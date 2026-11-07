@@ -20,9 +20,9 @@ sources:
 
 items:
   # ---- 代数 ----
-  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [A4-05, A5-01, A5-02, A5-03, A5-07]}
+  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [N2-06, A3-01, A3-02, A5-02, A5-01]}
   - {id: T-A02, field: 代数, topic: 総和と総積の記号、和の変形, sources: [O04, O05, O08], units: [A6-06]}
-  - {id: T-A03, field: 代数, topic: 数列（等差、等比、調和）, sources: [O01, O09, O10], units: [A3-04, A6-03]}
+  - {id: T-A03, field: 代数, topic: 数列（等差、等比、調和）, sources: [O01, O09, O10], units: [A3-05, A6-03]}
   - {id: T-A04, field: 代数, topic: 二項定理と二項係数の性質, sources: [O10], units: [C5-01]}
   - {id: T-A05, field: 代数, topic: 1 変数の多項式（解と係数の関係、代数学の基本定理）, sources: [O04, O05, O09, O10], units: [A6-02, A7-04]}
   - {id: T-A06, field: 代数, topic: 多変数の多項式と対称式（ニュートンの公式）, sources: [O04, O05, O10], units: [A7-06]}
@@ -44,7 +44,7 @@ items:
   - {id: T-C01, field: 組合せ, topic: 数え上げの基本（積の法則、順列と組合せ、全単射）, sources: [O01, O04, O05, O09, O10], units: [C2-02, C3-01, C3-02, C4-01, C6-07]}
   - {id: T-C02, field: 組合せ, topic: 漸化式と再帰, sources: [O04, O05, O10], units: [C4-02, A6-03]}
   - {id: T-C03, field: 組合せ, topic: 二重数え上げ（握手補題）, sources: [O05, O06], units: [C6-02]}
-  - {id: T-C04, field: 組合せ, topic: 確率と期待値の線形性, sources: [O01, O04, O05, O06, O08], units: [C5-02, C6-08]}
+  - {id: T-C04, field: 組合せ, topic: 確率と期待値の線形性, sources: [O01, O04, O05, O06, O08], units: [C4-04, C6-08]}
   - {id: T-C05, field: 組合せ, topic: 確率的方法, sources: [O08], units: [C8-01]}
   - {id: T-C06, field: 組合せ, topic: グラフ理論の基本（次数、道と閉路、二部グラフ）, sources: [O01, O04, O05, O06, O10], units: [C5-03, C6-05]}
   - {id: T-C07, field: 組合せ, topic: グラフ理論の発展と極値グラフ（ホール、トゥラン）, sources: [O04, O05], units: [C7-04]}
@@ -111,13 +111,13 @@ items:
   - {id: T-P07, field: 論法と証明, topic: 塗り分けによる証明, sources: [O09], units: [C5-04]}
   - {id: T-P08, field: 論法と証明, topic: 構成と、不可能性や上界の証明の二部構成, sources: [O06], units: [C7-02]}
   # ---- 学校の道具（IMO の道具として要る学校の内容。対応付けは調べた者による） ----
-  - {id: T-S01, field: 学校の道具, topic: 因数分解, sources: [O04, O10], units: [A5-03]}
+  - {id: T-S01, field: 学校の道具, topic: 因数分解, sources: [O04, O10], units: [A5-02]}
   - {id: T-S02, field: 学校の道具, topic: 式と証明（相加相乗平均）, sources: [O04, O10], units: [A6-01]}
   - {id: T-S03, field: 学校の道具, topic: 解と係数の関係、因数定理, sources: [O04, O10], units: [A6-02]}
   - {id: T-S04, field: 学校の道具, topic: 数列（Σ、漸化式）, sources: [O04, O10], units: [A6-03, A6-06]}
   - {id: T-S05, field: 学校の道具, topic: 数学的帰納法, sources: [O04, O10], units: [L5-03]}
   - {id: T-S06, field: 学校の道具, topic: 二項定理, sources: [O10], units: [C5-01]}
-  - {id: T-S07, field: 学校の道具, topic: 場合の数、確率、期待値, sources: [O01, O04], units: [C3-01, C3-02, C5-02, C6-08]}
+  - {id: T-S07, field: 学校の道具, topic: 場合の数、確率、期待値, sources: [O01, O04], units: [C3-01, C3-02, C4-04, C6-08]}
   - {id: T-S08, field: 学校の道具, topic: 整数の性質（互除法、余り）, sources: [O01, O10], units: [N5-01, N5-02]}
   - {id: T-S09, field: 学校の道具, topic: 平面図形（相似、円周角、方べき、チェバとメネラウス、五心）, sources: [O01, O10], units: [G5-03, G5-05, G6-01, G6-02, G6-03]}
   - {id: T-S10, field: 学校の道具, topic: 三角比と三角関数（加法定理）, sources: [O04, O10], units: [G6-04, G6-05]}
@@ -125,6 +125,6 @@ items:
   - {id: T-S12, field: 学校の道具, topic: ベクトル, sources: [O10], units: [G6-08]}
   - {id: T-S13, field: 学校の道具, topic: 複素数平面, sources: [O04, O10], units: [A7-05, G7-04]}
   - {id: T-S14, field: 学校の道具, topic: 2 次曲線, sources: [O10], units: [G8-05]}
-  - {id: T-S15, field: 学校の道具, topic: 指数, sources: [O10], units: [A5-07]}
+  - {id: T-S15, field: 学校の道具, topic: 指数, sources: [O10], units: [A5-01]}
   - {id: T-S16, field: 学校の道具, topic: 集合と命題, sources: [O04, O06], units: [L5-04, L6-03]}
   - {id: T-S17, field: 学校の道具, topic: 微分（接線、凹凸）, sources: [O04], none: 上級の道具にとどまる（O04）。接線の技法は A7-02 で微分を使わずに扱う}
