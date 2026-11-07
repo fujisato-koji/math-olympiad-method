@@ -195,3 +195,53 @@ items:
   - A-036
   - C-034
   - N-046
+- id: V-01
+  field: 検証で足した論題
+  topic: 漸近記法と上下の極限（O、o、≪、~、liminf、limsup）
+  units:
+  - K-021
+- id: V-02
+  field: 検証で足した論題
+  topic: 2 つの平方数の和と格子点（単位距離と相異なる距離の格子の例）
+  units:
+  - N-040
+- id: V-03
+  field: 検証で足した論題
+  topic: 相異なる距離のガス–カッツの方法（多項式分割、代数曲面と線織面）
+  units:
+  - C-028
+  - T-030
+  - T-031
+- id: V-04
+  field: 検証で足した論題
+  topic: 有限射影平面と完全差集合（シンガーの構成）
+  units:
+  - C-037
+  - R-014
+- id: V-05
+  field: 検証で足した論題
+  topic: 強制法と独立性（状態が not provable、independent の問題）
+  units:
+  - L-031
+- id: V-06
+  field: 検証で足した論題
+  topic: 半正定値計画とフラグ代数（ハイパーグラフのトゥラン密度）
+  units:
+  - K-009
+- id: V-07
+  field: 検証で足した論題
+  topic: 形式証明（Lean）で主張と証明を確かめる
+  units:
+  - L-036
+- id: V-08
+  field: 検証で足した論題
+  topic: 計算機による探索と有限の場合の確認
+  units:
+  - K-022
+  - K-053
+- id: V-09
+  field: 検証で足した論題
+  topic: コラッツ（#1135）の確率モデル
+  units:
+  - S-005
+  - S-008

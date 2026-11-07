@@ -1410,7 +1410,7 @@ units:
   - {id: N-062, title: モジュラー形式, stage: 10, region: hokei, needs: [D-042, D-034, R-006], days: 10}
   - {id: N-063, title: 篩法（セルバーグの篩とボンビエリ–ヴィノグラードフの定理）, stage: 10, region: kaisekiteki-seisuron, needs: [N-058], days: 10}
   - {id: N-064, title: 円周法と指数和, stage: 10, region: kaisekiteki-seisuron, needs: [N-058, D-022], days: 10}
-  - {id: N-065, title: ガロア表現とモジュラー性, stage: 10, region: hokei, needs: [N-057, N-062, R-016], days: 12}
+  - {id: N-065, title: ガロア表現とモジュラー性, stage: 10, region: hokei, needs: [N-057, N-062, R-016, N-066], days: 12}
   - {id: N-066, title: 類体論, stage: 10, region: daisuteki-seisuron, needs: [N-055, R-013, R-028], days: 12}
   - {id: N-067, title: 超越数論（ゲルフォント–シュナイダーの定理とベイカーの理論）, stage: 10, region: kaisekiteki-seisuron, needs: [N-049, N-051, D-031], days: 10}
   - {id: N-068, title: 保型表現, stage: 10, region: hokei, needs: [N-062, R-023, D-065], days: 12}
@@ -1429,6 +1429,6 @@ units:
   - {id: T-042, title: 特性類（チャーン類、スティーフェル–ホイットニー類、ポントリャーギン類）, stage: 10, region: daisuteki-iso, needs: [T-025, T-026], days: 8}
   - {id: T-043, title: 安定ホモトピー論（スペクトラム、一般化コホモロジー、アダムス・スペクトル系列）, stage: 10, region: daisuteki-iso, needs: [T-028, T-042], days: 12}
   - {id: T-044, title: 単体的集合とモデル圏, stage: 10, region: daisuteki-iso, needs: [T-027, R-026], days: 10}
-  - {id: T-045, title: リッチ流と幾何化予想, stage: 10, region: tayotai, needs: [T-017, T-040, D-060], days: 12}
+  - {id: T-045, title: リッチ流と幾何化予想, stage: 10, region: tayotai, needs: [T-017, T-040, D-060, T-012], days: 12}
   - {id: T-046, title: 偏屈層と構成可能層, stage: 10, region: daisu-kika, needs: [T-037, T-024, R-029], days: 10}
   - {id: S-032, title: ランダム行列, stage: 10, region: kakuritsu-daigaku, needs: [S-008, M-007, D-066], days: 10}
