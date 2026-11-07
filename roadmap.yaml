@@ -18,18 +18,19 @@ lanes:
   - {id: L, name: 論理, note: 論理と証明}
 
 stages:
-  - {id: 1, name: 入口, measure: マスカンガルー（年長〜小 2）, minutes: 15, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
-  - {id: 2, name: キッズ BEE, measure: キッズ BEE（小 1〜3）, minutes: 20, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
-  - {id: 3, name: ジュニア算数, measure: ジュニア算数オリンピック（小 5 以下）, minutes: 30, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
-  - {id: 4, name: 算数オリンピック, measure: 算数オリンピック（小 6）, minutes: 40, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
-  - {id: 5, name: 中学の入口, measure: ジュニア広中杯、広中杯、JJMO 予選, minutes: 45, day: {思い出す: 2, 今日: 2, 挑戦: 1}}
-  - {id: 6, name: 証明の入口, measure: JMO 予選、JJMO 本選, minutes: 60, day: {思い出す: 1, 今日: 2, 挑戦: 1}}
-  - {id: 7, name: 本選, measure: JMO 本選、APMO, minutes: 90, day: {思い出す: 1, 今日: 1, 挑戦: 1}}
-  - {id: 8, name: IMO, measure: IMO, minutes: 120, day: {思い出す: 0, 今日: 1, 挑戦: 1}}
+  - {id: 1, name: 数と形の入口, about: 数える、数直線、形、きまり、推理, minutes: 15, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 2, name: 算数の土台, about: かけ算とわり算、正負のたし算とひき算、□の式、場合の数、展開図, minutes: 20, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 3, name: 文字と方程式, about: 分数と小数、文字と式、方程式、順列と組合せ、面積と角度, minutes: 30, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 4, name: 割合と関数, about: 比と割合、比例、1 次関数、確率の入口、相似の入口、わけを文で書く, minutes: 40, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 5, name: 証明の道具, about: 展開と因数分解、平方根、2 次方程式、合同と相似の証明、背理法と帰納法, minutes: 45, day: {思い出す: 2, 今日: 2, 挑戦: 1}}
+  - {id: 6, name: 高校数学と論法, about: 合同式、不等式、多項式、三角関数、座標とベクトル、組合せの論法, minutes: 60, day: {思い出す: 1, 今日: 2, 挑戦: 1}}
+  - {id: 7, name: 上級の道具, about: 位数、古典的な不等式、関数方程式、複素数、母関数、根軸, minutes: 90, day: {思い出す: 1, 今日: 1, 挑戦: 1}}
+  - {id: 8, name: 最上級の道具, about: 射影幾何、反転、確率的方法、多項式法, minutes: 120, day: {思い出す: 0, 今日: 1, 挑戦: 1}}
 
-# 目標。網羅表が指す単元と、その前提をすべてたどった単元が、その目標までの道のりになる。
+# 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
+# 網羅表が指す単元と、その前提をすべてたどった単元が、その目標までの道のりになる。
 goals:
-  - {id: imo, name: IMO, note: 国際数学オリンピック（とその手前の JMO）, coverage: coverage.yaml}
+  - {id: imo, name: IMO, kind: 大会, level: 高校, region: 国際, note: 国際数学オリンピック（とその手前の JMO）, coverage: coverage.yaml}
 
 kinds:
   導入: 見本（解いた例）を見せてから解く

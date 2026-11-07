@@ -221,8 +221,12 @@ def build(data, problems):
                           "stage": int(m.group(2)), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {})})
     gu = goal_units(data)
-    goals = [{"id": g["id"], "name": g["name"], "note": g["note"], "units": sorted(gu.get(g["id"], []))}
-             for g in data.get("goals", [])]
+    goals = []
+    for g in data.get("goals", []):
+        cov = data["coverages"].get(g["id"], {})
+        items = [{k: i[k] for k in ("id", "field", "topic", "units", "none") if k in i} for i in cov.get("items", [])]
+        goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note")},
+                      "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "kinds": data["kinds"],
                "goals": goals, "units": out_units}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
@@ -232,10 +236,10 @@ def build(data, problems):
     lines = ["# 地図の一覧", "",
              "この頁は `tools/roadmap.py build` が `roadmap.yaml` から作ります。手で直さないでください。",
              "画面で見るときは `site/index.html` を開きます。", "",
-             "| 段 | 名前 | 物差し | 1 日 | 単元 | 日数 |", "|---|---|---|---|---|---|"]
+             "| 段 | 名前 | 主な内容 | 1 日 | 単元 | 日数 |", "|---|---|---|---|---|---|"]
     for s in data["stages"]:
         us = [u for u in out_units if u["stage"] == s["id"]]
-        lines.append(f"| {s['id']} | {s['name']} | {s['measure']} | {s['minutes']} 分 | "
+        lines.append(f"| {s['id']} | {s['name']} | {s['about']} | {s['minutes']} 分 | "
                      f"{len(us)} | {sum(len(u['days']) for u in us)} |")
     total = sum(len(u["days"]) for u in out_units)
     lines += ["", f"合わせて {len(out_units)} 単元、{total} 日分です。", "",
