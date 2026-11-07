@@ -29,6 +29,7 @@ lanes:
   - {id: F, name: 経済と金融, note: 金利と現在価値、保険数理、年金、投資と派生商品、会計と経済の入口}
   - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候（大気と海洋の力学は物理の流れ）}
   - {id: I, name: 医学と健康, note: 人体の構造と機能、病気のしくみ、薬と毒、感染と免疫、臨床医学、疫学と公衆衛生、栄養、医療の最前線（神経科学は B に残す）}
+  - {id: Q, name: 心理学と認知科学, note: 知覚、注意と記憶、学習、言語と思考、判断と意思決定、発達、社会の認知、感情と動機、研究の方法と心理測定、臨床心理の科学的な基礎、計算論的認知科学（検証で支持されなかった古い説は、置き換えた現代の知見の形で扱う）}
 
 
 stages:
@@ -168,6 +169,10 @@ regions:
   - {id: rinsho, name: 臨床医学, lane: I}
   - {id: eiyo, name: 栄養, lane: I}
   - {id: iryo-saizensen, name: 医療の最前線, lane: I}
+  - {id: shinri-ninchi, name: 知覚と認知, lane: Q}
+  - {id: shinri-gakushu, name: 学習と計算論, lane: Q}
+  - {id: shinri-shakai, name: 発達と社会と心の健康, lane: Q}
+  - {id: shinri-hoho, name: 心理学の方法と測定, lane: Q}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -299,6 +304,10 @@ goals:
   - {id: ifom-bse, name: 医学の基礎の国際試験（NBME の IFOM 基礎医学試験）, kind: 修了試験, field: 医学, level: 大学（医学部の基礎医学を終えるころ）, region: 国際, note: 医学部の前半で学ぶ、からだのしくみ、病気のしくみ、薬、微生物と免疫を、患者の場面の問題で確かめる国際試験。, coverage: coverage-ifom-bse.yaml, basis: "NBME の IFOM Basic Science Exam Blueprint（総論 28〜30% と 10 の器官系の配分）と、NBME の IFOM の頁（https://www.nbme.org/institutions/assess-learn/international-foundations-medicine/）による（2026-11-08 取得）。器官系の論題は、正常の構造と働き、異常の過程、治療の原則をまとめて 1 論題にした。神経系は B の神経の単元が受け持つ。論題と単元の対応は名称による", beyond: 学校や団体が申し込んで受けさせる（個人も受けられる）。160 問の多肢選択で、多くは患者の場面の問題。英語かスペイン語。得点は国際比較群と比べ、USMLE Step 1 の合格点のおよそに届くと認定が出る}
   - {id: ifom-cse, name: 医学の臨床の国際試験（NBME の IFOM 臨床医学試験）, kind: 修了試験, field: 医学, level: 大学（医学部の臨床実習を終えるころ）, region: 国際, note: 患者を前にして、病気を見分け、どう治し、どう防ぐかを考える力を、患者の場面の問題で確かめる国際試験。, coverage: coverage-ifom-cse.yaml, basis: "NBME の IFOM Clinical Science Exam Blueprint（総論 5〜7% と 14 の病気の群の配分）と、NBME の IFOM の頁（https://www.nbme.org/institutions/assess-learn/international-foundations-medicine/）による（2026-11-08 取得）。病気の群ごとの「健康の維持、病気のしくみ、診断、管理の原則」はまとめて 1 論題にし、診断と管理の考え方を別の論題にした。論題と単元の対応は名称による", beyond: 学校や団体が申し込んで受けさせる（個人も受けられる）。160 問の多肢選択で、患者の場面の問題。英語、スペイン語、ポルトガル語。医学部の出口の試験や研修医の選考に使われ、USMLE Step 2 CK の合格点のおよそに届くと認定が出る。臨床実習で患者を診た経験が前提}
   - {id: msf-epidemiologist, name: 国境なき医師団（MSF）の疫学者, kind: 仕事の頂点, field: 医学, level: 大学院（修士、疫学）, region: 国際（MSF の各国の現場）, note: 病気がはやった場所に入り、患者の数と広がりを調べて、どこにどう手を打つかを医療チームに助言する。, coverage: coverage-msf-epidemiologist.yaml, basis: MSF の職の紹介「Epidemiologist」（msf.org、2026-11-08 取得）の仕事と要件による。米国の支部の同じ頁は 403 で取れなかった。WHO の疫学者は、一次資料の募集の頁（careers.who.int の個々の募集）を見つけられず、使っていない。論題と単元の対応は名称による, beyond: 医師（望ましい）か看護師などの医療職で、疫学の学位（公衆衛生でなく疫学）。数年の熱帯医学の経験と、地域の疫学の経験。現場の言語（英語、フランス語、アラビア語、スペイン語が望ましい）。Excel、Epi Info、Stata、SPSS などの解析ソフト。医療チームへの研修と、受け持つ人の配置の計画と監督}
+  - {id: ap-psychology, name: AP Psychology（College Board）, kind: 修了試験, field: 心理学, level: 高校（大学 1 年の入門の科目の水準）, region: 米国（世界の多くの学校で受けられる）, note: アメリカの高校生が、大学 1 年の心理学の授業の代わりに受ける試験。脳と行動、認知、発達と学習、社会と性格、心とからだの健康の 5 つの単元が出る。, coverage: coverage-ap-psychology.yaml, basis: "College Board の AP Psychology Course and Exam Description（表紙は Effective Fall 2025、2 頁目は Effective Fall 2024）の 5 単元 35 トピックの学習目標と、科学の実践（研究の方法と計画、データの解釈、論証）による。多肢選択は各単元 15〜25%（AP Central の科目の頁）。論題と単元の対応は、各トピックの学習目標を読んで当てた", beyond: 多肢選択と記述（論証の問い、研究の記述を読んで答える問い）を時間内に解くこと}
+  - {id: ib-psychology, name: IB Diploma Programme Psychology（HL、2027 年からの試験）, kind: 修了試験, field: 心理学, level: 高校, region: 国際, note: 世界の学校で使われる国際バカロレアで、心理学を学ぶ科目の試験。実験や観察や面接で人の行動を調べ、研究の計画も自分で立てる。, coverage: coverage-ib-psychology.yaml, basis: IB の DP Psychology の subject brief（2027 年初回試験版、2024 年発行）と、大学入学向けの Psychology updates の頁による（どちらも ibo.org は 403 で取れず、Internet Archive の控えで読んだ）。6 つの概念、3 つの見方と研究の方法、4 つの文脈、授業の実習、HL の拡張。トピックごとの学習目標を書いた指導書（guide）は会員向けで、公開の版も 403 で控えがなく読めていない。論題と単元の対応は、上の名前と見本の問いによる, beyond: 研究の計画書（内部評価、24 点）、授業の実習を 4 つ以上（実験、観察、面接、質問紙）、文化の違いを踏まえて論じること、資料を読み比べて結論を出すこと（HL の試験 3）}
+  - {id: rumelhart-prize, name: 認知科学の研究者（ルメルハート賞の研究に届く知識）, kind: 研究の頂点, field: 心理学, level: 大学院（博士）, region: 米国（Cognitive Science Society の選考。授賞は国際）, note: 人がどう見て、覚え、考え、言葉を学ぶのかを、計算できる理論として解き明かす。, coverage: coverage-rumelhart-prize.yaml, basis: "Cognitive Science Society の David E. Rumelhart Prize の頁（人の認知の理論的な基礎への現代の大きな貢献に毎年授与、125,000 ドル）にある 2012〜2027 年の受賞者と業績の記述による。2015 年（M. I. Jordan）は頁に業績の記述がないので論題にしない。心理学の賞の候補だった Grawemeyer Award in Psychology（ルイビル大学）は、2010〜2018 年の受賞の考えが頁に書かれておらず、臨床と社会に寄るので、認知の理論の頂点としてこちらを選んだ", beyond: 博士の学位と長年の研究の実績、理論を実験と計算の両方で確かめる研究の計画、言語学・計算機科学・神経科学・哲学をまたぐ共同研究}
+  - {id: mpi-core-cognition, name: 認知科学の研究者（Max Planck Institute for Biological Cybernetics）, kind: 仕事の頂点, field: 心理学, level: 大学院（博士）, region: ドイツ（テュービンゲン）, note: 人がいろいろな場面でどう考えて動くかを、まねして予測できる計算のモデル（AI の技術を使う）で説明する。, coverage: coverage-mpi-core-cognition.yaml, basis: Max Planck Institute for Biological Cybernetics の CORE Cognition（Marcel Binz の研究室）の Postdoctoral Researcher の募集（2026 年 10 月 1 日着任、7 月 10 日まで受付、研究室の頁に置かれた PDF）による。研究の方向 4 つと求める条件を論題にした, beyond: 博士の学位（または取得目前）、機械学習か認知科学での論文の実績、はっきり伝える力と自分から動く力、テュービンゲンで働くこと}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -473,6 +482,7 @@ units:
   - {id: B-069, title: 自分のからだ（見る・聞く・かぐ・味わう・さわる、骨と筋肉をさわって確かめる、心臓の音、背がのびる）, stage: 1, level: 1, region: karada, needs: [], days: 4}
   - {id: W-043, title: 太陽と月の動き（1 日の太陽の動き、東西南北、影の向きと長さ、月の形の移り変わり）, stage: 1, level: 1, region: sora, needs: [P-178], days: 5}
   - {id: I-006, title: からだを守るしくみ（皮ふと鼻・のどのねばり、なみだ、すり傷がかさぶたになって治るまで、熱やせきや鼻水が出るわけ）, stage: 1, level: 1, region: kansen-meneki, needs: [B-069], days: 4}
+  - {id: Q-001, title: 見え方のふしぎ（同じ長さ・同じ明るさなのに違って見える錯視、見つめたあとの残像、盲点を見つける、片目と両目で見る奥行き、見え方は目と脳がつくる）, stage: 1, level: 1, region: shinri-ninchi, needs: [B-069], days: 4}
 
   # ---- 段 2 数 ----
   - id: N-004
@@ -565,6 +575,7 @@ units:
   - {id: W-044, title: 星と星座（明るさと色の違い、星座の形、1 晩で回る星空、季節で変わる星空）, stage: 2, level: 1, region: sora, needs: [W-043], days: 4}
   - {id: W-047, title: 天気と気温の記録（晴れ・くもり・雨と雲の量、1 日の気温の変わり方、風の向きと強さ、折れ線グラフ）, stage: 2, level: 2, region: tenki, needs: [P-189, S-027], days: 5}
   - {id: W-048, title: 水のゆくえ（雨水は高い所から低い所へ流れる、土や砂へのしみこみ方、水たまりが消える、冷たいコップにつく水）, stage: 2, level: 1, region: tenki, needs: [H-002], days: 4}
+  - {id: Q-002, title: 覚え方を試す（いくつ覚えられるかを数える、まとまりにすると多く覚えられる、読み返すより思い出して試すほうが残る、日をあけてもう一度試す、結果を表にして比べる）, stage: 2, level: 2, region: shinri-ninchi, needs: [S-027], days: 5}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, level: 2, region: keisan, needs: [N-007], days: 8}
@@ -645,6 +656,7 @@ units:
   - {id: K-132, title: 情報を送るしくみ（ネットワークの経路と中継、最短の道、小包（パケット）に分けて送る、届いたかを確かめて送り直す）, stage: 3, level: 2, region: programming, needs: [C-004, C-012], days: 5}
   - {id: I-007, title: 病気がうつる道すじ（せきとくしゃみのしぶき、手から口へ、食べ物と水、蚊とダニ、道すじごとの防ぎ方、うつり方をさいころ遊びで数える）, stage: 3, level: 2, region: ekigaku, needs: [B-074, S-027], days: 5}
   - {id: I-008, title: 救命のしくみ（心臓が止まると脳に酸素が届かない、胸骨圧迫で血を送る、AED、出血は押さえて止める、救急に電話で伝えること）, stage: 3, level: 2, region: rinsho, needs: [B-020], days: 5}
+  - {id: Q-003, title: 反応の速さと注意（落ちるものさしをつかむ位置で速さを測る、毎回ちがうので何回も測って平均する、ほかのことをしながらだと遅れる・見落とす）, stage: 3, level: 2, region: shinri-ninchi, needs: [S-028], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -977,6 +989,8 @@ units:
   - {id: W-064, title: 自然災害と減災、応用地質（地震・津波・火山・地すべり・洪水・台風、ハザードマップと予測と警報、液状化と地盤、ダムとトンネルの地質）, stage: 6, level: 3, region: jishin-kazan, needs: [W-004, W-005, P-122], days: 6}
   - {id: I-011, title: 組織学（上皮・結合・筋・神経の組織、細胞の結合と細胞外基質、器官の組み立て、標本の像を読む）, stage: 6, level: 3, region: jintai, needs: [B-022, B-031, B-036], days: 8}
   - {id: I-034, title: 医療と研究の倫理（自律・善行・無危害・公正の原則、説明と同意、研究倫理の歴史と審査、限られた資源の配分）, stage: 6, level: 2, region: ekigaku, needs: [S-031, I-033], days: 8}
+  - {id: Q-004, title: 知覚と心理物理（心理測定関数と閾値、ウェーバーの法則、信号検出理論の感度 d′ と判断の基準と ROC、奥行き・色・大きさの恒常性、錯視を手がかりからの推論として説明する）, stage: 6, level: 3, region: shinri-ninchi, needs: [Q-001, B-020, S-041], days: 10}
+  - {id: Q-005, title: 注意と記憶（選択的注意と注意の容量、視覚探索と変化の見落とし、作業記憶の容量、長期記憶の符号化・固定・検索、忘却と干渉、記憶は再構成される（目撃証言）、思い出す練習・間隔をあけた反復・交互の練習・自分で説明することの効果）, stage: 6, level: 3, region: shinri-ninchi, needs: [Q-002, Q-003, S-041], days: 12}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根（ド・モアブル）, stage: 5, level: 3, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -1124,7 +1138,7 @@ units:
   - {id: F-046, title: アクチュアリーの実務と事業の環境（助言と顧客、金融商品と給付、規制と外部の力）, stage: 7, level: 3, region: shokugyo-seido, needs: [F-027, F-029, F-032, F-040], days: 8}
   - {id: F-047, title: オルタナティブ投資と私募市場（不動産、未公開株、ヘッジファンド、インフラ）, stage: 7, level: 3, region: toshi, needs: [F-011], days: 8}
   - {id: F-048, title: ユニバーサル生命保険と変額保険の数理（積立金の推移、付利、最低保証）, stage: 7, level: 3, region: seimei-nenkin, needs: [F-027, F-021], days: 10}
-  - {id: F-049, title: 行動経済学と行動ファイナンス、実験経済学（市場実験、誘導価値法）, stage: 7, level: 3, region: keizai, needs: [F-020, F-024], days: 8}
+  - {id: F-049, title: 行動経済学と行動ファイナンス、実験経済学（市場実験、誘導価値法）, stage: 7, level: 3, region: keizai, needs: [F-020, F-024, Q-009], days: 8}
   - {id: D-075, title: フーリエ変換の計算（たたみ込み、デルタ関数、物理と工学の使い方）, stage: 7, level: 3, region: bisekibun, needs: [D-022, D-030], days: 8}
   - {id: D-076, title: 1 階偏微分方程式と特性曲線法, stage: 7, level: 3, region: bibun-hoteishiki, needs: [D-014, D-044], days: 8}
   - {id: D-077, title: 直交多項式と特殊関数（ルジャンドル、エルミート、ラゲール、ベッセル）, stage: 7, level: 3, region: bibun-hoteishiki, needs: [D-048], days: 8}
@@ -1196,7 +1210,14 @@ units:
   - {id: I-037, title: 感染症の数理モデル（SIR と SEIR、基本再生産数と次世代行列、閾値定理と集団免疫の接種率、齢構造とネットワークのモデル、データへの当てはめ）, stage: 7, level: 3, region: ekigaku, needs: [D-046, D-053, B-055, I-033], days: 10}
   - {id: I-038, title: スクリーニングと予防（検診の評価、リードタイムと長さの偏り、過剰診断、予防の段階、必要治療数）, stage: 7, level: 3, region: ekigaku, needs: [I-035, I-043], days: 8}
   - {id: I-043, title: 臨床検査の読み方（血液と尿の検査、基準範囲の決め方、感度と特異度、予測値と ROC 曲線、検査の誤差と変動）, stage: 7, level: 3, region: rinsho, needs: [S-001, S-018, B-050], days: 8}
-  - {id: I-044, title: 診断の推論（病歴と診察、鑑別診断の立て方、検査前確率と尤度比、ベイズの更新と治療の閾値、認知の偏りと誤診）, stage: 7, level: 3, region: rinsho, needs: [I-043], days: 9}
+  - {id: I-044, title: 診断の推論（病歴と診察、鑑別診断の立て方、検査前確率と尤度比、ベイズの更新と治療の閾値、認知の偏りと誤診）, stage: 7, level: 3, region: rinsho, needs: [I-043, Q-009], days: 9}
+  - {id: Q-006, title: 心理学の研究の方法と再現性（実験・観察・面接・質問紙、被験者内と被験者間の計画、統制と無作為化とカウンターバランス、効果量と検出力、研究の倫理、再現性の危機と多くの研究室での共同の追試、p ハッキングと出版の偏り、事前登録と登録報告）, stage: 7, level: 3, region: shinri-hoho, needs: [Q-003, S-019, S-031], days: 10}
+  - {id: Q-007, title: 学習：条件づけから予測誤差へ（古典的条件づけとオペラント条件づけ、消去と自発的回復、強化のスケジュール、観察による学習、予測誤差で学ぶレスコーラ–ワグナーのモデルとブロッキング、ドーパミンの報酬予測誤差と TD 学習へのつながり）, stage: 7, level: 3, region: shinri-gakushu, needs: [B-039, A-022], days: 10}
+  - {id: Q-008, title: 言語と思考（語と文の理解（予測と曖昧さの解消、目の動きで調べる）、言語の産出と身ぶり、概念とカテゴリー、演繹と確率の推論、問題解決と類推、言語が思考に与える影響の実験（強いサピア–ウォーフ仮説は支持されない））, stage: 7, level: 3, region: shinri-ninchi, needs: [Q-005, L-013], days: 10}
+  - {id: Q-009, title: 判断と意思決定（確率の判断とベイズの規則からのずれ、ヒューリスティクス（利用可能性・代表性・係留）、損失回避と参照点、フレーミング、時間割引、過信と自分の能力の評価、単純なヒューリスティクスの生態学的合理性、追試で弱まった効果）, stage: 7, level: 3, region: shinri-ninchi, needs: [Q-008, S-001], days: 10}
+  - {id: Q-010, title: 発達（乳児の物・数・空間の理解を調べる方法（注視時間と期待違反）、言語の獲得（統計的学習、語と動詞の学習）、心の理論と誤信念課題、実行機能、愛着と気質、生涯の認知の変化、ピアジェの段階説を置き換えた現代の見方、多くの国での共同の追試）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-005, Q-008], days: 12}
+  - {id: Q-011, title: 社会の認知（自己と他者の認識と帰属、印象の形成、態度と説得と認知的不協和、ステレオタイプと偏見の測り方とその限界、同調・服従・集団、協力と信頼の実験と文化による違い、WEIRD の偏り、大規模な追試で残った知見と残らなかった知見）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-010, Q-006], days: 10}
+  - {id: Q-012, title: 感情と動機（感情の成り立ち（評価・からだの反応・表出）と測り方、基本感情説と構成主義の論争、ストレスと対処、感情の調整、報酬と動機づけ（欲しいと好き）、内発的動機づけと自己決定理論、幸福感の測り方）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-007, B-035], days: 10}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1478,7 +1499,7 @@ units:
   - {id: B-053, title: 遺伝子工学とゲノム編集（ベクターと遺伝子導入、CRISPR–Cas、遺伝子治療、mRNA と核酸医薬）, stage: 8, level: 3, region: bunshi-saibo, needs: [B-033, B-009], days: 10}
   - {id: B-062, title: 理論生態学（反応拡散と空間のパターン、確率的な個体群動態、適応ダイナミクス、エージェントベースモデル）, stage: 8, level: 3, region: seitai, needs: [B-055, B-059, D-049, S-009], days: 12}
   - {id: B-064, title: 神経発生（神経誘導、軸索の誘導、シナプスの形成、臨界期と経験による作り替え）, stage: 8, level: 3, region: shinkei, needs: [B-046, B-052, B-010], days: 12}
-  - {id: B-065, title: 認知と行動の神経科学（学習と記憶、報酬と意思決定、知覚と注意、睡眠と覚醒）, stage: 8, level: 3, region: shinkei, needs: [B-063, B-039], days: 12}
+  - {id: B-065, title: 認知と行動の神経科学（学習と記憶、報酬と意思決定、知覚と注意、睡眠と覚醒）, stage: 8, level: 3, region: shinkei, needs: [B-063, B-039, Q-004, Q-005, Q-007], days: 12}
   - {id: B-066, title: 計算神経科学（神経細胞のモデル、神経符号化、回路の力学、学習則）, stage: 8, level: 3, region: shinkei, needs: [B-052, D-053, S-003, K-012], days: 12}
   - {id: B-067, title: 神経科学の計測と操作（電気生理と多電極記録、カルシウムイメージング、光遺伝学、脳の画像化、回路の地図）, stage: 8, level: 3, region: shinkei, needs: [B-052, B-053, P-118], days: 10}
   - {id: P-230, title: 物理のための群と表現（リー群とリー環の計算、SU(2)・SU(3)、ローレンツ群とポアンカレ群の表現、ヤング図形）, stage: 8, level: 4, region: soryushi, needs: [R-006, M-014, P-077], days: 10}
@@ -1520,6 +1541,9 @@ units:
   - {id: I-048, title: 骨と関節と皮膚の病気（骨の代謝と骨粗しょう症、骨折の治り方、変形性関節症と関節リウマチ、皮膚の守りと主な皮膚の病気）, stage: 8, level: 3, region: rinsho, needs: [I-011, I-021, B-035], days: 9}
   - {id: I-049, title: 一生の医学（妊娠と胎児の発育、子どもの成長と発達、思春期、老化とフレイルと多病、終末期の医療）, stage: 8, level: 3, region: rinsho, needs: [I-013, I-018, I-019], days: 9}
   - {id: I-052, title: 栄養の科学（ビタミンとミネラルの働きと欠乏、必要な量の決め方、低栄養と発育阻害、食事の調べ方と栄養疫学の難しさ）, stage: 8, level: 3, region: eiyo, needs: [B-008, I-009, I-035], days: 9}
+  - {id: Q-013, title: 心理測定と個人差（古典的テスト理論と信頼性、妥当性、因子分析と構造方程式モデル、項目反応理論、国や集団をまたぐ測定の不変性、知能と性格の構造（g と 5 因子）、双生児と養子の研究と遺伝率の意味）, stage: 8, level: 3, region: shinri-hoho, needs: [Q-006, S-023, S-021, B-024], days: 12}
+  - {id: Q-014, title: 臨床心理の科学的な基礎（症状を次元で測る（HiTOP、RDoC）と診断の分類、不安と抑うつの認知と学習のモデル、曝露療法と消去の学習、認知行動療法の効果の研究（無作為化比較試験、メタ分析、プラセボと自然な回復）、回復力と逆境、効果が確かめられた介入とそうでない介入）, stage: 8, level: 3, region: shinri-shakai, needs: [Q-012, Q-007, Q-013, S-037], days: 12}
+  - {id: Q-018, title: 健康の行動の心理学（ストレスと病気、健康についての信念と行動の予測、習慣の形成と行動を変える介入、治療を続けること、物質や行動への依存のモデル、ナッジの効果の大きさと出版の偏り）, stage: 8, level: 3, region: shinri-shakai, needs: [Q-012, Q-007, Q-009], days: 10}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1700,7 +1724,7 @@ units:
   - {id: E-137, title: 計算音響（差分法・有限要素法・境界要素法、構造と音の連成）, stage: 9, level: 3, region: onkyo, needs: [E-090, E-126, E-127, E-128, P-008, P-025], days: 12}
   - {id: E-138, title: 空力音響（ライトヒルの音響類推、動く物体表面からの放射）, stage: 9, level: 3, region: onkyo, needs: [E-134], days: 12}
   - {id: E-148, title: 室内音響と騒音制御（室内の音場と固有モード、吸音と遮音、騒音の評価と対策、室内音響の計画）, stage: 9, level: 3, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
-  - {id: E-149, title: 心理音響と空間音響（聴覚と音質の評価、頭部伝達関数と三次元音響）, stage: 9, level: 3, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
+  - {id: E-149, title: 心理音響と空間音響（聴覚と音質の評価、頭部伝達関数と三次元音響）, stage: 9, level: 3, region: onkyo, needs: [E-126, E-127, E-128, Q-004], days: 12}
   - {id: C-042, title: グラフの正則性補題とグラフ極限, stage: 9, level: 4, region: kumiawase-daigaku, needs: [C-031, C-032, D-020], days: 8}
   - {id: L-034, title: ゲーデルの不完全性定理とペアノ算術, stage: 9, level: 4, region: suri-ronri, needs: [L-024, L-026], days: 10}
   - {id: L-036, title: 定理証明支援系と形式証明, stage: 9, level: 4, region: suri-ronri, needs: [L-024, L-030], days: 8}
@@ -1780,6 +1804,9 @@ units:
   - {id: I-053, title: 精密医療とゲノム医療（がんゲノムの検査、液体生検、全ゲノム解析の臨床、薬理ゲノミクス、多遺伝子リスクの使い方と限界）, stage: 9, level: 3, region: iryo-saizensen, needs: [I-024, I-023, K-113, B-048], days: 10}
   - {id: I-054, title: 細胞治療と遺伝子治療（CAR-T 細胞、造血幹細胞の遺伝子治療、生体内のゲノム編集、ベクターの選び方と安全性）, stage: 9, level: 3, region: iryo-saizensen, needs: [B-053, B-054, B-051], days: 10}
   - {id: I-055, title: 医療の AI（予測モデルと外部での検証、画像の診断、電子カルテと言語モデル、偏りと公平性、規制）, stage: 9, level: 3, region: iryo-saizensen, needs: [K-048, I-040, I-044], days: 9}
+  - {id: Q-015, title: 計算論的認知科学（1）推論としての認知（理想観測者と手がかりの統合、ベイズの知覚と錯視、概念と因果の学習の確率モデル、予測符号化、単純さと資源合理性、近似の推論と人の誤り）, stage: 9, level: 3, region: shinri-gakushu, needs: [Q-004, Q-009, S-022], days: 12}
+  - {id: Q-016, title: 計算論的認知科学（2）強化学習と意思決定のモデル（モデルフリーとモデルベースの学習、探索と活用、ドリフト拡散モデル、行動のデータへのモデルの当てはめと比較（最尤、パラメータの回復、モデルの識別）、計算論的精神医学）, stage: 9, level: 3, region: shinri-gakushu, needs: [Q-007, Q-009, K-059, S-021], days: 12}
+  - {id: Q-017, title: 人と機械の認知を比べる（言語モデルを認知のモデルとして調べる、人の行動を予測する基盤モデル、課題の成績と内部の表現の比較、自然な場面（会話・ゲーム）の行動のモデル、実験と理論の発見の自動化）, stage: 9, level: 3, region: shinri-gakushu, needs: [Q-015, Q-016, K-161], days: 10}
 
   # ---- 段 10 新しい対象をつくる ----
 

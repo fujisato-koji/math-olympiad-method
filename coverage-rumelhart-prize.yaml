@@ -1,0 +1,122 @@
+# 網羅表：認知科学の研究者（ルメルハート賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PS05:
+    title: Cognitive Science Society, David E. Rumelhart Prize（目的、賞金、2001〜2027 年の受賞者）
+    url: https://www.cognitivesciencesociety.org/rumelhart-prize/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 受賞の研究
+  topic: 強化学習とドーパミンの計算論（2012 年 Dayan）
+  sources:
+  - PS05
+  units:
+  - Q-007
+  - Q-016
+  - B-066
+- id: T-02
+  field: 受賞の研究
+  topic: 発達のしくみ、幼い子の語の学習（2013 年 Smith）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-008
+- id: T-03
+  field: 受賞の研究
+  topic: 言語、概念の意味論、音楽の認知（2014 年 Jackendoff）
+  sources:
+  - PS05
+  units:
+  - Q-008
+- id: T-04
+  field: 受賞の研究
+  topic: 類推と構造写像の理論（2016 年 Gentner）
+  sources:
+  - PS05
+  units:
+  - Q-008
+- id: T-05
+  field: 受賞の研究
+  topic: 統語を手がかりにした動詞の学習（2017 年 Gleitman）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-008
+- id: T-06
+  field: 受賞の研究
+  topic: 言語の理解と視覚世界パラダイム（目の動きで理解を追う、2018 年 Tanenhaus）
+  sources:
+  - PS05
+  units:
+  - Q-008
+- id: T-07
+  field: 受賞の研究
+  topic: 熟達、自分で説明すること、能動的な学びの ICAP 理論（2019 年 Chi）
+  sources:
+  - PS05
+  units:
+  - Q-005
+- id: T-08
+  field: 受賞の研究
+  topic: 数の処理と読みの脳のしくみ（2020 年 Dehaene）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-008
+  - B-065
+- id: T-09
+  field: 受賞の研究
+  topic: ホームサインと言語の起源（2021 年 Goldin-Meadow）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-008
+- id: T-10
+  field: 受賞の研究
+  topic: 意図の共有と、人と大型類人猿の違い（2022 年 Tomasello）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-011
+- id: T-11
+  field: 受賞の研究
+  topic: 認知の一般原理（ベイズの推論と単純さ、2023 年 Chater）
+  sources:
+  - PS05
+  units:
+  - Q-015
+- id: T-12
+  field: 受賞の研究
+  topic: 認知と言語の発達、因果の学習（2024 年 Gopnik）
+  sources:
+  - PS05
+  units:
+  - Q-010
+  - Q-015
+- id: T-13
+  field: 受賞の研究
+  topic: 空間の認知と認知の発達（2025 年 Newcombe）
+  sources:
+  - PS05
+  units:
+  - Q-010
+- id: T-14
+  field: 受賞の研究
+  topic: 概念とカテゴリー化（2026 年 Medin）
+  sources:
+  - PS05
+  units:
+  - Q-008
+- id: T-15
+  field: 受賞の研究
+  topic: 協同の共同行為としての言語（2027 年 Clark）
+  sources:
+  - PS05
+  units:
+  - Q-008
+  - Q-011

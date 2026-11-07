@@ -1,0 +1,194 @@
+# 網羅表：IB Diploma Programme Psychology（HL、2027 年からの試験）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PS03:
+    title: 'International Baccalaureate, DP Subject Brief, Individuals and Societies: Psychology, First assessment 2027（ibo.org は 403。Internet Archive の 2026-08-21 の控え）'
+    url: https://web.archive.org/web/20260821140742/https://ibo.org/globalassets/new-structure/programmes/dp/pdfs/dp_psychology_subjectbrief_en.pdf
+    date: 2026-11-08
+  PS04:
+    title: International Baccalaureate, University admission, Psychology updates（概念・内容・文脈・実習・HL の拡張の一覧。ibo.org は 403。Internet Archive の 2026-05-16 の控え）
+    url: https://web.archive.org/web/20260516130835/https://ibo.org/university-admission/latest-curriculum-updates/psychology-updates/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 心理学
+  topic: 概念：偏り（研究の偏りと認知の偏り）
+  sources:
+  - PS04
+  units:
+  - Q-006
+  - Q-009
+- id: T-02
+  field: 心理学
+  topic: 概念：因果
+  sources:
+  - PS04
+  units:
+  - Q-006
+  - S-042
+- id: T-03
+  field: 心理学
+  topic: 概念：変化
+  sources:
+  - PS04
+  units:
+  - Q-010
+  - Q-007
+- id: T-04
+  field: 心理学
+  topic: 概念：測定
+  sources:
+  - PS04
+  units:
+  - Q-013
+  - Q-006
+- id: T-05
+  field: 心理学
+  topic: 概念：見方（生物・認知・社会文化の説明を合わせる）
+  sources:
+  - PS04
+  units:
+  - Q-014
+  - Q-011
+  - B-065
+- id: T-06
+  field: 心理学
+  topic: 概念：責任（研究の倫理と社会への責任）
+  sources:
+  - PS04
+  units:
+  - Q-006
+- id: T-07
+  field: 生命
+  topic: 内容：生物学的な見方（脳と行動、化学伝達物質とホルモン、遺伝と行動）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - B-034
+  - B-035
+  - B-063
+  - B-065
+  - Q-013
+- id: T-08
+  field: 心理学
+  topic: 内容：認知的な見方（記憶のモデル、思考と意思決定、係留のような認知の偏り）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-005
+  - Q-008
+  - Q-009
+- id: T-09
+  field: 心理学
+  topic: 内容：社会文化的な見方（社会的学習、文化と規範）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-011
+  - Q-007
+- id: T-10
+  field: 心理学
+  topic: 内容：研究の方法（実験と実験でない研究、量的と質的）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-006
+  - S-031
+- id: T-11
+  field: 心理学
+  topic: 文脈：健康とウェルビーイング（前の異常心理学）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-014
+  - Q-018
+  - Q-012
+- id: T-12
+  field: 心理学
+  topic: 文脈：人の発達（心の理論の測り方など）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-010
+- id: T-13
+  field: 心理学
+  topic: 文脈：人間関係
+  sources:
+  - PS04
+  units:
+  - Q-011
+- id: T-14
+  field: 心理学
+  topic: 文脈：学習と認知
+  sources:
+  - PS04
+  units:
+  - Q-005
+  - Q-007
+  - Q-008
+- id: T-15
+  field: 心理学
+  topic: 授業の実習（面接と集団面接、観察、質問紙、実験と準実験）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-006
+  - Q-013
+- id: T-16
+  field: 心理学
+  topic: 内部評価：対象の集団を決めた研究の計画書
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-006
+- id: T-17
+  field: 心理学
+  topic: HL の拡張：行動を形づくる文化の役割
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-011
+  - Q-013
+- id: T-18
+  field: 心理学
+  topic: HL の拡張：行動を形づくる動機づけの役割
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-012
+- id: T-19
+  field: 心理学
+  topic: HL の拡張：行動を形づくる技術の役割（技術と心の健康の主張を資料で確かめる）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-005
+  - Q-006
+  - S-042
+- id: T-20
+  field: 数学
+  topic: HL の拡張：データの分析と解釈（量的と質的の結果、グラフの読み取り）
+  sources:
+  - PS03
+  - PS04
+  units:
+  - Q-006
+  - S-029
+  - S-030
+  - S-041
+- id: T-21
+  field: 心理学
+  topic: 理論と研究を評価し、主張を批判し、立場を正当化する（評価の目標 AO3）
+  sources:
+  - PS03
+  axis: わけ

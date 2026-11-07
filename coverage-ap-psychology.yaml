@@ -1,0 +1,298 @@
+# 網羅表：AP Psychology（College Board）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PS01:
+    title: College Board, AP Psychology Course and Exam Description（表紙 Effective Fall 2025、186 頁）
+    url: https://apcentral.collegeboard.org/media/pdf/ap-psychology-course-and-exam-description.pdf
+    date: 2026-11-08
+  PS02:
+    title: College Board, AP Central, AP Psychology（単元と出題比率、科学の実践）
+    url: https://apcentral.collegeboard.org/courses/ap-psychology
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 生命
+  topic: 1.1 遺伝と環境の相互作用（進化の見方、双生児・家族・養子の研究）
+  sources:
+  - PS01
+  units:
+  - Q-013
+  - B-024
+  - B-042
+- id: T-02
+  field: 生命
+  topic: 1.2 神経系の全体像
+  sources:
+  - PS01
+  units:
+  - B-034
+  - B-063
+- id: T-03
+  field: 生命
+  topic: 1.3 ニューロンと神経の発火
+  sources:
+  - PS01
+  units:
+  - B-034
+- id: T-04
+  field: 生命
+  topic: 1.4 脳
+  sources:
+  - PS01
+  units:
+  - B-063
+  - B-065
+- id: T-05
+  field: 生命
+  topic: 1.5 睡眠
+  sources:
+  - PS01
+  units:
+  - B-065
+- id: T-06
+  field: 心理学
+  topic: 1.6 感覚（閾値と丁度可知差異、ウェーバーの法則、視覚・聴覚・化学感覚のしくみ）
+  sources:
+  - PS01
+  units:
+  - Q-004
+  - B-063
+- id: T-07
+  field: 心理学
+  topic: 2.1 知覚
+  sources:
+  - PS01
+  units:
+  - Q-004
+- id: T-08
+  field: 心理学
+  topic: 2.2 思考、問題解決、判断と意思決定
+  sources:
+  - PS01
+  units:
+  - Q-008
+  - Q-009
+- id: T-09
+  field: 心理学
+  topic: 2.3 記憶の入口
+  sources:
+  - PS01
+  units:
+  - Q-005
+- id: T-10
+  field: 心理学
+  topic: 2.4 記憶の符号化
+  sources:
+  - PS01
+  units:
+  - Q-005
+- id: T-11
+  field: 心理学
+  topic: 2.5 記憶の貯蔵
+  sources:
+  - PS01
+  units:
+  - Q-005
+- id: T-12
+  field: 心理学
+  topic: 2.6 記憶の検索
+  sources:
+  - PS01
+  units:
+  - Q-005
+- id: T-13
+  field: 心理学
+  topic: 2.7 忘却と記憶の問題
+  sources:
+  - PS01
+  units:
+  - Q-005
+- id: T-14
+  field: 心理学
+  topic: 2.8 知能と学力
+  sources:
+  - PS01
+  units:
+  - Q-013
+- id: T-15
+  field: 心理学
+  topic: 3.1 発達心理学の主題と方法
+  sources:
+  - PS01
+  units:
+  - Q-010
+  - Q-006
+- id: T-16
+  field: 心理学
+  topic: 3.2 生涯のからだの発達（生まれる前、乳幼児期の反射と臨界期、思春期、成人期）
+  sources:
+  - PS01
+  units:
+  - Q-010
+  - I-049
+- id: T-17
+  field: 心理学
+  topic: 3.3 性と性別の発達
+  sources:
+  - PS01
+  units:
+  - Q-010
+  - Q-011
+- id: T-18
+  field: 心理学
+  topic: 3.4 生涯の認知の発達
+  sources:
+  - PS01
+  units:
+  - Q-010
+- id: T-19
+  field: 心理学
+  topic: 3.5 コミュニケーションと言語の発達
+  sources:
+  - PS01
+  units:
+  - Q-010
+  - Q-008
+- id: T-20
+  field: 心理学
+  topic: 3.6 生涯の社会性と情動の発達
+  sources:
+  - PS01
+  units:
+  - Q-010
+  - Q-012
+- id: T-21
+  field: 心理学
+  topic: 3.7 古典的条件づけ
+  sources:
+  - PS01
+  units:
+  - Q-007
+- id: T-22
+  field: 心理学
+  topic: 3.8 オペラント条件づけ
+  sources:
+  - PS01
+  units:
+  - Q-007
+- id: T-23
+  field: 心理学
+  topic: 3.9 学習にはたらく社会・認知・神経の要因（観察による学習、潜在学習、洞察）
+  sources:
+  - PS01
+  units:
+  - Q-007
+  - B-065
+- id: T-24
+  field: 心理学
+  topic: 4.1 帰属と人の認知
+  sources:
+  - PS01
+  units:
+  - Q-011
+- id: T-25
+  field: 心理学
+  topic: 4.2 態度の形成と変化
+  sources:
+  - PS01
+  units:
+  - Q-011
+- id: T-26
+  field: 心理学
+  topic: 4.3 社会的な状況の心理（同調、服従、集団）
+  sources:
+  - PS01
+  units:
+  - Q-011
+- id: T-27
+  field: 心理学
+  topic: 4.4 精神力動と人間性の性格理論（防衛機制、投影法）
+  sources:
+  - PS01
+  none: 地図にない（D-026 で入れない：精神分析と投影法は検証で支持されず、性格の研究は特性の測定に置き換わった。性格は Q-013 で扱う）
+- id: T-28
+  field: 心理学
+  topic: 4.5 社会的認知と特性の性格理論
+  sources:
+  - PS01
+  units:
+  - Q-013
+  - Q-011
+- id: T-29
+  field: 心理学
+  topic: 4.6 動機づけ
+  sources:
+  - PS01
+  units:
+  - Q-012
+- id: T-30
+  field: 心理学
+  topic: 4.7 情動
+  sources:
+  - PS01
+  units:
+  - Q-012
+- id: T-31
+  field: 心理学
+  topic: 5.1 健康心理学の入口（ストレスと対処）
+  sources:
+  - PS01
+  units:
+  - Q-018
+  - Q-012
+- id: T-32
+  field: 心理学
+  topic: 5.2 ポジティブ心理学（ウェルビーイング、回復力、心的外傷後の成長）
+  sources:
+  - PS01
+  units:
+  - Q-012
+  - Q-014
+- id: T-33
+  field: 心理学
+  topic: 5.3 心理的な障害の説明と分類
+  sources:
+  - PS01
+  units:
+  - Q-014
+- id: T-34
+  field: 心理学
+  topic: 5.4 心理的な障害の種類
+  sources:
+  - PS01
+  units:
+  - Q-014
+  - B-068
+- id: T-35
+  field: 心理学
+  topic: 5.5 心理的な障害の治療（心理療法と生物学的な治療）
+  sources:
+  - PS01
+  units:
+  - Q-014
+  - B-068
+- id: T-36
+  field: 心理学
+  topic: 科学の実践 2：研究の方法と計画（多肢選択の 25%）
+  sources:
+  - PS01
+  - PS02
+  units:
+  - Q-006
+  - S-031
+- id: T-37
+  field: 数学
+  topic: 科学の実践 3：データの解釈（記述統計、相関、正規分布、統計的な有意）
+  sources:
+  - PS01
+  - PS02
+  units:
+  - S-029
+  - S-030
+  - S-041
+- id: T-38
+  field: 心理学
+  topic: 科学の実践 4：論証（記述の問いで主張を立てて根拠で支える）
+  sources:
+  - PS01
+  - PS02
+  axis: わけ

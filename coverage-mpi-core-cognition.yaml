@@ -1,0 +1,76 @@
+# 網羅表：認知科学の研究者（Max Planck Institute for Biological Cybernetics）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PS06:
+    title: CORE Cognition, Max Planck Institute for Biological Cybernetics, Postdoctoral Researcher（E13 TVöD Bund、2026 年 10 月 1 日着任、7 月 10 日まで受付）
+    url: https://core-cognition.github.io/tex/postdoc-position.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 心理学
+  topic: 学位の分野：認知科学（知覚、記憶、学習、言語、判断）
+  sources:
+  - PS06
+  units:
+  - Q-004
+  - Q-005
+  - Q-007
+  - Q-008
+  - Q-009
+- id: T-02
+  field: 計算
+  topic: 学位の分野：計算機科学と機械学習
+  sources:
+  - PS06
+  units:
+  - K-046
+  - K-047
+  - K-050
+- id: T-03
+  field: 心理学
+  topic: 研究の方向：人の認知の基盤モデル（多くの場面の行動を模擬し、予測し、説明する統一的な計算のモデル）
+  sources:
+  - PS06
+  units:
+  - Q-017
+  - Q-015
+  - Q-016
+- id: T-04
+  field: 心理学
+  topic: 研究の方向：自然な場面（会話、ゲーム、プログラミング）の人の行動のモデル
+  sources:
+  - PS06
+  units:
+  - Q-017
+  - Q-016
+  - Q-008
+- id: T-05
+  field: 心理学
+  topic: 研究の方向：認知科学の発見の自動化
+  sources:
+  - PS06
+  units:
+  - Q-017
+  - Q-006
+- id: T-06
+  field: 計算
+  topic: 研究の方向：AI のアラインメント
+  sources:
+  - PS06
+  units:
+  - K-161
+- id: T-07
+  field: 計算
+  topic: プログラミング（Python、PyTorch など）
+  sources:
+  - PS06
+  units:
+  - K-012
+  - K-050
+- id: T-08
+  field: 計算
+  topic: 大規模言語モデルと深層学習の作業の流れ
+  sources:
+  - PS06
+  units:
+  - K-161
+  - K-051
