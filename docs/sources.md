@@ -1,6 +1,6 @@
 # 出典
 
-取得日はすべて 2026-11-07 です。記号の頭文字は調べの区分を表します（C は大会、L は教材と学習科学、A は AI）。
+取得日はすべて 2026-11-07 です。記号の頭文字は調べの区分を表します（C は大会、L は教材と学習科学、A は AI、O は数学オリンピックの論題）。
 
 利用条件の欄の書き方は次のとおりです。
 
@@ -115,6 +115,26 @@
 | A30 | TechCrunch | Google will soon start letting kids under 13 use its Gemini chatbot | 2025-05-02。報道 | https://techcrunch.com/2025/05/02/google-will-soon-start-letting-kids-under-13-use-its-gemini-chatbot | 未確認 |
 | A31 | 個人情報保護委員会 | 改正法の公布、令和 8 年改正個人情報保護法について | 2026-07-17。取得は 503、検索の抜粋 | https://www.ppc.go.jp/news/press/2026/260717/ 、https://www.ppc.go.jp/personalinfo/legal/r8kaiseihogohou/ | 未確認 |
 | A32 | 個人情報保護委員会 | 生成AIサービスの利用に関する注意喚起等 | 2023-06-02。検索の抜粋 | https://www.ppc.go.jp/news/press/2023/230602kouhou/ | 未確認 |
+
+
+## O 数学オリンピックの論題
+
+網羅表（coverage.yaml）の出典です。利用条件は [research/olympiad-topics.md](research/olympiad-topics.md) の出典の表にあります。
+
+| 記号 | 題名 | URL |
+|---|---|---|
+| O01 | 数学オリンピック財団「日本数学オリンピック 概要」 | https://www.imojp.org/domestic/jmo_overview.html |
+| O02 | 数学オリンピック財団「第 37 回 JMO 募集要項」 | https://www.imojp.org/domestic/jmo_apply.html |
+| O03 | 数学オリンピック財団「JMO 参考書案内」 | https://www.imojp.org/domestic/jmo_books.html |
+| O04 | Evan Chen, Unofficial syllabus for math olympiads (2023-01-31) | https://web.evanchen.cc/handouts/Syllabus/Syllabus.pdf |
+| O05 | Evan Chen, OTIS Unit Catalog | https://catalog.evanchen.cc/ |
+| O06 | Evan Chen, The OTIS Excerpts（目次） | https://web.evanchen.cc/textbooks/OTIS-Excerpts.pdf |
+| O07 | Evan Chen, Euclidean Geometry in Mathematical Olympiads（章の題） | https://web.evanchen.cc/textbooks/AGEST.pdf |
+| O08 | Evan Chen, Olympiad handouts | https://web.evanchen.cc/olympiad.html |
+| O09 | Arthur Engel, Problem-Solving Strategies（目次） | https://www.schweitzer-online.de/en/buch/Engel/Problem-Solving-Strategies/9780387982199/B330380/ |
+| O10 | HBCSE, Mathematical Olympiad Syllabus | https://olympiads.hbcse.tifr.res.in/syllabus/ |
+| O11 | ISI, Regional Mathematical Olympiad | https://www.isical.ac.in/~rmo/ |
+| O12 | IMO 2024 Shortlisted Problems（A、C、G、N の分類） | https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf |
 
 ## 取得できなかったページ
 

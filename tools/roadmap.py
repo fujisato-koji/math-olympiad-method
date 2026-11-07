@@ -25,7 +25,28 @@ def load():
     problems = {}
     for p in sorted((ROOT / "units").glob("*.yaml")):
         problems[p.stem] = yaml.safe_load(p.read_text(encoding="utf-8"))
+    cov = ROOT / "coverage.yaml"
+    data["coverage"] = yaml.safe_load(cov.read_text(encoding="utf-8")) if cov.exists() else None
     return data, problems
+
+
+def check_coverage(cov, units):
+    """網羅表：どの論題にも、受け持つ単元（units）か、入れない理由（none）がある。"""
+    errors, seen = [], set()
+    for item in cov.get("items", []):
+        iid = item.get("id", "?")
+        if iid in seen:
+            errors.append(f"網羅表 {iid}: 二重")
+        seen.add(iid)
+        if bool(item.get("units")) == bool(item.get("none")):
+            errors.append(f"網羅表 {iid}: units か none のどちらか一方を書く")
+        for uid in item.get("units") or []:
+            if uid not in units:
+                errors.append(f"網羅表 {iid}: 単元 {uid} が地図にない")
+        for s in item.get("sources") or []:
+            if s not in cov.get("sources", {}):
+                errors.append(f"網羅表 {iid}: 出典 {s} が sources にない")
+    return errors
 
 
 def expand(unit):
@@ -123,7 +144,34 @@ def check(data, problems):
                         continue
                     if str(got) != str(item.get("answer")):
                         errors.append(f"{where}: 答え {item.get('answer')} と check の値 {got} が違う")
+    if data.get("coverage"):
+        errors += check_coverage(data["coverage"], units)
     return errors
+
+
+def build_coverage(cov, titles):
+    lines = ["# 網羅表", "",
+             "この頁は `tools/roadmap.py build` が `coverage.yaml` から作ります。手で直さないでください。",
+             "IMO と JMO に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
+    items = cov.get("items", [])
+    covered = sum(1 for i in items if i.get("units"))
+    lines += [f"論題 {len(items)} のうち、単元が受け持つもの {covered}、入れないもの {len(items) - covered}。", ""]
+    fields = []
+    for i in items:
+        if i["field"] not in fields:
+            fields.append(i["field"])
+    for f in fields:
+        lines += [f"## {f}", "", "| 記号 | 論題 | 受け持つ単元 | 出典 |", "|---|---|---|---|"]
+        for i in items:
+            if i["field"] != f:
+                continue
+            where = "、".join(f"{u} {titles[u]}" for u in i["units"]) if i.get("units") else f"入れない（{i['none']}）"
+            lines.append(f"| {i['id']} | {i['topic']} | {where} | {'、'.join(i.get('sources') or [])} |")
+        lines.append("")
+    lines += ["## 出典", "", "| 記号 | 題名 | URL | 取得日 |", "|---|---|---|---|"]
+    for k, s in cov.get("sources", {}).items():
+        lines.append(f"| {k} | {s['title']} | {s['url']} | {s.get('date', '')} |")
+    (ROOT / "docs" / "coverage.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def build(data, problems):
@@ -165,6 +213,8 @@ def build(data, problems):
                          f"{f'{ready} 日分' if ready else '—'} |")
         lines.append("")
     (ROOT / "docs" / "roadmap.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
+    if data.get("coverage"):
+        build_coverage(data["coverage"], {u["id"]: u["title"] for u in out_units})
     return len(out_units), total
 
 

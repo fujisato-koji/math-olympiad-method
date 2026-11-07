@@ -27,6 +27,7 @@ AI と人（保護者や指導者）が組んで回すことを前提にして�
 - [docs/01-requirements.md](docs/01-requirements.md)：要求整理（R-01〜R-31、ぶつかり、判断待ち）
 - [docs/02-structure.md](docs/02-structure.md)：構造（組み合わせなしのフロー、問題の書き方、画面）
 - [docs/roadmap.md](docs/roadmap.md)：段ごとの単元の一覧（道具が作る）
+- [docs/coverage.md](docs/coverage.md)：網羅表（IMO に要る 103 論題と受け持つ単元、道具が作る）
 - [docs/decisions.md](docs/decisions.md)：決まったこと
 - [docs/research/](docs/research/)：調べたこと（大会の梯子、教材と学習科学、AI）
 - [docs/sources.md](docs/sources.md)：出典の一覧
