@@ -1,0 +1,97 @@
+# 網羅表：神経科学の大きな未解決問題（意識、記憶、眠り、脳の配線と働き）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP120:
+    title: G. Miller, What Is the Biological Basis of Consciousness?（Science 309, 79 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.79
+    date: '2026-11-08'
+  OP121:
+    title: G. Miller, How Are Memories Stored and Retrieved?（Science 309, 92 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.92
+    date: '2026-11-08'
+  OP122:
+    title: W. J. Koroshetz ほか, The State of the NIH BRAIN Initiative（J. Neurosci. 38, 6427 (2018)。BRAIN 2025 の 7 つの優先領域。nih.gov の報告は 403 で取れなかった）
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6052245/
+    date: '2026-11-08'
+  OP123:
+    title: Cogitate Consortium, Adversarial testing of global neuronal workspace and integrated information theories of consciousness（Nature 642, 133 (2025)）
+    url: https://www.nature.com/articles/s41586-025-08888-1
+    date: '2026-11-08'
+  OP124:
+    title: S. Dorkenwald ほか（FlyWire）, Neuronal wiring diagram of an adult brain（Nature 634, 124 (2024)）
+    url: https://www.nature.com/articles/s41586-024-07558-y
+    date: '2026-11-08'
+  OP125:
+    title: MICrONS Consortium, Functional connectomics spanning multiple areas of mouse visual cortex（Nature 640, 435 (2025)）
+    url: https://www.nature.com/articles/s41586-025-08790-w
+    date: '2026-11-08'
+  OP126:
+    title: 'S. A. Josselyn, S. Tonegawa, Memory engrams: Recalling the past and imagining the future（Science 367, eaaw4325 (2020)、MIT の公開版）'
+    url: https://dspace.mit.edu/handle/1721.1/126261
+    date: '2026-11-08'
+  OP127:
+    title: 'E. Mignot, Why We Sleep: The Temporal Organization of Recovery（PLoS Biol. 6, e106 (2008)。NINDS の頁は 403 で取れなかった）'
+    url: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060106
+    date: '2026-11-08'
+  OP128:
+    title: V. Trubetskoy ほか, Mapping genomic loci implicates genes and synaptic biology in schizophrenia（Nature 604, 502 (2022)）
+    url: https://www.nature.com/articles/s41586-022-04434-5
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 意識
+  topic: 意識の生物学的基盤：脳のどの働きが意識を生むのか（未解決。統合情報理論と全体作業空間理論を事前登録で比べた敵対的共同研究（2025）は、どちらの中心の主張も揺るがした）
+  sources:
+  - OP120
+  - OP123
+  units:
+  - B-114
+  - B-065
+  - B-063
+- id: T-02
+  field: 記憶
+  topic: 記憶の蓄えと取り出し：記憶は脳のどこにどう残り、どう思い出されるか（一部解決。記憶の痕跡（エングラム）の細胞を観察し操作できるようになった）
+  sources:
+  - OP121
+  - OP126
+  units:
+  - B-065
+  - B-052
+  - B-067
+- id: T-03
+  field: 回路
+  topic: 脳の配線図から働きへ：結線図で脳の計算を説明できるか（一部解決。成虫のショウジョウバエの全脳 139,255 ニューロン（2024）とマウスの視覚野 約 1 mm³（2025）の結線図はできたが、働きの説明は途上）
+  sources:
+  - OP122
+  - OP124
+  - OP125
+  units:
+  - B-067
+  - B-066
+  - B-063
+- id: T-04
+  field: 計算の原理
+  topic: 脳の基本原理：神経の活動は情報をどう表し、どう計算するか（未解決。BRAIN 2025 の優先領域の 1 つ）
+  sources:
+  - OP122
+  units:
+  - B-066
+  - K-047
+  - S-022
+- id: T-05
+  field: 眠り
+  topic: 眠りの働き：なぜ眠らなければならないのか（未解決。眠りは水や食べ物と同じく欠かせないのに、なぜ要るのかは分かっていない）
+  sources:
+  - OP127
+  units:
+  - B-065
+  - B-035
+  - B-039
+- id: T-06
+  field: 脳の病気
+  topic: 精神疾患の仕組み：統合失調症などはどう起きるか（一部解決。ゲノムの 287 の領域が関わると分かった（2022）が、病気が起きる仕組みは途上）
+  sources:
+  - OP128
+  units:
+  - B-068
+  - B-002
+  - K-114

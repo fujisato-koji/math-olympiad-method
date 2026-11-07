@@ -1,0 +1,120 @@
+# 網羅表：工学の大きな未解決問題（核融合の発電、炭素の回収、きれいな水など）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP124:
+    title: S. Dorkenwald ほか（FlyWire）, Neuronal wiring diagram of an adult brain（Nature 634, 124 (2024)）
+    url: https://www.nature.com/articles/s41586-024-07558-y
+    date: '2026-11-08'
+  OP125:
+    title: MICrONS Consortium, Functional connectomics spanning multiple areas of mouse visual cortex（Nature 640, 435 (2025)）
+    url: https://www.nature.com/articles/s41586-025-08790-w
+    date: '2026-11-08'
+  OP138:
+    title: Google Quantum AI and Collaborators, Quantum error correction below the surface code threshold（Nature 638, 920 (2025)）
+    url: https://arxiv.org/abs/2408.13687
+    date: '2026-11-08'
+  OP150:
+    title: National Academies, 21st Century's Grand Engineering Challenges Unveiled（NAE Grand Challenges for Engineering、2008-02-15）
+    url: https://www.nationalacademies.org/news/21-centurys-grand-engineering-challenges-unveiled
+    date: '2026-11-08'
+  OP151:
+    title: U.S. DOE, DOE National Laboratory Makes History by Achieving Fusion Ignition（2022-12-12）
+    url: https://www.energy.gov/articles/doe-national-laboratory-makes-history-achieving-fusion-ignition
+    date: '2026-11-08'
+  OP152:
+    title: LLNL, Achieving Fusion Ignition（NIF の実験の記録）
+    url: https://lmf.llnl.gov/science/achieving-fusion-ignition
+    date: '2026-11-08'
+  OP153:
+    title: LLNL, LLNL's breakthrough ignition experiment highlighted in Physical Review Letters（2024-02-05）
+    url: https://lmf.llnl.gov/news/llnls-breakthrough-ignition-experiment-highlighted-in-physical-review-letters
+    date: '2026-11-08'
+  OP154:
+    title: IRENA, Renewable Power Generation Costs in 2024（要約、2025-07）
+    url: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2025/Jul/IRENA_TEC_RPGC_in_2024_Summary_2025.pdf
+    date: '2026-11-08'
+  OP155:
+    title: IRENA, Renewable Power Generation Costs in 2025（要旨、2026-07）
+    url: https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2026/Jul/IRENA_TEC_RPGC_2025_Executive_summary_2026.pdf
+    date: '2026-11-08'
+  OP156:
+    title: IEA, Policy and financing momentum sustain CCUS progress despite setbacks（2026-03-27）
+    url: https://www.iea.org/commentaries/policy-and-financing-momentum-sustain-ccus-progress-despite-setbacks
+    date: '2026-11-08'
+  OP157:
+    title: IEA, CCUS projects around the world are reaching new milestones（2025-04-30）
+    url: https://www.iea.org/commentaries/ccus-projects-around-the-world-are-reaching-new-milestones
+    date: '2026-11-08'
+  OP158:
+    title: WHO・UNICEF, 1 in 4 people globally still lack access to safe drinking water（JMP 2025、2025-08-26）
+    url: https://www.who.int/news/item/26-08-2025-1-in-4-people-globally-still-lack-access-to-safe-drinking-water---who--unicef
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: エネルギー
+  topic: 核融合からエネルギーを得る（一部解決。NIF は 2022 年に点火し、2025 年にレーザー 2.08 MJ から 8.6 MJ（利得 4.13）。施設の消費を含めた正味の発電は未達）
+  sources:
+  - OP150
+  - OP151
+  - OP152
+  - OP153
+  units:
+  - P-041
+  - P-106
+  - E-015
+  - E-040
+- id: T-02
+  field: エネルギー
+  topic: 太陽エネルギーを安くする（一部解決。太陽光の発電単価は 2010 年から約 9 割下がり、新設の 9 割が最も安い化石燃料より安い（2025）。課題は系統への統合へ移った）
+  sources:
+  - OP150
+  - OP154
+  - OP155
+  units:
+  - E-160
+  - E-170
+  - H-048
+- id: T-03
+  field: 環境
+  topic: 炭素の回収と貯留（未解決。稼働は年約 5 千万トンで、ネットゼロへの道筋に届かない）
+  sources:
+  - OP150
+  - OP156
+  - OP157
+  units:
+  - W-033
+  - H-043
+  - E-041
+  - W-029
+- id: T-04
+  field: 水
+  topic: きれいな水をすべての人に（未解決。2024 年に 21 億人が安全に管理された飲み水を得られず、2030 年に全員に届ける目標は遠のいている）
+  sources:
+  - OP150
+  - OP158
+  units:
+  - H-021
+  - H-043
+  - E-024
+  - E-040
+- id: T-05
+  field: 計算機
+  topic: 誤り耐性の量子計算機をつくる（一部解決。符号距離 7 で論理誤りが閾値より下がることを 2024 年に実証したが、役に立つ規模には届いていない）
+  sources:
+  - OP138
+  units:
+  - K-176
+  - K-166
+  - P-099
+  - P-087
+- id: T-06
+  field: 脳
+  topic: 脳を逆工学する（一部解決。ハエの全脳とマウスの視覚野の一部の結線図はできたが、脳の働きを機械で再現するには届いていない）
+  sources:
+  - OP150
+  - OP124
+  - OP125
+  units:
+  - B-067
+  - B-066
+  - E-169
+  - K-047

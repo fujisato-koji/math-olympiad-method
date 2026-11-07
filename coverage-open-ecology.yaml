@@ -1,0 +1,98 @@
+# 網羅表：生態学の大きな未解決問題（種の多様性、共存、生態系の転換点など）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP110:
+    title: W. J. Sutherland ほか, Identification of 100 fundamental ecological questions（J. Ecology 101, 58 (2013)、受理稿）
+    url: https://wrap.warwick.ac.uk/62738/
+    date: '2026-11-08'
+  OP111:
+    title: E. Pennisi, What Determines Species Diversity?（Science 309, 90 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.90
+    date: '2026-11-08'
+  OP112:
+    title: E. Pennisi, How Did Cooperative Behavior Evolve?（Science 309, 93 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.93
+    date: '2026-11-08'
+  OP113:
+    title: C. Mora ほか, How Many Species Are There on Earth and in the Ocean?（PLoS Biol. 9, e1001127 (2011)）
+    url: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001127
+    date: '2026-11-08'
+  OP114:
+    title: M. Scheffer ほか, Early-warning signals for critical transitions（Nature 461, 53 (2009)）
+    url: https://www.nature.com/articles/nature08227
+    date: '2026-11-08'
+  OP115:
+    title: V. Dakos ほか, Tipping point detection and early warnings in climate, ecological, and human systems（Earth Syst. Dynam. 15, 1117 (2024)）
+    url: https://esd.copernicus.org/articles/15/1117/2024/
+    date: '2026-11-08'
+  OP116:
+    title: R. M. May, Will a Large Complex System be Stable?（Nature 238, 413 (1972)）
+    url: https://www.nature.com/articles/238413a0
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 多様性
+  topic: 種の多様性を決めるもの：熱帯にはなぜ種が多いのか、環境の不均一さと進化の歴史はどう効くか（未解決）
+  sources:
+  - OP110
+  - OP111
+  units:
+  - B-056
+  - B-059
+  - B-060
+- id: T-02
+  field: 群集
+  topic: 種の共存：ある場所で何種が共存できるかを、仕組みから予測できるか（未解決）
+  sources:
+  - OP110
+  units:
+  - B-056
+  - B-055
+  - B-062
+- id: T-03
+  field: 群集
+  topic: 複雑さと安定性：種のつながりの網の構造は、生態系の働きと安定性にどう効くか（未解決。May（1972）は、無作為につないだ大きな系はつながりが臨界を越えると不安定になると示したが、実際の生態系は複雑でも続いている）
+  sources:
+  - OP110
+  - OP116
+  units:
+  - B-056
+  - B-062
+  - S-032
+- id: T-04
+  field: 多様性
+  topic: 地球に何種の生き物がいるか（未解決。真核生物は約 870 万種（標準誤差 130 万）と推定され、その 86% はまだ記載されていない。細菌などの微生物は含まない）
+  sources:
+  - OP113
+  units:
+  - B-025
+  - B-061
+  - K-118
+- id: T-05
+  field: 生態系
+  topic: 生態系の転換点：森や湖が急に別の状態に変わる前に気づけるか（一部解決。転換の前に共通の早期警戒信号がありうると示され（2009）、多くの事例で検出できたが、後から当てはめた例が多い）
+  sources:
+  - OP110
+  - OP114
+  - OP115
+  units:
+  - B-057
+  - B-062
+  - P-020
+- id: T-06
+  field: 生態系
+  topic: 生態系の応答の予測：種の性質から、環境の変化への生態系の応答を予測できるか、これまでの予測はどれだけ当たったか（未解決）
+  sources:
+  - OP110
+  units:
+  - B-057
+  - B-060
+  - B-061
+- id: T-07
+  field: 行動と進化
+  topic: 協力行動の進化：自分が損をしてほかを助ける行動はどう進化したか（未解決）
+  sources:
+  - OP112
+  units:
+  - B-058
+  - F-024
+  - B-002

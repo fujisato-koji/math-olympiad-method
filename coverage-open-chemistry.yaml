@@ -1,0 +1,120 @@
+# 網羅表：化学の大きな未解決問題（生命のキラリティ、人工光合成、周期表の果てなど）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP050:
+    title: '上海交通大学・Science/AAAS, 125 Questions: Exploration and Discovery（2021、12 分野の 125 問の全文。science.org の頁は 403 で、上海交通大学の掲載で確かめた）'
+    url: https://news.sjtu.edu.cn/mtjj/20210412/145693.html
+    date: '2026-11-08'
+  OP051:
+    title: R. F. Service, How Far Can We Push Chemical Self-Assembly?（Science 309, 95 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.95
+    date: '2026-11-08'
+  OP052:
+    title: D. G. Blackmond, The Origin of Biological Homochirality（Cold Spring Harb. Perspect. Biol. 2, a002147 (2010)）
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2857173/
+    date: '2026-11-08'
+  OP053:
+    title: S. Z. Andersen ほか, A rigorous electrochemical ammonia synthesis protocol with quantitative isotope measurements（Nature 570, 504 (2019)）
+    url: https://doi.org/10.1038/s41586-019-1260-x
+    date: '2026-11-08'
+  OP054:
+    title: T. Takata ほか, Photocatalytic water splitting with a quantum efficiency of almost unity（Nature 581, 411 (2020)）
+    url: https://doi.org/10.1038/s41586-020-2278-9
+    date: '2026-11-08'
+  OP055:
+    title: H. Nishiyama ほか, Photocatalytic solar hydrogen production from water on a 100-m2 scale（Nature 598, 304 (2021)）
+    url: https://doi.org/10.1038/s41586-021-03907-3
+    date: '2026-11-08'
+  OP056:
+    title: P. Zhou ほか, Solar-to-hydrogen efficiency of more than 9% in photocatalytic water splitting（Nature 613, 66 (2023)）
+    url: https://doi.org/10.1038/s41586-022-05399-1
+    date: '2026-11-08'
+  OP057:
+    title: 'L. M. Hunnisett ほか, The seventh blind test of crystal structure prediction: structure generation methods（Acta Cryst. B 80, 517 (2024)）'
+    url: https://doi.org/10.1107/S2052520624007492
+    date: '2026-11-08'
+  OP060:
+    title: 'J. M. Gates ほか, Toward the Discovery of New Elements: Production of Livermorium (Z=116) with 50Ti（PRL 133, 172502 (2024)）'
+    url: https://arxiv.org/abs/2407.16079
+    date: '2026-11-08'
+  OP061:
+    title: ORNL ほか, 120 番元素の探索のための標的の製作（INTDS2026 の講演要旨、理研、2026-09）
+    url: https://indico2.riken.jp/event/5355/contributions/28965/
+    date: '2026-11-08'
+  OP062:
+    title: K. Burke, Perspective on density functional theory（J. Chem. Phys. 136, 150901 (2012)）
+    url: https://arxiv.org/abs/1201.3679
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 生命の化学
+  topic: 生命のホモキラリティの起源：生き物のアミノ酸と糖はなぜ鏡像の片方だけなのか（未解決）
+  sources:
+  - OP050
+  - OP052
+  units:
+  - H-038
+  - H-037
+  - H-090
+  - B-028
+- id: T-02
+  field: 超分子
+  topic: 化学の自己組織化はどこまで押し進められるか：分子が自分で組み上がって複雑な構造と働きをつくる（一部解決。程度を問う問いで、研究が続く）
+  sources:
+  - OP051
+  units:
+  - H-054
+  - P-103
+  - B-003
+- id: T-03
+  field: 触媒
+  topic: 常温常圧の窒素固定：ハーバー–ボッシュ法の高温高圧を使わずにアンモニアをつくれるか（一部解決。窒素の同位体で汚染を除くと多くの報告は再現せず、リチウムを介する方法だけが確かめられた（2019））
+  sources:
+  - OP053
+  units:
+  - H-091
+  - H-052
+  - H-048
+  - H-030
+- id: T-04
+  field: エネルギーの化学
+  topic: 人工光合成：太陽の光で水を分解して燃料をつくれるか（一部解決。紫外の光では量子効率がほぼ 1（2020）だが、太陽光から水素への効率は 100 m² のパネルで 0.76%（2021）、集光して 9.2%（2023））
+  sources:
+  - OP054
+  - OP055
+  - OP056
+  units:
+  - H-091
+  - H-048
+  - E-160
+  - B-030
+- id: T-05
+  field: 固体の化学
+  topic: 結晶構造の予測：化学式だけから結晶の中の分子の並び方を予測できるか（一部解決。第 7 回ブラインドテスト（2024）では小さな分子は当たるが、複雑な系と乱れは難しい）
+  sources:
+  - OP057
+  units:
+  - H-092
+  - H-019
+  - H-053
+  - H-055
+- id: T-06
+  field: 元素
+  topic: 周期表は完成するか：119 番より重い元素はつくれるか、安定の島はあるか（未解決。2024 年にチタン 50 のビームで 116 番元素をつくり、120 番を探している。119 番と 120 番は 2026 年時点で見つかっていない）
+  sources:
+  - OP050
+  - OP060
+  - OP061
+  units:
+  - H-012
+  - P-106
+  - P-086
+  - H-045
+- id: T-07
+  field: 理論化学
+  topic: 密度汎関数法の交換相関汎関数：電子どうしの相関を正確に表す汎関数をつくれるか（未解決。実用の汎関数は近似で、系統的に良くする道がない）
+  sources:
+  - OP062
+  units:
+  - H-055
+  - P-082
+  - P-100

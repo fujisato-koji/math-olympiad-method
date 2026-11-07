@@ -1,0 +1,98 @@
+# 網羅表：生物学の大きな未解決問題（生命の起源、真核細胞の誕生、再生など）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP070:
+    title: C. Zimmer, How and Where Did Life on Earth Arise?（Science 309, 89 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.89
+    date: '2026-11-08'
+  OP071:
+    title: H. Imachi ほか, Isolation of an archaeon at the prokaryote–eukaryote interface（Nature 577, 519 (2020)）
+    url: https://doi.org/10.1038/s41586-019-1916-6
+    date: '2026-11-08'
+  OP072:
+    title: L. Eme ほか, Inference and reconstruction of the heimdallarchaeial ancestry of eukaryotes（Nature 618, 992 (2023)）
+    url: https://doi.org/10.1038/s41586-023-06186-2
+    date: '2026-11-08'
+  OP073:
+    title: R. J. Davenport, What Controls Organ Regeneration?（Science 309, 84 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.84
+    date: '2026-11-08'
+  OP074:
+    title: G. Vogel, How Can a Skin Cell Become a Nerve Cell?（Science 309, 85 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.85
+    date: '2026-11-08'
+  OP075:
+    title: The Nobel Assembly at Karolinska Institutet, The Nobel Prize in Physiology or Medicine 2012（報道発表。nobelprize.org は 403 で、Nobel Assembly の PDF で確かめた）
+    url: https://mb.cision.com/Main/4586/9314510/52244.pdf
+    date: '2026-11-08'
+  OP076:
+    title: E. Culotta, What Genetic Changes Made Us Uniquely Human?（Science 309, 91 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.91
+    date: '2026-11-08'
+  OP078:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Chemistry 2024（2024-10-09）
+    url: https://kva.se/en/news/the-nobel-prize-in-chemistry-2024
+    date: '2026-11-08'
+  OP079:
+    title: J. Jumper ほか, Highly accurate protein structure prediction with AlphaFold（Nature 596, 583 (2021)）
+    url: https://doi.org/10.1038/s41586-021-03819-2
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 生命の起源
+  topic: 生命の起源：地球の生命はどこでどう生まれたか（未解決）
+  sources:
+  - OP070
+  units:
+  - B-027
+  - H-090
+  - B-032
+  - W-036
+- id: T-02
+  field: 細胞の進化
+  topic: 真核細胞の起源：核やミトコンドリアをもつ細胞はどう生まれたか（一部解決。祖先はアスガルド古細菌の中のホダルケア類に近いと絞られた（2023）が、融合の過程は分かっていない）
+  sources:
+  - OP071
+  - OP072
+  units:
+  - B-110
+  - B-011
+  - B-010
+- id: T-03
+  field: 再生
+  topic: 器官の再生を制御するもの：イモリは手足をつくり直せるのに、人はなぜできないのか（未解決）
+  sources:
+  - OP073
+  units:
+  - B-046
+  - B-054
+  - B-044
+- id: T-04
+  field: 細胞の運命
+  topic: 細胞の運命の転換：皮膚の細胞を神経の細胞に変えられるか（方法は解決。成熟した細胞を多能性の状態に初期化できることの発見で 2012 年のノーベル賞。初期化の仕組みの全体は研究中）
+  sources:
+  - OP074
+  - OP075
+  units:
+  - B-054
+  - B-044
+  - B-009
+- id: T-05
+  field: 人類の進化
+  topic: 人を人にした遺伝的変化：人とチンパンジーを分けた遺伝子の変化は何か（未解決）
+  sources:
+  - OP076
+  units:
+  - B-011
+  - B-002
+  - K-118
+- id: T-06
+  field: タンパク質
+  topic: タンパク質の折りたたみ：アミノ酸の並びから立体構造と動きを予測できるか（一部解決。1 本の鎖の静的な構造は実験に迫る精度で予測でき、2024 年のノーベル化学賞。動き、複合体、折りたたみの道筋は残る）
+  sources:
+  - OP078
+  - OP079
+  units:
+  - B-013
+  - B-014
+  - K-111
+  - K-117

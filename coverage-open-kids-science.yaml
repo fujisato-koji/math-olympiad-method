@@ -1,0 +1,262 @@
+# 網羅表：子どもでも問いが分かる理科の未解決問題（宇宙はなぜ物質でできているのか、生命はどう始まったかなど）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OP001:
+    title: 'Particle Physics Project Prioritization Panel（P5、HEPAP）, Exploring the Quantum Universe: Pathways to Innovation and Discovery in Particle Physics（2023、arXiv:2407.19176）'
+    url: https://www.usparticlephysics.org/2023-p5-report/
+    date: '2026-11-08'
+  OP004:
+    title: C. Seife, What Is the Universe Made Of?（Science 309, 78 (2005)。書誌を Crossref で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.78a
+    date: '2026-11-08'
+  OP006:
+    title: LHCb Collaboration, Observation of charge–parity symmetry breaking in baryon decays（Nature 643, 1223 (2025)）
+    url: https://arxiv.org/abs/2503.16954
+    date: '2026-11-08'
+  OP009:
+    title: LZ Collaboration, Dark Matter Search Results from 4.2 Tonne-Years of Exposure of the LZ Experiment（PRL 2025）
+    url: https://arxiv.org/abs/2410.17036
+    date: '2026-11-08'
+  OP010:
+    title: LZ Collaboration, 拡張した原子核反跳のエネルギーの窓での暗黒物質の探索（2026-09、1 事象 248 keV、大域 2.6σ）
+    url: https://arxiv.org/abs/2609.02823
+    date: '2026-11-08'
+  OP013:
+    title: CERN, A new piece in the matter–antimatter puzzle（2025-03-25）
+    url: https://home.cern/new-piece-matter-antimatter-puzzle
+    date: '2026-11-08'
+  OP020:
+    title: National Academies of Sciences, Engineering, and Medicine, Pathways to Discovery in Astronomy and Astrophysics for the 2020s（Astro2020、2021）
+    url: https://doi.org/10.17226/26141
+    date: '2026-11-08'
+  OP021:
+    title: 'DESI Collaboration, DESI DR2 Results II: Measurements of Baryon Acoustic Oscillations and Cosmological Constraints（PRD 112, 083515 (2025)）'
+    url: https://arxiv.org/abs/2503.14738
+    date: '2026-11-08'
+  OP022:
+    title: DESI Collaboration, DESI DR2 Results IV（2026-07）
+    url: https://arxiv.org/abs/2607.27410
+    date: '2026-11-08'
+  OP027:
+    title: N. Madhusudhan ほか, New Constraints on DMS and DMDS in the Atmosphere of K2-18 b from JWST MIRI（ApJL 983, L40 (2025)）
+    url: https://arxiv.org/abs/2504.12267
+    date: '2026-11-08'
+  OP028:
+    title: R. Luque ほか, Insufficient evidence for DMS and DMDS in the atmosphere of K2-18 b（A&A 700, A284 (2025)）
+    url: https://arxiv.org/abs/2505.13407
+    date: '2026-11-08'
+  OP050:
+    title: '上海交通大学・Science/AAAS, 125 Questions: Exploration and Discovery（2021、12 分野の 125 問の全文。science.org の頁は 403 で、上海交通大学の掲載で確かめた）'
+    url: https://news.sjtu.edu.cn/mtjj/20210412/145693.html
+    date: '2026-11-08'
+  OP052:
+    title: D. G. Blackmond, The Origin of Biological Homochirality（Cold Spring Harb. Perspect. Biol. 2, a002147 (2010)）
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2857173/
+    date: '2026-11-08'
+  OP070:
+    title: C. Zimmer, How and Where Did Life on Earth Arise?（Science 309, 89 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.89
+    date: '2026-11-08'
+  OP100:
+    title: 'National Academies, A Vision for NSF Earth Sciences 2020-2030: Earth in Time（2020、12 の優先の問い）'
+    url: https://www.nationalacademies.org/read/25761/chapter/2
+    date: '2026-11-08'
+  OP101:
+    title: USGS, Can you predict earthquakes?（FAQ、2026-11-04 更新）
+    url: https://www.usgs.gov/faqs/can-you-predict-earthquakes
+    date: '2026-11-08'
+  OP107:
+    title: USGS, Earthquakes for Kids
+    url: https://www.usgs.gov/programs/earthquake-hazards/earthquakes-kids
+    date: '2026-11-08'
+  OP111:
+    title: E. Pennisi, What Determines Species Diversity?（Science 309, 90 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.90
+    date: '2026-11-08'
+  OP113:
+    title: C. Mora ほか, How Many Species Are There on Earth and in the Ocean?（PLoS Biol. 9, e1001127 (2011)）
+    url: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001127
+    date: '2026-11-08'
+  OP120:
+    title: G. Miller, What Is the Biological Basis of Consciousness?（Science 309, 79 (2005)。書誌を PubMed で確かめた）
+    url: https://doi.org/10.1126/science.309.5731.79
+    date: '2026-11-08'
+  OP123:
+    title: Cogitate Consortium, Adversarial testing of global neuronal workspace and integrated information theories of consciousness（Nature 642, 133 (2025)）
+    url: https://www.nature.com/articles/s41586-025-08888-1
+    date: '2026-11-08'
+  OP127:
+    title: 'E. Mignot, Why We Sleep: The Temporal Organization of Recovery（PLoS Biol. 6, e106 (2008)。NINDS の頁は 403 で取れなかった）'
+    url: https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.0060106
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 問い
+  topic: 宇宙はなぜ物質でできているのか（問い）：物は小さな粒（原子）でできている。宇宙のはじめには、物と同じだけ反対の性質の粒（反物質）が生まれたはずなのに、いまの宇宙にはほとんど物だけが残っているのはなぜか（未解決）
+  sources:
+  - OP013
+  units:
+  - H-003
+  - H-008
+  - H-011
+  - W-044
+  - W-046
+- id: T-02
+  field: 攻め方
+  topic: 宇宙はなぜ物質でできているのかの攻め方：粒子と反粒子の振る舞いの違い（CP 対称性の破れ）を加速器で測る、ニュートリノの性質を調べる、宇宙のはじめの熱い時代に物質が生まれる理論（バリオン数生成）を立てる（LHCb が 2025 年にバリオンでの破れを初めて観測したが、量が桁違いに足りない）
+  sources:
+  - OP001
+  - OP006
+  - OP013
+  units:
+  - P-108
+  - P-220
+  - P-067
+  - P-065
+- id: T-03
+  field: 問い
+  topic: 宇宙の大部分は何でできているのか（問い）：宇宙の中身を重さ（エネルギー）の割合で表すと、星や銀河など光で見える物はほんの一部にすぎない。残りの見えない物質（暗黒物質）と、膨張を速める何か（暗黒エネルギー）の正体は何か（未解決）
+  sources:
+  - OP004
+  - OP020
+  units:
+  - W-044
+  - W-046
+  - G-046
+  - A-005
+  - S-027
+- id: T-04
+  field: 攻め方
+  topic: 宇宙の大部分は何でできているのかの攻め方：銀河の回り方と重力レンズ、地下の検出器で暗黒物質の粒子を直接探す、銀河の地図で膨張の歴史を測る（2026 年の LZ の 1 事象と DESI の時間変化の兆しは、どちらも発見の水準に届いていない）
+  sources:
+  - OP009
+  - OP010
+  - OP021
+  - OP022
+  units:
+  - P-222
+  - P-228
+  - P-169
+  - P-064
+- id: T-05
+  field: 問い
+  topic: 生命はどう始まったか（問い）：生き物は細胞でできていて、細胞は原子の組み合わせでできている。生き物でない物から、最初の生き物はどこでどうやって生まれたのか（未解決）
+  sources:
+  - OP070
+  units:
+  - B-015
+  - B-022
+  - H-008
+  - B-027
+- id: T-06
+  field: 攻め方
+  topic: 生命はどう始まったかの攻め方：生命の材料（アミノ酸、糖、核酸）が自然にできる反応を実験で再現する、自分を写す RNA（RNA ワールド）、生き物の分子がなぜ鏡像の片方だけなのか（ホモキラリティ）、初期の地球の環境を岩石から読む
+  sources:
+  - OP050
+  - OP052
+  - OP070
+  units:
+  - H-090
+  - B-032
+  - W-036
+  - H-038
+- id: T-07
+  field: 問い
+  topic: 地球の外に生き物はいるか（問い）：生き物には水と栄養とエネルギーがいる。太陽系のほかの天体や、遠くの星のまわりの惑星に生き物はいるのか（未解決）
+  sources:
+  - OP020
+  units:
+  - B-015
+  - B-021
+  - H-002
+  - W-044
+  - W-046
+- id: T-08
+  field: 攻め方
+  topic: 地球の外に生き物はいるかの攻め方：生命の住める惑星を見つける、惑星の大気の光を分けて生き物がつくる気体を探す（K2-18b の主張（2025）は再解析で有意でないとされた）、太陽系の海をもつ衛星を探査する
+  sources:
+  - OP020
+  - OP027
+  - OP028
+  units:
+  - B-111
+  - P-171
+  - P-131
+- id: T-09
+  field: 問い
+  topic: 意識とは何か（問い）：見る、聞く、感じるとき、脳の中で何が起きて「感じている自分」が生まれるのか（未解決）
+  sources:
+  - OP120
+  units:
+  - B-020
+  - B-034
+- id: T-10
+  field: 攻め方
+  topic: 意識とは何かの攻め方：意識があるときとないときの脳の活動を比べる（意識の神経相関）、統合情報理論と全体作業空間理論の予測を事前に登録して実験で比べる（2025 年の結果はどちらの中心の主張も揺るがした）
+  sources:
+  - OP123
+  units:
+  - B-114
+  - B-065
+  - B-066
+- id: T-11
+  field: 問い
+  topic: なぜ眠るのか（問い）：人も動物も毎日眠り、眠らないと弱ってしまう。眠りは体と脳に何をしているのか（未解決）
+  sources:
+  - OP127
+  units:
+  - B-017
+  - B-020
+  - B-039
+  - N-059
+- id: T-12
+  field: 攻め方
+  topic: なぜ眠るのかの攻め方：眠っているときの脳波と神経の活動を記録する、眠りを妨げた動物の変化を調べる、眠りと目覚めを切り替える回路とホルモンを探す
+  sources:
+  - OP127
+  units:
+  - B-065
+  - B-035
+  - B-067
+- id: T-13
+  field: 問い
+  topic: 地震は予知できるか（問い）：地震は地下の岩がずれて起きる。いつ、どこで、どのくらいの大きさの地震が起きるかを前もって言えるか（未解決。いまは「何年以内に何%」という確率しか言えない）
+  sources:
+  - OP101
+  - OP107
+  units:
+  - W-005
+  - W-006
+  - N-059
+  - C-011
+- id: T-14
+  field: 攻め方
+  topic: 地震は予知できるかの攻め方：断層の摩擦の法則と地震のくり返し、余震の統計、GNSS で地面のゆがみのたまり方を測る、ゆっくりすべる地震を調べる
+  sources:
+  - OP100
+  - OP101
+  units:
+  - W-025
+  - W-038
+  - W-042
+  - S-009
+- id: T-15
+  field: 問い
+  topic: 地球には何種類の生き物がいるか（問い）：名前の付いた生き物は約 120 万種あるが、まだ見つかっていない生き物はどれだけいるのか（未解決）
+  sources:
+  - OP111
+  - OP113
+  units:
+  - B-018
+  - B-025
+  - N-061
+  - S-028
+- id: T-16
+  field: 攻め方
+  topic: 地球には何種類の生き物がいるかの攻め方：分類の階層（属、科、目）ごとの数の規則から種の数を推定する（真核生物で約 870 万種、2011）、標識再捕法などの調査の統計、DNA の配列で生き物を見分ける
+  sources:
+  - OP113
+  units:
+  - B-061
+  - B-025
+  - K-118
+  - B-056
