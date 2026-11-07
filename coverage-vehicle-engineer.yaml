@@ -1,0 +1,1773 @@
+# 網羅表：空と宇宙を進む乗り物のエンジニア（SpaceX、NASA JPL、F1 チーム）（spacex-propulsion、spacex-gnc、spacex-starlink、nasa-jpl-rover、nasa-jpl-trajectory、f1-aero をまとめた）
+sources:
+  CR01:
+    title: 'SpaceX 求人: Propulsion Engineer (Starship)'
+    url: https://boards.greenhouse.io/spacex/jobs/8756340002
+    date: '2026-11-07'
+  CR02:
+    title: 'SpaceX 求人: New Graduate Engineer, Propulsion (Starship)'
+    url: https://boards.greenhouse.io/spacex/jobs/8729085002
+    date: '2026-11-07'
+  CR03:
+    title: 'SpaceX 求人: Propulsion Fluids Analyst (Raptor Systems Engineering)'
+    url: https://boards.greenhouse.io/spacex/jobs/8605143002
+    date: '2026-11-07'
+  CR04:
+    title: 'SpaceX 求人: Propulsion Engineer, Propulsion Simulation & Data Analysis'
+    url: https://boards.greenhouse.io/spacex/jobs/8696839002
+    date: '2026-11-07'
+  CR05:
+    title: 'SpaceX 求人: Propulsion Engineer (Dragon)'
+    url: https://boards.greenhouse.io/spacex/jobs/8904025002
+    date: '2026-11-07'
+  CR06:
+    title: 'SpaceX 求人: Propulsion Analyst, Chamber and Nozzle (Raptor)'
+    url: https://boards.greenhouse.io/spacex/jobs/8486119002
+    date: '2026-11-07'
+  CR07:
+    title: 'SpaceX 求人: Propulsion Analyst, Turbomachinery (Raptor)'
+    url: https://boards.greenhouse.io/spacex/jobs/8731594002
+    date: '2026-11-07'
+  CR08:
+    title: 'SpaceX 求人: Propulsion Thermal Analyst (Raptor Combustion Devices)'
+    url: https://boards.greenhouse.io/spacex/jobs/8624447002
+    date: '2026-11-07'
+  CR09:
+    title: 'SpaceX 求人: Propulsion Engineer, Thermal & Fluid Analysis (Starship)'
+    url: https://boards.greenhouse.io/spacex/jobs/8562385002
+    date: '2026-11-07'
+  CR10:
+    title: 'SpaceX 求人: New Graduate Engineer, Propulsion (Raptor)'
+    url: https://boards.greenhouse.io/spacex/jobs/8517361002
+    date: '2026-11-07'
+  CR11:
+    title: 'SpaceX 求人: Electric Propulsion Engineer, Mechanical (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8925513002
+    date: '2026-11-07'
+  CR12:
+    title: MIT Subject Listing & Schedule, Course 16 (Fall 2026)
+    url: http://student.mit.edu/catalog/m16a.html
+    date: '2026-11-07'
+  CR13:
+    title: Stanford ExploreCourses 2026-2027
+    url: https://explorecourses.stanford.edu/
+    date: '2026-11-07'
+  CR14:
+    title: 'SpaceX 求人: GNC Engineer (Starship)'
+    url: https://boards.greenhouse.io/spacex/jobs/8561432002
+    date: '2026-11-07'
+  CR15:
+    title: 'SpaceX 求人: Sr. GNC Engineer (Starship) Controls'
+    url: https://boards.greenhouse.io/spacex/jobs/8628384002
+    date: '2026-11-07'
+  CR16:
+    title: 'SpaceX 求人: GNC Engineer - Embedded Controls (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8784235002
+    date: '2026-11-07'
+  CR17:
+    title: 'SpaceX 求人: GNC Engineer, Orbit Control (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8540057002
+    date: '2026-11-07'
+  CR18:
+    title: 'SpaceX 求人: GNC Engineer (Dragon)'
+    url: https://boards.greenhouse.io/spacex/jobs/8933642002
+    date: '2026-11-07'
+  CR19:
+    title: 'SpaceX 求人: GNC Engineer, Attitude Determination and Optical Navigation (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8722945002
+    date: '2026-11-07'
+  CR20:
+    title: 'SpaceX 求人: New Graduate Engineer, GNC- ''26/''27 (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8696105002
+    date: '2026-11-07'
+  CR21:
+    title: 'SpaceX 求人: GNC Engineer, ADCS (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8755408002
+    date: '2026-11-07'
+  CR22:
+    title: 'SpaceX 求人: GNC Engineer, Collision Avoidance (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8923946002
+    date: '2026-11-07'
+  CR23:
+    title: 'SpaceX 求人: GNC Engineer (Starfall)'
+    url: https://boards.greenhouse.io/spacex/jobs/8665541002
+    date: '2026-11-07'
+  CR24:
+    title: 'SpaceX 求人: GNC Engineer, Orbit Determination/Stargaze (Starlink)'
+    url: https://boards.greenhouse.io/spacex/jobs/8751036002
+    date: '2026-11-07'
+  CR25:
+    title: MIT Subject Listing & Schedule, Course 16 (Fall 2026)
+    url: http://student.mit.edu/catalog/m16a.html
+    date: '2026-11-07'
+  CR26:
+    title: Stanford ExploreCourses 2026-2027
+    url: https://explorecourses.stanford.edu/
+    date: '2026-11-07'
+  CR27:
+    title: MIT Subject Listing & Schedule, Course 18 (Fall 2026)
+    url: http://student.mit.edu/catalog/m18a.html
+    date: '2026-11-07'
+  DR123:
+    title: SpaceX, RF/Microwave Engineer, Satellites (Starlink)
+    url: https://boards.greenhouse.io/spacex/jobs/8928728002
+    date: '2026-11-07'
+  DR124:
+    title: SpaceX, Wireless Systems Engineer (Starlink Mobile)
+    url: https://boards.greenhouse.io/spacex/jobs/8546717002
+    date: '2026-11-07'
+  DR119:
+    title: Jet Propulsion Laboratory（Caltech）, Robotics Systems Engineer I（R6181）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Robotics-Systems-Engineer-I_R6181
+    date: '2026-11-07'
+  DR120:
+    title: Jet Propulsion Laboratory（Caltech）, Robotics Technologist II（R6184）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Robotics-Technologist-II_R6184
+    date: '2026-11-07'
+  DR121:
+    title: Jet Propulsion Laboratory（Caltech）, Navigation Engineer II（R6243）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Navigation-Engineer-II_R6243-1
+    date: '2026-11-07'
+  DR122:
+    title: 'NASA, Basics of Space Flight, Chapter 13: Navigation'
+    url: https://science.nasa.gov/learn/basics-of-space-flight/chapter13-1/
+    date: '2026-11-07'
+  DR039:
+    title: Williams Racing, Senior Aerodynamicist (R14058)
+    url: https://careers.williamsf1.com/job/senior-aerodynamicist-in-grove-wantage-jid-481
+    date: '2026-11-07'
+  DR040:
+    title: Red Bull（Visa Cash App Racing Bulls F1 Team）, VCARB F1 Team - Senior CFD Methodology Engineer
+    url: https://jobs.redbull.com/en/vcarb-f1-team-senior-cfd-methodology-engineer-ref35266u
+    date: '2026-11-07'
+  DR041:
+    title: Williams Racing, The roles and responsibilities of an F1 aerodynamics engineer
+    url: https://careers.williamsf1.com/blog/2025-4/responsibilities-of-an-f1-aerodynamics-engineer
+    date: '2026-11-07'
+  DR042:
+    title: Williams Racing, Aerodynamics - Development Graduate
+    url: https://careers.williamsf1.com/job/aerodynamics-development-graduate-in-grove-jid-302
+    date: '2026-11-07'
+  DR043:
+    title: Cranfield University, Advanced Motorsport Engineering MSc
+    url: https://www.cranfield.ac.uk/courses/taught/advanced-motorsport-engineering
+    date: '2026-11-07'
+  DR044:
+    title: Cranfield University, Aerospace Computational Engineering MSc
+    url: https://www.cranfield.ac.uk/courses/taught/aerospace-computational-engineering
+    date: '2026-11-07'
+  DR045:
+    title: University of Cambridge, Hydrodynamic Stability (L16), R. Kerswell
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Continuum%20Mechanics/Hydrodynamic%20Stability.pdf
+    date: '2026-11-07'
+  DR046:
+    title: Mercedes-AMG PETRONAS F1 Team, Aerodynamics Industrial Placement（2027-28）
+    url: https://www.mercedesamgf1.com/careers/vacancies/804
+    date: '2026-11-07'
+items:
+- id: spacex-propulsion-T-01
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 流体系の寸法決め（要求の導出）
+  sources:
+  - CR01
+  - CR02
+  units:
+  - E-024
+- id: spacex-propulsion-T-02
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 圧縮性・非圧縮性の流体力学の基礎
+  sources:
+  - CR03
+  - CR04
+  units:
+  - E-024
+  - E-026
+- id: spacex-propulsion-T-03
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：物理
+  topic: 熱力学
+  sources:
+  - CR03
+  - CR04
+  units:
+  - E-038
+  - P-044
+  - P-045
+- id: spacex-propulsion-T-04
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：物理
+  topic: 熱化学
+  sources:
+  - CR04
+  units:
+  - E-044
+  - P-046
+  - E-194
+- id: spacex-propulsion-T-05
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：その他
+  topic: 化学の原理
+  sources:
+  - CR05
+  units:
+  - H-022
+  - H-023
+  - H-024
+  - H-036
+  - E-194
+- id: spacex-propulsion-T-06
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 伝熱（熱解析）
+  sources:
+  - CR06
+  - CR07
+  - CR08
+  units:
+  - E-039
+  - E-040
+- id: spacex-propulsion-T-07
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 共役伝熱
+  sources:
+  - CR03
+  units:
+  - E-039
+  - E-040
+- id: spacex-propulsion-T-08
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 0 次元・1 次元の熱流体網
+  sources:
+  - CR09
+  - CR08
+  units:
+  - E-039
+  - E-024
+- id: spacex-propulsion-T-09
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 過渡の流体モデル
+  sources:
+  - CR03
+  units:
+  - E-024
+  - K-002
+- id: spacex-propulsion-T-10
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 数値流体力学（CFD）：形状・格子・モデル選択、定常と非定常、理想・実在流体の状態方程式
+  sources:
+  - CR03
+  units:
+  - E-035
+  - E-036
+  - E-031
+  - E-033
+  - E-034
+  - P-052
+  - E-195
+- id: spacex-propulsion-T-11
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 静力学
+  sources:
+  - CR06
+  - CR07
+  units:
+  - E-001
+- id: spacex-propulsion-T-12
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 材料力学
+  sources:
+  - CR06
+  - CR07
+  - CR05
+  units:
+  - E-002
+  - E-003
+- id: spacex-propulsion-T-13
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 疲労と耐久
+  sources:
+  - CR06
+  - CR07
+  units:
+  - E-015
+- id: spacex-propulsion-T-14
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 動力学（構造の動的解析）
+  sources:
+  - CR06
+  - CR07
+  units:
+  - P-008
+  - E-090
+  - E-094
+- id: spacex-propulsion-T-15
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 有限要素解析（構造・熱）と後処理
+  sources:
+  - CR01
+  - CR10
+  - CR06
+  - CR07
+  - CR08
+  units:
+  - E-020
+  - E-021
+  - E-010
+- id: spacex-propulsion-T-16
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 構造と電磁場の有限要素解析
+  sources:
+  - CR11
+  units:
+  - E-021
+  - P-036
+- id: spacex-propulsion-T-17
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 加圧・非加圧の構造物と部品の設計
+  sources:
+  - CR01
+  - CR02
+  units:
+  - E-003
+  - E-012
+- id: spacex-propulsion-T-18
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 圧力部品（弁、調圧器、管）
+  sources:
+  - CR01
+  - CR02
+  - CR11
+  none: 地図にない（候補：圧力部品と配管の機械要素）
+- id: spacex-propulsion-T-19
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 液体二元推進剤ロケットエンジンのサイクルと噴射器の型
+  sources:
+  - CR03
+  units:
+  - E-044
+  - E-045
+- id: spacex-propulsion-T-20
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: エンジンサイクル解析
+  sources:
+  - CR04
+  units:
+  - E-044
+  - E-045
+  - E-041
+- id: spacex-propulsion-T-21
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 集中定数の熱流体モデル
+  sources:
+  - CR04
+  units:
+  - E-039
+  - E-024
+  - K-002
+- id: spacex-propulsion-T-22
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 動的システムのモデル化（物理に基づくシミュレーション）
+  sources:
+  - CR04
+  units:
+  - E-047
+  - D-053
+  - K-002
+- id: spacex-propulsion-T-23
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 宇宙機・打上げ機の推進系と流体部品、姿勢制御系・推進剤状態・タンク加圧
+  sources:
+  - CR09
+  units:
+  - E-042
+  - E-044
+  - E-045
+  - E-066
+- id: spacex-propulsion-T-24
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 電気推進（機械・熱・磁気・流体の問題）
+  sources:
+  - CR11
+  units:
+  - E-046
+  - P-041
+- id: spacex-propulsion-T-25
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 物理を組み込んだニューラルネット
+  sources:
+  - CR04
+  units:
+  - K-046
+  - K-050
+  - K-051
+- id: spacex-propulsion-T-26
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 疎な計測からの原因推定とデータ駆動の解析
+  sources:
+  - CR04
+  units:
+  - K-060
+  - E-056
+- id: spacex-propulsion-T-27
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 数値解析と信号処理
+  sources:
+  - CR04
+  units:
+  - K-001
+  - K-002
+  - K-003
+  - E-081
+- id: spacex-propulsion-T-28
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: フィードバック制御ループの設計と実装
+  sources:
+  - CR04
+  units:
+  - E-049
+- id: spacex-propulsion-T-29
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 幾何公差（GD&T）と図面
+  sources:
+  - CR01
+  - CR11
+  - CR05
+  units:
+  - E-204
+- id: spacex-propulsion-T-30
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 製造性を考えた設計と製造工程（切削、溶接、鋳造、積層、被覆）
+  sources:
+  - CR11
+  - CR05
+  units:
+  - E-193
+- id: spacex-propulsion-T-31
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 開発・認定・受入の試験
+  sources:
+  - CR01
+  - CR02
+  none: 地図にない（候補：試験計画と認定試験）
+- id: spacex-propulsion-T-32
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 加圧・漏れ試験と計測器（質量分析、流量計、圧力変換器、熱電対）
+  sources:
+  - CR05
+  units:
+  - P-118
+  - P-117
+- id: spacex-propulsion-T-33
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：その他
+  topic: 故障と品質の分析（PFMEA、根本原因、パレート、工程の能力モデル）
+  sources:
+  - CR11
+  - CR05
+  units:
+  - E-156
+- id: spacex-propulsion-T-34
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: スクリプトによる自動化と後処理
+  sources:
+  - CR09
+  - CR03
+  - CR11
+  units:
+  - K-012
+- id: spacex-propulsion-T-35
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: ソフトウェアの実務（版管理、CI、Unix、データパイプライン）
+  sources:
+  - CR04
+  none: 地図にない（候補：ソフトウェア開発の実務（版管理、CI、Unix））
+- id: spacex-propulsion-T-36
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 推進系の基本（空気吸込みとロケット、ミッション解析、性能の基本関係式）
+  sources:
+  - CR12
+  units:
+  - E-042
+- id: spacex-propulsion-T-37
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: ロケット推進（固体・液体二元・ハイブリッド、熱化学と比推力、ノズル流れ、ターボポンプ、燃焼、冷却）
+  sources:
+  - CR12
+  units:
+  - E-044
+  - E-045
+- id: spacex-propulsion-T-38
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 空気と宇宙の推進（推力の機構と性能の指標、冷ガス、化学、電気推進、ラム・スクラムジェット、ターボジェット）
+  sources:
+  - CR13
+  units:
+  - E-042
+  - E-043
+  - E-044
+  - E-046
+- id: spacex-propulsion-T-39
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 宇宙推進（電熱・静電・電磁の加速、連続推力の軌道）
+  sources:
+  - CR12
+  units:
+  - E-046
+- id: spacex-propulsion-T-40
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 高速の気体力学（等エントロピーのノズル流れ、衝撃波、プラントル・マイヤー膨張、ファノ流れ、レイリー流れ）
+  sources:
+  - CR13
+  units:
+  - E-026
+  - E-037
+- id: spacex-propulsion-T-41
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 圧縮性の内部流れ（チョーク、衝撃波、質量・運動量・エネルギーの付加）
+  sources:
+  - CR12
+  units:
+  - E-026
+  - E-037
+- id: spacex-propulsion-T-42
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: ターボ機械の内部流れ（損失、非定常と不安定、回転流路）
+  sources:
+  - CR12
+  units:
+  - E-043
+  - E-045
+- id: spacex-propulsion-T-43
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 推進系の試作と試験（高速回転機械、製造と機械設計）
+  sources:
+  - CR12
+  none: 地図にない（候補：高速回転機械の設計・製作・試験）
+- id: spacex-propulsion-T-44
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：物理
+  topic: 熱力学と推進（第一法則、第二法則とエントロピー、サイクル解析、二相系、伝熱の入口）
+  sources:
+  - CR12
+  - CR13
+  units:
+  - E-038
+  - E-041
+  - P-044
+  - P-045
+- id: spacex-propulsion-T-45
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 流体力学（保存則、準一次元の圧縮性流れ、ポテンシャル流、静水力学、ベルヌーイ、次元解析、境界層の入口）
+  sources:
+  - CR12
+  - CR13
+  units:
+  - E-026
+  - E-027
+  - E-024
+  - P-013
+- id: spacex-propulsion-T-46
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 材料と構造（静力学、トラス、応力ひずみ、梁の曲げ・座屈・ねじり、塑性・破壊・疲労）
+  sources:
+  - CR12
+  - CR13
+  units:
+  - E-001
+  - E-002
+  - E-003
+- id: spacex-propulsion-T-47
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 構造力学（3 次元弾性、異方性材料、熱の影響、平面応力・平面ひずみ、薄肉はり、座屈）
+  sources:
+  - CR12
+  units:
+  - E-012
+  - E-013
+- id: spacex-propulsion-T-48
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：工学
+  topic: 軽量構造（応力ひずみ、梁の曲げ、ねじり、薄肉構造）
+  sources:
+  - CR13
+  units:
+  - E-003
+  - E-013
+- id: spacex-propulsion-T-49
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 計算によるモデル化とデータ解析（常微分方程式の数値積分、偏微分方程式の離散化、確率モデル）
+  sources:
+  - CR12
+  units:
+  - K-002
+  - K-015
+  - K-005
+- id: spacex-propulsion-T-50
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：計算
+  topic: 偏微分方程式の数値解法（差分、有限体積、有限要素、直接法と反復法）
+  sources:
+  - CR12
+  units:
+  - E-023
+  - K-004
+  - K-005
+- id: spacex-propulsion-V-01
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：検証で足した論題
+  topic: 剛体の動力学（学部の動力学の必修）
+  units:
+  - P-017
+  - E-060
+- id: spacex-propulsion-V-02
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：検証で足した論題
+  topic: 回帰と試験データによるモデルの較正
+  units:
+  - S-020
+  - K-003
+- id: spacex-propulsion-V-03
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：検証で足した論題
+  topic: 燃焼不安定と打上げの音響環境（燃焼室の音響モード、ジェット騒音、音響と振動の連成）
+  units:
+  - E-128
+  - E-134
+  - E-137
+  - E-138
+- id: spacex-propulsion-V-04
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：検証で足した論題
+  topic: システムズエンジニアリング（要求の分解、トレードスタディ、インタフェース、設計審査）
+  units:
+  - E-199
+- id: spacex-propulsion-V-05
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：検証で足した論題
+  topic: データベースと SQL（関係モデル、問い合わせ）
+  units:
+  - K-169
+- id: spacex-propulsion-V-06
+  field: SpaceX のロケットエンジン設計者（推進エンジニア）：音響
+  topic: 音の放射と散乱、音響の数値解析（境界要素法）
+  units:
+  - E-135
+- id: spacex-gnc-T-01
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 制御系（閉ループの解析と設計）
+  sources:
+  - CR14
+  - CR15
+  - CR16
+  units:
+  - E-047
+  - E-048
+  - E-049
+- id: spacex-gnc-T-02
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 線形閉ループ制御：状態空間法と周波数領域法
+  sources:
+  - CR16
+  units:
+  - E-048
+  - E-052
+  - E-053
+- id: spacex-gnc-T-03
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 状態空間法と古典制御理論
+  sources:
+  - CR17
+  units:
+  - E-049
+  - E-053
+- id: spacex-gnc-T-04
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 古典力学・剛体の力学
+  sources:
+  - CR14
+  - CR18
+  - CR16
+  units:
+  - P-005
+  - P-011
+  - P-017
+- id: spacex-gnc-T-05
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 回転の力学（姿勢の力学）
+  sources:
+  - CR19
+  units:
+  - P-017
+  - E-066
+- id: spacex-gnc-T-06
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 動的システムの基礎
+  sources:
+  - CR17
+  units:
+  - D-053
+  - D-046
+- id: spacex-gnc-T-07
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 軌道力学
+  sources:
+  - CR14
+  - CR18
+  - CR20
+  - CR21
+  - CR22
+  units:
+  - P-009
+  - P-010
+  - E-061
+  - E-063
+- id: spacex-gnc-T-08
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 相対軌道力学、マヌーバ計画、衝突回避
+  sources:
+  - CR17
+  units:
+  - E-065
+  - E-063
+- id: spacex-gnc-T-09
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 低推力の軌道最適化と軌道保持
+  sources:
+  - CR20
+  - CR21
+  units:
+  - E-046
+  - E-059
+  - E-065
+- id: spacex-gnc-T-10
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 軌道最適化、モデル予測制御、凸最適化、混合整数計画
+  sources:
+  - CR17
+  units:
+  - E-059
+  - K-009
+  - K-010
+- id: spacex-gnc-T-11
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 軌道設計・最適化と分散解析、飛行定数と誘導パラメータの選定
+  sources:
+  - CR18
+  units:
+  - E-063
+  - E-065
+  - E-059
+- id: spacex-gnc-T-12
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 打上げ機の軌道、性能の分散、飛行の安定
+  sources:
+  - CR14
+  - CR15
+  units:
+  - E-026
+  - E-063
+  - E-060
+- id: spacex-gnc-T-13
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 空気力学、センサとアクチュエータ
+  sources:
+  - CR14
+  - CR15
+  units:
+  - E-026
+  - E-047
+  - E-066
+- id: spacex-gnc-T-14
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 6 自由度の動力学シミュレーション
+  sources:
+  - CR14
+  - CR21
+  units:
+  - E-060
+  - K-002
+  - P-119
+- id: spacex-gnc-T-15
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: モンテカルロ解析
+  sources:
+  - CR14
+  - CR21
+  units:
+  - S-024
+  - K-015
+- id: spacex-gnc-T-16
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: ハードウェア・イン・ザ・ループ試験
+  sources:
+  - CR14
+  - CR21
+  units:
+  - K-163
+- id: spacex-gnc-T-17
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: シミュレーションのモデルの検証と妥当性確認
+  sources:
+  - CR20
+  - CR21
+  - CR17
+  - CR23
+  units:
+  - K-163
+- id: spacex-gnc-T-18
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 3 軸安定の宇宙機（運動量・磁気・推進による制御）
+  sources:
+  - CR20
+  - CR21
+  units:
+  - E-066
+- id: spacex-gnc-T-19
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 並進と回転の状態推定と制御の設計
+  sources:
+  - CR21
+  units:
+  - E-056
+  - E-054
+  - E-066
+- id: spacex-gnc-T-20
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 状態推定：姿勢決定、軌道決定、GNSS、電波航法
+  sources:
+  - CR20
+  - CR21
+  units:
+  - E-056
+  - E-062
+  - E-066
+  - E-166
+- id: spacex-gnc-T-21
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 逐次推定：カルマンフィルタ、フィルタの調整、共分散解析
+  sources:
+  - CR24
+  - CR19
+  - CR22
+  units:
+  - E-056
+  - E-062
+- id: spacex-gnc-T-22
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: カルマンフィルタと情報フィルタ
+  sources:
+  - CR16
+  units:
+  - E-056
+  - E-054
+- id: spacex-gnc-T-23
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 軌道のモデル化と伝播（低軌道の摂動、抗力モデル、大気密度モデル、宇宙天気）
+  sources:
+  - CR24
+  units:
+  - E-065
+  - P-009
+  - E-061
+- id: spacex-gnc-T-24
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 高次の重力場モデルと大気モデル
+  sources:
+  - CR17
+  units:
+  - W-015
+  - D-077
+- id: spacex-gnc-T-25
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 数値伝播法と不確かさのモデル化
+  sources:
+  - CR17
+  units:
+  - K-002
+  - E-062
+  - S-024
+- id: spacex-gnc-T-26
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 軌道決定の方法（角度のみ、初期軌道決定）
+  sources:
+  - CR24
+  units:
+  - E-062
+- id: spacex-gnc-T-27
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 計測の処理（計測モデル、バイアス除去、センサの較正、光学とレーダーの計測）
+  sources:
+  - CR24
+  units:
+  - E-062
+  - E-056
+  - P-117
+- id: spacex-gnc-T-28
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 天体の位置と明るさの測定（アストロメトリ、測光、画像の整約、光度曲線）
+  sources:
+  - CR24
+  - CR19
+  units:
+  - P-162
+  - K-080
+- id: spacex-gnc-T-29
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 姿勢のセンサ（スタートラッカ、ジャイロ、磁気センサ、太陽センサ、加速度計）
+  sources:
+  - CR19
+  units:
+  - E-066
+  - E-161
+- id: spacex-gnc-T-30
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 天体画像の処理（背景差分、スポット検出、重心、フレーム積算、星パターン同定）
+  sources:
+  - CR19
+  units:
+  - K-080
+  - K-075
+- id: spacex-gnc-T-31
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: センサ融合と故障検知・回復、耐故障
+  sources:
+  - CR19
+  units:
+  - E-056
+  - K-035
+- id: spacex-gnc-T-32
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 光学センサによる航法と、物体の回転運動の推定
+  sources:
+  - CR19
+  units:
+  - K-091
+  - K-081
+- id: spacex-gnc-T-33
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: GPU と FPGA による実時間の画像処理
+  sources:
+  - CR19
+  units:
+  - K-030
+  - K-027
+- id: spacex-gnc-T-34
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 統計的検定（カイ二乗、コルモゴロフ・スミルノフ）とデータの相関
+  sources:
+  - CR24
+  - CR22
+  units:
+  - S-019
+  - S-018
+- id: spacex-gnc-T-35
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 衝突確率の数値計算（Alfano、Foster、Hall の方法）
+  sources:
+  - CR20
+  - CR22
+  units:
+  - S-003
+  - K-001
+- id: spacex-gnc-T-36
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 軌道上のデブリと微小隕石の環境と危険度の評価
+  sources:
+  - CR22
+  none: 地図にない（候補：軌道上デブリと微小隕石の環境）
+- id: spacex-gnc-T-37
+  field: SpaceX の誘導・航法・制御エンジニア：その他
+  topic: 宇宙交通管理（接近データ通報 CDM、2 行軌道要素 TLE）
+  sources:
+  - CR24
+  none: 地図にない（候補：宇宙交通管理（接近の通報と軌道要素の形式））
+- id: spacex-gnc-T-38
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 大気圏突入の誘導・航法・制御、軌道離脱の計画、突入軌道の最適化
+  sources:
+  - CR23
+  units:
+  - E-190
+- id: spacex-gnc-T-39
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 極超音速の飛行、空力加熱、精密着陸と回収
+  sources:
+  - CR23
+  units:
+  - E-030
+  - E-040
+  - E-190
+- id: spacex-gnc-T-40
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 再突入機の状態推定（IMU、GNSS、レーダー・光学）
+  sources:
+  - CR23
+  units:
+  - E-056
+  - E-062
+- id: spacex-gnc-T-41
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 柔軟体の力学と縮約した有限要素モデル（閉ループ解析で使う）
+  sources:
+  - CR16
+  units:
+  - E-094
+  - E-021
+- id: spacex-gnc-T-42
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 運用構想（熱制約、電力収支、運動量管理、通信、ペイロードの指向）
+  sources:
+  - CR21
+  units:
+  - E-064
+- id: spacex-gnc-T-43
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 宇宙機の飛行に要る分野の全般（構造、推進、アビオニクス、GNC、飛行ソフト、動力学、打上げと運用）
+  sources:
+  - CR20
+  - CR21
+  units:
+  - E-042
+  - E-064
+  - E-066
+- id: spacex-gnc-T-44
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: システムズエンジニアリング
+  sources:
+  - CR22
+  units:
+  - E-199
+- id: spacex-gnc-T-45
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: C++ と Python での実用のソフト開発（アルゴリズム、シミュレーション、道具）
+  sources:
+  - CR14
+  - CR18
+  - CR20
+  - CR21
+  - CR24
+  - CR19
+  - CR17
+  - CR22
+  - CR23
+  - CR16
+  units:
+  - K-012
+  - K-013
+  - K-016
+  - K-019
+  - K-017
+- id: spacex-gnc-T-46
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 組込み C++（電気機械の制御のファームウェア）と飛行ソフト
+  sources:
+  - CR16
+  units:
+  - K-029
+  - K-019
+- id: spacex-gnc-T-47
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 大量の運用データの解析
+  sources:
+  - CR20
+  - CR21
+  units:
+  - K-060
+  - K-064
+- id: spacex-gnc-T-48
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 信号とシステム（線形時不変系、畳み込み、フーリエ変換とラプラス変換、標本化、フィードバック制御の入口）
+  sources:
+  - CR25
+  units:
+  - E-070
+  - E-071
+  - E-072
+- id: spacex-gnc-T-49
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 古典制御（時間領域と周波数領域の性能、安定、根軌跡、ナイキスト、周波数領域の設計）
+  sources:
+  - CR25
+  - CR26
+  units:
+  - E-048
+  - E-049
+  - E-052
+- id: spacex-gnc-T-50
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 状態空間と多入力多出力の制御（可制御性・可観測性、極配置、LQR、確率的な状態推定、ロバスト性）
+  sources:
+  - CR25
+  units:
+  - E-053
+  - E-054
+- id: spacex-gnc-T-51
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 線形の多入出力系（最小二乗と行列の摂動、モード、伝達関数行列、観測器、特異値によるロバスト性）
+  sources:
+  - CR25
+  units:
+  - E-076
+  - E-054
+  - M-007
+- id: spacex-gnc-T-52
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 最適制御と推定（動的計画法、変分法、ポントリャーギンの最大原理、最小二乗推定、カルマンフィルタ）
+  sources:
+  - CR25
+  units:
+  - E-055
+  - E-056
+  - D-052
+- id: spacex-gnc-T-53
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 動力学（相対運動と加速座標系、質点系、剛体、軌道力学・慣性航法・姿勢の力学の入口）
+  sources:
+  - CR25
+  - CR26
+  units:
+  - E-060
+  - P-011
+  - P-012
+- id: spacex-gnc-T-54
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 動的システム・振動・制御（1 自由度と多自由度、安定、強制、共振）
+  sources:
+  - CR26
+  units:
+  - P-008
+  - E-048
+  - E-090
+- id: spacex-gnc-T-55
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 軌道と姿勢の力学（座標変換、剛体の回転、姿勢の安定、二体問題、摂動、軌道マヌーバ）
+  sources:
+  - CR26
+  units:
+  - E-066
+  - E-061
+  - E-065
+- id: spacex-gnc-T-56
+  field: SpaceX の誘導・航法・制御エンジニア：物理
+  topic: 天体力学（ケプラー問題、ランバート問題、軌道決定、多体の方法、宇宙航法の逐次アルゴリズム）
+  sources:
+  - CR25
+  units:
+  - E-061
+  - E-062
+- id: spacex-gnc-T-57
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 飛行力学と制御（非線形の運動方程式、縦と横・方向の線形化、静安定、PID）
+  sources:
+  - CR26
+  units:
+  - E-060
+  - E-049
+  - E-026
+- id: spacex-gnc-T-58
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 宇宙機と航空機のセンサ（GPS、慣性基準系、電波航法、恒星・太陽・地平線による姿勢決定、レーダー）
+  sources:
+  - CR25
+  units:
+  - E-062
+  - E-066
+- id: spacex-gnc-T-59
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 衛星測位（コード追尾、1 周波・2 周波、搬送波、ディファレンシャル GNSS）
+  sources:
+  - CR26
+  units:
+  - E-166
+- id: spacex-gnc-T-60
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 視覚による航法（3 次元視覚、視覚慣性航法、SLAM、多様体上の最適化）
+  sources:
+  - CR25
+  units:
+  - K-091
+  - K-090
+- id: spacex-gnc-T-61
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 不確かさの数値手法（モンテカルロ、分散減少、ベイズ推定、MCMC、逐次データ同化とフィルタ）
+  sources:
+  - CR25
+  units:
+  - S-024
+  - S-022
+  - K-015
+- id: spacex-gnc-T-62
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 自律と意思決定（探索による計画、マルコフ決定過程、ベイズフィルタ、強化学習）
+  sources:
+  - CR25
+  - CR26
+  units:
+  - K-053
+  - K-054
+  - K-055
+  - K-056
+- id: spacex-gnc-T-63
+  field: SpaceX の誘導・航法・制御エンジニア：計算
+  topic: 実時間のシステムとソフト（並行、スケジューリング、検証）
+  sources:
+  - CR25
+  units:
+  - K-018
+  - K-037
+- id: spacex-gnc-T-64
+  field: SpaceX の誘導・航法・制御エンジニア：工学
+  topic: 宇宙機の基礎（軌道の力学、姿勢の力学、ミッション設計、サブシステム）
+  sources:
+  - CR26
+  units:
+  - E-063
+  - E-064
+  - E-066
+- id: spacex-gnc-T-65
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 確率（確率変数、分布、同時分布と条件付き分布、期待値、極限定理）
+  sources:
+  - CR25
+  - CR26
+  units:
+  - S-001
+  - S-002
+  - S-003
+  - S-004
+- id: spacex-gnc-T-66
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 統計（推定、仮説検定、信頼区間、回帰、モンテカルロ）
+  sources:
+  - CR25
+  - CR26
+  units:
+  - S-018
+  - S-019
+  - S-020
+- id: spacex-gnc-T-67
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 線形代数（ベクトル空間、行列式、固有値、特異値分解、最小二乗）
+  sources:
+  - CR25
+  - CR27
+  units:
+  - M-003
+  - M-004
+  - M-006
+  - M-007
+  - M-015
+- id: spacex-gnc-T-68
+  field: SpaceX の誘導・航法・制御エンジニア：数学
+  topic: 常微分方程式（1 階、定数係数の線形、振動と共振、行列指数、相平面）
+  sources:
+  - CR27
+  - CR26
+  units:
+  - D-044
+  - D-045
+  - D-046
+  - M-014
+- id: spacex-gnc-V-01
+  field: SpaceX の誘導・航法・制御エンジニア：検証で足した論題
+  topic: 非線形制御（リアプノフ解析、フィードバック線形化）
+  units:
+  - E-058
+- id: spacex-starlink-T-01
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: RF・マイクロ波の回路設計：電力増幅器、低雑音増幅器、ミキサー、フィルタ、PLL、受動部品
+  sources:
+  - DR123
+  units:
+  - E-069
+  - E-158
+  - E-205
+  - E-188
+- id: spacex-starlink-T-02
+  field: SpaceX Starlink の通信エンジニア：物理
+  topic: 電磁波の伝搬とアンテナ、3 次元の電磁界シミュレーション
+  sources:
+  - DR123
+  units:
+  - P-034
+  - P-036
+  - P-038
+  - P-027
+  - P-039
+  - E-084
+  - E-023
+  - P-040
+- id: spacex-starlink-T-03
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: ディジタル通信の方式と理論：変調、スペクトラム拡散、ビット誤り率、雑音指数
+  sources:
+  - DR123
+  units:
+  - E-085
+  - E-086
+  - E-089
+  - C-038
+  - C-039
+- id: spacex-starlink-T-04
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: 測定器と試験の自動化
+  sources:
+  - DR123
+  units:
+  - P-118
+  - K-012
+- id: spacex-starlink-T-05
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: 回路図と基板設計
+  sources:
+  - DR123
+  none: 地図にない（候補：回路・基板設計（電子回路の実装））
+- id: spacex-starlink-T-06
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: セルラー基地局の MAC・PHY 層、リンク適応、電力制御、ドップラー追従、3GPP
+  sources:
+  - DR124
+  units:
+  - E-087
+  - E-088
+  - E-089
+- id: spacex-starlink-T-07
+  field: SpaceX Starlink の通信エンジニア：計算
+  topic: 複数ビームにまたがる利用者のスケジューリング
+  sources:
+  - DR124
+  units:
+  - K-009
+  - K-010
+  - K-011
+  - S-009
+  - E-087
+- id: spacex-starlink-T-08
+  field: SpaceX Starlink の通信エンジニア：工学
+  topic: セル間・ビーム間の干渉の解析、信号処理
+  sources:
+  - DR124
+  units:
+  - E-083
+  - E-088
+- id: spacex-starlink-T-09
+  field: SpaceX Starlink の通信エンジニア：計算
+  topic: リンクレベル・システムレベルのシミュレーション、通信路のモデル
+  sources:
+  - DR124
+  units:
+  - E-088
+  - K-015
+  - S-024
+- id: spacex-starlink-V-01
+  field: SpaceX Starlink の通信エンジニア：検証で足した論題
+  topic: 信号とシステム（LTI 系、フーリエ・ラプラス変換）
+  units:
+  - E-070
+  - E-071
+- id: spacex-starlink-V-02
+  field: SpaceX Starlink の通信エンジニア：検証で足した論題
+  topic: 確率過程（再生過程、ポアソン過程）
+  units:
+  - S-010
+- id: spacex-starlink-V-03
+  field: SpaceX Starlink の通信エンジニア：検証で足した論題
+  topic: 回線設計と衛星通信の周波数帯
+  units:
+  - E-064
+- id: spacex-starlink-V-04
+  field: SpaceX Starlink の通信エンジニア：検証で足した論題
+  topic: MATLAB・Python・C++ と計算機ネットワーク
+  units:
+  - K-019
+  - K-038
+- id: nasa-jpl-rover-T-01
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: シミュレーション、モデリング、3D 可視化のソフトウェア開発、ロボットのモデリングとシミュレーション
+  sources:
+  - DR119
+  units:
+  - K-075
+  - K-076
+  - P-119
+  - K-071
+  - K-072
+- id: nasa-jpl-rover-T-02
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: 宇宙機・ロボットの運用の道具（操作画面、コマンド列、テレメトリ）
+  sources:
+  - DR119
+  none: 地図にない（候補：宇宙機の運用ソフトウェア）
+- id: nasa-jpl-rover-T-03
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: ソフトウェア工学の標準と慣行
+  sources:
+  - DR119
+  - DR120
+  units:
+  - K-013
+  - K-017
+- id: nasa-jpl-rover-T-04
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: C、C++、Python
+  sources:
+  - DR120
+  units:
+  - K-012
+  - K-016
+  - K-019
+  - K-029
+- id: nasa-jpl-rover-T-05
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: 状態推定、地図作成、深層学習、機械視覚のアルゴリズム
+  sources:
+  - DR120
+  units:
+  - E-056
+  - K-050
+  - K-051
+  - K-080
+  - K-082
+  - K-048
+  - K-049
+- id: nasa-jpl-rover-T-06
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: 自己位置推定、特徴点の検出と追跡、オプティカルフロー、領域分割、SfM、運動の推定と計画
+  sources:
+  - DR120
+  units:
+  - K-081
+  - K-083
+  - K-055
+  - K-087
+  - K-088
+  - K-090
+  - K-091
+- id: nasa-jpl-rover-T-07
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: 組み込み向けソフトウェア
+  sources:
+  - DR120
+  units:
+  - K-029
+  - K-030
+  - K-031
+  - K-037
+  - K-018
+- id: nasa-jpl-rover-T-08
+  field: NASA JPL の火星探査機のエンジニア：計算
+  topic: 動くロボットへの深層学習の応用
+  sources:
+  - DR120
+  units:
+  - K-056
+  - K-086
+  - K-058
+  - K-059
+- id: nasa-jpl-rover-V-01
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: ロボットの運動学と動力学、移動ロボットの動力学と軌道生成
+  units:
+  - K-084
+  - K-085
+  - K-089
+- id: nasa-jpl-rover-V-02
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: フィードバック制御、非線形制御と適応制御
+  units:
+  - E-049
+  - E-058
+- id: nasa-jpl-rover-V-03
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: 人工知能（ベイズネット、MDP、計画）
+  units:
+  - K-053
+  - K-054
+- id: nasa-jpl-rover-V-04
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: ロボットのための応用数学（最適化、変分法、直交関数、特異値分解、回転の生成子）
+  units:
+  - K-009
+  - D-052
+  - D-022
+  - M-015
+  - M-014
+- id: nasa-jpl-rover-V-05
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: センシングとセンサ
+  units:
+  - P-118
+  - E-068
+- id: nasa-jpl-rover-V-06
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: 飛行前の検証と妥当性確認（モデルの妥当性確認、HIL 試験）
+  units:
+  - K-163
+- id: nasa-jpl-rover-V-07
+  field: NASA JPL の火星探査機のエンジニア：検証で足した論題
+  topic: リモートセンシング（観測と画像の解析）
+  units:
+  - E-200
+- id: nasa-jpl-trajectory-T-01
+  field: NASA JPL の軌道設計者：物理
+  topic: 軌道力学：二体問題、Kepler 問題、Lambert 問題、軌道遷移、摂動
+  sources:
+  - DR121
+  - DR122
+  units:
+  - P-009
+  - P-010
+  - E-061
+  - E-062
+  - E-063
+  - E-065
+  - P-020
+- id: nasa-jpl-trajectory-T-02
+  field: NASA JPL の軌道設計者：数学
+  topic: 統計的推定、精密軌道決定、測定の重み、可観測性、共分散解析、系統誤差
+  sources:
+  - DR121
+  units:
+  - S-018
+  - S-021
+  - E-056
+  - E-053
+  - E-201
+- id: nasa-jpl-trajectory-T-03
+  field: NASA JPL の軌道設計者：数学
+  topic: 数値計算法
+  sources:
+  - DR121
+  units:
+  - K-001
+  - K-002
+  - K-003
+  - K-008
+- id: nasa-jpl-trajectory-T-04
+  field: NASA JPL の軌道設計者：数学
+  topic: 重力場のモデルの数学的な基礎（球面調和関数、マスコン）
+  sources:
+  - DR121
+  units:
+  - D-077
+  - W-015
+  - P-036
+- id: nasa-jpl-trajectory-T-05
+  field: NASA JPL の軌道設計者：地球
+  topic: 潮汐、大気・海洋のエイリアシング除去、座標系、地球の姿勢のパラメータ、非重力の力のモデル
+  sources:
+  - DR121
+  units:
+  - W-024
+  - W-015
+  - W-042
+  - E-166
+  - E-201
+- id: nasa-jpl-trajectory-T-06
+  field: NASA JPL の軌道設計者：数学
+  topic: 色付き雑音、正則化、大規模な推定問題、数値線形代数
+  sources:
+  - DR121
+  units:
+  - P-141
+  - K-007
+  - K-062
+- id: nasa-jpl-trajectory-T-07
+  field: NASA JPL の軌道設計者：計算
+  topic: 科学計算のプログラミング（Fortran、Python、C++、MATLAB）、高性能計算
+  sources:
+  - DR121
+  units:
+  - K-012
+  - K-016
+  - K-027
+- id: nasa-jpl-trajectory-V-01
+  field: NASA JPL の軌道設計者：検証で足した論題
+  topic: 軌道最適化（低推力、最適制御）
+  units:
+  - E-055
+  - E-059
+  - E-046
+- id: nasa-jpl-trajectory-V-02
+  field: NASA JPL の軌道設計者：検証で足した論題
+  topic: 太陽系の力学と天体暦、相対論の補正
+  units:
+  - P-171
+  - P-059
+- id: nasa-jpl-trajectory-V-03
+  field: NASA JPL の軌道設計者：検証で足した論題
+  topic: 宇宙機の姿勢データと機械学習による軌道の探索
+  units:
+  - E-066
+  - K-046
+- id: nasa-jpl-trajectory-V-04
+  field: NASA JPL の軌道設計者：検証で足した論題
+  topic: 三体問題と多体の軌道設計（ラグランジュ点、スイングバイ、ツアー設計）
+  units:
+  - E-185
+- id: f1-aero-T-01
+  field: F1 チームの空力エンジニア：物理
+  topic: 空気力学の基礎、流体力学
+  sources:
+  - DR039
+  - DR040
+  - DR041
+  units:
+  - P-013
+  - P-014
+  - E-024
+  - E-031
+  - E-032
+- id: f1-aero-T-02
+  field: F1 チームの空力エンジニア：工学
+  topic: レースカーの空気力学：翼とディフューザー、揚力と抗力、極曲線、静安定
+  sources:
+  - DR042
+  - DR043
+  - DR044
+  units:
+  - E-025
+  - E-026
+  - E-027
+  - E-028
+  - E-029
+  - E-186
+- id: f1-aero-T-03
+  field: F1 チームの空力エンジニア：工学
+  topic: 車体まわりの空気力学：冷却と換気、車輪、オープンホイール、鈍い物体と流線形の物体
+  sources:
+  - DR043
+  units:
+  - E-186
+- id: f1-aero-T-04
+  field: F1 チームの空力エンジニア：数学
+  topic: 数値計算法、有限差分・有限体積による偏微分方程式の離散化と疎行列の解法
+  sources:
+  - DR040
+  - DR044
+  units:
+  - K-002
+  - K-004
+  - K-005
+  - K-006
+  - K-007
+- id: f1-aero-T-05
+  field: F1 チームの空力エンジニア：計算
+  topic: CFD の手法：格子生成、時間進行法、回転領域の格子
+  sources:
+  - DR039
+  - DR043
+  - DR044
+  units:
+  - E-035
+  - E-036
+  - E-023
+- id: f1-aero-T-06
+  field: F1 チームの空力エンジニア：物理
+  topic: 乱流の模型、乱流の統計的記述
+  sources:
+  - DR043
+  - DR044
+  units:
+  - E-033
+  - E-034
+  - E-195
+- id: f1-aero-T-07
+  field: F1 チームの空力エンジニア：数学
+  topic: 双曲型方程式と保存則、衝撃波、高解像度の差分法、Riemann 問題
+  sources:
+  - DR044
+  units:
+  - E-037
+  - D-059
+  - E-035
+- id: f1-aero-T-08
+  field: F1 チームの空力エンジニア：計算
+  topic: 検証と妥当性確認（V&V）：格子収束、不確かさの定量化
+  sources:
+  - DR044
+  - DR043
+  units:
+  - K-163
+- id: f1-aero-T-09
+  field: F1 チームの空力エンジニア：工学
+  topic: 風洞試験の計画と実施、CFD と風洞・走行結果の相関
+  sources:
+  - DR039
+  - DR040
+  - DR042
+  - DR043
+  units:
+  - E-114
+  - E-024
+- id: f1-aero-T-10
+  field: F1 チームの空力エンジニア：数学
+  topic: 空力データの解析と報告
+  sources:
+  - DR042
+  - DR039
+  units:
+  - S-018
+  - S-020
+  - P-117
+- id: f1-aero-T-11
+  field: F1 チームの空力エンジニア：工学
+  topic: CAD による空力面の設計
+  sources:
+  - DR039
+  - DR042
+  units:
+  - E-204
+- id: f1-aero-T-12
+  field: F1 チームの空力エンジニア：計算
+  topic: CFD ソフトと Linux、C++・Python・bash の開発、HPC と作業の自動化
+  sources:
+  - DR040
+  - DR043
+  - DR044
+  units:
+  - K-012
+  - K-016
+  - K-029
+  - K-027
+  - K-032
+- id: f1-aero-T-13
+  field: F1 チームの空力エンジニア：計算
+  topic: 最適化（遺伝的アルゴリズム、粒子群、機械学習）
+  sources:
+  - DR044
+  units:
+  - K-046
+- id: f1-aero-T-14
+  field: F1 チームの空力エンジニア：物理
+  topic: 流れの不安定：平行せん断流、過渡成長
+  sources:
+  - DR045
+  units:
+  - P-014
+  - D-039
+- id: f1-aero-T-15
+  field: F1 チームの空力エンジニア：数学
+  topic: 数学と物理の素養（多変数の微積分、ベクトル解析、線形代数）
+  sources:
+  - DR046
+  units:
+  - D-014
+  - D-018
+  - D-044
+  - D-049
+  - M-003
+  - M-007
+- id: f1-aero-T-16
+  field: F1 チームの空力エンジニア：工学
+  topic: 車両の運動：タイヤの力、サスペンション、荷重移動、操縦安定
+  sources:
+  - DR043
+  units:
+  - E-191
+- id: f1-aero-V-01
+  field: F1 チームの空力エンジニア：検証で足した論題
+  topic: 構造と複合材料（有限要素法、異方性、疲労と非破壊検査）
+  units:
+  - E-021
+  - E-012
+  - E-013
+  - E-015
+- id: f1-aero-V-02
+  field: F1 チームの空力エンジニア：検証で足した論題
+  topic: センサ、データ取得、標本化
+  units:
+  - P-118
+  - E-074
+- id: f1-aero-V-03
+  field: F1 チームの空力エンジニア：検証で足した論題
+  topic: 空力騒音（ライトヒルの音響類推、動く物体からの音の放射）
+  units:
+  - E-138

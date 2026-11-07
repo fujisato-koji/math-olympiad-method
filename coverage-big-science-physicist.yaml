@@ -1,0 +1,472 @@
+# 網羅表：大型実験の物理学者（CERN、LIGO、ITER）（cern-physicist、ligo-researcher、iter-fusion をまとめた）
+sources:
+  DR007:
+    title: CERN, Experimental Physicist (EP-DI-2026-8-IC)
+    url: https://jobs.smartrecruiters.com/CERN/744000117650137-experimental-physicist-ep-di-2026-8-ic-
+    date: '2026-11-07'
+  DR008:
+    title: CERN, CMS Tracker Detector physicist (EP-CMX-DA-2023-135-LD)
+    url: https://jobs.smartrecruiters.com/CERN/743999937266103-cms-tracker-detector-physicist-ep-cmx-da-2023-135-ld-
+    date: '2026-11-07'
+  DR009:
+    title: 'University of Wisconsin–Madison, Department of Physics, Physics 736: Experimental Methods in Nuclear-, Particle-, and Astrophysics（Graduate, basic）'
+    url: https://physics.wisc.edu/courses/spring2024/736
+    date: '2026-11-07'
+  DR010:
+    title: Scuola Normale Superiore (Pisa), Statistical Methods in Experimental Particle Physics（博士課程、M. J. Morello）
+    url: https://www.sns.it/en/registro/programma/S250026/2025
+    date: '2026-11-07'
+  DR011:
+    title: University of Cambridge, Quantum Field Theory (MT24), A. Castro
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Quantum_Field_Theory.pdf
+    date: '2026-11-07'
+  DR012:
+    title: University of Cambridge, Symmetries, Particles and Fields (M24), B. Allanach
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Symmetries_Particles_and_Fields_Allanach.pdf
+    date: '2026-11-07'
+  DR013:
+    title: University of Cambridge, The Standard Model (L24), M. Ubiali
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/PartIII_course_outline_SM_Ubiali_2627.pdf
+    date: '2026-11-07'
+  DR014:
+    title: 'University of Victoria, Physics & Astronomy, PHYS 515: Data Analysis Techniques for Physics and Astronomy（Graduate）'
+    url: https://www.uvic.ca/science/physics/assets/docs/outlines/2026-27/phys515_202609.pdf
+    date: '2026-11-07'
+  DR125:
+    title: MIT Kavli Institute（MIT LIGO Laboratory）、Academic Jobs Online に掲載, Postdoctoral Associate（#31298）
+    url: https://academicjobsonline.org/ajo/jobs/31298
+    date: '2026-11-07'
+  DR126:
+    title: LIGO Laboratory（Caltech、MIT）、Academic Jobs Online に掲載, Data Analysis Postdoctoral position at the LIGO Laboratory（#30721）
+    url: https://academicjobsonline.org/ajo/job/30721
+    date: '2026-11-07'
+  DR129:
+    title: 'ITER Organization（量子科学技術研究開発機構 QST の ITER 国内機関のサイトに掲載された写し）, Job Title: Scientist, Physics Operations IO0298（Requisition ID 8347）'
+    url: https://www.fusion.qst.go.jp/ITER/images/page/734/IO0298.pdf
+    date: '2026-11-07'
+  DR130:
+    title: 'ITER Organization（QST のサイトに掲載された写し）, Job Title: Scientific Officer (Plasma-Wall Interactions) IO0386（Requisition ID 3581）'
+    url: https://www.fusion.qst.go.jp/ITER/images/page/436/IO-0386.pdf
+    date: '2026-11-07'
+  DR131:
+    title: 'ITER Organization, ITER: International Thermonuclear Experimental Reactor（What is ITER?）'
+    url: https://www.iter.org/proj/inafewlines
+    date: '2026-11-07'
+items:
+- id: cern-physicist-T-01
+  field: CERN の素粒子物理学者：物理
+  topic: 実験素粒子物理学（学位の分野）
+  sources:
+  - DR007
+  units:
+  - P-107
+  - P-108
+- id: cern-physicist-T-02
+  field: CERN の素粒子物理学者：工学
+  topic: 粒子検出器のハードウェアと実験装置、シリコン検出器
+  sources:
+  - DR007
+  - DR008
+  - DR009
+  units:
+  - P-107
+  - P-118
+  - P-096
+- id: cern-physicist-T-03
+  field: CERN の素粒子物理学者：工学
+  topic: 読み出し系の組立と運転、FPGA、トリガーとデータ収集の連鎖
+  sources:
+  - DR008
+  units:
+  - K-030
+  - E-067
+  - E-068
+  - E-085
+- id: cern-physicist-T-04
+  field: CERN の素粒子物理学者：工学
+  topic: 検出器の性能の解析と最適化、試験の手順と品質監視
+  sources:
+  - DR008
+  units:
+  - P-117
+  - P-118
+- id: cern-physicist-T-05
+  field: CERN の素粒子物理学者：計算
+  topic: 模擬計算・物理の再構成の手法・オンライン／オフラインのソフトウェア（Python、C++、ROOT）
+  sources:
+  - DR007
+  - DR008
+  - DR010
+  - DR009
+  units:
+  - P-119
+  - K-012
+  - K-016
+  - K-029
+  - E-056
+- id: cern-physicist-T-06
+  field: CERN の素粒子物理学者：物理
+  topic: 粒子と物質の相互作用、衝突型加速器の検出器の技法
+  sources:
+  - DR009
+  units:
+  - P-107
+  - P-118
+- id: cern-physicist-T-07
+  field: CERN の素粒子物理学者：物理
+  topic: 自由場の量子化、Fock 空間、Dirac 方程式
+  sources:
+  - DR011
+  units:
+  - P-109
+  - P-110
+  - P-086
+- id: cern-physicist-T-08
+  field: CERN の素粒子物理学者：物理
+  topic: 相互作用する場：LSZ 公式、Wick の定理、ファインマン図、崩壊率と断面積
+  sources:
+  - DR011
+  units:
+  - P-111
+  - P-081
+- id: cern-physicist-T-09
+  field: CERN の素粒子物理学者：物理
+  topic: 量子電磁力学（QED）と木の段階の散乱振幅
+  sources:
+  - DR011
+  units:
+  - P-112
+- id: cern-physicist-T-10
+  field: CERN の素粒子物理学者：数学
+  topic: 行列リー群・リー代数・表現、ローレンツ群とポアンカレ群、SU(3) フレーバー対称性
+  sources:
+  - DR012
+  units:
+  - P-230
+- id: cern-physicist-T-11
+  field: CERN の素粒子物理学者：物理
+  topic: ゲージ理論（U(1) と一般のリー群）
+  sources:
+  - DR012
+  units:
+  - P-112
+  - P-113
+- id: cern-physicist-T-12
+  field: CERN の素粒子物理学者：物理
+  topic: 標準模型の対称性と粒子の中身、P・C・T、パリティの破れ
+  sources:
+  - DR013
+  units:
+  - P-108
+- id: cern-physicist-T-13
+  field: CERN の素粒子物理学者：物理
+  topic: 電弱理論とヒッグス機構、自発的対称性の破れ
+  sources:
+  - DR013
+  units:
+  - P-108
+  - P-115
+- id: cern-physicist-T-14
+  field: CERN の素粒子物理学者：物理
+  topic: フレーバー物理、CKM 行列、CP の破れ、ニュートリノの質量と振動
+  sources:
+  - DR013
+  units:
+  - P-108
+- id: cern-physicist-T-15
+  field: CERN の素粒子物理学者：物理
+  topic: 量子色力学（QCD）、深非弾性散乱とパートン模型
+  sources:
+  - DR013
+  units:
+  - P-108
+  - P-107
+  - P-114
+- id: cern-physicist-T-16
+  field: CERN の素粒子物理学者：物理
+  topic: 粒子識別（チェレンコフ光、尤度比）
+  sources:
+  - DR010
+  units:
+  - P-039
+  - S-019
+- id: cern-physicist-T-17
+  field: CERN の素粒子物理学者：数学
+  topic: 確率の基礎、ベイズの定理、物理で使う分布、誤差の伝播と中心極限定理
+  sources:
+  - DR014
+  - DR009
+  units:
+  - S-001
+  - S-002
+  - S-003
+  - S-004
+  - P-047
+  - P-117
+- id: cern-physicist-T-18
+  field: CERN の素粒子物理学者：数学
+  topic: 点推定と最尤法、区間推定、仮説検定、有意性と 5 シグマ、look-elsewhere 効果
+  sources:
+  - DR010
+  - DR014
+  units:
+  - S-018
+  - S-019
+  - S-021
+- id: cern-physicist-T-19
+  field: CERN の素粒子物理学者：数学
+  topic: カイ二乗フィット、ビンなし尤度フィット、プロファイル尤度、拘束つき最小二乗
+  sources:
+  - DR010
+  - DR014
+  units:
+  - S-020
+  - S-021
+  - K-003
+- id: cern-physicist-T-20
+  field: CERN の素粒子物理学者：数学
+  topic: ベイズ推論とマルコフ連鎖モンテカルロ、ブートストラップ
+  sources:
+  - DR014
+  units:
+  - S-022
+  - S-024
+- id: cern-physicist-V-01
+  field: CERN の素粒子物理学者：検証で足した論題
+  topic: 物理の博士の資格試験の範囲（統計力学の全体、物質中の電磁場と境界値問題、正準変換、流体の基礎、電磁場中の粒子、同種粒子、もつれ、ベリー位相）
+  units:
+  - P-014
+  - P-019
+  - P-035
+  - P-036
+  - P-043
+  - P-045
+  - P-046
+  - P-048
+  - P-049
+  - P-050
+  - P-051
+  - P-052
+  - P-054
+  - P-055
+  - P-079
+  - P-080
+  - P-082
+  - P-084
+  - P-091
+  - P-176
+- id: cern-physicist-V-02
+  field: CERN の素粒子物理学者：検証で足した論題
+  topic: 検出器の熱の設計（二相 CO2 冷却、沸騰と凝縮）
+  units:
+  - E-040
+- id: ligo-researcher-T-01
+  field: LIGO の重力波の研究者：物理
+  topic: 実験室での実験科学（装置の設計と製作）
+  sources:
+  - DR125
+  units:
+  - P-118
+  - P-028
+- id: ligo-researcher-T-02
+  field: LIGO の重力波の研究者：物理
+  topic: 自由空間光学とファイバー光学、精密干渉計測
+  sources:
+  - DR125
+  units:
+  - P-023
+  - P-024
+  - P-028
+- id: ligo-researcher-T-03
+  field: LIGO の重力波の研究者：物理
+  topic: 量子光学
+  sources:
+  - DR125
+  units:
+  - P-091
+  - P-245
+- id: ligo-researcher-T-04
+  field: LIGO の重力波の研究者：工学
+  topic: アナログ・ディジタル制御
+  sources:
+  - DR125
+  units:
+  - E-048
+  - E-049
+  - E-052
+  - E-053
+- id: ligo-researcher-T-05
+  field: LIGO の重力波の研究者：工学
+  topic: 低雑音電子回路
+  sources:
+  - DR125
+  units:
+  - E-067
+  - E-068
+  - E-077
+- id: ligo-researcher-T-06
+  field: LIGO の重力波の研究者：計算
+  topic: シミュレーションとモデリング、有限要素法、プログラミング
+  sources:
+  - DR125
+  units:
+  - E-021
+  - P-119
+  - K-012
+- id: ligo-researcher-T-07
+  field: LIGO の重力波の研究者：物理
+  topic: 天体物理、モデリング、データ解析（重力波）
+  sources:
+  - DR126
+  units:
+  - P-062
+  - P-063
+  - S-022
+  - S-024
+  - P-244
+- id: ligo-researcher-T-08
+  field: LIGO の重力波の研究者：物理
+  topic: 検出器の特性評価と較正
+  sources:
+  - DR126
+  units:
+  - P-117
+  - E-077
+  - E-078
+  - P-244
+- id: ligo-researcher-V-01
+  field: LIGO の重力波の研究者：検証で足した論題
+  topic: 物理の博士の資格試験の範囲（統計力学と揺動散逸定理、放射、散乱理論、正準変換、流体、同種粒子、もつれ、ベリー位相）
+  units:
+  - P-014
+  - P-019
+  - P-036
+  - P-039
+  - P-043
+  - P-045
+  - P-046
+  - P-048
+  - P-049
+  - P-050
+  - P-051
+  - P-052
+  - P-054
+  - P-055
+  - P-080
+  - P-081
+  - P-082
+  - P-084
+  - P-176
+- id: iter-fusion-T-01
+  field: ITER の核融合の研究者：物理
+  topic: プラズマ物理の基礎（デバイ遮蔽、荷電粒子の軌道とドリフト、磁気ミラー）
+  sources:
+  - DR129
+  - DR130
+  units:
+  - P-041
+  - P-032
+- id: iter-fusion-T-02
+  field: ITER の核融合の研究者：物理
+  topic: 核融合反応
+  sources:
+  - DR131
+  units:
+  - P-104
+  - P-241
+- id: iter-fusion-T-03
+  field: ITER の核融合の研究者：物理
+  topic: トカマクの運転、プラズマのディスラプションと回避・緩和、パルスのシナリオ設計
+  sources:
+  - DR129
+  units:
+  - P-241
+  - P-247
+- id: iter-fusion-T-04
+  field: ITER の核融合の研究者：計算
+  topic: 核融合プラズマのシミュレーションの言語と手法
+  sources:
+  - DR129
+  units:
+  - K-012
+  - K-016
+  - P-119
+- id: iter-fusion-T-05
+  field: ITER の核融合の研究者：物理
+  topic: プラズマのパラメータの分布の再構成
+  sources:
+  - DR129
+  units:
+  - E-056
+  - K-062
+  - P-141
+  - P-247
+  - P-248
+- id: iter-fusion-T-06
+  field: ITER の核融合の研究者：工学
+  topic: 実時間制御（磁場閉じ込め）
+  sources:
+  - DR129
+  units:
+  - E-049
+  - E-053
+  - E-054
+  - P-247
+- id: iter-fusion-T-07
+  field: ITER の核融合の研究者：物理
+  topic: プラズマ境界の物理とプラズマ・壁相互作用、材料中の水素の拡散と捕獲
+  sources:
+  - DR130
+  units:
+  - P-041
+  - P-055
+  - P-248
+- id: iter-fusion-T-08
+  field: ITER の核融合の研究者：計算
+  topic: 現代的な科学データの解析と可視化の道具
+  sources:
+  - DR130
+  units:
+  - K-060
+  - K-064
+- id: iter-fusion-T-09
+  field: ITER の核融合の研究者：その他
+  topic: 原子力安全、労働安全衛生、品質管理
+  sources:
+  - DR129
+  none: 地図にない（候補：原子力安全と品質管理）
+- id: iter-fusion-V-01
+  field: ITER の核融合の研究者：検証で足した論題
+  topic: 物理の博士の資格試験の範囲（量子力学の後半と原子の分光、統計力学、流体の基礎、境界値問題、散乱理論）
+  units:
+  - P-014
+  - P-019
+  - P-036
+  - P-043
+  - P-046
+  - P-048
+  - P-051
+  - P-052
+  - P-054
+  - P-075
+  - P-076
+  - P-077
+  - P-078
+  - P-079
+  - P-080
+  - P-081
+  - P-082
+  - P-084
+  - P-089
+  - P-091
+  - P-176
+- id: iter-fusion-V-02
+  field: ITER の核融合の研究者：検証で足した論題
+  topic: 磁気流体力学の方程式と MHD 波
+  units:
+  - P-231
+- id: iter-fusion-V-03
+  field: ITER の核融合の研究者：検証で足した論題
+  topic: プラズマの運動論と波（ブラソフ方程式、ランダウ減衰、RF 加熱）
+  units:
+  - P-246

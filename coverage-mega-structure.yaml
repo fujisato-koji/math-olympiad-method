@@ -1,0 +1,271 @@
+# 網羅表：巨大構造物の設計者（超高層ビル、長大吊り橋）（skyscraper-structural、suspension-bridge をまとめた）
+sources:
+  DR166:
+    title: Skidmore, Owings & Merrill（SOM）, Structural Engineering
+    url: https://www.som.com/expertise/structural-engineering/
+    date: '2026-11-07'
+  DR167:
+    title: Skidmore, Owings & Merrill（SOM）, Burj Khalifa
+    url: https://www.som.com/projects/burj-khalifa/
+    date: '2026-11-07'
+  DR168:
+    title: 本州四国連絡高速道路, 募集要項・選考（募集要項：新卒採用（2027））
+    url: https://www.jb-honshi.co.jp/corp_index/recruit/info/application.html
+    date: '2026-11-07'
+  DR169:
+    title: 本州四国連絡高速道路, Akashi-Kaikyo Bridge（Introduction of the Honshu-Shikoku Bridge Project）
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/introduction/introduction_akashi.html
+    date: '2026-11-07'
+  DR170:
+    title: 本州四国連絡高速道路, Development of Materials
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/construction/construction_material.html
+    date: '2026-11-07'
+  DR171:
+    title: COWI, Together, we design a world record-breaking bridge for the 21st century
+    url: https://www.cowi.com/projects/together-we-design-a-world-record-breaking-bridge-for-the-21st-century/
+    date: '2026-11-07'
+items:
+- id: skyscraper-structural-T-01
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 構造力学の基礎（つりあい、応力とひずみ、梁・トラス、不静定、エネルギー定理、座屈）：土木・建築の構造の中核の単元を当てた
+  sources:
+  - DR166
+  units:
+  - E-001
+  - E-002
+  - E-003
+  - E-004
+  - E-005
+  - E-006
+  - E-007
+- id: skyscraper-structural-T-02
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 不静定構造の解法（たわみ角法、変位法、直接剛性法、トラスと骨組の解析）：中核の単元を当てた
+  sources: []
+  units:
+  - E-010
+  - E-011
+  - E-016
+  - E-018
+- id: skyscraper-structural-T-03
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 材料の挙動と部材（弾性・塑性、極限解析、疲労・破壊、断面の諸特性）：中核の単元を当てた
+  sources: []
+  units:
+  - E-012
+  - E-013
+  - E-014
+  - E-015
+- id: skyscraper-structural-T-04
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 有限要素法による構造解析：中核の単元を当てた
+  sources: []
+  units:
+  - E-020
+  - E-021
+  - E-022
+- id: skyscraper-structural-T-05
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 鉄筋コンクリートと高性能コンクリート（芯と外周の柱）
+  sources:
+  - DR167
+  units:
+  - E-119
+  - E-122
+  - E-123
+  - E-196
+- id: skyscraper-structural-T-06
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 鉄骨構造の部材と接合：中核の単元を当てた
+  sources: []
+  units:
+  - E-120
+  - E-121
+- id: skyscraper-structural-T-07
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: ねじれに強い剛性をもつ中央の芯と、風の力と渦（形の変化で渦をまとめない）
+  sources:
+  - DR167
+  units:
+  - E-013
+  - E-110
+  - E-112
+  - E-113
+  - E-115
+  - E-192
+- id: skyscraper-structural-T-08
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 風工学（自然風、極値風、風洞実験と数値予測）：中核の単元を当てた
+  sources: []
+  units:
+  - E-111
+  - E-114
+- id: skyscraper-structural-T-09
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 構造動力学と性能に基づく耐震設計、免震・制振
+  sources:
+  - DR166
+  units:
+  - E-090
+  - E-091
+  - E-092
+  - E-093
+  - E-094
+  - E-098
+  - E-099
+  - E-103
+  - E-104
+  - E-105
+  - E-097
+- id: skyscraper-structural-T-10
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 地震動のリスク（確率論的ハザード解析、フラジリティ）：中核の単元を当てた
+  sources: []
+  units:
+  - E-100
+  - E-101
+  - E-107
+- id: skyscraper-structural-T-11
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 荷重の分類と評価、構造信頼性
+  sources:
+  - DR166
+  units:
+  - E-106
+  - E-108
+  - E-109
+  - E-096
+- id: skyscraper-structural-T-12
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 基礎と地盤：中核の単元を当てた
+  sources: []
+  units:
+  - E-124
+- id: skyscraper-structural-V-01
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 合成構造
+  units:
+  - E-118
+- id: skyscraper-structural-V-02
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 連続体の力学（固体の力学）
+  units:
+  - E-017
+- id: skyscraper-structural-V-03
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 既存構造物の評価と補強（耐震改修を含む）
+  units:
+  - E-206
+- id: skyscraper-structural-V-04
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 木構造（集成材と CLT、中高層の木造）
+  units:
+  - E-202
+- id: skyscraper-structural-V-05
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：環境
+  topic: 建物の音（室内音響、騒音と振動の制御）
+  units:
+  - E-148
+- id: suspension-bridge-T-01
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 橋の計画と設計：橋梁形式、設計法、設計荷重、材料、圧縮部材の耐荷力
+  sources:
+  - DR168
+  - DR169
+  units:
+  - E-116
+  - E-117
+  - E-118
+- id: suspension-bridge-T-02
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 補剛トラスの 3 径間 2 ヒンジの吊り橋の形式（静定・不静定構造の解析）
+  sources:
+  - DR169
+  units:
+  - E-004
+  - E-005
+  - E-011
+  - E-116
+  - E-016
+  - E-017
+  - E-018
+  - E-021
+  - E-022
+  - E-203
+- id: suspension-bridge-T-03
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 高強度ケーブル素線、高張力鋼（溶接性のよい鋼）
+  sources:
+  - DR170
+  units:
+  - E-015
+  - E-120
+  - E-121
+  - E-163
+- id: suspension-bridge-T-04
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 水中不分離コンクリート、高流動コンクリート、低発熱セメント
+  sources:
+  - DR170
+  units:
+  - E-119
+  - E-122
+  - E-196
+- id: suspension-bridge-T-05
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 空力の安定性（ツインボックス桁）、風洞実験
+  sources:
+  - DR171
+  units:
+  - E-110
+  - E-111
+  - E-112
+  - E-113
+  - E-114
+  - E-115
+  - E-096
+  - E-105
+  - E-094
+  - E-081
+- id: suspension-bridge-T-06
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 耐震設計と船の衝突の評価
+  sources:
+  - DR171
+  units:
+  - E-090
+  - E-091
+  - E-098
+  - E-099
+  - E-102
+  - E-108
+  - E-014
+- id: suspension-bridge-T-07
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 構造ヘルスモニタリング、防食、点検と維持管理の計画
+  sources:
+  - DR171
+  - DR168
+  units:
+  - E-015
+  - E-109
+  - E-206
+- id: suspension-bridge-T-08
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 基礎と地盤
+  sources:
+  - DR168
+  units:
+  - E-124
+- id: suspension-bridge-V-01
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：検証で足した論題
+  topic: 数値計算（固有値、常微分方程式、偏微分方程式）
+  units:
+  - K-002
+  - K-008
+  - E-023
+- id: suspension-bridge-V-02
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：検証で足した論題
+  topic: 速い潮流と水理（流れが基礎に及ぼす力、洗掘）
+  units:
+  - E-187
