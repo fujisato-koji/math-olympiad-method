@@ -39,19 +39,24 @@ items:
   sources:
   - DR135
   units:
-  - N-048
   - N-056
   - N-057
+  - N-062
+  - N-065
+  - N-069
 - id: T-02
   field: 数学
   topic: Hodge 予想（代数方程式の解集合の位相）
   sources:
   - DR136
   units:
-  - T-018
+  - T-030
   - T-029
-  - T-034
-  - T-037
+  - T-018
+  - T-024
+  - T-036
+  - T-039
+  - T-042
 - id: T-03
   field: 数学
   topic: Navier–Stokes 方程式（解の存在と一意性）
@@ -62,7 +67,9 @@ items:
   - E-031
   - D-025
   - D-058
-  - D-059
+  - D-049
+  - D-023
+  - D-072
 - id: T-04
   field: 計算
   topic: P vs NP
@@ -73,6 +80,10 @@ items:
   - K-028
   - K-041
   - L-026
+  - K-121
+  - K-042
+  - N-050
+  - P-087
 - id: T-05
   field: 数学
   topic: Riemann 予想（ゼータ関数の非自明な零点）
@@ -83,6 +94,8 @@ items:
   - N-058
   - D-031
   - D-037
+  - D-036
+  - S-032
 - id: T-06
   field: 物理
   topic: Yang–Mills 理論と質量ギャップ
@@ -92,6 +105,9 @@ items:
   - P-112
   - P-113
   - P-114
+  - P-085
+  - P-108
+  - P-115
   - R-023
   - T-016
 - id: T-07
@@ -104,3 +120,5 @@ items:
   - T-019
   - T-020
   - T-015
+  - T-040
+  - T-045

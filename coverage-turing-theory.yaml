@@ -106,3 +106,34 @@ items:
   - K-044
   - C-034
   - C-032
+- id: V-01
+  field: 検証で足した論題
+  topic: 線形計画法と双対性、最大流最小カット
+  units:
+  - K-010
+  - K-011
+- id: V-02
+  field: 検証で足した論題
+  topic: 回路計算量
+  units:
+  - K-121
+- id: V-03
+  field: 検証で足した論題
+  topic: アルゴリズムの代数的方法（多項式の恒等式検査）
+  units:
+  - C-028
+- id: V-04
+  field: 検証で足した論題
+  topic: 離散数学の数え上げ
+  units:
+  - C-018
+- id: V-05
+  field: 検証で足した論題
+  topic: 誤差逆伝播法と自動微分
+  units:
+  - K-050
+- id: V-06
+  field: 検証で足した論題
+  topic: 統計的学習理論
+  units:
+  - S-025

@@ -150,13 +150,17 @@ items:
   sources:
   - DR077
   - DR078
-  none: 地図にない（候補：力学系の発展（くりこみ、斉次力学））
+  units:
+  - D-073
+  - D-074
 - id: T-03
   field: 数学
   topic: Riemann 面のモジュライ空間の力学と幾何
   sources:
   - DR077
-  none: 地図にない（候補：リーマン面のモジュライ空間）
+  units:
+  - T-040
+  - D-042
 - id: T-04
   field: 数学
   topic: 算術関数、Riemann ゼータ関数、素数定理、Riemann 予想、乗法的関数の平均
@@ -210,7 +214,8 @@ items:
   sources:
   - DR070
   - DR085
-  none: 地図にない（候補：モジュラー形式）
+  units:
+  - N-062
 - id: T-10
   field: 数学
   topic: 数の幾何、小さい階数の環の数え上げ
@@ -224,7 +229,9 @@ items:
   topic: パーフェクトイド空間、ガロア表現、新しいコホモロジー論
   sources:
   - DR078
-  none: 地図にない（候補：パーフェクトイド空間とガロア表現）
+  units:
+  - N-065
+  - N-055
 - id: T-12
   field: 数学
   topic: 可換環論：局所化、ネーター環、準素分解、整拡大、次元論
@@ -273,7 +280,9 @@ items:
   sources:
   - DR078
   - DR088
-  none: 地図にない（候補：極小モデル理論）
+  units:
+  - T-038
+  - T-036
 - id: T-17
   field: 数学
   topic: 複素多様体：多変数の複素解析、因子と直線束、Kähler 計量と Hodge 理論
@@ -318,7 +327,10 @@ items:
   topic: o-極小性の数論への応用、周期写像、André–Oort 予想
   sources:
   - DR085
-  none: 地図にない（候補：o-極小性と数論幾何の応用）
+  units:
+  - L-029
+  - T-018
+  - T-029
 - id: T-22
   field: 数学
   topic: Lie 代数とその表現：ルート系、Weyl 群、単純 Lie 代数の分類、Weyl の指標公式
@@ -394,13 +406,18 @@ items:
   sources:
   - DR097
   - DR085
-  none: 地図にない（候補：制限理論と幾何学的測度論）
+  units:
+  - D-072
+  - D-023
 - id: T-29
   field: 数学
   topic: 球充填と E8 格子
   sources:
   - DR080
-  none: 地図にない（候補：球充填問題と格子）
+  units:
+  - G-048
+  - N-062
+  - D-023
 - id: T-30
   field: 数学
   topic: Hilbert の第 6 問題：Newton 力学から Boltzmann 方程式へ、平均場極限
@@ -518,16 +535,51 @@ items:
   sources:
   - DR107
   - DR085
-  none: 地図にない（候補：シンプレクティック幾何）
+  units:
+  - T-041
+  - P-018
 - id: T-42
   field: 数学
   topic: 正則曲線の数え上げ、仮想基本サイクル、Fukaya 圏
   sources:
   - DR085
-  none: 地図にない（候補：正則曲線の数え上げと Fukaya 圏）
+  units:
+  - T-041
 - id: T-43
   field: 数学
   topic: 3 次元多様体への群作用と結び目理論
   sources:
   - DR085
   none: 地図にない（候補：低次元トポロジーと結び目理論）
+- id: V-01
+  field: 検証で足した論題
+  topic: 複素解析の等角写像（一次分数変換、シュワルツの補題）と平面の調和関数（ディリクレ問題）
+  units:
+  - D-034
+  - D-033
+- id: V-02
+  field: 検証で足した論題
+  topic: 基本解とグリーン関数
+  units:
+  - D-050
+- id: V-03
+  field: 検証で足した論題
+  topic: 篩法と素数の間隔
+  units:
+  - N-063
+- id: V-04
+  field: 検証で足した論題
+  topic: 保型形式と保型表現
+  units:
+  - N-062
+  - N-068
+- id: V-05
+  field: 検証で足した論題
+  topic: 類体論
+  units:
+  - N-066
+- id: V-06
+  field: 検証で足した論題
+  topic: 導来圏と導来関手
+  units:
+  - R-029
