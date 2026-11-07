@@ -93,7 +93,11 @@ items:
   topic: 化学の原理
   sources:
   - CR05
-  none: 地図にない（候補：一般化学（化学平衡と反応速度））
+  units:
+  - H-022
+  - H-023
+  - H-024
+  - H-036
 - id: T-06
   field: 工学
   topic: 伝熱（熱解析）

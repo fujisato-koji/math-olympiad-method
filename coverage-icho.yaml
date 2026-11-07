@@ -1,0 +1,398 @@
+# 網羅表：国際化学オリンピック（IChO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB001:
+    title: IChO International Jury, Regulations of the International Chemistry Olympiad (valid from 2023-08-01), Appendix C Syllabus（第 58 回の開催国のサイトの PDF）
+    url: https://www.icho2026.uz/regulations.pdf
+    date: '2026-11-07'
+  CB002:
+    title: 58th IChO 2026 Scientific Committee, Preparatory Problems Part 1 (V1, 2026-02-01), Fields of advanced difficulty（オランダ化学オリンピックの写し）
+    url: https://scheikundeolympiade.science.ru.nl/internationaal/2026/Preparatory%20Problems.%20PART%201.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 中等数学の道具（二次方程式、指数と対数、連立方程式、正弦と余弦、三平方の定理、グラフ）
+  sources:
+  - CB001
+  units:
+  - A-017
+  - D-001
+  - A-012
+  - G-024
+  - G-019
+  - A-019
+- id: T-02
+  field: その他
+  topic: 実験誤差と有効数字
+  sources:
+  - CB001
+  units:
+  - P-117
+  - H-031
+- id: T-03
+  field: 物理
+  topic: 原子核（核子、同位体、α・β・γ 壊変、核反応）
+  sources:
+  - CB001
+  units:
+  - P-104
+- id: T-04
+  field: 化学
+  topic: 原子の電子構造（量子数、s・p・d 軌道、フント則、パウリの原理、電子配置）
+  sources:
+  - CB001
+  units:
+  - H-011
+  - P-088
+- id: T-05
+  field: 化学
+  topic: 周期表と周期的傾向（電気陰性度、電子親和力、イオン化エネルギー、原子とイオンの半径）
+  sources:
+  - CB001
+  units:
+  - H-012
+- id: T-06
+  field: 化学
+  topic: 化学結合と分子の形（共有・イオン・金属・配位結合、分子間力、ルイス構造、VSEPR）
+  sources:
+  - CB001
+  units:
+  - H-014
+  - H-018
+- id: T-07
+  field: 化学
+  topic: 化学量論と気体（反応式、実験式、物質量、濃度の換算、理想気体の法則、分圧）
+  sources:
+  - CB001
+  units:
+  - H-015
+  - H-016
+  - H-020
+- id: T-08
+  field: 化学
+  topic: 化学平衡（濃度・分圧・モル分率の平衡定数、ルシャトリエの原理）
+  sources:
+  - CB001
+  units:
+  - H-024
+- id: T-09
+  field: 化学
+  topic: 酸と塩基（pH、水の電離、弱酸、緩衝液、塩の加水分解）
+  sources:
+  - CB001
+  units:
+  - H-025
+  - H-026
+- id: T-10
+  field: 化学
+  topic: 溶解・錯形成・分配の平衡（溶解度積、錯生成定数、分配係数）
+  sources:
+  - CB001
+  units:
+  - H-026
+  - H-029
+- id: T-11
+  field: 化学
+  topic: 電気化学の基礎（起電力、ネルンストの式、電気分解、ファラデーの法則）
+  sources:
+  - CB001
+  units:
+  - H-027
+  - H-036
+  - H-048
+- id: T-12
+  field: 化学
+  topic: 反応速度（速度式と次数、半減期、活性化エネルギー、アレニウスの式、触媒）
+  sources:
+  - CB001
+  units:
+  - H-023
+  - H-037
+- id: T-13
+  field: 化学
+  topic: 熱化学（熱と仕事、エンタルピー、熱容量、ヘスの法則、ボルン–ハーバーサイクル）
+  sources:
+  - CB001
+  units:
+  - H-022
+- id: T-14
+  field: 化学
+  topic: エントロピーとギブズエネルギー（自発変化の向き、ΔH と ΔS から平衡定数）
+  sources:
+  - CB001
+  units:
+  - H-036
+- id: T-15
+  field: 化学
+  topic: 滴定の原理（直接と逆の滴定、中和滴定曲線と指示薬、酸化還元・キレート・沈殿の滴定）
+  sources:
+  - CB001
+  units:
+  - H-026
+  - H-031
+- id: T-16
+  field: 物理
+  topic: 光と色（波長、振動数、光子のエネルギー、ランベルト–ベールの法則）
+  sources:
+  - CB001
+  units:
+  - P-069
+  - H-042
+- id: T-17
+  field: 化学
+  topic: 無機定性分析（炎色反応、陽イオンと陰イオンの確認）
+  sources:
+  - CB001
+  units:
+  - H-028
+  - H-029
+- id: T-18
+  field: 化学
+  topic: 典型元素の化学（s ブロックの反応、非金属の水素化物と酸化物、オキソ酸、ハロゲン）
+  sources:
+  - CB001
+  units:
+  - H-028
+- id: T-19
+  field: 化学
+  topic: 第一遷移金属（酸化数とイオンの色、両性水酸化物、過マンガン酸とクロム酸の酸化還元）
+  sources:
+  - CB001
+  units:
+  - H-029
+- id: T-20
+  field: 化学
+  topic: 有機化合物の構造（命名、混成、σ 結合と π 結合、共鳴と芳香族性、誘起効果と酸性）
+  sources:
+  - CB001
+  units:
+  - H-032
+  - H-039
+- id: T-21
+  field: 化学
+  topic: 異性と立体化学（配座異性、互変異性、E/Z、キラリティーと CIP 則、いす形）
+  sources:
+  - CB001
+  units:
+  - H-038
+- id: T-22
+  field: 化学
+  topic: 有機反応の型（求電子付加、芳香族求電子置換、E1 と E2、SN1 と SN2、求核付加、ラジカル置換）
+  sources:
+  - CB001
+  units:
+  - H-039
+  - H-033
+- id: T-23
+  field: 化学
+  topic: 官能基の変換と合成（酸化段階の行き来、グリニャール反応、保護基、多段階合成）
+  sources:
+  - CB001
+  units:
+  - H-040
+  - H-047
+- id: T-24
+  field: 化学
+  topic: 高分子と両親媒性（連鎖重合と重縮合、親水基と疎水基、ミセルと二重膜）
+  sources:
+  - CB001
+  units:
+  - H-035
+  - H-054
+- id: T-25
+  field: 生命
+  topic: アミノ酸・タンパク質と糖（等電点、ペプチド結合、鎖状と環状、グルコースとフルクトース）
+  sources:
+  - CB001
+  units:
+  - H-044
+  - B-028
+- id: T-26
+  field: 生命
+  topic: 脂質と核酸（脂肪酸とアシルグリセロール、DNA と RNA の塩基対、複製と転写）
+  sources:
+  - CB001
+  units:
+  - H-044
+  - B-028
+  - B-032
+- id: T-27
+  field: 化学
+  topic: 実験の基本操作（加熱と還流、天秤・ピペット・ビュレット・メスフラスコ）
+  sources:
+  - CB001
+  units:
+  - H-031
+- id: T-28
+  field: 化学
+  topic: 溶液と分析の基本操作（溶液の調製と希釈、試験管の反応、滴定、pH の測定、ろ過）
+  sources:
+  - CB001
+  units:
+  - H-031
+- id: T-29
+  field: その他
+  topic: 実験データの扱い（グラフにして解析、デジタルの計測機器）
+  sources:
+  - CB001
+  units:
+  - P-117
+  - S-030
+- id: T-30
+  field: 化学
+  topic: 錯体と溶液の発展（配位化合物の異性、結晶場理論と磁気モーメント）
+  sources:
+  - CB001
+  units:
+  - H-046
+- id: T-31
+  field: 化学
+  topic: 固体構造（単位格子、格子定数、ブラッグの法則、充填率、イオン半径比）
+  sources:
+  - CB001
+  units:
+  - H-019
+  - P-092
+- id: T-32
+  field: 化学
+  topic: 発展熱力学（断熱過程、熱機関の効率、平衡定数の温度変化、ラチマー図とフロスト図）
+  sources:
+  - CB001
+  units:
+  - H-036
+  - P-045
+  - H-048
+- id: T-33
+  field: 化学
+  topic: 気体と相（気体分子運動論、衝突理論、相図、クラウジウス–クラペイロンの式）
+  sources:
+  - CB001
+  units:
+  - P-043
+  - P-046
+  - H-036
+- id: T-34
+  field: 化学
+  topic: 複雑な反応速度（同位体効果、定常状態近似と前平衡近似、酵素反応の機構）
+  sources:
+  - CB001
+  units:
+  - H-037
+- id: T-35
+  field: 化学
+  topic: 発展有機化学（軸不斉と面不斉、立体選択性、配座解析、芳香族求核置換、複素環、ペリ環状反応）
+  sources:
+  - CB001
+  units:
+  - H-038
+  - H-047
+  - H-045
+- id: T-36
+  field: 化学
+  topic: 発展高分子（ゴム、共重合体、熱硬化性樹脂、重合の速度論）
+  sources:
+  - CB001
+  units:
+  - H-035
+- id: T-37
+  field: 生命
+  topic: 生体分子の発展（配糖体、タンパク質の高次構造と精製、酵素の機構、翻訳、PCR）
+  sources:
+  - CB001
+  units:
+  - H-044
+  - B-007
+  - B-033
+- id: T-38
+  field: 物理
+  topic: 量子化学と分光の計算（箱の中の粒子、回転・振動・電子遷移、簡単な分子軌道法）
+  sources:
+  - CB001
+  units:
+  - H-045
+  - P-071
+  - H-050
+- id: T-39
+  field: 化学
+  topic: スペクトルによる構造決定（質量分析、赤外吸収、¹H と ¹³C の NMR）
+  sources:
+  - CB001
+  units:
+  - H-041
+- id: T-40
+  field: 化学
+  topic: 発展実験技能（吸引ろ過、TLC、カラム、抽出、再結晶、蒸留、分光光度計）
+  sources:
+  - CB001
+  units:
+  - H-042
+  - H-031
+- id: T-41
+  field: 化学
+  topic: 上級分野（2026）：質量分析
+  sources:
+  - CB002
+  units:
+  - H-041
+- id: T-42
+  field: 化学
+  topic: 上級分野（2026）：反応速度論（定常状態と前平衡の近似、酵素反応、相図の読み）
+  sources:
+  - CB002
+  units:
+  - H-037
+  - B-007
+  - D-046
+- id: T-43
+  field: 化学
+  topic: 上級分野（2026）：熱力学（熱容量、平衡定数の温度依存）
+  sources:
+  - CB002
+  units:
+  - H-036
+- id: T-44
+  field: 化学
+  topic: 上級分野（2026）：遷移金属触媒（触媒サイクル、一電子移動と水素原子移動、クロスカップリング）
+  sources:
+  - CB002
+  units:
+  - H-052
+- id: T-45
+  field: 化学
+  topic: 上級分野（2026）：光化学（ヤブロンスキー図、蛍光とりん光、量子収率）
+  sources:
+  - CB002
+  units:
+  - H-050
+- id: T-46
+  field: 化学
+  topic: 上級分野（2026）：糖質化学（いす形配座、保護基）
+  sources:
+  - CB002
+  units:
+  - H-044
+  - H-038
+  - H-047
+- id: T-47
+  field: 化学
+  topic: 上級の実験（2026）：マイクロピペットと 96 穴プレート
+  sources:
+  - CB002
+  units:
+  - H-031
+  - H-042
+- id: T-48
+  field: 化学
+  topic: 上級の実験（2026）：吸引ろ過
+  sources:
+  - CB002
+  units:
+  - H-042
+- id: T-49
+  field: 化学
+  topic: 上級の実験（2026）：pH 計を使う滴定
+  sources:
+  - CB002
+  units:
+  - H-026
+  - H-031

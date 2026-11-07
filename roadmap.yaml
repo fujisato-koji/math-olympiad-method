@@ -138,6 +138,23 @@ regions:
   - {id: zairyo-device, name: 材料とデバイス, lane: E}
   - {id: energy, name: エネルギーの変換, lane: E}
   - {id: seitai-kogaku, name: 生体工学, lane: E}
+  - {id: busshitsu, name: 物質と変化, lane: H}
+  - {id: genshi-ketsugo, name: 原子と結合, lane: H}
+  - {id: hanno, name: 化学反応と平衡, lane: H}
+  - {id: muki, name: 無機と環境の化学, lane: H}
+  - {id: yuki, name: 有機化学, lane: H}
+  - {id: bunseki, name: 分析と実験, lane: H}
+  - {id: butsuri-kagaku, name: 物理化学, lane: H}
+  - {id: zairyo, name: 材料と高分子, lane: H}
+  - {id: soyaku, name: 創薬の化学, lane: H}
+  - {id: ikimono, name: 生き物のつくりとくらし, lane: B}
+  - {id: shokubutsu, name: 植物のはたらき, lane: B}
+  - {id: karada, name: からだのはたらき, lane: B}
+  - {id: iden-shinka, name: 遺伝と進化, lane: B}
+  - {id: seitai, name: 生態, lane: B}
+  - {id: hassei, name: 発生と再生, lane: B}
+  - {id: iyaku, name: 微生物と病気と薬, lane: B}
+  - {id: shinkei, name: 神経科学, lane: B}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -228,6 +245,21 @@ goals:
   - {id: apmo, name: Asian Pacific Mathematics Olympiad（APMO）, kind: 大会, level: 高校, region: 国際, note: アジアと太平洋の国々の中高生が、自分の国で 4 時間に 5 問の証明の問題に挑む数学オリンピック。, coverage: coverage-apmo.yaml, basis: 公式の範囲の文書はない（Regulations（IN010）は 4 時間 5 問、各問 7 点とだけ書く）。そこで過去問 85 問（2010〜2026）の型付けの記録（IN012）を単元ごとに集計し、2 問以上に出た論題を IMO の網羅表（coverage.yaml）の立て方でまとめた。論題の括弧の数はその論題の単元を使う問題の数。1 問だけの論題（リュカの定理、平面グラフの双対など）は入れていない, beyond: 大学に入っていない 20 歳未満（その年の 7 月 1 日）が、自分の国で受ける。各国で上位 10 人までの答案が公式の成績になる}
   - {id: ifoa, name: Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3）, kind: 資格, level: 大学, region: 国際, note: イギリスに本部があり世界で使われるアクチュアリーの資格で、保険や年金のお金を確率と統計と利息で計算し、会社に助言する力を確かめる試験。, coverage: coverage-ifoa.yaml, basis: IFoA の 2027 年の試験の科目別の syllabus（2026-04 版。CS1、CS2、CM1、CM2、CB1、CB2、CB3、CP1、CP2、CP3）の topics と objectives による。2027 年から CM1 は Actuarial Mathematics for Modelling、CM2 は Economic Modelling と名を変えた。Fellow に進む SP と SA の科目は入れていない。論題と単元の対応は名称による, beyond: "CS1 の Paper B は R などの統計ソフトで解く。CP2 は与えられた場面とデータから表計算のモデルを作り、監査の跡と要約を書く実技 2 本。CP3 は数値を相手に合わせて伝える文書（80 点）と振り返り（20 点）の筆記。CB3 はビジネス・シミュレーション・ゲームへの参加、3,000 語の報告、1,000 語の振り返りで評価し、職業倫理は Professional Skills Course（Stage One）で確かめる"}
   - {id: imf-economist, name: IMF（国際通貨基金）のエコノミスト（Economist Program）, kind: 仕事の頂点, field: 経済学, level: 大学院（博士）, region: 国際, note: 世界の国々の経済を調べて、物の値段やお金の流れ、国の借金や為替について助言し、困った国にはお金を貸して立て直しを助ける国際機関の専門家。, coverage: coverage-imf-economist.yaml, basis: IMF の Economist Program の公式の頁（応募の条件と仕事の分野：国の監視と支援プログラム、財政・金融・金融部門・債務・対外部門）、Experienced Economists の頁（マクロ経済学、金融経済学、財政、国際貿易、計量経済学）、2018 年の選考の頁（面接は金融政策、財政、国際収支、金融部門の問題）、2027 年の募集の転載による。論題は分野の名前から立て、単元は名称で当てた, beyond: 経済学か近い分野の博士（取得から 1 年以内か、1 年以内に取得の見込み）、入るときに 34 歳未満、IMF 加盟国の国籍、流暢な英語（ほかの IMF の言語は有利）。単著の研究論文（25 頁以内）、成績証明、推薦状 3 通。予備面接、パネル面接、作文の試験（論文を要約して批評する）、行動の評価。分析力、判断力、伝える力、各国の当局者と気を配って話す力}
+  - {id: icho, name: 国際化学オリンピック（IChO）, kind: 大会, field: 化学, level: 高校, region: 国際, note: 世界の高校生が国ごとに 4 人ずつ集まり、化学の筆記と実験の試験で力を比べる大会。, coverage: coverage-icho.yaml, basis: IChO 規則（Regulations of the IChO、2023-08-01 施行）の付属 C の syllabus による（第 58 回の開催国のサイトの PDF、2026-11-07 取得）。現行の付属 C は「全員が知るべき知識と実験技能」と「上級分野の例」の 2 層で、2004 年版のレベル 1〜3 の区分はない（T-30〜T-40 が上級分野の例）。開催国は付属 C の外から理論 6、実験 3 分野まで出せ、1 月の準備問題で示す。T-41〜T-49 は第 58 回（2026、ウズベキスタン）の準備問題が示した上級分野。論題と単元の対応は名称による, beyond: 中等学校の生徒か大学に入っていない直近の卒業生で、7 月 1 日に 20 歳未満。各国の選考を通った 1 国 4 名。実験試験 40 点と理論試験 60 点を別の日に行う。白衣と保護眼鏡、プログラム機能のない電卓}
+  - {id: ibo, name: 国際生物学オリンピック（IBO）, kind: 大会, field: 生物, level: 高校, region: 国際, note: 世界の高校生が、生き物のしくみを考える筆記の試験と、顕微鏡や解剖や生化学の実験の試験で力を比べる大会。, coverage: coverage-ibo.yaml, basis: "IBO Operational Guidelines v7.0（2026-09-05）の理論の配分（§3.7.3）と実験の技能の一覧（付録 2）による（2026-11-07 取得）。配分は細胞生物学 20%、植物の解剖と生理 15%、動物の解剖と生理 25%、行動学 5%、遺伝と進化 20%、生態学 10%、生物系統学 5%。IBO は論題の syllabus は今はないとするため、分野の細目は旧版の IBO Guide（第 25.1 版、2013）の付録 I（第三者のサイトの写し）による。付録 2 は一部が古く改訂中と自ら注記する。知識より理解を問う。論題と単元の対応は名称による", beyond: 自国の大会の上位者で 1 国 4 名まで。中等学校の生徒で大学に入っていないこと、大会年の 7 月 1 日に 20 歳以下、出場は 2 回まで。理論と実験を別の日に行う（理論は約 100 題、実験は 4 つの実験室）。実験の大まかな主題は 1 年前までに知らされる。解剖は無脊椎動物、魚、食用の部位に限る}
+  - {id: ap-chem, name: AP Chemistry（College Board）, kind: 入試, field: 化学, level: 大学, region: 米国, note: アメリカの高校生が、大学 1 年の化学の授業の代わりに受ける試験。原子のつくりから電池まで 9 つの単元が出る。, coverage: coverage-ap-chem.yaml, basis: College Board の AP Chemistry Course and Exam Description（Effective Fall 2024、V.1）による（2026-11-07 取得）。9 Unit、91 Topic。試験は 3 時間 15 分（選択 60 問 90 分と記述 7 問 105 分）、電卓と周期表と公式表を使う。Exclusion Statement で出題しない細目を定める（相図、束一的性質、アレニウスの式の計算など）。有機化学の単元はない。論題と単元の対応は名称による, beyond: "授業の 25% 以上を実験に充て、16 件以上（うち 6 件以上は生徒が手順を考える探究型）を行い、すべて実験ノートに記録する"}
+  - {id: ap-bio, name: AP Biology（College Board）, kind: 入試, field: 生物, level: 大学, region: 米国, note: アメリカの高校生が、大学 1 年の生物の授業の代わりに受ける試験。細胞をつくる分子から生態系まで 8 つの単元が出る。, coverage: coverage-ap-bio.yaml, basis: College Board の AP Biology Course and Exam Description（Effective Fall 2025、V.1）による（2026-11-07 取得）。8 Unit、60 Topic、4 つの大きな考え（進化、エネルギー、情報の保存と伝達、系の相互作用）。試験は 3 時間（選択 60 問 90 分と記述 6 問 90 分）、電卓と公式表を使う。Exclusion Statement で暗記を求めない細目を定める。論題と単元の対応は名称による, beyond: "授業の 25% を実験に充て、大きな考えごとに 2 件以上の探究型の実験を行い、データを適切な精度で記録する"}
+  - {id: alevel-chem, name: A level Chemistry（AQA 7405）, kind: 入試, field: 化学, level: 大学, region: 英国, note: イギリスの 16〜18 歳が、大学に入るために受ける化学の試験。物理化学、無機化学、有機化学に分かれる。, coverage: coverage-alevel-chem.yaml, basis: "AQA AS and A-level Chemistry Specification（7404/7405、Version 1.2、July 2026）による（2026-11-07 取得）。3.1 物理化学 12 節、3.2 無機化学 6 節、3.3 有機化学 16 節。筆記 3 回（各 2 時間）、数学の技能が点数の 20% 以上、実験の技能が 15% 以上。英国の海外の会場での提供は 2028 年夏の初回受験で終わる予定。論題と単元の対応は名称による", beyond: 必須の実験 12 件を全員が行い、実験の評価（Practical endorsement、CPAC）の合否が成績とは別に証明される。実験の記録を残す}
+  - {id: alevel-bio, name: A level Biology（AQA 7402）, kind: 入試, field: 生物, level: 大学, region: 英国, note: イギリスの 16〜18 歳が、大学に入るために受ける生物の試験。からだをつくる分子から生態系と遺伝子のはたらきまで 8 つの topic が出る。, coverage: coverage-alevel-bio.yaml, basis: "AQA AS and A-level Biology Specification（7401/7402、Version 1.6、July 2026）による（2026-11-07 取得）。筆記 3 回（各 2 時間、Paper 3 に 2 題から 1 題を選ぶ小論文）、数学の技能が点数の 10% 以上、実験の技能が 15% 以上。論題と単元の対応は名称による", beyond: 必須の実験 12 件、実験の評価（Practical endorsement、CPAC）、実験の記録、小論文を書く力}
+  - {id: nobel-chemistry, name: 化学者（ノーベル化学賞の研究に届く知識）, kind: 研究の頂点, field: 化学, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 目に見えない分子を設計して組み立て、電池や薬や新しい材料のもとになる発見をする。, coverage: coverage-nobel-chemistry.yaml, basis: 2016〜2026 年のノーベル化学賞の授賞の分野（nobelprize.org、2026-11-07 取得）と、大学院の入口の基礎として欧州の化学教育の中核の枠組み（ECTN、2026 年 5 月版）と英国の化学の学位の基準（QAA、2022）による。どちらも学部の中核の基準で、博士課程の入口より一段下の基礎にあたる。論題と単元の対応は名称による, beyond: 賞は応募でなく、招待された推薦者の推薦と王立スウェーデン科学アカデミーの選考による。発見から授賞まで数十年かかることが多い。博士課程では総合試験（筆記と口頭）、博士論文と口頭発表（MIT の例）}
+  - {id: breakthrough-life, name: 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識）, kind: 研究の頂点, field: 生物, level: 大学院（博士）, region: 米国（ブレークスルー賞財団の選考。授賞は国際）, note: 細胞や遺伝子のしくみを解き明かし、これまで治せなかった病気の治し方につなげる発見をする。, coverage: coverage-breakthrough-life.yaml, basis: 2016〜2026 年のブレークスルー賞・生命科学の受賞理由（breakthroughprize.org の発表）と、大学院の入口として MIT Biology の博士課程 1 年目の必修科目と ASBMB の生化学・分子生物学の学位の認定基準（2025）による（2026-11-07 取得）。2016 年の理由は発表の要旨による。論題と単元の対応は名称による, beyond: 推薦は誰でもできるが自薦はできず、過去の受賞者による選考委員会が選ぶ。毎年 3 件（各 300 万ドル）。博士号と長い研究の積み重ね}
+  - {id: nobel-medicine, name: 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識）, kind: 研究の頂点, field: 医学, level: 大学院（博士）, region: スウェーデン（カロリンスカ研究所のノーベル会議の選考。授賞は国際）, note: 生き物のからだの中で起きていることを細胞や分子のしくみとして解き明かし、病気の新しい治し方につなげる。, coverage: coverage-nobel-medicine.yaml, basis: 2012 年と 2016〜2026 年のノーベル生理学・医学賞の授賞の分野（nobelprize.org の授賞の理由）と、医学の入口として AAMC の MCAT の範囲（Foundational Concepts 1〜10）による（2026-11-07 取得）。MCAT は医学部の入口で、博士課程の入口ではない。論題と単元の対応は名称による, beyond: 賞は応募でなく、招待された推薦者の推薦とカロリンスカ研究所のノーベル会議の選考による。発見から授賞まで数十年かかることが多い。博士号と長い研究の積み重ね、研究室を率いて研究費を得る力}
+  - {id: crafoord-bio, name: 生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識）, kind: 研究の頂点, field: 生態学, level: 大学院（博士）, region: スウェーデン（王立スウェーデン科学アカデミーの選考。授賞は国際）, note: 生き物どうしや環境とのつながりと、種が生まれて変わっていくしくみを、野外の観察と数理で解き明かす。, coverage: coverage-crafoord-bio.yaml, basis: クラフォード賞・生物科学の 1984〜2023 年の全 13 回の受賞理由（crafoordprize.se と kva.se）と、大学院の入口として ESA の生態学の課程の枠組み（4DEE、2025 年 5 月改訂）とトロント大学 EEB の博士候補の試験の問題集（2021）による（2026-11-07 取得）。賞は 4 年で 4 部門を回り、次の生物科学の回は 2027 年の見込み。論題と単元の対応は名称による, beyond: 推薦は世界の研究者が出し、王立スウェーデン科学アカデミーが選ぶ（1〜3 人）。長い野外の研究と理論の積み重ね}
+  - {id: kavli-neuro, name: 神経科学の研究者（カブリ賞・神経科学の研究に届く知識）, kind: 研究の頂点, field: 神経科学, level: 大学院（博士）, region: ノルウェー（ノルウェー科学文学アカデミーの選考。授賞は国際）, note: 脳の神経細胞と回路が、どうやって感じ、覚え、考えるのかを解き明かす。, coverage: coverage-kavli-neuro.yaml, basis: カブリ賞・神経科学の 2008〜2026 年の全 10 回の受賞理由（kavliprize.org）と、大学院の入口として神経科学の博士課程の必修（Stanford、UC San Diego、Harvard）と Society for Neuroscience の大学院の訓練の中核の能力による（2026-11-07 取得）。博士課程の文書は領域の名前までで、細目はない。論題と単元の対応は名称による, beyond: 推薦は誰でもできるが自薦はできず、ノルウェー科学文学アカデミーが任命した委員会が選ぶ。偶数年に 2 年ごと（100 万ドル）。研究の厳密さと倫理}
+  - {id: crick-cell-biologist, name: 細胞の研究者（Francis Crick Institute）, kind: 仕事の頂点, field: 生物, level: 大学院（博士）, region: 英国（ロンドン）, note: 細胞がどうやって大きくなり二つに分かれるのかを、酵母という小さな生き物で調べる。, coverage: coverage-crick-cell-biologist.yaml, basis: Francis Crick Institute の Postdoctoral Fellow – Nurse Lab（R2842、2026-10-29 掲載、締切 2026-11-14）の募集による（2026-11-07 取得）。博士の直後の最初の研究職。論題と単元の対応は名称による, beyond: 細胞生物学・分子遺伝学・生化学などの博士、自分で研究の計画を立てて進める力、分野をまたぐ共同研究、論文と口頭の発表、博士課程の学生の指導、4 年の有期}
+  - {id: mrna-vaccine, name: mRNA ワクチンをつくる研究者（Moderna）, kind: 仕事の頂点, field: 医学, level: 大学院（博士）, region: 米国（マサチューセッツ州 Cambridge）, note: ウイルスの部品の設計図を mRNA にしてからだに届け、病気にかかる前にからだの守り（免疫）を育てるワクチンをつくる。, coverage: coverage-mrna-vaccine.yaml, basis: 2023 年ノーベル生理学・医学賞（mRNA の塩基の修飾）の発表、Moderna の研究職の募集 3 件（2026 年）、BioNTech の 2020-03-16 の発表による（2026-11-07 取得）。T-08〜T-10 は募集の職の分野（トランスレーショナル免疫学、タンパク質設計、分析化学）による。論題と単元の対応は名称による, beyond: 博士号（免疫学、分子生物学、生化学、タンパク質工学など）、上級研究員で 2 年以上の経験、勤務は現地、分野をまたぐチームでの仕事と後進の指導、結果とその限界をはっきり伝える力}
+  - {id: mpiab-ocean-ecologist, name: 野生動物の研究者（Max Planck Institute of Animal Behavior）, kind: 仕事の頂点, field: 生態学, level: 大学院（博士）, region: ドイツ（コンスタンツ）, note: クジラが海の中で仲間の情報を使いながら餌をさがすしくみを、体に付けた記録計や海の音のデータで調べる。, coverage: coverage-mpiab-ocean-ecologist.yaml, basis: Max Planck Institute of Animal Behavior の Postdoctoral position "Oceanic Collective Intelligence"（2026-10-14 掲載、締切 2026-12-20）の募集による（2026-11-07 取得）。博士の直後の最初の研究職。論題と単元の対応は名称による, beyond: 自然科学の博士（生態学・進化生物学、海洋学、物理学など）、計算の部分を自分で率いる力、野外の調査、論文の実績、研究者と一般の人に科学を伝える力、国際的なチーム（英語）、2 年の任期}
+  - {id: allen-brain-scientist, name: 脳の研究者（Allen Institute）, kind: 仕事の頂点, field: 神経科学, level: 大学院（博士）, region: 米国（シアトル）, note: ネズミが学んだり考えたりしているときに、脳の中のたくさんの神経細胞がどう働くかを電極で測る。, coverage: coverage-allen-brain-scientist.yaml, basis: Allen Institute の Scientist I – Neurophysiology – Global Brain Observatory（2026-10-27 掲載）の募集による（求人システムの公開データ、2026-11-07 取得）。博士の直後の最初の研究職。論題と単元の対応は名称による, beyond: 神経科学・生物学・生物医学工学の博士、生体内の電気生理の経験 2〜3 年が望ましい、論文の実績、チームでの仕事と若手の指導、実験動物を扱う、シアトルでの勤務と学会への出席}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -370,6 +402,11 @@ units:
       - 練習: 順番の推理（だれが前か、後ろか）
       - 混ぜる: L-001 と混ぜる
       - 確認: 推理パズル
+  - {id: H-001, title: 身のまわりの物の性質（見た目、重さ、手ざわり、水にとけるか、磁石と電気）, stage: 1, region: busshitsu, needs: [], days: 5}
+  - {id: H-002, title: 水と氷と水蒸気（あたためる、ひやす、すがたが変わる）, stage: 1, region: busshitsu, needs: [H-001], days: 4}
+  - {id: B-015, title: 生き物の観察（からだのつくり、動く・育つ・食べる、虫めがね）, stage: 1, region: ikimono, needs: [], days: 5}
+  - {id: B-016, title: 植物の育ち方（たねと芽生え、根・茎・葉、花と実）, stage: 1, region: shokubutsu, needs: [B-015], days: 5}
+  - {id: B-017, title: 動物のからだとくらし（こん虫のからだ、食べ物とすみか）, stage: 1, region: ikimono, needs: [B-015], days: 5}
 
   # ---- 段 2 数 ----
   - id: N-004
@@ -437,6 +474,10 @@ units:
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, region: data, needs: [N-006], days: 5}
   - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, region: risoku, needs: [N-060], days: 4}
   - {id: W-001, title: 石と砂と土の観察（粒の大きさ・色・かたさで分ける）, stage: 2, region: ganseki, needs: [G-046], days: 5}
+  - {id: H-003, title: 物は粒でできている（とける、まざる、ふくらむ、すがたが変わるを粒の動きで説明、重さは変わらない）, stage: 2, region: busshitsu, needs: [H-002, G-046], days: 6}
+  - {id: H-004, title: 物の燃え方と空気（酸素と二酸化炭素、燃えた後の物）, stage: 2, region: busshitsu, needs: [H-003], days: 5}
+  - {id: H-005, title: 水溶液の性質（酸性・中性・アルカリ性、指示薬、金属をとかす水溶液）, stage: 2, region: busshitsu, needs: [H-003], days: 5}
+  - {id: B-018, title: 生き物のなかま分け（共通点と違い、検索表の入口）, stage: 2, region: ikimono, needs: [B-016, B-017], days: 5}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, region: keisan, needs: [N-007], days: 8}
@@ -488,6 +529,14 @@ units:
   - {id: W-002, title: 流れる水のはたらきと地層のでき方（けずる・運ぶ・積もらせる）, stage: 3, region: chiso, needs: [W-001], days: 5}
   - {id: W-003, title: 化石と地層の重なり（地層の新旧、示準化石と示相化石）, stage: 3, region: chiso, needs: [W-002], days: 5}
   - {id: W-004, title: 火山と火成岩（マグマ、噴火のしかた、火山岩と深成岩）, stage: 3, region: jishin-kazan, needs: [W-001], days: 5}
+  - {id: H-006, title: とける量と物の分け方（溶解度と濃度、純物質と混合物、ろ過・再結晶・蒸留・クロマトグラフィー）, stage: 3, region: busshitsu, needs: [H-005, A-007, S-027], days: 7}
+  - {id: H-007, title: 密度（重さとかさの比、浮き沈み）, stage: 3, region: busshitsu, needs: [H-003, A-005], days: 5}
+  - {id: H-008, title: 原子と化学変化（分解と化合、原子の組みかえ、元素）, stage: 3, region: busshitsu, needs: [H-004, H-005], days: 6}
+  - {id: H-009, title: 化学変化と質量（質量保存の法則、定比例の法則、反応する量の比）, stage: 3, region: hanno, needs: [H-008, A-006], days: 6}
+  - {id: B-019, title: 植物の養分と水（日光とでんぷん、根から葉への水、蒸散）, stage: 3, region: shokubutsu, needs: [B-016, H-004], days: 6}
+  - {id: B-020, title: 人のからだのつくりとはたらき（骨と筋肉、感覚器、呼吸、消化、血液の循環）, stage: 3, region: karada, needs: [B-017, H-004], days: 7}
+  - {id: B-021, title: 生き物と環境（季節と生き物、食物連鎖、分解者、数のつりあい）, stage: 3, region: seitai, needs: [B-018, B-019, A-005], days: 6}
+  - {id: B-022, title: 顕微鏡で見る細胞（細胞のつくり、単細胞と多細胞、植物と動物の細胞）, stage: 3, region: bunshi-saibo, needs: [B-018, G-013], days: 6}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -533,6 +582,19 @@ units:
   - {id: W-007, title: 鉱物と結晶の観察（結晶の形、へき開、硬さ、造岩鉱物）, stage: 4, region: ganseki, needs: [W-004, G-021], days: 6}
   - {id: W-008, title: 岩石の循環（火成岩・堆積岩・変成岩のうつりかわり）, stage: 4, region: ganseki, needs: [W-003, W-007], days: 5}
   - {id: W-009, title: 地球の歴史と地質年代（生物の移り変わりと大量絶滅、地球の年齢）, stage: 4, region: chiso, needs: [W-003], days: 6}
+  - {id: H-010, title: 化学式と化学反応式（係数のつり合わせ）, stage: 4, region: hanno, needs: [H-009, A-012], days: 6}
+  - {id: H-011, title: 原子の構造（陽子・中性子・電子、同位体、電子殻と電子配置）, stage: 4, region: genshi-ketsugo, needs: [H-008, A-009], days: 6}
+  - {id: H-012, title: 周期表と元素の周期性（族と周期、価電子、イオン化エネルギー、電気陰性度）, stage: 4, region: genshi-ketsugo, needs: [H-011], days: 6}
+  - {id: H-013, title: イオンと電離（イオンのでき方、電解質、イオンからなる物質）, stage: 4, region: genshi-ketsugo, needs: [H-012, H-005], days: 5}
+  - {id: H-014, title: 化学結合（イオン結合・共有結合・金属結合・配位結合、電子式と構造式）, stage: 4, region: genshi-ketsugo, needs: [H-013], days: 7}
+  - {id: H-015, title: 物質量（モル、アボガドロ定数、モル質量、モル濃度）, stage: 4, region: hanno, needs: [H-010, H-011, A-005], days: 7}
+  - {id: H-016, title: 化学反応の量的関係（反応式と物質量、限定反応物、収率）, stage: 4, region: hanno, needs: [H-015, A-011], days: 6}
+  - {id: H-017, title: 酸化と還元（酸化数、酸化剤と還元剤、金属のイオン化傾向）, stage: 4, region: hanno, needs: [H-014, H-010], days: 6}
+  - {id: B-023, title: 生殖と細胞分裂（卵と精子、受粉と受精、体細胞分裂と減数分裂、染色体）, stage: 4, region: bunshi-saibo, needs: [B-022], days: 6}
+  - {id: B-024, title: 遺伝の規則性（メンデルの法則、顕性と潜性、分離比と確率）, stage: 4, region: iden-shinka, needs: [B-023, C-011, A-010], days: 6}
+  - {id: B-025, title: 生物の多様性と系統（3 つのドメイン、系統樹で見る動物・植物・菌類・原生生物・細菌の主要な群）, stage: 4, region: ikimono, needs: [B-018, B-022], days: 6}
+  - {id: B-026, title: 植物のからだと組織（根・茎・葉の組織、維管束、気孔、花のつくり）, stage: 4, region: shokubutsu, needs: [B-019, B-022], days: 6}
+  - {id: B-027, title: 生物の歴史と進化の考え（化石、生命の起源、相同と相似、自然選択の入口）, stage: 4, region: iden-shinka, needs: [B-025, B-024], days: 6}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, region: kansu, needs: [A-006, A-011], days: 6}
@@ -598,6 +660,40 @@ units:
   - {id: F-008, title: 需要と供給（市場の価格と数量）, stage: 5, region: keizai, needs: [A-019, A-012], days: 6}
   - {id: P-162, title: 天体の観測量と距離（天球座標、年周視差と距離のはしご、等級と色、スペクトル型と HR 図）, stage: 5, region: tenmon, needs: [P-023, P-088, G-025], days: 7}
   - {id: W-010, title: 放射年代測定（放射性崩壊と半減期、同位体による年代、年代の決め方）, stage: 5, region: chikyu-kagaku, needs: [P-104, D-001, W-009], days: 6}
+  - {id: H-018, title: 分子の形と極性、分子間力（電子対反発則、水素結合、沸点の違い）, stage: 5, region: genshi-ketsugo, needs: [H-014, G-021, G-027], days: 7}
+  - {id: H-019, title: 結晶と固体の構造（単位格子と充填、イオン結晶・金属結晶・分子結晶・共有結合の結晶）, stage: 5, region: genshi-ketsugo, needs: [H-014, H-015, G-021], days: 6}
+  - {id: H-020, title: 気体の法則と物質量（モル体積、分圧、実在気体）, stage: 5, region: hanno, needs: [H-016, P-043], days: 6}
+  - {id: H-021, title: 溶液の性質（質量モル濃度、溶解度と温度、沸点上昇・凝固点降下、浸透圧、コロイド）, stage: 5, region: hanno, needs: [H-020, H-006, H-018], days: 7}
+  - {id: H-022, title: 化学反応とエネルギー（反応熱とエンタルピー、ヘスの法則、結合エネルギー、熱量の測定）, stage: 5, region: hanno, needs: [H-016, P-044], days: 6}
+  - {id: H-023, title: 反応の速さ（速度式と反応次数、半減期、活性化エネルギー、触媒）, stage: 5, region: hanno, needs: [H-016, D-001, D-004], days: 7}
+  - {id: H-024, title: 化学平衡（可逆反応、平衡定数、ルシャトリエの原理、圧平衡定数）, stage: 5, region: hanno, needs: [H-023, H-020, A-017], days: 7}
+  - {id: H-025, title: 酸と塩基（ブレンステッドの定義、pH、中和と塩、中和滴定）, stage: 5, region: hanno, needs: [H-013, H-016, D-001], days: 7}
+  - {id: H-026, title: 電離平衡と溶解平衡（電離定数、緩衝液、塩の加水分解、滴定曲線と指示薬、溶解度積）, stage: 5, region: hanno, needs: [H-024, H-025], days: 8}
+  - {id: H-027, title: 電池と電気分解（ダニエル電池、標準電極電位、ファラデーの法則）, stage: 5, region: hanno, needs: [H-017, P-029], days: 6}
+  - {id: H-028, title: 典型元素の化学（水素、アルカリ金属、ハロゲン、酸素と硫黄、窒素とリン、炭素とケイ素、貴ガス）, stage: 5, region: muki, needs: [H-012, H-025, H-017], days: 8}
+  - {id: H-029, title: 遷移元素と錯イオン（酸化数と色、錯イオンの形、錯生成平衡）, stage: 5, region: muki, needs: [H-028, H-026, H-018], days: 7}
+  - {id: H-030, title: 金属の製錬と化学工業（鉄・銅・アルミニウム、合金、さび、アンモニアと硫酸の工業的製法）, stage: 5, region: muki, needs: [H-029, H-024, H-027], days: 6}
+  - {id: H-031, title: 化学実験の操作と定量（器具と安全、溶液の調製、滴定、誤差と有効数字）, stage: 5, region: bunseki, needs: [H-026, H-017, H-006, P-117], days: 7}
+  - {id: H-032, title: 有機化合物の構造と命名（炭化水素、官能基、構造異性、命名法）, stage: 5, region: yuki, needs: [H-018], days: 6}
+  - {id: H-033, title: 脂肪族化合物の反応（アルカン・アルケン・アルキン、アルコール、アルデヒドとケトン、カルボン酸とエステル）, stage: 5, region: yuki, needs: [H-032, H-017], days: 8}
+  - {id: H-034, title: 芳香族化合物（ベンゼン、置換反応、フェノール、アニリン、抽出による分離）, stage: 5, region: yuki, needs: [H-033, H-025], days: 7}
+  - {id: H-035, title: 高分子の合成と性質（付加重合と縮合重合、合成繊維・プラスチック・ゴム、平均分子量）, stage: 5, region: zairyo, needs: [H-033, H-034, S-028], days: 6}
+  - {id: B-028, title: 生き物をつくる分子（水と水素結合、糖、脂質、アミノ酸とタンパク質、核酸）, stage: 5, region: bunshi-saibo, needs: [B-022, H-018, H-032], days: 7}
+  - {id: B-029, title: 酵素とエネルギー（酵素のはたらきと条件、ATP、代謝の入口）, stage: 5, region: bunshi-saibo, needs: [B-028, H-023], days: 6}
+  - {id: B-030, title: 光合成と呼吸のしくみ（葉緑体とミトコンドリア、解糖系、クエン酸回路、電子伝達系、カルビン回路）, stage: 5, region: bunshi-saibo, needs: [B-029, B-019, H-017, H-022], days: 8}
+  - {id: B-031, title: 細胞膜と物質の出入り（拡散、浸透、能動輸送、水ポテンシャル）, stage: 5, region: bunshi-saibo, needs: [B-028, H-021], days: 6}
+  - {id: B-032, title: DNA と遺伝情報の発現（DNA の構造と複製、転写と翻訳、遺伝暗号、突然変異）, stage: 5, region: bunshi-saibo, needs: [B-028, B-023], days: 8}
+  - {id: B-033, title: バイオテクノロジー（PCR、電気泳動、制限酵素と組換え DNA、塩基配列の決定）, stage: 5, region: bunshi-saibo, needs: [B-032, H-013], days: 7}
+  - {id: B-034, title: 神経と筋肉（ニューロン、活動電位、シナプス、脳、筋収縮）, stage: 5, region: karada, needs: [B-020, B-031, P-030], days: 8}
+  - {id: B-035, title: 恒常性と内分泌（体液、自律神経とホルモン、血糖と体温の調節、肝臓と腎臓）, stage: 5, region: karada, needs: [B-034], days: 7}
+  - {id: B-036, title: 消化・呼吸・循環・排出の器官（消化と吸収、ガス交換とヘモグロビン、心臓と循環、腎臓）, stage: 5, region: karada, needs: [B-020, B-031, B-029, H-020], days: 7}
+  - {id: B-037, title: 免疫（自然免疫と獲得免疫、抗体、T 細胞と B 細胞、ワクチン、アレルギー）, stage: 5, region: karada, needs: [B-035, B-032], days: 7}
+  - {id: B-038, title: 植物の生理（水と養分の輸送、光合成の環境要因、植物ホルモン、光と屈性、花芽の形成）, stage: 5, region: shokubutsu, needs: [B-026, B-030, B-031], days: 7}
+  - {id: B-039, title: 動物の行動（生得的行動と学習、情報の伝達、社会行動、生物時計）, stage: 5, region: ikimono, needs: [B-034, B-027], days: 6}
+  - {id: B-040, title: 個体群と生物群集（個体群の成長とロジスティック成長、種間関係、遷移、多様性の指数）, stage: 5, region: seitai, needs: [B-021, A-022, D-001], days: 7}
+  - {id: B-041, title: 生態系と物質循環（エネルギーの流れと生産量、炭素と窒素の循環、生物多様性と保全）, stage: 5, region: seitai, needs: [B-040, B-030], days: 7}
+  - {id: B-042, title: 進化のしくみ（自然選択、遺伝的浮動、ハーディ–ワインベルグの法則、種分化、系統樹）, stage: 5, region: iden-shinka, needs: [B-027, B-032, A-015], days: 7}
+  - {id: B-043, title: 微生物とウイルス（細菌の構造と増殖、培養と無菌操作、ウイルスの増え方、発酵）, stage: 5, region: iyaku, needs: [B-032, B-031], days: 7}
 
   # ---- 段 6 構造 ----
   - {id: N-032, title: 合同式, stage: 6, region: seisuron, needs: [N-028, A-010], days: 13}
@@ -703,8 +799,23 @@ units:
   - {id: F-043, title: 経営戦略とコーポレート・ガバナンス（株式会社の仕組み、競争戦略、取締役会と株主）, stage: 6, region: kaikei, needs: [F-010, F-012], days: 8}
   - {id: W-011, title: 地磁気と古地磁気（双極子磁場、岩石の残留磁化、地磁気の逆転、見かけの極移動）, stage: 6, region: chikyu-naibu, needs: [P-032, W-006, W-010], days: 8}
   - {id: W-012, title: プレートテクトニクス（海洋底拡大、プレート境界、球面上のプレート運動とオイラー極、ホットスポット）, stage: 6, region: chikyu-naibu, needs: [W-006, W-011, M-013], days: 9}
-  - {id: W-013, title: 鉱物の結晶構造と化学組成（ケイ酸塩鉱物、固溶体、結晶化学）, stage: 6, region: ganseki, needs: [W-007, P-088], days: 8}
+  - {id: W-013, title: 鉱物の結晶構造と化学組成（ケイ酸塩鉱物、固溶体、結晶化学）, stage: 6, region: ganseki, needs: [W-007, H-014, H-019], days: 8}
   - {id: W-014, title: 層序学と地質図（地層の対比、生層序・磁気層序・化学層序、地質図と断面図）, stage: 6, region: chiso, needs: [W-009, W-010, W-011], days: 8}
+  - {id: H-036, title: 化学熱力学（エントロピー、ギブズエネルギー、平衡定数と ΔG、電極電位と ΔG、相図）, stage: 6, region: butsuri-kagaku, needs: [H-022, H-024, H-027, P-046], days: 10}
+  - {id: H-037, title: 反応速度論（積分形の速度式、反応機構と律速段階、定常状態近似と前平衡、連鎖反応）, stage: 6, region: butsuri-kagaku, needs: [H-023, H-024, D-044], days: 10}
+  - {id: H-038, title: 立体化学（キラリティーと R/S、ジアステレオマー、配座といす形、光学活性）, stage: 6, region: yuki, needs: [H-032, G-021], days: 8}
+  - {id: H-039, title: 有機反応機構（電子の矢印、共鳴と誘起効果、求核置換と脱離、付加、芳香族の置換と配向性）, stage: 6, region: yuki, needs: [H-034, H-038, H-023], days: 10}
+  - {id: H-040, title: カルボニル化学と炭素骨格の組み立て（求核付加、エノラートとアルドール反応、グリニャール反応、酸化と還元）, stage: 6, region: yuki, needs: [H-039], days: 10}
+  - {id: H-041, title: 構造決定の分光法（赤外吸収、核磁気共鳴、質量分析、紫外・可視吸収）, stage: 6, region: bunseki, needs: [H-032, P-088], days: 10}
+  - {id: H-042, title: 分離と機器分析（抽出・再結晶・蒸留、薄層とカラムのクロマトグラフィー、吸光光度法、電気泳動、検量線）, stage: 6, region: bunseki, needs: [H-031, H-034, S-030], days: 8}
+  - {id: H-043, title: 環境の化学（大気の化学とオゾン層、水の化学と水質、元素の循環、グリーンケミストリー）, stage: 6, region: muki, needs: [H-028, H-026, H-023], days: 8}
+  - {id: H-044, title: 生体分子の化学（単糖と配糖体、アミノ酸とペプチド、核酸の化学、脂質と膜）, stage: 6, region: yuki, needs: [H-040, H-038, B-028], days: 10}
+  - {id: B-044, title: 遺伝子の発現の調節（オペロン、転写因子、細胞の分化、エピジェネティクスの入口）, stage: 6, region: bunshi-saibo, needs: [B-032], days: 8}
+  - {id: B-045, title: 遺伝の解析（連鎖と組換え、伴性遺伝、遺伝子の相互作用、カイ二乗検定）, stage: 6, region: iden-shinka, needs: [B-024, B-032, S-019], days: 8}
+  - {id: B-046, title: 発生（受精、卵割と原腸形成、誘導、形態形成とホックス遺伝子、幹細胞）, stage: 6, region: hassei, needs: [B-044, B-023], days: 10}
+  - {id: B-047, title: 薬理学（受容体と用量反応、作動薬と拮抗薬、酵素阻害、薬の作用と副作用）, stage: 6, region: iyaku, needs: [B-034, B-035, B-029, H-024], days: 10}
+  - {id: B-048, title: 薬物動態（吸収・分布・代謝・排泄、コンパートメントモデル、半減期と投与設計）, stage: 6, region: iyaku, needs: [B-047, B-036, D-044], days: 10}
+  - {id: B-055, title: 個体群の数理（ロジスティック方程式、齢構成と行列モデル、捕食者と被食者、競争のモデル）, stage: 6, region: seitai, needs: [B-040, D-044, M-007], days: 8}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根, stage: 7, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -770,14 +881,14 @@ units:
   - {id: K-064, title: 統計グラフィックスと可視化, stage: 7, region: kikai-gakushu, needs: [S-018], days: 10}
   - {id: K-065, title: スポーツの数学（成績の評価、最適な戦略、公平性）, stage: 7, region: kikai-gakushu, needs: [S-001, C-020], days: 10}
   - {id: K-079, title: 多分野の小さなチームによるゲーム開発（設計の反復と定期的なテスト）, stage: 7, region: graphics, needs: [K-012, K-013, K-014], days: 10}
-  - {id: B-001, title: 遺伝子・染色体・ゲノムの構造と機能, stage: 7, region: bunshi-saibo, needs: [C-011, P-088], days: 10}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
-  - {id: B-002, title: 変異・組換え・選択、集団遺伝学、遺伝学的方法, stage: 7, region: bunshi-saibo, needs: [B-001, S-001], days: 10}
-  - {id: B-003, title: 溶液中の高分子の構造と相互作用、自己集合、結合の協同性, stage: 7, region: seibutsu-butsuri, needs: [D-018, P-004, P-012], days: 10}
-  - {id: B-004, title: 生物系の場・力・流れ（拡散と流束、電気準静的近似、ナビエ・ストークス流、界面動電現象）, stage: 7, region: seibutsu-butsuri, needs: [P-034, D-045], days: 10}
-  - {id: B-005, title: 分子・細胞・組織の生体力学（スケーリング則、細胞の力学、生体膜、分子モーター）, stage: 7, region: seibutsu-butsuri, needs: [D-045], days: 10}
-  - {id: K-105, title: 配列解析と配列アラインメント、クラスタリング、分類と予測, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
-  - {id: K-118, title: 計算分子生物学とゲノミクス（配列データ、構造データ、遺伝的変異、生物ネットワーク）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
-  - {id: K-119, title: 計算細胞生物学（個体群動態、生化学反応の速度、細胞の経路、神経細胞のモデル化）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
+  - {id: B-001, title: 遺伝子・染色体・ゲノムの構造と機能, stage: 7, region: bunshi-saibo, needs: [B-032, B-045], days: 10}
+  - {id: B-002, title: 変異・組換え・選択、集団遺伝学、遺伝学的方法, stage: 7, region: bunshi-saibo, needs: [B-001, S-001, B-042, B-045], days: 10}
+  - {id: B-003, title: 溶液中の高分子の構造と相互作用、自己集合、結合の協同性, stage: 7, region: seibutsu-butsuri, needs: [D-018, P-004, B-028, H-021, H-036], days: 10}
+  - {id: B-004, title: 生物系の場・力・流れ（拡散と流束、電気準静的近似、ナビエ・ストークス流、界面動電現象）, stage: 7, region: seibutsu-butsuri, needs: [P-034, D-045, B-031, B-034], days: 10}
+  - {id: B-005, title: 分子・細胞・組織の生体力学（スケーリング則、細胞の力学、生体膜、分子モーター）, stage: 7, region: seibutsu-butsuri, needs: [D-045, B-031, B-034, E-002], days: 10}
+  - {id: K-105, title: 配列解析と配列アラインメント、クラスタリング、分類と予測, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014, B-032], days: 10}
+  - {id: K-118, title: 計算分子生物学とゲノミクス（配列データ、構造データ、遺伝的変異、生物ネットワーク）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014, B-032, B-033], days: 10}
+  - {id: K-119, title: 計算細胞生物学（個体群動態、生化学反応の速度、細胞の経路、神経細胞のモデル化）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014, B-040, B-029, B-052, H-023], days: 10}
   - {id: P-009, title: 万有引力と惑星の運動（ケプラーの法則、万有引力の位置エネルギー、楕円軌道のエネルギー）, stage: 7, region: rikigaku, needs: [P-003, P-004, G-041], days: 10}
   - {id: P-010, title: 中心力と軌道（角運動量保存、軌道の方程式、脱出速度、軌道の安定性、ラザフォード散乱）, stage: 7, region: rikigaku, needs: [P-009], days: 10}
   - {id: P-014, title: 流体力学（オイラー方程式とナビエ＝ストークス方程式、渦度、ポテンシャル流と複素速度ポテンシャル、レイノルズ数と粘性流、乱流の入口、水波、不安定性）, stage: 7, region: rikigaku, needs: [P-016, P-018, P-013, D-030, D-031, D-032], days: 10}
@@ -864,20 +975,35 @@ units:
   - {id: S-034, title: ブートストラップ（再標本化による標準誤差と信頼区間、ジャックナイフ）, stage: 7, region: tokei, needs: [S-018, S-024], days: 8}
   - {id: S-040, title: 多重検定と偽発見率（族ごとの誤り率、ベンジャミニ–ホッホベルク法）, stage: 7, region: tokei, needs: [S-019], days: 8}
   - {id: W-015, title: 地球の形と重力（重力のポテンシャル、ジオイド、重力異常、アイソスタシー）, stage: 7, region: chikyu-naibu, needs: [P-009, D-018, W-006], days: 8}
-  - {id: W-016, title: 火成岩の成因（マグマの発生、部分融解、結晶分化、状態図による読み）, stage: 7, region: ganseki, needs: [W-008, W-013, P-046], days: 8}
-  - {id: W-017, title: 地球の化学組成と元素の分配（地球と隕石の組成、親石元素と親鉄元素、微量元素の分配）, stage: 7, region: chikyu-kagaku, needs: [W-013, P-046], days: 8}
+  - {id: W-016, title: 火成岩の成因（マグマの発生、部分融解、結晶分化、状態図による読み）, stage: 7, region: ganseki, needs: [W-008, W-013, H-036], days: 8}
+  - {id: W-017, title: 地球の化学組成と元素の分配（地球と隕石の組成、親石元素と親鉄元素、微量元素の分配）, stage: 7, region: chikyu-kagaku, needs: [W-013, H-012, H-036], days: 8}
   - {id: W-018, title: 堆積過程と堆積岩（粒子の運搬と沈降、堆積構造と堆積相、続成作用）, stage: 7, region: chiso, needs: [W-002, W-008, P-014], days: 8}
-  - {id: W-019, title: 変成作用と変成岩（温度と圧力の条件、変成相、地質温度圧力計）, stage: 7, region: ganseki, needs: [W-016, P-046], days: 8}
+  - {id: W-019, title: 変成作用と変成岩（温度と圧力の条件、変成相、地質温度圧力計）, stage: 7, region: ganseki, needs: [W-016, H-036], days: 8}
   - {id: W-020, title: 構造地質学（応力とひずみ、断層と褶曲、岩石の破壊）, stage: 7, region: chikyu-naibu, needs: [E-002, W-006], days: 8}
   - {id: W-021, title: 地震波の伝わり方（弾性体の波動方程式、P 波と S 波、表面波、走時と波線）, stage: 7, region: jishin-kazan, needs: [W-005, E-002, P-025, D-049], days: 9}
   - {id: W-022, title: 地球の熱（熱伝導と放射性元素による発熱、地殻熱流量、海洋底の冷却と水深）, stage: 7, region: chikyu-naibu, needs: [P-042, D-049, W-012], days: 8}
-  - {id: W-023, title: 地形と地表の過程（風化と侵食、河川と氷河、斜面、地形の発達）, stage: 7, region: chiso, needs: [W-018, P-014], days: 8}
+  - {id: W-023, title: 地形と地表の過程（風化と侵食、河川と氷河、斜面、地形の発達）, stage: 7, region: chiso, needs: [W-018, P-014, H-024], days: 8}
   - {id: W-024, title: 潮汐（起潮力、海と固体地球の潮汐、潮汐による散逸と月の後退）, stage: 7, region: chikyu-naibu, needs: [P-009, P-012, W-015], days: 8}
   - {id: F-050, title: 開放経済のマクロ経済学（国際収支、為替相場の決定、マンデル–フレミング・モデル、為替制度、資本移動と通貨危機）, stage: 7, region: keizai, needs: [F-013, F-025], days: 10}
   - {id: F-051, title: 国際貿易（比較優位、ヘクシャー–オリーン・モデル、貿易の利益、関税と保護貿易、WTO）, stage: 7, region: keizai, needs: [F-012, F-013], days: 8}
   - {id: F-052, title: 財政と公的債務（課税と支出の経済学、財政乗数、政府の予算制約、財政ルール、債務の持続可能性）, stage: 7, region: keizai, needs: [F-013, F-005], days: 8}
   - {id: F-054, title: 国の経済の診断（国民経済計算、国際収支統計、政府財政統計、通貨統計の整合と金融計画）, stage: 7, region: keizai, needs: [F-013, F-050, F-052], days: 8}
   - {id: F-056, title: 生存時間解析と死亡率の推定（打ち切り、カプラン–マイヤーとネルソン–アーレン、コックス比例ハザード、曝露と遷移強度の最尤推定、補整、死亡率の予測）, stage: 7, region: seimei-nenkin, needs: [F-014, S-019, S-020, S-021], days: 10}
+  - {id: H-045, title: 量子化学（原子軌道、分子軌道法、ヒュッケル法、混成軌道、フロンティア軌道とペリ環状反応）, stage: 7, region: butsuri-kagaku, needs: [P-070, P-075, M-007, H-039], days: 12}
+  - {id: H-046, title: 錯体化学（配位子場理論、錯体の磁性と色、異性、配位子置換の機構）, stage: 7, region: muki, needs: [H-029, H-045], days: 10}
+  - {id: H-047, title: 有機合成（逆合成解析、保護基、複素環の合成、多段階合成、不斉合成と不斉触媒）, stage: 7, region: yuki, needs: [H-040, H-041, H-042], days: 12}
+  - {id: H-048, title: 電気化学と電池（電極反応、ネルンストの式、過電圧、リチウムイオン電池、燃料電池、腐食）, stage: 7, region: butsuri-kagaku, needs: [H-036, H-037], days: 10}
+  - {id: H-049, title: 材料化学（金属・セラミックス・半導体・複合材料、構造と性質、ナノ粒子と量子ドット）, stage: 7, region: zairyo, needs: [H-019, H-035, P-095], days: 10}
+  - {id: B-049, title: 臨床試験と医薬品の開発（非臨床試験、臨床試験の相、無作為化比較試験、承認と規制、生命倫理）, stage: 7, region: iyaku, needs: [B-048, S-019, S-031], days: 8}
+  - {id: B-050, title: 人体の生理学（循環と呼吸の調節、腎臓、内分泌系、高地・潜水・宇宙での生理）, stage: 7, region: karada, needs: [B-035, B-036, P-043, D-044], days: 10}
+  - {id: B-052, title: 細胞と分子の神経科学（イオンチャネルと膜電位、活動電位の式、シナプス伝達と可塑性、神経伝達物質と受容体）, stage: 7, region: shinkei, needs: [B-034, B-031, D-046], days: 12}
+  - {id: B-056, title: 群集生態学（ニッチと競争と共存、食物網と栄養段階の動態、撹乱と遷移、島の生物地理）, stage: 7, region: seitai, needs: [B-055, B-041], days: 10}
+  - {id: B-057, title: 生態系と生物圏の生態学（生産と分解、物質とエネルギーの流れ、バイオーム、気候の変化と生態系）, stage: 7, region: seitai, needs: [B-041, B-055, P-120], days: 10}
+  - {id: B-058, title: 行動生態学（最適採餌、性選択、血縁選択と協力、集団行動、進化的に安定な戦略）, stage: 7, region: seitai, needs: [B-039, B-042, C-020], days: 10}
+  - {id: B-059, title: 進化生態学（生活史の進化、量的遺伝学、共進化と寄生者、適応放散と種分化）, stage: 7, region: iden-shinka, needs: [B-042, B-055, B-045, B-002], days: 10}
+  - {id: B-060, title: 空間生態学と保全生物学（メタ個体群、景観と分断、個体群の存続可能性、生物多様性の評価と保全）, stage: 7, region: seitai, needs: [B-055, B-056], days: 10}
+  - {id: B-061, title: 生態学の調査と統計（研究の設計、標識再捕法、バイオロギングと音響の計測、一般化線形モデルと混合モデル）, stage: 7, region: seitai, needs: [B-040, S-020, S-031], days: 10}
+  - {id: B-063, title: 神経解剖とシステム神経科学（脳の構造、感覚系と運動系、脳幹・小脳・大脳基底核）, stage: 7, region: shinkei, needs: [B-052], days: 10}
 
   # ---- 段 8 公理の構造 ----
 
@@ -988,17 +1114,17 @@ units:
   - {id: K-086, title: 視覚と知覚、操作の計画と制御、位置推定、ロボットのための機械学習, stage: 8, region: graphics, needs: [P-016, P-025, D-053], days: 12}
   - {id: K-087, title: 操作のための知覚、ロボットの運動学と軌道生成、衝突のない運動計画, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
   - {id: K-088, title: タスクと運動の計画、不確かさの下での計画、操作の動力学と制御, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
-  - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, region: bunshi-saibo, needs: [P-088, P-046], days: 12}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
-  - {id: B-007, title: 酵素学の基礎と生化学反応の機構, stage: 8, region: bunshi-saibo, needs: [B-006], days: 12}
-  - {id: B-008, title: 糖・脂肪・アミノ酸の代謝, stage: 8, region: bunshi-saibo, needs: [B-007], days: 12}
-  - {id: B-009, title: 分子生物学（遺伝子制御、DNA 複製、遺伝的組換え、翻訳）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
-  - {id: B-010, title: 細胞生物学（膜と細胞小器官、輸送とシグナル伝達、細胞骨格、細胞周期）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
-  - {id: K-106, title: ゲノム（配列解析、遺伝子発見、RNA の折りたたみ、ゲノムの組み立て）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
-  - {id: K-107, title: 遺伝子発現解析、制御モチーフ、生物ネットワーク, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
-  - {id: B-011, title: 進化（比較ゲノミクス、系統学、ゲノム重複）, stage: 8, region: bunshi-saibo, needs: [K-022, S-003], days: 12}
-  - {id: K-109, title: 計算生物学の算法（動的計画法、ギブスサンプリング、EM、HMM、確率文脈自由文法）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
-  - {id: K-112, title: 生体分子と細胞の三次元構造と動態の計算, stage: 8, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 12}
-  - {id: K-113, title: 次世代 DNA シーケンシングとそのデータ解析、RNA-seq, stage: 8, region: seibutsu-keisan, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
+  - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, region: bunshi-saibo, needs: [P-046, H-044, B-032], days: 12}
+  - {id: B-007, title: 酵素学の基礎と生化学反応の機構, stage: 8, region: bunshi-saibo, needs: [B-006, B-029, H-037], days: 12}
+  - {id: B-008, title: 糖・脂肪・アミノ酸の代謝, stage: 8, region: bunshi-saibo, needs: [B-007, B-030], days: 12}
+  - {id: B-009, title: 分子生物学（遺伝子制御、DNA 複製、遺伝的組換え、翻訳）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008, B-044, B-033], days: 12}
+  - {id: B-010, title: 細胞生物学（膜と細胞小器官、輸送とシグナル伝達、細胞骨格、細胞周期）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008, B-031, B-023], days: 12}
+  - {id: K-106, title: ゲノム（配列解析、遺伝子発見、RNA の折りたたみ、ゲノムの組み立て）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003, B-001, B-032], days: 12}
+  - {id: K-107, title: 遺伝子発現解析、制御モチーフ、生物ネットワーク, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003, B-044, B-001], days: 12}
+  - {id: B-011, title: 進化（比較ゲノミクス、系統学、ゲノム重複）, stage: 8, region: bunshi-saibo, needs: [K-022, S-003, B-042, B-001], days: 12}
+  - {id: K-109, title: 計算生物学の算法（動的計画法、ギブスサンプリング、EM、HMM、確率文脈自由文法）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003, B-032], days: 12}
+  - {id: K-112, title: 生体分子と細胞の三次元構造と動態の計算, stage: 8, region: seibutsu-keisan, needs: [K-012, K-013, K-014, B-006, B-010], days: 12}
+  - {id: K-113, title: 次世代 DNA シーケンシングとそのデータ解析、RNA-seq, stage: 8, region: seibutsu-keisan, needs: [B-001, B-002, B-006, B-007, B-008, B-033], days: 12}
   - {id: K-114, title: 現代の生物学の確率と統計（検定、多重検定、回帰、主成分分析）, stage: 8, region: seibutsu-keisan, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
   - {id: K-115, title: 分子・細胞系の解析（分子モデリング、代謝と遺伝子制御のネットワーク、シグナル伝達）, stage: 8, region: seibutsu-keisan, needs: [K-015, D-045, P-046, B-003, B-006, B-007, B-008], days: 12}
   - {id: K-116, title: 深層学習による生命科学, stage: 8, region: seibutsu-keisan, needs: [K-015, B-006, B-007, B-008], days: 12}
@@ -1048,7 +1174,7 @@ units:
   - {id: P-099, title: 超伝導（マイスナー効果、現象論、BCS 理論、ジョセフソン接合）, stage: 8, region: bussei, needs: [P-094, P-095, P-083], days: 12}
   - {id: P-100, title: 電子相関とフェルミ液体（ハバード模型とモット絶縁体、フェルミ液体論、近藤効果、スケーリング理論）, stage: 8, region: bussei, needs: [P-057, P-055, P-097], days: 12}
   - {id: P-102, title: トポロジカル物性（トポロジカルバンド理論、量子異常ホール効果、量子スピンホール効果、エッジ状態とトポロジカル絶縁体）, stage: 8, region: bussei, needs: [P-098, P-176], days: 12}
-  - {id: P-103, title: ソフトマター（高分子、コロイド、ゲル、液晶、自己組織化、生体のソフトマター）, stage: 8, region: bussei, needs: [P-045], days: 12}
+  - {id: P-103, title: ソフトマター（高分子、コロイド、ゲル、液晶、自己組織化、生体のソフトマター）, stage: 8, region: bussei, needs: [P-045, H-035], days: 12}
   - {id: P-106, title: 原子核物理（核力とパイ中間子交換、二核子系、液滴模型と質量公式、殻模型と魔法数、原子核の変形と集団運動、核子多体系、元素合成）, stage: 8, region: soryushi, needs: [P-077, P-079, P-080, P-081, P-083, P-084, P-085, P-086], days: 12}
   - {id: P-107, title: 素粒子の現象論（粒子と相互作用、相対論的運動学と崩壊・散乱、SU(2)・SU(3) とクォーク模型、物質との相互作用と検出器、レプトン＝核子散乱と構造関数）, stage: 8, region: soryushi, needs: [P-058, P-077, P-073, P-074, P-075], days: 12}
   - {id: P-109, title: 古典場の理論と対称性（場のラグランジアン、場のオイラー＝ラグランジュ方程式、ネーターの定理と保存則、相対論的な共変性）, stage: 8, region: soryushi, needs: [P-016, P-018, P-037, D-022, D-032], days: 12}
@@ -1149,10 +1275,10 @@ units:
   - {id: P-169, title: 銀河の構造と恒星系の力学（銀河の分類、銀河の回転と暗黒物質、恒星系の力学、銀河中心の巨大ブラックホール）, stage: 8, region: tenmon, needs: [P-010, P-018, P-162], days: 10}
   - {id: P-171, title: 惑星系（太陽系の天体と太陽系外縁天体、惑星の形成、系外惑星の検出法と性質）, stage: 8, region: tenmon, needs: [P-009, P-162, P-164], days: 9}
   - {id: P-173, title: 低次元のナノ構造（量子閉じ込め、量子ドット、ナノワイヤとカーボンナノチューブ、ナノ構造のフォノン）, stage: 8, region: bussei, needs: [P-095, P-093, P-071], days: 9}
-  - {id: P-175, title: 表面と界面（表面の構造と再構成、吸着、自己組織化単分子膜）, stage: 8, region: bussei, needs: [P-092, P-046, P-103], days: 8}
+  - {id: P-175, title: 表面と界面（表面の構造と再構成、吸着、自己組織化単分子膜）, stage: 8, region: bussei, needs: [P-092, H-014, H-054], days: 8}
   - {id: E-158, title: pn 接合とトランジスタ（ダイオード、バイポーラトランジスタ、MOSFET の動作）, stage: 8, region: zairyo-device, needs: [P-096, E-067], days: 9}
   - {id: E-163, title: 結晶の欠陥と転位（点欠陥、転位と塑性変形、粒界、強化の機構）, stage: 8, region: zairyo-device, needs: [P-092, E-002], days: 9}
-  - {id: E-164, title: 固体中の拡散と相変態（拡散の機構、核生成と成長、変態の速度論と組織）, stage: 8, region: zairyo-device, needs: [P-046, P-055, E-163], days: 9}
+  - {id: E-164, title: 固体中の拡散と相変態（拡散の機構、核生成と成長、変態の速度論と組織）, stage: 8, region: zairyo-device, needs: [P-055, E-163, H-036, H-053], days: 9}
   - {id: E-166, title: 衛星測位（擬似距離による位置の決定、原子時計、スペクトル拡散信号、相対論の補正）, stage: 8, region: kido, needs: [E-089, P-059, P-009, K-003], days: 9}
   - {id: E-170, title: 電力変換と電力系統（パワーエレクトロニクス、同期発電機、送電と系統の安定）, stage: 8, region: energy, needs: [E-069, E-048, E-158], days: 9}
   - {id: W-025, title: 震源の物理（断層運動と地震モーメント、マグニチュード、発震機構、グーテンベルク–リヒター則）, stage: 8, region: jishin-kazan, needs: [W-020, W-021], days: 9}
@@ -1160,13 +1286,25 @@ units:
   - {id: W-027, title: リソスフェアの力学（弾性板のたわみ、荷重とアイソスタシー、伸張と堆積盆地の沈降）, stage: 8, region: chikyu-naibu, needs: [W-015, W-022, E-012], days: 9}
   - {id: W-028, title: マントル対流（粘性流体の熱対流、レイリー数、プルームとホットスポット、地球の熱史）, stage: 8, region: chikyu-naibu, needs: [P-014, W-022, W-026], days: 10}
   - {id: W-029, title: 多孔質の岩石の中の流れ（ダルシーの法則、地下水と熱水の循環、融けたマントルからのメルトの移動）, stage: 8, region: chikyu-naibu, needs: [P-014, D-049, W-016, W-018], days: 8}
-  - {id: W-030, title: 火山の物理（マグマの上昇と発泡、噴火の様式、噴煙柱と火砕流）, stage: 8, region: jishin-kazan, needs: [W-016, P-014, P-046], days: 9}
+  - {id: W-030, title: 火山の物理（マグマの上昇と発泡、噴火の様式、噴煙柱と火砕流）, stage: 8, region: jishin-kazan, needs: [W-016, P-014, H-021, H-036], days: 9}
   - {id: W-031, title: 同位体地球化学（放射性同位体の系とアイソクロン、マントルと地殻の分化）, stage: 8, region: chikyu-kagaku, needs: [W-010, W-016, W-017], days: 9}
-  - {id: W-032, title: 安定同位体地球化学（同位体の分別、酸素・水素・炭素の同位体比、古水温の指標）, stage: 8, region: chikyu-kagaku, needs: [W-017, P-043, P-046], days: 9}
-  - {id: W-033, title: 炭素循環と海洋の化学（炭酸系の平衡、海洋による炭素の運搬、風化による長期の気候の調節）, stage: 8, region: chikyu-kagaku, needs: [W-032, P-120, P-046], days: 9}
-  - {id: W-034, title: 大気化学（オゾン層の生成と破壊、微量気体の反応、エーロゾル）, stage: 8, region: chikyu-kagaku, needs: [P-120, P-131, P-043], days: 9}
+  - {id: W-032, title: 安定同位体地球化学（同位体の分別、酸素・水素・炭素の同位体比、古水温の指標）, stage: 8, region: chikyu-kagaku, needs: [W-017, H-036, H-051], days: 9}
+  - {id: W-033, title: 炭素循環と海洋の化学（炭酸系の平衡、海洋による炭素の運搬、風化による長期の気候の調節）, stage: 8, region: chikyu-kagaku, needs: [W-032, P-120, H-024, H-026], days: 9}
+  - {id: W-034, title: 大気化学（オゾン層の生成と破壊、微量気体の反応、エーロゾル）, stage: 8, region: chikyu-kagaku, needs: [P-120, P-131, H-037, H-043], days: 9}
   - {id: F-053, title: 金融政策と中央銀行（ニューケインジアン・モデル、インフレ目標と政策金利の規則、波及の経路、量的緩和）, stage: 8, region: keizai, needs: [F-025, F-026], days: 10}
   - {id: F-055, title: 従属性と極値（コピュラ、裾の従属、極値分布、裾の重さの尺度）, stage: 8, region: keiryo-risk, needs: [S-003, S-008, F-017], days: 8}
+  - {id: H-050, title: 分子の対称性と分光学（点群と指標表、回転・振動・電子スペクトル、選択律、磁気共鳴、蛍光とりん光）, stage: 8, region: butsuri-kagaku, needs: [H-045, H-041, R-003, R-006, P-079], days: 12}
+  - {id: H-051, title: 統計熱力学と反応速度の理論（分配関数、平衡定数の分子論、ポテンシャルエネルギー面、遷移状態理論）, stage: 8, region: butsuri-kagaku, needs: [P-049, H-036, H-037, H-045], days: 10}
+  - {id: H-052, title: 触媒化学（有機金属錯体と触媒サイクル、クロスカップリング、メタセシス、固体触媒と吸着）, stage: 8, region: muki, needs: [H-046, H-047], days: 10}
+  - {id: H-053, title: 固体化学と結晶成長（状態図と固溶体、欠陥と不定比、固相反応、単結晶の育成）, stage: 8, region: zairyo, needs: [H-049, H-036, P-092], days: 10}
+  - {id: H-054, title: 超分子と多孔性材料（分子認識、自己集合とミセル、分子機械、ゼオライトと金属有機構造体）, stage: 8, region: zairyo, needs: [H-046, H-049, H-036], days: 10}
+  - {id: B-051, title: 免疫学（抗原認識と MHC、抗体の多様性、T 細胞の分化、サイトカイン、ワクチンの設計、腫瘍免疫）, stage: 8, region: karada, needs: [B-037, B-009, B-010], days: 12}
+  - {id: B-053, title: 遺伝子工学とゲノム編集（ベクターと遺伝子導入、CRISPR–Cas、遺伝子治療、mRNA と核酸医薬）, stage: 8, region: bunshi-saibo, needs: [B-033, B-009], days: 10}
+  - {id: B-062, title: 理論生態学（反応拡散と空間のパターン、確率的な個体群動態、適応ダイナミクス、エージェントベースモデル）, stage: 8, region: seitai, needs: [B-055, B-059, D-049, S-009], days: 12}
+  - {id: B-064, title: 神経発生（神経誘導、軸索の誘導、シナプスの形成、臨界期と経験による作り替え）, stage: 8, region: shinkei, needs: [B-046, B-052, B-010], days: 12}
+  - {id: B-065, title: 認知と行動の神経科学（学習と記憶、報酬と意思決定、知覚と注意、睡眠と覚醒）, stage: 8, region: shinkei, needs: [B-063, B-039], days: 12}
+  - {id: B-066, title: 計算神経科学（神経細胞のモデル、神経符号化、回路の力学、学習則）, stage: 8, region: shinkei, needs: [B-052, D-053, S-003, K-012], days: 12}
+  - {id: B-067, title: 神経科学の計測と操作（電気生理と多電極記録、カルシウムイメージング、光遺伝学、脳の画像化、回路の地図）, stage: 8, region: shinkei, needs: [B-052, B-053, P-118], days: 10}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1268,11 +1406,11 @@ units:
   - {id: K-089, title: 劣駆動系の非線形動力学、最適制御とロバスト制御、運動計画, stage: 9, region: graphics, needs: [D-045, M-007, P-016], days: 12}
   - {id: K-090, title: 移動ロボットの知覚・位置推定・SLAM、非線形系の制御、不確かさの下での推論, stage: 9, region: graphics, needs: [K-012, K-013, K-014, M-007, S-003], days: 12}
   - {id: K-091, title: 自律移動体の視覚航法（幾何制御、視覚・慣性航法、SLAM）, stage: 9, region: graphics, needs: [E-055, E-056], days: 12}
-  - {id: B-012, title: 構造生物学の手法（X 線結晶構造解析、電子顕微鏡、光学顕微鏡）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
-  - {id: B-013, title: 生体高分子の熱力学と統計力学（折りたたみ、結合、アロステリー、酵素反応の速度論）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
-  - {id: B-014, title: タンパク質の折りたたみ・誤った折りたたみ・凝集と品質管理, stage: 9, region: bunshi-saibo, needs: [B-006, B-007, B-008], days: 12}
-  - {id: K-110, title: 生物配列と構造のペアワイズ・多重アラインメント、系統樹、隠れマルコフモデル, stage: 9, region: seibutsu-keisan, needs: [K-016], days: 12}
-  - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, region: seibutsu-keisan, needs: [K-016, P-049, P-119], days: 12}
+  - {id: B-012, title: 構造生物学の手法（X 線結晶構造解析、電子顕微鏡、光学顕微鏡）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, H-050, P-092], days: 12}
+  - {id: B-013, title: 生体高分子の熱力学と統計力学（折りたたみ、結合、アロステリー、酵素反応の速度論）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046, H-051, B-003], days: 12}
+  - {id: B-014, title: タンパク質の折りたたみ・誤った折りたたみ・凝集と品質管理, stage: 9, region: bunshi-saibo, needs: [B-006, B-007, B-008, B-013, B-010], days: 12}
+  - {id: K-110, title: 生物配列と構造のペアワイズ・多重アラインメント、系統樹、隠れマルコフモデル, stage: 9, region: seibutsu-keisan, needs: [K-016, B-042, B-032], days: 12}
+  - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, region: seibutsu-keisan, needs: [K-016, P-049, P-119, B-006, H-055], days: 12}
   - {id: P-101, title: 物性の場の理論・多体理論の入口（多体の定式化とファインマン図、乱雑位相近似、誘電関数と線形応答、経路積分と平均場、ボソン化、非線形シグマ模型、量子ゲージ理論）, stage: 9, region: bussei, needs: [P-098, P-055, P-097], days: 12}
   - {id: P-108, title: 標準模型（QED、QCD と漸近的自由性・閉じ込め、弱い相互作用とパリティの破れ、電弱統一とヒッグス機構、CKM 行列と CP の破れ、ニュートリノ質量と振動、深非弾性散乱とパートン模型、標準模型を超える物理）, stage: 9, region: soryushi, needs: [P-111, P-112, P-107, R-023], days: 12}
   - {id: P-113, title: 経路積分による量子化とゲージ理論（汎関数法、非可換ゲージ理論、ゴースト場と BRST 対称性）, stage: 9, region: soryushi, needs: [P-111, P-112, R-023], days: 12}
@@ -1309,7 +1447,7 @@ units:
   - {id: E-036, title: 数値流体力学（2）：格子生成、複雑形状、有限要素法・スペクトル法・パネル法, stage: 9, region: ryutai, needs: [D-032, D-049, E-024, E-025, E-040, E-041], days: 12}
   - {id: E-037, title: 圧縮性流れの理論（オイラー方程式、衝撃波の跳び条件、特性曲線）, stage: 9, region: ryutai, needs: [E-038, E-039, P-013, P-014, E-024, E-025, E-040, E-041], days: 12}
   - {id: E-043, title: ジェットエンジンとガスタービン（インレット・圧縮機・燃焼器・タービン・ノズル、サイクル解析）, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
-  - {id: E-044, title: 化学ロケット（固体・液体・ハイブリッド、熱化学と比推力）, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
+  - {id: E-044, title: 化学ロケット（固体・液体・ハイブリッド、熱化学と比推力）, stage: 9, region: netsu-suishin, needs: [E-042, H-022, H-036], days: 12}
   - {id: E-045, title: ロケットのノズル流、推進剤供給とターボポンプ、燃焼、冷却, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
   - {id: E-046, title: 電気推進（電熱・静電・電磁の加速方式と連続推力の軌道）, stage: 9, region: netsu-suishin, needs: [P-034], days: 12}
   - {id: E-055, title: 最適制御（動的計画法、変分法、ポントリャーギンの最大原理）, stage: 9, region: seigyo, needs: [E-053, E-054], days: 12}
@@ -1382,7 +1520,7 @@ units:
   - {id: E-162, title: 永久磁石と磁性材料（磁気異方性、磁区と磁壁、保磁力、希土類磁石）, stage: 9, region: zairyo-device, needs: [P-097, E-163], days: 8}
   - {id: E-165, title: ナノの顕微鏡法（収差補正電子顕微鏡と電子線による元素分析、走査トンネル顕微鏡と原子間力顕微鏡、原子の操作）, stage: 9, region: zairyo-device, needs: [P-092, P-071, P-118], days: 9}
   - {id: E-167, title: 風力発電（ロータの空気力学とベッツの限界、翼素運動量理論、荷重と疲労、発電機と制御）, stage: 9, region: energy, needs: [E-029, E-111, E-015, E-170], days: 9}
-  - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, region: seitai-kogaku, needs: [E-164, P-103, B-010], days: 9}
+  - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, region: seitai-kogaku, needs: [E-164, B-010, H-035, H-049], days: 9}
   - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010], days: 9}
   - {id: W-035, title: 地球の形成と惑星の分化（隕石と太陽系の材料、核とマントルの分離、初期の地球）, stage: 9, region: chikyu-kagaku, needs: [W-031, P-171], days: 10}
   - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, region: chiso, needs: [W-014, W-033, B-011], days: 10}
@@ -1392,6 +1530,11 @@ units:
   - {id: W-040, title: 造山運動と大陸の変形（衝突帯、山脈の隆起と侵食、大陸地殻の厚化と気候への影響）, stage: 9, region: chikyu-naibu, needs: [W-023, W-026, W-027], days: 10}
   - {id: W-041, title: 古気候学（気候の記録の復元、氷床コアと海底堆積物、軌道要素と氷期の周期、過去の温暖期）, stage: 9, region: chikyu-kagaku, needs: [W-032, W-033, P-161, P-009], days: 10}
   - {id: W-042, title: 宇宙測地学（GNSS による地殻変動、衛星重力、衛星高度計による海面の変化）, stage: 9, region: chikyu-naibu, needs: [W-015, E-166, P-141], days: 10}
+  - {id: H-055, title: 計算化学（ハートリー–フォック法、密度汎関数法、基底関数、分子力学と分子動力学、自由エネルギー計算）, stage: 9, region: butsuri-kagaku, needs: [H-045, H-051, K-002, K-008], days: 12}
+  - {id: H-056, title: 医薬品化学（薬の標的、構造活性相関、リード最適化、薬らしさ、薬物代謝と構造）, stage: 9, region: soyaku, needs: [H-047, B-047, B-048, B-007], days: 12}
+  - {id: H-057, title: 化学生物学（生体直交反応とクリックケミストリー、化学プローブ、酵素の指向性進化とファージディスプレイ）, stage: 9, region: soyaku, needs: [H-047, B-007, B-009], days: 10}
+  - {id: B-054, title: 幹細胞と再生医療（多能性幹細胞、iPS 細胞と初期化、分化誘導、オルガノイド、細胞治療）, stage: 9, region: hassei, needs: [B-046, B-051, B-053, B-010], days: 12}
+  - {id: B-068, title: 神経遺伝学と脳の病気（神経発達症、神経変性疾患、精神疾患、神経薬理）, stage: 9, region: shinkei, needs: [B-064, B-065, B-047, B-014], days: 12}
 
   # ---- 段 10 新しい対象をつくる ----
 
@@ -1432,3 +1575,5 @@ units:
   - {id: T-045, title: リッチ流と幾何化予想, stage: 10, region: tayotai, needs: [T-017, T-040, D-060, T-012], days: 12}
   - {id: T-046, title: 偏屈層と構成可能層, stage: 10, region: daisu-kika, needs: [T-037, T-024, R-029], days: 10}
   - {id: S-032, title: ランダム行列, stage: 10, region: kakuritsu-daigaku, needs: [S-008, M-007, D-066], days: 10}
+  - {id: H-058, title: 計算創薬とケモインフォマティクス（分子記述子と QSAR、ドッキング、仮想スクリーニング、機械学習による分子設計）, stage: 10, region: soyaku, needs: [H-055, H-056, K-046, K-111], days: 12}
+  - {id: H-059, title: 創薬の新しいモダリティ（フラグメント創薬、標的タンパク質分解と分子のり、ペプチド、抗体、核酸医薬）, stage: 10, region: soyaku, needs: [H-056, H-057, B-051], days: 12}

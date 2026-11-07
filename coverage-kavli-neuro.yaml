@@ -1,0 +1,227 @@
+# 網羅表：神経科学の研究者（カブリ賞・神経科学の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB051:
+    title: The Kavli Prize, 2008 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2008
+    date: '2026-11-07'
+  CB052:
+    title: The Kavli Prize, 2010 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2010
+    date: '2026-11-07'
+  CB053:
+    title: The Kavli Prize, 2012 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2012
+    date: '2026-11-07'
+  CB054:
+    title: The Kavli Prize, 2014 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2014
+    date: '2026-11-07'
+  CB055:
+    title: The Kavli Prize, 2016 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2016
+    date: '2026-11-07'
+  CB056:
+    title: The Kavli Prize, 2018 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2018
+    date: '2026-11-07'
+  CB057:
+    title: The Kavli Prize, 2020 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2020
+    date: '2026-11-07'
+  CB058:
+    title: The Kavli Prize, 2022 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2022
+    date: '2026-11-07'
+  CB059:
+    title: The Kavli Prize, 2024 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2024
+    date: '2026-11-07'
+  CB060:
+    title: The Kavli Prize, 2026 Kavli Prize in Neuroscience
+    url: https://www.kavliprize.org/prizes/neuroscience/2026
+    date: '2026-11-07'
+  CB061:
+    title: Stanford Neurosciences PhD Program, Ph.D. Degree Requirements
+    url: https://med.stanford.edu/neurogradprogram/about/degree-requirements.html
+    date: '2026-11-07'
+  CB062:
+    title: 'UC San Diego Neurosciences Graduate Program, Handbook: Program Requirements'
+    url: https://neurograd.ucsd.edu/handbook/prog-requirement/program-requirements1.html
+    date: '2026-11-07'
+  CB063:
+    title: Society for Neuroscience, Core Competencies in Graduate Neuroscience Training
+    url: https://www.sfn.org/careers/higher-education-and-training/core-competencies/core-competencies-in-graduate-neuroscience-training
+    date: '2026-11-07'
+  CB064:
+    title: 'Harvard GSAS, Policies: Neuroscience'
+    url: https://gsas.harvard.edu/policy/neuroscience
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 神経回路の発生と働きの論理 2008
+  sources:
+  - CB051
+  units:
+  - B-064
+  - B-063
+- id: T-02
+  field: 生命
+  topic: 神経伝達物質の放出の分子機構 2010
+  sources:
+  - CB052
+  units:
+  - B-052
+- id: T-03
+  field: 生命
+  topic: 知覚と意思決定の神経機構 2012
+  sources:
+  - CB053
+  units:
+  - B-065
+  - B-063
+- id: T-04
+  field: 生命
+  topic: 記憶と認知を担う脳のネットワーク 2014
+  sources:
+  - CB054
+  units:
+  - B-065
+- id: T-05
+  field: 生命
+  topic: 経験と神経活動による脳の作り替え（可塑性）2016
+  sources:
+  - CB055
+  units:
+  - B-064
+  - B-052
+- id: T-06
+  field: 生命
+  topic: 聴覚の分子と神経のしくみ 2018
+  sources:
+  - CB056
+  units:
+  - B-063
+  - B-052
+- id: T-07
+  field: 生命
+  topic: 温度と圧力の受容体 2020
+  sources:
+  - CB057
+  units:
+  - B-052
+  - B-063
+- id: T-08
+  field: 生命
+  topic: 重い脳の病気の原因の遺伝子の発見 2022
+  sources:
+  - CB058
+  units:
+  - B-068
+- id: T-09
+  field: 生命
+  topic: 脳で顔を表す専用の領域 2024
+  sources:
+  - CB059
+  units:
+  - B-065
+  - B-067
+- id: T-10
+  field: 生命
+  topic: 神経細胞の中の局所の翻訳と発達・可塑性 2026
+  sources:
+  - CB060
+  units:
+  - B-052
+  - B-064
+  - B-009
+- id: T-11
+  field: 生命
+  topic: 神経遺伝学
+  sources:
+  - CB061
+  units:
+  - B-068
+  - B-045
+- id: T-12
+  field: 生命
+  topic: 神経解剖学（脳の全体と切片、組織と機能の対応）
+  sources:
+  - CB061
+  - CB062
+  units:
+  - B-063
+- id: T-13
+  field: 生命
+  topic: 神経発生
+  sources:
+  - CB061
+  - CB062
+  - CB063
+  units:
+  - B-064
+- id: T-14
+  field: 生命
+  topic: 分子と細胞の神経科学
+  sources:
+  - CB061
+  - CB062
+  - CB063
+  units:
+  - B-052
+- id: T-15
+  field: 生命
+  topic: システム神経科学
+  sources:
+  - CB061
+  - CB062
+  units:
+  - B-063
+- id: T-16
+  field: 生命
+  topic: 認知と行動の神経科学
+  sources:
+  - CB061
+  - CB062
+  units:
+  - B-065
+- id: T-17
+  field: 計算
+  topic: 計算神経科学
+  sources:
+  - CB061
+  units:
+  - B-066
+- id: T-18
+  field: 数学
+  topic: 神経科学のための数学の道具
+  sources:
+  - CB061
+  units:
+  - D-046
+  - M-007
+  - S-003
+- id: T-19
+  field: 計算
+  topic: Python によるプログラミング
+  sources:
+  - CB064
+  units:
+  - K-012
+- id: T-20
+  field: 数学
+  topic: 統計と再現可能な研究（生物統計、統計的推論と実験計画）
+  sources:
+  - CB061
+  - CB062
+  units:
+  - S-019
+  - S-020
+- id: T-21
+  field: その他
+  topic: 研究の技能（仮説、実験の設計と道具、データの解析と解釈）
+  sources:
+  - CB063
+  units:
+  - B-067
+  - S-031

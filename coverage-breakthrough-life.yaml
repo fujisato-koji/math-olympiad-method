@@ -1,0 +1,491 @@
+# 網羅表：生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB013:
+    title: Breakthrough Prize Foundation, News 29（2016 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/29
+    date: '2026-11-07'
+  CB014:
+    title: Breakthrough Prize Foundation, News 34（2017 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/34
+    date: '2026-11-07'
+  CB015:
+    title: Breakthrough Prize Foundation, News 41（2018 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/41
+    date: '2026-11-07'
+  CB016:
+    title: Breakthrough Prize Foundation, News 47（2019 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/47
+    date: '2026-11-07'
+  CB017:
+    title: Breakthrough Prize Foundation, News 54（2020 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/54
+    date: '2026-11-07'
+  CB018:
+    title: Breakthrough Prize Foundation, News 60（2021 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/60
+    date: '2026-11-07'
+  CB019:
+    title: Breakthrough Prize Foundation, News 65（2022 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/65
+    date: '2026-11-07'
+  CB020:
+    title: Breakthrough Prize Foundation, News 73（2023 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/73
+    date: '2026-11-07'
+  CB021:
+    title: Breakthrough Prize Foundation, News 83（2024 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/83
+    date: '2026-11-07'
+  CB022:
+    title: Breakthrough Prize Foundation, News 91（2025 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/91
+    date: '2026-11-07'
+  CB023:
+    title: Breakthrough Prize Foundation, News 98（2026 年の Breakthrough Prize の受賞者の発表）
+    url: https://breakthroughprize.org/News/98
+    date: '2026-11-07'
+  CB024:
+    title: MIT 7.51 Principles of Biochemical Analysis (Fall 2020)
+    url: https://canvas.mit.edu/courses/4593
+    date: '2026-11-07'
+  CB025:
+    title: ASBMB, Accreditation Program for Bachelor's Degrees in Biochemistry & Molecular Biology – 2025 Accreditation Application Guide
+    url: https://www.asbmb.org/getmedia/69be665d-defc-43c6-bb38-1d28dc964825/Application-guide-accreditation-2025.pdf
+    date: '2026-11-07'
+  CB026:
+    title: MITx 7.52r Genetics for Graduate Students (Fall 2024)
+    url: https://lms.mitx.mit.edu/courses/course-v1:MITx+7.52r+2024_Fall/about
+    date: '2026-11-07'
+  CB027:
+    title: MIT Department of Biology, Why MIT Biology（大学院の必修と資格試験）
+    url: https://biology.mit.edu/graduate/why-mit-biology
+    date: '2026-11-07'
+  CB028:
+    title: 'Harvard GSAS, Policies: Biology, Molecular and Cellular'
+    url: https://gsas.harvard.edu/policy/biology-molecular-and-cellular
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 光で神経を操る光遺伝学 2016
+  sources:
+  - CB013
+  units:
+  - B-067
+  - B-052
+- id: T-02
+  field: 生命
+  topic: APP 遺伝子の変異と早発性アルツハイマー病 2016
+  sources:
+  - CB013
+  units:
+  - B-068
+- id: T-03
+  field: 生命
+  topic: コレステロールを変える遺伝子の変異と心臓病 2016
+  sources:
+  - CB013
+  units:
+  - B-008
+  - B-045
+- id: T-04
+  field: 生命
+  topic: 古代 DNA の解読と現生人類の起源 2016
+  sources:
+  - CB013
+  units:
+  - B-011
+  - K-106
+- id: T-05
+  field: 生命
+  topic: DNA の損傷を感じて応答する細胞のしくみ 2017
+  sources:
+  - CB014
+  units:
+  - B-009
+  - B-010
+- id: T-06
+  field: 生命
+  topic: リボソームの活性中心は RNA であること 2017
+  sources:
+  - CB014
+  units:
+  - B-009
+  - B-006
+- id: T-07
+  field: 生命
+  topic: Wnt シグナル経路と発生とがん 2017
+  sources:
+  - CB014
+  units:
+  - B-046
+  - B-010
+- id: T-08
+  field: 生命
+  topic: オートファジーのしくみ 2017
+  sources:
+  - CB014
+  units:
+  - B-010
+  - B-014
+- id: T-09
+  field: 生命
+  topic: 脊髄小脳失調症とレット症候群の遺伝的な原因 2017
+  sources:
+  - CB014
+  units:
+  - B-068
+- id: T-10
+  field: 生命
+  topic: 植物が光と日陰を感じ取る分子のしくみ 2018
+  sources:
+  - CB015
+  units:
+  - B-038
+- id: T-11
+  field: 生命
+  topic: 遺伝性の筋萎縮性側索硬化症（ALS）の分子機構 2018
+  sources:
+  - CB015
+  units:
+  - B-068
+  - B-014
+- id: T-12
+  field: 生命
+  topic: 小胞体ストレス応答による細胞の品質管理 2018
+  sources:
+  - CB015
+  units:
+  - B-014
+  - B-010
+- id: T-13
+  field: 生命
+  topic: 複製された染色体を正しく分ける機構 2018
+  sources:
+  - CB015
+  units:
+  - B-010
+  - B-023
+- id: T-14
+  field: 生命
+  topic: アンチセンス核酸による脊髄性筋萎縮症の治療 2019
+  sources:
+  - CB016
+  units:
+  - B-053
+  - B-047
+- id: T-15
+  field: 生命
+  topic: 染色体の数の異常が細胞に及ぼす影響 2019
+  sources:
+  - CB016
+  units:
+  - B-010
+  - B-023
+- id: T-16
+  field: 生命
+  topic: 超解像顕微鏡で見る細胞の中の構造 2019
+  sources:
+  - CB016
+  units:
+  - B-012
+- id: T-17
+  field: 生命
+  topic: 細胞質の DNA を感じる自然免疫 2019
+  sources:
+  - CB016
+  units:
+  - B-051
+- id: T-18
+  field: 生命
+  topic: 脂肪組織が脳へ摂食を伝える内分泌系 2020
+  sources:
+  - CB017
+  units:
+  - B-035
+  - B-050
+- id: T-19
+  field: 生命
+  topic: 分子シャペロンによるタンパク質の折りたたみ 2020
+  sources:
+  - CB017
+  units:
+  - B-014
+- id: T-20
+  field: 生命
+  topic: 痛みを感じる分子と細胞 2020
+  sources:
+  - CB017
+  units:
+  - B-052
+- id: T-21
+  field: 生命
+  topic: 神経変性の病気のタンパク質の凝集 2020
+  sources:
+  - CB017
+  units:
+  - B-014
+  - B-068
+- id: T-22
+  field: 計算
+  topic: 自然にないタンパク質の計算による設計 2021
+  sources:
+  - CB018
+  units:
+  - K-111
+  - K-117
+- id: T-23
+  field: 生命
+  topic: 子育ての行動を担う神経細胞と回路 2021
+  sources:
+  - CB018
+  units:
+  - B-065
+  - B-039
+- id: T-24
+  field: 生命
+  topic: 母体の血液の中の胎児の DNA と出生前の検査 2021
+  sources:
+  - CB018
+  units:
+  - K-113
+  - B-033
+- id: T-25
+  field: 生命
+  topic: 傷んだミトコンドリアを除く品質管理 2021
+  sources:
+  - CB018
+  units:
+  - B-010
+- id: T-26
+  field: 生命
+  topic: トランスサイレチン病の分子機構と治療薬 2022
+  sources:
+  - CB019
+  units:
+  - B-014
+  - H-056
+- id: T-27
+  field: 生命
+  topic: 修飾 mRNA の技術とワクチン 2022
+  sources:
+  - CB019
+  units:
+  - B-053
+  - B-051
+- id: T-28
+  field: 生命
+  topic: 大規模並列の DNA 配列決定 2022
+  sources:
+  - CB019
+  units:
+  - K-113
+  - B-033
+- id: T-29
+  field: 生命
+  topic: 液–液相分離による膜のない細胞内の構造 2023
+  sources:
+  - CB020
+  units:
+  - B-010
+  - B-013
+- id: T-30
+  field: 計算
+  topic: 深層学習によるタンパク質の立体構造の予測 2023
+  sources:
+  - CB020
+  units:
+  - K-111
+  - K-117
+- id: T-31
+  field: 生命
+  topic: ナルコレプシーと覚醒を保つ神経の喪失 2023
+  sources:
+  - CB020
+  units:
+  - B-065
+  - B-068
+- id: T-32
+  field: 生命
+  topic: CAR-T 細胞によるがんの免疫療法 2024
+  sources:
+  - CB021
+  units:
+  - B-051
+  - B-053
+- id: T-33
+  field: 生命
+  topic: 嚢胞性線維症の欠陥のあるチャネルを直す薬の組合せ 2024
+  sources:
+  - CB021
+  units:
+  - B-047
+  - H-056
+- id: T-34
+  field: 生命
+  topic: パーキンソン病の危険を高める遺伝子 2024
+  sources:
+  - CB021
+  units:
+  - B-068
+- id: T-35
+  field: 生命
+  topic: GLP-1 の発見と糖尿病・肥満の治療 2025
+  sources:
+  - CB022
+  units:
+  - B-035
+  - B-047
+- id: T-36
+  field: 生命
+  topic: 多発性硬化症と B 細胞 2025
+  sources:
+  - CB022
+  units:
+  - B-051
+- id: T-37
+  field: 生命
+  topic: 二本鎖を切らない遺伝子編集（塩基編集とプライム編集）2025
+  sources:
+  - CB022
+  units:
+  - B-053
+- id: T-38
+  field: 生命
+  topic: 遺伝性の網膜変性の遺伝子治療 2026
+  sources:
+  - CB023
+  units:
+  - B-053
+- id: T-39
+  field: 生命
+  topic: 胎児型から成人型へのヘモグロビンの切り替えと血液の病気の治療 2026
+  sources:
+  - CB023
+  units:
+  - B-044
+  - B-036
+- id: T-40
+  field: 生命
+  topic: ALS と前頭側頭型認知症の最も多い遺伝的な原因 2026
+  sources:
+  - CB023
+  units:
+  - B-068
+- id: T-41
+  field: 生命
+  topic: 生化学の定量（平衡、結合と特異性、反応速度）
+  sources:
+  - CB024
+  units:
+  - B-007
+  - H-024
+  - H-037
+- id: T-42
+  field: 生命
+  topic: タンパク質の折りたたみとアロステリー
+  sources:
+  - CB024
+  - CB025
+  units:
+  - B-013
+  - B-014
+- id: T-43
+  field: 生命
+  topic: 分子機械（転写因子、キナーゼ、膜のチャネルと輸送体）
+  sources:
+  - CB024
+  units:
+  - B-009
+  - B-010
+- id: T-44
+  field: 生命
+  topic: 1 分子の計測と生化学の実験計画
+  sources:
+  - CB024
+  units:
+  - B-012
+- id: T-45
+  field: 生命
+  topic: 遺伝学（メンデル遺伝、原核生物と酵母の遺伝学）
+  sources:
+  - CB026
+  units:
+  - B-024
+  - B-045
+  - B-002
+- id: T-46
+  field: 生命
+  topic: 発生遺伝学、神経遺伝学、ヒトの遺伝学
+  sources:
+  - CB026
+  units:
+  - B-046
+  - B-068
+  - B-001
+- id: T-47
+  field: 生命
+  topic: 分子生物学の方法と論理
+  sources:
+  - CB027
+  units:
+  - B-009
+  - B-033
+- id: T-48
+  field: 計算
+  topic: 定量・計算生物学（生物データの統計、モデル化、システム生物学、機械学習）
+  sources:
+  - CB027
+  units:
+  - K-114
+  - K-115
+  - K-117
+- id: T-49
+  field: 生命
+  topic: 生体のエネルギー（熱力学、触媒、代謝経路の共役）
+  sources:
+  - CB025
+  units:
+  - B-008
+  - H-036
+- id: T-50
+  field: 生命
+  topic: 高分子の構造と機能（相互作用、動的な構造、制御）
+  sources:
+  - CB025
+  units:
+  - B-006
+  - B-003
+- id: T-51
+  field: 生命
+  topic: 遺伝情報（ゲノム、配列から機能へ、ゲノムの維持）
+  sources:
+  - CB025
+  units:
+  - B-001
+  - B-009
+- id: T-52
+  field: 生命
+  topic: 分子の進化
+  sources:
+  - CB025
+  units:
+  - B-011
+  - B-042
+- id: T-53
+  field: 生命
+  topic: 恒常性（定常状態、制御機構、細胞と個体）
+  sources:
+  - CB025
+  units:
+  - B-035
+  - B-050
+- id: T-54
+  field: その他
+  topic: 科学の方法（計測、定量解析、実験の設計と解釈）
+  sources:
+  - CB025
+  - CB028
+  units:
+  - S-031
+  - S-019

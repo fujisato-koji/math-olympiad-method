@@ -1,0 +1,299 @@
+# 網羅表：国際生物学オリンピック（IBO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB003:
+    title: International Biology Olympiad e.V., IBO Operational Guidelines, Version 7.0 (2026-09-05)
+    url: https://www.ibo-info.org/files/downloads/rules/IBO%20Operational%20Guidelines_v.7.pdf
+    date: '2026-11-07'
+  CB004:
+    title: IBO Coordinating Center, A Guide to the International Biology Olympiad, Edition 25.1 (2013), Appendix I（第三者のサイトの写し）
+    url: https://www.slideshare.net/slideshow/international-biology-olympiad-guide-last-version/34517441
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 細胞の構造と機能（化学成分、細胞小器官）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-022
+  - B-028
+  - B-010
+- id: T-02
+  field: 生命
+  topic: 細胞の代謝（糖の分解、脂肪とタンパク質の異化、同化）
+  sources:
+  - CB004
+  units:
+  - B-029
+  - B-030
+  - B-008
+- id: T-03
+  field: 生命
+  topic: タンパク質の合成（転写、翻訳、遺伝暗号）
+  sources:
+  - CB004
+  units:
+  - B-032
+- id: T-04
+  field: 生命
+  topic: 膜を通る輸送（拡散、浸透と原形質分離、能動輸送）
+  sources:
+  - CB004
+  units:
+  - B-031
+- id: T-05
+  field: 生命
+  topic: 体細胞分裂と減数分裂
+  sources:
+  - CB004
+  units:
+  - B-023
+- id: T-06
+  field: 生命
+  topic: 微生物学（原核細胞のつくり、光栄養と化学栄養）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-043
+- id: T-07
+  field: 生命
+  topic: バイオテクノロジー（発酵、生物の遺伝子操作）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-033
+  - B-043
+  - B-053
+- id: T-08
+  field: 生命
+  topic: 植物の光合成、蒸散、ガス交換（種子植物が中心）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-030
+  - B-038
+- id: T-09
+  field: 生命
+  topic: 植物の水、無機塩類、同化産物の輸送
+  sources:
+  - CB004
+  units:
+  - B-038
+  - B-026
+- id: T-10
+  field: 生命
+  topic: 植物の成長と発生
+  sources:
+  - CB004
+  units:
+  - B-038
+  - B-016
+- id: T-11
+  field: 生命
+  topic: 植物の生殖（シダとコケを含む）
+  sources:
+  - CB004
+  units:
+  - B-023
+  - B-025
+  - B-026
+- id: T-12
+  field: 生命
+  topic: 動物の消化と栄養（脊椎動物、特にヒトが中心）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-036
+- id: T-13
+  field: 生命
+  topic: 動物の呼吸と循環
+  sources:
+  - CB004
+  units:
+  - B-036
+- id: T-14
+  field: 生命
+  topic: 動物の排出
+  sources:
+  - CB004
+  units:
+  - B-036
+  - B-035
+- id: T-15
+  field: 生命
+  topic: 神経とホルモンによる調節
+  sources:
+  - CB004
+  units:
+  - B-034
+  - B-035
+- id: T-16
+  field: 生命
+  topic: 動物の生殖と発生
+  sources:
+  - CB004
+  units:
+  - B-023
+  - B-046
+- id: T-17
+  field: 生命
+  topic: 免疫
+  sources:
+  - CB004
+  units:
+  - B-037
+- id: T-18
+  field: 生命
+  topic: 行動学（生得的行動と学習、伝達と社会、採餌、防御、配偶と子の世話、生物リズム）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-039
+- id: T-19
+  field: 生命
+  topic: 変異とメンデル遺伝（突然変異、複対立遺伝子、組換え、伴性遺伝）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-024
+  - B-045
+- id: T-20
+  field: 生命
+  topic: 集団遺伝と進化の仕組み（ハーディ–ワインベルグの法則）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-042
+- id: T-21
+  field: 生命
+  topic: 生態学（個体、個体群、生物群集、生態系、生物圏と人間）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-021
+  - B-040
+  - B-041
+- id: T-22
+  field: 生命
+  topic: 生物系統学（主要な群の代表的生物の構造と機能、進化と生態の関係）
+  sources:
+  - CB003
+  - CB004
+  units:
+  - B-025
+  - B-042
+- id: T-23
+  field: その他
+  topic: 科学の方法（観察、測定、仮説、変数の制御、実験計画、表とグラフ、有効数字）
+  sources:
+  - CB003
+  units:
+  - S-031
+  - S-027
+  - P-117
+- id: T-24
+  field: 生命
+  topic: 拡大と観察の基本（ルーペ、光学顕微鏡、実体顕微鏡、スケッチ）
+  sources:
+  - CB003
+  units:
+  - B-022
+- id: T-25
+  field: 生命
+  topic: 細胞の標本づくり（押しつぶし、塗抹、染色とプレパラート）
+  sources:
+  - CB003
+  units:
+  - B-022
+- id: T-26
+  field: 生命
+  topic: 植物の解剖と測定（花の解剖と花式、徒手切片、光合成と蒸散の測定）
+  sources:
+  - CB003
+  units:
+  - B-026
+  - B-038
+- id: T-27
+  field: 生命
+  topic: 動物の解剖と測定、行動の観察（無脊椎動物の解剖、呼吸の測定）
+  sources:
+  - CB003
+  units:
+  - B-025
+  - B-036
+  - B-039
+- id: T-28
+  field: 生命
+  topic: 生態と環境の調査（個体群密度、生物量、水質と大気の簡易評価）
+  sources:
+  - CB003
+  units:
+  - B-040
+  - B-041
+- id: T-29
+  field: 生命
+  topic: 分類と同定（二分岐の検索表の利用と作成、被子植物の科、昆虫の目）
+  sources:
+  - CB003
+  units:
+  - B-018
+  - B-025
+- id: T-30
+  field: 化学
+  topic: 生体物質の分離と検出（クロマトグラフィー、遠心、ゲル電気泳動、呈色反応）
+  sources:
+  - CB003
+  units:
+  - H-042
+  - B-028
+- id: T-31
+  field: 化学
+  topic: 定量の操作（滴定、希釈、マイクロピペット、計数盤、吸光度）
+  sources:
+  - CB003
+  units:
+  - H-031
+  - H-042
+- id: T-32
+  field: 生命
+  topic: 微生物の培養（培地の調製、無菌操作、接種）
+  sources:
+  - CB003
+  units:
+  - B-043
+- id: T-33
+  field: 数学
+  topic: 統計の手法（平均、中央値、分散、標準偏差、標準誤差、t 検定、カイ二乗検定）
+  sources:
+  - CB003
+  units:
+  - S-028
+  - S-018
+  - S-019
+- id: T-34
+  field: 計算
+  topic: 配列と系統の解析（配列の整列、系統樹、オーソログとパラログ、データベースの検索）
+  sources:
+  - CB003
+  units:
+  - K-105
+  - K-110
+  - B-042
+- id: T-35
+  field: 計算
+  topic: 生物データの読み解き（発現量、タンパク質の構造、制限酵素部位、プラスミドとプライマーの設計）
+  sources:
+  - CB003
+  units:
+  - B-033
+  - B-053
+  - K-118

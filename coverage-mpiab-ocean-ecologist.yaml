@@ -1,0 +1,92 @@
+# 網羅表：野生動物の研究者（Max Planck Institute of Animal Behavior）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB071:
+    title: Max Planck Institute of Animal Behavior, Postdoctoral position "Oceanic Collective Intelligence" (2026-10-14)
+    url: https://www.mpg.de/27036430/postdoctoral-position-oceanic-collective-intelligence
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 動物の集団行動（群れでの社会的な採餌）
+  sources:
+  - CB071
+  units:
+  - B-058
+  - B-039
+- id: T-02
+  field: 生命
+  topic: 捕食者と被食者
+  sources:
+  - CB071
+  units:
+  - B-055
+  - B-056
+- id: T-03
+  field: 生命
+  topic: 生態学と進化生物学
+  sources:
+  - CB071
+  units:
+  - B-056
+  - B-059
+- id: T-04
+  field: 生命
+  topic: 生態系の物理的・生物的な変化と動物の行動
+  sources:
+  - CB071
+  units:
+  - B-057
+  - B-058
+- id: T-05
+  field: 物理
+  topic: 海洋学（海のデータ）
+  sources:
+  - CB071
+  units:
+  - P-121
+- id: T-06
+  field: その他
+  topic: バイオロギング（体に付ける記録計で動き、採餌、音を記録）
+  sources:
+  - CB071
+  units:
+  - B-061
+- id: T-07
+  field: 物理
+  topic: 能動音響と受動音響（餌の群れの測定、海の音の長期の録音）
+  sources:
+  - CB071
+  units:
+  - P-022
+  - B-061
+- id: T-08
+  field: 生命
+  topic: 生物音響（動物の出す音の解析）
+  sources:
+  - CB071
+  units:
+  - B-061
+  - B-039
+- id: T-09
+  field: 計算
+  topic: 機械学習
+  sources:
+  - CB071
+  units:
+  - K-046
+  - K-047
+- id: T-10
+  field: 計算
+  topic: エージェントベースモデルと動物の移動のモデル
+  sources:
+  - CB071
+  units:
+  - B-062
+- id: T-11
+  field: 計算
+  topic: 多様で複雑なデータの統合と解析
+  sources:
+  - CB071
+  units:
+  - K-060
+  - B-061

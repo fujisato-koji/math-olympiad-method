@@ -1,0 +1,236 @@
+# 網羅表：A level Chemistry（AQA 7405）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB007:
+    title: AQA, AS and A-level Chemistry Specification 7404/7405, Version 1.2 (July 2026)
+    url: https://cdn.sanity.io/files/p28bar15/green/973606f23930d71231deed8180ee15c17d464b92.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 化学
+  topic: 原子の構造（基本粒子、同位体と質量分析、電子配置、イオン化エネルギー）
+  sources:
+  - CB007
+  units:
+  - H-011
+  - H-041
+- id: T-02
+  field: 化学
+  topic: 物質量（相対質量、モルとアボガドロ定数、理想気体の式、実験式、反応式の計算）
+  sources:
+  - CB007
+  units:
+  - H-015
+  - H-016
+  - H-020
+- id: T-03
+  field: 化学
+  topic: 化学結合（イオン・共有・配位・金属結合、物性、分子の形、極性、分子間力）
+  sources:
+  - CB007
+  units:
+  - H-014
+  - H-018
+  - H-019
+- id: T-04
+  field: 化学
+  topic: エネルギー論（エンタルピー変化、熱量測定、ヘスの法則、結合エンタルピー）
+  sources:
+  - CB007
+  units:
+  - H-022
+- id: T-05
+  field: 化学
+  topic: 反応速度論（衝突理論、マクスウェル–ボルツマン分布、温度・濃度・圧力、触媒）
+  sources:
+  - CB007
+  units:
+  - H-023
+  - P-043
+- id: T-06
+  field: 化学
+  topic: 化学平衡（ルシャトリエの原理、Kc、気相の Kp）
+  sources:
+  - CB007
+  units:
+  - H-024
+- id: T-07
+  field: 化学
+  topic: 酸化・還元と酸化還元反応式（酸化数、半反応式）
+  sources:
+  - CB007
+  units:
+  - H-017
+- id: T-08
+  field: 化学
+  topic: 熱力学（ボルン–ハーバーサイクル、ギブズエネルギー変化、エントロピー変化）
+  sources:
+  - CB007
+  units:
+  - H-036
+  - H-022
+- id: T-09
+  field: 化学
+  topic: 速度式（反応次数、速度定数、アレニウスの式、速度式の決定）
+  sources:
+  - CB007
+  units:
+  - H-023
+  - H-037
+- id: T-10
+  field: 化学
+  topic: 電極電位と電池（標準電極電位、電気化学系列、実用の電池と燃料電池）
+  sources:
+  - CB007
+  units:
+  - H-027
+  - H-048
+- id: T-11
+  field: 化学
+  topic: 酸と塩基（pH、Kw、Ka、pH 曲線と指示薬、緩衝液）
+  sources:
+  - CB007
+  units:
+  - H-025
+  - H-026
+- id: T-12
+  field: 化学
+  topic: 周期性（元素の分類、第 3 周期元素の物理的性質）
+  sources:
+  - CB007
+  units:
+  - H-012
+- id: T-13
+  field: 化学
+  topic: 2 族と 17 族（アルカリ土類金属とハロゲンの傾向、塩素の用途、ハロゲン化物イオン）
+  sources:
+  - CB007
+  units:
+  - H-028
+- id: T-14
+  field: 化学
+  topic: 第 3 周期元素とその酸化物の性質
+  sources:
+  - CB007
+  units:
+  - H-028
+- id: T-15
+  field: 化学
+  topic: 遷移金属（錯イオンの置換と形、色、酸化数の変化、触媒）
+  sources:
+  - CB007
+  units:
+  - H-029
+  - H-046
+- id: T-16
+  field: 化学
+  topic: 水溶液中のイオンの反応（金属アクア錯イオンの酸性と沈殿）
+  sources:
+  - CB007
+  units:
+  - H-029
+  - H-026
+- id: T-17
+  field: 化学
+  topic: 有機化学の基礎（命名法、反応機構の表し方、異性）
+  sources:
+  - CB007
+  units:
+  - H-032
+  - H-039
+- id: T-18
+  field: 化学
+  topic: アルカン（原油の分留、クラッキング、燃焼、ラジカル塩素化）
+  sources:
+  - CB007
+  units:
+  - H-033
+- id: T-19
+  field: 化学
+  topic: ハロゲノアルカン（求核置換、脱離、オゾン層の破壊）
+  sources:
+  - CB007
+  units:
+  - H-039
+  - H-043
+- id: T-20
+  field: 化学
+  topic: アルケンとアルコール（求電子付加、付加重合、アルコールの製法・酸化・脱離）
+  sources:
+  - CB007
+  units:
+  - H-033
+  - H-035
+- id: T-21
+  field: 化学
+  topic: 有機の分析（官能基の試験管反応、質量分析、赤外分光）
+  sources:
+  - CB007
+  units:
+  - H-041
+  - H-031
+- id: T-22
+  field: 化学
+  topic: 光学異性とアルデヒド・ケトン（求核付加）
+  sources:
+  - CB007
+  units:
+  - H-038
+  - H-040
+- id: T-23
+  field: 化学
+  topic: カルボン酸とその誘導体（エステル、アシル化）
+  sources:
+  - CB007
+  units:
+  - H-033
+  - H-040
+- id: T-24
+  field: 化学
+  topic: 芳香族化合物とアミン（ベンゼンの結合、求電子置換、アミンの塩基性と求核性）
+  sources:
+  - CB007
+  units:
+  - H-034
+  - H-039
+- id: T-25
+  field: 化学
+  topic: 高分子（縮合重合、生分解性と廃棄）
+  sources:
+  - CB007
+  units:
+  - H-035
+- id: T-26
+  field: 化学
+  topic: アミノ酸・タンパク質・DNA（酵素、抗がん剤の作用）
+  sources:
+  - CB007
+  units:
+  - H-044
+  - B-028
+- id: T-27
+  field: 化学
+  topic: 有機合成と構造の決定（合成の経路、NMR 分光、クロマトグラフィー）
+  sources:
+  - CB007
+  units:
+  - H-047
+  - H-041
+  - H-042
+- id: T-28
+  field: 数学
+  topic: 化学の数学（単位、有効数字、不確かさ、対数と pH、グラフの傾きと接線、立体の形）
+  sources:
+  - CB007
+  units:
+  - P-117
+  - D-001
+  - D-004
+  - G-021
+- id: T-29
+  field: 化学
+  topic: 必須の実験 12 件（滴定、熱量測定、反応速度、イオンの検出、蒸留、有機物の調製、起電力、TLC）
+  sources:
+  - CB007
+  units:
+  - H-031
+  - H-042

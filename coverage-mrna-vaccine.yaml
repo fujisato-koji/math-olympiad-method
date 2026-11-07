@@ -1,0 +1,107 @@
+# 網羅表：mRNA ワクチンをつくる研究者（Moderna）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB066:
+    title: 'NobelPrize.org, Press release: The Nobel Prize in Physiology or Medicine 2023'
+    url: https://www.nobelprize.org/prizes/medicine/2023/press-release/
+    date: '2026-11-07'
+  CB067:
+    title: 'BioNTech, Press release: BioNTech reports rapid progress on COVID-19 vaccine program (2020-03-16)'
+    url: https://www.biontech.com/us/en/home/mediaroom/news/press-releases/2020/03/biontech-reports-rapid-progress-covid-19-vaccine-program-address.html
+    date: '2026-11-07'
+  CB068:
+    title: Moderna, Senior Scientist, Translational Immunology (R19927)
+    url: https://modernatx.wd1.myworkdayjobs.com/M_tx/job/Cambridge-Massachusetts/Senior-Scientist--Translational-Immunology_R19927
+    date: '2026-11-07'
+  CB069:
+    title: Moderna, Scientist, Protein Design (R19819)
+    url: https://modernatx.wd1.myworkdayjobs.com/M_tx/job/Cambridge-Massachusetts/Scientist--Protein-Design_R19819-1
+    date: '2026-11-07'
+  CB070:
+    title: Moderna, Director, Analytical Chemistry (R19241)
+    url: https://modernatx.wd1.myworkdayjobs.com/M_tx/job/Cambridge-Massachusetts/Director--Analytical-Chemistry_R19241
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: ワクチンの種類（不活化と弱毒、ウイルスの部品、ベクター）
+  sources:
+  - CB066
+  units:
+  - B-037
+  - B-051
+- id: T-02
+  field: 生命
+  topic: 免疫応答と抗体
+  sources:
+  - CB066
+  units:
+  - B-037
+  - B-051
+- id: T-03
+  field: 生命
+  topic: 遺伝情報の流れ（DNA から mRNA、タンパク質へ）
+  sources:
+  - CB066
+  units:
+  - B-032
+- id: T-04
+  field: 化学
+  topic: 細胞を使わない mRNA の合成（試験管内の転写）
+  sources:
+  - CB066
+  units:
+  - B-033
+  - B-053
+- id: T-05
+  field: 化学
+  topic: 塩基の修飾（炎症を抑え、翻訳を増やす）
+  sources:
+  - CB066
+  units:
+  - H-044
+  - B-053
+- id: T-06
+  field: 生命
+  topic: 自然免疫による RNA の認識（樹状細胞、受容体）
+  sources:
+  - CB066
+  units:
+  - B-051
+- id: T-07
+  field: 生命
+  topic: mRNA の形式（修飾 mRNA、自己増幅型 mRNA）
+  sources:
+  - CB067
+  units:
+  - B-053
+- id: T-08
+  field: 生命
+  topic: 免疫応答の測定と解析（トランスレーショナル免疫学）
+  sources:
+  - CB068
+  units:
+  - B-051
+  - K-114
+- id: T-09
+  field: 計算
+  topic: 抗原のタンパク質の設計
+  sources:
+  - CB069
+  units:
+  - K-111
+  - K-117
+- id: T-10
+  field: 化学
+  topic: 分析化学（mRNA 医薬の品質の分析）
+  sources:
+  - CB070
+  units:
+  - H-042
+  - H-041
+- id: T-11
+  field: その他
+  topic: 臨床試験
+  sources:
+  - CB067
+  units:
+  - B-049

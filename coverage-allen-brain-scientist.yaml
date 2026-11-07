@@ -1,0 +1,76 @@
+# 網羅表：脳の研究者（Allen Institute）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB072:
+    title: Allen Institute, Scientist I – Neurophysiology – Global Brain Observatory (2026-10-27、求人システムの公開データ)
+    url: https://careers-api.clearcompany.com/v1/f724f829-c8a2-8b32-a83b-2a479b88b77f/7d6feb7e-2bff-55b3-1b4b-874d140a48c6
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 生体内の電気生理（行動中の動物の神経活動の記録）
+  sources:
+  - CB072
+  units:
+  - B-067
+- id: T-02
+  field: 物理
+  topic: 多数の神経細胞を測る電極
+  sources:
+  - CB072
+  units:
+  - B-067
+  - P-118
+- id: T-03
+  field: 物理
+  topic: 光で神経活動を測る（ファイバーフォトメトリー）
+  sources:
+  - CB072
+  units:
+  - B-067
+- id: T-04
+  field: 生命
+  topic: 行動の最中の脳全体の記録
+  sources:
+  - CB072
+  units:
+  - B-067
+  - B-063
+- id: T-05
+  field: 生命
+  topic: 報酬による学習
+  sources:
+  - CB072
+  units:
+  - B-065
+- id: T-06
+  field: 生命
+  topic: 予測処理と認知
+  sources:
+  - CB072
+  units:
+  - B-065
+  - B-066
+- id: T-07
+  field: 生命
+  topic: 動物の行動の訓練（げっ歯類の課題）
+  sources:
+  - CB072
+  units:
+  - B-039
+  - B-065
+- id: T-08
+  field: 計算
+  topic: 神経と行動のデータの収集・処理・解析
+  sources:
+  - CB072
+  units:
+  - B-066
+  - K-060
+- id: T-09
+  field: 物理
+  topic: 物理と工学の基礎（記録装置の不具合の切り分け）
+  sources:
+  - CB072
+  units:
+  - P-029
+  - P-118

@@ -53,7 +53,10 @@ items:
   topic: 計算化学と創薬の計算設計（分子設計、リード最適化、ケモインフォマティクス）
   sources:
   - DR158
-  none: 地図にない（候補：計算化学と創薬）
+  units:
+  - H-055
+  - H-058
+  - H-056
 - id: T-05
   field: 計算
   topic: 機械学習と生成 AI によるヒット探索（仮想スクリーニング、能動学習）
@@ -81,13 +84,16 @@ items:
   topic: フラグメント創薬、PROTAC、分子のり、ペプチド
   sources:
   - DR158
-  none: 地図にない（候補：創薬の化学（フラグメント創薬と新しい創薬モダリティ））
+  units:
+  - H-059
+  - H-056
 - id: T-08
   field: 生命
   topic: 薬物動態の原理（ADME、DMPK）
   sources:
   - DR158
-  none: 地図にない（候補：薬物動態）
+  units:
+  - B-048
 - id: T-09
   field: 数学
   topic: 線形代数、微分積分、統計

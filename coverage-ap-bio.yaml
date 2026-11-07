@@ -1,0 +1,217 @@
+# 網羅表：AP Biology（College Board）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB006:
+    title: College Board, AP Biology Course and Exam Description, Effective Fall 2025 (V.1)
+    url: https://apcentral.collegeboard.org/media/pdf/ap-biology-course-and-exam-description.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 化学
+  topic: 水と生命の元素（水素結合、水の性質、生体をつくる元素）
+  sources:
+  - CB006
+  units:
+  - B-028
+  - H-018
+- id: T-02
+  field: 生命
+  topic: 生体高分子（脱水縮合と加水分解、糖質、脂質、核酸、タンパク質）
+  sources:
+  - CB006
+  units:
+  - B-028
+  - H-044
+- id: T-03
+  field: 生命
+  topic: 細胞の構造とはたらき（細胞小器官、表面積と体積の比、区画化、細胞内共生）
+  sources:
+  - CB006
+  units:
+  - B-022
+  - B-010
+  - B-027
+- id: T-04
+  field: 生命
+  topic: 細胞膜と物質輸送（受動輸送と能動輸送、浸透と張度、水ポテンシャル）
+  sources:
+  - CB006
+  units:
+  - B-031
+- id: T-05
+  field: 生命
+  topic: 酵素（構造と触媒、温度・pH・阻害剤の影響）
+  sources:
+  - CB006
+  units:
+  - B-029
+  - B-007
+- id: T-06
+  field: 生命
+  topic: 細胞のエネルギーと光合成（エネルギーの共役、明反応、カルビン回路）
+  sources:
+  - CB006
+  units:
+  - B-030
+  - B-029
+- id: T-07
+  field: 生命
+  topic: 細胞呼吸（解糖、クエン酸回路、電子伝達系、発酵）
+  sources:
+  - CB006
+  units:
+  - B-030
+- id: T-08
+  field: 生命
+  topic: 細胞間の情報伝達（シグナル伝達経路、受容体、正と負のフィードバック）
+  sources:
+  - CB006
+  units:
+  - B-035
+  - B-010
+- id: T-09
+  field: 生命
+  topic: 細胞周期とその調節（有糸分裂、チェックポイント、がん、アポトーシス）
+  sources:
+  - CB006
+  units:
+  - B-023
+  - B-010
+- id: T-10
+  field: 生命
+  topic: 減数分裂と遺伝的多様性
+  sources:
+  - CB006
+  units:
+  - B-023
+- id: T-11
+  field: 生命
+  topic: メンデル遺伝と非メンデル遺伝（確率、連鎖、伴性遺伝、環境と表現型）
+  sources:
+  - CB006
+  units:
+  - B-024
+  - B-045
+- id: T-12
+  field: 生命
+  topic: DNA と RNA の構造、DNA の複製
+  sources:
+  - CB006
+  units:
+  - B-032
+- id: T-13
+  field: 生命
+  topic: 転写、RNA のプロセシング、翻訳
+  sources:
+  - CB006
+  units:
+  - B-032
+  - B-009
+- id: T-14
+  field: 生命
+  topic: 遺伝子発現の調節と細胞の特殊化（オペロン、転写因子、エピジェネティクス）
+  sources:
+  - CB006
+  units:
+  - B-044
+- id: T-15
+  field: 生命
+  topic: 突然変異とバイオテクノロジー（電気泳動、PCR、塩基配列の決定）
+  sources:
+  - CB006
+  units:
+  - B-032
+  - B-033
+- id: T-16
+  field: 生命
+  topic: 自然選択と人為選択（変異、適応度、環境の変化）
+  sources:
+  - CB006
+  units:
+  - B-042
+  - B-027
+- id: T-17
+  field: 生命
+  topic: 集団遺伝学（遺伝的浮動、ハーディ–ワインベルグ平衡）
+  sources:
+  - CB006
+  units:
+  - B-042
+- id: T-18
+  field: 生命
+  topic: 進化の証拠と系統（共通祖先、系統樹と分岐図）
+  sources:
+  - CB006
+  units:
+  - B-027
+  - B-042
+- id: T-19
+  field: 生命
+  topic: 種分化と絶滅、集団の変異、生命の起源
+  sources:
+  - CB006
+  units:
+  - B-042
+  - B-027
+- id: T-20
+  field: 生命
+  topic: 環境への応答（行動と情報の伝達）
+  sources:
+  - CB006
+  units:
+  - B-039
+- id: T-21
+  field: 生命
+  topic: 生態系のエネルギーの流れ（代謝率と体の大きさ、栄養段階、一次生産）
+  sources:
+  - CB006
+  units:
+  - B-041
+- id: T-22
+  field: 生命
+  topic: 個体群生態学（指数成長とロジスティック成長、密度の効果）
+  sources:
+  - CB006
+  units:
+  - B-040
+- id: T-23
+  field: 生命
+  topic: 群集生態学と生物多様性（種間相互作用、多様性の指数、生態系の撹乱）
+  sources:
+  - CB006
+  units:
+  - B-040
+  - B-041
+- id: T-24
+  field: 数学
+  topic: 統計とデータ解析（平均、標準偏差と標準誤差、誤差棒、カイ二乗検定、帰無仮説）
+  sources:
+  - CB006
+  units:
+  - S-028
+  - S-018
+  - S-019
+- id: T-25
+  field: 数学
+  topic: 数式とグラフ（表面積と体積の比、水ポテンシャル、比と百分率、対数軸のグラフ）
+  sources:
+  - CB006
+  units:
+  - A-005
+  - G-011
+  - D-001
+- id: T-26
+  field: その他
+  topic: 問いと方法（検証できる問い、独立変数と従属変数、対照、主張と証拠）
+  sources:
+  - CB006
+  units:
+  - S-031
+- id: T-27
+  field: 生命
+  topic: 実験の技能（大きな考えごとに 2 件以上の探究型の実験、データの記録と精度）
+  sources:
+  - CB006
+  units:
+  - B-022
+  - B-033
+  - H-042

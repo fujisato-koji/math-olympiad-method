@@ -1,0 +1,291 @@
+# 網羅表：生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB037:
+    title: Crafoord Prize, The Crafoord Prize 1984 – in ecology
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-1984-in-ecology/
+    date: '2026-11-07'
+  CB038:
+    title: Crafoord Prize, The Crafoord Prizewinners 1987 Eugene P. Odum and Howard T. Odum
+    url: https://www.crafoordprize.se/news/the-crafoord-prizewinners-1987-eugene-p-odum-and-howard-t-odum/
+    date: '2026-11-07'
+  CB039:
+    title: Crafoord Prize, The Crafoord Prize 1990 for fundamental contributions to Population Biology and the conservation of biological diversity
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-1990-for-fundamental-contributions-to-population-biology-and-the-conservation-of-biological-diversity/
+    date: '2026-11-07'
+  CB040:
+    title: Crafoord Prize, The Crafoord Prize 1993
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-1993/
+    date: '2026-11-07'
+  CB041:
+    title: Crafoord Prize, The Crafoord Prize 1996
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-1996/
+    date: '2026-11-07'
+  CB042:
+    title: Crafoord Prize, The Crafoord Prize 1999
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-1999/
+    date: '2026-11-07'
+  CB043:
+    title: Crafoord Prize, The Crafoord Prize 2003
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-2003/
+    date: '2026-11-07'
+  CB044:
+    title: Crafoord Prize, The Crafoord Prize in Biosciences 2007
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-in-biosciences-2007/
+    date: '2026-11-07'
+  CB045:
+    title: Royal Swedish Academy of Sciences, Crafoord Prize in Biosciences 2011
+    url: https://www.kva.se/en/news/crafoordpriset-i-biovetenskaper-2011-2/
+    date: '2026-11-07'
+  CB046:
+    title: Crafoord Prize, The Crafoord Prize in Biosciences 2015
+    url: https://www.crafoordprize.se/news/the-crafoord-prize-in-biosciences-2015/
+    date: '2026-11-07'
+  CB047:
+    title: Royal Swedish Academy of Sciences, The Crafoord Prize in Biosciences 2019
+    url: https://www.kva.se/en/news/crafoordpriset-i-biovetenskaper-2019-2/
+    date: '2026-11-07'
+  CB048:
+    title: Crafoord Prize, Studies of how new species arise are rewarded with the Crafoord Prize (2023)
+    url: https://www.crafoordprize.se/news/studies-of-how-new-species-arise-are-rewarded-with-the-crafoord-prize/
+    date: '2026-11-07'
+  CB049:
+    title: Ecological Society of America, Four-Dimensional Ecology Education Framework (revised May 2025)
+    url: https://esa.org/4DEE/framework
+    date: '2026-11-07'
+  CB050:
+    title: University of Toronto, Department of Ecology and Evolutionary Biology, The Appraisal Exam Question Bank (2021-07-10)
+    url: https://eeb.utoronto.ca/wp-content/uploads/2021/10/Appraisal-Exam-Question-Bank_July-10-2021.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 生物どうしの共進化 1984
+  sources:
+  - CB037
+  units:
+  - B-059
+- id: T-02
+  field: 生命
+  topic: 生態系生態学（物質とエネルギーの流れ）1987
+  sources:
+  - CB038
+  units:
+  - B-057
+- id: T-03
+  field: 生命
+  topic: 個体群生物学と生物多様性の保全 1990
+  sources:
+  - CB039
+  units:
+  - B-055
+  - B-060
+- id: T-04
+  field: 生命
+  topic: ショウジョウバエの行動の突然変異と行動の遺伝学 1993
+  sources:
+  - CB040
+  units:
+  - B-045
+  - B-065
+- id: T-05
+  field: 生命
+  topic: 血縁選択と利他行動の進化 1993
+  sources:
+  - CB040
+  units:
+  - B-058
+- id: T-06
+  field: 生命
+  topic: 個体群・群集・生態系の動態の理論 1996
+  sources:
+  - CB041
+  units:
+  - B-062
+  - B-055
+- id: T-07
+  field: 生命
+  topic: 進化生物学の概念の発展 1999
+  sources:
+  - CB042
+  units:
+  - B-042
+  - B-059
+- id: T-08
+  field: 生命
+  topic: 生命の第三のドメイン（古細菌）と RNA による系統 2003
+  sources:
+  - CB043
+  units:
+  - B-025
+  - B-011
+- id: T-09
+  field: 生命
+  topic: 社会進化における対立と協力 2007
+  sources:
+  - CB044
+  units:
+  - B-058
+- id: T-10
+  field: 生命
+  topic: 生息地の分断と個体群の動態（メタ個体群）2011
+  sources:
+  - CB045
+  units:
+  - B-060
+- id: T-11
+  field: 生命
+  topic: 遺伝的多型と分子の進化 2015
+  sources:
+  - CB046
+  units:
+  - B-002
+- id: T-12
+  field: 生命
+  topic: 地球で最も多い光合成の微生物と海の生態系 2019
+  sources:
+  - CB047
+  units:
+  - B-057
+  - B-043
+- id: T-13
+  field: 生命
+  topic: 適応放散と生態的種分化 2023
+  sources:
+  - CB048
+  units:
+  - B-059
+- id: T-14
+  field: 生命
+  topic: 個体の生態学と生理生態（資源の獲得）
+  sources:
+  - CB049
+  - CB050
+  units:
+  - B-038
+  - B-036
+- id: T-15
+  field: 生命
+  topic: 個体群生態学（ロジスティック成長、r と K、齢構成）
+  sources:
+  - CB049
+  - CB050
+  units:
+  - B-055
+- id: T-16
+  field: 生命
+  topic: 生活史の進化（生活史の形質、繁殖価）
+  sources:
+  - CB050
+  units:
+  - B-059
+- id: T-17
+  field: 生命
+  topic: 群集生態学（競争、ニッチ、共存）
+  sources:
+  - CB049
+  - CB050
+  units:
+  - B-056
+- id: T-18
+  field: 生命
+  topic: 栄養段階の動態（捕食と植食、間接効果）
+  sources:
+  - CB050
+  units:
+  - B-056
+- id: T-19
+  field: 生命
+  topic: 生態系（物質とエネルギーの流れ）
+  sources:
+  - CB049
+  units:
+  - B-057
+- id: T-20
+  field: 生命
+  topic: 空間生態学とメタ個体群（景観、パッチの間の移動）
+  sources:
+  - CB049
+  - CB050
+  units:
+  - B-060
+- id: T-21
+  field: 生命
+  topic: 撹乱と遷移
+  sources:
+  - CB050
+  units:
+  - B-056
+- id: T-22
+  field: 生命
+  topic: バイオームと生物圏
+  sources:
+  - CB049
+  units:
+  - B-057
+- id: T-23
+  field: 生命
+  topic: 行動生態学（利他行動、親子の対立、性選択）
+  sources:
+  - CB050
+  units:
+  - B-058
+- id: T-24
+  field: 生命
+  topic: 進化遺伝学（遺伝的変異の維持、有効集団サイズ、利己的な遺伝因子）
+  sources:
+  - CB050
+  units:
+  - B-002
+- id: T-25
+  field: 生命
+  topic: 量的遺伝学（遺伝相関と進化）
+  sources:
+  - CB050
+  units:
+  - B-059
+- id: T-26
+  field: 生命
+  topic: 系統の推定と比較法
+  sources:
+  - CB050
+  units:
+  - B-011
+  - K-110
+- id: T-27
+  field: 生命
+  topic: 種と種分化
+  sources:
+  - CB050
+  units:
+  - B-042
+  - B-059
+- id: T-28
+  field: 生命
+  topic: 寄生者の毒性の進化と共進化
+  sources:
+  - CB050
+  units:
+  - B-059
+- id: T-29
+  field: 数学
+  topic: 統計の考え方（検出力、標準誤差と信頼区間）
+  sources:
+  - CB050
+  units:
+  - B-061
+  - S-019
+- id: T-30
+  field: その他
+  topic: 生態学の実践（自然史、野外調査、研究の設計、データの解析）
+  sources:
+  - CB049
+  units:
+  - B-061
+- id: T-31
+  field: その他
+  topic: 人と環境（人の環境への依存と影響）
+  sources:
+  - CB049
+  units:
+  - B-060
+  - H-043

@@ -1,0 +1,217 @@
+# 網羅表：A level Biology（AQA 7402）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB008:
+    title: AQA, AS and A-level Biology Specification 7401/7402, Version 1.6 (July 2026)
+    url: https://cdn.sanity.io/files/p28bar15/green/975bc7a717dc208919a154cb346c82e4e3618871.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 生体分子（単量体と重合体、糖質、脂質）
+  sources:
+  - CB008
+  units:
+  - B-028
+- id: T-02
+  field: 生命
+  topic: タンパク質と酵素（構造、酵素反応の速度に影響する要因）
+  sources:
+  - CB008
+  units:
+  - B-028
+  - B-029
+- id: T-03
+  field: 生命
+  topic: 核酸と DNA の複製、ATP、水、無機イオン
+  sources:
+  - CB008
+  units:
+  - B-032
+  - B-029
+  - B-028
+- id: T-04
+  field: 生命
+  topic: 細胞の構造（真核細胞と原核細胞、ウイルス、顕微鏡と細胞分画）
+  sources:
+  - CB008
+  units:
+  - B-022
+  - B-043
+- id: T-05
+  field: 生命
+  topic: 細胞分裂（有糸分裂と細胞周期、がん、原核生物の二分裂）
+  sources:
+  - CB008
+  units:
+  - B-023
+  - B-043
+- id: T-06
+  field: 生命
+  topic: 細胞膜を通る輸送（拡散、浸透、能動輸送、共輸送）
+  sources:
+  - CB008
+  units:
+  - B-031
+- id: T-07
+  field: 生命
+  topic: 細胞の認識と免疫（抗原、食作用、T 細胞と B 細胞、抗体、ワクチン、HIV）
+  sources:
+  - CB008
+  units:
+  - B-037
+  - B-043
+- id: T-08
+  field: 生命
+  topic: 表面積と体積の比とガス交換（昆虫、魚、葉、ヒトの肺）
+  sources:
+  - CB008
+  units:
+  - B-036
+  - G-011
+- id: T-09
+  field: 生命
+  topic: 消化と吸収
+  sources:
+  - CB008
+  units:
+  - B-036
+- id: T-10
+  field: 生命
+  topic: 動物の物質輸送（ヘモグロビン、循環系、心臓、組織液）
+  sources:
+  - CB008
+  units:
+  - B-036
+- id: T-11
+  field: 生命
+  topic: 植物の物質輸送（木部での水の移動、師部の転流）
+  sources:
+  - CB008
+  units:
+  - B-038
+- id: T-12
+  field: 生命
+  topic: DNA と遺伝子とタンパク質合成（染色体、遺伝暗号、転写、翻訳）
+  sources:
+  - CB008
+  units:
+  - B-032
+- id: T-13
+  field: 生命
+  topic: 遺伝的多様性（突然変異、減数分裂、自然選択と適応）
+  sources:
+  - CB008
+  units:
+  - B-023
+  - B-032
+  - B-042
+- id: T-14
+  field: 生命
+  topic: 種と分類、群集の生物多様性とその調べ方
+  sources:
+  - CB008
+  units:
+  - B-025
+  - B-040
+- id: T-15
+  field: 生命
+  topic: 光合成（明反応、カルビン回路、限定要因）
+  sources:
+  - CB008
+  units:
+  - B-030
+- id: T-16
+  field: 生命
+  topic: 呼吸（解糖、リンク反応、クレブス回路、酸化的リン酸化、嫌気呼吸）
+  sources:
+  - CB008
+  units:
+  - B-030
+- id: T-17
+  field: 生命
+  topic: 生態系のエネルギーと物質循環（生産量、窒素とリンの循環、肥料と富栄養化）
+  sources:
+  - CB008
+  units:
+  - B-041
+- id: T-18
+  field: 生命
+  topic: 刺激の受容と応答（植物の屈性、走性と動性、受容器、心拍の調節）
+  sources:
+  - CB008
+  units:
+  - B-034
+  - B-038
+  - B-039
+- id: T-19
+  field: 生命
+  topic: 神経の協調と筋収縮（神経インパルス、シナプス伝達、骨格筋の収縮）
+  sources:
+  - CB008
+  units:
+  - B-034
+- id: T-20
+  field: 生命
+  topic: 恒常性（負のフィードバック、血糖の調節、血液の水ポテンシャルの調節）
+  sources:
+  - CB008
+  units:
+  - B-035
+- id: T-21
+  field: 生命
+  topic: 遺伝（一遺伝子雑種と二遺伝子雑種、連鎖、エピスタシス、カイ二乗検定）
+  sources:
+  - CB008
+  units:
+  - B-024
+  - B-045
+- id: T-22
+  field: 生命
+  topic: 集団と進化（ハーディ–ワインベルグの原理、選択、遺伝的浮動、種分化）
+  sources:
+  - CB008
+  units:
+  - B-042
+- id: T-23
+  field: 生命
+  topic: 生態系の個体群（個体群の大きさ、標識再捕法、遷移、保全）
+  sources:
+  - CB008
+  units:
+  - B-040
+  - B-041
+- id: T-24
+  field: 生命
+  topic: 遺伝子発現の制御（突然変異とタンパク質、幹細胞、転写因子、エピジェネティクス、がん）
+  sources:
+  - CB008
+  units:
+  - B-044
+  - B-046
+- id: T-25
+  field: 生命
+  topic: ゲノム計画と遺伝子技術（組換え DNA、PCR、DNA プローブ、遺伝子指紋法）
+  sources:
+  - CB008
+  units:
+  - B-033
+  - B-053
+- id: T-26
+  field: 数学
+  topic: 生物の数学（比と百分率、平均と標準偏差、カイ二乗・t 検定・相関係数、対数、接線の傾き）
+  sources:
+  - CB008
+  units:
+  - S-028
+  - S-019
+  - S-030
+  - D-001
+- id: T-27
+  field: 生命
+  topic: 必須の実験 12 件（酵素、根端の有糸分裂、水ポテンシャル、無菌操作、色素のクロマトグラフィー、比色法）
+  sources:
+  - CB008
+  units:
+  - B-022
+  - B-043
+  - H-042

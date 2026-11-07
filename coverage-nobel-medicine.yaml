@@ -1,0 +1,289 @@
+# 網羅表：生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CB029:
+    title: NobelPrize.org, The Nobel Prize in Physiology or Medicine 2012, Summary
+    url: https://www.nobelprize.org/prizes/medicine/2012/summary/
+    date: '2026-11-07'
+  CB030:
+    title: NobelPrize.org, The Nobel Prize in Physiology or Medicine 2016, Summary
+    url: https://www.nobelprize.org/prizes/medicine/2016/summary/
+    date: '2026-11-07'
+  CB031:
+    title: NobelPrize.org, The Nobel Prize in Physiology or Medicine 2017, Summary
+    url: https://www.nobelprize.org/prizes/medicine/2017/summary/
+    date: '2026-11-07'
+  CB032:
+    title: NobelPrize.org, The Nobel Prize in Physiology or Medicine 2018, Summary
+    url: https://www.nobelprize.org/prizes/medicine/2018/summary/
+    date: '2026-11-07'
+  CB033:
+    title: NobelPrize.org, The Nobel Prize in Physiology or Medicine 2019, Summary
+    url: https://www.nobelprize.org/prizes/medicine/2019/summary/
+    date: '2026-11-07'
+  CB034:
+    title: NobelPrize.org, All Nobel Prizes in Physiology or Medicine
+    url: https://www.nobelprize.org/prizes/lists/all-nobel-laureates-in-physiology-or-medicine/
+    date: '2026-11-07'
+  CB035:
+    title: AAMC, What's on the MCAT Exam?（Foundational Concepts 1〜10）
+    url: https://students-residents.aamc.org/mcatexam
+    date: '2026-11-07'
+  CB036:
+    title: AAMC, What's on the MCAT Exam? (PDF, 2020)
+    url: https://students-residents.aamc.org/media/9261/download
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: 成熟した細胞の初期化と多能性（iPS 細胞）2012
+  sources:
+  - CB029
+  units:
+  - B-054
+  - B-046
+- id: T-02
+  field: 生命
+  topic: オートファジーのしくみ 2016
+  sources:
+  - CB030
+  units:
+  - B-010
+  - B-014
+- id: T-03
+  field: 生命
+  topic: 概日リズムを生み出す分子のしくみ 2017
+  sources:
+  - CB031
+  units:
+  - B-039
+  - B-044
+- id: T-04
+  field: 生命
+  topic: 免疫のブレーキを外すがんの治療 2018
+  sources:
+  - CB032
+  units:
+  - B-051
+  - B-047
+- id: T-05
+  field: 生命
+  topic: 細胞が酸素の量を感じて適応するしくみ 2019
+  sources:
+  - CB033
+  units:
+  - B-044
+  - B-050
+- id: T-06
+  field: 生命
+  topic: C 型肝炎ウイルスの発見 2020
+  sources:
+  - CB034
+  units:
+  - B-043
+- id: T-07
+  field: 生命
+  topic: 温度と触覚の受容体 2021
+  sources:
+  - CB034
+  units:
+  - B-052
+  - B-034
+- id: T-08
+  field: 生命
+  topic: 絶滅した人類のゲノムと人類の進化 2022
+  sources:
+  - CB034
+  units:
+  - B-011
+  - B-042
+- id: T-09
+  field: 生命
+  topic: mRNA ワクチンを可能にした塩基の修飾 2023
+  sources:
+  - CB034
+  units:
+  - B-053
+  - B-051
+- id: T-10
+  field: 生命
+  topic: マイクロ RNA と転写後の遺伝子の調節 2024
+  sources:
+  - CB034
+  units:
+  - B-044
+  - B-009
+- id: T-11
+  field: 生命
+  topic: 末梢の免疫寛容 2025
+  sources:
+  - CB034
+  units:
+  - B-051
+- id: T-12
+  field: 生命
+  topic: 光で開くイオンチャネルと光遺伝学 2026
+  sources:
+  - CB034
+  units:
+  - B-052
+  - B-053
+- id: T-13
+  field: 生命
+  topic: タンパク質とアミノ酸の構造と機能、酵素とその制御
+  sources:
+  - CB035
+  units:
+  - B-028
+  - B-029
+  - B-007
+- id: T-14
+  field: 生命
+  topic: 遺伝子からタンパク質への情報の伝達
+  sources:
+  - CB035
+  units:
+  - B-032
+- id: T-15
+  field: 生命
+  topic: 世代間の遺伝と遺伝的多様性を生む過程
+  sources:
+  - CB035
+  units:
+  - B-023
+  - B-024
+  - B-042
+- id: T-16
+  field: 生命
+  topic: 生体エネルギー論と燃料分子の代謝
+  sources:
+  - CB035
+  units:
+  - B-030
+  - B-008
+- id: T-17
+  field: 生命
+  topic: 分子・細胞・細胞集団の組織化
+  sources:
+  - CB035
+  units:
+  - B-022
+  - B-010
+- id: T-18
+  field: 生命
+  topic: 原核生物とウイルス（構造、増殖、生理、遺伝）
+  sources:
+  - CB035
+  units:
+  - B-043
+- id: T-19
+  field: 生命
+  topic: 細胞分裂、分化、特殊化
+  sources:
+  - CB035
+  units:
+  - B-023
+  - B-046
+- id: T-20
+  field: 医学
+  topic: 神経系と内分泌系、器官系の協調
+  sources:
+  - CB035
+  units:
+  - B-034
+  - B-035
+- id: T-21
+  field: 医学
+  topic: 主要な器官系の構造と統合的な機能
+  sources:
+  - CB035
+  units:
+  - B-036
+  - B-050
+  - B-037
+- id: T-22
+  field: 物理
+  topic: 生体の力学と流体（運動、力、仕事、平衡、血流、ガス交換）
+  sources:
+  - CB035
+  units:
+  - P-003
+  - P-013
+  - B-036
+- id: T-23
+  field: 物理
+  topic: 電気化学と電気回路
+  sources:
+  - CB035
+  units:
+  - H-027
+  - P-029
+- id: T-24
+  field: 物理
+  topic: 光と音と物質の相互作用
+  sources:
+  - CB035
+  units:
+  - P-022
+  - P-023
+  - H-041
+- id: T-25
+  field: 化学
+  topic: 原子、核崩壊、電子構造
+  sources:
+  - CB035
+  units:
+  - H-011
+  - P-104
+- id: T-26
+  field: 化学
+  topic: 水と溶液、分子と分子間の相互作用
+  sources:
+  - CB035
+  units:
+  - H-021
+  - H-018
+- id: T-27
+  field: 化学
+  topic: 分離と精製の方法
+  sources:
+  - CB035
+  units:
+  - H-042
+- id: T-28
+  field: 化学
+  topic: 生体に関わる分子の構造・機能・反応性
+  sources:
+  - CB035
+  units:
+  - H-044
+- id: T-29
+  field: 化学
+  topic: 化学熱力学と反応速度論
+  sources:
+  - CB035
+  units:
+  - H-022
+  - H-023
+  - H-036
+- id: T-30
+  field: その他
+  topic: 感覚・知覚・認知・情動と行動の変化
+  sources:
+  - CB035
+  units:
+  - B-063
+  - B-065
+- id: T-31
+  field: その他
+  topic: 自己と社会的な相互作用、社会構造、人口、社会的な不平等
+  sources:
+  - CB035
+  none: 地図にない（候補：心理学と社会学の入口）
+- id: T-32
+  field: 数学
+  topic: 科学的推論、研究デザイン、データと統計による推論
+  sources:
+  - CB036
+  units:
+  - S-031
+  - S-019
