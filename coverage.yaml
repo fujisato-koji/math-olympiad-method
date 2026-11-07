@@ -1,7 +1,7 @@
 # 網羅表：IMO と JMO に要る論題と、それを受け持つ単元（R-09）
 #
 # 論題は docs/research/olympiad-topics.md（公開資料の章立てと範囲の記述を突き合わせた一覧）から取った。
-# どの論題にも、受け持つ単元（units）か、入れない理由（none）のどちらかを書く。tools/roadmap.py が確かめる。
+# どの論題にも、受け持つ単元（units）、入れない理由（none）、すべての単元に通る軸（axis）のどれかを書く。tools/roadmap.py が確かめる。
 # 学習指導要領には合わせない（D-011）。「学校の道具」は、IMO の道具として要る学校の内容。
 
 sources:
@@ -20,111 +20,111 @@ sources:
 
 items:
   # ---- 代数 ----
-  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [N2-06, A3-01, A3-02, A3-03, A5-02, A5-01]}
-  - {id: T-A02, field: 代数, topic: 総和と総積の記号、和の変形, sources: [O04, O05, O08], units: [A6-06]}
-  - {id: T-A03, field: 代数, topic: 数列（等差、等比、調和）, sources: [O01, O09, O10], units: [A3-05, A6-03]}
-  - {id: T-A04, field: 代数, topic: 二項定理と二項係数の性質, sources: [O10], units: [C5-01]}
-  - {id: T-A05, field: 代数, topic: 1 変数の多項式（解と係数の関係、代数学の基本定理）, sources: [O04, O05, O09, O10], units: [A6-02, A7-04]}
-  - {id: T-A06, field: 代数, topic: 多変数の多項式と対称式（ニュートンの公式）, sources: [O04, O05, O10], units: [A7-06]}
-  - {id: T-A07, field: 代数, topic: 多項式の発展（ラグランジュ補間、根の大きさの評価）, sources: [O05], units: [A7-04, A8-03]}
-  - {id: T-A08, field: 代数, topic: 多項式の既約性, sources: [O05], units: [A8-03]}
-  - {id: T-A09, field: 代数, topic: 複素数と三角関数、1 の累乗根, sources: [O04, O05, O10], units: [A7-05, G6-05]}
-  - {id: T-A10, field: 代数, topic: 母関数, sources: [O04, O05, O08], units: [C7-01]}
-  - {id: T-A11, field: 代数, topic: 関数方程式の基本（代入、単射と全射、コーシーの関数方程式）, sources: [O04, O05, O06, O08, O09, O10], units: [A6-05, A7-03]}
-  - {id: T-A12, field: 代数, topic: 病的な解をもつ関数方程式, sources: [O05, O06, O08], units: [A8-02]}
-  - {id: T-A13, field: 代数, topic: 不等式の基本（相加相乗、コーシー・シュワルツ、斉次化）, sources: [O01, O04, O05, O06, O08, O09, O10], units: [A6-01, A7-01]}
-  - {id: T-A14, field: 代数, topic: ヘルダーの不等式と重み付きべき平均, sources: [O04, O05, O06], units: [A8-01]}
-  - {id: T-A15, field: 代数, topic: ミュアヘッドの不等式, sources: [O06], units: [A7-07]}
-  - {id: T-A16, field: 代数, topic: シューアの不等式, sources: [O06], units: [A7-07]}
-  - {id: T-A17, field: 代数, topic: 置きかえによる不等式（積が 1、ラヴィ置換）, sources: [O06], units: [A7-07]}
-  - {id: T-A18, field: 代数, topic: イェンゼン、カラマタと接線の技法, sources: [O04, O05, O06], units: [A7-02]}
-  - {id: T-A19, field: 代数, topic: SOS 法, sources: [O08], units: [A7-07]}
+  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [N-010, A-010, A-011, A-012, A-015, A-009]}
+  - {id: T-A02, field: 代数, topic: 総和と総積の記号、和の変形, sources: [O04, O05, O08], units: [A-018]}
+  - {id: T-A03, field: 代数, topic: 数列（等差、等比、調和）, sources: [O01, O09, O10], units: [A-004, A-022]}
+  - {id: T-A04, field: 代数, topic: 二項定理と二項係数の性質, sources: [O10], units: [C-016]}
+  - {id: T-A05, field: 代数, topic: 1 変数の多項式（解と係数の関係、代数学の基本定理）, sources: [O04, O05, O09, O10], units: [A-026, A-030]}
+  - {id: T-A06, field: 代数, topic: 多変数の多項式と対称式（ニュートンの公式）, sources: [O04, O05, O10], units: [A-031]}
+  - {id: T-A07, field: 代数, topic: 多項式の発展（ラグランジュ補間、根の大きさの評価）, sources: [O05], units: [A-030, A-036]}
+  - {id: T-A08, field: 代数, topic: 多項式の既約性, sources: [O05], units: [A-036]}
+  - {id: T-A09, field: 代数, topic: 複素数と三角関数、1 の累乗根, sources: [O04, O05, O10], units: [A-021, A-034, G-025]}
+  - {id: T-A10, field: 代数, topic: 母関数, sources: [O04, O05, O08], units: [C-026]}
+  - {id: T-A11, field: 代数, topic: 関数方程式の基本（代入、単射と全射、コーシーの関数方程式）, sources: [O04, O05, O06, O08, O09, O10], units: [A-023, A-029]}
+  - {id: T-A12, field: 代数, topic: 病的な解をもつ関数方程式, sources: [O05, O06, O08], units: [A-035]}
+  - {id: T-A13, field: 代数, topic: 不等式の基本（相加相乗、コーシー・シュワルツ、斉次化）, sources: [O01, O04, O05, O06, O08, O09, O10], units: [A-025, A-027]}
+  - {id: T-A14, field: 代数, topic: ヘルダーの不等式と重み付きべき平均, sources: [O04, O05, O06], units: [A-033]}
+  - {id: T-A15, field: 代数, topic: ミュアヘッドの不等式, sources: [O06], units: [A-032]}
+  - {id: T-A16, field: 代数, topic: シューアの不等式, sources: [O06], units: [A-032]}
+  - {id: T-A17, field: 代数, topic: 置きかえによる不等式（積が 1、ラヴィ置換）, sources: [O06], units: [A-032]}
+  - {id: T-A18, field: 代数, topic: イェンゼン、カラマタと接線の技法, sources: [O04, O05, O06], units: [A-028]}
+  - {id: T-A19, field: 代数, topic: SOS 法, sources: [O08], units: [A-032]}
   - {id: T-A20, field: 代数, topic: 微積分, sources: [O04, O05, O08], none: JMO の範囲外（O02、O11）。IMO でも解くのに要らず、上級の別解にとどまる（O04）}
   # ---- 組合せ ----
-  - {id: T-C01, field: 組合せ, topic: 数え上げの基本（積の法則、順列と組合せ、全単射）, sources: [O01, O04, O05, O09, O10], units: [C2-02, C3-01, C3-02, C4-01, C6-01, C6-07]}
-  - {id: T-C02, field: 組合せ, topic: 漸化式と再帰, sources: [O04, O05, O10], units: [C4-02, A6-03]}
-  - {id: T-C03, field: 組合せ, topic: 二重数え上げ（握手補題）, sources: [O05, O06], units: [C6-02]}
-  - {id: T-C04, field: 組合せ, topic: 確率と期待値の線形性, sources: [O01, O04, O05, O06, O08], units: [C4-04, C6-08]}
-  - {id: T-C05, field: 組合せ, topic: 確率的方法, sources: [O08], units: [C8-01]}
-  - {id: T-C06, field: 組合せ, topic: グラフ理論の基本（次数、道と閉路、二部グラフ）, sources: [O01, O04, O05, O06, O10], units: [C5-03, C6-05]}
-  - {id: T-C07, field: 組合せ, topic: グラフ理論の発展と極値グラフ（ホール、トゥラン）, sources: [O04, O05], units: [C7-04]}
-  - {id: T-C08, field: 組合せ, topic: 関数を矢印のグラフとして見る（サイクル分解）, sources: [O05], units: [C7-04]}
-  - {id: T-C09, field: 組合せ, topic: 盤面と格子, sources: [O05], units: [C2-03, C5-04]}
-  - {id: T-C10, field: 組合せ, topic: 凸包と組合せ幾何, sources: [O04, O05], units: [C7-03]}
-  - {id: T-C11, field: 組合せ, topic: 局所的な調整（小さな摂動、貪欲法）, sources: [O05, O06], units: [C7-05]}
-  - {id: T-C12, field: 組合せ, topic: 構成問題とアルゴリズム, sources: [O05, O06], units: [C7-02]}
-  - {id: T-C13, field: 組合せ, topic: 固い構造の解析, sources: [O05, O06], units: [C8-02]}
-  - {id: T-C14, field: 組合せ, topic: 等号の場合を手がかりにする, sources: [O05], units: [C7-02]}
-  - {id: T-C15, field: 組合せ, topic: ゲーム, sources: [O09], units: [L2-03, L4-02, C6-06]}
-  - {id: T-C16, field: 組合せ, topic: 多項式法（組合せ論的零点定理）, sources: [O05], units: [C8-03]}
+  - {id: T-C01, field: 組合せ, topic: 数え上げの基本（積の法則、順列と組合せ、全単射）, sources: [O01, O04, O05, O09, O10], units: [C-005, C-006, C-007, C-013, C-021, C-019, C-010]}
+  - {id: T-C02, field: 組合せ, topic: 漸化式と再帰, sources: [O04, O05, O10], units: [C-009, A-022]}
+  - {id: T-C03, field: 組合せ, topic: 二重数え上げ（握手補題）, sources: [O05, O06], units: [C-018]}
+  - {id: T-C04, field: 組合せ, topic: 確率と期待値の線形性, sources: [O01, O04, O05, O06, O08], units: [C-011, C-020]}
+  - {id: T-C05, field: 組合せ, topic: 確率的方法, sources: [O08], units: [C-027]}
+  - {id: T-C06, field: 組合せ, topic: グラフ理論の基本（次数、道と閉路、二部グラフ）, sources: [O01, O04, O05, O06, O10], units: [C-012, C-022]}
+  - {id: T-C07, field: 組合せ, topic: グラフ理論の発展と極値グラフ（ホール、トゥラン）, sources: [O04, O05], units: [C-024]}
+  - {id: T-C08, field: 組合せ, topic: 関数を矢印のグラフとして見る（サイクル分解）, sources: [O05], units: [C-024]}
+  - {id: T-C09, field: 組合せ, topic: 盤面と格子, sources: [O05], units: [C-004, C-017]}
+  - {id: T-C10, field: 組合せ, topic: 凸包と組合せ幾何, sources: [O04, O05], units: [C-023]}
+  - {id: T-C11, field: 組合せ, topic: 局所的な調整（小さな摂動、貪欲法）, sources: [O05, O06], units: [L-019]}
+  - {id: T-C12, field: 組合せ, topic: 構成問題とアルゴリズム, sources: [O05, O06], units: [L-018]}
+  - {id: T-C13, field: 組合せ, topic: 固い構造の解析, sources: [O05, O06], units: [C-025]}
+  - {id: T-C14, field: 組合せ, topic: 等号の場合を手がかりにする, sources: [O05], units: [L-018]}
+  - {id: T-C15, field: 組合せ, topic: ゲーム, sources: [O09], units: [L-004, L-010, L-017]}
+  - {id: T-C16, field: 組合せ, topic: 多項式法（組合せ論的零点定理）, sources: [O05], units: [C-028]}
   # ---- 幾何 ----
-  - {id: T-G01, field: 幾何, topic: 合同と相似、三角形と多角形の基本性質, sources: [O01, O04, O10], units: [G4-02, G5-01, G5-02, G5-05]}
-  - {id: T-G02, field: 幾何, topic: 角度の追跡と円に内接する四角形（有向角）, sources: [O01, O04, O05, O07, O08, O10], units: [G5-03, G6-06]}
-  - {id: T-G03, field: 幾何, topic: 方べきの定理と根軸、根心, sources: [O04, O05, O07], units: [G6-03, G7-02]}
-  - {id: T-G04, field: 幾何, topic: 方べきの差の線形性と共軸の補題, sources: [O05], units: [G7-02]}
-  - {id: T-G05, field: 幾何, topic: 三角形の五心と九点円, sources: [O04, O07], units: [G6-01]}
-  - {id: T-G06, field: 幾何, topic: 典型的な配置（内心・傍心の補題、混線内接円）, sources: [O05, O07, O08], units: [G7-05]}
-  - {id: T-G07, field: 幾何, topic: チェバとメネラウスの定理、共点と共線, sources: [O04, O10], units: [G6-02]}
-  - {id: T-G08, field: 幾何, topic: 相似拡大, sources: [O04, O05, O07], units: [G7-01]}
-  - {id: T-G09, field: 幾何, topic: 三角法（正弦定理と余弦定理、加法定理）, sources: [O03, O04, O05, O10], units: [G6-04, G6-05]}
-  - {id: T-G10, field: 幾何, topic: 長さと比の追跡, sources: [O05, O07], units: [G4-01, G6-02, G6-04]}
-  - {id: T-G11, field: 幾何, topic: 計算による幾何, sources: [O05, O07], units: [G6-04, G7-03]}
-  - {id: T-G12, field: 幾何, topic: 座標幾何（直線と円）, sources: [O04, O10], units: [G6-07, G7-03]}
-  - {id: T-G13, field: 幾何, topic: ベクトル, sources: [O10], units: [G6-08, G7-03]}
-  - {id: T-G14, field: 幾何, topic: 複素数による幾何, sources: [O04, O05, O07, O08], units: [G7-04]}
-  - {id: T-G15, field: 幾何, topic: 重心座標, sources: [O04, O05, O07, O08], units: [G8-04]}
-  - {id: T-G16, field: 幾何, topic: 反転, sources: [O04, O05, O07], units: [G8-02]}
-  - {id: T-G17, field: 幾何, topic: 射影幾何（複比、調和点列、極と極線、パスカルの定理）, sources: [O04, O05, O07], units: [G8-01]}
-  - {id: T-G18, field: 幾何, topic: 回転相似、ミケル点と完全四辺形, sources: [O04, O05, O07], units: [G7-01]}
-  - {id: T-G19, field: 幾何, topic: 円錐曲線, sources: [O04, O05, O10], units: [G8-05]}
-  - {id: T-G20, field: 幾何, topic: 空間図形, sources: [O01, O10], units: [G3-04, G4-03, G5-06]}
-  - {id: T-G21, field: 幾何, topic: 作図（定規とコンパス）, sources: [O05, O10], units: [G5-07]}
-  - {id: T-G22, field: 幾何, topic: 図を描くことと図からの見当付け, sources: [O05, O08], units: [G5-07, G6-06]}
-  - {id: T-G23, field: 幾何, topic: 動く点の方法, sources: [O05], units: [G8-03]}
+  - {id: T-G01, field: 幾何, topic: 合同と相似、三角形と多角形の基本性質, sources: [O01, O04, O10], units: [G-013, G-016, G-017, G-020]}
+  - {id: T-G02, field: 幾何, topic: 角度の追跡と円に内接する四角形（有向角）, sources: [O01, O04, O05, O07, O08, O10], units: [G-018, G-023]}
+  - {id: T-G03, field: 幾何, topic: 方べきの定理と根軸、根心, sources: [O04, O05, O07], units: [G-030, G-032]}
+  - {id: T-G04, field: 幾何, topic: 方べきの差の線形性と共軸の補題, sources: [O05], units: [G-032]}
+  - {id: T-G05, field: 幾何, topic: 三角形の五心と九点円, sources: [O04, O07], units: [G-028]}
+  - {id: T-G06, field: 幾何, topic: 典型的な配置（内心・傍心の補題、混線内接円）, sources: [O05, O07, O08], units: [G-033]}
+  - {id: T-G07, field: 幾何, topic: チェバとメネラウスの定理、共点と共線, sources: [O04, O10], units: [G-029]}
+  - {id: T-G08, field: 幾何, topic: 相似拡大, sources: [O04, O05, O07], units: [G-031]}
+  - {id: T-G09, field: 幾何, topic: 三角法（正弦定理と余弦定理、加法定理）, sources: [O03, O04, O05, O10], units: [G-024, G-025]}
+  - {id: T-G10, field: 幾何, topic: 長さと比の追跡, sources: [O05, O07], units: [G-012, G-029, G-024]}
+  - {id: T-G11, field: 幾何, topic: 計算による幾何, sources: [O05, O07], units: [G-024, G-035]}
+  - {id: T-G12, field: 幾何, topic: 座標幾何（直線と円）, sources: [O04, O10], units: [G-026, G-035]}
+  - {id: T-G13, field: 幾何, topic: ベクトル, sources: [O10], units: [G-027, G-035]}
+  - {id: T-G14, field: 幾何, topic: 複素数による幾何, sources: [O04, O05, O07, O08], units: [G-036]}
+  - {id: T-G15, field: 幾何, topic: 重心座標, sources: [O04, O05, O07, O08], units: [G-040]}
+  - {id: T-G16, field: 幾何, topic: 反転, sources: [O04, O05, O07], units: [G-038]}
+  - {id: T-G17, field: 幾何, topic: 射影幾何（複比、調和点列、極と極線、パスカルの定理）, sources: [O04, O05, O07], units: [G-037]}
+  - {id: T-G18, field: 幾何, topic: 回転相似、ミケル点と完全四辺形, sources: [O04, O05, O07], units: [G-031]}
+  - {id: T-G19, field: 幾何, topic: 円錐曲線, sources: [O04, O05, O10], units: [G-041]}
+  - {id: T-G20, field: 幾何, topic: 空間図形, sources: [O01, O10], units: [G-011, G-014, G-021]}
+  - {id: T-G21, field: 幾何, topic: 作図（定規とコンパス）, sources: [O05, O10], units: [G-022]}
+  - {id: T-G22, field: 幾何, topic: 図を描くことと図からの見当付け, sources: [O05, O08], units: [G-022, G-023]}
+  - {id: T-G23, field: 幾何, topic: 動く点の方法, sources: [O05], units: [G-039]}
   - {id: T-G24, field: 幾何, topic: ポリズム（ポンスレの閉形定理など）, sources: [O05], none: 上級の単元として 1 つの資料（O05）が扱うだけで、IMO の解答にはほとんど出ない}
-  - {id: T-G25, field: 幾何, topic: 幾何と他分野の融合（幾何の不等式、格子点）, sources: [O05], units: [G8-06, C7-03]}
+  - {id: T-G25, field: 幾何, topic: 幾何と他分野の融合（幾何の不等式、格子点）, sources: [O05], units: [G-034, C-023]}
   # ---- 整数 ----
-  - {id: T-N01, field: 整数, topic: 約数と倍数、素数、素因数分解の一意性, sources: [O01, O04, O09, O10], units: [N3-01, N3-05, N5-03]}
-  - {id: T-N02, field: 整数, topic: ユークリッドの互除法、ベズーの補題、1 次不定方程式, sources: [O04, O05, O10], units: [N5-02]}
-  - {id: T-N03, field: 整数, topic: 合同式の基本（逆元、1 次合同式）, sources: [O01, O04, O05, O10], units: [N5-01, N6-01]}
-  - {id: T-N04, field: 整数, topic: 中国剰余定理, sources: [O04, O08, O10], units: [N6-05]}
-  - {id: T-N05, field: 整数, topic: フェルマーの小定理、オイラーの定理、ウィルソンの定理, sources: [O04, O10], units: [N6-02]}
-  - {id: T-N06, field: 整数, topic: 位数と原始根, sources: [O04, O05, O06, O08], units: [N7-01]}
-  - {id: T-N07, field: 整数, topic: 素因数の指数（ν_p）, sources: [O04, O05, O06], units: [N6-03]}
-  - {id: T-N08, field: 整数, topic: 指数持ち上げの補題（LTE）, sources: [O05, O06], units: [N7-03]}
-  - {id: T-N09, field: 整数, topic: 2 つの平方数の和の定理, sources: [O04, O05, O06, O08], units: [N7-04]}
-  - {id: T-N10, field: 整数, topic: 不定方程式（剰余と因数分解、ピタゴラス数）, sources: [O01, O05, O10], units: [N6-04]}
-  - {id: T-N11, field: 整数, topic: 平方剰余と相互法則, sources: [O04, O05, O06], units: [N7-02]}
-  - {id: T-N12, field: 整数, topic: ペル方程式, sources: [O06], units: [N7-05]}
-  - {id: T-N13, field: 整数, topic: ヴィエタ・ジャンピング, sources: [O05, O06], units: [N7-06]}
-  - {id: T-N14, field: 整数, topic: 整数の大きさの議論, sources: [O05], units: [N8-01]}
-  - {id: T-N15, field: 整数, topic: 整数の構成問題, sources: [O05, O06], units: [N6-05, N8-02]}
-  - {id: T-N16, field: 整数, topic: 整数係数の多項式, sources: [O05], units: [A7-04, N8-03]}
-  - {id: T-N17, field: 整数, topic: 素数の分布の定理の主張（ディリクレ、素数定理）, sources: [O04], units: [N8-04]}
+  - {id: T-N01, field: 整数, topic: 約数と倍数、素数、素因数分解の一意性, sources: [O01, O04, O09, O10], units: [N-017, N-021, N-030, N-024]}
+  - {id: T-N02, field: 整数, topic: ユークリッドの互除法、ベズーの補題、1 次不定方程式, sources: [O04, O05, O10], units: [N-029]}
+  - {id: T-N03, field: 整数, topic: 合同式の基本（逆元、1 次合同式）, sources: [O01, O04, O05, O10], units: [N-028, N-032]}
+  - {id: T-N04, field: 整数, topic: 中国剰余定理, sources: [O04, O08, O10], units: [N-036]}
+  - {id: T-N05, field: 整数, topic: フェルマーの小定理、オイラーの定理、ウィルソンの定理, sources: [O04, O10], units: [N-033]}
+  - {id: T-N06, field: 整数, topic: 位数と原始根, sources: [O04, O05, O06, O08], units: [N-037]}
+  - {id: T-N07, field: 整数, topic: 素因数の指数（ν_p）, sources: [O04, O05, O06], units: [N-034]}
+  - {id: T-N08, field: 整数, topic: 指数持ち上げの補題（LTE）, sources: [O05, O06], units: [N-039]}
+  - {id: T-N09, field: 整数, topic: 2 つの平方数の和の定理, sources: [O04, O05, O06, O08], units: [N-040]}
+  - {id: T-N10, field: 整数, topic: 不定方程式（剰余と因数分解、ピタゴラス数）, sources: [O01, O05, O10], units: [N-035]}
+  - {id: T-N11, field: 整数, topic: 平方剰余と相互法則, sources: [O04, O05, O06], units: [N-038]}
+  - {id: T-N12, field: 整数, topic: ペル方程式, sources: [O06], units: [N-041]}
+  - {id: T-N13, field: 整数, topic: ヴィエタ・ジャンピング, sources: [O05, O06], units: [N-042]}
+  - {id: T-N14, field: 整数, topic: 整数の大きさの議論, sources: [O05], units: [N-043]}
+  - {id: T-N15, field: 整数, topic: 整数の構成問題, sources: [O05, O06], units: [N-036, N-044]}
+  - {id: T-N16, field: 整数, topic: 整数係数の多項式, sources: [O05], units: [A-030, N-045]}
+  - {id: T-N17, field: 整数, topic: 素数の分布の定理の主張（ディリクレ、素数定理）, sources: [O04], units: [N-046]}
   # ---- 論法と証明 ----
-  - {id: T-P01, field: 論法と証明, topic: 証明の書き方とよくある誤り, sources: [O01, O02, O04, O06, O08], units: [L4-03, L5-01, L6-01, L7-01]}
-  - {id: T-P02, field: 論法と証明, topic: 集合と写像（単射と全射）, sources: [O04, O06], units: [L6-03]}
-  - {id: T-P03, field: 論法と証明, topic: 数学的帰納法, sources: [O04, O05, O09], units: [L5-03]}
-  - {id: T-P04, field: 論法と証明, topic: 鳩の巣原理, sources: [O04, O05, O06, O09, O10], units: [L3-02, C6-03]}
-  - {id: T-P05, field: 論法と証明, topic: 不変量と単調量, sources: [O05, O09], units: [L4-01, C6-04]}
-  - {id: T-P06, field: 論法と証明, topic: 極端原理, sources: [O06, O09], units: [L6-02]}
-  - {id: T-P07, field: 論法と証明, topic: 塗り分けによる証明, sources: [O09], units: [C5-04]}
-  - {id: T-P08, field: 論法と証明, topic: 構成と、不可能性や上界の証明の二部構成, sources: [O06], units: [C7-02]}
+  - {id: T-P01, field: 論法と証明, topic: 証明の書き方とよくある誤り, sources: [O01, O02, O04, O06, O08], axis: わけ}
+  - {id: T-P02, field: 論法と証明, topic: 集合と写像（単射と全射）, sources: [O04, O06], units: [A-024]}
+  - {id: T-P03, field: 論法と証明, topic: 数学的帰納法, sources: [O04, O05, O09], units: [L-012]}
+  - {id: T-P04, field: 論法と証明, topic: 鳩の巣原理, sources: [O04, O05, O06, O09, O10], units: [L-006, L-015]}
+  - {id: T-P05, field: 論法と証明, topic: 不変量と単調量, sources: [O05, O09], units: [L-009, L-016]}
+  - {id: T-P06, field: 論法と証明, topic: 極端原理, sources: [O06, O09], units: [L-014]}
+  - {id: T-P07, field: 論法と証明, topic: 塗り分けによる証明, sources: [O09], units: [C-017]}
+  - {id: T-P08, field: 論法と証明, topic: 構成と、不可能性や上界の証明の二部構成, sources: [O06], units: [L-018]}
   # ---- 学校の道具（IMO の道具として要る学校の内容。対応付けは調べた者による） ----
-  - {id: T-S01, field: 学校の道具, topic: 因数分解, sources: [O04, O10], units: [A5-02]}
-  - {id: T-S02, field: 学校の道具, topic: 式と証明（相加相乗平均）, sources: [O04, O10], units: [A6-01]}
-  - {id: T-S03, field: 学校の道具, topic: 解と係数の関係、因数定理, sources: [O04, O10], units: [A6-02]}
-  - {id: T-S04, field: 学校の道具, topic: 数列（Σ、漸化式）, sources: [O04, O10], units: [A6-03, A6-06]}
-  - {id: T-S05, field: 学校の道具, topic: 数学的帰納法, sources: [O04, O10], units: [L5-03]}
-  - {id: T-S06, field: 学校の道具, topic: 二項定理, sources: [O10], units: [C5-01]}
-  - {id: T-S07, field: 学校の道具, topic: 場合の数、確率、期待値, sources: [O01, O04], units: [C3-01, C3-02, C4-04, C6-08]}
-  - {id: T-S08, field: 学校の道具, topic: 整数の性質（互除法、余り）, sources: [O01, O10], units: [N5-01, N5-02]}
-  - {id: T-S09, field: 学校の道具, topic: 平面図形（相似、円周角、方べき、チェバとメネラウス、五心）, sources: [O01, O10], units: [G5-03, G5-05, G6-01, G6-02, G6-03]}
-  - {id: T-S10, field: 学校の道具, topic: 三角比と三角関数（加法定理）, sources: [O04, O10], units: [G6-04, G6-05]}
-  - {id: T-S11, field: 学校の道具, topic: 図形と方程式, sources: [O10], units: [G6-07]}
-  - {id: T-S12, field: 学校の道具, topic: ベクトル, sources: [O10], units: [G6-08]}
-  - {id: T-S13, field: 学校の道具, topic: 複素数平面, sources: [O04, O10], units: [A7-05, G7-04]}
-  - {id: T-S14, field: 学校の道具, topic: 2 次曲線, sources: [O10], units: [G8-05]}
-  - {id: T-S15, field: 学校の道具, topic: 指数, sources: [O10], units: [A5-01]}
-  - {id: T-S16, field: 学校の道具, topic: 集合と命題, sources: [O04, O06], units: [L5-04, L6-03]}
+  - {id: T-S01, field: 学校の道具, topic: 因数分解, sources: [O04, O10], units: [A-015]}
+  - {id: T-S02, field: 学校の道具, topic: 式と証明（相加相乗平均）, sources: [O04, O10], units: [A-025]}
+  - {id: T-S03, field: 学校の道具, topic: 解と係数の関係、因数定理, sources: [O04, O10], units: [A-026]}
+  - {id: T-S04, field: 学校の道具, topic: 数列（Σ、漸化式）, sources: [O04, O10], units: [A-022, A-018]}
+  - {id: T-S05, field: 学校の道具, topic: 数学的帰納法, sources: [O04, O10], units: [L-012]}
+  - {id: T-S06, field: 学校の道具, topic: 二項定理, sources: [O10], units: [C-016]}
+  - {id: T-S07, field: 学校の道具, topic: 場合の数、確率、期待値, sources: [O01, O04], units: [C-006, C-007, C-011, C-020]}
+  - {id: T-S08, field: 学校の道具, topic: 整数の性質（互除法、余り）, sources: [O01, O10], units: [N-028, N-029]}
+  - {id: T-S09, field: 学校の道具, topic: 平面図形（相似、円周角、方べき、チェバとメネラウス、五心）, sources: [O01, O10], units: [G-018, G-020, G-028, G-029, G-030]}
+  - {id: T-S10, field: 学校の道具, topic: 三角比と三角関数（加法定理）, sources: [O04, O10], units: [G-024, G-025]}
+  - {id: T-S11, field: 学校の道具, topic: 図形と方程式, sources: [O10], units: [G-026]}
+  - {id: T-S12, field: 学校の道具, topic: ベクトル, sources: [O10], units: [G-027]}
+  - {id: T-S13, field: 学校の道具, topic: 複素数平面, sources: [O04, O10], units: [A-034, G-036]}
+  - {id: T-S14, field: 学校の道具, topic: 2 次曲線, sources: [O10], units: [G-041]}
+  - {id: T-S15, field: 学校の道具, topic: 指数, sources: [O10], units: [A-009]}
+  - {id: T-S16, field: 学校の道具, topic: 集合と命題, sources: [O04, O06], units: [L-013, A-024]}
   - {id: T-S17, field: 学校の道具, topic: 微分（接線、凹凸）, sources: [O04], none: 上級の道具にとどまる（O04）。接線の技法は A7-02 で微分を使わずに扱う}

@@ -23,6 +23,20 @@
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 保存できない環境でも表示は続ける */ } }
   let progress = load(KEY, null);
   if (!progress || typeof progress.units !== 'object') progress = { units: {} };
+  // 記号の付け替え（N1-01 → N-001 など）の前に保存された記録を読み替える
+  function migrate(p) {
+    const ren = R.renamed || {};
+    let moved = false;
+    Object.keys(p.units).forEach(k => {
+      if (ren[k] && !p.units[ren[k]]) { p.units[ren[k]] = p.units[k]; delete p.units[k]; moved = true; }
+    });
+    if (moved) save(KEY, p);
+    return p;
+  }
+  progress = migrate(progress);
+  // わけの深さ（D-016）。段ごとに上限がある
+  const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
+  const circled = n => '①②③④⑤'[n - 1] || '';
   const prefs = Object.assign({ music: true, parent: false, goal: 'all' }, load(PREF, {}));
   // 目標：網羅表が指す単元とその前提。'all' はすべての単元（大会のための単元も含む）
   const GOALS = R.goals || [];
@@ -153,7 +167,7 @@
     const f = forecast(), cur = currentStage(), opts = options();
     return `
     <section class="hero">
-      <div class="eyebrow">算数から数学オリンピックへ</div>
+      <div class="eyebrow">ものを数えるところから、研究の最前線まで</div>
       <h1>たくさんの道から、ひとすじを。</h1>
       <p>${R.stages.length} つの段に ${R.units.length} の駅。流れが分かれているところは、どれから進んでもかまいません。</p>
       <div class="goal-pick" role="group" aria-label="目標">
@@ -209,6 +223,7 @@
           <span class="meta">${esc(s.about)}・1 日 ${s.minutes} 分</span>
           <span class="count">${done} / ${us.length} 駅</span>
         </div>
+        ${lanes.length ? '' : `<p class="muted" style="margin:0">${R.units.some(u => u.stage === s.id) ? 'この目標では要りません。' : '駅はこれから足します。'}</p>`}
         <div class="tracks">${lanes.map(l => `
           <div class="track" style="${lc(l)}"><span>${esc(LANES[l].name)}</span>
             <div class="track-line">${us.filter(u => u.lane === l).map(u =>
@@ -269,14 +284,18 @@
     });
     const parts = Object.entries(s.day).filter(([, v]) => v).map(([k, v]) => `${k} ${v}`).join('、');
     const g = GOALS.find(x => x.id === prefs.goal);
+    const [lo, hi] = s.reason || [1, 1];
+    const reason = lo === hi ? `${circled(lo)} ${REASON[lo]}` : `${circled(lo)}〜${circled(hi)}（${REASON[hi]}まで）`;
+    const empty = !R.units.some(u => u.stage === n) ? 'この段の駅は、これから足します（大学、大学院、研究）。'
+      : 'この目標では、この段の駅は要りません。';
     return `
     <section class="stage-head">
       <div class="eyebrow">段 ${n}</div>
       <h1>${esc(s.name)}</h1>
-      <p>主な内容は ${esc(s.about)}。1 日 ${s.minutes} 分（${parts}）。</p>
+      <p>${esc(s.about)}。1 日 ${s.minutes} 分（${parts}）。わけを示す深さは ${esc(reason)}。</p>
       ${g ? `<p class="goal-banner">目標「${esc(g.name)}」に要る駅だけで組み替えています。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
     </section>
-    ${us.length ? legend() : `<p class="empty">この目標では、この段の駅は要りません。</p>`}
+    ${us.length ? legend() : `<p class="empty">${empty}</p>`}
     <div class="board-wrap"><div class="board" id="board" style="grid-template-columns:var(--lw) repeat(${cols}, var(--cw))">
       ${cells}<svg class="edges" id="edges" aria-hidden="true"></svg>
     </div></div>
@@ -447,6 +466,9 @@
   function parentHtml(it) {
     if (!prefs.parent) return '';
     if (it.part === '見本') return '';
+    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${esc(it.explain)}
+      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(esc).join(' → ')}`).join('')}
+      <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
     return `<div class="parent"><b>こたえ</b> ${esc(it.answer)}
       ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(esc).join(' → ')}`).join('')}
       ${it.note ? `<br><b>見どころ</b> ${esc(it.note)}` : ''}
@@ -467,7 +489,17 @@
     const longest = it.figure ? Math.max(...String(it.figure).split('\n').map(l => Array.from(l).length)) : 0;
     const fig = it.figure ? `<div class="fig" style="--n:${longest}" aria-label="え">${esc(it.figure)}</div>` : '';
     let body;
-    if (it.part === '見本') {
+    if (it.part === 'わけ' && !s.solved) {
+      // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${esc(h)}</div>`).join('');
+      body = `${fig}<p class="explain">くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。</p>
+        <div class="hints">${hints}</div>
+        <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}
+          <button class="pill solid" data-act="said" type="button">いえた</button></div>`;
+    } else if (it.part === 'わけ') {
+      body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
+        <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
+    } else if (it.part === '見本') {
       body = `${fig}<p class="explain">${esc(it.explain)}</p>
         <div class="actions"><button class="pill solid" data-act="next" type="button">わかった</button></div>`;
     } else if (s.solved) {
@@ -603,6 +635,11 @@
     }
     const act = t.dataset.act;
     if (act === 'hint') { s.hints = Math.min(3, s.hints + 1); Music.hint(); drawItem(); }
+    if (act === 'said') {
+      s.solved = true; s.tries = 1;
+      s.results[s.idx] = { first: s.hints === 0, hints: s.hints, tries: 1 };
+      Music.good(s.idx); drawItem();
+    }
     if (act === 'next') { Music.tap(); advance(false); }
     if (act === 'skip') advance(true);
     if (act === 'replay') Music.melody(s.melody || []);
@@ -643,7 +680,7 @@
     try {
       const v = JSON.parse(await f.text());
       if (!v || typeof v.units !== 'object') throw new Error('形が違う');
-      progress = v; save(KEY, progress); menu.close(); render();
+      progress = migrate(v); save(KEY, progress); menu.close(); render();
     } catch (err) { alert('読み込めませんでした（' + err.message + '）'); }
   });
   $('#btn-reset').addEventListener('click', () => {

@@ -12,12 +12,15 @@ from pathlib import Path
 import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
-ID_RE = re.compile(r"^([A-Z])(\d)-(\d\d)$")
-PARTS = ("見本", "思い出す", "今日", "挑戦")
+ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
+PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ")
 
 
 def default_plan(n):
-    return ["導入"] + ["練習"] * (n - 3) + ["混ぜる", "確認"]
+    """既定の日の並び。どの単元にも、わけを示す日を 1 日入れる（D-016）。"""
+    if n < 5:
+        return ["導入"] + ["わけ"] * (n - 2) + ["確認"]
+    return ["導入"] + ["練習"] * (n - 4) + ["わけ", "混ぜる", "確認"]
 
 
 def load():
@@ -31,6 +34,8 @@ def load():
         cov = ROOT / g["coverage"]
         if cov.exists():
             data["coverages"][g["id"]] = yaml.safe_load(cov.read_text(encoding="utf-8"))
+    ren = ROOT / "renamed.yaml"
+    data["renamed"] = yaml.safe_load(ren.read_text(encoding="utf-8")) if ren.exists() else {}
     return data, problems
 
 
@@ -51,15 +56,15 @@ def goal_units(data):
 
 
 def check_coverage(cov, units):
-    """網羅表：どの論題にも、受け持つ単元（units）か、入れない理由（none）がある。"""
+    """網羅表：どの論題にも、受け持つ単元（units）、入れない理由（none）、すべての単元に通る軸（axis）のどれか 1 つがある。"""
     errors, seen = [], set()
     for item in cov.get("items", []):
         iid = item.get("id", "?")
         if iid in seen:
             errors.append(f"網羅表 {iid}: 二重")
         seen.add(iid)
-        if bool(item.get("units")) == bool(item.get("none")):
-            errors.append(f"網羅表 {iid}: units か none のどちらか一方を書く")
+        if sum(bool(item.get(k)) for k in ("units", "none", "axis")) != 1:
+            errors.append(f"網羅表 {iid}: units、none、axis のどれか 1 つを書く")
         for uid in item.get("units") or []:
             if uid not in units:
                 errors.append(f"網羅表 {iid}: 単元 {uid} が地図にない")
@@ -97,7 +102,7 @@ def check(data, problems):
             continue
         if uid in units:
             errors.append(f"{uid}: 二重")
-        lane, stage = m.group(1), int(m.group(2))
+        lane, stage = m.group(1), u.get("stage")
         if lane not in lanes:
             errors.append(f"{uid}: 流れ {lane} がない")
         if stage not in stages:
@@ -150,9 +155,11 @@ def check(data, problems):
                 where = f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
-                if item.get("part") == "見本":
+                if item.get("part") in ("見本", "わけ"):
                     if "explain" not in item:
-                        errors.append(f"{where}: 見本には explain が要る")
+                        errors.append(f"{where}: {item.get('part')}には explain が要る")
+                    if item.get("part") == "わけ" and len(item.get("hints", [])) != 3:
+                        errors.append(f"{where}: ヒントは 3 段")
                     continue
                 if "answer" not in item:
                     errors.append(f"{where}: answer がない")
@@ -166,6 +173,8 @@ def check(data, problems):
                         continue
                     if str(got) != str(item.get("answer")):
                         errors.append(f"{where}: 答え {item.get('answer')} と check の値 {got} が違う")
+        if not any(it.get("part") == "わけ" for d in days for it in d.get("items", [])):
+            errors.append(f"{uid}: わけを示す問題（part: わけ）が 1 つもない（D-016）")
     for g in data.get("goals", []):
         if g["id"] not in data["coverages"]:
             errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
@@ -186,7 +195,9 @@ def build_coverage(goal, cov, titles):
              f"{goal['note']}に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
     items = cov.get("items", [])
     covered = sum(1 for i in items if i.get("units"))
-    lines += [f"論題 {len(items)} のうち、単元が受け持つもの {covered}、入れないもの {len(items) - covered}。", ""]
+    axis = sum(1 for i in items if i.get("axis"))
+    lines += [f"論題 {len(items)} のうち、単元が受け持つもの {covered}、すべての単元に通る軸が受け持つもの {axis}、"
+              f"入れないもの {len(items) - covered - axis}。", ""]
     fields = []
     for i in items:
         if i["field"] not in fields:
@@ -196,7 +207,8 @@ def build_coverage(goal, cov, titles):
         for i in items:
             if i["field"] != f:
                 continue
-            where = "、".join(f"{u} {titles[u]}" for u in i["units"]) if i.get("units") else f"入れない（{i['none']}）"
+            where = ("、".join(f"{u} {titles[u]}" for u in i["units"]) if i.get("units")
+                     else f"すべての単元（{i['axis']}の軸）" if i.get("axis") else f"入れない（{i['none']}）")
             lines.append(f"| {i['id']} | {i['topic']} | {where} | {'、'.join(i.get('sources') or [])} |")
         lines.append("")
     lines += ["## 出典", "", "| 記号 | 題名 | URL | 取得日 |", "|---|---|---|---|"]
@@ -218,17 +230,17 @@ def build(data, problems):
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": int(m.group(2)), "needs": u.get("needs", []), "days": days,
+                          "stage": u["stage"], "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {})})
     gu = goal_units(data)
     goals = []
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
-        items = [{k: i[k] for k in ("id", "field", "topic", "units", "none") if k in i} for i in cov.get("items", [])]
+        items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis") if k in i} for i in cov.get("items", [])]
         goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note")},
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "kinds": data["kinds"],
-               "goals": goals, "units": out_units}
+               "goals": goals, "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")
