@@ -961,7 +961,6 @@ units:
   - {id: F-033, title: 計量経済学（回帰と内生性、操作変数、パネルデータ、一般化モーメント法）, stage: 7, region: keiryo-risk, needs: [S-020, S-021], days: 10}
   - {id: F-034, title: 時系列解析（自己回帰移動平均、単位根と共和分、ボラティリティの変動）, stage: 7, region: keiryo-risk, needs: [S-020, S-021, A-022], days: 10}
   - {id: F-044, title: 保険会社の組織と規制（相互会社と株式会社、保険の監督、ソルベンシー規制）, stage: 7, region: shokugyo-seido, needs: [F-027, F-010], days: 8}
-  - {id: F-045, title: 年金と退職給付の税制（公的年金、企業年金、退職給付会計と税務）, stage: 7, region: shokugyo-seido, needs: [F-029, F-041], days: 8}
   - {id: F-046, title: アクチュアリーの実務と事業の環境（助言と顧客、金融商品と給付、規制と外部の力）, stage: 7, region: shokugyo-seido, needs: [F-027, F-029, F-032, F-040], days: 8}
   - {id: F-047, title: オルタナティブ投資と私募市場（不動産、未公開株、ヘッジファンド、インフラ）, stage: 7, region: toshi, needs: [F-022, F-011], days: 8}
   - {id: F-048, title: ユニバーサル生命保険と変額保険の数理（積立金の推移、付利、最低保証）, stage: 7, region: seimei-nenkin, needs: [F-027, F-021], days: 10}
@@ -1239,14 +1238,6 @@ units:
   - {id: E-122, title: 鉄筋コンクリート部材の挙動（軸力・曲げ・せん断）, stage: 8, region: doboku, needs: [E-002, E-003], days: 12}
   - {id: E-123, title: 鉄筋とコンクリートの付着・定着、柱・梁接合部, stage: 8, region: doboku, needs: [E-122], days: 12}
   - {id: E-124, title: 基礎と地盤（土の性質、地盤内応力、透水、圧密、せん断強さ、土圧）, stage: 8, region: doboku, needs: [E-012, E-013], days: 12}
-  - {id: E-129, title: 線形・非線形の音響波動方程式、音源、反射・屈折・透過・吸収, stage: 8, region: onkyo, needs: [P-025], days: 12}
-  - {id: E-130, title: センサアレイ処理による方位・距離の推定, stage: 8, region: onkyo, needs: [P-025], days: 12}
-  - {id: E-131, title: 散乱（グリーンの定理）、回折、波線追跡と導波路, stage: 8, region: onkyo, needs: [P-025], days: 12}
-  - {id: E-144, title: 計算機による音の合成と音響効果の信号処理, stage: 8, region: onkyo, needs: [E-073, K-012], days: 12}
-  - {id: E-146, title: 録音された音楽の解析（窓関数、特徴抽出、短時間フーリエ変換、行列分解）, stage: 8, region: onkyo, needs: [E-073, E-074, E-075], days: 12}
-  - {id: E-151, title: 建築と音（1）：音の物理・生理と心理、音の伝搬、室内の音場, stage: 8, region: onkyo, needs: [P-022], days: 12}
-  - {id: E-152, title: 建築と音（2）：吸音・遮音と材料、騒音の測定と評価, stage: 8, region: onkyo, needs: [E-151], days: 12}
-  - {id: E-153, title: 建築と音（3）：室内音響計画、電気音響設備、可視化と可聴化, stage: 8, region: onkyo, needs: [E-152], days: 12}
   - {id: G-048, title: 球充填と格子, stage: 8, region: risan-kika, needs: [G-021, M-006, M-010, D-007], days: 8}
   - {id: F-035, title: ブラック–ショールズ・モデル（連続時間のオプション価格、ギリシャ文字とヘッジ）, stage: 8, region: toshi, needs: [F-021, S-015, S-017, D-049, S-016], days: 10}
   - {id: F-036, title: 資産価格の実証（効率的市場、過剰変動、確率的割引因子）, stage: 8, region: toshi, needs: [F-022, F-033, F-034], days: 10}
@@ -1468,27 +1459,15 @@ units:
   - {id: E-103, title: 多質点系の非線形解析（非線形復元力モデル、静的増分解析とキャパシティスペクトル法）, stage: 9, region: doboku, needs: [E-093, E-102, E-014], days: 12}
   - {id: E-104, title: エネルギーの釣合いに基づく耐震設計、免震・制振構造, stage: 9, region: doboku, needs: [E-012, E-013, E-014, E-091, E-092, E-093], days: 12}
   - {id: E-115, title: 大気境界層（乱流輸送と浮力、乱流運動エネルギーの収支、地表面のエネルギー収支とフラックス、相似理論）, stage: 9, region: doboku, needs: [E-038, E-039, P-013, P-014, E-024, E-025, E-040, E-041, P-121, P-123], days: 12}
-  - {id: E-125, title: 棒・膜・薄板の振動（縦・ねじり・横・曲げ振動）, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045, A-021], days: 12}
   - {id: E-126, title: 流体力学の基礎方程式、音響の集中定数要素、音速、線形音波の伝搬, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045], days: 12}
   - {id: E-127, title: 平面波・球面波、音源とアレイからの放射、音響インテンシティ, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045], days: 12}
   - {id: E-128, title: 境界での反射と透過、吸収、室内の固有モード、管内伝搬, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045], days: 12}
-  - {id: E-132, title: 音響学の基礎（波動方程式、多重極、キルヒホッフ積分、散乱と回折、ダクト）, stage: 9, region: onkyo, needs: [E-129, D-049], days: 12}
-  - {id: E-133, title: 波の伝搬（群速度と分散、界面の反射・屈折、弾性波、散乱、相反定理）, stage: 9, region: onkyo, needs: [P-016, P-025, D-053, D-032, D-049], days: 12}
   - {id: E-134, title: 音源の理論（グリーン関数、多重極、キルヒホッフ・ヘルムホルツ積分）, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
   - {id: E-135, title: 円柱・球からの放射と散乱、回折、音響有限要素・境界要素の入口, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
-  - {id: E-136, title: 構造と音の連成（振動、有限要素・境界要素、統計的エネルギー解析）, stage: 9, region: onkyo, needs: [E-125, E-126, E-127, E-128, P-008, P-025], days: 12}
-  - {id: E-137, title: 計算音響（差分法・有限要素法・境界要素法、伝搬の算法）, stage: 9, region: onkyo, needs: [E-125, E-126, E-127, E-128, P-008, P-025], days: 12}
-  - {id: E-138, title: 空力音響（ライトヒルの音響類推、動く物体表面からの放射）, stage: 9, region: onkyo, needs: [E-132], days: 12}
-  - {id: E-139, title: 海洋音響（海中の音響環境、海面・海底での反射と透過、幾何音響）, stage: 9, region: onkyo, needs: [E-129, E-130, E-131], days: 12}
-  - {id: E-140, title: 音響・振動測定の信号解析（フィルタ、スペクトル、相関）, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045], days: 12}
-  - {id: E-141, title: ディジタルフィルタの設計、時間周波数解析、信号の検出と分類, stage: 9, region: onkyo, needs: [E-140], days: 12}
-  - {id: E-142, title: 電気音響変換器（マイクロホン、スピーカー、ハイドロホン）, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, E-067, E-068, E-069, D-045, A-021], days: 12}
-  - {id: E-143, title: 音声信号処理の基礎（正弦波、スペクトル、フーリエ・ラプラス・z 変換）, stage: 9, region: onkyo, needs: [D-006, A-021, M-002], days: 12}
-  - {id: E-145, title: 知覚符号化（心理音響に基づく音のデータ圧縮）, stage: 9, region: onkyo, needs: [E-143, K-029, D-023], days: 12}
-  - {id: E-147, title: 騒音制御工学（音源–経路–受音者、聴覚、評価量、吸音と遮音）, stage: 9, region: onkyo, needs: [P-012, P-025, P-034, D-045, A-021], days: 12}
-  - {id: E-148, title: 室内音響の理論と方法, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
-  - {id: E-149, title: 心理音響と音質, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
-  - {id: E-150, title: 空間音響と三次元音響（頭部伝達関数）, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
+  - {id: E-137, title: 計算音響（差分法・有限要素法・境界要素法、構造と音の連成）, stage: 9, region: onkyo, needs: [E-090, E-126, E-127, E-128, P-008, P-025], days: 12}
+  - {id: E-138, title: 空力音響（ライトヒルの音響類推、動く物体表面からの放射）, stage: 9, region: onkyo, needs: [E-134], days: 12}
+  - {id: E-148, title: 室内音響と騒音制御（室内の音場と固有モード、吸音と遮音、騒音の評価と対策、室内音響の計画）, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
+  - {id: E-149, title: 心理音響と空間音響（聴覚と音質の評価、頭部伝達関数と三次元音響）, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
   - {id: C-042, title: グラフの正則性補題とグラフ極限, stage: 9, region: kumiawase-daigaku, needs: [C-031, C-032, D-020], days: 8}
   - {id: L-034, title: ゲーデルの不完全性定理とペアノ算術, stage: 9, region: suri-ronri, needs: [L-024, L-026], days: 10}
   - {id: L-036, title: 定理証明支援系と形式証明, stage: 9, region: suri-ronri, needs: [L-024, L-030], days: 8}
