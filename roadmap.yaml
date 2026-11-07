@@ -498,7 +498,7 @@ units:
   - {id: A-004, title: 等差数列とその和, stage: 3, region: shiki, needs: [N-015, L-001, N-014], days: 6}
   - {id: A-005, title: 比と割合, stage: 3, region: kansu, needs: [N-019, N-020], days: 8}
   - {id: A-006, title: 比例と反比例, stage: 3, region: kansu, needs: [A-005], days: 6}
-  - {id: A-007, title: 速さ、仕事、濃度を比例で解く, stage: 3, region: kansu, needs: [A-006], days: 8, measure: true}
+  - {id: A-007, title: 速さ、仕事、濃度を比例で解く, stage: 3, region: kansu, needs: [A-006, G-046, N-059], days: 8, measure: true}
   - {id: A-008, title: 規則性と群数列, stage: 3, region: shiki, needs: [A-004], days: 6}
   - {id: A-009, title: 累乗と指数法則, stage: 3, region: shiki, needs: [N-013], days: 5}
   - {id: C-005, title: 和の法則と積の法則, stage: 3, region: kazoekata, needs: [C-003, N-013], days: 6}
@@ -595,6 +595,7 @@ units:
   - {id: B-025, title: 生物の多様性と系統（3 つのドメイン、系統樹で見る動物・植物・菌類・原生生物・細菌の主要な群）, stage: 4, region: ikimono, needs: [B-018, B-022], days: 6}
   - {id: B-026, title: 植物のからだと組織（根・茎・葉の組織、維管束、気孔、花のつくり）, stage: 4, region: shokubutsu, needs: [B-019, B-022], days: 6}
   - {id: B-027, title: 生物の歴史と進化の考え（化石、生命の起源、相同と相似、自然選択の入口）, stage: 4, region: iden-shinka, needs: [B-025, B-024], days: 6}
+  - {id: N-070, title: 標準形（10 の累乗の表し方）と有効数字、誤差の区間, stage: 4, region: keisan, needs: [A-009, N-061, N-020], days: 5}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, region: kansu, needs: [A-006, A-011], days: 6}

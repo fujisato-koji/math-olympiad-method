@@ -38,7 +38,7 @@ items:
   units:
   - A-009
   - A-016
-  - N-031
+  - D-001
 - id: T-05
   field: 数と計算
   topic: 分数・根号・π の倍数での正確な計算、分母の有理化
@@ -52,6 +52,7 @@ items:
   sources: *id001
   units:
   - A-009
+  - N-070
 - id: T-07
   field: 数と計算
   topic: 分数・小数・百分率（循環小数と分数の変換）
@@ -66,12 +67,15 @@ items:
   sources: *id001
   units:
   - N-061
+  - G-046
+  - N-070
 - id: T-09
   field: 数と計算
   topic: 精度の限界（上界と下界）
   sources: *id001
   units:
   - N-061
+  - N-070
 - id: T-10
   field: 代数
   topic: 文字式の表記、代入、用語（式、方程式、公式、恒等式、不等式）
@@ -85,6 +89,7 @@ items:
   units:
   - A-015
   - A-016
+  - A-037
 - id: T-12
   field: 代数
   topic: 公式の変形、恒等式と代数的証明
@@ -194,6 +199,7 @@ items:
   units:
   - A-005
   - G-013
+  - G-046
 - id: T-28
   field: 比と比例
   topic: 比（記法、配分、分数と一次関数との関係）
@@ -239,6 +245,7 @@ items:
   units:
   - D-001
   - A-022
+  - F-002
 - id: T-35
   field: 幾何
   topic: 図形の用語、定規とコンパスの作図、軌跡
@@ -296,7 +303,7 @@ items:
   sources: *id001
   units:
   - G-013
-  - G-022
+  - G-024
 - id: T-43
   field: 幾何
   topic: 面積と体積（三角形、角柱、円柱、円、扇形、球、角錐、円錐）
