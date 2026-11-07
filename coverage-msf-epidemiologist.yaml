@@ -1,0 +1,59 @@
+# 網羅表：国境なき医師団（MSF）の疫学者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  MD03:
+    title: Médecins Sans Frontières, Epidemiologist (work with MSF)
+    url: https://www.msf.org/epidemiologist
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 医学
+  topic: サーベイランスの評価・立ち上げ・維持（流行しやすい病気の動向）
+  sources:
+  - MD03
+  units:
+  - I-042
+  - I-033
+- id: T-02
+  field: 医学
+  topic: 流行の調査と、対応の方針への助言
+  sources:
+  - MD03
+  units:
+  - I-042
+  - I-037
+  - I-035
+- id: T-03
+  field: 医学
+  topic: 症例の定義、積極的な症例の探索、記録をそろえる
+  sources:
+  - MD03
+  units:
+  - I-042
+  - I-043
+- id: T-04
+  field: 統計学
+  topic: 緊急時の迅速な健康評価と調査（調査の計画書をつくる）
+  sources:
+  - MD03
+  units:
+  - S-031
+  - I-033
+  - I-036
+- id: T-05
+  field: 統計学
+  topic: データの管理、解析、定期の報告
+  sources:
+  - MD03
+  units:
+  - I-035
+  - S-019
+  - S-020
+- id: T-06
+  field: 医学
+  topic: 熱帯医学（現場で出会う感染症とその治療と予防）
+  sources:
+  - MD03
+  units:
+  - I-028
+  - I-029
+  - I-031

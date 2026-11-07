@@ -295,6 +295,8 @@
     ['life', '化学と生物', rg => 'HB'.includes(rg.lane)],
     ['fin', '経済と金融', rg => rg.lane === 'F'],
     ['earth', '地球科学', rg => rg.lane === 'W'],
+    ['med', '医学と健康', rg => rg.lane === 'I'],
+    ['agri-psy', '農学と心理学', rg => 'VQ'.includes(rg.lane)],
   ];
   function drawMap() {
     const host = $('#map');

@@ -32,6 +32,18 @@ sources:
     title: AAMC, What's on the MCAT Exam? (PDF, 2020)
     url: https://students-residents.aamc.org/media/9261/download
     date: '2026-11-07'
+  MD04:
+    title: Lasker Foundation, All Awards Winners（2023〜2026 年）
+    url: https://laskerfoundation.org/all-awards-winners/
+    date: 2026-11-08
+  MD05:
+    title: Lasker Foundation, All Awards Winners, page 2（2018〜2022 年）
+    url: https://laskerfoundation.org/all-awards-winners/page/2/
+    date: 2026-11-08
+  MD06:
+    title: Lasker Foundation, All Awards Winners, page 3（2014〜2017 年）
+    url: https://laskerfoundation.org/all-awards-winners/page/3/
+    date: 2026-11-08
 items:
 - id: T-01
   field: 生命
@@ -65,6 +77,8 @@ items:
   units:
   - B-051
   - B-047
+  - I-023
+  - I-050
 - id: T-05
   field: 生命
   topic: 細胞が酸素の量を感じて適応するしくみ 2019
@@ -80,6 +94,8 @@ items:
   - CB034
   units:
   - B-043
+  - I-028
+  - I-035
 - id: T-07
   field: 生命
   topic: 温度と触覚の受容体 2021
@@ -278,7 +294,8 @@ items:
   topic: 自己と社会的な相互作用、社会構造、人口、社会的な不平等
   sources:
   - CB035
-  none: 地図にない（候補：心理学と社会学の入口）
+  units:
+  - I-036
 - id: T-32
   field: 数学
   topic: 科学的推論、研究デザイン、データと統計による推論
@@ -287,3 +304,114 @@ items:
   units:
   - S-031
   - S-019
+- id: V-01
+  field: 医学
+  topic: 嚢胞性線維症の 3 剤併用療法（遺伝子の型に合わせて CFTR の働きを直す薬）2025 ラスカー臨床
+  units:
+  - I-024
+  - B-047
+  - I-053
+  sources:
+  - MD04
+- id: V-02
+  field: 医学
+  topic: GLP-1 にもとづく肥満の治療 2024 ラスカー臨床
+  units:
+  - I-019
+  - I-046
+  sources:
+  - MD04
+- id: V-03
+  field: 医学
+  topic: 母の血液の中の胎児の DNA による出生前の検査 2022 ラスカー臨床
+  units:
+  - I-024
+  - I-049
+  - I-053
+  sources:
+  - MD05
+- id: V-04
+  field: 医学
+  topic: 乳がんの抗体による分子標的薬（ハーセプチン）2019 ラスカー臨床
+  units:
+  - I-023
+  - I-050
+  - H-059
+  sources:
+  - MD05
+- id: V-05
+  field: 医学
+  topic: HPV ワクチンによるがんの予防 2017 ラスカー臨床
+  units:
+  - I-031
+  - I-023
+  - I-038
+  sources:
+  - MD06
+- id: V-06
+  field: 医学
+  topic: C 型肝炎ウイルスのレプリコンと薬の開発 2016 ラスカー臨床
+  units:
+  - I-028
+  - I-029
+  - B-049
+  sources:
+  - MD06
+- id: V-07
+  field: 医学
+  topic: 血友病 A の二重特異性抗体 2026 ラスカー臨床
+  units:
+  - I-022
+  - H-059
+  sources:
+  - MD04
+- id: V-08
+  field: 医学
+  topic: 麻酔薬プロポフォールの発見と開発 2018 ラスカー臨床
+  units:
+  - I-026
+  - B-048
+  sources:
+  - MD05
+- id: V-09
+  field: 神経科学
+  topic: パーキンソン病の脳深部刺激 2014 ラスカー臨床
+  units:
+  - B-068
+  - E-169
+  sources:
+  - MD06
+- id: V-10
+  field: 医学
+  topic: HIV の予防と治療の革新（予防の臨床試験、抗ウイルス薬）2024 ラスカー公共
+  units:
+  - I-029
+  - I-040
+  - I-042
+  sources:
+  - MD04
+- id: V-11
+  field: 医学
+  topic: COVID-19 の流行のダッシュボード（世界のデータを集めて公開する）2022 ラスカー公共
+  units:
+  - I-042
+  - I-033
+  sources:
+  - MD05
+- id: V-12
+  field: 医学
+  topic: 世界の子どもにワクチンを届け続けるしくみ（Gavi）2019 ラスカー公共
+  units:
+  - I-031
+  - I-036
+  sources:
+  - MD05
+- id: V-13
+  field: 医学
+  topic: 健康の危機への最前線の対応（国境なき医師団）2015 ラスカー公共
+  units:
+  - I-042
+  - I-051
+  - I-036
+  sources:
+  - MD06

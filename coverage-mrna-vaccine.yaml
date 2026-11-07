@@ -29,6 +29,7 @@ items:
   units:
   - B-037
   - B-051
+  - I-031
 - id: T-02
   field: 生命
   topic: 免疫応答と抗体
@@ -105,3 +106,4 @@ items:
   - CB067
   units:
   - B-049
+  - I-040

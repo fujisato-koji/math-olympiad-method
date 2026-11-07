@@ -1,0 +1,154 @@
+# 網羅表：医学の臨床の国際試験（NBME の IFOM 臨床医学試験）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  MD02:
+    title: NBME, International Foundations of Medicine Clinical Science Exam Blueprint (PDF)
+    url: https://www.nbme.org/pdf/ifom/IFOM_Clinical_Science_Exam_Content_Blueprint.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 医学
+  topic: 一生の段階（乳幼児と子どもの成長と発達、思春期、老い）
+  sources:
+  - MD02
+  units:
+  - I-049
+- id: T-02
+  field: 医学
+  topic: 医の倫理と法（治療と研究の同意、医師と患者の関係、死と緩和ケア、職業の誠実さ）
+  sources:
+  - MD02
+  units:
+  - I-034
+  - I-049
+- id: T-03
+  field: 統計学
+  topic: 応用の生物統計と臨床疫学（研究デザインと解釈、推測、因果と有効性、感度と特異度と予測値）
+  sources:
+  - MD02
+  units:
+  - I-035
+  - I-039
+  - I-040
+  - I-043
+- id: T-04
+  field: 医学
+  topic: 公衆衛生と集団の健康（感染の伝わり方、サーベイランスと流行の調査、災害の後の流行、母子保健、水と衛生、人口ピラミッド、健康と病気の頻度の指標）
+  sources:
+  - MD02
+  units:
+  - I-033
+  - I-036
+  - I-041
+  - I-042
+- id: T-05
+  field: 医学
+  topic: 免疫の病気（アレルギーとアナフィラキシー、HIV 感染症、予防接種、細胞性と液性の免疫の異常）
+  sources:
+  - MD02
+  units:
+  - I-030
+  - I-031
+  - I-029
+- id: T-06
+  field: 医学
+  topic: 血液と造血器の病気
+  sources:
+  - MD02
+  units:
+  - I-022
+  - I-050
+- id: T-07
+  field: 神経科学
+  topic: 精神の病気
+  sources:
+  - MD02
+  units:
+  - B-068
+- id: T-08
+  field: 神経科学
+  topic: 神経系と感覚器の病気
+  sources:
+  - MD02
+  units:
+  - B-068
+  - B-063
+- id: T-09
+  field: 医学
+  topic: 循環器の病気
+  sources:
+  - MD02
+  units:
+  - I-045
+- id: T-10
+  field: 医学
+  topic: 呼吸器の病気
+  sources:
+  - MD02
+  units:
+  - I-045
+  - I-051
+- id: T-11
+  field: 医学
+  topic: 栄養と消化器の病気
+  sources:
+  - MD02
+  units:
+  - I-047
+  - I-052
+- id: T-12
+  field: 医学
+  topic: 婦人科の病気
+  sources:
+  - MD02
+  units:
+  - I-018
+  - I-050
+  - I-038
+- id: T-13
+  field: 医学
+  topic: 腎と尿路と男性の生殖器の病気
+  sources:
+  - MD02
+  units:
+  - I-047
+  - I-016
+- id: T-14
+  field: 医学
+  topic: 妊娠と分娩と産褥の病気
+  sources:
+  - MD02
+  units:
+  - I-049
+  - I-018
+- id: T-15
+  field: 医学
+  topic: 皮膚と皮下組織の病気
+  sources:
+  - MD02
+  units:
+  - I-048
+- id: T-16
+  field: 医学
+  topic: 筋骨格と結合組織の病気
+  sources:
+  - MD02
+  units:
+  - I-048
+  - I-030
+- id: T-17
+  field: 医学
+  topic: 内分泌と代謝の病気
+  sources:
+  - MD02
+  units:
+  - I-046
+- id: T-18
+  field: 医学
+  topic: 診断と管理の原則（各群の診断、管理の原則、健康の維持）
+  sources:
+  - MD02
+  units:
+  - I-044
+  - I-043
+  - I-026
+  - I-038

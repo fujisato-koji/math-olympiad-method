@@ -1,0 +1,207 @@
+# 網羅表：医学の基礎の国際試験（NBME の IFOM 基礎医学試験）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  MD01:
+    title: NBME, International Foundations of Medicine Basic Science Exam Blueprint (PDF)
+    url: https://www.nbme.org/pdf/ifom/IFOM_Basic_Science_Exam_Content_Blueprint.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 生物
+  topic: 生化学と分子生物学（遺伝子の発現とその異常、タンパク質、エネルギー代謝と代謝の病気）
+  sources:
+  - MD01
+  units:
+  - B-032
+  - B-009
+  - B-007
+  - B-008
+- id: T-02
+  field: 生物
+  topic: 細胞の生物学（細胞の部品、シグナル伝達、接着と運動、細胞周期、組織の基本の成分）
+  sources:
+  - MD01
+  units:
+  - B-010
+  - I-011
+- id: T-03
+  field: 医学
+  topic: 細胞の傷害への応答（適応、細胞内の蓄積、傷害と壊死、アポトーシス）
+  sources:
+  - MD01
+  units:
+  - I-020
+- id: T-04
+  field: 医学
+  topic: ヒトの発生と遺伝（胚の発生、先天異常、家系の解析、集団遺伝学、臨床遺伝学）
+  sources:
+  - MD01
+  units:
+  - I-013
+  - I-024
+  - B-045
+  - B-002
+- id: T-05
+  field: 医学
+  topic: 病気への組織の応答（炎症とその細胞と仲介物質、修復、新生物）
+  sources:
+  - MD01
+  units:
+  - I-021
+  - I-023
+- id: T-06
+  field: 医学
+  topic: 一生の段階（誕生から老いまで）
+  sources:
+  - MD01
+  units:
+  - I-049
+- id: T-07
+  field: その他
+  topic: 患者の行動に影響する心理と社会の要因
+  sources:
+  - MD01
+  none: 地図にない（候補：健康の行動の心理学。心理学の係の単元が受け持つ見込み。社会の要因の一部は I-036）
+- id: T-08
+  field: 医学
+  topic: 患者の面接、相談、家族とのやりとり
+  sources:
+  - MD01
+  units:
+  - I-044
+- id: T-09
+  field: 医学
+  topic: 医の倫理、法、職業の行動
+  sources:
+  - MD01
+  units:
+  - I-034
+- id: T-10
+  field: 医学
+  topic: 全身にわたる過程（栄養、体温の調節、極限の環境への適応、水と電解質と酸塩基）
+  sources:
+  - MD01
+  units:
+  - I-052
+  - B-050
+  - I-016
+  - I-015
+- id: T-11
+  field: 医学
+  topic: 薬力学と薬物動態（一般の原理、抗微生物薬、抗がん薬と免疫抑制薬）
+  sources:
+  - MD01
+  units:
+  - B-047
+  - B-048
+  - I-029
+  - I-030
+  - I-050
+- id: T-12
+  field: 医学
+  topic: 微生物と感染（分類、細菌・ウイルス・真菌・寄生虫とその病気、滅菌と純培養）
+  sources:
+  - MD01
+  units:
+  - B-043
+  - I-028
+- id: T-13
+  field: 医学
+  topic: 免疫応答（自然免疫、T 細胞と B 細胞、抗体、MHC、補体とサイトカイン、ワクチン、免疫の病気、免疫学的な検査）
+  sources:
+  - MD01
+  units:
+  - B-051
+  - I-030
+  - I-031
+- id: T-14
+  field: 統計学
+  topic: 量の方法（測定、研究デザイン、仮説検定と統計的推測）
+  sources:
+  - MD01
+  units:
+  - I-035
+  - S-019
+- id: T-15
+  field: 医学
+  topic: 造血とリンパの系（正常、異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-022
+  - I-050
+- id: T-16
+  field: 神経科学
+  topic: 中枢と末梢の神経系（正常、異常、精神の病気、治療）
+  sources:
+  - MD01
+  units:
+  - B-063
+  - B-052
+  - B-068
+- id: T-17
+  field: 医学
+  topic: 皮膚と結合組織（守りと体温の調節、異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-048
+  - I-011
+- id: T-18
+  field: 医学
+  topic: 筋骨格系（正常、異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-048
+  - I-012
+- id: T-19
+  field: 医学
+  topic: 呼吸器系（肺胞と表面活性物質、異常、酸素と人工呼吸を含む治療）
+  sources:
+  - MD01
+  units:
+  - I-015
+  - I-045
+  - I-051
+- id: T-20
+  field: 医学
+  topic: 循環器系（正常、異常、先天の心疾患、治療）
+  sources:
+  - MD01
+  units:
+  - I-014
+  - I-045
+  - I-026
+- id: T-21
+  field: 医学
+  topic: 消化器系（正常、腸の守りと常在菌、異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-017
+  - I-047
+  - I-032
+- id: T-22
+  field: 医学
+  topic: 腎と尿路の系（正常、異常、透析と移植を含む治療）
+  sources:
+  - MD01
+  units:
+  - I-016
+  - I-047
+- id: T-23
+  field: 医学
+  topic: 生殖器系（正常、妊娠と産褥の異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-018
+  - I-049
+- id: T-24
+  field: 医学
+  topic: 内分泌系（ホルモンの合成と作用、異常、治療）
+  sources:
+  - MD01
+  units:
+  - I-019
+  - I-046

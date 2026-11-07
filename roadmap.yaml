@@ -28,6 +28,7 @@ lanes:
   - {id: B, name: 生物, note: 生き物のつくり、細胞、遺伝、分子生物学、生理、進化と生態}
   - {id: F, name: 経済と金融, note: 金利と現在価値、保険数理、年金、投資と派生商品、会計と経済の入口}
   - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候（大気と海洋の力学は物理の流れ）}
+  - {id: I, name: 医学と健康, note: 人体の構造と機能、病気のしくみ、薬と毒、感染と免疫、臨床医学、疫学と公衆衛生、栄養、医療の最前線（神経科学は B に残す）}
 
 
 stages:
@@ -159,6 +160,14 @@ regions:
   - {id: tenki, name: 天気と水のめぐり, lane: W}
   - {id: sekkei, name: 設計とものづくり, lane: E}
   - {id: kikai, name: 機械のしくみ, lane: E}
+  - {id: jintai, name: 人体の構造と機能, lane: I}
+  - {id: byori, name: 病気のしくみ, lane: I}
+  - {id: kusuri-doku, name: 薬と毒, lane: I}
+  - {id: kansen-meneki, name: 感染と免疫, lane: I}
+  - {id: ekigaku, name: 疫学と公衆衛生, lane: I}
+  - {id: rinsho, name: 臨床医学, lane: I}
+  - {id: eiyo, name: 栄養, lane: I}
+  - {id: iryo-saizensen, name: 医療の最前線, lane: I}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -257,7 +266,7 @@ goals:
   - {id: alevel-bio, name: A level Biology（AQA 7402）, kind: 入試, field: 生物, level: 大学, region: 英国, note: イギリスの 16〜18 歳が、大学に入るために受ける生物の試験。からだをつくる分子から生態系と遺伝子のはたらきまで 8 つの topic が出る。, coverage: coverage-alevel-bio.yaml, basis: "AQA AS and A-level Biology Specification（7401/7402、Version 1.6、July 2026）による（2026-11-07 取得）。筆記 3 回（各 2 時間、Paper 3 に 2 題から 1 題を選ぶ小論文）、数学の技能が点数の 10% 以上、実験の技能が 15% 以上。論題と単元の対応は名称による", beyond: 必須の実験 12 件、実験の評価（Practical endorsement、CPAC）、実験の記録、小論文を書く力}
   - {id: nobel-chemistry, name: 化学者（ノーベル化学賞の研究に届く知識）, kind: 研究の頂点, field: 化学, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 目に見えない分子を設計して組み立て、電池や薬や新しい材料のもとになる発見をする。, coverage: coverage-nobel-chemistry.yaml, basis: 2016〜2026 年のノーベル化学賞の授賞の分野（nobelprize.org、2026-11-07 取得）と、大学院の入口の基礎として欧州の化学教育の中核の枠組み（ECTN、2026 年 5 月版）と英国の化学の学位の基準（QAA、2022）による。どちらも学部の中核の基準で、博士課程の入口より一段下の基礎にあたる。論題と単元の対応は名称による, beyond: 賞は応募でなく、招待された推薦者の推薦と王立スウェーデン科学アカデミーの選考による。発見から授賞まで数十年かかることが多い。博士課程では総合試験（筆記と口頭）、博士論文と口頭発表（MIT の例）}
   - {id: breakthrough-life, name: 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識）, kind: 研究の頂点, field: 生物, level: 大学院（博士）, region: 米国（ブレークスルー賞財団の選考。授賞は国際）, note: 細胞や遺伝子のしくみを解き明かし、これまで治せなかった病気の治し方につなげる発見をする。, coverage: coverage-breakthrough-life.yaml, basis: 2016〜2026 年のブレークスルー賞・生命科学の受賞理由（breakthroughprize.org の発表）と、大学院の入口として MIT Biology の博士課程 1 年目の必修科目と ASBMB の生化学・分子生物学の学位の認定基準（2025）による（2026-11-07 取得）。2016 年の理由は発表の要旨による。論題と単元の対応は名称による, beyond: 推薦は誰でもできるが自薦はできず、過去の受賞者による選考委員会が選ぶ。毎年 3 件（各 300 万ドル）。博士号と長い研究の積み重ね}
-  - {id: nobel-medicine, name: 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識）, kind: 研究の頂点, field: 医学, level: 大学院（博士）, region: スウェーデン（カロリンスカ研究所のノーベル会議の選考。授賞は国際）, note: 生き物のからだの中で起きていることを細胞や分子のしくみとして解き明かし、病気の新しい治し方につなげる。, coverage: coverage-nobel-medicine.yaml, basis: 2012 年と 2016〜2026 年のノーベル生理学・医学賞の授賞の分野（nobelprize.org の授賞の理由）と、医学の入口として AAMC の MCAT の範囲（Foundational Concepts 1〜10）による（2026-11-07 取得）。MCAT は医学部の入口で、博士課程の入口ではない。論題と単元の対応は名称による, beyond: 賞は応募でなく、招待された推薦者の推薦とカロリンスカ研究所のノーベル会議の選考による。発見から授賞まで数十年かかることが多い。博士号と長い研究の積み重ね、研究室を率いて研究費を得る力}
+  - {id: nobel-medicine, name: 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識）, kind: 研究の頂点, field: 医学, level: 大学院（博士）, region: スウェーデン（カロリンスカ研究所のノーベル会議の選考。授賞は国際）, note: 生き物のからだの中で起きていることを細胞や分子のしくみとして解き明かし、病気の新しい治し方につなげる。, coverage: coverage-nobel-medicine.yaml, basis: "2012 年と 2016〜2026 年のノーベル生理学・医学賞の授賞の分野（nobelprize.org の授賞の理由）と、医学の入口として AAMC の MCAT の範囲（Foundational Concepts 1〜10）による（2026-11-07 取得）。MCAT は医学部の入口で、博士課程の入口ではない。論題と単元の対応は名称による。臨床医学と公衆衛生の論題はラスカー賞の臨床と公共衛生の部門（2014〜2026 年）による", beyond: 賞は応募でなく、招待された推薦者の推薦とカロリンスカ研究所のノーベル会議の選考による。発見から授賞まで数十年かかることが多い。博士号と長い研究の積み重ね、研究室を率いて研究費を得る力}
   - {id: crafoord-bio, name: 生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識）, kind: 研究の頂点, field: 生態学, level: 大学院（博士）, region: スウェーデン（王立スウェーデン科学アカデミーの選考。授賞は国際）, note: 生き物どうしや環境とのつながりと、種が生まれて変わっていくしくみを、野外の観察と数理で解き明かす。, coverage: coverage-crafoord-bio.yaml, basis: クラフォード賞・生物科学の 1984〜2023 年の全 13 回の受賞理由（crafoordprize.se と kva.se）と、大学院の入口として ESA の生態学の課程の枠組み（4DEE、2025 年 5 月改訂）とトロント大学 EEB の博士候補の試験の問題集（2021）による（2026-11-07 取得）。賞は 4 年で 4 部門を回り、次の生物科学の回は 2027 年の見込み。論題と単元の対応は名称による, beyond: 推薦は世界の研究者が出し、王立スウェーデン科学アカデミーが選ぶ（1〜3 人）。長い野外の研究と理論の積み重ね}
   - {id: kavli-neuro, name: 神経科学の研究者（カブリ賞・神経科学の研究に届く知識）, kind: 研究の頂点, field: 神経科学, level: 大学院（博士）, region: ノルウェー（ノルウェー科学文学アカデミーの選考。授賞は国際）, note: 脳の神経細胞と回路が、どうやって感じ、覚え、考えるのかを解き明かす。, coverage: coverage-kavli-neuro.yaml, basis: カブリ賞・神経科学の 2008〜2026 年の全 10 回の受賞理由（kavliprize.org）と、大学院の入口として神経科学の博士課程の必修（Stanford、UC San Diego、Harvard）と Society for Neuroscience の大学院の訓練の中核の能力による（2026-11-07 取得）。博士課程の文書は領域の名前までで、細目はない。論題と単元の対応は名称による, beyond: 推薦は誰でもできるが自薦はできず、ノルウェー科学文学アカデミーが任命した委員会が選ぶ。偶数年に 2 年ごと（100 万ドル）。研究の厳密さと倫理}
   - {id: crick-cell-biologist, name: 細胞の研究者（Francis Crick Institute）, kind: 仕事の頂点, field: 生物, level: 大学院（博士）, region: 英国（ロンドン）, note: 細胞がどうやって大きくなり二つに分かれるのかを、酵母という小さな生き物で調べる。, coverage: coverage-crick-cell-biologist.yaml, basis: Francis Crick Institute の Postdoctoral Fellow – Nurse Lab（R2842、2026-10-29 掲載、締切 2026-11-14）の募集による（2026-11-07 取得）。博士の直後の最初の研究職。論題と単元の対応は名称による, beyond: 細胞生物学・分子遺伝学・生化学などの博士、自分で研究の計画を立てて進める力、分野をまたぐ共同研究、論文と口頭の発表、博士課程の学生の指導、4 年の有期}
@@ -287,6 +296,9 @@ goals:
   - {id: olevel-sciences, name: GCE O-Level Physics・Chemistry・Biology（シンガポール）, kind: 修了試験, fields: [物理, 化学, 生物], level: 高校, region: シンガポール, note: シンガポールの中高生が、4 年間の終わりに受ける物理・化学・生物の試験。, coverage: coverage-olevel-sciences.yaml, basis: "2027 年から Singapore-Cambridge SEC の G3 Physics（K323）・Chemistry（K324）・Biology（K325）に代わる（2026 年までの O-Level の 6091・6092・6093 にあたると SEAB の一覧が示す）。論題は 2027 年版の syllabus（© MOE & Cambridge University Press & Assessment 2025）による（2026-11-07 取得）。物理 6 Section 20 topic、化学 3 Section 12 topic、生物 4 Theme 14 topic。科目ごとに Paper 1 選択 1 時間、Paper 2 記述 1 時間 45 分、Paper 3 実験 1 時間 50 分。SEAB の PDF は curl では拒まれた（HTTP 403）が、WebFetch では取れた。論題と単元の対応は名称による", beyond: 科目ごとに実験の試験（Paper 3、1 時間 50 分）があり、器具を使って測定し、記録し、結論を書く}
   - {id: alevel-geol, name: A level Geology（WJEC Eduqas）, kind: 入試, field: 地球科学, level: 大学, region: 英国, note: イギリスの 16〜18 歳が、大学に入るために受ける地質学の試験。鉱物と岩石、地層と化石、プレート、地質災害、資源が出る。, coverage: coverage-alevel-geol.yaml, basis: WJEC Eduqas GCE A Level in Geology（Version 2、October 2019、2019 年から授与）の仕様書による（2026-11-07 取得）。基礎 4 topic（F1〜F4）、地質記録の読み方 4 topic（G1〜G4）、テーマ 2 topic（T1、T2）と、選択 3 つ（T3〜T5）から 1 つ。筆記 3 回（2 時間 15 分、1 時間 45 分、2 時間）。OCR の A Level Geology（H414）は提供を終える予定（最終の試験は 2028 年 6 月。OCR の頁には接続できず、検索結果の OCR と Geological Society の告知で見た）なので、続く Eduqas を選んだ。論題と単元の対応は名称による, beyond: 野外での作業を 4 日以上行う（学校が WJEC に記録を出す）。実験の評価（Practical endorsement）の合否が成績とは別に報告される。WJEC が送る手標本の鑑定と、地質図からの断面図の作図が筆記で問われる}
   - {id: gcse-astro, name: GCSE Astronomy（Pearson Edexcel 1AS0）, kind: 修了試験, field: 天文学, level: 高校, region: 英国, note: イギリスの 16 歳が受ける天文学の試験。月と太陽の動き、太陽系、星の一生、宇宙の膨張が出る。, coverage: coverage-gcse-astro.yaml, basis: "Pearson Edexcel GCSE (9–1) Astronomy（1AS0）Specification（Issue 3、December 2024）による（2026-11-07 取得）。16 topic。筆記 2 回（Paper 1 肉眼の天文学、Paper 2 望遠鏡の天文学、各 1 時間 45 分、各 50%）。天文学の学校の修了試験として国際的に使われる科目はほかに見つからず、GCSE の 1 科目を採った。論題と単元の対応は名称による", beyond: 肉眼の観測と望遠鏡などを使う観測をそれぞれ 1 件以上行い、記録と評価の技能が筆記で問われる}
+  - {id: ifom-bse, name: 医学の基礎の国際試験（NBME の IFOM 基礎医学試験）, kind: 修了試験, field: 医学, level: 大学（医学部の基礎医学を終えるころ）, region: 国際, note: 医学部の前半で学ぶ、からだのしくみ、病気のしくみ、薬、微生物と免疫を、患者の場面の問題で確かめる国際試験。, coverage: coverage-ifom-bse.yaml, basis: "NBME の IFOM Basic Science Exam Blueprint（総論 28〜30% と 10 の器官系の配分）と、NBME の IFOM の頁（https://www.nbme.org/institutions/assess-learn/international-foundations-medicine/）による（2026-11-08 取得）。器官系の論題は、正常の構造と働き、異常の過程、治療の原則をまとめて 1 論題にした。神経系は B の神経の単元が受け持つ。論題と単元の対応は名称による", beyond: 学校や団体が申し込んで受けさせる（個人も受けられる）。160 問の多肢選択で、多くは患者の場面の問題。英語かスペイン語。得点は国際比較群と比べ、USMLE Step 1 の合格点のおよそに届くと認定が出る}
+  - {id: ifom-cse, name: 医学の臨床の国際試験（NBME の IFOM 臨床医学試験）, kind: 修了試験, field: 医学, level: 大学（医学部の臨床実習を終えるころ）, region: 国際, note: 患者を前にして、病気を見分け、どう治し、どう防ぐかを考える力を、患者の場面の問題で確かめる国際試験。, coverage: coverage-ifom-cse.yaml, basis: "NBME の IFOM Clinical Science Exam Blueprint（総論 5〜7% と 14 の病気の群の配分）と、NBME の IFOM の頁（https://www.nbme.org/institutions/assess-learn/international-foundations-medicine/）による（2026-11-08 取得）。病気の群ごとの「健康の維持、病気のしくみ、診断、管理の原則」はまとめて 1 論題にし、診断と管理の考え方を別の論題にした。論題と単元の対応は名称による", beyond: 学校や団体が申し込んで受けさせる（個人も受けられる）。160 問の多肢選択で、患者の場面の問題。英語、スペイン語、ポルトガル語。医学部の出口の試験や研修医の選考に使われ、USMLE Step 2 CK の合格点のおよそに届くと認定が出る。臨床実習で患者を診た経験が前提}
+  - {id: msf-epidemiologist, name: 国境なき医師団（MSF）の疫学者, kind: 仕事の頂点, field: 医学, level: 大学院（修士、疫学）, region: 国際（MSF の各国の現場）, note: 病気がはやった場所に入り、患者の数と広がりを調べて、どこにどう手を打つかを医療チームに助言する。, coverage: coverage-msf-epidemiologist.yaml, basis: MSF の職の紹介「Epidemiologist」（msf.org、2026-11-08 取得）の仕事と要件による。米国の支部の同じ頁は 403 で取れなかった。WHO の疫学者は、一次資料の募集の頁（careers.who.int の個々の募集）を見つけられず、使っていない。論題と単元の対応は名称による, beyond: 医師（望ましい）か看護師などの医療職で、疫学の学位（公衆衛生でなく疫学）。数年の熱帯医学の経験と、地域の疫学の経験。現場の言語（英語、フランス語、アラビア語、スペイン語が望ましい）。Excel、Epi Info、Stata、SPSS などの解析ソフト。医療チームへの研修と、受け持つ人の配置の計画と監督}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -460,6 +472,7 @@ units:
   - {id: H-061, title: 色が変わる（紫キャベツの色水、すっぱい物と石けん水で色が変わる）, stage: 1, level: 1, region: busshitsu, needs: [H-001], days: 4}
   - {id: B-069, title: 自分のからだ（見る・聞く・かぐ・味わう・さわる、骨と筋肉をさわって確かめる、心臓の音、背がのびる）, stage: 1, level: 1, region: karada, needs: [], days: 4}
   - {id: W-043, title: 太陽と月の動き（1 日の太陽の動き、東西南北、影の向きと長さ、月の形の移り変わり）, stage: 1, level: 1, region: sora, needs: [P-178], days: 5}
+  - {id: I-006, title: からだを守るしくみ（皮ふと鼻・のどのねばり、なみだ、すり傷がかさぶたになって治るまで、熱やせきや鼻水が出るわけ）, stage: 1, level: 1, region: kansen-meneki, needs: [B-069], days: 4}
 
   # ---- 段 2 数 ----
   - id: N-004
@@ -630,6 +643,8 @@ units:
   - {id: K-130, title: データのしまい方（表と並び、積み重ね（スタック）と行列（キュー）、木で分けて整理する、2 進数で表す）, stage: 3, level: 2, region: programming, needs: [N-025, C-003], days: 5}
   - {id: K-131, title: 仕事の順番と同時に進める（段取りと前後の関係、いちばん早く終わる順番、手分けして並べて進める、待ち行列）, stage: 3, level: 2, region: programming, needs: [C-003, N-007], days: 5}
   - {id: K-132, title: 情報を送るしくみ（ネットワークの経路と中継、最短の道、小包（パケット）に分けて送る、届いたかを確かめて送り直す）, stage: 3, level: 2, region: programming, needs: [C-004, C-012], days: 5}
+  - {id: I-007, title: 病気がうつる道すじ（せきとくしゃみのしぶき、手から口へ、食べ物と水、蚊とダニ、道すじごとの防ぎ方、うつり方をさいころ遊びで数える）, stage: 3, level: 2, region: ekigaku, needs: [B-074, S-027], days: 5}
+  - {id: I-008, title: 救命のしくみ（心臓が止まると脳に酸素が届かない、胸骨圧迫で血を送る、AED、出血は押さえて止める、救急に電話で伝えること）, stage: 3, level: 2, region: rinsho, needs: [B-020], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -691,6 +706,8 @@ units:
   - {id: N-070, title: 標準形（10 の累乗の表し方）と有効数字、誤差の区間, stage: 4, level: 2, region: keisan, needs: [A-009, N-061, N-020], days: 5}
   - {id: W-070, title: 土壌の生成と性質（風化と土壌のでき方、土壌の層位、粒径と土性、保水性と透水性、土壌の侵食と保全）, stage: 4, level: 2, region: chiso, needs: [W-001, W-002, A-005], days: 4}
   - {id: W-073, title: 天球と地球・月・太陽の動き（自転と公転、天球と日周運動・年周運動、緯度と経度、季節と太陽の高度、月の満ち欠けと日食・月食、潮の満ち干の入口、恒星日と太陽日、均時差と時刻と暦）, stage: 4, level: 3, region: sora, needs: [W-045, G-021, N-059], days: 6}
+  - {id: I-009, title: 食べ物と栄養（食品のなかまとはたらき、エネルギーになる物と体をつくる物、ビタミンとミネラル、栄養成分表示を読んで 1 日の量と比べる）, stage: 4, level: 2, region: eiyo, needs: [B-020, A-005], days: 6}
+  - {id: I-010, title: くすりと体（飲んだ薬が血にのって運ばれる、決まった量と回数を守るわけ、効き目と副作用、抗菌薬はウイルスに効かない）, stage: 4, level: 2, region: kusuri-doku, needs: [B-020, B-074], days: 5}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, level: 3, region: kansu, needs: [A-006, A-011], days: 6}
@@ -782,8 +799,8 @@ units:
   - {id: B-033, title: バイオテクノロジー（PCR、電気泳動、制限酵素と組換え DNA、塩基配列の決定）, stage: 5, level: 3, region: bunshi-saibo, needs: [B-032, H-013], days: 7}
   - {id: B-034, title: 神経と筋肉（ニューロン、活動電位、シナプス、脳、筋収縮）, stage: 5, level: 3, region: karada, needs: [B-020, B-031, P-030], days: 8}
   - {id: B-035, title: 恒常性と内分泌（体液、自律神経とホルモン、血糖と体温の調節、肝臓と腎臓）, stage: 5, level: 3, region: karada, needs: [B-034], days: 7}
-  - {id: B-036, title: 消化・呼吸・循環・排出の器官（消化と吸収、ガス交換とヘモグロビン、心臓と循環、腎臓）, stage: 5, level: 3, region: karada, needs: [B-020, B-031, B-029, H-020], days: 7}
-  - {id: B-037, title: 免疫（自然免疫と獲得免疫、抗体、T 細胞と B 細胞、ワクチン、アレルギー）, stage: 5, level: 3, region: karada, needs: [B-035, B-032], days: 7}
+  - {id: B-036, title: 消化・呼吸・循環・排出の器官（消化と吸収、ガス交換とヘモグロビン、心臓と循環、腎臓）, stage: 5, level: 3, region: karada, needs: [B-020, B-031, B-029, H-020, I-009], days: 7}
+  - {id: B-037, title: 免疫（自然免疫と獲得免疫、抗体、T 細胞と B 細胞、ワクチン、アレルギー）, stage: 5, level: 3, region: karada, needs: [B-035, B-032, I-006], days: 7}
   - {id: B-038, title: 植物の生理（水と養分の輸送、光合成の環境要因、植物ホルモン、光と屈性、花芽の形成）, stage: 5, level: 3, region: shokubutsu, needs: [B-026, B-030, B-031], days: 7}
   - {id: B-039, title: 動物の行動（生得的行動と学習、情報の伝達、社会行動、生物時計）, stage: 5, level: 2, region: ikimono, needs: [B-027], days: 6}
   - {id: B-040, title: 個体群と生物群集（個体群の成長とロジスティック成長、種間関係、遷移、多様性の指数）, stage: 5, level: 3, region: seitai, needs: [B-021, A-022, D-001], days: 7}
@@ -817,6 +834,7 @@ units:
   - {id: B-093, title: 生物多様性への人の影響と保全（生息地の消失と分断、島の生物地理、外来種、乱獲、気候変化と生物（海の温暖化と酸性化、サンゴの白化）、絶滅危惧種、保護区と生息域外保全、再野生化）, stage: 5, level: 3, region: seitai, needs: [B-041, P-201], days: 5}
   - {id: B-094, title: バイオームと生物の適応（気候と陸の生物群系、水の生態系（湖沼・河口・湿地・サンゴ礁・外洋）、乾燥・寒冷・水中への適応）, stage: 5, level: 3, region: seitai, needs: [B-021, B-027, P-204], days: 5}
   - {id: W-074, title: 太陽系とその探査（太陽の構造と活動、惑星・衛星・小天体の性質、惑星の見かけの動きと逆行、天動説と地動説、ケプラーの法則と万有引力による軌道、月の地形と起源、惑星系の形成、系外惑星の見つけ方、探査機）, stage: 5, level: 3, region: sora, needs: [W-073, W-046, P-003], days: 6}
+  - {id: I-033, title: 病気を数える（率と割合、発生率と有病率、致死率と死亡率、年齢の調整、流行の曲線）, stage: 5, level: 2, region: ekigaku, needs: [S-028, A-005, I-007], days: 6}
 
   # ---- 段 6 構造 ----
   - {id: N-032, title: 合同式, stage: 6, level: 3, region: seisuron, needs: [N-028, A-010], days: 13}
@@ -936,7 +954,7 @@ units:
   - {id: B-044, title: 遺伝子の発現の調節（オペロン、転写因子、細胞の分化、エピジェネティクスの入口）, stage: 6, level: 3, region: bunshi-saibo, needs: [B-032], days: 8}
   - {id: B-045, title: 遺伝の解析（連鎖と組換え、伴性遺伝、遺伝子の相互作用、カイ二乗検定）, stage: 6, level: 3, region: iden-shinka, needs: [B-024, B-032, S-019], days: 8}
   - {id: B-046, title: 発生（受精、卵割と原腸形成、誘導、形態形成とホックス遺伝子、幹細胞）, stage: 6, level: 3, region: hassei, needs: [B-044, B-023], days: 10}
-  - {id: B-047, title: 薬理学（受容体と用量反応、作動薬と拮抗薬、酵素阻害、薬の作用と副作用）, stage: 6, level: 3, region: iyaku, needs: [B-034, B-035, B-029, H-024], days: 10}
+  - {id: B-047, title: 薬理学（受容体と用量反応、作動薬と拮抗薬、酵素阻害、薬の作用と副作用）, stage: 6, level: 3, region: iyaku, needs: [B-034, B-035, B-029, H-024, I-010], days: 10}
   - {id: B-048, title: 薬物動態（吸収・分布・代謝・排泄、コンパートメントモデル、半減期と投与設計）, stage: 6, level: 3, region: iyaku, needs: [B-047, B-036, D-044], days: 10}
   - {id: B-055, title: 個体群の数理（ロジスティック方程式、齢構成と行列モデル、捕食者と被食者、競争のモデル）, stage: 6, level: 3, region: seitai, needs: [B-040, D-044, M-007], days: 8}
   - {id: D-080, title: 級数の収束判定とべき級数・テイラー級数の計算（収束半径、項別微分、二項級数）, stage: 6, level: 3, region: bisekibun, needs: [D-002, D-008, D-009], days: 8}
@@ -957,6 +975,8 @@ units:
   - {id: F-064, title: デジタル時代の金融（デジタル決済、クラウドファンディング、暗号資産とブロックチェーン、分散型金融、ポンジ・スキームと金融詐欺のしくみ）, stage: 6, level: 3, region: keizai, needs: [F-013, F-002], days: 5}
   - {id: W-063, title: 海洋（海水の組成と塩分、水温と密度の層構造、表層の海流と深層の循環、海と大気のやりとり、海底の地形、津波と高潮）, stage: 6, level: 3, region: chikyu-kagaku, needs: [W-012, W-060, P-013, P-042], days: 7}
   - {id: W-064, title: 自然災害と減災、応用地質（地震・津波・火山・地すべり・洪水・台風、ハザードマップと予測と警報、液状化と地盤、ダムとトンネルの地質）, stage: 6, level: 3, region: jishin-kazan, needs: [W-004, W-005, P-122], days: 6}
+  - {id: I-011, title: 組織学（上皮・結合・筋・神経の組織、細胞の結合と細胞外基質、器官の組み立て、標本の像を読む）, stage: 6, level: 3, region: jintai, needs: [B-022, B-031, B-036], days: 8}
+  - {id: I-034, title: 医療と研究の倫理（自律・善行・無危害・公正の原則、説明と同意、研究倫理の歴史と審査、限られた資源の配分）, stage: 6, level: 2, region: ekigaku, needs: [S-031, I-033], days: 8}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根（ド・モアブル）, stage: 5, level: 3, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -1163,6 +1183,20 @@ units:
   - {id: B-101, title: 神経疾患の診断（病歴と症状、神経学的診察と病変の場所、CT・MRI・PET・脳波・神経伝導検査、血液と髄液のバイオマーカー、末梢神経の損傷）, stage: 7, level: 3, region: shinkei, needs: [B-063, B-039], days: 7}
   - {id: F-060, title: 不完全競争（独占と価格差別、寡占（クールノーとベルトラン）、独占的競争、プラットフォームとネットワーク効果、束ね売り・フリーミアム・個別の価格）, stage: 7, level: 3, region: keizai, needs: [F-012, F-024], days: 7}
   - {id: F-061, title: 市場の失敗と環境の経済学（外部性とピグー税・排出量取引、公共財とただ乗り、共有資源、逆選択とモラルハザード、持続可能な発展）, stage: 7, level: 3, region: keizai, needs: [F-012, F-024], days: 7}
+  - {id: I-012, title: 人体の解剖（器官の位置と関係、体の区画、血管と神経とリンパの通り道、CT と MRI と超音波の断面で読む）, stage: 7, level: 3, region: jintai, needs: [I-011], days: 10}
+  - {id: I-013, title: ヒトの発生と先天異常（胚の時期と器官形成、胎盤、催奇形の臨界期、発生の遺伝子の変化と病気）, stage: 7, level: 3, region: jintai, needs: [B-046, I-011], days: 8}
+  - {id: I-014, title: 循環の生理（心筋の興奮と収縮、心電図、心周期の圧と容積、血行力学と血圧の調節）, stage: 7, level: 3, region: jintai, needs: [B-050, B-034], days: 10}
+  - {id: I-015, title: 呼吸と酸塩基の生理（換気と血流の釣り合い、ガス交換と酸素の運搬、呼吸の調節、酸塩基平衡と血液ガスの読み方）, stage: 7, level: 3, region: jintai, needs: [B-050, H-026], days: 9}
+  - {id: I-016, title: 腎臓と体液の生理（ろ過と再吸収、尿の濃縮、水とナトリウムとカリウムの調節、利尿薬の効く場所）, stage: 7, level: 3, region: jintai, needs: [B-050, B-047], days: 9}
+  - {id: I-017, title: 消化管と肝臓の生理（消化と吸収の調節、腸と肝臓の循環、肝臓の代謝と解毒、胆汁、腸の守り）, stage: 7, level: 3, region: jintai, needs: [B-036, B-035], days: 8}
+  - {id: I-018, title: 生殖の生理（性の分化、視床下部・下垂体・性腺の軸、月経周期、妊娠と分娩の生理、避妊と不妊）, stage: 7, level: 3, region: jintai, needs: [B-035, B-023, B-050], days: 8}
+  - {id: I-028, title: 病原体の生物学（細菌・ウイルス・真菌・寄生虫が病気を起こすしくみ、毒素、感染の経路、免疫からの逃れ方、配列による病原体の同定）, stage: 7, level: 3, region: kansen-meneki, needs: [B-043, B-037, B-001], days: 10}
+  - {id: I-035, title: 疫学研究のデザイン（コホート研究、症例対照研究、横断研究、相対危険とオッズ比、交絡と偏り）, stage: 7, level: 3, region: ekigaku, needs: [I-033, S-031, S-019], days: 9}
+  - {id: I-036, title: 世界の健康（疾病負荷と DALY、人口と疫学の転換、健康の社会的な決定要因と格差、保健医療の制度と皆保険）, stage: 7, level: 3, region: ekigaku, needs: [I-033], days: 8}
+  - {id: I-037, title: 感染症の数理モデル（SIR と SEIR、基本再生産数と次世代行列、閾値定理と集団免疫の接種率、齢構造とネットワークのモデル、データへの当てはめ）, stage: 7, level: 3, region: ekigaku, needs: [D-046, D-053, B-055, I-033], days: 10}
+  - {id: I-038, title: スクリーニングと予防（検診の評価、リードタイムと長さの偏り、過剰診断、予防の段階、必要治療数）, stage: 7, level: 3, region: ekigaku, needs: [I-035, I-043], days: 8}
+  - {id: I-043, title: 臨床検査の読み方（血液と尿の検査、基準範囲の決め方、感度と特異度、予測値と ROC 曲線、検査の誤差と変動）, stage: 7, level: 3, region: rinsho, needs: [S-001, S-018, B-050], days: 8}
+  - {id: I-044, title: 診断の推論（病歴と診察、鑑別診断の立て方、検査前確率と尤度比、ベイズの更新と治療の閾値、認知の偏りと誤診）, stage: 7, level: 3, region: rinsho, needs: [I-043], days: 9}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1465,6 +1499,27 @@ units:
   - {id: E-191, title: 車両運動力学（タイヤの特性、サスペンションの幾何、旋回と限界の挙動、最小時間の最適化）, stage: 8, level: 3, region: doboku, needs: [P-017, E-090, E-049], days: 10}
   - {id: K-175, title: 粒子法と粒子・格子の混合法（SPH、PIC/FLIP/APIC、物質点法）, stage: 8, level: 3, region: graphics, needs: [K-076, P-014], days: 10}
   - {id: K-133, title: 区間と木の問い合わせのデータ構造（累積和、セグメント木とフェニック木、Union-Find、最小共通祖先、重軽分解と重心分解、永続データ構造、トライ）, stage: 8, level: 3, region: programming, needs: [K-023, K-024], days: 8}
+  - {id: I-019, title: 代謝と内分泌の統合（食後と空腹と絶食、インスリンとグルカゴン、ケトン体、ストレスと副腎、甲状腺、食欲と体重の調節）, stage: 8, level: 3, region: jintai, needs: [B-008, B-050], days: 10}
+  - {id: I-020, title: 細胞の傷害と適応（虚血と低酸素、活性酸素、壊死とアポトーシス、肥大・萎縮・化生、細胞内の蓄積、細胞の老化）, stage: 8, level: 3, region: byori, needs: [B-010], days: 9}
+  - {id: I-021, title: 炎症と修復（急性炎症の血管と白血球、炎症の仲介物質、慢性炎症と肉芽腫、創傷の治癒と線維化、全身の炎症反応）, stage: 8, level: 3, region: byori, needs: [I-020, B-051], days: 9}
+  - {id: I-022, title: 血液と血流の障害（造血と血球、止血と凝固、血栓と塞栓、梗塞、浮腫とショック、貧血）, stage: 8, level: 3, region: byori, needs: [I-014, I-020], days: 10}
+  - {id: I-023, title: がんの生物学（がん遺伝子と抑制遺伝子、がんの特徴、浸潤と転移、腫瘍の進化と不均一性、腫瘍の微小環境）, stage: 8, level: 3, region: byori, needs: [B-044, B-010, B-042], days: 12}
+  - {id: I-024, title: 遺伝病と多因子疾患（単一遺伝子病と遺伝の型、染色体の異常、ゲノムワイド関連解析、多遺伝子リスクスコア、遺伝の相談の考え方）, stage: 8, level: 3, region: byori, needs: [B-045, B-002, S-020], days: 10}
+  - {id: I-026, title: 器官別の薬理（自律神経に効く薬、循環と腎臓の薬、中枢の薬、内分泌と代謝の薬、炎症と痛みの薬）, stage: 8, level: 3, region: kusuri-doku, needs: [B-048, I-014, I-016], days: 12}
+  - {id: I-027, title: 毒性学（用量と反応と閾値、代謝による活性化、臓器への毒性、遺伝毒性と発がん、リスク評価と安全性の試験）, stage: 8, level: 3, region: kusuri-doku, needs: [B-048, I-020], days: 10}
+  - {id: I-029, title: 抗微生物薬と薬剤耐性（作用の標的、耐性の機構、耐性遺伝子の伝わり方、耐性の進化と抗菌薬の適正使用）, stage: 8, level: 3, region: kansen-meneki, needs: [I-028, B-047, B-042], days: 9}
+  - {id: I-030, title: 臨床免疫（自己免疫、アレルギー、移植と拒絶、免疫不全、免疫を抑える薬と抗体医薬）, stage: 8, level: 3, region: kansen-meneki, needs: [B-051, I-021], days: 10}
+  - {id: I-031, title: ワクチン学（ワクチンの種類と免疫の記憶、防御の相関、効果と安全性の評価、mRNA とベクターの新しいワクチン、接種の戦略）, stage: 8, level: 3, region: kansen-meneki, needs: [B-051, B-053, I-037, I-035], days: 10}
+  - {id: I-039, title: 因果と交絡（因果の図と調整、傾向スコア、標的試験の模倣、操作変数とメンデルランダム化）, stage: 8, level: 3, region: ekigaku, needs: [I-035, S-042, I-024], days: 10}
+  - {id: I-040, title: 臨床研究の統計（無作為化と盲検、検出力と標本の大きさ、非劣性、中間解析、系統的レビューとメタ分析）, stage: 8, level: 3, region: ekigaku, needs: [B-049, S-037, I-035], days: 10}
+  - {id: I-041, title: 環境と労働の健康（水と衛生、大気汚染と健康、化学物質への曝露の評価、放射線防護、暑さと気候の変化、仕事による病気とけが）, stage: 8, level: 3, region: ekigaku, needs: [I-027, H-043, P-104, I-035], days: 9}
+  - {id: I-042, title: 感染症の監視と対策（サーベイランスと症例の定義、流行の調査と接触の追跡、病原体ゲノムによる監視、流行への対応と国際保健規則）, stage: 8, level: 3, region: ekigaku, needs: [I-037, I-035, I-028], days: 9}
+  - {id: I-045, title: 循環と呼吸の病気（動脈硬化と虚血性心疾患、高血圧、心不全、不整脈、COPD と喘息、肺炎）, stage: 8, level: 3, region: rinsho, needs: [I-015, I-021, I-022, I-026], days: 12}
+  - {id: I-046, title: 代謝と内分泌の病気（糖尿病、肥満と GLP-1 の薬、脂質異常症、甲状腺と副腎の病気）, stage: 8, level: 3, region: rinsho, needs: [I-019, I-026], days: 10}
+  - {id: I-047, title: 腎臓と消化管と肝臓の病気（急性腎障害と慢性腎臓病、電解質の異常、肝炎と脂肪肝と肝硬変、炎症性腸疾患）, stage: 8, level: 3, region: rinsho, needs: [I-016, I-017, I-021], days: 10}
+  - {id: I-048, title: 骨と関節と皮膚の病気（骨の代謝と骨粗しょう症、骨折の治り方、変形性関節症と関節リウマチ、皮膚の守りと主な皮膚の病気）, stage: 8, level: 3, region: rinsho, needs: [I-011, I-021, B-035], days: 9}
+  - {id: I-049, title: 一生の医学（妊娠と胎児の発育、子どもの成長と発達、思春期、老化とフレイルと多病、終末期の医療）, stage: 8, level: 3, region: rinsho, needs: [I-013, I-018, I-019], days: 9}
+  - {id: I-052, title: 栄養の科学（ビタミンとミネラルの働きと欠乏、必要な量の決め方、低栄養と発育阻害、食事の調べ方と栄養疫学の難しさ）, stage: 8, level: 3, region: eiyo, needs: [B-008, I-009, I-035], days: 9}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1680,7 +1735,7 @@ units:
   - {id: H-056, title: 医薬品化学（薬の標的、構造活性相関、リード最適化、薬らしさ、薬物代謝と構造）, stage: 9, level: 3, region: soyaku, needs: [H-047, B-047, B-048, B-007], days: 12}
   - {id: H-057, title: 化学生物学（生体直交反応とクリックケミストリー、化学プローブ、酵素の指向性進化とファージディスプレイ）, stage: 9, level: 3, region: soyaku, needs: [H-047, B-007, B-009], days: 10}
   - {id: B-054, title: 幹細胞と再生医療（多能性幹細胞、iPS 細胞と初期化、分化誘導、オルガノイド、細胞治療）, stage: 9, level: 3, region: hassei, needs: [B-046, B-051, B-053, B-010], days: 12}
-  - {id: B-068, title: 神経遺伝学と脳の病気（神経発達症、神経変性疾患、精神疾患、神経薬理）, stage: 9, level: 3, region: shinkei, needs: [B-064, B-065, B-047, B-014], days: 12}
+  - {id: B-068, title: 神経遺伝学と脳の病気（神経発達症、神経変性疾患、精神疾患、神経薬理）, stage: 9, level: 3, region: shinkei, needs: [B-064, B-065, B-047, B-014, I-024], days: 12}
   - {id: K-161, title: 大規模言語モデルと基盤モデル（事前学習、事後学習と人の好みへの整合、多モーダル、検索拡張と継続学習）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-051, K-059], days: 10}
   - {id: K-162, title: 生成モデル（自己回帰、変分自己符号化器、拡散モデル、世界モデル）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-050, K-051, S-003], days: 10}
   - {id: T-050, title: 微分位相（横断性、モース理論、コボルディズムとポントリャーギン–トム構成、h 同境と手術）, stage: 9, level: 4, region: tayotai, needs: [T-010, T-014, T-024, T-026], days: 10}
@@ -1718,6 +1773,13 @@ units:
   - {id: E-192, title: 超高層の構造形式（芯とバットレス、アウトリガー、チューブ、メガ構造、ねじれの剛性）, stage: 9, level: 3, region: doboku, needs: [E-013, E-093, E-112], days: 10}
   - {id: K-176, title: 量子アルゴリズム（量子フーリエ変換、位相推定、ショアの算法、グローバーの探索と振幅増幅、隠れ部分群問題）, stage: 9, level: 4, region: programming, needs: [P-087, N-049, R-002], days: 10}
   - {id: P-250, title: 非従来型超伝導（異方的なギャップと d 波、銅酸化物と鉄系、対称性による分類）, stage: 9, level: 4, region: bussei, needs: [P-099, P-100], days: 10}
+  - {id: I-025, title: 分子病理とデジタル病理（組織診と免疫染色、腫瘍の遺伝子パネル検査、全スライド画像と AI による診断の支援）, stage: 9, level: 3, region: byori, needs: [I-023, I-011, K-082], days: 10}
+  - {id: I-032, title: 宿主とマイクロバイオーム（腸内細菌叢の構成と測り方、代謝と免疫への働き、抗菌薬と細菌叢、便の移植）, stage: 9, level: 3, region: kansen-meneki, needs: [I-028, K-113, B-051], days: 9}
+  - {id: I-050, title: がんの臨床（病期と予後、手術・放射線・薬物の療法、分子標的薬と免疫療法、効果の評価と生存の解析）, stage: 9, level: 3, region: rinsho, needs: [I-023, B-051, S-035], days: 10}
+  - {id: I-051, title: 救急と集中治療（ショックと敗血症、呼吸不全と人工呼吸、蘇生の科学、外傷の初期診療）, stage: 9, level: 3, region: rinsho, needs: [I-022, I-015, I-021, I-008], days: 9}
+  - {id: I-053, title: 精密医療とゲノム医療（がんゲノムの検査、液体生検、全ゲノム解析の臨床、薬理ゲノミクス、多遺伝子リスクの使い方と限界）, stage: 9, level: 3, region: iryo-saizensen, needs: [I-024, I-023, K-113, B-048], days: 10}
+  - {id: I-054, title: 細胞治療と遺伝子治療（CAR-T 細胞、造血幹細胞の遺伝子治療、生体内のゲノム編集、ベクターの選び方と安全性）, stage: 9, level: 3, region: iryo-saizensen, needs: [B-053, B-054, B-051], days: 10}
+  - {id: I-055, title: 医療の AI（予測モデルと外部での検証、画像の診断、電子カルテと言語モデル、偏りと公平性、規制）, stage: 9, level: 3, region: iryo-saizensen, needs: [K-048, I-040, I-044], days: 9}
 
   # ---- 段 10 新しい対象をつくる ----
 
