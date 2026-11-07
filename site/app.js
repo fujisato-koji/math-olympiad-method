@@ -23,7 +23,12 @@
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 保存できない環境でも表示は続ける */ } }
   let progress = load(KEY, null);
   if (!progress || typeof progress.units !== 'object') progress = { units: {} };
-  const prefs = Object.assign({ music: true, parent: false }, load(PREF, {}));
+  const prefs = Object.assign({ music: true, parent: false, goal: 'all' }, load(PREF, {}));
+  // 目標：網羅表が指す単元とその前提。'all' はすべての単元（大会のための単元も含む）
+  const GOALS = R.goals || [];
+  const GOAL_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.units)]));
+  if (prefs.goal !== 'all' && !GOAL_SETS[prefs.goal]) prefs.goal = 'all';
+  const inGoal = id => prefs.goal === 'all' || GOAL_SETS[prefs.goal].has(id);
 
   function rec(id) {
     const r = progress.units[id] || (progress.units[id] = {});
@@ -57,7 +62,7 @@
       const mode = status(u.id) === 'review' ? '復習' : s.type === 'extra' ? 'おさらい' : 'つづき';
       return { u, href: stepHref(u.id, s), mode, label: `${s.day} 日目` };
     });
-    const ready = R.units.filter(u => status(u.id) === 'ready').sort(order)
+    const ready = R.units.filter(u => status(u.id) === 'ready' && inGoal(u.id)).sort(order)
       .slice(0, Math.max(0, 4 - doing.length)).map(u => ({ u, href: `#/day/${u.id}/1`, mode: 'はじめる', label: '1 日目' }));
     return [...due, ...doing, ...ready];
   }
@@ -66,10 +71,10 @@
     return open.length ? Math.min(...open.map(u => u.stage)) : R.stages[R.stages.length - 1].id;
   }
   // 全体の見込み（R-35）：残りの基本量 × 流れごとの係数 ＋ 復習の量
-  function forecast() {
+  function forecast(only = inGoal) {
     const lanes = {};
     let base = 0, reviews = 0;
-    R.units.forEach(u => {
+    R.units.filter(u => only(u.id)).forEach(u => {
       const r = progress.units[u.id] || {}, n = u.days.length, L = lanes[u.lane] || (lanes[u.lane] = { base: 0, used: 0, rest: 0 });
       base += n;
       if (r.done) {
@@ -134,6 +139,11 @@
       <div class="eyebrow">算数から数学オリンピックへ</div>
       <h1>たくさんの道から、ひとすじを。</h1>
       <p>${R.stages.length} つの段に ${R.units.length} の駅。流れが分かれているところは、どれから進んでもかまいません。</p>
+      <div class="goal-pick" role="group" aria-label="目標">
+        <span class="k">目標</span>
+        ${[...GOALS.map(g => [g.id, g.name]), ['all', 'すべての駅']].map(([id, name]) =>
+          `<button class="pill" type="button" data-goal="${id}" aria-pressed="${prefs.goal === id}">${esc(name)}</button>`).join('')}
+      </div>
       <div class="gauge">
         <div><span class="k">基本</span><b>${f.base}</b><span class="u">日分</span></div>
         <div><span class="k">いまの見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
@@ -150,7 +160,20 @@
         </a>`).join('') || '<p class="muted">すべての駅を通りました。</p>'}
       </div>
     </section>
-    <section class="zones">${R.stages.map(s => zone(s, cur)).join('')}</section>`;
+    <section class="zones">${R.stages.map(s => zone(s, cur)).join('')}</section>
+    <section class="goals">
+      <h2 class="section-title">終点</h2>
+      <div class="goal-list">${GOALS.map(g => {
+        const set = GOAL_SETS[g.id], f = forecast(id => set.has(id));
+        const done = g.units.filter(id => progress.units[id] && progress.units[id].done).length;
+        return `<button class="goal-card" type="button" data-goal="${g.id}" aria-pressed="${prefs.goal === g.id}">
+          <span class="goal-name">${esc(g.name)}</span>
+          <span class="muted">${esc(g.note)}</span>
+          <span class="goal-nums">${done} / ${g.units.length} 駅・基本 ${f.base} 日分・見込み 残り約 ${f.est} 日</span>
+          <span class="goal-bar"><i style="width:${Math.round(100 * done / Math.max(1, g.units.length))}%"></i></span>
+        </button>`;
+      }).join('')}</div>
+    </section>`;
   }
   function zone(s, cur) {
     const us = R.units.filter(u => u.stage === s.id);
@@ -168,7 +191,7 @@
         <div class="tracks">${lanes.map(l => `
           <div class="track" style="${lc(l)}"><span>${esc(LANES[l].name)}</span>
             <div class="track-line">${us.filter(u => u.lane === l).map(u =>
-              `<span class="mini ${status(u.id)}" title="${esc(u.id + ' ' + u.title)}"><i></i></span>`).join('')}</div>
+              `<span class="mini ${status(u.id)}${inGoal(u.id) ? '' : ' off'}" title="${esc(u.id + ' ' + u.title)}"><i></i></span>`).join('')}</div>
           </div>`).join('')}
         </div>
       </div>
@@ -244,13 +267,14 @@
     const outside = u.needs.filter(x => UNITS[x].stage !== u.stage || UNITS[x].lane !== u.lane);
     const ready = u.days.filter(d => d.items && d.items.length).length;
     return `
-    <a class="station ${st}" href="#/unit/${u.id}" data-id="${u.id}" style="${lc(u.lane)}">
+    <a class="station ${st}${inGoal(u.id) ? '' : ' off'}" href="#/unit/${u.id}" data-id="${u.id}" style="${lc(u.lane)}">
       <span class="dot ${st}" data-dot="${u.id}"></span>
       <span class="sid">${u.id}</span>
       <span class="st">${esc(u.title)}</span>
       <span class="sub">${st === 'doing' ? `${daysDone} / ${u.days.length} 日` : `${u.days.length} 日`}
         ${outside.map(x => `<span class="from" style="${lc(UNITS[x].lane)}">${x}</span>`).join('')}
-        ${ready ? `<span class="from" style="--c: var(--ok)">問題 ${ready} 日分</span>` : ''}</span>
+        ${ready ? `<span class="from" style="--c: var(--ok)">問題 ${ready} 日分</span>` : ''}
+        ${u.measure ? '<span class="from" style="--c: var(--muted)">大会のため</span>' : ''}</span>
     </a>`;
   }
   function drawEdges() {
@@ -487,6 +511,8 @@
 
   // ---- 操作 ----
   $('#view').addEventListener('click', e => {
+    const g = e.target.closest('[data-goal]');
+    if (g) { prefs.goal = g.dataset.goal; save(PREF, prefs); Music.tap(); render(); return; }
     if (!session) return;
     const t = e.target.closest('[data-act], [data-choice], [data-key]');
     if (!t) return;

@@ -25,9 +25,29 @@ def load():
     problems = {}
     for p in sorted((ROOT / "units").glob("*.yaml")):
         problems[p.stem] = yaml.safe_load(p.read_text(encoding="utf-8"))
-    cov = ROOT / "coverage.yaml"
-    data["coverage"] = yaml.safe_load(cov.read_text(encoding="utf-8")) if cov.exists() else None
+    # 目標ごとの網羅表（goals の coverage が指すファイル）
+    data["coverages"] = {}
+    for g in data.get("goals", []):
+        cov = ROOT / g["coverage"]
+        if cov.exists():
+            data["coverages"][g["id"]] = yaml.safe_load(cov.read_text(encoding="utf-8"))
     return data, problems
+
+
+def goal_units(data):
+    """目標ごとに、網羅表が指す単元とその前提をすべてたどった単元の集まり。"""
+    needs = {u["id"]: u.get("needs", []) for u in data["units"]}
+    out = {}
+    for gid, cov in data["coverages"].items():
+        seen, stack = set(), [uid for i in cov.get("items", []) for uid in i.get("units") or []]
+        while stack:
+            uid = stack.pop()
+            if uid in seen or uid not in needs:
+                continue
+            seen.add(uid)
+            stack += needs[uid]
+        out[gid] = seen
+    return out
 
 
 def check_coverage(cov, units):
@@ -146,15 +166,24 @@ def check(data, problems):
                         continue
                     if str(got) != str(item.get("answer")):
                         errors.append(f"{where}: 答え {item.get('answer')} と check の値 {got} が違う")
-    if data.get("coverage"):
-        errors += check_coverage(data["coverage"], units)
+    for g in data.get("goals", []):
+        if g["id"] not in data["coverages"]:
+            errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
+    for gid, cov in data["coverages"].items():
+        errors += [f"[{gid}] {e}" for e in check_coverage(cov, units)]
+    # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
+    if data["coverages"]:
+        on_path = set().union(*goal_units(data).values())
+        for uid, (_, _, u) in units.items():
+            if uid not in on_path and not u.get("measure"):
+                errors.append(f"{uid}: どの目標の道のりにも入らない（網羅表に当てるか、measure: true を付けるか、外す）")
     return errors
 
 
-def build_coverage(cov, titles):
-    lines = ["# 網羅表", "",
-             "この頁は `tools/roadmap.py build` が `coverage.yaml` から作ります。手で直さないでください。",
-             "IMO と JMO に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
+def build_coverage(goal, cov, titles):
+    lines = [f"# 網羅表：{goal['name']}", "",
+             f"この頁は `tools/roadmap.py build` が `{goal['coverage']}` から作ります。手で直さないでください。",
+             f"{goal['note']}に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
     items = cov.get("items", [])
     covered = sum(1 for i in items if i.get("units"))
     lines += [f"論題 {len(items)} のうち、単元が受け持つもの {covered}、入れないもの {len(items) - covered}。", ""]
@@ -173,7 +202,8 @@ def build_coverage(cov, titles):
     lines += ["## 出典", "", "| 記号 | 題名 | URL | 取得日 |", "|---|---|---|---|"]
     for k, s in cov.get("sources", {}).items():
         lines.append(f"| {k} | {s['title']} | {s['url']} | {s.get('date', '')} |")
-    (ROOT / "docs" / "coverage.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    name = Path(goal["coverage"]).stem + ".md"
+    (ROOT / "docs" / name).write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
 def build(data, problems):
@@ -188,9 +218,13 @@ def build(data, problems):
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": int(m.group(2)), "needs": u.get("needs", []), "days": days})
+                          "stage": int(m.group(2)), "needs": u.get("needs", []), "days": days,
+                          **({"measure": True} if u.get("measure") else {})})
+    gu = goal_units(data)
+    goals = [{"id": g["id"], "name": g["name"], "note": g["note"], "units": sorted(gu.get(g["id"], []))}
+             for g in data.get("goals", [])]
     payload = {"lanes": data["lanes"], "stages": data["stages"], "kinds": data["kinds"],
-               "units": out_units}
+               "goals": goals, "units": out_units}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")
@@ -204,7 +238,22 @@ def build(data, problems):
         lines.append(f"| {s['id']} | {s['name']} | {s['measure']} | {s['minutes']} 分 | "
                      f"{len(us)} | {sum(len(u['days']) for u in us)} |")
     total = sum(len(u["days"]) for u in out_units)
-    lines += ["", f"合わせて {len(out_units)} 単元、{total} 日分です。", ""]
+    lines += ["", f"合わせて {len(out_units)} 単元、{total} 日分です。", "",
+              "## 目標ごとの道のり", "",
+              "網羅表が指す単元と、その前提をすべてたどった単元の数です。", "",
+              "| 目標 | 単元 | 日数 |", "|---|---|---|"]
+    days_of = {u["id"]: len(u["days"]) for u in out_units}
+    for g in goals:
+        lines.append(f"| {g['name']} | {len(g['units'])} | {sum(days_of[x] for x in g['units'])} |")
+    on_path = set().union(*[set(g["units"]) for g in goals]) if goals else set()
+    measure = [u for u in out_units if u["id"] not in on_path and u.get("measure")]
+    off = [u for u in out_units if u["id"] not in on_path and not u.get("measure")]
+    lines += ["", f"目標には要らないが、段の物差しの大会のために置く単元：{len(measure)}。", ""]
+    lines += [f"- {u['id']} {u['title']}" for u in measure]
+    lines += ["", f"どの目標の道のりにも入らず、大会のためでもない単元：{len(off)}。"
+              "あれば、網羅表への当て漏れか、要らない単元かを見直します。", ""]
+    lines += [f"- {u['id']} {u['title']}" for u in off]
+    lines.append("")
     for s in data["stages"]:
         lines += [f"## 段 {s['id']} {s['name']}", "", "| 単元 | 流れ | 前提 | 日数 | 問題 |",
                   "|---|---|---|---|---|"]
@@ -218,8 +267,10 @@ def build(data, problems):
                          f"{'、'.join(u['needs']) or '—'} | {len(u['days'])} | {note} |")
         lines.append("")
     (ROOT / "docs" / "roadmap.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
-    if data.get("coverage"):
-        build_coverage(data["coverage"], {u["id"]: u["title"] for u in out_units})
+    titles = {u["id"]: u["title"] for u in out_units}
+    for g in data.get("goals", []):
+        if g["id"] in data["coverages"]:
+            build_coverage(g, data["coverages"][g["id"]], titles)
     return len(out_units), total
 
 

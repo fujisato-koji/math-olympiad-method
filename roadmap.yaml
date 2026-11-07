@@ -7,6 +7,7 @@
 # 並べる順は、学年や学習指導要領ではなく、人がその考えを理解できる順にする（D-014）。
 # もっと広く使える道具を理解できるなら、それを本線にし、特別な解き方は問題の別のみちすじにする。
 # IMO に要る論題を受け持っているかは coverage.yaml で確かめる（R-09）。
+# measure: true は、目標には要らないが、段の物差しの大会（算数オリンピックなど）で問われるので置く単元。
 # plan があれば 1 日分ずつのねらい、なければ days の日数で既定の並び（導入、練習…、混ぜる、確認）。
 
 lanes:
@@ -25,6 +26,10 @@ stages:
   - {id: 6, name: 証明の入口, measure: JMO 予選、JJMO 本選, minutes: 60, day: {思い出す: 1, 今日: 2, 挑戦: 1}}
   - {id: 7, name: 本選, measure: JMO 本選、APMO, minutes: 90, day: {思い出す: 1, 今日: 1, 挑戦: 1}}
   - {id: 8, name: IMO, measure: IMO, minutes: 120, day: {思い出す: 0, 今日: 1, 挑戦: 1}}
+
+# 目標。網羅表が指す単元と、その前提をすべてたどった単元が、その目標までの道のりになる。
+goals:
+  - {id: imo, name: IMO, note: 国際数学オリンピック（とその手前の JMO）, coverage: coverage.yaml}
 
 kinds:
   導入: 見本（解いた例）を見せてから解く
@@ -54,7 +59,7 @@ units:
       - 確認: 数直線
   - id: N1-03
     title: たし算とひき算（数直線で進む、もどる）
-    needs: [N1-01]
+    needs: [N1-02]
     plan:
       - 導入: 右へ進むとたし算、左へもどるとひき算
       - 練習: のこりはいくつ、ちがいはいくつ
@@ -205,7 +210,7 @@ units:
   - {id: G2-01, title: 長さとまわりの長さ, needs: [G1-02, N1-07], days: 5}
   - {id: G2-02, title: 直角と三角形、四角形, needs: [G1-02], days: 5}
   - {id: G2-03, title: 立方体と展開図, needs: [G1-03], days: 6}
-  - {id: L2-01, title: 数のパズル（魔方陣、虫食い算）, needs: [L1-01, N1-07], days: 6}
+  - {id: L2-01, title: 数のパズル（魔方陣、虫食い算）, needs: [L1-01, N1-07], days: 6, measure: true}
   - {id: L2-02, title: 本当とうその推理, needs: [L1-02], days: 5}
   - {id: L2-03, title: 取り合いゲーム, needs: [L1-04, N1-03], days: 6}
 
@@ -216,15 +221,15 @@ units:
   - {id: N3-04, title: 小数, needs: [N2-04], days: 5}
   - {id: N3-05, title: 素数と素因数分解, needs: [N3-01], days: 6}
   - {id: N3-06, title: 正負の数のかけ算とわり算, needs: [N2-06, N2-02], days: 5}
-  - {id: A3-01, title: 文字と式（□から文字へ）, needs: [A2-01, N2-05, N2-06], days: 8}
+  - {id: A3-01, title: 文字と式（□から文字へ）, needs: [A2-01, N2-05, N2-06, A2-02], days: 8}
   - {id: A3-02, title: 1 次方程式（つり合いで解く）, needs: [A3-01, L1-03], days: 8}
   - {id: A3-03, title: 連立方程式, needs: [A3-02], days: 6}
-  - {id: A3-04, title: 文章題を方程式にする（和差、つるかめ、過不足、植木）, needs: [A3-03, A2-02], days: 8}
+  - {id: A3-04, title: 文章題を方程式にする（和差、つるかめ、過不足、植木）, needs: [A3-03, A2-02], days: 8, measure: true}
   - {id: A3-05, title: 等差数列とその和, needs: [N2-05, L1-01], days: 6}
   - {id: C3-01, title: 並べ方（順列）, needs: [C2-02], days: 6}
   - {id: C3-02, title: 選び方（組合せ）, needs: [C3-01], days: 6}
   - {id: C3-03, title: 重なりを数える（ベン図）, needs: [C2-02], days: 5}
-  - {id: G3-01, title: 面積, needs: [G2-02, N2-01], days: 8}
+  - {id: G3-01, title: 面積, needs: [G2-02, N2-01, G2-01], days: 8}
   - {id: G3-02, title: 角度, needs: [G2-02], days: 6}
   - {id: G3-03, title: 円とおうぎ形, needs: [G3-01, N3-04], days: 6}
   - {id: G3-04, title: 体積と表面積, needs: [G2-03, G3-01], days: 6}
@@ -236,11 +241,11 @@ units:
   # ---- 段 4 算数オリンピック ----
   - {id: N4-01, title: あまりの性質, needs: [N3-01], days: 6}
   - {id: N4-02, title: 約数の個数と和, needs: [N3-05], days: 5}
-  - {id: N4-03, title: n 進法, needs: [N2-04, N2-02], days: 5}
-  - {id: N4-04, title: 分数の計算のくふう, needs: [N3-03], days: 6}
+  - {id: N4-03, title: n 進法, needs: [N2-04, N2-02], days: 5, measure: true}
+  - {id: N4-04, title: 分数の計算のくふう, needs: [N3-03], days: 6, measure: true}
   - {id: A4-01, title: 比と割合, needs: [N3-03, N3-04], days: 8}
   - {id: A4-02, title: 比例と反比例, needs: [A4-01, A3-01], days: 6}
-  - {id: A4-03, title: 速さ、仕事、濃度を比例で解く, needs: [A4-02, A3-04], days: 8}
+  - {id: A4-03, title: 速さ、仕事、濃度を比例で解く, needs: [A4-02, A3-04], days: 8, measure: true}
   - {id: A4-04, title: 規則性と群数列, needs: [A3-05], days: 6}
   - {id: A4-05, title: 1 次関数とグラフ, needs: [A4-02, A3-02], days: 6}
   - {id: C4-01, title: 区別と重複のある数え方, needs: [C3-02], days: 6}
@@ -261,7 +266,7 @@ units:
   - {id: N5-03, title: 素数の性質, needs: [N3-05, L5-01], days: 6}
   - {id: N5-04, title: 平方数の性質, needs: [N5-01], days: 5}
   - {id: A5-01, title: 累乗と指数法則, needs: [A3-01], days: 5}
-  - {id: A5-02, title: 展開と因数分解, needs: [A3-01], days: 6}
+  - {id: A5-02, title: 展開と因数分解, needs: [A3-01, N3-06], days: 6}
   - {id: A5-03, title: 平方根, needs: [A5-02], days: 5}
   - {id: A5-04, title: 2 次方程式, needs: [A5-02, A5-03], days: 6}
   - {id: A5-05, title: 2 次関数と平方完成, needs: [A5-04, A4-05], days: 6}
@@ -270,7 +275,7 @@ units:
   - {id: C5-04, title: 盤面とタイル張り（塗り分けの論法）, needs: [C4-03], days: 6}
   - {id: G5-01, title: 平行線と角、合同の証明, needs: [G3-02, L5-01], days: 8}
   - {id: G5-02, title: 三角形と四角形の性質, needs: [G5-01], days: 6}
-  - {id: G5-03, title: 円周角の定理, needs: [G5-02], days: 6}
+  - {id: G5-03, title: 円周角の定理, needs: [G5-02, G3-03], days: 6}
   - {id: G5-04, title: 三平方の定理, needs: [G5-02, A5-03], days: 6}
   - {id: G5-05, title: 相似の証明, needs: [G4-02, G5-01], days: 6}
   - {id: G5-06, title: 空間図形, needs: [G5-04, G4-03], days: 6}
@@ -278,15 +283,15 @@ units:
   - {id: L5-01, title: 証明の書き方, needs: [L4-03], days: 6}
   - {id: L5-02, title: 背理法, needs: [L5-01], days: 5}
   - {id: L5-03, title: 数学的帰納法の入口, needs: [L5-01, A3-05], days: 6}
-  - {id: L5-04, title: 命題と条件（必要条件と十分条件）, needs: [L5-01], days: 5}
+  - {id: L5-04, title: 命題と条件（必要条件と十分条件）, needs: [L5-01, L3-04], days: 5}
 
   # ---- 段 6 証明の入口 ----
   - {id: N6-01, title: 合同式, needs: [N5-01, A3-01], days: 8}
   - {id: N6-02, title: フェルマーの小定理、オイラーの定理、ウィルソンの定理, needs: [N6-01, N5-03], days: 6}
   - {id: N6-03, title: 素因数の個数（ルジャンドルの公式）, needs: [N5-03, N4-02], days: 6}
-  - {id: N6-04, title: 不定方程式, needs: [N5-02, N6-01, A5-02], days: 8}
+  - {id: N6-04, title: 不定方程式, needs: [N5-02, N6-01, A5-02, N5-04], days: 8}
   - {id: N6-05, title: 中国剰余定理, needs: [N6-01, N5-02], days: 6}
-  - {id: A6-01, title: 相加相乗平均の不等式, needs: [A5-04, L5-01], days: 6}
+  - {id: A6-01, title: 相加相乗平均の不等式, needs: [A5-04, L5-01, A5-05], days: 6}
   - {id: A6-02, title: 多項式（剰余の定理、解と係数の関係）, needs: [A5-04], days: 8}
   - {id: A6-03, title: 数列（等比数列を含む）と漸化式, needs: [A4-04, L5-03], days: 8}
   - {id: A6-04, title: ガウス記号と絶対値, needs: [A3-02], days: 5}
@@ -331,7 +336,7 @@ units:
   - {id: C7-03, title: 組合せ幾何, needs: [C6-04, G6-01], days: 8}
   - {id: C7-04, title: グラフ理論の応用, needs: [C6-05], days: 8}
   - {id: C7-05, title: 調整と貪欲法, needs: [C6-04, L6-02], days: 6}
-  - {id: G7-01, title: 相似拡大と回転相似（ミケル点）, needs: [G6-01, G6-03], days: 8}
+  - {id: G7-01, title: 相似拡大と回転相似（ミケル点）, needs: [G6-01, G6-03, G4-04], days: 8}
   - {id: G7-02, title: 根軸と共円・共線, needs: [G6-03], days: 8}
   - {id: G7-03, title: 座標とベクトルによる幾何, needs: [G6-05, G6-08], days: 8}
   - {id: G7-04, title: 複素数による幾何, needs: [G7-03, A7-05], days: 8}
@@ -339,7 +344,7 @@ units:
   - {id: L7-01, title: 証明の講評を受ける, needs: [L6-01], days: 10}
 
   # ---- 段 8 IMO ----
-  - {id: N8-01, title: 整数の大きさの議論, needs: [N7-03, N6-04], days: 8}
+  - {id: N8-01, title: 整数の大きさの議論, needs: [N7-03, N6-04, A6-04], days: 8}
   - {id: N8-02, title: 整数の構成問題, needs: [N6-05, N7-01], days: 8}
   - {id: N8-03, title: 整数係数の多項式, needs: [A7-04, N6-02], days: 8}
   - {id: N8-04, title: 素数の分布の定理とその使い方, needs: [N6-05], days: 5}

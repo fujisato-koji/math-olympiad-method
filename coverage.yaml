@@ -20,7 +20,7 @@ sources:
 
 items:
   # ---- 代数 ----
-  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [N2-06, A3-01, A3-02, A5-02, A5-01]}
+  - {id: T-A01, field: 代数, topic: 式の変形と方程式（展開と因数分解、恒等式、連立方程式、指数法則）, sources: [O01, O02, O04, O05, O10], units: [N2-06, A3-01, A3-02, A3-03, A5-02, A5-01]}
   - {id: T-A02, field: 代数, topic: 総和と総積の記号、和の変形, sources: [O04, O05, O08], units: [A6-06]}
   - {id: T-A03, field: 代数, topic: 数列（等差、等比、調和）, sources: [O01, O09, O10], units: [A3-05, A6-03]}
   - {id: T-A04, field: 代数, topic: 二項定理と二項係数の性質, sources: [O10], units: [C5-01]}
@@ -41,7 +41,7 @@ items:
   - {id: T-A19, field: 代数, topic: SOS 法, sources: [O08], units: [A7-07]}
   - {id: T-A20, field: 代数, topic: 微積分, sources: [O04, O05, O08], none: JMO の範囲外（O02、O11）。IMO でも解くのに要らず、上級の別解にとどまる（O04）}
   # ---- 組合せ ----
-  - {id: T-C01, field: 組合せ, topic: 数え上げの基本（積の法則、順列と組合せ、全単射）, sources: [O01, O04, O05, O09, O10], units: [C2-02, C3-01, C3-02, C4-01, C6-07]}
+  - {id: T-C01, field: 組合せ, topic: 数え上げの基本（積の法則、順列と組合せ、全単射）, sources: [O01, O04, O05, O09, O10], units: [C2-02, C3-01, C3-02, C4-01, C6-01, C6-07]}
   - {id: T-C02, field: 組合せ, topic: 漸化式と再帰, sources: [O04, O05, O10], units: [C4-02, A6-03]}
   - {id: T-C03, field: 組合せ, topic: 二重数え上げ（握手補題）, sources: [O05, O06], units: [C6-02]}
   - {id: T-C04, field: 組合せ, topic: 確率と期待値の線形性, sources: [O01, O04, O05, O06, O08], units: [C4-04, C6-08]}
