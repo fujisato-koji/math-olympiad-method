@@ -1,0 +1,523 @@
+# 網羅表：暮らしと社会を支えるエンジニア（超高層ビル、長大吊り橋、水処理、水素、医療の CT）（skyscraper-structural、suspension-bridge、airliquide-process、water-environment-engineer、philips-ct をまとめた）
+sources:
+  DR166:
+    title: Skidmore, Owings & Merrill（SOM）, Structural Engineering
+    url: https://www.som.com/expertise/structural-engineering/
+    date: '2026-11-07'
+  DR167:
+    title: Skidmore, Owings & Merrill（SOM）, Burj Khalifa
+    url: https://www.som.com/projects/burj-khalifa/
+    date: '2026-11-07'
+  DR168:
+    title: 本州四国連絡高速道路, 募集要項・選考（募集要項：新卒採用（2027））
+    url: https://www.jb-honshi.co.jp/corp_index/recruit/info/application.html
+    date: '2026-11-07'
+  DR169:
+    title: 本州四国連絡高速道路, Akashi-Kaikyo Bridge（Introduction of the Honshu-Shikoku Bridge Project）
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/introduction/introduction_akashi.html
+    date: '2026-11-07'
+  DR170:
+    title: 本州四国連絡高速道路, Development of Materials
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/construction/construction_material.html
+    date: '2026-11-07'
+  DR171:
+    title: COWI, Together, we design a world record-breaking bridge for the 21st century
+    url: https://www.cowi.com/projects/together-we-design-a-world-record-breaking-bridge-for-the-21st-century/
+    date: '2026-11-07'
+  EN06:
+    title: Air Liquide Global E&C Solutions France, PROCESS SAFETY ENGINEER (H/F), R10101111, Charenton-le-Pont (posted 2026-10-19)
+    url: https://airliquidehr.wd3.myworkdayjobs.com/AirLiquideExternalCareer/job/Charenton-le-Pont---Engineering---EC-France/PROCESS-SAFETY-ENGINEER--H-F-_R10101111-1
+    date: '2026-11-08'
+  EN07:
+    title: Air Liquide, Process Engineer, R10103641, Kobe (posted 2026-10-21)
+    url: https://airliquidehr.wd3.myworkdayjobs.com/AirLiquideExternalCareer/job/Japan-Kobe-shi/Process-Engineer_R10103641
+    date: '2026-11-08'
+  EN08:
+    title: Veolia Environnement SA (Water Technologies), Sr. Process Engineer - Water Treatment, REF59557S, Trevose PA (posted 2026-09-24)
+    url: https://jobs.smartrecruiters.com/VeoliaEnvironnementSA/744000151662770-sr-process-engineer-water-treatment
+    date: '2026-11-08'
+  EN09:
+    title: Xylem, Senior LCA Analyst, R50547, Vadodara (posted 2026-09-11)
+    url: https://xylem.wd5.myworkdayjobs.com/xylem-careers/job/Vadodara-73-East-Ave/LCA-Analyst_R50547
+    date: '2026-11-08'
+  EN03:
+    title: Philips, Research Scientist – AI in Computed Tomography Image Formation (all genders), Job ID 586913, Hamburg (posted 2026-10-26)
+    url: https://www.careers.philips.com/global/en/job/586913/Research-Scientist-AI-in-Computed-Tomography-Image-Formation-all-genders
+    date: '2026-11-08'
+  EN04:
+    title: Philips, Research Scientist – Physics of Computed Tomography (all genders), Job ID 586911, Hamburg (posted 2026-10-26)
+    url: https://www.careers.philips.com/global/en/job/586911/Research-Scientist-Physics-of-Computed-Tomography-all-genders
+    date: '2026-11-08'
+  EN05:
+    title: Philips, Software Design Quality Engineer, Job ID 579884, Bedford MA (posted 2026-09-18)
+    url: https://www.careers.philips.com/global/en/job/579884/Software-Design-Quality-Engineer
+    date: '2026-11-08'
+items:
+- id: skyscraper-structural-T-01
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 構造力学の基礎（つりあい、応力とひずみ、梁・トラス、不静定、エネルギー定理、座屈）：土木・建築の構造の中核の単元を当てた
+  sources:
+  - DR166
+  units:
+  - E-001
+  - E-002
+  - E-003
+  - E-004
+  - E-005
+  - E-006
+  - E-007
+- id: skyscraper-structural-T-02
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 不静定構造の解法（たわみ角法、変位法、直接剛性法、トラスと骨組の解析）：中核の単元を当てた
+  sources: []
+  units:
+  - E-010
+  - E-011
+  - E-016
+  - E-018
+- id: skyscraper-structural-T-03
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 材料の挙動と部材（弾性・塑性、極限解析、疲労・破壊、断面の諸特性）：中核の単元を当てた
+  sources: []
+  units:
+  - E-012
+  - E-013
+  - E-014
+  - E-015
+- id: skyscraper-structural-T-04
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 有限要素法による構造解析：中核の単元を当てた
+  sources: []
+  units:
+  - E-020
+  - E-021
+  - E-022
+- id: skyscraper-structural-T-05
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 鉄筋コンクリートと高性能コンクリート（芯と外周の柱）
+  sources:
+  - DR167
+  units:
+  - E-119
+  - E-122
+  - E-123
+  - E-196
+- id: skyscraper-structural-T-06
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 鉄骨構造の部材と接合：中核の単元を当てた
+  sources: []
+  units:
+  - E-120
+  - E-121
+- id: skyscraper-structural-T-07
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: ねじれに強い剛性をもつ中央の芯と、風の力と渦（形の変化で渦をまとめない）
+  sources:
+  - DR167
+  units:
+  - E-013
+  - E-110
+  - E-112
+  - E-113
+  - E-115
+  - E-192
+- id: skyscraper-structural-T-08
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 風工学（自然風、極値風、風洞実験と数値予測）：中核の単元を当てた
+  sources: []
+  units:
+  - E-111
+  - E-114
+- id: skyscraper-structural-T-09
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 構造動力学と性能に基づく耐震設計、免震・制振
+  sources:
+  - DR166
+  units:
+  - E-090
+  - E-091
+  - E-092
+  - E-093
+  - E-094
+  - E-098
+  - E-099
+  - E-103
+  - E-104
+  - E-105
+  - E-097
+- id: skyscraper-structural-T-10
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 地震動のリスク（確率論的ハザード解析、フラジリティ）：中核の単元を当てた
+  sources: []
+  units:
+  - E-100
+  - E-101
+  - E-107
+- id: skyscraper-structural-T-11
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 荷重の分類と評価、構造信頼性
+  sources:
+  - DR166
+  units:
+  - E-106
+  - E-108
+  - E-109
+  - E-096
+- id: skyscraper-structural-T-12
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：工学
+  topic: 基礎と地盤：中核の単元を当てた
+  sources: []
+  units:
+  - E-124
+- id: skyscraper-structural-V-01
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 合成構造
+  units:
+  - E-118
+- id: skyscraper-structural-V-02
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 連続体の力学（固体の力学）
+  units:
+  - E-017
+- id: skyscraper-structural-V-03
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 既存構造物の評価と補強（耐震改修を含む）
+  units:
+  - E-206
+- id: skyscraper-structural-V-04
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：検証で足した論題
+  topic: 木構造（集成材と CLT、中高層の木造）
+  units:
+  - E-202
+- id: skyscraper-structural-V-05
+  field: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：環境
+  topic: 建物の音（室内音響、騒音と振動の制御）
+  units:
+  - E-148
+- id: suspension-bridge-T-01
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 橋の計画と設計：橋梁形式、設計法、設計荷重、材料、圧縮部材の耐荷力
+  sources:
+  - DR168
+  - DR169
+  units:
+  - E-116
+  - E-117
+  - E-118
+- id: suspension-bridge-T-02
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 補剛トラスの 3 径間 2 ヒンジの吊り橋の形式（静定・不静定構造の解析）
+  sources:
+  - DR169
+  units:
+  - E-004
+  - E-005
+  - E-011
+  - E-116
+  - E-016
+  - E-017
+  - E-018
+  - E-021
+  - E-022
+  - E-203
+- id: suspension-bridge-T-03
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 高強度ケーブル素線、高張力鋼（溶接性のよい鋼）
+  sources:
+  - DR170
+  units:
+  - E-015
+  - E-120
+  - E-121
+  - E-163
+- id: suspension-bridge-T-04
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 水中不分離コンクリート、高流動コンクリート、低発熱セメント
+  sources:
+  - DR170
+  units:
+  - E-119
+  - E-122
+  - E-196
+- id: suspension-bridge-T-05
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 空力の安定性（ツインボックス桁）、風洞実験
+  sources:
+  - DR171
+  units:
+  - E-110
+  - E-111
+  - E-112
+  - E-113
+  - E-114
+  - E-115
+  - E-096
+  - E-105
+  - E-094
+  - E-081
+- id: suspension-bridge-T-06
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 耐震設計と船の衝突の評価
+  sources:
+  - DR171
+  units:
+  - E-090
+  - E-091
+  - E-098
+  - E-099
+  - E-102
+  - E-108
+  - E-014
+- id: suspension-bridge-T-07
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 構造ヘルスモニタリング、防食、点検と維持管理の計画
+  sources:
+  - DR171
+  - DR168
+  units:
+  - E-015
+  - E-109
+  - E-206
+- id: suspension-bridge-T-08
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：工学
+  topic: 基礎と地盤
+  sources:
+  - DR168
+  units:
+  - E-124
+- id: suspension-bridge-V-01
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：検証で足した論題
+  topic: 数値計算（固有値、常微分方程式、偏微分方程式）
+  units:
+  - K-002
+  - K-008
+  - E-023
+- id: suspension-bridge-V-02
+  field: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：検証で足した論題
+  topic: 速い潮流と水理（流れが基礎に及ぼす力、洗掘）
+  units:
+  - E-187
+- id: airliquide-process-T-01
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: プロセスのシミュレーションと計算と、契約の性能に合わせた最適化
+  sources:
+  - EN07
+  units:
+  - E-212
+  - E-218
+- id: airliquide-process-T-02
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: 機器と主な配管（弁、安全弁、流量計を含む）の寸法の決定と、プロセスのデータシート
+  sources:
+  - EN07
+  units:
+  - E-218
+  - E-024
+  - E-217
+- id: airliquide-process-T-03
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: 空気分離と、水素と一酸化炭素（HyCO）の製造の技術
+  sources:
+  - EN07
+  units:
+  - E-215
+  - E-214
+  - E-041
+- id: airliquide-process-T-04
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: 業者の図面の確認、試運転の支援、プラントの性能の記録
+  sources:
+  - EN07
+  units:
+  - E-218
+  - E-216
+- id: airliquide-process-T-05
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: 設計の段階のプロセスのリスク管理の計画と、社内の基準と外部の規制の当てはめ
+  sources:
+  - EN06
+  units:
+  - E-217
+- id: airliquide-process-T-06
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: プロセスの危険の解析（HAZID、HAZOP、LOPA と SIL）と、安全上重要な要素と機能安全のループ
+  sources:
+  - EN06
+  units:
+  - E-217
+  - E-216
+- id: airliquide-process-T-07
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: 危険な現象（火災、爆発、過圧、毒性）の影響の計算（DNV PHAST など）と防止の対策
+  sources:
+  - EN06
+  units:
+  - E-217
+  - E-220
+- id: airliquide-process-T-08
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: ガスと火災の検知の設計、危険場所の区分（ATEX）と配置図の確認、起動前の安全の確認（PSSR）
+  sources:
+  - EN06
+  units:
+  - E-217
+- id: airliquide-process-T-09
+  field: 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：工学
+  topic: エネルギー転換の新しい技術のプロセスのデータを読み解く
+  sources:
+  - EN06
+  units:
+  - E-218
+- id: water-environment-engineer-T-01
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: プロセス設計の計算と、ブロックフロー図・プロセスフロー図・配管計装図
+  sources:
+  - EN08
+  units:
+  - E-219
+  - E-212
+  - E-218
+- id: water-environment-engineer-T-02
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 入札前のプロセスの資料（原水の設計条件、物質収支、シミュレーションと予測、薬品の注入量と消費量、電力、予備機の考え方）
+  sources:
+  - EN08
+  units:
+  - E-219
+  - E-212
+- id: water-environment-engineer-T-03
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 凝集沈殿、媒体ろ過、加圧浮上、吸着、脱気、汚泥の脱水
+  sources:
+  - EN08
+  units:
+  - E-219
+  - E-215
+- id: water-environment-engineer-T-04
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 膜とイオンによる分離（UF、RO、イオン交換、EDI、MBR）と、海水淡水化・超純水・ボイラー給水
+  sources:
+  - EN08
+  units:
+  - E-219
+  - E-215
+- id: water-environment-engineer-T-05
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 下水と産業排水の処理、放流と再利用
+  sources:
+  - EN08
+  units:
+  - E-219
+- id: water-environment-engineer-T-06
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 既設プラントの監査と不具合の解消、運転の安全
+  sources:
+  - EN08
+  units:
+  - E-219
+  - E-217
+- id: water-environment-engineer-T-07
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：経済学
+  topic: ライフサイクルの費用の分析と、技術と経済の比較
+  sources:
+  - EN08
+  units:
+  - F-007
+  - E-222
+- id: water-environment-engineer-T-08
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 製品の LCA、カーボンフットプリント、環境製品宣言（ISO 14040/14044、14025、14067、EN 15804）の目的と範囲、機能単位、システム境界、配分、データの品質
+  sources:
+  - EN09
+  units:
+  - E-222
+- id: water-environment-engineer-T-09
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学
+  topic: 部品表と仕入れ先のデータから、金属と鋳物・加工・モーター・電子部品・輸送・使用・廃棄をモデルにする
+  sources:
+  - EN09
+  units:
+  - E-222
+  - E-193
+- id: water-environment-engineer-T-10
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：統計学
+  topic: 不確かさと感度の分析、再現できる記録と第三者の検証への対応
+  sources:
+  - EN09
+  units:
+  - E-222
+  - S-018
+- id: water-environment-engineer-T-11
+  field: 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：計算
+  topic: 生成 AI とエージェントの手順を、人の確認の段と出典を辿れる形で業務に組み込む
+  sources:
+  - EN09
+  units:
+  - K-161
+- id: philips-ct-T-01
+  field: CT の画像をつくる研究者（Philips）：工学
+  topic: CT の画像の形成：従来・スペクトル・光子計数の CT のデータからの再構成とノイズ除去
+  sources:
+  - EN03
+  units:
+  - E-224
+  - E-223
+- id: philips-ct-T-02
+  field: CT の画像をつくる研究者（Philips）：計算
+  topic: 深層学習（CNN の学習）を、高い空間・時間分解能の再構成、ノイズ除去、被ばくの低減に使う
+  sources:
+  - EN03
+  units:
+  - K-082
+  - K-050
+  - E-224
+- id: philips-ct-T-03
+  field: CT の画像をつくる研究者（Philips）：物理
+  topic: X 線の発生、物質との相互作用、検出と、CT の物理
+  sources:
+  - EN04
+  units:
+  - E-223
+  - P-104
+- id: philips-ct-T-04
+  field: CT の画像をつくる研究者（Philips）：工学
+  topic: スペクトル型・光子計数型の X 線検出器の信号の処理と較正
+  sources:
+  - EN04
+  units:
+  - E-223
+  - E-161
+  - E-078
+- id: philips-ct-T-05
+  field: CT の画像をつくる研究者（Philips）：医学
+  topic: 医用画像（CT を中心に）の臨床の理解と、成果を臨床で意味のある形に移す評価
+  sources:
+  - EN03
+  units:
+  - E-224
+  - I-055
+- id: philips-ct-T-06
+  field: CT の画像をつくる研究者（Philips）：計算
+  topic: プログラミング（Python と C++、NumPy と PyTorch）
+  sources:
+  - EN03
+  units:
+  - K-012
+  - K-013
+  - K-029
+  - K-047
+- id: philips-ct-T-07
+  field: CT の画像をつくる研究者（Philips）：工学
+  topic: 医療機器のソフトウェアの品質と規制（IEC 62304、ISO 14971 のリスク管理、設計管理、検証と妥当性確認、トレーサビリティ、サイバーセキュリティのリスク）
+  sources:
+  - EN05
+  units:
+  - E-227
+- id: philips-ct-T-08
+  field: CT の画像をつくる研究者（Philips）：工学
+  topic: 不具合の根本原因の分析と市販後の監視、各国での登録の書類
+  sources:
+  - EN05
+  units:
+  - E-227
+  - E-156

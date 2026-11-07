@@ -23,11 +23,11 @@ lanes:
   - {id: S, name: 確率と統計, note: 大学の確率、測度論的確率、確率過程、統計}
   - {id: K, name: 計算, note: 数値解析と最適化}
   - {id: P, name: 物理, note: 力学から場の量子論、宇宙論まで}
-  - {id: E, name: 工学, note: 流体、熱と推進、構造、制御、宇宙機、回路と信号、通信、土木と建築、音響}
+  - {id: E, name: 工学, note: 流体、熱と推進、構造、制御、宇宙機、回路と信号、通信、土木と建築、音響、化学工学、環境工学、生体工学、産業バイオ}
   - {id: H, name: 化学, note: 物質と反応、原子と結合、熱力学と反応速度、無機、有機、分析（C は数えるで使うので水素の H）}
   - {id: B, name: 生物, note: 生き物のつくり、細胞、遺伝、分子生物学、生理、進化と生態}
   - {id: F, name: 経済と金融, note: 金利と現在価値、保険数理、年金、投資と派生商品、会計と経済の入口}
-  - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候（大気と海洋の力学は物理の流れ）}
+  - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候、水と氷（大気と海洋の力学は物理の流れ）}
   - {id: I, name: 医学と健康, note: 人体の構造と機能、病気のしくみ、薬と毒、感染と免疫、臨床医学、疫学と公衆衛生、栄養、医療の最前線（神経科学は B に残す）}
   - {id: Q, name: 心理学と認知科学, note: 知覚、注意と記憶、学習、言語と思考、判断と意思決定、発達、社会の認知、感情と動機、研究の方法と心理測定、臨床心理の科学的な基礎、計算論的認知科学（検証で支持されなかった古い説は、置き換えた現代の知見の形で扱う）}
   - {id: V, name: 農学と獣医学, note: 作物の栽培化と育種（ゲノム育種）、作物の生理と収量、土と植物の栄養、病害虫と防除、農業と気候、家畜と養殖と動物の福祉、獣医学（比較の病理、人獣共通感染症とワンヘルス）、食品の科学と安全}
@@ -183,6 +183,10 @@ regions:
   - {id: nouchi, name: 農地の土と病害虫と気候, lane: V}
   - {id: kachiku-yoshoku, name: 家畜と養殖, lane: V}
   - {id: juui-shoku, name: 獣医学と食の安全, lane: V}
+  - {id: kagaku-kogaku, name: 化学工学, lane: E}
+  - {id: kankyo-kogaku, name: 環境工学, lane: E}
+  - {id: sangyo-bio, name: 産業バイオ, lane: E}
+  - {id: mizu-kori, name: 水と氷, lane: W}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -218,8 +222,8 @@ goals:
   - {id: amc8, name: AMC 8（MAA）, kind: 大会, level: 中学, region: 米国, note: アメリカの中学 2 年までの生徒が、25 問を 40 分で解く数学の大会。, basis: MAA の AMC のページの topics の列挙による（検索エンジンの抜粋で取得し、文言は原文との照合が要る）。「これに限らない」の注つき。8 年生以下、25 問 40 分の選択式。後半の問題は初歩の代数（一次関数か二次関数、座標幾何）に触れることがある。論題と単元の対応は名称による, coverage: coverage-amc8.yaml}
   - {id: kangaroo, name: Math Kangaroo, kind: 大会, level: 小学, region: 国際, note: 世界中の小中高生が、学年ごとの楽しい問題に挑む数学の大会。, basis: AKSF の学年帯ごとの指針（Math Kangaroo USA が掲載、2021-12）のうち、grades 5-6、7-8、9-10 の 3 本による。grades 1-2、3-4、11-12 は本文を読めなかった。ページは「試験で何が出るかの大まかな指針」とする。日本大会（算数オリンピック委員会）の範囲の文書は公開されていない。論題と単元の対応は名称による, coverage: coverage-kangaroo.yaml}
   - {id: deepmind-rs, name: Google DeepMind の Research Scientist, kind: 第一線の仕事, field: 計算機科学, level: 大学院, region: 国際, note: 人のように学んで考える計算機の仕組みを研究して、新しいやり方を見つけて確かめる仕事。, coverage: coverage-deepmind-rs.yaml, beyond: 博士号（コンピュータ科学や機械学習など。学士と実務経験で応募できる職もある）、NeurIPS・ICML・ICLR などでの論文の実績、JAX・PyTorch・TensorFlow などの枠組みでの実装経験。数学の土台は求人に名指しされていない。}
-  - {id: fe-mechanical, name: FE Mechanical（NCEES）, kind: 資格, level: 大学, region: 米国, note: 機械の技術者として、力と熱と流れの基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-mechanical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
-  - {id: fe-electrical, name: FE Electrical and Computer（NCEES）, kind: 資格, level: 大学, region: 米国, note: 電気や電子や計算機の技術者として、回路と信号と計算の基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-electrical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
+  - {id: fe-mechanical, name: FE Mechanical（NCEES）, kind: 資格, field: 工学, level: 大学, region: 米国, note: 機械の技術者として、力と熱と流れの基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-mechanical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
+  - {id: fe-electrical, name: FE Electrical and Computer（NCEES）, kind: 資格, field: 工学, level: 大学, region: 米国, note: 電気や電子や計算機の技術者として、回路と信号と計算の基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-electrical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
   - {id: nasa-astronaut, name: NASA の宇宙飛行士, kind: 第一線の仕事, field: 天文学, level: 大学院（修士）, region: 米国, note: 宇宙ステーションや月・火星への任務で、宇宙遊泳、ロボットアームの操作、実験、機械の保守をする。, coverage: coverage-nasa-astronaut.yaml, beyond: "米国市民、学位後の職務経験 2 年以上またはジェット機の機長 1,000 時間、NASA の身体検査、指導力・チームワーク・意思疎通、書類審査と面接と約 2 年の訓練（操縦、水中・陸上の生存、スキューバ、ロシア語）"}
   - {id: google-quantum-ai, name: Google Quantum AI の研究者, kind: 第一線の仕事, field: 物理, level: 大学院（博士）, region: 米国（カリフォルニア）, note: ほかの方法では解けない問題のために量子コンピュータをつくり、誤りを直す符号を考え、量子チップを設計して測る。, coverage: coverage-google-quantum-ai.yaml, beyond: 量子計算に関わる分野の博士（または同等の経験）、誤り訂正などの研究発表、論文 1 本以上、研究の方針を自分で立てた経験（望ましい）、ソフトウェア職は C++ か Python で 5 年の開発}
   - {id: nobel-theory, name: 理論物理学者（ノーベル物理学賞の研究に届く知識）, kind: 研究の頂点, field: 物理, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 数学の道具で自然の理論の枠組みをつくり、その予言が実験や観測で確かめられる。, coverage: coverage-nobel-theory.yaml, beyond: 賞は応募でなく王立スウェーデン科学アカデミーの選考。大きな共同実験への貢献が評価される例がある。理論の確かめまでに数十年かかることがある}
@@ -324,7 +328,9 @@ goals:
   - {id: sky-astronomer, name: "宇宙を観る天文学者（James Webb 宇宙望遠鏡、Event Horizon Telescope）", kind: 第一線の仕事, field: 天文学, level: "大学院（博士）", region: "国際", note: "宇宙望遠鏡や地球規模の電波望遠鏡で、最初の銀河やブラックホールの姿をとらえる。", coverage: coverage-sky-astronomer.yaml, basis: "", beyond: "James Webb 宇宙望遠鏡の天文学者：天文学・天体物理学・惑星科学か関連分野の博士、任務の仕事と自分の研究の両立、研究計画（フェローシップでは最重要）、指導力と粘り強さ ／ Event Horizon Telescope の研究者：天文学・物理・数学・宇宙科学・電子工学の学位（ポスドクは博士）、標高約 4,000 m での勤務がありうる、米国連邦政府の採用手続き"}
   - {id: motion-computing, name: "動きと映像をつくる計算機科学者（Pixar、Waymo、Boston Dynamics）", kind: 第一線の仕事, field: 計算機科学, level: "大学院（博士）", region: "米国", note: "コンピュータで、映画の中の動きや光、ロボットや自動運転の車の動きをつくる。", coverage: coverage-motion-computing.yaml, basis: "", beyond: "Pixar の研究者：計算機科学・計算機グラフィックスの博士（実習生は修士か博士の在学中）、C++ の開発、研究論文の発表、作家と協力する力 ／ Waymo の自動運転のエンジニア：学士（修士・博士が望ましい、研究職は修士・博士）、2 年以上の経験、論文・オープンソース・業界での貢献の実績 ／ Boston Dynamics のロボット工学者：学士・修士と実務 2〜3 年、または博士、米国で働く資格、実機に方策を載せた経験、物流現場への展開の経験や論文（望ましい）"}
   - {id: vehicle-engineer, name: "空と宇宙を進む乗り物のエンジニア（SpaceX、NASA JPL、F1 チーム）", kind: 第一線の仕事, field: 工学, level: "大学〜大学院", region: "国際", note: "ロケットや探査機、通信衛星、レーシングカーを設計し、思いどおりに速く正確に進ませる。", coverage: coverage-vehicle-engineer.yaml, basis: "", beyond: "SpaceX のロケットエンジン設計者（推進エンジニア）：工学か物理の学士以上の学位、機械・流体の設計か解析か製作の経験 1 年ほど（学生チームやインターンで可）、CAD・FEA・CFD・熱流体解析・MATLAB・Python・SQL などの道具、手計算でモデルを確かめる習慣、製造や試験の現場の経験。望ましい条件に高い成績や競技会の入賞。 ／ SpaceX の誘導・航法・制御エンジニア：物理か工学かコンピュータ科学などの学士以上の学位、制御・軌道力学・古典力学・モデル化とシミュレーションの経験、C++ か Python での実務の開発経験（1 年以上のことも。上級職は 5 年以上）、Git などの版管理、MATLAB など。 ／ SpaceX Starlink の通信エンジニア：電気・計算機・物理などの学士（修士は望ましい）、ITAR により米国市民・永住者などであること、必要なときの長時間・週末の勤務 ／ NASA JPL の火星探査機のエンジニア：計算機科学・計算機工学などの学士と実務 1〜3 年（修士・博士なら短縮）、GPA 3.0 以上（求人による）、推薦者 3 名、NASA の規則で指定国の国籍者は米国市民・永住者などであること ／ NASA JPL の軌道設計者：航空宇宙工学・天文学などの学士と実務 3 年、修士と 1 年、または博士。衛星の重力場の推定の実務と論文の実績（望ましい）。NASA の指定国の規則 ／ F1 チームの空力エンジニア：航空宇宙・機械などの学位（上級職は流体力学・数値計算の修士か博士）、F1 など高性能モータースポーツの経験（上級職）、技術規則の理解、意思疎通と協調、細部への注意"}
-  - {id: mega-structure, name: "巨大構造物の設計者（超高層ビル、長大吊り橋）", kind: 第一線の仕事, field: 工学, level: "大学〜大学院", region: "国際", note: "地震や強い風に負けない、とても高いビルや長い橋を設計する。", coverage: coverage-mega-structure.yaml, basis: "", beyond: "超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：学位と知識の要件は取れなかった（SOM の求人の本文は非公開）。構造設計の経験と、設計の第三者の審査 ／ 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：高専・大学の卒業または修士課程の修了（JB 本四高速は土木・機械・電気通信・化学・建築の技術系総合職）、年度により採用しない職種がある。COWI の求人は読んでいない"}
+  - {id: fe-chemical, name: FE Chemical（NCEES）, kind: 資格, field: 工学, level: 大学, region: 米国, note: 化学工学の技術者として、物質とエネルギーの収支、反応、分離、安全の基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-chemical.yaml, basis: NCEES の FE Chemical CBT Exam Specifications（2020 年 7 月の試験から有効）の 17 の分野による（2026-11-08 取得）。論題は分野ごとに 1 つ。論題と単元の対応は名称による, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
+  - {id: fe-environmental, name: FE Environmental（NCEES）, kind: 資格, field: 工学, level: 大学, region: 米国, note: 環境の技術者として、水と空気と廃棄物を扱う基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-environmental.yaml, basis: NCEES の FE Environmental CBT Exam Specifications（2020 年 7 月の試験から有効）の 15 の分野による（2026-11-08 取得）。論題は分野ごとに 1 つ。論題と単元の対応は名称による, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
+  - {id: infrastructure-engineer, name: "暮らしと社会を支えるエンジニア（超高層ビル、長大吊り橋、水処理、水素、医療の CT）", kind: 第一線の仕事, field: 工学, level: "大学〜大学院", region: "国際", note: "地震や風に負けないビルや橋、きれいな水、工場のガスと水素、体の中を写す CT の装置など、毎日の暮らしと社会を支えるしくみを設計する。", coverage: coverage-infrastructure-engineer.yaml, basis: "産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：Air Liquide の募集 2 件による（2026-11-08 取得）。Global E&C Solutions France の PROCESS SAFETY ENGINEER（R10101111、2026-10-19 掲載）と、日本の E&C の Process Engineer（R10103641、2026-10-21 掲載）。本文は Workday の採用の頁が読む公開の求人データから読んだ（会社のサイト airliquide.com は 403 で使っていない）。論題と単元の対応は名称による ／ 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：Veolia Water Technologies の Sr. Process Engineer - Water Treatment（REF59557S、2026-09-24 掲載）と Xylem の Senior LCA Analyst（R50547、2026-09-11 掲載）の募集による（2026-11-08 取得）。T-01〜T-07 は Veolia、T-08〜T-11 は Xylem。Veolia は SmartRecruiters の公開の頁、Xylem は Workday の採用の頁が読む公開の求人データから読んだ。論題と単元の対応は名称による ／ CT の画像をつくる研究者（Philips）：Philips の募集 3 件による（2026-11-08 取得）。Research Scientist – AI in Computed Tomography Image Formation（586913）と Research Scientist – Physics of Computed Tomography（586911）はどちらも 2026-10-26 掲載、ハンブルク。Software Design Quality Engineer（579884）は 2026-09-18 掲載、米国 Bedford で、T-07 と T-08 はこの職による。本文は採用の頁の HTML に入った求人のデータから読んだ。論題と単元の対応は名称による", beyond: "超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）：学位と知識の要件は取れなかった（SOM の求人の本文は非公開）。構造設計の経験と、設計の第三者の審査 ／ 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）：高専・大学の卒業または修士課程の修了（JB 本四高速は土木・機械・電気通信・化学・建築の技術系総合職）、年度により採用しない職種がある。COWI の求人は読んでいない ／ 産業ガスと水素の工場のプロセスエンジニア（Air Liquide）：技術者の学位か修士（化学工学、プロセス工学、産業安全）、プロセス設計かプロセス安全で 3 年以上（設計の職は 4〜6 年）、DNV PHAST などの影響解析の道具、英語、海外の現場への出張と試運転の経験。 ／ 水処理と環境負荷の評価のエンジニア（Veolia、Xylem）：工学の学士（機械・化学・環境が望ましい）、水と排水のプロセス設計で 10 年以上（うち現場 3〜5 年）。LCA の職は学士か修士と、製品の LCA・EPD で 5 年以上、SimaPro と Excel の上級、検証を受けた EPD の実績、AI を業務で使った実績。 ／ CT の画像をつくる研究者（Philips）：修士（AI・データサイエンス・情報学、または物理・電気工学）、Python と C++、NumPy と PyTorch、他分野のチームへの技術の助言、英語（ドイツ語は加点）、週 3 日以上の出社。規制の側の職は学士と FDA 規制下での 5 年以上の経験、ISTQB があれば望ましい。"}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -596,6 +602,7 @@ units:
   - {id: B-161, title: 水辺の生き物しらべ（池・川・磯で探す、すむ場所ごとに見つけた数を記録する、水の中の小さな生き物を虫めがねで見る）, stage: 2, level: 1, region: umi-mizu, needs: [B-015], days: 5}
   - {id: V-001, title: 育てて収穫する（種をまいて世話をし実りを収穫する、水やりと間引き、土や肥料を変えて育ち方とできた実の数を比べる）, stage: 2, level: 1, region: sakumotsu, needs: [B-016], days: 6}
   - {id: V-002, title: 家畜とペットの世話（犬・猫・うさぎ・にわとりの食べ物と水と寝床、元気なしるしと病気のしるし、牛や豚やにわとりが食べ物になるまで、命をあずかる責任）, stage: 2, level: 1, region: kachiku-yoshoku, needs: [B-017], days: 5}
+  - {id: W-100, title: 雪と氷（雪の結晶の形を虫めがねで見る、氷は水に浮く、塩をかけると早くとける、霜と霜柱、つららと池の氷は上から張る）, stage: 2, level: 1, region: mizu-kori, needs: [H-002, W-048], days: 4}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, level: 2, region: keisan, needs: [N-007], days: 8}
@@ -681,6 +688,8 @@ units:
   - {id: V-003, title: 食べ物のもとと保存（田畑・牧場・海から食卓まで、食べ物がくさるわけ、干す・塩・砂糖・酢・冷やす・発酵で長もちさせる、手洗いと期限の表示）, stage: 3, level: 2, region: juui-shoku, needs: [B-074, V-001], days: 5}
   - {id: P-197, title: 重さと力、エネルギーの移り変わり（重さと重力、摩擦と空気の抵抗、圧力、浮力と浮き沈み、エネルギーの形（運動・位置・電気・光・熱・音・化学）と移り変わり、エネルギー資源の入口）, stage: 3, level: 2, region: rikigaku, needs: [P-185, P-186, P-183], days: 6}
   - {id: B-083, title: 呼吸のしくみの入口（細胞の呼吸の式、酸素を使う呼吸と使わない呼吸、酵母と乳酸菌の発酵、光合成との比べ）, stage: 3, level: 2, region: bunshi-saibo, needs: [B-019, B-020, B-074], days: 4}
+  - {id: E-210, title: 水をきれいにする（にごった水をしばらく置いて沈める、砂と小石と炭の層でこす、こした水のきれいさを目盛りの見え方で比べる、こしただけでは飲めないわけ）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, E-171, G-046], days: 5}
+  - {id: E-211, title: ごみを分けて資源にもどす（燃やすごみと資源ごみ、缶を磁石で分ける、紙・びん・ペットボトルが何に生まれ変わるか、1 週間の家のごみを量って表にし減らし方を考える）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, H-064, S-027], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -1274,6 +1283,8 @@ units:
   - {id: V-008, title: 土壌の科学と植物の栄養（土の成り立ちと団粒、粘土と陽イオン交換、土の水と灌漑、窒素・リン・カリの循環と施肥、酸性の土と石灰、根のまわりの微生物、土の炭素）, stage: 7, level: 3, region: nouchi, needs: [B-038, B-041, H-026, W-023], days: 10}
   - {id: V-012, title: 動物の福祉の科学（福祉を評価する枠組みと指標、行動と生理の指標、飼い方・輸送・と畜、実験動物の 3R、伴侶動物の福祉）, stage: 7, level: 3, region: kachiku-yoshoku, needs: [B-039, B-035, V-002], days: 8}
   - {id: V-016, title: 食品の科学と安全（食品の成分と栄養、加工と保存の科学、微生物の制御と加熱殺菌の数理、食中毒の原因、HACCP とリスク評価）, stage: 7, level: 3, region: juui-shoku, needs: [V-003, B-144, B-028, H-023], days: 10}
+  - {id: E-212, title: 物質収支とエネルギー収支（プロセスの流れ図、定常と非定常の収支、自由度の解析、再循環・バイパス・パージ、反応を伴う収支と転化率・選択率・収率、エンタルピーの収支）, stage: 7, level: 3, region: kagaku-kogaku, needs: [H-016, H-022, E-038], days: 9}
+  - {id: W-101, title: 流域の水文学（降水・蒸発散・浸透・流出の水収支、到達時間と流出の計算、ハイドログラフと単位図、洪水の頻度と再現期間、貯水池と調整池、流出のモデル）, stage: 7, level: 3, region: mizu-kori, needs: [W-061, P-122, D-044, S-018], days: 9}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1628,6 +1639,25 @@ units:
   - {id: V-013, title: 水産資源と養殖（資源の評価と最大持続生産量、漁業の管理、養殖の飼料・病気・育種、貝と海藻の養殖、環境への負荷）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-055, B-154, V-006], days: 10}
   - {id: V-014, title: 比較の病理（細胞の傷害と死、炎症と修復、循環の障害、腫瘍、動物の種による病気の違い、剖検と病理組織の読み方）, stage: 8, level: 3, region: juui-shoku, needs: [B-010, B-037, B-036], days: 12}
   - {id: V-015, title: 人獣共通感染症とワンヘルス（宿主の飛び越えと流出、伝播のモデルと基本再生産数、見張りと発生の調査、越境性動物疾病の制御と根絶（牛疫）、輸入のリスク分析、ワクチンと薬剤耐性の管理、ワンヘルスの体制）, stage: 8, level: 3, region: juui-shoku, needs: [B-144, B-146, S-019, I-037], days: 12}
+  - {id: E-213, title: 移動現象（運動量・熱・物質の移動の類似、分子拡散とフィックの法則、拡散係数の見積もり、物質移動係数と境膜、無次元数と相関式、拡散と反応が競う系）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-024, E-040, D-049], days: 10}
+  - {id: E-214, title: 反応工学（回分・連続槽型・管型の理想反応器の設計方程式、反応器の組み合わせと選択率、滞留時間分布と非理想の流れ、発熱反応の多重定常と熱暴走、固体触媒の反応と有効係数、水蒸気改質など工業の反応）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-213, H-037], days: 10}
+  - {id: E-215, title: 分離工学（気液平衡と相対揮発度、蒸留の段の計算とマッケーブ–シール法と最小還流比、深冷分離、ガス吸収と液液抽出、吸着とクロマトグラフィー、膜による分離、晶析と乾燥、分離に要るエネルギー）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-213, H-036], days: 11}
+  - {id: E-216, title: プロセスの動特性と制御（タンクと反応器の動的モデル、1 次・2 次の遅れとむだ時間、PID の調整、カスケード・フィードフォワード・比率の制御、多変数のプロセスとモデル予測制御、計装と安全計装）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-214, E-049], days: 9}
+  - {id: E-217, title: プロセス安全（危険物の性質と SDS、HAZID と HAZOP、防護層の解析 LOPA と安全度水準 SIL、故障の木と事象の木、火災・爆発・毒性ガスの拡散の影響の計算、圧力の逃がし、暴走反応、危険場所の区分、本質安全の設計）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-214, E-216, S-001], days: 9}
+  - {id: E-219, title: 水処理（上水の凝集・沈殿・ろ過・消毒と消毒副生成物、下水の活性汚泥と生物による窒素・リンの除去、嫌気性消化と汚泥、膜ろ過・逆浸透と海水淡水化、膜分離活性汚泥法と水の再生、新しい汚染物質の PFAS と微量の医薬品）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-081, E-214, E-215, B-144], days: 11}
+  - {id: E-220, title: 大気汚染の制御（汚染物質の発生と排出係数、大気の安定度とガウスプルームによる拡散、サイクロン・バグフィルタ・電気集じんによる粒子の除去、吸収・吸着・触媒による脱硝・排煙脱硫によるガスの処理、室内の空気、燃焼の改善）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-080, E-194, E-213, P-123], days: 9}
+  - {id: E-221, title: 固形廃棄物と汚染地の浄化（廃棄物の量と組成、収集と処分、埋立てと浸出水・ガス、焼却とエネルギーの回収、堆肥化と嫌気性消化、有害廃棄物の処理、汚染された土と地下水の調査と浄化、バイオレメディエーション）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-081, E-212, E-214, W-102], days: 10}
+  - {id: E-222, title: 資源循環とライフサイクル評価（物質フロー分析、リサイクルの工程と品質、循環経済、LCA の目的と範囲・機能単位・システム境界、インベントリと配分、影響評価、カーボンフットプリントと環境製品宣言、感度と不確かさ）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-081, E-212, M-003, S-018], days: 9}
+  - {id: E-223, title: 医用画像の物理（X 線の発生と減弱と検出、CT の撮像とスペクトル CT・光子計数 CT、MRI の核磁気共鳴と緩和と傾斜磁場による位置の符号化、超音波の反射とドップラー、核医学と PET、画質と被ばくの評価）, stage: 8, level: 3, region: seitai-kogaku, needs: [P-104, P-034, P-022, P-118, E-073], days: 11}
+  - {id: E-225, title: 生体信号の処理（心電図・脳波・筋電図の発生と計測、電極と雑音と増幅、フィルタと特徴の抽出、心拍変動、パルスオキシメトリ、ウェアラブルと機械学習による判定）, stage: 8, level: 3, region: seitai-kogaku, needs: [E-068, E-074, B-034, I-014], days: 9}
+  - {id: E-226, title: 生体材料（生体適合性と異物反応、金属・セラミックス・高分子のインプラント、表面と細胞の相互作用、体の中で分解する材料、組織工学の足場、臓器チップ）, stage: 8, level: 3, region: seitai-kogaku, needs: [H-049, B-010, E-015], days: 9}
+  - {id: E-227, title: 医療機器の開発と規制（設計管理と設計の検証・妥当性確認、ISO 14971 のリスク管理、IEC 62304 の医療機器ソフトウェアとサイバーセキュリティ、使いやすさの工学、臨床評価、ソフトウェアとしての医療機器と AI、FDA と EU の MDR）, stage: 8, level: 3, region: seitai-kogaku, needs: [B-049, E-199, K-013], days: 9}
+  - {id: E-228, title: 培養の工学（微生物と動物細胞の増殖の速度論とモノー式、収率と代謝の収支、回分・流加・連続培養、培養槽の酸素の移動と混合、スケールアップ、無菌の操作と GMP）, stage: 8, level: 3, region: sangyo-bio, needs: [B-144, B-008, E-212, E-213], days: 10}
+  - {id: W-102, title: 地下水の水文学と汚染の移動（帯水層の性質、地下水の流動、井戸の揚水と水位の低下とタイスの式、涵養と過剰な揚水による枯渇、衛星重力で見る地下水の減少、移流・分散・吸着による汚染の広がり）, stage: 8, level: 3, region: mizu-kori, needs: [W-061, W-029, W-101, D-049], days: 10}
+  - {id: W-103, title: 陸水の物理と化学（湖の熱収支と成層、季節の循環と混合、湖と川の滞留時間、川の酸素収支とストリーター–フェルプスの式、栄養塩の負荷と富栄養化のモデル、化学風化と溶存物質、湖と川からの二酸化炭素とメタン）, stage: 8, level: 3, region: mizu-kori, needs: [W-061, W-101, H-043], days: 9}
+  - {id: W-104, title: 海洋の生物地球化学（栄養塩とレッドフィールド比、生物ポンプと輸出生産の定量、鉄の制限と高栄養塩低クロロフィル海域、窒素の固定と脱窒、酸素極小層と海洋の貧酸素化、トレーサーと水塊の年齢、海洋の酸性化の観測）, stage: 8, level: 3, region: mizu-kori, needs: [W-063, W-033, B-154], days: 10}
+  - {id: W-105, title: 氷床と氷河（氷の流動則と氷河の流れ、質量収支と平衡線、棚氷と接地線、氷床の不安定と海面上昇への寄与、衛星による氷の観測）, stage: 8, level: 3, region: mizu-kori, needs: [W-023, W-026, P-014], days: 10}
+  - {id: W-106, title: 海氷と永久凍土（海氷の成長と融解の熱収支、アイス・アルベド・フィードバック、北極の海氷の減少、永久凍土の熱と活動層、融解による地盤の変形と炭素の放出）, stage: 8, level: 3, region: mizu-kori, needs: [W-063, E-039, P-120, W-022], days: 9}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1829,8 +1859,8 @@ units:
   - {id: E-162, title: 永久磁石と磁性材料（磁気異方性、磁区と磁壁、保磁力、希土類磁石）, stage: 9, level: 4, region: zairyo-device, needs: [P-097, E-163], days: 8}
   - {id: E-165, title: ナノの顕微鏡法（収差補正電子顕微鏡と電子線による元素分析、走査トンネル顕微鏡と原子間力顕微鏡、原子の操作）, stage: 9, level: 3, region: zairyo-device, needs: [P-092, P-071, P-118], days: 9}
   - {id: E-167, title: 風力発電（ロータの空気力学とベッツの限界、翼素運動量理論、荷重と疲労、発電機と制御）, stage: 9, level: 3, region: energy, needs: [E-029, E-111, E-015, E-170], days: 9}
-  - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-164, B-010, H-035, H-049, B-004], days: 9}
-  - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010], days: 9}
+  - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-164, B-010, H-035, H-049, B-004, E-226], days: 9}
+  - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010, E-225], days: 9}
   - {id: W-035, title: 地球の形成と惑星の分化（隕石と太陽系の材料、核とマントルの分離、初期の地球）, stage: 9, level: 3, region: chikyu-kagaku, needs: [W-031, P-171], days: 10}
   - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, level: 3, region: chiso, needs: [W-014, W-033, B-011, B-145], days: 10}
   - {id: W-037, title: 地震波トモグラフィーと地球の内部構造（地球の標準モデル、自由振動、マントルと核）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-021, W-025, P-141, D-048], days: 10}
@@ -1903,6 +1933,9 @@ units:
   - {id: B-114, title: 意識の科学（意識の神経相関、全体作業空間理論と統合情報理論、予測の事前登録と敵対的共同研究、麻酔・睡眠・意識障害での意識の測り方）, stage: 9, level: 4, region: shinkei, needs: [B-065, B-066, B-063], days: 6}
   - {id: B-135, title: 系統ゲノミクスと形質の進化（遺伝子の木と種の木の食い違い、深い分岐の論争、遺伝子の重複と喪失、収斂進化のゲノム、生物多様性のゲノム計画）, stage: 9, level: 3, region: dobutsu-keito, needs: [B-134, K-106], days: 12}
   - {id: B-143, title: 1 細胞で見る発生（細胞の系譜の追跡、1 細胞の発現の解析と細胞の型、細胞のアトラス、細胞の型の進化）, stage: 9, level: 3, region: hassei, needs: [B-140, K-113], days: 12}
+  - {id: E-218, title: プロセス設計と脱炭素（流れ図と配管計装図、プロセスの合成、熱交換網とピンチ解析、機器の寸法と費用の見積もり、技術経済評価、二酸化炭素の回収と水素の製造・液化のプロセス、プロセスの電化）, stage: 9, level: 3, region: kagaku-kogaku, needs: [E-214, E-215, E-216, E-041, F-007], days: 11}
+  - {id: E-224, title: 医用画像の再構成と AI（ラドン変換と投影定理、フィルタ逆投影、反復再構成と正則化、MRI の k 空間と圧縮センシング、深層学習による再構成とノイズ除去、領域の分割と診断の支援、画質と性能の評価）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-223, P-141, K-082], days: 11}
+  - {id: E-229, title: 合成生物学と代謝工学（遺伝子回路の設計と部品、設計・構築・試験・学習のサイクル、代謝の流束の解析、微生物を工場にした物質の生産、酵素の改良、生物の封じ込めと安全）, stage: 9, level: 3, region: sangyo-bio, needs: [E-228, B-053, B-044, K-010], days: 11}
 
   # ---- 段 10 新しい対象をつくる ----
 
