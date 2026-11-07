@@ -1058,9 +1058,9 @@ units:
   - {id: S-015, title: 確率積分と伊藤の公式, stage: 8, region: kakuritsu-katei, needs: [S-012, S-013, S-014], days: 12}
   - {id: S-016, title: 確率微分方程式, stage: 8, region: kakuritsu-katei, needs: [S-015], days: 12}
   - {id: S-017, title: 裁定価格理論, stage: 8, region: kakuritsu-katei, needs: [S-011], days: 12}
-  - {id: K-004, title: ポアソン方程式の差分法, stage: 8, region: suchi, needs: [K-002, K-003, D-012, D-013, D-015, M-008, M-009, M-010, D-030, D-031, D-032], days: 12}
+  - {id: K-004, title: ポアソン方程式の差分法, stage: 8, region: suchi, needs: [K-002, K-003, D-049, M-007], days: 12}
   - {id: K-005, title: 初期値問題の偏微分方程式の差分法と安定性, stage: 8, region: suchi, needs: [K-004], days: 12}
-  - {id: K-006, title: スペクトル法, stage: 8, region: suchi, needs: [K-004], days: 12}
+  - {id: K-006, title: スペクトル法, stage: 8, region: suchi, needs: [K-004, D-075], days: 12}
   - {id: K-007, title: 線形方程式の反復法, stage: 8, region: suchi, needs: [K-004], days: 12}
   - {id: K-008, title: 固有値の数値計算, stage: 8, region: suchi, needs: [K-007], days: 12}
   - {id: K-017, title: 仕様と不変条件、テスト、抽象データ型、デザインパターン, stage: 8, region: programming, needs: [K-016], days: 12}
@@ -1113,7 +1113,7 @@ units:
   - {id: K-085, title: ロボットアームと移動ロボットの設計と制御, stage: 8, region: graphics, needs: [P-016, P-025, D-053], days: 12}
   - {id: K-086, title: 視覚と知覚、操作の計画と制御、位置推定、ロボットのための機械学習, stage: 8, region: graphics, needs: [P-016, P-025, D-053], days: 12}
   - {id: K-087, title: 操作のための知覚、ロボットの運動学と軌道生成、衝突のない運動計画, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
-  - {id: K-088, title: タスクと運動の計画、不確かさの下での計画、操作の動力学と制御, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
+  - {id: K-088, title: タスクと運動の計画、不確かさの下での計画、操作の動力学と制御, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047, K-084], days: 12}
   - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, region: bunshi-saibo, needs: [P-046, H-044, B-032], days: 12}
   - {id: B-007, title: 酵素学の基礎と生化学反応の機構, stage: 8, region: bunshi-saibo, needs: [B-006, B-029, H-037], days: 12}
   - {id: B-008, title: 糖・脂肪・アミノ酸の代謝, stage: 8, region: bunshi-saibo, needs: [B-007, B-030], days: 12}
@@ -1145,7 +1145,7 @@ units:
   - {id: P-060, title: テンソル解析と微分幾何（多様体、計量テンソル、接続とクリストッフェル記号、共変微分と平行移動、リーマン・リッチ曲率、測地線偏差）, stage: 8, region: soutai, needs: [P-058, P-015, M-005, D-049, M-012, D-018], days: 12}
   - {id: P-061, title: アインシュタイン方程式とシュワルツシルト解（エネルギー運動量テンソル、ビアンキ恒等式、宇宙項、光の湾曲・近日点移動・シャピロ遅延、バーコフの定理）, stage: 8, region: soutai, needs: [P-010, P-037, M-006, D-045], days: 12}
   - {id: P-062, title: 線形化重力と重力波（線形化した真空の方程式、ド・ドンダーゲージ、重力波、四重極公式）, stage: 8, region: soutai, needs: [P-057, P-058, D-049], days: 12}
-  - {id: P-063, title: ブラックホール（クルスカル座標と事象の地平面、重力崩壊、ライスナー＝ノルドストロム解とカー解、ペンローズ図、ブラックホール力学の法則、曲がった時空の場の量子論とホーキング効果）, stage: 8, region: soutai, needs: [P-061, P-111, P-060], days: 12}
+  - {id: P-063, title: ブラックホール（クルスカル座標と事象の地平面、重力崩壊、ライスナー＝ノルドストロム解とカー解、ペンローズ図、ブラックホール力学の法則、曲がった時空の場の量子論とホーキング効果）, stage: 8, region: soutai, needs: [P-061, P-060], days: 12}
   - {id: P-064, title: 膨張宇宙とフリードマン方程式（宇宙原理、FRW 計量とスケール因子、ハッブルの法則、赤方偏移と地平線、宇宙項、放射・物質・暗黒エネルギーの時代、宇宙年齢）, stage: 8, region: soutai, needs: [P-034, D-045], days: 12}
   - {id: P-065, title: 熱い宇宙（宇宙マイクロ波背景放射、再結合と光子の脱結合、バリオン光子比、温度の変化、ビッグバン元素合成）, stage: 8, region: soutai, needs: [P-034, D-045], days: 12}
   - {id: P-066, title: 構造形成（線形の密度ゆらぎ、ジーンズ不安定性、移送関数、ハリソン＝ゼルドビッチ・スペクトル、パワースペクトル、バリオン音響振動、CMB のゆらぎ）, stage: 8, region: soutai, needs: [P-064, P-065, P-014], days: 12}
@@ -1221,7 +1221,7 @@ units:
   - {id: E-060, title: 加速座標系と剛体の動力学、軌道力学・飛行力学・慣性航法・姿勢力学の入門, stage: 8, region: kido, needs: [E-003, E-026, E-027], days: 12}
   - {id: E-076, title: 線形系の入出力モデルと状態空間モデル、変換領域の表現、状態フィードバックとオブザーバ, stage: 8, region: kairo-shingo, needs: [E-073, E-074, E-075, S-003], days: 12}
   - {id: E-077, title: 確率過程、相関関数、パワースペクトル、スペクトル分解, stage: 8, region: kairo-shingo, needs: [E-073, E-074, E-075, S-003], days: 12}
-  - {id: E-078, title: 最小平均二乗誤差推定とウィーナーフィルタ、仮説検定と整合フィルタ, stage: 8, region: kairo-shingo, needs: [E-073, E-074, E-075, S-003], days: 12}
+  - {id: E-078, title: 最小平均二乗誤差推定とウィーナーフィルタ、仮説検定と整合フィルタ, stage: 8, region: kairo-shingo, needs: [E-073, E-074, E-075, S-003, S-019], days: 12}
   - {id: E-085, title: 信号の表現、標本化、量子化、圧縮（通信のための）, stage: 8, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
   - {id: E-086, title: 変調、符号化と復号, stage: 8, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
   - {id: E-087, title: 媒体アクセス制御、待ち行列、プロトコルの原理, stage: 8, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
@@ -1236,11 +1236,11 @@ units:
   - {id: E-109, title: 構造信頼性解析（擬似乱数法、点推定法、崩壊の信頼性解析）, stage: 8, region: doboku, needs: [E-004, E-008, E-009, E-010, E-106, E-107], days: 12}
   - {id: E-110, title: 風工学の序論、風災害、相似則, stage: 8, region: doboku, needs: [E-024, E-025], days: 12}
   - {id: E-111, title: 自然風のモデル化と極値風の推定, stage: 8, region: doboku, needs: [E-110, S-004], days: 12}
-  - {id: E-112, title: 構造物の風応答（空気力、静的・動的応答）, stage: 8, region: doboku, needs: [E-110, E-090], days: 12}
+  - {id: E-112, title: 構造物の風応答（空気力、静的・動的応答）, stage: 8, region: doboku, needs: [E-110, E-090, E-111], days: 12}
   - {id: E-113, title: 空力不安定（ギャロッピング、渦励振）, stage: 8, region: doboku, needs: [E-112], days: 12}
   - {id: E-114, title: 風洞実験と数値予測, stage: 8, region: doboku, needs: [E-110, E-024], days: 12}
   - {id: E-116, title: 橋の計画と設計（橋梁形式、各部の名称、コスト、設計の流れ）, stage: 8, region: doboku, needs: [E-004, E-005, E-006, E-007], days: 12}
-  - {id: E-117, title: 橋の設計法・設計荷重・材料、圧縮部材の耐荷力, stage: 8, region: doboku, needs: [E-004, E-005, E-006, E-007], days: 12}
+  - {id: E-117, title: 橋の設計法・設計荷重・材料、圧縮部材の耐荷力, stage: 8, region: doboku, needs: [E-004, E-005, E-006, E-007, E-108], days: 12}
   - {id: E-118, title: 曲げとせん断の耐荷力、合成構造、耐震・耐風設計の基礎, stage: 8, region: doboku, needs: [E-004, E-005, E-006, E-007], days: 12}
   - {id: E-119, title: 鉄筋コンクリートの破壊形式と制御、プレストレストコンクリート, stage: 8, region: doboku, needs: [E-004, E-005, E-006, E-007], days: 12}
   - {id: E-120, title: 鉄骨構造（鋼材、引張材・圧縮材、曲げ材、横座屈・局部座屈）, stage: 8, region: doboku, needs: [E-004, E-013, E-012, E-014], days: 12}
@@ -1419,7 +1419,7 @@ units:
   - {id: P-116, title: 有効場の理論（自由度と対称性の見きわめ、パワーカウンティング、マッチングとウィルソン係数）, stage: 9, region: soryushi, needs: [P-114], days: 12}
   - {id: P-135, title: 数値モデルの歴史と時間スキーム、気象と気候のカオスと予測可能性, stage: 9, region: chikyu, needs: [P-132, D-055], days: 12}
   - {id: P-136, title: 浅水モデルと差分モデルの波の分散、CFL 条件、アラカワの格子配置, stage: 9, region: chikyu, needs: [P-132, K-005, P-129], days: 12}
-  - {id: P-137, title: 流れによる輸送の数値解法（有限体積・有限要素・スペクトル・セミラグランジュ）, stage: 9, region: chikyu, needs: [P-132, K-005], days: 12}
+  - {id: P-137, title: 流れによる輸送の数値解法（有限体積・有限要素・スペクトル・セミラグランジュ）, stage: 9, region: chikyu, needs: [P-132, K-005, D-075, D-077], days: 12}
   - {id: P-138, title: 格子で解けない過程のパラメータ化（放射、エーロゾル、対流）, stage: 9, region: chikyu, needs: [P-132, P-131, P-130], days: 12}
   - {id: P-139, title: 現業の予報システム（定式化、同化、後処理）, stage: 9, region: chikyu, needs: [P-132, P-133], days: 12}
   - {id: P-140, title: データ同化の理論（カルマンフィルタ、アンサンブルカルマンフィルタ）, stage: 9, region: chikyu, needs: [P-133, S-003], days: 12}
@@ -1447,8 +1447,8 @@ units:
   - {id: E-036, title: 数値流体力学（2）：格子生成、複雑形状、有限要素法・スペクトル法・パネル法, stage: 9, region: ryutai, needs: [D-032, D-049, E-024, E-025, E-040, E-041], days: 12}
   - {id: E-037, title: 圧縮性流れの理論（オイラー方程式、衝撃波の跳び条件、特性曲線）, stage: 9, region: ryutai, needs: [E-038, E-039, P-013, P-014, E-024, E-025, E-040, E-041], days: 12}
   - {id: E-043, title: ジェットエンジンとガスタービン（インレット・圧縮機・燃焼器・タービン・ノズル、サイクル解析）, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
-  - {id: E-044, title: 化学ロケット（固体・液体・ハイブリッド、熱化学と比推力）, stage: 9, region: netsu-suishin, needs: [E-042, H-022, H-036], days: 12}
-  - {id: E-045, title: ロケットのノズル流、推進剤供給とターボポンプ、燃焼、冷却, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
+  - {id: E-044, title: 化学ロケット（固体・液体・ハイブリッド、熱化学と比推力）, stage: 8, region: netsu-suishin, needs: [E-042, H-022, H-036], days: 12}
+  - {id: E-045, title: ロケットのノズル流、推進剤供給とターボポンプ、燃焼、冷却, stage: 8, region: netsu-suishin, needs: [E-042], days: 12}
   - {id: E-046, title: 電気推進（電熱・静電・電磁の加速方式と連続推力の軌道）, stage: 9, region: netsu-suishin, needs: [P-034], days: 12}
   - {id: E-055, title: 最適制御（動的計画法、変分法、ポントリャーギンの最大原理）, stage: 9, region: seigyo, needs: [E-053, E-054], days: 12}
   - {id: E-056, title: 推定とフィルタ（最小二乗、再帰最小二乗、カルマンフィルタ、拡張・粒子フィルタ、適応信号処理、系の同定）, stage: 8, region: seigyo, needs: [E-053, E-054, E-076, E-077, E-078, M-007], days: 12}
@@ -1456,9 +1456,9 @@ units:
   - {id: E-058, title: 非線形制御（リアプノフ解析、フィードバック線形化、スライディング面、適応制御、縮約解析）, stage: 9, region: seigyo, needs: [E-057], days: 12}
   - {id: E-059, title: 最適制御と学習に基づく制御（動的計画法、到達可能性、軌道最適化、モデル予測制御、強化学習）, stage: 9, region: seigyo, needs: [E-055, K-056, K-009], days: 12}
   - {id: E-061, title: 二体問題の初期値問題と境界値問題、ケプラー問題とランベルト問題, stage: 9, region: kido, needs: [D-045], days: 12}
-  - {id: E-062, title: 軌道決定、多体法、ミッション計画、宇宙航法の再帰算法, stage: 9, region: kido, needs: [D-045], days: 12}
-  - {id: E-063, title: ヴィス・ヴィーヴァ式、ロケット方程式、ホーマン遷移・双楕円遷移・らせん遷移, stage: 9, region: kido, needs: [P-010, D-006], days: 12}
-  - {id: E-064, title: 回線設計式（リンクバジェット）、宇宙機の電力・推進・熱、宇宙環境, stage: 9, region: kido, needs: [P-034, E-039, E-042], days: 12}
+  - {id: E-062, title: 軌道決定、多体法、ミッション計画、宇宙航法の再帰算法, stage: 9, region: kido, needs: [D-045, E-061, K-003], days: 12}
+  - {id: E-063, title: ヴィス・ヴィーヴァ式、ロケット方程式、ホーマン遷移・双楕円遷移・らせん遷移, stage: 7, region: kido, needs: [P-010, D-006], days: 12}
+  - {id: E-064, title: 回線設計式（リンクバジェット）、宇宙機の電力・推進・熱、宇宙環境, stage: 8, region: kido, needs: [P-034, E-039, E-042], days: 12}
   - {id: E-065, title: 地球近傍衛星と惑星間探査機の軌道（相対運動、ランデブー、摂動、軌道の減衰）, stage: 9, region: kido, needs: [P-011, P-012], days: 12}
   - {id: E-066, title: 姿勢の表現と姿勢力学、姿勢センサ・アクチュエータ、姿勢制御, stage: 9, region: kido, needs: [P-016, P-017, E-049, E-065], days: 12}
   - {id: E-079, title: 間引き・補間・サンプリングレート変換、マルチレート信号処理, stage: 9, region: kairo-shingo, needs: [E-076, E-077, E-078], days: 12}

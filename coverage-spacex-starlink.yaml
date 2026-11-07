@@ -15,8 +15,7 @@ items:
   sources:
   - DR123
   units:
-  - E-067
-  - E-068
+  - E-158
   - E-069
   - E-084
 - id: T-02
@@ -27,6 +26,8 @@ items:
   units:
   - P-034
   - P-036
+  - P-038
+  - P-027
   - P-039
   - E-084
   - E-023
@@ -41,6 +42,7 @@ items:
   - E-086
   - E-089
   - C-038
+  - C-039
 - id: T-04
   field: 工学
   topic: 測定器と試験の自動化
@@ -70,6 +72,7 @@ items:
   sources:
   - DR124
   units:
+  - K-009
   - K-010
   - K-011
   - S-009
@@ -82,7 +85,6 @@ items:
   units:
   - E-083
   - E-088
-  - E-080
 - id: T-09
   field: 計算
   topic: リンクレベル・システムレベルのシミュレーション、通信路のモデル
@@ -92,3 +94,25 @@ items:
   - E-088
   - K-015
   - S-024
+- id: V-01
+  field: 検証で足した論題
+  topic: 信号とシステム（LTI 系、フーリエ・ラプラス変換）
+  units:
+  - E-070
+  - E-071
+- id: V-02
+  field: 検証で足した論題
+  topic: 確率過程（再生過程、ポアソン過程）
+  units:
+  - S-010
+- id: V-03
+  field: 検証で足した論題
+  topic: 回線設計と衛星通信の周波数帯
+  units:
+  - E-064
+- id: V-04
+  field: 検証で足した論題
+  topic: MATLAB・Python・C++ と計算機ネットワーク
+  units:
+  - K-019
+  - K-038
