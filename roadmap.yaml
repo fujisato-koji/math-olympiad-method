@@ -957,7 +957,7 @@ units:
   - {id: K-039, title: コンパイラとインタプリタ（字句解析、構文解析、型システム、コード生成）, stage: 8, region: programming, needs: [L-012, L-011, C-022, C-021, L-026, K-029, K-036], days: 12}
   - {id: K-040, title: 理論計算機科学の大きな考え（アルゴリズム、計算量、ゲーム理論、オートマトン、暗号）, stage: 8, region: keisan-riron, needs: [K-019, L-012, L-011, C-022, C-021], days: 12}
   - {id: K-041, title: 計算課題の難しさによる分類、P 対 NP 問題、乱択の力, stage: 8, region: keisan-riron, needs: [L-026, L-027], days: 12}
-  - {id: K-042, title: 暗号の基礎（擬似乱数、ハッシュ、認証符号、署名、公開鍵暗号）, stage: 8, region: anzen, needs: [K-022, K-033], days: 12}
+  - {id: K-042, title: 暗号の基礎（擬似乱数、ハッシュ、認証符号、署名、公開鍵暗号）, stage: 8, region: anzen, needs: [K-022, K-033, N-033, N-036, S-001, S-002], days: 12}
   - {id: K-043, title: システムの安全（隔離、認証、アクセス制御、ファジング、サイドチャネル攻撃）, stage: 8, region: anzen, needs: [K-022, K-033], days: 12}
   - {id: K-046, title: 最適化の観点からの機械学習（線形・非線形モデルと勾配に基づく方法）, stage: 8, region: kikai-gakushu, needs: [K-012, K-013, K-014, M-007], days: 12}
   - {id: K-047, title: ニューラルネットワークの構成、教師なし学習と強化学習の入口, stage: 8, region: kikai-gakushu, needs: [K-012, K-013, K-014, M-007], days: 12}
@@ -967,17 +967,17 @@ units:
   - {id: K-056, title: マルコフ決定過程とベイズフィルタ、強化学習, stage: 8, region: kikai-gakushu, needs: [K-016], days: 12}
   - {id: K-060, title: 統計的データ解析（データ探索、特徴選択、モデルの当てはめと評価、多重比較）, stage: 8, region: kikai-gakushu, needs: [K-012, K-013, K-014, S-003, S-004, S-019], days: 12}
   - {id: K-061, title: 統計と計算の相互作用（医療・遺伝子制御・金融・交通などの応用単元）, stage: 8, region: kikai-gakushu, needs: [K-015, M-007, S-003, S-004, S-019], days: 12}
-  - {id: K-063, title: 発展的データ解析（非線形回帰、平滑化、一般化線形・加法モデル、交差検証）, stage: 8, region: kikai-gakushu, needs: [S-020], days: 12}
+  - {id: K-063, title: 発展的データ解析（非線形回帰、平滑化、一般化線形・加法モデル、交差検証）, stage: 7, region: kikai-gakushu, needs: [S-020], days: 12}
   - {id: K-066, title: スポーツとデータ（探索的データ解析、回帰、分類、クラスタリング、ニューラルネットワーク）, stage: 8, region: kikai-gakushu, needs: [K-064, S-020], days: 12}
   - {id: K-067, title: 試合映像の解析（検出、追跡、姿勢推定、イベント認識）, stage: 8, region: kikai-gakushu, needs: [K-080, K-082], days: 12}
-  - {id: K-068, title: スポーツ解析の基礎（試合状態の期待値、選手とチームの評価のための多層モデル）, stage: 8, region: kikai-gakushu, needs: [S-020], days: 12}
+  - {id: K-068, title: スポーツ解析の基礎（試合状態の期待値、選手とチームの評価のための多層モデル）, stage: 8, region: kikai-gakushu, needs: [S-020, S-005], days: 12}
   - {id: K-069, title: 階層モデルによるベイズ的な評価、選手トラッキングデータと時空間の手法, stage: 8, region: kikai-gakushu, needs: [S-020], days: 12}
   - {id: K-071, title: レイトレーシングとグラフィックスパイプライン, stage: 8, region: graphics, needs: [K-016, M-007], days: 12}
   - {id: K-072, title: 座標変換、テクスチャマッピング、影, stage: 8, region: graphics, needs: [K-016, M-007], days: 12}
   - {id: K-073, title: 標本化と大域照明, stage: 8, region: graphics, needs: [K-016, M-007], days: 12}
   - {id: K-074, title: スプライン、アニメーション、色, stage: 8, region: graphics, needs: [K-016, M-007], days: 12}
   - {id: K-075, title: 画像処理の基礎、幾何変換、曲線・曲面のモデリング、可視判定、シェーディング, stage: 8, region: graphics, needs: [K-019, D-006, M-007], days: 12}
-  - {id: K-076, title: アニメーションと物理シミュレーション（数値積分、スキニング、逆運動学、剛体・変形体）, stage: 8, region: graphics, needs: [K-029, D-018, M-007], days: 12}
+  - {id: K-076, title: アニメーションと物理シミュレーション（数値積分、スキニング、逆運動学、剛体・変形体）, stage: 8, region: graphics, needs: [K-029, D-018, M-007, K-002], days: 12}
   - {id: K-077, title: 物理ベースレンダリング（レンダリング方程式、光輸送、経路積分）, stage: 8, region: graphics, needs: [K-019, M-007, D-018], days: 12}
   - {id: K-078, title: ゲームの実行系（AI・音・物理・描画・通信）と資産パイプライン, stage: 8, region: graphics, needs: [K-075], days: 12}
   - {id: K-080, title: 初期視覚（低次の画像解析、エッジ検出、画像変換）, stage: 8, region: graphics, needs: [K-046, K-047, M-007, L-012, L-011, C-022, C-021], days: 12}
@@ -1179,7 +1179,7 @@ units:
   - {id: N-058, title: 解析的整数論, stage: 9, region: kaisekiteki-seisuron, needs: [N-037, N-038, N-047, N-048, N-049, N-050, D-030, D-031, D-032], days: 12}
   - {id: C-036, title: 加法的組合せ論, stage: 9, region: kumiawase-daigaku, needs: [R-011, M-005, M-006, M-007, S-002, C-029], days: 12}
   - {id: C-037, title: 代数的組合せ論, stage: 9, region: kumiawase-daigaku, needs: [R-004, R-005, R-006], days: 12}
-  - {id: C-038, title: 情報源符号化と通信路容量, stage: 9, region: fugo, needs: [M-008, M-009, M-010, R-007, R-010, R-011], days: 12}
+  - {id: C-038, title: 情報源符号化と通信路容量, stage: 7, region: fugo, needs: [S-002, S-003], days: 12}
   - {id: C-039, title: 誤り訂正符号, stage: 9, region: fugo, needs: [C-038], days: 12}
   - {id: C-040, title: 暗号, stage: 9, region: fugo, needs: [C-038], days: 12}
   - {id: L-023, title: 命題論理（完全性定理、コンパクト性）, stage: 9, region: suri-ronri, needs: [L-020], days: 12}
@@ -1252,27 +1252,27 @@ units:
   - {id: T-032, title: 2 次曲線、平面 3 次曲線、2 次曲面, stage: 9, region: daisu-kika, needs: [T-030], days: 12}
   - {id: T-033, title: 曲線の微分形式と種数、因子と線形系, stage: 9, region: daisu-kika, needs: [T-030], days: 12}
   - {id: T-034, title: リーマン–ロッホの定理, stage: 9, region: daisu-kika, needs: [T-030], days: 12}
-  - {id: K-044, title: 証明系とゼロ知識、秘密分散、秘匿マルチパーティ計算、準同型暗号, stage: 9, region: anzen, needs: [L-012, L-011, C-022, C-021, K-033], days: 12}
-  - {id: K-045, title: ブロック暗号とハッシュ関数の設計、楕円曲線暗号と格子暗号、攻撃の算法, stage: 9, region: anzen, needs: [L-012, L-011, C-022, C-021, K-033], days: 12}
+  - {id: K-044, title: 証明系とゼロ知識、秘密分散、秘匿マルチパーティ計算、準同型暗号, stage: 9, region: anzen, needs: [L-012, L-011, C-022, C-021, K-033, K-042, S-001], days: 12}
+  - {id: K-045, title: ブロック暗号とハッシュ関数の設計、楕円曲線暗号と格子暗号、攻撃の算法, stage: 9, region: anzen, needs: [L-012, L-011, C-022, C-021, K-033, K-042, N-037, R-014, M-006], days: 12}
   - {id: K-048, title: 統計的推論からみた機械学習（表現、汎化、モデル選択、正則化）, stage: 9, region: kikai-gakushu, needs: [M-007, S-003], days: 12}
   - {id: K-049, title: 線形・加法モデル、ブースティング、SVM、カーネル法、EM、次元削減、HMM、ベイジアンネットワーク, stage: 9, region: kikai-gakushu, needs: [M-007, S-003, D-018], days: 12}
-  - {id: K-050, title: 誤差逆伝播法と自動微分, stage: 9, region: kikai-gakushu, needs: [S-019, K-046, K-047], days: 12}
-  - {id: K-051, title: ニューラルネットの構造（MLP、CNN、RNN、グラフネット、トランスフォーマー）, stage: 9, region: kikai-gakushu, needs: [S-019, K-046, K-047], days: 12}
+  - {id: K-050, title: 誤差逆伝播法と自動微分, stage: 8, region: kikai-gakushu, needs: [S-019, K-046, K-047], days: 12}
+  - {id: K-051, title: ニューラルネットの構造（MLP、CNN、RNN、グラフネット、トランスフォーマー）, stage: 8, region: kikai-gakushu, needs: [S-019, K-046, K-047], days: 12}
   - {id: K-052, title: 深層学習の幾何と不変性、高次元の学習理論と汎化, stage: 9, region: kikai-gakushu, needs: [S-019, K-046, K-047], days: 12}
   - {id: K-057, title: 不確かさの下での計画（情報空間、POMDP、不確かなモデルでの強化学習）, stage: 9, region: kikai-gakushu, needs: [K-055, K-056], days: 12}
   - {id: K-058, title: 強化学習（1）：動的計画法、マルコフ決定過程、価値反復と方策反復, stage: 9, region: kikai-gakushu, needs: [S-003], days: 12}
   - {id: K-059, title: 強化学習（2）：モンテカルロ法、TD 学習、Q 学習、バンディット、近似動的計画法, stage: 9, region: kikai-gakushu, needs: [S-003], days: 12}
   - {id: K-062, title: 行列の方法（特異値分解、重み付き最小二乗、主成分分析、行列分解、大規模行列）, stage: 9, region: kikai-gakushu, needs: [M-007], days: 12}
   - {id: K-070, title: スポーツ産業の構造と、競技内外のデータに基づく意思決定, stage: 9, region: kikai-gakushu, needs: [K-066, K-068], days: 12}
-  - {id: K-083, title: 画像形成と多視点幾何、微分可能レンダリング、ニューラル場面表現, stage: 9, region: graphics, needs: [K-050, K-051, K-052, L-012, L-011, C-022, C-021, M-007], days: 12}
-  - {id: K-089, title: 劣駆動系の非線形動力学、最適制御とロバスト制御、運動計画, stage: 9, region: graphics, needs: [D-045, M-007], days: 12}
+  - {id: K-083, title: 画像形成と多視点幾何、微分可能レンダリング、ニューラル場面表現, stage: 9, region: graphics, needs: [K-050, K-051, K-052, L-012, L-011, C-022, C-021, M-007, P-023], days: 12}
+  - {id: K-089, title: 劣駆動系の非線形動力学、最適制御とロバスト制御、運動計画, stage: 9, region: graphics, needs: [D-045, M-007, P-016], days: 12}
   - {id: K-090, title: 移動ロボットの知覚・位置推定・SLAM、非線形系の制御、不確かさの下での推論, stage: 9, region: graphics, needs: [K-012, K-013, K-014, M-007, S-003], days: 12}
   - {id: K-091, title: 自律移動体の視覚航法（幾何制御、視覚・慣性航法、SLAM）, stage: 9, region: graphics, needs: [E-055, E-056], days: 12}
   - {id: B-012, title: 構造生物学の手法（X 線結晶構造解析、電子顕微鏡、光学顕微鏡）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
   - {id: B-013, title: 生体高分子の熱力学と統計力学（折りたたみ、結合、アロステリー、酵素反応の速度論）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
   - {id: B-014, title: タンパク質の折りたたみ・誤った折りたたみ・凝集と品質管理, stage: 9, region: bunshi-saibo, needs: [B-006, B-007, B-008], days: 12}
   - {id: K-110, title: 生物配列と構造のペアワイズ・多重アラインメント、系統樹、隠れマルコフモデル, stage: 9, region: seibutsu-keisan, needs: [K-016], days: 12}
-  - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, region: seibutsu-keisan, needs: [K-016], days: 12}
+  - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, region: seibutsu-keisan, needs: [K-016, P-049, P-119], days: 12}
   - {id: P-101, title: 物性の場の理論・多体理論の入口（多体の定式化とファインマン図、乱雑位相近似、誘電関数と線形応答、経路積分と平均場、ボソン化、非線形シグマ模型、量子ゲージ理論）, stage: 9, region: bussei, needs: [P-098, P-055, P-097], days: 12}
   - {id: P-108, title: 標準模型（QED、QCD と漸近的自由性・閉じ込め、弱い相互作用とパリティの破れ、電弱統一とヒッグス機構、CKM 行列と CP の破れ、ニュートリノ質量と振動、深非弾性散乱とパートン模型、標準模型を超える物理）, stage: 9, region: soryushi, needs: [P-111, P-112, P-107, R-023], days: 12}
   - {id: P-113, title: 経路積分による量子化とゲージ理論（汎関数法、非可換ゲージ理論、ゴースト場と BRST 対称性）, stage: 9, region: soryushi, needs: [P-111, P-112, R-023], days: 12}
@@ -1299,7 +1299,7 @@ units:
   - {id: E-017, title: 変形の運動学・応力・つりあい則、等方線形弾性と線形熱弾性, stage: 9, region: kozo-zairyo, needs: [E-014, E-015], days: 12}
   - {id: E-018, title: 変分法とエネルギー法（構造力学）, stage: 9, region: kozo-zairyo, needs: [E-014, E-015], days: 12}
   - {id: E-019, title: 線形粘弾性、小ひずみの弾塑性、大変形と超弾性, stage: 9, region: kozo-zairyo, needs: [E-014, E-015], days: 12}
-  - {id: E-022, title: 非線形有限要素法（有限変形、幾何学的非線形、弾塑性・超弾性、接触、動的陽解法）, stage: 9, region: kozo-zairyo, needs: [E-012, E-013, E-014], days: 12}
+  - {id: E-022, title: 非線形有限要素法（有限変形、幾何学的非線形、弾塑性・超弾性、接触、動的陽解法）, stage: 9, region: kozo-zairyo, needs: [E-012, E-013, E-014, E-021], days: 12}
   - {id: E-023, title: 偏微分方程式の数値解法（差分・有限体積・有限要素・境界要素、直接法と反復法）, stage: 9, region: ryutai, needs: [D-045, M-007], days: 12}
   - {id: E-031, title: 連続体の保存方程式、粘性流のナビエ・ストークス方程式、潤滑理論, stage: 9, region: ryutai, needs: [E-024, E-025, E-040, E-041, D-032, D-049], days: 12}
   - {id: E-032, title: 循環と渦度の定理、ポテンシャル流、境界層と剥離, stage: 9, region: ryutai, needs: [E-024, E-025, E-040, E-041, D-032, D-049], days: 12}
@@ -1313,10 +1313,10 @@ units:
   - {id: E-045, title: ロケットのノズル流、推進剤供給とターボポンプ、燃焼、冷却, stage: 9, region: netsu-suishin, needs: [E-042], days: 12}
   - {id: E-046, title: 電気推進（電熱・静電・電磁の加速方式と連続推力の軌道）, stage: 9, region: netsu-suishin, needs: [P-034], days: 12}
   - {id: E-055, title: 最適制御（動的計画法、変分法、ポントリャーギンの最大原理）, stage: 9, region: seigyo, needs: [E-053, E-054], days: 12}
-  - {id: E-056, title: 推定とフィルタ（最小二乗、再帰最小二乗、カルマンフィルタ、拡張・粒子フィルタ、適応信号処理、系の同定）, stage: 9, region: seigyo, needs: [E-053, E-054, E-076, E-077, E-078, M-007], days: 12}
+  - {id: E-056, title: 推定とフィルタ（最小二乗、再帰最小二乗、カルマンフィルタ、拡張・粒子フィルタ、適応信号処理、系の同定）, stage: 8, region: seigyo, needs: [E-053, E-054, E-076, E-077, E-078, M-007], days: 12}
   - {id: E-057, title: 状態決定系の時間・周波数領域表現、可制御性・可観測性、状態観測器, stage: 9, region: seigyo, needs: [E-047, E-048, E-049, M-007], days: 12}
   - {id: E-058, title: 非線形制御（リアプノフ解析、フィードバック線形化、スライディング面、適応制御、縮約解析）, stage: 9, region: seigyo, needs: [E-057], days: 12}
-  - {id: E-059, title: 最適制御と学習に基づく制御（動的計画法、到達可能性、軌道最適化、モデル予測制御、強化学習）, stage: 9, region: seigyo, needs: [E-055, K-056], days: 12}
+  - {id: E-059, title: 最適制御と学習に基づく制御（動的計画法、到達可能性、軌道最適化、モデル予測制御、強化学習）, stage: 9, region: seigyo, needs: [E-055, K-056, K-009], days: 12}
   - {id: E-061, title: 二体問題の初期値問題と境界値問題、ケプラー問題とランベルト問題, stage: 9, region: kido, needs: [D-045], days: 12}
   - {id: E-062, title: 軌道決定、多体法、ミッション計画、宇宙航法の再帰算法, stage: 9, region: kido, needs: [D-045], days: 12}
   - {id: E-063, title: ヴィス・ヴィーヴァ式、ロケット方程式、ホーマン遷移・双楕円遷移・らせん遷移, stage: 9, region: kido, needs: [P-010, D-006], days: 12}
