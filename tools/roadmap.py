@@ -124,8 +124,10 @@ def check(data, problems):
         if len(days) > len(plan):
             errors.append(f"{uid}: 地図の日数より多い")
         for d in days:
-            for i, item in enumerate(d.get("items", []), 1):
-                where = f"{uid} {d.get('day')} 日目 {i} 問目"
+            pool = [(f"{i} 問目", it) for i, it in enumerate(d.get("items", []), 1)]
+            pool += [(f"予備 {i} 問目", it) for i, it in enumerate(d.get("extra", []), 1)]
+            for i, item in pool:
+                where = f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
                 if item.get("part") == "見本":
@@ -183,6 +185,8 @@ def build(data, problems):
         doc = problems.get(u["id"], {})
         for d in doc.get("days", []):
             days[d["day"] - 1]["items"] = d.get("items", [])
+            if d.get("extra"):
+                days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
                           "stage": int(m.group(2)), "needs": u.get("needs", []), "days": days})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "kinds": data["kinds"],
@@ -208,9 +212,10 @@ def build(data, problems):
             if u["stage"] != s["id"]:
                 continue
             ready = sum(1 for d in u["days"] if d.get("items"))
+            extra = sum(len(d.get("extra", [])) for d in u["days"])
+            note = f"{ready} 日分" + (f"、予備 {extra} 問" if extra else "") if ready else "—"
             lines.append(f"| {u['id']} {u['title']} | {lanes[u['lane']]['name']} | "
-                         f"{'、'.join(u['needs']) or '—'} | {len(u['days'])} | "
-                         f"{f'{ready} 日分' if ready else '—'} |")
+                         f"{'、'.join(u['needs']) or '—'} | {len(u['days'])} | {note} |")
         lines.append("")
     (ROOT / "docs" / "roadmap.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
     if data.get("coverage"):

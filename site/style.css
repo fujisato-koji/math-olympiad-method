@@ -254,6 +254,18 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .dot.done::after { content: ""; width: 7px; height: 4px; border: solid var(--surface); border-width: 0 0 2px 2px; transform: rotate(-45deg) translate(1px, -1px); }
 .dot.doing { background: var(--c); box-shadow: 0 0 0 5px var(--glow); animation: pulse 2.4s ease-in-out infinite; }
 .dot.later { border-color: color-mix(in srgb, var(--c) 40%, var(--surface)); }
+.dot.review { background: var(--surface); border-style: dashed; box-shadow: 0 0 0 4px var(--glow); }
+.mini.review i { border-style: dashed; }
+.day.skipped .day-stop { border-style: dashed; color: var(--muted); }
+.day.skipped .day-card { box-shadow: none; color: var(--ink-2); }
+
+/* 基本量と見込み */
+.gauge { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 28px; margin-top: 18px; }
+.gauge div { display: flex; align-items: baseline; gap: 8px; }
+.gauge .k { font-size: 13px; color: var(--muted); letter-spacing: .08em; }
+.gauge b { font-size: 28px; }
+.gauge .u { color: var(--ink-2); }
+.gauge p { flex-basis: 100%; margin: 0; font-size: 13px; }
 @keyframes pulse { 50% { box-shadow: 0 0 0 9px transparent; } }
 
 /* ---- 単元：日の路線 ---- */

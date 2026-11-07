@@ -53,10 +53,10 @@ items:
   - {id: T-C10, field: 組合せ, topic: 凸包と組合せ幾何, sources: [O04, O05], units: [C7-03]}
   - {id: T-C11, field: 組合せ, topic: 局所的な調整（小さな摂動、貪欲法）, sources: [O05, O06], units: [C7-05]}
   - {id: T-C12, field: 組合せ, topic: 構成問題とアルゴリズム, sources: [O05, O06], units: [C7-02]}
-  - {id: T-C13, field: 組合せ, topic: 固い構造の解析, sources: [O05, O06], units: [C8-01]}
+  - {id: T-C13, field: 組合せ, topic: 固い構造の解析, sources: [O05, O06], units: [C8-02]}
   - {id: T-C14, field: 組合せ, topic: 等号の場合を手がかりにする, sources: [O05], units: [C7-02]}
   - {id: T-C15, field: 組合せ, topic: ゲーム, sources: [O09], units: [L2-03, L4-02, C6-06]}
-  - {id: T-C16, field: 組合せ, topic: 多項式法（組合せ論的零点定理）, sources: [O05], units: [C8-01]}
+  - {id: T-C16, field: 組合せ, topic: 多項式法（組合せ論的零点定理）, sources: [O05], units: [C8-03]}
   # ---- 幾何 ----
   - {id: T-G01, field: 幾何, topic: 合同と相似、三角形と多角形の基本性質, sources: [O01, O04, O10], units: [G4-02, G5-01, G5-02, G5-05]}
   - {id: T-G02, field: 幾何, topic: 角度の追跡と円に内接する四角形（有向角）, sources: [O01, O04, O05, O07, O08, O10], units: [G5-03, G6-06]}
@@ -82,7 +82,7 @@ items:
   - {id: T-G22, field: 幾何, topic: 図を描くことと図からの見当付け, sources: [O05, O08], units: [G5-07, G6-06]}
   - {id: T-G23, field: 幾何, topic: 動く点の方法, sources: [O05], units: [G8-03]}
   - {id: T-G24, field: 幾何, topic: ポリズム（ポンスレの閉形定理など）, sources: [O05], none: 上級の単元として 1 つの資料（O05）が扱うだけで、IMO の解答にはほとんど出ない}
-  - {id: T-G25, field: 幾何, topic: 幾何と他分野の融合（幾何の不等式、格子点）, sources: [O05], units: [G8-03, C7-03]}
+  - {id: T-G25, field: 幾何, topic: 幾何と他分野の融合（幾何の不等式、格子点）, sources: [O05], units: [G8-06, C7-03]}
   # ---- 整数 ----
   - {id: T-N01, field: 整数, topic: 約数と倍数、素数、素因数分解の一意性, sources: [O01, O04, O09, O10], units: [N3-01, N3-05, N5-03]}
   - {id: T-N02, field: 整数, topic: ユークリッドの互除法、ベズーの補題、1 次不定方程式, sources: [O04, O05, O10], units: [N5-02]}
@@ -98,9 +98,9 @@ items:
   - {id: T-N12, field: 整数, topic: ペル方程式, sources: [O06], units: [N7-05]}
   - {id: T-N13, field: 整数, topic: ヴィエタ・ジャンピング, sources: [O05, O06], units: [N7-06]}
   - {id: T-N14, field: 整数, topic: 整数の大きさの議論, sources: [O05], units: [N8-01]}
-  - {id: T-N15, field: 整数, topic: 整数の構成問題, sources: [O05, O06], units: [N6-05, N8-01]}
-  - {id: T-N16, field: 整数, topic: 整数係数の多項式, sources: [O05], units: [A7-04, N8-01]}
-  - {id: T-N17, field: 整数, topic: 素数の分布の定理の主張（ディリクレ、素数定理）, sources: [O04], units: [N8-01]}
+  - {id: T-N15, field: 整数, topic: 整数の構成問題, sources: [O05, O06], units: [N6-05, N8-02]}
+  - {id: T-N16, field: 整数, topic: 整数係数の多項式, sources: [O05], units: [A7-04, N8-03]}
+  - {id: T-N17, field: 整数, topic: 素数の分布の定理の主張（ディリクレ、素数定理）, sources: [O04], units: [N8-04]}
   # ---- 論法と証明 ----
   - {id: T-P01, field: 論法と証明, topic: 証明の書き方とよくある誤り, sources: [O01, O02, O04, O06, O08], units: [L4-03, L5-01, L6-01, L7-01]}
   - {id: T-P02, field: 論法と証明, topic: 集合と写像（単射と全射）, sources: [O04, O06], units: [L6-03]}
