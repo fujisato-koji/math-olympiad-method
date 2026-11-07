@@ -1,4 +1,4 @@
-/* みちすじ：全体の地図 → 考え方の水準のページ → 単元の日 → 今日の問題を 1 問ずつ */
+/* みちすじ：全体の地図 → 考え方の水準のページ・組み合わせの層 → 単元の日 → 今日の問題を 1 問ずつ */
 (() => {
   'use strict';
   const R = window.ROADMAP;
@@ -69,12 +69,15 @@
   const topicsOf = uid => GOALS.flatMap(g => g.items.filter(i => (i.units || []).includes(uid)).map(i => ({ g, i })));
   // 組み合わせ（D-031）：前提がどの領域を合わせたものか。広さは遠い領域を広く合わせるほど大きく、珍しい組には印を付ける
   const REGION_NAME = Object.fromEntries((R.regions || []).map(r => [r.id, r.name]));
+  const LAYER = R.combLayer || { bridges: [], unitPairs: [], probPairs: [], probUnseen: [] };
+  const BRIDGES = new Set(LAYER.bridges);
   function combHtml(u) {
     const c = u.comb;
     if (!c) return '';
     const rare = c.r >= 1 ? `<span class="pill rare" title="地図の中で、期待より少ない組（${esc(c.pr.map(r => REGION_NAME[r]).join(' × '))}）">珍しい組み合わせ</span>` : '';
+    const bridge = BRIDGES.has(u.id) ? '<a class="pill rare" href="#/comb">橋の駅</a>' : '';
     return `<div class="row comb">組み合わせ ${c.rg.map(r => `<span class="from">${esc(REGION_NAME[r] || r)}</span>`).join('<span class="x">×</span>')}
-      <span class="comb-bar" title="組み合わせの広さ ${c.b}"><i style="width:${Math.round(100 * c.b / 0.7)}%"></i></span>${rare}</div>`;
+      <span class="comb-bar" title="組み合わせの広さ ${c.b}"><i style="width:${Math.round(100 * c.b / 0.7)}%"></i></span>${rare}${bridge}</div>`;
   }
   // 単元が受け持つ論題。多いときは数だけ見せて畳む
   function topicsHtml(ts) {
@@ -112,7 +115,8 @@
     const r = progress.units[id];
     if (r && r.done) return r.review && r.review.lapsed ? 'review' : 'done';
     if (r && Object.keys(r.days || {}).length) return 'doing';
-    return UNITS[id].needs.every(n => progress.units[n] && progress.units[n].done) ? 'ready' : 'later';
+    const alt = UNITS[id].alt || {};
+    return UNITS[id].needs.every(n => [n, ...(alt[n] || [])].some(isDone)) ? 'ready' : 'later';
   }
   // 次にやること：おさらいの日、まだの日（とばした日を除く）、どれも済なら確認の日のやり直し
   function nextStep(id) {
@@ -173,11 +177,13 @@
     }
     if (p[0] === 'review' && UNITS[p[1]]) return { name: 'day', type: 'review', id: p[1], day: UNITS[p[1]].days.length };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
+    if (p[0] === 'comb') return { name: 'comb' };
     return { name: 'map' };
   }
   function crumbs(r) {
     const parts = [['#/', '全体の地図']];
     if (r.name === 'goal') parts.push(['', '目標：' + GOALS.find(g => g.id === r.goal).name]);
+    if (r.name === 'comb') parts.push(['', '組み合わせの層']);
     const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
     if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
@@ -195,7 +201,7 @@
     view.innerHTML = r.name === 'level' ? viewLevel(r.level)
       : r.name === 'unit' ? viewUnit(r.id)
       : r.name === 'day' ? viewDay(r.id, r.day, r.type)
-      : r.name === 'goal' ? viewGoal(r.goal) : viewMap();
+      : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : viewMap();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
@@ -253,7 +259,11 @@
       ${GOAL_SETS[prefs.goal] ? `<p class="muted">目標「${esc(GOALS.find(g => g.id === prefs.goal).name)}」に要る ${GOAL_SETS[prefs.goal].size} 駅だけを描いています${CHOICE_SETS[prefs.goal].size ? `。選んで解く論題（選択科目）だけに要る ${CHOICE_SETS[prefs.goal].size} 駅は薄く描きます` : ''}。全体は目標の「すべての駅」で見られます。</p>` : ''}
       <div class="goal-pick map-groups" role="group" aria-label="関係図の範囲"><span class="k">範囲</span>${MAP_GROUPS.map(([id, name]) =>
         `<button class="pill" type="button" data-mapgroup="${id}" aria-pressed="${(prefs.mapGroup || 'all') === id}">${esc(name)}</button>`).join('')}</div>
-      <div class="map-wrap"><div id="map" class="map"></div></div>
+      <div class="goal-pick map-groups" role="group" aria-label="関係図の見方"><span class="k">見方</span>
+        <button class="pill" type="button" data-mapcomb="0" aria-pressed="${!prefs.mapComb}">前提のつながり</button>
+        <button class="pill" type="button" data-mapcomb="1" aria-pressed="${!!prefs.mapComb}">組み合わせ（橋の駅と、領域をまたぐ前提）</button>
+        <a class="pill" href="#/comb">組み合わせの層を見る</a></div>
+      <div class="map-wrap"><div id="map" class="map${prefs.mapComb ? ' comb' : ''}"></div></div>
       <div id="map-info" class="map-info muted">駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。</div>
     </section>
     <section class="goals">
@@ -343,15 +353,18 @@
     svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
       <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
       <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
-    svg += '<g class="edges">' + R.units.flatMap(u => u.needs.map(n => {
+    // 前提の線：同じ領域は「深める」、ほかの領域は「組み合わせる」（x）。代わりになる前提（alt）は点線
+    const edge = (n, u, cls) => {
       const a = pos[n], b = pos[u.id];
       if (!a || !b) return '';
       const mx = (a[0] + b[0]) / 2;
-      return `<path data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
-    })).join('') + '</g>';
+      return `<path class="${cls}${UNITS[n].region !== u.region ? ' x' : ''}" data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
+    };
+    svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map(n => edge(n, u, 'need')),
+      ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
-      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g></svg>';
     host.innerHTML = svg;
     if (selected && UNITS[selected]) highlight(selected);
@@ -375,6 +388,48 @@
     info.innerHTML = `<span class="dot ${status(id)}" style="${lc(u.lane)}"></span><b>${esc(u.title)}</b>
       <span class="muted">${u.id}・${esc(LANES[u.lane].name)}・水準 ${u.level}${inChoice(id) ? '・選択の論題' : ''}・${STATUS_NAME[status(id)]}・前提 ${up.size} 駅・この先 ${down.size} 駅</span>
       <a class="pill solid" href="#/unit/${id}">駅をひらく</a><button class="pill" type="button" data-act="unfocus">もどす</button>`;
+  }
+
+  // ---- 組み合わせの層（D-031、D-035） ----
+  // 地図のデータから出す 3 つ：橋の駅、単元の中で珍しい領域の組、古今東西の問題の中で少ない組・まだない組
+  function viewComb() {
+    const rn = r => esc(REGION_NAME[r] || r);
+    const pair = r => `<span class="from">${rn(r.a)}</span><span class="x">×</span><span class="from">${rn(r.b)}</span>`;
+    const uchip = id => UNITS[id] ? `<a class="from" href="#/unit/${id}" style="${lc(UNITS[id].lane)}">${id} ${esc(UNITS[id].title.replace(/（.*$/, ''))}</a>` : '';
+    const bridges = LAYER.bridges.filter(inGoal).map(id => UNITS[id]).sort((a, b) => b.comb.b - a.comb.b);
+    const g = GOALS.find(x => x.id === prefs.goal);
+    return `
+    <section class="level-head">
+      <div class="eyebrow">組み合わせの層</div>
+      <h1>何と何を組み合わせるか</h1>
+      <p>多くの単元は、ほかの領域の考えを組み合わせてできています。ここに並べるのは手で付けたものではなく、地図の前提のつながりと、古今東西の ${LAYER.problems} 問が使う単元から数えたものです。</p>
+      ${g ? `<p class="goal-banner">橋の駅は、目標「${esc(g.name)}」に要る駅だけです。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
+    </section>
+    <section class="comb-sec">
+      <h2>橋の駅 <span class="muted">${bridges.length}</span></h2>
+      <p class="muted">直接の前提が、遠い領域を広く組み合わせる駅（広さ ${LAYER.cut} 以上、上位 1 割）と、珍しい組み合わせの駅。</p>
+      <div class="station-list">${bridges.map(u => `<a class="station ${status(u.id)}" href="#/unit/${u.id}" style="${lc(u.lane)}">
+        <span class="dot ${status(u.id)}"></span><span class="sid">${u.id}・水準 ${u.level}</span><span class="st">${esc(u.title)}</span>
+        <span class="sub">${u.comb.rg.map(r => `<span class="from">${rn(r)}</span>`).join('')}</span></a>`).join('')}</div>
+    </section>
+    <section class="comb-sec">
+      <h2>単元の中で珍しい組</h2>
+      <p class="muted">その 2 つの領域を前提に持つ単元の数が、各領域の多さから期待される数よりずっと少ない組。橋がまだ少ないところです。</p>
+      <table class="comb-table"><tr><th>領域の組</th><th>単元</th><th>期待</th><th>その単元</th></tr>
+      ${LAYER.unitPairs.map(r => `<tr><td>${pair(r)}</td><td>${r.o}</td><td>${r.e}</td><td>${r.ex.map(uchip).join('')}</td></tr>`).join('')}</table>
+    </section>
+    <section class="comb-sec">
+      <h2>問題の中で少ない組</h2>
+      <p class="muted">古今東西の問題で、その 2 つの領域の単元を一緒に使う問題が、期待よりずっと少ない組。</p>
+      <table class="comb-table"><tr><th>領域の組</th><th>問題</th><th>期待</th><th>その問題</th></tr>
+      ${LAYER.probPairs.map(r => `<tr><td>${pair(r)}</td><td>${r.o}</td><td>${r.e}</td><td class="muted">${esc(r.ex.join('、'))}</td></tr>`).join('')}</table>
+    </section>
+    <section class="comb-sec">
+      <h2>まだ問題のない組</h2>
+      <p class="muted">期待では何問もあるはずなのに、まだ 1 問もない組。遠い組（遠さは前提の使い方の似ていなさ、0〜1）ほど上に並べます。自分で問題を作るときの材料です（2.16）。</p>
+      <table class="comb-table"><tr><th>領域の組</th><th>期待</th><th>遠さ</th></tr>
+      ${LAYER.probUnseen.map(r => `<tr><td>${pair(r)}</td><td>${r.e}</td><td>${r.d}</td></tr>`).join('')}</table>
+    </section>`;
   }
 
   // ---- 考え方の水準のページ ----
@@ -434,6 +489,7 @@
       <h1>${esc(u.title)}</h1>
       <div class="row"><span class="dot ${st}" style="${lc(u.lane)}"></span>${STATUS_NAME[st]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし。ここから始められます。'}</div>
+      ${u.alt ? `<div class="row">代わりの前提 ${Object.entries(u.alt).map(([n, bs]) => `<span class="muted">${n} の代わりに</span>${bs.map(chip).join('')}`).join('')}</div>` : ''}
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
       ${topicsHtml(topicsOf(id))}
       ${combHtml(u)}
@@ -723,6 +779,8 @@
     }
     if (e.target.closest('[data-act=unfocus]')) { selected = null; drawMap(); $('#map').classList.remove('focus');
       $('#map-info').className = 'map-info muted'; $('#map-info').textContent = '駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。'; return; }
+    const mc = e.target.closest('[data-mapcomb]');
+    if (mc) { prefs.mapComb = mc.dataset.mapcomb === '1'; save(PREF, prefs); Music.tap(); render(); return; }
     const mg = e.target.closest('[data-mapgroup]');
     if (mg) { prefs.mapGroup = mg.dataset.mapgroup; save(PREF, prefs); selected = null; Music.tap(); render(); return; }
     const gk = e.target.closest('[data-goalkind]');

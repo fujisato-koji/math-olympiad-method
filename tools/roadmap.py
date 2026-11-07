@@ -155,6 +155,28 @@ def check(data, problems):
                 errors.append(f"{uid}: 前提 {need} がない")
             elif units[need][1] > stage:
                 errors.append(f"{uid}: 前提 {need} が後の段にある")
+    # 代わりになる前提（alt、D-035）：{A: [B, ...]} は「前提 A の代わりに B を済ませていてもよい」。
+    # 道のりは既定の前提（needs）でたどり、alt は「次にできる」の判定と関係図にだけ使う
+    def ups(x, seen=None):
+        seen = set() if seen is None else seen
+        for y in units[x][2].get("needs", []):
+            if y in units and y not in seen:
+                seen.add(y)
+                ups(y, seen)
+        return seen
+    for uid, (_, stage, u) in units.items():
+        for need, alts in (u.get("alt") or {}).items():
+            if need not in u.get("needs", []):
+                errors.append(f"{uid}: alt の {need} が前提にない")
+            for b in alts:
+                if b not in units:
+                    errors.append(f"{uid}: alt の {b} がない")
+                elif b == need or b == uid:
+                    errors.append(f"{uid}: alt の {b} が自分か元の前提と同じ")
+                elif units[b][1] > stage or (units[b][2].get("level") or 0) > (u.get("level") or 5):
+                    errors.append(f"{uid}: alt の {b} が後の段か高い水準にある")
+                elif uid in ups(b):
+                    errors.append(f"{uid}: alt の {b} が {uid} を前提にたどる（輪）")
     # 考え方の水準（D-028、docs/thinking-levels.md）。付け直しの途中は、付いた単元だけを確かめる
     low = []
     for uid, (_, _, u) in units.items():
@@ -322,6 +344,7 @@ def build(data, problems):
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
                           "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {}),
+                          **({"alt": u["alt"]} if u.get("alt") else {}),
                           # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],
                                        "rg": comb[u["id"]]["regions"], "pr": comb[u["id"]]["pair"]}}
@@ -336,7 +359,8 @@ def build(data, problems):
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
-               "goals": goals, "levels": THINKING_LEVELS, "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
+               "goals": goals, "levels": THINKING_LEVELS,
+               "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")

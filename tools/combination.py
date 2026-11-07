@@ -9,6 +9,8 @@
 - 組み合わせの珍しさ：前提の領域の組ごとに、地図での出現の数 O と、領域ごとの出現から期待される数
   E（その領域を前提に持つ単元の数の積 ÷ 単元の数）を比べ、log2(E / O) の最大。期待が 2 未満の組は、
   単元が少ないだけで珍しく見えるので数えない（Uzzi ら 2013 の「珍しい組み合わせ」に近い考え）。
+- 組み合わせの層（D-035）：橋の駅（広さの上位 1 割と、珍しい組み合わせの駅）、単元の中で珍しい領域の組、
+  古今東西の問題の中で少ない組と、まだ問題のない組（自作の問題の材料、2.16）。
 """
 import math
 from collections import Counter, defaultdict
@@ -75,3 +77,44 @@ def measure(units):
                 rarity, rare = score, (a, b)
         out[u["id"]] = {"breadth": round(breadth, 3), "rarity": round(rarity, 2), "regions": rs, "pair": list(rare) if rare else []}
     return out
+
+
+def _pairs(groups, n_min=2):
+    """領域の集まりの並びから、組ごとの出現 O と期待 E（各領域の出現の積 ÷ 数）を数える。"""
+    reg, pair, ex = Counter(), Counter(), defaultdict(list)
+    for key, rs in groups:
+        reg.update(rs)
+        for a, b in combinations(rs, 2):
+            pair[(a, b)] += 1
+            ex[(a, b)].append(key)
+    n = max(1, len(groups))
+    regs = sorted(reg)
+    rows = []
+    for a, b in combinations(regs, 2):
+        e = reg[a] * reg[b] / n
+        if e >= n_min:
+            rows.append({"a": a, "b": b, "o": pair[(a, b)], "e": round(e, 1), "ex": ex[(a, b)][:6]})
+    return rows
+
+
+def layer(units, catalog, comb, top=30):
+    """組み合わせの層の材料。comb は measure() の結果。"""
+    region = {u["id"]: u.get("region") for u in units}
+    dist = region_distance(units)
+    ranked = sorted((u["id"] for u in units if comb[u["id"]]["breadth"] > 0), key=lambda i: -comb[i]["breadth"])
+    cut = comb[ranked[len(ranked) // 10]]["breadth"] if ranked else 1.0
+    bridges = [i for i in ranked if comb[i]["breadth"] >= cut or comb[i]["rarity"] >= 1]
+    # 単元：直接の前提の領域の組。期待より少ない組を、珍しい順に
+    ug = [(u["id"], sorted({region[n] for n in u.get("needs", []) if region.get(n)})) for u in units]
+    upairs = [r for r in _pairs(ug) if r["o"] > 0 and r["e"] / r["o"] >= 2]
+    upairs.sort(key=lambda r: -r["e"] / r["o"])
+    # 問題：受け持つ単元の領域の組。少ない組と、まだ問題のない組（遠い組ほど上に）
+    pg = [(it["id"], sorted({region[x] for x in it.get("units") or [] if region.get(x)})) for it in catalog]
+    pg = [g for g in pg if g[1]]
+    prows = _pairs(pg)
+    for r in prows:
+        r["d"] = round(dist.get((r["a"], r["b"]), 1.0), 2)
+    prare = sorted([r for r in prows if r["o"] > 0 and r["e"] / r["o"] >= 2], key=lambda r: -r["e"] / r["o"])
+    unseen = sorted([r for r in prows if r["o"] == 0], key=lambda r: -(r["e"] * r["d"]))
+    return {"cut": round(cut, 3), "bridges": bridges, "unitPairs": upairs[:top], "probPairs": prare[:top],
+            "probUnseen": [{k: r[k] for k in ("a", "b", "e", "d")} for r in unseen[:top]], "problems": len(pg)}
