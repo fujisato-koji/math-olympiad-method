@@ -28,7 +28,7 @@ items:
   - CB066
   units:
   - B-037
-  - B-051
+  - I-005
   - I-031
 - id: T-02
   field: 生命
@@ -37,7 +37,7 @@ items:
   - CB066
   units:
   - B-037
-  - B-051
+  - I-005
 - id: T-03
   field: 生命
   topic: 遺伝情報の流れ（DNA から mRNA、タンパク質へ）
@@ -67,7 +67,7 @@ items:
   sources:
   - CB066
   units:
-  - B-051
+  - I-005
 - id: T-07
   field: 生命
   topic: mRNA の形式（修飾 mRNA、自己増幅型 mRNA）
@@ -81,7 +81,7 @@ items:
   sources:
   - CB068
   units:
-  - B-051
+  - I-005
   - K-114
 - id: T-09
   field: 計算
@@ -105,5 +105,5 @@ items:
   sources:
   - CB067
   units:
-  - B-049
+  - I-003
   - I-040

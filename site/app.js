@@ -288,15 +288,11 @@
     'kakuritsu', 'graph', 'katachi', 'hakaru', 'shomei-zukei', 'zahyo', 'haichi', 'suiri', 'ronpo']);
   const MAP_GROUPS = [
     ['all', 'すべて', () => true],
-    ['school', '算数と数学オリンピック', rg => SCHOOL_REGIONS.has(rg.id)],
+    // 1 つのボタンは 1 つの分野（流れ）。違う分野を「〇と〇」で抱き合わせない（D-033）
+    ['school', '小中高の数学', rg => SCHOOL_REGIONS.has(rg.id)],
     ['univ', '大学の数学', rg => !SCHOOL_REGIONS.has(rg.id) && ('NACGLDMRTS'.includes(rg.lane) || rg.id === 'suchi')],
-    ['phys', '物理', rg => rg.lane === 'P'],
-    ['eng', '工学と計算', rg => rg.lane === 'E' || (rg.lane === 'K' && rg.id !== 'suchi')],
-    ['life', '化学と生物', rg => 'HB'.includes(rg.lane)],
-    ['fin', '経済と金融', rg => rg.lane === 'F'],
-    ['earth', '地球科学', rg => rg.lane === 'W'],
-    ['med', '医学と健康', rg => rg.lane === 'I'],
-    ['agri-psy', '農学と心理学', rg => 'VQ'.includes(rg.lane)],
+    ['cs', '計算機科学', rg => rg.lane === 'K' && rg.id !== 'suchi'],
+    ...'PHBWIQVEF'.split('').map(l => [l, LANES[l].name, rg => rg.lane === l]),
   ];
   function drawMap() {
     const host = $('#map');

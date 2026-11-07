@@ -85,7 +85,7 @@ items:
   - MD01
   units:
   - I-052
-  - B-050
+  - I-004
   - I-016
   - I-015
 - id: T-11
@@ -94,8 +94,8 @@ items:
   sources:
   - MD01
   units:
-  - B-047
-  - B-048
+  - I-001
+  - I-002
   - I-029
   - I-030
   - I-050
@@ -113,7 +113,7 @@ items:
   sources:
   - MD01
   units:
-  - B-051
+  - I-005
   - I-030
   - I-031
 - id: T-14

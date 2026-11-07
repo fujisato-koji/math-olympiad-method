@@ -174,7 +174,7 @@ items:
   - CB016
   units:
   - B-053
-  - B-047
+  - I-001
 - id: T-15
   field: 生命
   topic: 染色体の数の異常が細胞に及ぼす影響 2019
@@ -196,7 +196,7 @@ items:
   sources:
   - CB016
   units:
-  - B-051
+  - I-005
 - id: T-18
   field: 生命
   topic: 脂肪組織が脳へ摂食を伝える内分泌系 2020
@@ -204,7 +204,7 @@ items:
   - CB017
   units:
   - B-035
-  - B-050
+  - I-004
 - id: T-19
   field: 生命
   topic: 分子シャペロンによるタンパク質の折りたたみ 2020
@@ -274,7 +274,7 @@ items:
   - CB019
   units:
   - B-053
-  - B-051
+  - I-005
 - id: T-28
   field: 生命
   topic: 大規模並列の DNA 配列決定 2022
@@ -313,7 +313,7 @@ items:
   sources:
   - CB021
   units:
-  - B-051
+  - I-005
   - B-053
 - id: T-33
   field: 生命
@@ -321,7 +321,7 @@ items:
   sources:
   - CB021
   units:
-  - B-047
+  - I-001
   - H-056
 - id: T-34
   field: 生命
@@ -337,14 +337,14 @@ items:
   - CB022
   units:
   - B-035
-  - B-047
+  - I-001
 - id: T-36
   field: 生命
   topic: 多発性硬化症と B 細胞 2025
   sources:
   - CB022
   units:
-  - B-051
+  - I-005
 - id: T-37
   field: 生命
   topic: 二本鎖を切らない遺伝子編集（塩基編集とプライム編集）2025
@@ -484,7 +484,7 @@ items:
   - CB025
   units:
   - B-035
-  - B-050
+  - I-004
   - B-137
 - id: T-54
   field: その他

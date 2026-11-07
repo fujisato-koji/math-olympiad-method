@@ -75,8 +75,8 @@ items:
   sources:
   - CB032
   units:
-  - B-051
-  - B-047
+  - I-005
+  - I-001
   - I-023
   - I-050
 - id: T-05
@@ -86,7 +86,7 @@ items:
   - CB033
   units:
   - B-044
-  - B-050
+  - I-004
 - id: T-06
   field: 生命
   topic: C 型肝炎ウイルスの発見 2020
@@ -119,7 +119,7 @@ items:
   - CB034
   units:
   - B-053
-  - B-051
+  - I-005
 - id: T-10
   field: 生命
   topic: マイクロ RNA と転写後の遺伝子の調節 2024
@@ -134,7 +134,7 @@ items:
   sources:
   - CB034
   units:
-  - B-051
+  - I-005
 - id: T-12
   field: 生命
   topic: 光で開くイオンチャネルと光遺伝学 2026
@@ -214,7 +214,7 @@ items:
   - CB035
   units:
   - B-036
-  - B-050
+  - I-004
   - B-037
 - id: T-22
   field: 物理
@@ -320,7 +320,7 @@ items:
   topic: 嚢胞性線維症の 3 剤併用療法（遺伝子の型に合わせて CFTR の働きを直す薬）2025 ラスカー臨床
   units:
   - I-024
-  - B-047
+  - I-001
   - I-053
   sources:
   - MD04
@@ -365,7 +365,7 @@ items:
   units:
   - I-028
   - I-029
-  - B-049
+  - I-003
   sources:
   - MD06
 - id: V-07
@@ -381,7 +381,7 @@ items:
   topic: 麻酔薬プロポフォールの発見と開発 2018 ラスカー臨床
   units:
   - I-026
-  - B-048
+  - I-002
   sources:
   - MD05
 - id: V-09
