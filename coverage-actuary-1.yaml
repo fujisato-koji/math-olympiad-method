@@ -94,7 +94,8 @@ items:
   topic: 時系列解析
   sources:
   - CR31
-  none: 地図にない（候補：時系列解析）
+  units:
+  - F-034
 - id: T-13
   field: 数学
   topic: 確率過程
@@ -117,193 +118,232 @@ items:
   topic: 利息の計算
   sources:
   - CR31
-  none: 地図にない（候補：利息の理論（複利、年金現価、債券））
+  units:
+  - F-002
+  - F-003
+  - F-005
 - id: T-16
   field: 数学
   topic: 生命表と生命関数、脱退残存表
   sources:
   - CR31
-  none: 地図にない（候補：生命表と生命関数）
+  units:
+  - F-014
 - id: T-17
   field: 数学
   topic: 純保険料
   sources:
   - CR31
-  none: 地図にない（候補：生命保険数学（純保険料））
+  units:
+  - F-015
 - id: T-18
   field: 数学
   topic: 責任準備金（純保険料式）と計算基礎の変更
   sources:
   - CR31
-  none: 地図にない（候補：生命保険数学（責任準備金））
+  units:
+  - F-016
 - id: T-19
   field: 数学
   topic: 営業保険料と実務上の責任準備金
   sources:
   - CR31
-  none: 地図にない（候補：生命保険数学（営業保険料））
+  units:
+  - F-027
 - id: T-20
   field: 数学
   topic: 解約その他の諸変更に伴う計算
   sources:
   - CR31
-  none: 地図にない（候補：生命保険数学（契約の変更））
+  units:
+  - F-027
 - id: T-21
   field: 数学
   topic: 連合生命の保険と年金
   sources:
   - CR31
-  none: 地図にない（候補：連合生命の保険数学）
+  units:
+  - F-028
 - id: T-22
   field: 数学
   topic: 就業不能・要介護の給付、災害と疾病の保険
   sources:
   - CR31
-  none: 地図にない（候補：就業不能・要介護・疾病の保険数学）
+  units:
+  - F-028
 - id: T-23
   field: 数学
   topic: 料率算定の基礎（回帰分析を含む）とリスクモデル
   sources:
   - CR31
-  none: 地図にない（候補：損害保険数理（料率算定とリスクモデル））
+  units:
+  - F-018
+  - F-017
 - id: T-24
   field: 数学
   topic: 純保険料と営業保険料の算定
   sources:
   - CR31
-  none: 地図にない（候補：損害保険数理（保険料の算定））
+  units:
+  - F-018
 - id: T-25
   field: 数学
   topic: 信頼性理論
   sources:
   - CR31
-  none: 地図にない（候補：信頼性理論（クレディビリティ））
+  units:
+  - F-031
 - id: T-26
   field: 数学
   topic: 経験料率とクラス料率
   sources:
   - CR31
-  none: 地図にない（候補：損害保険数理（経験料率とクラス料率））
+  units:
+  - F-018
+  - F-031
 - id: T-27
   field: 数学
   topic: 支払備金の数理
   sources:
   - CR31
-  none: 地図にない（候補：損害保険数理（支払備金））
+  units:
+  - F-019
 - id: T-28
   field: 数学
   topic: 積立保険の数理
   sources:
   - CR31
-  none: 地図にない（候補：積立保険の数理）
+  units:
+  - F-018
 - id: T-29
   field: 数学
   topic: 保険料算出原理
   sources:
   - CR31
-  none: 地図にない（候補：保険料算出原理）
+  units:
+  - F-032
 - id: T-30
   field: 数学
   topic: 危険理論の基礎
   sources:
   - CR31
-  none: 地図にない（候補：危険理論）
+  units:
+  - F-017
+  - F-037
 - id: T-31
   field: 数学
   topic: 再保険の数理
   sources:
   - CR31
-  none: 地図にない（候補：再保険の数理）
+  units:
+  - F-032
 - id: T-32
   field: 数学
   topic: リスク評価の数理
   sources:
   - CR31
-  none: 地図にない（候補：リスク尺度とリスク評価）
+  units:
+  - F-038
 - id: T-33
   field: 数学
   topic: 年金数理の基本原理と計算基礎率
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（基本原理と計算基礎率））
+  units:
+  - F-029
 - id: T-34
   field: 数学
   topic: 年金現価率
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（年金現価率））
+  units:
+  - F-029
 - id: T-35
   field: 数学
   topic: 定常人口論（人口モデルを含む）
   sources:
   - CR31
-  none: 地図にない（候補：定常人口論）
+  units:
+  - F-029
 - id: T-36
   field: 数学
   topic: 財政方式
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（財政方式））
+  units:
+  - F-029
 - id: T-37
   field: 数学
   topic: 保険料と責任準備金（年金）
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（保険料と責任準備金））
+  units:
+  - F-030
 - id: T-38
   field: 数学
   topic: 積立金と過去勤務債務
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（積立金と過去勤務債務））
+  units:
+  - F-030
 - id: T-39
   field: 数学
   topic: 数理的損益分析
   sources:
   - CR31
-  none: 地図にない（候補：年金数理（数理的損益分析））
+  units:
+  - F-030
 - id: T-40
   field: その他
   topic: 財務会計の機能と制度、利益計算、会計理論と会計基準
   sources:
   - CR31
-  none: 地図にない（候補：財務会計）
+  units:
+  - F-010
 - id: T-41
   field: その他
   topic: 資産の会計（有価証券、売上債権、棚卸資産、有形・無形固定資産）
   sources:
   - CR31
-  none: 地図にない（候補：財務会計（資産の会計））
+  units:
+  - F-010
 - id: T-42
   field: その他
   topic: 負債と純資産、財務諸表の作成と公開
   sources:
   - CR31
-  none: 地図にない（候補：財務会計（負債と純資産、財務諸表））
+  units:
+  - F-010
 - id: T-43
   field: その他
   topic: ミクロ経済学（需要と供給、消費者行動、費用と供給、資源配分、ゲームの理論入門）
   sources:
   - CR31
-  none: 地図にない（候補：ミクロ経済学）
+  units:
+  - F-008
+  - F-012
+  - F-024
 - id: T-44
   field: その他
   topic: マクロ経済学（有効需要と乗数、貨幣、マクロ経済政策）
   sources:
   - CR31
-  none: 地図にない（候補：マクロ経済学）
+  units:
+  - F-013
 - id: T-45
   field: 数学
   topic: 投資家の選好とポートフォリオ理論
   sources:
   - CR31
-  none: 地図にない（候補：ポートフォリオ理論）
+  units:
+  - F-020
 - id: T-46
   field: 数学
   topic: CAPM
   sources:
   - CR31
-  none: 地図にない（候補：資本資産価格モデル（CAPM））
+  units:
+  - F-022
 - id: T-47
   field: 数学
   topic: リスク中立の価格づけとデリバティブの評価理論
@@ -317,4 +357,8 @@ items:
   topic: 債券・株式・デリバティブの投資分析
   sources:
   - CR31
-  none: 地図にない（候補：債券・株式・デリバティブの投資分析）
+  units:
+  - F-006
+  - F-009
+  - F-011
+  - F-021

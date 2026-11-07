@@ -119,6 +119,13 @@ regions:
   - {id: seibutsu-butsuri, name: 生物物理, lane: B}
   - {id: hokei, name: 保型形式とガロア表現, lane: N}
   - {id: risan-kika, name: 離散幾何, lane: G}
+  - {id: risoku, name: お金と利息, lane: F}
+  - {id: kaikei, name: 会計と企業金融, lane: F}
+  - {id: keizai, name: 経済学, lane: F}
+  - {id: seimei-nenkin, name: 生命保険と年金の数理, lane: F}
+  - {id: songai, name: 損害保険とリスク理論, lane: F}
+  - {id: toshi, name: 投資と派生商品, lane: F}
+  - {id: keiryo-risk, name: 計量とリスク管理, lane: F}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -216,6 +223,13 @@ goals:
   - {id: smale-18, name: スメイルの 18 の問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 1998 年にスメイルが「21 世紀に解くべき」と挙げた 18 の問題（リーマン予想、P=NP、ナヴィエ–ストークス方程式など）に挑む。, coverage: coverage-smale-18.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 4、一部解決 4、未解決 8、問いが曖昧 2）。第 1、3、15 問題はミレニアム懸賞問題と重なる。第 16 問題の反例は査読前だが、第三者が形式検証したので解決に数える。第 13 問題の 2026 年の OpenAI の主張は査読前で数えない。第 8、18 問題は研究計画で完了の基準がない。}
   - {id: solved-great, name: 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど）, kind: 夢, level: 大学院（博士）以上, region: 国際, note: フェルマーの最終定理やポアンカレ予想のように、何十年も何百年も解けなかった問題の証明を、読んで分かるようになる。, coverage: coverage-solved-great.yaml, beyond: 証明の論文は長く（ワイルズは 109 ページと共著 20 ページ、ヘイルズは 121 ページ）、ケプラー予想の証明は計算機の確認に頼る。三次元の掛谷、幾何学的ラングランズ（全 5 部作）、ケルヴェア不変量の 126 次元、マッケイ予想は arXiv の段階で、掲載誌の記載がない（マッケイは Annals に掲載予定）。マッケイ予想の証明に要る有限単純群の分類は地図にない。}
   - {id: icm-2026, name: ICM 2026 の部会に当たる 16 分野の研究の入口, kind: 夢, level: 大学院（博士）, region: 国際, note: 国際数学者会議（ICM 2026、フィラデルフィア）の部会に当たる 16 の研究分野で、大学院で最初に学ぶことをそろえる。, coverage: coverage-icm-2026.yaml, beyond: 入口は、SLMath の夏の大学院学校の前提、大学院の資格試験の範囲、教科書の序文が名指ししたものだけを取った。部会と分野の対応は本書が当てたもので、IMU が当てたものではない。2026 年の部会の定義文は確かめておらず、2019 年の構造委員会報告の定義を使った。数値解析、制御と最適化、統計と機械学習、確率モデル、教育、歴史の 6 部会は対象外。研究者になるには博士課程と論文の業績が要る。}
+  - {id: actuary-2, name: 日本アクチュアリー会の資格試験（第 2 次試験）, kind: 資格, level: 大学（卒業後の実務）, region: 日本, note: 保険会社や年金の仕事をするアクチュアリーが、商品の値段や決算の数字を自分で決めて、そのわけを書いて説明できるかを確かめる試験。, coverage: coverage-actuary-2.yaml, beyond: 第 1 次試験の全 5 科目に合格した準会員だけが受けられる。生保・損保・年金から 1 つのコースを選び 2 科目を受ける。第Ⅱ部は問題解決の力を問う論述。正会員になるには合格のあとプロフェッショナリズム研修と特定分野研修を終え、理事会の承認を受ける。関連の法規と監督指針は前提の知識}
+  - {id: soa-asa, name: Society of Actuaries（SOA）の ASA の試験, kind: 資格, level: 大学, region: 米国・カナダ, note: 北米で保険や年金のお金を確率と利息で計算するアクチュアリーの、準会員（ASA）になるための 7 つの試験。, coverage: coverage-soa-asa.yaml, beyond: 試験のほかに VEE（数理統計、経済、会計と財務）の単位、Pre-Actuarial と Actuarial Science の Foundations Module、ATPA の評価、FAP の e-Learning 課程、職業倫理の課程 APC。ALTAM と ASTAM はどちらか一方でよい}
+  - {id: cfa-program, name: CFA Institute の CFA Program（Level I〜III）, kind: 資格, level: 大学, region: 国際, note: 世界の投資の専門家が、会社や債券の値打ちを調べ、お客さまのお金をどう分けて運ぶかを決める力を確かめる 3 段の試験。, coverage: coverage-cfa-program.yaml, beyond: "受験には学士（在学中なら卒業の 23 か月前以内に Level I）か、職務と高等教育を合わせて 4,000 時間と旅券が要る。各 Level で Practical Skills Module を 1 つ終える。charter には投資判断に関わる実務 4,000 時間（36 か月以上）、推薦状、正会員としての入会、毎年の Professional Conduct Statement が要る"}
+  - {id: saa-cma, name: 日本証券アナリスト協会の認定アナリスト（CMA）試験, kind: 資格, level: 大学, region: 日本, note: 会社や株や債券の値打ちを分析して、投資の判断を助ける専門家（証券アナリスト）の日本の資格。, coverage: coverage-saa-cma.yaml, beyond: 協会の講座を受けないと受験できない（第 1 次・第 2 次とも受講の翌年から原則 3 年）。第 2 次の合格と通算 3 年以上の実務経験で入会して CMA を名乗れる。倫理の得点が水準に届かないと総点に関係なく不合格}
+  - {id: nobel-economics, name: ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学, kind: 夢, level: 大学院（博士）, region: 国際, note: お金と市場と銀行のしくみを数学とデータで解き明かし、世界の投資や銀行のやり方を変えた研究者に贈られる賞。, coverage: coverage-nobel-economics.yaml, beyond: 博士号のあと何十年もの独創的な研究、学術誌の論文、ほかの研究者や実務の人が使って確かめた成果。生きている人だけが受ける}
+  - {id: jane-street-qr, name: Jane Street のクオンツ研究者（Quantitative Researcher）, kind: 夢, level: 大学（学士。博士や研究の経験があれば有利）, region: 米国（ニューヨーク）ほか, note: 世界中の市場の大量のデータから、確率と統計とプログラムで値動きの手がかりを見つけ、売り買いの判断に生かす研究者。, coverage: coverage-jane-street-qr.yaml, beyond: 金融の知識は入社の前には問わない。論理と数学で解く力、好奇心、誤りを認める姿勢、いろいろな経歴の人とのチームワーク、正確に伝える力。面接は確率の問題、コード、データ分析}
+  - {id: boj-economist, name: 日本銀行の金融・経済研究員, kind: 夢, level: 大学院（博士）, region: 日本, note: 日本のお金と金利の舵をとる日本銀行で、景気や物価や金融のしくみを研究し、政策の判断を支える経済学者。, coverage: coverage-boj-economist.yaml, beyond: 金融・経済の博士（取る見込みを含む）か研究機関の研究者。独自の学術研究とサーベイ論文、行内向けの調査。選考は書類と面接}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -423,6 +437,7 @@ units:
   - {id: N-060, title: お金の計算, stage: 2, region: keisan, needs: [N-007], days: 4}
   - {id: G-046, title: 長さ・重さ・かさの単位と測定, stage: 2, region: hakaru, needs: [G-005, N-007], days: 5}
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, region: data, needs: [N-006], days: 5}
+  - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, region: risoku, needs: [N-060], days: 4}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, region: keisan, needs: [N-007], days: 8}
@@ -470,6 +485,7 @@ units:
   - {id: L-010, title: 後ろから考える必勝法, stage: 3, region: suiri, needs: [L-004], days: 5}
   - {id: N-061, title: 概数と見積もり（四捨五入）, stage: 3, region: keisan, needs: [N-009, N-013], days: 5}
   - {id: S-028, title: 平均と代表値, stage: 3, region: data, needs: [S-027, N-014, N-020], days: 5}
+  - {id: F-002, title: 利息と複利（元金が何倍になるか）, stage: 3, region: risoku, needs: [F-001, A-005, A-009], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -508,6 +524,8 @@ units:
   - {id: L-032, title: 離散的な中間値の議論, stage: 4, region: ronpo, needs: [L-011], days: 5}
   - {id: L-033, title: 作って示す、評価で示す（構成と評価の入口）, stage: 4, region: ronpo, needs: [L-007, L-011], days: 8}
   - {id: S-029, title: 度数分布と箱ひげ図（データの分析）, stage: 4, region: data, needs: [S-028, A-005], days: 6}
+  - {id: F-003, title: 現在価値と割引（将来のお金を今の値打ちに直す）, stage: 4, region: risoku, needs: [F-002, A-010], days: 5}
+  - {id: F-004, title: 複式簿記（仕訳、勘定、試算表）, stage: 4, region: kaikei, needs: [F-001, A-011], days: 6}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, region: kansu, needs: [A-006, A-011], days: 6}
@@ -567,6 +585,10 @@ units:
   - {id: A-038, title: 分数関数と無理関数, stage: 5, region: kansu, needs: [A-020, A-037], days: 6}
   - {id: S-030, title: 散布図と相関（記述統計）, stage: 5, region: data, needs: [S-029, A-019], days: 6}
   - {id: S-031, title: 標本調査、観察研究と実験計画, stage: 5, region: data, needs: [S-029, C-011], days: 6}
+  - {id: F-005, title: 年金現価とローン、利率の換算（償還表、実効利率、利力）, stage: 5, region: risoku, needs: [F-003, A-022, D-001, D-002], days: 8}
+  - {id: F-006, title: 債券の価格と利回り（クーポン、満期、償還）, stage: 5, region: risoku, needs: [F-005], days: 6}
+  - {id: F-007, title: 投資の採算と費用便益（正味現在価値、内部収益率、損益分岐）, stage: 5, region: kaikei, needs: [F-005, A-019], days: 6}
+  - {id: F-008, title: 需要と供給（市場の価格と数量）, stage: 5, region: keizai, needs: [A-019, A-012], days: 6}
 
   # ---- 段 6 構造 ----
   - {id: N-032, title: 合同式, stage: 6, region: seisuron, needs: [N-028, A-010], days: 13}
@@ -650,6 +672,19 @@ units:
   - {id: G-047, title: 極座標と極方程式, stage: 6, region: zahyo, needs: [G-025, G-026], days: 6}
   - {id: D-071, title: 媒介変数表示と曲線（速度と道のり）, stage: 6, region: bisekibun, needs: [D-005, G-025, G-027], days: 8}
   - {id: M-013, title: 外積とスカラー三重積, stage: 6, region: senkei-keisan, needs: [G-027, M-004], days: 6}
+  - {id: F-009, title: 金利の期間構造とデュレーション（スポットレート、フォワードレート、イミュニゼーション）, stage: 6, region: risoku, needs: [F-006, D-005], days: 8}
+  - {id: F-010, title: 財務会計と財務分析（財務諸表、資産・負債・純資産の会計、会計基準）, stage: 6, region: kaikei, needs: [F-004, F-003], days: 10}
+  - {id: F-011, title: 株式の価値評価（配当割引モデル、DCF 法、倍率法）, stage: 6, region: toshi, needs: [F-005, F-010], days: 8}
+  - {id: F-012, title: ミクロ経済学（消費者行動、費用と供給、市場均衡と余剰）, stage: 6, region: keizai, needs: [F-008, D-014], days: 10}
+  - {id: F-013, title: マクロ経済学（国民所得と乗数、貨幣と金利、財政・金融政策、為替）, stage: 6, region: keizai, needs: [F-008, F-005], days: 10}
+  - {id: F-014, title: 生命表と生存モデル（生命関数、死力、脱退残存表）, stage: 6, region: seimei-nenkin, needs: [S-001, S-003], days: 8}
+  - {id: F-015, title: 生命保険と生命年金の現価、純保険料（収支相等の原則）, stage: 6, region: seimei-nenkin, needs: [F-014, F-005, C-020], days: 10}
+  - {id: F-016, title: 責任準備金（将来法と過去法、ティーレの微分方程式、計算基礎の変更）, stage: 6, region: seimei-nenkin, needs: [F-015, D-044], days: 8}
+  - {id: F-017, title: 損害額と集合リスクモデル（頻度と損害額の分布、複合分布、免責と支払限度）, stage: 6, region: songai, needs: [S-002, S-003, S-004], days: 10}
+  - {id: F-018, title: 損害保険の料率算定（純保険料と営業保険料、経験料率とクラス料率、積立保険）, stage: 6, region: songai, needs: [F-017, S-020, F-005], days: 10}
+  - {id: F-019, title: 支払備金（チェイン・ラダー法と IBNR 備金）, stage: 6, region: songai, needs: [F-017, S-020], days: 8}
+  - {id: F-020, title: 投資家の選好とポートフォリオ選択（期待効用、リスク回避、平均分散）, stage: 6, region: toshi, needs: [S-003, M-010, D-014, A-028], days: 10}
+  - {id: F-021, title: 先渡・先物・スワップと二項モデル（裁定と複製による価格づけ）, stage: 6, region: toshi, needs: [F-009, S-001, C-015], days: 10}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根, stage: 7, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -781,6 +816,19 @@ units:
   - {id: E-075, title: 雑音除去と圧縮, stage: 7, region: kairo-shingo, needs: [K-012, K-013, K-014], days: 10}
   - {id: E-106, title: 構造設計の意思決定と荷重外力の評価、信頼性理論による性能の定量化, stage: 7, region: doboku, needs: [E-001, S-001], days: 10}
   - {id: E-107, title: 一次近似信頼性手法と限界状態設計法、建築物の地震動リスク, stage: 7, region: doboku, needs: [E-106, S-003], days: 10}
+  - {id: F-022, title: 資本資産価格モデル（CAPM）とファクターモデル、運用成果の測定, stage: 7, region: toshi, needs: [F-020, S-020], days: 8}
+  - {id: F-023, title: 企業金融（資本コスト、資本構成、配当政策、企業価値の評価）, stage: 7, region: kaikei, needs: [F-007, F-010, F-011, F-022], days: 10}
+  - {id: F-024, title: ゲーム理論（ナッシュ均衡、展開形ゲーム、オークション、情報の非対称性）, stage: 7, region: keizai, needs: [F-012, K-011, S-001], days: 10}
+  - {id: F-025, title: 経済成長と動学マクロ経済学（成長モデル、最適成長、景気循環）, stage: 7, region: keizai, needs: [F-013, D-044, K-010], days: 10}
+  - {id: F-026, title: 金融仲介と銀行（満期変換、取り付けのモデル、金融危機と規制）, stage: 7, region: keizai, needs: [F-024, F-013], days: 8}
+  - {id: F-027, title: 営業保険料と収益検証（付加保険料、解約返戻金、アセットシェア、契約者配当）, stage: 7, region: seimei-nenkin, needs: [F-016], days: 10}
+  - {id: F-028, title: 連合生命と多重状態モデル（連生保険と連生年金、多重脱退、就業不能・要介護の給付）, stage: 7, region: seimei-nenkin, needs: [F-016, S-005], days: 10}
+  - {id: F-029, title: 年金制度と年金財政の基礎（計算基礎率、年金現価率、定常人口、財政方式）, stage: 7, region: seimei-nenkin, needs: [F-015], days: 10}
+  - {id: F-030, title: 年金の保険料と積立金（責任準備金、過去勤務債務、数理的損益分析、退職給付会計）, stage: 7, region: seimei-nenkin, needs: [F-029, F-016, F-010], days: 10}
+  - {id: F-031, title: クレジビリティ理論（ベイズの考え、ビュールマン・モデル）, stage: 7, region: songai, needs: [F-017, S-022], days: 8}
+  - {id: F-032, title: 保険料算出原理と再保険（期待値・分散・効用の原理、比例再保険と超過損害額再保険）, stage: 7, region: songai, needs: [F-017, F-020], days: 8}
+  - {id: F-033, title: 計量経済学（回帰と内生性、操作変数、パネルデータ、一般化モーメント法）, stage: 7, region: keiryo-risk, needs: [S-020, S-021], days: 10}
+  - {id: F-034, title: 時系列解析（自己回帰移動平均、単位根と共和分、ボラティリティの変動）, stage: 7, region: keiryo-risk, needs: [S-020, S-021, A-022], days: 10}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1034,6 +1082,10 @@ units:
   - {id: E-152, title: 建築と音（2）：吸音・遮音と材料、騒音の測定と評価, stage: 8, region: onkyo, needs: [E-151], days: 12}
   - {id: E-153, title: 建築と音（3）：室内音響計画、電気音響設備、可視化と可聴化, stage: 8, region: onkyo, needs: [E-152], days: 12}
   - {id: G-048, title: 球充填と格子, stage: 8, region: risan-kika, needs: [G-021, M-006, M-010, D-007], days: 8}
+  - {id: F-035, title: ブラック–ショールズ・モデル（連続時間のオプション価格、ギリシャ文字とヘッジ）, stage: 8, region: toshi, needs: [F-021, S-015, S-017, D-049], days: 10}
+  - {id: F-036, title: 資産価格の実証（効率的市場、過剰変動、確率的割引因子）, stage: 8, region: toshi, needs: [F-022, F-033, F-034], days: 10}
+  - {id: F-037, title: 破産理論（複合ポアソン過程、ルンドベリの不等式、破産確率）, stage: 8, region: songai, needs: [F-017, S-009, S-011], days: 10}
+  - {id: F-038, title: リスク尺度と統合的リスク管理（VaR、期待ショートフォール、ALM、ERM、経済価値ベースのソルベンシー）, stage: 8, region: keiryo-risk, needs: [F-009, F-017, F-020, S-023], days: 10}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1234,6 +1286,7 @@ units:
   - {id: L-036, title: 定理証明支援系と形式証明, stage: 9, region: suri-ronri, needs: [L-024, L-030], days: 8}
   - {id: K-120, title: 精度保証付き数値計算（区間演算）, stage: 9, region: suchi, needs: [K-002, D-016], days: 8}
   - {id: K-121, title: ブール関数と回路計算量, stage: 9, region: keisan-riron, needs: [K-041, C-029], days: 8}
+  - {id: F-039, title: 期間構造モデルと信用リスク（短期金利モデル、測度変換、デフォルト強度）, stage: 9, region: toshi, needs: [F-035, S-016], days: 12}
 
   # ---- 段 10 新しい対象をつくる ----
 

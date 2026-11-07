@@ -259,7 +259,8 @@ def build_coverage(goal, cov, titles):
         lines.append("")
     lines += ["## 出典", "", "| 記号 | 題名 | URL | 取得日 |", "|---|---|---|---|"]
     for k, s in cov.get("sources", {}).items():
-        lines.append(f"| {k} | {s['title']} | {s['url']} | {s.get('date', '')} |")
+        note = f"（{s['note']}）" if s.get("note") else ""
+        lines.append(f"| {k} | {s['title']}{note} | {s['url']} | {s.get('date', '')} |")
     name = Path(goal["coverage"]).stem + ".md"
     (ROOT / "docs" / name).write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 

@@ -1,0 +1,62 @@
+# 網羅表：Jane Street のクオンツ研究者（Quantitative Researcher）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FN023:
+    title: Jane Street, Quantitative Researcher, New York
+    url: https://www.janestreet.com/join-jane-street/position/6302325002/
+    date: '2026-11-07'
+  FN024:
+    title: Jane Street, Trading Interviews
+    url: https://www.janestreet.com/trading-interviews/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 確率と統計
+  topic: 確率と期待値で素早く考える（面接の中心）
+  sources:
+  - FN024
+  units:
+  - S-001
+  - C-020
+  - S-002
+- id: T-02
+  field: 確率と統計
+  topic: 統計とデータ分析
+  sources:
+  - FN023
+  - FN024
+  units:
+  - S-018
+  - S-019
+  - S-020
+- id: T-03
+  field: 確率と統計
+  topic: 時系列の分析
+  sources:
+  - FN023
+  units:
+  - F-034
+- id: T-04
+  field: 計算
+  topic: 特徴量づくりと線形モデル
+  sources:
+  - FN023
+  units:
+  - S-020
+  - K-063
+- id: T-05
+  field: 計算
+  topic: 深層学習と大規模な計算（ペタバイト級のデータ、GPU）
+  sources:
+  - FN023
+  units:
+  - K-047
+  - K-051
+- id: T-06
+  field: 計算
+  topic: プログラミング（Python）
+  sources:
+  - FN023
+  - FN024
+  units:
+  - K-012
+  - K-016

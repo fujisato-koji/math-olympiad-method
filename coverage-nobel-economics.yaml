@@ -1,0 +1,125 @@
+# 網羅表：ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FN016:
+    title: Nobel Prize Outreach, The Sveriges Riksbank Prize in Economic Sciences in Memory of Alfred Nobel 1990, Press release
+    url: https://www.nobelprize.org/prizes/economic-sciences/1990/press-release/
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN017:
+    title: Nobel Prize Outreach, The Prize in Economic Sciences 1997, Press release
+    url: https://www.nobelprize.org/prizes/economic-sciences/1997/press-release/
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN018:
+    title: 'Royal Swedish Academy of Sciences, Scientific Background on the Prize in Economic Sciences 2013: Understanding Asset Prices'
+    url: https://www.nobelprize.org/uploads/2013/10/advanced-economicsciences2013.pdf
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN019:
+    title: 'Royal Swedish Academy of Sciences, Scientific Background on the Prize in Economic Sciences 2022: Financial Intermediation and the Economy'
+    url: https://www.nobelprize.org/uploads/2022/10/advanced-economicsciencesprize2022.pdf
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN020:
+    title: Nobel Prize Outreach, The Prize in Economic Sciences 2003, Press release
+    url: https://www.nobelprize.org/prizes/economic-sciences/2003/press-release/
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN021:
+    title: Royal Swedish Academy of Sciences, Scientific Background on the Prize in Economic Sciences 2002
+    url: https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2002.pdf
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+  FN022:
+    title: Royal Swedish Academy of Sciences, Scientific Background on the Prize in Economic Sciences 2017
+    url: https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2017.pdf
+    date: '2026-11-07'
+    note: 取得できず（403）、題名と論題は検索結果の要約から取った。本文は未確認
+items:
+- id: T-01
+  field: 受賞の研究
+  topic: 不確実性のもとでのポートフォリオ選択（平均分散、1990 年 Markowitz）
+  sources:
+  - FN016
+  units:
+  - F-020
+- id: T-02
+  field: 受賞の研究
+  topic: 資本資産価格モデル（CAPM、1990 年 Sharpe）
+  sources:
+  - FN016
+  units:
+  - F-022
+- id: T-03
+  field: 受賞の研究
+  topic: 企業金融の理論（資本構成、モディリアーニ＝ミラー、1990 年 Miller）
+  sources:
+  - FN016
+  units:
+  - F-023
+- id: T-04
+  field: 受賞の研究
+  topic: デリバティブの価値の決め方（ブラック–ショールズ–マートン、1997 年）
+  sources:
+  - FN017
+  units:
+  - F-035
+- id: T-05
+  field: 受賞の研究
+  topic: 複製による価格づけ（リスクプレミアムの要らない評価、1997 年）
+  sources:
+  - FN017
+  units:
+  - F-021
+  - S-017
+- id: T-06
+  field: 受賞の研究
+  topic: 短期の株価の予測しにくさ（効率的市場、2013 年 Fama）
+  sources:
+  - FN018
+  units:
+  - F-036
+- id: T-07
+  field: 受賞の研究
+  topic: 株価の過剰な変動と長期の予測可能性（2013 年 Shiller）
+  sources:
+  - FN018
+  units:
+  - F-036
+- id: T-08
+  field: 受賞の研究
+  topic: 一般化モーメント法による資産価格の検証（2013 年 Hansen）
+  sources:
+  - FN018
+  units:
+  - F-033
+  - F-036
+- id: T-09
+  field: 受賞の研究
+  topic: 銀行の満期変換と取り付けのモデル（2022 年 Diamond、Dybvig）
+  sources:
+  - FN019
+  units:
+  - F-026
+- id: T-10
+  field: 受賞の研究
+  topic: 銀行の危機が不況を深めるしくみ（2022 年 Bernanke）
+  sources:
+  - FN019
+  units:
+  - F-026
+  - F-013
+- id: T-11
+  field: 受賞の研究
+  topic: 時間で変わるボラティリティ（ARCH）と共和分（2003 年 Engle、Granger）
+  sources:
+  - FN020
+  units:
+  - F-034
+- id: T-12
+  field: 受賞の研究
+  topic: 不確実性のもとでの判断と行動経済学（2002 年 Kahneman、2017 年 Thaler）
+  sources:
+  - FN021
+  - FN022
+  none: 地図にない（候補：行動経済学と行動ファイナンス）

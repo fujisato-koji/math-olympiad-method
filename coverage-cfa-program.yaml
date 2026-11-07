@@ -1,0 +1,143 @@
+# 網羅表：CFA Institute の CFA Program（Level I〜III）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FN009:
+    title: CFA Institute, CFA Program Level I exam（2026 年と 2027 年の出題比率）
+    url: https://www.cfainstitute.org/programs/cfa-program/candidate-resources/level-i-exam
+    date: '2026-11-07'
+  FN010:
+    title: CFA Institute, CFA Program Level II exam
+    url: https://www.cfainstitute.org/programs/cfa-program/candidate-resources/level-ii-exam
+    date: '2026-11-07'
+  FN011:
+    title: CFA Institute, CFA Program Level III exam
+    url: https://www.cfainstitute.org/programs/cfa-program/candidate-resources/level-iii-exam
+    date: '2026-11-07'
+  FN012:
+    title: CFA Institute, CFA Program Curriculum
+    url: https://www.cfainstitute.org/programs/cfa-program/curriculum
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 倫理
+  topic: 倫理と職業行為基準（L1 10–15%、L2 10–15%、L3 10–15%、2027 年版）
+  sources:
+  - FN009
+  - FN010
+  - FN011
+  none: 地図にない（候補：職業倫理と行為基準）
+- id: T-02
+  field: 数量
+  topic: 数量分析（利率と収益率、時間価値、確率、推定と検定、回帰、シミュレーション。L1 11–14%）
+  sources:
+  - FN009
+  - FN012
+  units:
+  - F-005
+  - S-018
+  - S-019
+  - S-020
+  - S-024
+- id: T-03
+  field: 経済
+  topic: 経済学（ミクロ、マクロ、為替。L1 6–9%）
+  sources:
+  - FN009
+  - FN012
+  units:
+  - F-012
+  - F-013
+- id: T-04
+  field: 財務
+  topic: 財務諸表分析（L1 11–14%、L2 10–15%）
+  sources:
+  - FN009
+  - FN010
+  units:
+  - F-010
+- id: T-05
+  field: 財務
+  topic: 企業財務（発行体、L1 6–9%）
+  sources:
+  - FN009
+  - FN012
+  units:
+  - F-023
+- id: T-06
+  field: 投資
+  topic: 株式投資（L1 11–14%、L2 10–15%）
+  sources:
+  - FN009
+  - FN010
+  units:
+  - F-011
+- id: T-07
+  field: 投資
+  topic: 債券（L1 11–14%、L2 10–15%）
+  sources:
+  - FN009
+  - FN010
+  units:
+  - F-006
+  - F-009
+  - F-039
+- id: T-08
+  field: 投資
+  topic: デリバティブとリスク管理（L1 6–9%、L3 10–15%）
+  sources:
+  - FN009
+  - FN011
+  units:
+  - F-021
+  - F-035
+  - F-038
+- id: T-09
+  field: 投資
+  topic: オルタナティブ投資（L1 6–9%）
+  sources:
+  - FN009
+  - FN012
+  none: 地図にない（候補：オルタナティブ投資（不動産、未公開株、ヘッジファンド））
+- id: T-10
+  field: 投資
+  topic: ポートフォリオの構築と管理（L1 8–12%、L3 15–20%）
+  sources:
+  - FN009
+  - FN011
+  units:
+  - F-020
+  - F-022
+- id: T-11
+  field: 投資
+  topic: 資産配分（L3 15–20%）
+  sources:
+  - FN011
+  units:
+  - F-020
+- id: T-12
+  field: 投資
+  topic: 運用成果の測定（L3 5–10%）
+  sources:
+  - FN011
+  units:
+  - F-022
+- id: T-13
+  field: 選択科目
+  topic: L3 の選択科目：ポートフォリオ運用（株式と債券の戦略、執行）
+  sources:
+  - FN011
+  units:
+  - F-020
+  - F-011
+  - F-009
+- id: T-14
+  field: 選択科目
+  topic: L3 の選択科目：私募市場（PE、私募債、不動産とインフラ）
+  sources:
+  - FN011
+  none: 地図にない（候補：オルタナティブ投資（不動産、未公開株、ヘッジファンド））
+- id: T-15
+  field: 選択科目
+  topic: L3 の選択科目：富裕層の資産（目標に基づく計画、税、資産承継）
+  sources:
+  - FN011
+  none: 地図にない（候補：個人の資産設計と税）
