@@ -1,0 +1,305 @@
+# 地図：単元と前提（組み合わせなしのフロー）
+#
+# 単元の記号は「流れ・段-番号」（例 N1-01 は「数」の流れの段 1 の 1 番）。
+# needs は前提（済んでから始める単元）。流れをまたぐ前提は、知識として欠かせないものだけにする。
+# 2 つの流れの考えを合わせて解く単元（組み合わせ）は、ここには入れない（D-008）。
+# plan があれば 1 日分ずつのねらい、なければ days の日数で既定の並び（導入、練習…、混ぜる、確認）。
+
+lanes:
+  - {id: N, name: 数, note: 数と整数}
+  - {id: A, name: 式, note: 式と代数}
+  - {id: C, name: 数える, note: 数え上げと組合せ}
+  - {id: G, name: 図形, note: 図形と幾何}
+  - {id: L, name: 論理, note: 論理と証明}
+
+stages:
+  - {id: 1, name: 入口, measure: マスカンガルー（年長〜小 2）, minutes: 15, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 2, name: キッズ BEE, measure: キッズ BEE（小 1〜3）, minutes: 20, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 3, name: ジュニア算数, measure: ジュニア算数オリンピック（小 5 以下）, minutes: 30, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 4, name: 算数オリンピック, measure: 算数オリンピック（小 6）, minutes: 40, day: {思い出す: 2, 今日: 3, 挑戦: 1}}
+  - {id: 5, name: 中学の入口, measure: ジュニア広中杯、広中杯、JJMO 予選, minutes: 45, day: {思い出す: 2, 今日: 2, 挑戦: 1}}
+  - {id: 6, name: 証明の入口, measure: JMO 予選、JJMO 本選, minutes: 60, day: {思い出す: 1, 今日: 2, 挑戦: 1}}
+  - {id: 7, name: 本選, measure: JMO 本選、APMO, minutes: 90, day: {思い出す: 1, 今日: 1, 挑戦: 1}}
+  - {id: 8, name: IMO, measure: IMO, minutes: 120, day: {思い出す: 0, 今日: 1, 挑戦: 1}}
+
+kinds:
+  導入: 見本（解いた例）を見せてから解く
+  練習: 同じ型を少しずつ変えて解く
+  混ぜる: 前の日や前の単元の型と混ぜて解く（交互練習）
+  確認: 8 割できたら単元を済にする
+
+units:
+  # ---- 段 1 入口 ----
+  - id: N1-01
+    title: 10 までの数
+    needs: []
+    plan:
+      - 導入: 10 までの数を数える
+      - 練習: どちらが多いか、少ないか
+      - 導入: いくつといくつ（10 までの合成と分解）
+      - 混ぜる: 1〜3 日目の型を混ぜる
+      - 確認: 10 までの数
+  - id: N1-02
+    title: たし算とひき算（10 まで）
+    needs: [N1-01]
+    plan:
+      - 導入: あわせていくつ、ふえるといくつ
+      - 練習: のこりはいくつ、ちがいはいくつ
+      - 練習: 0 のたし算とひき算、たし算とひき算の関係
+      - 混ぜる: N1-01 と混ぜる
+      - 確認: 10 までのたし算とひき算
+  - id: N1-03
+    title: 20 までの数とくり上がり
+    needs: [N1-02]
+    plan:
+      - 導入: 20 までの数（10 といくつ）
+      - 練習: くり上がりのあるたし算（10 をつくる）
+      - 導入: くり下がりのあるひき算（10 からひく）
+      - 練習: 3 つの数の計算
+      - 混ぜる: N1-02 と混ぜる
+      - 確認: 20 までの計算
+  - id: N1-04
+    title: 100 までの数
+    needs: [N1-03]
+    plan:
+      - 導入: 十のまとまりで数える
+      - 練習: 十の位と一の位、数の線
+      - 練習: 大きさくらべと、とびとびの数え方
+      - 混ぜる: N1-03 と混ぜる
+      - 確認: 100 までの数
+  - id: N1-05
+    title: 2 けたのたし算とひき算
+    needs: [N1-04]
+    plan:
+      - 導入: 何十のたし算とひき算
+      - 練習: 2 けた＋1 けた
+      - 練習: 2 けた＋2 けた（筆算の入口）
+      - 練習: 2 けたのひき算（くり下がり）
+      - 混ぜる: N1-04 と混ぜる
+      - 確認: 2 けたの計算
+  - id: C1-01
+    title: もれなく数える
+    needs: [N1-01]
+    plan:
+      - 導入: 印をつけて数える（数え落としと二重に数えるのを防ぐ）
+      - 練習: 並べ直して、まとめて数える
+      - 練習: 散らばったものを種類ごとに数える
+      - 混ぜる: N1-01 と混ぜる
+      - 確認: もれなく数える
+  - id: C1-02
+    title: 書き出して数える
+    needs: [C1-01]
+    plan:
+      - 導入: 並べ方を全部書き出す（2〜3 個）
+      - 練習: 決まった順で書き出す（もれと重なりを防ぐ）
+      - 練習: 選び方を書き出す
+      - 混ぜる: C1-01 と混ぜる
+      - 確認: 書き出して数える
+  - id: G1-01
+    title: 形を見分ける
+    needs: []
+    plan:
+      - 導入: さんかく、しかく、まるを見分ける
+      - 練習: 辺と角（かど）の数
+      - 練習: 同じ形の仲間分け
+      - 混ぜる: 1〜3 日目の型を混ぜる
+      - 確認: 形を見分ける
+  - id: G1-02
+    title: 形を分ける、組み合わせる
+    needs: [G1-01]
+    plan:
+      - 導入: 色板で形をつくる
+      - 練習: 形を線で分ける
+      - 練習: タングラム（影の形をうめる）
+      - 混ぜる: G1-01 と混ぜる
+      - 確認: 形を分ける、組み合わせる
+  - id: G1-03
+    title: 積み木と立体
+    needs: [G1-01, N1-01]
+    plan:
+      - 導入: 箱の形、筒の形、ボールの形
+      - 練習: 見える積み木を数える
+      - 練習: 見えない積み木を数える
+      - 混ぜる: G1-01 と混ぜる
+      - 確認: 積み木と立体
+  - id: G1-04
+    title: 折る、映す、回す
+    needs: [G1-02]
+    plan:
+      - 導入: 半分に折ると重なる形
+      - 練習: 鏡に映した形
+      - 練習: 回した形（向きを変えても同じか）
+      - 混ぜる: G1-02 と混ぜる
+      - 確認: 折る、映す、回す
+  - id: L1-01
+    title: きまりを見つける
+    needs: []
+    plan:
+      - 導入: 形や色の並びのきまり
+      - 練習: 数の並びのきまり（1 ずつ、2 ずつ）
+      - 練習: くり返しのきまり
+      - 混ぜる: 1〜3 日目の型を混ぜる
+      - 確認: きまりを見つける
+  - id: L1-02
+    title: 推理パズル
+    needs: [L1-01]
+    plan:
+      - 導入: ヒントから 1 つに決める（だれのものか）
+      - 練習: 表に〇と×を書いて整理する
+      - 練習: 順番の推理（だれが前か、後ろか）
+      - 混ぜる: L1-01 と混ぜる
+      - 確認: 推理パズル
+  - id: L1-03
+    title: てんびんと重さくらべ
+    needs: [L1-01, N1-01]
+    plan:
+      - 導入: どちらが重いか（てんびん 1 つ）
+      - 練習: 3 つを重い順に並べる
+      - 練習: つり合いで置きかえる
+      - 混ぜる: L1-02 と混ぜる
+      - 確認: てんびんと重さくらべ
+  - id: L1-04
+    title: わけを言う
+    needs: [L1-02]
+    plan:
+      - 導入: 「どうしてそう思ったの」に答える
+      - 練習: 「だから」でつないで言う
+      - 練習: ほかの答えがないわけを言う
+      - 混ぜる: L1-02 と混ぜる
+      - 確認: 口で説明できるか（保護者が見る）
+
+  # ---- 段 2 キッズ BEE ----
+  - {id: N2-01, title: かけ算（九九）, needs: [N1-05], days: 8}
+  - {id: N2-02, title: わり算とあまり, needs: [N2-01], days: 6}
+  - {id: N2-03, title: 偶数と奇数, needs: [N1-05], days: 5}
+  - {id: N2-04, title: 大きな数と位, needs: [N1-05], days: 5}
+  - {id: N2-05, title: 計算のくふう, needs: [N2-01], days: 5}
+  - {id: A2-01, title: □を使った式, needs: [N1-05], days: 5}
+  - {id: A2-02, title: 図にして考える（線分図）, needs: [A2-01], days: 6}
+  - {id: C2-01, title: 表と樹形図で数える, needs: [C1-02], days: 5}
+  - {id: C2-02, title: 和の法則と積の法則, needs: [C2-01, N2-01], days: 6}
+  - {id: C2-03, title: 道順を数える, needs: [C2-01], days: 5}
+  - {id: G2-01, title: 長さとまわりの長さ, needs: [G1-02, N1-05], days: 5}
+  - {id: G2-02, title: 直角と三角形、四角形, needs: [G1-02], days: 5}
+  - {id: G2-03, title: 立方体と展開図, needs: [G1-03], days: 6}
+  - {id: L2-01, title: 数のパズル（魔方陣、虫食い算）, needs: [L1-01, N1-05], days: 6}
+  - {id: L2-02, title: 本当とうその推理, needs: [L1-02], days: 5}
+  - {id: L2-03, title: 取り合いゲーム, needs: [L1-04, N1-02], days: 6}
+
+  # ---- 段 3 ジュニア算数 ----
+  - {id: N3-01, title: 倍数と約数, needs: [N2-02], days: 6}
+  - {id: N3-02, title: 公約数と公倍数, needs: [N3-01], days: 6}
+  - {id: N3-03, title: 分数, needs: [N2-02], days: 8}
+  - {id: N3-04, title: 小数, needs: [N2-04], days: 5}
+  - {id: N3-05, title: 素数と素因数分解, needs: [N3-01], days: 6}
+  - {id: A3-01, title: 和差算と分配算, needs: [A2-02], days: 6}
+  - {id: A3-02, title: つるかめ算と過不足算, needs: [A2-02, N2-01], days: 6}
+  - {id: A3-03, title: 植木算と周期算, needs: [A2-02, N2-02], days: 5}
+  - {id: A3-04, title: 等差数列とその和, needs: [N2-05, L1-01], days: 6}
+  - {id: C3-01, title: 並べ方（順列）, needs: [C2-02], days: 6}
+  - {id: C3-02, title: 選び方（組合せ）, needs: [C3-01], days: 6}
+  - {id: C3-03, title: 重なりを数える（ベン図）, needs: [C2-02], days: 5}
+  - {id: G3-01, title: 面積, needs: [G2-02, N2-01], days: 8}
+  - {id: G3-02, title: 角度, needs: [G2-02], days: 6}
+  - {id: G3-03, title: 円とおうぎ形, needs: [G3-01, N3-04], days: 6}
+  - {id: G3-04, title: 体積と表面積, needs: [G2-03, G3-01], days: 6}
+  - {id: L3-01, title: 偶奇で考える, needs: [N2-03, L1-04], days: 5}
+  - {id: L3-02, title: 鳩の巣原理の入口, needs: [L1-04], days: 5}
+  - {id: L3-03, title: 場合分けで考える, needs: [L1-04], days: 5}
+  - {id: L3-04, title: 条件を整理する推理, needs: [L2-02], days: 5}
+
+  # ---- 段 4 算数オリンピック ----
+  - {id: N4-01, title: あまりの性質, needs: [N3-01], days: 6}
+  - {id: N4-02, title: 約数の個数と和, needs: [N3-05], days: 5}
+  - {id: N4-03, title: n 進法, needs: [N2-04, N2-02], days: 5}
+  - {id: N4-04, title: 分数の計算のくふう, needs: [N3-03], days: 6}
+  - {id: A4-01, title: 比と割合, needs: [N3-03, N3-04], days: 8}
+  - {id: A4-02, title: 速さ（旅人算、通過算、流水算）, needs: [A4-01], days: 8}
+  - {id: A4-03, title: 仕事算とニュートン算, needs: [A4-01], days: 6}
+  - {id: A4-04, title: 規則性と群数列, needs: [A3-04], days: 6}
+  - {id: C4-01, title: 区別と重複のある数え方, needs: [C3-02], days: 6}
+  - {id: C4-02, title: 前の結果から数える（漸化式の入口）, needs: [C3-01], days: 6}
+  - {id: C4-03, title: 塗り分け, needs: [C3-01], days: 5}
+  - {id: G4-01, title: 等積変形と面積比, needs: [G3-01, A4-01], days: 8}
+  - {id: G4-02, title: 拡大と縮小（相似の入口）, needs: [G3-01, A4-01], days: 8}
+  - {id: G4-03, title: 立体の切断, needs: [G3-04], days: 6}
+  - {id: G4-04, title: 点の移動と図形の回転, needs: [G3-03, G1-04], days: 6}
+  - {id: L4-01, title: 変わらないものを探す（不変量の入口）, needs: [L3-01], days: 5}
+  - {id: L4-02, title: 後ろから考える必勝法, needs: [L2-03], days: 5}
+  - {id: L4-03, title: わけを文で書く, needs: [L3-03], days: 6}
+
+  # ---- 段 5 中学の入口 ----
+  - {id: N5-01, title: あまりで分類する, needs: [N4-01], days: 6}
+  - {id: N5-02, title: 互除法と 1 次不定方程式, needs: [N3-02, A5-02], days: 8}
+  - {id: N5-03, title: 素数の性質, needs: [N3-05, L5-01], days: 6}
+  - {id: N5-04, title: 平方数の性質, needs: [N5-01], days: 5}
+  - {id: A5-01, title: 文字と式, needs: [A3-01], days: 8}
+  - {id: A5-02, title: 1 次方程式と連立方程式, needs: [A5-01], days: 8}
+  - {id: A5-03, title: 展開と因数分解, needs: [A5-01], days: 6}
+  - {id: A5-04, title: 平方根, needs: [A5-03], days: 5}
+  - {id: A5-05, title: 2 次方程式, needs: [A5-03, A5-04], days: 6}
+  - {id: A5-06, title: 1 次関数とグラフ, needs: [A5-02], days: 6}
+  - {id: C5-01, title: 二項係数とパスカルの三角形, needs: [C3-02, A5-01], days: 6}
+  - {id: C5-02, title: 確率の入口, needs: [C5-01, A4-01], days: 6}
+  - {id: C5-03, title: 一筆書きとグラフ, needs: [C2-03], days: 5}
+  - {id: G5-01, title: 平行線と角、合同の証明, needs: [G3-02, L5-01], days: 8}
+  - {id: G5-02, title: 三角形と四角形の性質, needs: [G5-01], days: 6}
+  - {id: G5-03, title: 円周角の定理, needs: [G5-02], days: 6}
+  - {id: G5-04, title: 三平方の定理, needs: [G5-02, A5-04], days: 6}
+  - {id: G5-05, title: 相似の証明, needs: [G4-02, G5-01], days: 6}
+  - {id: L5-01, title: 証明の書き方, needs: [L4-03], days: 6}
+  - {id: L5-02, title: 背理法, needs: [L5-01], days: 5}
+  - {id: L5-03, title: 数学的帰納法の入口, needs: [L5-01, A3-04], days: 6}
+
+  # ---- 段 6 証明の入口 ----
+  - {id: N6-01, title: 合同式, needs: [N5-01, A5-01], days: 8}
+  - {id: N6-02, title: フェルマーの小定理とオイラーの定理, needs: [N6-01, N5-03], days: 6}
+  - {id: N6-03, title: 素因数の個数（ルジャンドルの公式）, needs: [N5-03, N4-02], days: 6}
+  - {id: N6-04, title: 不定方程式, needs: [N5-02, N6-01, A5-03], days: 8}
+  - {id: A6-01, title: 相加相乗平均の不等式, needs: [A5-05, L5-01], days: 6}
+  - {id: A6-02, title: 多項式（剰余の定理、解と係数の関係）, needs: [A5-05], days: 8}
+  - {id: A6-03, title: 数列と漸化式, needs: [A4-04, L5-03], days: 8}
+  - {id: A6-04, title: ガウス記号と絶対値, needs: [A5-02], days: 5}
+  - {id: A6-05, title: 関数方程式の入口, needs: [A5-06, L5-01], days: 6}
+  - {id: C6-01, title: 包除原理, needs: [C3-03, C5-01], days: 6}
+  - {id: C6-02, title: 二通りに数える, needs: [C5-01], days: 6}
+  - {id: C6-03, title: 鳩の巣原理, needs: [L3-02, L5-02], days: 6}
+  - {id: C6-04, title: 不変量と単調量, needs: [L4-01, L5-01], days: 6}
+  - {id: C6-05, title: グラフ理論の基本, needs: [C5-03, L5-03], days: 8}
+  - {id: C6-06, title: ゲームと戦略, needs: [L4-02, L5-01], days: 6}
+  - {id: G6-01, title: 三角形の五心, needs: [G5-03, G5-05], days: 8}
+  - {id: G6-02, title: チェバとメネラウスの定理, needs: [G5-05], days: 6}
+  - {id: G6-03, title: 方べきの定理, needs: [G5-03, G5-05], days: 6}
+  - {id: G6-04, title: 三角比と正弦・余弦定理, needs: [G5-04, G5-05], days: 8}
+  - {id: L6-01, title: もれのない証明を書く, needs: [L5-02, L5-03], days: 8}
+  - {id: L6-02, title: 極端なものに着目する, needs: [L6-01], days: 5}
+
+  # ---- 段 7 本選 ----
+  - {id: N7-01, title: 位数と原始根, needs: [N6-02], days: 8}
+  - {id: N7-02, title: 平方剰余, needs: [N7-01], days: 6}
+  - {id: N7-03, title: LTE 補題と指数の方程式, needs: [N6-02, N6-03], days: 6}
+  - {id: A7-01, title: 古典的な不等式（コーシー・シュワルツ、並べかえ）, needs: [A6-01], days: 10}
+  - {id: A7-02, title: 凸性とイェンゼンの不等式, needs: [A7-01, A5-06], days: 6}
+  - {id: A7-03, title: 関数方程式, needs: [A6-05, L6-01], days: 10}
+  - {id: A7-04, title: 多項式の応用, needs: [A6-02, N6-01], days: 8}
+  - {id: A7-05, title: 複素数, needs: [A6-02, G6-04], days: 6}
+  - {id: C7-01, title: 母関数, needs: [C6-02, A6-02], days: 8}
+  - {id: C7-02, title: 構成と評価, needs: [C6-03, L6-02], days: 8}
+  - {id: C7-03, title: 組合せ幾何, needs: [C6-04, G6-01], days: 8}
+  - {id: C7-04, title: グラフ理論の応用, needs: [C6-05], days: 8}
+  - {id: G7-01, title: 相似拡大と回転相似, needs: [G6-01, G6-03], days: 8}
+  - {id: G7-02, title: 根軸と共円・共線, needs: [G6-03], days: 8}
+  - {id: G7-03, title: 座標とベクトルによる幾何, needs: [G6-04, A5-06], days: 8}
+  - {id: G7-04, title: 複素数による幾何, needs: [G7-03, A7-05], days: 8}
+  - {id: L7-01, title: 証明の講評を受ける, needs: [L6-01], days: 10}
+
+  # ---- 段 8 IMO ----
+  - {id: N8-01, title: IMO の整数論, needs: [N7-02, N7-03, N6-04], days: 15}
+  - {id: A8-01, title: IMO の不等式, needs: [A7-01, A7-02], days: 12}
+  - {id: A8-02, title: IMO の関数方程式, needs: [A7-03], days: 12}
+  - {id: A8-03, title: IMO の多項式, needs: [A7-04, A7-05], days: 10}
+  - {id: C8-01, title: IMO の組合せ, needs: [C7-01, C7-02, C7-04], days: 15}
+  - {id: C8-02, title: 組合せ幾何とゲーム, needs: [C7-03, C6-06], days: 10}
+  - {id: G8-01, title: 射影幾何, needs: [G7-02], days: 10}
+  - {id: G8-02, title: 反転, needs: [G7-02], days: 8}
+  - {id: G8-03, title: IMO の幾何, needs: [G7-01, G7-04, G8-01, G8-02], days: 15}

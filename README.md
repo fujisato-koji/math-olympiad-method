@@ -14,9 +14,19 @@ AI と人（保護者や指導者）が組んで回すことを前提にして�
 特定の子に使いながら作り、使って分かったことで一般化します。
 その子の学習記録はこのリポジトリには置きません。
 
+## 画面「みちすじ」
+
+`site/index.html` をブラウザで開くと、全体の地図、段の路線図、単元の日、今日の問題を 1 問ずつたどれます。
+進み具合はその端末のブラウザの中にだけ保存します。
+
+地図は `roadmap.yaml`、問題は `units/` に書き、`python tools/roadmap.py build` で画面のデータ（`site/data.js`）と一覧（`docs/roadmap.md`）を作り直します。
+この道具は、問題の答えを式で確かめ、前提の輪や日数の食い違いを止めます。
+
 ## 文書
 
-- [docs/01-requirements.md](docs/01-requirements.md)：要求整理（R-01〜R-24、ぶつかり、判断待ち）
+- [docs/01-requirements.md](docs/01-requirements.md)：要求整理（R-01〜R-31、ぶつかり、判断待ち）
+- [docs/02-structure.md](docs/02-structure.md)：構造（組み合わせなしのフロー、問題の書き方、画面）
+- [docs/roadmap.md](docs/roadmap.md)：段ごとの単元の一覧（道具が作る）
 - [docs/decisions.md](docs/decisions.md)：決まったこと
 - [docs/research/](docs/research/)：調べたこと（大会の梯子、教材と学習科学、AI）
 - [docs/sources.md](docs/sources.md)：出典の一覧
@@ -25,7 +35,7 @@ AI と人（保護者や指導者）が組んで回すことを前提にして�
 
 ## 状態
 
-2026-11-07 開始。要求整理の第一案を確認待ちです。
+2026-11-07 開始。要求整理と、組み合わせなしのフローの第一案を確認待ちです。
 
 ## ライセンス
 
