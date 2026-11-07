@@ -1,0 +1,115 @@
+# 網羅表：Math Kangaroo（5・6 年生）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN003:
+    title: AKSF, Math Kangaroo Curriculum for grades 5 and 6（Math Kangaroo USA が掲載、2021-12）
+    url: https://mathkangaroo.org/mks/wp-content/uploads/2021/12/Math-Kangaroo-Curriculum-for-grades-5-and-6.pdf
+    date: 2026-11-07
+items:
+- id: T-01
+  field: 平面幾何
+  topic: 平面図形の基本（点、直線、線分、円、特別な三角形と四角形）
+  sources:
+  - IN003
+  units:
+  - G-006
+  - G-017
+- id: T-02
+  field: 平面幾何
+  topic: 対称
+  sources:
+  - IN003
+  units:
+  - G-004
+- id: T-03
+  field: 平面幾何
+  topic: 正方形・長方形・直角三角形の周と面積
+  sources:
+  - IN003
+  units:
+  - G-005
+  - G-008
+- id: T-04
+  field: 立体幾何
+  topic: 直観で扱える立体の問題
+  sources:
+  - IN003
+  units:
+  - G-003
+  - G-007
+- id: T-05
+  field: 数と代数
+  topic: 自然数の計算と倍数の見分け（2、3、5、9、10）
+  sources:
+  - IN003
+  units:
+  - N-013
+  - N-014
+  - N-017
+  - N-008
+- id: T-06
+  field: 数と代数
+  topic: 正の有理数（分数・小数）のごく易しい計算
+  sources:
+  - IN003
+  units:
+  - N-019
+  - N-020
+- id: T-07
+  field: 数と代数
+  topic: 十進法と数の大小、数直線などでの表し方
+  sources:
+  - IN003
+  units:
+  - N-009
+  - N-002
+  - N-020
+- id: T-08
+  field: 数と代数
+  topic: 文字式を使わない代数の考え方
+  sources:
+  - IN003
+  units:
+  - A-002
+  - A-003
+  - L-001
+- id: T-09
+  field: 数と代数
+  topic: 公式を使わない数え上げ
+  sources:
+  - IN003
+  units:
+  - C-001
+  - C-002
+  - C-003
+  - C-004
+- id: T-10
+  field: 数と代数
+  topic: ごく易しい百分率
+  sources:
+  - IN003
+  units:
+  - A-005
+- id: T-11
+  field: 数と代数
+  topic: メートル法の単位（長さ、重さ、面積、体積、温度、時間）
+  sources:
+  - IN003
+  units:
+  - G-046
+- id: T-12
+  field: 数と代数
+  topic: 時間・距離・速さ
+  sources:
+  - IN003
+  units:
+  - A-007
+- id: T-13
+  field: 論理
+  topic: 少ない手順か場合分けで解く論理の問題
+  sources:
+  - IN003
+  units:
+  - L-003
+  - L-007
+  - L-008
+  - L-002

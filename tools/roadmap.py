@@ -14,7 +14,10 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
 PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ")
-GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "夢")  # 目標の種類。画面ではこの順にまとめる（2.12）
+GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の頂点", "仕事の頂点", "未解決問題")  # 目標の種類。画面ではこの順にまとめる（2.12）
+# 研究の頂点と仕事の頂点の分野。研究の頂点は分野ごとに 1 つ（その分野の国際的な最高の賞）、仕事の頂点は 1〜2（2.12）
+GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "経済学")
+PEAK_LIMIT = {"研究の頂点": 1, "仕事の頂点": 2}
 
 
 def default_plan(n):
@@ -215,6 +218,14 @@ def check(data, problems):
             errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
         if g.get("kind") not in GOAL_KINDS:
             errors.append(f"目標 {g['id']}: 種類 {g.get('kind')} は {'、'.join(GOAL_KINDS)} のどれでもない")
+        if g.get("kind") in PEAK_LIMIT and g.get("field") not in GOAL_FIELDS:
+            errors.append(f"目標 {g['id']}: 分野 {g.get('field')} は {'、'.join(GOAL_FIELDS)} のどれでもない")
+    # 水準をそろえるため、分野ごとの頂点の数は上限まで（まとめる前の途中は警告）
+    for kind, cap in PEAK_LIMIT.items():
+        for fd in GOAL_FIELDS:
+            n = [g["id"] for g in data.get("goals", []) if g.get("kind") == kind and g.get("field") == fd]
+            if len(n) > cap:
+                print(f"警告: {kind}の{fd}が {len(n)}（上限 {cap}）：{'、'.join(n)}")
     for gid, cov in data["coverages"].items():
         errors += [f"[{gid}] {e}" for e in check_coverage(cov, units)]
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
@@ -288,11 +299,11 @@ def build(data, problems):
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
         items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis", "choice") if k in i} for i in cov.get("items", [])]
-        goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note", "basis", "beyond") if k in g},
+        goals.append({**{k: g[k] for k in ("id", "name", "kind", "field", "level", "region", "note", "basis", "beyond") if k in g},
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
-               "goals": goals, "goalKinds": list(GOAL_KINDS), "units": out_units, "renamed": data["renamed"]}
+               "goals": goals, "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")

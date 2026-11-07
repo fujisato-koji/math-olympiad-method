@@ -1,0 +1,138 @@
+# 網羅表：統計学者（国際統計学賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC011:
+    title: International Prize in Statistics
+    url: https://statprize.org/
+    date: '2026-11-07'
+  SC012:
+    title: Wikipedia, International Prize in Statistics（受賞者と授賞の理由の一覧）
+    url: https://en.wikipedia.org/wiki/International_Prize_in_Statistics
+    date: '2026-11-07'
+  SC013:
+    title: Stanford Statistics, Doctoral Program Qualifying Exams
+    url: https://statistics.stanford.edu/academic-programs/graduate-programs/phd-program/doctoral-program/doctoral-program-qualifying-exams
+    date: '2026-11-07'
+  SC014:
+    title: 'UC Berkeley, Statistics 210A: Theoretical Statistics（Fall 2025）'
+    url: https://stat210a.berkeley.edu/fall-2025/index.html
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 統計学
+  topic: 生存時間解析（比例ハザードモデル）2017
+  sources:
+  - SC011
+  - SC012
+  units:
+  - S-035
+- id: T-02
+  field: 統計学
+  topic: ブートストラップ 2019
+  sources:
+  - SC011
+  - SC012
+  units:
+  - S-034
+- id: T-03
+  field: 統計学
+  topic: 経時データの解析（混合効果モデル、EM アルゴリズム、メタ分析）2021
+  sources:
+  - SC011
+  - SC012
+  units:
+  - S-037
+  - S-036
+- id: T-04
+  field: 統計学
+  topic: クラメール–ラオの下界とラオ–ブラックウェルの定理 2023
+  sources:
+  - SC011
+  - SC012
+  units:
+  - S-033
+- id: T-05
+  field: 統計学
+  topic: 情報幾何（統計モデルの空間の幾何）2023
+  sources:
+  - SC011
+  - SC012
+  none: 地図にない（候補：情報幾何（フィッシャー情報計量））
+- id: T-06
+  field: 統計学
+  topic: 平滑化スプライン（ノンパラメトリック回帰）2025
+  sources:
+  - SC011
+  - SC012
+  units:
+  - S-038
+  - K-063
+- id: T-07
+  field: 数学
+  topic: 測度論的確率論（大数の法則、中心極限定理）（確率論の資格試験）
+  sources:
+  - SC013
+  units:
+  - S-006
+  - S-007
+  - S-008
+- id: T-08
+  field: 数学
+  topic: マルチンゲールとブラウン運動（確率論の資格試験）
+  sources:
+  - SC013
+  units:
+  - S-011
+  - S-012
+- id: T-09
+  field: 統計学
+  topic: 推定の理論（十分性、指数型分布族、完備性、不偏推定、フィッシャー情報量）（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-033
+  - S-018
+- id: T-10
+  field: 統計学
+  topic: ベイズ推定と決定理論（ミニマックス、ジェームズ–スタイン推定量）（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-022
+- id: T-11
+  field: 統計学
+  topic: 仮説検定と信頼区間（局外母数、線形モデルでの検定）（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-019
+  - S-020
+- id: T-12
+  field: 統計学
+  topic: 漸近理論と最尤推定（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-021
+- id: T-13
+  field: 統計学
+  topic: 多重検定（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-040
+- id: T-14
+  field: 統計学
+  topic: ベイズ計算（Stat 210A）
+  sources:
+  - SC014
+  units:
+  - S-039
+- id: T-15
+  field: 統計学
+  topic: 応用統計（データ解析、回帰、一般化線形モデル）（応用統計の資格試験）
+  sources:
+  - SC013
+  units:
+  - K-060
+  - K-063
+  - S-020

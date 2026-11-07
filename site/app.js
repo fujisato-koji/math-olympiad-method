@@ -74,7 +74,9 @@
   const LEVELS = ['小学', '中学', '高校', '大学', '大学院'];
   const levelOf = g => LEVELS.reduce((a, l, i) => (g.level || '').startsWith(l) ? i : a, LEVELS.length);
   const KINDS = (R.goalKinds || []).filter(k => GOALS.some(g => g.kind === k));
-  const goalsOf = k => GOALS.filter(g => g.kind === k).sort((a, b) => levelOf(a) - levelOf(b));
+  // 頂点の目標は分野の順、ほかは段階の順
+  const FIELD_ORDER = R.goalFields || [], fieldOf = g => (FIELD_ORDER.indexOf(g.field) + 1) || 99;
+  const goalsOf = k => GOALS.filter(g => g.kind === k).sort((a, b) => fieldOf(a) - fieldOf(b) || levelOf(a) - levelOf(b));
   const kindNow = () => KINDS.includes(prefs.goalKind) ? prefs.goalKind : ((GOALS.find(g => g.id === prefs.goal) || {}).kind || KINDS[0]);
   // 近い目標：まだ届いていない目標のうち、論題の割合が高く、残りの駅が少ないもの。種類ごとに 1 つ
   function nearGoals(n) {
@@ -247,7 +249,7 @@
         <div class="goal-list">${goalsOf(k).map(g => {
           const set = GOAL_SETS[g.id], f = forecast(id => set.has(id)), st = goalStats(g);
           return `<a class="goal-card" href="#/goal/${g.id}" aria-current="${prefs.goal === g.id}">
-            <span class="eyebrow">${esc(g.level)}・${esc(g.region)}</span>
+            <span class="eyebrow">${g.field ? esc(g.field) + '・' : ''}${esc(g.level)}・${esc(g.region)}</span>
             <span class="goal-name">${esc(g.name)}</span>
             <span class="muted">${esc(g.note)}</span>
             <span class="goal-nums">論題 ${st.got} / ${st.topics}・駅 ${st.done} / ${st.units}・見込み 残り約 ${f.est} 日</span>
@@ -283,6 +285,7 @@
     ['eng', '工学と計算', rg => rg.lane === 'E' || (rg.lane === 'K' && rg.id !== 'suchi')],
     ['life', '化学と生物', rg => 'HB'.includes(rg.lane)],
     ['fin', '経済と金融', rg => rg.lane === 'F'],
+    ['earth', '地球科学', rg => rg.lane === 'W'],
   ];
   function drawMap() {
     const host = $('#map');
@@ -543,7 +546,7 @@
     };
     return `
     <section class="unit-head goal-head">
-      <div class="eyebrow">目標・${esc(g.kind)}・${esc(g.level)}・${esc(g.region)}</div>
+      <div class="eyebrow">目標・${esc(g.kind)}${g.field ? '・' + esc(g.field) : ''}・${esc(g.level)}・${esc(g.region)}</div>
       <h1>${esc(g.name)}</h1>
       <div class="row">${esc(g.note.replace(/。$/, ''))}。単元を組み合わせた結果として届く場所です。</div>
       ${g.basis ? `<div class="row muted">範囲の根拠：${esc(g.basis)}</div>` : ''}

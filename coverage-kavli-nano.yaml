@@ -1,0 +1,142 @@
+# 網羅表：ナノサイエンスの研究者（カブリ賞のナノサイエンス部門の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC008:
+    title: Wikipedia, Kavli Prize（ナノサイエンス部門の受賞者と授賞の理由の一覧）
+    url: https://en.wikipedia.org/wiki/Kavli_Prize
+    date: '2026-11-07'
+  SC009:
+    title: The Kavli Prize, Nanoscience 2026
+    url: https://www.kavliprize.org/prizes/nanoscience/2026
+    date: '2026-11-07'
+  SC010:
+    title: MIT DMSE, Doctoral Degree and Requirements
+    url: https://dmse.mit.edu/education/graduate-program/doctoral-degree-requirements
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 材料
+  topic: ゼロ次元と一次元のナノ構造（量子ドット、カーボンナノチューブ）2008
+  sources:
+  - SC008
+  units:
+  - P-173
+- id: T-02
+  field: 材料
+  topic: 原子を一つずつ動かす（走査トンネル顕微鏡による原子の操作）2010
+  sources:
+  - SC008
+  units:
+  - E-165
+- id: T-03
+  field: 材料
+  topic: DNA ナノ技術（DNA で組み立てる構造）2010
+  sources:
+  - SC008
+  none: 地図にない（候補：DNA ナノ技術）
+- id: T-04
+  field: 材料
+  topic: ナノ構造のフォノンと熱の輸送、炭素のナノ構造 2012
+  sources:
+  - SC008
+  units:
+  - P-173
+  - P-093
+- id: T-05
+  field: 材料
+  topic: ナノ光学（プラズモニクス、超解像の蛍光顕微鏡、メタマテリアル）2014
+  sources:
+  - SC008
+  units:
+  - P-174
+- id: T-06
+  field: 材料
+  topic: 原子間力顕微鏡 2016
+  sources:
+  - SC008
+  units:
+  - E-165
+- id: T-07
+  field: 生命
+  topic: ゲノム編集（CRISPR–Cas9）2018
+  sources:
+  - SC008
+  none: 地図にない（候補：ゲノム編集）
+- id: T-08
+  field: 材料
+  topic: 電子線による原子分解能の像と化学分析（収差補正電子顕微鏡）2020
+  sources:
+  - SC008
+  units:
+  - E-165
+- id: T-09
+  field: 材料
+  topic: 自己組織化単分子膜と表面の性質の制御 2022
+  sources:
+  - SC008
+  units:
+  - P-175
+- id: T-10
+  field: 材料
+  topic: ナノ材料と生物の機能の融合（ナノ医療、薬の送達）2024
+  sources:
+  - SC008
+  units:
+  - E-168
+- id: T-11
+  field: 材料
+  topic: ツイストロニクス（ねじれた二次元物質、魔法角グラフェン）2026
+  sources:
+  - SC008
+  - SC009
+  units:
+  - P-172
+- id: T-12
+  field: 材料
+  topic: 材料の物理化学（熱力学、相平衡と相転移）（3.25）
+  sources:
+  - SC010
+  units:
+  - P-046
+  - P-052
+- id: T-13
+  field: 材料
+  topic: 材料の構造（結晶と欠陥）（3.26）
+  sources:
+  - SC010
+  units:
+  - P-092
+  - E-163
+- id: T-14
+  field: 材料
+  topic: 材料のための量子力学（3.27）
+  sources:
+  - SC010
+  units:
+  - P-072
+  - P-095
+- id: T-15
+  field: 材料
+  topic: 材料の変化と変態（拡散、相変態の速度論）（3.28）
+  sources:
+  - SC010
+  units:
+  - E-164
+- id: T-16
+  field: 材料
+  topic: 材料の力学的性質（弾性、塑性と転位、破壊）（3.29）
+  sources:
+  - SC010
+  units:
+  - E-002
+  - E-014
+  - E-015
+  - E-163
+- id: T-17
+  field: 材料
+  topic: 材料の電磁気的性質（伝導、誘電、磁性、光学）（3.32）
+  sources:
+  - SC010
+  units:
+  - P-098
+  - P-097
+  - P-035

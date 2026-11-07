@@ -27,6 +27,7 @@ lanes:
   - {id: H, name: 化学, note: 物質と反応、原子と結合、熱力学と反応速度、無機、有機、分析（C は数えるで使うので水素の H）}
   - {id: B, name: 生物, note: 生き物のつくり、細胞、遺伝、分子生物学、生理、進化と生態}
   - {id: F, name: 経済と金融, note: 金利と現在価値、保険数理、年金、投資と派生商品、会計と経済の入口}
+  - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候（大気と海洋の力学は物理の流れ）}
 
 
 stages:
@@ -128,6 +129,15 @@ regions:
   - {id: keiryo-risk, name: 計量とリスク管理, lane: F}
   - {id: shokugyo-seido, name: 職業と制度, lane: F}
   - {id: keiei-kogaku, name: 経営工学, lane: E}
+  - {id: ganseki, name: 鉱物と岩石, lane: W}
+  - {id: chiso, name: 地層と地球の歴史, lane: W}
+  - {id: chikyu-naibu, name: 地球の内部と変動, lane: W}
+  - {id: jishin-kazan, name: 地震と火山, lane: W}
+  - {id: chikyu-kagaku, name: 地球化学と古気候, lane: W}
+  - {id: tenmon, name: 天文と天体物理, lane: P}
+  - {id: zairyo-device, name: 材料とデバイス, lane: E}
+  - {id: energy, name: エネルギーの変換, lane: E}
+  - {id: seitai-kogaku, name: 生体工学, lane: E}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -162,47 +172,62 @@ goals:
   - {id: olevel-amath, name: GCE O-Level Additional Mathematics（シンガポール）, kind: 修了試験, level: 高校, region: シンガポール, note: シンガポールの中高生が、数学をさらに深く学んで受ける試験。, basis: Syllabus 4049（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Additional Mathematics（Syllabus K341）に代わり、本文の内容は同じ。論題は K341 による。G3 Mathematics の内容を前提とする。論題と単元の対応は名称による, coverage: coverage-olevel-amath.yaml}
   - {id: amc8, name: AMC 8（MAA）, kind: 大会, level: 中学, region: 米国, note: アメリカの中学 2 年までの生徒が、25 問を 40 分で解く数学の大会。, basis: MAA の AMC のページの topics の列挙による（検索エンジンの抜粋で取得し、文言は原文との照合が要る）。「これに限らない」の注つき。8 年生以下、25 問 40 分の選択式。後半の問題は初歩の代数（一次関数か二次関数、座標幾何）に触れることがある。論題と単元の対応は名称による, coverage: coverage-amc8.yaml}
   - {id: kangaroo, name: Math Kangaroo, kind: 大会, level: 小学, region: 国際, note: 世界中の小中高生が、学年ごとの楽しい問題に挑む数学の大会。, basis: AKSF の学年帯ごとの指針（Math Kangaroo USA が掲載、2021-12）のうち、grades 5-6、7-8、9-10 の 3 本による。grades 1-2、3-4、11-12 は本文を読めなかった。ページは「試験で何が出るかの大まかな指針」とする。日本大会（算数オリンピック委員会）の範囲の文書は公開されていない。論題と単元の対応は名称による, coverage: coverage-kangaroo.yaml}
-  - {id: spacex-propulsion, name: SpaceX のロケットエンジン設計者（推進エンジニア）, kind: 夢, level: 大学, region: 米国, note: ロケットのエンジンの中で、燃料の流れと熱と力を計算して、こわれずに強い推力が出る形をつくる仕事。, coverage: coverage-spacex-propulsion.yaml, beyond: 工学か物理の学士以上の学位、機械・流体の設計か解析か製作の経験 1 年ほど（学生チームやインターンで可）、CAD・FEA・CFD・熱流体解析・MATLAB・Python・SQL などの道具、手計算でモデルを確かめる習慣、製造や試験の現場の経験。望ましい条件に高い成績や競技会の入賞。}
-  - {id: spacex-gnc, name: SpaceX の誘導・航法・制御エンジニア, kind: 夢, level: 大学, region: 米国, note: ロケットや衛星が自分の位置と向きを知って、行きたい所へ正しく進むように、計算の仕組みとプログラムをつくる仕事。, coverage: coverage-spacex-gnc.yaml, beyond: 物理か工学かコンピュータ科学などの学士以上の学位、制御・軌道力学・古典力学・モデル化とシミュレーションの経験、C++ か Python での実務の開発経験（1 年以上のことも。上級職は 5 年以上）、Git などの版管理、MATLAB など。}
-  - {id: deepmind-rs, name: Google DeepMind の Research Scientist, kind: 夢, level: 大学院, region: 国際, note: 人のように学んで考える計算機の仕組みを研究して、新しいやり方を見つけて確かめる仕事。, coverage: coverage-deepmind-rs.yaml, beyond: 博士号（コンピュータ科学や機械学習など。学士と実務経験で応募できる職もある）、NeurIPS・ICML・ICLR などでの論文の実績、JAX・PyTorch・TensorFlow などの枠組みでの実装経験。数学の土台は求人に名指しされていない。}
+  - {id: spacex-propulsion, name: SpaceX のロケットエンジン設計者（推進エンジニア）, kind: 仕事の頂点, field: 工学, level: 大学, region: 米国, note: ロケットのエンジンの中で、燃料の流れと熱と力を計算して、こわれずに強い推力が出る形をつくる仕事。, coverage: coverage-spacex-propulsion.yaml, beyond: 工学か物理の学士以上の学位、機械・流体の設計か解析か製作の経験 1 年ほど（学生チームやインターンで可）、CAD・FEA・CFD・熱流体解析・MATLAB・Python・SQL などの道具、手計算でモデルを確かめる習慣、製造や試験の現場の経験。望ましい条件に高い成績や競技会の入賞。}
+  - {id: spacex-gnc, name: SpaceX の誘導・航法・制御エンジニア, kind: 仕事の頂点, field: 工学, level: 大学, region: 米国, note: ロケットや衛星が自分の位置と向きを知って、行きたい所へ正しく進むように、計算の仕組みとプログラムをつくる仕事。, coverage: coverage-spacex-gnc.yaml, beyond: 物理か工学かコンピュータ科学などの学士以上の学位、制御・軌道力学・古典力学・モデル化とシミュレーションの経験、C++ か Python での実務の開発経験（1 年以上のことも。上級職は 5 年以上）、Git などの版管理、MATLAB など。}
+  - {id: deepmind-rs, name: Google DeepMind の Research Scientist, kind: 仕事の頂点, field: 計算機科学, level: 大学院, region: 国際, note: 人のように学んで考える計算機の仕組みを研究して、新しいやり方を見つけて確かめる仕事。, coverage: coverage-deepmind-rs.yaml, beyond: 博士号（コンピュータ科学や機械学習など。学士と実務経験で応募できる職もある）、NeurIPS・ICML・ICLR などでの論文の実績、JAX・PyTorch・TensorFlow などの枠組みでの実装経験。数学の土台は求人に名指しされていない。}
   - {id: fe-mechanical, name: FE Mechanical（NCEES）, kind: 資格, level: 大学, region: 米国, note: 機械の技術者として、力と熱と流れの基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-mechanical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
   - {id: fe-electrical, name: FE Electrical and Computer（NCEES）, kind: 資格, level: 大学, region: 米国, note: 電気や電子や計算機の技術者として、回路と信号と計算の基本を使って問題が解けるかをためす、アメリカの最初の試験。, coverage: coverage-fe-electrical.yaml, beyond: 6 時間、110 問、閉本（電子の参考書あり）のコンピュータ試験。出題範囲は 2020 年 7 月版の仕様で、新しい版の予告は見当たらなかった。}
-  - {id: nasa-astronaut, name: NASA の宇宙飛行士, kind: 夢, level: 大学院（修士）, region: 米国, note: 宇宙ステーションや月・火星への任務で、宇宙遊泳、ロボットアームの操作、実験、機械の保守をする。, coverage: coverage-nasa-astronaut.yaml, beyond: "米国市民、学位後の職務経験 2 年以上またはジェット機の機長 1,000 時間、NASA の身体検査、指導力・チームワーク・意思疎通、書類審査と面接と約 2 年の訓練（操縦、水中・陸上の生存、スキューバ、ロシア語）"}
-  - {id: cern-physicist, name: CERN の素粒子物理学者, kind: 夢, level: 大学院（博士）, region: スイス・フランス（ジュネーブ）, note: 大きな加速器と検出器で素粒子の実験を考え、検出器をつくって動かし、データから新しい発見を探す。, coverage: coverage-cern-physicist.yaml, beyond: 博士（または同等の経験）と博士研究員の経歴、研究や委員会の調整・主導、英語（フランス語を学ぶ意志）、推薦状 3 通、フェローは CERN 加盟国の国籍}
-  - {id: google-quantum-ai, name: Google Quantum AI の研究者, kind: 夢, level: 大学院（博士）, region: 米国（カリフォルニア）, note: ほかの方法では解けない問題のために量子コンピュータをつくり、誤りを直す符号を考え、量子チップを設計して測る。, coverage: coverage-google-quantum-ai.yaml, beyond: 量子計算に関わる分野の博士（または同等の経験）、誤り訂正などの研究発表、論文 1 本以上、研究の方針を自分で立てた経験（望ましい）、ソフトウェア職は C++ か Python で 5 年の開発}
-  - {id: jwst-astronomer, name: James Webb 宇宙望遠鏡の天文学者, kind: 夢, level: 大学院（博士）, region: 米国（STScI、メリーランド州）, note: 赤外線で見る大きな宇宙望遠鏡で、最初の星と銀河、星の一生、ほかの星をまわる惑星の大気を調べる。, coverage: coverage-jwst-astronomer.yaml, beyond: 天文学・天体物理学・惑星科学か関連分野の博士、任務の仕事と自分の研究の両立、研究計画（フェローシップでは最重要）、指導力と粘り強さ}
-  - {id: f1-aero, name: F1 チームの空力エンジニア, kind: 夢, level: 大学院（修士）, region: 英国（F1 チームの拠点）, note: 風洞と計算機上の模型で、車が空気を切って進み、高速でも路面に押しつけられるよう、部品の形を設計して磨く。, coverage: coverage-f1-aero.yaml, beyond: 航空宇宙・機械などの学位（上級職は流体力学・数値計算の修士か博士）、F1 など高性能モータースポーツの経験（上級職）、技術規則の理解、意思疎通と協調、細部への注意}
-  - {id: pixar-researcher, name: Pixar の研究者, kind: 夢, level: 大学院（博士）, region: 米国（カリフォルニア州エメリービル）, note: 映画の世界と登場人物をつくる作家のために、描画、物理の模擬、形の処理、機械学習などの新しい技術を研究する。, coverage: coverage-pixar-researcher.yaml, beyond: 計算機科学・計算機グラフィックスの博士（実習生は修士か博士の在学中）、C++ の開発、研究論文の発表、作家と協力する力}
-  - {id: nobel-theory, name: 理論物理学者（ノーベル物理学賞の研究に届く知識）, kind: 夢, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 数学の道具で自然の理論の枠組みをつくり、その予言が実験や観測で確かめられる。, coverage: coverage-nobel-theory.yaml, beyond: 賞は応募でなく王立スウェーデン科学アカデミーの選考。大きな共同実験への貢献が評価される例がある。理論の確かめまでに数十年かかることがある}
-  - {id: fields-math, name: 数学者（フィールズ賞の研究に届く知識）, kind: 夢, level: 大学院（博士）, region: 国際（国際数学連合 IMU）, note: 数や形、確率、方程式について新しい定理を証明し、長年の問題を解く。, coverage: coverage-fields-math.yaml, beyond: 40 歳の誕生日が国際数学者会議の年の 1 月 1 日より前でないこと（4 年ごと）。IMU の委員会が選ぶ。すでにある顕著な業績と、これからの見込み}
-  - {id: nobel-particle, name: 素粒子物理でノーベル物理学賞を目指す博士, kind: 夢, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 物をつくるいちばん小さい粒子とその力のしくみを、場の量子論の理論と大きな実験で調べる。, coverage: coverage-nobel-particle.yaml, beyond: 賞は応募でなく王立スウェーデン科学アカデミーの選考。理論の予言を大きな実験が確かめて授賞となった例（2013 年）や、大きな装置への決定的な貢献への授賞（1984、2026 年）がある。長い年月がかかる}
-  - {id: nasa-jpl-rover, name: NASA JPL の火星探査機のエンジニア, kind: 夢, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州パサデナ）, note: 火星でローバーを動かし、昔の生き物のあとを探したり、岩のサンプルを集めたりする手伝いをする。, coverage: coverage-nasa-jpl-rover.yaml, beyond: 計算機科学・計算機工学などの学士と実務 1〜3 年（修士・博士なら短縮）、GPA 3.0 以上（求人による）、推薦者 3 名、NASA の規則で指定国の国籍者は米国市民・永住者などであること}
-  - {id: nasa-jpl-trajectory, name: NASA JPL の軌道設計者, kind: 夢, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州パサデナ）, note: 宇宙船が目的地に着くまでの道すじを前もって計算して決め、飛んでいる間に本当の位置を測り、ずれたら直す。, coverage: coverage-nasa-jpl-trajectory.yaml, beyond: 航空宇宙工学・天文学などの学士と実務 3 年、修士と 1 年、または博士。衛星の重力場の推定の実務と論文の実績（望ましい）。NASA の指定国の規則}
-  - {id: spacex-starlink, name: SpaceX Starlink の通信エンジニア, kind: 夢, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州ホーソーン、ワシントン州レドモンド）, note: 宇宙を飛ぶ何千もの衛星と家に置くアンテナを電波でつなぎ、世界中にインターネットを届ける。, coverage: coverage-spacex-starlink.yaml, beyond: 電気・計算機・物理などの学士（修士は望ましい）、ITAR により米国市民・永住者などであること、必要なときの長時間・週末の勤務}
-  - {id: ligo-researcher, name: LIGO の重力波の研究者, kind: 夢, level: 大学院（博士）, region: 米国（カリフォルニア工科大学、MIT、ルイジアナ州、ワシントン州）, note: 腕の長さ 4 km のレーザー干渉計で、宇宙から来る重力波をとらえ、それがどこから来たかを調べる。, coverage: coverage-ligo-researcher.yaml, beyond: 物理か関連分野の博士（データ解析の職は分野を問わない）、推薦状 3 通、業績一覧、研究計画書、希望する拠点の申告}
-  - {id: eht-researcher, name: Event Horizon Telescope の研究者, kind: 夢, level: 大学〜大学院（博士）, region: 米国（ハーバード・スミソニアン天体物理学センターほか）。国際共同, note: 世界中の電波望遠鏡をつないで地球ほどの大きさの望遠鏡のようにし、ブラックホールの姿を写す。, coverage: coverage-eht-researcher.yaml, beyond: "天文学・物理・数学・宇宙科学・電子工学の学位（ポスドクは博士）、標高約 4,000 m での勤務がありうる、米国連邦政府の採用手続き"}
-  - {id: iter-fusion, name: ITER の核融合の研究者, kind: 夢, level: 大学院（修士・博士）, region: フランス（ITER 機構、サン＝ポール＝レ＝デュランス）。国際共同, note: 太陽や星と同じ核融合でエネルギーを取り出すため、世界最大のトカマクを動かす準備をする。, coverage: coverage-iter-fusion.yaml, beyond: 核融合プラズマ物理などの修士以上（十分な職務経験で代替可）、核融合研究の経験（6 年以上の例）、論文、英語、交替勤務・呼び出し対応}
-  - {id: superconductor-materials, name: 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne）, kind: 夢, level: 大学院（博士）, region: 日本、米国, note: 超伝導などのふしぎな性質を示す物質の結晶を育てたり、光を当てて中の電子のようすを直接見たりして、そのしくみを解き明かす。, coverage: coverage-superconductor-materials.yaml, beyond: 博士号（取得見込みを含む。専門は問わない例もある）、任期付き（5 年など）、論文、独立した研究計画、研究費の提案、後進の指導}
-  - {id: millennium, name: ミレニアム懸賞問題（クレイ数学研究所）, kind: 夢, level: 大学院（博士）以上, region: 米国（クレイ数学研究所、マサチューセッツ州）, note: 1 問 100 万ドルの賞がかかった 7 つの数学の難問（1 問は解決ずみ）に挑み、証明を見つける。, coverage: coverage-millennium.yaml, beyond: 学位や分野の条件はクレイの資料に書かれていない。賞の規則の文書は読んでいない}
-  - {id: turing-theory, name: 理論計算機科学者（ACM チューリング賞）, kind: 夢, level: 大学院（博士）, region: 国際（ACM、米国）, note: 計算と情報のしくみを数学の言葉で調べ、暗号や学習するプログラムなど、新しい計算のやり方の土台をつくる。, coverage: coverage-turing-theory.yaml, beyond: 賞は業績に対するもので応募の条件ではない。受賞者の例は理論計算機科学・数学・計算機通信科学の博士}
-  - {id: nist-pqc, name: NIST の耐量子暗号の暗号学者, kind: 夢, level: 大学院（修士・博士）, region: 米国（NIST、メリーランド州）, note: 将来の量子コンピュータでも破られない暗号のきまり（標準）をつくり、インターネットの通信を守る。, coverage: coverage-nist-pqc.yaml, beyond: 求人は見つからず、資料に条件の記載なし（職員の例は数学の博士）}
-  - {id: waymo-engineer, name: Waymo の自動運転のエンジニア, kind: 夢, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州マウンテンビューほか）, note: 人が運転しなくても安全に走る車の運転手を AI でつくる。, coverage: coverage-waymo-engineer.yaml, beyond: 学士（修士・博士が望ましい、研究職は修士・博士）、2 年以上の経験、論文・オープンソース・業界での貢献の実績}
-  - {id: boston-dynamics, name: Boston Dynamics のロボット工学者, kind: 夢, level: 大学〜大学院, region: 米国（マサチューセッツ州ウォルサム）, note: 歩いたり、物をつかんで運んだりするロボットの動きを、プログラムと学習でつくる。, coverage: coverage-boston-dynamics.yaml, beyond: 学士・修士と実務 2〜3 年、または博士、米国で働く資格、実機に方策を載せた経験、物流現場への展開の経験や論文（望ましい）}
-  - {id: protein-drug, name: タンパク質の構造予測で新薬を探す研究者, kind: 夢, level: 大学院（博士）, region: 英国（ロンドン）ほか, note: タンパク質がどんな立体の形になるかを AI で予測し、病気を治す薬の分子を設計する。, coverage: coverage-protein-drug.yaml, beyond: 博士（または同等の経験）、計算創薬の実務 5〜8 年以上（上級職）、創薬の計画を率いた実績、論文・特許・発表、週 3 日の出社}
-  - {id: ecmwf-weather, name: ECMWF の気象・気候の研究者, kind: 夢, level: 大学院（修士相当以上）, region: 欧州（ECMWF、英国レディング、イタリア・ボローニャ、ドイツ・ボン）, note: 世界中の観測と大きなコンピュータ（いまは AI も使う）で、何日も先の天気と地球のようすを予測する。, coverage: coverage-ecmwf-weather.yaml, beyond: 物理・数学・データ・機械学習・環境科学の修士相当以上、英語、ECMWF の加盟国・協力国・EU 加盟国の国籍、契約 3〜4 年、チームを率いた経験（上級職）}
-  - {id: skyscraper-structural, name: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）, kind: 夢, level: 大学〜大学院, region: 米国（SOM、シカゴ）、アラブ首長国連邦（ブルジュ・ハリファ）, note: 風や地震に負けない高い建物の骨組みを考える。ブルジュ・ハリファは Y 字の形と中心の芯を 3 方向から支える形で、風の力を小さくした。, coverage: coverage-skyscraper-structural.yaml, beyond: 学位と知識の要件は取れなかった（SOM の求人の本文は非公開）。構造設計の経験と、設計の第三者の審査}
-  - {id: suspension-bridge, name: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）, kind: 夢, level: 大学〜大学院, region: 日本（本州四国連絡高速道路）、トルコ（チャナッカレ橋）、デンマーク（COWI）, note: 海峡をまたぐ何 km もの吊り橋を、強い風や地震、大きな船にも耐えるように設計し、守る。, coverage: coverage-suspension-bridge.yaml, beyond: 高専・大学の卒業または修士課程の修了（JB 本四高速は土木・機械・電気通信・化学・建築の技術系総合職）、年度により採用しない職種がある。COWI の求人は読んでいない}
-  - {id: mlb-analyst, name: MLB のデータアナリスト, kind: 夢, level: 大学（学士）, region: 米国（球団・リーグ本部）, note: 選手と試合のデータを集めて確かめ、統計とプログラムで選手の評価や将来の予測をつくり、監督やスカウトにわかる形で伝える。, coverage: coverage-mlb-analyst.yaml, beyond: 数学・経済・統計・計算機科学などの学士、0〜3 年の経験、野球と国際市場への関心、スペイン語か日本語（望ましい）、夜・週末・祝日の勤務、非専門家への説明力}
-  - {id: open-kids, name: 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど）, kind: 夢, level: 小学〜研究, region: 国際, note: コラッツ予想やゴールドバッハ予想のように、小学生でも問題の意味は分かるのに、世界中の数学者がまだ答えを出せていない問題に挑む。, coverage: coverage-open-kids.yaml, beyond: 解けたと言えるのは、査読誌に載って数学界に受け入れられたとき（ビール予想の懸賞 100 万ドルは掲載から 2 年以上たって広く受け入れられることが条件で、原稿を AMS や本人に直接送ってはならない）。主張の理解は小中学の単元で足りるが、攻め方は大学院以上の解析的整数論や数論幾何になる。ルジャンドル予想の証明の主張と、2026 年の AI による主張（平面の彩色数が 6 以上など）は査読前で、解決に数えない。}
-  - {id: erdos-prizes, name: エルデシュの懸賞問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 数学者エルデシュが賞金をかけた問題（全部で 1221 問のうち 107 問、いちばん高いのは 1 万ドル）に挑む。, coverage: coverage-erdos-prizes.yaml, beyond: "状態と金額は teorth/erdosproblems（2026-11-06 の版）による。本家の erdosproblems.com は 2026-10-06 から状態と解決数を表に出していない。#3 はこのデータベースでは未解決で、2026 年の OpenAI の証明は主張・査読前。#90 は 2026-05 に反証され、第三者の数学者 9 名が人の手で確かめた。代表の問題のうち #20、#30、#64、#592、#89 は攻め方が資料に書かれていない。"}
-  - {id: hilbert-23, name: ヒルベルトの 23 の問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 1900 年にヒルベルトが「これからの数学で解くべき」と挙げた 23 の問題を、いまの答えまでたどる。, coverage: coverage-hilbert-23.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 12、一部解決 6、未解決 2、問いが曖昧 3）。第 8 問題のリーマン予想はミレニアム懸賞問題の目標で扱う。2026 年の OpenAI の主張（第 8 の零点のない半平面、第 10 の有理数版、第 16 の一様な上界、第 5 を広げたヒルベルト–スミス予想）は査読前で、解決に数えない。第 4、20、23 問題には完了の基準がない。}
-  - {id: smale-18, name: スメイルの 18 の問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 1998 年にスメイルが「21 世紀に解くべき」と挙げた 18 の問題（リーマン予想、P=NP、ナヴィエ–ストークス方程式など）に挑む。, coverage: coverage-smale-18.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 4、一部解決 4、未解決 8、問いが曖昧 2）。第 1、3、15 問題はミレニアム懸賞問題と重なる。第 16 問題の反例は査読前だが、第三者が形式検証したので解決に数える。第 13 問題の 2026 年の OpenAI の主張は査読前で数えない。第 8、18 問題は研究計画で完了の基準がない。}
-  - {id: solved-great, name: 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど）, kind: 夢, level: 大学院（博士）以上, region: 国際, note: フェルマーの最終定理やポアンカレ予想のように、何十年も何百年も解けなかった問題の証明を、読んで分かるようになる。, coverage: coverage-solved-great.yaml, beyond: 証明の論文は長く（ワイルズは 109 ページと共著 20 ページ、ヘイルズは 121 ページ）、ケプラー予想の証明は計算機の確認に頼る。三次元の掛谷、幾何学的ラングランズ（全 5 部作）、ケルヴェア不変量の 126 次元、マッケイ予想は arXiv の段階で、掲載誌の記載がない（マッケイは Annals に掲載予定）。マッケイ予想の証明に要る有限単純群の分類は地図にない。}
-  - {id: icm-2026, name: ICM 2026 の部会に当たる 16 分野の研究の入口, kind: 夢, level: 大学院（博士）, region: 国際, note: 国際数学者会議（ICM 2026、フィラデルフィア）の部会に当たる 16 の研究分野で、大学院で最初に学ぶことをそろえる。, coverage: coverage-icm-2026.yaml, beyond: 入口は、SLMath の夏の大学院学校の前提、大学院の資格試験の範囲、教科書の序文が名指ししたものだけを取った。部会と分野の対応は本書が当てたもので、IMU が当てたものではない。2026 年の部会の定義文は確かめておらず、2019 年の構造委員会報告の定義を使った。数値解析、制御と最適化、統計と機械学習、確率モデル、教育、歴史の 6 部会は対象外。研究者になるには博士課程と論文の業績が要る。}
+  - {id: nasa-astronaut, name: NASA の宇宙飛行士, kind: 仕事の頂点, field: 天文学, level: 大学院（修士）, region: 米国, note: 宇宙ステーションや月・火星への任務で、宇宙遊泳、ロボットアームの操作、実験、機械の保守をする。, coverage: coverage-nasa-astronaut.yaml, beyond: "米国市民、学位後の職務経験 2 年以上またはジェット機の機長 1,000 時間、NASA の身体検査、指導力・チームワーク・意思疎通、書類審査と面接と約 2 年の訓練（操縦、水中・陸上の生存、スキューバ、ロシア語）"}
+  - {id: cern-physicist, name: CERN の素粒子物理学者, kind: 仕事の頂点, field: 物理, level: 大学院（博士）, region: スイス・フランス（ジュネーブ）, note: 大きな加速器と検出器で素粒子の実験を考え、検出器をつくって動かし、データから新しい発見を探す。, coverage: coverage-cern-physicist.yaml, beyond: 博士（または同等の経験）と博士研究員の経歴、研究や委員会の調整・主導、英語（フランス語を学ぶ意志）、推薦状 3 通、フェローは CERN 加盟国の国籍}
+  - {id: google-quantum-ai, name: Google Quantum AI の研究者, kind: 仕事の頂点, field: 物理, level: 大学院（博士）, region: 米国（カリフォルニア）, note: ほかの方法では解けない問題のために量子コンピュータをつくり、誤りを直す符号を考え、量子チップを設計して測る。, coverage: coverage-google-quantum-ai.yaml, beyond: 量子計算に関わる分野の博士（または同等の経験）、誤り訂正などの研究発表、論文 1 本以上、研究の方針を自分で立てた経験（望ましい）、ソフトウェア職は C++ か Python で 5 年の開発}
+  - {id: jwst-astronomer, name: James Webb 宇宙望遠鏡の天文学者, kind: 仕事の頂点, field: 天文学, level: 大学院（博士）, region: 米国（STScI、メリーランド州）, note: 赤外線で見る大きな宇宙望遠鏡で、最初の星と銀河、星の一生、ほかの星をまわる惑星の大気を調べる。, coverage: coverage-jwst-astronomer.yaml, beyond: 天文学・天体物理学・惑星科学か関連分野の博士、任務の仕事と自分の研究の両立、研究計画（フェローシップでは最重要）、指導力と粘り強さ}
+  - {id: f1-aero, name: F1 チームの空力エンジニア, kind: 仕事の頂点, field: 工学, level: 大学院（修士）, region: 英国（F1 チームの拠点）, note: 風洞と計算機上の模型で、車が空気を切って進み、高速でも路面に押しつけられるよう、部品の形を設計して磨く。, coverage: coverage-f1-aero.yaml, beyond: 航空宇宙・機械などの学位（上級職は流体力学・数値計算の修士か博士）、F1 など高性能モータースポーツの経験（上級職）、技術規則の理解、意思疎通と協調、細部への注意}
+  - {id: pixar-researcher, name: Pixar の研究者, kind: 仕事の頂点, field: 計算機科学, level: 大学院（博士）, region: 米国（カリフォルニア州エメリービル）, note: 映画の世界と登場人物をつくる作家のために、描画、物理の模擬、形の処理、機械学習などの新しい技術を研究する。, coverage: coverage-pixar-researcher.yaml, beyond: 計算機科学・計算機グラフィックスの博士（実習生は修士か博士の在学中）、C++ の開発、研究論文の発表、作家と協力する力}
+  - {id: nobel-theory, name: 理論物理学者（ノーベル物理学賞の研究に届く知識）, kind: 研究の頂点, field: 物理, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 数学の道具で自然の理論の枠組みをつくり、その予言が実験や観測で確かめられる。, coverage: coverage-nobel-theory.yaml, beyond: 賞は応募でなく王立スウェーデン科学アカデミーの選考。大きな共同実験への貢献が評価される例がある。理論の確かめまでに数十年かかることがある}
+  - {id: fields-math, name: 数学者（フィールズ賞の研究に届く知識）, kind: 研究の頂点, field: 数学, level: 大学院（博士）, region: 国際（国際数学連合 IMU）, note: 数や形、確率、方程式について新しい定理を証明し、長年の問題を解く。, coverage: coverage-fields-math.yaml, beyond: 40 歳の誕生日が国際数学者会議の年の 1 月 1 日より前でないこと（4 年ごと）。IMU の委員会が選ぶ。すでにある顕著な業績と、これからの見込み}
+  - {id: nobel-particle, name: 素粒子物理でノーベル物理学賞を目指す博士, kind: 研究の頂点, field: 物理, level: 大学院（博士）, region: スウェーデン（王立科学アカデミーの選考。授賞は国際）, note: 物をつくるいちばん小さい粒子とその力のしくみを、場の量子論の理論と大きな実験で調べる。, coverage: coverage-nobel-particle.yaml, beyond: 賞は応募でなく王立スウェーデン科学アカデミーの選考。理論の予言を大きな実験が確かめて授賞となった例（2013 年）や、大きな装置への決定的な貢献への授賞（1984、2026 年）がある。長い年月がかかる}
+  - {id: nasa-jpl-rover, name: NASA JPL の火星探査機のエンジニア, kind: 仕事の頂点, field: 工学, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州パサデナ）, note: 火星でローバーを動かし、昔の生き物のあとを探したり、岩のサンプルを集めたりする手伝いをする。, coverage: coverage-nasa-jpl-rover.yaml, beyond: 計算機科学・計算機工学などの学士と実務 1〜3 年（修士・博士なら短縮）、GPA 3.0 以上（求人による）、推薦者 3 名、NASA の規則で指定国の国籍者は米国市民・永住者などであること}
+  - {id: nasa-jpl-trajectory, name: NASA JPL の軌道設計者, kind: 仕事の頂点, field: 工学, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州パサデナ）, note: 宇宙船が目的地に着くまでの道すじを前もって計算して決め、飛んでいる間に本当の位置を測り、ずれたら直す。, coverage: coverage-nasa-jpl-trajectory.yaml, beyond: 航空宇宙工学・天文学などの学士と実務 3 年、修士と 1 年、または博士。衛星の重力場の推定の実務と論文の実績（望ましい）。NASA の指定国の規則}
+  - {id: spacex-starlink, name: SpaceX Starlink の通信エンジニア, kind: 仕事の頂点, field: 工学, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州ホーソーン、ワシントン州レドモンド）, note: 宇宙を飛ぶ何千もの衛星と家に置くアンテナを電波でつなぎ、世界中にインターネットを届ける。, coverage: coverage-spacex-starlink.yaml, beyond: 電気・計算機・物理などの学士（修士は望ましい）、ITAR により米国市民・永住者などであること、必要なときの長時間・週末の勤務}
+  - {id: ligo-researcher, name: LIGO の重力波の研究者, kind: 仕事の頂点, field: 物理, level: 大学院（博士）, region: 米国（カリフォルニア工科大学、MIT、ルイジアナ州、ワシントン州）, note: 腕の長さ 4 km のレーザー干渉計で、宇宙から来る重力波をとらえ、それがどこから来たかを調べる。, coverage: coverage-ligo-researcher.yaml, beyond: 物理か関連分野の博士（データ解析の職は分野を問わない）、推薦状 3 通、業績一覧、研究計画書、希望する拠点の申告}
+  - {id: eht-researcher, name: Event Horizon Telescope の研究者, kind: 仕事の頂点, field: 天文学, level: 大学〜大学院（博士）, region: 米国（ハーバード・スミソニアン天体物理学センターほか）。国際共同, note: 世界中の電波望遠鏡をつないで地球ほどの大きさの望遠鏡のようにし、ブラックホールの姿を写す。, coverage: coverage-eht-researcher.yaml, beyond: "天文学・物理・数学・宇宙科学・電子工学の学位（ポスドクは博士）、標高約 4,000 m での勤務がありうる、米国連邦政府の採用手続き"}
+  - {id: iter-fusion, name: ITER の核融合の研究者, kind: 仕事の頂点, field: 物理, level: 大学院（修士・博士）, region: フランス（ITER 機構、サン＝ポール＝レ＝デュランス）。国際共同, note: 太陽や星と同じ核融合でエネルギーを取り出すため、世界最大のトカマクを動かす準備をする。, coverage: coverage-iter-fusion.yaml, beyond: 核融合プラズマ物理などの修士以上（十分な職務経験で代替可）、核融合研究の経験（6 年以上の例）、論文、英語、交替勤務・呼び出し対応}
+  - {id: superconductor-materials, name: 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne）, kind: 仕事の頂点, field: 材料, level: 大学院（博士）, region: 日本、米国, note: 超伝導などのふしぎな性質を示す物質の結晶を育てたり、光を当てて中の電子のようすを直接見たりして、そのしくみを解き明かす。, coverage: coverage-superconductor-materials.yaml, beyond: 博士号（取得見込みを含む。専門は問わない例もある）、任期付き（5 年など）、論文、独立した研究計画、研究費の提案、後進の指導}
+  - {id: millennium, name: ミレニアム懸賞問題（クレイ数学研究所）, kind: 未解決問題, level: 大学院（博士）以上, region: 米国（クレイ数学研究所、マサチューセッツ州）, note: 1 問 100 万ドルの賞がかかった 7 つの数学の難問（1 問は解決ずみ）に挑み、証明を見つける。, coverage: coverage-millennium.yaml, beyond: 学位や分野の条件はクレイの資料に書かれていない。賞の規則の文書は読んでいない}
+  - {id: turing-theory, name: 理論計算機科学者（ACM チューリング賞）, kind: 研究の頂点, field: 計算機科学, level: 大学院（博士）, region: 国際（ACM、米国）, note: 計算と情報のしくみを数学の言葉で調べ、暗号や学習するプログラムなど、新しい計算のやり方の土台をつくる。, coverage: coverage-turing-theory.yaml, beyond: 賞は業績に対するもので応募の条件ではない。受賞者の例は理論計算機科学・数学・計算機通信科学の博士}
+  - {id: nist-pqc, name: NIST の耐量子暗号の暗号学者, kind: 仕事の頂点, field: 数学, level: 大学院（修士・博士）, region: 米国（NIST、メリーランド州）, note: 将来の量子コンピュータでも破られない暗号のきまり（標準）をつくり、インターネットの通信を守る。, coverage: coverage-nist-pqc.yaml, beyond: 求人は見つからず、資料に条件の記載なし（職員の例は数学の博士）}
+  - {id: waymo-engineer, name: Waymo の自動運転のエンジニア, kind: 仕事の頂点, field: 計算機科学, level: 大学（学士）〜大学院, region: 米国（カリフォルニア州マウンテンビューほか）, note: 人が運転しなくても安全に走る車の運転手を AI でつくる。, coverage: coverage-waymo-engineer.yaml, beyond: 学士（修士・博士が望ましい、研究職は修士・博士）、2 年以上の経験、論文・オープンソース・業界での貢献の実績}
+  - {id: boston-dynamics, name: Boston Dynamics のロボット工学者, kind: 仕事の頂点, field: 計算機科学, level: 大学〜大学院, region: 米国（マサチューセッツ州ウォルサム）, note: 歩いたり、物をつかんで運んだりするロボットの動きを、プログラムと学習でつくる。, coverage: coverage-boston-dynamics.yaml, beyond: 学士・修士と実務 2〜3 年、または博士、米国で働く資格、実機に方策を載せた経験、物流現場への展開の経験や論文（望ましい）}
+  - {id: protein-drug, name: タンパク質の構造予測で新薬を探す研究者, kind: 仕事の頂点, field: 化学, level: 大学院（博士）, region: 英国（ロンドン）ほか, note: タンパク質がどんな立体の形になるかを AI で予測し、病気を治す薬の分子を設計する。, coverage: coverage-protein-drug.yaml, beyond: 博士（または同等の経験）、計算創薬の実務 5〜8 年以上（上級職）、創薬の計画を率いた実績、論文・特許・発表、週 3 日の出社}
+  - {id: ecmwf-weather, name: ECMWF の気象・気候の研究者, kind: 仕事の頂点, field: 地球科学, level: 大学院（修士相当以上）, region: 欧州（ECMWF、英国レディング、イタリア・ボローニャ、ドイツ・ボン）, note: 世界中の観測と大きなコンピュータ（いまは AI も使う）で、何日も先の天気と地球のようすを予測する。, coverage: coverage-ecmwf-weather.yaml, beyond: 物理・数学・データ・機械学習・環境科学の修士相当以上、英語、ECMWF の加盟国・協力国・EU 加盟国の国籍、契約 3〜4 年、チームを率いた経験（上級職）}
+  - {id: skyscraper-structural, name: 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）, kind: 仕事の頂点, field: 工学, level: 大学〜大学院, region: 米国（SOM、シカゴ）、アラブ首長国連邦（ブルジュ・ハリファ）, note: 風や地震に負けない高い建物の骨組みを考える。ブルジュ・ハリファは Y 字の形と中心の芯を 3 方向から支える形で、風の力を小さくした。, coverage: coverage-skyscraper-structural.yaml, beyond: 学位と知識の要件は取れなかった（SOM の求人の本文は非公開）。構造設計の経験と、設計の第三者の審査}
+  - {id: suspension-bridge, name: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）, kind: 仕事の頂点, field: 工学, level: 大学〜大学院, region: 日本（本州四国連絡高速道路）、トルコ（チャナッカレ橋）、デンマーク（COWI）, note: 海峡をまたぐ何 km もの吊り橋を、強い風や地震、大きな船にも耐えるように設計し、守る。, coverage: coverage-suspension-bridge.yaml, beyond: 高専・大学の卒業または修士課程の修了（JB 本四高速は土木・機械・電気通信・化学・建築の技術系総合職）、年度により採用しない職種がある。COWI の求人は読んでいない}
+  - {id: mlb-analyst, name: MLB のデータアナリスト, kind: 仕事の頂点, field: 統計学, level: 大学（学士）, region: 米国（球団・リーグ本部）, note: 選手と試合のデータを集めて確かめ、統計とプログラムで選手の評価や将来の予測をつくり、監督やスカウトにわかる形で伝える。, coverage: coverage-mlb-analyst.yaml, beyond: 数学・経済・統計・計算機科学などの学士、0〜3 年の経験、野球と国際市場への関心、スペイン語か日本語（望ましい）、夜・週末・祝日の勤務、非専門家への説明力}
+  - {id: open-kids, name: 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど）, kind: 未解決問題, level: 小学〜研究, region: 国際, note: コラッツ予想やゴールドバッハ予想のように、小学生でも問題の意味は分かるのに、世界中の数学者がまだ答えを出せていない問題に挑む。, coverage: coverage-open-kids.yaml, beyond: 解けたと言えるのは、査読誌に載って数学界に受け入れられたとき（ビール予想の懸賞 100 万ドルは掲載から 2 年以上たって広く受け入れられることが条件で、原稿を AMS や本人に直接送ってはならない）。主張の理解は小中学の単元で足りるが、攻め方は大学院以上の解析的整数論や数論幾何になる。ルジャンドル予想の証明の主張と、2026 年の AI による主張（平面の彩色数が 6 以上など）は査読前で、解決に数えない。}
+  - {id: erdos-prizes, name: エルデシュの懸賞問題, kind: 未解決問題, level: 大学院（博士）以上, region: 国際, note: 数学者エルデシュが賞金をかけた問題（全部で 1221 問のうち 107 問、いちばん高いのは 1 万ドル）に挑む。, coverage: coverage-erdos-prizes.yaml, beyond: "状態と金額は teorth/erdosproblems（2026-11-06 の版）による。本家の erdosproblems.com は 2026-10-06 から状態と解決数を表に出していない。#3 はこのデータベースでは未解決で、2026 年の OpenAI の証明は主張・査読前。#90 は 2026-05 に反証され、第三者の数学者 9 名が人の手で確かめた。代表の問題のうち #20、#30、#64、#592、#89 は攻め方が資料に書かれていない。"}
+  - {id: hilbert-23, name: ヒルベルトの 23 の問題, kind: 未解決問題, level: 大学院（博士）以上, region: 国際, note: 1900 年にヒルベルトが「これからの数学で解くべき」と挙げた 23 の問題を、いまの答えまでたどる。, coverage: coverage-hilbert-23.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 12、一部解決 6、未解決 2、問いが曖昧 3）。第 8 問題のリーマン予想はミレニアム懸賞問題の目標で扱う。2026 年の OpenAI の主張（第 8 の零点のない半平面、第 10 の有理数版、第 16 の一様な上界、第 5 を広げたヒルベルト–スミス予想）は査読前で、解決に数えない。第 4、20、23 問題には完了の基準がない。}
+  - {id: smale-18, name: スメイルの 18 の問題, kind: 未解決問題, level: 大学院（博士）以上, region: 国際, note: 1998 年にスメイルが「21 世紀に解くべき」と挙げた 18 の問題（リーマン予想、P=NP、ナヴィエ–ストークス方程式など）に挑む。, coverage: coverage-smale-18.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 4、一部解決 4、未解決 8、問いが曖昧 2）。第 1、3、15 問題はミレニアム懸賞問題と重なる。第 16 問題の反例は査読前だが、第三者が形式検証したので解決に数える。第 13 問題の 2026 年の OpenAI の主張は査読前で数えない。第 8、18 問題は研究計画で完了の基準がない。}
+  - {id: solved-great, name: 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど）, kind: 未解決問題, level: 大学院（博士）以上, region: 国際, note: フェルマーの最終定理やポアンカレ予想のように、何十年も何百年も解けなかった問題の証明を、読んで分かるようになる。, coverage: coverage-solved-great.yaml, beyond: 証明の論文は長く（ワイルズは 109 ページと共著 20 ページ、ヘイルズは 121 ページ）、ケプラー予想の証明は計算機の確認に頼る。三次元の掛谷、幾何学的ラングランズ（全 5 部作）、ケルヴェア不変量の 126 次元、マッケイ予想は arXiv の段階で、掲載誌の記載がない（マッケイは Annals に掲載予定）。マッケイ予想の証明に要る有限単純群の分類は地図にない。}
+  - {id: icm-2026, name: ICM 2026 の部会に当たる 16 分野の研究の入口, kind: 研究の頂点, field: 数学, level: 大学院（博士）, region: 国際, note: 国際数学者会議（ICM 2026、フィラデルフィア）の部会に当たる 16 の研究分野で、大学院で最初に学ぶことをそろえる。, coverage: coverage-icm-2026.yaml, beyond: 入口は、SLMath の夏の大学院学校の前提、大学院の資格試験の範囲、教科書の序文が名指ししたものだけを取った。部会と分野の対応は本書が当てたもので、IMU が当てたものではない。2026 年の部会の定義文は確かめておらず、2019 年の構造委員会報告の定義を使った。数値解析、制御と最適化、統計と機械学習、確率モデル、教育、歴史の 6 部会は対象外。研究者になるには博士課程と論文の業績が要る。}
   - {id: soa-asa, name: Society of Actuaries（SOA）の ASA の試験, kind: 資格, level: 大学, region: 米国・カナダ, note: 北米で保険や年金のお金を確率と利息で計算するアクチュアリーの、準会員（ASA）になるための 7 つの試験。, coverage: coverage-soa-asa.yaml, beyond: 試験のほかに VEE（数理統計、経済、会計と財務）の単位、Pre-Actuarial と Actuarial Science の Foundations Module、ATPA の評価、FAP の e-Learning 課程、職業倫理の課程 APC。ALTAM と ASTAM はどちらか一方でよい}
   - {id: cfa-program, name: CFA Institute の CFA Program（Level I〜III）, kind: 資格, level: 大学, region: 国際, note: 世界の投資の専門家が、会社や債券の値打ちを調べ、お客さまのお金をどう分けて運ぶかを決める力を確かめる 3 段の試験。, coverage: coverage-cfa-program.yaml, beyond: "受験には学士（在学中なら卒業の 23 か月前以内に Level I）か、職務と高等教育を合わせて 4,000 時間と旅券が要る。各 Level で Practical Skills Module を 1 つ終える。charter には投資判断に関わる実務 4,000 時間（36 か月以上）、推薦状、正会員としての入会、毎年の Professional Conduct Statement が要る"}
-  - {id: nobel-economics, name: ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学, kind: 夢, level: 大学院（博士）, region: 国際, note: お金と市場と銀行のしくみを数学とデータで解き明かし、世界の投資や銀行のやり方を変えた研究者に贈られる賞。, coverage: coverage-nobel-economics.yaml, beyond: 博士号のあと何十年もの独創的な研究、学術誌の論文、ほかの研究者や実務の人が使って確かめた成果。生きている人だけが受ける}
-  - {id: jane-street-qr, name: Jane Street のクオンツ研究者（Quantitative Researcher）, kind: 夢, level: 大学（学士。博士や研究の経験があれば有利）, region: 米国（ニューヨーク）ほか, note: 世界中の市場の大量のデータから、確率と統計とプログラムで値動きの手がかりを見つけ、売り買いの判断に生かす研究者。, coverage: coverage-jane-street-qr.yaml, beyond: 金融の知識は入社の前には問わない。論理と数学で解く力、好奇心、誤りを認める姿勢、いろいろな経歴の人とのチームワーク、正確に伝える力。面接は確率の問題、コード、データ分析}
+  - {id: nobel-economics, name: ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学, kind: 研究の頂点, field: 経済学, level: 大学院（博士）, region: 国際, note: お金と市場と銀行のしくみを数学とデータで解き明かし、世界の投資や銀行のやり方を変えた研究者に贈られる賞。, coverage: coverage-nobel-economics.yaml, beyond: 博士号のあと何十年もの独創的な研究、学術誌の論文、ほかの研究者や実務の人が使って確かめた成果。生きている人だけが受ける}
+  - {id: jane-street-qr, name: Jane Street のクオンツ研究者（Quantitative Researcher）, kind: 仕事の頂点, field: 経済学, level: 大学（学士。博士や研究の経験があれば有利）, region: 米国（ニューヨーク）ほか, note: 世界中の市場の大量のデータから、確率と統計とプログラムで値動きの手がかりを見つけ、売り買いの判断に生かす研究者。, coverage: coverage-jane-street-qr.yaml, beyond: 金融の知識は入社の前には問わない。論理と数学で解く力、好奇心、誤りを認める姿勢、いろいろな経歴の人とのチームワーク、正確に伝える力。面接は確率の問題、コード、データ分析}
+  - {id: crafoord-geo, name: 地球科学者（クラフォード賞の地球科学部門の研究に届く知識）, kind: 研究の頂点, field: 地球科学, level: 大学院（博士）, region: 国際, note: 地面の下や海や空気がどう動き、地球が 46 億年でどう変わってきたかを、石や地震や氷に残ったしるしから読み解く。, coverage: coverage-crafoord-geo.yaml, basis: 1983〜2026 年のクラフォード賞の地球科学部門の授賞の理由（13 回）と、固体地球と古気候を補う 2000〜2023 年のヴェトレセン賞（表に V を付けた）による。大学院の入口は、カリフォルニア工科大学 地球・環境部門（地質・惑星科学）の大学院の入門科目（Ge 101〜163、2026-27 年の科目一覧）による（2026-11-07 取得）。クラフォード賞は天文学と数学、多発性関節炎、地球科学、生物科学の順に回り、地球科学はおよそ 4 年に 1 回。大気と海洋の論題は物理の流れ（気象と気候）の単元に、固体地球と地球化学と古気候は新しい地球科学の流れ W に当てた。論題と単元の対応は名称による, beyond: 賞は応募でなく、推薦とスウェーデン王立科学アカデミーの選考による。野外での調査（地質図をつくる、試料を採る）、観測網や掘削や探査船などの大きな計画への参加、長い年月のデータの蓄積、分析装置を使いこなす実験の腕。博士課程では研究提案 2 件の口頭試問（カリフォルニア工科大学）と博士論文}
+  - {id: shaw-astronomy, name: 天文学者（ショウ賞の天文学部門の研究に届く知識）, kind: 研究の頂点, field: 天文学, level: 大学院（博士）, region: 国際, note: 星や銀河やブラックホールを望遠鏡と計算で調べ、宇宙がどう始まり、星の中で元素がどうつくられたかを明らかにする。, coverage: coverage-shaw-astronomy.yaml, basis: 2004〜2026 年のショウ賞の天文学部門の授賞の理由（23 回）と、大学院の入口としてカリフォルニア大学サンディエゴ校の天文学・天体物理学の博士課程の必修科目（Core A の放射過程と天体流体力学、Core B の惑星と系外惑星、星の構造と進化、星間物質、銀河と銀河力学、宇宙論、星の残骸から 3 科目）による（2026-11-07 取得）。カブリ賞の天体物理学部門は使っていない。論題と単元の対応は名称による, beyond: 賞は応募でなく、推薦とショウ賞財団の選考による。大きな望遠鏡や探査機の観測時間の提案と獲得、国際的な観測計画への参加、大量のデータを扱う計算の力、装置の開発。博士論文}
+  - {id: kavli-nano, name: ナノサイエンスの研究者（カブリ賞のナノサイエンス部門の研究に届く知識）, kind: 研究の頂点, field: 材料, level: 大学院（博士）, region: 国際, note: 原子が数個から数千個集まった目に見えない小さな物をつくり、見て、動かして、新しい性質をもつ材料や道具を生み出す。, coverage: coverage-kavli-nano.yaml, basis: 2008〜2026 年のカブリ賞のナノサイエンス部門の授賞の理由（10 回）と、大学院の入口として MIT 材料科学工学科の博士課程の 1 年目の必修科目（3.25 材料の物理化学、3.26 材料の構造、3.27 量子力学、3.28 材料の変化と変態、3.29 材料の力学的性質、3.32 材料の電磁気的性質）による（2026-11-07 取得）。論題と単元の対応は名称による, beyond: 賞は応募でなく、推薦とノルウェー科学文学アカデミーの選考による。クリーンルームでの試料づくりと顕微鏡などの装置を使いこなす実験の腕、物理・化学・生物にまたがる共同研究。博士課程では 1 年目の終わりの口頭の資格試験（MIT）と博士論文}
+  - {id: stat-prize, name: 統計学者（国際統計学賞の研究に届く知識）, kind: 研究の頂点, field: 統計学, level: 大学院（博士）, region: 国際, note: ばらつきのあるデータから、確かに言えることとその確からしさを引き出す方法をつくり、医療や科学の判断を助ける。, coverage: coverage-stat-prize.yaml, basis: 2017〜2025 年の国際統計学賞の授賞の理由（2 年ごと 5 回）と、大学院の入口としてスタンフォード大学統計学科の博士課程の資格試験（応用統計、確率論、理論統計の 3 科目）と、カリフォルニア大学バークレー校の Stat 210A（博士課程の入門の理論統計、2025 年秋の講義の一覧）による（2026-11-07 取得）。スタンフォードの資格試験の細目は学内限定のため科目名だけを使った。論題と単元の対応は名称による, beyond: 賞は応募でなく、推薦と、5 つの統計学の団体（ASA、IMS、IBS、ISI、RSS）による財団の選考による。方法が多くの分野で使われて影響を持つまで数十年かかることが多い。医学や科学の実データでの共同研究、方法を誰でも使えるソフトウェアにする力、博士論文}
+  - {id: qeprize, name: 工学者（エリザベス女王工学賞の研究に届く知識）, kind: 研究の頂点, field: 工学, level: 大学院（博士）, region: 国際, note: インターネットやスマホのカメラ、LED、風車のように、世界中の人の暮らしを変える技術を考え出して作り、広める。, coverage: coverage-qeprize.yaml, basis: 2013〜2026 年のエリザベス女王工学賞の受賞（10 回）と、大学院の入口としてイリノイ大学 電気・計算機工学科の博士課程の資格試験の分野と中核科目、MIT 機械工学科の博士課程の資格試験の科目（中核 10、専門 6）による（2026-11-07 取得）。論題と単元の対応は名称による, beyond: 賞は応募でなく、推薦と国際審査委員会の選考による。研究だけでなく、技術を製品や社会の仕組みにして世界に広めたこと（産業化、標準化、起業）が問われる。長年の開発と多くの人のチームを率いる力、特許。博士課程では資格試験（イリノイ大学は研究の発表と口頭試問）と博士論文}
+  - {id: kangaroo-1-2, name: Math Kangaroo（1・2 年生）, kind: 大会, level: 小学, region: 国際, note: 世界中の 1・2 年生が、数える、くらべる、形、時計やお金の楽しい問題に挑む数学の大会。, coverage: coverage-kangaroo-1-2.yaml, basis: AKSF の学年帯ごとの指針 Math Kangaroo Curriculum for grades 1 and 2（Math Kangaroo USA が掲載、2021-12。画像の PDF を読み取った）の箇条による。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く（指針は 3 点、4 点、5 点の問題で数の範囲を変える）}
+  - {id: kangaroo-3-4, name: Math Kangaroo（3・4 年生）, kind: 大会, level: 小学, region: 国際, note: 世界中の 3・4 年生が、計算と形、パズルや作戦の問題に挑む数学の大会。, coverage: coverage-kangaroo-3-4.yaml, basis: AKSF の指針 grades 3 and 4（画像の PDF を読み取った）の箇条による。指針は短いので、オーストリアの 2025 年の Écolier（3・4 年）の問題に出た型（空間の見方、折り紙と結び目、カレンダー、てんびん、文章題、並びのきまり）を、問題文は写さずに論題として足した（IN007）。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く（オーストリアの 3・4 年は 24 問を 60 分、誤答は減点）}
+  - {id: kangaroo-5-6, name: Math Kangaroo（5・6 年生）, kind: 大会, level: 小学, region: 国際, note: 世界中の 5・6 年生が、分数や割合、速さ、形、論理の問題に挑む数学の大会。, coverage: coverage-kangaroo-5-6.yaml, basis: AKSF の指針 grades 5 and 6 の箇条による（いまの coverage-kangaroo.yaml の 5-6 年の論題を引き継いだ）。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く}
+  - {id: kangaroo-7-8, name: Math Kangaroo（7・8 年生）, kind: 大会, level: 中学, region: 国際, note: 世界中の 7・8 年生（中学 1・2 年）が、図形、整数、1 次方程式、論理の問題に挑む数学の大会。, coverage: coverage-kangaroo-7-8.yaml, basis: AKSF の指針 grades 7 and 8 の箇条による（いまの coverage-kangaroo.yaml の 7-8 年の論題を引き継いだ）。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く}
+  - {id: kangaroo-9-10, name: Math Kangaroo（9・10 年生）, kind: 大会, level: 高校, region: 国際, note: 世界中の 9・10 年生が、幾何、整数、関数と数列、組合せと確率の問題に挑む数学の大会。, coverage: coverage-kangaroo-9-10.yaml, basis: AKSF の指針 grades 9 and 10 の箇条による（いまの coverage-kangaroo.yaml の 9-10 年の論題を引き継いだ）。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く}
+  - {id: kangaroo-11-12, name: Math Kangaroo（11・12 年生）, kind: 大会, level: 高校, region: 国際, note: 世界中の 11・12 年生が、幾何、整数、代数、組合せと確率、論理の問題に挑む数学の大会。, coverage: coverage-kangaroo-11-12.yaml, basis: AKSF の指針 grades 11 and 12（画像の PDF、2 頁を読み取った）の箇条による。論題と単元の対応は名称による, beyond: 国ごとの主催者を通して、学校などで受ける。5 つの選択肢から 1 つを選ぶ問題を、決まった時間の中で解く}
+  - {id: egmo, name: European Girls' Mathematical Olympiad（EGMO）, kind: 大会, level: 高校, region: 国際, note: 世界中の女子の中高生が、2 日間で 6 問の証明の問題に挑む数学オリンピック。, coverage: coverage-egmo.yaml, basis: 公式の範囲の文書はない。General Regulations（IN008）は 4.2 で問題を「大学より前の数学のいろいろな分野」とだけ書く。そこで過去問 92 問（2012〜2026）の型付けの記録（IN012）を単元ごとに集計し、2 問以上に出た論題を IMO の網羅表（coverage.yaml）の立て方でまとめた。論題の括弧の数はその論題の単元を使う問題の数。1 問だけの論題（ゼッケンドルフ表示、周期の補題、ハミング距離、ロルの定理など）は入れていない, beyond: 国の選抜を通って代表（各国 4 人まで）に選ばれる。20 歳未満で、大学より前の学校に在籍する女子またはノンバイナリー。1 日 3 問を 4 時間半で解き、各問を 0〜7 点で採点する}
+  - {id: apmo, name: Asian Pacific Mathematics Olympiad（APMO）, kind: 大会, level: 高校, region: 国際, note: アジアと太平洋の国々の中高生が、自分の国で 4 時間に 5 問の証明の問題に挑む数学オリンピック。, coverage: coverage-apmo.yaml, basis: 公式の範囲の文書はない（Regulations（IN010）は 4 時間 5 問、各問 7 点とだけ書く）。そこで過去問 85 問（2010〜2026）の型付けの記録（IN012）を単元ごとに集計し、2 問以上に出た論題を IMO の網羅表（coverage.yaml）の立て方でまとめた。論題の括弧の数はその論題の単元を使う問題の数。1 問だけの論題（リュカの定理、平面グラフの双対など）は入れていない, beyond: 大学に入っていない 20 歳未満（その年の 7 月 1 日）が、自分の国で受ける。各国で上位 10 人までの答案が公式の成績になる}
+  - {id: ifoa, name: Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3）, kind: 資格, level: 大学, region: 国際, note: イギリスに本部があり世界で使われるアクチュアリーの資格で、保険や年金のお金を確率と統計と利息で計算し、会社に助言する力を確かめる試験。, coverage: coverage-ifoa.yaml, basis: IFoA の 2027 年の試験の科目別の syllabus（2026-04 版。CS1、CS2、CM1、CM2、CB1、CB2、CB3、CP1、CP2、CP3）の topics と objectives による。2027 年から CM1 は Actuarial Mathematics for Modelling、CM2 は Economic Modelling と名を変えた。Fellow に進む SP と SA の科目は入れていない。論題と単元の対応は名称による, beyond: "CS1 の Paper B は R などの統計ソフトで解く。CP2 は与えられた場面とデータから表計算のモデルを作り、監査の跡と要約を書く実技 2 本。CP3 は数値を相手に合わせて伝える文書（80 点）と振り返り（20 点）の筆記。CB3 はビジネス・シミュレーション・ゲームへの参加、3,000 語の報告、1,000 語の振り返りで評価し、職業倫理は Professional Skills Course（Stage One）で確かめる"}
+  - {id: imf-economist, name: IMF（国際通貨基金）のエコノミスト（Economist Program）, kind: 仕事の頂点, field: 経済学, level: 大学院（博士）, region: 国際, note: 世界の国々の経済を調べて、物の値段やお金の流れ、国の借金や為替について助言し、困った国にはお金を貸して立て直しを助ける国際機関の専門家。, coverage: coverage-imf-economist.yaml, basis: IMF の Economist Program の公式の頁（応募の条件と仕事の分野：国の監視と支援プログラム、財政・金融・金融部門・債務・対外部門）、Experienced Economists の頁（マクロ経済学、金融経済学、財政、国際貿易、計量経済学）、2018 年の選考の頁（面接は金融政策、財政、国際収支、金融部門の問題）、2027 年の募集の転載による。論題は分野の名前から立て、単元は名称で当てた, beyond: 経済学か近い分野の博士（取得から 1 年以内か、1 年以内に取得の見込み）、入るときに 34 歳未満、IMF 加盟国の国籍、流暢な英語（ほかの IMF の言語は有利）。単著の研究論文（25 頁以内）、成績証明、推薦状 3 通。予備面接、パネル面接、作文の試験（論文を要約して批評する）、行動の評価。分析力、判断力、伝える力、各国の当局者と気を配って話す力}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -411,6 +436,7 @@ units:
   - {id: G-046, title: 長さ・重さ・かさの単位と測定, stage: 2, region: hakaru, needs: [G-005, N-007], days: 5}
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, region: data, needs: [N-006], days: 5}
   - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, region: risoku, needs: [N-060], days: 4}
+  - {id: W-001, title: 石と砂と土の観察（粒の大きさ・色・かたさで分ける）, stage: 2, region: ganseki, needs: [G-046], days: 5}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, region: keisan, needs: [N-007], days: 8}
@@ -459,6 +485,9 @@ units:
   - {id: N-061, title: 概数と見積もり（四捨五入）, stage: 3, region: keisan, needs: [N-009, N-013], days: 5}
   - {id: S-028, title: 平均と代表値, stage: 3, region: data, needs: [S-027, N-014, N-020], days: 5}
   - {id: F-002, title: 利息と複利（元金が何倍になるか）, stage: 3, region: risoku, needs: [F-001, A-005, A-009], days: 5}
+  - {id: W-002, title: 流れる水のはたらきと地層のでき方（けずる・運ぶ・積もらせる）, stage: 3, region: chiso, needs: [W-001], days: 5}
+  - {id: W-003, title: 化石と地層の重なり（地層の新旧、示準化石と示相化石）, stage: 3, region: chiso, needs: [W-002], days: 5}
+  - {id: W-004, title: 火山と火成岩（マグマ、噴火のしかた、火山岩と深成岩）, stage: 3, region: jishin-kazan, needs: [W-001], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -499,6 +528,11 @@ units:
   - {id: S-029, title: 度数分布と箱ひげ図（データの分析）, stage: 4, region: data, needs: [S-028, A-005], days: 6}
   - {id: F-003, title: 現在価値と割引（将来のお金を今の値打ちに直す）, stage: 4, region: risoku, needs: [F-002, A-010], days: 5}
   - {id: F-004, title: 複式簿記（仕訳、勘定、試算表）, stage: 4, region: kaikei, needs: [F-001, A-011], days: 6}
+  - {id: W-005, title: 地震のしくみと揺れの伝わり方（震源と震央、P 波と S 波、震度とマグニチュード）, stage: 4, region: jishin-kazan, needs: [A-007], days: 6}
+  - {id: W-006, title: 大地の変動と地球の内部（断層としゅう曲、隆起と沈降、地球の層構造、プレートの動き）, stage: 4, region: chikyu-naibu, needs: [W-003, W-005], days: 6}
+  - {id: W-007, title: 鉱物と結晶の観察（結晶の形、へき開、硬さ、造岩鉱物）, stage: 4, region: ganseki, needs: [W-004, G-021], days: 6}
+  - {id: W-008, title: 岩石の循環（火成岩・堆積岩・変成岩のうつりかわり）, stage: 4, region: ganseki, needs: [W-003, W-007], days: 5}
+  - {id: W-009, title: 地球の歴史と地質年代（生物の移り変わりと大量絶滅、地球の年齢）, stage: 4, region: chiso, needs: [W-003], days: 6}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, region: kansu, needs: [A-006, A-011], days: 6}
@@ -562,6 +596,8 @@ units:
   - {id: F-006, title: 債券の価格と利回り（クーポン、満期、償還）, stage: 5, region: risoku, needs: [F-005], days: 6}
   - {id: F-007, title: 投資の採算と費用便益（正味現在価値、内部収益率、損益分岐）, stage: 5, region: kaikei, needs: [F-005, A-019], days: 6}
   - {id: F-008, title: 需要と供給（市場の価格と数量）, stage: 5, region: keizai, needs: [A-019, A-012], days: 6}
+  - {id: P-162, title: 天体の観測量と距離（天球座標、年周視差と距離のはしご、等級と色、スペクトル型と HR 図）, stage: 5, region: tenmon, needs: [P-023, P-088, G-025], days: 7}
+  - {id: W-010, title: 放射年代測定（放射性崩壊と半減期、同位体による年代、年代の決め方）, stage: 5, region: chikyu-kagaku, needs: [P-104, D-001, W-009], days: 6}
 
   # ---- 段 6 構造 ----
   - {id: N-032, title: 合同式, stage: 6, region: seisuron, needs: [N-028, A-010], days: 13}
@@ -665,6 +701,10 @@ units:
   - {id: F-041, title: 個人の資産設計と税（所得税と相続税、目標に基づく計画、資産承継）, stage: 6, region: shokugyo-seido, needs: [F-005, F-010], days: 8}
   - {id: F-042, title: 管理会計と事業費の分析（原価計算、予算管理、業績評価）, stage: 6, region: kaikei, needs: [F-010, F-007], days: 8}
   - {id: F-043, title: 経営戦略とコーポレート・ガバナンス（株式会社の仕組み、競争戦略、取締役会と株主）, stage: 6, region: kaikei, needs: [F-010, F-012], days: 8}
+  - {id: W-011, title: 地磁気と古地磁気（双極子磁場、岩石の残留磁化、地磁気の逆転、見かけの極移動）, stage: 6, region: chikyu-naibu, needs: [P-032, W-006, W-010], days: 8}
+  - {id: W-012, title: プレートテクトニクス（海洋底拡大、プレート境界、球面上のプレート運動とオイラー極、ホットスポット）, stage: 6, region: chikyu-naibu, needs: [W-006, W-011, M-013], days: 9}
+  - {id: W-013, title: 鉱物の結晶構造と化学組成（ケイ酸塩鉱物、固溶体、結晶化学）, stage: 6, region: ganseki, needs: [W-007, P-088], days: 8}
+  - {id: W-014, title: 層序学と地質図（地層の対比、生層序・磁気層序・化学層序、地質図と断面図）, stage: 6, region: chiso, needs: [W-009, W-010, W-011], days: 8}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根, stage: 7, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -820,6 +860,24 @@ units:
   - {id: D-077, title: 直交多項式と特殊関数（ルジャンドル、エルミート、ラゲール、ベッセル）, stage: 7, region: bibun-hoteishiki, needs: [D-048], days: 8}
   - {id: M-014, title: "行列の指数関数と 1 径数変換群（e^{tA}、行列式とトレース、回転の生成子）", stage: 7, region: senkei-keisan, needs: [M-007, D-046], days: 8}
   - {id: M-015, title: 特異値分解と擬似逆行列（最小ノルム解、低ランク近似）, stage: 7, region: senkei-keisan, needs: [M-007, M-006], days: 8}
+  - {id: S-033, title: 十分統計量と不偏推定（指数型分布族、完備性、ラオ–ブラックウェルの定理、フィッシャー情報量とクラメール–ラオの不等式）, stage: 7, region: tokei, needs: [S-018, D-014], days: 8}
+  - {id: S-034, title: ブートストラップ（再標本化による標準誤差と信頼区間、ジャックナイフ）, stage: 7, region: tokei, needs: [S-018, S-024], days: 8}
+  - {id: S-040, title: 多重検定と偽発見率（族ごとの誤り率、ベンジャミニ–ホッホベルク法）, stage: 7, region: tokei, needs: [S-019], days: 8}
+  - {id: W-015, title: 地球の形と重力（重力のポテンシャル、ジオイド、重力異常、アイソスタシー）, stage: 7, region: chikyu-naibu, needs: [P-009, D-018, W-006], days: 8}
+  - {id: W-016, title: 火成岩の成因（マグマの発生、部分融解、結晶分化、状態図による読み）, stage: 7, region: ganseki, needs: [W-008, W-013, P-046], days: 8}
+  - {id: W-017, title: 地球の化学組成と元素の分配（地球と隕石の組成、親石元素と親鉄元素、微量元素の分配）, stage: 7, region: chikyu-kagaku, needs: [W-013, P-046], days: 8}
+  - {id: W-018, title: 堆積過程と堆積岩（粒子の運搬と沈降、堆積構造と堆積相、続成作用）, stage: 7, region: chiso, needs: [W-002, W-008, P-014], days: 8}
+  - {id: W-019, title: 変成作用と変成岩（温度と圧力の条件、変成相、地質温度圧力計）, stage: 7, region: ganseki, needs: [W-016, P-046], days: 8}
+  - {id: W-020, title: 構造地質学（応力とひずみ、断層と褶曲、岩石の破壊）, stage: 7, region: chikyu-naibu, needs: [E-002, W-006], days: 8}
+  - {id: W-021, title: 地震波の伝わり方（弾性体の波動方程式、P 波と S 波、表面波、走時と波線）, stage: 7, region: jishin-kazan, needs: [W-005, E-002, P-025, D-049], days: 9}
+  - {id: W-022, title: 地球の熱（熱伝導と放射性元素による発熱、地殻熱流量、海洋底の冷却と水深）, stage: 7, region: chikyu-naibu, needs: [P-042, D-049, W-012], days: 8}
+  - {id: W-023, title: 地形と地表の過程（風化と侵食、河川と氷河、斜面、地形の発達）, stage: 7, region: chiso, needs: [W-018, P-014], days: 8}
+  - {id: W-024, title: 潮汐（起潮力、海と固体地球の潮汐、潮汐による散逸と月の後退）, stage: 7, region: chikyu-naibu, needs: [P-009, P-012, W-015], days: 8}
+  - {id: F-050, title: 開放経済のマクロ経済学（国際収支、為替相場の決定、マンデル–フレミング・モデル、為替制度、資本移動と通貨危機）, stage: 7, region: keizai, needs: [F-013, F-025], days: 10}
+  - {id: F-051, title: 国際貿易（比較優位、ヘクシャー–オリーン・モデル、貿易の利益、関税と保護貿易、WTO）, stage: 7, region: keizai, needs: [F-012, F-013], days: 8}
+  - {id: F-052, title: 財政と公的債務（課税と支出の経済学、財政乗数、政府の予算制約、財政ルール、債務の持続可能性）, stage: 7, region: keizai, needs: [F-013, F-005], days: 8}
+  - {id: F-054, title: 国の経済の診断（国民経済計算、国際収支統計、政府財政統計、通貨統計の整合と金融計画）, stage: 7, region: keizai, needs: [F-013, F-050, F-052], days: 8}
+  - {id: F-056, title: 生存時間解析と死亡率の推定（打ち切り、カプラン–マイヤーとネルソン–アーレン、コックス比例ハザード、曝露と遷移強度の最尤推定、補整、死亡率の予測）, stage: 7, region: seimei-nenkin, needs: [F-014, S-019, S-020, S-021], days: 10}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1082,6 +1140,33 @@ units:
   - {id: D-079, title: 非線形方程式の厳密解（第一積分、キンクとソリトン、コール＝ホップ変換）, stage: 8, region: bibun-hoteishiki, needs: [D-076, D-049], days: 10}
   - {id: P-176, title: 量子の断熱定理と準位の避けた交差（ランダウ＝ツェナー遷移、ベリー位相の入口）, stage: 8, region: ryoshi, needs: [P-078, P-079, P-019], days: 10}
   - {id: P-177, title: 転送行列の方法（1 次元の格子模型、相関長、波の透過）, stage: 8, region: netsu, needs: [P-052, M-007], days: 8}
+  - {id: S-035, title: 生存時間解析（打ち切り、カプラン–マイヤー推定量、比例ハザードモデルと部分尤度）, stage: 8, region: tokei, needs: [S-020, S-021], days: 9}
+  - {id: S-036, title: 欠測データと EM アルゴリズム, stage: 8, region: tokei, needs: [S-021], days: 8}
+  - {id: S-037, title: 経時データと混合効果モデル（変量効果、反復測定、メタ分析）, stage: 8, region: tokei, needs: [S-020, S-021, S-036], days: 9}
+  - {id: S-039, title: マルコフ連鎖モンテカルロ法（メトロポリス–ヘイスティングス法、ギブスサンプリング、収束の診断）, stage: 8, region: tokei, needs: [S-005, S-022, S-024], days: 9}
+  - {id: P-163, title: 天体物理の放射過程（放射伝達、黒体放射、制動放射、シンクロトロン放射、逆コンプトン散乱）, stage: 8, region: tenmon, needs: [P-039, P-051, P-162], days: 10}
+  - {id: P-164, title: 星間物質と星形成（星間ガスと塵、加熱と冷却、分子雲の重力収縮、原始星と原始惑星系円盤）, stage: 8, region: tenmon, needs: [P-163, P-014, P-068], days: 10}
+  - {id: P-169, title: 銀河の構造と恒星系の力学（銀河の分類、銀河の回転と暗黒物質、恒星系の力学、銀河中心の巨大ブラックホール）, stage: 8, region: tenmon, needs: [P-010, P-018, P-162], days: 10}
+  - {id: P-171, title: 惑星系（太陽系の天体と太陽系外縁天体、惑星の形成、系外惑星の検出法と性質）, stage: 8, region: tenmon, needs: [P-009, P-162, P-164], days: 9}
+  - {id: P-173, title: 低次元のナノ構造（量子閉じ込め、量子ドット、ナノワイヤとカーボンナノチューブ、ナノ構造のフォノン）, stage: 8, region: bussei, needs: [P-095, P-093, P-071], days: 9}
+  - {id: P-175, title: 表面と界面（表面の構造と再構成、吸着、自己組織化単分子膜）, stage: 8, region: bussei, needs: [P-092, P-046, P-103], days: 8}
+  - {id: E-158, title: pn 接合とトランジスタ（ダイオード、バイポーラトランジスタ、MOSFET の動作）, stage: 8, region: zairyo-device, needs: [P-096, E-067], days: 9}
+  - {id: E-163, title: 結晶の欠陥と転位（点欠陥、転位と塑性変形、粒界、強化の機構）, stage: 8, region: zairyo-device, needs: [P-092, E-002], days: 9}
+  - {id: E-164, title: 固体中の拡散と相変態（拡散の機構、核生成と成長、変態の速度論と組織）, stage: 8, region: zairyo-device, needs: [P-046, P-055, E-163], days: 9}
+  - {id: E-166, title: 衛星測位（擬似距離による位置の決定、原子時計、スペクトル拡散信号、相対論の補正）, stage: 8, region: kido, needs: [E-089, P-059, P-009, K-003], days: 9}
+  - {id: E-170, title: 電力変換と電力系統（パワーエレクトロニクス、同期発電機、送電と系統の安定）, stage: 8, region: energy, needs: [E-069, E-048, E-158], days: 9}
+  - {id: W-025, title: 震源の物理（断層運動と地震モーメント、マグニチュード、発震機構、グーテンベルク–リヒター則）, stage: 8, region: jishin-kazan, needs: [W-020, W-021], days: 9}
+  - {id: W-026, title: 岩石のレオロジー（クリープ、転位と拡散による流動、マントルの粘性）, stage: 8, region: chikyu-naibu, needs: [W-020, E-163, E-164], days: 9}
+  - {id: W-027, title: リソスフェアの力学（弾性板のたわみ、荷重とアイソスタシー、伸張と堆積盆地の沈降）, stage: 8, region: chikyu-naibu, needs: [W-015, W-022, E-012], days: 9}
+  - {id: W-028, title: マントル対流（粘性流体の熱対流、レイリー数、プルームとホットスポット、地球の熱史）, stage: 8, region: chikyu-naibu, needs: [P-014, W-022, W-026], days: 10}
+  - {id: W-029, title: 多孔質の岩石の中の流れ（ダルシーの法則、地下水と熱水の循環、融けたマントルからのメルトの移動）, stage: 8, region: chikyu-naibu, needs: [P-014, D-049, W-016, W-018], days: 8}
+  - {id: W-030, title: 火山の物理（マグマの上昇と発泡、噴火の様式、噴煙柱と火砕流）, stage: 8, region: jishin-kazan, needs: [W-016, P-014, P-046], days: 9}
+  - {id: W-031, title: 同位体地球化学（放射性同位体の系とアイソクロン、マントルと地殻の分化）, stage: 8, region: chikyu-kagaku, needs: [W-010, W-016, W-017], days: 9}
+  - {id: W-032, title: 安定同位体地球化学（同位体の分別、酸素・水素・炭素の同位体比、古水温の指標）, stage: 8, region: chikyu-kagaku, needs: [W-017, P-043, P-046], days: 9}
+  - {id: W-033, title: 炭素循環と海洋の化学（炭酸系の平衡、海洋による炭素の運搬、風化による長期の気候の調節）, stage: 8, region: chikyu-kagaku, needs: [W-032, P-120, P-046], days: 9}
+  - {id: W-034, title: 大気化学（オゾン層の生成と破壊、微量気体の反応、エーロゾル）, stage: 8, region: chikyu-kagaku, needs: [P-120, P-131, P-043], days: 9}
+  - {id: F-053, title: 金融政策と中央銀行（ニューケインジアン・モデル、インフレ目標と政策金利の規則、波及の経路、量的緩和）, stage: 8, region: keizai, needs: [F-025, F-026], days: 10}
+  - {id: F-055, title: 従属性と極値（コピュラ、裾の従属、極値分布、裾の重さの尺度）, stage: 8, region: keiryo-risk, needs: [S-003, S-008, F-017], days: 8}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1283,6 +1368,30 @@ units:
   - {id: K-120, title: 精度保証付き数値計算（区間演算）, stage: 9, region: suchi, needs: [K-002, D-016], days: 8}
   - {id: K-121, title: ブール関数と回路計算量, stage: 9, region: keisan-riron, needs: [K-041, C-029], days: 8}
   - {id: F-039, title: 期間構造モデルと信用リスク（短期金利モデル、測度変換、デフォルト強度）, stage: 9, region: toshi, needs: [F-035, S-016], days: 12}
+  - {id: S-038, title: 平滑化スプラインと再生核ヒルベルト空間（ノンパラメトリック回帰、一般化交差検証）, stage: 9, region: tokei, needs: [S-020, K-063, D-065], days: 10}
+  - {id: P-165, title: 降着円盤（角運動量の輸送、磁気回転不安定性、円盤の構造と放射）, stage: 9, region: tenmon, needs: [P-164, P-041, P-010], days: 9}
+  - {id: P-166, title: 超新星と元素の起源（Ia 型と重力崩壊型の超新星、s 過程と r 過程、標準光源としての超新星）, stage: 9, region: tenmon, needs: [P-068, P-106, P-163], days: 10}
+  - {id: P-167, title: 中性子星とパルサー（中性子星の構造、パルサーとミリ秒パルサー、マグネター、高速電波バースト）, stage: 9, region: tenmon, needs: [P-068, P-061, P-163], days: 10}
+  - {id: P-168, title: 高エネルギー天体と突発天体（ガンマ線バースト、活動銀河核と相対論的ジェット、ブラックホールからのエネルギーの取り出し）, stage: 9, region: tenmon, needs: [P-063, P-165, P-166], days: 10}
+  - {id: P-170, title: 銀河の形成と宇宙の大規模構造（暗黒物質ハローの成長、N 体計算、銀河サーベイと赤方偏移空間のゆがみ）, stage: 9, region: tenmon, needs: [P-066, P-169, P-119], days: 10}
+  - {id: P-172, title: 二次元物質とモアレ超格子（グラフェン、ねじれ二層、魔法角の平坦バンドと電子相関）, stage: 9, region: bussei, needs: [P-095, P-100, P-102], days: 10}
+  - {id: P-174, title: ナノ光学（表面プラズモン、メタマテリアルと負の屈折、回折限界を超える顕微鏡）, stage: 9, region: bussei, needs: [P-098, P-040, P-028], days: 9}
+  - {id: E-159, title: 発光ダイオードと半導体レーザー（直接遷移の化合物半導体、ヘテロ構造と量子井戸、窒化ガリウムの青色発光）, stage: 9, region: zairyo-device, needs: [E-158, P-079, P-028], days: 9}
+  - {id: E-160, title: 太陽電池（光起電力効果、変換効率の限界、再結合と表面の不活性化）, stage: 9, region: energy, needs: [E-158, P-051], days: 9}
+  - {id: E-161, title: 撮像素子（光電変換、電荷結合素子、CMOS イメージセンサ、雑音）, stage: 9, region: zairyo-device, needs: [E-158, E-077], days: 8}
+  - {id: E-162, title: 永久磁石と磁性材料（磁気異方性、磁区と磁壁、保磁力、希土類磁石）, stage: 9, region: zairyo-device, needs: [P-097, E-163], days: 8}
+  - {id: E-165, title: ナノの顕微鏡法（収差補正電子顕微鏡と電子線による元素分析、走査トンネル顕微鏡と原子間力顕微鏡、原子の操作）, stage: 9, region: zairyo-device, needs: [P-092, P-071, P-118], days: 9}
+  - {id: E-167, title: 風力発電（ロータの空気力学とベッツの限界、翼素運動量理論、荷重と疲労、発電機と制御）, stage: 9, region: energy, needs: [E-029, E-111, E-015, E-170], days: 9}
+  - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, region: seitai-kogaku, needs: [E-164, P-103, B-010], days: 9}
+  - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010], days: 9}
+  - {id: W-035, title: 地球の形成と惑星の分化（隕石と太陽系の材料、核とマントルの分離、初期の地球）, stage: 9, region: chikyu-kagaku, needs: [W-031, P-171], days: 10}
+  - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, region: chiso, needs: [W-014, W-033, B-011], days: 10}
+  - {id: W-037, title: 地震波トモグラフィーと地球の内部構造（地球の標準モデル、自由振動、マントルと核）, stage: 9, region: chikyu-naibu, needs: [W-021, W-025, P-141, D-048], days: 10}
+  - {id: W-038, title: 地震の発生の物理（断層の摩擦則、地震サイクル、余震と地震の予測）, stage: 9, region: jishin-kazan, needs: [W-025, W-026], days: 10}
+  - {id: W-039, title: 地球ダイナモ（外核の対流、磁気流体力学、地磁気の逆転の機構）, stage: 9, region: chikyu-naibu, needs: [W-011, W-028, P-041], days: 10}
+  - {id: W-040, title: 造山運動と大陸の変形（衝突帯、山脈の隆起と侵食、大陸地殻の厚化と気候への影響）, stage: 9, region: chikyu-naibu, needs: [W-023, W-026, W-027], days: 10}
+  - {id: W-041, title: 古気候学（気候の記録の復元、氷床コアと海底堆積物、軌道要素と氷期の周期、過去の温暖期）, stage: 9, region: chikyu-kagaku, needs: [W-032, W-033, P-161, P-009], days: 10}
+  - {id: W-042, title: 宇宙測地学（GNSS による地殻変動、衛星重力、衛星高度計による海面の変化）, stage: 9, region: chikyu-naibu, needs: [W-015, E-166, P-141], days: 10}
 
   # ---- 段 10 新しい対象をつくる ----
 

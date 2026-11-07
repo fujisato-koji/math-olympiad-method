@@ -27,6 +27,7 @@
   --lane-H: #b8432f;
   --lane-B: #23955a;
   --lane-F: #5f7088;
+  --lane-W: #8f7a3e;
   --ok: #1f9d63;
   --bad: #d4553a;
   --glow: rgba(255, 196, 61, .55);
@@ -64,6 +65,7 @@
     --lane-H: #ff8f78;
     --lane-B: #6bdc9a;
     --lane-F: #a9b8cc;
+    --lane-W: #d6c08a;
     --ok: #43c98a;
     --bad: #ff7b61;
     --glow: rgba(255, 205, 90, .4);
@@ -98,6 +100,7 @@
   --lane-H: #ff8f78;
   --lane-B: #6bdc9a;
   --lane-F: #a9b8cc;
+  --lane-W: #d6c08a;
   --ok: #43c98a;
   --bad: #ff7b61;
   --glow: rgba(255, 205, 90, .4);

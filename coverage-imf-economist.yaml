@@ -1,0 +1,163 @@
+# 網羅表：IMF（国際通貨基金）のエコノミスト（Economist Program）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN023:
+    title: IMF, Economist Program（応募の条件と仕事の分野）
+    url: https://www.imf.org/en/about/careers/economist-program
+    date: 2026-11-07
+  IN024:
+    title: IMF, Experienced Economists（エコノミストの専門の分野）
+    url: https://www.imf.org/en/About/Recruitment/working-at-the-imf/experienced-economists
+    date: 2026-11-07
+  IN025:
+    title: IMF Recruitment, Economist Program Selection Process and Criteria（2018-09-24、面接の論題）
+    url: https://www.imf.org/external/np/adm/rec/job/econprosp.htm
+    date: 2026-11-07
+  IN026:
+    title: Economist Program 2027（IMF の募集の転載、Impactpool、締切 2026-12-05）
+    url: https://www.impactpool.org/jobs/1238926
+    date: 2026-11-07
+items:
+- id: T-01
+  field: マクロ経済学
+  topic: マクロ経済学の基礎（国民所得と乗数、総需要と総供給、貨幣と金利、インフレと失業）
+  sources:
+  - IN023
+  - IN025
+  - IN026
+  units:
+  - F-013
+- id: T-02
+  field: マクロ経済学
+  topic: 動学マクロ経済学と経済成長（成長モデル、最適成長、景気循環）
+  sources:
+  - IN024
+  - IN026
+  units:
+  - F-025
+- id: T-03
+  field: マクロ経済学
+  topic: 金融政策と中央銀行（インフレ目標と政策金利の規則、波及の経路）
+  sources:
+  - IN023
+  - IN024
+  - IN025
+  - IN026
+  units:
+  - F-053
+- id: T-04
+  field: マクロ経済学
+  topic: 財政政策と公的債務（財政乗数、政府の予算制約、債務の持続可能性）
+  sources:
+  - IN023
+  - IN024
+  - IN025
+  - IN026
+  units:
+  - F-052
+- id: T-05
+  field: 国際金融
+  topic: 開放経済のマクロ経済学と為替（国際収支、為替相場の決定、為替制度、資本移動）
+  sources:
+  - IN023
+  - IN025
+  - IN026
+  units:
+  - F-050
+- id: T-06
+  field: 国際金融
+  topic: 国際貿易
+  sources:
+  - IN024
+  units:
+  - F-051
+- id: T-07
+  field: 金融
+  topic: 金融部門とマクロ金融の連関（銀行、金融危機と規制、システミック・リスク）
+  sources:
+  - IN023
+  - IN024
+  - IN025
+  - IN026
+  units:
+  - F-026
+  - F-038
+- id: T-08
+  field: 金融
+  topic: 金融経済学（資産価格、ポートフォリオ、市場の効率性）
+  sources:
+  - IN024
+  - IN026
+  units:
+  - F-020
+  - F-022
+  - F-036
+- id: T-09
+  field: 国の分析
+  topic: 国の経済の診断（国民経済計算、国際収支、財政、通貨の統計とその整合、4 条協議と支援プログラムの設計）
+  sources:
+  - IN023
+  - IN026
+  units:
+  - F-054
+- id: T-10
+  field: ミクロ経済学
+  topic: ミクロ経済学（消費者と企業、市場均衡、ゲーム理論、情報の非対称性）
+  sources:
+  - IN023
+  units:
+  - F-012
+  - F-024
+- id: T-11
+  field: 計量経済学
+  topic: 計量経済学（回帰と内生性、操作変数、パネルデータ、一般化モーメント法）
+  sources:
+  - IN024
+  units:
+  - F-033
+- id: T-12
+  field: 計量経済学
+  topic: 時系列の計量（自己回帰、単位根と共和分、予測）
+  sources:
+  - IN024
+  units:
+  - F-034
+- id: T-13
+  field: 数学
+  topic: 経済学の数学（多変数の最適化と条件付き極値、ラグランジュ法、動学的な最適化、微分方程式の系、固有値）
+  sources:
+  - IN023
+  - IN024
+  units:
+  - D-014
+  - D-015
+  - K-010
+  - D-052
+  - D-046
+  - M-007
+- id: T-14
+  field: 数学
+  topic: 確率と統計（大学）
+  sources:
+  - IN023
+  - IN024
+  units:
+  - S-003
+  - S-004
+  - S-018
+  - S-019
+  - S-021
+- id: T-15
+  field: 計算
+  topic: 計算機を使う力（モデルを数値で解く、データを扱う）
+  sources:
+  - IN026
+  units:
+  - K-012
+  - K-015
+  - K-060
+- id: T-16
+  field: 応用の分野
+  topic: 開発経済学、労働経済学、ジェンダーの経済学など（博士の分野として挙がる）
+  sources:
+  - IN026
+  none: 地図にない（候補：開発経済学、労働経済学）

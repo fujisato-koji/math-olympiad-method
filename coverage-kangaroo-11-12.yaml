@@ -1,0 +1,384 @@
+# 網羅表：Math Kangaroo（11・12 年生）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN006:
+    title: AKSF, Math Kangaroo Curriculum for grades 11 and 12（Math Kangaroo USA が掲載、2021-12）
+    url: https://mathkangaroo.org/mks/wp-content/uploads/2021/12/Math-Kangaroo-Curriculum-for-grades-11-and-12.pdf
+    date: 2026-11-07
+items:
+- id: T-01
+  field: 平面幾何
+  topic: 直線、線分、多角形
+  sources:
+  - IN006
+  units:
+  - G-006
+  - G-017
+- id: T-02
+  field: 平面幾何
+  topic: 合同と相似
+  sources:
+  - IN006
+  units:
+  - G-016
+  - G-020
+- id: T-03
+  field: 平面幾何
+  topic: 対称
+  sources:
+  - IN006
+  units:
+  - G-004
+- id: T-04
+  field: 平面幾何
+  topic: 三平方の定理
+  sources:
+  - IN006
+  units:
+  - G-019
+- id: T-05
+  field: 平面幾何
+  topic: 簡単な平面図形の面積（自分と相似な小さな形に分けて解くものを含む）
+  sources:
+  - IN006
+  units:
+  - G-008
+  - G-012
+  - G-013
+- id: T-06
+  field: 平面幾何
+  topic: 角の計算（平行線と垂直、円の中の角、三角形と多角形の角）
+  sources:
+  - IN006
+  units:
+  - G-009
+  - G-016
+  - G-018
+  - G-023
+- id: T-07
+  field: 平面幾何
+  topic: 円と放物線
+  sources:
+  - IN006
+  units:
+  - G-010
+  - G-018
+  - A-020
+- id: T-08
+  field: 平面幾何
+  topic: 共点、共線、共円
+  sources:
+  - IN006
+  units:
+  - G-023
+  - G-029
+  - G-032
+- id: T-09
+  field: 平面幾何
+  topic: 回転、鏡映、平行移動、相似拡大（等長変換と相似変換）
+  sources:
+  - IN006
+  units:
+  - G-004
+  - G-015
+  - G-013
+  - G-031
+- id: T-10
+  field: 平面幾何
+  topic: 正多角形
+  sources:
+  - IN006
+  units:
+  - G-017
+  - G-009
+- id: T-11
+  field: 解析幾何
+  topic: 点の座標と、直線・円・放物線の方程式
+  sources:
+  - IN006
+  units:
+  - G-026
+  - A-019
+  - A-020
+- id: T-12
+  field: 解析幾何
+  topic: 平面の点と直線の計算
+  sources:
+  - IN006
+  units:
+  - G-026
+  - G-027
+- id: T-13
+  field: 解析幾何
+  topic: 三角法による三角形の計算
+  sources:
+  - IN006
+  units:
+  - G-024
+  - G-025
+- id: T-14
+  field: 立体幾何
+  topic: 空間の位置関係（向きと鏡像、立体の展開図）
+  sources:
+  - IN006
+  units:
+  - G-021
+  - G-007
+- id: T-15
+  field: 立体幾何
+  topic: 立方体、角柱、角錐
+  sources:
+  - IN006
+  units:
+  - G-003
+  - G-021
+- id: T-16
+  field: 立体幾何
+  topic: 球、円錐、円柱
+  sources:
+  - IN006
+  units:
+  - G-011
+  - G-021
+- id: T-17
+  field: 立体幾何
+  topic: 正多面体
+  sources:
+  - IN006
+  units:
+  - G-021
+- id: T-18
+  field: 立体幾何
+  topic: 空間の点の座標
+  sources:
+  - IN006
+  units:
+  - G-027
+  - G-035
+- id: T-19
+  field: 立体幾何
+  topic: 体積
+  sources:
+  - IN006
+  units:
+  - G-011
+- id: T-20
+  field: 立体幾何
+  topic: 投影
+  sources:
+  - IN006
+  units:
+  - G-021
+- id: T-21
+  field: 立体幾何
+  topic: 1 次元・2 次元の物体の 3 次元での動き（結び目、折りなど）
+  sources:
+  - IN006
+  units:
+  - G-004
+  - G-007
+- id: T-22
+  field: 整数
+  topic: 数のパズル
+  sources:
+  - IN006
+  units:
+  - N-012
+  - L-001
+- id: T-23
+  field: 整数
+  topic: 累乗
+  sources:
+  - IN006
+  units:
+  - A-009
+- id: T-24
+  field: 整数
+  topic: 素数と素因数分解
+  sources:
+  - IN006
+  units:
+  - N-021
+  - N-030
+- id: T-25
+  field: 整数
+  topic: 三角数
+  sources:
+  - IN006
+  units:
+  - A-004
+- id: T-26
+  field: 整数
+  topic: ディオファントス方程式
+  sources:
+  - IN006
+  units:
+  - N-029
+  - N-035
+- id: T-27
+  field: 整数
+  topic: 割り切れと簡単な余りの計算、偶奇
+  sources:
+  - IN006
+  units:
+  - N-017
+  - N-022
+  - N-028
+  - L-005
+- id: T-28
+  field: 関数と数列
+  topic: グラフの読み取り
+  sources:
+  - IN006
+  units:
+  - A-019
+  - A-020
+- id: T-29
+  field: 関数と数列
+  topic: 簡単な等差数列と等比数列、漸化式などで決まる数列
+  sources:
+  - IN006
+  units:
+  - A-004
+  - A-022
+  - C-009
+- id: T-30
+  field: 関数と数列
+  topic: 簡単な関数方程式
+  sources:
+  - IN006
+  units:
+  - A-023
+- id: T-31
+  field: 代数
+  topic: 絶対値
+  sources:
+  - IN006
+  units:
+  - N-011
+- id: T-32
+  field: 代数
+  topic: 累乗と累乗根
+  sources:
+  - IN006
+  units:
+  - A-009
+  - A-016
+- id: T-33
+  field: 代数
+  topic: 対数（基本の性質だけ。底の変換は含まない）
+  sources:
+  - IN006
+  units:
+  - D-001
+- id: T-34
+  field: 代数
+  topic: 連立方程式、置きかえと変数の変換
+  sources:
+  - IN006
+  units:
+  - A-012
+- id: T-35
+  field: 代数
+  topic: 簡単な不等式（解の集合を区間で書く）
+  sources:
+  - IN006
+  units:
+  - A-013
+- id: T-36
+  field: 代数
+  topic: 簡単な多項式の因数分解
+  sources:
+  - IN006
+  units:
+  - A-015
+- id: T-37
+  field: 代数
+  topic: 2 次方程式と多項式の方程式
+  sources:
+  - IN006
+  units:
+  - A-017
+  - A-026
+- id: T-38
+  field: 代数
+  topic: 文章題や場面の問題を代数で解く
+  sources:
+  - IN006
+  units:
+  - A-014
+- id: T-39
+  field: 組合せと確率
+  topic: n!（順列）
+  sources:
+  - IN006
+  units:
+  - C-006
+- id: T-40
+  field: 組合せと確率
+  topic: 二項係数と部分集合の個数
+  sources:
+  - IN006
+  units:
+  - C-007
+  - C-015
+- id: T-41
+  field: 組合せと確率
+  topic: 包除原理
+  sources:
+  - IN006
+  units:
+  - C-008
+  - C-021
+- id: T-42
+  field: 組合せと確率
+  topic: 場合を分けて系統的に数える
+  sources:
+  - IN006
+  units:
+  - C-003
+  - C-005
+  - L-007
+- id: T-43
+  field: 組合せと確率
+  topic: 樹形図による確率の計算
+  sources:
+  - IN006
+  units:
+  - C-003
+  - C-011
+- id: T-44
+  field: 論理とパズル
+  topic: 問題の読みかえ（ほかの分野の問題に帰着する）
+  sources:
+  - IN006
+  none: 地図にない（候補：問題をほかの分野に写す読みかえ）
+- id: T-45
+  field: 論理とパズル
+  topic: 論理でつながった文の網から、部分的な情報で事実を導く
+  sources:
+  - IN006
+  units:
+  - L-008
+  - L-013
+- id: T-46
+  field: 論理とパズル
+  topic: 決まった公理や規則から作ったパズル
+  sources:
+  - IN006
+  units:
+  - L-002
+  - L-016
+- id: T-47
+  field: 論理とパズル
+  topic: 言語の構造（文の形と意味）
+  sources:
+  - IN006
+  units:
+  - L-013
+- id: T-48
+  field: 論理とパズル
+  topic: ブール型の問題（正直者とうそつき）
+  sources:
+  - IN006
+  units:
+  - L-003

@@ -1,0 +1,203 @@
+# 網羅表：地球科学者（クラフォード賞の地球科学部門の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC001:
+    title: Wikipedia, Crafoord Prize（地球科学部門の受賞者と授賞の理由の一覧）
+    url: https://en.wikipedia.org/wiki/Crafoord_Prize
+    date: '2026-11-07'
+  SC002:
+    title: The Crafoord Prize, Geosciences
+    url: https://www.crafoordprize.se/the-prize/geosciences/
+    date: '2026-11-07'
+  SC003:
+    title: Wikipedia, Vetlesen Prize（受賞者の一覧）
+    url: https://en.wikipedia.org/wiki/Vetlesen_Prize
+    date: '2026-11-07'
+  SC004:
+    title: Caltech Catalog 2026-27, Earth and Environment（Ge の科目）
+    url: https://catalog.caltech.edu/current/ge
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 地球科学
+  topic: 地球流体力学と予測可能性（大気と海洋の大規模な運動、カオス）1983
+  sources:
+  - SC001
+  - SC002
+  units:
+  - P-121
+  - P-157
+  - P-135
+- id: T-02
+  field: 地球科学
+  topic: 同位体地球化学（放射性同位体による年代、地球と隕石の分化）1986
+  sources:
+  - SC001
+  - SC002
+  units:
+  - W-031
+  - W-010
+  - W-035
+- id: T-03
+  field: 地球科学
+  topic: 磁気圏と放射線帯（地磁気に捕らえられた粒子）1989
+  sources:
+  - SC001
+  - SC002
+  units:
+  - P-041
+  - W-011
+- id: T-04
+  field: 地球科学
+  topic: 地層に残る生命と地球環境の共進化（初期の生命、大量絶滅）1992、2022、V2008
+  sources:
+  - SC001
+  - SC002
+  - SC003
+  units:
+  - W-036
+  - W-014
+- id: T-05
+  field: 地球科学
+  topic: 第四紀の気候変化と同位体の記録（氷床コア、海底堆積物）1995、V2004、V2012
+  sources:
+  - SC001
+  - SC002
+  - SC003
+  units:
+  - W-032
+  - W-041
+- id: T-06
+  field: 地球科学
+  topic: 地球内部の構造（地震波トモグラフィー、地球の標準モデル）1998
+  sources:
+  - SC001
+  - SC002
+  units:
+  - W-037
+- id: T-07
+  field: 地球科学
+  topic: リソスフェアの力学とプレートテクトニクス（堆積盆地、マントルの融解とメルトの移動）2002、V2000
+  sources:
+  - SC001
+  - SC002
+  - SC003
+  units:
+  - W-027
+  - W-012
+  - W-016
+  - W-029
+- id: T-08
+  field: 地球科学
+  topic: 全球の炭素循環と気候 2006
+  sources:
+  - SC001
+  - SC002
+  units:
+  - W-033
+  - P-161
+- id: T-09
+  field: 地球科学
+  topic: 海洋の循環、潮汐、波と大気海洋の結合（エルニーニョ）2010、V2017
+  sources:
+  - SC001
+  - SC002
+  - SC003
+  units:
+  - P-128
+  - P-129
+  - W-024
+  - P-156
+- id: T-10
+  field: 地球科学
+  topic: 大陸の変形と造山運動、気候への影響 2014
+  sources:
+  - SC001
+  - SC002
+  units:
+  - W-040
+- id: T-11
+  field: 地球科学
+  topic: 大気の微量気体とエーロゾルと気候（オゾン層、温室効果、大気のエネルギー収支）2018、2026、V2012
+  sources:
+  - SC001
+  - SC002
+  - SC003
+  units:
+  - W-034
+  - P-131
+  - P-160
+  - P-161
+- id: T-12
+  field: 地球科学
+  topic: 火山の物理 V2015
+  sources:
+  - SC003
+  units:
+  - W-030
+- id: T-13
+  field: 地球科学
+  topic: 宇宙測地学と海面の変化 V2020
+  sources:
+  - SC003
+  units:
+  - W-042
+- id: T-14
+  field: 地球科学
+  topic: 岩石のレオロジー（マントルの岩石の変形）V2023
+  sources:
+  - SC003
+  units:
+  - W-026
+- id: T-15
+  field: 地球科学
+  topic: 構造地質学（Ge 106）
+  sources:
+  - SC004
+  units:
+  - W-020
+- id: T-16
+  field: 地球科学
+  topic: 鉱物と岩石（Ge 114 鉱物学、Ge 121 の火成岩・変成岩の野外地質）
+  sources:
+  - SC004
+  units:
+  - W-013
+  - W-016
+  - W-019
+- id: T-17
+  field: 地球科学
+  topic: 堆積学と層序学（Ge 112）
+  sources:
+  - SC004
+  units:
+  - W-018
+  - W-014
+- id: T-18
+  field: 地球科学
+  topic: 地震学（波の伝わり方、地球の構造、震源、地震の危険）（Ge 162）
+  sources:
+  - SC004
+  units:
+  - W-021
+  - W-025
+  - W-038
+- id: T-19
+  field: 地球科学
+  topic: 地球力学（核・マントル・リソスフェア・地殻の力学モデル、地震サイクル）（Ge 163）
+  sources:
+  - SC004
+  units:
+  - W-028
+  - W-039
+  - W-027
+  - W-038
+- id: T-20
+  field: 地球科学
+  topic: 地球科学のための物理（回転体、潮汐、固有振動、熱と拡散、波）（Ge 108）
+  sources:
+  - SC004
+  units:
+  - W-024
+  - W-022
+  - W-021
+  - W-015

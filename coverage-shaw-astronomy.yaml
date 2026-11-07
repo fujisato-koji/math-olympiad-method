@@ -1,0 +1,169 @@
+# 網羅表：天文学者（ショウ賞の天文学部門の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC005:
+    title: Wikipedia, Shaw Prize（天文学部門の受賞者と授賞の理由の一覧）
+    url: https://en.wikipedia.org/wiki/Shaw_Prize
+    date: '2026-11-07'
+  SC006:
+    title: The Shaw Prize Foundation, Announcement of The Shaw Laureates 2026（PR Newswire、2026-05-27）
+    url: https://kyodonewsprwire.jp/release/202605279824
+    date: '2026-11-07'
+  SC007:
+    title: UC San Diego General Catalog, Astronomy and Astrophysics（Graduate）
+    url: https://catalog.ucsd.edu/curric/ASTR-gr.html
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 天文学
+  topic: 宇宙論の理論（膨張宇宙、熱い宇宙、構造の形成）2004
+  sources:
+  - SC005
+  units:
+  - P-064
+  - P-065
+  - P-066
+- id: T-02
+  field: 天文学
+  topic: 系外惑星の発見と性質（視線速度法、トランジット法）2005、2015
+  sources:
+  - SC005
+  units:
+  - P-171
+- id: T-03
+  field: 天文学
+  topic: 宇宙の加速膨張（超新星による距離の測定）2006
+  sources:
+  - SC005
+  units:
+  - P-064
+  - P-166
+- id: T-04
+  field: 天文学
+  topic: 銀河系の中心の超大質量ブラックホール 2008
+  sources:
+  - SC005
+  units:
+  - P-169
+  - P-063
+- id: T-05
+  field: 天文学
+  topic: 星形成の理論 2009
+  sources:
+  - SC005
+  units:
+  - P-164
+- id: T-06
+  field: 天文学
+  topic: 宇宙マイクロ波背景放射のゆらぎと宇宙論パラメータ 2010、2025
+  sources:
+  - SC005
+  units:
+  - P-065
+  - P-066
+- id: T-07
+  field: 天文学
+  topic: ガンマ線バーストと突発天体 2011、2024
+  sources:
+  - SC005
+  units:
+  - P-168
+- id: T-08
+  field: 天文学
+  topic: 太陽系外縁天体と外惑星の探査 2012、2019
+  sources:
+  - SC005
+  units:
+  - P-171
+- id: T-09
+  field: 天文学
+  topic: 降着円盤の磁気回転不安定性と乱流 2013
+  sources:
+  - SC005
+  units:
+  - P-165
+- id: T-10
+  field: 天文学
+  topic: 銀河の大規模構造とバリオン音響振動、構造形成の数値計算 2014、2017
+  sources:
+  - SC005
+  units:
+  - P-170
+  - P-066
+- id: T-11
+  field: 天文学
+  topic: 重力波の検出 2016
+  sources:
+  - SC005
+  units:
+  - P-062
+  - P-028
+- id: T-12
+  field: 天文学
+  topic: 遠赤外線の宇宙背景放射 2018
+  sources:
+  - SC005
+  units:
+  - P-163
+  - P-170
+- id: T-13
+  field: 天文学
+  topic: 活動銀河核と相対論的ジェット 2020
+  sources:
+  - SC005
+  units:
+  - P-168
+- id: T-14
+  field: 天文学
+  topic: マグネター、高速電波バースト、ミリ秒パルサー 2021、2023、2024
+  sources:
+  - SC005
+  units:
+  - P-167
+- id: T-15
+  field: 天文学
+  topic: 宇宙からの位置天文学（ヒッパルコスとガイア）2022
+  sources:
+  - SC005
+  units:
+  - P-162
+- id: T-16
+  field: 天文学
+  topic: 星の爆発と元素の起源 2026
+  sources:
+  - SC005
+  - SC006
+  units:
+  - P-166
+  - P-068
+- id: T-17
+  field: 天文学
+  topic: 天体物理の放射過程（ASTR 201）
+  sources:
+  - SC007
+  units:
+  - P-163
+- id: T-18
+  field: 天文学
+  topic: 天体の流体力学（ASTR 202）
+  sources:
+  - SC007
+  units:
+  - P-014
+  - P-041
+  - E-037
+- id: T-19
+  field: 天文学
+  topic: 星の構造と進化、星の残骸（ASTR 211、215）
+  sources:
+  - SC007
+  units:
+  - P-068
+  - P-167
+- id: T-20
+  field: 天文学
+  topic: 銀河と銀河力学（ASTR 213）
+  sources:
+  - SC007
+  units:
+  - P-169
+  - P-170

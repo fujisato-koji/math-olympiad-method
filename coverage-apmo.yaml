@@ -1,0 +1,411 @@
+# 網羅表：Asian Pacific Mathematics Olympiad（APMO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN010:
+    title: APMO, Regulations
+    url: https://www.apmo-official.org/regulations
+    date: 2026-11-07
+  IN011:
+    title: APMO, Problems（各年の問題と解答）
+    url: https://www.apmo-official.org/problems
+    date: 2026-11-07
+  IN012:
+    title: APMO 85 問（2010〜2026）と EGMO 92 問（2012〜2026）の型付けの記録（このリポジトリ problems/apmo-egmo.yaml）
+    url: problems/apmo-egmo.yaml
+    date: 2026-11-07
+items:
+- id: T-01
+  field: 代数
+  topic: 式の変形（展開と因数分解、Σ、累乗、連立方程式と 2 次方程式）（85 問中 6 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - A-018
+  - A-009
+  - A-012
+  - A-016
+  - A-017
+- id: T-02
+  field: 代数
+  topic: 不等式（評価、相加相乗平均、コーシー・シュワルツと並べかえ、凸性）（85 問中 10 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - A-013
+  - A-025
+  - A-027
+- id: T-03
+  field: 代数
+  topic: 数列と漸化式（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - A-022
+  - A-004
+- id: T-04
+  field: 代数
+  topic: 関数方程式（85 問中 9 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - A-029
+  - A-035
+- id: T-05
+  field: 組合せ
+  topic: 数え上げの基本（積の法則、順列と組合せ、二項係数）（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-005
+  - C-006
+  - C-007
+  - C-015
+- id: T-06
+  field: 組合せ
+  topic: 二通りに数える（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-018
+- id: T-07
+  field: 組合せ
+  topic: 全単射で数える（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-019
+- id: T-08
+  field: 組合せ
+  topic: 漸化式と再帰で数える（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-009
+- id: T-09
+  field: 組合せ
+  topic: グラフ理論（次数、道と閉路、木）（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-022
+  - C-024
+- id: T-10
+  field: 組合せ
+  topic: 盤面とタイル張り、塗り分け（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-017
+- id: T-11
+  field: 組合せ
+  topic: 組合せ幾何（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - C-023
+- id: T-12
+  field: 幾何
+  topic: 角度の追跡と円に内接する四角形（円周角）（85 問中 15 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-009
+  - G-023
+- id: T-13
+  field: 幾何
+  topic: 合同と相似、三角形と四角形の性質（85 問中 14 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-016
+  - G-017
+  - G-020
+- id: T-14
+  field: 幾何
+  topic: 方べきの定理と根軸（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-030
+  - G-032
+- id: T-15
+  field: 幾何
+  topic: 三角形の五心と典型的な配置（内心・傍心の補題、九点円）（85 問中 6 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-028
+  - G-033
+- id: T-16
+  field: 幾何
+  topic: 相似拡大と回転相似（ミケル点）（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-031
+- id: T-17
+  field: 幾何
+  topic: チェバとメネラウスの定理（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-029
+- id: T-18
+  field: 幾何
+  topic: 長さと面積の比（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-008
+  - G-012
+- id: T-19
+  field: 幾何
+  topic: 三角法とベクトルの計算（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-024
+  - G-027
+- id: T-20
+  field: 幾何
+  topic: 対称移動と回転（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-004
+- id: T-21
+  field: 幾何
+  topic: 射影幾何（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-037
+- id: T-22
+  field: 幾何
+  topic: トレミーの定理、角の二等分線とアポロニウスの円、等角共役（85 問中 2 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - G-043
+  - G-044
+- id: T-23
+  field: 整数
+  topic: 約数と倍数、素数と素因数分解（85 問中 14 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-017
+  - N-018
+  - N-021
+  - N-024
+  - N-030
+- id: T-24
+  field: 整数
+  topic: 余りと合同式（85 問中 10 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-022
+  - N-028
+  - N-032
+- id: T-25
+  field: 整数
+  topic: フェルマーの小定理、位数と原始根、平方剰余（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-033
+  - N-037
+  - N-038
+- id: T-26
+  field: 整数
+  topic: 中国剰余定理と整数の構成（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-036
+  - N-044
+- id: T-27
+  field: 整数
+  topic: 整数の大きさの議論（85 問中 10 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-043
+- id: T-28
+  field: 整数
+  topic: ガウス記号（整数の部分）（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-023
+- id: T-29
+  field: 整数
+  topic: 平方数の性質（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-031
+- id: T-30
+  field: 整数
+  topic: n 進法と各位の数字（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-009
+  - N-025
+- id: T-31
+  field: 整数
+  topic: 整数係数の多項式（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - N-045
+- id: T-32
+  field: 論法と証明
+  topic: 構成と評価（作って示し、上界や不可能を証明する）（85 問中 14 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-018
+- id: T-33
+  field: 論法と証明
+  topic: 数学的帰納法（85 問中 11 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-012
+- id: T-34
+  field: 論法と証明
+  topic: 極端なものに着目する（85 問中 8 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-014
+- id: T-35
+  field: 論法と証明
+  topic: 鳩の巣原理（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-015
+- id: T-36
+  field: 論法と証明
+  topic: 不変量と単調量（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-016
+- id: T-37
+  field: 論法と証明
+  topic: 偶奇で考える（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-005
+- id: T-38
+  field: 論法と証明
+  topic: 場合分け（85 問中 4 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-007
+- id: T-39
+  field: 論法と証明
+  topic: 調整と貪欲法（85 問中 3 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - L-019
+- id: T-40
+  field: 論法と証明
+  topic: 集合と写像（単射と全射）（85 問中 5 問）
+  sources:
+  - IN010
+  - IN011
+  - IN012
+  units:
+  - A-024
+- id: T-41
+  field: 論法と証明
+  topic: 証明を書く（記述の答案を各問 0〜7 点で採点する）
+  sources:
+  - IN010
+  axis: わけ

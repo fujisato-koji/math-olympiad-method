@@ -1,0 +1,175 @@
+# 網羅表：工学者（エリザベス女王工学賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC015:
+    title: Queen Elizabeth Prize for Engineering, Winners
+    url: https://qeprize.org/winners
+    date: '2026-11-07'
+  SC016:
+    title: University of Illinois ECE, The Qualifying Examination and Admission to Ph.D. Candidacy
+    url: https://ece.illinois.edu/academics/grad/msphd-manual/qual
+    date: '2026-11-07'
+  SC017:
+    title: MIT Mechanical Engineering, Doctoral Qualifying Exam
+    url: https://mechegrad.mit.edu/qualification-exam
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: インターネットとウェブ（パケット交換、TCP/IP、ハイパーテキスト）2013
+  sources:
+  - SC015
+  units:
+  - K-038
+  - K-034
+- id: T-02
+  field: 工学
+  topic: 薬の放出制御（高分子による薬物送達）2015
+  sources:
+  - SC015
+  units:
+  - E-168
+- id: T-03
+  field: 工学
+  topic: デジタルの撮像素子（CCD と CMOS イメージセンサ）2017
+  sources:
+  - SC015
+  units:
+  - E-161
+- id: T-04
+  field: 工学
+  topic: 全地球測位システム（GPS）2019
+  sources:
+  - SC015
+  units:
+  - E-166
+- id: T-05
+  field: 工学
+  topic: LED 照明 2021
+  sources:
+  - SC015
+  units:
+  - E-159
+- id: T-06
+  field: 工学
+  topic: 最も強い永久磁石（ネオジム磁石）2022
+  sources:
+  - SC015
+  units:
+  - E-162
+- id: T-07
+  field: 工学
+  topic: PERC 太陽電池 2023
+  sources:
+  - SC015
+  units:
+  - E-160
+- id: T-08
+  field: 工学
+  topic: 現代の風力発電 2024
+  sources:
+  - SC015
+  units:
+  - E-167
+  - E-170
+- id: T-09
+  field: 計算
+  topic: 現代の機械学習（ニューラルネットワーク、深層学習、並列計算機による計算）2025
+  sources:
+  - SC015
+  units:
+  - K-047
+  - K-050
+  - K-051
+  - K-032
+- id: T-10
+  field: 工学
+  topic: 現代の神経インターフェース（人工内耳、脳深部刺激、脊髄刺激、脳–機械インターフェース）2026
+  sources:
+  - SC015
+  units:
+  - E-169
+- id: T-11
+  field: 工学
+  topic: 確率過程と推定（通信・データ科学の中核科目）
+  sources:
+  - SC016
+  units:
+  - E-077
+  - E-078
+  - E-056
+- id: T-12
+  field: 工学
+  topic: 電磁波と光（電磁気・光学の中核科目）
+  sources:
+  - SC016
+  units:
+  - P-034
+  - P-039
+  - E-084
+- id: T-13
+  field: 工学
+  topic: 信号処理（ディジタル信号処理の中核科目）
+  sources:
+  - SC016
+  units:
+  - E-080
+  - E-081
+- id: T-14
+  field: 工学
+  topic: 制御（制御の中核科目、機械系の System Dynamics & Controls）
+  sources:
+  - SC016
+  - SC017
+  units:
+  - E-049
+  - E-053
+  - E-054
+- id: T-15
+  field: 工学
+  topic: 半導体デバイスとフォトニクス（Microelectronics & Photonics）
+  sources:
+  - SC016
+  units:
+  - E-158
+  - E-159
+- id: T-16
+  field: 工学
+  topic: 電力とエネルギーのシステム（Power & Energy Systems）
+  sources:
+  - SC016
+  units:
+  - E-170
+- id: T-17
+  field: 工学
+  topic: 固体力学（Solid Mechanics）
+  sources:
+  - SC017
+  units:
+  - E-017
+  - E-012
+- id: T-18
+  field: 工学
+  topic: 流体力学（Fluids）
+  sources:
+  - SC017
+  units:
+  - E-031
+  - E-032
+  - E-033
+- id: T-19
+  field: 工学
+  topic: 熱力学と熱伝達（Thermodynamics、Heat Transfer）
+  sources:
+  - SC017
+  units:
+  - E-038
+  - E-040
+  - E-041
+- id: T-20
+  field: 工学
+  topic: マイクロ・ナノ工学（Micro and Nano Engineering）
+  sources:
+  - SC017
+  units:
+  - P-173
+  - E-165

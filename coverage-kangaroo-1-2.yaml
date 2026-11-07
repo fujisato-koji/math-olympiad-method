@@ -1,0 +1,183 @@
+# 網羅表：Math Kangaroo（1・2 年生）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN001:
+    title: AKSF, Math Kangaroo Curriculum for grades 1 and 2（Math Kangaroo USA が掲載、2021-12）
+    url: https://mathkangaroo.org/mks/wp-content/uploads/2021/12/Math-Kangaroo-Curriculum-for-grades-1-and-2.pdf
+    date: 2026-11-07
+items:
+- id: T-01
+  field: 数
+  topic: 20 までを数え、小さい数を並べる（5 点の問題は 30 まで）
+  sources:
+  - IN001
+  units:
+  - N-001
+  - N-005
+  - N-006
+  - C-001
+- id: T-02
+  field: 数
+  topic: 数と形の広さの大きさくらべ（多い、少ない、同じ）
+  sources:
+  - IN001
+  units:
+  - N-001
+  - G-002
+- id: T-03
+  field: 数
+  topic: 何番目かを表す数（順序数）
+  sources:
+  - IN001
+  units:
+  - N-001
+  - N-002
+- id: T-04
+  field: 数
+  topic: 位（一の位と十の位。5 点の問題は百の位まで）
+  sources:
+  - IN001
+  units:
+  - N-006
+  - N-009
+- id: T-05
+  field: 数
+  topic: 1 けたどうしのたし算とひき算
+  sources:
+  - IN001
+  units:
+  - N-003
+  - N-005
+- id: T-06
+  field: 数
+  topic: 数直線（簡単な使い方）
+  sources:
+  - IN001
+  units:
+  - N-002
+- id: T-07
+  field: 数
+  topic: 分数（半分、3 分の 1、4 分の 1 という言葉だけ）
+  sources:
+  - IN001
+  units:
+  - N-016
+  - G-002
+- id: T-08
+  field: データ
+  topic: 1 つの特徴で並べる、仲間に分ける
+  sources:
+  - IN001
+  units:
+  - G-001
+  - C-001
+  - S-027
+- id: T-09
+  field: 測定
+  topic: 長さ、かさ、重さ、温度、時間を小さな整数で測る
+  sources:
+  - IN001
+  units:
+  - G-046
+  - G-005
+  - A-001
+- id: T-10
+  field: きまり
+  topic: 数と形の模様のきまり（「続きを当てる」並びは出さない）
+  sources:
+  - IN001
+  units:
+  - L-001
+- id: T-11
+  field: 図形
+  topic: まわりの長さ、折れ線の長さくらべ
+  sources:
+  - IN001
+  units:
+  - G-005
+- id: T-12
+  field: 図形
+  topic: 位置のことば（前と後ろ、となり、左と右、上と下、真ん中、中と外）
+  sources:
+  - IN001
+  none: 地図にない（候補：位置と向きのことば）
+- id: T-13
+  field: 図形
+  topic: 形の特徴をことばで表す
+  sources:
+  - IN001
+  units:
+  - G-001
+  - G-006
+- id: T-14
+  field: パズル
+  topic: 迷路と形のパズル
+  sources:
+  - IN001
+  units:
+  - C-004
+  - G-002
+- id: T-15
+  field: 図形
+  topic: 立方体と直方体の簡単な空間の見方
+  sources:
+  - IN001
+  units:
+  - G-003
+  - G-007
+- id: T-16
+  field: データ
+  topic: 起こりやすさ（起こりやすい、起こりにくい、必ず起こる、ありえない）
+  sources:
+  - IN001
+  units:
+  - C-011
+- id: T-17
+  field: データ
+  topic: 棒グラフと絵グラフ
+  sources:
+  - IN001
+  units:
+  - S-027
+- id: T-18
+  field: データ
+  topic: ベン図（やさしい場面）
+  sources:
+  - IN001
+  units:
+  - C-008
+- id: T-19
+  field: 時刻とお金
+  topic: カレンダー（週、月、年）
+  sources:
+  - IN001
+  units:
+  - N-059
+- id: T-20
+  field: 時刻とお金
+  topic: 小さな数のお金
+  sources:
+  - IN001
+  units:
+  - N-060
+- id: T-21
+  field: 時刻とお金
+  topic: 時計（ちょうどと半。3・4 点の問題では分を読まない）
+  sources:
+  - IN001
+  units:
+  - N-059
+- id: T-22
+  field: 図形
+  topic: 簡単な線対称、回した形
+  sources:
+  - IN001
+  units:
+  - G-004
+- id: T-23
+  field: 式
+  topic: てんびんで「等しい、多い、少ない」を考える（代数の芽）
+  sources:
+  - IN001
+  units:
+  - A-001
+  - A-002

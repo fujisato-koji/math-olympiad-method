@@ -1,0 +1,182 @@
+# 網羅表：Math Kangaroo（7・8 年生）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN004:
+    title: AKSF, Math Kangaroo Curriculum for grades 7 and 8（Math Kangaroo USA が掲載、2021-12）
+    url: https://mathkangaroo.org/mks/wp-content/uploads/2021/12/Math-Kangaroo-Curriculum-for-grades-7-and-8.pdf
+    date: 2026-11-07
+items:
+- id: T-01
+  field: 平面幾何
+  topic: 平面図形の用語（角の種類、円、二等辺・正三角形、四角形、対角線、正多角形）
+  sources:
+  - IN004
+  units:
+  - G-006
+  - G-017
+- id: T-02
+  field: 平面幾何
+  topic: 平面の対称・平行移動・回転
+  sources:
+  - IN004
+  units:
+  - G-004
+  - G-015
+- id: T-03
+  field: 平面幾何
+  topic: 角の和と平行線の角
+  sources:
+  - IN004
+  units:
+  - G-009
+  - G-016
+- id: T-04
+  field: 平面幾何
+  topic: 特別な三角形・四角形の角・辺・対角線の初等的な性質
+  sources:
+  - IN004
+  units:
+  - G-017
+- id: T-05
+  field: 平面幾何
+  topic: 多角形の周と面積
+  sources:
+  - IN004
+  units:
+  - G-008
+  - G-012
+- id: T-06
+  field: 平面幾何
+  topic: 平面上の点の座標
+  sources:
+  - IN004
+  units:
+  - A-019
+  - G-026
+- id: T-07
+  field: 立体幾何
+  topic: 立体の種類（立方体、直方体、角柱、角錐、円錐、円柱、球）
+  sources:
+  - IN004
+  units:
+  - G-003
+  - G-021
+- id: T-08
+  field: 立体幾何
+  topic: 立方体・直方体の表面積と体積
+  sources:
+  - IN004
+  units:
+  - G-011
+- id: T-09
+  field: 立体幾何
+  topic: 一次元・二次元の物体の三次元での動き（結び目、折り）
+  sources:
+  - IN004
+  units:
+  - G-004
+  - G-007
+- id: T-10
+  field: 立体幾何
+  topic: 立体の直観的な平面表示
+  sources:
+  - IN004
+  units:
+  - G-007
+  - G-003
+- id: T-11
+  field: 数
+  topic: 整数と有理数（分数・小数）の計算
+  sources:
+  - IN004
+  units:
+  - N-010
+  - N-019
+  - N-020
+  - N-027
+- id: T-12
+  field: 数
+  topic: 素数、最大公約数と最小公倍数
+  sources:
+  - IN004
+  units:
+  - N-021
+  - N-018
+- id: T-13
+  field: 数
+  topic: 倍数の見分け（2、3、4、5、6、9、10）と和・差の割り切れ方
+  sources:
+  - IN004
+  units:
+  - N-017
+  - N-014
+- id: T-14
+  field: 数
+  topic: 2 乗、完全平方数の平方根、完全立方数の立方根
+  sources:
+  - IN004
+  units:
+  - A-009
+  - A-016
+  - N-031
+- id: T-15
+  field: 数
+  topic: 公式を使わない組合せの問題
+  sources:
+  - IN004
+  units:
+  - C-001
+  - C-002
+  - C-004
+  - C-006
+- id: T-16
+  field: 数
+  topic: 百分率
+  sources:
+  - IN004
+  units:
+  - A-005
+- id: T-17
+  field: 数
+  topic: メートル法の単位
+  sources:
+  - IN004
+  units:
+  - G-046
+- id: T-18
+  field: 数
+  topic: 文字の計算を使わない時間・距離・速さ
+  sources:
+  - IN004
+  units:
+  - A-007
+- id: T-19
+  field: 数
+  topic: 直観だけで扱う確率
+  sources:
+  - IN004
+  units:
+  - C-011
+- id: T-20
+  field: 代数
+  topic: 一次の文字式の計算
+  sources:
+  - IN004
+  units:
+  - A-010
+- id: T-21
+  field: 代数
+  topic: 一元一次方程式・不等式に帰着する問題
+  sources:
+  - IN004
+  units:
+  - A-011
+  - A-013
+- id: T-22
+  field: 論理
+  topic: 少ない手順か場合分けで解く論理の問題
+  sources:
+  - IN004
+  units:
+  - L-003
+  - L-007
+  - L-008

@@ -1,0 +1,690 @@
+# 網羅表：Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  IN013:
+    title: IFoA, Actuarial Statistics (CS1) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/1rwlly0e/cs1-actuarial-statistics-syllabus-2027.pdf
+    date: 2026-11-07
+  IN014:
+    title: IFoA, Risk Modelling and Survival Analysis (CS2) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/sfldlbgn/cs2-risk-modelling-and-survival-analysis-syllabus-2027.pdf
+    date: 2026-11-07
+  IN015:
+    title: IFoA, Actuarial Mathematics for Modelling (CM1) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/agiexgoj/cm1-actuarial-mathematics-for-modelling-syllabus-2027.pdf
+    date: 2026-11-07
+  IN016:
+    title: IFoA, Economic Modelling (CM2) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/j35htd5x/cm2-economic-modelling-syllabus-2027.pdf
+    date: 2026-11-07
+  IN017:
+    title: IFoA, Business Finance (CB1) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/cgljqfl5/cb1-business-finance-syllabus-2027.pdf
+    date: 2026-11-07
+  IN018:
+    title: IFoA, Business Economics (CB2) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/zh1b3oqg/cb2-business-economics-syllabus-2027.pdf
+    date: 2026-11-07
+  IN019:
+    title: IFoA, Business Management (CB3) Syllabus for the 2027 Assessment（2026-04）
+    url: https://actuaries.org.uk/media/xr0pzkis/cb3-business-management-syllabus-2027.pdf
+    date: 2026-11-07
+  IN020:
+    title: IFoA, Actuarial Practice (CP1) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/ewshee1n/cp1-actuarial-practice-syllabus-2027.pdf
+    date: 2026-11-07
+  IN021:
+    title: IFoA, Modelling Practice (CP2) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/sq4by4pk/cp2-modelling-practice-syllabus-2027.pdf
+    date: 2026-11-07
+  IN022:
+    title: IFoA, Communications Practice (CP3) Syllabus for the 2027 Examinations（2026-04）
+    url: https://actuaries.org.uk/media/csadwl51/cp3-communications-practice-syllabus-2027.pdf
+    date: 2026-11-07
+items:
+- id: T-01
+  field: CS1 統計
+  topic: データ分析の目的と段階、再現できる分析、要約統計と可視化
+  sources:
+  - IN013
+  units:
+  - S-029
+  - S-030
+  - K-060
+  - K-064
+- id: T-02
+  field: CS1 統計
+  topic: 相関の尺度（ピアソン、スピアマン、ケンドール）と主成分分析
+  sources:
+  - IN013
+  units:
+  - S-030
+  - S-023
+  - S-024
+- id: T-03
+  field: CS1 統計
+  topic: 基本の分布（離散と連続）、確率と分位点、ポアソン過程、逆変換法による乱数の生成
+  sources:
+  - IN013
+  units:
+  - S-002
+  - S-003
+  - S-009
+  - S-024
+- id: T-04
+  field: CS1 統計
+  topic: 同時分布、独立、共分散と相関、線形結合の平均と分散
+  sources:
+  - IN013
+  units:
+  - S-003
+- id: T-05
+  field: CS1 統計
+  topic: 条件付き期待値（期待値と分散を条件付き期待値で表す）
+  sources:
+  - IN013
+  units:
+  - S-001
+  - S-003
+- id: T-06
+  field: CS1 統計
+  topic: 積率母関数とキュムラント母関数
+  sources:
+  - IN013
+  units:
+  - S-002
+  - S-003
+- id: T-07
+  field: CS1 統計
+  topic: 中心極限定理
+  sources:
+  - IN013
+  units:
+  - S-004
+- id: T-08
+  field: CS1 統計
+  topic: 標本分布（標本平均と標本分散、t 分布、F 分布）
+  sources:
+  - IN013
+  units:
+  - S-004
+  - S-018
+- id: T-09
+  field: CS1 統計
+  topic: 推定量（積率法、最尤法、偏りと平均二乗誤差、最尤推定量の漸近分布、ブートストラップ）
+  sources:
+  - IN013
+  units:
+  - S-018
+  - S-021
+  - S-024
+- id: T-10
+  field: CS1 統計
+  topic: 信頼区間と予測区間
+  sources:
+  - IN013
+  units:
+  - S-018
+- id: T-11
+  field: CS1 統計
+  topic: 仮説検定と適合度（2 種類の誤り、置換検定、カイ二乗検定、分割表）
+  sources:
+  - IN013
+  units:
+  - S-019
+  - S-024
+- id: T-12
+  field: CS1 統計
+  topic: 線形回帰（単回帰と重回帰、最小二乗、当てはまりの尺度）
+  sources:
+  - IN013
+  units:
+  - S-020
+- id: T-13
+  field: CS1 統計
+  topic: 一般化線形モデル（指数型分布族、リンク関数、逸脱度、残差）
+  sources:
+  - IN013
+  units:
+  - S-020
+  - K-063
+- id: T-14
+  field: CS1 統計
+  topic: ベイズ統計（事前分布と事後分布、共役事前分布、損失関数、信用区間）
+  sources:
+  - IN013
+  units:
+  - S-022
+- id: T-15
+  field: CS1 統計
+  topic: クレジビリティ（ベイズの方法と経験ベイズの方法）
+  sources:
+  - IN013
+  units:
+  - F-031
+- id: T-16
+  field: CS2 リスクと生存
+  topic: 損害額の分布と再保険（免責、保有限度、比例再保険と超過損害額再保険、分布の当てはめ）
+  sources:
+  - IN014
+  units:
+  - F-017
+  - F-032
+- id: T-17
+  field: CS2 リスクと生存
+  topic: 複合分布（複合ポアソン、複合二項、複合負の二項）
+  sources:
+  - IN014
+  units:
+  - F-017
+- id: T-18
+  field: CS2 リスクと生存
+  topic: コピュラ（従属性、裾の従属、ガウス型とアルキメデス型）
+  sources:
+  - IN014
+  units:
+  - F-055
+- id: T-19
+  field: CS2 リスクと生存
+  topic: 極値理論と裾の重さ
+  sources:
+  - IN014
+  units:
+  - F-055
+- id: T-20
+  field: CS2 リスクと生存
+  topic: 時系列（定常性、ARMA と ARIMA、ランダムウォーク、多変量の自己回帰、共和分、同定と推定と診断、予測）
+  sources:
+  - IN014
+  units:
+  - F-034
+- id: T-21
+  field: CS2 リスクと生存
+  topic: マルコフ連鎖（定常分布、ボーナス・マルスの経験料率、時間に非斉次な連鎖、シミュレーション）
+  sources:
+  - IN014
+  units:
+  - S-005
+- id: T-22
+  field: CS2 リスクと生存
+  topic: マルコフ過程（ポアソン過程、コルモゴロフ方程式、病気と結婚のモデル、継続期間に依存する遷移強度）
+  sources:
+  - IN014
+  units:
+  - S-009
+  - F-028
+- id: T-23
+  field: CS2 リスクと生存
+  topic: 生存モデル（将来の寿命、生存関数、死力、ゴンペルツとメイカムの法則、平均余命）
+  sources:
+  - IN014
+  units:
+  - F-014
+- id: T-24
+  field: CS2 リスクと生存
+  topic: 寿命の分布の推定（打ち切り、カプラン–マイヤー、ネルソン–アーレン、コックス比例ハザード）
+  sources:
+  - IN014
+  units:
+  - F-056
+- id: T-25
+  field: CS2 リスクと生存
+  topic: 遷移強度の最尤推定と曝露（中央曝露、センサスによる近似、率の区間）
+  sources:
+  - IN014
+  units:
+  - F-056
+  - S-021
+- id: T-26
+  field: CS2 リスクと生存
+  topic: 補整とその検定、死亡率の予測（リー–カーター、年齢・時代・世代、p スプライン）
+  sources:
+  - IN014
+  units:
+  - F-056
+- id: T-27
+  field: CS2 リスクと生存
+  topic: 機械学習（偏りと分散、交差検証、正則化、教師あり学習と評価の指標、主成分分析と k 平均法）
+  sources:
+  - IN014
+  units:
+  - S-025
+  - K-046
+  - K-060
+- id: T-28
+  field: CM1 保険数理
+  topic: 利息の理論（利率と割引率、利力、名目と実効、インフレ）
+  sources:
+  - IN015
+  units:
+  - F-002
+  - F-003
+  - F-005
+- id: T-29
+  field: CM1 保険数理
+  topic: キャッシュフローの現在価値と終価、年金現価と終価の関数
+  sources:
+  - IN015
+  units:
+  - F-003
+  - F-005
+- id: T-30
+  field: CM1 保険数理
+  topic: 金利の期間構造、デュレーション、コンベクシティ、イミュニゼーション
+  sources:
+  - IN015
+  units:
+  - F-009
+- id: T-31
+  field: CM1 保険数理
+  topic: 価値の方程式（ローンの償還表、債券の価格と利回り）
+  sources:
+  - IN015
+  units:
+  - F-005
+  - F-006
+- id: T-32
+  field: CM1 保険数理
+  topic: 事業の評価（正味現在価値、内部収益率）
+  sources:
+  - IN015
+  units:
+  - F-007
+- id: T-33
+  field: CM1 保険数理
+  topic: 生命保険と生命年金の現価と分散
+  sources:
+  - IN015
+  units:
+  - F-015
+- id: T-34
+  field: CM1 保険数理
+  topic: 2 人の生命の保険と年金（連生）
+  sources:
+  - IN015
+  units:
+  - F-028
+- id: T-35
+  field: CM1 保険数理
+  topic: 多重状態と多重脱退のモデルによるキャッシュフローの評価
+  sources:
+  - IN015
+  units:
+  - F-028
+- id: T-36
+  field: CM1 保険数理
+  topic: 将来損失の確率変数、営業保険料と責任準備金
+  sources:
+  - IN015
+  units:
+  - F-015
+  - F-016
+  - F-027
+- id: T-37
+  field: CM1 保険数理
+  topic: 危険保険金と死差益（death strain、mortality profit）
+  sources:
+  - IN015
+  units:
+  - F-016
+  - F-027
+- id: T-38
+  field: CM1 保険数理
+  topic: キャッシュフローの予測と収益検証（ユニットリンクと有配当、非ユニット準備金によるゼロ化）
+  sources:
+  - IN015
+  units:
+  - F-027
+  - F-048
+- id: T-39
+  field: CM2 経済のモデル
+  topic: 効率的市場仮説（3 つの形とその証拠）
+  sources:
+  - IN016
+  units:
+  - F-036
+- id: T-40
+  field: CM2 経済のモデル
+  topic: 効用理論と期待効用（効用関数の性質、保険への応用）
+  sources:
+  - IN016
+  units:
+  - F-020
+- id: T-41
+  field: CM2 経済のモデル
+  topic: 投資のリスクの尺度（分散、下方半分散、不足確率、VaR、期待ショートフォール）と裾の厚さ
+  sources:
+  - IN016
+  units:
+  - F-020
+  - F-038
+- id: T-42
+  field: CM2 経済のモデル
+  topic: 保険によるリスクの軽減、モラルハザードと逆選択
+  sources:
+  - IN016
+  units:
+  - F-024
+- id: T-43
+  field: CM2 経済のモデル
+  topic: 平均分散のポートフォリオ理論
+  sources:
+  - IN016
+  units:
+  - F-020
+- id: T-44
+  field: CM2 経済のモデル
+  topic: CAPM と単一因子・多因子のモデル
+  sources:
+  - IN016
+  units:
+  - F-022
+- id: T-45
+  field: CM2 経済のモデル
+  topic: 証券価格の確率モデル（対数正規、ブラウン運動、伊藤の補題、幾何ブラウン運動、オルンシュタイン–ウーレンベック過程）
+  sources:
+  - IN016
+  units:
+  - S-012
+  - S-015
+  - S-016
+- id: T-46
+  field: CM2 経済のモデル
+  topic: 金利の期間構造のモデル（リスク中立による割引債の価格、Vasicek、CIR、Hull–White）
+  sources:
+  - IN016
+  units:
+  - F-039
+- id: T-47
+  field: CM2 経済のモデル
+  topic: 信用リスクのモデル（構造型と誘導型、マートン・モデル、2 状態の格付けモデル）
+  sources:
+  - IN016
+  units:
+  - F-039
+- id: T-48
+  field: CM2 経済のモデル
+  topic: 破産理論
+  sources:
+  - IN016
+  units:
+  - F-037
+- id: T-49
+  field: CM2 経済のモデル
+  topic: ランオフ三角形による支払備金の見積もり
+  sources:
+  - IN016
+  units:
+  - F-019
+- id: T-50
+  field: CM2 経済のモデル
+  topic: シミュレーションによる最低保証の評価
+  sources:
+  - IN016
+  units:
+  - F-048
+  - S-024
+- id: T-51
+  field: CM2 経済のモデル
+  topic: 先渡とオプションの価格（裁定なし、プット・コール・パリティ）と二項モデル
+  sources:
+  - IN016
+  units:
+  - F-021
+- id: T-52
+  field: CM2 経済のモデル
+  topic: ブラック–ショールズ・モデルとギリシャ文字
+  sources:
+  - IN016
+  units:
+  - F-035
+- id: T-53
+  field: CB1 企業金融
+  topic: 財務報告の規制とコーポレート・ガバナンス、経営者の倫理
+  sources:
+  - IN017
+  units:
+  - F-010
+  - F-043
+  - F-040
+- id: T-54
+  field: CB1 企業金融
+  topic: 会社の資金調達と金融商品（株式と負債、発行の方法）
+  sources:
+  - IN017
+  units:
+  - F-023
+  - F-006
+  - F-011
+- id: T-55
+  field: CB1 企業金融
+  topic: 個人と法人の税
+  sources:
+  - IN017
+  units:
+  - F-041
+- id: T-56
+  field: CB1 企業金融
+  topic: 資本構成と配当政策、会社の成長と再編
+  sources:
+  - IN017
+  units:
+  - F-023
+- id: T-57
+  field: CB1 企業金融
+  topic: 資本コストと投資案件の評価
+  sources:
+  - IN017
+  units:
+  - F-007
+  - F-023
+- id: T-58
+  field: CB1 企業金融
+  topic: 会社の財務諸表の作成と読み取り
+  sources:
+  - IN017
+  units:
+  - F-004
+  - F-010
+- id: T-59
+  field: CB2 経済学
+  topic: 経済学の学派と近年のマクロ経済史（大恐慌から 2008 年の金融危機まで）
+  sources:
+  - IN018
+  none: 地図にない（候補：経済思想と経済史）
+- id: T-60
+  field: CB2 経済学
+  topic: 競争市場、消費者の需要、生産と費用、完全競争と独占の利潤最大化
+  sources:
+  - IN018
+  units:
+  - F-008
+  - F-012
+- id: T-61
+  field: CB2 経済学
+  topic: 不完全競争と価格の戦略（寡占、広告の効果）
+  sources:
+  - IN018
+  units:
+  - F-012
+  - F-024
+- id: T-62
+  field: CB2 経済学
+  topic: 政府の市場への介入と競争政策
+  sources:
+  - IN018
+  units:
+  - F-012
+- id: T-63
+  field: CB2 経済学
+  topic: グローバル化と国際貿易（特化の利益、保護貿易、WTO）
+  sources:
+  - IN018
+  units:
+  - F-051
+- id: T-64
+  field: CB2 経済学
+  topic: 国際収支と為替相場（固定相場と変動相場、通貨同盟）
+  sources:
+  - IN018
+  units:
+  - F-013
+  - F-050
+- id: T-65
+  field: CB2 経済学
+  topic: 貨幣と金利（信用創造、貨幣乗数、中央銀行の役割）
+  sources:
+  - IN018
+  units:
+  - F-013
+  - F-026
+- id: T-66
+  field: CB2 経済学
+  topic: 金融システムの役割と安定（銀行と保険の信用リスクと流動性リスク、システミック・リスク）
+  sources:
+  - IN018
+  units:
+  - F-026
+- id: T-67
+  field: CB2 経済学
+  topic: 国民所得と景気循環、失業とインフレ（乗数、総需要と総供給、フィリップス曲線）
+  sources:
+  - IN018
+  units:
+  - F-013
+  - F-025
+- id: T-68
+  field: CB2 経済学
+  topic: 財政政策と金融政策（財政ルール、インフレ目標、独立した中央銀行）
+  sources:
+  - IN018
+  units:
+  - F-013
+  - F-052
+- id: T-69
+  field: CB2 経済学
+  topic: 供給側の政策と経済成長
+  sources:
+  - IN018
+  units:
+  - F-013
+  - F-025
+- id: T-70
+  field: CB3 経営
+  topic: アクチュアリーに要る技能、金融サービス業と各分野の課題
+  sources:
+  - IN019
+  units:
+  - F-046
+- id: T-71
+  field: CB3 経営
+  topic: 戦略と事業の意思決定（競争優位、PEST 分析、価値連鎖、組織の文化と構造）
+  sources:
+  - IN019
+  units:
+  - F-043
+- id: T-72
+  field: CB3 経営
+  topic: 法の基礎（契約、損害賠償、専門家の過失責任、信託、代理、会社と取締役の義務、パートナーシップ）
+  sources:
+  - IN019
+  none: 地図にない（候補：契約・信託・会社の法の基礎（英国法））
+- id: T-73
+  field: CB3 経営
+  topic: 職業と倫理（Actuaries' Code、アクチュアリーの規制）
+  sources:
+  - IN019
+  units:
+  - F-040
+- id: T-74
+  field: CP1 実務
+  topic: アクチュアリーの助言と顧客、主な金融商品と給付
+  sources:
+  - IN020
+  units:
+  - F-046
+  - F-027
+  - F-029
+- id: T-75
+  field: CP1 実務
+  topic: 事業の環境（規制、外部の力、投資の環境）
+  sources:
+  - IN020
+  units:
+  - F-044
+  - F-046
+- id: T-76
+  field: CP1 実務
+  topic: アクチュアリアル・コントロール・サイクルとリスクのガバナンス、リスクの特定と分類と測定
+  sources:
+  - IN020
+  units:
+  - F-038
+- id: T-77
+  field: CP1 実務
+  topic: 商品の設計とデータの扱い
+  sources:
+  - IN020
+  units:
+  - F-027
+  - K-060
+- id: T-78
+  field: CP1 実務
+  topic: モデルと前提の設定、費用と価格
+  sources:
+  - IN020
+  units:
+  - F-018
+  - F-027
+- id: T-79
+  field: CP1 実務
+  topic: 投資管理の原則と、資産と負債の関係
+  sources:
+  - IN020
+  units:
+  - F-020
+  - F-022
+  - F-038
+- id: T-80
+  field: CP1 実務
+  topic: 負債の評価と資本
+  sources:
+  - IN020
+  units:
+  - F-016
+  - F-030
+  - F-044
+- id: T-81
+  field: CP1 実務
+  topic: 収益の管理と剰余の分配、経験の監視
+  sources:
+  - IN020
+  units:
+  - F-027
+- id: T-82
+  field: CP2 モデルの実務
+  topic: データの準備と分析（点検、整形、欠けたデータの補い、記述統計、妥当性の検定）
+  sources:
+  - IN021
+  units:
+  - K-060
+  - S-029
+- id: T-83
+  field: CP2 モデルの実務
+  topic: 表計算によるモデルの作成と検証（図表、シナリオ）
+  sources:
+  - IN021
+  units:
+  - K-015
+  - K-064
+- id: T-84
+  field: CP2 モデルの実務
+  topic: モデルの文書化（監査の跡、データと前提とやり方と結果の要約、次の手の提案）
+  sources:
+  - IN021
+  none: 地図にない（候補：モデルの文書化と結果の伝え方）
+- id: T-85
+  field: CP3 伝える実務
+  topic: 数値と専門の内容を相手に合わせて伝える（要る情報の選択、構成、ことば、図表の選び方）
+  sources:
+  - IN022
+  none: 地図にない（候補：数値と専門の内容を伝える文書）
