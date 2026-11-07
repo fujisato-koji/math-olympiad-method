@@ -1,0 +1,115 @@
+# 網羅表：Bebras（International Challenge on Informatics and Computational Thinking）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT07:
+    title: USA Bebras Computing Challenge（年齢帯と問題の数、問う力）
+    url: https://bebraschallenge.org/
+    date: 2026-11-08
+  CT08:
+    title: V. Dagienė, S. Sentance, G. Stupurienė, Developing a Two-Dimensional Categorization System for Educational Tasks in Informatics, Informatica 28(1), 23–44 (2017)（Bebras の問題の内容 5 区分と技能 5 つ）
+    url: https://www.informatica.vu.lt/journal/INFORMATICA/article/836/text
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 計算機科学
+  topic: 手順（アルゴリズム）をたどる・書く、くり返しと条件
+  sources:
+  - CT07
+  - CT08
+  units:
+  - K-122
+  - K-124
+- id: T-02
+  field: 計算機科学
+  topic: 並べ替えと探し方（比べて並べる、半分ずつ探す）
+  sources:
+  - CT08
+  units:
+  - K-123
+  - K-125
+- id: T-03
+  field: 計算機科学
+  topic: 状態と移り変わり（決まりで動く機械）
+  sources:
+  - CT08
+  units:
+  - K-126
+- id: T-04
+  field: 計算機科学
+  topic: データの表し方（画素の絵、2 進数、符号）
+  sources:
+  - CT08
+  units:
+  - K-127
+  - K-130
+  - N-025
+- id: T-05
+  field: 計算機科学
+  topic: データ構造（スタック、キュー、木、グラフ）
+  sources:
+  - CT08
+  units:
+  - K-130
+  - C-003
+  - C-012
+- id: T-06
+  field: 計算機科学
+  topic: 計算機の処理（仕事の順番、並列に進める、待ち行列）
+  sources:
+  - CT08
+  units:
+  - K-131
+- id: T-07
+  field: 計算機科学
+  topic: 通信とネットワーク（経路、中継、パケット）
+  sources:
+  - CT08
+  units:
+  - K-132
+- id: T-08
+  field: 計算機科学
+  topic: 暗号と誤りの検出
+  sources:
+  - CT08
+  units:
+  - K-128
+- id: T-09
+  field: 数学
+  topic: 論理の推理（本当とうそ、条件の整理）
+  sources:
+  - CT08
+  units:
+  - L-003
+  - L-008
+- id: T-10
+  field: 数学
+  topic: ゲームと必勝法（後ろから考える）
+  sources:
+  - CT08
+  units:
+  - L-004
+  - L-010
+- id: T-11
+  field: 計算機科学
+  topic: 計算論的思考の技能（抽象化、分解、パターンの発見と一般化、評価）
+  sources:
+  - CT07
+  - CT08
+  units:
+  - L-001
+  - L-008
+- id: T-12
+  field: 計算機科学
+  topic: 上の年齢帯（14〜18 歳）：プログラムの考え、手順の効率、グラフの探索
+  sources:
+  - CT07
+  - CT08
+  units:
+  - K-012
+  - K-014
+  - C-022
+- id: T-13
+  field: 計算機科学
+  topic: 情報と社会（使いやすさ、ロボット、倫理と法）
+  sources:
+  - CT08
+  none: 地図にない（候補：情報と社会（使いやすさの設計、プライバシー、AI の判断とかたより）。反復・検証できる知の地図の外として入れない）

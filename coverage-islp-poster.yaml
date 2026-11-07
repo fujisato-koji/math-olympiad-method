@@ -1,0 +1,55 @@
+# 網羅表：ISLP International Statistical Literacy Poster Competition（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT13:
+    title: IASE International Statistical Literacy Project, ISLP Poster Competition 2026-2027 Rules
+    url: https://iase-web.org/sites/default/files/2026-02/Rules%202026-2027_English.pdf
+    date: 2026-11-08
+  CT14:
+    title: IASE International Statistical Literacy Project, Making a Statistical Poster – Guidelines 2026-2027
+    url: https://iase-web.org/sites/default/files/2026-02/Guidelines%202026-2027_English.pdf
+    date: 2026-11-08
+  CT15:
+    title: IASE International Statistical Literacy Project, Judging criteria 2026-2027
+    url: https://iase-web.org/sites/default/files/2026-02/Judging%20criteria%202026-2027_English.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 統計学
+  topic: 調べる問いを立てる（目的、問い、仮説。答えが明らかでなく、データで答えられる問い）
+  sources:
+  - CT14
+  - CT15
+  none: 地図にない（候補：統計的な探究の流れ（問い、計画、データ、分析、結論）の入口。S の流れの単元なので、この係の範囲では足さない）
+- id: T-02
+  field: 統計学
+  topic: データの集め方（測定の正確さ、標本の大きさと代表性、かたよりと誤差、公表データの出典）
+  sources:
+  - CT13
+  - CT14
+  - CT15
+  units:
+  - S-031
+- id: T-03
+  field: 統計学
+  topic: 表とグラフ（ヒストグラム、棒・折れ線・円グラフ、箱ひげ図）を選んで描く
+  sources:
+  - CT14
+  - CT15
+  units:
+  - S-027
+  - S-029
+- id: T-04
+  field: 統計学
+  topic: 代表値とばらつき（平均、中央値、最頻値、標準偏差）
+  sources:
+  - CT14
+  units:
+  - S-028
+  - S-029
+- id: T-05
+  field: 統計学
+  topic: 結論と限界（データに支えられた結論、方法とデータの限界、次の調べ方の提案）
+  sources:
+  - CT14
+  - CT15
+  axis: わけ

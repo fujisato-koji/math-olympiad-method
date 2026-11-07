@@ -258,7 +258,7 @@
         <div class="goal-list">${goalsOf(k).map(g => {
           const set = GOAL_SETS[g.id], f = forecast(id => set.has(id)), st = goalStats(g);
           return `<a class="goal-card" href="#/goal/${g.id}" aria-current="${prefs.goal === g.id}">
-            <span class="eyebrow">${g.field ? esc(g.field) + '・' : ''}${esc(g.level)}・${esc(g.region)}</span>
+            <span class="eyebrow">${g.field ? esc(g.field) + '・' : g.fields ? esc(g.fields.join('・')) + '・' : ''}${esc(g.level)}・${esc(g.region)}</span>
             <span class="goal-name">${esc(g.name)}</span>
             <span class="muted">${esc(g.note)}</span>
             <span class="goal-nums">論題 ${st.got} / ${st.topics}・駅 ${st.done} / ${st.units}・見込み 残り約 ${f.est} 日</span>
@@ -556,7 +556,7 @@
     };
     return `
     <section class="unit-head goal-head">
-      <div class="eyebrow">目標・${esc(g.kind)}${g.field ? '・' + esc(g.field) : ''}・${esc(g.level)}・${esc(g.region)}</div>
+      <div class="eyebrow">目標・${esc(g.kind)}${g.field ? '・' + esc(g.field) : g.fields ? '・' + esc(g.fields.join('・')) : ''}・${esc(g.level)}・${esc(g.region)}</div>
       <h1>${esc(g.name)}</h1>
       <div class="row">${esc(g.note.replace(/。$/, ''))}。単元を組み合わせた結果として届く場所です。</div>
       ${g.basis ? `<div class="row muted">範囲の根拠：${esc(g.basis)}</div>` : ''}

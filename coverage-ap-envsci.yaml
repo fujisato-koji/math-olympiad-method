@@ -1,0 +1,159 @@
+# 網羅表：AP Environmental Science（College Board）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB05:
+    title: College Board, AP Environmental Science Course and Exam Description, Effective Fall 2026
+    url: https://apcentral.collegeboard.org/media/pdf/ap-environmental-science-course-and-exam-description.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生態系
+  topic: 生態系の入口（種間関係）、陸と水のバイオーム
+  sources:
+  - SB05
+  units:
+  - B-040
+  - B-094
+- id: T-02
+  field: 生態系
+  topic: 物質の循環（炭素・窒素・リン・水）
+  sources:
+  - SB05
+  units:
+  - B-041
+- id: T-03
+  field: 生態系
+  topic: 一次生産、栄養段階、エネルギーの流れと 10% の目安、食物連鎖と食物網
+  sources:
+  - SB05
+  units:
+  - B-021
+  - B-041
+- id: T-04
+  field: 生物多様性
+  topic: 生物多様性と生態系サービス、島の生物地理、生態学的な耐性、自然の撹乱、適応、遷移
+  sources:
+  - SB05
+  units:
+  - B-040
+  - B-041
+  - B-042
+  - B-093
+- id: T-05
+  field: 個体群
+  topic: ジェネラリストとスペシャリスト、K 戦略と r 戦略、生存曲線、環境収容力、個体群の増え方と資源の不足
+  sources:
+  - SB05
+  units:
+  - B-040
+- id: T-06
+  field: 個体群
+  topic: 人の人口（齢構成、合計特殊出生率、人口の増え方、人口転換）
+  sources:
+  - SB05
+  units:
+  - B-090
+- id: T-07
+  field: 地球の系と資源
+  topic: プレートテクトニクス、土壌の生成と侵食、土壌の組成と性質
+  sources:
+  - SB05
+  units:
+  - W-005
+  - W-006
+  - W-070
+- id: T-08
+  field: 地球の系と資源
+  topic: 大気、地球規模の風の型、流域、太陽放射と季節、地理と気候、エルニーニョとラニーニャ
+  sources:
+  - SB05
+  units:
+  - W-073
+  - W-049
+  - P-204
+- id: T-09
+  field: 土地と水の利用
+  topic: 共有地の悲劇、伐採、緑の革命と農業の影響、灌漑、病害虫の防除と総合的病害虫管理、食肉の生産、漁業の乱獲、持続可能な農業と林業と養殖
+  sources:
+  - SB05
+  units:
+  - B-091
+- id: T-10
+  field: 土地と水の利用
+  topic: 鉱業、都市化、生態学的フットプリント、持続可能性、都市の影響を減らす方法
+  sources:
+  - SB05
+  units:
+  - B-091
+  - W-065
+- id: T-11
+  field: エネルギー資源と消費
+  topic: 再生可能と非再生可能な資源、世界のエネルギー消費、燃料の種類、化石燃料、原子力、バイオマス、太陽、水力、地熱、水素燃料電池、風力、省エネルギー
+  sources:
+  - SB05
+  units:
+  - P-203
+  - W-065
+- id: T-12
+  field: 大気の汚染
+  topic: 大気汚染物質、光化学スモッグ、気温の逆転層、自然の汚染源、室内の大気汚染、汚染物質の削減、酸性雨、騒音
+  sources:
+  - SB05
+  units:
+  - H-080
+  - P-204
+- id: T-13
+  field: 水と陸の汚染
+  topic: 汚染源、生態系と湿地への影響、内分泌かく乱物質、富栄養化、熱汚染、残留性有機汚染物質、生物濃縮、固形廃棄物とその削減、下水処理
+  sources:
+  - SB05
+  units:
+  - B-092
+  - H-081
+- id: T-14
+  field: 水と陸の汚染
+  topic: 毒性と健康（LD50、用量反応曲線、汚染と人の健康、病原体と感染症）
+  sources:
+  - SB05
+  units:
+  - B-092
+  - B-043
+- id: T-15
+  field: 地球規模の変化
+  topic: 成層圏のオゾンの減少とその対策
+  sources:
+  - SB05
+  units:
+  - H-080
+- id: T-16
+  field: 地球規模の変化
+  topic: 温室効果、温室効果ガスの増加、地球規模の気候変化、海の温暖化と酸性化
+  sources:
+  - SB05
+  units:
+  - P-201
+  - B-093
+- id: T-17
+  field: 地球規模の変化
+  topic: 外来種、絶滅危惧種、生物多様性への人の影響
+  sources:
+  - SB05
+  units:
+  - B-093
+- id: T-18
+  field: 数学
+  topic: 環境科学の数学（単位の換算、百分率と変化率、科学的表記、倍加時間と半減期、データとグラフの解析）
+  sources:
+  - SB05
+  units:
+  - A-005
+  - N-070
+  - D-001
+  - S-030
+- id: T-19
+  field: 実験と野外調査
+  topic: 科学の実践（実験の計画、データの解析、根拠に基づく主張、解決策の提案）
+  sources:
+  - SB05
+  units:
+  - S-031
+  - S-030

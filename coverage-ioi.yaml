@@ -1,0 +1,186 @@
+# 網羅表：国際情報オリンピック（IOI）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT01:
+    title: International Scientific Committee, The International Olympiad in Informatics Syllabus（IOI 2025 の公式版、2024-02 改訂）
+    url: https://ioinformatics.org/files/ioi-syllabus-2025.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 数学
+  topic: 整数と剰余（演算、偶奇、約数、合同の加減乗、素数）、分数と百分率
+  sources:
+  - CT01
+  units:
+  - N-017
+  - N-021
+  - N-022
+  - N-032
+  - N-019
+  - A-005
+- id: T-02
+  field: 数学
+  topic: 平面の図形と座標（点・ベクトル・多角形と面積、ユークリッド距離、三平方の定理）
+  sources:
+  - CT01
+  units:
+  - G-019
+  - G-026
+  - G-027
+- id: T-03
+  field: 数学
+  topic: 関数・関係・集合（単射と全射、同値関係と順序、包含と直積）
+  sources:
+  - CT01
+  units:
+  - A-024
+- id: T-04
+  field: 数学
+  topic: 論理と証明の方法（論理結合子と真理値表、量化、対偶、背理法、帰納法）
+  sources:
+  - CT01
+  units:
+  - L-011
+  - L-012
+  - L-013
+- id: T-05
+  field: 数学
+  topic: 数え上げ（和と積の法則、順列と組合せ、二項係数、包除原理、鳩の巣原理）
+  sources:
+  - CT01
+  units:
+  - C-005
+  - C-006
+  - C-007
+  - C-015
+  - C-016
+  - C-021
+  - L-015
+- id: T-06
+  field: 数学
+  topic: 数列と再帰的な定義（等差・等比数列、フィボナッチ数）
+  sources:
+  - CT01
+  units:
+  - A-004
+  - A-022
+  - C-009
+- id: T-07
+  field: 数学
+  topic: グラフと木（有向・無向、道と閉路、連結、木と根付き木、全域木、2 部グラフ、DAG、平面グラフ）
+  sources:
+  - CT01
+  units:
+  - C-012
+  - C-022
+  - C-029
+- id: T-08
+  field: 計算機科学
+  topic: プログラミングの基礎（変数・型・式・入出力・条件・くり返し・関数・配列・文字列）
+  sources:
+  - CT01
+  units:
+  - K-012
+  - K-016
+- id: T-09
+  field: 計算機科学
+  topic: 再帰、分割統治、バックトラック
+  sources:
+  - CT01
+  units:
+  - K-016
+  - K-024
+- id: T-10
+  field: 計算機科学
+  topic: アルゴリズムの正しさと計算量（事前条件・事後条件・不変条件、O 記法、計算量の級）
+  sources:
+  - CT01
+  units:
+  - K-014
+  - K-019
+  - K-021
+- id: T-11
+  field: 計算機科学
+  topic: 整列と探索（二分探索、クイックソートとクイックセレクト、ヒープソート、マージソート）
+  sources:
+  - CT01
+  units:
+  - K-023
+- id: T-12
+  field: 計算機科学
+  topic: アルゴリズムの戦略（全探索、貪欲法、動的計画法、分枝限定）
+  sources:
+  - CT01
+  units:
+  - K-024
+  - K-025
+  - L-019
+- id: T-13
+  field: 計算機科学
+  topic: 整数のアルゴリズム（基数変換、ユークリッドの互除法、エラトステネスのふるい、素因数分解、多倍長の演算）
+  sources:
+  - CT01
+  units:
+  - N-025
+  - N-029
+  - N-021
+  - K-016
+- id: T-14
+  field: 計算機科学
+  topic: グラフのアルゴリズム（深さ・幅優先の探索、トポロジカル順序、連結成分、最短路、最小全域木、2 部マッチング、最大流、橋と関節点、強連結成分）
+  sources:
+  - CT01
+  units:
+  - K-026
+  - C-030
+- id: T-15
+  field: 計算機科学
+  topic: データ構造（スタックとキュー、二分ヒープ、平衡二分探索木、グラフの表し方）
+  sources:
+  - CT01
+  units:
+  - K-023
+- id: T-16
+  field: 計算機科学
+  topic: 区間と木の問い合わせのデータ構造（累積和、セグメント木とフェニック木、Union-Find、最小共通祖先、重軽分解と重心分解、永続データ構造、トライ）
+  sources:
+  - CT01
+  units:
+  - K-133
+- id: T-17
+  field: 計算機科学
+  topic: 償却解析
+  sources:
+  - CT01
+  units:
+  - K-025
+- id: T-18
+  field: 数学
+  topic: 組合せゲーム（勝ちと負けの局面、ミニマックス）
+  sources:
+  - CT01
+  units:
+  - L-010
+  - L-017
+- id: T-19
+  field: 計算機科学
+  topic: 計算幾何（外積による向き、多角形の面積、点の内外、凸包、走査線、座標圧縮）
+  sources:
+  - CT01
+  units:
+  - K-026
+  - M-013
+- id: T-20
+  field: 計算機科学
+  topic: 簡単な文法（バッカス・ナウア記法）を読む
+  sources:
+  - CT01
+  units:
+  - L-028
+- id: T-21
+  field: 計算機科学
+  topic: ソフトウェアの作り方（設計、仕様、テストとデバッグ、時間の管理）
+  sources:
+  - CT01
+  units:
+  - K-013
+  - K-017

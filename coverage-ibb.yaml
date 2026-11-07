@@ -1,0 +1,80 @@
+# 網羅表：International Brain Bee（世界大会）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT06:
+    title: International Brain Bee, The Competition（世界大会の部門、診断の検査、神経の病気の一覧）
+    url: https://www.thebrainbee.org/competition/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 神経科学
+  topic: 神経解剖（主な脳の構造の位置、入力と出力の線維、灰白質の核、白質の線維路、ニューロンの型と結合、働き）
+  sources:
+  - CT06
+  units:
+  - B-063
+- id: T-02
+  field: 神経科学
+  topic: 神経組織学（顕微鏡のスライドで人の組織の構造を見分け、入出力と働きを答える）
+  sources:
+  - CT06
+  units:
+  - B-100
+- id: T-03
+  field: 神経科学
+  topic: ニューロンと神経伝達（活動電位、シナプス、神経伝達物質、髄鞘）
+  sources:
+  - CT06
+  units:
+  - B-034
+  - B-052
+- id: T-04
+  field: 神経科学
+  topic: 感覚と運動の系
+  sources:
+  - CT06
+  units:
+  - B-063
+- id: T-05
+  field: 神経科学
+  topic: 学習と記憶、睡眠、情動と意思決定
+  sources:
+  - CT06
+  units:
+  - B-065
+- id: T-06
+  field: 神経科学
+  topic: 脳の発生と可塑性
+  sources:
+  - CT06
+  units:
+  - B-064
+- id: T-07
+  field: 医学
+  topic: 神経と精神の病気（遺伝性、感染、変性、血管、精神、構造、筋と末梢神経、外傷、てんかん、発達、依存）
+  sources:
+  - CT06
+  units:
+  - B-068
+  - B-101
+- id: T-08
+  field: 医学
+  topic: 診断の検査（CT、PET と SPECT、MRI、脳波、神経伝導検査、認知の測定、血液と髄液のバイオマーカー）
+  sources:
+  - CT06
+  units:
+  - B-101
+- id: T-09
+  field: 医学
+  topic: 末梢神経の損傷の影響（副神経、脊髄神経、橈骨・正中・尺骨・大腿・坐骨神経）
+  sources:
+  - CT06
+  units:
+  - B-101
+- id: T-10
+  field: 医学
+  topic: 薬と依存（物質の作用、アルコールとウェルニッケ・コルサコフ症候群）
+  sources:
+  - CT06
+  units:
+  - B-047
+  - B-068

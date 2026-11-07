@@ -1,0 +1,147 @@
+# 網羅表：A level Geology（WJEC Eduqas）（組み込みの係が作り、check_fragment.py で確かめた）
+choices:
+  opt:
+    label: 選択（第四紀の地質、英国の地質の発達、リソスフェアの地質から 1 つ）
+    pick: 1
+sources:
+  SB13:
+    title: WJEC Eduqas, GCE A Level in Geology Specification, Version 2 (October 2019)
+    url: https://www.eduqas.co.uk/media/rckbdnax/eduqas-a-level-geology-spec-from-2017-e-24-01-2020.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 地質学の基礎
+  topic: F1 元素・鉱物・岩石（元素の地球化学的な分類、地球の組成と隕石、ケイ酸塩鉱物、鉱物と岩石の組織と同定）
+  sources:
+  - SB13
+  units:
+  - W-007
+  - W-013
+  - W-017
+- id: T-02
+  field: 地質学の基礎
+  topic: F2 岩石の循環の地表と内部の過程（堆積岩の鉱物と組織、火成岩と変成岩のでき方と変化、岩石の変形）
+  sources:
+  - SB13
+  units:
+  - W-008
+  - W-016
+  - W-018
+  - W-019
+  - W-020
+- id: T-03
+  field: 地質学の基礎
+  topic: F3 時間と変化（いまの過程から過去を読む、相対年代と放射年代）
+  sources:
+  - SB13
+  units:
+  - W-003
+  - W-009
+  - W-010
+  - W-014
+- id: T-04
+  field: 地質学の基礎
+  topic: F4 地球の構造とプレートテクトニクス（層構造と地震波による証拠、地球の熱とプレートの運動、古地磁気）
+  sources:
+  - SB13
+  units:
+  - W-006
+  - W-011
+  - W-012
+  - W-021
+  - W-022
+- id: T-05
+  field: 地質記録の読み方
+  topic: G1 岩石のでき方（マグマの生成と分化、変成岩の鉱物と組織、堆積の過程と環境）
+  sources:
+  - SB13
+  units:
+  - W-016
+  - W-018
+  - W-019
+- id: T-06
+  field: 地質記録の読み方
+  topic: G2 岩石の変形（褶曲・断層・節理）
+  sources:
+  - SB13
+  units:
+  - W-020
+- id: T-07
+  field: 地質記録の読み方
+  topic: G3 過去の生物と過去の気候（化石と生物の多様化、大量絶滅、気候変化の要因と証拠、酸素同位体の曲線）
+  sources:
+  - SB13
+  units:
+  - B-027
+  - W-009
+  - P-201
+- id: T-08
+  field: 地質記録の読み方
+  topic: G4 地球の物質と天然資源（鉱床の濃集、石油とガスの移動と貯留、資源の探査、水資源）
+  sources:
+  - SB13
+  units:
+  - W-065
+- id: T-09
+  field: 地質学のテーマ
+  topic: T1 地質災害（自然の地質災害の影響、予測と管理、工学活動の影響）
+  sources:
+  - SB13
+  units:
+  - W-064
+- id: T-10
+  field: 地質学のテーマ
+  topic: T2 地質図の応用（露頭の型、断面図、地質図からの土地の評価）
+  sources:
+  - SB13
+  units:
+  - W-014
+  - W-064
+- id: T-11
+  field: 選択
+  choice: opt
+  topic: T3 第四紀の地質（気候の要因、第四紀の堆積物と地形、化石が示す環境と気候の変化）
+  sources:
+  - SB13
+  units:
+  - W-023
+  - P-201
+- id: T-12
+  field: 選択
+  choice: opt
+  topic: T4 英国の地質の発達（新原生代と顕生代の層序、北への移動の証拠とプレートの動き）
+  sources:
+  - SB13
+  units:
+  - W-011
+  - W-012
+  - W-014
+  - W-040
+- id: T-13
+  field: 選択
+  choice: opt
+  topic: T5 リソスフェアの地質（地球の熱とリソスフェア、海洋リソスフェアの形成、リソスフェアの過程）
+  sources:
+  - SB13
+  units:
+  - W-012
+  - W-022
+  - W-027
+- id: T-14
+  field: 数学
+  topic: 地質学の数学（標準形と有効数字、比と百分率、対数、グラフと相関）
+  sources:
+  - SB13
+  units:
+  - N-070
+  - A-005
+  - D-001
+  - S-030
+- id: T-15
+  field: 実験と野外調査
+  topic: 観察と野外調査（鉱物・岩石・化石の観察、地質図と断面図の作図、野外の記録）
+  sources:
+  - SB13
+  units:
+  - W-007
+  - W-014

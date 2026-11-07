@@ -1,0 +1,73 @@
+# 網羅表：World Robot Olympiad（Future Engineers、自動運転車）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT11:
+    title: World Robot Olympiad Association, WRO 2026 Future Engineers Self-Driving Cars General Rules
+    url: https://wro-association.org/wp-content/uploads/WRO-2026-Future-Engineers-Self-Driving-Cars-General-Rules.pdf
+    date: 2026-11-08
+  CT12:
+    title: World Robot Olympiad Association, Future Engineers 2026 Documentation Rubric
+    url: https://wro-association.org/wp-content/uploads/WRO-2026-Future-Engineers-Documentation-Rubric.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 工学
+  topic: 車体と駆動と操舵の機構、トルクと速さの見積もり、設計の選び方
+  sources:
+  - CT11
+  - CT12
+  units:
+  - E-181
+- id: T-02
+  field: 工学
+  topic: 電源とセンサーの構成（消費電流の見積もり、配線図、センサーの選び方と置き方と較正）
+  sources:
+  - CT12
+  units:
+  - E-183
+  - E-180
+- id: T-03
+  field: 計算機科学
+  topic: コンピュータビジョン（赤と緑の標識を見つけて、どちら側を通るか決める）
+  sources:
+  - CT11
+  - CT12
+  units:
+  - E-182
+- id: T-04
+  field: 工学
+  topic: センサーを合わせてコースと車の状態を推定する（カメラ、慣性センサー、回転の計測）
+  sources:
+  - CT11
+  units:
+  - E-181
+  - E-182
+- id: T-05
+  field: 計算機科学
+  topic: ソフトウェアの構成（モジュール、状態機械、レーンに沿う走り、障害物の回避、PID の調整と試験）
+  sources:
+  - CT12
+  units:
+  - E-180
+  - K-013
+- id: T-06
+  field: 工学
+  topic: 動きの計画（周回、旋回、駐車場を見つけて縦列駐車する）
+  sources:
+  - CT11
+  units:
+  - E-181
+- id: T-07
+  field: 工学
+  topic: システムとして考える（部分のつながり、制約とトレードオフ、試験の繰り返し、リスク）
+  sources:
+  - CT12
+  units:
+  - E-184
+  - E-199
+- id: T-08
+  field: 工学
+  topic: 再現できる記録（GitHub の構成、コミットの履歴、README、CAD・配線・コード）
+  sources:
+  - CT12
+  units:
+  - E-184

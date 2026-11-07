@@ -1,0 +1,393 @@
+# 網羅表：国際ジュニア科学オリンピック（IJSO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT04:
+    title: International Junior Science Olympiad, Syllabus of the IJSO（2009 年採択、2020-12 に国際理事会が改訂、修正版）
+    url: https://ijsoweb.org/qna/IJSO-Syllabus-2020-update-corrected-version.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: その他
+  topic: 科学の方法（仮説、予想、対照のある実験の計画、結論）
+  sources:
+  - CT04
+  units:
+  - S-031
+  - P-188
+- id: T-02
+  field: その他
+  topic: データの表し方と読み取り（表・図・グラフ・生物のスケッチ）、精度と正確さ、有効数字、誤差の原因
+  sources:
+  - CT04
+  units:
+  - S-027
+  - N-070
+  - P-117
+- id: T-03
+  field: 物理
+  topic: SI 単位と組立単位、次元解析
+  sources:
+  - CT04
+  units:
+  - G-046
+  - P-117
+- id: T-04
+  field: 化学
+  topic: 物質の状態と状態変化（粒子の運動、潜熱、水の状態図）
+  sources:
+  - CT04
+  units:
+  - H-003
+  - H-060
+  - P-042
+- id: T-05
+  field: 化学
+  topic: 元素・化合物・混合物、原子の構造と同位体、電子配置、周期表と周期性
+  sources:
+  - CT04
+  units:
+  - H-008
+  - H-011
+  - H-012
+- id: T-06
+  field: 化学
+  topic: 金属・半金属・非金属、酸化物の酸性と塩基性、化学式と組成式
+  sources:
+  - CT04
+  units:
+  - H-010
+  - H-012
+  - H-028
+- id: T-07
+  field: 化学
+  topic: 物質量と反応の計算（モル、質量百分率、収率、モル濃度、希釈）
+  sources:
+  - CT04
+  units:
+  - H-015
+  - H-016
+- id: T-08
+  field: 化学
+  topic: 化学反応（係数、沈殿、酸と塩基、酸化数と酸化還元、半反応式、イオン反応式）
+  sources:
+  - CT04
+  units:
+  - H-010
+  - H-013
+  - H-017
+  - H-025
+- id: T-09
+  field: 化学
+  topic: 気体の法則（ボイル・シャルル、理想気体、分圧とモル分率、拡散）
+  sources:
+  - CT04
+  units:
+  - H-020
+  - P-043
+- id: T-10
+  field: 化学
+  topic: 化学結合と分子間力（水素結合、性質との関係）
+  sources:
+  - CT04
+  units:
+  - H-014
+  - H-018
+- id: T-11
+  field: 化学
+  topic: 反応の速さ（平均と瞬間の速さ、速さの要因、1 次反応の速度定数）
+  sources:
+  - CT04
+  units:
+  - H-023
+- id: T-12
+  field: 化学
+  topic: 化学平衡と酸塩基平衡（平衡定数、ルシャトリエの原理、pH、Ka と Kb、滴定曲線と指示薬、緩衝液、溶解度積）
+  sources:
+  - CT04
+  units:
+  - H-024
+  - H-025
+  - H-026
+- id: T-13
+  field: 化学
+  topic: 反応とエネルギー（発熱と吸熱、反応のエンタルピー、ヘスの法則）
+  sources:
+  - CT04
+  units:
+  - H-022
+- id: T-14
+  field: 化学
+  topic: 電池と電気分解（電極、塩橋、標準電極電位、融解塩の電気分解）
+  sources:
+  - CT04
+  units:
+  - H-027
+- id: T-15
+  field: 物理
+  topic: 力と運動（ニュートンの法則、摩擦、重力、等加速度運動、自由落下、運動のグラフ、慣性系）
+  sources:
+  - CT04
+  units:
+  - P-001
+  - P-002
+  - P-003
+- id: T-16
+  field: 物理
+  topic: 簡単な機械とモーメント（てこ、滑車、輪軸、くさび、斜面、トルク）
+  sources:
+  - CT04
+  units:
+  - E-174
+  - E-175
+  - P-005
+- id: T-17
+  field: 物理
+  topic: 圧力と浮力（アルキメデスの原理、パスカルの原理、ベルヌーイの定理の基礎）
+  sources:
+  - CT04
+  units:
+  - P-013
+- id: T-18
+  field: 物理
+  topic: 弾性とフックの法則
+  sources:
+  - CT04
+  units:
+  - P-186
+  - P-002
+- id: T-19
+  field: 物理
+  topic: 運動量と衝突（弾性・非弾性）
+  sources:
+  - CT04
+  units:
+  - P-006
+- id: T-20
+  field: 物理
+  topic: エネルギー・仕事・仕事率・効率、エネルギーの変換と保存
+  sources:
+  - CT04
+  units:
+  - P-004
+- id: T-21
+  field: 地球科学
+  topic: エネルギー資源と環境（化石燃料、再生可能と非再生可能な資源）
+  sources:
+  - CT04
+  units:
+  - W-065
+- id: T-22
+  field: 物理
+  topic: 振動と波（単振動、波の性質、反射と屈折、干渉と回折、横波と縦波、波の速さ）
+  sources:
+  - CT04
+  units:
+  - P-007
+  - P-021
+  - P-024
+- id: T-23
+  field: 物理
+  topic: 光（直進と影、反射と屈折、レンズと鏡、電磁スペクトルと色、分散、光電効果）
+  sources:
+  - CT04
+  units:
+  - P-023
+  - P-024
+  - P-069
+- id: T-24
+  field: 物理
+  topic: 音（縦波としての音、ドップラー効果、聞こえ方、マイクとスピーカー）
+  sources:
+  - CT04
+  units:
+  - P-022
+- id: T-25
+  field: 物理
+  topic: 電気（静電気とクーロンの法則、オームの法則、回路とキルヒホッフの法則、電力、電場、荷電粒子の運動、安全）
+  sources:
+  - CT04
+  units:
+  - P-029
+  - P-030
+- id: T-26
+  field: 物理
+  topic: 磁気と電磁誘導（磁石と磁場、ローレンツ力、レンツの法則、発電機・変圧器・モーター、交流と直流）
+  sources:
+  - CT04
+  units:
+  - P-032
+  - P-033
+- id: T-27
+  field: 物理
+  topic: 半導体とダイオード（定性的）
+  sources:
+  - CT04
+  none: 地図にない（候補：半導体とダイオードの入口（一方向にだけ流す、LED）。いまは E-158 と P-096 が大学の水準だけ）
+- id: T-28
+  field: 物理
+  topic: 熱（伝導・対流・放射、比熱と熱量、潜熱、熱力学第一法則、分子運動のモデル）
+  sources:
+  - CT04
+  units:
+  - P-042
+  - P-043
+  - P-044
+- id: T-29
+  field: 物理
+  topic: 原子核（同位体、放射能、半減期）
+  sources:
+  - CT04
+  units:
+  - P-104
+- id: T-30
+  field: 天文学
+  topic: 太陽系とケプラーの法則、宇宙の構造（定性的）
+  sources:
+  - CT04
+  units:
+  - W-046
+  - P-162
+- id: T-31
+  field: 生物
+  topic: 生き物をつくる分子と栄養素
+  sources:
+  - CT04
+  units:
+  - B-028
+  - B-036
+- id: T-32
+  field: 生物
+  topic: 生物の多様性と分類（系統樹と分岐学、モネラ・原生生物・植物・菌類・動物、微生物とウイルス）
+  sources:
+  - CT04
+  units:
+  - B-018
+  - B-025
+  - B-043
+- id: T-33
+  field: 生物
+  topic: 細胞（細胞の構造、植物・動物・細菌の細胞、物質の出入り、呼吸と発酵）
+  sources:
+  - CT04
+  units:
+  - B-022
+  - B-031
+  - B-030
+- id: T-34
+  field: 生物
+  topic: 細胞分裂と生殖（細胞周期、体細胞分裂と減数分裂、核相、配偶子形成、無性生殖と有性生殖）
+  sources:
+  - CT04
+  units:
+  - B-023
+- id: T-35
+  field: 生物
+  topic: 遺伝（染色体と遺伝子、DNA の複製、メンデルの法則、家系図、伴性遺伝、突然変異）
+  sources:
+  - CT04
+  units:
+  - B-024
+  - B-032
+  - B-045
+- id: T-36
+  field: 生物
+  topic: 進化と自然選択
+  sources:
+  - CT04
+  units:
+  - B-027
+  - B-042
+- id: T-37
+  field: 生物
+  topic: 植物のからだとはたらき（組織、養分と水、蒸散、光合成、植物ホルモン、屈性、受粉と種子散布、栄養生殖）
+  sources:
+  - CT04
+  units:
+  - B-019
+  - B-026
+  - B-038
+- id: T-38
+  field: 生物
+  topic: 動物のからだとはたらき（組織、消化の比較、感覚器と信号、定位、生殖と変態）
+  sources:
+  - CT04
+  units:
+  - B-020
+  - B-036
+  - B-039
+- id: T-39
+  field: 生物
+  topic: 人のからだ（皮膚、骨格と筋、循環、消化、呼吸、排出、内分泌、神経、感覚器、生殖と思春期）
+  sources:
+  - CT04
+  units:
+  - B-020
+  - B-034
+  - B-035
+  - B-036
+- id: T-40
+  field: 医学
+  topic: 健康と病気（免疫とワクチン、感染症と HIV、たばこ・アルコール・薬物、生活習慣と遺伝の影響）
+  sources:
+  - CT04
+  units:
+  - B-037
+  - B-043
+  - B-047
+- id: T-41
+  field: 生態学
+  topic: 生態（物質とエネルギーの流れ、物質循環、食物網、生態系の要因、適応、種間関係、個体群の成長、遷移）
+  sources:
+  - CT04
+  units:
+  - B-021
+  - B-040
+  - B-041
+- id: T-42
+  field: 生態学
+  topic: 環境問題（酸性雨、地球温暖化、炭素の足あと、生物多様性と持続可能な発展）
+  sources:
+  - CT04
+  units:
+  - H-043
+  - B-041
+- id: T-43
+  field: 数学
+  topic: 数学の道具（分数・対数・累乗と根・2 次方程式・三角関数、直線化、図形の面積と体積、ベクトル、平均）
+  sources:
+  - CT04
+  units:
+  - A-017
+  - A-019
+  - D-001
+  - G-011
+  - G-024
+  - G-027
+  - S-028
+- id: T-44
+  field: 物理
+  topic: 実験の技能：測定（質量・長さ・体積・時間・温度・電圧・電流）、レンズの焦点距離
+  sources:
+  - CT04
+  units:
+  - G-046
+  - P-029
+  - P-023
+- id: T-45
+  field: 生物
+  topic: 実験の技能：検索表、植物の解剖、顕微鏡とプレパラート
+  sources:
+  - CT04
+  units:
+  - B-018
+  - B-022
+  - B-026
+- id: T-46
+  field: 化学
+  topic: 実験の技能：標準溶液、滴定、分光光度法（ベールの法則）、分離（ろ過・蒸留・再結晶・薄層クロマトグラフィー・遠心）、pH の測定
+  sources:
+  - CT04
+  units:
+  - H-006
+  - H-025
+  - H-031
+  - H-042

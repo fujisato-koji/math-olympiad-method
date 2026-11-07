@@ -1,0 +1,227 @@
+# 網羅表：ICAS Science（2〜6 年生、Introductory〜Paper D）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT09:
+    title: ICAS Assessments（Janison）, Science Assessment Framework 2024（Introductory、Paper A〜D の頁）
+    url: https://www.icasassessments.com/wp-content/uploads/2024_Reach-and-ICAS-Framework-Science.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 地球科学
+  topic: 季節、太陽の動きと影、月の形
+  sources:
+  - CT09
+  units:
+  - W-043
+  - W-045
+  - P-178
+- id: T-02
+  field: 天文学
+  topic: 星の位置と星座、惑星のデータを読む
+  sources:
+  - CT09
+  units:
+  - W-044
+  - W-046
+- id: T-03
+  field: 地球科学
+  topic: 岩石の見分け方と硬さ、堆積岩のでき方、風化と侵食
+  sources:
+  - CT09
+  units:
+  - W-001
+  - W-002
+  - W-004
+  - W-007
+  - W-008
+- id: T-04
+  field: 地球科学
+  topic: 地層と化石、地質年代
+  sources:
+  - CT09
+  units:
+  - W-003
+  - W-009
+- id: T-05
+  field: 地球科学
+  topic: 天気と雲、気温と水温の変わり方、風、天気図を読む
+  sources:
+  - CT09
+  units:
+  - W-047
+  - W-049
+- id: T-06
+  field: 化学
+  topic: 材料の性質と用途、水を吸う・水にとける、天然と合成の材料
+  sources:
+  - CT09
+  units:
+  - H-001
+  - H-006
+  - H-063
+- id: T-07
+  field: 化学
+  topic: 固体・液体・気体、あたためたりひやしたりしたときの変化、金属の膨張
+  sources:
+  - CT09
+  units:
+  - H-002
+  - H-060
+  - P-189
+- id: T-08
+  field: 化学
+  topic: もどる変化ともどらない変化（物理変化と化学変化）、塩の結晶
+  sources:
+  - CT09
+  units:
+  - H-062
+  - H-065
+  - H-008
+- id: T-09
+  field: 化学
+  topic: 資源とリサイクル、汚染のデータ、加工した食品
+  sources:
+  - CT09
+  none: 地図にない（候補：資源の使い方とリサイクル、くらしと汚染の入口）
+- id: T-10
+  field: 生物
+  topic: 生き物とそうでないもの、からだの部分のはたらき、感覚
+  sources:
+  - CT09
+  units:
+  - B-015
+  - B-069
+  - B-020
+- id: T-11
+  field: 生物
+  topic: 生き物の一生と成長（成長のグラフ）
+  sources:
+  - CT09
+  units:
+  - B-070
+  - B-016
+- id: T-12
+  field: 生物
+  topic: すみかとからだの形、動物の歯の違い
+  sources:
+  - CT09
+  units:
+  - B-017
+  - B-072
+- id: T-13
+  field: 生物
+  topic: 検索表でなかま分け
+  sources:
+  - CT09
+  units:
+  - B-018
+- id: T-14
+  field: 生態学
+  topic: 食物網、人のくらしが生き物とすみかに与える影響
+  sources:
+  - CT09
+  units:
+  - B-021
+- id: T-15
+  field: 生物
+  topic: 植物の育ち方を調べる実験と対照
+  sources:
+  - CT09
+  units:
+  - B-071
+- id: T-16
+  field: 物理
+  topic: 温度計を読む、あたたまり方
+  sources:
+  - CT09
+  units:
+  - P-189
+- id: T-17
+  field: 物理
+  topic: 浮くものと沈むもの
+  sources:
+  - CT09
+  units:
+  - H-007
+  - H-064
+- id: T-18
+  field: 物理
+  topic: 磁石
+  sources:
+  - CT09
+  units:
+  - P-181
+- id: T-19
+  field: 物理
+  topic: 音のでき方と伝わり方、音の大きさ
+  sources:
+  - CT09
+  units:
+  - P-180
+- id: T-20
+  field: 物理
+  topic: 力と動き（押す・引く、転がる）
+  sources:
+  - CT09
+  units:
+  - P-185
+  - P-187
+- id: T-21
+  field: 工学
+  topic: 歯車と車輪の回る向きと速さ、機械
+  sources:
+  - CT09
+  units:
+  - E-174
+  - E-175
+- id: T-22
+  field: 物理
+  topic: 電気の回路と回路図、豆電球と電圧
+  sources:
+  - CT09
+  units:
+  - P-182
+  - P-183
+- id: T-23
+  field: 物理
+  topic: 光と影
+  sources:
+  - CT09
+  units:
+  - P-178
+  - P-179
+- id: T-24
+  field: 物理
+  topic: エネルギー源、電波（ラジオの周波数）、電子レンジ
+  sources:
+  - CT09
+  none: 地図にない（候補：身のまわりのエネルギー源と電磁波（電波、電子レンジ）の入口）
+- id: T-25
+  field: 物理
+  topic: 観察と測定（目盛りを読む、長さ・温度を測る）
+  sources:
+  - CT09
+  units:
+  - G-046
+  - P-189
+- id: T-26
+  field: 統計学
+  topic: 表とグラフを読み取る
+  sources:
+  - CT09
+  units:
+  - S-027
+- id: T-27
+  field: 物理
+  topic: 予想と結論、条件を 1 つだけ変えて調べる
+  sources:
+  - CT09
+  units:
+  - P-188
+  - B-071
+- id: T-28
+  field: 数学
+  topic: 推論と問題解決（資料から筋道を立てて答えを決める）
+  sources:
+  - CT09
+  units:
+  - L-008

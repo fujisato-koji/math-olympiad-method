@@ -1,0 +1,213 @@
+# 網羅表：IB Physics HL（国際バカロレア）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB06:
+    title: 'International Baccalaureate, Diploma Programme Subject Brief, Sciences: Physics, First assessment 2025（© IBO 2022。ibo.org は HTTP 403 のため Internet Archive の 2025-02-28 の写し）'
+    url: https://web.archive.org/web/20250228144922/https://www.ibo.org/globalassets/new-structure/recognition/pdfs/dp_sciences_physics_subject-brief_jan_2022_e.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: A 空間・時間・運動
+  topic: A.1 運動学
+  sources:
+  - SB06
+  units:
+  - P-001
+  - P-005
+- id: T-02
+  field: A 空間・時間・運動
+  topic: A.2 力と運動量（円運動を含む）
+  sources:
+  - SB06
+  units:
+  - P-002
+  - P-003
+  - P-006
+  - P-007
+- id: T-03
+  field: A 空間・時間・運動
+  topic: A.3 仕事・エネルギー・仕事率
+  sources:
+  - SB06
+  units:
+  - P-004
+- id: T-04
+  field: A 空間・時間・運動
+  topic: A.4 剛体の力学（HL）
+  sources:
+  - SB06
+  units:
+  - P-011
+- id: T-05
+  field: A 空間・時間・運動
+  topic: A.5 ガリレイの相対性と特殊相対論（HL）
+  sources:
+  - SB06
+  units:
+  - P-057
+- id: T-06
+  field: B 物質の粒子性
+  topic: B.1 熱エネルギーの移動（比熱と潜熱、伝導・対流・放射、黒体放射）
+  sources:
+  - SB06
+  units:
+  - P-042
+  - P-201
+- id: T-07
+  field: B 物質の粒子性
+  topic: B.2 温室効果
+  sources:
+  - SB06
+  units:
+  - P-201
+- id: T-08
+  field: B 物質の粒子性
+  topic: B.3 気体の法則
+  sources:
+  - SB06
+  units:
+  - P-043
+- id: T-09
+  field: B 物質の粒子性
+  topic: B.4 熱力学（HL）
+  sources:
+  - SB06
+  units:
+  - P-044
+  - P-045
+- id: T-10
+  field: B 物質の粒子性
+  topic: B.5 電流と回路
+  sources:
+  - SB06
+  units:
+  - P-029
+- id: T-11
+  field: C 波の振る舞い
+  topic: C.1 単振動
+  sources:
+  - SB06
+  units:
+  - P-007
+- id: T-12
+  field: C 波の振る舞い
+  topic: C.2 波のモデル（電磁波のスペクトルを含む）
+  sources:
+  - SB06
+  units:
+  - P-021
+  - P-205
+- id: T-13
+  field: C 波の振る舞い
+  topic: C.3 波の現象（反射・屈折・回折・干渉、スリットと回折格子）
+  sources:
+  - SB06
+  units:
+  - P-021
+  - P-023
+  - P-024
+- id: T-14
+  field: C 波の振る舞い
+  topic: C.4 定常波と共鳴（減衰を含む）
+  sources:
+  - SB06
+  units:
+  - P-021
+  - P-022
+  - P-008
+- id: T-15
+  field: C 波の振る舞い
+  topic: C.5 ドップラー効果（音と光、銀河の赤方偏移）
+  sources:
+  - SB06
+  units:
+  - P-022
+  - P-202
+- id: T-16
+  field: D 場
+  topic: D.1 重力場（HL の追加を含む）
+  sources:
+  - SB06
+  units:
+  - P-009
+  - P-010
+- id: T-17
+  field: D 場
+  topic: D.2 電場と磁場（HL の追加を含む）
+  sources:
+  - SB06
+  units:
+  - P-030
+  - P-032
+- id: T-18
+  field: D 場
+  topic: D.3 電磁場の中の運動
+  sources:
+  - SB06
+  units:
+  - P-032
+- id: T-19
+  field: D 場
+  topic: D.4 電磁誘導（HL）
+  sources:
+  - SB06
+  units:
+  - P-033
+- id: T-20
+  field: E 原子核と量子
+  topic: E.1 原子の構造（HL の追加を含む）
+  sources:
+  - SB06
+  units:
+  - H-011
+  - P-088
+  - P-104
+- id: T-21
+  field: E 原子核と量子
+  topic: E.2 量子物理（HL）
+  sources:
+  - SB06
+  units:
+  - P-069
+- id: T-22
+  field: E 原子核と量子
+  topic: E.3 放射性崩壊（HL の追加を含む）
+  sources:
+  - SB06
+  units:
+  - P-104
+  - P-105
+- id: T-23
+  field: E 原子核と量子
+  topic: E.4 核分裂
+  sources:
+  - SB06
+  units:
+  - P-104
+  - P-203
+- id: T-24
+  field: E 原子核と量子
+  topic: E.5 核融合と恒星
+  sources:
+  - SB06
+  units:
+  - P-104
+  - P-162
+  - P-202
+- id: T-25
+  field: 物理の技能
+  topic: 道具としての数学（標準形と有効数字、対数、三角関数とベクトル、グラフ）
+  sources:
+  - SB06
+  units:
+  - N-070
+  - D-001
+  - G-025
+  - G-027
+  - A-019
+- id: T-26
+  field: 物理の技能
+  topic: 実験の技術と探究の過程（計画、データの収集と処理、結論と評価、誤差と不確かさ）
+  sources:
+  - SB06
+  units:
+  - P-117

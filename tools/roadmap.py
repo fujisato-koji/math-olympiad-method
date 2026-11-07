@@ -322,7 +322,7 @@ def build(data, problems):
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
         items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis", "choice") if k in i} for i in cov.get("items", [])]
-        goals.append({**{k: g[k] for k in ("id", "name", "kind", "field", "level", "region", "note", "basis", "beyond") if k in g},
+        goals.append({**{k: g[k] for k in ("id", "name", "kind", "field", "fields", "level", "region", "note", "basis", "beyond") if k in g},
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],

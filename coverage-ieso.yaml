@@ -1,0 +1,145 @@
+# 網羅表：国際地球科学オリンピック（IESO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT03:
+    title: International Earth Science Olympiad, Syllabus（IGEO の Goals, objectives and syllabus、委員長 Nir Orion。公式の ieso-info.org の頁の Internet Archive の写し、2022-09-26）
+    url: https://web.archive.org/web/20220926182749/http://www.ieso-info.org/syllabus/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 地球科学
+  topic: 地球システムの見方（4 つの圏、物質とエネルギーの流れ、循環の考え、地質学的な時間）
+  sources:
+  - CT03
+  units:
+  - W-060
+- id: T-02
+  field: 地球科学
+  topic: 岩石の循環とプレートテクトニクス
+  sources:
+  - CT03
+  units:
+  - W-008
+  - W-012
+- id: T-03
+  field: 地球科学
+  topic: 火成岩・変成岩と鉱物を見分ける（花崗岩、玄武岩、片麻岩、石英、長石、黒雲母など）
+  sources:
+  - CT03
+  units:
+  - W-004
+  - W-007
+  - W-013
+- id: T-04
+  field: 地球科学
+  topic: 堆積岩と堆積構造（級化層理、斜交層理、リップルマーク）、化石と化石化
+  sources:
+  - CT03
+  units:
+  - W-003
+  - W-018
+- id: T-05
+  field: 地球科学
+  topic: 地質構造（褶曲と断層、応力の向き）、地質断面図
+  sources:
+  - CT03
+  units:
+  - W-006
+  - W-014
+  - W-020
+- id: T-06
+  field: 地球科学
+  topic: 地震と火山（プレート境界、物質とエネルギーの移動、人と生物圏への影響）
+  sources:
+  - CT03
+  units:
+  - W-004
+  - W-005
+  - W-012
+- id: T-07
+  field: 地球科学
+  topic: 地層に残る生物の歴史と大量絶滅、年代
+  sources:
+  - CT03
+  units:
+  - W-009
+  - W-010
+- id: T-08
+  field: 地球科学
+  topic: 土壌のでき方と生物のはたらき
+  sources:
+  - CT03
+  units:
+  - W-062
+- id: T-09
+  field: 地球科学
+  topic: 水圏：陸水と地下水、水資源、洪水
+  sources:
+  - CT03
+  units:
+  - W-061
+- id: T-10
+  field: 地球科学
+  topic: 海洋（海水の組成とその進化、海底の地形、海と他の圏のやりとり、津波とハリケーン）
+  sources:
+  - CT03
+  units:
+  - W-063
+- id: T-11
+  field: 地球科学
+  topic: 大気：太陽放射による温まり方の違い、大気と海の流れ、天気
+  sources:
+  - CT03
+  units:
+  - P-120
+  - P-122
+- id: T-12
+  field: 地球科学
+  topic: 大気の組成と進化、炭素の循環、人の活動と大気（汚染、温暖化）
+  sources:
+  - CT03
+  units:
+  - H-043
+  - W-060
+- id: T-13
+  field: 地球科学
+  topic: 自然災害の予測と防止（地震、火山、台風、津波、地すべり、洪水）
+  sources:
+  - CT03
+  units:
+  - W-064
+- id: T-14
+  field: 天文学
+  topic: 惑星系の中の地球（惑星のデータの比較、エネルギーの収支）
+  sources:
+  - CT03
+  units:
+  - P-211
+- id: T-15
+  field: 地球科学
+  topic: 資源とエネルギー（化石燃料、代替エネルギー）、持続可能な利用
+  sources:
+  - CT03
+  units:
+  - W-065
+- id: T-16
+  field: 統計学
+  topic: データを集めて処理し、グラフと図で表す
+  sources:
+  - CT03
+  units:
+  - S-029
+  - S-030
+- id: T-17
+  field: 地球科学
+  topic: 野外での観察（露頭、地図、断面）
+  sources:
+  - CT03
+  units:
+  - W-014
+  - W-066
+- id: T-18
+  field: その他
+  topic: 観察・仮定・結論を区別し、仮説を立てて結論を引く
+  sources:
+  - CT03
+  axis: わけ

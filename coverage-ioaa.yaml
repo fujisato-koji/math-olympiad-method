@@ -1,0 +1,176 @@
+# 網羅表：国際天文学・天体物理学オリンピック（IOAA）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT02:
+    title: International Olympiad on Astronomy and Astrophysics, IOAA Syllabus（公式サイトの頁、版の表示なし）
+    url: https://ioaastrophysics.org/resources/ioaa-syllabus
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 物理
+  topic: 天体力学（万有引力、ケプラーの法則、ロッシュ限界、重心、二体問題、ラグランジュ点）
+  sources:
+  - CT02
+  units:
+  - P-009
+  - P-012
+- id: T-02
+  field: 物理
+  topic: 電磁波と放射の法則（電磁スペクトル、黒体放射）
+  sources:
+  - CT02
+  units:
+  - P-034
+  - P-069
+- id: T-03
+  field: 物理
+  topic: 熱力学（熱平衡、理想気体、エネルギーの移動）
+  sources:
+  - CT02
+  units:
+  - P-042
+  - P-043
+  - P-044
+- id: T-04
+  field: 物理
+  topic: 分光と原子物理（吸収・放出・散乱、ドップラー効果、スペクトル線の形成と広がり、偏光）
+  sources:
+  - CT02
+  units:
+  - P-088
+  - P-022
+  - P-024
+- id: T-05
+  field: 物理
+  topic: 原子核物理（質量欠損と結合エネルギー、放射能、ニュートリノ）
+  sources:
+  - CT02
+  units:
+  - P-104
+- id: T-06
+  field: 数学
+  topic: 数値の方法（式の線形化、反復で解く、曲線の下の面積の近似、テイラー近似）
+  sources:
+  - CT02
+  units:
+  - K-160
+  - D-080
+- id: T-07
+  field: 数学
+  topic: 微積分（初等関数の導関数、不定積分と定積分、初期条件）
+  sources:
+  - CT02
+  units:
+  - D-004
+  - D-005
+  - D-006
+- id: T-08
+  field: 数学
+  topic: ベクトル（和、内積と外積、ベクトルの時間微分）
+  sources:
+  - CT02
+  units:
+  - G-027
+  - M-013
+- id: T-09
+  field: 統計学
+  topic: 統計と誤差解析（平均・中央値・最頻値・百分位数・箱ひげ図・標準偏差、確率、相対誤差、誤差の見積もり）
+  sources:
+  - CT02
+  units:
+  - S-028
+  - S-029
+  - C-043
+  - P-117
+- id: T-10
+  field: 天文学
+  topic: 天球と時刻（球面三角法、天球座標、分点と至点、周極星、星座と黄道十二宮、恒星時、ユリウス日、均時差）
+  sources:
+  - CT02
+  units:
+  - P-210
+- id: T-11
+  field: 天文学
+  topic: 太陽と太陽系（太陽の構造と活動、太陽定数、地球と月の系、歳差と章動と秤動、会合周期と逆行、潮汐・季節・食・流星群）
+  sources:
+  - CT02
+  units:
+  - P-211
+- id: T-12
+  field: 天文学
+  topic: 宇宙探査（人工衛星の軌道と遷移、スイングバイ）
+  sources:
+  - CT02
+  units:
+  - E-063
+- id: T-13
+  field: 天文学
+  topic: 恒星の性質（距離の決め方、光度と等級、色指数と温度、半径と質量、固有運動、変光星とセファイド）
+  sources:
+  - CT02
+  units:
+  - P-162
+  - P-212
+- id: T-14
+  field: 天文学
+  topic: 恒星の内部と大気、恒星の進化（HR 図、元素合成、超新星、惑星状星雲、終末）
+  sources:
+  - CT02
+  units:
+  - P-212
+- id: T-15
+  field: 天文学
+  topic: 連星と系外惑星（連星の種類と質量の決定、食連星の光度曲線と視線速度曲線、系外惑星の検出法、ハビタブルゾーン）
+  sources:
+  - CT02
+  units:
+  - P-213
+- id: T-16
+  field: 天文学
+  topic: 星団・銀河系・星間物質（星団の年齢と距離、銀河系の構造と回転、HII 領域、21 cm 線、星間吸収）
+  sources:
+  - CT02
+  units:
+  - P-214
+- id: T-17
+  field: 天文学
+  topic: 銀河と降着（構造と活動による分類、質量・光度・距離、回転曲線、エディントン光度）
+  sources:
+  - CT02
+  units:
+  - P-214
+- id: T-18
+  field: 天文学
+  topic: 宇宙論の入口（ハッブルの法則、銀河団、暗黒物質、重力レンズ、宇宙マイクロ波背景放射、宇宙論的赤方偏移）
+  sources:
+  - CT02
+  units:
+  - P-215
+- id: T-19
+  field: 天文学
+  topic: 多波長の天文学と観測装置（大気の影響と光害、望遠鏡と検出器、分解能と集光力、干渉計と開口合成、補償光学、測光と位置天文）
+  sources:
+  - CT02
+  units:
+  - P-216
+- id: T-20
+  field: 天文学
+  topic: 観測（肉眼の観測、星図と星表、天球座標を使う、等級と角距離の見積もり、望遠鏡と検出器の操作）
+  sources:
+  - CT02
+  units:
+  - P-210
+  - P-216
+- id: T-21
+  field: 物理
+  topic: データ解析（誤差の原因、対数や極座標のグラフ用紙、最良の直線）
+  sources:
+  - CT02
+  units:
+  - P-117
+- id: T-22
+  field: 数学
+  topic: 幾何の道具（定規、コンパス、分度器、三角定規）
+  sources:
+  - CT02
+  units:
+  - G-022

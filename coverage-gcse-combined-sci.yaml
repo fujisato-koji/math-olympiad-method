@@ -1,0 +1,280 @@
+# 網羅表：GCSE Combined Science: Trilogy Higher（AQA 8464）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB09:
+    title: 'AQA, GCSE Combined Science: Trilogy Specification 8464, Version 1.3 (October 2026)'
+    url: https://www.aqa.org.uk/files/resources.science.specifications.AQA-8464-SP-2016_PDF/a18ef3788335dcf75e16c61df6a5149710ec04e8.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生物
+  topic: 細胞の構造（真核細胞と原核細胞、動物と植物の細胞、細胞の特殊化、顕微鏡）
+  sources:
+  - SB09
+  units:
+  - B-022
+- id: T-02
+  field: 生物
+  topic: 細胞分裂（染色体、有糸分裂と細胞周期、幹細胞）
+  sources:
+  - SB09
+  units:
+  - B-023
+  - B-046
+- id: T-03
+  field: 生物
+  topic: 細胞の物質輸送（拡散、浸透、能動輸送）
+  sources:
+  - SB09
+  units:
+  - B-031
+- id: T-04
+  field: 生物
+  topic: 器官のはたらき（消化系と酵素、心臓と血管と血液）
+  sources:
+  - SB09
+  units:
+  - B-020
+  - B-029
+  - B-036
+- id: T-05
+  field: 生物
+  topic: 植物の組織と器官（葉の組織、蒸散と転流）
+  sources:
+  - SB09
+  units:
+  - B-026
+  - B-038
+- id: T-06
+  field: 生物
+  topic: 感染と応答（感染症の病原体、ヒトの防御、ワクチン、抗生物質と鎮痛剤、新薬の発見と開発）
+  sources:
+  - SB09
+  units:
+  - B-037
+  - B-043
+  - S-031
+- id: T-07
+  field: 生物
+  topic: 生物のエネルギー（光合成と限定要因、好気呼吸と嫌気呼吸、代謝）
+  sources:
+  - SB09
+  units:
+  - B-019
+  - B-030
+- id: T-08
+  field: 生物
+  topic: 恒常性と応答（神経系と反射、ホルモン、血糖と糖尿病、生殖のホルモンと避妊、負のフィードバック）
+  sources:
+  - SB09
+  units:
+  - B-034
+  - B-035
+- id: T-09
+  field: 生物
+  topic: 生殖と遺伝（有性生殖と無性生殖、減数分裂、DNA とゲノム、遺伝のしくみ、遺伝病、性の決定）
+  sources:
+  - SB09
+  units:
+  - B-023
+  - B-024
+  - B-032
+- id: T-10
+  field: 生物
+  topic: 変異と進化（自然選択、品種改良、遺伝子組換え、化石と絶滅、薬剤耐性菌、分類）
+  sources:
+  - SB09
+  units:
+  - B-025
+  - B-027
+  - B-033
+  - B-042
+- id: T-11
+  field: 生物
+  topic: 生態学（適応と相互依存と競争、生態系の組織、炭素と水の循環）
+  sources:
+  - SB09
+  units:
+  - B-021
+  - B-040
+  - B-041
+- id: T-12
+  field: 生物
+  topic: 生物多様性と人の影響（廃棄物、土地利用、森林破壊、地球温暖化、生物多様性の維持）
+  sources:
+  - SB09
+  units:
+  - B-092
+  - B-093
+- id: T-13
+  field: 化学
+  topic: 原子の構造と周期表（原子のモデルの歴史、混合物の分離、電子配置、0 族・1 族・7 族）
+  sources:
+  - SB09
+  units:
+  - H-006
+  - H-011
+  - H-012
+  - H-028
+- id: T-14
+  field: 化学
+  topic: 結合と構造と物性（イオン・共有・金属結合、状態と物性、炭素の構造）
+  sources:
+  - SB09
+  units:
+  - H-014
+  - H-018
+  - H-019
+- id: T-15
+  field: 化学
+  topic: 量的な化学（質量保存、式量、物質量（HT）、限定反応物、濃度）
+  sources:
+  - SB09
+  units:
+  - H-009
+  - H-015
+  - H-016
+- id: T-16
+  field: 化学
+  topic: 化学変化（金属の反応性と抽出、酸の反応と塩、pH と中和、強酸と弱酸（HT）、電気分解）
+  sources:
+  - SB09
+  units:
+  - H-017
+  - H-025
+  - H-027
+  - H-030
+- id: T-17
+  field: 化学
+  topic: エネルギー変化（発熱と吸熱、反応の経路図、結合エネルギー（HT））
+  sources:
+  - SB09
+  units:
+  - H-022
+- id: T-18
+  field: 化学
+  topic: 反応の速さと平衡（速さの要因、衝突理論と触媒、可逆反応と動的平衡、ルシャトリエの原理（HT））
+  sources:
+  - SB09
+  units:
+  - H-023
+  - H-024
+- id: T-19
+  field: 化学
+  topic: 有機化学（原油と炭化水素、分留、クラッキングとアルケン）
+  sources:
+  - SB09
+  units:
+  - H-032
+  - H-033
+- id: T-20
+  field: 化学
+  topic: 化学分析（純物質と配合物、クロマトグラフィー、気体の検出）
+  sources:
+  - SB09
+  units:
+  - H-004
+  - H-006
+  - H-028
+- id: T-21
+  field: 化学
+  topic: 大気の化学（大気の組成と移り変わり、温室効果ガスと気候変化、大気汚染物質）
+  sources:
+  - SB09
+  units:
+  - H-080
+  - P-201
+- id: T-22
+  field: 化学
+  topic: 資源の利用（飲料水と下水、金属の新しい採取法（HT）、ライフサイクル評価とリサイクル）
+  sources:
+  - SB09
+  units:
+  - H-081
+- id: T-23
+  field: 物理
+  topic: エネルギー（蓄えと移動、運動・位置・弾性のエネルギー、比熱、仕事率、効率、国と世界のエネルギー資源）
+  sources:
+  - SB09
+  units:
+  - P-004
+  - P-042
+  - P-203
+- id: T-24
+  field: 物理
+  topic: 電気（回路と電流・電位差・抵抗、直列と並列、家庭の電気と安全、電力、送電網）
+  sources:
+  - SB09
+  units:
+  - P-029
+  - P-203
+- id: T-25
+  field: 物理
+  topic: 粒子モデル（密度、状態変化と内部エネルギー、比熱と潜熱、気体の圧力）
+  sources:
+  - SB09
+  units:
+  - H-007
+  - P-042
+  - P-043
+- id: T-26
+  field: 物理
+  topic: 原子の構造（原子のモデル、同位体、放射性崩壊と核反応式、半減期、汚染と照射）
+  sources:
+  - SB09
+  units:
+  - H-011
+  - P-104
+- id: T-27
+  field: 物理
+  topic: 力（スカラーとベクトル、合力、仕事、弾性とフックの法則、距離–時間と速度–時間のグラフ、ニュートンの法則、停止距離、運動量（HT））
+  sources:
+  - SB09
+  units:
+  - P-001
+  - P-002
+  - P-003
+  - P-006
+- id: T-28
+  field: 物理
+  topic: 波（横波と縦波、波の性質、電磁波の性質と利用と危険、屈折（HT））
+  sources:
+  - SB09
+  units:
+  - P-021
+  - P-023
+  - P-205
+- id: T-29
+  field: 物理
+  topic: 磁気と電磁気（永久磁石と誘導磁石、電流のつくる磁場、モーター効果（HT））
+  sources:
+  - SB09
+  units:
+  - P-181
+  - P-032
+- id: T-30
+  field: 数学
+  topic: 理科の数学（標準形、比と百分率、平均、グラフ、式の変形と代入、面積と体積）
+  sources:
+  - SB09
+  units:
+  - N-070
+  - A-005
+  - S-028
+  - A-019
+  - A-010
+  - G-011
+- id: T-31
+  field: 実験
+  topic: 必須の実験 21 件と実験の技能（変数、測定、誤差、安全）
+  sources:
+  - SB09
+  units:
+  - B-022
+  - H-006
+  - P-117
+- id: T-32
+  field: 生物
+  topic: 非感染性の病気（健康の要因、生活習慣と危険因子、相関と因果、がん）
+  sources:
+  - SB09
+  none: 地図にない（候補：健康と病気の入口（感染性と非感染性の病気、危険因子と相関、がん））

@@ -1,0 +1,142 @@
+# 網羅表：GCSE Astronomy（Pearson Edexcel 1AS0）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB14:
+    title: Pearson Edexcel, GCSE (9–1) Astronomy (1AS0) Specification, Issue 3 (December 2024)
+    url: https://qualifications.pearson.com/content/dam/pdf/GCSE/Astronomy/2017/Specification%20and%20sample%20assessments/gcse-astronomy-specification.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 肉眼の天文学
+  topic: 地球（形と内部、緯度と経度、大気が観測に与える影響）
+  sources:
+  - SB14
+  units:
+  - W-006
+  - W-073
+- id: T-02
+  field: 肉眼の天文学
+  topic: 月面（月の地形、秤動）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-03
+  field: 肉眼の天文学
+  topic: 地球・月・太陽の系（月の満ち欠け、日食と月食、潮汐）
+  sources:
+  - SB14
+  units:
+  - W-073
+- id: T-04
+  field: 肉眼の天文学
+  topic: 時と地球・月・太陽の周期（恒星日と太陽日、均時差、至点と分点、時間帯、歳差）
+  sources:
+  - SB14
+  units:
+  - W-073
+- id: T-05
+  field: 肉眼の天文学
+  topic: 太陽系の観測（惑星の見え方、合と衝、逆行）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-06
+  field: 肉眼の天文学
+  topic: 天体の観測（星座と星群、天球座標、周極星、光害、観測の計画）
+  sources:
+  - SB14
+  units:
+  - P-162
+  - W-073
+- id: T-07
+  field: 肉眼の天文学
+  topic: 太陽系の初期のモデル（天動説と地動説）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-08
+  field: 肉眼の天文学
+  topic: 惑星の運動と重力（ケプラーの法則、ニュートンの万有引力）
+  sources:
+  - SB14
+  units:
+  - P-003
+  - W-074
+- id: T-09
+  field: 望遠鏡の天文学
+  topic: 月の探査（月の起源、探査の歴史）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-10
+  field: 望遠鏡の天文学
+  topic: 太陽の天文学（太陽の構造、黒点と自転、太陽風とオーロラ、安全な観測）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-11
+  field: 望遠鏡の天文学
+  topic: 太陽系の探査（探査機、惑星・衛星・小天体の性質）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-12
+  field: 望遠鏡の天文学
+  topic: 惑星系の形成（太陽系の形成、系外惑星の検出）
+  sources:
+  - SB14
+  units:
+  - W-074
+- id: T-13
+  field: 望遠鏡の天文学
+  topic: 星の光（等級と距離指数、スペクトル、望遠鏡といろいろな波長の観測）
+  sources:
+  - SB14
+  units:
+  - P-023
+  - P-162
+  - P-205
+- id: T-14
+  field: 望遠鏡の天文学
+  topic: 星の進化（星の誕生と一生、HR 図、超新星）
+  sources:
+  - SB14
+  units:
+  - P-162
+  - P-202
+- id: T-15
+  field: 望遠鏡の天文学
+  topic: 銀河系の中の位置（銀河系の構造、銀河の分類、局所銀河群）
+  sources:
+  - SB14
+  units:
+  - P-202
+- id: T-16
+  field: 望遠鏡の天文学
+  topic: 宇宙論（赤方偏移、ハッブルの法則、ビッグバン、暗黒物質と暗黒エネルギー、宇宙の行く末）
+  sources:
+  - SB14
+  units:
+  - P-202
+- id: T-17
+  field: 数学
+  topic: 天文学の数学（比と単位の換算、標準形、角度、対数、式の変形）
+  sources:
+  - SB14
+  units:
+  - N-070
+  - A-005
+  - D-001
+- id: T-18
+  field: 観測
+  topic: 観測の技能（肉眼と望遠鏡による観測、記録と評価）
+  sources:
+  - SB14
+  units:
+  - P-023
+  - W-073

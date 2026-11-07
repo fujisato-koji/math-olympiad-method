@@ -1,0 +1,97 @@
+# 網羅表：AP Computer Science A（College Board）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB04:
+    title: College Board, AP Computer Science A Course and Exam Description, Effective Fall 2025
+    url: https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: オブジェクトとメソッドの利用
+  topic: アルゴリズムの入口、変数と基本データ型、式と出力、代入と複合代入、型変換と値の範囲、コメント
+  sources:
+  - SB04
+  units:
+  - K-012
+  - K-145
+- id: T-02
+  field: オブジェクトとメソッドの利用
+  topic: メソッドの呼び出し（クラスメソッドと Math クラス）、オブジェクトの生成と参照、インスタンスメソッド、String の操作
+  sources:
+  - SB04
+  units:
+  - K-013
+  - K-145
+- id: T-03
+  field: 選択と反復
+  topic: 選択（ブール式、if 文と入れ子、複合条件、ド・モルガンの法則、ブール式の比較）
+  sources:
+  - SB04
+  units:
+  - K-012
+  - L-013
+- id: T-04
+  field: 選択と反復
+  topic: 反復（while と for、入れ子の反復、選択と反復のアルゴリズム、文字列のアルゴリズム、実行時間の見積もり）
+  sources:
+  - SB04
+  units:
+  - K-012
+  - K-014
+- id: T-05
+  field: クラスの作成
+  topic: クラスの作成（抽象化と設計、プログラムの影響、クラスの構造、コンストラクタ、メソッドと参照の受け渡し、static の変数とメソッド、スコープとアクセス、this）
+  sources:
+  - SB04
+  units:
+  - K-013
+  - K-145
+- id: T-06
+  field: データの集まり
+  topic: 倫理と社会の問題、データ集合の利用
+  sources:
+  - SB04
+  units:
+  - K-146
+- id: T-07
+  field: データの集まり
+  topic: 配列（生成と参照、走査、配列のアルゴリズム）、テキストファイル、ラッパークラス
+  sources:
+  - SB04
+  units:
+  - K-145
+- id: T-08
+  field: データの集まり
+  topic: ArrayList（メソッド、走査、アルゴリズム）
+  sources:
+  - SB04
+  units:
+  - K-145
+- id: T-09
+  field: データの集まり
+  topic: 2 次元配列（生成と参照、走査、アルゴリズム）
+  sources:
+  - SB04
+  units:
+  - K-145
+- id: T-10
+  field: データの集まり
+  topic: 探索と整列（線形探索と二分探索、選択ソートと挿入ソート）
+  sources:
+  - SB04
+  units:
+  - K-125
+  - K-014
+- id: T-11
+  field: データの集まり
+  topic: 再帰（再帰の追跡、再帰による探索と整列（二分探索、マージソート））
+  sources:
+  - SB04
+  units:
+  - K-016
+- id: T-12
+  field: 計算論的思考の実践
+  topic: プログラムの設計、コードの論理の説明、実装、テストとデバッグ
+  sources:
+  - SB04
+  units:
+  - K-013

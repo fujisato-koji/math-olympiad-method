@@ -1,0 +1,177 @@
+# 網羅表：NCF-Envirothon（国際大会）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT16:
+    title: NCF-Envirothon, Aquatic Ecology Learning Objectives（2021-02-24 承認）
+    url: https://envirothon.org/wp-content/uploads/2021/09/Aquatics-LearningObjectives_2.24.21.pdf
+    date: 2026-11-08
+  CT17:
+    title: NCF-Envirothon, Forestry Learning Objectives（2021-02-24 承認）
+    url: https://envirothon.org/wp-content/uploads/2021/10/Forestry-LearningObjectives_2.24.21.pdf
+    date: 2026-11-08
+  CT18:
+    title: NCF-Envirothon, Soils and Land Use Learning Objectives（2021-02-24 承認）
+    url: https://envirothon.org/wp-content/uploads/2021/09/Soils-LearningObjectives_2.24.21.pdf
+    date: 2026-11-08
+  CT19:
+    title: NCF-Envirothon, Wildlife Learning Objectives（2021-02-24 承認）
+    url: https://envirothon.org/wp-content/uploads/2021/09/Wildlife-LearningObjectives_2.24.21.pdf
+    date: 2026-11-08
+  CT20:
+    title: NCF-Envirothon, Current Environmental Issue Learning Objectives（2021-02-24 承認）
+    url: https://envirothon.org/wp-content/uploads/2021/09/CurrentIssue-LearningObjectives_2.24.21.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 地球科学
+  topic: 水の性質と水の循環、地球の水の分布
+  sources:
+  - CT16
+  units:
+  - W-061
+  - B-028
+- id: T-02
+  field: 生態学
+  topic: 水域の種類（淡水・海水・河口・湿地）と生態系の構造、食物網とエネルギー
+  sources:
+  - CT16
+  units:
+  - B-102
+  - B-041
+- id: T-03
+  field: 地球科学
+  topic: 流域と河川の地形、帯水層と地下水面
+  sources:
+  - CT16
+  units:
+  - W-061
+- id: T-04
+  field: 生態学
+  topic: 水生生物の適応と生活史、指標生物と生物指数
+  sources:
+  - CT16
+  units:
+  - B-102
+- id: T-05
+  field: 生態学
+  topic: 水質と汚染（富栄養化、低酸素、点源と非点源、生物濃縮、海洋の酸性化）と管理
+  sources:
+  - CT16
+  units:
+  - B-102
+  - H-043
+- id: T-06
+  field: 生物
+  topic: 樹木と植物のからだ・成長・年輪
+  sources:
+  - CT17
+  units:
+  - B-026
+  - B-038
+  - B-103
+- id: T-07
+  field: 生態学
+  topic: 森林の生態（階層構造、林縁効果、菌根、遷移、山火事、レジリエンス）
+  sources:
+  - CT17
+  units:
+  - B-103
+  - B-056
+- id: T-08
+  field: 生態学
+  topic: 森林の管理（間伐・伐採・更新、森林の計測、最良の管理の方法）
+  sources:
+  - CT17
+  units:
+  - B-103
+- id: T-09
+  field: 生態学
+  topic: 景観生態学、生態系サービス、気候の変化と植物群集
+  sources:
+  - CT17
+  units:
+  - B-060
+  - B-057
+- id: T-10
+  field: 地球科学
+  topic: 地形と地質と母材、風化
+  sources:
+  - CT18
+  units:
+  - W-008
+  - W-062
+- id: T-11
+  field: 地球科学
+  topic: 土壌の生成と性質（生成因子、層位、粒径、有機物、構造、pH、保水、陽イオン交換）
+  sources:
+  - CT18
+  units:
+  - W-062
+- id: T-12
+  field: 生態学
+  topic: 土壌の生態と物質循環（窒素・リン・炭素、土壌生物）
+  sources:
+  - CT18
+  units:
+  - W-062
+  - B-041
+- id: T-13
+  field: 地球科学
+  topic: 土地利用と保全（侵食と締め固めの防止、農地、汚染、氾濫原）
+  sources:
+  - CT18
+  units:
+  - W-062
+- id: T-14
+  field: 生物
+  topic: 野生生物の分類と体のつくり、適応、生活史と渡り、検索表で見分ける
+  sources:
+  - CT19
+  units:
+  - B-018
+  - B-025
+  - B-039
+- id: T-15
+  field: 生態学
+  topic: 個体群（出生・死亡・移出入、収容力と制限要因、人口学のモデル）
+  sources:
+  - CT19
+  units:
+  - B-040
+  - B-055
+- id: T-16
+  field: 生態学
+  topic: 群集と生態系（ニッチ、競争、共生、遷移、林縁効果、撹乱、生物多様性）
+  sources:
+  - CT19
+  units:
+  - B-056
+  - B-041
+- id: T-17
+  field: 生態学
+  topic: 保全と管理（絶滅のおそれの区分、キーストーン種、外来種、保護区、狩猟、人と野生生物）
+  sources:
+  - CT19
+  units:
+  - B-060
+- id: T-18
+  field: 生態学
+  topic: 野外の調査（個体数の推定、標本の取り方、データの解釈）
+  sources:
+  - CT19
+  units:
+  - B-061
+- id: T-19
+  field: 地球科学
+  topic: 地図と GIS（地形図、流域の区切り、GPS、空中写真、リモートセンシング）
+  sources:
+  - CT16
+  - CT18
+  - CT19
+  units:
+  - W-066
+- id: T-20
+  field: 生態学
+  topic: その年の環境問題（科学的な背景、経済と社会への影響、解決策の評価、利害関係者）
+  sources:
+  - CT20
+  none: 地図にない（候補：その年の環境問題を科学・経済・社会から分析して管理を提案する。論題が年ごとに変わり、固定の単元にできない）

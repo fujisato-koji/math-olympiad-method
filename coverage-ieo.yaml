@@ -1,0 +1,192 @@
+# 網羅表：国際経済オリンピック（IEO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CT05:
+    title: International Economics Olympiad, Syllabus（2025-12-31 に国際理事会が承認）
+    url: https://files.ieo-official.org/IEO_Syllabus.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 経済学
+  topic: 経済学の考え方、需要と供給（弾力性、均衡）
+  sources:
+  - CT05
+  units:
+  - F-008
+  - F-012
+- id: T-02
+  field: 経済学
+  topic: 消費者の選択と企業の行動
+  sources:
+  - CT05
+  units:
+  - F-012
+- id: T-03
+  field: 経済学
+  topic: 不完全競争（独占・寡占・独占的競争）、デジタルプラットフォームとネットワーク効果、デジタル経済の価格
+  sources:
+  - CT05
+  units:
+  - F-060
+- id: T-04
+  field: 経済学
+  topic: 政府の介入（税、補助金、価格の規制）
+  sources:
+  - CT05
+  units:
+  - F-012
+  - F-052
+- id: T-05
+  field: 経済学
+  topic: 市場の失敗（外部性、公共財、情報の非対称性）
+  sources:
+  - CT05
+  units:
+  - F-061
+- id: T-06
+  field: 経済学
+  topic: 労働市場（ミクロとマクロ）
+  sources:
+  - CT05
+  units:
+  - F-062
+- id: T-07
+  field: 経済学
+  topic: ゲーム理論（ナッシュ均衡、協力と協調の問題、コミットメント、繰り返しゲーム）
+  sources:
+  - CT05
+  units:
+  - F-024
+- id: T-08
+  field: 経済学
+  topic: イノベーションと技術と長期の成長
+  sources:
+  - CT05
+  units:
+  - F-025
+- id: T-09
+  field: 経済学
+  topic: マクロ経済のデータ（所得、インフレ、失業の測り方）
+  sources:
+  - CT05
+  units:
+  - F-013
+  - F-062
+- id: T-10
+  field: 経済学
+  topic: AD-AS モデル、景気変動と危機
+  sources:
+  - CT05
+  units:
+  - F-013
+  - F-025
+  - F-026
+- id: T-11
+  field: 経済学
+  topic: お金と銀行の役割、金融政策と財政政策
+  sources:
+  - CT05
+  units:
+  - F-013
+  - F-026
+  - F-052
+- id: T-12
+  field: 経済学
+  topic: 制度と不平等
+  sources:
+  - CT05
+  units:
+  - F-063
+- id: T-13
+  field: 経済学
+  topic: 特化と貿易の利益、保護主義の勝者と敗者
+  sources:
+  - CT05
+  units:
+  - F-051
+- id: T-14
+  field: 経済学
+  topic: 通貨と通貨同盟、為替レート、金利平価
+  sources:
+  - CT05
+  units:
+  - F-050
+- id: T-15
+  field: 経済学
+  topic: 環境の経済学と持続可能な発展
+  sources:
+  - CT05
+  units:
+  - F-061
+- id: T-16
+  field: 経済学
+  topic: 経済学者のデータの使い方（自然実験とフィールド実験、相関と因果）
+  sources:
+  - CT05
+  units:
+  - S-031
+  - S-042
+- id: T-17
+  field: 経済学
+  topic: 家計の計画（収入・支出・借金の管理、目標、予算）
+  sources:
+  - CT05
+  units:
+  - F-001
+  - F-041
+- id: T-18
+  field: 経済学
+  topic: 銀行と銀行の制度（預金、貸出、金利、中央銀行の役割）
+  sources:
+  - CT05
+  units:
+  - F-013
+  - F-026
+- id: T-19
+  field: 経済学
+  topic: 貯蓄と複利
+  sources:
+  - CT05
+  units:
+  - F-002
+  - F-005
+- id: T-20
+  field: 経済学
+  topic: 借入と信用（クレジットカード、ローン、信用スコア、金利）
+  sources:
+  - CT05
+  units:
+  - F-005
+- id: T-21
+  field: 経済学
+  topic: 投資と金融商品とリスク管理（貨幣の時間価値、株式、債券、分散、リスクとリターン、デリバティブ）
+  sources:
+  - CT05
+  units:
+  - F-003
+  - F-006
+  - F-011
+  - F-020
+  - F-021
+- id: T-22
+  field: 経済学
+  topic: 保険の契約と保険市場（保険料、補償、免責、賠償責任）
+  sources:
+  - CT05
+  units:
+  - F-017
+  - F-061
+- id: T-23
+  field: 経済学
+  topic: 金融詐欺とポンジ・スキーム、クラウドファンディング、暗号資産とブロックチェーン
+  sources:
+  - CT05
+  units:
+  - F-064
+- id: T-24
+  field: 経済学
+  topic: ビジネスケース（課題を漏れなく重ならず分ける、仮説を立てる、数量で分析する）
+  sources:
+  - CT05
+  units:
+  - F-043
+  - F-007

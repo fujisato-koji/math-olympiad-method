@@ -1,0 +1,207 @@
+# 網羅表：IB Chemistry HL（国際バカロレア）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SB07:
+    title: 'International Baccalaureate, Diploma Programme Subject Brief, Sciences: Chemistry, First assessment 2025（© IBO 2022。ibo.org は HTTP 403 のため Internet Archive の 2025-01-06 の写し）'
+    url: https://web.archive.org/web/20250106084611/https://www.ibo.org/globalassets/new-structure/recognition/pdfs/dp_sciences_chemistry_subject-brief_jan_2022_e.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: Structure 1 粒子性のモデル
+  topic: S1.1 粒子性の入口（元素・化合物・混合物と分離、状態変化と運動論）
+  sources:
+  - SB07
+  units:
+  - H-003
+  - H-006
+  - P-043
+- id: T-02
+  field: Structure 1 粒子性のモデル
+  topic: S1.2 原子核のある原子（基本粒子、同位体、質量スペクトル）
+  sources:
+  - SB07
+  units:
+  - H-011
+  - H-041
+- id: T-03
+  field: Structure 1 粒子性のモデル
+  topic: S1.3 電子配置（発光スペクトル、軌道と電子配置、イオン化エネルギー）
+  sources:
+  - SB07
+  units:
+  - H-011
+  - H-012
+  - P-088
+- id: T-04
+  field: Structure 1 粒子性のモデル
+  topic: S1.4 質量で粒子を数える：物質量
+  sources:
+  - SB07
+  units:
+  - H-015
+  - H-016
+- id: T-05
+  field: Structure 1 粒子性のモデル
+  topic: S1.5 理想気体
+  sources:
+  - SB07
+  units:
+  - H-020
+  - P-043
+- id: T-06
+  field: Structure 2 結合と構造のモデル
+  topic: S2.1 イオンのモデル
+  sources:
+  - SB07
+  units:
+  - H-013
+  - H-014
+  - H-019
+- id: T-07
+  field: Structure 2 結合と構造のモデル
+  topic: S2.2 共有結合のモデル（分子の形、極性、分子間力、クロマトグラフィー、HL の共鳴・形式電荷・混成・σ 結合と π 結合）
+  sources:
+  - SB07
+  units:
+  - H-014
+  - H-018
+  - H-045
+  - H-006
+- id: T-08
+  field: Structure 2 結合と構造のモデル
+  topic: S2.3 金属のモデル
+  sources:
+  - SB07
+  units:
+  - H-014
+  - H-019
+- id: T-09
+  field: Structure 2 結合と構造のモデル
+  topic: S2.4 モデルから材料へ（結合の三角形、合金、高分子と重合）
+  sources:
+  - SB07
+  units:
+  - H-019
+  - H-035
+- id: T-10
+  field: Structure 3 物質の分類
+  topic: S3.1 周期表：元素の分類（周期性、酸化物、酸化数、HL の遷移元素と錯イオン）
+  sources:
+  - SB07
+  units:
+  - H-012
+  - H-028
+  - H-029
+- id: T-11
+  field: Structure 3 物質の分類
+  topic: S3.2 官能基：有機化合物の分類（命名、異性、分光による構造決定）
+  sources:
+  - SB07
+  units:
+  - H-032
+  - H-038
+  - H-041
+- id: T-12
+  field: Reactivity 1 反応を進めるもの
+  topic: R1.1 エンタルピー変化の測定
+  sources:
+  - SB07
+  units:
+  - H-022
+- id: T-13
+  field: Reactivity 1 反応を進めるもの
+  topic: R1.2 反応のエネルギーサイクル（結合エンタルピー、ヘスの法則、HL のボルン–ハーバーサイクル）
+  sources:
+  - SB07
+  units:
+  - H-022
+  - H-036
+- id: T-14
+  field: Reactivity 1 反応を進めるもの
+  topic: R1.3 燃料からのエネルギー（燃焼と不完全燃焼、化石燃料と生物燃料、燃料電池）
+  sources:
+  - SB07
+  units:
+  - H-022
+  - H-033
+  - H-080
+  - H-048
+- id: T-15
+  field: Reactivity 1 反応を進めるもの
+  topic: R1.4 エントロピーと自発性（HL）
+  sources:
+  - SB07
+  units:
+  - H-036
+- id: T-16
+  field: Reactivity 2 どれだけ・どれほど速く・どこまで
+  topic: R2.1 化学変化の量（化学量論、収率と原子効率）
+  sources:
+  - SB07
+  units:
+  - H-016
+- id: T-17
+  field: Reactivity 2 どれだけ・どれほど速く・どこまで
+  topic: R2.2 化学変化の速さ（衝突理論、HL の速度式・反応機構・アレニウスの式）
+  sources:
+  - SB07
+  units:
+  - H-023
+  - H-037
+- id: T-18
+  field: Reactivity 2 どれだけ・どれほど速く・どこまで
+  topic: R2.3 化学変化の程度（平衡定数と反応商、ルシャトリエの原理、HL の ΔG と K）
+  sources:
+  - SB07
+  units:
+  - H-024
+  - H-036
+- id: T-19
+  field: Reactivity 3 化学変化の機構
+  topic: R3.1 プロトン移動の反応（酸と塩基、pH、強酸と弱酸、HL の Ka・緩衝液・滴定曲線）
+  sources:
+  - SB07
+  units:
+  - H-025
+  - H-026
+- id: T-20
+  field: Reactivity 3 化学変化の機構
+  topic: R3.2 電子移動の反応（酸化還元、電池と電気分解、HL の標準電極電位）
+  sources:
+  - SB07
+  units:
+  - H-017
+  - H-027
+  - H-036
+- id: T-21
+  field: Reactivity 3 化学変化の機構
+  topic: R3.3 電子の共有の反応（ラジカルと連鎖反応）
+  sources:
+  - SB07
+  units:
+  - H-033
+  - H-037
+- id: T-22
+  field: Reactivity 3 化学変化の機構
+  topic: R3.4 電子対の共有の反応（求核剤と求電子剤、求核置換と求電子付加、HL のルイス酸塩基・錯イオン・芳香族の置換）
+  sources:
+  - SB07
+  units:
+  - H-039
+  - H-029
+- id: T-23
+  field: 化学の技能
+  topic: 道具としての数学（標準形と有効数字、対数と pH、グラフ）
+  sources:
+  - SB07
+  units:
+  - N-070
+  - D-001
+  - A-019
+- id: T-24
+  field: 化学の技能
+  topic: 実験の技術と探究の過程（滴定、熱量測定、分離、分析、誤差と不確かさ）
+  sources:
+  - SB07
+  units:
+  - H-031
+  - H-042

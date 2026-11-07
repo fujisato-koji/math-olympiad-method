@@ -1,0 +1,201 @@
+# 網羅表：A level Physics（AQA 7408）（組み込みの係が作り、check_fragment.py で確かめた）
+choices:
+  opt:
+    label: 選択分野（5 つから 1 つ）
+    pick: 1
+sources:
+  SB01:
+    title: AQA, AS and A-level Physics Specification 7407/7408, Version 1.4 (July 2026)
+    url: https://www.aqa.org.uk/files/resources.physics.specifications.AQA-7407-7408-SP-2015_PDF/85944e7114a6a88e8a769b108949133ce30d3cba.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 測定と誤差
+  topic: 測定と誤差（SI 単位と接頭辞、測定の限界と不確かさ、物理量の見積もり）
+  sources:
+  - SB01
+  units:
+  - P-117
+  - N-070
+- id: T-02
+  field: 粒子と放射
+  topic: 粒子（原子の構成、安定な核と不安定な核、粒子・反粒子・光子、粒子の相互作用と分類、クォーク、保存則）
+  sources:
+  - SB01
+  units:
+  - H-011
+  - P-104
+  - P-200
+- id: T-03
+  field: 粒子と放射
+  topic: 電磁放射と量子現象（光電効果、電子と原子の衝突、エネルギー準位と光子の放出、波動と粒子の二重性）
+  sources:
+  - SB01
+  units:
+  - P-069
+  - P-088
+- id: T-04
+  field: 波
+  topic: 進行波と定常波（縦波と横波、偏光、重ね合わせと定常波）
+  sources:
+  - SB01
+  units:
+  - P-021
+  - P-022
+- id: T-05
+  field: 波
+  topic: 屈折・回折・干渉（ヤングの二重スリット、回折格子、平面での屈折、全反射と光ファイバー）
+  sources:
+  - SB01
+  units:
+  - P-021
+  - P-023
+  - P-024
+- id: T-06
+  field: 力学と材料
+  topic: 力・エネルギー・運動量（スカラーとベクトル、力のモーメント、直線運動、放物運動、ニュートンの法則、運動量、仕事とエネルギーと仕事率、エネルギー保存）
+  sources:
+  - SB01
+  units:
+  - P-001
+  - P-002
+  - P-003
+  - P-004
+  - P-005
+  - P-006
+- id: T-07
+  field: 力学と材料
+  topic: 材料（密度、フックの法則、応力とひずみ、ヤング率、弾性エネルギー）
+  sources:
+  - SB01
+  units:
+  - H-007
+  - P-002
+  - P-004
+- id: T-08
+  field: 電気
+  topic: 電流と回路（電流・電位差・抵抗、電流–電圧特性、抵抗率と超伝導、直列と並列、分圧回路、起電力と内部抵抗）
+  sources:
+  - SB01
+  units:
+  - P-029
+- id: T-09
+  field: 力学の発展と熱物理
+  topic: 周期運動（円運動、単振動、強制振動と共振）
+  sources:
+  - SB01
+  units:
+  - P-007
+  - P-008
+- id: T-10
+  field: 力学の発展と熱物理
+  topic: 熱物理（内部エネルギー、比熱と潜熱、理想気体の法則、気体分子運動論）
+  sources:
+  - SB01
+  units:
+  - P-042
+  - P-043
+- id: T-11
+  field: 場とその結果
+  topic: 重力場（万有引力の法則、場の強さ、ポテンシャル、惑星と衛星の軌道）
+  sources:
+  - SB01
+  units:
+  - P-009
+- id: T-12
+  field: 場とその結果
+  topic: 電場とコンデンサー（クーロンの法則、場の強さ、ポテンシャル、平行板コンデンサー、充電と放電）
+  sources:
+  - SB01
+  units:
+  - P-030
+  - P-033
+- id: T-13
+  field: 場とその結果
+  topic: 磁場（電流と運動する電荷にはたらく力、電磁誘導、交流と変圧器）
+  sources:
+  - SB01
+  units:
+  - P-032
+  - P-033
+- id: T-14
+  field: 原子核物理
+  topic: 放射能（ラザフォード散乱、α・β・γ、放射性崩壊と半減期、原子核の不安定性と半径、質量とエネルギー、誘導核分裂と原子炉、安全）
+  sources:
+  - SB01
+  units:
+  - H-011
+  - P-104
+- id: T-15
+  field: 選択分野
+  choice: opt
+  topic: 天体物理（望遠鏡、恒星の分類と HR 図、超新星・中性子星・ブラックホール、ドップラー効果とハッブルの法則、クェーサー、系外惑星の検出）
+  sources:
+  - SB01
+  units:
+  - P-023
+  - P-162
+  - W-074
+  - P-202
+- id: T-16
+  field: 選択分野
+  choice: opt
+  topic: 医用物理（眼と耳の物理、生体の計測、超音波と内視鏡、X 線と CT、核医学の画像化と治療）
+  sources:
+  - SB01
+  units:
+  - P-022
+  - P-023
+  - P-088
+  - P-104
+- id: T-17
+  field: 選択分野
+  choice: opt
+  topic: 工学物理（回転の力学と角運動量、熱力学の第一法則と第二法則、熱機関のサイクル、冷凍機とヒートポンプ）
+  sources:
+  - SB01
+  units:
+  - P-011
+  - P-044
+  - P-045
+- id: T-18
+  field: 選択分野
+  choice: opt
+  topic: 物理学の転換点（陰極線と比電荷とミリカンの実験、光の波動説と粒子説、電子顕微鏡、特殊相対論）
+  sources:
+  - SB01
+  units:
+  - P-030
+  - P-032
+  - P-069
+  - P-057
+- id: T-19
+  field: 選択分野
+  choice: opt
+  topic: 電子工学（MOSFET・ツェナーダイオード・フォトダイオード・ホール素子、アナログとディジタルの信号、LC フィルタ、演算増幅器、論理回路、データ通信と変調）
+  sources:
+  - SB01
+  units:
+  - E-158
+  - E-068
+  - K-030
+  - E-089
+- id: T-20
+  field: 数学
+  topic: 物理の数学（標準形と有効数字、対数と指数関数的な変化、三角関数、直線への変形、グラフの傾きと面積）
+  sources:
+  - SB01
+  units:
+  - N-070
+  - D-001
+  - G-025
+  - A-019
+  - D-004
+  - D-006
+- id: T-21
+  field: 実験
+  topic: 必須の実験 12 件（弦の定常波、干渉、自由落下による g、ヤング率、抵抗率、起電力と内部抵抗、単振動、気体の法則、コンデンサーの充放電、導線にはたらく力、磁束の鎖交、γ 線の逆二乗則）と実験の技能
+  sources:
+  - SB01
+  units:
+  - P-117
