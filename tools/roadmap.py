@@ -143,6 +143,21 @@ def check(data, problems):
                 errors.append(f"{uid}: 前提 {need} がない")
             elif units[need][1] > stage:
                 errors.append(f"{uid}: 前提 {need} が後の段にある")
+    # 考え方の水準（D-028、docs/thinking-levels.md）。付け直しの途中は、付いた単元だけを確かめる
+    low = []
+    for uid, (_, _, u) in units.items():
+        lv = u.get("level")
+        if lv is None:
+            continue
+        if lv not in (1, 2, 3, 4, 5):
+            errors.append(f"{uid}: 考え方の水準 {lv} は 1〜5 のどれでもない")
+            continue
+        hi = max([units[n][2].get("level") or 0 for n in u.get("needs", []) if n in units] or [0])
+        if lv < hi:
+            low.append(f"{uid}（{lv}）＜ 前提の {hi}")
+    if low:
+        # 前提が強すぎる（道のりの膨らみ）か、水準が低すぎるかのどちらか
+        print(f"警告: 前提より低い考え方の水準 {len(low)}：" + "、".join(low[:10]) + ("…" if len(low) > 10 else ""))
     # 前提の輪
     state = {}
 
@@ -292,7 +307,7 @@ def build(data, problems):
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": u["stage"], "region": u.get("region"), "needs": u.get("needs", []), "days": days,
+                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {})})
     gu = goal_units(data)
     goals = []
