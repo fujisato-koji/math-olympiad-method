@@ -16,7 +16,7 @@ AI と人（保護者や指導者）が組んで回すことを前提にして�
 
 ## 画面「みちすじ」
 
-公開先 https://fujisato-koji.github.io/math-olympiad-method/ （手元では `site/index.html`）を開くと、全体の地図、段の路線図、単元の日、今日の問題を 1 問ずつたどれます。
+公開先 https://fujisato-koji.github.io/math-olympiad-method/ （手元では `site/index.html`）を開くと、全体の地図、考え方の水準のページ、組み合わせの層、単元の日、今日の問題を 1 問ずつたどれます。
 進み具合はその端末のブラウザの中にだけ保存します。
 
 地図は `roadmap.yaml`、問題は `units/` に書き、`python tools/roadmap.py build` で画面のデータ（`site/data.js`）と一覧（`docs/roadmap.md`）を作り直します。
