@@ -155,6 +155,10 @@ regions:
   - {id: hassei, name: 発生と再生, lane: B}
   - {id: iyaku, name: 微生物と病気と薬, lane: B}
   - {id: shinkei, name: 神経科学, lane: B}
+  - {id: sora, name: 空と星, lane: W}
+  - {id: tenki, name: 天気と水のめぐり, lane: W}
+  - {id: sekkei, name: 設計とものづくり, lane: E}
+  - {id: kikai, name: 機械のしくみ, lane: E}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -419,6 +423,20 @@ units:
   - {id: B-015, title: 生き物の観察（からだのつくり、動く・育つ・食べる、虫めがね）, stage: 1, level: 1, region: ikimono, needs: [], days: 5}
   - {id: B-016, title: 植物の育ち方（たねと芽生え、根・茎・葉、花と実）, stage: 1, level: 1, region: shokubutsu, needs: [B-015], days: 5}
   - {id: B-017, title: 動物のからだとくらし（こん虫のからだ、食べ物とすみか）, stage: 1, level: 1, region: ikimono, needs: [B-015], days: 5}
+  - {id: K-122, title: 手順を書く（ロボット役で道案内、命令を順に並べる、まちがいを見つけて直す）, stage: 1, level: 1, region: programming, needs: [N-001], days: 4}
+  - {id: K-123, title: 手で並べ替える（てんびんで 2 つずつ比べて重い順に並べる、背の順に並ぶ、並べる手順を言う）, stage: 1, level: 1, region: programming, needs: [K-122, A-001], days: 4}
+  - {id: P-178, title: 光と影（光はまっすぐ進む、影は光の反対側にできる、日なたと日かげ）, stage: 1, level: 1, region: hado, needs: [], days: 4}
+  - {id: P-180, title: 音（ふるえて音が出る、ふるえが伝わる、大きい音と小さい音・高い音と低い音、糸電話）, stage: 1, level: 1, region: hado, needs: [], days: 4}
+  - {id: P-181, title: 磁石の極（N 極と S 極、引き合う・しりぞけ合う、はなれていても働く力、方位磁針、鉄が磁石になる）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 5}
+  - {id: P-182, title: 電気の通り道（乾電池と豆電球・LED、ひとまわりの輪になると明かりがつく、スイッチ）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 4}
+  - {id: P-184, title: シーソーとやじろべえ（重さと置く位置でかたむきが変わる、つり合う置き方を探す、重心で支えて立てる）, stage: 1, level: 1, region: rikigaku, needs: [A-001], days: 4}
+  - {id: P-185, title: 押す力・引く力とゴム（力で形と動きが変わる、ゴムを長くのばすほど遠くへ走る、風で動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4}
+  - {id: P-187, title: 転がる・すべる・ぶつかる（坂の高さと速さ、重い球と軽い球、ぶつけて物を動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4}
+  - {id: E-171, title: つくって試す（紙の塔やゴムで走る車をつくる、試してうまくいかない所を見つけて直す）, stage: 1, level: 1, region: sekkei, needs: [G-003], days: 5}
+  - {id: H-060, title: 固体・液体・気体（形とかさ、空気も場所をとる、とじこめた空気は押し縮められ水は縮まない、ろうやバターがとける）, stage: 1, level: 1, region: busshitsu, needs: [H-002], days: 5}
+  - {id: H-061, title: 色が変わる（紫キャベツの色水、すっぱい物と石けん水で色が変わる）, stage: 1, level: 1, region: busshitsu, needs: [H-001], days: 4}
+  - {id: B-069, title: 自分のからだ（見る・聞く・かぐ・味わう・さわる、骨と筋肉をさわって確かめる、心臓の音、背がのびる）, stage: 1, level: 1, region: karada, needs: [], days: 4}
+  - {id: W-043, title: 太陽と月の動き（1 日の太陽の動き、東西南北、影の向きと長さ、月の形の移り変わり）, stage: 1, level: 1, region: sora, needs: [P-178], days: 5}
 
   # ---- 段 2 数 ----
   - id: N-004
@@ -490,10 +508,27 @@ units:
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, level: 2, region: data, needs: [N-006], days: 5}
   - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, level: 2, region: risoku, needs: [N-060], days: 4}
   - {id: W-001, title: 石と砂と土の観察（粒の大きさ・色・かたさで分ける）, stage: 2, level: 1, region: ganseki, needs: [], days: 5}
-  - {id: H-003, title: 物は粒でできている（とける、まざる、ふくらむ、すがたが変わるを粒の動きで説明、重さは変わらない）, stage: 2, level: 2, region: busshitsu, needs: [H-002, G-046], days: 6}
+  - {id: H-003, title: 物は粒でできている（とける、まざる、ふくらむ、すがたが変わるを粒の動きで説明、重さは変わらない）, stage: 2, level: 2, region: busshitsu, needs: [H-002, G-046, H-060], days: 6}
   - {id: H-004, title: 物の燃え方と空気（酸素と二酸化炭素、燃えた後の物）, stage: 2, level: 2, region: busshitsu, needs: [H-003], days: 5}
-  - {id: H-005, title: 水溶液の性質（酸性・中性・アルカリ性、指示薬、金属をとかす水溶液）, stage: 2, level: 2, region: busshitsu, needs: [H-003], days: 5}
+  - {id: H-005, title: 水溶液の性質（酸性・中性・アルカリ性、指示薬、金属をとかす水溶液）, stage: 2, level: 2, region: busshitsu, needs: [H-003, H-061], days: 5}
   - {id: B-018, title: 生き物のなかま分け（共通点と違い、検索表の入口）, stage: 2, level: 2, region: ikimono, needs: [B-016, B-017], days: 5}
+  - {id: K-124, title: くり返しと「もし～なら」（同じ命令をまとめる、条件で分かれる、ブロックをつないで動かす）, stage: 2, level: 2, region: programming, needs: [K-122, N-006], days: 6}
+  - {id: K-127, title: 点で絵を表す（白と黒の点の絵、点を数の列で書く、同じ色が続く数でちぢめる）, stage: 2, level: 2, region: graphics, needs: [N-006], days: 4}
+  - {id: P-179, title: 鏡と虫めがね（光をはね返す、虫めがねで小さな点に集める、集めるほど明るく熱い）, stage: 2, level: 1, region: hado, needs: [P-178], days: 4}
+  - {id: P-189, title: 温度と熱の伝わり方（温度計で測る、0 度より低い温度、金属・水・空気のあたたまり方）, stage: 2, level: 2, region: netsu, needs: [N-004, N-006, H-002], days: 5}
+  - {id: E-172, title: 強い形（三角形の骨組はくずれにくい、紙を折る・丸めると強くなる、アーチ）, stage: 2, level: 1, region: kozo-zairyo, needs: [E-171, G-002], days: 4}
+  - {id: H-062, title: もどる変化ともどらない変化（とける・こおるはもどる、焼く・こげる・さびる・酢と重曹のあわはもどらない）, stage: 2, level: 1, region: busshitsu, needs: [H-060, H-061], days: 5}
+  - {id: H-063, title: まざった物を分ける（ふるい、磁石、こす、浮く物と沈む物、水にとかして分ける）, stage: 2, level: 1, region: busshitsu, needs: [H-001], days: 4}
+  - {id: H-064, title: 物の重さと体積（形を変えても分けても重さは同じ、同じ体積でも物によって重さがちがう、はかりで g を読む）, stage: 2, level: 2, region: busshitsu, needs: [A-001, G-046], days: 5}
+  - {id: H-065, title: 結晶を育てる（塩やミョウバンの水を少しずつ蒸発させる、形のそろった粒、虫めがねで見る）, stage: 2, level: 1, region: busshitsu, needs: [H-063], days: 4}
+  - {id: B-070, title: 生き物の一生（たまご・幼虫・さなぎ・成虫、魚のたまごの育ち方、育てて毎日記録する）, stage: 2, level: 1, region: ikimono, needs: [B-017], days: 6}
+  - {id: B-072, title: すみかに合ったからだ（くちばしと歯の形と食べ物、水かきとひれ、まわりの色にかくれる）, stage: 2, level: 1, region: ikimono, needs: [B-017], days: 4}
+  - {id: B-073, title: 親に似るところと違うところ（同じなかまでも 1 つずつ違う、葉や種の長さを測って並べる、親から子へ伝わる）, stage: 2, level: 2, region: iden-shinka, needs: [B-018, G-046, S-027], days: 5}
+  - {id: B-074, title: 目に見えない小さな生き物（パンのかび、ヨーグルトと発酵、手洗いで減らす、寒天で育てて数える）, stage: 2, level: 1, region: iyaku, needs: [B-015], days: 5}
+  - {id: B-075, title: 心臓と呼吸を数える（1 分間の脈と呼吸の回数、運動の前と後、表とグラフにする）, stage: 2, level: 2, region: karada, needs: [B-069, N-059, S-027], days: 4}
+  - {id: W-044, title: 星と星座（明るさと色の違い、星座の形、1 晩で回る星空、季節で変わる星空）, stage: 2, level: 1, region: sora, needs: [W-043], days: 4}
+  - {id: W-047, title: 天気と気温の記録（晴れ・くもり・雨と雲の量、1 日の気温の変わり方、風の向きと強さ、折れ線グラフ）, stage: 2, level: 2, region: tenki, needs: [P-189, S-027], days: 5}
+  - {id: W-048, title: 水のゆくえ（雨水は高い所から低い所へ流れる、土や砂へのしみこみ方、水たまりが消える、冷たいコップにつく水）, stage: 2, level: 1, region: tenki, needs: [H-002], days: 4}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, level: 2, region: keisan, needs: [N-007], days: 8}
@@ -542,19 +577,33 @@ units:
   - {id: N-061, title: 概数と見積もり（四捨五入）, stage: 3, level: 2, region: keisan, needs: [N-009, N-013], days: 5}
   - {id: S-028, title: 平均と代表値, stage: 3, level: 2, region: data, needs: [S-027, N-014, N-020], days: 5}
   - {id: F-002, title: 利息と複利（元金が何倍になるか）, stage: 3, level: 2, region: risoku, needs: [F-001, A-005, A-009], days: 5}
-  - {id: W-002, title: 流れる水のはたらきと地層のでき方（けずる・運ぶ・積もらせる）, stage: 3, level: 1, region: chiso, needs: [W-001], days: 5}
+  - {id: W-002, title: 流れる水のはたらきと地層のでき方（けずる・運ぶ・積もらせる）, stage: 3, level: 1, region: chiso, needs: [W-001, W-048], days: 5}
   - {id: W-003, title: 化石と地層の重なり（地層の新旧、示準化石と示相化石）, stage: 3, level: 2, region: chiso, needs: [W-002], days: 5}
   - {id: W-004, title: 火山と火成岩（マグマ、噴火のしかた、火山岩と深成岩）, stage: 3, level: 2, region: jishin-kazan, needs: [W-001], days: 5}
-  - {id: H-006, title: とける量と物の分け方（溶解度と濃度、純物質と混合物、ろ過・再結晶・蒸留・クロマトグラフィー）, stage: 3, level: 2, region: busshitsu, needs: [H-005, A-007, S-027], days: 7}
-  - {id: H-007, title: 密度（重さとかさの比、浮き沈み）, stage: 3, level: 2, region: busshitsu, needs: [H-003, A-005], days: 5}
-  - {id: H-008, title: 原子と化学変化（分解と化合、原子の組みかえ、元素）, stage: 3, level: 2, region: busshitsu, needs: [H-004, H-005], days: 6}
-  - {id: H-009, title: 化学変化と質量（質量保存の法則、定比例の法則、反応する量の比）, stage: 3, level: 2, region: hanno, needs: [H-008, A-006], days: 6}
-  - {id: B-019, title: 植物の養分と水（日光とでんぷん、根から葉への水、蒸散）, stage: 3, level: 2, region: shokubutsu, needs: [B-016, H-004], days: 6}
-  - {id: B-020, title: 人のからだのつくりとはたらき（骨と筋肉、感覚器、呼吸、消化、血液の循環）, stage: 3, level: 2, region: karada, needs: [B-017, H-004], days: 7}
+  - {id: H-006, title: とける量と物の分け方（溶解度と濃度、純物質と混合物、ろ過・再結晶・蒸留・クロマトグラフィー）, stage: 3, level: 2, region: busshitsu, needs: [H-005, A-007, S-027, H-063, H-065], days: 7}
+  - {id: H-007, title: 密度（重さとかさの比、浮き沈み）, stage: 3, level: 2, region: busshitsu, needs: [H-003, A-005, H-064], days: 5}
+  - {id: H-008, title: 原子と化学変化（分解と化合、原子の組みかえ、元素）, stage: 3, level: 2, region: busshitsu, needs: [H-004, H-005, H-062], days: 6}
+  - {id: H-009, title: 化学変化と質量（質量保存の法則、定比例の法則、反応する量の比）, stage: 3, level: 2, region: hanno, needs: [H-008, A-006, H-064], days: 6}
+  - {id: B-019, title: 植物の養分と水（日光とでんぷん、根から葉への水、蒸散）, stage: 3, level: 2, region: shokubutsu, needs: [B-016, H-004, B-071], days: 6}
+  - {id: B-020, title: 人のからだのつくりとはたらき（骨と筋肉、感覚器、呼吸、消化、血液の循環）, stage: 3, level: 2, region: karada, needs: [B-017, H-004, B-075], days: 7}
   - {id: B-021, title: 生き物と環境（季節と生き物、食物連鎖、分解者、数のつりあい）, stage: 3, level: 2, region: seitai, needs: [B-018, B-019, A-005], days: 6}
   - {id: B-022, title: 顕微鏡で見る細胞（細胞のつくり、単細胞と多細胞、植物と動物の細胞）, stage: 3, level: 2, region: bunshi-saibo, needs: [B-018, G-013], days: 6}
   - {id: G-050, title: 座標平面の入口（格子の点、4 象限、移動と対称、表から直線を描く）, stage: 3, level: 2, region: zahyo, needs: [N-010, G-015], days: 6}
   - {id: G-051, title: 結び目と折りたたみ（紐と紙の空間での動き）, stage: 3, level: 1, region: katachi, needs: [G-004, G-002], days: 6}
+  - {id: K-125, title: 並べ替えと探し方をくらべる（選んで並べる、となりと入れかえる、半分ずつ探す数当て、比べる回数を数える）, stage: 3, level: 2, region: programming, needs: [K-123, K-124, N-014], days: 6}
+  - {id: K-126, title: 状態と移り変わり（信号機や自動販売機のきまり、状態と矢印の図をかく、入力で次の状態が決まる）, stage: 3, level: 2, region: programming, needs: [K-124], days: 5}
+  - {id: K-128, title: 暗号と誤りを見つける（ずらす暗号と解き方、偶数と奇数で 1 枚の裏返しを見つける）, stage: 3, level: 2, region: anzen, needs: [N-008, N-014], days: 5}
+  - {id: P-183, title: 電流のはたらき（直列と並列のつなぎ方と明るさ、電磁石の強さと巻き数、モーターと手回し発電機）, stage: 3, level: 2, region: denjiki, needs: [P-181, P-182, S-027], days: 6}
+  - {id: P-186, title: ばねとばねばかり（おもりの重さとのびは比例する、力の大きさを数で表す、つり合う 2 つの力）, stage: 3, level: 2, region: rikigaku, needs: [P-185, G-046, A-006], days: 5}
+  - {id: P-188, title: 振り子のきまり（1 往復の時間は何で決まるか、変える条件と変えない条件、何回か測って平均する）, stage: 3, level: 2, region: rikigaku, needs: [P-187, N-059, S-028], days: 5}
+  - {id: E-173, title: 橋をつくって比べる（どの形がおもりを多く支えるか、こわれ方を見る、橋の重さあたりの強さを表にする）, stage: 3, level: 2, region: kozo-zairyo, needs: [E-172, S-027, A-005], days: 6}
+  - {id: E-174, title: てこ（支点・力点・作用点、小さな力で持ち上げる、おもり×支点からのきょりでつり合う）, stage: 3, level: 2, region: kikai, needs: [P-184, N-013, G-046], days: 5}
+  - {id: E-175, title: 滑車と輪軸（定滑車と動滑車、ひもを引く長さと力、輪軸と歯車、自転車のギア）, stage: 3, level: 2, region: kikai, needs: [E-174], days: 5}
+  - {id: E-176, title: センサーで動くロボット（明るさやきょりを感じて止まる・曲がる、プログラムで動かして試して直す）, stage: 3, level: 2, region: seigyo, needs: [K-124, P-183, E-171], days: 6}
+  - {id: B-071, title: 植物が育つ条件（発芽に要る水・空気・温度、育ちに要る日光と肥料、条件を 1 つだけ変えて比べる）, stage: 3, level: 2, region: shokubutsu, needs: [B-016, S-027], days: 6}
+  - {id: W-045, title: 太陽・月・地球の模型（昼と夜、月の満ち欠け、日食と月食を電灯と球で再現する）, stage: 3, level: 2, region: sora, needs: [W-043, W-044], days: 5}
+  - {id: W-046, title: 太陽系の縮尺模型（惑星の大きさと太陽からの距離を比べる、縮尺を決めて並べる）, stage: 3, level: 2, region: sora, needs: [W-045, G-013], days: 5}
+  - {id: W-049, title: 雲と雨と水のめぐり（雲のでき方、雲の動きと天気の変わり方、海・空・陸をめぐる水、台風と大雨にそなえる）, stage: 3, level: 2, region: tenki, needs: [W-047, W-048], days: 6}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -608,11 +657,11 @@ units:
   - {id: H-015, title: 物質量（モル、アボガドロ定数、モル質量、モル濃度）, stage: 4, level: 2, region: hanno, needs: [H-010, H-011, A-005], days: 7}
   - {id: H-016, title: 化学反応の量的関係（反応式と物質量、限定反応物、収率）, stage: 4, level: 2, region: hanno, needs: [H-015, A-011], days: 6}
   - {id: H-017, title: 酸化と還元（酸化数、酸化剤と還元剤、金属のイオン化傾向）, stage: 4, level: 2, region: hanno, needs: [H-014, H-010], days: 6}
-  - {id: B-023, title: 生殖と細胞分裂（卵と精子、受粉と受精、体細胞分裂と減数分裂、染色体）, stage: 4, level: 2, region: bunshi-saibo, needs: [B-022], days: 6}
-  - {id: B-024, title: 遺伝の規則性（メンデルの法則、顕性と潜性、分離比と確率）, stage: 4, level: 2, region: iden-shinka, needs: [B-023, C-011, A-010], days: 6}
+  - {id: B-023, title: 生殖と細胞分裂（卵と精子、受粉と受精、体細胞分裂と減数分裂、染色体）, stage: 4, level: 2, region: bunshi-saibo, needs: [B-022, B-070], days: 6}
+  - {id: B-024, title: 遺伝の規則性（メンデルの法則、顕性と潜性、分離比と確率）, stage: 4, level: 2, region: iden-shinka, needs: [B-023, C-011, A-010, B-073], days: 6}
   - {id: B-025, title: 生物の多様性と系統（3 つのドメイン、系統樹で見る動物・植物・菌類・原生生物・細菌の主要な群）, stage: 4, level: 2, region: ikimono, needs: [B-018, B-022], days: 6}
   - {id: B-026, title: 植物のからだと組織（根・茎・葉の組織、維管束、気孔、花のつくり）, stage: 4, level: 2, region: shokubutsu, needs: [B-019, B-022], days: 6}
-  - {id: B-027, title: 生物の歴史と進化の考え（化石、生命の起源、相同と相似、自然選択の入口）, stage: 4, level: 2, region: iden-shinka, needs: [B-025, B-024], days: 6}
+  - {id: B-027, title: 生物の歴史と進化の考え（化石、生命の起源、相同と相似、自然選択の入口）, stage: 4, level: 2, region: iden-shinka, needs: [B-025, B-024, B-072], days: 6}
   - {id: N-070, title: 標準形（10 の累乗の表し方）と有効数字、誤差の区間, stage: 4, level: 2, region: keisan, needs: [A-009, N-061, N-020], days: 5}
 
   # ---- 段 5 関係 ----
@@ -638,28 +687,28 @@ units:
   - {id: D-006, title: 積分の考え（面積と原始関数、置換積分と部分積分）, stage: 5, level: 3, region: bisekibun-nyumon, needs: [D-005, A-037], days: 8}
   - {id: M-001, title: 連立 1 次方程式と行列（高校）, stage: 5, level: 3, region: senkei-keisan, needs: [A-012, G-027], days: 8}
   - {id: M-002, title: 平面の線形変換と行列式, stage: 5, level: 3, region: senkei-keisan, needs: [M-001, G-025], days: 8}
-  - {id: K-012, title: 計算という考え方と Python（簡単なアルゴリズムとデータ構造）, stage: 5, level: 2, region: programming, needs: [A-010], days: 8}
+  - {id: K-012, title: 計算という考え方と Python（簡単なアルゴリズムとデータ構造）, stage: 5, level: 2, region: programming, needs: [A-010, K-124], days: 8}
   - {id: K-013, title: オブジェクト指向プログラミング、テストとデバッグ, stage: 5, level: 2, region: programming, needs: [K-012], days: 8}
-  - {id: K-014, title: アルゴリズムの計算量（入門）, stage: 5, level: 3, region: programming, needs: [K-012, D-001], days: 8}
-  - {id: P-001, title: 運動の表し方（速さと向き、変位・速度・加速度、等加速度直線運動）, stage: 5, level: 3, region: rikigaku, needs: [G-027, D-004], days: 8}
-  - {id: P-002, title: 力とつり合い（…、フックの法則、応力・ひずみ・ヤング率）, stage: 5, level: 3, region: rikigaku, needs: [G-027], days: 8}
+  - {id: K-014, title: アルゴリズムの計算量（入門）, stage: 5, level: 3, region: programming, needs: [K-012, D-001, K-125], days: 8}
+  - {id: P-001, title: 運動の表し方（速さと向き、変位・速度・加速度、等加速度直線運動）, stage: 5, level: 3, region: rikigaku, needs: [G-027, D-004, P-187], days: 8}
+  - {id: P-002, title: 力とつり合い（…、フックの法則、応力・ひずみ・ヤング率）, stage: 5, level: 3, region: rikigaku, needs: [G-027, P-186], days: 8}
   - {id: P-003, title: 運動の法則（ニュートンの 3 法則、運動方程式、落下運動）, stage: 5, level: 3, region: rikigaku, needs: [P-002], days: 8}
   - {id: P-004, title: 仕事とエネルギー（仕事と仕事率、運動エネルギーと位置エネルギー、力学的エネルギー保存、保存力とポテンシャル）, stage: 5, level: 3, region: rikigaku, needs: [D-006], days: 8}
-  - {id: P-005, title: 平面内の運動と剛体のつり合い（曲線運動の速度と加速度、放物運動、力のモーメント、重心）, stage: 5, level: 3, region: rikigaku, needs: [P-001, P-003, D-006], days: 8}
+  - {id: P-005, title: 平面内の運動と剛体のつり合い（曲線運動の速度と加速度、放物運動、力のモーメント、重心）, stage: 5, level: 3, region: rikigaku, needs: [P-001, P-003, D-006, E-174], days: 8}
   - {id: P-006, title: 運動量と衝突（運動量と力積、運動量保存、衝突と力学的エネルギー、重心運動と相対運動、二体問題、可変質量とロケット方程式）, stage: 5, level: 3, region: rikigaku, needs: [P-003, P-004], days: 8}
-  - {id: P-007, title: 円運動と単振動（向心加速度、振り子、単振動の表し方）, stage: 5, level: 3, region: rikigaku, needs: [P-003, G-025], days: 8}
+  - {id: P-007, title: 円運動と単振動（向心加速度、振り子、単振動の表し方）, stage: 5, level: 3, region: rikigaku, needs: [P-003, G-025, P-188], days: 8}
   - {id: P-011, title: 剛体の回転（慣性モーメント、平行軸の定理、固定軸のまわりの回転、転がり、トルク、瞬間回転中心）, stage: 5, level: 3, region: rikigaku, needs: [P-005, P-006], days: 8}
   - {id: P-012, title: 非慣性系（慣性力、遠心力、コリオリ力、回転座標系での位置エネルギー）, stage: 5, level: 3, region: rikigaku, needs: [P-007, D-004], days: 8}
   - {id: P-013, title: 流体の入門（圧力、浮力、連続の式、ベルヌーイの定理、表面張力と毛管圧、抗力とマグヌス効果）, stage: 5, level: 3, region: rikigaku, needs: [P-002], days: 8}
   - {id: P-021, title: 波の性質（…、定常波、ホイヘンスの原理、波のエネルギー、うなりと群速度・位相速度）, stage: 5, level: 3, region: hado, needs: [G-025], days: 8}
-  - {id: P-022, title: 音（音の性質、弦の振動と気柱の共鳴、うなり、ドップラー効果、音速、マッハ円錐）, stage: 5, level: 3, region: hado, needs: [P-021, G-025], days: 8}
-  - {id: P-023, title: 光の反射・屈折とレンズ（全反射、凸レンズと像、フェルマーの原理とスネルの法則、光学機器と分解能、測光）, stage: 5, level: 3, region: hado, needs: [P-021, G-025], days: 8}
-  - {id: P-029, title: 電流と回路（回路と電流・電圧、オームの法則、抵抗と抵抗率、電力と電力量、キルヒホッフの法則、電池と計器）, stage: 5, level: 2, region: denjiki, needs: [A-012], days: 8}
+  - {id: P-022, title: 音（音の性質、弦の振動と気柱の共鳴、うなり、ドップラー効果、音速、マッハ円錐）, stage: 5, level: 3, region: hado, needs: [P-021, G-025, P-180], days: 8}
+  - {id: P-023, title: 光の反射・屈折とレンズ（全反射、凸レンズと像、フェルマーの原理とスネルの法則、光学機器と分解能、測光）, stage: 5, level: 3, region: hado, needs: [P-021, G-025, P-179], days: 8}
+  - {id: P-029, title: 電流と回路（回路と電流・電圧、オームの法則、抵抗と抵抗率、電力と電力量、キルヒホッフの法則、電池と計器）, stage: 5, level: 2, region: denjiki, needs: [A-012, P-183], days: 8}
   - {id: P-030, title: "電荷と電場・電位（静電気、クーロンの法則、電場と電位、静電エネルギー、コンデンサーと電気容量、誘電体と電気容量）", stage: 5, level: 3, region: denjiki, needs: [P-029, D-006], days: 8}
   - {id: P-031, title: ガウスの法則と導体（電気力線、対称な電荷分布、導体の境界条件と接地、解の一意性、鏡像法）, stage: 5, level: 3, region: denjiki, needs: [P-030], days: 8}
-  - {id: P-032, title: "電流と磁場（電流のつくる磁場、ビオ＝サバールの法則、アンペールの法則、ローレンツ力、磁場中の荷電粒子のらせん運動とドリフト、磁気双極子、磁性体と磁化（常磁性、キュリーの法則））", stage: 5, level: 3, region: denjiki, needs: [G-027], days: 8}
+  - {id: P-032, title: "電流と磁場（電流のつくる磁場、ビオ＝サバールの法則、アンペールの法則、ローレンツ力、磁場中の荷電粒子のらせん運動とドリフト、磁気双極子、磁性体と磁化（常磁性、キュリーの法則））", stage: 5, level: 3, region: denjiki, needs: [G-027, P-183], days: 8}
   - {id: P-033, title: 電磁誘導と交流（ファラデー＝レンツの法則、自己・相互インダクタンス、RL・RC 回路の時定数、交流回路と複素インピーダンス、共振、渦電流）, stage: 5, level: 3, region: denjiki, needs: [A-021], days: 8}
-  - {id: P-042, title: 熱と温度・状態変化（熱運動、熱容量と比熱、熱の移動（伝導・対流・放射）、潜熱と相変化、融点と沸点、飽和蒸気圧と湿度）, stage: 5, level: 2, region: netsu, needs: [H-003], days: 8}
+  - {id: P-042, title: 熱と温度・状態変化（熱運動、熱容量と比熱、熱の移動（伝導・対流・放射）、潜熱と相変化、融点と沸点、飽和蒸気圧と湿度）, stage: 5, level: 2, region: netsu, needs: [H-003, P-189], days: 8}
   - {id: P-043, title: 気体分子運動論と理想気体（分子の運動と圧力、状態方程式、内部エネルギー、自由度とエネルギー等分配、二乗平均速度、ボルツマン因子）, stage: 5, level: 3, region: netsu, needs: [P-042, P-004], days: 8}
   - {id: P-044, title: 熱力学第一法則と気体の状態変化（熱と仕事、内部エネルギー、定積・定圧熱容量、等温・断熱・定圧・定積変化）, stage: 5, level: 3, region: netsu, needs: [P-042, P-004], days: 8}
   - {id: P-045, title: 熱力学第二法則とエントロピー（トムソンとクラウジウスの原理、可逆と不可逆、カルノー・サイクルと熱効率、熱力学的温度、クラウジウスの不等式）, stage: 5, level: 3, region: netsu, needs: [P-044], days: 8}
@@ -677,7 +726,7 @@ units:
   - {id: F-006, title: 債券の価格と利回り（クーポン、満期、償還）, stage: 5, level: 3, region: risoku, needs: [F-005], days: 6}
   - {id: F-007, title: 投資の採算と費用便益（正味現在価値、内部収益率、損益分岐）, stage: 5, level: 3, region: kaikei, needs: [F-005, A-019], days: 6}
   - {id: F-008, title: 需要と供給（市場の価格と数量）, stage: 5, level: 3, region: keizai, needs: [A-019, A-012], days: 6}
-  - {id: P-162, title: 天体の観測量と距離（天球座標、年周視差と距離のはしご、等級と色、スペクトル型と HR 図）, stage: 5, level: 3, region: tenmon, needs: [P-023, P-088, G-025], days: 7}
+  - {id: P-162, title: 天体の観測量と距離（天球座標、年周視差と距離のはしご、等級と色、スペクトル型と HR 図）, stage: 5, level: 3, region: tenmon, needs: [P-023, P-088, G-025, W-046], days: 7}
   - {id: W-010, title: 放射年代測定（放射性崩壊と半減期、同位体による年代、年代の決め方）, stage: 5, level: 3, region: chikyu-kagaku, needs: [P-104, D-001, W-009], days: 6}
   - {id: H-018, title: 分子の形と極性、分子間力（電子対反発則、水素結合、沸点の違い）, stage: 5, level: 3, region: genshi-ketsugo, needs: [H-014, G-021, G-027], days: 7}
   - {id: H-019, title: 結晶と固体の構造（単位格子と充填、イオン結晶・金属結晶・分子結晶・共有結合の結晶）, stage: 5, level: 3, region: genshi-ketsugo, needs: [H-014, H-015, G-021], days: 6}
@@ -712,7 +761,7 @@ units:
   - {id: B-040, title: 個体群と生物群集（個体群の成長とロジスティック成長、種間関係、遷移、多様性の指数）, stage: 5, level: 3, region: seitai, needs: [B-021, A-022, D-001], days: 7}
   - {id: B-041, title: 生態系と物質循環（エネルギーの流れと生産量、炭素と窒素の循環、生物多様性と保全）, stage: 5, level: 3, region: seitai, needs: [B-040, B-030], days: 7}
   - {id: B-042, title: 進化のしくみ（自然選択、遺伝的浮動、ハーディ–ワインベルグの法則、種分化、系統樹）, stage: 5, level: 3, region: iden-shinka, needs: [B-027, B-032, A-015], days: 7}
-  - {id: B-043, title: 微生物とウイルス（細菌の構造と増殖、培養と無菌操作、ウイルスの増え方、発酵）, stage: 5, level: 3, region: iyaku, needs: [B-032, B-031], days: 7}
+  - {id: B-043, title: 微生物とウイルス（細菌の構造と増殖、培養と無菌操作、ウイルスの増え方、発酵）, stage: 5, level: 3, region: iyaku, needs: [B-032, B-031, B-074], days: 7}
   - {id: K-160, title: 数値計算の入口（二分法・反復法・ニュートン法による求根、台形公式とシンプソンの公式、オイラー法、収束の速さ）, stage: 5, level: 3, region: suchi, needs: [D-005, D-006, A-022], days: 6}
   - {id: S-041, title: 確率分布と統計的推測の入口（二項分布、正規分布と標準化、標本平均と標本比率の分布、推定と検定の手順）, stage: 5, level: 3, region: kakuritsu-daigaku, needs: [C-020, S-030, S-031], days: 6}
   - {id: G-049, title: 空間座標と直線・平面・球の方程式（方向ベクトルと法線ベクトル、距離と角）, stage: 5, level: 3, region: zahyo, needs: [G-027, G-021], days: 6}
@@ -794,7 +843,7 @@ units:
   - {id: P-047, title: 確率と統計の基礎（確率変数、同時確率と条件付き確率、確率分布、平均と分散）, stage: 6, level: 3, region: netsu, needs: [S-002, S-003], days: 8}
   - {id: P-057, title: 相対性原理とローレンツ変換（光速度不変、マイケルソン＝モーリーの実験、同時性の相対性、時間の遅れとローレンツ収縮、速度の合成、時空図とパラドックス）, stage: 6, level: 3, region: soutai, needs: [P-003, P-034], days: 8}
   - {id: P-059, title: 等価原理と曲がった時空の入口（重力赤方偏移、シュワルツシルト計量、測地線、粒子と光の軌道、シャピロ遅延）, stage: 6, level: 3, region: soutai, needs: [P-057, P-058], days: 8}
-  - {id: P-122, title: 気象学入門（大気の組成と構造、観測、湿度と雲、気圧と風系、天気図と前線）, stage: 6, level: 3, region: chikyu, needs: [P-044, P-013], days: 8}
+  - {id: P-122, title: 気象学入門（大気の組成と構造、観測、湿度と雲、気圧と風系、天気図と前線）, stage: 6, level: 3, region: chikyu, needs: [P-044, P-013, W-049], days: 8}
   - {id: P-123, title: 大気の熱力学と安定度（放射の法則、熱力学第一法則、断熱減率と浮力、熱力学図）, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-124, title: 空気塊に働く力と釣り合い（静水圧・地衡風・傾度風）、大気中の水分, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-125, title: 温度風と温度移流、発散・渦度・鉛直運動、前線形成と低気圧発生, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
@@ -954,8 +1003,8 @@ units:
   - {id: P-143, title: 地球システムモデル（気候系の要素の表現と結合、結合モデルの実行と評価）, stage: 7, level: 3, region: chikyu, needs: [P-004, P-012, D-006], days: 10}
   - {id: E-001, title: 静力学と変形体の力学の三原則（つりあい、幾何学的適合、材料の挙動）, stage: 7, level: 3, region: kozo-zairyo, needs: [P-004, D-045, D-014], days: 10}
   - {id: E-002, title: 応力とひずみ、主応力とモールの円、線形弾性（熱膨張を含む）, stage: 7, level: 3, region: kozo-zairyo, needs: [P-004, D-045, D-014], days: 10}
-  - {id: E-003, title: 棒・軸・梁・トラスの解析、静定と不静定、曲げ・ねじり・座屈と破壊モード, stage: 7, level: 3, region: kozo-zairyo, needs: [P-004, D-018, D-045], days: 10}
-  - {id: E-004, title: 静定骨組構造物の応力と変形（トラス・梁・骨組、静定・不静定・不安定の判別）, stage: 7, level: 3, region: kozo-zairyo, needs: [D-006], days: 10}
+  - {id: E-003, title: 棒・軸・梁・トラスの解析、静定と不静定、曲げ・ねじり・座屈と破壊モード, stage: 7, level: 3, region: kozo-zairyo, needs: [P-004, D-018, D-045, E-173], days: 10}
+  - {id: E-004, title: 静定骨組構造物の応力と変形（トラス・梁・骨組、静定・不静定・不安定の判別）, stage: 7, level: 3, region: kozo-zairyo, needs: [D-006, E-173], days: 10}
   - {id: E-005, title: エネルギー定理（仮想仕事、単位荷重法、不静定力法）, stage: 7, level: 3, region: kozo-zairyo, needs: [D-006], days: 10}
   - {id: E-006, title: 影響線と相反定理（ミュラー・ブレスラウの定理）, stage: 7, level: 3, region: kozo-zairyo, needs: [D-006], days: 10}
   - {id: E-007, title: 梁–柱の安定問題（安定と不安定、座屈）, stage: 7, level: 3, region: kozo-zairyo, needs: [D-006], days: 10}
@@ -1666,4 +1715,3 @@ units:
   - {id: T-057, title: アーベル多様体, stage: 10, level: 4, region: daisu-kika, needs: [T-036, N-057], days: 10}
   - {id: P-239, title: スピングラスと乱れた系（レプリカ法、空洞法）, stage: 10, level: 5, region: netsu, needs: [P-052, P-056], days: 10}
   - {id: K-174, title: 量子シャノン理論と量子暗号（状態の距離、ホレボ限界、通信路容量、もつれの尺度、量子鍵配送の安全性）, stage: 10, level: 4, region: programming, needs: [P-084, C-038], days: 10}
-
