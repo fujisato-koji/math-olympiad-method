@@ -1,0 +1,154 @@
+# 網羅表：Lean で数学を形式化する研究エンジニア（Lean FRO、Mathlib Initiative）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JA01:
+    title: Lean FRO（Convergent Research）, Principal Research Software Engineer（Lever の募集、Remote US。元の頁は 404。Internet Archive の 2024-05-20 の控え）
+    url: https://web.archive.org/web/20240520133627/https://jobs.lever.co/convergentresearch/2e3abd63-4893-4b15-8bad-187920c86e12
+    date: 2026-11-08
+  JA02:
+    title: Lean FRO（Convergent Research）, Senior Research Software Engineer (Tooling)（Lever の募集、Remote US。元の頁は 404。Internet Archive の 2025-08-12 の控え）
+    url: https://web.archive.org/web/20250812152926/https://jobs.lever.co/convergentresearch/5a0770d5-b31f-4afa-a434-3b6566d7f867
+    date: 2026-11-08
+  JA03:
+    title: Renaissance Philanthropy, Mathematical Research Engineer, Mathlib Initiative（2025-09-14 締切。元の頁は 404。Internet Archive の 2025-10-03 の控え）
+    url: https://web.archive.org/web/20251003143933/https://www.renaissancephilanthropy.org/careers/mathematical-research-engineer
+    date: 2026-11-08
+  JA04:
+    title: Lean FRO（Lean Focused Research Organization）の頁（使命の 7 つの柱：スケーラビリティ、使いやすさ、証明の自動化、文書、分野への応用、コミュニティ、AI の研究と検証されたコードの合成）
+    url: https://lean-lang.org/fro/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 計算
+  topic: 学位の分野：計算機科学（Lean FRO）
+  sources:
+  - JA01
+  - JA02
+  units:
+  - K-020
+  - K-028
+  - K-039
+- id: T-02
+  field: 数学
+  topic: 学位の分野と研究の水準の数学（博士が望ましい。Mathlib Initiative）、数学の研究の経歴（Lean FRO の望ましい条件）
+  sources:
+  - JA01
+  - JA03
+  units:
+  - R-013
+  - R-024
+  - D-020
+  - D-062
+  - T-014
+  - T-024
+- id: T-03
+  field: 計算
+  topic: 関数型プログラミングの確かな力（Lean の経験は大きな加点）
+  sources:
+  - JA01
+  - JA02
+  units:
+  - K-020
+- id: T-04
+  field: 数学
+  topic: 形式手法と対話型の定理証明（Coq、Isabelle、Agda などほかの証明支援系も）
+  sources:
+  - JA01
+  - JA02
+  units:
+  - L-036
+  - K-019
+- id: T-05
+  field: 数学
+  topic: 数理論理学
+  sources:
+  - JA01
+  - JA02
+  units:
+  - L-023
+  - L-024
+  - L-034
+- id: T-06
+  field: 数学
+  topic: 型理論
+  sources:
+  - JA01
+  - JA02
+  units:
+  - L-030
+  - L-035
+- id: T-07
+  field: 数学
+  topic: 証明論
+  sources:
+  - JA01
+  - JA02
+  units:
+  - L-043
+  - L-030
+- id: T-08
+  field: 数学
+  topic: 証明の自動化を進めて Lean を改良する
+  sources:
+  - JA01
+  - JA04
+  units:
+  - L-040
+- id: T-09
+  field: 計算
+  topic: 標準ライブラリと Lean の生態系の改良、大きく複雑になる生態系のスケーラビリティの問題を解く
+  sources:
+  - JA01
+  units:
+  - L-041
+  - K-017
+- id: T-10
+  field: 計算
+  topic: 効率のよい定理証明のために Lean の性能とスケーラビリティを最適化する
+  sources:
+  - JA01
+  - JA04
+  units:
+  - K-039
+  - K-036
+  - K-018
+- id: T-11
+  field: 数学
+  topic: Mathlib の設計の原則と品質の基準で寄稿を査読し、作者への自動のフィードバックを改良する
+  sources:
+  - JA03
+  units:
+  - L-041
+  - K-017
+- id: T-12
+  field: 数学
+  topic: 大きな数学のライブラリの構造を決める技術の判断、下流の計画と Mathlib をつなぐ
+  sources:
+  - JA03
+  units:
+  - L-041
+  - R-026
+- id: T-13
+  field: 計算
+  topic: ソフトウェア開発の実践（版管理、テスト、デバッグ、コードの査読）
+  sources:
+  - JA01
+  - JA02
+  units:
+  - K-017
+  - K-013
+- id: T-14
+  field: 計算
+  topic: 数学の文書を書く道具、証明を作り探る道具、可視化（文書のための DSL と組版、IDE の道具と LSP。Tooling の職）
+  sources:
+  - JA02
+  units:
+  - K-039
+  - L-036
+- id: T-15
+  field: 数学
+  topic: AI による数学の研究と検証されたコードの合成を支える（Mathlib は AlphaProof などの自動定理証明の土台）
+  sources:
+  - JA03
+  - JA04
+  units:
+  - L-042

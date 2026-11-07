@@ -1,0 +1,228 @@
+# 網羅表：臨床試験の生物統計家（FDA、MSD、GSK）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JA05:
+    title: USAJOBS, FDA Center for Veterinary Medicine, Mathematical Statistician（FDA-CVM-26-T21-1305257-ATG、1529、2026-07-21〜27、締切済み）
+    url: https://www.usajobs.gov/job/877317000
+    date: 2026-11-08
+  JA06:
+    title: MSD（Merck & Co.）, Principal Scientist, Biostatistics, Late-Stage Clinical Development（R414604、2026-10-27 掲載、Workday の公開データ）
+    url: https://msd.wd5.myworkdayjobs.com/SearchJobs/job/USA---Pennsylvania---North-Wales-Upper-Gwynedd/Principal-Scientist--Biostatistics--Late-Stage-Clinical-Development_R414604-2
+    date: 2026-11-08
+  JA07:
+    title: GSK, Associate Director – Oncology Statistics（450338、2026-10-27 掲載、2026-11-10 締切、Workday の公開データ）
+    url: https://gsk.wd5.myworkdayjobs.com/GSKCareers/job/UK--London--New-Oxford-Street/Associate-Director---Oncology-Statistics_450338-1
+    date: 2026-11-08
+  JA08:
+    title: ICH E9, Statistical Principles for Clinical Trials（Step 4、1998-02-05）
+    url: https://database.ich.org/sites/default/files/E9_Guideline.pdf
+    date: 2026-11-08
+  JA09:
+    title: ICH E9(R1), Addendum on Estimands and Sensitivity Analysis in Clinical Trials（Step 4、2019-11-20 採択）
+    url: https://database.ich.org/sites/default/files/E9-R1_Step4_Guideline_2019_1203.pdf
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 統計学
+  topic: 学位：数学・統計学か量的な科学の学士以上（FDA）、統計学・生物統計学の博士か修士（MSD、GSK）
+  sources:
+  - JA05
+  - JA06
+  - JA07
+  units:
+  - S-018
+  - S-019
+  - S-020
+  - S-021
+- id: T-02
+  field: 統計学
+  topic: 統計解析の方法の確かな知識と、新しい問題のための方法の開発（FDA、MSD）
+  sources:
+  - JA05
+  - JA06
+  units:
+  - S-021
+  - S-033
+  - S-037
+  - K-063
+- id: T-03
+  field: 統計学
+  topic: 実験計画（平行群・クロスオーバー・要因の計画、多施設の試験。ICH E9 3.1–3.2）
+  sources:
+  - JA06
+  - JA08
+  units:
+  - S-050
+  - S-031
+- id: T-04
+  field: 医学
+  topic: 臨床開発の計画と試験の位置づけ（検証の試験と探索の試験）、対象の集団、主要・副次・複合・代理の評価項目（ICH E9 2.1–2.2）
+  sources:
+  - JA06
+  - JA08
+  units:
+  - I-003
+  - I-040
+- id: T-05
+  field: 統計学
+  topic: 偏りを避ける：盲検化と無作為化（ICH E9 2.3）
+  sources:
+  - JA08
+  units:
+  - I-040
+  - S-042
+- id: T-06
+  field: 統計学
+  topic: 比べ方：優越性・同等性・非劣性の試験と用量反応の試験（ICH E9 3.3）
+  sources:
+  - JA08
+  units:
+  - I-040
+  - S-052
+  - I-001
+- id: T-07
+  field: 統計学
+  topic: 標本の大きさと検出力（ICH E9 3.5）
+  sources:
+  - JA08
+  units:
+  - I-040
+  - S-019
+- id: T-08
+  field: 統計学
+  topic: 群逐次デザイン、中間解析と早期の中止、標本の大きさの見直し、独立データモニタリング委員会（ICH E9 3.4、4.1–4.6）
+  sources:
+  - JA08
+  units:
+  - S-052
+  - I-040
+- id: T-09
+  field: 統計学
+  topic: ベイズの方法と適応型の試験デザイン
+  sources:
+  - JA07
+  units:
+  - S-052
+  - S-022
+  - S-039
+- id: T-10
+  field: 統計学
+  topic: シミュレーションで試験デザインを決め、リスクを評価する
+  sources:
+  - JA07
+  units:
+  - S-052
+  - S-024
+- id: T-11
+  field: 統計学
+  topic: 推定対象（estimand）と中間事象、解析対象集団（FAS と PPS）（ICH E9 5.2、E9(R1)）
+  sources:
+  - JA08
+  - JA09
+  units:
+  - S-051
+- id: T-12
+  field: 統計学
+  topic: 欠測値と外れ値、主たる推定と感度分析と補足の解析（ICH E9 5.3、E9(R1) A.5）
+  sources:
+  - JA08
+  - JA09
+  units:
+  - S-051
+  - S-036
+- id: T-13
+  field: 統計学
+  topic: 推定・信頼区間・検定と、有意水準の調整（多重性）（ICH E9 5.5–5.6）
+  sources:
+  - JA08
+  units:
+  - S-018
+  - S-019
+  - S-040
+- id: T-14
+  field: 統計学
+  topic: 部分集団・交互作用・共変量の調整（ICH E9 5.7）
+  sources:
+  - JA08
+  units:
+  - S-050
+  - S-020
+- id: T-15
+  field: 統計学
+  topic: 安全性と忍容性の評価（ICH E9 VI）、薬・食品・機器の安全性と有効性のデータの解析（FDA）
+  sources:
+  - JA05
+  - JA08
+  units:
+  - S-053
+  - I-040
+- id: T-16
+  field: 統計学
+  topic: プロトコルと統計解析計画書、試験の結果の解析と解釈と報告（ICH E9 5.1、VII）
+  sources:
+  - JA06
+  - JA07
+  - JA08
+  units:
+  - I-040
+  - I-003
+- id: T-17
+  field: 統計学
+  topic: がんの領域の試験の統計（GSK の職、MSD の最初の領域）
+  sources:
+  - JA06
+  - JA07
+  units:
+  - S-035
+  - I-050
+- id: T-18
+  field: 統計学
+  topic: 実世界のデータ（real-world evidence）への統計の方法
+  sources:
+  - JA07
+  units:
+  - I-039
+  - S-042
+- id: T-19
+  field: 統計学
+  topic: 高次元のデータの統計
+  sources:
+  - JA07
+  units:
+  - K-048
+  - K-049
+  - S-040
+- id: T-20
+  field: 医学
+  topic: 病気のモデル化（disease modelling。がんの領域の職なので、病気の進み方と薬の効き方の混合効果モデル）
+  sources:
+  - JA07
+  units:
+  - S-037
+  - I-002
+- id: T-21
+  field: 計算
+  topic: 統計とデータ処理のソフトウェア（SAS、R、Python）、高性能計算と大きなシミュレーション
+  sources:
+  - JA06
+  - JA07
+  units:
+  - K-060
+  - K-012
+  - K-027
+- id: T-22
+  field: 医学
+  topic: 世界の規制の要件と第 II〜IV 相の臨床試験、規制当局への文書と問い合わせへの回答
+  sources:
+  - JA06
+  - JA07
+  units:
+  - I-003
+  - I-034
+- id: T-23
+  field: 計算
+  topic: データの質とデータベースの設計、計算機のソフトウェアの妥当性（ICH E9 5.8、MSD）
+  sources:
+  - JA06
+  - JA08
+  units:
+  - K-169

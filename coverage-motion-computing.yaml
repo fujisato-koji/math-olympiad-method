@@ -178,7 +178,8 @@ items:
   topic: スケッチによる操作の画面と新しい操作の画面
   sources:
   - DR047
-  none: 地図にない（候補：ヒューマン・コンピュータ・インタラクション）
+  units:
+  - Q-021
 - id: pixar-researcher-T-15
   field: Pixar の研究者：計算
   topic: C++ の開発

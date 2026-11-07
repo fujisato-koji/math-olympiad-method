@@ -1,0 +1,189 @@
+# 網羅表：人と機械のやり取りを調べる研究者（Google の UX リサーチ、Apple の Human Factors）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JA10:
+    title: Google DeepMind, Staff UX Researcher, GeminiApp（Mountain View・San Francisco、採用の頁）
+    url: https://www.google.com/about/careers/applications/jobs/results/83173346874663622-staff-ux-researcher-geminiapp-deepmind
+    date: 2026-11-08
+  JA11:
+    title: Google, Senior Quantitative UX Researcher, AI Enablement（Sunnyvale、採用の頁）
+    url: https://www.google.com/about/careers/applications/jobs/results/136675244185133766-senior-quantitative-ux-researcher-ai-enablement
+    date: 2026-11-08
+  JA12:
+    title: Apple, Human Factors Engineer / Researcher（200679293-0836、2026-08-21 掲載、Cupertino）
+    url: https://jobs.apple.com/en-us/details/200679293-0836/human-factors-engineer-researcher
+    date: 2026-11-08
+  JA13:
+    title: Apple, Senior Human Factors Engineer（200673351-0836、2026-07-22 掲載、Cupertino）
+    url: https://jobs.apple.com/en-us/details/200673351-0836/senior-human-factors-engineer
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 心理学
+  topic: 学位の分野：人とコンピュータのやり取り（HCI）、心理学、認知科学、人間工学、認知心理学・実験心理学（修士・博士が望ましい）
+  sources:
+  - JA10
+  - JA11
+  - JA12
+  - JA13
+  units:
+  - Q-004
+  - Q-005
+  - Q-008
+  - Q-021
+- id: T-02
+  field: 心理学
+  topic: 質的と量的の研究の方法と、両方を合わせる混合研究法
+  sources:
+  - JA10
+  - JA11
+  - JA12
+  units:
+  - Q-020
+  - Q-006
+- id: T-03
+  field: 心理学
+  topic: 厳密な実験の計画と科学的方法
+  sources:
+  - JA12
+  units:
+  - Q-006
+  - S-050
+- id: T-04
+  field: 統計学
+  topic: 統計の解析（t 検定、分散分析、回帰、ブートストラップ）
+  sources:
+  - JA11
+  - JA12
+  units:
+  - S-019
+  - S-050
+  - S-020
+  - S-034
+- id: T-05
+  field: 心理学
+  topic: ユーザビリティの研究と、製品の使い方についての面接の技法
+  sources:
+  - JA12
+  units:
+  - Q-021
+  - Q-020
+- id: T-06
+  field: 心理学
+  topic: 人間工学（Human Factors Engineering）の方法と原理を開発のすべての段階で使う、認知と身体のヒューリスティクス、世界の人間工学の文献と標準
+  sources:
+  - JA12
+  units:
+  - Q-021
+- id: T-07
+  field: 工学
+  topic: 健康の機能と医療機器の使いやすさの評価と規制（IEC 62366、AAMI HE75、FDA の人間工学の指針）
+  sources:
+  - JA12
+  units:
+  - E-227
+  - Q-021
+- id: T-08
+  field: 心理学
+  topic: 研究の倫理と、人を対象とする研究の決まり（倫理審査委員会）
+  sources:
+  - JA12
+  units:
+  - Q-006
+  - I-034
+- id: T-09
+  field: 心理学
+  topic: デザインリサーチの方法（文脈の中の聞き取り、日記の研究、参加型デザイン、民族誌、質問紙の設計）、質的研究の統合、試作での研究、ペルソナ
+  sources:
+  - JA13
+  units:
+  - Q-020
+  - Q-013
+- id: T-10
+  field: 心理学
+  topic: 知能を持ち適応するシステムのやり取りの設計
+  sources:
+  - JA13
+  units:
+  - Q-022
+  - Q-021
+- id: T-11
+  field: 心理学
+  topic: 声・触れる・身ぶり・視線・空間を使うやり取り
+  sources:
+  - JA13
+  units:
+  - Q-021
+  - Q-004
+- id: T-12
+  field: 心理学
+  topic: 人と AI のやり取り、自動化と自律の枠組み
+  sources:
+  - JA10
+  - JA13
+  units:
+  - Q-022
+- id: T-13
+  field: 心理学
+  topic: 使う人の必要・認知の制約・行動の知見から、体験の目標とやり取りのモデルと仕様を決める
+  sources:
+  - JA13
+  units:
+  - Q-021
+  - E-199
+- id: T-14
+  field: 心理学
+  topic: 生成 AI を使う人の次の必要を探る基礎の研究
+  sources:
+  - JA10
+  units:
+  - Q-020
+  - Q-022
+- id: T-15
+  field: 計算
+  topic: 人のフィードバックによる強化学習（RLHF）の信号を決め、AI の人柄と推論を使う人の期待に合わせる
+  sources:
+  - JA10
+  units:
+  - K-161
+  - Q-022
+- id: T-16
+  field: 心理学
+  topic: AI を評価する新しい枠組み（幻覚の許容、創造の主体性、協働の信頼を測る）
+  sources:
+  - JA10
+  units:
+  - Q-022
+  - Q-013
+- id: T-17
+  field: 統計学
+  topic: 量的な研究：ログの解析、測定と帰属、データと指標の解析
+  sources:
+  - JA11
+  units:
+  - S-054
+  - S-042
+  - K-060
+- id: T-18
+  field: 心理学
+  topic: 調査（質問紙）の研究と回帰
+  sources:
+  - JA11
+  units:
+  - Q-013
+  - S-031
+  - S-020
+- id: T-19
+  field: 計算
+  topic: データの操作と計算統計のプログラミング（Python）、行動のログのデータ（SQL）
+  sources:
+  - JA11
+  units:
+  - K-012
+  - K-060
+  - K-169
+- id: T-20
+  field: 計算
+  topic: ML・AI の体験のためのデータの要件を決め、プライバシーを守って行動のデータを集める
+  sources:
+  - JA13
+  none: 地図にない（候補：差分プライバシーとプライバシーを守るデータの集め方。K-146 は入口、K-034 はシステムの安全で、集め方の方法を扱わない）
