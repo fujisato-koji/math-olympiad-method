@@ -83,8 +83,13 @@ def expand(unit):
 
 def run_check(item, fig):
     """問題の check 式を評価する。fig は図の文字列、n(c) は図の中の c の数。"""
-    env = {"__builtins__": {}, "fig": fig, "n": lambda c: fig.count(c), "min": min,
-           "max": max, "len": len, "sorted": sorted, "sum": sum, "range": range}
+    # 総当たりで確かめられるように、計算の部品（math、itertools、fractions）も使える
+    import fractions
+    import itertools
+    import math
+    env = {"__builtins__": {}, "fig": fig, "n": lambda c: fig.count(c), "min": min, "max": max, "len": len,
+           "sorted": sorted, "sum": sum, "range": range, "abs": abs, "all": all, "any": any, "set": set,
+           "divmod": divmod, "pow": pow, "math": math, "itertools": itertools, "Fraction": fractions.Fraction}
     return eval(item["check"], env)
 
 
@@ -158,6 +163,9 @@ def check(data, problems):
                 where = f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
+                for tid in item.get("type") or []:
+                    if tid not in units:
+                        errors.append(f"{where}: 組み合わせの型の単元 {tid} が地図にない")
                 if item.get("part") in ("見本", "わけ"):
                     if "explain" not in item:
                         errors.append(f"{where}: {item.get('part')}には explain が要る")
