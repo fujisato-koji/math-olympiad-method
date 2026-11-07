@@ -158,6 +158,7 @@
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
     if (r.name === 'stage') { requestAnimationFrame(drawEdges); document.fonts && document.fonts.ready.then(drawEdges); }
+    if (r.name === 'map') { requestAnimationFrame(drawMap); document.fonts && document.fonts.ready.then(drawMap); }
     if (r.name === 'day') drawItem();
     window.scrollTo(0, 0);
   }
@@ -169,7 +170,7 @@
     <section class="hero">
       <div class="eyebrow">ものを数えるところから、研究の最前線まで</div>
       <h1>たくさんの道から、ひとすじを。</h1>
-      <p>${R.stages.length} つの段に ${R.units.length} の駅。流れが分かれているところは、どれから進んでもかまいません。</p>
+      <p>${R.stages.length} つの段に ${R.units.length} の駅。段は目安です。前提が済んだ駅なら、どの段の駅からでも始められ、流れごとに進み方が違ってかまいません。</p>
       <div class="goal-pick" role="group" aria-label="目標">
         <span class="k">目標</span>
         ${[...GOALS.map(g => [g.id, g.name]), ['all', 'すべての駅']].map(([id, name]) =>
@@ -195,7 +196,14 @@
         </a>`).join('') || '<p class="muted">すべての駅を通りました。</p>'}
       </div>
     </section>
-    <section class="zones">${R.stages.map(s => zone(s, cur)).join('')}</section>
+    <section class="overview">
+      <h2 class="section-title">全体の関係図</h2>
+      <div class="legend">${['done', 'doing', 'ready', 'later'].map(s =>
+        `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
+        <span>横は理解の深さ（右ほど多くの前提の上にある）、縦は領域。上の目盛りは段のおよその位置</span></div>
+      <div class="map-wrap"><div id="map" class="map"></div></div>
+      <div id="map-info" class="map-info muted">駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。</div>
+    </section>
     <section class="goals">
       <h2 class="section-title">終点</h2>
       <div class="goal-list">${GOALS.map(g => {
@@ -210,28 +218,82 @@
       }).join('')}</div>
     </section>`;
   }
-  function zone(s, cur) {
-    const us = R.units.filter(u => u.stage === s.id && inGoal(u.id));
-    const done = us.filter(u => status(u.id) === 'done').length;
-    const lanes = LANE_ORDER.filter(l => us.some(u => u.lane === l));
-    return `
-    <a class="zone ${s.id === cur ? 'current' : ''}" href="#/stage/${s.id}">
-      <div class="zone-num">${s.id}</div>
-      <div class="zone-card">
-        <div class="zone-head">
-          <h3>${esc(s.name)}</h3>
-          <span class="meta">${esc(s.about)}・1 日 ${s.minutes} 分</span>
-          <span class="count">${done} / ${us.length} 駅</span>
-        </div>
-        ${lanes.length ? '' : `<p class="muted" style="margin:0">${R.units.some(u => u.stage === s.id) ? 'この目標では要りません。' : '駅はこれから足します。'}</p>`}
-        <div class="tracks">${lanes.map(l => `
-          <div class="track" style="${lc(l)}"><span>${esc(LANES[l].name)}</span>
-            <div class="track-line">${us.filter(u => u.lane === l).map(u =>
-              `<span class="mini ${status(u.id)}${inGoal(u.id) ? '' : ' off'}" title="${esc(u.id + ' ' + u.title)}"><i></i></span>`).join('')}</div>
-          </div>`).join('')}
-        </div>
-      </div>
-    </a>`;
+  // 全体の関係図（2 次元）：横は理解の深さ（前提の鎖の長さ）、縦は名前を付けた領域（D-019）
+  const DEPTH = {};
+  const depthOf = id => DEPTH[id] ?? (DEPTH[id] = 1 + Math.max(0, ...UNITS[id].needs.map(depthOf)));
+  R.units.forEach(u => depthOf(u.id));
+  const NEXT = {};
+  R.units.forEach(u => u.needs.forEach(n => (NEXT[n] = NEXT[n] || []).push(u.id)));
+  function closure(id, dir) {
+    const out = new Set(), stack = [id];
+    while (stack.length) {
+      const x = stack.pop();
+      (dir === 'up' ? UNITS[x].needs : NEXT[x] || []).forEach(y => { if (!out.has(y)) { out.add(y); stack.push(y); } });
+    }
+    return out;
+  }
+  let selected = null;
+  function drawMap() {
+    const host = $('#map');
+    if (!host) return;
+    const maxD = Math.max(...R.units.map(u => DEPTH[u.id]));
+    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.max(38, (W - X0 - 28) / Math.max(1, maxD - 1));
+    const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
+    let y = TOP;
+    (R.regions || []).forEach(rg => {
+      const us = R.units.filter(u => u.region === rg.id).sort(order);
+      if (!us.length) return;
+      const byD = {};
+      us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
+      const rows = Math.max(...Object.values(byD).map(a => a.length)), h = rows * YS + PAD * 2;
+      Object.entries(byD).forEach(([d, a]) => a.forEach((u, i) => {
+        pos[u.id] = [X0 + (d - 1) * XS, y + PAD + YS / 2 + (i + (rows - a.length) / 2) * YS];
+      }));
+      const xs = us.map(u => pos[u.id][0]);
+      boxes.push({ rg, x: Math.min(...xs) - 15, x2: Math.max(...xs) + 15, y, h });
+      y += h + 8;
+    });
+    const H = y + 6;
+    // 段：各段の駅の深さの中央値を、およその位置として上に置く
+    const marks = R.stages.map(s => {
+      const ds = R.units.filter(u => u.stage === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
+      return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - 1) * XS } : null;
+    }).filter(Boolean);
+    let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
+    svg += marks.map((m, i) => `<g class="stage-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
+      <text x="${m.x}" y="${i % 2 ? TOP - 10 : TOP - 26}" text-anchor="middle">段 ${m.s.id} ${esc(m.s.name)}</text></g>`).join('');
+    svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
+      <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
+      <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
+    svg += '<g class="edges">' + R.units.flatMap(u => u.needs.map(n => {
+      const a = pos[n], b = pos[u.id];
+      if (!a || !b) return '';
+      const mx = (a[0] + b[0]) / 2;
+      return `<path data-a="${n}" data-b="${u.id}" d="M${a[0]},${a[1]} C${mx},${a[1]} ${mx},${b[1]} ${b[0]},${b[1]}"/>`;
+    })).join('') + '</g>';
+    svg += '<g class="dots">' + R.units.map(u => {
+      const p = pos[u.id];
+      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : ' off'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+    }).join('') + '</g></svg>';
+    host.innerHTML = svg;
+    if (selected && UNITS[selected]) highlight(selected);
+  }
+  // 選んだ駅の前提の鎖（上流）と、その先に開ける駅（下流）だけを浮かび上がらせる
+  function highlight(id) {
+    const host = $('#map'), info = $('#map-info');
+    if (!host) return;
+    const up = closure(id, 'up'), down = closure(id, 'down'), on = new Set([id, ...up, ...down]);
+    host.classList.add('focus');
+    host.querySelectorAll('circle').forEach(c => { c.classList.toggle('hl', on.has(c.dataset.u)); c.classList.toggle('sel', c.dataset.u === id); });
+    host.querySelectorAll('.edges path').forEach(p => {
+      const a = p.dataset.a, b = p.dataset.b;
+      p.classList.toggle('hl', ((up.has(a)) && (up.has(b) || b === id)) || ((down.has(b)) && (down.has(a) || a === id)));
+    });
+    const u = UNITS[id];
+    info.classList.remove('muted');
+    info.innerHTML = `<span class="dot ${status(id)}" style="${lc(u.lane)}"></span><b>${esc(u.title)}</b>
+      <span class="muted">${u.id}・${esc(LANES[u.lane].name)}・段 ${u.stage}・${STATUS_NAME[status(id)]}・前提 ${up.size} 駅・この先 ${down.size} 駅</span>
+      <a class="pill solid" href="#/unit/${id}">駅をひらく</a><button class="pill" type="button" data-act="unfocus">もどす</button>`;
   }
 
   // ---- 段の路線図 ----
@@ -613,6 +675,14 @@
 
   // ---- 操作 ----
   $('#view').addEventListener('click', e => {
+    const dot = e.target.closest('#map circle[data-u]');
+    if (dot) {
+      const id = dot.dataset.u;
+      if (selected === id) { location.hash = `#/unit/${id}`; return; }
+      selected = id; Music.tap(); highlight(id); return;
+    }
+    if (e.target.closest('[data-act=unfocus]')) { selected = null; drawMap(); $('#map').classList.remove('focus');
+      $('#map-info').className = 'map-info muted'; $('#map-info').textContent = '駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。'; return; }
     const g = e.target.closest('[data-goal]');
     if (g) {
       prefs.goal = g.dataset.goal; save(PREF, prefs); Music.tap();
@@ -688,7 +758,7 @@
     progress = { units: {} }; save(KEY, progress); menu.close(); render();
   });
   window.addEventListener('hashchange', render);
-  window.addEventListener('resize', () => { if (parse().name === 'stage') drawEdges(); });
+  window.addEventListener('resize', () => { const n = parse().name; if (n === 'stage') drawEdges(); if (n === 'map') drawMap(); });
 
   Music.init(prefs.music);
   sync();

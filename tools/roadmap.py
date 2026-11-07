@@ -93,6 +93,7 @@ def check(data, problems):
     lanes = {l["id"] for l in data["lanes"]}
     stages = {s["id"] for s in data["stages"]}
     kinds = set(data["kinds"])
+    regions = {r["id"] for r in data.get("regions", [])}
     units = {}
     for u in data["units"]:
         uid = u["id"]
@@ -107,6 +108,8 @@ def check(data, problems):
             errors.append(f"{uid}: 流れ {lane} がない")
         if stage not in stages:
             errors.append(f"{uid}: 段 {stage} がない")
+        if regions and u.get("region") not in regions:
+            errors.append(f"{uid}: 領域 {u.get('region')} がない")
         if "plan" in u and "days" in u and len(u["plan"]) != u["days"]:
             errors.append(f"{uid}: plan と days の日数が違う")
         if "plan" not in u and u.get("days", 0) < 3:
@@ -230,7 +233,7 @@ def build(data, problems):
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": u["stage"], "needs": u.get("needs", []), "days": days,
+                          "stage": u["stage"], "region": u.get("region"), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {})})
     gu = goal_units(data)
     goals = []
@@ -239,7 +242,7 @@ def build(data, problems):
         items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis") if k in i} for i in cov.get("items", [])]
         goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note")},
                       "units": sorted(gu.get(g["id"], [])), "items": items})
-    payload = {"lanes": data["lanes"], "stages": data["stages"], "kinds": data["kinds"],
+    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
                "goals": goals, "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"

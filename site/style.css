@@ -463,3 +463,24 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .path .stn, .path .link { opacity: 1; }
 }
+
+/* 全体の関係図（2 次元）：横は理解の深さ、縦は領域 */
+.map-wrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px 6px; -webkit-overflow-scrolling: touch; }
+.map svg { display: block; font-family: var(--font); }
+.map .region rect { fill: color-mix(in srgb, var(--c) 9%, transparent); stroke: color-mix(in srgb, var(--c) 28%, transparent); }
+.map .region text { font-size: 13px; font-weight: 700; fill: var(--ink); }
+.map .region .leader { stroke: color-mix(in srgb, var(--c) 30%, transparent); stroke-dasharray: 1 4; }
+.map .stage-mark line { stroke: var(--line); stroke-dasharray: 2 5; }
+.map .stage-mark text { font-size: 11px; fill: var(--muted); }
+.map .edges path { fill: none; stroke: var(--ink); stroke-opacity: .07; stroke-width: 1; }
+.map.focus .edges path.hl { stroke: var(--solid); stroke-opacity: .75; stroke-width: 1.6; }
+.map circle { fill: var(--surface); stroke: var(--c); stroke-width: 3; cursor: pointer; transition: opacity .2s; }
+.map circle.done { fill: var(--c); }
+.map circle.doing, .map circle.review { fill: var(--c); filter: drop-shadow(0 0 4px var(--glow)); }
+.map circle.ready { stroke-width: 4; filter: drop-shadow(0 0 4px var(--glow)); }
+.map circle.later { stroke: color-mix(in srgb, var(--c) 45%, var(--surface)); }
+.map circle.off { stroke: var(--line); fill: var(--surface); filter: none; }
+.map.focus circle:not(.hl) { opacity: .15; }
+.map.focus .region { opacity: .7; }
+.map circle.sel { stroke-width: 5; }
+.map-info { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; margin-top: 10px; min-height: 40px; }

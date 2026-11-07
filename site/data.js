@@ -179,6 +179,98 @@ window.ROADMAP = {
    ]
   }
  ],
+ "regions": [
+  {
+   "id": "kazu",
+   "name": "数のはじまり",
+   "lane": "N"
+  },
+  {
+   "id": "keisan",
+   "name": "計算",
+   "lane": "N"
+  },
+  {
+   "id": "seisu",
+   "name": "整数の性質",
+   "lane": "N"
+  },
+  {
+   "id": "seisuron",
+   "name": "整数論",
+   "lane": "N"
+  },
+  {
+   "id": "houteishiki",
+   "name": "方程式",
+   "lane": "A"
+  },
+  {
+   "id": "kansu",
+   "name": "比と関数",
+   "lane": "A"
+  },
+  {
+   "id": "shiki",
+   "name": "式と多項式",
+   "lane": "A"
+  },
+  {
+   "id": "futoshiki",
+   "name": "不等式と関数方程式",
+   "lane": "A"
+  },
+  {
+   "id": "kazoekata",
+   "name": "数え方",
+   "lane": "C"
+  },
+  {
+   "id": "kakuritsu",
+   "name": "確率",
+   "lane": "C"
+  },
+  {
+   "id": "graph",
+   "name": "グラフと盤面",
+   "lane": "C"
+  },
+  {
+   "id": "katachi",
+   "name": "かたち",
+   "lane": "G"
+  },
+  {
+   "id": "hakaru",
+   "name": "はかる",
+   "lane": "G"
+  },
+  {
+   "id": "shomei-zukei",
+   "name": "図形の証明",
+   "lane": "G"
+  },
+  {
+   "id": "zahyo",
+   "name": "三角法と座標",
+   "lane": "G"
+  },
+  {
+   "id": "haichi",
+   "name": "円と配置",
+   "lane": "G"
+  },
+  {
+   "id": "suiri",
+   "name": "推理",
+   "lane": "L"
+  },
+  {
+   "id": "ronpo",
+   "name": "論法",
+   "lane": "L"
+  }
+ ],
  "kinds": {
   "わけ": "その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）",
   "導入": "見本（解いた例）を見せてから解く",
@@ -1246,6 +1338,7 @@ window.ROADMAP = {
    "title": "10 までの数",
    "lane": "N",
    "stage": 1,
+   "region": "kazu",
    "needs": [],
    "days": [
     {
@@ -2427,6 +2520,7 @@ window.ROADMAP = {
    "title": "数直線",
    "lane": "N",
    "stage": 1,
+   "region": "kazu",
    "needs": [
     "N-001"
    ],
@@ -2458,6 +2552,7 @@ window.ROADMAP = {
    "title": "たし算とひき算（数直線で進む、もどる）",
    "lane": "N",
    "stage": 1,
+   "region": "kazu",
    "needs": [
     "N-002"
    ],
@@ -2489,6 +2584,7 @@ window.ROADMAP = {
    "title": "てんびんと重さくらべ",
    "lane": "A",
    "stage": 1,
+   "region": "houteishiki",
    "needs": [
     "N-001"
    ],
@@ -2520,6 +2616,7 @@ window.ROADMAP = {
    "title": "もれなく数える",
    "lane": "C",
    "stage": 1,
+   "region": "kazoekata",
    "needs": [
     "N-001"
    ],
@@ -2551,6 +2648,7 @@ window.ROADMAP = {
    "title": "書き出して数える",
    "lane": "C",
    "stage": 1,
+   "region": "kazoekata",
    "needs": [
     "C-001"
    ],
@@ -2582,6 +2680,7 @@ window.ROADMAP = {
    "title": "形を見分ける",
    "lane": "G",
    "stage": 1,
+   "region": "katachi",
    "needs": [],
    "days": [
     {
@@ -2611,6 +2710,7 @@ window.ROADMAP = {
    "title": "形を分ける、組み合わせる",
    "lane": "G",
    "stage": 1,
+   "region": "katachi",
    "needs": [
     "G-001"
    ],
@@ -2642,6 +2742,7 @@ window.ROADMAP = {
    "title": "積み木と立体",
    "lane": "G",
    "stage": 1,
+   "region": "katachi",
    "needs": [
     "G-001",
     "N-001"
@@ -2674,6 +2775,7 @@ window.ROADMAP = {
    "title": "折る、映す、回す",
    "lane": "G",
    "stage": 1,
+   "region": "katachi",
    "needs": [
     "G-002"
    ],
@@ -2705,6 +2807,7 @@ window.ROADMAP = {
    "title": "きまりを見つける",
    "lane": "L",
    "stage": 1,
+   "region": "suiri",
    "needs": [],
    "days": [
     {
@@ -2734,6 +2837,7 @@ window.ROADMAP = {
    "title": "推理パズル",
    "lane": "L",
    "stage": 1,
+   "region": "suiri",
    "needs": [
     "L-001"
    ],
@@ -2765,6 +2869,7 @@ window.ROADMAP = {
    "title": "0 より小さい数",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "N-003"
    ],
@@ -2796,6 +2901,7 @@ window.ROADMAP = {
    "title": "20 までの数とくり上がり",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "N-003"
    ],
@@ -2831,6 +2937,7 @@ window.ROADMAP = {
    "title": "100 までの数",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "N-005"
    ],
@@ -2862,6 +2969,7 @@ window.ROADMAP = {
    "title": "2 けたのたし算とひき算",
    "lane": "N",
    "stage": 2,
+   "region": "keisan",
    "needs": [
     "N-006"
    ],
@@ -2897,6 +3005,7 @@ window.ROADMAP = {
    "title": "偶数と奇数",
    "lane": "N",
    "stage": 2,
+   "region": "seisu",
    "needs": [
     "N-007"
    ],
@@ -2928,6 +3037,7 @@ window.ROADMAP = {
    "title": "大きな数と位",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "N-007"
    ],
@@ -2959,6 +3069,7 @@ window.ROADMAP = {
    "title": "正負の数のたし算とひき算",
    "lane": "N",
    "stage": 2,
+   "region": "keisan",
    "needs": [
     "N-004",
     "N-007"
@@ -2995,6 +3106,7 @@ window.ROADMAP = {
    "title": "絶対値（数直線の上の距離）",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "N-010"
    ],
@@ -3026,6 +3138,7 @@ window.ROADMAP = {
    "title": "数のパズル（魔方陣、虫食い算）",
    "lane": "N",
    "stage": 2,
+   "region": "kazu",
    "needs": [
     "L-001",
     "N-007"
@@ -3063,6 +3176,7 @@ window.ROADMAP = {
    "title": "□を使った式",
    "lane": "A",
    "stage": 2,
+   "region": "houteishiki",
    "needs": [
     "N-007"
    ],
@@ -3094,6 +3208,7 @@ window.ROADMAP = {
    "title": "表と樹形図で数える",
    "lane": "C",
    "stage": 2,
+   "region": "kazoekata",
    "needs": [
     "C-002"
    ],
@@ -3125,6 +3240,7 @@ window.ROADMAP = {
    "title": "道順を数える",
    "lane": "C",
    "stage": 2,
+   "region": "kazoekata",
    "needs": [
     "C-003"
    ],
@@ -3156,6 +3272,7 @@ window.ROADMAP = {
    "title": "長さとまわりの長さ",
    "lane": "G",
    "stage": 2,
+   "region": "hakaru",
    "needs": [
     "G-002",
     "N-007"
@@ -3188,6 +3305,7 @@ window.ROADMAP = {
    "title": "直角と平行、三角形と四角形",
    "lane": "G",
    "stage": 2,
+   "region": "hakaru",
    "needs": [
     "G-002"
    ],
@@ -3219,6 +3337,7 @@ window.ROADMAP = {
    "title": "立方体と展開図",
    "lane": "G",
    "stage": 2,
+   "region": "katachi",
    "needs": [
     "G-003"
    ],
@@ -3254,6 +3373,7 @@ window.ROADMAP = {
    "title": "本当とうその推理",
    "lane": "L",
    "stage": 2,
+   "region": "suiri",
    "needs": [
     "L-002"
    ],
@@ -3285,6 +3405,7 @@ window.ROADMAP = {
    "title": "取り合いゲーム",
    "lane": "L",
    "stage": 2,
+   "region": "suiri",
    "needs": [
     "N-003"
    ],
@@ -3320,6 +3441,7 @@ window.ROADMAP = {
    "title": "かけ算（九九）",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-007"
    ],
@@ -3363,6 +3485,7 @@ window.ROADMAP = {
    "title": "わり算とあまり",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-013"
    ],
@@ -3398,6 +3521,7 @@ window.ROADMAP = {
    "title": "計算のきまり（入れかえ、まとめ、分ける）",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-013"
    ],
@@ -3429,6 +3553,7 @@ window.ROADMAP = {
    "title": "分数の意味（わる、分ける）",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-014"
    ],
@@ -3464,6 +3589,7 @@ window.ROADMAP = {
    "title": "倍数と約数",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-014"
    ],
@@ -3499,6 +3625,7 @@ window.ROADMAP = {
    "title": "公約数と公倍数",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-017"
    ],
@@ -3534,6 +3661,7 @@ window.ROADMAP = {
    "title": "分数の計算（約分と通分）",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-016"
    ],
@@ -3577,6 +3705,7 @@ window.ROADMAP = {
    "title": "小数",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-009",
     "N-014"
@@ -3609,6 +3738,7 @@ window.ROADMAP = {
    "title": "素数と素因数分解",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-017",
     "A-009"
@@ -3645,6 +3775,7 @@ window.ROADMAP = {
    "title": "あまりの性質",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-017"
    ],
@@ -3680,6 +3811,7 @@ window.ROADMAP = {
    "title": "ガウス記号（整数の部分）",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-014",
     "N-022"
@@ -3712,6 +3844,7 @@ window.ROADMAP = {
    "title": "約数の個数と和",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-021",
     "C-005",
@@ -3745,6 +3878,7 @@ window.ROADMAP = {
    "title": "n 進法",
    "lane": "N",
    "stage": 3,
+   "region": "seisu",
    "needs": [
     "N-009",
     "N-014",
@@ -3779,6 +3913,7 @@ window.ROADMAP = {
    "title": "分数の計算のくふう",
    "lane": "N",
    "stage": 3,
+   "region": "keisan",
    "needs": [
     "N-019",
     "N-018"
@@ -3816,6 +3951,7 @@ window.ROADMAP = {
    "title": "図にして考える（線分図）",
    "lane": "A",
    "stage": 3,
+   "region": "houteishiki",
    "needs": [
     "A-002"
    ],
@@ -3851,6 +3987,7 @@ window.ROADMAP = {
    "title": "等差数列とその和",
    "lane": "A",
    "stage": 3,
+   "region": "shiki",
    "needs": [
     "N-015",
     "L-001",
@@ -3888,6 +4025,7 @@ window.ROADMAP = {
    "title": "比と割合",
    "lane": "A",
    "stage": 3,
+   "region": "kansu",
    "needs": [
     "N-019",
     "N-020"
@@ -3932,6 +4070,7 @@ window.ROADMAP = {
    "title": "比例と反比例",
    "lane": "A",
    "stage": 3,
+   "region": "kansu",
    "needs": [
     "A-005"
    ],
@@ -3967,6 +4106,7 @@ window.ROADMAP = {
    "title": "速さ、仕事、濃度を比例で解く",
    "lane": "A",
    "stage": 3,
+   "region": "kansu",
    "needs": [
     "A-006"
    ],
@@ -4011,6 +4151,7 @@ window.ROADMAP = {
    "title": "規則性と群数列",
    "lane": "A",
    "stage": 3,
+   "region": "shiki",
    "needs": [
     "A-004"
    ],
@@ -4046,6 +4187,7 @@ window.ROADMAP = {
    "title": "累乗と指数法則",
    "lane": "A",
    "stage": 3,
+   "region": "shiki",
    "needs": [
     "N-013"
    ],
@@ -4077,6 +4219,7 @@ window.ROADMAP = {
    "title": "和の法則と積の法則",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-003",
     "N-013"
@@ -4113,6 +4256,7 @@ window.ROADMAP = {
    "title": "並べ方（順列）",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-005"
    ],
@@ -4148,6 +4292,7 @@ window.ROADMAP = {
    "title": "選び方（組合せ）",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-006",
     "N-014"
@@ -4184,6 +4329,7 @@ window.ROADMAP = {
    "title": "重なりを数える（ベン図）",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-005"
    ],
@@ -4215,6 +4361,7 @@ window.ROADMAP = {
    "title": "前の結果から数える（漸化式の入口）",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-005",
     "C-004"
@@ -4251,6 +4398,7 @@ window.ROADMAP = {
    "title": "塗り分け",
    "lane": "C",
    "stage": 3,
+   "region": "kazoekata",
    "needs": [
     "C-006"
    ],
@@ -4282,6 +4430,7 @@ window.ROADMAP = {
    "title": "確率の入口（場合の数の比）",
    "lane": "C",
    "stage": 3,
+   "region": "kakuritsu",
    "needs": [
     "C-007",
     "A-005"
@@ -4318,6 +4467,7 @@ window.ROADMAP = {
    "title": "一筆書きとグラフ",
    "lane": "C",
    "stage": 3,
+   "region": "graph",
    "needs": [
     "L-005"
    ],
@@ -4349,6 +4499,7 @@ window.ROADMAP = {
    "title": "面積",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-006",
     "N-013",
@@ -4395,6 +4546,7 @@ window.ROADMAP = {
    "title": "角度",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-006",
     "N-009",
@@ -4432,6 +4584,7 @@ window.ROADMAP = {
    "title": "円とおうぎ形",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-008",
     "N-020",
@@ -4470,6 +4623,7 @@ window.ROADMAP = {
    "title": "体積と表面積",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-007",
     "G-008",
@@ -4507,6 +4661,7 @@ window.ROADMAP = {
    "title": "等積変形と面積比",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-008",
     "A-005"
@@ -4551,6 +4706,7 @@ window.ROADMAP = {
    "title": "拡大と縮小（相似の入口）",
    "lane": "G",
    "stage": 3,
+   "region": "hakaru",
    "needs": [
     "G-008",
     "A-005"
@@ -4595,6 +4751,7 @@ window.ROADMAP = {
    "title": "立体の切断",
    "lane": "G",
    "stage": 3,
+   "region": "katachi",
    "needs": [
     "G-011"
    ],
@@ -4630,6 +4787,7 @@ window.ROADMAP = {
    "title": "点の移動と図形の回転",
    "lane": "G",
    "stage": 3,
+   "region": "katachi",
    "needs": [
     "G-010",
     "G-004"
@@ -4666,6 +4824,7 @@ window.ROADMAP = {
    "title": "偶奇で考える",
    "lane": "L",
    "stage": 3,
+   "region": "ronpo",
    "needs": [
     "N-008"
    ],
@@ -4697,6 +4856,7 @@ window.ROADMAP = {
    "title": "鳩の巣原理の入口",
    "lane": "L",
    "stage": 3,
+   "region": "ronpo",
    "needs": [
     "C-001"
    ],
@@ -4728,6 +4888,7 @@ window.ROADMAP = {
    "title": "場合分けで考える",
    "lane": "L",
    "stage": 3,
+   "region": "ronpo",
    "needs": [
     "C-002"
    ],
@@ -4759,6 +4920,7 @@ window.ROADMAP = {
    "title": "条件を整理する推理",
    "lane": "L",
    "stage": 3,
+   "region": "suiri",
    "needs": [
     "L-003"
    ],
@@ -4790,6 +4952,7 @@ window.ROADMAP = {
    "title": "変わらないものを探す（不変量の入口）",
    "lane": "L",
    "stage": 3,
+   "region": "ronpo",
    "needs": [
     "L-005"
    ],
@@ -4821,6 +4984,7 @@ window.ROADMAP = {
    "title": "後ろから考える必勝法",
    "lane": "L",
    "stage": 3,
+   "region": "suiri",
    "needs": [
     "L-004"
    ],
@@ -4852,6 +5016,7 @@ window.ROADMAP = {
    "title": "正負の数のかけ算とわり算",
    "lane": "N",
    "stage": 4,
+   "region": "keisan",
    "needs": [
     "N-010",
     "N-014",
@@ -4885,6 +5050,7 @@ window.ROADMAP = {
    "title": "あまりで分類する",
    "lane": "N",
    "stage": 4,
+   "region": "seisu",
    "needs": [
     "N-022",
     "A-010",
@@ -4922,6 +5088,7 @@ window.ROADMAP = {
    "title": "互除法と 1 次不定方程式",
    "lane": "N",
    "stage": 4,
+   "region": "seisu",
    "needs": [
     "N-018",
     "A-011"
@@ -4966,6 +5133,7 @@ window.ROADMAP = {
    "title": "素数の性質",
    "lane": "N",
    "stage": 4,
+   "region": "seisu",
    "needs": [
     "N-021",
     "L-011",
@@ -5003,6 +5171,7 @@ window.ROADMAP = {
    "title": "平方数の性質",
    "lane": "N",
    "stage": 4,
+   "region": "seisu",
    "needs": [
     "N-028",
     "A-015"
@@ -5035,6 +5204,7 @@ window.ROADMAP = {
    "title": "文字と式（□から文字へ）",
    "lane": "A",
    "stage": 4,
+   "region": "houteishiki",
    "needs": [
     "A-002",
     "N-015",
@@ -5082,6 +5252,7 @@ window.ROADMAP = {
    "title": "1 次方程式（つり合いで解く）",
    "lane": "A",
    "stage": 4,
+   "region": "houteishiki",
    "needs": [
     "A-010",
     "A-001",
@@ -5127,6 +5298,7 @@ window.ROADMAP = {
    "title": "連立方程式",
    "lane": "A",
    "stage": 4,
+   "region": "houteishiki",
    "needs": [
     "A-011"
    ],
@@ -5162,6 +5334,7 @@ window.ROADMAP = {
    "title": "不等式の性質と 1 次不等式",
    "lane": "A",
    "stage": 4,
+   "region": "houteishiki",
    "needs": [
     "A-011",
     "N-027",
@@ -5199,6 +5372,7 @@ window.ROADMAP = {
    "title": "文章題を方程式にする（和差、つるかめ、過不足、植木）",
    "lane": "A",
    "stage": 4,
+   "region": "houteishiki",
    "needs": [
     "A-012",
     "A-003"
@@ -5244,6 +5418,7 @@ window.ROADMAP = {
    "title": "展開と因数分解",
    "lane": "A",
    "stage": 4,
+   "region": "shiki",
    "needs": [
     "A-010",
     "N-027",
@@ -5281,6 +5456,7 @@ window.ROADMAP = {
    "title": "平方根",
    "lane": "A",
    "stage": 4,
+   "region": "shiki",
    "needs": [
     "A-015",
     "N-021",
@@ -5314,6 +5490,7 @@ window.ROADMAP = {
    "title": "2 次方程式",
    "lane": "A",
    "stage": 4,
+   "region": "shiki",
    "needs": [
     "A-015",
     "A-016"
@@ -5350,6 +5527,7 @@ window.ROADMAP = {
    "title": "Σ と和の変形",
    "lane": "A",
    "stage": 4,
+   "region": "shiki",
    "needs": [
     "A-004",
     "A-010",
@@ -5387,6 +5565,7 @@ window.ROADMAP = {
    "title": "区別と重複のある数え方",
    "lane": "C",
    "stage": 4,
+   "region": "kazoekata",
    "needs": [
     "C-007"
    ],
@@ -5422,6 +5601,7 @@ window.ROADMAP = {
    "title": "対応させて数える",
    "lane": "C",
    "stage": 4,
+   "region": "kazoekata",
    "needs": [
     "C-013"
    ],
@@ -5453,6 +5633,7 @@ window.ROADMAP = {
    "title": "二項係数とパスカルの三角形",
    "lane": "C",
    "stage": 4,
+   "region": "kazoekata",
    "needs": [
     "C-007",
     "A-010"
@@ -5489,6 +5670,7 @@ window.ROADMAP = {
    "title": "二項定理",
    "lane": "C",
    "stage": 4,
+   "region": "kazoekata",
    "needs": [
     "C-015",
     "A-015",
@@ -5522,6 +5704,7 @@ window.ROADMAP = {
    "title": "盤面とタイル張り（塗り分けの論法）",
    "lane": "C",
    "stage": 4,
+   "region": "kazoekata",
    "needs": [
     "L-009",
     "L-005"
@@ -5558,6 +5741,7 @@ window.ROADMAP = {
    "title": "平行線と角、合同の証明",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-009"
    ],
@@ -5601,6 +5785,7 @@ window.ROADMAP = {
    "title": "三角形と四角形の性質",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-016"
    ],
@@ -5636,6 +5821,7 @@ window.ROADMAP = {
    "title": "円周角の定理",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-017",
     "G-010"
@@ -5672,6 +5858,7 @@ window.ROADMAP = {
    "title": "三平方の定理",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-017",
     "A-016",
@@ -5710,6 +5897,7 @@ window.ROADMAP = {
    "title": "相似の証明",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-013",
     "G-016"
@@ -5746,6 +5934,7 @@ window.ROADMAP = {
    "title": "空間図形",
    "lane": "G",
    "stage": 4,
+   "region": "katachi",
    "needs": [
     "G-019",
     "G-014"
@@ -5782,6 +5971,7 @@ window.ROADMAP = {
    "title": "作図（定規とコンパス）",
    "lane": "G",
    "stage": 4,
+   "region": "shomei-zukei",
    "needs": [
     "G-017"
    ],
@@ -5813,6 +6003,7 @@ window.ROADMAP = {
    "title": "角度の追跡と内接四角形",
    "lane": "G",
    "stage": 4,
+   "region": "hakaru",
    "needs": [
     "G-018"
    ],
@@ -5856,6 +6047,7 @@ window.ROADMAP = {
    "title": "背理法",
    "lane": "L",
    "stage": 4,
+   "region": "ronpo",
    "needs": [
     "L-013"
    ],
@@ -5887,6 +6079,7 @@ window.ROADMAP = {
    "title": "数学的帰納法の入口",
    "lane": "L",
    "stage": 4,
+   "region": "ronpo",
    "needs": [
     "A-004",
     "A-010"
@@ -5923,6 +6116,7 @@ window.ROADMAP = {
    "title": "命題と条件（必要条件と十分条件）",
    "lane": "L",
    "stage": 4,
+   "region": "ronpo",
    "needs": [
     "L-008",
     "A-010",
@@ -5956,6 +6150,7 @@ window.ROADMAP = {
    "title": "極端なものに着目する",
    "lane": "L",
    "stage": 4,
+   "region": "ronpo",
    "needs": [
     "L-011"
    ],
@@ -5987,6 +6182,7 @@ window.ROADMAP = {
    "title": "1 次関数とグラフ",
    "lane": "A",
    "stage": 5,
+   "region": "kansu",
    "needs": [
     "A-006",
     "A-011"
@@ -6023,6 +6219,7 @@ window.ROADMAP = {
    "title": "2 次関数と平方完成",
    "lane": "A",
    "stage": 5,
+   "region": "kansu",
    "needs": [
     "A-017",
     "A-019"
@@ -6059,6 +6256,7 @@ window.ROADMAP = {
    "title": "複素数の計算",
    "lane": "A",
    "stage": 5,
+   "region": "shiki",
    "needs": [
     "A-017"
    ],
@@ -6090,6 +6288,7 @@ window.ROADMAP = {
    "title": "数列（等比数列を含む）と漸化式",
    "lane": "A",
    "stage": 5,
+   "region": "shiki",
    "needs": [
     "A-008",
     "L-012",
@@ -6136,6 +6335,7 @@ window.ROADMAP = {
    "title": "関数方程式の入口",
    "lane": "A",
    "stage": 5,
+   "region": "kansu",
    "needs": [
     "A-019"
    ],
@@ -6171,6 +6371,7 @@ window.ROADMAP = {
    "title": "集合と写像（単射と全射）",
    "lane": "A",
    "stage": 5,
+   "region": "kansu",
    "needs": [
     "L-013",
     "A-006"
@@ -6203,6 +6404,7 @@ window.ROADMAP = {
    "title": "二通りに数える",
    "lane": "C",
    "stage": 5,
+   "region": "kazoekata",
    "needs": [
     "C-015"
    ],
@@ -6238,6 +6440,7 @@ window.ROADMAP = {
    "title": "全単射で数える",
    "lane": "C",
    "stage": 5,
+   "region": "kazoekata",
    "needs": [
     "C-015",
     "A-024",
@@ -6275,6 +6478,7 @@ window.ROADMAP = {
    "title": "期待値とその線形性",
    "lane": "C",
    "stage": 5,
+   "region": "kakuritsu",
    "needs": [
     "C-011"
    ],
@@ -6310,6 +6514,7 @@ window.ROADMAP = {
    "title": "三角比と正弦・余弦定理",
    "lane": "G",
    "stage": 5,
+   "region": "zahyo",
    "needs": [
     "G-019",
     "G-020",
@@ -6355,6 +6560,7 @@ window.ROADMAP = {
    "title": "三角関数と加法定理",
    "lane": "G",
    "stage": 5,
+   "region": "zahyo",
    "needs": [
     "G-024",
     "G-026",
@@ -6400,6 +6606,7 @@ window.ROADMAP = {
    "title": "座標と図形の方程式（直線と円）",
    "lane": "G",
    "stage": 5,
+   "region": "zahyo",
    "needs": [
     "A-019",
     "G-019"
@@ -6444,6 +6651,7 @@ window.ROADMAP = {
    "title": "ベクトル",
    "lane": "G",
    "stage": 5,
+   "region": "zahyo",
    "needs": [
     "G-026",
     "G-024"
@@ -6480,6 +6688,7 @@ window.ROADMAP = {
    "title": "合同式",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-028",
     "A-010"
@@ -6524,6 +6733,7 @@ window.ROADMAP = {
    "title": "フェルマーの小定理、オイラーの定理、ウィルソンの定理",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-032",
     "N-030",
@@ -6562,6 +6772,7 @@ window.ROADMAP = {
    "title": "素因数の個数（ルジャンドルの公式）",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-030",
     "N-023",
@@ -6599,6 +6810,7 @@ window.ROADMAP = {
    "title": "不定方程式",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-029",
     "N-032",
@@ -6645,6 +6857,7 @@ window.ROADMAP = {
    "title": "中国剰余定理",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-032",
     "N-029"
@@ -6681,6 +6894,7 @@ window.ROADMAP = {
    "title": "位数と原始根",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-033"
    ],
@@ -6724,6 +6938,7 @@ window.ROADMAP = {
    "title": "平方剰余",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-033"
    ],
@@ -6759,6 +6974,7 @@ window.ROADMAP = {
    "title": "LTE 補題と指数の方程式",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-033",
     "N-034",
@@ -6797,6 +7013,7 @@ window.ROADMAP = {
    "title": "2 つの平方数の和",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-038",
     "L-015",
@@ -6830,6 +7047,7 @@ window.ROADMAP = {
    "title": "ペル方程式",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-035",
     "A-016"
@@ -6866,6 +7084,7 @@ window.ROADMAP = {
    "title": "ヴィエタ・ジャンピング",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-035",
     "A-026",
@@ -6903,6 +7122,7 @@ window.ROADMAP = {
    "title": "整数の大きさの議論",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-035",
     "A-013",
@@ -6948,6 +7168,7 @@ window.ROADMAP = {
    "title": "整数の構成問題",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-036",
     "N-037"
@@ -6992,6 +7213,7 @@ window.ROADMAP = {
    "title": "整数係数の多項式",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "A-030",
     "N-033"
@@ -7036,6 +7258,7 @@ window.ROADMAP = {
    "title": "素数の分布の定理とその使い方",
    "lane": "N",
    "stage": 6,
+   "region": "seisuron",
    "needs": [
     "N-030"
    ],
@@ -7067,6 +7290,7 @@ window.ROADMAP = {
    "title": "相加相乗平均の不等式",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-017",
     "A-013",
@@ -7104,6 +7328,7 @@ window.ROADMAP = {
    "title": "多項式（剰余の定理、解と係数の関係）",
    "lane": "A",
    "stage": 6,
+   "region": "shiki",
    "needs": [
     "A-017"
    ],
@@ -7147,6 +7372,7 @@ window.ROADMAP = {
    "title": "古典的な不等式（コーシー・シュワルツ、並べかえ）",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-025",
     "A-018"
@@ -7199,6 +7425,7 @@ window.ROADMAP = {
    "title": "凸性とイェンゼンの不等式",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-019",
     "L-012",
@@ -7237,6 +7464,7 @@ window.ROADMAP = {
    "title": "関数方程式",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-023",
     "A-024"
@@ -7289,6 +7517,7 @@ window.ROADMAP = {
    "title": "多項式の応用",
    "lane": "A",
    "stage": 6,
+   "region": "shiki",
    "needs": [
     "A-026",
     "N-032"
@@ -7333,6 +7562,7 @@ window.ROADMAP = {
    "title": "対称式とニュートンの公式",
    "lane": "A",
    "stage": 6,
+   "region": "shiki",
    "needs": [
     "A-026"
    ],
@@ -7368,6 +7598,7 @@ window.ROADMAP = {
    "title": "不等式の技法（シューア、ミュアヘッド、置きかえ、SOS）",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-027",
     "A-031"
@@ -7420,6 +7651,7 @@ window.ROADMAP = {
    "title": "ヘルダーの不等式とべき平均",
    "lane": "A",
    "stage": 6,
+   "region": "futoshiki",
    "needs": [
     "A-027",
     "A-028",
@@ -7465,6 +7697,7 @@ window.ROADMAP = {
    "title": "包除原理",
    "lane": "C",
    "stage": 6,
+   "region": "kazoekata",
    "needs": [
     "C-008",
     "C-015"
@@ -7501,6 +7734,7 @@ window.ROADMAP = {
    "title": "グラフ理論の基本",
    "lane": "C",
    "stage": 6,
+   "region": "graph",
    "needs": [
     "C-012",
     "L-012"
@@ -7545,6 +7779,7 @@ window.ROADMAP = {
    "title": "組合せ幾何",
    "lane": "C",
    "stage": 6,
+   "region": "graph",
    "needs": [
     "L-016",
     "L-014",
@@ -7590,6 +7825,7 @@ window.ROADMAP = {
    "title": "グラフ理論の応用",
    "lane": "C",
    "stage": 6,
+   "region": "graph",
    "needs": [
     "C-022"
    ],
@@ -7633,6 +7869,7 @@ window.ROADMAP = {
    "title": "固い構造を決める",
    "lane": "C",
    "stage": 6,
+   "region": "graph",
    "needs": [
     "L-018",
     "L-019"
@@ -7677,6 +7914,7 @@ window.ROADMAP = {
    "title": "三角形の五心と九点円",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-018",
     "G-020"
@@ -7721,6 +7959,7 @@ window.ROADMAP = {
    "title": "チェバとメネラウスの定理",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-020",
     "G-012"
@@ -7757,6 +7996,7 @@ window.ROADMAP = {
    "title": "方べきの定理",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-018",
     "G-020"
@@ -7793,6 +8033,7 @@ window.ROADMAP = {
    "title": "相似拡大と回転相似（ミケル点）",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-028",
     "G-015",
@@ -7838,6 +8079,7 @@ window.ROADMAP = {
    "title": "根軸と共円・共線",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-030"
    ],
@@ -7881,6 +8123,7 @@ window.ROADMAP = {
    "title": "典型的な配置（内心・傍心の補題など）",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-028",
     "G-023"
@@ -7925,6 +8168,7 @@ window.ROADMAP = {
    "title": "幾何の不等式と格子点",
    "lane": "G",
    "stage": 6,
+   "region": "haichi",
    "needs": [
     "G-024",
     "A-027"
@@ -7961,6 +8205,7 @@ window.ROADMAP = {
    "title": "鳩の巣原理（一般の形）",
    "lane": "L",
    "stage": 6,
+   "region": "ronpo",
    "needs": [
     "L-006",
     "L-011"
@@ -7997,6 +8242,7 @@ window.ROADMAP = {
    "title": "不変量と単調量",
    "lane": "L",
    "stage": 6,
+   "region": "ronpo",
    "needs": [
     "L-009",
     "N-022"
@@ -8033,6 +8279,7 @@ window.ROADMAP = {
    "title": "ゲームと戦略",
    "lane": "L",
    "stage": 6,
+   "region": "ronpo",
    "needs": [
     "L-010",
     "L-011",
@@ -8070,6 +8317,7 @@ window.ROADMAP = {
    "title": "構成と評価",
    "lane": "L",
    "stage": 6,
+   "region": "ronpo",
    "needs": [
     "L-015",
     "L-014"
@@ -8114,6 +8362,7 @@ window.ROADMAP = {
    "title": "調整と貪欲法",
    "lane": "L",
    "stage": 6,
+   "region": "ronpo",
    "needs": [
     "L-016",
     "L-014"
@@ -8150,6 +8399,7 @@ window.ROADMAP = {
    "title": "複素数の極形式と 1 の累乗根",
    "lane": "A",
    "stage": 7,
+   "region": "shiki",
    "needs": [
     "G-025",
     "A-021",
@@ -8188,6 +8438,7 @@ window.ROADMAP = {
    "title": "病的な解をもつ関数方程式",
    "lane": "A",
    "stage": 7,
+   "region": "futoshiki",
    "needs": [
     "A-029"
    ],
@@ -8231,6 +8482,7 @@ window.ROADMAP = {
    "title": "多項式の発展（補間、根の評価、既約性）",
    "lane": "A",
    "stage": 7,
+   "region": "shiki",
    "needs": [
     "A-030",
     "A-034"
@@ -8283,6 +8535,7 @@ window.ROADMAP = {
    "title": "母関数",
    "lane": "C",
    "stage": 7,
+   "region": "kazoekata",
    "needs": [
     "A-026",
     "C-015",
@@ -8329,6 +8582,7 @@ window.ROADMAP = {
    "title": "確率的方法",
    "lane": "C",
    "stage": 7,
+   "region": "kakuritsu",
    "needs": [
     "C-020",
     "L-018",
@@ -8374,6 +8628,7 @@ window.ROADMAP = {
    "title": "多項式法（組合せ論的零点定理）",
    "lane": "C",
    "stage": 7,
+   "region": "graph",
    "needs": [
     "C-026",
     "A-030"
@@ -8410,6 +8665,7 @@ window.ROADMAP = {
    "title": "座標とベクトルによる幾何",
    "lane": "G",
    "stage": 7,
+   "region": "zahyo",
    "needs": [
     "G-025",
     "G-027"
@@ -8454,6 +8710,7 @@ window.ROADMAP = {
    "title": "複素数による幾何",
    "lane": "G",
    "stage": 7,
+   "region": "zahyo",
    "needs": [
     "G-035",
     "A-034"
@@ -8498,6 +8755,7 @@ window.ROADMAP = {
    "title": "射影幾何",
    "lane": "G",
    "stage": 7,
+   "region": "haichi",
    "needs": [
     "G-032",
     "G-029",
@@ -8551,6 +8809,7 @@ window.ROADMAP = {
    "title": "反転",
    "lane": "G",
    "stage": 7,
+   "region": "haichi",
    "needs": [
     "G-032"
    ],
@@ -8594,6 +8853,7 @@ window.ROADMAP = {
    "title": "動く点の方法",
    "lane": "G",
    "stage": 7,
+   "region": "haichi",
    "needs": [
     "G-037",
     "G-031",
@@ -8632,6 +8892,7 @@ window.ROADMAP = {
    "title": "重心座標",
    "lane": "G",
    "stage": 7,
+   "region": "zahyo",
    "needs": [
     "G-035",
     "G-012",
@@ -8677,6 +8938,7 @@ window.ROADMAP = {
    "title": "円錐曲線",
    "lane": "G",
    "stage": 7,
+   "region": "zahyo",
    "needs": [
     "G-026",
     "A-020"
