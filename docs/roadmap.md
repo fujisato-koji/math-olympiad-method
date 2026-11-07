@@ -25,80 +25,80 @@
 | 目標 | 単元 | 日数 |
 |---|---|---|
 | IMO | 172 | 1152 |
-| 東京大学大学院数理科学研究科（修士課程入試） | 132 | 1052 |
-| GRE Mathematics Subject Test（ETS） | 167 | 1289 |
-| UC Berkeley Preliminary Examination | 156 | 1256 |
-| 国際物理オリンピック（IPhO）Syllabus | 139 | 989 |
-| 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 234 | 1847 |
-| GRE Physics Test（ETS） | 187 | 1488 |
-| University of Cambridge ほか（STEP 2・3） | 133 | 892 |
-| Indian Institutes of Technology（JEE Advanced） | 110 | 715 |
-| National Testing Agency（JEE Main） | 103 | 670 |
-| University of Oxford ほか（TMUA） | 108 | 698 |
-| 東京大学（理科の入学試験、数学） | 126 | 821 |
-| 中国の普通高等学校招生全国統一考試（高考、数学） | 123 | 801 |
-| 韓国の大学修学能力試験（修能、数学） | 103 | 666 |
-| A level Mathematics（Pearson Edexcel） | 122 | 817 |
+| 東京大学大学院数理科学研究科（修士課程入試） | 133 | 1058 |
+| GRE Mathematics Subject Test（ETS） | 168 | 1295 |
+| UC Berkeley Preliminary Examination | 157 | 1262 |
+| 国際物理オリンピック（IPhO）Syllabus | 140 | 995 |
+| 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 235 | 1853 |
+| GRE Physics Test（ETS） | 188 | 1494 |
+| University of Cambridge ほか（STEP 2・3） | 148 | 985 |
+| Indian Institutes of Technology（JEE Advanced） | 114 | 744 |
+| National Testing Agency（JEE Main） | 109 | 707 |
+| University of Oxford ほか（TMUA） | 99 | 604 |
+| 東京大学（理科の入学試験、数学） | 137 | 906 |
+| 中国の普通高等学校招生全国統一考試（高考、数学） | 115 | 735 |
+| 韓国の大学修学能力試験（修能、数学） | 107 | 704 |
+| A level Mathematics（Pearson Edexcel） | 123 | 823 |
 | A level Further Mathematics（Pearson Edexcel） | 171 | 1236 |
 | IB Mathematics: Analysis and Approaches HL | 121 | 781 |
 | SAT Math（College Board） | 103 | 661 |
-| AP Calculus BC | 89 | 609 |
-| AP Statistics | 95 | 617 |
-| ЕГЭ（数学 профильный уровень） | 113 | 721 |
+| AP Calculus BC | 90 | 615 |
+| AP Statistics | 96 | 623 |
+| ЕГЭ（数学 профильный уровень） | 140 | 898 |
 | ISEB Common Entrance 11+（数学） | 50 | 287 |
 | ISEB Common Entrance 13+（数学） | 73 | 432 |
-| GCSE Mathematics Higher（Pearson Edexcel） | 107 | 662 |
+| GCSE Mathematics Higher（Pearson Edexcel） | 108 | 668 |
 | PSLE Mathematics（シンガポール） | 55 | 320 |
 | GCE O-Level Mathematics（シンガポール） | 96 | 597 |
-| GCE O-Level Additional Mathematics（シンガポール） | 77 | 489 |
+| GCE O-Level Additional Mathematics（シンガポール） | 78 | 495 |
 | AMC 8（MAA） | 98 | 590 |
 | Math Kangaroo | 96 | 596 |
-| SpaceX のロケットエンジン設計者（推進エンジニア） | 273 | 2335 |
-| SpaceX の誘導・航法・制御エンジニア | 274 | 2326 |
-| Google DeepMind の Research Scientist | 260 | 2013 |
-| FE Mechanical（NCEES） | 250 | 1947 |
-| FE Electrical and Computer（NCEES） | 240 | 1968 |
-| NASA の宇宙飛行士 | 320 | 2466 |
-| CERN の素粒子物理学者 | 262 | 2255 |
-| Google Quantum AI の研究者 | 248 | 2046 |
-| James Webb 宇宙望遠鏡の天文学者 | 249 | 2030 |
-| F1 チームの空力エンジニア | 222 | 1861 |
-| Pixar の研究者 | 251 | 2194 |
-| 理論物理学者（ノーベル物理学賞の研究に届く知識） | 320 | 2924 |
-| 数学者（フィールズ賞の研究に届く知識） | 341 | 3228 |
-| 素粒子物理でノーベル物理学賞を目指す博士 | 247 | 2108 |
-| NASA JPL の火星探査機のエンジニア | 209 | 1716 |
-| NASA JPL の軌道設計者 | 242 | 1965 |
-| SpaceX Starlink の通信エンジニア | 232 | 1927 |
-| LIGO の重力波の研究者 | 220 | 1822 |
-| Event Horizon Telescope の研究者 | 234 | 1937 |
-| ITER の核融合の研究者 | 224 | 1844 |
-| 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne） | 228 | 1795 |
-| ミレニアム懸賞問題（クレイ数学研究所） | 329 | 3086 |
-| 理論計算機科学者（ACM チューリング賞） | 273 | 2122 |
-| NIST の耐量子暗号の暗号学者 | 209 | 1737 |
-| Waymo の自動運転のエンジニア | 191 | 1529 |
-| Boston Dynamics のロボット工学者 | 187 | 1484 |
-| タンパク質の構造予測で新薬を探す研究者 | 302 | 2411 |
-| ECMWF の気象・気候の研究者 | 219 | 1805 |
-| 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM） | 197 | 1688 |
-| 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋） | 235 | 2055 |
-| MLB のデータアナリスト | 145 | 1056 |
-| 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど） | 246 | 2180 |
-| エルデシュの懸賞問題 | 242 | 2101 |
-| ヒルベルトの 23 の問題 | 317 | 2921 |
-| スメイルの 18 の問題 | 302 | 2739 |
-| 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど） | 277 | 2562 |
-| ICM 2026 の部会に当たる 16 分野の研究の入口 | 443 | 4263 |
-| Society of Actuaries（SOA）の ASA の試験 | 175 | 1357 |
-| CFA Institute の CFA Program（Level I〜III） | 171 | 1318 |
-| ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学 | 157 | 1188 |
-| Jane Street のクオンツ研究者（Quantitative Researcher） | 123 | 855 |
-| 地球科学者（クラフォード賞の地球科学部門の研究に届く知識） | 336 | 2625 |
-| 天文学者（ショウ賞の天文学部門の研究に届く知識） | 201 | 1675 |
-| ナノサイエンスの研究者（カブリ賞のナノサイエンス部門の研究に届く知識） | 276 | 2166 |
-| 統計学者（国際統計学賞の研究に届く知識） | 134 | 1016 |
-| 工学者（エリザベス女王工学賞の研究に届く知識） | 333 | 2771 |
+| SpaceX のロケットエンジン設計者（推進エンジニア） | 274 | 2341 |
+| SpaceX の誘導・航法・制御エンジニア | 275 | 2332 |
+| Google DeepMind の Research Scientist | 261 | 2019 |
+| FE Mechanical（NCEES） | 251 | 1953 |
+| FE Electrical and Computer（NCEES） | 241 | 1974 |
+| NASA の宇宙飛行士 | 321 | 2472 |
+| CERN の素粒子物理学者 | 263 | 2261 |
+| Google Quantum AI の研究者 | 249 | 2052 |
+| James Webb 宇宙望遠鏡の天文学者 | 250 | 2036 |
+| F1 チームの空力エンジニア | 223 | 1867 |
+| Pixar の研究者 | 252 | 2200 |
+| 理論物理学者（ノーベル物理学賞の研究に届く知識） | 321 | 2930 |
+| 数学者（フィールズ賞の研究に届く知識） | 342 | 3234 |
+| 素粒子物理でノーベル物理学賞を目指す博士 | 248 | 2114 |
+| NASA JPL の火星探査機のエンジニア | 210 | 1722 |
+| NASA JPL の軌道設計者 | 243 | 1971 |
+| SpaceX Starlink の通信エンジニア | 233 | 1933 |
+| LIGO の重力波の研究者 | 221 | 1828 |
+| Event Horizon Telescope の研究者 | 235 | 1943 |
+| ITER の核融合の研究者 | 225 | 1850 |
+| 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne） | 229 | 1801 |
+| ミレニアム懸賞問題（クレイ数学研究所） | 330 | 3092 |
+| 理論計算機科学者（ACM チューリング賞） | 274 | 2128 |
+| NIST の耐量子暗号の暗号学者 | 210 | 1743 |
+| Waymo の自動運転のエンジニア | 192 | 1535 |
+| Boston Dynamics のロボット工学者 | 188 | 1490 |
+| タンパク質の構造予測で新薬を探す研究者 | 303 | 2417 |
+| ECMWF の気象・気候の研究者 | 220 | 1811 |
+| 超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM） | 198 | 1694 |
+| 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋） | 236 | 2061 |
+| MLB のデータアナリスト | 146 | 1062 |
+| 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど） | 247 | 2186 |
+| エルデシュの懸賞問題 | 243 | 2107 |
+| ヒルベルトの 23 の問題 | 318 | 2927 |
+| スメイルの 18 の問題 | 303 | 2745 |
+| 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど） | 278 | 2568 |
+| ICM 2026 の部会に当たる 16 分野の研究の入口 | 444 | 4269 |
+| Society of Actuaries（SOA）の ASA の試験 | 176 | 1363 |
+| CFA Institute の CFA Program（Level I〜III） | 172 | 1324 |
+| ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学 | 158 | 1194 |
+| Jane Street のクオンツ研究者（Quantitative Researcher） | 124 | 861 |
+| 地球科学者（クラフォード賞の地球科学部門の研究に届く知識） | 337 | 2631 |
+| 天文学者（ショウ賞の天文学部門の研究に届く知識） | 202 | 1681 |
+| ナノサイエンスの研究者（カブリ賞のナノサイエンス部門の研究に届く知識） | 277 | 2172 |
+| 統計学者（国際統計学賞の研究に届く知識） | 135 | 1022 |
+| 工学者（エリザベス女王工学賞の研究に届く知識） | 334 | 2777 |
 | Math Kangaroo（1・2 年生） | 36 | 197 |
 | Math Kangaroo（3・4 年生） | 33 | 180 |
 | Math Kangaroo（5・6 年生） | 41 | 237 |
@@ -107,23 +107,23 @@
 | Math Kangaroo（11・12 年生） | 106 | 689 |
 | European Girls' Mathematical Olympiad（EGMO） | 117 | 788 |
 | Asian Pacific Mathematics Olympiad（APMO） | 131 | 888 |
-| Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 196 | 1551 |
-| IMF（国際通貨基金）のエコノミスト（Economist Program） | 145 | 1046 |
-| 国際化学オリンピック（IChO） | 220 | 1629 |
-| 国際生物学オリンピック（IBO） | 194 | 1343 |
-| AP Chemistry（College Board） | 159 | 1093 |
-| AP Biology（College Board） | 180 | 1223 |
-| A level Chemistry（AQA 7405） | 171 | 1184 |
-| A level Biology（AQA 7402） | 186 | 1265 |
-| 化学者（ノーベル化学賞の研究に届く知識） | 268 | 2060 |
-| 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識） | 293 | 2301 |
-| 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識） | 253 | 1850 |
-| 生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識） | 221 | 1581 |
-| 神経科学の研究者（カブリ賞・神経科学の研究に届く知識） | 231 | 1705 |
-| 細胞の研究者（Francis Crick Institute） | 187 | 1302 |
-| mRNA ワクチンをつくる研究者（Moderna） | 245 | 1838 |
-| 野生動物の研究者（Max Planck Institute of Animal Behavior） | 199 | 1431 |
-| 脳の研究者（Allen Institute） | 188 | 1314 |
+| Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 197 | 1557 |
+| IMF（国際通貨基金）のエコノミスト（Economist Program） | 146 | 1052 |
+| 国際化学オリンピック（IChO） | 221 | 1635 |
+| 国際生物学オリンピック（IBO） | 195 | 1349 |
+| AP Chemistry（College Board） | 160 | 1099 |
+| AP Biology（College Board） | 181 | 1229 |
+| A level Chemistry（AQA 7405） | 172 | 1190 |
+| A level Biology（AQA 7402） | 187 | 1271 |
+| 化学者（ノーベル化学賞の研究に届く知識） | 269 | 2066 |
+| 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識） | 294 | 2307 |
+| 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識） | 254 | 1856 |
+| 生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識） | 222 | 1587 |
+| 神経科学の研究者（カブリ賞・神経科学の研究に届く知識） | 232 | 1711 |
+| 細胞の研究者（Francis Crick Institute） | 188 | 1308 |
+| mRNA ワクチンをつくる研究者（Moderna） | 246 | 1844 |
+| 野生動物の研究者（Max Planck Institute of Animal Behavior） | 200 | 1437 |
+| 脳の研究者（Allen Institute） | 189 | 1320 |
 
 目標には要らないが、段の物差しの大会のために置く単元：0。
 
@@ -338,7 +338,7 @@
 | G-044 アポロニウスの円 | 図形 | G-042、G-018 | 5 | — |
 | D-001 指数関数と対数関数（高校） | 解析 | A-020 | 8 | — |
 | D-002 数列の極限と無限級数（高校） | 解析 | A-022、D-001、A-018 | 8 | — |
-| D-003 関数の極限と連続（高校） | 解析 | D-002 | 8 | — |
+| D-003 関数の極限と連続（高校） | 解析 | D-002、A-038 | 8 | — |
 | D-004 微分の考え（変化の割合と接線） | 解析 | D-003 | 8 | — |
 | D-005 導関数の計算と関数のグラフ（微分法） | 解析 | D-004、G-025 | 8 | — |
 | D-006 積分の考え（面積と原始関数、置換積分と部分積分） | 解析 | D-005、A-037 | 8 | — |

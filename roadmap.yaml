@@ -614,7 +614,7 @@ units:
   - {id: G-044, title: アポロニウスの円, stage: 5, region: haichi, needs: [G-042, G-018], days: 5}
   - {id: D-001, title: 指数関数と対数関数（高校）, stage: 5, region: bisekibun-nyumon, needs: [A-020], days: 8}
   - {id: D-002, title: 数列の極限と無限級数（高校）, stage: 5, region: bisekibun-nyumon, needs: [A-022, D-001, A-018], days: 8}
-  - {id: D-003, title: 関数の極限と連続（高校）, stage: 5, region: bisekibun-nyumon, needs: [D-002], days: 8}
+  - {id: D-003, title: 関数の極限と連続（高校）, stage: 5, region: bisekibun-nyumon, needs: [D-002, A-038], days: 8}
   - {id: D-004, title: 微分の考え（変化の割合と接線）, stage: 5, region: bisekibun-nyumon, needs: [D-003], days: 8}
   - {id: D-005, title: 導関数の計算と関数のグラフ（微分法）, stage: 5, region: bisekibun-nyumon, needs: [D-004, G-025], days: 8}
   - {id: D-006, title: 積分の考え（面積と原始関数、置換積分と部分積分）, stage: 5, region: bisekibun-nyumon, needs: [D-005, A-037], days: 8}
