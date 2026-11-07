@@ -522,3 +522,8 @@ items:
   topic: データベースと SQL（関係モデル、問い合わせ）
   units:
   - K-169
+- id: V-06
+  field: 音響
+  topic: 音の放射と散乱、音響の数値解析（境界要素法）
+  units:
+  - E-135

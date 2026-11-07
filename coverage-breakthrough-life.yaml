@@ -120,6 +120,7 @@ items:
   units:
   - B-046
   - B-010
+  - B-140
 - id: T-08
   field: 生命
   topic: オートファジーのしくみ 2017
@@ -141,7 +142,7 @@ items:
   sources:
   - CB015
   units:
-  - B-038
+  - B-151
 - id: T-11
   field: 生命
   topic: 遺伝性の筋萎縮性側索硬化症（ALS）の分子機構 2018
@@ -242,6 +243,7 @@ items:
   units:
   - B-065
   - B-039
+  - B-157
 - id: T-24
   field: 生命
   topic: 母体の血液の中の胎児の DNA と出生前の検査 2021
@@ -414,13 +416,15 @@ items:
   - B-024
   - B-045
   - B-002
+  - B-144
+  - B-147
 - id: T-46
   field: 生命
   topic: 発生遺伝学、神経遺伝学、ヒトの遺伝学
   sources:
   - CB026
   units:
-  - B-046
+  - B-140
   - B-068
   - B-001
 - id: T-47
@@ -472,6 +476,7 @@ items:
   units:
   - B-011
   - B-042
+  - B-134
 - id: T-53
   field: 生命
   topic: 恒常性（定常状態、制御機構、細胞と個体）
@@ -480,6 +485,7 @@ items:
   units:
   - B-035
   - B-050
+  - B-137
 - id: T-54
   field: その他
   topic: 科学の方法（計測、定量解析、実験の設計と解釈）
@@ -489,3 +495,20 @@ items:
   units:
   - S-031
   - S-019
+- id: V-01
+  field: 発生
+  topic: 形態形成の数理、進化発生学、1 細胞で見る発生
+  units:
+  - B-141
+  - B-142
+  - B-143
+- id: V-02
+  field: 細胞
+  topic: 細胞と組織の力学（分子モーター、生体膜、細胞の力学）
+  units:
+  - B-005
+- id: V-03
+  field: 医学への応用
+  topic: 細胞治療と遺伝子治療（CAR-T、生体内のゲノム編集）
+  units:
+  - I-054

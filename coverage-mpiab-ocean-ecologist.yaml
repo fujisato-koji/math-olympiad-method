@@ -90,3 +90,9 @@ items:
   units:
   - K-060
   - B-061
+- id: V-01
+  field: 計測
+  topic: バイオロギングと行動の自動計測
+  units:
+  - B-159
+  - B-158

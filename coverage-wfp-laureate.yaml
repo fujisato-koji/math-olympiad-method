@@ -1,0 +1,267 @@
+# 網羅表：食料と農業の研究者（世界食糧賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OR01:
+    title: World Food Prize Foundation, 1987-1999 Laureates（Internet Archive の写し 2026-05-15。本体は応答 202 で中身が返らなかった）
+    url: https://web.archive.org/web/20260515052130/https://www.worldfoodprize.org/en/laureates/19871999_laureates/
+    date: 2026-11-08
+  OR02:
+    title: World Food Prize Foundation, 2000-2009 Laureates（Internet Archive の写し 2026-09-28）
+    url: https://web.archive.org/web/20260928024156/https://www.worldfoodprize.org/en/laureates/20002009_laureates/
+    date: 2026-11-08
+  OR03:
+    title: World Food Prize Foundation, 2010-2019 Laureates（Internet Archive の写し 2026-06-10）
+    url: https://web.archive.org/web/20260610221906/https://www.worldfoodprize.org/en/laureates/20102019_laureates/
+    date: 2026-11-08
+  OR04:
+    title: World Food Prize Foundation, 2020-2026 Laureates（Internet Archive の写し 2026-07-17）
+    url: https://web.archive.org/web/20260717232248/https://www.worldfoodprize.org/en/laureates/20202026_laureates/
+    date: 2026-11-08
+  OR05:
+    title: 'World Food Prize Foundation, 1990: Niederhauser（Internet Archive の写し 2026-07-20）'
+    url: https://web.archive.org/web/20260720000600/https://www.worldfoodprize.org/en/laureates/19871999_laureates/1990_niederhauser/
+    date: 2026-11-08
+  OR06:
+    title: 'World Food Prize Foundation, 1991: Scrimshaw（Internet Archive の写し 2026-09-08）'
+    url: https://web.archive.org/web/20260908163223/https://www.worldfoodprize.org/en/laureates/19871999_laureates/1991_scrimshaw/
+    date: 2026-11-08
+  OR07:
+    title: 'World Food Prize Foundation, 1992: Knipling and Bushland（Internet Archive の写し 2025-12-13）'
+    url: https://web.archive.org/web/20251213135409/https://www.worldfoodprize.org/en/laureates/19871999_laureates/1992_knipling_and_bushland/
+    date: 2026-11-08
+  OR08:
+    title: 'World Food Prize Foundation, 1995: Herren（Internet Archive の写し 2026-07-22）'
+    url: https://web.archive.org/web/20260722143456/https://www.worldfoodprize.org/en/laureates/19871999_laureates/1995_herren/
+    date: 2026-11-08
+  OR09:
+    title: 'World Food Prize Foundation, 1997: Adkisson and Smith（Internet Archive の写し 2024-10-08。2026 年の写しは 404）'
+    url: https://web.archive.org/web/20241008030539/https://www.worldfoodprize.org/index.cfm?NodeID=87485&AudienceID=1&preview=1
+    date: 2026-11-08
+  OR10:
+    title: 'World Food Prize Foundation, 2000: Vasal and Villegas（Internet Archive の写し 2026-07-31）'
+    url: https://web.archive.org/web/20260731223836/https://www.worldfoodprize.org/en/laureates/20002009_laureates/2000_vasal__villegas/
+    date: 2026-11-08
+  OR11:
+    title: 'World Food Prize Foundation, 2004: Jones and Yuan（Internet Archive の写し 2026-07-24）'
+    url: https://web.archive.org/web/20260724064303/https://www.worldfoodprize.org/en/laureates/20002009_laureates/2004_jones_and_yuan/
+    date: 2026-11-08
+  OR12:
+    title: 'World Food Prize Foundation, 2006: Lobato, McClung, Paolinelli（Internet Archive の写し 2026-06-13）'
+    url: https://web.archive.org/web/20260613145048/https://www.worldfoodprize.org/en/laureates/20002009_laureates/2006_lobato_mcclung_paolinelli/
+    date: 2026-11-08
+  OR13:
+    title: 'World Food Prize Foundation, 2007: Nelson（Internet Archive の写し 2026-06-10）'
+    url: https://web.archive.org/web/20260610223045/https://www.worldfoodprize.org/en/laureates/20002009_laureates/2007_nelson/
+    date: 2026-11-08
+  OR14:
+    title: 'World Food Prize Foundation, 2013: Van Montagu, Chilton, Fraley（Internet Archive の写し 2026-07-15）'
+    url: https://web.archive.org/web/20260715012540/https://www.worldfoodprize.org/en/laureates/20102019_laureates/2013_van_montagu_chilton_fraley/
+    date: 2026-11-08
+  OR15:
+    title: 'World Food Prize Foundation, 2014: Rajaram（Internet Archive の写し 2026-04-17）'
+    url: https://web.archive.org/web/20260417064918/https://www.worldfoodprize.org/en/laureates/20102019_laureates/2014_rajaram/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 農学と獣医学
+  topic: インドへの多収の小麦と稲の品種の導入（緑の革命）1987
+  sources:
+  - OR01
+  units:
+  - V-005
+  - V-006
+- id: T-02
+  field: 農学と獣医学
+  topic: ジャガイモの生産を広げる研究と疫病の制御 1990
+  sources:
+  - OR05
+  units:
+  - V-009
+  - B-152
+- id: T-03
+  field: 農学と獣医学
+  topic: たんぱく質・ヨウ素・鉄の欠乏と闘う栄養の研究と栄養の補い 1991
+  sources:
+  - OR06
+  units:
+  - V-016
+  - B-008
+- id: T-04
+  field: 農学と獣医学
+  topic: 不妊の虫を放して害虫を根絶する方法（不妊虫放飼、ラセンウジバエ）1992
+  sources:
+  - OR07
+  units:
+  - V-009
+  - B-132
+  - B-055
+- id: T-05
+  field: 農学と獣医学
+  topic: 天敵による害虫の生物的防除（キャッサバのコナカイガラムシと寄生蜂）1995
+  sources:
+  - OR08
+  units:
+  - V-009
+  - B-132
+- id: T-06
+  field: 農学と獣医学
+  topic: 稲の緑の革命（IRRI の多収の品種）1996
+  sources:
+  - OR01
+  units:
+  - V-005
+  - V-006
+- id: T-07
+  field: 農学と獣医学
+  topic: 総合的な害虫の管理（IPM）1997
+  sources:
+  - OR01
+  - OR09
+  units:
+  - V-009
+- id: T-08
+  field: 農学と獣医学
+  topic: 組織培養による牛疫のワクチンと牛疫の根絶 1999
+  sources:
+  - OR01
+  units:
+  - V-015
+  - B-146
+  - B-037
+- id: T-09
+  field: 農学と獣医学
+  topic: たんぱく質の質の高いトウモロコシ（QPM）の開発と普及 2000
+  sources:
+  - OR02
+  - OR10
+  units:
+  - V-006
+  - V-016
+- id: T-10
+  field: 農学と獣医学
+  topic: 痩せて傷んだ土の肥沃さを取り戻す 2002
+  sources:
+  - OR02
+  units:
+  - V-008
+- id: T-11
+  field: 農学と獣医学
+  topic: 雑種稲（ハイブリッドライス）の遺伝の材料と技術、アジアとアフリカの稲の交雑（ネリカ）2004
+  sources:
+  - OR02
+  - OR11
+  units:
+  - V-006
+  - V-004
+- id: T-12
+  field: 農学と獣医学
+  topic: 淡水の養殖の低コストの技術 2005
+  sources:
+  - OR02
+  units:
+  - V-013
+- id: T-13
+  field: 農学と獣医学
+  topic: 熱帯の痩せた高原（セラード）を土の科学で農地に変える 2006
+  sources:
+  - OR02
+  - OR12
+  units:
+  - V-008
+- id: T-14
+  field: 農学と獣医学
+  topic: 果汁と野菜の大量の無菌の包装・貯蔵・輸送 2007
+  sources:
+  - OR02
+  - OR13
+  units:
+  - V-016
+- id: T-15
+  field: 農学と獣医学
+  topic: 乾燥と寄生雑草ストライガに強いソルガムの雑種 2009
+  sources:
+  - OR02
+  units:
+  - V-006
+  - V-009
+  - B-153
+- id: T-16
+  field: 農学と獣医学
+  topic: 乾いた土地で作物に水を届ける微小灌漑 2012
+  sources:
+  - OR03
+  units:
+  - V-008
+  - V-005
+- id: T-17
+  field: 農学と獣医学
+  topic: 農業のバイオテクノロジー（植物への遺伝子の導入と、虫や病気に強く気候の変動に耐える作物）2013
+  sources:
+  - OR03
+  - OR14
+  units:
+  - V-007
+  - B-144
+- id: T-18
+  field: 農学と獣医学
+  topic: 多収で病気に強い小麦の品種（世界の小麦の生産を 2 億トン増やした）2014
+  sources:
+  - OR03
+  - OR15
+  units:
+  - V-006
+  - V-009
+- id: T-19
+  field: 農学と獣医学
+  topic: 主食の作物にビタミンや栄養素を育種で入れる（生物学的な栄養強化）2016
+  sources:
+  - OR03
+  units:
+  - V-006
+  - V-016
+- id: T-20
+  field: 農学と獣医学
+  topic: 土を中心にした食料の増産と、土を守り気候の変化を和らげる 2020
+  sources:
+  - OR04
+  units:
+  - V-008
+  - V-010
+- id: T-21
+  field: 農学と獣医学
+  topic: 栄養を考えた養殖と食料システム 2021
+  sources:
+  - OR04
+  units:
+  - V-013
+  - V-016
+- id: T-22
+  field: 農学と獣医学
+  topic: 気候と食料システムの相互作用を観測とモデルで理解し予測する 2022
+  sources:
+  - OR04
+  units:
+  - V-010
+  - V-005
+- id: T-23
+  field: 農学と獣医学
+  topic: 作物の多様性の保存と活用（遺伝資源）2024
+  sources:
+  - OR04
+  units:
+  - V-004
+- id: T-24
+  field: 農学と獣医学
+  topic: 生物的な窒素固定で熱帯の土と作物の栄養を変える 2025
+  sources:
+  - OR04
+  units:
+  - B-152
+  - V-008
+  - B-148
+- id: T-25
+  field: 農学と獣医学
+  topic: 食品の安全の科学を世界の行動に（食中毒の予防、貿易と援助の障壁、食品の損失と廃棄）2026
+  sources:
+  - OR04
+  units:
+  - V-016

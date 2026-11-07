@@ -209,3 +209,8 @@ items:
   units:
   - I-019
   - I-046
+- id: V-01
+  field: 病理
+  topic: 分子病理とデジタル病理
+  units:
+  - I-025

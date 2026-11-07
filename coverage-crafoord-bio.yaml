@@ -64,6 +64,7 @@ items:
   - CB037
   units:
   - B-059
+  - B-132
 - id: T-02
   field: 生命
   topic: 生態系生態学（物質とエネルギーの流れ）1987
@@ -87,6 +88,7 @@ items:
   units:
   - B-045
   - B-065
+  - B-157
 - id: T-05
   field: 生命
   topic: 血縁選択と利他行動の進化 1993
@@ -116,7 +118,7 @@ items:
   sources:
   - CB043
   units:
-  - B-025
+  - B-145
   - B-011
 - id: T-09
   field: 生命
@@ -147,6 +149,8 @@ items:
   units:
   - B-057
   - B-043
+  - B-154
+  - B-148
 - id: T-13
   field: 生命
   topic: 適応放散と生態的種分化 2023
@@ -161,8 +165,8 @@ items:
   - CB049
   - CB050
   units:
-  - B-038
-  - B-036
+  - B-153
+  - B-136
 - id: T-15
   field: 生命
   topic: 個体群生態学（ロジスティック成長、r と K、齢構成）
@@ -249,8 +253,7 @@ items:
   sources:
   - CB050
   units:
-  - B-011
-  - K-110
+  - B-134
 - id: T-27
   field: 生命
   topic: 種と種分化
@@ -266,6 +269,7 @@ items:
   - CB050
   units:
   - B-059
+  - B-146
 - id: T-29
   field: 数学
   topic: 統計の考え方（検出力、標準誤差と信頼区間）
@@ -289,3 +293,22 @@ items:
   units:
   - B-060
   - H-043
+- id: V-01
+  field: 進化
+  topic: 系統ゲノミクスと形質の進化、脊椎動物の進化
+  units:
+  - B-135
+  - B-133
+- id: V-02
+  field: 生態
+  topic: 陸水の生態と、環境 DNA による生物多様性の見張り
+  units:
+  - B-155
+  - B-156
+- id: V-03
+  field: 行動生態
+  topic: 動物の移動・認知・コミュニケーションと、行動の計測
+  units:
+  - B-158
+  - B-159
+  - B-160

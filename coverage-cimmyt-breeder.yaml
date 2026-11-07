@@ -1,0 +1,101 @@
+# 網羅表：CIMMYT の小麦・トウモロコシの育種の研究者（量的遺伝とゲノム選抜）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  OR16:
+    title: 'CGIAR vacancy, CIMMYT: Post-Doctoral Fellow or Associate Scientist – Applied Quantitative Geneticist, Bread Wheat Breeding（IRS22146、2022-10-19 掲載。今の頁は 404、Internet Archive の写し 2025-05-12）'
+    url: https://web.archive.org/web/20250512020000/https://www.cgiar.org/news-events/vacancy/post-doctoral-fellow-or-associate-scientist-applied-quantitative-geneticist-bread-wheat-breeding/
+    date: 2026-11-08
+  OR17:
+    title: 'CGIAR vacancy, CIMMYT: Post-Doctoral Fellow or Associate Scientist, Quantitative Genetics（IRS22173、2022-12-20 掲載。今の頁は 404、Internet Archive の写し 2025-01-17）'
+    url: https://web.archive.org/web/20250117115033/https://www.cgiar.org/news-events/vacancy/post-doctoral-fellow-or-associate-scientist-quantitative-genetics/
+    date: 2026-11-08
+items:
+- id: T-01
+  field: 農学と獣医学
+  topic: 小麦の改良（病害虫と乾燥・暑さへの強さ、栄養の質）
+  sources:
+  - OR16
+  units:
+  - V-006
+  - V-009
+  - B-153
+- id: T-02
+  field: 農学と獣医学
+  topic: 育種の回ごとのデータの解析と、その流れを作って速く判断に返す
+  sources:
+  - OR16
+  - OR17
+  units:
+  - V-006
+  - K-060
+- id: T-03
+  field: 農学と獣医学
+  topic: 多くの環境で行う国際の試験の解析（遺伝子型と環境の交互作用）
+  sources:
+  - OR16
+  units:
+  - V-006
+  - S-037
+- id: T-04
+  field: 農学と獣医学
+  topic: ゲノム予測とゲノム選抜を育種の判断に使う
+  sources:
+  - OR16
+  - OR17
+  units:
+  - V-007
+- id: T-05
+  field: 農学と獣医学
+  topic: 育種を速める戦略と、確率的なシミュレーションで育種の計画を比べる
+  sources:
+  - OR16
+  - OR17
+  units:
+  - V-007
+  - K-015
+- id: T-06
+  field: 農学と獣医学
+  topic: マーカーによる選抜、ゲノムワイド関連解析と QTL、高速の表現型の計測
+  sources:
+  - OR16
+  units:
+  - V-007
+- id: T-07
+  field: 農学と獣医学
+  topic: 交配の組み合わせの最適化、いくつもの形質をまとめる選抜指数、実現した遺伝的な獲得量
+  sources:
+  - OR16
+  - OR17
+  units:
+  - V-006
+- id: T-08
+  field: 農学と獣医学
+  topic: 雑種（F1）の作物と系統の作物の育種
+  sources:
+  - OR17
+  units:
+  - V-006
+- id: T-09
+  field: 農学と獣医学
+  topic: 農家の畑で行う反復のない疎な試験の設計と、畑と試験場の遺伝相関と遺伝率
+  sources:
+  - OR17
+  units:
+  - V-006
+  - S-037
+  - S-031
+- id: T-10
+  field: 統計学
+  topic: 線形混合モデルと R による統計のモデル化
+  sources:
+  - OR17
+  units:
+  - S-037
+  - S-020
+- id: T-11
+  field: 生物
+  topic: 分子遺伝学とゲノムのデータベースと解析の道具
+  sources:
+  - OR16
+  units:
+  - K-113
+  - K-106

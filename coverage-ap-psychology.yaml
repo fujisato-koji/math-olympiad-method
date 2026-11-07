@@ -296,3 +296,8 @@ items:
   - PS01
   - PS02
   axis: わけ
+- id: V-01
+  field: 感覚と知覚
+  topic: 聴覚と音の知覚（心理音響、空間音響）
+  units:
+  - E-149

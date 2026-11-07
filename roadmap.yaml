@@ -30,6 +30,7 @@ lanes:
   - {id: W, name: 地球科学, note: 鉱物と岩石、地層と地球の歴史、プレートと地球の内部、地震と火山、地球化学と古気候（大気と海洋の力学は物理の流れ）}
   - {id: I, name: 医学と健康, note: 人体の構造と機能、病気のしくみ、薬と毒、感染と免疫、臨床医学、疫学と公衆衛生、栄養、医療の最前線（神経科学は B に残す）}
   - {id: Q, name: 心理学と認知科学, note: 知覚、注意と記憶、学習、言語と思考、判断と意思決定、発達、社会の認知、感情と動機、研究の方法と心理測定、臨床心理の科学的な基礎、計算論的認知科学（検証で支持されなかった古い説は、置き換えた現代の知見の形で扱う）}
+  - {id: V, name: 農学と獣医学, note: 作物の栽培化と育種（ゲノム育種）、作物の生理と収量、土と植物の栄養、病害虫と防除、農業と気候、家畜と養殖と動物の福祉、獣医学（比較の病理、人獣共通感染症とワンヘルス）、食品の科学と安全}
 
 
 stages:
@@ -173,6 +174,15 @@ regions:
   - {id: shinri-gakushu, name: 学習と計算論, lane: Q}
   - {id: shinri-shakai, name: 発達と社会と心の健康, lane: Q}
   - {id: shinri-hoho, name: 心理学の方法と測定, lane: Q}
+  - {id: dobutsu-keito, name: 動物の多様性と系統, lane: B}
+  - {id: hikaku-seiri, name: 比較の生理, lane: B}
+  - {id: biseibutsu, name: 微生物, lane: B}
+  - {id: umi-mizu, name: 海と陸水の生き物, lane: B}
+  - {id: kodo, name: 行動と認知, lane: B}
+  - {id: sakumotsu, name: 作物と育種, lane: V}
+  - {id: nouchi, name: 農地の土と病害虫と気候, lane: V}
+  - {id: kachiku-yoshoku, name: 家畜と養殖, lane: V}
+  - {id: juui-shoku, name: 獣医学と食の安全, lane: V}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -322,6 +332,10 @@ goals:
   - {id: open-engineering, name: "工学の大きな未解決問題（核融合の発電、炭素の回収、きれいな水など）", kind: 未解決問題, field: 工学, level: "大学院（博士）以上", region: "国際", note: "太陽と同じしくみで電気をつくる、二酸化炭素を集めて地下に閉じ込める、世界のすべての人に安全な水を届ける、といった技術で人類の課題を解く問題に挑む。", coverage: coverage-open-engineering.yaml, basis: "米国工学アカデミー（NAE）の Grand Challenges for Engineering（2008、14 の課題）。2026 年の状況は DOE と LLNL、IRENA、IEA、WHO と UNICEF の公式の資料で確かめた（2026-11-08）。誤り耐性の量子計算機は NAE の一覧の外から足した。", beyond: "課題は技術だけでなく、費用、規制、社会の受け入れで決まる。技術士（PE）などの資格、大規模な事業の管理、長い年月の実証が要る。"}
   - {id: open-economics, name: "経済学の大きな未解決問題（株式プレミアムの謎、国の豊かさの違い、生産性の鈍化など）", kind: 未解決問題, field: 経済学, level: "大学院（博士）以上", region: "国際", note: "株は国債よりなぜずっと多くもうかってきたのか、豊かな国と貧しい国の差はなぜ縮まらないのか、為替はなぜ予測できないのか、といった経済の謎に挑む。", coverage: coverage-open-economics.yaml, basis: "Mehra と Prescott（1985）の株式プレミアムの謎、Obstfeld と Rogoff（2000）の国際マクロ経済学の 6 つの謎、Meese と Rogoff（1983）、2024 年のノーベル経済学賞の発表、Syverson（2017）、Bernanke と Blanchard（2025）。経済学には学会の公式の未解決問題の一覧がないので、謎として名づけられ長く引用されているものを選んだ。", beyond: "経済では実験が難しく、自然実験や政策の変化を使った因果推論が要る。中央銀行や国際機関のデータと、政策の現場との協働。"}
   - {id: open-kids-science, name: "子どもでも問いが分かる理科の未解決問題（宇宙はなぜ物質でできているのか、生命はどう始まったかなど）", kind: 未解決問題, fields: [物理, 天文学, 化学, 生物, 神経科学, 地球科学, 生態学], level: "小学〜研究", region: "国際", note: "宇宙はなぜ物質でできているのか、生命はどう始まったのか、なぜ眠るのか、地震は予知できるのか、のように小学生でも問いの意味は分かるのに、世界中の科学者がまだ答えを出せていない問題に挑む。", coverage: coverage-open-kids-science.yaml, basis: "Science 誌の \"What Don't We Know?\"（2005）と、上海交通大学と Science 誌の \"125 Questions: Exploration and Discovery\"（2021）の問いのうち、子どもでも問いが分かるもの。状況は CERN、USGS、各分野の論文で確かめた（2026-11-08）。", beyond: "問いの理解は小学校の理科の単元で足りるが、攻め方は大学院以上の素粒子物理、生化学、神経科学、地震学になる。解けたと言えるのは、実験や観測で確かめられ、査読誌に載って受け入れられたとき。"}
+  - {id: wfp-laureate, name: 食料と農業の研究者（世界食糧賞の研究に届く知識）, kind: 研究の頂点, field: 農学と獣医学, level: 大学院（博士）, region: 米国（世界食糧賞財団の選考。授賞は国際）, note: 作物や家畜や魚を、より多く、より安全に、土や気候をこわさずに育てる方法を見つけて、世界の飢えを減らす。, coverage: coverage-wfp-laureate.yaml, basis: 世界食糧賞の 1987〜2026 年の受賞理由（worldfoodprize.org の受賞者の一覧と受賞者ごとの頁）による（2026-11-08 取得）。本体の頁はボット対策で中身が返らなかったので、Internet Archive の写し（2024〜2026 年）で読んだ。研究と技術の業績で受けた回だけを論題にし、政策・援助・組織や事業づくりで受けた回（1988、1989、1993、1994、1998、2001、2003、2008、2010、2011、2015、2017、2018、2019、2023）は除いた。論題と単元の対応は名称による, beyond: 何年もの畑や養殖池での試験、農家と各国の研究機関と政府との協働、品種や技術を何百万の農家へ広める仕組みづくり（受賞理由はどれも、成果が広まって収量や栄養や所得が変わったことを挙げる）}
+  - {id: cimmyt-breeder, name: CIMMYT の小麦・トウモロコシの育種の研究者（量的遺伝とゲノム選抜）, kind: 仕事の頂点, field: 農学と獣医学, level: 大学院（博士）, region: 国際（メキシコ・ケニアほか、CGIAR の研究所）, note: 世界の農家のために、病気や暑さや乾燥に強く栄養の多い小麦やトウモロコシを、遺伝子のデータと畑の試験で速くつくり出す仕事。, coverage: coverage-cimmyt-breeder.yaml, basis: "CGIAR の求人の頁に載った CIMMYT の 2 件（IRS22146 Applied Quantitative Geneticist, Bread Wheat Breeding、2022-10-19 掲載。IRS22173 Quantitative Genetics、2022-12-20 掲載）による（2026-11-08 取得）。どちらも今は頁がなく（404）、Internet Archive の写し（2025 年）で読んだ。博士の直後の最初の研究職。論題と単元の対応は名称による", beyond: 育種か遺伝学か生物統計の博士、ゲノムを使う育種の研究の経験 1〜3 年、R による統計の解析、査読のある論文の実績、南アジアやアフリカへの多くの出張、英語で多文化のチームと協働し人を育てる力、3 年の有期}
+  - {id: woah-vet, name: 国の獣医当局と WOAH・FAO の獣医官（動物の病気と食の安全を守る）, kind: 仕事の頂点, field: 農学と獣医学, level: 大学（獣医学の学位）, region: 国際（WOAH の加盟国の獣医当局と国際機関）, note: 家畜の伝染病が国境をこえて広がるのを止め、動物から人にうつる病気を防ぎ、肉や卵や牛乳の安全を守る仕事。, coverage: coverage-woah-vet.yaml, basis: OIE（今の WOAH）の「獣医の卒業時の能力の勧告（Day 1 graduates）」（2012 年 5 月）による（2026-11-08 取得）。基本の能力のうち具体的な 11 項目と、獣医当局で働くのに要る高度な能力 8 項目を論題にした（陸の動物と水の動物の両方）。意思疎通の力は beyond に書いた。WOAH は 2025 年から改訂を始めたが、改訂版は見つからなかった。国際機関（FAO の Animal Health Officer など）の求人は、第三者の転載しか見つからなかったので出典にしていない。論題と単元の対応は名称による, beyond: 獣医師の免許（国の獣医の法定機関による）、臨床の基礎の能力（この文書は詳しく扱わない）、飼い主・農家・他の分野の専門家・報道との意思疎通、生涯の学び。国際機関では、さらに大学院の資格（獣医の疫学など）と数年の経験、英語ほかの国連の言語}
+  - {id: navle, name: 北米の獣医師国家試験（NAVLE）, kind: 資格, field: 農学と獣医学, level: 大学（獣医学の学位）, region: 米国とカナダ, note: アメリカとカナダで獣医師として働くために受ける試験。犬や猫から牛や馬まで、病気を見つけて治す力をためす。, coverage: coverage-navle.yaml, basis: "ICVA の NAVLE の出題の設計（exam blueprint の頁の能力の領域と動物種の配分）と、能力の領域の文書（NAVLE Competency Domains）、2017 年の業務の分析の要旨による（2026-11-08 取得）。今の出題の設計は 2017 年の分析にもとづく。能力の領域は臨床 70%、予防医学と動物の福祉 15%、意思疎通 8%、職業と経営と健康 7%。動物種は犬 25.6%、猫 24.3%、馬 14.7%、牛 13.3%、豚 5% ほか。意思疎通と職業は beyond に書いた。論題と単元の対応は名称による", beyond: 認定を受けた獣医学校の卒業（または最終学年）、臨床の実習、飼い主や他の専門家との意思疎通、獣医の診療の経営、生涯の学び、州や州の免許の手続き}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -590,6 +604,9 @@ units:
   - {id: W-047, title: 天気と気温の記録（晴れ・くもり・雨と雲の量、1 日の気温の変わり方、風の向きと強さ、折れ線グラフ）, stage: 2, level: 2, region: tenki, needs: [P-189, S-027], days: 5}
   - {id: W-048, title: 水のゆくえ（雨水は高い所から低い所へ流れる、土や砂へのしみこみ方、水たまりが消える、冷たいコップにつく水）, stage: 2, level: 1, region: tenki, needs: [H-002], days: 4}
   - {id: Q-002, title: 覚え方を試す（いくつ覚えられるかを数える、まとまりにすると多く覚えられる、読み返すより思い出して試すほうが残る、日をあけてもう一度試す、結果を表にして比べる）, stage: 2, level: 2, region: shinri-ninchi, needs: [S-027], days: 5}
+  - {id: B-161, title: 水辺の生き物しらべ（池・川・磯で探す、すむ場所ごとに見つけた数を記録する、水の中の小さな生き物を虫めがねで見る）, stage: 2, level: 1, region: umi-mizu, needs: [B-015], days: 5}
+  - {id: V-001, title: 育てて収穫する（種をまいて世話をし実りを収穫する、水やりと間引き、土や肥料を変えて育ち方とできた実の数を比べる）, stage: 2, level: 1, region: sakumotsu, needs: [B-016], days: 6}
+  - {id: V-002, title: 家畜とペットの世話（犬・猫・うさぎ・にわとりの食べ物と水と寝床、元気なしるしと病気のしるし、牛や豚やにわとりが食べ物になるまで、命をあずかる責任）, stage: 2, level: 1, region: kachiku-yoshoku, needs: [B-017], days: 5}
 
   # ---- 段 3 量と比 ----
   - {id: N-013, title: かけ算（九九）, stage: 3, level: 2, region: keisan, needs: [N-007], days: 8}
@@ -647,7 +664,7 @@ units:
   - {id: H-009, title: 化学変化と質量（質量保存の法則、定比例の法則、反応する量の比）, stage: 3, level: 2, region: hanno, needs: [H-008, A-006, H-064], days: 6}
   - {id: B-019, title: 植物の養分と水（日光とでんぷん、根から葉への水、蒸散）, stage: 3, level: 2, region: shokubutsu, needs: [B-016, H-004, B-071], days: 6}
   - {id: B-020, title: 人のからだのつくりとはたらき（骨と筋肉、感覚器、呼吸、消化、血液の循環）, stage: 3, level: 2, region: karada, needs: [B-017, H-004, B-075], days: 7}
-  - {id: B-021, title: 生き物と環境（季節と生き物、食物連鎖、分解者、数のつりあい）, stage: 3, level: 2, region: seitai, needs: [B-018, B-019, A-005], days: 6}
+  - {id: B-021, title: 生き物と環境（季節と生き物、食物連鎖、分解者、数のつりあい）, stage: 3, level: 2, region: seitai, needs: [B-018, B-019, A-005, B-161], days: 6}
   - {id: B-022, title: 顕微鏡で見る細胞（細胞のつくり、単細胞と多細胞、植物と動物の細胞）, stage: 3, level: 2, region: bunshi-saibo, needs: [B-018, G-013], days: 6}
   - {id: G-050, title: 座標平面の入口（格子の点、4 象限、移動と対称、表から直線を描く）, stage: 3, level: 2, region: zahyo, needs: [N-010, G-015], days: 6}
   - {id: G-051, title: 結び目と折りたたみ（紐と紙の空間での動き）, stage: 3, level: 1, region: katachi, needs: [G-004, G-002], days: 6}
@@ -671,6 +688,8 @@ units:
   - {id: I-007, title: 病気がうつる道すじ（せきとくしゃみのしぶき、手から口へ、食べ物と水、蚊とダニ、道すじごとの防ぎ方、うつり方をさいころ遊びで数える）, stage: 3, level: 2, region: ekigaku, needs: [B-074, S-027], days: 5}
   - {id: I-008, title: 救命のしくみ（心臓が止まると脳に酸素が届かない、胸骨圧迫で血を送る、AED、出血は押さえて止める、救急に電話で伝えること）, stage: 3, level: 2, region: rinsho, needs: [B-020], days: 5}
   - {id: Q-003, title: 反応の速さと注意（落ちるものさしをつかむ位置で速さを測る、毎回ちがうので何回も測って平均する、ほかのことをしながらだと遅れる・見落とす）, stage: 3, level: 2, region: shinri-ninchi, needs: [S-028], days: 5}
+  - {id: B-162, title: 動物のふるまいを見て数える（アリの行列や鳥のえさ台、何をいつ何回したかを表にする、まわりを変えるとふるまいが変わるか）, stage: 3, level: 2, region: kodo, needs: [B-017, S-027], days: 5}
+  - {id: V-003, title: 食べ物のもとと保存（田畑・牧場・海から食卓まで、食べ物がくさるわけ、干す・塩・砂糖・酢・冷やす・発酵で長もちさせる、手洗いと期限の表示）, stage: 3, level: 2, region: juui-shoku, needs: [B-074, V-001], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -828,7 +847,7 @@ units:
   - {id: B-036, title: 消化・呼吸・循環・排出の器官（消化と吸収、ガス交換とヘモグロビン、心臓と循環、腎臓）, stage: 5, level: 3, region: karada, needs: [B-020, B-031, B-029, H-020, I-009], days: 7}
   - {id: B-037, title: 免疫（自然免疫と獲得免疫、抗体、T 細胞と B 細胞、ワクチン、アレルギー）, stage: 5, level: 3, region: karada, needs: [B-035, B-032, I-006], days: 7}
   - {id: B-038, title: 植物の生理（水と養分の輸送、光合成の環境要因、植物ホルモン、光と屈性、花芽の形成）, stage: 5, level: 3, region: shokubutsu, needs: [B-026, B-030, B-031], days: 7}
-  - {id: B-039, title: 動物の行動（生得的行動と学習、情報の伝達、社会行動、生物時計）, stage: 5, level: 2, region: ikimono, needs: [B-027], days: 6}
+  - {id: B-039, title: 動物の行動（生得的行動と学習、情報の伝達、社会行動、生物時計）, stage: 5, level: 2, region: ikimono, needs: [B-027, B-162], days: 6}
   - {id: B-040, title: 個体群と生物群集（個体群の成長とロジスティック成長、種間関係、遷移、多様性の指数）, stage: 5, level: 3, region: seitai, needs: [B-021, A-022, D-001], days: 7}
   - {id: B-041, title: 生態系と物質循環（エネルギーの流れと生産量、炭素と窒素の循環、生物多様性と保全）, stage: 5, level: 3, region: seitai, needs: [B-040, B-030], days: 7}
   - {id: B-042, title: 進化のしくみ（自然選択、遺伝的浮動、ハーディ–ワインベルグの法則、種分化、系統樹）, stage: 5, level: 3, region: iden-shinka, needs: [B-027, B-032, A-015], days: 7}
@@ -1005,6 +1024,8 @@ units:
   - {id: I-034, title: 医療と研究の倫理（自律・善行・無危害・公正の原則、説明と同意、研究倫理の歴史と審査、限られた資源の配分）, stage: 6, level: 2, region: ekigaku, needs: [S-031, I-033], days: 8}
   - {id: Q-004, title: 知覚と心理物理（心理測定関数と閾値、ウェーバーの法則、信号検出理論の感度 d′ と判断の基準と ROC、奥行き・色・大きさの恒常性、錯視を手がかりからの推論として説明する）, stage: 6, level: 3, region: shinri-ninchi, needs: [Q-001, B-020, S-041], days: 10}
   - {id: Q-005, title: 注意と記憶（選択的注意と注意の容量、視覚探索と変化の見落とし、作業記憶の容量、長期記憶の符号化・固定・検索、忘却と干渉、記憶は再構成される（目撃証言）、思い出す練習・間隔をあけた反復・交互の練習・自分で説明することの効果）, stage: 6, level: 3, region: shinri-ninchi, needs: [Q-002, Q-003, S-041], days: 12}
+  - {id: B-130, title: 動物の体の設計と系統（左右相称と体腔、前口動物と後口動物、分子系統で組み直した動物の系統樹、カンブリア紀の多様化）, stage: 6, level: 3, region: dobutsu-keito, needs: [B-025, B-046], days: 8}
+  - {id: B-136, title: 体の大きさと代謝（代謝率のスケーリングと両対数のグラフ、エネルギーの収支、休眠と冬眠の代謝の抑制）, stage: 6, level: 3, region: hikaku-seiri, needs: [B-036, B-029, D-001], days: 8}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根（ド・モアブル）, stage: 5, level: 3, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -1218,7 +1239,7 @@ units:
   - {id: I-016, title: 腎臓と体液の生理（ろ過と再吸収、尿の濃縮、水とナトリウムとカリウムの調節、利尿薬の効く場所）, stage: 7, level: 3, region: jintai, needs: [B-050, B-047], days: 9}
   - {id: I-017, title: 消化管と肝臓の生理（消化と吸収の調節、腸と肝臓の循環、肝臓の代謝と解毒、胆汁、腸の守り）, stage: 7, level: 3, region: jintai, needs: [B-036, B-035], days: 8}
   - {id: I-018, title: 生殖の生理（性の分化、視床下部・下垂体・性腺の軸、月経周期、妊娠と分娩の生理、避妊と不妊）, stage: 7, level: 3, region: jintai, needs: [B-035, B-023, B-050], days: 8}
-  - {id: I-028, title: 病原体の生物学（細菌・ウイルス・真菌・寄生虫が病気を起こすしくみ、毒素、感染の経路、免疫からの逃れ方、配列による病原体の同定）, stage: 7, level: 3, region: kansen-meneki, needs: [B-043, B-037, B-001], days: 10}
+  - {id: I-028, title: 病原体の生物学（細菌・ウイルス・真菌・寄生虫が病気を起こすしくみ、毒素、感染の経路、免疫からの逃れ方、配列による病原体の同定）, stage: 7, level: 3, region: kansen-meneki, needs: [B-043, B-037, B-001, B-144], days: 10}
   - {id: I-035, title: 疫学研究のデザイン（コホート研究、症例対照研究、横断研究、相対危険とオッズ比、交絡と偏り）, stage: 7, level: 3, region: ekigaku, needs: [I-033, S-031, S-019], days: 9}
   - {id: I-036, title: 世界の健康（疾病負荷と DALY、人口と疫学の転換、健康の社会的な決定要因と格差、保健医療の制度と皆保険）, stage: 7, level: 3, region: ekigaku, needs: [I-033], days: 8}
   - {id: I-037, title: 感染症の数理モデル（SIR と SEIR、基本再生産数と次世代行列、閾値定理と集団免疫の接種率、齢構造とネットワークのモデル、データへの当てはめ）, stage: 7, level: 3, region: ekigaku, needs: [D-046, D-053, B-055, I-033], days: 10}
@@ -1232,6 +1253,24 @@ units:
   - {id: Q-010, title: 発達（乳児の物・数・空間の理解を調べる方法（注視時間と期待違反）、言語の獲得（統計的学習、語と動詞の学習）、心の理論と誤信念課題、実行機能、愛着と気質、生涯の認知の変化、ピアジェの段階説を置き換えた現代の見方、多くの国での共同の追試）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-005, Q-008], days: 12}
   - {id: Q-011, title: 社会の認知（自己と他者の認識と帰属、印象の形成、態度と説得と認知的不協和、ステレオタイプと偏見の測り方とその限界、同調・服従・集団、協力と信頼の実験と文化による違い、WEIRD の偏り、大規模な追試で残った知見と残らなかった知見）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-010, Q-006], days: 10}
   - {id: Q-012, title: 感情と動機（感情の成り立ち（評価・からだの反応・表出）と測り方、基本感情説と構成主義の論争、ストレスと対処、感情の調整、報酬と動機づけ（欲しいと好き）、内発的動機づけと自己決定理論、幸福感の測り方）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-007, B-035], days: 10}
+  - {id: B-131, title: いろいろな動物の体の設計を系統で比べる（海綿・刺胞・扁形・環形・軟体・節足・棘皮動物、体の設計とくらし方の結びつき）, stage: 7, level: 3, region: dobutsu-keito, needs: [B-130], days: 8}
+  - {id: B-132, title: 昆虫の生物学（体の設計と変態のホルモン、飛ぶしくみ、社会性昆虫の分業、植物との共進化、送粉と昆虫の減少）, stage: 7, level: 3, region: dobutsu-keito, needs: [B-130, B-059], days: 8}
+  - {id: B-133, title: 脊椎動物の進化（顎の獲得、水から陸へ、羊膜類、恐竜から鳥へ、哺乳類の放散、化石とゲノムで年代を合わせる）, stage: 7, level: 3, region: dobutsu-keito, needs: [B-130, W-009], days: 8}
+  - {id: B-137, title: 体温と体液の調節（変温と恒温、熱の出入りの収支、海・淡水・陸での浸透圧とイオンの調節、熱に耐える限界と気候の変化）, stage: 7, level: 3, region: hikaku-seiri, needs: [B-136, B-031, B-035], days: 8}
+  - {id: B-138, title: 呼吸と循環の比較（えら・肺・気管系、対向流によるガス交換、心臓と循環の型、潜水と高地への適応）, stage: 7, level: 3, region: hikaku-seiri, needs: [B-036, B-136], days: 8}
+  - {id: B-140, title: 発生の遺伝学（モデル生物の遺伝学、母性因子と体軸、体節と分節の遺伝子、細胞の運命の決定と細胞間の信号）, stage: 7, level: 3, region: hassei, needs: [B-046, B-044, B-045], days: 10}
+  - {id: B-144, title: 細菌の生理と遺伝（増殖の動態と培養の数理、遺伝子の水平伝播、クオラムセンシング、バイオフィルム）, stage: 7, level: 3, region: biseibutsu, needs: [B-043, B-044, D-044], days: 10}
+  - {id: B-147, title: 菌類の生物学（菌糸と胞子、モデル生物としての酵母、菌根と分解、植物と動物の病原になる菌）, stage: 7, level: 3, region: biseibutsu, needs: [B-043, B-025], days: 8}
+  - {id: B-149, title: 陸上植物の多様性と進化（水から陸へ、コケ・シダ・種子植物・被子植物の系統、ゲノムの倍数化と種の誕生）, stage: 7, level: 3, region: shokubutsu, needs: [B-026, B-042], days: 8}
+  - {id: B-150, title: 植物の発生（分裂組織と幹細胞、花の ABC モデル、根と葉の形づくり、花をつける時期の決まり方）, stage: 7, level: 3, region: shokubutsu, needs: [B-038, B-044, B-046], days: 10}
+  - {id: B-154, title: 海洋生物学（プランクトンと海の一次生産、生物ポンプ、深海と熱水噴出孔の化学合成、サンゴ礁、海の食物網と温暖化・酸性化）, stage: 7, level: 3, region: umi-mizu, needs: [B-056, H-026], days: 10}
+  - {id: B-155, title: 陸水の生物学（湖と川の生態系、水温の成層と栄養の循環、富栄養化、川のつながりとダム、外来種）, stage: 7, level: 3, region: umi-mizu, needs: [B-056, W-023], days: 8}
+  - {id: V-004, title: 栽培化と遺伝資源（作物と家畜の起源、栽培化で変わった形質とその遺伝子、野生の近縁種、遺伝子銀行と種子の保存）, stage: 7, level: 3, region: sakumotsu, needs: [B-042, B-149, B-045], days: 8}
+  - {id: V-005, title: 作物の生理と収量（収量のなりたち：受ける光の量×光を使う効率×収穫指数、草の形と半矮性、水と窒素を使う効率、作物モデル）, stage: 7, level: 3, region: sakumotsu, needs: [B-038, B-030, D-044, V-001], days: 10}
+  - {id: V-006, title: 量的遺伝と育種の理論（育種価と遺伝率、選抜への反応と育種家の方程式、遺伝子型と環境の交互作用、雑種強勢と F1 の育種、選抜指数）, stage: 7, level: 3, region: sakumotsu, needs: [B-002, B-045, S-020], days: 10}
+  - {id: V-008, title: 土壌の科学と植物の栄養（土の成り立ちと団粒、粘土と陽イオン交換、土の水と灌漑、窒素・リン・カリの循環と施肥、酸性の土と石灰、根のまわりの微生物、土の炭素）, stage: 7, level: 3, region: nouchi, needs: [B-038, B-041, H-026, W-023], days: 10}
+  - {id: V-012, title: 動物の福祉の科学（福祉を評価する枠組みと指標、行動と生理の指標、飼い方・輸送・と畜、実験動物の 3R、伴侶動物の福祉）, stage: 7, level: 3, region: kachiku-yoshoku, needs: [B-039, B-035, V-002], days: 8}
+  - {id: V-016, title: 食品の科学と安全（食品の成分と栄養、加工と保存の科学、微生物の制御と加熱殺菌の数理、食中毒の原因、HACCP とリスク評価）, stage: 7, level: 3, region: juui-shoku, needs: [V-003, B-144, B-028, H-023], days: 10}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1512,7 +1551,7 @@ units:
   - {id: B-051, title: 免疫学（抗原認識と MHC、抗体の多様性、T 細胞の分化、サイトカイン、ワクチンの設計、腫瘍免疫）, stage: 8, level: 3, region: karada, needs: [B-037, B-009, B-010], days: 12}
   - {id: B-053, title: 遺伝子工学とゲノム編集（ベクターと遺伝子導入、CRISPR–Cas、遺伝子治療、mRNA と核酸医薬）, stage: 8, level: 3, region: bunshi-saibo, needs: [B-033, B-009], days: 10}
   - {id: B-062, title: 理論生態学（反応拡散と空間のパターン、確率的な個体群動態、適応ダイナミクス、エージェントベースモデル）, stage: 8, level: 3, region: seitai, needs: [B-055, B-059, D-049, S-009], days: 12}
-  - {id: B-064, title: 神経発生（神経誘導、軸索の誘導、シナプスの形成、臨界期と経験による作り替え）, stage: 8, level: 3, region: shinkei, needs: [B-046, B-052, B-010], days: 12}
+  - {id: B-064, title: 神経発生（神経誘導、軸索の誘導、シナプスの形成、臨界期と経験による作り替え）, stage: 8, level: 3, region: shinkei, needs: [B-046, B-052, B-010, B-140], days: 12}
   - {id: B-065, title: 認知と行動の神経科学（学習と記憶、報酬と意思決定、知覚と注意、睡眠と覚醒）, stage: 8, level: 3, region: shinkei, needs: [B-063, B-039, Q-004, Q-005, Q-007], days: 12}
   - {id: B-066, title: 計算神経科学（神経細胞のモデル、神経符号化、回路の力学、学習則）, stage: 8, level: 3, region: shinkei, needs: [B-052, D-053, S-003, K-012], days: 12}
   - {id: B-067, title: 神経科学の計測と操作（電気生理と多電極記録、カルシウムイメージング、光遺伝学、脳の画像化、回路の地図）, stage: 8, level: 3, region: shinkei, needs: [B-052, B-053, P-118], days: 10}
@@ -1564,6 +1603,28 @@ units:
   - {id: H-091, title: 太陽燃料と小分子の活性化（光触媒と光電極による水の分解、二酸化炭素の還元、窒素の還元とアンモニア合成、効率と耐久性の評価、同位体による偽陽性の除き方）, stage: 8, level: 3, region: butsuri-kagaku, needs: [H-048, H-052, H-036], days: 7}
   - {id: B-110, title: 真核細胞と複雑な生命の起源（細胞内共生とミトコンドリア・葉緑体の起源、アスガルド古細菌、真核細胞の特徴の起源、多細胞化）, stage: 8, level: 3, region: iden-shinka, needs: [B-011, B-010], days: 5}
   - {id: F-065, title: 経済発展と国の豊かさの違い（成長会計と全要素生産性、制度・地理・文化による説明、歴史を使った自然実験、開発経済学のランダム化比較試験）, stage: 8, level: 3, region: keizai, needs: [F-025, F-033], days: 6}
+  - {id: B-134, title: 系統樹の推定と系統比較法（距離法・最尤法・ベイズ法、分子時計と分岐年代、系統の非独立性を考えた形質の比較）, stage: 8, level: 3, region: dobutsu-keito, needs: [B-011, S-021, S-022], days: 10}
+  - {id: B-139, title: 動物の運動（筋の力学、歩く・走る・飛ぶ・泳ぐの力学、体の大きさと運動のスケーリング）, stage: 8, level: 3, region: hikaku-seiri, needs: [B-005, B-136, E-025], days: 10}
+  - {id: B-141, title: 形態形成の数理と力学（チューリング・パターン、モルフォゲンの勾配と位置の情報、組織の力学と形の変化）, stage: 8, level: 3, region: hassei, needs: [B-140, D-049, B-005], days: 10}
+  - {id: B-142, title: 進化発生学（ツールキット遺伝子の保存、シス制御の進化、新しい形の起源、形の多様性の遺伝的な基盤）, stage: 8, level: 3, region: hassei, needs: [B-140, B-130, B-011], days: 10}
+  - {id: B-145, title: 微生物の多様性と系統（細菌と古細菌、化学合成・窒素固定・メタン生成など代謝の多様性、メタゲノムで見る培養できない系統、生命の木と真核生物の起源）, stage: 8, level: 3, region: biseibutsu, needs: [B-144, B-025, K-106], days: 10}
+  - {id: B-146, title: ウイルスの生物学（複製の戦略、宿主との軍拡競争、ファージと細菌の防御系（CRISPR を含む）、ウイルスの進化と出現）, stage: 8, level: 3, region: biseibutsu, needs: [B-043, B-009, B-042], days: 10}
+  - {id: B-148, title: 微生物の生態とマイクロバイオーム（群集のでき方、共生と相互作用、元素の循環を担う微生物、動物と植物のマイクロバイオーム）, stage: 8, level: 3, region: biseibutsu, needs: [B-145, B-056], days: 10}
+  - {id: B-151, title: 植物の信号伝達（光受容体、植物ホルモンの受容と信号、気孔の制御、環境の記憶）, stage: 8, level: 3, region: shokubutsu, needs: [B-038, B-010], days: 10}
+  - {id: B-152, title: 植物の免疫と共生（病原体の認識と抵抗性遺伝子、全身の抵抗性、根粒の窒素固定と菌根の共生）, stage: 8, level: 3, region: shokubutsu, needs: [B-151, B-147, B-144], days: 10}
+  - {id: B-153, title: 光合成の改良と環境への応答（C4 と CAM、CO₂ の濃縮、光呼吸と光の害を防ぐしくみ、乾燥・高温・塩への応答）, stage: 8, level: 3, region: shokubutsu, needs: [B-030, B-038, B-007], days: 10}
+  - {id: B-156, title: 環境 DNA と生物多様性の分子の計測（水や土から DNA を集める、メタバーコーディング、見つかる確率と誤り、生物多様性の見張り）, stage: 8, level: 3, region: umi-mizu, needs: [B-033, B-060, K-113], days: 10}
+  - {id: B-157, title: 神経行動学（反響定位、電気と磁気の感覚、鳥の歌の学習、ナビゲーションの神経のしくみ）, stage: 8, level: 3, region: kodo, needs: [B-052, B-039, B-063], days: 10}
+  - {id: B-158, title: 行動の自動計測（姿勢の推定と追跡、機械学習による行動の分類、群れの動きの数理）, stage: 8, level: 3, region: kodo, needs: [K-067, B-058], days: 10}
+  - {id: B-159, title: 動物の移動とバイオロギング（体に付ける記録計と衛星での追跡、渡りと回遊、移動の生態学の数理）, stage: 8, level: 3, region: kodo, needs: [B-061, B-058, K-109], days: 10}
+  - {id: B-160, title: 動物の認知とコミュニケーション（信号の進化と正直な信号、動物の認知を確かめる実験の設計、道具の使用、文化の伝わり方）, stage: 8, level: 3, region: kodo, needs: [B-039, B-058, B-065], days: 10}
+  - {id: V-007, title: ゲノム育種（作物と家畜）（QTL とゲノムワイド関連解析、ゲノム予測と GBLUP、高速の表現型の計測、世代を速める育種と育種計画のシミュレーション、遺伝子組換えとゲノム編集の作物と規制）, stage: 8, level: 3, region: sakumotsu, needs: [V-006, K-113, S-037, B-053], days: 12}
+  - {id: V-009, title: 植物の病害虫と総合的な防除（病気の三角形と流行の数理、抵抗性の品種とその崩壊、農薬の作用と抵抗性の進化、天敵による防除と不妊虫放飼、総合的な防除 IPM）, stage: 8, level: 3, region: nouchi, needs: [B-152, B-132, B-055, B-059], days: 12}
+  - {id: V-010, title: 持続可能な農業と気候（農業からの温室効果ガスと土の炭素、気候の変化と収量の予測、適応と緩和、精密農業とリモートセンシング、水と窒素の使い方）, stage: 8, level: 3, region: nouchi, needs: [V-005, V-008, B-057, P-120], days: 12}
+  - {id: V-011, title: 家畜の生理と飼養（反芻とルーメンの微生物、栄養の要求と飼料、泌乳と成長、繁殖の技術、家畜からのメタン）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-136, B-148, V-006], days: 10}
+  - {id: V-013, title: 水産資源と養殖（資源の評価と最大持続生産量、漁業の管理、養殖の飼料・病気・育種、貝と海藻の養殖、環境への負荷）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-055, B-154, V-006], days: 10}
+  - {id: V-014, title: 比較の病理（細胞の傷害と死、炎症と修復、循環の障害、腫瘍、動物の種による病気の違い、剖検と病理組織の読み方）, stage: 8, level: 3, region: juui-shoku, needs: [B-010, B-037, B-036], days: 12}
+  - {id: V-015, title: 人獣共通感染症とワンヘルス（宿主の飛び越えと流出、伝播のモデルと基本再生産数、見張りと発生の調査、越境性動物疾病の制御と根絶（牛疫）、輸入のリスク分析、ワクチンと薬剤耐性の管理、ワンヘルスの体制）, stage: 8, level: 3, region: juui-shoku, needs: [B-144, B-146, S-019, I-037], days: 12}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1768,7 +1829,7 @@ units:
   - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-164, B-010, H-035, H-049, B-004], days: 9}
   - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010], days: 9}
   - {id: W-035, title: 地球の形成と惑星の分化（隕石と太陽系の材料、核とマントルの分離、初期の地球）, stage: 9, level: 3, region: chikyu-kagaku, needs: [W-031, P-171], days: 10}
-  - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, level: 3, region: chiso, needs: [W-014, W-033, B-011], days: 10}
+  - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, level: 3, region: chiso, needs: [W-014, W-033, B-011, B-145], days: 10}
   - {id: W-037, title: 地震波トモグラフィーと地球の内部構造（地球の標準モデル、自由振動、マントルと核）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-021, W-025, P-141, D-048], days: 10}
   - {id: W-038, title: 地震の発生の物理（断層の摩擦則、地震サイクル、余震と地震の予測）, stage: 9, level: 3, region: jishin-kazan, needs: [W-025, W-026], days: 10}
   - {id: W-039, title: 地球ダイナモ（外核の対流、磁気流体力学、地磁気の逆転の機構）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-011, W-028, P-041, P-231], days: 10}
@@ -1818,7 +1879,7 @@ units:
   - {id: K-176, title: 量子アルゴリズム（量子フーリエ変換、位相推定、ショアの算法、グローバーの探索と振幅増幅、隠れ部分群問題）, stage: 9, level: 4, region: programming, needs: [P-087, N-049, R-002], days: 10}
   - {id: P-250, title: 強相関電子と非従来型超伝導（モット絶縁体、異方的なギャップと d 波、銅酸化物と鉄系、対称性による分類）, stage: 9, level: 4, region: bussei, needs: [P-099, P-100], days: 10}
   - {id: I-025, title: 分子病理とデジタル病理（組織診と免疫染色、腫瘍の遺伝子パネル検査、全スライド画像と AI による診断の支援）, stage: 9, level: 3, region: byori, needs: [I-023, I-011, K-082], days: 10}
-  - {id: I-032, title: 宿主とマイクロバイオーム（腸内細菌叢の構成と測り方、代謝と免疫への働き、抗菌薬と細菌叢、便の移植）, stage: 9, level: 3, region: kansen-meneki, needs: [I-028, K-113, B-051], days: 9}
+  - {id: I-032, title: 宿主とマイクロバイオーム（腸内細菌叢の構成と測り方、代謝と免疫への働き、抗菌薬と細菌叢、便の移植）, stage: 9, level: 3, region: kansen-meneki, needs: [I-028, K-113, B-051, B-148], days: 9}
   - {id: I-050, title: がんの臨床（病期と予後、手術・放射線・薬物の療法、分子標的薬と免疫療法、効果の評価と生存の解析）, stage: 9, level: 3, region: rinsho, needs: [I-023, B-051, S-035], days: 10}
   - {id: I-051, title: 救急と集中治療（ショックと敗血症、呼吸不全と人工呼吸、蘇生の科学、外傷の初期診療）, stage: 9, level: 3, region: rinsho, needs: [I-022, I-015, I-021, I-008], days: 9}
   - {id: I-053, title: 精密医療とゲノム医療（がんゲノムの検査、液体生検、全ゲノム解析の臨床、薬理ゲノミクス、多遺伝子リスクの使い方と限界）, stage: 9, level: 3, region: iryo-saizensen, needs: [I-024, I-023, K-113, B-048], days: 10}
@@ -1837,6 +1898,8 @@ units:
   - {id: B-111, title: 宇宙生物学（生命の定義と生命の住める条件、太陽系の海をもつ天体、生命の兆候と非生物による偽陽性、系外惑星の大気の分光）, stage: 9, level: 4, region: iden-shinka, needs: [B-027, P-171, P-131, W-036, H-090], days: 6}
   - {id: B-112, title: 老化の生物学（老化の特徴、テロメアと細胞老化、栄養感知の経路と寿命、エピジェネティックな時計、寿命を延ばす試みとその検証）, stage: 9, level: 3, region: hassei, needs: [B-010, B-044, B-054], days: 6}
   - {id: B-114, title: 意識の科学（意識の神経相関、全体作業空間理論と統合情報理論、予測の事前登録と敵対的共同研究、麻酔・睡眠・意識障害での意識の測り方）, stage: 9, level: 4, region: shinkei, needs: [B-065, B-066, B-063], days: 6}
+  - {id: B-135, title: 系統ゲノミクスと形質の進化（遺伝子の木と種の木の食い違い、深い分岐の論争、遺伝子の重複と喪失、収斂進化のゲノム、生物多様性のゲノム計画）, stage: 9, level: 3, region: dobutsu-keito, needs: [B-134, K-106], days: 12}
+  - {id: B-143, title: 1 細胞で見る発生（細胞の系譜の追跡、1 細胞の発現の解析と細胞の型、細胞のアトラス、細胞の型の進化）, stage: 9, level: 3, region: hassei, needs: [B-140, K-113], days: 12}
 
   # ---- 段 10 新しい対象をつくる ----
 

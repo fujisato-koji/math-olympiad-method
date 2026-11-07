@@ -145,3 +145,8 @@ items:
   topic: 木構造（集成材と CLT、中高層の木造）
   units:
   - E-202
+- id: V-05
+  field: 環境
+  topic: 建物の音（室内音響、騒音と振動の制御）
+  units:
+  - E-148

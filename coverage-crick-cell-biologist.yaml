@@ -65,8 +65,8 @@ items:
   sources:
   - CB065
   units:
+  - B-147
   - B-045
-  - B-025
 - id: T-09
   field: 生命
   topic: 分子遺伝学
