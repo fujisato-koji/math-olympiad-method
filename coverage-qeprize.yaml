@@ -88,6 +88,9 @@ items:
   - SC015
   units:
   - E-169
+  - B-170
+  - B-171
+  - E-234
 - id: T-11
   field: 工学
   topic: 確率過程と推定（通信・データ科学の中核科目）
@@ -132,6 +135,7 @@ items:
   units:
   - E-158
   - E-159
+  - E-230
 - id: T-16
   field: 工学
   topic: 電力とエネルギーのシステム（Power & Energy Systems）
@@ -173,3 +177,5 @@ items:
   units:
   - P-173
   - E-165
+  - E-231
+  - E-232

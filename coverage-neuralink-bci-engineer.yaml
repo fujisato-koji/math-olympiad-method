@@ -1,0 +1,171 @@
+# 網羅表：脳とコンピュータをつなぐエンジニア（Neuralink）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JB08:
+    title: Neuralink, Neuroengineer, Next Gen（7571489003、2026-11-05 更新、Greenhouse の公開データ）
+    url: https://boards.greenhouse.io/neuralink/jobs/7571489003
+    date: '2026-11-08'
+  JB09:
+    title: Neuralink, Machine Learning Engineer（5663271003、2026-11-05 更新、Greenhouse の公開データ）
+    url: https://boards.greenhouse.io/neuralink/jobs/5663271003
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 生命
+  topic: 電気刺激の計算モデルと、刺激の符号化の戦略
+  sources:
+  - JB08
+  units:
+  - B-170
+  - E-169
+- id: T-02
+  field: 生命
+  topic: 電気刺激が神経の活動に及ぼす影響のモデル（NEURON など）
+  sources:
+  - JB08
+  units:
+  - B-170
+  - B-066
+- id: T-03
+  field: 物理
+  topic: 有限要素法による電場のモデル
+  sources:
+  - JB08
+  units:
+  - E-021
+  - B-004
+- id: T-04
+  field: 生命
+  topic: 神経の記録と刺激の実験の計画・実行・解釈
+  sources:
+  - JB08
+  units:
+  - B-067
+  - E-169
+  - B-170
+- id: T-05
+  field: 生命
+  topic: 生体内の電気生理、覚醒して行動中の記録、閉ループの BCI
+  sources:
+  - JB08
+  units:
+  - B-067
+  - B-171
+  - E-225
+- id: T-06
+  field: 計算
+  topic: 視覚の人工器官のハードとソフト（機械視覚の算法、スマートグラス、視線の追跡）
+  sources:
+  - JB08
+  units:
+  - B-170
+  - K-082
+  - K-081
+- id: T-07
+  field: 計算
+  topic: 現代の統計的推論と機械学習（機械視覚への応用を含む）
+  sources:
+  - JB08
+  units:
+  - S-022
+  - K-048
+  - K-082
+- id: T-08
+  field: 計算
+  topic: Python によるデータ解析
+  sources:
+  - JB08
+  units:
+  - K-012
+  - K-060
+- id: T-09
+  field: 工学
+  topic: 実験の装置を作ってプログラムする
+  sources:
+  - JB08
+  units:
+  - P-118
+  - E-068
+  - K-012
+- id: T-10
+  field: その他
+  topic: 科学の方法と工学の第一原理
+  sources:
+  - JB08
+  units:
+  - S-031
+  - S-019
+  - P-117
+- id: T-11
+  field: 生命
+  topic: 運動野のスパイクからの解読（カーソルの操作、腕と手の 29 の自由度）
+  sources:
+  - JB09
+  units:
+  - B-171
+  - E-056
+- id: T-12
+  field: 計算
+  topic: 脳から声へ（皮質内の信号からのリアルタイムの音声合成とストリーミングのボコーダ）
+  sources:
+  - JB09
+  units:
+  - B-171
+  - K-162
+  - E-081
+- id: T-13
+  field: 計算
+  topic: 系列のモデル（音声、ロボット、強化学習、時系列）
+  sources:
+  - JB09
+  units:
+  - K-051
+  - K-059
+  - E-082
+- id: T-14
+  field: 計算
+  topic: 神経の記録での自己教師ありの表現学習、対のデータでの教師ありの微調整、明瞭さと自然さを報酬にした強化学習
+  sources:
+  - JB09
+  units:
+  - K-161
+  - K-164
+- id: T-15
+  field: 計算
+  topic: 神経の活動のずれ（非定常）と分布の大きな移り、少ないデータ、教師なしの再較正と人をまたぐ転移
+  sources:
+  - JB09
+  units:
+  - B-171
+  - K-048
+- id: T-16
+  field: 計算
+  topic: 閉ループの共適応（脳と解読器が互いに学ぶ）と、オンラインの適応を安定に保つ
+  sources:
+  - JB09
+  units:
+  - B-171
+  - E-058
+- id: T-17
+  field: 工学
+  topic: 埋め込みの機器の上で動く小さく速い解読器（モデルの圧縮と量子化、電力と遅延の制約）
+  sources:
+  - JB09
+  units:
+  - B-171
+  - E-234
+- id: T-18
+  field: 工学
+  topic: モデルの更新を使う人に届けてよい根拠を決め、評価と配布の仕組みを作る
+  sources:
+  - JB09
+  units:
+  - E-227
+  - S-019
+- id: T-19
+  field: 工学
+  topic: 埋め込みの機器（専用の集積回路、薄膜の電極アレイ）へ学んだことを返す
+  sources:
+  - JB09
+  units:
+  - E-234
+  - E-169

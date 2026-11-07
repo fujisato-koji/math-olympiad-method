@@ -45,6 +45,7 @@ items:
   - CB009
   units:
   - H-048
+  - H-101
 - id: T-05
   field: 生命
   topic: ゲノム編集（CRISPR/Cas9）2020
@@ -151,6 +152,7 @@ items:
   - CB011
   units:
   - H-048
+  - H-100
 - id: T-18
   field: 化学
   topic: 量子化学（量子力学の基礎、分子の電子状態）
