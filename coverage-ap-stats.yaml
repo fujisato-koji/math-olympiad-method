@@ -11,14 +11,14 @@ items:
   sources:
   - EX21
   units:
-  - S-030
+  - S-027
 - id: T-02
   field: Unit 1 データの探索と収集
   topic: 1 つの量的変数の表示・記述・比較
   sources:
   - EX21
   units:
-  - S-030
+  - S-029
 - id: T-03
   field: Unit 1 データの探索と収集
   topic: 調査の問いとデータ収集・無作為抽出

@@ -82,6 +82,7 @@ items:
   - EX09
   - EX10
   units:
+  - S-029
   - S-030
 - id: T-10
   field: 数学Ⅰ・Ａ
@@ -388,6 +389,7 @@ items:
   - EX10
   units:
   - D-071
+  - G-047
 - id: T-46
   field: 数学Ⅱ・Ｂ・Ｃ
   topic: 複素数平面と極形式

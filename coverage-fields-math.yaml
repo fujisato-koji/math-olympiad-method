@@ -408,7 +408,8 @@ items:
   - DR098
   - DR085
   units:
-  - S-028
+  - P-054
+  - P-055
 - id: T-31
   field: 数学
   topic: 波の運動論方程式と非線形分散系

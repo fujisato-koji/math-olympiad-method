@@ -192,6 +192,7 @@ items:
   sources:
   - EX15
   units:
+  - S-029
   - S-030
 - id: T-26
   field: 統計

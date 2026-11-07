@@ -117,6 +117,8 @@ regions:
   - {id: data, name: データの活用, lane: S}
   - {id: bunshi-saibo, name: 分子と細胞の生物学, lane: B}
   - {id: seibutsu-butsuri, name: 生物物理, lane: B}
+  - {id: hokei, name: 保型形式とガロア表現, lane: N}
+  - {id: risan-kika, name: 離散幾何, lane: G}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -208,6 +210,12 @@ goals:
   - {id: suspension-bridge, name: 長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）, kind: 夢, level: 大学〜大学院, region: 日本（本州四国連絡高速道路）、トルコ（チャナッカレ橋）、デンマーク（COWI）, note: 海峡をまたぐ何 km もの吊り橋を、強い風や地震、大きな船にも耐えるように設計し、守る。, coverage: coverage-suspension-bridge.yaml, beyond: 高専・大学の卒業または修士課程の修了（JB 本四高速は土木・機械・電気通信・化学・建築の技術系総合職）、年度により採用しない職種がある。COWI の求人は読んでいない}
   - {id: yamaha-acoustics, name: ヤマハの楽器と音響の研究者, kind: 夢, level: 大学〜大学院, region: 日本（静岡県浜松市）, note: 楽器や音響機器の音を、信号処理や AI、新しい素材の研究でよくする。歌声をコンピュータで作る VOCALOID もその成果の一つ。, coverage: coverage-yamaha-acoustics.yaml, beyond: 4 年制大学・大学院・高専の卒業（理系）、論文を書けるくらいの実力、学術研究から事業に使える種を拾う力、音や音楽への深い愛とこだわり}
   - {id: mlb-analyst, name: MLB のデータアナリスト, kind: 夢, level: 大学（学士）, region: 米国（球団・リーグ本部）, note: 選手と試合のデータを集めて確かめ、統計とプログラムで選手の評価や将来の予測をつくり、監督やスカウトにわかる形で伝える。, coverage: coverage-mlb-analyst.yaml, beyond: 数学・経済・統計・計算機科学などの学士、0〜3 年の経験、野球と国際市場への関心、スペイン語か日本語（望ましい）、夜・週末・祝日の勤務、非専門家への説明力}
+  - {id: open-kids, name: 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど）, kind: 夢, level: 小学〜研究, region: 国際, note: コラッツ予想やゴールドバッハ予想のように、小学生でも問題の意味は分かるのに、世界中の数学者がまだ答えを出せていない問題に挑む。, coverage: coverage-open-kids.yaml, beyond: 解けたと言えるのは、査読誌に載って数学界に受け入れられたとき（ビール予想の懸賞 100 万ドルは掲載から 2 年以上たって広く受け入れられることが条件で、原稿を AMS や本人に直接送ってはならない）。主張の理解は小中学の単元で足りるが、攻め方は大学院以上の解析的整数論や数論幾何になる。ルジャンドル予想の証明の主張と、2026 年の AI による主張（平面の彩色数が 6 以上など）は査読前で、解決に数えない。}
+  - {id: erdos-prizes, name: エルデシュの懸賞問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 数学者エルデシュが賞金をかけた問題（全部で 1221 問のうち 107 問、いちばん高いのは 1 万ドル）に挑む。, coverage: coverage-erdos-prizes.yaml, beyond: "状態と金額は teorth/erdosproblems（2026-11-06 の版）による。本家の erdosproblems.com は 2026-10-06 から状態と解決数を表に出していない。#3 はこのデータベースでは未解決で、2026 年の OpenAI の証明は主張・査読前。#90 は 2026-05 に反証され、第三者の数学者 9 名が人の手で確かめた。代表の問題のうち #20、#30、#64、#592、#89 は攻め方が資料に書かれていない。"}
+  - {id: hilbert-23, name: ヒルベルトの 23 の問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 1900 年にヒルベルトが「これからの数学で解くべき」と挙げた 23 の問題を、いまの答えまでたどる。, coverage: coverage-hilbert-23.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 12、一部解決 6、未解決 2、問いが曖昧 3）。第 8 問題のリーマン予想はミレニアム懸賞問題の目標で扱う。2026 年の OpenAI の主張（第 8 の零点のない半平面、第 10 の有理数版、第 16 の一様な上界、第 5 を広げたヒルベルト–スミス予想）は査読前で、解決に数えない。第 4、20、23 問題には完了の基準がない。}
+  - {id: smale-18, name: スメイルの 18 の問題, kind: 夢, level: 大学院（博士）以上, region: 国際, note: 1998 年にスメイルが「21 世紀に解くべき」と挙げた 18 の問題（リーマン予想、P=NP、ナヴィエ–ストークス方程式など）に挑む。, coverage: coverage-smale-18.yaml, beyond: 状況は MathWorld の記述を本書で区分したもの（解決 4、一部解決 4、未解決 8、問いが曖昧 2）。第 1、3、15 問題はミレニアム懸賞問題と重なる。第 16 問題の反例は査読前だが、第三者が形式検証したので解決に数える。第 13 問題の 2026 年の OpenAI の主張は査読前で数えない。第 8、18 問題は研究計画で完了の基準がない。}
+  - {id: solved-great, name: 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど）, kind: 夢, level: 大学院（博士）以上, region: 国際, note: フェルマーの最終定理やポアンカレ予想のように、何十年も何百年も解けなかった問題の証明を、読んで分かるようになる。, coverage: coverage-solved-great.yaml, beyond: 証明の論文は長く（ワイルズは 109 ページと共著 20 ページ、ヘイルズは 121 ページ）、ケプラー予想の証明は計算機の確認に頼る。三次元の掛谷、幾何学的ラングランズ（全 5 部作）、ケルヴェア不変量の 126 次元、マッケイ予想は arXiv の段階で、掲載誌の記載がない（マッケイは Annals に掲載予定）。マッケイ予想の証明に要る有限単純群の分類は地図にない。}
+  - {id: icm-2026, name: ICM 2026 の部会に当たる 16 分野の研究の入口, kind: 夢, level: 大学院（博士）, region: 国際, note: 国際数学者会議（ICM 2026、フィラデルフィア）の部会に当たる 16 の研究分野で、大学院で最初に学ぶことをそろえる。, coverage: coverage-icm-2026.yaml, beyond: 入口は、SLMath の夏の大学院学校の前提、大学院の資格試験の範囲、教科書の序文が名指ししたものだけを取った。部会と分野の対応は本書が当てたもので、IMU が当てたものではない。2026 年の部会の定義文は確かめておらず、2019 年の構造委員会報告の定義を使った。数値解析、制御と最適化、統計と機械学習、確率モデル、教育、歴史の 6 部会は対象外。研究者になるには博士課程と論文の業績が要る。}
 
 kinds:
   わけ: その段の深さで、わけを示す（口で言う、文で書く、定義から筋道を立てて書く）
@@ -1025,6 +1033,7 @@ units:
   - {id: E-151, title: 建築と音（1）：音の物理・生理と心理、音の伝搬、室内の音場, stage: 8, region: onkyo, needs: [P-022], days: 12}
   - {id: E-152, title: 建築と音（2）：吸音・遮音と材料、騒音の測定と評価, stage: 8, region: onkyo, needs: [E-151], days: 12}
   - {id: E-153, title: 建築と音（3）：室内音響計画、電気音響設備、可視化と可聴化, stage: 8, region: onkyo, needs: [E-152], days: 12}
+  - {id: G-048, title: 球充填と格子, stage: 8, region: risan-kika, needs: [G-021, M-006, M-010, D-007], days: 8}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1220,6 +1229,11 @@ units:
   - {id: E-148, title: 室内音響の理論と方法, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
   - {id: E-149, title: 心理音響と音質, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
   - {id: E-150, title: 空間音響と三次元音響（頭部伝達関数）, stage: 9, region: onkyo, needs: [E-126, E-127, E-128], days: 12}
+  - {id: C-042, title: グラフの正則性補題とグラフ極限, stage: 9, region: kumiawase-daigaku, needs: [C-031, C-032, D-020], days: 8}
+  - {id: L-034, title: ゲーデルの不完全性定理とペアノ算術, stage: 9, region: suri-ronri, needs: [L-024, L-026], days: 10}
+  - {id: L-036, title: 定理証明支援系と形式証明, stage: 9, region: suri-ronri, needs: [L-024, L-030], days: 8}
+  - {id: K-120, title: 精度保証付き数値計算（区間演算）, stage: 9, region: suchi, needs: [K-002, D-016], days: 8}
+  - {id: K-121, title: ブール関数と回路計算量, stage: 9, region: keisan-riron, needs: [K-041, C-029], days: 8}
 
   # ---- 段 10 新しい対象をつくる ----
 
@@ -1235,3 +1249,28 @@ units:
   - {id: T-037, title: 層コホモロジーの入口, stage: 10, region: daisu-kika, needs: [T-035], days: 15}
   - {id: T-038, title: 代数曲線と代数曲面, stage: 10, region: daisu-kika, needs: [T-036, T-037], days: 15}
   - {id: T-039, title: 交叉理論, stage: 10, region: daisu-kika, needs: [T-036, T-037, T-025], days: 15}
+  - {id: N-062, title: モジュラー形式, stage: 10, region: hokei, needs: [D-042, D-034, R-006], days: 10}
+  - {id: N-063, title: 篩法（セルバーグの篩とボンビエリ–ヴィノグラードフの定理）, stage: 10, region: kaisekiteki-seisuron, needs: [N-058], days: 10}
+  - {id: N-064, title: 円周法と指数和, stage: 10, region: kaisekiteki-seisuron, needs: [N-058, D-022], days: 10}
+  - {id: N-065, title: ガロア表現とモジュラー性, stage: 10, region: hokei, needs: [N-057, N-062, R-016], days: 12}
+  - {id: N-066, title: 類体論, stage: 10, region: daisuteki-seisuron, needs: [N-055, R-013, R-028], days: 12}
+  - {id: N-067, title: 超越数論（ゲルフォント–シュナイダーの定理とベイカーの理論）, stage: 10, region: kaisekiteki-seisuron, needs: [N-049, N-051, D-031], days: 10}
+  - {id: N-068, title: 保型表現, stage: 10, region: hokei, needs: [N-062, R-023, D-065], days: 12}
+  - {id: N-069, title: 高さの理論とファルティングスの定理（モーデル予想）, stage: 10, region: daisuteki-seisuron, needs: [N-057, T-038], days: 10}
+  - {id: C-041, title: セメレディの定理と高次フーリエ解析, stage: 10, region: kumiawase-daigaku, needs: [C-036, C-042, D-023], days: 10}
+  - {id: L-035, title: 依存型理論とホモトピー型理論, stage: 10, region: suri-ronri, needs: [L-030, T-027], days: 10}
+  - {id: D-072, title: ハウスドルフ測度と幾何学的測度論, stage: 10, region: jitsukaiseki, needs: [D-019, D-026], days: 10}
+  - {id: D-073, title: 双曲力学系と構造安定性, stage: 10, region: bibun-hoteishiki, needs: [D-055, T-014], days: 10}
+  - {id: D-074, title: 複素力学系（ジュリア集合とマンデルブロ集合）, stage: 10, region: bibun-hoteishiki, needs: [D-034, D-036, D-053], days: 8}
+  - {id: R-029, title: 導来圏と導来関手, stage: 10, region: kakan-homology, needs: [R-026, R-027], days: 10}
+  - {id: R-030, title: 線形代数群, stage: 10, region: hyogen, needs: [R-023, T-035], days: 10}
+  - {id: R-031, title: ∞圏, stage: 10, region: kenron, needs: [R-026, T-044], days: 12}
+  - {id: R-032, title: 幾何学的群論（擬等長写像と双曲群）, stage: 10, region: gunkantai, needs: [R-004, T-020, T-040], days: 10}
+  - {id: T-040, title: 双曲幾何と双曲多様体, stage: 10, region: tayotai, needs: [T-008, T-017, T-020], days: 10}
+  - {id: T-041, title: シンプレクティック幾何（ダルブーの定理と運動量写像）, stage: 10, region: tayotai, needs: [T-015, P-018, R-023], days: 10}
+  - {id: T-042, title: 特性類（チャーン類、スティーフェル–ホイットニー類、ポントリャーギン類）, stage: 10, region: daisuteki-iso, needs: [T-025, T-026], days: 8}
+  - {id: T-043, title: 安定ホモトピー論（スペクトラム、一般化コホモロジー、アダムス・スペクトル系列）, stage: 10, region: daisuteki-iso, needs: [T-028, T-042], days: 12}
+  - {id: T-044, title: 単体的集合とモデル圏, stage: 10, region: daisuteki-iso, needs: [T-027, R-026], days: 10}
+  - {id: T-045, title: リッチ流と幾何化予想, stage: 10, region: tayotai, needs: [T-017, T-040, D-060], days: 12}
+  - {id: T-046, title: 偏屈層と構成可能層, stage: 10, region: daisu-kika, needs: [T-037, T-024, R-029], days: 10}
+  - {id: S-032, title: ランダム行列, stage: 10, region: kakuritsu-daigaku, needs: [S-008, M-007, D-066], days: 10}

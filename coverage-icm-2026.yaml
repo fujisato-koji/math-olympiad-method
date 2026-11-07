@@ -1,0 +1,1058 @@
+# 網羅表：ICM 2026 の部会に当たる 16 分野の研究の入口（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FR061:
+    title: International Mathematical Union, Program Committee 2026 / Section panel chairs and core members
+    url: https://www.mathunion.org/fileadmin/documents/2026-08/PC_Panels_2026.pdf
+    date: '2026-11-07'
+  FR062:
+    title: IMU ICM Structure Committee, 2019 Report of the ICM Structure Committee（§4 Recommended section descriptions）
+    url: https://www.mathunion.org/fileadmin/IMU/Report/SC/2019/structure_committee_final.pdf
+    date: '2026-11-07'
+  FR063:
+    title: SLMath（MSRI）, Automorphic Forms and the Langlands Program（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/792
+    date: '2026-11-07'
+  FR064:
+    title: SLMath, Koszul Duality in the Local Langlands Program（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1072
+    date: '2026-11-07'
+  FR065:
+    title: SLMath（MSRI）, Gaps between Primes and Analytic Number Theory（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/753
+    date: '2026-11-07'
+  FR066:
+    title: SLMath（MSRI）, Sparsity of Algebraic Points（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/962
+    date: '2026-11-07'
+  FR067:
+    title: SLMath, Introduction to the Theory of Algebraic Curves（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1067
+    date: '2026-11-07'
+  FR068:
+    title: SLMath, Introduction to Derived Algebraic Geometry（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/992
+    date: '2026-11-07'
+  FR069:
+    title: SLMath（MSRI）, Derived Categories（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/821
+    date: '2026-11-07'
+  FR070:
+    title: SLMath, Resolutions of Singularities（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1106
+    date: '2026-11-07'
+  FR071:
+    title: SLMath（MSRI）, Soergel Bimodules（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/790
+    date: '2026-11-07'
+  FR072:
+    title: SLMath（MSRI）, Geometric Group Theory（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/909
+    date: '2026-11-07'
+  FR073:
+    title: SLMath, Geometry and Dynamics in Higher Rank Lie Groups（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1104
+    date: '2026-11-07'
+  FR074:
+    title: SLMath, Topological and Geometric Structures in Low Dimensions（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1105
+    date: '2026-11-07'
+  FR075:
+    title: SLMath（MSRI）, Gauge Theory in Geometry and Topology（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/965
+    date: '2026-11-07'
+  FR076:
+    title: SLMath（MSRI）, From Symplectic Geometry to Chaos（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/825
+    date: '2026-11-07'
+  FR077:
+    title: 'SLMath（MSRI）, Séminaire de Mathématiques Supérieures 2022: Floer Homotopy（Summer Graduate School）'
+    url: https://legacy.slmath.org/summer_schools/1005
+    date: '2026-11-07'
+  FR078:
+    title: 'SLMath（MSRI）, Séminaire de Mathématiques Supérieures 2018: Derived Geometry（Summer Graduate School）'
+    url: https://legacy.slmath.org/summer_schools/843
+    date: '2026-11-07'
+  FR079:
+    title: SLMath（MSRI）, H-principle（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/856
+    date: '2026-11-07'
+  FR080:
+    title: 'SLMath（MSRI）/ IAS-PCMI, IAS/PCMI 2018: Harmonic Analysis（Summer Graduate School）'
+    url: https://legacy.slmath.org/summer_schools/884
+    date: '2026-11-07'
+  FR081:
+    title: 'SLMath, SLMath-Oxford-OIST School: Analysis of Partial Differential Equations（Summer Graduate School）'
+    url: https://legacy.slmath.org/summer_schools/1108
+    date: '2026-11-07'
+  FR082:
+    title: SLMath, Stochastic Quantization（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1038
+    date: '2026-11-07'
+  FR083:
+    title: SLMath, 2025 PIMS-CRM Summer School in Probability（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1071
+    date: '2026-11-07'
+  FR084:
+    title: SLMath（MSRI）, Random Conformal Geometry（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/922
+    date: '2026-11-07'
+  FR085:
+    title: SLMath, Mathematical Spin Glass Theory（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1063
+    date: '2026-11-07'
+  FR086:
+    title: SLMath（MSRI）, Nonlinear dispersive PDE, quantum many particle systems and the world between（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/834
+    date: '2026-11-07'
+  FR087:
+    title: SLMath, Mathematics of General Relativity and Fluids（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1070
+    date: '2026-11-07'
+  FR088:
+    title: SLMath（MSRI）, Topological Methods for the Discrete Mathematician（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/982
+    date: '2026-11-07'
+  FR089:
+    title: SLMath, Graphical Models in Algebraic Combinatorics（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1121
+    date: '2026-11-07'
+  FR090:
+    title: Harvard University, Department of Mathematics, The Qualifying Exam Syllabus
+    url: https://www.math.harvard.edu/graduate/study-the-qualifying-exam/the-qualifying-exam-syllabus/
+    date: '2026-11-07'
+  FR091:
+    title: SLMath（MSRI）, Foundations and Frontiers of Probabilistic Proofs（Summer Graduate School）
+    url: https://legacy.slmath.org/summer_schools/1037
+    date: '2026-11-07'
+  FR092:
+    title: MIT OpenCourseWare（A. Sutherland）, 18.782 Introduction to Arithmetic Geometry, Syllabus
+    url: https://ocw.mit.edu/courses/18-782-introduction-to-arithmetic-geometry-fall-2013/pages/syllabus/
+    date: '2026-11-07'
+  FR093:
+    title: MIT OpenCourseWare（A. Sutherland）, 18.785 Number Theory I, Syllabus
+    url: https://ocw.mit.edu/courses/18-785-number-theory-i-fall-2021/pages/syllabus/
+    date: '2026-11-07'
+  FR094:
+    title: 'N. D. Elkies（Harvard University）, Math 229: Introduction to Analytic Number Theory, pseudo-syllabus'
+    url: https://people.math.harvard.edu/~elkies/M229.19/plan.pdf
+    date: '2026-11-07'
+  FR095:
+    title: 'Y. Zhao, Graph Theory and Additive Combinatorics: Exploring Structure and Randomness（書籍頁）'
+    url: https://yufeizhao.com/gtacbook/
+    date: '2026-11-07'
+  FR096:
+    title: T. Tao, Topics in random matrix theory（Preface）
+    url: https://terrytao.files.wordpress.com/2011/08/matrix-book.pdf
+    date: '2026-11-07'
+  FR097:
+    title: UC Berkeley, Group in Logic and the Methodology of Science, Requirements for the Ph.D. Program
+    url: https://logic.berkeley.edu/requirements.html
+    date: '2026-11-07'
+  FR098:
+    title: 'J. Lurie, Higher Topos Theory（Preface: Prerequisites and Suggested Reading）'
+    url: https://www.math.ias.edu/~lurie/papers/HTT.pdf
+    date: '2026-11-07'
+  FR099:
+    title: E. Rijke, Introduction to Homotopy Type Theory
+    url: https://arxiv.org/abs/2212.11082
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: ラングランズ・プログラム
+  topic: 代数的整数論（デデキント環、素イデアルの分解、局所体、分岐、類群、単数定理）
+  sources:
+  - FR061
+  - FR062
+  - FR093
+  units:
+  - N-051
+  - N-052
+  - N-053
+  - N-054
+  - R-025
+- id: T-02
+  field: ラングランズ・プログラム
+  topic: p 進数と局所体
+  sources:
+  - FR061
+  - FR062
+  - FR063
+  units:
+  - N-055
+- id: T-03
+  field: ラングランズ・プログラム
+  topic: モジュラー形式
+  sources:
+  - FR061
+  - FR062
+  - FR063
+  units:
+  - N-062
+- id: T-04
+  field: ラングランズ・プログラム
+  topic: 代数群、表現論、代数幾何（大学院初年度）とリー代数の表現
+  sources:
+  - FR061
+  - FR062
+  - FR064
+  units:
+  - R-030
+  - R-022
+  - T-035
+- id: T-05
+  field: ラングランズ・プログラム
+  topic: 偏屈層
+  sources:
+  - FR061
+  - FR062
+  - FR064
+  units:
+  - T-046
+- id: T-06
+  field: ラングランズ・プログラム
+  topic: 保型形式と保型表現（主系列表現、佐武同型、GL_n の保型表現）
+  sources:
+  - FR061
+  - FR062
+  - FR063
+  units:
+  - N-068
+- id: T-07
+  field: 数論幾何
+  topic: 学部の代数（群、環、体、ガロア理論）と 1 変数の正則関数
+  sources:
+  - FR061
+  - FR062
+  - FR066
+  units:
+  - R-004
+  - R-009
+  - R-013
+  - D-030
+- id: T-08
+  field: 数論幾何
+  topic: 数論幾何の入門（円錐曲線の有理点、p 進数、二次形式、射影多様体、曲線と因子、リーマン–ロッホ、楕円曲線とアーベル多様体の有理点）
+  sources:
+  - FR061
+  - FR062
+  - FR092
+  units:
+  - T-032
+  - T-033
+  - T-034
+  - M-010
+  - N-055
+  - N-056
+  - N-057
+- id: T-09
+  field: 数論幾何
+  topic: スキームの代数幾何（ハーツホーン第 I・II 章）
+  sources:
+  - FR061
+  - FR062
+  - FR078
+  - FR070
+  units:
+  - T-035
+  - T-036
+- id: T-10
+  field: 数論幾何
+  topic: o-極小性（必要なモデル理論は学校で補う）
+  sources:
+  - FR061
+  - FR062
+  - FR066
+  units:
+  - L-029
+- id: T-11
+  field: 解析的整数論
+  topic: 前提：複素解析と初等整数論（平方剰余の相互法則まで）
+  sources:
+  - FR061
+  - FR062
+  - FR094
+  units:
+  - D-030
+  - D-032
+  - N-038
+- id: T-12
+  field: 解析的整数論
+  topic: 複素解析を使わない素数分布（ディリクレ指標と L 級数、チェビシェフの評価）
+  sources:
+  - FR061
+  - FR062
+  - FR094
+  units:
+  - N-046
+  - N-048
+- id: T-13
+  field: 解析的整数論
+  topic: 複素解析による素数分布（ζ と L 関数、素数定理、関数等式、リーマン予想）
+  sources:
+  - FR061
+  - FR062
+  - FR094
+  units:
+  - N-048
+  - N-058
+  - D-037
+- id: T-14
+  field: 解析的整数論
+  topic: セルバーグの二次篩とその応用
+  sources:
+  - FR061
+  - FR062
+  - FR094
+  units:
+  - N-063
+- id: T-15
+  field: 解析的整数論
+  topic: 指数和の評価（ファン・デル・コルプト）とワイルの一様分布
+  sources:
+  - FR061
+  - FR062
+  - FR094
+  units:
+  - N-064
+- id: T-16
+  field: 解析的整数論
+  topic: 素数の間隔（張とメイナードの結果）
+  sources:
+  - FR061
+  - FR062
+  - FR065
+  units:
+  - N-058
+  - N-063
+- id: T-17
+  field: 代数幾何
+  topic: 可換環論（アティヤ–マクドナルド）
+  sources:
+  - FR061
+  - FR062
+  - FR070
+  units:
+  - R-024
+  - R-025
+- id: T-18
+  field: 代数幾何
+  topic: アフィン多様体と射影多様体、射、ブローアップ（零点定理、次元と次数、ヒルベルト多項式、特異点）
+  sources:
+  - FR061
+  - FR062
+  - FR070
+  - FR090
+  units:
+  - T-030
+  - T-031
+  - R-025
+- id: T-19
+  field: 代数幾何
+  topic: 連接層、導来関手と層のコホモロジー
+  sources:
+  - FR061
+  - FR062
+  - FR069
+  units:
+  - T-036
+  - T-037
+  - R-027
+- id: T-20
+  field: 代数幾何
+  topic: 曲線（リーマン–ロッホとリーマン–フルヴィッツ）
+  sources:
+  - FR061
+  - FR062
+  - FR067
+  - FR090
+  units:
+  - T-034
+  - T-038
+  - D-041
+- id: T-21
+  field: 代数幾何
+  topic: 導来圏とホモロジー代数、関手の点の見方、∞圏
+  sources:
+  - FR061
+  - FR062
+  - FR068
+  units:
+  - R-029
+  - R-031
+- id: T-22
+  field: 表現論
+  topic: 加群とテンソル積、有限群の表現（指標理論、誘導表現、群環）
+  sources:
+  - FR061
+  - FR062
+  - FR071
+  - FR090
+  units:
+  - R-011
+  - M-011
+  - R-016
+  - R-017
+- id: T-23
+  field: 表現論
+  topic: リー群とリー代数
+  sources:
+  - FR061
+  - FR062
+  - FR090
+  - FR073
+  - FR064
+  units:
+  - R-020
+  - R-021
+  - R-022
+  - R-023
+- id: T-24
+  field: 表現論
+  topic: ホモロジー代数（Ext、導来圏、グロタンディーク群）と圏論（随伴）
+  sources:
+  - FR061
+  - FR062
+  - FR071
+  units:
+  - R-026
+  - R-027
+  - R-029
+- id: T-25
+  field: 表現論
+  topic: 代数群と代数幾何
+  sources:
+  - FR061
+  - FR062
+  - FR064
+  units:
+  - R-030
+  - T-035
+- id: T-26
+  field: 表現論
+  topic: 幾何学的表現論の基本（偏屈層、構成可能層）
+  sources:
+  - FR061
+  - FR062
+  - FR064
+  - FR068
+  units:
+  - T-046
+- id: T-27
+  field: 幾何学的群論
+  topic: 群と群作用、線形代数
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  - FR072
+  units:
+  - R-003
+  - R-004
+  - M-005
+- id: T-28
+  field: 幾何学的群論
+  topic: 点集合位相、被覆空間と基本群
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  - FR072
+  units:
+  - T-001
+  - T-003
+  - T-020
+- id: T-29
+  field: 幾何学的群論
+  topic: 微分位相とリーマン幾何
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  - FR072
+  units:
+  - T-014
+  - T-016
+- id: T-30
+  field: 幾何学的群論
+  topic: 測度論とヒルベルト空間
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  - FR072
+  units:
+  - D-020
+  - D-021
+  - D-065
+- id: T-31
+  field: 幾何学的群論
+  topic: リー群
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  units:
+  - R-023
+- id: T-32
+  field: 幾何学的群論
+  topic: 幾何学的群論の入口（ドゥルツ–カポヴィッチ、写像類群）
+  sources:
+  - FR061
+  - FR062
+  - FR072
+  units:
+  - R-032
+- id: T-33
+  field: 低次元位相
+  topic: 微分位相（滑らかな多様体、横断性、リー群）
+  sources:
+  - FR061
+  - FR062
+  - FR075
+  units:
+  - T-009
+  - T-010
+  - T-014
+  - R-023
+- id: T-34
+  field: 低次元位相
+  topic: 代数的位相（特異ホモロジーと CW ホモロジー）
+  sources:
+  - FR061
+  - FR062
+  - FR075
+  units:
+  - T-024
+  - T-027
+- id: T-35
+  field: 低次元位相
+  topic: 双曲空間と双曲多様体
+  sources:
+  - FR061
+  - FR062
+  - FR074
+  units:
+  - T-040
+- id: T-36
+  field: 低次元位相
+  topic: ゲージ理論（ヤン–ミルズ方程式とサイバーグ–ウィッテン方程式、4 次元多様体への応用）
+  sources:
+  - FR061
+  - FR062
+  - FR075
+  units:
+  - P-113
+  - T-017
+  - T-042
+- id: T-37
+  field: シンプレクティック幾何
+  topic: 常微分方程式
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  units:
+  - D-044
+  - D-045
+  - D-046
+  - D-047
+- id: T-38
+  field: シンプレクティック幾何
+  topic: 多様体と微分形式、ド・ラーム・コホモロジー
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  - FR077
+  units:
+  - T-014
+  - T-015
+- id: T-39
+  field: シンプレクティック幾何
+  topic: 代数的位相の基礎（基本群、ホモロジー、コホモロジー、ポアンカレ双対、ホモトピー群）
+  sources:
+  - FR061
+  - FR062
+  - FR077
+  - FR079
+  units:
+  - T-019
+  - T-024
+  - T-025
+  - T-027
+- id: T-40
+  field: シンプレクティック幾何
+  topic: モース理論の基礎、ベクトル束と特性類
+  sources:
+  - FR061
+  - FR062
+  - FR079
+  units:
+  - T-026
+  - T-042
+- id: T-41
+  field: シンプレクティック幾何
+  topic: ハミルトン力学
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  units:
+  - P-018
+  - P-019
+  - T-041
+- id: T-42
+  field: シンプレクティック幾何
+  topic: 一般化コホモロジー（K 理論、ボルディズム）とスペクトラム
+  sources:
+  - FR061
+  - FR062
+  - FR077
+  units:
+  - T-043
+- id: T-43
+  field: 偏微分方程式と調和解析
+  topic: 大学院の実解析（測度論）と進んだ線形代数
+  sources:
+  - FR061
+  - FR062
+  - FR080
+  units:
+  - D-019
+  - D-020
+  - D-021
+  - M-008
+- id: T-44
+  field: 偏微分方程式と調和解析
+  topic: 関数解析
+  sources:
+  - FR061
+  - FR062
+  - FR081
+  units:
+  - D-062
+  - D-065
+  - D-066
+  - D-067
+- id: T-45
+  field: 偏微分方程式と調和解析
+  topic: 超関数
+  sources:
+  - FR061
+  - FR062
+  - FR081
+  units:
+  - D-024
+- id: T-46
+  field: 偏微分方程式と調和解析
+  topic: ソボレフ空間
+  sources:
+  - FR061
+  - FR062
+  - FR081
+  units:
+  - D-025
+- id: T-47
+  field: 偏微分方程式と調和解析
+  topic: 基本の偏微分方程式（ラプラス方程式、熱方程式、波動方程式）
+  sources:
+  - FR061
+  - FR062
+  - FR081
+  units:
+  - D-049
+  - D-051
+  - D-056
+  - D-057
+  - D-059
+- id: T-48
+  field: 偏微分方程式と調和解析
+  topic: 幾何学的測度論（課程によって追加の前提）
+  sources:
+  - FR061
+  - FR062
+  - FR080
+  units:
+  - D-072
+- id: T-49
+  field: 確率論
+  topic: 実解析と複素解析（大学院初年度）
+  sources:
+  - FR061
+  - FR062
+  - FR084
+  units:
+  - D-020
+  - D-021
+  - D-030
+  - D-036
+- id: T-50
+  field: 確率論
+  topic: 測度論的確率論（大数の法則、中心極限定理）
+  sources:
+  - FR061
+  - FR062
+  - FR083
+  - FR084
+  - FR085
+  units:
+  - S-006
+  - S-007
+  - S-008
+- id: T-51
+  field: 確率論
+  topic: ブラウン運動と確率微分方程式
+  sources:
+  - FR061
+  - FR062
+  - FR082
+  units:
+  - S-012
+  - S-015
+  - S-016
+- id: T-52
+  field: 確率論
+  topic: 関数解析と偏微分方程式の基礎（フーリエ変換、ソボレフ空間）
+  sources:
+  - FR061
+  - FR062
+  - FR082
+  units:
+  - D-023
+  - D-025
+  - D-049
+- id: T-53
+  field: 確率論
+  topic: ランダム行列（集中不等式と中心極限定理から）
+  sources:
+  - FR061
+  - FR062
+  - FR096
+  units:
+  - S-032
+- id: T-54
+  field: 数理物理
+  topic: 大学院初年度の実解析と関数解析
+  sources:
+  - FR061
+  - FR062
+  - FR087
+  - FR086
+  units:
+  - D-020
+  - D-062
+  - D-065
+- id: T-55
+  field: 数理物理
+  topic: 大学院初年度の確率論
+  sources:
+  - FR061
+  - FR062
+  - FR085
+  units:
+  - S-006
+  - S-008
+- id: T-56
+  field: 数理物理
+  topic: 偏微分方程式と微分幾何の基礎（一般相対論のコーシー問題）
+  sources:
+  - FR061
+  - FR062
+  - FR087
+  units:
+  - D-059
+  - T-016
+  - P-061
+- id: T-57
+  field: 数理物理
+  topic: ブラウン運動、フーリエ変換、ソボレフ空間（確率量子化）
+  sources:
+  - FR061
+  - FR062
+  - FR082
+  units:
+  - S-012
+  - D-023
+  - D-025
+- id: T-58
+  field: 数理物理
+  topic: 分野ごとの入口（一般相対論と流体、スピングラス、非線形分散型方程式と量子多粒子系）
+  sources:
+  - FR061
+  - FR062
+  - FR087
+  - FR085
+  - FR086
+  units:
+  - P-061
+  - E-031
+  - P-052
+  - D-061
+  - P-082
+- id: T-59
+  field: 組合せ論
+  topic: 前提：抽象代数、解析、線形代数の基礎
+  sources:
+  - FR061
+  - FR062
+  - FR095
+  units:
+  - R-004
+  - D-007
+  - M-005
+- id: T-60
+  field: 組合せ論
+  topic: 極値グラフ理論（部分グラフの禁止、正則性の方法、擬似ランダムグラフ）
+  sources:
+  - FR061
+  - FR062
+  - FR095
+  units:
+  - C-031
+  - C-032
+  - C-042
+- id: T-61
+  field: 組合せ論
+  topic: グラフ極限とグラフ準同型の不等式
+  sources:
+  - FR061
+  - FR062
+  - FR095
+  units:
+  - C-042
+- id: T-62
+  field: 組合せ論
+  topic: 加法的組合せ論（3 項等差数列、和集合の構造、和積問題、疎な擬似ランダム集合の中の等差数列）
+  sources:
+  - FR061
+  - FR062
+  - FR095
+  units:
+  - C-036
+  - C-041
+- id: T-63
+  field: 組合せ論
+  topic: 周辺の入口（位相的方法、代数的組合せ論）
+  sources:
+  - FR061
+  - FR062
+  - FR088
+  - FR089
+  units:
+  - T-001
+  - C-037
+- id: T-64
+  field: 計算複雑性
+  topic: チューリング機械、計算量クラス、帰着
+  sources:
+  - FR061
+  - FR062
+  - FR091
+  units:
+  - L-026
+  - K-041
+- id: T-65
+  field: 計算複雑性
+  topic: クック–レヴィンの定理と、P、NP、PSPACE、NEXP の完全問題
+  sources:
+  - FR061
+  - FR062
+  - FR091
+  units:
+  - K-028
+  - K-041
+- id: T-66
+  field: 計算複雑性
+  topic: ブール回路（回路充足可能性、指数サイズの回路）
+  sources:
+  - FR061
+  - FR062
+  - FR091
+  units:
+  - K-121
+- id: T-67
+  field: 計算複雑性
+  topic: 確率的計算と BPP
+  sources:
+  - FR061
+  - FR062
+  - FR091
+  units:
+  - K-041
+  - S-001
+- id: T-68
+  field: 計算複雑性
+  topic: 有限体とその性質
+  sources:
+  - FR061
+  - FR062
+  - FR091
+  units:
+  - R-014
+- id: T-69
+  field: 数理論理と集合論
+  topic: 一階述語論理と、不完全性・決定不能性
+  sources:
+  - FR061
+  - FR062
+  - FR097
+  units:
+  - L-024
+  - L-026
+  - L-034
+- id: T-70
+  field: 数理論理と集合論
+  topic: モデル理論
+  sources:
+  - FR061
+  - FR062
+  - FR097
+  units:
+  - L-029
+- id: T-71
+  field: 数理論理と集合論
+  topic: 再帰理論（帰納的可算集合と次数）
+  sources:
+  - FR061
+  - FR062
+  - FR097
+  units:
+  - L-026
+- id: T-72
+  field: 数理論理と集合論
+  topic: 集合論（構成可能宇宙まで）
+  sources:
+  - FR061
+  - FR062
+  - FR097
+  units:
+  - L-021
+  - L-025
+  - L-031
+- id: T-73
+  field: 数理論理と集合論
+  topic: ゲーデルの不完全性定理とペアノ算術のモデル
+  sources:
+  - FR061
+  - FR062
+  - FR097
+  units:
+  - L-034
+- id: T-74
+  field: 高次の圏論とホモトピー型理論
+  topic: 古典的な圏論（マックレーン）
+  sources:
+  - FR061
+  - FR062
+  - FR098
+  units:
+  - R-026
+- id: T-75
+  field: 高次の圏論とホモトピー型理論
+  topic: 単体的集合の古典的ホモトピー論
+  sources:
+  - FR061
+  - FR062
+  - FR098
+  units:
+  - T-044
+- id: T-76
+  field: 高次の圏論とホモトピー型理論
+  topic: モデル圏（キレン）
+  sources:
+  - FR061
+  - FR062
+  - FR098
+  units:
+  - T-044
+- id: T-77
+  field: 高次の圏論とホモトピー型理論
+  topic: ∞圏の入門
+  sources:
+  - FR061
+  - FR062
+  - FR068
+  units:
+  - R-031
+- id: T-78
+  field: 高次の圏論とホモトピー型理論
+  topic: マルティン＝レーフの依存型理論
+  sources:
+  - FR061
+  - FR062
+  - FR099
+  units:
+  - L-030
+  - L-035
+- id: T-79
+  field: 高次の圏論とホモトピー型理論
+  topic: 単価（univalent）数学とホモトピー型理論
+  sources:
+  - FR061
+  - FR062
+  - FR099
+  units:
+  - L-035
+- id: T-80
+  field: 力学系
+  topic: 常微分方程式
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  units:
+  - D-044
+  - D-046
+  - D-053
+- id: T-81
+  field: 力学系
+  topic: 多様体と微分形式
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  units:
+  - T-014
+  - T-015
+- id: T-82
+  field: 力学系
+  topic: 群と群作用・線形代数、点集合位相と被覆空間
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  units:
+  - R-003
+  - M-005
+  - T-001
+  - T-020
+- id: T-83
+  field: 力学系
+  topic: 測度論
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  units:
+  - D-019
+  - D-020
+- id: T-84
+  field: 力学系
+  topic: リー群（等質力学系に要る）
+  sources:
+  - FR061
+  - FR062
+  - FR073
+  units:
+  - R-023
+- id: T-85
+  field: 力学系
+  topic: ハミルトン力学
+  sources:
+  - FR061
+  - FR062
+  - FR076
+  units:
+  - P-018
+  - P-019
+  - T-041

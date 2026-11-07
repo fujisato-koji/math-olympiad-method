@@ -1,0 +1,295 @@
+# 網羅表：ヒルベルトの 23 の問題（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FR003:
+    title: OpenAI, OpenAI Math Release（manuscripts and Lean artifacts）
+    url: https://github.com/openai/math
+    date: '2026-11-07'
+  FR022:
+    title: D. Hilbert（訳 M. W. Newson、HTML 版 D. Joyce）, Mathematical Problems（Bull. Amer. Math. Soc. 8 (1902) の英訳）
+    url: https://mathcs.clarku.edu/~djoyce/hilbert/problems.html
+    date: '2026-11-07'
+  FR023:
+    title: E. W. Weisstein（MathWorld）, Hilbert's Problems
+    url: https://mathworld.wolfram.com/HilbertsProblems.html
+    date: '2026-11-07'
+  FR024:
+    title: Wolfram Research（MathWorld）, Hilbert's Tenth Problem
+    url: https://mathworld.wolfram.com/HilbertsTenthProblem.html
+    date: '2026-11-07'
+  FR025:
+    title: Zhi-Wei Sun, 86 unknowns for Hilbert's tenth problem over the rationals
+    url: https://arxiv.org/abs/2610.20691
+    date: '2026-11-07'
+  FR026:
+    title: P. Koymans, C. Pagano, Hilbert's tenth problem via additive combinatorics
+    url: https://arxiv.org/abs/2412.01768
+    date: '2026-11-07'
+  FR027:
+    title: 'Y. Deng, Z. Hani, X. Ma, Hilbert''s sixth problem: derivation of fluid equations via Boltzmann''s kinetic theory'
+    url: https://arxiv.org/abs/2503.01800
+    date: '2026-11-07'
+  FR028:
+    title: S. Dasgupta, M. Kakde, Brumer-Stark Units and Explicit Class Field Theory
+    url: https://arxiv.org/abs/2103.02516
+    date: '2026-11-07'
+  FR029:
+    title: H. A. Helfgott, The ternary Goldbach conjecture is true
+    url: https://arxiv.org/abs/1312.7748
+    date: '2026-11-07'
+  FR030:
+    title: International Mathematical Union, Fields Medals 2026
+    url: https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2026
+    date: '2026-11-07'
+  FR049:
+    title: T. C. Hales, A proof of the Kepler conjecture（Ann. of Math. 162 (2005)）
+    url: https://annals.math.princeton.edu/2005/162-3/p01
+    date: '2026-11-07'
+  FR050:
+    title: T. C. Hales, An overview of the Kepler conjecture
+    url: https://arxiv.org/abs/math/9811071
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 論理
+  topic: 第 1 問題：連続体仮説（解決：独立性。ゲーデルとコーエン）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - L-021
+  - L-025
+  - L-031
+- id: T-02
+  field: 論理
+  topic: 第 2 問題：算術の公理の無矛盾性（解決：記された形では実行できない、解釈に議論あり。ゲンツェンの仕事）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - L-034
+  - L-024
+  - L-021
+- id: T-03
+  field: 幾何
+  topic: 第 3 問題：底面と高さが等しい二つの四面体は切って貼り直せるか（解決：否定的。デーン）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - G-011
+  - G-021
+  - M-011
+- id: T-04
+  field: 幾何
+  topic: 第 4 問題：二点間の最短線としての直線（問いが曖昧、標準の定式化ではほぼ解決）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-013
+  - T-013
+  - G-037
+- id: T-05
+  field: 代数
+  topic: 第 5 問題：微分可能性を仮定しないリーの連続変換群（解決：グリーソン、モンゴメリー–ジッピン。全次元のヒルベルト–スミス予想の証明は主張・査読前）
+  sources:
+  - FR022
+  - FR023
+  - FR003
+  units:
+  - R-023
+  - T-001
+  - T-003
+- id: T-06
+  field: 物理
+  topic: 第 6 問題：物理学の公理の数学的扱い（一部解決、終わりのない研究計画。剛体球の粒子系からボルツマン方程式と流体の方程式を導く）
+  sources:
+  - FR022
+  - FR023
+  - FR027
+  - FR030
+  units:
+  - P-054
+  - P-014
+  - E-031
+  - S-006
+- id: T-07
+  field: 数論
+  topic: 第 7 問題：α^β の無理性と超越性（解決：ゲルフォントとシュナイダー）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - N-049
+  - N-067
+- id: T-08
+  field: 数論
+  topic: 第 8 問題：素数の問題（未解決。リーマン予想は未解決、三素数のゴールドバッハは解決。零点のない半平面 Re s > 7/8 は主張・査読前）
+  sources:
+  - FR022
+  - FR023
+  - FR029
+  - FR003
+  units:
+  - N-048
+  - N-058
+  - N-063
+  - N-064
+- id: T-09
+  field: 数論
+  topic: 第 9 問題：任意の数体での最も一般の相互法則（一部解決：アーベルの場合はアルティン）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - N-038
+  - N-066
+  - R-028
+- id: T-10
+  field: 論理
+  topic: 第 10 問題：ディオファントス方程式の可解性の判定（解決：否定的、マチャセビッチ。Z 上有限生成の無限環へ拡張。有理数版の否定解は主張・査読前）
+  sources:
+  - FR022
+  - FR023
+  - FR024
+  - FR025
+  - FR026
+  - FR003
+  units:
+  - L-026
+  - N-035
+  - N-041
+  - C-036
+- id: T-11
+  field: 数論
+  topic: 第 11 問題：代数的数を係数とする二次形式（一部解決：ハッセ–ミンコフスキーの定理）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - M-010
+  - N-047
+  - N-055
+- id: T-12
+  field: 数論
+  topic: 第 12 問題：クロネッカーの定理の任意の代数体への拡張（一部解決：総実体の最大アーベル拡大はダスグプタ–カクデ）
+  sources:
+  - FR022
+  - FR023
+  - FR028
+  units:
+  - N-054
+  - N-066
+  - D-042
+- id: T-13
+  field: 解析
+  topic: 第 13 問題：一般の 7 次方程式を 2 変数の関数だけで解けるか（一部解決：連続関数ではコルモゴロフとアーノルド、代数関数では未解決）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - R-015
+  - D-012
+  - D-028
+- id: T-14
+  field: 代数
+  topic: 第 14 問題：ある関数の完全系（不変式の環）の有限性（解決：否定的、永田の反例）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - R-010
+  - R-024
+  - R-030
+- id: T-15
+  field: 幾何
+  topic: 第 15 問題：シューベルトの数え上げ計算の厳密な基礎（一部解決）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - T-039
+  - R-019
+- id: T-16
+  field: 幾何
+  topic: 第 16 問題：代数曲線と代数曲面の位相、極限周期の個数（未解決。極限周期の個数の一様な上界は主張・査読前）
+  sources:
+  - FR022
+  - FR023
+  - FR003
+  units:
+  - T-032
+  - T-038
+  - D-054
+- id: T-17
+  field: 代数
+  topic: 第 17 問題：定符号の形式を平方の和で表す（解決：アルティン）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - R-012
+  - R-013
+  - A-026
+- id: T-18
+  field: 幾何
+  topic: 第 18 問題：合同な多面体による空間の構成と球の最密充填（解決：ビーベルバッハ、ラインハルト、ヘイルズ）
+  sources:
+  - FR022
+  - FR023
+  - FR049
+  - FR050
+  units:
+  - R-003
+  - R-006
+  - G-048
+- id: T-19
+  field: 解析
+  topic: 第 19 問題：正則な変分問題の解は必ず解析的か（解決：ベルンシュタイン、ペトロフスキー、デ・ジョルジ、ナッシュほか）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-052
+  - D-058
+  - D-060
+- id: T-20
+  field: 解析
+  topic: 第 20 問題：一般の境界値問題（問いが曖昧な研究計画、多くの類で解決）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-052
+  - D-056
+  - D-058
+- id: T-21
+  field: 解析
+  topic: 第 21 問題：与えられたモノドロミー群を持つ線形微分方程式の存在（解決：定式化によって答えが違う。ボリブルフの反例）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-036
+  - D-038
+  - T-020
+- id: T-22
+  field: 解析
+  topic: 第 22 問題：保型関数による解析的関係の一意化（解決：一変数の場合はケーベとポアンカレ）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-040
+  - D-042
+  - T-020
+- id: T-23
+  field: 解析
+  topic: 第 23 問題：変分法の方法のさらなる発展（問いが曖昧な研究計画、完了の基準がない）
+  sources:
+  - FR022
+  - FR023
+  units:
+  - D-052
+  - D-025
+  - D-067

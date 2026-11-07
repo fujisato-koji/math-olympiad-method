@@ -171,6 +171,7 @@ items:
   sources:
   - EX04
   units:
+  - S-029
   - S-030
 - id: T-22
   field: GCSE の範囲

@@ -145,7 +145,7 @@ items:
   sources:
   - EX03
   units:
-  - S-030
+  - S-029
 - id: T-19
   field: 統計と確率
   topic: 確率（加法・乗法定理、ベイズの定理、確率変数の分布）

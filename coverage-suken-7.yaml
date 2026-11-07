@@ -51,7 +51,7 @@ items:
   topic: 平均
   sources: *id001
   units:
-  - S-029
+  - S-028
 - id: T-08
   field: 数量関係
   topic: 単位量あたりの大きさ

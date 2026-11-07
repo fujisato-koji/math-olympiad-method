@@ -1,0 +1,260 @@
+# 網羅表：スメイルの 18 の問題（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FR003:
+    title: OpenAI, OpenAI Math Release（manuscripts and Lean artifacts）
+    url: https://github.com/openai/math
+    date: '2026-11-07'
+  FR031:
+    title: S. Smale, Mathematical Problems for the Next Century（Second Version、Passau 大学の掲載）
+    url: https://www.fim.uni-passau.de/fileadmin/dokumente/fakultaeten/fim/lehrstuhl/muller/SmaleProblems1998.pdf
+    date: '2026-11-07'
+  FR032:
+    title: E. W. Weisstein（MathWorld）, Smale's Problems
+    url: https://mathworld.wolfram.com/SmalesProblems.html
+    date: '2026-11-07'
+  FR033:
+    title: M. Hampton, R. Moeckel, Finiteness of relative equilibria of the four-body problem（Invent. Math. 163 (2006)）
+    url: https://experts.umn.edu/en/publications/finiteness-of-relative-equilibria-of-the-four-body-problem/
+    date: '2026-11-07'
+  FR034:
+    title: A. Albouy, V. Kaloshin, Finiteness of central configurations of five bodies in the plane（Ann. of Math. 176 (2012)）
+    url: https://annals.math.princeton.edu/2012/176-1/p10
+    date: '2026-11-07'
+  FR035:
+    title: 'M. Moczurad, P. Zgliczyński, Central Configurations with Unequal Masses: Finiteness in Several Exceptional Cases of Five Bodies'
+    url: https://arxiv.org/abs/2601.01165
+    date: '2026-11-07'
+  FR036:
+    title: D. Dadush, Z. K. Koh, B. Natura, N. Olver, L. A. Végh, A Strongly Polynomial Algorithm for Linear Programs with at Most Two Non-Zero Entries per Row or Column (Invited Talk)
+    url: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.STACS.2025.2
+    date: '2026-11-07'
+  FR037:
+    title: M. Asaoka, K. Irie, A C^∞ closing lemma for Hamiltonian diffeomorphisms of closed surfaces
+    url: https://arxiv.org/abs/1512.06336
+    date: '2026-11-07'
+  FR038:
+    title: O. Kozlovski, W. Shen, S. van Strien, Density of hyperbolicity in dimension one（Ann. of Math. 166 (2007)）
+    url: https://annals.math.princeton.edu/2007/166-1/p04
+    date: '2026-11-07'
+  FR039:
+    title: C. Bonatti, S. Crovisier, A. Wilkinson, The C^1 generic diffeomorphism has trivial centralizer（Publ. Math. IHÉS 109 (2009)）
+    url: https://geodesic.mathdoc.fr/item/PMIHES_2009__109__185_0/
+    date: '2026-11-07'
+  FR040:
+    title: W. Tucker, A Rigorous ODE Solver and Smale's 14th Problem（Found. Comput. Math. 2 (2002)）
+    url: https://research.monash.edu/en/publications/a-rigorous-ode-solver-and-smales-14th-problem/
+    date: '2026-11-07'
+  FR041:
+    title: A. F. Ramos, D. B. Hulak, R. J. G. B. de Queiroz（Archive of Formal Proofs）, Formal Verification of an Explicit Counterexample to the Jacobian Conjecture
+    url: https://isa-afp.org/entries/Jacobian_Counterexample.html
+    date: '2026-11-07'
+  FR042:
+    title: 'C. Beltrán, L. M. Pardo, Smale''s 17th problem: Average polynomial time to compute affine and projective solutions（J. Amer. Math. Soc. 22 (2009)）'
+    url: https://www.ams.org/jams/2009-22-02/S0894-0347-08-00630-9/
+    date: '2026-11-07'
+  FR043:
+    title: P. Bürgisser, F. Cucker, On a Problem Posed by Steve Smale（Ann. of Math. 174 (2011)）
+    url: https://arxiv.org/abs/0909.2114
+    date: '2026-11-07'
+  FR044:
+    title: P. Lairez, A deterministic algorithm to compute approximate roots of polynomial systems in polynomial average time（Found. Comput. Math. 17 (2017)）
+    url: https://arxiv.org/abs/1507.05485
+    date: '2026-11-07'
+  FR048:
+    title: Clay Mathematics Institute, Poincaré Conjecture
+    url: https://www.claymath.org/millennium/poincare-conjecture/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数論
+  topic: 第 1 問題：リーマン予想（未解決。ミレニアム懸賞問題と重なる）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - N-048
+  - N-058
+  - D-037
+- id: T-02
+  field: 幾何
+  topic: 第 2 問題：ポアンカレ予想（解決：ペレルマン）
+  sources:
+  - FR031
+  - FR032
+  - FR048
+  units:
+  - T-019
+  - T-045
+- id: T-03
+  field: 計算
+  topic: 第 3 問題：P=NP か（未解決。ミレニアム懸賞問題と重なる）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - K-041
+  - K-028
+  - L-026
+- id: T-04
+  field: 計算
+  topic: 第 4 問題：1 変数多項式の整数零点（未解決）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - A-026
+  - K-041
+- id: T-05
+  field: 数論
+  topic: 第 5 問題：ディオファントス曲線の高さの評価（未解決。判定可能かどうかも分かっていない）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - N-057
+  - N-069
+  - N-067
+- id: T-06
+  field: 力学系
+  topic: 第 6 問題：天体力学の相対平衡の個数の有限性（一部解決：4 体はハンプトン–メッケル、平面の 5 体はアルブイ–カロシンが例外を除いて有限、例外の一部は計算機援用）
+  sources:
+  - FR031
+  - FR032
+  - FR033
+  - FR034
+  - FR035
+  units:
+  - P-009
+  - P-018
+  - D-053
+  - K-120
+- id: T-07
+  field: 計算
+  topic: 第 7 問題：球面上の点の分布（未解決）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - T-007
+  - K-041
+- id: T-08
+  field: 力学系
+  topic: 第 8 問題：経済理論への力学の導入（問いが曖昧な研究計画）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - D-053
+  - D-027
+  - K-011
+- id: T-09
+  field: 計算
+  topic: 第 9 問題：線形計画問題を強多項式時間で解けるか（未解決。各行か各列の非零成分が 2 個以下の場合は解決）
+  sources:
+  - FR031
+  - FR032
+  - FR036
+  units:
+  - K-010
+  - K-009
+  - K-041
+- id: T-10
+  field: 力学系
+  topic: 第 10 問題：閉包補題（一部解決：C^1 はピュー、閉曲面のハミルトン微分同相の C^∞ は浅岡–入江が埋め込み接触ホモロジーで示した）
+  sources:
+  - FR031
+  - FR032
+  - FR037
+  units:
+  - D-073
+  - T-041
+  - T-014
+- id: T-11
+  field: 力学系
+  topic: 第 11 問題：1 次元の力学系は一般に双曲的か（一部解決：実の場合はコズロフスキー–シェン–ファン・ストリーン、複素の場合は未解決）
+  sources:
+  - FR031
+  - FR032
+  - FR038
+  units:
+  - D-073
+  - D-074
+- id: T-12
+  field: 力学系
+  topic: 第 12 問題：微分同相の中心化群（一部解決：C^1 位相の生成的な場合はボナッティ–クロヴィジエ–ウィルキンソン）
+  sources:
+  - FR031
+  - FR032
+  - FR039
+  units:
+  - D-073
+  - D-063
+  - T-014
+- id: T-13
+  field: 力学系
+  topic: 第 13 問題：ヒルベルトの第 16 問題（未解決。極限周期の個数の一様な上界は主張・査読前）
+  sources:
+  - FR031
+  - FR032
+  - FR003
+  units:
+  - D-054
+  - T-032
+- id: T-14
+  field: 力学系
+  topic: 第 14 問題：ローレンツ・アトラクタ（解決：タッカーが区間演算による厳密な常微分方程式の解法で示した）
+  sources:
+  - FR031
+  - FR032
+  - FR040
+  units:
+  - D-055
+  - D-073
+  - K-120
+- id: T-15
+  field: 解析
+  topic: 第 15 問題：ナヴィエ–ストークス方程式（未解決。ミレニアム懸賞問題と重なる）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - E-031
+  - P-014
+  - D-025
+  - D-057
+- id: T-16
+  field: 代数
+  topic: 第 16 問題：ヤコビアン予想（解決：否定的。3 次元以上の反例は 2026-07 の発表で査読前だが、第三者が Isabelle で形式検証した。2 次元は未解決）
+  sources:
+  - FR031
+  - FR032
+  - FR041
+  units:
+  - D-014
+  - D-015
+  - A-026
+  - L-036
+- id: T-17
+  field: 計算
+  topic: 第 17 問題：多項式方程式の近似解を平均多項式時間で求める（解決：ベルトラン–パルド、ビュルギッサー–クッカー、レレ）
+  sources:
+  - FR031
+  - FR032
+  - FR042
+  - FR043
+  - FR044
+  units:
+  - T-030
+  - K-002
+  - K-041
+  - S-003
+- id: T-18
+  field: 計算
+  topic: 第 18 問題：知能の限界（問いが曖昧な研究計画）
+  sources:
+  - FR031
+  - FR032
+  units:
+  - L-026
+  - K-041
+  - S-025

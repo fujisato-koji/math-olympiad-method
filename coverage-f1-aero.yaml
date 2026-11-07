@@ -112,8 +112,7 @@ items:
   sources:
   - DR044
   - DR043
-  units:
-  - G-046
+  none: 地図にない（候補：検証と妥当性確認、不確かさの定量化）
 - id: T-09
   field: 工学
   topic: 風洞試験の計画と実施、CFD と風洞・走行結果の相関

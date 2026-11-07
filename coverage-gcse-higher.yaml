@@ -371,9 +371,11 @@ items:
   sources: *id001
   units:
   - S-027
+  - S-031
 - id: T-54
   field: 確率統計
   topic: ヒストグラム、累積度数のグラフ、分布の比較（箱ひげ図）、散布図と相関
   sources: *id001
   units:
+  - S-029
   - S-030

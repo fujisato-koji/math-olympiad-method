@@ -114,6 +114,8 @@ items:
   sources: *id001
   units:
   - G-046
+  - N-059
+  - N-060
 - id: T-16
   field: 数量関係
   topic: 速さ・距離・時間
@@ -141,6 +143,7 @@ items:
   topic: 実世界のグラフ（換算、散布図、移動のグラフ）
   sources: *id001
   units:
+  - S-027
   - S-030
 - id: T-20
   field: 図形
@@ -183,7 +186,7 @@ items:
   topic: 代表値と範囲
   sources: *id001
   units:
-  - S-029
+  - S-028
 - id: T-26
   field: データ
   topic: 度数表、棒グラフ、円グラフ

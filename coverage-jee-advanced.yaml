@@ -400,7 +400,7 @@ items:
   sources:
   - EX02
   units:
-  - S-030
+  - S-029
 - id: T-55
   field: 整数と離散
   topic: 集合と命題（必要条件と十分条件、否定、ド・モルガンの法則）

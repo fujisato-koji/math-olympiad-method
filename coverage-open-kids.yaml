@@ -1,0 +1,274 @@
+# 網羅表：子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  FR001:
+    title: 'T. Tao ほか, erdosproblems: A community database for the problems on the erdosproblems.com site（版 3a73a31、2026-11-06）'
+    url: https://github.com/teorth/erdosproblems
+    date: '2026-11-07'
+  FR002:
+    title: The Formal Conjectures Authors（Google DeepMind ほか）, Formal Conjectures
+    url: https://github.com/google-deepmind/formal-conjectures
+    date: '2026-11-07'
+  FR003:
+    title: OpenAI, OpenAI Math Release（manuscripts and Lean artifacts）
+    url: https://github.com/openai/math
+    date: '2026-11-07'
+  FR006:
+    title: American Mathematical Society, Beal Prize Rules and Procedures
+    url: https://www.ams.org/profession/prizes-awards/ams-supported/beal-prize-rules
+    date: '2026-11-07'
+  FR007:
+    title: American Mathematical Society, Beal Conjecture
+    url: https://www.ams.org/profession/prizes-awards/ams-supported/beal-conjecture
+    date: '2026-11-07'
+  FR008:
+    title: 'M. A. Bennett, I. Chen, S. R. Dahmen, S. Yazdani, Generalized Fermat equations: A miscellany（Int. J. Number Theory 11 (2015)）'
+    url: https://personal.math.ubc.ca/~bennett/BeChDaYa-IJNT-2015.pdf
+    date: '2026-11-07'
+  FR009:
+    title: 'A. Ratcliffe, B. Grechuk, Generalised Fermat equation: a survey of solved cases（Expo. Math. 2025）'
+    url: https://arxiv.org/abs/2412.11933
+    date: '2026-11-07'
+  FR010:
+    title: 'J. C. Lagarias, The 3x+1 Problem: An Overview'
+    url: https://arxiv.org/abs/2111.02635
+    date: '2026-11-07'
+  FR011:
+    title: T. Tao, Almost all orbits of the Collatz map attain almost bounded values（Forum Math. Pi 10 (2022)）
+    url: https://arxiv.org/abs/1909.03562
+    date: '2026-11-07'
+  FR012:
+    title: D. Barina, Improved verification limit for the convergence of the Collatz conjecture（J. Supercomputing 81 (2025)）
+    url: https://www.fit.vut.cz/research/publication-file/c197809/298514/s11227-025-07337-0.pdf
+    date: '2026-11-07'
+  FR013:
+    title: J. Pintz, Landau's problems on primes（J. Théor. Nombres Bordeaux 21 (2009)）
+    url: https://jtnb.centre-mersenne.org/articles/10.5802/jtnb.676/
+    date: '2026-11-07'
+  FR014:
+    title: T. Oliveira e Silva, S. Herzog, S. Pardi, Empirical verification of the even Goldbach conjecture and computation of prime gaps up to 4·10^18（Math. Comp. 83 (2014)）
+    url: https://www.ams.org/journals/mcom/2014-83-288/S0025-5718-2013-02787-1
+    date: '2026-11-07'
+  FR015:
+    title: H. A. Helfgott, The ternary Goldbach problem
+    url: https://arxiv.org/abs/1501.05438
+    date: '2026-11-07'
+  FR016:
+    title: P. Ochem, M. Rao, Odd perfect numbers are greater than 10^1500（Math. Comp. 81 (2012)）
+    url: https://www.ams.org/mcom/2012-81-279/S0025-5718-2012-02563-4/
+    date: '2026-11-07'
+  FR017:
+    title: P. Ochem（LIRMM）, Odd perfect numbers
+    url: https://www.lirmm.fr/~ochem/opn/
+    date: '2026-11-07'
+  FR018:
+    title: E. W. Weisstein（MathWorld）, Odd Perfect Number
+    url: https://mathworld.wolfram.com/OddPerfectNumber.html
+    date: '2026-11-07'
+  FR019:
+    title: L. A. Ferreira, Real exponential sums over primes and prime gaps（査読前）
+    url: https://arxiv.org/abs/2307.08725
+    date: '2026-11-07'
+  FR020:
+    title: A. D. N. J. de Grey, The chromatic number of the plane is at least 5
+    url: https://arxiv.org/abs/1804.02385
+    date: '2026-11-07'
+  FR021:
+    title: M. J. H. Heule, Computing Small Unit-Distance Graphs with Chromatic Number 5
+    url: https://arxiv.org/abs/1805.12181
+    date: '2026-11-07'
+  FR029:
+    title: H. A. Helfgott, The ternary Goldbach conjecture is true
+    url: https://arxiv.org/abs/1312.7748
+    date: '2026-11-07'
+  FR052:
+    title: Y. Zhang, Bounded gaps between primes（Ann. of Math. 179 (2014)）
+    url: https://annals.math.princeton.edu/2014/179-3/p07
+    date: '2026-11-07'
+  FR053:
+    title: J. Maynard, Small gaps between primes（Ann. of Math. 181 (2015)）
+    url: https://annals.math.princeton.edu/2015/181-1/p07
+    date: '2026-11-07'
+  FR054:
+    title: D. H. J. Polymath, Variants of the Selberg sieve, and bounded intervals containing many primes（Res. Math. Sci. 1 (2014)）
+    url: https://arxiv.org/abs/1407.4897
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 主張
+  topic: ビール予想の主張：A^x + B^y = C^z（x、y、z は 3 以上）が正の整数で成り立てば、A、B、C には共通の素因数がある（未解決、懸賞 100 万ドル）
+  sources:
+  - FR002
+  - FR007
+  - FR006
+  units:
+  - A-009
+  - N-018
+  - N-021
+  - N-029
+- id: T-02
+  field: 攻め方
+  topic: ビール予想の攻め方：楕円曲線の有理点、ダルモン–グランヴィルの定理（指数を固定すれば原始解は有限個）、フライ曲線とガロア表現のモジュラー性、ヒルベルト・モジュラー形式
+  sources:
+  - FR008
+  - FR009
+  units:
+  - N-057
+  - N-069
+  - N-062
+  - N-065
+- id: T-03
+  field: 主張
+  topic: コラッツ予想の主張：偶数なら 2 で割り、奇数なら 3 倍して 1 を足すことをくり返すと、どの正の整数から始めても 1 に着く（未解決、2^71 まで確認）
+  sources:
+  - FR001
+  - FR002
+  - FR012
+  units:
+  - N-008
+  - N-013
+  - N-014
+  - A-008
+- id: T-04
+  field: 攻め方
+  topic: コラッツ予想の攻め方：周期軌道と指数型のディオファントス方程式（ベイカーの理論）、写像の反復を実数・複素数・2 進整数へ広げる力学系、2 進整数上のエルゴード性、一般化した写像の決定不能性（コンウェイ）、確率モデルとタオの方法（ほとんどすべての軌道）、大規模な計算
+  sources:
+  - FR010
+  - FR011
+  - FR012
+  units:
+  - N-067
+  - D-053
+  - D-074
+  - N-055
+  - S-007
+  - L-026
+  - S-005
+  - S-008
+  - K-022
+- id: T-05
+  field: 主張
+  topic: ゴールドバッハ予想の主張：4 以上の偶数はどれも 2 つの素数の和で書ける（未解決、4·10^18 まで確認）
+  sources:
+  - FR002
+  - FR014
+  units:
+  - N-007
+  - N-008
+  - N-021
+- id: T-06
+  field: 攻め方
+  topic: ゴールドバッハ予想の攻め方：素数の分布と L 関数、円周法、ヴィノグラードフの素数上の三角和（三素数の版は解決）、篩法とボンビエリ–ヴィノグラードフの定理（陳の定理）、例外集合の評価
+  sources:
+  - FR013
+  - FR015
+  - FR029
+  units:
+  - N-048
+  - N-058
+  - N-064
+  - N-063
+- id: T-07
+  field: 主張
+  topic: 双子素数予想の主張：差が 2 の素数の組は無限にある（未解決）
+  sources:
+  - FR002
+  - FR013
+  units:
+  - N-007
+  - N-021
+  - N-030
+- id: T-08
+  field: 攻め方
+  topic: 双子素数予想の攻め方：算術級数の中の素数の分布（ボンビエリ–ヴィノグラードフの定理と張の強化）、セルバーグの篩とゴールドストン–ピンツ–ユルドゥルムの方法、メイナードの多次元の篩、篩の変種と数値の最適化、篩のパリティ問題（差 246 以下の組が無限にあることまでは解決）
+  sources:
+  - FR013
+  - FR052
+  - FR053
+  - FR054
+  units:
+  - N-058
+  - N-063
+  - K-009
+- id: T-09
+  field: 主張
+  topic: 奇数の完全数の問題の主張：自分以外の約数の和が自分に等しい奇数はあるか（未解決）
+  sources:
+  - FR002
+  - FR018
+  units:
+  - N-008
+  - N-017
+  - N-024
+- id: T-10
+  field: 攻め方
+  topic: 奇数の完全数の攻め方：約数の和の関数の乗法性とオイラーの形、素因数分解の大規模な計算（木の方法）、素因数の個数の不等式（あるとすれば 10^1500 より大きい）
+  sources:
+  - FR016
+  - FR017
+  - FR018
+  units:
+  - N-024
+  - N-032
+  - N-050
+  - N-043
+- id: T-11
+  field: 主張
+  topic: ルジャンドル予想の主張：n^2 と (n+1)^2 の間にはいつも素数がある（未解決。十分大きな n で成り立つという証明は主張・査読前）
+  sources:
+  - FR002
+  - FR013
+  - FR019
+  units:
+  - N-021
+  - N-031
+  - A-013
+- id: T-12
+  field: 攻め方
+  topic: ルジャンドル予想の攻め方：素数定理とリーマン–フォン・マンゴルトの明示公式、零点密度定理と短い区間の素数（ホーハイゼル、インガム）、解析と篩の組み合わせ（ベイカー–ハーマン–ピンツ）、概素数による近似（陳）
+  sources:
+  - FR013
+  - FR019
+  units:
+  - N-048
+  - N-058
+  - N-063
+- id: T-13
+  field: 主張
+  topic: ハドウィガー–ネルソン問題の主張：距離がちょうど 1 の 2 点が違う色になるように平面を塗るとき、最少で何色いるか（未解決、答えは 5〜7）
+  sources:
+  - FR002
+  - FR020
+  units:
+  - C-010
+  - C-012
+  - G-019
+- id: T-14
+  field: 攻め方
+  topic: ハドウィガー–ネルソン問題の攻め方：単位距離グラフの彩色、計算機による有限グラフの探索と 4 色で塗れないことの機械的な確認、節の証明の最小化（5 色で足りないという 2026 年の主張は主張・査読前）
+  sources:
+  - FR003
+  - FR020
+  - FR021
+  units:
+  - C-023
+  - C-032
+  - L-023
+  - K-028
+- id: T-15
+  field: 主張
+  topic: ランダウの第 1 問題の主張：n^2 + 1 の形の素数は無限にある（未解決）
+  sources:
+  - FR013
+  units:
+  - A-009
+  - N-021
+  - N-030
+- id: T-16
+  field: 攻め方
+  topic: ランダウの第 1 問題の攻め方：既約な多項式の値への篩法（ラーデマッハー、ブーフシュタープ）、イワニエツの二次多項式の篩（素因数 2 個以下の数）、最大の素因数の評価（フーリー）
+  sources:
+  - FR013
+  units:
+  - N-063
+  - N-058
+  - A-036

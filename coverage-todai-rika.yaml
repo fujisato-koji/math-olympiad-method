@@ -405,6 +405,7 @@ items:
   - EX05
   - EX06
   units:
+  - S-029
   - S-030
 - id: T-48
   field: 確率と統計

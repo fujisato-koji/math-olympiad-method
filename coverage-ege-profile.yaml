@@ -192,7 +192,7 @@ items:
   sources:
   - EX22
   units:
-  - S-030
+  - S-029
 - id: T-24
   field: 論理と確率統計
   topic: 確率

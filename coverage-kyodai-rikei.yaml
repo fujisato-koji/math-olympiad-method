@@ -388,6 +388,7 @@ items:
   - EX07
   - EX08
   units:
+  - S-029
   - S-030
 - id: T-46
   field: 確率と統計

@@ -539,7 +539,7 @@ items:
   sources:
   - EX01
   units:
-  - S-030
+  - S-029
 - id: T-73
   field: 確率と統計
   topic: 標本調査と標本平均

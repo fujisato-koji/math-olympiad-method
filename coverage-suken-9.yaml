@@ -51,6 +51,7 @@ items:
   sources: *id001
   units:
   - G-046
+  - N-059
 - id: T-08
   field: 量と測定
   topic: 時刻の理解

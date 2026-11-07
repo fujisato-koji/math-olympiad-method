@@ -221,6 +221,15 @@ def check(data, problems):
         off = [uid for uid, (_, _, u) in units.items() if uid not in on_path and not u.get("measure")]
         if off:
             print(f"警告: どの目標の道のりにも入らない単元 {len(off)}（網羅表がそろったら誤りに戻す）")
+    # 大学院の目標の論題が段 3 以下の単元だけを指すなら、記号の取り違えを疑う（語の部分一致の誤りがあった）
+    levels = {g["id"]: str(g.get("level", "")) for g in data.get("goals", [])}
+    for gid, cov in data["coverages"].items():
+        if not levels.get(gid, "").startswith("大学院"):
+            continue
+        for item in cov.get("items", []):
+            us = [u for u in item.get("units") or [] if u in units]
+            if us and max(units[u][1] for u in us) <= 3:
+                print(f"警告: [{gid}] {item.get('id')} 「{item.get('topic', '')[:30]}」が段 3 以下の単元だけを指す（取り違えの疑い）")
     return errors
 
 

@@ -39,6 +39,7 @@ items:
   topic: 長さと時刻
   sources: *id001
   units:
+  - G-046
   - N-059
 - id: T-06
   field: P1
@@ -91,6 +92,7 @@ items:
   sources: *id001
   units:
   - G-046
+  - N-059
 - id: T-14
   field: P2
   topic: 平面図形と立体図形
@@ -142,6 +144,7 @@ items:
   sources: *id001
   units:
   - G-046
+  - N-059
 - id: T-22
   field: P3
   topic: 面積と周の長さ
@@ -349,4 +352,4 @@ items:
   topic: 平均
   sources: *id001
   units:
-  - S-029
+  - S-028
