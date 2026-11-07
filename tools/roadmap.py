@@ -21,6 +21,14 @@ GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の
 # 研究の頂点と第一線の仕事の分野。どちらも分野ごとに 1〜2（研究の頂点はその分野の国際的な最高の賞、2.12、D-032）
 GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "農学と獣医学", "心理学", "経済学")
 PEAK_LIMIT = {"研究の頂点": 2, "第一線の仕事": 2}
+# 考え方の水準（D-028、docs/thinking-levels.md の第 2 節）。画面の水準のページと目盛りに使う
+THINKING_LEVELS = [
+    {"id": 1, "name": "体で分かる", "about": "目の前の物と動き、観察したこと。数や言葉は物に結びついたまま使う"},
+    {"id": 2, "name": "記号で扱う", "about": "物から切り離した数・量・式・単位・決まった手順。決まりを当てはめて答えを出す"},
+    {"id": 3, "name": "関係とモデルで考える", "about": "変化、関数、法則、モデル、具体的な構造。与えられた枠組みの中で、定義と定理を使って計算し、モデルを立て、個々の命題を示す"},
+    {"id": 4, "name": "定義や原理から体系として組み立てる", "about": "公理や第一原理で定めた対象と、理論の体系そのもの。枠組みを選び、そこから主な結果を導き、どの仮定が要るかを調べる"},
+    {"id": 5, "name": "研究の最前線で新しくつくる", "about": "ここ数十年の研究で形になり、いまも動いている理論。それを道具にして、新しい定義・問い・方法を立てる"},
+]
 
 
 def default_plan(n):
@@ -53,13 +61,14 @@ def load():
     return data, problems
 
 
-def goal_units(data):
+def goal_units(data, choice=False):
     """目標ごとに、網羅表が指す単元とその前提をすべてたどった単元の集まり。
-    choice（選んで解く論題の組。網羅表の choices に名前と選ぶ数）の論題は道のりに入れない。"""
+    choice（選んで解く論題の組。網羅表の choices に名前と選ぶ数）の論題は道のりに入れない。
+    choice=True なら、選んで解く論題の単元とその前提だけをたどる（関係図に薄く描く）。"""
     needs = {u["id"]: u.get("needs", []) for u in data["units"]}
     out = {}
     for gid, cov in data["coverages"].items():
-        seen, stack = set(), [uid for i in cov.get("items", []) if not i.get("choice") for uid in i.get("units") or []]
+        seen, stack = set(), [uid for i in cov.get("items", []) if bool(i.get("choice")) == choice for uid in i.get("units") or []]
         while stack:
             uid = stack.pop()
             if uid in seen or uid not in needs:
@@ -317,16 +326,17 @@ def build(data, problems):
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],
                                        "rg": comb[u["id"]]["regions"], "pr": comb[u["id"]]["pair"]}}
                              if len(comb[u["id"]]["regions"]) > 1 else {})})
-    gu = goal_units(data)
+    gu, gc = goal_units(data), goal_units(data, choice=True)
     goals = []
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
         items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis", "choice") if k in i} for i in cov.get("items", [])]
         goals.append({**{k: g[k] for k in ("id", "name", "kind", "field", "fields", "level", "region", "note", "basis", "beyond") if k in g},
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
-                      "units": sorted(gu.get(g["id"], [])), "items": items})
+                      "units": sorted(gu.get(g["id"], [])), "items": items,
+                      **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
-               "goals": goals, "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
+               "goals": goals, "levels": THINKING_LEVELS, "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")

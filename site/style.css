@@ -245,35 +245,25 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .mini.doing i { background: var(--c); box-shadow: 0 0 0 4px var(--glow); }
 .mini.later i { border-color: color-mix(in srgb, var(--c) 40%, var(--surface)); }
 
-/* ---- 段の路線図 ---- */
-.stage-head { display: grid; gap: 6px; padding: 12px 4px 18px; }
-.stage-head h1 { font-size: clamp(26px, 4.4vw, 38px); }
-.stage-head p { margin: 0; color: var(--ink-2); }
+/* ---- 考え方の水準のページ ---- */
+.level-head { display: grid; gap: 6px; padding: 12px 4px 18px; }
+.level-head h1 { font-size: clamp(26px, 4.4vw, 38px); }
+.level-head p { margin: 0; color: var(--ink-2); }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--muted); margin: 4px 0 14px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
-.board-wrap { overflow-x: auto; margin: 0 -16px; padding: 0 16px 8px; -webkit-overflow-scrolling: touch; }
-.board { --lw: 96px; --cw: 184px; position: relative; display: grid; gap: 0 26px; min-width: max-content; padding: 4px 0 12px; }
-@media (max-width: 720px) { .board { --lw: 62px; --cw: 152px; gap: 0 18px; } .lane-title { padding: 0 6px 0 10px; } .lane-title small { display: none; } }
-.band {
-  grid-column: 1 / -1; margin: 5px 0; border-radius: 22px;
+.level-lane {
+  margin-top: 10px; padding: 2px 14px 10px; border-radius: 18px; border-left: 6px solid var(--c);
   background: color-mix(in srgb, var(--c) 7%, transparent);
-  border: 1px solid color-mix(in srgb, var(--c) 16%, transparent);
 }
-.lane-title {
-  position: sticky; left: 0; z-index: 2; grid-column: 1; align-self: stretch;
-  display: flex; flex-direction: column; justify-content: center; gap: 2px; margin: 5px 0; padding: 0 12px 0 16px;
-  border-left: 6px solid var(--c); border-radius: 22px 0 0 22px;
-  background: color-mix(in srgb, var(--c) 7%, var(--bg));
-}
-.lane-title b { font-size: 17px; }
-.lane-title small { color: var(--muted); font-size: 11px; line-height: 1.4; }
-.cell { position: relative; z-index: 1; padding: 14px 0; display: flex; align-items: center; }
-.edges { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: visible; }
-.edges .same { fill: none; stroke-width: 5; stroke-linecap: round; opacity: .9; }
-.edges .entry { stroke-dasharray: 2 9; opacity: .55; }
+.level-lane > summary { display: flex; align-items: baseline; gap: 12px; padding: 10px 0; cursor: pointer; list-style: none; }
+.level-lane > summary::-webkit-details-marker { display: none; }
+.level-lane > summary b { font-size: 17px; }
+.station-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr)); gap: 10px; padding: 2px 0 6px; }
+.goal-pick.levels .pill .n { margin-left: 6px; font-size: 12px; opacity: .65; font-variant-numeric: tabular-nums; }
+.unit-head .eyebrow a { color: inherit; }
 
 .station {
-  position: relative; z-index: 1; width: var(--cw); display: grid; grid-template-columns: 22px 1fr; gap: 2px 10px;
+  position: relative; z-index: 1; display: grid; grid-template-columns: 22px 1fr; gap: 2px 10px;
   align-items: center; text-align: left; padding: 10px 12px; border-radius: 16px;
   background: var(--surface); border: 1px solid var(--line); cursor: pointer; text-decoration: none;
   box-shadow: var(--shadow); transition: transform .2s ease, opacity .2s;
@@ -524,8 +514,8 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .map .region rect { fill: color-mix(in srgb, var(--c) 9%, transparent); stroke: color-mix(in srgb, var(--c) 28%, transparent); }
 .map .region text { font-size: 13px; font-weight: 700; fill: var(--ink); }
 .map .region .leader { stroke: color-mix(in srgb, var(--c) 30%, transparent); stroke-dasharray: 1 4; }
-.map .stage-mark line { stroke: var(--line); stroke-dasharray: 2 5; }
-.map .stage-mark text { font-size: 11px; fill: var(--muted); }
+.map .level-mark line { stroke: var(--line); stroke-dasharray: 2 5; }
+.map .level-mark text { font-size: 11px; fill: var(--muted); }
 .map .edges path { fill: none; stroke: var(--ink); stroke-opacity: .07; stroke-width: 1; }
 .map.focus .edges path.hl { stroke: var(--solid); stroke-opacity: .75; stroke-width: 1.6; }
 .map circle { fill: var(--surface); stroke: var(--c); stroke-width: 3; cursor: pointer; transition: opacity .2s; }
@@ -534,6 +524,9 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .map circle.ready { stroke-width: 4; filter: drop-shadow(0 0 4px var(--glow)); }
 .map circle.later { stroke: color-mix(in srgb, var(--c) 45%, var(--surface)); }
 .map circle.off { stroke: var(--line); fill: var(--surface); filter: none; }
+/* 選んで解く論題（選択科目）だけに要る駅は薄く描く */
+.map circle.choice { fill: var(--surface); stroke-width: 2; opacity: .4; filter: none; }
+.legend .dot.choice { opacity: .4; }
 .map.focus circle:not(.hl) { opacity: .15; }
 .map.focus .region { opacity: .7; }
 .map circle.sel { stroke-width: 5; }

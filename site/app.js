@@ -1,11 +1,12 @@
-/* みちすじ：全体の地図 → 段の路線図 → 単元の日 → 今日の問題を 1 問ずつ */
+/* みちすじ：全体の地図 → 考え方の水準のページ → 単元の日 → 今日の問題を 1 問ずつ */
 (() => {
   'use strict';
   const R = window.ROADMAP;
   const LANES = Object.fromEntries(R.lanes.map(l => [l.id, l]));
   const LANE_ORDER = R.lanes.map(l => l.id);
   const UNITS = Object.fromEntries(R.units.map(u => [u.id, u]));
-  const STAGES = Object.fromEntries(R.stages.map(s => [s.id, s]));
+  // 考え方の水準（D-028）。段（stage）は画面に出さない
+  const THINK = Object.fromEntries((R.levels || []).map(l => [l.id, l]));
   const KEY = 'michisuji.progress.v1', PREF = 'michisuji.prefs.v1';
   const STATUS_NAME = { done: '済', doing: 'いま', review: '復習', ready: '次にできる', later: 'まだ' };
   // 問題の量の決まり（R-33〜R-35）。値は仮の設計点で、記録を見て直す。
@@ -34,7 +35,7 @@
     return p;
   }
   progress = migrate(progress);
-  // わけの深さ（D-016）。段ごとに上限がある
+  // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
   const prefs = Object.assign({ music: true, parent: false, goal: 'all' }, load(PREF, {}));
@@ -43,6 +44,9 @@
   const GOAL_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.units)]));
   if (prefs.goal !== 'all' && !GOAL_SETS[prefs.goal]) prefs.goal = 'all';
   const inGoal = id => prefs.goal === 'all' || GOAL_SETS[prefs.goal].has(id);
+  // 選んで解く論題（選択科目）の駅：道のりには入らないが、関係図に薄く描く
+  const CHOICE_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.choiceUnits || [])]));
+  const inChoice = id => prefs.goal !== 'all' && CHOICE_SETS[prefs.goal].has(id);
   // 論題に届いた＝その論題を受け持つ単元がすべて済
   const isDone = id => !!(progress.units[id] && progress.units[id].done);
   const topicDone = it => !!(it.units && it.units.length && it.units.every(isDone));
@@ -119,7 +123,8 @@
     return { type: 'day', day: u.days.length };
   }
   const stepHref = (id, s) => `#/${s.type === 'extra' ? 'extra' : 'day'}/${id}/${s.day}`;
-  const order = (a, b) => a.stage - b.stage || LANE_ORDER.indexOf(a.lane) - LANE_ORDER.indexOf(b.lane) || a.id.localeCompare(b.id);
+  // 前提の浅い順、同じ深さなら流れの順
+  const order = (a, b) => DEPTH[a.id] - DEPTH[b.id] || LANE_ORDER.indexOf(a.lane) - LANE_ORDER.indexOf(b.lane) || a.id.localeCompare(b.id);
   function options() {
     const today = localDate();
     const due = R.units.filter(u => {
@@ -134,10 +139,6 @@
     const ready = R.units.filter(u => status(u.id) === 'ready' && inGoal(u.id)).sort(order)
       .slice(0, Math.max(0, 4 - doing.length)).map(u => ({ u, href: `#/day/${u.id}/1`, mode: 'はじめる', label: '1 日目' }));
     return [...due, ...doing, ...ready];
-  }
-  function currentStage() {
-    const open = R.units.filter(u => ['doing', 'review', 'ready'].includes(status(u.id)));
-    return open.length ? Math.min(...open.map(u => u.stage)) : R.stages[R.stages.length - 1].id;
   }
   // 全体の見込み（R-35）：残りの基本量 × 流れごとの係数 ＋ 復習の量
   function forecast(only = inGoal) {
@@ -164,7 +165,7 @@
   // ---- 道順 ----
   function parse() {
     const p = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
-    if (p[0] === 'stage' && STAGES[p[1]]) return { name: 'stage', stage: +p[1] };
+    if (p[0] === 'level' && THINK[p[1]]) return { name: 'level', level: +p[1] };
     if (p[0] === 'unit' && UNITS[p[1]]) return { name: 'unit', id: p[1] };
     if ((p[0] === 'day' || p[0] === 'extra') && UNITS[p[1]]) {
       const n = Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length);
@@ -177,8 +178,8 @@
   function crumbs(r) {
     const parts = [['#/', '全体の地図']];
     if (r.name === 'goal') parts.push(['', '目標：' + GOALS.find(g => g.id === r.goal).name]);
-    const stage = r.name === 'stage' ? r.stage : r.id ? UNITS[r.id].stage : null;
-    if (stage) parts.push([`#/stage/${stage}`, `段 ${stage} ${STAGES[stage].name}`]);
+    const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
+    if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
     if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
     return parts.map(([href, t], i) => i === parts.length - 1
@@ -191,14 +192,13 @@
     const r = parse(), view = $('#view');
     if (r.name !== 'day') session = null;
     Music.scene(r.name === 'day' ? 'play' : 'map');
-    view.innerHTML = r.name === 'stage' ? viewStage(r.stage)
+    view.innerHTML = r.name === 'level' ? viewLevel(r.level)
       : r.name === 'unit' ? viewUnit(r.id)
       : r.name === 'day' ? viewDay(r.id, r.day, r.type)
       : r.name === 'goal' ? viewGoal(r.goal) : viewMap();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
-    if (r.name === 'stage') { requestAnimationFrame(drawEdges); document.fonts && document.fonts.ready.then(drawEdges); }
     if (r.name === 'map') { requestAnimationFrame(drawMap); document.fonts && document.fonts.ready.then(drawMap); }
     if (r.name === 'day') drawItem();
     window.scrollTo(0, 0);
@@ -206,12 +206,16 @@
 
   // ---- 全体の地図 ----
   function viewMap() {
-    const f = forecast(), cur = currentStage(), opts = options(), kind = kindNow(), near = nearGoals(5);
+    const f = forecast(), opts = options(), kind = kindNow(), near = nearGoals(5);
     return `
     <section class="hero">
       <div class="eyebrow">ものを数えるところから、研究の最前線まで</div>
       <h1>たくさんの道から、ひとすじを。</h1>
-      <p>${R.stages.length} つの段に ${R.units.length} の駅。段は目安です。前提が済んだ駅なら、どの段の駅からでも始められ、流れごとに進み方が違ってかまいません。</p>
+      <p>${R.units.length} の駅。前提が済んだ駅なら、どこからでも始められ、流れごとに進み方が違ってかまいません。駅には、考え方の水準（1〜5）を付けています。</p>
+      <div class="goal-pick levels" role="group" aria-label="考え方の水準"><span class="k">水準</span>${(R.levels || []).map(l => {
+        const us = R.units.filter(u => u.level === l.id && inGoal(u.id));
+        return `<a class="pill" href="#/level/${l.id}">${l.id} ${esc(l.name)}<span class="n">${us.filter(u => isDone(u.id)).length} / ${us.length}</span></a>`;
+      }).join('')}</div>
       <div class="goal-pick" role="group" aria-label="目標の種類">
         <span class="k">目標</span>
         ${KINDS.map(k => `<button class="pill kind" type="button" data-goalkind="${esc(k)}" aria-pressed="${kind === k}">${esc(k)}<span class="n">${goalsOf(k).length}</span></button>`).join('')}
@@ -244,8 +248,9 @@
       <h2 class="section-title">全体の関係図</h2>
       <div class="legend">${['done', 'doing', 'ready', 'later'].map(s =>
         `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
-        <span>横は理解の深さ（右ほど多くの前提の上にある）、縦は領域。上の目盛りは段のおよその位置</span></div>
-      ${GOAL_SETS[prefs.goal] ? `<p class="muted">目標「${esc(GOALS.find(g => g.id === prefs.goal).name)}」に要る ${GOAL_SETS[prefs.goal].size} 駅だけを描いています。全体は目標の「すべての駅」で見られます。</p>` : ''}
+        ${prefs.goal !== 'all' && CHOICE_SETS[prefs.goal].size ? `<span><span class="dot later choice" style="${lc('N')}"></span>選択の論題だけ</span>` : ''}
+        <span>横は理解の深さ（右ほど多くの前提の上にある）、縦は領域。上の目盛りは考え方の水準のおよその位置</span></div>
+      ${GOAL_SETS[prefs.goal] ? `<p class="muted">目標「${esc(GOALS.find(g => g.id === prefs.goal).name)}」に要る ${GOAL_SETS[prefs.goal].size} 駅だけを描いています${CHOICE_SETS[prefs.goal].size ? `。選んで解く論題（選択科目）だけに要る ${CHOICE_SETS[prefs.goal].size} 駅は薄く描きます` : ''}。全体は目標の「すべての駅」で見られます。</p>` : ''}
       <div class="goal-pick map-groups" role="group" aria-label="関係図の範囲"><span class="k">範囲</span>${MAP_GROUPS.map(([id, name]) =>
         `<button class="pill" type="button" data-mapgroup="${id}" aria-pressed="${(prefs.mapGroup || 'all') === id}">${esc(name)}</button>`).join('')}</div>
       <div class="map-wrap"><div id="map" class="map"></div></div>
@@ -299,15 +304,16 @@
     if (!host) return;
     // 目標を選んでいるときは、その目標の駅と、その駅がある島だけで描き直す（D-015）
     const grp = (MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0])[2];
-    const shownRegions = (R.regions || []).filter(grp).filter(rg => R.units.some(u => u.region === rg.id && inGoal(u.id)));
+    const shown = id => inGoal(id) || inChoice(id);
+    const shownRegions = (R.regions || []).filter(grp).filter(rg => R.units.some(u => u.region === rg.id && shown(u.id)));
     const shownIds = new Set(shownRegions.map(r => r.id));
-    const shownUnits = R.units.filter(u => shownIds.has(u.region) && inGoal(u.id));
+    const shownUnits = R.units.filter(u => shownIds.has(u.region) && shown(u.id));
     if (!shownUnits.length) {
       host.innerHTML = `<p class="muted">${prefs.goal === 'all' ? 'この切り替えの駅はまだありません。' : 'この範囲には、選んでいる目標の駅がありません。範囲を「すべて」にすると見えます。'}</p>`;
       return;
     }
     const minD = Math.min(...shownUnits.map(u => DEPTH[u.id])), maxD = Math.max(...shownUnits.map(u => DEPTH[u.id]));
-    // 幅に収まるなら段の間隔を縮めて収め、22px より詰まるなら図を広げて横に送る（右端の段の名前の余白 70px）
+    // 幅に収まるなら深さの間隔を縮めて収め、22px より詰まるなら図を広げて横に送る（右端の目盛りの名前の余白 70px）
     const X0 = 168, span = Math.max(1, maxD - minD), avail = Math.max(host.parentElement.clientWidth - 32, 820);
     const XS = Math.min(140, Math.max(22, (avail - X0 - 70) / span)), W = Math.max(avail, Math.ceil(X0 + span * XS + 70));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
@@ -326,14 +332,14 @@
       y += h + 8;
     });
     const H = y + 6;
-    // 段：描いている駅の深さの中央値を、段ごとにおよその位置として上に置く
-    const marks = R.stages.map(s => {
-      const ds = shownUnits.filter(u => u.stage === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
+    // 考え方の水準：描いている駅の深さの中央値を、水準ごとにおよその位置として上に置く
+    const marks = (R.levels || []).map(s => {
+      const ds = shownUnits.filter(u => u.level === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
       return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
     }).filter(Boolean);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
-    svg += marks.map((m, i) => `<g class="stage-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
-      <text x="${m.x}" y="${i % 2 ? TOP - 10 : TOP - 26}" text-anchor="middle">段 ${m.s.id} ${esc(m.s.name)}</text></g>`).join('');
+    svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
+      <text x="${m.x}" y="${i % 2 ? TOP - 10 : TOP - 26}" text-anchor="middle">水準 ${m.s.id} ${esc(m.s.name)}</text></g>`).join('');
     svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
       <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
       <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
@@ -345,7 +351,7 @@
     })).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
-      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : ' off'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g></svg>';
     host.innerHTML = svg;
     if (selected && UNITS[selected]) highlight(selected);
@@ -355,7 +361,8 @@
     const host = $('#map'), info = $('#map-info');
     if (!host) return;
     // 目標を選んでいるときは、その目標の中の鎖だけ（目標の道のりは前提で閉じているので、途中の駅も目標の中にある）
-    const up = new Set([...closure(id, 'up')].filter(inGoal)), down = new Set([...closure(id, 'down')].filter(inGoal));
+    const near = x => inGoal(x) || inChoice(x);
+    const up = new Set([...closure(id, 'up')].filter(near)), down = new Set([...closure(id, 'down')].filter(near));
     const on = new Set([id, ...up, ...down]);
     host.classList.add('focus');
     host.querySelectorAll('circle').forEach(c => { c.classList.toggle('hl', on.has(c.dataset.u)); c.classList.toggle('sel', c.dataset.u === id); });
@@ -366,88 +373,45 @@
     const u = UNITS[id];
     info.classList.remove('muted');
     info.innerHTML = `<span class="dot ${status(id)}" style="${lc(u.lane)}"></span><b>${esc(u.title)}</b>
-      <span class="muted">${u.id}・${esc(LANES[u.lane].name)}・段 ${u.stage}・${STATUS_NAME[status(id)]}・前提 ${up.size} 駅・この先 ${down.size} 駅</span>
+      <span class="muted">${u.id}・${esc(LANES[u.lane].name)}・水準 ${u.level}${inChoice(id) ? '・選択の論題' : ''}・${STATUS_NAME[status(id)]}・前提 ${up.size} 駅・この先 ${down.size} 駅</span>
       <a class="pill solid" href="#/unit/${id}">駅をひらく</a><button class="pill" type="button" data-act="unfocus">もどす</button>`;
   }
 
-  // ---- 段の路線図 ----
-  function legend() {
-    return `<div class="legend">${['done', 'doing', 'review', 'ready', 'later'].map(s =>
-      `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
-      <span>線：同じ流れの前提</span><span><span class="from" style="${lc('C')}">C1-01</span>ほかの流れや前の段の前提</span></div>`;
-  }
-  // 流れを横の帯にし、前提の深さを左から右へ並べる。分かれ道は帯の中で段をずらす。
-  // 同じ流れの中でつながりのない駅（前の段だけが前提）は、帯の下の行に横並びでまとめる。
-  function layoutStage(n) {
-    const us = R.units.filter(u => u.stage === n && inGoal(u.id)), depth = {}, sub = {}, col = {};
-    if (!us.length) return { us, col, sub, cols: 0, lanes: [] };
-    const sameLane = u => u.needs.filter(x => UNITS[x].stage === n && UNITS[x].lane === u.lane);
-    const linked = new Set();
-    us.forEach(u => sameLane(u).forEach(x => { linked.add(u.id); linked.add(x); }));
-    const d = id => depth[id] ?? (depth[id] = Math.max(0, ...sameLane(UNITS[id]).map(x => d(x) + 1)));
-    us.forEach(u => d(u.id));
-    const cols = Math.max(4, ...us.map(u => depth[u.id] + 1));
+  // ---- 考え方の水準のページ ----
+  // 水準ごとに、流れの帯の中へ駅を前提の浅い順に並べる。いま進めている・次にできる駅のある流れを開いておく
+  function viewLevel(n) {
+    const s = THINK[n], g = GOALS.find(x => x.id === prefs.goal);
+    const us = R.units.filter(u => u.level === n && inGoal(u.id)).sort(order);
     const lanes = LANE_ORDER.filter(l => us.some(u => u.lane === l)).map(l => {
-      let height = 0;
-      for (let c = 0; c < cols; c++) {
-        const here = us.filter(u => u.lane === l && linked.has(u.id) && depth[u.id] === c).map(u => {
-          const parents = sameLane(u).map(x => sub[x]);
-          return { u, want: parents.length ? Math.min(...parents) : 0 };
-        }).sort((a, b) => a.want - b.want || order(a.u, b.u));
-        let last = -1;
-        here.forEach(h => { sub[h.u.id] = Math.max(h.want, last + 1); col[h.u.id] = c; last = sub[h.u.id]; });
-        height = Math.max(height, last + 1);
-      }
-      us.filter(u => u.lane === l && !linked.has(u.id)).sort(order).forEach((u, i) => {
-        sub[u.id] = height + Math.floor(i / cols); col[u.id] = i % cols;
-      });
-      const free = us.filter(u => u.lane === l && !linked.has(u.id)).length;
-      return { id: l, height: height + Math.ceil(free / cols) };
-    });
-    return { us, col, sub, cols, lanes };
-  }
-  function viewStage(n) {
-    const s = STAGES[n], { us, col, sub, cols, lanes } = layoutStage(n);
-    let row = 1, cells = '';
-    lanes.forEach(l => {
-      cells += `<div class="band" style="grid-row:${row} / span ${l.height};${lc(l.id)}"></div>
-        <div class="lane-title" style="grid-row:${row} / span ${l.height};${lc(l.id)}">
-          <b>${esc(LANES[l.id].name)}</b><small>${esc(LANES[l.id].note)}</small></div>`;
-      us.filter(u => u.lane === l.id).forEach(u => {
-        cells += `<div class="cell" style="grid-column:${col[u.id] + 2};grid-row:${row + sub[u.id]}">${station(u)}</div>`;
-      });
-      row += l.height;
-    });
-    const parts = Object.entries(s.day).filter(([, v]) => v).map(([k, v]) => `${k} ${v}`).join('、');
-    const g = GOALS.find(x => x.id === prefs.goal);
-    const [lo, hi] = s.reason || [1, 1];
-    const reason = lo === hi ? `${circled(lo)} ${REASON[lo]}` : `${circled(lo)}〜${circled(hi)}（${REASON[hi]}まで）`;
-    const empty = !R.units.some(u => u.stage === n) ? 'この段の駅は、これから足します（大学、大学院、研究）。'
-      : 'この目標では、この段の駅は要りません。';
+      const ls = us.filter(u => u.lane === l), open = ls.some(u => ['doing', 'review', 'ready'].includes(status(u.id)));
+      return `<details class="level-lane" style="${lc(l)}"${open ? ' open' : ''}>
+        <summary><b>${esc(LANES[l].name)}</b><span class="muted">${ls.filter(u => isDone(u.id)).length} / ${ls.length} 駅</span></summary>
+        <div class="station-list">${ls.map(station).join('')}</div></details>`;
+    }).join('');
     return `
-    <section class="stage-head">
-      <div class="eyebrow">段 ${n}</div>
+    <section class="level-head">
+      <div class="eyebrow">考え方の水準 ${n}</div>
       <h1>${esc(s.name)}</h1>
-      <p>${esc(s.about)}。1 日 ${s.minutes} 分（${parts}）。わけを示す深さは ${esc(reason)}。</p>
+      <p>${esc(s.about)}。わけの示し方は ${circled(n)} ${esc(REASON[n])}。</p>
       ${g ? `<p class="goal-banner">目標「${esc(g.name)}」に要る駅だけで組み替えています。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
     </section>
-    ${us.length ? legend() : `<p class="empty">${empty}</p>`}
-    <div class="board-wrap"><div class="board" id="board" style="grid-template-columns:var(--lw) repeat(${cols}, var(--cw))">
-      ${cells}<svg class="edges" id="edges" aria-hidden="true"></svg>
-    </div></div>
+    <div class="legend">${['done', 'doing', 'review', 'ready', 'later'].map(k =>
+      `<span><span class="dot ${k}" style="${lc('N')}"></span>${STATUS_NAME[k]}</span>`).join('')}
+      <span><span class="from" style="${lc('C')}">C-001</span>ほかの流れの前提</span></div>
+    ${us.length ? lanes : '<p class="empty">この目標では、この水準の駅は要りません。</p>'}
     <div class="actions">
-      ${STAGES[n - 1] ? `<a class="pill" href="#/stage/${n - 1}">← 段 ${n - 1}</a>` : ''}
-      ${STAGES[n + 1] ? `<a class="pill" href="#/stage/${n + 1}">段 ${n + 1} →</a>` : ''}
+      ${THINK[n - 1] ? `<a class="pill" href="#/level/${n - 1}">← 水準 ${n - 1}</a>` : ''}
+      ${THINK[n + 1] ? `<a class="pill" href="#/level/${n + 1}">水準 ${n + 1} →</a>` : ''}
     </div>`;
   }
   function station(u) {
     const st = status(u.id), r = progress.units[u.id];
     const daysDone = Object.keys((r && r.days) || {}).length;
-    const outside = u.needs.filter(x => UNITS[x].stage !== u.stage || UNITS[x].lane !== u.lane);
+    const outside = u.needs.filter(x => UNITS[x].lane !== u.lane);
     const ready = u.days.filter(d => d.items && d.items.length).length;
     return `
     <a class="station ${st}${inGoal(u.id) ? '' : ' off'}" href="#/unit/${u.id}" data-id="${u.id}" style="${lc(u.lane)}">
-      <span class="dot ${st}" data-dot="${u.id}"></span>
+      <span class="dot ${st}"></span>
       <span class="sid">${u.id}</span>
       <span class="st">${esc(u.title)}</span>
       <span class="sub">${st === 'doing' ? `${daysDone} / ${u.days.length} 日` : `${u.days.length} 日`}
@@ -455,35 +419,6 @@
         ${ready ? `<span class="from" style="--c: var(--ok)">問題 ${ready} 日分</span>` : ''}
         ${u.measure ? '<span class="from" style="--c: var(--muted)">大会のため</span>' : ''}</span>
     </a>`;
-  }
-  function drawEdges() {
-    const board = $('#board'), svg = $('#edges');
-    if (!board || !svg) return;
-    const box = board.getBoundingClientRect(), w = board.scrollWidth, h = board.scrollHeight;
-    svg.setAttribute('viewBox', `0 0 ${w} ${h}`); svg.setAttribute('width', w); svg.setAttribute('height', h);
-    const pos = id => {
-      const el = board.querySelector(`[data-dot="${id}"]`);
-      if (!el) return null;
-      const r = el.getBoundingClientRect();
-      return { x: r.left - box.left + r.width / 2, y: r.top - box.top + r.height / 2 };
-    };
-    const title = board.querySelector('.lane-title');
-    const entryX = title ? title.getBoundingClientRect().right - box.left : 0;
-    let out = '';
-    R.units.forEach(u => {
-      const b = pos(u.id);
-      if (!b) return;
-      u.needs.filter(nid => UNITS[nid].lane === u.lane).forEach(nid => {
-        const a = pos(nid);
-        // 前の段から続く線は、帯の入口から引く（左端の列の駅だけ）
-        if (!a && b.x - entryX > 60) return;
-        const path = a
-          ? `M${a.x},${a.y} C${(a.x + b.x) / 2},${a.y} ${(a.x + b.x) / 2},${b.y} ${b.x},${b.y}`
-          : `M${entryX},${b.y} L${b.x},${b.y}`;
-        out += `<path class="same${a ? '' : ' entry'}" d="${path}" stroke="var(--lane-${u.lane})"/>`;
-      });
-    });
-    svg.innerHTML = out;
   }
 
   // ---- 単元：日の路線 ----
@@ -495,7 +430,7 @@
     const reviewNote = !v ? '' : v.complete ? '定着しました' : v.lapsed ? '「復習」に戻りました。確認の日をもう一度' : `次の確かめは ${v.due}`;
     return `
     <section class="unit-head" style="${lc(u.lane)}">
-      <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・段 ${u.stage}・${u.id}</div>
+      <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・<a href="#/level/${u.level}">水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</a>・${u.id}</div>
       <h1>${esc(u.title)}</h1>
       <div class="row"><span class="dot ${st}" style="${lc(u.lane)}"></span>${STATUS_NAME[st]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし。ここから始められます。'}</div>
@@ -571,7 +506,7 @@
       <div class="next-list">${next.slice(0, 8).map(u => `
         <a class="next-card" href="#/unit/${u.id}" style="${lc(u.lane)}">
           <span class="dot ${status(u.id)}"></span>
-          <span class="mode">${STATUS_NAME[status(u.id)]}・${esc(LANES[u.lane].name)}・段 ${u.stage}</span>
+          <span class="mode">${STATUS_NAME[status(u.id)]}・${esc(LANES[u.lane].name)}・水準 ${u.level}</span>
           <span class="t">${esc(u.title)}</span>
         </a>`).join('') || '<p class="muted">この目標の駅はすべて済みました。</p>'}</div>
     </section>
@@ -869,7 +804,7 @@
     progress = { units: {} }; save(KEY, progress); menu.close(); render();
   });
   window.addEventListener('hashchange', render);
-  window.addEventListener('resize', () => { const n = parse().name; if (n === 'stage') drawEdges(); if (n === 'map') drawMap(); });
+  window.addEventListener('resize', () => { if (parse().name === 'map') drawMap(); });
 
   Music.init(prefs.music);
   sync();
