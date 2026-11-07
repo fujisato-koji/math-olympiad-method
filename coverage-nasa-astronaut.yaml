@@ -1,0 +1,177 @@
+# 網羅表：NASA の宇宙飛行士（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR001:
+    title: NASA, Astronaut Requirements
+    url: https://www.nasa.gov/humans-in-space/astronauts/astronaut-requirements/
+    date: '2026-11-07'
+  DR002:
+    title: 'NASA（Johnson Space Center）, Becoming an Astronaut: Frequently Asked Questions'
+    url: https://www.nasa.gov/humans-in-space/becoming-an-astronaut-frequently-asked-questions/
+    date: '2026-11-07'
+  DR003:
+    title: 'NASA（Johnson Space Center）, NASAfacts: Astronaut Selection and Training（FS-2011-11-057-JSC）'
+    url: https://www.nasa.gov/wp-content/uploads/2017/05/606877main_fs-2011-11-057-jsc-astro_trng.pdf
+    date: '2026-11-07'
+  DR004:
+    title: 'NASA（Johnson Space Center）, Summer Training: Catching Up With NASA''s Astronaut Candidates'
+    url: https://www.nasa.gov/centers-and-facilities/johnson/summer-training-catching-up-with-nasas-astronaut-candidates/
+    date: '2026-11-07'
+  DR005:
+    title: NASA, NASA Selects All-American 2025 Class of Astronaut Candidates
+    url: https://www.nasa.gov/news-release/nasa-selects-all-american-2025-class-of-astronaut-candidates/
+    date: '2026-11-07'
+  DR006:
+    title: NASA（NTRS）, K. E. Young ほか, Geoscience Training for NASA Astronaut Candidates
+    url: https://ntrs.nasa.gov/api/citations/20170000802/downloads/20170000802.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 工学
+  topic: 工学（学位の分野）：力学、材料、制御、熱
+  sources:
+  - DR001
+  - DR002
+  units:
+  - E-001
+  - E-002
+  - E-003
+  - E-038
+  - E-048
+  - E-049
+- id: T-02
+  field: 物理
+  topic: 物理科学（学位の分野）：力学、電磁気、熱、波
+  sources:
+  - DR001
+  - DR002
+  units:
+  - P-001
+  - P-002
+  - P-003
+  - P-004
+  - P-005
+  - P-006
+  - P-007
+  - P-021
+  - P-029
+  - P-030
+  - P-031
+  - P-032
+  - P-033
+  - P-042
+  - P-043
+  - P-044
+  - P-045
+- id: T-03
+  field: 計算
+  topic: 計算機科学（学位の分野）
+  sources:
+  - DR001
+  - DR002
+  units:
+  - K-012
+  - K-013
+  - K-014
+  - K-016
+  - K-021
+  - K-023
+  - K-024
+- id: T-04
+  field: 数学
+  topic: 数学（学位の分野）：微積分、線形代数、確率
+  sources:
+  - DR001
+  - DR002
+  units:
+  - D-005
+  - D-006
+  - D-014
+  - D-044
+  - M-003
+  - M-004
+  - M-007
+  - S-001
+  - S-002
+- id: T-05
+  field: 生命
+  topic: 生物科学（学位の分野）
+  sources:
+  - DR001
+  - DR002
+  units:
+  - K-097
+  - K-098
+- id: T-06
+  field: その他
+  topic: 医学（医師の学位で修士に代えられる）
+  sources:
+  - DR001
+  none: 地図にない（候補：医学）
+- id: T-07
+  field: 工学
+  topic: 宇宙ステーションの系統と宇宙機の系統の操作・故障の見分けと直し方
+  sources:
+  - DR003
+  - DR004
+  units:
+  - E-064
+  - E-047
+  - E-049
+- id: T-08
+  field: 工学
+  topic: 船外活動（宇宙遊泳）の技能
+  sources:
+  - DR003
+  - DR005
+  - DR004
+  none: 地図にない（候補：宇宙服と船外活動の工学）
+- id: T-09
+  field: 工学
+  topic: ロボットアーム（遠隔マニピュレータ）の操作
+  sources:
+  - DR003
+  - DR005
+  units:
+  - K-084
+  - K-085
+- id: T-10
+  field: 物理
+  topic: 無重量での体の動き（剛体の回転運動）
+  sources:
+  - DR003
+  units:
+  - P-005
+  - P-011
+  - P-017
+- id: T-11
+  field: その他
+  topic: 高い気圧・低い気圧とその緊急時、宇宙医学
+  sources:
+  - DR003
+  - DR005
+  - DR004
+  none: 地図にない（候補：宇宙医学と気圧の生理）
+- id: T-12
+  field: その他
+  topic: 固体地球科学（プレートの動き、地球物理、地形、火山）と軌道からの地球観測、野外の地質観察
+  sources:
+  - DR006
+  - DR004
+  none: 地図にない（候補：固体地球科学とリモートセンシング）
+- id: T-13
+  field: 物理
+  topic: 大気・海洋・気候の科学（地球の系）
+  sources:
+  - DR006
+  units:
+  - P-120
+  - P-121
+  - P-122
+  - P-161
+- id: T-14
+  field: その他
+  topic: 惑星科学（月、火星、小天体）と宇宙生物学
+  sources:
+  - DR006
+  - DR005
+  none: 地図にない（候補：惑星科学と宇宙生物学）

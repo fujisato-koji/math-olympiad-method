@@ -1,0 +1,532 @@
+# 網羅表：数学者（フィールズ賞の研究に届く知識）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR070:
+    title: University of Oxford, Mathematical Institute, Part C Mathematics Synopses 2025-26（DRAFT）
+    url: https://www.maths.ox.ac.uk/system/files/inline-files/DRAFT%20Part%20C%20Mathematics%20Synopses%202025-26.pdf
+    date: '2026-11-07'
+  DR076:
+    title: University of Warwick, MA427-15 Ergodic Theory（Undergraduate Level 4）
+    url: https://courses.warwick.ac.uk/modules/2026/MA427-15
+    date: '2026-11-07'
+  DR077:
+    title: International Mathematical Union, Fields Medals 2014
+    url: https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2014
+    date: '2026-11-07'
+  DR078:
+    title: International Mathematical Union, Fields Medals 2018
+    url: https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2018
+    date: '2026-11-07'
+  DR079:
+    title: University of Cambridge, Analytic Number Theory (M24), H. Krieger
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Number%20theory/Analytic%20Number%20Theory.pdf
+    date: '2026-11-07'
+  DR080:
+    title: International Mathematical Union, Fields Medals 2022
+    url: https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2022
+    date: '2026-11-07'
+  DR081:
+    title: University of Cambridge, Introduction to Additive Combinatorics (M24), J. Wolf
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Combinatorics/Introduction_to_Additive_Combinatorics_Wolf.pdf
+    date: '2026-11-07'
+  DR082:
+    title: University of Cambridge, Diophantine Analysis (L24), P. P. Varjú
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Number%20theory/Diophantine_Analysis_Varju_L_2027.pdf
+    date: '2026-11-07'
+  DR083:
+    title: University of Cambridge, Local Fields (M16), T. A. Fisher
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Number%20theory/Local_Fields_Fisher.pdf
+    date: '2026-11-07'
+  DR084:
+    title: University of Cambridge, Elliptic Curves (L24), A. Morgan
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Number%20theory/elliptic_curves_morgan.pdf
+    date: '2026-11-07'
+  DR085:
+    title: International Mathematical Union, Fields Medals 2026
+    url: https://www.mathunion.org/imu-awards/fields-medal/fields-medals-2026
+    date: '2026-11-07'
+  DR086:
+    title: University of Cambridge, Commutative Algebra (M24), N. J. Williams
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebra/commutativealgebra_williams.pdf
+    date: '2026-11-07'
+  DR087:
+    title: University of Cambridge, Algebraic Geometry (M24), S. Canning
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebraic%20Geometry/algebraicgeometry_canning.pdf
+    date: '2026-11-07'
+  DR088:
+    title: 'University of Cambridge, Algebraic Geometry II: Curves and Surfaces (L24), D. Ranganathan'
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebraic%20Geometry/Part%20III%202027.pdf
+    date: '2026-11-07'
+  DR089:
+    title: University of Cambridge, Intersection Theory (L24), J. Jackson
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebraic%20Geometry/Intersection_Theory.pdf
+    date: '2026-11-07'
+  DR090:
+    title: University of Cambridge, Complex Manifolds (L24), M. Jeffs
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Differential%20Geometry%20and%20Topology/complex_manifolds_jeffs.pdf
+    date: '2026-11-07'
+  DR091:
+    title: University of Cambridge, Combinatorics (M16), I. Leader
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Combinatorics/Imre_Combi%20%281%29.pdf
+    date: '2026-11-07'
+  DR092:
+    title: University of Cambridge, Model Theory (M16), M. Tong
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Foundations/ModelTheory_Tong.pdf
+    date: '2026-11-07'
+  DR093:
+    title: University of Cambridge, Lie Algebras and their representations (M24), I. Grojnowski
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebra/LieAlgebras_Grojnowski.pdf
+    date: '2026-11-07'
+  DR094:
+    title: University of Cambridge, Analysis of Partial Differential Equations (M24), Z. Wyatt
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Analysis%20and%20PDEs/Zoe_Wyatt.pdf
+    date: '2026-11-07'
+  DR095:
+    title: University of Cambridge, Elliptic Partial Differential Equations (L24), G. Orriols
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Analysis%20and%20PDEs/PartIII_outline_EPDE_2627.pdf
+    date: '2026-11-07'
+  DR096:
+    title: University of Cambridge, Functional Analysis (M24), A. Zsák
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Analysis%20and%20PDEs/functional_analysis_zsak.pdf
+    date: '2026-11-07'
+  DR097:
+    title: Rutgers University, Department of Mathematics, 16:640:521 Harmonic Analysis
+    url: https://math.rutgers.edu/academics/graduate-program/course-descriptions/1283-640-521-harmonic-analysis
+    date: '2026-11-07'
+  DR098:
+    title: University of Cambridge, Recent progress on Hilbert's sixth problem (L16, Non-Examinable), C. Mouhot
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebraic%20Geometry/PartIII_nonexaminable_template.pdf
+    date: '2026-11-07'
+  DR099:
+    title: University of Cambridge, Advanced Probability (M24), J. Norris
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Probability/Advanced_Probability.pdf
+    date: '2026-11-07'
+  DR100:
+    title: University of Cambridge, Stochastic Calculus (L24), J. Miller
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Probability/Stochastic%20Calculus%20with%20Applications.pdf
+    date: '2026-11-07'
+  DR101:
+    title: University of Cambridge, The Ising model (M16), F. R. Klausen
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Probability/Course_description.pdf
+    date: '2026-11-07'
+  DR102:
+    title: University of Cambridge, Percolation and related topics (M16), S. Sarkar
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Probability/Percolation_Sarkar.pdf
+    date: '2026-11-07'
+  DR103:
+    title: University of Cambridge, Random walks and phase transitions (L24), P.-F. Rodriguez
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Probability/PartIII_RWPT_2627.pdf
+    date: '2026-11-07'
+  DR104:
+    title: University of Cambridge, Algebraic Topology (M24), O. Randal-Williams
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Differential%20Geometry%20and%20Topology/Algebraic_Topology_Randal-Williams.pdf
+    date: '2026-11-07'
+  DR105:
+    title: University of Cambridge, Differential Geometry (M24), Yang Li
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Differential%20Geometry%20and%20Topology/Differential_Geometry_Part_III-1.pdf
+    date: '2026-11-07'
+  DR106:
+    title: University of Cambridge, Riemannian Geometry (L24), A. Kovalev
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Differential%20Geometry%20and%20Topology/Riemannian-Geometry_Kovalev.pdf
+    date: '2026-11-07'
+  DR107:
+    title: 'University of California, Santa Cruz, MATH 248: Symplectic Geometry'
+    url: https://catalog.ucsc.edu/en/current/general-catalog/courses/math-mathematics/graduate/math-248
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: エルゴード理論と力学系（エルゴード定理、エントロピー、安定性、カオス）
+  sources:
+  - DR076
+  - DR077
+  units:
+  - S-007
+  - D-053
+  - D-054
+  - D-055
+- id: T-02
+  field: 数学
+  topic: くりこみによる力学系の理論、斉次力学と数論的な対象の等分布
+  sources:
+  - DR077
+  - DR078
+  none: 地図にない（候補：力学系の発展（くりこみ、斉次力学））
+- id: T-03
+  field: 数学
+  topic: Riemann 面のモジュライ空間の力学と幾何
+  sources:
+  - DR077
+  none: 地図にない（候補：リーマン面のモジュライ空間）
+- id: T-04
+  field: 数学
+  topic: 算術関数、Riemann ゼータ関数、素数定理、Riemann 予想、乗法的関数の平均
+  sources:
+  - DR079
+  - DR080
+  units:
+  - N-046
+  - N-048
+  - N-058
+  - D-037
+- id: T-05
+  field: 数学
+  topic: 加法的整数論（円周法、Roth の定理）と加法的組合せ論
+  sources:
+  - DR070
+  - DR081
+  units:
+  - N-058
+  - C-036
+- id: T-06
+  field: 数学
+  topic: ディオファントス近似
+  sources:
+  - DR082
+  - DR080
+  units:
+  - N-049
+- id: T-07
+  field: 数学
+  topic: 局所体：p 進数、付値、Hensel の補題、分岐
+  sources:
+  - DR083
+  - DR078
+  units:
+  - N-055
+- id: T-08
+  field: 数学
+  topic: 楕円曲線：Weierstrass 方程式と群法則、有限体・局所体・数体の上の楕円曲線、Mordell–Weil の定理、Selmer 群
+  sources:
+  - DR084
+  - DR077
+  units:
+  - N-056
+  - N-057
+  - T-033
+  - D-042
+- id: T-09
+  field: 数学
+  topic: モジュラー形式：次元公式、Eisenstein 級数、Hecke 作用素
+  sources:
+  - DR070
+  - DR085
+  none: 地図にない（候補：モジュラー形式）
+- id: T-10
+  field: 数学
+  topic: 数の幾何、小さい階数の環の数え上げ
+  sources:
+  - DR077
+  units:
+  - N-047
+  - N-053
+- id: T-11
+  field: 数学
+  topic: パーフェクトイド空間、ガロア表現、新しいコホモロジー論
+  sources:
+  - DR078
+  none: 地図にない（候補：パーフェクトイド空間とガロア表現）
+- id: T-12
+  field: 数学
+  topic: 可換環論：局所化、ネーター環、準素分解、整拡大、次元論
+  sources:
+  - DR086
+  units:
+  - R-008
+  - R-009
+  - R-010
+  - R-024
+  - R-025
+- id: T-13
+  field: 数学
+  topic: スキームと層、準連接層、直線束、Picard 群、層コホモロジー
+  sources:
+  - DR087
+  - DR078
+  - DR085
+  units:
+  - T-030
+  - T-031
+  - T-035
+  - T-036
+  - T-037
+  - R-026
+  - R-027
+- id: T-14
+  field: 数学
+  topic: 曲線と曲面：種数、小平次元、ブローアップ、双有理幾何
+  sources:
+  - DR088
+  units:
+  - T-033
+  - T-034
+  - T-038
+- id: T-15
+  field: 数学
+  topic: 交叉理論：Chow 群、Chern 類、交叉積
+  sources:
+  - DR089
+  units:
+  - T-039
+- id: T-16
+  field: 数学
+  topic: Fano 多様体の有界性と極小モデル理論
+  sources:
+  - DR078
+  - DR088
+  none: 地図にない（候補：極小モデル理論）
+- id: T-17
+  field: 数学
+  topic: 複素多様体：多変数の複素解析、因子と直線束、Kähler 計量と Hodge 理論
+  sources:
+  - DR090
+  - DR080
+  units:
+  - T-029
+  - D-043
+  - T-018
+  - D-036
+  - D-041
+- id: T-18
+  field: 数学
+  topic: マトロイド、幾何的な束、Lorentz 多項式
+  sources:
+  - DR080
+  none: 地図にない（候補：マトロイドと Lorentz 多項式）
+- id: T-19
+  field: 数学
+  topic: 組合せ論：集合系、Sperner の補題、Kruskal–Katona、測度の集中
+  sources:
+  - DR091
+  - DR080
+  units:
+  - C-035
+  - C-031
+  - C-037
+- id: T-20
+  field: 数学
+  topic: 模型理論：完全な理論、超積、量化子の消去、安定性理論
+  sources:
+  - DR092
+  - DR085
+  units:
+  - L-023
+  - L-024
+  - L-029
+  - L-031
+- id: T-21
+  field: 数学
+  topic: o-極小性の数論への応用、周期写像、André–Oort 予想
+  sources:
+  - DR085
+  none: 地図にない（候補：o-極小性と数論幾何の応用）
+- id: T-22
+  field: 数学
+  topic: Lie 代数とその表現：ルート系、Weyl 群、単純 Lie 代数の分類、Weyl の指標公式
+  sources:
+  - DR093
+  - DR078
+  units:
+  - R-020
+  - R-021
+  - R-022
+  - R-019
+- id: T-23
+  field: 数学
+  topic: 偏微分方程式の解析：Hölder 空間と Sobolev 空間、楕円型の境界値問題、双曲型方程式、最大値原理
+  sources:
+  - DR094
+  - DR095
+  - DR078
+  - DR085
+  units:
+  - D-025
+  - D-056
+  - D-057
+  - D-058
+  - D-059
+  - D-060
+  - D-051
+- id: T-24
+  field: 数学
+  topic: 関数解析：Hahn–Banach、弱位相、Krein–Milman、Banach 環、スペクトル定理
+  sources:
+  - DR096
+  units:
+  - D-062
+  - D-063
+  - D-065
+  - D-066
+  - D-067
+  - D-069
+  - D-070
+  - D-068
+  - D-028
+- id: T-25
+  field: 数学
+  topic: 最適輸送：Monge 問題、Kantorovich 双対、輸送距離
+  sources:
+  - DR070
+  - DR078
+  none: 地図にない（候補：最適輸送）
+- id: T-26
+  field: 数学
+  topic: フーリエ解析と超関数：Schwartz 空間、Plancherel の定理、Poisson 和公式
+  sources:
+  - DR070
+  - DR080
+  - DR085
+  units:
+  - D-023
+  - D-024
+  - D-025
+- id: T-27
+  field: 数学
+  topic: 調和解析：補間定理、Calderón–Zygmund の特異積分、Littlewood–Paley
+  sources:
+  - DR097
+  - DR085
+  units:
+  - D-026
+  - D-023
+- id: T-28
+  field: 数学
+  topic: フーリエ変換の制限理論、幾何学的測度論、掛谷問題、デカップリング
+  sources:
+  - DR097
+  - DR085
+  none: 地図にない（候補：制限理論と幾何学的測度論）
+- id: T-29
+  field: 数学
+  topic: 球充填と E8 格子
+  sources:
+  - DR080
+  none: 地図にない（候補：球充填問題と格子）
+- id: T-30
+  field: 数学
+  topic: Hilbert の第 6 問題：Newton 力学から Boltzmann 方程式へ、平均場極限
+  sources:
+  - DR098
+  - DR085
+  units:
+  - S-028
+- id: T-31
+  field: 数学
+  topic: 波の運動論方程式と非線形分散系
+  sources:
+  - DR085
+  units:
+  - D-061
+- id: T-32
+  field: 数学
+  topic: 測度論的確率論：条件付き期待値、マルチンゲール、弱収束、大数の法則、中心極限定理
+  sources:
+  - DR099
+  units:
+  - S-006
+  - S-007
+  - S-008
+  - S-011
+  - S-013
+- id: T-33
+  field: 数学
+  topic: ブラウン運動、Poisson ランダム測度、Lévy 過程
+  sources:
+  - DR099
+  units:
+  - S-012
+  - S-014
+  - S-010
+- id: T-34
+  field: 数学
+  topic: 確率解析：伊藤積分と伊藤の公式、確率微分方程式、Feller 過程とFeynman–Kac の公式
+  sources:
+  - DR100
+  - DR070
+  - DR077
+  units:
+  - S-015
+  - S-016
+- id: T-35
+  field: 数学
+  topic: 確率偏微分方程式と正則性構造
+  sources:
+  - DR077
+  none: 地図にない（候補：確率偏微分方程式）
+- id: T-36
+  field: 数学
+  topic: イジング模型の確率論（Curie–Weiss 模型、ランダムクラスター表現）
+  sources:
+  - DR101
+  - DR080
+  units:
+  - P-052
+- id: T-37
+  field: 数学
+  topic: パーコレーション、ガウス自由場とループスープ
+  sources:
+  - DR102
+  - DR103
+  - DR080
+  none: 地図にない（候補：パーコレーションとガウス自由場）
+- id: T-38
+  field: 数学
+  topic: 代数的位相幾何：特異ホモロジーとコホモロジー、カップ積、Poincaré 双対、ベクトル束
+  sources:
+  - DR104
+  - DR078
+  units:
+  - T-019
+  - T-020
+  - T-021
+  - T-022
+  - T-023
+  - T-024
+  - T-025
+  - T-026
+  - T-027
+  - T-028
+  - R-027
+  - D-027
+- id: T-39
+  field: 数学
+  topic: 微分幾何：多様体、微分形式、de Rham コホモロジー、Riemann 計量と曲率、極小曲面
+  sources:
+  - DR105
+  - DR078
+  units:
+  - T-014
+  - T-015
+  - T-016
+  - T-012
+  - T-006
+  - T-010
+- id: T-40
+  field: 数学
+  topic: Riemann 幾何：Jacobi 場、Hopf–Rinow、Bonnet–Myers、Hodge 分解、Ricci 曲率
+  sources:
+  - DR106
+  units:
+  - T-016
+  - T-017
+  - T-018
+  - T-007
+  - T-008
+- id: T-41
+  field: 数学
+  topic: シンプレクティック幾何：Darboux の定理、運動量写像、Floer ホモロジー
+  sources:
+  - DR107
+  - DR085
+  none: 地図にない（候補：シンプレクティック幾何）
+- id: T-42
+  field: 数学
+  topic: 正則曲線の数え上げ、仮想基本サイクル、Fukaya 圏
+  sources:
+  - DR085
+  none: 地図にない（候補：正則曲線の数え上げと Fukaya 圏）
+- id: T-43
+  field: 数学
+  topic: 3 次元多様体への群作用と結び目理論
+  sources:
+  - DR085
+  none: 地図にない（候補：低次元トポロジーと結び目理論）

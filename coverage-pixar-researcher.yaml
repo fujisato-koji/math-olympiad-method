@@ -1,0 +1,175 @@
+# 網羅表：Pixar の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR047:
+    title: Pixar Animation Studios, Research Team
+    url: https://www.pixar.com/research-team
+    date: '2026-11-07'
+  DR048:
+    title: Pixar Animation Studios, Technology Libraries
+    url: https://www.pixar.com/technology-libraries
+    date: '2026-11-07'
+  DR049:
+    title: Pixar Animation Studios, Software Research & Development Intern - Summer 2025
+    url: https://pixar.wd5.myworkdayjobs.com/en-US/Pixar_External_Internships/job/Software-Research---Development-Intern---Summer-2025_R-03863
+    date: '2026-11-07'
+  DR050:
+    title: 'Stanford University, CS348B: Image Synthesis Techniques'
+    url: http://gfxcourses.stanford.edu/cs348b
+    date: '2026-11-07'
+  DR051:
+    title: 'Stanford University, CS 348C: Computer Graphics: Animation and Simulation'
+    url: http://graphics.stanford.edu/courses/cs348c/
+    date: '2026-11-07'
+  DR052:
+    title: Pixar Animation Studios, SIGGRAPH 2025 Talks（Directing Cloth Draping through Blended UVs、Fine Tuning Every Grain on the Beach、Metaball Madness）
+    url: https://research.pixar.com/docs/2025.SiggraphTalks.CdGWE.pdf
+    date: '2026-11-07'
+  DR053:
+    title: 'Carnegie Mellon University（K. Crane の授業のサイト）, 15-458/858: Discrete Differential Geometry'
+    url: https://brickisland.net/DDGSpring2024/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: 機械学習
+  sources:
+  - DR047
+  - DR048
+  - DR049
+  units:
+  - K-046
+  - K-047
+  - K-051
+  - K-082
+- id: T-02
+  field: 計算
+  topic: 物理に基づく描画と様式化された描画、描画の高速化、体積の描画
+  sources:
+  - DR049
+  - DR047
+  - DR050
+  units:
+  - K-071
+  - K-072
+  - K-073
+  - K-077
+  - K-075
+- id: T-03
+  field: 物理
+  topic: 放射測定・測光・光場、カメラとレンズ、反射の模型（表面下散乱を含む）
+  sources:
+  - DR050
+  units:
+  - P-131
+  - P-023
+  - P-027
+  - K-077
+- id: T-04
+  field: 数学
+  topic: モンテカルロ積分と低食い違い量のサンプリング、分散の低減
+  sources:
+  - DR050
+  units:
+  - S-024
+  - K-073
+- id: T-05
+  field: 数学
+  topic: 信号処理とサンプリング
+  sources:
+  - DR050
+  units:
+  - E-073
+  - E-074
+- id: T-06
+  field: 計算
+  topic: 大域照明、経路追跡、双方向の光輸送、実時間の光線追跡とノイズ除去
+  sources:
+  - DR050
+  units:
+  - K-073
+  - K-077
+- id: T-07
+  field: 物理
+  topic: 物理の模擬：剛体と拘束つきの力学、粒子系、位置に基づく力学
+  sources:
+  - DR049
+  - DR051
+  units:
+  - K-076
+  - P-016
+  - P-017
+- id: T-08
+  field: 物理
+  topic: 物理の模擬：流体（粒子と格子）
+  sources:
+  - DR049
+  - DR051
+  units:
+  - P-014
+  - E-031
+  - E-035
+- id: T-09
+  field: 物理
+  topic: 物理の模擬：肉・布・破壊・物質点法（変形体）
+  sources:
+  - DR049
+  - DR051
+  - DR052
+  units:
+  - E-017
+  - E-019
+  - E-022
+- id: T-10
+  field: 数学
+  topic: 形の処理：細分割曲面、曲線と曲面のモデリング
+  sources:
+  - DR047
+  - DR048
+  - DR049
+  units:
+  - K-074
+  - K-075
+- id: T-11
+  field: 数学
+  topic: 離散微分幾何：離散外微分とラプラシアン、測地距離、共形パラメータ化、Hodge 分解
+  sources:
+  - DR053
+  units:
+  - T-011
+  - T-013
+  - T-015
+  - T-016
+  - T-018
+- id: T-12
+  field: 計算
+  topic: キャラクターの関節（リギング）とアニメーション
+  sources:
+  - DR047
+  - DR051
+  - DR052
+  units:
+  - K-076
+  - K-084
+  - K-074
+- id: T-13
+  field: 計算
+  topic: 3D の場面の共同の組み立て（OpenUSD）と手続き的な形づくり
+  sources:
+  - DR048
+  - DR051
+  units:
+  - K-078
+- id: T-14
+  field: 計算
+  topic: スケッチによる操作の画面と新しい操作の画面
+  sources:
+  - DR047
+  none: 地図にない（候補：ヒューマン・コンピュータ・インタラクション）
+- id: T-15
+  field: 計算
+  topic: C++ の開発
+  sources:
+  - DR049
+  units:
+  - K-016
+  - K-029

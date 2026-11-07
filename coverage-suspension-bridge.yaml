@@ -1,0 +1,92 @@
+# 網羅表：長大吊り橋の設計者（明石海峡大橋、1915 チャナッカレ橋）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR168:
+    title: 本州四国連絡高速道路, 募集要項・選考（募集要項：新卒採用（2027））
+    url: https://www.jb-honshi.co.jp/corp_index/recruit/info/application.html
+    date: '2026-11-07'
+  DR169:
+    title: 本州四国連絡高速道路, Akashi-Kaikyo Bridge（Introduction of the Honshu-Shikoku Bridge Project）
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/introduction/introduction_akashi.html
+    date: '2026-11-07'
+  DR170:
+    title: 本州四国連絡高速道路, Development of Materials
+    url: https://www.jb-honshi.co.jp/english/corp_index/technology/construction/construction_material.html
+    date: '2026-11-07'
+  DR171:
+    title: COWI, Together, we design a world record-breaking bridge for the 21st century
+    url: https://www.cowi.com/projects/together-we-design-a-world-record-breaking-bridge-for-the-21st-century/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 工学
+  topic: 橋の計画と設計：橋梁形式、設計法、設計荷重、材料、圧縮部材の耐荷力
+  sources:
+  - DR168
+  - DR169
+  units:
+  - E-116
+  - E-117
+  - E-118
+- id: T-02
+  field: 工学
+  topic: 補剛トラスの 3 径間 2 ヒンジの吊り橋の形式（静定・不静定構造の解析）
+  sources:
+  - DR169
+  units:
+  - E-004
+  - E-005
+  - E-011
+  - E-116
+- id: T-03
+  field: 工学
+  topic: 高強度ケーブル素線、高張力鋼（溶接性のよい鋼）
+  sources:
+  - DR170
+  units:
+  - E-015
+  - E-120
+  - E-121
+- id: T-04
+  field: 工学
+  topic: 水中不分離コンクリート、高流動コンクリート、低発熱セメント
+  sources:
+  - DR170
+  units:
+  - E-119
+  - E-122
+- id: T-05
+  field: 工学
+  topic: 空力の安定性（ツインボックス桁）、風洞実験
+  sources:
+  - DR171
+  units:
+  - E-110
+  - E-112
+  - E-113
+  - E-114
+- id: T-06
+  field: 工学
+  topic: 耐震設計と船の衝突の評価
+  sources:
+  - DR171
+  units:
+  - E-090
+  - E-098
+  - E-099
+  - E-014
+- id: T-07
+  field: 工学
+  topic: 構造ヘルスモニタリング、防食、点検と維持管理の計画
+  sources:
+  - DR171
+  - DR168
+  units:
+  - E-015
+  - E-109
+- id: T-08
+  field: 工学
+  topic: 基礎と地盤
+  sources:
+  - DR168
+  units:
+  - E-124

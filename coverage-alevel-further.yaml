@@ -1,0 +1,456 @@
+# 網羅表：A level Further Mathematics（Pearson Edexcel）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  EX16:
+    title: Pearson Edexcel Level 3 Advanced GCE in Further Mathematics (9FM0) Specification（Pearson Education、Issue 4）
+    url: https://qualifications.pearson.com/content/dam/pdf/A%20Level/Mathematics/2017/specification-and-sample-assesment/a-level-l3-further-mathematics-specification.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: Core Pure
+  topic: 数学的帰納法
+  sources:
+  - EX16
+  units:
+  - L-012
+- id: T-02
+  field: Core Pure
+  topic: 複素数の計算と多項式の解
+  sources:
+  - EX16
+  units:
+  - A-021
+  - A-026
+- id: T-03
+  field: Core Pure
+  topic: アルガン図・極形式・軌跡
+  sources:
+  - EX16
+  units:
+  - A-034
+  - G-036
+- id: T-04
+  field: Core Pure
+  topic: ド・モアブルの定理と n 乗根
+  sources:
+  - EX16
+  units:
+  - A-034
+  - G-036
+- id: T-05
+  field: Core Pure
+  topic: 行列の演算と一次変換
+  sources:
+  - EX16
+  units:
+  - M-001
+  - M-002
+- id: T-06
+  field: Core Pure
+  topic: 行列式・逆行列・3 元連立一次方程式
+  sources:
+  - EX16
+  units:
+  - M-003
+  - M-004
+- id: T-07
+  field: Core Pure
+  topic: 解と係数の関係
+  sources:
+  - EX16
+  units:
+  - A-026
+  - A-031
+- id: T-08
+  field: Core Pure
+  topic: 級数の和（Σ の公式、差分法）
+  sources:
+  - EX16
+  units:
+  - A-018
+- id: T-09
+  field: Core Pure
+  topic: マクローリン級数
+  sources:
+  - EX16
+  units:
+  - D-008
+  - D-010
+- id: T-10
+  field: Core Pure
+  topic: 回転体の体積・広義積分・関数の平均値
+  sources:
+  - EX16
+  units:
+  - D-006
+  - D-009
+- id: T-11
+  field: Core Pure
+  topic: 部分分数（二次因子）と逆三角関数の微積分
+  sources:
+  - EX16
+  units:
+  - D-006
+  - D-011
+- id: T-12
+  field: Core Pure
+  topic: 空間の直線と平面
+  sources:
+  - EX16
+  units:
+  - G-035
+- id: T-13
+  field: Core Pure
+  topic: 極座標と面積
+  sources:
+  - EX16
+  units:
+  - G-047
+- id: T-14
+  field: Core Pure
+  topic: 双曲線関数
+  sources:
+  - EX16
+  units:
+  - D-011
+- id: T-15
+  field: Core Pure
+  topic: 1 階の線形微分方程式
+  sources:
+  - EX16
+  units:
+  - D-044
+- id: T-16
+  field: Core Pure
+  topic: 2 階の定数係数線形微分方程式
+  sources:
+  - EX16
+  units:
+  - D-045
+- id: T-17
+  field: Core Pure
+  topic: 単振動・減衰振動・連立微分方程式
+  sources:
+  - EX16
+  units:
+  - D-045
+  - D-046
+  - P-007
+  - P-008
+- id: T-18
+  field: Further Pure 1
+  topic: t 公式
+  sources:
+  - EX16
+  none: 地図にない（候補：t 公式（半角の置換））
+- id: T-19
+  field: Further Pure 1
+  topic: テイラー級数・ライプニッツ則・ロピタルの定理
+  sources:
+  - EX16
+  units:
+  - D-008
+  - D-010
+- id: T-20
+  field: Further Pure 1
+  topic: 微分方程式の級数解と置換による解法
+  sources:
+  - EX16
+  units:
+  - D-045
+  - D-010
+- id: T-21
+  field: Further Pure 1
+  topic: 二次曲線（焦点・準線、接線と法線、軌跡）
+  sources:
+  - EX16
+  units:
+  - G-041
+- id: T-22
+  field: Further Pure 1
+  topic: 外積とスカラー三重積
+  sources:
+  - EX16
+  units:
+  - M-013
+- id: T-23
+  field: Further Pure 1
+  topic: 微分方程式の数値解法とシンプソンの公式
+  sources:
+  - EX16
+  units:
+  - K-002
+  - K-001
+- id: T-24
+  field: Further Pure 1
+  topic: 不等式
+  sources:
+  - EX16
+  units:
+  - A-027
+  - A-025
+- id: T-25
+  field: Further Pure 2
+  topic: 群
+  sources:
+  - EX16
+  units:
+  - R-001
+- id: T-26
+  field: Further Pure 2
+  topic: 縮小公式・弧長・回転面の面積
+  sources:
+  - EX16
+  units:
+  - D-006
+  - D-009
+- id: T-27
+  field: Further Pure 2
+  topic: 固有値・固有ベクトルと対角化
+  sources:
+  - EX16
+  units:
+  - M-007
+- id: T-28
+  field: Further Pure 2
+  topic: 複素平面の軌跡・領域と変換
+  sources:
+  - EX16
+  units:
+  - G-036
+  - D-034
+- id: T-29
+  field: Further Pure 2
+  topic: 整数論と数え上げ（互除法、ベズー、合同式、フェルマーの小定理）
+  sources:
+  - EX16
+  units:
+  - N-029
+  - N-032
+  - N-033
+- id: T-30
+  field: Further Pure 2
+  topic: 漸化式（1 階・2 階）
+  sources:
+  - EX16
+  units:
+  - A-022
+  - C-009
+- id: T-31
+  field: Further Statistics 1
+  topic: 離散分布（ポアソン・幾何・負の二項）
+  sources:
+  - EX16
+  units:
+  - S-002
+- id: T-32
+  field: Further Statistics 1
+  topic: ポアソン・幾何分布の検定と中心極限定理
+  sources:
+  - EX16
+  units:
+  - S-019
+  - S-004
+- id: T-33
+  field: Further Statistics 1
+  topic: 適合度検定と分割表
+  sources:
+  - EX16
+  units:
+  - S-019
+- id: T-34
+  field: Further Statistics 1
+  topic: 確率母関数
+  sources:
+  - EX16
+  units:
+  - S-002
+- id: T-35
+  field: Further Statistics 1
+  topic: 第一種・第二種の過誤と検出力
+  sources:
+  - EX16
+  units:
+  - S-019
+- id: T-36
+  field: Further Statistics 2
+  topic: 最小二乗回帰と残差
+  sources:
+  - EX16
+  units:
+  - S-020
+- id: T-37
+  field: Further Statistics 2
+  topic: 連続確率変数と一様分布
+  sources:
+  - EX16
+  units:
+  - S-003
+- id: T-38
+  field: Further Statistics 2
+  topic: 相関（積率相関・スピアマン）とその検定
+  sources:
+  - EX16
+  units:
+  - S-020
+  - S-019
+- id: T-39
+  field: Further Statistics 2
+  topic: 正規確率変数の一次結合
+  sources:
+  - EX16
+  units:
+  - S-003
+- id: T-40
+  field: Further Statistics 2
+  topic: 推定量と信頼区間、2 つの平均の差
+  sources:
+  - EX16
+  units:
+  - S-018
+- id: T-41
+  field: Further Statistics 2
+  topic: 正規母集団の分散の検定と区間
+  sources:
+  - EX16
+  units:
+  - S-018
+  - S-019
+- id: T-42
+  field: Further Statistics 2
+  topic: t 検定（1 標本・対応・2 標本）
+  sources:
+  - EX16
+  units:
+  - S-019
+- id: T-43
+  field: Further Mechanics 1
+  topic: 運動量と力積
+  sources:
+  - EX16
+  units:
+  - P-006
+- id: T-44
+  field: Further Mechanics 1
+  topic: 仕事・エネルギー・仕事率
+  sources:
+  - EX16
+  units:
+  - P-004
+- id: T-45
+  field: Further Mechanics 1
+  topic: 弾性ひもとばね
+  sources:
+  - EX16
+  units:
+  - P-002
+  - P-004
+- id: T-46
+  field: Further Mechanics 1
+  topic: 弾性衝突（直衝突・斜衝突）
+  sources:
+  - EX16
+  units:
+  - P-006
+- id: T-47
+  field: Further Mechanics 2
+  topic: 円運動
+  sources:
+  - EX16
+  units:
+  - P-007
+- id: T-48
+  field: Further Mechanics 2
+  topic: 重心と剛体のつり合い・転倒
+  sources:
+  - EX16
+  units:
+  - P-005
+- id: T-49
+  field: Further Mechanics 2
+  topic: 変化する力のもとでの運動と単振動
+  sources:
+  - EX16
+  units:
+  - P-007
+  - D-044
+- id: T-50
+  field: Further Mechanics 2
+  topic: 変化する加速度の運動学
+  sources:
+  - EX16
+  units:
+  - P-001
+  - D-044
+- id: T-51
+  field: Decision 1
+  topic: アルゴリズムとグラフの基礎
+  sources:
+  - EX16
+  units:
+  - C-022
+  - K-014
+- id: T-52
+  field: Decision 1
+  topic: 最小全域木と最短路
+  sources:
+  - EX16
+  units:
+  - C-022
+  - K-026
+- id: T-53
+  field: Decision 1
+  topic: 経路検査問題と巡回セールスマン問題
+  sources:
+  - EX16
+  units:
+  - C-024
+- id: T-54
+  field: Decision 1
+  topic: 臨界経路分析
+  sources:
+  - EX16
+  units:
+  - C-022
+- id: T-55
+  field: Decision 1
+  topic: 線形計画法（シンプレックス法）
+  sources:
+  - EX16
+  units:
+  - K-010
+- id: T-56
+  field: Decision 2
+  topic: 輸送問題と割当問題
+  sources:
+  - EX16
+  units:
+  - K-011
+- id: T-57
+  field: Decision 2
+  topic: ネットワークの流れ
+  sources:
+  - EX16
+  units:
+  - K-011
+- id: T-58
+  field: Decision 2
+  topic: 動的計画法
+  sources:
+  - EX16
+  units:
+  - K-024
+- id: T-59
+  field: Decision 2
+  topic: ゲーム理論（2 人ゼロ和）
+  sources:
+  - EX16
+  units:
+  - K-011
+- id: T-60
+  field: Decision 2
+  topic: 漸化式によるモデルと決定木
+  sources:
+  - EX16
+  units:
+  - C-009
+  - K-015

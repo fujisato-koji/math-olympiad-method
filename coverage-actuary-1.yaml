@@ -1,0 +1,320 @@
+# 網羅表：日本アクチュアリー会の資格試験（第 1 次試験）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CR31:
+    title: 日本アクチュアリー会 資格試験要領 別紙(1) 試験科目・内容および教科書・参考書（2026 年度）
+    url: https://www.actuaries.jp/examin/2026exam/2026-B1.html
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 事象と確率
+  sources:
+  - CR31
+  units:
+  - S-001
+  - C-011
+- id: T-02
+  field: 数学
+  topic: 確率変数と確率分布（確率密度関数、分布関数、平均と分散）
+  sources:
+  - CR31
+  units:
+  - S-002
+  - S-003
+- id: T-03
+  field: 数学
+  topic: 変数変換と和の分布
+  sources:
+  - CR31
+  units:
+  - S-003
+- id: T-04
+  field: 数学
+  topic: 積率と母関数（積率母関数、確率母関数、特性関数）
+  sources:
+  - CR31
+  units:
+  - S-002
+  - S-008
+- id: T-05
+  field: 数学
+  topic: 大数の法則と中心極限定理
+  sources:
+  - CR31
+  units:
+  - S-004
+  - S-008
+- id: T-06
+  field: 数学
+  topic: データのまとめ方
+  sources:
+  - CR31
+  units:
+  - K-060
+  - K-064
+- id: T-07
+  field: 数学
+  topic: 統計的推定と区間推定
+  sources:
+  - CR31
+  units:
+  - S-018
+- id: T-08
+  field: 数学
+  topic: 統計的検定
+  sources:
+  - CR31
+  units:
+  - S-019
+- id: T-09
+  field: 数学
+  topic: 標本分布論と標本調査
+  sources:
+  - CR31
+  units:
+  - S-018
+- id: T-10
+  field: 数学
+  topic: 最小二乗法、相関係数、回帰係数の推定と検定
+  sources:
+  - CR31
+  units:
+  - S-020
+  - K-003
+- id: T-11
+  field: 数学
+  topic: 回帰分析
+  sources:
+  - CR31
+  units:
+  - S-020
+  - K-063
+- id: T-12
+  field: 数学
+  topic: 時系列解析
+  sources:
+  - CR31
+  none: 地図にない（候補：時系列解析）
+- id: T-13
+  field: 数学
+  topic: 確率過程
+  sources:
+  - CR31
+  units:
+  - S-005
+  - S-009
+  - S-012
+- id: T-14
+  field: 計算
+  topic: シミュレーション
+  sources:
+  - CR31
+  units:
+  - S-024
+  - K-015
+- id: T-15
+  field: 数学
+  topic: 利息の計算
+  sources:
+  - CR31
+  none: 地図にない（候補：利息の理論（複利、年金現価、債券））
+- id: T-16
+  field: 数学
+  topic: 生命表と生命関数、脱退残存表
+  sources:
+  - CR31
+  none: 地図にない（候補：生命表と生命関数）
+- id: T-17
+  field: 数学
+  topic: 純保険料
+  sources:
+  - CR31
+  none: 地図にない（候補：生命保険数学（純保険料））
+- id: T-18
+  field: 数学
+  topic: 責任準備金（純保険料式）と計算基礎の変更
+  sources:
+  - CR31
+  none: 地図にない（候補：生命保険数学（責任準備金））
+- id: T-19
+  field: 数学
+  topic: 営業保険料と実務上の責任準備金
+  sources:
+  - CR31
+  none: 地図にない（候補：生命保険数学（営業保険料））
+- id: T-20
+  field: 数学
+  topic: 解約その他の諸変更に伴う計算
+  sources:
+  - CR31
+  none: 地図にない（候補：生命保険数学（契約の変更））
+- id: T-21
+  field: 数学
+  topic: 連合生命の保険と年金
+  sources:
+  - CR31
+  none: 地図にない（候補：連合生命の保険数学）
+- id: T-22
+  field: 数学
+  topic: 就業不能・要介護の給付、災害と疾病の保険
+  sources:
+  - CR31
+  none: 地図にない（候補：就業不能・要介護・疾病の保険数学）
+- id: T-23
+  field: 数学
+  topic: 料率算定の基礎（回帰分析を含む）とリスクモデル
+  sources:
+  - CR31
+  none: 地図にない（候補：損害保険数理（料率算定とリスクモデル））
+- id: T-24
+  field: 数学
+  topic: 純保険料と営業保険料の算定
+  sources:
+  - CR31
+  none: 地図にない（候補：損害保険数理（保険料の算定））
+- id: T-25
+  field: 数学
+  topic: 信頼性理論
+  sources:
+  - CR31
+  none: 地図にない（候補：信頼性理論（クレディビリティ））
+- id: T-26
+  field: 数学
+  topic: 経験料率とクラス料率
+  sources:
+  - CR31
+  none: 地図にない（候補：損害保険数理（経験料率とクラス料率））
+- id: T-27
+  field: 数学
+  topic: 支払備金の数理
+  sources:
+  - CR31
+  none: 地図にない（候補：損害保険数理（支払備金））
+- id: T-28
+  field: 数学
+  topic: 積立保険の数理
+  sources:
+  - CR31
+  none: 地図にない（候補：積立保険の数理）
+- id: T-29
+  field: 数学
+  topic: 保険料算出原理
+  sources:
+  - CR31
+  none: 地図にない（候補：保険料算出原理）
+- id: T-30
+  field: 数学
+  topic: 危険理論の基礎
+  sources:
+  - CR31
+  none: 地図にない（候補：危険理論）
+- id: T-31
+  field: 数学
+  topic: 再保険の数理
+  sources:
+  - CR31
+  none: 地図にない（候補：再保険の数理）
+- id: T-32
+  field: 数学
+  topic: リスク評価の数理
+  sources:
+  - CR31
+  none: 地図にない（候補：リスク尺度とリスク評価）
+- id: T-33
+  field: 数学
+  topic: 年金数理の基本原理と計算基礎率
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（基本原理と計算基礎率））
+- id: T-34
+  field: 数学
+  topic: 年金現価率
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（年金現価率））
+- id: T-35
+  field: 数学
+  topic: 定常人口論（人口モデルを含む）
+  sources:
+  - CR31
+  none: 地図にない（候補：定常人口論）
+- id: T-36
+  field: 数学
+  topic: 財政方式
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（財政方式））
+- id: T-37
+  field: 数学
+  topic: 保険料と責任準備金（年金）
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（保険料と責任準備金））
+- id: T-38
+  field: 数学
+  topic: 積立金と過去勤務債務
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（積立金と過去勤務債務））
+- id: T-39
+  field: 数学
+  topic: 数理的損益分析
+  sources:
+  - CR31
+  none: 地図にない（候補：年金数理（数理的損益分析））
+- id: T-40
+  field: その他
+  topic: 財務会計の機能と制度、利益計算、会計理論と会計基準
+  sources:
+  - CR31
+  none: 地図にない（候補：財務会計）
+- id: T-41
+  field: その他
+  topic: 資産の会計（有価証券、売上債権、棚卸資産、有形・無形固定資産）
+  sources:
+  - CR31
+  none: 地図にない（候補：財務会計（資産の会計））
+- id: T-42
+  field: その他
+  topic: 負債と純資産、財務諸表の作成と公開
+  sources:
+  - CR31
+  none: 地図にない（候補：財務会計（負債と純資産、財務諸表））
+- id: T-43
+  field: その他
+  topic: ミクロ経済学（需要と供給、消費者行動、費用と供給、資源配分、ゲームの理論入門）
+  sources:
+  - CR31
+  none: 地図にない（候補：ミクロ経済学）
+- id: T-44
+  field: その他
+  topic: マクロ経済学（有効需要と乗数、貨幣、マクロ経済政策）
+  sources:
+  - CR31
+  none: 地図にない（候補：マクロ経済学）
+- id: T-45
+  field: 数学
+  topic: 投資家の選好とポートフォリオ理論
+  sources:
+  - CR31
+  none: 地図にない（候補：ポートフォリオ理論）
+- id: T-46
+  field: 数学
+  topic: CAPM
+  sources:
+  - CR31
+  none: 地図にない（候補：資本資産価格モデル（CAPM））
+- id: T-47
+  field: 数学
+  topic: リスク中立の価格づけとデリバティブの評価理論
+  sources:
+  - CR31
+  units:
+  - S-017
+  - S-015
+- id: T-48
+  field: その他
+  topic: 債券・株式・デリバティブの投資分析
+  sources:
+  - CR31
+  none: 地図にない（候補：債券・株式・デリバティブの投資分析）

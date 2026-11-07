@@ -1,0 +1,100 @@
+# 網羅表：Waymo の自動運転のエンジニア（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR152:
+    title: Waymo, Machine Learning Engineer, Prediction & Planning
+    url: https://careers.withwaymo.com/jobs?gh_jid=6506689
+    date: '2026-11-07'
+  DR153:
+    title: Waymo, Senior Research Scientist, Perception
+    url: https://careers.withwaymo.com/jobs?gh_jid=8003626
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: 機械学習のモデル化と深層学習、基盤モデル
+  sources:
+  - DR152
+  - DR153
+  units:
+  - K-046
+  - K-047
+  - K-048
+  - K-049
+  - K-050
+  - K-051
+  - K-052
+- id: T-02
+  field: 計算
+  topic: 強化学習による予測・経路計画
+  sources:
+  - DR152
+  - DR153
+  units:
+  - K-056
+  - K-058
+  - K-059
+- id: T-03
+  field: 工学
+  topic: 運動計画などのロボット工学の問題
+  sources:
+  - DR152
+  units:
+  - K-055
+  - K-087
+  - K-088
+  - K-089
+- id: T-04
+  field: 計算
+  topic: 不確かさの下での計画と予測
+  sources:
+  - DR152
+  units:
+  - K-054
+  - K-057
+  - S-005
+- id: T-05
+  field: 計算
+  topic: カメラ・LiDAR・レーダーによる 3 次元の認識
+  sources:
+  - DR153
+  units:
+  - K-081
+  - K-083
+  - K-091
+  - K-080
+  - K-082
+- id: T-06
+  field: 計算
+  topic: 生成モデル（拡散モデル、自己回帰モデル）、世界モデル、マルチモーダル LLM
+  sources:
+  - DR153
+  none: 地図にない（候補：生成モデルと世界モデル）
+- id: T-07
+  field: 計算
+  topic: 分散学習と深層モデルの性能の最適化
+  sources:
+  - DR152
+  - DR153
+  units:
+  - K-027
+  - K-032
+  - K-036
+- id: T-08
+  field: 計算
+  topic: Python、C/C++
+  sources:
+  - DR152
+  units:
+  - K-012
+  - K-016
+  - K-029
+- id: T-09
+  field: 数学
+  topic: 線形代数、微分積分、確率・統計の基礎
+  sources:
+  - DR152
+  units:
+  - M-003
+  - M-007
+  - D-014
+  - S-001

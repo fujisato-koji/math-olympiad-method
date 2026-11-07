@@ -1,0 +1,69 @@
+# 網羅表：Event Horizon Telescope の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR127:
+    title: Smithsonian Institution（Smithsonian Astrophysical Observatory）、USAJOBS に掲載, Radio Astronomer（EHT group）
+    url: https://www.usajobs.gov/job/606123800
+    date: '2026-11-07'
+  DR128:
+    title: Smithsonian Institution（SAO）、USAJOBS に掲載, Astrophysicist (Post-Doctoral Research Fellow)（EHT data processing）
+    url: https://www.usajobs.gov/job/599203500
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 微分積分
+  sources:
+  - DR127
+  units:
+  - D-005
+  - D-006
+  - D-014
+  - D-017
+- id: T-02
+  field: 物理
+  topic: 電波干渉計と VLBI のデータ処理の理論
+  sources:
+  - DR127
+  units:
+  - P-024
+  - P-028
+  - E-084
+  - D-023
+- id: T-03
+  field: 計算
+  topic: VLBI の相関処理、較正、画像化のアルゴリズム
+  sources:
+  - DR127
+  units:
+  - E-074
+  - E-081
+  - E-056
+- id: T-04
+  field: 工学
+  topic: ディジタル信号処理
+  sources:
+  - DR127
+  units:
+  - E-070
+  - E-071
+  - E-079
+  - E-080
+  - E-081
+- id: T-05
+  field: 計算
+  topic: 高性能計算、並列計算、大容量記憶、大規模ソフトウェアの設計、Linux
+  sources:
+  - DR127
+  units:
+  - K-027
+  - K-032
+  - K-033
+  - K-037
+- id: T-06
+  field: 物理
+  topic: 電波天体物理、ブラックホール物理
+  sources:
+  - DR128
+  units:
+  - P-062
+  - P-063

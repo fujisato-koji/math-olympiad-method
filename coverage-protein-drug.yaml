@@ -1,0 +1,129 @@
+# 網羅表：タンパク質の構造予測で新薬を探す研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR156:
+    title: 'The Royal Swedish Academy of Sciences（nobelprize.org）, Press release: The Nobel Prize in Chemistry 2024'
+    url: https://www.nobelprize.org/prizes/chemistry/2024/press-release/
+    date: '2026-11-07'
+  DR157:
+    title: Google DeepMind, AlphaFold
+    url: https://deepmind.google/science/alphafold/
+    date: '2026-11-07'
+  DR158:
+    title: Isomorphic Labs, Research Leader / Senior Research Investigator (Computational Drug Design), London
+    url: https://job-boards.greenhouse.io/isomorphiclabs/jobs/6240752004
+    date: '2026-11-07'
+  DR159:
+    title: Isomorphic Labs, Research Scientist (Machine Learning), London
+    url: https://job-boards.greenhouse.io/isomorphiclabs/jobs/5224363004
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 生命
+  topic: タンパク質の 3 次元構造と働き、折りたたみ
+  sources:
+  - DR156
+  units:
+  - K-092
+  - K-103
+  - K-104
+  - K-102
+- id: T-02
+  field: 生命
+  topic: アミノ酸配列からの構造の予測と、計算によるタンパク質の設計
+  sources:
+  - DR156
+  - DR157
+  units:
+  - K-111
+  - K-117
+  - K-110
+  - K-112
+- id: T-03
+  field: 生命
+  topic: タンパク質と他の分子の相互作用の予測
+  sources:
+  - DR157
+  - DR158
+  units:
+  - K-111
+  - K-112
+  - K-115
+- id: T-04
+  field: その他
+  topic: 計算化学と創薬の計算設計（分子設計、リード最適化、ケモインフォマティクス）
+  sources:
+  - DR158
+  none: 地図にない（候補：計算化学と創薬）
+- id: T-05
+  field: 計算
+  topic: 機械学習と生成 AI によるヒット探索（仮想スクリーニング、能動学習）
+  sources:
+  - DR158
+  units:
+  - K-046
+  - K-047
+  - K-116
+- id: T-06
+  field: 生命
+  topic: 標的の同定と検証
+  sources:
+  - DR158
+  units:
+  - K-097
+  - K-098
+  - K-107
+  - K-106
+  - K-108
+  - K-113
+  - K-114
+- id: T-07
+  field: その他
+  topic: フラグメント創薬、PROTAC、分子のり、ペプチド
+  sources:
+  - DR158
+  none: 地図にない（候補：創薬の化学（フラグメント創薬と新しい創薬モダリティ））
+- id: T-08
+  field: 生命
+  topic: 薬物動態の原理（ADME、DMPK）
+  sources:
+  - DR158
+  none: 地図にない（候補：薬物動態）
+- id: T-09
+  field: 数学
+  topic: 線形代数、微分積分、統計
+  sources:
+  - DR159
+  units:
+  - M-003
+  - M-007
+  - D-014
+  - S-018
+  - S-021
+- id: T-10
+  field: 計算
+  topic: 深層学習（構造の設計、実験、解析）
+  sources:
+  - DR159
+  units:
+  - K-050
+  - K-051
+  - K-052
+- id: T-11
+  field: 計算
+  topic: 機械学習の枠組みと科学計算（Python）
+  sources:
+  - DR159
+  units:
+  - K-012
+  - K-062
+- id: T-12
+  field: 生命
+  topic: 計算生物学と計算化学の問題への応用
+  sources:
+  - DR159
+  units:
+  - K-118
+  - K-119
+  - K-115
+  - K-105
+  - K-109

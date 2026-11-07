@@ -1,0 +1,84 @@
+# 網羅表：実用数学技能検定 準 1 級（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC12:
+    title: 実用数学技能検定 数学検定 準 1 級
+    url: https://www.su-gaku.net/suken/examination/summary/j1q/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 微積分
+  topic: 数列と極限
+  sources: &id001
+  - SC12
+  units:
+  - A-022
+  - D-002
+- id: T-02
+  field: 微積分
+  topic: 関数と極限
+  sources: *id001
+  units:
+  - D-003
+- id: T-03
+  field: 関数
+  topic: 分数関数
+  sources: *id001
+  units:
+  - A-038
+- id: T-04
+  field: 関数
+  topic: 無理関数
+  sources: *id001
+  units:
+  - A-038
+- id: T-05
+  field: 関数
+  topic: 合成関数
+  sources: *id001
+  units:
+  - A-024
+- id: T-06
+  field: 関数
+  topic: 逆関数
+  sources: *id001
+  units:
+  - A-024
+- id: T-07
+  field: 微積分
+  topic: 微分法
+  sources: *id001
+  units:
+  - D-004
+  - D-005
+- id: T-08
+  field: 微積分
+  topic: 積分法
+  sources: *id001
+  units:
+  - D-006
+- id: T-09
+  field: 行列
+  topic: 行列の演算と一次変換
+  sources: *id001
+  units:
+  - M-001
+  - M-002
+- id: T-10
+  field: 図形
+  topic: いろいろな曲線
+  sources: *id001
+  units:
+  - G-041
+- id: T-11
+  field: 図形
+  topic: 複素数平面
+  sources: *id001
+  units:
+  - A-034
+  - G-036
+- id: T-12
+  field: 確率統計
+  topic: 基礎的統計処理
+  sources: *id001
+  units:
+  - S-029

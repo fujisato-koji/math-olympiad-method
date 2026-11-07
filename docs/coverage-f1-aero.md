@@ -1,0 +1,55 @@
+# 網羅表：F1 チームの空力エンジニア
+
+この頁は `tools/roadmap.py build` が `coverage-f1-aero.yaml` から作ります。手で直さないでください。
+風洞と計算機上の模型で、車が空気を切って進み、高速でも路面に押しつけられるよう、部品の形を設計して磨く。に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+論題 16 のうち、単元が受け持つもの 13、すべての単元に通る軸が受け持つもの 0、入れないもの 3。
+
+## 物理
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-01 | 空気力学の基礎、流体力学 | P-013 流体の入門（圧力、浮力、連続の式、ベルヌーイの定理、表面張力と毛管圧）、P-014 流体力学（オイラー方程式とナビエ＝ストークス方程式、渦度、ポテンシャル流と複素速度ポテンシャル、レイノルズ数と粘性流、乱流の入口、水波、不安定性）、E-024 次元解析・相似・模型、管路の主損失と副損失、E-031 連続体の保存方程式、粘性流のナビエ・ストークス方程式、潤滑理論、E-032 循環と渦度の定理、ポテンシャル流、境界層と剥離 | DR039、DR040、DR041 |
+| T-06 | 乱流の模型、乱流の統計的記述 | E-033 乱流の入口と表面張力駆動流、E-034 乱流の統計的・スペクトル的記述（レイノルズ応力、乱流運動エネルギーの収支、コルモゴロフ） | DR043、DR044 |
+| T-14 | 流れの不安定：平行せん断流、過渡成長 | P-014 流体力学（オイラー方程式とナビエ＝ストークス方程式、渦度、ポテンシャル流と複素速度ポテンシャル、レイノルズ数と粘性流、乱流の入口、水波、不安定性）、P-158 回転・成層流体の小規模の波、流れの不安定、乱流 | DR045 |
+
+## 工学
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-02 | レースカーの空気力学：翼とディフューザー、揚力と抗力、極曲線、静安定 | E-025 層流・乱流境界層、剥離、揚力と抗力、E-026 航空機と空力の性能、準一次元圧縮性流れ、衝撃波と膨張波、E-027 流線曲率、ポテンシャル流のモデル化、三次元翼と誘導抗力の入口、E-028 亜音速ポテンシャル流とソース・渦パネル法、E-029 翼の空力（薄翼理論、揚力線理論、境界層との相互作用） | DR042、DR043、DR044 |
+| T-03 | 車体まわりの空気力学：冷却と換気、車輪、オープンホイール、鈍い物体と流線形の物体 | 入れない（地図にない（候補：車両の空気力学（車輪、冷却、車体形状））） | DR043 |
+| T-09 | 風洞試験の計画と実施、CFD と風洞・走行結果の相関 | E-114 風洞実験と数値予測、E-024 次元解析・相似・模型、管路の主損失と副損失 | DR039、DR040、DR042、DR043 |
+| T-11 | CAD による空力面の設計 | 入れない（地図にない（候補：CAD）） | DR039、DR042 |
+| T-16 | 車両の運動：タイヤの力、サスペンション、荷重移動、操縦安定 | 入れない（地図にない（候補：車両の運動学（タイヤとサスペンション））） | DR043 |
+
+## 数学
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-04 | 数値計算法、有限差分・有限体積による偏微分方程式の離散化と疎行列の解法 | K-002 常微分方程式の数値解法、K-004 ポアソン方程式の差分法、K-005 初期値問題の偏微分方程式の差分法と安定性、K-006 スペクトル法、K-007 線形方程式の反復法 | DR040、DR044 |
+| T-07 | 双曲型方程式と保存則、衝撃波、高解像度の差分法、Riemann 問題 | E-037 圧縮性流れの理論（オイラー方程式、衝撃波の跳び条件、特性曲線）、D-059 双曲型方程式、E-035 数値流体力学（1）：差分法の誤差と安定、有限体積法、時間進行法 | DR044 |
+| T-10 | 空力データの解析と報告 | S-018 点推定と区間推定、S-020 線形モデル、P-117 測定と誤差の解析（物理量と単位、有効数字、系統誤差と偶然誤差、誤差の伝播、線形化と直線の当てはめ、グラフと誤差棒） | DR042、DR039 |
+| T-15 | 数学と物理の素養（多変数の微積分、ベクトル解析、線形代数） | D-014 多変数関数の微分（全微分、連鎖律、ヤコビ行列、極値）、D-018 ベクトル解析（線積分と面積分、ガウス・グリーン・ストークスの定理）、D-044 1 階常微分方程式、D-049 変数分離法（ラプラス・波動・拡散方程式）、M-003 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）、M-007 固有値と対角化 | DR046 |
+
+## 計算
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-05 | CFD の手法：格子生成、時間進行法、回転領域の格子 | E-035 数値流体力学（1）：差分法の誤差と安定、有限体積法、時間進行法、E-036 数値流体力学（2）：格子生成、複雑形状、有限要素法・スペクトル法・パネル法、E-023 偏微分方程式の数値解法（差分・有限体積・有限要素・境界要素、直接法と反復法） | DR039、DR043、DR044 |
+| T-08 | 検証と妥当性確認（V&V）：格子収束、不確かさの定量化 | G-046 長さ・重さ・かさの単位と測定 | DR044、DR043 |
+| T-12 | CFD ソフトと Linux、C++・Python・bash の開発、HPC と作業の自動化 | K-012 計算という考え方と Python（簡単なアルゴリズムとデータ構造）、K-016 プログラミングの基礎（アルゴリズムの技法、データ型、再帰）、K-029 C 言語とメモリ、アセンブリ言語、K-027 並列と逐次のデータ構造とアルゴリズム | DR040、DR043、DR044 |
+| T-13 | 最適化（遺伝的アルゴリズム、粒子群、機械学習） | K-009 凸最適化の基礎、K-010 ラグランジュ法と双対性、線形計画法、K-046 最適化の観点からの機械学習（線形・非線形モデルと勾配に基づく方法） | DR044 |
+
+## 出典
+
+| 記号 | 題名 | URL | 取得日 |
+|---|---|---|---|
+| DR039 | Williams Racing, Senior Aerodynamicist (R14058) | https://careers.williamsf1.com/job/senior-aerodynamicist-in-grove-wantage-jid-481 | 2026-11-07 |
+| DR040 | Red Bull（Visa Cash App Racing Bulls F1 Team）, VCARB F1 Team - Senior CFD Methodology Engineer | https://jobs.redbull.com/en/vcarb-f1-team-senior-cfd-methodology-engineer-ref35266u | 2026-11-07 |
+| DR041 | Williams Racing, The roles and responsibilities of an F1 aerodynamics engineer | https://careers.williamsf1.com/blog/2025-4/responsibilities-of-an-f1-aerodynamics-engineer | 2026-11-07 |
+| DR042 | Williams Racing, Aerodynamics - Development Graduate | https://careers.williamsf1.com/job/aerodynamics-development-graduate-in-grove-jid-302 | 2026-11-07 |
+| DR043 | Cranfield University, Advanced Motorsport Engineering MSc | https://www.cranfield.ac.uk/courses/taught/advanced-motorsport-engineering | 2026-11-07 |
+| DR044 | Cranfield University, Aerospace Computational Engineering MSc | https://www.cranfield.ac.uk/courses/taught/aerospace-computational-engineering | 2026-11-07 |
+| DR045 | University of Cambridge, Hydrodynamic Stability (L16), R. Kerswell | https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Continuum%20Mechanics/Hydrodynamic%20Stability.pdf | 2026-11-07 |
+| DR046 | Mercedes-AMG PETRONAS F1 Team, Aerodynamics Industrial Placement（2027-28） | https://www.mercedesamgf1.com/careers/vacancies/804 | 2026-11-07 |

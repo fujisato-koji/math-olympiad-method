@@ -1,0 +1,90 @@
+# 網羅表：JR 東海のリニア中央新幹線の技術者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR162:
+    title: 東海旅客鉄道（JR 東海）採用サイト, 超電導リニアによる中央新幹線
+    url: https://saiyo.jr-central.co.jp/company/business/maglev.html
+    date: '2026-11-07'
+  DR163:
+    title: 東海旅客鉄道, 超電導のひみつ（発見！リニア未来シティ）
+    url: https://linear-chuo-shinkansen.jr-central.co.jp/linearfuturecity/secret/
+    date: '2026-11-07'
+  DR164:
+    title: 東海旅客鉄道, 職種・系統紹介
+    url: https://saiyo.jr-central.co.jp/work/career/
+    date: '2026-11-07'
+  DR165:
+    title: 東海旅客鉄道, 浮いて走るしくみ（発見！リニア未来シティ）
+    url: https://linear-chuo-shinkansen.jr-central.co.jp/linearfuturecity/mechanism/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 推進・浮上・案内の電磁力（推進コイル、超電導磁石、浮上・案内コイル）
+  sources:
+  - DR162
+  units:
+  - P-032
+  - P-033
+  - P-034
+  - P-035
+  - E-047
+- id: T-02
+  field: 物理
+  topic: 電磁石、電流と電気抵抗による発熱
+  sources:
+  - DR163
+  units:
+  - P-029
+  - P-033
+- id: T-03
+  field: 物理
+  topic: 超電導と極低温（液体窒素、液体ヘリウム）、高温超電導磁石
+  sources:
+  - DR163
+  - DR162
+  units:
+  - P-099
+  - P-118
+- id: T-04
+  field: 工学
+  topic: 車両・機械系統（機械、材料、電気の分野）：力学、材料、制御、車両の動き
+  sources:
+  - DR164
+  - DR165
+  units:
+  - E-001
+  - E-002
+  - E-003
+  - E-060
+  - E-090
+  - E-048
+- id: T-05
+  field: 工学
+  topic: 施設系統（土木・建築の分野）：構造、地盤、橋
+  sources:
+  - DR164
+  units:
+  - E-004
+  - E-005
+  - E-090
+  - E-116
+  - E-124
+- id: T-06
+  field: 工学
+  topic: 電気・システム系統（電気電子・情報システムの分野）：回路、信号、制御
+  sources:
+  - DR164
+  units:
+  - E-067
+  - E-069
+  - E-072
+  - E-048
+  - E-049
+- id: T-07
+  field: 計算
+  topic: ICT による保守の効率化
+  sources:
+  - DR162
+  units:
+  - K-015
+  - K-060

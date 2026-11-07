@@ -1,0 +1,160 @@
+# 網羅表：日本女子数学オリンピック（JGMO）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC18:
+    title: 第 2 回日本女子数学オリンピック（JGMO）募集要項
+    url: https://imojp.org/domestic/jgmo_apply.pdf
+    date: '2026-11-07'
+  SC19:
+    title: 日本女子数学オリンピック（JGMO）
+    url: https://www.imojp.org/domestic/jgmo_overview.html
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 代数
+  topic: 数列
+  sources: &id001
+  - SC19
+  units:
+  - A-022
+  - A-004
+  - A-008
+- id: T-02
+  field: 代数
+  topic: 恒等式
+  sources: *id001
+  units:
+  - A-015
+  - A-026
+- id: T-03
+  field: 代数
+  topic: 方程式
+  sources: *id001
+  units:
+  - A-017
+  - A-026
+  - A-012
+- id: T-04
+  field: 代数
+  topic: 不等式
+  sources: *id001
+  units:
+  - A-025
+  - A-027
+  - A-032
+- id: T-05
+  field: 組合せ論
+  topic: 数え上げ
+  sources: *id001
+  units:
+  - C-005
+  - C-006
+  - C-007
+  - C-013
+  - C-014
+  - C-018
+  - C-021
+- id: T-06
+  field: 組合せ論
+  topic: 場合の数
+  sources: *id001
+  units:
+  - C-005
+  - C-006
+  - C-007
+  - C-013
+  - C-016
+- id: T-07
+  field: 組合せ論
+  topic: 確率
+  sources: *id001
+  units:
+  - C-011
+  - C-020
+- id: T-08
+  field: 組合せ論
+  topic: グラフ理論
+  sources: *id001
+  units:
+  - C-022
+  - C-024
+  - C-012
+- id: T-09
+  field: 幾何
+  topic: 合同と相似
+  sources: *id001
+  units:
+  - G-016
+  - G-020
+  - G-031
+- id: T-10
+  field: 幾何
+  topic: 三角形
+  sources: *id001
+  units:
+  - G-017
+  - G-024
+  - G-028
+  - G-029
+- id: T-11
+  field: 幾何
+  topic: 円
+  sources: *id001
+  units:
+  - G-018
+  - G-030
+  - G-032
+- id: T-12
+  field: 幾何
+  topic: 空間図形
+  sources: *id001
+  units:
+  - G-021
+  - G-011
+- id: T-13
+  field: 数論
+  topic: 約数・倍数
+  sources: *id001
+  units:
+  - N-017
+  - N-018
+  - N-024
+- id: T-14
+  field: 数論
+  topic: 素数
+  sources: *id001
+  units:
+  - N-021
+  - N-030
+- id: T-15
+  field: 数論
+  topic: 不定方程式
+  sources: *id001
+  units:
+  - N-029
+  - N-035
+- id: T-16
+  field: 数論
+  topic: 合同式
+  sources: *id001
+  units:
+  - N-032
+  - N-033
+  - N-036
+- id: T-17
+  field: 範囲外
+  topic: 微積分
+  sources:
+  - SC18
+  none: 範囲外（要項）
+- id: T-18
+  field: 範囲外
+  topic: 確率統計
+  sources:
+  - SC18
+  none: 範囲外（要項）
+- id: T-19
+  field: 範囲外
+  topic: 行列
+  sources:
+  - SC18
+  none: 範囲外（要項）

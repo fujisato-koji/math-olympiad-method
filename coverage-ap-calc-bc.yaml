@@ -1,0 +1,226 @@
+# 網羅表：AP Calculus BC（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  EX20:
+    title: AP Calculus AB and BC Course and Exam Description（College Board、Effective Fall 2020）
+    url: https://apcentral.collegeboard.org/media/pdf/ap-calculus-ab-and-bc-course-and-exam-description.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: Unit 1 極限と連続
+  topic: 極限の定義と求め方（はさみうちの原理を含む）
+  sources:
+  - EX20
+  units:
+  - D-003
+- id: T-02
+  field: Unit 1 極限と連続
+  topic: 連続性・不連続・漸近線と中間値の定理
+  sources:
+  - EX20
+  units:
+  - D-003
+- id: T-03
+  field: Unit 2 微分
+  topic: 導関数の定義と微分可能性
+  sources:
+  - EX20
+  units:
+  - D-004
+- id: T-04
+  field: Unit 2 微分
+  topic: 基本的な微分法則（べき、三角、指数、対数、積、商）
+  sources:
+  - EX20
+  units:
+  - D-005
+  - D-011
+- id: T-05
+  field: Unit 3 微分
+  topic: 連鎖律と陰関数微分
+  sources:
+  - EX20
+  units:
+  - D-005
+- id: T-06
+  field: Unit 3 微分
+  topic: 逆関数・逆三角関数の微分と高階導関数
+  sources:
+  - EX20
+  units:
+  - D-011
+  - D-005
+- id: T-07
+  field: Unit 4 微分の応用
+  topic: 文脈での導関数（直線運動、変化率）
+  sources:
+  - EX20
+  units:
+  - D-004
+  - P-001
+- id: T-08
+  field: Unit 4 微分の応用
+  topic: 関連変化率
+  sources:
+  - EX20
+  units:
+  - D-005
+- id: T-09
+  field: Unit 4 微分の応用
+  topic: 局所線形近似とロピタルの定理
+  sources:
+  - EX20
+  units:
+  - D-008
+- id: T-10
+  field: Unit 5 微分による解析
+  topic: 平均値の定理・最大値最小値の定理と増減
+  sources:
+  - EX20
+  units:
+  - D-008
+  - D-005
+- id: T-11
+  field: Unit 5 微分による解析
+  topic: 極値の判定・凹凸・グラフ
+  sources:
+  - EX20
+  units:
+  - D-005
+- id: T-12
+  field: Unit 5 微分による解析
+  topic: 最適化と陰関数の振る舞い
+  sources:
+  - EX20
+  units:
+  - D-005
+- id: T-13
+  field: Unit 6 積分
+  topic: リーマン和・定積分・微積分の基本定理
+  sources:
+  - EX20
+  units:
+  - D-006
+  - D-009
+- id: T-14
+  field: Unit 6 積分
+  topic: 不定積分と置換積分
+  sources:
+  - EX20
+  units:
+  - D-006
+- id: T-15
+  field: Unit 6 積分
+  topic: 部分積分・部分分数・広義積分
+  sources:
+  - EX20
+  units:
+  - D-006
+  - D-009
+- id: T-16
+  field: Unit 7 微分方程式
+  topic: 微分方程式の立式と方向場
+  sources:
+  - EX20
+  units:
+  - D-044
+- id: T-17
+  field: Unit 7 微分方程式
+  topic: オイラー法
+  sources:
+  - EX20
+  units:
+  - K-002
+- id: T-18
+  field: Unit 7 微分方程式
+  topic: 変数分離形・指数モデル・ロジスティックモデル
+  sources:
+  - EX20
+  units:
+  - D-044
+- id: T-19
+  field: Unit 8 積分の応用
+  topic: 積分の応用（平均値、運動、累積）
+  sources:
+  - EX20
+  units:
+  - D-006
+  - P-001
+- id: T-20
+  field: Unit 8 積分の応用
+  topic: 曲線で囲まれた面積
+  sources:
+  - EX20
+  units:
+  - D-006
+- id: T-21
+  field: Unit 8 積分の応用
+  topic: 断面による体積と円板・ワッシャー法
+  sources:
+  - EX20
+  units:
+  - D-006
+- id: T-22
+  field: Unit 8 積分の応用
+  topic: 曲線の長さ
+  sources:
+  - EX20
+  units:
+  - D-006
+  - D-009
+- id: T-23
+  field: Unit 9 媒介変数・ベクトル・極座標
+  topic: 媒介変数表示の微分と弧長
+  sources:
+  - EX20
+  units:
+  - D-071
+- id: T-24
+  field: Unit 9 媒介変数・ベクトル・極座標
+  topic: ベクトル値関数と運動
+  sources:
+  - EX20
+  none: 地図にない（候補：ベクトル値関数と運動）
+- id: T-25
+  field: Unit 9 媒介変数・ベクトル・極座標
+  topic: 極座標の微分と面積
+  sources:
+  - EX20
+  units:
+  - G-047
+- id: T-26
+  field: Unit 10 級数
+  topic: 級数の収束と発散・等比級数・n 項判定
+  sources:
+  - EX20
+  units:
+  - D-002
+  - D-010
+- id: T-27
+  field: Unit 10 級数
+  topic: 収束判定法（積分・p 級数・比較・交代・比）
+  sources:
+  - EX20
+  units:
+  - D-010
+- id: T-28
+  field: Unit 10 級数
+  topic: 絶対収束・条件収束と交代級数の誤差
+  sources:
+  - EX20
+  units:
+  - D-010
+- id: T-29
+  field: Unit 10 級数
+  topic: テイラー多項式とラグランジュの剰余
+  sources:
+  - EX20
+  units:
+  - D-008
+  - D-010
+- id: T-30
+  field: Unit 10 級数
+  topic: べき級数（収束半径、テイラー級数とマクローリン級数）
+  sources:
+  - EX20
+  units:
+  - D-010

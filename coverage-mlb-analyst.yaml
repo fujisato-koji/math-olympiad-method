@@ -1,0 +1,90 @@
+# 網羅表：MLB のデータアナリスト（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR174:
+    title: Los Angeles Dodgers（TeamWork Online に掲載）, Analyst, International Baseball Strategy & Information
+    url: https://www.teamworkonline.com/baseball-jobs/los-angeles-dodgers-jobs/los-angeles-dodgers/analyst-international-baseball-strategy-information-2190300
+    date: '2026-11-07'
+  DR175:
+    title: San Francisco Giants（Lever の掲示板）, Coordinator, Pitching Analysis
+    url: https://jobs.lever.co/sfgiants/0582a6d6-778d-4c4c-b32c-c16b5ce3008d
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 量的分析・統計・データサイエンスの訓練
+  sources:
+  - DR174
+  units:
+  - S-018
+  - S-019
+  - S-020
+  - S-022
+  - S-023
+  - K-060
+  - K-063
+- id: T-02
+  field: 計算
+  topic: SQL、Python または R、データの流れ（ETL）、データの品質と検証
+  sources:
+  - DR174
+  units:
+  - K-012
+  - K-016
+- id: T-03
+  field: 計算
+  topic: データ基盤（SQL、dbt、クラウド）
+  sources:
+  - DR174
+  none: 地図にない（候補：データベースとデータ基盤）
+- id: T-04
+  field: 計算
+  topic: クラウドのデータ基盤、BI・ダッシュボード、可視化
+  sources:
+  - DR174
+  units:
+  - K-064
+  - K-033
+- id: T-05
+  field: 数学
+  topic: 選手の価値と将来の予測のモデル、リーグ間の成績の換算
+  sources:
+  - DR174
+  units:
+  - K-068
+  - K-069
+  - S-022
+  - K-066
+  - K-070
+- id: T-06
+  field: 物理
+  topic: 投球の力学、球種の設計
+  sources:
+  - DR175
+  units:
+  - P-003
+  - P-005
+  - P-011
+- id: T-07
+  field: 計算
+  topic: 投球の追跡の技術、映像分析、成績のデータ
+  sources:
+  - DR175
+  units:
+  - K-067
+  - K-069
+  - K-081
+- id: T-08
+  field: その他
+  topic: バイオメカニクスのデータ
+  sources:
+  - DR174
+  none: 地図にない（候補：バイオメカニクス）
+- id: T-09
+  field: 計算
+  topic: スポーツの数学と野球の成績の分析
+  sources:
+  - DR175
+  units:
+  - K-065
+  - K-066
+  - K-068

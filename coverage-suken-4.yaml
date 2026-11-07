@@ -1,0 +1,64 @@
+# 網羅表：実用数学技能検定 4 級（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC08:
+    title: 実用数学技能検定 数学検定 4 級
+    url: https://www.su-gaku.net/suken/examination/summary/4q/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数と式
+  topic: 文字式を用いた簡単な式の四則混合計算
+  sources: &id001
+  - SC08
+  units:
+  - A-010
+  - A-015
+- id: T-02
+  field: 数と式
+  topic: 文字式の利用と等式の変形
+  sources: *id001
+  units:
+  - A-010
+  - A-011
+- id: T-03
+  field: 数と式
+  topic: 連立方程式
+  sources: *id001
+  units:
+  - A-012
+- id: T-04
+  field: 図形
+  topic: 平行線の性質
+  sources: *id001
+  units:
+  - G-016
+- id: T-05
+  field: 図形
+  topic: 三角形の合同条件
+  sources: *id001
+  units:
+  - G-016
+- id: T-06
+  field: 図形
+  topic: 四角形の性質
+  sources: *id001
+  units:
+  - G-017
+- id: T-07
+  field: 関数
+  topic: 一次関数
+  sources: *id001
+  units:
+  - A-019
+- id: T-08
+  field: データ
+  topic: 確率の基礎
+  sources: *id001
+  units:
+  - C-011
+- id: T-09
+  field: データ
+  topic: 簡単な統計
+  sources: *id001
+  units:
+  - S-029

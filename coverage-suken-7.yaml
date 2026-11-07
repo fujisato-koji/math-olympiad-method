@@ -1,0 +1,105 @@
+# 網羅表：実用数学技能検定 7 級（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC05:
+    title: 実用数学技能検定 算数検定 7 級
+    url: https://www.su-gaku.net/suken/examination/summary/7q/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数と計算
+  topic: 整数や小数の四則混合計算
+  sources: &id001
+  - SC05
+  units:
+  - N-015
+  - N-020
+- id: T-02
+  field: 数と計算
+  topic: 約数・倍数
+  sources: *id001
+  units:
+  - N-017
+  - N-018
+- id: T-03
+  field: 数と計算
+  topic: 分数の加減
+  sources: *id001
+  units:
+  - N-019
+- id: T-04
+  field: 図形
+  topic: 三角形・四角形の面積
+  sources: *id001
+  units:
+  - G-008
+  - G-012
+- id: T-05
+  field: 図形
+  topic: 三角形・四角形の内角の和
+  sources: *id001
+  units:
+  - G-009
+  - G-017
+- id: T-06
+  field: 図形
+  topic: 立方体・直方体の体積
+  sources: *id001
+  units:
+  - G-011
+- id: T-07
+  field: データ
+  topic: 平均
+  sources: *id001
+  units:
+  - S-029
+- id: T-08
+  field: 数量関係
+  topic: 単位量あたりの大きさ
+  sources: *id001
+  units:
+  - A-005
+  - A-007
+- id: T-09
+  field: 図形
+  topic: 多角形
+  sources: *id001
+  units:
+  - G-009
+  - G-017
+- id: T-10
+  field: 図形
+  topic: 図形の合同
+  sources: *id001
+  units:
+  - G-016
+- id: T-11
+  field: 図形
+  topic: 円周の長さ
+  sources: *id001
+  units:
+  - G-010
+- id: T-12
+  field: 図形
+  topic: 角柱・円柱
+  sources: *id001
+  units:
+  - G-003
+  - G-011
+- id: T-13
+  field: 数量関係
+  topic: 簡単な比例
+  sources: *id001
+  units:
+  - A-006
+- id: T-14
+  field: データ
+  topic: 基本的なグラフの表現
+  sources: *id001
+  units:
+  - S-027
+- id: T-15
+  field: 数量関係
+  topic: 割合や百分率の理解
+  sources: *id001
+  units:
+  - A-005

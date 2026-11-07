@@ -1,0 +1,352 @@
+# 網羅表：PSLE Mathematics（シンガポール）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC24:
+    title: Mathematics Syllabus Primary One to Six (MOE Singapore, Updated Oct 2025)
+    url: https://www.moe.gov.sg/media/files/primary/92bff26d-b2b4-4535-b868-b8415c744b91.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: P1
+  topic: 100 までの数（数える、位取り、大小、数列、序数）
+  sources: &id001
+  - SC24
+  units:
+  - N-001
+  - N-005
+  - N-006
+- id: T-02
+  field: P1
+  topic: たし算とひき算（100 以内、筆算、暗算）
+  sources: *id001
+  units:
+  - N-003
+  - N-005
+- id: T-03
+  field: P1
+  topic: かけ算とわり算（40 以内のかけ算、20 以内のわり算）
+  sources: *id001
+  units:
+  - N-013
+  - N-014
+- id: T-04
+  field: P1
+  topic: お金（$1 までのセント、$100 までのドル）
+  sources: *id001
+  units:
+  - N-060
+- id: T-05
+  field: P1
+  topic: 長さと時刻
+  sources: *id001
+  units:
+  - N-059
+- id: T-06
+  field: P1
+  topic: 平面図形
+  sources: *id001
+  units:
+  - G-001
+  - G-006
+- id: T-07
+  field: P1
+  topic: 絵グラフ
+  sources: *id001
+  units:
+  - S-027
+- id: T-08
+  field: P2
+  topic: 1000 までの数
+  sources: *id001
+  units:
+  - N-006
+  - N-009
+- id: T-09
+  field: P2
+  topic: たし算とひき算
+  sources: *id001
+  units:
+  - N-007
+- id: T-10
+  field: P2
+  topic: かけ算とわり算
+  sources: *id001
+  units:
+  - N-013
+  - N-014
+- id: T-11
+  field: P2
+  topic: 分数（全体の分数、加減）
+  sources: *id001
+  units:
+  - N-016
+- id: T-12
+  field: P2
+  topic: お金
+  sources: *id001
+  units:
+  - N-060
+- id: T-13
+  field: P2
+  topic: 長さ・重さ・かさ、時刻
+  sources: *id001
+  units:
+  - G-046
+- id: T-14
+  field: P2
+  topic: 平面図形と立体図形
+  sources: *id001
+  units:
+  - G-001
+  - G-003
+- id: T-15
+  field: P2
+  topic: 目盛りのある絵グラフ
+  sources: *id001
+  units:
+  - S-027
+- id: T-16
+  field: P3
+  topic: 10 000 までの数
+  sources: *id001
+  units:
+  - N-009
+- id: T-17
+  field: P3
+  topic: たし算とひき算
+  sources: *id001
+  units:
+  - N-007
+- id: T-18
+  field: P3
+  topic: かけ算とわり算
+  sources: *id001
+  units:
+  - N-013
+  - N-014
+- id: T-19
+  field: P3
+  topic: 分数（同値分数、加減）
+  sources: *id001
+  units:
+  - N-016
+  - N-019
+- id: T-20
+  field: P3
+  topic: お金
+  sources: *id001
+  units:
+  - N-060
+- id: T-21
+  field: P3
+  topic: 長さ・重さ・かさ（ml を含む）、時刻
+  sources: *id001
+  units:
+  - G-046
+- id: T-22
+  field: P3
+  topic: 面積と周の長さ
+  sources: *id001
+  units:
+  - G-005
+  - G-008
+- id: T-23
+  field: P3
+  topic: 角、垂直と平行
+  sources: *id001
+  units:
+  - G-009
+  - G-006
+- id: T-24
+  field: P3
+  topic: 棒グラフ
+  sources: *id001
+  units:
+  - S-027
+- id: T-25
+  field: P4
+  topic: 100 000 までの数
+  sources: *id001
+  units:
+  - N-009
+- id: T-26
+  field: P4
+  topic: 約数と倍数
+  sources: *id001
+  units:
+  - N-017
+- id: T-27
+  field: P4
+  topic: 四則
+  sources: *id001
+  units:
+  - N-015
+  - N-013
+  - N-014
+- id: T-28
+  field: P4
+  topic: 帯分数と仮分数、集合の分数
+  sources: *id001
+  units:
+  - N-016
+  - N-019
+- id: T-29
+  field: P4
+  topic: 分数の加減
+  sources: *id001
+  units:
+  - N-019
+- id: T-30
+  field: P4
+  topic: 小数（小数第 3 位まで）
+  sources: *id001
+  units:
+  - N-020
+- id: T-31
+  field: P4
+  topic: 小数の加減と乗除
+  sources: *id001
+  units:
+  - N-020
+- id: T-32
+  field: P4
+  topic: 面積と周の長さ
+  sources: *id001
+  units:
+  - G-008
+  - G-005
+- id: T-33
+  field: P4
+  topic: 角、長方形と正方形
+  sources: *id001
+  units:
+  - G-009
+  - G-006
+- id: T-34
+  field: P4
+  topic: 線対称、展開図
+  sources: *id001
+  units:
+  - G-004
+  - G-007
+- id: T-35
+  field: P4
+  topic: 表、線グラフ、円グラフ
+  sources: *id001
+  units:
+  - S-027
+- id: T-36
+  field: P5
+  topic: 1 千万までの数、四則（計算の順序、かっこ）
+  sources: *id001
+  units:
+  - N-009
+  - N-015
+- id: T-37
+  field: P5
+  topic: 分数と除法、分数の四則
+  sources: *id001
+  units:
+  - N-016
+  - N-019
+- id: T-38
+  field: P5
+  topic: 小数の四則と単位の換算
+  sources: *id001
+  units:
+  - N-020
+- id: T-39
+  field: P5
+  topic: 百分率（割引、GST、年利）
+  sources: *id001
+  units:
+  - A-005
+- id: T-40
+  field: P5
+  topic: 割合（単位あたりの量）
+  sources: *id001
+  units:
+  - A-007
+  - A-005
+- id: T-41
+  field: P5
+  topic: 三角形の面積と複合図形
+  sources: *id001
+  units:
+  - G-008
+  - G-012
+- id: T-42
+  field: P5
+  topic: 立方体と直方体の体積
+  sources: *id001
+  units:
+  - G-011
+- id: T-43
+  field: P5
+  topic: 角（直線上、点の周り、対頂角）
+  sources: *id001
+  units:
+  - G-009
+- id: T-44
+  field: P5
+  topic: 三角形（二等辺、正、直角、内角の和）
+  sources: *id001
+  units:
+  - G-009
+  - G-017
+- id: T-45
+  field: P5
+  topic: 平行四辺形、ひし形、台形
+  sources: *id001
+  units:
+  - G-017
+  - G-006
+- id: T-46
+  field: P6
+  topic: 分数のわり算
+  sources: *id001
+  units:
+  - N-019
+- id: T-47
+  field: P6
+  topic: 百分率（全体を求める、増減の百分率）
+  sources: *id001
+  units:
+  - A-005
+- id: T-48
+  field: P6
+  topic: 比（a:b と a:b:c、同値の比、配分、分数との関係）
+  sources: *id001
+  units:
+  - A-005
+- id: T-49
+  field: P6
+  topic: 文字と式（文字で未知数、式の簡約と代入、一次方程式）
+  sources: *id001
+  units:
+  - A-010
+  - A-011
+- id: T-50
+  field: P6
+  topic: 円の面積と円周（半円、四分円、複合図形）
+  sources: *id001
+  units:
+  - G-010
+- id: T-51
+  field: P6
+  topic: 立方体と直方体の体積（辺や高さを求める）
+  sources: *id001
+  units:
+  - G-011
+- id: T-52
+  field: P6
+  topic: 特別な四角形を含む図形の角
+  sources: *id001
+  units:
+  - G-009
+  - G-017
+- id: T-53
+  field: P6
+  topic: 平均
+  sources: *id001
+  units:
+  - S-029

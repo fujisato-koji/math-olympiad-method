@@ -1,0 +1,77 @@
+# 網羅表：NASA JPL の軌道設計者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR121:
+    title: Jet Propulsion Laboratory（Caltech）, Navigation Engineer II（R6243）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Navigation-Engineer-II_R6243-1
+    date: '2026-11-07'
+  DR122:
+    title: 'NASA, Basics of Space Flight, Chapter 13: Navigation'
+    url: https://science.nasa.gov/learn/basics-of-space-flight/chapter13-1/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 軌道力学：二体問題、Kepler 問題、Lambert 問題、軌道遷移、摂動
+  sources:
+  - DR121
+  - DR122
+  units:
+  - P-009
+  - P-010
+  - E-061
+  - E-062
+  - E-063
+  - E-065
+  - P-020
+- id: T-02
+  field: 数学
+  topic: 統計的推定、精密軌道決定、測定の重み、可観測性、共分散解析、系統誤差
+  sources:
+  - DR121
+  units:
+  - S-018
+  - S-021
+  - E-056
+  - E-053
+- id: T-03
+  field: 数学
+  topic: 数値計算法
+  sources:
+  - DR121
+  units:
+  - K-001
+  - K-002
+  - K-003
+  - K-008
+- id: T-04
+  field: 数学
+  topic: 重力場のモデルの数学的な基礎（球面調和関数、マスコン）
+  sources:
+  - DR121
+  units:
+  - P-036
+  - P-075
+- id: T-05
+  field: 地球
+  topic: 潮汐、大気・海洋のエイリアシング除去、座標系、地球の姿勢のパラメータ、非重力の力のモデル
+  sources:
+  - DR121
+  none: 地図にない（候補：測地学（地球の回転、潮汐、基準座標系））
+- id: T-06
+  field: 数学
+  topic: 色付き雑音、正則化、大規模な推定問題、数値線形代数
+  sources:
+  - DR121
+  units:
+  - P-141
+  - K-007
+  - K-062
+- id: T-07
+  field: 計算
+  topic: 科学計算のプログラミング（Fortran、Python、C++、MATLAB）、高性能計算
+  sources:
+  - DR121
+  units:
+  - K-012
+  - K-016
+  - K-027

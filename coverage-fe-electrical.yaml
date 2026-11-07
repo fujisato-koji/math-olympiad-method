@@ -1,0 +1,166 @@
+# 網羅表：FE Electrical and Computer（NCEES）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CR36:
+    title: NCEES FE Electrical and Computer CBT Exam Specifications
+    url: https://ncees.org/wp-content/uploads/2022/09/FE-Electrical-and-Computer-CBT-specs.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 数学（代数と三角法、複素数、離散数学、解析幾何、微積分、常微分方程式、線形代数、ベクトル解析）
+  sources:
+  - CR36
+  units:
+  - A-017
+  - A-021
+  - A-034
+  - G-025
+  - G-026
+  - D-005
+  - D-006
+  - D-014
+  - D-018
+  - D-045
+  - M-003
+  - M-007
+- id: T-02
+  field: 数学
+  topic: 確率と統計（中心傾向とばらつき、分布と条件付き確率、期待値）
+  sources:
+  - CR36
+  units:
+  - S-001
+  - S-002
+  - S-003
+  - C-020
+- id: T-03
+  field: その他
+  topic: 倫理と職業の実務（倫理規程、知的財産、安全：接地・PPE・放射線防護）
+  sources:
+  - CR36
+  none: 地図にない（候補：技術者倫理と職業の実務）
+- id: T-04
+  field: その他
+  topic: 工学経済（貨幣の時間価値、費用見積り、リスクの特定、費用便益・損益分岐）
+  sources:
+  - CR36
+  none: 地図にない（候補：工学経済（貨幣の時間価値と費用便益））
+- id: T-05
+  field: 物理
+  topic: 電気材料の性質（半導体、導電率・誘電率・透磁率、雑音、熱）
+  sources:
+  - CR36
+  units:
+  - P-096
+  - P-095
+  - P-094
+- id: T-06
+  field: 工学
+  topic: 回路解析（直流と交流定常）
+  sources:
+  - CR36
+  units:
+  - E-067
+  - E-069
+  - P-029
+  - P-033
+- id: T-07
+  field: 工学
+  topic: 線形システム（周波数応答と過渡応答、共振、ラプラス変換、伝達関数）
+  sources:
+  - CR36
+  units:
+  - E-069
+  - E-048
+  - E-070
+  - E-071
+  - D-035
+- id: T-08
+  field: 工学
+  topic: 信号処理（標本化、アナログフィルタ、デジタルフィルタ：差分方程式・Z 変換）
+  sources:
+  - CR36
+  units:
+  - E-072
+  - E-074
+  - E-079
+  - E-080
+  - E-081
+- id: T-09
+  field: 工学
+  topic: 電子回路（ダイオード・トランジスタ・サイリスタ、増幅器、演算増幅器、パワーエレクトロニクス）
+  sources:
+  - CR36
+  units:
+  - E-068
+  - P-096
+- id: T-10
+  field: 工学
+  topic: 電力系統（力率と単相・三相、送配電、変圧器、同期・誘導・直流機）
+  sources:
+  - CR36
+  none: 地図にない（候補：電力系統と電気機械）
+- id: T-11
+  field: 物理
+  topic: 電磁気学（静電場と静磁場、マクスウェル方程式と波の伝搬、高周波の伝送線路）
+  sources:
+  - CR36
+  units:
+  - P-030
+  - P-031
+  - P-032
+  - P-034
+  - E-084
+- id: T-12
+  field: 工学
+  topic: 制御系（ブロック線図、ボード線図、開ループと閉ループの応答と安定）
+  sources:
+  - CR36
+  units:
+  - E-048
+  - E-049
+  - E-052
+- id: T-13
+  field: 工学
+  topic: 通信（AM・FM・PCM、フーリエ変換とフーリエ級数、多重化、デジタル通信）
+  sources:
+  - CR36
+  units:
+  - E-085
+  - E-086
+  - E-089
+  - D-022
+  - D-023
+- id: T-14
+  field: 計算
+  topic: 計算機ネットワーク（経路制御と交換、LAN・WAN、OSI と TCP/IP、侵入の検知と防御）
+  sources:
+  - CR36
+  units:
+  - K-038
+  - K-034
+- id: T-15
+  field: 工学
+  topic: デジタル回路（数の表現、ブール論理、論理ゲート、フリップフロップ、FPGA、状態機械）
+  sources:
+  - CR36
+  units:
+  - K-030
+- id: T-16
+  field: 計算
+  topic: 計算機システム（マイクロプロセッサ、記憶装置、インタフェース）
+  sources:
+  - CR36
+  units:
+  - K-031
+  - K-032
+- id: T-17
+  field: 計算
+  topic: ソフトウェア工学（整列・探索・計算量、データ構造、再帰・スクリプト・試験）
+  sources:
+  - CR36
+  units:
+  - K-021
+  - K-023
+  - K-016
+  - K-013

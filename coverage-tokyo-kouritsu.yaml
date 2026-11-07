@@ -1,0 +1,172 @@
+# 網羅表：東京都立高等学校入学者選抜（数学、共通問題）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC20:
+    title: 令和 9 年度 東京都立高等学校入学者選抜実施要綱（東京都教育委員会）
+    url: https://www.metro.tokyo.lg.jp/documents/d/tosei/20260917_24_01
+    date: '2026-11-07'
+  SC21:
+    title: 中学校学習指導要領（平成 29 年告示）第 2 章第 3 節 数学（文部科学省）
+    url: https://www.mext.go.jp/content/20230120-mxt_kyoiku02-100002604_02.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数と式
+  topic: 正の数と負の数（四則計算、数の集合、素因数分解）
+  sources: &id001
+  - SC20
+  - SC21
+  units:
+  - N-010
+  - N-011
+  - N-027
+  - N-021
+- id: T-02
+  field: 数と式
+  topic: 文字を用いた式（一次式の加減、不等式）
+  sources: *id001
+  units:
+  - A-010
+  - A-013
+- id: T-03
+  field: 数と式
+  topic: 一元一次方程式（比例式を含む）
+  sources: *id001
+  units:
+  - A-011
+  - A-005
+- id: T-04
+  field: 図形
+  topic: 平面図形（基本の作図、平行・対称・回転移動、円の接線と半径）
+  sources: *id001
+  units:
+  - G-022
+  - G-015
+  - G-004
+- id: T-05
+  field: 図形
+  topic: 空間図形（位置関係、回転体、見取図・展開図・投影図、扇形、表面積と体積）
+  sources: *id001
+  units:
+  - G-021
+  - G-011
+  - G-010
+  - G-007
+  - G-014
+- id: T-06
+  field: 関数
+  topic: 比例と反比例（関数、変域、座標、表・式・グラフ）
+  sources: *id001
+  units:
+  - A-006
+  - A-019
+- id: T-07
+  field: データ
+  topic: データの分布（ヒストグラム、相対度数、累積度数、範囲）
+  sources: *id001
+  units:
+  - S-029
+- id: T-08
+  field: データ
+  topic: 不確定な事象の起こりやすさ（多数回の試行による確率）
+  sources: *id001
+  units:
+  - C-011
+- id: T-09
+  field: 数と式
+  topic: 式の計算（整式の加減、単項式の乗除、文字式による説明、等式の変形）
+  sources: *id001
+  units:
+  - A-010
+  - A-015
+  - A-011
+- id: T-10
+  field: 数と式
+  topic: 連立二元一次方程式
+  sources: *id001
+  units:
+  - A-012
+- id: T-11
+  field: 図形
+  topic: 平行線と角、多角形の角
+  sources: *id001
+  units:
+  - G-016
+  - G-009
+- id: T-12
+  field: 図形
+  topic: 三角形の合同と証明（合同条件、平行四辺形の性質）
+  sources: *id001
+  units:
+  - G-016
+  - G-017
+- id: T-13
+  field: 関数
+  topic: 一次関数
+  sources: *id001
+  units:
+  - A-019
+- id: T-14
+  field: データ
+  topic: データの分布の比較（四分位範囲、箱ひげ図）
+  sources: *id001
+  units:
+  - S-029
+- id: T-15
+  field: データ
+  topic: 確率（場合の数を基にした確率）
+  sources: *id001
+  units:
+  - C-011
+  - C-005
+  - C-006
+  - C-007
+- id: T-16
+  field: 数と式
+  topic: 平方根
+  sources: *id001
+  units:
+  - A-016
+- id: T-17
+  field: 数と式
+  topic: 式の展開と因数分解（乗法公式）
+  sources: *id001
+  units:
+  - A-015
+- id: T-18
+  field: 数と式
+  topic: 二次方程式
+  sources: *id001
+  units:
+  - A-017
+- id: T-19
+  field: 図形
+  topic: 図形の相似（相似条件、平行線と線分の比、面積比・体積比）
+  sources: *id001
+  units:
+  - G-013
+  - G-020
+  - G-012
+- id: T-20
+  field: 図形
+  topic: 円周角と中心角
+  sources: *id001
+  units:
+  - G-018
+- id: T-21
+  field: 図形
+  topic: 三平方の定理
+  sources: *id001
+  units:
+  - G-019
+- id: T-22
+  field: 関数
+  topic: 関数 y=ax²
+  sources: *id001
+  units:
+  - A-020
+- id: T-23
+  field: データ
+  topic: 標本調査
+  sources: *id001
+  units:
+  - S-031

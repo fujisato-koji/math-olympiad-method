@@ -1,0 +1,167 @@
+# 網羅表：Google DeepMind の Research Scientist（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CR28:
+    title: Google Careers 検索結果（DeepMind、Research Scientist）
+    url: https://www.google.com/about/careers/applications/jobs/results?company=DeepMind&q=%22Research%20Scientist%22
+    date: '2026-11-07'
+  CR29:
+    title: Research Scientist, Agents, DeepMind
+    url: https://www.google.com/about/careers/applications/jobs/results/82988974666064582-research-scientist-agents-deepmind
+    date: '2026-11-07'
+  CR30:
+    title: Research Scientist, Memory, Reasoning and Continual Learning, DeepMind
+    url: https://www.google.com/about/careers/applications/jobs/results/96791044003111622-research-scientist-memory-reasoning-and-continual-learning-deepmind
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: 深層学習
+  sources:
+  - CR28
+  units:
+  - K-046
+  - K-047
+  - K-050
+  - K-051
+  - S-025
+  - S-026
+- id: T-02
+  field: 計算
+  topic: 強化学習
+  sources:
+  - CR28
+  - CR29
+  units:
+  - K-056
+  - K-058
+  - K-059
+- id: T-03
+  field: 計算
+  topic: 模倣学習とロボットの方策学習（シミュレータと実機）
+  sources:
+  - CR28
+  units:
+  - K-086
+  - K-088
+- id: T-04
+  field: 計算
+  topic: 自然言語処理
+  sources:
+  - CR28
+  none: 地図にない（候補：自然言語処理と言語モデル）
+- id: T-05
+  field: 計算
+  topic: 大規模言語モデルと事後学習（教師あり微調整、実行の結果を使う強化学習、報酬モデル、選好学習）
+  sources:
+  - CR28
+  none: 地図にない（候補：大規模言語モデルの事後学習（SFT、報酬モデル、選好学習））
+- id: T-06
+  field: 計算
+  topic: プロンプト設計と少数例学習
+  sources:
+  - CR29
+  none: 地図にない（候補：大規模言語モデルの使い方（プロンプト、少数例学習））
+- id: T-07
+  field: 計算
+  topic: 多モーダルの生成モデル（視覚・言語・動画、視覚言語行動モデル）
+  sources:
+  - CR28
+  units:
+  - K-082
+  - K-083
+  - K-051
+- id: T-08
+  field: 計算
+  topic: 継続学習（生涯学習、破滅的忘却、非定常環境での標本効率）
+  sources:
+  - CR28
+  - CR30
+  none: 地図にない（候補：継続学習（破滅的忘却））
+- id: T-09
+  field: 計算
+  topic: 長い文脈の注意機構、検索拡張生成、多段の推論
+  sources:
+  - CR30
+  none: 地図にない（候補：長い文脈・検索拡張生成・推論の手法）
+- id: T-10
+  field: 計算
+  topic: 評価とベンチマークの設計（長期の記憶、分布外汎化、計画）
+  sources:
+  - CR28
+  - CR30
+  none: 地図にない（候補：AI モデルの評価とベンチマーク設計）
+- id: T-11
+  field: 計算
+  topic: モデルの軽量化（蒸留、枝刈り、学習後の量子化）
+  sources:
+  - CR28
+  none: 地図にない（候補：モデル圧縮（蒸留、枝刈り、量子化））
+- id: T-12
+  field: 計算
+  topic: 分散学習と大きな文脈の基盤
+  sources:
+  - CR30
+  none: 地図にない（候補：機械学習の分散学習）
+- id: T-13
+  field: 数学
+  topic: 統計の概念、データ解析、可視化
+  sources:
+  - CR28
+  units:
+  - S-018
+  - S-019
+  - S-020
+  - K-060
+  - K-064
+- id: T-14
+  field: 数学
+  topic: 多エージェント系とゲーム理論
+  sources:
+  - CR28
+  units:
+  - K-011
+  - K-040
+- id: T-15
+  field: 計算
+  topic: 自律エージェント（基盤モデルによる）
+  sources:
+  - CR29
+  none: 地図にない（候補：基盤モデルによる自律エージェント）
+- id: T-16
+  field: 計算
+  topic: ML と自動推論のセキュリティ・プログラム解析・コード生成への応用
+  sources:
+  - CR28
+  units:
+  - K-043
+  - K-039
+- id: T-17
+  field: その他
+  topic: AI の安全性とアライメント（LLM の安全性とセキュリティ、危険な能力の評価）
+  sources:
+  - CR28
+  none: 地図にない（候補：AI の安全性とアライメント）
+- id: T-18
+  field: その他
+  topic: 機械学習と神経科学・計算神経科学の学際
+  sources:
+  - CR30
+  units:
+  - K-119
+- id: T-19
+  field: 計算
+  topic: アルゴリズムの設計、実験の計画と実施、結果の解析
+  sources:
+  - CR28
+  units:
+  - K-022
+  - K-024
+  - K-060
+- id: T-20
+  field: 計算
+  topic: ソフトウェア工学（コーディング、コードレビュー、設計の議論）
+  sources:
+  - CR28
+  units:
+  - K-013
+  - K-017

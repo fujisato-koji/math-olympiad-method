@@ -1,0 +1,125 @@
+# 網羅表：AMC 8（MAA）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC27:
+    title: MAA American Mathematics Competitions
+    url: https://maa.org/student-programs/amc/
+    date: '2026-11-07'
+  SC28:
+    title: MAA AMC 8 Information Overview
+    url: https://maa.org/math-competitions/amc-8
+    date: '2026-11-07'
+  SC29:
+    title: MAA AMC About Us
+    url: https://amc-reg.maa.org/CustomerService/AboutUs.aspx
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数え上げと確率
+  topic: 数え上げ
+  sources:
+  - SC27
+  - SC28
+  units:
+  - C-005
+  - C-006
+  - C-007
+- id: T-02
+  field: 数え上げと確率
+  topic: 確率
+  sources:
+  - SC27
+  - SC28
+  - SC29
+  units:
+  - C-011
+- id: T-03
+  field: 数量
+  topic: 見積もり
+  sources:
+  - SC27
+  - SC28
+  - SC29
+  units:
+  - N-061
+- id: T-04
+  field: 数量
+  topic: 比例の考え
+  sources:
+  - SC27
+  - SC28
+  units:
+  - A-005
+  - A-006
+- id: T-05
+  field: 数量
+  topic: 百分率
+  sources:
+  - SC29
+  units:
+  - A-005
+- id: T-06
+  field: 幾何
+  topic: 初等幾何
+  sources:
+  - SC27
+  - SC28
+  units:
+  - G-008
+  - G-009
+  - G-017
+- id: T-07
+  field: 幾何
+  topic: 三平方の定理
+  sources:
+  - SC27
+  units:
+  - G-019
+- id: T-08
+  field: 幾何
+  topic: 空間の視覚化
+  sources:
+  - SC27
+  - SC28
+  - SC29
+  units:
+  - G-003
+  - G-007
+  - G-014
+- id: T-09
+  field: データ
+  topic: グラフと表の読み取り
+  sources:
+  - SC27
+  - SC28
+  - SC29
+  units:
+  - S-027
+- id: T-10
+  field: 応用
+  topic: 日常への応用
+  sources:
+  - SC29
+  units:
+  - A-014
+  - A-007
+- id: T-11
+  field: 代数
+  topic: 一次関数
+  sources:
+  - SC27
+  units:
+  - A-019
+- id: T-12
+  field: 代数
+  topic: 二次関数
+  sources:
+  - SC27
+  units:
+  - A-020
+- id: T-13
+  field: 代数
+  topic: 座標幾何
+  sources:
+  - SC27
+  units:
+  - G-026

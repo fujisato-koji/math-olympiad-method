@@ -1,0 +1,78 @@
+# 網羅表：超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR132:
+    title: 東京大学物性研究所, 岡﨑研究室
+    url: https://www.issp.u-tokyo.ac.jp/maincontents/organization/labs/okazaki_group.html
+    date: '2026-11-07'
+  DR133:
+    title: 東京大学物性研究所, 東京大学物性研究所教員公募について（助教 1 名、附属極限コヒーレント光科学研究センター）
+    url: https://www.issp.u-tokyo.ac.jp/news/wp-content/uploads/2025/05/jokyo_lasorokazaki_ja.pdf
+    date: '2026-11-07'
+  DR134:
+    title: Argonne National Laboratory, Assistant Scientist - Quantum Materials（423035）
+    url: https://argonne.wd1.myworkdayjobs.com/Argonne_Careers/job/Lemont-IL-USA/Assistant-Scientist---Quantum-Materials_423035
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 角度分解光電子分光：固体中の電子のバンド構造
+  sources:
+  - DR132
+  - DR133
+  units:
+  - P-095
+  - P-094
+  - P-092
+  - P-098
+- id: T-02
+  field: 物理
+  topic: 超伝導ギャップの観測と非従来型超伝導
+  sources:
+  - DR132
+  - DR133
+  units:
+  - P-099
+  - P-100
+- id: T-03
+  field: 物理
+  topic: 時間分解光電子分光、高次高調波、光誘起相転移、レーザー分光
+  sources:
+  - DR132
+  - DR133
+  units:
+  - P-091
+  - P-098
+- id: T-04
+  field: 物理
+  topic: 無機の量子物質の単結晶育成
+  sources:
+  - DR134
+  none: 地図にない（候補：結晶成長）
+- id: T-05
+  field: 物理
+  topic: X 線回折による結晶構造の決定、放射光・中性子散乱
+  sources:
+  - DR134
+  units:
+  - P-092
+  - P-093
+- id: T-06
+  field: 物理
+  topic: 電気伝導、比熱、磁気の測定
+  sources:
+  - DR134
+  units:
+  - P-094
+  - P-097
+  - P-049
+  - P-118
+  - P-054
+- id: T-07
+  field: 物理
+  topic: 量子物質（トポロジカル物性、電子相関）
+  sources:
+  - DR134
+  units:
+  - P-100
+  - P-102
+  - P-101

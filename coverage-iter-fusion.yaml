@@ -1,0 +1,86 @@
+# 網羅表：ITER の核融合の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR129:
+    title: 'ITER Organization（量子科学技術研究開発機構 QST の ITER 国内機関のサイトに掲載された写し）, Job Title: Scientist, Physics Operations IO0298（Requisition ID 8347）'
+    url: https://www.fusion.qst.go.jp/ITER/images/page/734/IO0298.pdf
+    date: '2026-11-07'
+  DR130:
+    title: 'ITER Organization（QST のサイトに掲載された写し）, Job Title: Scientific Officer (Plasma-Wall Interactions) IO0386（Requisition ID 3581）'
+    url: https://www.fusion.qst.go.jp/ITER/images/page/436/IO-0386.pdf
+    date: '2026-11-07'
+  DR131:
+    title: 'ITER Organization, ITER: International Thermonuclear Experimental Reactor（What is ITER?）'
+    url: https://www.iter.org/proj/inafewlines
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: プラズマ物理の基礎（デバイ遮蔽、荷電粒子の軌道とドリフト、磁気ミラー）
+  sources:
+  - DR129
+  - DR130
+  units:
+  - P-041
+  - P-032
+- id: T-02
+  field: 物理
+  topic: 核融合反応
+  sources:
+  - DR131
+  units:
+  - P-104
+- id: T-03
+  field: 物理
+  topic: トカマクの運転、プラズマのディスラプションと回避・緩和、パルスのシナリオ設計
+  sources:
+  - DR129
+  none: 地図にない（候補：磁場閉じ込め核融合（トカマク））
+- id: T-04
+  field: 計算
+  topic: 核融合プラズマのシミュレーションの言語と手法
+  sources:
+  - DR129
+  units:
+  - K-012
+  - K-016
+  - P-119
+- id: T-05
+  field: 物理
+  topic: プラズマのパラメータの分布の再構成
+  sources:
+  - DR129
+  units:
+  - E-056
+  - K-062
+  - P-141
+- id: T-06
+  field: 工学
+  topic: 実時間制御（磁場閉じ込め）
+  sources:
+  - DR129
+  units:
+  - E-049
+  - E-053
+  - E-054
+- id: T-07
+  field: 物理
+  topic: プラズマ境界の物理とプラズマ・壁相互作用、材料中の水素の拡散と捕獲
+  sources:
+  - DR130
+  units:
+  - P-041
+  - P-055
+- id: T-08
+  field: 計算
+  topic: 現代的な科学データの解析と可視化の道具
+  sources:
+  - DR130
+  units:
+  - K-060
+  - K-064
+- id: T-09
+  field: その他
+  topic: 原子力安全、労働安全衛生、品質管理
+  sources:
+  - DR129
+  none: 地図にない（候補：原子力安全と品質管理）

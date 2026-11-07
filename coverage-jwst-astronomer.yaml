@@ -1,0 +1,200 @@
+# 網羅表：James Webb 宇宙望遠鏡の天文学者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR014:
+    title: 'University of Victoria, Physics & Astronomy, PHYS 515: Data Analysis Techniques for Physics and Astronomy（Graduate）'
+    url: https://www.uvic.ca/science/physics/assets/docs/outlines/2026-27/phys515_202609.pdf
+    date: '2026-11-07'
+  DR027:
+    title: Space Telescope Science Institute, Scientific Careers
+    url: https://www.stsci.edu/scientific-community/scientific-careers
+    date: '2026-11-07'
+  DR028:
+    title: NASA Science, Webb Science Overview
+    url: https://science.nasa.gov/mission/webb/science-overview/
+    date: '2026-11-07'
+  DR029:
+    title: Space Telescope Science Institute, JWST User Documentation (JDox)
+    url: https://jwst-docs.stsci.edu/
+    date: '2026-11-07'
+  DR030:
+    title: 'University of Arizona, Lunar and Planetary Laboratory, PTYS 521: Observational Planetary Astronomy & Remote Sensing（Graduate elective）'
+    url: https://lpl.arizona.edu/graduate/courses/ptys-521
+    date: '2026-11-07'
+  DR031:
+    title: 'University of Cambridge, Extrasolar Planets: Atmospheres and Interiors, N. Madhusudhan'
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/Extrasolar_Planets_Madhusudhan.pdf
+    date: '2026-11-07'
+  DR032:
+    title: University of Cambridge, Cosmology (M24), E. Pajer
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Relativity%20and%20Cosmology/Cosmology_26-27.pdf
+    date: '2026-11-07'
+  DR033:
+    title: University of Cambridge, General Relativity (M24), D. Skinner
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Relativity%20and%20Cosmology/GR_Skinner.pdf
+    date: '2026-11-07'
+  DR034:
+    title: University of Cambridge, Galaxy Formation and Dynamics (M24), N. W. Evans
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/Galaxy_Formation_Evans.pdf
+    date: '2026-11-07'
+  DR035:
+    title: University of Cambridge, Structure and Evolution of Stars (M24), A. N. Żytkow
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/Anna_Zytkow.pdf
+    date: '2026-11-07'
+  DR036:
+    title: University of Cambridge, Astrophysical Fluid Dynamics (M24), G. I. Ogilvie
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/Astrophysical_Fluid_Dynamics_Ogilvie.pdf
+    date: '2026-11-07'
+  DR037:
+    title: University of Cambridge, Astrophysical Black Holes (L16), D. Sijacki
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/PartIII_AstrophysicalBlackHoles_Sijacki.pdf
+    date: '2026-11-07'
+  DR038:
+    title: University of Cambridge, Astrostatistics (L24), K. Mandel
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Astrophysics/Astrostatistics_Mandel.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 天文学・天体物理学・惑星科学（博士の分野）
+  sources:
+  - DR027
+  units:
+  - P-064
+  - P-068
+  - P-063
+- id: T-02
+  field: 工学
+  topic: 赤外線の観測と望遠鏡の観測モード（撮像、分光、時系列、開口マスク干渉法）
+  sources:
+  - DR028
+  - DR029
+  - DR030
+  units:
+  - P-028
+  - P-024
+  - P-088
+  - P-118
+- id: T-03
+  field: 工学
+  topic: 望遠鏡の設計・光学の配置・検出器・分光器
+  sources:
+  - DR030
+  units:
+  - P-023
+  - P-028
+  - P-096
+- id: T-04
+  field: 物理
+  topic: 放射輸送の基礎と観測の技法
+  sources:
+  - DR030
+  - DR031
+  units:
+  - P-131
+  - P-088
+- id: T-05
+  field: 物理
+  topic: 宇宙の幾何と力学、熱史、CMB、インフレーション、摂動論と構造形成
+  sources:
+  - DR032
+  units:
+  - P-064
+  - P-065
+  - P-066
+  - P-067
+- id: T-06
+  field: 物理
+  topic: 一般相対論
+  sources:
+  - DR033
+  units:
+  - P-059
+  - P-060
+  - P-061
+- id: T-07
+  field: 物理
+  topic: 非線形の構造形成、暗黒物質ハロー、銀河の形成（円盤銀河・楕円銀河）
+  sources:
+  - DR034
+  none: 地図にない（候補：銀河の形成と進化）
+- id: T-08
+  field: 物理
+  topic: 星の構造と進化（基礎方程式、エネルギー輸送、ポリトロープ、HR 図、終末）
+  sources:
+  - DR035
+  units:
+  - P-068
+- id: T-09
+  field: 物理
+  topic: 系外惑星の大気と内部（放射輸送、化学、雲、状態方程式）
+  sources:
+  - DR031
+  none: 地図にない（候補：系外惑星科学）
+- id: T-10
+  field: その他
+  topic: 生命居住可能性と生命の兆候
+  sources:
+  - DR031
+  none: 地図にない（候補：生命居住可能性（宇宙生物学））
+- id: T-11
+  field: 物理
+  topic: 理想気体力学と磁気流体力学、衝撃波、爆風、星風と降着、星の振動
+  sources:
+  - DR036
+  units:
+  - P-014
+  - P-041
+  - E-037
+- id: T-12
+  field: 物理
+  topic: 超大質量ブラックホール、活動銀河核、降着円盤とアウトフロー
+  sources:
+  - DR037
+  units:
+  - P-063
+- id: T-13
+  field: 数学
+  topic: 天文の統計：ベイズ推論、モンテカルロ法、ガウス過程、階層模型、模型選択
+  sources:
+  - DR038
+  units:
+  - S-022
+  - S-024
+  - S-021
+- id: T-14
+  field: 数学
+  topic: 誤差の伝播と最尤・カイ二乗のフィット
+  sources:
+  - DR014
+  units:
+  - P-117
+  - S-018
+  - S-020
+- id: T-15
+  field: 数学
+  topic: 時系列とスペクトルの解析（周期図、Lomb–Scargle、パワースペクトル）
+  sources:
+  - DR014
+  units:
+  - D-022
+  - D-023
+  - E-073
+  - E-081
+- id: T-16
+  field: 計算
+  topic: 主成分分析、クラスタリング、機械学習の概観
+  sources:
+  - DR014
+  units:
+  - K-062
+  - K-049
+  - K-046
+- id: T-17
+  field: 計算
+  topic: 大きな天文データベースの解析、観測装置のソフトウェア開発と較正
+  sources:
+  - DR027
+  units:
+  - K-012
+  - K-016
+  - K-027

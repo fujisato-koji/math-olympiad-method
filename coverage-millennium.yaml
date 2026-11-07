@@ -1,0 +1,106 @@
+# 網羅表：ミレニアム懸賞問題（クレイ数学研究所）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR135:
+    title: Clay Mathematics Institute, Birch and Swinnerton-Dyer Conjecture
+    url: https://www.claymath.org/millennium/birch-and-swinnerton-dyer-conjecture/
+    date: '2026-11-07'
+  DR136:
+    title: Clay Mathematics Institute, Hodge Conjecture
+    url: https://www.claymath.org/millennium/hodge-conjecture/
+    date: '2026-11-07'
+  DR137:
+    title: Clay Mathematics Institute, Navier-Stokes Equation
+    url: https://www.claymath.org/millennium/navier-stokes-equation/
+    date: '2026-11-07'
+  DR138:
+    title: Clay Mathematics Institute, P vs NP
+    url: https://www.claymath.org/millennium/p-vs-np/
+    date: '2026-11-07'
+  DR139:
+    title: Clay Mathematics Institute（Stephen Cook による公式の問題説明）, P vs NP の公式の問題説明（PDF）
+    url: https://www.claymath.org/wp-content/uploads/2022/06/pvsnp.pdf
+    date: '2026-11-07'
+  DR140:
+    title: Clay Mathematics Institute, Riemann Hypothesis
+    url: https://www.claymath.org/millennium/riemann-hypothesis/
+    date: '2026-11-07'
+  DR141:
+    title: Clay Mathematics Institute, Yang-Mills & the Mass Gap
+    url: https://www.claymath.org/millennium/yang-mills-the-maths-gap/
+    date: '2026-11-07'
+  DR142:
+    title: Clay Mathematics Institute, Poincaré Conjecture
+    url: https://www.claymath.org/millennium/poincare-conjecture/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: Birch and Swinnerton-Dyer 予想（楕円曲線の有理点の階数とゼータ関数）
+  sources:
+  - DR135
+  units:
+  - N-048
+  - N-056
+  - N-057
+- id: T-02
+  field: 数学
+  topic: Hodge 予想（代数方程式の解集合の位相）
+  sources:
+  - DR136
+  units:
+  - T-018
+  - T-029
+  - T-034
+  - T-037
+- id: T-03
+  field: 数学
+  topic: Navier–Stokes 方程式（解の存在と一意性）
+  sources:
+  - DR137
+  units:
+  - P-014
+  - E-031
+  - D-025
+  - D-058
+  - D-059
+- id: T-04
+  field: 計算
+  topic: P vs NP
+  sources:
+  - DR138
+  - DR139
+  units:
+  - K-028
+  - K-041
+  - L-026
+- id: T-05
+  field: 数学
+  topic: Riemann 予想（ゼータ関数の非自明な零点）
+  sources:
+  - DR140
+  units:
+  - N-048
+  - N-058
+  - D-031
+  - D-037
+- id: T-06
+  field: 物理
+  topic: Yang–Mills 理論と質量ギャップ
+  sources:
+  - DR141
+  units:
+  - P-112
+  - P-113
+  - P-114
+  - R-023
+  - T-016
+- id: T-07
+  field: 数学
+  topic: Poincaré 予想（解決済み。Ricci 流と幾何化予想）
+  sources:
+  - DR142
+  units:
+  - T-017
+  - T-019
+  - T-020
+  - T-015

@@ -14,6 +14,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
 PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ")
+GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "夢")  # 目標の種類。画面ではこの順にまとめる（2.12）
 
 
 def default_plan(n):
@@ -203,9 +204,14 @@ def check(data, problems):
                 errors.append(f"問題 {it.get('id')}: 単元 {u} が地図にない")
         if it.get("text") and not it.get("pd"):
             errors.append(f"問題 {it.get('id')}: 著作権のある問題の問題文は収録しない")
+    for uid, (_, _, u) in units.items():
+        if u.get("stage", 1) > 2 and not u.get("needs"):
+            errors.append(f"単元 {uid}: 段 {u['stage']} なのに前提がない（地図にない分野なら代わりの前提を書く）")
     for g in data.get("goals", []):
         if g["id"] not in data["coverages"]:
             errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
+        if g.get("kind") not in GOAL_KINDS:
+            errors.append(f"目標 {g['id']}: 種類 {g.get('kind')} は {'、'.join(GOAL_KINDS)} のどれでもない")
     for gid, cov in data["coverages"].items():
         errors += [f"[{gid}] {e}" for e in check_coverage(cov, units)]
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
@@ -269,7 +275,7 @@ def build(data, problems):
         goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note", "beyond") if k in g},
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
-               "goals": goals, "units": out_units, "renamed": data["renamed"]}
+               "goals": goals, "goalKinds": list(GOAL_KINDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")

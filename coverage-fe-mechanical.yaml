@@ -1,0 +1,147 @@
+# 網羅表：FE Mechanical（NCEES）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CR35:
+    title: NCEES FE Mechanical CBT Exam Specifications
+    url: https://ncees.org/wp-content/uploads/2022/09/FE-Mechanical-CBT-specs.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 数学（解析幾何、微積分、常微分方程式とラプラス変換、線形代数とベクトル解析、数値法、アルゴリズムと論理）
+  sources:
+  - CR35
+  units:
+  - D-004
+  - D-005
+  - D-006
+  - D-014
+  - D-018
+  - D-044
+  - D-045
+  - E-048
+  - M-003
+  - M-007
+  - K-001
+  - K-012
+- id: T-02
+  field: 数学
+  topic: 確率と統計（確率分布、ばらつき・信頼区間、期待値、回帰と曲線のあてはめ）
+  sources:
+  - CR35
+  units:
+  - S-001
+  - S-002
+  - S-003
+  - S-018
+  - S-020
+  - C-020
+- id: T-03
+  field: その他
+  topic: 倫理と職業の実務
+  sources:
+  - CR35
+  none: 地図にない（候補：技術者倫理と職業の実務）
+- id: T-04
+  field: その他
+  topic: 工学経済（貨幣の時間価値、費用の種類、費用便益・損益分岐）
+  sources:
+  - CR35
+  none: 地図にない（候補：工学経済（貨幣の時間価値と費用便益））
+- id: T-05
+  field: 物理
+  topic: 電気と磁気（基礎量、直流回路、交流回路、電動機と発電機）
+  sources:
+  - CR35
+  units:
+  - P-029
+  - P-030
+  - P-032
+  - P-033
+- id: T-06
+  field: 工学
+  topic: 静力学（力系の合成、剛体のつり合い、骨組とトラス、図心と慣性モーメント、静摩擦）
+  sources:
+  - CR35
+  units:
+  - E-001
+  - E-004
+  - P-002
+  - P-005
+- id: T-07
+  field: 工学
+  topic: 動力学・運動学・振動
+  sources:
+  - CR35
+  units:
+  - P-001
+  - P-003
+  - P-004
+  - P-006
+  - P-011
+  - P-008
+- id: T-08
+  field: 工学
+  topic: 材料力学（せん断力図と曲げモーメント図、モールの円、組合せ荷重、柱の座屈、不静定）
+  sources:
+  - CR35
+  units:
+  - E-002
+  - E-003
+  - E-007
+- id: T-09
+  field: 工学
+  topic: 材料の性質と加工（応力ひずみ線図、状態図と熱処理、材料選定、腐食、破損の機構）
+  sources:
+  - CR35
+  units:
+  - E-015
+- id: T-10
+  field: 工学
+  topic: 流体力学（静水力学、内部流れ、外部流れ、圧縮性流れ、ポンプ・送風機の相似則）
+  sources:
+  - CR35
+  units:
+  - P-013
+  - E-024
+  - E-025
+  - E-026
+- id: T-11
+  field: 物理
+  topic: 熱力学（理想気体と純物質、熱力学の法則、動力サイクル、冷凍、湿り空気、燃焼）
+  sources:
+  - CR35
+  units:
+  - E-038
+  - E-041
+  - P-043
+  - P-044
+  - P-045
+  - P-046
+- id: T-12
+  field: 工学
+  topic: 伝熱（伝導、対流、放射、過渡、熱交換器）
+  sources:
+  - CR35
+  units:
+  - E-039
+  - E-040
+- id: T-13
+  field: 工学
+  topic: 計測・計装・制御（センサ、フィードバックとブロック線図、動的応答、計測の不確かさ）
+  sources:
+  - CR35
+  units:
+  - E-047
+  - E-048
+  - E-049
+  - E-068
+  - P-117
+- id: T-14
+  field: 工学
+  topic: 機械設計と解析（破損理論、ばね、圧力容器と配管、軸受、ねじ、動力伝達、接合、はめあい、GD&T）
+  sources:
+  - CR35
+  units:
+  - E-003
+  - E-015
+  - E-007

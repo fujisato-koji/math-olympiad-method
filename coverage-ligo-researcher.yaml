@@ -1,0 +1,82 @@
+# 網羅表：LIGO の重力波の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR125:
+    title: MIT Kavli Institute（MIT LIGO Laboratory）、Academic Jobs Online に掲載, Postdoctoral Associate（#31298）
+    url: https://academicjobsonline.org/ajo/jobs/31298
+    date: '2026-11-07'
+  DR126:
+    title: LIGO Laboratory（Caltech、MIT）、Academic Jobs Online に掲載, Data Analysis Postdoctoral position at the LIGO Laboratory（#30721）
+    url: https://academicjobsonline.org/ajo/job/30721
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 実験室での実験科学（装置の設計と製作）
+  sources:
+  - DR125
+  units:
+  - P-118
+  - P-028
+- id: T-02
+  field: 物理
+  topic: 自由空間光学とファイバー光学、精密干渉計測
+  sources:
+  - DR125
+  units:
+  - P-023
+  - P-024
+  - P-028
+- id: T-03
+  field: 物理
+  topic: 量子光学
+  sources:
+  - DR125
+  units:
+  - P-091
+- id: T-04
+  field: 工学
+  topic: アナログ・ディジタル制御
+  sources:
+  - DR125
+  units:
+  - E-048
+  - E-049
+  - E-050
+  - E-053
+- id: T-05
+  field: 工学
+  topic: 低雑音電子回路
+  sources:
+  - DR125
+  units:
+  - E-067
+  - E-068
+  - E-077
+- id: T-06
+  field: 計算
+  topic: シミュレーションとモデリング、有限要素法、プログラミング
+  sources:
+  - DR125
+  units:
+  - E-021
+  - K-004
+  - K-012
+- id: T-07
+  field: 物理
+  topic: 天体物理、モデリング、データ解析（重力波）
+  sources:
+  - DR126
+  units:
+  - P-062
+  - P-063
+  - S-022
+  - S-024
+- id: T-08
+  field: 物理
+  topic: 検出器の特性評価と較正
+  sources:
+  - DR126
+  units:
+  - P-117
+  - E-077
+  - E-078

@@ -1,0 +1,100 @@
+# 網羅表：ECMWF の気象・気候の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR160:
+    title: ECMWF, Machine Learning Scientist（VN26-075）
+    url: https://jobs.ecmwf.int/Job/JobDetail?JobId=10443
+    date: '2026-11-07'
+  DR161:
+    title: ECMWF, Team Leader - Forecast Verification and Observation Monitoring
+    url: https://jobs.ecmwf.int/Job/JobDetail?JobId=10446
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 大気と海洋の力学と物理（学位の分野）
+  sources:
+  - DR160
+  - DR161
+  units:
+  - P-121
+  - P-122
+  - P-144
+  - P-146
+  - P-148
+  - P-149
+  - P-151
+  - P-156
+  - P-159
+  - P-160
+- id: T-02
+  field: 計算
+  topic: 機械学習のモデルの設計・実装・学習・規模の拡大・評価、機械学習による気象予報
+  sources:
+  - DR160
+  units:
+  - K-046
+  - K-047
+  - K-050
+  - K-051
+  - K-052
+  - P-134
+- id: T-03
+  field: 計算
+  topic: 機械学習の工学とソフトウェア開発の良い慣行
+  sources:
+  - DR160
+  units:
+  - K-013
+  - K-017
+- id: T-04
+  field: 地球
+  topic: 地球システムのモデル化
+  sources:
+  - DR160
+  units:
+  - P-143
+  - P-161
+  - P-120
+  - P-136
+  - P-138
+  - P-142
+- id: T-05
+  field: 計算
+  topic: 学習・推論の性能の最適化、高性能計算
+  sources:
+  - DR160
+  units:
+  - K-027
+  - K-032
+  - P-132
+  - P-137
+- id: T-06
+  field: 地球
+  topic: 予報の検証と観測の監視
+  sources:
+  - DR161
+  units:
+  - P-134
+  - P-153
+  - S-018
+  - S-019
+  - P-139
+- id: T-07
+  field: 地球
+  topic: 物理にもとづく予測と AI にもとづく予測、データ同化
+  sources:
+  - DR161
+  units:
+  - P-132
+  - P-133
+  - P-135
+  - P-140
+- id: T-08
+  field: 地球
+  topic: アンサンブル・地球システム・AI・ハイブリッドの予報の科学的な評価
+  sources:
+  - DR161
+  units:
+  - P-134
+  - P-140
+  - S-022

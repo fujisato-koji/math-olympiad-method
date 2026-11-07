@@ -1,0 +1,379 @@
+# 網羅表：GCSE Mathematics Higher（Pearson Edexcel）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC23:
+    title: Pearson Edexcel Level 1/Level 2 GCSE (9-1) in Mathematics (1MA1) Specification, Issue 2
+    url: https://qualifications.pearson.com/content/dam/pdf/GCSE/mathematics/2015/specification-and-sample-assesment/gcse-maths-2015-specification.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数と計算
+  topic: 数の大小と四則（整数・小数・分数・帯分数）、逆演算
+  sources: &id001
+  - SC23
+  units:
+  - N-007
+  - N-013
+  - N-014
+  - N-019
+  - N-020
+- id: T-02
+  field: 数と計算
+  topic: 素数・約数・倍数・HCF・LCM・素因数分解
+  sources: *id001
+  units:
+  - N-017
+  - N-018
+  - N-021
+- id: T-03
+  field: 数と計算
+  topic: 系統的な列挙と積の法則
+  sources: *id001
+  units:
+  - C-002
+  - C-005
+- id: T-04
+  field: 数と計算
+  topic: 累乗と根、整数と分数の指数
+  sources: *id001
+  units:
+  - A-009
+  - A-016
+  - N-031
+- id: T-05
+  field: 数と計算
+  topic: 分数・根号・π の倍数での正確な計算、分母の有理化
+  sources: *id001
+  units:
+  - A-016
+  - N-019
+- id: T-06
+  field: 数と計算
+  topic: 指数表記（標準形）
+  sources: *id001
+  units:
+  - A-009
+- id: T-07
+  field: 数と計算
+  topic: 分数・小数・百分率（循環小数と分数の変換）
+  sources: *id001
+  units:
+  - N-019
+  - N-020
+  - A-005
+- id: T-08
+  field: 数と計算
+  topic: 単位、見積もり、丸め（有効数字、誤差の区間）
+  sources: *id001
+  units:
+  - N-061
+- id: T-09
+  field: 数と計算
+  topic: 精度の限界（上界と下界）
+  sources: *id001
+  units:
+  - N-061
+- id: T-10
+  field: 代数
+  topic: 文字式の表記、代入、用語（式、方程式、公式、恒等式、不等式）
+  sources: *id001
+  units:
+  - A-010
+- id: T-11
+  field: 代数
+  topic: 式の簡約と操作（展開、因数分解、代数分数、surd を含む式）
+  sources: *id001
+  units:
+  - A-015
+  - A-016
+- id: T-12
+  field: 代数
+  topic: 公式の変形、恒等式と代数的証明
+  sources: *id001
+  units:
+  - A-010
+  - A-015
+- id: T-13
+  field: 代数
+  topic: 関数（入力と出力、逆関数、合成関数）
+  sources: *id001
+  units:
+  - A-019
+  - A-024
+- id: T-14
+  field: 代数
+  topic: 座標と直線のグラフ（y=mx+c、平行と垂直）
+  sources: *id001
+  units:
+  - A-019
+  - G-026
+- id: T-15
+  field: 代数
+  topic: 二次関数のグラフ（根、切片、頂点）
+  sources: *id001
+  units:
+  - A-020
+- id: T-16
+  field: 代数
+  topic: いろいろな関数のグラフ（一次、二次、三次、反比例、指数、三角関数）
+  sources: *id001
+  units:
+  - A-019
+  - A-020
+  - D-001
+  - G-025
+- id: T-17
+  field: 代数
+  topic: 関数のグラフの平行移動と対称移動
+  sources: *id001
+  units:
+  - A-020
+- id: T-18
+  field: 代数
+  topic: 実際の文脈のグラフ、グラフの傾きと下の面積
+  sources: *id001
+  units:
+  - A-019
+  - D-004
+  - D-006
+- id: T-19
+  field: 代数
+  topic: 円の方程式（中心が原点）と接線
+  sources: *id001
+  units:
+  - G-026
+- id: T-20
+  field: 代数
+  topic: 一次方程式
+  sources: *id001
+  units:
+  - A-011
+- id: T-21
+  field: 代数
+  topic: 二次方程式（因数分解、平方完成、解の公式）
+  sources: *id001
+  units:
+  - A-017
+  - A-020
+- id: T-22
+  field: 代数
+  topic: 連立方程式（一次と一次、一次と二次）
+  sources: *id001
+  units:
+  - A-012
+  - A-017
+- id: T-23
+  field: 代数
+  topic: 反復法による近似解
+  sources: *id001
+  none: 地図にない（候補：反復法による方程式の近似解）
+- id: T-24
+  field: 代数
+  topic: 方程式を立てて解き、解を解釈する
+  sources: *id001
+  units:
+  - A-014
+- id: T-25
+  field: 代数
+  topic: 不等式（一次、2 変数、二次不等式、集合の記法とグラフ）
+  sources: *id001
+  units:
+  - A-013
+  - A-020
+- id: T-26
+  field: 代数
+  topic: 数列（項の生成、特別な数列、等比数列、一次と二次の n 番目の項）
+  sources: *id001
+  units:
+  - A-004
+  - A-022
+  - A-008
+- id: T-27
+  field: 比と比例
+  topic: 単位の換算、縮尺と地図
+  sources: *id001
+  units:
+  - A-005
+  - G-013
+- id: T-28
+  field: 比と比例
+  topic: 比（記法、配分、分数と一次関数との関係）
+  sources: *id001
+  units:
+  - A-005
+- id: T-29
+  field: 比と比例
+  topic: 百分率と百分率での増減
+  sources: *id001
+  units:
+  - A-005
+- id: T-30
+  field: 比と比例
+  topic: 正比例と反比例（式とグラフ）
+  sources: *id001
+  units:
+  - A-006
+- id: T-31
+  field: 比と比例
+  topic: 複合単位（速さ、単価、密度、圧力）
+  sources: *id001
+  units:
+  - A-007
+- id: T-32
+  field: 比と比例
+  topic: 長さ・面積・体積の比と相似
+  sources: *id001
+  units:
+  - G-013
+  - G-012
+  - G-020
+- id: T-33
+  field: 比と比例
+  topic: 瞬間の変化率（接線と弦の傾き）
+  sources: *id001
+  units:
+  - D-004
+- id: T-34
+  field: 比と比例
+  topic: 成長と減衰（複利、反復の過程）
+  sources: *id001
+  units:
+  - D-001
+  - A-022
+- id: T-35
+  field: 幾何
+  topic: 図形の用語、定規とコンパスの作図、軌跡
+  sources: *id001
+  units:
+  - G-022
+  - G-026
+- id: T-36
+  field: 幾何
+  topic: 角の性質、多角形の角、四角形の性質
+  sources: *id001
+  units:
+  - G-009
+  - G-016
+  - G-017
+- id: T-37
+  field: 幾何
+  topic: 三角形の合同条件と図形の証明
+  sources: *id001
+  units:
+  - G-016
+- id: T-38
+  field: 幾何
+  topic: 変換（回転、対称移動、平行移動、拡大とその組合せ）
+  sources: *id001
+  units:
+  - G-015
+  - G-004
+  - G-013
+- id: T-39
+  field: 幾何
+  topic: 円の用語と円の定理
+  sources: *id001
+  units:
+  - G-018
+  - G-023
+  - G-010
+- id: T-40
+  field: 幾何
+  topic: 座標上の図形の問題
+  sources: *id001
+  units:
+  - G-026
+- id: T-41
+  field: 幾何
+  topic: 立体の性質、平面図と立面図
+  sources: *id001
+  units:
+  - G-003
+  - G-021
+  - G-007
+- id: T-42
+  field: 幾何
+  topic: 測定、縮図、方位
+  sources: *id001
+  units:
+  - G-013
+  - G-022
+- id: T-43
+  field: 幾何
+  topic: 面積と体積（三角形、角柱、円柱、円、扇形、球、角錐、円錐）
+  sources: *id001
+  units:
+  - G-008
+  - G-010
+  - G-011
+- id: T-44
+  field: 幾何
+  topic: 相似な図形の長さ・面積・体積
+  sources: *id001
+  units:
+  - G-013
+  - G-012
+  - G-020
+- id: T-45
+  field: 幾何
+  topic: 三平方の定理と三角比（2 次元と 3 次元）
+  sources: *id001
+  units:
+  - G-019
+  - G-024
+- id: T-46
+  field: 幾何
+  topic: 三角比の特別な値（0°、30°、45°、60°、90°）
+  sources: *id001
+  units:
+  - G-024
+  - G-025
+- id: T-47
+  field: 幾何
+  topic: 正弦定理と余弦定理、面積 ½ab sin C
+  sources: *id001
+  units:
+  - G-024
+- id: T-48
+  field: 幾何
+  topic: ベクトル（平行移動、加減、スカラー倍、ベクトルによる証明）
+  sources: *id001
+  units:
+  - G-027
+- id: T-49
+  field: 確率統計
+  topic: 確率の実験、期待される結果、相対度数と理論確率
+  sources: *id001
+  units:
+  - C-011
+- id: T-50
+  field: 確率統計
+  topic: 集合の列挙と確率（表、格子、ベン図、樹形図、標本空間）
+  sources: *id001
+  units:
+  - C-003
+  - C-011
+- id: T-51
+  field: 確率統計
+  topic: 独立な事象と従属な事象
+  sources: *id001
+  units:
+  - C-011
+  - S-001
+- id: T-52
+  field: 確率統計
+  topic: 条件付き確率
+  sources: *id001
+  units:
+  - S-001
+- id: T-53
+  field: 確率統計
+  topic: 標本と母集団、統計の表とグラフ
+  sources: *id001
+  units:
+  - S-027
+- id: T-54
+  field: 確率統計
+  topic: ヒストグラム、累積度数のグラフ、分布の比較（箱ひげ図）、散布図と相関
+  sources: *id001
+  units:
+  - S-030

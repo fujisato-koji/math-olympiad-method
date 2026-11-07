@@ -1,0 +1,74 @@
+# 網羅表：NIST の耐量子暗号の暗号学者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR146:
+    title: NIST Computer Security Resource Center, Post-Quantum Cryptography
+    url: https://csrc.nist.gov/projects/post-quantum-cryptography
+    date: '2026-11-07'
+  DR147:
+    title: NIST, NIST Releases First 3 Finalized Post-Quantum Encryption Standards
+    url: https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards
+    date: '2026-11-07'
+  DR148:
+    title: NIST, NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption
+    url: https://www.nist.gov/news-events/news/2025/03/nist-selects-hqc-fifth-algorithm-post-quantum-encryption
+    date: '2026-11-07'
+  DR149:
+    title: 'NIST, Staff Spotlight: NIST Post-Quantum Cryptography'
+    url: https://www.nist.gov/node/1636206
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: 鍵の確立と電子署名（量子コンピュータに脅かされる公開鍵の機能）
+  sources:
+  - DR146
+  units:
+  - K-042
+  - K-044
+  - K-045
+- id: T-02
+  field: 数学
+  topic: 加群格子にもとづく鍵カプセル化と電子署名（ML-KEM、ML-DSA）
+  sources:
+  - DR146
+  - DR147
+  units:
+  - K-045
+  - N-051
+  - M-006
+- id: T-03
+  field: 数学
+  topic: ハッシュにもとづく電子署名（SLH-DSA）
+  sources:
+  - DR146
+  - DR147
+  units:
+  - K-042
+  - K-045
+- id: T-04
+  field: 数学
+  topic: 誤り訂正符号にもとづく鍵カプセル化（HQC）
+  sources:
+  - DR148
+  units:
+  - C-039
+  - K-045
+- id: T-05
+  field: 数学
+  topic: FALCON にもとづく署名（FN-DSA）
+  sources:
+  - DR146
+  - DR147
+  units:
+  - K-045
+  - N-051
+- id: T-06
+  field: 数学
+  topic: 量子計算機に強いと考えられる数学の問題の分類
+  sources:
+  - DR149
+  units:
+  - K-045
+  - C-039
+  - N-056
+  - N-053

@@ -1,0 +1,195 @@
+# 網羅表：GCE O-Level Mathematics（シンガポール）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC25:
+    title: Singapore-Cambridge SEC (2027) G3 Mathematics (Syllabus K310)
+    url: https://isomer-user-content.by.gov.sg/334/332ca9aa-990e-49a7-9394-23e6db5544d4/K310_y27_sy.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数と計算
+  topic: 素数と素因数分解（HCF、LCM、平方・立方・平方根・立方根）
+  sources: &id001
+  - SC25
+  units:
+  - N-017
+  - N-018
+  - N-021
+  - N-031
+- id: T-02
+  field: 数と計算
+  topic: 数の種類と四則（負の数、整数、有理数、実数）、数直線と不等号
+  sources: *id001
+  units:
+  - N-010
+  - N-027
+  - N-011
+- id: T-03
+  field: 数と計算
+  topic: 近似と見積もり（小数第何位、有効数字）
+  sources: *id001
+  units:
+  - N-061
+- id: T-04
+  field: 数と計算
+  topic: 指数表記と指数法則（正・負・0・分数の指数）
+  sources: *id001
+  units:
+  - A-009
+- id: T-05
+  field: 数と計算
+  topic: 比と比例（地図の縮尺の距離と面積、正比例と反比例）
+  sources: *id001
+  units:
+  - A-005
+  - A-006
+- id: T-06
+  field: 数と計算
+  topic: 百分率（100% を超える、増減、逆算）
+  sources: *id001
+  units:
+  - A-005
+- id: T-07
+  field: 数と計算
+  topic: 割合と速さ（平均の割合と平均の速さ、単位の換算）
+  sources: *id001
+  units:
+  - A-007
+- id: T-08
+  field: 代数
+  topic: 文字式（表記、式の値、実世界の場面の式、n 番目の項、一次式の加減）
+  sources: *id001
+  units:
+  - A-010
+  - A-004
+- id: T-09
+  field: 代数
+  topic: 展開と因数分解、公式の変形
+  sources: *id001
+  units:
+  - A-015
+  - A-010
+- id: T-10
+  field: 代数
+  topic: 代数分数（乗除、一次・二次の分母の加減）
+  sources: *id001
+  units:
+  - A-037
+- id: T-11
+  field: 代数
+  topic: 座標と一次関数のグラフ（傾き）
+  sources: *id001
+  units:
+  - A-019
+- id: T-12
+  field: 代数
+  topic: 二次関数のグラフ
+  sources: *id001
+  units:
+  - A-020
+- id: T-13
+  field: 代数
+  topic: 累乗関数と指数関数のグラフ、接線による傾きの推定
+  sources: *id001
+  units:
+  - D-001
+  - A-006
+- id: T-14
+  field: 代数
+  topic: 一次方程式、分数方程式、連立一次方程式
+  sources: *id001
+  units:
+  - A-011
+  - A-012
+- id: T-15
+  field: 代数
+  topic: 二次方程式（因数分解、解の公式、平方完成、グラフ）
+  sources: *id001
+  units:
+  - A-017
+  - A-020
+- id: T-16
+  field: 代数
+  topic: 一次不等式と数直線
+  sources: *id001
+  units:
+  - A-013
+- id: T-17
+  field: 代数
+  topic: 集合の言葉と記法、ベン図
+  sources: *id001
+  units:
+  - C-008
+  - A-024
+- id: T-18
+  field: 代数
+  topic: 行列（表示、解釈、スカラー倍、和と積）
+  sources: *id001
+  units:
+  - M-001
+  - M-003
+- id: T-19
+  field: 幾何
+  topic: 角、三角形、多角形、作図
+  sources: *id001
+  units:
+  - G-009
+  - G-016
+  - G-017
+  - G-022
+- id: T-20
+  field: 幾何
+  topic: 合同と相似（拡大と縮小、縮図、面積比と体積比）
+  sources: *id001
+  units:
+  - G-016
+  - G-013
+  - G-020
+  - G-012
+- id: T-21
+  field: 幾何
+  topic: 円の性質（対称性、円周角、接線、内接四角形）
+  sources: *id001
+  units:
+  - G-018
+  - G-023
+- id: T-22
+  field: 幾何
+  topic: 三平方の定理と直角三角形の三角比
+  sources: *id001
+  units:
+  - G-019
+  - G-024
+- id: T-23
+  field: 幾何
+  topic: 鈍角への拡張、½ab sin C、正弦定理と余弦定理、2 次元・3 次元の問題、方位
+  sources: *id001
+  units:
+  - G-024
+- id: T-24
+  field: 幾何
+  topic: 面積・体積・表面積、単位の換算
+  sources: *id001
+  units:
+  - G-008
+  - G-010
+  - G-011
+- id: T-25
+  field: 幾何
+  topic: 弧の長さ、扇形と弓形の面積、弧度法
+  sources: *id001
+  units:
+  - G-010
+  - G-025
+- id: T-26
+  field: 幾何
+  topic: 座標幾何とベクトル（位置ベクトル、図形の問題）
+  sources: *id001
+  units:
+  - G-026
+  - G-027
+- id: T-27
+  field: 確率統計
+  topic: 資料の整理と分析（箱ひげ図、累積度数、標準偏差など）と確率
+  sources: *id001
+  units:
+  - C-011

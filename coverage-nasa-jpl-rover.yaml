@@ -1,0 +1,82 @@
+# 網羅表：NASA JPL の火星探査機のエンジニア（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR119:
+    title: Jet Propulsion Laboratory（Caltech）, Robotics Systems Engineer I（R6181）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Robotics-Systems-Engineer-I_R6181
+    date: '2026-11-07'
+  DR120:
+    title: Jet Propulsion Laboratory（Caltech）, Robotics Technologist II（R6184）
+    url: https://citjpl.wd5.myworkdayjobs.com/Jobs/job/JPL-Campus/Robotics-Technologist-II_R6184
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 計算
+  topic: シミュレーション、モデリング、3D 可視化のソフトウェア開発、ロボットのモデリングとシミュレーション
+  sources:
+  - DR119
+  units:
+  - K-075
+  - K-076
+  - P-119
+- id: T-02
+  field: 計算
+  topic: 宇宙機・ロボットの運用の道具（操作画面、コマンド列、テレメトリ）
+  sources:
+  - DR119
+  none: 地図にない（候補：宇宙機の運用ソフトウェア）
+- id: T-03
+  field: 計算
+  topic: ソフトウェア工学の標準と慣行
+  sources:
+  - DR119
+  - DR120
+  units:
+  - K-013
+  - K-017
+- id: T-04
+  field: 計算
+  topic: C、C++、Python
+  sources:
+  - DR120
+  units:
+  - K-012
+  - K-016
+  - K-019
+  - K-029
+- id: T-05
+  field: 計算
+  topic: 状態推定、地図作成、深層学習、機械視覚のアルゴリズム
+  sources:
+  - DR120
+  units:
+  - E-056
+  - K-051
+  - K-080
+  - K-082
+- id: T-06
+  field: 計算
+  topic: 自己位置推定、特徴点の検出と追跡、オプティカルフロー、領域分割、SfM、運動の推定と計画
+  sources:
+  - DR120
+  units:
+  - K-081
+  - K-087
+  - K-088
+  - K-090
+- id: T-07
+  field: 計算
+  topic: 組み込み向けソフトウェア
+  sources:
+  - DR120
+  units:
+  - K-029
+  - K-030
+  - K-031
+- id: T-08
+  field: 計算
+  topic: 動くロボットへの深層学習の応用
+  sources:
+  - DR120
+  units:
+  - K-056
+  - K-086

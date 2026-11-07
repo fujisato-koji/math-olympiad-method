@@ -1,0 +1,229 @@
+# 網羅表：Google Quantum AI の研究者（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR015:
+    title: Google, Research Scientist, Quantum Error Correction, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/123628508197855942-research-scientist-quantum-error-correction-quantum-ai
+    date: '2026-11-07'
+  DR016:
+    title: 'University of Waterloo, Graduate Studies Academic Calendar: Quantum Info & Computation (QIC)（QIC 710, 750, 820, 823, 845, 880, 885）'
+    url: https://academic-calendar-archive.uwaterloo.ca/graduate-studies/archive-winter-2024/graduate-course/subject/QIC.html
+    date: '2026-11-07'
+  DR017:
+    title: Google, Staff Software Engineer, Quantum Error Correction Decoding, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/79322813130777286-staff-software-engineer-quantum-error-correction-decoding-quantum-ai
+    date: '2026-11-07'
+  DR018:
+    title: Google, Research Scientist, Applied ML, Quantum Error Correction
+    url: https://www.google.com/about/careers/applications/jobs/results/106415068375065286-research-scientist-applied-ml-quantum-error-correction
+    date: '2026-11-07'
+  DR019:
+    title: Google, Research Scientist, Numerical Modeling, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/136856963345457862-research-scientist/
+    date: '2026-11-07'
+  DR020:
+    title: Google, (Experimental) Research Scientist, Quantum Methods, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/72997234588689094-research-scientist/
+    date: '2026-11-07'
+  DR021:
+    title: Google, Research Scientist, Gate Design and Measurement, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/137662836112270022-research-scientist-gate-design-and-measurement-quantum-ai
+    date: '2026-11-07'
+  DR022:
+    title: Google, Research Scientist, Quantum Processor Design, Quantum AI
+    url: https://www.google.com/about/careers/applications/jobs/results/142880269504783046-research-scientist/
+    date: '2026-11-07'
+  DR023:
+    title: University of Waterloo, Institute for Quantum Computing, Introduction to Quantum Information Processing (QIC 710 ほか)
+    url: https://cleve.iqc.uwaterloo.ca/qic710/information/index.html
+    date: '2026-11-07'
+  DR024:
+    title: University of Cambridge, Quantum Information Theory (M16), Á. Capel Cuevas
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/QuantumInformationTheory_Capel.pdf
+    date: '2026-11-07'
+  DR025:
+    title: University of Cambridge, Quantum Entanglement in Many-body Physics, F. Verstraete
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/frank_v.pdf
+    date: '2026-11-07'
+  DR026:
+    title: University of Cambridge, Topological Quantum Matter (L16), B. Béri
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/Topological_Quantum_Matter_Beri.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 量子誤り訂正符号の設計（高い符号化率、LDPC 符号、yoked 符号化）、CSS 符号
+  sources:
+  - DR015
+  - DR016
+  none: 地図にない（候補：量子誤り訂正符号）
+- id: T-02
+  field: 計算
+  topic: 誤り耐性の回路の解析、雑音の模型のもとでの符号の模擬計算
+  sources:
+  - DR015
+  - DR016
+  none: 地図にない（候補：誤り耐性量子計算）
+- id: T-03
+  field: 計算
+  topic: 表面符号・qLDPC 符号の復号アルゴリズムと、機械学習による符号探索
+  sources:
+  - DR017
+  - DR018
+  units:
+  - K-046
+  - K-047
+  - K-051
+- id: T-04
+  field: 物理
+  topic: 理論量子物理（量子力学の体系、近似法、散乱、同種粒子）
+  sources:
+  - DR019
+  units:
+  - P-070
+  - P-071
+  - P-072
+  - P-073
+  - P-074
+  - P-075
+  - P-076
+  - P-077
+  - P-078
+  - P-079
+  - P-080
+  - P-081
+  - P-082
+  - P-083
+- id: T-05
+  field: 計算
+  topic: 数値物理と科学計算・高性能計算
+  sources:
+  - DR019
+  units:
+  - P-119
+  - K-004
+  - K-007
+  - K-008
+- id: T-06
+  field: 工学
+  topic: 量子ハードウェアでの実験、実験の制御とデータ解析の Python、データの収集と解析
+  sources:
+  - DR020
+  - DR021
+  units:
+  - P-117
+  - P-118
+  - K-012
+- id: T-07
+  field: 物理
+  topic: 超伝導量子計算：超伝導体の電磁気学、BCS 理論、Josephson 効果
+  sources:
+  - DR022
+  - DR016
+  units:
+  - P-099
+- id: T-08
+  field: 物理
+  topic: 回路量子電磁力学、超伝導量子ビット、読み出し
+  sources:
+  - DR016
+  - DR022
+  units:
+  - P-091
+  - P-099
+- id: T-09
+  field: 工学
+  topic: 量子ビット素子の作製と測定の技法
+  sources:
+  - DR016
+  none: 地図にない（候補：微細加工と素子作製）
+- id: T-10
+  field: 計算
+  topic: C++ と Python のソフトウェア開発
+  sources:
+  - DR017
+  units:
+  - K-012
+  - K-013
+  - K-016
+  - K-029
+- id: T-11
+  field: 物理
+  topic: 量子情報の枠組み：純粋・混合状態、密度行列、Schmidt 分解、量子回路模型
+  sources:
+  - DR023
+  - DR024
+  - DR016
+  units:
+  - P-084
+  - P-087
+- id: T-12
+  field: 計算
+  topic: 量子アルゴリズム：量子フーリエ変換、位相推定、Shor、Grover、隠れ部分群、量子ウォーク
+  sources:
+  - DR016
+  - DR023
+  none: 地図にない（候補：量子アルゴリズム）
+- id: T-13
+  field: 計算
+  topic: 計算量理論の基礎
+  sources:
+  - DR016
+  units:
+  - K-028
+  - K-041
+  - L-026
+- id: T-14
+  field: 数学
+  topic: 量子操作（CPTP 写像、Kraus 表現、POVM）、量子状態の距離（トレース距離、忠実度）
+  sources:
+  - DR016
+  - DR024
+  none: 地図にない（候補：量子操作と量子状態の距離）
+- id: T-15
+  field: 数学
+  topic: 量子 Shannon 理論：von Neumann エントロピー、Holevo の定理、通信路容量、量子相対エントロピー
+  sources:
+  - DR016
+  - DR024
+  none: 地図にない（候補：量子情報理論）
+- id: T-16
+  field: 物理
+  topic: エンタングルメントの理論と非局所性
+  sources:
+  - DR016
+  - DR023
+  units:
+  - P-084
+- id: T-17
+  field: 計算
+  topic: 量子暗号と量子鍵配送の安全性、量子の証明系
+  sources:
+  - DR016
+  none: 地図にない（候補：量子暗号）
+- id: T-18
+  field: 物理
+  topic: 開放量子系：マスター方程式、デコヒーレンス
+  sources:
+  - DR016
+  units:
+  - P-084
+  - P-055
+- id: T-19
+  field: 工学
+  topic: 量子制御、NMR・量子光学・超伝導回路での量子情報素子の実現
+  sources:
+  - DR016
+  units:
+  - P-091
+- id: T-20
+  field: 物理
+  topic: エンタングルメントエントロピーの面積則とテンソルネットワーク
+  sources:
+  - DR025
+  none: 地図にない（候補：テンソルネットワーク）
+- id: T-21
+  field: 物理
+  topic: トポロジカル秩序、エニオン、トーリック符号、非可換エニオンによる量子計算
+  sources:
+  - DR026
+  none: 地図にない（候補：トポロジカル秩序とエニオン）

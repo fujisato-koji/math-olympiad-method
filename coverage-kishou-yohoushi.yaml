@@ -1,0 +1,162 @@
+# 網羅表：気象予報士試験（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  CR32:
+    title: 気象業務支援センター 気象予報士試験 試験概要
+    url: https://www.jmbsc.or.jp/jp/examination/examination-2.html
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 大気の構造
+  sources:
+  - CR32
+  units:
+  - P-122
+  - P-120
+- id: T-02
+  field: 物理
+  topic: 大気の熱力学
+  sources:
+  - CR32
+  units:
+  - P-123
+  - P-044
+  - P-043
+- id: T-03
+  field: 物理
+  topic: 降水過程
+  sources:
+  - CR32
+  units:
+  - P-130
+- id: T-04
+  field: 物理
+  topic: 大気における放射
+  sources:
+  - CR32
+  units:
+  - P-131
+  - P-123
+- id: T-05
+  field: 物理
+  topic: 大気の力学
+  sources:
+  - CR32
+  units:
+  - P-124
+  - P-125
+  - P-121
+- id: T-06
+  field: 物理
+  topic: 気象現象
+  sources:
+  - CR32
+  units:
+  - P-125
+  - P-146
+  - P-147
+  - P-150
+- id: T-07
+  field: 物理
+  topic: 気候の変動
+  sources:
+  - CR32
+  units:
+  - P-120
+  - P-143
+- id: T-08
+  field: その他
+  topic: 気象業務法その他の法規
+  sources:
+  - CR32
+  none: 地図にない（候補：気象業務法と関連法規）
+- id: T-09
+  field: 工学
+  topic: 観測の成果の利用
+  sources:
+  - CR32
+  units:
+  - P-122
+- id: T-10
+  field: 計算
+  topic: 数値予報
+  sources:
+  - CR32
+  units:
+  - P-132
+  - P-133
+  - P-134
+- id: T-11
+  field: その他
+  topic: 短期予報・中期予報
+  sources:
+  - CR32
+  units:
+  - P-144
+  - P-146
+  - P-132
+- id: T-12
+  field: その他
+  topic: 長期予報
+  sources:
+  - CR32
+  units:
+  - P-143
+  - P-134
+- id: T-13
+  field: その他
+  topic: 局地予報
+  sources:
+  - CR32
+  units:
+  - P-152
+  - P-147
+- id: T-14
+  field: その他
+  topic: 短時間予報
+  sources:
+  - CR32
+  none: 地図にない（候補：短時間予報（レーダーと降水の予測））
+- id: T-15
+  field: その他
+  topic: 気象災害
+  sources:
+  - CR32
+  none: 地図にない（候補：気象災害（大雨、暴風、高潮など））
+- id: T-16
+  field: 数学
+  topic: 予想の精度の評価
+  sources:
+  - CR32
+  units:
+  - P-134
+- id: T-17
+  field: その他
+  topic: 気象の予想の応用
+  sources:
+  - CR32
+  none: 地図にない（候補：予報の利用と応用（産業と防災））
+- id: T-18
+  field: その他
+  topic: 気象概況とその変動の把握
+  sources:
+  - CR32
+  units:
+  - P-144
+  - P-145
+  - P-125
+- id: T-19
+  field: その他
+  topic: 局地的な気象の予想
+  sources:
+  - CR32
+  units:
+  - P-152
+  - P-147
+- id: T-20
+  field: その他
+  topic: 台風など緊急時の対応
+  sources:
+  - CR32
+  units:
+  - P-150

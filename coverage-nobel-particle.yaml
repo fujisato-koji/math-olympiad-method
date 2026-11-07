@@ -1,0 +1,365 @@
+# 網羅表：素粒子物理でノーベル物理学賞を目指す博士（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR007:
+    title: CERN, Experimental Physicist (EP-DI-2026-8-IC)
+    url: https://jobs.smartrecruiters.com/CERN/744000117650137-experimental-physicist-ep-di-2026-8-ic-
+    date: '2026-11-07'
+  DR008:
+    title: CERN, CMS Tracker Detector physicist (EP-CMX-DA-2023-135-LD)
+    url: https://jobs.smartrecruiters.com/CERN/743999937266103-cms-tracker-detector-physicist-ep-cmx-da-2023-135-ld-
+    date: '2026-11-07'
+  DR009:
+    title: 'University of Wisconsin–Madison, Department of Physics, Physics 736: Experimental Methods in Nuclear-, Particle-, and Astrophysics（Graduate, basic）'
+    url: https://physics.wisc.edu/courses/spring2024/736
+    date: '2026-11-07'
+  DR010:
+    title: Scuola Normale Superiore (Pisa), Statistical Methods in Experimental Particle Physics（博士課程、M. J. Morello）
+    url: https://www.sns.it/en/registro/programma/S250026/2025
+    date: '2026-11-07'
+  DR011:
+    title: University of Cambridge, Quantum Field Theory (MT24), A. Castro
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Quantum_Field_Theory.pdf
+    date: '2026-11-07'
+  DR012:
+    title: University of Cambridge, Symmetries, Particles and Fields (M24), B. Allanach
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Symmetries_Particles_and_Fields_Allanach.pdf
+    date: '2026-11-07'
+  DR013:
+    title: University of Cambridge, The Standard Model (L24), M. Ubiali
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/PartIII_course_outline_SM_Ubiali_2627.pdf
+    date: '2026-11-07'
+  DR014:
+    title: 'University of Victoria, Physics & Astronomy, PHYS 515: Data Analysis Techniques for Physics and Astronomy（Graduate）'
+    url: https://www.uvic.ca/science/physics/assets/docs/outlines/2026-27/phys515_202609.pdf
+    date: '2026-11-07'
+  DR054:
+    title: University of Cambridge, Statistical Field Theory (M16), H. S. Reall
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Statistical_Field_Theory_Reall.pdf
+    date: '2026-11-07'
+  DR055:
+    title: University of Cambridge, Advanced Quantum Field Theory (L24), C. E. Thomas
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/Advanced_Quantum_Field_Theory_Thomas.pdf
+    date: '2026-11-07'
+  DR056:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2015
+    url: https://www.kva.se/en/news/nobelpriset-i-fysik-2015-2/
+    date: '2026-11-07'
+  DR075:
+    title: 'Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2026: Elusive particles from the universe captured at the South Pole'
+    url: https://www.kva.se/en/news/the-nobel-prize-in-physics-2026/
+    date: '2026-11-07'
+  DR093:
+    title: University of Cambridge, Lie Algebras and their representations (M24), I. Grojnowski
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Algebra/LieAlgebras_Grojnowski.pdf
+    date: '2026-11-07'
+  DR108:
+    title: University of Cambridge, Particle Physics, Quantum Fields and Strings（introduction and pre-requisites）
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/misc/cg1moreinfo.pdf
+    date: '2026-11-07'
+  DR109:
+    title: 'Nobel Foundation（NobelPrize.org）, Press release: The 1999 Nobel Prize in Physics'
+    url: https://www.nobelprize.org/prizes/physics/1999/press-release/
+    date: '2026-11-07'
+  DR110:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2004
+    url: https://www.kva.se/en/news/nobelpriset-i-fysik-2004-2/
+    date: '2026-11-07'
+  DR111:
+    title: 'Nobel Foundation（NobelPrize.org）, Press release: The 1980 Nobel Prize in Physics'
+    url: https://www.nobelprize.org/prizes/physics/1980/press-release/
+    date: '2026-11-07'
+  DR112:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2008
+    url: https://www.kva.se/en/news/nobelpriset-i-fysik-2008-2/
+    date: '2026-11-07'
+  DR113:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2013
+    url: https://www.kva.se/en/news/nobelpriset-i-fysik-2013-2/
+    date: '2026-11-07'
+  DR114:
+    title: 'Nobel Foundation（NobelPrize.org）, Press release: The 1979 Nobel Prize in Physics'
+    url: https://www.nobelprize.org/prizes/physics/1979/press-release/
+    date: '2026-11-07'
+  DR115:
+    title: Nobel Foundation（NobelPrize.org）, The Nobel Prize in Physics 1990
+    url: https://www.nobelprize.org/prizes/physics/1990/summary/
+    date: '2026-11-07'
+  DR116:
+    title: University of Cambridge, String Theory (L24), N. Dorey
+    url: https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Particle%20Physics%20and%20Quantum%20Fields/String_Theory_Dorey.pdf
+    date: '2026-11-07'
+  DR117:
+    title: Royal Swedish Academy of Sciences, The Nobel Prize in Physics 2002
+    url: https://www.kva.se/en/news/nobelpriset-i-fysik-2002-2/
+    date: '2026-11-07'
+  DR118:
+    title: 'Nobel Foundation（NobelPrize.org）, Press release: The 1984 Nobel Prize in Physics'
+    url: https://www.nobelprize.org/prizes/physics/1984/press-release/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 物理
+  topic: 量子力学の基礎：波動関数、正準交換関係、描像、ブラケット記法、調和振動子
+  sources:
+  - DR108
+  units:
+  - P-070
+  - P-071
+  - P-072
+  - P-073
+  - P-074
+- id: T-02
+  field: 物理
+  topic: 角運動量の代数、スピン、Clebsch–Gordan 係数
+  sources:
+  - DR108
+  units:
+  - P-076
+- id: T-03
+  field: 物理
+  topic: 摂動論、Golden Rule、散乱：断面積、部分波展開
+  sources:
+  - DR108
+  units:
+  - P-078
+  - P-079
+  - P-081
+- id: T-04
+  field: 物理
+  topic: ラグランジュ形式の力学と基準振動
+  sources:
+  - DR108
+  units:
+  - P-016
+- id: T-05
+  field: 物理
+  topic: 特殊相対論と相対論的な電磁気学
+  sources:
+  - DR108
+  units:
+  - P-057
+  - P-058
+  - P-037
+- id: T-06
+  field: 数学
+  topic: デルタ関数とフーリエ変換、群の基本と行列表現、置換群
+  sources:
+  - DR108
+  units:
+  - D-023
+  - D-024
+  - R-001
+  - R-005
+  - R-006
+- id: T-07
+  field: 物理
+  topic: 古典場の理論：スカラー・スピノル・ゲージ場、Noether の定理
+  sources:
+  - DR011
+  units:
+  - P-109
+- id: T-08
+  field: 物理
+  topic: 自由場の正準量子化、Fock 空間と粒子の統計、Dirac 方程式
+  sources:
+  - DR011
+  units:
+  - P-110
+  - P-086
+- id: T-09
+  field: 物理
+  topic: LSZ 公式、Wick の定理、ファインマン図、崩壊率と断面積
+  sources:
+  - DR011
+  units:
+  - P-111
+- id: T-10
+  field: 物理
+  topic: Maxwell の作用とゲージ不変性、QED の木の段階の振幅
+  sources:
+  - DR011
+  units:
+  - P-112
+- id: T-11
+  field: 数学
+  topic: 行列リー群とリー代数、SO(3) と SU(2)、コンパクト単純リー代数の分類、ルート系、Weyl の指標公式
+  sources:
+  - DR012
+  - DR093
+  units:
+  - R-006
+  - R-018
+  - R-020
+  - R-021
+  - R-022
+  - R-023
+- id: T-12
+  field: 物理
+  topic: ローレンツ群とポアンカレ群、SU(3) フレーバーとカラー対称性
+  sources:
+  - DR012
+  units:
+  - P-077
+  - P-107
+- id: T-13
+  field: 物理
+  topic: ゲージ理論、経路積分と汎関数の方法、非可換ゲージ理論の量子化（ゴースト、BRST）（1999 年の賞）
+  sources:
+  - DR012
+  - DR055
+  - DR109
+  units:
+  - P-113
+- id: T-14
+  field: 物理
+  topic: くりこみ（次元正則化）とくりこみ群の流れ、漸近的自由性（2004 年の賞）
+  sources:
+  - DR055
+  - DR110
+  units:
+  - P-114
+- id: T-15
+  field: 物理
+  topic: 有効場の理論と、有効場の理論としての標準模型
+  sources:
+  - DR055
+  - DR013
+  units:
+  - P-116
+- id: T-16
+  field: 物理
+  topic: くりこみ群と臨界現象（統計系の側から）
+  sources:
+  - DR054
+  units:
+  - P-053
+  - P-056
+- id: T-17
+  field: 物理
+  topic: 標準模型：素粒子の一覧、局所と大域の対称性、離散対称性 P・C・T、パリティの破れ（1980 年の賞）
+  sources:
+  - DR013
+  - DR111
+  units:
+  - P-108
+- id: T-18
+  field: 物理
+  topic: 自発的対称性の破れ、Goldstone の定理、ヒッグス機構、電弱の精密検証（1979・2008・2013 年の賞）
+  sources:
+  - DR013
+  - DR112
+  - DR113
+  - DR114
+  units:
+  - P-115
+  - P-108
+- id: T-19
+  field: 物理
+  topic: 世代の構造、CKM 行列、3 世代での CP の破れ（2008 年の賞）
+  sources:
+  - DR013
+  - DR112
+  units:
+  - P-108
+- id: T-20
+  field: 物理
+  topic: ニュートリノの質量と振動（2015 年の賞）
+  sources:
+  - DR013
+  - DR056
+  units:
+  - P-108
+- id: T-21
+  field: 物理
+  topic: 量子色力学：閉じ込めとハドロン化、電子・陽電子消滅、深非弾性散乱とパートン模型（1990 年の賞）
+  sources:
+  - DR013
+  - DR110
+  - DR115
+  units:
+  - P-108
+  - P-107
+- id: T-22
+  field: 物理
+  topic: 弦理論の入口：ボソン弦、共形場理論、臨界次元
+  sources:
+  - DR116
+  none: 地図にない（候補：弦理論）
+- id: T-23
+  field: 物理
+  topic: 粒子と物質の相互作用、衝突型加速器の検出器の技法、検出器設計の戦略
+  sources:
+  - DR009
+  units:
+  - P-107
+  - P-118
+- id: T-24
+  field: 工学
+  topic: ニュートリノの検出（2002・2015・2026 年の賞）
+  sources:
+  - DR117
+  - DR075
+  - DR009
+  units:
+  - P-107
+  - P-118
+- id: T-25
+  field: 工学
+  topic: 加速器のビームの技術（確率冷却）（1984 年の賞）
+  sources:
+  - DR118
+  none: 地図にない（候補：加速器物理）
+- id: T-26
+  field: 計算
+  topic: 模擬計算とモンテカルロ法、物理の再構成の手法、トリガーとデータ収集、ROOT と C++・Python による解析
+  sources:
+  - DR009
+  - DR007
+  - DR008
+  - DR010
+  units:
+  - P-119
+  - K-012
+  - K-016
+  - K-029
+  - E-056
+- id: T-27
+  field: 数学
+  topic: 確率の基礎、ベイズの定理、物理で使う分布、誤差の伝播と中心極限定理
+  sources:
+  - DR014
+  - DR009
+  units:
+  - S-001
+  - S-002
+  - S-003
+  - S-004
+  - P-047
+  - P-117
+- id: T-28
+  field: 数学
+  topic: 点推定と最尤法、区間推定と仮説検定、5 シグマの基準、カイ二乗フィットと適合度、look-elsewhere 効果
+  sources:
+  - DR010
+  - DR014
+  units:
+  - S-018
+  - S-019
+  - S-020
+  - S-021
+- id: T-29
+  field: 数学
+  topic: プロファイル尤度と局外母数、多次元のビンなし尤度フィット、稀な崩壊の探索
+  sources:
+  - DR010
+  units:
+  - S-021
+  - S-019
+- id: T-30
+  field: 数学
+  topic: ベイズ推論とマルコフ連鎖モンテカルロ
+  sources:
+  - DR014
+  units:
+  - S-022
+  - S-024

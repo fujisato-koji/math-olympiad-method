@@ -1,0 +1,125 @@
+# 網羅表：超高層ビルの構造設計者（ブルジュ・ハリファを設計した SOM）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  DR166:
+    title: Skidmore, Owings & Merrill（SOM）, Structural Engineering
+    url: https://www.som.com/expertise/structural-engineering/
+    date: '2026-11-07'
+  DR167:
+    title: Skidmore, Owings & Merrill（SOM）, Burj Khalifa
+    url: https://www.som.com/projects/burj-khalifa/
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 工学
+  topic: 構造力学の基礎（つりあい、応力とひずみ、梁・トラス、不静定、エネルギー定理、座屈）：土木・建築の構造の中核の単元を当てた
+  sources:
+  - DR166
+  units:
+  - E-001
+  - E-002
+  - E-003
+  - E-004
+  - E-005
+  - E-006
+  - E-007
+- id: T-02
+  field: 工学
+  topic: 不静定構造の解法（たわみ角法、変位法、直接剛性法、トラスと骨組の解析）：中核の単元を当てた
+  sources: []
+  units:
+  - E-008
+  - E-009
+  - E-010
+  - E-011
+  - E-016
+  - E-018
+- id: T-03
+  field: 工学
+  topic: 材料の挙動と部材（弾性・塑性、極限解析、疲労・破壊、断面の諸特性）：中核の単元を当てた
+  sources: []
+  units:
+  - E-012
+  - E-013
+  - E-014
+  - E-015
+- id: T-04
+  field: 工学
+  topic: 有限要素法による構造解析：中核の単元を当てた
+  sources: []
+  units:
+  - E-020
+  - E-021
+  - E-022
+- id: T-05
+  field: 工学
+  topic: 鉄筋コンクリートと高性能コンクリート（芯と外周の柱）
+  sources:
+  - DR167
+  units:
+  - E-119
+  - E-122
+  - E-123
+- id: T-06
+  field: 工学
+  topic: 鉄骨構造の部材と接合：中核の単元を当てた
+  sources: []
+  units:
+  - E-120
+  - E-121
+- id: T-07
+  field: 工学
+  topic: ねじれに強い剛性をもつ中央の芯と、風の力と渦（形の変化で渦をまとめない）
+  sources:
+  - DR167
+  units:
+  - E-110
+  - E-112
+  - E-113
+  - E-115
+- id: T-08
+  field: 工学
+  topic: 風工学（自然風、極値風、風洞実験と数値予測）：中核の単元を当てた
+  sources: []
+  units:
+  - E-111
+  - E-114
+- id: T-09
+  field: 工学
+  topic: 構造動力学と性能に基づく耐震設計、免震・制振
+  sources:
+  - DR166
+  units:
+  - E-090
+  - E-091
+  - E-092
+  - E-093
+  - E-098
+  - E-099
+  - E-103
+  - E-104
+  - E-105
+  - E-097
+- id: T-10
+  field: 工学
+  topic: 地震動のリスク（確率論的ハザード解析、フラジリティ）：中核の単元を当てた
+  sources: []
+  units:
+  - E-100
+  - E-101
+  - E-107
+- id: T-11
+  field: 工学
+  topic: 荷重の分類と評価、構造信頼性
+  sources:
+  - DR166
+  units:
+  - E-106
+  - E-108
+  - E-109
+  - E-096
+- id: T-12
+  field: 工学
+  topic: 基礎と地盤：中核の単元を当てた
+  sources: []
+  units:
+  - E-124

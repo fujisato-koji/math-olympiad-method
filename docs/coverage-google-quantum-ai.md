@@ -1,0 +1,64 @@
+# 網羅表：Google Quantum AI の研究者
+
+この頁は `tools/roadmap.py build` が `coverage-google-quantum-ai.yaml` から作ります。手で直さないでください。
+ほかの方法では解けない問題のために量子コンピュータをつくり、誤りを直す符号を考え、量子チップを設計して測る。に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+論題 21 のうち、単元が受け持つもの 12、すべての単元に通る軸が受け持つもの 0、入れないもの 9。
+
+## 数学
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-01 | 量子誤り訂正符号の設計（高い符号化率、LDPC 符号、yoked 符号化）、CSS 符号 | 入れない（地図にない（候補：量子誤り訂正符号）） | DR015、DR016 |
+| T-14 | 量子操作（CPTP 写像、Kraus 表現、POVM）、量子状態の距離（トレース距離、忠実度） | 入れない（地図にない（候補：量子操作と量子状態の距離）） | DR016、DR024 |
+| T-15 | 量子 Shannon 理論：von Neumann エントロピー、Holevo の定理、通信路容量、量子相対エントロピー | 入れない（地図にない（候補：量子情報理論）） | DR016、DR024 |
+
+## 計算
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-02 | 誤り耐性の回路の解析、雑音の模型のもとでの符号の模擬計算 | 入れない（地図にない（候補：誤り耐性量子計算）） | DR015、DR016 |
+| T-03 | 表面符号・qLDPC 符号の復号アルゴリズムと、機械学習による符号探索 | K-046 最適化の観点からの機械学習（線形・非線形モデルと勾配に基づく方法）、K-047 ニューラルネットワークの構成、教師なし学習と強化学習の入口、K-051 ニューラルネットの構造（MLP、CNN、RNN、グラフネット、トランスフォーマー） | DR017、DR018 |
+| T-05 | 数値物理と科学計算・高性能計算 | P-119 計算物理（数値誤差と数値微分、常微分方程式の数値解法（ルンゲ＝クッタ法、シンプレクティック積分）、連立一次方程式と固有値問題、モンテカルロ法、分子動力学、最適化）、K-004 ポアソン方程式の差分法、K-007 線形方程式の反復法、K-008 固有値の数値計算 | DR019 |
+| T-10 | C++ と Python のソフトウェア開発 | K-012 計算という考え方と Python（簡単なアルゴリズムとデータ構造）、K-013 オブジェクト指向プログラミング、テストとデバッグ、K-016 プログラミングの基礎（アルゴリズムの技法、データ型、再帰）、K-029 C 言語とメモリ、アセンブリ言語 | DR017 |
+| T-12 | 量子アルゴリズム：量子フーリエ変換、位相推定、Shor、Grover、隠れ部分群、量子ウォーク | 入れない（地図にない（候補：量子アルゴリズム）） | DR016、DR023 |
+| T-13 | 計算量理論の基礎 | K-028 アルゴリズムの設計と解析（下界と NP 完全性）、K-041 計算課題の難しさによる分類、P 対 NP 問題、乱択の力、L-026 計算可能性（停止問題、ライスの定理） | DR016 |
+| T-17 | 量子暗号と量子鍵配送の安全性、量子の証明系 | 入れない（地図にない（候補：量子暗号）） | DR016 |
+
+## 物理
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-04 | 理論量子物理（量子力学の体系、近似法、散乱、同種粒子） | P-070 シュレーディンガー方程式と確率解釈（波動関数と規格化、確率密度と確率の流れ、期待値、波束と群速度、定常状態、古典極限）、P-071 1 次元の量子力学（井戸型ポテンシャル、階段と障壁とトンネル効果、デルタ関数ポテンシャル、調和振動子、パリティ）、P-072 量子力学の体系（ヒルベルト空間、エルミート演算子と固有値、行列表示とユニタリ変換、ブラ・ケット、交換関係と不確定性関係、同時固有状態の完全系、正準量子化、測定）、P-073 時間発展と描像（時間発展演算子、シュレーディンガー描像とハイゼンベルク描像、ハイゼンベルクの運動方程式）、P-074 調和振動子の代数的解法とコヒーレント状態（生成・消滅演算子、数演算子、基準振動との対応）、P-075 3 次元の問題と水素原子（球対称ポテンシャル、軌道角運動量の演算子と球面調和関数、3 次元の井戸型、水素原子）、P-076 角運動量とスピン（角運動量の交換関係と固有状態、空間回転、スピン 1/2 とパウリ行列、角運動量の合成とクレブシュ＝ゴルダン係数、一重項と三重項）、P-077 量子力学の対称性（並進と回転の生成子、ユニタリ演算子、パリティと内部パリティ、テンソル演算子と選択則、対称性の群の表現）、P-078 時間に依存しない近似法（縮退のない摂動と縮退のある摂動、変分法、WKB 近似）、P-079 時間に依存する摂動論と遷移（相互作用描像、遷移確率、フェルミの黄金律、角運動量とパリティによる選択則、光の吸収・誘導放出・自然放出）、P-080 電磁場中の荷電粒子（ベクトルポテンシャルとハミルトニアン、ゲージ不変性、ゼーマン分裂、ランダウ準位と整数量子ホール効果、アハラノフ＝ボーム効果）、P-081 散乱理論（古典散乱と微分断面積、散乱振幅、ボルン近似、部分波と位相のずれ、光学定理、散乱長、共鳴、S 行列の極）、P-082 同種粒子と多粒子系（テンソル積、ボース粒子とフェルミ粒子、対称と反対称な状態、パウリの排他原理）、P-083 第二量子化と量子多体系の初歩（生成消滅演算子による多粒子状態、ハートリー＝フォック近似） | DR019 |
+| T-07 | 超伝導量子計算：超伝導体の電磁気学、BCS 理論、Josephson 効果 | P-099 超伝導（マイスナー効果、現象論、BCS 理論、ジョセフソン接合） | DR022、DR016 |
+| T-08 | 回路量子電磁力学、超伝導量子ビット、読み出し | P-091 光と原子の相互作用と量子光学（共鳴、吸収と誘導放出・自然放出、ドレスト原子、メーザーとレーザー、共振器 QED、レーザー冷却、ボース＝アインシュタイン凝縮、電磁場の量子化、コヒーレント状態、スクイージング、もつれと量子干渉）、P-099 超伝導（マイスナー効果、現象論、BCS 理論、ジョセフソン接合） | DR016、DR022 |
+| T-11 | 量子情報の枠組み：純粋・混合状態、密度行列、Schmidt 分解、量子回路模型 | P-084 密度行列ともつれ（純粋状態と混合状態、デコヒーレンス、EPR とベルの不等式、GHZ 状態）、P-087 量子情報の入口（量子ビット、複製不可能定理、量子計算） | DR023、DR024、DR016 |
+| T-16 | エンタングルメントの理論と非局所性 | P-084 密度行列ともつれ（純粋状態と混合状態、デコヒーレンス、EPR とベルの不等式、GHZ 状態） | DR016、DR023 |
+| T-18 | 開放量子系：マスター方程式、デコヒーレンス | P-084 密度行列ともつれ（純粋状態と混合状態、デコヒーレンス、EPR とベルの不等式、GHZ 状態）、P-055 確率過程とブラウン運動（拡散方程式とランダムウォーク、ランジュバン方程式、フォッカー＝プランク方程式、マスター方程式、ゆらぎの熱力学） | DR016 |
+| T-20 | エンタングルメントエントロピーの面積則とテンソルネットワーク | 入れない（地図にない（候補：テンソルネットワーク）） | DR025 |
+| T-21 | トポロジカル秩序、エニオン、トーリック符号、非可換エニオンによる量子計算 | 入れない（地図にない（候補：トポロジカル秩序とエニオン）） | DR026 |
+
+## 工学
+
+| 記号 | 論題 | 受け持つ単元 | 出典 |
+|---|---|---|---|
+| T-06 | 量子ハードウェアでの実験、実験の制御とデータ解析の Python、データの収集と解析 | P-117 測定と誤差の解析（物理量と単位、有効数字、系統誤差と偶然誤差、誤差の伝播、線形化と直線の当てはめ、グラフと誤差棒）、P-118 実験技術と計測（電子回路と信号処理、計測器、真空と低温、X 線による構造解析、磁気共鳴、放射線の検出と計数統計、レーザーと光の干渉計、次元解析）、K-012 計算という考え方と Python（簡単なアルゴリズムとデータ構造） | DR020、DR021 |
+| T-09 | 量子ビット素子の作製と測定の技法 | 入れない（地図にない（候補：微細加工と素子作製）） | DR016 |
+| T-19 | 量子制御、NMR・量子光学・超伝導回路での量子情報素子の実現 | P-091 光と原子の相互作用と量子光学（共鳴、吸収と誘導放出・自然放出、ドレスト原子、メーザーとレーザー、共振器 QED、レーザー冷却、ボース＝アインシュタイン凝縮、電磁場の量子化、コヒーレント状態、スクイージング、もつれと量子干渉） | DR016 |
+
+## 出典
+
+| 記号 | 題名 | URL | 取得日 |
+|---|---|---|---|
+| DR015 | Google, Research Scientist, Quantum Error Correction, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/123628508197855942-research-scientist-quantum-error-correction-quantum-ai | 2026-11-07 |
+| DR016 | University of Waterloo, Graduate Studies Academic Calendar: Quantum Info & Computation (QIC)（QIC 710, 750, 820, 823, 845, 880, 885） | https://academic-calendar-archive.uwaterloo.ca/graduate-studies/archive-winter-2024/graduate-course/subject/QIC.html | 2026-11-07 |
+| DR017 | Google, Staff Software Engineer, Quantum Error Correction Decoding, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/79322813130777286-staff-software-engineer-quantum-error-correction-decoding-quantum-ai | 2026-11-07 |
+| DR018 | Google, Research Scientist, Applied ML, Quantum Error Correction | https://www.google.com/about/careers/applications/jobs/results/106415068375065286-research-scientist-applied-ml-quantum-error-correction | 2026-11-07 |
+| DR019 | Google, Research Scientist, Numerical Modeling, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/136856963345457862-research-scientist/ | 2026-11-07 |
+| DR020 | Google, (Experimental) Research Scientist, Quantum Methods, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/72997234588689094-research-scientist/ | 2026-11-07 |
+| DR021 | Google, Research Scientist, Gate Design and Measurement, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/137662836112270022-research-scientist-gate-design-and-measurement-quantum-ai | 2026-11-07 |
+| DR022 | Google, Research Scientist, Quantum Processor Design, Quantum AI | https://www.google.com/about/careers/applications/jobs/results/142880269504783046-research-scientist/ | 2026-11-07 |
+| DR023 | University of Waterloo, Institute for Quantum Computing, Introduction to Quantum Information Processing (QIC 710 ほか) | https://cleve.iqc.uwaterloo.ca/qic710/information/index.html | 2026-11-07 |
+| DR024 | University of Cambridge, Quantum Information Theory (M16), Á. Capel Cuevas | https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/QuantumInformationTheory_Capel.pdf | 2026-11-07 |
+| DR025 | University of Cambridge, Quantum Entanglement in Many-body Physics, F. Verstraete | https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/frank_v.pdf | 2026-11-07 |
+| DR026 | University of Cambridge, Topological Quantum Matter (L16), B. Béri | https://www.maths.cam.ac.uk/postgrad/part-iii/files/GtC/Quantum%20computation%2C%20Information%20and%20Foundations/Topological_Quantum_Matter_Beri.pdf | 2026-11-07 |

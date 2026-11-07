@@ -1,0 +1,112 @@
+# 網羅表：GCE O-Level Additional Mathematics（シンガポール）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  SC26:
+    title: Singapore-Cambridge SEC (2027) G3 Additional Mathematics (Syllabus K341)
+    url: https://isomer-user-content.by.gov.sg/334/7609d80d-5786-44e8-b79f-f70e29925cd5/K341_y27_sy.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 代数
+  topic: 二次関数（平方完成で最大・最小、常に正・負の条件）
+  sources: &id001
+  - SC26
+  units:
+  - A-020
+- id: T-02
+  field: 代数
+  topic: 方程式と不等式（判別式、直線と曲線の交わり・接する条件、二次不等式）
+  sources: *id001
+  units:
+  - A-017
+  - A-013
+  - A-020
+  - G-026
+- id: T-03
+  field: 代数
+  topic: 根号（四則、分母の有理化、根号を含む方程式）
+  sources: *id001
+  units:
+  - A-016
+- id: T-04
+  field: 代数
+  topic: 多項式（乗除、剰余の定理と因数定理、三次方程式）
+  sources: *id001
+  units:
+  - A-026
+- id: T-05
+  field: 代数
+  topic: 部分分数
+  sources: *id001
+  units:
+  - A-037
+- id: T-06
+  field: 代数
+  topic: 二項定理（正の整数 n、n!、nCr、一般項）
+  sources: *id001
+  units:
+  - C-016
+  - C-015
+- id: T-07
+  field: 代数
+  topic: 指数関数と対数関数（aˣ、eˣ、log、ln、対数法則、底の変換）
+  sources: *id001
+  units:
+  - D-001
+- id: T-08
+  field: 幾何と三角法
+  topic: 三角関数の定義とグラフ（任意の角、度と弧度、逆三角関数の主値）
+  sources: *id001
+  units:
+  - G-025
+- id: T-09
+  field: 幾何と三角法
+  topic: 三角関数の恒等式（加法定理、2 倍角、合成）
+  sources: *id001
+  units:
+  - G-025
+- id: T-10
+  field: 幾何と三角法
+  topic: 三角方程式と恒等式の証明
+  sources: *id001
+  units:
+  - G-025
+- id: T-11
+  field: 幾何と三角法
+  topic: 座標幾何（平行・垂直、中点、多角形の面積、円の方程式）
+  sources: *id001
+  units:
+  - G-026
+- id: T-12
+  field: 幾何と三角法
+  topic: 平面幾何の証明（中点連結定理、接弦定理）
+  sources: *id001
+  units:
+  - G-016
+  - G-017
+  - G-018
+- id: T-13
+  field: 微積分
+  topic: 微分（接線の傾き、変化率、積と商、連鎖律）
+  sources: *id001
+  units:
+  - D-004
+  - D-005
+- id: T-14
+  field: 微積分
+  topic: 微分の応用（増減、停留点、接線と法線、関連変化率、最大・最小）
+  sources: *id001
+  units:
+  - D-005
+- id: T-15
+  field: 微積分
+  topic: 積分（微分の逆、定積分、曲線と直線で囲む面積）
+  sources: *id001
+  units:
+  - D-006
+- id: T-16
+  field: 微積分
+  topic: 直線上の運動（変位、速度、加速度）
+  sources: *id001
+  units:
+  - P-001
+  - D-004

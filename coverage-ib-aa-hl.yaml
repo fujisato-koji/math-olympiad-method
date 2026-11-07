@@ -1,0 +1,77 @@
+# 網羅表：IB Mathematics: Analysis and Approaches HL（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  EX17:
+    title: 'Diploma Programme Subject Brief, Mathematics: analysis and approaches（International Baccalaureate Organization、学校サイトに置かれた写し）'
+    url: https://riverviewib.com/wp-content/uploads/2020/02/subject-brief-dp-math-analysis-and-approaches-en.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: 数学
+  topic: 数と代数
+  sources:
+  - EX17
+  units:
+  - A-004
+  - A-009
+  - A-017
+  - A-022
+  - C-016
+  - D-001
+  - A-021
+  - L-012
+- id: T-02
+  field: 数学
+  topic: 関数
+  sources:
+  - EX17
+  units:
+  - A-019
+  - A-020
+  - A-023
+  - A-024
+  - D-001
+  - D-011
+- id: T-03
+  field: 数学
+  topic: 幾何と三角法
+  sources:
+  - EX17
+  units:
+  - G-024
+  - G-025
+  - G-026
+  - G-027
+  - G-035
+- id: T-04
+  field: 数学
+  topic: 統計と確率
+  sources:
+  - EX17
+  units:
+  - C-011
+  - S-001
+  - S-002
+  - S-003
+  - S-018
+  - S-019
+- id: T-05
+  field: 数学
+  topic: 微積分
+  sources:
+  - EX17
+  units:
+  - D-002
+  - D-003
+  - D-004
+  - D-005
+  - D-006
+  - D-008
+  - D-009
+  - D-010
+  - D-044
+- id: T-06
+  field: 数学
+  topic: 探究・問題解決・モデル化の技能と Exploration
+  sources:
+  - EX17
+  none: 地図にない（候補：数学の探究とモデル化の技能）

@@ -1,0 +1,151 @@
+# 網羅表：AP Statistics（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  EX21:
+    title: AP Statistics Course and Exam Description（College Board、Effective Fall 2026）
+    url: https://apcentral.collegeboard.org/media/pdf/ap-statistics-course-and-exam-description.pdf
+    date: '2026-11-07'
+items:
+- id: T-01
+  field: Unit 1 データの探索と収集
+  topic: 統計の問いと変数、1 つのカテゴリ変数
+  sources:
+  - EX21
+  units:
+  - S-030
+- id: T-02
+  field: Unit 1 データの探索と収集
+  topic: 1 つの量的変数の表示・記述・比較
+  sources:
+  - EX21
+  units:
+  - S-030
+- id: T-03
+  field: Unit 1 データの探索と収集
+  topic: 調査の問いとデータ収集・無作為抽出
+  sources:
+  - EX21
+  units:
+  - S-031
+- id: T-04
+  field: Unit 1 データの探索と収集
+  topic: 実験計画
+  sources:
+  - EX21
+  units:
+  - S-031
+- id: T-05
+  field: Unit 2 確率と分布
+  topic: 2 つのカテゴリ変数
+  sources:
+  - EX21
+  units:
+  - S-030
+- id: T-06
+  field: Unit 2 確率と分布
+  topic: シミュレーションと確率の基本
+  sources:
+  - EX21
+  units:
+  - C-011
+  - S-001
+- id: T-07
+  field: Unit 2 確率と分布
+  topic: 確率変数と分布のパラメタ
+  sources:
+  - EX21
+  units:
+  - S-002
+  - S-003
+- id: T-08
+  field: Unit 2 確率と分布
+  topic: 二項分布
+  sources:
+  - EX21
+  units:
+  - S-002
+- id: T-09
+  field: Unit 2 確率と分布
+  topic: 正規分布
+  sources:
+  - EX21
+  units:
+  - S-003
+- id: T-10
+  field: Unit 2 確率と分布
+  topic: 標本分布と中心極限定理
+  sources:
+  - EX21
+  units:
+  - S-004
+- id: T-11
+  field: Unit 3 比率の推測
+  topic: 推定量と標本比率の分布
+  sources:
+  - EX21
+  units:
+  - S-018
+- id: T-12
+  field: Unit 3 比率の推測
+  topic: 母比率の信頼区間
+  sources:
+  - EX21
+  units:
+  - S-018
+- id: T-13
+  field: Unit 3 比率の推測
+  topic: 母比率の検定・p 値・過誤
+  sources:
+  - EX21
+  units:
+  - S-019
+- id: T-14
+  field: Unit 3 比率の推測
+  topic: 2 つの母比率の差
+  sources:
+  - EX21
+  units:
+  - S-018
+  - S-019
+- id: T-15
+  field: Unit 3 比率の推測
+  topic: 同質性のカイ二乗検定
+  sources:
+  - EX21
+  units:
+  - S-019
+- id: T-16
+  field: Unit 4 平均の推測
+  topic: 標本平均の分布と母平均の信頼区間
+  sources:
+  - EX21
+  units:
+  - S-018
+- id: T-17
+  field: Unit 4 平均の推測
+  topic: 母平均（対応のある差を含む）の検定
+  sources:
+  - EX21
+  units:
+  - S-019
+- id: T-18
+  field: Unit 4 平均の推測
+  topic: 2 つの母平均の差
+  sources:
+  - EX21
+  units:
+  - S-018
+  - S-019
+- id: T-19
+  field: Unit 5 量的変数の関係
+  topic: 2 つの量的変数の表示と相関
+  sources:
+  - EX21
+  units:
+  - S-020
+- id: T-20
+  field: Unit 5 量的変数の関係
+  topic: 線形回帰・残差・最小二乗回帰
+  sources:
+  - EX21
+  units:
+  - S-020
