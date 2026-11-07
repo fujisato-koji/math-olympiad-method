@@ -126,6 +126,8 @@ regions:
   - {id: songai, name: 損害保険とリスク理論, lane: F}
   - {id: toshi, name: 投資と派生商品, lane: F}
   - {id: keiryo-risk, name: 計量とリスク管理, lane: F}
+  - {id: shokugyo-seido, name: 職業と制度, lane: F}
+  - {id: keiei-kogaku, name: 経営工学, lane: E}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
@@ -685,6 +687,13 @@ units:
   - {id: F-019, title: 支払備金（チェイン・ラダー法と IBNR 備金）, stage: 6, region: songai, needs: [F-017, S-020], days: 8}
   - {id: F-020, title: 投資家の選好とポートフォリオ選択（期待効用、リスク回避、平均分散）, stage: 6, region: toshi, needs: [S-003, M-010, D-014, A-028], days: 10}
   - {id: F-021, title: 先渡・先物・スワップと二項モデル（裁定と複製による価格づけ）, stage: 6, region: toshi, needs: [F-009, S-001, C-015], days: 10}
+  - {id: E-154, title: 生産管理とインダストリアル・エンジニアリング（作業研究、工程管理、PERT と CPM、設備配置）, stage: 6, region: keiei-kogaku, needs: [C-012, A-019, S-003], days: 8}
+  - {id: E-155, title: 在庫管理と需要予測（経済的発注量、安全在庫、指数平滑法）, stage: 6, region: keiei-kogaku, needs: [E-154, S-018, A-022, D-005], days: 8}
+  - {id: E-156, title: 品質管理と統計的工程管理（管理図、工程能力、抜取検査、QC 七つ道具）, stage: 6, region: keiei-kogaku, needs: [S-018, S-019, S-020], days: 8}
+  - {id: F-040, title: 職業倫理と行為基準（信任義務、利益相反、公正な開示）, stage: 6, region: shokugyo-seido, needs: [F-010, F-020], days: 8}
+  - {id: F-041, title: 個人の資産設計と税（所得税と相続税、目標に基づく計画、資産承継）, stage: 6, region: shokugyo-seido, needs: [F-005, F-010], days: 8}
+  - {id: F-042, title: 管理会計と事業費の分析（原価計算、予算管理、業績評価）, stage: 6, region: kaikei, needs: [F-010, F-007], days: 8}
+  - {id: F-043, title: 経営戦略とコーポレート・ガバナンス（株式会社の仕組み、競争戦略、取締役会と株主）, stage: 6, region: kaikei, needs: [F-010, F-012], days: 8}
 
   # ---- 段 7 構造を移す ----
   - {id: A-034, title: 複素数の極形式と 1 の累乗根, stage: 7, region: shiki, needs: [G-025, A-021, L-012, A-009], days: 6}
@@ -829,6 +838,12 @@ units:
   - {id: F-032, title: 保険料算出原理と再保険（期待値・分散・効用の原理、比例再保険と超過損害額再保険）, stage: 7, region: songai, needs: [F-017, F-020], days: 8}
   - {id: F-033, title: 計量経済学（回帰と内生性、操作変数、パネルデータ、一般化モーメント法）, stage: 7, region: keiryo-risk, needs: [S-020, S-021], days: 10}
   - {id: F-034, title: 時系列解析（自己回帰移動平均、単位根と共和分、ボラティリティの変動）, stage: 7, region: keiryo-risk, needs: [S-020, S-021, A-022], days: 10}
+  - {id: F-044, title: 保険会社の組織と法制（相互会社と株式会社、保険業法、ソルベンシー規制）, stage: 7, region: shokugyo-seido, needs: [F-027, F-010], days: 8}
+  - {id: F-045, title: 年金と退職給付の税制（公的年金、企業年金、退職給付会計と税務）, stage: 7, region: shokugyo-seido, needs: [F-029, F-041], days: 8}
+  - {id: F-046, title: アクチュアリーの職業と時事（生保・損保・年金の実務と規制の動き）, stage: 7, region: shokugyo-seido, needs: [F-027, F-029, F-032, F-040], days: 8}
+  - {id: F-047, title: オルタナティブ投資と私募市場（不動産、未公開株、ヘッジファンド、インフラ）, stage: 7, region: toshi, needs: [F-022, F-011], days: 8}
+  - {id: F-048, title: ユニバーサル生命保険と変額保険の数理（積立金の推移、付利、最低保証）, stage: 7, region: seimei-nenkin, needs: [F-027, F-021], days: 10}
+  - {id: F-049, title: 行動経済学と行動ファイナンス（プロスペクト理論、ヒューリスティクス、ナッジ）, stage: 7, region: keizai, needs: [F-020, F-024], days: 8}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1086,6 +1101,7 @@ units:
   - {id: F-036, title: 資産価格の実証（効率的市場、過剰変動、確率的割引因子）, stage: 8, region: toshi, needs: [F-022, F-033, F-034], days: 10}
   - {id: F-037, title: 破産理論（複合ポアソン過程、ルンドベリの不等式、破産確率）, stage: 8, region: songai, needs: [F-017, S-009, S-011], days: 10}
   - {id: F-038, title: リスク尺度と統合的リスク管理（VaR、期待ショートフォール、ALM、ERM、経済価値ベースのソルベンシー）, stage: 8, region: keiryo-risk, needs: [F-009, F-017, F-020, S-023], days: 10}
+  - {id: E-157, title: オペレーションズ・リサーチの応用（数理計画のモデル化、待ち行列、シミュレーション、意思決定分析）, stage: 8, region: keiei-kogaku, needs: [K-011, K-015, S-009, E-155], days: 10}
 
   # ---- 段 9 構造のあいだ ----
 

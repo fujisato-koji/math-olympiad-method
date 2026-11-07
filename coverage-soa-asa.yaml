@@ -195,7 +195,8 @@ items:
   topic: ユニバーサル生命保険（10–18%）
   sources:
   - FN005
-  none: 地図にない（候補：ユニバーサル生命保険と変額保険の数理）
+  units:
+  - F-048
 - id: T-23
   field: Exam ALTAM
   topic: 生命保険と年金に組み込まれたオプション（10–18%）
