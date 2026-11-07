@@ -129,7 +129,7 @@ items:
   sources:
   - EX20
   units:
-  - K-002
+  - K-160
 - id: T-18
   field: Unit 7 微分方程式
   topic: 変数分離形・指数モデル・ロジスティックモデル
@@ -158,7 +158,7 @@ items:
   sources:
   - EX20
   units:
-  - D-006
+  - D-081
 - id: T-22
   field: Unit 8 積分の応用
   topic: 曲線の長さ
@@ -195,21 +195,21 @@ items:
   - EX20
   units:
   - D-002
-  - D-010
+  - D-080
 - id: T-27
   field: Unit 10 級数
   topic: 収束判定法（積分・p 級数・比較・交代・比）
   sources:
   - EX20
   units:
-  - D-010
+  - D-080
 - id: T-28
   field: Unit 10 級数
   topic: 絶対収束・条件収束と交代級数の誤差
   sources:
   - EX20
   units:
-  - D-010
+  - D-080
 - id: T-29
   field: Unit 10 級数
   topic: テイラー多項式とラグランジュの剰余
@@ -217,11 +217,11 @@ items:
   - EX20
   units:
   - D-008
-  - D-010
+  - D-080
 - id: T-30
   field: Unit 10 級数
   topic: べき級数（収束半径、テイラー級数とマクローリン級数）
   sources:
   - EX20
   units:
-  - D-010
+  - D-080

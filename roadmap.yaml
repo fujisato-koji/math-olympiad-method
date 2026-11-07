@@ -808,7 +808,7 @@ units:
   - {id: B-042, title: 進化のしくみ（自然選択、遺伝的浮動、ハーディ–ワインベルグの法則、種分化、系統樹）, stage: 5, level: 3, region: iden-shinka, needs: [B-027, B-032, A-015], days: 7}
   - {id: B-043, title: 微生物とウイルス（細菌の構造と増殖、培養と無菌操作、ウイルスの増え方、発酵）, stage: 5, level: 3, region: iyaku, needs: [B-032, B-031, B-074], days: 7}
   - {id: K-160, title: 数値計算の入口（二分法・反復法・ニュートン法による求根、台形公式とシンプソンの公式、オイラー法、収束の速さ）, stage: 5, level: 3, region: suchi, needs: [D-005, D-006, A-022], days: 6}
-  - {id: S-041, title: 確率分布と統計的推測の入口（二項分布、正規分布と標準化、標本平均と標本比率の分布、推定と検定の手順）, stage: 5, level: 3, region: kakuritsu-daigaku, needs: [C-020, S-030, S-031], days: 6}
+  - {id: S-041, title: 確率分布と統計的推測の入口（二項分布、正規分布と標準化、標本平均と標本比率の分布、t 分布と χ² 検定、推定と検定の手順）, stage: 5, level: 3, region: kakuritsu-daigaku, needs: [C-020, S-030, S-031], days: 6}
   - {id: G-049, title: 空間座標と直線・平面・球の方程式（方向ベクトルと法線ベクトル、距離と角）, stage: 5, level: 3, region: zahyo, needs: [G-027, G-021], days: 6}
   - {id: D-081, title: 定積分の応用（断面積による体積、回転体の体積）, stage: 5, level: 3, region: bisekibun-nyumon, needs: [D-006, G-011], days: 6}
   - {id: C-043, title: 確率の計算（排反と独立、条件付き確率、樹形図・2 元表・ベン図）, stage: 5, level: 3, region: kakuritsu, needs: [C-011, C-008], days: 6}
@@ -1736,7 +1736,7 @@ units:
   - {id: H-057, title: 化学生物学（生体直交反応とクリックケミストリー、化学プローブ、酵素の指向性進化とファージディスプレイ）, stage: 9, level: 3, region: soyaku, needs: [H-047, B-007, B-009], days: 10}
   - {id: B-054, title: 幹細胞と再生医療（多能性幹細胞、iPS 細胞と初期化、分化誘導、オルガノイド、細胞治療）, stage: 9, level: 3, region: hassei, needs: [B-046, B-051, B-053, B-010], days: 12}
   - {id: B-068, title: 神経遺伝学と脳の病気（神経発達症、神経変性疾患、精神疾患、神経薬理）, stage: 9, level: 3, region: shinkei, needs: [B-064, B-065, B-047, B-014, I-024], days: 12}
-  - {id: K-161, title: 大規模言語モデルと基盤モデル（事前学習、事後学習と人の好みへの整合、多モーダル、検索拡張と継続学習）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-051, K-059], days: 10}
+  - {id: K-161, title: 大規模言語モデルと基盤モデル（事前学習、事後学習と人の好みへの整合、プロンプトと少数例学習、多モーダル、検索拡張と継続学習、エージェント）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-051, K-059], days: 10}
   - {id: K-162, title: 生成モデル（自己回帰、変分自己符号化器、拡散モデル、世界モデル）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-050, K-051, S-003], days: 10}
   - {id: T-050, title: 微分位相（横断性、モース理論、コボルディズムとポントリャーギン–トム構成、h 同境と手術）, stage: 9, level: 4, region: tayotai, needs: [T-010, T-014, T-024, T-026], days: 10}
   - {id: K-164, title: 方策勾配法と actor-critic（on-policy の学習、PPO）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-058, K-059, K-050], days: 10}

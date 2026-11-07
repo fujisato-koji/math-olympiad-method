@@ -81,7 +81,7 @@ items:
   - EX15
   units:
   - C-016
-  - D-010
+  - D-080
 - id: T-11
   field: 純粋数学
   topic: 数列・Σ・等差・等比級数
@@ -169,8 +169,7 @@ items:
   sources:
   - EX15
   units:
-  - D-005
-  - K-001
+  - K-160
 - id: T-23
   field: 純粋数学
   topic: ベクトル（2 次元・3 次元）
@@ -178,7 +177,7 @@ items:
   - EX15
   units:
   - G-027
-  - G-035
+  - G-049
 - id: T-24
   field: 統計
   topic: 母集団と標本
@@ -209,14 +208,14 @@ items:
   - EX15
   units:
   - S-002
-  - S-003
+  - S-041
 - id: T-28
   field: 統計
   topic: 仮説検定（二項分布の比率、相関係数、正規分布の平均）
   sources:
   - EX15
   units:
-  - S-019
+  - S-041
 - id: T-29
   field: 力学
   topic: 単位と運動学（等加速度、グラフ、微積分）

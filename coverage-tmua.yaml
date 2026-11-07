@@ -119,6 +119,7 @@ items:
   - EX04
   units:
   - D-006
+  - K-160
 - id: T-16
   field: 関数
   topic: 関数のグラフと変換

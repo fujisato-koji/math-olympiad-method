@@ -50,8 +50,7 @@ items:
   sources:
   - IN004
   units:
-  - A-019
-  - G-026
+  - G-050
 - id: T-07
   field: 立体幾何
   topic: 立体の種類（立方体、直方体、角柱、角錐、円錐、円柱、球）
@@ -75,6 +74,7 @@ items:
   units:
   - G-004
   - G-007
+  - G-051
 - id: T-10
   field: 立体幾何
   topic: 立体の直観的な平面表示

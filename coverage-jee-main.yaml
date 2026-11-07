@@ -131,7 +131,7 @@ items:
   sources:
   - EX03
   units:
-  - G-035
+  - G-049
 - id: T-17
   field: 座標幾何
   topic: ベクトル（内積と外積）

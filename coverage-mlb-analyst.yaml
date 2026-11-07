@@ -30,12 +30,14 @@ items:
   units:
   - K-012
   - K-016
+  - K-169
 - id: T-03
   field: 計算
   topic: データ基盤（SQL、dbt、クラウド）
   sources:
   - DR174
-  none: 地図にない（候補：データベースとデータ基盤）
+  units:
+  - K-169
 - id: T-04
   field: 計算
   topic: クラウドのデータ基盤、BI・ダッシュボード、可視化
@@ -77,7 +79,8 @@ items:
   topic: バイオメカニクスのデータ
   sources:
   - DR174
-  none: 地図にない（候補：バイオメカニクス）
+  units:
+  - B-120
 - id: T-09
   field: 計算
   topic: スポーツの数学と野球の成績の分析
@@ -118,3 +121,8 @@ items:
   topic: 常微分方程式
   units:
   - D-044
+- id: V-07
+  field: 検証で足した論題
+  topic: 因果推論
+  units:
+  - S-042

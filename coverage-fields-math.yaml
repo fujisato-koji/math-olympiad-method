@@ -144,6 +144,7 @@ items:
   - D-053
   - D-054
   - D-055
+  - S-044
 - id: T-02
   field: 数学
   topic: くりこみによる力学系の理論、斉次力学と数論的な対象の等分布
@@ -153,6 +154,7 @@ items:
   units:
   - D-073
   - D-074
+  - D-084
 - id: T-03
   field: 数学
   topic: Riemann 面のモジュライ空間の力学と幾何
@@ -161,6 +163,7 @@ items:
   units:
   - T-040
   - D-042
+  - T-055
 - id: T-04
   field: 数学
   topic: 算術関数、Riemann ゼータ関数、素数定理、Riemann 予想、乗法的関数の平均
@@ -232,6 +235,8 @@ items:
   units:
   - N-065
   - N-055
+  - T-047
+  - N-072
 - id: T-12
   field: 数学
   topic: 可換環論：局所化、ネーター環、準素分解、整拡大、次元論
@@ -281,8 +286,7 @@ items:
   - DR078
   - DR088
   units:
-  - T-038
-  - T-036
+  - T-054
 - id: T-17
   field: 数学
   topic: 複素多様体：多変数の複素解析、因子と直線束、Kähler 計量と Hodge 理論
@@ -300,7 +304,8 @@ items:
   topic: マトロイド、幾何的な束、Lorentz 多項式
   sources:
   - DR080
-  none: 地図にない（候補：マトロイドと Lorentz 多項式）
+  units:
+  - C-045
 - id: T-19
   field: 数学
   topic: 組合せ論：集合系、Sperner の補題、Kruskal–Katona、測度の集中
@@ -328,9 +333,9 @@ items:
   sources:
   - DR085
   units:
-  - L-029
-  - T-018
-  - T-029
+  - L-037
+  - T-049
+  - N-071
 - id: T-22
   field: 数学
   topic: Lie 代数とその表現：ルート系、Weyl 群、単純 Lie 代数の分類、Weyl の指標公式
@@ -379,7 +384,8 @@ items:
   sources:
   - DR070
   - DR078
-  none: 地図にない（候補：最適輸送）
+  units:
+  - D-087
 - id: T-26
   field: 数学
   topic: フーリエ解析と超関数：Schwartz 空間、Plancherel の定理、Poisson 和公式
@@ -398,8 +404,7 @@ items:
   - DR097
   - DR085
   units:
-  - D-026
-  - D-023
+  - D-083
 - id: T-28
   field: 数学
   topic: フーリエ変換の制限理論、幾何学的測度論、掛谷問題、デカップリング
@@ -409,6 +414,7 @@ items:
   units:
   - D-072
   - D-023
+  - D-085
 - id: T-29
   field: 数学
   topic: 球充填と E8 格子
@@ -425,8 +431,7 @@ items:
   - DR098
   - DR085
   units:
-  - P-054
-  - P-055
+  - D-082
 - id: T-31
   field: 数学
   topic: 波の運動論方程式と非線形分散系
@@ -434,6 +439,7 @@ items:
   - DR085
   units:
   - D-061
+  - D-082
 - id: T-32
   field: 数学
   topic: 測度論的確率論：条件付き期待値、マルチンゲール、弱収束、大数の法則、中心極限定理
@@ -469,7 +475,8 @@ items:
   topic: 確率偏微分方程式と正則性構造
   sources:
   - DR077
-  none: 地図にない（候補：確率偏微分方程式）
+  units:
+  - S-045
 - id: T-36
   field: 数学
   topic: イジング模型の確率論（Curie–Weiss 模型、ランダムクラスター表現）
@@ -477,7 +484,7 @@ items:
   - DR101
   - DR080
   units:
-  - P-052
+  - S-043
 - id: T-37
   field: 数学
   topic: パーコレーション、ガウス自由場とループスープ
@@ -485,7 +492,8 @@ items:
   - DR102
   - DR103
   - DR080
-  none: 地図にない（候補：パーコレーションとガウス自由場）
+  units:
+  - S-043
 - id: T-38
   field: 数学
   topic: 代数的位相幾何：特異ホモロジーとコホモロジー、カップ積、Poincaré 双対、ベクトル束
@@ -538,19 +546,21 @@ items:
   units:
   - T-041
   - P-018
+  - T-052
 - id: T-42
   field: 数学
   topic: 正則曲線の数え上げ、仮想基本サイクル、Fukaya 圏
   sources:
   - DR085
   units:
-  - T-041
+  - T-052
 - id: T-43
   field: 数学
   topic: 3 次元多様体への群作用と結び目理論
   sources:
   - DR085
-  none: 地図にない（候補：低次元トポロジーと結び目理論）
+  units:
+  - T-056
 - id: V-01
   field: 検証で足した論題
   topic: 複素解析の等角写像（一次分数変換、シュワルツの補題）と平面の調和関数（ディリクレ問題）
@@ -583,3 +593,18 @@ items:
   topic: 導来圏と導来関手
   units:
   - R-029
+- id: V-07
+  field: 検証で足した論題
+  topic: グラスマン多様体と族（ヒルベルトスキーム、チャウ多様体）、リーマン面のモジュライ空間
+  units:
+  - T-048
+- id: V-08
+  field: 検証で足した論題
+  topic: 無限積と整関数（ワイエルシュトラス積、アダマール）、ピカールの定理
+  units:
+  - D-086
+- id: V-09
+  field: 検証で足した論題
+  topic: ベクトル束と主束の接続・曲率・平行移動（平坦接続）
+  units:
+  - T-051

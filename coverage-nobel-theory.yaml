@@ -151,6 +151,7 @@ items:
   - R-006
   - D-038
   - D-039
+  - P-230
 - id: T-03
   field: 物理
   topic: 前提：学部の統計力学
@@ -217,6 +218,7 @@ items:
   units:
   - P-053
   - P-056
+  - P-236
 - id: T-11
   field: 数学
   topic: 位相幾何の考えと位相的な相転移・相（2016 年の賞）
@@ -285,6 +287,7 @@ items:
   units:
   - P-061
   - P-063
+  - P-240
 - id: T-19
   field: 物理
   topic: 超大質量ブラックホールの観測の証拠（SgrA*）
@@ -322,19 +325,22 @@ items:
   units:
   - P-028
   - P-091
+  - P-234
 - id: T-23
   field: 物理
   topic: 非線形光学
   sources:
   - DR063
-  none: 地図にない（候補：非線形光学）
+  units:
+  - P-234
 - id: T-24
   field: 物理
   topic: 時間分解の手法（ポンプ・プローブ分光、高次高調波の光源）（2023 年の賞）
   sources:
   - DR063
   - DR065
-  none: 地図にない（候補：超高速光学（アト秒科学））
+  units:
+  - P-234
 - id: T-25
   field: 物理
   topic: 光の放射圧と光ピンセット（2018 年の賞）
@@ -371,13 +377,15 @@ items:
   - DR068
   - DR069
   - DR067
-  none: 地図にない（候補：スピングラスとレプリカ法）
+  units:
+  - P-239
 - id: T-29
   field: 物理
   topic: ランダムエネルギー模型、KPZ 普遍クラス、ガラス転移
   sources:
   - DR069
-  none: 地図にない（候補：ガラス転移とランダム系）
+  units:
+  - P-239
 - id: T-30
   field: 物理
   topic: Anderson 局在と多体局在

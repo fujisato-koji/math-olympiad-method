@@ -176,6 +176,7 @@ items:
   units:
   - G-004
   - G-007
+  - G-051
 - id: T-22
   field: 整数
   topic: 数のパズル
@@ -346,6 +347,7 @@ items:
   units:
   - C-003
   - C-011
+  - C-043
 - id: T-44
   field: 論理とパズル
   topic: 問題の読みかえ（ほかの分野の問題に帰着する）

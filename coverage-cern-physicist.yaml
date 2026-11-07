@@ -122,11 +122,7 @@ items:
   sources:
   - DR012
   units:
-  - R-006
-  - R-018
-  - R-020
-  - R-023
-  - P-077
+  - P-230
 - id: T-11
   field: 物理
   topic: ゲージ理論（U(1) と一般のリー群）

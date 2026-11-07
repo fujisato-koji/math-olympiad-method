@@ -114,6 +114,7 @@ items:
   - IN007
   units:
   - G-004
+  - G-051
 - id: T-14
   field: 時刻
   topic: カレンダーと曜日

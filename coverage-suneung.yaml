@@ -150,7 +150,7 @@ items:
   - EX13
   - EX14
   units:
-  - D-006
+  - D-081
 - id: T-18
   field: 解析
   topic: 和の極限としての定積分（区分求積）
@@ -250,7 +250,7 @@ items:
   - EX13
   - EX14
   units:
-  - G-035
+  - G-049
 - id: T-30
   field: 幾何
   topic: 空間図形の位置関係（三垂線の定理、正射影）
@@ -308,7 +308,7 @@ items:
   - EX13
   - EX14
   units:
-  - S-003
+  - S-041
 - id: T-37
   field: 確率と統計
   topic: 標本調査と標本平均
@@ -316,7 +316,7 @@ items:
   - EX13
   - EX14
   units:
-  - S-018
+  - S-041
 - id: T-38
   field: 確率と統計
   topic: 推定（母平均の区間推定）
@@ -324,7 +324,7 @@ items:
   - EX13
   - EX14
   units:
-  - S-018
+  - S-041
 - id: T-39
   field: 整数と離散
   topic: 数学的帰納法
@@ -375,6 +375,7 @@ items:
   topic: 因数定理（条件から多項式を決める）
   units:
   - A-026
+  - A-012
 - id: V-02
   field: 検証で足した論題
   topic: 円に内接する四角形と円周角（正弦定理の問題の図形）

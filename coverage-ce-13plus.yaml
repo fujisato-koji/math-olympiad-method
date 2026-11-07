@@ -99,7 +99,7 @@ items:
   topic: 直線のグラフ
   sources: *id001
   units:
-  - A-019
+  - G-050
 - id: T-14
   field: 代数
   topic: 数列（等差、等比、平方数、三角数、フィボナッチ）
@@ -167,6 +167,7 @@ items:
   - G-015
   - G-004
   - G-013
+  - G-050
 - id: T-23
   field: 図形
   topic: 角の計算、多角形の角

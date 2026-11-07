@@ -320,14 +320,14 @@ items:
   - EX02
   units:
   - G-027
-  - G-035
+  - G-049
 - id: T-44
   field: 幾何
   topic: 空間の直線と平面の方程式、ねじれの位置と最短距離
   sources:
   - EX02
   units:
-  - G-035
+  - G-049
 - id: T-45
   field: 幾何
   topic: 外積とスカラー三重積・ベクトル三重積

@@ -68,8 +68,7 @@ items:
   sources:
   - IN005
   units:
-  - A-019
-  - G-026
+  - G-050
 - id: T-09
   field: 平面幾何
   topic: 簡単な正多角形
@@ -108,6 +107,7 @@ items:
   units:
   - G-004
   - G-007
+  - G-051
 - id: T-14
   field: 数論
   topic: 数のパズルと数の並び

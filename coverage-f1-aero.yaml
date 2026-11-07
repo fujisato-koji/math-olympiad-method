@@ -59,12 +59,14 @@ items:
   - E-027
   - E-028
   - E-029
+  - E-186
 - id: T-03
   field: 工学
   topic: 車体まわりの空気力学：冷却と換気、車輪、オープンホイール、鈍い物体と流線形の物体
   sources:
   - DR043
-  none: 地図にない（候補：車両の空気力学（車輪、冷却、車体形状））
+  units:
+  - E-186
 - id: T-04
   field: 数学
   topic: 数値計算法、有限差分・有限体積による偏微分方程式の離散化と疎行列の解法
@@ -97,6 +99,7 @@ items:
   units:
   - E-033
   - E-034
+  - E-195
 - id: T-07
   field: 数学
   topic: 双曲型方程式と保存則、衝撃波、高解像度の差分法、Riemann 問題
@@ -112,7 +115,8 @@ items:
   sources:
   - DR044
   - DR043
-  none: 地図にない（候補：検証と妥当性確認、不確かさの定量化）
+  units:
+  - K-163
 - id: T-09
   field: 工学
   topic: 風洞試験の計画と実施、CFD と風洞・走行結果の相関
@@ -140,7 +144,8 @@ items:
   sources:
   - DR039
   - DR042
-  none: 地図にない（候補：CAD）
+  units:
+  - E-204
 - id: T-12
   field: 計算
   topic: CFD ソフトと Linux、C++・Python・bash の開発、HPC と作業の自動化
@@ -186,7 +191,8 @@ items:
   topic: 車両の運動：タイヤの力、サスペンション、荷重移動、操縦安定
   sources:
   - DR043
-  none: 地図にない（候補：車両の運動学（タイヤとサスペンション））
+  units:
+  - E-191
 - id: V-01
   field: 検証で足した論題
   topic: 構造と複合材料（有限要素法、異方性、疲労と非破壊検査）

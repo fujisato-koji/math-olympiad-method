@@ -126,6 +126,7 @@ items:
   units:
   - D-006
   - D-009
+  - D-081
 - id: T-15
   field: 代数と関数
   topic: 多項式の展開と因数分解
@@ -143,6 +144,7 @@ items:
   units:
   - A-017
   - A-020
+  - A-012
 - id: T-17
   field: 代数と関数
   topic: 解と係数の関係と対称式
@@ -308,7 +310,7 @@ items:
   - EX06
   units:
   - G-027
-  - G-035
+  - G-049
 - id: T-36
   field: 幾何
   topic: 空間図形の性質（平行・垂直、正射影）
@@ -400,7 +402,7 @@ items:
   - EX05
   - EX06
   units:
-  - S-003
+  - S-041
 - id: T-47
   field: 確率と統計
   topic: 記述統計と散布図・相関係数
@@ -417,7 +419,7 @@ items:
   - EX05
   - EX06
   units:
-  - S-018
+  - S-041
 - id: T-49
   field: 確率と統計
   topic: 推定（母平均の区間推定）
@@ -425,7 +427,7 @@ items:
   - EX05
   - EX06
   units:
-  - S-018
+  - S-041
 - id: T-50
   field: 確率と統計
   topic: 仮説検定（正規分布による検定）
@@ -433,7 +435,7 @@ items:
   - EX05
   - EX06
   units:
-  - S-019
+  - S-041
 - id: T-51
   field: 整数と離散
   topic: 集合と命題（必要条件と十分条件、否定、ド・モルガンの法則）
@@ -521,3 +523,8 @@ items:
   units:
   - N-031
   - N-035
+- id: V-03
+  field: 解析
+  topic: 平均値の定理（数学 III）
+  units:
+  - D-008

@@ -63,6 +63,7 @@ items:
   - F-002
   - F-003
   - F-005
+  - K-160
 - id: T-05
   field: Exam FM
   topic: 確定キャッシュフローの年金現価と終価（20–30%）
@@ -123,6 +124,7 @@ items:
   - FN004
   units:
   - F-021
+  - F-057
 - id: T-13
   field: Exam FAM
   topic: 長期の保険と退職保障の制度の概要（2.5–5%）
@@ -161,6 +163,7 @@ items:
   units:
   - F-014
   - F-028
+  - K-160
 - id: T-18
   field: Exam ALTAM
   topic: 状態で変わる長期の保障の保険料と責任準備金（12–20%）
@@ -204,7 +207,7 @@ items:
   - FN005
   units:
   - F-021
-  - F-035
+  - F-057
   - F-048
 - id: T-24
   field: Exam ASTAM

@@ -55,14 +55,16 @@ items:
   sources:
   - DR015
   - DR016
-  none: 地図にない（候補：量子誤り訂正符号）
+  units:
+  - K-166
 - id: T-02
   field: 計算
   topic: 誤り耐性の回路の解析、雑音の模型のもとでの符号の模擬計算
   sources:
   - DR015
   - DR016
-  none: 地図にない（候補：誤り耐性量子計算）
+  units:
+  - K-166
 - id: T-03
   field: 計算
   topic: 表面符号・qLDPC 符号の復号アルゴリズムと、機械学習による符号探索
@@ -73,6 +75,7 @@ items:
   - K-046
   - K-047
   - K-051
+  - K-166
 - id: T-04
   field: 物理
   topic: 理論量子物理（量子力学の体系、近似法、散乱、同種粒子）
@@ -130,6 +133,7 @@ items:
   units:
   - P-091
   - P-099
+  - P-249
 - id: T-09
   field: 工学
   topic: 量子ビット素子の作製と測定の技法
@@ -162,7 +166,8 @@ items:
   sources:
   - DR016
   - DR023
-  none: 地図にない（候補：量子アルゴリズム）
+  units:
+  - K-176
 - id: T-13
   field: 計算
   topic: 計算量理論の基礎
@@ -178,14 +183,17 @@ items:
   sources:
   - DR016
   - DR024
-  none: 地図にない（候補：量子操作と量子状態の距離）
+  units:
+  - P-242
+  - K-174
 - id: T-15
   field: 数学
   topic: 量子 Shannon 理論：von Neumann エントロピー、Holevo の定理、通信路容量、量子相対エントロピー
   sources:
   - DR016
   - DR024
-  none: 地図にない（候補：量子情報理論）
+  units:
+  - K-174
 - id: T-16
   field: 物理
   topic: エンタングルメントの理論と非局所性
@@ -194,12 +202,14 @@ items:
   - DR023
   units:
   - P-084
+  - K-174
 - id: T-17
   field: 計算
   topic: 量子暗号と量子鍵配送の安全性、量子の証明系
   sources:
   - DR016
-  none: 地図にない（候補：量子暗号）
+  units:
+  - K-174
 - id: T-18
   field: 物理
   topic: 開放量子系：マスター方程式、デコヒーレンス
@@ -207,6 +217,7 @@ items:
   - DR016
   units:
   - P-084
+  - P-242
 - id: T-19
   field: 工学
   topic: 量子制御、NMR・量子光学・超伝導回路での量子情報素子の実現
@@ -214,6 +225,7 @@ items:
   - DR016
   units:
   - P-091
+  - P-249
 - id: T-20
   field: 物理
   topic: エンタングルメントエントロピーの面積則とテンソルネットワーク

@@ -144,6 +144,7 @@ items:
   units:
   - D-006
   - D-009
+  - D-081
 - id: T-20
   field: 解析
   topic: 和の極限としての定積分（区分求積）
@@ -158,8 +159,7 @@ items:
   sources:
   - EX01
   units:
-  - D-005
-  - K-001
+  - K-160
 - id: T-22
   field: 解析
   topic: マクローリン展開
@@ -413,14 +413,14 @@ items:
   - EX01
   units:
   - G-027
-  - G-035
+  - G-049
 - id: T-56
   field: 幾何
   topic: 空間の直線と平面の方程式、交わり、距離と角
   sources:
   - EX01
   units:
-  - G-035
+  - G-049
 - id: T-57
   field: 幾何
   topic: 外積とスカラー三重積・ベクトル三重積

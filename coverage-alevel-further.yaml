@@ -74,7 +74,7 @@ items:
   - EX16
   units:
   - D-008
-  - D-010
+  - D-080
 - id: T-10
   field: Core Pure
   topic: 回転体の体積・広義積分・関数の平均値
@@ -83,6 +83,7 @@ items:
   units:
   - D-006
   - D-009
+  - D-081
 - id: T-11
   field: Core Pure
   topic: 部分分数（二次因子）と逆三角関数の微積分
@@ -97,7 +98,7 @@ items:
   sources:
   - EX16
   units:
-  - G-035
+  - G-049
 - id: T-13
   field: Core Pure
   topic: 極座標と面積
@@ -151,7 +152,7 @@ items:
   - EX16
   units:
   - D-008
-  - D-010
+  - D-080
 - id: T-20
   field: Further Pure 1
   topic: 微分方程式の級数解と置換による解法
@@ -181,8 +182,7 @@ items:
   sources:
   - EX16
   units:
-  - K-002
-  - K-001
+  - K-160
 - id: T-24
   field: Further Pure 1
   topic: 不等式

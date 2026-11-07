@@ -57,7 +57,7 @@ items:
   - EX21
   units:
   - S-002
-  - S-003
+  - S-041
 - id: T-08
   field: Unit 2 確率と分布
   topic: 二項分布
@@ -71,7 +71,7 @@ items:
   sources:
   - EX21
   units:
-  - S-003
+  - S-041
 - id: T-10
   field: Unit 2 確率と分布
   topic: 標本分布と中心極限定理
@@ -79,64 +79,63 @@ items:
   - EX21
   units:
   - S-004
+  - S-041
 - id: T-11
   field: Unit 3 比率の推測
   topic: 推定量と標本比率の分布
   sources:
   - EX21
   units:
-  - S-018
+  - S-041
 - id: T-12
   field: Unit 3 比率の推測
   topic: 母比率の信頼区間
   sources:
   - EX21
   units:
-  - S-018
+  - S-041
 - id: T-13
   field: Unit 3 比率の推測
   topic: 母比率の検定・p 値・過誤
   sources:
   - EX21
   units:
-  - S-019
+  - S-041
 - id: T-14
   field: Unit 3 比率の推測
   topic: 2 つの母比率の差
   sources:
   - EX21
   units:
-  - S-018
-  - S-019
+  - S-041
 - id: T-15
   field: Unit 3 比率の推測
   topic: 同質性のカイ二乗検定
   sources:
   - EX21
   units:
-  - S-019
+  - S-041
 - id: T-16
   field: Unit 4 平均の推測
   topic: 標本平均の分布と母平均の信頼区間
   sources:
   - EX21
   units:
-  - S-018
+  - S-041
 - id: T-17
   field: Unit 4 平均の推測
   topic: 母平均（対応のある差を含む）の検定
   sources:
   - EX21
   units:
-  - S-019
+  - S-041
 - id: T-18
   field: Unit 4 平均の推測
   topic: 2 つの母平均の差
   sources:
   - EX21
   units:
-  - S-018
-  - S-019
+  - S-041
 - id: T-19
   field: Unit 5 量的変数の関係
   topic: 2 つの量的変数の表示と相関

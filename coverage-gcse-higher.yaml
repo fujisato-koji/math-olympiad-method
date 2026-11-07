@@ -170,7 +170,8 @@ items:
   field: 代数
   topic: 反復法による近似解
   sources: *id001
-  none: 地図にない（候補：反復法による方程式の近似解）
+  units:
+  - K-160
 - id: T-24
   field: 代数
   topic: 方程式を立てて解き、解を解釈する
@@ -359,19 +360,20 @@ items:
   units:
   - C-003
   - C-011
+  - C-043
 - id: T-51
   field: 確率統計
   topic: 独立な事象と従属な事象
   sources: *id001
   units:
   - C-011
-  - S-001
+  - C-043
 - id: T-52
   field: 確率統計
   topic: 条件付き確率
   sources: *id001
   units:
-  - S-001
+  - C-043
 - id: T-53
   field: 確率統計
   topic: 標本と母集団、統計の表とグラフ

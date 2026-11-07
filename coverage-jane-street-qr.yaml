@@ -52,6 +52,7 @@ items:
   units:
   - K-047
   - K-051
+  - K-165
 - id: T-06
   field: 計算
   topic: プログラミング（Python）

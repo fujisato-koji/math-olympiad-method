@@ -215,7 +215,7 @@ items:
   - EX24
   units:
   - S-002
-  - S-003
+  - S-041
 - id: T-26
   field: 論理と確率統計
   topic: 組合せ論
@@ -245,7 +245,7 @@ items:
   - EX23
   units:
   - G-021
-  - G-035
+  - G-049
 - id: T-29
   field: 幾何
   topic: 多面体
@@ -262,6 +262,7 @@ items:
   units:
   - G-011
   - D-006
+  - D-081
 - id: T-31
   field: 幾何
   topic: 座標とベクトル
@@ -270,7 +271,7 @@ items:
   - EX23
   units:
   - G-027
-  - G-035
+  - G-049
   - M-013
 - id: T-32
   field: 応用
