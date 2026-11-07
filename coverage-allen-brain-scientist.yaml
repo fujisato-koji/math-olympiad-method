@@ -42,6 +42,7 @@ items:
   - CB072
   units:
   - B-065
+  - Q-007
 - id: T-06
   field: 生命
   topic: 予測処理と認知
@@ -50,6 +51,7 @@ items:
   units:
   - B-065
   - B-066
+  - Q-015
 - id: T-07
   field: 生命
   topic: 動物の行動の訓練（げっ歯類の課題）

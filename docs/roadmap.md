@@ -117,13 +117,13 @@
 | A level Biology（AQA 7402） | 201 | 1325 |
 | 化学者（ノーベル化学賞の研究に届く知識） | 279 | 2043 |
 | 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識） | 297 | 2165 |
-| 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識） | 320 | 2328 |
+| 生命科学の研究者（ノーベル生理学・医学賞の研究に届く知識） | 330 | 2434 |
 | 生態学と進化の研究者（クラフォード賞・生物科学の研究に届く知識） | 234 | 1571 |
 | 神経科学の研究者（カブリ賞・神経科学の研究に届く知識） | 221 | 1524 |
 | 細胞の研究者（Francis Crick Institute） | 206 | 1389 |
 | mRNA ワクチンをつくる研究者（Moderna） | 253 | 1769 |
 | 野生動物の研究者（Max Planck Institute of Animal Behavior） | 187 | 1259 |
-| 脳の研究者（Allen Institute） | 215 | 1459 |
+| 脳の研究者（Allen Institute） | 226 | 1540 |
 | Bebras（International Challenge on Informatics and Computational Thinking） | 61 | 353 |
 | ICAS Science（2〜6 年生、Introductory〜Paper D） | 84 | 441 |
 | 国際ジュニア科学オリンピック（IJSO） | 240 | 1516 |
@@ -147,7 +147,7 @@
 | GCE O-Level Physics・Chemistry・Biology（シンガポール） | 197 | 1215 |
 | A level Geology（WJEC Eduqas） | 201 | 1317 |
 | GCSE Astronomy（Pearson Edexcel 1AS0） | 116 | 711 |
-| 医学の基礎の国際試験（NBME の IFOM 基礎医学試験） | 271 | 1953 |
+| 医学の基礎の国際試験（NBME の IFOM 基礎医学試験） | 282 | 2064 |
 | 医学の臨床の国際試験（NBME の IFOM 臨床医学試験） | 282 | 2043 |
 | 国境なき医師団（MSF）の疫学者 | 216 | 1465 |
 | AP Psychology（College Board） | 236 | 1652 |
