@@ -582,7 +582,7 @@ units:
   - {id: P-043, title: 気体分子運動論と理想気体（分子の運動と圧力、状態方程式、内部エネルギー、自由度とエネルギー等分配、二乗平均速度、ボルツマン因子）, stage: 5, region: netsu, needs: [P-042], days: 8}
   - {id: P-044, title: 熱力学第一法則と気体の状態変化（熱と仕事、内部エネルギー、定積・定圧熱容量、等温・断熱・定圧・定積変化）, stage: 5, region: netsu, needs: [P-042], days: 8}
   - {id: P-045, title: 熱力学第二法則とエントロピー（トムソンとクラウジウスの原理、可逆と不可逆、カルノー・サイクルと熱効率、熱力学的温度、クラウジウスの不等式）, stage: 5, region: netsu, needs: [P-044], days: 8}
-  - {id: P-058, title: 相対論的力学（ミンコフスキー計量と不変間隔、固有時、4 元速度と 4 元運動量、質量とエネルギーの等価性、衝突と崩壊、光子のエネルギーと運動量、相対論的ドップラー効果）, stage: 5, region: soutai, needs: [P-006], days: 8}
+  - {id: P-058, title: 相対論的力学（ミンコフスキー計量と不変間隔、固有時、4 元速度と 4 元運動量、質量とエネルギーの等価性、衝突と崩壊、光子のエネルギーと運動量、相対論的ドップラー効果）, stage: 6, region: soutai, needs: [P-006, P-057], days: 8}
   - {id: P-069, title: 量子論の始まり（黒体放射とエネルギー量子、光電効果、コンプトン効果、ボーアの原子模型、フランク＝ヘルツの実験、ド・ブロイ波と電子線回折、粒子性と波動性）, stage: 5, region: ryoshi, needs: [P-021, P-030, P-004], days: 8}
   - {id: P-088, title: 原子の構造とスペクトル（エネルギー準位とスペクトル線、放出と吸収、X 線、励起状態の寿命とスペクトル幅）, stage: 5, region: genshi, needs: [P-069], days: 8}
   - {id: P-104, title: 原子核と放射線（原子核の構成と同位体、α・β・γ 崩壊、半減期と指数関数的な減衰、核反応、質量欠損、核分裂と核融合、中性子捕獲）, stage: 5, region: soryushi, needs: [D-001], days: 8}
@@ -731,7 +731,7 @@ units:
   - {id: C-034, title: 確率的方法（大学）, stage: 7, region: kumiawase-daigaku, needs: [C-029, S-001, C-027], days: 10}
   - {id: C-035, title: 集合族の極値組合せ論, stage: 7, region: kumiawase-daigaku, needs: [C-029], days: 10}
   - {id: L-020, title: 可算と非可算, stage: 7, region: suri-ronri, needs: [A-024], days: 10}
-  - {id: D-029, title: 正則関数（コーシー–リーマン方程式、等角写像）, stage: 7, region: fukuso, needs: [D-011, D-009], days: 12}
+  - {id: D-029, title: 正則関数（コーシー–リーマン方程式、等角写像）, stage: 7, region: fukuso, needs: [D-011, D-009, A-034], days: 12}
   - {id: D-030, title: 複素線積分とコーシーの定理・積分公式, stage: 7, region: fukuso, needs: [D-029], days: 12}
   - {id: D-031, title: テイラー展開とローラン展開、孤立特異点の分類, stage: 7, region: fukuso, needs: [D-029], days: 12}
   - {id: D-032, title: 留数定理と定積分の計算, stage: 7, region: fukuso, needs: [D-029], days: 12}
