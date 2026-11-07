@@ -11,6 +11,9 @@ from pathlib import Path
 
 import yaml
 
+sys.path.insert(0, str(Path(__file__).parent))
+import combination  # noqa: E402  組み合わせの指標（D-031）
+
 ROOT = Path(__file__).resolve().parent.parent
 ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
 PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ")
@@ -298,6 +301,7 @@ def build_coverage(goal, cov, titles):
 def build(data, problems):
     lanes = {l["id"]: l for l in data["lanes"]}
     out_units = []
+    comb = combination.measure(data["units"])
     for u in data["units"]:
         m = ID_RE.match(u["id"])
         days = expand(u)
@@ -308,7 +312,11 @@ def build(data, problems):
                 days[d["day"] - 1]["extra"] = d["extra"]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
                           "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
-                          **({"measure": True} if u.get("measure") else {})})
+                          **({"measure": True} if u.get("measure") else {}),
+                          # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
+                          **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],
+                                       "rg": comb[u["id"]]["regions"], "pr": comb[u["id"]]["pair"]}}
+                             if len(comb[u["id"]]["regions"]) > 1 else {})})
     gu = goal_units(data)
     goals = []
     for g in data.get("goals", []):

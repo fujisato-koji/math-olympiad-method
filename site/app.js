@@ -63,6 +63,15 @@
     return s;
   }
   const topicsOf = uid => GOALS.flatMap(g => g.items.filter(i => (i.units || []).includes(uid)).map(i => ({ g, i })));
+  // 組み合わせ（D-031）：前提がどの領域を合わせたものか。広さは遠い領域を広く合わせるほど大きく、珍しい組には印を付ける
+  const REGION_NAME = Object.fromEntries((R.regions || []).map(r => [r.id, r.name]));
+  function combHtml(u) {
+    const c = u.comb;
+    if (!c) return '';
+    const rare = c.r >= 1 ? `<span class="pill rare" title="地図の中で、期待より少ない組（${esc(c.pr.map(r => REGION_NAME[r]).join(' × '))}）">珍しい組み合わせ</span>` : '';
+    return `<div class="row comb">組み合わせ ${c.rg.map(r => `<span class="from">${esc(REGION_NAME[r] || r)}</span>`).join('<span class="x">×</span>')}
+      <span class="comb-bar" title="組み合わせの広さ ${c.b}"><i style="width:${Math.round(100 * c.b / 0.7)}%"></i></span>${rare}</div>`;
+  }
   // 単元が受け持つ論題。多いときは数だけ見せて畳む
   function topicsHtml(ts) {
     if (!ts.length) return '';
@@ -494,6 +503,7 @@
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし。ここから始められます。'}</div>
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
       ${topicsHtml(topicsOf(id))}
+      ${combHtml(u)}
     </section>
     <div class="days" style="${lc(u.lane)}">${u.days.map((d, i) => {
       const n = i + 1, dr = r.days && r.days[n], skipped = (r.skip || []).includes(n);

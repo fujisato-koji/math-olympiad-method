@@ -48126,6 +48126,8 @@ window.ROADMAP = {
   "計算機科学",
   "統計学",
   "工学",
+  "農学と獣医学",
+  "心理学",
   "経済学"
  ],
  "units": [
@@ -49573,7 +49575,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": "積み木と立体"
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.436,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "kazu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-004",
@@ -49886,7 +49897,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.391,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-178",
@@ -50484,7 +50504,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.314,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-011",
@@ -50556,7 +50585,16 @@ window.ROADMAP = {
      "aim": ""
     }
    ],
-   "measure": true
+   "measure": true,
+   "comb": {
+    "b": 0.281,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "suiri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-002",
@@ -50689,7 +50727,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-006",
@@ -50925,7 +50972,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.411,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-027",
@@ -51057,7 +51113,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.369,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "hakaru"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-004",
@@ -51158,7 +51223,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.198,
+    "r": 0.0,
+    "rg": [
+     "ikimono",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-124",
@@ -51196,7 +51270,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.44,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-127",
@@ -51289,7 +51372,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.34,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "kazu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-172",
@@ -51319,7 +51411,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "sekkei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-062",
@@ -51416,7 +51517,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.274,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "houteishiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-065",
@@ -51546,7 +51656,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.524,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "hakaru",
+     "ikimono"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-074",
@@ -51610,7 +51730,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.543,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "karada",
+     "kazu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-044",
@@ -51673,7 +51803,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.398,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-048",
@@ -52007,7 +52146,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.315,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-021",
@@ -52045,7 +52193,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.154,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-022",
@@ -52116,7 +52273,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.337,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-024",
@@ -52151,7 +52317,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.327,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "seisu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-025",
@@ -52187,7 +52363,17 @@ window.ROADMAP = {
      "aim": ""
     }
    ],
-   "measure": true
+   "measure": true,
+   "comb": {
+    "b": 0.404,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "keisan",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-026",
@@ -52226,7 +52412,16 @@ window.ROADMAP = {
      "aim": ""
     }
    ],
-   "measure": true
+   "measure": true,
+   "comb": {
+    "b": 0.34,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-003",
@@ -52302,7 +52497,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.261,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "suiri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-005",
@@ -52433,7 +52637,17 @@ window.ROADMAP = {
      "aim": ""
     }
    ],
-   "measure": true
+   "measure": true,
+   "comb": {
+    "b": 0.398,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "kansu",
+     "kazu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-008",
@@ -52541,7 +52755,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.317,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-006",
@@ -52616,7 +52839,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.315,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-008",
@@ -52758,7 +52990,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.381,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-012",
@@ -52839,7 +53080,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.41,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-009",
@@ -52878,7 +53128,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.409,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "kazu",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-010",
@@ -52918,7 +53178,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.416,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-011",
@@ -52957,7 +53226,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.32,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "katachi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-012",
@@ -53003,7 +53281,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.347,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-013",
@@ -53049,7 +53336,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.347,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-014",
@@ -53124,7 +53420,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.341,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "katachi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-005",
@@ -53372,7 +53677,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.317,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-028",
@@ -53407,7 +53721,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.374,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-002",
@@ -53442,7 +53765,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.434,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "risoku",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-002",
@@ -53476,7 +53809,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.392,
+    "r": 0.0,
+    "rg": [
+     "ganseki",
+     "tenki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-003",
@@ -53587,7 +53929,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.363,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "data",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-007",
@@ -53622,7 +53974,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.262,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-008",
@@ -53700,7 +54061,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.27,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-019",
@@ -53739,7 +54109,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.391,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-020",
@@ -53782,7 +54161,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.484,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "ikimono",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-021",
@@ -53821,7 +54210,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.482,
+    "r": 0.0,
+    "rg": [
+     "ikimono",
+     "kansu",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-022",
@@ -53859,7 +54258,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.453,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "ikimono"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-050",
@@ -53897,7 +54305,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-051",
@@ -53974,7 +54391,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.359,
+    "r": 1.35,
+    "rg": [
+     "keisan",
+     "programming"
+    ],
+    "pr": [
+     "keisan",
+     "programming"
+    ]
+   }
   },
   {
    "id": "K-126",
@@ -54041,7 +54470,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.334,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-183",
@@ -54080,7 +54518,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-186",
@@ -54115,7 +54562,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.536,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "kansu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-188",
@@ -54150,7 +54607,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.561,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kazu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-173",
@@ -54189,7 +54656,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.6,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kansu",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-174",
@@ -54224,7 +54701,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.578,
+    "r": 1.15,
+    "rg": [
+     "hakaru",
+     "keisan",
+     "rikigaku"
+    ],
+    "pr": [
+     "keisan",
+     "rikigaku"
+    ]
+   }
   },
   {
    "id": "E-175",
@@ -54296,7 +54786,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.633,
+    "r": 1.63,
+    "rg": [
+     "denjiki",
+     "programming",
+     "sekkei"
+    ],
+    "pr": [
+     "denjiki",
+     "programming"
+    ]
+   }
   },
   {
    "id": "B-071",
@@ -54334,7 +54837,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.436,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-045",
@@ -54402,7 +54914,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.458,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "sora"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-049",
@@ -54526,7 +55047,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.39,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "ronpo",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-029",
@@ -54572,7 +55103,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.145,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-030",
@@ -54611,7 +55151,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.29,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-031",
@@ -54645,7 +55194,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.154,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-010",
@@ -54694,7 +55252,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.268,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-011",
@@ -54741,7 +55308,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.254,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-012",
@@ -54817,7 +55393,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.334,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "kazu",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-014",
@@ -54903,7 +55489,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.353,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "keisan",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-016",
@@ -54938,7 +55534,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.147,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-017",
@@ -55015,7 +55620,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.141,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-013",
@@ -55124,7 +55738,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.174,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-016",
@@ -55159,7 +55782,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.321,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-017",
@@ -55317,7 +55949,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.255,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-019",
@@ -55357,7 +55998,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.433,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shiki",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-020",
@@ -55407,7 +56058,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.255,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-021",
@@ -55445,7 +56105,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.165,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-022",
@@ -55658,7 +56327,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.166,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-013",
@@ -55693,7 +56371,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.263,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "suiri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-014",
@@ -55938,7 +56625,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.366,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-003",
@@ -55972,7 +56668,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.328,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-004",
@@ -56010,7 +56715,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.336,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-005",
@@ -56085,7 +56799,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.119,
+    "r": 0.0,
+    "rg": [
+     "chiso",
+     "jishin-kazan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-007",
@@ -56156,7 +56879,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.282,
+    "r": 0.0,
+    "rg": [
+     "chiso",
+     "ganseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-009",
@@ -56231,7 +56963,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.439,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "houteishiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-011",
@@ -56269,7 +57010,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.417,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-012",
@@ -56340,7 +57090,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.289,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "genshi-ketsugo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-014",
@@ -56424,7 +57183,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.44,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "hanno",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-016",
@@ -56462,7 +57231,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.44,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "houteishiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-017",
@@ -56500,7 +57278,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.26,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-023",
@@ -56538,7 +57325,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.363,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "ikimono"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-024",
@@ -56578,7 +57374,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.663,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "houteishiki",
+     "iden-shinka",
+     "kakuritsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-025",
@@ -56616,7 +57423,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.365,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "ikimono"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-026",
@@ -56654,7 +57470,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.459,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-027",
@@ -56693,7 +57518,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.159,
+    "r": 0.0,
+    "rg": [
+     "iden-shinka",
+     "ikimono"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-070",
@@ -56728,7 +57562,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-019",
@@ -56766,7 +57609,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.251,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-020",
@@ -56804,7 +57656,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.265,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-021",
@@ -56886,7 +57747,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.38,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "kazoekata",
+     "ronpo",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-023",
@@ -56957,7 +57829,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.442,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-018",
@@ -57033,7 +57914,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.326,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-020",
@@ -57164,7 +58054,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.196,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-026",
@@ -57210,7 +58109,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.35,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-027",
@@ -57374,7 +58282,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.356,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-003",
@@ -57420,7 +58337,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.326,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-004",
@@ -57511,7 +58437,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.274,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-006",
@@ -57557,7 +58492,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.413,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-001",
@@ -57603,7 +58547,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.38,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-002",
@@ -57649,7 +58602,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.453,
+    "r": 0.0,
+    "rg": [
+     "senkei-keisan",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-012",
@@ -57695,7 +58657,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.388,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-013",
@@ -57787,7 +58758,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.42,
+    "r": 0.27,
+    "rg": [
+     "bisekibun-nyumon",
+     "programming"
+    ],
+    "pr": [
+     "bisekibun-nyumon",
+     "programming"
+    ]
+   }
   },
   {
    "id": "P-001",
@@ -57834,7 +58817,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.437,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "rikigaku",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-002",
@@ -57880,7 +58873,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.399,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-003",
@@ -58018,7 +59020,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.461,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "kikai",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-006",
@@ -58111,7 +59123,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.331,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-011",
@@ -58203,7 +59224,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-013",
@@ -58340,7 +59370,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.292,
+    "r": 0.0,
+    "rg": [
+     "hado",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-023",
@@ -58387,7 +59426,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.292,
+    "r": 0.0,
+    "rg": [
+     "hado",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-029",
@@ -58433,7 +59481,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.459,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "houteishiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-030",
@@ -58479,7 +59536,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-031",
@@ -58570,7 +59636,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.382,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-033",
@@ -58661,7 +59736,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.441,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-043",
@@ -58707,7 +59791,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.415,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-044",
@@ -58753,7 +59846,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.415,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-045",
@@ -58844,7 +59946,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.401,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-069",
@@ -58891,7 +60002,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.445,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hado",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-088",
@@ -59027,7 +60148,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.424,
+    "r": 0.0,
+    "rg": [
+     "ryoshi",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-117",
@@ -59073,7 +60203,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.462,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "kakuritsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-037",
@@ -59111,7 +60250,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.336,
+    "r": 0.0,
+    "rg": [
+     "keisan",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-038",
@@ -59149,7 +60297,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.265,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-030",
@@ -59187,7 +60344,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.369,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-031",
@@ -59225,7 +60391,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.327,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kakuritsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-005",
@@ -59273,7 +60448,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.506,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "risoku",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-006",
@@ -59348,7 +60533,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.326,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-008",
@@ -59386,7 +60580,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.251,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "kansu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-162",
@@ -59430,7 +60633,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.566,
+    "r": 0.0,
+    "rg": [
+     "genshi",
+     "hado",
+     "sora",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-010",
@@ -59469,7 +60683,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.605,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "chiso",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-018",
@@ -59512,7 +60736,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.524,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "katachi",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-019",
@@ -59551,7 +60785,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.485,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "hanno",
+     "katachi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-020",
@@ -59630,7 +60874,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.336,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-022",
@@ -59710,7 +60963,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.401,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-024",
@@ -59753,7 +61015,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.38,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-025",
@@ -59796,7 +61067,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.473,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "genshi-ketsugo",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-026",
@@ -59880,7 +61161,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.45,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-028",
@@ -59927,7 +61217,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.235,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-029",
@@ -59970,7 +61269,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.327,
+    "r": 0.0,
+    "rg": [
+     "genshi-ketsugo",
+     "hanno",
+     "muki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-030",
@@ -60009,7 +61318,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.323,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "muki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-031",
@@ -60051,7 +61369,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.335,
+    "r": 0.0,
+    "rg": [
+     "busshitsu",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-032",
@@ -60134,7 +61461,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.291,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-034",
@@ -60176,7 +61512,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.291,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-035",
@@ -60215,7 +61560,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-028",
@@ -60257,7 +61611,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.455,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-029",
@@ -60342,7 +61705,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.512,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hanno",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-031",
@@ -60380,7 +61753,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.416,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-032",
@@ -60468,7 +61850,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.457,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "genshi-ketsugo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-034",
@@ -60515,7 +61906,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.583,
+    "r": 0.34,
+    "rg": [
+     "bunshi-saibo",
+     "denjiki",
+     "karada"
+    ],
+    "pr": [
+     "bunshi-saibo",
+     "denjiki"
+    ]
+   }
   },
   {
    "id": "B-035",
@@ -60600,7 +62004,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.506,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hanno",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-037",
@@ -60642,7 +62056,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.396,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-038",
@@ -60685,7 +62108,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.431,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "shokubutsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-039",
@@ -60765,7 +62197,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.551,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "seitai",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-041",
@@ -60807,7 +62249,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.33,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "seitai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-042",
@@ -60850,7 +62301,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.603,
+    "r": 1.45,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "shiki"
+    ],
+    "pr": [
+     "bunshi-saibo",
+     "shiki"
+    ]
+   }
   },
   {
    "id": "B-043",
@@ -60893,7 +62357,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.386,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iyaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-160",
@@ -60932,7 +62405,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-041",
@@ -60971,7 +62453,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.284,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kakuritsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-049",
@@ -61009,7 +62500,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.322,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-081",
@@ -61047,7 +62547,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.431,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "hakaru"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-043",
@@ -61085,7 +62594,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-032",
@@ -61151,7 +62669,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.143,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-033",
@@ -61191,7 +62718,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.314,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-034",
@@ -61230,7 +62767,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.21,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-035",
@@ -61278,7 +62824,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-036",
@@ -61316,7 +62872,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.316,
+    "r": 0.0,
+    "rg": [
+     "seisu",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-037",
@@ -61438,7 +63003,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.397,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-040",
@@ -61473,7 +63048,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.448,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-041",
@@ -61511,7 +63096,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.323,
+    "r": 0.0,
+    "rg": [
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-042",
@@ -61550,7 +63144,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.451,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-043",
@@ -61617,7 +63221,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.34,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "seisu",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-044",
@@ -61709,7 +63323,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.32,
+    "r": 0.0,
+    "rg": [
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-046",
@@ -61781,7 +63404,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.152,
+    "r": 0.0,
+    "rg": [
+     "houteishiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-026",
@@ -61880,7 +63512,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "futoshiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-028",
@@ -61920,7 +63561,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.472,
+    "r": 0.0,
+    "rg": [
+     "futoshiki",
+     "kansu",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-029",
@@ -62048,7 +63699,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.323,
+    "r": 0.0,
+    "rg": [
+     "seisuron",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-031",
@@ -62139,7 +63799,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.382,
+    "r": 0.0,
+    "rg": [
+     "futoshiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-033",
@@ -62186,7 +63855,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.306,
+    "r": 0.0,
+    "rg": [
+     "futoshiki",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-021",
@@ -62270,7 +63948,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.101,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-023",
@@ -62317,7 +64004,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.42,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-024",
@@ -62471,7 +64167,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.232,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-029",
@@ -62509,7 +64214,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.253,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-030",
@@ -62606,7 +64320,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.337,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "hakaru",
+     "katachi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-032",
@@ -62697,7 +64421,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.255,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "hakaru"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-034",
@@ -62735,7 +64468,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.351,
+    "r": 0.0,
+    "rg": [
+     "futoshiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-015",
@@ -62835,7 +64577,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.374,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-017",
@@ -62874,7 +64625,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.481,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisu",
+     "suiri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-018",
@@ -63038,7 +64799,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.224,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "hakaru"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-008",
@@ -63219,7 +64989,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-017",
@@ -63266,7 +65045,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.384,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-018",
@@ -63494,7 +65282,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.301,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-003",
@@ -63810,7 +65607,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.379,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-002",
@@ -63856,7 +65662,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.437,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kazoekata"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-003",
@@ -63902,7 +65717,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.371,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-004",
@@ -64043,7 +65867,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.37,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-019",
@@ -64134,7 +65967,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.357,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-008",
@@ -64181,7 +66023,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.518,
+    "r": 1.54,
+    "rg": [
+     "bisekibun",
+     "rikigaku",
+     "shiki"
+    ],
+    "pr": [
+     "rikigaku",
+     "shiki"
+    ]
+   }
   },
   {
    "id": "P-024",
@@ -64227,7 +66082,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.321,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-025",
@@ -64273,7 +66137,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.369,
+    "r": 0.43,
+    "rg": [
+     "rikigaku",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "rikigaku",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "P-034",
@@ -64321,7 +66197,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.197,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-046",
@@ -64367,7 +66252,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.413,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-047",
@@ -64459,7 +66353,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.289,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-059",
@@ -64552,7 +66455,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.522,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "rikigaku",
+     "tenki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-123",
@@ -64772,7 +66685,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.254,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-013",
@@ -64810,7 +66732,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.465,
+    "r": 0.0,
+    "rg": [
+     "senkei-keisan",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-009",
@@ -64856,7 +66787,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.403,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-010",
@@ -64910,7 +66850,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.215,
+    "r": 0.0,
+    "rg": [
+     "kaikei",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-011",
@@ -64956,7 +66905,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.216,
+    "r": 0.0,
+    "rg": [
+     "kaikei",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-012",
@@ -65010,7 +66968,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.302,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "keizai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-013",
@@ -65064,7 +67031,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.332,
+    "r": 0.0,
+    "rg": [
+     "keizai",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-014",
@@ -65165,7 +67141,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.511,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "risoku",
+     "seimei-nenkin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-016",
@@ -65211,7 +67197,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.468,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "seimei-nenkin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-017",
@@ -65321,7 +67316,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.466,
+    "r": 0.0,
+    "rg": [
+     "risoku",
+     "songai",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-019",
@@ -65367,7 +67372,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "songai",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-020",
@@ -65423,7 +67437,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.633,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "futoshiki",
+     "kakuritsu-daigaku",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-021",
@@ -65478,7 +67503,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.548,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kazoekata",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-154",
@@ -65571,7 +67606,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.645,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "keiei-kogaku",
+     "shiki",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-156",
@@ -65709,7 +67755,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.216,
+    "r": 0.0,
+    "rg": [
+     "kaikei",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-042",
@@ -65847,7 +67902,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.491,
+    "r": 0.0,
+    "rg": [
+     "chikyu-kagaku",
+     "chikyu-naibu",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-012",
@@ -65898,7 +67963,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.416,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-013",
@@ -65945,7 +68019,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.379,
+    "r": 0.0,
+    "rg": [
+     "ganseki",
+     "genshi-ketsugo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-014",
@@ -65992,7 +68075,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.399,
+    "r": 0.0,
+    "rg": [
+     "chikyu-kagaku",
+     "chikyu-naibu",
+     "chiso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-036",
@@ -66048,7 +68141,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.311,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-037",
@@ -66103,7 +68205,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.397,
+    "r": 1.45,
+    "rg": [
+     "bibun-hoteishiki",
+     "hanno"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "hanno"
+    ]
+   }
   },
   {
    "id": "H-038",
@@ -66149,7 +68263,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.455,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-039",
@@ -66204,7 +68327,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.25,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-040",
@@ -66311,7 +68443,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.474,
+    "r": 0.0,
+    "rg": [
+     "genshi",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-042",
@@ -66358,7 +68499,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.53,
+    "r": 0.0,
+    "rg": [
+     "bunseki",
+     "data",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-043",
@@ -66405,7 +68556,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.323,
+    "r": 0.0,
+    "rg": [
+     "hanno",
+     "muki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-044",
@@ -66460,7 +68620,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.387,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-044",
@@ -66552,7 +68721,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.593,
+    "r": 1.09,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "tokei"
+    ],
+    "pr": [
+     "bunshi-saibo",
+     "tokei"
+    ]
+   }
   },
   {
    "id": "B-046",
@@ -66662,7 +68844,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.473,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hanno",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-048",
@@ -66717,7 +68909,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.446,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "iyaku",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-055",
@@ -66764,7 +68966,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.55,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "seitai",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-080",
@@ -66811,7 +69023,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.277,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "bisekibun-nyumon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-204",
@@ -66857,7 +69078,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.322,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-198",
@@ -66987,7 +69217,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.486,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "shiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "A-035",
@@ -67134,7 +69374,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.257,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-027",
@@ -67181,7 +69430,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.395,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "kazoekata",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-028",
@@ -67219,7 +69478,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.351,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "shiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-035",
@@ -67311,7 +69579,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.403,
+    "r": 0.0,
+    "rg": [
+     "shiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-037",
@@ -67366,7 +69643,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.228,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-038",
@@ -67451,7 +69737,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.423,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "shiki",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-040",
@@ -67498,7 +69794,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.328,
+    "r": 0.0,
+    "rg": [
+     "haichi",
+     "hakaru",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-041",
@@ -67536,7 +69842,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.372,
+    "r": 0.0,
+    "rg": [
+     "kansu",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-047",
@@ -67912,7 +70227,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.337,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-033",
@@ -68020,7 +70344,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.494,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "kakuritsu-daigaku",
+     "kumiawase-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-035",
@@ -68189,7 +70523,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.384,
+    "r": 0.38,
+    "rg": [
+     "bisekibun",
+     "shiki"
+    ],
+    "pr": [
+     "bisekibun",
+     "shiki"
+    ]
+   }
   },
   {
    "id": "D-030",
@@ -68496,7 +70842,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.532,
+    "r": 2.12,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "shiki"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "shiki"
+    ]
+   }
   },
   {
    "id": "D-037",
@@ -68828,7 +71187,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.152,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-053",
@@ -69365,7 +71733,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.418,
+    "r": 0.0,
+    "rg": [
+     "suchi",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-026",
@@ -69525,7 +71902,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.288,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-003",
@@ -69579,7 +71965,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.365,
+    "r": 0.0,
+    "rg": [
+     "senkei-keisan",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-009",
@@ -69633,7 +72028,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-010",
@@ -69908,7 +72312,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.361,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-020",
@@ -69967,7 +72382,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.361,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-021",
@@ -70023,7 +72449,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.125,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-022",
@@ -70082,7 +72518,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.361,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-029",
@@ -70191,7 +72638,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.444,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-065",
@@ -70245,7 +72701,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.332,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-001",
@@ -70299,7 +72764,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.405,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-002",
@@ -70355,7 +72829,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.502,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-003",
@@ -70412,7 +72896,22 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.68,
+    "r": 1.76,
+    "rg": [
+     "bisekibun",
+     "bunshi-saibo",
+     "butsuri-kagaku",
+     "hanno",
+     "rikigaku"
+    ],
+    "pr": [
+     "bunshi-saibo",
+     "rikigaku"
+    ]
+   }
   },
   {
    "id": "B-004",
@@ -70468,7 +72967,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.632,
+    "r": 0.34,
+    "rg": [
+     "bibun-hoteishiki",
+     "bunshi-saibo",
+     "denjiki",
+     "karada"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "bunshi-saibo"
+    ]
+   }
   },
   {
    "id": "B-005",
@@ -70524,7 +73037,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.686,
+    "r": 1.22,
+    "rg": [
+     "bibun-hoteishiki",
+     "bunshi-saibo",
+     "karada",
+     "kozo-zairyo"
+    ],
+    "pr": [
+     "bunshi-saibo",
+     "kozo-zairyo"
+    ]
+   }
   },
   {
    "id": "K-105",
@@ -70580,7 +73107,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.208,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-118",
@@ -70637,7 +73173,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.257,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-119",
@@ -70696,7 +73241,22 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.6,
+    "r": 1.08,
+    "rg": [
+     "bunshi-saibo",
+     "hanno",
+     "programming",
+     "seitai",
+     "shinkei"
+    ],
+    "pr": [
+     "hanno",
+     "programming"
+    ]
+   }
   },
   {
    "id": "P-009",
@@ -70752,7 +73312,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.407,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-010",
@@ -70806,7 +73375,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.405,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "zahyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-014",
@@ -70863,7 +73441,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.356,
+    "r": 1.11,
+    "rg": [
+     "bisekibun",
+     "fukuso",
+     "rikigaku"
+    ],
+    "pr": [
+     "fukuso",
+     "rikigaku"
+    ]
+   }
   },
   {
    "id": "P-015",
@@ -70920,7 +73511,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.249,
+    "r": 0.0,
+    "rg": [
+     "kaiseki-rikigaku",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-016",
@@ -71136,7 +73736,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-027",
@@ -71243,7 +73853,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.288,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-037",
@@ -71298,7 +73917,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.371,
+    "r": 0.0,
+    "rg": [
+     "senkei-keisan",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-038",
@@ -71406,7 +74034,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.264,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-048",
@@ -71460,7 +74097,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.305,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-049",
@@ -71515,7 +74161,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.507,
+    "r": 1.15,
+    "rg": [
+     "bisekibun",
+     "netsu",
+     "ryoshi"
+    ],
+    "pr": [
+     "bisekibun",
+     "ryoshi"
+    ]
+   }
   },
   {
    "id": "P-070",
@@ -71570,7 +74229,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.358,
+    "r": 0.0,
+    "rg": [
+     "hado",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-071",
@@ -71680,7 +74348,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.481,
+    "r": 0.0,
+    "rg": [
+     "kaiseki-rikigaku",
+     "ryoshi",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-073",
@@ -71736,7 +74414,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.435,
+    "r": 0.0,
+    "rg": [
+     "ryoshi",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-074",
@@ -71845,7 +74532,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.438,
+    "r": 0.89,
+    "rg": [
+     "bibun-hoteishiki",
+     "ryoshi"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "ryoshi"
+    ]
+   }
   },
   {
    "id": "P-084",
@@ -72007,7 +74706,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.331,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "jikken"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-119",
@@ -72062,7 +74770,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.372,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-120",
@@ -72117,7 +74834,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.254,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-126",
@@ -72659,7 +75385,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.25,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-001",
@@ -72714,7 +75449,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-002",
@@ -72769,7 +75514,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-003",
@@ -72825,7 +75580,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.533,
+    "r": 1.31,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "kozo-zairyo",
+     "rikigaku"
+    ],
+    "pr": [
+     "kozo-zairyo",
+     "rikigaku"
+    ]
+   }
   },
   {
    "id": "E-004",
@@ -72879,7 +75648,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.438,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-005",
@@ -73092,7 +75870,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.152,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-027",
@@ -73146,7 +75933,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.152,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-038",
@@ -73200,7 +75996,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-039",
@@ -73254,7 +76059,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.309,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-067",
@@ -73791,7 +76605,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.371,
+    "r": 1.05,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kozo-zairyo"
+    ],
+    "pr": [
+     "kakuritsu-daigaku",
+     "kozo-zairyo"
+    ]
+   }
   },
   {
    "id": "E-107",
@@ -73845,7 +76671,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.457,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-022",
@@ -73891,7 +76726,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.318,
+    "r": 0.0,
+    "rg": [
+     "tokei",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-023",
@@ -73947,7 +76791,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.317,
+    "r": 0.0,
+    "rg": [
+     "kaikei",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-024",
@@ -74002,7 +76855,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.517,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "keizai",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-025",
@@ -74057,7 +76920,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.457,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "keizai",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-026",
@@ -74210,7 +77083,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.243,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "seimei-nenkin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-029",
@@ -74318,7 +77200,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.228,
+    "r": 0.0,
+    "rg": [
+     "kaikei",
+     "seimei-nenkin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-031",
@@ -74364,7 +77255,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.311,
+    "r": 0.0,
+    "rg": [
+     "songai",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-032",
@@ -74410,7 +77310,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.17,
+    "r": 0.0,
+    "rg": [
+     "songai",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-033",
@@ -74519,7 +77428,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.429,
+    "r": 0.0,
+    "rg": [
+     "shiki",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-044",
@@ -74612,7 +77530,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.321,
+    "r": 0.0,
+    "rg": [
+     "seimei-nenkin",
+     "shokugyo-seido",
+     "songai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-047",
@@ -74711,7 +77639,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.237,
+    "r": 0.0,
+    "rg": [
+     "seimei-nenkin",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-049",
@@ -74757,7 +77694,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.319,
+    "r": 0.0,
+    "rg": [
+     "keizai",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-075",
@@ -74803,7 +77749,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.23,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-076",
@@ -74849,7 +77804,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.153,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-077",
@@ -74940,7 +77904,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.297,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-015",
@@ -75032,7 +78005,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.447,
+    "r": 1.02,
+    "rg": [
+     "bisekibun",
+     "tokei"
+    ],
+    "pr": [
+     "bisekibun",
+     "tokei"
+    ]
+   }
   },
   {
    "id": "S-034",
@@ -75170,7 +78155,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.449,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "chikyu-naibu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-016",
@@ -75217,7 +78212,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.296,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "ganseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-017",
@@ -75264,7 +78268,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.462,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "ganseki",
+     "genshi-ketsugo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-018",
@@ -75311,7 +78325,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.47,
+    "r": 0.0,
+    "rg": [
+     "chiso",
+     "ganseki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-019",
@@ -75357,7 +78381,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.371,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "ganseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-020",
@@ -75403,7 +78436,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.458,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-021",
@@ -75455,7 +78497,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.66,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado",
+     "jishin-kazan",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-022",
@@ -75502,7 +78555,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.51,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "chikyu-naibu",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-023",
@@ -75549,7 +78612,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.555,
+    "r": 0.0,
+    "rg": [
+     "chiso",
+     "hanno",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-024",
@@ -75596,7 +78669,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-050",
@@ -75742,7 +78824,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.335,
+    "r": 0.0,
+    "rg": [
+     "keizai",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-054",
@@ -75846,7 +78937,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.283,
+    "r": 0.0,
+    "rg": [
+     "seimei-nenkin",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-045",
@@ -75910,7 +79010,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.574,
+    "r": 0.0,
+    "rg": [
+     "ryoshi",
+     "senkei-keisan",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-046",
@@ -76026,7 +79136,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.275,
+    "r": 0.0,
+    "rg": [
+     "bunseki",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-048",
@@ -76135,7 +79254,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.548,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "genshi-ketsugo",
+     "zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-049",
@@ -76182,7 +79311,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.525,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "iyaku",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-050",
@@ -76238,7 +79377,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.515,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "karada",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-052",
@@ -76301,7 +79450,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.583,
+    "r": 0.34,
+    "rg": [
+     "bibun-hoteishiki",
+     "bunshi-saibo",
+     "karada"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "bunshi-saibo"
+    ]
+   }
   },
   {
    "id": "B-056",
@@ -76410,7 +79572,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.338,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "seitai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-058",
@@ -76465,7 +79636,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.444,
+    "r": 0.0,
+    "rg": [
+     "iden-shinka",
+     "ikimono",
+     "kakuritsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-059",
@@ -76521,7 +79702,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.41,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "seitai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-060",
@@ -76630,7 +79821,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.479,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "seitai",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-063",
@@ -76729,7 +79930,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.359,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "kairo-shingo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-193",
@@ -76821,7 +80031,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.399,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "netsu-suishin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-197",
@@ -76867,7 +80086,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.366,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "kairo-shingo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-199",
@@ -76958,7 +80186,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.352,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-057",
@@ -77049,7 +80286,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.225,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-120",
@@ -77142,7 +80388,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.345,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "risoku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-070",
@@ -77234,7 +80489,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.438,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "risoku",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-021",
@@ -77481,7 +80746,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.516,
+    "r": 0.0,
+    "rg": [
+     "ronpo",
+     "seisuron",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-027",
@@ -77789,7 +81064,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-013",
@@ -77852,7 +81136,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-015",
@@ -77976,7 +81269,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-019",
@@ -78040,7 +81342,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.378,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-020",
@@ -78225,7 +81537,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.291,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-028",
@@ -78288,7 +81609,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.291,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-034",
@@ -78351,7 +81681,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.585,
+    "r": 1.71,
+    "rg": [
+     "fukuso",
+     "senkei-keisan",
+     "shiki"
+    ],
+    "pr": [
+     "senkei-keisan",
+     "shiki"
+    ]
+   }
   },
   {
    "id": "D-036",
@@ -78543,7 +81886,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.247,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-047",
@@ -78789,7 +82141,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.37,
+    "r": 0.0,
+    "rg": [
+     "senkei-chusho",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "M-011",
@@ -78852,7 +82213,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.37,
+    "r": 0.0,
+    "rg": [
+     "senkei-chusho",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-001",
@@ -79158,7 +82528,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.41,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-001",
@@ -79222,7 +82601,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.378,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-002",
@@ -79471,7 +82860,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.542,
+    "r": 0.16,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki",
+     "senkei-chusho",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "jitsukaiseki",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "T-006",
@@ -79595,7 +82998,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-013",
@@ -79720,7 +83132,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.378,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-007",
@@ -80027,7 +83449,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.274,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kakuritsu-katei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-012",
@@ -80459,7 +83890,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.375,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-005",
@@ -80583,7 +84024,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.315,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-007",
@@ -80892,7 +84343,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-024",
@@ -80958,7 +84420,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.36,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-025",
@@ -81023,7 +84496,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-026",
@@ -81089,7 +84573,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.36,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-027",
@@ -81213,7 +84708,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.251,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-030",
@@ -81278,7 +84782,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.308,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-031",
@@ -81845,7 +85358,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.361,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-040",
@@ -81910,7 +85434,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.314,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-041",
@@ -82038,7 +85573,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.512,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "programming",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-043",
@@ -82164,7 +85709,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.191,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-047",
@@ -82228,7 +85782,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.191,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-053",
@@ -82291,7 +85854,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.211,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-054",
@@ -82354,7 +85926,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.211,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-055",
@@ -82542,7 +86123,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.337,
+    "r": 1.38,
+    "rg": [
+     "kakuritsu-daigaku",
+     "programming",
+     "tokei"
+    ],
+    "pr": [
+     "programming",
+     "tokei"
+    ]
+   }
   },
   {
    "id": "K-063",
@@ -82665,7 +86259,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.406,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-067",
@@ -82789,7 +86392,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.279,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-069",
@@ -82912,7 +86524,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-072",
@@ -82974,7 +86595,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-073",
@@ -83036,7 +86666,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-074",
@@ -83098,7 +86737,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.267,
+    "r": 0.0,
+    "rg": [
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-075",
@@ -83161,7 +86809,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.504,
+    "r": 1.24,
+    "rg": [
+     "bisekibun-nyumon",
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "bisekibun-nyumon",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "K-076",
@@ -83225,7 +86886,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.552,
+    "r": 0.9,
+    "rg": [
+     "bisekibun",
+     "programming",
+     "senkei-keisan",
+     "suchi"
+    ],
+    "pr": [
+     "bisekibun",
+     "programming"
+    ]
+   }
   },
   {
    "id": "K-077",
@@ -83288,7 +86963,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.482,
+    "r": 0.9,
+    "rg": [
+     "bisekibun",
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "bisekibun",
+     "programming"
+    ]
+   }
   },
   {
    "id": "K-078",
@@ -83416,7 +87104,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.292,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "kikai-gakushu",
+     "ronpo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-081",
@@ -83483,7 +87183,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.292,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "kikai-gakushu",
+     "ronpo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-082",
@@ -83550,7 +87262,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.292,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "kazoekata",
+     "kikai-gakushu",
+     "ronpo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-084",
@@ -83613,7 +87337,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.439,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado",
+     "kaiseki-rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-085",
@@ -83676,7 +87410,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.439,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado",
+     "kaiseki-rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-086",
@@ -83739,7 +87483,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.439,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado",
+     "kaiseki-rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-087",
@@ -83804,7 +87558,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.36,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-088",
@@ -83870,7 +87633,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.399,
+    "r": 0.0,
+    "rg": [
+     "graphics",
+     "kikai-gakushu",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-006",
@@ -83933,7 +87706,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.585,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "netsu",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-007",
@@ -83996,7 +87779,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.403,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "butsuri-kagaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-008",
@@ -84256,7 +88048,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.38,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-107",
@@ -84320,7 +88122,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.369,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-011",
@@ -84384,7 +88196,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.56,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-109",
@@ -84447,7 +88270,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.406,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "kakuritsu-daigaku",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-112",
@@ -84512,7 +88345,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.256,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-113",
@@ -84710,7 +88552,22 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.582,
+    "r": 1.63,
+    "rg": [
+     "bibun-hoteishiki",
+     "bunshi-saibo",
+     "netsu",
+     "programming",
+     "seibutsu-butsuri"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "programming"
+    ]
+   }
   },
   {
    "id": "K-116",
@@ -84774,7 +88631,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.212,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-117",
@@ -84841,7 +88707,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.404,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "kikai-gakushu",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-017",
@@ -84904,7 +88780,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.48,
+    "r": 0.43,
+    "rg": [
+     "kaiseki-rikigaku",
+     "rikigaku",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "rikigaku",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "P-020",
@@ -85027,7 +88916,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-036",
@@ -85091,7 +88989,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.201,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-040",
@@ -85155,7 +89062,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.264,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-041",
@@ -85220,7 +89136,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.314,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-050",
@@ -85282,7 +89207,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.304,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-051",
@@ -85346,7 +89280,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.224,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-052",
@@ -85531,7 +89474,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.248,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-055",
@@ -85721,7 +89673,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.594,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "kaiseki-rikigaku",
+     "senkei-chusho",
+     "senkei-keisan",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-061",
@@ -85785,7 +89750,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.468,
+    "r": 1.59,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki",
+     "rikigaku",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "denjiki",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "P-062",
@@ -85848,7 +89827,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.306,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-063",
@@ -85972,7 +89960,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.286,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-065",
@@ -86034,7 +90031,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.286,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-066",
@@ -86097,7 +90103,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.293,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-067",
@@ -86343,7 +90358,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.397,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-078",
@@ -86528,7 +90552,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-081",
@@ -86593,7 +90626,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.418,
+    "r": 0.89,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "ryoshi"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "ryoshi"
+    ]
+   }
   },
   {
    "id": "P-082",
@@ -86780,7 +90826,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.389,
+    "r": 0.0,
+    "rg": [
+     "kaiseki-rikigaku",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-086",
@@ -86842,7 +90897,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.259,
+    "r": 0.0,
+    "rg": [
+     "ryoshi",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-087",
@@ -87095,7 +91159,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.404,
+    "r": 0.0,
+    "rg": [
+     "genshi",
+     "hado",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-092",
@@ -87218,7 +91292,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.246,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-094",
@@ -87282,7 +91365,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-096",
@@ -87468,7 +91560,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.369,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-099",
@@ -87531,7 +91632,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.34,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-100",
@@ -87594,7 +91704,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.43,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "netsu",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-102",
@@ -87656,7 +91776,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.372,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-103",
@@ -87718,7 +91847,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.25,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-106",
@@ -87852,7 +91990,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.366,
+    "r": 0.0,
+    "rg": [
+     "ryoshi",
+     "soryushi",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-109",
@@ -87917,7 +92065,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.499,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "denjiki",
+     "fukuso",
+     "kaiseki-rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-110",
@@ -87981,7 +92140,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.297,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-111",
@@ -88104,7 +92272,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.344,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-121",
@@ -88230,7 +92407,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.206,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-146",
@@ -88295,7 +92481,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.206,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-148",
@@ -88360,7 +92555,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.206,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-149",
@@ -88425,7 +92629,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.206,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-151",
@@ -88490,7 +92703,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.206,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-153",
@@ -88554,7 +92776,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.521,
+    "r": 1.76,
+    "rg": [
+     "bibun-hoteishiki",
+     "suchi",
+     "tokei"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "tokei"
+    ]
+   }
   },
   {
    "id": "P-160",
@@ -88677,7 +92912,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.449,
+    "r": 0.0,
+    "rg": [
+     "kozo-zairyo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-012",
@@ -89116,7 +93360,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-025",
@@ -89180,7 +93433,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-028",
@@ -89243,7 +93505,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.318,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-029",
@@ -89306,7 +93577,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.318,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-030",
@@ -89369,7 +93649,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.318,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-040",
@@ -89433,7 +93722,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-041",
@@ -89497,7 +93795,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-042",
@@ -89560,7 +93867,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.318,
+    "r": 0.0,
+    "rg": [
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-047",
@@ -89623,7 +93939,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.416,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "denjiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-048",
@@ -89686,7 +94012,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.381,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-049",
@@ -89749,7 +94085,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.445,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado",
+     "seigyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-052",
@@ -89874,7 +94220,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.349,
+    "r": 0.0,
+    "rg": [
+     "seigyo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-054",
@@ -89998,7 +94353,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.315,
+    "r": 0.0,
+    "rg": [
+     "kozo-zairyo",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-076",
@@ -90062,7 +94426,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-077",
@@ -90126,7 +94499,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-078",
@@ -90191,7 +94573,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.42,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-085",
@@ -90255,7 +94647,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-086",
@@ -90319,7 +94720,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-087",
@@ -90383,7 +94793,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-089",
@@ -90447,7 +94866,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-090",
@@ -90513,7 +94941,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.368,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kozo-zairyo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-091",
@@ -90762,7 +95200,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.48,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-105",
@@ -90950,7 +95398,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.47,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-110",
@@ -91074,7 +95531,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.487,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-112",
@@ -91260,7 +95726,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.451,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-116",
@@ -91389,7 +95864,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.349,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-118",
@@ -91877,7 +96361,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.411,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-035",
@@ -91934,7 +96427,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.351,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kakuritsu-katei",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-036",
@@ -91989,7 +96492,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.268,
+    "r": 0.0,
+    "rg": [
+     "keiryo-risk",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-037",
@@ -92043,7 +96555,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.17,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "songai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-038",
@@ -92099,7 +96620,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.459,
+    "r": 0.0,
+    "rg": [
+     "risoku",
+     "songai",
+     "tokei",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-157",
@@ -92155,7 +96687,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.654,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "keiei-kogaku",
+     "programming",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-078",
@@ -92209,7 +96752,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.249,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-079",
@@ -92318,7 +96870,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.364,
+    "r": 0.0,
+    "rg": [
+     "kaiseki-rikigaku",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-177",
@@ -92364,7 +96925,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.396,
+    "r": 1.2,
+    "rg": [
+     "netsu",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "netsu",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "S-035",
@@ -92561,7 +97134,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.242,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-163",
@@ -92615,7 +97197,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.301,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-164",
@@ -92670,7 +97261,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.414,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "soutai",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-169",
@@ -92724,7 +97325,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.366,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-171",
@@ -92775,7 +97385,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.313,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-173",
@@ -92826,7 +97445,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.317,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-175",
@@ -92873,7 +97501,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.544,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "genshi-ketsugo",
+     "zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-158",
@@ -92923,7 +97561,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.471,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "kairo-shingo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-163",
@@ -92973,7 +97620,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.496,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-164",
@@ -93025,7 +97681,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.445,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "netsu",
+     "zairyo",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-166",
@@ -93077,7 +97744,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.63,
+    "r": 0.0,
+    "rg": [
+     "rikigaku",
+     "soutai",
+     "suchi",
+     "tsushin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-170",
@@ -93128,7 +97806,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.518,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "seigyo",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-025",
@@ -93178,7 +97866,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "jishin-kazan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-026",
@@ -93229,7 +97926,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.397,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-027",
@@ -93280,7 +97986,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.39,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-028",
@@ -93335,7 +98050,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.269,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-029",
@@ -93383,7 +98107,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.563,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "chiso",
+     "ganseki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-030",
@@ -93435,7 +98170,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.569,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "ganseki",
+     "hanno",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-031",
@@ -93486,7 +98232,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.196,
+    "r": 0.0,
+    "rg": [
+     "chikyu-kagaku",
+     "ganseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-032",
@@ -93536,7 +98291,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.338,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "chikyu-kagaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-033",
@@ -93588,7 +98352,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.457,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "chikyu-kagaku",
+     "hanno"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-034",
@@ -93640,7 +98414,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.494,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "chikyu",
+     "muki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-053",
@@ -93740,7 +98524,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.342,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "songai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-050",
@@ -93805,7 +98598,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.63,
+    "r": 0.0,
+    "rg": [
+     "bunseki",
+     "butsuri-kagaku",
+     "gunkantai",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-051",
@@ -93861,7 +98665,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.275,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-052",
@@ -93915,7 +98728,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.239,
+    "r": 0.0,
+    "rg": [
+     "muki",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-053",
@@ -93970,7 +98792,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.506,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "butsuri-kagaku",
+     "zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-054",
@@ -94025,7 +98857,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.478,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "muki",
+     "zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-051",
@@ -94088,7 +98930,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-053",
@@ -94206,7 +99057,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.621,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "iden-shinka",
+     "kakuritsu-katei",
+     "seitai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-064",
@@ -94269,7 +99131,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.386,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hassei",
+     "shinkei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-065",
@@ -94331,7 +99203,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.256,
+    "r": 0.0,
+    "rg": [
+     "ikimono",
+     "shinkei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-066",
@@ -94395,7 +99276,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.605,
+    "r": 1.63,
+    "rg": [
+     "bibun-hoteishiki",
+     "kakuritsu-daigaku",
+     "programming",
+     "shinkei"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "programming"
+    ]
+   }
   },
   {
    "id": "B-067",
@@ -94450,7 +99345,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.524,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "jikken",
+     "shinkei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-230",
@@ -94505,7 +99410,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.553,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "ryoshi",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-231",
@@ -94559,7 +99474,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.287,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-163",
@@ -94613,7 +99537,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.428,
+    "r": 0.0,
+    "rg": [
+     "suchi",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-165",
@@ -94668,7 +99601,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.302,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-206",
@@ -94723,7 +99665,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.406,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-196",
@@ -94778,7 +99729,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.619,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "hanno",
+     "netsu-suishin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-233",
@@ -94833,7 +99794,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.44,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "hado",
+     "jikken"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-200",
@@ -94887,7 +99858,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.414,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "graphics"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-058",
@@ -94942,7 +99922,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.476,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "keizai",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-086",
@@ -95105,7 +100095,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.364,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-188",
@@ -95214,7 +100213,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.51,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "senkei-keisan",
+     "suchi",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-189",
@@ -95323,7 +100333,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.609,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kaiseki-rikigaku",
+     "seigyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-175",
@@ -95377,7 +100397,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.437,
+    "r": 0.0,
+    "rg": [
+     "graphics",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-048",
@@ -95441,7 +100470,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.483,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "fukuso",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-051",
@@ -95507,7 +100546,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.492,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "gunkantai",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-052",
@@ -95755,7 +100804,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.284,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-seisuron",
+     "iso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-058",
@@ -95824,7 +100882,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.441,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "kaisekiteki-seisuron",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-036",
@@ -95890,7 +100958,19 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.621,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "kakuritsu-daigaku",
+     "kumiawase-daigaku",
+     "senkei-chusho",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-037",
@@ -96324,7 +101404,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.28,
+    "r": 0.0,
+    "rg": [
+     "iso",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-030",
@@ -96389,7 +101478,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "keisan-kanousei",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-023",
@@ -96456,7 +101554,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.315,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-024",
@@ -96644,7 +101752,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.29,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-040",
@@ -96710,7 +101827,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "iso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-041",
@@ -96900,7 +102026,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-057",
@@ -97213,7 +102349,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.542,
+    "r": 0.16,
+    "rg": [
+     "bisekibun",
+     "jitsukaiseki",
+     "senkei-chusho",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "jitsukaiseki",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "D-063",
@@ -97523,7 +102673,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.29,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-068",
@@ -97709,7 +102868,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-004",
@@ -98140,7 +103308,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "senkei-chusho"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-013",
@@ -98385,7 +103562,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.41,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-017",
@@ -98570,7 +103756,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.346,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "kenron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-020",
@@ -99127,7 +104322,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.167,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "kakan-homology"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-009",
@@ -99380,7 +104584,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.491,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "iso",
+     "senkei-chusho",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-015",
@@ -99565,7 +104780,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-018",
@@ -99692,7 +104916,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.294,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "iso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-020",
@@ -100246,7 +105479,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.286,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "iso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-031",
@@ -100557,7 +105799,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.442,
+    "r": 0.0,
+    "rg": [
+     "anzen",
+     "graph",
+     "kakuritsu-daigaku",
+     "kazoekata",
+     "programming",
+     "ronpo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-045",
@@ -100625,7 +105880,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.496,
+    "r": 0.0,
+    "rg": [
+     "anzen",
+     "graph",
+     "kazoekata",
+     "programming",
+     "ronpo",
+     "seisuron",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-048",
@@ -100687,7 +105956,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-049",
@@ -100749,7 +106027,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.324,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-050",
@@ -100812,7 +106099,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.368,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-051",
@@ -100875,7 +106171,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.368,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-052",
@@ -100938,7 +106243,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.368,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-057",
@@ -101314,7 +106628,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.417,
+    "r": 0.0,
+    "rg": [
+     "graph",
+     "hado",
+     "kazoekata",
+     "kikai-gakushu",
+     "ronpo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-089",
@@ -101377,7 +106704,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.452,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kaiseki-rikigaku",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-090",
@@ -101442,7 +106779,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.295,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "programming",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-091",
@@ -101567,7 +106914,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.38,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "bussei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-013",
@@ -101633,7 +106989,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.563,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "butsuri-kagaku",
+     "netsu",
+     "seibutsu-butsuri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-014",
@@ -101760,7 +107127,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.509,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iden-shinka",
+     "programming"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-111",
@@ -101824,7 +107201,21 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.543,
+    "r": 0.24,
+    "rg": [
+     "bunshi-saibo",
+     "jikken",
+     "netsu",
+     "programming"
+    ],
+    "pr": [
+     "netsu",
+     "programming"
+    ]
+   }
   },
   {
    "id": "P-101",
@@ -101887,7 +107278,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.213,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-108",
@@ -102014,7 +107414,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.394,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-114",
@@ -102138,7 +107547,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.394,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-116",
@@ -102261,7 +107679,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.401,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "chikyu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-136",
@@ -102324,7 +107751,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.304,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-137",
@@ -102388,7 +107824,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.438,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "bisekibun",
+     "chikyu",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-138",
@@ -102575,7 +108022,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.401,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-141",
@@ -102638,7 +108094,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.421,
+    "r": 0.27,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "senkei-keisan"
+    ],
+    "pr": [
+     "fukuso",
+     "senkei-keisan"
+    ]
+   }
   },
   {
    "id": "P-142",
@@ -102700,7 +108169,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.341,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-154",
@@ -103130,7 +108608,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.316,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-011",
@@ -103192,7 +108679,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.453,
+    "r": 0.0,
+    "rg": [
+     "kozo-zairyo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-016",
@@ -103567,7 +109063,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.233,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-031",
@@ -103632,7 +109137,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.477,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-032",
@@ -103697,7 +109213,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.477,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-033",
@@ -103762,7 +109289,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.477,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-034",
@@ -103824,7 +109362,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.404,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-035",
@@ -103889,7 +109436,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.477,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-036",
@@ -103954,7 +109512,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.477,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso",
+     "netsu-suishin",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-037",
@@ -104022,7 +109591,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.478,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "netsu-suishin",
+     "rikigaku",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-043",
@@ -104146,7 +109726,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.57,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "hanno",
+     "netsu-suishin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-045",
@@ -104396,7 +109986,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.455,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "seigyo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-058",
@@ -104519,7 +110119,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.392,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-061",
@@ -104643,7 +110252,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.423,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kido",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-063",
@@ -104705,7 +110324,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.296,
+    "r": 0.0,
+    "rg": [
+     "bisekibun-nyumon",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-064",
@@ -104893,7 +110521,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.433,
+    "r": 0.0,
+    "rg": [
+     "kaiseki-rikigaku",
+     "kido",
+     "seigyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-079",
@@ -105213,7 +110851,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.127,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-084",
@@ -105277,7 +110924,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.255,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "kairo-shingo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-088",
@@ -105403,7 +111059,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.478,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-096",
@@ -105652,7 +111318,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.188,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-101",
@@ -105839,7 +111514,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.391,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-104",
@@ -105905,7 +111589,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.475,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-115",
@@ -105974,7 +111667,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.525,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "netsu-suishin",
+     "rikigaku",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-126",
@@ -106036,7 +111740,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.319,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-127",
@@ -106098,7 +111811,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.319,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-128",
@@ -106160,7 +111882,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.319,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-134",
@@ -106352,7 +112083,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.565,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "hado",
+     "onkyo",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-138",
@@ -106586,7 +112328,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.376,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kumiawase-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-034",
@@ -106640,7 +112391,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.303,
+    "r": 0.0,
+    "rg": [
+     "keisan-kanousei",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-036",
@@ -106777,7 +112537,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.346,
+    "r": 0.0,
+    "rg": [
+     "keisan-riron",
+     "kumiawase-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "F-039",
@@ -106839,7 +112608,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.263,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-katei",
+     "toshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-038",
@@ -106893,7 +112671,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.406,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "tokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-165",
@@ -106945,7 +112732,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.391,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "rikigaku",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-166",
@@ -106999,7 +112796,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.216,
+    "r": 0.0,
+    "rg": [
+     "soutai",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-167",
@@ -107053,7 +112859,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.216,
+    "r": 0.0,
+    "rg": [
+     "soutai",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-168",
@@ -107108,7 +112923,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.258,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-170",
@@ -107163,7 +112987,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.387,
+    "r": 0.0,
+    "rg": [
+     "jikken",
+     "soutai",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-172",
@@ -107268,7 +113102,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-159",
@@ -107318,7 +113161,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.392,
+    "r": 0.0,
+    "rg": [
+     "hado",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-160",
@@ -107413,7 +113265,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.455,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-162",
@@ -107459,7 +113320,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.304,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-165",
@@ -107510,7 +113380,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.432,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "jikken",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-167",
@@ -107562,7 +113442,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.614,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "energy",
+     "kozo-zairyo",
+     "ryutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-168",
@@ -107615,7 +113506,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.551,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "seibutsu-butsuri",
+     "zairyo",
+     "zairyo-device"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-169",
@@ -107667,7 +113569,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.542,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "kairo-shingo",
+     "seibutsu-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-035",
@@ -107721,7 +113633,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.443,
+    "r": 0.0,
+    "rg": [
+     "chikyu-kagaku",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-036",
@@ -107776,7 +113697,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.556,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "chikyu-kagaku",
+     "chiso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-037",
@@ -107832,7 +113763,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.489,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "chikyu",
+     "jishin-kazan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-038",
@@ -107886,7 +113827,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "jishin-kazan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-039",
@@ -107942,7 +113892,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "denjiki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-040",
@@ -107997,7 +113956,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.287,
+    "r": 0.0,
+    "rg": [
+     "chikyu-naibu",
+     "chiso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-041",
@@ -108053,7 +114021,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.43,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "chikyu-kagaku",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "W-042",
@@ -108108,7 +114086,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.298,
+    "r": 0.0,
+    "rg": [
+     "chikyu",
+     "chikyu-naibu",
+     "kido"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-055",
@@ -108172,7 +114160,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.447,
+    "r": 0.0,
+    "rg": [
+     "butsuri-kagaku",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-056",
@@ -108236,7 +114233,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.43,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iyaku",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-057",
@@ -108291,7 +114298,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.419,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "yuki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-054",
@@ -108355,7 +114371,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.45,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "hassei",
+     "karada"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "B-068",
@@ -108419,7 +114445,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.352,
+    "r": 0.0,
+    "rg": [
+     "bunshi-saibo",
+     "iyaku",
+     "shinkei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-161",
@@ -108528,7 +114564,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kikai-gakushu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-050",
@@ -108584,7 +114629,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.348,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-164",
@@ -108694,7 +114748,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.402,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "hyogen",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-083",
@@ -108805,7 +114869,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.638,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "hado",
+     "kairo-shingo",
+     "tsushin"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-166",
@@ -108860,7 +114935,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.576,
+    "r": 0.0,
+    "rg": [
+     "fugo",
+     "gunkantai",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-167",
@@ -108915,7 +115000,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.213,
+    "r": 0.0,
+    "rg": [
+     "graphics",
+     "kikai-gakushu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-168",
@@ -108969,7 +115063,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.492,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-195",
@@ -109077,7 +115180,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.223,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "gunkantai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-234",
@@ -109131,7 +115243,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.325,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "hado"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-087",
@@ -109186,7 +115307,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.482,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kansu-kaiseki",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-044",
@@ -109240,7 +115371,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.394,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kakuritsu-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-056",
@@ -109348,7 +115488,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.23,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-089",
@@ -109403,7 +115552,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.398,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-091",
@@ -109458,7 +115617,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.293,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-240",
@@ -109512,7 +115680,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.356,
+    "r": 0.0,
+    "rg": [
+     "soryushi",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-241",
@@ -109567,7 +115744,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.517,
+    "r": 0.0,
+    "rg": [
+     "netsu",
+     "seigyo",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-201",
@@ -109622,7 +115809,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.262,
+    "r": 0.0,
+    "rg": [
+     "kido",
+     "tenmon"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-173",
@@ -109678,7 +115874,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.647,
+    "r": 0.0,
+    "rg": [
+     "anzen",
+     "bisekibun",
+     "kakuritsu-daigaku",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-242",
@@ -109788,7 +115995,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.224,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-185",
@@ -109843,7 +116059,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.294,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "kido"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-186",
@@ -109953,7 +116178,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.346,
+    "r": 0.0,
+    "rg": [
+     "kairo-shingo",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-245",
@@ -110008,7 +116242,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.449,
+    "r": 0.0,
+    "rg": [
+     "genshi",
+     "hado",
+     "seigyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-246",
@@ -110063,7 +116307,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.385,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "denjiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-247",
@@ -110171,7 +116425,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.408,
+    "r": 0.0,
+    "rg": [
+     "denjiki",
+     "genshi",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-249",
@@ -110226,7 +116490,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.407,
+    "r": 0.0,
+    "rg": [
+     "bussei",
+     "denjiki",
+     "genshi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-190",
@@ -110282,7 +116556,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.472,
+    "r": 0.0,
+    "rg": [
+     "kido",
+     "netsu-suishin",
+     "ryutai",
+     "suchi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "E-192",
@@ -110337,7 +116622,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.408,
+    "r": 0.0,
+    "rg": [
+     "doboku",
+     "kozo-zairyo"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-176",
@@ -110392,7 +116686,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.616,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "ryoshi",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-250",
@@ -110525,7 +116829,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.301,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-057",
@@ -110820,7 +117133,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.29,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "jitsukaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-028",
@@ -110971,7 +117293,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.441,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "fukuso",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-035",
@@ -111048,7 +117380,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.135,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "kakan-homology"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-036",
@@ -111343,7 +117684,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.272,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-iso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-062",
@@ -111398,7 +117748,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.371,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "gunkantai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-063",
@@ -111505,7 +117864,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.438,
+    "r": 0.0,
+    "rg": [
+     "bisekibun",
+     "kaisekiteki-seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-065",
@@ -111569,7 +117937,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.397,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-seisuron",
+     "hokei",
+     "hyogen"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-066",
@@ -111632,7 +118010,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.321,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-seisuron",
+     "gunkantai",
+     "kakan-homology"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-067",
@@ -111687,7 +118075,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.571,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-seisuron",
+     "fukuso",
+     "seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-068",
@@ -111750,7 +118148,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.508,
+    "r": 0.0,
+    "rg": [
+     "hokei",
+     "hyogen",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-069",
@@ -111804,7 +118212,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.307,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-041",
@@ -111859,7 +118276,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.383,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kumiawase-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-035",
@@ -111913,7 +118339,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.279,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-072",
@@ -112021,7 +118456,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.352,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-074",
@@ -112068,7 +118512,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.205,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "fukuso"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-029",
@@ -112122,7 +118575,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.145,
+    "r": 0.0,
+    "rg": [
+     "kakan-homology",
+     "kenron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-030",
@@ -112176,7 +118638,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.399,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "hyogen"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-031",
@@ -112238,7 +118709,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.281,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "kenron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-032",
@@ -112293,7 +118773,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.448,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "gunkantai",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-040",
@@ -112348,7 +118838,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.304,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-041",
@@ -112403,7 +118902,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.555,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "kaiseki-rikigaku",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-042",
@@ -112565,7 +119074,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.282,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-iso",
+     "kenron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-045",
@@ -112630,7 +119148,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.341,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-046",
@@ -112685,7 +119212,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.321,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-iso",
+     "kakan-homology"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-032",
@@ -112740,7 +119277,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.503,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kansu-kaiseki",
+     "senkei-keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-058",
@@ -112803,7 +119350,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.433,
+    "r": 0.0,
+    "rg": [
+     "kikai-gakushu",
+     "seibutsu-keisan",
+     "soyaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "H-059",
@@ -112866,7 +119423,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.12,
+    "r": 0.0,
+    "rg": [
+     "karada",
+     "soyaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-047",
@@ -112921,7 +119487,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.357,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-seisuron",
+     "gunkantai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-048",
@@ -112976,7 +119552,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.375,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "hyogen"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-049",
@@ -113084,7 +119669,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.389,
+    "r": 0.0,
+    "rg": [
+     "daisuteki-seisuron",
+     "hokei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-082",
@@ -113139,7 +119733,20 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.533,
+    "r": 1.17,
+    "rg": [
+     "bibun-hoteishiki",
+     "kakuritsu-daigaku",
+     "netsu"
+    ],
+    "pr": [
+     "bibun-hoteishiki",
+     "kakuritsu-daigaku"
+    ]
+   }
   },
   {
    "id": "T-052",
@@ -113194,7 +119801,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.312,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-037",
@@ -113248,7 +119864,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.413,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "suri-ronri"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "R-033",
@@ -113304,7 +119929,18 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.471,
+    "r": 0.0,
+    "rg": [
+     "hyogen",
+     "iso",
+     "jitsukaiseki",
+     "kansu-kaiseki"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-044",
@@ -113359,7 +119995,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.395,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "graph"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-084",
@@ -113413,7 +120058,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.3,
+    "r": 0.0,
+    "rg": [
+     "gunkantai",
+     "hyogen"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-085",
@@ -113522,7 +120176,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.572,
+    "r": 0.0,
+    "rg": [
+     "kakuritsu-daigaku",
+     "kumiawase-daigaku",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-045",
@@ -113576,7 +120240,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.284,
+    "r": 0.0,
+    "rg": [
+     "kumiawase-daigaku",
+     "senkei-chusho"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-054",
@@ -113684,7 +120357,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.307,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "S-045",
@@ -113738,7 +120420,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.442,
+    "r": 0.0,
+    "rg": [
+     "jitsukaiseki",
+     "kakuritsu-katei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-055",
@@ -113792,7 +120483,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "tayotai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-235",
@@ -113846,7 +120546,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.481,
+    "r": 0.0,
+    "rg": [
+     "kansu-kaiseki",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-236",
@@ -113900,7 +120609,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.362,
+    "r": 0.0,
+    "rg": [
+     "fukuso",
+     "netsu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-237",
@@ -113954,7 +120672,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.357,
+    "r": 0.0,
+    "rg": [
+     "soryushi",
+     "soutai"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-170",
@@ -114009,7 +120736,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.298,
+    "r": 0.0,
+    "rg": [
+     "keisan-riron",
+     "kumiawase-daigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-238",
@@ -114063,7 +120799,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.459,
+    "r": 0.0,
+    "rg": [
+     "jikken",
+     "soryushi"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "K-171",
@@ -114172,7 +120917,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.474,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "kakan-homology",
+     "keisan-riron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "D-090",
@@ -114228,7 +120983,17 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.441,
+    "r": 0.0,
+    "rg": [
+     "bibun-hoteishiki",
+     "jitsukaiseki",
+     "rikigaku"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "T-057",
@@ -114282,7 +121047,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.307,
+    "r": 0.0,
+    "rg": [
+     "daisu-kika",
+     "daisuteki-seisuron"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "P-239",
@@ -114390,7 +121164,16 @@ window.ROADMAP = {
      "kind": "確認",
      "aim": ""
     }
-   ]
+   ],
+   "comb": {
+    "b": 0.46,
+    "r": 0.0,
+    "rg": [
+     "fugo",
+     "ryoshi"
+    ],
+    "pr": []
+   }
   }
  ],
  "renamed": {
