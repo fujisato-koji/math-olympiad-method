@@ -228,6 +228,7 @@
       <div class="legend">${['done', 'doing', 'ready', 'later'].map(s =>
         `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
         <span>横は理解の深さ（右ほど多くの前提の上にある）、縦は領域。上の目盛りは段のおよその位置</span></div>
+      ${GOAL_SETS[prefs.goal] ? `<p class="muted">目標「${esc(GOALS.find(g => g.id === prefs.goal).name)}」に要る ${GOAL_SETS[prefs.goal].size} 駅だけを描いています。全体は目標の「すべての駅」で見られます。</p>` : ''}
       <div class="goal-pick map-groups" role="group" aria-label="関係図の範囲"><span class="k">範囲</span>${MAP_GROUPS.map(([id, name]) =>
         `<button class="pill" type="button" data-mapgroup="${id}" aria-pressed="${(prefs.mapGroup || 'all') === id}">${esc(name)}</button>`).join('')}</div>
       <div class="map-wrap"><div id="map" class="map"></div></div>
@@ -280,16 +281,21 @@
   function drawMap() {
     const host = $('#map');
     if (!host) return;
+    // 目標を選んでいるときは、その目標の駅と、その駅がある島だけで描き直す（D-015）
     const grp = (MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0])[2];
-    const shownRegions = (R.regions || []).filter(grp), shownIds = new Set(shownRegions.map(r => r.id));
-    const shownUnits = R.units.filter(u => shownIds.has(u.region));
-    if (!shownUnits.length) { host.innerHTML = '<p class="muted">この切り替えの駅はまだありません。</p>'; return; }
+    const shownRegions = (R.regions || []).filter(grp).filter(rg => R.units.some(u => u.region === rg.id && inGoal(u.id)));
+    const shownIds = new Set(shownRegions.map(r => r.id));
+    const shownUnits = R.units.filter(u => shownIds.has(u.region) && inGoal(u.id));
+    if (!shownUnits.length) {
+      host.innerHTML = `<p class="muted">${prefs.goal === 'all' ? 'この切り替えの駅はまだありません。' : 'この範囲には、選んでいる目標の駅がありません。範囲を「すべて」にすると見えます。'}</p>`;
+      return;
+    }
     const minD = Math.min(...shownUnits.map(u => DEPTH[u.id])), maxD = Math.max(...shownUnits.map(u => DEPTH[u.id]));
-    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.max(34, (W - X0 - 28) / Math.max(1, maxD - minD));
+    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.min(140, Math.max(34, (W - X0 - 28) / Math.max(1, maxD - minD)));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
     let y = TOP;
     shownRegions.forEach(rg => {
-      const us = R.units.filter(u => u.region === rg.id).sort(order);
+      const us = shownUnits.filter(u => u.region === rg.id).sort(order);
       if (!us.length) return;
       const byD = {};
       us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
@@ -302,10 +308,10 @@
       y += h + 8;
     });
     const H = y + 6;
-    // 段：各段の駅の深さの中央値を、およその位置として上に置く
+    // 段：描いている駅の深さの中央値を、段ごとにおよその位置として上に置く
     const marks = R.stages.map(s => {
-      const ds = R.units.filter(u => u.stage === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
-      return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - 1) * XS } : null;
+      const ds = shownUnits.filter(u => u.stage === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
+      return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
     }).filter(Boolean);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
     svg += marks.map((m, i) => `<g class="stage-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
@@ -330,7 +336,9 @@
   function highlight(id) {
     const host = $('#map'), info = $('#map-info');
     if (!host) return;
-    const up = closure(id, 'up'), down = closure(id, 'down'), on = new Set([id, ...up, ...down]);
+    // 目標を選んでいるときは、その目標の中の鎖だけ（目標の道のりは前提で閉じているので、途中の駅も目標の中にある）
+    const up = new Set([...closure(id, 'up')].filter(inGoal)), down = new Set([...closure(id, 'down')].filter(inGoal));
+    const on = new Set([id, ...up, ...down]);
     host.classList.add('focus');
     host.querySelectorAll('circle').forEach(c => { c.classList.toggle('hl', on.has(c.dataset.u)); c.classList.toggle('sel', c.dataset.u === id); });
     host.querySelectorAll('.edges path').forEach(p => {
@@ -759,7 +767,7 @@
     if (gk) { prefs.goalKind = gk.dataset.goalkind; save(PREF, prefs); Music.tap(); render(); return; }
     const g = e.target.closest('[data-goal]');
     if (g) {
-      prefs.goal = g.dataset.goal;
+      prefs.goal = g.dataset.goal; selected = null;  // 目標が変わると駅の選択は外す（前の目標の鎖を残さない）
       if (GOAL_SETS[prefs.goal]) prefs.goalKind = GOALS.find(x => x.id === prefs.goal).kind;
       save(PREF, prefs); Music.tap();
       if (g.dataset.go && location.hash !== g.dataset.go) location.hash = g.dataset.go; else render();
