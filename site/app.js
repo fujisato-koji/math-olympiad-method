@@ -500,6 +500,7 @@
       <div class="eyebrow">目標・${esc(g.kind)}・${esc(g.level)}・${esc(g.region)}</div>
       <h1>${esc(g.name)}</h1>
       <div class="row">${esc(g.note)}。単元を組み合わせた結果として届く場所です。</div>
+      ${g.beyond ? `<div class="row muted">知識のほかに要ること：${esc(g.beyond)}（地図が受け持つのは知識の土台だけです）</div>` : ''}
       <div class="gauge">
         <div><span class="k">届いた論題</span><b>${st.got} / ${st.topics}</b></div>
         <div><span class="k">済んだ駅</span><b>${st.done} / ${st.units}</b></div>

@@ -3056,6 +3056,7 @@ window.ROADMAP = {
     "P-017",
     "P-018",
     "P-019",
+    "P-021",
     "P-025",
     "P-026",
     "P-029",
@@ -9550,7 +9551,9 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 5,
    "region": "programming",
-   "needs": [],
+   "needs": [
+    "A-010"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -9592,7 +9595,9 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 5,
    "region": "programming",
-   "needs": [],
+   "needs": [
+    "K-012"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -9634,7 +9639,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 5,
    "region": "programming",
-   "needs": [],
+   "needs": [
+    "K-012",
+    "D-001"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10167,7 +10175,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "hado",
-   "needs": [],
+   "needs": [
+    "P-021",
+    "G-025"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10209,7 +10220,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "hado",
-   "needs": [],
+   "needs": [
+    "P-021",
+    "G-025"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10472,7 +10486,9 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "netsu",
-   "needs": [],
+   "needs": [
+    "P-004"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10690,7 +10706,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "ryoshi",
-   "needs": [],
+   "needs": [
+    "P-021",
+    "P-030",
+    "P-004"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10732,7 +10752,9 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "genshi",
-   "needs": [],
+   "needs": [
+    "P-069"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -10818,7 +10840,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 5,
    "region": "soryushi",
-   "needs": [],
+   "needs": [
+    "P-104",
+    "P-069"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -14065,7 +14090,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 6,
    "region": "netsu",
-   "needs": [],
+   "needs": [
+    "P-045",
+    "D-014"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -14242,7 +14270,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 6,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-044",
+    "P-013"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -17596,7 +17627,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 7,
    "region": "kikai-gakushu",
-   "needs": [],
+   "needs": [
+    "S-001",
+    "C-020"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -17750,7 +17784,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 7,
    "region": "seibutsu-keisan",
-   "needs": [],
+   "needs": [
+    "K-095",
+    "S-001"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -19348,7 +19385,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 7,
    "region": "jikken",
-   "needs": [],
+   "needs": [
+    "P-117",
+    "P-033",
+    "P-029"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -19398,7 +19439,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 7,
    "region": "jikken",
-   "needs": [],
+   "needs": [
+    "K-002",
+    "K-003",
+    "K-012"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -21104,7 +21149,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 7,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-001",
+    "S-001"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -21154,7 +21202,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 7,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-106",
+    "S-003"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -25566,7 +25617,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "region": "programming",
-   "needs": [],
+   "needs": [
+    "K-029",
+    "K-016"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -26556,7 +26610,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "region": "kikai-gakushu",
-   "needs": [],
+   "needs": [
+    "K-064",
+    "S-020"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -26614,7 +26671,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "region": "kikai-gakushu",
-   "needs": [],
+   "needs": [
+    "K-080",
+    "K-082"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -27852,7 +27912,9 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "region": "seibutsu-keisan",
-   "needs": [],
+   "needs": [
+    "K-092"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -27910,7 +27972,9 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 8,
    "region": "seibutsu-keisan",
-   "needs": [],
+   "needs": [
+    "K-093"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -29899,7 +29963,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 8,
    "region": "soutai",
-   "needs": [],
+   "needs": [
+    "P-064",
+    "P-065",
+    "P-014"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -32504,7 +32572,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 8,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-121",
+    "P-123"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -34987,7 +35058,11 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-021",
+    "E-090",
+    "K-004"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35233,7 +35308,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-024",
+    "E-025"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35291,7 +35369,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-110",
+    "S-004"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35349,7 +35430,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-110",
+    "E-090"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35407,7 +35491,9 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-112"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35465,7 +35551,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-110",
+    "E-024"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35901,7 +35990,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-002",
+    "E-003"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -35959,7 +36051,9 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-122"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -36258,7 +36352,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "onkyo",
-   "needs": [],
+   "needs": [
+    "E-073",
+    "K-012"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -36378,7 +36475,9 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "onkyo",
-   "needs": [],
+   "needs": [
+    "P-022"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -36436,7 +36535,9 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "onkyo",
-   "needs": [],
+   "needs": [
+    "E-151"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -36494,7 +36595,9 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 8,
    "region": "onkyo",
-   "needs": [],
+   "needs": [
+    "E-152"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -42269,7 +42372,10 @@ window.ROADMAP = {
    "lane": "K",
    "stage": 9,
    "region": "kikai-gakushu",
-   "needs": [],
+   "needs": [
+    "K-066",
+    "K-068"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43257,7 +43363,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-132",
+    "D-055"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43315,7 +43424,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-132",
+    "K-005",
+    "P-129"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43373,7 +43486,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-132",
+    "K-005"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43431,7 +43547,11 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-132",
+    "P-131",
+    "P-130"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43489,7 +43609,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-132",
+    "P-133"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43547,7 +43670,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-133",
+    "S-003"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -43666,7 +43792,10 @@ window.ROADMAP = {
    "lane": "P",
    "stage": 9,
    "region": "chikyu",
-   "needs": [],
+   "needs": [
+    "P-121",
+    "K-005"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -44770,7 +44899,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "ryutai",
-   "needs": [],
+   "needs": [
+    "E-033",
+    "S-003"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -45514,7 +45646,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "seigyo",
-   "needs": [],
+   "needs": [
+    "E-055",
+    "K-056"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -45692,7 +45827,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "kido",
-   "needs": [],
+   "needs": [
+    "P-010",
+    "D-006"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -45750,7 +45888,11 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "kido",
-   "needs": [],
+   "needs": [
+    "P-034",
+    "E-039",
+    "E-042"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -46798,7 +46940,11 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-092",
+    "E-122",
+    "E-090"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -46856,7 +47002,11 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "doboku",
-   "needs": [],
+   "needs": [
+    "E-093",
+    "E-102",
+    "E-014"
+   ],
    "days": [
     {
      "kind": "導入",
@@ -47299,7 +47449,10 @@ window.ROADMAP = {
    "lane": "E",
    "stage": 9,
    "region": "onkyo",
-   "needs": [],
+   "needs": [
+    "E-129",
+    "D-049"
+   ],
    "days": [
     {
      "kind": "導入",
