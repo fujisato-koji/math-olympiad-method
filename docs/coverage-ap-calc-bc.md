@@ -1,7 +1,9 @@
 # 網羅表：AP Calculus BC
 
 この頁は `tools/roadmap.py build` が `coverage-ap-calc-bc.yaml` から作ります。手で直さないでください。
-College Board の AP Calculus AB and BC Course and Exam Description（Effective Fall 2020）による。BC だけの項目（級数、媒介変数、極座標、ベクトル値関数など）を含む。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+AP Calculus BCに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：College Board の AP Calculus AB and BC Course and Exam Description（Effective Fall 2020）による。BC だけの項目（級数、媒介変数、極座標、ベクトル値関数など）を含む。論題と単元の対応は名称による
 
 論題 30 のうち、単元が受け持つもの 29、すべての単元に通る軸が受け持つもの 0、入れないもの 1。
 

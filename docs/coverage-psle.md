@@ -1,7 +1,9 @@
 # 網羅表：PSLE Mathematics（シンガポール）
 
 この頁は `tools/roadmap.py build` が `coverage-psle.yaml` から作ります。手で直さないでください。
-SEAB の PSLE Mathematics (0008) は目的だけを書き、論題は MOE の Mathematics Syllabus Primary One to Six（2021 年入学の学年から、2025 年 10 月更新）にある。Primary 6（12 歳前後）。学年ごとの論題を 1 行ずつ載せ、学年を論題の前に書いた。どの学年の論題をどれだけ出すかの割り振りは SEAB の文書にない。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+PSLE Mathematics（シンガポール）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：SEAB の PSLE Mathematics (0008) は目的だけを書き、論題は MOE の Mathematics Syllabus Primary One to Six（2021 年入学の学年から、2025 年 10 月更新）にある。Primary 6（12 歳前後）。学年ごとの論題を 1 行ずつ載せ、学年を論題の前に書いた。どの学年の論題をどれだけ出すかの割り振りは SEAB の文書にない。論題と単元の対応は名称による
 
 論題 53 のうち、単元が受け持つもの 53、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

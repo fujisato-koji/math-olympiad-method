@@ -227,7 +227,9 @@ def check(data, problems):
 def build_coverage(goal, cov, titles):
     lines = [f"# 網羅表：{goal['name']}", "",
              f"この頁は `tools/roadmap.py build` が `{goal['coverage']}` から作ります。手で直さないでください。",
-             f"{goal['note']}に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
+             f"{goal['name']}に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。", ""]
+    if goal.get("basis"):
+        lines[-1:-1] = ["", f"範囲の根拠：{goal['basis']}"]
     items = cov.get("items", [])
     covered = sum(1 for i in items if i.get("units"))
     axis = sum(1 for i in items if i.get("axis"))
@@ -272,7 +274,7 @@ def build(data, problems):
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
         items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis") if k in i} for i in cov.get("items", [])]
-        goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note", "beyond") if k in g},
+        goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note", "basis", "beyond") if k in g},
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
                "goals": goals, "goalKinds": list(GOAL_KINDS), "units": out_units, "renamed": data["renamed"]}

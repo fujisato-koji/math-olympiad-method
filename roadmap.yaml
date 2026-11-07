@@ -24,6 +24,9 @@ lanes:
   - {id: K, name: 計算, note: 数値解析と最適化}
   - {id: P, name: 物理, note: 力学から場の量子論、宇宙論まで}
   - {id: E, name: 工学, note: 流体、熱と推進、構造、制御、宇宙機、回路と信号、通信、土木と建築、音響}
+  - {id: H, name: 化学, note: 物質と反応、原子と結合、熱力学と反応速度、無機、有機、分析（C は数えるで使うので水素の H）}
+  - {id: B, name: 生物, note: 生き物のつくり、細胞、遺伝、分子生物学、生理、進化と生態}
+  - {id: F, name: 経済と金融, note: 金利と現在価値、保険数理、年金、投資と派生商品、会計と経済の入口}
 
 
 stages:
@@ -112,60 +115,62 @@ regions:
   - {id: seibutsu-keisan, name: 計算生物, lane: K}
   - {id: chikyu, name: 気象と気候, lane: P}
   - {id: data, name: データの活用, lane: S}
+  - {id: bunshi-saibo, name: 分子と細胞の生物学, lane: B}
+  - {id: seibutsu-butsuri, name: 生物物理, lane: B}
 
 # 目標（大会や入試）。単元を組み合わせた結果として届く場所で、地図に重ねて見せる（D-015）。
 # kind は 大会、検定、修了試験、入試、資格、夢 のどれか（画面ではこの順にまとめる、2.12）。
 # 網羅表が指す単元と、その前提をすべてたどった単元が、その目標までの道のりになる。
 goals:
-  - {id: imo, name: IMO, kind: 大会, level: 高校, region: 国際, note: 国際数学オリンピック（とその手前の JMO）, coverage: coverage.yaml}
-  - {id: todai-suuri, name: 東京大学大学院数理科学研究科（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 令和9（2027）年度の修士課程学生募集要項と出題の意図による。専門科目 A の範囲は「線形代数、微分積分、複素解析、常微分方程式、集合・位相」。専門科目 B は分野ごとで範囲の文書がない。論題と単元の対応は名称による, coverage: coverage-todai-suuri.yaml}
-  - {id: kyodai-suugaku, name: 京都大学大学院理学研究科 数学・数理解析専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 基礎科目の範囲を定めた文書は見つからなかった。令和8（2026）年度の基礎科目の問題文と入試説明会の資料（UM10、UM11）から読み取った論題で、範囲そのものではない, coverage: coverage-kyodai-suugaku.yaml}
-  - {id: gre-math, name: GRE Mathematics Subject Test（ETS）, kind: 入試, level: 大学院, region: 米国, note: "ETS の内容の頁と練習帳による出題比率は微積分 50%、代数 25%、その他 25%。論題と単元の対応は名称による", coverage: coverage-gre-math.yaml}
-  - {id: berkeley-prelim, name: UC Berkeley Preliminary Examination, kind: 入試, level: 大学院, region: 米国, note: 範囲の PDF（2003-12-09 付、現在も頁から参照）による。Math 1A-1B-53-54、104、113、110、185 の範囲。論題と単元の対応は名称による, coverage: coverage-berkeley-prelim.yaml}
-  - {id: ipho, name: 国際物理オリンピック（IPhO）Syllabus, kind: 大会, level: 高校, region: 国際, note: IPhO 公式サイトの Statutes and Syllabus による（2026-11-07 取得、シラバスの版の表示なし）。論題と単元の対応は名称による。シラバス外の概念は問題文で説明すれば出してよい。数学は「中等学校の生徒が標準的な高校の数学で解けること」が条件, coverage: coverage-ipho.yaml}
-  - {id: todai-butsuri, name: 東京大学大学院理学系研究科物理学専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 令和9（2027）年度の修士課程学生募集要項（試験は 2026-08-18）による。数学 1 問、物理学 3 問で、物理学は量子力学・統計力学・古典力学・電磁気学が主な範囲。細目は書かれておらず、過去問のページも取得できなかったため、論題と単元の対応は分野の名称による, coverage: coverage-todai-butsuri.yaml}
-  - {id: gre-physics, name: GRE Physics Test（ETS）, kind: 入試, level: 大学, region: 米国, note: "ETS の内容の頁と練習帳による。約 70 問で、大半は学部の最初の 3 年の物理で解ける。出題比率は古典力学 20%、電磁気学 18%、光学と波動 8%、熱力学と統計力学 10%、量子力学 13%、原子物理 10%、特殊相対論 6%、実験の方法 6%、専門の話題 9%。各分野は「such as」で例示されるだけなので、論題と単元の対応は名称による。数学の方法は ETS が挙げる多変数の微積分、ベクトル解析、フーリエ級数、偏微分方程式、行列と行列式、複素関数", coverage: coverage-gre-physics.yaml}
-  - {id: step, name: University of Cambridge ほか（STEP 2・3）, kind: 入試, level: 大学, region: 英国, note: STEP 2 と STEP 3 の仕様書（2026 年 6 月以降）による。両方とも Mathematics 1（A Level 相当）を前提とし、STEP 3 は STEP 2 の範囲も含む。力学と確率統計も範囲に入る。論題と単元の対応は名称による, coverage: coverage-step.yaml}
-  - {id: jee-advanced, name: Indian Institutes of Technology（JEE Advanced）, kind: 入試, level: 大学, region: インド, note: JEE (Advanced) 2026 の案内書の付録 I（数学の範囲）による。物理の範囲にある力学は含めない。論題と単元の対応は名称による, coverage: coverage-jee-advanced.yaml}
-  - {id: jee-main, name: National Testing Agency（JEE Main）, kind: 入試, level: 大学, region: インド, note: JEE (Main) 2027 の数学（Paper 1、B.E./B.Tech.）のシラバスによる。2026 年 10 月 24 日付で掲示。論題と単元の対応は名称による, coverage: coverage-jee-main.yaml}
-  - {id: tmua, name: University of Oxford ほか（TMUA）, kind: 入試, level: 大学, region: 英国, note: TMUA の Content Specification（2026 年 10 月・2027 年 1 月の試験）による。Section 1 は AS level の純粋数学と GCSE 上級、Section 2 は論理と証明。どの大学・学科が課すかは調べていない。論題と単元の対応は名称による, coverage: coverage-tmua.yaml}
-  - {id: todai-rika, name: 東京大学（理科の入学試験、数学）, kind: 入試, level: 大学, region: 日本, note: 令和 9（2027）年度の入学者選抜要項と学習指導要領による。数学 I・II・III・A は全範囲、数学 B は「数列」「統計的な推測」、数学 C は「ベクトル」「平面上の曲線と複素数平面」。論題と単元の対応は名称による, coverage: coverage-todai-rika.yaml}
-  - {id: kyodai-rikei, name: 京都大学（理系の入学試験、数学）, kind: 入試, level: 大学, region: 日本, note: 令和 9 年度の入学者選抜要項と学習指導要領による。数学 I・II・III・A は全範囲、数学 B は「数列」だけ、数学 C は「ベクトル」「平面上の曲線と複素数平面」。論題と単元の対応は名称による, coverage: coverage-kyodai-rikei.yaml}
-  - {id: kyotsu-test, name: 大学入学共通テスト（数学）, kind: 入試, level: 大学, region: 日本, note: 令和 9 年度試験の『数学Ⅰ，数学Ａ』『数学Ⅰ』『数学Ⅱ，数学Ｂ，数学Ｃ』。大学入試センターの文書は科目と項目の単位までなので、細目は学習指導要領から取った。数学Ⅲ、数学Ａの整数、数学Ｃの行列は範囲外。論題と単元の対応は名称による, coverage: coverage-kyotsu-test.yaml}
-  - {id: gaokao, name: 中国の普通高等学校招生全国統一考試（高考、数学）, kind: 入試, level: 大学, region: 中国, note: 全国卷の数学。範囲は普通高中数学課程標準（2017 年版 2020 年修訂）の必修課程と選択性必修課程。選学の印が付いた項目（複素数の三角表示、数学的帰納法、ベイズの公式）は考試の要求としないので含めない。積分の項目はない。論題と単元の対応は名称による, coverage: coverage-gaokao.yaml}
-  - {id: suneung, name: 韓国の大学修学能力試験（修能、数学）, kind: 入試, level: 大学, region: 韓国, note: "2027 学年度（2026-11-19 実施）の数学。共通科目「数学 I」「数学 II」（約 75%）と、「確率と統計」「微積分」「幾何」から 1 つを選ぶ選択科目（約 25%）。論題と単元の対応は名称による", coverage: coverage-suneung.yaml}
-  - {id: alevel-maths, name: A level Mathematics（Pearson Edexcel）, kind: 入試, level: 大学, region: 英国, note: Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0) の仕様書（Issue 4、2020 年 2 月）による。純粋数学、統計、力学。論題と単元の対応は名称による, coverage: coverage-alevel-maths.yaml}
-  - {id: alevel-further, name: A level Further Mathematics（Pearson Edexcel）, kind: 入試, level: 大学, region: 英国, note: Pearson Edexcel Level 3 Advanced GCE in Further Mathematics (9FM0) の仕様書（Issue 4、2023 年 6 月）による。必修の Core Pure と、Further Pure、Further Statistics、Further Mechanics、Decision の選択部分を全部並べた。論題と単元の対応は名称による, coverage: coverage-alevel-further.yaml}
-  - {id: ib-aa-hl, name: "IB Mathematics: Analysis and Approaches HL", kind: 入試, level: 大学, region: 国際, note: 国際バカロレア・ディプロマ・プログラムの数学（AA）HL。公開の subject brief（2021 年初回試験版）が示すのは 5 分野と時間数だけで、細目は有料の科目ガイドにあり取得していない。このため論題は分野の単位とし、単元の対応は分野の名称による, coverage: coverage-ib-aa-hl.yaml}
-  - {id: sat-math, name: SAT Math（College Board）, kind: 入試, level: 大学, region: 米国, note: SAT Suite の Math Specifications と Assessment Framework（version 4、2026 年 9 月）による。代数、発展的な数学、問題解決とデータ分析、幾何と三角法の 4 分野。論題と単元の対応は名称による, coverage: coverage-sat-math.yaml}
-  - {id: ap-calc-bc, name: AP Calculus BC, kind: 入試, level: 大学, region: 米国, note: College Board の AP Calculus AB and BC Course and Exam Description（Effective Fall 2020）による。BC だけの項目（級数、媒介変数、極座標、ベクトル値関数など）を含む。論題と単元の対応は名称による, coverage: coverage-ap-calc-bc.yaml}
-  - {id: ap-stats, name: AP Statistics, kind: 入試, level: 大学, region: 米国, note: College Board の AP Statistics Course and Exam Description（Effective Fall 2026、5 単位に改訂、初回の試験は 2027 年 5 月）による。論題と単元の対応は名称による, coverage: coverage-ap-stats.yaml}
-  - {id: ege-profile, name: ЕГЭ（数学 профильный уровень）, kind: 入試, level: 大学, region: ロシア, note: ФИПИ の 2027 年の кодификатор と спецификация による。これらは確定版ではなく案（ПРОЕКТ、2026 年 8〜9 月付）。論題は кодификатор の内容の要素と要件から取った。論題と単元の対応は名称による, coverage: coverage-ege-profile.yaml}
-  - {id: suken-11, name: 実用数学技能検定 11 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 11 級（小学校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-11.yaml}
-  - {id: suken-10, name: 実用数学技能検定 10 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 10 級（小学校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-10.yaml}
-  - {id: suken-9, name: 実用数学技能検定 9 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 9 級（小学校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-9.yaml}
-  - {id: suken-8, name: 実用数学技能検定 8 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 8 級（小学校 4 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-8.yaml}
-  - {id: suken-7, name: 実用数学技能検定 7 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 7 級（小学校 5 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-7.yaml}
-  - {id: suken-6, name: 実用数学技能検定 6 級, kind: 検定, level: 小学, region: 日本, note: 算数検定 6 級（小学校 6 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-6.yaml}
-  - {id: suken-5, name: 実用数学技能検定 5 級, kind: 検定, level: 中学, region: 日本, note: 数学検定 5 級（中学校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-5.yaml}
-  - {id: suken-4, name: 実用数学技能検定 4 級, kind: 検定, level: 中学, region: 日本, note: 数学検定 4 級（中学校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-4.yaml}
-  - {id: suken-3, name: 実用数学技能検定 3 級, kind: 検定, level: 中学, region: 日本, note: 数学検定 3 級（中学校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-3.yaml}
-  - {id: suken-jun2, name: 実用数学技能検定 準 2 級, kind: 検定, level: 高校, region: 日本, note: 数学検定 準 2 級（高校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-jun2.yaml}
-  - {id: suken-2, name: 実用数学技能検定 2 級, kind: 検定, level: 高校, region: 日本, note: 数学検定 2 級（高校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-2.yaml}
-  - {id: suken-jun1, name: 実用数学技能検定 準 1 級, kind: 検定, level: 高校, region: 日本, note: 数学検定 準 1 級（高校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-jun1.yaml}
-  - {id: suken-1, name: 実用数学技能検定 1 級, kind: 検定, level: 大学, region: 日本, note: 数学検定 1 級（大学程度・一般）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-1.yaml}
-  - {id: jjmo, name: 日本ジュニア数学オリンピック（JJMO）, kind: 大会, level: 中学, region: 日本, note: 第 25 回。数学オリンピック財団の概要ページの「主たる出題分野」と募集要項（2026-11-07 取得）による。前提は世界各国の中学校程度で、範囲外の記述はない。論題と単元の対応は名称による, coverage: coverage-jjmo.yaml}
-  - {id: jmo, name: 日本数学オリンピック（JMO）, kind: 大会, level: 高校, region: 日本, note: 第 37 回。数学オリンピック財団の概要ページの「主たる出題分野」と募集要項（2026-11-07 取得）による。前提は世界各国の高校程度で、微積分、確率統計、行列は範囲外（要項）。概要ページは組合せ論に「確率」を挙げ、要項は「確率統計」を範囲外とするため、両方を載せた。論題と単元の対応は名称による, coverage: coverage-jmo.yaml}
-  - {id: jgmo, name: 日本女子数学オリンピック（JGMO）, kind: 大会, level: 高校, region: 日本, note: 第 2 回。主たる出題分野と範囲外は JMO と同じ（数学オリンピック財団の概要ページと募集要項、2026-11-07 取得）。微積分、確率統計、行列は範囲外（要項）。論題と単元の対応は名称による, coverage: coverage-jgmo.yaml}
-  - {id: tokyo-kouritsu, name: 東京都立高等学校入学者選抜（数学、共通問題）, kind: 入試, level: 高校, region: 日本（東京都）, note: 令和 9 年度（2027 年入学）の実施要綱は、出題の範囲を中学校学習指導要領に示されている内容とする。論題は学習指導要領 第 2 章第 3 節 数学の内容による。自校作成問題の高校は含まない。論題と単元の対応は名称による, coverage: coverage-tokyo-kouritsu.yaml}
-  - {id: ce-11plus, name: ISEB Common Entrance 11+（数学）, kind: 入試, level: 小学, region: 英国, note: "ISEB の Mathematics CE at 11+ & 13+ and CASE Specification（2020 年 9 月版、2021 年 9 月から教える、2022 年 11 月から実施）による。Year 6（10〜11 歳）、60 分、電卓なし。論題と単元の対応は名称による", coverage: coverage-ce-11plus.yaml}
-  - {id: ce-13plus, name: ISEB Common Entrance 13+（数学）, kind: 入試, level: 中学, region: 英国, note: "ISEB の Mathematics CE at 11+ & 13+ and CASE Specification による。Year 8（12〜13 歳）、Core と Foundation の論題表に、任意の Additional（と奨学金試験 CASE）の論題を加えた。Core は電卓なし 60 分と電卓あり 60 分、暗算 10 分。論題と単元の対応は名称による", coverage: coverage-ce-13plus.yaml}
-  - {id: gcse-higher, name: GCSE Mathematics Higher（Pearson Edexcel）, kind: 修了試験, level: 高校, region: 英国, note: Pearson Edexcel GCSE (9-1) Mathematics (1MA1) Specification（Issue 2、2015 年 6 月）の Higher tier。Year 11（15〜16 歳）、3 冊子各 1 時間 30 分。AQA 版は取得していない。論題と単元の対応は名称による, coverage: coverage-gcse-higher.yaml}
-  - {id: psle, name: PSLE Mathematics（シンガポール）, kind: 修了試験, level: 小学, region: シンガポール, note: SEAB の PSLE Mathematics (0008) は目的だけを書き、論題は MOE の Mathematics Syllabus Primary One to Six（2021 年入学の学年から、2025 年 10 月更新）にある。Primary 6（12 歳前後）。学年ごとの論題を 1 行ずつ載せ、学年を論題の前に書いた。どの学年の論題をどれだけ出すかの割り振りは SEAB の文書にない。論題と単元の対応は名称による, coverage: coverage-psle.yaml}
-  - {id: olevel-math, name: GCE O-Level Mathematics（シンガポール）, kind: 修了試験, level: 高校, region: シンガポール, note: Syllabus 4052（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Mathematics（Syllabus K310）に代わり、SEAB の文書の本文は内容が同じ（題名と著作権年の違いだけ）。論題は K310 による。Secondary 4（16 歳前後）。論題と単元の対応は名称による, coverage: coverage-olevel-math.yaml}
-  - {id: olevel-amath, name: GCE O-Level Additional Mathematics（シンガポール）, kind: 修了試験, level: 高校, region: シンガポール, note: Syllabus 4049（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Additional Mathematics（Syllabus K341）に代わり、本文の内容は同じ。論題は K341 による。G3 Mathematics の内容を前提とする。論題と単元の対応は名称による, coverage: coverage-olevel-amath.yaml}
-  - {id: amc8, name: AMC 8（MAA）, kind: 大会, level: 中学, region: 米国, note: MAA の AMC のページの topics の列挙による（検索エンジンの抜粋で取得し、文言は原文との照合が要る）。「これに限らない」の注つき。8 年生以下、25 問 40 分の選択式。後半の問題は初歩の代数（一次関数か二次関数、座標幾何）に触れることがある。論題と単元の対応は名称による, coverage: coverage-amc8.yaml}
-  - {id: kangaroo, name: Math Kangaroo, kind: 大会, level: 小学, region: 国際, note: AKSF の学年帯ごとの指針（Math Kangaroo USA が掲載、2021-12）のうち、grades 5-6、7-8、9-10 の 3 本による。grades 1-2、3-4、11-12 は本文を読めなかった。ページは「試験で何が出るかの大まかな指針」とする。日本大会（算数オリンピック委員会）の範囲の文書は公開されていない。論題と単元の対応は名称による, coverage: coverage-kangaroo.yaml}
+  - {id: imo, name: IMO, kind: 大会, level: 高校, region: 国際, note: 世界中の高校生が、2 日間で 6 問の難しい問題に挑む数学の大会。, basis: IMO の公式の頁と過去問の論題の調べ（coverage.yaml の出典 O01〜O13）による, coverage: coverage.yaml}
+  - {id: todai-suuri, name: 東京大学大学院数理科学研究科（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、数学の研究を始めるための試験。, basis: 令和9（2027）年度の修士課程学生募集要項と出題の意図による。専門科目 A の範囲は「線形代数、微分積分、複素解析、常微分方程式、集合・位相」。専門科目 B は分野ごとで範囲の文書がない。論題と単元の対応は名称による, coverage: coverage-todai-suuri.yaml}
+  - {id: kyodai-suugaku, name: 京都大学大学院理学研究科 数学・数理解析専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 京都大学の大学院で、数学の研究を始めるための試験。, basis: 基礎科目の範囲を定めた文書は見つからなかった。令和8（2026）年度の基礎科目の問題文と入試説明会の資料（UM10、UM11）から読み取った論題で、範囲そのものではない, coverage: coverage-kyodai-suugaku.yaml}
+  - {id: gre-math, name: GRE Mathematics Subject Test（ETS）, kind: 入試, level: 大学院, region: 米国, note: アメリカの大学院で数学を学ぶときに使う、大学の数学の力をはかる試験。, basis: "ETS の内容の頁と練習帳による出題比率は微積分 50%、代数 25%、その他 25%。論題と単元の対応は名称による", coverage: coverage-gre-math.yaml}
+  - {id: berkeley-prelim, name: UC Berkeley Preliminary Examination, kind: 入試, level: 大学院, region: 米国, note: カリフォルニア大学バークレー校の大学院で、数学の研究に進む前に受ける試験。, basis: 範囲の PDF（2003-12-09 付、現在も頁から参照）による。Math 1A-1B-53-54、104、113、110、185 の範囲。論題と単元の対応は名称による, coverage: coverage-berkeley-prelim.yaml}
+  - {id: ipho, name: 国際物理オリンピック（IPhO）Syllabus, kind: 大会, level: 高校, region: 国際, note: 世界中の高校生が、物理の問題と実験に挑む大会。, basis: IPhO 公式サイトの Statutes and Syllabus による（2026-11-07 取得、シラバスの版の表示なし）。論題と単元の対応は名称による。シラバス外の概念は問題文で説明すれば出してよい。数学は「中等学校の生徒が標準的な高校の数学で解けること」が条件, coverage: coverage-ipho.yaml}
+  - {id: todai-butsuri, name: 東京大学大学院理学系研究科物理学専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、物理の研究を始めるための試験。, basis: 令和9（2027）年度の修士課程学生募集要項（試験は 2026-08-18）による。数学 1 問、物理学 3 問で、物理学は量子力学・統計力学・古典力学・電磁気学が主な範囲。細目は書かれておらず、過去問のページも取得できなかったため、論題と単元の対応は分野の名称による, coverage: coverage-todai-butsuri.yaml}
+  - {id: gre-physics, name: GRE Physics Test（ETS）, kind: 入試, level: 大学, region: 米国, note: アメリカの大学院で物理を学ぶときに使う、大学の物理の力をはかる試験。, basis: "ETS の内容の頁と練習帳による。約 70 問で、大半は学部の最初の 3 年の物理で解ける。出題比率は古典力学 20%、電磁気学 18%、光学と波動 8%、熱力学と統計力学 10%、量子力学 13%、原子物理 10%、特殊相対論 6%、実験の方法 6%、専門の話題 9%。各分野は「such as」で例示されるだけなので、論題と単元の対応は名称による。数学の方法は ETS が挙げる多変数の微積分、ベクトル解析、フーリエ級数、偏微分方程式、行列と行列式、複素関数", coverage: coverage-gre-physics.yaml}
+  - {id: step, name: University of Cambridge ほか（STEP 2・3）, kind: 入試, level: 大学, region: 英国, note: ケンブリッジ大学などで数学を学ぶ人が、長い問題をじっくり解く入学の試験。, basis: STEP 2 と STEP 3 の仕様書（2026 年 6 月以降）による。両方とも Mathematics 1（A Level 相当）を前提とし、STEP 3 は STEP 2 の範囲も含む。力学と確率統計も範囲に入る。論題と単元の対応は名称による, coverage: coverage-step.yaml}
+  - {id: jee-advanced, name: Indian Institutes of Technology（JEE Advanced）, kind: 入試, level: 大学, region: インド, note: インド工科大学に入るための、とても難しいことで知られる試験。, basis: JEE (Advanced) 2026 の案内書の付録 I（数学の範囲）による。物理の範囲にある力学は含めない。論題と単元の対応は名称による, coverage: coverage-jee-advanced.yaml}
+  - {id: jee-main, name: National Testing Agency（JEE Main）, kind: 入試, level: 大学, region: インド, note: インドの工学の大学に入るための全国の試験。, basis: JEE (Main) 2027 の数学（Paper 1、B.E./B.Tech.）のシラバスによる。2026 年 10 月 24 日付で掲示。論題と単元の対応は名称による, coverage: coverage-jee-main.yaml}
+  - {id: tmua, name: University of Oxford ほか（TMUA）, kind: 入試, level: 大学, region: 英国, note: オックスフォード大学などで数学を学ぶ人の、考える力をためす入学の試験。, basis: TMUA の Content Specification（2026 年 10 月・2027 年 1 月の試験）による。Section 1 は AS level の純粋数学と GCSE 上級、Section 2 は論理と証明。どの大学・学科が課すかは調べていない。論題と単元の対応は名称による, coverage: coverage-tmua.yaml}
+  - {id: todai-rika, name: 東京大学（理科の入学試験、数学）, kind: 入試, level: 大学, region: 日本, note: 東京大学の理科の学部に入るための数学の試験。, basis: 令和 9（2027）年度の入学者選抜要項と学習指導要領による。数学 I・II・III・A は全範囲、数学 B は「数列」「統計的な推測」、数学 C は「ベクトル」「平面上の曲線と複素数平面」。論題と単元の対応は名称による, coverage: coverage-todai-rika.yaml}
+  - {id: kyodai-rikei, name: 京都大学（理系の入学試験、数学）, kind: 入試, level: 大学, region: 日本, note: 京都大学の理系の学部に入るための数学の試験。, basis: 令和 9 年度の入学者選抜要項と学習指導要領による。数学 I・II・III・A は全範囲、数学 B は「数列」だけ、数学 C は「ベクトル」「平面上の曲線と複素数平面」。論題と単元の対応は名称による, coverage: coverage-kyodai-rikei.yaml}
+  - {id: kyotsu-test, name: 大学入学共通テスト（数学）, kind: 入試, level: 大学, region: 日本, note: 日本の大学に入る人がみんなで受ける、全国の試験の数学。, basis: 令和 9 年度試験の『数学Ⅰ，数学Ａ』『数学Ⅰ』『数学Ⅱ，数学Ｂ，数学Ｃ』。大学入試センターの文書は科目と項目の単位までなので、細目は学習指導要領から取った。数学Ⅲ、数学Ａの整数、数学Ｃの行列は範囲外。論題と単元の対応は名称による, coverage: coverage-kyotsu-test.yaml}
+  - {id: gaokao, name: 中国の普通高等学校招生全国統一考試（高考、数学）, kind: 入試, level: 大学, region: 中国, note: 中国の高校生が大学に入るために受ける、全国の試験の数学。, basis: 全国卷の数学。範囲は普通高中数学課程標準（2017 年版 2020 年修訂）の必修課程と選択性必修課程。選学の印が付いた項目（複素数の三角表示、数学的帰納法、ベイズの公式）は考試の要求としないので含めない。積分の項目はない。論題と単元の対応は名称による, coverage: coverage-gaokao.yaml}
+  - {id: suneung, name: 韓国の大学修学能力試験（修能、数学）, kind: 入試, level: 大学, region: 韓国, note: 韓国の高校生が大学に入るために受ける、全国の試験の数学。, basis: "2027 学年度（2026-11-19 実施）の数学。共通科目「数学 I」「数学 II」（約 75%）と、「確率と統計」「微積分」「幾何」から 1 つを選ぶ選択科目（約 25%）。論題と単元の対応は名称による", coverage: coverage-suneung.yaml}
+  - {id: alevel-maths, name: A level Mathematics（Pearson Edexcel）, kind: 入試, level: 大学, region: 英国, note: イギリスの高校生が、大学に進む前に受ける数学の試験。, basis: Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0) の仕様書（Issue 4、2020 年 2 月）による。純粋数学、統計、力学。論題と単元の対応は名称による, coverage: coverage-alevel-maths.yaml}
+  - {id: alevel-further, name: A level Further Mathematics（Pearson Edexcel）, kind: 入試, level: 大学, region: 英国, note: イギリスの高校生が、数学をさらに深く学んで受ける試験。, basis: Pearson Edexcel Level 3 Advanced GCE in Further Mathematics (9FM0) の仕様書（Issue 4、2023 年 6 月）による。必修の Core Pure と、Further Pure、Further Statistics、Further Mechanics、Decision の選択部分を全部並べた。論題と単元の対応は名称による, coverage: coverage-alevel-further.yaml}
+  - {id: ib-aa-hl, name: "IB Mathematics: Analysis and Approaches HL", kind: 入試, level: 大学, region: 国際, note: 世界の学校で使われる国際バカロレアで、数学をいちばん深く学ぶ科目の試験。, basis: 国際バカロレア・ディプロマ・プログラムの数学（AA）HL。公開の subject brief（2021 年初回試験版）が示すのは 5 分野と時間数だけで、細目は有料の科目ガイドにあり取得していない。このため論題は分野の単位とし、単元の対応は分野の名称による, coverage: coverage-ib-aa-hl.yaml}
+  - {id: sat-math, name: SAT Math（College Board）, kind: 入試, level: 大学, region: 米国, note: アメリカの大学に入るときに使う試験の数学。, basis: SAT Suite の Math Specifications と Assessment Framework（version 4、2026 年 9 月）による。代数、発展的な数学、問題解決とデータ分析、幾何と三角法の 4 分野。論題と単元の対応は名称による, coverage: coverage-sat-math.yaml}
+  - {id: ap-calc-bc, name: AP Calculus BC, kind: 入試, level: 大学, region: 米国, note: アメリカの高校生が、大学の微分と積分を先に学んで受ける試験。, basis: College Board の AP Calculus AB and BC Course and Exam Description（Effective Fall 2020）による。BC だけの項目（級数、媒介変数、極座標、ベクトル値関数など）を含む。論題と単元の対応は名称による, coverage: coverage-ap-calc-bc.yaml}
+  - {id: ap-stats, name: AP Statistics, kind: 入試, level: 大学, region: 米国, note: アメリカの高校生が、大学の統計を先に学んで受ける試験。, basis: College Board の AP Statistics Course and Exam Description（Effective Fall 2026、5 単位に改訂、初回の試験は 2027 年 5 月）による。論題と単元の対応は名称による, coverage: coverage-ap-stats.yaml}
+  - {id: ege-profile, name: ЕГЭ（数学 профильный уровень）, kind: 入試, level: 大学, region: ロシア, note: ロシアの高校生が大学に入るために受ける全国の試験の、数学の詳しい版。, basis: ФИПИ の 2027 年の кодификатор と спецификация による。これらは確定版ではなく案（ПРОЕКТ、2026 年 8〜9 月付）。論題は кодификатор の内容の要素と要件から取った。論題と単元の対応は名称による, coverage: coverage-ege-profile.yaml}
+  - {id: suken-11, name: 実用数学技能検定 11 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 1 年くらいの算数の力をためす級。, basis: 算数検定 11 級（小学校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-11.yaml}
+  - {id: suken-10, name: 実用数学技能検定 10 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 2 年くらいの算数の力をためす級。, basis: 算数検定 10 級（小学校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-10.yaml}
+  - {id: suken-9, name: 実用数学技能検定 9 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 3 年くらいの算数の力をためす級。, basis: 算数検定 9 級（小学校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-9.yaml}
+  - {id: suken-8, name: 実用数学技能検定 8 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 4 年くらいの算数の力をためす級。, basis: 算数検定 8 級（小学校 4 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-8.yaml}
+  - {id: suken-7, name: 実用数学技能検定 7 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 5 年くらいの算数の力をためす級。, basis: 算数検定 7 級（小学校 5 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-7.yaml}
+  - {id: suken-6, name: 実用数学技能検定 6 級, kind: 検定, level: 小学, region: 日本, note: 算数検定で、小学 6 年くらいの算数の力をためす級。, basis: 算数検定 6 級（小学校 6 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-6.yaml}
+  - {id: suken-5, name: 実用数学技能検定 5 級, kind: 検定, level: 中学, region: 日本, note: 数学検定で、中学 1 年くらいの数学の力をためす級。, basis: 数学検定 5 級（中学校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-5.yaml}
+  - {id: suken-4, name: 実用数学技能検定 4 級, kind: 検定, level: 中学, region: 日本, note: 数学検定で、中学 2 年くらいの数学の力をためす級。, basis: 数学検定 4 級（中学校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-4.yaml}
+  - {id: suken-3, name: 実用数学技能検定 3 級, kind: 検定, level: 中学, region: 日本, note: 数学検定で、中学 3 年くらいの数学の力をためす級。, basis: 数学検定 3 級（中学校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-3.yaml}
+  - {id: suken-jun2, name: 実用数学技能検定 準 2 級, kind: 検定, level: 高校, region: 日本, note: 数学検定で、高校 1 年くらいの数学の力をためす級。, basis: 数学検定 準 2 級（高校 1 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-jun2.yaml}
+  - {id: suken-2, name: 実用数学技能検定 2 級, kind: 検定, level: 高校, region: 日本, note: 数学検定で、高校 2 年くらいの数学の力をためす級。, basis: 数学検定 2 級（高校 2 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-2.yaml}
+  - {id: suken-jun1, name: 実用数学技能検定 準 1 級, kind: 検定, level: 高校, region: 日本, note: 数学検定で、高校 3 年くらいの数学の力をためす級。, basis: 数学検定 準 1 級（高校 3 年程度）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-jun1.yaml}
+  - {id: suken-1, name: 実用数学技能検定 1 級, kind: 検定, level: 大学, region: 日本, note: 数学検定で、大学くらいの数学の力をためす級。, basis: 数学検定 1 級（大学程度・一般）。日本数学検定協会の「検定の内容」（2026-11-07 取得）による。論題と単元の対応は名称による, coverage: coverage-suken-1.yaml}
+  - {id: jjmo, name: 日本ジュニア数学オリンピック（JJMO）, kind: 大会, level: 中学, region: 日本, note: 中学生が、考える力で問題に挑む日本の数学の大会。, basis: 第 25 回。数学オリンピック財団の概要ページの「主たる出題分野」と募集要項（2026-11-07 取得）による。前提は世界各国の中学校程度で、範囲外の記述はない。論題と単元の対応は名称による, coverage: coverage-jjmo.yaml}
+  - {id: jmo, name: 日本数学オリンピック（JMO）, kind: 大会, level: 高校, region: 日本, note: 高校生までが挑み、国際数学オリンピックの日本代表につながる大会。, basis: 第 37 回。数学オリンピック財団の概要ページの「主たる出題分野」と募集要項（2026-11-07 取得）による。前提は世界各国の高校程度で、微積分、確率統計、行列は範囲外（要項）。概要ページは組合せ論に「確率」を挙げ、要項は「確率統計」を範囲外とするため、両方を載せた。論題と単元の対応は名称による, coverage: coverage-jmo.yaml}
+  - {id: jgmo, name: 日本女子数学オリンピック（JGMO）, kind: 大会, level: 高校, region: 日本, note: 女子の中高生が挑む、日本の数学の大会。, basis: 第 2 回。主たる出題分野と範囲外は JMO と同じ（数学オリンピック財団の概要ページと募集要項、2026-11-07 取得）。微積分、確率統計、行列は範囲外（要項）。論題と単元の対応は名称による, coverage: coverage-jgmo.yaml}
+  - {id: tokyo-kouritsu, name: 東京都立高等学校入学者選抜（数学、共通問題）, kind: 入試, level: 高校, region: 日本（東京都）, note: 東京都の公立高校に入るための数学の試験。, basis: 令和 9 年度（2027 年入学）の実施要綱は、出題の範囲を中学校学習指導要領に示されている内容とする。論題は学習指導要領 第 2 章第 3 節 数学の内容による。自校作成問題の高校は含まない。論題と単元の対応は名称による, coverage: coverage-tokyo-kouritsu.yaml}
+  - {id: ce-11plus, name: ISEB Common Entrance 11+（数学）, kind: 入試, level: 小学, region: 英国, note: イギリスの私立の学校に 11 歳で入るための数学の試験。, basis: "ISEB の Mathematics CE at 11+ & 13+ and CASE Specification（2020 年 9 月版、2021 年 9 月から教える、2022 年 11 月から実施）による。Year 6（10〜11 歳）、60 分、電卓なし。論題と単元の対応は名称による", coverage: coverage-ce-11plus.yaml}
+  - {id: ce-13plus, name: ISEB Common Entrance 13+（数学）, kind: 入試, level: 中学, region: 英国, note: イギリスの私立の学校に 13 歳で入るための数学の試験。, basis: "ISEB の Mathematics CE at 11+ & 13+ and CASE Specification による。Year 8（12〜13 歳）、Core と Foundation の論題表に、任意の Additional（と奨学金試験 CASE）の論題を加えた。Core は電卓なし 60 分と電卓あり 60 分、暗算 10 分。論題と単元の対応は名称による", coverage: coverage-ce-13plus.yaml}
+  - {id: gcse-higher, name: GCSE Mathematics Higher（Pearson Edexcel）, kind: 修了試験, level: 高校, region: 英国, note: イギリスの 16 歳が、中学校の終わりに受ける数学の試験の難しいほうの版。, basis: Pearson Edexcel GCSE (9-1) Mathematics (1MA1) Specification（Issue 2、2015 年 6 月）の Higher tier。Year 11（15〜16 歳）、3 冊子各 1 時間 30 分。AQA 版は取得していない。論題と単元の対応は名称による, coverage: coverage-gcse-higher.yaml}
+  - {id: psle, name: PSLE Mathematics（シンガポール）, kind: 修了試験, level: 小学, region: シンガポール, note: シンガポールの小学生が、小学校の終わりに受ける算数の試験。, basis: SEAB の PSLE Mathematics (0008) は目的だけを書き、論題は MOE の Mathematics Syllabus Primary One to Six（2021 年入学の学年から、2025 年 10 月更新）にある。Primary 6（12 歳前後）。学年ごとの論題を 1 行ずつ載せ、学年を論題の前に書いた。どの学年の論題をどれだけ出すかの割り振りは SEAB の文書にない。論題と単元の対応は名称による, coverage: coverage-psle.yaml}
+  - {id: olevel-math, name: GCE O-Level Mathematics（シンガポール）, kind: 修了試験, level: 高校, region: シンガポール, note: シンガポールの中高生が、4 年間の終わりに受ける数学の試験。, basis: Syllabus 4052（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Mathematics（Syllabus K310）に代わり、SEAB の文書の本文は内容が同じ（題名と著作権年の違いだけ）。論題は K310 による。Secondary 4（16 歳前後）。論題と単元の対応は名称による, coverage: coverage-olevel-math.yaml}
+  - {id: olevel-amath, name: GCE O-Level Additional Mathematics（シンガポール）, kind: 修了試験, level: 高校, region: シンガポール, note: シンガポールの中高生が、数学をさらに深く学んで受ける試験。, basis: Syllabus 4049（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Additional Mathematics（Syllabus K341）に代わり、本文の内容は同じ。論題は K341 による。G3 Mathematics の内容を前提とする。論題と単元の対応は名称による, coverage: coverage-olevel-amath.yaml}
+  - {id: amc8, name: AMC 8（MAA）, kind: 大会, level: 中学, region: 米国, note: アメリカの中学 2 年までの生徒が、25 問を 40 分で解く数学の大会。, basis: MAA の AMC のページの topics の列挙による（検索エンジンの抜粋で取得し、文言は原文との照合が要る）。「これに限らない」の注つき。8 年生以下、25 問 40 分の選択式。後半の問題は初歩の代数（一次関数か二次関数、座標幾何）に触れることがある。論題と単元の対応は名称による, coverage: coverage-amc8.yaml}
+  - {id: kangaroo, name: Math Kangaroo, kind: 大会, level: 小学, region: 国際, note: 世界中の小中高生が、学年ごとの楽しい問題に挑む数学の大会。, basis: AKSF の学年帯ごとの指針（Math Kangaroo USA が掲載、2021-12）のうち、grades 5-6、7-8、9-10 の 3 本による。grades 1-2、3-4、11-12 は本文を読めなかった。ページは「試験で何が出るかの大まかな指針」とする。日本大会（算数オリンピック委員会）の範囲の文書は公開されていない。論題と単元の対応は名称による, coverage: coverage-kangaroo.yaml}
   - {id: spacex-propulsion, name: SpaceX のロケットエンジン設計者（推進エンジニア）, kind: 夢, level: 大学, region: 米国, note: ロケットのエンジンの中で、燃料の流れと熱と力を計算して、こわれずに強い推力が出る形をつくる仕事。, coverage: coverage-spacex-propulsion.yaml, beyond: 工学か物理の学士以上の学位、機械・流体の設計か解析か製作の経験 1 年ほど（学生チームやインターンで可）、CAD・FEA・CFD・熱流体解析・MATLAB・Python・SQL などの道具、手計算でモデルを確かめる習慣、製造や試験の現場の経験。望ましい条件に高い成績や競技会の入賞。}
   - {id: spacex-gnc, name: SpaceX の誘導・航法・制御エンジニア, kind: 夢, level: 大学, region: 米国, note: ロケットや衛星が自分の位置と向きを知って、行きたい所へ正しく進むように、計算の仕組みとプログラムをつくる仕事。, coverage: coverage-spacex-gnc.yaml, beyond: 物理か工学かコンピュータ科学などの学士以上の学位、制御・軌道力学・古典力学・モデル化とシミュレーションの経験、C++ か Python での実務の開発経験（1 年以上のことも。上級職は 5 年以上）、Git などの版管理、MATLAB など。}
   - {id: deepmind-rs, name: Google DeepMind の Research Scientist, kind: 夢, level: 大学院, region: 国際, note: 人のように学んで考える計算機の仕組みを研究して、新しいやり方を見つけて確かめる仕事。, coverage: coverage-deepmind-rs.yaml, beyond: 博士号（コンピュータ科学や機械学習など。学士と実務経験で応募できる職もある）、NeurIPS・ICML・ICLR などでの論文の実績、JAX・PyTorch・TensorFlow などの枠組みでの実装経験。数学の土台は求人に名指しされていない。}
@@ -702,11 +707,11 @@ units:
   - {id: K-064, title: 統計グラフィックスと可視化, stage: 7, region: kikai-gakushu, needs: [S-018], days: 10}
   - {id: K-065, title: スポーツの数学（成績の評価、最適な戦略、公平性）, stage: 7, region: kikai-gakushu, needs: [S-001, C-020], days: 10}
   - {id: K-079, title: 多分野の小さなチームによるゲーム開発（設計の反復と定期的なテスト）, stage: 7, region: graphics, needs: [K-012, K-013, K-014], days: 10}
-  - {id: K-095, title: 遺伝子・染色体・ゲノムの構造と機能, stage: 7, region: seibutsu-keisan, needs: [C-011, P-088], days: 10}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
-  - {id: K-096, title: 変異・組換え・選択、集団遺伝学、遺伝学的方法, stage: 7, region: seibutsu-keisan, needs: [K-095, S-001], days: 10}
-  - {id: K-099, title: 溶液中の高分子の構造と相互作用、自己集合、結合の協同性, stage: 7, region: seibutsu-keisan, needs: [D-018, P-004, P-012], days: 10}
-  - {id: K-100, title: 生物系の場・力・流れ（拡散と流束、電気準静的近似、ナビエ・ストークス流、界面動電現象）, stage: 7, region: seibutsu-keisan, needs: [P-034, D-045], days: 10}
-  - {id: K-101, title: 分子・細胞・組織の生体力学（スケーリング則、細胞の力学、生体膜、分子モーター）, stage: 7, region: seibutsu-keisan, needs: [D-045], days: 10}
+  - {id: B-001, title: 遺伝子・染色体・ゲノムの構造と機能, stage: 7, region: bunshi-saibo, needs: [C-011, P-088], days: 10}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
+  - {id: B-002, title: 変異・組換え・選択、集団遺伝学、遺伝学的方法, stage: 7, region: bunshi-saibo, needs: [B-001, S-001], days: 10}
+  - {id: B-003, title: 溶液中の高分子の構造と相互作用、自己集合、結合の協同性, stage: 7, region: seibutsu-butsuri, needs: [D-018, P-004, P-012], days: 10}
+  - {id: B-004, title: 生物系の場・力・流れ（拡散と流束、電気準静的近似、ナビエ・ストークス流、界面動電現象）, stage: 7, region: seibutsu-butsuri, needs: [P-034, D-045], days: 10}
+  - {id: B-005, title: 分子・細胞・組織の生体力学（スケーリング則、細胞の力学、生体膜、分子モーター）, stage: 7, region: seibutsu-butsuri, needs: [D-045], days: 10}
   - {id: K-105, title: 配列解析と配列アラインメント、クラスタリング、分類と予測, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
   - {id: K-118, title: 計算分子生物学とゲノミクス（配列データ、構造データ、遺伝的変異、生物ネットワーク）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
   - {id: K-119, title: 計算細胞生物学（個体群動態、生化学反応の速度、細胞の経路、神経細胞のモデル化）, stage: 7, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 10}
@@ -878,21 +883,21 @@ units:
   - {id: K-086, title: 視覚と知覚、操作の計画と制御、位置推定、ロボットのための機械学習, stage: 8, region: graphics, needs: [P-016, P-025, D-053], days: 12}
   - {id: K-087, title: 操作のための知覚、ロボットの運動学と軌道生成、衝突のない運動計画, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
   - {id: K-088, title: タスクと運動の計画、不確かさの下での計画、操作の動力学と制御, stage: 8, region: graphics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
-  - {id: K-092, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, region: seibutsu-keisan, needs: [P-088, P-046], days: 12}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
-  - {id: K-093, title: 酵素学の基礎と生化学反応の機構, stage: 8, region: seibutsu-keisan, needs: [K-092], days: 12}
-  - {id: K-094, title: 糖・脂肪・アミノ酸の代謝, stage: 8, region: seibutsu-keisan, needs: [K-093], days: 12}
-  - {id: K-097, title: 分子生物学（遺伝子制御、DNA 複製、遺伝的組換え、翻訳）, stage: 8, region: seibutsu-keisan, needs: [K-095, K-096, K-092, K-093, K-094], days: 12}
-  - {id: K-098, title: 細胞生物学（膜と細胞小器官、輸送とシグナル伝達、細胞骨格、細胞周期）, stage: 8, region: seibutsu-keisan, needs: [K-095, K-096, K-092, K-093, K-094], days: 12}
+  - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, region: bunshi-saibo, needs: [P-088, P-046], days: 12}  # 化学と生物の前提は地図にないので、決まるまで物理と確率の単元で代える
+  - {id: B-007, title: 酵素学の基礎と生化学反応の機構, stage: 8, region: bunshi-saibo, needs: [B-006], days: 12}
+  - {id: B-008, title: 糖・脂肪・アミノ酸の代謝, stage: 8, region: bunshi-saibo, needs: [B-007], days: 12}
+  - {id: B-009, title: 分子生物学（遺伝子制御、DNA 複製、遺伝的組換え、翻訳）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
+  - {id: B-010, title: 細胞生物学（膜と細胞小器官、輸送とシグナル伝達、細胞骨格、細胞周期）, stage: 8, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
   - {id: K-106, title: ゲノム（配列解析、遺伝子発見、RNA の折りたたみ、ゲノムの組み立て）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
   - {id: K-107, title: 遺伝子発現解析、制御モチーフ、生物ネットワーク, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
-  - {id: K-108, title: 進化（比較ゲノミクス、系統学、ゲノム重複）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
+  - {id: B-011, title: 進化（比較ゲノミクス、系統学、ゲノム重複）, stage: 8, region: bunshi-saibo, needs: [K-022, S-003], days: 12}
   - {id: K-109, title: 計算生物学の算法（動的計画法、ギブスサンプリング、EM、HMM、確率文脈自由文法）, stage: 8, region: seibutsu-keisan, needs: [K-022, S-003], days: 12}
   - {id: K-112, title: 生体分子と細胞の三次元構造と動態の計算, stage: 8, region: seibutsu-keisan, needs: [K-012, K-013, K-014], days: 12}
-  - {id: K-113, title: 次世代 DNA シーケンシングとそのデータ解析、RNA-seq, stage: 8, region: seibutsu-keisan, needs: [K-095, K-096, K-092, K-093, K-094], days: 12}
-  - {id: K-114, title: 現代の生物学の確率と統計（検定、多重検定、回帰、主成分分析）, stage: 8, region: seibutsu-keisan, needs: [K-095, K-096, K-092, K-093, K-094], days: 12}
-  - {id: K-115, title: 分子・細胞系の解析（分子モデリング、代謝と遺伝子制御のネットワーク、シグナル伝達）, stage: 8, region: seibutsu-keisan, needs: [K-015, D-045, P-046, K-099, K-092, K-093, K-094], days: 12}
-  - {id: K-116, title: 深層学習による生命科学, stage: 8, region: seibutsu-keisan, needs: [K-015, K-092, K-093, K-094], days: 12}
-  - {id: K-117, title: 分子・細胞生物学の機械学習（タンパク質構造予測、画像化）, stage: 8, region: seibutsu-keisan, needs: [K-012, K-013, K-014, K-046, K-092, K-093, K-094], days: 12}
+  - {id: K-113, title: 次世代 DNA シーケンシングとそのデータ解析、RNA-seq, stage: 8, region: seibutsu-keisan, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
+  - {id: K-114, title: 現代の生物学の確率と統計（検定、多重検定、回帰、主成分分析）, stage: 8, region: seibutsu-keisan, needs: [B-001, B-002, B-006, B-007, B-008], days: 12}
+  - {id: K-115, title: 分子・細胞系の解析（分子モデリング、代謝と遺伝子制御のネットワーク、シグナル伝達）, stage: 8, region: seibutsu-keisan, needs: [K-015, D-045, P-046, B-003, B-006, B-007, B-008], days: 12}
+  - {id: K-116, title: 深層学習による生命科学, stage: 8, region: seibutsu-keisan, needs: [K-015, B-006, B-007, B-008], days: 12}
+  - {id: K-117, title: 分子・細胞生物学の機械学習（タンパク質構造予測、画像化）, stage: 8, region: seibutsu-keisan, needs: [K-012, K-013, K-014, K-046, B-006, B-007, B-008], days: 12}
   - {id: P-017, title: 剛体の力学（慣性テンソルの対角化、オイラー方程式、オイラーのこまとラグランジュのこま、歳差と章動）, stage: 8, region: kaiseki-rikigaku, needs: [P-015, M-012], days: 12}
   - {id: P-020, title: 非線形力学とカオスの入口, stage: 8, region: kaiseki-rikigaku, needs: [P-019], days: 12}
   - {id: P-028, title: 光学（レーザー、ビーム光学、光共振器、コヒーレンスと干渉計、光学機器）, stage: 8, region: hado, needs: [P-035, P-024], days: 12}
@@ -1121,9 +1126,9 @@ units:
   - {id: K-089, title: 劣駆動系の非線形動力学、最適制御とロバスト制御、運動計画, stage: 9, region: graphics, needs: [D-045, M-007], days: 12}
   - {id: K-090, title: 移動ロボットの知覚・位置推定・SLAM、非線形系の制御、不確かさの下での推論, stage: 9, region: graphics, needs: [K-012, K-013, K-014, M-007, S-003], days: 12}
   - {id: K-091, title: 自律移動体の視覚航法（幾何制御、視覚・慣性航法、SLAM）, stage: 9, region: graphics, needs: [E-055, E-056], days: 12}
-  - {id: K-102, title: 構造生物学の手法（X 線結晶構造解析、電子顕微鏡、光学顕微鏡）, stage: 9, region: seibutsu-keisan, needs: [K-092, K-093, K-094, P-046], days: 12}
-  - {id: K-103, title: 生体高分子の熱力学と統計力学（折りたたみ、結合、アロステリー、酵素反応の速度論）, stage: 9, region: seibutsu-keisan, needs: [K-092, K-093, K-094, P-046], days: 12}
-  - {id: K-104, title: タンパク質の折りたたみ・誤った折りたたみ・凝集と品質管理, stage: 9, region: seibutsu-keisan, needs: [K-092, K-093, K-094], days: 12}
+  - {id: B-012, title: 構造生物学の手法（X 線結晶構造解析、電子顕微鏡、光学顕微鏡）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
+  - {id: B-013, title: 生体高分子の熱力学と統計力学（折りたたみ、結合、アロステリー、酵素反応の速度論）, stage: 9, region: seibutsu-butsuri, needs: [B-006, B-007, B-008, P-046], days: 12}
+  - {id: B-014, title: タンパク質の折りたたみ・誤った折りたたみ・凝集と品質管理, stage: 9, region: bunshi-saibo, needs: [B-006, B-007, B-008], days: 12}
   - {id: K-110, title: 生物配列と構造のペアワイズ・多重アラインメント、系統樹、隠れマルコフモデル, stage: 9, region: seibutsu-keisan, needs: [K-016], days: 12}
   - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, region: seibutsu-keisan, needs: [K-016], days: 12}
   - {id: P-101, title: 物性の場の理論・多体理論の入口（多体の定式化とファインマン図、乱雑位相近似、誘電関数と線形応答、経路積分と平均場、ボソン化、非線形シグマ模型、量子ゲージ理論）, stage: 9, region: bussei, needs: [P-098, P-055, P-097], days: 12}

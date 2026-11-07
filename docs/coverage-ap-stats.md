@@ -1,7 +1,9 @@
 # 網羅表：AP Statistics
 
 この頁は `tools/roadmap.py build` が `coverage-ap-stats.yaml` から作ります。手で直さないでください。
-College Board の AP Statistics Course and Exam Description（Effective Fall 2026、5 単位に改訂、初回の試験は 2027 年 5 月）による。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+AP Statisticsに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：College Board の AP Statistics Course and Exam Description（Effective Fall 2026、5 単位に改訂、初回の試験は 2027 年 5 月）による。論題と単元の対応は名称による
 
 論題 20 のうち、単元が受け持つもの 20、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

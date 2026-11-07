@@ -1,7 +1,9 @@
 # 網羅表：ISEB Common Entrance 11+（数学）
 
 この頁は `tools/roadmap.py build` が `coverage-ce-11plus.yaml` から作ります。手で直さないでください。
-ISEB の Mathematics CE at 11+ & 13+ and CASE Specification（2020 年 9 月版、2021 年 9 月から教える、2022 年 11 月から実施）による。Year 6（10〜11 歳）、60 分、電卓なし。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+ISEB Common Entrance 11+（数学）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：ISEB の Mathematics CE at 11+ & 13+ and CASE Specification（2020 年 9 月版、2021 年 9 月から教える、2022 年 11 月から実施）による。Year 6（10〜11 歳）、60 分、電卓なし。論題と単元の対応は名称による
 
 論題 12 のうち、単元が受け持つもの 12、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

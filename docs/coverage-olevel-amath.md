@@ -1,7 +1,9 @@
 # 網羅表：GCE O-Level Additional Mathematics（シンガポール）
 
 この頁は `tools/roadmap.py build` が `coverage-olevel-amath.yaml` から作ります。手で直さないでください。
-Syllabus 4049（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Additional Mathematics（Syllabus K341）に代わり、本文の内容は同じ。論題は K341 による。G3 Mathematics の内容を前提とする。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+GCE O-Level Additional Mathematics（シンガポール）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：Syllabus 4049（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Additional Mathematics（Syllabus K341）に代わり、本文の内容は同じ。論題は K341 による。G3 Mathematics の内容を前提とする。論題と単元の対応は名称による
 
 論題 16 のうち、単元が受け持つもの 16、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

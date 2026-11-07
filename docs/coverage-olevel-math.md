@@ -1,7 +1,9 @@
 # 網羅表：GCE O-Level Mathematics（シンガポール）
 
 この頁は `tools/roadmap.py build` が `coverage-olevel-math.yaml` から作ります。手で直さないでください。
-Syllabus 4052（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Mathematics（Syllabus K310）に代わり、SEAB の文書の本文は内容が同じ（題名と著作権年の違いだけ）。論題は K310 による。Secondary 4（16 歳前後）。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+GCE O-Level Mathematics（シンガポール）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：Syllabus 4052（2026 年まで）。2027 年から Singapore-Cambridge SEC の G3 Mathematics（Syllabus K310）に代わり、SEAB の文書の本文は内容が同じ（題名と著作権年の違いだけ）。論題は K310 による。Secondary 4（16 歳前後）。論題と単元の対応は名称による
 
 論題 27 のうち、単元が受け持つもの 27、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

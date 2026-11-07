@@ -274,6 +274,8 @@
     ['univ', '大学の数学', rg => !SCHOOL_REGIONS.has(rg.id) && ('NACGLDMRTS'.includes(rg.lane) || rg.id === 'suchi')],
     ['phys', '物理', rg => rg.lane === 'P'],
     ['eng', '工学と計算', rg => rg.lane === 'E' || (rg.lane === 'K' && rg.id !== 'suchi')],
+    ['life', '化学と生物', rg => 'HB'.includes(rg.lane)],
+    ['fin', '経済と金融', rg => rg.lane === 'F'],
   ];
   function drawMap() {
     const host = $('#map');
@@ -527,7 +529,8 @@
     <section class="unit-head goal-head">
       <div class="eyebrow">目標・${esc(g.kind)}・${esc(g.level)}・${esc(g.region)}</div>
       <h1>${esc(g.name)}</h1>
-      <div class="row">${esc(g.note)}。単元を組み合わせた結果として届く場所です。</div>
+      <div class="row">${esc(g.note.replace(/。$/, ''))}。単元を組み合わせた結果として届く場所です。</div>
+      ${g.basis ? `<div class="row muted">範囲の根拠：${esc(g.basis)}</div>` : ''}
       ${g.beyond ? `<div class="row muted">知識のほかに要ること：${esc(g.beyond)}（地図が受け持つのは知識の土台だけです）</div>` : ''}
       <div class="gauge">
         <div><span class="k">届いた論題</span><b>${st.got} / ${st.topics}</b></div>

@@ -1,7 +1,9 @@
 # 網羅表：Indian Institutes of Technology（JEE Advanced）
 
 この頁は `tools/roadmap.py build` が `coverage-jee-advanced.yaml` から作ります。手で直さないでください。
-JEE (Advanced) 2026 の案内書の付録 I（数学の範囲）による。物理の範囲にある力学は含めない。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+Indian Institutes of Technology（JEE Advanced）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：JEE (Advanced) 2026 の案内書の付録 I（数学の範囲）による。物理の範囲にある力学は含めない。論題と単元の対応は名称による
 
 論題 59 のうち、単元が受け持つもの 59、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

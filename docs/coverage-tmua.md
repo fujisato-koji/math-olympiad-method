@@ -1,7 +1,9 @@
 # 網羅表：University of Oxford ほか（TMUA）
 
 この頁は `tools/roadmap.py build` が `coverage-tmua.yaml` から作ります。手で直さないでください。
-TMUA の Content Specification（2026 年 10 月・2027 年 1 月の試験）による。Section 1 は AS level の純粋数学と GCSE 上級、Section 2 は論理と証明。どの大学・学科が課すかは調べていない。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+University of Oxford ほか（TMUA）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：TMUA の Content Specification（2026 年 10 月・2027 年 1 月の試験）による。Section 1 は AS level の純粋数学と GCSE 上級、Section 2 は論理と証明。どの大学・学科が課すかは調べていない。論題と単元の対応は名称による
 
 論題 25 のうち、単元が受け持つもの 24、すべての単元に通る軸が受け持つもの 1、入れないもの 0。
 

@@ -1,7 +1,9 @@
 # 網羅表：ISEB Common Entrance 13+（数学）
 
 この頁は `tools/roadmap.py build` が `coverage-ce-13plus.yaml` から作ります。手で直さないでください。
-ISEB の Mathematics CE at 11+ & 13+ and CASE Specification による。Year 8（12〜13 歳）、Core と Foundation の論題表に、任意の Additional（と奨学金試験 CASE）の論題を加えた。Core は電卓なし 60 分と電卓あり 60 分、暗算 10 分。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+ISEB Common Entrance 13+（数学）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：ISEB の Mathematics CE at 11+ & 13+ and CASE Specification による。Year 8（12〜13 歳）、Core と Foundation の論題表に、任意の Additional（と奨学金試験 CASE）の論題を加えた。Core は電卓なし 60 分と電卓あり 60 分、暗算 10 分。論題と単元の対応は名称による
 
 論題 39 のうち、単元が受け持つもの 38、すべての単元に通る軸が受け持つもの 0、入れないもの 1。
 

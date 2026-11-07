@@ -1,7 +1,9 @@
 # 網羅表：A level Mathematics（Pearson Edexcel）
 
 この頁は `tools/roadmap.py build` が `coverage-alevel-maths.yaml` から作ります。手で直さないでください。
-Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0) の仕様書（Issue 4、2020 年 2 月）による。純粋数学、統計、力学。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+A level Mathematics（Pearson Edexcel）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：Pearson Edexcel Level 3 Advanced GCE in Mathematics (9MA0) の仕様書（Issue 4、2020 年 2 月）による。純粋数学、統計、力学。論題と単元の対応は名称による
 
 論題 32 のうち、単元が受け持つもの 32、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

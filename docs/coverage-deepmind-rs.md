@@ -1,7 +1,7 @@
 # 網羅表：Google DeepMind の Research Scientist
 
 この頁は `tools/roadmap.py build` が `coverage-deepmind-rs.yaml` から作ります。手で直さないでください。
-人のように学んで考える計算機の仕組みを研究して、新しいやり方を見つけて確かめる仕事。に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+Google DeepMind の Research Scientistに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
 
 論題 20 のうち、単元が受け持つもの 10、すべての単元に通る軸が受け持つもの 0、入れないもの 10。
 

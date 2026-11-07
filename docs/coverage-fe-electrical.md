@@ -1,7 +1,7 @@
 # 網羅表：FE Electrical and Computer（NCEES）
 
 この頁は `tools/roadmap.py build` が `coverage-fe-electrical.yaml` から作ります。手で直さないでください。
-電気や電子や計算機の技術者として、回路と信号と計算の基本を使って問題が解けるかをためす、アメリカの最初の試験。に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+FE Electrical and Computer（NCEES）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
 
 論題 17 のうち、単元が受け持つもの 14、すべての単元に通る軸が受け持つもの 0、入れないもの 3。
 

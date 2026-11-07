@@ -1,7 +1,9 @@
 # 網羅表：GCSE Mathematics Higher（Pearson Edexcel）
 
 この頁は `tools/roadmap.py build` が `coverage-gcse-higher.yaml` から作ります。手で直さないでください。
-Pearson Edexcel GCSE (9-1) Mathematics (1MA1) Specification（Issue 2、2015 年 6 月）の Higher tier。Year 11（15〜16 歳）、3 冊子各 1 時間 30 分。AQA 版は取得していない。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+GCSE Mathematics Higher（Pearson Edexcel）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：Pearson Edexcel GCSE (9-1) Mathematics (1MA1) Specification（Issue 2、2015 年 6 月）の Higher tier。Year 11（15〜16 歳）、3 冊子各 1 時間 30 分。AQA 版は取得していない。論題と単元の対応は名称による
 
 論題 54 のうち、単元が受け持つもの 53、すべての単元に通る軸が受け持つもの 0、入れないもの 1。
 

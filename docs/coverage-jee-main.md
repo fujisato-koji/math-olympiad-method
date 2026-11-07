@@ -1,7 +1,9 @@
 # 網羅表：National Testing Agency（JEE Main）
 
 この頁は `tools/roadmap.py build` が `coverage-jee-main.yaml` から作ります。手で直さないでください。
-JEE (Main) 2027 の数学（Paper 1、B.E./B.Tech.）のシラバスによる。2026 年 10 月 24 日付で掲示。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+National Testing Agency（JEE Main）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：JEE (Main) 2027 の数学（Paper 1、B.E./B.Tech.）のシラバスによる。2026 年 10 月 24 日付で掲示。論題と単元の対応は名称による
 
 論題 20 のうち、単元が受け持つもの 20、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 

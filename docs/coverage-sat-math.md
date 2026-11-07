@@ -1,7 +1,9 @@
 # 網羅表：SAT Math（College Board）
 
 この頁は `tools/roadmap.py build` が `coverage-sat-math.yaml` から作ります。手で直さないでください。
-SAT Suite の Math Specifications と Assessment Framework（version 4、2026 年 9 月）による。代数、発展的な数学、問題解決とデータ分析、幾何と三角法の 4 分野。論題と単元の対応は名称によるに要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+SAT Math（College Board）に要る論題ごとに、受け持つ単元か、入れない理由を書いています（R-09）。
+
+範囲の根拠：SAT Suite の Math Specifications と Assessment Framework（version 4、2026 年 9 月）による。代数、発展的な数学、問題解決とデータ分析、幾何と三角法の 4 分野。論題と単元の対応は名称による
 
 論題 19 のうち、単元が受け持つもの 19、すべての単元に通る軸が受け持つもの 0、入れないもの 0。
 
