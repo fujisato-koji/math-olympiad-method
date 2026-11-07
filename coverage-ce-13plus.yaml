@@ -1,9 +1,13 @@
-# 網羅表：ISEB Common Entrance 13+（数学）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：ISEB Common Entrance 13+（数学と理科）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
 sources:
   SC22:
     title: 'ISEB Mathematics: CE at 11+ & 13+, Common Academic Scholarship at 13+ Specification'
     url: https://www.iseb.co.uk/wp-content/uploads/Syllabus-CE-CASE-Mathematics-Helvetica-_V7.1-2.pdf
     date: '2026-11-07'
+  WE15:
+    title: 'ISEB Science: CE at 11+ & 13+, Common Academic Scholarship at 13+ Specification（September 2020、V4.2）'
+    url: https://www.iseb.co.uk/wp-content/uploads/Syllabus-CE-CASE-Science-Helvetica_V4.2-2.pdf
+    date: '2026-11-08'
 items:
 - id: T-01
   field: 数と計算
@@ -279,3 +283,291 @@ items:
   - N-018
   - N-061
   - N-070
+- id: BI-01
+  field: 生物
+  topic: 生物のからだのつくり（細胞・組織・器官・器官系、7 つの生命活動）
+  sources:
+  - WE15
+  units:
+  - B-022
+  - B-020
+- id: BI-02
+  field: 生物
+  topic: 植物の細胞と動物の細胞の比べ方（顕微鏡と倍率）
+  sources:
+  - WE15
+  units:
+  - B-022
+- id: BI-03
+  field: 生物
+  topic: 食物の栄養素（はたらきと検出）
+  sources:
+  - WE15
+  units:
+  - B-020
+  - I-009
+- id: BI-04
+  field: 生物
+  topic: 健康な食事（栄養表示、食事のかたよりと健康）
+  sources:
+  - WE15
+  units:
+  - I-009
+- id: BI-05
+  field: 生物
+  topic: 人の呼吸運動（肺、横隔膜と肋骨、ガス交換）
+  sources:
+  - WE15
+  units:
+  - B-020
+- id: BI-06
+  field: 生物
+  topic: 人の生殖（生殖器、受精、胎児の発達）
+  sources:
+  - WE15
+  units:
+  - B-023
+- id: BI-07
+  field: 生物
+  topic: 光合成
+  sources:
+  - WE15
+  units:
+  - B-019
+- id: BI-08
+  field: 生物
+  topic: 呼吸（好気呼吸と嫌気呼吸、酵母の発酵）
+  sources:
+  - WE15
+  units:
+  - B-083
+- id: BI-09
+  field: 生物
+  topic: 花の咲く植物の生殖（風媒花と虫媒花、受粉と受精、種子の散布）
+  sources:
+  - WE15
+  units:
+  - B-016
+  - B-026
+- id: BI-10
+  field: 生物
+  topic: 薬物と人の健康
+  sources:
+  - WE15
+  units:
+  - I-010
+- id: BI-11
+  field: 生物
+  topic: 生態系の中の生物どうしのつながり（生産者と消費者、食物網、調べ方）
+  sources:
+  - WE15
+  units:
+  - B-021
+- id: BI-12
+  field: 生物
+  topic: 生物の分類（脊椎動物と無脊椎動物の群、植物の群、つくりとはたらき）
+  sources:
+  - WE15
+  units:
+  - B-018
+  - B-025
+- id: BI-13
+  field: 生物
+  topic: 生物の変異（連続と不連続の変異、遺伝と環境）
+  sources:
+  - WE15
+  units:
+  - B-073
+  - B-024
+- id: CH-01
+  field: 化学
+  topic: 物質の状態と粒子のモデル（融解・沸騰・昇華・拡散）
+  sources:
+  - WE15
+  units:
+  - H-003
+  - H-060
+- id: CH-02
+  field: 化学
+  topic: 原子と元素（元素記号、金属と非金属）
+  sources:
+  - WE15
+  units:
+  - H-008
+- id: CH-03
+  field: 化学
+  topic: 化合物と分子（化学式、元素から化合物をつくる）
+  sources:
+  - WE15
+  units:
+  - H-008
+  - H-010
+- id: CH-04
+  field: 化学
+  topic: 純物質（融点と沸点による純度の判定）
+  sources:
+  - WE15
+  units:
+  - H-006
+- id: CH-05
+  field: 化学
+  topic: 混合物と溶液（溶解度、空気の成分）
+  sources:
+  - WE15
+  units:
+  - H-006
+  - H-004
+- id: CH-06
+  field: 化学
+  topic: 混合物の分離（ろ過、蒸発、蒸留、クロマトグラフィー）
+  sources:
+  - WE15
+  units:
+  - H-063
+  - H-006
+- id: CH-07
+  field: 化学
+  topic: 燃焼（元素の燃焼と質量の変化）
+  sources:
+  - WE15
+  units:
+  - H-004
+  - H-009
+- id: CH-08
+  field: 化学
+  topic: 燃料と二酸化炭素の発生
+  sources:
+  - WE15
+  units:
+  - H-004
+  - H-080
+- id: CH-09
+  field: 化学
+  topic: 金属の酸化（空気・水・酸との反応、反応のしやすさの順、さび）
+  sources:
+  - WE15
+  units:
+  - H-004
+  - H-017
+  - H-062
+- id: CH-10
+  field: 化学
+  topic: 熱分解
+  sources:
+  - WE15
+  units:
+  - H-008
+  - H-062
+- id: CH-11
+  field: 化学
+  topic: 酸とアルカリ（pH、指示薬）
+  sources:
+  - WE15
+  units:
+  - H-005
+- id: CH-12
+  field: 化学
+  topic: 中和（酸と金属・金属の酸化物・炭酸塩の反応、塩）
+  sources:
+  - WE15
+  units:
+  - H-005
+  - H-010
+- id: PY-01
+  field: 物理
+  topic: エネルギー資源（化石燃料、再生可能エネルギー、発電）
+  sources:
+  - WE15
+  units:
+  - P-197
+- id: PY-02
+  field: 物理
+  topic: エネルギーの移り変わりと保存
+  sources:
+  - WE15
+  units:
+  - P-197
+- id: PY-03
+  field: 物理
+  topic: 速さと運動（速さ・距離・時間、距離と時間のグラフ）
+  sources:
+  - WE15
+  units:
+  - A-007
+  - P-197
+- id: PY-04
+  field: 物理
+  topic: 力の測定（ばねの伸び、重さと質量）
+  sources:
+  - WE15
+  units:
+  - P-186
+- id: PY-05
+  field: 物理
+  topic: 力のはたらき（つり合う力とつり合わない力、摩擦と空気の抵抗、停止距離）
+  sources:
+  - WE15
+  units:
+  - P-197
+  - P-186
+- id: PY-06
+  field: 物理
+  topic: 圧力（力と面積の関係）
+  sources:
+  - WE15
+  units:
+  - P-197
+- id: PY-07
+  field: 物理
+  topic: 密度
+  sources:
+  - WE15
+  units:
+  - H-007
+- id: PY-08
+  field: 物理
+  topic: 音（振動、音の速さ、聞こえる範囲）
+  sources:
+  - WE15
+  units:
+  - P-180
+- id: PY-09
+  field: 物理
+  topic: 光（真空を伝わる、反射の法則、屈折、分散と色）
+  sources:
+  - WE15
+  units:
+  - P-178
+  - P-179
+- id: PY-10
+  field: 物理
+  topic: 回路（スイッチ、直列と並列、回路図）
+  sources:
+  - WE15
+  units:
+  - P-183
+- id: PY-11
+  field: 物理
+  topic: 電流（電流計、抵抗、直列と並列での電流）
+  sources:
+  - WE15
+  units:
+  - P-183
+  - P-029
+- id: PY-12
+  field: 物理
+  topic: 磁場と電磁石
+  sources:
+  - WE15
+  units:
+  - P-181
+  - P-183
+- id: PY-13
+  field: 物理
+  topic: 宇宙（昼夜と年周の見かけの運動、季節、月の満ち欠け、日食と月食、太陽系、人工衛星）
+  sources:
+  - WE15
+  units:
+  - W-073
+  - W-045
+  - W-046

@@ -1,4 +1,8 @@
-# 網羅表：ЕГЭ（数学 профильный уровень）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：ЕГЭ（数学 профильный уровень と、物理・化学・生物・情報）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
+choices:
+  predmet:
+    label: 大学が求める科目（物理・化学・生物・情報から 1 つ。多くの理工系は物理か情報）
+    pick: 16
 sources:
   EX22:
     title: Кодификатор проверяемых требований … и элементов содержания для проведения ЕГЭ по математике 2027（ФИПИ、проект）
@@ -12,6 +16,22 @@ sources:
     title: Планируемые изменения в КИМ ЕГЭ 2027 года（ФИПИ）
     url: https://doc.fipi.ru/ege/demoversii-specifikacii-kodifikatory/2027/Plan_izmeneniya_KIM_EGE_2027.pdf
     date: '2026-11-07'
+  WE09:
+    title: Кодификатор проверяемых требований … и элементов содержания для проведения ЕГЭ по физике 2027（ФИПИ、проект）
+    url: https://doc.fipi.ru/ege/demoversii-specifikacii-kodifikatory/2027/fi_11_2027.zip
+    date: '2026-11-08'
+  WE10:
+    title: Кодификатор … ЕГЭ по химии 2027（ФИПИ、проект）
+    url: https://doc.fipi.ru/ege/demoversii-specifikacii-kodifikatory/2027/hi_11_2027.zip
+    date: '2026-11-08'
+  WE11:
+    title: Кодификатор … ЕГЭ по биологии 2027（ФИПИ、проект）
+    url: https://doc.fipi.ru/ege/demoversii-specifikacii-kodifikatory/2027/bi_11_2027.zip
+    date: '2026-11-08'
+  WE12:
+    title: Кодификатор … ЕГЭ по информатике 2027（ФИПИ、проект）
+    url: https://doc.fipi.ru/ege/demoversii-specifikacii-kodifikatory/2027/inf_11_2027.zip
+    date: '2026-11-08'
 items:
 - id: T-01
   field: 数と式
@@ -334,3 +354,850 @@ items:
   topic: 背理法
   units:
   - L-011
+- id: PH-01
+  field: 物理
+  topic: 運動学（等加速度運動、放物運動、円運動）
+  sources:
+  - WE09
+  units:
+  - P-001
+  - P-005
+  - P-007
+  choice: predmet
+- id: PH-02
+  field: 物理
+  topic: 力学（ニュートンの法則、弾性力と摩擦力、万有引力）
+  sources:
+  - WE09
+  units:
+  - P-002
+  - P-003
+  - P-009
+  choice: predmet
+- id: PH-03
+  field: 物理
+  topic: 静力学（力のモーメント、重心、液体と気体の圧力、パスカルとアルキメデスの原理）
+  sources:
+  - WE09
+  units:
+  - P-005
+  - P-013
+  choice: predmet
+- id: PH-04
+  field: 物理
+  topic: 力学の保存則（運動量、仕事とエネルギー）
+  sources:
+  - WE09
+  units:
+  - P-004
+  - P-006
+  choice: predmet
+- id: PH-05
+  field: 物理
+  topic: 力学的な振動と波（単振動、振り子、波、音）
+  sources:
+  - WE09
+  units:
+  - P-007
+  - P-021
+  - P-022
+  choice: predmet
+- id: PH-06
+  field: 物理
+  topic: 分子物理（分子運動論、理想気体、飽和蒸気と湿度、状態変化）
+  sources:
+  - WE09
+  units:
+  - P-043
+  - P-042
+  choice: predmet
+- id: PH-07
+  field: 物理
+  topic: 熱力学（内部エネルギー、熱量、第一法則、熱機関と効率）
+  sources:
+  - WE09
+  units:
+  - P-044
+  - P-045
+  choice: predmet
+- id: PH-08
+  field: 物理
+  topic: 電場（クーロンの法則、電場と電位、導体と誘電体、コンデンサー）
+  sources:
+  - WE09
+  units:
+  - P-030
+  choice: predmet
+- id: PH-09
+  field: 物理
+  topic: 直流の法則（オームの法則、回路、仕事と電力）
+  sources:
+  - WE09
+  units:
+  - P-029
+  choice: predmet
+- id: PH-10
+  field: 物理
+  topic: 磁場（電流の磁場、アンペール力とローレンツ力）
+  sources:
+  - WE09
+  units:
+  - P-032
+  choice: predmet
+- id: PH-11
+  field: 物理
+  topic: 電磁誘導（磁束、ファラデーとレンツの法則、自己誘導）
+  sources:
+  - WE09
+  units:
+  - P-033
+  choice: predmet
+- id: PH-12
+  field: 物理
+  topic: 電磁振動と電磁波（LC 回路、交流、変圧器、電磁波）
+  sources:
+  - WE09
+  units:
+  - P-198
+  - P-033
+  choice: predmet
+- id: PH-13
+  field: 物理
+  topic: 光学（反射と屈折、全反射、レンズ、干渉・回折・分散）
+  sources:
+  - WE09
+  units:
+  - P-023
+  - P-024
+  choice: predmet
+- id: PH-14
+  field: 物理
+  topic: 粒子と波の二重性（光子、光電効果）
+  sources:
+  - WE09
+  units:
+  - P-069
+  choice: predmet
+- id: PH-15
+  field: 物理
+  topic: 原子の物理（ボーアの模型、スペクトル）
+  sources:
+  - WE09
+  units:
+  - P-088
+  choice: predmet
+- id: PH-16
+  field: 物理
+  topic: 原子核の物理（核の構成、放射性崩壊、核反応と結合エネルギー）
+  sources:
+  - WE09
+  units:
+  - P-104
+  choice: predmet
+- id: CH-01
+  field: 化学
+  topic: 原子の構造と電子配置（s・p・d 軌道）
+  sources:
+  - WE10
+  units:
+  - H-011
+  - H-071
+  choice: predmet
+- id: CH-02
+  field: 化学
+  topic: 周期律と周期表
+  sources:
+  - WE10
+  units:
+  - H-012
+  choice: predmet
+- id: CH-03
+  field: 化学
+  topic: 原子価、電気陰性度、酸化数
+  sources:
+  - WE10
+  units:
+  - H-012
+  - H-017
+  choice: predmet
+- id: CH-04
+  field: 化学
+  topic: 化学結合の種類、分子間の相互作用、結晶格子
+  sources:
+  - WE10
+  units:
+  - H-014
+  - H-018
+  - H-019
+  choice: predmet
+- id: CH-05
+  field: 化学
+  topic: 化学反応の分類、質量保存の法則
+  sources:
+  - WE10
+  units:
+  - H-009
+  - H-010
+  choice: predmet
+- id: CH-06
+  field: 化学
+  topic: 反応の速さとそれを決めるもの
+  sources:
+  - WE10
+  units:
+  - H-023
+  choice: predmet
+- id: CH-07
+  field: 化学
+  topic: 反応熱、熱化学方程式
+  sources:
+  - WE10
+  units:
+  - H-022
+  choice: predmet
+- id: CH-08
+  field: 化学
+  topic: 可逆反応と化学平衡、ルシャトリエの原理
+  sources:
+  - WE10
+  units:
+  - H-024
+  choice: predmet
+- id: CH-09
+  field: 化学
+  topic: 電離、イオン交換反応、塩の加水分解と pH
+  sources:
+  - WE10
+  units:
+  - H-013
+  - H-025
+  - H-026
+  choice: predmet
+- id: CH-10
+  field: 化学
+  topic: 溶液の濃度（質量分率、モル濃度）と溶解度
+  sources:
+  - WE10
+  units:
+  - H-006
+  - H-015
+  choice: predmet
+- id: CH-11
+  field: 化学
+  topic: 酸化還元反応と電子の収支
+  sources:
+  - WE10
+  units:
+  - H-017
+  choice: predmet
+- id: CH-12
+  field: 化学
+  topic: 塩の水溶液と融解塩の電気分解
+  sources:
+  - WE10
+  units:
+  - H-027
+  choice: predmet
+- id: CH-13
+  field: 化学
+  topic: 無機物質の分類と命名
+  sources:
+  - WE10
+  units:
+  - H-028
+  choice: predmet
+- id: CH-14
+  field: 化学
+  topic: 主な金属とその化合物（Na、K、Ca、Mg、Al、Zn、Cr、Fe、Cu）と金属の製法
+  sources:
+  - WE10
+  units:
+  - H-028
+  - H-029
+  - H-030
+  choice: predmet
+- id: CH-15
+  field: 化学
+  topic: 主な非金属とその化合物（ハロゲン、硫黄、窒素、リン、炭素、ケイ素）
+  sources:
+  - WE10
+  units:
+  - H-028
+  choice: predmet
+- id: CH-16
+  field: 化学
+  topic: 無機物質の相互の変換と定性反応
+  sources:
+  - WE10
+  units:
+  - H-028
+  - H-029
+  - H-031
+  choice: predmet
+- id: CH-17
+  field: 化学
+  topic: 有機化合物の構造の理論、官能基、命名、反応の機構（ラジカルとイオン、求核剤と求電子剤、マルコフニコフ則とザイツェフ則）
+  sources:
+  - WE10
+  units:
+  - H-032
+  - H-039
+  choice: predmet
+- id: CH-18
+  field: 化学
+  topic: 炭化水素（アルカン、シクロアルカン、アルケン、アルカジエン、アルキン、アレーン）
+  sources:
+  - WE10
+  units:
+  - H-033
+  - H-034
+  choice: predmet
+- id: CH-19
+  field: 化学
+  topic: 酸素を含む有機化合物（アルコール、フェノール、アルデヒド、カルボン酸、エステルと油脂）
+  sources:
+  - WE10
+  units:
+  - H-033
+  - H-034
+  choice: predmet
+- id: CH-20
+  field: 化学
+  topic: 糖（グルコースの反応、デンプンとセルロース）
+  sources:
+  - WE10
+  units:
+  - H-044
+  choice: predmet
+- id: CH-21
+  field: 化学
+  topic: アミン、アミノ酸とタンパク質
+  sources:
+  - WE10
+  units:
+  - H-034
+  - H-044
+  choice: predmet
+- id: CH-22
+  field: 化学
+  topic: 高分子の構造と合成
+  sources:
+  - WE10
+  units:
+  - H-035
+  choice: predmet
+- id: CH-23
+  field: 化学
+  topic: 有機化合物の識別と相互の変換
+  sources:
+  - WE10
+  units:
+  - H-033
+  - H-034
+  - H-031
+  choice: predmet
+- id: CH-24
+  field: 化学
+  topic: 暮らし・健康・環境と化学
+  sources:
+  - WE10
+  units:
+  - H-070
+  - H-043
+  - H-080
+  choice: predmet
+- id: CH-25
+  field: 化学
+  topic: 工業的な製法（アンモニア、硫酸、金属の製錬）
+  sources:
+  - WE10
+  units:
+  - H-030
+  choice: predmet
+- id: CH-26
+  field: 化学
+  topic: 反応式による計算（質量と気体の体積、反応熱、過不足、収率、溶液）
+  sources:
+  - WE10
+  units:
+  - H-016
+  - H-020
+  - H-022
+  choice: predmet
+- id: CH-27
+  field: 化学
+  topic: 濃度と溶解度の計算、有機化合物の分子式の決定
+  sources:
+  - WE10
+  units:
+  - H-015
+  - H-032
+  choice: predmet
+- id: BI-01
+  field: 生物
+  topic: 科学としての生物学（生命の性質、研究の方法）
+  sources:
+  - WE11
+  units:
+  - B-022
+  - S-031
+  choice: predmet
+- id: BI-02
+  field: 生物
+  topic: 細胞と細胞の化学組成
+  sources:
+  - WE11
+  units:
+  - B-022
+  - B-028
+  choice: predmet
+- id: BI-03
+  field: 生物
+  topic: 真核細胞と原核細胞、細胞小器官
+  sources:
+  - WE11
+  units:
+  - B-022
+  - B-025
+  choice: predmet
+- id: BI-04
+  field: 生物
+  topic: 代謝（同化と異化、光合成と化学合成、細胞呼吸）
+  sources:
+  - WE11
+  units:
+  - B-029
+  - B-030
+  choice: predmet
+- id: BI-05
+  field: 生物
+  topic: 鋳型による合成（複製、転写、翻訳、遺伝暗号）
+  sources:
+  - WE11
+  units:
+  - B-032
+  choice: predmet
+- id: BI-06
+  field: 生物
+  topic: 細胞周期、有糸分裂と減数分裂
+  sources:
+  - WE11
+  units:
+  - B-023
+  choice: predmet
+- id: BI-07
+  field: 生物
+  topic: 単細胞・群体・多細胞の生物、生殖と個体発生
+  sources:
+  - WE11
+  units:
+  - B-023
+  - B-046
+  choice: predmet
+- id: BI-08
+  field: 生物
+  topic: 遺伝学の基本とメンデルの法則、連鎖と伴性遺伝
+  sources:
+  - WE11
+  units:
+  - B-024
+  - B-045
+  choice: predmet
+- id: BI-09
+  field: 生物
+  topic: 変異（環境による変異、突然変異、組合せによる変異）
+  sources:
+  - WE11
+  units:
+  - B-032
+  - B-045
+  choice: predmet
+- id: BI-10
+  field: 生物
+  topic: 人の遺伝学（核型、ゲノム計画、研究の方法）
+  sources:
+  - WE11
+  units:
+  - B-045
+  choice: predmet
+- id: BI-11
+  field: 生物
+  topic: 品種改良と家畜化
+  sources:
+  - WE11
+  units:
+  - B-045
+  choice: predmet
+- id: BI-12
+  field: 生物
+  topic: バイオテクノロジー（細胞と組織の培養、遺伝子工学、クローン）
+  sources:
+  - WE11
+  units:
+  - B-033
+  - B-080
+  choice: predmet
+- id: BI-13
+  field: 生物
+  topic: 生物の分類、ウイルス・細菌・菌類
+  sources:
+  - WE11
+  units:
+  - B-025
+  - B-043
+  choice: predmet
+- id: BI-14
+  field: 生物
+  topic: 植物（組織、器官とそのはたらき、植物の群）
+  sources:
+  - WE11
+  units:
+  - B-026
+  - B-038
+  - B-016
+  choice: predmet
+- id: BI-15
+  field: 生物
+  topic: 動物（組織、器官系とそのはたらき、動物の群）
+  sources:
+  - WE11
+  units:
+  - B-025
+  - B-036
+  choice: predmet
+- id: BI-16
+  field: 生物
+  topic: 人の器官系、神経系と反射、感覚器
+  sources:
+  - WE11
+  units:
+  - B-020
+  - B-034
+  - B-035
+  choice: predmet
+- id: BI-17
+  field: 生物
+  topic: 免疫
+  sources:
+  - WE11
+  units:
+  - B-037
+  choice: predmet
+- id: BI-18
+  field: 生物
+  topic: 循環・呼吸・消化
+  sources:
+  - WE11
+  units:
+  - B-036
+  - B-020
+  choice: predmet
+- id: BI-19
+  field: 生物
+  topic: 排出、皮膚、運動器
+  sources:
+  - WE11
+  units:
+  - B-036
+  - B-020
+  - B-034
+  choice: predmet
+- id: BI-20
+  field: 生物
+  topic: 進化の理論（ダーウィン、集団、小進化と大進化）
+  sources:
+  - WE11
+  units:
+  - B-042
+  - B-027
+  choice: predmet
+- id: BI-21
+  field: 生物
+  topic: 生命の起源と人類学
+  sources:
+  - WE11
+  units:
+  - B-027
+  choice: predmet
+- id: BI-22
+  field: 生物
+  topic: 生態学（環境要因、個体群、群集）
+  sources:
+  - WE11
+  units:
+  - B-021
+  - B-040
+  choice: predmet
+- id: BI-23
+  field: 生物
+  topic: 生物圏と環境の危機
+  sources:
+  - WE11
+  units:
+  - B-041
+  choice: predmet
+- id: IN-01
+  field: 情報
+  topic: コンピュータの発展の傾向（並列計算、分散システム、ビッグデータ）
+  sources:
+  - WE12
+  units:
+  - K-027
+  choice: predmet
+- id: IN-02
+  field: 情報
+  topic: ネットワーク（TCP/IP、DNS、IP アドレスとサブネットマスク）
+  sources:
+  - WE12
+  units:
+  - K-144
+  choice: predmet
+- id: IN-03
+  field: 情報
+  topic: ファイルシステムとファイル名のパターン
+  sources:
+  - WE12
+  units:
+  - K-144
+  choice: predmet
+- id: IN-04
+  field: 情報
+  topic: データの転送の速さと時間
+  sources:
+  - WE12
+  units:
+  - K-140
+  choice: predmet
+- id: IN-05
+  field: 情報
+  topic: 暗号（換字式暗号、シーザー暗号、ヴィジュネル暗号、RSA）
+  sources:
+  - WE12
+  units:
+  - K-128
+  - K-042
+  choice: predmet
+- id: IN-06
+  field: 情報
+  topic: 誤りの検出と訂正（ハミング距離、ハミング符号）
+  sources:
+  - WE12
+  units:
+  - K-128
+  - C-039
+  choice: predmet
+- id: IN-07
+  field: 情報
+  topic: 2 進の符号化、ファノの条件、情報量（ハートリーの式とシャノンの式）
+  sources:
+  - WE12
+  units:
+  - K-140
+  - C-038
+  choice: predmet
+- id: IN-08
+  field: 情報
+  topic: 位取り記数法（2・8・16 進、平衡 3 進、2 進化 10 進）
+  sources:
+  - WE12
+  units:
+  - N-025
+  - K-142
+  choice: predmet
+- id: IN-09
+  field: 情報
+  topic: 文字・画像・音の符号化と情報の量
+  sources:
+  - WE12
+  units:
+  - K-140
+  choice: predmet
+- id: IN-10
+  field: 情報
+  topic: 論理代数（真理値表、論理式の変形、論理方程式、標準形）
+  sources:
+  - WE12
+  units:
+  - K-141
+  choice: predmet
+- id: IN-11
+  field: 情報
+  topic: 論理素子（フリップフロップ、加算器、論理回路の組み立て）
+  sources:
+  - WE12
+  units:
+  - K-141
+  choice: predmet
+- id: IN-12
+  field: 情報
+  topic: モデルとモデル化
+  sources:
+  - WE12
+  units:
+  - K-015
+  choice: predmet
+- id: IN-13
+  field: 情報
+  topic: 整数と実数の表し方（補数、ビット演算とシフト、浮動小数点と誤差）
+  sources:
+  - WE12
+  units:
+  - K-142
+  choice: predmet
+- id: IN-14
+  field: 情報
+  topic: グラフ（隣接行列と隣接リスト、最短経路、DAG の経路の数）
+  sources:
+  - WE12
+  units:
+  - C-022
+  - K-026
+  choice: predmet
+- id: IN-15
+  field: 情報
+  topic: チューリング機械
+  sources:
+  - WE12
+  units:
+  - K-040
+  choice: predmet
+- id: IN-16
+  field: 情報
+  topic: 計算の複雑さ（時間と記憶、漸近的な評価）
+  sources:
+  - WE12
+  units:
+  - K-014
+  choice: predmet
+- id: IN-17
+  field: 情報
+  topic: 簡単なアルゴリズムの実行結果（実行者のアルゴリズム）
+  sources:
+  - WE12
+  units:
+  - K-012
+  choice: predmet
+- id: IN-18
+  field: 情報
+  topic: 自然数のアルゴリズム（桁の処理、素因数分解、高速なべき乗、エラトステネスのふるい、多倍長の計算）
+  sources:
+  - WE12
+  units:
+  - K-012
+  - K-016
+  choice: predmet
+- id: IN-19
+  field: 情報
+  topic: プログラミング言語（型、分岐、ループ、ファイル、部分プログラム）
+  sources:
+  - WE12
+  units:
+  - K-012
+  - K-013
+  choice: predmet
+- id: IN-20
+  field: 情報
+  topic: 再帰
+  sources:
+  - WE12
+  units:
+  - K-016
+  choice: predmet
+- id: IN-21
+  field: 情報
+  topic: 数値計算（二分法、台形公式と長方形公式）
+  sources:
+  - WE12
+  units:
+  - K-160
+  choice: predmet
+- id: IN-22
+  field: 情報
+  topic: 文字列の処理
+  sources:
+  - WE12
+  units:
+  - K-012
+  choice: predmet
+- id: IN-23
+  field: 情報
+  topic: 配列と並べ替え（クイックソート、マージソート、二分探索）、2 次元配列
+  sources:
+  - WE12
+  units:
+  - K-022
+  - K-023
+  choice: predmet
+- id: IN-24
+  field: 情報
+  topic: 辞書とハッシュ表、スタックとキュー
+  sources:
+  - WE12
+  units:
+  - K-023
+  - K-022
+  choice: predmet
+- id: IN-25
+  field: 情報
+  topic: グラフのアルゴリズム（最小全域木、ダイクストラ法）と木
+  sources:
+  - WE12
+  units:
+  - K-026
+  - K-023
+  choice: predmet
+- id: IN-26
+  field: 情報
+  topic: 動的計画法
+  sources:
+  - WE12
+  units:
+  - K-024
+  choice: predmet
+- id: IN-27
+  field: 情報
+  topic: オブジェクト指向プログラミング
+  sources:
+  - WE12
+  units:
+  - K-013
+  choice: predmet
+- id: IN-28
+  field: 情報
+  topic: データの分析と機械学習
+  sources:
+  - WE12
+  units:
+  - K-060
+  choice: predmet
+- id: IN-29
+  field: 情報
+  topic: 表計算ソフトによるデータの分析
+  sources:
+  - WE12
+  units:
+  - K-143
+  choice: predmet
+- id: IN-30
+  field: 情報
+  topic: 連続な過程のモデル化（離散化、最小二乗法、モンテカルロ法、待ち行列）
+  sources:
+  - WE12
+  units:
+  - K-015
+  choice: predmet
+- id: IN-31
+  field: 情報
+  topic: 関係データベース
+  sources:
+  - WE12
+  units:
+  - K-169
+  choice: predmet
+- id: IN-32
+  field: 情報
+  topic: 文書作成（構造化した文書、引用の作法）
+  sources:
+  - WE12
+  none: 地図にない（候補：文書作成と引用の作法）
+  choice: predmet

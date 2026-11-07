@@ -1,7 +1,11 @@
-# 網羅表：National Testing Agency（JEE Main）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：National Testing Agency（JEE Main、数学・物理・化学）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
 sources:
   EX03:
     title: Syllabus for JEE (Main) - 2027（Paper 1 Mathematics）、National Testing Agency
+    url: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/10/20261024683680768.pdf
+    date: '2026-11-07'
+  WE02:
+    title: Syllabus for JEE (Main) - 2027（Paper 1 の Physics と Chemistry）、National Testing Agency
     url: https://cdnbbsr.s3waas.gov.in/s3f8e59f4b2fe7c5705bf878bbd494ccdf/uploads/2026/10/20261024683680768.pdf
     date: '2026-11-07'
 items:
@@ -179,3 +183,322 @@ items:
   topic: 2 階の定数係数線形微分方程式
   units:
   - D-045
+- id: PH-01
+  field: 物理
+  topic: 単位と測定（SI、有効数字、誤差、次元解析）
+  sources:
+  - WE02
+  units:
+  - P-117
+- id: PH-02
+  field: 物理
+  topic: 運動学（直線運動、相対速度、平面運動、放物運動、等速円運動）
+  sources:
+  - WE02
+  units:
+  - P-001
+  - P-005
+  - P-007
+- id: PH-03
+  field: 物理
+  topic: 運動の法則（ニュートンの法則、運動量保存、共点力のつり合い、摩擦、円運動の力学）
+  sources:
+  - WE02
+  units:
+  - P-002
+  - P-003
+  - P-006
+  - P-007
+- id: PH-04
+  field: 物理
+  topic: 仕事・エネルギー・仕事率（ばねの位置エネルギー、保存力、鉛直面内の円運動、1 次元と 2 次元の衝突）
+  sources:
+  - WE02
+  units:
+  - P-004
+  - P-006
+- id: PH-05
+  field: 物理
+  topic: 回転運動（重心、トルク、角運動量の保存、慣性モーメントと平行軸・直交軸の定理、剛体のつり合い）
+  sources:
+  - WE02
+  units:
+  - P-011
+  - P-005
+- id: PH-06
+  field: 物理
+  topic: 万有引力（重力加速度の高さと深さによる変化、ケプラーの法則、重力の位置エネルギー、脱出速度、人工衛星）
+  sources:
+  - WE02
+  units:
+  - P-009
+- id: PH-07
+  field: 物理
+  topic: 固体と液体の性質（弾性と弾性率、流体の圧力とパスカルの原理、粘性とストークスの法則、ベルヌーイの定理、表面張力、熱膨張と熱量測定、熱の移動）
+  sources:
+  - WE02
+  units:
+  - P-190
+  - P-013
+  - P-042
+- id: PH-08
+  field: 物理
+  topic: 熱力学（第 0 法則、第一法則、等温と断熱、第二法則）
+  sources:
+  - WE02
+  units:
+  - P-044
+  - P-045
+- id: PH-09
+  field: 物理
+  topic: 気体分子運動論（状態方程式、圧力の分子論、二乗平均速度、エネルギー等分配と比熱、平均自由行程）
+  sources:
+  - WE02
+  units:
+  - P-043
+- id: PH-10
+  field: 物理
+  topic: 振動と波（単振動、ばねと単振り子、進行波、重ね合わせ、定常波、うなり）
+  sources:
+  - WE02
+  units:
+  - P-007
+  - P-021
+  - P-022
+- id: PH-11
+  field: 物理
+  topic: 静電気（クーロンの法則、電場と双極子、ガウスの法則、電位、導体と誘電体、コンデンサー）
+  sources:
+  - WE02
+  units:
+  - P-030
+  - P-031
+- id: PH-12
+  field: 物理
+  topic: 電流（ドリフト速度、オームの法則、抵抗率、電池の起電力と内部抵抗、キルヒホッフの法則、ホイートストンブリッジ）
+  sources:
+  - WE02
+  units:
+  - P-029
+- id: PH-13
+  field: 物理
+  topic: 電流の磁気作用と磁性（ビオ＝サバール、アンペール、ローレンツ力、検流計、磁気双極子、常磁性・反磁性・強磁性）
+  sources:
+  - WE02
+  units:
+  - P-032
+- id: PH-14
+  field: 物理
+  topic: 電磁誘導と交流（ファラデーとレンツの法則、渦電流、インダクタンス、LCR 回路と共振、交流の電力、発電機と変圧器）
+  sources:
+  - WE02
+  units:
+  - P-033
+- id: PH-15
+  field: 物理
+  topic: 電磁波（変位電流、電磁波の性質、電磁スペクトル）
+  sources:
+  - WE02
+  units:
+  - P-198
+  - P-205
+- id: PH-16
+  field: 物理
+  topic: 光学（反射と屈折、レンズとプリズム、光学機器、ホイヘンスの原理、干渉、単スリットの回折、偏光）
+  sources:
+  - WE02
+  units:
+  - P-023
+  - P-024
+  - P-198
+- id: PH-17
+  field: 物理
+  topic: 物質と放射の二重性（光電効果、ド・ブロイの関係）
+  sources:
+  - WE02
+  units:
+  - P-069
+- id: PH-18
+  field: 物理
+  topic: 原子と原子核（ラザフォードの模型、ボーア模型と水素のスペクトル、質量欠損と結合エネルギー、核分裂と核融合）
+  sources:
+  - WE02
+  units:
+  - P-088
+  - P-104
+- id: PH-19
+  field: 物理
+  topic: 電子デバイス（半導体、ダイオードと整流、発光ダイオード・光ダイオード・太陽電池・ツェナーダイオード、論理ゲート）
+  sources:
+  - WE02
+  units:
+  - P-191
+- id: PH-20
+  field: 物理
+  topic: 実験の技能（ノギス、マイクロメータ、単振り子、ヤング率、表面張力、粘性、共鳴管、比熱、抵抗率、オームの法則など）
+  sources:
+  - WE02
+  units:
+  - P-117
+- id: CH-01
+  field: 化学
+  topic: 化学の基本概念（ドルトンの原子説、化合の法則、物質量、組成式と分子式、量的関係）
+  sources:
+  - WE02
+  units:
+  - H-009
+  - H-015
+  - H-016
+- id: CH-02
+  field: 化学
+  topic: 原子の構造（水素原子のスペクトル、ボーア模型、二重性と不確定性原理、量子数と軌道、電子配置の規則）
+  sources:
+  - WE02
+  units:
+  - H-011
+  - H-071
+  - P-069
+  - P-088
+- id: CH-03
+  field: 化学
+  topic: 化学結合と分子構造（イオン結合と格子エンタルピー、電気陰性度、双極子モーメント、VSEPR、原子価結合理論と混成、共鳴、分子軌道理論、水素結合）
+  sources:
+  - WE02
+  units:
+  - H-014
+  - H-018
+  - H-071
+- id: CH-04
+  field: 化学
+  topic: 化学熱力学（第一法則、ヘスの法則、各種のエンタルピー、第二法則、自発性と ΔG、ΔG° と平衡定数）
+  sources:
+  - WE02
+  units:
+  - H-022
+  - H-036
+- id: CH-05
+  field: 化学
+  topic: 溶液（濃度の表し方、ラウールの法則、理想溶液と非理想溶液、束一的性質、ファントホッフ係数）
+  sources:
+  - WE02
+  units:
+  - H-021
+- id: CH-06
+  field: 化学
+  topic: 平衡（物理平衡と化学平衡、Kp と Kc、ルシャトリエの原理、電離平衡、酸と塩基、pH、緩衝液、溶解度積）
+  sources:
+  - WE02
+  units:
+  - H-024
+  - H-025
+  - H-026
+- id: CH-07
+  field: 化学
+  topic: 酸化還元と電気化学（酸化数、電解質の伝導率、電池と電極電位、ネルンストの式、起電力と ΔG）
+  sources:
+  - WE02
+  units:
+  - H-017
+  - H-027
+  - H-048
+- id: CH-08
+  field: 化学
+  topic: 反応速度論（速度式、反応次数と分子数、0 次と 1 次の積分形と半減期、アレニウスの式、衝突理論）
+  sources:
+  - WE02
+  units:
+  - H-023
+  - H-037
+- id: CH-09
+  field: 化学
+  topic: 元素の分類と性質の周期性
+  sources:
+  - WE02
+  units:
+  - H-012
+- id: CH-10
+  field: 化学
+  topic: p ブロック元素（13〜18 族の一般的な傾向）
+  sources:
+  - WE02
+  units:
+  - H-028
+- id: CH-11
+  field: 化学
+  topic: d ブロックと f ブロック元素（遷移元素の性質、K₂Cr₂O₇ と KMnO₄、ランタノイドとアクチノイド）
+  sources:
+  - WE02
+  units:
+  - H-029
+- id: CH-12
+  field: 化学
+  topic: 配位化合物（ウェルナーの理論、配位子と配位数、命名、異性、原子価結合と結晶場理論、色と磁性）
+  sources:
+  - WE02
+  units:
+  - H-029
+  - H-071
+- id: CH-13
+  field: 化学
+  topic: 有機化合物の精製と確認（結晶化・昇華・蒸留・抽出・クロマトグラフィー、元素の定性と定量）
+  sources:
+  - WE02
+  units:
+  - H-042
+  - H-006
+- id: CH-14
+  field: 化学
+  topic: 有機化学の基本原理（混成、官能基による分類、異性、命名、結合の開裂と反応中間体、誘起効果・共鳴・超共役、反応の型）
+  sources:
+  - WE02
+  units:
+  - H-032
+  - H-038
+  - H-039
+- id: CH-15
+  field: 化学
+  topic: 炭化水素（アルカンの配座、アルケンとアルキンの付加、芳香族性と求電子置換）
+  sources:
+  - WE02
+  units:
+  - H-033
+  - H-034
+  - H-039
+- id: CH-16
+  field: 化学
+  topic: ハロゲンを含む有機化合物（C–X 結合、置換反応の機構、環境への影響）
+  sources:
+  - WE02
+  units:
+  - H-039
+- id: CH-17
+  field: 化学
+  topic: 酸素を含む有機化合物（アルコール・フェノール・エーテル、アルデヒドとケトンの求核付加、カルボン酸）
+  sources:
+  - WE02
+  units:
+  - H-033
+  - H-034
+  - H-040
+- id: CH-18
+  field: 化学
+  topic: 窒素を含む有機化合物（アミン、ジアゾニウム塩）
+  sources:
+  - WE02
+  units:
+  - H-034
+- id: CH-19
+  field: 化学
+  topic: 生体分子（糖、タンパク質、ビタミン、核酸、ホルモン）
+  sources:
+  - WE02
+  units:
+  - H-044
+- id: CH-20
+  field: 化学
+  topic: 実験化学の原理（元素と官能基の検出、無機化合物と有機化合物の調製、滴定、塩の定性分析）
+  sources:
+  - WE02
+  units:
+  - H-031
+  - H-033

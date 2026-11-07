@@ -1,9 +1,13 @@
-# 網羅表：ISEB Common Entrance 11+（数学）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：ISEB Common Entrance 11+（数学と理科）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
 sources:
   SC22:
     title: 'ISEB Mathematics: CE at 11+ & 13+, Common Academic Scholarship at 13+ Specification'
     url: https://www.iseb.co.uk/wp-content/uploads/Syllabus-CE-CASE-Mathematics-Helvetica-_V7.1-2.pdf
     date: '2026-11-07'
+  WE15:
+    title: 'ISEB Science: CE at 11+ & 13+, Common Academic Scholarship at 13+ Specification（September 2020、V4.2）'
+    url: https://www.iseb.co.uk/wp-content/uploads/Syllabus-CE-CASE-Science-Helvetica_V4.2-2.pdf
+    date: '2026-11-08'
 items:
 - id: T-01
   field: 数と計算
@@ -108,3 +112,159 @@ items:
   - S-027
   - S-028
   - G-050
+- id: SC-01
+  field: 理科
+  topic: Year 3：生命の営み（生き物と生き物でない物、栄養・運動・成長・生殖）
+  sources:
+  - WE15
+  units:
+  - B-015
+- id: SC-02
+  field: 理科
+  topic: Year 3：緑色植物（根・茎・葉・花のはたらき、光・空気・水・温度と成長、水の運搬）
+  sources:
+  - WE15
+  units:
+  - B-016
+  - B-019
+  - B-071
+- id: SC-03
+  field: 理科
+  topic: Year 3：人とほかの動物（主な器官、栄養とかたよりのない食事、骨格と筋肉）
+  sources:
+  - WE15
+  units:
+  - B-020
+  - B-069
+- id: SC-04
+  field: 理科
+  topic: Year 3：岩石と土（見た目と性質で分ける、水の通しやすさ、ふるい分け、化石のでき方）
+  sources:
+  - WE15
+  units:
+  - W-001
+  - W-003
+  - W-070
+- id: SC-05
+  field: 理科
+  topic: Year 3：光（光源、直進、影、反射、見えるしくみ）
+  sources:
+  - WE15
+  units:
+  - P-178
+  - P-179
+- id: SC-06
+  field: 理科
+  topic: Year 3：力と磁石（押す・引く、磁石の引き合いと退け合い、磁石につく物）
+  sources:
+  - WE15
+  units:
+  - P-185
+  - P-181
+- id: SC-07
+  field: 理科
+  topic: Year 4：環境の中の生き物（いろいろな分け方、検索表、すみかと生命の営み、食物連鎖）
+  sources:
+  - WE15
+  units:
+  - B-018
+  - B-021
+- id: SC-08
+  field: 理科
+  topic: Year 4：人とほかの動物（歯のはたらきと手入れ、肉食と草食の歯、消化器系）
+  sources:
+  - WE15
+  units:
+  - B-020
+- id: SC-09
+  field: 理科
+  topic: Year 4：物質の状態（固体・液体・気体と粒子、状態の変化と温度、水の循環）
+  sources:
+  - WE15
+  units:
+  - H-060
+  - H-003
+  - W-049
+- id: SC-10
+  field: 理科
+  topic: Year 4：音（振動、高さと大きさ、伝わり方）
+  sources:
+  - WE15
+  units:
+  - P-180
+- id: SC-11
+  field: 理科
+  topic: Year 4：電気（回路をつくる、電気を通す物と通さない物、安全）
+  sources:
+  - WE15
+  units:
+  - P-182
+- id: SC-12
+  field: 理科
+  topic: Year 5：生き物とすみか（生活環、植物と動物の生殖、すみかへの適応）
+  sources:
+  - WE15
+  units:
+  - B-070
+  - B-016
+  - B-072
+- id: SC-13
+  field: 理科
+  topic: Year 5：人とほかの動物（成長と老化）
+  sources:
+  - WE15
+  units:
+  - B-020
+  - B-069
+- id: SC-14
+  field: 理科
+  topic: Year 5：物質の性質と変化（硬さ・強さ・磁性、可逆な変化、溶解と分離、燃焼などの不可逆な変化）
+  sources:
+  - WE15
+  units:
+  - H-001
+  - H-062
+  - H-063
+  - H-004
+- id: SC-15
+  field: 理科
+  topic: Year 5：地球と宇宙（太陽・地球・月の形と動き、昼と夜、月の公転、太陽系）
+  sources:
+  - WE15
+  units:
+  - W-043
+  - W-045
+  - W-046
+- id: SC-16
+  field: 理科
+  topic: Year 5：力（ニュートン、ばねばかり、摩擦と空気の抵抗、重力、てこ・滑車・歯車）
+  sources:
+  - WE15
+  units:
+  - P-186
+  - P-197
+  - E-174
+  - E-175
+- id: SC-17
+  field: 理科
+  topic: Year 6：生き物とすみか（検索表をつくる、主な分類群と界）
+  sources:
+  - WE15
+  units:
+  - B-018
+  - B-025
+- id: SC-18
+  field: 理科
+  topic: Year 6：物質の性質（熱を伝えにくい物、温度と温度計、酸性とアルカリ性）
+  sources:
+  - WE15
+  units:
+  - P-189
+  - H-005
+- id: SC-19
+  field: 理科
+  topic: Year 6：電気（直列回路の部品の数と明るさ、回路図の記号）
+  sources:
+  - WE15
+  units:
+  - P-183

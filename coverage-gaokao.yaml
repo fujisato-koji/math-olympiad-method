@@ -1,4 +1,11 @@
-# 網羅表：中国の普通高等学校招生全国統一考試（高考、数学）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：中国の普通高等学校招生全国統一考試（高考、数学と理科）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
+choices:
+  shouxuan:
+    label: 首選科目（物理か歴史から 1 つ。歴史は社会の科目なので表に入れない）
+    pick: 20
+  zaixuan:
+    label: 再選科目（化学・生物・地理・思想政治から 2 つ。思想政治と人文地理は表に入れない）
+    pick: 35
 sources:
   EX11:
     title: 普通高中数学课程标准（2017年版2020年修订）（中华人民共和国教育部）
@@ -8,6 +15,26 @@ sources:
     title: 教育部教育考试院：2026年高考数学全国卷试题评析（扬子晚报网の転載）
     url: https://www.yzwb.net/news/jy/202606/t20260607_360287.html
     date: '2026-11-07'
+  WE03:
+    title: 普通高中物理课程标准（2017年版2020年修订）（中华人民共和国教育部、课程方案と各科の课程标准の一括 zip）
+    url: http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html
+    date: '2026-11-07'
+  WE04:
+    title: 普通高中化学课程标准（2017年版2020年修订）（中华人民共和国教育部、同上の zip）
+    url: http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html
+    date: '2026-11-07'
+  WE05:
+    title: 普通高中生物学课程标准（2017年版2020年修订）（中华人民共和国教育部、同上の zip）
+    url: http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html
+    date: '2026-11-07'
+  WE06:
+    title: 普通高中地理课程标准（2017年版2020年修订）（中华人民共和国教育部、同上の zip）
+    url: http://www.moe.gov.cn/srcsite/A26/s8001/202006/t20200603_462199.html
+    date: '2026-11-07'
+  WE07:
+    title: 广东省人民政府关于印发广东省深化普通高校考试招生制度综合改革实施方案的通知（粤府〔2019〕42号）（3+1+2 の例。元の頁は接続できず、Internet Archive の 2025-12-09 の写し）
+    url: http://web.archive.org/web/20251209141331/http://www.gd.gov.cn/zwgk/wjk/qbwj/yf/content/post_2283054.html
+    date: '2026-11-08'
 items:
 - id: T-01
   field: 解析
@@ -360,3 +387,768 @@ items:
   topic: 直線と円錐曲線の連立と解と係数の関係（弦長、面積）
   units:
   - A-026
+- id: PH-01
+  field: 物理
+  topic: 必修 1：機械運動と物理モデル（質点、変位・速度・加速度、等加速度直線運動、自由落下）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-001
+  - P-117
+  choice: shouxuan
+- id: PH-02
+  field: 物理
+  topic: 必修 1：相互作用と運動の法則（重力・弾性力・摩擦力、フックの法則、力の合成と分解、つり合い、ニュートンの法則、超重と失重、単位系）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-002
+  - P-003
+  choice: shouxuan
+- id: PH-03
+  field: 物理
+  topic: 必修 2：力学的エネルギーとその保存（仕事と仕事率、運動エネルギーの定理、位置エネルギー、保存則）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-004
+  choice: shouxuan
+- id: PH-04
+  field: 物理
+  topic: 必修 2：曲線運動と万有引力（運動の合成と分解、水平投射、等速円運動と向心力、万有引力と宇宙速度）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-005
+  - P-007
+  - P-009
+  choice: shouxuan
+- id: PH-05
+  field: 物理
+  topic: 必修 2：ニュートン力学の限界と相対論の入口（相対論的な時空、宇宙の起源と進化）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-057
+  - P-202
+  choice: shouxuan
+- id: PH-06
+  field: 物理
+  topic: 必修 3：静電場（クーロンの法則、電場、電位と電位差、コンデンサー）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-030
+  choice: shouxuan
+- id: PH-07
+  field: 物理
+  topic: 必修 3：電気回路とその応用（抵抗率、直列と並列、閉回路のオームの法則、電力とジュールの法則）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-029
+  choice: shouxuan
+- id: PH-08
+  field: 物理
+  topic: 必修 3：電磁場と電磁波の入口（磁場と磁束密度、磁束、電磁誘導の入口、電磁波とエネルギーの量子化）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-032
+  - P-033
+  - P-205
+  choice: shouxuan
+- id: PH-09
+  field: 物理
+  topic: 必修 3：エネルギーと持続可能な発展（エネルギーの変換と保存と方向性、核分裂と核融合、再生可能エネルギー）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-203
+  - P-045
+  choice: shouxuan
+- id: PH-10
+  field: 物理
+  topic: 選択性必修 1：運動量と運動量保存（力積、弾性衝突と非弾性衝突）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-006
+  choice: shouxuan
+- id: PH-11
+  field: 物理
+  topic: 選択性必修 1：機械振動と機械波（単振動、単振り子、受迫振動と共振、横波と縦波、反射・屈折・干渉・回折、ドップラー効果）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-007
+  - P-008
+  - P-021
+  - P-022
+  choice: shouxuan
+- id: PH-12
+  field: 物理
+  topic: 選択性必修 1：光とその応用（屈折の法則、全反射と光ファイバー、干渉・回折・偏光、レーザー）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-023
+  - P-024
+  - P-198
+  choice: shouxuan
+- id: PH-13
+  field: 物理
+  topic: 選択性必修 2：磁場（アンペール力、ローレンツ力、一様な磁場の中の荷電粒子）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-032
+  choice: shouxuan
+- id: PH-14
+  field: 物理
+  topic: 選択性必修 2：電磁誘導とその応用（レンツの法則、ファラデーの法則、自己誘導と渦電流、交流、変圧器と送電、発電機とモーター）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-033
+  choice: shouxuan
+- id: PH-15
+  field: 物理
+  topic: 選択性必修 2：電磁振動と電磁波（マクスウェルの考え、LC 振動、電磁波の発信と受信、電磁スペクトル）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-198
+  - P-205
+  choice: shouxuan
+- id: PH-16
+  field: 物理
+  topic: 選択性必修 2：センサー
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-191
+  choice: shouxuan
+- id: PH-17
+  field: 物理
+  topic: 選択性必修 3：固体・液体・気体（分子運動論、ブラウン運動、速さの分布、結晶と非晶質、液晶、表面張力、気体の法則）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-043
+  - H-019
+  - P-013
+  choice: shouxuan
+- id: PH-18
+  field: 物理
+  topic: 選択性必修 3：熱力学の法則（第一法則、エネルギー保存、第二法則）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-044
+  - P-045
+  choice: shouxuan
+- id: PH-19
+  field: 物理
+  topic: 選択性必修 3：原子と原子核（原子核模型、水素のスペクトルとエネルギー準位、原子核の構成、放射性崩壊と半減期、結合エネルギー、核分裂と核融合）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-088
+  - P-104
+  - P-105
+  choice: shouxuan
+- id: PH-20
+  field: 物理
+  topic: 選択性必修 3：波と粒子の二重性（光電効果、物質波）
+  sources:
+  - WE03
+  - WE07
+  units:
+  - P-069
+  choice: shouxuan
+- id: CH-01
+  field: 化学
+  topic: 必修 主題 1：化学と実験による探究（化学の特徴、物質量、探究の進め方、実験の操作と安全）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-015
+  - H-031
+  - H-006
+  choice: zaixuan
+- id: CH-02
+  field: 化学
+  topic: 必修 2.1：元素と物質（物質の分類、物質の変換、コロイド）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-008
+  - H-021
+  choice: zaixuan
+- id: CH-03
+  field: 化学
+  topic: 必修 2.2：酸化還元反応
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-017
+  choice: zaixuan
+- id: CH-04
+  field: 化学
+  topic: 必修 2.3：電離とイオン反応
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-013
+  choice: zaixuan
+- id: CH-05
+  field: 化学
+  topic: 必修 2.4–2.5：金属・非金属とその化合物（ナトリウム、鉄、塩素、窒素、硫黄など）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-028
+  - H-029
+  choice: zaixuan
+- id: CH-06
+  field: 化学
+  topic: 必修 3.1：原子の構造と元素の周期律
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-011
+  - H-012
+  choice: zaixuan
+- id: CH-07
+  field: 化学
+  topic: 必修 3.2：化学結合
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-014
+  choice: zaixuan
+- id: CH-08
+  field: 化学
+  topic: 必修 3.3：化学反応の限度と速さ
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-023
+  - H-024
+  choice: zaixuan
+- id: CH-09
+  field: 化学
+  topic: 必修 3.4：化学反応とエネルギーの変換（反応熱、化学電池）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-022
+  - H-027
+  choice: zaixuan
+- id: CH-10
+  field: 化学
+  topic: 必修 主題 4：簡単な有機化合物とその応用（エチレン・エタノール・酢酸、官能基、高分子と油脂・糖・タンパク質）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-032
+  - H-033
+  choice: zaixuan
+- id: CH-11
+  field: 化学
+  topic: 必修 主題 5：化学と社会の発展（資源とエネルギー、材料と健康、環境保護、安全）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-070
+  - H-080
+  - H-081
+  choice: zaixuan
+- id: CH-12
+  field: 化学
+  topic: 選択性必修 1 主題 1：化学反応とエネルギー（反応熱とヘスの法則、電池と電気分解、腐食と防食）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-022
+  - H-027
+  choice: zaixuan
+- id: CH-13
+  field: 化学
+  topic: 選択性必修 1 2.1：化学反応の方向と限度（エンタルピーとエントロピー、平衡定数と濃度商、平衡の移動）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-024
+  - H-036
+  choice: zaixuan
+- id: CH-14
+  field: 化学
+  topic: 選択性必修 1 2.2–2.3：化学反応の速さとその調節（素反応と活性化エネルギー、触媒、工業での調節）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-023
+  - H-037
+  choice: zaixuan
+- id: CH-15
+  field: 化学
+  topic: 選択性必修 1 主題 3：水溶液の中のイオン反応と平衡（電離平衡、加水分解、沈殿溶解平衡）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-025
+  - H-026
+  choice: zaixuan
+- id: CH-16
+  field: 化学
+  topic: 選択性必修 2 主題 1：原子の構造と元素の性質（電子の運動状態と原子軌道、構成原理、周期表の区分、電離エネルギーと電気陰性度）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-071
+  - H-012
+  choice: zaixuan
+- id: CH-17
+  field: 化学
+  topic: 選択性必修 2 2.1–2.3：粒子のあいだの相互作用と分子の形（イオン結合・共有結合・配位結合・金属結合、σ と π、分子間力と水素結合、VSEPR と混成）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-014
+  - H-018
+  - H-071
+  choice: zaixuan
+- id: CH-18
+  field: 化学
+  topic: 選択性必修 2 2.4：結晶と集合状態
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-019
+  choice: zaixuan
+- id: CH-19
+  field: 化学
+  topic: 選択性必修 2 主題 3：物質の構造を調べる方法（原子スペクトル、分子スペクトル、X 線回折）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-041
+  choice: zaixuan
+- id: CH-20
+  field: 化学
+  topic: 選択性必修 3 主題 1：有機化合物の組成と構造（構造異性と立体異性、官能基、赤外吸収と核磁気共鳴）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-032
+  - H-038
+  - H-041
+  choice: zaixuan
+- id: CH-21
+  field: 化学
+  topic: 選択性必修 3 2.1–2.2：炭化水素とその誘導体（アルカン〜芳香族炭化水素、ハロゲン化物・アルコール・フェノール・アルデヒド・カルボン酸・エステル、アミンとアミド）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-033
+  - H-034
+  choice: zaixuan
+- id: CH-22
+  field: 化学
+  topic: 選択性必修 3 2.3–2.4：有機反応の型と有機合成（付加・置換・脱離・酸化還元、炭素骨格の組み立てと官能基の変換、安全な使用）
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-039
+  - H-040
+  choice: zaixuan
+- id: CH-23
+  field: 化学
+  topic: 選択性必修 3 主題 3：生体高分子と合成高分子
+  sources:
+  - WE04
+  - WE07
+  units:
+  - H-044
+  - H-035
+  choice: zaixuan
+- id: BI-01
+  field: 生物
+  topic: 必修 1 1.1：細胞をつくる分子（水、無機塩、糖、脂質、タンパク質、核酸）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-028
+  choice: zaixuan
+- id: BI-02
+  field: 生物
+  topic: 必修 1 1.2–1.3：細胞のつくり（細胞膜、細胞小器官、核、原核細胞と真核細胞）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-022
+  choice: zaixuan
+- id: BI-03
+  field: 生物
+  topic: 必修 1 2.1：物質の細胞への出入り（受動輸送と能動輸送、エンドサイトーシスとエキソサイトーシス）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-031
+  choice: zaixuan
+- id: BI-04
+  field: 生物
+  topic: 必修 1 2.2：酵素と ATP、光合成と細胞呼吸
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-029
+  - B-030
+  choice: zaixuan
+- id: BI-05
+  field: 生物
+  topic: 必修 1 2.3：細胞の増殖・分化・老化・死
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-023
+  - B-044
+  choice: zaixuan
+- id: BI-06
+  field: 生物
+  topic: 必修 2 3.1：遺伝の分子的な基礎（DNA の構造と半保存的複製、転写と翻訳、エピジェネティクス）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-032
+  - B-044
+  choice: zaixuan
+- id: BI-07
+  field: 生物
+  topic: 必修 2 3.2：遺伝の法則（減数分裂、分離と独立、伴性遺伝）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-023
+  - B-024
+  - B-045
+  choice: zaixuan
+- id: BI-08
+  field: 生物
+  topic: 必修 2 3.3：変異（遺伝子突然変異とがん、染色体の変異、遺伝子の組換え、人の遺伝病）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-032
+  - B-045
+  choice: zaixuan
+- id: BI-09
+  field: 生物
+  topic: 必修 2 4.1–4.2：生物の進化（共通祖先の証拠、自然選択と適応、種の形成）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-027
+  - B-042
+  choice: zaixuan
+- id: BI-10
+  field: 生物
+  topic: 選択性必修 1 1.1–1.2：内部環境と恒常性
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-035
+  - B-036
+  choice: zaixuan
+- id: BI-11
+  field: 生物
+  topic: 選択性必修 1 1.3：神経による調節（反射、膜電位と興奮の伝導、シナプス、中枢と自律神経）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-034
+  choice: zaixuan
+- id: BI-12
+  field: 生物
+  topic: 選択性必修 1 1.4：体液による調節（内分泌系とホルモン、フィードバック）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-035
+  choice: zaixuan
+- id: BI-13
+  field: 生物
+  topic: 選択性必修 1 1.5：免疫による調節
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-037
+  choice: zaixuan
+- id: BI-14
+  field: 生物
+  topic: 選択性必修 1 1.6：植物の生命活動の調節（植物ホルモン、光・重力・温度）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-038
+  choice: zaixuan
+- id: BI-15
+  field: 生物
+  topic: 選択性必修 2 2.1：個体群と群集
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-040
+  choice: zaixuan
+- id: BI-16
+  field: 生物
+  topic: 選択性必修 2 2.2–2.3：生態系の構造と機能、安定性
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-041
+  choice: zaixuan
+- id: BI-17
+  field: 生物
+  topic: 選択性必修 2 2.4：人と環境（生物多様性の保全、持続可能な発展）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-041
+  - B-093
+  choice: zaixuan
+- id: BI-18
+  field: 生物
+  topic: 選択性必修 3 3.1–3.2：発酵工学（微生物の純粋培養、発酵の産物）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-043
+  choice: zaixuan
+- id: BI-19
+  field: 生物
+  topic: 選択性必修 3 4.1–4.3：細胞工学と胚の工学（組織培養、体細胞雑種、動物細胞の培養と核移植、胚の操作）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-080
+  choice: zaixuan
+- id: BI-20
+  field: 生物
+  topic: 選択性必修 3 5.1–5.2：遺伝子工学とタンパク質工学
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-033
+  - B-053
+  choice: zaixuan
+- id: BI-21
+  field: 生物
+  topic: 選択性必修 3 6.1–6.3：生物技術の安全と倫理（遺伝子組換え産物、生殖目的のクローン、生物兵器）
+  sources:
+  - WE05
+  - WE07
+  units:
+  - B-081
+  choice: zaixuan
+- id: GE-01
+  field: 地理（自然地理）
+  topic: 地理 1 1.1：地球のまわりの宇宙と太陽の地球への影響
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-074
+  choice: zaixuan
+- id: GE-02
+  field: 地理（自然地理）
+  topic: 地理 1 1.2–1.3：地球の圏構造と地球の歴史（地質年代）
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-006
+  - W-009
+  choice: zaixuan
+- id: GE-03
+  field: 地理（自然地理）
+  topic: 地理 1 1.4：よく見る地形（河川・風・海岸・カルストなど）
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-002
+  - W-023
+  choice: zaixuan
+- id: GE-04
+  field: 地理（自然地理）
+  topic: 地理 1 1.5–1.6：大気の組成と鉛直構造、大気の受熱と熱による循環
+  sources:
+  - WE06
+  - WE07
+  units:
+  - P-201
+  - P-204
+  - P-122
+  choice: zaixuan
+- id: GE-05
+  field: 地理（自然地理）
+  topic: 地理 1 1.7：水の循環
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-061
+  - W-049
+  choice: zaixuan
+- id: GE-06
+  field: 地理（自然地理）
+  topic: 地理 1 1.8：海水の性質と運動
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-063
+  choice: zaixuan
+- id: GE-07
+  field: 地理（自然地理）
+  topic: 地理 1 1.9–1.10：土壌と植生
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-062
+  - B-094
+  choice: zaixuan
+- id: GE-08
+  field: 地理（自然地理）
+  topic: 地理 1 1.11：よく起こる自然災害の成因（洪水・干ばつ・台風・地震・地すべり）
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-064
+  choice: zaixuan
+- id: GE-09
+  field: 地理（自然地理）
+  topic: 地理 1 1.12：地理情報技術（リモートセンシング、測位、地理情報システム）
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-066
+  choice: zaixuan
+- id: GE-10
+  field: 地理（自然地理）
+  topic: 選択性必修 1 1.1：地球の運動の地理的な意味（昼夜、季節、時差）
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-073
+  choice: zaixuan
+- id: GE-11
+  field: 地理（自然地理）
+  topic: 選択性必修 1 1.2–1.3：岩石圏の物質循環、内的営力と外的営力による地形
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-008
+  - W-012
+  - W-023
+  choice: zaixuan
+- id: GE-12
+  field: 地理（自然地理）
+  topic: 選択性必修 1 1.4–1.5：天気の系（前線、低気圧と高気圧）、気圧帯と風帯
+  sources:
+  - WE06
+  - WE07
+  units:
+  - P-122
+  - P-204
+  choice: zaixuan
+- id: GE-13
+  field: 地理（自然地理）
+  topic: 選択性必修 1 1.6–1.8：陸の水、海流、海と大気の相互作用
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-061
+  - W-063
+  - P-204
+  choice: zaixuan
+- id: GE-14
+  field: 地理（自然地理）
+  topic: 選択性必修 1 1.9：自然環境の全体性と地域による違い
+  sources:
+  - WE06
+  - WE07
+  units:
+  - W-060
+  - B-094
+  choice: zaixuan

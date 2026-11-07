@@ -1,4 +1,8 @@
-# 網羅表：東京大学（理科の入学試験、数学）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：東京大学（理科の入学試験、数学と理科）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
+choices:
+  rika:
+    label: 理科（物理・化学・生物・地学から 2 科目。基礎を付した科目を含む）
+    pick: 31
 sources:
   EX05:
     title: 令和 9(2027)年度 東京大学入学者選抜要項
@@ -6,6 +10,10 @@ sources:
     date: '2026-11-07'
   EX06:
     title: 高等学校学習指導要領（平成 30 年告示）第 2 章第 4 節 数学（文部科学省）
+    url: https://www.mext.go.jp/content/20230120-mxt_kyoiku02-100002604_03.pdf
+    date: '2026-11-07'
+  WE01:
+    title: 高等学校学習指導要領（平成 30 年告示）第 2 章第 5 節 理科（文部科学省）
     url: https://www.mext.go.jp/content/20230120-mxt_kyoiku02-100002604_03.pdf
     date: '2026-11-07'
 items:
@@ -528,3 +536,681 @@ items:
   topic: 平均値の定理（数学 III）
   units:
   - D-008
+- id: PH-01
+  field: 物理
+  topic: 物理基礎：運動の表し方（物理量の測定と扱い方、速度、直線運動の加速度）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-117
+  - P-001
+  choice: rika
+- id: PH-02
+  field: 物理
+  topic: 物理基礎：様々な力とその働き（様々な力、力のつり合い、運動の法則、落下運動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-002
+  - P-003
+  choice: rika
+- id: PH-03
+  field: 物理
+  topic: 物理基礎：力学的エネルギー（運動エネルギーと位置エネルギー、力学的エネルギーの保存）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-004
+  choice: rika
+- id: PH-04
+  field: 物理
+  topic: 物理基礎：波（波の性質、音と振動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-021
+  - P-022
+  choice: rika
+- id: PH-05
+  field: 物理
+  topic: 物理基礎：熱（熱と温度、熱の利用）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-042
+  - P-044
+  choice: rika
+- id: PH-06
+  field: 物理
+  topic: 物理基礎：電気（物質と電気抵抗、電気の利用）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-029
+  - P-033
+  choice: rika
+- id: PH-07
+  field: 物理
+  topic: 物理基礎：エネルギーとその利用（エネルギーの変換、原子力）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-104
+  choice: rika
+- id: PH-08
+  field: 物理
+  topic: 物理：平面内の運動と剛体のつり合い（曲線運動の速度と加速度、放物運動、剛体のつり合い）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-005
+  choice: rika
+- id: PH-09
+  field: 物理
+  topic: 物理：運動量（運動量と力積、運動量の保存、衝突と力学的エネルギー）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-006
+  choice: rika
+- id: PH-10
+  field: 物理
+  topic: 物理：円運動と単振動
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-007
+  choice: rika
+- id: PH-11
+  field: 物理
+  topic: 物理：万有引力（惑星の運動、万有引力）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-009
+  choice: rika
+- id: PH-12
+  field: 物理
+  topic: 物理：気体分子の運動（気体分子の運動と圧力、内部エネルギー、気体の状態変化）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-043
+  - P-044
+  choice: rika
+- id: PH-13
+  field: 物理
+  topic: 物理：波の伝わり方（表し方、干渉と回折）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-021
+  choice: rika
+- id: PH-14
+  field: 物理
+  topic: 物理：音（音の干渉と回折、ドップラー効果）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-022
+  choice: rika
+- id: PH-15
+  field: 物理
+  topic: 物理：光（光の伝わり方、光の回折と干渉）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-023
+  - P-024
+  choice: rika
+- id: PH-16
+  field: 物理
+  topic: 物理：電気と電流（電荷と電界、電界と電位、電気容量、電気回路）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-030
+  - P-029
+  choice: rika
+- id: PH-17
+  field: 物理
+  topic: 物理：電流と磁界（電流による磁界、電流が磁界から受ける力、電磁誘導、電磁波）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-032
+  - P-033
+  - P-198
+  - P-205
+  choice: rika
+- id: PH-18
+  field: 物理
+  topic: 物理：電子と光（電子、粒子性と波動性）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-069
+  choice: rika
+- id: PH-19
+  field: 物理
+  topic: 物理：原子と原子核（原子とスペクトル、原子核、素粒子）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-088
+  - P-104
+  - P-105
+  choice: rika
+- id: CH-01
+  field: 化学
+  topic: 化学基礎：化学と物質（化学の特徴、物質の分離・精製、単体と化合物、熱運動と物質の三態）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-006
+  - H-008
+  - H-003
+  choice: rika
+- id: CH-02
+  field: 化学
+  topic: 化学基礎：物質の構成粒子（原子の構造、電子配置と周期表）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-011
+  - H-012
+  choice: rika
+- id: CH-03
+  field: 化学
+  topic: 化学基礎：物質と化学結合（イオンとイオン結合、分子と共有結合、金属と金属結合）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-013
+  - H-014
+  - H-018
+  choice: rika
+- id: CH-04
+  field: 化学
+  topic: 化学基礎：物質量と化学反応式
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-015
+  - H-010
+  - H-016
+  choice: rika
+- id: CH-05
+  field: 化学
+  topic: 化学基礎：酸・塩基と中和
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-025
+  choice: rika
+- id: CH-06
+  field: 化学
+  topic: 化学基礎：酸化と還元
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-017
+  choice: rika
+- id: CH-07
+  field: 化学
+  topic: 化学：物質の状態とその変化（状態変化、気体の性質、固体の構造）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-020
+  - H-019
+  choice: rika
+- id: CH-08
+  field: 化学
+  topic: 化学：溶液と平衡（溶解平衡、溶液とその性質）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-021
+  choice: rika
+- id: CH-09
+  field: 化学
+  topic: 化学：化学反応とエネルギー（化学反応と熱・光、電池、電気分解）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-022
+  - H-027
+  choice: rika
+- id: CH-10
+  field: 化学
+  topic: 化学：反応速度
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-023
+  choice: rika
+- id: CH-11
+  field: 化学
+  topic: 化学：化学平衡とその移動、電離平衡
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-024
+  - H-026
+  choice: rika
+- id: CH-12
+  field: 化学
+  topic: 化学：無機物質（典型元素、遷移元素）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-028
+  - H-029
+  - H-030
+  choice: rika
+- id: CH-13
+  field: 化学
+  topic: 化学：有機化合物（炭化水素、官能基をもつ化合物、芳香族化合物）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-032
+  - H-033
+  - H-034
+  choice: rika
+- id: CH-14
+  field: 化学
+  topic: 化学：高分子化合物（合成高分子化合物、天然高分子化合物）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-035
+  - H-044
+  choice: rika
+- id: CH-15
+  field: 化学
+  topic: 化学：人間生活の中の化学（様々な物質と人間生活）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - H-070
+  choice: rika
+- id: BI-01
+  field: 生物
+  topic: 生物基礎：生物の特徴（生物の共通性と多様性、生物とエネルギー）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-022
+  - B-025
+  - B-029
+  choice: rika
+- id: BI-02
+  field: 生物
+  topic: 生物基礎：遺伝子とその働き（遺伝情報と DNA、遺伝情報とタンパク質の合成）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-032
+  choice: rika
+- id: BI-03
+  field: 生物
+  topic: 生物基礎：神経系と内分泌系による調節（情報の伝達、体内環境の維持の仕組み）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-034
+  - B-035
+  choice: rika
+- id: BI-04
+  field: 生物
+  topic: 生物基礎：免疫
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-037
+  choice: rika
+- id: BI-05
+  field: 生物
+  topic: 生物基礎：植生と遷移
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-040
+  - B-094
+  choice: rika
+- id: BI-06
+  field: 生物
+  topic: 生物基礎：生態系とその保全（生態系と生物の多様性、生態系のバランスと保全）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-041
+  - B-093
+  choice: rika
+- id: BI-07
+  field: 生物
+  topic: 生物：生命の起源と細胞の進化
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-027
+  choice: rika
+- id: BI-08
+  field: 生物
+  topic: 生物：遺伝子の変化と進化の仕組み（遺伝子の変化、遺伝子の組合せの変化、進化の仕組み）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-032
+  - B-045
+  - B-042
+  choice: rika
+- id: BI-09
+  field: 生物
+  topic: 生物：生物の系統と進化（生物の系統、人類の系統と進化）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-025
+  - B-042
+  choice: rika
+- id: BI-10
+  field: 生物
+  topic: 生物：細胞と分子（生体物質と細胞、生命現象とタンパク質）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-028
+  - B-029
+  - B-031
+  choice: rika
+- id: BI-11
+  field: 生物
+  topic: 生物：代謝（呼吸、光合成）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-030
+  choice: rika
+- id: BI-12
+  field: 生物
+  topic: 生物：遺伝情報とその発現
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-032
+  choice: rika
+- id: BI-13
+  field: 生物
+  topic: 生物：発生と遺伝子発現（遺伝子の発現調節、発生と遺伝子発現）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-044
+  - B-046
+  choice: rika
+- id: BI-14
+  field: 生物
+  topic: 生物：遺伝子を扱う技術
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-033
+  choice: rika
+- id: BI-15
+  field: 生物
+  topic: 生物：動物の反応と行動（刺激の受容と反応、動物の行動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-034
+  - B-039
+  choice: rika
+- id: BI-16
+  field: 生物
+  topic: 生物：植物の環境応答
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-038
+  choice: rika
+- id: BI-17
+  field: 生物
+  topic: 生物：個体群と生物群集
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-040
+  choice: rika
+- id: BI-18
+  field: 生物
+  topic: 生物：生態系（物質生産と物質循環、生態系と人間生活）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - B-041
+  - B-093
+  choice: rika
+- id: ES-01
+  field: 地学
+  topic: 地学基礎：惑星としての地球（地球の形と大きさ、地球内部の層構造）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-006
+  choice: rika
+- id: ES-02
+  field: 地学
+  topic: 地学基礎：活動する地球（プレートの運動、火山活動と地震）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-012
+  - W-004
+  - W-005
+  choice: rika
+- id: ES-03
+  field: 地学
+  topic: 地学基礎：大気と海洋（地球の熱収支、大気と海水の運動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-201
+  - P-204
+  choice: rika
+- id: ES-04
+  field: 地学
+  topic: 地学基礎：地球の変遷（宇宙・太陽系と地球の誕生、古生物の変遷と地球環境）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-202
+  - W-074
+  - W-009
+  choice: rika
+- id: ES-05
+  field: 地学
+  topic: 地学基礎：地球の環境（地球環境の科学、日本の自然環境）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-201
+  - W-064
+  choice: rika
+- id: ES-06
+  field: 地学
+  topic: 地学：地球の形状（地球の形と重力、地球の磁気）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-015
+  - W-011
+  choice: rika
+- id: ES-07
+  field: 地学
+  topic: 地学：地球の内部（内部構造、内部の状態と物質）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-006
+  - W-005
+  - W-013
+  choice: rika
+- id: ES-08
+  field: 地学
+  topic: 地学：プレートテクトニクス、地震と地殻変動
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-012
+  - W-005
+  choice: rika
+- id: ES-09
+  field: 地学
+  topic: 地学：火成活動、変成作用と変成岩
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-004
+  - W-008
+  - W-016
+  - W-019
+  choice: rika
+- id: ES-10
+  field: 地学
+  topic: 地学：地表の変化、地層の観察
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-018
+  - W-014
+  - W-023
+  choice: rika
+- id: ES-11
+  field: 地学
+  topic: 地学：地球環境の変遷、日本列島の成り立ち
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-009
+  - W-010
+  - W-036
+  choice: rika
+- id: ES-12
+  field: 地学
+  topic: 地学：大気の構造と運動（大気の構造、大気の運動と気象）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-122
+  - P-123
+  - P-124
+  - P-204
+  choice: rika
+- id: ES-13
+  field: 地学
+  topic: 地学：海洋と海水の運動（海洋の構造、海水の運動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-063
+  - P-204
+  - W-024
+  choice: rika
+- id: ES-14
+  field: 地学
+  topic: 地学：太陽系（地球の自転と公転、太陽系天体とその運動、太陽の活動）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - W-073
+  - W-074
+  - P-162
+  choice: rika
+- id: ES-15
+  field: 地学
+  topic: 地学：恒星と銀河系（恒星の性質と進化、銀河系の構造）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-162
+  - P-202
+  choice: rika
+- id: ES-16
+  field: 地学
+  topic: 地学：銀河と宇宙（様々な銀河、膨張する宇宙）
+  sources:
+  - EX05
+  - WE01
+  units:
+  - P-202
+  choice: rika

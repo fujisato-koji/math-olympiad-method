@@ -1,4 +1,8 @@
-# 網羅表：韓国の大学修学能力試験（修能、数学）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：韓国の大学修学能力試験（修能、数学と科学探究）（whole-exams の係が作り直した。数学の論題は元の表のまま、理科などの論題を足した）
+choices:
+  tamgu:
+    label: 科学探究（物理学Ⅰ・Ⅱ、化学Ⅰ・Ⅱ、生命科学Ⅰ・Ⅱ、地球科学Ⅰ・Ⅱ から 2 科目。社会探究と合わせて 17 科目から最大 2 科目）
+    pick: 18
 sources:
   EX13:
     title: 報道資料「2027학년도 대학수학능력시험은 2026년 11월 19일(목)에 시행됩니다」別添 2（大韓民国 教育部、KDI 経済情報センターの再掲）
@@ -8,6 +12,10 @@ sources:
     title: 수학과 교육과정（教育部告示 第 2020-236 号 別冊 8）
     url: https://www.moe.go.kr/boardCnts/viewRenew.do?boardID=141&lev=0&statusYN=W&s=moe&m=0404&opType=N&boardSeq=81884
     date: '2026-11-07'
+  WE08:
+    title: 교육부 고시 제2015-74호 [별책 9] 과학과 교육과정（大韓民国 教育部。韓国教員大学校の掲載の写しは 403 のため Internet Archive の 2023-10-14 の写し）
+    url: http://web.archive.org/web/20231014203758/https://ceri.knue.ac.kr/pds/2015_05_science.pdf
+    date: '2026-11-08'
 items:
 - id: T-01
   field: 解析
@@ -381,3 +389,788 @@ items:
   topic: 円に内接する四角形と円周角（正弦定理の問題の図形）
   units:
   - G-023
+- id: PA-01
+  field: 物理学Ⅰ
+  topic: 力学とエネルギー：運動の分類、ニュートンの運動の法則、作用と反作用
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-001
+  - P-003
+  choice: tamgu
+- id: PA-02
+  field: 物理学Ⅰ
+  topic: 力学とエネルギー：運動量の保存と力積
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-006
+  choice: tamgu
+- id: PA-03
+  field: 物理学Ⅰ
+  topic: 力学とエネルギー：力学的エネルギーの保存
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-004
+  choice: tamgu
+- id: PA-04
+  field: 物理学Ⅰ
+  topic: 力学とエネルギー：熱機関と熱力学の法則
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-044
+  - P-045
+  choice: tamgu
+- id: PA-05
+  field: 物理学Ⅰ
+  topic: 力学とエネルギー：特殊相対論（時間の遅れ、長さの収縮、質量とエネルギー）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-057
+  - P-104
+  choice: tamgu
+- id: PA-06
+  field: 物理学Ⅰ
+  topic: 物質と電磁場：原子と電気力、エネルギー準位とスペクトル
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-030
+  - P-088
+  choice: tamgu
+- id: PA-07
+  field: 物理学Ⅰ
+  topic: 物質と電磁場：固体のエネルギー帯、半導体とダイオード
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-191
+  choice: tamgu
+- id: PA-08
+  field: 物理学Ⅰ
+  topic: 物質と電磁場：電流の磁気作用、磁性体、電磁誘導
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-032
+  - P-033
+  choice: tamgu
+- id: PA-09
+  field: 物理学Ⅰ
+  topic: 波動と情報通信：波の性質と屈折、全反射と光通信
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-021
+  - P-023
+  choice: tamgu
+- id: PA-10
+  field: 物理学Ⅰ
+  topic: 波動と情報通信：電磁波のスペクトル、波の干渉
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-205
+  - P-024
+  choice: tamgu
+- id: PA-11
+  field: 物理学Ⅰ
+  topic: 波動と情報通信：光と物質の二重性（光電効果、画像の記録、電子顕微鏡）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-069
+  choice: tamgu
+- id: PB-01
+  field: 物理学Ⅱ
+  topic: 力学的相互作用：平面の運動（力の合成、重心とつり合い、放物運動、等速円運動）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-005
+  - P-007
+  choice: tamgu
+- id: PB-02
+  field: 物理学Ⅱ
+  topic: 力学的相互作用：ケプラーの法則と万有引力、等価原理、重力レンズとブラックホール
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-009
+  - P-059
+  choice: tamgu
+- id: PB-03
+  field: 物理学Ⅱ
+  topic: 力学的相互作用：仕事と運動エネルギー、単振り子のエネルギー、熱の仕事当量
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-004
+  - P-007
+  - P-042
+  choice: tamgu
+- id: PB-04
+  field: 物理学Ⅱ
+  topic: 電磁場：電場と電位、静電誘導と誘電分極、コンデンサー
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-030
+  - P-031
+  choice: tamgu
+- id: PB-05
+  field: 物理学Ⅱ
+  topic: 電磁場：直流回路、トランジスタの増幅
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-029
+  - P-191
+  choice: tamgu
+- id: PB-06
+  field: 物理学Ⅱ
+  topic: 電磁場：電流のつくる磁場、電磁誘導と相互誘導
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-032
+  - P-033
+  choice: tamgu
+- id: PB-07
+  field: 物理学Ⅱ
+  topic: 波動と物質の性質：電磁波の干渉と回折、ドップラー効果、交流回路での電磁波の発生とアンテナ
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-024
+  - P-022
+  - P-198
+  choice: tamgu
+- id: PB-08
+  field: 物理学Ⅱ
+  topic: 波動と物質の性質：凸レンズの像、二重スリットの干渉
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-023
+  - P-024
+  choice: tamgu
+- id: PB-09
+  field: 物理学Ⅱ
+  topic: 波動と物質の性質：光電効果、物質波、水素原子の電子の軌道
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-069
+  - P-088
+  choice: tamgu
+- id: CA-01
+  field: 化学Ⅰ
+  topic: 化学の第一歩：化学の有用さと炭素化合物
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-070
+  - H-032
+  choice: tamgu
+- id: CA-02
+  field: 化学Ⅰ
+  topic: 化学の第一歩：物質量と化学反応式、モル濃度
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-015
+  - H-016
+  - H-010
+  choice: tamgu
+- id: CA-03
+  field: 化学Ⅰ
+  topic: 原子の世界：原子の構成と同位体
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-011
+  choice: tamgu
+- id: CA-04
+  field: 化学Ⅰ
+  topic: 原子の世界：量子数と軌道、電子配置
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-071
+  choice: tamgu
+- id: CA-05
+  field: 化学Ⅰ
+  topic: 原子の世界：周期表と周期的な性質（有効核電荷、原子半径、イオン化エネルギー）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-012
+  choice: tamgu
+- id: CA-06
+  field: 化学Ⅰ
+  topic: 化学結合と分子の世界：イオン結合・共有結合・金属結合、電気陰性度、ルイスの電子点式
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-013
+  - H-014
+  choice: tamgu
+- id: CA-07
+  field: 化学Ⅰ
+  topic: 化学結合と分子の世界：電子対反発と分子の形、極性
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-018
+  choice: tamgu
+- id: CA-08
+  field: 化学Ⅰ
+  topic: 動的な化学反応：動的平衡、水の電離と pH、中和と中和滴定
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-024
+  - H-025
+  choice: tamgu
+- id: CA-09
+  field: 化学Ⅰ
+  topic: 動的な化学反応：酸化と還元、酸化数
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-017
+  choice: tamgu
+- id: CA-10
+  field: 化学Ⅰ
+  topic: 動的な化学反応：反応での熱の出入り
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-022
+  choice: tamgu
+- id: CB-01
+  field: 化学Ⅱ
+  topic: 物質の三態と溶液：気体の性質（理想気体の状態方程式、分圧）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-020
+  choice: tamgu
+- id: CB-02
+  field: 化学Ⅱ
+  topic: 物質の三態と溶液：分子間の相互作用と液体（水素結合、蒸気圧）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-018
+  - H-020
+  choice: tamgu
+- id: CB-03
+  field: 化学Ⅱ
+  topic: 物質の三態と溶液：固体（結晶の種類と単位格子）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-019
+  choice: tamgu
+- id: CB-04
+  field: 化学Ⅱ
+  topic: 物質の三態と溶液：溶液の濃度と束一的性質（蒸気圧降下、沸点上昇、凝固点降下、浸透圧）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-021
+  choice: tamgu
+- id: CB-05
+  field: 化学Ⅱ
+  topic: 反応エンタルピーと化学平衡：熱化学方程式とヘスの法則
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-022
+  choice: tamgu
+- id: CB-06
+  field: 化学Ⅱ
+  topic: 反応エンタルピーと化学平衡：平衡定数と平衡の移動、相図
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-024
+  - H-036
+  choice: tamgu
+- id: CB-07
+  field: 化学Ⅱ
+  topic: 反応エンタルピーと化学平衡：電離定数と酸・塩基の強さ、緩衝液
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-026
+  choice: tamgu
+- id: CB-08
+  field: 化学Ⅱ
+  topic: 反応の速さと触媒：速度式、1 次反応の半減期、活性化エネルギー、濃度と温度の影響
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-023
+  choice: tamgu
+- id: CB-09
+  field: 化学Ⅱ
+  topic: 反応の速さと触媒：触媒のはたらきと利用
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-023
+  choice: tamgu
+- id: CB-10
+  field: 化学Ⅱ
+  topic: 電気化学とその利用：化学電池、電気分解、燃料電池
+  sources:
+  - EX13
+  - WE08
+  units:
+  - H-027
+  - H-048
+  choice: tamgu
+- id: BA-01
+  field: 生命科学Ⅰ
+  topic: 生命科学の理解：生物の特性と探究の方法
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-022
+  - S-031
+  choice: tamgu
+- id: BA-02
+  field: 生命科学Ⅰ
+  topic: 人の物質代謝：エネルギーの代謝、老廃物の排出、代謝の病気
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-029
+  - B-036
+  choice: tamgu
+- id: BA-03
+  field: 生命科学Ⅰ
+  topic: 恒常性とからだの調節：興奮の伝導と伝達、筋収縮、神経系
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-034
+  choice: tamgu
+- id: BA-04
+  field: 生命科学Ⅰ
+  topic: 恒常性とからだの調節：内分泌系と恒常性
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-035
+  choice: tamgu
+- id: BA-05
+  field: 生命科学Ⅰ
+  topic: 恒常性とからだの調節：からだの防御とワクチン
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-037
+  choice: tamgu
+- id: BA-06
+  field: 生命科学Ⅰ
+  topic: 遺伝：染色体とゲノム、細胞分裂
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-023
+  - B-032
+  choice: tamgu
+- id: BA-07
+  field: 生命科学Ⅰ
+  topic: 遺伝：人の遺伝（家系図、常染色体と性染色体の遺伝、遺伝病）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-024
+  - B-045
+  choice: tamgu
+- id: BA-08
+  field: 生命科学Ⅰ
+  topic: 生態系と相互作用：生態系の構成、個体群と群集（重要値、遷移）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-040
+  - B-021
+  choice: tamgu
+- id: BA-09
+  field: 生命科学Ⅰ
+  topic: 生態系と相互作用：エネルギーの流れと物質の循環、生物多様性
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-041
+  - B-093
+  choice: tamgu
+- id: BB-01
+  field: 生命科学Ⅱ
+  topic: 生命科学の歴史（主な発見と研究の方法）
+  sources:
+  - EX13
+  - WE08
+  none: 地図にない（候補：生命科学の歴史と研究の方法）
+  choice: tamgu
+- id: BB-02
+  field: 生命科学Ⅱ
+  topic: 細胞の特性：生物のからだの組み立てと生体分子
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-028
+  - B-022
+  choice: tamgu
+- id: BB-03
+  field: 生命科学Ⅱ
+  topic: 細胞の特性：原核細胞と真核細胞、細胞小器官
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-022
+  - B-025
+  choice: tamgu
+- id: BB-04
+  field: 生命科学Ⅱ
+  topic: 細胞の特性：細胞膜を通る物質の出入り、酵素
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-031
+  - B-029
+  choice: tamgu
+- id: BB-05
+  field: 生命科学Ⅱ
+  topic: 細胞呼吸と光合成（電子伝達系、発酵）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-030
+  choice: tamgu
+- id: BB-06
+  field: 生命科学Ⅱ
+  topic: 遺伝子の発現：ゲノム、DNA の複製、転写と翻訳、遺伝暗号
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-032
+  choice: tamgu
+- id: BB-07
+  field: 生命科学Ⅱ
+  topic: 遺伝子の発現の調節（原核生物と真核生物、発生と分化）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-044
+  - B-046
+  choice: tamgu
+- id: BB-08
+  field: 生命科学Ⅱ
+  topic: 生物の進化と多様性：原始細胞の誕生、単細胞から多細胞へ
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-027
+  choice: tamgu
+- id: BB-09
+  field: 生命科学Ⅱ
+  topic: 生物の進化と多様性：3 ドメイン 6 界の分類と系統樹
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-025
+  choice: tamgu
+- id: BB-10
+  field: 生命科学Ⅱ
+  topic: 生物の進化と多様性：進化の原理と種分化
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-042
+  choice: tamgu
+- id: BB-11
+  field: 生命科学Ⅱ
+  topic: 生命工学の技術：DNA の組換え、核移植・組織培養・細胞融合、単クローン抗体・遺伝子治療・幹細胞
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-033
+  - B-080
+  choice: tamgu
+- id: BB-12
+  field: 生命科学Ⅱ
+  topic: 生命工学と社会：遺伝子組換え生物の影響、倫理・法・社会の問題
+  sources:
+  - EX13
+  - WE08
+  units:
+  - B-081
+  choice: tamgu
+- id: EA-01
+  field: 地球科学Ⅰ
+  topic: 地圏の変動：大陸移動説からプレートテクトニクスへ、大陸の分布の変化
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-012
+  - W-011
+  choice: tamgu
+- id: EA-02
+  field: 地球科学Ⅰ
+  topic: 地圏の変動：マントルの対流とプルーム、変動帯のマグマと火成岩
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-012
+  - W-004
+  choice: tamgu
+- id: EA-03
+  field: 地球科学Ⅰ
+  topic: 地球の歴史：堆積構造と堆積環境、地質構造
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-018
+  - W-006
+  choice: tamgu
+- id: EA-04
+  field: 地球科学Ⅰ
+  topic: 地球の歴史：地層の前後関係、絶対年代、地質時代と化石
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-003
+  - W-010
+  - W-009
+  - W-014
+  choice: tamgu
+- id: EA-05
+  field: 地球科学Ⅰ
+  topic: 大気と海洋の変化：高気圧と低気圧、台風、激しい気象
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-122
+  choice: tamgu
+- id: EA-06
+  field: 地球科学Ⅰ
+  topic: 大気と海洋の変化：海水の性質（水温、塩分、密度、溶けた気体）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-063
+  choice: tamgu
+- id: EA-07
+  field: 地球科学Ⅰ
+  topic: 大気と海洋の相互作用：大気の大循環と表層・深層の海洋循環、湧昇とエルニーニョ
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-204
+  - W-063
+  choice: tamgu
+- id: EA-08
+  field: 地球科学Ⅰ
+  topic: 大気と海洋の相互作用：気候変動の原因
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-201
+  choice: tamgu
+- id: EA-09
+  field: 地球科学Ⅰ
+  topic: 星と系外惑星系：星の物理量と HR 図、星の進化とエネルギー源
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-162
+  - P-202
+  choice: tamgu
+- id: EA-10
+  field: 地球科学Ⅰ
+  topic: 星と系外惑星系：系外惑星の探査と生命が住める領域
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-074
+  choice: tamgu
+- id: EA-11
+  field: 地球科学Ⅰ
+  topic: 外部銀河と宇宙膨張：銀河の分類、宇宙の膨張、暗黒物質と暗黒エネルギー
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-202
+  choice: tamgu
+- id: EB-01
+  field: 地球科学Ⅱ
+  topic: 地球の形成と力の場：地球の形成、内部のエネルギー、地震波と内部構造、アイソスタシー
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-006
+  - W-005
+  - W-015
+  choice: tamgu
+- id: EB-02
+  field: 地球科学Ⅱ
+  topic: 地球の形成と力の場：重力と重力異常、地磁気
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-015
+  - W-011
+  choice: tamgu
+- id: EB-03
+  field: 地球科学Ⅱ
+  topic: 地球をつくる物質：ケイ酸塩鉱物、偏光顕微鏡による鉱物の識別
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-013
+  - W-007
+  choice: tamgu
+- id: EB-04
+  field: 地球科学Ⅱ
+  topic: 地球をつくる物質と資源：鉱床のでき方、鉱物と海洋の資源
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-065
+  choice: tamgu
+- id: EB-05
+  field: 地球科学Ⅱ
+  topic: 朝鮮半島の地質（地質図、地史、プレートの環境、変成岩と火成岩）
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-014
+  - W-012
+  - W-019
+  choice: tamgu
+- id: EB-06
+  field: 地球科学Ⅱ
+  topic: 海水の運動と循環：静水圧平衡、エクマン輸送と地衡流、波、高潮と津波、潮汐
+  sources:
+  - EX13
+  - WE08
+  units:
+  - W-063
+  - P-124
+  - W-024
+  choice: tamgu
+- id: EB-07
+  field: 地球科学Ⅱ
+  topic: 大気の運動と循環：断熱変化と大気の安定度、地衡風と傾度風、偏西風の波、大気の大循環
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-123
+  - P-124
+  - P-204
+  choice: tamgu
+- id: EB-08
+  field: 地球科学Ⅱ
+  topic: 惑星の運動：天球の座標、惑星の見かけの運動と会合周期、ケプラーの法則
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-162
+  - W-074
+  choice: tamgu
+- id: EB-09
+  field: 地球科学Ⅱ
+  topic: 銀河系と宇宙の構造：星団と変光星による距離、星間物質、21 cm 線、回転曲線、宇宙の大規模構造
+  sources:
+  - EX13
+  - WE08
+  units:
+  - P-202
+  - P-214
+  choice: tamgu
