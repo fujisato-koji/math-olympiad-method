@@ -280,10 +280,10 @@ def check(data, problems):
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
-        # 大学以降を組み込む途中は、目標の網羅表がまだない単元があるので、誤りでなく警告にする（一覧は docs/roadmap.md）
+        # 網羅表がそろったので誤りに戻した（2026-11-08、D-036）。道のりの外の単元は、合う目標の論題に当てるか外す
         off = [uid for uid, (_, _, u) in units.items() if uid not in on_path and not u.get("measure")]
         if off:
-            print(f"警告: どの目標の道のりにも入らない単元 {len(off)}（網羅表がそろったら誤りに戻す）")
+            errors.append(f"どの目標の道のりにも入らない単元 {len(off)}：" + "、".join(off[:10]) + ("…" if len(off) > 10 else ""))
     # 大学院の目標の論題が段 3 以下の単元だけを指すなら、記号の取り違えを疑う（語の部分一致の誤りがあった）
     levels = {g["id"]: str(g.get("level", "")) for g in data.get("goals", [])}
     for gid, cov in data["coverages"].items():

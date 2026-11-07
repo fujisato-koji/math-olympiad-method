@@ -12,6 +12,10 @@ sources:
     title: ICVA, North American Veterinary Licensing Examination Practice Analysis, Executive Summary (2017)
     url: https://www.icva.net/image/cache/ICVA_NAVLE_Practice_Analysis_Executive_Summary_final.pdf
     date: 2026-11-08
+  TD02:
+    title: International Council for Veterinary Assessment (ICVA), NAVLE Species and Diagnoses（version 0.026。13 の動物の群ごとに器官の系の診断の例）
+    url: https://www.icva.net/image/cache/NAVLE_Species_and_Diagnoses_0.026.pdf
+    date: 2026-11-08
 items:
 - id: T-01
   field: 農学と獣医学
@@ -19,7 +23,9 @@ items:
   sources:
   - OR19
   - OR20
-  none: 地図にない（候補：獣医の臨床診断学（身体の検査、臨床病理、画像診断））
+  units:
+  - V-030
+  - V-031
 - id: T-02
   field: 農学と獣医学
   topic: 病態生理と薬の作用のしくみ、剖検で死因を決める
@@ -33,25 +39,34 @@ items:
   topic: 中毒の調査（伴侶動物と食用・狩猟の動物）
   sources:
   - OR20
-  none: 地図にない（候補：獣医の毒性学）
+  - TD02
+  units:
+  - V-032
 - id: T-04
   field: 農学と獣医学
   topic: 鑑別診断と診断の計画、資源を考えた検査の優先順位
   sources:
   - OR20
-  none: 地図にない（候補：獣医の内科学（動物の種と器官ごとの病気））
+  units:
+  - V-030
+  - I-044
 - id: T-05
   field: 農学と獣医学
   topic: 治療（薬と生物製剤とワクチンの投与と処方、予後の判定、治療の評価、リハビリ）
   sources:
   - OR20
-  none: 地図にない（候補：獣医の薬理と治療学（動物の種による薬の違い、食用の動物の休薬と残留））
+  units:
+  - V-032
+  - V-036
+  - V-034
 - id: T-06
   field: 農学と獣医学
   topic: 麻酔と外科（全身と局所の麻酔、外科の手技、傷の処置と固定）
   sources:
   - OR20
-  none: 地図にない（候補：獣医の麻酔と外科）
+  units:
+  - V-033
+  - V-034
 - id: T-07
   field: 農学と獣医学
   topic: 群れと集団の健康の管理（生産の記録と群の健康の指標、飼い方の改善）
@@ -60,6 +75,7 @@ items:
   units:
   - V-011
   - V-015
+  - V-038
 - id: T-08
   field: 農学と獣医学
   topic: 行動の評価と行動を直す計画
@@ -107,25 +123,39 @@ items:
   sources:
   - OR19
   - OR21
-  none: 地図にない（候補：小動物の臨床（犬と猫の内科と外科））
+  - TD02
+  units:
+  - V-035
+  - V-036
+  - V-037
 - id: T-14
   field: 農学と獣医学
   topic: 馬の病気
   sources:
   - OR19
   - OR21
-  none: 地図にない（候補：馬の臨床）
+  - TD02
+  units:
+  - V-035
+  - V-036
+  - V-034
+  - V-037
 - id: T-15
   field: 農学と獣医学
   topic: 牛・豚・羊と山羊・家禽の病気
   sources:
   - OR19
   - OR21
-  none: 地図にない（候補：産業動物の臨床（牛・豚・羊と山羊・家禽の病気と群の診療））
+  - TD02
+  units:
+  - V-038
+  - V-037
 - id: T-16
   field: 農学と獣医学
   topic: 小さな哺乳類・ペットの鳥・爬虫類・ラクダとシカのなかま・水の動物の病気
   sources:
   - OR19
   - OR21
-  none: 地図にない（候補：エキゾチック動物と水の動物の臨床）
+  - TD02
+  units:
+  - V-039
