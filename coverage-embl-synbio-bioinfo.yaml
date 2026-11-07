@@ -1,0 +1,153 @@
+# 網羅表：合成生物学とバイオインフォマティクスの研究者（EMBL、EMBL-EBI）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JC07:
+    title: 'EMBL Steinmetz Group, Open positions: Postdoctoral Fellow – Synthetic Biology Design and Evolution（HD01874、2020-12-14 掲載、Internet Archive の写し 2022-03-02）'
+    url: http://web.archive.org/web/20220302171414/https://www.embl.org/groups/steinmetz/open-positions/
+    date: '2026-11-08'
+  JC08:
+    title: EMBL-EBI, Ensembl Microbes Bioinformatician（JR4343、2026-10-28 掲載、Workday の公開データ）
+    url: https://embl.wd103.myworkdayjobs.com/EMBL/job/Hinxton-Cambridgeshire/Bioinformatician_JR4343
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 生物
+  topic: 合成生物学（進化の中でゲノムの設計の原理を見つける）
+  sources:
+  - JC07
+  units:
+  - E-229
+  - B-180
+- id: T-02
+  field: 生物
+  topic: 完全に合成した真核生物のゲノム（酵母 Sc2.0）と、ゲノム全体に組み換えを起こす SCRaMbLE
+  sources:
+  - JC07
+  units:
+  - B-180
+  - B-147
+- id: T-03
+  field: 生物
+  topic: ゲノムの構成の急な変化が、働きと分子に及ぼす影響を測る
+  sources:
+  - JC07
+  units:
+  - B-001
+  - K-113
+- id: T-04
+  field: 生物
+  topic: 実験室の進化（実験進化）の実験とデータの解析
+  sources:
+  - JC07
+  units:
+  - B-181
+- id: T-05
+  field: 計算機科学
+  topic: 高速の表現型の計測のデータの解析
+  sources:
+  - JC07
+  units:
+  - K-114
+  - K-060
+- id: T-06
+  field: 計算機科学
+  topic: 第 3 世代（長い読み取り）の配列決定のデータの解析
+  sources:
+  - JC07
+  units:
+  - K-113
+  - K-106
+- id: T-07
+  field: 統計学
+  topic: 大規模な実験の設計と、高速の実験のデータの処理・解析・保存
+  sources:
+  - JC07
+  units:
+  - S-031
+  - K-114
+  - K-190
+- id: T-08
+  field: 統計学
+  topic: 基本の統計の知識
+  sources:
+  - JC07
+  units:
+  - K-114
+- id: T-09
+  field: 計算機科学
+  topic: スクリプト言語（R、Python）
+  sources:
+  - JC07
+  - JC08
+  units:
+  - K-012
+  - K-016
+- id: T-10
+  field: 計算機科学
+  topic: ワークフロー管理系（Snakemake、Nextflow）で計算の流れを組む、UNIX/Linux と計算機クラスタ（SLURM）と HPC・クラウド
+  sources:
+  - JC07
+  - JC08
+  units:
+  - K-190
+- id: T-11
+  field: 生物
+  topic: 原核生物と微生物の真核生物の生物学（細菌、古細菌、菌類、原生生物）
+  sources:
+  - JC08
+  units:
+  - B-144
+  - B-145
+  - B-147
+- id: T-12
+  field: 計算機科学
+  topic: 微生物のゲノムの注釈（新しい注釈を取り込む、分類群に特有の注釈の道具を見つけて評価する）
+  sources:
+  - JC08
+  units:
+  - K-106
+  - K-110
+- id: T-13
+  field: 計算機科学
+  topic: 機能の注釈の流れ（パイプライン）を作り、微生物の機能の注釈の表し方を決める
+  sources:
+  - JC08
+  units:
+  - K-110
+  - K-190
+- id: T-14
+  field: 計算機科学
+  topic: 微生物のパンゲノムの表し方
+  sources:
+  - JC08
+  units:
+  - K-191
+- id: T-15
+  field: 計算機科学
+  topic: ゲノムの解析と注釈の道具、生物のデータの形式（FASTA、GFF3）、大規模な生物のデータ
+  sources:
+  - JC08
+  units:
+  - K-118
+  - K-106
+- id: T-16
+  field: 計算機科学
+  topic: 関係データベース（MySQL、PostgreSQL）
+  sources:
+  - JC08
+  units:
+  - K-169
+- id: T-17
+  field: 計算機科学
+  topic: ソフトウェア開発の良い慣行（本番の品質のコード、版管理、テスト、コードの査読、文書化）
+  sources:
+  - JC08
+  units:
+  - K-013
+  - K-017
+- id: T-18
+  field: 計算機科学
+  topic: 機械学習による品質の管理とゲノムの注釈（望ましい）
+  sources:
+  - JC08
+  units:
+  - K-116

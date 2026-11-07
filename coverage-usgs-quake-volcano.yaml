@@ -1,0 +1,142 @@
+# 網羅表：地震と火山の研究者（米国地質調査所 USGS）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  JC01:
+    title: 'USGS Mendenhall Research Fellowship Program, 23-19. Earthquake sequences and how they evolve: Underlying physics, statistical properties, and impacts on hazard forecasts（2024-11-01 締切）'
+    url: https://www.usgs.gov/centers/mendenhall-research-fellowship-program/23-19-earthquake-sequences-and-how-they-evolve
+    date: '2026-11-08'
+  JC02:
+    title: USGS Mendenhall Research Fellowship Program, 23-25. Towards rapid and automatic global earthquake reporting（2024-11-01 締切）
+    url: https://www.usgs.gov/centers/mendenhall-research-fellowship-program/23-25-towards-rapid-and-automatic-global-earthquake
+    date: '2026-11-08'
+  JC03:
+    title: USGS Mendenhall Research Fellowship Program, 23-26. Developing empirical constraints on the petrologic behavior of volcanic volatiles at high-threat Alaskan volcanoes（2024-11-01 締切）
+    url: https://www.usgs.gov/centers/mendenhall-research-fellowship-program/23-26-developing-empirical-constraints-petrologic
+    date: '2026-11-08'
+  JC04:
+    title: USAJOBS, USGS Mendenhall Postdoctoral Research Fellowship RO 23-19（USGS-DEN-24-12534520-MH-SAS、1301 GS-12、2024-09-20〜11-01）
+    url: https://www.usajobs.gov/job/810429100
+    date: '2026-11-08'
+  JC05:
+    title: USAJOBS, USGS Mendenhall Research Fellowship RO 23-25（USGS-DEN-24-12534533-MH-SAS、1301 GS-12、2024-09-20〜11-01）
+    url: https://www.usajobs.gov/job/810415700
+    date: '2026-11-08'
+  JC06:
+    title: USAJOBS, Geophysicist, USGS Volcano Science Center, Hawaiian Volcano Observatory（USGS-SAC-25-12633554-DE-PC、1313 GS-9/11、2024-12-16〜12-20）
+    url: https://www.usajobs.gov/job/824043400
+    date: '2026-11-08'
+items:
+- id: T-01
+  field: 地球科学
+  topic: 地震の連なりの物理（震源の場の地質・流体・温度・応力、非地震性のすべり、地震どうしの応力の受け渡し、本震・余震型と群発地震の違い、余震の生産性）
+  sources:
+  - JC01
+  - JC04
+  units:
+  - W-038
+  - W-025
+  - W-020
+- id: T-02
+  field: 地球科学
+  topic: 地震の連なりの統計と予測（ETAS、b 値と余震の生産性、カタログの不完全さとマグニチュードの偏り、何年も続く連なり）
+  sources:
+  - JC01
+  units:
+  - W-110
+- id: T-03
+  field: 地球科学
+  topic: 地震の危険度のモデルへの組み込み（全米の地震危険度モデル、時間に依存する運用の地震予測）
+  sources:
+  - JC01
+  units:
+  - E-100
+  - W-110
+- id: T-04
+  field: 地球科学
+  topic: ほぼ実時間の連なりの把握（マグニチュードの速い推定、精密な震源の位置と発震機構による断層の構造と震源の移動）
+  sources:
+  - JC01
+  units:
+  - W-111
+  - W-025
+- id: T-05
+  field: 地球科学
+  topic: 世界の地震の素早い決定（検出、震源の位置、マグニチュード、震源の性質、地殻の場）
+  sources:
+  - JC02
+  - JC05
+  units:
+  - W-111
+  - W-012
+- id: T-06
+  field: 計算機科学
+  topic: 機械学習による相の読み取り・会合・マグニチュードの推定と、観測点の密度が場所でちがう世界のデータへの対処
+  sources:
+  - JC02
+  units:
+  - W-111
+  - K-051
+  - K-046
+- id: T-07
+  field: 地球科学
+  topic: 震源の位置とマグニチュードの不確かさの推定と、新しい方法を標準の監視の方法と比べて確かめる
+  sources:
+  - JC02
+  units:
+  - W-111
+  - P-141
+- id: T-08
+  field: 地球科学
+  topic: マグマの揮発性成分（硫黄のガス、二酸化炭素、ハロゲン）の噴火の前の含有量
+  sources:
+  - JC03
+  units:
+  - W-112
+- id: T-09
+  field: 地球科学
+  topic: メルト包有物（輝石と斜長石の中の包有物の調製と分析）と鉱物の含水量計
+  sources:
+  - JC03
+  units:
+  - W-112
+  - W-013
+- id: T-10
+  field: 地球科学
+  topic: 脱ガスの深さ、マグマの貯留、噴出量の推定と、30 年の火山ガスの観測の記録との対応（数値モデルも使う）
+  sources:
+  - JC03
+  units:
+  - W-112
+  - W-030
+- id: T-11
+  field: 地球科学
+  topic: 火山と地殻の変動の観測（GNSS の観測網と傾斜計、火山の上での精密な GNSS の測量）
+  sources:
+  - JC06
+  units:
+  - W-113
+  - W-042
+- id: T-12
+  field: 計算機科学
+  topic: 測地のデータとメタデータの取り込み・処理・保管と、データの公開
+  sources:
+  - JC06
+  units:
+  - K-169
+- id: T-13
+  field: 地球科学
+  topic: 測地のデータをほかのデータと合わせて、地震と火山の危険の予測を良くする
+  sources:
+  - JC06
+  units:
+  - W-113
+  - W-064
+- id: T-14
+  field: 地球科学
+  topic: 地震学と地球物理学（学位の分野）
+  sources:
+  - JC04
+  - JC05
+  units:
+  - W-021
+  - W-025
+  - W-037
