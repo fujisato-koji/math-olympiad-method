@@ -1,0 +1,105 @@
+# 網羅表：国際物理オリンピック（IPhO）Syllabus（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PH01:
+    title: International Physics Olympiad, Statutes of the International Physics Olympiads and Syllabus（Syllabus の節）（規約は IPhO 2022・2023 で改正。シラバスの版の表示なし）
+    url: https://www.ipho-new.org/statutes-syllabus/
+    date: 2026-11-07
+items:
+- id: IP-01
+  field: 力学
+  topic: 力学
+  sources:
+  - PH01
+  units:
+  - P-001
+  - P-002
+  - P-003
+  - P-004
+  - P-005
+  - P-006
+  - P-007
+  - P-008
+  - P-009
+  - P-010
+  - P-011
+  - P-012
+  - P-013
+- id: IP-02
+  field: 電磁場
+  topic: 電磁場
+  sources:
+  - PH01
+  units:
+  - P-029
+  - P-030
+  - P-031
+  - P-032
+  - P-033
+  - P-034
+  - P-035
+- id: IP-03
+  field: 振動と波動
+  topic: 振動と波動（光を含む）
+  sources:
+  - PH01
+  units:
+  - P-007
+  - P-008
+  - P-021
+  - P-022
+  - P-023
+  - P-024
+  - P-025
+  - P-026
+  - P-027
+- id: IP-04
+  field: 相対論
+  topic: 相対論
+  sources:
+  - PH01
+  units:
+  - P-057
+  - P-058
+- id: IP-05
+  field: 量子物理
+  topic: 量子物理（原子、原子核、素粒子の入口を含む）
+  sources:
+  - PH01
+  units:
+  - P-069
+  - P-088
+  - P-104
+  - P-105
+- id: IP-06
+  field: 熱力学と統計物理
+  topic: 熱力学と統計物理
+  sources:
+  - PH01
+  units:
+  - P-042
+  - P-043
+  - P-044
+  - P-045
+  - P-051
+- id: IP-07
+  field: 実験の技能
+  topic: 実験の技能（測定と誤差）
+  sources:
+  - PH01
+  units:
+  - P-117
+- id: IP-08
+  field: 数学
+  topic: 数学
+  sources:
+  - PH01
+  units:
+  - G-027
+  - G-025
+  - D-004
+  - D-006
+  - A-012
+  - A-021
+  - D-001
+  - G-041
+  - C-020

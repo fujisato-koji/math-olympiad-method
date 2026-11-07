@@ -1,0 +1,2664 @@
+# 組み合わせの型の記録。問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。
+# 問題は url の公式の資料で読む（D-020）。
+- id: APMO-2010-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2010
+  number: 1
+  field: G
+  gist: 角 A が直角でない三角形で、外心 O と B, C を通る円が 2 辺と交わる点と O の対蹠点で、平行四辺形ができることを示す
+  units:
+  - G-023
+  missing: []
+  key: 円周角で ∠NQC=∠BAC を出し、向かい合う辺が平行と言う
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2010_sol.pdf
+- id: APMO-2010-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2010
+  number: 2
+  field: N
+  gist: どの n でも、和が 2009 乗数、積が 2010 乗数になる相異なる n 個の正整数をつくる
+  units:
+  - N-044
+  - A-009
+  - N-036
+  missing: []
+  key: 積が 2010 乗数の組を、和 s の累乗倍に拡大し、指数を合同式（x≡0, x≡−1）で合わせる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2010_sol.pdf
+- id: APMO-2010-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2010
+  number: 3
+  field: C
+  gist: n 人の知り合い関係で、知り合いでないが共通の知人をもつ組の数の最大を求める（答え (n−1)(n−2)/2）
+  units:
+  - C-022
+  - L-018
+  - L-019
+  missing: []
+  key: 連結にしてよく（成分をつなぐ調整）、連結なら辺は n−1 本以上なので残りの組で抑え、星形で等号
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2010_sol.pdf
+- id: APMO-2010-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2010
+  number: 4
+  field: G
+  gist: 鋭角三角形で、円 AHC と円 AHB が 2 辺と再び交わる点 M, N について、三角形 MNH の外心が OH 上にあることを示す
+  units:
+  - G-028
+  - G-020
+  - G-031
+  - G-023
+  missing: []
+  key: 円 AHC は外接円の辺での折り返しで、H を頂点とする 2 つのひし形の相似が外心どうしを対応させる
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2010_sol.pdf
+- id: APMO-2010-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2010
+  number: 5
+  field: A
+  gist: f の値の和を入れた 3 変数の実数の関数方程式を解く（答え 0 と x²）
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: 0 を入れて偶関数と「値が等しければ ±」を出し、x=y で 2x² と f(x) を結ぶ
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2010_sol.pdf
+- id: APMO-2011-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2011
+  number: 1
+  field: N
+  gist: 正の整数 a, b, c で、a²+b+c とその巡回の 3 つが同時に平方数にならないことを示す
+  units:
+  - N-031
+  - N-043
+  missing: []
+  key: a² の次の平方は (a+1)² 以上なので b+c≥2a+1、3 つ足すと矛盾
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2011_sol.pdf
+- id: APMO-2011-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2011
+  number: 2
+  field: G
+  gist: 3 点が一直線にない平面上の 5 点で、3 点のなす角の最小値の最大を求める（答え 36°）
+  units:
+  - C-023
+  - L-015
+  - G-009
+  missing: []
+  key: 凸包の内角の和から 108° 以下の角があり、残りの 2 点がその角を 3 つに分ける
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2011_sol.pdf
+- id: APMO-2011-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2011
+  number: 3
+  field: G
+  gist: ∠A=30° の三角形で、B と C の内外の角の二等分線の足を直径とする 2 円の交点 P で、∠BPC=90° を示す
+  units:
+  - G-024
+  - G-023
+  - G-020
+  - G-044
+  missing: []
+  key: 2 円はアポロニウスの円で PA·sinA=PB·sinB=PC·sinC、P の垂足三角形が正三角形になり角を追う
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2011_sol.pdf
+- id: APMO-2011-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2011
+  number: 4
+  field: C
+  gist: n 奇数。縦横交互に進み自分と重ならない格子点の折れ線で、折れ点の数の最大を求める（答え n(n−1)）
+  units:
+  - C-018
+  - L-005
+  - L-012
+  - L-018
+  missing: []
+  key: 折れ点は上下の隣と対になり各列で偶数個かつ n−1 以下、外枠を足す帰納で構成
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2011_sol.pdf
+- id: APMO-2011-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2011
+  number: 5
+  field: A
+  gist: 上に有界という条件つきの 2 変数の実数の関数方程式を解く
+  units:
+  - A-029
+  missing: []
+  key: f(f(y))=2f(y) で値域が 2 倍で閉じ、有界から f≤0、正の側は 0、負の側は 2x
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2011_sol.pdf
+- id: APMO-2012-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2012
+  number: 1
+  field: G
+  gist: 三角形内の点を通る 3 本のチェバ線で、3 つの小三角形の面積が 1 なら全体が 6 であることを示す
+  units:
+  - G-012
+  - A-012
+  - L-014
+  missing: []
+  key: 面積比で 3 つの未知の面積の連立式を立て、大小の順の議論で全部 2 と決める
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2012_sol.pdf
+- id: APMO-2012-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2012
+  number: 2
+  field: C
+  gist: 2012×2012 のますに 0 以上 1 以下の数を入れ、縦横どこで 2 つに切っても片側の和が 1 以下のとき、総和の最大を求める（答え 5）
+  units:
+  - L-018
+  - L-014
+  missing: []
+  key: 和が 1 を越える境目の行と列を選んで四方と真ん中で 5 以下と抑え、十字の配置で 5
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2012_sol.pdf
+- id: APMO-2012-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2012
+  number: 3
+  field: N
+  gist: 素数 p と正整数 n で、n^p+1 が p^n+1 で割り切れる組を求める
+  units:
+  - N-043
+  - N-037
+  - N-033
+  missing: []
+  key: 大きさで n≤p、合同式で n の位数が 2 となり n=p、p=2 の小さい場合を調べる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2012_sol.pdf
+- id: APMO-2012-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2012
+  number: 4
+  field: G
+  gist: 中点 M から垂心を通る半直線と外接円の交点 E、ED と外接円の交点 F で、BF:CF=AB:AC を示す
+  units:
+  - G-028
+  - G-023
+  - G-020
+  missing: []
+  key: A の対蹠点 K で BKCH が平行四辺形、A, E, D, M の共円から相似な三角形を 2 組つくる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2012_sol.pdf
+- id: APMO-2012-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2012
+  number: 5
+  field: A
+  gist: 二乗和が n の n 個の実数で、1/(n−a_i a_j) の組全体の和が n/2 以下を示す
+  units:
+  - A-025
+  - A-027
+  missing: []
+  key: 非負にしてよく、a_i a_j を ((a_i+a_j)/2)² で抑え、コーシー・シュワルツで和をまとめる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2012_sol.pdf
+- id: APMO-2013-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2013
+  number: 1
+  field: G
+  gist: 鋭角三角形の外心から頂点と高さの足へ引いた 6 本の線分が、面積の等しい 3 組の三角形に分けることを示す
+  units:
+  - G-028
+  - G-020
+  - G-008
+  missing: []
+  key: 外心から辺への垂線の足（中点）と高さがつくる三角形の相似で、底辺×高さを一致させる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2013_sol.pdf
+- id: APMO-2013-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2013
+  number: 2
+  field: N
+  gist: (n²+1) が ([√n]²+2) で割り切れる正整数 n を求める（答え ない）
+  units:
+  - N-023
+  - N-032
+  - N-031
+  - N-043
+  missing: []
+  key: n=m²+a とおき m²+2 が (a−2)²+1 を割る形にし、商を 1〜3 に絞って平方の余りで消す
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2013_sol.pdf
+- id: APMO-2013-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2013
+  number: 3
+  field: A
+  gist: 1 次式の床関数の和でできる数列が等差数列なら、傾きの和が整数であることを示す
+  units:
+  - N-023
+  - A-004
+  - A-013
+  missing: []
+  key: 床関数は元の値と 1 未満しか違わず、公差と傾きの和の差に n を掛けても有界なので等しい
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2013_sol.pdf
+- id: APMO-2013-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2013
+  number: 4
+  field: C
+  gist: 交わらない有限整数集合 A, B で、各要素は a 進めば A か b 戻れば B に入るとき a|A|=b|B| を示す
+  units:
+  - A-024
+  - C-018
+  missing: []
+  key: A を −a、B を +b ずらすと A∪B へ重ならずに写るので、要素の和を比べる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2013_sol.pdf
+- id: APMO-2013-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2013
+  number: 5
+  field: G
+  gist: 内接四角形で、AC の延長上の点からの 2 接線と C での接線から作った点で、B, E, R が一直線上にあることを示す
+  units:
+  - G-020
+  - G-037
+  - G-030
+  - G-043
+  missing: []
+  key: 接線の相似とトレミーで調和四角形 AB·CD=BC·AD を出し、R と BE 側の点が AD を同じ比に分けると示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2013_sol.pdf
+- id: APMO-2014-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2014
+  number: 1
+  field: N
+  gist: 数字の和 S と積 P について、S が増える n 個の正整数で S(a_i)=P(a_{i+1}) が一周してつながるものをつくる
+  units:
+  - N-009
+  - N-044
+  - A-009
+  missing: []
+  key: 数字を 1 と 2 だけにし、2 の個数で積を、1 の個数で和を 2 の累乗に合わせる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2014_sol.pdf
+- id: APMO-2014-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2014
+  number: 2
+  field: C
+  gist: '{1..2014} の空でない部分集合に代表を決め、交わらない 3 つの和集合の代表がどれかの代表と一致する決め方を数える（答え 108·2014!）'
+  units:
+  - C-025
+  - C-009
+  - C-006
+  missing: []
+  key: 全体の代表 x はそれを含むすべての集合の代表になり、x を除いて繰り返し、最後の 4 元を数える
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2014_sol.pdf
+- id: APMO-2014-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2014
+  number: 3
+  field: N
+  gist: どの整数 k にも a³+a−k が n で割れる a がある n を求める（答え 3 の累乗）
+  units:
+  - N-032
+  - N-036
+  - N-038
+  - A-024
+  missing: []
+  key: 有限集合では全射と単射が同じ、差の因数 a²+ab+b²+1 を素数ごとに調べ、平方剰余で 3 以外を除く
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2014_sol.pdf
+- id: APMO-2014-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2014
+  number: 4
+  field: C
+  gist: 100 未満の相異なる正整数で部分集合の和がすべて違うものは、8 個はあり 9 個はないことを示す
+  units:
+  - L-015
+  - C-007
+  - L-018
+  missing: []
+  key: (a) 2 の累乗の 3 倍の近くの数で作り 3 の余りで区別、(b) 要素数を絞った部分集合の数と和の範囲で鳩の巣
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2014_sol.pdf
+- id: APMO-2014-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2014
+  number: 5
+  field: G
+  gist: 交わる 2 円の弧の中点からの弦で、2 つの接線と共通弦がつくる三角形の外接円が一方の円に接することを示す
+  units:
+  - G-031
+  - G-030
+  - G-023
+  missing: []
+  key: 接線の三角形と相似で辺が平行な三角形を作り、相似の中心が円上にあることを方べきで示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2014_sol.pdf
+- id: APMO-2015-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2015
+  number: 1
+  field: G
+  gist: BC 上の D を通る直線と円 BXD と外接円の交点 Z から作った外接円の弦 VW が AB に等しいことを示す
+  units:
+  - G-023
+  - G-017
+  missing: []
+  key: 角の追跡で V, W が A, B を同じ直線で折り返した位置にあり、等脚台形になる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2015_sol.pdf
+- id: APMO-2015-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2015
+  number: 2
+  field: N
+  gist: 2 以上の整数上の関数で、異なる a, b について f(a)f(b)=f(a²b²) となるものがあるか（答え ない）
+  units:
+  - A-029
+  missing: []
+  key: 3 つの数の積の値を 2 通りに計算して f(a²)/f(a) が一定、乗法性に直して矛盾
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2015_sol.pdf
+- id: APMO-2015-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2015
+  number: 3
+  field: N
+  gist: 正の整数から 2a+1 か a/(a+2) を繰り返す数列で、2014 に着く最小の番号を求める（答え 60）
+  units:
+  - A-022
+  - N-037
+  - N-036
+  - N-033
+  missing: []
+  key: 1/(a+1) に置きかえると 2 つの変換が 2 倍の形になり、2 の 2015 を法とする位数 60 に帰着
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2015_sol.pdf
+- id: APMO-2015-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2015
+  number: 4
+  field: G
+  gist: 平行でない 2n 本の直線を青 n、赤 n に塗るとき、青の全体とも赤の全体とも 2n−1 点で交わる円があることを示す
+  units:
+  - C-023
+  - L-014
+  missing: []
+  key: 傾きの順で隣り合う異色の 2 本を選び、その 2 本に接し他とは 2 点ずつ交わる大きな円をとる
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2015_sol.pdf
+- id: APMO-2015-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2015
+  number: 5
+  field: N
+  gist: a_0≥2015 の正整数列で、2 つ先が割り切れることと交代和の条件を満たすものをすべて求める
+  units:
+  - A-022
+  - N-017
+  - N-043
+  - L-012
+  missing: []
+  key: 条件から漸化式を作り、割り切れと大きさで a_{n+2}=(n+1)(n+4)a_n に決めて解く
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2015_sol.pdf
+- id: APMO-2016-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2016
+  number: 1
+  field: G
+  gist: BC 上のどの D でも、2 辺への垂線の足を結ぶ線で D を折り返した点が外接円上にある三角形は、直角二等辺に限ることを示す
+  units:
+  - G-023
+  - G-020
+  - G-004
+  missing: []
+  key: 特別な D（二等分線上、中点）で必要条件を出し、逆は相似な三角形 2 組で ∠BD′C=90°
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2016_sol.pdf
+- id: APMO-2016-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2016
+  number: 2
+  field: N
+  gist: 100 個の 2 の累乗の和で表せる数を fancy とし、どの倍数も fancy でない最小の n を求める（答え 2^101−1）
+  units:
+  - N-025
+  - L-014
+  - N-017
+  missing: []
+  key: 2 進の 1 の個数で考え、最小の倍数に 2 の累乗の重なりがあれば小さくできることで矛盾
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2016_sol.pdf
+- id: APMO-2016-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2016
+  number: 3
+  field: G
+  gist: 角の 2 辺に接する円と、接点を結ぶ弦上の点 R から作った M, N で、MN が円に接することを示す
+  units:
+  - G-020
+  - G-023
+  - G-029
+  missing: []
+  key: N からのもう 1 本の接線で M′ を作り、相似な三角形で M′R∥AC を示す（メネラウスと計算でも）
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2016_sol.pdf
+- id: APMO-2016-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2016
+  number: 4
+  field: C
+  gist: 2016 都市の各都市から 1 本ずつ出る片道便で、28 便以内で同じ組に行けないよう分ける組の最小数を求める（答え 57）
+  units:
+  - C-024
+  - L-012
+  - L-019
+  - L-018
+  missing: []
+  key: 長さ 57 の閉路で下から、28 便以内で着く関係の入次数の小さい頂点を除く帰納と貪欲な塗り分けで上から
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2016_sol.pdf
+- id: APMO-2016-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2016
+  number: 5
+  field: A
+  gist: 正の実数上で、(z+1)f(x+y) を f の 2 項の和で表す関数方程式を解く（答え f(x)=x）
+  units:
+  - A-029
+  - A-035
+  - A-024
+  missing: []
+  key: 非有界性と和の等しい 2 組の値の関係から加法性と単調性を出し、コーシーの方程式に落とす
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2016_sol.pdf
+- id: APMO-2017-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2017
+  number: 1
+  field: N
+  gist: 2017 個の整数を円に並べ、連続する 5 個がいつも並べかえで交代和 29 にできるものを求める（答え すべて 29）
+  units:
+  - L-005
+  - L-014
+  - N-018
+  missing: []
+  key: 29 を引くと 5 つおきに偶奇が等しく、5 と 2017 が互いに素で全部同じ偶奇、2 で割る無限降下
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2017_sol.pdf
+- id: APMO-2017-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2017
+  number: 2
+  field: G
+  gist: AB<AC の三角形で、A の二等分線と外接円の交点 D、AC の垂直二等分線と外角の二等分線の交点 Z で、AB の中点が円 ADZ 上にあることを示す
+  units:
+  - G-023
+  - G-016
+  - G-017
+  missing: []
+  key: D を AB の中点で折り返した点を作り、合同な三角形で平行四辺形を示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2017_sol.pdf
+- id: APMO-2017-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2017
+  number: 3
+  field: C
+  gist: 各項に 1 を足すと 2 の累乗になる分割の数と、各項が次の 2 倍以上の分割の数が等しいことを示す
+  units:
+  - C-019
+  - N-025
+  missing: []
+  key: 各項を 2 進の位に並べた表に書き、行の和と列の和を入れかえる全単射
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2017_sol.pdf
+- id: APMO-2017-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2017
+  number: 4
+  field: N
+  gist: 積が 1 の正の有理数 a, b, c で a^x+b^y+c^z が整数なら、どれも p^k/q（k>1）の形であることを示す
+  units:
+  - N-021
+  - N-018
+  - N-017
+  missing: []
+  key: 分母と分子を素因数ごとの指数で比べ、指数がすべて 1 より大きい同じ数で割り切れると示す
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2017_sol.pdf
+- id: APMO-2017-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2017
+  number: 5
+  field: C
+  gist: 整数の n 組の集まりで、どの 2 つも内積の絶対値が 1 以下になるものの最大個数を求める（答え n²+n+1）
+  units:
+  - L-018
+  - L-012
+  - G-027
+  missing:
+  - 高次元のベクトル（内積と直交変換）
+  key: 0, ±e_i, e_i±e_j で構成、最後の 0 でない成分の位置で分類し、各位置 2i 個以下を回転と帰納の補題で示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2017_sol.pdf
+- id: APMO-2018-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2018
+  number: 1
+  field: G
+  gist: 垂心と 2 辺の中点を通る 2 円が接するとき、作った点 F が A と三角形 MHN の内心から等距離であることを示す
+  units:
+  - G-023
+  - G-028
+  - G-033
+  missing: []
+  key: 接することから MFNH が共円で F は AMN の外心、内心・傍心の補題で FJ=FM=FA
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2018_sol.pdf
+- id: APMO-2018-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2018
+  number: 2
+  field: A
+  gist: 偶数点と奇数点に極をもつ 2 つの分数の和の差が、0 と 2018 の間の非整数でいつも 2 より大きいことを示す
+  units:
+  - A-013
+  - A-025
+  - A-018
+  missing: []
+  key: 中央についての対称と、区間をずらすと差が増えることで 1<x<2 に帰着し、相加相乗で評価
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2018_sol.pdf
+- id: APMO-2018-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2018
+  number: 3
+  field: C
+  gist: 合同な正方形が頂点だけで触れ、どれもちょうど 3 つに触れる配置ができる 2018〜3018 の n の個数を求める（答え 501）
+  units:
+  - C-022
+  - L-005
+  - L-018
+  missing: []
+  key: 触れる組は 3n/2 なので n は偶数、偶数は鎖と多角形の構成で全部作れる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2018_sol.pdf
+- id: APMO-2018-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2018
+  number: 4
+  field: G
+  gist: 正三角形の頂点から出た光線が辺で n 回反射し、他の頂点に当たらずに戻る n を求める
+  units:
+  - G-004
+  - N-018
+  - N-028
+  missing: []
+  key: 反射を折り返して三角格子に展開し、戻る点の座標の 3 の余りと互いに素の条件で n を決める
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2018_sol.pdf
+- id: APMO-2018-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2018
+  number: 5
+  field: A
+  gist: P(s), P(t) が整数ならいつも P(st) も整数になる整数係数多項式を求める（答え ±x^n+k）
+  units:
+  - A-030
+  - A-036
+  - N-045
+  missing: []
+  key: P(t) が大きな素数になる t をとり、2 つの多項式の共通の根から単項式に限り、係数を 1 に決める
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2018_sol.pdf
+- id: APMO-2019-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2019
+  number: 1
+  field: N
+  gist: f(a)+b が a²+f(a)f(b) を割る正整数上の関数を求める（答え f(n)=n）
+  units:
+  - A-029
+  - N-017
+  - N-030
+  - N-043
+  missing: []
+  key: 素数 p で f(p)=p を出し、大きな素数との割り切れで f(b)=b
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2019_sol.pdf
+- id: APMO-2019-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2019
+  number: 2
+  field: N
+  gist: 2^m 未満なら二乗して 2^m を足し、以上なら半分にする数列が整数のままになる初項を求める
+  units:
+  - N-021
+  - L-016
+  - L-014
+  missing: []
+  key: 奇数の部分が減らない有界な量でやがて一定、1 とわかり項はすべて 2 の累乗、m=2 に限る
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2019_sol.pdf
+- id: APMO-2019-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2019
+  number: 3
+  field: G
+  gist: 中線上を動く P から 2 円で作った X, Y について、円 AXY が A 以外の定点を通ることを示す
+  units:
+  - G-032
+  - G-030
+  - G-023
+  - G-017
+  missing: []
+  key: 3 円の根心と平行四辺形 BNCL を見つけ、BCXY の共円と BC 上の定点の方べきで定点を決める
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2019_sol.pdf
+- id: APMO-2019-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2019
+  number: 4
+  field: C
+  gist: 2018×2019 の盤の整数を、選んだますを隣の平均に置きかえる操作で全部等しくできるか（答え できない）
+  units:
+  - L-016
+  - N-032
+  missing: []
+  key: 5 で割った余りで見ると、等しくない 2×3 の配置がどの操作でも変わらず、折り返しで盤全体に広げる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2019_sol.pdf
+- id: APMO-2019-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2019
+  number: 5
+  field: A
+  gist: f(x²+f(y)) を 3 つの f の和で表す実数の関数方程式を解く（答え 0 と x²）
+  units:
+  - A-029
+  missing: []
+  key: f(0)=0、偶関数、値が等しければ倍も等しい性質から非負性と f(1)=1 を出す
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2019_sol.pdf
+- id: APMO-2020-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2020
+  number: 1
+  field: G
+  gist: A での接線と BA に平行な D からの線の交点 E、CE と外接円の交点 F で、B, D, F, E が共円なら 3 直線が 1 点で交わることを示す
+  units:
+  - G-023
+  missing: []
+  key: 接弦角と共円で角を追い、A, P, F, E の共円から EP∥AB で 3 直線が 1 点
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2020_sol.pdf
+- id: APMO-2020-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2020
+  number: 2
+  field: A
+  gist: 2 つ先の項が自分以上で平方根の上限以下の正整数列がやがて周期 2 になる、その r の最大が 2 であることを示す
+  units:
+  - L-018
+  - L-012
+  - A-013
+  - A-022
+  missing: []
+  key: r>2 は反例の数列、r=2 は帰納で偶数番と奇数番の項が単調で有界、やがて一定
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2020_sol.pdf
+- id: APMO-2020-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2020
+  number: 3
+  field: C
+  gist: ある m より大きい整数がすべて S の相異なる要素の和でちょうど k 通りに表せる k を求める（答え 2 の累乗）
+  units:
+  - N-025
+  - C-018
+  - N-028
+  missing: []
+  key: 2 の累乗で構成、逆に S の大きい要素は倍々になり、余りごとの部分集合を数えて k·x=2^|T|
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2020_sol.pdf
+- id: APMO-2020-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2020
+  number: 4
+  field: N
+  gist: 各整数を 1 度ずつ並べたどの列にも区間和が P の値になる所がある整数係数多項式を求める（答え 1 次式）
+  units:
+  - L-015
+  - N-028
+  - L-018
+  - N-045
+  missing: []
+  key: 1 次なら区間和の余りで鳩の巣、2 次以上は値がまばらなので避ける列を帰納的に作る
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2020_sol.pdf
+- id: APMO-2020-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2020
+  number: 5
+  field: C
+  gist: 1 が n 個の黒板で 2 数を 1 と和に置きかえ、石を 1 個と最大公約数個ずつ入れるとき、比 t/s のとりうる値を求める
+  units:
+  - L-016
+  - L-012
+  - L-018
+  - N-018
+  missing: []
+  key: 重み付きの和が単調量で t<(n−1)s、具体的な手順で区間内の有理数をすべて作る
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2020_sol.pdf
+- id: APMO-2021-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2021
+  number: 1
+  field: A
+  gist: r>2 のとき x²=r⌊x⌋ を満たす正の実数がちょうど 2 個か 3 個であることを示す
+  units:
+  - N-023
+  - A-013
+  - A-016
+  missing: []
+  key: ⌊x⌋=k とおくと k²≤rk<(k+1)² から k の範囲が長さ 3 未満、各 k に解が 1 つ
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2021_sol.pdf
+- id: APMO-2021-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2021
+  number: 2
+  field: N
+  gist: '|P(a)|−|P(b)| が n で割れる a<b≤n の組がいつも 2021 個以下の整数係数多項式を求める'
+  units:
+  - N-045
+  - L-015
+  - N-028
+  - N-043
+  missing: []
+  key: P(1..n) が n で全部違う余りになることを示して 1 次に限り、傾き ±1 と定数項の範囲を決める
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2021_sol.pdf
+- id: APMO-2021-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2021
+  number: 3
+  field: G
+  gist: 内接四角形で、3 辺に接する円の中心 L、弧 BC の中点 M と、対角線の交点でできる三角形の傍心が一直線上にあることを示す
+  units:
+  - G-033
+  - G-024
+  - G-029
+  missing: []
+  key: 3 点の角を角の大きさで表し、正弦の比の積が 1（三角形のチェバ）で一直線
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2021_sol.pdf
+- id: APMO-2021-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2021
+  number: 4
+  field: C
+  gist: 32×32 の表でチーズに当たると右に曲がるネズミで、888 個の良い配置はなく、666 個以上の良い配置はあることを示す
+  units:
+  - C-018
+  - L-018
+  - L-012
+  missing: []
+  key: チーズの並びは 3 個まで、空きますは 2 回までなので数えて上から抑え、4 倍ずつ大きくなるタイルで構成
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2021_sol.pdf
+- id: APMO-2021-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2021
+  number: 5
+  field: N
+  gist: f(f(a)−b)+bf(2a) がいつも平方数になる整数上の関数を求める
+  units:
+  - A-029
+  - N-031
+  - N-030
+  - N-043
+  missing: []
+  key: f(0)=0 で値がすべて平方数、零点が多い場合と f(n)=n² の場合に分け、素数と大きな k の比較で決める
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2021_sol.pdf
+- id: APMO-2022-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2022
+  number: 1
+  field: N
+  gist: a³ が b² の倍数で、b−1 が a−1 の倍数になる正整数の組を求める
+  units:
+  - N-017
+  - N-032
+  - N-043
+  - N-021
+  missing: []
+  key: b<a なら b=1、そうでなければ a³=b²c とおき c≡1 (mod a−1) と大きさで c=1 か a=b
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2022_sol.pdf
+- id: APMO-2022-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2022
+  number: 2
+  field: G
+  gist: B が直角の三角形で、CB 上を動く D から作った直線 EF が定点を通ることを示す
+  units:
+  - G-023
+  - G-016
+  - G-017
+  missing: []
+  key: 等脚台形を見つけ、合同な三角形で BP=BC となる点 P を通ると示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2022_sol.pdf
+- id: APMO-2022-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2022
+  number: 3
+  field: N
+  gist: kn/202 までの小数部分の和が k/2 になる n がある k<202 を求める（答え 1, 100, 101, 201）
+  units:
+  - N-023
+  - N-022
+  - N-028
+  - N-030
+  missing: []
+  key: 小数部分を 202 で割った余りにし、平均 101 の条件から 101 が k(k+1) を割ると示し例で確かめる
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2022_sol.pdf
+- id: APMO-2022-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2022
+  number: 4
+  field: C
+  gist: 番号付きのおはじき n 個と箱 k 個で、最小の番号を動かす操作により n だけの箱を作れる (n,k) を求める（答え n≤2^{k−1}）
+  units:
+  - C-009
+  - L-012
+  - L-014
+  - L-018
+  missing: []
+  key: 操作は戻せるのでハノイの塔のように再帰で作り、最後に動く時に着目して箱 1 つ少ない場合に帰着
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2022_sol.pdf
+- id: APMO-2022-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2022
+  number: 5
+  field: A
+  gist: 二乗和が 1 の 4 実数で (a−b)(b−c)(c−d)(d−a) の最小値と等号の場合を求める（答え −1/8）
+  units:
+  - A-017
+  - A-025
+  - L-007
+  missing: []
+  key: 最大の文字を固定し符号で場合分け、差を変数にして制約を 2 次式とみて判別式、相加相乗で評価
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2022_sol.pdf
+- id: APMO-2023-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2023
+  number: 1
+  field: C
+  gist: 一辺 1〜n の正方形を、頂点でだけ触れ、どれもちょうど 2 つに触れるように並べられることを示す
+  units:
+  - L-019
+  - L-018
+  missing: []
+  key: 小さい正方形を和がほぼ等しい 2 組に分け、平行な対角線に沿って並べ、大きい 4 つで閉じる
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2023_sol.pdf
+- id: APMO-2023-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2023
+  number: 2
+  field: N
+  gist: 約数の和を（最大の素因数 −1）で割ると n になる n を求める（答え 6）
+  units:
+  - N-024
+  - N-043
+  - N-021
+  missing: []
+  key: σ(n)/n を素因数ごとの p/(p−1) の積で抑え、最大の素因数を 3 以下に絞る
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2023_sol.pdf
+- id: APMO-2023-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2023
+  number: 3
+  field: G
+  gist: 平行四辺形の 4 辺上の点がつくる 4 つの角の三角形の内心が平行四辺形をなすなら、もとの 4 点も平行四辺形をなすことを示す
+  units:
+  - G-017
+  - L-011
+  - A-013
+  missing: []
+  key: 内心と辺の距離から向かい合う内接円の半径が等しく、等しくないと仮定すると不等式が一周して矛盾
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2023_sol.pdf
+- id: APMO-2023-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2023
+  number: 4
+  field: A
+  gist: 正の定数 c を含む、正の実数上の 2 変数の関数方程式を解く（答え f(x)=2x）
+  units:
+  - A-029
+  - A-022
+  - A-013
+  missing: []
+  key: f の項が消える x を選んで f(y)≥2y、越えるなら指数的に増える数列を作って矛盾
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2023_sol.pdf
+- id: APMO-2023-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2023
+  number: 5
+  field: C
+  gist: どの 2 本も内部で交わる n 本の線分の端点から、交点で乗りかえて進むプレゼントを、ちょうど n 人に送れることを示す
+  units:
+  - C-017
+  - L-012
+  - L-005
+  missing: []
+  key: 線分を円の弦に延ばし、領域を 2 色に塗ると進む向きが決まり、偶数番の端点だけが受け取る
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2023_sol.pdf
+- id: APMO-2024-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2024
+  number: 1
+  field: G
+  gist: BC に平行な DE と内部の点 X から作った P, Q、円 BQX と円 CPX の交点 Y で、A, X, Y が一直線上にあることを示す
+  units:
+  - G-032
+  - G-030
+  - G-020
+  missing: []
+  key: X, Y は 2 円の根軸上、AX と BC の交点が平行線の比で根軸に乗り、A も乗る
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2024_sol.pdf
+- id: APMO-2024-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2024
+  number: 2
+  field: C
+  gist: 100×100 の盤で縦横に 1 と k 動く駒が (1,1) から行けるますの数を求める（51≤k≤99）
+  units:
+  - C-017
+  - L-007
+  - L-018
+  missing: []
+  key: 中央の正方形には入れず、2 手で (±2,±2) ずれる動きと市松の偶奇で、k の偶奇に分けて数える
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2024_sol.pdf
+- id: APMO-2024-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2024
+  number: 3
+  field: A
+  gist: n 個の正の実数で、重み 1/2^i の和の不等式を示す
+  units:
+  - A-025
+  - L-012
+  missing: []
+  key: 2 数を 1 つにまとめる補題を帰納で示し、重みを付けて 1 つずつ合わせる
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2024_sol.pdf
+- id: APMO-2024-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2024
+  number: 4
+  field: N
+  gist: どの t でも、二項係数 C(t+i, 2a_i) が奇数で 2a_i≠t+i となる 0〜t−1 の並べかえがただ 1 つあることを示す
+  units:
+  - N-025
+  - C-015
+  - L-012
+  - C-019
+  missing:
+  - リュカの定理（二項係数の偶奇）
+  key: 奇数なのは 2 進で位が包含されるとき、1 の個数の和の等式で各位置を決め、2 の累乗についての補数で帰納
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2024_sol.pdf
+- id: APMO-2024-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2024
+  number: 5
+  field: G
+  gist: 内接四角形を切る直線上の点から作った 2 つの交点 M, N で、直線 MP と NQ の交点が対辺の交点を結ぶ直線上にあることを示す
+  units:
+  - G-031
+  - G-032
+  - G-023
+  missing: []
+  key: 完全四辺形のミケル点 E が KL 上にあり、2 直線と KL の交点がともに円 EMN 上にあると示す
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2024_sol.pdf
+- id: APMO-2025-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2025
+  number: 1
+  field: G
+  gist: 高さの足から 2 辺への垂線の足を B1, C1 とし、四角形 AB1PC1 が三角形と等積になる点 P が外接円の内部にありうるか（答え ない）
+  units:
+  - G-020
+  - G-012
+  - G-028
+  missing: []
+  key: AB1C1 は ABC と相似で直径 AD は B1C1 に垂直、等積の点の軌跡が D での接線になる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2025_sol.pdf
+- id: APMO-2025-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2025
+  number: 2
+  field: A
+  gist: 帯 |x−y|<2025 の中を右か上に進み ⌊αx+βy⌋ を書くと非負整数が 1 度ずつ出る (α,β) を求める（答え α+β=2）
+  units:
+  - N-023
+  - L-016
+  - A-013
+  missing: []
+  key: n 歩目は x+y=n で書く値は増えるので n 歩目は n、帯の中なので α+β=2、交互に進めば作れる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2025_sol.pdf
+- id: APMO-2025-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2025
+  number: 3
+  field: N
+  gist: P(0)≠0 の整数係数多項式 P で、P(i−j) が a_i−a_j を割る整数列は定数に限ることを示す
+  units:
+  - N-045
+  - N-029
+  - N-030
+  missing: []
+  key: P(k) を割り k を割らない素数が無限にあり、周期 k と k+p が互いに素なので周期 1
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2025_sol.pdf
+- id: APMO-2025-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2025
+  number: 4
+  field: C
+  gist: 円に並んだ 0/1 のますを、値で 1 つか 2 つ進みながら反転させる鶏が、やがて 3 周で元に戻る動きになることを示す
+  units:
+  - L-016
+  - L-007
+  - L-014
+  missing: []
+  key: 周ごとに止まるますと飛ばすますを見て、飛ばしは続かず、3 周で各ますがちょうど 1 回飛ばされると示す
+  basis: official
+  confidence: 低
+  url: https://www.apmo-official.org/static/solutions/apmo2025_sol.pdf
+- id: APMO-2025-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2025
+  number: 5
+  field: N
+  gist: 100! 倍した区間和が項の積で割り切れる正整数列は、有界か a_n=na_1 に限ることを示す
+  units:
+  - N-017
+  - N-018
+  - N-021
+  - N-043
+  missing: []
+  key: a_{m+n} が c(a_m+a_n) を割る形を出して最大公約数で正規化、lcm が大きければ加法的に伝わり、小さければ素数べきで有界
+  basis: official
+  confidence: 低
+  url: https://www.apmo-official.org/static/solutions/apmo2025_sol.pdf
+- id: APMO-2026-1
+  source: Asian Pacific Mathematics Olympiad
+  year: 2026
+  number: 1
+  field: N
+  gist: 2 つの階乗の和が、2 乗以上の累乗数に 26 を足した数になる正整数の組を求める
+  units:
+  - N-032
+  - N-028
+  - L-007
+  missing: []
+  key: 大きい階乗は 4, 8, 9, 16 などで割れ、累乗の余りの制限で小さい場合に絞って調べる
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2026_sol.pdf
+- id: APMO-2026-2
+  source: Asian Pacific Mathematics Olympiad
+  year: 2026
+  number: 2
+  field: C
+  gist: n 元集合の 2^n 個の部分集合を輪に並べると、隣どうしの共通部分の大きさの和が 2^{n−2} 以上であることを示す
+  units:
+  - C-018
+  - C-015
+  missing: []
+  key: 各要素で「隣が両方含む」と「両方含まない」の数が等しく、両方 0 の隣はないので半分で抑える
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2026_sol.pdf
+- id: APMO-2026-3
+  source: Asian Pacific Mathematics Olympiad
+  year: 2026
+  number: 3
+  field: A
+  gist: 距離の大小関係を保つ正の実数から実数への関数を求める（答え 1 次関数）
+  units:
+  - A-029
+  - A-024
+  - A-035
+  missing: []
+  key: 等距離が保たれ単射なので中点の式（イェンゼン型）、単調性と 2 進の有理数での値から 1 次
+  basis: official
+  confidence: 高
+  url: https://www.apmo-official.org/static/solutions/apmo2026_sol.pdf
+- id: APMO-2026-4
+  source: Asian Pacific Mathematics Olympiad
+  year: 2026
+  number: 4
+  field: G
+  gist: 内接円をもつ四角形で、対角線の交点と三角形 ABD の内心を結ぶ半直線が内接円と交わる点 P について PI⊥BD を示す
+  units:
+  - G-037
+  - G-031
+  missing: []
+  key: IP′⊥BD の点 P′ を置き、内接円どうしの相似の中心、パスカル、極と極線、調和点列の複比で E, J, P′ が並ぶ
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2026_sol.pdf
+- id: APMO-2026-5
+  source: Asian Pacific Mathematics Olympiad
+  year: 2026
+  number: 5
+  field: C
+  gist: (n+1)×n の部屋の扉に鍵をかける選び方のうち、最初の行と最後の行が開いた扉でつながるものの数を求める
+  units:
+  - C-019
+  - C-022
+  - C-005
+  missing:
+  - 平面グラフの双対
+  key: 両端の行をそれぞれ 1 点に縮め、扉を対応する扉と入れかえる対合で「つながる」と「つながらない」が 1 対 1
+  basis: official
+  confidence: 中
+  url: https://www.apmo-official.org/static/solutions/apmo2026_sol.pdf
+- id: EGMO-2012-1
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 1
+  field: G
+  gist: DE⊥CO、DF⊥BO となる辺上の点で、三角形 AFE の外心 K について DK⊥BC を示す
+  units:
+  - G-023
+  - G-033
+  missing: []
+  key: DE, DF は C, B での接線に平行で BDEA, CDFA が共円、BC は ∠EDF の外角の二等分線、K は弧の中点
+  basis: official
+  confidence: 高
+  url: https://www.egmo2012.org.uk/competition/solutions-day1.pdf
+- id: EGMO-2012-2
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 2
+  field: C
+  gist: m 行 n 列の実数の表で、どの 2 行も成分の差の最大が 1 になる m の最大を求める（答え 2^n）
+  units:
+  - L-018
+  - L-015
+  - C-022
+  missing: []
+  key: 0/1 のすべての行で構成、列ごとの「差が 1」の二部グラフで、各列で同じ側の 2 行は条件を満たさず 2^n 以下
+  basis: official
+  confidence: 高
+  url: https://www.egmo2012.org.uk/competition/solutions-day1.pdf
+- id: EGMO-2012-3
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 3
+  field: A
+  gist: f(x+y) を含む 2 変数の実数の関数方程式を解く（答え f(x)=2x）
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: y=0 で f(f(x))=4x から全単射、y=1−x を入れて単射性で 2x
+  basis: official
+  confidence: 高
+  url: https://www.egmo2012.org.uk/competition/solutions-day1.pdf
+- id: EGMO-2012-4
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 4
+  field: C
+  gist: 各要素が 2 要素の和で、0 以外のどの整数も有限部分集合の和になり 0 にはならない整数の集合があるか（答え ある）
+  units:
+  - A-022
+  - L-019
+  - L-018
+  missing:
+  - ゼッケンドルフ表示（フィボナッチ数による表示）
+  key: 偶数番のフィボナッチ数と、負にした奇数番のフィボナッチ数を集め、表示の一意性と貪欲法で確かめる
+  basis: official
+  confidence: 中
+  url: https://www.egmo2012.org.uk/competition/solutions-day1.pdf
+- id: EGMO-2012-5
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 5
+  field: N
+  gist: 素数 p, q の 2 つの分数の和が正整数 n の分数式に等しいとき、q−p のとりうる値を求める（答え 2, 3, 5）
+  units:
+  - N-030
+  - N-018
+  - N-035
+  missing: []
+  key: 1/(p+1)−1/q=4/(n+2) の形にし、偶奇と互いに素で場合分け、既約の分子が 4 を割る
+  basis: official
+  confidence: 高
+  url: https://www.egmo2012.org.uk/competition/solutions-day2.pdf
+- id: EGMO-2012-6
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 6
+  field: C
+  gist: 無限人の SNS で各人が友人の 1 人を親友に指名するとき、人気者についての主張と、友人が無限なら反例があることを示す
+  units:
+  - L-015
+  - C-022
+  missing: []
+  key: 友人が有限なので鳩の巣で人気者の指名元に人気者がいる、友人が無限なら鎖を足した反例
+  basis: official
+  confidence: 中
+  url: https://www.egmo2012.org.uk/competition/solutions-day2.pdf
+- id: EGMO-2012-7
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 7
+  field: G
+  gist: 外接円上の点 K を 2 辺で折り返した L, M と、円 BLM と外接円の交点 E で、KH, EM, BC が 1 点で交わることを示す
+  units:
+  - G-028
+  - G-023
+  - G-004
+  missing: []
+  key: BK=BL=BM から角を追い、EM が H を BC で折り返した点（外接円上）を通ると示す
+  basis: official
+  confidence: 高
+  url: https://www.egmo2012.org.uk/competition/solutions-day2.pdf
+- id: EGMO-2012-8
+  source: European Girls' Mathematical Olympiad
+  year: 2012
+  number: 8
+  field: C
+  gist: 隣り合う 2 文字をどう入れかえても繰り返し語になる語は、全部同じ文字であることを示す
+  units:
+  - L-011
+  - L-007
+  missing:
+  - 周期の補題（ファイン・ウィルフ）
+  key: 2 通りの入れかえでできる繰り返し語の周期 p, q と共通部分に周期の補題を使い、長さを抑えて小さい場合を調べる
+  basis: official
+  confidence: 中
+  url: https://www.egmo2012.org.uk/competition/solutions-day2.pdf
+- id: EGMO-2013-1
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 1
+  field: G
+  gist: BC と CA を決まった比で延長した点 D, E で AD=BE なら、三角形が直角であることを示す
+  units:
+  - G-017
+  - G-016
+  missing: []
+  key: ABFD を平行四辺形にすると BF=AD=BE で A は EF の中点、二等辺三角形の中線は高さ
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2013-2
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 2
+  field: C
+  gist: 辺が 1〜10 の 5 つの長方形に切り分けられる m×m の正方形の m を求める（答え 11, 13）
+  units:
+  - A-027
+  - L-007
+  - L-005
+  - L-018
+  missing: []
+  key: 面積を並べかえの不等式で挟んで m を 11〜13 に絞り、内側 1 つと四隅 4 つの形で 12 を偶奇で除き、11 と 13 を構成
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2013-3
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 3
+  field: N
+  gist: 6n 個の相異なる正整数で、どの 2 つの最小公倍数も 32n² 以下の集合があることと、9n² を越える組が必ずあることを示す
+  units:
+  - N-018
+  - L-015
+  - L-018
+  missing: []
+  key: (a) 4n までと 8n までの偶数、(b) 3n 以上の 3n+1 個の逆数を区間に分けて鳩の巣で差を小さくし lcm を大きくする
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2013-4
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 4
+  field: N
+  gist: (n^5+a)/b が連続する 3 つの整数で整数になる正整数 a, b を求める
+  units:
+  - N-032
+  - N-033
+  - N-029
+  missing: []
+  key: 3 つの合同式の差を組み合わせて b が 22 を割ると出し、偶数は偶奇で除き、11 では 5 乗の余りが ±1
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2013-5
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 5
+  field: G
+  gist: 2 辺に接し外接円に内接する円の接点 P と、AB に平行な接線の接点 Q で、∠ACP=∠QCB を示す
+  units:
+  - G-031
+  - G-033
+  - G-016
+  missing: []
+  key: P を中心とする相似で接点が外接円の弧の中点に写り、ω の弧が等しくなり、合同な三角形で角が等しい
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2013-6
+  source: European Girls' Mathematical Olympiad
+  year: 2013
+  number: 6
+  field: C
+  gist: 7 人が 16 日、毎日 2 種類の仕事に分かれ、どの 2 日も 3 人以上が違う仕事をするとき、初日が全員同じなら全員がもう一方の日があることを示す
+  units:
+  - C-018
+  - L-015
+  - C-007
+  missing:
+  - ハミング距離と符号（球の詰め込み）
+  key: 7 桁の 0/1 の列が互いに 3 か所以上違うので半径 1 の球 8 個ずつで 128 個をちょうど埋め、重みで数えて 1111111 が残る
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo2/solutions.pdf
+- id: EGMO-2014-1
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 1
+  field: A
+  gist: a, b, c が三角形の辺ならいつも a²+bct などの 3 つも三角形の辺になる実数 t を求める（答え 2/3≤t≤2）
+  units:
+  - A-013
+  - A-015
+  - L-013
+  missing: []
+  key: つぶれた三角形（1,1,0 や 1,1,2）で必要条件を出し、不等式を因数分解して十分を示す
+  basis: self
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo3/paper-day1-English.pdf
+- id: EGMO-2014-2
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 2
+  field: G
+  gist: DB=BC=CE の点で、内心 I、三角形 DEF の垂心 H、弧 BAC の中点 M が一直線上にあることを示す
+  units:
+  - G-032
+  - G-030
+  - G-028
+  - G-016
+  missing: []
+  key: I は三角形 FBC の垂心、直径 BD と CE の 2 円に対し 2 つの垂心は方べきが等しく、M も合同な MBD と MCE で等しく、3 点は根軸上
+  basis: self
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo3/paper-day1-English.pdf
+- id: EGMO-2014-3
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 3
+  field: N
+  gist: ω(n)=k で、a+b=n のどの a, b でも d(n) が d(a²+b²) を割らない n が無限にあることを示す
+  units:
+  - N-024
+  - N-044
+  - N-043
+  - N-031
+  missing: []
+  key: n=2^{p−1}×（3 でない奇素数の積）とし、指数が −1 (mod p) の素因数を大きさ、3 の平方の余り、2 の指数で否定
+  basis: self
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo3/paper-day1-English.pdf
+- id: EGMO-2014-4
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 4
+  field: N
+  gist: n が 2i+j を割れば x_i<x_j となる整数 x_1〜x_{n−1} がある n を求める（答え 2^k と 3·2^k）
+  units:
+  - N-032
+  - N-037
+  - C-022
+  missing: []
+  key: i から −2i (mod n) への矢印に長さ 2 以上の閉路がないことと同値、奇数部分が 1, 3 以外なら 2^a から −2 の位数で閉路
+  basis: self
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo3/paper-day2-English.pdf
+- id: EGMO-2014-5
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 5
+  field: C
+  gist: 2 個取って 1 個捨て 1 個を移す操作の小石で、解けないが、どの箱に 1 個足しても解ける配置を求める
+  units:
+  - L-016
+  - N-023
+  - N-008
+  missing: []
+  key: 箱ごとの ⌊(c−1)/2⌋ の和が増えない量で 0 以上と解けることが同値、1 個足して増えるのは偶数の箱
+  basis: self
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo3/paper-day2-English.pdf
+- id: EGMO-2014-6
+  source: European Girls' Mathematical Olympiad
+  year: 2014
+  number: 6
+  field: A
+  gist: f(x) と f(y) を組み合わせた引数をもつ実数の関数方程式を解く（答え x, −x, 1/2−x）
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: x と y を入れかえた式との比較と特別な値の代入で候補を絞る（3 つの解の成立は確認、一意性の筋は未確認）
+  basis: self
+  confidence: 低
+  url: https://www.egmo.org/egmos/egmo3/paper-day2-English.pdf
+- id: EGMO-2015-1
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 1
+  field: G
+  gist: C からの高さと B の二等分線の交点 E、円 ADE と二等分線の交点 F で、∠ADF=45° なら CF が円に接することを示す
+  units:
+  - G-023
+  - G-020
+  missing: []
+  key: DF が ∠CDA を二等分して F は AE の垂直二等分線上、直角三角形の相似で GDCF が共円
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2015-2
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 2
+  field: C
+  gist: 2n×2n の盤に n² 枚のドミノを、どの 2×2 にも同じ行か列で空いた 2 ますが残るように置く方法を数える（答え C(2n,n)²）
+  units:
+  - C-019
+  - C-004
+  - C-007
+  missing: []
+  key: 2×2 のブロックごとにちょうど 1 枚で 4 つの型に分かれ、型の境が 2 本の単調な道になり、それぞれ C(2n,n) 通り
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2015-3
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 3
+  field: N
+  gist: n^m 以下の正整数 a_i に n 以下の b_i を足して、最大公約数を n 未満にできることを示す
+  units:
+  - L-015
+  - N-018
+  - L-011
+  missing: []
+  key: どの選び方でも gcd が n 以上と仮定し、gcd のとりうる値が n^m 未満なので鳩の巣で同じ値の 2 つの選び方が出て矛盾
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2015-4
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 4
+  field: N
+  gist: 各項が前の項と、前の 2 項の和の平方根の和になる正整数の無限列があるか（答え ない）
+  units:
+  - N-031
+  - A-022
+  - N-043
+  missing: []
+  key: 差の列 b_n で b_{n+1}²−b_n²=b_n+b_{n−1} となり、増える列なのに b_{n−1}≥b_{n+1} で矛盾
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2015-5
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 5
+  field: C
+  gist: 1〜2m を m 組に分け、各組から 1 つずつ選んだ和が n にならないように組を作れることを示す
+  units:
+  - N-022
+  - L-007
+  - L-018
+  missing: []
+  key: 隣どうし、i と m+i、もう 1 通りの 3 つの組み分けを用意し、和の範囲と m で割った余りで n を避ける
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2015-6
+  source: European Girls' Mathematical Olympiad
+  year: 2015
+  number: 6
+  field: G
+  gist: AG と外接円の交点を BC で折り返した点 P′ について、∠A=60° と HG=GP′ が同値であることを示す
+  units:
+  - G-028
+  - G-030
+  - G-029
+  - G-004
+  missing: []
+  key: 外接円を BC で折り返すと H と P′ が乗り、∠A=60° なら O も乗る、ひし形と共円で合同、逆はメネラウス
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo4/solutions.pdf
+- id: EGMO-2016-1
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 1
+  field: A
+  gist: n 奇数のとき、円に並んだ非負の実数で、隣どうしの二乗和の最小が隣どうしの積の 2 倍の最大以下を示す
+  units:
+  - L-005
+  - L-015
+  - A-013
+  missing: []
+  key: n が奇数なので隣の差の符号がそろう所があり、x_j≤x_{j+1}≤x_{j+2} の 3 つで不等式をつなぐ
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2016-2
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 2
+  field: G
+  gist: 内接四角形の対角線の交点 X と中点 C1, D1, M から作った Y と MY で、XY が円 EFX に接することを示す
+  units:
+  - G-020
+  - G-023
+  missing: []
+  key: 三角形 XAD と XBC の相似で対応する中線の角が等しく、相似な三角形 ABY と C1D1Y の対応点で接弦角
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2016-3
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 3
+  field: C
+  gist: 4m×4m の盤で、どのますも同じ行か列に 2 つ以上の青をもつようにする青の最小数を求める（答え 6m）
+  units:
+  - C-018
+  - L-018
+  - C-022
+  missing: []
+  key: 4×4 のブロックを対角に並べて 6m、行と列の青の数が 1, 2, 3 以上かで数えて下から抑える
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2016-4
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 4
+  field: G
+  gist: 等しい半径の 2 円と、一方に外接し他方に内接する円 ω で、X1T1 と X2T2 の交点が ω 上にあることを示す
+  units:
+  - G-031
+  missing: []
+  key: 接点を中心とする相似で X_k での接線が ω の接線と平行に写り、半径が等しいので同じ点になる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2016-5
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 5
+  field: C
+  gist: n×n の盤に 1×k のタイルをこれ以上置けなくなるまで置くとき、タイルの最小数を求める（k≤n≤2k−1）
+  units:
+  - L-018
+  - L-014
+  - L-007
+  missing: []
+  key: 空いた行と列の数で場合分けし、両方あれば連続して 2n−2k+2 枚以上、なければ n 枚以上、構成で一致
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2016-6
+  source: European Girls' Mathematical Olympiad
+  year: 2016
+  number: 6
+  field: N
+  gist: n⁴ が n²+1〜n²+2n に約数をもつ n が、7 で割った余り 0,1,2,5,6 には無限にあり 3, 4 にはないことを示す
+  units:
+  - N-041
+  - N-035
+  - N-028
+  - A-022
+  missing: []
+  key: 約数を n²+m とおくと 2n²+1 か 12n²+9 が平方数になり、ペル方程式の解の漸化式の余りが 7 で周期的
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo5/solutions.pdf
+- id: EGMO-2017-1
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 1
+  field: G
+  gist: 2 つの角が直角の四角形で、PQ=RS となる直線上の点から作った中点 M, N と A, C が共円であることを示す
+  units:
+  - G-023
+  - G-017
+  missing: []
+  key: M, N は直角三角形の斜辺の中点なので中心角が 2 倍になり、∠ANC=∠AMC
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2017-2
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 2
+  field: C
+  gist: 正整数を k 色に塗り、同色どうしでは加法的だが全体では加法的でない f がある最小の k を求める（答え 3）
+  units:
+  - L-014
+  - N-028
+  - A-029
+  missing: []
+  key: 3 で割った余りで塗る例、k=2 では f(a)≠af(1) の最小の a で a±1, a−2 の色から矛盾
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2017-3
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 3
+  field: C
+  gist: 2017 本の直線の上を交点ごとに左右交互に曲がるかたつむりが、同じ線分を両方向に通ることがあるか（答え ない）
+  units:
+  - C-017
+  - L-012
+  - L-016
+  missing: []
+  key: 直線で分けた領域を 2 色に塗り（帰納）、曲がり方の決まりで左はいつも白、右は黒になり逆向きは通らない
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2017-4
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 4
+  field: C
+  gist: t_n+1 人のチェスで、対戦数がどれも t_1〜t_n のどれかで、どの t_i にも当たる人がいるようにできることを示す
+  units:
+  - C-022
+  - L-012
+  missing: []
+  key: n についての帰納で、差 t_n−t_i の集合のグラフを作り、孤立点を足して補グラフをとる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2017-5
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 5
+  field: N
+  gist: 隣どうしの和の積が 2 の奇数乗になる n 組がある n と、どの奇数も含まれうることを示す
+  units:
+  - N-021
+  - L-014
+  - L-012
+  - N-008
+  missing: []
+  key: 偶数の n では最大の要素の両隣が等しく 2 つを除いて n−2 に下げる降下、奇数 m は帰納で 2^{k+1}−r を挿入
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2017-6
+  source: European Girls' Mathematical Olympiad
+  year: 2017
+  number: 6
+  field: G
+  gist: 重心と外心を 3 辺で折り返した点がつくる 6 つの円と外接円が 1 点を共有することを示す
+  units:
+  - G-028
+  - G-023
+  - G-004
+  missing: []
+  key: オイラー線を 3 辺で折り返した 3 直線が外接円上の 1 点で交わり、各円がその点を通ることを角で示す
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo6/solutions.pdf
+- id: EGMO-2018-1
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 1
+  field: G
+  gist: CA=CB、∠C=120° の三角形の外接円上を動く P から作った N が定円上にあることを示す
+  units:
+  - G-020
+  - G-027
+  missing: []
+  key: M は CO の中点で三角形 QNP と QMC が相似、NP=CO なので N は P を一定のベクトルで平行移動した点
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2018-2
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 2
+  field: N
+  gist: 1+1/k の形の数の積で 2 以上の整数をすべて表せることと、最小個数 f で f(xy)<f(x)+f(y) の組が無限にあることを示す
+  units:
+  - N-043
+  - N-044
+  - A-009
+  missing: []
+  key: (a) 積が順に約分されて消える、(b) f(n)≥log₂n の評価と、x=5, y=(2^{4k+2}+1)/5 の構成
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2018-3
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 3
+  field: C
+  gist: n 人の行列で、選んだ人が i 人前へ進む操作が必ず終わることと、集められる金額の最大を求める（答え 2^n−n−1）
+  units:
+  - L-016
+  - L-012
+  - L-018
+  missing: []
+  key: 逆順の組に 2^i の重みを付けた和が毎回減る単調量で上から抑え、M_{n+1}=2M_n+n の帰納の構成
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2018-4
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 4
+  field: C
+  gist: n×n の盤のドミノ配置で、どの行と列も同じ数のドミノに触れる配置の最小枚数を求める
+  units:
+  - C-018
+  - N-017
+  - L-018
+  missing: []
+  key: （行か列, ドミノ）の組を数えて 2nk=3D、3 で割れなければ k が 3 の倍数、3×3 や 4×4 のブロックを対角に並べて構成
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2018-5
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 5
+  field: G
+  gist: AB に接し外接円に内接する円 Ω と C の二等分線の交点 P, Q で、∠ABP=∠QBC を示す
+  units:
+  - G-031
+  - G-030
+  - G-020
+  - G-033
+  missing: []
+  key: 接点を結ぶ直線が弧 AB の中点 M を通り（相似）、方べきで MP·MQ=MB²、相似な三角形 MBP と MQB で角を移す
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2018-6
+  source: European Girls' Mathematical Olympiad
+  year: 2018
+  number: 6
+  field: N
+  gist: 0<t<1/2 について、n 個の正整数のどの集合にも |x−my|≤ty の組があることと、m>0 では避ける無限集合があることを示す
+  units:
+  - L-015
+  - N-044
+  - N-023
+  - L-018
+  missing: []
+  key: (a) 小さい順に並べ、比が 1+t 以内の 2 つか、最小が最大の t 倍以下、(b) s_{n+1}=((Πs_i)²+1)/2 で小数部分を (t,1/2) に保つ
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo7/solutions.pdf
+- id: EGMO-2019-1
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 1
+  field: A
+  gist: ab+bc+ca=1 で、a²b+c などの 3 つの式が等しい実数の組を求める
+  units:
+  - A-015
+  - A-012
+  - L-007
+  missing: []
+  key: 条件から a²+ab+b²=1 とその巡回を出し、足して二乗和 = 積の和、差の二乗の和が 0、0 を含む場合は別に
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo8/solutions-day1.pdf
+- id: EGMO-2019-2
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 2
+  field: C
+  gist: 2n×2n の盤のどのますもちょうど 1 つのドミノのますに隣り合うように置くとき、ドミノの最大数を求める（答え n(n+1)/2）
+  units:
+  - C-018
+  - L-012
+  - L-018
+  missing: []
+  key: 外側に枠を足し、枠のますの半分以下しか覆われないことと 1 枚あたり 8 ますを数え、2n+3 枚の枠を足す帰納で構成
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo8/solutions-day1.pdf
+- id: EGMO-2019-3
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 3
+  field: G
+  gist: ∠CAD=∠ABC となる D と、AC に A で接し I を通る円と外接円の交点 X で、∠DAB と ∠CXB の二等分線が BC 上で交わることを示す
+  units:
+  - G-033
+  - G-023
+  - G-020
+  missing: []
+  key: 弧の中点 M で MA=MI=MB（内心・傍心の補題）を使い、2 本の二等分線と BC の交点がともに円 AIB 上にあると示す
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo8/solutions-day1.pdf
+- id: EGMO-2019-4
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 4
+  field: G
+  gist: AI に I で接し B, C を通る 2 円が辺と再び交わる P, Q で、PQ が内接円に接することを示す
+  units:
+  - G-023
+  - G-030
+  - G-020
+  missing: []
+  key: AI が両円に接することから接弦角で角を追い、P, Q から内接円への接線が同じ点で触れると示す
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo8/solutions-day2.pdf
+- id: EGMO-2019-5
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 5
+  field: N
+  gist: 正整数 a_i 以上で n で割った余りが全部違う b_i を、和が決まった上限以下になるように選べることを示す
+  units:
+  - L-019
+  - N-028
+  - N-023
+  missing: []
+  key: まだ出ていない余りの最小の値をとる貪欲法で b_i−a_i≤i−1、和が n(n−1)/2 (mod n) と合うことで床の上限に収める
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo8/solutions-day2.pdf
+- id: EGMO-2019-6
+  source: European Girls' Mathematical Olympiad
+  year: 2019
+  number: 6
+  field: C
+  gist: 円の弦の端と交点に付けた数の小分けごとの和と差について、和が 0〜N を 1 度ずつとるなら差に 3 の倍数があることを示す
+  units:
+  - N-028
+  - L-005
+  - C-022
+  - C-018
+  missing: []
+  key: 3 で割った余りで見て差に 3 の倍数がないと仮定し、境界の頂点の数の偶奇から辺の種類の数の偶奇を出して矛盾
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo8/solutions-day2.pdf
+- id: EGMO-2020-1
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 1
+  field: N
+  gist: 2a_{n+2}=a_{n+1}+4a_n を満たす 3031 個の正整数のどれかが 2^2020 で割れることを示す
+  units:
+  - N-021
+  - L-012
+  - N-017
+  missing: []
+  key: 連続 3 項の補題で真ん中が 4 で割れ、窓を両側から縮める帰納で真ん中の項の 2 の指数を 2 ずつ上げる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2020-2
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 2
+  field: A
+  gist: 差が 1 以内の非負の 2020 個の数と並べかえで、((x_i+1)(y_i+1))² の和が 8Σx_i³ になるものを求める
+  units:
+  - A-025
+  - A-013
+  missing: []
+  key: '|x−y|≤1 のとき ((x+1)(y+1))²≥4(x³+y³) を相加相乗で示し、全部等号から {0,1} か {1,2}'
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2020-3
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 3
+  field: G
+  gist: 1 つおきの角が等しい凸六角形で、A, C, E の二等分線が 1 点で交われば、B, D, F の二等分線も 1 点で交わることを示す
+  units:
+  - G-031
+  - G-023
+  - G-015
+  missing: []
+  key: 六角形を 2 つの正三角形の共通部分とみて、二等分線の交点を中心とする回転で一方を他方に写し、もう 1 つの回転の中心を見つける
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2020-4
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 4
+  field: C
+  gist: 先頭の k 個が 1〜k にならない並べかえの数 f_n について f_n≥n·f_{n−1} を示す
+  units:
+  - C-014
+  - C-019
+  - C-006
+  missing: []
+  key: n−1 の並べかえに n を n−1 か所に入れ、さらに末尾に n−1 を置く別の作り方で、重ならない n·f_{n−1} 個を作る
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2020-5
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 5
+  field: G
+  gist: 鈍角の C をもつ三角形で、PB=PC、PA=R の点 P と、PB の垂直二等分線と外接円の交点 D, E で、P が三角形 CDE の内心であることを示す
+  units:
+  - G-033
+  - G-017
+  - G-023
+  missing: []
+  key: AOMP がひし形（M は弧 DE の中点）、OP についての対称で C, P, M が並び MD=ME=MP、内心の補題の逆で内心
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2020-6
+  source: European Girls' Mathematical Olympiad
+  year: 2020
+  number: 6
+  field: N
+  gist: 1, 1, 4 から始まる 3 項の線形漸化式の項がすべて平方数になる m を求める（答え 2, 10）
+  units:
+  - N-038
+  - N-028
+  - A-022
+  - N-035
+  missing: []
+  key: 4 の余りで m−1 は奇数、3 以外の素因数 p では項が p のすべての余りをとり平方でない値が出るので m−1=3^k、構成は b_n の漸化式
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo9/solutions.pdf
+- id: EGMO-2021-1
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 1
+  field: N
+  gist: m, 2m+1, 3m のどれかが良ければ全部良いという規則で、2021 から 2021^2021 が良いと言えるか（答え 言える）
+  units:
+  - L-016
+  - L-014
+  - L-012
+  missing: []
+  key: 規則をつなぐと m と 2m が同じ、さらに m と ⌊m/2⌋ が同じとなり、2021 を 1 まで下げてすべての数に広げる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2021-2
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 2
+  field: A
+  gist: 有理数上の関数で、x f(x) を足すと値が x² 増える関数方程式を解く（答え ±x）
+  units:
+  - A-029
+  - A-024
+  - L-012
+  missing: []
+  key: f(nA+y)=f(y)+nB の帰納で全射と f(nx)=nf(x) を出し、有理数上で 1 次
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2021-3
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 3
+  field: G
+  gist: A が鈍角の三角形で、外角の二等分線と 2 本の高さの交点 E, F と、角の条件で決めた M, N が共円であることを示す
+  units:
+  - G-028
+  - G-030
+  - G-023
+  missing: []
+  key: 二等辺三角形の補題で角を移し、垂心が HE=HF の円の中心とわかり、M, N がその円と EC, FB の交点
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2021-4
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 4
+  field: G
+  gist: 内心 I と BC 上の D から BI, CI に垂直な線で作った E, F で、A を EF で折り返した点が BC 上にあることを示す
+  units:
+  - G-020
+  - G-023
+  - G-004
+  missing: []
+  key: 相似から AEIF が共円、円 AEC と円 AFB の第 2 の交点 T が BC 上にあり EA=ET、FA=FT
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2021-5
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 5
+  field: C
+  gist: 原点を通る直線に 2 点が乗らず 3 点が一直線にない 2021 点で、原点を内部に含む三角形の数の最大を求める
+  units:
+  - C-023
+  - C-018
+  - A-028
+  missing: []
+  key: 含まない三角形を「真ん中の頂点」で数え、原点を通る直線の両側の点の数の凸性で下から抑え、正 2021 角形で等号
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2021-6
+  source: European Girls' Mathematical Olympiad
+  year: 2021
+  number: 6
+  field: N
+  gist: 床関数 ⌊m/k⌋ の和が n²+a になる (m,n) が 100 万組を越える a があるか（答え ある）
+  units:
+  - N-023
+  - L-015
+  - N-043
+  missing: []
+  key: 床関数の和を 2 のまとまりで上から抑え、和から平方数を引いた値の種類が少ないので鳩の巣
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo10/solutions.pdf
+- id: EGMO-2022-1
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 1
+  field: G
+  gist: BQ=BC=CP となる点で、三角形 APQ の外心、垂心、BQ と CP の交点が一直線上にあることを示す
+  units:
+  - G-028
+  - G-023
+  - G-017
+  missing: []
+  key: H と T がともに ∠BSC の二等分線上にあることを示し、T は PTQS の共円と TP=TQ による
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2022-2
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 2
+  field: N
+  gist: 正整数上の乗法的な関数で、f(a), f(b), f(a+b) の 2 つ以上が等しいものを求める
+  units:
+  - A-029
+  - N-021
+  - L-014
+  - N-036
+  missing: []
+  key: 値が 1 でない最小の素数を 2 つとって大きさで矛盾、1 つの素数の指数だけで決まる
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2022-3
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 3
+  field: N
+  gist: 重み付きの和が平方数になるように各項を最小にとる数列が、やがて一定になることを示す
+  units:
+  - N-031
+  - A-022
+  - L-016
+  missing: []
+  key: 部分和を 2 回とった列が、前の 2 項の外挿を越える最小の平方になり、その平方根の差が増えない整数なのでやがて一定
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2022-4
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 4
+  field: A
+  gist: a_0+a_1=−1/n と隣の 3 項の関係を満たす実数列が続く最大の長さ N を求める（答え n）
+  units:
+  - A-022
+  - A-015
+  missing: []
+  key: b_k=a_k+a_{k+1} と置きかえると (b_{k−1}+1)(b_k−1)=−1 となり、b_k=−1/(n−k) が k=n で行き詰まる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2022-5
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 5
+  field: C
+  gist: n×2k の盤のドミノの敷き詰めの数が、どの k でも奇数になる n を求める（答え 2^k−1）
+  units:
+  - C-019
+  - L-005
+  - L-012
+  - C-009
+  missing: []
+  key: 真ん中の列についての折り返しの対合で f(m,2n+1)≡f(m,n) (mod 2)、対角の折り返しで偶数の n は偶数、帰納で絞る
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2022-6
+  source: European Girls' Mathematical Olympiad
+  year: 2022
+  number: 6
+  field: G
+  gist: 内接四角形の角の二等分線の交点 X, Y, Z, W について、外心 O と対角線の交点 P のどちらかが乗る共円は同値であることを示す
+  units:
+  - G-032
+  - G-037
+  - G-033
+  missing: []
+  key: X, Y, Z, W は共円、対辺の交点を結ぶ線が外接円との根軸、O と P は極と極線の関係で同時に乗る
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo11/solutions.pdf
+- id: EGMO-2023-1
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 1
+  field: A
+  gist: 円に並んだ正の実数で、両隣の和を自分で割った値の大小が元の大小と一致するなら全部等しいことを示す
+  units:
+  - L-014
+  - A-025
+  missing: []
+  key: 最大の a_i で隣が小さい所では b_i<2、順序の条件で全部 2 未満だが、積は相加相乗で 2^n 以上
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2023-2
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 2
+  field: G
+  gist: AD が直径となる D から円 AKL に接する接点 K, L を 2 辺上にとると、KL が垂心を通ることを示す
+  units:
+  - G-023
+  - G-018
+  - G-028
+  missing: []
+  key: KL の中点 M で DM⊥KL、直角から BDMK と DMLC が共円、角を追って M が垂心
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2023-3
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 3
+  field: C
+  gist: k 文字の A/B の語の辞書で、k×k の表の行と列をすべて辞書の語にできることを保証する語数の最小を求める（答え 2^{k−1}）
+  units:
+  - L-015
+  - L-018
+  missing: []
+  key: 末尾が B の語から B…B を除いた反例、2^{k−1} 個あれば定数の語か補い合う 2 語があり、ブロック市松で埋める
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2023-4
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 4
+  field: C
+  gist: 円周 1 の円で、与えられた距離を左右どちらかに這うかたつむりが、決して通らない点を残せる C の最大を求める（答え 1/2）
+  units:
+  - L-019
+  - L-018
+  missing: []
+  key: C≤1/2 なら決めた点までの長い方の弧へ進む貪欲で避け、C>1/2 では 1/2 前後の長さを交互に与えて円を覆わせる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2023-5
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 5
+  field: N
+  gist: k=as+b を bs+a にねじる操作の列が 1 を含むのは、n を s²−1 で割った余りが 1 か s のときに限ることを示す
+  units:
+  - N-028
+  - L-016
+  - N-032
+  missing: []
+  key: k と 2 回ねじった数の差が s²−1 の倍数で 0 以上なので、余りは周期 2 で数は減り、s² 未満で止まる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2023-6
+  source: European Girls' Mathematical Olympiad
+  year: 2023
+  number: 6
+  field: G
+  gist: 弧の中点 Sb, Sc で外接円に内接する 2 円の根軸と、I と弧 BAC の中点を結ぶ直線が外接円上で交わることを示す
+  units:
+  - G-032
+  - G-033
+  - G-031
+  - G-045
+  missing: []
+  key: 2 円の根軸は A と SbSc の極を結ぶ線（類似中線）、SbSc で折り返すと AISbSc のたこ形から INa 上の点とわかる
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo12/solutions.pdf
+- id: EGMO-2024-1
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 1
+  field: N
+  gist: 和を書く操作と、3 つの数を係数とする 2 次方程式の整数解を書く操作で、すべての整数を書ける初めの 2 数を求める
+  units:
+  - A-026
+  - A-017
+  - L-007
+  missing: []
+  key: 0 や両方負は進めない、それ以外は ux²+(u+v)x+v で −1 を作り、和で大きな数、−1 で下げ、2 次式で −2
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2024-2
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 2
+  field: G
+  gist: 内接円の弧上に ∠BXD=∠DYC となる X, Y をとり、XY と BC の交点 K からの外接円の接点 T で、TD と AI が外接円上で交わることを示す
+  units:
+  - G-032
+  - G-030
+  - G-033
+  - G-020
+  missing: []
+  key: BXYC が共円で K は根心、KT²=KB·KC=KD² で KT=KD、相似で T, D と弧の中点 M が並ぶ
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2024-3
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 3
+  field: N
+  gist: どの約数 d でも d(d+1) が n(n+1) を割る数について、異なる 4 つの最大公約数が 1 であることを示す
+  units:
+  - N-017
+  - N-021
+  - N-043
+  - N-030
+  missing: []
+  key: 最小の素因数で抑えて素因数は 2 つまでで平方因子なし、n=pq なら p=q²−q−1 の形、1 つの素数を含むのは 3 つまで
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2024-4
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 4
+  field: C
+  gist: 長さ n の増える整数列で、差の 2 倍がほかの組の差になる組の数の最大を求める（答え (n−1)(n−2)/2+1）
+  units:
+  - L-018
+  - L-014
+  missing: []
+  key: 2 の累乗で構成、両端の組は条件を満たさず、各 i で (1,i) と (i,n) は真ん中を除き両方は満たせない
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2024-5
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 5
+  field: N
+  gist: x と f(x) の約数の個数が等しく、互いに割り切れない x, y で gcd(f(x),f(y))>f(gcd(x,y)) となる関数を求める
+  units:
+  - N-024
+  - A-029
+  - L-012
+  - N-021
+  missing: []
+  key: f(p) は素数で、条件 (ii) からすべての素数に同じ素数 q、約数の個数の帰納で f(n)=q^{d(n)−1}
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2024-6
+  source: European Girls' Mathematical Olympiad
+  year: 2024
+  number: 6
+  field: A
+  gist: P(0)〜P(d²−d) の値が d 通り以下になる d 次の実数係数多項式がある d を求める（答え 1, 2, 3）
+  units:
+  - A-026
+  - C-018
+  - L-018
+  missing:
+  - 微分と極値（ロルの定理）
+  key: 1 つの値は d 回まで、d 回とる値の隣の値は極値の数から d−2 回以下で、数えると d≥4 で矛盾
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo13/solutions.pdf
+- id: EGMO-2025-1
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 1
+  field: N
+  gist: N と互いに素な N 未満の数を並べ、隣どうしの和がいつも N と互いに素でない N を求める（答え 偶数と 3 の累乗）
+  units:
+  - N-018
+  - N-028
+  - N-036
+  missing: []
+  key: 偶数は偶奇、3 の累乗は余りが交互、それ以外は M−2, M+1 などの隣り合う項の和が N と互いに素になる
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2025-2
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 2
+  field: A
+  gist: 最初の a_n 項の平均が a_n になる増える数列について、どの数列とも無限回一致する数列 b があることを示す
+  units:
+  - A-018
+  - A-004
+  - L-011
+  missing: []
+  key: b_i=2i−1 とし、d_i=a_i−b_i は 1 ずつしか減らず、和が 0 なので符号を変えるたびに 0 を通る
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2025-3
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 3
+  field: G
+  gist: BD=DE=EC の点と AD, AE の中点、三角形 ADE の垂心から作った P, Q で、P, Q, N, M が共円であることを示す
+  units:
+  - G-023
+  - G-032
+  - G-030
+  - G-017
+  missing: []
+  key: B, C を M, N で折り返した点を作り、平行四辺形と角の追跡で 5 点の共円を示し、そこから 4 点の共円
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2025-4
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 4
+  field: G
+  gist: BI, CI と外接円の交点 P, Q で作った平行四辺形の頂点 R, S と、RB と SC の交点 T で、R, S, T, I が共円であることを示す
+  units:
+  - G-031
+  - G-020
+  - G-023
+  missing: []
+  key: 向き付きの角で ∠RBI=∠SCI、相似 IBC∽AQP から BR/BI=CS/CI、三角形 BIR∽CIS で共円
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2025-5
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 5
+  field: C
+  gist: n×n の矢印が毎手 90° 回る盤で、すべてのますを 1 度ずつ回って戻れる出発点の最大数を求める（答え 偶数 n²/4、奇数 0）
+  units:
+  - C-017
+  - C-022
+  - N-028
+  - L-018
+  missing: []
+  key: 奇数は市松の偶奇で回れず、偶数は蛇行の閉路で 4 つおきに良います、隅のますで 2 つの経路のずれが 4 の倍数となり上から抑える
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2025-6
+  source: European Girls' Mathematical Olympiad
+  year: 2025
+  number: 6
+  field: A
+  gist: 行和も列和も 1 の 2025×2025 の非負の表で、行の最大値の和と列の最大値の和の比の最大を求める（答え 2025/89）
+  units:
+  - A-027
+  - A-025
+  - L-018
+  missing: []
+  key: 45 列に 1/45 を置き他を 1/45² にする構成と、行の最大値を列ごとにまとめ端点に寄せ、コーシー・シュワルツと相加相乗で抑える
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo14/solutions.pdf
+- id: EGMO-2026-1
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 1
+  field: C
+  gist: 赤いますが 1 つ以上ある 2026×2026 の盤に、赤を奇数個含む長方形が必ずある面積の最大を求める（答え 1013²）
+  units:
+  - L-018
+  - L-005
+  - C-021
+  missing: []
+  key: 中央 4 ますを赤にする例で上から、大きい長方形の赤がすべて偶数なら角からの 4 つの長方形の包除でどのますも赤でないと示す
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf
+- id: EGMO-2026-2
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 2
+  field: N
+  gist: V を j·R(V/j) に置きかえる操作で、数が有界なことと、最大値 f(n) が十分大きい n で 2026 で割れることを示す
+  units:
+  - N-023
+  - N-021
+  - L-016
+  - N-017
+  missing: []
+  key: R の性質で n! 以下にとどまり、最大値はどの j でも余りが j/2 未満の数、2 の累乗と奇数部分の議論で 2 と 1013 で割れる
+  basis: official
+  confidence: 低
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf
+- id: EGMO-2026-3
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 3
+  field: A
+  gist: f の値の和の二乗を入れると (x+y)f(x+y) になる実数の関数方程式を解く（答え 0, x, −x）
+  units:
+  - A-029
+  - A-024
+  - A-035
+  missing: []
+  key: f≡0 か単射に分け、f(x+y)²=(f(x)+f(y))² から奇関数と加法性、f(x²)=f(x)²≥0 で単調にして 1 次
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf
+- id: EGMO-2026-4
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 4
+  field: A
+  gist: a_1=1 の増えない実数列で各項が 2 つの子の項の和のとき、a_r を 1/r と 2/(r+1) ではさむ
+  units:
+  - A-018
+  - A-013
+  - L-012
+  missing: []
+  key: 足し合わせると a_n〜a_{2n−1} の和がいつも 1、単調性で下の評価、a_k≤2a_{2k} から後ろ半分を a_r/2 以上として上の評価
+  basis: official
+  confidence: 高
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf
+- id: EGMO-2026-5
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 5
+  field: G
+  gist: B, C での接線の交点 K と、円 ABK と BC の交点 Z から作った点 L, X, V で、LV⊥CX を示す
+  units:
+  - G-032
+  - G-030
+  - G-023
+  - G-017
+  missing: []
+  key: KCZY の平行四辺形で L が AC 上、O から KZ への垂線の足が円 ABL 上、CX が 2 円の根軸で VL が直径
+  basis: official
+  confidence: 低
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf
+- id: EGMO-2026-6
+  source: European Girls' Mathematical Olympiad
+  year: 2026
+  number: 6
+  field: N
+  gist: p で割れない n の約数 d_i について、d_i² の約数で d_i と p を法として合同なものの個数の和が k²/(p−1) 以上を示す
+  units:
+  - C-018
+  - C-019
+  - A-027
+  - N-032
+  missing: []
+  key: 和を p を法として合同な約数の順序対の数とみて、lcm と d_j²/gcd の写像で単射、p−1 個の余りの類にコーシー・シュワルツ
+  basis: official
+  confidence: 中
+  url: https://www.egmo.org/egmos/egmo15/solutions.pdf

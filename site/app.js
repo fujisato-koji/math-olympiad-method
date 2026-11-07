@@ -179,7 +179,8 @@
       <div class="reach"><span class="k">いまの到達</span>${GOALS.map(g => {
         const st = goalStats(g);
         return `<a class="reach-item" href="#/goal/${g.id}"><span class="ring" style="--p:${st.pct}"></span>${esc(g.name)} ${st.pct}%<span class="muted">（論題 ${st.got} / ${st.topics}）</span></a>`;
-      }).join('')}</div>
+      }).join('')}
+        <span class="reach-item">古今東西の問題 ${solvable()} / ${PROBS.length} 問<span class="muted">（済んだ駅だけで組み合わせがそろう問題）</span></span></div>
       <div class="gauge">
         <div><span class="k">基本</span><b>${f.base}</b><span class="u">日分</span></div>
         <div><span class="k">いまの見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
@@ -201,6 +202,8 @@
       <div class="legend">${['done', 'doing', 'ready', 'later'].map(s =>
         `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
         <span>横は理解の深さ（右ほど多くの前提の上にある）、縦は領域。上の目盛りは段のおよその位置</span></div>
+      <div class="goal-pick map-groups" role="group" aria-label="関係図の範囲"><span class="k">範囲</span>${MAP_GROUPS.map(([id, name]) =>
+        `<button class="pill" type="button" data-mapgroup="${id}" aria-pressed="${(prefs.mapGroup || 'all') === id}">${esc(name)}</button>`).join('')}</div>
       <div class="map-wrap"><div id="map" class="map"></div></div>
       <div id="map-info" class="map-info muted">駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。</div>
     </section>
@@ -233,21 +236,35 @@
     return out;
   }
   let selected = null;
+  // 関係図の切り替え：島が多いので、流れのまとまりごとに見られるようにする
+  const SCHOOL_REGIONS = new Set(['kazu', 'keisan', 'seisu', 'seisuron', 'houteishiki', 'kansu', 'shiki', 'futoshiki', 'kazoekata',
+    'kakuritsu', 'graph', 'katachi', 'hakaru', 'shomei-zukei', 'zahyo', 'haichi', 'suiri', 'ronpo']);
+  const MAP_GROUPS = [
+    ['all', 'すべて', () => true],
+    ['school', '算数と数学オリンピック', rg => SCHOOL_REGIONS.has(rg.id)],
+    ['univ', '大学の数学', rg => !SCHOOL_REGIONS.has(rg.id) && ('NACGLDMRTS'.includes(rg.lane) || rg.id === 'suchi')],
+    ['phys', '物理', rg => rg.lane === 'P'],
+    ['eng', '工学と計算', rg => rg.lane === 'E' || (rg.lane === 'K' && rg.id !== 'suchi')],
+  ];
   function drawMap() {
     const host = $('#map');
     if (!host) return;
-    const maxD = Math.max(...R.units.map(u => DEPTH[u.id]));
-    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.max(38, (W - X0 - 28) / Math.max(1, maxD - 1));
+    const grp = (MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0])[2];
+    const shownRegions = (R.regions || []).filter(grp), shownIds = new Set(shownRegions.map(r => r.id));
+    const shownUnits = R.units.filter(u => shownIds.has(u.region));
+    if (!shownUnits.length) { host.innerHTML = '<p class="muted">この切り替えの駅はまだありません。</p>'; return; }
+    const minD = Math.min(...shownUnits.map(u => DEPTH[u.id])), maxD = Math.max(...shownUnits.map(u => DEPTH[u.id]));
+    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.max(34, (W - X0 - 28) / Math.max(1, maxD - minD));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
     let y = TOP;
-    (R.regions || []).forEach(rg => {
+    shownRegions.forEach(rg => {
       const us = R.units.filter(u => u.region === rg.id).sort(order);
       if (!us.length) return;
       const byD = {};
       us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
       const rows = Math.max(...Object.values(byD).map(a => a.length)), h = rows * YS + PAD * 2;
       Object.entries(byD).forEach(([d, a]) => a.forEach((u, i) => {
-        pos[u.id] = [X0 + (d - 1) * XS, y + PAD + YS / 2 + (i + (rows - a.length) / 2) * YS];
+        pos[u.id] = [X0 + (d - minD) * XS, y + PAD + YS / 2 + (i + (rows - a.length) / 2) * YS];
       }));
       const xs = us.map(u => pos[u.id][0]);
       boxes.push({ rg, x: Math.min(...xs) - 15, x2: Math.max(...xs) + 15, y, h });
@@ -443,10 +460,31 @@
           <span class="a">${esc(d.aim || R.kinds[d.kind])}</span></span>
         <span class="go">${go}</span>
       </a>`;
-    }).join('')}</div>`;
+    }).join('')}</div>
+    ${problemsHtml(id)}`;
   }
 
   // ---- 目標：単元を組み合わせた結果として届く場所 ----
+  // 古今東西の問題（problems/。著作権のある問題は骨格と出典だけ、D-020）
+  const PROBS = window.PROBLEMS || [];
+  const PBY = {};
+  PROBS.forEach(p => (p.u || []).forEach(u => (PBY[u] = PBY[u] || []).push(p)));
+  const solvable = () => PROBS.filter(p => p.u && p.u.length && p.u.every(isDone)).length;
+  function problemsHtml(id) {
+    const ps = (PBY[id] || []).slice().sort((a, b) => (b.pd ? 1 : 0) - (a.pd ? 1 : 0) || (a.u || []).length - (b.u || []).length || String(b.y).localeCompare(String(a.y)));
+    if (!ps.length) return '';
+    const shown = ps.slice(0, 24);
+    return `<section class="probs"><h2 class="section-title">この駅が鍵になる古今東西の問題（${ps.length} 問）</h2>
+      <p class="muted">組み合わせの札が、その問題を解くのに一緒に使う駅です。著作権のある問題は、骨格だけを書き、問題そのものは出典で読みます。</p>
+      <div class="prob-list">${shown.map(p => `<article class="prob">
+        <div class="prob-head"><b>${esc(p.src)}${p.y ? ' ' + esc(p.y) : ''}${p.no ? ' 第 ' + esc(p.no) + ' 問' : ''}</b>
+          ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">出典</a>` : ''}</div>
+        <div class="prob-body">${esc(p.pd && p.text ? p.text : p.g || '')}</div>
+        ${prefs.parent && p.k ? `<div class="parent"><b>鍵の一手</b> ${esc(p.k)}</div>` : ''}
+        <div class="row">組み合わせ ${(p.u || []).filter(u => UNITS[u]).map(u => `<a class="from" href="#/unit/${u}" style="${lc(UNITS[u].lane)}">${u === id ? '★ ' : ''}${isDone(u) ? '✓ ' : ''}${esc(UNITS[u].title)}</a>`).join('')}</div>
+      </article>`).join('')}</div>
+      ${ps.length > shown.length ? `<p class="muted">ほか ${ps.length - shown.length} 問</p>` : ''}</section>`;
+  }
   function viewGoal(id) {
     const g = GOALS.find(x => x.id === id), set = GOAL_SETS[id], st = goalStats(g), f = forecast(x => set.has(x));
     const next = R.units.filter(u => set.has(u.id) && ['ready', 'doing', 'review'].includes(status(u.id))).sort(order);
@@ -683,6 +721,8 @@
     }
     if (e.target.closest('[data-act=unfocus]')) { selected = null; drawMap(); $('#map').classList.remove('focus');
       $('#map-info').className = 'map-info muted'; $('#map-info').textContent = '駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。'; return; }
+    const mg = e.target.closest('[data-mapgroup]');
+    if (mg) { prefs.mapGroup = mg.dataset.mapgroup; save(PREF, prefs); selected = null; Music.tap(); render(); return; }
     const g = e.target.closest('[data-goal]');
     if (g) {
       prefs.goal = g.dataset.goal; save(PREF, prefs); Music.tap();

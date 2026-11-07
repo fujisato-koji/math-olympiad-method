@@ -1,0 +1,2356 @@
+# 組み合わせの型の記録。問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。
+# 問題は url の公式の資料で読む（D-020）。
+- id: USAMO-2000-1
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 1
+  field: A
+  gist: 中点での凸性に |x−y| の余りが付く「とても凸な」関数は存在しないことを示す。
+  units:
+  - A-028
+  - L-011
+  - L-012
+  missing: []
+  key: 等差に並ぶ点で不等式を足すと余りの係数が倍になり、繰り返すと矛盾する。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2000-2
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 2
+  field: G
+  gist: 内接円の接点までの長さで書いた等式を満たす三角形は、二等辺で互いに相似であることを示す。
+  units:
+  - G-028
+  - A-025
+  - A-015
+  missing: []
+  key: 接線の長さ x,y,z と r=√(xyz/(x+y+z)) で不等式に直し、等号の比 1:4:4 を出す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2000-3
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 3
+  field: C
+  gist: 3 色のカードを出す順で罰点が決まる遊びで、罰点の最小値と最小にする出し方を求める。
+  units:
+  - L-012
+  - L-019
+  - C-009
+  missing: []
+  key: 最小値は min(BW,2WR,3RB)。1 枚減らした場合への漸化式と帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2000-4
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 4
+  field: C
+  gist: 1000×1000 の盤で、辺が盤に平行な直角三角形を必ず含むための塗るマスの最小数を求める。
+  units:
+  - L-018
+  - C-017
+  missing: []
+  key: 答 1999。欠けた L 字の構成と、2 個以上ある列の駒から横の光線を出して数える評価。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2000-5
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 5
+  field: G
+  gist: 三角形の頂点を 2 つずつ通り隣と外接する円の列が、7 番目で最初の円に戻ることを示す。
+  units:
+  - G-023
+  - L-016
+  missing: []
+  key: 各円で弧に立つ有向角を追い、6 回で元の値に戻る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2000-6
+  source: USA Mathematical Olympiad
+  year: 2000
+  number: 6
+  field: A
+  gist: 非負の実数の組について、min を使った 2 重和の不等式を示す。
+  units:
+  - A-032
+  - L-019
+  missing: []
+  key: b_i=r_i a_i と置いて 1 つの min に直す、または調整（smoothing）で異なる値を減らす。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2000-notes.tex
+- id: USAMO-2001-1
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 1
+  field: C
+  gist: 8 箱に 6 色ずつ入れ、どの 2 色も同じ箱に 2 回以上入らないとき、色の数の最小値を求める。
+  units:
+  - C-018
+  - L-018
+  - L-015
+  missing: []
+  key: 答 23。色ごとの出現回数で色の対を二通りに数えて下界、表で構成。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2001-2
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 2
+  field: G
+  gist: 接点を辺の反対側へ移した点を結ぶ 2 本のチェバ線の交点（ナーゲル点）について長さの等式を示す。
+  units:
+  - G-033
+  - G-031
+  - G-029
+  missing: []
+  key: 接点の対蹠点が A からの直線上にあること（相似拡大）と、交点での比 (s−a)/s。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2001-3
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 3
+  field: A
+  gist: a²+b²+c²+abc=4 の非負実数で、ab+bc+ca−abc を 0 と 2 で挟む。
+  units:
+  - L-015
+  - A-025
+  - A-015
+  missing: []
+  key: 鳩の巣で (b−1)(c−1)≥0 となる 2 つを選び、条件から bc≤2−a を出して代入（ノートはラグランジュ乗数）。
+  basis: self
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2001-4
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 4
+  field: G
+  gist: PA,PB,PC が PA を最長とする鈍角三角形をなすなら、角 A が鋭角であることを示す。
+  units:
+  - G-034
+  - A-027
+  missing: []
+  key: トレミーの不等式とコーシー・シュワルツで BC²<AB²+AC²。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2001-5
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 5
+  field: N
+  gist: gcd の条件を満たす 2 元を含み x²−y で閉じる整数の集合は、全整数であることを示す。
+  units:
+  - N-029
+  - N-032
+  - L-011
+  missing: []
+  key: 集合を保つ平行移動の幅を作り、1 でなければその素因数で割った余りの世界で矛盾。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2001-6
+  source: USA Mathematical Olympiad
+  year: 2001
+  number: 6
+  field: G
+  gist: 平面の各点に実数を置き、どの三角形でも内心の値が 3 頂点の平均なら、全部等しいことを示す。
+  units:
+  - A-029
+  - G-028
+  missing: []
+  key: 等脚台形では対角の値の和が等しい（同じ内接円を共有する）ことを出し、任意の 2 点を結ぶ。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2001-notes.tex
+- id: USAMO-2002-1
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 1
+  field: C
+  gist: 部分集合を白黒に塗り、白も黒も和で閉じ、白がちょうど N 個になるようにできることを示す。
+  units:
+  - L-012
+  - N-025
+  missing: []
+  key: 要素の数についての帰納法（N を半分ずつに分けて割り当てる）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2002-2
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 2
+  field: G
+  gist: 半角の cot の重み付き二乗和が 6s/7r の二乗に等しい三角形は、整数比の辺をもつことを示す。
+  units:
+  - G-028
+  - A-027
+  missing: []
+  key: s−a=r·cot(A/2) などと置き、コーシー・シュワルツの等号条件で比を決める。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2002-3
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 3
+  field: A
+  gist: 実数係数のモニック多項式は、実根を n 個もつ 2 つのモニック多項式の平均で書けることを示す。
+  units:
+  - A-026
+  - A-036
+  missing:
+  - 中間値の定理と連続性
+  key: 1,…,n で符号が交互に大きく振れる多項式を足し引きし、根の数を中間値の定理で確かめる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2002-4
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 4
+  field: A
+  gist: f(x²−y²)=xf(x)−yf(y) を満たす実関数を全部求める。
+  units:
+  - A-029
+  missing: []
+  key: 奇関数と加法性を出し、f((x+1)²) を 2 通りに展開して f(x)=cx。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2002-5
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 5
+  field: N
+  gist: 3 以上の 2 数を、隣どうしの和が積を割る列でつなげることを示す。
+  units:
+  - N-017
+  - C-022
+  - L-018
+  missing: []
+  key: グラフの連結性に直し、n→n(n−1)→…→n! と n!→(n+1)! の道を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2002-6
+  source: USA Mathematical Olympiad
+  year: 2002
+  number: 6
+  field: C
+  gist: 切手のシートから 3 枚続きをこれ以上取れなくなるまで取る最少数を、n² の定数倍で挟む。
+  units:
+  - L-018
+  - C-018
+  - C-017
+  missing: []
+  key: 1 つの帯がつぶす置き場所の数で下界、周期的な取り方で上界。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2002-notes.tex
+- id: USAMO-2003-1
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 1
+  field: N
+  gist: どの n にも、奇数の数字だけでできた n 桁の 5^n の倍数があることを示す。
+  units:
+  - L-012
+  - N-028
+  missing: []
+  key: 先頭に奇数を 1 つ付ける 5 通りは 5^{n+1} で割った余りが全部違うので、帰納法で 1 つ選べる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2003-2
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 2
+  field: G
+  gist: 辺と対角線が全部有理数の凸多角形を対角線で切ると、小片の辺も有理数であることを示す。
+  units:
+  - G-024
+  - G-025
+  - G-020
+  missing: []
+  key: 四角形に帰着し、余弦定理で cos が有理数、正弦の比で切り分けた長さを出す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2003-3
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 3
+  field: C
+  gist: 0≤a_i≤i の数列に「前にある異なる値の個数」を取る変換を繰り返すと、n 回未満で止まることを示す。
+  units:
+  - L-012
+  - L-016
+  missing: []
+  key: 先頭に 0 が並ぶ長さで場合分けし、強い帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2003-4
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 4
+  field: G
+  gist: 円と三角形の辺の交点から作る点 M について、MF=MC と MB·MD=MC² の同値を示す。
+  units:
+  - G-029
+  - G-020
+  - G-030
+  missing: []
+  key: チェバの定理で中線の条件を辺の平行に直し、相似な三角形で長さの積に結ぶ。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2003-5
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 5
+  field: A
+  gist: 正の a,b,c で、巡回する 3 つの分数の和が 8 以下であることを示す。
+  units:
+  - A-028
+  - A-032
+  missing: []
+  key: 斉次化で a+b+c=3 とし、各項を接線の 1 次式で上から押さえる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2003-6
+  source: USA Mathematical Olympiad
+  year: 2003
+  number: 6
+  field: C
+  gist: 正六角形の頂点の数を両隣の差の絶対値に置きかえる操作で、全部 0 にできることを示す。
+  units:
+  - L-016
+  - L-005
+  - L-012
+  missing: []
+  key: 偶奇の行き詰まりを避けた形に持ち込み、和が減る操作で帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2003-notes.tex
+- id: USAMO-2004-1
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 1
+  field: G
+  gist: 角がどれも 60° 以上の外接四角形で、辺の 3 乗の差を 1/3 倍と 3 倍で挟む。
+  units:
+  - G-024
+  - A-015
+  missing: []
+  key: 接線の長さの和の等式で差をそろえ、余弦定理で 2 次式どうしを比べる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2004-2
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 2
+  field: N
+  gist: gcd が 1 の整数を含み、差と特定の和で閉じる集合は全整数であることを示す。
+  units:
+  - N-029
+  - L-005
+  missing: []
+  key: 1 次結合が入ることを示してベズーで全体へ、途中に偶奇の妨げがある。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2004-3
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 3
+  field: G
+  gist: 1×k の長方形を、相似だが合同でない 2 つの多角形に分けられる k を求める。
+  units:
+  - G-020
+  - L-018
+  - L-011
+  missing:
+  - 中間値の定理と連続性
+  key: 答 k≠1。階段形 2 つを組む構成で縦横比が連続に動くことを使い、正方形は背理法で不可能。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2004-4
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 4
+  field: C
+  gist: 6×6 の盤に交互に異なる有理数を書き、最大の行を含む列で勝敗が決まる遊びの勝者を決める。
+  units:
+  - L-017
+  missing: []
+  key: 後手が 2 行のマスを対にして大小の並びをそろえる戦略で勝つ。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2004-5
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 5
+  field: A
+  gist: 正の a,b,c で (a^5−a²+3) の 3 つの積が (a+b+c)³ 以上であることを示す。
+  units:
+  - A-033
+  - A-015
+  missing: []
+  key: a^5−a²+3≥a³+2 を因数分解で示し、ヘルダーの不等式。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2004-6
+  source: USA Mathematical Olympiad
+  year: 2004
+  number: 6
+  field: G
+  gist: 内接円をもつ四角形で、中心までの長さの等式から等脚台形であることを示す。
+  units:
+  - G-025
+  - A-027
+  missing: []
+  key: 接線の長さで書き、tan の加法定理から出る関係式のもとで不等式の等号条件に帰着。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2004-notes.tex
+- id: USAMO-2005-1
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 1
+  field: N
+  gist: 1 より大きい約数を、隣どうしが互いに素でないように円に並べられる合成数を求める。
+  units:
+  - N-021
+  - L-007
+  - L-018
+  missing: []
+  key: 異なる 2 素数の積だけが不可。素因数の個数で場合分けして並べ方を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2005-2
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 2
+  field: N
+  gist: 大きな冪を右辺にもつ 2 本の連立方程式が整数解をもたないことを示す。
+  units:
+  - N-032
+  - N-033
+  - N-038
+  missing: []
+  key: 足して平方の形にし、19 を法として 9 乗の値と平方剰余を調べる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2005-3
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 3
+  field: G
+  gist: 円と平行線の条件で作る点 B₁,C₁ について、B₁,C₁,P,Q が同一円周上にあることを示す。
+  units:
+  - G-023
+  - G-031
+  missing: []
+  key: A,B₁,C₁ が一直線上にあることに帰着し、角を追う。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2005-4
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 4
+  field: C
+  gist: 机の 4 本の脚を整数の長さだけ切って、なお安定して立つ切り方を数える。
+  units:
+  - G-021
+  - C-005
+  - A-018
+  missing: []
+  key: 脚の先が平行四辺形をなす条件 k₁+k₃=k₂+k₄ に直し、和ごとの組の数の 2 乗を足す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2005-5
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 5
+  field: C
+  gist: 赤青 n 個ずつの点で、赤と青を 1 つずつ通り両側の個数がつり合う直線が 2 本以上あることを示す。
+  units:
+  - C-023
+  - L-014
+  - L-019
+  missing: []
+  key: 凸包の色で場合分けし、点の周りに直線を回して個数の差が符号を変える所を取る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2005-6
+  source: USA Mathematical Olympiad
+  year: 2005
+  number: 6
+  field: N
+  gist: どの部分和の数字の和も k になる n 元の集合がある最小の k を、対数で上下から挟む。
+  units:
+  - N-025
+  - L-018
+  missing: []
+  key: 10^e−1 の倍数で構成、部分和を順に足していく手順で数字の和が増えることを示して下界。
+  basis: published-notes
+  confidence: 低
+  url: https://web.evanchen.cc/exams/USAMO-2005-notes.tex
+- id: USAMO-2006-1
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 1
+  field: N
+  gist: 素数 p と 0<s<p について、分数部分の条件を満たす m,n があるのは s が p−1 を割らないときに限ることを示す。
+  units:
+  - N-032
+  - N-023
+  missing: []
+  key: s 倍して p で割った余りで言いかえ、逆元の並び方を調べる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2006-2
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 2
+  field: N
+  gist: 2k+1 個の異なる正の整数の和は N を越え、どの k 個の和も N/2 以下となる最小の N を求める。
+  units:
+  - L-018
+  - L-014
+  missing: []
+  key: 小さい順に並べ、大きい側と小さい側の差を積み上げて評価、連続した整数で構成。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2006-3
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 3
+  field: N
+  gist: p(f(n²))−2n が上に有界になる整数係数多項式 f を全部求める（p は最大の素因数）。
+  units:
+  - N-045
+  - N-038
+  - N-036
+  missing: []
+  key: 既約な因子の値を割る素数が無限にあることと、平方剰余で n を p/2 より十分小さく取る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2006-4
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 4
+  field: N
+  gist: 和と積がともに n になる正の有理数の組（2 個以上）がある n を求める。
+  units:
+  - A-025
+  - A-017
+  - L-018
+  missing: []
+  key: 1,2,3,5 以外。小さい n は判別式と相加相乗平均で不可、残りは組を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2006-5
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 5
+  field: N
+  gist: 2 の冪で決まる跳び方のカエルで、2^i k へ行く最少の跳びが 2^i へ行く最少より多いことを示す。
+  units:
+  - N-025
+  - L-018
+  missing: []
+  key: 2 で割れる回数に注目し、ある跳びを消しても有効な列が残ることを使って比べる。
+  basis: published-notes
+  confidence: 低
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2006-6
+  source: USA Mathematical Olympiad
+  year: 2006
+  number: 6
+  field: G
+  gist: 四角形の向かい合う辺を同じ比に分ける点から作る 4 つの外接円が、1 点を共有することを示す。
+  units:
+  - G-031
+  missing: []
+  key: 回転相似の中心（ミケル点）が全部の円に乗る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2006-notes.tex
+- id: USAMO-2007-1
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 1
+  field: N
+  gist: 和が項の番号で割り切れるように次の項を決める数列が、いずれ一定になることを示す。
+  units:
+  - L-016
+  - A-022
+  missing: []
+  key: 平均 b_k が増えない非負整数の列なのでいずれ一定、そこで a_k も一定。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2007-2
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 2
+  field: C
+  gist: 半径 5 以上で内部が交わらない円の族で、格子点を全部覆えるかを問う。
+  units:
+  - C-023
+  - L-014
+  - G-024
+  missing: []
+  key: 不可。どれとも交わらない円を最大まで広げ、接する 3 円と余弦定理で矛盾。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2007-3
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 3
+  field: C
+  gist: n²+n−1 元集合の n 元部分集合を 2 組に分けると、同じ組に互いに素な n 個があることを示す。
+  units:
+  - L-014
+  - L-012
+  - L-015
+  missing: []
+  key: 両方の組の部分集合を含む n+1 元集合の、互いに素な極大の族を取る（帰納法でも同じ）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2007-4
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 4
+  field: C
+  gist: 2007 マス以上の連結な形のうち、分けられない「原始的」なものの最大のマス数を求める。
+  units:
+  - C-022
+  - L-014
+  - L-018
+  missing: []
+  key: 全域木で考え、消しても大きな部分が残らない頂点を極端な位置から探す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2007-5
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 5
+  field: N
+  gist: 7^{7^n}+1 が少なくとも 2n+3 個（重複を許す）の素数の積であることを示す。
+  units:
+  - L-012
+  - A-015
+  missing: []
+  key: X=7^{7^n} で (X^7+1)/(X+1) が平方の差に分解できることを使う帰納法。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2007-6
+  source: USA Mathematical Olympiad
+  year: 2007
+  number: 6
+  field: G
+  gist: 外接円と内接円に接する 2 種の円の中心間の距離の積が R³/8 以下であることを示す。
+  units:
+  - G-038
+  - G-033
+  - A-025
+  missing: []
+  key: A を中心に内接円を保つ反転と角の二等分線での折り返しで距離を明示し、積を評価する。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2007-notes.tex
+- id: USAMO-2008-1
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 1
+  field: N
+  gist: 互いに素な 1 より大きい整数の積から 1 を引くと連続 2 整数の積になる組の存在を示す。
+  units:
+  - N-045
+  - N-036
+  - L-012
+  missing: []
+  key: t²+t+1 の値を割る素数が無限にあること（シュールの定理）、または帰納的な構成。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2008-2
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 2
+  field: G
+  gist: 中線と垂直二等分線の交点から作る F について、A,N,F,P が同一円周上にあることを示す。
+  units:
+  - G-023
+  - G-040
+  missing: []
+  key: 角を追う、または重心座標で点を表して確かめる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2008-3
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 3
+  field: C
+  gist: 菱形状の格子点の集合を、1 歩ずつ進む互いに素な道に分けるには n 本以上要ることを示す。
+  units:
+  - L-018
+  - L-012
+  - C-017
+  missing: []
+  key: 外側の層を取り除く帰納法、または端の点に注目した全体の評価。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2008-4
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 4
+  field: G
+  gist: 正 n 角形を二等辺三角形だけで三角形分割できる n を求める。
+  units:
+  - L-012
+  - L-007
+  - G-018
+  missing: []
+  key: 答 n=2^a(2^b+1)。短い辺を含む三角形の形を偶奇で場合分けし、小さい n に帰着。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2008-5
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 5
+  field: A
+  gist: 整数の 1 次関係をもつ 3 つの非負実数に引き算の操作を繰り返し、1 つを 0 にできることを示す。
+  units:
+  - L-016
+  - N-029
+  missing: []
+  key: 係数の絶対値の和が減る操作を選べることを示す（互除法の考え）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2008-6
+  source: USA Mathematical Olympiad
+  year: 2008
+  number: 6
+  field: C
+  gist: 各人の部屋の中の友人数が偶数になるよう 2 部屋に分ける方法の数が、2 の冪であることを示す。
+  units:
+  - C-022
+  missing:
+  - 線形代数（ランク、核、行列式）
+  key: F₂ 上の連立 1 次方程式に直し、解の集合が核の平行移動であることを使う。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2008-notes.tex
+- id: USAMO-2009-1
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 1
+  field: G
+  gist: 交わる 2 円と中心を通る直線から作る 4 点が共円なら、その中心が共通弦の直線上にあることを示す。
+  units:
+  - G-032
+  - G-030
+  - G-019
+  missing: []
+  key: 方べきと三平方の定理で半径の関係を出し、根軸の上にあることを示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2009-2
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 2
+  field: C
+  gist: −n から n までで、a+b+c=0 となる 3 数（重複可）を含まない部分集合の最大の大きさを求める。
+  units:
+  - L-012
+  - L-007
+  - L-018
+  missing: []
+  key: 奇数を全部取って構成、両端の数の入り方で場合分けして帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2009-3
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 3
+  field: C
+  gist: 格子の多角形のドミノ敷き詰めで、決まった 2 つの形を避ける敷き方が存在し一意であることを示す。
+  units:
+  - C-017
+  - L-012
+  missing: []
+  key: 左下のマスの覆い方で場合分けする帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2009-4
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 4
+  field: A
+  gist: 和と逆数の和の積が (n+1/2)² 以下なら、最大が最小の 4 倍以下であることを示す。
+  units:
+  - A-027
+  - A-017
+  missing: []
+  key: 最大と最小を組にしてコーシー・シュワルツを使い、比の平方根の 2 次不等式に直す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2009-5
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 5
+  field: G
+  gist: 円に内接する台形と内部の点から作る四角形の共円が、ある角の二等分と同値であることを示す。
+  units:
+  - G-038
+  - G-023
+  missing: []
+  key: B を中心に反転して直線の関係に直す、または角を追う。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2009-6
+  source: USA Mathematical Olympiad
+  year: 2009
+  number: 6
+  field: N
+  gist: 差の積が整数になる 2 つの有理数列に、差を同時に整数にする共通の比 r があることを示す。
+  units:
+  - N-021
+  - N-030
+  - L-014
+  missing: []
+  key: 素数ごとに指数を比べ、最小の指数に合わせて r を決める。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2009-notes.tex
+- id: USAMO-2010-1
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 1
+  field: G
+  gist: 半円に内接する五角形の点からの垂線の足で作る 2 直線のなす角が、中心角の半分であることを示す。
+  units:
+  - G-023
+  - G-033
+  missing: []
+  key: 角を追う、またはシムソン線で交点が直径への垂線の足だと示す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2010-2
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 2
+  field: C
+  gist: 円に並ぶ生徒が背の条件で前後を入れかえるとき、入れかえは C(n,3) 回を越えないことを示す。
+  units:
+  - L-012
+  - L-016
+  missing: []
+  key: 2 人が入れかわる回数は番号の差−1 以下（帰納法）、それを足すと C(n,3)。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2010-3
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 3
+  field: A
+  gist: a_i a_j ≤ i+j のもとで a_1…a_2010 の積の最大値を求める。
+  units:
+  - L-018
+  - A-027
+  missing: []
+  key: 組にした積で上から押さえ（並べかえ）、等号に届く値を慎重に構成。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2010-4
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 4
+  field: G
+  gist: 直角三角形の角の二等分線と内心から作る 6 本の線分が、全部整数になれるかを問う。
+  units:
+  - G-024
+  - G-028
+  - A-016
+  missing: []
+  key: 不可。角 BIC=135° の余弦定理で √2 が現れ、有理数と矛盾。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2010-5
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 5
+  field: N
+  gist: 3 つの連続数の積の逆数の和について、ある分数の分子と分母の差が p で割れることを示す。
+  units:
+  - A-018
+  - N-032
+  missing: []
+  key: 部分分数で調和和に直し、1/k+1/(p−k) が p で割れる組にまとめる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2010-6
+  source: USA Mathematical Olympiad
+  year: 2010
+  number: 6
+  field: C
+  gist: 0 でない整数の組 68 個から和が 0 にならないように数を消すとき、保証できる最大の得点を求める。
+  units:
+  - C-027
+  - C-022
+  - L-018
+  missing: []
+  key: 答 43。各数を一定の確率で消す確率的方法で下界、多重グラフの構成で上界。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2010-notes.tex
+- id: USAMO-2011-1
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 1
+  field: A
+  gist: a²+b²+c²+(a+b+c)²≤4 のもとで、3 つの分数の和が 3 以上であることを示す。
+  units:
+  - A-025
+  - A-032
+  missing: []
+  key: 条件で分子の定数を置きかえて斉次にし、相加相乗平均。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2011-2
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 2
+  field: C
+  gist: 正五角形の頂点の整数を動かす操作で、1 つの頂点に 2011 を集められるかを問う。
+  units:
+  - L-016
+  - N-032
+  missing: []
+  key: 重み付きの和を 5 で割った余りが不変なので勝てる頂点は 1 つだけ、そこへ集める手順を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2011-3
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 3
+  field: G
+  gist: 角と辺の条件を満たす非凸の六角形で、3 本の対角線が 1 点で交わることを示す。
+  units:
+  - G-028
+  - G-036
+  missing: []
+  key: 三角形 ACE の辺での折り返しでできる形（垂心で交わる）と比べ、角で形が一意に決まることを複素数で示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2011-4
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 4
+  field: N
+  gist: 2^{2^n} を 2^n−1 で割った余りがいつも 4 の冪かを問う。
+  units:
+  - N-032
+  - N-037
+  missing: []
+  key: 反例 n=25。2^n≡1 なので指数を n で割った余りに落とす。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2011-5
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 5
+  field: G
+  gist: 四角形の内部の点 P から角の条件で作る 2 点について、Q₁Q₂ と 2 辺の平行が同値であることを示す。
+  units:
+  - G-029
+  - G-045
+  missing: []
+  key: 対辺の延長の交点 X について Q₁,Q₂ は P の等角共役で、X と一直線上にある。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2011-6
+  source: USA Mathematical Olympiad
+  year: 2011
+  number: 6
+  field: C
+  gist: 45 元の集合 11 個のどの 2 つも 9 元を共有するとき、和集合が 165 元以上であることを示す。
+  units:
+  - C-018
+  - A-027
+  missing: []
+  key: 各要素の出現回数で二通りに数え、コーシー・シュワルツ。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2011-notes.tex
+- id: USAMO-2012-1
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 1
+  field: A
+  gist: 最大が最小の n 倍以下の n 個の正数から、必ず鋭角三角形の 3 辺が選べる n を求める。
+  units:
+  - A-022
+  - L-018
+  - L-014
+  missing: []
+  key: 答 n≥13。小さい順に並べ、2 乗がフィボナッチ型に増える列と比べる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2012-2
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 2
+  field: C
+  gist: 円周の 432 点を 4 色 108 点ずつ塗ると、各色から合同な三角形を 1 つずつ選べることを示す。
+  units:
+  - C-020
+  - L-015
+  missing: []
+  key: 回転を無作為に選んだときの重なりの期待値と鳩の巣で、色を順に絞る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2012-3
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 3
+  field: N
+  gist: a_k+2a_{2k}+…+na_{nk}=0 がすべての k で成り立つ 0 でない整数列がある n を求める。
+  units:
+  - N-046
+  - N-021
+  - L-018
+  missing: []
+  key: 答 n≥3。完全乗法的な列を作り、ベルトランの仮説で素数での値を決める。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2012-4
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 4
+  field: N
+  gist: f(n!)=f(n)! と m−n|f(m)−f(n) を満たす正の整数上の関数を全部求める。
+  units:
+  - A-029
+  - N-017
+  - N-043
+  missing: []
+  key: f(1),f(2) で場合分けし、階乗の差の割り算と大きさの比較で恒等写像に絞る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2012-5
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 5
+  field: G
+  gist: 点 P を通る直線で PA,PB,PC を折り返した直線と対辺の交点が、一直線上にあることを示す。
+  units:
+  - G-036
+  - G-037
+  missing: []
+  key: 複素数で P を原点、直線を実軸に置いて計算する、またはデザルグの対合。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2012-6
+  source: USA Mathematical Olympiad
+  year: 2012
+  number: 6
+  field: A
+  gist: 和 0、二乗和 1 の実数で、部分和が λ 以上になる部分集合の数を上から押さえる。
+  units:
+  - C-020
+  - C-014
+  missing: []
+  key: 部分和の 2 乗の平均が 1/4、補集合と組にしてマルコフ型に数える。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2012-notes.tex
+- id: USAMO-2013-1
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 1
+  field: G
+  gist: 辺上の 3 点で作る 3 つの外接円とチェバ線の交点について、比 YX/XZ=BP/PC を示す。
+  units:
+  - G-031
+  - G-024
+  missing: []
+  key: ミケル点を取り、正弦定理と相似で比を出す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2013-2
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 2
+  field: C
+  gist: 円周の点を 1 つか 2 つ進む動きで同じ動きを使わずに 2 周する数え方について、漸化式を示す。
+  units:
+  - C-019
+  - C-009
+  - A-022
+  missing: []
+  key: 動きの列を 2 行の表に直して対応させ、漸化式で数える。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2013-3
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 3
+  field: C
+  gist: 三角形に並べた駒の 1 列を裏返す操作で、ある配置に要る最少回数の最大値を求める。
+  units:
+  - L-005
+  - L-018
+  missing:
+  - 線形代数（ランク、核、行列式）
+  key: 操作は可換で 2 回で元に戻るので F₂ のベクトルとみて、操作の間の 1 次従属を全部決める。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2013-4
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 4
+  field: A
+  gist: x,y,z≥1 で、平方根の最小値と平方根の和が等しくなる実数を全部求める。
+  units:
+  - A-027
+  - A-016
+  missing: []
+  key: x=1+a などと置き、コーシー・シュワルツで左辺が右辺以上を示して等号を調べる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2013-5
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 5
+  field: N
+  gist: cm と cn が同じ 0 でない数字を使う正の整数 c があることを示す。
+  units:
+  - N-037
+  - N-033
+  - N-025
+  missing: []
+  key: 循環小数の巡回（142857 の型）。10 の位数を使って分母を選ぶ。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2013-6
+  source: USA Mathematical Olympiad
+  year: 2013
+  number: 6
+  field: G
+  gist: 辺上の点 P と 2 つの外接円の共通外接線から作る長さの等式を満たす P を全部求める。
+  units:
+  - G-031
+  - G-030
+  missing: []
+  key: ABC と A O₁ O₂ の回転相似、接線の長さの方べき。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2013-notes.tex
+- id: USAMO-2014-1
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 1
+  field: A
+  gist: 実根だけの 4 次多項式で、係数の条件のもとで (x_i²+1) の積の最小値を求める。
+  units:
+  - A-021
+  - A-026
+  missing: []
+  key: 積は |P(i)|²=(b−d−1)²+(a−c)² と書ける。答 16。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2014-2
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 2
+  field: A
+  gist: 整数上で定義された関数方程式を解く。
+  units:
+  - A-029
+  - N-030
+  missing: []
+  key: f(0) を割らない素数を代入して f(0)=0 を出し、各点で 0 か x² かを決める。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2014-3
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 3
+  field: G
+  gist: 3 点が一直線になるのが添字の和が 2014 のときに限る、平面の点の列の存在を示す。
+  units:
+  - A-026
+  - G-026
+  - L-018
+  missing: []
+  key: y=x³ 上の点を使い、直線との 3 交点の x の和が 0（解と係数の関係）。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2014-4
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 4
+  field: C
+  gist: 六角形の盤で置く側と取る側が交互に動くとき、置く側が k 個並べられない最小の k を求める。
+  units:
+  - L-017
+  - C-017
+  missing: []
+  key: 答 6。3 つおきに塗ったマスを取る側が狙えば 6 個は並ばず、5 個は置く側の戦略を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2014-5
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 5
+  field: G
+  gist: 垂心と角の二等分線から作る外心 X と垂心 Y の距離が、外接円の半径に等しいことを示す。
+  units:
+  - G-036
+  - G-028
+  missing: []
+  key: P を AC で折り返すと外接円に乗ることを使い、複素数で計算する。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2014-6
+  source: USA Mathematical Olympiad
+  year: 2014
+  number: 6
+  field: N
+  gist: gcd(a+i,b+j)>1 がすべての i,j で成り立つなら、min(a,b) が大きいことを示す。
+  units:
+  - C-018
+  - L-015
+  - N-043
+  missing: []
+  key: 表の各マスに割る素数を置き、素数ごとに占めるマス数を数えて大きな素数を見つける。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2014-notes.tex
+- id: USAMO-2015-1
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 1
+  field: N
+  gist: x²+xy+y²=((x+y)/3+1)³ を整数で解く。
+  units:
+  - N-035
+  - N-031
+  - A-015
+  missing: []
+  key: a=x+y, b=x−y と置いて b²=(c−2)²(4c+1) に直し、4c+1 を平方数にする。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2015-2
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 2
+  field: G
+  gist: 直角を 2 つもつ内接四角形で、動く点から作る弦の中点が 1 つの円の上を動くことを示す。
+  units:
+  - G-030
+  - G-031
+  missing: []
+  key: 方べき（公式の解）や相似拡大で、AO の中点を中心とする円を示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2015-3
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 3
+  field: C
+  gist: 部分集合を 2 色に塗り、和と共通部分についての乗法的な等式を満たす塗り方を数える。
+  units:
+  - A-024
+  - A-029
+  - C-005
+  missing: []
+  key: 値が 0 でない集合の族が和と共通部分で閉じて区間の形になり、要素ごとに独立に決まる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2015-4
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 4
+  field: C
+  gist: 盤に積んだ石を長方形の角で動かす操作で、移り合わない置き方の数を数える。
+  units:
+  - L-016
+  - C-013
+  missing: []
+  key: 各行・各列の石の数が不変で、それが同じなら移り合う。重複組合せの 2 乗。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2015-5
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 5
+  field: N
+  gist: a⁴+b⁴=c⁴+d⁴=e⁵ のとき、ac+bd が合成数であることを示す。
+  units:
+  - N-032
+  - N-030
+  - N-043
+  missing: []
+  key: 素数 p と仮定し合同式で p|e⁵(a−d)(a+d)(a²+d²) を出し、大きさで矛盾。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2015-6
+  source: USA Mathematical Olympiad
+  year: 2015
+  number: 6
+  field: A
+  gist: 密度が λ 以下の多重集合で、要素の和が n(n+1)λ/2 以下になる n が無限にあることを示す。
+  units:
+  - A-018
+  - L-011
+  missing: []
+  key: 和をアーベルの総和法で個数の和に変え、背理法で矛盾。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2015-notes.tex
+- id: USAMO-2016-1
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 1
+  field: C
+  gist: 隣どうしが交わらず和も全体でない 100 個の異なる部分集合の列に要る、全体の最小の大きさを求める。
+  units:
+  - L-018
+  - A-024
+  missing: []
+  key: 答 8。7 元では大きい集合が使える回数を数えて不可、8 元で構成。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2016-2
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 2
+  field: N
+  gist: 階乗の積と商で書いた数が整数であることを示す。
+  units:
+  - N-034
+  - N-023
+  missing: []
+  key: ルジャンドルの公式で各素数の指数を比べ、床関数の不等式に直す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2016-3
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 3
+  field: G
+  gist: 傍心・外心と、高さの足・角の二等分線の足から作る点 P について、PO と YZ が垂直であることを示す。
+  units:
+  - G-033
+  - G-028
+  - G-040
+  missing: []
+  key: 高さの中点の補題と傍心三角形の外心を使う、または重心座標。
+  basis: published-notes
+  confidence: 低
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2016-4
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 4
+  field: A
+  gist: (f(x)+xy)f(x−3y)+(f(y)+xy)f(3x−y)=f(x+y)² を満たす実関数を全部求める。
+  units:
+  - A-029
+  - L-011
+  missing: []
+  key: f(0)=0、偶関数、各点で f(x)=x² か f(4x)=0 を出し、2 種が混ざらないことを示す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2016-5
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 5
+  field: G
+  gist: 三角形に入れた辺の等しい五角形で、ある角の二等分線が OI と平行であることを示す。
+  units:
+  - G-036
+  - G-028
+  - G-025
+  missing: []
+  key: 外接円を単位円にし、弧の中点の和で内心を書く複素数、または三角法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2016-6
+  source: USA Mathematical Olympiad
+  year: 2016
+  number: 6
+  field: C
+  gist: 2 枚ずつ同じ数の札が伏せて並び、k 枚めくると並べかえられる遊びで、一致を見つけられる (n,k) を求める。
+  units:
+  - L-017
+  - L-016
+  missing: []
+  key: k<n なら隣り合う問い合わせの差で 1 枚ずつ読む戦略、k=n なら相手が情報を与えない並べかえを保てる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2016-notes.tex
+- id: USAMO-2017-1
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 1
+  field: N
+  gist: a+b が a^b+b^a を割る、互いに素な (a,b) が無限にあることを示す。
+  units:
+  - N-044
+  - N-032
+  missing: []
+  key: 差 d を固定した式で a,b を作り、合同式で割り切れることを確かめる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2017-2
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 2
+  field: C
+  gist: 数列 A で定まる「A 転倒」の個数ごとの置換の数が、A によらないことを示す。
+  units:
+  - C-026
+  - C-019
+  - L-012
+  missing: []
+  key: 転倒の数え上げを q の母関数に直し、どの A でも同じ積になることを示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2017-3
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 3
+  field: G
+  gist: 内心と弧の中点から作る 2 円の交点 L について、IL の中点が外接円に乗ることを示す。
+  units:
+  - G-033
+  - G-032
+  - G-028
+  missing: []
+  key: S をある三角形の垂心とみて根心を使い、九点円と方べきで交点を特定する。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2017-4
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 4
+  field: C
+  gist: 円周の赤と青を決まった規則で組にするとき、基準点を含む弧の数が赤の順序によらないことを示す。
+  units:
+  - L-019
+  - L-016
+  missing: []
+  key: 隣り合う 2 つの赤の順を入れかえても数が変わらないことを示す（または不変量）。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2017-5
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 5
+  field: C
+  gist: 格子点に有限種のラベルを付け、同じラベル i の点の距離を c^i 以上にできる c を求める。
+  units:
+  - C-023
+  - L-018
+  - G-034
+  missing: []
+  key: 答 c<√2。市松模様で半分ずつ割り当てる構成と、円の詰め込みの面積による評価。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2017-6
+  source: USA Mathematical Olympiad
+  year: 2017
+  number: 6
+  field: A
+  gist: a+b+c+d=4 の非負実数で、巡回する分数の和の最小値を求める。
+  units:
+  - A-028
+  - A-025
+  missing: []
+  key: 各分母を 1 次式で押さえる接線の不等式と、ab+bc+cd+da≤4。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2017-notes.tex
+- id: USAMO-2018-1
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 1
+  field: A
+  gist: a+b+c=4∛(abc) のもとで、最小値の項を含む 2 次の不等式を示す。
+  units:
+  - A-032
+  - A-015
+  missing: []
+  key: 最小を 1 にそろえ、t=∛(ab) と置いた 1 変数の因数分解 4t(t−2)²。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2018-2
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 2
+  field: A
+  gist: xyz=1 のもとで f(x+1/y)+f(y+1/z)+f(z+1/x)=1 を満たす正の実関数を全部求める。
+  units:
+  - A-029
+  - A-035
+  - A-032
+  missing: []
+  key: x=b/c などと置いてコーシー型の式に直し、値の有界性で 1 次関数に絞る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2018-3
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 3
+  field: N
+  gist: φ(n) の素因数がすべて n を割るとき、φ(n) が既約剰余類の k 乗和を割ることを示す。
+  units:
+  - N-033
+  - N-036
+  - N-037
+  missing: []
+  key: 素数ごとの指数で比べ、素数冪の場合から中国剰余定理で組み立てる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2018-4
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 4
+  field: N
+  gist: 素数 p と整数 a_i で、a_i+ik を p で割った余りが p/2 種類以上になる k があることを示す。
+  units:
+  - C-022
+  - L-015
+  - N-032
+  missing: []
+  key: 各 k で余りの一致を辺にしたグラフを作り、辺の総数から辺の少ない k を鳩の巣で選ぶ。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2018-5
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 5
+  field: G
+  gist: 内接四角形の対角線の交点と 2 つの円から作る点 M で、角 MAC が直角であることを示す。
+  units:
+  - G-031
+  - G-037
+  - G-023
+  missing: []
+  key: 自己交差する四角形 PBQD のミケル点が A であることを示す（射影や反転でも解ける）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2018-6
+  source: USA Mathematical Olympiad
+  year: 2018
+  number: 6
+  field: C
+  gist: x_k/k がすべて異なる置換の個数が奇数であることを示す。
+  units:
+  - C-014
+  - L-005
+  - C-022
+  missing: []
+  key: 逆置換と組にして長さ 2 以下の巡回に絞り、完全グラフのマッチングを組にして偶奇を見る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2018-notes.tex
+- id: USAMO-2019-1
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 1
+  field: A
+  gist: f を f(n) 回くり返した値と f(f(n)) の積が n² になる関数で、f(1000) のとりうる値を求める。
+  units:
+  - A-029
+  - A-024
+  - L-012
+  missing: []
+  key: 単射を示し、奇数は動かず偶数は 2 つずつ入れかわる形に分類する。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2019-2
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 2
+  field: G
+  gist: AD²+BC²=AB² の内接四角形で、条件を満たす点 P と対角線の交点を結ぶ直線が CD を二等分することを示す。
+  units:
+  - G-030
+  - G-020
+  - G-023
+  missing: []
+  key: AD²=AP·AB となる点で相似を作り角を追う（対称中線で見る解き方もある）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2019-3
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 3
+  field: N
+  gist: 数字 7 を含まない正の整数を、また 7 を含まない数に移す非負係数の多項式を全部求める。
+  units:
+  - N-025
+  - A-026
+  - L-018
+  missing: []
+  key: 単項式に帰着し、桁を選んで 7 が現れる x を作る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2019-4
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 4
+  field: C
+  gist: 大きさが i+j で包含関係を保つ、格子状に並んだ部分集合の族の数を数える。
+  units:
+  - C-005
+  - C-019
+  - L-012
+  missing: []
+  key: 外側の鎖で (2n)! を出し、内側の各マスに 2 択が n² 回あることを示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2019-5
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 5
+  field: N
+  gist: m/n と n/m から相加平均と調和平均を書き足して 1 を作れる (m,n) を求める。
+  units:
+  - L-016
+  - N-032
+  - N-025
+  missing: []
+  key: m+n が 2 の冪のとき。奇素数 p で −1 の余りが保たれる不変量と、2 進の構成。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2019-6
+  source: USA Mathematical Olympiad
+  year: 2019
+  number: 6
+  field: A
+  gist: 条件 2xyz=x+y+z のもとで成り立つ多項式の等式を満たす P を全部求める。
+  units:
+  - A-030
+  - A-021
+  - A-031
+  missing: []
+  key: 多項式の等式として複素数まで広げ、特別な値を代入して次数と係数を決める。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2019-notes.tex
+- id: USAMO-2020-1
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 1
+  field: G
+  gist: 円周上の動点 X から作る 2 つの外心と円の中心で作る三角形の、面積の最小値を求める。
+  units:
+  - G-031
+  - G-034
+  - G-023
+  missing: []
+  key: 三角形 OO₁O₂ が ABC と相似で、その比を高さで下から押さえる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2020-2
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 2
+  field: C
+  gist: 立方体の中に条件を満たす棒を置き、これ以上置けないために要る最少本数を求める。
+  units:
+  - L-018
+  - C-018
+  - G-021
+  missing: []
+  key: 答 3030。構成と、各向きの棒の本数についての不等式による評価。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2020-3
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 3
+  field: N
+  gist: a と 4−a がともに平方非剰余となる a の積を p で割った余りを求める。
+  units:
+  - N-038
+  - N-033
+  - N-032
+  missing: []
+  key: 答 2。平方剰余の組を数えて対応させ、ウィルソンの定理などで積を出す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2020-4
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 4
+  field: C
+  gist: 100 個の非負整数の組で、|a_i b_j−a_j b_i|=1 となる対の数の最大値を求める。
+  units:
+  - L-014
+  - L-012
+  - G-034
+  missing: []
+  key: 答 197（一般に 2n−3）。原点との三角形の面積 1/2 とみて、最も大きい点を取り除く帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2020-5
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 5
+  field: A
+  gist: 低い次数の多項式のグラフに乗る点の集合（過剰決定）について、その個数の最小値を求める。
+  units:
+  - A-036
+  - A-026
+  - L-018
+  missing: []
+  key: 補間の一意性を使い、構成で 2^{n−1}−n、部分集合を数えて評価。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2020-6
+  source: USA Mathematical Olympiad
+  year: 2020
+  number: 6
+  field: A
+  gist: 和 0・二乗和 1 で大きい順に並べた 2 組の実数で、同順と逆順の積和の差を下から押さえる。
+  units:
+  - C-020
+  - A-027
+  missing: []
+  key: 無作為な置換の積和の期待値と 2 乗の期待値を計算し、並べかえの不等式と組み合わせる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2020-notes.tex
+- id: USAMO-2021-1
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 1
+  field: G
+  gist: 三角形の外側に立てた 3 つの長方形で、角の条件から 3 本の直線が 1 点で交わることを示す。
+  units:
+  - G-023
+  missing: []
+  key: 角の条件で 3 つの長方形の外接円が 1 点を共有し、その点で直角が出る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2021-2
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 2
+  field: C
+  gist: 3 正則な平面グラフを左右交互に曲がって歩くとき、同じ頂点に入る回数の最大値を求める。
+  units:
+  - A-024
+  - C-022
+  - C-024
+  missing: []
+  key: 答 3。曲がり方の列は前後に一意に戻せるので周期的で、各頂点の曲がり方の数で上界。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2021-3
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 3
+  field: C
+  gist: L 字に石を置く操作と行・列の石を消す操作で、盤を石で埋められる n を求める。
+  units:
+  - C-028
+  - A-034
+  - L-018
+  missing: []
+  key: 答 3|n。構成と、1 の累乗根を代入する多項式法（または行ごとの回数の 1 次式）で必要性。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2021-4
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 4
+  field: N
+  gist: 各要素と各約数 d に、gcd が d となる要素がちょうど 1 つある整数の集合の大きさを求める。
+  units:
+  - N-024
+  - N-021
+  - L-018
+  missing: []
+  key: 2 の冪。どの素数の指数も 1 以下を約数の数え上げで示し、素数の選び方で構成。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2021-5
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 5
+  field: A
+  gist: 2n 個の正の実数の連立方程式を全部解く。
+  units:
+  - L-014
+  - A-012
+  missing: []
+  key: 奇数番を消して偶数番だけの式にし、最小と最大の番号で不等式を比べて一定を示す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2021-6
+  source: USA Mathematical Olympiad
+  year: 2021
+  number: 6
+  field: G
+  gist: 対辺が平行で積が等しい六角形で、2 つの外心と中点の三角形の垂心が一直線上にあることを示す。
+  units:
+  - G-030
+  - G-027
+  - G-028
+  missing: []
+  key: 平行四辺形で合同な三角形を作り方べきで外心を一致させ、ベクトルの平均で垂心を表す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2021-notes.tex
+- id: USAMO-2022-1
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 1
+  field: C
+  gist: 2 色に塗った盤で、各色の個数の条件から、行も列も重ならない a 個と b 個を選べることを示す。
+  units:
+  - C-020
+  - L-019
+  missing: []
+  key: 無作為な横断の期待値で多い横断を取り、一方から他方へ 1 マスずつ変える離散的な連続性。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2022-2
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 2
+  field: C
+  gist: 黒白の棒で組んだ正多角形を平行四辺形に分けたとき、黒と白の面積の差が組み方によらないことを示す。
+  units:
+  - G-027
+  - L-019
+  missing: []
+  key: 隣り合う黒と白を入れかえても差が変わらないことを、ベクトルの外積で示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2022-3
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 3
+  field: A
+  gist: 正の実数上の関数方程式 f(x)=f(f(f(x))+y)+f(xf(y))f(x+y) を解く。
+  units:
+  - A-029
+  - A-013
+  missing: []
+  key: 答 f=c/x。値の大小を結ぶ補助の主張を作り、単調性と値の評価で絞る。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2022-4
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 4
+  field: N
+  gist: p−q と pq−q がともに平方数になる素数の組を求める。
+  units:
+  - N-030
+  - N-031
+  - A-015
+  missing: []
+  key: 平方の差に分解し、因子の大きさから b+a=p と決める。答 (3,2)。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2022-5
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 5
+  field: A
+  gist: 「ほぼ増加」な関数 k 個の和で任意の 2022 個の値を表せる最小の k を求める。
+  units:
+  - L-015
+  - N-025
+  - L-018
+  missing: []
+  key: 答 11。値が 0 でない番号の集合を鳩の巣で比べて評価、2 進の帰納的な構成。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2022-6
+  source: USA Mathematical Olympiad
+  year: 2022
+  number: 6
+  field: C
+  gist: 共通の友人 2 人以上で新しい友人関係ができる網で、全員がつながれる最少の初期の友人関係数を求める。
+  units:
+  - C-024
+  - L-018
+  missing: []
+  key: 答 ⌈3n/2⌉−2。C₄ を K₄ に完成する操作とみて、構成と評価。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2022-notes.tex
+- id: USAMO-2023-1
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 1
+  field: G
+  gist: 中線への垂線の足 P を通る円 ABP が BC と交わる Q について、AQ の中点が B,C から等距離であることを示す。
+  units:
+  - G-030
+  - G-023
+  - G-026
+  missing: []
+  key: 高さの足 D を取り、方べき（または座標）で Q が D の M についての対称点だと示す。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2023-2
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 2
+  field: A
+  gist: 正の実数上で f(xy+f(x))=xf(y)+2 を解く。
+  units:
+  - A-029
+  - A-013
+  missing: []
+  key: 単調性を示し、そこから 1 次関数 x+1 に絞る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2023-3
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 3
+  field: C
+  gist: 奇数の盤で 1 マス空いたドミノの配置を滑らせて得られる配置の数として、とりうる値を全部求める。
+  units:
+  - C-022
+  - C-017
+  - L-018
+  missing: []
+  key: 空きと同じ偶奇のマスに矢印のグラフを作り、木になることから数を決める。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2023-4
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 4
+  field: C
+  gist: 黒板の数に a を足す側と偶数を半分にする側が交互に動く遊びで、ゲームを終わらせられるかを決める。
+  units:
+  - L-017
+  - L-016
+  - N-021
+  missing: []
+  key: 2 で割れる回数（ν₂）を比べ、終わる場合は手数が一定、そうでなければ足す側が続けられる。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2023-5
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 5
+  field: N
+  gist: 行が等差数列に並べかえられる表を、列も等差数列にできるよう並べかえられる n を求める。
+  units:
+  - N-028
+  - A-004
+  - L-018
+  missing: []
+  key: n が素数のとき。素数で割った余りで等差数列の型を分け、合成数は反例を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2023-6
+  source: USA Mathematical Olympiad
+  year: 2023
+  number: 6
+  field: G
+  gist: 内心・傍心と外接円上の点 D から作る 2 円の交点で、角 BAD と角 EAC が等しいことを示す。
+  units:
+  - G-040
+  - G-032
+  - G-033
+  missing: []
+  key: 重心座標で 2 円の根軸を求める、または内心と傍心の配置で示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2023-notes.tex
+- id: USAMO-2024-1
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 1
+  field: N
+  gist: n! の約数を小さい順に並べたときの差が増えていく n を求める。
+  units:
+  - N-046
+  - N-017
+  missing: []
+  key: 答 3,4。大きい n はベルトランの仮説で n と (n/2)²−1 の間の素数を取り、差の逆転を作る。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2024-2
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 2
+  field: C
+  gist: 選んだ集合の共通部分の大きさが選んだ個数の倍数になる 100 個の集合で、和集合の最小の大きさを求める。
+  units:
+  - C-021
+  - C-015
+  - L-018
+  missing: []
+  key: 答 50·C(100,50)。各要素の属し方を 0/1 の列で表し、包除で個数の条件に直す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2024-3
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 3
+  field: A
+  gist: 正 n 角形の三角形分割を m 色で塗り、各色の面積を等しくできる (m,n) を求める。
+  units:
+  - A-034
+  - L-018
+  missing:
+  - 代数的整数と円分体
+  key: m が n の真の約数のとき。1 の累乗根で面積を書き、必要性は代数的整数になるかで判定。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2024-4
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 4
+  field: C
+  gist: mn 個の玉の首飾りを n 個ずつ m 区画に切るどの切り方でも、赤の数が全部違う (m,n) を求める。
+  units:
+  - L-018
+  - L-015
+  missing: []
+  key: 答 m≤n+1。赤の数は 0〜n なので鳩の巣、表に並べた構成。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2024-5
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 5
+  field: G
+  gist: 角の条件で決まる D と AE=EC の点 E で、AB が BEM の外接円に接することを示す。
+  units:
+  - G-023
+  - G-031
+  - G-029
+  missing: []
+  key: 等脚台形を補って角を追う（メネラウスや回転相似でも解ける）。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2024-6
+  source: USA Mathematical Olympiad
+  year: 2024
+  number: 6
+  field: C
+  gist: 大きさ ℓ 以上の部分集合と重みで作る 2 重和の、和の 2 乗に対する下限 c を求める。
+  units:
+  - C-018
+  - A-027
+  - A-018
+  missing: []
+  key: 指示関数で和の順序を入れかえ、対角と非対角に分けて二乗平均の不等式。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2024-notes.tex
+- id: USAMO-2025-1
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 1
+  field: N
+  gist: 十分大きな奇数 n で、n^k の 2n 進表示の各桁が d より大きいことを示す。
+  units:
+  - N-036
+  - N-025
+  - N-032
+  missing: []
+  key: 下 ℓ 桁を (2n)^ℓ で割った余りとみて、中国剰余定理で n^ℓ の奇数倍と計算する。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2025-2
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 2
+  field: A
+  gist: 割り切る低次の多項式の係数に必ず 0 がある条件から、多項式に実数でない根があることを示す。
+  units:
+  - L-015
+  - A-026
+  - A-036
+  missing: []
+  key: 鳩の巣で 0 の位置が重なる 2 つを取り、解と係数で連続する 0 係数を作り、デカルトの符号法則で矛盾。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2025-3
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 3
+  field: C
+  gist: 点と領域を選ぶ側と都市を置く側の遊びで、道路網が連結で交わらないように選べることを示す。
+  units:
+  - C-023
+  - C-022
+  - L-014
+  missing: []
+  key: 直径の円に他の点がない 2 点を結ぶグラフが連結で平面的であることを、極端な組で示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2025-4
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 4
+  field: G
+  gist: 垂心の折り返し P と高さの足 F を通る円が BC と交わる 2 点が、C から等距離であることを示す。
+  units:
+  - G-028
+  - G-023
+  missing: []
+  key: B の対蹠点 Q で平行四辺形と等脚台形を作り、円の中心が C を通る垂線上にあることを示す。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2025-5
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 5
+  field: N
+  gist: 二項係数の k 乗の和がいつも n+1 で割れる k を求める。
+  units:
+  - C-015
+  - N-032
+  - L-012
+  missing: []
+  key: 答 k が偶数。n+1 を割る素数冪で、二項係数を小さい場合の二項係数に結ぶ補題と帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2025-6
+  source: USA Mathematical Olympiad
+  year: 2025
+  number: 6
+  field: C
+  gist: 円に並ぶ菓子を各人が n 区画に分けられる条件から、全員が 1 以上の得点になるよう配れることを示す。
+  units:
+  - C-024
+  - L-012
+  missing: []
+  key: 1 人の区切りに対しホールの結婚定理で照合し、足りない集合を除く手順と帰納法。
+  basis: published-notes
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2025-notes.tex
+- id: USAMO-2026-1
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 1
+  field: N
+  gist: ⌊nx⌋−Σ⌊kx⌋/k の最大値と、それを与える x を求める。
+  units:
+  - N-023
+  - A-018
+  - L-012
+  missing: []
+  key: 分数部分が 1−1/n 以上で最大。補数で書きかえ、床関数の和の不等式（USAMO 1981/5 の型）に帰着。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex
+- id: USAMO-2026-2
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 2
+  field: C
+  gist: 2 の冪の列で隣の 2 つを大きい 2 の冪に置きかえ続け、最後の数を元の和の 4 倍未満にできるかを問う。
+  units:
+  - N-025
+  - C-022
+  - L-018
+  missing:
+  - 二進の区間と符号の長さ（クラフトの不等式）
+  key: できる。各数を和の区間に並べ、中に入る 2 進の区間を葉とする二分木の順に合わせると最後は 2^{t+1}<4S。解答ノート未掲載のため自分で解いた。
+  basis: self
+  confidence: 中
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex
+- id: USAMO-2026-3
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 3
+  field: G
+  gist: 外接円に内接する正三角形から作る直線と弧の中点の接線で作る三角形の内接円が、円 AYZ に接することを示す。
+  units:
+  - G-036
+  - G-031
+  missing: []
+  key: 解答ノート未掲載。同じ図の JMO 2026/3 の解答（https://web.evanchen.cc/twitch/Ep178-JMO-2026-3-Solution.tex）がミケル点と複素数で解くので、その延長と推定。
+  basis: self
+  confidence: 低
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex
+- id: USAMO-2026-4
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 4
+  field: N
+  gist: どう a+b=n と分けても a か b に数字 1 が現れる数を、10^2026 未満で数える。
+  units:
+  - N-025
+  - L-012
+  - C-005
+  missing: []
+  key: 1 が 1 つ、その左は 0 か 2、右は 9 だけ、と特徴づけ（桁の帰納法と分け方の構成）、そして数える。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex
+- id: USAMO-2026-5
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 5
+  field: G
+  gist: 角が等しくなる辺上の 3 点から作る 3 つの外心などについて、2 つの外心からの距離 OM=ON を示す。
+  units:
+  - G-031
+  - G-023
+  missing: []
+  key: 3 円のミケル点 Q の回転相似で ABC、DEF、O_AO_BO_C を互いに移し、外心どうしを対応させる。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex
+- id: USAMO-2026-6
+  source: USA Mathematical Olympiad
+  year: 2026
+  number: 6
+  field: N
+  gist: φ(ab+1) が a²+b²+1 を割るなら、a と b がフィボナッチ数であることを示す。
+  units:
+  - N-042
+  - N-033
+  - N-032
+  - A-022
+  missing: []
+  key: φ の偶奇で ab+1 を素数冪にし、素数ならヴィエタ・ジャンピング、冪なら 3 を法として除く。
+  basis: published-notes
+  confidence: 高
+  url: https://web.evanchen.cc/exams/USAMO-2026-notes.tex

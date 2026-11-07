@@ -16,6 +16,7 @@ sources:
   O09: {title: "Arthur Engel, Problem-Solving Strategies（目次）", url: "https://www.schweitzer-online.de/en/buch/Engel/Problem-Solving-Strategies/9780387982199/B330380/", date: 2026-11-07}
   O10: {title: "HBCSE, Mathematical Olympiad Syllabus", url: "https://olympiads.hbcse.tifr.res.in/syllabus/", date: 2026-11-07}
   O11: {title: "ISI, Regional Mathematical Olympiad", url: "https://www.isical.ac.in/~rmo/", date: 2026-11-07}
+  O13: {title: 過去問 1,322 問の組み合わせの型付け（このリポジトリ docs/research/problem-types.md）, url: "docs/research/problem-types.md", date: 2026-11-07}
   O12: {title: "IMO 2024 Shortlisted Problems（A、C、G、N の分類）", url: "https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf", date: 2026-11-07}
 
 items:
@@ -62,7 +63,7 @@ items:
   - {id: T-G02, field: 幾何, topic: 角度の追跡と円に内接する四角形（有向角）, sources: [O01, O04, O05, O07, O08, O10], units: [G-018, G-023]}
   - {id: T-G03, field: 幾何, topic: 方べきの定理と根軸、根心, sources: [O04, O05, O07], units: [G-030, G-032]}
   - {id: T-G04, field: 幾何, topic: 方べきの差の線形性と共軸の補題, sources: [O05], units: [G-032]}
-  - {id: T-G05, field: 幾何, topic: 三角形の五心と九点円, sources: [O04, O07], units: [G-028]}
+  - {id: T-G05, field: 幾何, topic: 三角形の五心と九点円, sources: [O04, O07], units: [G-028, G-033]}
   - {id: T-G06, field: 幾何, topic: 典型的な配置（内心・傍心の補題、混線内接円）, sources: [O05, O07, O08], units: [G-033]}
   - {id: T-G07, field: 幾何, topic: チェバとメネラウスの定理、共点と共線, sources: [O04, O10], units: [G-029]}
   - {id: T-G08, field: 幾何, topic: 相似拡大, sources: [O04, O05, O07], units: [G-031]}
@@ -83,6 +84,9 @@ items:
   - {id: T-G23, field: 幾何, topic: 動く点の方法, sources: [O05], units: [G-039]}
   - {id: T-G24, field: 幾何, topic: ポリズム（ポンスレの閉形定理など）, sources: [O05], none: 上級の単元として 1 つの資料（O05）が扱うだけで、IMO の解答にはほとんど出ない}
   - {id: T-G25, field: 幾何, topic: 幾何と他分野の融合（幾何の不等式、格子点）, sources: [O05], units: [G-034, C-023]}
+  - {id: T-G26, field: 幾何, topic: トレミーの定理, sources: [O13], units: [G-043]}
+  - {id: T-G27, field: 幾何, topic: 角の二等分線の定理とアポロニウスの円, sources: [O13], units: [G-042, G-044]}
+  - {id: T-G28, field: 幾何, topic: 等角共役と類似中線, sources: [O13], units: [G-045]}
   # ---- 整数 ----
   - {id: T-N01, field: 整数, topic: 約数と倍数、素数、素因数分解の一意性, sources: [O01, O04, O09, O10], units: [N-017, N-021, N-030, N-024]}
   - {id: T-N02, field: 整数, topic: ユークリッドの互除法、ベズーの補題、1 次不定方程式, sources: [O04, O05, O10], units: [N-029]}
@@ -110,6 +114,7 @@ items:
   - {id: T-P06, field: 論法と証明, topic: 極端原理, sources: [O06, O09], units: [L-014]}
   - {id: T-P07, field: 論法と証明, topic: 塗り分けによる証明, sources: [O09], units: [C-017]}
   - {id: T-P08, field: 論法と証明, topic: 構成と、不可能性や上界の証明の二部構成, sources: [O06], units: [L-018]}
+  - {id: T-P09, field: 論法と証明, topic: 離散的な中間値の議論, sources: [O13], units: [L-032]}
   # ---- 学校の道具（IMO の道具として要る学校の内容。対応付けは調べた者による） ----
   - {id: T-S01, field: 学校の道具, topic: 因数分解, sources: [O04, O10], units: [A-015]}
   - {id: T-S02, field: 学校の道具, topic: 式と証明（相加相乗平均）, sources: [O04, O10], units: [A-025]}

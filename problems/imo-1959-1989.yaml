@@ -1,0 +1,2716 @@
+# 組み合わせの型の記録。問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。
+# 問題は url の公式の資料で読む（D-020）。
+- id: IMO-1959-1
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 1
+  field: N
+  gist: n によらず分数 (21n+4)/(14n+3) が既約であることを示す
+  units:
+  - N-029
+  - N-018
+  missing: []
+  key: 3(14n+3)−2(21n+4)=1 なので公約数は 1 しかない（互除法）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1959-2
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 2
+  field: A
+  gist: √(x+√(2x−1))+√(x−√(2x−1)) が与えられた値になる x を、3 つの値について求める
+  units:
+  - A-016
+  - N-011
+  - L-007
+  missing: []
+  key: 平方すると 2x+2|x−1|=A² になり、x と 1 の大小で場合分けする
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1959-3
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 3
+  field: A
+  gist: cos x の 2 次方程式から、同じ x で cos 2x が満たす 2 次方程式を係数で作り、特定の係数で比べる
+  units:
+  - G-025
+  - A-026
+  - A-017
+  missing: []
+  key: cos2x=2cos²x−1 と解と係数の関係で新しい方程式の 2 解の和と積を作る（例では同じ形に戻る）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1959-4
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 4
+  field: G
+  gist: 斜辺が与えられ、斜辺への中線が 2 本の脚の相乗平均になる直角三角形を作図する
+  units:
+  - G-022
+  - G-018
+  - G-008
+  missing: []
+  key: 中線は c/2 なので脚の積が c²/4、面積から斜辺への高さが c/4 で、直径 c の円と平行線の交点をとる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1959-5
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 5
+  field: G
+  gist: 線分を分けて立てた 2 つの正方形の外接円の交点について、2 直線の交点との一致、定点を通ること、中心の中点の軌跡を示す
+  units:
+  - G-023
+  - G-018
+  - G-015
+  - G-026
+  missing: []
+  key: 90° 回転で 2 つの三角形が重なり 2 直線が直交するので交点は直径の円上、MN は直角の二等分線で弧の中点を通る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1959-6
+  source: International Mathematical Olympiad
+  year: 1959
+  number: 6
+  field: G
+  gist: 交わる 2 平面上の点を使い、内接円をもつ等脚台形を空間で作図する
+  units:
+  - G-021
+  - G-022
+  - G-017
+  missing: []
+  key: 平行な 2 辺は交線に平行になるので 1 つの平面の中に移し、内接円の条件（脚=上底と下底の和の半分）で作図する
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1959/1959_eng.pdf
+- id: IMO-1960-1
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 1
+  field: N
+  gist: 11 で割り切れ、11 で割った商が各桁の平方和に等しい 3 桁の数をすべて求める
+  units:
+  - N-009
+  - N-022
+  - L-007
+  - A-017
+  missing: []
+  key: 11 の倍数の判定で十の位が他の 2 桁の和か和−11 に分かれ、各場合を 2 次式で絞る（550 と 803）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-2
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 2
+  field: A
+  gist: 根号を含む分数式の不等式を満たす実数 x を求める
+  units:
+  - A-016
+  - A-013
+  missing: []
+  key: 分母を有理化すると左辺が (1+√(1+2x))² になり、x≠0 と定義域に注意して解く
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-3
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 3
+  field: G
+  gist: 直角三角形の斜辺を奇数等分し、中点を含む区間を直角の頂点から見る角の tan を高さと斜辺で表す
+  units:
+  - G-024
+  - G-027
+  - G-008
+  missing: []
+  key: 面積から AP·AQ sinα、中線定理から AP·AQ cosα=AM²−(PQ/2)² を出して割る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-4
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 4
+  field: G
+  gist: 2 本の高さと 1 本の中線の長さから三角形を作図する
+  units:
+  - G-022
+  - G-020
+  - G-018
+  missing: []
+  key: BC の中点から AC までの距離は h_b/2 なので、中点を中心とする半径 h_b/2 の円への A からの接線が AC
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-5
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 5
+  field: G
+  gist: 立方体の上面と下面の対角線上の 2 点を結ぶ線分の中点（と 1:2 の内分点）の軌跡を求める
+  units:
+  - G-027
+  - G-021
+  - G-026
+  missing: []
+  key: 座標を置くと点は 2 つの媒介変数の 1 次式で、像は平面の中の正方形（長方形）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-6
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 6
+  field: G
+  gist: 球が内接する円錐とその球に外接する円柱の体積を比べ、体積比の最小値を求める
+  units:
+  - G-021
+  - G-011
+  - G-025
+  - A-025
+  missing: []
+  key: 母線と底面の角の半角の tan で体積比を 1 変数の式にし、相加相乗（判別式）で最小 4/3
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1960-7
+  source: International Mathematical Olympiad
+  year: 1960
+  number: 7
+  field: G
+  gist: 等脚台形の対称軸上で両方の脚を直角に見る点を求め、存在する条件を論じる
+  units:
+  - G-018
+  - G-020
+  - A-017
+  missing: []
+  key: 脚を直径とする円と軸の交点で、相似から x(h−x)=ac/4、判別式から h²≥ac
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1960/1960_eng.pdf
+- id: IMO-1961-1
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 1
+  field: A
+  gist: 和、平方和、2 数の積がもう 1 数の平方という連立方程式を解き、相異なる正の解になる条件を求める
+  units:
+  - A-012
+  - A-026
+  - A-017
+  missing: []
+  key: xy=z² で平方和が a²−2az になり z が決まり、x,y は和と積から作る 2 次方程式の解
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1961-2
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 2
+  field: G
+  gist: 三角形の 3 辺の平方和が面積の 4√3 倍以上であることと等号の場合を示す
+  units:
+  - G-024
+  - G-025
+  - A-025
+  - G-034
+  missing: []
+  key: 余弦定理と面積公式で 1 つの角に寄せ、cosC+√3 sinC≤2 と a²+b²≥2ab を使う
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1961-3
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 3
+  field: A
+  gist: cos x と sin x の n 乗の差が 1 になる方程式を自然数 n ごとに解く
+  units:
+  - G-025
+  - A-013
+  - L-007
+  missing: []
+  key: n≥2 では |cos|^n+|sin|^n ≤ cos²+sin²=1 で、等号の場合だけを調べる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1961-4
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 4
+  field: G
+  gist: 三角形内の点を通る 3 本のチェバ線で、頂点側と辺側の比の少なくとも 1 つが 2 以下、1 つが 2 以上を示す
+  units:
+  - G-012
+  - L-015
+  missing: []
+  key: 辺側の部分とチェバ線全体の比は面積比で、3 つの和が 1 なので 1/3 以上と 1/3 以下が 1 つずつある
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1961-5
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 5
+  field: G
+  gist: 2 辺と、第 3 辺の中点から 1 辺を見る角から三角形を作図し、作図できる条件を示す
+  units:
+  - G-022
+  - G-018
+  - G-020
+  - G-024
+  missing: []
+  key: 中点 M は AB を定角で見る円弧と、AB の中点を中心とする半径 b/2 の円（中点連結）の交点で、交わる条件が不等式
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1961-6
+  source: International Mathematical Olympiad
+  year: 1961
+  number: 6
+  field: G
+  gist: 平面の片側の 3 点と平面上を動く 3 点の中点がつくる三角形の重心の軌跡を求める
+  units:
+  - G-027
+  - G-021
+  missing: []
+  key: 重心はもとの三角形の重心と動く 3 点の重心の中点で、後者は平面全体を動く
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1961/1961_eng.pdf
+- id: IMO-1962-1
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 1
+  field: N
+  gist: 末尾が 6 で、その 6 を先頭に移すともとの 4 倍になる最小の自然数を求める
+  units:
+  - N-009
+  - N-032
+  - A-011
+  missing: []
+  key: n=10m+6 と置くと 39m=6(10^k−4) で、10^k≡4 (mod 13) となる最小の k を探す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-2
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 2
+  field: A
+  gist: 2 つの平方根の差が 1/2 より大きくなる実数を求める
+  units:
+  - A-016
+  - A-013
+  - A-017
+  missing: []
+  key: 左辺は x について減少するので等号の点を 2 回の平方で求め、それより左が答え
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-3
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 3
+  field: G
+  gist: 立方体の 2 つの面の周を同じ速さで回る 2 点を結ぶ線分の中点の軌跡を求める
+  units:
+  - G-027
+  - G-021
+  - L-007
+  missing: []
+  key: 4 つの時間区間ごとに 2 点は等速直線運動なので中点も線分を動き、区切りの時刻の中点を結べばよい
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-4
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 4
+  field: A
+  gist: cos²x+cos²2x+cos²3x=1 を解く
+  units:
+  - G-025
+  - A-015
+  missing: []
+  key: 半角の公式で 1 次にし、和積の公式で cos x cos 2x cos 3x=0 に因数分解する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-5
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 5
+  field: G
+  gist: 円上の 3 点に 4 点目を加えて内接円をもつ四角形にする点を作図する
+  units:
+  - G-022
+  - G-023
+  - G-017
+  - G-018
+  missing: []
+  key: 接線四角形の条件から DA−DC が決まり、DA 上に DE=DC をとると角 AEC が一定で E は AC を見る円弧上
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-6
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 6
+  field: G
+  gist: 二等辺三角形で外心と内心の距離が d²=R(R−2r) を満たすことを示す
+  units:
+  - G-030
+  - G-033
+  - G-028
+  missing: []
+  key: 内心の外接円に関する方べき R²−d² を AI·IL とみて、IL=LB（内心の補題）から 2Rr
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1962-7
+  source: International Mathematical Olympiad
+  year: 1962
+  number: 7
+  field: G
+  gist: 6 辺（の延長）に接する球が 5 つある四面体は正四面体であることと、その逆を示す
+  units:
+  - G-021
+  - G-017
+  - A-012
+  missing: []
+  key: 1 点から球への接線の長さは等しいので球ごとに辺の和と差の関係が出て、5 つを合わせると全辺が等しい
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1962/1962_eng.pdf
+- id: IMO-1963-1
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 1
+  field: A
+  gist: パラメータを含む無理方程式の実数解を求める
+  units:
+  - A-016
+  - A-017
+  - L-007
+  - L-013
+  missing: []
+  key: 2 回平方して x² を p で表し、x≥0 と元の式に戻す条件から 0≤p≤4/3
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1963-2
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 2
+  field: G
+  gist: 一方の辺が定点を通り他方の辺が線分と交わる直角の頂点の、空間での軌跡を求める
+  units:
+  - G-021
+  - G-018
+  missing: []
+  key: 直角の頂点は A と線分上の点 Y を結ぶ線分を直径とする球面上で、Y を動かした球面の和集合
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1963-3
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 3
+  field: G
+  gist: 内角がすべて等しい n 角形で辺の長さが単調に減るなら、すべて等しいことを示す
+  units:
+  - G-027
+  - A-034
+  - A-018
+  missing: []
+  key: 辺を回転した単位ベクトルの a_k 倍とみると和が 0、単調性と合わせて差の部分和を使い、ある向きへの射影の符号を比べる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1963-4
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 4
+  field: A
+  gist: 5 変数の巡回的な 1 次の連立方程式を、パラメータ y の値ごとに解く
+  units:
+  - A-012
+  - A-034
+  - L-007
+  missing: []
+  key: 全部たすと (y−2)Σx=0、さらに組み合わせると y²+y−1=0 のときだけ自由度 2 の解が残る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1963-5
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 5
+  field: A
+  gist: cos(π/7)−cos(2π/7)+cos(3π/7)=1/2 を示す
+  units:
+  - G-025
+  - A-034
+  missing: []
+  key: 2sin(π/7) を掛けて積和の公式で項を打ち消す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1963-6
+  source: International Mathematical Olympiad
+  year: 1963
+  number: 6
+  field: C
+  gist: 2 つの順位の予想と当たり外れの条件から、実際の順位を決める
+  units:
+  - L-008
+  - L-007
+  missing: []
+  key: 2 番目の予想で当たる 2 人と続いて当たる 2 組の組み合わせを書き出し、1 番目の予想の否定条件で絞る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1963/1963_eng.pdf
+- id: IMO-1964-1
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 1
+  field: N
+  gist: 2^n−1 が 7 で割れる n を求め、2^n+1 は 7 で割れないことを示す
+  units:
+  - N-032
+  - N-028
+  missing: []
+  key: 2³≡1 (mod 7) で 2^n の余りは 1, 2, 4 をくり返す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1964-2
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 2
+  field: A
+  gist: 三角形の辺について a²(b+c−a)+… ≤ 3abc を示す
+  units:
+  - A-032
+  missing: []
+  key: ラヴィ置換で正の変数の式にするか、シューアの不等式そのものとみる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1964-3
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 3
+  field: G
+  gist: 内接円の辺に平行な接線で切り取った 3 つの三角形の内接円と、もとの内接円の面積の和を辺で表す
+  units:
+  - G-020
+  - G-028
+  - G-024
+  missing: []
+  key: 切り取られた三角形は相似比 (s−a)/s（高さ h_a−2r から）、r²=(s−a)(s−b)(s−c)/s
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1964-4
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 4
+  field: C
+  gist: 17 人の文通で話題が 3 つのとき、互いに同じ話題で書く 3 人がいることを示す
+  units:
+  - L-015
+  - C-024
+  missing: []
+  key: 1 人の 16 通のうち 6 通以上が同じ話題（鳩の巣）、その 6 人の中は 2 話題の 6 人の場合に帰着する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1964-5
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 5
+  field: C
+  gist: 5 点を結ぶ直線へ他の点から引いた垂線どうしの交点の最大数を求める
+  units:
+  - C-007
+  - C-008
+  - G-028
+  missing: []
+  key: 垂線の組を数え、同じ直線への垂線（平行）、同じ点を通る組、三角形の垂心に 3 本が集まる分を差し引く
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1964-6
+  source: International Mathematical Olympiad
+  year: 1964
+  number: 6
+  field: G
+  gist: 四面体の頂点と底面の重心を結ぶ線に平行な線で作る四面体の体積が 3 倍になることを示し、点を一般にした場合を問う
+  units:
+  - G-027
+  - G-021
+  - G-040
+  missing: []
+  key: D0 を原点に D0 の重心座標 (α,β,γ) を使うと A1=A+(D−D0)/α などとなり、体積はどの内部の点でも 3 倍
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1964/1964_eng.pdf
+- id: IMO-1965-1
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 1
+  field: A
+  gist: 0 から 2π で、√(1+sin2x) と √(1−sin2x) の差の絶対値を挟む不等式を解く
+  units:
+  - G-025
+  - N-011
+  - L-007
+  missing: []
+  key: 1±sin2x=(sin x±cos x)² なので中央は 2min(|sin x|,|cos x|) になる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1965-2
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 2
+  field: A
+  gist: 対角の係数が正、他が負で各行の和が正の 3 元 1 次斉次連立方程式は自明な解しかないことを示す
+  units:
+  - L-014
+  - A-012
+  - A-013
+  missing: []
+  key: 絶対値が最大の未知数を含む式を見ると、行の和が正であることから左辺が 0 になれない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1965-3
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 3
+  field: G
+  gist: 向かい合う 2 辺に平行な平面で四面体を切り、距離の比が k のときの 2 つの立体の体積比を求める
+  units:
+  - G-021
+  - G-011
+  - G-020
+  missing: []
+  key: 切り口は平行四辺形で辺は比で決まり、片側を角錐と柱状の部分に分けて V=abd sinω/6 で表す
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1965-4
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 4
+  field: A
+  gist: どの 1 つと残り 3 つの積の和も 2 になる 4 つの実数を求める
+  units:
+  - A-017
+  - A-026
+  - L-007
+  missing: []
+  key: 4 数の積を p とおくと各 x_i は x²−2x+p=0 の解なので値は 2 種類で、個数で場合分けする
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1965-5
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 5
+  field: G
+  gist: 鋭角の 2 辺への垂線の足と頂点がつくる三角形の垂心の軌跡を、点が辺上と内部を動くときに求める
+  units:
+  - G-027
+  - G-028
+  missing: []
+  key: PH∥MQ、QH∥MP なので MPHQ は平行四辺形で H=P+Q−M は M の 1 次式、端点の像を結ぶ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1965-6
+  source: International Mathematical Olympiad
+  year: 1965
+  number: 6
+  field: C
+  gist: 平面の n 点で、最長の距離を与える組（直径）が n 個以下であることを示す
+  units:
+  - C-023
+  - L-012
+  - C-022
+  missing: []
+  key: 2 本の直径は必ず交わるか端点を共有し、3 本出る点があれば真ん中の相手は 1 本だけなので、その点を除いて帰納法
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1965/1965_eng.pdf
+- id: IMO-1966-1
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 1
+  field: C
+  gist: 3 問の正解者の人数の条件から、2 番目の問題だけを解いた人数を求める
+  units:
+  - C-008
+  - A-012
+  - A-014
+  missing: []
+  key: ベン図の 7 つの部分を文字で置き、条件を連立方程式にして 0 以上の整数の解を絞る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1966-2
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 2
+  field: G
+  gist: 辺と角の tan を含む関係式を満たす三角形は二等辺であることを示す
+  units:
+  - G-025
+  - G-024
+  missing: []
+  key: tan(γ/2)=cot((α+β)/2) とし加法定理で sin((α−β)/2) をくくり出すと、α=β か正弦定理で tanα=tanβ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1966-3
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 3
+  field: G
+  gist: 正四面体の頂点への距離の和は外接球の中心で最小になることを示す
+  units:
+  - G-027
+  - G-021
+  - A-027
+  - G-034
+  missing: []
+  key: 中心から各頂点への単位ベクトルの和は 0 で、|PA_i| ≥ (A_i−P)·u_i を足すと右辺は P によらない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1966-4
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 4
+  field: A
+  gist: 1/sin(2^k x) の和が cot x − cot(2^n x) になることを示す
+  units:
+  - G-025
+  - A-018
+  - L-012
+  missing: []
+  key: 1/sin2t=cot t−cot 2t で和が畳み込まれる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1966-5
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 5
+  field: A
+  gist: 係数が 4 つの異なる数の差の絶対値である 4 元連立 1 次方程式を解く
+  units:
+  - A-012
+  - N-011
+  missing: []
+  key: a の大小を仮定して絶対値を外し、隣り合う式の差をとると未知数の部分和が出る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1966-6
+  source: International Mathematical Olympiad
+  year: 1966
+  number: 6
+  field: G
+  gist: 三角形の各辺上に点をとると、頂点の近くにできる 3 つの三角形の 1 つは面積が 1/4 以下であることを示す
+  units:
+  - G-012
+  - A-025
+  - L-011
+  missing: []
+  key: 3 つの面積比の積が x(1−x)y(1−y)z(1−z) になり、各 t(1−t)≤1/4
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1966/1966_eng.pdf
+- id: IMO-1967-1
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 1
+  field: G
+  gist: 平行四辺形が頂点を中心とする 4 つの単位円で覆われる条件を辺と角で示す
+  units:
+  - G-024
+  - G-028
+  - L-014
+  missing: []
+  key: 鋭角三角形 ABD の外心が最も覆いにくい点で、覆う⇔外接円の半径≤1、正弦定理と余弦定理で式にする
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1967-2
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 2
+  field: G
+  gist: 1 辺だけが 1 より長い四面体の体積は 1/8 以下であることを示す
+  units:
+  - G-021
+  - G-019
+  - G-011
+  - A-020
+  missing: []
+  key: 長い辺の対辺 AB=a について残る 2 頂点から AB までの距離は √(1−a²/4) 以下で、V≤a(4−a²)/24≤1/8
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1967-3
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 3
+  field: N
+  gist: s(s+1) どうしの差の積が s(s+1) の積で割り切れることを、ある和が素数という条件のもとで示す
+  units:
+  - A-015
+  - C-015
+  - N-030
+  missing: []
+  key: c_a−c_b=(a−b)(a+b+1) と因数分解し、連続 n 個の積が n! で割れることと、素数 m+k+1 が (n+1)! と互いに素なことを使う
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1967-4
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 4
+  field: G
+  gist: 与えられた三角形に外接し、別の三角形と相似な三角形のうち面積最大のものを求めて作図する
+  units:
+  - G-031
+  - G-018
+  - G-022
+  missing: []
+  key: 各頂点は定角の円弧上にあり 3 円はミケル点で交わる、大きさはミケル点からの距離で決まりそれが直径のとき最大
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1967-5
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 5
+  field: A
+  gist: 8 つの実数の n 乗和が無限に多くの n で 0 になるとき、0 になる n をすべて求める
+  units:
+  - L-014
+  - L-012
+  - A-009
+  missing:
+  - 数列と関数の極限
+  key: 絶対値が最大の値の正負の個数が違えば大きい奇数 n で c_n≠0、よって a と −a が対になって消え、奇数 n でだけ 0
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1967-6
+  source: International Mathematical Olympiad
+  year: 1967
+  number: 6
+  field: A
+  gist: 毎日の配り方の規則から、メダルの総数と日数を求める
+  units:
+  - A-022
+  - A-018
+  - N-030
+  missing: []
+  key: 残りの数の漸化式を解くと総数は 36+(n−6)·7^n/6^(n−1) の形で、整数になるのは n=6 だけ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1967/1967_eng.pdf
+- id: IMO-1968-1
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 1
+  field: G
+  gist: 辺の長さが連続する 3 整数で 1 つの角が別の角の 2 倍になる三角形がただ 1 つであることを示す
+  units:
+  - G-024
+  - G-025
+  - L-007
+  missing: []
+  key: 角 B=2A ⇔ b²=a(a+c)（正弦定理と倍角）で、どの辺が a, b, c かを場合分けして 4, 5, 6 だけ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1968-2
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 2
+  field: N
+  gist: 各桁の数の積が x²−10x−22 になる自然数 x を求める
+  units:
+  - N-043
+  - N-009
+  - A-013
+  missing: []
+  key: 各桁の積は x 以下なので x²−11x−22≤0 から x≤12 で、あとは調べて x=12
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1968-3
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 3
+  field: A
+  gist: 2 次式で次々に写す巡回的な連立方程式の解の個数が判別式の符号で決まることを示す
+  units:
+  - A-020
+  - A-017
+  - A-018
+  missing: []
+  key: 全部足すと Σ(ax_i²+(b−1)x_i+c)=0 で、判別式が負なら各項が同符号で 0 にならず、0 なら重解に集まる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1968-4
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 4
+  field: G
+  gist: どの四面体にも、そこに集まる 3 辺が三角形をつくる頂点があることを示す
+  units:
+  - L-014
+  - L-011
+  - G-017
+  missing: []
+  key: 最長の辺の両端でともに成り立たないと仮定し、その辺を含む 2 面の三角不等式と足して矛盾
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1968-5
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 5
+  field: A
+  gist: f(x+a)=1/2+√(f(x)−f(x)²) を満たす関数は周期的であることを示し、例を作る
+  units:
+  - A-029
+  - G-025
+  missing: []
+  key: g=f−1/2 とおくと g(x+a)=√(1/4−g(x)²)≥0 で、2 回使うと g(x+2a)=g(x)
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1968-6
+  source: International Mathematical Olympiad
+  year: 1968
+  number: 6
+  field: N
+  gist: n+2^k を 2^(k+1) で割ったガウス記号の和が n になることを示す
+  units:
+  - N-023
+  - A-018
+  missing: []
+  key: '[x+1/2]=[2x]−[x] を x=n/2^(k+1) に使うと和が畳み込まれる'
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1968/1968_eng.pdf
+- id: IMO-1969-1
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 1
+  field: N
+  gist: どの n についても n⁴+a が素数にならない a が無限にあることを示す
+  units:
+  - A-015
+  - N-021
+  missing: []
+  key: a=4k⁴ とすると n⁴+4k⁴=(n²+2k²)²−(2nk)² と因数分解でき、k≥2 なら両因数とも 1 より大きい
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1969-2
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 2
+  field: A
+  gist: 位相のずれた cos を 1/2^(k−1) の重みで足した関数の 2 つの零点の差が π の倍数であることを示す
+  units:
+  - G-025
+  - A-022
+  missing: []
+  key: f は C cos(x+φ) にまとまり、x=−a_1 で f>0（残りは等比数列の和で 1 未満）なので C≠0
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1969-3
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 3
+  field: G
+  gist: k 本の辺が a、残りが 1 の四面体が存在する a の条件を k=1〜5 で求める
+  units:
+  - G-021
+  - G-019
+  - L-007
+  missing: []
+  key: a の辺の置き方で場合分けし、1 つの面を固定して残る頂点がとれる条件を高さで比べる、k と 6−k は 1/a の相似で対応
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1969-4
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 4
+  field: G
+  gist: 半円と垂線と直径に接する 2 円と直角三角形の内接円に、もう 1 本の共通接線があることを示す
+  units:
+  - G-033
+  - G-019
+  - G-030
+  - G-028
+  missing: []
+  key: 垂線と半円に接する円の直径上の接点 E は AE=AC を満たし、内接円の接点と半径が 2 円の平均なので 3 つの中心が一直線
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1969-5
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 5
+  field: C
+  gist: 3 点が一直線にない n 点の中に凸四角形が少なくとも C(n−3,2) 個あることを示す
+  units:
+  - C-023
+  - C-018
+  - C-007
+  missing: []
+  key: どの 5 点にも凸四角形があり（凸包で場合分け）、各凸四角形は n−4 個の 5 点組に入るので二重に数える
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1969-6
+  source: International Mathematical Olympiad
+  year: 1969
+  number: 6
+  field: A
+  gist: 2 変数の 2 次形式の判別式に当たる量の逆数について不等式と等号の条件を示す
+  units:
+  - A-027
+  - A-025
+  missing: []
+  key: u_i=x_iy_i−z_i² とおき、和の判別式が (√u1+√u2)² 以上であることをコーシー・シュワルツで示し、相加相乗で仕上げる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1969/1969_eng.pdf
+- id: IMO-1970-1
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 1
+  field: G
+  gist: 辺上の点で三角形を 2 つに分けたとき、内接円と傍接円の半径の比の積がもとの比に等しいことを示す
+  units:
+  - G-024
+  - G-028
+  - G-033
+  missing: []
+  key: 角 C 内の傍接円との比 r/q は tan(A/2)tan(B/2) と書け、分点での 2 つの角の半角の tan が打ち消しあう
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1970-2
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 2
+  field: N
+  gist: 2 つの底で同じ数字列の数の比を比べ、底の大小と同値であることを示す
+  units:
+  - N-025
+  - A-013
+  - A-009
+  missing: []
+  key: 逆数をとって A_(n−1)/a^n と B_(n−1)/b^n の比較に直すと、桁ごとに a^(−m) と b^(−m) の比較になる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1970-3
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 3
+  field: A
+  gist: 1 から増える数列から作る和 b_n が 2 未満であることと、2 未満のどの値も越えうることを示す
+  units:
+  - A-018
+  - A-013
+  - A-022
+  missing:
+  - 数列と関数の極限
+  key: 各項を 2(1/√a_(k−1)−1/√a_k) で上から押さえて和を畳み込み、逆向きは公比が 1 に近い等比数列で作る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1970-4
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 4
+  field: N
+  gist: 連続する 6 つの整数を、積の等しい 2 組に分けられる n を求める
+  units:
+  - N-030
+  - N-028
+  - N-021
+  missing: []
+  key: 7 以上の素数は 6 つのうち 1 つしか割らないので現れず、6 と互いに素な 2 数は 5 の累乗になるしかなく不可能
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1970-5
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 5
+  field: G
+  gist: 頂点からの垂線の足が底面の垂心になる四面体で、辺の長さの不等式と等号の場合を示す
+  units:
+  - G-021
+  - G-019
+  - A-027
+  missing: []
+  key: 足が垂心なら頂点からの 3 辺が互いに垂直、三平方で底面の辺の平方和は 2 倍になり、(x+y+z)²≤3(x²+y²+z²)
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1970-6
+  source: International Mathematical Olympiad
+  year: 1970
+  number: 6
+  field: C
+  gist: 3 点が一直線にない 100 点のつくる三角形のうち鋭角三角形は 7 割以下であることを示す
+  units:
+  - C-018
+  - C-023
+  - L-007
+  missing: []
+  key: 4 点では鋭角三角形は 3 つまで、5 点では 10 個中 7 つまでを示し、すべての 5 点組で平均する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1970/1970_eng.pdf
+- id: IMO-1971-1
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 1
+  field: A
+  gist: 差の積の和が 0 以上という主張が n=3, 5 だけで正しいことを示す
+  units:
+  - A-032
+  - L-007
+  - A-013
+  missing: []
+  key: 大きさの順に並べ、隣り合う 2 項を組にすると符号が決まる（シューア型）、他の n は値の重なりを使った反例
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1971-2
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 2
+  field: C
+  gist: 9 頂点の凸多面体を頂点どうしの平行移動で写した 9 個のうち 2 つが内部を共有することを示す
+  units:
+  - L-015
+  - G-031
+  - C-023
+  - G-011
+  missing: []
+  key: 凸性からどの写しも 1 頂点を中心に 2 倍にした立体に入り、体積 8V に体積 V の 9 個を入れるので重なる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1971-3
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 3
+  field: N
+  gist: 2^k−3 の形の数から、どの 2 つも互いに素な無限部分集合がとれることを示す
+  units:
+  - N-033
+  - N-044
+  - L-012
+  missing: []
+  key: 選んだ数の積 s に対し k=φ(s) とすると 2^k−3≡−2 (mod s) で s と互いに素、これを繰り返す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1971-4
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 4
+  field: G
+  gist: 面が鋭角三角形の四面体で、4 辺を順にたどる閉じた折れ線の最短が存在する条件と長さを求める
+  units:
+  - G-021
+  - G-007
+  - G-015
+  - G-024
+  missing: []
+  key: 4 つの面を順に展開すると閉じた折れ線は直線になり、最初と最後の辺の像が平行移動で重なる条件が角の和の等式
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1971-5
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 5
+  field: C
+  gist: どの点からもちょうど m 点が距離 1 にある有限の点集合が平面にあることを示す
+  units:
+  - L-012
+  - L-018
+  - G-027
+  missing: []
+  key: 帰納法で、条件を満たす集合と、それを一般の向きの単位ベクトルでずらした写しを合わせると相手が 1 つ増える
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1971-6
+  source: International Mathematical Olympiad
+  year: 1971
+  number: 6
+  field: C
+  gist: 0 の成分のある行と列の和が n 以上の非負整数の正方行列で、総和が n²/2 以上を示す
+  units:
+  - L-014
+  - A-025
+  - L-007
+  missing: []
+  key: 和が最小の行（列）に着目し、その和 k について総和 ≥ (n−k)²+k² ≥ n²/2
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1971/1971_eng.pdf
+- id: IMO-1972-1
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 1
+  field: C
+  gist: 10 個の異なる 2 桁の数から和の等しい交わらない 2 つの部分集合がとれることを示す
+  units:
+  - L-015
+  - C-005
+  missing: []
+  key: 空でない部分集合は 1023 個、和は 990 以下なので和の等しい 2 つがあり、共通部分を除く
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1972-2
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 2
+  field: G
+  gist: 円に内接する四角形を、4 以上の任意の個数の内接四角形に分けられることを示す
+  units:
+  - G-023
+  - L-012
+  - L-018
+  missing: []
+  key: 等脚台形は底に平行な線で等脚台形 2 つに分けられるので 1 つずつ増やせ、最初の分け方を構成する
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1972-3
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 3
+  field: N
+  gist: (2m)!(2n)!/(m!n!(m+n)!) が整数であることを示す
+  units:
+  - N-034
+  - N-023
+  missing: []
+  key: 各素数の指数をルジャンドルの公式で比べ、[2x]+[2y]≥[x]+[y]+[x+y] を示す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1972-4
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 4
+  field: A
+  gist: 5 変数の巡回的な積の不等式の連立を正の数の範囲で解く
+  units:
+  - A-015
+  - A-032
+  - L-011
+  missing: []
+  key: 5 つの左辺を足すと平方の和（0 以上）になるので全部 0 で、そこからすべて等しい
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1972-5
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 5
+  field: A
+  gist: f(x+y)+f(x−y)=2f(x)g(y) で f が 0 でなく |f|≤1 なら |g|≤1 を示す
+  units:
+  - A-029
+  - L-014
+  - L-011
+  missing:
+  - 上限（最大値をとらない場合の上界）
+  key: '|f| の上限 M>0 をとり、|g(y)|>1 なら |f(x)|>M/|g(y)| となる x で 2M ≥ 2|f(x)||g(y)| > 2M の矛盾'
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1972-6
+  source: International Mathematical Olympiad
+  year: 1972
+  number: 6
+  field: G
+  gist: 4 つの平行な平面のそれぞれに 1 頂点をもつ正四面体があることを示す
+  units:
+  - G-027
+  - G-021
+  - A-012
+  - G-031
+  missing: []
+  key: 1 頂点を原点とすると他の 3 頂点のベクトルは 1 次独立なので内積が平面の間隔の比になる向きがとれ、相似拡大で合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1972/1972_eng.pdf
+- id: IMO-1973-1
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 1
+  field: G
+  gist: 直線の片側にある奇数本の単位ベクトルの和の長さが 1 以上であることを示す
+  units:
+  - G-027
+  - L-012
+  - L-014
+  missing: []
+  key: 角の両端の 2 本を除いて帰納法、両端の和は残りの和と鋭角をなすので長さを減らさない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1973-2
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 2
+  field: G
+  gist: 平面にない有限の点集合で、どの 2 点の直線にも平行な別の 2 点の直線があるものの存在を問う
+  units:
+  - G-021
+  - G-027
+  - L-018
+  - G-004
+  missing: []
+  key: 存在する。中心対称な集合では中心を通らない弦は対称像と平行なので、立方体の辺の中点 12 個のように直径にも平行な弦がある例をとる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1973-3
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 3
+  field: A
+  gist: 4 次の相反方程式が実数解をもつ係数について a²+b² の最小値を求める
+  units:
+  - A-026
+  - A-027
+  - A-025
+  missing: []
+  key: y=x+1/x（|y|≥2）で 2 次にし、ay+b=2−y² にコーシー・シュワルツで a²+b² ≥ (y²−2)²/(y²+1) ≥ 4/5
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1973-4
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 4
+  field: G
+  gist: 正三角形の頂点から出て、半径が高さの半分の探知機で全体を調べる最短の道を求める
+  units:
+  - G-015
+  - G-004
+  - G-017
+  - L-014
+  missing: []
+  key: 残る 2 頂点のそれぞれ半径 h/2 以内に寄る必要があり、反射で折れ線をまっすぐにして最短を決め、それで全体が覆えることを確かめる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1973-5
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 5
+  field: A
+  gist: 合成と逆で閉じた 1 次関数の集まりで、各関数が不動点をもてば共通の不動点があることを示す
+  units:
+  - A-024
+  - A-019
+  missing:
+  - 群（合成と逆元、交換子）
+  key: f∘g と g∘f は傾きが等しく交換子は平行移動なので、不動点をもつには恒等写像、よって可換で不動点が一致
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1973-6
+  source: International Mathematical Olympiad
+  year: 1973
+  number: 6
+  field: A
+  gist: 正の数列に対し、上回り、隣の比が q と 1/q の間で、和が定数倍以下の数列を作る
+  units:
+  - L-018
+  - A-022
+  - A-018
+  missing: []
+  key: b_k=Σ_j q^|k−j| a_j とおくと比の条件は項ごとに確かめられ、和は等比数列の和で (1+q)/(1−q) 倍未満
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1973/1973_eng.pdf
+- id: IMO-1974-1
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 1
+  field: C
+  gist: 3 人に 3 枚のカードを配る回の合計の情報から、最初の回に中の数を受け取った人を決める
+  units:
+  - L-008
+  - N-017
+  - L-007
+  missing: []
+  key: 39=回数×(p+q+r) と p<q<r から 3 回で和 13、B の合計 10 と最後の r から p, q, r と配り方を推理する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1974-2
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 2
+  field: G
+  gist: 辺 AB 上に、C からの距離が AD と DB の相乗平均になる点 D がある条件を角の sin で示す
+  units:
+  - G-030
+  - G-024
+  - G-025
+  missing: []
+  key: CD を延ばして外接円と E で交わらせると AD·DB=CD·DE なので D は CE の中点、弧の AB からの最大距離と C の高さを比べる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1974-3
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 3
+  field: N
+  gist: 奇数番目の二項係数に 8 の累乗を掛けた和が 5 で割れないことを示す
+  units:
+  - C-016
+  - N-032
+  - N-038
+  - A-016
+  missing: []
+  key: 和は (1+√8)^(2n+1)=A+B√8 の B で A²−8B²=−7^(2n+1)、B≡0 (mod 5) なら A²≡±2 となり平方剰余に反する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1974-4
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 4
+  field: C
+  gist: 8×8 の盤を白黒同数で白の数が増えていく長方形に分ける最大の個数と、その列を求める
+  units:
+  - C-017
+  - L-018
+  - C-002
+  missing: []
+  key: 白の数は相異なり和 32、1+…+8=36>32 から 7 個以下、和 32 の列から 22=2·11 のように盤に収まらない長方形を除く
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1974-5
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 5
+  field: A
+  gist: 4 つの正の数でつくる巡回的な分数の和がとりうる値の範囲を求める
+  units:
+  - A-013
+  missing:
+  - 中間値の定理（連続性）
+  key: 分母を全体の和や 2 つずつの和に置きかえて 1<S<2、両端に近づく例と連続性で間のすべての値をとる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1974-6
+  source: International Mathematical Olympiad
+  year: 1974
+  number: 6
+  field: A
+  gist: 整数係数多項式 P で P(k)²=1 となる整数 k の個数が次数+2 以下であることを示す
+  units:
+  - N-045
+  - A-026
+  missing: []
+  key: a−b は P(a)−P(b) を割るので P=1 の点と P=−1 の点は距離 2 以内に集まり、根の個数は次数以下
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1974/1974_eng.pdf
+- id: IMO-1975-1
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 1
+  field: A
+  gist: 降順に並べた 2 つの列の差の平方和は、片方を並べかえると減らないことを示す
+  units:
+  - A-027
+  missing: []
+  key: 展開すると Σx_iy_i≥Σx_iz_i に帰着し、並べかえ不等式
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1975-2
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 2
+  field: N
+  gist: 増加する正の整数列で、どの p でも無限に多くの項が a_p と後の項の正の整数係数の和で書けることを示す
+  units:
+  - N-022
+  - L-015
+  missing: []
+  key: a_p で割った余りで無限に多くの項が同じ類に入り、その最初を a_q とすると後の項は a_q+x a_p
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1975-3
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 3
+  field: G
+  gist: 三角形の辺の外側に決まった角の三角形を立てると、3 つの頂点が直角二等辺三角形をなすことを示す
+  units:
+  - G-036
+  - G-031
+  - G-024
+  missing: []
+  key: 正弦定理で外側の頂点までの長さを辺で表し、R を中心とする回転（複素数）で RQ を 90° 回すと RP になることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1975-4
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 4
+  field: N
+  gist: 4444^4444 の各桁の和を 3 回とった数を求める
+  units:
+  - N-032
+  - N-043
+  - N-009
+  missing: []
+  key: 各桁の和は 9 を法として合同、大きさの評価で 3 回目は 1 桁と絞り、4444^4444≡7 (mod 9)
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1975-5
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 5
+  field: G
+  gist: 単位円上に、どの 2 点の距離も有理数になる 1975 点がとれるかを問う
+  units:
+  - G-025
+  - N-035
+  - G-024
+  missing: []
+  key: sin と cos がともに有理数の角（ピタゴラス数）の 2 倍の角に点を置くと、弦の長さ 2|sin(α−β)| は加法定理で有理数
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1975-6
+  source: International Mathematical Olympiad
+  year: 1975
+  number: 6
+  field: A
+  gist: 斉次で巡回的な和が 0 になる 2 変数多項式を、値の条件のもとですべて求める
+  units:
+  - A-026
+  - A-031
+  - L-012
+  missing: []
+  key: a=b=c で P(2,1)=0 から x−2y を因数にもち、代入を重ねて残りが (x+y)^(n−1) であることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1975/1975_eng.pdf
+- id: IMO-1976-1
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 1
+  field: G
+  gist: 面積と、2 つの対辺と 1 本の対角線の長さの和が与えられた凸四角形のもう 1 本の対角線を求める
+  units:
+  - A-025
+  - G-008
+  - G-019
+  missing: []
+  key: 面積 ≤ (1/2)BD(AB+CD) ≤ (1/2)(16/2)²=32 で等号、AB と CD は BD に垂直で残る対角線は 8√2
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1976-2
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 2
+  field: A
+  gist: x²−2 を n 回合成した式 =x の解がすべて実数で相異なることを示す
+  units:
+  - G-025
+  - A-026
+  missing: []
+  key: x=2cos t とおくと P_n(x)=2cos(2^n t) で、cos(2^n t)=cos t の解が [0,π] に 2^n 個ある
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1976-3
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 3
+  field: N
+  gist: 体積 2 の立方体を詰めるとちょうど 4 割を満たす直方体の辺の長さを求める
+  units:
+  - N-023
+  - N-043
+  - L-007
+  missing: []
+  key: 辺 a に並ぶ個数は [a/∛2] で、比 a/[a/∛2] の 3 つの積が 5、比は 2 以下で大きい a では ∛2 に近いので候補を絞る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1976-4
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 4
+  field: A
+  gist: 和が 1976 の正の整数の積の最大値を求める
+  units:
+  - L-019
+  - L-014
+  missing: []
+  key: 5 以上は 2 と残りに、4 は 2+2 に、2 が 3 つは 3+3 に直すと積が減らないので 3 をできるだけ使う
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1976-5
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 5
+  field: C
+  gist: 係数が −1, 0, 1 の p 本の式と 2p 個の未知数で、小さな整数の自明でない解があることを示す
+  units:
+  - L-015
+  - A-012
+  missing: []
+  key: 未知数を 0〜q の整数で動かすと入力は (q+1)^q 通り、各式の値は q²+1 通りで出力が少ないので、同じ出力の 2 つの差が解
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1976-6
+  source: International Mathematical Olympiad
+  year: 1976
+  number: 6
+  field: A
+  gist: 3 項の漸化式で決まる数列のガウス記号が 2 の累乗になることを示す
+  units:
+  - L-012
+  - A-022
+  - N-023
+  - A-009
+  missing: []
+  key: u_n=2^(a_n)+2^(−a_n) の形を見抜き、指数が a_(n+1)=a_n+2a_(n−1) を満たすことを帰納法で示す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1976/1976_eng.pdf
+- id: IMO-1977-1
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 1
+  field: G
+  gist: 正方形の内側に立てた 4 つの正三角形から作る 12 点が正十二角形の頂点であることを示す
+  units:
+  - G-026
+  - G-004
+  - G-025
+  missing: []
+  key: 図の対称性で 3 点を調べれば足り、座標で中心からの距離と角度が 30° おきであることを確かめる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1977-2
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 2
+  field: A
+  gist: 連続 7 項の和が負、連続 11 項の和が正の数列の最大の長さを求める
+  units:
+  - C-018
+  - L-018
+  - L-011
+  missing: []
+  key: 17 項以上なら 7×11 の表に並べた項の和を行と列で二通りに足して矛盾、16 項の例を作る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1977-3
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 3
+  field: N
+  gist: n で割って 1 余る数の集合で、分解できない数への分解が 2 通りある数を示す
+  units:
+  - N-022
+  - N-043
+  - L-011
+  missing: []
+  key: a=n−1, b=2n−1 とすると a², b², ab は集合に入り、a² は小さすぎて分解できず ab を割らないので a²b²=(ab)(ab) が 2 通り
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1977-4
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 4
+  field: A
+  gist: 1 次と 2 次の三角多項式がいつも 0 以上なら係数の平方和に上限があることを示す
+  units:
+  - G-025
+  - A-013
+  missing: []
+  key: f(θ)+f(θ+π) で 1 次の項を消すと A²+B²≤1、f(θ)+f(θ+π/2) で 2 次の項を消すと a²+b²≤2
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1977-5
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 5
+  field: N
+  gist: a²+b² を a+b で割った商と余りが q²+r=1977 を満たす (a,b) を求める
+  units:
+  - N-043
+  - N-040
+  - N-035
+  - A-025
+  missing: []
+  key: r<a+b と a²+b²≥(a+b)²/2 から q=44, r=41、(a−22)²+(b−22)²=1009 を 2 つの平方数の和に分ける
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1977-6
+  source: International Mathematical Olympiad
+  year: 1977
+  number: 6
+  field: A
+  gist: 正の整数上の関数で f(n+1)>f(f(n)) なら恒等関数であることを示す
+  units:
+  - L-012
+  - L-014
+  - A-029
+  missing: []
+  key: 値の最小を考える帰納法で n≥k なら f(n)≥k を示し、f が狭義増加なので f(n)=n
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1977/1977_eng.pdf
+- id: IMO-1978-1
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 1
+  field: N
+  gist: 1978 の 2 つの累乗の下 3 桁が一致する最小の指数の和を求める
+  units:
+  - N-032
+  - N-036
+  - N-037
+  missing: []
+  key: 1000=8·125 に分け、2 の因子から m≥3、1978^(n−m)≡1 (mod 125) の最小の指数（位数）が 100
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1978-2
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 2
+  field: G
+  gist: 球の内部の点から互いに垂直な 3 本の半直線で作る直方体の対頂点の軌跡を求める
+  units:
+  - G-027
+  - G-021
+  - G-019
+  missing: []
+  key: 球の中心を原点に Q=U+V+W−2P とし、直交性と |U|=|V|=|W|=R から |Q|²=3R²−2|P|² が一定
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1978-3
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 3
+  field: A
+  gist: 自然数を 2 つの増加列に分け g(n)=f(f(n))+1 が成り立つとき f(240) を求める
+  units:
+  - C-014
+  - A-029
+  - A-022
+  missing: []
+  key: 1〜g(n) にある f の値と g の値を数えて g(n)=f(n)+n を出し、f(f(n))=f(n)+n−1 から値を順に求める
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1978-4
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 4
+  field: G
+  gist: 二等辺三角形で 2 辺と外接円に接する円の接点を結ぶ線分の中点が内心であることを示す
+  units:
+  - G-033
+  - G-031
+  - G-028
+  - G-023
+  missing: []
+  key: 接点を中心とする相似拡大で辺との接点と弧の中点が結ばれ、角の追跡で中点が角の二等分線の交点になる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1978-5
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 5
+  field: A
+  gist: 相異なる正の整数の列で a_k/k² の和が 1/k の和以上であることを示す
+  units:
+  - A-027
+  missing: []
+  key: 並べかえ不等式で小さい順に並べた列に置きかえると減り、相異なる正の整数なので k 番目は k 以上
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1978-6
+  source: International Mathematical Olympiad
+  year: 1978
+  number: 6
+  field: C
+  gist: 1978 人を 6 つの国に分けると、ある人の番号が同国の 2 人の番号の和（か 1 人の 2 倍）になることを示す
+  units:
+  - L-015
+  - L-011
+  - C-024
+  missing: []
+  key: 最も多い国に 330 人以上、最大の番号との差は他国に入り、差をとる操作を繰り返すと国が尽きる（シューアの定理）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1978/1978_eng.pdf
+- id: IMO-1979-1
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 1
+  field: N
+  gist: 交代調和和を既約分数にした分子が 1979 で割れることを示す
+  units:
+  - A-018
+  - N-030
+  missing: []
+  key: 交代和を 1/660+…+1/1319 に直し、k と 1979−k を組にすると分子に 1979 が出て、分母は 1979 を含まない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1979-2
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 2
+  field: C
+  gist: 五角柱の辺と上下の頂点を結ぶ線分を 2 色で塗り単色の三角形がないとき、上下の 10 辺が同色であることを示す
+  units:
+  - L-015
+  - L-011
+  - L-007
+  missing: []
+  key: 上の 1 頂点から下への 5 本のうち 3 本が同色（鳩の巣）で、五角形の 3 頂点には隣り合う 2 点があり、隣の上の頂点と合わせると単色三角形が出る。これで上下が各々単色、さらに同色
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1979-3
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 3
+  field: G
+  gist: 交わる 2 円を同じ周期で回る 2 点から、いつも等距離にある定点があることを示す
+  units:
+  - G-016
+  - G-015
+  - G-004
+  - G-036
+  missing: []
+  key: 交点 A を中心どうしの垂直二等分線で折り返した点 P をとると、P と中心と動点の 2 つの三角形が 2 辺夾角で合同
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1979-4
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 4
+  field: G
+  gist: 平面上の定点と平面外の点について、平面上の点 R で長さの比を最大にするものを求める
+  units:
+  - G-024
+  - G-025
+  - G-021
+  missing: []
+  key: 正弦定理で比を cos((Q−R)/2)/sin(P/2) に直し、角 P を最小にする向き（Q の正射影の向き）と PR=PQ で最大
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1979-5
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 5
+  field: A
+  gist: 非負の 5 数で k, k³, k⁵ の重みつき和が a, a², a³ になる a をすべて求める
+  units:
+  - A-027
+  - A-018
+  missing: []
+  key: Σk(k²−a)²x_k を 3 式で計算すると 0 で、非負の項の和なので x_k≠0 なら k²=a
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1979-6
+  source: International Mathematical Olympiad
+  year: 1979
+  number: 6
+  field: C
+  gist: 正八角形を跳ぶ蛙が向かいの頂点にちょうど n 回で着く道の数の式を示す
+  units:
+  - C-009
+  - A-022
+  - L-005
+  missing: []
+  key: 向かいの頂点からの距離で状態をまとめ、2 歩ごとの漸化式の特性方程式 t²−4t+2=0 の解が 2±√2
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1979/1979_eng.pdf
+- id: IMO-1981-1
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 1
+  field: G
+  gist: 三角形内の点から辺への距離で辺を割った和を最小にする点を求める
+  units:
+  - A-027
+  - G-008
+  - G-028
+  missing: []
+  key: a·PD+b·PE+c·PF=2T が一定なのでコーシー・シュワルツで (Σa/PD)·2T≥(a+b+c)²、等号は内心
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1981-2
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 2
+  field: C
+  gist: r 元部分集合の最小の要素の平均が (n+1)/(r+1) であることを示す
+  units:
+  - C-015
+  - C-018
+  - C-019
+  missing: []
+  key: 最小が k の部分集合は C(n−k,r−1) 個で、Σk·C(n−k,r−1)=C(n+1,r+1) を r+1 元集合との対応で示す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1981-3
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 3
+  field: N
+  gist: (n²−mn−m²)²=1 を満たす 1981 以下の整数で m³+n³ の最大値を求める
+  units:
+  - N-042
+  - A-022
+  - N-035
+  missing: []
+  key: (m,n) が解なら (n−m,m) も解という降下でフィボナッチ数の隣り合う組に限られ、最大は (987,1597)
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1981-4
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 4
+  field: N
+  gist: 連続する n 個の整数で最大の数が他の数の最小公倍数を割る n と、それがただ 1 組の n を求める
+  units:
+  - N-018
+  - N-030
+  - L-018
+  missing: []
+  key: n=3 は互いに素の議論で不可能、n≥4 は最大の数を (n−1)(n−2) とする例、n≥5 は (n−2)(n−3) も例で、n=4 だけ 1 組
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1981-5
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 5
+  field: G
+  gist: 三角形の 2 辺ずつに接し 1 点を共有する合同な 3 円について、その点と内心と外心が一直線であることを示す
+  units:
+  - G-031
+  - G-028
+  missing: []
+  key: 3 つの中心は内心を中心にもとの三角形と相似の位置にあり、共有点はその外心なので、相似拡大で外心どうしが内心と一直線
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1981-6
+  source: International Mathematical Olympiad
+  year: 1981
+  number: 6
+  field: A
+  gist: アッカーマン型の漸化式で定まる 2 変数関数の値 f(4,1981) を求める
+  units:
+  - L-012
+  - A-022
+  - A-009
+  missing: []
+  key: f(1,y), f(2,y), f(3,y)=2^(y+3)−3 と順に帰納法で求めると、f(4,y)+3 は 2 の累乗の塔になる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1981/1981_eng.pdf
+- id: IMO-1982-1
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 1
+  field: A
+  gist: f(m+n)−f(m)−f(n) が 0 か 1 で、いくつかの値が決まる関数の f(1982) を求める
+  units:
+  - A-029
+  - N-023
+  - A-013
+  missing: []
+  key: f(3)=1 と f(3n)≥n から f(9999)=3333 で途中の f(3n)=n が強制され、f(1982) を挟んで 660
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1982-2
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 2
+  field: G
+  gist: 辺の中点と、内接円の接点を角の二等分線で折り返した点を結ぶ 3 直線が 1 点で交わることを示す
+  units:
+  - G-031
+  - G-028
+  - G-023
+  - G-004
+  missing: []
+  key: 折り返した点は内接円上にあり、それらの三角形の辺が中点三角形の辺と平行なので、2 つは相似の位置で対応点の直線は相似の中心を通る
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1982-3
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 3
+  field: A
+  gist: 1 から減っていく正の数列で x_(i−1)²/x_i の和が 3.999 を越える n があることと、4 未満にとどまる例を示す
+  units:
+  - A-025
+  - A-018
+  - A-022
+  missing:
+  - 数列と関数の極限
+  key: 相加相乗で x_(i−1)²/x_i ≥ 4(x_(i−1)−x_i) なので和は 4(1−x_n) 以上、x_n が 0 に近づかなければ和は発散、例は x_i=2^(−i)
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1982-4
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 4
+  field: N
+  gist: 3 次の 2 変数形式 =n の整数解が 1 つあれば 3 つあることと、n=2891 で解がないことを示す
+  units:
+  - N-032
+  - N-035
+  - A-015
+  missing: []
+  key: (x,y)→(y−x,−x) で式の値が変わらず 3 つの解ができ、2891≡2 (mod 9) で x, y を 3 の余りで場合分けすると値 2 は出ない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1982-5
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 5
+  field: G
+  gist: 正六角形の 2 本の対角線を同じ比で分ける点が頂点と一直線になる比を求める
+  units:
+  - G-029
+  - G-026
+  missing: []
+  key: 三角形 ACE と直線 BMN にメネラウスの定理を使う（または座標で共線の条件を作る）と r=1/√3
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1982-6
+  source: International Mathematical Olympiad
+  year: 1982
+  number: 6
+  field: C
+  gist: 正方形の周のどの点にも近い折れ線に、近い 2 点で間の道のりが長いものがあることを示す
+  units:
+  - C-023
+  - L-014
+  missing:
+  - 中間値の定理（連続性）
+  key: 道の始め側に近い周の点と終わり側に近い点の境目（連続性）で両側から 1/2 以内の 2 点をとると、その間の道は周を大きく回る
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1982/1982_eng.pdf
+- id: IMO-1983-1
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 1
+  field: A
+  gist: 正の実数上で f(xf(y))=yf(x) と、無限大で 0 に近づく条件を満たす関数を求める
+  units:
+  - A-029
+  - A-024
+  - L-011
+  missing:
+  - 数列と関数の極限
+  key: f(1)=1、xf(x) は不動点で不動点は積で閉じるので、1 より大きい不動点があると累乗で極限の条件に反し、f(x)=1/x
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1983-2
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 2
+  field: G
+  gist: 交わる 2 円の共通接線の接点の中点を使い、2 つの角が等しいことを示す
+  units:
+  - G-030
+  - G-031
+  - G-020
+  missing: []
+  key: 外相似の中心 S で SA²=SP1·SP2=SM1·SO2=SM2·SO1 を示し、相似な三角形 SAM1 と SO2A、SAM2 と SO1A の角を引く
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1983-3
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 3
+  field: N
+  gist: 互いに素な a, b, c について xbc+yca+zab と書けない最大の整数を示す
+  units:
+  - N-029
+  - N-032
+  - N-043
+  missing: []
+  key: n≡xbc (mod a) で x を 0〜a−1 に一意に決め、y, z も同様に決めて残りが負になる境目を出す（2 数の場合の拡張）
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1983-4
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 4
+  field: C
+  gist: 正三角形の周の点を 2 組に分けると、どちらかに直角三角形の頂点がそろうかを問う
+  units:
+  - L-015
+  - L-007
+  - G-017
+  missing: []
+  key: 各辺を 1:2 に分ける 3 点は互いに辺と直交する位置にあり、鳩の巣で 2 つが同じ組に入り、間の辺上の点の色で場合分けして直角三角形を作る
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1983-5
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 5
+  field: C
+  gist: 10^5 以下で 3 項の等差数列を含まない 1983 個の整数がとれるかを問う
+  units:
+  - N-025
+  - L-018
+  missing: []
+  key: 3 進法で 0 と 1 だけを使う数は 2b=a+c で繰り上がらないので 3 項の等差を含まず、11 桁で 2048 個、最大 88573
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1983-6
+  source: International Mathematical Olympiad
+  year: 1983
+  number: 6
+  field: A
+  gist: 三角形の辺について a²b(a−b)+b²c(b−c)+c²a(c−a)≥0 と等号の場合を示す
+  units:
+  - A-032
+  - A-027
+  missing: []
+  key: ラヴィ置換で xy³+yz³+zx³≥xyz(x+y+z) に直し、コーシー・シュワルツ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1983/1983_eng.pdf
+- id: IMO-1984-1
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 1
+  field: A
+  gist: 和が 1 の非負の 3 数で、2 次と 3 次の対称式の組み合わせが 0 と 7/27 の間にあることを示す
+  units:
+  - A-025
+  - A-032
+  - A-031
+  missing: []
+  key: 上は (1−2x)(1−2y)(1−2z) を相加相乗で押さえる（またはシューア）、下は 1 つが 1/2 以下であることから明らか
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1984-2
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 2
+  field: N
+  gist: ab(a+b) は 7 で割れず、(a+b)^7−a^7−b^7 が 7^7 で割れる正の整数の組を 1 つ求める
+  units:
+  - A-015
+  - N-032
+  - C-016
+  missing: []
+  key: (a+b)^7−a^7−b^7=7ab(a+b)(a²+ab+b²)² と因数分解し、a²+ab+b² が 343 で割れる組（18 と 1）を探す
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1984-3
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 3
+  field: C
+  gist: 有限個の色で塗った平面で、ある点の色がその点で決まる同心円の上に現れることを示す
+  units:
+  - L-015
+  - C-005
+  - L-011
+  missing: []
+  key: 中心 O の円ごとに現れる色の集合は 2^n 通りしかないので、近い 2 つの半径 r<R で集合が一致し、円 r 上の角 r(R−r) の点が条件を満たす
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1984-4
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 4
+  field: G
+  gist: 凸四角形で、一方の辺を直径とする円に対辺が接するとき、逆も接することと 2 辺の平行が同値であることを示す
+  units:
+  - G-012
+  - G-020
+  - G-018
+  missing: []
+  key: 接する条件を中点から対辺への距離＝半径に直すと 2 つの三角形の面積の等式になり、それは中点を結ぶ線が対角線の中点を通ること、中点連結定理で平行
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1984-5
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 5
+  field: G
+  gist: 凸 n 角形の対角線の長さの和と周の比を上下から評価する
+  units:
+  - G-017
+  - C-018
+  - A-018
+  missing: []
+  key: 交わる 2 本の対角線の和は向かい合う 2 辺の和より大きいこと（下）と、対角線は短い側の周の道のりより短いこと（上）を、すべての組で足し合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1984-6
+  source: International Mathematical Olympiad
+  year: 1984
+  number: 6
+  field: N
+  gist: ad=bc の奇数 a<b<c<d で a+d と b+c が 2 の累乗なら a=1 を示す
+  units:
+  - A-015
+  - N-030
+  - N-043
+  missing: []
+  key: a+d>b+c から k>m、(b−a)(b+a)=2^m(b−2^(k−m)a) で b±a の一方が 2^(m−1) の倍数になり、大きさから b+a=2^(m−1)、さらに a=1
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1984/1984_eng.pdf
+- id: IMO-1985-1
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 1
+  field: G
+  gist: 円に内接する四角形で、1 辺上に中心をもち他の 3 辺に接する円があるとき、辺の和の等式を示す
+  units:
+  - G-023
+  - G-018
+  - G-028
+  missing: []
+  key: 中心は 2 つの角の二等分線上にあり、その辺上に BP=BC となる点 P をとると角の追跡で P と中心と 2 頂点が共円、AP=AD
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1985-2
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 2
+  field: C
+  gist: 1〜n−1 の 2 色の塗り分けで、2 つの対称の規則から全部が同じ色であることを示す
+  units:
+  - N-032
+  - N-029
+  missing: []
+  key: 2 つの規則を合わせると i と i+k (mod n) が同じ色になり、k と n が互いに素なので k の倍数の余りで全体がつながる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1985-3
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 3
+  field: A
+  gist: (1+x) の相異なる累乗の和の奇数の係数の個数が、最も低い累乗のそれ以上であることを示す
+  units:
+  - C-016
+  - N-032
+  - L-012
+  - C-015
+  missing: []
+  key: 2 を法として (1+x)^(2^m)≡1+x^(2^m) を使い、最大の累乗を越えない 2^m で多項式を下と上に分けて帰納法
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1985-4
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 4
+  field: N
+  gist: 素因数が 26 以下の 1985 個の整数から、積が 4 乗数になる 4 つがとれることを示す
+  units:
+  - L-015
+  - N-021
+  - L-005
+  missing: []
+  key: 9 個の素数の指数の偶奇で 512 通りに分け、鳩の巣で積が平方数の対を 513 組以上取り出し、その平方根にもう一度鳩の巣
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1985-5
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 5
+  field: G
+  gist: 三角形の 2 頂点を通る円と 2 つの外接円の交点 M で、円の中心を見る角が直角であることを示す
+  units:
+  - G-032
+  - G-031
+  - G-030
+  missing: []
+  key: 3 つの円の根軸 AC、KN、BM が 1 点で交わり、M はミケル点で、方べきを中心からの距離の平方の差に直すと OM⊥BM
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1985-6
+  source: International Mathematical Olympiad
+  year: 1985
+  number: 6
+  field: A
+  gist: 漸化式 x_(n+1)=x_n(x_n+1/n) で、すべての n で 0<x_n<x_(n+1)<1 となる初項がただ 1 つであることを示す
+  units:
+  - A-022
+  - L-012
+  - A-013
+  missing:
+  - 区間縮小法（実数の連続性）
+  - 数列と関数の極限
+  key: x_n は初項の増加関数で、条件を満たす初項の範囲は入れ子の閉区間になり幅が 0 に縮むので 1 点が残る
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1985/1985_eng.pdf
+- id: IMO-1986-1
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 1
+  field: N
+  gist: 2, 5, 13 と別の d のうち 2 つの積から 1 を引いた数が平方数でないものがあることを示す
+  units:
+  - N-028
+  - N-031
+  - N-032
+  missing: []
+  key: 3 つとも平方数と仮定すると 2d−1 から d は奇数、残る 2 つの平方の差が 8d で、偶奇を 16 を法として調べて矛盾
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1986-2
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 2
+  field: G
+  gist: 三角形の頂点を順に中心とする 120° 回転を 1986 回くり返して元に戻るなら正三角形であることを示す
+  units:
+  - G-036
+  - G-015
+  - A-034
+  missing: []
+  key: 3 つの 120° 回転の合成は平行移動で、662 回で戻るので恒等写像、複素数で書くと A1+ωA2+ω²A3=0 で正三角形
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1986-3
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 3
+  field: C
+  gist: 正五角形の頂点の整数を、負の数の位置で決まった操作で変えるとき、必ず終わるかを問う
+  units:
+  - L-016
+  missing: []
+  key: 和は変わらず、1 つおきの差の平方和のような非負整数の量が操作ごとに減るので有限回で終わる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1986-4
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 4
+  field: G
+  gist: 正 n 角形の中心と 1 辺がつくる三角形を、2 頂点が周を回るように動かしたときの残りの頂点の軌跡を求める
+  units:
+  - G-023
+  - G-018
+  - G-015
+  missing: []
+  key: 動く三角形の角と多角形の頂点の角の和が 180° なので 4 点が共円で、X は O と頂点を結ぶ直線の上を往復する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1986-5
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 5
+  field: A
+  gist: f(xf(y))f(y)=f(x+y) と 2 での値の条件を満たす非負の関数を求める
+  units:
+  - A-029
+  - L-007
+  missing: []
+  key: y=2 から 2 以上で f=0、xf(y)≥2 ⇔ x+y≥2 を使って f(y)=2/(2−y)（2 未満）
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1986-6
+  source: International Mathematical Olympiad
+  year: 1986
+  number: 6
+  field: C
+  gist: 格子点の有限集合を、縦横どの線でも赤と白の差が 1 以下になるように塗れるかを問う
+  units:
+  - C-022
+  - L-005
+  missing: []
+  key: 同じ行（列）の点を 2 つずつ結ぶと次数 2 以下のグラフで道と偶数の閉路に分かれ、交互に塗る
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1986/1986_eng.pdf
+- id: IMO-1987-1
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 1
+  field: C
+  gist: n 個の置換について不動点の個数の総和が n! であることを示す
+  units:
+  - C-018
+  - C-006
+  missing: []
+  key: （置換、その不動点）の組を二通りに数えると、各 i を固定する置換は (n−1)! 個で合計 n!
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1987-2
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 2
+  field: G
+  gist: 角の二等分線の足から 2 辺への垂線の足と外接円の点がつくる四角形の面積が三角形の面積に等しいことを示す
+  units:
+  - G-020
+  - G-018
+  - G-024
+  - G-008
+  missing: []
+  key: 四角形は二等分線について対称で面積 AK·AN·sin(A/2)、AK=AL cos(A/2) と相似から AL·AN=AB·AC で一致
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1987-3
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 3
+  field: A
+  gist: 平方和 1 の実数に、小さな整数係数の 1 次結合で小さくなるものがあることを示す
+  units:
+  - L-015
+  - A-027
+  missing: []
+  key: x_i≥0 としてよく、Σx_i≤√n（コーシー・シュワルツ）、0〜k−1 の係数 k^n 通りの値を区間に鳩の巣で入れて差をとる
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1987-4
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 4
+  field: A
+  gist: 非負整数上で f(f(n))=n+1987 となる関数がないことを示す
+  units:
+  - A-029
+  - N-028
+  - L-005
+  missing: []
+  key: f(n+1987)=f(n)+1987 なので f は 1987 で割った余りの上の不動点のない対合を引き起こすが、余りの個数は奇数
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1987-5
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 5
+  field: G
+  gist: どの 2 点の距離も無理数で、どの 3 点も有理数の面積の三角形をつくる n 点があることを示す
+  units:
+  - L-018
+  - G-026
+  - N-031
+  missing: []
+  key: 放物線上の格子点 (k,k²) をとると面積は有理数、距離は |i−j|√(1+(i+j)²) で 1+m² は平方数でない
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1987-6
+  source: International Mathematical Olympiad
+  year: 1987
+  number: 6
+  field: N
+  gist: 小さい k で k²+k+n が素数なら、n−2 までのすべての k で素数であることを示す
+  units:
+  - N-030
+  - N-032
+  - L-014
+  - N-043
+  missing: []
+  key: 合成数になる最小の y の最小の素因数 p で x=p−1−y も同じく p で割れ、大きさの評価で矛盾
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1987/1987_eng.pdf
+- id: IMO-1988-1
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 1
+  field: G
+  gist: 同心円の小円上の定点を通る弦と垂線でつくる三角形の辺の平方和と、弦の中点の軌跡を求める
+  units:
+  - G-027
+  - G-030
+  - G-019
+  missing: []
+  key: 中心から弦への垂線の足を使い、三平方と方べき（PB·PC=R²−r²）で和が 6R²+2r² に一定、中点は OP を直径とする円上
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1988-2
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 2
+  field: C
+  gist: どの 2 つも 1 点だけ共有する 2n+1 個の集合の要素に、各集合で半分が 0 になるように 0 と 1 を付けられる n を求める
+  units:
+  - C-018
+  - C-022
+  - L-005
+  - L-018
+  missing: []
+  key: 各要素はちょうど 2 つの集合に入るので完全グラフ K_(2n+1) の辺に対応し、0 の辺の数 (2n+1)n/2 が整数なので n は偶数、偶数なら構成する
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1988-3
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 3
+  field: N
+  gist: 奇偶で分けた漸化式の関数で f(n)=n となる 1988 以下の n の個数を求める
+  units:
+  - N-025
+  - L-012
+  missing: []
+  key: 漸化式から f(n) は n の 2 進表記を逆から読んだ数と帰納法で示し、1988 以下の 2 進の回文を数えて 92
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1988-4
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 4
+  field: A
+  gist: k/(x−k) の和が 5/4 以上になる x の集合が長さの和 1988 の区間の和であることを示す
+  units:
+  - A-026
+  - A-013
+  missing:
+  - 中間値の定理（連続性）
+  key: 左辺は各区間で減少するので解は (k,x_k] の和、x_k は 70 次方程式の根で、和を解と係数の関係で出すと長さの和 1988
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1988-5
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 5
+  field: G
+  gist: 直角三角形を高さで分けた 2 つの三角形の内心を結ぶ直線が切り取る三角形の面積が半分以下であることを示す
+  units:
+  - G-020
+  - G-028
+  - G-023
+  missing: []
+  key: 2 つの小三角形は相似で、内心と足の三角形がもとの三角形と相似になり、切り取る三角形は AK=AL=AD の直角二等辺、高さは斜辺の半分以下
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1988-6
+  source: International Mathematical Olympiad
+  year: 1988
+  number: 6
+  field: N
+  gist: ab+1 が a²+b² を割るなら商が平方数であることを示す
+  units:
+  - N-042
+  - A-026
+  - L-014
+  missing: []
+  key: 商が平方数でないと仮定し a+b が最小の解をとると、もう 1 つの解 (b²−k)/a が正のより小さい解を与えて矛盾
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1988/1988_eng.pdf
+- id: IMO-1989-1
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 1
+  field: C
+  gist: 1〜1989 を和の等しい 17 個ずつの 117 組に分けられることを示す
+  units:
+  - L-018
+  - A-004
+  missing: []
+  key: 117 行 17 列の表で 14 列は上下逆の順で 2 列ずつ組にして和をそろえ、残り 3 列は和が一定の 3 つ組で埋める
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf
+- id: IMO-1989-2
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 2
+  field: G
+  gist: 角の二等分線と外接円、外角の二等分線から作る三角形の面積が六角形の 2 倍で、もとの三角形の 4 倍以上であることを示す
+  units:
+  - G-033
+  - G-028
+  - G-012
+  - G-025
+  missing: []
+  key: A0 は傍心で外接円上の A1 は内心と傍心の中点なので面積が 2 倍、ABC は A0B0C0 の垂足三角形で面積比 2cosα cosβ cosγ≤1/4
+  basis: self
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf
+- id: IMO-1989-3
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 3
+  field: C
+  gist: 3 点が一直線にない n 点で各点から等距離の点が k 個以上あれば k<1/2+√(2n) を示す
+  units:
+  - C-018
+  - C-023
+  - A-017
+  missing: []
+  key: 点 P と P から等距離の 2 点の組を二通りに数える：各 P で C(k,2) 個以上、各 2 点の垂直二等分線上には 2 点まで
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf
+- id: IMO-1989-4
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 4
+  field: G
+  gist: 辺の長さの関係を満たす凸四角形の内部の点の、ある直線からの距離 h について 1/√h の不等式を示す
+  units:
+  - G-019
+  - G-030
+  - A-013
+  missing: []
+  key: 半径 AD, BC, h の 3 円は互いに外接し P の円は CD に接する、A, B の円の共通接線に接する円の場合（接線の長さ 2√(rr′)）と比べる
+  basis: self
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf
+- id: IMO-1989-5
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 5
+  field: N
+  gist: 素数の累乗でない連続する n 個の整数があることを示す
+  units:
+  - N-036
+  - N-044
+  missing: []
+  key: 2n 個の相異なる素数をとり、x+i が p_i q_i で割れるように中国剰余定理で x を選ぶ
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf
+- id: IMO-1989-6
+  source: International Mathematical Olympiad
+  year: 1989
+  number: 6
+  field: C
+  gist: '{1,…,2n} の置換で、差が n の数が隣り合うものの方が多いことを示す'
+  units:
+  - C-021
+  - C-006
+  - C-013
+  missing: []
+  key: 組 {k,k+n} が隣り合う置換の集合について、包除原理の 2 項までの下界が全体の半分を越える
+  basis: self
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/1989/1989_eng.pdf

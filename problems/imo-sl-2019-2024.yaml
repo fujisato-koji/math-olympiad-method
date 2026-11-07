@@ -1,0 +1,2689 @@
+# 組み合わせの型の記録。問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。
+# 問題は url の公式の資料で読む（D-020）。
+- id: ISL-2019-A1
+  source: IMO Shortlist
+  year: 2019
+  number: A1
+  field: A
+  gist: 整数上の関数で、2 倍と合成を含む等式を満たすものを全部求める。代入で隣り合う値の差が一定と示し 1 次式に絞る
+  units:
+  - A-029
+  missing: []
+  key: 代入を 2 通りして差 f(n+1)-f(n) が一定と示し、1 次関数の係数を決める
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A2
+  source: IMO Shortlist
+  year: 2019
+  number: A2
+  field: A
+  gist: 和が 0 で平方和が 1 の実数の列で、最小値と最大値の積の上界を示す。正の項と負の項に分けて平方和を評価する
+  units:
+  - A-013
+  - A-018
+  missing: []
+  key: 正の項と非正の項に分け、それぞれの平方和を最大値・最小値と和の積で抑えて足し合わせる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A3
+  source: IMO Shortlist
+  year: 2019
+  number: A3
+  field: A
+  gist: 増加列を 2 組に分けて和の差を最小にする添字の組が、ちょうど半分に分ける別の増加列でも使えることを示す
+  units:
+  - L-019
+  - L-007
+  missing: []
+  key: 1 項に小さな量を足してから全体を縮める調整をし、うまくいかない場合は最小性に反すると示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A4
+  source: IMO Shortlist
+  year: 2019
+  number: A4
+  field: A
+  gist: 和が 0 の実数で、差が 1 以上の組についての積の和が負になることを示す。補集合の和へ移して値の範囲で分ける
+  units:
+  - A-018
+  - A-013
+  missing: []
+  key: 全体の積の和が和の平方から決まることで補集合側の和に移し、値の範囲で 4 組に分けて平方の和で評価する
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A5
+  source: IMO Shortlist
+  year: 2019
+  number: A5
+  field: A
+  gist: 相異なる実数についての有理式の和が n の偶奇で 0 か 1 になる恒等式を示す。補間公式の最高次の係数を比べる
+  units:
+  - A-036
+  missing: []
+  key: 節点 ±1 と x_i でラグランジュ補間し、最高次の係数を比べる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A6
+  source: IMO Shortlist
+  year: 2019
+  number: A6
+  field: A
+  gist: 3 変数の多項式が 3 つのヴィエタ型の置きかえで不変なら、決まった 3 次式の 1 変数多項式になることを示す
+  units:
+  - A-030
+  - A-031
+  - L-012
+  missing: []
+  key: 1 つの置きかえで不変な多項式の形を決め、次数についての帰納法で残りの不変性から 1 変数に落とす
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-A7
+  source: IMO Shortlist
+  year: 2019
+  number: A7
+  field: A
+  gist: 整数上の関数方程式で、逆像が有限で空でない値があり得ることと、それが 2 つ以上ないことを示す
+  units:
+  - A-029
+  - N-021
+  - L-014
+  missing: []
+  key: 2 の冪の因子で例を作り、等差数列の上で関数が最小値をとることを逆像の最小元と最大元から導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C1
+  source: IMO Shortlist
+  year: 2019
+  number: C1
+  field: C
+  gist: 二項係数の和が 2 の冪になる条件を満たす整数列に、すべての非負整数が現れることを示す
+  units:
+  - C-016
+  - L-012
+  missing: []
+  key: 最初の k+1 項の中身（重複を含む）を帰納法で決め、二項係数の総和が 2^k であることを使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C2
+  source: IMO Shortlist
+  year: 2019
+  number: C2
+  field: C
+  gist: 重さ 1 以上で合計 2n の n 個のブロックから、どの幅 2 の区間にも入る部分の重さが選べることを示す
+  units:
+  - L-012
+  - L-014
+  missing: []
+  key: 主張を強めて個数について帰納法を使い、最も重いブロックを外すか入れるかで分ける
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C3
+  source: IMO Shortlist
+  year: 2019
+  number: C3
+  field: C
+  gist: 表の数で決まる位置の硬貨を裏返す操作が止まるまでの回数の、全配置での平均を求める
+  units:
+  - C-009
+  - C-019
+  - L-012
+  missing: []
+  key: n 枚の遷移の図を n-1 枚の図 2 つ（そのままと裏返して逆順）から組み立て、平均の漸化式を立てる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C4
+  source: IMO Shortlist
+  year: 2019
+  number: C4
+  field: C
+  gist: 一般の位置の直線で分けた平面の領域を扉でつなぎ、互いに会えない騎士を置ける最大数を求める
+  units:
+  - C-023
+  - C-022
+  missing: []
+  key: 領域の数を帰納法で数え、扉を辺とするグラフの連結成分の数を「頂点の数−辺の数」で下から抑える
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C5
+  source: IMO Shortlist
+  year: 2019
+  number: C5
+  field: C
+  gist: 決まった次数の友人グラフで、三角の付け替えを繰り返して全員の友人を 1 人以下にできることを示す
+  units:
+  - C-024
+  - L-016
+  missing: []
+  key: 「3 頂点以上の成分は完全でなく奇数次の頂点をもつ」を保つ付け替えが常にあると場合分けで示し、辺の数の減少で終わらせる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C6
+  source: IMO Shortlist
+  year: 2019
+  number: C6
+  field: C
+  gist: 平面の 2n 点を一周に並べ、各頂点の角を和の等しい 2 組に分けられる並べ方があることを示す
+  units:
+  - C-023
+  - G-015
+  missing: []
+  key: 点を半分ずつに分ける直線を引いて左右交互に並べ、点のまわりに直線を回したときの総回転が 0 になることを使う
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C7
+  source: IMO Shortlist
+  year: 2019
+  number: C7
+  field: C
+  gist: 並んだ箱の小石を、相手が選ぶ区切りの片側に足し他方から引くゲームで、空の箱を防げる最小の初期個数を求める
+  units:
+  - L-017
+  - L-018
+  missing: []
+  key: 先手が守れる配り方と守り方を作り、それより少ないと後手の区切り方で必ず空の箱ができることを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C8
+  source: IMO Shortlist
+  year: 2019
+  number: C8
+  field: C
+  gist: 向きの分からない完全グラフで、出る道が 1 本以下の町があるかを 4n 回以内の問いで判定する方法を示す
+  units:
+  - C-024
+  - L-019
+  missing: []
+  key: 候補の町を段階的に絞る質問の手順を作り、各段の質問の数を数えて合計を抑える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-C9
+  source: IMO Shortlist
+  year: 2019
+  number: C9
+  field: C
+  gist: 2 点の距離の 2 進の桁を「尺度」とし、各点の尺度が k 種類以下の実数の集合の最大の大きさを求める
+  units:
+  - L-018
+  - L-012
+  missing: []
+  key: 0 から 2^k-1 で例を作り、各点に 2^(-尺度の数) の重みを置いた和が 1 以下であることを最小の尺度で分けて帰納法で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G1
+  source: IMO Shortlist
+  year: 2019
+  number: G1
+  field: G
+  gist: 円と三角形の辺の交点で作る 2 つの円の接線の交点と頂点を結ぶ線が、底辺に平行であることを示す
+  units:
+  - G-023
+  missing: []
+  key: 接弦定理と内接四角形の角で 2 つの三角形の角をそろえ、合同から高さが等しいことを導く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G2
+  source: IMO Shortlist
+  year: 2019
+  number: G2
+  field: G
+  gist: 垂足三角形のまわりの 2 つの小三角形の内接円と、接点を結ぶ直線の交点でできる 2 つの弦が等しいことを示す
+  units:
+  - G-028
+  - G-024
+  missing: []
+  key: 垂足三角形の角から 2 つの直角三角形の相似を出し、弦の長さを接弦の角の正弦で表して正弦定理で比べる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G3
+  source: IMO Shortlist
+  year: 2019
+  number: G3
+  field: G
+  gist: 三角形の中で底辺に平行な線分の端から角の条件で取った 2 点を合わせた 4 点が同じ円にのることを示す
+  units:
+  - G-023
+  missing: []
+  key: 頂点からの直線と外接円の 2 つ目の交点を加え、方向角の追跡で順に共円を示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G4
+  source: IMO Shortlist
+  year: 2019
+  number: G4
+  field: G
+  gist: 三角形の内部の点をチェバ線の足について折り返した 3 点が、すべて外接円の内側にはないことを示す
+  units:
+  - G-024
+  - G-030
+  missing: []
+  key: 角の和からある角で正弦の大小を得て、外接円との交点を使う相似と正弦定理で比を表し、2 つの比の積が 1 以上と示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G5
+  source: IMO Shortlist
+  year: 2019
+  number: G5
+  field: G
+  gist: 角の条件をもつ凸五角形の内部の点が対角線にのることと、面積の等式が同値であることを示す
+  units:
+  - G-031
+  - G-012
+  missing: []
+  key: 点を辺について折り返し中点を取って、共線条件と面積条件をどちらも 2 つの直角三角形が同じ向きに相似であることに言い換える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G6
+  source: IMO Shortlist
+  year: 2019
+  number: G6
+  field: G
+  gist: 内接円の接点を結ぶ直線と外接円の交点から作る角の和が、内心から見た角に等しいことを示す
+  units:
+  - G-031
+  - G-037
+  missing: []
+  key: 弧の中点との回転相似で直線を移し、メネラウスで調和点列を得て、接点と辺の中点を含む 4 点の共円を方べきで示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G7
+  source: IMO Shortlist
+  year: 2019
+  number: G7
+  field: G
+  gist: 内接円の上で順に取った点を通る 2 つの円の交点を結ぶ直線が、外角の二等分線の上で別の直線と交わることを示す
+  units:
+  - G-037
+  - G-033
+  missing: []
+  key: 内接円についての極と極線、方べきでの共円、内心を通る円 BIC を使って共線に帰着する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-G8
+  source: IMO Shortlist
+  year: 2019
+  number: G8
+  field: G
+  gist: 各直線に点を 1 つ割り当てる関数が、共点な 3 直線の像と交点が共円になる条件を満たすとき、特別な点があることを示す
+  units:
+  - G-023
+  - L-018
+  missing: []
+  key: 方向角で「よい」点と直線を定義し、補題でよい点が直線と円に沿って広がることを示して全体を特徴づける
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N1
+  source: IMO Shortlist
+  year: 2019
+  number: N1
+  field: N
+  gist: 2 の冪から 2 の冪を引いた数の積が階乗になる正の整数の組を全部求める
+  units:
+  - N-034
+  - N-043
+  missing: []
+  key: 両辺の 2 の指数を比べ、ルジャンドルの公式で階乗側の指数を抑えて n を上から絞る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N2
+  source: IMO Shortlist
+  year: 2019
+  number: N2
+  field: N
+  gist: 3 つの正の整数の立方和が積の平方に等しい組を全部求める
+  units:
+  - N-043
+  missing: []
+  key: 大小の比較で最小の数を 1 に決め、さらに不等式で残りを有限個に絞る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N3
+  source: IMO Shortlist
+  year: 2019
+  number: N3
+  field: N
+  gist: 係数がその集合の元の多項式の整数解を必ず含む整数の集合で、2 の冪の差を含むものを全部求める
+  units:
+  - N-033
+  - N-025
+  - L-012
+  missing: []
+  key: オイラーの定理で各 n の倍数を集合の中に作り、その n 進展開の係数の多項式で n が根になることを帰納法に使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N4
+  source: IMO Shortlist
+  year: 2019
+  number: N4
+  field: N
+  gist: 正の整数上の関数で、大きな組について割り切りの条件を満たすものを全部求める
+  units:
+  - A-029
+  - N-030
+  - L-015
+  missing: []
+  key: b | f(b)^2 から素数 p で p | f(p) を出し、無限に多くの素数で同じ比をとることから f(a)=ka を導く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N5
+  source: IMO Shortlist
+  year: 2019
+  number: N5
+  field: N
+  gist: 二項係数の割り切りで定めた「よい」数が b でよく b+2 でよくないとき、b+1 が素数であることを示す
+  units:
+  - N-034
+  - N-033
+  missing: []
+  key: p 進付値で「よい」を「b が偶数で b 以下の素数がすべて a を割る」と言い換え、逆元で反例の n を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N6
+  source: IMO Shortlist
+  year: 2019
+  number: N6
+  field: N
+  gist: √2 の倍数の整数部分の集合を差として避ける部分集合の大きさが √n の定数倍以下であることを示す
+  units:
+  - A-016
+  - N-043
+  missing:
+  - 無理数の有理数による近似の下限
+  key: 集合に入ることを小数部分の条件に言い換え、元を並べると小数部分が単調になり、√2 の近似の下限で個数を抑える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N7
+  source: IMO Shortlist
+  year: 2019
+  number: N7
+  field: N
+  gist: 互いに素な n 乗の和で表すのに n log n の定数倍の個数が要る数が無限にあるような n が無限にあることを示す
+  units:
+  - N-037
+  - N-043
+  missing: []
+  key: n が各素数冪のオイラー関数で割れるように法 N を選ぶと n 乗は 0 か 1 になり、フェルマー数の素因数で N を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2019-N8
+  source: IMO Shortlist
+  year: 2019
+  number: N8
+  field: N
+  gist: 平方数と切り上げの商の和が平方数にならないことを示す
+  units:
+  - N-042
+  - N-023
+  missing: []
+  key: 平方になると仮定して 2 次の不定方程式に直し、解の最小性からヴィエタ・ジャンピングで矛盾を導く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2019/IMO2019SL.pdf
+- id: ISL-2020-A1
+  source: IMO Shortlist
+  year: 2020
+  number: A1
+  field: A
+  gist: 2 の冪の次数のべき平均の根が、1 次式と 2 次の項の和で上から抑えられる最小の係数を求める
+  units:
+  - C-016
+  - L-012
+  - A-013
+  missing: []
+  key: x=1 の近くで二項展開して係数の下界を出し、上界は次数を倍にする帰納法で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A2
+  source: IMO Shortlist
+  year: 2020
+  number: A2
+  field: A
+  gist: 3 変数の基本対称式を因子にもつ式の全体に、ある次数以上の単項式がすべて入る最小の次数を求める
+  units:
+  - A-031
+  missing: []
+  key: x,y,z を根とする 3 次式で 3 乗の単項式を表し、次数 3 の単項式が入らないことは係数の比較で示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A3
+  source: IMO Shortlist
+  year: 2020
+  number: A3
+  field: A
+  gist: 4 つの正の数の積の条件の下で、巡回する 4 つの比の和の最小値を求める
+  units:
+  - A-025
+  missing: []
+  key: 相加相乗平均を 2 回使い、条件から比の積を評価して最小値を得る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A4
+  source: IMO Shortlist
+  year: 2020
+  number: A4
+  field: A
+  gist: 和が 1 で減少する 4 つの数で、自分自身を指数とする累乗の積と 1 次式の積が 1 未満であることを示す
+  units:
+  - A-028
+  missing: []
+  key: 重み付きの相加相乗平均で累乗の積を平方和で抑え、和の 3 乗を展開して順序で比べる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A5
+  source: IMO Shortlist
+  year: 2020
+  number: A5
+  field: A
+  gist: 2n 点での n 次多項式の値を並べ替えて見せたとき、元の多項式を当てられるかを問う
+  units:
+  - A-026
+  - A-012
+  missing:
+  - 斉次の連立 1 次方程式の非自明な解
+  key: 隣り合う 2 点の値の和が 0 になる条件を係数の連立方程式とみて解をとり、P と -P が同じ値の並びを与えることを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A6
+  source: IMO Shortlist
+  year: 2020
+  number: A6
+  field: A
+  gist: 整数上の関数で、反復の回数が変数の平方和で決まる等式を満たすものを全部求める
+  units:
+  - A-029
+  - N-018
+  missing: []
+  key: 点を繰り返し写した軌道を考え、軌道どうしが有限個しか違わないことから有限か無限かで分け、周期の最大公約数を使う
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A7
+  source: IMO Shortlist
+  year: 2020
+  number: A7
+  field: A
+  gist: 区間に入る正の数の列で、各項を前までの平方和の根で割った和の上界を示す
+  units:
+  - A-027
+  missing: []
+  key: 値を 2 の冪の区間で分け、各群の和を 1/√i の和で抑えてから群の間でコーシー・シュワルツを使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-A8
+  source: IMO Shortlist
+  year: 2020
+  number: A8
+  field: A
+  gist: 正の実数上の関数で、和と積と合成を含む等式を満たすものを全部求める
+  units:
+  - A-029
+  missing:
+  - 単調関数の片側極限
+  key: 単射から単調増加を導き、片側極限を使って 1 次関数であることを示し係数を決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C1
+  source: IMO Shortlist
+  year: 2020
+  number: C1
+  field: C
+  gist: 各項に位置を掛けた値が増える順列の数を求め、フィボナッチ数になることを示す
+  units:
+  - C-009
+  - A-022
+  missing: []
+  key: 最大の数が末尾か末尾の 1 つ前にしか置けないことを示し、漸化式を立てる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C2
+  source: IMO Shortlist
+  year: 2020
+  number: C2
+  field: C
+  gist: 2 色に塗った正多角形の頂点から、3 対 1 の色の互いに交わらない四角形をいくつも取れることを示す
+  units:
+  - L-012
+  - L-015
+  missing: []
+  key: 頂点の数と色の数を一般化して帰納法を使い、4 つずつの組に鳩の巣原理で 3 対 1 になる連続の 4 点を見つける
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C3
+  source: IMO Shortlist
+  year: 2020
+  number: C3
+  field: C
+  gist: 2 社のロープウェーの区間の並びで、両社でつながる 2 点が必ずある最小の台数を求める
+  units:
+  - L-018
+  missing: []
+  key: 台数が 1 少ないときの例を作り、各社の鎖の数が n 以下になることから鳩の巣原理で共通の組を見つける
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C4
+  source: IMO Shortlist
+  year: 2020
+  number: C4
+  field: C
+  gist: フィボナッチ数をすべて差として含む整数の集合の最小の大きさを求める
+  units:
+  - C-022
+  - A-022
+  - L-018
+  missing: []
+  key: 奇数番目のフィボナッチ数の差を辺とするグラフに閉路がないことを示して下界を出し、例を作る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C5
+  source: IMO Shortlist
+  year: 2020
+  number: C5
+  field: C
+  gist: 1 から N を 2 色に塗ったとき、赤の割合が決して取らない分母 p の分数があることを示す
+  units:
+  - L-014
+  missing: []
+  key: 割合が各分数に等しくなる位置を取ったと仮定し、その位置の大小から出る不等式を繰り返して範囲に入らないことを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C6
+  source: IMO Shortlist
+  year: 2020
+  number: C6
+  field: C
+  gist: 重さの連続する 4n 枚の硬貨を各色 4 枚ずつ塗ったとき、各色 2 枚ずつで重さの等しい 2 組に分けられることを示す
+  units:
+  - C-022
+  missing: []
+  key: 和が一定の組を辺とする色の多重グラフを作り、オイラー回路に沿って辺を交互に塗り分ける
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C7
+  source: IMO Shortlist
+  year: 2020
+  number: C7
+  field: C
+  gist: 表の行と列の組で定めた鞍点の組の極小なものが、どれも同じ行数をもつことを示す
+  units:
+  - A-024
+  - L-014
+  missing: []
+  key: 2 つの鞍点の組の間に写像を作って合成し、像を繰り返し取ることで小さい鞍点の組を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-C8
+  source: IMO Shortlist
+  year: 2020
+  number: C8
+  field: C
+  gist: 黒板の 1 を 2 つずつ消して和か差を書くゲームで、最適に遊んだときの最後の数の個数を求める
+  units:
+  - N-025
+  - L-017
+  - L-016
+  missing: []
+  key: 2 進の桁の和に着目し、一方は等しい数を選び続け、他方は各数の元になった 1 の数で抑える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G1
+  source: IMO Shortlist
+  year: 2020
+  number: G1
+  field: G
+  gist: 二等辺三角形の内部の点からの垂線の足を通る円と外接円の交点の共線条件から、頂角が直角であることを示す
+  units:
+  - G-023
+  - G-004
+  missing: []
+  key: 内部の点と頂点を直径とする円を見つけ、垂直二等分線についての対称性で円の中心が底辺の中点と一致することを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G2
+  source: IMO Shortlist
+  year: 2020
+  number: G2
+  field: G
+  gist: 角の比の条件をもつ四角形の内部の点で、2 つの角の二等分線の交点が 2 頂点から等距離にあることを示す
+  units:
+  - G-023
+  - G-028
+  missing: []
+  key: 角の条件で二等辺三角形を作り、二等分線を垂直二等分線とみて、作った点が 1 つの円にのることから外心に一致させる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G3
+  source: IMO Shortlist
+  year: 2020
+  number: G3
+  field: G
+  gist: 四角形の頂点を 2 辺で折り返した点と対角線の交点で作る 2 つの円が接することを示す
+  units:
+  - G-023
+  - G-004
+  missing: []
+  key: 対角線で折り返した点を加え、両方の円がそこを通り接線の角が合うことを角度で示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G4
+  source: IMO Shortlist
+  year: 2020
+  number: G4
+  field: G
+  gist: 互いに交わらない円板の中の点までの距離の和が、6 番目以降の半径の和以上であることを示す
+  units:
+  - L-015
+  - L-012
+  - G-017
+  missing: []
+  key: 中心へ引いた 6 本の半直線のなす角のどれかが 60 度以下になることから補題を得て、円板の数で帰納法を使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G5
+  source: IMO Shortlist
+  year: 2020
+  number: G5
+  field: G
+  gist: 内接四角形の辺上の菱形で分けた 4 つの三角形の内接円で、向かい合う円の内側の共通接線が 1 点で交わることを示す
+  units:
+  - G-031
+  missing: []
+  key: 内側の共通接線の交点を相似の中心として比を表し、もう一組の交点も同じ比をもつ唯一の点になることを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G6
+  source: IMO Shortlist
+  year: 2020
+  number: G6
+  field: G
+  gist: 内心と傍心と接点を使った 2 つの三角形の外接円が接することを示す
+  units:
+  - G-031
+  - G-033
+  missing: []
+  key: 内心と傍心を直径とする円と、完全四辺形のミケル点を第 2 の交点として方向角で接することを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G7
+  source: IMO Shortlist
+  year: 2020
+  number: G7
+  field: G
+  gist: 外接円上の点を中線で折り返した 3 点で作る 3 つの円と別の円が共通の点をもつことを示す
+  units:
+  - G-032
+  - G-028
+  - G-023
+  missing: []
+  key: 垂線の足が各円にのることと垂心の方べきから 3 円の根軸が一致することを示し、残りを方向角で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G8
+  source: IMO Shortlist
+  year: 2020
+  number: G8
+  field: G
+  gist: 内心で接する 2 つの円と外接円の交点から作る点と接線の交点と頂点が一直線にのることを示す
+  units:
+  - G-033
+  missing: []
+  key: 接点での共通接線の上に接線の交点があることを方向角で示し、もう一方の点も弧の中点を結ぶ線との交点として特定する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-G9
+  source: IMO Shortlist
+  year: 2020
+  number: G9
+  field: G
+  gist: 距離が 1 以上の n 点を、どの点からも n^(-1/3) の定数倍以上離れた直線で分けられることを示す
+  units:
+  - C-023
+  missing: []
+  key: どの方向の射影でも間隔が小さいと仮定し、直径の 2 点を取ってその方向と直交方向の射影から点の数を面積で抑えて矛盾させる
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N1
+  source: IMO Shortlist
+  year: 2020
+  number: N1
+  field: N
+  gist: 連続する 4 項の積が順に 1, 2, … と合同になる相異なる剰余の列がとれる素数があることを示す
+  units:
+  - N-032
+  - N-029
+  - N-021
+  missing: []
+  key: まず有理数の列で積の条件を満たすものを作り、分母と分子に現れない大きな素数を法として整数に移す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N2
+  source: IMO Shortlist
+  year: 2020
+  number: N2
+  field: N
+  gist: 素数 p ごとに剰余の 2 次式の条件で島を橋で結ぶとき、つながらない島がある p が無限にあることを示す
+  units:
+  - C-022
+  - N-045
+  missing: []
+  key: 2 次式の値を割る素数では矢印の出ない島が 2 つあり、橋の数が p-2 以下なので連結でないことを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N3
+  source: IMO Shortlist
+  year: 2020
+  number: N3
+  field: N
+  gist: どの 2 項の相加平均もいくつかの項の相乗平均になる、すべては等しくない正の整数の列があるかを問う
+  units:
+  - N-021
+  - L-014
+  - N-043
+  missing: []
+  key: 最大公約数で割り、最大の項の素因数 p と p で割れない最大の項の平均を取り、p の指数と大きさで矛盾させる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N4
+  source: IMO Shortlist
+  year: 2020
+  number: N4
+  field: N
+  gist: 剰余を足していく素数 p の数列 2 本の大小が入れ替わり続ける例と、すぐ追い越す例がある p が無限にあるかを問う
+  units:
+  - N-037
+  missing: []
+  key: 2 の位数が周期になり、1 周期分の剰余の和が一定であることを使って、2^q+1 の素因数を法とする例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N5
+  source: IMO Shortlist
+  year: 2020
+  number: N5
+  field: N
+  gist: 積を和に移す非負整数値の関数で、対称性の条件をもつ数が無限にあるものを全部求める
+  units:
+  - N-033
+  - L-014
+  missing: []
+  key: よい数の約数もよいことと、値が正になる最小の素数 p を使い、フェルマーの小定理で他の素数での値を 0 にする
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N6
+  source: IMO Shortlist
+  year: 2020
+  number: N6
+  field: N
+  gist: 約数の個数とオイラー関数を入れ替えて合成した 2 つの値の比が有界かを問う
+  units:
+  - N-024
+  - N-033
+  - N-046
+  missing: []
+  key: 小さい素数と N から 2N の素数を組み合わせた n を作り、その範囲の素数がいくらでも多いことから比を大きくする
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2020-N7
+  source: IMO Shortlist
+  year: 2020
+  number: N7
+  field: N
+  gist: どの元も他の 2 元の和でない整数の集合を、どの項も両隣の和を割らないように並べられることを示す
+  units:
+  - L-012
+  - L-015
+  - N-032
+  missing: []
+  key: 和と差の両方を割らない並べ方に強めて帰納法を使い、最大の元を差し込む位置を鳩の巣原理で選ぶ
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2020/IMO2020SL.pdf
+- id: ISL-2021-A1
+  source: IMO Shortlist
+  year: 2021
+  number: A1
+  field: A
+  gist: 0 から 5n の中の 4n+2 個の整数の集合に、ある 1 次の不等式を満たす 3 元が必ずあることを示す
+  units:
+  - L-011
+  - A-022
+  missing: []
+  key: ないと仮定して最大の元を固定し、隣り合う 2 元で不等式を書くと差が 3/2 倍ずつ広がり、範囲を越える
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A2
+  source: IMO Shortlist
+  year: 2021
+  number: A2
+  field: A
+  gist: n×n の表に整数部分の値を並べた和が決まった値になる n を全部求める
+  units:
+  - N-023
+  - N-030
+  - A-018
+  missing: []
+  key: 和が整数の 2 数の整数部分の和の不等式を使い、表の対称な 2 マスを組にして、等号が n+1 の素数性と同値になると示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A3
+  source: IMO Shortlist
+  year: 2021
+  number: A3
+  field: A
+  gist: 1 から n の順列で、各項を位置で割った整数部分の和の最小値を求める
+  units:
+  - N-023
+  - L-012
+  - L-018
+  missing: []
+  key: 巡回の形に並べた例で値を出し、相異なる 2^k 個の整数について和が k+1 以上であることを帰納法で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A4
+  source: IMO Shortlist
+  year: 2021
+  number: A4
+  field: A
+  gist: 実数の組について、差の絶対値の平方根の和が和の絶対値の平方根の和以下であることを示す
+  units:
+  - A-028
+  - L-019
+  missing: []
+  key: 全体を t ずらした右辺を t の関数とみると区間ごとに凹なので、最小はある和が 0 になる点でとり、そこから変数の数で帰納法を使う
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A5
+  source: IMO Shortlist
+  year: 2021
+  number: A5
+  field: A
+  gist: 和が 1 の正の数で、前までの和の平方を含む分数の和が 1/3 未満であることを示す
+  units:
+  - A-018
+  - A-013
+  missing: []
+  key: 各項を前までの和の 3 乗の差で抑え、和を望遠鏡のように消す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A6
+  source: IMO Shortlist
+  year: 2021
+  number: A6
+  field: A
+  gist: 整数の有限集合の部分集合の和が m の 1 乗から m 乗までになるとき、元の数が m/2 以上であることを示す
+  units:
+  - L-015
+  - N-025
+  missing: []
+  key: 係数を 0 から m-1 とした m^m 通りの 1 次結合と、とり得る値の数を比べて鳩の巣原理を使い、m 進表示の一意性に反すると示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A7
+  source: IMO Shortlist
+  year: 2021
+  number: A7
+  field: A
+  gist: 隣り合う項の積と前の項の平方の差が 1 以上の非負の列で、和が n の 3/2 乗の定数倍以上であることを示す
+  units:
+  - A-015
+  - A-013
+  - L-012
+  missing: []
+  key: 3 項の補題で「前の項+2×次の項」の平方が段ごとに一定量ずつ増えることを示し、足し合わせて評価する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-A8
+  source: IMO Shortlist
+  year: 2021
+  number: A8
+  field: A
+  gist: 3 つの差の積が巡回する 2 つの 3 次式の値の差になる実数上の関数を全部求める
+  units:
+  - A-029
+  - A-031
+  - A-030
+  missing: []
+  key: 同じ値をとる組の集合を置きかえで広げて 0 か単射かに分け、単射のとき多項式の形に追い込む
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C1
+  source: IMO Shortlist
+  year: 2021
+  number: C1
+  field: C
+  gist: 無限の整数の集合で、gcd が違う組があれば、gcd の関係が決まった形の 3 元があることを示す
+  units:
+  - N-018
+  - L-015
+  missing: []
+  key: 1 つの元との gcd は有限個の約数しかとらないので、同じ gcd をもつ無限の部分集合を取り、そこで 3 元を選ぶ
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C2
+  source: IMO Shortlist
+  year: 2021
+  number: C2
+  field: C
+  gist: n 色のおはじきを円に並べ、連続する n+1 個に全色が入るようにできない個数の最大を求める
+  units:
+  - L-018
+  missing: []
+  key: 個数が少ないとある色が少なく他の色を区切れないことで不可能を示し、それ以上の個数では色の並びを繰り返す例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C3
+  source: IMO Shortlist
+  year: 2021
+  number: C3
+  field: C
+  gist: 円に並べた番号付きの指ぬきで、番号 k の両隣を順に入れ替えるとき、k をはさむ 2 つを入れ替える回があることを示す
+  units:
+  - L-016
+  - L-011
+  missing: []
+  key: ないと仮定し、動かした中心の指ぬきを黒く塗る色付けと、位置を赤と緑に塗る色付けで隣り合う位置の関係から矛盾を導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C4
+  source: IMO Shortlist
+  year: 2021
+  number: C4
+  field: C
+  gist: 向きのある完全グラフで、2 点の間の辺を共有しない道の最大本数が両向きで等しいことと、出る辺の数が等しいことの同値を示す
+  units:
+  - C-024
+  - L-019
+  missing: []
+  key: 長さ 1 と 2 の道を必ず含むように道の組を取り替えられることを示し、他の都市を 4 群に分けて両向きの本数を比べる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C5
+  source: IMO Shortlist
+  year: 2021
+  number: C5
+  field: C
+  gist: 円に並ぶ n+1 人の女子と n 人の男子で、近くの 2k 人のうち k 人以上が女子である女子がいることを示す
+  units:
+  - L-014
+  - A-018
+  missing: []
+  key: 0 と 1 の周期列にし、離れた 2 項の和から 1 を引いた列の区間和が 1 になることから、部分和が負にならない出発点を選ぶ
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C6
+  source: IMO Shortlist
+  year: 2021
+  number: C6
+  field: C
+  gist: 見えないうさぎがいる格子を有限色で塗り、色の報告から出発点を当てられるかを問う
+  units:
+  - L-017
+  - N-028
+  - C-017
+  missing: []
+  key: 座標の剰余を記録する塗り方と、間隔がすべて異なる縞の塗り方を重ね、x, y, x+y のうち 2 つが有界でないことを使う
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C7
+  source: IMO Shortlist
+  year: 2021
+  number: C7
+  field: C
+  gist: 右か上へ跳ぶかえるを止める格子のマスの集合で、極小なものの大きさの上下の評価を示す
+  units:
+  - L-018
+  - C-018
+  missing: []
+  key: 帯に分けた例で下の評価を示し、上の評価は出発点から届くマスと終点へ届くマスを数え、塞ぐマスの数を両側の数で抑える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-C8
+  source: IMO Shortlist
+  year: 2021
+  number: C8
+  field: C
+  gist: 1 から 100 の順列を行とし、どの 2 行もある列で 2 以上違う表の最大の行数を求める
+  units:
+  - C-014
+  - L-018
+  missing: []
+  key: 2k-1 と 2k を同じ記号にした型が行ごとに異なることで上界を示し、各型から行を作る手順で例を作る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G1
+  source: IMO Shortlist
+  year: 2021
+  number: G1
+  field: G
+  gist: 辺の条件をもつ平行四辺形と 2 つの外接円から、3 直線が 1 点で交わることを示す
+  units:
+  - G-023
+  missing: []
+  key: 角度で 2 組の 4 点が同じ円にのることを示し、交点を置いて共線を角度で確かめる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G2
+  source: IMO Shortlist
+  year: 2021
+  number: G2
+  field: G
+  gist: 円に外接する四角形と、内心と 2 頂点を通る円の交点で作る 2 つの四角形の周の長さが等しいことを示す
+  units:
+  - G-033
+  missing: []
+  key: 内心が弧の中点になることから等しい線分を出し、接点を使った直角三角形の合同で辺を移す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G3
+  source: IMO Shortlist
+  year: 2021
+  number: G3
+  field: G
+  gist: 格子の点を頂点が重ならないように多角形に分けたとき、面積の和の最大を求める
+  units:
+  - G-034
+  missing: []
+  key: 中心からの距離で多角形の面積を隣り合う距離の積の和で抑え、相加相乗で距離の平方和にして全点で足す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G4
+  source: IMO Shortlist
+  year: 2021
+  number: G4
+  field: G
+  gist: 内接四角形の接線と平行線で作る点で、3 直線が 1 点で交わることを示す
+  units:
+  - G-032
+  - G-023
+  missing: []
+  key: 平行線で 2 つの円を作り、その接点での共通接線を根軸として方べきで確かめ、5 点の共円から共点を導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G5
+  source: IMO Shortlist
+  year: 2021
+  number: G5
+  field: G
+  gist: 内接四角形の角の二等分線と、対角線に接する 2 つの円の中心と外心が一直線にのることを示す
+  units:
+  - G-031
+  - G-032
+  - G-024
+  missing: []
+  key: 対角線の交点を中心とする相似拡大と、接線の交点が根軸にのることを方べきで示し、正弦定理で比を比べる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G6
+  source: IMO Shortlist
+  year: 2021
+  number: G6
+  field: G
+  gist: 辺の長さがすべて 1 の凸 n 角形が、必ず辺 1 の正三角形を含む n を全部求める
+  units:
+  - C-023
+  missing: []
+  key: 偶数では細い帯に入る例を作り、奇数では最長の対角線を取ってその片側の折れ線から正三角形を見つける
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G7
+  source: IMO Shortlist
+  year: 2021
+  number: G7
+  field: G
+  gist: 角の二等分線上の点から作る 2 つの外心を結ぶ直線と 2 直線が 1 点で交わることを示す
+  units:
+  - G-038
+  - G-045
+  missing: []
+  key: 等角共役の点で 4 点の共円を出して交点 T の方べきの等式を示し、T を中心とする反転で円を移して根軸で結ぶ
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-G8
+  source: IMO Shortlist
+  year: 2021
+  number: G8
+  field: G
+  gist: 外接円と傍接円の交点での接線への射影から作る点を通る直線が、辺に垂直であることを示す
+  units:
+  - G-037
+  - G-023
+  missing: []
+  key: 傍接円に外接する退化した六角形にブリアンションの定理を使い、交点の位置を特定する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N1
+  source: IMO Shortlist
+  year: 2021
+  number: N1
+  field: N
+  gist: 整数の組で分数の値が整数になり、分母が素数の 3 乗で割れないとき、その値を全部求める
+  units:
+  - N-043
+  - N-021
+  missing: []
+  key: 分母を法として分子を (a+1)^3 に直し、3 乗で割れないことから (a+1)^2 を割ることを示して大きさで決める
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N2
+  source: IMO Shortlist
+  year: 2021
+  number: N2
+  field: N
+  gist: n から 2n のカードを 2 つの山に分けると、和が平方数になる 2 枚が同じ山にあることを示す
+  units:
+  - L-015
+  - N-031
+  missing: []
+  key: どの 2 つの和も平方数になる 3 枚を範囲の中に作り、2 つの山のどちらかに 2 枚が入ることを使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N3
+  source: IMO Shortlist
+  year: 2021
+  number: N3
+  field: N
+  gist: 約数を並べ替えて部分和がすべて平方数になる正の整数を全部求める
+  units:
+  - L-012
+  - N-043
+  missing: []
+  key: 部分和を平方の列で表し、大きい約数から順に平方の差の形を帰納法で決めて n を絞る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N4
+  source: IMO Shortlist
+  year: 2021
+  number: N4
+  field: N
+  gist: 2 つの玉を有理数の倍で動かす一人遊びで、決まった手数以内で目標に届く比を全部求める
+  units:
+  - N-045
+  missing: []
+  key: 距離が比の整数係数の多項式になり、動かす玉を交互にしてよいとして、有理根の分母と分子の割り切りで比を絞る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N5
+  source: IMO Shortlist
+  year: 2021
+  number: N5
+  field: N
+  gist: 階乗が 3 つの同じ指数のべきの和になる組が有限個しかないことを示す
+  units:
+  - N-034
+  - A-025
+  - N-032
+  missing: []
+  key: 相加相乗平均で底を上から抑え、偶奇と 4 を法とする議論とルジャンドルの公式で 2 の指数を比べて矛盾させる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N6
+  source: IMO Shortlist
+  year: 2021
+  number: N6
+  field: N
+  gist: 和が n で割れない n 個の整数を、位置との積の和が n で割れるように並べられる n を全部求める
+  units:
+  - N-032
+  - N-029
+  - L-012
+  missing: []
+  key: 反例で他の n を除き、並べ方を巡回させると積の和が和の倍ずつ変わることと 1 次合同式の解で補題を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N7
+  source: IMO Shortlist
+  year: 2021
+  number: N7
+  field: N
+  gist: ずれた 3 項の割り切りの条件をもつ正の整数列が、いずれ周期的になることを示す
+  units:
+  - N-017
+  - L-015
+  missing: []
+  key: 割り切りの補題で数列が有界であることを背理法で示し、有界な列の値の組が繰り返すことから周期性を導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2021-N8
+  source: IMO Shortlist
+  year: 2021
+  number: N8
+  field: N
+  gist: 整数係数の多項式の反復で、剰余の種類の数が決まった形になる n を全部求める
+  units:
+  - N-045
+  - N-036
+  - A-036
+  missing: []
+  key: 2 の冪と素数で例を作り、それ以外は素因数ごとの反復の様子を中国剰余定理で組み合わせて矛盾させる
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2021/IMO2021SL.pdf
+- id: ISL-2022-A1
+  source: IMO Shortlist
+  year: 2022
+  number: A1
+  field: A
+  gist: 正の数の列が 3 項の不等式を満たすとき、決まった番号の項が 1 以下であることを示す
+  units:
+  - A-015
+  - L-011
+  missing: []
+  key: 不等式を因数分解した形に直し、1 より大きい項が 2 つ続くと矛盾することを示して、目的の項の前後で使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A2
+  source: IMO Shortlist
+  year: 2022
+  number: A2
+  field: A
+  gist: どの元も他の k 個の相異なる元の和になる実数の集合の最小の大きさを求める
+  units:
+  - L-018
+  missing: []
+  key: 最小と最大の元の表し方から和の不等式を立てて小さい場合を除き、k+4 個の例を作る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A3
+  source: IMO Shortlist
+  year: 2022
+  number: A3
+  field: A
+  gist: 正の実数上の関数で、各 x に対し 1 次の不等式を満たす y がただ 1 つあるものを全部求める
+  units:
+  - A-029
+  - A-025
+  - L-011
+  missing: []
+  key: よい組は x=y に限ることを示し、相加相乗平均で f(x)=1/x と比べて他の値が矛盾することを導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A4
+  source: IMO Shortlist
+  year: 2022
+  number: A4
+  field: A
+  gist: 区間 [0,1] の数で和が 3 以上のとき、2 の冪の重みを付けた 2 項の積がある値以上になる組があることを示す
+  units:
+  - L-014
+  - A-022
+  missing: []
+  key: 重み付きの積が最大になる組を選び、他の項がそこから等比的に小さくなることで和を等比級数で抑える
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A5
+  source: IMO Shortlist
+  year: 2022
+  number: A5
+  field: A
+  gist: n 個の実数の差がすべてある数の相異なる冪になる n を全部求める
+  units:
+  - L-018
+  - A-009
+  missing: []
+  key: 小さい n では方程式の根で例を作り、n≥5 では r^(n-1)<2 の補題と最大の差の分け方の数え上げで矛盾させる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A6
+  source: IMO Shortlist
+  year: 2022
+  number: A6
+  field: A
+  gist: ある加法的な条件を満たすどの関数にも f(z)=qz となる z がある有理数 q を全部求める
+  units:
+  - A-029
+  - L-012
+  - L-018
+  missing: []
+  key: f(kf(0)) の値を帰納法で求めて候補が入ることを示し、それ以外の q には条件を満たす関数の例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A7
+  source: IMO Shortlist
+  year: 2022
+  number: A7
+  field: A
+  gist: 係数が正の整数の多項式で、k と P(k) の桁の和の偶奇が常に一致することがあり得るかを問う
+  units:
+  - N-025
+  - L-018
+  missing: []
+  key: 各項の桁が重ならない大きな数を選び、P の値の桁の和を項ごとの桁の和の和にして偶奇を比べる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-A8
+  source: IMO Shortlist
+  year: 2022
+  number: A8
+  field: A
+  gist: 番号の和と値の合成の条件をもつ数列の個数が指数関数で上下から抑えられることを示す
+  units:
+  - A-024
+  - N-017
+  - C-005
+  - L-007
+  missing: []
+  key: 補題で数列を周期と始まりの位置で分類し、各型の個数を数えて和を評価する
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C1
+  source: IMO Shortlist
+  year: 2022
+  number: C1
+  field: C
+  gist: ±1 の列から間を 1 つ以上空けて選んだ項の和の、必ず届く最大の値を求める
+  units:
+  - L-019
+  - L-018
+  missing: []
+  key: 多い方の符号を全部取り、少ない方は飛ばせるときは飛ばす貪欲な選び方で下界を出し、ブロックの例で上界を示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C2
+  source: IMO Shortlist
+  year: 2022
+  number: C2
+  field: C
+  gist: 2 種類の硬貨の列で、k 番目を含む同種の塊を左端へ移す操作が必ず 2 塊になる組を全部求める
+  units:
+  - L-016
+  - L-018
+  missing: []
+  key: 塊の数が増えないことを使い、範囲外では 4 塊が回り続ける例を作り、範囲内では塊が必ず減ることを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C3
+  source: IMO Shortlist
+  year: 2022
+  number: C3
+  field: C
+  gist: 盤の木を 3×3 で伸ばす側と 4 本ずつ切る側のゲームで、高い木の数の保証できる最大を求める
+  units:
+  - L-017
+  - C-017
+  - L-018
+  missing: []
+  key: 座標が 3 の倍数の行と列に色を塗って切る側の戦略を作り、伸ばす側は色のマスを均等に伸ばす戦略で数を保証する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C4
+  source: IMO Shortlist
+  year: 2022
+  number: C4
+  field: C
+  gist: 円に座る子どもが両隣に硬貨を渡す操作で、全員が 1 枚になれる初めの配り方を全部求める
+  units:
+  - L-016
+  - N-032
+  - L-018
+  missing: []
+  key: 位置を重みにした和の n を法とする値が操作で変わらないことで必要条件を出し、十分性は手順を作って示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C5
+  source: IMO Shortlist
+  year: 2022
+  number: C5
+  field: C
+  gist: 部分集合の和が唯一の最大をとる関数の数が n^n 以上であることを示す
+  units:
+  - C-019
+  - L-014
+  missing: []
+  key: 和が最大の部分集合の元だけ 1 増やす写像を作り、それがよい関数になることと単射であることを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C6
+  source: IMO Shortlist
+  year: 2022
+  number: C6
+  field: C
+  gist: 1 個ずつの n 山から、2 山から同じ数を取り新しい山を作る操作で、最少の山の数を求める
+  units:
+  - L-016
+  - L-018
+  missing: []
+  key: 2 の冪なら倍々にまとめ、そうでなければ奇数の約数で全部の山が割れる状態が操作の逆向きに保たれることを使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C7
+  source: IMO Shortlist
+  year: 2022
+  number: C7
+  field: C
+  gist: 整数の組の和と成分ごとの最大で全部の組を作れる、最初に書く組の最小の数を求める
+  units:
+  - L-018
+  - L-016
+  - A-020
+  missing: []
+  key: 2 次式の成分をもつ 3 つの組から単位の組を作る例を示し、2 つでは保たれる比の不等式で作れない組があると示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C8
+  source: IMO Shortlist
+  year: 2022
+  number: C8
+  field: C
+  gist: 盤に 1 から n^2 を入れたとき、増加する「よい道」の数の最小値を求める
+  units:
+  - C-009
+  - C-022
+  - L-018
+  missing: []
+  key: 各マスで終わる道の数を隣の小さいマスの値の和として表し、隣り合う組の数で下から抑え、極小のマスの配置で例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-C9
+  source: IMO Shortlist
+  year: 2022
+  number: C9
+  field: C
+  gist: 単調性の条件をもつ 2 変数の全単射で、範囲の中の奇数の値の個数の最小と最大を求める
+  units:
+  - C-019
+  - L-016
+  - L-018
+  missing: []
+  key: 条件を満たす全単射を「針」と傾きで特徴づけ、その形から奇数の個数の上下の評価を出し、例を作る
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G1
+  source: IMO Shortlist
+  year: 2022
+  number: G1
+  field: G
+  gist: 辺と距離の条件をもつ五角形で、交点の 4 点が同じ円にのることを示す
+  units:
+  - G-030
+  missing: []
+  key: 合同な 2 つの三角形から相似な三角形を作り、比の等式を方べきの形にして共円を示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G2
+  source: IMO Shortlist
+  year: 2022
+  number: G2
+  field: G
+  gist: 鋭角三角形の高さの上の点から作る 2 つの円上の点と 2 頂点が同じ円にのることを示す
+  units:
+  - G-032
+  missing: []
+  key: 2 つの直線の交点が頂点の折り返しになることを示し、その点が 2 円の根軸にのることを比の計算で確かめる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G3
+  source: IMO Shortlist
+  year: 2022
+  number: G3
+  field: G
+  gist: 内接四角形の外の共線の点と中点で、2 本の接線と辺が 1 点で交わることを示す
+  units:
+  - G-020
+  - G-023
+  missing: []
+  key: 接線の条件で 2 つの三角形の相似を出し、中点の対応から角を移して接線を同じ円の上で特定する
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G4
+  source: IMO Shortlist
+  year: 2022
+  number: G4
+  field: G
+  gist: 外心と垂線の交点の距離の条件から、ある直線が円に接することを示す
+  units:
+  - G-023
+  - G-028
+  missing: []
+  key: 距離の条件を直角三角形の外心と読み替えて共円を出し、外接円上の点を折り返しで平行の位置に定めて接線の角を確かめる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G5
+  source: IMO Shortlist
+  year: 2022
+  number: G5
+  field: G
+  gist: 三角形の辺と 2 本の平行線の交点での垂線が作る 2 つの三角形の外接円が接することを示す
+  units:
+  - G-031
+  missing: []
+  key: 対応する三角形が頂点を中心に相似拡大の関係にあることを示し、2 つの三角形の相似の中心が外接円の上にあることを方向角で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G6
+  source: IMO Shortlist
+  year: 2022
+  number: G6
+  field: G
+  gist: 角の二等分線の交点が高さの上にある動く点で、ある直線が定点を通ることを示す
+  units:
+  - G-037
+  - G-031
+  - G-033
+  missing: []
+  key: 辺の折り返しの交点を定点の候補とし、接する円の相似の中心と完全四角形の調和点列で共線を示す
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G7
+  source: IMO Shortlist
+  year: 2022
+  number: G7
+  field: G
+  gist: 外接円と垂心が同じ 2 つの三角形で、垂心と 2 つの円の中心が一直線にのることを示す
+  units:
+  - G-037
+  - G-028
+  missing: []
+  key: 重心を中心とする相似拡大で中点の円を作り、ブロカールの定理の自己極三角形を使って 3 円が同じ根軸をもつことを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-G8
+  source: IMO Shortlist
+  year: 2022
+  number: G8
+  field: G
+  gist: 内接六角形で 2 つの内接円の条件があるとき、交点で作る四角形に内接円があることを示す
+  units:
+  - G-033
+  - G-032
+  missing: []
+  key: 弧の中点と内心の関係から 4 点の共円を出し、2 つの円の根軸に内心がのることで角の二等分線の交点を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N1
+  source: IMO Shortlist
+  year: 2022
+  number: N1
+  field: N
+  gist: 3 つの相異なる約数の和が決まった値になる最小の数を求める
+  units:
+  - N-043
+  missing: []
+  key: 約数を N/a, N/b, N/c と書き、逆数の和と N の大きさで場合を絞って小さい候補を除く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N2
+  source: IMO Shortlist
+  year: 2022
+  number: N2
+  field: N
+  gist: n! が素数の組の和の積を割るような n を全部求める
+  units:
+  - N-030
+  - N-043
+  missing: []
+  key: n 以下の最大の素数がどれかの和を割るので 2 つの素数の和に等しく、双子の素数の連鎖を 3 で割った余りで止める
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N3
+  source: IMO Shortlist
+  year: 2022
+  number: N3
+  field: N
+  gist: 割れるときは割り、割れないときは足す数列で、a の何乗まで割れる項が現れるかの最大を求める
+  units:
+  - N-032
+  - N-029
+  - L-012
+  missing: []
+  key: 項の大きさを帰納法で抑えて上界を出し、a の逆元の冪と合同な項を順に追って a^n に届くことを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N4
+  source: IMO Shortlist
+  year: 2022
+  number: N4
+  field: N
+  gist: 素数乗が階乗と素数の和になる組を全部求める
+  units:
+  - N-043
+  - N-039
+  missing: []
+  key: 底と素数の大小で 3 つに分け、大きさの比較と p の指数で 2 つを除き、底が p のときは 2 の指数を比べる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N5
+  source: IMO Shortlist
+  year: 2022
+  number: N5
+  field: N
+  gist: ある数の倍数を書き並べたときの各数字の出現数が、ちょうど 2 種類の値になる区切りが無限にあることを示す
+  units:
+  - N-033
+  - N-025
+  - L-016
+  missing: []
+  key: 10^k≡1 となる k を取ると倍数の集合が桁の巡回で保たれ、各数字の出現数がほぼ等しくなることを使う
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N6
+  source: IMO Shortlist
+  year: 2022
+  number: N6
+  field: N
+  gist: 素因数の指数の和の偶奇の条件で定めた特別な数が、範囲の一定の割合以上あることを示す
+  units:
+  - N-021
+  - L-018
+  missing: []
+  key: 差がどの 2 元も割る 5 元の集合を作り、偶奇の 4 種類に鳩の巣原理を使って特別な数を見つけ、重なりを数える
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N7
+  source: IMO Shortlist
+  year: 2022
+  number: N7
+  field: N
+  gist: 奇素数を円に並べ隣どうしの積が決まった 2 次式の値になる並べ方が、たかだか 1 通りであることを示す
+  units:
+  - N-032
+  - A-026
+  - L-012
+  - L-014
+  missing: []
+  key: 素数を法とする 2 次合同式の解は 2 つまでなので相手は 2 つまで、解と係数の関係でその 2 つも組になり、最大の素数から帰納法で並びを決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2022-N8
+  source: IMO Shortlist
+  year: 2022
+  number: N8
+  field: N
+  gist: 3 の冪と 5 の冪の差が、2 の冪に 65 を足した数で割れないことを示す
+  units:
+  - L-015
+  - N-038
+  missing: []
+  key: 鳩の巣原理で小さい係数の 2 次形式の倍数を作り、最小の倍数の大きさと平方剰余の議論で矛盾させる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2022/IMO2022SL.pdf
+- id: ISL-2023-A1
+  source: IMO Shortlist
+  year: 2023
+  number: A1
+  field: A
+  gist: 容量の合計が 100 の器に整数の量の餌を配り、器との差の合計を必ず抑えられる最小の値を求める
+  units:
+  - N-023
+  - L-019
+  - A-025
+  missing: []
+  key: まず整数部分を配り、残りを小数部分の大きい順に足し、差の合計を R(100-R) の形にして相加相乗で抑える
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A2
+  source: IMO Shortlist
+  year: 2023
+  number: A2
+  field: A
+  gist: 実数上の関数が和と差の積の不等式を満たし、どこかで等号でないとき、符号が一定であることを示す
+  units:
+  - A-029
+  missing: []
+  key: 変数を和と差に置きかえ、符号を変えた不等式と足して f(s)(f(t)+f(-t)) が 0 以上と導く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A3
+  source: IMO Shortlist
+  year: 2023
+  number: A3
+  field: A
+  gist: 相異なる正の数の和と逆数の和の積の平方根がすべて整数のとき、最後の値の下界を示す
+  units:
+  - A-027
+  missing: []
+  key: 値の列は増加する整数列で、2 回続けて 1 しか増えないとコーシー・シュワルツと相加相乗の等号条件に反すると示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A4
+  source: IMO Shortlist
+  year: 2023
+  number: A4
+  field: A
+  gist: 正の実数上の関数で、合成を含む 2 変数の不等式を満たすものを全部求める
+  units:
+  - A-029
+  - A-018
+  - L-011
+  missing: []
+  key: 代入で反復の差の不等式を作り、望遠鏡の和で y ≥ m(y - f^2(y)) を得て f^2 を恒等写像にし、形を決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A5
+  source: IMO Shortlist
+  year: 2023
+  number: A5
+  field: A
+  gist: 順列で隣の差もすべて異なる順列になるとき、両端の大きい方の下界を示す
+  units:
+  - A-018
+  - A-013
+  missing: []
+  key: 中央からの距離を各数の点数とし、三角不等式で差の和を点数の和で抑えて両端の点数の和を評価する
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A6
+  source: IMO Shortlist
+  year: 2023
+  number: A6
+  field: A
+  gist: 単項の多項式に数列の項を入れた値が、続く k 項の積になる正の整数列を全部求める
+  units:
+  - A-026
+  - L-014
+  - N-043
+  missing: []
+  key: 多項式の単調性で数列が増加することを示し、隣り合う差が有界でいずれ一定になることを大きさの比較で導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-A7
+  source: IMO Shortlist
+  year: 2023
+  number: A7
+  field: A
+  gist: 1 から N の 3 つの順列で、各位置の平方根の和がほぼ一定にできることを示す
+  units:
+  - A-016
+  - L-018
+  - L-012
+  missing: []
+  key: 平方根を最も近い整数に丸めた値の多重集合を、3 つの和が一定になるように組み合わせる構成を作る
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C1
+  source: IMO Shortlist
+  year: 2023
+  number: C1
+  field: C
+  gist: 2×2 の中の 3 枚を裏返す操作で、全部の硬貨を表にできる盤の大きさを全部求める
+  units:
+  - C-017
+  - L-016
+  - N-028
+  missing: []
+  key: 3 で割れるときは操作の組み合わせで作り、そうでないときは 3 を法とする座標の塗り分けで変わらない量を作って不可能を示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C2
+  source: IMO Shortlist
+  year: 2023
+  number: C2
+  field: C
+  gist: 上限のある正の整数の列で、連続する部分に符号を付けた和が 0 にならないものの最大の長さを求める
+  units:
+  - N-021
+  - L-018
+  missing: []
+  key: 2 の指数で決めた列で例を作り、上界は部分和が狭い範囲に入るように符号を選んで鳩の巣原理で同じ値の部分和を見つける
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C3
+  source: IMO Shortlist
+  year: 2023
+  number: C3
+  field: C
+  gist: 三角形に並べた円の各行の 1 つを赤くしたとき、下へ進む道で必ず通れる赤の最大数を求める
+  units:
+  - C-009
+  - L-018
+  - L-012
+  missing: []
+  key: 各円にそこまでの道の赤の最大数を書き、行ごとの和の増え方を評価して最大値が 1+log2 n 以上と示し、2 の冪で例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C4
+  source: IMO Shortlist
+  year: 2023
+  number: C4
+  field: C
+  gist: 番号付きの細長い帯を切って並べ、剰余の条件をもつ正方形にするのに要る最少の切れ端の数を求める
+  units:
+  - C-022
+  - N-032
+  missing: []
+  key: 切れ端を辺とするグラフを作るとオイラー回路があり連結になることから、辺の数が 2n-1 以上と示し、例を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C5
+  source: IMO Shortlist
+  year: 2023
+  number: C5
+  field: C
+  gist: 宝箱に宝石を 1 つずつ入れ、相手が箱を閉じる遊びで、箱の間の個数の差を一定以内に保てることを示す
+  units:
+  - L-017
+  - L-016
+  - L-012
+  missing:
+  - 数列の優越（majorization）
+  key: いつも最も少ない開いた箱に入れる戦略を取り、個数の列が決まった列に優越されることを帰納法で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C6
+  source: IMO Shortlist
+  year: 2023
+  number: C6
+  field: C
+  gist: 正方形の格子を右下か右上へ進む道に分けるには、少なくとも N 本要ることを示す
+  units:
+  - C-017
+  - C-023
+  - L-018
+  missing: []
+  key: 道の分け方を「よい平行四辺形」の詰め込みに言い換え、マスの対角線を鏡とみて光線を追うことで空く面積が N 以上と示す
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-C7
+  source: IMO Shortlist
+  year: 2023
+  number: C7
+  field: C
+  gist: 完全グラフの辺を k 社で塗り、どの 1 社を除いてもハミルトン路がないようにできる最大の k を求める
+  units:
+  - C-024
+  - L-018
+  missing: []
+  key: 頂点を 2 の冪の区切りで色分けした塗り方で例を作り、上界は頂点の数についての帰納法で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G1
+  source: IMO Shortlist
+  year: 2023
+  number: G1
+  field: G
+  gist: 2 つの直角をもつ五角形で、外心と頂点を結ぶ直線が対角線の中点を通ることを示す
+  units:
+  - G-012
+  - G-028
+  missing: []
+  key: 外心が直角の頂点を結ぶ線の中点に来ることを使い、中点と平行線による等積変形で 2 つの三角形の面積が等しいことを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G2
+  source: IMO Shortlist
+  year: 2023
+  number: G2
+  field: G
+  gist: 外接円と垂線の足から作る 2 本の垂線の交点が外接円の上にあることを示す
+  units:
+  - G-020
+  - G-023
+  - G-004
+  missing: []
+  key: 2 つの二等辺三角形から問題の対称性を見つけ、折り返した点が円上にあることと相似な三角形で垂直を示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G3
+  source: IMO Shortlist
+  year: 2023
+  number: G3
+  field: G
+  gist: 内接四角形の内部の角の条件をもつ点と弧の中点を結ぶ直線が、2 辺の延長と 1 点で交わることを示す
+  units:
+  - G-023
+  missing: []
+  key: 角度で平行四辺形と内接四角形を作り、交点が目的の直線にのることを角の追跡で示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G4
+  source: IMO Shortlist
+  year: 2023
+  number: G4
+  field: G
+  gist: 弧の中点と垂線から作る円の接線と直線が、角の二等分線の上で交わることを示す
+  units:
+  - G-031
+  - G-033
+  missing: []
+  key: 2 つの三角形の対応する辺が平行であることを角度で示し、相似の中心として 3 直線の共点を導く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G5
+  source: IMO Shortlist
+  year: 2023
+  number: G5
+  field: G
+  gist: 垂線と外接円の交点から作る 2 つの円が、外心を通る直線の上に共通の点をもつことを示す
+  units:
+  - G-004
+  - G-023
+  - G-028
+  missing: []
+  key: 垂直二等分線について折り返すと一方の円が自分に移ることを使い、交点が BOC の円にのることを角度で示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G6
+  source: IMO Shortlist
+  year: 2023
+  number: G6
+  field: G
+  gist: 内側で接する円と三角形の辺の交点から作る点で、2 つの角が等しいことを示す
+  units:
+  - G-029
+  - G-031
+  - G-033
+  missing: []
+  key: メネラウスの定理と接点を中心とする相似拡大で交点が角の二等分線上にあることを示し、相似な三角形で角を移す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G7
+  source: IMO Shortlist
+  year: 2023
+  number: G7
+  field: G
+  gist: 垂心について頂点を折り返した点で作る三角形の垂心と外心が、元の垂心と一直線にのることを示す
+  units:
+  - G-031
+  missing: []
+  key: 折り返した点の三角形が元の三角形と同じ向きか裏返しに相似であることを方向角で示し、相似の対応で中心の位置を決める
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-G8
+  source: IMO Shortlist
+  year: 2023
+  number: G8
+  field: G
+  gist: 正三角形の内部の点と角の和の条件から作る 3 つの円が、2 点を共有することを示す
+  units:
+  - G-032
+  - G-028
+  - G-023
+  missing: []
+  key: 角の和の条件から各点が外心になることを示し、3 円に対して方べきが等しい 2 点を見つける
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N1
+  source: IMO Shortlist
+  year: 2023
+  number: N1
+  field: N
+  gist: 約数を小さい順に並べ、どの約数も次の 2 つの和を割る合成数を全部求める
+  units:
+  - N-021
+  - L-007
+  missing: []
+  key: 2 種類の素因数があると仮定し、小さい方と大きい方の両端の約数の並びを比べて割り切りが崩れることを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N2
+  source: IMO Shortlist
+  year: 2023
+  number: N2
+  field: N
+  gist: 素数の a 乗に a の 4 乗を足して平方数になる組を全部求める
+  units:
+  - N-021
+  - N-043
+  missing: []
+  key: 平方の差に因数分解して両因子が p の冪になることを使い、p=2 と奇素数に分けて大きさと剰余で絞る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N3
+  source: IMO Shortlist
+  year: 2023
+  number: N3
+  field: N
+  gist: 階乗を割る 10 の冪と 9 の冪の指数の大小が、どちらの向きにも無限に起こることを示す
+  units:
+  - N-034
+  - N-028
+  missing: []
+  key: ルジャンドルの公式で 2 つの指数を書き、5 の冪や 3 の冪に近い n を選んで剰余から整数部分を計算する
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N4
+  source: IMO Shortlist
+  year: 2023
+  number: N4
+  field: N
+  gist: 2 つの数列の積を 1 つずつ入れ替えた積が増加する等差数列になるとき、公差の最小値を求める
+  units:
+  - N-018
+  - L-012
+  missing: []
+  key: 公差の等式を隣り合う比の式に直し、最大公約数で割った部分が順に割り切ることから公差が n! の倍数と示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N5
+  source: IMO Shortlist
+  year: 2023
+  number: N5
+  field: N
+  gist: 次の項が前までの和の 2 倍を割る増加列で、無限に多くの素数が現れるなら、どの数の倍数も現れることを示す
+  units:
+  - L-011
+  - N-043
+  missing: []
+  key: 商の列が 1 ずつ以下しか増えず有界でないことを示し、商の振る舞いから項の比を決めて倍数を作る
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N6
+  source: IMO Shortlist
+  year: 2023
+  number: N6
+  field: N
+  gist: 2 つの漸化式のどちらかで進む数列に現れる数で、連続する 2 数が現れれば 3 の倍数で 1/3 も現れることを示す
+  units:
+  - A-022
+  - N-032
+  missing: []
+  key: 2 と 3 を法とする剰余で数列の型を分け、型の一方から 1 を引いて 3 で割った列も条件を満たすことを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N7
+  source: IMO Shortlist
+  year: 2023
+  number: N7
+  field: N
+  gist: 4 つの正の整数の分数の等式が成り立つとき、和としてとり得る値を全部求める
+  units:
+  - N-021
+  - A-015
+  missing: []
+  key: 平方因子をもつ和は例を作り、和が平方因子をもたないと仮定して分母を払い、素因数が両方の和を割ることから矛盾させる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2023-N8
+  source: IMO Shortlist
+  year: 2023
+  number: N8
+  field: N
+  gist: 正の整数上の関数で、反復の回数が値で決まる等式を満たすものを全部求める
+  units:
+  - A-029
+  - L-011
+  missing: []
+  key: 反復の像が無限であることから単射を示し、段階を追って値の並びを決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2023/IMO2023SL.pdf
+- id: ISL-2024-A1
+  source: IMO Shortlist
+  year: 2024
+  number: A1
+  field: A
+  gist: 実数 α の倍数の整数部分を n 個足した和が、どの n でも n の倍数になる α を全部求める
+  units:
+  - N-023
+  - L-012
+  - N-028
+  missing: []
+  key: α を整数部分と小数部分に分け、整数部分の偶奇で場合を分け、n についての帰納法で小数部分の寄与が消えることを示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A2
+  source: IMO Shortlist
+  year: 2024
+  number: A2
+  field: A
+  gist: 和が n の非負整数で、2 の冪の重みを付けた平方和の最小値を求める
+  units:
+  - A-022
+  - L-019
+  missing: []
+  key: 無限の列に広げて最小値の漸化式を立て、先頭の値の選び方を比べて帰納法で値を出す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A3
+  source: IMO Shortlist
+  year: 2024
+  number: A3
+  field: A
+  gist: 正の数の列で、3 の冪の和を 2 の冪の和の平方で割った値が、いつか一定より小さくなるかを問う
+  units:
+  - A-009
+  - L-014
+  missing: []
+  key: 最大の項 M で各項を抑えて比を (3/4)^M 程度にし、項が有界なときは n を大きく取って比を小さくする
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A4
+  source: IMO Shortlist
+  year: 2024
+  number: A4
+  field: A
+  gist: 正の整数上の関数で、和の値と値の和の差が作る 2 の冪の集合としてあり得るものを全部求める
+  units:
+  - A-029
+  - N-023
+  - L-012
+  missing: []
+  key: 1 次関数と整数部分の関数で大きさ 1 と 2 の例を作り、差の指数の多重集合の包含を帰納法で示して 3 つ以上を除く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A5
+  source: IMO Shortlist
+  year: 2024
+  number: A5
+  field: A
+  gist: ずれた番号の 4 項の等式と隣の差の条件を満たす周期的な実数列を全部求める
+  units:
+  - A-018
+  - A-025
+  missing: []
+  key: 等式を隣り合う 2 項の和の積の形に直し、1 周期の積が 1 になることと相加相乗の等号条件で差が一定と導く
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A6
+  source: IMO Shortlist
+  year: 2024
+  number: A6
+  field: A
+  gist: 各項が両隣の相加平均か相乗平均になる増加する整数列で、平均の種類の並びがいずれ周期的になることを示す
+  units:
+  - A-022
+  - N-018
+  missing: []
+  key: 隣り合う項の比を互いに素な数の分数で表し、相加平均のたびに比の番号が 1 進むことから並びを決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A7
+  source: IMO Shortlist
+  year: 2024
+  number: A7
+  field: A
+  gist: 有理数上の関数が 2 つの等式のどちらかを満たすとき、f(x)+f(-x) の値の種類の最大数を求める
+  units:
+  - A-029
+  - N-023
+  - L-011
+  missing: []
+  key: 整数部分と小数部分を使った関数で 2 種類の例を作り、x と x+f(x) の関係を追って 3 種類以上を除く
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-A8
+  source: IMO Shortlist
+  year: 2024
+  number: A8
+  field: A
+  gist: 長さの違う 2 種類の区間で最大と最小の差が決まった値になる正の整数列を全部求める
+  units:
+  - L-014
+  - L-012
+  missing: []
+  key: 区間の差の補題を三角不等式と帰納法で作り、最小と最大をとる位置を絞って 1 ずつ増える列に決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C1
+  source: IMO Shortlist
+  year: 2024
+  number: C1
+  field: C
+  gist: n 人が n 回走った順位から決まる点数の合計の最大値を求める
+  units:
+  - L-019
+  - L-018
+  missing: []
+  key: どの回も同じ順位になるように順位を入れ替えても合計が減らないことを示し、その場合の値を出す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C2
+  source: IMO Shortlist
+  year: 2024
+  number: C2
+  field: C
+  gist: 盤に数を入れ、各約数の大きさの区画の和がその約数で割れないようにできる偶数を全部求める
+  units:
+  - N-032
+  - L-012
+  missing: []
+  key: 2 の冪は 4 つの区画に分けて数を入れ替える帰納法で作り、奇数の約数をもつときは区画の和の剰余を帰納法で決めて矛盾させる
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C3
+  source: IMO Shortlist
+  year: 2024
+  number: C3
+  field: C
+  gist: 円卓の 2n 人が隣と席を替え、どの組の相手とも一度は隣り合うのに要る最少の交換の回数を求める
+  units:
+  - L-016
+  - L-018
+  - C-007
+  missing: []
+  key: 組を弦で結び、1 回の交換で交わる弦の組の数が 1 つしか変わらないことで下界を出し、手順で上界を示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C4
+  source: IMO Shortlist
+  year: 2024
+  number: C4
+  field: C
+  gist: 各行に 1 匹ずつ見えない怪物がいる盤を、何回の挑戦で必ず通り抜けられるかの最小を求める
+  units:
+  - L-017
+  - L-018
+  - L-007
+  missing: []
+  key: 2 回では怪物の置き方で必ず防げることを示し、3 回では 2 行目を調べてから怪物の位置で分ける道順を作る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C5
+  source: IMO Shortlist
+  year: 2024
+  number: C5
+  field: C
+  gist: 2 の冪で割った余りの類を消していくゲームで、先手が勝てる N を全部求める
+  units:
+  - L-017
+  - N-025
+  - C-019
+  missing: []
+  key: 集合を偶数と奇数に分けて半分にする対応で勝ち負けが保たれることを示し、2 進の形から N を分類する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C6
+  source: IMO Shortlist
+  year: 2024
+  number: C6
+  field: C
+  gist: 天秤にのせた 1 から 4n の重りを、差を T 以下に保ちながら全部反対側へ移せる最小の T を求める
+  units:
+  - L-018
+  - C-014
+  missing: []
+  key: 和が 4n+1 の組に分け、組どうしを入れ替える手順を作って差が 4n を超えないことを示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C7
+  source: IMO Shortlist
+  year: 2024
+  number: C7
+  field: C
+  gist: 各項が直前の項の出現回数になる数列で、奇数番目か偶数番目のどちらかがいずれ周期的になることを示す
+  units:
+  - L-014
+  - L-015
+  missing: []
+  key: 無限に現れる数が有限個であることを示し、大きい数と小さい数が交互に現れる後の並びを補題で決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-C8
+  source: IMO Shortlist
+  year: 2024
+  number: C8
+  field: C
+  gist: 2×2 の中で黒が 1 つのとき残りを黒く塗る操作で、盤全体を黒くできる n を全部求める
+  units:
+  - C-022
+  - C-017
+  missing: []
+  key: 2 の冪は帰納法で塗り、操作を X 字の図にして木になることを示し、座標の偶奇から半分の盤に帰着する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G1
+  source: IMO Shortlist
+  year: 2024
+  number: G1
+  field: G
+  gist: 内接四角形と平行線上の点で、2 つの垂直二等分線の交点が外接円の上にあることを示す
+  units:
+  - G-024
+  missing: []
+  key: 正弦定理で 2 点が辺から等距離と示して平行四辺形を作り、弧の中点が中心角の関係で 4 点の円の中心になると示す
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G2
+  source: IMO Shortlist
+  year: 2024
+  number: G2
+  field: G
+  gist: 内接円の接線と平行な線から作る 2 つの角の和が 180 度になることを示す
+  units:
+  - G-033
+  - G-004
+  missing: []
+  key: 頂点を内心について折り返した点から接線を引き、弧の中点が内心と頂点から等距離にあることを使って角を移す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G3
+  source: IMO Shortlist
+  year: 2024
+  number: G3
+  field: G
+  gist: 五角形の中点で接する円と 2 つの円から作る 3 直線が 1 点で交わることを示す
+  units:
+  - G-031
+  - G-032
+  missing: []
+  key: 角度で 2 組の平行を示し、交点の 4 点の共円と相似拡大か根軸で 3 直線を結ぶ
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G4
+  source: IMO Shortlist
+  year: 2024
+  number: G4
+  field: G
+  gist: 台形の延長の交点と 2 つの外接円上の点から作る直線が、底辺に平行であることを示す
+  units:
+  - G-023
+  - G-028
+  missing: []
+  key: 中点と外心からの垂線の足で内接四角形を作り、2 つの三角形の相似から交点の位置を決める
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G5
+  source: IMO Shortlist
+  year: 2024
+  number: G5
+  field: G
+  gist: 内心を通る円と角の二等分線の交点で、2 つの角が等しいことを示す
+  units:
+  - G-032
+  - G-033
+  missing: []
+  key: 方べきで点が別の円にのることを示し、3 つの円の共通弦と中心を結ぶ線の垂直から角の二等分線を特定する
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G6
+  source: IMO Shortlist
+  year: 2024
+  number: G6
+  field: G
+  gist: 外接円の接線で作る三角形の傍心と頂点を結ぶ直線が、角の二等分線になることを示す
+  units:
+  - G-033
+  missing: []
+  key: 弧の中点から引いた直線と辺の交点で 4 点の共円を示し、接線の長さが等しいことからその円の中心が傍心になると示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G7
+  source: IMO Shortlist
+  year: 2024
+  number: G7
+  field: G
+  gist: 内心と弧の中点から作る点で、ある円の中心が別の直線の上にあることを示す
+  units:
+  - G-031
+  - G-038
+  - G-033
+  missing: []
+  key: ミケル点の性質（回転相似と外接円についての反転で内心と対になること）を使って角を移し、中心の位置を示す
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-G8
+  source: IMO Shortlist
+  year: 2024
+  number: G8
+  field: G
+  gist: 4 つの内心が同じ円にのることと、3 直線が 1 点で交わることが同値であることを示す
+  units:
+  - G-033
+  - G-030
+  missing: []
+  key: 内心を通る 2 つの円と辺の交点で共線を示し、両方の条件を交点が角の二等分線にのることに言い換える
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N1
+  source: IMO Shortlist
+  year: 2024
+  number: N1
+  field: N
+  gist: どの約数 d も d+1 が n を割るか素数になる n を全部求める
+  units:
+  - N-030
+  - N-028
+  missing: []
+  key: n を 2 の冪と奇数の積に分け、m+1 と 2^k+1 と 2^(k-1)+1 を調べて 3 で割った余りで絞る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N2
+  source: IMO Shortlist
+  year: 2024
+  number: N2
+  field: N
+  gist: どの 2 元にも 1 次の割り切りを満たす元がある正の整数の有限集合を全部求める
+  units:
+  - N-028
+  - L-014
+  missing: []
+  key: 公約数で割って全部奇数にし、4 を法とする剰余と最大の元で場合を分けて元の数を絞る
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N3
+  source: IMO Shortlist
+  year: 2024
+  number: N3
+  field: N
+  gist: どの区間の相加平均と相乗平均も整数になる正の整数列を全部求める
+  units:
+  - N-021
+  - L-011
+  missing: []
+  key: 区間の平均が整数な列では差が番号の差で割れることを示し、各素数の指数の列にも使って定数に追い込む
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N4
+  source: IMO Shortlist
+  year: 2024
+  number: N4
+  field: N
+  gist: 2 つのべきの和の最大公約数が大きい n で一定になる組を全部求める
+  units:
+  - N-033
+  missing: []
+  key: 最大公約数が 2gcd(a,b) を割ることを示し、ab+1 を法としてオイラーの定理で n を選んで gcd を割らせる
+  basis: official-solution
+  confidence: 高
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N5
+  source: IMO Shortlist
+  year: 2024
+  number: N5
+  field: N
+  gist: 素因数が決まった素数だけの数の逆数の和で、分子を選んで切り上げの値にちょうど合わせられることを示す
+  units:
+  - N-021
+  - A-022
+  - L-018
+  missing: []
+  key: 逆数の総和をオイラー積の形で表し、小さい場合を例で処理して、分子を一つずつ調整する構成で一般の場合を作る
+  basis: official-solution
+  confidence: 低
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N6
+  source: IMO Shortlist
+  year: 2024
+  number: N6
+  field: N
+  gist: どの整数係数の多項式にも、ある 2 次式との積が n で割れないものがある n を全部求める
+  units:
+  - N-038
+  - N-045
+  missing: []
+  key: 約数で成り立てば n で成り立つことを使い、4 と奇素数に帰着して、平方非剰余を使った 2 次式で関数の値を避ける
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf
+- id: ISL-2024-N7
+  source: IMO Shortlist
+  year: 2024
+  number: N7
+  field: N
+  gist: 互いに素のときに限り成り立つ関数方程式で、f(n) としてあり得る値を全部求める
+  units:
+  - A-029
+  - N-021
+  - N-018
+  missing: []
+  key: 代入で 1 の値と単射に近い性質を出し、n と f(n) が共通の素因数をもつことから素因数の集合が一致すると示す
+  basis: official-solution
+  confidence: 中
+  url: https://www.imo-official.org/assets/documents/problems/2024/IMO2024SL.pdf

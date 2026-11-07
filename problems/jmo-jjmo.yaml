@@ -1,0 +1,5035 @@
+# 組み合わせの型の記録。問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。
+# 問題は url の公式の資料で読む（D-020）。
+- id: JMO-F-2026-1
+  source: 日本数学オリンピック本選
+  year: 2026
+  number: 1
+  field: G
+  gist: 外心と角の二等分線の足を結ぶ半直線上に、二辺と等しい二等辺三角形の頂点を同じ頂角でとったときの頂角を求める
+  units:
+  - G-031
+  - G-023
+  - G-028
+  missing: []
+  key: 頂角の等しい二等辺三角形どうしは A を中心とする回転相似で移り、外心の線上という条件を角に直す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36hq.pdf
+- id: JMO-F-2026-2
+  source: 日本数学オリンピック本選
+  year: 2026
+  number: 2
+  field: N
+  gist: 奇数の列で、次の項が直前の項より大きく 2 つ前の項と互いに素な最小の奇数になるとき、第 n 項と 2n の差が有界であることを示す
+  units:
+  - N-018
+  - L-016
+  - L-014
+  missing: []
+  key: 隣りあう奇数は互いに素なので差 2 が一度続けばその後もずっと続く。それまでの差の超過が有界であることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36hq.pdf
+- id: JMO-F-2026-3
+  source: 日本数学オリンピック本選
+  year: 2026
+  number: 3
+  field: C
+  gist: 正 m 角形の頂点から n 個ずつ赤と青を選び、同色 2 点の距離が赤と青で一度も一致しないときの m の最小値
+  units:
+  - L-018
+  - N-032
+  - C-023
+  missing:
+  - 差集合の大きさの評価（加法的組合せ論）
+  key: 距離を頂点の番号の差 mod m（符号を除く）に直し、赤と青の差の集合が交わらないことから m を下から評価し、構成で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36hq.pdf
+- id: JMO-F-2026-4
+  source: 日本数学オリンピック本選
+  year: 2026
+  number: 4
+  field: A
+  gist: f の中に f の 2 乗が入れ子になった関数方程式の解をすべて求める
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: 代入で f(0) と f の値域を調べ、単射性や偶奇を導いて f=0 と f(x)=x に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36hq.pdf
+- id: JMO-F-2026-5
+  source: 日本数学オリンピック本選
+  year: 2026
+  number: 5
+  field: G
+  gist: 空間で、各頂点からの距離と対辺の積が等しい点 P について、側面の三角形の内心を通る 3 円が平面と交わる点の三角形の形が一定であることを示す
+  units:
+  - G-021
+  - G-028
+  - G-030
+  - G-032
+  - G-044
+  - G-042
+  missing: []
+  key: 積の条件から各側面の頂角の二等分線の足が底面の三角形の二等分線の足と一致し、方べきで 3 円と平面の交点を底面だけの量で表す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36hq.pdf
+- id: JMO-F-2025-1
+  source: 日本数学オリンピック本選
+  year: 2025
+  number: 1
+  field: A
+  gist: 2n 個の実数で向かいあう項の差が 1 以上のとき、隣りあう差の 2 乗の巡回和の最小値
+  units:
+  - A-025
+  - L-007
+  missing:
+  - 離散的な中間値（符号が変わる隣どうし）
+  key: 向かいあう差 b_k の符号は半周で反転するので隣りあう k で符号が変わり、そこで 2 つの差の差が 2 以上になる。0 と 1 を半分ずつ並べて等号
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35hq.pdf
+- id: JMO-F-2025-2
+  source: 日本数学オリンピック本選
+  year: 2025
+  number: 2
+  field: G
+  gist: 鋭角三角形で外心と 2 頂点を通る円の中心を使った円が辺と交わる 2 点と外心を通る円の中心が、頂点と外心の直線上にあることを示す
+  units:
+  - G-028
+  - G-023
+  - G-030
+  missing: []
+  key: 中心が AO 上にあることを、O での接線が A での外接円の接線に平行であることに直し、接弦の角と方べきで追う
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35hq.pdf
+- id: JMO-F-2025-3
+  source: 日本数学オリンピック本選
+  year: 2025
+  number: 3
+  field: C
+  gist: 1〜100 の数列のどれにも連続 3 項として現れるような 3 つ組の集合の最小の大きさ
+  units:
+  - C-024
+  - L-018
+  - C-013
+  missing:
+  - ド・ブロイン・グラフ
+  - ネックレス（巡回同値類）の数え上げ
+  key: 3 つ組を 2 文字の状態間の辺とみると集合は全閉路を断つ辺集合。巡回シフトで閉じた閉路は互いに辺を共有しないので個数はネックレスの数以上で、構成で等号
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35hq.pdf
+- id: JMO-F-2025-4
+  source: 日本数学オリンピック本選
+  year: 2025
+  number: 4
+  field: N
+  gist: 2 以上のすべての n で f(n) が n の f(n) 乗引く 1 を割る整数係数多項式を求める
+  units:
+  - N-045
+  - N-037
+  - N-039
+  - N-033
+  missing: []
+  key: 素数 p が f(n) を割るとき n と n+p を比べ、位数が p-1 を割ることから f(n) の素因数を n-1 のものに限る。(x-1)^k は LTE で確かめる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35hq.pdf
+- id: JMO-F-2025-5
+  source: 日本数学オリンピック本選
+  year: 2025
+  number: 5
+  field: G
+  gist: 辺の比がアポロニウスの条件をみたす内部の 3 点を辺で折り返した 3 点が共円の条件をみたすとき、2 つの三角形が相似であることを示す
+  units:
+  - G-038
+  - G-032
+  - G-023
+  - G-044
+  missing: []
+  key: 比の条件の点は頂点を中心とする反転で扱える円の上にあり、共円条件を反転で角の等式に移して相似を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35hq.pdf
+- id: JMO-F-2024-1
+  source: 日本数学オリンピック本選
+  year: 2024
+  number: 1
+  field: A
+  gist: 巡回する各項から次の項の 2 倍を引いた列が元の列の並べ替えになる実数の組をすべて求める
+  units:
+  - L-009
+  - A-018
+  - A-025
+  missing: []
+  key: 並べ替えで和と 2 乗和は変わらない。和から総和 0、2 乗和から隣りあう積の和が 2 乗和に等しくなり、隣どうしの差の 2 乗和が 0 で全項 0
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34hq.pdf
+- id: JMO-F-2024-2
+  source: 日本数学オリンピック本選
+  year: 2024
+  number: 2
+  field: N
+  gist: 最小公倍数を含む等式をみたす正の整数上の関数をすべて求める
+  units:
+  - A-029
+  - N-018
+  - N-030
+  missing: []
+  key: 小さい値の代入で f(1) などを決め、素数 p を入れて lcm の素因数を比べ、f(n)=n に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34hq.pdf
+- id: JMO-F-2024-3
+  source: 日本数学オリンピック本選
+  year: 2024
+  number: 3
+  field: C
+  gist: 横線・斜め線・横線からなる Z 字の折れ線で正方形の格子点をすべて覆うときの本数の最小値
+  units:
+  - L-018
+  - C-017
+  - L-014
+  missing: []
+  key: 1 本が覆える行は 2 本の横線ぶん、残りの点は斜め線でしか覆えないことから、端の行や斜めの線の点の数を数えて下界、構成で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34hq.pdf
+- id: JMO-F-2024-4
+  source: 日本数学オリンピック本選
+  year: 2024
+  number: 4
+  field: G
+  gist: 弧の中点を使って 2 辺上にとった点を通る 2 円の交点 X について、2 点を結ぶ線分の垂直二等分線が A、O、X を通る円に接することを示す
+  units:
+  - G-031
+  - G-033
+  - G-028
+  - G-023
+  missing: []
+  key: X は B→D、E→C の回転相似の中心で、BD=BM=CM=CE から比が 1 の回転になる。回転の中心の性質と外心の角で接することを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34hq.pdf
+- id: JMO-F-2024-5
+  source: 日本数学オリンピック本選
+  year: 2024
+  number: 5
+  field: N
+  gist: 4 つの平方の和から 4√(abcd) を引いた値が 7 と 2 のべきの積にならないことを示す
+  units:
+  - N-031
+  - N-032
+  - L-014
+  - A-025
+  missing: []
+  key: 式を (a-b)^2+(c-d)^2+2(√ab-√cd)^2 と分け、8 を法とした平方の余りで偶奇を調べる。全部偶数なら 2 で割って降下し、最小の場合に矛盾
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34hq.pdf
+- id: JMO-F-2023-1
+  source: 日本数学オリンピック本選
+  year: 2023
+  number: 1
+  field: C
+  gist: 5×5 の盤に S 字型の 4 マスのタイルを各マスの重なりが 2 枚以下になるよう置くとき、覆われるマスの最大数
+  units:
+  - C-017
+  - L-018
+  - L-007
+  missing: []
+  key: 覆えないマスが必ず残ることを、角や辺のマスに重みをつけた数え上げで示し、具体的な置き方で最大を達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html
+- id: JMO-F-2023-2
+  source: 日本数学オリンピック本選
+  year: 2023
+  number: 2
+  field: G
+  gist: 中点三角形と中点から 2 辺への垂線の足を使った交点 P について、中線と EP が垂直であることを示す
+  units:
+  - G-023
+  - G-017
+  - G-020
+  missing: []
+  key: 中点から 2 辺へ垂線をおろした足と頂点で円ができる。中点連結の平行と円周角で角を移し、中線との角が 90° になることを追う
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html
+- id: JMO-F-2023-3
+  source: 日本数学オリンピック本選
+  year: 2023
+  number: 3
+  field: A
+  gist: 次の項に c を足した値以下の項の個数がちょうど第 n 項になる正の整数の数列をすべて求める
+  units:
+  - L-014
+  - L-012
+  - A-022
+  missing: []
+  key: 個数が有限なので数列は増えていく。最小の項や同じ値の項の個数に着目し、帰納法で各項を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html
+- id: JMO-F-2023-4
+  source: 日本数学オリンピック本選
+  year: 2023
+  number: 4
+  field: N
+  gist: オイラー関数と約数の個数を使った 2 つの割り算の条件をみたす n をすべて求める
+  units:
+  - N-033
+  - N-024
+  - N-037
+  - N-039
+  missing: []
+  key: n が φ(n)^d(n)+1 を割ることから n と φ(n) は互いに素で、素因数の形が強く制限される。候補ごとに d(n)^5 の条件を LTE で調べる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html
+- id: JMO-F-2023-5
+  source: 日本数学オリンピック本選
+  year: 2023
+  number: 5
+  field: C
+  gist: 1〜3000 の任意の全単射 f に対し全単射 g を選び、f と g の 2 回合成の 4 値の幅の和を X 以上にできる最大の X
+  units:
+  - A-024
+  - L-018
+  - L-014
+  missing: []
+  key: f が恒等写像のときの最良の g で上界を出し、一般の f には f の巡回構造に合わせた g の作り方で同じ値を達成する
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33hq.html
+- id: JMO-F-2022-1
+  source: 日本数学オリンピック本選
+  year: 2022
+  number: 1
+  field: C
+  gist: 交互に名前が書かれた一列のマスで、相手の名前を挟んで塗り替えるゲームで先手が確保できるマス数の最大
+  units:
+  - L-017
+  - L-016
+  - L-018
+  missing: []
+  key: 各手で塊がどう変わるかを単調量で追い、先手の戦略で下界、後手の戦略で上界を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html
+- id: JMO-F-2022-2
+  source: 日本数学オリンピック本選
+  year: 2022
+  number: 2
+  field: A
+  gist: f の f(n) 回合成を含む正の整数上の関数方程式を解く
+  units:
+  - A-029
+  - L-012
+  - A-024
+  missing: []
+  key: 小さい値を代入して f(1) を決め、帰納法で f(n)=n+1 を示す。単射性で合成の回数を扱う
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html
+- id: JMO-F-2022-3
+  source: 日本数学オリンピック本選
+  year: 2022
+  number: 3
+  field: G
+  gist: 二等辺三角形の内部の点を中心とする円と、別の 3 点を通る円の交点を使い、ある三角形の外心がその円上にあることを示す
+  units:
+  - G-023
+  - G-028
+  - G-018
+  missing: []
+  key: 二等辺と半径の等しさから等しい角を集め、外心の候補点を円上にとって角の一致で示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html
+- id: JMO-F-2022-4
+  source: 日本数学オリンピック本選
+  year: 2022
+  number: 4
+  field: N
+  gist: 3 のべきから 8 のべきを引いた差が 2xy+1 になる正の整数の組をすべて求める
+  units:
+  - N-032
+  - N-039
+  - N-043
+  missing: []
+  key: 小さい法で x と y の偶奇や余りを絞り、LTE で 2 や 3 の指数を比べ、大きさの評価で有限個に落とす
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html
+- id: JMO-F-2022-5
+  source: 日本数学オリンピック本選
+  year: 2022
+  number: 5
+  field: C
+  gist: 円周に並ぶ数で、各点から k 歩先の差が k になる性質が m 以下のすべての k で成り立つとき、等差に並ぶ点が必ずあるための最小の m
+  units:
+  - L-018
+  - L-014
+  - L-011
+  missing: []
+  key: どちら向きに差が k かを各点と各 k に割り当て、m が小さいと反例が作れる構成と、m 以上なら向きがそろう点が出る評価を合わせる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32hq.html
+- id: JMO-F-2021-1
+  source: 日本数学オリンピック本選
+  year: 2021
+  number: 1
+  field: N
+  gist: n が m を割ることと f(n) が f(m)-n を割ることが同値になる関数を求める
+  units:
+  - A-029
+  - N-017
+  - N-030
+  missing: []
+  key: m=n などを代入して f(n) と n の関係を作り、素数での値から f(n)=n を導く
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html
+- id: JMO-F-2021-2
+  source: 日本数学オリンピック本選
+  year: 2021
+  number: 2
+  field: C
+  gist: 白黒に塗った n 行の盤で駒を下へ動かすゲームで、どの出発点と目標でも必ず着ける最小の行数
+  units:
+  - L-017
+  - L-018
+  - L-012
+  missing: []
+  key: 1 行ごとに到達できる位置の範囲がどれだけ広がるかを評価し、塗り方の構成で行数を達成
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html
+- id: JMO-F-2021-3
+  source: 日本数学オリンピック本選
+  year: 2021
+  number: 3
+  field: G
+  gist: 2 辺上に等しい長さをとった点と外接円上の点の比の条件から、角の和の等式を示す
+  units:
+  - G-031
+  - G-023
+  - G-020
+  missing: []
+  key: BD=CE から弧の中点を中心とする回転が B→C、D→E を移す。比の条件で相似な三角形を作り、角を足し合わせる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html
+- id: JMO-F-2021-4
+  source: 日本数学オリンピック本選
+  year: 2021
+  number: 4
+  field: A
+  gist: 離れた 4 項の和の不等式をみたす整数列で、最大値と最小値の差の最小値
+  units:
+  - A-022
+  - L-014
+  - A-018
+  missing:
+  - 整数の差分の評価（階差が 1 以上増える）
+  key: 条件を 2 項おきの差が増えると読みかえ、整数なので 1 以上ずつ増えることから全体の幅を下から評価し、2 次式型の列で等号
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html
+- id: JMO-F-2021-5
+  source: 日本数学オリンピック本選
+  year: 2021
+  number: 5
+  field: C
+  gist: 2n×2n の盤で k マスを黒にしたとき、2 色を含む 2×2 の数の最小値が 2n-1 になる k をすべて求める
+  units:
+  - L-018
+  - C-017
+  missing:
+  - 離散の等周不等式（境界の数と面積の関係）
+  key: 2 色を含む 2×2 は黒と白の境界にあたる。境界が短いのは黒が角に寄るときで、各行と各列の様子から下界を出し、k ごとに構成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2021/jmo2021/problems/jmo31hq.html
+- id: JMO-F-2020-1
+  source: 日本数学オリンピック本選
+  year: 2020
+  number: 1
+  field: N
+  gist: (n^2+1)/(2m) と根号の中の 2 のべきを含む式がともに整数になる組をすべて求める
+  units:
+  - N-031
+  - N-043
+  - N-017
+  missing: []
+  key: n は奇数で 2 のべきは平方数。次の平方数との差から m が 2 のべきの平方根程度以上になり、m≦(n^2+1)/2 と比べて n を有限個に絞る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html
+- id: JMO-F-2020-2
+  source: 日本数学オリンピック本選
+  year: 2020
+  number: 2
+  field: G
+  gist: BD=CE=BC となる点から作った 2 円の交点 Q と、2 直線の交点 P を結ぶ線が BC に垂直であることを示す
+  units:
+  - G-031
+  - G-023
+  - G-017
+  missing: []
+  key: Q は BD→EC の回転相似の中心で BD=CE より比が 1 の回転。二等辺三角形の頂角の二等分線と回転の中心の性質を合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html
+- id: JMO-F-2020-3
+  source: 日本数学オリンピック本選
+  year: 2020
+  number: 3
+  field: A
+  gist: 2 乗の和の不等式をみたす正の整数上の関数をすべて求める
+  units:
+  - A-029
+  - A-020
+  missing: []
+  key: m=f(n) などを代入して不等式を両向きに使い、平方完成で f(n)=n に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html
+- id: JMO-F-2020-4
+  source: 日本数学オリンピック本選
+  year: 2020
+  number: 4
+  field: C
+  gist: 円周上の 3n 点で、線を引く人と駒を置く人が交互に動くとき、駒のある点とない点を結ぶ線を一定数以上にできることを示す
+  units:
+  - L-017
+  - C-022
+  - L-018
+  missing: []
+  key: 線を引く側の戦略を、駒を置く側の応答ごとに場合を分けて作り、異なる色を結ぶ辺の数を下から数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html
+- id: JMO-F-2020-5
+  source: 日本数学オリンピック本選
+  year: 2020
+  number: 5
+  field: N
+  gist: 添字と項を入れかえて足した 2 数の最大公約数が m+n の定数倍より大きい整数列をすべて求める
+  units:
+  - N-018
+  - N-030
+  - N-043
+  - A-029
+  missing: []
+  key: 大きな素数を最大公約数に入れる m、n を選び、a_n-n が一定であることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2020/jmo2020/problems/jmo30hq.html
+- id: JMO-F-2019-1
+  source: 日本数学オリンピック本選
+  year: 2019
+  number: 1
+  field: N
+  gist: a^2+b+3 が b^2-c^2 の 2 乗に等しくなる正の整数の組を求める
+  units:
+  - N-043
+  - N-031
+  - A-015
+  missing: []
+  key: 右辺は平方数で a^2 より大きいので次の平方数以上。b^2-c^2 の因数分解と大きさの評価で b、c を小さい範囲に絞る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html
+- id: JMO-F-2019-2
+  source: 日本数学オリンピック本選
+  year: 2019
+  number: 2
+  field: C
+  gist: 奇数 n の盤に 1〜n^2 を 1 つずつ書き、書いた行や列の和が n の倍数になるたびに点を得るときの総得点の最大
+  units:
+  - L-018
+  - N-028
+  - C-017
+  missing: []
+  key: 各行と各列で最後に書いたときにしか点にならないなどの数え上げで上界、余りを制御する書き順で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html
+- id: JMO-F-2019-3
+  source: 日本数学オリンピック本選
+  year: 2019
+  number: 3
+  field: A
+  gist: 正の実数上で f の比を含む関数方程式を解く
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: 変数をうまく選んで右辺の引数を固定し、単射性や単調性を導いて f(x)=x などに絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html
+- id: JMO-F-2019-4
+  source: 日本数学オリンピック本選
+  year: 2019
+  number: 4
+  field: G
+  gist: 内心と中点から作った点 K について、AK を直径とする円が内接円に接することを示す
+  units:
+  - G-033
+  - G-028
+  - G-032
+  missing: []
+  key: K の位置を内接円の接点や傍心と結びつけ、2 円の中心間の距離と半径の関係（または接点での根軸）で接することを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html
+- id: JMO-F-2019-5
+  source: 日本数学オリンピック本選
+  year: 2019
+  number: 5
+  field: N
+  gist: どの 3 元にも和を割る元がある集合で、ある数の倍数でない元の個数を一定以下にできる最小の上界を求める
+  units:
+  - N-017
+  - N-043
+  - L-014
+  missing: []
+  key: 大きい 3 元を見て和を割る元の候補を大きさで絞ると、ほとんどの元が同じ数の倍数になる。例で最小性を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2019/jmo2019/problems/jmo29mq.html
+- id: JMO-F-2018-1
+  source: 日本数学オリンピック本選
+  year: 2018
+  number: 1
+  field: N
+  gist: 2 数を ab の 2 乗+3 と 2 乗の和+2 の最大公約数に置きかえ続けたとき、最後の数が平方数でないことを示す
+  units:
+  - N-032
+  - N-018
+  - L-016
+  - N-038
+  missing: []
+  key: 新しい数の素因数が満たす余りの条件を不変量として保ち、最後の数が平方数になりえないことを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html
+- id: JMO-F-2018-2
+  source: 日本数学オリンピック本選
+  year: 2018
+  number: 2
+  field: G
+  gist: 2 辺上の点と、頂点を対辺で折り返した点から作った 2 交点を通る直線が円上で交わることを示す
+  units:
+  - G-032
+  - G-030
+  - G-023
+  missing: []
+  key: B と C はそれぞれ A、E と A、D を通る円の中心で、折り返した点 P はその 2 円の交点。方べきと根軸、円周角で交点が ω 上にあることを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html
+- id: JMO-F-2018-3
+  source: 日本数学オリンピック本選
+  year: 2018
+  number: 3
+  field: A
+  gist: n+f(n)+1 回と n·f(n) 回の合成がもとに戻る 999 元の写像に不動点があることを示す
+  units:
+  - A-024
+  - N-017
+  - L-005
+  missing:
+  - 置換の巡回分解
+  key: 各元の周期は 2 つの回数の公約数を割る。不動点がないと仮定して周期の偶奇と和を調べ、999 が奇数であることと矛盾させる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html
+- id: JMO-F-2018-4
+  source: 日本数学オリンピック本選
+  year: 2018
+  number: 4
+  field: C
+  gist: 平面の無限の盤に 1、2、3 を条件どおり書き、どの奇数辺の正方形でも総和が等しくすることができないことを示す
+  units:
+  - C-017
+  - L-009
+  - L-011
+  - L-005
+  missing: []
+  key: 正方形の和が等しいことから行や列の並びに周期性が生じる。隣接と 123 の並びの禁止とあわせて場合を絞り、矛盾を導く
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html
+- id: JMO-F-2018-5
+  source: 日本数学オリンピック本選
+  year: 2018
+  number: 5
+  field: A
+  gist: 各 n をちょうど n 回とり、斜めの平行移動で差が一定になる 2 変数関数と定数をすべて求める
+  units:
+  - A-029
+  - C-014
+  - L-014
+  missing: []
+  key: 差が一定の条件から f が斜めの方向に 1 次式になり、値 n をとる個数の条件と対応させて形を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jmo2018/problems/jmo28mq.html
+- id: JMO-F-2017-1
+  source: 日本数学オリンピック本選
+  year: 2017
+  number: 1
+  field: N
+  gist: a と b の最小公倍数と、a+c と b+c の最小公倍数が等しくならないことを示す
+  units:
+  - N-018
+  - N-030
+  - L-014
+  missing: []
+  key: 等しいと仮定し a+c を割る素数をとると a か b を割り、c も割ることになる。共通の素因数で割って降下し矛盾
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html
+- id: JMO-F-2017-2
+  source: 日本数学オリンピック本選
+  year: 2017
+  number: 2
+  field: N
+  gist: 2^n で割った余りが最小の項を 2 倍して次の項を決める数列が、いずれ一定になることを示す
+  units:
+  - N-025
+  - L-016
+  - N-028
+  missing: []
+  key: 項を 2 進法で見ると、2 倍で下の桁がずれるだけ。2^n での余りの最小値が単調に動くことを示し、有限の値しかとれないので止まる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html
+- id: JMO-F-2017-3
+  source: 日本数学オリンピック本選
+  year: 2017
+  number: 3
+  field: G
+  gist: 垂足三角形の辺と垂線の交点 X、外心の線と辺の交点 Y の中点が中線の上にあることを示す
+  units:
+  - G-028
+  - G-020
+  - G-033
+  - G-045
+  missing: []
+  key: AEF と ABC は逆相似で、垂線 AD と AO は角 A の二等分線について対称。対応する点が X と Y になり、相似比を使って中点が中線上にあることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html
+- id: JMO-F-2017-4
+  source: 日本数学オリンピック本選
+  year: 2017
+  number: 4
+  field: C
+  gist: n 人が n 日の集会でどの 2 人もちょうど 1 回握手したとき、すべての集会の人数が等しいことを示す
+  units:
+  - C-018
+  - L-014
+  - C-024
+  missing:
+  - ド・ブロイン＝エルデシュの定理（点と集会の数え上げ）
+  key: 人と集会の所属を二通りに数え、ある人が出る集会の数と集会の人数の不等式を足し合わせて等号条件から人数がそろうことを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html
+- id: JMO-F-2017-5
+  source: 日本数学オリンピック本選
+  year: 2017
+  number: 5
+  field: N
+  gist: 1000 個の整数の 1〜672 乗の和がすべて素数 2017 の倍数なら、全部が 2017 の倍数であることを示す
+  units:
+  - N-033
+  - A-031
+  - A-030
+  missing: []
+  key: 余りごとの個数で表し、2016=3·672 とフェルマーの小定理から、べき和の条件を多項式の係数の条件に直して、0 でない余りの個数が 0 であることを導く
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jmo2017/problems/jmo27mq.html
+- id: JMO-F-2016-1
+  source: 日本数学オリンピック本選
+  year: 2016
+  number: 1
+  field: N
+  gist: kp+1 の約数で k 以上 p 未満のものの個数を k について足した値を求める
+  units:
+  - C-018
+  - N-029
+  - N-032
+  missing: []
+  key: 和を組 (k,d) の個数と見て d ごとに数えなおす。d ごとに kp≡-1 (mod d) をみたす k は d 以下にちょうど 1 つ
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html
+- id: JMO-F-2016-2
+  source: 日本数学オリンピック本選
+  year: 2016
+  number: 2
+  field: G
+  gist: 比の条件をみたす円に内接する四角形で、2 つの角の二等分線と中点を結ぶ線の交点を結ぶ直線が対角線と平行であることを示す
+  units:
+  - G-020
+  - G-018
+  - G-029
+  - G-042
+  missing: []
+  key: 対辺の延長の交点で相似な三角形ができ、二等分線がその中点を結ぶ線を辺の比で分ける。比の条件から 2 つの比が等しくなり平行
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html
+- id: JMO-F-2016-3
+  source: 日本数学オリンピック本選
+  year: 2016
+  number: 3
+  field: C
+  gist: 2 のべきの硬貨をやりとりして毎日 1 円ずつ多く払い続けられるための硬貨の総数の最小
+  units:
+  - N-025
+  - L-016
+  - L-018
+  missing: []
+  key: 払える額を 2 進法の硬貨で表し、硬貨の配り方を不変量で追って下界、具体的な回し方で永続することを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html
+- id: JMO-F-2016-4
+  source: 日本数学オリンピック本選
+  year: 2016
+  number: 4
+  field: A
+  gist: f(yf(x)-x)=f(x)f(y)+2x をみたす実数関数を求める
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: x=0、y=0 などを代入して f(0) を決め、全射性や単射性を導いて f(x)=-2x などに絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html
+- id: JMO-F-2016-5
+  source: 日本数学オリンピック本選
+  year: 2016
+  number: 5
+  field: C
+  gist: 辺の少ないグラフで、頂点を 2 組に分けてどの頂点も相手の組へ出る辺が 1 本以下になる分け方があることを示す
+  units:
+  - C-022
+  - L-012
+  - L-014
+  missing: []
+  key: 辺数が 3(m-1)/2 未満から次数の小さい頂点があることを使い、頂点数についての帰納法で分け方を作る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2016/jmo2016/problems/jmo26mq.html
+- id: JMO-F-2015-1
+  source: 日本数学オリンピック本選
+  year: 2015
+  number: 1
+  field: N
+  gist: 10^n を n^3+n^2+n+1 で割り切る n をすべて求める
+  units:
+  - A-015
+  - N-021
+  - N-031
+  missing: []
+  key: (n+1)(n^2+1) と因数分解し、両方が 2 と 5 のべきの積。n^2+1 は 4 で割れないことと余りで候補を絞る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html
+- id: JMO-F-2015-2
+  source: 日本数学オリンピック本選
+  year: 2015
+  number: 2
+  field: C
+  gist: 正六角形の三角格子で各点から 4 方向に矢印があるとき、どんな矢印でも周に着ける手数の最小
+  units:
+  - L-018
+  - L-014
+  missing: []
+  key: 中心から周への距離の層を考え、どの層でも外へ進める向きが残ることで上界、矢印の構成で下界
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html
+- id: JMO-F-2015-3
+  source: 日本数学オリンピック本選
+  year: 2015
+  number: 3
+  field: N
+  gist: a_n<a_{n+1} と a_{2n}=2a_n をみたす列で、素数の倍数が現れる場合と現れない場合を示す
+  units:
+  - N-028
+  - L-015
+  - N-044
+  missing: []
+  key: a_{2^k} から a_{2^{k+1}} の間の項は増え幅が小さく連続した整数に近いので、p で割った余りがすべて現れる。p を避ける列は構成する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html
+- id: JMO-F-2015-4
+  source: 日本数学オリンピック本選
+  year: 2015
+  number: 4
+  field: G
+  gist: 内心と接点を通る円が外接円と交わる 2 点と 2 接点が共円であることを示す
+  units:
+  - G-031
+  - G-032
+  - G-033
+  - G-038
+  - G-030
+  missing: []
+  key: P、Q を回転相似の中心や内接円での反転でとらえ、方べきと根軸で 4 点が共円であることを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html
+- id: JMO-F-2015-5
+  source: 日本数学オリンピック本選
+  year: 2015
+  number: 5
+  field: C
+  gist: n マスを黒くしたとき、黒がちょうど a マスの a×a の枠の数の最大が a(n+1-a) であることを示す
+  units:
+  - L-018
+  - C-018
+  - L-014
+  missing: []
+  key: 1 列に並べる構成で達成。上界は各枠を左上の黒マスなどに対応させて数え、二通りの数え上げで評価
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2015/jmo2015/problems/jmo25mq.html
+- id: JMO-F-2014-1
+  source: 日本数学オリンピック本選
+  year: 2014
+  number: 1
+  field: G
+  gist: 中点を通り二等分線に垂直な直線が AO の中点を通るときの角 A を求める
+  units:
+  - G-028
+  - G-033
+  - G-023
+  missing: []
+  key: 二等分線は弧の中点 N を通り、ON は BC に垂直。中点連結と直角三角形で角を追い、角 A を求める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html
+- id: JMO-F-2014-2
+  source: 日本数学オリンピック本選
+  year: 2014
+  number: 2
+  field: N
+  gist: 2^a+3^b+1=6^c をみたす正の整数の組をすべて求める
+  units:
+  - N-032
+  - N-039
+  - N-028
+  missing: []
+  key: 小さい法（3、4、8、9 など）で a、b、c の偶奇や大小を絞り、指数を比べて残りを確かめる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html
+- id: JMO-F-2014-3
+  source: 日本数学オリンピック本選
+  year: 2014
+  number: 3
+  field: C
+  gist: 頂点数 n のグラフで、完全部分グラフへの分割数と独立集合への分割数の和の最大値を求める
+  units:
+  - C-024
+  - L-012
+  - L-018
+  missing:
+  - 彩色数（ノルドハウス＝ガドゥムの不等式）
+  key: 2 つの最小分割数はグラフと補グラフの彩色数。頂点を 1 つ除く帰納法で和が n+1 以下を示し、完全グラフで等号
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html
+- id: JMO-F-2014-4
+  source: 日本数学オリンピック本選
+  year: 2014
+  number: 4
+  field: G
+  gist: 辺を比の条件で分けた点から引いた平行線と接線の交点 2 つと、弦の 2 点が共円で、その円が BC に接することを示す
+  units:
+  - G-030
+  - G-020
+  - G-032
+  missing: []
+  key: 接線上の点と弦の交点に方べきを使い、比の条件から平行線の比を相似で出して共円を示す。接することは方べきの値で確かめる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html
+- id: JMO-F-2014-5
+  source: 日本数学オリンピック本選
+  year: 2014
+  number: 5
+  field: A
+  gist: 和が 1 の非負実数で、分母に k(b-c)^2 を含む分数の和が 1/2 以上になる最大の k
+  units:
+  - A-027
+  - A-032
+  - L-014
+  missing: []
+  key: 等号の場合（a=b=c、1 つが 0 で残りが等しい）から k≦4 を出し、コーシー・シュワルツ（エンゲル形）で k=4 の不等式を示す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2014/jmo2014/problems/jmo24mq.html
+- id: JMO-F-2013-1
+  source: 日本数学オリンピック本選
+  year: 2013
+  number: 1
+  field: C
+  gist: n 人の k 団体に団体ごとに異なる個数で減っていくようにお菓子を n^2 個ちょうど配れることを示す
+  units:
+  - L-012
+  - L-019
+  - N-044
+  missing: []
+  key: 団体の人数に応じて配る数を大きい団体から決め、帰納法や調整で総数をちょうど n^2 に合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html
+- id: JMO-F-2013-2
+  source: 日本数学オリンピック本選
+  year: 2013
+  number: 2
+  field: A
+  gist: f(m)+f(n)=f(mn)+f(m+n+mn) をみたす整数上の関数を求める
+  units:
+  - A-029
+  - N-028
+  missing: []
+  key: m+n+mn=(m+1)(n+1)-1 に注目し、小さい値の代入で f の値の関係を集めて、偶奇などで決まる形に絞る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html
+- id: JMO-F-2013-3
+  source: 日本数学オリンピック本選
+  year: 2013
+  number: 3
+  field: N
+  gist: 隣りあう 2 数の 2 乗の平均がすべて平方数になる増加列の末項の最小値
+  units:
+  - N-035
+  - N-040
+  - N-043
+  missing:
+  - ピタゴラス数の一般形
+  key: x^2+y^2=2z^2 の解をピタゴラス数で表し、隣りあう項の差の下限を出して和で末項を評価、構成で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html
+- id: JMO-F-2013-4
+  source: 日本数学オリンピック本選
+  year: 2013
+  number: 4
+  field: G
+  gist: BC を通る円と AH を直径とする円の 2 交点を結ぶ直線へ D からおろした垂線の足 K で、∠BKD=∠CKD を示す
+  units:
+  - G-032
+  - G-028
+  - G-030
+  missing:
+  - 調和点列
+  key: XY は根軸で、AD 上の決まった点を通る。その点と D、B、C の関係を方べきで調べ、調和の関係から KD が二等分線になる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html
+- id: JMO-F-2013-5
+  source: 日本数学オリンピック本選
+  year: 2013
+  number: 5
+  field: C
+  gist: 各点で 90° 曲がる 4n 点の閉じた折れ線で、交わる線分の組の数の最大
+  units:
+  - L-018
+  - C-023
+  - L-014
+  missing: []
+  key: 曲がり方が同じなので辺は縦と横に交互になり、平行な辺どうしは交わらない。縦と横の組の数え上げで上界、らせん状の構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jmo2013/problems/jmo23mq.html
+- id: JMO-F-2012-1
+  source: 日本数学オリンピック本選
+  year: 2012
+  number: 1
+  field: G
+  gist: A での接線と BC の交点を AB、AC で折り返した 2 点を結ぶ直線が BC に垂直であることを示す
+  units:
+  - G-018
+  - G-023
+  - G-016
+  missing: []
+  key: AQ=AP=AR で Q、R は A 中心の円上。接弦定理で ∠PAB などを角 C、B で表し、二等辺三角形の角を追って垂直を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html
+- id: JMO-F-2012-2
+  source: 日本数学オリンピック本選
+  year: 2012
+  number: 2
+  field: A
+  gist: f(f(x+y)f(x-y))=x^2-yf(y) をみたす実数関数を求める
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: x=y や x=-y を代入して f(0) や f の値域を決め、全射性から f(x)=x に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html
+- id: JMO-F-2012-3
+  source: 日本数学オリンピック本選
+  year: 2012
+  number: 3
+  field: N
+  gist: p で x^n-1 が割れれば必ず p^2 でも割れる n をすべて求める
+  units:
+  - N-033
+  - N-039
+  - C-016
+  missing: []
+  key: x=1+p で二項展開すると p が n を割ることが必要。逆に n=pm なら x^m≡1 (mod p) から二項展開（LTE）で p^2 まで割れる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html
+- id: JMO-F-2012-4
+  source: 日本数学オリンピック本選
+  year: 2012
+  number: 4
+  field: G
+  gist: 二等辺三角形の組から作った 2 円の交点 X、Y と P の外心が 2 円の中心の中点であることを示す
+  units:
+  - G-030
+  - G-032
+  - G-035
+  missing: []
+  key: PA=PB、PC=PD から P の 2 円に対する方べきが符号違いで等しい。中点を中心とする円の方べきとして書き、X、Y、P が同じ円上の点と示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html
+- id: JMO-F-2012-5
+  source: 日本数学オリンピック本選
+  year: 2012
+  number: 5
+  field: C
+  gist: 格子点に印をつける人と、右か上へ k 歩まで動く駒の人のゲームで、印をつける側が勝てる k
+  units:
+  - L-017
+  - L-018
+  missing: []
+  key: k が小さいと駒の行き先を先回りして囲める戦略を作り、k が大きいと逃げ切る戦略があることを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2012/jmo2012/problems/jmo22mq.html
+- id: JMO-F-2011-1
+  source: 日本数学オリンピック本選
+  year: 2011
+  number: 1
+  field: G
+  gist: 垂心から中線へおろした垂線の足 P について AM·PM=BM^2 を示す
+  units:
+  - G-028
+  - G-030
+  - G-033
+  missing: []
+  key: P は B、H、C を通る円（外接円を BC で折り返した円）の上にあり、M の方べきで MB^2=MP·MA を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html
+- id: JMO-F-2011-2
+  source: 日本数学オリンピック本選
+  year: 2011
+  number: 2
+  field: N
+  gist: a^n-1 が a^p-1、a^q-1、a^r-1 の積に等しくなる組をすべて求める
+  units:
+  - N-039
+  - N-032
+  - N-043
+  missing: []
+  key: a で割った余りや a-1 のべきの指数（LTE）を両辺で比べ、a と指数の大きさを絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html
+- id: JMO-F-2011-3
+  source: 日本数学オリンピック本選
+  year: 2011
+  number: 3
+  field: C
+  gist: 書き換えを指定する人と場所を選ぶ人のゲームで、選ぶ側が必ず数を左から小さい順にそろえられるか
+  units:
+  - L-017
+  - L-016
+  - L-012
+  missing: []
+  key: 選ぶ側の戦略として、指定された数の置き場所を決める規則を作り、並びの乱れを表す量が単調に減ることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html
+- id: JMO-F-2011-4
+  source: 日本数学オリンピック本選
+  year: 2011
+  number: 4
+  field: A
+  gist: f(f(x)-f(y))=f(f(x))-2x^2f(y)+f(y^2) をみたす実数関数を求める
+  units:
+  - A-029
+  missing: []
+  key: x=y=0 などの代入で f(0) を決め、x=y で f(f(x)) と f(x^2) の関係を出して f=0 と f(x)=x^2 に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html
+- id: JMO-F-2011-5
+  source: 日本数学オリンピック本選
+  year: 2011
+  number: 5
+  field: G
+  gist: 4 点のうち 3 点でできる 4 つの三角形の内接円の半径が等しいとき、すべて合同であることを示す
+  units:
+  - G-034
+  - G-028
+  - L-007
+  - L-011
+  missing: []
+  key: 4 点が凸か凹かで場合を分け、面積=内接円の半径×半周長を使って周の長さの関係を作り、等しい半径から辺の等しさを導く
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2011/jmo2011/problems/jmo21mq.html
+- id: JMO-F-2010-1
+  source: 日本数学オリンピック本選
+  year: 2010
+  number: 1
+  field: G
+  gist: B、C、P、Q が共円で HP=HQ のとき、垂線の足 H が三角形 APQ の外心であることを示す
+  units:
+  - G-033
+  - G-018
+  - G-028
+  - G-045
+  missing: []
+  key: PQ は BC と逆平行なので APQ の外心は垂線 AH 上にある。外心は PQ の垂直二等分線上にもあり、AB≠AC からその交点が H
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html
+- id: JMO-F-2010-2
+  source: 日本数学オリンピック本選
+  year: 2010
+  number: 2
+  field: N
+  gist: 奇数 m と k に対し n^n≡m (mod 2^k) となる n があることを示す
+  units:
+  - N-032
+  - L-012
+  - C-019
+  missing: []
+  key: 奇数 n について n→n^n が 2^k を法とした奇数の余りの上で全単射であることを k の帰納法で示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html
+- id: JMO-F-2010-3
+  source: 日本数学オリンピック本選
+  year: 2010
+  number: 3
+  field: C
+  gist: 木の頂点を隣接を保って写す写像に、不動点か隣りあう 2 点の入れかえがあることを示す
+  units:
+  - C-022
+  - C-024
+  - L-014
+  missing: []
+  key: 木では 2 点を結ぶ道が 1 本。各頂点から行き先への道の向きを考え、辺の向きが反転する辺か不動点を極端な点から見つける
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html
+- id: JMO-F-2010-4
+  source: 日本数学オリンピック本選
+  year: 2010
+  number: 4
+  field: A
+  gist: (1+xy+xz)/(1+y+z)^2 型の巡回和が 1 以上であることを示す
+  units:
+  - A-027
+  missing: []
+  key: コーシー・シュワルツで (1+y+z)^2≦(1+(y+z)/x)(1+xy+xz) とすると各項は x/(x+y+z) 以上になり、和が 1
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html
+- id: JMO-F-2010-5
+  source: 日本数学オリンピック本選
+  year: 2010
+  number: 5
+  field: C
+  gist: 凸 2010 角形の対角線だけで全頂点を 1 回ずつ通る閉じた折れ線の自己交差の最大数
+  units:
+  - L-018
+  - C-023
+  - L-014
+  missing: []
+  key: 各対角線が他と交わる回数の上限を数えて上界を出し、星形に近い構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2010/jmo2010/problems/jmo20mq.html
+- id: JMO-F-2009-1
+  source: 日本数学オリンピック本選
+  year: 2009
+  number: 1
+  field: N
+  gist: 8^n+n が 2^n+n で割り切れる n をすべて求める
+  units:
+  - A-015
+  - N-032
+  - N-043
+  missing: []
+  key: 2^n≡-n を使うと 8^n+n≡n-n^3 となり、2^n+n が n^3-n を割る。大きさで n を小さく絞り確かめる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html
+- id: JMO-F-2009-2
+  source: 日本数学オリンピック本選
+  year: 2009
+  number: 2
+  field: C
+  gist: 1〜N をすべて含み総和が偶数の数の集まりを、和の等しい 2 組に分けられることを示す
+  units:
+  - L-019
+  - L-012
+  - L-005
+  missing: []
+  key: 大きい数から順に和の小さいほうの組へ入れる貪欲法で、2 組の差がいつも N 以下に保たれることを示し、偶奇で差 0 にする
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html
+- id: JMO-F-2009-3
+  source: 日本数学オリンピック本選
+  year: 2009
+  number: 3
+  field: N
+  gist: k 進法で同じ数字が並ぶ数どうしの積が同じ形になるときの桁数の組を求める
+  units:
+  - N-025
+  - N-043
+  - A-015
+  missing: []
+  key: b_i は k 進法で数字 a_i が n_i+1 個並ぶ数。積の繰り上がりと桁数を比べ、片方が 1 桁などの場合に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html
+- id: JMO-F-2009-4
+  source: 日本数学オリンピック本選
+  year: 2009
+  number: 4
+  field: G
+  gist: BC と外接円の弧に接する円の中心が角 A の二等分線上にあるとき、2 つの接点への角が等しいことを示す
+  units:
+  - G-031
+  - G-033
+  - G-030
+  missing: []
+  key: 接点 Q を中心とする相似拡大で小円が外接円に移り、P は弧の中点 M へ移るので Q、P、M は共線。MP·MQ=MB^2 などで角を移す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html
+- id: JMO-F-2009-5
+  source: 日本数学オリンピック本選
+  year: 2009
+  number: 5
+  field: A
+  gist: 非負実数上で f(x^2)+f(y)=f(x^2+y+xf(4y)) をみたす関数を求める
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: x=0 や y=0 の代入で f(0) を決め、f の値が 0 になる点の集合と単調性を調べて解を絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jmo2009/problems/jmo19mq.html
+- id: JMO-F-2008-1
+  source: 日本数学オリンピック本選
+  year: 2008
+  number: 1
+  field: N
+  gist: P(n^2)=0 となる整数係数多項式では、0 でない有理数 a で P(a^2)=1 とならないことを示す
+  units:
+  - N-045
+  - A-026
+  - A-015
+  missing: []
+  key: P(x)=(x-n^2)Q(x) とし、a=p/q で分母を払うと p^2-n^2q^2 が q のべきを割り、互いに素なので ±1。因数分解で矛盾
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html
+- id: JMO-F-2008-2
+  source: 日本数学オリンピック本選
+  year: 2008
+  number: 2
+  field: C
+  gist: 赤と白のカードを左隣へ渡す操作で、全員が 1 枚ずつになるまでのターン数の最大値
+  units:
+  - L-016
+  - L-018
+  - L-014
+  missing: []
+  key: 赤の固まりがどう動くかを追い、ある量が毎ターン減ることで上界、最も遅い配り方の構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html
+- id: JMO-F-2008-3
+  source: 日本数学オリンピック本選
+  year: 2008
+  number: 3
+  field: G
+  gist: A と外心 O を通る円が 2 辺と交わる 2 点の距離が BC に等しいとき、2 直線のなす角を求める
+  units:
+  - G-031
+  - G-023
+  - G-028
+  missing: []
+  key: O を中心とする回転相似で 2 点を B、C に結びつけ、PQ=BC から回転の角を求めて直線のなす角を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html
+- id: JMO-F-2008-4
+  source: 日本数学オリンピック本選
+  year: 2008
+  number: 4
+  field: A
+  gist: f(x+y)f(f(x)-y)=xf(x)-yf(y) をみたす実数関数を求める
+  units:
+  - A-029
+  missing: []
+  key: y=x や y=f(x) などの代入で f(0) と f の零点を調べ、f=0 と f(x)=x に絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html
+- id: JMO-F-2008-5
+  source: 日本数学オリンピック本選
+  year: 2008
+  number: 5
+  field: N
+  gist: どの有理数も整数と n 個の単位分数（分母は 0 でない整数）の和で書ける n があるかを問う
+  units:
+  - N-044
+  - N-029
+  - N-019
+  missing: []
+  key: 分母 q と互いに素な関係から 1 次不定方程式で分子を分け、一定個数の単位分数の和で任意の p/q を表す構成を作る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2008/jmo2008/problems/jmo18mq.html
+- id: JMO-F-2007-1
+  source: 日本数学オリンピック本選
+  year: 2007
+  number: 1
+  field: C
+  gist: 1〜n を交互に言い、先手の言った数の和が 3 の倍数かで勝負が決まるゲームで先手必勝の n
+  units:
+  - L-017
+  - N-028
+  - L-005
+  missing: []
+  key: 数を 3 で割った余りで分類し、残りの個数の偶奇から後手のまねる戦略や先手の戦略を作る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html
+- id: JMO-F-2007-2
+  source: 日本数学オリンピック本選
+  year: 2007
+  number: 2
+  field: A
+  gist: 和に関する 2 つの不等式をみたす正の実数上の関数を求める
+  units:
+  - A-029
+  - A-013
+  missing: []
+  key: 2 つの不等式を組み合わせて f(x) を上と下から挟み、f=0 などに絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html
+- id: JMO-F-2007-3
+  source: 日本数学オリンピック本選
+  year: 2007
+  number: 3
+  field: G
+  gist: 外接円に内接し 2 辺に接する 3 つの円の接点と頂点を結ぶ 3 直線が 1 点で交わることを示す
+  units:
+  - G-029
+  - G-031
+  - G-033
+  - G-045
+  missing:
+  - 混線内接円（2 辺と外接円に接する円）
+  key: 各接点への直線は、頂点と傍接円の接点を結ぶ線と二等分線について対称。後者はナーゲル点で交わるので、等角共役（またはチェバの三角比形）で共点を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html
+- id: JMO-F-2007-4
+  source: 日本数学オリンピック本選
+  year: 2007
+  number: 4
+  field: G
+  gist: どの 3 点も幅 1 の帯に入る 4 点が、幅 √2 の帯に入ることを示す
+  units:
+  - G-034
+  - L-007
+  - L-014
+  missing: []
+  key: 4 点が凸か否かで分け、最も長い辺や最大の三角形に注目して、高さの評価で幅 √2 の帯を作る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html
+- id: JMO-F-2007-5
+  source: 日本数学オリンピック本選
+  year: 2007
+  number: 5
+  field: N
+  gist: ガウス記号の倍数列の包含から比が整数になる無理数 α をすべて求める
+  units:
+  - N-023
+  - L-011
+  - N-043
+  missing:
+  - ビーティの定理（補い合うガウス記号の列）
+  key: ⌊nα⌋ の列の隙間の大きさで β との関係を調べ、包含が成り立つのに比が整数でない β を作れるかで α の範囲を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2007/jmo2007/problems/jmo17mq.html
+- id: JMO-F-2006-1
+  source: 日本数学オリンピック本選
+  year: 2006
+  number: 1
+  field: G
+  gist: 弧の中点と円上の点から作った 2 交点を通る直線が円と交わる 2 点まで、中点からの距離が等しいことを示す
+  units:
+  - G-018
+  - G-023
+  - G-017
+  missing: []
+  key: MA=MB から弧が等しく、C、D、P、Q が共円。円周角で PQ が AB と平行になり、弧の中点からの距離が等しい
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html
+- id: JMO-F-2006-2
+  source: 日本数学オリンピック本選
+  year: 2006
+  number: 2
+  field: N
+  gist: (a^2-k)(b^2-k)=c^2-k に整数解が無限にある整数 k をすべて求める
+  units:
+  - A-015
+  - N-044
+  missing: []
+  key: b=a+1、c=a^2+a-k とおくと恒等式になることを展開で確かめ、すべての k で無限個の解がある
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html
+- id: JMO-F-2006-3
+  source: 日本数学オリンピック本選
+  year: 2006
+  number: 3
+  field: A
+  gist: f(x)^2+2yf(x)+f(y)=f(y+f(x)) をみたす実数関数を求める
+  units:
+  - A-029
+  - A-020
+  missing: []
+  key: y=-f(x) などを代入し、f(y+f(x))-f(y) の形から平方完成で f(x)=x^2+c 型に絞り、f=0 も確かめる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html
+- id: JMO-F-2006-4
+  source: 日本数学オリンピック本選
+  year: 2006
+  number: 4
+  field: C
+  gist: 碁盤の目の町で全交差点を 1 回ずつ通って指定の 2 点を結べる条件をすべて求める
+  units:
+  - C-017
+  - L-005
+  - L-012
+  missing: []
+  key: 市松模様の塗り分けで始点と終点の色の条件（偶奇）を出し、条件をみたす場合は帰納的に道を構成する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html
+- id: JMO-F-2006-5
+  source: 日本数学オリンピック本選
+  year: 2006
+  number: 5
+  field: A
+  gist: 3 乗の和に 1 を足した 3 つの式の積と、3 つの和の積の比の最小値を求める
+  units:
+  - A-033
+  - A-025
+  missing: []
+  key: ヘルダーの不等式で 3 つの因子をまとめ、残りを相加相乗平均で評価。等号の条件から最大の A を決める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2006/jmo2006/problems/jmo16mq.html
+- id: JMO-F-2005-1
+  source: 日本数学オリンピック本選
+  year: 2005
+  number: 1
+  field: C
+  gist: 17×17 の硬貨を縦・横・斜めに連続 5 枚ずつ裏返して全部裏にできるかを問う
+  units:
+  - L-016
+  - C-017
+  - L-005
+  missing: []
+  key: どの 5 枚の並びとも偶数個で交わるマスの集合を選び、その集合の表の数の偶奇が不変であることで不可能を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html
+- id: JMO-F-2005-2
+  source: 日本数学オリンピック本選
+  year: 2005
+  number: 2
+  field: N
+  gist: 整数係数の 2 変数多項式でくり返し写す周期的な点列で、隣りあう 2 点を結ぶ線分上の格子点の数が一定であることを示す
+  units:
+  - N-045
+  - N-018
+  - L-016
+  missing: []
+  key: 線分上の格子点の数は座標の差の最大公約数+1。a-b が P(a)-P(b) を割る性質から最大公約数が次の線分で割り切られ、周期で戻るので一定
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html
+- id: JMO-F-2005-3
+  source: 日本数学オリンピック本選
+  year: 2005
+  number: 3
+  field: A
+  gist: 和が 1 の正の数で、立方根を含む巡回和が 1 以下であることを示す
+  units:
+  - A-025
+  missing: []
+  key: ∛(1+b-c)=∛((1+b-c)·1·1) を相加相乗平均で (3+b-c)/3 以下にし、和をとると巡回の項が消えて 1
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html
+- id: JMO-F-2005-4
+  source: 日本数学オリンピック本選
+  year: 2005
+  number: 4
+  field: G
+  gist: 接線の交点を通る直線と円の交点で直交する 2 直線から作った 4 点が共円であることを示す
+  units:
+  - G-023
+  - G-018
+  - G-030
+  missing:
+  - 調和四角形（AB:AC=DB:DC の円に内接する四角形）
+  key: ACBD は調和四角形になる。接弦定理と円周角で角を移し、垂直二等分線上の点 H の角の条件から 4 点が共円
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html
+- id: JMO-F-2005-5
+  source: 日本数学オリンピック本選
+  year: 2005
+  number: 5
+  field: C
+  gist: 熱意と能力が決まった 10 人と 10 の仕事で、誰も不満を抱かず社長にも怒られない割り当てがあることを示す
+  units:
+  - L-014
+  - L-019
+  - C-024
+  - L-016
+  missing:
+  - 安定な割り当て（ゲール＝シャプレーの手続き）
+  key: 能力の面で改善できない割り当ての中から、不満を減らす交換をくり返す。ある量が単調に増えるので止まり、そこが答になる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2005/jmo2005/problems/jmo15mq.html
+- id: JMO-F-2004-1
+  source: 日本数学オリンピック本選
+  year: 2004
+  number: 1
+  field: N
+  gist: 2n^2+1、3n^2+1、6n^2+1 がすべて平方数にはならないことを示す
+  units:
+  - N-043
+  - N-031
+  missing: []
+  key: (2n^2+1)(3n^2+1)=(n·z)^2+4n^2+1（z^2=6n^2+1）と書け、連続する平方数のあいだに入るので平方数でない
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html
+- id: JMO-F-2004-2
+  source: 日本数学オリンピック本選
+  year: 2004
+  number: 2
+  field: A
+  gist: f(xf(x)+f(y))=f(x)^2+y をみたす実数関数を求める
+  units:
+  - A-029
+  - A-024
+  missing: []
+  key: y を動かすと右辺はすべての実数をとるので全射、y の比較で単射。f(0)=0 と f(f(y))=y を出して f(x)=x と f(x)=-x
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html
+- id: JMO-F-2004-3
+  source: 日本数学オリンピック本選
+  year: 2004
+  number: 3
+  field: G
+  gist: 直交する 2 平面にまたがる配置で、二等分線を含む任意の平面が円と交わる 2 点への角を二等分することを示す
+  units:
+  - G-021
+  - G-019
+  - G-020
+  - G-044
+  - G-042
+  missing: []
+  key: 角の二等分線の定理で CA:CB=PA:PB。円 S 上の点 D への距離 CD を三平方で表し、CD:PD が一定（アポロニウス球）であることから二等分を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html
+- id: JMO-F-2004-4
+  source: 日本数学オリンピック本選
+  year: 2004
+  number: 4
+  field: A
+  gist: 和が 1 の正の実数で、(1+a)/(1-a) の和が b/a 型の巡回和の 2 倍以下であることを示す
+  units:
+  - A-025
+  - A-027
+  - A-032
+  missing: []
+  key: (1+a)/(1-a)=1+2a/(b+c) と直し、2a/(b+c)≦(a/b+a/c)/2 などの相加相乗平均で巡回和に結びつける
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html
+- id: JMO-F-2004-5
+  source: 日本数学オリンピック本選
+  year: 2004
+  number: 5
+  field: C
+  gist: どの町も 3 本の道で結ばれた島でハミルトン閉路が 1 つあれば別のものもあることを示す
+  units:
+  - C-024
+  - L-005
+  - C-022
+  missing:
+  - ハミルトン閉路
+  - スミスの定理（立方グラフで 1 辺を通るハミルトン閉路の数は偶数）
+  key: ハミルトン路の端を付けかえる操作で路どうしを結ぶグラフを作り、次数の偶奇から路の数が偶数になることで別の閉路を得る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2004/jmo2004/problems/jmo14mq.html
+- id: JMO-F-2003-1
+  source: 日本数学オリンピック本選
+  year: 2003
+  number: 1
+  field: G
+  gist: AR=RB=CP かつ CQ=PQ をみたす内部の点から ∠BRC を求める
+  units:
+  - G-017
+  - G-023
+  - G-029
+  missing: []
+  key: 等しい長さから二等辺三角形を見つけ、平行四辺形を作る補助線や比の関係で角を追い、角の大きさを決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html
+- id: JMO-F-2003-2
+  source: 日本数学オリンピック本選
+  year: 2003
+  number: 2
+  field: N
+  gist: 2n 桁の数の上下 n 桁を入れかえた数が元の数の倍数になる組をすべて求める
+  units:
+  - N-017
+  - N-018
+  - N-043
+  missing: []
+  key: a=X·10^n+Y、b=Y·10^n+X とおき b=ka（k≦9）から (10^n-k)Y=(k·10^n-1)X。最大公約数と桁の制約で解を決める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html
+- id: JMO-F-2003-3
+  source: 日本数学オリンピック本選
+  year: 2003
+  number: 3
+  field: A
+  gist: a^2>bc のとき (a^2-bc)^2 が (b^2-ca)(c^2-ab) の k 倍より大きくなる最大の k
+  units:
+  - A-020
+  - A-013
+  - L-014
+  missing: []
+  key: 3 つの式の関係を 1 つの文字の 2 次式とみて判別式や平方完成で評価し、等号に近づく例で最大値を決める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html
+- id: JMO-F-2003-4
+  source: 日本数学オリンピック本選
+  year: 2003
+  number: 4
+  field: N
+  gist: 絶対値 2 以上の項による連分数展開の重みの総和が分母 q に等しいことを示す
+  units:
+  - L-012
+  - N-029
+  - C-009
+  missing:
+  - 連分数
+  key: 最初の項 r の選び方で展開を分け、残りの分数の展開に帰着させて分母についての帰納法で重みの和の漸化式を示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html
+- id: JMO-F-2003-5
+  source: 日本数学オリンピック本選
+  year: 2003
+  number: 5
+  field: C
+  gist: 赤の三角形には青、青には黄、黄には赤の点が入るように 3 色で塗れる点の個数の最大
+  units:
+  - C-023
+  - L-018
+  - C-018
+  missing:
+  - 三角形分割の個数（内部の点と凸包の頂点で決まる）
+  key: ある色の点の三角形分割の三角形はそれぞれ次の色の点を含むので、色ごとの個数の不等式が回って上界が出る。配置の構成で達成
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2003/jmo2003/problems/jmo13mq.html
+- id: JMO-F-2002-1
+  source: 日本数学オリンピック本選
+  year: 2002
+  number: 1
+  field: G
+  gist: 弧に内接し弦に接する円の接点と弧の中点の距離の積が一定であることを示す
+  units:
+  - G-031
+  - G-030
+  - G-018
+  missing: []
+  key: 接点 P を中心とする相似拡大で小円が大円に移り、Q は弧の中点 M へ。P、Q、M は共線で、三角形の相似から MP·MQ=MA^2
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html
+- id: JMO-F-2002-2
+  source: 日本数学オリンピック本選
+  year: 2002
+  number: 2
+  field: C
+  gist: 円周上の硬貨を両隣と合わせた表の数の偶奇で裏返す操作で、全部裏になるかとその回数
+  units:
+  - L-016
+  - L-005
+  - N-028
+  missing:
+  - mod 2 の線形な操作（多項式による表示）
+  key: 操作を 2 を法とした足し算で表し、n が奇数のとき全裏に戻れない不変量を見つける。可能な n では状態の周期を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html
+- id: JMO-F-2002-3
+  source: 日本数学オリンピック本選
+  year: 2002
+  number: 3
+  field: N
+  gist: n+S(n) が同じ値になる相異なる自然数を 2002 個作れることを示す
+  units:
+  - N-044
+  - N-028
+  - N-025
+  - L-012
+  missing: []
+  key: n+S(n) の値は繰り上がりで調整できる。9 の倍数の差と桁の 9 の並びを使って、同じ値をとる数を帰納的に増やす
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html
+- id: JMO-F-2002-4
+  source: 日本数学オリンピック本選
+  year: 2002
+  number: 4
+  field: A
+  gist: 和が 1 の正の数と 2 乗和が 1 の正の数で、ある巡回和が 1 未満であることを示す
+  units:
+  - A-027
+  - A-025
+  missing: []
+  key: Σa_ib_i をコーシー・シュワルツで √(Σa_i^2) 以下、Σa_ia_{i+1} を (1-Σa_i^2)/2 以下にし、合わせて 1-(1-√Σa^2)^2/2<1
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html
+- id: JMO-F-2002-5
+  source: 日本数学オリンピック本選
+  year: 2002
+  number: 5
+  field: C
+  gist: 座標がすべて異なる 2002 点で、2 点を対角とする長方形の内部の点の数がいつも N 以上になる組がある最大の N
+  units:
+  - L-018
+  - L-015
+  - L-014
+  missing: []
+  key: 鳩の巣原理で点の多い領域を作り下界、点を格子状にずらして並べる構成で上界
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2002/jmo2002/problems/jmo12mq.html
+- id: JMO-F-2001-1
+  source: 日本数学オリンピック本選
+  year: 2001
+  number: 1
+  field: C
+  gist: どの黒マスも隣の黒マスが奇数個なら黒マスの総数が偶数であることを示す
+  units:
+  - C-022
+  - L-005
+  missing: []
+  key: 黒マスを頂点、隣接を辺とするグラフで次数の和は辺の数の 2 倍で偶数。奇数の次数が偶数個しかないので黒マスは偶数個
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html
+- id: JMO-F-2001-2
+  source: 日本数学オリンピック本選
+  year: 2001
+  number: 2
+  field: N
+  gist: 各桁に 1 を足した積が元の数に等しくなる自然数をすべて求める
+  units:
+  - N-043
+  - A-015
+  missing: []
+  key: 最上位の桁で数は a·10^{m-1} 以上、積は (a+1)·10^{m-1} 以下などと大きさを比べて 2 桁に絞り、2 桁で式を解いて 18
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html
+- id: JMO-F-2001-3
+  source: 日本数学オリンピック本選
+  year: 2001
+  number: 3
+  field: A
+  gist: 三角形的な条件をみたす非負実数で、1 次・2 次・3 次の和の積が 6 次の和の 4 倍以上であることを示す
+  units:
+  - A-032
+  - A-027
+  - L-014
+  missing: []
+  key: 対称性から大小を仮定し、条件で最大の文字を残りで抑えて差を因数分解、または置きかえて等号（直角二等辺型）に着目して示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html
+- id: JMO-F-2001-4
+  source: 日本数学オリンピック本選
+  year: 2001
+  number: 4
+  field: N
+  gist: 任意の素数のべきで 0 が m 個以上続く部分をもつものがあることを示す
+  units:
+  - N-033
+  - N-032
+  - L-007
+  missing: []
+  key: p が 10 と互いに素ならオイラーの定理で p^k≡1 (mod 10^M) となり、下の桁に 0 が並ぶ。p=2、5 は別に扱う
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html
+- id: JMO-F-2001-5
+  source: 日本数学オリンピック本選
+  year: 2001
+  number: 5
+  field: G
+  gist: 中点と二等分線の条件が入れ子になった 2 つの三角形で、2 辺の和が等しいことを示す
+  units:
+  - G-017
+  - G-016
+  - G-020
+  missing: []
+  key: 中点を対称の中心とする点対称や二等分線での折り返しで辺を一直線に並べ、合同な三角形を作って和を比べる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2001/jmo2001/problems/jmo11mq.html
+- id: JJMO-F-2026-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2026
+  number: 1
+  field: C
+  gist: 左から右へ 0 か 1 ずつ増える行を何本も並べ、どの 2 行も一致する列と異なる列を両方もつときの行数の最大値
+  units:
+  - C-014
+  - C-005
+  missing: []
+  key: 行は増える位置の集合と出発の値で決まり、同じ集合の 2 行は平行移動の関係なので両条件を同時にはみたせない。集合への単射で上界、全行を同じ値から始めて等号
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24hq.pdf
+- id: JJMO-F-2026-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2026
+  number: 2
+  field: G
+  gist: 角の二等分線の垂直二等分線が 2 辺と交わる点を使い、角を折り返した線で 2 辺上にとった 2 点と残りの 2 頂点が共円であることを示す
+  units:
+  - G-017
+  - G-020
+  - G-030
+  missing: []
+  key: A と二等分線の足を垂直二等分線で折り返すとひし形ができる。折り返しで角の条件を辺の比に直し、AX·AB=AY·AC を示して方べきの逆
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24hq.pdf
+- id: JJMO-F-2026-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2026
+  number: 3
+  field: N
+  gist: 約数をすべて 1 回ずつ並べて隣りあう 2 つの和がいつも 2 べきになる n を求める
+  units:
+  - L-005
+  - N-024
+  - N-028
+  - N-043
+  missing: []
+  key: 1 が約数なので偶奇から全約数が奇数で n は奇数。最大の約数 n と組む約数の和の大きさと 2 べきの間隔を比べて候補を絞る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24hq.pdf
+- id: JJMO-F-2026-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2026
+  number: 4
+  field: A
+  gist: 巡回する隣りあう 2 数の和の積が総積の 3 のべき倍のとき、最大と最小の比の最小値
+  units:
+  - A-025
+  - L-014
+  - A-017
+  missing: []
+  key: 各因子を t+1/t の形に直すと積の幾何平均が 3 なので、ある因子は 3 以上。その隣りあう 2 数の比が t^2 以上になり、2 値を交互に置いて等号
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24hq.pdf
+- id: JJMO-F-2026-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2026
+  number: 5
+  field: C
+  gist: カードを順にマスへ置くとき、何枚目の直後に左から何番目が何かという条件を何個与えれば置き方が 1 通りに決まるかの最小値
+  units:
+  - C-006
+  - C-014
+  - L-018
+  missing: []
+  key: 置き方を各カードの挿入位置の列とみて、条件 1 個が決める挿入の情報を評価して下界、時刻をうまく選んだ条件で構成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24hq.pdf
+- id: JJMO-F-2025-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2025
+  number: 1
+  field: C
+  gist: 正方形の格子点に印をつけ、同じ行か列の印どうしを線分で結んで印のない点をすべて覆うときの印の個数の最小値
+  units:
+  - L-018
+  - L-014
+  - L-012
+  missing: []
+  key: 端の点は端の点としてしか覆えないことから角などが必ず印になる。2 本の対角線に印をつける構成で上界、外周から 1 周ずつはがす帰納で下界
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23hq.pdf
+- id: JJMO-F-2025-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2025
+  number: 2
+  field: A
+  gist: 奇数角形の頂点に実数を置き隣どうしの和か積が 1 になるとき、現れうる実数をすべて求める
+  units:
+  - A-024
+  - L-005
+  missing:
+  - 写像の合成のなす群（x→1-x と x→1/x が生む 6 つの変換）
+  key: 1 歩ごとの変換は x→1-x か x→1/x。奇数回の合成は 3 つの対合のどれかになるので r はその不動点（-1、0、1/2、1、2）に限られ、各値で構成
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23hq.pdf
+- id: JJMO-F-2025-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2025
+  number: 3
+  field: G
+  gist: 平行四辺形の対角線上の点を通る 2 円が辺と交わる点を、別の辺で折り返した点との距離が等しいことを示す
+  units:
+  - G-023
+  - G-030
+  - G-016
+  missing: []
+  key: 円周角と方べきで頂点 C から 2 点への距離や角の関係を出し、折り返しで保たれる長さを使って 2 つの三角形の合同に持ち込む
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23hq.pdf
+- id: JJMO-F-2025-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2025
+  number: 4
+  field: N
+  gist: 前半の積と後半の積の和がどの切れ目でも奇素数 p のべきになるとき、ほとんどの項が 1 であることを示す
+  units:
+  - N-030
+  - N-018
+  - N-043
+  missing: []
+  key: 各切れ目で 2 つの積の積は全体の積で一定、和は p のべき。p が積を割らないことと隣りあう切れ目の和の比較から、大きい項が 3 個以下に限られる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23hq.pdf
+- id: JJMO-F-2025-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2025
+  number: 5
+  field: C
+  gist: 巡回する n 枚の紙に m 個ずつ実数が書かれ、隣の紙の数以下になる組の総数が m^2 以上であることを示す
+  units:
+  - C-018
+  - L-014
+  - L-018
+  missing: []
+  key: 隣りあう 2 枚の (s≦t) の組の数を順位で表し、最大の数を含む紙から 1 周たどって不等式を足し合わせる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23hq.pdf
+- id: JJMO-F-2024-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2024
+  number: 1
+  field: A
+  gist: ab/cd=(a+b)/(c+d) をみたす正の実数で、2 通りの組の積の大小を示す
+  units:
+  - A-015
+  - A-013
+  - L-007
+  missing: []
+  key: 示す不等式は (a-d)(c-b)≧0 と同値。条件を整理して a と d、b と c の大小が同じ向きになることを場合分けで示す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22hq.pdf
+- id: JJMO-F-2024-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2024
+  number: 2
+  field: G
+  gist: 中点を二等分線の足と弧の中点を結ぶ直線で折り返した点が、頂点から底辺への垂線上にあるときの頂角を求める
+  units:
+  - G-033
+  - G-018
+  - G-023
+  missing: []
+  key: 弧の中点 N で ∠NAD=∠NMD=90° なので A、M は ND を直径とする円上。折り返した点も同じ円にのり、垂直の条件を円周角で角の式に直す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22hq.pdf
+- id: JJMO-F-2024-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2024
+  number: 3
+  field: N
+  gist: x^2+4y^2 型の 3 つの式の積が素数のべきになる組をすべて求める
+  units:
+  - N-032
+  - N-030
+  - L-014
+  missing: []
+  key: 各因子が p のべき。共通因数で割って降下し、mod p で 3 式を回すと 65x^2≡0 から p は 5 か 13。大きさを比べて x=y=z の 5 のべきに絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22hq.pdf
+- id: JJMO-F-2024-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2024
+  number: 4
+  field: C
+  gist: 3 色に塗った盤に色と隣接で決まる赤と青の駒を置き、どの 2×2 でも赤と青が同数で 1 か 2 個のときの白マスの最大数
+  units:
+  - C-017
+  - L-018
+  - L-007
+  missing: []
+  key: 2×2 の条件から赤と青の並び方の型を場合分けで絞り、白にできるマスの割合の上界を出して周期的な塗り方で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22hq.pdf
+- id: JJMO-F-2024-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2024
+  number: 5
+  field: G
+  gist: 辺の比と弧上の点の比が等しいとき、3 頂点の折り返しでできる三角形がもとの三角形と相似であることを示す
+  units:
+  - G-020
+  - G-031
+  - G-023
+  missing:
+  - 調和四角形（AB:AC=DB:DC の円に内接する四角形）
+  key: 比の条件と円周角から相似な三角形の組を作り、折り返しで角と比が保たれることを使って 2 角を等しくする
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22hq.pdf
+- id: JJMO-F-2023-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2023
+  number: 1
+  field: G
+  gist: 2 頂点を中心に A を通る 2 円と外接円の交点 3 つでできる三角形が元の三角形と相似であることを示す
+  units:
+  - G-018
+  - G-023
+  - G-016
+  missing: []
+  key: D は A を BC で折り返した点、E、F は BA=BE、CA=CF となる外接円上の点。等しい弧と中心角から DEF の角を A、B、C の角で表す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html
+- id: JJMO-F-2023-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2023
+  number: 2
+  field: A
+  gist: 相異なる 2023 個の正の数の 2 つから xy/(x+y)^2 を作るときの値の種類の最小
+  units:
+  - A-013
+  - L-014
+  - A-022
+  missing: []
+  key: 値は比 x/y（1 より大きいほう）の減少関数なので種類は比の種類。最大の数と他の比、最小の数と他の比で 2022 種類以上あり、等比数列で等号
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html
+- id: JJMO-F-2023-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2023
+  number: 3
+  field: C
+  gist: n×n に 1〜n^2 を書いた盤から隣りあわないマスを選ぶとき、どんな書き方でも得られる得点の最大の保証値
+  units:
+  - L-018
+  - C-017
+  - L-015
+  missing: []
+  key: 盤を隣りあわないマスの組の型（市松など）に分け、その平均から得点の下界を出す。書き方の構成で上界を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html
+- id: JJMO-F-2023-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2023
+  number: 4
+  field: N
+  gist: a+c/b、b+a/c、c+b/a がすべて整数になる正の有理数の組を求める
+  units:
+  - N-021
+  - N-030
+  - N-043
+  missing: []
+  key: 素因数ごとに a、b、c の指数を比べ、分母に残る素数がないことを示す。そのあと大きさの評価で組を絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html
+- id: JJMO-F-2023-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2023
+  number: 5
+  field: G
+  gist: 辺の中点を通る直線が 2 辺と交わる点の中点 N と、外接円との交点 R から、PRN の外接円が BC に接することを示す
+  units:
+  - G-029
+  - G-030
+  - G-018
+  missing: []
+  key: メネラウスで P、Q の位置の比を出し、接することを P での方べき（BC 上の長さの関係）や接弦の角に直して示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21hq.html
+- id: JJMO-F-2022-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2022
+  number: 1
+  field: N
+  gist: p^3+3q^3-32 が素数になる素数の組 (p,q) を求める
+  units:
+  - L-005
+  - N-028
+  - N-030
+  missing: []
+  key: p、q がともに奇数なら式は偶数で 2 にならない。2 を含む場合を 3 で割った余りで絞り、残りを確かめる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html
+- id: JJMO-F-2022-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2022
+  number: 2
+  field: C
+  gist: 円周に 1 個ずつある石を、点 A について対称な位置へ移す操作 n-2 回で 1 マスに n-1 個集められる n
+  units:
+  - L-016
+  - N-028
+  - L-018
+  missing: []
+  key: 操作は A を中心にした折り返しなので、石のある位置の和などの量の変わり方を n を法として調べ、集められる n の条件と手順を作る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html
+- id: JJMO-F-2022-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2022
+  number: 3
+  field: A
+  gist: 6 つの相異なる実数で、文字の組み合わせ方を変えた 6 つの式のうち値が 1 のものの最大数
+  units:
+  - A-015
+  - C-022
+  - L-018
+  missing: []
+  key: 1 つの互換で移りあう 2 式の差は (b-c)(y-z) のように 0 でない。互換で結んだグラフで同時に 1 にできない組を数えて上界、具体例で達成
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html
+- id: JJMO-F-2022-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2022
+  number: 4
+  field: G
+  gist: BC の垂直二等分線が 2 辺と交わる点の中点と A を結ぶ直線が外接円と交わる点 P で ∠BPE=90° を示す
+  units:
+  - G-020
+  - G-033
+  - G-018
+  - G-045
+  missing: []
+  key: ADE は ACB と逆相似なので ADE の中線 AM は ABC の類似中線になる。P の性質と円周角で BPE が直角になることを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html
+- id: JJMO-F-2022-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2022
+  number: 5
+  field: N
+  gist: n を 2 のべきで割った整数部分の積に 4 のべきの 2 倍を足した値が平方数になる n を求める
+  units:
+  - N-023
+  - N-031
+  - N-043
+  - N-025
+  missing: []
+  key: 積の各因子は n の 2 進法の上の桁。積と 4 のべきの大きさを比べ、平方数の間隔で挟んで n を絞る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20hq.html
+- id: JJMO-F-2020-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2020
+  number: 1
+  field: C
+  gist: L 字と S 字のタイルで 2020×2021 を覆うとき、L の枚数の最小値
+  units:
+  - C-017
+  - L-018
+  - N-028
+  - L-005
+  missing: []
+  key: 列ごとの塗り分けで各タイルが覆う色の数を数え、L の枚数の偶奇や下界を出し、構成で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html
+- id: JJMO-F-2020-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2020
+  number: 2
+  field: G
+  gist: 二等辺三角形で垂線上の点が 2 つの長さの条件をみたすときの角 BCD
+  units:
+  - G-017
+  - G-023
+  - G-019
+  missing: []
+  key: BC=2CD などから中点を補助点にとり、二等辺三角形や直角三角形を見つけて角を追う
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html
+- id: JJMO-F-2020-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2020
+  number: 3
+  field: N
+  gist: 最小公倍数が (ab+bc+ca)/4 になる正の整数の組を求める
+  units:
+  - N-018
+  - N-021
+  - N-043
+  missing: []
+  key: L を最小公倍数とし、ab+bc+ca=4L を各文字で割った余りで見ると、a が bc を割るなどの条件が出る。L/a などの比の大きさで絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html
+- id: JJMO-F-2020-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2020
+  number: 4
+  field: C
+  gist: どのマスも斜めの線上に駒が 2 個以上あるように 2020×2020 に置く駒の最小数
+  units:
+  - L-018
+  - C-017
+  - L-014
+  missing: []
+  key: 市松の色ごとに斜めの線は分かれる。端のマスの斜め線の本数から駒の数を下から数え、構成で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html
+- id: JJMO-F-2020-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2020
+  number: 5
+  field: A
+  gist: 正 2020 角形の頂点の相異なる正の整数で、連続 3 頂点の数が 2 乗の不等式をみたす番号があることを示す
+  units:
+  - L-011
+  - A-018
+  - L-014
+  missing: []
+  key: すべての番号で逆の不等式が成り立つと仮定して一周足し合わせ、2 乗の和が 1〜2020 の 2 乗の和以上であることと比べて矛盾
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2020/jjmo2020/problems/jjmo18hq.html
+- id: JJMO-F-2019-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2019
+  number: 1
+  field: G
+  gist: 二等辺三角形の内部の点で 30° の条件があるとき、2 つの角の二等分線が辺 AB 上で交わることを示す
+  units:
+  - G-020
+  - G-024
+  - G-017
+  - G-042
+  missing: []
+  key: 2 本の二等分線が AB を同じ比に分けることを示せばよい。AC:CB=AD:DB を正弦定理や正三角形の補助線で示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html
+- id: JJMO-F-2019-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2019
+  number: 2
+  field: C
+  gist: 円に並んだ 1〜n の球を隣りあう色が違うよう 10 色に塗り、色ごとの和を等しくできる最小の n
+  units:
+  - L-018
+  - N-017
+  - L-014
+  missing: []
+  key: n を含む色の和は n 以上なので総和は 10n 以上。n(n+1)/2 が 10 の倍数であることも合わせて候補を出し、隣接の条件をみたす塗り方を作る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html
+- id: JJMO-F-2019-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2019
+  number: 3
+  field: N
+  gist: gcd(a,b+1) と gcd(a+1,b) の小さいほうが √(4a+4b+5) の式以下であることと等号条件
+  units:
+  - N-018
+  - N-017
+  - A-017
+  missing: []
+  key: 2 つの最大公約数は互いに素で、どちらも a+b+1 を割るので積が a+b+1 以下。小さいほうを d とすると d(d+1)≦a+b+1 から 2 次不等式
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html
+- id: JJMO-F-2019-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2019
+  number: 4
+  field: C
+  gist: 奇数 n の盤を王将の動きで全マス回るとき、縦横の移動の回数の最小値
+  units:
+  - C-017
+  - L-005
+  - L-018
+  missing: []
+  key: 行の偶奇などで塗り分けると斜めの移動では色の型が決まった変わり方をする。色ごとのマス数の差から縦横の移動の回数を下から評価し、回り方で等号
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html
+- id: JJMO-F-2019-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2019
+  number: 5
+  field: G
+  gist: 中点と弧の中点 N、N から辺への垂線の足 H、円と直線の交点 K で ∠AKH=∠CAM を示す
+  units:
+  - G-033
+  - G-018
+  - G-023
+  - G-020
+  missing: []
+  key: N は弧の中点なので NB=NC で H は AC 上の決まった点（AB+AC の半分の位置など）。円周角で K の角を移し、相似な三角形で示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2019/jjmo2019/problems/jjmo17mq.html
+- id: JJMO-F-2018-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2018
+  number: 1
+  field: C
+  gist: 正 k 角形の頂点に相手の言う数を書き、同じ数の 3 頂点が二等辺三角形になれば勝ちのゲームで書く側が必勝の k
+  units:
+  - L-017
+  - L-015
+  - C-023
+  missing: []
+  key: 頂点が多いと鳩の巣原理で同じ数の頂点が多くなり、正多角形の中で二等辺三角形が必ずできる。k が小さい場合は言う側の戦略で防ぐ
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html
+- id: JJMO-F-2018-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2018
+  number: 2
+  field: C
+  gist: 5 人の年齢差 10 個がすべて異なる正の整数のときの最大の年齢差の最小値
+  units:
+  - L-018
+  - L-007
+  missing: []
+  key: 10 個の異なる差の和を、隣りあう 4 つの差を使って表すと最大差の下界が出る。差 1〜10 がそろう場合を場合分けで否定し、例を作る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html
+- id: JJMO-F-2018-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2018
+  number: 3
+  field: G
+  gist: 4 点が共円となる配置で、2 直線の交点と外接円の交点などの 4 点が共円であることを示す
+  units:
+  - G-030
+  - G-032
+  - G-018
+  missing: []
+  key: F の方べき FB·FC=FD·FE=FA·FG から A、G、D、E が共円。H の 2 円に対する方べきを比べて 4 点が共円であることを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html
+- id: JJMO-F-2018-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2018
+  number: 4
+  field: N
+  gist: 2^k-1 から引いた数の最大の奇数の約数を書き続けるとき、最初の数が 2 回現れることを示す
+  units:
+  - N-032
+  - N-037
+  - L-015
+  missing: []
+  key: A-n の奇数部分は A を法として -n に 2 の逆元のべきを掛けたもの。とりうる値が A/2 以下の奇数に限られることと鳩の巣原理で周期に戻る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html
+- id: JJMO-F-2018-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2018
+  number: 5
+  field: G
+  gist: 内接円の直径を辺に平行に置いた端点と中点から作った 3 点を頂点と結ぶ 3 直線が 1 点で交わることを示す
+  units:
+  - G-029
+  - G-028
+  - G-031
+  missing: []
+  key: 中点三角形と内接円の直径の端点を相似拡大で結びつけ、各直線が辺を分ける比を出してチェバの定理で共点を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2018/jjmo2018/problems/jjmo16mq.html
+- id: JJMO-F-2017-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2017
+  number: 1
+  field: C
+  gist: 円の椅子の人が時計回りに 0 周以上 1 周未満動いて座りなおすとき、移動の長さの種類の最大
+  units:
+  - N-028
+  - C-014
+  - N-032
+  missing: []
+  key: 移動の和は n の倍数なので n 種類なら 0+1+…+(n-1) が n の倍数で n は奇数。奇数なら i→2i の対応で全種類を作り、偶数なら n-1 種類を構成
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html
+- id: JJMO-F-2017-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2017
+  number: 2
+  field: N
+  gist: どの 2 数の和も素数のべきになる相異なる正の整数の個数の最大値
+  units:
+  - L-005
+  - N-028
+  - N-030
+  missing: []
+  key: 偶奇で分けると同じ偶奇どうしの和は偶数で 2 のべき。3 で割った余りなども使い、4 個以上の組が作れないことを示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html
+- id: JJMO-F-2017-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2017
+  number: 3
+  field: A
+  gist: 奇数角形の頂点の実数で隣どうしの和が 0 以上のとき、正の和と負の和の重みつきの不等式を示す
+  units:
+  - L-007
+  - A-013
+  - L-015
+  missing: []
+  key: 負の数は隣りあわず両隣は正でその絶対値以上。奇数角形なので負の数の個数は n 以下で、隣の正の数との組で不等式を足し合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html
+- id: JJMO-F-2017-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2017
+  number: 4
+  field: C
+  gist: 座標が異なる 5 点で、2 点を対角とする長方形の面積がすべて 1 以上のとき最大の面積の最小値
+  units:
+  - L-018
+  - L-014
+  - L-015
+  missing: []
+  key: x 座標と y 座標の順位で 5 点を並べ、真ん中の点を含む長方形の面積を掛け合わせて最大の面積を下から評価し、配置で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html
+- id: JJMO-F-2017-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2017
+  number: 5
+  field: G
+  gist: 垂心のまわりで 4 つの円と線分の交点 P、Q、S、T が共円であることを示す
+  units:
+  - G-030
+  - G-028
+  - G-032
+  missing: []
+  key: H を通る 3 本の垂線で HA·HD=HB·HE=HC·HF。各円に対する H の方べきから HP、HQ、HS、HT の積の関係を作り、方べきの逆で共円
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2017/jjmo2017/problems/jjmo15mq.html
+- id: JJMO-F-2016-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2016
+  number: 1
+  field: G
+  gist: 垂足三角形で、2 つの円が辺と交わる点を結ぶ直線が DG の中点を通ることを示す
+  units:
+  - G-028
+  - G-023
+  - G-018
+  missing: []
+  key: AD は垂足三角形 DEF の角 D の二等分線。円周角で P、Q と G、D を結ぶ角を移し、平行四辺形などを見つけて中点を通すことを示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html
+- id: JJMO-F-2016-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2016
+  number: 2
+  field: C
+  gist: 各行各列に 1〜n が 1 回ずつ現れる盤で、斜めに隣りあう同じ数の組の数の最大
+  units:
+  - L-018
+  - C-017
+  - L-014
+  missing: []
+  key: 2×2 の小正方形ごとに同じ数の斜めの組は最大 2 組で、ラテン方陣の条件からさらに制限される。数え上げで上界、巡回型の構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html
+- id: JJMO-F-2016-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2016
+  number: 3
+  field: A
+  gist: ab+bc+cd=1 のとき (a^2+ac+c^2)(b^2+bd+d^2) の最小値
+  units:
+  - A-027
+  - A-020
+  missing: []
+  key: a^2+ac+c^2 を平方完成で 2 つの 2 乗の和にし、コーシー・シュワルツで積を (ab+bc+cd を含む式)^2 以上にする。等号の例で最小値
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html
+- id: JJMO-F-2016-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2016
+  number: 4
+  field: G
+  gist: 外心を通り BC に平行な直線と 2 辺の交点、AH の中点 M で ∠BMP=∠CMQ を示す
+  units:
+  - G-028
+  - G-017
+  - G-020
+  missing: []
+  key: AH=2·(O から BC への距離) なので AM はその距離に等しく、M と BC の中点、O で平行四辺形ができる。平行線と相似で角を移す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html
+- id: JJMO-F-2016-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2016
+  number: 5
+  field: C
+  gist: 閉路のない 2 つの航空網で、同じ会社でつながる都市の組があるとき、Y の次に X に乗らない m 本の乗り継ぎがあることを示す
+  units:
+  - L-015
+  - C-024
+  - L-014
+  missing:
+  - 最長経路の長さによる番号づけ（エルデシュ＝セケレシュ型）
+  key: 各都市に X での最長経路と Y での最長経路の長さの組を付け、組が異なることを示す。都市数が m(m+1)/2 より多いので鳩の巣原理で長い経路が出る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2016/jjmo2016/problems/jjmo14mq.html
+- id: JJMO-F-2015-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2015
+  number: 1
+  field: G
+  gist: 円に内接する四角形で 2 つの直角の条件をみたす点 P から CD への垂線が三角形 PAB の外心を通ることを示す
+  units:
+  - G-023
+  - G-028
+  - G-018
+  missing: []
+  key: 外心へ引いた線は P からの垂線と角 P の二等分線について対称。直角と円周角で CD への垂線の角を求め、その角と一致させる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html
+- id: JJMO-F-2015-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2015
+  number: 2
+  field: A
+  gist: (xy+x+y-1)^2/((x^2+1)(y^2+1)) の最大値
+  units:
+  - A-021
+  - A-027
+  missing: []
+  key: (x+i)(y+i)=(xy-1)+(x+y)i とみると分母は絶対値の 2 乗、分子は実部と虚部の和の 2 乗。和の 2 乗は 2 乗和の 2 倍以下で最大値 2
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html
+- id: JJMO-F-2015-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2015
+  number: 3
+  field: C
+  gist: 白では直進、黒では自由に曲がれるアリ k 匹で n×n の全マスを訪れるための黒マスの最小数
+  units:
+  - L-018
+  - C-017
+  - L-014
+  missing: []
+  key: 白だけの行や列はアリがまっすぐ通るしかないので、曲がるために必要な黒マスの数を行と列の数え上げで下から評価し、配置で等号
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html
+- id: JJMO-F-2015-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2015
+  number: 4
+  field: G
+  gist: 円内の点 A を通る直線と円の交点 P、Q と点 B でできる三角形の外心が定直線上にあることを示す
+  units:
+  - G-030
+  - G-032
+  missing: []
+  key: A の方べき AP·AQ は一定なので、BPQ の外接円は直線 AB 上の決まった点 B' を通る。外心は BB' の垂直二等分線上
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html
+- id: JJMO-F-2015-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2015
+  number: 5
+  field: C
+  gist: 隣りあう 2 辺のなす角がすべて 90° より大きい 2015 点のグラフの辺数の最大
+  units:
+  - C-022
+  - C-023
+  - L-018
+  missing: []
+  key: 各点の次数は 3 以下で、三角形もできない。次数の和と辺の配置の制約を組み合わせて上界を出し、構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2015/jjmo2015/problems/jjmo13mq.html
+- id: JJMO-F-2014-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2014
+  number: 1
+  field: N
+  gist: √n 以下の約数 d のすべてで d^2 が n を割る n を求める
+  units:
+  - N-021
+  - N-024
+  - L-014
+  missing: []
+  key: 最小の素因数 p をとると p^2 が n を割り、別の素因数 q があると √n 以下の約数で条件が破れることを示して、素数のべきなどに絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html
+- id: JJMO-F-2014-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2014
+  number: 2
+  field: A
+  gist: 2n 個の正の数を任意に並べた比の最小値は、小さい順に並べたときの比の最小値以下であることを示す
+  units:
+  - L-015
+  - A-013
+  - L-014
+  missing: []
+  key: 並べた比の最小値をとる位置 j について、b_j 以上の数と b_{n+j} 以下の数の個数を数え、鳩の巣原理で両方をみたす組 (a_i,a_{n+i}) を見つける
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html
+- id: JJMO-F-2014-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2014
+  number: 3
+  field: G
+  gist: ∠A=60° で 2 本の角の二等分線の足を結ぶ直線に関する A の対称点が BC 上にあることを示す
+  units:
+  - G-028
+  - G-018
+  - G-023
+  missing: []
+  key: 内心 I で ∠BIC=120° なので A、Q、I、P は共円で IP=IQ。折り返した点が BC 上にあることを、角の二等分線での対称と円周角で示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html
+- id: JJMO-F-2014-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2014
+  number: 4
+  field: C
+  gist: 島が最も大きい隣の島を避難先に選ぶとき、どの島の避難先にもならない島があることを示す
+  units:
+  - C-022
+  - A-024
+  - L-014
+  missing:
+  - マンテルの定理（三角形のないグラフの辺の数）
+  key: 全員が選ばれると避難先の写像は全単射で、選び方から 2 島ずつの組になり n は偶数。さらにその構造から辺の数が n^2/4 以下になる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html
+- id: JJMO-F-2014-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2014
+  number: 5
+  field: N
+  gist: (n^n+n+2)/(n+1)^2 が 2 のべきになる組を求める
+  units:
+  - C-016
+  - N-032
+  - N-039
+  - N-043
+  missing: []
+  key: n^n=((n+1)-1)^n を二項展開して (n+1)^2 を法で計算すると n が奇数のとき割り切れる。そのうえで 2 の指数と大きさを比べて n を絞る
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2014/jjmo2014/problems/jjmo12mq.html
+- id: JJMO-F-2013-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2013
+  number: 1
+  field: A
+  gist: 4 つの相異なる正の数の 6 つの和と 6 つの積のうち 1 になるものの最大数
+  units:
+  - L-007
+  - A-013
+  - L-011
+  missing: []
+  key: 同じ数を含む 2 つの和（または積）は同時に 1 にならない。和が 1 なら両方 1 未満、積が 1 なら片方が 1 より大きいことで組み合わせを場合分けし最大を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html
+- id: JJMO-F-2013-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2013
+  number: 2
+  field: C
+  gist: 牛乳と紅茶を交互に注ぐゲームで、牛乳側が 2 杯同時に良いミルクティーになるのを防ぎ続けられるか
+  units:
+  - L-017
+  - L-016
+  - A-013
+  missing: []
+  key: 各カップの紅茶と牛乳の比の条件を 1 次の不等式で表し、牛乳側が注ぎ方を工夫して危ないカップを抑える戦略、あるいは紅茶側の必勝手順を調べる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html
+- id: JJMO-F-2013-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2013
+  number: 3
+  field: N
+  gist: 3 つの数がそれぞれ他の 2 数の 2 乗+1 の最大公約数になる組を求める
+  units:
+  - N-018
+  - N-030
+  - N-043
+  - N-038
+  missing: []
+  key: a、b、c が互いの 2 乗+1 を割ることから偶奇と互いに素を調べ、素因数が 4 で割って 1 余る素数に限られることと大きさで組を絞る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html
+- id: JJMO-F-2013-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2013
+  number: 4
+  field: G
+  gist: 垂心と内心から作った直角の条件と辺の長さの和の条件から ∠HJK を角 C で表す
+  units:
+  - G-028
+  - G-033
+  - G-016
+  missing: []
+  key: AC=AJ+CK から AC 上に点をとって合同な三角形を作り、内心の二等分線と垂心の角を合わせて角を追う
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html
+- id: JJMO-F-2013-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2013
+  number: 5
+  field: C
+  gist: 国民が互いを監視し、n 人以下のどの反乱も鎮圧できるときの監視の総数の最小値
+  units:
+  - C-024
+  - C-018
+  - L-014
+  missing:
+  - ホールの結婚定理
+  key: 各国民は n 人以上に監視されていないと、その人と監視者が反乱して捕まらない。よって K≧nN。2n≦N のとき巡回型の監視でホールの条件をみたし等号
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2013/jjmo2013/problems/jjmo11mq.html
+- id: JJMO-F-2012-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2012
+  number: 1
+  field: G
+  gist: 正方形を含む凸五角形で、角の和が 180° のとき五角形が円に内接することを示す
+  units:
+  - G-018
+  - G-023
+  - G-017
+  missing: []
+  key: 正方形の対称性から E の位置を角の条件で調べ、E が正方形の外接円上にあることを円周角の和で示す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html
+- id: JJMO-F-2012-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2012
+  number: 2
+  field: N
+  gist: 各桁が 1〜7 で、桁をどう並べ替えても 7 の倍数になる数をすべて求める
+  units:
+  - N-028
+  - N-032
+  - N-025
+  missing: []
+  key: 隣りあう 2 桁を入れかえると差は 9(a-b)·10^k で、7 で割れるには a=b。全桁が等しく、その数字と桁数から 7 の倍数になる条件を決める
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html
+- id: JJMO-F-2012-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2012
+  number: 3
+  field: C
+  gist: 行か列で 1 マス以外に印があれば残りに印をつける操作で全マスに印をつけるための最初の印の最小数
+  units:
+  - L-016
+  - L-018
+  - L-014
+  missing: []
+  key: 印のないマスが減る過程を逆にたどり、印のない行と列の数の関係を単調量で追って下界を出す。L 字に残す配置で等号
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html
+- id: JJMO-F-2012-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2012
+  number: 4
+  field: G
+  gist: ∠A=30° の三角形の内部の点 X と二等辺の条件で決めた 2 点が中点から直角に見えることを示す
+  units:
+  - G-017
+  - G-023
+  - G-028
+  missing: []
+  key: ∠BXC=120° と ∠A=30° から外心との関係を見つけ、P、Q を辺の垂直二等分線上の点として回転や合同で ∠PMQ=90° を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html
+- id: JJMO-F-2012-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2012
+  number: 5
+  field: C
+  gist: 0 以上の整数のカードが n 枚ずつあるとき、k 回目の 2012 枚の和が k になるよう取り出せる最小の n
+  units:
+  - L-018
+  - L-014
+  - N-044
+  missing: []
+  key: 小さい数のカードが早く尽きることを和の評価で示して下界を出し、0 と 1 などのカードの使い方を周期的に決める構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2012/jjmo2012/problems/jjmo10mq.html
+- id: JJMO-F-2011-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2011
+  number: 1
+  field: G
+  gist: 円に内接する六角形で 2 組の対辺が平行なら残りの対辺も平行であることを示す
+  units:
+  - G-018
+  - G-016
+  missing: []
+  key: 平行な弦にはさまれた弧は等しい。2 組の等しい弧から残りの弧も等しくなり、円周角で CD と FA が平行
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html
+- id: JJMO-F-2011-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2011
+  number: 2
+  field: N
+  gist: n が平方数のとき、n 以上の 2 数の積で表せる数の n 番目に小さいものを n で表す
+  units:
+  - N-043
+  - C-005
+  - L-007
+  missing: []
+  key: n·n、n(n+1)、… と (n+1)(n+1)、… の大小を比べ、√n の範囲で積を小さい順に数え上げて n 番目を特定する
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html
+- id: JJMO-F-2011-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2011
+  number: 3
+  field: G
+  gist: 垂心から作った 2 円と垂線の交点 E、F について AE=AF を示す
+  units:
+  - G-019
+  - G-030
+  - G-020
+  missing: []
+  key: 円 ABD は AB を直径とし E での角は直角。直角三角形の比で AE^2=AB·(C からの垂線の足までの長さ)、同様に AF^2 も表し、方べきで等しい
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html
+- id: JJMO-F-2011-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2011
+  number: 4
+  field: N
+  gist: 1 から p か q を足し続けて p の倍数も q の倍数も書かずにいつまでも続けられる p、q の条件
+  units:
+  - N-028
+  - N-018
+  - N-036
+  missing: []
+  key: p を足しても p で割った余りは変わらない。q で割った余りと p で割った余りの組の動きを調べ、両方の倍数を避けて回り続けられる条件を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html
+- id: JJMO-F-2011-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2011
+  number: 5
+  field: N
+  gist: 1〜n を n 個ずつ並べ、左から k 個の和の余りが k の余りといつも異なる並べ方があるか
+  units:
+  - N-028
+  - L-005
+  - L-011
+  missing: []
+  key: 左から k 個の和から k を引いた量の n を法とした余りが 0 を避ける条件を考え、総和の余りや偶奇で n ごとに可否を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2011/jjmo2011/problems/jjmo9mq.html
+- id: JJMO-F-2010-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2010
+  number: 1
+  field: G
+  gist: 内角が 120° か 240° で辺の長さがすべて等しい n 角形がある n を求める
+  units:
+  - G-009
+  - G-027
+  - L-007
+  missing: []
+  key: 内角の和から 120° と 240° の個数の差が 6。辺は 60° ずつの向きの単位ベクトルなので閉じる条件を調べ、n ごとに構成するか否定する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html
+- id: JJMO-F-2010-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2010
+  number: 2
+  field: N
+  gist: 下の桁を 1〜k 個取り除いても平方数のままの平方数がある最大の k
+  units:
+  - N-031
+  - N-043
+  missing: []
+  key: 下 1 桁を取り除く前後の平方数を m^2、l^2 とすると m は 10l に近い。その差から l が小さいことを示し、桁数の条件で k を決める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html
+- id: JJMO-F-2010-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2010
+  number: 3
+  field: G
+  gist: 5 本の線分の 3 本の組のうち 9 組が鋭角三角形を作るとき、残りの組でも三角形が作れることを示す
+  units:
+  - G-019
+  - A-013
+  - L-007
+  missing: []
+  key: 鋭角は最大辺の 2 乗が他の 2 乗の和より小さいこと。長さを並べて残りの 1 組の場合を分け、他の組の不等式を足し合わせて三角不等式を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html
+- id: JJMO-F-2010-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2010
+  number: 4
+  field: G
+  gist: AD+AE=BC となる円と二等分線の交点 P、Q で A、I、P、Q が共円であることを示す
+  units:
+  - G-023
+  - G-028
+  - G-018
+  missing: []
+  key: 等しい長さの条件から BC 上に点をとって合同な三角形を作り、円周角と内心の角で ∠PAQ と ∠PIQ の関係を示す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html
+- id: JJMO-F-2010-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2010
+  number: 5
+  field: C
+  gist: 円周上の白黒 n 点ずつを交互に結んで一周する線分の引き方で、交点を n-1 個以下にできることを示す
+  units:
+  - L-012
+  - C-023
+  - L-014
+  missing: []
+  key: 隣りあう白黒の組を見つけて結び、残りに帰納法を使う。つなぎかえで増える交点を 1 個以下に抑える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2010/jjmo2010/problems/jjmo8mq.html
+- id: JJMO-F-2009-1
+  source: 日本ジュニア数学オリンピック本選
+  year: 2009
+  number: 1
+  field: N
+  gist: n と互いに素な n 以下の数の和 S(n) が素数になる n を求める
+  units:
+  - N-033
+  - C-014
+  - N-030
+  missing: []
+  key: k と n-k を組にすると S(n)=nφ(n)/2。積の形なので素数になる場合は因数がほとんど 1 になる n に限られる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html
+- id: JJMO-F-2009-2
+  source: 日本ジュニア数学オリンピック本選
+  year: 2009
+  number: 2
+  field: G
+  gist: BP+CQ=PQ のとき弧の中点 R から見た角 PRQ を角 A で表す
+  units:
+  - G-033
+  - G-016
+  - G-015
+  missing: []
+  key: RB=RC なので PQ 上に PX=PB、XQ=QC となる点 X をとると、R を中心とした回転や合同で三角形 RBP と RXP、RCQ と RXQ が重なる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html
+- id: JJMO-F-2009-3
+  source: 日本ジュニア数学オリンピック本選
+  year: 2009
+  number: 3
+  field: C
+  gist: 正 2n 角形の頂点に 1〜2n を割り当て、隣りあう差を n-1 以上にはできるが n 以上にはできないことを示す
+  units:
+  - L-014
+  - L-018
+  - L-011
+  missing: []
+  key: 差を n 以上にすると数 n の隣は 2n しかなく 2 つの隣を埋められない。n-1 以上は交互に大小を置く構成で作る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html
+- id: JJMO-F-2009-4
+  source: 日本ジュニア数学オリンピック本選
+  year: 2009
+  number: 4
+  field: A
+  gist: (4a+b)/(a+4b) の巡回和が 3/2 より大きく 9 より小さいことを示す
+  units:
+  - A-013
+  - A-025
+  - L-014
+  missing: []
+  key: 各項は 1/4 と 4 の間にある。片方の評価は項ごとの不等式、もう片方は 2 項ずつ組にして和の下限・上限を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html
+- id: JJMO-F-2009-5
+  source: 日本ジュニア数学オリンピック本選
+  year: 2009
+  number: 5
+  field: G
+  gist: 3 本の対角線がどれも 60° で交わる凸六角形で、周の長さが対角線の和以上であることを示す
+  units:
+  - G-027
+  - G-034
+  - G-015
+  missing: []
+  key: 対角線を平行移動して正三角形を作り、辺のベクトルを並べかえて三角不等式を足し合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2009/jjmo2009/problems/jjmo7mq.html
+- id: JMO-P-2026-1
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 1
+  field: N
+  gist: 20 乗と 2 乗と 6 乗の和が 2026 になる正の整数の組を求める
+  units:
+  - N-043
+  - N-031
+  missing: []
+  key: 2^20 は大きすぎるので a=1、c≦3 に絞り、残りが平方数かを確かめる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-2
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 2
+  field: N
+  gist: ガウス記号で表した √(2026n) が n で割り切れない最小の n
+  units:
+  - N-023
+  - N-043
+  missing: []
+  key: '[√(2026n)] は √2026·√n 程度。n が小さいうちは商がちょうど整数倍になる範囲を調べ、初めてずれる n を探す'
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-3
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 3
+  field: G
+  gist: 円周上の 5 点で弦を 3 等分する 2 交点と 3 つの三角形の面積から、2 本の弦の比を求める
+  units:
+  - G-012
+  - G-030
+  - G-020
+  - G-018
+  missing: []
+  key: 等しい底辺の三角形の面積比を高さの比に直し、円周角による相似と方べきで弦の比を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-4
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 4
+  field: C
+  gist: 全幅の切れ目で長方形を切り、辺が 1〜9 の小長方形がすべて合同でないようにするときの面積の最大
+  units:
+  - L-018
+  - C-007
+  - L-019
+  missing: []
+  key: 切れ目は格子状なので行の幅と列の幅の組で小長方形が決まる。合同を避ける幅の選び方を組合せで数え、和の積を最大にする
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-5
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 5
+  field: N
+  gist: xy+4、yz+5、zx+6、xyz+7 を共通に割る 2 以上の数がある 17 以下の組を求める
+  units:
+  - N-032
+  - N-030
+  missing: []
+  key: 共通の素数 p を法とすると xy≡-4 などから z≡7/4 (mod p) などが出て、組み合わせると p が決まった定数を割る。p ごとに組を探す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-6
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 6
+  field: G
+  gist: 平行四辺形で中点と交点の長さの条件から辺 AB の長さを求める
+  units:
+  - G-020
+  - G-026
+  missing: []
+  key: 中点 M を通る直線と平行線で相似な三角形を作り比を出す。座標をおいて長さの条件を式にしてもよい
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-7
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 7
+  field: C
+  gist: 円形に並ぶベンチの生徒を選んで右へ 1 つ、他を左へ 2 つ動かし、空でないベンチの数がちょうど一定になる選び方の数
+  units:
+  - C-007
+  - C-014
+  - N-028
+  missing: []
+  key: ベンチごとに入ってくる生徒の数を、隣の生徒の選び方の並びで表し、空いたベンチの数と対応させて二項係数で数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-8
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 8
+  field: N
+  gist: 交代和の倍数で次の項が決まる相異なる数列で、2 つの値を含むときの第 20 項の最小値
+  units:
+  - N-017
+  - N-021
+  - L-014
+  - A-022
+  missing: []
+  key: 交代和の漸化式から項どうしの倍数関係が鎖になる。36 と 3750 の素因数分解に合うよう倍率を最小に選ぶ
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-9
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 9
+  field: G
+  gist: 二等辺三角形で角の条件の 3 点と垂直二等分線から作った点の長さから三角形の面積を求める
+  units:
+  - G-023
+  - G-018
+  - G-024
+  missing: []
+  key: 角の条件から共円の点を見つけ、垂直二等分線上の点で二等辺三角形を作って長さを移し、正弦定理などで面積を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-10
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 10
+  field: C
+  gist: 座標の入れかえの条件をもつ格子点の凸 101 角形が入る最小の正方形の大きさ
+  units:
+  - L-018
+  - G-026
+  - C-023
+  - G-027
+  missing: []
+  key: 辺のベクトルの向きがすべて異なることと座標の条件から、使える向きの数を数えて n の下界を出し、構成で達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-11
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 11
+  field: C
+  gist: 1〜20 の 26 個の組で、前からの和と後ろからの和が等しくなる組 (i,j) がちょうど 1 つあるものの数
+  units:
+  - C-005
+  - C-014
+  - L-016
+  - L-005
+  missing: []
+  key: 前からの部分和と後ろからの部分和は一方が増え一方が減るので、等しくなる位置の条件を総和の偶奇や中央の項で分類して数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2026-12
+  source: 日本数学オリンピック予選
+  year: 2026
+  number: 12
+  field: N
+  gist: x^x y^y=z^(20x+26y) で x は z^25 の倍数、y はそうでないときの z の最小値
+  units:
+  - N-021
+  - N-043
+  - A-009
+  missing: []
+  key: 素因数ごとに指数を比べ、x、y、z を共通の数のべきで表して指数の方程式に直し、条件をみたす最小の z を探す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jmo/problems/jmo36yqa.pdf
+- id: JMO-P-2025-1
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 1
+  field: C
+  gist: 7 つの六角形のマスに 1〜7 を書き、隣りあう和が 10 以下となる書き方の数
+  units:
+  - L-007
+  - C-006
+  - L-014
+  missing: []
+  key: 中央のマスは 6 つと隣りあうので小さい数しか置けない。大きい数の置き場所から場合分けして数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-2
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 2
+  field: N
+  gist: abcd=2025 で隣りあう積がすべて平方数になる組の数
+  units:
+  - N-021
+  - N-031
+  - C-005
+  missing: []
+  key: 2025=3^4·5^2 の指数を素数ごとに分け、隣りあう指数の和が偶数になる配り方を数えて掛ける
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-3
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 3
+  field: C
+  gist: 大きさの違う 6 枚の C 字型のピースを 10×10 に置く方法の数
+  units:
+  - C-017
+  - L-007
+  - C-005
+  missing: []
+  key: 大きいピースから置ける位置が限られることを使い、外周から順に場合を分けて数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-4
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 4
+  field: N
+  gist: 2〜6 で割った余りがどの 2 つも異なる 1000 以下の整数の数
+  units:
+  - N-028
+  - N-036
+  - L-007
+  missing: []
+  key: 余りの関係（2 と 4、2 と 6、3 と 6 の余りの整合）から 12 や 60 を法とした型に絞り、周期で数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-5
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 5
+  field: G
+  gist: 内接円と外接円をもつ四角形の延長でできる 2 つの三角形の内接円の半径から辺の比を求める
+  units:
+  - G-028
+  - G-020
+  - G-018
+  - G-031
+  missing: []
+  key: P、Q を頂点とする三角形と元の四角形の内接円の相似拡大で半径の比を辺の比に結びつけ、円に内接する条件の相似で比を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-6
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 6
+  field: N
+  gist: 2 通りの規則で 2 つの数列を進め、ずっと正の整数でいられる初めの組の数
+  units:
+  - L-016
+  - N-028
+  - L-011
+  missing: []
+  key: どちらの規則も 2 で割るので、2 で割り切れる回数と和の不変量を調べ、無限に続くための条件に絞って数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-7
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 7
+  field: C
+  gist: 右か上へ続くマスの列を順に塗って盤を埋めるとき、手数を最小にする塗られ方の数
+  units:
+  - C-004
+  - L-018
+  - C-014
+  missing: []
+  key: 右上がりの列は対角方向の各線と高々 1 回しか交わらないので最小手数は対角線の長さ。最小のときの列の組を道の組に対応させて数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-8
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 8
+  field: A
+  gist: 0 から始まる増加列で i<j<k なら a_i+a_k≦a_j となる列の最大の長さと、そのときの末項の最小値
+  units:
+  - L-014
+  - L-018
+  - A-013
+  missing: []
+  key: 条件から差が急に小さくなり、列の長さに上限がある。2025 を含む条件と差の評価を合わせて末項の最小値を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-9
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 9
+  field: G
+  gist: 外心と垂線の足の直角の条件と、足から 2 辺への垂線の足を結ぶ線分の長さを求める
+  units:
+  - G-028
+  - G-018
+  - G-019
+  - G-020
+  missing: []
+  key: AO は EF と垂直（EF は BC と逆平行）。AE·AB=AD^2=AF·AC から相似で EF を AD と AO の比で表し、三平方で長さを出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-10
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 10
+  field: N
+  gist: 9 を法とした関数で和の条件から f(x)f(y)-f(f(z)) が 9 の倍数になるものの数
+  units:
+  - N-032
+  - A-029
+  - A-024
+  missing: []
+  key: x+y≡z の関係で代入し、f の値が満たす合同式（f(x)f(y) が x+y だけで決まる）から f の形を絞って数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-11
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 11
+  field: C
+  gist: 有向グラフの辺を頂点に置きかえる操作を 100 回くり返したときの重要度の総和
+  units:
+  - C-024
+  - C-009
+  - A-022
+  missing:
+  - 有向グラフの線グラフ（辺を頂点にする操作）
+  key: 総和を頂点ごとの入次数と出次数で表し、操作の前後で総和と辺の数が満たす漸化式を作って解く
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2025-12
+  source: 日本数学オリンピック予選
+  year: 2025
+  number: 12
+  field: G
+  gist: 円に内接する五角形と弧上の点の 5 本の辺に関する対称点の距離の比を求める
+  units:
+  - G-024
+  - G-023
+  - G-018
+  missing:
+  - シムソン線（対称点が一直線上に並ぶスタイナー線）
+  key: 対称点は 2 点ずつ P を中心とする円上にあり、角の 2 倍の中心角で距離を正弦で表して比をとる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jmo/problems/jmo35yqa.pdf
+- id: JMO-P-2024-1
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 1
+  field: N
+  gist: 階乗の差の比の平方根を既約分数で表す
+  units:
+  - A-015
+  - N-019
+  missing: []
+  key: 共通の階乗でくくると (122·122!)/(121·121!) になり、約分して平方根をとる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-2
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 2
+  field: N
+  gist: 各桁が素数の数になる 2 つの平行移動がともに成り立つ 3 桁の数を求める
+  units:
+  - N-009
+  - L-007
+  missing: []
+  key: 2024 を足す・34 を引く計算での繰り上がりと繰り下がりを桁ごとに場合分けし、各桁が 2、3、5、7 になる条件を調べる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-3
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 3
+  field: G
+  gist: 正三角形で頂点を通り底辺に接する円と 2 辺の交点の和から接点の位置を求める
+  units:
+  - G-030
+  missing: []
+  key: B、C での方べき BX^2=BD·BA、CX^2=CE·CA を足して AD+AE の条件と組み合わせ、BX の 2 次方程式を解く
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-4
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 4
+  field: C
+  gist: 5 個ずつの多数決を 5 回くり返すとき、必ず最後が黒になる黒石の数の最小
+  units:
+  - L-018
+  - L-014
+  - A-009
+  missing: []
+  key: 白が勝つには各段で 5 個中 3 個を取ればよく、3^5 個の白で勝てる。白が 3^5 個未満なら黒が残ることを段ごとに示す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-5
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 5
+  field: N
+  gist: n を 1〜10 で割った整数部分の積が二項係数 nC10 に等しくなる最小の n
+  units:
+  - N-023
+  - C-007
+  - N-043
+  missing: []
+  key: 両辺の大きさを比べて n の範囲を絞り、整数部分の積と階乗の比を素因数で比べて候補を確かめる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-6
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 6
+  field: G
+  gist: 二等辺三角形の辺上の点で接する 2 円の条件から底辺の長さを求める
+  units:
+  - G-030
+  - G-031
+  - G-020
+  missing: []
+  key: 2 円の接点を中心とする相似拡大で AE 上の点の関係を出し、方べきで長さの式を立てる
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-7
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 7
+  field: N
+  gist: ap^4+2p^3+2p^2+1 が平方数になる素数 p と a の組の数
+  units:
+  - N-031
+  - N-030
+  - N-043
+  - N-032
+  missing: []
+  key: 平方数を (p^2+…)^2 の形と比べ、p を法とした条件で根の形を絞って a を p の式で表し、範囲内の個数を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-8
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 8
+  field: A
+  gist: f(m+n)^2 を f の絶対値と n^2 での値の和で表す式をみたす非負整数上の関数の値の組の数
+  units:
+  - A-029
+  - L-007
+  missing: []
+  key: m=n=0 などで f(0) を決め、f の値が 0 か 1 などに限られることを示して、とりうる値の組を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-9
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 9
+  field: G
+  gist: 円に内接する四角形と角の二等分線上の点の角の条件から長さを求める
+  units:
+  - G-020
+  - G-018
+  - G-030
+  missing: []
+  key: 角の二等分線と円周角で相似な三角形を見つけ、比と方べきで DF を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-10
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 10
+  field: C
+  gist: 2×2 がすべて良いブロックで、異なる文字の隣りあう組が一定数の文字の書き方の数
+  units:
+  - C-017
+  - C-005
+  - L-007
+  missing: []
+  key: 良いブロックの条件から行や列の並びが周期的にそろう型に限られる。型ごとに異なる組の数を数えて条件に合うものを数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-11
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 11
+  field: A
+  gist: a+f(b) などがいつも三角形の 3 辺になる関数で、ある範囲の値の和の最小値
+  units:
+  - A-029
+  - A-013
+  - L-014
+  missing: []
+  key: 三角不等式に極端な値を代入して f の値の上下の評価を作り、f(34) の条件と合わせて和を最小にする関数を作る
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2024-12
+  source: 日本数学オリンピック予選
+  year: 2024
+  number: 12
+  field: N
+  gist: 互いに素な差の項の和で表せる 2100 を法とした組の数
+  units:
+  - N-036
+  - N-033
+  missing:
+  - 巡回行列の像（離散フーリエ変換）
+  key: 2100 を素因数ごとに分けて中国剰余定理で独立に考え、各法で写像の像の大きさを数えて掛ける
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jmo34yqa.pdf
+- id: JMO-P-2023-1
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 1
+  field: N
+  gist: 10 を足しても掛けても平方数になる最小の正の整数
+  units:
+  - N-031
+  - N-021
+  missing: []
+  key: 10n が平方数なので n=10k^2。10(k^2+1) が平方数となる k を小さい順に探す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-2
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 2
+  field: C
+  gist: 2 が 3 より多い数と 3 が 2 より多い数の、2023 以下での個数の差
+  units:
+  - C-019
+  - C-014
+  - L-007
+  missing: []
+  key: 数字の 2 と 3 を入れかえる対応で良い数と悪い数は 1 対 1。2023 を超えてしまうものだけ数えて差を出す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-3
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 3
+  field: G
+  gist: 正三角形の辺上の点で 60° の角の条件をみたすときの長さを求める
+  units:
+  - G-020
+  - G-017
+  missing: []
+  key: 60° の条件から ABD と DCE などが相似。比を順に使って AF を出す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-4
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 4
+  field: A
+  gist: x/(xy+1) の演算を 100 から 1 まで続けた値を求める
+  units:
+  - A-018
+  - A-004
+  missing: []
+  key: 逆数をとると 1/(x⋆y)=1/x+y と足し算になり、1 から 99 までの和を足すだけになる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-5
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 5
+  field: N
+  gist: k·a_k が等差数列になる相異なる 7 個の正の整数で a7 と a1 の差の絶対値の最小値
+  units:
+  - N-018
+  - A-004
+  - N-043
+  missing: []
+  key: k·a_k=b+(k-1)d とおき、各 k で割り切れる条件を最小公倍数で整理して、差が最小になる b と d を探す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-6
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 6
+  field: G
+  gist: 長方形に内接する正六角形で 2 つの隅の面積から六角形の面積を求める
+  units:
+  - G-008
+  - G-012
+  - G-013
+  missing: []
+  key: 隅の三角形は 30°-60°-90° の形で相似。辺の長さを 2 つの変数で表し、面積の条件から六角形の辺を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-7
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 7
+  field: N
+  gist: (ab-1)(ac-1)/bc=2023 をみたす c の値をすべて求める
+  units:
+  - N-017
+  - N-018
+  - N-043
+  missing: []
+  key: b が ac-1 を割り c が ab-1 を割ることなどを整理し、大きさの評価で a や b を小さく絞って 2023 の約数で解く
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-8
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 8
+  field: C
+  gist: 15 頂点 20 辺の図形に 0、1、2 を書き、差が 1 の辺の数を最大にする書き方の数
+  units:
+  - C-022
+  - L-005
+  - C-005
+  missing: []
+  key: 差が 1 になる辺は 1 と 0 か 2 を結ぶ辺で、奇数の長さの閉路では全辺を満たせない。5 角形ごとの欠けを数えて最大値と書き方の数を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-9
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 9
+  field: C
+  gist: 両端に 0 を補った並べ替えの隣りあう差の絶対値の和が最小+2 になる順列の数
+  units:
+  - L-014
+  - C-006
+  - L-018
+  missing: []
+  key: 和は最大値 2023 まで登って下りるので 2·2023 以上。2 だけ多くなる並び方の型（一度だけ戻る）を分類して数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-10
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 10
+  field: G
+  gist: 中線上の点で接弦の角の条件をみたし、角の値から角 A を求める
+  units:
+  - G-030
+  - G-023
+  - G-018
+  missing: []
+  key: ∠PAM=∠MBA から MA^2=MP·MB。直角三角形で MD=MA=MC なので MD^2=MP·MB となり、角を移して角 A を求める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-11
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 11
+  field: C
+  gist: 互いに素でない数しか消せないゲームで先手が必ず勝てる初めの集合の数
+  units:
+  - L-017
+  - N-030
+  - C-005
+  missing: []
+  key: 大きい素数のように他と互いに素な数は消せる手が限られる。素因数ごとの数の固まりで局面を分け、必勝の条件を調べて数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2023-12
+  source: 日本数学オリンピック予選
+  year: 2023
+  number: 12
+  field: A
+  gist: 単調に減る関数の集合で合成の等式が成り立つときの集合の大きさの最大
+  units:
+  - A-024
+  - L-018
+  - C-007
+  missing: []
+  key: f(g(x)) はある決まった値の集合で止まる。減少関数の像と不動点の構造を調べ、関数を像の型で数えて最大を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jmo/problems/jmo33yq.html
+- id: JMO-P-2022-1
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 1
+  field: N
+  gist: 2022 より大きく 2 種類の数字だけからなる 4 桁の 3 の倍数の最小
+  units:
+  - N-028
+  - L-007
+  missing: []
+  key: 各桁の和が 3 の倍数になる条件で、上の桁から小さい数字を選んで調べる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-2
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 2
+  field: G
+  gist: 半径 3 の円が内接する台形の面積を求める
+  units:
+  - G-017
+  - G-008
+  missing: []
+  key: 円に外接する四角形では対辺の和が等しいので AD+BC=AB+CD。高さは直径なので面積が出る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-3
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 3
+  field: C
+  gist: 六角形の頂点と対角を結ぶグラフで A から全部を回って戻る道の数
+  units:
+  - C-022
+  - L-007
+  - C-005
+  missing: []
+  key: 各頂点から 3 方向に動ける。最初の数手で場合分けし、残りのマスの並びから戻れる道を数える
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-4
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 4
+  field: G
+  gist: 垂直の条件がある凸四角形と内部の点の長さから三角形の面積を求める
+  units:
+  - G-019
+  - G-008
+  - G-026
+  missing: []
+  key: 直角三角形で三平方を使って長さを出し、座標をおいて面積を計算する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-5
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 5
+  field: N
+  gist: 大きな d で m-k^2 と n+2k が同時に割り切れる組 (m,n) の数
+  units:
+  - N-032
+  - N-043
+  - L-011
+  missing: []
+  key: 2k≡-n から 4m-n^2 が d で割り切れ、d がいくらでも大きいので 4m=n^2。n が偶数で m がその 2 乗の 4 分の 1 のときを数える
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-6
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 6
+  field: C
+  gist: 三角形のタイルを赤と青に塗り、どの良い点でも 2 色の枚数が等しい塗り方の数
+  units:
+  - C-005
+  - L-007
+  - C-017
+  missing: []
+  key: 外周の点から順に条件を使うと隣のタイルの色が決まっていく。決まらずに残る自由度を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-7
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 7
+  field: G
+  gist: 直角二等辺三角形の辺上の 3 点で直角の条件と長さから BD を求める
+  units:
+  - G-018
+  - G-024
+  - G-026
+  - G-019
+  missing: []
+  key: ∠EAF+∠EDF=180° から A、E、D、F は共円。EF を三平方で出し、円周角と正弦定理または座標で BD を求める
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-8
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 8
+  field: A
+  gist: 増加する整数列で a_i^2-(i+5)^2 が増えない組の数
+  units:
+  - A-013
+  - C-014
+  - L-014
+  missing: []
+  key: 隣りあう差の条件から a_{i+1}-a_i は 1 で、ある位置で少しだけずれる型に限られる。ずれ方を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-9
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 9
+  field: C
+  gist: 最後以外の各位置の値がその位置の倍数になる並べ替えの数
+  units:
+  - C-009
+  - N-024
+  - C-014
+  missing: []
+  key: 位置 i から値 p_i への移動は倍数をたどる鎖になり、鎖は 1000 で終わる。1 から 1000 への約数の鎖の数を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-10
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 10
+  field: N
+  gist: 1〜50 から 25 個を選び、どの 2 つも約数の関係にない選び方の数
+  units:
+  - L-015
+  - N-021
+  - C-005
+  missing: []
+  key: 奇数部分が同じ数は 25 組の鎖をなし、各鎖から 1 つずつ選ぶしかない。大きい奇数部分から 2 の指数の選び方を順に決めて数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-11
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 11
+  field: N
+  gist: 各桁の和の偶奇で符号をつけた n^100 の和が 5 の何乗で割れるか
+  units:
+  - N-034
+  - C-026
+  missing:
+  - 高階差分（多項式に差分をくり返すと次数が下がる）
+  key: 桁ごとの符号の積で和を母関数として因数分解し、各桁の交代和が高次の差分になることから 5 の指数を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JMO-P-2022-12
+  source: 日本数学オリンピック予選
+  year: 2022
+  number: 12
+  field: G
+  gist: 垂心を通る円上の点と中点の角の条件から辺 BC の長さを求める
+  units:
+  - G-028
+  - G-030
+  - G-031
+  missing: []
+  key: BHC の外接円は外接円を BC で折り返したもの。角の条件から相似を作り、中点での方べきや中線の長さで BC を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jmo2022/problems/jmo32yq.html
+- id: JJMO-P-2026-1
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 1
+  field: G
+  gist: 三角形と重なる長方形の 2 つの小三角形の面積から三角形の面積を求める
+  units:
+  - G-013
+  - G-012
+  missing: []
+  key: 長方形の辺と三角形の辺で相似な三角形ができる。面積の比を辺の比に直して全体の面積を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-2
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 2
+  field: N
+  gist: 1〜4 の並べ方で累積和の積が平方数になる最大の値
+  units:
+  - N-021
+  - N-031
+  - L-007
+  missing: []
+  key: 最後の因子は 10。並べ方を全部調べ、素因数の指数がすべて偶数になるものを探す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-3
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 3
+  field: C
+  gist: 下の桁の数字の出現回数の多い・少ないで次の桁が決まる 2026 桁の数の個数
+  units:
+  - C-005
+  - L-016
+  - C-009
+  missing: []
+  key: 出現回数の差の状態を追うと、偶数桁と奇数桁でとりうる数字の候補数が決まった型をくり返す。状態ごとの選び方を掛け合わせる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-4
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 4
+  field: N
+  gist: 各桁の平均が整数でない数が 8 個続く最小の n
+  units:
+  - N-028
+  - L-007
+  missing: []
+  key: 桁の和を桁数で割った余りを考え、1 ずつ増えると桁の和も 1 ずつ増えることから、8 個続けて割り切れない桁数と繰り上がりの位置を探す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-5
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 5
+  field: C
+  gist: 9 つの円上の 14 点に -3〜3 を 2 回ずつ割り当て、どの円の和も等しくする方法の数
+  units:
+  - C-005
+  - L-007
+  - L-009
+  missing: []
+  key: 全体の和と各点が何個の円にのるかから円の和を決め、中心付近の点から場合分けして割り当てを数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-6
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 6
+  field: G
+  gist: 辺を 3 等分する点から引いた平行線と角の条件から辺の長さを求める
+  units:
+  - G-020
+  - G-013
+  - G-018
+  missing: []
+  key: 平行線で相似な三角形を作り、角の条件から共円や相似を見つけて比を求める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-7
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 7
+  field: C
+  gist: 原点から √10 以内の格子点で、どの点も斜めの線上に駒がある最少の置き方の数
+  units:
+  - C-017
+  - L-018
+  - C-005
+  missing: []
+  key: 市松の色で斜めの線は分かれるので色ごとに考え、端の点を覆う必要から駒の最少数を出し、その数での置き方を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-8
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 8
+  field: G
+  gist: 3 辺の比の点でできる隅の三角形の内心が内側の三角形の外接円上にあるときの辺の比
+  units:
+  - G-028
+  - G-018
+  - G-023
+  missing: []
+  key: 内心の角は 90°+頂角/2 で、外接円上にあることから内側の三角形の角と頂角の関係が出る。比の条件と合わせて辺の比を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-9
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 9
+  field: C
+  gist: どの項もちょうど 2 個の項と大小が逆になる 1〜30 の並べ替えの数
+  units:
+  - C-006
+  - C-009
+  - L-007
+  missing: []
+  key: 逆転の組を辺とするとすべての次数が 2 で、閉路や鎖の形が限られる。ブロックの型に分けて漸化式で数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-10
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 10
+  field: N
+  gist: 最小公倍数と最大公約数の和と差に置きかえる操作をくり返したあとの最大公約数のとりうる値の数
+  units:
+  - N-018
+  - L-016
+  - N-021
+  missing: []
+  key: l+g と l-g の最大公約数は g の 2 倍以下に決まる。操作のたびの最大公約数の変わり方を調べ、とりうる値を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-11
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 11
+  field: C
+  gist: どの連続部分の和も -5 以上 6 以下になる 56 項の整数列の数
+  units:
+  - C-014
+  - A-018
+  - C-005
+  missing: []
+  key: 部分和の列に直すと、その最大と最小の差が 11 以下の条件になる。部分和の値の範囲を固定して道の数として数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2026-12
+  source: 日本ジュニア数学オリンピック予選
+  year: 2026
+  number: 12
+  field: G
+  gist: 円に内接する四角形と平行線でできる点の長さから EQ を求める
+  units:
+  - G-020
+  - G-018
+  - G-030
+  missing: []
+  key: 平行線で相似な三角形を順に作り、円周角で比を移して EQ を求める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2026/jjmo/problems/jjmo24yqa.pdf
+- id: JJMO-P-2025-1
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 1
+  field: N
+  gist: 和が 2025 の 2 数の最大公約数の最大
+  units:
+  - N-018
+  - N-021
+  missing: []
+  key: 最大公約数は 2025 の約数で、2025 自身にはならないので 2025 の 2 番目に大きい約数
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-2
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 2
+  field: C
+  gist: 6 本の直線上の 3 点の和がすべて 10 になる正の整数の割り当て方の数
+  units:
+  - C-005
+  - L-007
+  - A-012
+  missing: []
+  key: 直線の条件を連立方程式として扱い、自由に決められる点の値を場合分けして正の整数の解を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-3
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 3
+  field: G
+  gist: 外接円と平行線で決まる長さから BD を求める
+  units:
+  - G-030
+  - G-020
+  missing: []
+  key: 方べき BD·DC=AD·DE と、平行線による相似 DF:BE=AD:AE を合わせて BD を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-4
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 4
+  field: C
+  gist: 正三角形の盤に正六角形のタイル 6 枚を置く方法の数
+  units:
+  - C-005
+  - L-007
+  - C-017
+  missing: []
+  key: 六角形が置ける位置を列挙し、重ならない 6 個の組を場合分けで数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-5
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 5
+  field: C
+  gist: 空でない箱から 1 個ずつ集めて新しい箱を作る操作をくり返したあとの箱の数
+  units:
+  - L-016
+  - C-014
+  missing:
+  - ブルガリアン・ソリティア（分割の共役）
+  key: 箱の個数の並びを分割とみると操作は図形の回転のように働く。階段状の形に近づいて周期的になることを使う
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-6
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 6
+  field: N
+  gist: 2 つの式の連立をみたす 80000 以下の整数の組の数
+  units:
+  - A-015
+  - A-017
+  - N-043
+  missing: []
+  key: 2b=a+c で a を消すと b の 2 次式になり、因数分解して b を c の式で表し、範囲内の個数を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-7
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 7
+  field: G
+  gist: 三角形の中の 4 つの三角形の面積から辺の比 BD/DC を求める
+  units:
+  - G-012
+  - G-029
+  missing: []
+  key: 高さの共通な三角形の面積比を線分の比に直し、チェバやメネラウスの比と合わせて BD/DC を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-8
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 8
+  field: N
+  gist: 少ない枚数の平均がいつも整数なら多い枚数の平均も整数になる最小の n
+  units:
+  - N-018
+  - N-028
+  - N-021
+  missing: []
+  key: k 枚の平均が整数ならすべての数が 1〜n-4 の最小公倍数を法として等しい。n-3〜n がその最小公倍数を割る最小の n を探す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-9
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 9
+  field: G
+  gist: 円に内接する四角形の長さの条件から辺 CD を求める
+  units:
+  - G-020
+  - G-030
+  - G-018
+  missing: []
+  key: 円周角で相似な三角形を作り、比と方べきで長さの式を立てて CD を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-10
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 10
+  field: C
+  gist: 各行各列に 1 つずつ黒を置き、黒を囲む白の閉路ができない塗り方の数
+  units:
+  - C-006
+  - C-009
+  - L-007
+  missing: []
+  key: 白の閉路ができない条件を、黒のマスが隣どうしでつながるような並べ替えの型に言いかえ、漸化式で数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-11
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 11
+  field: A
+  gist: 正解数と問題番号による優先順位がいつも得点に反映される配点で、最後の問題の最小の配点
+  units:
+  - L-018
+  - A-013
+  - L-014
+  missing: []
+  key: 正解数が多い場合と同数で番号が大きい場合の条件を不等式にし、小さい配点から順に最小の値を決める
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2025-12
+  source: 日本ジュニア数学オリンピック予選
+  year: 2025
+  number: 12
+  field: C
+  gist: 引き分けが 2 つずつある総当たりで、勝ちで回る組の最少数と、そのときの結果の数
+  units:
+  - C-024
+  - C-006
+  - L-014
+  missing: []
+  key: 勝ち負けの向きを向きつきグラフとみると、閉路が少ないのは強さの順に近い並びのとき。引き分けの位置で閉路が必要になる最少の型を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2025/jjmo/problems/jjmo23yqa.pdf
+- id: JJMO-P-2024-1
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 1
+  field: N
+  gist: 各桁の和が 8 で 1 を足すと平方数になる 5 桁の最小の数
+  units:
+  - N-028
+  - N-031
+  - L-007
+  missing: []
+  key: 桁の和が 8 なので 9 で割ると 8 余り、1 を足すと 9 の倍数の平方数。3 の倍数の 2 乗を小さい順に調べる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-2
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 2
+  field: G
+  gist: 同心円の弦と接線の長さから BC を求める
+  units:
+  - G-030
+  - G-017
+  missing: []
+  key: A の内円に対する方べき AD^2 を 2 つの交点との距離の積で表し、同心円の対称から BC を出す
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-3
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 3
+  field: C
+  gist: 白黒の石の並びで、右隣が白の黒より左隣が白の黒が多くなる並べ方の数
+  units:
+  - C-014
+  - C-007
+  - L-009
+  missing: []
+  key: 黒白と白黒の境目の数の差は両端の色だけで決まる。両端の色で場合を分けて数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-4
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 4
+  field: N
+  gist: 整数部分と小数部分の積が 42 になる有限小数の最小値
+  units:
+  - N-020
+  - N-021
+  - L-007
+  missing: []
+  key: 整数部分を n とすると小数部分は 42/n で 1 未満。有限小数になる n（2 と 5 だけの素因数を残す）を小さい順に探す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-5
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 5
+  field: G
+  gist: 直角と等しい辺と相似の条件をもつ四角形の面積を求める
+  units:
+  - G-020
+  - G-019
+  missing: []
+  key: 相似の対応から角を決め、三平方で辺の長さを出して面積を計算する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-6
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 6
+  field: N
+  gist: 最大公約数が 1 の 6 つの数で比の形の 6 つの値がすべて整数になる組の数
+  units:
+  - N-021
+  - N-024
+  - C-005
+  missing: []
+  key: 6 つの比の積は 720 に等しい。素因数ごとに指数の配り方を数え、最大公約数 1 の条件で数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-7
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 7
+  field: C
+  gist: 平方数番目を消し続けて最後に 3 個残る n の個数
+  units:
+  - N-031
+  - L-010
+  - A-022
+  missing: []
+  key: 1 回の操作で残る個数は n-[√n]。最後から逆にたどって 3 個になる n の範囲を求め、指定の範囲の個数を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-8
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 8
+  field: C
+  gist: 2×2 に J が 2 個と M、O が 1 個ずつで、奇数行奇数列が J の書き方の数
+  units:
+  - C-017
+  - C-005
+  - L-007
+  missing: []
+  key: J の位置が決まると残りのマスの M と O の並びは行ごとや列ごとに 2 通りずつの型になる。自由に選べる数を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-9
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 9
+  field: C
+  gist: 円に並ぶマスを偶奇で決まる 1 歩か 2 歩で回る一周の道の数
+  units:
+  - C-009
+  - L-007
+  - C-024
+  - L-005
+  missing: []
+  key: 偶数マスと奇数マスで使える動きが違うので、道を区間ごとの型に分け、型の並びを漸化式で数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-10
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 10
+  field: G
+  gist: 辺上の点から引いた平行線の交点が外接円上にあり、ある円が辺に接するときの辺の長さ
+  units:
+  - G-030
+  - G-020
+  - G-018
+  missing: []
+  key: 平行線で相似な三角形を作り、F が外接円上にあることと接する条件を方べきで式にして AB を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-11
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 11
+  field: C
+  gist: 並べ替えで各位置が上がる・同じ・下がるかの符号の列としてありうるものの数
+  units:
+  - C-014
+  - C-009
+  - L-018
+  missing: []
+  key: 符号の列が実現できる条件を、上がる位置と下がる位置の個数の釣り合いなどで特徴づけ、道の数え上げに直して数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2024-12
+  source: 日本ジュニア数学オリンピック予選
+  year: 2024
+  number: 12
+  field: N
+  gist: ある数の約数を末尾に付け足していく列で、各項がその約数の倍数である最長の長さ
+  units:
+  - N-017
+  - N-021
+  - N-028
+  missing: []
+  key: 9·10^100 の約数は 2^a5^b と 3 や 9 の積。付け足したときの割り切れる条件を桁の数と余りで調べ、長さの上界と構成を出す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2024/problems/jjmo22yqa.pdf
+- id: JJMO-P-2023-1
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 1
+  field: N
+  gist: 約数がちょうど 6 個で各桁の和が 7 の最小の数
+  units:
+  - N-024
+  - N-028
+  - L-007
+  missing: []
+  key: 約数 6 個は p^5 か p^2q の形。桁の和が 7 なので 3 の倍数でなく、小さい候補から調べる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-2
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 2
+  field: G
+  gist: 直角台形に内接する正方形で辺の比 CR/RD を求める
+  units:
+  - G-016
+  - G-026
+  - G-020
+  missing: []
+  key: 正方形のまわりの直角三角形は合同になる。座標をおいて正方形の頂点の位置を決め、比を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-3
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 3
+  field: C
+  gist: 7 マスに A、B、C を書き、各文字に隣りあう同じ組がある書き方の数
+  units:
+  - C-021
+  - C-009
+  - C-005
+  missing: []
+  key: 同じ文字が隣りあう組のない場合などを包除原理で引き、または隣りあう組の並びで直接数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-4
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 4
+  field: N
+  gist: 相異なる 5 つの正の整数の 2 数の和のうち素数になるものの最大数
+  units:
+  - L-005
+  - N-030
+  - L-018
+  missing: []
+  key: 2 以外の素数は奇数なので偶数と奇数の組だけが候補で、その数は最大 6。6 を実現する例を作る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-5
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 5
+  field: G
+  gist: BC に平行な直線と外接円・2 辺の交点の長さから DE を求める
+  units:
+  - G-030
+  - G-020
+  missing: []
+  key: D と E で方べきを使い、平行線による相似 AD:AB=AE:AC と合わせて DE の方程式を立てる
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-6
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 6
+  field: A
+  gist: 2 次式の値が a<b<c の順に減る正の整数の組の数
+  units:
+  - A-020
+  - C-007
+  - A-015
+  missing: []
+  key: 2 次関数は軸 10002.5 について対称で、a<b のとき f(a)>f(b) は a+b<20005 と同値。この条件をみたす組を数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-7
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 7
+  field: C
+  gist: J 国の 3 人の順位が決まっているとき、合計点が J 国より高い国の数の最大
+  units:
+  - L-018
+  - L-014
+  - L-019
+  missing: []
+  key: 得点の総和を順位の範囲で評価して、J 国より高い国の数の上界を出し、得点の割り振りで達成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-8
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 8
+  field: G
+  gist: 辺と対角線の比が決まった円に内接する四角形の面積の最大値
+  units:
+  - G-024
+  - G-018
+  - A-025
+  - G-043
+  missing: []
+  key: トレミーの定理で AC·BD を AD·BC で表し、面積を対角線の積と角の正弦で書いて最大にする
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-9
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 9
+  field: C
+  gist: マスを 4 つの三角形に分けた盤の塗り方で、マスごとの赤の偶奇と辺の条件をみたすものの数
+  units:
+  - C-017
+  - L-005
+  - C-005
+  missing: []
+  key: 辺を共有する三角形が同色なので、格子の辺ごとに色を決める問題に直し、マスごとの奇数の条件を偶奇の連立として解の数を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-10
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 10
+  field: C
+  gist: 互いに素な小さい数を交互に言い、初めて約数を言った人が負けのゲームで先手が勝つ n の数
+  units:
+  - L-017
+  - N-018
+  - L-010
+  missing: []
+  key: 1 を言えば次は言えないなどの終わり方から後ろ向きに局面を調べ、n の約数と互いに素な数の構造で勝敗を分類する
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-11
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 11
+  field: C
+  gist: 同じ市の友人がちょうど半分（切り捨て）になる友人関係で、友人の組の数の最大
+  units:
+  - C-022
+  - C-018
+  - L-018
+  - L-005
+  missing: []
+  key: 同じ市の辺と違う市の辺を二通りに数え、次数の偶奇と切り捨ての条件から辺数の上界を出して構成
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2023-12
+  source: 日本ジュニア数学オリンピック予選
+  year: 2023
+  number: 12
+  field: G
+  gist: 共円の 4 点と対角線の交点、中点の長さから AM を求める
+  units:
+  - G-030
+  - G-032
+  - G-020
+  missing: []
+  key: D、B、C、E が共円なので A と P の方べきの関係を使い、中線や根軸で AM を AP、PM、BC、DE の式で表す
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2023/jjmo/problems/jjmo21yqa.html
+- id: JJMO-P-2022-1
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 1
+  field: C
+  gist: 2×2 の盤に 3 文字を隣りあうマスが異なるように書く方法の数
+  units:
+  - C-010
+  missing: []
+  key: 4 つのマスは閉路をなすので、対角の 2 マスが同じか違うかで分けて数える
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-2
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 2
+  field: N
+  gist: 15(p-1)(q-1) が pq で割り切れる素数の組の pq の和
+  units:
+  - N-030
+  - N-017
+  - N-043
+  missing: []
+  key: p は p-1 を割らないので p は 15(q-1) を割る。p が 3 か 5 か、p が q-1 を割るかで分け、大きさで絞る
+  basis: self
+  confidence: 高
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-3
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 3
+  field: G
+  gist: 長方形を含む円に内接する五角形で外接円の直径を求める
+  units:
+  - G-019
+  - G-018
+  - G-024
+  missing: []
+  key: 長方形の対角線が直径。A は弧の中点なので、三平方や円周角と正弦で直径の方程式を立てる
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-4
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 4
+  field: G
+  gist: 共円の条件と接する条件をもつ辺上の点から AE の長さを求める
+  units:
+  - G-030
+  - G-018
+  - G-023
+  missing: []
+  key: 2 つの共円から A と C での方べきの式を作り、接する条件を接弦の角で共円に結びつけて連立する
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-5
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 5
+  field: C
+  gist: 45×45 に 2022 個の黒マスを塗ったとき必ずある黒い正方形の大きさの最大
+  units:
+  - L-015
+  - L-018
+  - L-014
+  missing: []
+  key: 白は 3 マスしかないので、盤を n×n の区画に分ければ鳩の巣原理で白のない区画がある。白 3 マスで大きな正方形をすべて妨げる置き方で上界
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-6
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 6
+  field: G
+  gist: 3 つの直角二等辺三角形が重なった図で五角形の面積から長さを求める
+  units:
+  - G-019
+  - G-008
+  - G-015
+  missing: []
+  key: 直角二等辺三角形は 90° 回転で重なるので、回転で合同な三角形を見つけて面積を分け、三平方で長さを出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-7
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 7
+  field: C
+  gist: 和が 2022 の 5 つの非負整数で 3 桁のものがない組の数
+  units:
+  - C-013
+  - C-021
+  - L-007
+  missing: []
+  key: 各数は 2 桁以下か 1000 以上。1000 以上の数の個数で場合を分け、残りの和を重複組合せと包除で数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-8
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 8
+  field: C
+  gist: 中の抜けた立方体の 20 個のブロックに 1〜8 を割り当て、各面で異なる方法の数
+  units:
+  - C-006
+  - G-021
+  - L-007
+  missing: []
+  key: 角のブロックは 3 面、辺のブロックは 2 面に属する。面ごとの条件から角と辺の割り当ての関係を調べ、順列で数える
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-9
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 9
+  field: N
+  gist: ちょうど 1 桁が 0 で他が 2 の数を倍数にもつ 2022 以下の n の数
+  units:
+  - N-028
+  - N-033
+  - L-007
+  missing: []
+  key: その形の数は 2·(10^k-1)/9·… の形。n の 2 と 5 の因数は 0 の位置で制限され、残りはオイラーの定理で必ず作れることから数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-10
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 10
+  field: C
+  gist: 素数個のマスの円で 2 人が決まった歩数で駒を進め、後手が目標マスに必ず止められる組の数
+  units:
+  - L-017
+  - N-032
+  - N-028
+  missing: []
+  key: 1 往復の移動量の和を 103 を法として考え、後手がいつでも調整できる歩数の組の条件を求めて数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-11
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 11
+  field: G
+  gist: 二等辺三角形の内部で角の等しい点 P と面積の条件から底辺の長さを求める
+  units:
+  - G-020
+  - G-013
+  - G-012
+  missing: []
+  key: ∠PBC=∠PCA と二等辺から三角形 PAB と PBC が相似になる。面積比を相似比の 2 乗とみて BC を出す
+  basis: self
+  confidence: 中
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html
+- id: JJMO-P-2022-12
+  source: 日本ジュニア数学オリンピック予選
+  year: 2022
+  number: 12
+  field: C
+  gist: 部屋と廊下のグラフでロボットを同時に動かせる最大台数と、その配置の数
+  units:
+  - C-022
+  - C-024
+  - L-018
+  missing: []
+  key: ロボットの移動は辺の向きづけで、すれ違いの禁止と到着先の異なりから各頂点の入る数が 1 以下。グラフの構造から最大台数を出して配置を数える
+  basis: self
+  confidence: 低
+  url: https://www.imojp.org/archive/mo2022/jjmo2022/problems/jjmo20yq.html

@@ -1,0 +1,147 @@
+# 網羅表：GRE Physics Test（ETS）（組み込みの係が作り、check_fragment.py で確かめた）
+sources:
+  PH28:
+    title: 'ETS, GRE Subject Tests: Content Structure（Physics）（2023 年 9 月以降の試験）'
+    url: https://www.ets.org/gre/test-takers/subject-tests/about/content-structure.html
+    date: 2026-11-07
+  PH29:
+    title: ETS, GRE Physics Test Practice Book（2024 年版）
+    url: https://www.ets.org/content/dam/ets-org/pdfs/gre/practice-book-physics.pdf
+    date: 2026-11-07
+items:
+- id: GP-01
+  field: 古典力学（20%）
+  topic: 古典力学
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-001
+  - P-002
+  - P-003
+  - P-004
+  - P-005
+  - P-006
+  - P-007
+  - P-008
+  - P-009
+  - P-010
+  - P-011
+  - P-012
+  - P-013
+  - P-016
+  - P-018
+- id: GP-02
+  field: 電磁気学（18%）
+  topic: 電磁気学
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-029
+  - P-030
+  - P-031
+  - P-032
+  - P-033
+  - P-034
+  - P-035
+- id: GP-03
+  field: 光学と波動（8%）
+  topic: 光学と波動
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-021
+  - P-022
+  - P-023
+  - P-024
+  - P-027
+- id: GP-04
+  field: 熱力学と統計力学（10%）
+  topic: 熱力学と統計力学
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-042
+  - P-043
+  - P-044
+  - P-045
+  - P-048
+  - P-049
+  - P-050
+  - P-051
+- id: GP-05
+  field: 量子力学（13%）
+  topic: 量子力学
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-070
+  - P-071
+  - P-075
+  - P-076
+  - P-078
+  - P-082
+- id: GP-06
+  field: 原子物理（10%）
+  topic: 原子物理
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-069
+  - P-088
+  - P-089
+  - P-051
+- id: GP-07
+  field: 特殊相対論（6%）
+  topic: 特殊相対論
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-057
+  - P-058
+- id: GP-08
+  field: 実験の方法（6%）
+  topic: 実験の方法
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-117
+  - P-118
+- id: GP-09
+  field: 専門の話題（9%）
+  topic: 専門の話題（原子核、素粒子、物性、天体物理など）
+  sources:
+  - PH28
+  - PH29
+  units:
+  - P-104
+  - P-107
+  - P-092
+  - P-093
+  - P-094
+  - P-095
+  - P-096
+  - P-099
+  - P-068
+- id: GP-10
+  field: 数学の方法
+  topic: 数学の方法（試験で使う数学）
+  sources:
+  - PH28
+  units:
+  - D-014
+  - D-018
+  - D-022
+  - D-049
+  - M-003
+  - M-004
+  - D-029
+  - D-030
+  - D-032

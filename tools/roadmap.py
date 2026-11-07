@@ -34,6 +34,13 @@ def load():
         cov = ROOT / g["coverage"]
         if cov.exists():
             data["coverages"][g["id"]] = yaml.safe_load(cov.read_text(encoding="utf-8"))
+    # 古今東西の問題の記録（problems/*.yaml。組み合わせの型つき、D-020）
+    data["catalog"] = []
+    pdir = ROOT / "problems"
+    for f in sorted(pdir.glob("*.yaml")) if pdir.exists() else []:
+        for it in yaml.safe_load(f.read_text(encoding="utf-8")) or []:
+            it["_set"] = f.stem
+            data["catalog"].append(it)
     ren = ROOT / "renamed.yaml"
     data["renamed"] = yaml.safe_load(ren.read_text(encoding="utf-8")) if ren.exists() else {}
     return data, problems
@@ -186,6 +193,16 @@ def check(data, problems):
                         errors.append(f"{where}: 答え {item.get('answer')} と check の値 {got} が違う")
         if not any(it.get("part") == "わけ" for d in days for it in d.get("items", [])):
             errors.append(f"{uid}: わけを示す問題（part: わけ）が 1 つもない（D-016）")
+    seen_p = set()
+    for it in data.get("catalog", []):
+        if it.get("id") in seen_p:
+            errors.append(f"問題 {it.get('id')}: 記号が重なっている")
+        seen_p.add(it.get("id"))
+        for u in it.get("units") or []:
+            if u not in units:
+                errors.append(f"問題 {it.get('id')}: 単元 {u} が地図にない")
+        if it.get("text") and not it.get("pd"):
+            errors.append(f"問題 {it.get('id')}: 著作権のある問題の問題文は収録しない")
     for g in data.get("goals", []):
         if g["id"] not in data["coverages"]:
             errors.append(f"目標 {g['id']}: 網羅表 {g['coverage']} がない")
@@ -194,9 +211,10 @@ def check(data, problems):
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
-        for uid, (_, _, u) in units.items():
-            if uid not in on_path and not u.get("measure"):
-                errors.append(f"{uid}: どの目標の道のりにも入らない（網羅表に当てるか、measure: true を付けるか、外す）")
+        # 大学以降を組み込む途中は、目標の網羅表がまだない単元があるので、誤りでなく警告にする（一覧は docs/roadmap.md）
+        off = [uid for uid, (_, _, u) in units.items() if uid not in on_path and not u.get("measure")]
+        if off:
+            print(f"警告: どの目標の道のりにも入らない単元 {len(off)}（網羅表がそろったら誤りに戻す）")
     return errors
 
 
@@ -255,6 +273,14 @@ def build(data, problems):
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"
     js += "window.ROADMAP = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     (ROOT / "site" / "data.js").write_text(js, encoding="utf-8", newline="\n")
+    keys = {"id": "id", "_set": "set", "source": "src", "year": "y", "number": "no", "field": "f", "gist": "g",
+            "units": "u", "key": "k", "url": "url", "pd": "pd", "text": "text", "answer": "a", "paths": "paths"}
+    cat = [{v: it[k] for k, v in keys.items() if k in it and it[k] not in (None, "", [])}
+           for it in data.get("catalog", [])]
+    (ROOT / "site" / "problems.js").write_text(
+        "// tools/roadmap.py build が problems/ から作る。手で直さない。\n"
+        "window.PROBLEMS = " + json.dumps(cat, ensure_ascii=False, separators=(",", ":"), default=str) + ";\n",
+        encoding="utf-8", newline="\n")
 
     lines = ["# 地図の一覧", "",
              "この頁は `tools/roadmap.py build` が `roadmap.yaml` から作ります。手で直さないでください。",

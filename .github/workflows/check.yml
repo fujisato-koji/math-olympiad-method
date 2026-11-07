@@ -16,4 +16,4 @@ jobs:
       - name: 地図と問題を確かめ、作ったものが最新かを見る
         run: |
           python tools/roadmap.py build
-          git diff --exit-code site/data.js docs/roadmap.md docs/coverage.md || (git status --short; exit 1)
+          git diff --exit-code site/data.js site/problems.js docs/roadmap.md docs/coverage.md || (git status --short; exit 1)
