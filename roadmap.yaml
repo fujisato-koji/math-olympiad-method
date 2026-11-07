@@ -983,7 +983,7 @@ units:
   - {id: P-047, title: 確率と統計の基礎（確率変数、同時確率と条件付き確率、確率分布、平均と分散）, stage: 6, level: 3, region: netsu, needs: [S-002, S-003], days: 8}
   - {id: P-057, title: 相対性原理とローレンツ変換（光速度不変、マイケルソン＝モーリーの実験、同時性の相対性、時間の遅れとローレンツ収縮、速度の合成、時空図とパラドックス）, stage: 6, level: 3, region: soutai, needs: [P-003, P-034], days: 8}
   - {id: P-059, title: 等価原理と曲がった時空の入口（重力赤方偏移、シュワルツシルト計量、測地線、粒子と光の軌道、シャピロ遅延）, stage: 6, level: 3, region: soutai, needs: [P-057, P-058], days: 8}
-  - {id: P-122, title: 気象学入門（大気の組成と構造、観測、湿度と雲、気圧と風系、天気図と前線）, stage: 6, level: 3, region: chikyu, needs: [P-044, P-013, W-049], days: 8}
+  - {id: P-122, title: 気象学入門（大気の組成と構造、観測、湿度と雲、気圧と風系、天気図と前線）, stage: 6, level: 3, region: chikyu, needs: [P-044, P-013, W-049], days: 8, alt: {P-044: [P-123]}}
   - {id: P-123, title: 大気の熱力学と安定度（放射の法則、熱力学第一法則、断熱減率と浮力、熱力学図）, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-124, title: 空気塊に働く力と釣り合い（静水圧・地衡風・傾度風）、大気中の水分, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-125, title: 温度風と温度移流、発散・渦度・鉛直運動、前線形成と低気圧発生, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
@@ -1004,8 +1004,8 @@ units:
   - {id: F-020, title: 投資家の選好とポートフォリオ選択（期待効用、リスク回避、平均分散）, stage: 6, level: 3, region: toshi, needs: [S-003, M-010, D-014, A-028], days: 10}
   - {id: F-021, title: 先渡・先物・スワップと二項モデル（裁定と複製による価格づけ）, stage: 6, level: 3, region: toshi, needs: [F-009, S-001, C-015], days: 10}
   - {id: E-154, title: 生産管理とインダストリアル・エンジニアリング（作業研究、工程管理、PERT と CPM、設備配置）, stage: 6, level: 2, region: keiei-kogaku, needs: [C-012], days: 8}
-  - {id: E-155, title: 在庫管理と需要予測（経済的発注量、安全在庫、指数平滑法）, stage: 6, level: 3, region: keiei-kogaku, needs: [E-154, S-018, A-022, D-005], days: 8}
-  - {id: E-156, title: 品質管理と統計的工程管理（管理図、工程能力、抜取検査、QC 七つ道具）, stage: 6, level: 3, region: keiei-kogaku, needs: [S-018, S-019, S-020], days: 8}
+  - {id: E-155, title: 在庫管理と需要予測（経済的発注量、安全在庫、指数平滑法）, stage: 6, level: 3, region: keiei-kogaku, needs: [E-154, S-018, A-022, D-005], days: 8, alt: {S-018: [S-041]}}
+  - {id: E-156, title: 品質管理と統計的工程管理（管理図、工程能力、抜取検査、QC 七つ道具）, stage: 6, level: 3, region: keiei-kogaku, needs: [S-018, S-019, S-020], days: 8, alt: {S-019: [S-041]}}
   - {id: F-040, title: 職業倫理と行為基準（信任義務、利益相反、公正な開示）, stage: 6, level: 2, region: shokugyo-seido, needs: [F-010], days: 8}
   - {id: F-041, title: 個人の資産設計と税（所得税と相続税、目標に基づく計画、資産承継）, stage: 6, level: 3, region: shokugyo-seido, needs: [F-005, F-010], days: 8}
   - {id: F-042, title: 管理会計と事業費の分析（原価計算、予算管理、業績評価）, stage: 6, level: 3, region: kaikei, needs: [F-010, F-007], days: 8}
@@ -1024,7 +1024,7 @@ units:
   - {id: H-043, title: 環境の化学（大気の化学とオゾン層、水の化学と水質、元素の循環、グリーンケミストリー）, stage: 6, level: 3, region: kankyo-kagaku, needs: [H-028, H-026, H-023], days: 8}
   - {id: H-044, title: 生体分子の化学（単糖と配糖体、アミノ酸とペプチド、核酸の化学、脂質と膜）, stage: 6, level: 3, region: yuki, needs: [H-040, H-038, B-028], days: 10}
   - {id: B-044, title: 遺伝子の発現の調節（オペロン、転写因子、細胞の分化、エピジェネティクスの入口）, stage: 6, level: 3, region: bunshi-saibo, needs: [B-032], days: 8}
-  - {id: B-045, title: 遺伝の解析（連鎖と組換え、伴性遺伝、遺伝子の相互作用、カイ二乗検定）, stage: 6, level: 3, region: iden-shinka, needs: [B-024, B-032, S-019], days: 8}
+  - {id: B-045, title: 遺伝の解析（連鎖と組換え、伴性遺伝、遺伝子の相互作用、カイ二乗検定）, stage: 6, level: 3, region: iden-shinka, needs: [B-024, B-032, S-019], days: 8, alt: {S-019: [S-041]}}
   - {id: B-046, title: 発生（受精、卵割と原腸形成、誘導、形態形成とホックス遺伝子、幹細胞）, stage: 6, level: 3, region: hassei, needs: [B-044, B-023], days: 10}
   - {id: I-001, title: 薬理学（受容体と用量反応、作動薬と拮抗薬、酵素阻害、薬の作用と副作用）, stage: 6, level: 3, region: kusuri-doku, needs: [B-034, B-035, B-029, H-024, I-010], days: 10}
   - {id: I-002, title: 薬物動態（吸収・分布・代謝・排泄、コンパートメントモデル、半減期と投与設計）, stage: 6, level: 3, region: kusuri-doku, needs: [I-001, B-036, D-044], days: 10}
@@ -1134,7 +1134,7 @@ units:
   - {id: P-016, title: ラグランジュ形式（一般化座標、ホロノミックな拘束、ネーターの定理と保存則、微小振動と基準振動、電磁場中の荷電粒子）, stage: 7, level: 3, region: kaiseki-rikigaku, needs: [P-008, P-011, P-012], days: 10}
   - {id: P-018, title: ハミルトン形式（相空間、正準方程式、ルジャンドル変換、ポアソン括弧、リウヴィルの定理）, stage: 7, level: 4, region: kaiseki-rikigaku, needs: [P-015], days: 10}
   - {id: P-019, title: 正準変換とハミルトン＝ヤコビ理論（作用・角変数、断熱不変量、可積分系の入口）, stage: 7, level: 4, region: kaiseki-rikigaku, needs: [P-018], days: 10}
-  - {id: P-026, title: 波束・分散と群速度（位相速度と群速度、分散媒質、フーリエ変換による波の表し方）, stage: 7, level: 3, region: hado, needs: [P-008, D-022, D-049], days: 10}
+  - {id: P-026, title: 波束・分散と群速度（位相速度と群速度、分散媒質、フーリエ変換による波の表し方）, stage: 7, level: 3, region: hado, needs: [P-008, D-022, D-049], days: 10, alt: {D-022: [E-073]}}
   - {id: P-027, title: 偏光と物質中の光（屈折率と分散、吸収、ブルースター角、偏光子とマリュスの法則、結晶光学）, stage: 7, level: 3, region: hado, needs: [P-035], days: 10}
   - {id: P-035, title: 物質中の電磁場（分極電荷と磁化電流、誘電体と磁性体、境界条件、物質中のマクスウェル方程式とエネルギー）, stage: 7, level: 3, region: denjiki, needs: [P-034, D-049], days: 10}
   - {id: P-037, title: 相対論的電磁気学（4 元電流と連続の式、4 元ポテンシャルとゲージ変換、電磁場テンソル、電磁場のローレンツ変換、共変形のマクスウェル方程式、一様な場の中の荷電粒子）, stage: 7, level: 3, region: denjiki, needs: [P-057, P-058, M-012], days: 10}
@@ -1188,7 +1188,7 @@ units:
   - {id: F-022, title: 資本資産価格モデル（CAPM）とファクターモデル、運用成果の測定, stage: 7, level: 3, region: toshi, needs: [F-020, S-020], days: 8}
   - {id: F-023, title: 企業金融（資本コスト、資本構成、配当政策、企業価値の評価）, stage: 7, level: 3, region: kaikei, needs: [F-007, F-010, F-011, F-022], days: 10}
   - {id: F-024, title: ゲーム理論（ナッシュ均衡、展開形ゲーム、オークション、情報の非対称性）, stage: 7, level: 3, region: keizai, needs: [F-012, K-011, S-001], days: 10}
-  - {id: F-025, title: 経済成長と動学マクロ経済学（成長モデル、最適成長と動的計画法、景気循環）, stage: 7, level: 3, region: keizai, needs: [F-013, D-044, K-010], days: 10}
+  - {id: F-025, title: 経済成長と動学マクロ経済学（成長モデル、最適成長と動的計画法、景気循環）, stage: 7, level: 3, region: keizai, needs: [F-013, D-044, K-010], days: 10, alt: {K-010: [D-014]}}
   - {id: F-026, title: 金融仲介と銀行（満期変換、取り付けのモデル、金融危機と規制）, stage: 7, level: 3, region: keizai, needs: [F-024, F-013], days: 8}
   - {id: F-027, title: 営業保険料と収益検証（付加保険料、解約返戻金、アセットシェア、契約者配当）, stage: 7, level: 3, region: seimei-nenkin, needs: [F-016], days: 10}
   - {id: F-028, title: 連合生命と多重状態モデル（連生保険と連生年金、多重脱退、就業不能・要介護の給付）, stage: 7, level: 3, region: seimei-nenkin, needs: [F-016, S-005], days: 10}
@@ -1212,13 +1212,13 @@ units:
   - {id: S-034, title: ブートストラップ（再標本化による標準誤差と信頼区間、ジャックナイフ）, stage: 7, level: 3, region: tokei, needs: [S-018, S-024], days: 8}
   - {id: S-040, title: 多重検定と偽発見率（族ごとの誤り率、ベンジャミニ–ホッホベルク法）, stage: 7, level: 3, region: tokei, needs: [S-019], days: 8}
   - {id: W-015, title: 地球の形と重力（重力のポテンシャル、ジオイド、重力異常、アイソスタシー）, stage: 7, level: 3, region: chikyu-naibu, needs: [P-009, D-018, W-006], days: 8}
-  - {id: W-016, title: 火成岩の成因（マグマの発生、部分融解、結晶分化、状態図による読み）, stage: 7, level: 3, region: ganseki, needs: [W-008, W-013, H-036], days: 8}
+  - {id: W-016, title: 火成岩の成因（マグマの発生、部分融解、結晶分化、状態図による読み）, stage: 7, level: 3, region: ganseki, needs: [W-008, W-013, H-036], days: 8, alt: {H-036: [P-046]}}
   - {id: W-017, title: 地球の化学組成と元素の分配（地球と隕石の組成、親石元素と親鉄元素、微量元素の分配）, stage: 7, level: 3, region: chikyu-kagaku, needs: [W-013, H-012, H-036], days: 8}
   - {id: W-018, title: 堆積過程と堆積岩（粒子の運搬と沈降、堆積構造と堆積相、続成作用）, stage: 7, level: 3, region: chiso, needs: [W-002, W-008, P-014], days: 8}
   - {id: W-019, title: 変成作用と変成岩（温度と圧力の条件、変成相、地質温度圧力計）, stage: 7, level: 3, region: ganseki, needs: [W-016, H-036], days: 8}
   - {id: W-020, title: 構造地質学（応力とひずみ、断層と褶曲、岩石の破壊）, stage: 7, level: 3, region: chikyu-naibu, needs: [E-002, W-006], days: 8}
   - {id: W-021, title: 地震波の伝わり方（弾性体の波動方程式、P 波と S 波、表面波、走時と波線）, stage: 7, level: 3, region: jishin-kazan, needs: [W-005, E-002, P-025, D-049], days: 9}
-  - {id: W-022, title: 地球の熱（熱伝導と放射性元素による発熱、地殻熱流量、海洋底の冷却と水深）, stage: 7, level: 3, region: chikyu-naibu, needs: [P-042, D-049, W-012], days: 8}
+  - {id: W-022, title: 地球の熱（熱伝導と放射性元素による発熱、地殻熱流量、海洋底の冷却と水深）, stage: 7, level: 3, region: chikyu-naibu, needs: [P-042, D-049, W-012], days: 8, alt: {D-049: [E-039]}}
   - {id: W-023, title: 地形と地表の過程（風化と侵食、河川と氷河、斜面、地形の発達）, stage: 7, level: 3, region: chiso, needs: [W-018, P-014, H-024], days: 8}
   - {id: W-024, title: 潮汐（起潮力、海と固体地球の潮汐、潮汐による散逸と月の後退）, stage: 7, level: 3, region: chikyu-naibu, needs: [P-009, P-012, W-015], days: 8}
   - {id: F-050, title: 開放経済のマクロ経済学（国際収支、為替相場の決定、マンデル–フレミング・モデル、為替制度、資本移動と通貨危機）, stage: 7, level: 3, region: keizai, needs: [F-013, F-025], days: 10}
@@ -1231,8 +1231,8 @@ units:
   - {id: H-047, title: 有機合成（逆合成解析、保護基、複素環の合成、多段階合成、不斉合成と不斉触媒）, stage: 7, level: 3, region: yuki, needs: [H-040, H-041, H-042], days: 12}
   - {id: H-048, title: 電気化学と電池（電極反応、ネルンストの式、過電圧、リチウムイオン電池、燃料電池、腐食と防食）, stage: 7, level: 3, region: butsuri-kagaku, needs: [H-036, H-037], days: 10}
   - {id: H-049, title: 材料化学（金属・セラミックス・半導体・複合材料、構造と性質、ナノ粒子と量子ドット）, stage: 7, level: 3, region: zairyo, needs: [H-019, H-035, P-095], days: 10}
-  - {id: I-003, title: 臨床試験と医薬品の開発（非臨床試験、臨床試験の相、無作為化比較試験、承認と規制、生命倫理）, stage: 7, level: 3, region: kusuri-doku, needs: [I-002, S-019, S-031], days: 8}
-  - {id: I-004, title: 人体の生理学（循環と呼吸の調節、腎臓、内分泌系、高地・潜水・宇宙での生理）, stage: 7, level: 3, region: jintai, needs: [B-035, B-036, P-043, D-044], days: 10}
+  - {id: I-003, title: 臨床試験と医薬品の開発（非臨床試験、臨床試験の相、無作為化比較試験、承認と規制、生命倫理）, stage: 7, level: 3, region: kusuri-doku, needs: [I-002, S-019, S-031], days: 8, alt: {S-019: [S-041]}}
+  - {id: I-004, title: 人体の生理学（循環と呼吸の調節、腎臓、内分泌系、高地・潜水・宇宙での生理）, stage: 7, level: 3, region: jintai, needs: [B-035, B-036, D-044], days: 10}
   - {id: B-052, title: 細胞と分子の神経科学（イオンチャネルと膜電位、活動電位の式、シナプス伝達と可塑性、神経伝達物質と受容体）, stage: 7, level: 3, region: shinkei, needs: [B-034, B-031, D-046], days: 12}
   - {id: B-056, title: 群集生態学（ニッチと競争と共存、食物網と栄養段階の動態、撹乱と遷移、島の生物地理）, stage: 7, level: 3, region: seitai, needs: [B-055, B-041], days: 10}
   - {id: B-057, title: 生態系と生物圏の生態学（生産と分解、物質とエネルギーの流れ、バイオーム、気候の変化と生態系）, stage: 7, level: 3, region: seitai, needs: [B-041, B-055, P-120], days: 10}
@@ -1269,16 +1269,16 @@ units:
   - {id: I-017, title: 消化管と肝臓の生理（消化と吸収の調節、腸と肝臓の循環、肝臓の代謝と解毒、胆汁、腸の守り）, stage: 7, level: 3, region: jintai, needs: [B-036, B-035], days: 8}
   - {id: I-018, title: 生殖の生理（性の分化、視床下部・下垂体・性腺の軸、月経周期、妊娠と分娩の生理、避妊と不妊）, stage: 7, level: 3, region: jintai, needs: [B-035, B-023, I-004], days: 8}
   - {id: I-028, title: 病原体の生物学（細菌・ウイルス・真菌・寄生虫が病気を起こすしくみ、毒素、感染の経路、免疫からの逃れ方、配列による病原体の同定）, stage: 7, level: 3, region: kansen-meneki, needs: [B-043, B-037, B-001, B-144], days: 10}
-  - {id: I-035, title: 疫学研究のデザイン（コホート研究、症例対照研究、横断研究、相対危険とオッズ比、交絡と偏り）, stage: 7, level: 3, region: ekigaku, needs: [I-033, S-031, S-019], days: 9}
+  - {id: I-035, title: 疫学研究のデザイン（コホート研究、症例対照研究、横断研究、相対危険とオッズ比、交絡と偏り）, stage: 7, level: 3, region: ekigaku, needs: [I-033, S-031, S-019], days: 9, alt: {S-019: [S-041]}}
   - {id: I-036, title: 世界の健康（疾病負荷と DALY、人口と疫学の転換、健康の社会的な決定要因と格差、保健医療の制度と皆保険）, stage: 7, level: 3, region: ekigaku, needs: [I-033], days: 8}
   - {id: I-037, title: 感染症の数理モデル（SIR と SEIR、基本再生産数と次世代行列、閾値定理と集団免疫の接種率、齢構造とネットワークのモデル、データへの当てはめ）, stage: 7, level: 3, region: ekigaku, needs: [D-046, D-053, B-055, I-033], days: 10}
   - {id: I-038, title: スクリーニングと予防（検診の評価、リードタイムと長さの偏り、過剰診断、予防の段階、必要治療数）, stage: 7, level: 3, region: ekigaku, needs: [I-035, I-043], days: 8}
-  - {id: I-043, title: 臨床検査の読み方（血液と尿の検査、基準範囲の決め方、感度と特異度、予測値と ROC 曲線、検査の誤差と変動）, stage: 7, level: 3, region: rinsho, needs: [S-001, S-018, I-004], days: 8}
+  - {id: I-043, title: 臨床検査の読み方（血液と尿の検査、基準範囲の決め方、感度と特異度、予測値と ROC 曲線、検査の誤差と変動）, stage: 7, level: 3, region: rinsho, needs: [S-001, S-018, I-004], days: 8, alt: {S-018: [S-041], S-001: [C-043]}}
   - {id: I-044, title: 診断の推論（病歴と診察、鑑別診断の立て方、検査前確率と尤度比、ベイズの更新と治療の閾値、認知の偏りと誤診）, stage: 7, level: 3, region: rinsho, needs: [I-043, Q-009], days: 9}
   - {id: Q-006, title: 心理学の研究の方法と再現性（実験・観察・面接・質問紙、被験者内と被験者間の計画、統制と無作為化とカウンターバランス、効果量と検出力、研究の倫理、再現性の危機と多くの研究室での共同の追試、p ハッキングと出版の偏り、事前登録と登録報告）, stage: 7, level: 3, region: shinri-hoho, needs: [Q-003, S-019, S-031], days: 10}
   - {id: Q-007, title: 学習：条件づけから予測誤差へ（古典的条件づけとオペラント条件づけ、消去と自発的回復、強化のスケジュール、観察による学習、予測誤差で学ぶレスコーラ–ワグナーのモデルとブロッキング、ドーパミンの報酬予測誤差と TD 学習へのつながり）, stage: 7, level: 3, region: shinri-gakushu, needs: [B-039, A-022], days: 10}
   - {id: Q-008, title: 言語と思考（語と文の理解（予測と曖昧さの解消、目の動きで調べる）、言語の産出と身ぶり、概念とカテゴリー、演繹と確率の推論、問題解決と類推、言語が思考に与える影響の実験（強いサピア–ウォーフ仮説は支持されない））, stage: 7, level: 3, region: shinri-ninchi, needs: [Q-005, L-013], days: 10}
-  - {id: Q-009, title: 判断と意思決定（確率の判断とベイズの規則からのずれ、ヒューリスティクス（利用可能性・代表性・係留）、損失回避と参照点、フレーミング、時間割引、過信と自分の能力の評価、単純なヒューリスティクスの生態学的合理性、追試で弱まった効果）, stage: 7, level: 3, region: shinri-ninchi, needs: [Q-008, S-001], days: 10}
+  - {id: Q-009, title: 判断と意思決定（確率の判断とベイズの規則からのずれ、ヒューリスティクス（利用可能性・代表性・係留）、損失回避と参照点、フレーミング、時間割引、過信と自分の能力の評価、単純なヒューリスティクスの生態学的合理性、追試で弱まった効果）, stage: 7, level: 3, region: shinri-ninchi, needs: [Q-008, S-001], days: 10, alt: {S-001: [C-043]}}
   - {id: Q-010, title: 発達（乳児の物・数・空間の理解を調べる方法（注視時間と期待違反）、言語の獲得（統計的学習、語と動詞の学習）、心の理論と誤信念課題、実行機能、愛着と気質、生涯の認知の変化、ピアジェの段階説を置き換えた現代の見方、多くの国での共同の追試）, stage: 7, level: 3, region: shinri-hattatsu, needs: [Q-005, Q-008], days: 12}
   - {id: Q-011, title: 社会の認知（自己と他者の認識と帰属、印象の形成、態度と説得と認知的不協和、ステレオタイプと偏見の測り方とその限界、同調・服従・集団、協力と信頼の実験と文化による違い、WEIRD の偏り、大規模な追試で残った知見と残らなかった知見）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-010, Q-006], days: 10}
   - {id: Q-012, title: 感情と動機（感情の成り立ち（評価・からだの反応・表出）と測り方、基本感情説と構成主義の論争、ストレスと対処、感情の調整、報酬と動機づけ（欲しいと好き）、内発的動機づけと自己決定理論、幸福感の測り方）, stage: 7, level: 3, region: shinri-shakai, needs: [Q-007, B-035], days: 10}
@@ -1363,7 +1363,7 @@ units:
   - {id: S-017, title: 裁定価格理論, stage: 8, level: 4, region: kakuritsu-katei, needs: [S-011], days: 12}
   - {id: K-004, title: ポアソン方程式の差分法, stage: 8, level: 3, region: suchi, needs: [K-002, K-003, D-049, M-007], days: 12}
   - {id: K-005, title: 初期値問題の偏微分方程式の差分法と安定性, stage: 8, level: 3, region: suchi, needs: [K-004], days: 12}
-  - {id: K-006, title: スペクトル法, stage: 8, level: 3, region: suchi, needs: [K-004, D-075, D-077], days: 12}
+  - {id: K-006, title: スペクトル法, stage: 8, level: 3, region: suchi, needs: [K-004, D-075, D-077], days: 12, alt: {D-075: [E-073]}}
   - {id: K-007, title: 線形方程式の反復法, stage: 8, level: 3, region: suchi, needs: [K-004], days: 12}
   - {id: K-008, title: 固有値の数値計算, stage: 8, level: 3, region: suchi, needs: [K-007], days: 12}
   - {id: K-017, title: 仕様と不変条件、テスト、抽象データ型、デザインパターン, stage: 8, level: 3, region: programming, needs: [K-016], days: 12}
@@ -1416,7 +1416,7 @@ units:
   - {id: K-086, title: 視覚と知覚、操作の計画と制御、位置推定、ロボットのための機械学習, stage: 8, level: 3, region: robotics, needs: [P-016, P-025, D-053], days: 12}
   - {id: K-087, title: 操作のための知覚、ロボットの運動学と軌道生成、衝突のない運動計画, stage: 8, level: 3, region: robotics, needs: [K-012, K-013, K-014, K-046, K-047], days: 12}
   - {id: K-088, title: タスクと運動の計画、不確かさの下での計画、操作の動力学と制御, stage: 8, level: 3, region: robotics, needs: [K-012, K-013, K-014, K-046, K-047, K-084], days: 12}
-  - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, level: 3, region: bunshi-saibo, needs: [P-046, H-044, B-032], days: 12}
+  - {id: B-006, title: 核酸・タンパク質・糖の構造の化学的基礎と、細胞の成分の化学, stage: 8, level: 3, region: bunshi-saibo, needs: [P-046, H-044, B-032], days: 12, alt: {P-046: [H-036]}}
   - {id: B-007, title: 酵素学の基礎と生化学反応の機構, stage: 8, level: 3, region: bunshi-saibo, needs: [B-006, B-029, H-037], days: 12}
   - {id: B-008, title: 糖・脂肪・アミノ酸の代謝, stage: 8, level: 3, region: bunshi-saibo, needs: [B-007, B-030], days: 12}
   - {id: B-009, title: 分子生物学（遺伝子制御、DNA 複製、遺伝的組換え、翻訳）, stage: 8, level: 3, region: bunshi-saibo, needs: [B-001, B-002, B-006, B-007, B-008, B-044, B-033], days: 12}
@@ -1431,7 +1431,7 @@ units:
   - {id: K-115, title: 分子・細胞系の解析（分子モデリング、代謝と遺伝子制御のネットワーク、シグナル伝達）, stage: 8, level: 3, region: seibutsu-keisan, needs: [K-015, D-045, P-046, B-003, B-006, B-007, B-008], days: 12}
   - {id: K-116, title: 深層学習による生命科学, stage: 8, level: 3, region: seibutsu-keisan, needs: [K-015, B-006, B-007, B-008], days: 12}
   - {id: K-117, title: 分子・細胞生物学の機械学習（タンパク質構造予測、画像化）, stage: 8, level: 3, region: seibutsu-keisan, needs: [K-012, K-013, K-014, K-046, B-006, B-007, B-008], days: 12}
-  - {id: P-017, title: 剛体の力学（慣性テンソルの対角化、オイラー方程式、オイラーのこまとラグランジュのこま、歳差と章動）, stage: 8, level: 3, region: kaiseki-rikigaku, needs: [M-012, P-011, P-016], days: 12}
+  - {id: P-017, title: 剛体の力学（慣性テンソルの対角化、オイラー方程式、オイラーのこまとラグランジュのこま、歳差と章動）, stage: 8, level: 3, region: kaiseki-rikigaku, needs: [M-012, P-011, P-016], days: 12, alt: {M-012: [E-002]}}
   - {id: P-020, title: 非線形力学とカオスの入口, stage: 8, level: 3, region: kaiseki-rikigaku, needs: [D-055], days: 12}
   - {id: P-028, title: 光学（レーザー、ビーム光学、光共振器、コヒーレンスと干渉計、光学機器）, stage: 8, level: 3, region: hado, needs: [P-035, P-024], days: 12}
   - {id: P-036, title: 静電場・静磁場の境界値問題（ポアソン方程式、グリーン関数の方法、極座標の境界値問題、多重極展開、回路のインダクタンス）, stage: 8, level: 3, region: denjiki, needs: [P-034, D-049, D-048, D-050], days: 12}
@@ -1444,7 +1444,7 @@ units:
   - {id: P-054, title: 線形応答理論（外場と応答、ボルツマン方程式、久保公式、揺動散逸定理）, stage: 8, level: 4, region: netsu, needs: [P-049, P-095], days: 12}
   - {id: P-055, title: 確率過程とブラウン運動（拡散方程式とランダムウォーク、ランジュバン方程式、フォッカー＝プランク方程式、マスター方程式、ゆらぎの熱力学）, stage: 8, level: 3, region: netsu, needs: [P-049, P-047, P-043], days: 12}
   - {id: P-056, title: 統計場の理論（ランダウ＝ギンツブルグ理論、経路積分とガウス模型、くりこみ群とε展開、演算子積展開、連続対称性、トポロジカル相転移）, stage: 8, level: 4, region: netsu, needs: [P-053], days: 12}
-  - {id: P-060, title: テンソル解析と微分幾何（多様体、計量テンソル、接続とクリストッフェル記号、共変微分と平行移動、リーマン・リッチ曲率、測地線偏差）, stage: 8, level: 4, region: soutai, needs: [P-058, P-015, M-005, D-049, M-012, D-018], days: 12}
+  - {id: P-060, title: テンソル解析と微分幾何（多様体、計量テンソル、接続とクリストッフェル記号、共変微分と平行移動、リーマン・リッチ曲率、測地線偏差）, stage: 8, level: 4, region: soutai, needs: [P-058, P-015, M-005, D-049, M-012, D-018], days: 12, alt: {P-015: [D-052]}}
   - {id: P-061, title: アインシュタイン方程式とシュワルツシルト解（エネルギー運動量テンソル、ビアンキ恒等式、宇宙項、光の湾曲・近日点移動・シャピロ遅延、バーコフの定理）, stage: 8, level: 4, region: soutai, needs: [P-010, P-037, M-006, D-045], days: 12}
   - {id: P-062, title: 線形化重力と重力波（線形化した真空の方程式、ド・ドンダーゲージ、重力波、四重極公式）, stage: 8, level: 3, region: soutai, needs: [P-057, P-058, D-049], days: 12}
   - {id: P-063, title: ブラックホール（…、ペンローズ図、レイチャウドゥリ方程式と特異点定理、ブラックホール力学の法則）, stage: 8, level: 4, region: soutai, needs: [P-061, P-060], days: 12}
@@ -1507,7 +1507,7 @@ units:
   - {id: E-041, title: 純物質と混合気体（ダルトンの法則、湿り空気と空調の過程）、動力サイクルと冷凍サイクル, stage: 7, level: 3, region: netsu-suishin, needs: [E-038, E-039, P-013, P-014], days: 12}
   - {id: E-042, title: 推進系の見方（空気吸込みエンジンとロケット、ミッション解析と基本性能式）, stage: 8, level: 3, region: netsu-suishin, needs: [E-026, E-027, E-038], days: 12}
   - {id: E-047, title: 機械・電気・電気機械系の集中定数モデル（アクチュエータとセンサ）, stage: 8, level: 3, region: seigyo, needs: [P-034, P-025, D-053], days: 12}
-  - {id: E-048, title: ラプラス変換と伝達関数（時間応答・周波数応答、極と零点、安定性）, stage: 8, level: 3, region: seigyo, needs: [P-025, D-053, D-035], days: 12}
+  - {id: E-048, title: ラプラス変換と伝達関数（時間応答・周波数応答、極と零点、安定性）, stage: 8, level: 3, region: seigyo, needs: [P-025, D-053, D-035], days: 12, alt: {D-035: [E-071]}}
   - {id: E-049, title: フィードバック制御の入門（PID、根軌跡、周波数領域の設計）, stage: 8, level: 3, region: seigyo, needs: [P-025, D-053, E-048], days: 12}
   - {id: E-052, title: 古典制御器の合成（根軌跡、ナイキスト判別、ループ整形と周波数領域の設計）, stage: 8, level: 3, region: seigyo, needs: [E-070, E-071, E-072], days: 12}
   - {id: E-053, title: 状態空間表現（連続時間と離散時間）、モデルの実現、可制御性と可観測性、状態観測器, stage: 8, level: 3, region: seigyo, needs: [E-052, M-014], days: 12}
@@ -1520,7 +1520,7 @@ units:
   - {id: E-086, title: 変調、符号化と復号, stage: 8, level: 3, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
   - {id: E-087, title: 媒体アクセス制御、待ち行列、プロトコルの原理, stage: 8, level: 3, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
   - {id: E-089, title: ディジタル通信と網の入口（符号化、変調、雑音下の検出、多元接続、経路制御）, stage: 8, level: 3, region: tsushin, needs: [E-073, E-074, E-075, S-003], days: 12}
-  - {id: E-090, title: 構造動力学（1 自由度・多自由度・連続体の自由振動と強制振動、地震への応答）, stage: 8, level: 3, region: doboku, needs: [E-004, E-005, E-006, E-007, D-045, M-007], days: 12}
+  - {id: E-090, title: 構造動力学（1 自由度・多自由度・連続体の自由振動と強制振動、地震への応答）, stage: 8, level: 3, region: doboku, needs: [E-004, E-005, E-006, E-007, D-045, M-007], days: 12, alt: {M-007: [P-025]}}
   - {id: E-091, title: 耐震構造の入門（地震被害と耐震技術、1 自由度系の応答）, stage: 8, level: 3, region: doboku, needs: [E-004, E-010], days: 12}
   - {id: E-092, title: 地震動のスペクトルと応答スペクトル、振動とエネルギー, stage: 8, level: 3, region: doboku, needs: [E-004, E-010], days: 12}
   - {id: E-093, title: 多自由度系の振動解析と耐震設計法, stage: 8, level: 3, region: doboku, needs: [E-004, E-010], days: 12}
@@ -1563,9 +1563,9 @@ units:
   - {id: P-173, title: 低次元のナノ構造（量子閉じ込め、量子ドット、ナノワイヤとカーボンナノチューブ、ナノ構造のフォノン）, stage: 8, level: 4, region: bussei, needs: [P-095, P-093, P-071], days: 9}
   - {id: P-175, title: 表面と界面（表面の構造と再構成、吸着、自己組織化単分子膜）, stage: 8, level: 3, region: bussei, needs: [P-092, H-014, H-054], days: 8}
   - {id: E-158, title: pn 接合とトランジスタ（ダイオード、バイポーラトランジスタ、MOSFET の動作、小信号モデルと増幅回路）, stage: 8, level: 3, region: zairyo-device, needs: [P-096, E-067], days: 9}
-  - {id: E-163, title: 結晶の欠陥と転位（点欠陥、転位と塑性変形、粒界、強化の機構）, stage: 8, level: 3, region: zairyo-device, needs: [P-092, E-002], days: 9}
+  - {id: E-163, title: 結晶の欠陥と転位（点欠陥、転位と塑性変形、粒界、強化の機構）, stage: 8, level: 3, region: zairyo-device, needs: [P-092, E-002], days: 9, alt: {P-092: [H-019]}}
   - {id: E-164, title: 固体中の拡散と相変態（拡散の機構、核生成と成長、変態の速度論と組織、合金の状態図と鋼の熱処理）, stage: 8, level: 3, region: zairyo-device, needs: [P-055, E-163, H-036, H-053], days: 9}
-  - {id: E-166, title: 衛星測位（擬似距離による位置の決定、原子時計、スペクトル拡散信号、相対論の補正）, stage: 8, level: 3, region: kido, needs: [E-089, P-059, P-009, K-003], days: 9}
+  - {id: E-166, title: 衛星測位（擬似距離による位置の決定、原子時計、スペクトル拡散信号、相対論の補正）, stage: 8, level: 3, region: kido, needs: [E-089, P-059, P-009, K-003], days: 9, alt: {K-003: [M-015]}}
   - {id: E-170, title: 電力変換と電力系統（パワーエレクトロニクス、同期発電機、送電と系統の安定）, stage: 8, level: 3, region: energy, needs: [E-069, E-048, E-158], days: 9}
   - {id: W-025, title: 震源の物理（断層運動と地震モーメント、マグニチュード、発震機構、グーテンベルク–リヒター則）, stage: 8, level: 3, region: jishin-kazan, needs: [W-020, W-021], days: 9}
   - {id: W-026, title: 岩石のレオロジー（クリープ、転位と拡散による流動、マントルの粘性）, stage: 8, level: 3, region: chikyu-naibu, needs: [W-020, E-163, E-164], days: 9}
@@ -1606,7 +1606,7 @@ units:
   - {id: E-188, title: RF・マイクロ波回路（低雑音増幅器、電力増幅器、ミキサ、発振器と PLL、フィルタ、S パラメータ、雑音指数）, stage: 8, level: 3, region: zairyo-device, needs: [E-158], days: 10}
   - {id: T-058, title: 離散微分幾何の計算（離散外微分、余接ラプラシアン、熱の方法による測地距離、ホッジ分解、等角パラメータ化）, stage: 8, level: 3, region: tayotai, needs: [D-018, M-007, K-003, T-011], days: 10}
   - {id: E-189, title: 機械要素の設計（軸、ばね、軸受、動力ねじ、歯車とベルト、締結、薄肉圧力容器、油圧と空気圧の部品）, stage: 8, level: 3, region: kozo-zairyo, needs: [E-003, E-015], days: 10}
-  - {id: E-191, title: 車両運動力学（タイヤの特性、サスペンションの幾何、旋回と限界の挙動、最小時間の最適化）, stage: 8, level: 3, region: doboku, needs: [P-017, E-090, E-049], days: 10}
+  - {id: E-191, title: 車両運動力学（タイヤの特性、サスペンションの幾何、旋回と限界の挙動、最小時間の最適化）, stage: 8, level: 3, region: doboku, needs: [P-017, E-090, E-049], days: 10, alt: {P-017: [E-060]}}
   - {id: K-175, title: 粒子法と粒子・格子の混合法（SPH、PIC/FLIP/APIC、物質点法）, stage: 8, level: 3, region: graphics, needs: [K-076, P-014], days: 10}
   - {id: K-133, title: 区間と木の問い合わせのデータ構造（累積和、セグメント木とフェニック木、Union-Find、最小共通祖先、重軽分解と重心分解、永続データ構造、トライ）, stage: 8, level: 3, region: programming, needs: [K-023, K-024], days: 8}
   - {id: I-019, title: 代謝と内分泌の統合（食後と空腹と絶食、インスリンとグルカゴン、ケトン体、ストレスと副腎、甲状腺、食欲と体重の調節）, stage: 8, level: 3, region: jintai, needs: [B-008, I-004], days: 10}
@@ -1614,19 +1614,19 @@ units:
   - {id: I-021, title: 炎症と修復（急性炎症の血管と白血球、炎症の仲介物質、慢性炎症と肉芽腫、創傷の治癒と線維化、全身の炎症反応）, stage: 8, level: 3, region: byori, needs: [I-020, I-005], days: 9}
   - {id: I-022, title: 血液と血流の障害（造血と血球、止血と凝固、血栓と塞栓、梗塞、浮腫とショック、貧血）, stage: 8, level: 3, region: byori, needs: [I-014, I-020], days: 10}
   - {id: I-023, title: がんの生物学（がん遺伝子と抑制遺伝子、がんの特徴、浸潤と転移、腫瘍の進化と不均一性、腫瘍の微小環境）, stage: 8, level: 3, region: byori, needs: [B-044, B-010, B-042], days: 12}
-  - {id: I-024, title: 遺伝病と多因子疾患（単一遺伝子病と遺伝の型、染色体の異常、ゲノムワイド関連解析、多遺伝子リスクスコア、遺伝の相談の考え方）, stage: 8, level: 3, region: byori, needs: [B-045, B-002, S-020], days: 10}
+  - {id: I-024, title: 遺伝病と多因子疾患（単一遺伝子病と遺伝の型、染色体の異常、ゲノムワイド関連解析、多遺伝子リスクスコア、遺伝の相談の考え方）, stage: 8, level: 3, region: byori, needs: [B-045, B-002, S-020], days: 10, alt: {S-020: [K-114]}}
   - {id: I-026, title: 器官別の薬理（自律神経に効く薬、循環と腎臓の薬、中枢の薬、内分泌と代謝の薬、炎症と痛みの薬）, stage: 8, level: 3, region: kusuri-doku, needs: [I-002, I-014, I-016], days: 12}
-  - {id: I-027, title: 毒性学（用量と反応と閾値、代謝による活性化、臓器への毒性、遺伝毒性と発がん、リスク評価と安全性の試験）, stage: 8, level: 3, region: kusuri-doku, needs: [I-002, I-020], days: 10}
+  - {id: I-027, title: 毒性学（用量と反応と閾値、代謝による活性化、臓器への毒性、遺伝毒性と発がん、リスク評価と安全性の試験）, stage: 8, level: 3, region: kusuri-doku, needs: [I-002, I-020], days: 10, alt: {I-020: [V-014]}}
   - {id: I-029, title: 抗微生物薬と薬剤耐性（作用の標的、耐性の機構、耐性遺伝子の伝わり方、耐性の進化と抗菌薬の適正使用）, stage: 8, level: 3, region: kansen-meneki, needs: [I-028, I-001, B-042], days: 9}
-  - {id: I-030, title: 臨床免疫（自己免疫、アレルギー、移植と拒絶、免疫不全、免疫を抑える薬と抗体医薬）, stage: 8, level: 3, region: kansen-meneki, needs: [I-005, I-021], days: 10}
+  - {id: I-030, title: 臨床免疫（自己免疫、アレルギー、移植と拒絶、免疫不全、免疫を抑える薬と抗体医薬）, stage: 8, level: 3, region: kansen-meneki, needs: [I-005, I-021], days: 10, alt: {I-021: [V-014]}}
   - {id: I-031, title: ワクチン学（ワクチンの種類と免疫の記憶、防御の相関、効果と安全性の評価、mRNA とベクターの新しいワクチン、接種の戦略）, stage: 8, level: 3, region: kansen-meneki, needs: [I-005, B-053, I-037, I-035], days: 10}
   - {id: I-039, title: 因果と交絡（因果の図と調整、傾向スコア、標的試験の模倣、操作変数とメンデルランダム化）, stage: 8, level: 3, region: ekigaku, needs: [I-035, S-042, I-024], days: 10}
   - {id: I-040, title: 臨床研究の統計（無作為化と盲検、検出力と標本の大きさ、非劣性、中間解析、系統的レビューとメタ分析）, stage: 8, level: 3, region: ekigaku, needs: [I-003, S-037, I-035], days: 10}
   - {id: I-041, title: 環境と労働の健康（水と衛生、大気汚染と健康、化学物質への曝露の評価、放射線防護、暑さと気候の変化、仕事による病気とけが）, stage: 8, level: 3, region: ekigaku, needs: [I-027, H-043, P-104, I-035], days: 9}
   - {id: I-042, title: 感染症の監視と対策（サーベイランスと症例の定義、流行の調査と接触の追跡、病原体ゲノムによる監視、流行への対応と国際保健規則）, stage: 8, level: 3, region: ekigaku, needs: [I-037, I-035, I-028], days: 9}
-  - {id: I-045, title: 循環と呼吸の病気（動脈硬化と虚血性心疾患、高血圧、心不全、不整脈、COPD と喘息、肺炎）, stage: 8, level: 3, region: rinsho, needs: [I-015, I-021, I-022, I-026], days: 12}
+  - {id: I-045, title: 循環と呼吸の病気（動脈硬化と虚血性心疾患、高血圧、心不全、不整脈、COPD と喘息、肺炎）, stage: 8, level: 3, region: rinsho, needs: [I-015, I-021, I-022, I-026], days: 12, alt: {I-022: [V-014]}}
   - {id: I-046, title: 代謝と内分泌の病気（糖尿病、肥満と GLP-1 の薬、脂質異常症、甲状腺と副腎の病気）, stage: 8, level: 3, region: rinsho, needs: [I-019, I-026], days: 10}
-  - {id: I-047, title: 腎臓と消化管と肝臓の病気（急性腎障害と慢性腎臓病、電解質の異常、肝炎と脂肪肝と肝硬変、炎症性腸疾患）, stage: 8, level: 3, region: rinsho, needs: [I-016, I-017, I-021], days: 10}
+  - {id: I-047, title: 腎臓と消化管と肝臓の病気（急性腎障害と慢性腎臓病、電解質の異常、肝炎と脂肪肝と肝硬変、炎症性腸疾患）, stage: 8, level: 3, region: rinsho, needs: [I-016, I-017, I-021], days: 10, alt: {I-021: [V-014]}}
   - {id: I-048, title: 骨と関節と皮膚の病気（骨の代謝と骨粗しょう症、骨折の治り方、変形性関節症と関節リウマチ、皮膚の守りと主な皮膚の病気）, stage: 8, level: 3, region: rinsho, needs: [I-011, I-021, B-035], days: 9}
   - {id: I-049, title: 一生の医学（妊娠と胎児の発育、子どもの成長と発達、思春期、老化とフレイルと多病、終末期の医療）, stage: 8, level: 3, region: rinsho, needs: [I-013, I-018, I-019], days: 9}
   - {id: I-052, title: 栄養の科学（ビタミンとミネラルの働きと欠乏、必要な量の決め方、低栄養と発育阻害、食事の調べ方と栄養疫学の難しさ）, stage: 8, level: 3, region: eiyo, needs: [B-008, I-009, I-035], days: 9}
@@ -1658,14 +1658,14 @@ units:
   - {id: V-009, title: 植物の病害虫と総合的な防除（病気の三角形と流行の数理、抵抗性の品種とその崩壊、農薬の作用と抵抗性の進化、天敵による防除と不妊虫放飼、総合的な防除 IPM）, stage: 8, level: 3, region: nouchi, needs: [B-152, B-132, B-055, B-059], days: 12}
   - {id: V-010, title: 持続可能な農業と気候（農業からの温室効果ガスと土の炭素、気候の変化と収量の予測、適応と緩和、精密農業とリモートセンシング、水と窒素の使い方）, stage: 8, level: 3, region: nouchi, needs: [V-005, V-008, B-057, P-120], days: 12}
   - {id: V-011, title: 家畜の生理と飼養（反芻とルーメンの微生物、栄養の要求と飼料、泌乳と成長、繁殖の技術、家畜からのメタン）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-136, B-148, V-006], days: 10}
-  - {id: V-013, title: 水産資源と養殖（資源の評価と最大持続生産量、漁業の管理、養殖の飼料・病気・育種、貝と海藻の養殖、環境への負荷）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-055, B-154, V-006], days: 10}
+  - {id: V-013, title: 水産資源と養殖（資源の評価と最大持続生産量、漁業の管理、養殖の飼料・病気・育種、貝と海藻の養殖、環境への負荷）, stage: 8, level: 3, region: kachiku-yoshoku, needs: [B-055, B-154, V-006], days: 10, alt: {V-006: [B-059]}}
   - {id: V-014, title: 比較の病理（細胞の傷害と死、炎症と修復、循環の障害、腫瘍、動物の種による病気の違い、剖検と病理組織の読み方）, stage: 8, level: 3, region: juui-shoku, needs: [B-010, B-037, B-036], days: 12}
   - {id: V-015, title: 人獣共通感染症とワンヘルス（宿主の飛び越えと流出、伝播のモデルと基本再生産数、見張りと発生の調査、越境性動物疾病の制御と根絶（牛疫）、輸入のリスク分析、ワクチンと薬剤耐性の管理、ワンヘルスの体制）, stage: 8, level: 3, region: juui-shoku, needs: [B-144, B-146, S-019, I-037], days: 12}
   - {id: E-213, title: 移動現象（運動量・熱・物質の移動の類似、分子拡散とフィックの法則、拡散係数の見積もり、物質移動係数と境膜、無次元数と相関式、拡散と反応が競う系）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-024, E-040, D-049], days: 10}
   - {id: E-214, title: 反応工学（回分・連続槽型・管型の理想反応器の設計方程式、反応器の組み合わせと選択率、滞留時間分布と非理想の流れ、発熱反応の多重定常と熱暴走、固体触媒の反応と有効係数、水蒸気改質など工業の反応）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-213, H-037], days: 10}
   - {id: E-215, title: 分離工学（気液平衡と相対揮発度、蒸留の段の計算とマッケーブ–シール法と最小還流比、深冷分離、ガス吸収と液液抽出、吸着とクロマトグラフィー、膜による分離、晶析と乾燥、分離に要るエネルギー）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-213, H-036], days: 11}
   - {id: E-216, title: プロセスの動特性と制御（タンクと反応器の動的モデル、1 次・2 次の遅れとむだ時間、PID の調整、カスケード・フィードフォワード・比率の制御、多変数のプロセスとモデル予測制御、計装と安全計装）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-212, E-214, E-049], days: 9}
-  - {id: E-217, title: プロセス安全（危険物の性質と SDS、HAZID と HAZOP、防護層の解析 LOPA と安全度水準 SIL、故障の木と事象の木、火災・爆発・毒性ガスの拡散の影響の計算、圧力の逃がし、暴走反応、危険場所の区分、本質安全の設計）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-214, E-216, S-001], days: 9}
+  - {id: E-217, title: プロセス安全（危険物の性質と SDS、HAZID と HAZOP、防護層の解析 LOPA と安全度水準 SIL、故障の木と事象の木、火災・爆発・毒性ガスの拡散の影響の計算、圧力の逃がし、暴走反応、危険場所の区分、本質安全の設計）, stage: 8, level: 3, region: kagaku-kogaku, needs: [E-214, E-216, S-001], days: 9, alt: {S-001: [C-043]}}
   - {id: E-219, title: 水処理（上水の凝集・沈殿・ろ過・消毒と消毒副生成物、下水の活性汚泥と生物による窒素・リンの除去、嫌気性消化と汚泥、膜ろ過・逆浸透と海水淡水化、膜分離活性汚泥法と水の再生、新しい汚染物質の PFAS と微量の医薬品）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-081, E-214, E-215, B-144], days: 11}
   - {id: E-220, title: 大気汚染の制御（汚染物質の発生と排出係数、大気の安定度とガウスプルームによる拡散、サイクロン・バグフィルタ・電気集じんによる粒子の除去、吸収・吸着・触媒による脱硝・排煙脱硫によるガスの処理、室内の空気、燃焼の改善）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-080, E-194, E-213, P-123], days: 9}
   - {id: E-221, title: 固形廃棄物と汚染地の浄化（廃棄物の量と組成、収集と処分、埋立てと浸出水・ガス、焼却とエネルギーの回収、堆肥化と嫌気性消化、有害廃棄物の処理、汚染された土と地下水の調査と浄化、バイオレメディエーション）, stage: 8, level: 3, region: kankyo-kogaku, needs: [H-081, E-212, E-214, W-102], days: 10}
@@ -1796,13 +1796,13 @@ units:
   - {id: K-111, title: タンパク質の構造計算と構造予測、分子動力学とエネルギー最小化, stage: 9, level: 3, region: seibutsu-keisan, needs: [K-016, P-049, P-119, B-006], days: 12}
   - {id: P-101, title: 物性の場の理論・多体理論の入口（多体の定式化とファインマン図、乱雑位相近似、誘電関数と線形応答、経路積分と平均場、ボソン化、非線形シグマ模型、量子ゲージ理論）, stage: 9, level: 4, region: bussei, needs: [P-098, P-055, P-097], days: 12}
   - {id: P-108, title: 標準模型（QED、QCD と漸近的自由性・閉じ込め、弱い相互作用とパリティの破れ、電弱統一とヒッグス機構、CKM 行列と CP の破れ、ニュートリノ質量と振動、深非弾性散乱とパートン模型、標準模型を超える物理）, stage: 9, level: 4, region: soryushi, needs: [P-111, P-112, P-107, P-230], days: 12}
-  - {id: P-113, title: 経路積分による量子化とゲージ理論（汎関数法、非可換ゲージ理論、ゴースト場と BRST 対称性）, stage: 9, level: 4, region: soryushi, needs: [P-111, P-112, R-023], days: 12}
+  - {id: P-113, title: 経路積分による量子化とゲージ理論（汎関数法、非可換ゲージ理論、ゴースト場と BRST 対称性）, stage: 9, level: 4, region: soryushi, needs: [P-111, P-112, R-023], days: 12, alt: {R-023: [P-230]}}
   - {id: P-114, title: くりこみとくりこみ群（ループ積分と次元正則化、1 ループのくりこみ、くりこみ群の流れ、漸近的自由性、ウィルソンの描像）, stage: 9, level: 4, region: soryushi, needs: [P-111], days: 12}
-  - {id: P-115, title: 対称性の自発的破れとヒッグス機構（有効ポテンシャル、ゴールドストーンの定理、ゲージ対称性の破れ）, stage: 9, level: 4, region: soryushi, needs: [P-111, P-112, R-023], days: 12}
+  - {id: P-115, title: 対称性の自発的破れとヒッグス機構（有効ポテンシャル、ゴールドストーンの定理、ゲージ対称性の破れ）, stage: 9, level: 4, region: soryushi, needs: [P-111, P-112, R-023], days: 12, alt: {R-023: [P-230]}}
   - {id: P-116, title: 有効場の理論（自由度と対称性の見きわめ、パワーカウンティング、マッチングとウィルソン係数）, stage: 9, level: 4, region: soryushi, needs: [P-114], days: 12}
   - {id: P-135, title: 数値予報の時間スキーム、気象と気候のカオスと予測可能性, stage: 9, level: 3, region: chikyu, needs: [P-132, D-055], days: 12}
   - {id: P-136, title: 浅水モデルと差分モデルの波の分散、CFL 条件、アラカワの格子配置, stage: 9, level: 3, region: chikyu, needs: [P-132, K-005, P-129], days: 12}
-  - {id: P-137, title: 流れによる輸送の数値解法（有限体積・有限要素・スペクトル・セミラグランジュ）, stage: 9, level: 3, region: chikyu, needs: [P-132, K-005, D-075, D-077], days: 12}
+  - {id: P-137, title: 流れによる輸送の数値解法（有限体積・有限要素・スペクトル・セミラグランジュ）, stage: 9, level: 3, region: chikyu, needs: [P-132, K-005, D-075, D-077], days: 12, alt: {D-075: [E-073]}}
   - {id: P-138, title: 格子で解けない過程のパラメータ化（放射、エーロゾル、対流）, stage: 9, level: 3, region: chikyu, needs: [P-132, P-131, P-130], days: 12}
   - {id: P-139, title: 現業の予報システム（定式化、同化、後処理）, stage: 9, level: 3, region: chikyu, needs: [P-132, P-133], days: 12}
   - {id: P-140, title: データ同化の理論（カルマンフィルタ、アンサンブルカルマンフィルタ）, stage: 9, level: 3, region: chikyu, needs: [P-133, S-003], days: 12}
@@ -1841,8 +1841,8 @@ units:
   - {id: E-062, title: 軌道決定、多体法、ミッション計画、宇宙航法の再帰算法, stage: 9, level: 3, region: kido, needs: [D-045, E-061, K-003], days: 12}
   - {id: E-063, title: ヴィス・ヴィーヴァ式、ロケット方程式、ホーマン遷移・双楕円遷移・らせん遷移, stage: 7, level: 3, region: kido, needs: [P-010, D-006], days: 12}
   - {id: E-064, title: 回線設計式、宇宙機の電力・推進・熱・通信、生命維持と与圧、宇宙服と船外活動、宇宙環境, stage: 8, level: 3, region: kido, needs: [E-039, E-042], days: 12}
-  - {id: E-065, title: 地球近傍衛星と惑星間探査機の軌道（相対運動、ランデブー、摂動、大気抵抗と熱圏・宇宙天気、デブリの環境と接近解析・衝突確率）, stage: 9, level: 3, region: kido, needs: [P-011, P-012], days: 12}
-  - {id: E-066, title: 姿勢の表現と姿勢力学、姿勢センサ・アクチュエータ、姿勢制御, stage: 9, level: 3, region: kido, needs: [P-016, P-017, E-049, E-065], days: 12}
+  - {id: E-065, title: 地球近傍衛星と惑星間探査機の軌道（相対運動、ランデブー、摂動、大気抵抗と熱圏・宇宙天気、デブリの環境と接近解析・衝突確率）, stage: 9, level: 3, region: kido, needs: [P-011, P-012], days: 12, alt: {P-012: [E-060]}}
+  - {id: E-066, title: 姿勢の表現と姿勢力学、姿勢センサ・アクチュエータ、姿勢制御, stage: 9, level: 3, region: kido, needs: [P-016, P-017, E-049, E-065], days: 12, alt: {P-017: [E-060]}}
   - {id: E-079, title: 間引き・補間・サンプリングレート変換、マルチレート信号処理, stage: 9, level: 3, region: kairo-shingo, needs: [E-076, E-077, E-078], days: 12}
   - {id: E-080, title: 離散時間系の流れ図構造、IIR・FIR フィルタの設計, stage: 9, level: 3, region: kairo-shingo, needs: [E-076, E-077, E-078], days: 12}
   - {id: E-081, title: DFT の計算と FFT、スペクトル解析と時間周波数解析, stage: 9, level: 3, region: kairo-shingo, needs: [E-076, E-077, E-078], days: 12}
@@ -1850,7 +1850,7 @@ units:
   - {id: E-083, title: アレイ信号処理（ビームフォーミング、時空間の確率過程、適応アルゴリズム）, stage: 9, level: 3, region: kairo-shingo, needs: [E-079, E-080, E-081, E-082, E-076, E-077, E-078, M-007], days: 12}
   - {id: E-084, title: 導波・アンテナ・レーダ（動的なマクスウェル方程式の解と無線・光通信への応用）, stage: 9, level: 3, region: tsushin, needs: [P-034, E-073, E-074, E-075], days: 12}
   - {id: E-088, title: 無線通信路のモデル、フェージング、MIMO、多元接続、OFDM、セルラー網と非地上網（衛星との直接通信）, stage: 9, level: 3, region: tsushin, needs: [E-085, E-086, E-087], days: 12}
-  - {id: E-094, title: 構造動力学の計算法（有限要素定式化、固有値解析とモード解析、時間積分）, stage: 9, level: 3, region: doboku, needs: [E-011, E-090, K-008], days: 12}
+  - {id: E-094, title: 構造動力学の計算法（有限要素定式化、固有値解析とモード解析、時間積分）, stage: 9, level: 3, region: doboku, needs: [E-011, E-090, K-008], days: 12, alt: {K-008: [P-119]}}
   - {id: E-096, title: ランダム振動、信頼性解析と疲労解析, stage: 9, level: 3, region: doboku, needs: [E-090], days: 12}
   - {id: E-098, title: 地震動と設計スペクトル、線形・非線形の 1・多自由度系構造の設計, stage: 9, level: 3, region: doboku, needs: [E-090, E-120, E-122], days: 12}
   - {id: E-099, title: 力に基づく設計と変位に基づく設計、キャパシティデザイン, stage: 9, level: 3, region: doboku, needs: [E-090, E-120, E-122], days: 12}
@@ -1890,7 +1890,7 @@ units:
   - {id: E-165, title: ナノの顕微鏡法（収差補正電子顕微鏡と電子線による元素分析、走査トンネル顕微鏡と原子間力顕微鏡、原子の操作）, stage: 9, level: 3, region: zairyo-device, needs: [P-092, P-071, P-118], days: 9}
   - {id: E-167, title: 風力発電（ロータの空気力学とベッツの限界、翼素運動量理論、荷重と疲労、発電機と制御）, stage: 9, level: 3, region: energy, needs: [E-029, E-111, E-015, E-170], days: 9}
   - {id: E-168, title: 薬物送達の工学（拡散による放出制御、生分解性高分子、ナノ粒子による送達と標的化）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-164, B-010, H-035, H-049, B-004, E-226], days: 9}
-  - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010, E-225], days: 9}
+  - {id: E-169, title: 神経インターフェース（神経の電気信号と電気刺激、人工内耳、脳深部刺激、脳–機械インターフェースと信号の解読）, stage: 9, level: 3, region: seitai-kogaku, needs: [E-069, E-078, K-119, B-010, E-225], days: 9, alt: {K-119: [B-066]}}
   - {id: W-035, title: 地球の形成と惑星の分化（隕石と太陽系の材料、核とマントルの分離、初期の地球）, stage: 9, level: 3, region: chikyu-kagaku, needs: [W-031, P-171], days: 10}
   - {id: W-036, title: 地球と生命の共進化（初期の生命、大気の酸素の増加、全球凍結、大量絶滅）, stage: 9, level: 3, region: chiso, needs: [W-014, W-033, B-011, B-145], days: 10}
   - {id: W-037, title: 地震波トモグラフィーと地球の内部構造（地球の標準モデル、自由振動、マントルと核）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-021, W-025, P-141, D-048], days: 10}
@@ -1899,7 +1899,7 @@ units:
   - {id: W-040, title: 造山運動と大陸の変形（衝突帯、山脈の隆起と侵食、大陸地殻の厚化と気候への影響）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-023, W-026, W-027], days: 10}
   - {id: W-041, title: 古気候学（気候の記録の復元、氷床コアと海底堆積物、軌道要素と氷期の周期、過去の温暖期）, stage: 9, level: 3, region: chikyu-system, needs: [W-032, W-033, P-161, P-009], days: 10}
   - {id: W-042, title: 宇宙測地学（GNSS による地殻変動、衛星重力、衛星高度計による海面の変化）, stage: 9, level: 3, region: chikyu-naibu, needs: [W-015, E-166, P-141], days: 10}
-  - {id: H-055, title: 計算化学（ハートリー–フォック法、密度汎関数法、基底関数、分子力学と分子動力学、自由エネルギー計算）, stage: 9, level: 4, region: butsuri-kagaku, needs: [H-045, H-051, K-002, K-008], days: 12}
+  - {id: H-055, title: 計算化学（ハートリー–フォック法、密度汎関数法、基底関数、分子力学と分子動力学、自由エネルギー計算）, stage: 9, level: 4, region: butsuri-kagaku, needs: [H-045, H-051, K-002, K-008], days: 12, alt: {K-008: [P-119]}}
   - {id: H-056, title: 医薬品化学（薬の標的、構造活性相関、リード最適化、薬らしさ、薬物代謝と構造）, stage: 9, level: 3, region: soyaku, needs: [H-047, I-001, I-002, B-007], days: 12}
   - {id: H-057, title: 化学生物学（生体直交反応とクリックケミストリー、化学プローブ、酵素の指向性進化とファージディスプレイ）, stage: 9, level: 3, region: soyaku, needs: [H-047, B-007, B-009], days: 10}
   - {id: B-054, title: 幹細胞と再生医療（多能性幹細胞、iPS 細胞と初期化、分化誘導、オルガノイド、細胞治療）, stage: 9, level: 3, region: hassei, needs: [B-046, I-005, B-053, B-010], days: 12}
@@ -1910,7 +1910,7 @@ units:
   - {id: K-164, title: 方策勾配法と actor-critic（on-policy の学習、PPO）, stage: 9, level: 3, region: kikai-gakushu, needs: [K-058, K-059, K-050], days: 10}
   - {id: T-051, title: ベクトル束と主束の接続と曲率（ゲージ理論の幾何）, stage: 9, level: 4, region: tayotai, needs: [T-026, T-016, R-023], days: 10}
   - {id: D-083, title: 特異積分作用素（カルデロン–ジグムント、リトルウッド–ペイリー、補間定理）, stage: 9, level: 4, region: jitsukaiseki, needs: [D-023, D-026, D-021], days: 10}
-  - {id: P-232, title: 電波天文学と干渉計（ラジオメータ方程式、可視度と uv 平面、較正と自己較正、撮像と逆畳み込み、VLBI）, stage: 9, level: 3, region: hado, needs: [P-028, E-084, E-077, D-075], days: 10}
+  - {id: P-232, title: 電波天文学と干渉計（ラジオメータ方程式、可視度と uv 平面、較正と自己較正、撮像と逆畳み込み、VLBI）, stage: 9, level: 3, region: hado, needs: [P-028, E-084, E-077], days: 10}
   - {id: K-166, title: 量子誤り訂正と耐故障量子計算（安定化子符号と CSS 符号、表面符号と量子 LDPC 符号、復号、閾値定理、もつれの蒸留）, stage: 9, level: 4, region: programming, needs: [P-087, C-039, R-001], days: 10}
   - {id: K-167, title: ロボット学習（模倣学習、オフライン強化学習、シミュレーションから実機への移行、ドメインランダム化）, stage: 9, level: 3, region: robotics, needs: [K-059, K-086, K-076], days: 10}
   - {id: K-168, title: 数値代数幾何（ニュートン法の α 理論、ホモトピー連続法、条件数、BKK による根の数え上げ）, stage: 9, level: 4, region: suchi, needs: [K-002, T-030], days: 10}
@@ -1921,7 +1921,7 @@ units:
   - {id: S-044, title: エルゴード理論（測度保存系、混合、測度エントロピー）, stage: 9, level: 4, region: kakuritsu-daigaku, needs: [S-007, D-019], days: 10}
   - {id: T-056, title: 結び目理論と 3 次元多様体（結び目不変量、デーン手術、ヘーガード分解）, stage: 9, level: 4, region: daisuteki-iso, needs: [T-021, T-024], days: 10}
   - {id: D-088, title: ポテンシャル論と平衡測度（対数ポテンシャル、フェケテ点）, stage: 9, level: 4, region: fukuso, needs: [D-033, D-019], days: 10}
-  - {id: D-089, title: 変分法の直接法（弱下半連続性とソボレフ空間での最小化）, stage: 9, level: 4, region: bibun-hoteishiki, needs: [D-025, D-067, D-052], days: 10}
+  - {id: D-089, title: 変分法の直接法（弱下半連続性とソボレフ空間での最小化）, stage: 9, level: 4, region: bibun-hoteishiki, needs: [D-025, D-067, D-052], days: 10, alt: {D-052: [P-015]}}
   - {id: D-091, title: 放物型偏微分方程式（熱方程式型、最大値原理、短時間の存在）, stage: 9, level: 4, region: bibun-hoteishiki, needs: [D-057, D-025, D-051], days: 10}
   - {id: P-240, title: 曲がった時空の場の量子論とホーキング効果（P-063 から分ける）, stage: 9, level: 4, region: soutai, needs: [P-063, P-111], days: 10}
   - {id: P-241, title: 核融合炉心の物理と運転（ローソン条件と点火、加熱と電流駆動、輸送、閉じ込めのスケーリング、ディスラプション、シナリオの設計）, stage: 9, level: 3, region: soryushi, needs: [P-104, P-055, E-049], days: 10}
@@ -1933,7 +1933,7 @@ units:
   - {id: E-186, title: 車体の空力（地面効果とディフューザ、床下、車輪、冷却の流れ、鈍い物体）, stage: 9, level: 3, region: ryutai, needs: [E-025, E-029, E-035], days: 10}
   - {id: P-244, title: 重力波の波形とデータ解析（ポストニュートン近似、数値相対論の波形と準固有振動、探索、検出器の較正）, stage: 9, level: 4, region: soutai, needs: [P-062, P-063, E-078], days: 10}
   - {id: P-245, title: 光機械と量子測定（輻射圧とショット雑音、標準量子限界、スクイーズド光の注入、量子フィードバック）, stage: 9, level: 4, region: genshi, needs: [P-091, P-028, E-049], days: 10}
-  - {id: P-246, title: プラズマの運動論と波（ブラソフ方程式、ランダウ減衰、冷たいプラズマと熱いプラズマの波、RF 加熱）, stage: 9, level: 4, region: denjiki, needs: [P-041, D-032, D-075], days: 10}
+  - {id: P-246, title: プラズマの運動論と波（ブラソフ方程式、ランダウ減衰、冷たいプラズマと熱いプラズマの波、RF 加熱）, stage: 9, level: 4, region: denjiki, needs: [P-041, D-032, D-075], days: 10, alt: {D-075: [E-071]}}
   - {id: P-247, title: トカマクの平衡と安定性（グラッド＝シャフラノフ方程式、安全係数、キンク・ティアリング・バルーニング、エネルギー原理）, stage: 9, level: 4, region: denjiki, needs: [P-036], days: 10}
   - {id: P-248, title: 周辺プラズマ・壁相互作用とプラズマ計測（シースとスクレイプオフ層、ダイバータ、燃料の保持、探針、トムソン散乱、分光計測）, stage: 9, level: 3, region: denjiki, needs: [P-041, P-055, P-088], days: 10}
   - {id: P-249, title: 超伝導量子回路（電気回路の量子化、トランズモン、回路 QED と分散読み出し、ゲートの制御と較正）, stage: 9, level: 4, region: bussei, needs: [P-099, P-091, P-040], days: 10}
@@ -2054,7 +2054,7 @@ units:
   - {id: K-174, title: 量子シャノン理論と量子暗号（状態の距離、ホレボ限界、通信路容量、もつれの尺度、量子鍵配送の安全性）, stage: 10, level: 4, region: programming, needs: [P-084, C-038], days: 10}
   - {id: P-224, title: 量子重力とホログラフィー（ブラックホールの熱力学とホーキング放射、情報問題、AdS/CFT 対応、エンタングルメント・エントロピーと時空、ほかの方法）, stage: 10, level: 5, region: soryushi, needs: [P-237, P-063, P-084], days: 12}
   - {id: E-233, title: 半導体の工程の統合と歩留まりと信頼性（FEOL・MEOL・BEOL の工程の流れ、銅の配線と low-k、設計ルールとレイアウト、電気特性の検査と機能の歩留まり、欠陥密度と歩留まりのモデル、故障の解析、信頼性（絶縁膜の経時破壊、エレクトロマイグレーション、BTI、ホットキャリア）、3 次元の集積と接合（TSV、ハイブリッド接合、チップレット）と熱の管理、工程のデータの解析と技術の移転）, stage: 10, level: 3, region: zairyo-device, needs: [E-230, E-231, E-232, E-156], days: 12}
-  - {id: B-171, title: 皮質内 BCI の解読（運動野の集団の活動と神経の多様体、スパイクの検出としきい値の交差、カルマンフィルタと再帰型ネットの解読器、カーソル・手指・手書き・音声の解読、閉ループでの脳と解読器の共適応、日をまたぐ信号のずれと教師なしの再較正（多様体の整列）、人をまたぐ転移、遅延と電力の制約の下で小さくした解読器、臨床の試験での評価）, stage: 10, level: 3, region: shinkei, needs: [E-169, B-066, E-056, K-051], days: 12}
+  - {id: B-171, title: 皮質内 BCI の解読（運動野の集団の活動と神経の多様体、スパイクの検出としきい値の交差、カルマンフィルタと再帰型ネットの解読器、カーソル・手指・手書き・音声の解読、閉ループでの脳と解読器の共適応、日をまたぐ信号のずれと教師なしの再較正（多様体の整列）、人をまたぐ転移、遅延と電力の制約の下で小さくした解読器、臨床の試験での評価）, stage: 10, level: 3, region: shinkei, needs: [E-169, B-066, E-056, K-051], days: 12, alt: {E-056: [P-140]}}
   - {id: L-040, title: 証明の自動化（命題論理の充足可能性と SAT ソルバー（DPLL と CDCL）、理論つきの充足可能性 SMT と決定手続き（線形算術、合同閉包）、単一化と項の書き換え、証明の探索とタクティク、メタプログラミングで自動化を作り証明の項をカーネルで確かめる）, stage: 10, level: 4, region: suri-ronri, needs: [L-036, L-023, K-022], days: 10}
   - {id: L-041, title: 形式化された数学のライブラリの設計（Mathlib を例に：型クラスで代数・順序・位相の構造を積み上げる、構造の束ね方と継承、型の間の強制、フィルターで極限と「十分先で」を一つに扱う、定義の選び方（全域の関数とゼロでの割り算）と一般化の水準、補題の名前と簡約の補題の決まり、ライブラリの依存とビルドの規模、査読の基準と保守）, stage: 10, level: 4, region: suri-ronri, needs: [L-036, R-008, T-001, R-026], days: 10}
   - {id: L-042, title: AI と形式化された数学（自然言語の数学を Lean の主張にする自動形式化、言語モデルによる証明の探索と検証器の判定からの強化学習、定理証明のベンチマークとその限界、形式の証明で正しさを確かめたコードの生成、AI が出した証明と主張を人が読んで確かめる）, stage: 10, level: 4, region: suri-ronri, needs: [L-040, K-161, K-164], days: 10}
