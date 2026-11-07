@@ -39,7 +39,9 @@ items:
   sources:
   - EX21
   units:
-  - S-030
+  - S-027
+  - C-008
+  - S-001
 - id: T-06
   field: Unit 2 確率と分布
   topic: シミュレーションと確率の基本
@@ -141,7 +143,7 @@ items:
   sources:
   - EX21
   units:
-  - S-020
+  - S-030
 - id: T-20
   field: Unit 5 量的変数の関係
   topic: 線形回帰・残差・最小二乗回帰

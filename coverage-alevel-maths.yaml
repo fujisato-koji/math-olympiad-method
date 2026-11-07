@@ -185,7 +185,7 @@ items:
   sources:
   - EX15
   units:
-  - S-018
+  - S-031
 - id: T-25
   field: 統計
   topic: データの表示と解釈（ヒストグラム、散布図と回帰直線、標準偏差、外れ値）

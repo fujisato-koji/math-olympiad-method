@@ -617,7 +617,7 @@ units:
   - {id: D-003, title: 関数の極限と連続（高校）, stage: 5, region: bisekibun-nyumon, needs: [D-002], days: 8}
   - {id: D-004, title: 微分の考え（変化の割合と接線）, stage: 5, region: bisekibun-nyumon, needs: [D-003], days: 8}
   - {id: D-005, title: 導関数の計算と関数のグラフ（微分法）, stage: 5, region: bisekibun-nyumon, needs: [D-004, G-025], days: 8}
-  - {id: D-006, title: 積分の考え（面積と原始関数、置換積分と部分積分）, stage: 5, region: bisekibun-nyumon, needs: [D-005], days: 8}
+  - {id: D-006, title: 積分の考え（面積と原始関数、置換積分と部分積分）, stage: 5, region: bisekibun-nyumon, needs: [D-005, A-037], days: 8}
   - {id: M-001, title: 連立 1 次方程式と行列（高校）, stage: 5, region: senkei-keisan, needs: [A-012, G-027], days: 8}
   - {id: M-002, title: 平面の線形変換と行列式, stage: 5, region: senkei-keisan, needs: [M-001, G-025], days: 8}
   - {id: K-012, title: 計算という考え方と Python（簡単なアルゴリズムとデータ構造）, stage: 5, region: programming, needs: [A-010], days: 8}
@@ -760,7 +760,7 @@ units:
   - {id: S-003, title: 連続確率変数と同時分布, stage: 6, region: kakuritsu-daigaku, needs: [S-001, D-017], days: 8}
   - {id: S-004, title: 確率の不等式と極限定理, stage: 6, region: kakuritsu-daigaku, needs: [S-001], days: 8}
   - {id: S-005, title: 離散時間マルコフ連鎖, stage: 6, region: kakuritsu-katei, needs: [S-002, S-003, S-004], days: 8}
-  - {id: S-018, title: 点推定と区間推定, stage: 6, region: tokei, needs: [S-002, S-003, S-004, S-031], days: 8}
+  - {id: S-018, title: 点推定と区間推定, stage: 6, region: tokei, needs: [S-002, S-003, S-004, S-031, S-029], days: 8}
   - {id: S-019, title: 仮説検定, stage: 6, region: tokei, needs: [S-018], days: 8}
   - {id: S-020, title: 線形モデル, stage: 6, region: tokei, needs: [S-018, S-030], days: 8}
   - {id: P-008, title: 減衰振動・強制振動と共振（振幅と位相のずれ、物理振り子、LC 振動との対応）, stage: 6, region: rikigaku, needs: [P-007, A-021, D-014], days: 8}

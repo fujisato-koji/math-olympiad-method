@@ -205,6 +205,7 @@ items:
   units:
   - F-021
   - F-035
+  - F-048
 - id: T-24
   field: Exam ASTAM
   topic: 損害額（severity）のモデル（8–18%）
@@ -286,7 +287,7 @@ items:
   - FN007
   units:
   - S-023
-  - K-047
+  - K-049
 - id: T-35
   field: Exam PA
   topic: 予測分析の問題の定め方（10–20%）
@@ -309,7 +310,7 @@ items:
   - FN008
   units:
   - S-023
-  - K-047
+  - K-049
 - id: T-38
   field: Exam PA
   topic: 一般化線形モデル（25–35%）
@@ -324,3 +325,18 @@ items:
   - FN008
   units:
   - K-049
+- id: V-01
+  field: 検証で足した論題
+  topic: VaR と TVaR、リスク尺度の性質
+  units:
+  - F-038
+- id: V-02
+  field: 検証で足した論題
+  topic: 極値分布（GEV、一般化パレート）とヒル推定量
+  units:
+  - F-055
+- id: V-03
+  field: 検証で足した論題
+  topic: 遷移強度の最尤推定（区間ごとに一定の死力）
+  units:
+  - F-056

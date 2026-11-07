@@ -165,8 +165,7 @@ items:
   sources:
   - EX20
   units:
-  - D-006
-  - D-009
+  - D-071
 - id: T-23
   field: Unit 9 媒介変数・ベクトル・極座標
   topic: 媒介変数表示の微分と弧長
@@ -179,7 +178,9 @@ items:
   topic: ベクトル値関数と運動
   sources:
   - EX20
-  none: 地図にない（候補：ベクトル値関数と運動）
+  units:
+  - D-071
+  - G-027
 - id: T-25
   field: Unit 9 媒介変数・ベクトル・極座標
   topic: 極座標の微分と面積
