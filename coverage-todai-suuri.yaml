@@ -1,20 +1,136 @@
-# 網羅表：東京大学大学院数理科学研究科（修士課程入試）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：東京大学大学院数理科学研究科（修士課程入試）。2015〜2026 年度の過去問 300 題の型付けから作り直した（2026-11-07）
+choices:
+  B:
+    label: 専門科目 B（18 題から 3 題）
+    pick: 3
 sources:
   UM06:
-    title: 同上, 令和9（2027）年度 東京大学大学院数理科学研究科修士課程学生募集要項
+    title: 東京大学大学院数理科学研究科, 令和9（2027）年度 東京大学大学院数理科学研究科修士課程学生募集要項
     url: https://www.ms.u-tokyo.ac.jp/kyoumu/cd52295aade4feca2f7995bbec75c056d370bf6b.pdf
     date: 2026-11-07
   UM07:
     title: 同上, 出題の意図（修士課程）
     url: https://www.ms.u-tokyo.ac.jp/kyoumu/kyoumu/3825a21208326e2fd7153b3820297ea804f5c9d2.pdf
     date: 2026-11-07
+  UM11:
+    title: 同上, 2015年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/docs/27a%201203.pdf
+    date: 2026-11-07
+  UM12:
+    title: 同上, 2015年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/docs/27b%201203.pdf
+    date: 2026-11-07
+  UM13:
+    title: 同上, 2016年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20160210a.pdf
+    date: 2026-11-07
+  UM14:
+    title: 同上, 2016年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20160210b.pdf
+    date: 2026-11-07
+  UM15:
+    title: 同上, 2017年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/a20170524.pdf
+    date: 2026-11-07
+  UM16:
+    title: 同上, 2017年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/b20170524.pdf
+    date: 2026-11-07
+  UM17:
+    title: 同上, 2018年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/30a.pdf
+    date: 2026-11-07
+  UM18:
+    title: 同上, 2018年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/30b.pdf
+    date: 2026-11-07
+  UM19:
+    title: 同上, 2019年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/0528A.pdf
+    date: 2026-11-07
+  UM20:
+    title: 同上, 2019年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20190528B.pdf
+    date: 2026-11-07
+  UM21:
+    title: 同上, 2020年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20200520A.pdf
+    date: 2026-11-07
+  UM22:
+    title: 同上, 2020年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20200520B.pdf
+    date: 2026-11-07
+  UM23:
+    title: 同上, 2021年度 修士課程入学試験 専門科目Ⅰ（専門科目1）（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/14ddc568f516a98d6afb91190509c57c2796f3a6.pdf
+    date: 2026-11-07
+  UM24:
+    title: 同上, 2021年度 修士課程入学試験 専門科目Ⅱ（専門科目2）（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/3480b0595608b0d89a6745f2469adef52e5ba17a.pdf
+    date: 2026-11-07
+  UM25:
+    title: 同上, 2022年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20220421-100.pdf
+    date: 2026-11-07
+  UM26:
+    title: 同上, 2022年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/20220421-200.pdf
+    date: 2026-11-07
+  UM27:
+    title: 同上, 2023年度 修士課程入学試験 専門科目A（問題）
+    url: http://web.archive.org/web/20240521093748/https://www.ms.u-tokyo.ac.jp/kyoumu/cc78b459c04d37ba400587ef8917cc027a42a756.pdf
+    date: 2026-11-07
+  UM28:
+    title: 同上, 2023年度 修士課程入学試験 専門科目B（問題）
+    url: http://web.archive.org/web/20240523224514/https://www.ms.u-tokyo.ac.jp/kyoumu/10461f8a68ddd5c0fd90460f919fcceee40d5ea4.pdf
+    date: 2026-11-07
+  UM29:
+    title: 同上, 2024年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/a_final_2023_HP.pdf
+    date: 2026-11-07
+  UM30:
+    title: 同上, 2024年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/b_final_2023_HP.pdf
+    date: 2026-11-07
+  UM31:
+    title: 同上, 2025年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/A.pdf
+    date: 2026-11-07
+  UM32:
+    title: 同上, 2025年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/B.pdf
+    date: 2026-11-07
+  UM33:
+    title: 同上, 2026年度 修士課程入学試験 専門科目A（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/2026_A.pdf
+    date: 2026-11-07
+  UM34:
+    title: 同上, 2026年度 修士課程入学試験 専門科目B（問題）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/2026_B.pdf
+    date: 2026-11-07
+  UM38:
+    title: 同上, 2026年度 英語（問題は著作権のため非公開、出典の一覧だけ）
+    url: https://www.ms.u-tokyo.ac.jp/kyoumu/2026_E.pdf
+    date: 2026-11-07
 items:
 - id: T-01
   field: 線形代数
-  topic: 専門科目 A：線形代数
+  topic: 専門科目 A：線形代数（必答 1 題が毎年。階数と核、固有値と対角化、ジョルダン標準形、内積と直交射影、双対、テンソルと外冪）
   sources:
   - UM06
   - UM07
+  - UM11
+  - UM13
+  - UM15
+  - UM17
+  - UM19
+  - UM21
+  - UM23
+  - UM25
+  - UM27
+  - UM29
+  - UM31
+  - UM33
   units:
   - M-003
   - M-004
@@ -27,10 +143,22 @@ items:
   - M-011
 - id: T-02
   field: 解析
-  topic: 専門科目 A：微分積分
+  topic: 専門科目 A：微分積分（必答 1 題が毎年。テイラー展開と漸近、広義積分、級数と一様収束、多変数の極値、重積分）
   sources:
   - UM06
   - UM07
+  - UM11
+  - UM13
+  - UM15
+  - UM17
+  - UM19
+  - UM21
+  - UM23
+  - UM25
+  - UM27
+  - UM29
+  - UM31
+  - UM33
   units:
   - D-007
   - D-008
@@ -46,10 +174,19 @@ items:
   - D-018
 - id: T-03
   field: 複素解析
-  topic: 専門科目 A：複素解析
+  topic: 専門科目 A：複素解析（留数による定積分、偏角の原理とルーシェの定理、調和関数とポアソン積分）
   sources:
   - UM06
   - UM07
+  - UM11
+  - UM13
+  - UM17
+  - UM19
+  - UM23
+  - UM27
+  - UM29
+  - UM31
+  - UM33
   units:
   - D-029
   - D-030
@@ -59,21 +196,46 @@ items:
   - D-034
 - id: T-04
   field: 微分方程式
-  topic: 専門科目 A：常微分方程式
+  topic: 専門科目 A：常微分方程式（定数係数の線形系、求積、保存量と相図、解の漸近）
   sources:
   - UM06
   - UM07
+  - UM11
+  - UM13
+  - UM15
+  - UM17
+  - UM19
+  - UM21
+  - UM23
+  - UM25
+  - UM27
+  - UM29
+  - UM31
+  - UM33
   units:
   - D-044
   - D-045
   - D-046
   - D-047
+  - D-053
 - id: T-05
   field: 集合・位相
-  topic: 専門科目 A：集合・位相
+  topic: 専門科目 A：集合・位相（商位相、ハウスドルフ性、コンパクト性と連結性、距離空間、アスコリ–アルツェラ）
   sources:
   - UM06
   - UM07
+  - UM11
+  - UM13
+  - UM15
+  - UM17
+  - UM19
+  - UM21
+  - UM23
+  - UM25
+  - UM27
+  - UM29
+  - UM31
+  - UM33
   units:
   - L-020
   - L-022
@@ -82,10 +244,691 @@ items:
   - T-003
   - T-004
   - T-005
+  - D-013
+  - D-064
 - id: T-06
-  field: 専門分野
-  topic: 専門科目 B：専門的問題（10 数題から 3 題選択）
+  field: 解析
+  topic: 専門科目 A：微分積分の発展（ルベーグ積分と L^p、フーリエ級数と変換、ガンマ関数。選択問題でときどき要る）
   sources:
   - UM06
   - UM07
-  none: 分野ごとの専門的問題で、募集要項と出題の意図に範囲の文書がない（UM06、UM07）
+  - UM13
+  - UM15
+  - UM19
+  - UM23
+  - UM33
+  units:
+  - D-020
+  - D-021
+  - D-022
+  - D-023
+  - D-037
+- id: T-07
+  field: 代数
+  topic: 専門科目 B：群論（有限群、群作用と軌道、共役類と中心化群、シローの定理、行列群）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - R-001
+  - R-002
+  - R-003
+  - R-004
+  - R-006
+  - R-007
+  choice: B
+- id: T-08
+  field: 代数
+  topic: 専門科目 B：表現論（有限群の表現と指標、sl₂ の表現）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM18
+  - UM20
+  - UM22
+  units:
+  - R-016
+  - R-017
+  - R-020
+  - R-022
+  choice: B
+- id: T-09
+  field: 代数
+  topic: 専門科目 B：可換環と加群（イデアル、局所化、整閉包と導手、ネーター環、加群の自由性とテンソル積）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - R-008
+  - R-009
+  - R-010
+  - R-011
+  - R-024
+  - R-025
+  - R-027
+  - N-051
+  choice: B
+- id: T-10
+  field: 代数
+  topic: 専門科目 B：体とガロア理論（関数体上の分解体、クンマー拡大、中間体の数え上げ）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - R-012
+  - R-013
+  - R-014
+  - R-030
+  choice: B
+- id: T-11
+  field: 幾何
+  topic: 専門科目 B：代数幾何の入口（座標環、特異点と接空間、2 次曲面）
+  sources:
+  - UM06
+  - UM07
+  - UM14
+  - UM16
+  - UM18
+  - UM22
+  - UM26
+  units:
+  - T-030
+  - T-031
+  - T-032
+  choice: B
+- id: T-12
+  field: 幾何
+  topic: 専門科目 B：多様体（正則値定理、臨界点と臨界値、はめ込み、商多様体、写像度）
+  sources:
+  - UM06
+  - UM07
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - T-009
+  - T-010
+  - T-014
+  - D-027
+  choice: B
+- id: T-13
+  field: 幾何
+  topic: 専門科目 B：微分形式とド・ラームコホモロジー（ストークスの定理、閉形式と完全形式、引き戻しと積分）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - T-015
+  - D-018
+  choice: B
+- id: T-14
+  field: 幾何
+  topic: 専門科目 B：リー群・等質空間とシンプレクティック形式（随伴軌道、不変形式、ハミルトンベクトル場）
+  sources:
+  - UM06
+  - UM07
+  - UM14
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  units:
+  - R-023
+  - T-041
+  choice: B
+- id: T-15
+  field: 幾何
+  topic: 専門科目 B：リーマン計量と曲線・曲面（計量と面積、曲線の長さと最短路、曲率、第二基本形式）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM16
+  - UM20
+  - UM24
+  - UM28
+  - UM30
+  - UM32
+  units:
+  - T-006
+  - T-007
+  - T-008
+  - T-011
+  - T-016
+  choice: B
+- id: T-16
+  field: 位相
+  topic: 専門科目 B：ホモロジーと基本群（商空間と貼り合わせ、写像トーラス、群作用の商、マイヤー–ヴィートリス）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - T-019
+  - T-020
+  - T-023
+  - T-024
+  - T-025
+  - T-026
+  choice: B
+- id: T-17
+  field: 解析
+  topic: 専門科目 B：測度と積分（収束定理、一様可積分性、L^p、可測性）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM34
+  units:
+  - D-019
+  - D-020
+  - D-021
+  - S-006
+  choice: B
+- id: T-18
+  field: 解析
+  topic: 専門科目 B：関数解析（バナッハ空間とヒルベルト空間の作用素、双対、一様有界性原理、スペクトル）
+  sources:
+  - UM06
+  - UM07
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM32
+  - UM34
+  units:
+  - D-062
+  - D-063
+  - D-064
+  - D-065
+  - D-066
+  - D-067
+  - D-068
+  choice: B
+- id: T-19
+  field: 解析
+  topic: 専門科目 B：フーリエ解析と超関数（フーリエ変換、合成積、プランシュレルの定理、超関数の微分）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM18
+  - UM22
+  - UM30
+  units:
+  - D-022
+  - D-023
+  - D-024
+  choice: B
+- id: T-20
+  field: 複素解析
+  topic: 専門科目 B：複素解析の発展（解析接続と多価関数、等角写像とシュワルツの補題、ルンゲの近似、楕円関数、留数の応用）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - D-028
+  - D-030
+  - D-031
+  - D-032
+  - D-033
+  - D-034
+  - D-036
+  - D-042
+  choice: B
+- id: T-21
+  field: 微分方程式
+  topic: 専門科目 B：常微分方程式と力学系（平衡点の安定性、保存量、周期軌道、数理生物のモデル、解の存在と比較）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  units:
+  - D-016
+  - D-044
+  - D-045
+  - D-046
+  - D-047
+  - D-053
+  - D-054
+  - K-119
+  choice: B
+- id: T-22
+  field: 微分方程式
+  topic: 専門科目 B：偏微分方程式（熱・ラプラス・シュレディンガー・KdV、最大値原理、エネルギー法、特性曲線）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  units:
+  - D-049
+  - D-050
+  - D-051
+  - D-057
+  - D-061
+  choice: B
+- id: T-23
+  field: 解析
+  topic: 専門科目 B：特殊関数と直交多項式（ガンマ関数、確定特異点と級数解、エルミート・ラゲール・ルジャンドル・ベッセル、鞍点法）
+  sources:
+  - UM06
+  - UM07
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM34
+  units:
+  - D-037
+  - D-038
+  - D-039
+  - D-048
+  - D-077
+  choice: B
+- id: T-24
+  field: 確率
+  topic: 専門科目 B：確率論（独立和と極限定理、法則収束、条件付き期待値、マルチンゲール）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - S-002
+  - S-003
+  - S-004
+  - S-007
+  - S-008
+  - S-011
+  choice: B
+- id: T-25
+  field: 統計
+  topic: 専門科目 B：数理統計（最尤推定、不偏性、一致性、漸近正規性、線形モデル）
+  sources:
+  - UM06
+  - UM07
+  - UM16
+  - UM26
+  - UM28
+  - UM30
+  - UM32
+  - UM34
+  units:
+  - S-018
+  - S-020
+  - S-021
+  choice: B
+- id: T-26
+  field: 数値解析
+  topic: 専門科目 B：数値解析（反復法とスペクトル半径、常微分方程式の数値解法、差分法の安定性と最大値原理、数値積分の誤差）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  - UM22
+  - UM24
+  - UM26
+  - UM28
+  - UM32
+  - UM34
+  units:
+  - K-001
+  - K-002
+  - K-004
+  - K-005
+  - K-007
+  - K-008
+  choice: B
+- id: T-27
+  field: 数理物理
+  topic: 専門科目 B：解析力学（運動方程式とエネルギー保存、ラグランジュ形式と微小振動、中心力、ハミルトン形式）。B の選択問題で、選ばずに済む
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM16
+  - UM24
+  - UM28
+  - UM34
+  units:
+  - P-003
+  - P-004
+  - P-007
+  - P-010
+  - P-015
+  - P-016
+  - P-018
+  - P-019
+  - P-025
+  - D-052
+  choice: B
+- id: T-28
+  field: 数理物理
+  topic: 専門科目 B：量子力学（自由シュレディンガー方程式、調和振動子と生成消滅演算子、ハイゼンベルク方程式、スピン）。選ばずに済む
+  sources:
+  - UM06
+  - UM07
+  - UM18
+  - UM30
+  - UM32
+  units:
+  - P-070
+  - P-071
+  - P-072
+  - P-073
+  - P-074
+  - P-076
+  choice: B
+- id: T-29
+  field: 数理物理
+  topic: 専門科目 B：統計力学の格子模型（分配関数、転送行列、イジング模型、くりこみ）。選ばずに済む
+  sources:
+  - UM06
+  - UM07
+  - UM20
+  - UM26
+  units:
+  - P-049
+  - P-052
+  - P-053
+  choice: B
+- id: T-30
+  field: 数理物理
+  topic: 専門科目 B：流体（非圧縮オイラー方程式と粒子の軌道）。選ばずに済む
+  sources:
+  - UM06
+  - UM07
+  - UM20
+  units:
+  - P-014
+  choice: B
+- id: T-31
+  field: 論理・集合
+  topic: 専門科目 B：数理論理と集合論（完全性とコンパクト性、補間定理、モデルの同型と理論の完全性、計算可能性、超フィルター）
+  sources:
+  - UM06
+  - UM07
+  - UM22
+  - UM24
+  - UM26
+  - UM30
+  - UM34
+  units:
+  - L-021
+  - L-022
+  - L-024
+  - L-026
+  - L-029
+  choice: B
+- id: T-32
+  field: 計算機科学
+  topic: 専門科目 B：形式言語とオートマトン（正則言語、文脈自由言語）
+  sources:
+  - UM06
+  - UM07
+  - UM28
+  - UM32
+  units:
+  - L-027
+  - L-028
+  choice: B
+- id: T-33
+  field: 計算機科学
+  topic: 専門科目 B：時相論理とモデル検査（CTL の EG・AF。2015〜2019 年度に毎年 1 題）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM16
+  - UM18
+  - UM20
+  none: 地図にない（候補：時相論理とモデル検査）
+  choice: B
+- id: T-34
+  field: 代数
+  topic: 専門科目 B：q 類似と量子群（q 二項定理、q 差分作用素、U_q(sl₂)）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM18
+  - UM30
+  - UM32
+  none: 地図にない（候補：q 類似と量子群）
+  choice: B
+- id: T-35
+  field: 複素解析
+  topic: 専門科目 B：幾何的関数論（単葉関数と面積定理、正規族、有限ブラシュケ積）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM18
+  - UM24
+  - UM32
+  none: 地図にない（候補：幾何的関数論）
+  choice: B
+- id: T-36
+  field: 複素解析
+  topic: 専門科目 B：整関数の増大度（ジェンセンの公式、ボレル–カラテオドリの不等式）
+  sources:
+  - UM06
+  - UM07
+  - UM26
+  - UM28
+  none: 地図にない（候補：整関数の値分布の入口。ジェンセンの公式）
+  choice: B
+- id: T-37
+  field: 微分方程式
+  topic: 専門科目 B：数理生物の閾値定理（基本再生産数、齢構造のある感染症モデル）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM14
+  - UM18
+  none: 地図にない（候補：数理生物の閾値定理。模型の解析そのものは T-21 の D-053、K-119 が受け持つ）
+  choice: B
+- id: T-38
+  field: 数理物理
+  topic: 専門科目 B：可積分系（ラックス対、戸田格子、KdV の保存量）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM28
+  - UM32
+  units:
+  - D-079
+  - P-019
+  choice: B
+- id: T-39
+  field: 統計
+  topic: 専門科目 B：時系列（自己回帰過程、標本自己共分散）
+  sources:
+  - UM06
+  - UM07
+  - UM22
+  - UM24
+  - UM28
+  units:
+  - F-034
+  choice: B
+- id: T-40
+  field: 確率
+  topic: 専門科目 B：極値統計（最大値の法則収束、ガンベル分布）
+  sources:
+  - UM06
+  - UM07
+  - UM16
+  - UM28
+  - UM34
+  none: 地図にない（候補：極値統計）
+  choice: B
+- id: T-41
+  field: 解析
+  topic: 専門科目 A・B：特異積分（ヒルベルト変換の L^p 有界性）
+  sources:
+  - UM06
+  - UM07
+  - UM12
+  - UM19
+  none: 地図にない（候補：特異積分とヒルベルト変換）
+  choice: B
+- id: T-42
+  field: 幾何
+  topic: 専門科目 B：モース理論（モース–ボット関数、勾配流による微分同相）
+  sources:
+  - UM06
+  - UM07
+  - UM20
+  - UM30
+  none: 地図にない（候補：モース理論）
+  choice: B
+- id: T-43
+  field: 数値解析
+  topic: 専門科目 B：ニュートン法の 2 次収束（逆行列のニュートン–シュルツ反復を含む）
+  sources:
+  - UM06
+  - UM07
+  - UM28
+  - UM30
+  none: 地図にない（候補：ニュートン法）
+  choice: B
+- id: T-44
+  field: 外国語
+  topic: 外国語：数学の英文の読解と作文（英文和訳と和文英訳）
+  sources:
+  - UM06
+  - UM07
+  - UM38
+  none: 数学の英語の読解と作文で、地図は数学の単元を並べるので受け持たない（問題は非公開、UM38 は出典の一覧だけ）

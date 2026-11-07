@@ -1,106 +1,513 @@
-# 網羅表：東京大学大学院理学系研究科物理学専攻（修士課程入試）（組み込みの係が作り、check_fragment.py で確かめた）
+# 網羅表：東京大学大学院理学系研究科物理学専攻（修士課程入試）。平成 27〜令和 8 年度の過去問 68 問の型付けから作り直した（2026-11-07）
 sources:
-  PH27:
-    title: 東京大学大学院理学系研究科, 令和 9（2027）年度 修士課程 学生募集要項（p.3「4. 専攻別試験科目及び試験期日」物理学専攻）（令和 9 年度入学（試験は 2026-08-18））
-    url: https://www.s.u-tokyo.ac.jp/ja/admission/master/files/R9/R9_master_guidelines.pdf
+  R8I:
+    title: 物理学専攻, 令和 8 年度「専門科目」の出題の意図（2025-08-19 実施。問題冊子は取れず）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2026/04/7279dddee7f4ed267cae8c23fe4cd7d1.pdf
     date: 2026-11-07
+    note: Wayback 20261016011422
+  R7:
+    title: 物理学専攻, 令和 7 年度 修士課程入学試験問題「専門科目」（2024-08-20）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2025/05/R7Master.pdf
+    date: 2026-11-07
+    note: Wayback 20251117044630
+  R6:
+    title: 物理学専攻, 令和 6 年度 修士課程入学試験問題「専門科目」（2023-08-22）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2024/04/95623d8494d7022b27ffbf7b8d8a7630.pdf
+    date: 2026-11-07
+    note: Wayback 20250214014156
+  R5:
+    title: 物理学専攻, 令和 5 年度 修士課程入学試験問題「専門科目」（2022-08-23）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2023/04/R5master.pdf
+    date: 2026-11-07
+    note: Wayback 20250214005436
+  R4:
+    title: 物理学専攻, 令和 4 年度 修士課程入学試験問題「専門科目」（2021-08-23）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2022/04/R4master.pdf
+    date: 2026-11-07
+    note: Wayback 20250214014633
+  R2P:
+    title: 物理学専攻, 令和 2 年度 修士課程入学試験問題「物理学」（2019-08-19）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2020/04/R2masterphysics.pdf
+    date: 2026-11-07
+    note: Wayback 20250619161249
+  R2M:
+    title: 物理学専攻, 令和 2 年度 修士課程入学試験問題「数学」（2019-08-19）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2020/04/R2math.pdf
+    date: 2026-11-07
+    note: Wayback 20250214012958
+  H31P:
+    title: 物理学専攻, 平成 31 年度 修士課程入学試験問題「物理学」（2018-08-20）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/butsuriH31.pdf
+    date: 2026-11-07
+    note: Wayback 20250214011626
+  H31M:
+    title: 物理学専攻, 平成 31 年度 修士課程入学試験問題「数学」（2018-08-20）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/sugakuH31.pdf
+    date: 2026-11-07
+    note: Wayback 20250214011702
+  H30P:
+    title: 物理学専攻, 平成 30 年度 修士課程入学試験問題「物理学」（2017-08-21）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/butsuriH30.pdf
+    date: 2026-11-07
+    note: Wayback 20220320000136
+  H30M:
+    title: 物理学専攻, 平成 30 年度 修士課程入学試験問題「数学」（2017-08-21）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/sugakuH30.pdf
+    date: 2026-11-07
+    note: Wayback 20250214012328
+  H29P:
+    title: 物理学専攻, 平成 29 年度 修士課程入学試験問題「物理学」（2016-08-22）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/butsuriH29.pdf
+    date: 2026-11-07
+    note: Wayback 20210914132706
+  H29M:
+    title: 物理学専攻, 平成 29 年度 修士課程入学試験問題「数学」（2016-08-22）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2015/03/sugakuH29.pdf
+    date: 2026-11-07
+    note: Wayback 20250214010812
+  H28P:
+    title: 物理学専攻, 平成 28 年度 修士課程入学試験問題「物理学」（2015-08-24）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2016/04/butsuriH28.pdf
+    date: 2026-11-07
+    note: Wayback 20250214003841
+  H28M:
+    title: 物理学専攻, 平成 28 年度 修士課程入学試験問題「数学」（2015-08-24）
+    url: https://www.phys.s.u-tokyo.ac.jp/wp-content/uploads/2016/04/sugakuH28.pdf
+    date: 2026-11-07
+    note: Wayback 20250214012417
+  H27P:
+    title: 物理学専攻, 平成 27 年度 修士課程入学試験問題「物理学」（2014-08-25）
+    url: https://www.phys.s.u-tokyo.ac.jp/doc/nyushi/documents/buturiH27.pdf
+    date: 2026-11-07
+    note: Wayback 20210811115646
+  H27M:
+    title: 物理学専攻, 平成 27 年度 修士課程入学試験問題「数学」（2014-08-25）
+    url: https://www.phys.s.u-tokyo.ac.jp/doc/nyushi/documents/sugakuH27.pdf
+    date: 2026-11-07
+    note: Wayback 20250214005921
 items:
 - id: TB-01
-  field: 数学
-  topic: 数学（物理学研究に必要となる基礎的な数学）
+  field: 量子力学
+  topic: 調和振動子の代数的解法（生成消滅演算子、多次元の縮退、スクイーズド状態）
   sources:
-  - PH27
+  - H31P
+  - R5
+  - R6
+  - H28P
   units:
-  - D-014
-  - D-018
-  - D-022
-  - D-029
-  - D-030
-  - D-032
-  - D-044
-  - D-045
-  - D-049
-  - D-048
-  - D-050
-  - M-003
-  - M-004
-  - M-007
+  - P-074
+  - P-076
+  - P-091
 - id: TB-02
   field: 量子力学
-  topic: 物理学：量子力学
+  topic: 時間に依存しない摂動論と準古典近似（1・2 次の摂動、ボーア＝ゾンマーフェルトの量子化）
   sources:
-  - PH27
+  - H27P
+  - H31P
   units:
-  - P-069
+  - P-078
+- id: TB-03
+  field: 量子力学
+  topic: 1 次元のポテンシャル問題と波束（デルタ関数、周期境界、周期ポテンシャル、重心の分離、波束の広がり）
+  sources:
+  - H27P
+  - H29P
+  - R8I
+  units:
   - P-070
   - P-071
-  - P-072
-  - P-073
-  - P-074
-  - P-075
-  - P-076
-  - P-077
-  - P-078
-  - P-079
-  - P-080
-  - P-081
-  - P-082
-  - P-083
-  - P-084
-- id: TB-03
-  field: 統計力学
-  topic: 物理学：統計力学
+  - P-095
+- id: TB-04
+  field: 量子力学
+  topic: 交換関係、不確定性関係、同時固有状態
   sources:
-  - PH27
+  - R4
+  - R5
+  - R8I
   units:
-  - P-042
-  - P-043
-  - P-044
-  - P-045
+  - P-072
+- id: TB-05
+  field: 量子力学
+  topic: スピン 1/2 と二準位系（パウリ行列、測定、磁場中のスピンとゲージ）
+  sources:
+  - R2P
+  - H30P
+  - H28P
+  - H29P
+  units:
+  - P-072
+  - P-076
+  - P-080
+- id: TB-06
+  field: 量子力学
+  topic: 量子の断熱定理と準位の避けた交差（古典のモードの移りを含む）
+  sources:
+  - H30P
+  - H29P
+  units:
+  - P-176
+- id: TB-07
+  field: 量子力学
+  topic: もつれとベル型の不等式（一重項の相関、局所実在論）
+  sources:
+  - R2P
+  units:
+  - P-084
+- id: TB-08
+  field: 量子力学
+  topic: 時間に依存する摂動論と光の吸収（遷移率、2 光子遷移、ゲージの選び方、和則）
+  sources:
+  - R7
+  units:
+  - P-079
+  - P-091
+- id: TB-09
+  field: 統計力学
+  topic: カノニカル分布と古典理想気体（分配関数、1/N! と示量性、エントロピー、揺らぎ、第三法則）
+  sources:
+  - R2P
+  - R6
+  - H30P
+  - R7
+  units:
   - P-046
-  - P-047
   - P-048
   - P-049
-  - P-050
-  - P-051
-  - P-052
-- id: TB-04
-  field: 古典力学
-  topic: 物理学：古典力学
+- id: TB-10
+  field: 統計力学
+  topic: 振動子の集まりの統計（等分配則、アインシュタイン比熱、連成振動子とデバイ模型）
   sources:
-  - PH27
+  - H28P
+  - R7
   units:
-  - P-001
-  - P-002
-  - P-003
-  - P-004
-  - P-005
-  - P-006
-  - P-007
-  - P-008
-  - P-009
-  - P-010
-  - P-011
-  - P-012
+  - P-049
+  - P-051
+  - P-093
+- id: TB-11
+  field: 統計力学
+  topic: グランドカノニカル分布と化学ポテンシャル（粒子の出入り、吸着）
+  sources:
+  - H30P
+  - R2P
+  - R6
+  units:
+  - P-050
+- id: TB-12
+  field: 統計力学
+  topic: 理想ボース気体とボース＝アインシュタイン凝縮（箱、調和トラップ、スピンと磁場）
+  sources:
+  - R4
+  - R7
+  - H30P
+  units:
+  - P-051
+- id: TB-13
+  field: 統計力学
+  topic: 理想フェルミ気体と状態密度（縮退、低温の比熱、線形分散の電子）
+  sources:
+  - R2P
+  - R5
+  units:
+  - P-051
+  - P-094
+  - P-095
+- id: TB-14
+  field: 統計力学
+  topic: イジング模型（1 次元の転送行列と相関長、副格子の平均場近似）
+  sources:
+  - H29P
+  - H31P
+  - R8I
+  units:
+  - P-052
+  - P-177
+- id: TB-15
+  field: 統計力学
+  topic: 高分子とエントロピー弾性（ランダムウォーク、ゴム弾性、揺らぎと応答）
+  sources:
+  - H27P
+  - R8I
+  units:
+  - P-054
+  - P-055
+  - P-103
+- id: TB-16
+  field: 古典力学
+  topic: ラグランジュ形式（一般化座標、拘束、保存量）
+  sources:
+  - H29P
+  - H31P
+  - R8I
+  units:
   - P-015
   - P-016
-  - P-017
+- id: TB-17
+  field: 古典力学
+  topic: 微小振動、連成振動と基準振動
+  sources:
+  - H29P
+  - H28P
+  - R7
+  units:
+  - P-007
+  - P-016
+  - P-025
+- id: TB-18
+  field: 古典力学
+  topic: 二体問題と中心力（換算質量、ケプラー運動、軌道の縮小、衝突パラメータ）
+  sources:
+  - H31P
+  - H29P
+  - H30P
+  units:
+  - P-006
+  - P-009
+  - P-010
+- id: TB-19
+  field: 古典力学
+  topic: 剛体の固定軸まわりの回転（慣性モーメント、トルク、つり合いの安定）
+  sources:
+  - R7
+  - R8I
+  units:
+  - P-005
+  - P-011
+- id: TB-20
+  field: 古典力学
+  topic: 回転する座標系の中の運動（遠心力、コリオリ力）
+  sources:
+  - R8I
+  units:
+  - P-012
+- id: TB-21
+  field: 古典力学
+  topic: 強制振動と共鳴（束縛された荷電粒子、LCR 共振との対応）
+  sources:
+  - R6
+  - H28P
+  - R2P
+  units:
+  - P-008
+- id: TB-22
+  field: 古典力学
+  topic: 相対論的力学（4 元運動量、衝突と崩壊、閾値、変質量のロケット）
+  sources:
+  - H28P
+  - H27P
+  - H30P
+  - H31P
+  - R2P
+  units:
+  - P-006
+  - P-057
+  - P-058
+- id: TB-23
+  field: 古典力学
+  topic: ハミルトン形式と相空間（正準方程式、作用、断熱不変量）
+  sources:
+  - R6
+  - H31P
+  - H29P
+  units:
   - P-018
   - P-019
-- id: TB-05
-  field: 電磁気学
-  topic: 物理学：電磁気学
+- id: TB-24
+  field: 古典力学
+  topic: 電場・磁場の中の荷電粒子の運動（ローレンツ力、円運動、速度選別）
   sources:
-  - PH27
+  - H28P
+  - H30P
+  - H31P
+  - R2P
   units:
-  - P-029
-  - P-030
-  - P-031
   - P-032
-  - P-033
-  - P-034
-  - P-035
+- id: TB-25
+  field: 電磁気学
+  topic: 静電場の境界値問題（ポアソン方程式、解の一意性、鏡像法）
+  sources:
+  - R7
+  units:
+  - P-031
   - P-036
-  - P-037
-  - P-038
+- id: TB-26
+  field: 電磁気学
+  topic: 多重極展開と双極子（双極子と四極子のエネルギー、力、トルク）
+  sources:
+  - R5
+  - R7
+  - H30P
+  - R6
+  units:
+  - P-030
+  - P-036
+- id: TB-27
+  field: 電磁気学
+  topic: 電磁波の放射と散乱（遅延ポテンシャル、双極子放射、レイリー散乱、制動放射）
+  sources:
+  - H30P
+  - R6
+  - H31P
+  units:
+  - P-034
   - P-039
+- id: TB-28
+  field: 電磁気学
+  topic: 境界での反射と透過（フレネル係数、全反射、エバネッセント波）
+  sources:
+  - R4
+  - H28P
+  units:
+  - P-027
+  - P-035
+- id: TB-29
+  field: 電磁気学
+  topic: 導波路と伝送線路（同軸ケーブル、特性インピーダンス、反射、表皮効果、プラズマの分散）
+  sources:
+  - R2P
+  - H31P
+  - H28P
+  units:
+  - P-033
+  - P-040
+- id: TB-30
+  field: 電磁気学
+  topic: 電磁場のローレンツ変換（動く電荷のつくる場）
+  sources:
+  - H27P
+  units:
+  - P-037
+  - P-057
+- id: TB-31
+  field: 数学
+  topic: 固有値と対角化（特性多項式、対角化の条件、冪零行列、三重対角行列、半正定値、線形系の安定性）
+  sources:
+  - H27M
+  - H28M
+  - R4
+  - R6
+  - R8I
+  units:
+  - M-007
+  - M-008
+  - M-010
+  - D-046
+- id: TB-32
+  field: 数学
+  topic: 行列の指数関数と回転（e^{tA}、det e^A = e^{tr A}、ロドリゲスの公式、相似変換）
+  sources:
+  - H29M
+  - H31M
+  - R5
+  units:
+  - M-014
+- id: TB-33
+  field: 数学
+  topic: エルミート行列とリー代数（パウリ行列、ゲルマン行列、構造定数、SU(2) と回転、クロック行列とシフト行列）
+  sources:
+  - H31M
+  - R7
+  - R2M
+  units:
+  - M-006
+  - P-076
+  - P-077
+  - P-107
+- id: TB-34
+  field: 数学
+  topic: 特異値分解と擬似逆（最小ノルム解）
+  sources:
+  - H30M
+  units:
+  - M-015
+- id: TB-35
+  field: 数学
+  topic: 留数定理と定積分（三角関数の積分、ジョルダンの補題、ラプラス逆変換）
+  sources:
+  - H27M
+  - H29M
+  - R5
+  - R6
+  - R7
+  units:
+  - D-030
+  - D-031
+  - D-032
+- id: TB-36
+  field: 数学
+  topic: 解析接続と分散関係（主値積分、クラマース＝クローニッヒ、枝切り、ゼータ正則化）
+  sources:
+  - R4
+  - H31M
+  units:
+  - D-036
+  - D-037
+  - P-040
+- id: TB-37
+  field: 数学
+  topic: フーリエ変換、たたみ込み、デルタ関数
+  sources:
+  - H27M
+  - R2M
+  - H30M
+  - R6
+  units:
+  - D-075
+  - P-026
+- id: TB-38
+  field: 数学
+  topic: 拡散方程式とグリーン関数（熱核、移流拡散、誤差関数）
+  sources:
+  - H27M
+  - R2M
+  - H30M
+  units:
+  - D-049
+  - D-050
+- id: TB-39
+  field: 数学
+  topic: 1 階偏微分方程式と特性曲線法
+  sources:
+  - H30M
+  - R2M
+  - R8I
+  units:
+  - D-076
+- id: TB-40
+  field: 数学
+  topic: 非線形方程式の厳密解（第一積分、キンク解、コール＝ホップ変換）
+  sources:
+  - H28M
+  - H30M
+  units:
+  - D-079
+- id: TB-41
+  field: 数学
+  topic: スツルム＝リウヴィル問題と直交多項式（自己共役な演算子、重み付きの直交）
+  sources:
+  - H27M
+  - R7
+  - H31M
+  units:
+  - D-048
+  - D-077
+- id: TB-42
+  field: 数学
+  topic: ラプラス変換と積分方程式（たたみ込み型）
+  sources:
+  - H29M
+  - R6
+  units:
+  - D-035
+  - D-078
+- id: TB-43
+  field: 数学
+  topic: ガウス積分、ガンマ関数、漸近展開（スターリングの公式、誤差関数）
+  sources:
+  - R2M
+  - R2P
+  - R6
+  - R7
+  units:
+  - D-017
+  - D-037
+  - D-039

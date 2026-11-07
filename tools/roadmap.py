@@ -48,11 +48,12 @@ def load():
 
 
 def goal_units(data):
-    """目標ごとに、網羅表が指す単元とその前提をすべてたどった単元の集まり。"""
+    """目標ごとに、網羅表が指す単元とその前提をすべてたどった単元の集まり。
+    choice（選んで解く論題の組。網羅表の choices に名前と選ぶ数）の論題は道のりに入れない。"""
     needs = {u["id"]: u.get("needs", []) for u in data["units"]}
     out = {}
     for gid, cov in data["coverages"].items():
-        seen, stack = set(), [uid for i in cov.get("items", []) for uid in i.get("units") or []]
+        seen, stack = set(), [uid for i in cov.get("items", []) if not i.get("choice") for uid in i.get("units") or []]
         while stack:
             uid = stack.pop()
             if uid in seen or uid not in needs:
@@ -76,6 +77,8 @@ def check_coverage(cov, units):
         for uid in item.get("units") or []:
             if uid not in units:
                 errors.append(f"網羅表 {iid}: 単元 {uid} が地図にない")
+        if item.get("choice") and item["choice"] not in (cov.get("choices") or {}):
+            errors.append(f"網羅表 {iid}: 選択の組 {item['choice']} が choices にない")
         for s in item.get("sources") or []:
             if s not in cov.get("sources", {}):
                 errors.append(f"網羅表 {iid}: 出典 {s} が sources にない")
@@ -255,7 +258,8 @@ def build_coverage(goal, cov, titles):
                 continue
             where = ("、".join(f"{u} {titles[u]}" for u in i["units"]) if i.get("units")
                      else f"すべての単元（{i['axis']}の軸）" if i.get("axis") else f"入れない（{i['none']}）")
-            lines.append(f"| {i['id']} | {i['topic']} | {where} | {'、'.join(i.get('sources') or [])} |")
+            pick = f"（選択：{cov['choices'][i['choice']]['label']}）" if i.get("choice") else ""
+            lines.append(f"| {i['id']} | {i['topic']}{pick} | {where} | {'、'.join(i.get('sources') or [])} |")
         lines.append("")
     lines += ["## 出典", "", "| 記号 | 題名 | URL | 取得日 |", "|---|---|---|---|"]
     for k, s in cov.get("sources", {}).items():
@@ -283,8 +287,9 @@ def build(data, problems):
     goals = []
     for g in data.get("goals", []):
         cov = data["coverages"].get(g["id"], {})
-        items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis") if k in i} for i in cov.get("items", [])]
+        items = [{k: i[k] for k in ("id", "field", "topic", "units", "none", "axis", "choice") if k in i} for i in cov.get("items", [])]
         goals.append({**{k: g[k] for k in ("id", "name", "kind", "level", "region", "note", "basis", "beyond") if k in g},
+                      **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
                "goals": goals, "goalKinds": list(GOAL_KINDS), "units": out_units, "renamed": data["renamed"]}

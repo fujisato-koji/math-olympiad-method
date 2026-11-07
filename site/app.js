@@ -47,9 +47,15 @@
   const isDone = id => !!(progress.units[id] && progress.units[id].done);
   const topicDone = it => !!(it.units && it.units.length && it.units.every(isDone));
   function goalStats(g) {
-    const topics = g.items.filter(i => i.units && i.units.length), got = topics.filter(topicDone).length;
-    return { topics: topics.length, got, units: g.units.length, done: g.units.filter(isDone).length,
-      pct: Math.round(100 * got / Math.max(1, topics.length)) };
+    // 選んで解く論題の組（choices）は、組ごとに選ぶ数だけを数える（道のりには入らない）
+    const must = g.items.filter(i => i.units && i.units.length && !i.choice);
+    let topics = must.length, got = must.filter(topicDone).length;
+    Object.entries(g.choices || {}).forEach(([k, c]) => {
+      topics += c.pick;
+      got += Math.min(c.pick, g.items.filter(i => i.choice === k && i.units && i.units.length && topicDone(i)).length);
+    });
+    return { topics, got, units: g.units.length, done: g.units.filter(isDone).length,
+      pct: Math.round(100 * got / Math.max(1, topics)) };
   }
   function satisfied() {
     const s = new Set();
@@ -528,7 +534,7 @@
   function viewGoal(id) {
     const g = GOALS.find(x => x.id === id), set = GOAL_SETS[id], st = goalStats(g), f = forecast(x => set.has(x));
     const next = R.units.filter(u => set.has(u.id) && ['ready', 'doing', 'review'].includes(status(u.id))).sort(order);
-    const fields = [...new Set(g.items.map(i => i.field))];
+    const must = g.items.filter(i => !i.choice), fields = [...new Set(must.map(i => i.field))];
     const row = it => {
       if (it.none) return `<div class="topic none"><span class="mark"></span><span class="t">${esc(it.topic)}</span><span class="us muted">入れない：${esc(it.none)}</span></div>`;
       const ok = topicDone(it);
@@ -560,8 +566,16 @@
     </section>
     <section>
       <h2 class="section-title">論題（✓ は、受け持つ駅がすべて済んで届いたもの）</h2>
-      ${fields.map(fd => `<h3 class="field">${esc(fd)}</h3><div class="topics">${g.items.filter(i => i.field === fd).map(row).join('')}</div>`).join('')}
+      ${fields.map(fd => `<h3 class="field">${esc(fd)}</h3><div class="topics">${must.filter(i => i.field === fd).map(row).join('')}</div>`).join('')}
+    </section>
+    ${Object.entries(g.choices || {}).map(([k, c]) => {
+      const picks = g.items.filter(i => i.choice === k), pf = [...new Set(picks.map(i => i.field))];
+      return `<section>
+      <h2 class="section-title">選んで解く論題：${esc(c.label)}</h2>
+      <p class="muted">得意な論題を選んで解く問題です。道のりには入れず、届いた論題は ${c.pick} つまで数えます。</p>
+      ${pf.map(fd => `<h3 class="field">${esc(fd)}</h3><div class="topics">${picks.filter(i => i.field === fd).map(row).join('')}</div>`).join('')}
     </section>`;
+    }).join('')}`;
   }
 
   // ---- 今日の問題 ----

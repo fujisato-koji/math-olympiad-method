@@ -134,11 +134,11 @@ regions:
 # 網羅表が指す単元と、その前提をすべてたどった単元が、その目標までの道のりになる。
 goals:
   - {id: imo, name: IMO, kind: 大会, level: 高校, region: 国際, note: 世界中の高校生が、2 日間で 6 問の難しい問題に挑む数学の大会。, basis: IMO の公式の頁と過去問の論題の調べ（coverage.yaml の出典 O01〜O13）による, coverage: coverage.yaml}
-  - {id: todai-suuri, name: 東京大学大学院数理科学研究科（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、数学の研究を始めるための試験。, basis: 令和9（2027）年度の修士課程学生募集要項と出題の意図による。専門科目 A の範囲は「線形代数、微分積分、複素解析、常微分方程式、集合・位相」。専門科目 B は分野ごとで範囲の文書がない。論題と単元の対応は名称による, coverage: coverage-todai-suuri.yaml}
+  - {id: todai-suuri, name: 東京大学大学院数理科学研究科（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、数学の研究を始めるための試験。, basis: "令和 9 年度の募集要項と出題の意図、2015〜2026 年度の過去問 300 題（研究科の公開、一部は Internet Archive の控え）の型付けによる。専門科目 A は 7 題（A1・A2 が必答、A3〜A7 から 2 題）で、範囲の 5 分野はどれも学部の基礎なので道のりに入れる。専門科目 B は 18 題から 3 題を選ぶので、選んで解く論題として道のりに入れない。物理を題材にする問題は B に毎年 0〜2 題で、選ばずに済む", coverage: coverage-todai-suuri.yaml}
   - {id: gre-math, name: GRE Mathematics Subject Test（ETS）, kind: 入試, level: 大学院, region: 米国, note: アメリカの大学院で数学を学ぶときに使う、大学の数学の力をはかる試験。, basis: "ETS の内容の頁と練習帳による出題比率は微積分 50%、代数 25%、その他 25%。論題と単元の対応は名称による", coverage: coverage-gre-math.yaml}
   - {id: berkeley-prelim, name: UC Berkeley Preliminary Examination, kind: 入試, level: 大学院, region: 米国, note: カリフォルニア大学バークレー校の大学院で、数学の研究に進む前に受ける試験。, basis: 範囲の PDF（2003-12-09 付、現在も頁から参照）による。Math 1A-1B-53-54、104、113、110、185 の範囲。論題と単元の対応は名称による, coverage: coverage-berkeley-prelim.yaml}
   - {id: ipho, name: 国際物理オリンピック（IPhO）Syllabus, kind: 大会, level: 高校, region: 国際, note: 世界中の高校生が、物理の問題と実験に挑む大会。, basis: IPhO 公式サイトの Statutes and Syllabus による（2026-11-07 取得、シラバスの版の表示なし）。論題と単元の対応は名称による。シラバス外の概念は問題文で説明すれば出してよい。数学は「中等学校の生徒が標準的な高校の数学で解けること」が条件, coverage: coverage-ipho.yaml}
-  - {id: todai-butsuri, name: 東京大学大学院理学系研究科物理学専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、物理の研究を始めるための試験。, basis: 令和9（2027）年度の修士課程学生募集要項（試験は 2026-08-18）による。数学 1 問、物理学 3 問で、物理学は量子力学・統計力学・古典力学・電磁気学が主な範囲。細目は書かれておらず、過去問のページも取得できなかったため、論題と単元の対応は分野の名称による, coverage: coverage-todai-butsuri.yaml}
+  - {id: todai-butsuri, name: 東京大学大学院理学系研究科物理学専攻（修士課程入試）, kind: 入試, level: 大学院, region: 日本, note: 東京大学の大学院で、物理の研究を始めるための試験。, basis: "令和 9 年度の募集要項（筆記は数学 1 問と物理学 3 問の全問必答、240 分）と、専攻が公開する平成 27〜令和 8 年度の過去問 68 問（一部は Internet Archive の写し）の型付けによる。旧形式の実験・計測の選択問題は令和 4 年度から出ていないので入れない", coverage: coverage-todai-butsuri.yaml}
   - {id: gre-physics, name: GRE Physics Test（ETS）, kind: 入試, level: 大学, region: 米国, note: アメリカの大学院で物理を学ぶときに使う、大学の物理の力をはかる試験。, basis: "ETS の内容の頁と練習帳による。約 70 問で、大半は学部の最初の 3 年の物理で解ける。出題比率は古典力学 20%、電磁気学 18%、光学と波動 8%、熱力学と統計力学 10%、量子力学 13%、原子物理 10%、特殊相対論 6%、実験の方法 6%、専門の話題 9%。各分野は「such as」で例示されるだけなので、論題と単元の対応は名称による。数学の方法は ETS が挙げる多変数の微積分、ベクトル解析、フーリエ級数、偏微分方程式、行列と行列式、複素関数", coverage: coverage-gre-physics.yaml}
   - {id: step, name: University of Cambridge ほか（STEP 2・3）, kind: 入試, level: 大学, region: 英国, note: ケンブリッジ大学などで数学を学ぶ人が、長い問題をじっくり解く入学の試験。, basis: STEP 2 と STEP 3 の仕様書（2026 年 6 月以降）による。両方とも Mathematics 1（A Level 相当）を前提とし、STEP 3 は STEP 2 の範囲も含む。力学と確率統計も範囲に入る。論題と単元の対応は名称による, coverage: coverage-step.yaml}
   - {id: jee-advanced, name: Indian Institutes of Technology（JEE Advanced）, kind: 入試, level: 大学, region: インド, note: インド工科大学に入るための、とても難しいことで知られる試験。, basis: JEE (Advanced) 2026 の案内書の付録 I（数学の範囲）による。物理の範囲にある力学は含めない。論題と単元の対応は名称による, coverage: coverage-jee-advanced.yaml}
@@ -755,7 +755,7 @@ units:
   - {id: P-049, title: カノニカル分布と分配関数（ボルツマン分布、自由エネルギー、理想気体、二準位系、調和振動子、常磁性、比熱）, stage: 7, region: netsu, needs: [P-045, P-072, D-017], days: 10}
   - {id: P-070, title: シュレーディンガー方程式と確率解釈（波動関数と規格化、確率密度と確率の流れ、期待値、波束と群速度、定常状態、古典極限）, stage: 7, region: ryoshi, needs: [P-025, P-026, P-069], days: 10}
   - {id: P-071, title: 1 次元の量子力学（井戸型ポテンシャル、階段と障壁とトンネル効果、デルタ関数ポテンシャル、調和振動子、パリティ）, stage: 7, region: ryoshi, needs: [P-025, P-026], days: 10}
-  - {id: P-072, title: 量子力学の体系（ヒルベルト空間、エルミート演算子と固有値、行列表示とユニタリ変換、ブラ・ケット、交換関係と不確定性関係、同時固有状態の完全系、正準量子化、測定）, stage: 7, region: ryoshi, needs: [P-070, P-071, M-006], days: 10}
+  - {id: P-072, title: 量子力学の体系（ヒルベルト空間、エルミート演算子と固有値、行列表示とユニタリ変換、ブラ・ケット、交換関係と不確定性関係、同時固有状態の完全系、正準量子化、測定）, stage: 7, region: ryoshi, needs: [P-070, P-071, M-006, P-018], days: 10}
   - {id: P-073, title: 時間発展と描像（時間発展演算子、シュレーディンガー描像とハイゼンベルク描像、ハイゼンベルクの運動方程式）, stage: 7, region: ryoshi, needs: [P-070, P-071, M-006], days: 10}
   - {id: P-074, title: 調和振動子の代数的解法とコヒーレント状態（生成・消滅演算子、数演算子、基準振動との対応）, stage: 7, region: ryoshi, needs: [P-071], days: 10}
   - {id: P-075, title: 3 次元の問題と水素原子（球対称ポテンシャル、軌道角運動量の演算子と球面調和関数、3 次元の井戸型、水素原子）, stage: 7, region: ryoshi, needs: [P-070, P-071, D-048], days: 10}
@@ -815,6 +815,11 @@ units:
   - {id: F-047, title: オルタナティブ投資と私募市場（不動産、未公開株、ヘッジファンド、インフラ）, stage: 7, region: toshi, needs: [F-022, F-011], days: 8}
   - {id: F-048, title: ユニバーサル生命保険と変額保険の数理（積立金の推移、付利、最低保証）, stage: 7, region: seimei-nenkin, needs: [F-027, F-021], days: 10}
   - {id: F-049, title: 行動経済学と行動ファイナンス（プロスペクト理論、ヒューリスティクス、ナッジ）, stage: 7, region: keizai, needs: [F-020, F-024], days: 8}
+  - {id: D-075, title: フーリエ変換の計算（たたみ込み、デルタ関数、物理と工学の使い方）, stage: 7, region: bisekibun, needs: [D-022, D-030], days: 8}
+  - {id: D-076, title: 1 階偏微分方程式と特性曲線法, stage: 7, region: bibun-hoteishiki, needs: [D-014, D-044], days: 8}
+  - {id: D-077, title: 直交多項式と特殊関数（ルジャンドル、エルミート、ラゲール、ベッセル）, stage: 7, region: bibun-hoteishiki, needs: [D-048], days: 8}
+  - {id: M-014, title: "行列の指数関数と 1 径数変換群（e^{tA}、行列式とトレース、回転の生成子）", stage: 7, region: senkei-keisan, needs: [M-007, D-046], days: 8}
+  - {id: M-015, title: 特異値分解と擬似逆行列（最小ノルム解、低ランク近似）, stage: 7, region: senkei-keisan, needs: [M-007, M-006], days: 8}
 
   # ---- 段 8 公理の構造 ----
 
@@ -1073,6 +1078,10 @@ units:
   - {id: F-037, title: 破産理論（複合ポアソン過程、ルンドベリの不等式、破産確率）, stage: 8, region: songai, needs: [F-017, S-009, S-011], days: 10}
   - {id: F-038, title: リスク尺度と統合的リスク管理（VaR、期待ショートフォール、ALM、ERM、経済価値ベースのソルベンシー）, stage: 8, region: keiryo-risk, needs: [F-009, F-017, F-020, S-023], days: 10}
   - {id: E-157, title: オペレーションズ・リサーチの応用（数理計画のモデル化、待ち行列、シミュレーション、意思決定分析）, stage: 8, region: keiei-kogaku, needs: [K-011, K-015, S-009, E-155], days: 10}
+  - {id: D-078, title: 積分方程式（ヴォルテラ型とフレドホルム型、たたみ込み型）, stage: 8, region: bibun-hoteishiki, needs: [D-035, D-050], days: 10}
+  - {id: D-079, title: 非線形方程式の厳密解（第一積分、キンクとソリトン、コール＝ホップ変換）, stage: 8, region: bibun-hoteishiki, needs: [D-076, D-049], days: 10}
+  - {id: P-176, title: 量子の断熱定理と準位の避けた交差（ランダウ＝ツェナー遷移、ベリー位相の入口）, stage: 8, region: ryoshi, needs: [P-078, P-079, P-019], days: 10}
+  - {id: P-177, title: 転送行列の方法（1 次元の格子模型、相関長、波の透過）, stage: 8, region: netsu, needs: [P-052, M-007], days: 8}
 
   # ---- 段 9 構造のあいだ ----
 
@@ -1092,7 +1101,7 @@ units:
   - {id: L-024, title: 述語論理（完全性定理、レーヴェンハイム–スコーレム）, stage: 9, region: suri-ronri, needs: [L-023], days: 12}
   - {id: L-029, title: モデル理論の入口, stage: 9, region: suri-ronri, needs: [L-022, L-024, L-025, T-002, T-003], days: 12}
   - {id: L-030, title: ラムダ計算と直観主義論理, stage: 9, region: suri-ronri, needs: [L-022, L-024, L-025, L-027, L-028], days: 12}
-  - {id: D-023, title: フーリエ変換, stage: 9, region: jitsukaiseki, needs: [D-063, D-064, D-065, D-066, D-020, D-021], days: 12}
+  - {id: D-023, title: フーリエ変換, stage: 9, region: jitsukaiseki, needs: [D-063, D-064, D-065, D-066, D-020, D-021, D-075], days: 12}
   - {id: D-024, title: 超関数, stage: 9, region: jitsukaiseki, needs: [D-023], days: 12}
   - {id: D-025, title: ソボレフ空間, stage: 9, region: jitsukaiseki, needs: [D-023], days: 12}
   - {id: D-026, title: ルベーグの微分定理と近似, stage: 9, region: jitsukaiseki, needs: [D-063, D-064, D-065, D-066, D-020, D-021], days: 12}
