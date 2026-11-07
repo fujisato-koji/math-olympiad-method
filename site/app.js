@@ -291,7 +291,9 @@
       return;
     }
     const minD = Math.min(...shownUnits.map(u => DEPTH[u.id])), maxD = Math.max(...shownUnits.map(u => DEPTH[u.id]));
-    const W = Math.max(host.parentElement.clientWidth - 32, 820), X0 = 168, XS = Math.min(140, Math.max(34, (W - X0 - 28) / Math.max(1, maxD - minD)));
+    // 幅に収まるなら段の間隔を縮めて収め、22px より詰まるなら図を広げて横に送る（右端の段の名前の余白 70px）
+    const X0 = 168, span = Math.max(1, maxD - minD), avail = Math.max(host.parentElement.clientWidth - 32, 820);
+    const XS = Math.min(140, Math.max(22, (avail - X0 - 70) / span)), W = Math.max(avail, Math.ceil(X0 + span * XS + 70));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
     let y = TOP;
     shownRegions.forEach(rg => {
