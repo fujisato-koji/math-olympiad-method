@@ -6288,6 +6288,7 @@ window.ROADMAP = {
     "G-019",
     "G-020",
     "G-021",
+    "G-022",
     "G-023",
     "G-024",
     "G-025",
@@ -7616,6 +7617,7 @@ window.ROADMAP = {
     "G-019",
     "G-020",
     "G-021",
+    "G-022",
     "G-023",
     "G-024",
     "G-025",
@@ -7628,6 +7630,7 @@ window.ROADMAP = {
     "G-046",
     "G-049",
     "G-050",
+    "G-054",
     "H-001",
     "H-002",
     "H-003",
@@ -8789,6 +8792,7 @@ window.ROADMAP = {
     "G-019",
     "G-020",
     "G-021",
+    "G-022",
     "G-023",
     "G-024",
     "G-025",
@@ -11838,6 +11842,7 @@ window.ROADMAP = {
     "G-027",
     "G-046",
     "G-050",
+    "G-054",
     "L-001",
     "L-002",
     "L-012",
@@ -20121,6 +20126,7 @@ window.ROADMAP = {
     "G-046",
     "G-050",
     "G-052",
+    "G-054",
     "L-001",
     "L-002",
     "L-003",
@@ -21051,6 +21057,7 @@ window.ROADMAP = {
     "G-046",
     "G-050",
     "G-051",
+    "G-054",
     "L-001",
     "L-002",
     "L-003",
@@ -38751,6 +38758,7 @@ window.ROADMAP = {
     "G-046",
     "G-050",
     "G-051",
+    "G-054",
     "L-001",
     "L-002",
     "L-003",
@@ -39142,6 +39150,7 @@ window.ROADMAP = {
     "G-019",
     "G-020",
     "G-021",
+    "G-022",
     "G-023",
     "G-024",
     "G-025",
@@ -39702,6 +39711,7 @@ window.ROADMAP = {
     "G-018",
     "G-019",
     "G-020",
+    "G-022",
     "G-023",
     "G-028",
     "G-030",
@@ -40156,6 +40166,7 @@ window.ROADMAP = {
     "G-018",
     "G-019",
     "G-020",
+    "G-022",
     "G-023",
     "G-024",
     "G-026",
@@ -78331,9 +78342,9 @@ window.ROADMAP = {
    "B-052",
    "E-191",
    "K-166",
+   "E-174",
    "V-005",
    "H-092",
-   "E-174",
    "D-034",
    "B-013",
    "W-036",
@@ -78364,12 +78375,12 @@ window.ROADMAP = {
    "B-156",
    "W-070",
    "B-011",
+   "E-210",
    "E-223",
    "W-110",
    "V-031",
    "B-021",
    "H-042",
-   "E-210",
    "E-225",
    "H-018",
    "P-175",
@@ -78679,7 +78690,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-2016-3"
     ],
-    "d": 0.86
+    "d": 0.88
    },
    {
     "a": "kazoekata",
@@ -78689,7 +78700,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1984-5"
     ],
-    "d": 0.85
+    "d": 0.88
    },
    {
     "a": "hakaru",
@@ -78699,7 +78710,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1997-1"
     ],
-    "d": 0.69
+    "d": 0.7
    },
    {
     "a": "seisu",
@@ -78731,7 +78742,7 @@ window.ROADMAP = {
      "IMO-1964-5",
      "IMO-2002-6"
     ],
-    "d": 0.94
+    "d": 0.95
    },
    {
     "a": "futoshiki",
@@ -78776,7 +78787,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2012-1"
     ],
-    "d": 0.34
+    "d": 0.36
    },
    {
     "a": "hakaru",
@@ -78798,7 +78809,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.56
+    "d": 0.58
    },
    {
     "a": "kansu",
@@ -78808,7 +78819,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.65
+    "d": 0.67
    },
    {
     "a": "haichi",
@@ -78819,7 +78830,7 @@ window.ROADMAP = {
      "IMO-1972-6",
      "IMO-1989-4"
     ],
-    "d": 0.79
+    "d": 0.8
    },
    {
     "a": "futoshiki",
@@ -78832,7 +78843,7 @@ window.ROADMAP = {
      "IMO-1991-1",
      "JJMO-P-2023-8"
     ],
-    "d": 0.69
+    "d": 0.72
    },
    {
     "a": "futoshiki",
@@ -78845,7 +78856,7 @@ window.ROADMAP = {
      "IMO-1976-1",
      "IMO-1981-1"
     ],
-    "d": 0.83
+    "d": 0.84
    },
    {
     "a": "ronpo",
@@ -78860,7 +78871,7 @@ window.ROADMAP = {
      "IMO-1973-4",
      "IMO-1983-4"
     ],
-    "d": 0.89
+    "d": 0.91
    },
    {
     "a": "seisuron",
@@ -78887,7 +78898,7 @@ window.ROADMAP = {
      "IMO-1971-2",
      "IMO-1972-2"
     ],
-    "d": 0.91
+    "d": 0.92
    },
    {
     "a": "kansu",
@@ -78949,7 +78960,7 @@ window.ROADMAP = {
      "CL-SANGAKU-3CIRCLES",
      "IMO-1960-7"
     ],
-    "d": 0.77
+    "d": 0.79
    },
    {
     "a": "graph",
@@ -79028,7 +79039,7 @@ window.ROADMAP = {
      "IMO-1996-5",
      "USAMO-2000-2"
     ],
-    "d": 0.84
+    "d": 0.86
    }
   ],
   "hints": [
@@ -79764,25 +79775,25 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "seisuron",
     "e": 41.1,
-    "d": 0.91
+    "d": 0.92
    },
    {
     "a": "seisu",
     "b": "shomei-zukei",
     "e": 39.9,
-    "d": 0.87
+    "d": 0.89
    },
    {
     "a": "hakaru",
     "b": "seisuron",
     "e": 30.4,
-    "d": 0.98
+    "d": 0.99
    },
    {
     "a": "hakaru",
     "b": "seisu",
     "e": 39.7,
-    "d": 0.58
+    "d": 0.6
    },
    {
     "a": "graph",
@@ -79806,7 +79817,7 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "kansu",
     "e": 10.9,
-    "d": 0.71
+    "d": 0.75
    },
    {
     "a": "graph",
@@ -79824,13 +79835,13 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "keisan",
     "e": 3.5,
-    "d": 0.72
+    "d": 0.75
    },
    {
     "a": "haichi",
     "b": "kazu",
     "e": 2.6,
-    "d": 0.92
+    "d": 0.93
    },
    {
     "a": "haichi",
@@ -79842,7 +79853,7 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.77
+    "d": 0.78
    },
    {
     "a": "kakuritsu",
@@ -79860,7 +79871,7 @@ window.ROADMAP = {
     "a": "keisan",
     "b": "shomei-zukei",
     "e": 2.6,
-    "d": 0.62
+    "d": 0.63
    },
    {
     "a": "futoshiki",
@@ -116962,7 +116973,7 @@ window.ROADMAP = {
     10.62
    ],
    "comb": {
-    "b": 0.361,
+    "b": 0.371,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -118131,7 +118142,7 @@ window.ROADMAP = {
     17.24
    ],
    "comb": {
-    "b": 0.356,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -118593,7 +118604,7 @@ window.ROADMAP = {
     16.62
    ],
    "comb": {
-    "b": 0.168,
+    "b": 0.177,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -118752,7 +118763,7 @@ window.ROADMAP = {
     13.17
    ],
    "comb": {
-    "b": 0.56,
+    "b": 0.564,
     "r": 0.0,
     "rg": [
      "data",
@@ -142503,7 +142514,7 @@ window.ROADMAP = {
     18.69
    ],
    "comb": {
-    "b": 0.263,
+    "b": 0.273,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -155043,7 +155054,7 @@ window.ROADMAP = {
     11.06
    ],
    "comb": {
-    "b": 0.354,
+    "b": 0.357,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -156184,7 +156195,7 @@ window.ROADMAP = {
     10.0
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.369,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -157324,7 +157335,7 @@ window.ROADMAP = {
     11.53
    ],
    "comb": {
-    "b": 0.348,
+    "b": 0.351,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -158531,7 +158542,7 @@ window.ROADMAP = {
     15.15
    ],
    "comb": {
-    "b": 0.418,
+    "b": 0.42,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -160116,7 +160127,7 @@ window.ROADMAP = {
     18.32
    ],
    "comb": {
-    "b": 0.278,
+    "b": 0.289,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161646,7 +161657,7 @@ window.ROADMAP = {
     20.14
    ],
    "comb": {
-    "b": 0.194,
+    "b": 0.201,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -164122,7 +164133,7 @@ window.ROADMAP = {
     16.58
    ],
    "comb": {
-    "b": 0.372,
+    "b": 0.371,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -173720,7 +173731,7 @@ window.ROADMAP = {
     2.09
    ],
    "comb": {
-    "b": 0.41,
+    "b": 0.412,
     "r": 0.0,
     "rg": [
      "data",
@@ -174321,7 +174332,7 @@ window.ROADMAP = {
     19.92
    ],
    "comb": {
-    "b": 0.474,
+    "b": 0.475,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -177094,7 +177105,7 @@ window.ROADMAP = {
     20.28
    ],
    "comb": {
-    "b": 0.512,
+    "b": 0.517,
     "r": 1.07,
     "rg": [
      "hakaru",
@@ -177254,7 +177265,7 @@ window.ROADMAP = {
     9.96
    ],
    "comb": {
-    "b": 0.575,
+    "b": 0.577,
     "r": 1.69,
     "rg": [
      "hakaru",
@@ -177492,7 +177503,7 @@ window.ROADMAP = {
     15.28
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.412,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -178047,7 +178058,7 @@ window.ROADMAP = {
     9.07
    ],
    "comb": {
-    "b": 0.546,
+    "b": 0.55,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -185751,7 +185762,7 @@ window.ROADMAP = {
     18.36
    ],
    "comb": {
-    "b": 0.373,
+    "b": 0.372,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -195816,7 +195827,7 @@ window.ROADMAP = {
     8.2
    ],
    "comb": {
-    "b": 0.343,
+    "b": 0.345,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -211874,7 +211885,7 @@ window.ROADMAP = {
     12.86
    ],
    "comb": {
-    "b": 0.378,
+    "b": 0.384,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -212999,7 +213010,7 @@ window.ROADMAP = {
     17.48
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.3,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -214082,7 +214093,7 @@ window.ROADMAP = {
     19.13
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.301,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -215360,7 +215371,7 @@ window.ROADMAP = {
     19.21
    ],
    "comb": {
-    "b": 0.415,
+    "b": 0.429,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -217193,7 +217204,7 @@ window.ROADMAP = {
     17.61
    ],
    "comb": {
-    "b": 0.375,
+    "b": 0.392,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -218397,7 +218408,7 @@ window.ROADMAP = {
     26.69
    ],
    "comb": {
-    "b": 0.211,
+    "b": 0.198,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -218414,35 +218425,1023 @@ window.ROADMAP = {
    "level": 3,
    "region": "shomei-zukei",
    "needs": [
-    "G-017"
+    "G-017",
+    "G-010"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "線分 AB の垂直二等分線を、定規とコンパスで作図しよう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"77.7\" y1=\"75\" x2=\"162.3\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"132\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polyline points=\"128,75 128,67 120,67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"77.7\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"65.7\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">A</text><circle cx=\"162.3\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"174.3\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"132\" y=\"36.1\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"132\" y=\"123.7\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"111.5\" y=\"88.4\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "explain": "① A を中心に、AB の半分より長い半径で弧をかく。② B を中心に、同じ半径で弧をかく。③ 2 つの弧の交点を P、Q として、直線 PQ をひく。直線 PQ は AB の真ん中の点 M を通り、AB に垂直です。これを線分 AB の垂直二等分線といいます。垂直二等分線の上の点は、どれも A と B から等しい距離にあります。逆に、A と B から等しい距離にある点は、垂直二等分線の上にあります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "AB = AC の二等辺三角形 ABC で、∠B = 65° です。∠A は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 71.5,122 168.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.5 122 A15 15 0 0 0 77.8 108.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.1\" y=\"111.2\" font-size=\"12\" text-anchor=\"middle\">65°</text><line x1=\"91.2\" y1=\"67.9\" x2=\"100.3\" y2=\"72.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"139.7\" y1=\"72.1\" x2=\"148.8\" y2=\"67.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.6\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.4\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 50,
+       "check": "180 - 2 * 65",
+       "hints": [
+        "二等辺三角形の 2 つの底角は等しいね。",
+        "∠C も ∠B と同じ大きさだよ。",
+        "三角形の 3 つの角の和は 180° だね。"
+       ],
+       "paths": [
+        [
+         "∠C = ∠B = 65°",
+         "∠A = 180° − 65° × 2",
+         "50°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "AB = AC の二等辺三角形 ABC で、頂角 A の二等分線と底辺 BC の交点を D とします。BC = 12 cm のとき、BD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 78,122 162,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.4\" y1=\"68.1\" x2=\"103.6\" y2=\"71.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"136.4\" y1=\"71.9\" x2=\"145.6\" y2=\"68.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"68.6\" y=\"132.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.4\" y=\"132.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 6,
+       "check": "12 // 2",
+       "hints": [
+        "二等辺三角形の頂角の二等分線には、どんな性質があったかな。",
+        "頂角の二等分線は、底辺を垂直に 2 等分するね。",
+        "BD は BC の何分の 1 かな。"
+       ],
+       "paths": [
+        [
+         "頂角の二等分線は底辺を垂直に 2 等分する",
+         "BD = 12 ÷ 2",
+         "6 cm"
+        ]
+       ],
+       "note": "この性質が、垂直二等分線の作図が正しいわけ（3 日目）のもとになる。"
+      },
+      {
+       "part": "今日",
+       "text": "長さ 9 cm の線分 AB の垂直二等分線をひき、AB との交点を M とします。AM は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"77.7\" y1=\"75\" x2=\"162.3\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"132\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polyline points=\"128,75 128,67 120,67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"77.7\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"65.7\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">A</text><circle cx=\"162.3\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"174.3\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"132\" y=\"36.1\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"132\" y=\"123.7\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"111.5\" y=\"88.4\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 4.5,
+       "accept": [
+        "9/2"
+       ],
+       "check": "9 / 2",
+       "hints": [
+        "垂直二等分線は、AB をどのように分けるかな。",
+        "M は AB の真ん中の点だよ。",
+        "AB の長さを 2 でわろう。"
+       ],
+       "paths": [
+        [
+         "M は AB の中点",
+         "AM = 9 ÷ 2",
+         "4.5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 P は線分 AB の垂直二等分線の上にあります。PA = 7 cm、AB = 6 cm のとき、三角形 PAB のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"18\" x2=\"72.7\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"167.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.7\" y1=\"122\" x2=\"167.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,122 128,114 120,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"96.4\" y1=\"127\" x2=\"96.4\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"143.6\" y1=\"117\" x2=\"143.6\" y2=\"127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.9\" y=\"133.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"176.1\" y=\"133.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 20,
+       "check": "7 + 7 + 6",
+       "hints": [
+        "垂直二等分線の上の点は、A と B からどんな距離にあるかな。",
+        "PB は PA と同じ長さだね。",
+        "3 つの辺の長さをたそう。"
+       ],
+       "paths": [
+        [
+         "PB = PA = 7 cm",
+         "7 + 7 + 6",
+         "20 cm"
+        ]
+       ],
+       "note": "PB の長さが書いていないので止まりやすい。「垂直二等分線の上 → 両はしから等しい距離」を言葉で確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "長さ 8 cm の線分 AB があります。A からも B からも 5 cm の距離にある点は、いくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"87.5\" y1=\"70\" x2=\"152.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"87.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"152.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"76.5\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"163.5\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text></svg>",
+       "answer": 2,
+       "check": "2 if 5 > 8 / 2 else (1 if 5 == 8 / 2 else 0)",
+       "hints": [
+        "A からも B からも同じ距離の点は、どの線の上にあるかな。",
+        "A を中心に半径 5 cm の円をかくと、垂直二等分線と何回交わるかな。",
+        "5 cm と、AB の半分の長さをくらべよう。"
+       ],
+       "paths": [
+        [
+         "点は垂直二等分線（点線）の上",
+         "A を中心に半径 5 cm の円と点線の交点",
+         "5 cm は 4 cm より長いので AB の上と下に 1 つずつ",
+         "2 つ"
+        ]
+       ],
+       "note": "AB の上側だけを考えて 1 と答えやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "3 つの点 A、B、C から等しい距離にある点 P を作図します。どの 2 本の線の交点を作図すればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"105.4\" cy=\"36\" r=\"3\" fill=\"currentColor\"/><text x=\"105.4\" y=\"28.9\" font-size=\"14\" text-anchor=\"middle\">A</text><circle cx=\"47.1\" cy=\"108.9\" r=\"3\" fill=\"currentColor\"/><text x=\"35.9\" y=\"117.9\" font-size=\"14\" text-anchor=\"middle\">B</text><circle cx=\"192.9\" cy=\"99.1\" r=\"3\" fill=\"currentColor\"/><text x=\"204.1\" y=\"108.1\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "線分 AB の垂直二等分線と、線分 BC の垂直二等分線",
+        "∠A の二等分線と、∠B の二等分線",
+        "A から BC への垂線と、B から CA への垂線"
+       ],
+       "answer": "線分 AB の垂直二等分線と、線分 BC の垂直二等分線",
+       "hints": [
+        "A と B から等しい距離の点は、どの線の上にあるかな。",
+        "B と C から等しい距離の点は、どの線の上にあるかな。",
+        "両方の線の上にある点は、A、B、C のどれからも等しい距離だね。"
+       ],
+       "paths": [
+        [
+         "PA = PB なら AB の垂直二等分線の上",
+         "PB = PC なら BC の垂直二等分線の上",
+         "2 本の交点で PA = PB = PC"
+        ]
+       ],
+       "note": "この点は、3 点 A、B、C を通る円の中心になる。名前（外心）と、AC の垂直二等分線も同じ点を通ることは G-028 で扱う。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "長さ 8 cm の線分 AB があります。A からも B からも 3 cm の距離にある点は、いくつありますか。",
+       "answer": 0,
+       "check": "2 if 3 > 8 / 2 else (1 if 3 == 8 / 2 else 0)",
+       "hints": [
+        "A からも B からも同じ距離の点は、垂直二等分線の上にあるね。",
+        "垂直二等分線の上で、A にいちばん近い点はどこかな。",
+        "いちばん近い点でも、A から何 cm あるかな。"
+       ],
+       "paths": [
+        [
+         "点は垂直二等分線の上",
+         "その上で A にいちばん近いのは AB の中点で 4 cm",
+         "3 cm の点はない",
+         "0 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長さ 12 cm の線分 AB の垂直二等分線を作図します。A と B を中心にかく弧が 2 点で交わるには、半径を何 cm より長くしなければなりませんか。",
+       "answer": 6,
+       "check": "12 // 2",
+       "hints": [
+        "弧の交点は、A からも B からも半径の距離にあるね。",
+        "交点は垂直二等分線の上にあり、その上で A にいちばん近いのは AB の真ん中だよ。",
+        "AB の半分の長さとくらべよう。"
+       ],
+       "paths": [
+        [
+         "交点は A、B から半径の距離で、垂直二等分線の上",
+         "その上で A にいちばん近いのは中点",
+         "半径は 12 ÷ 2 = 6 cm より長く"
+        ]
+       ],
+       "note": "ちょうど 6 cm だと 2 つの弧は 1 点（AB の中点）でふれるだけで、直線が決まらない。"
+      },
+      {
+       "part": "今日",
+       "text": "PA = PB = 9 cm、AB = 10 cm の三角形 PAB があります。P から AB に垂線をひき、AB との交点を M とします。AM は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"18\" x2=\"50.7\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"189.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.7\" y1=\"122\" x2=\"189.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,122 128,114 120,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"81.2\" y1=\"67.2\" x2=\"89.5\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"150.5\" y1=\"72.8\" x2=\"158.8\" y2=\"67.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"40.4\" y=\"130.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"199.6\" y=\"130.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "PA = PB だから、P は AB の垂直二等分線の上にあるね。",
+        "P を通って AB に垂直な直線は、1 本しかないね。",
+        "だから M はどんな点かな。"
+       ],
+       "paths": [
+        [
+         "PA = PB だから P は垂直二等分線の上",
+         "P から AB への垂線は垂直二等分線と同じ",
+         "M は中点",
+         "10 ÷ 2 = 5 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "∠XOY の二等分線を作図しよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.8\" y1=\"115.4\" x2=\"174.2\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"113.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113 122 A47.7 47.7 0 0 0 80.6 70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M135.1 82.9 A39 39 0 0 0 114.6 76.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M122.3 88.6 A39 39 0 0 0 125.4 67.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"161.4\" y2=\"55.7\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><text x=\"54.6\" y=\"124.4\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"185.2\" y=\"120.3\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"118.1\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"117.6\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"78.4\" y=\"68.8\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"134.8\" y=\"90.5\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "explain": "① O を中心に弧をかき、辺 OX、OY との交点を P、Q とする。② P と Q を中心に、同じ半径で弧をかき、交点を R とする。③ 半直線 OR をひく。OR は ∠XOY を 2 つの等しい角に分けます。これを角の二等分線といいます。角の二等分線の上の点は、角の 2 つの辺から等しい距離にあります。また、直線 ℓ の上の点 O を通る垂線は、O のところの一直線の角（180°）を 2 等分すれば作図できます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "長さ 14 cm の線分 AB の垂直二等分線の上に、PA = 9 cm となる点 P をとります。三角形 PAB のまわりの長さは何 cm ですか。",
+       "answer": 32,
+       "check": "9 + 9 + 14",
+       "hints": [
+        "垂直二等分線の上の点は、A と B から等しい距離にあるね。",
+        "PB は何 cm かな。",
+        "3 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "PB = PA = 9 cm",
+         "9 + 9 + 14",
+         "32 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "長さ 10 cm の線分 AB があります。A からも B からも 6 cm の距離にある点は、いくつありますか。",
+       "answer": 2,
+       "check": "2 if 6 > 10 / 2 else (1 if 6 == 10 / 2 else 0)",
+       "hints": [
+        "点は AB の垂直二等分線の上にあるね。",
+        "6 cm を、AB の半分の長さとくらべよう。",
+        "AB の上側と下側を考えよう。"
+       ],
+       "paths": [
+        [
+         "点は垂直二等分線の上",
+         "6 cm は半分の 5 cm より長い",
+         "上と下に 1 つずつ",
+         "2 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠XOY = 76° の二等分線を作図しました。二等分線と辺 OX がつくる角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"69.6\" y1=\"115.8\" x2=\"170.4\" y2=\"115.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.6\" y1=\"115.8\" x2=\"94\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.5 122 A44.4 44.4 0 0 0 74.2 71.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M125.9 81.5 A36.3 36.3 0 0 0 105.9 80.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M112.7 89.2 A36.3 36.3 0 0 0 116.5 69.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"69.6\" y1=\"115.8\" x2=\"152.2\" y2=\"51.3\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><text x=\"58.3\" y=\"124.8\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"181.4\" y=\"120.7\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"96.6\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"118.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"70.4\" y=\"71\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"126.2\" y=\"90.8\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "answer": 38,
+       "check": "76 // 2",
+       "hints": [
+        "二等分線は、角を 2 つの等しい角に分けるね。",
+        "76° を 2 つに等しく分けよう。",
+        "76 ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "二等分線は角を半分にする",
+         "76 ÷ 2",
+         "38°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線分 AB を 1 辺とする正三角形を作図すると、60° の角ができます。その角を 2 等分し、できた角をさらに 2 等分すると、何度の角ができますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M135.8 37.2 A110.7 110.7 0 0 0 102.5 18\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M137.5 18 A110.7 110.7 0 0 0 104.2 37.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"64.7,122 175.3,122 120,26.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.7\" y1=\"122\" x2=\"165.3\" y2=\"63.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"54.3\" y=\"130.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"185.7\" y=\"130.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"20.1\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 15,
+       "check": "60 // 2 // 2",
+       "hints": [
+        "正三角形の 1 つの角は 60° だね。",
+        "1 回 2 等分すると何度かな。",
+        "その角を、もう 1 回 2 等分しよう。"
+       ],
+       "paths": [
+        [
+         "60° を 2 等分して 30°",
+         "30° を 2 等分",
+         "15°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠XOY の二等分線の上の点 P から、辺 OX、OY に垂線 PA、PB をひきます。PA = 4 cm、OA = 7 cm のとき、四角形 OAPB のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"64.7\" y1=\"122\" x2=\"175.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.7\" y1=\"122\" x2=\"102.5\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.7\" y1=\"122\" x2=\"151.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"134.4\" y1=\"73.2\" x2=\"134.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"134.4\" y1=\"73.2\" x2=\"88.5\" y2=\"56.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"126.4,122 126.4,114 134.4,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"85.8,64 93.3,66.7 96,59.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M86.7 122 A22 22 0 0 0 82.7 109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M86 107.1 A26 26 0 0 0 73.6 97.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"53.4\" y=\"131\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"186.3\" y=\"126.9\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"106.3\" y=\"12.6\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"134.4\" y=\"138.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"77.2\" y=\"57.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"145.3\" y=\"73\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 22,
+       "check": "2 * (7 + 4)",
+       "hints": [
+        "三角形 OAP と OBP は合同かな。どの合同条件が使えるかな。",
+        "合同なら、PB と OB の長さがわかるね。",
+        "4 つの辺の長さをたそう。"
+       ],
+       "paths": [
+        [
+         "△OAP ≡ △OBP（直角三角形の斜辺と 1 つの鋭角）",
+         "PB = 4 cm、OB = 7 cm",
+         "7 + 4 + 4 + 7 = 22 cm"
+        ]
+       ],
+       "note": "OP が共通の斜辺、∠AOP = ∠BOP から、直角三角形の合同条件で合同になる。PB = PA だけでなく OB = OA も出せる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "正三角形の 60°、垂線の 90°、角の二等分線、角をたすこととひくことだけを使います。このやり方で作図できない角は、どれですか。",
+       "choices": [
+        "75°",
+        "22.5°",
+        "20°"
+       ],
+       "answer": "20°",
+       "hints": [
+        "75° は、60° にどんな角をたせばできるかな。",
+        "22.5° は、90° を何回 2 等分すればできるかな。",
+        "このやり方でできる角は、15° を何回か 2 等分した角の何こ分かになるね。"
+       ],
+       "paths": [
+        [
+         "75° = 60° + 15°（60° を 2 回 2 等分）",
+         "22.5° = 90° を 2 回 2 等分",
+         "20° は 60° を 3 等分する角で、2 等分とたし算・ひき算ではつくれない"
+        ]
+       ],
+       "note": "実は 20° は、どんな手順を使っても定規とコンパスでは作図できない（角の 3 等分の問題。1837 年にワンツェルが示した。のちの体の理論とガロア理論につながる）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠XOY = 128° の二等分線を作図しました。二等分線と辺 OY がつくる角は何度ですか。",
+       "answer": 64,
+       "check": "128 // 2",
+       "hints": [
+        "二等分線は、角を 2 つの等しい角に分けるね。",
+        "128° を 2 つに等しく分けよう。",
+        "128 ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "128 ÷ 2",
+         "64°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直線 ℓ の上の点 O を通る垂線を、角の二等分線の作図でかきます。何度の角を 2 等分していることになりますか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"18\" y1=\"72.8\" x2=\"222\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><circle cx=\"120\" cy=\"72.8\" r=\"3\" fill=\"currentColor\"/><text x=\"120\" y=\"89.7\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"222\" y=\"67.7\" font-size=\"14\" text-anchor=\"middle\">ℓ</text></svg>",
+       "answer": 180,
+       "check": "90 * 2",
+       "hints": [
+        "直線 ℓ の上の点 O のところには、どんな角があるかな。",
+        "O の左と右の半直線は、一直線になっているね。",
+        "一直線の角は何度だったかな。"
+       ],
+       "paths": [
+        [
+         "O のところの角は一直線の角",
+         "一直線の角は 180°",
+         "2 等分すると 90° で垂線"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形の作図でできる 60° の角を 2 等分した角と、垂線の作図でできる 90° の角を 2 等分した角をたすと、何度ですか。",
+       "answer": 75,
+       "check": "60 // 2 + 90 // 2",
+       "hints": [
+        "60° を 2 等分すると何度かな。",
+        "90° を 2 等分すると何度かな。",
+        "2 つの角をたそう。"
+       ],
+       "paths": [
+        [
+         "30° と 45°",
+         "30° + 45°",
+         "75°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "線分 AB の垂直二等分線の作図（A と B を中心に同じ半径の弧をかき、交点を P、Q として直線 PQ をひく）で、直線 PQ が AB の垂直二等分線になるわけを、筋道を立てて書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"77.7\" y1=\"75\" x2=\"162.3\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"132\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polyline points=\"128,75 128,67 120,67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"77.7\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"65.7\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">A</text><circle cx=\"162.3\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><text x=\"174.3\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"132\" y=\"36.1\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"132\" y=\"123.7\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"111.5\" y=\"88.4\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "explain": "例：「PQ と AB の交点を M とする。同じ半径でかいたので PA = PB、QA = QB。△PAQ と △PBQ で、PA = PB、QA = QB、PQ は共通だから、3 辺がそれぞれ等しく △PAQ ≡ △PBQ。よって ∠APQ = ∠BPQ。△PAB は PA = PB の二等辺三角形で、PM は頂角の二等分線だから、底辺 AB を垂直に 2 等分する。よって直線 PQ は AB の垂直二等分線である。」と書ければよい。①「〜とする」で点に名前を付ける、② 等しい辺を並べて合同を言う、③ 約束した性質（二等辺三角形の頂角の二等分線は底辺を垂直に 2 等分する）で結ぶ、の 3 つがそろっているかを見る。△PAM ≡ △PBM（2 辺とその間の角）から AM = BM、∠PMA = ∠PMB = 90° を出してもよい。図に定規を当てて「直角に見える」だけでは、どの長さの線分でも成り立つわけにならないことを話す。",
+       "hints": [
+        "PA、PB、QA、QB の長さについて、何が言えるかな。",
+        "△PAQ と △PBQ に注目して、合同条件を探そう。",
+        "二等辺三角形 PAB の頂角の二等分線の性質を思い出そう。"
+       ],
+       "paths": [
+        [
+         "PA = PB、QA = QB（同じ半径）",
+         "△PAQ ≡ △PBQ（3 辺）",
+         "∠APQ = ∠BPQ",
+         "二等辺三角形 PAB の頂角の二等分線は AB を垂直に 2 等分する"
+        ],
+        [
+         "△PAQ ≡ △PBQ で ∠APM = ∠BPM",
+         "△PAM ≡ △PBM（2 辺とその間の角）",
+         "AM = BM、∠PMA = ∠PMB = 90°"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "角の二等分線の作図（O を中心に弧をかいて辺との交点を P、Q とし、P、Q を中心に同じ半径の弧をかいて交点を R とし、半直線 OR をひく）で、OR が ∠XOY を 2 等分するわけを書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.8\" y1=\"115.4\" x2=\"174.2\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"113.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113 122 A47.7 47.7 0 0 0 80.6 70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M135.1 82.9 A39 39 0 0 0 114.6 76.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M122.3 88.6 A39 39 0 0 0 125.4 67.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"161.4\" y2=\"55.7\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polygon points=\"65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"54.6\" y=\"124.4\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"185.2\" y=\"120.3\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"118.1\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"117.6\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"78.4\" y=\"68.8\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"134.8\" y=\"90.5\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "explain": "例：「P と R、Q と R を結ぶ。O を中心にかいた弧の上の点なので OP = OQ。同じ半径でかいたので PR = QR。△OPR と △OQR で、OP = OQ、PR = QR、OR は共通だから、3 辺がそれぞれ等しく △OPR ≡ △OQR。合同な図形の対応する角は等しいので ∠POR = ∠QOR。よって OR は ∠XOY の二等分線である。」と書ければよい。① 補助の線 PR、QR をひいて三角形をつくる、② 等しい辺を 3 組並べる、③ 合同条件と「対応する角は等しい」で結ぶ、の 3 つを見る。OP = OQ と PR = QR がそれぞれどの弧から言えるのかを、作図の手順と結びつけて言えているかを確かめる。",
+       "hints": [
+        "P と R、Q と R を結んで、2 つの三角形をつくろう。",
+        "OP と OQ、PR と QR は、それぞれどの弧の半径かな。",
+        "合同が言えたら、どの角とどの角が等しいかな。"
+       ],
+       "paths": [
+        [
+         "OP = OQ（O を中心の弧）",
+         "PR = QR（同じ半径の弧）",
+         "OR は共通",
+         "△OPR ≡ △OQR（3 辺）",
+         "∠POR = ∠QOR"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "線分 AB の垂直二等分線の上のどの点 P も、A と B から等しい距離にあります。このことを示しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"38.1\" x2=\"86.5\" y2=\"101.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"38.1\" x2=\"153.5\" y2=\"101.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.5\" y1=\"101.9\" x2=\"153.5\" y2=\"101.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,101.9 128,93.9 120,93.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"103.2\" y1=\"106.9\" x2=\"103.2\" y2=\"96.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"136.8\" y1=\"96.9\" x2=\"136.8\" y2=\"106.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"76.5\" y=\"111.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"163.5\" y=\"111.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"127.8\" y=\"114.5\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"131\" y=\"43\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "explain": "例：「AB の中点を M とする。P が M と同じ点のときは PA = MA = MB = PB で成り立つ。P が M でないとき、△PAM と △PBM で、AM = BM（M は中点）、∠PMA = ∠PMB = 90°（垂直）、PM は共通だから、2 辺とその間の角がそれぞれ等しく △PAM ≡ △PBM。よって PA = PB。」と書ければよい。①「AB の中点を M とする」「垂直二等分線の上の点を P とする」で決める、② 等しい辺と角を並べる、③ 合同条件で結ぶ、の 3 つを見る。1 つの点で長さを測って確かめただけでは「どの点でも」とは言えない（例ではすべての場合を示せない）ことを話す。逆に PA = PB なら、△PAB は二等辺三角形で、P と中点 M を結ぶ線は AB に垂直なので、P は垂直二等分線の上にある（これも G-017 の性質から言える）。",
+       "hints": [
+        "AB の中点を M として、△PAM と △PBM を見よう。",
+        "2 つの三角形で、等しい辺と角を 3 つ探そう。",
+        "合同条件のどれが使えるかな。"
+       ],
+       "paths": [
+        [
+         "AB の中点を M とする",
+         "AM = BM、∠PMA = ∠PMB = 90°、PM は共通",
+         "△PAM ≡ △PBM（2 辺とその間の角）",
+         "PA = PB"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠XOY の二等分線の上の点 P から、2 辺に垂線 PA、PB をひきます。△OAP ≡ △OBP を示すときに使う合同条件は、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62.1\" y1=\"122\" x2=\"177.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62.1\" y1=\"122\" x2=\"112.9\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62.1\" y1=\"122\" x2=\"156.5\" y2=\"63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"137.6\" y1=\"74.8\" x2=\"137.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"137.6\" y1=\"74.8\" x2=\"95.2\" y2=\"54.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"129.6,122 129.6,114 137.6,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"91.7,61.3 98.9,64.9 102.4,57.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M84.1 122 A22 22 0 0 0 80.8 110.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M84.2 108.2 A26 26 0 0 0 73.5 98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"50.9\" y=\"131\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"188.9\" y=\"126.9\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"117.7\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"137.6\" y=\"138.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"84.4\" y=\"53.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"148.8\" y=\"75.2\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "choices": [
+        "直角三角形の斜辺と 1 つの鋭角がそれぞれ等しい",
+        "3 辺がそれぞれ等しい",
+        "直角三角形の斜辺と他の 1 辺がそれぞれ等しい"
+       ],
+       "answer": "直角三角形の斜辺と 1 つの鋭角がそれぞれ等しい",
+       "hints": [
+        "2 つの三角形で、はじめからわかっている等しいものを書き出そう。",
+        "OP はどちらの三角形にもあるね。∠AOP と ∠BOP はどうかな。",
+        "PA = PB はこれから示したいことなので、まだ使えないね。"
+       ],
+       "paths": [
+        [
+         "∠OAP = ∠OBP = 90°",
+         "OP は共通の斜辺",
+         "∠AOP = ∠BOP（二等分線）",
+         "斜辺と 1 つの鋭角"
+        ]
+       ],
+       "note": "3 辺や「斜辺と他の 1 辺」は、PA = PB か OA = OB がわかっていないと使えない。示したいことを先に使っていないかを見る。"
+      },
+      {
+       "part": "今日",
+       "text": "PA = PB、∠APB = 40° の三角形 PAB で、P と AB の中点 M を結びます。∠APM は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"18\" x2=\"82\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"158\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82\" y1=\"122\" x2=\"158\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.5 38.7 A22 22 0 0 0 127.5 38.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"96.3\" y1=\"68.3\" x2=\"105.7\" y2=\"71.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"134.3\" y1=\"71.7\" x2=\"143.7\" y2=\"68.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"99\" y1=\"127\" x2=\"99\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"103\" y1=\"127\" x2=\"103\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"141\" y1=\"117\" x2=\"141\" y2=\"127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"137\" y1=\"117\" x2=\"137\" y2=\"127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"73\" y=\"133.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"133.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 20,
+       "check": "40 // 2",
+       "hints": [
+        "△PAM と △PBM で、等しい辺を 3 組探そう。",
+        "2 つの三角形は合同だね。∠APM と ∠BPM はどうかな。",
+        "∠APB を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "PA = PB、AM = BM、PM は共通",
+         "△PAM ≡ △PBM（3 辺）",
+         "∠APM = ∠BPM = 40° ÷ 2 = 20°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠XOY の二等分線の作図で、OP = 5 cm になるように O を中心の弧をかき、P と Q を中心に半径 4 cm の弧をかいて交点を R としました。四角形 OPRQ のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.8\" y1=\"115.4\" x2=\"174.2\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"113.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113 122 A47.7 47.7 0 0 0 80.6 70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M135.1 82.9 A39 39 0 0 0 114.6 76.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M122.3 88.6 A39 39 0 0 0 125.4 67.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"161.4\" y2=\"55.7\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polygon points=\"65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"54.6\" y=\"124.4\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"185.2\" y=\"120.3\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"118.1\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"117.6\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"78.4\" y=\"68.8\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"134.8\" y=\"90.5\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "answer": 18,
+       "check": "5 + 4 + 4 + 5",
+       "hints": [
+        "OQ は OP と同じ弧の半径だね。",
+        "PR と QR は、どちらも 2 回目の弧の半径だね。",
+        "4 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "OP = OQ = 5 cm",
+         "PR = QR = 4 cm",
+         "5 + 4 + 4 + 5 = 18 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線分 AB の垂直二等分線の作図で、A と B を中心に同じ半径の弧をかいてできる四角形 APBQ は、何という四角形ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M127.7 34.4 A62 62 0 0 0 110.7 18\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.7 122 A62 62 0 0 0 127.7 105.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M129.3 18 A62 62 0 0 0 112.3 34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M112.3 105.6 A62 62 0 0 0 129.3 122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"77,70 120,25.4 163,70 120,114.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"77\" y1=\"70\" x2=\"163\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"66\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"174\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"130.5\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "choices": [
+        "ひし形",
+        "長方形",
+        "台形"
+       ],
+       "answer": "ひし形",
+       "hints": [
+        "AP、BP、AQ、BQ は、どれもどの長さかな。",
+        "4 つの辺の長さがすべて等しい四角形の名前を思い出そう。",
+        "角が直角かどうかは、まだわからないね。"
+       ],
+       "paths": [
+        [
+         "AP = BP = AQ = BQ（同じ半径）",
+         "4 つの辺が等しい",
+         "ひし形"
+        ]
+       ],
+       "note": "ひし形の対角線はたがいに垂直に 2 等分し合う（G-017）。これも垂直二等分線の作図が正しいわけの 1 つの言い方になる。"
+      },
+      {
+       "part": "今日",
+       "text": "長さ 8 cm の線分 AB の垂直二等分線の作図で、A と B を中心に半径 5 cm の弧をかきました。四角形 APBQ のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M127.7 34.4 A62 62 0 0 0 110.7 18\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.7 122 A62 62 0 0 0 127.7 105.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M129.3 18 A62 62 0 0 0 112.3 34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M112.3 105.6 A62 62 0 0 0 129.3 122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"77,70 120,25.4 163,70 120,114.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"77\" y1=\"70\" x2=\"163\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"66\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"174\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"130.5\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 20,
+       "check": "5 * 4",
+       "hints": [
+        "AP、BP、AQ、BQ は、どれもどの長さかな。",
+        "4 つの辺は、どれも弧の半径だね。",
+        "AB の長さは、まわりの長さに入るかな。"
+       ],
+       "paths": [
+        [
+         "4 つの辺はどれも 5 cm",
+         "5 × 4",
+         "20 cm"
+        ]
+       ],
+       "note": "AB（対角線）の 8 cm をたしてしまいやすい。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "点 P を通り直線 ℓ に平行な直線を作図します。P を通る直線をひいて ℓ との交点を A とし、A の角と同じ大きさの角を、同じ向きに P に写しました。こうしてひいた直線（点線）が ℓ と平行になるわけは、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"33.6\" y1=\"109.9\" x2=\"200.2\" y2=\"109.9\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"88.5\" y1=\"132\" x2=\"149.1\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><line x1=\"64.8\" y1=\"51.1\" x2=\"206.4\" y2=\"51.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M116.2 109.9 A16 16 0 0 0 107.7 95.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M147.5 51.1 A16 16 0 0 0 139 37\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"131.5\" cy=\"51.1\" r=\"2.6\" fill=\"currentColor\"/><text x=\"124\" y=\"45.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"110.9\" y=\"123.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"200.2\" y=\"104.8\" font-size=\"14\" text-anchor=\"middle\">ℓ</text></svg>",
+       "choices": [
+        "同位角が等しいから",
+        "対頂角が等しいから",
+        "三角形の角の和が 180° だから"
+       ],
+       "answer": "同位角が等しいから",
+       "hints": [
+        "A の角と P の角は、2 本の直線と 1 本の直線がつくる角のうち、どんな位置にあるかな。",
+        "同じ向きの位置にある 2 つの角を何というかな。",
+        "2 直線が平行になる条件を思い出そう。"
+       ],
+       "paths": [
+        [
+         "A の角と P の角は同位角",
+         "同位角が等しい",
+         "だから 2 直線は平行"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "垂直二等分線の作図でできる四角形 APBQ は、4 つの辺がすべて等しいひし形です。対角線 PQ と AB について、正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M127.7 34.4 A62 62 0 0 0 110.7 18\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.7 122 A62 62 0 0 0 127.7 105.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M129.3 18 A62 62 0 0 0 112.3 34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M112.3 105.6 A62 62 0 0 0 129.3 122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"77,70 120,25.4 163,70 120,114.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"77\" y1=\"70\" x2=\"163\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"66\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"174\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"130.5\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "choices": [
+        "たがいに垂直に 2 等分し合う",
+        "長さがいつも等しい",
+        "たがいに平行である"
+       ],
+       "answer": "たがいに垂直に 2 等分し合う",
+       "hints": [
+        "ひし形は平行四辺形の仲間だね。平行四辺形の対角線の性質は何だったかな。",
+        "ひし形の対角線は、交わるところで何度になるかな。",
+        "長さが等しくなるのは、長方形の対角線だね。"
+       ],
+       "paths": [
+        [
+         "ひし形は平行四辺形なので対角線は 2 等分し合う",
+         "ひし形の対角線は垂直",
+         "たがいに垂直に 2 等分し合う"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線分 AB の垂直二等分線の上に、PA = AB となる点 P をとります。∠PAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M131.6 42.2 A59.5 59.5 0 0 0 106.6 27.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M106.6 142.2 A59.5 59.5 0 0 0 131.6 127.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M133.4 27.8 A59.5 59.5 0 0 0 108.4 42.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M108.4 127.8 A59.5 59.5 0 0 0 133.4 142.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"90.2\" y1=\"85\" x2=\"149.8\" y2=\"85\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"152\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polyline points=\"128,85 128,77 120,77\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"90.2\" cy=\"85\" r=\"2.6\" fill=\"currentColor\"/><text x=\"78.2\" y=\"89.9\" font-size=\"14\" text-anchor=\"middle\">A</text><circle cx=\"149.8\" cy=\"85\" r=\"2.6\" fill=\"currentColor\"/><text x=\"161.8\" y=\"89.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"132\" y=\"38.4\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"132\" y=\"141.4\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"111.5\" y=\"98.4\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "P は垂直二等分線の上だから、PA と PB はどうかな。",
+        "PA = PB = AB だね。どんな三角形かな。",
+        "その三角形の 1 つの角は何度かな。"
+       ],
+       "paths": [
+        [
+         "PA = PB（垂直二等分線の上）",
+         "PA = PB = AB で正三角形",
+         "180 ÷ 3 = 60°"
+        ]
+       ],
+       "note": "正三角形の作図（A と B を中心に半径 AB の弧）と同じ点になる。"
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC、∠A = 40° の二等辺三角形 ABC で、∠B の二等分線を作図し、辺 AC との交点を D とします。∠BDC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 82.1,122 157.9,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82.1\" y1=\"122\" x2=\"142.5\" y2=\"79.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.8 37.7 A21 21 0 0 0 127.2 37.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"56.2\" font-size=\"12\" text-anchor=\"middle\">40°</text><line x1=\"96.4\" y1=\"68.3\" x2=\"105.8\" y2=\"71.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"134.2\" y1=\"71.7\" x2=\"143.6\" y2=\"68.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.1\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"73.7\" y=\"134\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"165.1\" y=\"135.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"152.9\" y=\"81.1\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 75,
+       "check": "180 - (180 - 40) // 2 // 2 - (180 - 40) // 2",
+       "hints": [
+        "まず ∠B と ∠C を求めよう。",
+        "∠DBC は ∠B の半分だね。",
+        "三角形 DBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠C = (180° − 40°) ÷ 2 = 70°",
+         "∠DBC = 35°",
+         "∠BDC = 180° − 35° − 70° = 75°"
+        ],
+        [
+         "∠ABD = 35°",
+         "∠BDC は △ABD の外角",
+         "40° + 35° = 75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で ∠B = 50°、∠C = 30° です。辺 AC の垂直二等分線を作図し、辺 BC との交点を P とします。∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"84.6,30.3 18,109.7 222,109.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.6\" y1=\"30.3\" x2=\"130.4\" y2=\"109.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.3\" y1=\"70\" x2=\"130.4\" y2=\"109.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M33 109.7 A15 15 0 0 0 27.6 98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"43.4\" y=\"102\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M209 102.2 A15 15 0 0 0 207 109.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"106.6\" font-size=\"12\" text-anchor=\"middle\">30°</text><polyline points=\"160.2,74 156.2,80.9 149.3,76.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"116.4\" y1=\"54.5\" x2=\"121.4\" y2=\"45.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"190.1\" y1=\"85.5\" x2=\"185.1\" y2=\"94.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.7\" y=\"25.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"7.2\" y=\"116.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"232.8\" y=\"116.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"137.5\" y=\"123\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 60,
+       "check": "30 + 30",
+       "hints": [
+        "P は AC の垂直二等分線の上だから、PA と PC はどうかな。",
+        "三角形 PAC は二等辺三角形だね。∠PAC は何度かな。",
+        "∠APB は三角形 PAC の外角だよ。"
+       ],
+       "paths": [
+        [
+         "PA = PC",
+         "∠PAC = ∠C = 30°",
+         "∠APB = 30° + 30° = 60°（外角）"
+        ],
+        [
+         "∠PAC = 30°",
+         "∠APC = 180° − 30° × 2 = 120°",
+         "∠APB = 180° − 120° = 60°"
+        ]
+       ],
+       "note": "∠B = 50° は使わない。使わない数があってもよいことに気づかせる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "中心がわからなくなった円があります。円の上に 3 点 A、B、C をとり、AB と BC の垂直二等分線を作図すると、その交点が円の中心になります。そのわけとして正しいものは、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70.6\" y1=\"46.5\" x2=\"100.5\" y2=\"128.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"100.5\" y1=\"128.6\" x2=\"176.1\" y2=\"65.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"77\" y1=\"90.7\" x2=\"151\" y2=\"63.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"142.9\" y1=\"102.3\" x2=\"103.5\" y2=\"55.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"61.1\" y=\"45.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"96.7\" y=\"143.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"187\" y=\"68.1\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "円の中心は、A と B からも、B と C からも等しい距離にあるから",
+        "円の中心は、線分 AB の中点だから",
+        "AB と BC の長さが等しいから"
+       ],
+       "answer": "円の中心は、A と B からも、B と C からも等しい距離にあるから",
+       "hints": [
+        "円の中心から、円の上の点までの距離は、どれも何だったかな。",
+        "A と B から等しい距離の点は、どの線の上にあるかな。",
+        "2 本の直線の交点は、いくつあるかな。"
+       ],
+       "paths": [
+        [
+         "中心から A、B、C までは半径で等しい",
+         "中心は AB の垂直二等分線の上にも BC の垂直二等分線の上にもある",
+         "2 本の交点は 1 つ",
+         "交点が中心"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の辺 BC の上に、辺 AB と辺 AC から等しい距離にある点 P を作図します。どの線と BC の交点を作図すればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"106.4,18 46.3,122 193.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"105\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"36.5\" y=\"131.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"203.7\" y=\"131.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "∠A の二等分線",
+        "辺 BC の垂直二等分線",
+        "A から BC への垂線"
+       ],
+       "answer": "∠A の二等分線",
+       "hints": [
+        "辺 AB と辺 AC は、どの角の 2 つの辺かな。",
+        "角の 2 つの辺から等しい距離にある点は、どの線の上にあったかな。",
+        "その線と BC の交点を探そう。"
+       ],
+       "paths": [
+        [
+         "AB と AC は ∠A の 2 辺",
+         "2 辺から等しい距離の点は ∠A の二等分線の上",
+         "その線と BC の交点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形の作図でできる 60° の角と、垂線の 90° を 2 等分した 45° の角の差を、さらに 2 等分すると何度ですか。",
+       "answer": 7.5,
+       "accept": [
+        "15/2"
+       ],
+       "check": "(60 - 45) / 2",
+       "hints": [
+        "まず 60° と 45° の差を求めよう。",
+        "その角を 2 等分しよう。",
+        "15 ÷ 2 は小数で表せるね。"
+       ],
+       "paths": [
+        [
+         "60° − 45° = 15°",
+         "15 ÷ 2",
+         "7.5°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直線 ℓ の外にある点 P から、ℓ への垂線を作図します。はじめにすることとして正しいものは、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"39.1\" y1=\"69.5\" x2=\"200.9\" y2=\"69.5\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><path d=\"M64.9 61 A69.9 69.9 0 0 0 80.9 75.9\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M159.1 75.9 A69.9 69.9 0 0 0 175.1 61\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M106.1 130.9 A69.9 69.9 0 0 0 131.1 108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M108.9 108 A69.9 69.9 0 0 0 133.9 130.9\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polyline points=\"128,69.5 128,61.5 120,61.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"18\" r=\"2.6\" fill=\"currentColor\"/><text x=\"132\" y=\"22.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"67.3\" y=\"86.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"172.7\" y=\"86.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"132\" y=\"125.9\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"200.9\" y=\"64.4\" font-size=\"14\" text-anchor=\"middle\">ℓ</text></svg>",
+       "choices": [
+        "P を中心に弧をかき、ℓ との交点を 2 つつくる",
+        "ℓ の上に、P のちょうど下に見える点をとる",
+        "P から ℓ へ、目もりで直角をはかって線をひく"
+       ],
+       "answer": "P を中心に弧をかき、ℓ との交点を 2 つつくる",
+       "hints": [
+        "作図では、目もりや見た目で直角をつくらないね。",
+        "P から等しい距離にある ℓ の上の 2 点 A、B をつくると、何ができるかな。",
+        "P は AB の垂直二等分線の上にあるね。"
+       ],
+       "paths": [
+        [
+         "P を中心の弧で A、B をつくる（PA = PB）",
+         "A、B を中心に同じ半径の弧で Q をつくる",
+         "直線 PQ が垂線"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "長さ 11 cm の線分 AB の垂直二等分線をひき、AB との交点を M とします。AM は何 cm ですか。",
+       "answer": 5.5,
+       "accept": [
+        "11/2"
+       ],
+       "check": "11 / 2",
+       "hints": [
+        "垂直二等分線は、AB をどのように分けるかな。",
+        "M は AB の真ん中の点だよ。",
+        "AB の長さを 2 でわろう。"
+       ],
+       "paths": [
+        [
+         "M は AB の中点",
+         "11 ÷ 2",
+         "5.5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長さ 6 cm の線分 AB があります。A からも B からも 4 cm の距離にある点は、いくつありますか。",
+       "answer": 2,
+       "check": "2 if 4 > 6 / 2 else (1 if 4 == 6 / 2 else 0)",
+       "hints": [
+        "点は、AB のどんな線の上にあるかな。",
+        "4 cm と、AB の半分の長さをくらべよう。",
+        "AB の上側と下側を考えよう。"
+       ],
+       "paths": [
+        [
+         "点は垂直二等分線の上",
+         "4 cm は半分の 3 cm より長い",
+         "上と下に 1 つずつ",
+         "2 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠XOY = 84° の二等分線を作図しました。二等分線と辺 OX がつくる角は何度ですか。",
+       "answer": 42,
+       "check": "84 // 2",
+       "hints": [
+        "二等分線は、角を 2 つの等しい角に分けるね。",
+        "84° を 2 つに等しく分けよう。",
+        "84 ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "84 ÷ 2",
+         "42°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "垂線の作図でできる 90° の角と、正三角形の 60° を 2 等分した角をたすと、何度ですか。",
+       "answer": 120,
+       "check": "90 + 60 // 2",
+       "hints": [
+        "60° を 2 等分すると何度かな。",
+        "90° とたそう。",
+        "2 つの角をとなりに並べて作図すると、この大きさの角ができるね。"
+       ],
+       "paths": [
+        [
+         "60° ÷ 2 = 30°",
+         "90° + 30°",
+         "120°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "角の 2 つの辺 OX、OY から等しい距離にある点（角の内側）は、どこにありますか。",
+       "choices": [
+        "∠XOY の二等分線の上",
+        "O を中心とする円の上",
+        "辺 OX の垂直二等分線の上"
+       ],
+       "answer": "∠XOY の二等分線の上",
+       "hints": [
+        "点から辺までの距離は、点から辺にひいた垂線の長さだね。",
+        "2 つの垂線の長さが等しいとき、2 つの直角三角形はどうなるかな。",
+        "合同なら、O のところの 2 つの角はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "点を P、垂線を PA、PB とする",
+         "PA = PB、OP は共通で △OAP ≡ △OBP（斜辺と他の 1 辺）",
+         "∠AOP = ∠BOP",
+         "二等分線の上"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "角の二等分線の作図が正しいわけを示すとき、△OPR ≡ △OQR に使う合同条件は、どれですか（OP = OQ、PR = QR）。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.8\" y1=\"115.4\" x2=\"174.2\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"113.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113 122 A47.7 47.7 0 0 0 80.6 70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M135.1 82.9 A39 39 0 0 0 114.6 76.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M122.3 88.6 A39 39 0 0 0 125.4 67.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"65.8\" y1=\"115.4\" x2=\"161.4\" y2=\"55.7\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><polygon points=\"65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"54.6\" y=\"124.4\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"185.2\" y=\"120.3\" font-size=\"14\" text-anchor=\"middle\">X</text><text x=\"118.1\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">Y</text><text x=\"117.6\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"78.4\" y=\"68.8\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"134.8\" y=\"90.5\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "choices": [
+        "3 辺がそれぞれ等しい",
+        "2 辺とその間の角がそれぞれ等しい",
+        "1 辺とその両はしの角がそれぞれ等しい"
+       ],
+       "answer": "3 辺がそれぞれ等しい",
+       "hints": [
+        "OP = OQ、PR = QR のほかに、等しい辺はあるかな。",
+        "OR は、どちらの三角形にもあるね。",
+        "角はまだ何もわかっていないね。"
+       ],
+       "paths": [
+        [
+         "OP = OQ、PR = QR",
+         "OR は共通",
+         "3 辺がそれぞれ等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で ∠B = 35° です。辺 BC の上に、PA = PB となる点 P をとります。∠APC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"138,28 18,112 222,112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138\" y1=\"28\" x2=\"107.4\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M33 112 A15 15 0 0 0 30.3 103.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"44.7\" y=\"107.8\" font-size=\"12\" text-anchor=\"middle\">35°</text><line x1=\"127.4\" y1=\"71.7\" x2=\"118\" y2=\"68.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"62.7\" y1=\"107\" x2=\"62.7\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.8\" y=\"22.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"7.2\" y=\"119.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"232.8\" y=\"119.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"101.3\" y=\"126.1\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 70,
+       "check": "35 + 35",
+       "hints": [
+        "PA = PB だから、三角形 PAB はどんな三角形かな。",
+        "∠PAB は何度かな。",
+        "∠APC は三角形 PAB の外角だね。"
+       ],
+       "paths": [
+        [
+         "PA = PB で二等辺三角形",
+         "∠PAB = ∠B = 35°",
+         "∠APC = 35° + 35° = 70°（外角）"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長さ 10 cm の線分 AB の垂直二等分線の作図で、A と B を中心に半径 7 cm の弧をかきました。四角形 APBQ のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M127.7 34.4 A62 62 0 0 0 110.7 18\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M110.7 122 A62 62 0 0 0 127.7 105.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M129.3 18 A62 62 0 0 0 112.3 34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><path d=\"M112.3 105.6 A62 62 0 0 0 129.3 122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"77,70 120,25.4 163,70 120,114.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"77\" y1=\"70\" x2=\"163\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"66\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"174\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"130.5\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 28,
+       "check": "7 * 4",
+       "hints": [
+        "AP、BP、AQ、BQ は、どれもどの長さかな。",
+        "4 つの辺は、どれも弧の半径だね。",
+        "AB はまわりに入るかな。"
+       ],
+       "paths": [
+        [
+         "4 つの辺はどれも 7 cm",
+         "7 × 4",
+         "28 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "長さ 13 cm の線分 AB の垂直二等分線の上に、PA = 8 cm となる点 P をとります。三角形 PAB のまわりの長さは何 cm ですか。",
+       "answer": 29,
+       "check": "8 + 8 + 13",
+       "hints": [
+        "垂直二等分線の上の点は、A と B から等しい距離にあるね。",
+        "PB は何 cm かな。",
+        "3 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "PB = PA = 8 cm",
+         "8 + 8 + 13",
+         "29 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長さ 10 cm の線分 AB があります。A からも B からも 5 cm の距離にある点は、いくつありますか。",
+       "answer": 1,
+       "check": "2 if 5 > 10 / 2 else (1 if 5 == 10 / 2 else 0)",
+       "hints": [
+        "点は垂直二等分線の上にあるね。",
+        "垂直二等分線の上で、A にいちばん近い点はどこで、何 cm かな。",
+        "ちょうどその長さのときは、点はいくつかな。"
+       ],
+       "paths": [
+        [
+         "点は垂直二等分線の上",
+         "A にいちばん近いのは中点で 5 cm",
+         "ちょうど 5 cm なのは中点だけ",
+         "1 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "60° の角を 2 等分してできた角を、さらに 2 等分し、それを 90° からひくと何度ですか。",
+       "answer": 75,
+       "check": "90 - 60 // 2 // 2",
+       "hints": [
+        "60° を 2 回 2 等分すると何度かな。",
+        "90° からその角をひこう。",
+        "図にすると、垂線の作図と正三角形の作図を組み合わせることになるね。"
+       ],
+       "paths": [
+        [
+         "60° → 30° → 15°",
+         "90° − 15°",
+         "75°"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     19.09,
     16.14,
     18.5
-   ]
+   ],
+   "comb": {
+    "b": 0.301,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-023",
@@ -218452,72 +219451,3107 @@ window.ROADMAP = {
    "level": 3,
    "region": "hakaru",
    "needs": [
-    "G-018"
+    "G-018",
+    "G-054"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円 O に三角形 ABC が内接しています。∠OBC = 25° のとき、∠x（∠BAC）を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.4\" y1=\"99.8\" x2=\"170.2\" y2=\"83.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170.2\" y1=\"83.5\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"170.2\" y2=\"83.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M92.2 97.2 A15 15 0 0 0 89.7 91.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.3\" y=\"93.3\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M105.2 32.6 A15 15 0 0 0 121.1 29.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.8\" y=\"50.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"68.4\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"180.9\" y=\"91.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "わかる角を、使った事実といっしょに図に書きこんでいきます（角度の追跡）。① OB と OC は半径なので、△OBC は二等辺三角形で ∠OCB = 25°。② △OBC の角の和から ∠BOC = 180° − 25° × 2 = 130°。③ ∠BAC は弧 BC に対する円周角なので、中心角 ∠BOC の半分で 65°。使う事実は、三角形の角の和、二等辺三角形、平行線の角、円周角の定理です。どの三角形、どの弧に目をつけるかを決めてから進みます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O で ∠AOB = 110° です。∠x（∠APB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"18.8\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"18.8\" x2=\"153.4\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"153.4\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M105.9 75.1 A15 15 0 0 0 129.6 81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.8\" y=\"101.2\" font-size=\"12\" text-anchor=\"middle\">110°</text><path d=\"M119.4 30.3 A15 15 0 0 0 132.9 33.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"123\" y=\"50.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"160.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"130.9\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 55,
+       "check": "110 // 2",
+       "hints": [
+        "∠APB と ∠AOB は、どちらも同じ弧に対する角だね。",
+        "円周角と中心角の関係を思い出そう。",
+        "円周角は、同じ弧に対する中心角の何分の 1 だったかな。"
+       ],
+       "paths": [
+        [
+         "∠APB は弧 AB に対する円周角",
+         "中心角 110° の半分",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円 O の直径です。∠CAB = 34° のとき、∠x（∠CBA）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"139.5\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.5\" y1=\"21.8\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83 70 A15 15 0 0 0 80.4 61.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"66\" font-size=\"12\" text-anchor=\"middle\">34°</text><path d=\"M163.6 57.6 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.3\" y=\"61.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"143.6\" y=\"16.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 56,
+       "check": "180 - 90 - 34",
+       "hints": [
+        "直径に対する円周角は何度だったかな。",
+        "∠ACB がわかれば、△ABC の角の和が使えるね。",
+        "180° から 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°（直径に対する円周角）",
+         "∠CBA = 180° − 90° − 34°",
+         "56°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠OAB = 20° のとき、∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.1 87.8 A15 15 0 0 0 85.2 82.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.7\" y=\"87.1\" font-size=\"12\" text-anchor=\"middle\">20°</text><path d=\"M111.4 30.3 A15 15 0 0 0 128.6 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 70,
+       "check": "(180 - 2 * 20) // 2",
+       "hints": [
+        "OA と OB は何かな。△OAB はどんな三角形かな。",
+        "△OAB の角の和から、∠AOB を求めよう。",
+        "∠ACB は弧 AB に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "OA = OB で ∠OBA = 20°",
+         "∠AOB = 180° − 40° = 140°",
+         "∠ACB = 140° ÷ 2 = 70°"
+        ]
+       ],
+       "note": "∠AOB を求めたところで止まり、140 と答えやすい。最後に円周角へ移すことを確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径で、点 C は円の上にあります。∠ACO = 28° のとき、∠x（∠BOC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"149.1\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"149.1\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M135.8 33.9 A15 15 0 0 0 140.7 39.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"128.3\" y=\"49.8\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M135 70 A15 15 0 0 0 128.4 57.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.7\" y=\"61.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"155.2\" y=\"22.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 56,
+       "check": "28 + 28",
+       "hints": [
+        "OA と OC は何かな。∠OAC は何度かな。",
+        "∠BOC は △OAC のどの角の外側の角かな。",
+        "三角形の外角は、となりにない 2 つの内角の和だね。"
+       ],
+       "paths": [
+        [
+         "OA = OC で ∠OAC = 28°",
+         "∠BOC は △OAC の外角",
+         "28° + 28° = 56°"
+        ],
+        [
+         "∠BAC = 28° は弧 BC に対する円周角",
+         "中心角は 2 倍",
+         "56°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠AOB = 100°、∠OAC = 15° のとき、∠x（∠OBC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"94\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"115\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"79\" x2=\"80.2\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"80.2\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"94\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M108.5 60.4 A15 15 0 0 0 112.5 83\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.4\" y=\"79.1\" font-size=\"12\" text-anchor=\"middle\">100°</text><path d=\"M91.7 46.2 A15 15 0 0 0 93.8 42.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.8\" y=\"55.8\" font-size=\"12\" text-anchor=\"middle\">15°</text><path d=\"M107.6 108.7 A15 15 0 0 0 101.5 102\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.6\" y=\"100.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"71.7\" y=\"34.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"88.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"182\" y=\"85.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 35,
+       "check": "100 // 2 - 15",
+       "hints": [
+        "∠ACB は弧 AB に対する円周角だね。何度かな。",
+        "△OCA は二等辺三角形だから、∠OCA は何度かな。",
+        "∠OCB を求めると、△OBC も二等辺三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 100° ÷ 2 = 50°",
+         "∠OCA = ∠OAC = 15°",
+         "∠OCB = 50° − 15° = 35°",
+         "∠OBC = ∠OCB = 35°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円 O に三角形 ABC が内接し、O は三角形の内側にあります。∠OBA = 25°、∠OCA = 35° のとき、∠x（∠BOC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.7 93.8 A15 15 0 0 0 86.5 89.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.2\" y=\"85.4\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M160.3 75.5 A15 15 0 0 0 154.8 82.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"74.9\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M108.5 79.6 A15 15 0 0 0 134.1 75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"124.9\" y=\"101.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 120,
+       "check": "2 * (25 + 35)",
+       "hints": [
+        "OA を結ぶと、二等辺三角形が 2 つできるね。",
+        "∠OAB と ∠OAC は何度かな。",
+        "∠BAC がわかれば、中心角 ∠BOC は何倍かな。"
+       ],
+       "paths": [
+        [
+         "∠OAB = 25°、∠OAC = 35°（二等辺三角形）",
+         "∠BAC = 60°",
+         "∠BOC = 2 × 60° = 120°"
+        ]
+       ],
+       "note": "3 つの二等辺三角形 OAB、OBC、OCA の底角を a、b、c とすると、2(a + b + c) = 180° になる。ここから ∠BOC = 180° − 2b と求める道もある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠OBC = 32° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"75.9\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.9\" y1=\"97.6\" x2=\"164.1\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.1\" y1=\"97.6\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"75.9\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"164.1\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M90.9 97.6 A15 15 0 0 0 88.6 89.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.8\" y=\"94\" font-size=\"12\" text-anchor=\"middle\">32°</text><path d=\"M112.7 31.1 A15 15 0 0 0 127.3 31.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"66.6\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"173.4\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 58,
+       "check": "(180 - 2 * 32) // 2",
+       "hints": [
+        "△OBC は二等辺三角形だね。",
+        "∠BOC を求めよう。",
+        "∠BAC は、∠BOC と同じ弧に対する円周角だよ。"
+       ],
+       "paths": [
+        [
+         "∠OCB = 32°",
+         "∠BOC = 180° − 64° = 116°",
+         "∠BAC = 116° ÷ 2 = 58°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円の直径で、点 C は円の上にあります。∠ABC が ∠BAC の 3 倍のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"156.8\" y2=\"33.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.8\" y1=\"33.2\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83 70 A15 15 0 0 0 81.9 64.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.5\" y=\"68.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"149.4,36.3 152.4,43.7 159.8,40.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"164.5\" y=\"30.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 22.5,
+       "accept": [
+        "45/2"
+       ],
+       "check": "90 / 4",
+       "hints": [
+        "∠ACB は何度かな。",
+        "∠BAC を 1 つ分とすると、∠BAC と ∠ABC で何こ分かな。",
+        "90° を 4 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "∠BAC + ∠ABC = 90° で 1 + 3 = 4 こ分",
+         "90° ÷ 4 = 22.5°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠BAC = 72° のとき、∠OBC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"70.5\" y2=\"86.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70.5\" y1=\"86.1\" x2=\"169.5\" y2=\"86.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"169.5\" y1=\"86.1\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"70.5\" y2=\"86.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"169.5\" y2=\"86.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M111.2 30.1 A15 15 0 0 0 128.8 30.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">72°</text><path d=\"M85.5 86.1 A15 15 0 0 0 84.8 81.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.2\" y=\"85.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.1\" y=\"94.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.9\" y=\"94.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 18,
+       "check": "(180 - 2 * 72) // 2",
+       "hints": [
+        "∠BAC と同じ弧に対する中心角はどれかな。",
+        "∠BOC は ∠BAC の何倍かな。",
+        "△OBC は二等辺三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2 × 72° = 144°",
+         "△OBC は二等辺三角形",
+         "∠OBC = (180° − 144°) ÷ 2 = 18°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "円 O に三角形 ABC が内接しています。∠OAB = 24° のとき、∠ACB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.5\" y1=\"91.2\" x2=\"167.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.5\" y1=\"91.2\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"72.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"72.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"167.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M87.5 91.2 A15 15 0 0 0 86.2 85\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.9\" y=\"89.5\" font-size=\"12\" text-anchor=\"middle\">24°</text><path d=\"M111.8 30.6 A15 15 0 0 0 128.2 30.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"62.4\" y=\"100.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"177.6\" y=\"100.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 66,
+       "check": "(180 - 2 * 24) // 2",
+       "hints": [
+        "△OAB はどんな三角形かな。",
+        "∠AOB を求めよう。",
+        "∠ACB は弧 AB に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "∠OBA = 24°",
+         "∠AOB = 132°",
+         "∠ACB = 66°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O の弧 AB に対する円周角 ∠ACB が 38° です。中心角 ∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"142.8\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"142.8\" y2=\"116.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M105.8 32.9 A15 15 0 0 0 115.6 33.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.5\" y=\"51\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M108.5 79.6 A15 15 0 0 0 126.6 83.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.2\" y=\"101.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"147.6\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 76,
+       "check": "38 * 2",
+       "hints": [
+        "円周角と中心角は、同じ弧に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "38° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "中心角は円周角の 2 倍",
+         "38° × 2",
+         "76°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠ABD = 42°、∠BDC = 30° のとき、∠x（∠AEB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"96\" x2=\"141.2\" y2=\"22.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"165\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"141.2\" y2=\"22.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M125 98.5 A24 24 0 0 0 108 101.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.2\" y=\"89.7\" font-size=\"12\" text-anchor=\"middle\">42°</text><path d=\"M138 37.2 A15 15 0 0 0 145.8 36.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.6\" y=\"54.7\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M120.3 70.2 A11 11 0 0 0 127.6 86.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.9\" y=\"89.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"174.6\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"145.6\" y=\"17.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"118.8\" y=\"80.6\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 108,
+       "check": "180 - 42 - 30",
+       "hints": [
+        "∠BDC と同じ弧 BC に対する円周角を、図の中で探そう。",
+        "∠BAC は何度かな。",
+        "△ABE の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BAC = ∠BDC = 30°（弧 BC に対する円周角）",
+         "△ABE で 180° − 30° − 42°",
+         "108°"
+        ]
+       ],
+       "note": "同じ弧に対する円周角を見つけるには、弧の両はし（ここでは B と C）から円の上の点へ線がのびている角を探す。"
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形 ABC が円に内接し、∠BAC = 40° です。B をふくまない弧 AC の上に点 D をとります。∠x（∠ADB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"86.6\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"153.4\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.4\" y1=\"109.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M114.9 32.1 A15 15 0 0 0 125.1 32.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M156.6 43.6 A15 15 0 0 0 156.6 60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.9\" y=\"56.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"98.6\" y1=\"62.2\" x2=\"108\" y2=\"65.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"132\" y1=\"65.6\" x2=\"141.4\" y2=\"62.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"79.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"160.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 70,
+       "check": "(180 - 40) // 2",
+       "hints": [
+        "∠ADB は、どの弧に対する円周角かな。",
+        "同じ弧 AB に対する円周角を、△ABC の中で探そう。",
+        "∠ACB は二等辺三角形の底角だね。"
+       ],
+       "paths": [
+        [
+         "∠ADB = ∠ACB（弧 AB に対する円周角）",
+         "∠ACB = (180° − 40°) ÷ 2",
+         "70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠AEB = 100°、∠ACD = 35° のとき、∠x（∠BAC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"111\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"79\" x2=\"129\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"121.2\" x2=\"129\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M107.5 55.8 A15 15 0 0 0 119 75.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.3\" y=\"79.2\" font-size=\"12\" text-anchor=\"middle\">100°</text><path d=\"M162.6 66.7 A15 15 0 0 0 157.1 73.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M81.3 57.6 A15 15 0 0 0 89.1 49.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.6\" y=\"67.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"109.1\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"182\" y=\"85.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"130.9\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"132.6\" y=\"65.9\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 45,
+       "check": "180 - 100 - 35",
+       "hints": [
+        "∠ACD と同じ弧 AD に対する円周角を探そう。",
+        "∠ABD は何度かな。",
+        "△ABE の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ABE = ∠ACD = 35°（弧 AD）",
+         "△ABE で 180° − 100° − 35°",
+         "45°"
+        ],
+        [
+         "∠DEC = ∠AEB = 100°（対頂角）",
+         "△CDE で ∠CDE = 45°",
+         "∠BAC = ∠BDC = 45°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円の上の 5 点を、1 つおきに結んで星の形をかきました。星の 5 つの先の角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"115.5\" y1=\"18.2\" x2=\"94\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"115\" x2=\"167.1\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.1\" y1=\"48\" x2=\"69.8\" y2=\"56.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.8\" y1=\"56.5\" x2=\"146\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"115.5\" y2=\"18.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.2 32.8 A15 15 0 0 0 120 32.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M105.1 104.9 A15 15 0 0 0 97.2 100.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M152.2 49.3 A15 15 0 0 0 156.1 58.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M81.7 65.7 A15 15 0 0 0 84.7 55.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M141.5 100.7 A15 15 0 0 0 134.1 105.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.5\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59.1\" y=\"58.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"88.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"151.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"177.1\" y=\"48.3\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 180,
+       "check": "360 // 2",
+       "hints": [
+        "先の角の 1 つ、たとえば A の角は、どの弧に対する円周角かな。",
+        "5 つの先の角が見ている 5 つの弧を、円の上でたどってみよう。",
+        "5 つの弧を合わせると円のどれだけかな。中心角でいうと何度かな。"
+       ],
+       "paths": [
+        [
+         "どの先の角も、となり合わない 2 点の間の弧に対する円周角",
+         "5 つの弧を合わせると円 1 周（中心角 360°）",
+         "円周角の和は 360° ÷ 2 = 180°"
+        ]
+       ],
+       "note": "円の上でなくても、星の形の先の角の和は 180° になる（三角形の外角で示せる）。円の上なら、弧を合わせる見方ですぐにわかる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠DAC = 28°、∠ACB = 40° のとき、∠AEB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"162.1\" y2=\"39.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"162.1\" y2=\"39.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"162.1\" y2=\"39.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.2 44.1 A15 15 0 0 0 95.2 37.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.1\" y=\"48.5\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M155.9 80.3 A15 15 0 0 0 154.1 90.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.3\" y=\"87.1\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M116.4 57.5 A15 15 0 0 0 117.5 74.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.4\" y=\"71.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"71.7\" y=\"34.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"171\" y=\"37.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"140.4\" y=\"69.9\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 68,
+       "check": "28 + 40",
+       "hints": [
+        "∠DAC と同じ弧 DC に対する円周角を探そう。",
+        "∠DBC は何度かな。",
+        "∠AEB は △EBC の外角だね。"
+       ],
+       "paths": [
+        [
+         "∠DBC = ∠DAC = 28°",
+         "∠AEB は △EBC の外角",
+         "28° + 40° = 68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があります。∠ABD = 38°、∠DBC = 24° のとき、∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"171.9\" y2=\"73.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.9\" y1=\"73.6\" x2=\"157.4\" y2=\"33.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"157.4\" y1=\"33.9\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"171.9\" y2=\"73.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"157.4\" y2=\"33.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M109.8 107.1 A14 14 0 0 0 101 104.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.7\" y=\"96.9\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M127.4 102.5 A30 30 0 0 0 118.6 93.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"132.6\" y=\"92.7\" font-size=\"12\" text-anchor=\"middle\">24°</text><path d=\"M142.6 31.8 A15 15 0 0 0 162.5 48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.8\" y=\"59.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"182.8\" y=\"79.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"165.3\" y=\"31.1\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 118,
+       "check": "180 - 38 - 24",
+       "hints": [
+        "∠ABD と同じ弧に対する円周角を、△ACD の中で探そう。",
+        "∠DBC と同じ弧に対する円周角も探そう。",
+        "△ACD の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ACD = ∠ABD = 38°",
+         "∠DAC = ∠DBC = 24°",
+         "∠ADC = 180° − 38° − 24° = 118°"
+        ]
+       ],
+       "note": "答えは ∠ABC = 62° と合わせて 180° になる。このことは 4 日目に「内接四角形の向かい合う角」として学ぶ。"
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があります。∠ACB = 25°、∠BDC = 35° のとき、∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"159.8\" y1=\"103.4\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"159.8\" y1=\"103.4\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M145.1 100.8 A15 15 0 0 0 145.3 107.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"131.9\" y=\"108.8\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M109.7 33.7 A15 15 0 0 0 118.5 31.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117\" y=\"50.3\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M103.5 31.8 A15 15 0 0 0 118.5 31.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111\" y=\"51\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"168.3\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 60,
+       "check": "25 + 35",
+       "hints": [
+        "∠ACB と同じ弧 AB に対する円周角を、D のところで探そう。",
+        "∠ADB は何度かな。",
+        "∠ADC は ∠ADB と ∠BDC を合わせた角だね。"
+       ],
+       "paths": [
+        [
+         "∠ADB = ∠ACB = 25°（弧 AB）",
+         "∠ADC = 25° + 35°",
+         "60°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠BAC = 33°、∠ABD = 47° のとき、∠AEB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"111\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163.1\" y1=\"99.1\" x2=\"149.1\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"163.1\" y2=\"99.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"121.2\" x2=\"149.1\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.3 57.6 A15 15 0 0 0 87.7 51.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.5\" y=\"69.2\" font-size=\"12\" text-anchor=\"middle\">33°</text><path d=\"M116.6 107.3 A15 15 0 0 0 104.6 107.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.2\" y=\"97.4\" font-size=\"12\" text-anchor=\"middle\">47°</text><path d=\"M115.9 69.6 A15 15 0 0 0 123 91.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102\" y=\"90.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"109.1\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"110.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"155.2\" y=\"22.7\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"139.6\" y=\"82.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 100,
+       "check": "180 - 33 - 47",
+       "hints": [
+        "△ABE の 2 つの角がわかっているね。",
+        "三角形の角の和は 180° だね。",
+        "180° から 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "△ABE で 180° − 33° − 47°",
+         "100°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円の直径です。∠ABC = 57° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"141.2\" y2=\"22.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.2\" y1=\"22.5\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M163.8 57.4 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.4\" y=\"60.8\" font-size=\"12\" text-anchor=\"middle\">57°</text><path d=\"M83 70 A15 15 0 0 0 80.6 61.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"145.6\" y=\"17.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 33,
+       "check": "90 - 57",
+       "hints": [
+        "直径に対する円周角 ∠ACB は何度かな。",
+        "△ABC の角の和を使おう。",
+        "90° から 57° をひけばよいね。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "∠BAC = 90° − 57°",
+         "33°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径で、C と D は AB について反対側の円の上にあります。∠BAC = 26° のとき、∠x（∠ADC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"152\" y2=\"29\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152\" y1=\"29\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"152\" y2=\"29\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83 70 A15 15 0 0 0 81.5 63.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.3\" y=\"67.9\" font-size=\"12\" text-anchor=\"middle\">26°</text><path d=\"M109.5 105.7 A15 15 0 0 0 93.6 106.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.7\" y=\"95.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"158.8\" y=\"25.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 64,
+       "check": "90 - 26",
+       "hints": [
+        "∠ADC は、どの弧に対する円周角かな。",
+        "同じ弧 AC に対する円周角を、△ABC の中で探そう。",
+        "∠ACB = 90° を使って ∠ABC を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "∠ABC = 90° − 26° = 64°",
+         "∠ADC = ∠ABC = 64°（弧 AC）"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠ABC = 58° のとき、∠x（∠OAC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"171.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.9\" y1=\"66.4\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"171.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M114.2 109.8 A15 15 0 0 0 100.9 103.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.6\" y=\"97.5\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M101.5 38 A15 15 0 0 0 107.2 32\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.1\" y=\"48.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"182.8\" y=\"70.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 32,
+       "check": "(180 - 2 * 58) // 2",
+       "hints": [
+        "∠ABC と同じ弧 AC に対する中心角はどれかな。",
+        "∠AOC は何度かな。",
+        "△OAC は二等辺三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠AOC = 2 × 58° = 116°",
+         "△OAC は OA = OC",
+         "∠OAC = (180° − 116°) ÷ 2 = 32°"
+        ],
+        [
+         "∠OAC = 90° − ∠ABC",
+         "90° − 58°",
+         "32°"
+        ]
+       ],
+       "note": "2 本目の道は「∠OAC = 90° − ∠ABC」という形。G-028 の外心で何度も使う。"
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径で、C は円の上の点です。C から AB に垂線 CD をひきます。∠COB = 70° のとき、∠x（∠ACD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"137.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"137.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.8\" y1=\"21.1\" x2=\"137.8\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"137.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M135 70 A15 15 0 0 0 125.1 55.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.9\" y=\"58.1\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M125.5 29.7 A15 15 0 0 0 137.8 36.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"124.9\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"137.8,62 145.8,62 145.8,70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"141.5\" y=\"15.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"143.3\" y=\"84.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"114.5\" y=\"84.4\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 55,
+       "check": "90 - 70 // 2",
+       "hints": [
+        "∠CAB は、∠COB と同じ弧に対する円周角だね。",
+        "∠CAB は何度かな。",
+        "△ACD は直角三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠CAB = 70° ÷ 2 = 35°",
+         "△ACD で ∠ACD = 90° − 35°",
+         "55°"
+        ],
+        [
+         "∠ACB = 90°",
+         "∠BCD = 90° − ∠CBA = ∠CAB = 35°",
+         "∠ACD = 90° − 35° = 55°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "AB は円の直径で、C と D は AB の同じ側の円の上にあります。直線 AD と直線 BC の交点を E とします。∠CAB = 20°、∠DBA = 30° のとき、∠x（∠AEB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"109.1\" r=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.1\" y1=\"109.1\" x2=\"162.9\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.1\" y1=\"109.1\" x2=\"129.7\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.9\" y1=\"109.1\" x2=\"129.7\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.1\" y1=\"109.1\" x2=\"152.9\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"162.9\" y1=\"109.1\" x2=\"98.6\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M92.1 109.1 A15 15 0 0 0 91.2 104\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.7\" y=\"108.5\" font-size=\"12\" text-anchor=\"middle\">20°</text><path d=\"M149.9 101.6 A15 15 0 0 0 147.9 109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.8\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M122.2 31 A15 15 0 0 0 134.9 32.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.3\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"66.1\" y=\"114\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"173.9\" y=\"114\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"161.3\" y=\"79.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"93.1\" y=\"67.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"129.7\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 50,
+       "check": "180 - (90 - 30) - (90 - 20)",
+       "hints": [
+        "∠ADB と ∠ACB は、どちらも直径に対する円周角だね。",
+        "△ABD から ∠DAB を、△ABC から ∠CBA を求めよう。",
+        "△ABE の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ADB = 90° で ∠DAB = 60°",
+         "∠ACB = 90° で ∠CBA = 70°",
+         "△ABE で 180° − 60° − 70° = 50°"
+        ]
+       ],
+       "note": "E は円の外にある。直径を見る角が 90° より小さいので、円の外にあることもわかる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠OBC = 22° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.8\" y2=\"89.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.8\" y1=\"89.5\" x2=\"168.2\" y2=\"89.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.2\" y1=\"89.5\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.8\" y2=\"89.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.2\" y2=\"89.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.8 89.5 A15 15 0 0 0 85.7 83.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.3\" y=\"88.3\" font-size=\"12\" text-anchor=\"middle\">22°</text><path d=\"M111.6 30.4 A15 15 0 0 0 128.4 30.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"61.6\" y=\"98.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"178.4\" y=\"98.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 68,
+       "check": "90 - 22",
+       "hints": [
+        "△OBC は二等辺三角形だね。",
+        "∠BOC を求めよう。",
+        "∠BAC は ∠BOC の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 180° − 44° = 136°",
+         "∠BAC = 136° ÷ 2",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90° の直角三角形 ABC で、斜辺 AB = 14 cm です。斜辺の中点を M とするとき、CM は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,31.9 96.9,35.9 100.9,29\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "∠C = 90° だから、C は AB を直径とする円の上にあるね。",
+        "その円の中心はどこかな。",
+        "CM はその円の何にあたるかな。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90° だから C は AB を直径とする円の上",
+         "中心は M",
+         "CM は半径で 14 ÷ 2 = 7 cm"
+        ]
+       ],
+       "note": "直角三角形の斜辺の中点は、3 つの頂点から等しい距離にある。わけは 14 日目に長方形を使って示す。"
+      },
+      {
+       "part": "今日",
+       "text": "AB は円の直径で、C と D は AB について反対側の円の上にあります。∠CAB = 48° のとき、∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"114.6\" y2=\"18.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.6\" y1=\"18.3\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"129\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"121.2\" x2=\"114.6\" y2=\"18.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83 70 A15 15 0 0 0 78 58.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.6\" y=\"62.8\" font-size=\"12\" text-anchor=\"middle\">48°</text><path d=\"M126.9 106.4 A15 15 0 0 0 117.5 111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.5\" y=\"100.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"113.4\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"130.9\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 42,
+       "check": "90 - 48",
+       "hints": [
+        "∠ADC と同じ弧 AC に対する円周角を探そう。",
+        "∠ACB は何度かな。",
+        "∠ABC を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "∠ABC = 90° − 48° = 42°",
+         "∠ADC = ∠ABC = 42°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円に内接する四角形 ABCD で、∠A = 70° です。∠C は何度か考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"68.8\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.8\" y1=\"79\" x2=\"102.2\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"165\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"96\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"68.8\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"165\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M110.4 29.5 A15 15 0 0 0 127.5 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.6\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M116.3 113.7 A15 15 0 0 0 92.6 107.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.5\" y=\"96\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"58\" y=\"85.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"174.6\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "4 つの頂点がすべて 1 つの円の上にある四角形を、円に内接する四角形といいます。∠A は弧 BCD に対する円周角、∠C は弧 BAD に対する円周角です。2 つの弧を合わせると円 1 周なので、2 つの弧の中心角の和は 360° で、円周角の和はその半分の 180° です。だから、円に内接する四角形の向かい合う角の和は 180° です。∠A = 70° なら ∠C = 180° − 70° = 110° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円の直径です。∠ABC = 61° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"147.6\" y2=\"25.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.6\" y1=\"25.9\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M164.7 56.9 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.9\" y=\"60\" font-size=\"12\" text-anchor=\"middle\">61°</text><path d=\"M83 70 A15 15 0 0 0 81.1 62.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.1\" y=\"67.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"153.4\" y=\"21.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 29,
+       "check": "90 - 61",
+       "hints": [
+        "直径に対する円周角 ∠ACB は何度かな。",
+        "△ABC の角の和を使おう。",
+        "90° から 61° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "90° − 61°",
+         "29°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O で、弧 AB に対する円周角 ∠ADB = 47° です。中心角 ∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M105.8 32.9 A15 15 0 0 0 117.8 32.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.7\" y=\"50.9\" font-size=\"12\" text-anchor=\"middle\">47°</text><path d=\"M108.5 79.6 A15 15 0 0 0 130.4 80.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.5\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"163.8\" y=\"120.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 94,
+       "check": "47 * 2",
+       "hints": [
+        "円周角と中心角は、同じ弧に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "47° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "中心角は円周角の 2 倍",
+         "47° × 2",
+         "94°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠ABC = 96°、∠BCD = 79° です。∠x（∠BAD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"69.1\" y2=\"59.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.1\" y1=\"59.2\" x2=\"118.2\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"118.2\" y1=\"122\" x2=\"171.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"61\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.4 71 A15 15 0 0 0 79.9 48.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.1\" y=\"65.3\" font-size=\"12\" text-anchor=\"middle\">96°</text><path d=\"M128 110.6 A15 15 0 0 0 109 110.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.9\" y=\"98.2\" font-size=\"12\" text-anchor=\"middle\">79°</text><path d=\"M100.2 29.2 A15 15 0 0 0 123.3 27.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.2\" y=\"50.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"58.4\" y=\"61.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"117.8\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182\" y=\"64\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 101,
+       "check": "180 - 79",
+       "hints": [
+        "∠BAD と向かい合う角はどれかな。",
+        "向かい合う角の和は何度だったかな。",
+        "∠ABC は ∠BAD と向かい合っていないね。"
+       ],
+       "paths": [
+        [
+         "∠BAD と ∠BCD は向かい合う角",
+         "180° − 79°",
+         "101°"
+        ]
+       ],
+       "note": "96° を使って 180° − 96° = 84° としやすい。向かい合う角はどれかを、対角線で結ばれる頂点として確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠A の大きさは ∠C の 3 倍です。∠A は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"21.1\" x2=\"75\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"137.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.8\" y1=\"118.9\" x2=\"146\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"25\" x2=\"102.2\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M90.7 30.8 A15 15 0 0 0 117.2 22.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M139.1 103.9 A15 15 0 0 0 128.1 107.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.5\" y=\"15.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"141.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"151.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 135,
+       "check": "180 * 3 // 4",
+       "hints": [
+        "∠A と ∠C の和は何度かな。",
+        "∠C を 1 つ分とすると、∠A と ∠C で何こ分かな。",
+        "180° を 4 つに分けた 3 つ分だね。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 180°",
+         "∠C を 1 こ分とすると 4 こ分で 180°",
+         "∠C = 45° で ∠A = 135°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠BAC = 30°、∠CAD = 45° です。∠x（∠BCD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"129\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"121.2\" x2=\"171.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"61\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"129\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.4 39.7 A15 15 0 0 0 99.1 39.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96.4\" y=\"57.1\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M99.1 39.1 A15 15 0 0 0 107.6 31.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.9\" y=\"49.8\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M137.6 108.9 A15 15 0 0 0 114.9 116.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120.6\" y=\"98.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"130.9\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182\" y=\"64\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 105,
+       "check": "180 - (30 + 45)",
+       "hints": [
+        "∠BAD は何度かな。",
+        "∠BAD と向かい合う角はどれかな。",
+        "向かい合う角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BAD = 30° + 45° = 75°",
+         "∠BCD = 180° − 75°",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円に内接する四角形 ABCD で、AB = AD、∠BAD = 70° です。∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"111\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"121.2\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"111\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M111.4 30.3 A15 15 0 0 0 128.6 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M112.3 106.3 A15 15 0 0 0 99.5 111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.3\" y=\"99.5\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"91.5\" y1=\"50\" x2=\"99.7\" y2=\"55.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"140.3\" y1=\"55.8\" x2=\"148.5\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"109.1\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 55,
+       "check": "(180 - 70) // 2",
+       "hints": [
+        "△ABD は二等辺三角形だね。∠ADB は何度かな。",
+        "∠ACB と同じ弧 AB に対する円周角はどれかな。",
+        "∠ADB と ∠ACB をくらべよう。"
+       ],
+       "paths": [
+        [
+         "∠ADB = (180° − 70°) ÷ 2 = 55°",
+         "∠ACB = ∠ADB（弧 AB）",
+         "55°"
+        ],
+        [
+         "∠BCD = 180° − 70° = 110°",
+         "AB = AD なので弧 AB = 弧 AD で ∠ACB = ∠ACD",
+         "110° ÷ 2 = 55°"
+        ]
+       ],
+       "note": "等しい弦に対する円周角は等しい。だから AC は ∠BCD を 2 等分する。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠ABC = (2x + 10)°、∠ADC = (x + 20)° です。x はいくつですか。",
+       "answer": 50,
+       "check": "(180 - 30) // 3",
+       "hints": [
+        "∠ABC と ∠ADC は向かい合う角だね。",
+        "2 つの角の和を、x の式で書いて 180 とおこう。",
+        "3x + 30 = 180 を解こう。"
+       ],
+       "paths": [
+        [
+         "(2x + 10) + (x + 20) = 180",
+         "3x + 30 = 180",
+         "x = 50"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠A = 88° です。∠C は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"137.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.8\" y1=\"118.9\" x2=\"170\" y2=\"55.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170\" y1=\"55.7\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M103.5 31.8 A15 15 0 0 0 123.7 26.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.7\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">88°</text><path d=\"M144.6 105.5 A15 15 0 0 0 124.2 112.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"128.7\" y=\"96.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"141.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"180.6\" y=\"57.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 92,
+       "check": "180 - 88",
+       "hints": [
+        "∠A と ∠C は向かい合う角だね。",
+        "向かい合う角の和は何度かな。",
+        "180° から 88° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 180°",
+         "180° − 88°",
+         "92°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形が円に内接しています。この平行四辺形は、どんな四角形ですか。",
+       "choices": [
+        "長方形",
+        "ひし形",
+        "台形"
+       ],
+       "answer": "長方形",
+       "hints": [
+        "平行四辺形の向かい合う角は、どんな関係かな。",
+        "円に内接すると、向かい合う角の和は何度かな。",
+        "2 つの等しい角の和が 180° なら、1 つの角は何度かな。"
+       ],
+       "paths": [
+        [
+         "平行四辺形の向かい合う角は等しい",
+         "内接すると和は 180°",
+         "どの角も 90° で長方形"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円に内接する四角形 ABCD で、辺 BC を C の先にのばした点を E とします。∠BAD = 80° のとき、∠DCE は何度か考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"115.4\" cy=\"68.8\" r=\"50.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98\" y1=\"21.1\" x2=\"71.4\" y2=\"94.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.4\" y1=\"94.1\" x2=\"140.7\" y2=\"112.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.7\" y1=\"112.7\" x2=\"165.3\" y2=\"59.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.3\" y1=\"59.9\" x2=\"98\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.7\" y1=\"112.7\" x2=\"175.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M92.9 35.2 A15 15 0 0 0 111 28.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.6\" y=\"51.6\" font-size=\"12\" text-anchor=\"middle\">80°</text><path d=\"M155.2 116.6 A15 15 0 0 0 147.1 99.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"166.1\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"94.2\" y=\"15.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"61.9\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"146.2\" y=\"127.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"176.2\" y=\"62.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"183.6\" y=\"134.2\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "∠BCD と ∠DCE を合わせると一直線で 180° です。また、内接四角形の向かい合う角なので ∠BCD + ∠BAD = 180° です。どちらも ∠BCD に何かをたして 180° なので、∠DCE = ∠BAD = 80° です。円に内接する四角形の外角は、それと向かい合う内角（内対角）に等しくなります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、∠A = 82° です。∠C は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"70\" y2=\"84.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"84.3\" x2=\"125.4\" y2=\"121.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.4\" y1=\"121.7\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M103 31.5 A15 15 0 0 0 122.5 28.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.4\" y=\"50.6\" font-size=\"12\" text-anchor=\"middle\">82°</text><path d=\"M135.5 110.6 A15 15 0 0 0 113 113.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122\" y=\"98.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59.4\" y=\"92.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"126.6\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 98,
+       "check": "180 - 82",
+       "hints": [
+        "∠A と ∠C は向かい合う角だね。",
+        "向かい合う角の和は何度かな。",
+        "180° から 82° をひこう。"
+       ],
+       "paths": [
+        [
+         "180° − 82°",
+         "98°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC で ∠A = 48°、∠B = 67° です。辺 BC を C の先にのばした点を E とします。∠ACE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"97,18 52.8,122 145.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.5\" y1=\"122\" x2=\"187.2\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.1 31.8 A15 15 0 0 0 103.3 31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.5\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">48°</text><path d=\"M67.8 122 A15 15 0 0 0 58.7 108.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"76.2\" y=\"110.7\" font-size=\"12\" text-anchor=\"middle\">67°</text><path d=\"M160.5 122 A15 15 0 0 0 139.1 108.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.5\" y=\"102.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"93.8\" y=\"12.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"42.6\" y=\"130.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"153.1\" y=\"134.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"197.4\" y=\"130.9\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 115,
+       "check": "48 + 67",
+       "hints": [
+        "∠ACE は △ABC の外角だね。",
+        "外角は、となりにない 2 つの内角とどんな関係かな。",
+        "48° と 67° をたそう。"
+       ],
+       "paths": [
+        [
+         "外角 = となりにない 2 つの内角の和",
+         "48° + 67°",
+         "115°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、辺 BC を C の先にのばした点を E とします。∠BAC = 40°、∠CAD = 35° のとき、∠x（∠DCE）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"118.2\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"92.2\" y1=\"25\" x2=\"78.4\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"78.4\" y1=\"103.4\" x2=\"144.2\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"144.2\" y1=\"115\" x2=\"169.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"169.4\" y1=\"61\" x2=\"92.2\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"92.2\" y1=\"25\" x2=\"144.2\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"144.2\" y1=\"115\" x2=\"173.8\" y2=\"120.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.6 39.7 A15 15 0 0 0 99.7 38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97\" y=\"56.7\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M99.7 38 A15 15 0 0 0 105.8 31.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.8\" y=\"48.1\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M159 117.6 A15 15 0 0 0 150.5 101.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"169\" y=\"106.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"86.7\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"69.9\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"149.7\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"180.2\" y=\"64\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"182\" y=\"132.5\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 75,
+       "check": "40 + 35",
+       "hints": [
+        "∠DCE は内接四角形の外角だね。どの内角と等しいかな。",
+        "∠BAD は何度かな。",
+        "40° と 35° を合わせよう。"
+       ],
+       "paths": [
+        [
+         "∠DCE = ∠BAD（外角 = 内対角）",
+         "∠BAD = 40° + 35°",
+         "75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、直線 AB と直線 DC の交点を E とします。∠BAD = 60°、∠AED = 35° のとき、∠x（∠ABC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"90.8\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"37.3\" y1=\"94.5\" x2=\"206.2\" y2=\"124.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.7\" y1=\"18.9\" x2=\"206.2\" y2=\"124.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134.5\" y1=\"111.6\" x2=\"147\" y2=\"65.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"37.3\" y1=\"94.5\" x2=\"100.7\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M52.1 97.1 A15 15 0 0 0 46.9 83\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.6\" y=\"89.1\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M195.5 113.7 A15 15 0 0 0 191.4 121.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"181.3\" y=\"115.5\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M138.4 97.2 A15 15 0 0 0 119.7 109\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.5\" y=\"92.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"26.9\" y=\"103.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"142.9\" y=\"123.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"157.8\" y=\"68.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"102.7\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"216.3\" y=\"133.5\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 95,
+       "check": "180 - (180 - 60 - 35)",
+       "hints": [
+        "△AED の角の和から、∠ADE を求めよう。",
+        "∠ADC と ∠ABC は、内接四角形 ABCD の向かい合う角だね。",
+        "180° から ∠ADC をひこう。"
+       ],
+       "paths": [
+        [
+         "△AED で ∠ADE = 180° − 60° − 35° = 85°",
+         "∠ABC = 180° − 85°",
+         "95°"
+        ],
+        [
+         "∠EBC = ∠ADC = 85°（外角 = 内対角）",
+         "∠ABC = 180° − 85° = 95°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠A : ∠B : ∠C = 2 : 3 : 4 です。∠D は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"96\" x2=\"165\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"96\" x2=\"165\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"44\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"75\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M90 96 A15 15 0 0 0 82.5 83\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M165 81 A15 15 0 0 0 150 96\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M152 36.5 A15 15 0 0 0 165 59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M112.5 31 A15 15 0 0 0 133 25.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.2\" y=\"49.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"174.6\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"174.6\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 90,
+       "check": "180 - 180 // (2 + 4) * 3",
+       "hints": [
+        "∠A と ∠C は向かい合う角だね。和は何度かな。",
+        "比の 2 と 4 で 180° なら、比の 1 は何度かな。",
+        "∠B を求めて、∠D と向かい合うことを使おう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 180° で 2 + 4 = 6 こ分",
+         "1 こ分は 30°、∠B = 90°",
+         "∠D = 180° − 90° = 90°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円に内接する六角形 ABCDEF があります。∠A + ∠C + ∠E は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"115.5\" y1=\"18.2\" x2=\"80.2\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"106.5\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.5\" y1=\"120.2\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"159.8\" y1=\"103.4\" x2=\"167.1\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.1\" y1=\"48\" x2=\"115.5\" y2=\"18.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"115.5\" y1=\"18.2\" x2=\"106.5\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M102.2 25.1 A15 15 0 0 0 128.5 25.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M82.2 97.9 A15 15 0 0 0 73.7 73\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M161.8 88.6 A15 15 0 0 0 145.5 107.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.5\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"34.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"103.7\" y=\"135.8\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"168.3\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"177.1\" y=\"48.3\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 360,
+       "check": "180 + 180",
+       "hints": [
+        "対角線 AD をひくと、内接四角形が 2 つできるね。",
+        "四角形 ABCD と四角形 ADEF で、向かい合う角の和を書こう。",
+        "∠BAD と ∠DAF を合わせると ∠A だね。"
+       ],
+       "paths": [
+        [
+         "四角形 ABCD で ∠BAD + ∠C = 180°",
+         "四角形 ADEF で ∠DAF + ∠E = 180°",
+         "∠A + ∠C + ∠E = 360°"
+        ]
+       ],
+       "note": "1 つおきの角の和が 360° になる。∠B + ∠D + ∠F も 360° で、六角形の角の和 720° の半分ずつに分かれる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠BAD = 83° です。辺 BC を C の先にのばした点を E とするとき、∠DCE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"65.7\" r=\"47.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"103.7\" y1=\"20.9\" x2=\"76.4\" y2=\"85.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"76.4\" y1=\"85.1\" x2=\"136.3\" y2=\"110.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"136.3\" y1=\"110.6\" x2=\"167\" y2=\"57.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167\" y1=\"57.4\" x2=\"103.7\" y2=\"20.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"136.3\" y1=\"110.6\" x2=\"163.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M97.8 34.7 A15 15 0 0 0 116.7 28.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.6\" y=\"51.6\" font-size=\"12\" text-anchor=\"middle\">83°</text><path d=\"M150.1 116.4 A15 15 0 0 0 143.8 97.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.9\" y=\"105.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"99.9\" y=\"15.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"66.4\" y=\"94.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"140.1\" y=\"125.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"177.8\" y=\"60.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"170\" y=\"135.6\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 83,
+       "check": "180 - (180 - 83)",
+       "hints": [
+        "∠BCD を先に求めよう。",
+        "∠DCE と ∠BCD を合わせると何度かな。",
+        "外角と内対角の関係を思い出そう。"
+       ],
+       "paths": [
+        [
+         "∠BCD = 180° − 83° = 97°",
+         "∠DCE = 180° − 97°",
+         "83°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、辺 CD を D の先にのばした点を E とします。∠ABC = (2x + 10)°、∠ADE = (x + 48)° のとき、x はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"118.8\" cy=\"74.4\" r=\"47.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"101\" y1=\"30.2\" x2=\"74.1\" y2=\"90.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.1\" y1=\"90.7\" x2=\"142.7\" y2=\"115.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.7\" y1=\"115.6\" x2=\"160.1\" y2=\"50.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160.1\" y1=\"50.5\" x2=\"101\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160.1\" y1=\"50.5\" x2=\"168.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M88.2 95.8 A15 15 0 0 0 80.2 77\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M164 36.1 A15 15 0 0 0 145.9 45.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96.9\" y=\"24.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"63.7\" y=\"99.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"148.2\" y=\"130\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"169.6\" y=\"49.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"176.1\" y=\"14.7\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 38,
+       "check": "[x for x in range(1, 90) if 2 * x + 10 == x + 48][0]",
+       "hints": [
+        "∠ADE は内接四角形の外角だね。",
+        "外角は、どの内角と等しいかな。",
+        "2 つの角が等しいという式を立てて解こう。"
+       ],
+       "paths": [
+        [
+         "∠ADE = ∠ABC（外角 = 内対角）",
+         "2x + 10 = x + 48",
+         "x = 38"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、直線 AB と直線 DC の交点を E とします。∠BAD = 55°、∠AED = 45° のとき、∠ABC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"104.4\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.9\" y1=\"94.5\" x2=\"192.6\" y2=\"119.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"123.9\" y1=\"21.4\" x2=\"192.6\" y2=\"119.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"148.1\" y1=\"111.6\" x2=\"161.4\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.9\" y1=\"94.5\" x2=\"123.9\" y2=\"21.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M65.6 97.1 A15 15 0 0 0 61.5 83.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"77.6\" y=\"90.3\" font-size=\"12\" text-anchor=\"middle\">55°</text><path d=\"M184 107.2 A15 15 0 0 0 177.8 116.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"169\" y=\"108.6\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M153.2 97.5 A15 15 0 0 0 133.3 109\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"134.1\" y=\"91.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"40.5\" y=\"103.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"156.5\" y=\"123.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"172.4\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"127.7\" y=\"16\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"202.4\" y=\"129.3\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 100,
+       "check": "180 - (180 - 55 - 45)",
+       "hints": [
+        "△AED の角の和から ∠ADE を求めよう。",
+        "∠ADC と ∠ABC は向かい合う角だね。",
+        "180° から ∠ADC をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ADE = 180° − 55° − 45° = 80°",
+         "∠ABC = 180° − 80°",
+         "100°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、辺 CD を D の先にのばした点を E とします。∠ABC = 77° のとき、∠ADE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"115.9\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.2\" y1=\"18.1\" x2=\"67\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67\" y1=\"87.8\" x2=\"141.9\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.9\" y1=\"115\" x2=\"164.7\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.7\" y1=\"52.2\" x2=\"112.2\" y2=\"18.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.7\" y1=\"52.2\" x2=\"176.1\" y2=\"20.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.1 92.9 A15 15 0 0 0 75.2 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.5\" y=\"83.1\" font-size=\"12\" text-anchor=\"middle\">77°</text><path d=\"M169.8 38.1 A15 15 0 0 0 152.1 44\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.8\" y=\"29.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"111.5\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"56.7\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"147.4\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"175.1\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"184.7\" y=\"18.8\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 77,
+       "check": "180 - (180 - 77)",
+       "hints": [
+        "∠ADE は内接四角形の外角だね。",
+        "外角は、どの内角と等しかったかな。",
+        "∠ADC を先に求めてもよいね。"
+       ],
+       "paths": [
+        [
+         "∠ADC = 180° − 77° = 103°",
+         "∠ADE = 180° − 103°",
+         "77°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠BAC = 28°、∠ACD = 41° のとき、∠AEB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163.1\" y1=\"99.1\" x2=\"139.5\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"163.1\" y2=\"99.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"139.5\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M82.5 57 A15 15 0 0 0 87.7 51.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.4\" y=\"68.3\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M158.7 84.7 A15 15 0 0 0 150.4 91.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.1\" y=\"81.1\" font-size=\"12\" text-anchor=\"middle\">41°</text><path d=\"M118.5 71.2 A12 12 0 0 0 126.4 89.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.7\" y=\"91.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"110.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"143.6\" y=\"16.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"139.6\" y=\"82.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 111,
+       "check": "180 - 28 - 41",
+       "hints": [
+        "∠ACD と同じ弧 AD に対する円周角を探そう。",
+        "∠ABD は何度かな。",
+        "△ABE の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ABE = ∠ACD = 41°",
+         "△ABE で 180° − 28° − 41°",
+         "111°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠ABD = 35°、∠BAD = 100° です。∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"86.6\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"129\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"121.2\" x2=\"137.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.8\" y1=\"21.1\" x2=\"80.2\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"36.6\" x2=\"129\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"137.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M94.1 96.8 A15 15 0 0 0 85.3 94.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.6\" y=\"86.7\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M81.5 51.5 A15 15 0 0 0 94.7 32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.1\" y=\"56.8\" font-size=\"12\" text-anchor=\"middle\">100°</text><path d=\"M118 102.2 A22 22 0 0 0 107.8 115.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.3\" y=\"104.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"71.7\" y=\"34.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"79.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"130.9\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"141.5\" y=\"15.7\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 45,
+       "check": "180 - 100 - 35",
+       "hints": [
+        "∠ACB と同じ弧 AB に対する円周角を探そう。",
+        "∠ADB は △ABD の中にあるね。",
+        "△ABD の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ADB = 180° − 100° − 35° = 45°",
+         "∠ACB = ∠ADB（弧 AB）",
+         "45°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円の直径で、四角形 ABCD は円に内接しています。∠BAC = 25° のとき、∠x（∠ADC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"153.4\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.4\" y1=\"30.2\" x2=\"86.6\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"30.2\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"153.4\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83 70 A15 15 0 0 0 81.6 63.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.3\" y=\"68.1\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M80.2 43.8 A15 15 0 0 0 101.6 30.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.6\" y=\"58\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"160.5\" y=\"26.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"79.5\" y=\"26.6\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 115,
+       "check": "180 - (90 - 25)",
+       "hints": [
+        "∠ACB は何度かな。",
+        "∠ABC を求めよう。",
+        "∠ADC と ∠ABC は向かい合う角だね。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "∠ABC = 90° − 25° = 65°",
+         "∠ADC = 180° − 65° = 115°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、AB = BC、∠ADC = 110° です。∠x（∠BDC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"75\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"96\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"159.8\" y1=\"103.4\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"52.2\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"96\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M155.9 44.7 A15 15 0 0 0 166.3 67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.5\" y=\"68.2\" font-size=\"12\" text-anchor=\"middle\">110°</text><path d=\"M145.3 63.2 A26 26 0 0 0 164.3 77.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.1\" y=\"87.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"88.4\" y1=\"55.3\" x2=\"97.5\" y2=\"59.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"117\" y1=\"104.7\" x2=\"117.8\" y2=\"94.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"168.3\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 55,
+       "check": "(180 - (180 - 110)) // 2",
+       "hints": [
+        "∠ABC は何度かな。",
+        "△ABC は二等辺三角形だね。∠BAC は何度かな。",
+        "∠BDC と同じ弧 BC に対する円周角はどれかな。"
+       ],
+       "paths": [
+        [
+         "∠ABC = 180° − 110° = 70°",
+         "∠BAC = (180° − 70°) ÷ 2 = 55°",
+         "∠BDC = ∠BAC = 55°"
+        ],
+        [
+         "AB = BC なので ∠ADB = ∠BDC",
+         "110° ÷ 2 = 55°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円に内接する五角形 ABCDE で、∠B + ∠E = 220° です。∠x（∠CAD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"52.2\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"146\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"52.2\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"18\" x2=\"146\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M73.7 67 A15 15 0 0 0 83.4 43.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M156.6 43.6 A15 15 0 0 0 163.7 66.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.9 39.8 A24 24 0 0 0 126.2 41.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.8\" y=\"59.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"151.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"179.2\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 40,
+       "check": "220 - 180",
+       "hints": [
+        "四角形 ABCD と四角形 ACDE は、どちらも円に内接しているね。",
+        "∠B と ∠ADC、∠E と ∠ACD の関係を書こう。",
+        "△ACD の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ADC = 180° − ∠B",
+         "∠ACD = 180° − ∠E",
+         "∠ADC + ∠ACD = 360° − 220° = 140°",
+         "∠CAD = 180° − 140° = 40°"
+        ]
+       ],
+       "note": "∠B と ∠E がそれぞれわからなくても、和だけで決まる。わからない角を 2 つの式で表して、たしてみる考え方。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB は円の直径で、四角形 ABCD は円に内接しています。∠BCD = 120° のとき、∠ABD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"153.4\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.4\" y1=\"30.2\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M138.5 28.9 A15 15 0 0 0 159.8 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"137.4\" y=\"57.3\" font-size=\"12\" text-anchor=\"middle\">120°</text><path d=\"M159 62.5 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"67\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"160.5\" y=\"26.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 30,
+       "check": "90 - (180 - 120)",
+       "hints": [
+        "∠BAD は何度かな。",
+        "∠ADB は直径に対する円周角だね。",
+        "△ABD の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BAD = 180° − 120° = 60°",
+         "∠ADB = 90°",
+         "∠ABD = 90° − 60° = 30°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、AD = DC、∠ABC = 64° です。∠DBC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.5\" y1=\"21.8\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"146\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"171.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.9\" y1=\"66.4\" x2=\"139.5\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"171.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81 77.5 A15 15 0 0 0 80.4 61.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M90.5 83 A26 26 0 0 0 94 69.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.8\" y=\"83.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"151.6\" y1=\"47\" x2=\"159.7\" y2=\"41.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.5\" y1=\"88.4\" x2=\"163.4\" y2=\"93.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.6\" y=\"16.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"151.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182.8\" y=\"70.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 32,
+       "check": "64 // 2",
+       "hints": [
+        "等しい弦 AD と DC に対する円周角はどうなるかな。",
+        "∠ABD と ∠DBC をくらべよう。",
+        "∠ABC を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "AD = DC なので弧 AD = 弧 DC",
+         "∠ABD = ∠DBC",
+         "64° ÷ 2 = 32°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠DBC = 30°、∠BDC = 50° です。∠BAD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"21.1\" x2=\"86.6\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"165\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"96\" x2=\"165\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"44\" x2=\"102.2\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"165\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M101.3 107.2 A15 15 0 0 0 98.1 100.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M153.5 53.6 A15 15 0 0 0 165 59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"153.2\" y=\"73.6\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M99.6 35.9 A15 15 0 0 0 116.3 26.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.2\" y=\"49.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"98.5\" y=\"15.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"79.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"174.6\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"174.6\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 80,
+       "check": "180 - (180 - 30 - 50)",
+       "hints": [
+        "△BCD の角の和から ∠BCD を求めよう。",
+        "∠BAD と ∠BCD は向かい合う角だね。",
+        "180° から ∠BCD をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BCD = 180° − 30° − 50° = 100°",
+         "∠BAD = 180° − 100°",
+         "80°"
+        ],
+        [
+         "∠BAD = ∠DBC + ∠BDC（外角と同じ形）",
+         "30° + 50°",
+         "80°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "線分 BC について同じ側に 2 点 A、D があり、∠BAC = ∠BDC = 55° です。4 点 A、B、C、D について考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"94\" y1=\"25\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"25\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"25\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.4\" y1=\"99.8\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M90.8 39.6 A15 15 0 0 0 104.1 36\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.2\" y=\"56.2\" font-size=\"12\" text-anchor=\"middle\">55°</text><path d=\"M135.9 36 A15 15 0 0 0 149.2 39.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.8\" y=\"56.2\" font-size=\"12\" text-anchor=\"middle\">55°</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"151.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"68.4\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.6\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "explain": "線分 BC を見る角が、同じ側の 2 点 A、D で等しいとき、4 点 A、B、C、D は 1 つの円の上にあります（円周角の定理の逆）。図に円がかいていなくても、等しい角を見つけたら円をかき足してみます。すると円周角の定理が使えて、たとえば弧 AD に対する ∠ABD と ∠ACD も等しいとわかります。角を「移す」ための円を、自分で見つけるのがこの日の練習です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、∠ABD = 34°、∠DBC = 41° です。∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"30.2\" x2=\"94\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"115\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"144.4\" y2=\"24.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"144.4\" y1=\"24.1\" x2=\"86.6\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"115\" x2=\"144.4\" y2=\"24.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M100.8 102.8 A14 14 0 0 0 92.8 101.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.6\" y=\"92.8\" font-size=\"12\" text-anchor=\"middle\">34°</text><path d=\"M120.3 105.5 A28 28 0 0 0 107.6 90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.2\" y=\"92.6\" font-size=\"12\" text-anchor=\"middle\">41°</text><path d=\"M129.5 25.7 A15 15 0 0 0 149.8 38.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.8\" y=\"52.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"79.5\" y=\"26.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"88.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"149.6\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 105,
+       "check": "180 - (34 + 41)",
+       "hints": [
+        "∠ABC は何度かな。",
+        "∠ADC と ∠ABC は向かい合う角だね。",
+        "180° から ∠ABC をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ABC = 34° + 41° = 75°",
+         "∠ADC = 180° − 75°",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O に三角形 ABC が内接し、∠BAC = 42° です。∠BOC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"149.1\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"149.1\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.7 31.6 A15 15 0 0 0 124.4 32.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">42°</text><path d=\"M108.5 79.6 A15 15 0 0 0 128.4 82.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.1\" y=\"101.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"155.2\" y=\"127.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 84,
+       "check": "42 * 2",
+       "hints": [
+        "∠BAC と ∠BOC は、同じ弧 BC に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "42° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "中心角 = 円周角 × 2",
+         "42° × 2",
+         "84°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 点 A、D は直線 BC について同じ側にあります。4 点 A、B、C、D が 1 つの円の上にあるといえるのは、どれですか。",
+       "choices": [
+        "∠BAC = ∠BDC = 40°",
+        "∠BAC = 40°、∠BDC = 50°",
+        "∠ABC = ∠DCB = 40°"
+       ],
+       "answer": "∠BAC = ∠BDC = 40°",
+       "hints": [
+        "円周角の定理の逆は、どんな角が等しいときに使えたかな。",
+        "線分 BC を、A と D から見る角はどれかな。",
+        "∠ABC と ∠DCB は、BC を見る角ではないね。"
+       ],
+       "paths": [
+        [
+         "BC を A から見る角は ∠BAC、D から見る角は ∠BDC",
+         "2 つが等しく A、D が同じ側",
+         "円周角の定理の逆で 4 点は 1 つの円の上"
+        ]
+       ],
+       "note": "∠ABC = ∠DCB でも、AB と DC の長さによっては 4 点は同じ円の上にない。「同じ線分を見る角」かどうかを見分ける。"
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠BAC = ∠BDC = 35°、∠ABD = 45°、∠DBC = 40° です。∠x（∠ADC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"77.1\" y1=\"18\" x2=\"95.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.4\" y1=\"122\" x2=\"162.9\" y2=\"103.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.9\" y1=\"103.9\" x2=\"162.9\" y2=\"25.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.9\" y1=\"25.5\" x2=\"77.1\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.1\" y1=\"18\" x2=\"162.9\" y2=\"103.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.4\" y1=\"122\" x2=\"162.9\" y2=\"25.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.6 43.6 A26 26 0 0 0 95.4 36.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.1\" y=\"56.8\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M148 46.8 A26 26 0 0 0 162.9 51.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"151.2\" y=\"66.9\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M104.6 108.9 A16 16 0 0 0 92.6 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.7\" y=\"97.9\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M124.4 114.2 A30 30 0 0 0 112.6 97.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.6\" y=\"101.5\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M149 24.3 A14 14 0 0 0 162.9 39.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143\" y=\"48\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"69.4\" y=\"15\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"90.2\" y=\"136.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"170.9\" y=\"116.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"170.4\" y=\"22.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 95,
+       "check": "180 - (45 + 40)",
+       "hints": [
+        "∠BAC = ∠BDC から、4 点について何が言えるかな。",
+        "4 点が 1 つの円の上にあれば、四角形 ABCD は円に内接するね。",
+        "∠ABC を求めて、向かい合う角を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BAC = ∠BDC で 4 点は 1 つの円の上",
+         "∠ABC = 45° + 40° = 85°",
+         "∠ADC = 180° − 85° = 95°"
+        ]
+       ],
+       "note": "図に円がないので、内接四角形の性質がすぐには使えない。等しい角から円を見つけるのが 1 歩目。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、∠DBE = ∠DCE です。∠A = 60°、∠ABC = 70° のとき、∠x（∠ADE）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"88.2,18 39.4,152 200.6,152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"39.4\" y1=\"152\" x2=\"134.5\" y2=\"73.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"200.6\" y1=\"152\" x2=\"57.9\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"57.9\" y1=\"101.1\" x2=\"134.5\" y2=\"73.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M57.9 136.7 A24 24 0 0 0 47.6 129.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M185.2 133.6 A24 24 0 0 0 178 143.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M83.4 31.2 A14 14 0 0 0 97.2 28.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.9\" y=\"48.8\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M71.1 96.3 A14 14 0 0 0 62.7 87.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"77\" y=\"86.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"86\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"30.9\" y=\"163.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"210.3\" y=\"162.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"46.9\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"142.8\" y=\"71\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 50,
+       "check": "180 - 60 - 70",
+       "hints": [
+        "∠DBE と ∠DCE は、どちらも線分 DE を見る角だね。",
+        "4 点 B、C、E、D は 1 つの円の上にあるね。",
+        "四角形 DBCE の外角 ∠ADE は、どの内角と等しいかな。"
+       ],
+       "paths": [
+        [
+         "∠DBE = ∠DCE で B、C、E、D は 1 つの円の上",
+         "∠ADE = ∠ACB（外角 = 内対角）",
+         "∠ACB = 180° − 60° − 70° = 50°"
+        ]
+       ],
+       "note": "∠ADE = ∠ACB となる DE を、BC に「逆平行」な線という。相似（G-020）を学ぶと、△ADE と △ACB が相似であることにもつながる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "四角形 ABCD で、∠BAC = ∠BDC = 35°、∠CAD = 45°、∠ACB = 60° です。∠x（∠ABD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"82\" y1=\"18\" x2=\"82\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82\" y1=\"122\" x2=\"150.6\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.6\" y1=\"116\" x2=\"158\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"158\" y1=\"31.4\" x2=\"82\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82\" y1=\"18\" x2=\"150.6\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82\" y1=\"122\" x2=\"158\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M82 40 A22 22 0 0 0 94.6 36\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.5\" y=\"55.6\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M143.9 48.3 A22 22 0 0 0 156.1 53.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.6\" y=\"67.9\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M101.5 45.9 A34 34 0 0 0 115.5 23.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.6\" y=\"47.5\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M142 103.7 A15 15 0 0 0 135.7 117.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.2\" y=\"108.4\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M91.6 110.5 A15 15 0 0 0 82 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.6\" y=\"99.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"75.9\" y=\"13.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"75.6\" y=\"135.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"157.1\" y=\"129.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"165.7\" y=\"28.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 40,
+       "check": "(180 - 35 - 60) - 45",
+       "hints": [
+        "等しい角から、4 点が 1 つの円の上にあることを見つけよう。",
+        "∠DBC と同じ弧 DC に対する円周角はどれかな。",
+        "△ABC の角の和から ∠ABC を求めよう。"
+       ],
+       "paths": [
+        [
+         "4 点は 1 つの円の上",
+         "∠DBC = ∠DAC = 45°",
+         "∠ABC = 180° − 35° − 60° = 85°",
+         "∠ABD = 85° − 45° = 40°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠BAC = ∠BDC = 50°、∠ABC = 75° です。∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"81\" y1=\"18\" x2=\"71.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.9\" y1=\"122\" x2=\"168.1\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.1\" y1=\"105\" x2=\"161.7\" y2=\"32.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161.7\" y1=\"32.2\" x2=\"81\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"81\" y1=\"18\" x2=\"168.1\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.9\" y1=\"122\" x2=\"161.7\" y2=\"32.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M79.7 32.9 A15 15 0 0 0 91.6 28.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.6\" y=\"48.5\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M151.1 42.8 A15 15 0 0 0 163 47.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.1\" y=\"62.7\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M86.7 119.4 A15 15 0 0 0 73.2 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.8\" y=\"105.6\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M147.9 29.8 A14 14 0 0 0 162.9 46.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.8\" y=\"54.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"74.3\" y=\"14.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.5\" y=\"135\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"176.9\" y=\"116.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"169.9\" y=\"29.7\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 105,
+       "check": "180 - 75",
+       "hints": [
+        "∠BAC = ∠BDC から、4 点について何が言えるかな。",
+        "四角形 ABCD は円に内接するね。",
+        "向かい合う角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "4 点は 1 つの円の上",
+         "∠ADC = 180° − 75°",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC = AD で、D は ∠BAC の外側にあります。∠BAC = 64° のとき、∠BDC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"135.1\" y1=\"71.8\" x2=\"73.9\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.1\" y1=\"71.8\" x2=\"98.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.1\" y1=\"71.8\" x2=\"166.1\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166.1\" y1=\"18\" x2=\"73.9\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166.1\" y1=\"18\" x2=\"98.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120.3 69.2 A15 15 0 0 0 126.2 83.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.1\" y=\"86.5\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M144.3 28.1 A24 24 0 0 0 153 38.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.2\" y=\"46.5\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"105.3\" y1=\"61.5\" x2=\"103.6\" y2=\"71.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"112.8\" y1=\"93.9\" x2=\"120.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.9\" y1=\"47.4\" x2=\"146.2\" y2=\"42.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.1\" y=\"76.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"63\" y=\"64.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"94.7\" y=\"137.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"173.7\" y=\"14.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 32,
+       "check": "64 // 2",
+       "hints": [
+        "AB = AC = AD だから、B、C、D は A を中心とするある円の上にあるね。",
+        "∠BAC はその円の中心角だね。",
+        "∠BDC は同じ弧 BC に対する円周角だよ。"
+       ],
+       "paths": [
+        [
+         "B、C、D は A を中心とする円の上",
+         "∠BDC は弧 BC に対する円周角",
+         "64° ÷ 2 = 32°"
+        ]
+       ],
+       "note": "等しい長さが 3 つ以上あれば、中心のある円が隠れている。"
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠BAC = ∠BDC = 38°、∠ABD = 52° です。AC と BD の交点を E とするとき、∠AED は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.7\" y1=\"18\" x2=\"84.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.1\" y1=\"122\" x2=\"168.1\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.1\" y1=\"110.2\" x2=\"174.3\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.3\" y1=\"21.8\" x2=\"65.7\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.7\" y1=\"18\" x2=\"168.1\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.1\" y1=\"122\" x2=\"174.3\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M68.3 32.8 A15 15 0 0 0 76.9 28\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.3\" y=\"46.7\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M164.2 32.9 A15 15 0 0 0 173.2 36.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"163.3\" y=\"51.8\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M94.1 110.9 A15 15 0 0 0 81.5 107.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.8\" y=\"99.3\" font-size=\"12\" text-anchor=\"middle\">52°</text><path d=\"M135.6 64.8 A12 12 0 0 0 118.6 65.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"126.3\" y=\"52.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"57.5\" y=\"15.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"77.4\" y=\"135.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"176.2\" y=\"122.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182.3\" y=\"19.2\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"127.6\" y=\"89.6\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 90,
+       "check": "52 + 38",
+       "hints": [
+        "4 点が 1 つの円の上にあることを見つけよう。",
+        "∠ACD と同じ弧 AD に対する円周角はどれかな。",
+        "∠AED は △ECD の外角だね。"
+       ],
+       "paths": [
+        [
+         "4 点は 1 つの円の上",
+         "∠ACD = ∠ABD = 52°",
+         "∠AED = ∠ECD + ∠EDC = 52° + 38° = 90°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "四角形 ABCD で、∠A = 75°、∠C = 105° です。4 点 A、B、C、D について考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"94\" y1=\"25\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"137.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.8\" y1=\"118.9\" x2=\"171.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"61\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.4 39.7 A15 15 0 0 0 107.6 31.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.9\" y=\"54\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M145.3 105.9 A15 15 0 0 0 123.3 115\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.1\" y=\"97.2\" font-size=\"12\" text-anchor=\"middle\">105°</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"141.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182\" y=\"64\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "向かい合う角の和が 180° の四角形は、円に内接します（内接四角形の性質の逆）。∠A + ∠C = 75° + 105° = 180° なので、4 点 A、B、C、D は 1 つの円の上にあります。外角が、それと向かい合う内角に等しいときも同じです。4 点が 1 つの円の上にあるかを見分ける方法は、① 同じ線分を同じ側から同じ角で見る、② 向かい合う角の和が 180°、③ 外角が内対角に等しい、の 3 つです。"
+      },
+      {
+       "part": "思い出す",
+       "text": "C と D は直線 AB について同じ側にあり、∠ACB = ∠ADB = 30° です。∠BAC = 70° のとき、∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"105.8\" y1=\"18\" x2=\"66.6\" y2=\"64.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"66.6\" y1=\"64.7\" x2=\"165.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.9\" y1=\"122\" x2=\"105.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"173.4\" y1=\"36.1\" x2=\"105.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"173.4\" y1=\"36.1\" x2=\"66.6\" y2=\"64.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"173.4\" y1=\"36.1\" x2=\"165.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M158.4 109 A15 15 0 0 0 152.9 114.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.1\" y=\"106.4\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M159.9 32.5 A14 14 0 0 0 159.9 39.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.4\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M96.2 29.5 A15 15 0 0 0 113.3 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.4\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M148.3 29.4 A26 26 0 0 0 171.1 62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.4\" y=\"62.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"100.7\" y=\"13.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"55.7\" y=\"70.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.6\" y=\"136.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"183.1\" y=\"35.8\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 100,
+       "check": "30 + 70",
+       "hints": [
+        "∠ACB = ∠ADB から、4 点について何が言えるかな。",
+        "∠BDC と同じ弧 BC に対する円周角はどれかな。",
+        "∠ADC は ∠ADB と ∠BDC を合わせた角だね。"
+       ],
+       "paths": [
+        [
+         "4 点は 1 つの円の上",
+         "∠BDC = ∠BAC = 70°",
+         "∠ADC = 30° + 70° = 100°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、∠B の大きさは ∠D の 2 倍です。∠D は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"75\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"80.2\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.2\" y1=\"103.4\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.2\" y1=\"79\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M76.3 58.9 A15 15 0 0 0 87.3 35.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M160.6 68.4 A15 15 0 0 0 156.7 82.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"182\" y=\"85.8\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "∠B と ∠D の和は何度かな。",
+        "∠D を 1 こ分とすると、和は何こ分かな。",
+        "180° を 3 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠D = 180°",
+         "∠D を 1 こ分とすると 3 こ分",
+         "∠D = 60°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "いつでも円に内接する四角形は、どれですか。",
+       "choices": [
+        "AD ∥ BC で AB = DC の台形（等脚台形）",
+        "ひし形",
+        "平行四辺形"
+       ],
+       "answer": "AD ∥ BC で AB = DC の台形（等脚台形）",
+       "hints": [
+        "向かい合う角の和が 180° になるかを調べよう。",
+        "等脚台形では、底の両はしの角が等しいね。",
+        "ひし形や平行四辺形では、向かい合う角は等しいけれど、和はいつも 180° かな。"
+       ],
+       "paths": [
+        [
+         "等脚台形は ∠B = ∠C",
+         "AD ∥ BC から ∠A + ∠B = 180°",
+         "だから ∠A + ∠C = 180° で円に内接する"
+        ]
+       ],
+       "note": "ひし形と平行四辺形は、長方形（正方形）のときだけ円に内接する。"
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠ABC = 80°、∠ADC = 100°、∠ACD = 30° です。∠x（∠DBC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"78.3\" y1=\"27.6\" x2=\"94.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.9\" y1=\"122\" x2=\"161.7\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161.7\" y1=\"97.7\" x2=\"132.7\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132.7\" y1=\"18\" x2=\"78.3\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"78.3\" y1=\"27.6\" x2=\"161.7\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.9\" y1=\"122\" x2=\"132.7\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M108.1 117.2 A14 14 0 0 0 92.5 108.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.4\" y=\"102.8\" font-size=\"12\" text-anchor=\"middle\">80°</text><path d=\"M118 20.6 A15 15 0 0 0 137.9 32.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.7\" y=\"46.4\" font-size=\"12\" text-anchor=\"middle\">100°</text><path d=\"M156.6 83.6 A15 15 0 0 0 150.3 88\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.7\" y=\"78.9\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M123.1 111.7 A30 30 0 0 0 105.2 93.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.3\" y=\"95.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"70.5\" y=\"24.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"90.9\" y=\"137.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"170.8\" y=\"108.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"136.2\" y=\"12.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 50,
+       "check": "180 - 100 - 30",
+       "hints": [
+        "∠ABC + ∠ADC は何度かな。",
+        "4 点が 1 つの円の上にあれば、∠DBC と同じ弧に対する円周角が使えるね。",
+        "∠DAC を △ACD の中で求めよう。"
+       ],
+       "paths": [
+        [
+         "∠ABC + ∠ADC = 180° で 4 点は 1 つの円の上",
+         "∠DBC = ∠DAC",
+         "∠DAC = 180° − 100° − 30° = 50°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、辺 BC を C の先にのばした点を E とします。∠DCE = ∠BAD = 75°、∠BDC = 30° のとき、∠x（∠CBD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"81.6\" y1=\"18\" x2=\"74.2\" y2=\"101.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.2\" y1=\"101.5\" x2=\"127.1\" y2=\"115.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"127.1\" y1=\"115.6\" x2=\"165.8\" y2=\"48.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.8\" y1=\"48.6\" x2=\"81.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"81.6\" y1=\"18\" x2=\"127.1\" y2=\"115.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.2\" y1=\"101.5\" x2=\"165.8\" y2=\"48.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"127.1\" y1=\"115.6\" x2=\"150.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M141.6 119.5 A15 15 0 0 0 134.6 102.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.9\" y=\"109.1\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M80.2 32.9 A15 15 0 0 0 95.6 23.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96.6\" y=\"45.8\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M152.8 56.1 A15 15 0 0 0 158.3 61.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146\" y=\"72.6\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M93.6 106.7 A20 20 0 0 0 91.6 91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107\" y=\"101.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"75.8\" y=\"13.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.2\" y=\"110.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"129.3\" y=\"131.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"174.7\" y=\"47.2\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"157.5\" y=\"135.7\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 45,
+       "check": "75 - 30",
+       "hints": [
+        "外角 ∠DCE と内角 ∠BAD が等しいと、4 点について何が言えるかな。",
+        "∠BAC と ∠BDC は、どちらも線分 BC を見る角だね。",
+        "∠CAD を求めて、同じ弧 CD に対する円周角を使おう。"
+       ],
+       "paths": [
+        [
+         "外角 = 内対角で 4 点は 1 つの円の上",
+         "∠BAC = ∠BDC = 30°",
+         "∠CAD = 75° − 30° = 45°",
+         "∠CBD = ∠CAD = 45°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC の辺 BC の上の点 D から、辺 AB、AC に垂線 DE、DF をひきます。∠A = 70° のとき、∠x（∠EDF）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"106.4,18 46.3,122 193.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.6\" y1=\"122\" x2=\"62.9\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.6\" y1=\"122\" x2=\"160.2\" y2=\"82.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.4\" y1=\"18\" x2=\"112.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M98.9 31 A15 15 0 0 0 116 29.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.8\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M124.1 112.4 A15 15 0 0 0 99.6 114.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.2\" y=\"98.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"58.9,100.2 65.8,104.2 69.8,97.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"154.1,87.2 159.2,93.4 165.3,88.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.3\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"36.2\" y=\"131.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"204\" y=\"130.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"112.2\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"51.9\" y=\"98.2\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"170.9\" y=\"84.4\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "∠AED と ∠AFD は何度かな。",
+        "四角形 AEDF の向かい合う角 ∠E と ∠F の和は何度かな。",
+        "四角形 AEDF は円に内接するね。"
+       ],
+       "paths": [
+        [
+         "∠AED + ∠AFD = 90° + 90° = 180°",
+         "四角形 AEDF は円に内接する",
+         "∠EDF = 180° − 70° = 110°"
+        ],
+        [
+         "四角形 AEDF の角の和は 360°",
+         "360° − 90° − 90° − 70°",
+         "110°"
+        ]
+       ],
+       "note": "2 本目の道でも求められる。円が見つかると、∠AEF = ∠ADF のように、ほかの角も移せるようになる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠A = 95°、∠B = 70°、∠C = 85° です。この四角形は円に内接しますか。",
+       "choices": [
+        "内接する",
+        "内接しない"
+       ],
+       "answer": "内接する",
+       "check": "'内接する' if 95 + 85 == 180 else '内接しない'",
+       "hints": [
+        "向かい合う角はどれとどれかな。",
+        "∠A + ∠C を計算しよう。",
+        "和が 180° なら内接するね。"
+       ],
+       "paths": [
+        [
+         "向かい合う角は ∠A と ∠C",
+         "95° + 85° = 180°",
+         "内接する"
+        ]
+       ],
+       "note": "∠A + ∠B を調べてしまいやすい。となり合う角ではなく、向かい合う角を見る。"
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠A = 100°、∠B = 75°、∠C = 70° です。この四角形は円に内接しますか。",
+       "choices": [
+        "内接する",
+        "内接しない"
+       ],
+       "answer": "内接しない",
+       "check": "'内接する' if 100 + 70 == 180 else '内接しない'",
+       "hints": [
+        "向かい合う角はどれとどれかな。",
+        "∠A + ∠C を計算しよう。",
+        "和が 180° でなければ、どうかな。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 170°",
+         "180° ではない",
+         "内接しない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の辺 BC の上の点 D から、辺 AB、AC に垂線 DE、DF をひきます。∠EDF = 128° のとき、∠A は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"129,18 69,122 171,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.9\" y1=\"122\" x2=\"80.5\" y2=\"102.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.9\" y1=\"122\" x2=\"163.2\" y2=\"102.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M128.8 116.4 A15 15 0 0 0 101.9 114.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.9\" y=\"98.3\" font-size=\"12\" text-anchor=\"middle\">128°</text><path d=\"M121.5 31 A15 15 0 0 0 134.6 31.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.1\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"76.5,109 83.4,113 87.4,106.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"155.7,105.5 158.7,112.9 166.2,109.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.1\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59\" y=\"131.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"180.9\" y=\"131.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"112.1\" y=\"137.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"69.5\" y=\"108.1\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"174.1\" y=\"108.6\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 52,
+       "check": "180 - 128",
+       "hints": [
+        "四角形 AEDF の ∠E と ∠F は何度かな。",
+        "四角形 AEDF は円に内接するね。",
+        "∠A と ∠EDF は向かい合う角だよ。"
+       ],
+       "paths": [
+        [
+         "∠E + ∠F = 180° で AEDF は円に内接",
+         "∠A = 180° − 128°",
+         "52°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "∠ADB = ∠AEB = 90° のとき、4 点 A、B、D、E について考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"98\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98\" y1=\"22.9\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"149.8\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.8\" y1=\"27.4\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"93.7,29.6 100.5,33.9 104.8,27.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"142.7,31.1 146.4,38.2 153.5,34.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"93.4\" y=\"17.8\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"156.1\" y=\"23.3\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "∠ADB = 90° なら、D は AB を直径とする円の上にあります（半円の弧に対する円周角が 90° であることの逆）。E も同じです。だから、同じ線分 AB を 90° で見る 2 点 D、E があれば、4 点 A、B、D、E は AB を直径とする 1 つの円の上にあり、その中心は AB の中点 M です。三角形に 2 本の垂線をひくと、この形がよく出てきます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "四角形 ABCD で、∠A = 104°、∠B = 85°、∠C = 76° です。この四角形は円に内接しますか。",
+       "choices": [
+        "内接する",
+        "内接しない"
+       ],
+       "answer": "内接する",
+       "check": "'内接する' if 104 + 76 == 180 else '内接しない'",
+       "hints": [
+        "向かい合う角はどれとどれかな。",
+        "∠A + ∠C を計算しよう。",
+        "和が 180° かどうかを見よう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 104° + 76° = 180°",
+         "内接する"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円の直径です。∠ABC = 52° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"132.6\" y2=\"19.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132.6\" y1=\"19.5\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M162.8 58.2 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.8\" y=\"61.9\" font-size=\"12\" text-anchor=\"middle\">52°</text><path d=\"M83 70 A15 15 0 0 0 79.8 60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.5\" y=\"65.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"135.2\" y=\"13.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 38,
+       "check": "90 - 52",
+       "hints": [
+        "∠ACB は何度かな。",
+        "△ABC の角の和を使おう。",
+        "90° から 52° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "90° − 52°",
+         "38°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひきます。∠A = 64°、∠ACB = 50° のとき、∠x（∠AEF）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"99.5,18 53.2,122 186.8,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"53.2\" y1=\"122\" x2=\"131.6\" y2=\"56.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"186.8\" y1=\"122\" x2=\"75.3\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"131.6\" y1=\"56.2\" x2=\"75.3\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.4 31.7 A15 15 0 0 0 109.2 29.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.4\" y=\"49.9\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M177.1 110.5 A15 15 0 0 0 171.8 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"161.4\" y=\"114.4\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M122 44.7 A15 15 0 0 0 117.2 60.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.8\" y=\"52.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"136.7,62.4 130.6,67.5 125.5,61.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"72.1,79.7 79.4,82.9 82.6,75.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.8\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"44.6\" y=\"133.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"196.4\" y=\"132.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"139.4\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"64.5\" y=\"75.4\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 66,
+       "check": "180 - 64 - 50",
+       "hints": [
+        "∠BEC と ∠BFC は、どちらも線分 BC を 90° で見る角だね。",
+        "4 点 B、C、E、F は 1 つの円の上にあるね。",
+        "∠AEF は四角形 BCEF の外角だよ。"
+       ],
+       "paths": [
+        [
+         "B、C、E、F は BC を直径とする円の上",
+         "∠AEF = ∠FBC（外角 = 内対角）",
+         "∠ABC = 180° − 64° − 50° = 66°"
+        ]
+       ],
+       "note": "△AEF は △ABC を裏返して縮めた形になる（∠AEF = ∠B、∠AFE = ∠C）。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひきます。∠ABC = 62° のとき、∠x（∠BEF）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"121.2,18 65.9,122 174.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.9\" y1=\"122\" x2=\"151.8\" y2=\"78.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.1\" y1=\"122\" x2=\"89.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"151.8\" y1=\"78.2\" x2=\"89.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M80.9 122 A15 15 0 0 0 72.9 108.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"89.9\" y=\"111.8\" font-size=\"12\" text-anchor=\"middle\">62°</text><path d=\"M131.8 77.8 A20 20 0 0 0 134 87.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.7\" y=\"89.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"155.5,85.3 148.3,89 144.7,81.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,84.2 93,87.9 96.8,80.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.3\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"56.9\" y=\"133.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"183.1\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"162.7\" y=\"81.3\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"78.9\" y=\"79.8\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 28,
+       "check": "90 - 62",
+       "hints": [
+        "B、C、E、F は 1 つの円の上にあるね。",
+        "∠BEF と同じ弧 BF に対する円周角はどれかな。",
+        "∠BCF を △BCF で求めよう。"
+       ],
+       "paths": [
+        [
+         "B、C、E、F は 1 つの円の上",
+         "∠BEF = ∠BCF（弧 BF）",
+         "∠BCF = 90° − 62° = 28°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、BE と CF の交点を H とします。∠A = 58° のとき、∠x（∠BHC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"110.5,18 62,122 178,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62\" y1=\"122\" x2=\"143.6\" y2=\"69\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178\" y1=\"122\" x2=\"82.7\" y2=\"77.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.1 31.6 A15 15 0 0 0 118.6 30.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.4\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M100.4 97 A12 12 0 0 0 121.4 95.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.2\" y=\"119.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"148,75.7 141.2,80.1 136.9,73.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"79.3,84.8 86.6,88.2 90,80.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"53.1\" y=\"133.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"187.4\" y=\"132.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"153.5\" y=\"69.1\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"71.9\" y=\"80.5\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"110.5\" y=\"84.4\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 122,
+       "check": "180 - 58",
+       "hints": [
+        "四角形 AFHE の ∠F と ∠E は何度かな。",
+        "四角形 AFHE は円に内接するね。∠FHE は何度かな。",
+        "∠BHC と ∠FHE は対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠AFH + ∠AEH = 180° で AFHE は円に内接",
+         "∠FHE = 180° − 58° = 122°",
+         "∠BHC = ∠FHE（対頂角）"
+        ]
+       ],
+       "note": "A から BC への垂線も H を通る。そのことと H の名前（垂心）は G-028 で扱う。"
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC で、A から BC に垂線 AD、B から AC に垂線 BE をひきます。∠BAD = 35°、∠ACB = 60° のとき、∠x（∠ADE）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"126.4,18 53.6,122 186.4,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"126.4\" y1=\"18\" x2=\"126.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"53.6\" y1=\"122\" x2=\"153.2\" y2=\"64.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"126.4\" y1=\"122\" x2=\"153.2\" y2=\"64.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M117.8 30.3 A15 15 0 0 0 126.4 33\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118\" y=\"48.9\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M178.9 109 A15 15 0 0 0 171.4 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.2\" y=\"112.2\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M134.8 103.9 A20 20 0 0 0 126.4 102\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.5\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"126.4,114 134.4,114 134.4,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"146.3,68.5 150.3,75.4 157.2,71.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"126\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"43.5\" y=\"131.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"196\" y=\"132.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"125.4\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"160.8\" y=\"61.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 25,
+       "check": "90 - (180 - (90 - 35) - 60)",
+       "hints": [
+        "4 点 A、B、D、E は、どの線分を直径とする円の上にあるかな。",
+        "∠ADE と同じ弧 AE に対する円周角はどれかな。",
+        "∠ABC、∠BAC の順に求めて、∠ABE を出そう。"
+       ],
+       "paths": [
+        [
+         "A、B、D、E は AB を直径とする円の上",
+         "∠ADE = ∠ABE",
+         "∠ABC = 90° − 35° = 55° で ∠BAC = 65°",
+         "∠ABE = 90° − 65° = 25°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、交点を H とします。∠A = 70° のとき、∠BHC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"106.4,18 46.3,122 193.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"46.3\" y1=\"122\" x2=\"132.8\" y2=\"49.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"193.7\" y1=\"122\" x2=\"83.2\" y2=\"58.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M98.9 31 A15 15 0 0 0 116 29.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.8\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M97.2 79.3 A12 12 0 0 0 116.8 77.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.6\" y=\"100.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"137.9,55.6 131.8,60.7 126.7,54.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"79.2,65.1 86.1,69.1 90.1,62.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"37.5\" y=\"133.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"203.1\" y=\"132.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"140.1\" y=\"46.1\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"73.5\" y=\"57.9\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"106.4\" y=\"65.5\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "四角形 AFHE の 2 つの直角に目をつけよう。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "AFHE は円に内接",
+         "∠FHE = 180° − 70° = 110°",
+         "∠BHC = 110°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひきます。∠A = 60°、∠ABC = 66° のとき、∠AFE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"105.4,18 59.1,122 180.9,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.1\" y1=\"122\" x2=\"138.8\" y2=\"64.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.9\" y1=\"122\" x2=\"79.2\" y2=\"76.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138.8\" y1=\"64.1\" x2=\"79.2\" y2=\"76.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M99.3 31.7 A15 15 0 0 0 114.2 30.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.3\" y=\"50\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M74.1 122 A15 15 0 0 0 65.2 108.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"82.6\" y=\"111\" font-size=\"12\" text-anchor=\"middle\">66°</text><path d=\"M93.9 73.6 A15 15 0 0 0 85.3 63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101\" y=\"63.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"143.5,70.5 137.1,75.2 132.4,68.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"76,84 83.3,87.3 86.5,80\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.1\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"133.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"190.3\" y=\"132.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"148.1\" y=\"63.1\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"68.3\" y=\"80.4\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 54,
+       "check": "180 - 60 - 66",
+       "hints": [
+        "B、C、E、F は 1 つの円の上にあるね。",
+        "∠AFE は四角形 BCEF の外角だね。",
+        "どの内角と等しいかな。"
+       ],
+       "paths": [
+        [
+         "∠AFE = ∠ECB（外角 = 内対角）",
+         "∠ACB = 180° − 60° − 66°",
+         "54°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長さ 10 cm の線分 AB と、∠APB = 90° となる点 P があります。AB の中点を M とするとき、PM は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.6\" y1=\"24.1\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.6\" y1=\"24.1\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.6\" y1=\"24.1\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"91.5,30.9 98.3,35.1 102.4,28.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"90.4\" y=\"19.3\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "∠APB = 90° だから、P はどんな円の上にあるかな。",
+        "その円の中心と半径は何かな。",
+        "PM はその円の半径だね。"
+       ],
+       "paths": [
+        [
+         "P は AB を直径とする円の上",
+         "中心は M で半径は 5 cm",
+         "PM = 5 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、交点を H とします。∠A = 48° のとき、∠BHC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"111.3,18 73.4,122 166.6,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"73.4\" y1=\"122\" x2=\"146\" y2=\"83.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166.6\" y1=\"122\" x2=\"84.3\" y2=\"92.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M106.1 32.1 A15 15 0 0 0 118.3 31.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.2\" y=\"50.1\" font-size=\"12\" text-anchor=\"middle\">48°</text><path d=\"M100.7 107.5 A12 12 0 0 0 122.6 106\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113\" y=\"131\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"149.8,90.5 142.7,94.2 139,87.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"81.6,99.6 89.1,102.3 91.8,94.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.7\" y=\"133.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"175.9\" y=\"132.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"156.8\" y=\"86\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"73.3\" y=\"97.7\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"111.3\" y=\"95.8\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 132,
+       "check": "180 - 48",
+       "hints": [
+        "四角形 AFHE の 2 つの直角に目をつけよう。",
+        "∠FHE は何度かな。",
+        "∠BHC と ∠FHE は対頂角だね。"
+       ],
+       "paths": [
+        [
+         "AFHE は円に内接",
+         "∠FHE = 180° − 48° = 132°",
+         "∠BHC = 132°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、辺 BC を C の先にのばした点を E とします。∠BAC = 36°、∠CAD = 41° のとき、∠DCE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"68.6\" r=\"50.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.7\" y1=\"24.8\" x2=\"81.2\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"81.2\" y1=\"101.1\" x2=\"139\" y2=\"115.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139\" y1=\"115.5\" x2=\"169.1\" y2=\"56.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"169.1\" y1=\"56.4\" x2=\"94.7\" y2=\"24.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.7\" y1=\"24.8\" x2=\"139\" y2=\"115.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139\" y1=\"115.5\" x2=\"164.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M92.1 39.6 A15 15 0 0 0 101.3 38.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.6\" y=\"56.7\" font-size=\"12\" text-anchor=\"middle\">36°</text><path d=\"M107.8 51.7 A30 30 0 0 0 122.3 36.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.9\" y=\"58.6\" font-size=\"12\" text-anchor=\"middle\">41°</text><path d=\"M153.5 119.2 A15 15 0 0 0 145.8 102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"164.4\" y=\"108.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"89.2\" y=\"20.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"72.8\" y=\"113.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"143.1\" y=\"130.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.8\" y=\"58.6\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"172\" y=\"135.3\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 77,
+       "check": "36 + 41",
+       "hints": [
+        "∠DCE は内接四角形の外角だね。",
+        "どの内角と等しいかな。",
+        "∠BAD を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠DCE = ∠BAD",
+         "36° + 41°",
+         "77°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC = AD です。∠CAD = 76° のとき、∠x（∠CBD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"121.1\" y1=\"43.1\" x2=\"31.4\" y2=\"27.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"121.1\" y1=\"43.1\" x2=\"166.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"121.1\" y1=\"43.1\" x2=\"208.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"31.4\" y1=\"27.3\" x2=\"166.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"31.4\" y1=\"27.3\" x2=\"208.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M128.6 56.1 A15 15 0 0 0 135.5 39\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147\" y=\"57.8\" font-size=\"12\" text-anchor=\"middle\">76°</text><path d=\"M52.7 42.2 A26 26 0 0 0 57.3 25.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.9\" y=\"42.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"77.1\" y1=\"30.3\" x2=\"75.3\" y2=\"40.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"139.5\" y1=\"85.1\" x2=\"148.2\" y2=\"80.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"166.2\" y1=\"35.4\" x2=\"163.5\" y2=\"25.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.1\" y=\"37\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"20.7\" y=\"29.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.5\" y=\"136.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"218.7\" y=\"18.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 38,
+       "check": "76 // 2",
+       "hints": [
+        "等しい長さが 3 つあるね。B、C、D はどんな円の上にあるかな。",
+        "その円の中心は A だね。∠CAD は何の角かな。",
+        "∠CBD は同じ弧 CD に対する円周角だよ。"
+       ],
+       "paths": [
+        [
+         "B、C、D は A を中心とする円の上",
+         "∠CAD は弧 CD の中心角",
+         "∠CBD = 76° ÷ 2 = 38°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠ABC = ∠ADC = 90°、∠BAC = 28° です。∠x（∠BDA）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"61.2\" y1=\"66.7\" x2=\"152.9\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.9\" y1=\"18\" x2=\"178.8\" y2=\"66.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.8\" y1=\"66.7\" x2=\"99.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99.9\" y1=\"122\" x2=\"61.2\" y2=\"66.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.2\" y1=\"66.7\" x2=\"178.8\" y2=\"66.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.9\" y1=\"18\" x2=\"99.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M76.2 66.7 A15 15 0 0 0 74.4 59.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.4\" y=\"64.2\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M109.9 102.4 A22 22 0 0 0 87.3 104\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.4\" y=\"91.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"145.8,21.8 149.6,28.8 156.6,25.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"95.3,115.4 101.9,110.9 106.4,117.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"50.2\" y=\"71.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"189.8\" y=\"71.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"158.5\" y=\"13.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"95.5\" y=\"137\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 62,
+       "check": "90 - 28",
+       "hints": [
+        "∠ABC と ∠ADC は、どちらも線分 AC を 90° で見る角だね。",
+        "4 点は、AC を直径とする円の上にあるね。",
+        "∠BDA と同じ弧 AB に対する円周角はどれかな。"
+       ],
+       "paths": [
+        [
+         "A、B、C、D は AC を直径とする円の上",
+         "∠BDA = ∠BCA（弧 AB）",
+         "∠BCA = 90° − 28° = 62°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠ABD = ∠ACD = 35°、∠BAC = 40°、∠ACB = 55° です。∠x（∠ADC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"88.1\" y1=\"18\" x2=\"79\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"122\" x2=\"161\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"122\" x2=\"161\" y2=\"24.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"24.4\" x2=\"88.1\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.1\" y1=\"18\" x2=\"161\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"122\" x2=\"161\" y2=\"24.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M88.7 110.5 A15 15 0 0 0 80.3 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"89.8\" y=\"100.3\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M161 92 A30 30 0 0 0 143.8 97.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148\" y=\"85.2\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M85.7 45.9 A28 28 0 0 0 104.2 40.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.8\" y=\"61.8\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M151.8 108.9 A16 16 0 0 0 145 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.2\" y=\"112.8\" font-size=\"12\" text-anchor=\"middle\">55°</text><path d=\"M147 23.2 A14 14 0 0 0 161 38.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.1\" y=\"46.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"82.2\" y=\"13.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.9\" y=\"135.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"167.7\" y=\"135.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"167.9\" y=\"20.8\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 95,
+       "check": "180 - (180 - 40 - 55)",
+       "hints": [
+        "∠ABD と ∠ACD は、どちらも線分 AD を見る角だね。",
+        "4 点が 1 つの円の上にあれば、四角形 ABCD は円に内接するね。",
+        "∠ABC を △ABC で求めよう。"
+       ],
+       "paths": [
+        [
+         "∠ABD = ∠ACD で 4 点は 1 つの円の上",
+         "∠ABC = 180° − 40° − 55° = 85°",
+         "∠ADC = 180° − 85° = 95°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "AB = AC = AD で、点 C は ∠BAD の内側にあります。∠BAC = 50°、∠CAD = 30° のとき、∠x（∠BCD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"18\" x2=\"52.1\" y2=\"98.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"138.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"187.9\" y2=\"98.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"52.1\" y1=\"98.9\" x2=\"138.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138.3\" y1=\"122\" x2=\"187.9\" y2=\"98.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M108.4 31.8 A18 18 0 0 0 123.1 35.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112\" y=\"52.1\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M123.1 35.7 A18 18 0 0 0 131.6 31.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.1\" y=\"50.3\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M149.2 116.9 A12 12 0 0 0 126.7 118.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"136.2\" y=\"101.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"82.2\" y1=\"55.2\" x2=\"89.9\" y2=\"61.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"124.2\" y1=\"70.9\" x2=\"134.1\" y2=\"69.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"150.1\" y1=\"61.7\" x2=\"157.8\" y2=\"55.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"41.3\" y=\"105.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"142.1\" y=\"137.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"198.6\" y=\"106.2\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 140,
+       "check": "(180 - 50) // 2 + (180 - 30) // 2",
+       "hints": [
+        "B、C、D は A を中心とする円の上にあるね。",
+        "∠BCD は、C をふくまない弧 BD に対する円周角だね。その弧の中心角は何度かな。",
+        "二等辺三角形 ABC と ACD の底角を求めて、たしてもよいね。"
+       ],
+       "paths": [
+        [
+         "∠BAD = 50° + 30° = 80°",
+         "C をふくまない弧 BD の中心角は 360° − 80° = 280°",
+         "∠BCD = 280° ÷ 2 = 140°"
+        ],
+        [
+         "∠BAC = 50° で ∠ACB = 65°",
+         "∠ACD = (180° − 30°) ÷ 2 = 75°",
+         "∠BCD = 65° + 75° = 140°"
+        ]
+       ],
+       "note": "中心角が 180° をこえる「大きいほうの弧」の円周角になる。どちらの弧を見ているかを、点 C の位置で決める。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = AC = AD で、D は ∠BAC の外側にあります。∠BAC = 58° のとき、∠BDC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"135.7\" y1=\"74\" x2=\"72\" y2=\"62.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.7\" y1=\"74\" x2=\"92.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.7\" y1=\"74\" x2=\"168\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168\" y1=\"18\" x2=\"72\" y2=\"62.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168\" y1=\"18\" x2=\"92.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120.9 71.4 A15 15 0 0 0 125.6 85.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.2\" y=\"87.3\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M146.2 28.1 A24 24 0 0 0 153.9 37.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.4\" y=\"45.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"104.7\" y1=\"63.4\" x2=\"103\" y2=\"73.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"110.3\" y1=\"94.6\" x2=\"117.8\" y2=\"101.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"156.2\" y1=\"48.5\" x2=\"147.5\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"78.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"61.1\" y=\"66.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"87.8\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"175.7\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 29,
+       "check": "58 // 2",
+       "hints": [
+        "B、C、D は A を中心とする円の上にあるね。",
+        "∠BAC はその円の中心角だね。",
+        "∠BDC は同じ弧 BC に対する円周角だよ。"
+       ],
+       "paths": [
+        [
+         "B、C、D は A を中心とする円の上",
+         "∠BDC = 58° ÷ 2",
+         "29°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠ABC = ∠ADC = 90°、∠BAC = 33° です。∠BDA は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"63.9\" y1=\"69.3\" x2=\"142.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"18\" x2=\"176.1\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"176.1\" y1=\"69.3\" x2=\"100.8\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.8\" y1=\"122\" x2=\"63.9\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63.9\" y1=\"69.3\" x2=\"176.1\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"18\" x2=\"100.8\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.9 69.3 A15 15 0 0 0 76.5 61.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.7\" y=\"65.5\" font-size=\"12\" text-anchor=\"middle\">33°</text><path d=\"M109 101.6 A22 22 0 0 0 88.2 104\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96.8\" y=\"91.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"136.1,22.4 140.5,29.1 147.2,24.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"96.2,115.4 102.8,110.9 107.4,117.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"52.9\" y=\"74.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"187.1\" y=\"74.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"147.1\" y=\"12.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"96.9\" y=\"137.2\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 57,
+       "check": "90 - 33",
+       "hints": [
+        "4 点は、どの線分を直径とする円の上にあるかな。",
+        "∠BDA と同じ弧 AB に対する円周角はどれかな。",
+        "∠BCA を △ABC で求めよう。"
+       ],
+       "paths": [
+        [
+         "4 点は AC を直径とする円の上",
+         "∠BDA = ∠BCA",
+         "90° − 33° = 57°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠ABC = ∠ADC = 90° です。4 点 A、B、C、D を通る円の直径はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"63.9\" y1=\"69.3\" x2=\"142.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"18\" x2=\"176.1\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"176.1\" y1=\"69.3\" x2=\"100.8\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.8\" y1=\"122\" x2=\"63.9\" y2=\"69.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"136.1,22.4 140.5,29.1 147.2,24.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"96.2,115.4 102.8,110.9 107.4,117.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"52.9\" y=\"74.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"187.1\" y=\"74.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"147.1\" y=\"12.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"96.9\" y=\"137.2\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "choices": [
+        "AC",
+        "BD",
+        "AB"
+       ],
+       "answer": "AC",
+       "hints": [
+        "∠ABC は、どの線分を見る角かな。",
+        "直径に対する円周角は 90° だね。",
+        "2 つの直角が同じ線分を見ているね。"
+       ],
+       "paths": [
+        [
+         "∠ABC と ∠ADC は AC を 90° で見る",
+         "AC が直径"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円 O の点 A での接線 ST と、弦 AB のつくる角を考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"171.2\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M129.6 29.5 A15 15 0 0 0 135 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.4\" y=\"34\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M86.1 86.5 A15 15 0 0 0 79.7 75.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.4\" y=\"78\" font-size=\"12\" text-anchor=\"middle\">50°</text><polyline points=\"120,26 128,26 128,18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"182\" y=\"85.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "円と 1 点だけで交わる直線を接線、その点を接点といいます。円の接線は、接点を通る半径に垂直です（円は直線 OA について線対称なので、接線もこの直線について線対称になり、OA と直角に交わります）。さらに、接線 AT と弦 AB のつくる角 ∠TAB は、その角の内側にある弧 AB に対する円周角 ∠ACB と等しくなります（接弦定理）。図では ∠TAB = 50° なので ∠ACB = 50° です。接線は「弦の片方のはしが、もう片方に重なった形」と見ることができます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円の直径です。∠ABC = 64° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"152\" y2=\"29\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152\" y1=\"29\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M165.4 56.5 A15 15 0 0 0 157 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148.3\" y=\"59.4\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M83 70 A15 15 0 0 0 81.5 63.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.3\" y=\"67.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"158.8\" y=\"25.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 26,
+       "check": "90 - 64",
+       "hints": [
+        "∠ACB は何度かな。",
+        "△ABC の角の和を使おう。",
+        "90° から 64° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 90°",
+         "90° − 64°",
+         "26°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O で ∠AOB = 124° です。∠OAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"74.1\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.1\" y1=\"94.4\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M106.8 77 A15 15 0 0 0 133.2 77\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\">124°</text><path d=\"M89.1 94.4 A15 15 0 0 0 87.3 87.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.3\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"64.4\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"175.6\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 28,
+       "check": "(180 - 124) // 2",
+       "hints": [
+        "OA と OB は何かな。",
+        "△OAB は二等辺三角形だね。",
+        "180° から 124° をひいて 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "OA = OB",
+         "(180° − 124°) ÷ 2",
+         "28°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O の点 A での接線を ST とします。∠OAB = 32° のとき、∠x（∠TAB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"166.7\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"166.7\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 33 A15 15 0 0 0 127.9 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.7\" y=\"49.1\" font-size=\"12\" text-anchor=\"middle\">32°</text><path d=\"M130.6 35 A20 20 0 0 0 140 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148.9\" y=\"38.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"176.6\" y=\"102.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 58,
+       "check": "90 - 32",
+       "hints": [
+        "接線と、接点を通る半径は、どんな角で交わるかな。",
+        "∠OAT は何度かな。",
+        "∠OAT から ∠OAB をひこう。"
+       ],
+       "paths": [
+        [
+         "∠OAT = 90°（接線は半径に垂直）",
+         "∠TAB = 90° − 32°",
+         "58°"
+        ],
+        [
+         "∠AOB = 180° − 64° = 116°",
+         "弧 AB の円周角は 58°",
+         "接弦定理で ∠TAB = 58°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC が円に内接し、点 A での接線を ST とします。∠TAB = 65°、∠ABC = 70° のとき、∠x（∠BAC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"159.8\" y1=\"103.4\" x2=\"86.6\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.6\" y1=\"109.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M126.3 31.6 A15 15 0 0 0 135 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.6\" y=\"37.2\" font-size=\"12\" text-anchor=\"middle\">65°</text><path d=\"M153.5 89.8 A15 15 0 0 0 144.9 104.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.6\" y=\"93.6\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M112.5 38.7 A22 22 0 0 0 129.3 37.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.5\" y=\"57.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"168.3\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"79.5\" y=\"123.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text></svg>",
+       "answer": 45,
+       "check": "180 - 65 - 70",
+       "hints": [
+        "∠TAB と等しい円周角はどれかな。",
+        "∠ACB は何度かな。",
+        "△ABC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = ∠TAB = 65°（接弦定理）",
+         "∠BAC = 180° − 65° − 70°",
+         "45°"
+        ]
+       ],
+       "note": "接弦定理で等しくなるのは、接線と弦の角の内側にある弧（ここでは弧 AB）に対する円周角。C の角を選ぶ。"
+      },
+      {
+       "part": "今日",
+       "text": "AB は円の直径です。円の上の点 C について、直線 AC と、点 B での接線の交点を D とします。∠CAB = 34° のとき、∠x（∠BDC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"91.3\" r=\"40.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.3\" y1=\"91.3\" x2=\"160.7\" y2=\"91.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.3\" y1=\"91.3\" x2=\"160.7\" y2=\"36.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160.7\" y1=\"91.3\" x2=\"135.3\" y2=\"53.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160.7\" y1=\"18\" x2=\"160.7\" y2=\"123.9\" stroke=\"currentColor\" stroke-width=\"1.6\" fill=\"none\"/><path d=\"M94.3 91.3 A15 15 0 0 0 91.7 82.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.1\" y=\"87.3\" font-size=\"12\" text-anchor=\"middle\">34°</text><path d=\"M148.3 44.7 A15 15 0 0 0 160.7 51.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.6\" y=\"65.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"68.3\" y=\"96.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"171.7\" y=\"96.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"139.4\" y=\"48.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"171.7\" y=\"41.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 56,
+       "check": "90 - 34",
+       "hints": [
+        "直径 AB と、B での接線は、どんな角で交わるかな。",
+        "∠ABD は何度かな。",
+        "△ABD の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ABD = 90°（接線は半径に垂直）",
+         "△ABD で 180° − 90° − 34°",
+         "56°"
+        ],
+        [
+         "∠DBC = ∠CAB = 34°（接弦定理）",
+         "∠BCD = 90°（∠ACB の外側も直角）",
+         "∠BDC = 90° − 34° = 56°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円の外の点 P から、円に接線 PA（A は接点）と、円と 2 点 B、C で交わる直線 PBC をひきます。∠APB = 30°、∠ACB = 35° のとき、∠x（∠BAC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"150.8\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"32.2\" y1=\"18\" x2=\"150.8\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"32.2\" y1=\"18\" x2=\"194.4\" y2=\"111.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.8\" y1=\"18\" x2=\"97.2\" y2=\"55.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.8\" y1=\"18\" x2=\"194.4\" y2=\"111.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M51.3 29 A22 22 0 0 0 54.2 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"66\" y=\"31.3\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M188.1 98 A15 15 0 0 0 181.4 104.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"175.5\" y=\"95.2\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M138.5 26.6 A15 15 0 0 0 157.1 31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.5\" y=\"49.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"150.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"86.9\" y=\"56.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"202.9\" y=\"123.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"32.2\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 80,
+       "check": "180 - 30 - 35 - 35",
+       "hints": [
+        "接線 PA と弦 AB の角 ∠PAB と等しい円周角はどれかな。",
+        "△PAC の角の和から ∠PAC を求めよう。",
+        "∠PAC から ∠PAB をひこう。"
+       ],
+       "paths": [
+        [
+         "∠PAB = ∠ACB = 35°（接弦定理）",
+         "△PAC で ∠PAC = 180° − 30° − 35° = 115°",
+         "∠BAC = 115° − 35° = 80°"
+        ],
+        [
+         "∠ABC は △PAB の外角",
+         "∠ABC = 30° + 35° = 65°",
+         "∠BAC = 180° − 65° − 35° = 80°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円 O の点 A での接線を ST とします。∠OAB = 26° のとき、∠TAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"161\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"161\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 33 A15 15 0 0 0 126.6 31.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"126.3\" y=\"49.5\" font-size=\"12\" text-anchor=\"middle\">26°</text><path d=\"M128.8 36 A20 20 0 0 0 140 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148\" y=\"39.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"169.6\" y=\"113.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 64,
+       "check": "90 - 26",
+       "hints": [
+        "∠OAT は何度かな。",
+        "接線は接点を通る半径に垂直だね。",
+        "90° から 26° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠OAT = 90°",
+         "90° − 26°",
+         "64°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC が円に内接し、点 A での接線を ST とします。∠TAB = 52°、∠ABC = 60° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"170.5\" y2=\"82.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170.5\" y1=\"82.6\" x2=\"75\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"96\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M129.2 29.8 A15 15 0 0 0 135 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.2\" y=\"34.5\" font-size=\"12\" text-anchor=\"middle\">52°</text><path d=\"M161.2 70.8 A15 15 0 0 0 155.6 84.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.5\" y=\"76.3\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M109 37.1 A22 22 0 0 0 133.5 35.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.4\" y=\"57.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"181.1\" y=\"90.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"65.4\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text></svg>",
+       "answer": 68,
+       "check": "180 - 52 - 60",
+       "hints": [
+        "∠TAB と等しい円周角はどれかな。",
+        "∠ACB は何度かな。",
+        "△ABC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 52°",
+         "180° − 52° − 60°",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O の点 A での接線と、半径 OA は何度の角で交わりますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 90,
+       "hints": [
+        "円は、直線 OA について線対称だね。",
+        "接線も、直線 OA について線対称になるね。",
+        "線対称の軸と、それを横切る線が交わる角は何度かな。"
+       ],
+       "paths": [
+        [
+         "円は直線 OA について線対称",
+         "接線も OA について線対称",
+         "接線と OA は垂直で 90°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円 O の外の点 P から、2 本の接線 PA、PB をひいたときの形を調べよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"94\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198\" y1=\"70\" x2=\"120\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198\" y1=\"70\" x2=\"120\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"70\" x2=\"120\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"70\" x2=\"120\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"70\" x2=\"198\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"116,31.9 122.9,35.9 126.9,29\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,108.1 122.9,104.1 126.9,111\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"161.5\" y1=\"43.2\" x2=\"156.5\" y2=\"51.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"156.5\" y1=\"88.2\" x2=\"161.5\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"94\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"125.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"209\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"94\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "接線は接点を通る半径に垂直なので、∠OAP = ∠OBP = 90° です。△OAP と △OBP は、斜辺 OP が共通で、OA = OB（半径）なので合同です（直角三角形の斜辺と他の 1 辺）。だから PA = PB で、円の外の点からひいた 2 本の接線の長さは等しくなります。また、四角形 OAPB の角の和は 360° なので、∠APB + ∠AOB = 360° − 90° − 90° = 180° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O の点 A での接線を ST とします。∠OAB = 21° のとき、∠TAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"154.8\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"154.8\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 33 A15 15 0 0 0 125.4 32\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.1\" y=\"49.7\" font-size=\"12\" text-anchor=\"middle\">21°</text><path d=\"M127.2 36.7 A20 20 0 0 0 140 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.2\" y=\"40.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"162.2\" y=\"121.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 69,
+       "check": "90 - 21",
+       "hints": [
+        "接線と半径 OA の角は何度かな。",
+        "∠OAT から ∠OAB をひこう。",
+        "90° − 21° を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠OAT = 90°",
+         "90° − 21°",
+         "69°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、∠B = (3x)°、∠D = (x + 40)° です。x はいくつですか。",
+       "answer": 35,
+       "check": "(180 - 40) // 4",
+       "hints": [
+        "∠B と ∠D は向かい合う角だね。",
+        "2 つの角の和を式にして 180 とおこう。",
+        "4x + 40 = 180 を解こう。"
+       ],
+       "paths": [
+        [
+         "3x + (x + 40) = 180",
+         "4x = 140",
+         "x = 35"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O の外の点 P から接線 PA、PB をひきます。∠APB = 50° のとき、円の上の点 C（A、B をふくむ大きいほうの弧の上）について、∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"84.5\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207.5\" y1=\"70\" x2=\"106.5\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207.5\" y1=\"70\" x2=\"106.5\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"35.6\" y1=\"87.8\" x2=\"106.5\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"35.6\" y1=\"87.8\" x2=\"106.5\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.5\" y1=\"70\" x2=\"106.5\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"84.5\" y1=\"70\" x2=\"106.5\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M193.9 63.7 A15 15 0 0 0 193.9 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M49.5 93.5 A15 15 0 0 0 46.7 77.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.2\" y=\"87.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"84.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"111.1\" y=\"17.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"111.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"218.5\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"25.3\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"84.5\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 65,
+       "check": "(180 - 50) // 2",
+       "hints": [
+        "∠APB + ∠AOB は何度だったかな。",
+        "∠AOB を求めよう。",
+        "∠ACB は弧 AB に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 180° − 50° = 130°",
+         "∠ACB = 130° ÷ 2",
+         "65°"
+        ],
+        [
+         "PA = PB で ∠PAB = (180° − 50°) ÷ 2 = 65°",
+         "接弦定理で ∠ACB = ∠PAB = 65°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の外の点 P から接線 PA、PB をひきます。∠APB = 44° のとき、∠x（∠PAB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"76.6\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"215.4\" y1=\"70\" x2=\"96.1\" y2=\"21.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"215.4\" y1=\"70\" x2=\"96.1\" y2=\"118.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.1\" y1=\"21.8\" x2=\"96.1\" y2=\"118.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M201.5 64.4 A15 15 0 0 0 201.5 75.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"187.4\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">44°</text><path d=\"M96.1 37.8 A16 16 0 0 0 110.9 27.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.3\" y=\"50\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"157.6\" y1=\"41.3\" x2=\"153.9\" y2=\"50.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"153.9\" y1=\"89.5\" x2=\"157.6\" y2=\"98.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.2\" y=\"16.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"100.2\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"226.4\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 68,
+       "check": "(180 - 44) // 2",
+       "hints": [
+        "PA と PB の長さはどうかな。",
+        "△PAB はどんな三角形かな。",
+        "180° から 44° をひいて 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "PA = PB で △PAB は二等辺三角形",
+         "(180° − 44°) ÷ 2",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD の 4 つの辺が、すべて 1 つの円に接しています。AB = 9 cm、BC = 7 cm、CD = 6 cm のとき、DA は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"124.1\" cy=\"72.6\" r=\"37.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"143.9,18 70.1,60.6 113.1,122 169.9,89.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"147.7\" y=\"12.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59.4\" y=\"63.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"110.7\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"180.2\" y=\"97.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 8,
+       "check": "9 + 6 - 7",
+       "hints": [
+        "1 つの頂点から円にひいた 2 本の接線の長さは等しいね。",
+        "4 つの頂点からの接線の長さを a、b、c、d として、4 つの辺を表そう。",
+        "AB + CD と BC + DA をくらべよう。"
+       ],
+       "paths": [
+        [
+         "頂点から接点までの長さを a、b、c、d とする",
+         "AB + CD = a + b + c + d = BC + DA",
+         "DA = 9 + 6 − 7 = 8 cm"
+        ]
+       ],
+       "note": "円に外接する四角形では、向かい合う辺の和が等しい。図の長さの比はおおよそ。"
+      },
+      {
+       "part": "挑戦",
+       "text": "円 O の外の点 P から接線 PA、PB をひきます。∠APB = 40° のとき、A と B の間の小さいほうの弧の上の点 C について、∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"70\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"222\" y1=\"70\" x2=\"87.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"222\" y1=\"70\" x2=\"87.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"122\" y1=\"70\" x2=\"87.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"122\" y1=\"70\" x2=\"87.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"70\" x2=\"87.8\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"70\" x2=\"87.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M207.9 64.9 A15 15 0 0 0 207.9 75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"194\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M114 58.5 A14 14 0 0 0 114 81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"70\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"91.5\" y=\"15.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"91.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"233\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"133\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"70\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 110,
+       "check": "(360 - (180 - 40)) // 2",
+       "hints": [
+        "∠AOB を求めよう。",
+        "C をふくまない弧 AB は、大きいほうの弧だね。その中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 180° − 40° = 140°",
+         "C をふくまない弧の中心角は 360° − 140° = 220°",
+         "∠ACB = 110°"
+        ],
+        [
+         "大きいほうの弧の上に点 D をとると ∠ADB = 70°",
+         "四角形 ADBC は円に内接",
+         "∠ACB = 180° − 70° = 110°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円 O の外の点 P から接線 PA、PB をひきます。∠AOB = 112° のとき、∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"99.5\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"192.5\" y1=\"70\" x2=\"128.6\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"192.5\" y1=\"70\" x2=\"128.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99.5\" y1=\"70\" x2=\"128.6\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99.5\" y1=\"70\" x2=\"128.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M107.9 82.4 A15 15 0 0 0 107.9 57.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">112°</text><path d=\"M180.1 61.6 A15 15 0 0 0 180.1 78.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"164.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"99.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"134.7\" y=\"22.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"134.7\" y=\"127.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"203.5\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"99.5\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 68,
+       "check": "180 - 112",
+       "hints": [
+        "∠OAP と ∠OBP は何度かな。",
+        "四角形 OAPB の角の和は何度かな。",
+        "360° から 3 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "∠OAP = ∠OBP = 90°",
+         "360° − 90° − 90° − 112°",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD の 4 つの辺が、すべて 1 つの円に接しています。AB = 10 cm、BC = 8 cm、CD = 7 cm のとき、DA は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120.6\" cy=\"72.5\" r=\"36.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"135.2,18 72.5,61.8 107.3,122 167.5,87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"138\" y=\"12.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"61.8\" y=\"64.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"104.4\" y=\"137.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"177.9\" y=\"95.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 9,
+       "check": "10 + 7 - 8",
+       "hints": [
+        "頂点からの 2 本の接線の長さは等しいね。",
+        "向かい合う辺の和はどうなるかな。",
+        "AB + CD = BC + DA を使おう。"
+       ],
+       "paths": [
+        [
+         "AB + CD = BC + DA",
+         "10 + 7 = 8 + DA",
+         "DA = 9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の外の点 P から接線 PA、PB をひきます。PA = 6 cm、∠APB = 60° のとき、三角形 PAB のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"94\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198\" y1=\"70\" x2=\"120\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198\" y1=\"70\" x2=\"120\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M185 62.5 A15 15 0 0 0 185 77.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">60°</text><text x=\"125.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"125.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"209\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 18,
+       "check": "6 * 3",
+       "hints": [
+        "PB は何 cm かな。",
+        "△PAB の ∠PAB と ∠PBA は何度かな。",
+        "3 つの角が等しい三角形の辺はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "PB = PA = 6 cm",
+         "∠PAB = ∠PBA = 60° で正三角形",
+         "6 × 3 = 18 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "2 つの円が P、Q で交わっています。P を通る直線が円と A、B で、Q を通る直線が円と C、D で交わります。∠CAP = 75° のとき、∠PBD を考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"87.2\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"161.3\" cy=\"72.2\" r=\"48.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"37.9\" y1=\"46.5\" x2=\"184.8\" y2=\"29.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70.6\" y1=\"129.5\" x2=\"207.4\" y2=\"87.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"128.9\" y1=\"36.1\" x2=\"131.8\" y2=\"110.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M43.4 60.5 A15 15 0 0 0 52.8 44.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"61.9\" y=\"65.1\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M146.1 106.1 A15 15 0 0 0 131.2 95.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M169.9 31.5 A15 15 0 0 0 190.3 43.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170.4\" y=\"58\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"28.3\" y=\"45.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"67.3\" y=\"144.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"190.1\" y=\"25\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"217.9\" y=\"95.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"128.9\" y=\"30\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"131.8\" y=\"126.4\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "explain": "2 つの円が交わるときは、共通の弦 PQ をはさんで角を移せます。四角形 APQC は左の円に内接するので、外角 ∠PQD は内対角 ∠CAP と等しく 75° です。四角形 PBDQ は右の円に内接するので、∠PBD = 180° − ∠PQD = 105° です。∠CAB + ∠ABD = 75° + 105° = 180° なので、AC と BD は平行になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O の外の点 P から接線 PA、PB をひきます。∠APB = 70° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"100.7\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"191.3\" y1=\"70\" x2=\"130.5\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"191.3\" y1=\"70\" x2=\"130.5\" y2=\"112.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.7\" y1=\"70\" x2=\"130.5\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.7\" y1=\"70\" x2=\"130.5\" y2=\"112.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M179 61.4 A15 15 0 0 0 179 78.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"163.3\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M109.3 82.3 A15 15 0 0 0 109.3 57.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"128.7\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"100.7\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"136.8\" y=\"23.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"136.8\" y=\"126.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"202.3\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"100.7\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "∠OAP と ∠OBP は何度かな。",
+        "四角形 OAPB の角の和を使おう。",
+        "∠APB + ∠AOB は何度かな。"
+       ],
+       "paths": [
+        [
+         "∠APB + ∠AOB = 180°",
+         "180° − 70°",
+         "110°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、交点を H とします。∠A = 54° のとき、∠BHC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"113.1,18 66.8,122 173.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"66.8\" y1=\"122\" x2=\"146.6\" y2=\"75.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"173.2\" y1=\"122\" x2=\"84.4\" y2=\"82.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M107 31.7 A15 15 0 0 0 120.6 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.6\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">54°</text><path d=\"M102.7 101.3 A12 12 0 0 0 124.1 100.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.4\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"150.6,82.9 143.7,86.9 139.7,79.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"81.2,89.8 88.5,93 91.7,85.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"57.9\" y=\"133.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"182.5\" y=\"132.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"157\" y=\"77.4\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"73.5\" y=\"86.2\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"113.1\" y=\"89.2\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 126,
+       "check": "180 - 54",
+       "hints": [
+        "四角形 AFHE の 2 つの直角に目をつけよう。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "AFHE は円に内接",
+         "∠FHE = 180° − 54° = 126°",
+         "∠BHC = 126°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 つの円が P、Q で交わっています。直線 APB と直線 CQD をひきます（A、C は左の円、B、D は右の円の上）。∠CAP = 70° のとき、∠x（∠PBD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"87.2\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"161.3\" cy=\"72.2\" r=\"48.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"43.6\" y1=\"38.4\" x2=\"191.8\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.3\" y1=\"131.6\" x2=\"209.3\" y2=\"78.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"128.9\" y1=\"36.1\" x2=\"131.8\" y2=\"110.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M49.1 52.3 A15 15 0 0 0 58.6 38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"66.9\" y=\"58\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M176.8 34.9 A15 15 0 0 0 197.3 48.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"176.4\" y=\"62\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"35.1\" y=\"36.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"78.9\" y=\"147.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"198.7\" y=\"30.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"220.2\" y=\"85.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"128.9\" y=\"30\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"131.8\" y=\"126.4\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "共通の弦 PQ をひいて、左の円の内接四角形 APQC を見よう。",
+        "∠PQD は四角形 APQC の外角だね。",
+        "右の円の内接四角形 PBDQ で、∠PBD と ∠PQD の関係を使おう。"
+       ],
+       "paths": [
+        [
+         "∠PQD = ∠CAP = 70°（外角 = 内対角）",
+         "PBDQ は右の円に内接",
+         "∠PBD = 180° − 70° = 110°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接し、∠BAC = x° です（x は 90 より小さい）。∠OBC を x の式で表すと、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.4\" y1=\"99.8\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.1 31.3 A15 15 0 0 0 126.9 31.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><path d=\"M92.4 99.8 A15 15 0 0 0 89.7 91.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"68.4\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.6\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "choices": [
+        "90 − x",
+        "90 − x/2",
+        "180 − 2x"
+       ],
+       "answer": "90 − x",
+       "check": "[c for c, f in {'90 − x': lambda x: 90 - x, '90 − x/2': lambda x: 90 - x / 2, '180 − 2x': lambda x: 180 - 2 * x}.items() if all(f(x) == (180 - 2 * x) / 2 for x in range(10, 90))][0]",
+       "hints": [
+        "∠BOC を x で表そう。",
+        "△OBC は二等辺三角形だね。",
+        "180 − 2x を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2x°",
+         "∠OBC = (180 − 2x) ÷ 2",
+         "90 − x"
+        ]
+       ],
+       "note": "数でなく文字で追うと、どんな大きさの三角形でも成り立つ関係が 1 つの式で得られる。x = 40 などを入れて確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "円の外の点 P から接線 PA、PB をひき、∠APB = x° とします。A、B をふくむ大きいほうの弧の上の点 C について、∠ACB を x の式で表すと、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"84.5\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207.5\" y1=\"70\" x2=\"106.5\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207.5\" y1=\"70\" x2=\"106.5\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"35.6\" y1=\"87.8\" x2=\"106.5\" y2=\"22.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"35.6\" y1=\"87.8\" x2=\"106.5\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M193.9 63.7 A15 15 0 0 0 193.9 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><path d=\"M49.5 93.5 A15 15 0 0 0 46.7 77.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.1\" y=\"17.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"111.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"218.5\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"25.3\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "90 − x/2",
+        "180 − x",
+        "x/2"
+       ],
+       "answer": "90 − x/2",
+       "check": "[c for c, f in {'90 − x/2': lambda x: 90 - x / 2, '180 − x': lambda x: 180 - x, 'x/2': lambda x: x / 2}.items() if all(f(x) == (180 - x) / 2 for x in range(10, 170))][0]",
+       "hints": [
+        "中心 O をとると、∠AOB は x でどう表せるかな。",
+        "∠AOB + ∠APB = 180° だったね。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 180 − x",
+         "∠ACB = (180 − x) ÷ 2",
+         "90 − x/2"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円の上に 4 点 A、B、C、D があり、∠ACB = 40° です。D が、弦 AB について C と反対側の弧の上にあるとき、∠x（∠ADB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"18.8\" x2=\"75\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129\" y1=\"18.8\" x2=\"137.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"75\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.2\" y1=\"118.9\" x2=\"137.8\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120.4 31.1 A15 15 0 0 0 130.3 33.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.8\" y=\"50\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M116.2 118.9 A14 14 0 0 0 91.5 109.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.4\" y=\"97.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"141.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"130.9\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"98.5\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 140,
+       "check": "180 - 40",
+       "hints": [
+        "四角形 ACBD は円に内接しているね。",
+        "∠ACB と ∠ADB は向かい合う角かな。",
+        "向かい合う角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "四角形 ACBD は円に内接",
+         "∠ADB = 180° − 40°",
+         "140°"
+        ]
+       ],
+       "note": "D が C と同じ側なら 40°、反対側なら 140° になる。点の位置で答えが変わるので、図をかくときは位置を確かめる。大会では、このような場合分けをまとめる「向きのある角（有向角）」を使うことがある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 つの円が P、Q で交わっています。直線 APB と直線 CQD をひきます（A、C は左の円、B、D は右の円の上）。∠CAP = 80° のとき、∠PBD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"87.2\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"161.3\" cy=\"72.2\" r=\"48.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"33.7\" y1=\"55.5\" x2=\"177.1\" y2=\"26.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.3\" y1=\"125.8\" x2=\"204.1\" y2=\"94.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"128.9\" y1=\"36.1\" x2=\"131.8\" y2=\"110.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M39.2 69.5 A15 15 0 0 0 48.4 52.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"58.3\" y=\"73.1\" font-size=\"12\" text-anchor=\"middle\">80°</text><path d=\"M162.4 29.3 A15 15 0 0 0 182.6 40.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"163.7\" y=\"55.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"23.3\" y=\"56.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"56.4\" y=\"140.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"180.7\" y=\"20.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"213.8\" y=\"105\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"128.9\" y=\"30\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"131.8\" y=\"126.4\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 100,
+       "check": "180 - 80",
+       "hints": [
+        "共通の弦 PQ をひこう。",
+        "∠PQD は左の円の内接四角形の外角だね。",
+        "右の円の内接四角形で、向かい合う角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠PQD = 80°",
+         "∠PBD = 180° − 80°",
+         "100°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接し、∠OAB = x° です。∠ACB を x の式で表すと、どれですか（C は O と同じ側）。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.1 87.8 A15 15 0 0 0 85.2 82.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.7\" y=\"87.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><path d=\"M111.4 30.3 A15 15 0 0 0 128.6 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "choices": [
+        "90 − x",
+        "2x",
+        "180 − x"
+       ],
+       "answer": "90 − x",
+       "check": "[c for c, f in {'90 − x': lambda x: 90 - x, '2x': lambda x: 2 * x, '180 − x': lambda x: 180 - x}.items() if all(f(x) == (180 - 2 * x) / 2 for x in range(1, 90))][0]",
+       "hints": [
+        "△OAB は二等辺三角形だね。∠AOB を x で表そう。",
+        "∠ACB は ∠AOB の半分だね。",
+        "x = 20 を入れて確かめよう。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 180 − 2x",
+         "∠ACB = (180 − 2x) ÷ 2",
+         "90 − x"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があり、∠ACB = 55° です。D が、弦 AB について C と反対側の弧の上にあるとき、∠ADB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"77.4\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"162.6\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.1 31.3 A15 15 0 0 0 126.9 31.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">55°</text><path d=\"M132.4 115.5 A14 14 0 0 0 107.6 115.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"99.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"68.4\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"171.6\" y=\"111\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 125,
+       "check": "180 - 55",
+       "hints": [
+        "四角形 ACBD は円に内接しているね。",
+        "∠ACB と ∠ADB は向かい合う角だね。",
+        "180° から 55° をひこう。"
+       ],
+       "paths": [
+        [
+         "ACBD は円に内接",
+         "180° − 55°",
+         "125°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "円に内接する四角形 ABCD の向かい合う角の和が 180° になるわけを、筋道を立てて書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"106.5\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.5\" y1=\"120.2\" x2=\"167.1\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.1\" y1=\"92\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"167.1\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M111.4 30.3 A15 15 0 0 0 128.1 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M120.1 113.9 A15 15 0 0 0 95.5 110.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"103.7\" y=\"135.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"177.1\" y=\"101.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "例：「円の中心を O とし、∠BAD = a、∠BCD = c とする。∠BAD は弧 BCD に対する円周角だから、弧 BCD の中心角は 2a。∠BCD は弧 BAD に対する円周角だから、弧 BAD の中心角は 2c。2 つの弧を合わせると円 1 周なので 2a + 2c = 360°。両辺を 2 でわって a + c = 180°。」と書ければよい。①「〜とする」で中心と角に名前を付ける、② 中心角の和の式を立てて変形する、③ 約束した事実（円周角の定理：円周角は中心角の半分）で結ぶ、の 3 つがそろっているかを見る。分度器で測って 180° になった、という例だけでは、どの四角形でも成り立つことは示せないことを話す。∠ABC + ∠ADC = 180° も同じように示せる。",
+       "hints": [
+        "中心 O と B、D を結んで、2 つの中心角を見よう。",
+        "∠A と ∠C は、それぞれどちらの弧に対する円周角かな。",
+        "2 つの弧の中心角を合わせると何度かな。"
+       ],
+       "paths": [
+        [
+         "中心を O、∠A = a、∠C = c とする",
+         "弧 BCD の中心角 2a、弧 BAD の中心角 2c",
+         "2a + 2c = 360°",
+         "a + c = 180°"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "点 A での接線 AT と弦 AB のつくる角 ∠TAB（90° より小さい）が、弧 AB に対する円周角 ∠ACB に等しいわけを書きましょう。A を通る直径 AD をひいて考えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M128.6 30.3 A15 15 0 0 0 135 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M86.1 87.8 A15 15 0 0 0 79.7 75.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "例：「A を通る直径を AD とする。接線は接点を通る半径に垂直なので ∠DAT = 90°。よって ∠TAB = 90° − ∠DAB。AD は直径なので ∠ABD = 90°、△ABD で ∠ADB = 90° − ∠DAB。だから ∠TAB = ∠ADB。∠ADB と ∠ACB は同じ弧 AB に対する円周角なので等しい。よって ∠TAB = ∠ACB。」と書ければよい。① 直径 AD という補助の線を「〜とする」で決める、② 90° − ∠DAB を 2 通りに書いて等しいと結ぶ、③ 約束した事実（接線は半径に垂直、直径の円周角は 90°、同じ弧の円周角は等しい）で結ぶ、の 3 つを見る。∠TAB が 90° より大きいときも、となりの角を使って同じように示せることにふれてもよい。",
+       "hints": [
+        "∠DAT は何度かな。∠TAB を ∠DAB で表そう。",
+        "∠ABD は何度かな。∠ADB を ∠DAB で表そう。",
+        "∠ADB と ∠ACB は、同じ弧に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "直径 AD をひく",
+         "∠TAB = 90° − ∠DAB（接線は半径に垂直）",
+         "∠ADB = 90° − ∠DAB（∠ABD = 90°）",
+         "∠TAB = ∠ADB = ∠ACB"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "∠ADB = ∠AEB = 90° のとき、4 点 A、B、D、E が、AB の中点 M を中心とする 1 つの円の上にあることを示しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"70\" x2=\"180\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"70\" x2=\"90\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90\" y1=\"18\" x2=\"180\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"70\" x2=\"150\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150\" y1=\"18\" x2=\"180\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"70\" x2=\"150\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"150\" y1=\"122\" x2=\"180\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90\" y1=\"18\" x2=\"150\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"86,24.9 92.9,28.9 96.9,22\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"143.1,22 147.1,28.9 154,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"49.1\" y=\"76.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"190.9\" y=\"76.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"83.1\" y=\"14.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"150\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"155.5\" y=\"13.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "例：「AB の中点を M とする。△ADB で ∠ADB = 90°。DM を M の先にのばし、MF = MD となる点 F をとる。四角形 ADBF は、対角線 AB と DF がたがいの中点 M で交わるので平行四辺形で、∠ADB = 90° だから長方形である。長方形の対角線は長さが等しいので DF = AB、よって MD = DF ÷ 2 = AB ÷ 2 = MA = MB。同じように ME = MA。だから MA = MB = MD = ME で、4 点は M を中心とする 1 つの円の上にある。」と書ければよい。① 中点 M と補助の点 F を「〜とする」で決める、② 長さの式（MD = AB ÷ 2）を出す、③ 約束した事実（G-017 の平行四辺形と長方形の性質）で結ぶ、の 3 つを見る。半円の弧の円周角が 90° であることの逆なので、「直角を見る点は直径の円の上」とまとめられる。",
+       "hints": [
+        "DM を M の先に同じ長さだけのばした点を F として、四角形 ADBF を見よう。",
+        "対角線がたがいの中点で交わる四角形は何だったかな。1 つの角が直角なら何かな。",
+        "長方形の対角線の長さから、MD を AB で表そう。"
+       ],
+       "paths": [
+        [
+         "AB の中点を M、MF = MD となる F をとる",
+         "ADBF は平行四辺形で ∠D = 90° だから長方形",
+         "対角線が等しく MD = AB ÷ 2 = MA",
+         "同じように ME = MA で 4 点は M を中心とする円の上"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠BAD = a° とします。辺 BC を C の先にのばした点を E とするとき、∠DCE を a の式で表すと、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"115.4\" cy=\"68.8\" r=\"50.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98\" y1=\"21.1\" x2=\"71.4\" y2=\"94.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.4\" y1=\"94.1\" x2=\"140.7\" y2=\"112.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.7\" y1=\"112.7\" x2=\"165.3\" y2=\"59.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.3\" y1=\"59.9\" x2=\"98\" y2=\"21.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.7\" y1=\"112.7\" x2=\"175.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M92.9 35.2 A15 15 0 0 0 111 28.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.6\" y=\"51.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">a</text><path d=\"M155.2 116.6 A15 15 0 0 0 147.1 99.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.2\" y=\"15.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"61.9\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"146.2\" y=\"127.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"176.2\" y=\"62.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"183.6\" y=\"134.2\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "choices": [
+        "a",
+        "180 − a",
+        "2a"
+       ],
+       "answer": "a",
+       "check": "[c for c, f in {'a': lambda a: a, '180 − a': lambda a: 180 - a, '2a': lambda a: 2 * a}.items() if all(f(a) == 180 - (180 - a) for a in range(1, 180))][0]",
+       "hints": [
+        "∠BCD を a で表そう。",
+        "∠BCD + ∠DCE は何度かな。",
+        "180 − (180 − a) を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠BCD = 180 − a",
+         "∠DCE = 180 − (180 − a)",
+         "a"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の点 A での接線を AT とし、A を通る直径を AD とします。∠DAB = 28° のとき、∠TAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"166.7\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 33 A15 15 0 0 0 127.9 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.7\" y=\"49.1\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M130.6 35 A20 20 0 0 0 140 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148.9\" y=\"38.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"176.6\" y=\"102.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text></svg>",
+       "answer": 62,
+       "check": "90 - 28",
+       "hints": [
+        "直径 AD と接線 AT の角は何度かな。",
+        "∠TAB は ∠DAT から ∠DAB をひいた角だね。",
+        "90° から 28° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠DAT = 90°",
+         "∠TAB = 90° − 28°",
+         "62°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "接弦定理のわけを書くときに使った事実は、どれですか。",
+       "choices": [
+        "接線は接点を通る半径に垂直",
+        "円の外の点からの 2 本の接線の長さは等しい",
+        "平行線の錯角は等しい"
+       ],
+       "answer": "接線は接点を通る半径に垂直",
+       "hints": [
+        "∠DAT = 90° は、どの事実から言えたかな。",
+        "接線は 1 本しか使っていないね。",
+        "平行線は出てこなかったね。"
+       ],
+       "paths": [
+        [
+         "∠DAT = 90° を使った",
+         "接線は接点を通る半径に垂直"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角三角形の斜辺の中点が 3 つの頂点から等しい距離にあることを示すとき、補助の点をとってつくった四角形は、どれですか。",
+       "choices": [
+        "長方形",
+        "ひし形",
+        "台形"
+       ],
+       "answer": "長方形",
+       "hints": [
+        "対角線がたがいの中点で交わる四角形は、まず何だったかな。",
+        "その四角形の 1 つの角が直角だと、何になるかな。",
+        "その四角形の対角線の長さは、どうなるかな。"
+       ],
+       "paths": [
+        [
+         "対角線がたがいの中点で交わるので平行四辺形",
+         "1 つの角が直角なので長方形",
+         "対角線の長さが等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠A = a° とします。弧 BCD の中心角を a の式で表すと、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"106.5\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.5\" y1=\"120.2\" x2=\"167.1\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.1\" y1=\"92\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"167.1\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M111.4 30.3 A15 15 0 0 0 128.1 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.4\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">a</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"103.7\" y=\"135.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"177.1\" y=\"101.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "choices": [
+        "2a",
+        "a/2",
+        "180 − a"
+       ],
+       "answer": "2a",
+       "check": "[c for c, f in {'2a': lambda a: 2 * a, 'a/2': lambda a: a / 2, '180 − a': lambda a: 180 - a}.items() if all(f(a) == a * 2 for a in range(1, 180))][0]",
+       "hints": [
+        "∠A は弧 BCD に対する円周角だね。",
+        "中心角は円周角の何倍かな。",
+        "a を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "∠A は弧 BCD の円周角",
+         "中心角は 2 倍",
+         "2a"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で AB ∥ DC です。∠BAC = 25°、∠CAD = 45° のとき、∠x（∠ABC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.2\" y1=\"65.5\" x2=\"170.2\" y2=\"83.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170.2\" y1=\"83.5\" x2=\"162.6\" y2=\"40.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.6\" y1=\"40.2\" x2=\"90.2\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.2\" y1=\"27.4\" x2=\"68.2\" y2=\"65.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.2\" y1=\"65.5\" x2=\"162.6\" y2=\"40.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.8 70 A26 26 0 0 0 93.3 58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.2\" y=\"68\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M83.7 61.3 A16 16 0 0 0 76.2 51.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.2\" y=\"52\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M167.6 68.7 A15 15 0 0 0 155.5 80.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.4\" y=\"67.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"115.4,78.9 122.2,75 117.1,69\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"122.6,38.2 129.3,34.3 124.3,28.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.2\" y=\"69.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"180.9\" y=\"91.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171.6\" y=\"38.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"83.9\" y=\"23.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 70,
+       "check": "180 - (180 - 45 - 25)",
+       "hints": [
+        "AB ∥ DC だから、∠BAC と等しい錯角はどれかな。",
+        "△ACD の角の和から ∠ADC を求めよう。",
+        "∠ABC と ∠ADC は向かい合う角だね。"
+       ],
+       "paths": [
+        [
+         "∠ACD = ∠BAC = 25°（錯角）",
+         "∠ADC = 180° − 45° − 25° = 110°",
+         "∠ABC = 180° − 110° = 70°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "正五角形 ABCDE が円に内接しています。∠CAD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"70.5\" y2=\"53.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70.5\" y1=\"53.9\" x2=\"89.4\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.4\" y1=\"112.1\" x2=\"150.6\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.6\" y1=\"112.1\" x2=\"169.5\" y2=\"53.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"169.5\" y1=\"53.9\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"89.4\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"150.6\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.2 38.9 A22 22 0 0 0 126.8 38.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"57.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.1\" y=\"55.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"83\" y=\"125.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"157\" y=\"125.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"179.9\" y=\"55.4\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 36,
+       "check": "360 // 5 // 2",
+       "hints": [
+        "正五角形の頂点は、円周を 5 つの等しい弧に分けるね。",
+        "弧 CD の中心角は何度かな。",
+        "∠CAD は弧 CD に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "弧 CD の中心角は 360° ÷ 5 = 72°",
+         "∠CAD = 72° ÷ 2",
+         "36°"
+        ],
+        [
+         "正五角形の 1 つの角は 108°",
+         "∠BAC = ∠DAE = 36°（二等辺三角形）",
+         "108° − 72° = 36°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC が円に内接し、点 A での接線と直線 BC の交点を P とします（P は C の先）。∠APB = 30°、∠ABC = 40° のとき、∠x（∠ACB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"79.6\" cy=\"75\" r=\"57\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.6\" y1=\"18\" x2=\"43\" y2=\"118.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"43\" y1=\"118.7\" x2=\"135.8\" y2=\"65.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.8\" y1=\"65.1\" x2=\"79.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.6\" y1=\"18\" x2=\"217.4\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.8\" y1=\"65.1\" x2=\"217.4\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M195.4 18 A22 22 0 0 0 198.3 29\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"183.6\" y=\"31.3\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M56 111.2 A15 15 0 0 0 48.1 104.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"61\" y=\"101.4\" font-size=\"12\" text-anchor=\"middle\">40°</text><path d=\"M124.3 55.5 A15 15 0 0 0 122.8 72.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.9\" y=\"66.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"79.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"146.6\" y=\"68.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"35.9\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"217.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 70,
+       "check": "40 + 30",
+       "hints": [
+        "接線 PA と弦 AC の角 ∠PAC と等しい円周角はどれかな。",
+        "∠PAC は何度かな。",
+        "∠ACB は △APC の外角だね。"
+       ],
+       "paths": [
+        [
+         "∠PAC = ∠ABC = 40°（接弦定理）",
+         "∠ACB は △APC の外角",
+         "40° + 30° = 70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形 ABC が円に内接し、∠BAC = 44° です。B をふくまない弧 AC の上の点 D について、∠x（∠ADC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"83.9\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"83.9\" y1=\"107.4\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.1\" y1=\"107.4\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"52.2\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M114.4 31.9 A15 15 0 0 0 125.6 31.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">44°</text><path d=\"M157.4 44.2 A14 14 0 0 0 165.7 65.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.7\" y=\"66.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"97.3\" y1=\"60.8\" x2=\"106.6\" y2=\"64.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"133.4\" y1=\"64.6\" x2=\"142.7\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"76.2\" y=\"120.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"163.8\" y=\"120.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 112,
+       "check": "180 - (180 - 44) // 2",
+       "hints": [
+        "∠ABC は何度かな。",
+        "四角形 ABCD は円に内接しているね。",
+        "∠ADC と ∠ABC は向かい合う角だね。"
+       ],
+       "paths": [
+        [
+         "∠ABC = (180° − 44°) ÷ 2 = 68°",
+         "∠ADC = 180° − 68°",
+         "112°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひきます。∠ACB = 50° のとき、∠x（∠EFC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"95.3,18 57.4,122 182.6,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"57.4\" y1=\"122\" x2=\"130.9\" y2=\"60.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.6\" y1=\"122\" x2=\"72.1\" y2=\"81.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130.9\" y1=\"60.4\" x2=\"72.1\" y2=\"81.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M172.9 110.5 A15 15 0 0 0 167.6 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157.2\" y=\"114.4\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M90.9 88.6 A20 20 0 0 0 90.9 74.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.1\" y=\"86\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"136,66.5 129.9,71.7 124.7,65.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"69.3,89.3 76.9,92 79.6,84.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.2\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"48.9\" y=\"133.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"192.2\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"139.1\" y=\"58\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"61.1\" y=\"87\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 40,
+       "check": "90 - 50",
+       "hints": [
+        "B、C、E、F は 1 つの円の上にあるね。",
+        "∠EFC と同じ弧 EC に対する円周角はどれかな。",
+        "∠EBC を △BCE で求めよう。"
+       ],
+       "paths": [
+        [
+         "B、C、E、F は BC を直径とする円の上",
+         "∠EFC = ∠EBC（弧 EC）",
+         "∠EBC = 90° − 50° = 40°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC が円 O に内接し、∠BAC = 56° です。点 B と点 C での接線の交点を P とするとき、∠x（∠BPC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"58.9\" r=\"40.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"86.1\" y2=\"81.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"153.9\" y2=\"81.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.1\" y1=\"81.7\" x2=\"153.9\" y2=\"81.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.1\" y1=\"81.7\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.9\" y1=\"81.7\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113 31.2 A15 15 0 0 0 127 31.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">56°</text><path d=\"M128.4 119.6 A15 15 0 0 0 111.6 119.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"108.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"77\" y=\"92.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"163\" y=\"92.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"147.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 68,
+       "check": "180 - 2 * 56",
+       "hints": [
+        "中心 O をとると、∠BOC は何度かな。",
+        "PB と PC は 2 本の接線だね。∠BPC + ∠BOC は何度かな。",
+        "接弦定理で ∠PBC を求める道もあるよ。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2 × 56° = 112°",
+         "∠BPC = 180° − 112°",
+         "68°"
+        ],
+        [
+         "∠PBC = ∠PCB = ∠BAC = 56°（接弦定理）",
+         "∠BPC = 180° − 56° × 2 = 68°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、AB = AD、∠BCD = 110° です。∠ABD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.9\" y1=\"87.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M132.3 113.4 A15 15 0 0 0 107.7 113.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"98.2\" font-size=\"12\" text-anchor=\"middle\">110°</text><path d=\"M89.1 87.8 A18 18 0 0 0 81.5 73\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.6\" y=\"77.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"91.5\" y1=\"50\" x2=\"99.7\" y2=\"55.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"140.3\" y1=\"55.8\" x2=\"148.5\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 55,
+       "check": "(180 - (180 - 110)) // 2",
+       "hints": [
+        "∠BAD は何度かな。",
+        "△ABD は二等辺三角形だね。",
+        "底角を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠BAD = 180° − 110° = 70°",
+         "∠ABD = (180° − 70°) ÷ 2",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正六角形 ABCDEF が円に内接しています。∠ADB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"25\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"70\" x2=\"94\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"115\" x2=\"146\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"172\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172\" y1=\"70\" x2=\"146\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"25\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"94\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146\" y1=\"115\" x2=\"68\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M134 94.2 A24 24 0 0 0 125.2 103\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.8\" y=\"93.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"88.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"57\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"88.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"151.5\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"183\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"151.5\" y=\"20.3\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 30,
+       "check": "360 // 6 // 2",
+       "hints": [
+        "正六角形の頂点は、円周を 6 つの等しい弧に分けるね。",
+        "弧 AB の中心角は何度かな。",
+        "∠ADB は弧 AB に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "弧 AB の中心角は 360° ÷ 6 = 60°",
+         "∠ADB = 60° ÷ 2",
+         "30°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、交点を H とします。∠A = 75° のとき、∠BHC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"112.8,18 40,122 200,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"122\" x2=\"133.9\" y2=\"43.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"200\" y1=\"122\" x2=\"92.6\" y2=\"46.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.2 30.3 A15 15 0 0 0 122.4 29.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">75°</text><path d=\"M103.6 68.6 A12 12 0 0 0 122.6 67.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.9\" y=\"90.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"139,49.3 132.9,54.4 127.8,48.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"88,53.3 94.6,57.9 99.2,51.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.2\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"31\" y=\"133.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"209.4\" y=\"132.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"140.3\" y=\"39.2\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"84.7\" y=\"44\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"112.8\" y=\"54.8\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 105,
+       "check": "180 - 75",
+       "hints": [
+        "四角形 AFHE の 2 つの直角に目をつけよう。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "AFHE は円に内接",
+         "∠FHE = 180° − 75° = 105°",
+         "∠BHC = 105°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "円 O に三角形 ABC が内接しています。∠OBC = 28° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"74.1\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.1\" y1=\"94.4\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.9\" y1=\"94.4\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"74.1\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.1 94.4 A15 15 0 0 0 87.3 87.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.3\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M112.3 30.9 A15 15 0 0 0 127.7 30.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.4\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"175.6\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 62,
+       "check": "90 - 28",
+       "hints": [
+        "△OBC は二等辺三角形だね。",
+        "∠BOC を求めよう。",
+        "∠BAC は ∠BOC の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 180° − 56° = 124°",
+         "∠BAC = 62°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 4 点 A、B、C、D があり、AC と BD の交点を E とします。∠ABD = 38°、∠BDC = 27° のとき、∠AEB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.1\" y1=\"100.6\" x2=\"134.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75\" y1=\"44\" x2=\"162.1\" y2=\"100.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"134.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M123.1 100.2 A22 22 0 0 0 109 102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.3\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M132.2 34.9 A15 15 0 0 0 139.2 34.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"137\" y=\"52.1\" font-size=\"12\" text-anchor=\"middle\">27°</text><path d=\"M117.1 71.3 A11 11 0 0 0 124.7 88.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.4\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"65.4\" y=\"43.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"171\" y=\"111.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"137.4\" y=\"14.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"137.3\" y=\"82.2\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 115,
+       "check": "180 - 38 - 27",
+       "hints": [
+        "∠BDC と同じ弧 BC に対する円周角を探そう。",
+        "∠BAC は何度かな。",
+        "△ABE の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BAC = ∠BDC = 27°",
+         "180° − 38° − 27°",
+         "115°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、∠B = (2x)°、∠D = (3x)° です。∠D は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"18.8\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"87.8\" x2=\"157.4\" y2=\"106.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"157.4\" y1=\"106.1\" x2=\"166.7\" y2=\"47.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166.7\" y1=\"47.2\" x2=\"111\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M85.8 90.9 A15 15 0 0 0 78.6 74.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M153.4 40.4 A15 15 0 0 0 164.4 62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"165.3\" y=\"118.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"176.6\" y=\"47.3\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 108,
+       "check": "180 * 3 // 5",
+       "hints": [
+        "∠B と ∠D の和は何度かな。",
+        "2x + 3x = 180 を解こう。",
+        "x がわかったら ∠D = 3x を計算しよう。"
+       ],
+       "paths": [
+        [
+         "2x + 3x = 180",
+         "x = 36",
+         "∠D = 108°"
+        ]
+       ],
+       "note": "x = 36 を答えにしやすい。何をたずねているかを最後に確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "円に内接する四角形 ABCD で、辺 BC を C の先にのばした点を E とします。∠BAC = 38°、∠CAD = 44° のとき、∠DCE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"68\" r=\"50\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"24.7\" x2=\"79.5\" y2=\"97.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.5\" y1=\"97.4\" x2=\"138.7\" y2=\"114.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138.7\" y1=\"114.4\" x2=\"167\" y2=\"50.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167\" y1=\"50.9\" x2=\"95\" y2=\"24.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"24.7\" x2=\"138.7\" y2=\"114.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138.7\" y1=\"114.4\" x2=\"165.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.9 39.4 A15 15 0 0 0 101.6 38.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.4\" y=\"56.7\" font-size=\"12\" text-anchor=\"middle\">38°</text><path d=\"M108.2 51.7 A30 30 0 0 0 123.2 35\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127\" y=\"57.7\" font-size=\"12\" text-anchor=\"middle\">44°</text><path d=\"M153.2 118.5 A15 15 0 0 0 144.8 100.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"164.1\" y=\"106.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"89.5\" y=\"20.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"70.6\" y=\"108.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"142.9\" y=\"129.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"177.3\" y=\"52\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"172.4\" y=\"135.3\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 82,
+       "check": "38 + 44",
+       "hints": [
+        "∠DCE は内接四角形の外角だね。",
+        "どの内角と等しいかな。",
+        "∠BAD を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠DCE = ∠BAD",
+         "38° + 44°",
+         "82°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠A = 112°、∠B = 80°、∠C = 68° です。この四角形は円に内接しますか。",
+       "choices": [
+        "内接する",
+        "内接しない"
+       ],
+       "answer": "内接する",
+       "check": "'内接する' if 112 + 68 == 180 else '内接しない'",
+       "hints": [
+        "向かい合う角はどれとどれかな。",
+        "∠A + ∠C を計算しよう。",
+        "和が 180° かどうかを見よう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 180°",
+         "内接する"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひき、交点を H とします。∠A = 66° のとき、∠BHC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"112.2,18 52.2,122 187.8,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"52.2\" y1=\"122\" x2=\"141\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"187.8\" y1=\"122\" x2=\"86.1\" y2=\"63.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.7 31 A15 15 0 0 0 121.1 30.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.7\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">66°</text><path d=\"M102.5 85.4 A12 12 0 0 0 122.6 84.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.6\" y=\"107.5\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"145.7,64 139.2,68.7 134.5,62.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"82.1,70.2 89,74.2 93,67.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.7\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"43.3\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"197.1\" y=\"132.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"149.7\" y=\"55.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"76.1\" y=\"63.5\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"112.2\" y=\"72.3\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 114,
+       "check": "180 - 66",
+       "hints": [
+        "四角形 AFHE の 2 つの直角に目をつけよう。",
+        "∠FHE は何度かな。",
+        "∠BHC と ∠FHE は対頂角だね。"
+       ],
+       "paths": [
+        [
+         "AFHE は円に内接",
+         "∠FHE = 114°",
+         "∠BHC = 114°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O の点 A での接線を ST とします。∠OAB = 22° のとき、∠TAB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"156.1\" y2=\"107.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 33 A15 15 0 0 0 125.6 31.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.3\" y=\"49.7\" font-size=\"12\" text-anchor=\"middle\">22°</text><path d=\"M127.5 36.5 A20 20 0 0 0 140 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.4\" y=\"40.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"163.8\" y=\"120.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 68,
+       "check": "90 - 22",
+       "hints": [
+        "接線と半径の角は何度かな。",
+        "∠OAT から ∠OAB をひこう。",
+        "90° − 22° を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠OAT = 90°",
+         "90° − 22°",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の外の点 P から接線 PA、PB をひきます。∠APB = 72° のとき、A、B をふくむ大きいほうの弧の上の点 C について、∠ACB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"101.8\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.2\" y1=\"70\" x2=\"132.3\" y2=\"27.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.2\" y1=\"70\" x2=\"132.3\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"52.9\" y1=\"87.8\" x2=\"132.3\" y2=\"27.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"52.9\" y1=\"87.8\" x2=\"132.3\" y2=\"112.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M178.1 61.2 A15 15 0 0 0 178.1 78.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">72°</text><path d=\"M67.2 92.2 A15 15 0 0 0 64.9 78.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"80.5\" y=\"87.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"138.8\" y=\"23.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"138.8\" y=\"125.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"201.2\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"42.6\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 54,
+       "check": "(180 - 72) // 2",
+       "hints": [
+        "中心 O をとって、∠AOB を求めよう。",
+        "∠APB + ∠AOB = 180° だね。",
+        "∠ACB は ∠AOB の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 108°",
+         "∠ACB = 54°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "四角形 ABCD で、∠BAC = ∠BDC = 42°、∠ABC = 70° です。∠ADC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"79.2\" y1=\"18\" x2=\"93.8\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.8\" y1=\"122\" x2=\"160.8\" y2=\"86.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160.8\" y1=\"86.4\" x2=\"148.3\" y2=\"27.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"148.3\" y1=\"27.7\" x2=\"79.2\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79.2\" y1=\"18\" x2=\"160.8\" y2=\"86.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.8\" y1=\"122\" x2=\"148.3\" y2=\"27.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.3 32.9 A15 15 0 0 0 90.7 27.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.8\" y=\"46.7\" font-size=\"12\" text-anchor=\"middle\">42°</text><path d=\"M140.8 40.7 A15 15 0 0 0 151.4 42.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.9\" y=\"59.6\" font-size=\"12\" text-anchor=\"middle\">42°</text><path d=\"M107.1 115 A15 15 0 0 0 91.8 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.6\" y=\"101.3\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M134.4 25.8 A14 14 0 0 0 151.2 41.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.9\" y=\"51.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"71.8\" y=\"14.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"89.3\" y=\"136.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"170.3\" y=\"96.8\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"155\" y=\"23.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "等しい角から、4 点について何が言えるかな。",
+        "四角形 ABCD は円に内接するね。",
+        "向かい合う角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "4 点は 1 つの円の上",
+         "∠ADC = 180° − 70°",
+         "110°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC が円に内接し、点 A での接線を ST とします。∠TAB = 58°、∠ABC = 67° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"166.7\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166.7\" y1=\"92.8\" x2=\"82.6\" y2=\"106.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82.6\" y1=\"106.1\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M127.9 30.7 A15 15 0 0 0 135 18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.5\" y=\"35.8\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M158.8 80.1 A15 15 0 0 0 151.9 95.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.3\" y=\"85.4\" font-size=\"12\" text-anchor=\"middle\">67°</text><path d=\"M111.4 38.3 A22 22 0 0 0 131.7 36.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.7\" y=\"57.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"176.6\" y=\"102.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"74.7\" y=\"118.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">S</text><text x=\"179.8\" y=\"15.1\" font-size=\"14\" text-anchor=\"middle\">T</text></svg>",
+       "answer": 55,
+       "check": "180 - 58 - 67",
+       "hints": [
+        "∠TAB と等しい円周角はどれかな。",
+        "∠ACB は何度かな。",
+        "△ABC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 58°",
+         "180° − 58° − 67°",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC = AD で、D は ∠BAC の外側にあります。∠BAC = 70° のとき、∠BDC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"134.6\" y1=\"70\" x2=\"75.4\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134.6\" y1=\"70\" x2=\"104.5\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134.6\" y1=\"70\" x2=\"164.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.6\" y1=\"18\" x2=\"75.4\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.6\" y1=\"18\" x2=\"104.5\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M119.8 67.4 A15 15 0 0 0 127.1 83\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.2\" y=\"86\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M142.8 28.1 A24 24 0 0 0 152.6 38.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"137.3\" y=\"47.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><line x1=\"105.9\" y1=\"59.9\" x2=\"104.1\" y2=\"69.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"115.2\" y1=\"93.5\" x2=\"123.9\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"153.9\" y1=\"46.5\" x2=\"145.2\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.6\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.6\" y=\"62.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"101.6\" y=\"137.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"172\" y=\"14.8\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 35,
+       "check": "70 // 2",
+       "hints": [
+        "B、C、D は、どんな円の上にあるかな。",
+        "∠BAC はその円の中心角だね。",
+        "∠BDC は同じ弧に対する円周角だよ。"
+       ],
+       "paths": [
+        [
+         "B、C、D は A を中心とする円の上",
+         "∠BDC = 70° ÷ 2",
+         "35°"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -228172,7 +232206,7 @@ window.ROADMAP = {
     18.44
    ],
    "comb": {
-    "b": 0.342,
+    "b": 0.353,
     "r": 0.0,
     "rg": [
      "shiki",
@@ -235309,7 +239343,7 @@ window.ROADMAP = {
     14.67
    ],
    "comb": {
-    "b": 0.347,
+    "b": 0.354,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -236937,7 +240971,7 @@ window.ROADMAP = {
     23.26
    ],
    "comb": {
-    "b": 0.223,
+    "b": 0.213,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -236997,7 +241031,7 @@ window.ROADMAP = {
     23.65
    ],
    "comb": {
-    "b": 0.322,
+    "b": 0.333,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -241887,7 +245921,7 @@ window.ROADMAP = {
     6.49
    ],
    "comb": {
-    "b": 0.449,
+    "b": 0.451,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -242241,7 +246275,7 @@ window.ROADMAP = {
     21.41
    ],
    "comb": {
-    "b": 0.476,
+    "b": 0.477,
     "r": 0.0,
     "rg": [
      "chiso",
@@ -245071,7 +249105,7 @@ window.ROADMAP = {
     3.18
    ],
    "comb": {
-    "b": 0.382,
+    "b": 0.39,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -245191,56 +249225,2284 @@ window.ROADMAP = {
    "needs": [
     "G-018",
     "G-020",
-    "G-023"
+    "G-023",
+    "G-054",
+    "G-022"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形 ABC の 3 つの辺の垂直二等分線をひくと、どうなるか見よう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polygon points=\"125.4,18.3 74.1,94.4 165.9,94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"94.4\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"145.7\" y1=\"56.3\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"99.8\" y1=\"56.3\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,94.4 128,86.4 120,86.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"141.9,49.3 134.9,53 138.6,60.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"95.3,63 101.9,67.5 106.4,60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"126.6\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.4\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"175.6\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"109.7\" y=\"71.1\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "線分の垂直二等分線の上の点は、その両はしから等しい距離にあります。逆に、両はしから等しい距離の点は垂直二等分線の上にあります（二等辺三角形の性質）。辺 AB と辺 AC の垂直二等分線の交点を O とすると、OA = OB、OA = OC なので OB = OC で、O は辺 BC の垂直二等分線の上にもあります。だから 3 本の垂直二等分線は 1 点 O で交わります。O を中心に半径 OA の円をかくと、3 つの頂点を通ります。この円を外接円、O を外心といいます。外心と頂点を結ぶと、二等辺三角形 OAB、OBC、OCA ができます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O に三角形 ABC が内接し、∠BAC = 52° です。∠OBC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"79\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"161\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"102\" x2=\"161\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"79\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"161\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.4 31.5 A15 15 0 0 0 126.6 31.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">52°</text><path d=\"M94 102 A15 15 0 0 0 90.8 92.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.5\" y=\"97.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"70.4\" y=\"113.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"169.6\" y=\"113.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 38,
+       "check": "90 - 52",
+       "hints": [
+        "∠BOC は ∠BAC の何倍かな。",
+        "△OBC は二等辺三角形だね。",
+        "(180° − ∠BOC) ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 104°",
+         "∠OBC = (180° − 104°) ÷ 2",
+         "38°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "PA = PB となる点 P は、どこにありますか。",
+       "choices": [
+        "線分 AB の垂直二等分線の上",
+        "∠A の二等分線の上",
+        "線分 AB の上だけ"
+       ],
+       "answer": "線分 AB の垂直二等分線の上",
+       "hints": [
+        "PA = PB なら、△PAB はどんな三角形かな。",
+        "二等辺三角形の頂角の二等分線は、底辺をどのように分けたかな。",
+        "P と AB の中点を結ぶ直線は、AB とどんな角で交わるかな。"
+       ],
+       "paths": [
+        [
+         "△PAB は二等辺三角形",
+         "P と AB の中点を結ぶ線は AB に垂直",
+         "P は垂直二等分線の上"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。OA = 5 cm のとき、外接円の直径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"125.4,18.3 74.1,94.4 165.9,94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"125.4\" y2=\"18.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"74.1\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"126.6\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.4\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"175.6\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"125.5\" y=\"84.4\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 10,
+       "check": "5 * 2",
+       "hints": [
+        "外接円の中心はどこかな。",
+        "OA は外接円の何にあたるかな。",
+        "直径は半径の何倍かな。"
+       ],
+       "paths": [
+        [
+         "OA は外接円の半径",
+         "直径 = 5 × 2",
+         "10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。∠BAC = 64° のとき、∠x（∠BOC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"120,18 73.3,92.8 166.7,92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"73.3\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"166.7\" y2=\"92.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.1 30.7 A15 15 0 0 0 127.9 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M106.5 76.6 A15 15 0 0 0 133.5 76.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"63.4\" y=\"102.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"176.6\" y=\"102.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 128,
+       "check": "64 * 2",
+       "hints": [
+        "外接円で、∠BAC と ∠BOC はどんな角かな。",
+        "円周角と中心角の関係を使おう。",
+        "中心角は円周角の 2 倍だね。"
+       ],
+       "paths": [
+        [
+         "∠BAC は弧 BC の円周角、∠BOC は中心角",
+         "64° × 2",
+         "128°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。O は三角形の内側にあり、∠OBC = 25°、∠OCA = 30° です。∠x（∠OAB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"115.5,18.2 72.9,92 167.1,92\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"115.5\" y2=\"18.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"72.9\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"167.1\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M87.9 92 A15 15 0 0 0 86.5 85.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.2\" y=\"90.1\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M155.7 75.6 A20 20 0 0 0 149 83.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.8\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M105.5 35.5 A20 20 0 0 0 117.2 38.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.3\" y=\"54.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"114.5\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.9\" y=\"101.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.1\" y=\"101.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 35,
+       "check": "90 - 25 - 30",
+       "hints": [
+        "△OAB、△OBC、△OCA はどれも二等辺三角形だね。",
+        "3 つの二等辺三角形の底角を a、b、c とすると、三角形 ABC の角の和はどう書けるかな。",
+        "2(a + b + c) = 180° から a + b + c を求めよう。"
+       ],
+       "paths": [
+        [
+         "二等辺三角形の底角を ∠OAB = a、∠OBC = 25°、∠OCA = 30° とする",
+         "2(a + 25 + 30) = 180",
+         "a = 90 − 55 = 35°"
+        ],
+        [
+         "∠BOC = 130° で ∠A = 65°",
+         "∠COA = 120° で ∠B = 60°",
+         "∠C = 55° で ∠AOB = 110°",
+         "∠OAB = (180° − 110°) ÷ 2 = 35°"
+        ]
+       ],
+       "note": "外心が内側にあるとき、3 つの底角の和はいつも 90° になる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "∠C = 90° の直角三角形 ABC で、斜辺 AB = 13 cm です。外接円の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"164.1,42.4 75.9,97.6 164.1,97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"164.1,89.6 156.1,89.6 156.1,97.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"173.4\" y=\"41.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"66.6\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"173.4\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 6.5,
+       "accept": [
+        "13/2"
+       ],
+       "check": "13 / 2",
+       "hints": [
+        "∠C = 90° だから、C は AB を直径とする円の上にあるね。",
+        "外接円の直径はどの辺かな。",
+        "斜辺の半分を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠C = 90° なので AB は外接円の直径",
+         "外心は AB の中点",
+         "半径 13 ÷ 2 = 6.5 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。∠BOC = 140° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"120,18 71.1,87.8 168.9,87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.9\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M105.9 75.1 A15 15 0 0 0 134.1 75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\">140°</text><path d=\"M111.4 30.3 A15 15 0 0 0 128.6 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.2\" y=\"96.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 70,
+       "check": "140 // 2",
+       "hints": [
+        "∠BOC は外接円の中心角だね。",
+        "∠BAC は同じ弧 BC に対する円周角だね。",
+        "140° の半分だよ。"
+       ],
+       "paths": [
+        [
+         "∠BAC = 140° ÷ 2",
+         "70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。∠BAC = 58° のとき、∠OBC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"118.2,18 75.9,97.6 164.1,97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"75.9\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"164.1\" y2=\"97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M111.1 31.3 A15 15 0 0 0 125.7 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.7\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M90.9 97.6 A15 15 0 0 0 88.6 89.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.8\" y=\"94\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"117.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"66.6\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"173.4\" y=\"108.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 32,
+       "check": "90 - 58",
+       "hints": [
+        "∠BOC を求めよう。",
+        "△OBC は二等辺三角形だね。",
+        "(180° − ∠BOC) ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 116°",
+         "∠OBC = (180° − 116°) ÷ 2",
+         "32°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。外接円の半径が 6 cm、BC = 7 cm のとき、三角形 OBC のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"125.4,18.3 74.1,94.4 165.9,94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"74.1\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"126.6\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"64.4\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"175.6\" y=\"104.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 19,
+       "check": "6 + 6 + 7",
+       "hints": [
+        "OB と OC は外接円の何かな。",
+        "OB と OC は何 cm かな。",
+        "3 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "OB = OC = 6 cm（半径）",
+         "6 + 6 + 7",
+         "19 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "鋭角三角形、直角三角形、鈍角三角形で、外心の位置をくらべよう。図は ∠A が鈍角の三角形です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"115.5,18.2 72.9,48 167.1,48\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"72.9\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"167.1\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"115.5\" y2=\"18.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M103.2 26.8 A15 15 0 0 0 128.5 25.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M133.6 63.7 A15 15 0 0 0 106.4 63.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"114.5\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.9\" y=\"48.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.1\" y=\"48.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "外心は、鋭角三角形では三角形の内側、直角三角形では斜辺の中点、鈍角三角形では三角形の外側（鈍角と向かい合う辺の向こう）にあります。∠A が鈍角のとき、A は弧 BC の小さいほうの上にあるので、∠BAC は大きいほうの弧に対する円周角です。だから ∠BOC（180° より小さいほう）= 360° − 2 × ∠A になります。図では ∠A = 115° なので ∠BOC = 360° − 230° = 130° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の外心を O とします。∠A = 47° のとき、∠BOC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"113.7,18.4 82,105.5 158,105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"82\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"158\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M108.5 32.5 A15 15 0 0 0 120.5 31.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.4\" y=\"50.5\" font-size=\"12\" text-anchor=\"middle\">47°</text><path d=\"M109 80.2 A15 15 0 0 0 131 80.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"112.3\" y=\"12.4\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"73.9\" y=\"117.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"166.1\" y=\"117.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 94,
+       "check": "47 * 2",
+       "hints": [
+        "∠BOC は弧 BC に対する中心角だね。",
+        "∠BAC は同じ弧に対する円周角だね。",
+        "47° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2 × 47°",
+         "94°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "∠C = 90° の直角三角形 ABC で、斜辺 AB の中点を M とします。CM = 4 cm のとき、AB は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"156.4,18 83.6,122 156.4,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.4\" y1=\"122\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"156.4,114 148.4,114 148.4,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"160.7\" y=\"12.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"75.2\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"162.7\" y=\"135.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 8,
+       "check": "4 * 2",
+       "hints": [
+        "M は、どんな円の中心になるかな。",
+        "MA、MB、MC はどんな関係かな。",
+        "AB は MA の何倍かな。"
+       ],
+       "paths": [
+        [
+         "M は外接円の中心で MA = MB = MC = 4 cm",
+         "AB = 4 × 2",
+         "8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠A = 120°、∠B = 35° の三角形 ABC の外心は、どこにありますか。",
+       "choices": [
+        "三角形の外側",
+        "三角形の内側",
+        "辺 BC の中点"
+       ],
+       "answer": "三角形の外側",
+       "check": "'三角形の外側' if 120 > 90 else ('辺 BC の中点' if 120 == 90 else '三角形の内側')",
+       "hints": [
+        "いちばん大きい角は何度かな。",
+        "その角は鋭角、直角、鈍角のどれかな。",
+        "鈍角三角形の外心はどこにあったかな。"
+       ],
+       "paths": [
+        [
+         "∠A = 120° は鈍角",
+         "鈍角三角形の外心は三角形の外側"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠A = 110° の三角形 ABC の外心を O とします。∠x（∠BOC、180° より小さいほう）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"111,18.8 71.1,52.2 168.9,52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"71.1\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"168.9\" y2=\"52.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.1 24.6 A9 9 0 0 0 118.8 23.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.9\" y=\"44.9\" font-size=\"12\" text-anchor=\"middle\">110°</text><path d=\"M124.7 68.3 A5 5 0 0 0 115.3 68.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"56.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"109.1\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"60.8\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"179.2\" y=\"53.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 140,
+       "check": "360 - 2 * 110",
+       "hints": [
+        "A は、弧 BC のどちらの側にあるかな。",
+        "∠BAC は、大きいほうの弧 BC に対する円周角だね。その中心角は何度かな。",
+        "360° から大きいほうの中心角をひこう。"
+       ],
+       "paths": [
+        [
+         "大きいほうの弧 BC の中心角 = 2 × 110° = 220°",
+         "∠BOC = 360° − 220°",
+         "140°"
+        ],
+        [
+         "外接円の上で、A と反対側の弧の点 D をとる",
+         "∠BDC = 180° − 110° = 70°（内接四角形）",
+         "∠BOC = 2 × 70° = 140°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90°、∠A = 34° の直角三角形 ABC で、斜辺 AB の中点を M とします。∠x（∠MCB）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"155.1,18 84.9,122 155.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.1\" y1=\"122\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M146.7 30.4 A15 15 0 0 0 155.1 33\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.9\" y=\"49\" font-size=\"12\" text-anchor=\"middle\">34°</text><path d=\"M143.9 105.4 A20 20 0 0 0 135.1 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.9\" y=\"110.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"155.1,114 147.1,114 147.1,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.2\" y=\"12.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"76.7\" y=\"134.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"161.2\" y=\"136\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 56,
+       "check": "90 - 34",
+       "hints": [
+        "M は外接円の中心だから、MB と MC はどうかな。",
+        "△MBC は二等辺三角形だね。",
+        "∠B を求めよう。"
+       ],
+       "paths": [
+        [
+         "MB = MC（M は外心）",
+         "∠MCB = ∠B",
+         "∠B = 90° − 34° = 56°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "鋭角三角形 ABC の外心を O とします。∠ABC = 60° のとき、∠x（∠OAC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"129,18.8 80.2,103.4 159.8,103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"129\" y2=\"18.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"159.8\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95.2 103.4 A15 15 0 0 0 87.7 90.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.4\" y=\"93.6\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M125.6 38.5 A20 20 0 0 0 135.9 37.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"131.9\" y=\"55.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"130.9\" y=\"12.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71.7\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"168.3\" y=\"115.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 30,
+       "check": "90 - 60",
+       "hints": [
+        "∠AOC は、∠ABC と同じ弧に対する中心角だね。",
+        "∠AOC は何度かな。",
+        "△OAC は二等辺三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠AOC = 2 × 60° = 120°",
+         "∠OAC = (180° − 120°) ÷ 2",
+         "30°"
+        ]
+       ],
+       "note": "∠OAC = 90° − ∠B。7 日目に、垂線 AH がつくる角 ∠BAH も 90° − ∠B になることを見る。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠A = 125° の三角形 ABC の外心を O とします。∠BOC（180° より小さいほう）は何度ですか。",
+       "answer": 110,
+       "check": "360 - 2 * 125",
+       "hints": [
+        "∠BAC は、大きいほうの弧 BC に対する円周角だね。",
+        "その中心角は何度かな。",
+        "360° からひこう。"
+       ],
+       "paths": [
+        [
+         "大きいほうの中心角 = 250°",
+         "360° − 250°",
+         "110°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90° の直角三角形 ABC で、AB = 9 cm です。外接円の半径は何 cm ですか。",
+       "answer": 4.5,
+       "accept": [
+        "9/2"
+       ],
+       "check": "9 / 2",
+       "hints": [
+        "直角三角形の外心はどこにあったかな。",
+        "外接円の直径はどの辺かな。",
+        "9 を 2 でわろう。"
+       ],
+       "paths": [
+        [
+         "外心は斜辺 AB の中点",
+         "半径 = 9 ÷ 2",
+         "4.5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠A = 90° の直角三角形 ABC の外心は、どこにありますか。",
+       "choices": [
+        "辺 BC の中点",
+        "辺 AB の中点",
+        "三角形の外側"
+       ],
+       "answer": "辺 BC の中点",
+       "hints": [
+        "直角はどの頂点にあるかな。",
+        "斜辺はどの辺かな。",
+        "直角三角形の外心は斜辺の中点だね。"
+       ],
+       "paths": [
+        [
+         "∠A = 90° なので斜辺は BC",
+         "外心は BC の中点"
+        ]
+       ],
+       "note": "斜辺はいつも AB とは限らない。直角と向かい合う辺が斜辺。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形 ABC の 3 つの角の二等分線をひくと、どうなるか見よう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"122.7\" cy=\"86\" r=\"36\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"54.9\" y1=\"122\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"185.1\" y1=\"122\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"122.7\" cy=\"86\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.2\" y=\"132.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.6\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"122.7\" y=\"101.9\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "explain": "角の二等分線の上の点は、角の 2 辺から等しい距離にあります。逆に、角の内側で 2 辺から等しい距離の点は、角の二等分線の上にあります（直角三角形の合同）。∠B と ∠C の二等分線の交点を I とすると、I は辺 BA と BC からも、辺 CB と CA からも等しい距離にあるので、辺 AB と AC からも等しい距離で、∠A の二等分線の上にもあります。だから 3 本の角の二等分線は 1 点 I で交わります。I を中心に、辺までの距離を半径とする円は 3 辺に接します。この円を内接円、I を内心といいます。△IBC で ∠BIC = 180° − (∠B + ∠C) ÷ 2 = 90° + ∠A ÷ 2 です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "∠A = 112° の三角形 ABC の外心を O とします。∠BOC（180° より小さいほう）は何度ですか。",
+       "answer": 136,
+       "check": "360 - 2 * 112",
+       "hints": [
+        "∠A は鈍角だね。外心はどこにあるかな。",
+        "∠BAC は、大きいほうの弧 BC に対する円周角だね。",
+        "360° から 2 × 112° をひこう。"
+       ],
+       "paths": [
+        [
+         "大きいほうの中心角 = 224°",
+         "360° − 224°",
+         "136°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円 O の外の点 P から接線 PA、PB をひきます。∠APB = 54° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"88.7\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.3\" y1=\"70\" x2=\"112.3\" y2=\"23.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.3\" y1=\"70\" x2=\"112.3\" y2=\"116.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.7\" y1=\"70\" x2=\"112.3\" y2=\"23.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.7\" y1=\"70\" x2=\"112.3\" y2=\"116.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M189.9 63.2 A15 15 0 0 0 189.9 76.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"175.3\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">54°</text><path d=\"M95.5 83.4 A15 15 0 0 0 95.5 56.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.7\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"108.7,30.8 115.8,34.4 119.5,27.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"108.7,109.2 115.8,105.6 119.5,112.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"88.7\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"117.3\" y=\"18.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"117.3\" y=\"131\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"214.3\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"88.7\" y=\"85.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 126,
+       "check": "180 - 54",
+       "hints": [
+        "∠OAP と ∠OBP は何度かな。",
+        "四角形 OAPB の角の和は何度かな。",
+        "∠APB + ∠AOB は何度かな。"
+       ],
+       "paths": [
+        [
+         "∠OAP = ∠OBP = 90°",
+         "∠AOB = 360° − 180° − 54°",
+         "126°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠IBC = 25°、∠ICB = 30° のとき、∠x（∠BIC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"133.6,18 46.3,122 193.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"46.3\" y1=\"122\" x2=\"127.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"193.7\" y1=\"122\" x2=\"127.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M68.3 122 A22 22 0 0 0 66.3 112.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"80.5\" y=\"118.6\" font-size=\"12\" text-anchor=\"middle\">25°</text><path d=\"M174.6 111 A22 22 0 0 0 171.7 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.8\" y=\"117.1\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M117 89.1 A12 12 0 0 0 138.2 90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"126.7\" y=\"113.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"127.8\" cy=\"84\" r=\"2.6\" fill=\"currentColor\"/><text x=\"134.9\" y=\"12\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"36.3\" y=\"131.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"203.4\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"127.8\" y=\"77.9\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 125,
+       "check": "180 - 25 - 30",
+       "hints": [
+        "△IBC の 2 つの角がわかっているね。",
+        "三角形の角の和を使おう。",
+        "180° から 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "△IBC で 180° − 25° − 30°",
+         "125°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠A = 64° のとき、∠x（∠BIC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"114.9,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"117.3\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"117.3\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.9\" y1=\"18\" x2=\"117.3\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M107.4 31 A15 15 0 0 0 123.3 30.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.9\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M106.9 92 A12 12 0 0 0 127.9 91.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.8\" y=\"115.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"117.3\" cy=\"86\" r=\"2.6\" fill=\"currentColor\"/><text x=\"114.5\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.3\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.8\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.3\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 122,
+       "check": "90 + 64 // 2",
+       "hints": [
+        "∠B + ∠C は何度かな。",
+        "∠IBC + ∠ICB は、∠B + ∠C の何分の 1 かな。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠C = 180° − 64° = 116°",
+         "∠IBC + ∠ICB = 58°",
+         "∠BIC = 180° − 58° = 122°"
+        ],
+        [
+         "∠BIC = 90° + ∠A ÷ 2",
+         "90° + 32°",
+         "122°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠BIC = 130° のとき、∠A は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 32.7,122 207.3,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"32.7\" y1=\"122\" x2=\"120\" y2=\"81.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207.3\" y1=\"122\" x2=\"120\" y2=\"81.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M109.1 86.4 A12 12 0 0 0 130.9 86.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"110.5\" font-size=\"12\" text-anchor=\"middle\">130°</text><path d=\"M110.4 29.5 A15 15 0 0 0 129.6 29.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"81.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"22.6\" y=\"131.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"217.4\" y=\"131.1\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"75.2\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 80,
+       "check": "(130 - 90) * 2",
+       "hints": [
+        "∠IBC + ∠ICB は何度かな。",
+        "∠B + ∠C は、その何倍かな。",
+        "180° から ∠B + ∠C をひこう。"
+       ],
+       "paths": [
+        [
+         "∠IBC + ∠ICB = 180° − 130° = 50°",
+         "∠B + ∠C = 100°",
+         "∠A = 180° − 100° = 80°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC の内心を I とします。∠IAB = 28°、∠IBC = 33° のとき、∠x（∠ICA）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"110.7,18 64.4,122 175.6,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"110.7\" y1=\"18\" x2=\"115.6\" y2=\"88.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.4\" y1=\"122\" x2=\"115.6\" y2=\"88.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"175.6\" y1=\"122\" x2=\"115.6\" y2=\"88.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M102.5 36.3 A20 20 0 0 0 112.1 38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.9\" y=\"54.7\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M86.4 122 A22 22 0 0 0 82.8 110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.9\" y=\"116.3\" font-size=\"12\" text-anchor=\"middle\">33°</text><path d=\"M164 103.3 A22 22 0 0 0 156.4 111.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.3\" y=\"102.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"115.6\" cy=\"88.7\" r=\"2.6\" fill=\"currentColor\"/><text x=\"109.7\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"55.2\" y=\"132.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"185.2\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"115.6\" y=\"104.6\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 29,
+       "check": "90 - 28 - 33",
+       "hints": [
+        "∠A、∠B、∠C はそれぞれ ∠IAB、∠IBC、∠ICA の何倍かな。",
+        "三角形の角の和を、この 3 つの角で書こう。",
+        "2(28° + 33° + x) = 180° を解こう。"
+       ],
+       "paths": [
+        [
+         "∠A = 2 × 28°、∠B = 2 × 33°、∠C = 2x",
+         "2(28 + 33 + x) = 180",
+         "x = 90 − 61 = 29°"
+        ]
+       ],
+       "note": "内心では、3 つの角の半分の和がいつも 90° になる。1 日目の外心の底角の和 90° と見くらべる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠A = 50° のとき、∠BIC は何度ですか。",
+       "answer": 115,
+       "check": "90 + 50 // 2",
+       "hints": [
+        "∠B + ∠C は何度かな。",
+        "その半分が ∠IBC + ∠ICB だね。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠C = 130°",
+         "半分は 65°",
+         "∠BIC = 180° − 65° = 115°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠B = 76°、∠C = 44° のとき、∠BIC は何度ですか。",
+       "answer": 120,
+       "check": "180 - 76 // 2 - 44 // 2",
+       "hints": [
+        "∠IBC は ∠B の半分だね。",
+        "∠ICB は ∠C の半分だね。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠IBC = 38°、∠ICB = 22°",
+         "∠BIC = 180° − 38° − 22°",
+         "120°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠IBA = 20°、∠ICA = 35° のとき、∠BAC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"163,18 39.1,122 200.9,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163\" y1=\"18\" x2=\"145.6\" y2=\"83.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"39.1\" y1=\"122\" x2=\"145.6\" y2=\"83.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"200.9\" y1=\"122\" x2=\"145.6\" y2=\"83.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M61.7 113.8 A24 24 0 0 0 57.5 106.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"71.1\" y=\"107.7\" font-size=\"12\" text-anchor=\"middle\">20°</text><path d=\"M193.4 101.3 A22 22 0 0 0 182.9 109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.6\" y=\"98.4\" font-size=\"12\" text-anchor=\"middle\">35°</text><path d=\"M151.6 27.6 A15 15 0 0 0 168.2 32.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.8\" y=\"49.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"145.6\" cy=\"83.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"166.9\" y=\"12.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"28.8\" y=\"130.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"210.5\" y=\"132.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"145.6\" y=\"99.2\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 70,
+       "check": "180 - 2 * 20 - 2 * 35",
+       "hints": [
+        "∠B と ∠C は何度かな。",
+        "∠B = 2 × 20°、∠C = 2 × 35° だね。",
+        "三角形の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B = 40°、∠C = 70°",
+         "∠A = 180° − 40° − 70°",
+         "70°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形 ABC の内接円が、辺 BC、CA、AB に D、E、F で接しています。頂点から接点までの長さを考えよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"122.7\" cy=\"86\" r=\"36\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"122.7\" y1=\"86\" x2=\"122.7\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"122.7\" y1=\"86\" x2=\"153.9\" y2=\"67.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"122.7\" y1=\"86\" x2=\"92.8\" y2=\"65.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"122.7\" cy=\"86\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"122.7\" cy=\"122\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"153.9\" cy=\"67.9\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"92.8\" cy=\"65.8\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.2\" y=\"132.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.6\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"128.2\" y=\"100.4\" font-size=\"14\" text-anchor=\"middle\">I</text><text x=\"122.7\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"163.4\" y=\"67.3\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"83.7\" y=\"64.6\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "explain": "円の外の点からひいた 2 本の接線の長さは等しいので、AE = AF、BD = BF、CD = CE です。AF = x、BD = y、CD = z とすると、AB = x + y、BC = y + z、CA = z + x。3 つの辺をたすと 2(x + y + z) なので、x = (AB + CA − BC) ÷ 2 です。また、三角形を内心 I と 3 つの辺でできる 3 つの三角形 IBC、ICA、IAB に分けると、どれも高さが内接円の半径 r なので、面積 S = r × (3 辺の和) ÷ 2 になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の内心を I とします。∠A = 76° のとき、∠BIC は何度ですか。",
+       "answer": 128,
+       "check": "90 + 76 // 2",
+       "hints": [
+        "∠B + ∠C は何度かな。",
+        "その半分が ∠IBC + ∠ICB だね。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠C = 104°",
+         "半分は 52°",
+         "∠BIC = 128°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "四角形 ABCD の 4 つの辺が、すべて 1 つの円に接しています。AB = 8 cm、BC = 6 cm、CD = 5 cm のとき、DA は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"121.8\" cy=\"73.3\" r=\"36.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"136.6,18 70.6,64.2 111,122 169.4,88.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"139.5\" y=\"12.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59.8\" y=\"67.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"108.6\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"179.9\" y=\"96.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 7,
+       "check": "8 + 5 - 6",
+       "hints": [
+        "頂点からの 2 本の接線の長さは等しいね。",
+        "向かい合う辺の和はどうなったかな。",
+        "AB + CD = BC + DA を使おう。"
+       ],
+       "paths": [
+        [
+         "AB + CD = BC + DA",
+         "8 + 5 = 6 + DA",
+         "DA = 7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = 7 cm、BC = 8 cm、CA = 9 cm の三角形 ABC の内接円が、辺 AB に F で接しています。AF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"104.5\" cy=\"87.3\" r=\"34.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"89,18 58,122 182,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"104.5\" cy=\"122\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"130.3\" cy=\"64.2\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"71.3\" cy=\"77.4\" r=\"2.6\" fill=\"currentColor\"/><text x=\"86.6\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"49.2\" y=\"133.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"192\" y=\"131.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"104.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"138.5\" y=\"61.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"60.7\" y=\"79.2\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 4,
+       "check": "(7 + 9 - 8) // 2",
+       "hints": [
+        "AF = AE、BF = BD、CD = CE だね。",
+        "AF = x、BD = y、CD = z として、3 つの辺を式にしよう。",
+        "x = (AB + CA − BC) ÷ 2 を使おう。"
+       ],
+       "paths": [
+        [
+         "x + y = 7、y + z = 8、z + x = 9",
+         "x + y + z = 12",
+         "x = 12 − 8 = 4 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 24 cm²、3 つの辺の和が 24 cm の三角形があります。内接円の半径は何 cm ですか。",
+       "answer": 2,
+       "check": "24 * 2 // 24",
+       "hints": [
+        "三角形を、内心と 3 つの辺で 3 つの三角形に分けよう。",
+        "3 つの三角形の高さは、どれも何かな。",
+        "面積 = 半径 × 3 辺の和 ÷ 2 を使おう。"
+       ],
+       "paths": [
+        [
+         "24 = r × 24 ÷ 2",
+         "24 = 12r",
+         "r = 2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 3 cm、4 cm、5 cm で、3 cm と 4 cm の辺の間の角が直角の三角形があります。内接円の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"85.3\" cy=\"87.3\" r=\"34.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"50.7,18 50.7,122 189.3,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"50.7,114 58.7,114 58.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45.7\" y=\"13.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"42.9\" y=\"134.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"199.8\" y=\"130.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 1,
+       "check": "(3 * 4 // 2) * 2 // (3 + 4 + 5)",
+       "hints": [
+        "まず三角形の面積を求めよう。",
+        "3 辺の和は何 cm かな。",
+        "面積 = 半径 × 3 辺の和 ÷ 2 を使おう。"
+       ],
+       "paths": [
+        [
+         "面積 = 3 × 4 ÷ 2 = 6 cm²",
+         "6 = r × 12 ÷ 2",
+         "r = 1 cm"
+        ],
+        [
+         "直角のかどの接線の長さは r",
+         "(3 − r) + (4 − r) = 5",
+         "r = 1 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "∠C = 90° の直角三角形 ABC の内接円の半径が 2 cm、斜辺 AB が 10 cm です。三角形の 3 つの辺の和は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"133.1\" cy=\"95.9\" r=\"26.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"159.2,18 80.8,122 159.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"133.1\" y1=\"95.9\" x2=\"133.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"133.1\" y1=\"95.9\" x2=\"159.2\" y2=\"95.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"159.2,114 151.2,114 151.2,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"133.1\" cy=\"122\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"159.2\" cy=\"95.9\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"112.3\" cy=\"80.2\" r=\"2.6\" fill=\"currentColor\"/><text x=\"162.7\" y=\"12.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"71\" y=\"131.8\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"167\" y=\"134.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"133.1\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"170.2\" y=\"100.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"103.5\" y=\"78.5\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 24,
+       "check": "10 + 10 + 2 * 2",
+       "hints": [
+        "内心 I と接点 D、E、頂点 C でできる四角形 IDCE はどんな四角形かな。",
+        "CD と CE は何 cm かな。",
+        "BC + CA を、BF + AF と CD + CE で書こう。"
+       ],
+       "paths": [
+        [
+         "IDCE は正方形で CD = CE = 2 cm",
+         "BC + CA = BD + AE + 4 = BF + AF + 4 = 10 + 4 = 14",
+         "3 辺の和 = 14 + 10 = 24 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = 6 cm、BC = 7 cm、CA = 5 cm の三角形 ABC の内接円が、辺 BC に D で接しています。BD は何 cm ですか。",
+       "answer": 4,
+       "check": "(6 + 7 - 5) // 2",
+       "hints": [
+        "BD = BF、CD = CE、AE = AF だね。",
+        "BD = y として、3 つの辺を式にしよう。",
+        "y = (AB + BC − CA) ÷ 2 だね。"
+       ],
+       "paths": [
+        [
+         "3 辺の和の半分は 9",
+         "BD = 9 − CA = 9 − 5",
+         "4 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 5 cm、12 cm、13 cm で、5 cm と 12 cm の辺の間の角が直角の三角形があります。内接円の半径は何 cm ですか。",
+       "answer": 2,
+       "check": "(5 * 12 // 2) * 2 // (5 + 12 + 13)",
+       "hints": [
+        "面積を求めよう。",
+        "3 辺の和を求めよう。",
+        "面積 = 半径 × 3 辺の和 ÷ 2 を使おう。"
+       ],
+       "paths": [
+        [
+         "面積 = 30 cm²",
+         "30 = r × 30 ÷ 2",
+         "r = 2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 30 cm²、3 つの辺の和が 20 cm の三角形があります。内接円の半径は何 cm ですか。",
+       "answer": 3,
+       "check": "30 * 2 // 20",
+       "hints": [
+        "面積 = 半径 × 3 辺の和 ÷ 2 だね。",
+        "30 = r × 20 ÷ 2 と書こう。",
+        "r を求めよう。"
+       ],
+       "paths": [
+        [
+         "30 = 10r",
+         "r = 3 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形 ABC の 3 本の中線（頂点と向かいの辺の中点を結ぶ線）をひくと、どうなるか見よう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"90\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.5\" y1=\"127\" x2=\"87.5\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"152.5\" y1=\"117\" x2=\"152.5\" y2=\"127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"175.4\" y1=\"95.2\" x2=\"166.8\" y2=\"100.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.4\" y1=\"91.8\" x2=\"164.8\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"134.7\" y1=\"44.8\" x2=\"143.4\" y2=\"39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"136.7\" y1=\"48.2\" x2=\"145.4\" y2=\"43.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"105.6\" y1=\"37.9\" x2=\"113.9\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"103.4\" y1=\"41.2\" x2=\"111.7\" y2=\"46.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"101.1\" y1=\"44.5\" x2=\"109.4\" y2=\"50.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"74.3\" y1=\"102.1\" x2=\"66.1\" y2=\"96.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"76.6\" y1=\"98.8\" x2=\"68.3\" y2=\"93.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"78.8\" y1=\"95.5\" x2=\"70.5\" y2=\"89.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"119.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164.8\" y=\"69.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"80.3\" y=\"69.6\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "explain": "3 本の中線は 1 点 G で交わり、G は中線を頂点のほうから 2 : 1 に分けます（AG : GD = 2 : 1。わけは 10 日目に中点連結定理と相似で示します）。G を重心といいます。中線 AD は、底辺 BD と DC が等しく高さが同じなので、三角形の面積を 2 等分します。3 本の中線で、三角形は面積の等しい 6 つの三角形に分かれます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "面積が 30 cm²、3 つの辺の和が 30 cm の三角形があります。内接円の半径は何 cm ですか。",
+       "answer": 2,
+       "check": "30 * 2 // 30",
+       "hints": [
+        "面積 = 半径 × 3 辺の和 ÷ 2 だね。",
+        "30 = r × 30 ÷ 2 と書こう。",
+        "r を求めよう。"
+       ],
+       "paths": [
+        [
+         "30 = 15r",
+         "r = 2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の辺 AB、AC の中点を M、N とします。BC = 14 cm のとき、MN は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"115.2,18 59.9,122 180.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.5\" y1=\"70\" x2=\"147.6\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.9\" y1=\"41.7\" x2=\"105.7\" y2=\"46.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"78.1\" y1=\"98.3\" x2=\"69.3\" y2=\"93.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"169.2\" y1=\"95\" x2=\"160.7\" y2=\"100.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"167.1\" y1=\"91.7\" x2=\"158.6\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"126.1\" y1=\"45\" x2=\"134.6\" y2=\"39.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"128.2\" y1=\"48.3\" x2=\"136.7\" y2=\"43\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"50.9\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"189.3\" y=\"133\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"77.1\" y=\"71.4\" font-size=\"14\" text-anchor=\"middle\">M</text><text x=\"158\" y=\"71.3\" font-size=\"14\" text-anchor=\"middle\">N</text></svg>",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "中点連結定理を思い出そう。",
+        "MN と BC はどんな関係かな。",
+        "MN は BC の半分だね。"
+       ],
+       "paths": [
+        [
+         "中点連結定理で MN ∥ BC、MN = BC ÷ 2",
+         "14 ÷ 2",
+         "7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AD = 12 cm のとき、AG は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"90\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"119.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164.8\" y=\"69.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"80.3\" y=\"69.6\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "answer": 8,
+       "check": "12 * 2 // 3",
+       "hints": [
+        "G は AD をどんな比に分けるかな。",
+        "AG は AD の何分の何かな。",
+        "12 を 3 つに分けた 2 つ分だね。"
+       ],
+       "paths": [
+        [
+         "AG : GD = 2 : 1",
+         "AG = 12 × 2/3",
+         "8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。GD = 3 cm のとき、AD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"90\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"119.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164.8\" y=\"69.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"80.3\" y=\"69.6\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "answer": 9,
+       "check": "3 * 3",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "AG は何 cm かな。",
+        "AG と GD をたそう。"
+       ],
+       "paths": [
+        [
+         "AG = 3 × 2 = 6 cm",
+         "AD = 6 + 3",
+         "9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 36 cm² の三角形 ABC の重心を G とします。三角形 GBC の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"121.7,87.3 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"90\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.1\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"119.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164.8\" y=\"69.8\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"80.3\" y=\"69.6\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "answer": 12,
+       "check": "36 // 3",
+       "hints": [
+        "3 本の中線で、三角形は面積の等しい何こに分かれるかな。",
+        "△GBC は、その小さい三角形の何こ分かな。",
+        "36 を 6 でわって 2 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "6 つの面積の等しい三角形に分かれる",
+         "1 つは 36 ÷ 6 = 6 cm²",
+         "△GBC は 2 つ分で 12 cm²"
+        ],
+        [
+         "GD : AD = 1 : 3",
+         "△GBC は △ABC と底辺 BC が同じで高さが 1/3",
+         "36 ÷ 3 = 12 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "面積が 48 cm² の三角形 ABC で、中線 AD と BE の交点を G とします。四角形 GDCE の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"121.7,87.3 120,122 185.1,122 155.1,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"121.7\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"124.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"44.8\" y=\"131.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.6\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164\" y=\"68.5\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"116.2\" y=\"82.7\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "answer": 16,
+       "check": "48 // 6 * 2",
+       "hints": [
+        "C と G を結ぶと、四角形 GDCE は 2 つの三角形に分かれるね。",
+        "△GDC と △GCE は、6 つの小さい三角形のうちのどれかな。",
+        "小さい三角形 1 つの面積を求めよう。"
+       ],
+       "paths": [
+        [
+         "CG を結ぶ（CG の延長は AB の中点を通る中線）",
+         "6 つの三角形は 48 ÷ 6 = 8 cm² ずつ",
+         "GDCE = 8 × 2 = 16 cm²"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AG = 10 cm のとき、GD は何 cm ですか。",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "GD は AG の半分だね。",
+        "10 を 2 でわろう。"
+       ],
+       "paths": [
+        [
+         "GD = AG ÷ 2",
+         "5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 27 cm² の三角形 ABC の重心を G とします。三角形 GAB の面積は何 cm² ですか。",
+       "answer": 9,
+       "check": "27 // 3",
+       "hints": [
+        "3 本の中線で、面積の等しい 6 つの三角形に分かれるね。",
+        "△GAB はそのうちの何こ分かな。",
+        "27 ÷ 6 × 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "△GAB は 6 つのうち 2 つ分",
+         "27 ÷ 3 = 9 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AG : GD はどれですか。",
+       "choices": [
+        "2:1",
+        "1:1",
+        "3:1"
+       ],
+       "answer": "2:1",
+       "hints": [
+        "G は頂点 A と D のどちらに近いかな。",
+        "頂点から G までと、G から辺の中点までをくらべよう。",
+        "見本の言葉を思い出そう。"
+       ],
+       "paths": [
+        [
+         "重心は中線を頂点から 2 : 1 に分ける",
+         "AG : GD = 2 : 1"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形 ABC の 3 つの頂点から、向かいの辺に垂線をひくと、どうなるか見よう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"125.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"152.5\" y2=\"65.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"95.6\" y2=\"61.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"125.1,114 133.1,114 133.1,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"145.6,69.6 149.6,76.6 156.5,72.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"102.2,66.1 97.8,72.7 91.1,68.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"125.1\" cy=\"81.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.3\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.2\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.5\" y=\"132.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"125.6\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"161.8\" y=\"64.5\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"87.2\" y=\"59.5\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"135.4\" y=\"82.6\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "explain": "3 本の垂線 AD、BE、CF は 1 点 H で交わります（わけはこの日のわけの問題で示します）。H を垂心といいます。G-023 で見たように、四角形 AFHE は 2 つの直角をもつので円に内接し、∠BHC = ∠FHE = 180° − ∠A です。鈍角三角形の垂心は三角形の外側に、直角三角形の垂心は直角の頂点にあります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AD = 15 cm のとき、AG は何 cm ですか。",
+       "answer": 10,
+       "check": "15 * 2 // 3",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "AG は AD の何分の何かな。",
+        "15 を 3 つに分けた 2 つ分だね。"
+       ],
+       "paths": [
+        [
+         "AG = 15 × 2/3",
+         "10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC で、B から AC に垂線 BE、C から AB に垂線 CF をひきます。∠A = 50°、∠ACB = 62° のとき、∠AEF は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"113.4,18 71.3,122 168.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.3\" y1=\"122\" x2=\"147.2\" y2=\"81.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.7\" y1=\"122\" x2=\"85\" y2=\"88.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.2\" y1=\"81.7\" x2=\"85\" y2=\"88.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M107.7 31.9 A15 15 0 0 0 120.4 31.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.8\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M161.6 108.8 A15 15 0 0 0 153.7 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.7\" y=\"111.8\" font-size=\"12\" text-anchor=\"middle\">62°</text><path d=\"M140.2 68.4 A15 15 0 0 0 132.3 83.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.5\" y=\"72.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"151,88.7 143.9,92.5 140.1,85.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"82,95.6 89.4,98.6 92.4,91.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.7\" y=\"133.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.7\" y=\"133.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"158.1\" y=\"84.9\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"74\" y=\"93.7\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 68,
+       "check": "180 - 50 - 62",
+       "hints": [
+        "B、C、E、F は 1 つの円の上にあるね。",
+        "∠AEF は四角形 BCEF の外角だね。",
+        "∠ABC を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠AEF = ∠ABC（外角 = 内対角）",
+         "∠ABC = 180° − 50° − 62°",
+         "68°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠A = 62° のとき、∠x（∠BHC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"117.5,18 57.5,122 182.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"117.5\" y1=\"18\" x2=\"117.5\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"57.5\" y1=\"122\" x2=\"147.4\" y2=\"65.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.5\" y1=\"122\" x2=\"88.7\" y2=\"67.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M110 31 A15 15 0 0 0 125.5 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">62°</text><path d=\"M107.4 90.8 A12 12 0 0 0 127.9 90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118\" y=\"113.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"140.6,70.1 144.9,76.8 151.6,72.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"95.7,71.9 91.7,78.8 84.7,74.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"117.5\" cy=\"84.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"117.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"48.4\" y=\"133.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"191.7\" y=\"132.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"157.3\" y=\"65.9\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"78.6\" y=\"68.6\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"117.5\" y=\"78.4\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 118,
+       "check": "180 - 62",
+       "hints": [
+        "四角形 AFHE の ∠F と ∠E は何度かな。",
+        "四角形 AFHE は円に内接するね。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠FHE = 180° − 62° = 118°",
+         "∠BHC = ∠FHE",
+         "118°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠ABC = 66° のとき、∠x（∠BAH）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"108.1,18 61.8,122 178.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108.1\" y1=\"18\" x2=\"108.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.8\" y1=\"122\" x2=\"141.8\" y2=\"68\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.2\" y1=\"122\" x2=\"81\" y2=\"78.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M76.8 122 A15 15 0 0 0 67.9 108.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"85.3\" y=\"111\" font-size=\"12\" text-anchor=\"middle\">66°</text><path d=\"M99.9 36.3 A20 20 0 0 0 108.1 38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.2\" y=\"54.5\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"108.1,114 116.1,114 116.1,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"108.1\" cy=\"90.8\" r=\"2.6\" fill=\"currentColor\"/><text x=\"107.4\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"52.6\" y=\"132.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"188\" y=\"131.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"106.6\" y=\"137.8\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"150.8\" y=\"66.6\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"70.6\" y=\"80.3\" font-size=\"14\" text-anchor=\"middle\">F</text><text x=\"118.4\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 24,
+       "check": "90 - 66",
+       "hints": [
+        "AH をのばすと、BC とどんな角で交わるかな。",
+        "△ABD は直角三角形だね。",
+        "90° から ∠B をひこう。"
+       ],
+       "paths": [
+        [
+         "AH の延長は BC に垂直（D で交わる）",
+         "△ABD で ∠BAD = 90° − 66°",
+         "24°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90° の直角三角形 ABC の垂心は、どこにありますか。",
+       "choices": [
+        "頂点 C",
+        "斜辺 AB の中点",
+        "三角形の外側"
+       ],
+       "answer": "頂点 C",
+       "hints": [
+        "A から BC への垂線は、どの辺と重なるかな。",
+        "B から CA への垂線は、どの辺と重なるかな。",
+        "2 本の垂線はどこで交わるかな。"
+       ],
+       "paths": [
+        [
+         "A から BC への垂線は辺 AC",
+         "B から CA への垂線は辺 BC",
+         "交点は C"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形 ABC の 3 本の垂線が 1 点で交わるわけを書きましょう。A、B、C を通り、それぞれ向かいの辺に平行な直線をひいて、大きい三角形 PQR をつくって考えます。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 78.2,80 155.8,80\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"78.2\" y1=\"80\" x2=\"136.4\" y2=\"46.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.8\" y1=\"80\" x2=\"102.5\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"142\" x2=\"197.6\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"197.6\" y1=\"18\" x2=\"42.4\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"42.4\" y1=\"18\" x2=\"114\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,72 128,72 128,80\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"129.5,50.4 133.5,57.3 140.4,53.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"109.1,48.5 104.6,55.1 98,50.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120.5\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"68.4\" y=\"90\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"165.4\" y=\"90.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"113.4\" y=\"157.9\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"207.4\" y=\"17.8\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"32.7\" y=\"17.6\" font-size=\"14\" text-anchor=\"middle\">R</text></svg>",
+       "explain": "例：「A を通り BC に平行な直線、B を通り CA に平行な直線、C を通り AB に平行な直線で、三角形 PQR をつくる（Q と R は A を通る直線の上）。四角形 ARBC と AQCB はどちらも 2 組の向かい合う辺が平行なので平行四辺形で、AR = BC、AQ = BC。よって AR = AQ で、A は QR の中点。A からの垂線は BC に垂直なので、BC に平行な QR にも垂直。だから A からの垂線は QR の垂直二等分線である。同じように、B、C からの垂線は RP、PQ の垂直二等分線。三角形 PQR の 3 本の垂直二等分線は 1 点（外心）で交わるので、3 本の垂線も 1 点で交わる。」と書ければよい。①「〜とする」で大きい三角形をつくる、② 平行四辺形から AR = BC = AQ を出す、③ 約束した事実（1 日目の外心の性質）で結ぶ、の 3 つを見る。図をかいて 3 本が交わって見える、だけでは、どの三角形でも成り立つわけにならないことを話す。",
+       "hints": [
+        "四角形 ARBC と AQCB は、どんな四角形かな。",
+        "AR と AQ を BC で表すと、A は QR のどんな点かな。",
+        "A からの垂線は、三角形 PQR のどんな線になるかな。"
+       ],
+       "paths": [
+        [
+         "大きい三角形 PQR をつくる",
+         "ARBC と AQCB は平行四辺形で AR = AQ = BC",
+         "A からの垂線は QR の垂直二等分線",
+         "3 本は PQR の外心で交わる"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC の垂心を H とします。∠BHC の大きさが ∠A の 3 倍のとき、∠A は何度ですか。",
+       "answer": 45,
+       "check": "180 // 4",
+       "hints": [
+        "∠BHC を ∠A で表そう。",
+        "180° − ∠A = 3 × ∠A と書けるね。",
+        "∠A の 4 つ分が 180° だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − ∠A",
+         "180 − a = 3a",
+         "a = 45°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠A = 75° のとき、∠BHC は何度ですか。",
+       "answer": 105,
+       "check": "180 - 75",
+       "hints": [
+        "四角形 AFHE は円に内接するね。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 75°",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠ABC = 52° のとき、∠BAH は何度ですか。",
+       "answer": 38,
+       "check": "90 - 52",
+       "hints": [
+        "AH の延長は BC に垂直だね。",
+        "直角三角形の 2 つの鋭角の和は何度かな。",
+        "90° から 52° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BAH = 90° − 52°",
+         "38°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠A = 100° の三角形 ABC の垂心は、どこにありますか。",
+       "choices": [
+        "三角形の外側",
+        "三角形の内側",
+        "頂点 A"
+       ],
+       "answer": "三角形の外側",
+       "check": "'三角形の外側' if 100 > 90 else ('頂点 A' if 100 == 90 else '三角形の内側')",
+       "hints": [
+        "B から CA への垂線をひくと、CA のどこで交わるかな。",
+        "鈍角のとき、その垂線は辺 CA ののばした線と交わるね。",
+        "垂線どうしの交点はどこになるかな。"
+       ],
+       "paths": [
+        [
+         "∠A が鈍角なので B、C からの垂線は辺の延長と交わる",
+         "交点は A の外側",
+         "三角形の外側"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "鋭角三角形 ABC の垂心 H を、辺 BC について対称に移した点を K とします。K と外接円の関係を見よう。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polygon points=\"122.2,18 65.3,109.1 174.7,109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"122.2\" y1=\"18\" x2=\"122.2\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.3\" y1=\"109.1\" x2=\"147.4\" y2=\"61.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.7\" y1=\"109.1\" x2=\"96\" y2=\"59.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.3\" y1=\"109.1\" x2=\"122.2\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"174.7\" y1=\"109.1\" x2=\"122.2\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"122.2,101.1 130.2,101.1 130.2,109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"122.2\" cy=\"76.3\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"122.2\" cy=\"142\" r=\"2.6\" fill=\"currentColor\"/><text x=\"122.5\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"55.5\" y=\"119.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"184.5\" y=\"119.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"132.5\" y=\"77.4\" font-size=\"14\" text-anchor=\"middle\">H</text><text x=\"122.2\" y=\"157.9\" font-size=\"14\" text-anchor=\"middle\">K</text></svg>",
+       "explain": "H と K は BC について対称なので ∠BKC = ∠BHC = 180° − ∠A です。だから ∠BAC + ∠BKC = 180° で、A と K は BC について反対側にあるので、四角形 ABKC は円に内接します（内接四角形の逆）。つまり K は外接円の上にあり、AH の延長と外接円の交点になります。また、∠BAH = 90° − ∠B（△ABD）、∠OAC = 90° − ∠B（2 日目）なので、垂線 AH と外心への線 AO は、∠A の 2 つの辺に対して同じ大きさの角をつくります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の垂心を H とします。∠A = 56° のとき、∠BHC は何度ですか。",
+       "answer": 124,
+       "check": "180 - 56",
+       "hints": [
+        "四角形 AFHE は円に内接するね。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 56°",
+         "124°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "鋭角三角形 ABC の外心を O とします。∠ABC = 64° のとき、∠OAC は何度ですか。",
+       "answer": 26,
+       "check": "90 - 64",
+       "hints": [
+        "∠AOC は何度かな。",
+        "△OAC は二等辺三角形だね。",
+        "(180° − ∠AOC) ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠AOC = 128°",
+         "∠OAC = (180° − 128°) ÷ 2",
+         "26°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC の垂心 H を、辺 BC について対称に移した点を K とします。∠A = 58° のとき、∠x（∠BKC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polygon points=\"113.5,18.3 67.4,112.9 172.6,112.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"113.5\" y1=\"18.3\" x2=\"113.5\" y2=\"141.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.4\" y1=\"112.9\" x2=\"143\" y2=\"65.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172.6\" y1=\"112.9\" x2=\"87.6\" y2=\"71.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.4\" y1=\"112.9\" x2=\"113.5\" y2=\"141.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"172.6\" y1=\"112.9\" x2=\"113.5\" y2=\"141.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M106.9 31.8 A15 15 0 0 0 121.5 31.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115\" y=\"50.5\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M127 135.1 A15 15 0 0 0 100.8 133.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115\" y=\"117.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"113.5\" cy=\"84\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"113.5\" cy=\"141.7\" r=\"2.6\" fill=\"currentColor\"/><text x=\"112.4\" y=\"12.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"58.1\" y=\"123.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"181.9\" y=\"123.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"123.9\" y=\"85.2\" font-size=\"14\" text-anchor=\"middle\">H</text><text x=\"113.5\" y=\"157.6\" font-size=\"14\" text-anchor=\"middle\">K</text></svg>",
+       "answer": 122,
+       "check": "180 - 58",
+       "hints": [
+        "∠BHC は何度かな。",
+        "K は H を BC について対称に移した点だね。",
+        "∠BKC と ∠BHC をくらべよう。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 58° = 122°",
+         "対称なので ∠BKC = ∠BHC",
+         "122°"
+        ],
+        [
+         "K は外接円の上",
+         "ABKC は内接四角形",
+         "∠BKC = 180° − 58° = 122°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC で ∠B = 70°、∠C = 50° です。外心を O、垂心を H とするとき、∠x（∠HAO）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"98.8,21.7 66.3,111 173.7,111\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.8\" y1=\"21.7\" x2=\"98.8\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.8\" y1=\"21.7\" x2=\"120\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M98.8 49.7 A28 28 0 0 0 108.4 48.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.9\" y=\"66.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"98.8,103 106.8,103 106.8,111\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"80\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"98.8\" cy=\"83.7\" r=\"2.6\" fill=\"currentColor\"/><text x=\"95\" y=\"16.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"56.8\" y=\"121.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"183.2\" y=\"121.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"84.9\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"87.8\" y=\"88.6\" font-size=\"14\" text-anchor=\"middle\">H</text><text x=\"92.6\" y=\"125\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 20,
+       "check": "(180 - 70 - 50) - 2 * (90 - 70)",
+       "hints": [
+        "∠BAH は何度かな。",
+        "∠OAC は何度かな。",
+        "∠BAC から 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BAH = 90° − 70° = 20°",
+         "∠OAC = 90° − 70° = 20°",
+         "∠HAO = 60° − 20° − 20° = 20°"
+        ]
+       ],
+       "note": "∠HAO = ∠B − ∠C（∠B が大きいとき）になる。"
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC の垂心を H とし、AH の延長と外接円の交点を K とします。∠ACB = 64° のとき、∠x（∠KBC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"124.3,18.2 68.6,114.7 171.4,114.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"124.3\" y1=\"18.2\" x2=\"124.3\" y2=\"141.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"114.7\" x2=\"124.3\" y2=\"141.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"114.7\" x2=\"151.6\" y2=\"74.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M164.8 101.2 A15 15 0 0 0 156.4 114.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.7\" y=\"104\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M88.4 124.3 A22 22 0 0 0 90.6 114.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.7\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"124.3\" cy=\"87.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.1\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"59.5\" y=\"125.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"180.5\" y=\"125.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"134.7\" y=\"88.6\" font-size=\"14\" text-anchor=\"middle\">H</text><text x=\"124.3\" y=\"157.7\" font-size=\"14\" text-anchor=\"middle\">K</text></svg>",
+       "answer": 26,
+       "check": "90 - 64",
+       "hints": [
+        "∠KBC と同じ弧 KC に対する円周角はどれかな。",
+        "∠KAC は △ADC の中の角だね。",
+        "△ADC は直角三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠KBC = ∠KAC（弧 KC）",
+         "△ADC で ∠DAC = 90° − 64°",
+         "26°"
+        ],
+        [
+         "∠HBC = 90° − 64° = 26°（△BEC）",
+         "K は H の対称な点なので ∠KBC = ∠HBC = 26°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "∠A = 60° の鋭角三角形 ABC の外心を O、垂心を H とします。4 点 B、C、H、O について、正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"87.2,18 50.2,132 189.8,132\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.2\" y1=\"132\" x2=\"120\" y2=\"91.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"189.8\" y1=\"132\" x2=\"120\" y2=\"91.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.2\" y1=\"132\" x2=\"87.2\" y2=\"98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"189.8\" y1=\"132\" x2=\"87.2\" y2=\"98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"91.7\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"87.2\" cy=\"98.6\" r=\"2.6\" fill=\"currentColor\"/><text x=\"84.5\" y=\"12.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"41\" y=\"143\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"199.9\" y=\"141.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"85.6\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"87.2\" y=\"92.5\" font-size=\"14\" text-anchor=\"middle\">H</text></svg>",
+       "choices": [
+        "同じ円の上にある",
+        "同じ円の上にない"
+       ],
+       "answer": "同じ円の上にある",
+       "check": "'同じ円の上にある' if 180 - 60 == 2 * 60 else '同じ円の上にない'",
+       "hints": [
+        "∠BOC は何度かな。",
+        "∠BHC は何度かな。",
+        "O と H は BC について同じ側にあるね。BC を同じ角で見ているかな。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2 × 60° = 120°",
+         "∠BHC = 180° − 60° = 120°",
+         "BC を同じ側から同じ角で見るので同じ円の上"
+        ]
+       ],
+       "note": "∠A = 60° のときは、内心 I も ∠BIC = 90° + 30° = 120° で同じ円の上にある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC の垂心 H を、辺 BC について対称に移した点を K とします。∠A = 64° のとき、∠BKC は何度ですか。",
+       "answer": 116,
+       "check": "180 - 64",
+       "hints": [
+        "∠BHC を求めよう。",
+        "∠BKC は ∠BHC と同じだね。",
+        "180° から 64° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BKC = ∠BHC = 180° − 64°",
+         "116°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC の垂心を H とし、AH の延長と外接円の交点を K とします。∠ACB = 58° のとき、∠KBC は何度ですか。",
+       "answer": 32,
+       "check": "90 - 58",
+       "hints": [
+        "∠KBC と同じ弧に対する円周角はどれかな。",
+        "∠KAC を求めよう。",
+        "△ADC は直角三角形だね。"
+       ],
+       "paths": [
+        [
+         "∠KBC = ∠KAC = 90° − 58°",
+         "32°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC で ∠B = 72°、∠C = 48° です。外心を O、垂心を H とするとき、∠HAO は何度ですか。",
+       "answer": 24,
+       "check": "(180 - 72 - 48) - 2 * (90 - 72)",
+       "hints": [
+        "∠BAH と ∠OAC を求めよう。",
+        "どちらも 90° − ∠B だね。",
+        "∠BAC から 2 つをひこう。"
+       ],
+       "paths": [
+        [
+         "∠BAH = ∠OAC = 18°",
+         "∠BAC = 60°",
+         "∠HAO = 60° − 36° = 24°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "∠A の二等分線と、B と C での外角の二等分線をひくと、どうなるか見よう。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"112.2\" r=\"39.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"120,18 94.6,72.4 145.4,72.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.6\" y1=\"72.4\" x2=\"61.7\" y2=\"143.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.4\" y1=\"72.4\" x2=\"178.3\" y2=\"143.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"112.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"94.6\" y1=\"72.4\" x2=\"120\" y2=\"112.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"145.4\" y1=\"72.4\" x2=\"120\" y2=\"112.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"94.6\" y1=\"72.4\" x2=\"120\" y2=\"56.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"145.4\" y1=\"72.4\" x2=\"120\" y2=\"56.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"112.2\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"56.2\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"85.7\" y=\"83.7\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"154.3\" y=\"83.7\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"128.1\" font-size=\"14\" text-anchor=\"middle\">J</text><text x=\"116.2\" y=\"50.8\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "explain": "B での外角の二等分線の上の点は、直線 BC と直線 AB から等しい距離、C での外角の二等分線の上の点は、直線 BC と直線 AC から等しい距離にあります。2 本の交点を J とすると、J は直線 AB と AC から等しい距離にあるので、∠A の二等分線の上にもあります。J を中心に、辺 BC と AB、AC の延長に接する円がかけます。この円を傍接円、J を傍心といいます（三角形 1 つに 3 つあります）。内心 I も ∠A の二等分線の上なので A、I、J は一直線です。B での内角と外角の二等分線は垂直なので ∠IBJ = 90°。また ∠BJC = 90° − ∠A ÷ 2 です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の内心を I とします。∠A = 46° のとき、∠BIC は何度ですか。",
+       "answer": 113,
+       "check": "90 + 46 // 2",
+       "hints": [
+        "∠B + ∠C は何度かな。",
+        "その半分が ∠IBC + ∠ICB だね。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠C = 134°",
+         "半分は 67°",
+         "∠BIC = 113°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の垂心を H とします。∠A = 68° のとき、∠BHC は何度ですか。",
+       "answer": 112,
+       "check": "180 - 68",
+       "hints": [
+        "四角形 AFHE は円に内接するね。",
+        "∠FHE は何度かな。",
+        "∠BHC と ∠FHE は対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 68°",
+         "112°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の、∠A の内側にある傍心を J とします。∠A = 64° のとき、∠x（∠BJC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 83.6,76.3 156.4,76.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"83.6\" y1=\"76.3\" x2=\"36.3\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.4\" y1=\"76.3\" x2=\"203.7\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"141.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"83.6\" y1=\"76.3\" x2=\"120\" y2=\"141.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"156.4\" y1=\"76.3\" x2=\"120\" y2=\"141.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M112.1 30.7 A15 15 0 0 0 127.9 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M127.3 128.8 A15 15 0 0 0 112.7 128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"118.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"141.9\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"73.9\" y=\"86.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"166.1\" y=\"86.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"157.8\" font-size=\"14\" text-anchor=\"middle\">J</text></svg>",
+       "answer": 58,
+       "check": "90 - 64 // 2",
+       "hints": [
+        "∠JBC は、B での外角の半分だね。外角は 180° − ∠B だよ。",
+        "∠JBC + ∠JCB を ∠B + ∠C で表そう。",
+        "△JBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠JBC + ∠JCB = (180° − ∠B + 180° − ∠C) ÷ 2 = (180° + ∠A) ÷ 2 = 122°",
+         "∠BJC = 180° − 122°",
+         "58°"
+        ],
+        [
+         "∠BJC = 90° − ∠A ÷ 2",
+         "90° − 32°",
+         "58°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I、∠A の内側にある傍心を J とします。∠ABC = 70° のとき、∠x（∠IBJ）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"95.7,18 74.5,76.3 138,76.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"46.9\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138\" y1=\"76.3\" x2=\"193.1\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.7\" y1=\"18\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"138\" y1=\"76.3\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"101.3\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"138\" y1=\"76.3\" x2=\"101.3\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M89.5 76.3 A15 15 0 0 0 79.6 62.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.4\" y=\"64.4\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M82.5 87.7 A14 14 0 0 0 86 68.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.1\" y=\"85.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"111.3\" cy=\"128.8\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"101.3\" cy=\"57.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"93.7\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"87.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"147.7\" y=\"86.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"111.3\" y=\"144.7\" font-size=\"14\" text-anchor=\"middle\">J</text><text x=\"97.5\" y=\"52.1\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 90,
+       "check": "70 // 2 + (180 - 70) // 2",
+       "hints": [
+        "BI は ∠B を 2 等分するね。∠IBC は何度かな。",
+        "BJ は外角を 2 等分するね。∠CBJ は何度かな。",
+        "2 つの角をたそう。"
+       ],
+       "paths": [
+        [
+         "∠IBC = 35°",
+         "∠CBJ = (180° − 70°) ÷ 2 = 55°",
+         "∠IBJ = 35° + 55° = 90°"
+        ]
+       ],
+       "note": "∠B の大きさによらず、内角の半分と外角の半分の和は 180° ÷ 2 = 90° になる。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I、∠A の内側にある傍心を J とします。∠A = 52° のとき、∠BIC + ∠BJC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"114.2,18 88.3,76.3 145.2,76.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.3\" y1=\"76.3\" x2=\"54.5\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.2\" y1=\"76.3\" x2=\"185.5\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.2\" y1=\"18\" x2=\"117.8\" y2=\"121.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88.3\" y1=\"76.3\" x2=\"117.8\" y2=\"121.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"145.2\" y1=\"76.3\" x2=\"117.8\" y2=\"121.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88.3\" y1=\"76.3\" x2=\"115.6\" y2=\"58.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"145.2\" y1=\"76.3\" x2=\"115.6\" y2=\"58.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"117.8\" cy=\"121.8\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"115.6\" cy=\"58.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"113.7\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"79.3\" y=\"87.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"154.4\" y=\"87.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.8\" y=\"137.7\" font-size=\"14\" text-anchor=\"middle\">J</text><text x=\"111.9\" y=\"53.1\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "answer": 180,
+       "check": "(90 + 52 // 2) + (90 - 52 // 2)",
+       "hints": [
+        "∠BIC と ∠BJC を、それぞれ ∠A で表そう。",
+        "∠BIC = 90° + ∠A ÷ 2、∠BJC = 90° − ∠A ÷ 2 だね。",
+        "2 つをたすと ∠A の部分はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "∠BIC = 116°",
+         "∠BJC = 64°",
+         "116° + 64° = 180°"
+        ],
+        [
+         "∠IBJ = ∠ICJ = 90°",
+         "四角形 IBJC は向かい合う角の和が 180° で円に内接",
+         "∠BIC + ∠BJC = 180°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC の、∠A の内側にある傍心を J とします。∠BJC = 62° のとき、∠A は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"114,18 85.6,76.3 147.6,76.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"76.3\" x2=\"48.6\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.6\" y1=\"76.3\" x2=\"191.4\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"18\" x2=\"117.8\" y2=\"127.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85.6\" y1=\"76.3\" x2=\"117.8\" y2=\"127.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"147.6\" y1=\"76.3\" x2=\"117.8\" y2=\"127.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M125.3 114.9 A15 15 0 0 0 109.9 115.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.3\" y=\"104.1\" font-size=\"12\" text-anchor=\"middle\">62°</text><path d=\"M107.4 31.5 A15 15 0 0 0 121.5 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"117.8\" cy=\"127.9\" r=\"2.6\" fill=\"currentColor\"/><text x=\"113.5\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"76.3\" y=\"87.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"157\" y=\"86.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.8\" y=\"143.8\" font-size=\"14\" text-anchor=\"middle\">J</text></svg>",
+       "answer": 56,
+       "check": "(90 - 62) * 2",
+       "hints": [
+        "∠BJC = 90° − ∠A ÷ 2 だったね。",
+        "90° − 62° は ∠A のどれだけかな。",
+        "それを 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "90° − ∠A ÷ 2 = 62°",
+         "∠A ÷ 2 = 28°",
+         "∠A = 56°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の、∠A の内側にある傍心を J とします。∠A = 80° のとき、∠BJC は何度ですか。",
+       "answer": 50,
+       "check": "90 - 80 // 2",
+       "hints": [
+        "∠BJC = 90° − ∠A ÷ 2 だね。",
+        "∠A ÷ 2 は何度かな。",
+        "90° からひこう。"
+       ],
+       "paths": [
+        [
+         "90° − 40°",
+         "50°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I、∠A の内側にある傍心を J とします。∠BJC = 55° のとき、∠BIC は何度ですか。",
+       "answer": 125,
+       "check": "180 - 55",
+       "hints": [
+        "四角形 IBJC の ∠IBJ と ∠ICJ は何度かな。",
+        "四角形 IBJC は円に内接するね。",
+        "∠BIC + ∠BJC = 180° を使おう。"
+       ],
+       "paths": [
+        [
+         "∠BIC + ∠BJC = 180°",
+         "180° − 55°",
+         "125°"
+        ],
+        [
+         "∠A = 2 × (90° − 55°) = 70°",
+         "∠BIC = 90° + 35°",
+         "125°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I、∠A の内側にある傍心を J とします。4 点 B、C、I、J を通る円の直径は、どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"95.7,18 74.5,76.3 138,76.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"46.9\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"138\" y1=\"76.3\" x2=\"193.1\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.7\" y1=\"18\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"138\" y1=\"76.3\" x2=\"111.3\" y2=\"128.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"74.5\" y1=\"76.3\" x2=\"101.3\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"138\" y1=\"76.3\" x2=\"101.3\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"111.3\" cy=\"128.8\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"101.3\" cy=\"57.5\" r=\"2.6\" fill=\"currentColor\"/><text x=\"93.7\" y=\"12.1\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"87.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"147.7\" y=\"86.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"111.3\" y=\"144.7\" font-size=\"14\" text-anchor=\"middle\">J</text><text x=\"97.5\" y=\"52.1\" font-size=\"14\" text-anchor=\"middle\">I</text></svg>",
+       "choices": [
+        "IJ",
+        "BC",
+        "AJ"
+       ],
+       "answer": "IJ",
+       "hints": [
+        "∠IBJ と ∠ICJ は何度かな。",
+        "直角を見る線分は、円の何になるかな。",
+        "B と C が 90° で見ている線分はどれかな。"
+       ],
+       "paths": [
+        [
+         "∠IBJ = ∠ICJ = 90°",
+         "IJ を直径とする円の上に B、C がある"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の、∠A の内側にある傍心を J とします。∠A = 70° のとき、∠BJC は何度ですか。",
+       "answer": 55,
+       "check": "90 - 70 // 2",
+       "hints": [
+        "∠BJC = 90° − ∠A ÷ 2 だね。",
+        "∠A ÷ 2 は何度かな。",
+        "90° からひこう。"
+       ],
+       "paths": [
+        [
+         "90° − 35°",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AG = 6 cm のとき、AD は何 cm ですか。",
+       "answer": 9,
+       "check": "6 + 6 // 2",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "GD は何 cm かな。",
+        "AG と GD をたそう。"
+       ],
+       "paths": [
+        [
+         "GD = 3 cm",
+         "AD = 6 + 3",
+         "9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形 ABC の外心、内心、重心、垂心は、どうなりますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"122\" x2=\"150\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180\" y1=\"122\" x2=\"90\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "4 つとも同じ点になる",
+        "外心と内心だけが同じ点になる",
+        "4 つともちがう点になる"
+       ],
+       "answer": "4 つとも同じ点になる",
+       "hints": [
+        "正三角形で、頂点から向かいの辺の中点を結ぶ線は、どんな線かな。",
+        "その線は、角の二等分線でもあり、垂線でもあり、垂直二等分線でもあるね。",
+        "3 本ずつの線が同じ線なら、交点はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "中線 = 角の二等分線 = 垂線 = 垂直二等分線",
+         "交点はどれも同じ点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形 ABC の外心、内心、重心、垂心は、どこにありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 71.5,122 168.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"91.2\" y1=\"67.9\" x2=\"100.3\" y2=\"72.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"139.7\" y1=\"72.1\" x2=\"148.8\" y2=\"67.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.6\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.4\" y=\"133.3\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "4 つとも、A から BC への垂線の上",
+        "4 つとも、辺 AB の上",
+        "4 つとも、辺 BC の上"
+       ],
+       "answer": "4 つとも、A から BC への垂線の上",
+       "hints": [
+        "二等辺三角形は、どの直線について線対称かな。",
+        "頂角の二等分線は、底辺をどのように分けたかな。",
+        "線対称な図形の五心は、対称の軸の上にあるね。"
+       ],
+       "paths": [
+        [
+         "頂角 A の二等分線は BC の垂直二等分線で、中線で、垂線",
+         "4 つの中心はこの直線の上"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形 ABC の中線 AD が 9 cm です。内接円の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"87.3\" r=\"34.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text><text x=\"120\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 3,
+       "check": "9 // 3",
+       "hints": [
+        "正三角形では、内心と重心は同じ点だね。",
+        "重心は AD をどんな比に分けるかな。",
+        "内接円の半径は、重心から D までの長さだね。"
+       ],
+       "paths": [
+        [
+         "内心 = 重心 G",
+         "GD = AD ÷ 3",
+         "3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "正三角形の外接円の半径が 8 cm のとき、内接円の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"120,18 75,96 165,96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"65.4\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"174.6\" y=\"106.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">G</text><text x=\"120\" y=\"111.9\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 4,
+       "check": "8 // 2",
+       "hints": [
+        "正三角形では、外心と内心と重心は同じ点だね。",
+        "外接円の半径は AG、内接円の半径は GD だね。",
+        "AG : GD = 2 : 1 を使おう。"
+       ],
+       "paths": [
+        [
+         "外心 = 内心 = 重心 G",
+         "AG = 8 cm で AG : GD = 2 : 1",
+         "GD = 4 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠C = 90° の直角三角形 ABC で、AB = 12 cm です。外心と垂心の距離は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"156.4,18 83.6,122 156.4,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.4\" y1=\"122\" x2=\"120\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"156.4,114 148.4,114 148.4,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"160.7\" y=\"12.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"75.2\" y=\"134.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"162.7\" y=\"135.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 6,
+       "check": "12 // 2",
+       "hints": [
+        "直角三角形の外心はどこにあるかな。",
+        "直角三角形の垂心はどこにあるかな。",
+        "2 つの点の距離は、外接円の何かな。"
+       ],
+       "paths": [
+        [
+         "外心は斜辺 AB の中点 M、垂心は C",
+         "MC は外接円の半径",
+         "12 ÷ 2 = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形の 1 つの頂点から重心までの長さが 10 cm です。中線の長さは何 cm ですか。",
+       "answer": 15,
+       "check": "10 + 10 // 2",
+       "hints": [
+        "重心は中線を 2 : 1 に分けるね。",
+        "重心から辺の中点までは何 cm かな。",
+        "2 つをたそう。"
+       ],
+       "paths": [
+        [
+         "重心から中点まで 5 cm",
+         "10 + 5",
+         "15 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの頂点から等しい距離にある点は、五心のうちどれですか。",
+       "choices": [
+        "外心",
+        "内心",
+        "重心"
+       ],
+       "answer": "外心",
+       "hints": [
+        "2 つの頂点から等しい距離の点は、どんな線の上にあるかな。",
+        "3 辺の垂直二等分線の交点は何だったかな。",
+        "3 辺から等しい距離の点と、まちがえないようにしよう。"
+       ],
+       "paths": [
+        [
+         "頂点から等しい距離 → 垂直二等分線の上",
+         "3 本の交点は外心"
+        ]
+       ],
+       "note": "3 つの辺から等しい距離にある点は内心（と傍心）。頂点か辺かを読み分ける。"
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "三角形の 3 つの辺の垂直二等分線が 1 点で交わるわけを、筋道を立てて書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"127.4,18 57.3,122 182.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"155.1\" y1=\"70\" x2=\"120\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"92.4\" y1=\"70\" x2=\"120\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"88.6\" x2=\"127.4\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"88.6\" x2=\"57.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"88.6\" x2=\"182.7\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,122 128,114 120,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"151.3,62.9 144.3,66.7 148,73.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"87.9,76.6 94.5,81.1 99,74.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"88.6\" r=\"2.6\" fill=\"currentColor\"/><text x=\"128.3\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"47.6\" y=\"132.1\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"192.3\" y=\"132.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"109.7\" y=\"89.8\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "例：「辺 AB と辺 AC の垂直二等分線の交点を O とする。O は AB の垂直二等分線の上にあるので OA = OB。O は AC の垂直二等分線の上にあるので OA = OC。よって OB = OC。B と C から等しい距離の点は BC の垂直二等分線の上にあるので、O は BC の垂直二等分線の上にもある。だから 3 本の垂直二等分線は 1 点 O で交わる。」と書ければよい。①「2 本の交点を O とする」、② 等しい長さを式でつなぐ（OA = OB、OA = OC から OB = OC）、③ 約束した事実（両はしから等しい距離の点は垂直二等分線の上、またその逆）で結ぶ、の 3 つを見る。AB と AC の垂直二等分線が交わること（平行にならないこと）は、AB と AC が平行でないことから言えるとふれてもよい。",
+       "hints": [
+        "まず 2 本の垂直二等分線の交点を O としよう。",
+        "OA、OB、OC の間に、どんな等しい関係があるかな。",
+        "OB = OC なら、O はどの線の上にあるかな。"
+       ],
+       "paths": [
+        [
+         "AB と AC の垂直二等分線の交点を O とする",
+         "OA = OB、OA = OC",
+         "OB = OC で O は BC の垂直二等分線の上"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形の 3 つの角の二等分線が 1 点で交わるわけを書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"185.1\" y1=\"122\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"122.7\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"122.7\" y1=\"86\" x2=\"122.7\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"122.7\" y1=\"86\" x2=\"153.9\" y2=\"67.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"122.7\" y1=\"86\" x2=\"92.8\" y2=\"65.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"114.7,122 114.7,114 122.7,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"157.9,74.9 151,78.9 147,71.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"97.3,59.2 103.9,63.7 99.4,70.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"122.7\" cy=\"86\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.5\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"45.2\" y=\"132\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"122.7\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">I</text><text x=\"122.8\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"163.4\" y=\"67.3\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"83.7\" y=\"64.5\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
+       "explain": "例：「∠B と ∠C の二等分線の交点を I とし、I から辺 BC、CA、AB にひいた垂線の足を D、E、F とする。I は ∠B の二等分線の上なので ID = IF（△IBD ≡ △IBF、直角三角形の斜辺と 1 つの鋭角）。I は ∠C の二等分線の上なので ID = IE。よって IE = IF。△IAE と △IAF は、斜辺 IA が共通で IE = IF なので合同（直角三角形の斜辺と他の 1 辺）。よって ∠IAE = ∠IAF で、I は ∠A の二等分線の上にある。」と書ければよい。① 交点と垂線の足を「〜とする」で決める、② 等しい長さをつなぐ（ID = IF、ID = IE から IE = IF）、③ 直角三角形の合同条件で結ぶ、の 3 つを見る。1 つの三角形で測って確かめただけでは、どの三角形でもとは言えないことを話す。",
+       "hints": [
+        "∠B と ∠C の二等分線の交点を I として、I から 3 つの辺に垂線をひこう。",
+        "3 本の垂線の長さの間に、どんな等しい関係があるかな。",
+        "IE = IF から、△IAE と △IAF について何が言えるかな。"
+       ],
+       "paths": [
+        [
+         "交点を I、垂線の足を D、E、F とする",
+         "ID = IF、ID = IE で IE = IF",
+         "△IAE ≡ △IAF（斜辺と他の 1 辺）",
+         "∠IAE = ∠IAF"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形 ABC の中線 AD と BE の交点を G とします。AG : GD = 2 : 1 になるわけを書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"121.7,87.3 125.1,18 54.9,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"121.7,87.3 120,122 155.1,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.5\" y1=\"127\" x2=\"87.5\" y2=\"117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"152.5\" y1=\"117\" x2=\"152.5\" y2=\"127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"175.4\" y1=\"95.2\" x2=\"166.8\" y2=\"100.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.4\" y1=\"91.8\" x2=\"164.8\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"134.7\" y1=\"44.8\" x2=\"143.4\" y2=\"39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"136.7\" y1=\"48.2\" x2=\"145.4\" y2=\"43.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"124.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"44.8\" y=\"131.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.6\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164\" y=\"68.5\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "explain": "例：「D、E はそれぞれ BC、CA の中点なので、中点連結定理より DE ∥ AB、DE = AB ÷ 2。△GAB と △GDE で、DE ∥ AB より錯角が等しく ∠GAB = ∠GDE、∠GBA = ∠GED。2 組の角がそれぞれ等しいので △GAB ∽ △GDE で、相似比は AB : DE = 2 : 1。よって AG : GD = 2 : 1。」と書ければよい。① 中点と交点を決める、② 長さの比 AB : DE = 2 : 1 を出す、③ 約束した事実（中点連結定理、相似条件、平行線の錯角）で結ぶ、の 3 つを見る。さらに、中線 CF も AD を 2 : 1 に分ける点を通る（同じ議論を AD と CF で行う）ので、3 本の中線が 1 点で交わることも言える。",
+       "hints": [
+        "D と E を結ぶと、DE と AB にはどんな関係があるかな（中点連結定理）。",
+        "△GAB と △GDE で、等しい角を 2 組探そう。",
+        "2 つの三角形の相似比は何かな。"
+       ],
+       "paths": [
+        [
+         "DE ∥ AB、DE = AB ÷ 2（中点連結定理）",
+         "錯角で △GAB ∽ △GDE",
+         "相似比 2 : 1 で AG : GD = 2 : 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "外心のわけを書くとき、最後に「O は BC の垂直二等分線の上にある」と言うために使う事実は、どれですか。",
+       "choices": [
+        "B と C から等しい距離の点は、BC の垂直二等分線の上にある",
+        "二等辺三角形の 2 つの底角は等しい",
+        "対頂角は等しい"
+       ],
+       "answer": "B と C から等しい距離の点は、BC の垂直二等分線の上にある",
+       "hints": [
+        "その前に言えたのは、OB = OC だったね。",
+        "OB = OC から、O の位置について何が言えるかな。",
+        "「垂直二等分線の上の点は両はしから等しい距離」の逆だよ。"
+       ],
+       "paths": [
+        [
+         "OB = OC",
+         "両はしから等しい距離の点は垂直二等分線の上",
+         "O は BC の垂直二等分線の上"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の中線 AD と BE の交点を G とします。AB = 10 cm のとき、DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.9\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"155.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"124.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"44.8\" y=\"131.3\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"194.7\" y=\"132.2\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"117.6\" y=\"137.6\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"164\" y=\"68.5\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"132.7\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">G</text></svg>",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "D と E は、それぞれどの辺の中点かな。",
+        "中点連結定理を思い出そう。",
+        "DE は AB の半分だね。"
+       ],
+       "paths": [
+        [
+         "D、E は BC、CA の中点",
+         "DE = AB ÷ 2",
+         "5 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "重心のわけで使った、△GAB と △GDE の相似比 AB : DE はどれですか。",
+       "choices": [
+        "2:1",
+        "1:1",
+        "3:2"
+       ],
+       "answer": "2:1",
+       "hints": [
+        "DE は AB の何分の 1 かな。",
+        "中点連結定理を思い出そう。",
+        "AB : DE を簡単な比にしよう。"
+       ],
+       "paths": [
+        [
+         "DE = AB ÷ 2",
+         "AB : DE = 2 : 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "内心のわけで、IE = IF から ∠IAE = ∠IAF を言うときに使う合同条件は、どれですか。",
+       "choices": [
+        "直角三角形の斜辺と他の 1 辺がそれぞれ等しい",
+        "直角三角形の斜辺と 1 つの鋭角がそれぞれ等しい",
+        "3 辺がそれぞれ等しい"
+       ],
+       "answer": "直角三角形の斜辺と他の 1 辺がそれぞれ等しい",
+       "hints": [
+        "△IAE と △IAF で、わかっている等しいものを書き出そう。",
+        "IA は共通の斜辺、IE = IF だね。",
+        "角はまだわかっていないね。"
+       ],
+       "paths": [
+        [
+         "∠IEA = ∠IFA = 90°",
+         "斜辺 IA が共通、IE = IF",
+         "斜辺と他の 1 辺"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AD = 18 cm のとき、GD は何 cm ですか。",
+       "answer": 6,
+       "check": "18 // 3",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "GD は AD の何分の 1 かな。",
+        "18 を 3 でわろう。"
+       ],
+       "paths": [
+        [
+         "GD = AD ÷ 3",
+         "6 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "三角形 ABC で、辺 AB 上の点 D を通り BC に平行な直線が AC と E で交わります。AD : DB = 2 : 1、BC = 12 cm のとき、DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"115.2,18 59.9,122 180.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"78.3\" y1=\"87.3\" x2=\"158.5\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"115.4,92.3 121.4,87.3 115.4,82.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"117,127 123,122 117,117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"132.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"189.7\" y=\"132.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"67.3\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"169.5\" y=\"92.2\" font-size=\"14\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 8,
+       "check": "12 * 2 // 3",
+       "hints": [
+        "△ADE と △ABC は相似だね。",
+        "相似比 AD : AB は何かな。",
+        "BC を 3 つに分けた 2 つ分だね。"
+       ],
+       "paths": [
+        [
+         "△ADE ∽ △ABC",
+         "AD : AB = 2 : 3",
+         "DE = 12 × 2/3 = 8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "円に内接する四角形 ABCD で、∠A の大きさは ∠C の 3 倍です。∠C は何度ですか。",
+       "answer": 45,
+       "check": "180 // 4",
+       "hints": [
+        "∠A + ∠C は何度かな。",
+        "∠C を 1 こ分とすると、何こ分で 180° かな。",
+        "180° を 4 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠C = 180°",
+         "4 こ分で 180°",
+         "∠C = 45°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "鋭角三角形 ABC で ∠B = 68°、∠C = 52° です。外心を O、垂心を H とするとき、∠x（∠OAH）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"102.9,20.4 66.3,111 173.7,111\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.9\" y1=\"20.4\" x2=\"102.9\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.9\" y1=\"20.4\" x2=\"120\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M102.9 50.4 A30 30 0 0 0 111.2 49.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.9\" y=\"67.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><polyline points=\"102.9,103 110.9,103 110.9,111\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"80\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"102.9\" cy=\"82.4\" r=\"2.6\" fill=\"currentColor\"/><text x=\"99.9\" y=\"14.7\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"56.8\" y=\"121.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"183.2\" y=\"121.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"84.9\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"91.9\" y=\"87.3\" font-size=\"14\" text-anchor=\"middle\">H</text><text x=\"97.6\" y=\"125.5\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 16,
+       "check": "(180 - 68 - 52) - (90 - 68) - (90 - 68)",
+       "hints": [
+        "∠BAH は何度かな。",
+        "∠OAC は何度かな。",
+        "∠BAC から 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BAH = 90° − 68° = 22°",
+         "∠OAC = 90° − 68° = 22°",
+         "∠OAH = 60° − 44° = 16°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とし、AI の延長と外接円の交点を M とします。∠BAC = 70° のとき、∠x（∠MBC）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"62\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"109.2,18.9 61.7,101.2 178.3,101.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.2\" y1=\"18.9\" x2=\"120\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.7\" y1=\"101.2\" x2=\"120\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.7\" y1=\"101.2\" x2=\"113.8\" y2=\"71.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"178.3\" y1=\"101.2\" x2=\"113.8\" y2=\"71.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M101.7 31.9 A15 15 0 0 0 118.9 30.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.7\" y=\"51\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M79.8 113.8 A22 22 0 0 0 83.7 101.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.1\" y=\"115.9\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"113.8\" cy=\"71.1\" r=\"2.6\" fill=\"currentColor\"/><text x=\"107.3\" y=\"13\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"51.4\" y=\"109.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"188.6\" y=\"109.9\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"124.8\" y=\"76\" font-size=\"14\" text-anchor=\"middle\">I</text><text x=\"120\" y=\"157.9\" font-size=\"14\" text-anchor=\"middle\">M</text></svg>",
+       "answer": 35,
+       "check": "70 // 2",
+       "hints": [
+        "∠MBC と同じ弧 MC に対する円周角はどれかな。",
+        "AI は ∠A を 2 等分するね。∠MAC は何度かな。",
+        "2 つの角をくらべよう。"
+       ],
+       "paths": [
+        [
+         "∠MBC = ∠MAC（弧 MC）",
+         "∠MAC = 70° ÷ 2",
+         "35°"
+        ]
+       ],
+       "note": "M は弧 BC の真ん中の点になる。MB = MC = MI となる性質（内心と傍心の補題）は G-033 で扱う。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心 G を通り、BC に平行な直線が AB、AC と P、Q で交わります。BC = 18 cm のとき、PQ は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"125.1,18 54.9,122 185.1,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.1\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"78.3\" y1=\"87.3\" x2=\"165.1\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"118.7,92.3 124.7,87.3 118.7,82.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"117,127 123,122 117,117\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"121.7\" cy=\"87.3\" r=\"2.6\" fill=\"currentColor\"/><text x=\"125.6\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"44.9\" y=\"131.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"195.1\" y=\"131.6\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"119.5\" y=\"137.9\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"127.2\" y=\"101.8\" font-size=\"14\" text-anchor=\"middle\">G</text><text x=\"67.4\" y=\"91\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"176\" y=\"91\" font-size=\"14\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 12,
+       "check": "18 * 2 // 3",
+       "hints": [
+        "中線 AD をひくと、AG : AD は何かな。",
+        "△APQ と △ABC は相似だね。相似比は何かな。",
+        "BC を 3 つに分けた 2 つ分だね。"
+       ],
+       "paths": [
+        [
+         "AG : AD = 2 : 3",
+         "△APQ ∽ △ABC で相似比 2 : 3",
+         "PQ = 18 × 2/3 = 12 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "三角形 ABC の外心を O、内心を I とし、∠A = x° とします（x は 90 より小さい）。∠BOC = ∠BIC となるとき、x はいくつですか。",
+       "answer": 60,
+       "check": "[x for x in range(1, 90) if 2 * x == 90 + x / 2][0]",
+       "hints": [
+        "∠BOC を x で表そう。",
+        "∠BIC を x で表そう。",
+        "2x = 90 + x/2 を解こう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2x、∠BIC = 90 + x/2",
+         "2x = 90 + x/2",
+         "x = 60"
+        ]
+       ],
+       "note": "このとき B、C、O、I は同じ円の上にある。7 日目の挑戦のとおり、垂心 H もこの円の上にある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。∠A = 75° のとき、∠OBC は何度ですか。",
+       "answer": 15,
+       "check": "90 - 75",
+       "hints": [
+        "∠BOC を求めよう。",
+        "△OBC は二等辺三角形だね。",
+        "(180° − ∠BOC) ÷ 2 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 150°",
+         "∠OBC = 15°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠BIC = 117° のとき、∠A は何度ですか。",
+       "answer": 54,
+       "check": "(117 - 90) * 2",
+       "hints": [
+        "∠IBC + ∠ICB は何度かな。",
+        "∠B + ∠C はその 2 倍だね。",
+        "180° からひこう。"
+       ],
+       "paths": [
+        [
+         "∠IBC + ∠ICB = 63°",
+         "∠B + ∠C = 126°",
+         "∠A = 54°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠A = 48° のとき、∠BHC は何度ですか。",
+       "answer": 132,
+       "check": "180 - 48",
+       "hints": [
+        "四角形 AFHE は円に内接するね。",
+        "∠FHE は何度かな。",
+        "∠BHC は ∠FHE の対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 48°",
+         "132°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "三角形 ABC の外心を O とします。∠A = 66° のとき、∠BOC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"118.2,18 72.5,91.2 167.5,91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"72.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"167.5\" y2=\"91.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M110.2 30.8 A15 15 0 0 0 126.6 30.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.7\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">66°</text><path d=\"M106.3 76.1 A15 15 0 0 0 133.7 76.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"102.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"117.8\" y=\"11.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"62.4\" y=\"100.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"177.6\" y=\"100.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"63.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 132,
+       "check": "66 * 2",
+       "hints": [
+        "∠BOC は外接円の中心角だね。",
+        "∠BAC は同じ弧に対する円周角だね。",
+        "2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "∠BOC = 2 × 66°",
+         "132°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90° の直角三角形 ABC で、AB = 15 cm です。外接円の半径は何 cm ですか。",
+       "answer": 7.5,
+       "accept": [
+        "15/2"
+       ],
+       "check": "15 / 2",
+       "hints": [
+        "直角三角形の外心はどこにあるかな。",
+        "外接円の直径はどの辺かな。",
+        "15 を 2 でわろう。"
+       ],
+       "paths": [
+        [
+         "外心は AB の中点",
+         "15 ÷ 2",
+         "7.5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の内心を I とします。∠A = 54° のとき、∠BIC は何度ですか。",
+       "answer": 117,
+       "check": "90 + 54 // 2",
+       "hints": [
+        "∠B + ∠C は何度かな。",
+        "その半分が ∠IBC + ∠ICB だね。",
+        "△IBC の角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B + ∠C = 126°",
+         "半分は 63°",
+         "∠BIC = 117°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 42 cm²、3 つの辺の和が 28 cm の三角形があります。内接円の半径は何 cm ですか。",
+       "answer": 3,
+       "check": "42 * 2 // 28",
+       "hints": [
+        "三角形を内心と 3 つの辺で 3 つに分けよう。",
+        "面積 = 半径 × 3 辺の和 ÷ 2 だね。",
+        "42 = r × 14 を解こう。"
+       ],
+       "paths": [
+        [
+         "42 = r × 28 ÷ 2",
+         "r = 3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の重心を G、中線を AD とします。AD = 21 cm のとき、AG は何 cm ですか。",
+       "answer": 14,
+       "check": "21 * 2 // 3",
+       "hints": [
+        "AG : GD = 2 : 1 だね。",
+        "AG は AD の何分の何かな。",
+        "21 を 3 つに分けた 2 つ分だね。"
+       ],
+       "paths": [
+        [
+         "AG = 21 × 2/3",
+         "14 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠A = 72° のとき、∠BHC は何度ですか。",
+       "answer": 108,
+       "check": "180 - 72",
+       "hints": [
+        "四角形 AFHE は円に内接するね。",
+        "∠FHE は何度かな。",
+        "∠BHC と ∠FHE は対頂角だね。"
+       ],
+       "paths": [
+        [
+         "∠BHC = 180° − 72°",
+         "108°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の、∠A の内側にある傍心を J とします。∠A = 48° のとき、∠BJC は何度ですか。",
+       "answer": 66,
+       "check": "90 - 48 // 2",
+       "hints": [
+        "∠JBC は、B での外角の半分だね。",
+        "∠BJC = 90° − ∠A ÷ 2 だったね。",
+        "90° から 24° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BJC = 90° − 24°",
+         "66°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺から等しい距離にあり、三角形の内側にある点は、五心のうちどれですか。",
+       "choices": [
+        "内心",
+        "外心",
+        "重心"
+       ],
+       "answer": "内心",
+       "hints": [
+        "2 つの辺から等しい距離の点は、どんな線の上にあるかな。",
+        "3 つの角の二等分線の交点は何だったかな。",
+        "頂点から等しい距離の点（外心）と読み分けよう。"
+       ],
+       "paths": [
+        [
+         "辺から等しい距離 → 角の二等分線の上",
+         "3 本の交点は内心"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = 8 cm、BC = 9 cm、CA = 7 cm の三角形 ABC の内接円が、辺 BC に D で接しています。BD は何 cm ですか。",
+       "answer": 5,
+       "check": "(8 + 9 - 7) // 2",
+       "hints": [
+        "BD = BF、CD = CE、AE = AF だね。",
+        "3 辺の和の半分を求めよう。",
+        "BD = (AB + BC − CA) ÷ 2 だね。"
+       ],
+       "paths": [
+        [
+         "3 辺の和の半分は 12",
+         "BD = 12 − 7",
+         "5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 54 cm² の三角形 ABC の重心を G とします。三角形 GAB の面積は何 cm² ですか。",
+       "answer": 18,
+       "check": "54 // 3",
+       "hints": [
+        "3 本の中線で、面積の等しい 6 つの三角形に分かれるね。",
+        "△GAB はそのうちの何こ分かな。",
+        "54 ÷ 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "△GAB は 6 つのうち 2 つ分",
+         "54 ÷ 3",
+         "18 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC の垂心を H とします。∠ABC = 48° のとき、∠BAH は何度ですか。",
+       "answer": 42,
+       "check": "90 - 48",
+       "hints": [
+        "AH の延長は BC に垂直だね。",
+        "直角三角形の 2 つの鋭角の和は何度かな。",
+        "90° から 48° をひこう。"
+       ],
+       "paths": [
+        [
+         "∠BAH = 90° − 48°",
+         "42°"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -245249,7 +251511,7 @@ window.ROADMAP = {
     24.56
    ],
    "comb": {
-    "b": 0.258,
+    "b": 0.191,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -245301,7 +251563,7 @@ window.ROADMAP = {
     22.7
    ],
    "comb": {
-    "b": 0.281,
+    "b": 0.299,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -247094,7 +253356,7 @@ window.ROADMAP = {
     21.87
    ],
    "comb": {
-    "b": 0.234,
+    "b": 0.246,
     "r": 0.0,
     "rg": [
      "shiki",
@@ -247155,7 +253417,7 @@ window.ROADMAP = {
     26.26
    ],
    "comb": {
-    "b": 0.392,
+    "b": 0.386,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -247266,7 +253528,7 @@ window.ROADMAP = {
     27.08
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.246,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -247679,7 +253941,7 @@ window.ROADMAP = {
     26.96
    ],
    "comb": {
-    "b": 0.252,
+    "b": 0.216,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -254202,7 +260464,7 @@ window.ROADMAP = {
     28.03
    ],
    "comb": {
-    "b": 0.227,
+    "b": 0.229,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -254306,7 +260568,7 @@ window.ROADMAP = {
     27.87
    ],
    "comb": {
-    "b": 0.401,
+    "b": 0.402,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -254368,7 +260630,7 @@ window.ROADMAP = {
     28.95
    ],
    "comb": {
-    "b": 0.354,
+    "b": 0.333,
     "r": 0.0,
     "rg": [
      "haichi",

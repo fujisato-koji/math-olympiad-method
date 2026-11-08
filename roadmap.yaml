@@ -743,8 +743,8 @@ units:
   - {id: G-019, title: 三平方の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, A-016, G-020, G-008, A-017], days: 6}
   - {id: G-020, title: 相似の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-013, G-016, A-010], days: 9}
   - {id: G-021, title: 空間図形, stage: 4, level: 3, region: katachi, needs: [G-019, G-014], days: 6}
-  - {id: G-022, title: 作図（定規とコンパス）, stage: 4, level: 3, region: shomei-zukei, needs: [G-017], days: 5}
-  - {id: G-023, title: 角度の追跡と内接四角形, stage: 4, level: 3, region: hakaru, needs: [G-018], days: 16}
+  - {id: G-022, title: 作図（定規とコンパス）, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, G-010], days: 5}
+  - {id: G-023, title: 角度の追跡と内接四角形, stage: 4, level: 3, region: hakaru, needs: [G-018, G-054], days: 16}
   - {id: L-011, title: 背理法, stage: 4, level: 3, region: ronpo, needs: [L-013, A-016], days: 7}
   - {id: L-012, title: 数学的帰納法の入口, stage: 4, level: 3, region: ronpo, needs: [A-004, A-010, A-015, A-013], days: 12}
   - {id: L-013, title: 命題と条件（必要条件と十分条件）, stage: 4, level: 3, region: ronpo, needs: [L-008, A-010, A-013], days: 5}
@@ -949,7 +949,7 @@ units:
   - {id: C-023, title: 組合せ幾何, stage: 6, level: 3, region: graph, needs: [L-016, L-014, G-017], days: 8}
   - {id: C-024, title: グラフ理論の応用、最小全域木と最短経路の算法（手で回す）, stage: 6, level: 3, region: graph, needs: [C-022], days: 8}
   - {id: C-025, title: 固い構造を決める, stage: 6, level: 3, region: graph, needs: [L-018, L-019], days: 8}
-  - {id: G-028, title: 三角形の五心, stage: 4, level: 3, region: haichi, needs: [G-018, G-020, G-023], days: 12}
+  - {id: G-028, title: 三角形の五心, stage: 4, level: 3, region: haichi, needs: [G-018, G-020, G-023, G-054, G-022], days: 12}
   - {id: G-029, title: チェバとメネラウスの定理, stage: 6, level: 3, region: haichi, needs: [G-020, G-012], days: 6}
   - {id: G-030, title: 方べきの定理, stage: 4, level: 3, region: haichi, needs: [G-018, G-020, G-054, G-019, A-016], days: 9}
   - {id: G-031, title: 相似拡大と回転相似（ミケル点）, stage: 6, level: 3, region: haichi, needs: [G-028, G-015, G-023], days: 8}

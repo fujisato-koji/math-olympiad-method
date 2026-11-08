@@ -1,0 +1,582 @@
+# G-022 作図（定規とコンパス）
+#
+# 書き方は N-001 の頭の注のとおり。
+# 作図は、定規とコンパスだけで図をかくこと。定規は直線をひくだけに使い（目もりで長さを測らない）、
+#   コンパスは円や弧をかくことと、長さを写すことに使う。分度器は使わない。
+# 柱は 3 つの基本の作図：① 線分の垂直二等分線　② 角の二等分線　③ 垂線（直線の上の点を通る垂線は 180° の角の二等分線、
+#   直線の外の点 P からの垂線は、P を中心にかいた弧と直線の 2 つの交点を結ぶ線分の垂直二等分線）。
+#   組み合わせて、正三角形の 60°、2 等分の 30°・15°、垂線の 90°・45°、その和と差の角をつくる。
+# 点の集まりの見方（のちの軌跡）：2 点から等しい距離の点は垂直二等分線の上、角の 2 辺から等しい距離の点は角の二等分線の上、
+#   1 点から決まった距離の点は円の上。2 つの条件を満たす点は 2 つの線の交点として作図する（交わる点の数を、距離をくらべて数える）。
+# 前提は G-017（二等辺三角形の頂角の二等分線は底辺を垂直に 2 等分する、ひし形の対角線、直角三角形の合同条件）と、
+#   その前の G-016（合同条件、平行線と同位角、外角）。
+#   円（G-010）は前提にないので、円は「中心から同じ距離にある点の集まり」としてだけ使い、円周や面積は使わない。
+#   3 点から等しい距離の点（2 本の垂直二等分線の交点）は 1 日目の挑戦と 4 日目の挑戦で作図だけを扱う。
+#   名前（外心）と、3 本目の垂直二等分線も同じ点を通ることは G-028 で扱う。
+#   円の接線の作図は、接線と半径の関係を G-023 で扱うので、ここでは扱わない。
+# 長さの答えは cm の数、角の答えは度の数を打つ。半分の長さは小数で答え、分数も正しいとする（accept）。
+# 図は svg（D-040）。作図の弧は細い線でかいた。点線は、ひいた補助の線。
+# 地図に plan がないので既定の並び（導入・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 垂直二等分線と「2 点から等しい距離」　2 日目 角の二等分線と垂線、60° と 90° からつくる角
+#   3 日目 わけ（垂直二等分線と角の二等分線の作図が正しいわけ、垂直二等分線の上の点が両はしから等しい距離にあるわけ）
+#   4 日目 G-016・G-017（平行線、二等辺三角形、ひし形、外角）と混ぜる　5 日目 確認
+# check：長さと角の計算の式。交わる点の数は、距離と線分の半分をくらべる式。
+#   作図の手順や性質を選ぶ問題は約束ごとなので check を付けない。
+
+id: G-022
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 線分 AB の垂直二等分線を、定規とコンパスで作図しよう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="77.7" y1="75" x2="162.3" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="132" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,75 128,67 120,67" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="77.7" cy="75" r="2.6" fill="currentColor"/><text x="65.7" y="79.9" font-size="14" text-anchor="middle">A</text><circle cx="162.3" cy="75" r="2.6" fill="currentColor"/><text x="174.3" y="79.9" font-size="14" text-anchor="middle">B</text><text x="132" y="36.1" font-size="14" text-anchor="middle">P</text><text x="132" y="123.7" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="88.4" font-size="14" text-anchor="middle">M</text></svg>'
+        explain: ① A を中心に、AB の半分より長い半径で弧をかく。② B を中心に、同じ半径で弧をかく。③ 2 つの弧の交点を P、Q として、直線 PQ をひく。直線 PQ は AB の真ん中の点 M を通り、AB に垂直です。これを線分 AB の垂直二等分線といいます。垂直二等分線の上の点は、どれも A と B から等しい距離にあります。逆に、A と B から等しい距離にある点は、垂直二等分線の上にあります。
+      - part: 思い出す
+        text: AB = AC の二等辺三角形 ABC で、∠B = 65° です。∠A は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 71.5,122 168.5,122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M86.5 122 A15 15 0 0 0 77.8 108.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.1" y="111.2" font-size="12" text-anchor="middle">65°</text><line x1="91.2" y1="67.9" x2="100.3" y2="72.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="139.7" y1="72.1" x2="148.8" y2="67.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="11.9" font-size="14" text-anchor="middle">A</text><text x="62.6" y="133.3" font-size="14" text-anchor="middle">B</text><text x="177.4" y="133.3" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 50
+        check: "180 - 2 * 65"
+        hints:
+          - 二等辺三角形の 2 つの底角は等しいね。
+          - ∠C も ∠B と同じ大きさだよ。
+          - 三角形の 3 つの角の和は 180° だね。
+        paths:
+          - [∠C = ∠B = 65°, ∠A = 180° − 65° × 2, 50°]
+      - part: 思い出す
+        text: AB = AC の二等辺三角形 ABC で、頂角 A の二等分線と底辺 BC の交点を D とします。BC = 12 cm のとき、BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 78,122 162,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.4" y1="68.1" x2="103.6" y2="71.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="136.4" y1="71.9" x2="145.6" y2="68.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="11.9" font-size="14" text-anchor="middle">A</text><text x="68.6" y="132.7" font-size="14" text-anchor="middle">B</text><text x="171.4" y="132.7" font-size="14" text-anchor="middle">C</text><text x="120" y="137.9" font-size="14" text-anchor="middle">D</text></svg>'
+        answer: 6
+        check: "12 // 2"
+        hints:
+          - 二等辺三角形の頂角の二等分線には、どんな性質があったかな。
+          - 頂角の二等分線は、底辺を垂直に 2 等分するね。
+          - BD は BC の何分の 1 かな。
+        paths:
+          - [頂角の二等分線は底辺を垂直に 2 等分する, BD = 12 ÷ 2, 6 cm]
+        note: この性質が、垂直二等分線の作図が正しいわけ（3 日目）のもとになる。
+      - part: 今日
+        text: 長さ 9 cm の線分 AB の垂直二等分線をひき、AB との交点を M とします。AM は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="77.7" y1="75" x2="162.3" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="132" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,75 128,67 120,67" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="77.7" cy="75" r="2.6" fill="currentColor"/><text x="65.7" y="79.9" font-size="14" text-anchor="middle">A</text><circle cx="162.3" cy="75" r="2.6" fill="currentColor"/><text x="174.3" y="79.9" font-size="14" text-anchor="middle">B</text><text x="132" y="36.1" font-size="14" text-anchor="middle">P</text><text x="132" y="123.7" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="88.4" font-size="14" text-anchor="middle">M</text></svg>'
+        answer: 4.5
+        accept: [9/2]
+        check: "9 / 2"
+        hints:
+          - 垂直二等分線は、AB をどのように分けるかな。
+          - M は AB の真ん中の点だよ。
+          - AB の長さを 2 でわろう。
+        paths:
+          - [M は AB の中点, AM = 9 ÷ 2, 4.5 cm]
+      - part: 今日
+        text: 点 P は線分 AB の垂直二等分線の上にあります。PA = 7 cm、AB = 6 cm のとき、三角形 PAB のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="18" x2="72.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="167.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.7" y1="122" x2="167.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="128,122 128,114 120,114" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="96.4" y1="127" x2="96.4" y2="117" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="143.6" y1="117" x2="143.6" y2="127" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="63.9" y="133.4" font-size="14" text-anchor="middle">A</text><text x="176.1" y="133.4" font-size="14" text-anchor="middle">B</text><text x="120" y="11.9" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 20
+        check: "7 + 7 + 6"
+        hints:
+          - 垂直二等分線の上の点は、A と B からどんな距離にあるかな。
+          - PB は PA と同じ長さだね。
+          - 3 つの辺の長さをたそう。
+        paths:
+          - [PB = PA = 7 cm, 7 + 7 + 6, 20 cm]
+        note: PB の長さが書いていないので止まりやすい。「垂直二等分線の上 → 両はしから等しい距離」を言葉で確かめる。
+      - part: 今日
+        text: 長さ 8 cm の線分 AB があります。A からも B からも 5 cm の距離にある点は、いくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="87.5" y1="70" x2="152.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="87.5" cy="70" r="2.6" fill="currentColor"/><circle cx="152.5" cy="70" r="2.6" fill="currentColor"/><text x="76.5" y="74.9" font-size="14" text-anchor="middle">A</text><text x="163.5" y="74.9" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 2
+        check: "2 if 5 > 8 / 2 else (1 if 5 == 8 / 2 else 0)"
+        hints:
+          - A からも B からも同じ距離の点は、どの線の上にあるかな。
+          - A を中心に半径 5 cm の円をかくと、垂直二等分線と何回交わるかな。
+          - 5 cm と、AB の半分の長さをくらべよう。
+        paths:
+          - [点は垂直二等分線（点線）の上, A を中心に半径 5 cm の円と点線の交点, 5 cm は 4 cm より長いので AB の上と下に 1 つずつ, 2 つ]
+        note: AB の上側だけを考えて 1 と答えやすい。
+      - part: 挑戦
+        text: 3 つの点 A、B、C から等しい距離にある点 P を作図します。どの 2 本の線の交点を作図すればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="105.4" cy="36" r="3" fill="currentColor"/><text x="105.4" y="28.9" font-size="14" text-anchor="middle">A</text><circle cx="47.1" cy="108.9" r="3" fill="currentColor"/><text x="35.9" y="117.9" font-size="14" text-anchor="middle">B</text><circle cx="192.9" cy="99.1" r="3" fill="currentColor"/><text x="204.1" y="108.1" font-size="14" text-anchor="middle">C</text></svg>'
+        choices:
+          - 線分 AB の垂直二等分線と、線分 BC の垂直二等分線
+          - ∠A の二等分線と、∠B の二等分線
+          - A から BC への垂線と、B から CA への垂線
+        answer: 線分 AB の垂直二等分線と、線分 BC の垂直二等分線
+        hints:
+          - A と B から等しい距離の点は、どの線の上にあるかな。
+          - B と C から等しい距離の点は、どの線の上にあるかな。
+          - 両方の線の上にある点は、A、B、C のどれからも等しい距離だね。
+        paths:
+          - [PA = PB なら AB の垂直二等分線の上, PB = PC なら BC の垂直二等分線の上, 2 本の交点で PA = PB = PC]
+        note: この点は、3 点 A、B、C を通る円の中心になる。名前（外心）と、AC の垂直二等分線も同じ点を通ることは G-028 で扱う。
+    extra:
+      - part: 今日
+        text: 長さ 8 cm の線分 AB があります。A からも B からも 3 cm の距離にある点は、いくつありますか。
+        answer: 0
+        check: "2 if 3 > 8 / 2 else (1 if 3 == 8 / 2 else 0)"
+        hints:
+          - A からも B からも同じ距離の点は、垂直二等分線の上にあるね。
+          - 垂直二等分線の上で、A にいちばん近い点はどこかな。
+          - いちばん近い点でも、A から何 cm あるかな。
+        paths:
+          - [点は垂直二等分線の上, その上で A にいちばん近いのは AB の中点で 4 cm, 3 cm の点はない, 0 こ]
+      - part: 今日
+        text: 長さ 12 cm の線分 AB の垂直二等分線を作図します。A と B を中心にかく弧が 2 点で交わるには、半径を何 cm より長くしなければなりませんか。
+        answer: 6
+        check: "12 // 2"
+        hints:
+          - 弧の交点は、A からも B からも半径の距離にあるね。
+          - 交点は垂直二等分線の上にあり、その上で A にいちばん近いのは AB の真ん中だよ。
+          - AB の半分の長さとくらべよう。
+        paths:
+          - [交点は A、B から半径の距離で、垂直二等分線の上, その上で A にいちばん近いのは中点, 半径は 12 ÷ 2 = 6 cm より長く]
+        note: ちょうど 6 cm だと 2 つの弧は 1 点（AB の中点）でふれるだけで、直線が決まらない。
+      - part: 今日
+        text: PA = PB = 9 cm、AB = 10 cm の三角形 PAB があります。P から AB に垂線をひき、AB との交点を M とします。AM は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="18" x2="50.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="189.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="122" x2="189.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="128,122 128,114 120,114" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="81.2" y1="67.2" x2="89.5" y2="72.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="150.5" y1="72.8" x2="158.8" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="40.4" y="130.8" font-size="14" text-anchor="middle">A</text><text x="199.6" y="130.8" font-size="14" text-anchor="middle">B</text><text x="120" y="137.9" font-size="14" text-anchor="middle">M</text><text x="120" y="11.9" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 5
+        check: "10 // 2"
+        hints:
+          - PA = PB だから、P は AB の垂直二等分線の上にあるね。
+          - P を通って AB に垂直な直線は、1 本しかないね。
+          - だから M はどんな点かな。
+        paths:
+          - [PA = PB だから P は垂直二等分線の上, P から AB への垂線は垂直二等分線と同じ, M は中点, 10 ÷ 2 = 5 cm]
+  - day: 2
+    items:
+      - part: 見本
+        text: ∠XOY の二等分線を作図しよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.8" y1="115.4" x2="174.2" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="115.4" x2="113.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113 122 A47.7 47.7 0 0 0 80.6 70" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M135.1 82.9 A39 39 0 0 0 114.6 76.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M122.3 88.6 A39 39 0 0 0 125.4 67.3" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="65.8" y1="115.4" x2="161.4" y2="55.7" stroke="currentColor" stroke-width="1.6" fill="none"/><text x="54.6" y="124.4" font-size="14" text-anchor="middle">O</text><text x="185.2" y="120.3" font-size="14" text-anchor="middle">X</text><text x="118.1" y="13" font-size="14" text-anchor="middle">Y</text><text x="117.6" y="131.5" font-size="14" text-anchor="middle">P</text><text x="78.4" y="68.8" font-size="14" text-anchor="middle">Q</text><text x="134.8" y="90.5" font-size="14" text-anchor="middle">R</text></svg>'
+        explain: ① O を中心に弧をかき、辺 OX、OY との交点を P、Q とする。② P と Q を中心に、同じ半径で弧をかき、交点を R とする。③ 半直線 OR をひく。OR は ∠XOY を 2 つの等しい角に分けます。これを角の二等分線といいます。角の二等分線の上の点は、角の 2 つの辺から等しい距離にあります。また、直線 ℓ の上の点 O を通る垂線は、O のところの一直線の角（180°）を 2 等分すれば作図できます。
+      - part: 思い出す
+        text: 長さ 14 cm の線分 AB の垂直二等分線の上に、PA = 9 cm となる点 P をとります。三角形 PAB のまわりの長さは何 cm ですか。
+        answer: 32
+        check: "9 + 9 + 14"
+        hints:
+          - 垂直二等分線の上の点は、A と B から等しい距離にあるね。
+          - PB は何 cm かな。
+          - 3 つの辺をたそう。
+        paths:
+          - [PB = PA = 9 cm, 9 + 9 + 14, 32 cm]
+      - part: 思い出す
+        text: 長さ 10 cm の線分 AB があります。A からも B からも 6 cm の距離にある点は、いくつありますか。
+        answer: 2
+        check: "2 if 6 > 10 / 2 else (1 if 6 == 10 / 2 else 0)"
+        hints:
+          - 点は AB の垂直二等分線の上にあるね。
+          - 6 cm を、AB の半分の長さとくらべよう。
+          - AB の上側と下側を考えよう。
+        paths:
+          - [点は垂直二等分線の上, 6 cm は半分の 5 cm より長い, 上と下に 1 つずつ, 2 つ]
+      - part: 今日
+        text: ∠XOY = 76° の二等分線を作図しました。二等分線と辺 OX がつくる角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="69.6" y1="115.8" x2="170.4" y2="115.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.6" y1="115.8" x2="94" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113.5 122 A44.4 44.4 0 0 0 74.2 71.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M125.9 81.5 A36.3 36.3 0 0 0 105.9 80.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.7 89.2 A36.3 36.3 0 0 0 116.5 69.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="69.6" y1="115.8" x2="152.2" y2="51.3" stroke="currentColor" stroke-width="1.6" fill="none"/><text x="58.3" y="124.8" font-size="14" text-anchor="middle">O</text><text x="181.4" y="120.7" font-size="14" text-anchor="middle">X</text><text x="96.6" y="12.2" font-size="14" text-anchor="middle">Y</text><text x="118.1" y="132" font-size="14" text-anchor="middle">P</text><text x="70.4" y="71" font-size="14" text-anchor="middle">Q</text><text x="126.2" y="90.8" font-size="14" text-anchor="middle">R</text></svg>'
+        answer: 38
+        check: "76 // 2"
+        hints:
+          - 二等分線は、角を 2 つの等しい角に分けるね。
+          - 76° を 2 つに等しく分けよう。
+          - 76 ÷ 2 を計算しよう。
+        paths:
+          - [二等分線は角を半分にする, 76 ÷ 2, 38°]
+      - part: 今日
+        text: 線分 AB を 1 辺とする正三角形を作図すると、60° の角ができます。その角を 2 等分し、できた角をさらに 2 等分すると、何度の角ができますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M135.8 37.2 A110.7 110.7 0 0 0 102.5 18" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M137.5 18 A110.7 110.7 0 0 0 104.2 37.2" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="64.7,122 175.3,122 120,26.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.7" y1="122" x2="165.3" y2="63.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="54.3" y="130.7" font-size="14" text-anchor="middle">A</text><text x="185.7" y="130.7" font-size="14" text-anchor="middle">B</text><text x="120" y="20.1" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 15
+        check: "60 // 2 // 2"
+        hints:
+          - 正三角形の 1 つの角は 60° だね。
+          - 1 回 2 等分すると何度かな。
+          - その角を、もう 1 回 2 等分しよう。
+        paths:
+          - [60° を 2 等分して 30°, 30° を 2 等分, 15°]
+      - part: 今日
+        text: ∠XOY の二等分線の上の点 P から、辺 OX、OY に垂線 PA、PB をひきます。PA = 4 cm、OA = 7 cm のとき、四角形 OAPB のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="64.7" y1="122" x2="175.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.7" y1="122" x2="102.5" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.7" y1="122" x2="151.8" y2="61" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="134.4" y1="73.2" x2="134.4" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="134.4" y1="73.2" x2="88.5" y2="56.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="126.4,122 126.4,114 134.4,114" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="85.8,64 93.3,66.7 96,59.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M86.7 122 A22 22 0 0 0 82.7 109.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M86 107.1 A26 26 0 0 0 73.6 97.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="53.4" y="131" font-size="14" text-anchor="middle">O</text><text x="186.3" y="126.9" font-size="14" text-anchor="middle">X</text><text x="106.3" y="12.6" font-size="14" text-anchor="middle">Y</text><text x="134.4" y="138.9" font-size="14" text-anchor="middle">A</text><text x="77.2" y="57.3" font-size="14" text-anchor="middle">B</text><text x="145.3" y="73" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 22
+        check: "2 * (7 + 4)"
+        hints:
+          - 三角形 OAP と OBP は合同かな。どの合同条件が使えるかな。
+          - 合同なら、PB と OB の長さがわかるね。
+          - 4 つの辺の長さをたそう。
+        paths:
+          - [△OAP ≡ △OBP（直角三角形の斜辺と 1 つの鋭角）, PB = 4 cm、OB = 7 cm, 7 + 4 + 4 + 7 = 22 cm]
+        note: OP が共通の斜辺、∠AOP = ∠BOP から、直角三角形の合同条件で合同になる。PB = PA だけでなく OB = OA も出せる。
+      - part: 挑戦
+        text: 正三角形の 60°、垂線の 90°、角の二等分線、角をたすこととひくことだけを使います。このやり方で作図できない角は、どれですか。
+        choices: [75°, 22.5°, 20°]
+        answer: 20°
+        hints:
+          - 75° は、60° にどんな角をたせばできるかな。
+          - 22.5° は、90° を何回 2 等分すればできるかな。
+          - このやり方でできる角は、15° を何回か 2 等分した角の何こ分かになるね。
+        paths:
+          - [75° = 60° + 15°（60° を 2 回 2 等分）, 22.5° = 90° を 2 回 2 等分, 20° は 60° を 3 等分する角で、2 等分とたし算・ひき算ではつくれない]
+        note: 実は 20° は、どんな手順を使っても定規とコンパスでは作図できない（角の 3 等分の問題。1837 年にワンツェルが示した。のちの体の理論とガロア理論につながる）。
+    extra:
+      - part: 今日
+        text: ∠XOY = 128° の二等分線を作図しました。二等分線と辺 OY がつくる角は何度ですか。
+        answer: 64
+        check: "128 // 2"
+        hints:
+          - 二等分線は、角を 2 つの等しい角に分けるね。
+          - 128° を 2 つに等しく分けよう。
+          - 128 ÷ 2 を計算しよう。
+        paths:
+          - [128 ÷ 2, 64°]
+      - part: 今日
+        text: 直線 ℓ の上の点 O を通る垂線を、角の二等分線の作図でかきます。何度の角を 2 等分していることになりますか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="72.8" x2="222" y2="72.8" stroke="currentColor" stroke-width="1.8" fill="none"/><circle cx="120" cy="72.8" r="3" fill="currentColor"/><text x="120" y="89.7" font-size="14" text-anchor="middle">O</text><text x="222" y="67.7" font-size="14" text-anchor="middle">ℓ</text></svg>'
+        answer: 180
+        check: "90 * 2"
+        hints:
+          - 直線 ℓ の上の点 O のところには、どんな角があるかな。
+          - O の左と右の半直線は、一直線になっているね。
+          - 一直線の角は何度だったかな。
+        paths:
+          - [O のところの角は一直線の角, 一直線の角は 180°, 2 等分すると 90° で垂線]
+      - part: 今日
+        text: 正三角形の作図でできる 60° の角を 2 等分した角と、垂線の作図でできる 90° の角を 2 等分した角をたすと、何度ですか。
+        answer: 75
+        check: "60 // 2 + 90 // 2"
+        hints:
+          - 60° を 2 等分すると何度かな。
+          - 90° を 2 等分すると何度かな。
+          - 2 つの角をたそう。
+        paths:
+          - [30° と 45°, 30° + 45°, 75°]
+  - day: 3
+    items:
+      - part: わけ
+        text: 線分 AB の垂直二等分線の作図（A と B を中心に同じ半径の弧をかき、交点を P、Q として直線 PQ をひく）で、直線 PQ が AB の垂直二等分線になるわけを、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M129.4 42.7 A60.9 60.9 0 0 0 108.1 22.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.1 127.8 A60.9 60.9 0 0 0 129.4 107.3" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M131.9 22.2 A60.9 60.9 0 0 0 110.6 42.7" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.6 107.3 A60.9 60.9 0 0 0 131.9 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="77.7" y1="75" x2="162.3" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="132" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,75 128,67 120,67" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="77.7" cy="75" r="2.6" fill="currentColor"/><text x="65.7" y="79.9" font-size="14" text-anchor="middle">A</text><circle cx="162.3" cy="75" r="2.6" fill="currentColor"/><text x="174.3" y="79.9" font-size="14" text-anchor="middle">B</text><text x="132" y="36.1" font-size="14" text-anchor="middle">P</text><text x="132" y="123.7" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="88.4" font-size="14" text-anchor="middle">M</text></svg>'
+        explain: 例：「PQ と AB の交点を M とする。同じ半径でかいたので PA = PB、QA = QB。△PAQ と △PBQ で、PA = PB、QA = QB、PQ は共通だから、3 辺がそれぞれ等しく △PAQ ≡ △PBQ。よって ∠APQ = ∠BPQ。△PAB は PA = PB の二等辺三角形で、PM は頂角の二等分線だから、底辺 AB を垂直に 2 等分する。よって直線 PQ は AB の垂直二等分線である。」と書ければよい。①「〜とする」で点に名前を付ける、② 等しい辺を並べて合同を言う、③ 約束した性質（二等辺三角形の頂角の二等分線は底辺を垂直に 2 等分する）で結ぶ、の 3 つがそろっているかを見る。△PAM ≡ △PBM（2 辺とその間の角）から AM = BM、∠PMA = ∠PMB = 90° を出してもよい。図に定規を当てて「直角に見える」だけでは、どの長さの線分でも成り立つわけにならないことを話す。
+        hints:
+          - PA、PB、QA、QB の長さについて、何が言えるかな。
+          - △PAQ と △PBQ に注目して、合同条件を探そう。
+          - 二等辺三角形 PAB の頂角の二等分線の性質を思い出そう。
+        paths:
+          - [PA = PB、QA = QB（同じ半径）, △PAQ ≡ △PBQ（3 辺）, ∠APQ = ∠BPQ, 二等辺三角形 PAB の頂角の二等分線は AB を垂直に 2 等分する]
+          - [△PAQ ≡ △PBQ で ∠APM = ∠BPM, △PAM ≡ △PBM（2 辺とその間の角）, AM = BM、∠PMA = ∠PMB = 90°]
+      - part: わけ
+        text: 角の二等分線の作図（O を中心に弧をかいて辺との交点を P、Q とし、P、Q を中心に同じ半径の弧をかいて交点を R とし、半直線 OR をひく）で、OR が ∠XOY を 2 等分するわけを書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.8" y1="115.4" x2="174.2" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="115.4" x2="113.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113 122 A47.7 47.7 0 0 0 80.6 70" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M135.1 82.9 A39 39 0 0 0 114.6 76.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M122.3 88.6 A39 39 0 0 0 125.4 67.3" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="65.8" y1="115.4" x2="161.4" y2="55.7" stroke="currentColor" stroke-width="1.6" fill="none"/><polygon points="65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="54.6" y="124.4" font-size="14" text-anchor="middle">O</text><text x="185.2" y="120.3" font-size="14" text-anchor="middle">X</text><text x="118.1" y="13" font-size="14" text-anchor="middle">Y</text><text x="117.6" y="131.5" font-size="14" text-anchor="middle">P</text><text x="78.4" y="68.8" font-size="14" text-anchor="middle">Q</text><text x="134.8" y="90.5" font-size="14" text-anchor="middle">R</text></svg>'
+        explain: 例：「P と R、Q と R を結ぶ。O を中心にかいた弧の上の点なので OP = OQ。同じ半径でかいたので PR = QR。△OPR と △OQR で、OP = OQ、PR = QR、OR は共通だから、3 辺がそれぞれ等しく △OPR ≡ △OQR。合同な図形の対応する角は等しいので ∠POR = ∠QOR。よって OR は ∠XOY の二等分線である。」と書ければよい。① 補助の線 PR、QR をひいて三角形をつくる、② 等しい辺を 3 組並べる、③ 合同条件と「対応する角は等しい」で結ぶ、の 3 つを見る。OP = OQ と PR = QR がそれぞれどの弧から言えるのかを、作図の手順と結びつけて言えているかを確かめる。
+        hints:
+          - P と R、Q と R を結んで、2 つの三角形をつくろう。
+          - OP と OQ、PR と QR は、それぞれどの弧の半径かな。
+          - 合同が言えたら、どの角とどの角が等しいかな。
+        paths:
+          - [OP = OQ（O を中心の弧）, PR = QR（同じ半径の弧）, OR は共通, △OPR ≡ △OQR（3 辺）, ∠POR = ∠QOR]
+      - part: わけ
+        text: 線分 AB の垂直二等分線の上のどの点 P も、A と B から等しい距離にあります。このことを示しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="38.1" x2="86.5" y2="101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="38.1" x2="153.5" y2="101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.5" y1="101.9" x2="153.5" y2="101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="128,101.9 128,93.9 120,93.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="103.2" y1="106.9" x2="103.2" y2="96.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="136.8" y1="96.9" x2="136.8" y2="106.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="76.5" y="111.5" font-size="14" text-anchor="middle">A</text><text x="163.5" y="111.5" font-size="14" text-anchor="middle">B</text><text x="127.8" y="114.5" font-size="14" text-anchor="middle">M</text><text x="131" y="43" font-size="14" text-anchor="middle">P</text></svg>'
+        explain: 例：「AB の中点を M とする。P が M と同じ点のときは PA = MA = MB = PB で成り立つ。P が M でないとき、△PAM と △PBM で、AM = BM（M は中点）、∠PMA = ∠PMB = 90°（垂直）、PM は共通だから、2 辺とその間の角がそれぞれ等しく △PAM ≡ △PBM。よって PA = PB。」と書ければよい。①「AB の中点を M とする」「垂直二等分線の上の点を P とする」で決める、② 等しい辺と角を並べる、③ 合同条件で結ぶ、の 3 つを見る。1 つの点で長さを測って確かめただけでは「どの点でも」とは言えない（例ではすべての場合を示せない）ことを話す。逆に PA = PB なら、△PAB は二等辺三角形で、P と中点 M を結ぶ線は AB に垂直なので、P は垂直二等分線の上にある（これも G-017 の性質から言える）。
+        hints:
+          - AB の中点を M として、△PAM と △PBM を見よう。
+          - 2 つの三角形で、等しい辺と角を 3 つ探そう。
+          - 合同条件のどれが使えるかな。
+        paths:
+          - [AB の中点を M とする, AM = BM、∠PMA = ∠PMB = 90°、PM は共通, △PAM ≡ △PBM（2 辺とその間の角）, PA = PB]
+      - part: 今日
+        text: ∠XOY の二等分線の上の点 P から、2 辺に垂線 PA、PB をひきます。△OAP ≡ △OBP を示すときに使う合同条件は、どれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62.1" y1="122" x2="177.9" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.1" y1="122" x2="112.9" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.1" y1="122" x2="156.5" y2="63" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="137.6" y1="74.8" x2="137.6" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="137.6" y1="74.8" x2="95.2" y2="54.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="129.6,122 129.6,114 137.6,114" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="91.7,61.3 98.9,64.9 102.4,57.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M84.1 122 A22 22 0 0 0 80.8 110.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M84.2 108.2 A26 26 0 0 0 73.5 98.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="50.9" y="131" font-size="14" text-anchor="middle">O</text><text x="188.9" y="126.9" font-size="14" text-anchor="middle">X</text><text x="117.7" y="13" font-size="14" text-anchor="middle">Y</text><text x="137.6" y="138.9" font-size="14" text-anchor="middle">A</text><text x="84.4" y="53.8" font-size="14" text-anchor="middle">B</text><text x="148.8" y="75.2" font-size="14" text-anchor="middle">P</text></svg>'
+        choices:
+          - 直角三角形の斜辺と 1 つの鋭角がそれぞれ等しい
+          - 3 辺がそれぞれ等しい
+          - 直角三角形の斜辺と他の 1 辺がそれぞれ等しい
+        answer: 直角三角形の斜辺と 1 つの鋭角がそれぞれ等しい
+        hints:
+          - 2 つの三角形で、はじめからわかっている等しいものを書き出そう。
+          - OP はどちらの三角形にもあるね。∠AOP と ∠BOP はどうかな。
+          - PA = PB はこれから示したいことなので、まだ使えないね。
+        paths:
+          - [∠OAP = ∠OBP = 90°, OP は共通の斜辺, ∠AOP = ∠BOP（二等分線）, 斜辺と 1 つの鋭角]
+        note: 3 辺や「斜辺と他の 1 辺」は、PA = PB か OA = OB がわかっていないと使えない。示したいことを先に使っていないかを見る。
+      - part: 今日
+        text: PA = PB、∠APB = 40° の三角形 PAB で、P と AB の中点 M を結びます。∠APM は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="18" x2="82" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="158" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="82" y1="122" x2="158" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M112.5 38.7 A22 22 0 0 0 127.5 38.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="96.3" y1="68.3" x2="105.7" y2="71.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="134.3" y1="71.7" x2="143.7" y2="68.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="99" y1="127" x2="99" y2="117" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="103" y1="127" x2="103" y2="117" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="141" y1="117" x2="141" y2="127" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="137" y1="117" x2="137" y2="127" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="73" y="133.1" font-size="14" text-anchor="middle">A</text><text x="167" y="133.1" font-size="14" text-anchor="middle">B</text><text x="120" y="137.9" font-size="14" text-anchor="middle">M</text><text x="120" y="11.9" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 20
+        check: "40 // 2"
+        hints:
+          - △PAM と △PBM で、等しい辺を 3 組探そう。
+          - 2 つの三角形は合同だね。∠APM と ∠BPM はどうかな。
+          - ∠APB を 2 つに等しく分けよう。
+        paths:
+          - [PA = PB、AM = BM、PM は共通, △PAM ≡ △PBM（3 辺）, ∠APM = ∠BPM = 40° ÷ 2 = 20°]
+    extra:
+      - part: 今日
+        text: ∠XOY の二等分線の作図で、OP = 5 cm になるように O を中心の弧をかき、P と Q を中心に半径 4 cm の弧をかいて交点を R としました。四角形 OPRQ のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.8" y1="115.4" x2="174.2" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="115.4" x2="113.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113 122 A47.7 47.7 0 0 0 80.6 70" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M135.1 82.9 A39 39 0 0 0 114.6 76.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M122.3 88.6 A39 39 0 0 0 125.4 67.3" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="65.8" y1="115.4" x2="161.4" y2="55.7" stroke="currentColor" stroke-width="1.6" fill="none"/><polygon points="65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="54.6" y="124.4" font-size="14" text-anchor="middle">O</text><text x="185.2" y="120.3" font-size="14" text-anchor="middle">X</text><text x="118.1" y="13" font-size="14" text-anchor="middle">Y</text><text x="117.6" y="131.5" font-size="14" text-anchor="middle">P</text><text x="78.4" y="68.8" font-size="14" text-anchor="middle">Q</text><text x="134.8" y="90.5" font-size="14" text-anchor="middle">R</text></svg>'
+        answer: 18
+        check: "5 + 4 + 4 + 5"
+        hints:
+          - OQ は OP と同じ弧の半径だね。
+          - PR と QR は、どちらも 2 回目の弧の半径だね。
+          - 4 つの辺をたそう。
+        paths:
+          - [OP = OQ = 5 cm, PR = QR = 4 cm, 5 + 4 + 4 + 5 = 18 cm]
+      - part: 今日
+        text: 線分 AB の垂直二等分線の作図で、A と B を中心に同じ半径の弧をかいてできる四角形 APBQ は、何という四角形ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M127.7 34.4 A62 62 0 0 0 110.7 18" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.7 122 A62 62 0 0 0 127.7 105.6" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M129.3 18 A62 62 0 0 0 112.3 34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.3 105.6 A62 62 0 0 0 129.3 122" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="77,70 120,25.4 163,70 120,114.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="77" y1="70" x2="163" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="66" y="74.9" font-size="14" text-anchor="middle">A</text><text x="174" y="74.9" font-size="14" text-anchor="middle">B</text><text x="120" y="19.3" font-size="14" text-anchor="middle">P</text><text x="120" y="130.5" font-size="14" text-anchor="middle">Q</text></svg>'
+        choices: [ひし形, 長方形, 台形]
+        answer: ひし形
+        hints:
+          - AP、BP、AQ、BQ は、どれもどの長さかな。
+          - 4 つの辺の長さがすべて等しい四角形の名前を思い出そう。
+          - 角が直角かどうかは、まだわからないね。
+        paths:
+          - [AP = BP = AQ = BQ（同じ半径）, 4 つの辺が等しい, ひし形]
+        note: ひし形の対角線はたがいに垂直に 2 等分し合う（G-017）。これも垂直二等分線の作図が正しいわけの 1 つの言い方になる。
+      - part: 今日
+        text: 長さ 8 cm の線分 AB の垂直二等分線の作図で、A と B を中心に半径 5 cm の弧をかきました。四角形 APBQ のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M127.7 34.4 A62 62 0 0 0 110.7 18" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.7 122 A62 62 0 0 0 127.7 105.6" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M129.3 18 A62 62 0 0 0 112.3 34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.3 105.6 A62 62 0 0 0 129.3 122" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="77,70 120,25.4 163,70 120,114.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="77" y1="70" x2="163" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="66" y="74.9" font-size="14" text-anchor="middle">A</text><text x="174" y="74.9" font-size="14" text-anchor="middle">B</text><text x="120" y="19.3" font-size="14" text-anchor="middle">P</text><text x="120" y="130.5" font-size="14" text-anchor="middle">Q</text></svg>'
+        answer: 20
+        check: "5 * 4"
+        hints:
+          - AP、BP、AQ、BQ は、どれもどの長さかな。
+          - 4 つの辺は、どれも弧の半径だね。
+          - AB の長さは、まわりの長さに入るかな。
+        paths:
+          - [4 つの辺はどれも 5 cm, 5 × 4, 20 cm]
+        note: AB（対角線）の 8 cm をたしてしまいやすい。
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 点 P を通り直線 ℓ に平行な直線を作図します。P を通る直線をひいて ℓ との交点を A とし、A の角と同じ大きさの角を、同じ向きに P に写しました。こうしてひいた直線（点線）が ℓ と平行になるわけは、どれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="33.6" y1="109.9" x2="200.2" y2="109.9" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="88.5" y1="132" x2="149.1" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><line x1="64.8" y1="51.1" x2="206.4" y2="51.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M116.2 109.9 A16 16 0 0 0 107.7 95.8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M147.5 51.1 A16 16 0 0 0 139 37" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="131.5" cy="51.1" r="2.6" fill="currentColor"/><text x="124" y="45.3" font-size="14" text-anchor="middle">P</text><text x="110.9" y="123.8" font-size="14" text-anchor="middle">A</text><text x="200.2" y="104.8" font-size="14" text-anchor="middle">ℓ</text></svg>'
+        choices:
+          - 同位角が等しいから
+          - 対頂角が等しいから
+          - 三角形の角の和が 180° だから
+        answer: 同位角が等しいから
+        hints:
+          - A の角と P の角は、2 本の直線と 1 本の直線がつくる角のうち、どんな位置にあるかな。
+          - 同じ向きの位置にある 2 つの角を何というかな。
+          - 2 直線が平行になる条件を思い出そう。
+        paths:
+          - [A の角と P の角は同位角, 同位角が等しい, だから 2 直線は平行]
+      - part: 思い出す
+        text: 垂直二等分線の作図でできる四角形 APBQ は、4 つの辺がすべて等しいひし形です。対角線 PQ と AB について、正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M127.7 34.4 A62 62 0 0 0 110.7 18" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.7 122 A62 62 0 0 0 127.7 105.6" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M129.3 18 A62 62 0 0 0 112.3 34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.3 105.6 A62 62 0 0 0 129.3 122" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="77,70 120,25.4 163,70 120,114.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="77" y1="70" x2="163" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="66" y="74.9" font-size="14" text-anchor="middle">A</text><text x="174" y="74.9" font-size="14" text-anchor="middle">B</text><text x="120" y="19.3" font-size="14" text-anchor="middle">P</text><text x="120" y="130.5" font-size="14" text-anchor="middle">Q</text></svg>'
+        choices:
+          - たがいに垂直に 2 等分し合う
+          - 長さがいつも等しい
+          - たがいに平行である
+        answer: たがいに垂直に 2 等分し合う
+        hints:
+          - ひし形は平行四辺形の仲間だね。平行四辺形の対角線の性質は何だったかな。
+          - ひし形の対角線は、交わるところで何度になるかな。
+          - 長さが等しくなるのは、長方形の対角線だね。
+        paths:
+          - [ひし形は平行四辺形なので対角線は 2 等分し合う, ひし形の対角線は垂直, たがいに垂直に 2 等分し合う]
+      - part: 今日
+        text: 線分 AB の垂直二等分線の上に、PA = AB となる点 P をとります。∠PAB は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><path d="M131.6 42.2 A59.5 59.5 0 0 0 106.6 27.8" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M106.6 142.2 A59.5 59.5 0 0 0 131.6 127.8" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M133.4 27.8 A59.5 59.5 0 0 0 108.4 42.2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.4 127.8 A59.5 59.5 0 0 0 133.4 142.2" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="90.2" y1="85" x2="149.8" y2="85" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="120" y2="18" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,85 128,77 120,77" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="90.2" cy="85" r="2.6" fill="currentColor"/><text x="78.2" y="89.9" font-size="14" text-anchor="middle">A</text><circle cx="149.8" cy="85" r="2.6" fill="currentColor"/><text x="161.8" y="89.9" font-size="14" text-anchor="middle">B</text><text x="132" y="38.4" font-size="14" text-anchor="middle">P</text><text x="132" y="141.4" font-size="14" text-anchor="middle">Q</text><text x="111.5" y="98.4" font-size="14" text-anchor="middle">M</text></svg>'
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - P は垂直二等分線の上だから、PA と PB はどうかな。
+          - PA = PB = AB だね。どんな三角形かな。
+          - その三角形の 1 つの角は何度かな。
+        paths:
+          - [PA = PB（垂直二等分線の上）, PA = PB = AB で正三角形, 180 ÷ 3 = 60°]
+        note: 正三角形の作図（A と B を中心に半径 AB の弧）と同じ点になる。
+      - part: 今日
+        text: AB = AC、∠A = 40° の二等辺三角形 ABC で、∠B の二等分線を作図し、辺 AC との交点を D とします。∠BDC は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 82.1,122 157.9,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="82.1" y1="122" x2="142.5" y2="79.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M112.8 37.7 A21 21 0 0 0 127.2 37.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="56.2" font-size="12" text-anchor="middle">40°</text><line x1="96.4" y1="68.3" x2="105.8" y2="71.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="134.2" y1="71.7" x2="143.6" y2="68.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.1" y="11.9" font-size="14" text-anchor="middle">A</text><text x="73.7" y="134" font-size="14" text-anchor="middle">B</text><text x="165.1" y="135.2" font-size="14" text-anchor="middle">C</text><text x="152.9" y="81.1" font-size="14" text-anchor="middle">D</text></svg>'
+        answer: 75
+        check: "180 - (180 - 40) // 2 // 2 - (180 - 40) // 2"
+        hints:
+          - まず ∠B と ∠C を求めよう。
+          - ∠DBC は ∠B の半分だね。
+          - 三角形 DBC の角の和を使おう。
+        paths:
+          - [∠B = ∠C = (180° − 40°) ÷ 2 = 70°, ∠DBC = 35°, ∠BDC = 180° − 35° − 70° = 75°]
+          - [∠ABD = 35°, ∠BDC は △ABD の外角, 40° + 35° = 75°]
+      - part: 今日
+        text: 三角形 ABC で ∠B = 50°、∠C = 30° です。辺 AC の垂直二等分線を作図し、辺 BC との交点を P とします。∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84.6,30.3 18,109.7 222,109.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.6" y1="30.3" x2="130.4" y2="109.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.3" y1="70" x2="130.4" y2="109.7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M33 109.7 A15 15 0 0 0 27.6 98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="43.4" y="102" font-size="12" text-anchor="middle">50°</text><path d="M209 102.2 A15 15 0 0 0 207 109.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="195" y="106.6" font-size="12" text-anchor="middle">30°</text><polyline points="160.2,74 156.2,80.9 149.3,76.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="116.4" y1="54.5" x2="121.4" y2="45.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="190.1" y1="85.5" x2="185.1" y2="94.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79.7" y="25.4" font-size="14" text-anchor="middle">A</text><text x="7.2" y="116.8" font-size="14" text-anchor="middle">B</text><text x="232.8" y="116.6" font-size="14" text-anchor="middle">C</text><text x="137.5" y="123" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 60
+        check: "30 + 30"
+        hints:
+          - P は AC の垂直二等分線の上だから、PA と PC はどうかな。
+          - 三角形 PAC は二等辺三角形だね。∠PAC は何度かな。
+          - ∠APB は三角形 PAC の外角だよ。
+        paths:
+          - [PA = PC, ∠PAC = ∠C = 30°, ∠APB = 30° + 30° = 60°（外角）]
+          - [∠PAC = 30°, ∠APC = 180° − 30° × 2 = 120°, ∠APB = 180° − 120° = 60°]
+        note: ∠B = 50° は使わない。使わない数があってもよいことに気づかせる。
+      - part: 挑戦
+        text: 中心がわからなくなった円があります。円の上に 3 点 A、B、C をとり、AB と BC の垂直二等分線を作図すると、その交点が円の中心になります。そのわけとして正しいものは、どれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="57" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70.6" y1="46.5" x2="100.5" y2="128.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="100.5" y1="128.6" x2="176.1" y2="65.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="77" y1="90.7" x2="151" y2="63.7" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="142.9" y1="102.3" x2="103.5" y2="55.4" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><text x="61.1" y="45.9" font-size="14" text-anchor="middle">A</text><text x="96.7" y="143.8" font-size="14" text-anchor="middle">B</text><text x="187" y="68.1" font-size="14" text-anchor="middle">C</text></svg>'
+        choices:
+          - 円の中心は、A と B からも、B と C からも等しい距離にあるから
+          - 円の中心は、線分 AB の中点だから
+          - AB と BC の長さが等しいから
+        answer: 円の中心は、A と B からも、B と C からも等しい距離にあるから
+        hints:
+          - 円の中心から、円の上の点までの距離は、どれも何だったかな。
+          - A と B から等しい距離の点は、どの線の上にあるかな。
+          - 2 本の直線の交点は、いくつあるかな。
+        paths:
+          - [中心から A、B、C までは半径で等しい, 中心は AB の垂直二等分線の上にも BC の垂直二等分線の上にもある, 2 本の交点は 1 つ, 交点が中心]
+    extra:
+      - part: 今日
+        text: 三角形 ABC の辺 BC の上に、辺 AB と辺 AC から等しい距離にある点 P を作図します。どの線と BC の交点を作図すればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="106.4,18 46.3,122 193.7,122" stroke="currentColor" stroke-width="2" fill="none"/><text x="105" y="12" font-size="14" text-anchor="middle">A</text><text x="36.5" y="131.8" font-size="14" text-anchor="middle">B</text><text x="203.7" y="131.4" font-size="14" text-anchor="middle">C</text></svg>'
+        choices:
+          - ∠A の二等分線
+          - 辺 BC の垂直二等分線
+          - A から BC への垂線
+        answer: ∠A の二等分線
+        hints:
+          - 辺 AB と辺 AC は、どの角の 2 つの辺かな。
+          - 角の 2 つの辺から等しい距離にある点は、どの線の上にあったかな。
+          - その線と BC の交点を探そう。
+        paths:
+          - [AB と AC は ∠A の 2 辺, 2 辺から等しい距離の点は ∠A の二等分線の上, その線と BC の交点]
+      - part: 今日
+        text: 正三角形の作図でできる 60° の角と、垂線の 90° を 2 等分した 45° の角の差を、さらに 2 等分すると何度ですか。
+        answer: 7.5
+        accept: [15/2]
+        check: "(60 - 45) / 2"
+        hints:
+          - まず 60° と 45° の差を求めよう。
+          - その角を 2 等分しよう。
+          - 15 ÷ 2 は小数で表せるね。
+        paths:
+          - [60° − 45° = 15°, 15 ÷ 2, 7.5°]
+      - part: 今日
+        text: 直線 ℓ の外にある点 P から、ℓ への垂線を作図します。はじめにすることとして正しいものは、どれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="39.1" y1="69.5" x2="200.9" y2="69.5" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M64.9 61 A69.9 69.9 0 0 0 80.9 75.9" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M159.1 75.9 A69.9 69.9 0 0 0 175.1 61" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M106.1 130.9 A69.9 69.9 0 0 0 131.1 108" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M108.9 108 A69.9 69.9 0 0 0 133.9 130.9" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="18" x2="120" y2="132" stroke="currentColor" stroke-width="1.6" fill="none"/><polyline points="128,69.5 128,61.5 120,61.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="18" r="2.6" fill="currentColor"/><text x="132" y="22.9" font-size="14" text-anchor="middle">P</text><text x="67.3" y="86.2" font-size="14" text-anchor="middle">A</text><text x="172.7" y="86.2" font-size="14" text-anchor="middle">B</text><text x="132" y="125.9" font-size="14" text-anchor="middle">Q</text><text x="200.9" y="64.4" font-size="14" text-anchor="middle">ℓ</text></svg>'
+        choices:
+          - P を中心に弧をかき、ℓ との交点を 2 つつくる
+          - ℓ の上に、P のちょうど下に見える点をとる
+          - P から ℓ へ、目もりで直角をはかって線をひく
+        answer: P を中心に弧をかき、ℓ との交点を 2 つつくる
+        hints:
+          - 作図では、目もりや見た目で直角をつくらないね。
+          - P から等しい距離にある ℓ の上の 2 点 A、B をつくると、何ができるかな。
+          - P は AB の垂直二等分線の上にあるね。
+        paths:
+          - [P を中心の弧で A、B をつくる（PA = PB）, A、B を中心に同じ半径の弧で Q をつくる, 直線 PQ が垂線]
+  - day: 5
+    items:
+      - part: 今日
+        text: 長さ 11 cm の線分 AB の垂直二等分線をひき、AB との交点を M とします。AM は何 cm ですか。
+        answer: 5.5
+        accept: [11/2]
+        check: "11 / 2"
+        hints:
+          - 垂直二等分線は、AB をどのように分けるかな。
+          - M は AB の真ん中の点だよ。
+          - AB の長さを 2 でわろう。
+        paths:
+          - [M は AB の中点, 11 ÷ 2, 5.5 cm]
+      - part: 今日
+        text: 長さ 6 cm の線分 AB があります。A からも B からも 4 cm の距離にある点は、いくつありますか。
+        answer: 2
+        check: "2 if 4 > 6 / 2 else (1 if 4 == 6 / 2 else 0)"
+        hints:
+          - 点は、AB のどんな線の上にあるかな。
+          - 4 cm と、AB の半分の長さをくらべよう。
+          - AB の上側と下側を考えよう。
+        paths:
+          - [点は垂直二等分線の上, 4 cm は半分の 3 cm より長い, 上と下に 1 つずつ, 2 つ]
+      - part: 今日
+        text: ∠XOY = 84° の二等分線を作図しました。二等分線と辺 OX がつくる角は何度ですか。
+        answer: 42
+        check: "84 // 2"
+        hints:
+          - 二等分線は、角を 2 つの等しい角に分けるね。
+          - 84° を 2 つに等しく分けよう。
+          - 84 ÷ 2 を計算しよう。
+        paths:
+          - [84 ÷ 2, 42°]
+      - part: 今日
+        text: 垂線の作図でできる 90° の角と、正三角形の 60° を 2 等分した角をたすと、何度ですか。
+        answer: 120
+        check: "90 + 60 // 2"
+        hints:
+          - 60° を 2 等分すると何度かな。
+          - 90° とたそう。
+          - 2 つの角をとなりに並べて作図すると、この大きさの角ができるね。
+        paths:
+          - [60° ÷ 2 = 30°, 90° + 30°, 120°]
+      - part: 今日
+        text: 角の 2 つの辺 OX、OY から等しい距離にある点（角の内側）は、どこにありますか。
+        choices:
+          - ∠XOY の二等分線の上
+          - O を中心とする円の上
+          - 辺 OX の垂直二等分線の上
+        answer: ∠XOY の二等分線の上
+        hints:
+          - 点から辺までの距離は、点から辺にひいた垂線の長さだね。
+          - 2 つの垂線の長さが等しいとき、2 つの直角三角形はどうなるかな。
+          - 合同なら、O のところの 2 つの角はどうなるかな。
+        paths:
+          - [点を P、垂線を PA、PB とする, PA = PB、OP は共通で △OAP ≡ △OBP（斜辺と他の 1 辺）, ∠AOP = ∠BOP, 二等分線の上]
+      - part: 今日
+        text: 角の二等分線の作図が正しいわけを示すとき、△OPR ≡ △OQR に使う合同条件は、どれですか（OP = OQ、PR = QR）。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.8" y1="115.4" x2="174.2" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="115.4" x2="113.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113 122 A47.7 47.7 0 0 0 80.6 70" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M135.1 82.9 A39 39 0 0 0 114.6 76.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M122.3 88.6 A39 39 0 0 0 125.4 67.3" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="65.8" y1="115.4" x2="161.4" y2="55.7" stroke="currentColor" stroke-width="1.6" fill="none"/><polygon points="65.8,115.4 113.5,115.4 125.3,78.2 86.7,72.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="54.6" y="124.4" font-size="14" text-anchor="middle">O</text><text x="185.2" y="120.3" font-size="14" text-anchor="middle">X</text><text x="118.1" y="13" font-size="14" text-anchor="middle">Y</text><text x="117.6" y="131.5" font-size="14" text-anchor="middle">P</text><text x="78.4" y="68.8" font-size="14" text-anchor="middle">Q</text><text x="134.8" y="90.5" font-size="14" text-anchor="middle">R</text></svg>'
+        choices:
+          - 3 辺がそれぞれ等しい
+          - 2 辺とその間の角がそれぞれ等しい
+          - 1 辺とその両はしの角がそれぞれ等しい
+        answer: 3 辺がそれぞれ等しい
+        hints:
+          - OP = OQ、PR = QR のほかに、等しい辺はあるかな。
+          - OR は、どちらの三角形にもあるね。
+          - 角はまだ何もわかっていないね。
+        paths:
+          - [OP = OQ、PR = QR, OR は共通, 3 辺がそれぞれ等しい]
+      - part: 今日
+        text: 三角形 ABC で ∠B = 35° です。辺 BC の上に、PA = PB となる点 P をとります。∠APC は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="138,28 18,112 222,112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="138" y1="28" x2="107.4" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><path d="M33 112 A15 15 0 0 0 30.3 103.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="44.7" y="107.8" font-size="12" text-anchor="middle">35°</text><line x1="127.4" y1="71.7" x2="118" y2="68.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="62.7" y1="107" x2="62.7" y2="117" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.8" y="22.3" font-size="14" text-anchor="middle">A</text><text x="7.2" y="119.1" font-size="14" text-anchor="middle">B</text><text x="232.8" y="119.2" font-size="14" text-anchor="middle">C</text><text x="101.3" y="126.1" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 70
+        check: "35 + 35"
+        hints:
+          - PA = PB だから、三角形 PAB はどんな三角形かな。
+          - ∠PAB は何度かな。
+          - ∠APC は三角形 PAB の外角だね。
+        paths:
+          - [PA = PB で二等辺三角形, ∠PAB = ∠B = 35°, ∠APC = 35° + 35° = 70°（外角）]
+      - part: 今日
+        text: 長さ 10 cm の線分 AB の垂直二等分線の作図で、A と B を中心に半径 7 cm の弧をかきました。四角形 APBQ のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M127.7 34.4 A62 62 0 0 0 110.7 18" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M110.7 122 A62 62 0 0 0 127.7 105.6" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M129.3 18 A62 62 0 0 0 112.3 34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M112.3 105.6 A62 62 0 0 0 129.3 122" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="77,70 120,25.4 163,70 120,114.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="77" y1="70" x2="163" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="66" y="74.9" font-size="14" text-anchor="middle">A</text><text x="174" y="74.9" font-size="14" text-anchor="middle">B</text><text x="120" y="19.3" font-size="14" text-anchor="middle">P</text><text x="120" y="130.5" font-size="14" text-anchor="middle">Q</text></svg>'
+        answer: 28
+        check: "7 * 4"
+        hints:
+          - AP、BP、AQ、BQ は、どれもどの長さかな。
+          - 4 つの辺は、どれも弧の半径だね。
+          - AB はまわりに入るかな。
+        paths:
+          - [4 つの辺はどれも 7 cm, 7 × 4, 28 cm]
+    extra:
+      - part: 今日
+        text: 長さ 13 cm の線分 AB の垂直二等分線の上に、PA = 8 cm となる点 P をとります。三角形 PAB のまわりの長さは何 cm ですか。
+        answer: 29
+        check: "8 + 8 + 13"
+        hints:
+          - 垂直二等分線の上の点は、A と B から等しい距離にあるね。
+          - PB は何 cm かな。
+          - 3 つの辺をたそう。
+        paths:
+          - [PB = PA = 8 cm, 8 + 8 + 13, 29 cm]
+      - part: 今日
+        text: 長さ 10 cm の線分 AB があります。A からも B からも 5 cm の距離にある点は、いくつありますか。
+        answer: 1
+        check: "2 if 5 > 10 / 2 else (1 if 5 == 10 / 2 else 0)"
+        hints:
+          - 点は垂直二等分線の上にあるね。
+          - 垂直二等分線の上で、A にいちばん近い点はどこで、何 cm かな。
+          - ちょうどその長さのときは、点はいくつかな。
+        paths:
+          - [点は垂直二等分線の上, A にいちばん近いのは中点で 5 cm, ちょうど 5 cm なのは中点だけ, 1 つ]
+      - part: 今日
+        text: 60° の角を 2 等分してできた角を、さらに 2 等分し、それを 90° からひくと何度ですか。
+        answer: 75
+        check: "90 - 60 // 2 // 2"
+        hints:
+          - 60° を 2 回 2 等分すると何度かな。
+          - 90° からその角をひこう。
+          - 図にすると、垂線の作図と正三角形の作図を組み合わせることになるね。
+        paths:
+          - [60° → 30° → 15°, 90° − 15°, 75°]

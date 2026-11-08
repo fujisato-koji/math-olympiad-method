@@ -32,12 +32,12 @@
 | 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 249 | 1902 |
 | GRE Physics Test（ETS） | 214 | 1604 |
 | University of Cambridge ほか（STEP 2・3） | 172 | 1109 |
-| Indian Institutes of Technology（JEE Advanced、数学・物理・化学） | 240 | 1561 |
-| National Testing Agency（JEE Main、数学・物理・化学） | 225 | 1460 |
+| Indian Institutes of Technology（JEE Advanced、数学・物理・化学） | 241 | 1566 |
+| National Testing Agency（JEE Main、数学・物理・化学） | 227 | 1470 |
 | University of Oxford ほか（TMUA） | 114 | 688 |
-| 東京大学（理科の入学試験、数学と理科） | 144 | 921 |
+| 東京大学（理科の入学試験、数学と理科） | 145 | 926 |
 | 中国の普通高等学校招生全国統一考試（高考、数学と理科） | 127 | 797 |
-| 韓国の大学修学能力試験（修能、数学と科学探究） | 88 | 558 |
+| 韓国の大学修学能力試験（修能、数学と科学探究） | 89 | 563 |
 | A level Mathematics（Pearson Edexcel） | 132 | 820 |
 | A level Further Mathematics（Pearson Edexcel） | 196 | 1342 |
 | IB Mathematics: Analysis and Approaches HL | 134 | 836 |
@@ -49,10 +49,10 @@
 | ISEB Common Entrance 13+（数学と理科） | 144 | 809 |
 | GCSE Mathematics Higher（Pearson Edexcel） | 114 | 695 |
 | PSLE（シンガポール、算数と理科） | 101 | 561 |
-| GCE O-Level Mathematics（シンガポール） | 100 | 608 |
+| GCE O-Level Mathematics（シンガポール） | 101 | 613 |
 | GCE O-Level Additional Mathematics（シンガポール） | 86 | 526 |
 | AMC 8（MAA） | 106 | 634 |
-| Math Kangaroo | 106 | 652 |
+| Math Kangaroo | 107 | 657 |
 | Google DeepMind の Research Scientist | 302 | 2266 |
 | FE Mechanical（NCEES） | 275 | 2012 |
 | FE Electrical and Computer（NCEES） | 264 | 2017 |
@@ -87,10 +87,10 @@
 | Math Kangaroo（3・4 年生） | 41 | 223 |
 | Math Kangaroo（5・6 年生） | 60 | 346 |
 | Math Kangaroo（7・8 年生） | 81 | 479 |
-| Math Kangaroo（9・10 年生） | 96 | 597 |
-| Math Kangaroo（11・12 年生） | 117 | 750 |
-| European Girls' Mathematical Olympiad（EGMO） | 128 | 851 |
-| Asian Pacific Mathematics Olympiad（APMO） | 140 | 937 |
+| Math Kangaroo（9・10 年生） | 97 | 602 |
+| Math Kangaroo（11・12 年生） | 118 | 755 |
+| European Girls' Mathematical Olympiad（EGMO） | 129 | 856 |
+| Asian Pacific Mathematics Olympiad（APMO） | 141 | 942 |
 | Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 216 | 1660 |
 | IMF（国際通貨基金）のエコノミスト（Economist Program） | 160 | 1107 |
 | 国際化学オリンピック（IChO） | 230 | 1608 |
@@ -398,8 +398,8 @@
 | G-019 三平方の定理 | 図形 | G-017、A-016、G-020、G-008、A-017 | 6 | 6 日分、予備 18 問 |
 | G-020 相似の証明 | 図形 | G-013、G-016、A-010 | 9 | 9 日分、予備 27 問 |
 | G-021 空間図形 | 図形 | G-019、G-014 | 6 | 6 日分、予備 18 問 |
-| G-022 作図（定規とコンパス） | 図形 | G-017 | 5 | — |
-| G-023 角度の追跡と内接四角形 | 図形 | G-018 | 16 | — |
+| G-022 作図（定規とコンパス） | 図形 | G-017、G-010 | 5 | 5 日分、予備 15 問 |
+| G-023 角度の追跡と内接四角形 | 図形 | G-018、G-054 | 16 | 16 日分、予備 48 問 |
 | L-011 背理法 | 論理 | L-013、A-016 | 7 | 7 日分、予備 21 問 |
 | L-012 数学的帰納法の入口 | 論理 | A-004、A-010、A-015、A-013 | 12 | 12 日分、予備 36 問 |
 | L-013 命題と条件（必要条件と十分条件） | 論理 | L-008、A-010、A-013 | 5 | 5 日分、予備 15 問 |
@@ -436,7 +436,7 @@
 | I-010 くすりと体（飲んだ薬が血にのって運ばれる、決まった量と回数を守るわけ、効き目と副作用、抗菌薬はウイルスに効かない） | 医学と健康 | B-020、B-074 | 5 | — |
 | G-052 錐体と球の体積と表面積（角錐、円錐、球） | 図形 | G-011、G-010、A-010、N-078 | 5 | 5 日分、予備 15 問 |
 | G-054 円の接線と接弦定理（接線と半径、接線の長さ、接線と弦のつくる角） | 図形 | G-018、G-017 | 5 | — |
-| G-028 三角形の五心 | 図形 | G-018、G-020、G-023 | 12 | — |
+| G-028 三角形の五心 | 図形 | G-018、G-020、G-023、G-054、G-022 | 12 | 12 日分、予備 36 問 |
 | G-030 方べきの定理 | 図形 | G-018、G-020、G-054、G-019、A-016 | 9 | 9 日分、予備 27 問 |
 
 ## 段 5 関係
