@@ -8,7 +8,7 @@
   // 考え方の水準（D-028）。段（stage）は画面に出さない
   const THINK = Object.fromEntries((R.levels || []).map(l => [l.id, l]));
   const KEY = 'michisuji.progress.v1', PREF = 'michisuji.prefs.v1';
-  const STATUS_NAME = { done: '済', doing: 'いま', review: '復習', ready: '次にできる', later: 'まだ' };
+  const STATUS_NAME = { ri: '腕だめしまで', done: '済', doing: 'いま', review: '復習', ready: '次にできる', later: 'まだ' };
   // 問題の量の決まり（R-33〜R-35）。値は仮の設計点で、記録を見て直す。
   // prior は係数の前置き（基本の日数を何日分混ぜるか）。済んだ単元が少ないうちに係数がぶれないようにする。
   const RULE = { low: .6, high: .9, pass: .8, intervals: [1, 7, 30], reviewItems: 2, reviewDay: .25, prior: 20 };
@@ -216,6 +216,18 @@
     if (r && Object.keys(r.days || {}).length) return 'doing';
     const alt = UNITS[id].alt || {};
     return UNITS[id].needs.every(n => [n, ...(alt[n] || [])].some(isDone)) ? 'ready' : 'later';
+  }
+  // 見せる状態（D-048）：済のうち、腕だめしをすべて解いた駅は「腕だめしまで」（ri）。
+  // 進みは、途中なら日の割合（やった日ととばした日）、済なら腕だめしの解けた割合
+  const riSolved = id => (UNITS[id].ri || []).filter(it => ((progress.items[it.qid] || {}).star || 0) > 0).length;
+  function stateOf(id) {
+    const s = status(id), n = (UNITS[id].ri || []).length;
+    return s === 'done' && n && riSolved(id) >= n ? 'ri' : s;
+  }
+  function progOf(id) {
+    const u = UNITS[id], r = progress.units[id] || {}, s = status(id);
+    if (s === 'doing' || s === 'review') return Math.min(1, new Set([...Object.keys(r.days || {}).map(Number), ...(r.skip || [])]).size / u.days.length);
+    return s === 'done' && (u.ri || []).length ? riSolved(id) / u.ri.length : 0;
   }
   // 次にやること：おさらいの日、まだの日（とばした日を除く）、どれも済なら確認の日のやり直し
   function nextStep(id) {
@@ -433,7 +445,7 @@
       <h2>つぎの みちすじ</h2>
       <div class="next-list">${opts.map(o => `
         <a class="next-card" href="${o.href}" style="${lc(o.u.lane)}">
-          <span class="dot ${status(o.u.id)}"></span>
+          <span class="dot ${stateOf(o.u.id)}"></span>
           <span class="mode">${o.mode}・${esc(LANES[o.u.lane].name)}・${o.label}</span>
           <span class="t">${esc(o.u.title)}</span>
         </a>`).join('') || '<p class="muted">すべての駅を通りました。</p>'}
@@ -534,6 +546,7 @@
         <input class="cosmos-q" id="cosmos-q" type="search" placeholder="星をさがす（光合成、フーリエ、確率…）" autocomplete="off" aria-label="星をさがす">
       </div>
       ${barHtml()}
+      ${legendHtml()}
       <div class="xpop" id="xpop" hidden></div>
       <div class="cosmos-tip" id="cosmos-tip" hidden></div>
       <div class="cosmos-card" id="cosmos-card"${CARD ? '' : ' hidden'}>${CARD}</div>
@@ -599,7 +612,7 @@
   function paint(fly) {
     if (X.view === '3d') {
       if (!cosmos) return;
-      cosmos.setStates(status);
+      cosmos.setStates(stateOf, progOf);
       cosAlpha();
       const g = GOALS.find(x => x.id === prefs.goal);
       if (X.pair) {
@@ -638,7 +651,11 @@
     }
     const g = GOALS.find(x => x.id === prefs.goal), marks = g && !on ? new Set(goalMarks(g)) : null;
     host.classList.toggle('focus', !!on);
-    host.querySelectorAll('circle').forEach(c => {
+    host.querySelectorAll('.dc').forEach(g => {
+      const id = g.dataset.d;
+      g.classList.toggle('fade', (!!on && !on.has(id)) || (!!X.hits && !X.hits.has(id)));
+    });
+    host.querySelectorAll('circle[data-u]').forEach(c => {
       const id = c.dataset.u;
       c.classList.toggle('hl', !!on && on.has(id));
       c.classList.toggle('sel', id === X.sel || (!!X.pair && (id === X.pair.a || id === X.pair.b)));
@@ -946,13 +963,47 @@
     };
     svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map(n => edge(n, u, 'need')),
       ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
+    svg += '<g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
-      return p ? `<circle class="${status(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+      return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g></svg>';
     host.innerHTML = svg;
     POS2D = pos;
     apply2D();
+  }
+
+  // 駅の状態の飾り（D-048）：途中は日の割合の弧、済は閉じた輪と腕だめしの金の弧、腕だめしまでは金の光と輪
+  const arcSvg = (x, y, r, k, cls) => `<circle class="${cls}" cx="${x}" cy="${y}" r="${r}" pathLength="100" stroke-dasharray="${(k * 100).toFixed(1)} 100" transform="rotate(-90 ${x} ${y})"/>`;
+  function sparkPath(x, y, R, r) {
+    let d = '';
+    for (let i = 0; i < 8; i++) {
+      const a = i * Math.PI / 4 - Math.PI / 2, q = i % 2 ? r : R;
+      d += (i ? 'L' : 'M') + (x + q * Math.cos(a)).toFixed(1) + ',' + (y + q * Math.sin(a)).toFixed(1);
+    }
+    return d + 'Z';
+  }
+  function decoSvg(u, p) {
+    if (!p) return '';
+    const s = stateOf(u.id), k = progOf(u.id), [x, y] = p;
+    const head = `<g class="dc ${s}${inGoal(u.id) || inChoice(u.id) ? '' : ' off'}" data-d="${u.id}" style="${lc(u.lane)}">`;
+    if (s === 'doing' || s === 'review') return `${head}<circle class="trk" cx="${x}" cy="${y}" r="10.5"/>${arcSvg(x, y, 10.5, k, 'arc')}</g>`;
+    if (s === 'done') return `${head}<circle class="ring" cx="${x}" cy="${y}" r="10.5"/>${k > 0 ? arcSvg(x, y, 14, k, 'garc') : ''}</g>`;
+    if (s === 'ri') return `${head}<path class="spark" d="${sparkPath(x, y, 19, 3)}"/><circle class="gring" cx="${x}" cy="${y}" r="10.5"/></g>`;
+    return '';
+  }
+  // 探索の画面の凡例（D-048）：星の状態の見分け方
+  function legendHtml() {
+    const ic = {
+      later: '<circle cx="12" cy="12" r="4" fill="none" stroke="#8f9be0" stroke-opacity=".6" stroke-width="2"/>',
+      ready: '<circle cx="12" cy="12" r="4.5" fill="none" stroke="#b9c6ff" stroke-width="2.4"/>',
+      doing: '<circle cx="12" cy="12" r="3.5" fill="#86a6ff"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="#86a6ff" stroke-opacity=".25" stroke-width="2"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="#86a6ff" stroke-width="2" stroke-linecap="round" pathLength="100" stroke-dasharray="55 100" transform="rotate(-90 12 12)"/>',
+      done: '<circle cx="12" cy="12" r="3.5" fill="#fff"/><circle cx="12" cy="12" r="8.5" fill="none" stroke="#c9d4ff" stroke-width="1.6"/>',
+      ri: `<path d="${sparkPath(12, 12, 11.5, 2)}" fill="#f5c451"/><circle cx="12" cy="12" r="3" fill="#fff"/>`,
+    };
+    const names = { later: 'まだ', ready: '次にできる', doing: '途中', done: '済', ri: '腕だめしまで' };
+    return `<div class="xlegend" aria-label="星の状態">${Object.keys(names).map(k =>
+      `<span><svg viewBox="0 0 24 24" aria-hidden="true">${ic[k]}</svg>${names[k]}</span>`).join('')}</div>`;
   }
 
   // ---- 組み合わせの層（D-031、D-035） ----
@@ -973,8 +1024,8 @@
     <section class="comb-sec">
       <h2>橋の駅 <span class="muted">${bridges.length}</span></h2>
       <p class="muted">直接の前提が、遠い領域を広く組み合わせる駅（広さ ${LAYER.cut} 以上、上位 1 割）と、珍しい組み合わせの駅。</p>
-      <div class="station-list">${bridges.map(u => `<a class="station ${status(u.id)}" href="#/unit/${u.id}" style="${lc(u.lane)}">
-        <span class="dot ${status(u.id)}"></span><span class="sid">${u.id}・水準 ${u.level}</span><span class="st">${esc(u.title)}</span>
+      <div class="station-list">${bridges.map(u => `<a class="station ${stateOf(u.id)}" href="#/unit/${u.id}" style="${lc(u.lane)}">
+        <span class="dot ${stateOf(u.id)}"></span><span class="sid">${u.id}・水準 ${u.level}</span><span class="st">${esc(u.title)}</span>
         <span class="sub">${u.comb.rg.map(r => `<span class="from">${rn(r)}</span>`).join('')}</span></a>`).join('')}</div>
     </section>
     <section class="comb-sec">
@@ -1015,7 +1066,7 @@
       <p>${esc(s.about)}。わけの示し方は ${circled(n)} ${esc(REASON[n])}。</p>
       ${g ? `<p class="goal-banner">目標「${esc(g.name)}」に要る駅だけで組み替えています。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
     </section>
-    <div class="legend">${['done', 'doing', 'review', 'ready', 'later'].map(k =>
+    <div class="legend">${['ri', 'done', 'doing', 'review', 'ready', 'later'].map(k =>
       `<span><span class="dot ${k}" style="${lc('N')}"></span>${STATUS_NAME[k]}</span>`).join('')}
       <span><span class="from" style="${lc('C')}">C-001</span>ほかの流れの前提</span></div>
     ${us.length ? lanes : '<p class="empty">この目標では、この水準の駅は要りません。</p>'}
@@ -1025,7 +1076,7 @@
     </div>`;
   }
   function station(u) {
-    const st = status(u.id), r = progress.units[u.id];
+    const st = stateOf(u.id), r = progress.units[u.id];
     const daysDone = Object.keys((r && r.days) || {}).length;
     const outside = u.needs.filter(x => UNITS[x].lane !== u.lane);
     const ready = u.days.filter(d => d.items && d.items.length).length;
@@ -1052,7 +1103,7 @@
     <section class="unit-head" style="${lc(u.lane)}">
       <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・<a href="#/level/${u.level}">水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</a>・${u.id}</div>
       <h1>${esc(u.title)}</h1>
-      <div class="row"><span class="dot ${st}" style="${lc(u.lane)}"></span>${STATUS_NAME[st]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
+      <div class="row"><span class="dot ${stateOf(id)}" style="${lc(u.lane)}"></span>${STATUS_NAME[stateOf(id)]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし。ここから始められます。'}</div>
       ${u.alt ? `<div class="row">代わりの前提 ${Object.entries(u.alt).map(([n, bs]) => `<span class="muted">${n} の代わりに</span>${bs.map(chip).join('')}`).join('')}</div>` : ''}
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
@@ -1164,8 +1215,8 @@
       <h2>次に進める駅</h2>
       <div class="next-list">${next.slice(0, 8).map(u => `
         <a class="next-card" href="#/unit/${u.id}" style="${lc(u.lane)}">
-          <span class="dot ${status(u.id)}"></span>
-          <span class="mode">${STATUS_NAME[status(u.id)]}・${esc(LANES[u.lane].name)}・水準 ${u.level}</span>
+          <span class="dot ${stateOf(u.id)}"></span>
+          <span class="mode">${STATUS_NAME[stateOf(u.id)]}・${esc(LANES[u.lane].name)}・水準 ${u.level}</span>
           <span class="t">${esc(u.title)}</span>
         </a>`).join('') || '<p class="muted">この目標の駅はすべて済みました。</p>'}</div>
     </section>

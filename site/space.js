@@ -3,29 +3,65 @@
    何を光らせるか（前提の鎖、目標、組み合わせ）は app.js が決めて渡す。 */
 import * as THREE from './vendor/three.module.min.js';
 
+// 星の状態（D-048）：0 まだ、1 次にできる（息をする）、2 途中（やった日の割合だけ輪が伸び、先が光る）、
+// 3 済（輪が閉じ、外に腕だめしの解けた割合だけ金の弧）、4 腕だめしまで（金の星になり、光の筋がゆっくり回る）。
+// 輪と光の筋を描く星は、絵を大きく取り（k 倍）、星そのものの光の大きさは変えない
 const STAR_VS = `
-attribute float size; attribute vec3 color; attribute float phase; attribute float state; attribute float alpha;
+attribute float size; attribute vec3 color; attribute float phase; attribute float state; attribute float alpha; attribute float prog;
 uniform float time; uniform float scale; uniform vec2 fog;
-varying vec3 vColor; varying float vAlpha; varying float vState;
+varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT;
 void main() {
   vec4 mv = modelViewMatrix * vec4(position, 1.0);
   float fogk = 1.0 - 0.75 * smoothstep(fog.x, fog.y, -mv.z);
   float tw = 0.82 + 0.18 * sin(time * 1.3 + phase * 6.2832);
-  float pulse = (state > 0.5 && state < 2.5) ? 1.0 + 0.45 * sin(time * 3.2 + phase * 6.2832) : 1.0;
-  gl_PointSize = clamp(size * scale * tw * pulse / -mv.z, 1.5, 90.0);
+  float pulse = (state > 0.5 && state < 1.5) ? 1.0 + 0.45 * sin(time * 3.2 + phase * 6.2832) : 1.0;
+  float k = state > 3.5 ? 3.4 : state > 1.5 ? 2.0 : 1.0;
+  // 進んだ星ほど大きく、遠くからでも見える大きさを下限にする（腕だめしまでの金の光は遠目でも分かるように）
+  float boost = state > 3.5 ? 1.7 : state > 2.5 ? 1.3 : state > 1.5 ? 1.15 : 1.0;
+  float lo = state > 3.5 ? 22.0 : state > 2.5 ? 9.0 : state > 1.5 ? 7.0 : 1.5;
+  gl_PointSize = clamp(size * scale * tw * pulse * k * boost / -mv.z, lo, 90.0 * k);
   gl_Position = projectionMatrix * mv;
-  vColor = color; vAlpha = alpha * fogk; vState = state;
+  vColor = color; vAlpha = alpha * fogk; vState = state; vProg = prog; vK = k;
+  vSpin = time * 0.22 + phase * 6.2832; vT = time + phase * 6.2832;
 }`;
 const STAR_FS = `
-varying vec3 vColor; varying float vAlpha; varying float vState;
+varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT;
 void main() {
-  vec2 c = gl_PointCoord - 0.5; float d = length(c);
-  if (d > 0.5) discard;
+  vec2 q = gl_PointCoord - 0.5;
+  if (length(q) > 0.5) discard;
+  vec2 c = q * vK; float d = length(c);
   float glow = exp(-d * d * 16.0);
   float core = smoothstep(0.16, 0.0, d);
   float white = vState > 2.5 ? 1.0 : 0.5;
   vec3 col = vColor * glow * 1.15 + vec3(1.0) * core * white;
-  gl_FragColor = vec4(col, (glow * 0.85 + core * 0.9) * vAlpha);
+  float a = glow * 0.85 + core * 0.9;
+  float ang = fract(atan(c.x, -c.y) / 6.2832 + 1.0);
+  vec3 gold = vec3(1.0, 0.78, 0.36);
+  if (vState > 1.5 && vState < 2.5) {
+    float band = smoothstep(0.045, 0.0, abs(d - 0.7));
+    float on = step(ang, vProg);
+    float head = exp(-pow((ang - vProg) * 18.0, 2.0)) * band;
+    float br = 0.85 + 0.15 * sin(vT * 2.4);
+    col += vColor * band * (0.18 + 1.2 * on * br) + vec3(1.0) * head * 0.9;
+    a += band * (0.12 + 0.8 * on) + head * 0.6;
+  } else if (vState > 2.5 && vState < 3.5) {
+    float band = smoothstep(0.04, 0.0, abs(d - 0.7));
+    col += mix(vColor, vec3(1.0), 0.35) * band; a += band * 0.75;
+    float band2 = smoothstep(0.035, 0.0, abs(d - 0.86));
+    float on2 = step(ang, vProg) * step(0.001, vProg);
+    col += gold * band2 * on2 * 1.3; a += band2 * on2 * 0.8;
+  } else if (vState > 3.5) {
+    float cs = cos(vSpin), sn = sin(vSpin);
+    vec2 r = vec2(cs * c.x - sn * c.y, sn * c.x + cs * c.y);
+    float sp = exp(-abs(r.x) * 30.0) * exp(-abs(r.y) * 2.2) + exp(-abs(r.y) * 30.0) * exp(-abs(r.x) * 2.2);
+    vec2 r2 = vec2(0.7071 * (r.x - r.y), 0.7071 * (r.x + r.y));
+    sp += 0.4 * (exp(-abs(r2.x) * 42.0) * exp(-abs(r2.y) * 4.5) + exp(-abs(r2.y) * 42.0) * exp(-abs(r2.x) * 4.5));
+    float halo = exp(-d * d * 3.0) * (0.28 + 0.08 * sin(vT * 1.7));
+    float band = smoothstep(0.04, 0.0, abs(d - 0.7));
+    col = mix(vColor, gold, 0.65) * glow * 1.25 + vec3(1.0) * core + gold * (sp * 1.15 + halo + band * 0.9);
+    a = glow * 0.9 + core + sp + halo + band * 0.7;
+  }
+  gl_FragColor = vec4(col, min(a, 1.8) * vAlpha);
 }`;
 // 線：頂点ごとの色と濃さ。flow > 0 なら、前提から先へ光が流れる（along は線の始まり 0、終わり 1）
 const LINE_VS = `
@@ -130,7 +166,7 @@ export function mount(api) {
 
   // ---- 星（単元） ----
   const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N),
-    phase = new Float32Array(N), state = new Float32Array(N), alpha = new Float32Array(N);
+    phase = new Float32Array(N), state = new Float32Array(N), alpha = new Float32Array(N), prog = new Float32Array(N);
   const P = units.map(u => new THREE.Vector3(...u.p));
   units.forEach((u, i) => {
     pos.set(u.p, i * 3);
@@ -145,6 +181,7 @@ export function mount(api) {
   sg.setAttribute('size', new THREE.BufferAttribute(size, 1));
   sg.setAttribute('phase', new THREE.BufferAttribute(phase, 1));
   sg.setAttribute('state', new THREE.BufferAttribute(state, 1));
+  sg.setAttribute('prog', new THREE.BufferAttribute(prog, 1));
   sg.setAttribute('alpha', new THREE.BufferAttribute(alpha, 1));
   const starMat = new THREE.ShaderMaterial({
     uniforms: { time: { value: 0 }, scale: { value: 1 }, fog: { value: new THREE.Vector2(60, 200) } }, vertexShader: STAR_VS, fragmentShader: STAR_FS,
@@ -312,10 +349,11 @@ export function mount(api) {
   }
 
   // ---- 状態を描く ----
-  const STATE = { later: 0, ready: 1, doing: 2, review: 2, done: 3 };
-  function setStates(fn) {
-    units.forEach((u, i) => { state[i] = STATE[fn(u.id)] ?? 0; });
-    sg.attributes.state.needsUpdate = true;
+  // fn は星の状態の名前、pfn は進み（途中なら日の割合、済なら腕だめしの解けた割合）を返す
+  const STATE = { later: 0, ready: 1, doing: 2, review: 2, done: 3, ri: 4 };
+  function setStates(fn, pfn) {
+    units.forEach((u, i) => { state[i] = STATE[fn(u.id)] ?? 0; prog[i] = pfn ? pfn(u.id) : 0; });
+    sg.attributes.state.needsUpdate = true; sg.attributes.prog.needsUpdate = true;
   }
   // 見せる濃さ：1 は見える、低いほど沈む。目標の外の星と糸は沈める
   // boost：目標の星座では、目標の星どうしの糸を濃くする。

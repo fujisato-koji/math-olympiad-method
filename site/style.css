@@ -289,6 +289,8 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   display: grid; place-items: center;
 }
 .dot.done { background: var(--c); }
+.dot.ri { background: var(--c); border-color: #f0b429; box-shadow: 0 0 0 3px rgba(240, 180, 41, .35), 0 0 12px rgba(245, 196, 81, .55); }
+.dot.ri::after { content: "✦"; color: #fff; font-size: 10px; line-height: 1; }
 .dot.done::after { content: ""; width: 7px; height: 4px; border: solid var(--surface); border-width: 0 0 2px 2px; transform: rotate(-45deg) translate(1px, -1px); }
 .dot.doing { background: var(--c); box-shadow: 0 0 0 5px var(--glow); animation: pulse 2.4s ease-in-out infinite; }
 .dot.later { border-color: color-mix(in srgb, var(--c) 40%, var(--surface)); }
@@ -523,6 +525,7 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .map.focus .edges path.hl { stroke: var(--solid); stroke-opacity: .75; stroke-width: 1.6; }
 .map circle { fill: var(--surface); stroke: var(--c); stroke-width: 3; cursor: pointer; transition: opacity .2s; }
 .map circle.done { fill: var(--c); }
+.map circle.ri { fill: var(--c); stroke: #f0b429; }
 .map circle.doing, .map circle.review { fill: var(--c); filter: drop-shadow(0 0 4px var(--glow)); }
 .map circle.ready { stroke-width: 4; filter: drop-shadow(0 0 4px var(--glow)); }
 .map circle.later { stroke: color-mix(in srgb, var(--c) 45%, var(--surface)); }
@@ -865,3 +868,26 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .ri-n { font-size: 12px; color: var(--muted); }
 .ri-got { display: flex; justify-content: center; gap: 18px; margin: 18px 0 6px; flex-wrap: wrap; }
 .ri-got .stars { font-size: 30px; }
+
+/* 駅の状態の飾り（D-048） */
+.map .dc { pointer-events: none; transition: opacity .2s; }
+.map .dc circle { fill: none; }
+.map .dc .trk { stroke: color-mix(in srgb, var(--c) 22%, transparent); stroke-width: 2.5; }
+.map .dc .arc { stroke: var(--c); stroke-width: 2.5; stroke-linecap: round; }
+.map .dc .ring { stroke: var(--c); stroke-width: 1.6; opacity: .75; }
+.map .dc .garc { stroke: #f0b429; stroke-width: 2.2; stroke-linecap: round; }
+.map .dc .gring { stroke: #f0b429; stroke-width: 2; }
+.map .dc .spark { fill: #f5c451; opacity: .9; transform-box: fill-box; transform-origin: center; animation: dc-spin 14s linear infinite; filter: drop-shadow(0 0 3px rgba(245, 196, 81, .8)); }
+.map .dc.off { opacity: .25; }
+.map .dc.fade { opacity: .1; }
+.map.comb .dc { opacity: .3; }
+@keyframes dc-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .map .dc .spark { animation: none; } }
+.xlegend {
+  position: absolute; right: 14px; bottom: 14px; z-index: 1; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 12px;
+  max-width: calc(50% - 90px); padding: 6px 12px; border-radius: 14px; color: var(--star-muted); font: 500 12px/1.2 var(--font);
+  background: rgba(12, 16, 36, .5); border: 1px solid var(--glass-line); pointer-events: none;
+}
+.xlegend span { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+.xlegend svg { width: 18px; height: 18px; flex: none; }
+@media (max-width: 720px) { .xlegend { left: 12px; right: 12px; bottom: 52px; max-width: none; justify-content: center; font-size: 11px; } }
