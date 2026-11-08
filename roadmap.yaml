@@ -720,7 +720,7 @@ units:
   - {id: N-028, title: あまりで分類する, stage: 4, level: 3, region: seisu, needs: [N-022, A-010, L-007], days: 9}
   - {id: N-029, title: 互除法と 1 次不定方程式, stage: 4, level: 2, region: seisu, needs: [N-018, A-011, N-075], days: 8}
   - {id: N-030, title: 素数の性質, stage: 4, level: 3, region: seisu, needs: [N-021, L-011, N-029], days: 6}
-  - {id: N-031, title: 平方数の性質, stage: 4, level: 3, region: seisu, needs: [N-028, A-015], days: 5}
+  - {id: N-031, title: 平方数の性質, stage: 4, level: 3, region: seisu, needs: [N-028, A-015, N-021], days: 5}
   - {id: A-010, title: 文字と式（□から文字へ）, stage: 4, level: 2, region: houteishiki, needs: [A-002, N-015, N-010, A-003, N-019, N-027, A-009, N-009], days: 8}
   - {id: A-011, title: 1 次方程式（つり合いで解く）, stage: 4, level: 2, region: houteishiki, needs: [A-010, A-001, N-027, A-005, N-077, G-046], days: 8}
   - {id: A-012, title: 連立方程式, stage: 4, level: 2, region: houteishiki, needs: [A-011], days: 6}
@@ -772,7 +772,7 @@ units:
   - {id: B-025, title: 生物の多様性と系統（3 つのドメイン、系統樹で見る動物・植物・菌類・原生生物・細菌の主要な群）, stage: 4, level: 2, region: ikimono, needs: [B-018, B-022], days: 6}
   - {id: B-026, title: 植物のからだと組織（根・茎・葉の組織、維管束、気孔、花のつくり）, stage: 4, level: 2, region: shokubutsu, needs: [B-019, B-022], days: 6}
   - {id: B-027, title: 生物の歴史と進化の考え（化石、生命の起源、相同と相似、自然選択の入口）, stage: 4, level: 2, region: iden-shinka, needs: [B-025, B-024, B-072], days: 6}
-  - {id: N-070, title: 標準形（10 の累乗の表し方）と有効数字、誤差の区間, stage: 4, level: 2, region: keisan, needs: [A-009, N-061, N-020], days: 5}
+  - {id: N-070, title: 標準形（10 の累乗の表し方）と有効数字、誤差の区間, stage: 4, level: 2, region: keisan, needs: [A-009, N-061, N-020, N-073, N-010, N-077], days: 5}
   - {id: W-070, title: 土壌の生成と性質（風化と土壌のでき方、土壌の層位、粒径と土性、保水性と透水性、土壌の侵食と保全）, stage: 4, level: 2, region: chiso, needs: [W-001, W-002, A-005], days: 4}
   - {id: W-073, title: 天球と地球・月・太陽の動き（自転と公転、天球と日周運動・年周運動、緯度と経度、季節と太陽の高度、月の満ち欠けと日食・月食、潮の満ち干の入口、恒星日と太陽日、均時差と時刻と暦）, stage: 4, level: 3, region: sora, needs: [W-045, G-021, N-059], days: 6}
   - {id: I-009, title: 食べ物と栄養（食品のなかまとはたらき、エネルギーになる物と体をつくる物、ビタミンとミネラル、栄養成分表示を読んで 1 日の量と比べる）, stage: 4, level: 2, region: eiyo, needs: [B-020, A-005], days: 6}
