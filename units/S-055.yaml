@@ -1,0 +1,2395 @@
+# S-055 折れ線グラフと割合のグラフ（円グラフ、帯グラフ）
+#
+# 書き方は N-001 の頭の注のとおり。段 3 なので、子に見せる文は学年に合う漢字で書く。A-005 にならい、割合、百分率、
+#   比べる量、もとにする量、求める、変わる、差は漢字にし、増える・減るも漢字にした（中身が小 4〜5 のため）。
+#   グラフの名前（折れ線グラフ、帯グラフ、円グラフ）は、1 日目と 2 日目の見本で読みをそえる。
+# 前提は S-027（表と棒グラフ、1 目もりの大きさを先に決める）と A-005（比と割合、百分率）。
+#   たどると N-077（小数のかけ算とわり算）、N-078、N-019、N-020 がある。比べる量 = もとにする量 × 割合 と
+#   もとにする量 = 比べる量 ÷ 割合 は、小数（200 × 0.25）か、分母を 100 にそろえる形で計算する。
+# 前提にないので使わないもの：
+#   角度（G-009）：円グラフは、まわりの百分率の目もり（1 目もり 5%）で読む。中心の角（360° × 割合）は扱わない。
+#   概数と四捨五入：割合はわり切れる数にして、合計がちょうど 100% になるようにした。
+#   負の数（N-010）：気温は 0 度より上だけにする。時刻と時間（N-059）：横の軸は月、週、曜日にし、時刻を読ませない。
+#   長さ・重さの単位（G-046）：場面は人数、こ数、さっ数、ひき数と気温にする（気温の「度」は読むだけ）。
+#   平均（S-028）：「月の平均気温」とは書かず、「毎月 1 日にはかった気温」にする。
+# 扱うもの：折れ線グラフ（点を読む、2 つの点の差、線のかたむきと変わり方、波線で省いた軸、2 本の線）、
+#   帯グラフと円グラフ（目もりで百分率を読む、割合から量、量から割合、区切りの線をかく目もり）、
+#   全体の量がちがう割合のグラフでは割合だけで量を比べられないこと、表したいことに合うグラフを選ぶこと（棒、折れ線、円と帯）。
+#   islp-poster の「グラフを選んで描く」は、選ぶ問題と、かくときに要る計算（百分率、区切りの位置）で受け持つ。
+#   画面で線や点をかかせる問題はない。
+# 図：グラフと表は svg で描く。答えにあたる数はグラフに書かない。目もりで読めない割合（24% など）は、グラフに
+#   書かずに文で示す。折れ線グラフは、読ませる点を目もりの線の上に置いた。
+#   2 本の折れ線は、実線と丸い点、点線と四角い点で見分け、上に見分けの印（凡例）を置く。
+# check：グラフの数を式に書き直して確かめる。百分率は Fraction(部分 * 100, 全体)、量は Fraction(全体 * 百分率, 100)
+#   （わり切れなければ分数になって答えと合わないので、わり切れることも確かめられる）。
+#   「増え方がいちばん大きいところ」は、となりの差が最大（減り方は最小）の位置で選ぶ。比は '%d:%d' % (分子, 分母)（A-005 と同じ）。
+#   グラフを選ぶ問題は約束ごとなので check を付けない。
+# 日の並びは地図の既定（導入・練習・わけ・混ぜる・確認）。ねらいは次のとおりにした。
+#   1 日目 導入：折れ線グラフ（点を読む、差、変わり方がいちばん大きいところ、波線で省いた軸）。
+#   2 日目 練習：帯グラフと円グラフ（頭に見本 2 つ）。百分率を読む、量を求める、表から百分率、区切りの線の目もり。
+#   3 日目 わけ：線のかたむきが変わり方を表すわけ、全体がちがう割合のグラフでは量を比べられないわけ、グラフの選び方のわけ。
+#   4 日目 混ぜる：S-027（棒グラフ）、A-005（比、もとにする量）と、1〜3 日目の型を混ぜる。
+#   5 日目 確認。
+
+id: S-055
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: ある町で、4 月から 9 月まで、毎月 1 日に気温をはかって、折れ線グラフに表しました。グラフの読み方を見てみよう。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.067" x2="196" y2="151.067" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="142.133" x2="196" y2="142.133" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="124.267" x2="196" y2="124.267" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="97.4667" x2="196" y2="97.4667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="88.5333" x2="196" y2="88.5333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="61.7333" x2="196" y2="61.7333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="43.8667" x2="196" y2="43.8667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.9333" x2="196" y2="34.9333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,97.4667 79,79.6 105,61.7333 131,43.8667 157,34.9333 183,52.8" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="97.4667" r="3" fill="currentColor"/>
+            <circle cx="79" cy="79.6" r="3" fill="currentColor"/>
+            <circle cx="105" cy="61.7333" r="3" fill="currentColor"/>
+            <circle cx="131" cy="43.8667" r="3" fill="currentColor"/>
+            <circle cx="157" cy="34.9333" r="3" fill="currentColor"/>
+            <circle cx="183" cy="52.8" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        explain: 横に月、縦に気温をとり、はかった気温のところに点をうって、点を順に直線で結んだグラフを、折れ線（おれせん）グラフといいます。縦の 1 目もりは 2 度です。7 月の点は 20 度の線から 3 目もり上なので 26 度です。線が右上がりのところは気温が上がり、右下がりのところは下がっています。8 月から 9 月は、28 度から 24 度へ 4 度下がりました。線のかたむきが急なところほど、変わり方が大きいことを表します。
+      - part: 思い出す
+        text: 好きなスポーツを 1 つずつ聞いて、棒グラフに表しました。サッカーと野球の人数の差は何人ですか。
+        svg: |
+          <svg viewBox="0 0 276 170" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="127.5" x2="268" y2="127.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113" x2="268" y2="113" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="98.5" x2="268" y2="98.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="268" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="69.5" x2="268" y2="69.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="55" x2="268" y2="55" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="40.5" x2="268" y2="40.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="268" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="12" text-anchor="end">0</text>
+            <text x="34" y="117" font-size="12" text-anchor="end">4</text>
+            <text x="34" y="88" font-size="12" text-anchor="end">8</text>
+            <text x="34" y="59" font-size="12" text-anchor="end">12</text>
+            <text x="34" y="30" font-size="12" text-anchor="end">16</text>
+            <rect x="58" y="40.5" width="24" height="101.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="70" y="159" font-size="12" text-anchor="middle">サッカー</text>
+            <rect x="114" y="84" width="24" height="58" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="126" y="159" font-size="12" text-anchor="middle">野球</text>
+            <rect x="170" y="69.5" width="24" height="72.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="182" y="159" font-size="12" text-anchor="middle">水泳</text>
+            <rect x="226" y="113" width="24" height="29" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="238" y="159" font-size="12" text-anchor="middle">テニス</text>
+            <line x1="40" y1="18" x2="40" y2="142" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="142" x2="268" y2="142" stroke="currentColor" stroke-width="2"/>
+            <text x="36" y="14" font-size="12" text-anchor="end">（人）</text>
+          </svg>
+        answer: 6
+        check: 14 - 8
+        hints:
+          - 縦の 1 目もりは何人かな。0 と 4 の間の目もりの数を見よう。
+          - サッカーと野球は、それぞれ何人かな。
+          - 多いほうから少ないほうをひこう。
+        paths:
+          - [1 目もりは 2 人, サッカー 14 人、野球 8 人, 14 − 8 = 6, 6 人]
+          - [2 つの棒の高さのちがいは 3 目もり, 2 × 3 = 6, 6 人]
+      - part: 思い出す
+        text: 40 人のうち 14 人が、自転車で来ました。40 人をもとにすると、自転車で来た人の割合は何 % ですか。
+        answer: 35
+        check: Fraction(14 * 100, 40)
+        hints:
+          - 割合は、比べる量 ÷ もとにする量 だったね。
+          - 14 ÷ 40 を小数で求めよう。
+          - 割合の 1 が 100% だよ。
+        paths:
+          - [14 ÷ 40 = 0.35, 0.35 は 35%]
+          - [14/40 を約分して 7/20, 分母を 100 にそろえて 35/100, 35%]
+      - part: 今日
+        text: ある学校の図書室で、1 週間に借りられた本のさっ数を 6 週間調べて、折れ線グラフに表しました。5 週目は何さつですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="148.833" x2="196" y2="148.833" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="137.667" x2="196" y2="137.667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="104.167" x2="196" y2="104.167" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="81.8333" x2="196" y2="81.8333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="48.3333" x2="196" y2="48.3333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="37.1667" x2="196" y2="37.1667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="141.667" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="97" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="52.3333" font-size="11" text-anchor="end">50</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">60</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,104.167 79,93 105,70.6667 131,81.8333 157,59.5 183,37.1667" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="104.167" r="3" fill="currentColor"/>
+            <circle cx="79" cy="93" r="3" fill="currentColor"/>
+            <circle cx="105" cy="70.6667" r="3" fill="currentColor"/>
+            <circle cx="131" cy="81.8333" r="3" fill="currentColor"/>
+            <circle cx="157" cy="59.5" r="3" fill="currentColor"/>
+            <circle cx="183" cy="37.1667" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（さつ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（週）</text>
+          </svg>
+        answer: 45
+        check: "[25, 30, 40, 35, 45, 55][5 - 1]"
+        hints:
+          - 縦の 1 目もりは何さつかな。0 と 10 の間を見よう。
+          - 5 週目の点から、横にまっすぐ左へたどろう。
+          - 40 の線から何目もり上かな。
+        paths:
+          - [1 目もりは 5 さつ, 5 週目の点は 40 の線から 1 目もり上, 45 さつ]
+        note: 横の軸の「5」と縦の軸の目もりを取りちがえやすい。点から縦の軸へまっすぐたどっているかを見る。
+      - part: 今日
+        text: ある町で、7 月から 12 月まで、毎月 1 日に気温をはかりました。8 月から 11 月までに、気温は何度下がりましたか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.067" x2="196" y2="151.067" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="142.133" x2="196" y2="142.133" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="124.267" x2="196" y2="124.267" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="97.4667" x2="196" y2="97.4667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="88.5333" x2="196" y2="88.5333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="61.7333" x2="196" y2="61.7333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="43.8667" x2="196" y2="43.8667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.9333" x2="196" y2="34.9333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">10</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">11</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">12</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,43.8667 79,34.9333 105,52.8 131,79.6 157,106.4 183,133.2" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="43.8667" r="3" fill="currentColor"/>
+            <circle cx="79" cy="34.9333" r="3" fill="currentColor"/>
+            <circle cx="105" cy="52.8" r="3" fill="currentColor"/>
+            <circle cx="131" cy="79.6" r="3" fill="currentColor"/>
+            <circle cx="157" cy="106.4" r="3" fill="currentColor"/>
+            <circle cx="183" cy="133.2" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 16
+        check: "(lambda v: v[8 - 7] - v[11 - 7])([26, 28, 24, 18, 12, 6])"
+        hints:
+          - 縦の 1 目もりは何度かな。
+          - 8 月と 11 月の気温を、それぞれ読もう。
+          - 高いほうから低いほうをひこう。
+        paths:
+          - [8 月は 28 度、11 月は 12 度, 28 − 12 = 16, 16 度]
+          - [8 月と 11 月の点の高さのちがいは 8 目もり, 2 × 8 = 16, 16 度]
+        note: 1 か月ずつの下がり方をたしてもよい（4 + 6 + 6）。11 月から 12 月まで入れてしまわないかを見る。
+      - part: 今日
+        text: あるパン屋で 1 日に売れたあんパンの数を、月曜日から土曜日まで折れ線グラフに表しました。前の日からの増え方がいちばん大きいのは、どこですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.625" x2="196" y2="151.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="143.25" x2="196" y2="143.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="134.875" x2="196" y2="134.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.125" x2="196" y2="118.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="109.75" x2="196" y2="109.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="101.375" x2="196" y2="101.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84.625" x2="196" y2="84.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="76.25" x2="196" y2="76.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="67.875" x2="196" y2="67.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="51.125" x2="196" y2="51.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="42.75" x2="196" y2="42.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.375" x2="196" y2="34.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="147.25" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="130.5" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="113.75" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="97" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="80.25" font-size="11" text-anchor="end">50</text>
+            <text x="34" y="63.5" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="46.75" font-size="11" text-anchor="end">70</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">80</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">月</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">火</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">水</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">木</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">金</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">土</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,93 79,84.625 105,101.375 131,59.5 157,42.75 183,34.375" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="93" r="3" fill="currentColor"/>
+            <circle cx="79" cy="84.625" r="3" fill="currentColor"/>
+            <circle cx="105" cy="101.375" r="3" fill="currentColor"/>
+            <circle cx="131" cy="59.5" r="3" fill="currentColor"/>
+            <circle cx="157" cy="42.75" r="3" fill="currentColor"/>
+            <circle cx="183" cy="34.375" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（こ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（曜日）</text>
+          </svg>
+        choices: [月曜日から火曜日, 水曜日から木曜日, 木曜日から金曜日, 金曜日から土曜日]
+        answer: 水曜日から木曜日
+        check: "(lambda v: ['月曜日から火曜日', '火曜日から水曜日', '水曜日から木曜日', '木曜日から金曜日', '金曜日から土曜日'][max(range(5), key=lambda i: v[i + 1] - v[i])])([40, 45, 35, 60, 70, 75])"
+        hints:
+          - 線が右上がりになっているところをさがそう。
+          - 右上がりのところで、かたむきがいちばん急なのはどこかな。
+          - 目もりを数えて、それぞれ何こ増えたかを比べよう。
+        paths:
+          - [線のかたむきがいちばん急な右上がりのところ, 水曜日から木曜日（35 こから 60 こ）, 25 こ増えた]
+          - [となりの日との差を求める, 5 こ増、10 こ減、25 こ増、10 こ増、5 こ増, いちばん大きく増えたのは水曜日から木曜日]
+        note: いちばん多い土曜日の点を見て、金曜日から土曜日を選びやすい。「いちばん多い日」と「増え方がいちばん大きいところ」はちがうことを話す。
+      - part: 挑戦
+        text: ある水族館に、毎月の最初の日曜日に来た人の数を、折れ線グラフに表しました。縦の軸の波線（≈）は、0 から 300 までを省いたしるしです。いちばん多い月と、いちばん少ない月の差は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="142" x2="196" y2="142" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="130.4" x2="196" y2="130.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.8" x2="196" y2="118.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="107.2" x2="196" y2="107.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="95.6" x2="196" y2="95.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="196" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.4" x2="196" y2="72.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="60.8" x2="196" y2="60.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="49.2" x2="196" y2="49.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="37.6" x2="196" y2="37.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="11" text-anchor="end">300</text>
+            <text x="34" y="122.8" font-size="11" text-anchor="end">320</text>
+            <text x="34" y="99.6" font-size="11" text-anchor="end">340</text>
+            <text x="34" y="76.4" font-size="11" text-anchor="end">360</text>
+            <text x="34" y="53.2" font-size="11" text-anchor="end">380</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">400</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <line x1="40" y1="18" x2="40" y2="145" stroke="currentColor" stroke-width="2"/>
+            <path d="M34 147 q3 -4 6 0 t6 0 M34 152 q3 -4 6 0 t6 0" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="40" y1="154" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,118.8 79,95.6 105,107.2 131,72.4 157,49.2 183,84" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="118.8" r="3" fill="currentColor"/>
+            <circle cx="79" cy="95.6" r="3" fill="currentColor"/>
+            <circle cx="105" cy="107.2" r="3" fill="currentColor"/>
+            <circle cx="131" cy="72.4" r="3" fill="currentColor"/>
+            <circle cx="157" cy="49.2" r="3" fill="currentColor"/>
+            <circle cx="183" cy="84" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（人）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 60
+        check: "(lambda v: max(v) - min(v))([320, 340, 330, 360, 380, 350])"
+        hints:
+          - 縦の軸は、波線の上の 300 から目もりが始まっているよ。
+          - 縦の 1 目もりは何人かな。
+          - いちばん高い点といちばん低い点を読んで、ひき算しよう。
+        paths:
+          - [1 目もりは 10 人, いちばん多いのは 8 月の 380 人、いちばん少ないのは 4 月の 320 人, 380 − 320 = 60, 60 人]
+        note: 省いたところを見落として、グラフの上の高さだけで「8 月は 4 月の 4 倍」のように考えやすい。波線のグラフは変わり方を大きく見せるので、数を読んで比べることを話す。
+    extra:
+      - part: 今日
+        text: ある町で、6 月から 12 月まで、毎月 1 日に気温をはかりました。11 月の気温は何度ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.625" x2="222" y2="151.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="143.25" x2="222" y2="143.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="134.875" x2="222" y2="134.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="222" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.125" x2="222" y2="118.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="109.75" x2="222" y2="109.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="101.375" x2="222" y2="101.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="222" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84.625" x2="222" y2="84.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="76.25" x2="222" y2="76.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="67.875" x2="222" y2="67.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="222" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="51.125" x2="222" y2="51.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="42.75" x2="222" y2="42.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.375" x2="222" y2="34.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="222" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="130.5" font-size="11" text-anchor="end">8</text>
+            <text x="34" y="97" font-size="11" text-anchor="end">16</text>
+            <text x="34" y="63.5" font-size="11" text-anchor="end">24</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">32</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="209" y1="26" x2="209" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">10</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">11</text>
+            <text x="209" y="176" font-size="11" text-anchor="middle">12</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="226" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,59.5 79,42.75 105,34.375 131,51.125 157,76.25 183,101.375 209,126.5" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="59.5" r="3" fill="currentColor"/>
+            <circle cx="79" cy="42.75" r="3" fill="currentColor"/>
+            <circle cx="105" cy="34.375" r="3" fill="currentColor"/>
+            <circle cx="131" cy="51.125" r="3" fill="currentColor"/>
+            <circle cx="157" cy="76.25" r="3" fill="currentColor"/>
+            <circle cx="183" cy="101.375" r="3" fill="currentColor"/>
+            <circle cx="209" cy="126.5" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="226" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 14
+        check: "[24, 28, 30, 26, 20, 14, 8][11 - 6]"
+        hints:
+          - 縦の 1 目もりは何度かな。0 と 8 の間を見よう。
+          - 11 月の点から、横にまっすぐ左へたどろう。
+          - 近くの、数の書いてある線から何目もりはなれているかな。
+        paths:
+          - [1 目もりは 2 度, 11 月の点は 16 の線から 1 目もり下, 14 度]
+      - part: 今日
+        text: ある店で 1 週間に売れたうちわの数を、6 週間調べました。1 週間に売れた数は、2 週目から 5 週目までに何こ増えましたか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="146.6" x2="196" y2="146.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="119.8" x2="196" y2="119.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="66.2" x2="196" y2="66.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="39.4" x2="196" y2="39.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="137.2" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="110.4" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="83.6" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="56.8" font-size="11" text-anchor="end">80</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">100</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,133.2 79,119.8 105,93 131,52.8 157,39.4 183,26" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="133.2" r="3" fill="currentColor"/>
+            <circle cx="79" cy="119.8" r="3" fill="currentColor"/>
+            <circle cx="105" cy="93" r="3" fill="currentColor"/>
+            <circle cx="131" cy="52.8" r="3" fill="currentColor"/>
+            <circle cx="157" cy="39.4" r="3" fill="currentColor"/>
+            <circle cx="183" cy="26" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（こ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（週）</text>
+          </svg>
+        answer: 60
+        check: "(lambda v: v[5 - 1] - v[2 - 1])([20, 30, 50, 80, 90, 100])"
+        hints:
+          - 縦の 1 目もりは何こかな。
+          - 2 週目と 5 週目の数を、それぞれ読もう。
+          - 多いほうから少ないほうをひこう。
+        paths:
+          - [2 週目は 30 こ、5 週目は 90 こ, 90 − 30 = 60, 60 こ]
+      - part: 今日
+        text: ある店で 1 か月に売れたアイスの数を、7 月から 12 月まで折れ線グラフに表しました。前の月からの減り方がいちばん大きいのは、どこですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="153.3" x2="196" y2="153.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="146.6" x2="196" y2="146.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="139.9" x2="196" y2="139.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="119.8" x2="196" y2="119.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113.1" x2="196" y2="113.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="99.7" x2="196" y2="99.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="86.3" x2="196" y2="86.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.9" x2="196" y2="72.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="66.2" x2="196" y2="66.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="46.1" x2="196" y2="46.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="39.4" x2="196" y2="39.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="32.7" x2="196" y2="32.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="137.2" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="110.4" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="83.6" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="56.8" font-size="11" text-anchor="end">80</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">100</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">10</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">11</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">12</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,39.4 79,26 105,59.5 131,113.1 157,126.5 183,133.2" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="39.4" r="3" fill="currentColor"/>
+            <circle cx="79" cy="26" r="3" fill="currentColor"/>
+            <circle cx="105" cy="59.5" r="3" fill="currentColor"/>
+            <circle cx="131" cy="113.1" r="3" fill="currentColor"/>
+            <circle cx="157" cy="126.5" r="3" fill="currentColor"/>
+            <circle cx="183" cy="133.2" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（こ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        choices: [8 月から 9 月, 9 月から 10 月, 10 月から 11 月, 11 月から 12 月]
+        answer: 9 月から 10 月
+        check: "(lambda v: ['7 月から 8 月', '8 月から 9 月', '9 月から 10 月', '10 月から 11 月', '11 月から 12 月'][min(range(5), key=lambda i: v[i + 1] - v[i])])([90, 100, 75, 35, 25, 20])"
+        hints:
+          - 線が右下がりになっているところをさがそう。
+          - 右下がりのところで、かたむきがいちばん急なのはどこかな。
+          - 目もりを数えて、それぞれ何こ減ったかを比べよう。
+        paths:
+          - [右下がりでかたむきがいちばん急なところ, 9 月から 10 月（75 こから 35 こ）, 40 こ減った]
+        note: いちばん少ない 12 月の点を見て、11 月から 12 月を選びやすい。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: クラスの 40 人に、好きな動物を 1 つずつ聞いて、帯グラフに表しました。グラフの読み方を見てみよう。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="58.1" y="25.96" font-size="11" text-anchor="middle">犬</text>
+            <line x1="102.2" y1="8" x2="102.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="133.7" y="25.96" font-size="11" text-anchor="middle">ねこ</text>
+            <line x1="165.2" y1="8" x2="165.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="184.1" y="25.96" font-size="11" text-anchor="middle">うさぎ</text>
+            <line x1="203" y1="8" x2="203" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="215.6" y="25.96" font-size="11" text-anchor="middle">鳥</text>
+            <line x1="228.2" y1="8" x2="228.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="247.1" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        explain: 全体を 100% として、それぞれの割合に合わせて長方形を区切ったグラフを、帯（おび）グラフといいます。下の目もりは、1 目もりが 5% です。犬は 0 から 35 までなので 35%、ねこは 35 から 60 までなので 60 − 35 = 25% です。ふつうは割合の大きい順に左から並べ、「その他」はいちばん右にかきます。犬が好きな人は 40 人の 35% なので、40 × 0.35 = 14 人です。
+      - part: 見本
+        text: 同じ 40 人の好きな動物を、円グラフに表しました。グラフの読み方を見てみよう。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="153.1" y="75.1" font-size="11" text-anchor="middle">犬</text>
+            <line x1="120" y1="88" x2="170.2" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="125.8" y="128.7" font-size="11" text-anchor="middle">ねこ</text>
+            <line x1="120" y1="88" x2="83.6" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="86.9" y="108.8" font-size="11" text-anchor="middle">うさぎ</text>
+            <line x1="120" y1="88" x2="58" y2="88" stroke="currentColor" stroke-width="1.5"/>
+            <text x="78.7" y="78.2" font-size="10" text-anchor="middle">鳥</text>
+            <line x1="120" y1="88" x2="69.8" y2="51.6" stroke="currentColor" stroke-width="1.5"/>
+            <text x="103.1" y="58.8" font-size="11" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        explain: 円全体を 100% として、それぞれの割合に合わせて、中心からの線で区切ったグラフを、円（えん）グラフといいます。真上の 0 から右回りに読みます。まわりの目もりは、1 目もりが 5% です。ねこは 35 から 60 までなので 25% で、円の 4 分の 1 にあたります。帯グラフと同じように割合の大きい順に並べ、「その他」は最後にかきます。
+      - part: 思い出す
+        text: ある池のメダカの数を、4 月から 9 月まで毎月数えて、折れ線グラフに表しました。いちばん多い月と、いちばん少ない月の差は何びきですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="146.6" x2="196" y2="146.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="119.8" x2="196" y2="119.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="66.2" x2="196" y2="66.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="39.4" x2="196" y2="39.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="137.2" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="110.4" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="83.6" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="56.8" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">50</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,133.2 79,119.8 105,93 131,52.8 157,39.4 183,79.6" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="133.2" r="3" fill="currentColor"/>
+            <circle cx="79" cy="119.8" r="3" fill="currentColor"/>
+            <circle cx="105" cy="93" r="3" fill="currentColor"/>
+            <circle cx="131" cy="52.8" r="3" fill="currentColor"/>
+            <circle cx="157" cy="39.4" r="3" fill="currentColor"/>
+            <circle cx="183" cy="79.6" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（ひき）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 35
+        check: "(lambda v: max(v) - min(v))([10, 15, 25, 40, 45, 30])"
+        hints:
+          - 縦の 1 目もりは何びきかな。
+          - いちばん高い点と、いちばん低い点をさがそう。
+          - 2 つの点の数を読んで、ひき算しよう。
+        paths:
+          - [1 目もりは 5 ひき, いちばん多いのは 8 月の 45 ひき、いちばん少ないのは 4 月の 10 ぴき, 45 − 10 = 35, 35 ひき]
+      - part: 思い出す
+        text: 60 この 15% は何こですか。
+        answer: 9
+        check: Fraction(60 * 15, 100)
+        hints:
+          - 15% を小数で表すと、いくつかな。
+          - 比べる量 = もとにする量 × 割合 だね。
+          - 60 に、15% を小数にした数をかけよう。
+        paths:
+          - [15% は 0.15, 60 × 0.15 = 9, 9 こ]
+          - [60 この 1% は 0.6 こ, 0.6 × 15 = 9, 9 こ]
+      - part: 今日
+        text: 図書室で 1 週間に借りられた本の種類を、帯グラフに表しました。図かんは、全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="64.4" y="25.96" font-size="11" text-anchor="middle">物語</text>
+            <line x1="114.8" y1="8" x2="114.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="146.3" y="25.96" font-size="11" text-anchor="middle">まんが</text>
+            <line x1="177.8" y1="8" x2="177.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="203" y="25.96" font-size="11" text-anchor="middle">図かん</text>
+            <line x1="228.2" y1="8" x2="228.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="247.1" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        answer: 20
+        check: 85 - 65
+        hints:
+          - 下の目もりの 1 目もりは何 % かな。
+          - 図かんの左はしと右はしは、それぞれ何 % の目もりのところかな。
+          - 右はしの目もりから、左はしの目もりをひこう。
+        paths:
+          - [図かんは 65 から 85 まで, 85 − 65 = 20, 20%]
+        note: 右はしの 85 をそのまま答えやすい。帯グラフの目もりは、左はしからの割合の合計を表している。
+      - part: 今日
+        text: ある学校の 200 人に、好きな給食を 1 つずつ聞いて、円グラフに表しました。あげパンと答えた人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="150.1" y="70.1" font-size="11" text-anchor="middle">カレー</text>
+            <line x1="120" y1="88" x2="179" y2="107.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="136.9" y="125.1" font-size="11" text-anchor="middle">あげパン</text>
+            <line x1="120" y1="88" x2="100.8" y2="147" stroke="currentColor" stroke-width="1.5"/>
+            <text x="89.9" y="113.8" font-size="11" text-anchor="middle">からあげ</text>
+            <line x1="120" y1="88" x2="58" y2="88" stroke="currentColor" stroke-width="1.5"/>
+            <text x="78.7" y="78.2" font-size="10" text-anchor="middle">めん</text>
+            <line x1="120" y1="88" x2="69.8" y2="51.6" stroke="currentColor" stroke-width="1.5"/>
+            <text x="103.1" y="58.8" font-size="11" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 50
+        check: Fraction(200 * (55 - 30), 100)
+        hints:
+          - あげパンは、全体の何 % かな。まわりの目もりで読もう。
+          - 比べる量 = もとにする量 × 割合 だね。
+          - 200 人をもとにして、その割合にあたる人数を求めよう。
+        paths:
+          - [あげパンは 30 から 55 までで 25%, 200 × 0.25 = 50, 50 人]
+          - [25% は円の 4 分の 1, 200 ÷ 4 = 50, 50 人]
+        note: 割合の 25 をそのまま人数と答えやすい。グラフが表すのは割合で、人数はもとにする量（200 人）から求める。
+      - part: 今日
+        text: 50 人に好きな季節を聞いて、表にまとめました。帯グラフに表すために、割合を百分率で求めます。夏は何 % ですか。
+        svg: |
+          <svg viewBox="0 0 269 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="6" width="259" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="5" y="6" width="259" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="5" y1="32" x2="264" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="86" y1="6" x2="86" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="154" y1="6" x2="154" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="188" y1="6" x2="188" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="222" y1="6" x2="222" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="45.5" y="23.68" font-size="13" text-anchor="middle">季節</text>
+            <text x="103" y="23.68" font-size="13" text-anchor="middle">春</text>
+            <text x="137" y="23.68" font-size="13" text-anchor="middle">夏</text>
+            <text x="171" y="23.68" font-size="13" text-anchor="middle">秋</text>
+            <text x="205" y="23.68" font-size="13" text-anchor="middle">冬</text>
+            <text x="243" y="23.68" font-size="13" text-anchor="middle">合計</text>
+            <text x="45.5" y="49.68" font-size="13" text-anchor="middle">人数（人）</text>
+            <text x="103" y="49.68" font-size="13" text-anchor="middle">12</text>
+            <text x="137" y="49.68" font-size="13" text-anchor="middle">18</text>
+            <text x="171" y="49.68" font-size="13" text-anchor="middle">14</text>
+            <text x="205" y="49.68" font-size="13" text-anchor="middle">6</text>
+            <text x="243" y="49.68" font-size="13" text-anchor="middle">50</text>
+          </svg>
+        answer: 36
+        check: Fraction(18 * 100, 50)
+        hints:
+          - もとにする量は、何人かな。
+          - 割合は、比べる量 ÷ もとにする量 だね。
+          - 小数で求めた割合を、百分率に直そう。
+        paths:
+          - [18 ÷ 50 = 0.36, 0.36 は 36%]
+          - [分母を 100 にそろえる, 18/50 = 36/100, 36%]
+      - part: 挑戦
+        text: 40 人に好きな季節を聞くと、春 10 人、夏 14 人、秋 12 人、冬 4 人でした。帯グラフに、左から春、夏、秋、冬の順にかきます。秋と冬の間の区切りの線は、何 % の目もりのところにかきますか。
+        answer: 90
+        check: Fraction((10 + 14 + 12) * 100, 40)
+        hints:
+          - 春、夏、秋は、それぞれ何 % かな。
+          - 区切りの線の目もりは、左はしからの割合の合計だよ。
+          - 冬の割合から考えてもよいよ。
+        paths:
+          - [春 25%、夏 35%、秋 30%, 25 + 35 + 30 = 90, 90% の目もり]
+          - [冬は 4 ÷ 40 = 0.1 で 10%, 100 − 10 = 90, 90% の目もり]
+        note: 秋の割合の 30 と答えやすい。区切りの線は、そこまでの割合をたした位置にかく。季節のように順番が決まっているものは、大きい順でなくその順に並べてよい。
+    extra:
+      - part: 今日
+        text: ある店で 1 日に売れたおにぎり 120 こを、種類ごとに帯グラフに表しました。うめは何こ売れましたか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="64.4" y="25.96" font-size="11" text-anchor="middle">さけ</text>
+            <line x1="114.8" y1="8" x2="114.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="146.3" y="25.96" font-size="11" text-anchor="middle">うめ</text>
+            <line x1="177.8" y1="8" x2="177.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="203" y="25.96" font-size="11" text-anchor="middle">こんぶ</text>
+            <line x1="228.2" y1="8" x2="228.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="247.1" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        answer: 30
+        check: Fraction(120 * (65 - 40), 100)
+        hints:
+          - うめは、全体の何 % かな。
+          - うめの左はしと右はしの目もりを読もう。
+          - 120 こをもとにして、その割合にあたる数を求めよう。
+        paths:
+          - [うめは 40 から 65 までで 25%, 120 × 0.25 = 30, 30 こ]
+          - [25% は全体の 4 分の 1, 120 ÷ 4 = 30, 30 こ]
+      - part: 今日
+        text: 好きなスポーツを聞いて、円グラフに表しました。水泳と答えた人は、全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="155.4" y="80.5" font-size="11" text-anchor="middle">サッカー</text>
+            <line x1="120" y1="88" x2="156.4" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="114.2" y="128.7" font-size="11" text-anchor="middle">野球</text>
+            <line x1="120" y1="88" x2="69.8" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="83.3" y="97.8" font-size="11" text-anchor="middle">水泳</text>
+            <line x1="120" y1="88" x2="61" y2="68.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="98.1" y="61.9" font-size="11" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 15
+        check: 80 - 65
+        hints:
+          - まわりの目もりの 1 目もりは何 % かな。
+          - 水泳の区切りの線は、それぞれ何 % の目もりのところかな。
+          - 後ろの区切りの目もりから、前の区切りの目もりをひこう。
+        paths:
+          - [水泳は 65 から 80 まで, 80 − 65 = 15, 15%]
+      - part: 今日
+        text: ある朝、公園に来た 80 人の来かたを、表にまとめました。帯グラフに表すために、割合を百分率で求めます。電車で来た人は何 % ですか。
+        svg: |
+          <svg viewBox="0 0 314 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="6" width="304" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="5" y="6" width="304" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="5" y1="32" x2="309" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="86" y1="6" x2="86" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="128" y1="6" x2="128" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="183" y1="6" x2="183" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="225" y1="6" x2="225" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="267" y1="6" x2="267" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="45.5" y="23.68" font-size="13" text-anchor="middle">来かた</text>
+            <text x="107" y="23.68" font-size="13" text-anchor="middle">歩き</text>
+            <text x="155.5" y="23.68" font-size="13" text-anchor="middle">自転車</text>
+            <text x="204" y="23.68" font-size="13" text-anchor="middle">電車</text>
+            <text x="246" y="23.68" font-size="13" text-anchor="middle">バス</text>
+            <text x="288" y="23.68" font-size="13" text-anchor="middle">合計</text>
+            <text x="45.5" y="49.68" font-size="13" text-anchor="middle">人数（人）</text>
+            <text x="107" y="49.68" font-size="13" text-anchor="middle">32</text>
+            <text x="155.5" y="49.68" font-size="13" text-anchor="middle">12</text>
+            <text x="204" y="49.68" font-size="13" text-anchor="middle">28</text>
+            <text x="246" y="49.68" font-size="13" text-anchor="middle">8</text>
+            <text x="288" y="49.68" font-size="13" text-anchor="middle">80</text>
+          </svg>
+        answer: 35
+        check: Fraction(28 * 100, 80)
+        hints:
+          - もとにする量は、何人かな。
+          - 28 ÷ 80 を小数で求めよう。
+          - 小数で求めた割合を、百分率に直そう。
+        paths:
+          - [28 ÷ 80 = 0.35, 0.35 は 35%]
+          - [80 人の 1% は 0.8 人, 28 ÷ 0.8 = 35, 35%]
+
+  - day: 3
+    items:
+      - part: 思い出す
+        text: ある公園に、毎月 1 日に来た人の数を、折れ線グラフに表しました。7 月は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="147.818" x2="196" y2="147.818" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="135.636" x2="196" y2="135.636" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="123.455" x2="196" y2="123.455" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="111.273" x2="196" y2="111.273" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="99.0909" x2="196" y2="99.0909" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="86.9091" x2="196" y2="86.9091" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="74.7273" x2="196" y2="74.7273" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="62.5455" x2="196" y2="62.5455" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="50.3636" x2="196" y2="50.3636" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="38.1818" x2="196" y2="38.1818" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="103.091" font-size="11" text-anchor="end">100</text>
+            <text x="34" y="42.1818" font-size="11" text-anchor="end">200</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,86.9091 79,62.5455 105,111.273 131,50.3636 157,38.1818 183,74.7273" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="86.9091" r="3" fill="currentColor"/>
+            <circle cx="79" cy="62.5455" r="3" fill="currentColor"/>
+            <circle cx="105" cy="111.273" r="3" fill="currentColor"/>
+            <circle cx="131" cy="50.3636" r="3" fill="currentColor"/>
+            <circle cx="157" cy="38.1818" r="3" fill="currentColor"/>
+            <circle cx="183" cy="74.7273" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（人）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 180
+        check: "[120, 160, 80, 180, 200, 140][7 - 4]"
+        hints:
+          - 縦の 1 目もりは何人かな。0 と 100 の間の目もりの数を見よう。
+          - 7 月の点から、横にまっすぐ左へたどろう。
+          - 近くの、数の書いてある線から何目もりはなれているかな。
+        paths:
+          - [1 目もりは 20 人, 7 月の点は 200 の線から 1 目もり下, 180 人]
+        note: 1 目もりを 10 人とまちがえやすい。0 から 100 までが 5 目もりであることを確かめる。
+      - part: 思い出す
+        text: ある学校の 300 人の、家から学校までの来かたを、円グラフに表しました。バスで来る人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="156.7" y="97.8" font-size="11" text-anchor="middle">歩き</text>
+            <line x1="120" y1="88" x2="100.8" y2="147" stroke="currentColor" stroke-width="1.5"/>
+            <text x="89.9" y="113.8" font-size="11" text-anchor="middle">自転車</text>
+            <line x1="120" y1="88" x2="58" y2="88" stroke="currentColor" stroke-width="1.5"/>
+            <text x="86.9" y="75.1" font-size="11" text-anchor="middle">バス</text>
+            <line x1="120" y1="88" x2="83.6" y2="37.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="106.6" y="50.3" font-size="10" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 45
+        check: Fraction(300 * (90 - 75), 100)
+        hints:
+          - バスは、全体の何 % かな。
+          - バスの区切りの線の目もりを、2 つとも読もう。
+          - 300 人をもとにして、その割合にあたる人数を求めよう。
+        paths:
+          - [バスは 75 から 90 までで 15%, 300 × 0.15 = 45, 45 人]
+          - [300 人の 1% は 3 人, 3 × 15 = 45, 45 人]
+      - part: わけ
+        text: ある水そうのメダカの数を、毎週 1 回数えて、折れ線グラフに表しました。線のかたむきがいちばん急な 3 週目から 4 週目が、いちばん多く増えた 1 週間だといえるわけを、2 週目から 3 週目と比べて文に書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.625" x2="196" y2="151.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="143.25" x2="196" y2="143.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="134.875" x2="196" y2="134.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.125" x2="196" y2="118.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="109.75" x2="196" y2="109.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="101.375" x2="196" y2="101.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84.625" x2="196" y2="84.625" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="76.25" x2="196" y2="76.25" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="67.875" x2="196" y2="67.875" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="51.125" x2="196" y2="51.125" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="42.75" x2="196" y2="42.75" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.375" x2="196" y2="34.375" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="147.25" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="130.5" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="113.75" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="97" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="80.25" font-size="11" text-anchor="end">50</text>
+            <text x="34" y="63.5" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="46.75" font-size="11" text-anchor="end">70</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">80</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,143.25 79,126.5 105,109.75 131,59.5 157,34.375 183,26" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="143.25" r="3" fill="currentColor"/>
+            <circle cx="79" cy="126.5" r="3" fill="currentColor"/>
+            <circle cx="105" cy="109.75" r="3" fill="currentColor"/>
+            <circle cx="131" cy="59.5" r="3" fill="currentColor"/>
+            <circle cx="157" cy="34.375" r="3" fill="currentColor"/>
+            <circle cx="183" cy="26" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（ひき）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（週）</text>
+          </svg>
+        explain: 例：「2 週目から 3 週目は 20 ぴきから 30 ぴきで 10 ぴき、3 週目から 4 週目は 30 ぴきから 60 ぴきで 30 ぴき増えた。どちらも、横には 1 週間分の 1 目もりだけ進む。その間に線が縦に進む分が、増えた数になる。横に進む分が同じなら、縦に多く進むほど線は急になる。だから、線がいちばん急なところが、いちばん多く増えたところ。」と書ければよい。① 横の 1 目もり（1 週間）はどこも同じ、② 増えた数が線の縦の進み方になる、の 2 点を見る。点の高さだけを比べて「4 週目は数が多いから」と書いていたら、「6 週目は 4 週目より多いのに、5 週目から 6 週目の線がゆるやかなのはなぜか」を聞く。
+        hints:
+          - 2 週目から 3 週目、3 週目から 4 週目に、それぞれ何びき増えたかな。
+          - 横に 1 週間分進む間に、線は縦にどれだけ進んでいるかな。
+          - 横に進む分が同じとき、縦に多く進むと、線はどうなるかな。
+        paths:
+          - [増えた数は 10 ぴきと 30 ぴき, 横の進み方はどちらも 1 週間分, 縦に多く進むほど線は急になる, だから急なところがいちばん多く増えたところ]
+      - part: わけ
+        text: ある図書室で借りられた本の種類の割合を、去年と今年の帯グラフに表しました。借りられた本は、去年が 200 さつ、今年が 300 さつです。「物語の割合は 40% から 30% に減ったので、物語を借りたさつ数も減った」という考えは正しいですか。わけといっしょに文に書きましょう。
+        svg: |
+          <svg viewBox="0 0 280 122" xmlns="http://www.w3.org/2000/svg">
+            <text x="90" y="25.96" font-size="11" text-anchor="middle">物語</text>
+            <line x1="134" y1="8" x2="134" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="161.5" y="25.96" font-size="11" text-anchor="middle">図かん</text>
+            <line x1="189" y1="8" x2="189" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="211" y="25.96" font-size="11" text-anchor="middle">まんが</text>
+            <line x1="233" y1="8" x2="233" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="249.5" y="25.24" font-size="9" text-anchor="middle">その他</text>
+            <rect x="46" y="8" width="220" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="25.96" font-size="11" text-anchor="end">去年</text>
+            <text x="79" y="67.96" font-size="11" text-anchor="middle">物語</text>
+            <line x1="112" y1="50" x2="112" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="145" y="67.96" font-size="11" text-anchor="middle">図かん</text>
+            <line x1="178" y1="50" x2="178" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="205.5" y="67.96" font-size="11" text-anchor="middle">まんが</text>
+            <line x1="233" y1="50" x2="233" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="249.5" y="67.24" font-size="9" text-anchor="middle">その他</text>
+            <rect x="46" y="50" width="220" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="67.96" font-size="11" text-anchor="end">今年</text>
+            <line x1="46" y1="86" x2="266" y2="86" stroke="currentColor" stroke-width="1"/>
+            <line x1="46" y1="86" x2="46" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="46" y="103" font-size="10" text-anchor="middle">0</text>
+            <line x1="57" y1="86" x2="57" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="86" x2="68" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="68" y="103" font-size="10" text-anchor="middle">10</text>
+            <line x1="79" y1="86" x2="79" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="90" y1="86" x2="90" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="90" y="103" font-size="10" text-anchor="middle">20</text>
+            <line x1="101" y1="86" x2="101" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="112" y1="86" x2="112" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="112" y="103" font-size="10" text-anchor="middle">30</text>
+            <line x1="123" y1="86" x2="123" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="134" y1="86" x2="134" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="134" y="103" font-size="10" text-anchor="middle">40</text>
+            <line x1="145" y1="86" x2="145" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="156" y1="86" x2="156" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="156" y="103" font-size="10" text-anchor="middle">50</text>
+            <line x1="167" y1="86" x2="167" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="178" y1="86" x2="178" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="178" y="103" font-size="10" text-anchor="middle">60</text>
+            <line x1="189" y1="86" x2="189" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="200" y1="86" x2="200" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="200" y="103" font-size="10" text-anchor="middle">70</text>
+            <line x1="211" y1="86" x2="211" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="222" y1="86" x2="222" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="222" y="103" font-size="10" text-anchor="middle">80</text>
+            <line x1="233" y1="86" x2="233" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="244" y1="86" x2="244" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="244" y="103" font-size="10" text-anchor="middle">90</text>
+            <line x1="255" y1="86" x2="255" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="86" x2="266" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="103" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="117" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        explain: 例：「正しくない。物語は、去年が 200 × 0.4 = 80 さつ、今年が 300 × 0.3 = 90 さつで、10 さつ増えている。割合は全体をもとにした大きさなので、もとにする量（全体のさつ数）がちがうと、割合が減っても量が増えることがある。」と書ければよい。① 実際のさつ数を求めて比べている、② もとにする量がちがうと割合だけでは量を比べられない、の 2 点を見る。全体の数が同じなら、割合の大小がそのまま量の大小になることにもふれる。
+        hints:
+          - 去年の物語は何さつかな。200 さつの 40% を求めよう。
+          - 今年の物語は何さつかな。300 さつの 30% を求めよう。
+          - 2 つの帯グラフは、もとにする量が同じかな。
+        paths:
+          - [去年は 200 × 0.4 = 80 さつ, 今年は 300 × 0.3 = 90 さつ, 割合は減ったがさつ数は増えた, もとにする量がちがうので割合だけでは量を比べられない]
+      - part: わけ
+        text: 次の（ア）と（イ）を表すのに、折れ線グラフと円グラフのどちらがよいですか。それぞれ、わけといっしょに文に書きましょう。（ア）ある町で、1 年間、毎月 1 日にはかった気温。（イ）クラス 30 人の、いちばん好きな教科。
+        explain: 例：「（ア）は折れ線グラフがよい。月は順に並んでいて、となりの月との間に気温がどれだけ上がったか下がったかを、線のかたむきで見られるから。（イ）は円グラフがよい。30 人全体を 100% として、それぞれの教科が全体のどれだけにあたるかを見たいから。教科には順番がないので、点を線で結んでも、その線は何も表さない。」と書ければよい。① 時がたつにつれて変わる量は折れ線グラフ、② 全体の中の部分の割合は円グラフ（帯グラフ）、の 2 点を見る。人数の多い少ないを比べるだけなら棒グラフもよいことにふれる。
+        hints:
+          - （ア）は、時がたつにつれて変わっていくものかな。
+          - （イ）の 30 人は、全体で 1 つのまとまりかな。
+          - 教科の順に点を線で結ぶと、その線は何を表すかな。
+        paths:
+          - [（ア）は時がたつにつれて変わる量で、変わり方は線のかたむきで見える, 折れ線グラフ, （イ）は全体の中のそれぞれの割合を見る, 円グラフ]
+      - part: 今日
+        text: ある店で売れたアイスの種類の割合を、帯グラフに表しました。売れたアイスは、去年が 400 こ、今年が 500 こで、バニラの割合は、去年が 30%、今年が 24% でした。バニラの売れた数は、去年と比べてどうなりましたか。
+        svg: |
+          <svg viewBox="0 0 280 122" xmlns="http://www.w3.org/2000/svg">
+            <text x="79" y="25.96" font-size="11" text-anchor="middle">バニラ</text>
+            <line x1="112" y1="8" x2="112" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="145" y="25.96" font-size="11" text-anchor="middle">チョコ</text>
+            <line x1="178" y1="8" x2="178" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="200" y="25.96" font-size="11" text-anchor="middle">いちご</text>
+            <line x1="222" y1="8" x2="222" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="244" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="46" y="8" width="220" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="25.96" font-size="11" text-anchor="end">去年</text>
+            <text x="72.4" y="67.96" font-size="11" text-anchor="middle">バニラ</text>
+            <line x1="98.8" y1="50" x2="98.8" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="138.4" y="67.96" font-size="11" text-anchor="middle">チョコ</text>
+            <line x1="178" y1="50" x2="178" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="202.2" y="67.96" font-size="11" text-anchor="middle">いちご</text>
+            <line x1="226.4" y1="50" x2="226.4" y2="78" stroke="currentColor" stroke-width="1.5"/>
+            <text x="246.2" y="67.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="46" y="50" width="220" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="67.96" font-size="11" text-anchor="end">今年</text>
+            <line x1="46" y1="86" x2="266" y2="86" stroke="currentColor" stroke-width="1"/>
+            <line x1="46" y1="86" x2="46" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="46" y="103" font-size="10" text-anchor="middle">0</text>
+            <line x1="57" y1="86" x2="57" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="86" x2="68" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="68" y="103" font-size="10" text-anchor="middle">10</text>
+            <line x1="79" y1="86" x2="79" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="90" y1="86" x2="90" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="90" y="103" font-size="10" text-anchor="middle">20</text>
+            <line x1="101" y1="86" x2="101" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="112" y1="86" x2="112" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="112" y="103" font-size="10" text-anchor="middle">30</text>
+            <line x1="123" y1="86" x2="123" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="134" y1="86" x2="134" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="134" y="103" font-size="10" text-anchor="middle">40</text>
+            <line x1="145" y1="86" x2="145" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="156" y1="86" x2="156" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="156" y="103" font-size="10" text-anchor="middle">50</text>
+            <line x1="167" y1="86" x2="167" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="178" y1="86" x2="178" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="178" y="103" font-size="10" text-anchor="middle">60</text>
+            <line x1="189" y1="86" x2="189" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="200" y1="86" x2="200" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="200" y="103" font-size="10" text-anchor="middle">70</text>
+            <line x1="211" y1="86" x2="211" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="222" y1="86" x2="222" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="222" y="103" font-size="10" text-anchor="middle">80</text>
+            <line x1="233" y1="86" x2="233" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="244" y1="86" x2="244" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="244" y="103" font-size="10" text-anchor="middle">90</text>
+            <line x1="255" y1="86" x2="255" y2="89" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="86" x2="266" y2="92" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="103" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="117" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        choices: [増えた, 減った, 同じ]
+        answer: 同じ
+        check: "(lambda a, b: '増えた' if b > a else ('減った' if b < a else '同じ'))(Fraction(400 * 30, 100), Fraction(500 * 24, 100))"
+        hints:
+          - 2 つの帯グラフは、もとにする量が同じかな。
+          - 去年のバニラは、400 この 30% だね。
+          - 今年のバニラも、こ数を求めて比べよう。
+        paths:
+          - [去年は 400 × 0.3 = 120 こ, 今年は 500 × 0.24 = 120 こ, 同じ]
+        note: 割合が 30% から 24% に減ったので「減った」と答えやすい。全体のこ数がちがうときは、量を求めてから比べる。
+      - part: 今日
+        text: 次のうち、折れ線グラフに表すとよいものはどれですか。
+        choices: [クラスの人の、好きな色の割合, 学校の 4 つの組の、それぞれの人数, 毎朝はかった、プールの水の温度]
+        answer: 毎朝はかった、プールの水の温度
+        hints:
+          - 折れ線グラフは、何を見るのに向いていたかな。
+          - 時がたつにつれて変わっていくものは、どれかな。
+          - 点を順に線で結んで意味があるのは、どれかな。
+        paths:
+          - [折れ線グラフは時がたつにつれての変わり方を見る, 毎朝の水の温度は日ごとに変わる, プールの水の温度]
+        note: 好きな色の割合は円グラフか帯グラフ、組ごとの人数は棒グラフがよい。
+      - part: 挑戦
+        text: A 市と B 市で、4 月から 9 月まで、毎月 1 日に気温をはかりました。2 つの市の気温の差がいちばん大きいのは何月ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.067" x2="196" y2="151.067" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="142.133" x2="196" y2="142.133" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="124.267" x2="196" y2="124.267" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="97.4667" x2="196" y2="97.4667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="88.5333" x2="196" y2="88.5333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="61.7333" x2="196" y2="61.7333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="43.8667" x2="196" y2="43.8667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.9333" x2="196" y2="34.9333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,106.4 79,88.5333 105,70.6667 131,43.8667 157,26 183,52.8" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="106.4" r="3" fill="currentColor"/>
+            <circle cx="79" cy="88.5333" r="3" fill="currentColor"/>
+            <circle cx="105" cy="70.6667" r="3" fill="currentColor"/>
+            <circle cx="131" cy="43.8667" r="3" fill="currentColor"/>
+            <circle cx="157" cy="26" r="3" fill="currentColor"/>
+            <circle cx="183" cy="52.8" r="3" fill="currentColor"/>
+            <polyline points="53,88.5333 79,79.6 105,70.6667 131,61.7333 157,52.8 183,70.6667" stroke="currentColor" fill="none" stroke-width="2" stroke-dasharray="5 3"/>
+            <rect x="50" y="85.5333" width="6" height="6" fill="currentColor"/>
+            <rect x="76" y="76.6" width="6" height="6" fill="currentColor"/>
+            <rect x="102" y="67.6667" width="6" height="6" fill="currentColor"/>
+            <rect x="128" y="58.7333" width="6" height="6" fill="currentColor"/>
+            <rect x="154" y="49.8" width="6" height="6" fill="currentColor"/>
+            <rect x="180" y="67.6667" width="6" height="6" fill="currentColor"/>
+            <text x="167.8" y="14" font-size="11" text-anchor="start">B 市</text>
+            <line x1="145.8" y1="10" x2="163.8" y2="10" stroke="currentColor" stroke-width="2" stroke-dasharray="5 3"/>
+            <rect x="151.8" y="7" width="6" height="6" fill="currentColor"/>
+            <text x="107.6" y="14" font-size="11" text-anchor="start">A 市</text>
+            <line x1="85.6" y1="10" x2="103.6" y2="10" stroke="currentColor" stroke-width="2"/>
+            <circle cx="94.6" cy="10" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 8
+        check: "(lambda a, b: [4, 5, 6, 7, 8, 9][max(range(6), key=lambda i: abs(a[i] - b[i]))])([12, 16, 20, 26, 30, 24], [16, 18, 20, 22, 24, 20])"
+        hints:
+          - 2 本の線が、縦にいちばんはなれているところをさがそう。
+          - 6 月より前は B 市、後は A 市のほうが高いね。
+          - はなれていそうな月で、2 つの市の気温を読んでひき算しよう。
+        paths:
+          - [2 本の線の縦のはなれ方を見る, 8 月が 3 目もりでいちばん大きい, 30 − 24 = 6 度, 8 月]
+          - [月ごとの差を求める, 4 度、2 度、0 度、4 度、6 度、4 度, いちばん大きいのは 8 月]
+        note: 線の上がり方が大きい月（A 市の 6 月から 7 月）を選びやすい。2 本の線の「間」を見ることを話す。
+    extra:
+      - part: 今日
+        text: ある町の子ども会で、好きな動物を聞きました。去年は 250 人のうち 24%、今年は 200 人のうち 35% が「犬」と答えました。犬と答えた人は、今年のほうが何人多いですか。
+        answer: 10
+        check: Fraction(200 * 35, 100) - Fraction(250 * 24, 100)
+        hints:
+          - 去年と今年で、もとにする量はちがうね。
+          - 去年の 250 人の 24% は何人かな。
+          - 今年の 200 人の 35% も求めて、ひき算しよう。
+        paths:
+          - [去年は 250 × 0.24 = 60 人, 今年は 200 × 0.35 = 70 人, 70 − 60 = 10, 10 人]
+        note: 割合の差の 35 − 24 = 11 を答えやすい。もとにする量がちがうので、人数を求めてから比べる。
+      - part: 今日
+        text: ある店で 1 週間に売れた水とうの数を、6 週間調べました。前の週からの増え方がいちばん小さいのは、どこですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="152.556" x2="196" y2="152.556" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="145.111" x2="196" y2="145.111" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="137.667" x2="196" y2="137.667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="130.222" x2="196" y2="130.222" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="122.778" x2="196" y2="122.778" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="107.889" x2="196" y2="107.889" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="100.444" x2="196" y2="100.444" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="85.5556" x2="196" y2="85.5556" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="78.1111" x2="196" y2="78.1111" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="63.2222" x2="196" y2="63.2222" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="55.7778" x2="196" y2="55.7778" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="48.3333" x2="196" y2="48.3333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="40.8889" x2="196" y2="40.8889" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="33.4444" x2="196" y2="33.4444" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="149.111" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="134.222" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="104.444" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="89.5556" font-size="11" text-anchor="end">50</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="59.7778" font-size="11" text-anchor="end">70</text>
+            <text x="34" y="44.8889" font-size="11" text-anchor="end">80</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">90</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,130.222 79,107.889 105,100.444 131,70.6667 157,55.7778 183,26" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="130.222" r="3" fill="currentColor"/>
+            <circle cx="79" cy="107.889" r="3" fill="currentColor"/>
+            <circle cx="105" cy="100.444" r="3" fill="currentColor"/>
+            <circle cx="131" cy="70.6667" r="3" fill="currentColor"/>
+            <circle cx="157" cy="55.7778" r="3" fill="currentColor"/>
+            <circle cx="183" cy="26" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（こ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（週）</text>
+          </svg>
+        choices: [1 週目から 2 週目, 2 週目から 3 週目, 3 週目から 4 週目, 4 週目から 5 週目]
+        answer: 2 週目から 3 週目
+        check: "(lambda v: ['1 週目から 2 週目', '2 週目から 3 週目', '3 週目から 4 週目', '4 週目から 5 週目', '5 週目から 6 週目'][min(range(5), key=lambda i: v[i + 1] - v[i])])([20, 35, 40, 60, 70, 90])"
+        hints:
+          - 増え方が小さいところは、線のかたむきがどうなっているかな。
+          - かたむきがいちばんゆるやかなところをさがそう。
+          - 目もりを数えて、それぞれ何こ増えたかを比べよう。
+        paths:
+          - [線のかたむきがいちばんゆるやかなところ, 2 週目から 3 週目（35 こから 40 こ）, 5 こしか増えていない]
+      - part: 今日
+        text: 4 つの班が集めたペットボトルのふたの数の、多い少ないを比べます。いちばんよいグラフはどれですか。
+        choices: [棒グラフ, 折れ線グラフ, 円グラフ]
+        answer: 棒グラフ
+        hints:
+          - 班には、決まった順番があるかな。
+          - 知りたいのは変わり方かな、割合かな、数の大きさかな。
+          - 数の大きさを、高さで比べられるグラフはどれかな。
+        paths:
+          - [班には順番がないので折れ線グラフは向かない, 知りたいのは数の多い少ない, 棒グラフ]
+        note: 全体の中の割合を知りたいときは円グラフでもよい。ここでは「多い少ない」を比べるので棒グラフ。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: ある町で、5 月から 10 月まで、毎月 1 日に気温をはかりました。縦の軸の波線（≈）は、0 から 16 までを省いたしるしです。7 月の気温は何度ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="142" x2="196" y2="142" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.714" x2="196" y2="133.714" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="125.429" x2="196" y2="125.429" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="117.143" x2="196" y2="117.143" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="108.857" x2="196" y2="108.857" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="100.571" x2="196" y2="100.571" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="92.2857" x2="196" y2="92.2857" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="196" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="75.7143" x2="196" y2="75.7143" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="67.4286" x2="196" y2="67.4286" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.1429" x2="196" y2="59.1429" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="50.8571" x2="196" y2="50.8571" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="42.5714" x2="196" y2="42.5714" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.2857" x2="196" y2="34.2857" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="11" text-anchor="end">16</text>
+            <text x="34" y="129.429" font-size="11" text-anchor="end">18</text>
+            <text x="34" y="112.857" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="96.2857" font-size="11" text-anchor="end">22</text>
+            <text x="34" y="79.7143" font-size="11" text-anchor="end">24</text>
+            <text x="34" y="63.1429" font-size="11" text-anchor="end">26</text>
+            <text x="34" y="46.5714" font-size="11" text-anchor="end">28</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">10</text>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <line x1="40" y1="18" x2="40" y2="145" stroke="currentColor" stroke-width="2"/>
+            <path d="M34 147 q3 -4 6 0 t6 0 M34 152 q3 -4 6 0 t6 0" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="40" y1="154" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,125.429 79,92.2857 105,50.8571 131,34.2857 157,67.4286 183,117.143" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="125.429" r="3" fill="currentColor"/>
+            <circle cx="79" cy="92.2857" r="3" fill="currentColor"/>
+            <circle cx="105" cy="50.8571" r="3" fill="currentColor"/>
+            <circle cx="131" cy="34.2857" r="3" fill="currentColor"/>
+            <circle cx="157" cy="67.4286" r="3" fill="currentColor"/>
+            <circle cx="183" cy="117.143" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 27
+        check: "[18, 22, 27, 29, 25, 19][7 - 5]"
+        hints:
+          - 縦の軸は、波線の上の 16 から目もりが始まっているよ。
+          - 縦の 1 目もりは何度かな。
+          - 7 月の点から、横にまっすぐ左へたどろう。
+        paths:
+          - [1 目もりは 1 度, 7 月の点は 26 の線から 1 目もり上, 27 度]
+      - part: 思い出す
+        text: 好きなおにぎりの具を聞いて、円グラフに表しました。うめと答えた人は、全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="153.1" y="75.1" font-size="11" text-anchor="middle">さけ</text>
+            <line x1="120" y1="88" x2="170.2" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="120" y="129.2" font-size="11" text-anchor="middle">ツナ</text>
+            <line x1="120" y1="88" x2="69.8" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="83.3" y="97.8" font-size="11" text-anchor="middle">うめ</text>
+            <line x1="120" y1="88" x2="61" y2="68.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="84.9" y="66.1" font-size="10" text-anchor="middle">こんぶ</text>
+            <line x1="120" y1="88" x2="83.6" y2="37.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="106.6" y="50.3" font-size="10" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 15
+        check: 80 - 65
+        hints:
+          - まわりの目もりの 1 目もりは何 % かな。
+          - うめの区切りの線は、それぞれ何 % の目もりのところかな。
+          - 後ろの区切りの目もりから、前の区切りの目もりをひこう。
+        paths:
+          - [うめは 65 から 80 まで, 80 − 65 = 15, 15%]
+      - part: 今日
+        text: クラスの人に、好きな果物を 1 つずつ聞いて、棒グラフに表しました。みかんが好きな人は、クラス全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 272 170" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="127.5" x2="264" y2="127.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113" x2="264" y2="113" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="98.5" x2="264" y2="98.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="264" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="69.5" x2="264" y2="69.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="55" x2="264" y2="55" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="40.5" x2="264" y2="40.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="264" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="12" text-anchor="end">0</text>
+            <text x="34" y="117" font-size="12" text-anchor="end">4</text>
+            <text x="34" y="88" font-size="12" text-anchor="end">8</text>
+            <text x="34" y="59" font-size="12" text-anchor="end">12</text>
+            <text x="34" y="30" font-size="12" text-anchor="end">16</text>
+            <rect x="52" y="40.5" width="24" height="101.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="64" y="159" font-size="12" text-anchor="middle">いちご</text>
+            <rect x="96" y="69.5" width="24" height="72.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="108" y="159" font-size="12" text-anchor="middle">みかん</text>
+            <rect x="140" y="84" width="24" height="58" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="152" y="159" font-size="12" text-anchor="middle">りんご</text>
+            <rect x="184" y="98.5" width="24" height="43.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="196" y="159" font-size="12" text-anchor="middle">ぶどう</text>
+            <rect x="228" y="127.5" width="24" height="14.5" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="240" y="159" font-size="12" text-anchor="middle">その他</text>
+            <line x1="40" y1="18" x2="40" y2="142" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="142" x2="264" y2="142" stroke="currentColor" stroke-width="2"/>
+            <text x="36" y="14" font-size="12" text-anchor="end">（人）</text>
+          </svg>
+        answer: 25
+        check: Fraction(10 * 100, 14 + 10 + 8 + 6 + 2)
+        hints:
+          - クラス全体は何人かな。棒の人数を全部たそう。
+          - みかんは何人かな。
+          - 比べる量 ÷ もとにする量 を、百分率に直そう。
+        paths:
+          - [全体は 14 + 10 + 8 + 6 + 2 = 40 人, みかんは 10 人, 10 ÷ 40 = 0.25, 25%]
+        note: もとにする量を、いちばん多いいちごの 14 人にしやすい。全体（クラスの人数）がもとにする量になる。
+      - part: 今日
+        text: 好きな動物を聞いて、帯グラフに表しました。犬と答えた人と、ねこと答えた人の人数の比を、いちばん簡単な比で表すと、どれですか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="51.8" y="25.96" font-size="11" text-anchor="middle">犬</text>
+            <line x1="89.6" y1="8" x2="89.6" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="114.8" y="25.96" font-size="11" text-anchor="middle">ねこ</text>
+            <line x1="140" y1="8" x2="140" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="158.9" y="25.96" font-size="11" text-anchor="middle">鳥</text>
+            <line x1="177.8" y1="8" x2="177.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="196.7" y="25.96" font-size="11" text-anchor="middle">魚</text>
+            <line x1="215.6" y1="8" x2="215.6" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="240.8" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        choices: ["3:2", "2:3", "3:5", "5:2"]
+        answer: "3:2"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(30, 50 - 30))"
+        hints:
+          - 犬とねこは、それぞれ全体の何 % かな。
+          - 全体の人数が同じなので、割合の比は人数の比と同じになるよ。
+          - 2 つの百分率の比を、同じ数でわって簡単にしよう。
+        paths:
+          - [犬 30%、ねこ 20%, 人数の比は 30:20, 10 でわって 3:2]
+        note: 全体の人数がわからなくても、同じ全体の割合どうしなら、割合の比が人数の比になる。
+      - part: 今日
+        text: 次のうち、帯グラフに表すとよいものはどれですか。
+        choices: [ある町で毎月 1 日にはかった気温, 1 年生から 6 年生までの、それぞれの人数, ある畑でとれた野菜の、種類ごとの割合]
+        answer: ある畑でとれた野菜の、種類ごとの割合
+        hints:
+          - 帯グラフは、何を表すグラフだったかな。
+          - 全体を 100% として、その中の割合を見たいのはどれかな。
+          - 気温の変わり方は、どのグラフがよかったかな。
+        paths:
+          - [帯グラフは全体の中の割合を表す, 野菜の種類ごとの割合, 帯グラフ]
+        note: 気温は折れ線グラフ、学年ごとの人数は棒グラフがよい。
+      - part: 挑戦
+        text: ある学校で、好きな季節を聞いて円グラフに表しました。夏と答えた人は 63 人でした。春と答えた人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="153.1" y="75.1" font-size="11" text-anchor="middle">夏</text>
+            <line x1="120" y1="88" x2="170.2" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="125.8" y="128.7" font-size="11" text-anchor="middle">春</text>
+            <line x1="120" y1="88" x2="83.6" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="83.3" y="97.8" font-size="11" text-anchor="middle">秋</text>
+            <line x1="120" y1="88" x2="69.8" y2="51.6" stroke="currentColor" stroke-width="1.5"/>
+            <text x="103.1" y="58.8" font-size="11" text-anchor="middle">冬</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 45
+        check: Fraction(63 * 25, 35)
+        hints:
+          - 夏と春は、それぞれ全体の何 % かな。
+          - 夏の 63 人から、全体の人数を求められるかな。
+          - 夏と春の割合の比を使って考えてもよいよ。
+        paths:
+          - [夏は 35%, 全体は 63 ÷ 0.35 = 180 人, 春は 180 × 0.25 = 45 人]
+          - [夏と春の割合の比は 35:25 = 7:5, 63 ÷ 7 × 5 = 45, 45 人]
+        note: 春も秋も 25% なので、どちらを読んでもよい。全体を求めずに、割合の比（A-005）で求める道もある。
+    extra:
+      - part: 今日
+        text: クラスの人に、好きな色を 1 つずつ聞いて、棒グラフに表しました。赤が好きな人は、クラス全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 272 170" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="130.4" x2="264" y2="130.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.8" x2="264" y2="118.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="107.2" x2="264" y2="107.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="95.6" x2="264" y2="95.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="264" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.4" x2="264" y2="72.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="60.8" x2="264" y2="60.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="49.2" x2="264" y2="49.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="37.6" x2="264" y2="37.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="264" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="12" text-anchor="end">0</text>
+            <text x="34" y="122.8" font-size="12" text-anchor="end">2</text>
+            <text x="34" y="99.6" font-size="12" text-anchor="end">4</text>
+            <text x="34" y="76.4" font-size="12" text-anchor="end">6</text>
+            <text x="34" y="53.2" font-size="12" text-anchor="end">8</text>
+            <text x="34" y="30" font-size="12" text-anchor="end">10</text>
+            <rect x="52" y="37.6" width="24" height="104.4" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="64" y="159" font-size="12" text-anchor="middle">青</text>
+            <rect x="96" y="72.4" width="24" height="69.6" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="108" y="159" font-size="12" text-anchor="middle">赤</text>
+            <rect x="140" y="107.2" width="24" height="34.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="152" y="159" font-size="12" text-anchor="middle">緑</text>
+            <rect x="184" y="107.2" width="24" height="34.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="196" y="159" font-size="12" text-anchor="middle">黄</text>
+            <rect x="228" y="95.6" width="24" height="46.4" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="240" y="159" font-size="12" text-anchor="middle">その他</text>
+            <line x1="40" y1="18" x2="40" y2="142" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="142" x2="264" y2="142" stroke="currentColor" stroke-width="2"/>
+            <text x="36" y="14" font-size="12" text-anchor="end">（人）</text>
+          </svg>
+        answer: 24
+        check: Fraction(6 * 100, 9 + 6 + 3 + 3 + 4)
+        hints:
+          - クラス全体は何人かな。棒の人数を全部たそう。
+          - 赤は何人かな。
+          - 比べる量 ÷ もとにする量 を、百分率に直そう。
+        paths:
+          - [全体は 9 + 6 + 3 + 3 + 4 = 25 人, 赤は 6 人, 6 ÷ 25 = 0.24, 24%]
+      - part: 今日
+        text: 駅前に来た人の来かたを、帯グラフに表しました。電車で来た人と、車で来た人の人数の比を、いちばん簡単な比で表すと、どれですか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="70.7" y="25.96" font-size="11" text-anchor="middle">バス</text>
+            <line x1="127.4" y1="8" x2="127.4" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="165.2" y="25.96" font-size="11" text-anchor="middle">電車</text>
+            <line x1="203" y1="8" x2="203" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="221.9" y="25.96" font-size="11" text-anchor="middle">車</text>
+            <line x1="240.8" y1="8" x2="240.8" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="253.4" y="25.24" font-size="9" text-anchor="middle">歩き</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        choices: ["2:1", "1:2", "3:1", "2:3"]
+        answer: "2:1"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(75 - 45, 90 - 75))"
+        hints:
+          - 電車と車は、それぞれ全体の何 % かな。
+          - 全体の人数が同じなので、割合の比は人数の比と同じになるよ。
+          - 2 つの百分率の比を、同じ数でわって簡単にしよう。
+        paths:
+          - [電車 30%、車 15%, 30:15, 15 でわって 2:1]
+      - part: 今日
+        text: 好きな動物を聞いて、円グラフに表しました。犬と答えた人は 48 人でした。全体は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="155.4" y="80.5" font-size="11" text-anchor="middle">犬</text>
+            <line x1="120" y1="88" x2="156.4" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="108.5" y="127.3" font-size="11" text-anchor="middle">ねこ</text>
+            <line x1="120" y1="88" x2="61" y2="107.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="83.3" y="86.1" font-size="11" text-anchor="middle">うさぎ</text>
+            <line x1="120" y1="88" x2="69.8" y2="51.6" stroke="currentColor" stroke-width="1.5"/>
+            <text x="103.1" y="58.8" font-size="11" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 120
+        check: Fraction(48 * 100, 40)
+        hints:
+          - 犬は、全体の何 % かな。
+          - もとにする量 = 比べる量 ÷ 割合 だね。
+          - 48 を、40% を小数にした数でわろう。
+        paths:
+          - [犬は 40%, 48 ÷ 0.4 = 120, 120 人]
+          - [10% にあたるのは 48 ÷ 4 = 12 人, 100% は 12 × 10 = 120, 120 人]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: ある店で 1 か月に売れたアイスの数を、折れ線グラフに表しました。6 月は何こですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="153.3" x2="196" y2="153.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="146.6" x2="196" y2="146.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="139.9" x2="196" y2="139.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="119.8" x2="196" y2="119.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113.1" x2="196" y2="113.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="99.7" x2="196" y2="99.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="86.3" x2="196" y2="86.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.9" x2="196" y2="72.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="66.2" x2="196" y2="66.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="46.1" x2="196" y2="46.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="39.4" x2="196" y2="39.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="32.7" x2="196" y2="32.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="137.2" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="110.4" font-size="11" text-anchor="end">40</text>
+            <text x="34" y="83.6" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="56.8" font-size="11" text-anchor="end">80</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">100</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">10</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,119.8 79,86.3 105,52.8 131,32.7 157,79.6 183,126.5" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="119.8" r="3" fill="currentColor"/>
+            <circle cx="79" cy="86.3" r="3" fill="currentColor"/>
+            <circle cx="105" cy="52.8" r="3" fill="currentColor"/>
+            <circle cx="131" cy="32.7" r="3" fill="currentColor"/>
+            <circle cx="157" cy="79.6" r="3" fill="currentColor"/>
+            <circle cx="183" cy="126.5" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（こ）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 55
+        check: "[30, 55, 80, 95, 60, 25][6 - 5]"
+        hints:
+          - 縦の 1 目もりは何こかな。0 と 20 の間の目もりの数を見よう。
+          - 6 月の点から、横にまっすぐ左へたどろう。
+          - 近くの、数の書いてある線から何目もりはなれているかな。
+        paths:
+          - [1 目もりは 5 こ, 6 月の点は 60 の線から 1 目もり下, 55 こ]
+      - part: 今日
+        text: ある水そうのメダカの数を、毎週 1 回数えて、折れ線グラフに表しました。前の週からの増え方がいちばん大きいのは、どこですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="153.3" x2="196" y2="153.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="146.6" x2="196" y2="146.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="139.9" x2="196" y2="139.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="126.5" x2="196" y2="126.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="119.8" x2="196" y2="119.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113.1" x2="196" y2="113.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="99.7" x2="196" y2="99.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93" x2="196" y2="93" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="86.3" x2="196" y2="86.3" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.9" x2="196" y2="72.9" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="66.2" x2="196" y2="66.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="59.5" x2="196" y2="59.5" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="46.1" x2="196" y2="46.1" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="39.4" x2="196" y2="39.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="32.7" x2="196" y2="32.7" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="130.5" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="97" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="63.5" font-size="11" text-anchor="end">30</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">40</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,119.8 79,106.4 105,66.2 131,46.1 157,32.7 183,26" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="119.8" r="3" fill="currentColor"/>
+            <circle cx="79" cy="106.4" r="3" fill="currentColor"/>
+            <circle cx="105" cy="66.2" r="3" fill="currentColor"/>
+            <circle cx="131" cy="46.1" r="3" fill="currentColor"/>
+            <circle cx="157" cy="32.7" r="3" fill="currentColor"/>
+            <circle cx="183" cy="26" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（ひき）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（週）</text>
+          </svg>
+        choices: [1 週目から 2 週目, 2 週目から 3 週目, 3 週目から 4 週目, 5 週目から 6 週目]
+        answer: 2 週目から 3 週目
+        check: "(lambda v: ['1 週目から 2 週目', '2 週目から 3 週目', '3 週目から 4 週目', '4 週目から 5 週目', '5 週目から 6 週目'][max(range(5), key=lambda i: v[i + 1] - v[i])])([12, 16, 28, 34, 38, 40])"
+        hints:
+          - 線のかたむきが、いちばん急なところをさがそう。
+          - 横の 1 目もりは、どこも 1 週間だね。
+          - 目もりを数えて、それぞれ何びき増えたかを比べよう。
+        paths:
+          - [かたむきがいちばん急なところ, 2 週目から 3 週目（16 ぴきから 28 ぴき）, 12 ひき増えた]
+      - part: 今日
+        text: ある学校で、毎月 1 日に図書室に来た人の数を、折れ線グラフに表しました。縦の軸の波線（≈）は、0 から 60 までを省いたしるしです。いちばん多い月と、いちばん少ない月の差は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="142" x2="196" y2="142" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="132.333" x2="196" y2="132.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="122.667" x2="196" y2="122.667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="113" x2="196" y2="113" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="103.333" x2="196" y2="103.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="93.6667" x2="196" y2="93.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="196" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="74.3333" x2="196" y2="74.3333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="64.6667" x2="196" y2="64.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="55" x2="196" y2="55" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="45.3333" x2="196" y2="45.3333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="35.6667" x2="196" y2="35.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="11" text-anchor="end">60</text>
+            <text x="34" y="126.667" font-size="11" text-anchor="end">62</text>
+            <text x="34" y="107.333" font-size="11" text-anchor="end">64</text>
+            <text x="34" y="88" font-size="11" text-anchor="end">66</text>
+            <text x="34" y="68.6667" font-size="11" text-anchor="end">68</text>
+            <text x="34" y="49.3333" font-size="11" text-anchor="end">70</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">72</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <line x1="40" y1="18" x2="40" y2="145" stroke="currentColor" stroke-width="2"/>
+            <path d="M34 147 q3 -4 6 0 t6 0 M34 152 q3 -4 6 0 t6 0" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <line x1="40" y1="154" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,122.667 79,103.333 105,132.333 131,84 157,45.3333 183,64.6667" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="122.667" r="3" fill="currentColor"/>
+            <circle cx="79" cy="103.333" r="3" fill="currentColor"/>
+            <circle cx="105" cy="132.333" r="3" fill="currentColor"/>
+            <circle cx="131" cy="84" r="3" fill="currentColor"/>
+            <circle cx="157" cy="45.3333" r="3" fill="currentColor"/>
+            <circle cx="183" cy="64.6667" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（人）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 9
+        check: "(lambda v: max(v) - min(v))([62, 64, 61, 66, 70, 68])"
+        hints:
+          - 縦の軸は、波線の上の 60 から目もりが始まっているよ。
+          - いちばん高い点と、いちばん低い点の数を読もう。
+          - 2 つの数をひき算しよう。
+        paths:
+          - [1 目もりは 1 人, いちばん多いのは 8 月の 70 人、いちばん少ないのは 6 月の 61 人, 70 − 61 = 9, 9 人]
+        note: グラフの上では 8 月が 6 月の何倍にも見えるが、人数の差は 9 人。省いた軸は変わり方を大きく見せる。
+      - part: 今日
+        text: ある遊園地に来た人の来かたを、帯グラフに表しました。バスで来た人は、全体の何 % ですか。
+        svg: |
+          <svg viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="51.8" y="25.96" font-size="11" text-anchor="middle">歩き</text>
+            <line x1="89.6" y1="8" x2="89.6" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="121.1" y="25.96" font-size="11" text-anchor="middle">自転車</text>
+            <line x1="152.6" y1="8" x2="152.6" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="177.8" y="25.96" font-size="11" text-anchor="middle">バス</text>
+            <line x1="203" y1="8" x2="203" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="215.6" y="25.24" font-size="9" text-anchor="middle">電車</text>
+            <line x1="228.2" y1="8" x2="228.2" y2="36" stroke="currentColor" stroke-width="1.5"/>
+            <text x="247.1" y="25.96" font-size="11" text-anchor="middle">その他</text>
+            <rect x="14" y="8" width="252" height="28" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="44" x2="266" y2="44" stroke="currentColor" stroke-width="1"/>
+            <line x1="14" y1="44" x2="14" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="14" y="61" font-size="10" text-anchor="middle">0</text>
+            <line x1="26.6" y1="44" x2="26.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="39.2" y1="44" x2="39.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="39.2" y="61" font-size="10" text-anchor="middle">10</text>
+            <line x1="51.8" y1="44" x2="51.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="64.4" y1="44" x2="64.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="64.4" y="61" font-size="10" text-anchor="middle">20</text>
+            <line x1="77" y1="44" x2="77" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="89.6" y1="44" x2="89.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="89.6" y="61" font-size="10" text-anchor="middle">30</text>
+            <line x1="102.2" y1="44" x2="102.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="114.8" y1="44" x2="114.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="114.8" y="61" font-size="10" text-anchor="middle">40</text>
+            <line x1="127.4" y1="44" x2="127.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="140" y1="44" x2="140" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="61" font-size="10" text-anchor="middle">50</text>
+            <line x1="152.6" y1="44" x2="152.6" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="165.2" y1="44" x2="165.2" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="165.2" y="61" font-size="10" text-anchor="middle">60</text>
+            <line x1="177.8" y1="44" x2="177.8" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="190.4" y1="44" x2="190.4" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="190.4" y="61" font-size="10" text-anchor="middle">70</text>
+            <line x1="203" y1="44" x2="203" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="215.6" y1="44" x2="215.6" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="215.6" y="61" font-size="10" text-anchor="middle">80</text>
+            <line x1="228.2" y1="44" x2="228.2" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="240.8" y1="44" x2="240.8" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="240.8" y="61" font-size="10" text-anchor="middle">90</text>
+            <line x1="253.4" y1="44" x2="253.4" y2="47" stroke="currentColor" stroke-width="1"/>
+            <line x1="266" y1="44" x2="266" y2="50" stroke="currentColor" stroke-width="1"/>
+            <text x="266" y="61" font-size="10" text-anchor="middle">100</text>
+            <text x="268" y="75" font-size="10" text-anchor="end">（%）</text>
+          </svg>
+        answer: 20
+        check: 75 - 55
+        hints:
+          - 下の目もりの 1 目もりは何 % かな。
+          - バスの左はしと右はしは、それぞれ何 % の目もりのところかな。
+          - 右はしの目もりから、左はしの目もりをひこう。
+        paths:
+          - [バスは 55 から 75 まで, 75 − 55 = 20, 20%]
+      - part: 今日
+        text: ある学校の 240 人に、好きなスポーツを 1 つずつ聞いて、円グラフに表しました。水泳と答えた人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="153.1" y="75.1" font-size="11" text-anchor="middle">サッカー</text>
+            <line x1="120" y1="88" x2="170.2" y2="124.4" stroke="currentColor" stroke-width="1.5"/>
+            <text x="125.8" y="128.7" font-size="11" text-anchor="middle">野球</text>
+            <line x1="120" y1="88" x2="83.6" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="84.6" y="103.5" font-size="11" text-anchor="middle">水泳</text>
+            <line x1="120" y1="88" x2="61" y2="68.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="84.9" y="66.1" font-size="10" text-anchor="middle">テニス</text>
+            <line x1="120" y1="88" x2="83.6" y2="37.8" stroke="currentColor" stroke-width="1.5"/>
+            <text x="106.6" y="50.3" font-size="10" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 48
+        check: Fraction(240 * (80 - 60), 100)
+        hints:
+          - 水泳は、全体の何 % かな。
+          - 比べる量 = もとにする量 × 割合 だね。
+          - 240 人をもとにして、その割合にあたる人数を求めよう。
+        paths:
+          - [水泳は 60 から 80 までで 20%, 240 × 0.2 = 48, 48 人]
+          - [240 人の 10% は 24 人, 20% はその 2 倍で 48 人]
+      - part: 今日
+        text: 25 人に好きな色を聞いて、表にまとめました。帯グラフに表すために、割合を百分率で求めます。赤は何 % ですか。
+        svg: |
+          <svg viewBox="0 0 269 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="6" width="259" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="5" y="6" width="259" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="5" y1="32" x2="264" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="86" y1="6" x2="86" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="154" y1="6" x2="154" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="188" y1="6" x2="188" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="222" y1="6" x2="222" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="45.5" y="23.68" font-size="13" text-anchor="middle">色</text>
+            <text x="103" y="23.68" font-size="13" text-anchor="middle">赤</text>
+            <text x="137" y="23.68" font-size="13" text-anchor="middle">青</text>
+            <text x="171" y="23.68" font-size="13" text-anchor="middle">緑</text>
+            <text x="205" y="23.68" font-size="13" text-anchor="middle">黄</text>
+            <text x="243" y="23.68" font-size="13" text-anchor="middle">合計</text>
+            <text x="45.5" y="49.68" font-size="13" text-anchor="middle">人数（人）</text>
+            <text x="103" y="49.68" font-size="13" text-anchor="middle">7</text>
+            <text x="137" y="49.68" font-size="13" text-anchor="middle">9</text>
+            <text x="171" y="49.68" font-size="13" text-anchor="middle">5</text>
+            <text x="205" y="49.68" font-size="13" text-anchor="middle">4</text>
+            <text x="243" y="49.68" font-size="13" text-anchor="middle">25</text>
+          </svg>
+        answer: 28
+        check: Fraction(7 * 100, 25)
+        hints:
+          - もとにする量は、何人かな。
+          - 7 ÷ 25 を小数で求めよう。
+          - 小数で求めた割合を、百分率に直そう。
+        paths:
+          - [7 ÷ 25 = 0.28, 0.28 は 28%]
+          - [分母を 100 にそろえる, 7/25 = 28/100, 28%]
+      - part: 今日
+        text: A 小学校には 300 人、B 小学校には 500 人がいます。歩いて学校に来る人の割合は、A 小学校が 60%、B 小学校が 40% です。歩いて学校に来る人が多いのは、どちらですか。
+        choices: [A 小学校, B 小学校, 同じ]
+        answer: B 小学校
+        check: "(lambda a, b: 'A 小学校' if a > b else ('B 小学校' if b > a else '同じ'))(Fraction(300 * 60, 100), Fraction(500 * 40, 100))"
+        hints:
+          - 2 つの学校は、もとにする量が同じかな。
+          - A 小学校で歩いて来るのは、300 人の 60% だね。
+          - B 小学校も人数を求めて比べよう。
+        paths:
+          - [A は 300 × 0.6 = 180 人, B は 500 × 0.4 = 200 人, B 小学校]
+        note: 割合が大きい A 小学校を選びやすい。全体の人数がちがうときは、人数を求めてから比べる。
+      - part: 今日
+        text: ある池のカメの数を、1 年間、毎月数えます。数の変わり方を見るのに、よいグラフはどれですか。
+        choices: [折れ線グラフ, 円グラフ, 帯グラフ]
+        answer: 折れ線グラフ
+        hints:
+          - 知りたいのは、変わり方かな、割合かな。
+          - 月には、決まった順番があるね。
+          - 点を順に線で結ぶと、増えたか減ったかが見えるのはどれかな。
+        paths:
+          - [知りたいのは時がたつにつれての変わり方, 月は順に並ぶ, 折れ線グラフ]
+    extra:
+      - part: 今日
+        text: ある町で、1 月から 6 月まで、毎月 1 日に気温をはかりました。3 月から 6 月までに、気温は何度上がりましたか。
+        svg: |
+          <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="151.067" x2="196" y2="151.067" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="142.133" x2="196" y2="142.133" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="133.2" x2="196" y2="133.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="124.267" x2="196" y2="124.267" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="115.333" x2="196" y2="115.333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="106.4" x2="196" y2="106.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="97.4667" x2="196" y2="97.4667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="88.5333" x2="196" y2="88.5333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="79.6" x2="196" y2="79.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="70.6667" x2="196" y2="70.6667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="61.7333" x2="196" y2="61.7333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="52.8" x2="196" y2="52.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="43.8667" x2="196" y2="43.8667" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="34.9333" x2="196" y2="34.9333" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="196" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+            <text x="34" y="119.333" font-size="11" text-anchor="end">10</text>
+            <text x="34" y="74.6667" font-size="11" text-anchor="end">20</text>
+            <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+            <line x1="53" y1="26" x2="53" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="79" y1="26" x2="79" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="105" y1="26" x2="105" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="131" y1="26" x2="131" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="157" y1="26" x2="157" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <line x1="183" y1="26" x2="183" y2="160" stroke="currentColor" stroke-width="0.8" stroke-opacity=".2"/>
+            <text x="53" y="176" font-size="11" text-anchor="middle">1</text>
+            <text x="79" y="176" font-size="11" text-anchor="middle">2</text>
+            <text x="105" y="176" font-size="11" text-anchor="middle">3</text>
+            <text x="131" y="176" font-size="11" text-anchor="middle">4</text>
+            <text x="157" y="176" font-size="11" text-anchor="middle">5</text>
+            <text x="183" y="176" font-size="11" text-anchor="middle">6</text>
+            <line x1="40" y1="18" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+            <polyline points="53,142.133 79,133.2 105,115.333 131,97.4667 157,79.6 183,61.7333" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="53" cy="142.133" r="3" fill="currentColor"/>
+            <circle cx="79" cy="133.2" r="3" fill="currentColor"/>
+            <circle cx="105" cy="115.333" r="3" fill="currentColor"/>
+            <circle cx="131" cy="97.4667" r="3" fill="currentColor"/>
+            <circle cx="157" cy="79.6" r="3" fill="currentColor"/>
+            <circle cx="183" cy="61.7333" r="3" fill="currentColor"/>
+            <text x="36" y="14" font-size="11" text-anchor="end">（度）</text>
+            <text x="200" y="188" font-size="11" text-anchor="end">（月）</text>
+          </svg>
+        answer: 12
+        check: "(lambda v: v[6 - 1] - v[3 - 1])([4, 6, 10, 14, 18, 22])"
+        hints:
+          - 縦の 1 目もりは何度かな。
+          - 3 月と 6 月の気温を、それぞれ読もう。
+          - 高いほうから低いほうをひこう。
+        paths:
+          - [3 月は 10 度、6 月は 22 度, 22 − 10 = 12, 12 度]
+      - part: 今日
+        text: 好きな動物を聞いて、円グラフに表しました。うさぎと答えた人は 27 人でした。全体は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 176" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="88" r="62" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="88" x2="120" y2="26" stroke="currentColor" stroke-width="1.5"/>
+            <text x="155.4" y="80.5" font-size="11" text-anchor="middle">ねこ</text>
+            <line x1="120" y1="88" x2="156.4" y2="138.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="108.5" y="127.3" font-size="11" text-anchor="middle">犬</text>
+            <line x1="120" y1="88" x2="61" y2="107.2" stroke="currentColor" stroke-width="1.5"/>
+            <text x="83.3" y="86.1" font-size="11" text-anchor="middle">うさぎ</text>
+            <line x1="120" y1="88" x2="69.8" y2="51.6" stroke="currentColor" stroke-width="1.5"/>
+            <text x="103.1" y="58.8" font-size="11" text-anchor="middle">その他</text>
+            <line x1="120" y1="26" x2="120" y2="21" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="16" font-size="10" text-anchor="middle">0</text>
+            <line x1="139.2" y1="29" x2="140.1" y2="26.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="37.8" x2="159.4" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="30.5" font-size="10" text-anchor="middle">10</text>
+            <line x1="170.2" y1="51.6" x2="172.6" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="68.8" x2="183.7" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="68.5" font-size="10" text-anchor="middle">20</text>
+            <line x1="182" y1="88" x2="185" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="179" y1="107.2" x2="183.7" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="192.3" y="115.5" font-size="10" text-anchor="middle">30</text>
+            <line x1="170.2" y1="124.4" x2="172.6" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="156.4" y1="138.2" x2="159.4" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="164.7" y="153.5" font-size="10" text-anchor="middle">40</text>
+            <line x1="139.2" y1="147" x2="140.1" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="150" x2="120" y2="155" stroke="currentColor" stroke-width="1"/>
+            <text x="120" y="168" font-size="10" text-anchor="middle">50</text>
+            <line x1="100.8" y1="147" x2="99.9" y2="149.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="138.2" x2="80.6" y2="142.2" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="153.5" font-size="10" text-anchor="middle">60</text>
+            <line x1="69.8" y1="124.4" x2="67.4" y2="126.2" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="107.2" x2="56.3" y2="108.7" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="115.5" font-size="10" text-anchor="middle">70</text>
+            <line x1="58" y1="88" x2="55" y2="88" stroke="currentColor" stroke-width="1"/>
+            <line x1="61" y1="68.8" x2="56.3" y2="67.3" stroke="currentColor" stroke-width="1"/>
+            <text x="47.7" y="68.5" font-size="10" text-anchor="middle">80</text>
+            <line x1="69.8" y1="51.6" x2="67.4" y2="49.8" stroke="currentColor" stroke-width="1"/>
+            <line x1="83.6" y1="37.8" x2="80.6" y2="33.8" stroke="currentColor" stroke-width="1"/>
+            <text x="75.3" y="30.5" font-size="10" text-anchor="middle">90</text>
+            <line x1="100.8" y1="29" x2="99.9" y2="26.2" stroke="currentColor" stroke-width="1"/>
+          </svg>
+        answer: 180
+        check: Fraction(27 * 100, 15)
+        hints:
+          - うさぎは、全体の何 % かな。
+          - もとにする量 = 比べる量 ÷ 割合 だね。
+          - 27 を、15% を小数にした数でわろう。
+        paths:
+          - [うさぎは 70 から 85 までで 15%, 27 ÷ 0.15 = 180, 180 人]
+          - [5% にあたるのは 27 ÷ 3 = 9 人, 100% は 9 × 20 = 180, 180 人]
+      - part: 今日
+        text: 30 人に好きな教科を聞くと、算数 12 人、国語 9 人、理科 6 人、その他 3 人でした。帯グラフに、左から算数、国語、理科、その他の順にかきます。国語と理科の間の区切りの線は、何 % の目もりのところにかきますか。
+        answer: 70
+        check: Fraction((12 + 9) * 100, 30)
+        hints:
+          - 算数と国語は、それぞれ何 % かな。
+          - 区切りの線の目もりは、左はしからの割合の合計だよ。
+          - 右から、理科とその他の割合をひいて考えてもよいよ。
+        paths:
+          - [算数 40%、国語 30%, 40 + 30 = 70, 70% の目もり]
+          - [算数と国語で 21 人, 21 ÷ 30 = 0.7, 70% の目もり]

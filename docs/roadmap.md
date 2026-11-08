@@ -113,7 +113,7 @@
 | 国際ジュニア科学オリンピック（IJSO） | 250 | 1560 |
 | World Robot Olympiad（RoboMission） | 109 | 662 |
 | World Robot Olympiad（Future Engineers、自動運転車） | 107 | 667 |
-| ISLP International Statistical Literacy Poster Competition | 39 | 219 |
+| ISLP International Statistical Literacy Poster Competition | 41 | 230 |
 | 国際情報オリンピック（IOI） | 132 | 887 |
 | 国際天文学・天体物理学オリンピック（IOAA） | 171 | 1098 |
 | 国際地球科学オリンピック（IESO） | 224 | 1444 |
@@ -367,7 +367,7 @@
 | N-077 小数のかけ算とわり算 | 数 | N-020、N-074、N-075、N-076 | 6 | 6 日分、予備 18 問 |
 | N-078 分数のかけ算とわり算 | 数 | N-019、N-014、N-076 | 6 | 6 日分、予備 18 問 |
 | G-053 線対称と点対称（対称の軸と中心、対称な図形の性質） | 図形 | G-004、G-006、G-009、G-015 | 5 | 5 日分、予備 15 問 |
-| S-055 折れ線グラフと割合のグラフ（円グラフ、帯グラフ） | 確率と統計 | S-027、A-005 | 5 | — |
+| S-055 折れ線グラフと割合のグラフ（円グラフ、帯グラフ） | 確率と統計 | S-027、A-005、G-009、G-046 | 5 | 5 日分、予備 15 問 |
 
 ## 段 4 一般の数
 
