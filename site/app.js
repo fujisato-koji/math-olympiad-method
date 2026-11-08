@@ -1891,12 +1891,15 @@
     if (b) {
       b.hidden = !CLIENT_ID || !drive.on;
       b.dataset.s = driveState;
-      b.title = { ok: 'Google ドライブと合わせ済み', wait: 'Google ドライブへ送る前', need: 'Google のログインが切れました。押すとログインして合わせます',
-        err: 'Google ドライブと合わせられませんでした。押すともう一度合わせます' }[driveState] || '';
+      // 言葉は保存にそろえる（D-057、施主「ドライブという言い方がわかりにくい」）
+      const t = b.querySelector('.t');
+      if (t) t.textContent = { ok: '保存済み', wait: '保存中', need: 'つなぐ', err: 'つなぐ' }[driveState] || '保存';
+      b.title = { ok: '保存済み（どの端末でも開けます）', wait: '保存の途中です', need: 'つながりが切れました。押すとつなぎ直して保存します',
+        err: '保存できませんでした。押すともう一度保存します' }[driveState] || '';
     }
     const st = $('#drive-status');
     if (st) st.textContent = !drive.on ? 'この端末だけに保存'
-      : [drive.who, drive.at && drive.at + ' に合わせ済み', DriveSync.linked && '家族と共有中', driveState === 'need' && 'ログインが切れました', driveState === 'err' && '合わせられませんでした'].filter(Boolean).join('・');
+      : [drive.who, drive.at && drive.at + ' に保存', DriveSync.linked && '家族と共有中', driveState === 'need' && 'つなぎ直してください', driveState === 'err' && '保存できませんでした'].filter(Boolean).join('・');
     const show = showEl;
     show('#btn-drive-in', !drive.on || driveState === 'need');
     show('#btn-drive-take', !drive.on);
@@ -1993,7 +1996,7 @@
   // 共有をやめる：自分のドライブの記録に戻る（共有のファイルはそのまま残る）
   async function familyLeave() {
     if (!window.DriveSync || driveBusy) return;
-    if (!confirm('共有をやめて、自分のドライブの記録に戻ります。共有の記録はそのまま残ります。')) return;
+    if (!confirm('共有をやめて、自分だけの記録に戻ります。共有の記録はそのまま残ります。')) return;
     driveBusy = true;
     try {
       if (!DriveSync.valid()) await DriveSync.signIn();
@@ -2036,7 +2039,7 @@
       else if (err.code === 'gone') { family.gone = true; driveState = 'err'; }
       else {
         driveState = err.code === 'auth' || err.code === 'scope' ? 'need' : 'err';
-        if (interactive && err.code !== 'auth') alert(err.code === 'scope' ? NO_FILE : 'Google ドライブと合わせられませんでした（' + err.message + '）');
+        if (interactive && err.code !== 'auth') alert(err.code === 'scope' ? NO_FILE : '保存できませんでした（' + err.message + '）');
       }
     } finally {
       driveBusy = false; driveChip();
@@ -2053,11 +2056,11 @@
       if (!DriveSync.valid()) await DriveSync.signIn();
       const remote = await DriveSync.pull();
       if (!remote || remote.schema !== 2 || !remote.profiles || !Object.keys(remote.profiles).length) {
-        alert('Google ドライブにまだ記録がありません。先に、記録のある端末で「Google でログインして合わせる」を押してください。');
+        alert('保存してある記録がまだありません。先に、記録のある端末で「Google でつなぐ」を押してください。');
         return;
       }
       const names = Object.values(remote.profiles).map(pr => pr.name).join('、');
-      if (!confirm(`この端末の記録を、Google ドライブの記録（${names}）で置き換えます。この端末だけにある記録は消えます。`)) return;
+      if (!confirm(`この端末の記録を、保存してある記録（${names}）で置き換えます。この端末だけにある記録は消えます。`)) return;
       Object.values(remote.profiles).forEach(pr => migrate(pr.rec));
       if (!remote.profiles[remote.current]) remote.current = Object.keys(remote.profiles)[0];
       store = remote; progress = store.profiles[store.current].rec; save(STORE_KEY, store);
@@ -2066,7 +2069,7 @@
       driveState = 'ok';
       syncWho(); if (parse().name !== 'day') render();
     } catch (err) {
-      if (err.code !== 'popup_closed') alert('Google ドライブから読み込めませんでした（' + err.message + '）');
+      if (err.code !== 'popup_closed') alert('保存してある記録を読み込めませんでした（' + err.message + '）');
     } finally { driveBusy = false; driveChip(); }
   }
   // 記録を保存するたびに、少し待ってからドライブへ送る（続けて解いている間は、まとめて 1 回）
@@ -2092,7 +2095,7 @@
     $('#btn-family-leave').addEventListener('click', familyLeave);
     $('#btn-menu').addEventListener('click', refreshFamily);
     $('#btn-drive-out').addEventListener('click', () => {
-      if (!confirm('この端末では Google ドライブと合わせるのをやめます。記録はこの端末に残り、ドライブの記録も消えません。')) return;
+      if (!confirm('この端末ではつなぐのをやめます。記録はこの端末に残り、保存してある記録も消えません。')) return;
       DriveSync.signOut(); drive.on = false; drive.who = ''; save(DRIVE_KEY, drive); driveState = 'off'; driveChip();
     });
     document.addEventListener('visibilitychange', () => { if (document.hidden && driveState === 'wait') { clearTimeout(driveTimer); driveSync(false); } });
