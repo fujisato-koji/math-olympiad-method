@@ -1062,7 +1062,9 @@
     if (s.idx >= s.items.length) return drawFinish();
     const it = s.items[s.idx];
     // 図の並びが折り返すと意味が変わるので、いちばん長い行が 1 行に収まる大きさにする
-    const longest = it.figure ? Math.max(...String(it.figure).split('\n').map(l => Array.from(l).length)) : 0;
+    // 半角（数字、英字、空白）は全角の半分ほどの幅として数え、数字の多い行で字が小さくなりすぎないようにする
+    const width = l => Array.from(l).reduce((w, c) => w + (c.codePointAt(0) < 0x2000 ? .55 : 1), 0);
+    const longest = it.figure ? Math.max(...String(it.figure).split('\n').map(width)).toFixed(2) : 0;
     // 図：文字の図（figure）と、線や形の図（svg、D-040）。svg は地図の問題ファイルに書いたものだけを出す（道具が確かめる）
     const fig = (it.figure ? `<div class="fig" style="--n:${longest}" aria-label="え">${esc(it.figure)}</div>` : '')
       + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '')
