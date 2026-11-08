@@ -132,7 +132,9 @@
       await writeLink({ fileId: id, mine: true });
       l = link;
     }
-    const msg = encodeURIComponent('みちすじの記録を共有しました。https://fujisato-koji.github.io/math-olympiad-method/ を開き、記録の窓の「共有された記録を開く」から、このファイルを選んでください。');
+    // お知らせのメールに、共有の記録を開く専用のリンクを入れる（D-054）。添付のように見えるファイルは開かなくてよい
+    const url = location.origin + location.pathname + '#/join/' + l.fileId;
+    const msg = encodeURIComponent(`みちすじの記録を共有しました。次のリンクを開いて「記録を開く」を押してください（下のファイルは開かなくて大丈夫です）。\n${url}`);
     await call(`${API}/files/${l.fileId}/permissions?sendNotificationEmail=true&emailMessage=${msg}`, {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ type: 'user', role: 'writer', emailAddress: email }) });
   }
@@ -146,11 +148,13 @@
     } catch { return []; }
   }
   // 共有された記録を開く：Google のファイル選びで「みちすじの記録」を選ぶ。選んだら目印を置き、以後はそのファイルを使う
-  async function pick(apiKey, appId) {
+  // only を渡すと、そのファイルだけを並べる（共有の専用のリンクから開いたとき、D-054）
+  async function pick(apiKey, appId, only) {
     await loadScript('https://apis.google.com/js/api.js', () => window.gapi);
     await new Promise(ok => gapi.load('picker', ok));
     const id = await new Promise(ok => {
-      const view = new google.picker.DocsView(google.picker.ViewId.DOCS).setMimeTypes('application/json').setQuery('みちすじの記録');
+      const view = new google.picker.DocsView(google.picker.ViewId.DOCS).setMimeTypes('application/json');
+      if (only) view.setFileIds(only); else view.setQuery('みちすじの記録');
       new google.picker.PickerBuilder().addView(view).setOAuthToken(token).setDeveloperKey(apiKey).setAppId(appId)
         .setTitle('みちすじの記録を選ぶ').setLocale('ja')
         .setCallback(d => {

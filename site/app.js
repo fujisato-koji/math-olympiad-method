@@ -315,12 +315,14 @@
     if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
+    if (p[0] === 'join' && p[1]) return { name: 'join', file: p[1] };
     return { name: 'map' };
   }
   function crumbs(r) {
     const parts = [['#/', '全体の地図']];
     if (r.name === 'goal') parts.push(['', '目標：' + GOALS.find(g => g.id === r.goal).name]);
     if (r.name === 'comb') parts.push(['', '組み合わせの層']);
+    if (r.name === 'join') parts.push(['', '共有の記録']);
     const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
     if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
@@ -338,7 +340,7 @@
     view.innerHTML = r.name === 'level' ? viewLevel(r.level)
       : r.name === 'unit' ? viewUnit(r.id)
       : r.name === 'day' ? viewDay(r.id, r.day, r.type)
-      : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : viewMap();
+      : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     const ex = $('#explore');
     if (r.name === 'map') { ex.hidden = false; ex.innerHTML = exploreHtml(); mountExplore(); }
@@ -346,6 +348,7 @@
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
     if (r.name === 'day') drawItem();
+    if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => joinOpen(r.file)); }
     window.scrollTo(0, 0);
   }
 
@@ -1961,6 +1964,30 @@
     family.gone = false;
     await driveSync(true);
     await refreshFamily();
+  }
+  // 共有の専用のリンク（#/join/<ファイル>、D-054）：ボタン 1 つで、ログインし、そのファイルだけが並ぶ Google の窓で選ぶ
+  function viewJoin(id) {
+    const l = window.DriveSync && DriveSync.linked, done = l && l.fileId === id;
+    return `<section class="join"><article class="card join-card">
+      <div class="join-ic">${'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm10 2a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM2 20c.5-3.6 2.4-5.5 5-5.5s4.5 1.9 5 5.5M13.5 20c.4-2.4 1.6-3.7 3.5-3.7s3.1 1.3 3.5 3.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>'}</div>
+      <h1>${done ? '共有の記録を開いています' : '家族から、みちすじの記録が共有されました'}</h1>
+      ${done ? '<a class="pill solid big" href="#/">地図へ</a>'
+        : CLIENT_ID && API_KEY ? '<button class="pill solid big" id="btn-join" type="button">記録を開く</button>' : '<p class="muted">この画面では、まだ開けません。</p>'}
+    </article></section>`;
+  }
+  async function joinOpen(id) {
+    if (!API_KEY || !window.DriveSync || driveBusy) return;
+    if (!(await fileConsent())) return;
+    let got = null;
+    driveBusy = true;
+    try { got = await DriveSync.pick(API_KEY, APP_ID, id); }
+    catch (err) { if (err.code !== 'popup_closed') alert(err.code === 'scope' ? NO_FILE : '開けませんでした（' + err.message + '）'); }
+    finally { driveBusy = false; }
+    if (!got) return;
+    family.gone = false;
+    await driveSync(true);
+    await refreshFamily();
+    if (driveState === 'ok') location.hash = '#/';
   }
   // 共有をやめる：自分のドライブの記録に戻る（共有のファイルはそのまま残る）
   async function familyLeave() {
