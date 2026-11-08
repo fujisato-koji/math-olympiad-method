@@ -740,8 +740,8 @@ units:
   - {id: G-016, title: 平行線と角、合同の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-009], days: 8}
   - {id: G-017, title: 三角形と四角形の性質, stage: 4, level: 3, region: shomei-zukei, needs: [G-016], days: 6}
   - {id: G-018, title: 円周角の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, G-010], days: 6}
-  - {id: G-019, title: 三平方の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, A-016, G-020, G-008], days: 6}
-  - {id: G-020, title: 相似の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-013, G-016], days: 9}
+  - {id: G-019, title: 三平方の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, A-016, G-020, G-008, A-017], days: 6}
+  - {id: G-020, title: 相似の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-013, G-016, A-010], days: 9}
   - {id: G-021, title: 空間図形, stage: 4, level: 3, region: katachi, needs: [G-019, G-014], days: 6}
   - {id: G-022, title: 作図（定規とコンパス）, stage: 4, level: 3, region: shomei-zukei, needs: [G-017], days: 5}
   - {id: G-023, title: 角度の追跡と内接四角形, stage: 4, level: 3, region: hakaru, needs: [G-018], days: 16}

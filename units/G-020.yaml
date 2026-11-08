@@ -1,0 +1,1006 @@
+# G-020 相似の証明
+#
+# 書き方は N-001 の頭の注のとおり。答えの形は A-016 に合わせる（段 4。分数は約分した形、小数でもよいものは accept に入れた）。
+# 相似：1 つの図形を拡大または縮小した図形と合同な図形（G-013 の拡大図・縮図）。記号 ∽ で、対応する頂点を同じ順に書く。
+# ことば：相似、相似比（対応する辺の比）、三角形の相似条件（3 組の辺の比がすべて等しい、2 組の辺の比とその間の角がそれぞれ等しい、
+#   2 組の角がそれぞれ等しい）、三角形と比の定理（DE ∥ BC なら AD:AB = AE:AC = DE:BC、AD:DB = AE:EC）とその逆、
+#   平行線にはさまれた線分の比、中点連結定理、相似な図形の面積の比（相似比の数をそれぞれ 2 回かけた比）とまわりの長さの比。
+#   記号 △、∠、∥、⊥、≡ は G-016 で使ったものとした。相似条件は、合同条件（G-016）と同じく約束した事実として使う。
+# 前提は G-013（拡大と縮小）と G-016（平行線と角、合同の証明）。G-016 の約束した事実（平行線の同位角・錯角、同位角が等しければ平行、
+#   合同条件）と示したこと（対頂角、内角の和、外角）、証明の書き方（仮定、結論、根拠を書いて結ぶ）を使う。
+# 前提の道に A-010（文字と式）、A-011（1 次方程式）、A-009（累乗）がないので、わからない長さは文字でおかず、
+#   G-013・A-005 と同じく「何倍か」で求める（比の外項の積 = 内項の積も A-005 で扱っていないので使わない）。
+#   面積の比も (4 × 4):(5 × 5) のように書き、2 乗の記号は使わない。証明も、文字を使わずに点の名前と比で書く。
+# G-017（二等辺三角形、平行四辺形の性質）は前提にないので使わない（中点を結んだ四角形は、まわりの長さだけを求める）。
+#   角の二等分線の定理は G-042、円周角は G-018、三平方の定理は G-019、相似な立体の体積の比は G-021（G-011 が前提にないため）で扱う。
+# 図は svg（D-040）。長さの比は、問題の数に合わせて描いた（形を選ぶ問題では、答えがわからないように通る点や辺だけをかいた）。
+#   平行な線分には、まん中に「>」のしるしをつけた。
+# 地図に plan がないので既定の並び（導入・練習 5 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 相似の意味、記号 ∽、相似比、対応する辺と角　2 日目 三角形の相似条件
+#   3 日目 相似の証明を書く（根拠を選ぶ、条件の穴をうめる）　4 日目 相似を使って長さを求める（重なった三角形、ちょうちょ形、直角三角形、影）
+#   5 日目 三角形と比の定理とその逆、平行線にはさまれた線分の比　6 日目 中点連結定理、相似な図形の面積の比
+#   7 日目 わけ（三角形と比の定理、中点連結定理、面積の比が相似比を 2 回かけた比になる）
+#   8 日目 G-013（縮尺、影）・G-016（角）・G-008（面積）と混ぜる　9 日目 確認
+# check：長さは「何倍か」をかける式（Fraction）。比は Fraction で約分して '%d:%d' の文字にする（A-005 と同じ）。
+#   相似な三角形を選ぶ問題は、対応する辺の倍が 3 組とも等しいかを Fraction でくらべる式。
+#   相似条件や根拠の名前を選ぶ問題は約束ごとなので check を付けない。
+# 相似は、三平方の定理の証明（G-019）、円と比の定理（G-030 方べき）、三角比（G-024）、縮尺と測量、相似な立体（G-021）の道具になる（D-026）。
+
+id: G-020
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: △ABC ∽ △DEF です。AB = 4 cm、BC = 6 cm、DE = 10 cm のとき、相似比と辺 EF の長さを求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="41.9,75.9 26,99.3 68.5,99.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="147.6,40.7 107.8,99.3 214,99.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="41.9,75.9 26,99.3 68.5,99.3" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="147.6,40.7 107.8,99.3 214,99.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="41.9" y="71.1" font-size="12" text-anchor="middle">A</text><text x="19" y="112.5" font-size="12" text-anchor="middle">B</text><text x="75.5" y="112.5" font-size="12" text-anchor="middle">C</text><text x="147.6" y="35.9" font-size="12" text-anchor="middle">D</text><text x="100.8" y="112.5" font-size="12" text-anchor="middle">E</text><text x="221" y="112.5" font-size="12" text-anchor="middle">F</text><text x="26" y="85" font-size="12" text-anchor="end">4 cm</text><text x="47.2" y="117.5" font-size="12" text-anchor="middle">6 cm</text><text x="119.7" y="67.5" font-size="12" text-anchor="end">10 cm</text></svg>'
+        explain: 1 つの図形を拡大または縮小した図形と合同な図形を、もとの図形と相似であるといい、記号 ∽ を使って △ABC ∽ △DEF と書きます。対応する頂点を同じ順に書くので、A と D、B と E、C と F が対応します。対応する辺の長さの比を相似比といいます。AB と DE が対応するので、相似比は 4:10 = 2:5 です。EF は BC に対応するので BC の 5/2 倍で、EF = 6 × 5/2 = 15 cm。対応する角の大きさは等しいので、∠E = ∠B です。
+      - part: 思い出す
+        text: 三角形 DEF は三角形 ABC の拡大図で、辺 BC に辺 EF が対応しています。BC = 4 cm、EF = 10 cm のとき、EF は BC の何倍ですか。
+        answer: 5/2
+        accept: [2.5]
+        check: "Fraction(10, 4)"
+        hints:
+          - 何倍かは、EF ÷ BC で求めましょう。
+          - 10 ÷ 4 を分数で表しましょう。
+          - 分数は約分しておきましょう。
+        paths:
+          - [10 ÷ 4, 10/4 を約分する, 5/2 倍（2.5 倍）]
+      - part: 思い出す
+        text: △ABC ≡ △PQR です。辺 AC に対応する辺はどれですか。
+        choices: [PQ, PR, QR]
+        answer: PR
+        hints:
+          - 合同の記号では、対応する頂点を同じ順に書きます。
+          - A に対応する頂点と、C に対応する頂点はどれでしょう。
+          - その 2 つの頂点を結んだ辺が答えです。
+        paths:
+          - [A と P、C と R が対応する, AC に対応するのは PR]
+      - part: 今日
+        text: △ABC ∽ △DEF です。AB = 6 cm、BC = 8 cm、CA = 7 cm、DE = 9 cm のとき、△ABC と △DEF の相似比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="49.6,60.6 26,98.2 85.2,98.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="160.6,41.8 125.2,98.2 214,98.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="49.6,60.6 26,98.2 85.2,98.2" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="160.6,41.8 125.2,98.2 214,98.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="49.6" y="55.8" font-size="12" text-anchor="middle">A</text><text x="19" y="111.4" font-size="12" text-anchor="middle">B</text><text x="92.2" y="111.4" font-size="12" text-anchor="middle">C</text><text x="160.6" y="37" font-size="12" text-anchor="middle">D</text><text x="118.2" y="111.4" font-size="12" text-anchor="middle">E</text><text x="221" y="111.4" font-size="12" text-anchor="middle">F</text><text x="29.7" y="77.2" font-size="12" text-anchor="end">6 cm</text><text x="55.6" y="116.4" font-size="12" text-anchor="middle">8 cm</text><text x="74.9" y="75.4" font-size="12" text-anchor="start">7 cm</text><text x="134.8" y="67.8" font-size="12" text-anchor="end">9 cm</text></svg>'
+        choices: ["3:2", "2:3", "3:4"]
+        answer: "2:3"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(6, 9))"
+        hints:
+          - 相似比は、対応する辺の長さの比です。
+          - 長さがわかっている、対応する辺の組はどれでしょう。
+          - 比の両方を同じ数でわって、簡単にしましょう。
+        paths:
+          - [AB と DE が対応する, "AB:DE = 6:9", "= 2:3"]
+        note: 相似比は △ABC:△DEF の順に書く。逆にして 3:2 としやすい。
+      - part: 今日
+        text: △ABC ∽ △DEF で、AB = 6 cm、BC = 8 cm、DE = 9 cm です。辺 EF の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="49.6,60.6 26,98.2 85.2,98.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="160.6,41.8 125.2,98.2 214,98.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="49.6,60.6 26,98.2 85.2,98.2" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="160.6,41.8 125.2,98.2 214,98.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="49.6" y="55.8" font-size="12" text-anchor="middle">A</text><text x="19" y="111.4" font-size="12" text-anchor="middle">B</text><text x="92.2" y="111.4" font-size="12" text-anchor="middle">C</text><text x="160.6" y="37" font-size="12" text-anchor="middle">D</text><text x="118.2" y="111.4" font-size="12" text-anchor="middle">E</text><text x="221" y="111.4" font-size="12" text-anchor="middle">F</text><text x="29.7" y="77.2" font-size="12" text-anchor="end">6 cm</text><text x="55.6" y="116.4" font-size="12" text-anchor="middle">8 cm</text><text x="134.8" y="67.8" font-size="12" text-anchor="end">9 cm</text></svg>'
+        answer: 12
+        check: "8 * Fraction(9, 6)"
+        hints:
+          - EF に対応する △ABC の辺はどれでしょう。
+          - DE は AB の何倍でしょう。
+          - EF も BC の同じ倍になります。
+        paths:
+          - [DE は AB の 9/6 = 3/2 倍, EF = 8 × 3/2, 12 cm]
+          - ["三角形の中で AB:BC = 6:8 = 3:4", "DE:EF も 3:4", 9 は 3 の 3 倍なので EF = 4 × 3 = 12 cm]
+        note: EF に対応する辺を CA と取りちがえやすい。頂点の順（E と B、F と C）で対応を確かめる。
+      - part: 今日
+        text: △ABC ∽ △DEF で、∠A = 50°、∠B = 75° です。∠F は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="42.2,51.9 26,112.2 84.4,112.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="154.9,27.8 132.3,112.2 214,112.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="42.2,51.9 26,112.2 84.4,112.2" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="154.9,27.8 132.3,112.2 214,112.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.2" y="47.1" font-size="12" text-anchor="middle">A</text><text x="19" y="125.4" font-size="12" text-anchor="middle">B</text><text x="91.4" y="125.4" font-size="12" text-anchor="middle">C</text><text x="154.9" y="23" font-size="12" text-anchor="middle">D</text><text x="125.3" y="125.4" font-size="12" text-anchor="middle">E</text><text x="221" y="125.4" font-size="12" text-anchor="middle">F</text><path d="M38.8 64.5 A13 13 0 0 0 49.6 62.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="46.7" y="81.4" font-size="11" text-anchor="middle">50°</text><path d="M39 112.2 A13 13 0 0 0 29.4 99.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="46.6" y="100.2" font-size="11" text-anchor="middle">75°</text></svg>'
+        answer: 55
+        check: "180 - 50 - 75"
+        hints:
+          - ∠F に対応する △ABC の角はどれでしょう。
+          - 相似な図形では、対応する角の大きさは等しくなります。
+          - 三角形の 3 つの角の和は 180° です。
+        paths:
+          - [∠F は ∠C に対応する, ∠C = 180° − 50° − 75°, 55°]
+      - part: 挑戦
+        text: 四角形 ABCD ∽ 四角形 EFGH です。AB = 4 cm、BC = 5 cm、CD = 6 cm、DA = 3 cm、EF = 6 cm のとき、四角形 EFGH のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="36.4,110.2 79.9,110.2 89.4,56.6 28,78.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="132.5,110.2 197.8,110.2 212,29.8 119.9,62.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="36.4,110.2 79.9,110.2 89.4,56.6 28,78.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="132.5,110.2 197.8,110.2 212,29.8 119.9,62.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="29.4" y="122.4" font-size="12" text-anchor="middle">A</text><text x="86.9" y="122.4" font-size="12" text-anchor="middle">B</text><text x="97.4" y="56.8" font-size="12" text-anchor="middle">C</text><text x="21" y="76.8" font-size="12" text-anchor="middle">D</text><text x="125.5" y="122.4" font-size="12" text-anchor="middle">E</text><text x="204.8" y="122.4" font-size="12" text-anchor="middle">F</text><text x="220" y="30" font-size="12" text-anchor="middle">G</text><text x="112.9" y="61.1" font-size="12" text-anchor="middle">H</text><text x="58.2" y="128.4" font-size="12" text-anchor="middle">4 cm</text><text x="93.4" y="91.7" font-size="12" text-anchor="start">5 cm</text><text x="54.7" y="60.5" font-size="12" text-anchor="middle">6 cm</text><text x="23.6" y="103.7" font-size="12" text-anchor="end">3 cm</text><text x="165.2" y="128.4" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 27
+        check: "(4 + 5 + 6 + 3) * Fraction(6, 4)"
+        hints:
+          - 相似比を求めましょう。
+          - 四角形 EFGH の辺は、それぞれ四角形 ABCD の辺の何倍でしょう。
+          - まわりの長さも同じ倍になるかを考えましょう。
+        paths:
+          - [EF は AB の 6/4 = 3/2 倍, ABCD のまわりは 4 + 5 + 6 + 3 = 18, 18 × 3/2 = 27 cm]
+          - [FG = 15/2、GH = 9、HE = 9/2, 6 + 15/2 + 9 + 9/2 = 27 cm]
+        note: まわりの長さの比も相似比に等しい。面積の比はちがう（6 日目）。
+    extra:
+      - part: 今日
+        text: △PQR ∽ △XYZ です。PQ = 10 cm、QR = 15 cm、XY = 4 cm のとき、YZ は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="64.8,44.4 26,95.6 122.4,95.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="190.9,75.1 175.4,95.6 214,95.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="64.8,44.4 26,95.6 122.4,95.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="190.9,75.1 175.4,95.6 214,95.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="64.8" y="39.6" font-size="12" text-anchor="middle">P</text><text x="19" y="108.8" font-size="12" text-anchor="middle">Q</text><text x="129.4" y="108.8" font-size="12" text-anchor="middle">R</text><text x="190.9" y="70.3" font-size="12" text-anchor="middle">X</text><text x="168.4" y="108.8" font-size="12" text-anchor="middle">Y</text><text x="221" y="108.8" font-size="12" text-anchor="middle">Z</text><text x="37.6" y="67" font-size="12" text-anchor="end">10 cm</text><text x="74.2" y="113.8" font-size="12" text-anchor="middle">15 cm</text><text x="175.4" y="82.3" font-size="12" text-anchor="end">4 cm</text></svg>'
+        answer: 6
+        check: "15 * Fraction(4, 10)"
+        hints:
+          - YZ に対応する辺はどれでしょう。
+          - XY は PQ の何倍でしょう。1 より小さい数になります。
+          - QR に同じ数をかけましょう。
+        paths:
+          - [XY は PQ の 4/10 = 2/5 倍, YZ = 15 × 2/5, 6 cm]
+      - part: 今日
+        text: △ABC ∽ △DEF で、∠A = 40°、∠E = 110° です。∠C は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="26,48.6 41.6,91.4 100.2,91.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="147.3,52.9 161.3,91.4 214,91.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="26,48.6 41.6,91.4 100.2,91.4" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="147.3,52.9 161.3,91.4 214,91.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="26" y="43.8" font-size="12" text-anchor="middle">A</text><text x="34.6" y="104.6" font-size="12" text-anchor="middle">B</text><text x="107.2" y="104.6" font-size="12" text-anchor="middle">C</text><text x="147.3" y="48.1" font-size="12" text-anchor="middle">D</text><text x="154.3" y="104.6" font-size="12" text-anchor="middle">E</text><text x="221" y="104.6" font-size="12" text-anchor="middle">F</text><path d="M30.4 60.8 A13 13 0 0 0 37.3 55.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="42.7" y="72.4" font-size="11" text-anchor="middle">40°</text><path d="M174.3 91.4 A13 13 0 0 0 156.8 79.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="176.2" y="74" font-size="11" text-anchor="middle">110°</text></svg>'
+        answer: 30
+        check: "180 - 40 - 110"
+        hints:
+          - ∠E に対応する △ABC の角はどれでしょう。
+          - ∠B は何度でしょう。
+          - 三角形の 3 つの角の和を使いましょう。
+        paths:
+          - [∠B = ∠E = 110°, ∠C = 180° − 40° − 110°, 30°]
+      - part: 今日
+        text: 相似な 2 つの三角形の相似比は 3:5 です。小さいほうの三角形の 12 cm の辺に対応する、大きいほうの三角形の辺は何 cm ですか。
+        answer: 20
+        check: "12 * Fraction(5, 3)"
+        hints:
+          - 大きいほうの辺は、小さいほうの辺の何倍でしょう。
+          - 3:5 のとき、5 は 3 の何倍かを分数で表しましょう。
+          - 12 にその数をかけましょう。
+        paths:
+          - [大きいほうは小さいほうの 5/3 倍, 12 × 5/3, 20 cm]
+          - [12 ÷ 3 = 4 が比の 1 にあたる, 4 × 5 = 20 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: △ABC と △DEF で、AB = 4 cm、AC = 6 cm、∠A = 50°、DE = 6 cm、DF = 9 cm、∠D = 50° です。2 つの三角形は相似といえるでしょうか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="73.9,18 45.3,55.9 89.9,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="170.7,18 127.8,74.8 194.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="73.9,18 45.3,55.9 89.9,87.3" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="170.7,18 127.8,74.8 194.7,122" stroke="currentColor" stroke-width="2" fill="none"/><text x="73.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="38.3" y="69.1" font-size="12" text-anchor="middle">B</text><text x="96.9" y="100.5" font-size="12" text-anchor="middle">C</text><text x="170.7" y="13.2" font-size="12" text-anchor="middle">D</text><text x="120.8" y="88" font-size="12" text-anchor="middle">E</text><text x="201.7" y="135.2" font-size="12" text-anchor="middle">F</text><text x="51.8" y="33.9" font-size="12" text-anchor="end">4 cm</text><text x="90.6" y="54.2" font-size="12" text-anchor="start">6 cm</text><text x="141.4" y="43.4" font-size="12" text-anchor="end">6 cm</text><text x="191.3" y="71.5" font-size="12" text-anchor="start">9 cm</text><path d="M66.1 28.4 A13 13 0 0 0 76.8 30.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.5" y="47.3" font-size="11" text-anchor="middle">50°</text><path d="M162.8 28.4 A13 13 0 0 0 173.6 30.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165.3" y="47.3" font-size="11" text-anchor="middle">50°</text></svg>'
+        explain: 2 つの三角形は、次のどれかがなりたてば相似です（三角形の相似条件）。① 3 組の辺の比がすべて等しい。② 2 組の辺の比とその間の角がそれぞれ等しい。③ 2 組の角がそれぞれ等しい。ここでは AB:DE = 4:6 = 2:3、AC:DF = 6:9 = 2:3 で、その間の角 ∠A と ∠D がどちらも 50° なので、② により △ABC ∽ △DEF です。合同条件（G-016）の「等しい辺」が「比の等しい辺」に変わった形です。
+      - part: 思い出す
+        text: △ABC ∽ △DEF で、相似比は 3:4 です。BC = 7.5 cm のとき、EF は何 cm ですか。
+        answer: 10
+        check: "Fraction(15, 2) * Fraction(4, 3)"
+        hints:
+          - EF は BC に対応します。
+          - 相似比 3:4 から、EF は BC の何倍かを分数で表しましょう。
+          - 7.5 にその数をかけましょう。
+        paths:
+          - [EF は BC の 4/3 倍, 7.5 × 4/3, 10 cm]
+      - part: 思い出す
+        text: 直線 ℓ と m は平行です。図の ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="56.1" y1="38" x2="183.9" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="187.9" y="42.2" font-size="12" text-anchor="start">ℓ</text><line x1="56.1" y1="102" x2="183.9" y2="102" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="187.9" y="106.2" font-size="12" text-anchor="start">m</text><line x1="102.1" y1="122" x2="139.9" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><path d="M116.6 38 A16 16 0 0 0 127.1 53.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108" y="59.4" font-size="12" text-anchor="middle">70°</text><path d="M114.8 86.9 A16 16 0 0 0 93.3 102" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="92.1" y="81.6" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 110
+        check: "180 - 70"
+        hints:
+          - 平行線の同位角や錯角は等しくなります。
+          - 70° の角と同じ大きさの角を、下の交わる点で探しましょう。
+          - 一直線の角は 180° です。
+        paths:
+          - [錯角で 70° を下の交わる点へ移す, ∠x = 180° − 70°, 110°]
+      - part: 今日
+        text: △ABC の 3 つの辺は 4 cm、6 cm、8 cm です。△ABC と相似な三角形はどれですか。
+        choices: [5 cm、7 cm、9 cm, 6 cm、9 cm、12 cm, 6 cm、8 cm、10 cm]
+        answer: 6 cm、9 cm、12 cm
+        check: "[c for c, s in {'5 cm、7 cm、9 cm': (5, 7, 9), '6 cm、9 cm、12 cm': (6, 9, 12), '6 cm、8 cm、10 cm': (6, 8, 10)}.items() if len(set([Fraction(s[i], (4, 6, 8)[i]) for i in range(3)])) == 1][0]"
+        hints:
+          - 短い辺どうし、長い辺どうしを組にしましょう。
+          - それぞれの組で、何倍になっているかを調べましょう。
+          - 3 組とも同じ倍なら、3 組の辺の比がすべて等しくなります。
+        paths:
+          - [4 → 6、6 → 9、8 → 12, どれも 3/2 倍, 3 組の辺の比がすべて等しいので相似]
+        note: 6 cm、8 cm、10 cm は、どの辺も 2 cm ずつ長いだけで、倍は同じではない（4 → 6 は 3/2 倍、8 → 10 は 5/4 倍）。
+      - part: 今日
+        text: △ABC と △DEF で、∠B = ∠E = 60°、∠C = ∠F = 45° です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="49.5,55.7 26,96.5 90.3,96.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="161,43.5 130.4,96.5 214,96.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="49.5,55.7 26,96.5 90.3,96.5" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="161,43.5 130.4,96.5 214,96.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="49.5" y="50.9" font-size="12" text-anchor="middle">A</text><text x="19" y="109.7" font-size="12" text-anchor="middle">B</text><text x="97.3" y="109.7" font-size="12" text-anchor="middle">C</text><text x="161" y="38.7" font-size="12" text-anchor="middle">D</text><text x="123.4" y="109.7" font-size="12" text-anchor="middle">E</text><text x="221" y="109.7" font-size="12" text-anchor="middle">F</text><path d="M39 96.5 A13 13 0 0 0 32.5 85.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="48.5" y="87.3" font-size="11" text-anchor="middle">60°</text><path d="M81.1 87.3 A13 13 0 0 0 77.3 96.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="66.3" y="90.4" font-size="11" text-anchor="middle">45°</text><path d="M143.4 96.5 A13 13 0 0 0 136.9 85.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="153" y="87.3" font-size="11" text-anchor="middle">60°</text><path d="M204.8 87.3 A13 13 0 0 0 201 96.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="90.4" font-size="11" text-anchor="middle">45°</text></svg>'
+        choices: [3 組の辺の比がすべて等しい, 2 組の辺の比とその間の角がそれぞれ等しい, 2 組の角がそれぞれ等しい]
+        answer: 2 組の角がそれぞれ等しい
+        hints:
+          - わかっているのは、辺と角のどちらでしょう。
+          - 等しいとわかっている角は何組でしょう。
+          - 角だけで相似がいえる条件を選びましょう。
+        paths:
+          - [∠B = ∠E、∠C = ∠F, 2 組の角がそれぞれ等しい]
+        note: 2 組の角が等しければ、残りの角も 180° からひいて等しくなる。辺の長さは使わない。
+      - part: 今日
+        text: 図の △ABC で、点 D は辺 AB の上、点 E は辺 AC の上にあり、AD = 3 cm、DB = 5 cm、AE = 4 cm、EC = 2 cm です。△ADE と相似な三角形を、対応する頂点の順に書いたものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="155.8,18 57.3,122 182.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.9" y1="57" x2="173.7" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="155.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.3" y="134.2" font-size="12" text-anchor="middle">B</text><text x="190.7" y="134.2" font-size="12" text-anchor="middle">C</text><text x="114.1" y="50.2" font-size="12" text-anchor="middle">D</text><text x="185.7" y="91.5" font-size="12" text-anchor="middle">E</text><text x="129.9" y="33.5" font-size="12" text-anchor="end">3 cm</text><text x="80.6" y="85.5" font-size="12" text-anchor="end">5 cm</text><text x="173.4" y="53.9" font-size="12" text-anchor="start">4 cm</text><text x="186.8" y="105.9" font-size="12" text-anchor="start">2 cm</text></svg>'
+        choices: [△ABC, △ACB, △CAB]
+        answer: △ACB
+        check: "'△ACB' if Fraction(3, 4 + 2) == Fraction(4, 3 + 5) else '△ABC' if Fraction(3, 3 + 5) == Fraction(4, 4 + 2) else 'なし'"
+        hints:
+          - AB と AC の長さを求めましょう。
+          - AD:AC と AE:AB をくらべましょう。
+          - ∠A は 2 つの三角形に共通です。対応する頂点の順に気をつけましょう。
+        paths:
+          - [AB = 8、AC = 6, "AD:AC = 3:6 = 1:2、AE:AB = 4:8 = 1:2", ∠A は共通, △ADE ∽ △ACB（D と C、E と B が対応）]
+        note: AD:AB と AE:AC（3:8 と 4:6）は等しくないので、△ABC の順にはならない。重なった三角形では、対応が入れかわることが多い。
+      - part: 挑戦
+        text: △ABC で AB = 6 cm、BC = 9 cm、CA = 7.5 cm です。辺 BC の上に BD = 4 cm となる点 D をとります。AD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.5,20.4 30,119.6 210,119.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="20.4" x2="110" y2="119.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="97.5" y="15.6" font-size="12" text-anchor="middle">A</text><text x="22" y="131.8" font-size="12" text-anchor="middle">B</text><text x="218" y="131.8" font-size="12" text-anchor="middle">C</text><text x="109.1" y="135.8" font-size="12" text-anchor="middle">D</text><text x="55.8" y="67.5" font-size="12" text-anchor="end">6 cm</text><text x="160.9" y="65.2" font-size="12" text-anchor="start">7.5 cm</text><text x="70" y="137.8" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 5
+        check: "Fraction(15, 2) * Fraction(4, 6)"
+        hints:
+          - ∠B が共通な 2 つの三角形、△DBA と △ABC を考えましょう。
+          - BD:BA と BA:BC は等しいでしょうか。
+          - 相似な三角形で、AD に対応する辺を探しましょう。
+        paths:
+          - ["BD:BA = 4:6 = 2:3、BA:BC = 6:9 = 2:3", ∠B は共通, △DBA ∽ △ABC, AD = CA × 2/3 = 7.5 × 2/3 = 5 cm]
+        note: 2 つの三角形で同じ辺 BA を使うのがポイント。△DBA の頂点の順（D と A、B と B、A と C）に気をつける。
+    extra:
+      - part: 今日
+        text: 3 つの辺が 5 cm、6 cm、8 cm の三角形と相似な三角形はどれですか。
+        choices: [10 cm、12 cm、15 cm, 7.5 cm、9 cm、12 cm, 6 cm、7 cm、9 cm]
+        answer: 7.5 cm、9 cm、12 cm
+        check: "[c for c, s in {'10 cm、12 cm、15 cm': (10, 12, 15), '7.5 cm、9 cm、12 cm': (Fraction(15, 2), 9, 12), '6 cm、7 cm、9 cm': (6, 7, 9)}.items() if len(set([Fraction(s[i], (5, 6, 8)[i]) for i in range(3)])) == 1][0]"
+        hints:
+          - 短い辺どうし、長い辺どうしを組にしましょう。
+          - 5 cm が 7.5 cm になるのは何倍でしょう。
+          - 3 組とも同じ倍になっているものを選びましょう。
+        paths:
+          - [5 → 7.5、6 → 9、8 → 12, どれも 3/2 倍, 相似]
+        note: 10 cm、12 cm、15 cm は、2 倍、2 倍、15/8 倍で、1 組だけ倍がちがう。
+      - part: 今日
+        text: △ABC と △DEF で、AB:DE = BC:EF = 2:3、∠B = ∠E です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。
+        choices: [3 組の辺の比がすべて等しい, 2 組の辺の比とその間の角がそれぞれ等しい, 2 組の角がそれぞれ等しい]
+        answer: 2 組の辺の比とその間の角がそれぞれ等しい
+        hints:
+          - 比が等しいとわかっている辺は何組でしょう。
+          - ∠B は、AB と BC の間の角でしょうか。
+          - 辺の比と角を使う条件を選びましょう。
+        paths:
+          - ["AB:DE = BC:EF", ∠B は AB と BC の間の角, 2 組の辺の比とその間の角がそれぞれ等しい]
+      - part: 今日
+        text: △ABC で ∠A = 40°、∠B = 80°、△DEF で ∠D = 40°、∠F = 60° です。2 つの三角形は相似といえますか。
+        choices: [相似といえる, 相似とはいえない]
+        answer: 相似といえる
+        check: "'相似といえる' if 180 - 40 - 80 == 60 else '相似とはいえない'"
+        hints:
+          - △ABC の ∠C は何度でしょう。
+          - 等しい角は何組あるでしょう。
+          - 2 組の角が等しければ、相似です。
+        paths:
+          - [∠C = 180° − 40° − 80° = 60°, ∠A = ∠D、∠C = ∠F, 2 組の角が等しいので相似]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。△OAB ∽ △ODC を証明してみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="97.5" y1="32.5" x2="210" y2="32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198.8" y1="107.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="32.5" x2="198.8" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="32.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="91.5" y="27.7" font-size="12" text-anchor="middle">A</text><text x="216" y="27.7" font-size="12" text-anchor="middle">B</text><text x="24" y="121.7" font-size="12" text-anchor="middle">C</text><text x="204.8" y="121.7" font-size="12" text-anchor="middle">D</text><text x="150" y="67.7" font-size="12" text-anchor="middle">O</text><polyline points="149.8,28.5 155.8,32.5 149.8,36.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="110.4,103.5 116.4,107.5 110.4,111.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 証明は次のように書きます。「△OAB と △ODC で、AB ∥ DC より、平行線の錯角は等しいので ∠OAB = ∠ODC …①。対頂角は等しいので ∠AOB = ∠DOC …②。①、②より、2 組の角がそれぞれ等しいので、△OAB ∽ △ODC。」 はじめにどの三角形について話すかを書き、等しい角ごとに根拠（錯角、対頂角）を書き、最後に相似条件で結びます。対応する頂点（A と D、B と C）が同じ順になるように書くことにも気をつけます。
+      - part: 思い出す
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠AOB = ∠DOC といえる根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="89.5" y1="29.8" x2="210" y2="29.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.7" y1="110.2" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.5" y1="29.8" x2="190.7" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="29.8" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="83.5" y="25" font-size="12" text-anchor="middle">A</text><text x="216" y="25" font-size="12" text-anchor="middle">B</text><text x="24" y="124.4" font-size="12" text-anchor="middle">C</text><text x="196.7" y="124.4" font-size="12" text-anchor="middle">D</text><text x="144.9" y="69.5" font-size="12" text-anchor="middle">O</text><path d="M145.6 58.6 A14 14 0 0 0 121.9 55.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M120.1 70 A14 14 0 0 0 143.8 73" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="145.7,25.8 151.7,29.8 145.7,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="106.4,106.2 112.4,110.2 106.4,114.2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        choices: [平行線の錯角は等しい, 対頂角は等しい, 平行線の同位角は等しい]
+        answer: 対頂角は等しい
+        hints:
+          - ∠AOB と ∠DOC は、点 O で向かい合っています。
+          - 2 本の直線が交わってできる、向かい合う角を何というでしょう。
+          - AB ∥ DC を使わなくてもいえます。
+        paths:
+          - [2 直線 AD、BC が O で交わる, ∠AOB と ∠DOC は向かい合う角, 対頂角は等しい]
+      - part: 思い出す
+        text: △ABC ∽ △DEF で、相似比は 5:2 です。DE = 4 cm のとき、AB は何 cm ですか。
+        answer: 10
+        check: "4 * Fraction(5, 2)"
+        hints:
+          - AB は DE に対応します。
+          - △ABC のほうが大きいでしょうか、小さいでしょうか。
+          - AB は DE の何倍かを分数で表しましょう。
+        paths:
+          - [AB は DE の 5/2 倍, 4 × 5/2, 10 cm]
+      - part: 今日
+        text: 図の △ABC で、辺 AB の上に ∠ACD = ∠ABC となる点 D をとります。次の証明の（　）にあてはまるものはどれですか。「△ACD と △ABC で、仮定より ∠ACD = ∠ABC …①、共通な角なので ∠CAD = ∠BAC …②。①、②より（　）ので、△ACD ∽ △ABC。」
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="169.7,18 49.3,122 190.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.7" y1="122" x2="116.2" y2="64.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="169.7" y="13.2" font-size="12" text-anchor="middle">A</text><text x="41.3" y="134.2" font-size="12" text-anchor="middle">B</text><text x="198.7" y="134.2" font-size="12" text-anchor="middle">C</text><text x="108.3" y="59.4" font-size="12" text-anchor="middle">D</text><path d="M63.3 122 A14 14 0 0 0 59.9 112.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M188 108.3 A14 14 0 0 0 179.7 113.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        choices: [3 組の辺の比がすべて等しい, 2 組の辺の比とその間の角がそれぞれ等しい, 2 組の角がそれぞれ等しい]
+        answer: 2 組の角がそれぞれ等しい
+        hints:
+          - ①と②は、辺と角のどちらについての式でしょう。
+          - 等しいといえた角は何組でしょう。
+          - 角だけを使う相似条件を選びましょう。
+        paths:
+          - [①と②は角が等しいこと, 2 組の角がそれぞれ等しい]
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC です。△ADE ∽ △ABC の証明で、∠ADE と等しい角と、その根拠の組はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text></svg>'
+        choices: [∠ACB（同位角）, ∠ABC（錯角）, ∠ABC（同位角）]
+        answer: ∠ABC（同位角）
+        hints:
+          - 直線 AB は、平行な 2 本の直線 DE と BC に交わっています。
+          - ∠ADE と同じ位置にある角を、点 B で探しましょう。
+          - 同じ位置にある角を同位角、Z の形の位置にある角を錯角といいます。
+        paths:
+          - [直線 AB が DE と BC に交わる, ∠ADE と ∠ABC は同位角, DE ∥ BC なので等しい]
+      - part: 今日
+        text: ∠BAC = 90°の直角三角形 ABC で、頂点 A から辺 BC に垂線 AH をひきました。∠B が共通なので、△ABC と △ABH は相似です。対応する頂点の順に正しく書いたものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.8,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.8" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text></svg>'
+        choices: [△ABC ∽ △ABH, △ABC ∽ △HBA, △ABC ∽ △BHA]
+        answer: △ABC ∽ △HBA
+        hints:
+          - △ABC の直角は ∠A です。△ABH の直角はどの角でしょう。
+          - 直角どうし、∠B どうしが対応します。
+          - △ABC の A、B、C に対応する頂点を、順に書きましょう。
+        paths:
+          - [∠BAC = ∠BHA = 90°, ∠B は共通, A と H、B と B、C と A が対応する, △ABC ∽ △HBA]
+        note: 同じ三角形でも、書く順で対応が変わる。△ABH と書くと A と A が対応することになってしまう。
+      - part: 挑戦
+        text: 「AB:DE = AC:DF = 2:3、∠B = ∠E だから △ABC ∽ △DEF」という説明はまちがいです。2 組の辺の比を使って相似といえるようにするには、∠B = ∠E の代わりに何がいえればよいですか。
+        choices: [∠C = ∠F, BC = EF, ∠A = ∠D]
+        answer: ∠A = ∠D
+        hints:
+          - 2 組の辺の比と、その「間の角」が等しいことが条件です。
+          - AB と AC の間にある角はどれでしょう。
+          - ∠B は、AB と BC の間の角です。
+        paths:
+          - [比が等しいのは AB と AC, AB と AC の間の角は ∠A, ∠A = ∠D がいえればよい]
+        note: 合同条件と同じく、角は 2 つの辺の「間」の角でなければならない。間でない角では、形が 1 つに決まらないことがある。
+    extra:
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠OBA = ∠OCD といえる根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="97.5" y1="32.5" x2="210" y2="32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198.8" y1="107.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="32.5" x2="198.8" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="32.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="91.5" y="27.7" font-size="12" text-anchor="middle">A</text><text x="216" y="27.7" font-size="12" text-anchor="middle">B</text><text x="24" y="121.7" font-size="12" text-anchor="middle">C</text><text x="204.8" y="121.7" font-size="12" text-anchor="middle">D</text><text x="150" y="67.7" font-size="12" text-anchor="middle">O</text><path d="M196 32.5 A14 14 0 0 0 197.1 37.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M44 107.5 A14 14 0 0 0 42.9 102.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="149.8,28.5 155.8,32.5 149.8,36.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="110.4,103.5 116.4,107.5 110.4,111.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        choices: [対頂角は等しい, 平行線の同位角は等しい, 平行線の錯角は等しい]
+        answer: 平行線の錯角は等しい
+        hints:
+          - ∠OBA と ∠OCD は、直線 BC と 2 本の平行線でできる角です。
+          - 2 つの角は、直線 BC の同じ側にあるでしょうか、反対側でしょうか。
+          - Z の形の位置にある角を錯角といいます。
+        paths:
+          - [直線 BC が AB と DC に交わる, ∠OBA と ∠OCD は錯角, AB ∥ DC なので等しい]
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 6 cm、DC = 9 cm、AO = 5 cm のとき、OD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="97.5" y1="32.5" x2="210" y2="32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198.8" y1="107.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="32.5" x2="198.8" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="32.5" x2="30" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="91.5" y="27.7" font-size="12" text-anchor="middle">A</text><text x="216" y="27.7" font-size="12" text-anchor="middle">B</text><text x="24" y="121.7" font-size="12" text-anchor="middle">C</text><text x="204.8" y="121.7" font-size="12" text-anchor="middle">D</text><text x="150" y="67.7" font-size="12" text-anchor="middle">O</text><text x="153.8" y="24.7" font-size="12" text-anchor="middle">6 cm</text><text x="114.4" y="125.7" font-size="12" text-anchor="middle">9 cm</text><text x="110.9" y="63.3" font-size="12" text-anchor="end">5 cm</text><polyline points="149.8,28.5 155.8,32.5 149.8,36.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="110.4,103.5 116.4,107.5 110.4,111.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 15/2
+        accept: [7.5]
+        check: "5 * Fraction(9, 6)"
+        hints:
+          - △OAB ∽ △ODC で、OA に対応する辺はどれでしょう。
+          - DC は AB の何倍でしょう。
+          - OD は OA の同じ倍になります。
+        paths:
+          - [△OAB ∽ △ODC, OD は OA の 9/6 = 3/2 倍, 5 × 3/2 = 15/2 cm]
+      - part: 今日
+        text: △ABC と △DEF で、AB = 6 cm、BC = 8 cm、CA = 10 cm、DE = 9 cm、EF = 12 cm、FD = 15 cm です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。
+        choices: [2 組の角がそれぞれ等しい, 3 組の辺の比がすべて等しい, 2 組の辺の比とその間の角がそれぞれ等しい]
+        answer: 3 組の辺の比がすべて等しい
+        check: "'3 組の辺の比がすべて等しい' if Fraction(6, 9) == Fraction(8, 12) == Fraction(10, 15) else 'ほか'"
+        hints:
+          - わかっているのは、辺の長さだけです。
+          - AB:DE、BC:EF、CA:FD を、それぞれ簡単にしましょう。
+          - 3 つの比がすべて等しいかを確かめましょう。
+        paths:
+          - ["AB:DE = 6:9 = 2:3", "BC:EF = 8:12 = 2:3", "CA:FD = 10:15 = 2:3", 3 組の辺の比がすべて等しい]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: ∠BAC = 90°の直角三角形 ABC で、AB = 6 cm、AC = 8 cm、BC = 10 cm です。A から BC に垂線 AH をひくとき、BH の長さを求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.8,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.8" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text><text x="54.6" y="67" font-size="12" text-anchor="end">6 cm</text><text x="159.3" y="64.6" font-size="12" text-anchor="start">8 cm</text><text x="170.4" y="130.4" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        explain: △HBA と △ABC で、∠BHA = ∠BAC = 90°、∠B は共通なので、2 組の角がそれぞれ等しく △HBA ∽ △ABC です。対応する辺は、HB と AB、BA と BC、AH と CA です。相似比は BA:BC = 6:10 = 3:5 なので、HB は AB の 3/5 倍で、BH = 6 × 3/5 = 18/5 cm（3.6 cm）です。相似な三角形を見つけたら、対応する辺の組を書き出してから、何倍かを使って長さを求めます。
+      - part: 思い出す
+        text: 同じ時刻に、高さ 120 cm の棒の影が 90 cm、木の影が 360 cm でした。木の高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,122 90.9,18 168.9,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="71.1,122 71.1,96 90.6,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="71" y1="122" x2="169" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="71.1" y1="122" x2="71.1" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.9" y1="122" x2="90.9" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="71.1" y1="96" x2="90.6" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.9" y1="18" x2="168.9" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="66.1" y="113.2" font-size="12" text-anchor="end">120 cm</text><text x="80.9" y="139.2" font-size="12" text-anchor="middle">90 cm</text><text x="129.9" y="139.2" font-size="12" text-anchor="middle">360 cm</text><text x="71.1" y="91.2" font-size="12" text-anchor="middle">棒</text><text x="90.9" y="13.2" font-size="12" text-anchor="middle">木</text><line x1="71.1" y1="122" x2="90.6" y2="122" stroke="currentColor" stroke-width="4" fill="none"/><line x1="90.9" y1="122" x2="168.9" y2="122" stroke="currentColor" stroke-width="4" fill="none"/><polyline points="71.1,114 79.1,114 79.1,122" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="90.9,114 98.9,114 98.9,122" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 480
+        check: "120 * Fraction(360, 90)"
+        hints:
+          - 棒と影、木と影でできる 2 つの三角形は相似です。
+          - 木の影は、棒の影の何倍でしょう。
+          - 木の高さも、棒の高さの同じ倍です。
+        paths:
+          - [木の影は棒の影の 360 ÷ 90 = 4 倍, 120 × 4, 480 cm]
+      - part: 思い出す
+        text: 図の △ABC で DE ∥ BC、AD = 4 cm、DB = 6 cm です。△ADE と △ABC の相似比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text><text x="68.1" y="43" font-size="12" text-anchor="end">4 cm</text><text x="41" y="95" font-size="12" text-anchor="end">6 cm</text></svg>'
+        choices: ["2:3", "2:5", "5:2"]
+        answer: "2:5"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(4, 4 + 6))"
+        hints:
+          - △ADE の AD に対応するのは、△ABC のどの辺でしょう。
+          - AB の長さを求めましょう。
+          - AD:AB を簡単にしましょう。
+        paths:
+          - [AD と AB が対応する, AB = 4 + 6 = 10, "4:10 = 2:5"]
+        note: AD:DB = 4:6 = 2:3 としやすい。相似比は対応する辺の比で、DB は △ABC の辺ではない。
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 6 cm、DC = 8 cm、BO = 3 cm のとき、OC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="89.5" y1="29.8" x2="210" y2="29.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.7" y1="110.2" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.5" y1="29.8" x2="190.7" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="29.8" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="83.5" y="25" font-size="12" text-anchor="middle">A</text><text x="216" y="25" font-size="12" text-anchor="middle">B</text><text x="24" y="124.4" font-size="12" text-anchor="middle">C</text><text x="196.7" y="124.4" font-size="12" text-anchor="middle">D</text><text x="144.9" y="69.5" font-size="12" text-anchor="middle">O</text><text x="149.7" y="22" font-size="12" text-anchor="middle">6 cm</text><text x="110.4" y="128.4" font-size="12" text-anchor="middle">8 cm</text><text x="176.3" y="64.2" font-size="12" text-anchor="middle">3 cm</text><polyline points="145.7,25.8 151.7,29.8 145.7,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="106.4,106.2 112.4,110.2 106.4,114.2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 4
+        check: "3 * Fraction(8, 6)"
+        hints:
+          - △OAB と相似な三角形はどれでしょう。
+          - OB に対応する辺はどれでしょう。
+          - DC は AB の何倍でしょう。
+        paths:
+          - [△OAB ∽ △ODC, OC は OB に対応する, OC = 3 × 8/6 = 4 cm]
+      - part: 今日
+        text: 図の △ABC で、辺 AB の上の点 D と辺 AC の上の点 E を、∠ADE = ∠ACB となるようにとりました。AD = 4 cm、AE = 5 cm、AC = 8 cm のとき、AB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="147.4,18 58.4,122 181.6,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111.8" y1="59.6" x2="168.8" y2="83" stroke="currentColor" stroke-width="2" fill="none"/><text x="147.4" y="13.2" font-size="12" text-anchor="middle">A</text><text x="50.4" y="134.2" font-size="12" text-anchor="middle">B</text><text x="189.6" y="134.2" font-size="12" text-anchor="middle">C</text><text x="105.4" y="53.6" font-size="12" text-anchor="middle">D</text><text x="180.7" y="85.9" font-size="12" text-anchor="middle">E</text><text x="121.9" y="35.2" font-size="12" text-anchor="end">4 cm</text><text x="166.6" y="51" font-size="12" text-anchor="start">5 cm</text><path d="M124.7 64.9 A14 14 0 0 0 120.9 49" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M177.2 108.7 A14 14 0 0 0 167.6 122" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 10
+        check: "5 * Fraction(8, 4)"
+        hints:
+          - ∠A は共通です。△ADE と相似な三角形の、対応する頂点の順を考えましょう。
+          - ∠ADE = ∠ACB なので、D と C が対応します。
+          - AE に対応する辺を探しましょう。
+        paths:
+          - [△ADE ∽ △ACB, AC は AD の 8/4 = 2 倍, AB = AE × 2 = 10 cm]
+        note: △ABC の順に対応すると思いこむと、AD と AB を組にしてしまう。等しい角の位置から対応を決める。
+      - part: 今日
+        text: ∠BAC = 90°の直角三角形 ABC で、AB = 9 cm、AC = 12 cm、BC = 15 cm です。A から BC に垂線 AH をひくとき、AH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.8,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.8" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text><text x="54.6" y="67" font-size="12" text-anchor="end">9 cm</text><text x="159.3" y="64.6" font-size="12" text-anchor="start">12 cm</text><text x="170.4" y="130.4" font-size="12" text-anchor="middle">15 cm</text></svg>'
+        answer: 36/5
+        accept: [7.2]
+        check: "12 * Fraction(9, 15)"
+        hints:
+          - △HBA と △ABC は相似です。
+          - AH に対応する △ABC の辺はどれでしょう。
+          - 相似比 BA:BC を使いましょう。
+        paths:
+          - [△HBA ∽ △ABC, AH は CA に対応する, AH = 12 × 9/15 = 36/5 cm]
+          - [面積を 2 通りに書く, 9 × 12 ÷ 2 = 15 × AH ÷ 2, AH = 108 ÷ 15 = 36/5 cm]
+      - part: 挑戦
+        text: 高さ 480 cm の街灯の真下から 300 cm はなれたところに、身長 160 cm の人が立っています。この人の影の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="56.1" y1="122" x2="183.9" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="69.1" y1="18" x2="166.6" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="63.1" y="74.2" font-size="12" text-anchor="end">480 cm</text><text x="101.6" y="138.2" font-size="12" text-anchor="middle">300 cm</text><text x="128.1" y="108.9" font-size="12" text-anchor="end">160 cm</text><text x="69.1" y="13.2" font-size="12" text-anchor="middle">街灯</text><text x="125.1" y="84.5" font-size="12" text-anchor="middle">人</text><line x1="69.1" y1="122" x2="69.1" y2="18" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="134.1" y1="122" x2="134.1" y2="87.3" stroke="currentColor" stroke-width="3" fill="none"/><line x1="134.1" y1="122" x2="166.6" y2="122" stroke="currentColor" stroke-width="5" fill="none"/><circle cx="69.1" cy="18" r="4" fill="currentColor"/></svg>'
+        answer: 150
+        check: "300 * Fraction(160, 480 - 160)"
+        hints:
+          - 街灯の先と影の先を結ぶ直線で、相似な 2 つの三角形ができます。
+          - 人の身長は、街灯の高さの何分の 1 でしょう。
+          - 影の長さは、街灯の真下から影の先までの長さの、同じ分になります。
+        paths:
+          - [人の三角形と街灯の三角形は相似, "相似比 160:480 = 1:3", 影は（300 + 影）の 1/3, 300 cm が 3 − 1 = 2 つ分なので影は 150 cm]
+        note: 影を 300 の 1/3 の 100 としやすい。小さいほうの三角形の底辺は影だけ、大きいほうの底辺は 300 + 影。
+    extra:
+      - part: 今日
+        text: ∠BAC = 90°の直角三角形 ABC で、AB = 15 cm、BC = 25 cm です。A から BC に垂線 AH をひくとき、BH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.8,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.8" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text><text x="54.6" y="67" font-size="12" text-anchor="end">15 cm</text><text x="170.4" y="130.4" font-size="12" text-anchor="middle">25 cm</text></svg>'
+        answer: 9
+        check: "15 * Fraction(15, 25)"
+        hints:
+          - △HBA と △ABC は相似です。
+          - HB に対応する △ABC の辺はどれでしょう。
+          - 相似比 BA:BC を簡単にしましょう。
+        paths:
+          - [△HBA ∽ △ABC, "相似比 BA:BC = 15:25 = 3:5", HB = AB × 3/5 = 9 cm]
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AO = 6 cm、OD = 9 cm、AB = 8 cm のとき、DC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="97.5" y1="41.9" x2="210" y2="41.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198.8" y1="98.1" x2="30" y2="98.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="41.9" x2="198.8" y2="98.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="41.9" x2="30" y2="98.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="91.5" y="37.1" font-size="12" text-anchor="middle">A</text><text x="216" y="37.1" font-size="12" text-anchor="middle">B</text><text x="24" y="112.3" font-size="12" text-anchor="middle">C</text><text x="204.8" y="112.3" font-size="12" text-anchor="middle">D</text><text x="150" y="69.6" font-size="12" text-anchor="middle">O</text><text x="153.8" y="34.1" font-size="12" text-anchor="middle">8 cm</text><text x="111.4" y="69.8" font-size="12" text-anchor="end">6 cm</text><text x="174.7" y="75" font-size="12" text-anchor="start">9 cm</text><polyline points="149.8,37.9 155.8,41.9 149.8,45.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="110.4,94.1 116.4,98.1 110.4,102.1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 12
+        check: "8 * Fraction(9, 6)"
+        hints:
+          - △OAB ∽ △ODC です。
+          - OD は OA の何倍でしょう。
+          - DC は AB の同じ倍です。
+        paths:
+          - [OD は OA の 9/6 = 3/2 倍, DC = 8 × 3/2 = 12 cm]
+      - part: 今日
+        text: 図の △ABC で、辺 AC の上に ∠ABD = ∠ACB となる点 D をとります。AB = 6 cm、AC = 9 cm のとき、AD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70.3,18 49.3,122 190.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.3" y1="122" x2="123.8" y2="64.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="70.3" y="13.2" font-size="12" text-anchor="middle">A</text><text x="41.3" y="134.2" font-size="12" text-anchor="middle">B</text><text x="198.7" y="134.2" font-size="12" text-anchor="middle">C</text><text x="131.7" y="59.4" font-size="12" text-anchor="middle">D</text><text x="51.1" y="71.8" font-size="12" text-anchor="end">6 cm</text><path d="M60.3 113.4 A14 14 0 0 0 52 108.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M180.1 112.9 A14 14 0 0 0 176.7 122" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 4
+        check: "6 * Fraction(6, 9)"
+        hints:
+          - ∠A は共通です。△ABD と相似な三角形の、対応する頂点の順を考えましょう。
+          - ∠ABD = ∠ACB なので、B と C が対応します。
+          - AD に対応する辺は AB です。
+        paths:
+          - [△ABD ∽ △ACB, "相似比 AB:AC = 6:9 = 2:3", AD = AB × 2/3 = 4 cm]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 図の △ABC で DE ∥ BC、AD = 4 cm、DB = 2 cm、AE = 6 cm です。EC の長さと、DE:BC を求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 54.8,87.3 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text><text x="60.9" y="56.9" font-size="12" text-anchor="end">4 cm</text><text x="33.8" y="108.9" font-size="12" text-anchor="end">2 cm</text><text x="140.3" y="56.9" font-size="12" text-anchor="start">6 cm</text></svg>'
+        explain: DE ∥ BC のとき △ADE ∽ △ABC なので、AD:AB = AE:AC = DE:BC です（三角形と比の定理）。ここから、AD:DB = AE:EC もなりたちます（AB を AD と DB に、AC を AE と EC に同じ比で分けるから）。AD:DB = 4:2 = 2:1 なので AE:EC も 2:1 で、EC = 6 × 1/2 = 3 cm。DE:BC は AD:AB = 4:6 = 2:3 です。DE:BC を求めるときは、DB ではなく AB = AD + DB を使います。逆に、AD:DB = AE:EC ならば DE ∥ BC です（逆の定理）。
+      - part: 思い出す
+        text: △ADE ∽ △ABC で、相似比は 3:5 です。BC = 10 cm のとき、DE は何 cm ですか。
+        answer: 6
+        check: "10 * Fraction(3, 5)"
+        hints:
+          - DE は BC に対応します。
+          - DE は BC の何倍でしょう。
+          - 3:5 を、分数の倍に直しましょう。
+        paths:
+          - [DE は BC の 3/5 倍, 10 × 3/5 = 6 cm]
+      - part: 思い出す
+        text: 比 12:18 を簡単にすると、どれになりますか。
+        choices: ["4:6", "3:2", "2:3"]
+        answer: "2:3"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(12, 18))"
+        hints:
+          - 12 と 18 を、同じ数でわりましょう。
+          - 12 と 18 の最大公約数は何でしょう。
+          - これ以上われなくなるまでわりましょう。
+        paths:
+          - [12 と 18 の最大公約数は 6, "12:18 = 2:3"]
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD = 6 cm、DB = 4 cm、AE = 7.5 cm です。EC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 58.4,80.4 158.3,80.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.4" y1="80.4" x2="158.3" y2="80.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="49.4" y="84.6" font-size="12" text-anchor="middle">D</text><text x="167.3" y="84.6" font-size="12" text-anchor="middle">E</text><text x="62.7" y="53.4" font-size="12" text-anchor="end">6 cm</text><text x="35.6" y="105.4" font-size="12" text-anchor="end">4 cm</text><text x="136.6" y="53.4" font-size="12" text-anchor="start">7.5 cm</text></svg>'
+        answer: 5
+        check: "Fraction(15, 2) * Fraction(4, 6)"
+        hints:
+          - DE ∥ BC なので、AD:DB = AE:EC です。
+          - AD:DB を簡単にしましょう。
+          - EC は AE の何倍でしょう。
+        paths:
+          - ["AD:DB = 6:4 = 3:2", "AE:EC = 3:2", EC = 7.5 × 2/3 = 5 cm]
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD = 3 cm、DB = 6 cm、BC = 12 cm です。DE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 72.9,52.7 128.3,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="52.7" x2="128.3" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="63.9" y="56.9" font-size="12" text-anchor="middle">D</text><text x="137.3" y="56.9" font-size="12" text-anchor="middle">E</text><text x="69.9" y="39.5" font-size="12" text-anchor="end">3 cm</text><text x="42.8" y="91.5" font-size="12" text-anchor="end">6 cm</text><text x="120" y="139.2" font-size="12" text-anchor="middle">12 cm</text></svg>'
+        answer: 4
+        check: "12 * Fraction(3, 3 + 6)"
+        hints:
+          - DE:BC と等しいのは、AD:DB と AD:AB のどちらでしょう。
+          - AB の長さを求めましょう。
+          - DE は BC の何倍でしょう。
+        paths:
+          - ["DE:BC = AD:AB", "AD:AB = 3:9 = 1:3", DE = 12 × 1/3 = 4 cm]
+        note: AD:DB = 1:2 を使って DE = 6 としやすい。DE:BC は △ADE と △ABC の相似比なので、AD:AB を使う。
+      - part: 今日
+        text: 図の △ABC で、AD = 4 cm、DB = 6 cm、AE = 6 cm、EC = 9 cm、BF = 5 cm、FC = 10 cm です。平行な 2 つの線分の組はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="74,18 37.3,122 202.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.3" y1="59.6" x2="125.5" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="125.5" y1="59.6" x2="92.4" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.3" y1="59.6" x2="92.4" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="74" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.3" y="134.2" font-size="12" text-anchor="middle">B</text><text x="210.7" y="134.2" font-size="12" text-anchor="middle">C</text><text x="49.3" y="61.8" font-size="12" text-anchor="middle">D</text><text x="135.5" y="61.8" font-size="12" text-anchor="middle">E</text><text x="92.4" y="138.2" font-size="12" text-anchor="middle">F</text><text x="58.2" y="39" font-size="12" text-anchor="end">4 cm</text><text x="39.8" y="91" font-size="12" text-anchor="end">6 cm</text><text x="106.8" y="33.7" font-size="12" text-anchor="start">6 cm</text><text x="171.1" y="85.7" font-size="12" text-anchor="start">9 cm</text><text x="64.8" y="140.2" font-size="12" text-anchor="middle">5 cm</text><text x="147.6" y="140.2" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        choices: [EF と AB, DE と BC, DF と AC]
+        answer: DE と BC
+        check: "[k for k, (a, b, c, d) in {'DE と BC': (4, 6, 6, 9), 'EF と AB': (9, 6, 10, 5), 'DF と AC': (6, 4, 5, 10)}.items() if Fraction(a, b) == Fraction(c, d)][0]"
+        hints:
+          - 三角形と比の定理の逆を使います。
+          - DE と BC なら、AD:DB と AE:EC をくらべます。
+          - ほかの組も、平行かどうかを調べる線分に合わせて、2 つの比をくらべましょう。
+        paths:
+          - ["AD:DB = 4:6 = 2:3", "AE:EC = 6:9 = 2:3", 比が等しいので DE ∥ BC]
+        note: EF と AB なら CE:EA（9:6）と CF:FB（10:5）、DF と AC なら BD:DA（6:4）と BF:FC（5:10）をくらべる。
+      - part: 挑戦
+        text: 図の台形 ABCD で AD ∥ BC、AD = 6 cm、BC = 12 cm です。辺 AB の上に AE:EB = 1:2 となる点 E をとり、E を通って BC に平行な直線が辺 DC と交わる点を F とします。EF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="75,32.5 30,107.5 210,107.5 165,32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="57.5" x2="180" y2="57.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="71" y="27.7" font-size="12" text-anchor="middle">A</text><text x="23" y="120.7" font-size="12" text-anchor="middle">B</text><text x="217" y="120.7" font-size="12" text-anchor="middle">C</text><text x="169" y="27.7" font-size="12" text-anchor="middle">D</text><text x="50" y="61.7" font-size="12" text-anchor="middle">E</text><text x="190" y="61.7" font-size="12" text-anchor="middle">F</text><text x="120" y="24.7" font-size="12" text-anchor="middle">6 cm</text><text x="120" y="125.7" font-size="12" text-anchor="middle">12 cm</text></svg>'
+        answer: 8
+        check: "12 * Fraction(1, 3) + 6 * Fraction(2, 3)"
+        hints:
+          - 対角線 AC をひいて、EF との交点を G としましょう。
+          - △ABC で EG を、△CDA で GF を求めましょう。
+          - AE:EB = 1:2 のとき、AG:GC も同じ比になります。
+        paths:
+          - [対角線 AC と EF の交点を G とする, △ABC で EG = 12 × 1/3 = 4, △CDA で GF = 6 × 2/3 = 4, EF = 4 + 4 = 8 cm]
+        note: AD と BC のまん中の 9 cm としやすい。9 cm になるのは、E が AB の中点のときだけ。
+    extra:
+      - part: 今日
+        text: 図で、3 本の直線 ℓ、m、n は平行です。AB = 8 cm、BC = 6 cm、DE = 10 cm のとき、EF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="34" y1="25.2" x2="206" y2="25.2" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="210" y="29.4" font-size="12" text-anchor="start">ℓ</text><line x1="34" y1="76.4" x2="206" y2="76.4" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="210" y="80.6" font-size="12" text-anchor="start">m</text><line x1="34" y1="114.8" x2="206" y2="114.8" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="210" y="119" font-size="12" text-anchor="start">n</text><line x1="58.6" y1="14" x2="98.9" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><line x1="147.8" y1="14" x2="192.6" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><text x="52.7" y="22.4" font-size="12" text-anchor="middle">A</text><text x="71.1" y="73.6" font-size="12" text-anchor="middle">B</text><text x="84.9" y="112" font-size="12" text-anchor="middle">C</text><text x="162.3" y="22.4" font-size="12" text-anchor="middle">D</text><text x="182.7" y="73.6" font-size="12" text-anchor="middle">E</text><text x="198.1" y="112" font-size="12" text-anchor="middle">F</text><circle cx="62.7" cy="25.2" r="2.6" fill="currentColor"/><circle cx="81.1" cy="76.4" r="2.6" fill="currentColor"/><circle cx="94.9" cy="114.8" r="2.6" fill="currentColor"/><circle cx="152.3" cy="25.2" r="2.6" fill="currentColor"/><circle cx="172.7" cy="76.4" r="2.6" fill="currentColor"/><circle cx="188.1" cy="114.8" r="2.6" fill="currentColor"/><text x="63.9" y="55" font-size="12" text-anchor="end">8 cm</text><text x="80" y="99.8" font-size="12" text-anchor="end">6 cm</text><text x="170.5" y="55" font-size="12" text-anchor="start">10 cm</text></svg>'
+        answer: 15/2
+        accept: [7.5]
+        check: "10 * Fraction(6, 8)"
+        hints:
+          - 平行線にはさまれた線分の比は等しくなります。
+          - AB:BC = DE:EF です。
+          - EF は DE の何倍でしょう。
+        paths:
+          - ["AB:BC = 8:6 = 4:3", "DE:EF = 4:3", EF = 10 × 3/4 = 15/2 cm]
+        note: 平行線にはさまれた線分の比は、2 本の直線が交わっていなくてもなりたつ。
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD = 5 cm、AB = 15 cm、AC = 12 cm です。AE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 72.9,52.7 128.3,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="52.7" x2="128.3" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="63.9" y="56.9" font-size="12" text-anchor="middle">D</text><text x="137.3" y="56.9" font-size="12" text-anchor="middle">E</text><text x="69.9" y="39.5" font-size="12" text-anchor="end">5 cm</text></svg>'
+        answer: 4
+        check: "12 * Fraction(5, 15)"
+        hints:
+          - AD:AB = AE:AC です。
+          - AD:AB を簡単にしましょう。
+          - AE は AC の何倍でしょう。
+        paths:
+          - ["AD:AB = 5:15 = 1:3", AE = 12 × 1/3 = 4 cm]
+      - part: 今日
+        text: △ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、AD:DB = 2:3、AE:EC = 4:6 です。DE と BC は平行ですか。
+        choices: [平行である, 平行ではない]
+        answer: 平行である
+        check: "'平行である' if Fraction(2, 3) == Fraction(4, 6) else '平行ではない'"
+        hints:
+          - 三角形と比の定理の逆を使いましょう。
+          - 4:6 を簡単にしましょう。
+          - AD:DB と AE:EC が等しいかをくらべましょう。
+        paths:
+          - ["4:6 = 2:3", "AD:DB = AE:EC", DE ∥ BC]
+
+  - day: 6
+    items:
+      - part: 見本
+        text: △ABC で、辺 AB、AC の中点をそれぞれ M、N とします。BC = 10 cm のとき、MN の長さと、△AMN と △ABC の面積の比を求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="132.9,18 88.4,70 164.5,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="132.9,18 44,122 196,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.4" y1="70" x2="164.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="132.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="36" y="134.2" font-size="12" text-anchor="middle">B</text><text x="204" y="134.2" font-size="12" text-anchor="middle">C</text><text x="78.4" y="72.2" font-size="12" text-anchor="middle">M</text><text x="174.5" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="88.4" cy="70" r="2.6" fill="currentColor"/><circle cx="164.5" cy="70" r="2.6" fill="currentColor"/><text x="120" y="140.2" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        explain: M、N が AB、AC の中点のとき、MN ∥ BC、MN = BC × 1/2 です（中点連結定理）。MN = 10 × 1/2 = 5 cm。△AMN ∽ △ABC で、相似比は 1:2 です。相似な図形の面積の比は、相似比の 2 つの数をそれぞれ 2 回かけた比になります（底辺も高さも同じ倍になるから）。面積の比は (1 × 1):(2 × 2) = 1:4 です。まわりの長さの比は、相似比と同じ 1:2 です。
+      - part: 思い出す
+        text: 図の △ABC で DE ∥ BC、AD:DB = 2:1、BC = 9 cm です。DE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 54.8,87.3 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text><text x="120" y="139.2" font-size="12" text-anchor="middle">9 cm</text></svg>'
+        answer: 6
+        check: "9 * Fraction(2, 2 + 1)"
+        hints:
+          - DE:BC = AD:AB です。
+          - AD:AB は何:何でしょう。
+          - DE は BC の何倍でしょう。
+        paths:
+          - ["AD:AB = 2:3", DE = 9 × 2/3 = 6 cm]
+      - part: 思い出す
+        text: ある図形を 3 倍に拡大した図形の面積は、もとの図形の面積の何倍ですか。
+        answer: 9
+        check: "3 * 3"
+        hints:
+          - たて 1 cm、横 1 cm の正方形で考えてみましょう。
+          - 3 倍の拡大図では、たてと横はそれぞれ何 cm でしょう。
+          - 面積は たて × 横 です。
+        paths:
+          - [たても横も 3 倍, 面積は 3 × 3 = 9 倍]
+      - part: 今日
+        text: △ABC で AB = 10 cm、BC = 14 cm、CA = 12 cm です。辺 AB、AC の中点をそれぞれ M、N とするとき、△AMN のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="100.5,18 66.9,70 153.6,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="100.5,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="66.9" y1="70" x2="153.6" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="100.5" y="13.2" font-size="12" text-anchor="middle">A</text><text x="25.3" y="134.2" font-size="12" text-anchor="middle">B</text><text x="214.7" y="134.2" font-size="12" text-anchor="middle">C</text><text x="56.9" y="72.2" font-size="12" text-anchor="middle">M</text><text x="163.6" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="66.9" cy="70" r="2.6" fill="currentColor"/><circle cx="153.6" cy="70" r="2.6" fill="currentColor"/><text x="42.1" y="93.7" font-size="12" text-anchor="end">10 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">14 cm</text><text x="187.5" y="91.6" font-size="12" text-anchor="start">12 cm</text></svg>'
+        answer: 18
+        check: "Fraction(10, 2) + Fraction(14, 2) + Fraction(12, 2)"
+        hints:
+          - AM と AN の長さを求めましょう。
+          - MN の長さは、中点連結定理で求めましょう。
+          - 3 つの辺をたしましょう。
+        paths:
+          - [AM = 5、AN = 6, MN = 14 × 1/2 = 7, 5 + 7 + 6 = 18 cm]
+          - ["△AMN と △ABC の相似比は 1:2", △ABC のまわりは 36 cm, 36 × 1/2 = 18 cm]
+      - part: 今日
+        text: 四角形 ABCD の辺 AB、BC、CD、DA の中点を、それぞれ P、Q、R、S とします。対角線が AC = 12 cm、BD = 9 cm のとき、四角形 PQRS のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="79.1,95.7 149.2,89.9 155.1,37.9 84.9,43.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="49.9,69.4 108.3,122 190.1,57.7 120,18" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="79.1,95.7 149.2,89.9 155.1,37.9 84.9,43.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.9" y1="69.4" x2="190.1" y2="57.7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="108.3" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="38.9" y="74" font-size="12" text-anchor="middle">A</text><text x="106.6" y="137.1" font-size="12" text-anchor="middle">B</text><text x="201" y="60.6" font-size="12" text-anchor="middle">C</text><text x="120.7" y="11.2" font-size="12" text-anchor="middle">D</text><text x="70.3" y="106.6" font-size="12" text-anchor="middle">P</text><text x="158.1" y="100.5" font-size="12" text-anchor="middle">Q</text><text x="163.8" y="35.4" font-size="12" text-anchor="middle">R</text><text x="76" y="41.5" font-size="12" text-anchor="middle">S</text><circle cx="79.1" cy="95.7" r="2.6" fill="currentColor"/><circle cx="149.2" cy="89.9" r="2.6" fill="currentColor"/><circle cx="155.1" cy="37.9" r="2.6" fill="currentColor"/><circle cx="84.9" cy="43.7" r="2.6" fill="currentColor"/></svg>'
+        answer: 21
+        check: "Fraction(12, 2) * 2 + Fraction(9, 2) * 2"
+        hints:
+          - △ABC で、P と Q は AB と BC の中点です。
+          - PQ は AC の何倍でしょう。SR も同じように考えましょう。
+          - QR と PS は、△BCD と △ABD で BD を使って求めましょう。
+        paths:
+          - [PQ = SR = 12 × 1/2 = 6, QR = PS = 9 × 1/2 = 9/2, 6 + 6 + 9/2 + 9/2 = 21 cm]
+        note: 四角形の形によらず、まわりの長さは 2 本の対角線の長さの和になる。
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD:DB = 2:3 です。△ADE の面積が 8 cm² のとき、△ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 50
+        check: "8 * Fraction(5 * 5, 2 * 2)"
+        hints:
+          - △ADE と △ABC の相似比 AD:AB を求めましょう。
+          - 面積の比は、相似比の数をそれぞれ 2 回かけた比です。
+          - △ABC の面積は、△ADE の面積の何倍でしょう。
+        paths:
+          - ["相似比 AD:AB = 2:5", "面積の比 (2 × 2):(5 × 5) = 4:25", 8 × 25/4 = 50 cm²]
+        note: 相似比を 2:3（AD:DB）としたり、面積を 5/2 倍にしたりしやすい。
+      - part: 挑戦
+        text: 図の △ABC で DE ∥ BC、AD:DB = 1:2 です。△ABC の面積が 90 cm² のとき、四角形 DBCE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72.9,52.7 36.8,122 203.2,122 128.3,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="52.7" x2="128.3" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="63.9" y="56.9" font-size="12" text-anchor="middle">D</text><text x="137.3" y="56.9" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 80
+        check: "90 - 90 * Fraction(1 * 1, 3 * 3)"
+        hints:
+          - △ADE と △ABC の相似比を求めましょう。
+          - △ADE の面積は、△ABC の面積の何分の 1 でしょう。
+          - 四角形 DBCE は、△ABC から △ADE を取りのぞいた部分です。
+        paths:
+          - ["相似比 1:3", "面積の比 1:9", △ADE = 90 × 1/9 = 10, 90 − 10 = 80 cm²]
+    extra:
+      - part: 今日
+        text: △ABC で、辺 AB の中点 M を通り辺 BC に平行な直線が、辺 AC と点 N で交わります。MN = 6 cm のとき、BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="132.9,18 88.4,70 164.5,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="132.9,18 44,122 196,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.4" y1="70" x2="164.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="132.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="36" y="134.2" font-size="12" text-anchor="middle">B</text><text x="204" y="134.2" font-size="12" text-anchor="middle">C</text><text x="78.4" y="72.2" font-size="12" text-anchor="middle">M</text><text x="174.5" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="88.4" cy="70" r="2.6" fill="currentColor"/><circle cx="164.5" cy="70" r="2.6" fill="currentColor"/><text x="126.5" y="66.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 12
+        check: "6 * 2"
+        hints:
+          - M は AB の中点で、MN ∥ BC です。
+          - 三角形と比の定理で、MN:BC は AM:AB と等しくなります。
+          - AM:AB は何:何でしょう。
+        paths:
+          - ["AM:AB = 1:2", "MN:BC = 1:2", BC = 6 × 2 = 12 cm]
+      - part: 今日
+        text: 相似な 2 つの図形の相似比は 3:4 です。小さいほうの面積が 18 cm² のとき、大きいほうの面積は何 cm² ですか。
+        answer: 32
+        check: "18 * Fraction(4 * 4, 3 * 3)"
+        hints:
+          - 面積の比は、相似比の数をそれぞれ 2 回かけた比です。
+          - 面積の比は何:何でしょう。
+          - 大きいほうは小さいほうの何倍でしょう。
+        paths:
+          - ["面積の比 (3 × 3):(4 × 4) = 9:16", 18 × 16/9 = 32 cm²]
+      - part: 今日
+        text: 相似な 2 つの三角形の面積の比が 9:25 です。相似比はどれですか。
+        choices: ["9:25", "3:5", "5:3"]
+        answer: "3:5"
+        check: "[('%d:%d' % (a, b)) for a in range(1, 10) for b in range(1, 10) if a * a * 25 == b * b * 9 and Fraction(a, b).denominator == b][0]"
+        hints:
+          - 相似比の数をそれぞれ 2 回かけた比が、面積の比です。
+          - 2 回かけて 9 になる数、25 になる数を考えましょう。
+          - 面積の比を、そのまま相似比にしないようにしましょう。
+        paths:
+          - [3 × 3 = 9、5 × 5 = 25, "相似比は 3:5"]
+
+  - day: 7
+    items:
+      - part: わけ
+        text: △ABC の辺 AB、AC の上に点 D、E があり、DE ∥ BC です。このとき AD:AB = AE:AC = DE:BC となること（三角形と比の定理）を証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text></svg>'
+        explain: 例：「△ADE と △ABC で、DE ∥ BC より、平行線の同位角は等しいので ∠ADE = ∠ABC …①。∠A は共通なので ∠DAE = ∠BAC …②。①、②より、2 組の角がそれぞれ等しいので △ADE ∽ △ABC。相似な図形の対応する辺の比は等しいので、AD:AB = AE:AC = DE:BC。」と書ければよい。① はじめにどの 2 つの三角形の相似を使うかを決めている、② 等しい角ごとに根拠（同位角、共通な角）を書いている、③ 相似条件（約束した事実）で結び、対応する辺の比につないでいる、の 3 点を見る。AD = 2 cm、AB = 5 cm のような例で測ってくらべただけなら、例ではすべての場合を示せないことを話す。
+        hints:
+          - どの 2 つの三角形が相似になるかを考えましょう。
+          - DE ∥ BC から、等しい角を 1 組見つけましょう。根拠も書きます。
+          - もう 1 組の等しい角を見つけ、相似条件を書いて結びましょう。
+        paths:
+          - [△ADE と △ABC に目をつける, ∠ADE = ∠ABC（同位角）, ∠A は共通, 2 組の角で △ADE ∽ △ABC, 対応する辺の比は等しい]
+      - part: わけ
+        text: △ABC の辺 AB、AC の中点をそれぞれ M、N とします。MN ∥ BC、MN = BC × 1/2 となること（中点連結定理）を証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="132.9,18 44,122 196,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.4" y1="70" x2="164.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="132.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="36" y="134.2" font-size="12" text-anchor="middle">B</text><text x="204" y="134.2" font-size="12" text-anchor="middle">C</text><text x="78.4" y="72.2" font-size="12" text-anchor="middle">M</text><text x="174.5" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="88.4" cy="70" r="2.6" fill="currentColor"/><circle cx="164.5" cy="70" r="2.6" fill="currentColor"/></svg>'
+        explain: 例：「△AMN と △ABC で、M、N は中点なので AM:AB = 1:2 …①、AN:AC = 1:2 …②。∠A は共通 …③。①、②、③より、2 組の辺の比とその間の角がそれぞれ等しいので △AMN ∽ △ABC。よって MN:BC = 1:2 で、MN = BC × 1/2。また、対応する角は等しいので ∠AMN = ∠ABC。同位角が等しいので MN ∥ BC。」と書ければよい。① 中点であることを比の式に直している、② 間の角が共通であることを書いている、③ 相似条件で結び、長さと平行の両方を示している、の 3 点を見る。平行を示すところで「同位角が等しければ 2 直線は平行」（G-016）を使っていることも確かめる。
+        hints:
+          - 中点であることを、AM:AB のような比で書きましょう。
+          - 2 組の辺の比とその間の角を使う相似条件で、相似を示しましょう。
+          - 相似からわかる等しい角を使って、平行を示しましょう。
+        paths:
+          - ["AM:AB = AN:AC = 1:2", ∠A は共通, △AMN ∽ △ABC, "MN:BC = 1:2", ∠AMN = ∠ABC で同位角が等しいので MN ∥ BC]
+      - part: わけ
+        text: △ABC ∽ △DEF で、相似比は 2:3 です。面積の比が 4:9 になることを、高さを使って証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="45.7,61.3 22,96.1 85.2,96.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="158.7,43.9 123.2,96.1 218,96.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="45.7,61.3 22,96.1 85.2,96.1" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="158.7,43.9 123.2,96.1 218,96.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="45.7" y1="61.3" x2="45.7" y2="96.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="158.7" y1="43.9" x2="158.7" y2="96.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="45.7,88.1 53.7,88.1 53.7,96.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="158.7,88.1 166.7,88.1 166.7,96.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="45.7" y="56.5" font-size="12" text-anchor="middle">A</text><text x="15" y="109.3" font-size="12" text-anchor="middle">B</text><text x="92.2" y="109.3" font-size="12" text-anchor="middle">C</text><text x="158.7" y="39.1" font-size="12" text-anchor="middle">D</text><text x="116.2" y="109.3" font-size="12" text-anchor="middle">E</text><text x="225" y="109.3" font-size="12" text-anchor="middle">F</text><text x="45.7" y="112.3" font-size="12" text-anchor="middle">H</text><text x="158.7" y="112.3" font-size="12" text-anchor="middle">K</text></svg>'
+        explain: 例：「A から BC に垂線 AH、D から EF に垂線 DK をひく。△ABH と △DEK で、∠AHB = ∠DKE = 90°、∠B = ∠E（△ABC ∽ △DEF の対応する角）なので、2 組の角がそれぞれ等しく △ABH ∽ △DEK。よって AH:DK = AB:DE = 2:3 で、DK は AH の 3/2 倍。EF も BC の 3/2 倍。△DEF の面積 = EF × DK ÷ 2 = (BC × 3/2) × (AH × 3/2) ÷ 2 = (BC × AH ÷ 2) × 9/4 なので、△DEF の面積は △ABC の面積の 9/4 倍で、面積の比は 4:9。」と書ければよい。① 高さを垂線として決めている、② 高さの比も 2:3 になることを相似で示している、③ 底辺と高さがどちらも 3/2 倍なので面積は 3/2 × 3/2 倍、と結んでいる、の 3 点を見る。底辺だけが 3/2 倍になると考えて 2:3 としていないかも見る。
+        hints:
+          - 面積は 底辺 × 高さ ÷ 2 です。BC と EF に高さをひきましょう。
+          - 高さの比も 2:3 になることを、小さな直角三角形の相似で示しましょう。
+          - 底辺も高さも 3/2 倍のとき、面積は何倍になるでしょう。
+        paths:
+          - [高さ AH、DK をひく, "△ABH ∽ △DEK で AH:DK = 2:3", EF と DK はどちらも 3/2 倍, 面積は 3/2 × 3/2 = 9/4 倍, "面積の比 4:9"]
+      - part: 今日
+        text: △ABC で AB = 8 cm、BC = 12 cm、CA = 10 cm です。辺 AB、BC、CA の中点をそれぞれ D、E、F とするとき、△DEF のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="63.8,70 120,119.6 153.8,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="97.5,20.4 30,119.6 210,119.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="63.8,70 120,119.6 153.8,70" stroke="currentColor" stroke-width="2" fill="none"/><text x="97.5" y="15.6" font-size="12" text-anchor="middle">A</text><text x="22" y="131.8" font-size="12" text-anchor="middle">B</text><text x="218" y="131.8" font-size="12" text-anchor="middle">C</text><text x="53.8" y="72.2" font-size="12" text-anchor="middle">D</text><text x="120" y="135.8" font-size="12" text-anchor="middle">E</text><text x="163.8" y="72.2" font-size="12" text-anchor="middle">F</text><circle cx="63.8" cy="70" r="2.6" fill="currentColor"/><circle cx="120" cy="119.6" r="2.6" fill="currentColor"/><circle cx="153.8" cy="70" r="2.6" fill="currentColor"/><text x="38.9" y="92.3" font-size="12" text-anchor="end">8 cm</text><text x="165" y="137.8" font-size="12" text-anchor="middle">12 cm</text><text x="132.8" y="40.4" font-size="12" text-anchor="start">10 cm</text></svg>'
+        answer: 15
+        check: "Fraction(8 + 12 + 10, 2)"
+        hints:
+          - DE は、△ABC のどの辺の半分でしょう。
+          - 3 つの辺 DE、EF、FD を、中点連結定理で求めましょう。
+          - 3 つの辺をたしましょう。
+        paths:
+          - [DE = CA × 1/2 = 5, EF = AB × 1/2 = 4, FD = BC × 1/2 = 6, 5 + 4 + 6 = 15 cm]
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD = 2 cm、DB = 3 cm、DE = 4 cm です。BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text><text x="68.1" y="43" font-size="12" text-anchor="end">2 cm</text><text x="41" y="95" font-size="12" text-anchor="end">3 cm</text><text x="102.5" y="55.8" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 10
+        check: "4 * Fraction(2 + 3, 2)"
+        hints:
+          - DE:BC = AD:AB です。
+          - AB は何 cm でしょう。
+          - BC は DE の何倍でしょう。
+        paths:
+          - ["AD:AB = 2:5", BC = 4 × 5/2 = 10 cm]
+    extra:
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD:DB = 3:2、AE = 9 cm です。EC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 58.4,80.4 158.3,80.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.4" y1="80.4" x2="158.3" y2="80.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="49.4" y="84.6" font-size="12" text-anchor="middle">D</text><text x="167.3" y="84.6" font-size="12" text-anchor="middle">E</text><text x="136.6" y="53.4" font-size="12" text-anchor="start">9 cm</text></svg>'
+        answer: 6
+        check: "9 * Fraction(2, 3)"
+        hints:
+          - AD:DB = AE:EC です。
+          - EC は AE の何倍でしょう。
+          - 3:2 を、分数の倍に直しましょう。
+        paths:
+          - ["AE:EC = 3:2", EC = 9 × 2/3 = 6 cm]
+      - part: 今日
+        text: 相似な 2 つの三角形の相似比は 3:2 です。大きいほうの面積が 27 cm² のとき、小さいほうの面積は何 cm² ですか。
+        answer: 12
+        check: "27 * Fraction(2 * 2, 3 * 3)"
+        hints:
+          - 面積の比は何:何でしょう。
+          - 小さいほうは、大きいほうの何倍でしょう。
+          - 27 にその数をかけましょう。
+        paths:
+          - ["面積の比 (3 × 3):(2 × 2) = 9:4", 27 × 4/9 = 12 cm²]
+      - part: 今日
+        text: △ABC の辺 AB、AC の中点を M、N とします。△ABC の面積が 36 cm² のとき、△AMN の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="132.9,18 88.4,70 164.5,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="132.9,18 44,122 196,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.4" y1="70" x2="164.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="132.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="36" y="134.2" font-size="12" text-anchor="middle">B</text><text x="204" y="134.2" font-size="12" text-anchor="middle">C</text><text x="78.4" y="72.2" font-size="12" text-anchor="middle">M</text><text x="174.5" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="88.4" cy="70" r="2.6" fill="currentColor"/><circle cx="164.5" cy="70" r="2.6" fill="currentColor"/></svg>'
+        answer: 9
+        check: "36 * Fraction(1, 4)"
+        hints:
+          - △AMN と △ABC の相似比は何:何でしょう。
+          - 面積の比は何:何でしょう。
+          - △AMN は △ABC の何分の 1 でしょう。
+        paths:
+          - ["相似比 1:2", "面積の比 1:4", 36 × 1/4 = 9 cm²]
+
+  - day: 8
+    items:
+      - part: 思い出す
+        text: 縮尺 1/200 の縮図で 3.5 cm の長さは、実際には何 cm ですか。
+        answer: 700
+        check: "Fraction(7, 2) * 200"
+        hints:
+          - 縮尺 1/200 は、実際の長さを 1/200 にちぢめたということです。
+          - 実際の長さは、縮図の長さの何倍でしょう。
+          - 3.5 × 200 を計算しましょう。
+        paths:
+          - [実際は縮図の 200 倍, 3.5 × 200 = 700 cm]
+      - part: 思い出す
+        text: △ABC で ∠A = 45°、∠B = 70° です。∠C の外角は何度ですか。
+        answer: 115
+        check: "45 + 70"
+        hints:
+          - 外角は、辺をのばしてできる角です。
+          - ∠C と ∠C の外角をあわせると 180° です。
+          - 外角は、となりにない 2 つの内角の和にも等しくなります。
+        paths:
+          - [∠C = 180° − 45° − 70° = 65°, 外角 = 180° − 65° = 115°]
+          - [外角 = ∠A + ∠B, 45° + 70° = 115°]
+      - part: 今日
+        text: 台形 ABCD で AD ∥ BC、AD = 4 cm、BC = 6 cm です。対角線 AC と BD の交点を O とするとき、△OAD と △OCB の面積の比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,59.6 68,18 172,18" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,59.6 198,122 42,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="68,18 42,122 198,122 172,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="18" x2="198" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="64" y="13.2" font-size="12" text-anchor="middle">A</text><text x="35" y="135.2" font-size="12" text-anchor="middle">B</text><text x="205" y="135.2" font-size="12" text-anchor="middle">C</text><text x="176" y="13.2" font-size="12" text-anchor="middle">D</text><text x="120" y="75.8" font-size="12" text-anchor="middle">O</text><text x="120" y="10.2" font-size="12" text-anchor="middle">4 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        choices: ["2:3", "4:9", "9:4"]
+        answer: "4:9"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(4 * 4, 6 * 6))"
+        hints:
+          - △OAD と △OCB は相似です。等しい角を 2 組見つけましょう。
+          - 相似比は AD:CB です。
+          - 面積の比は、相似比の数をそれぞれ 2 回かけた比です。
+        paths:
+          - [AD ∥ BC の錯角と対頂角, △OAD ∽ △OCB, "相似比 4:6 = 2:3", "面積の比 4:9"]
+      - part: 今日
+        text: △ABC ∽ △DEF で、∠A = 52°、∠E = 63° です。∠F は何度ですか。
+        answer: 65
+        check: "180 - 52 - 63"
+        hints:
+          - ∠A に対応する △DEF の角はどれでしょう。
+          - ∠D は何度でしょう。
+          - 三角形の 3 つの角の和は 180° です。
+        paths:
+          - [∠D = ∠A = 52°, ∠F = 180° − 52° − 63°, 65°]
+      - part: 今日
+        text: 同じ時刻に、高さ 150 cm の棒の影が 200 cm、ビルの影が 1600 cm でした。ビルの高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="59.4,122 59.4,18 198.1,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="41.9,122 41.9,109 59.3,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="41.9" y1="122" x2="198.1" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="41.9" y1="122" x2="41.9" y2="109" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.4" y1="122" x2="59.4" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.9" y1="109" x2="59.3" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="59.4" y1="18" x2="198.1" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="36.9" y="119.7" font-size="12" text-anchor="end">150 cm</text><text x="50.6" y="139.2" font-size="12" text-anchor="middle">200 cm</text><text x="128.7" y="139.2" font-size="12" text-anchor="middle">1600 cm</text><text x="41.9" y="104.2" font-size="12" text-anchor="middle">棒</text><text x="59.4" y="13.2" font-size="12" text-anchor="middle">ビル</text><line x1="41.9" y1="122" x2="59.3" y2="122" stroke="currentColor" stroke-width="4" fill="none"/><line x1="59.4" y1="122" x2="198.1" y2="122" stroke="currentColor" stroke-width="4" fill="none"/><polyline points="41.9,114 49.9,114 49.9,122" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="59.4,114 67.4,114 67.4,122" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 1200
+        check: "150 * Fraction(1600, 200)"
+        hints:
+          - 棒と影、ビルと影でできる三角形は相似です。
+          - ビルの影は、棒の影の何倍でしょう。
+          - ビルの高さも同じ倍です。
+        paths:
+          - [1600 ÷ 200 = 8 倍, 150 × 8 = 1200 cm]
+      - part: 挑戦
+        text: △ABC の辺 AB の上に AD:DB = 3:1 となる点 D をとります。D を通り BC に平行な直線と辺 AC の交点を E、E を通り AB に平行な直線と辺 BC の交点を F とします。BC = 16 cm のとき、BF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="108.8,18 35,122 205,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="96" x2="181" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181" y1="96" x2="162.5" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="108.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="27" y="134.2" font-size="12" text-anchor="middle">B</text><text x="213" y="134.2" font-size="12" text-anchor="middle">C</text><text x="43.4" y="98.2" font-size="12" text-anchor="middle">D</text><text x="191" y="98.2" font-size="12" text-anchor="middle">E</text><text x="162.5" y="138.2" font-size="12" text-anchor="middle">F</text><text x="120" y="140.2" font-size="12" text-anchor="middle">16 cm</text></svg>'
+        answer: 12
+        check: "16 - 16 * Fraction(1, 4)"
+        hints:
+          - DE ∥ BC から、AE:EC を求めましょう。
+          - EF ∥ AB です。△CEF と △CAB で、CF:CB を求めましょう。
+          - BF = BC − CF です。
+        paths:
+          - ["AE:EC = AD:DB = 3:1", "CF:CB = CE:CA = 1:4", CF = 16 × 1/4 = 4, BF = 16 − 4 = 12 cm]
+    extra:
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD:DB = 2:1 です。△ABC の面積が 45 cm² のとき、四角形 DBCE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="54.8,87.3 36.8,122 203.2,122 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 25
+        check: "45 - 45 * Fraction(2 * 2, 3 * 3)"
+        hints:
+          - 相似比 AD:AB を求めましょう。
+          - △ADE の面積は、△ABC の面積の何倍でしょう。
+          - 四角形 DBCE は、△ABC から △ADE を取りのぞいた部分です。
+        paths:
+          - ["相似比 2:3", "面積の比 4:9", △ADE = 45 × 4/9 = 20, 45 − 20 = 25 cm²]
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠OAB = 35°、∠AOB = 100° のとき、∠OCD は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="89.5" y1="29.8" x2="210" y2="29.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.7" y1="110.2" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.5" y1="29.8" x2="190.7" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="29.8" x2="30" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="83.5" y="25" font-size="12" text-anchor="middle">A</text><text x="216" y="25" font-size="12" text-anchor="middle">B</text><text x="24" y="124.4" font-size="12" text-anchor="middle">C</text><text x="196.7" y="124.4" font-size="12" text-anchor="middle">D</text><text x="144.9" y="69.5" font-size="12" text-anchor="middle">O</text><path d="M100.4 38.5 A14 14 0 0 0 103.5 29.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="114" y="42.2" font-size="11" text-anchor="middle">35°</text><path d="M145.6 58.6 A14 14 0 0 0 121.9 55.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="136.1" y="42.3" font-size="11" text-anchor="middle">100°</text><polyline points="145.7,25.8 151.7,29.8 145.7,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="106.4,106.2 112.4,110.2 106.4,114.2" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 45
+        check: "180 - 35 - 100"
+        hints:
+          - △OAB の ∠OBA は何度でしょう。
+          - ∠OCD と ∠OBA は錯角です。
+          - 平行線の錯角は等しくなります。
+        paths:
+          - [∠OBA = 180° − 35° − 100° = 45°, ∠OCD = ∠OBA（錯角）, 45°]
+      - part: 今日
+        text: 縮尺 1:500 の縮図で 1.8 cm の長さは、実際には何 cm ですか。
+        answer: 900
+        check: "Fraction(9, 5) * 500"
+        hints:
+          - 縮尺 1:500 では、実際の長さは縮図の長さの何倍でしょう。
+          - 1.8 × 500 を計算しましょう。
+          - 1.8 × 5 を先に計算してもよいでしょう。
+        paths:
+          - [実際は縮図の 500 倍, 1.8 × 500 = 900 cm]
+
+  - day: 9
+    items:
+      - part: 今日
+        text: △ABC ∽ △DEF で、AB = 8 cm、AC = 10 cm、DE = 12 cm です。DF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="42.1,57.8 26,106.6 83.8,106.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="151.3,33.4 127.2,106.6 214,106.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="42.1,57.8 26,106.6 83.8,106.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="151.3,33.4 127.2,106.6 214,106.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.1" y="53" font-size="12" text-anchor="middle">A</text><text x="19" y="119.8" font-size="12" text-anchor="middle">B</text><text x="90.8" y="119.8" font-size="12" text-anchor="middle">C</text><text x="151.3" y="28.6" font-size="12" text-anchor="middle">D</text><text x="120.2" y="119.8" font-size="12" text-anchor="middle">E</text><text x="221" y="119.8" font-size="12" text-anchor="middle">F</text><text x="25.5" y="82.7" font-size="12" text-anchor="end">8 cm</text><text x="70.6" y="78.6" font-size="12" text-anchor="start">10 cm</text><text x="130.7" y="70.5" font-size="12" text-anchor="end">12 cm</text></svg>'
+        answer: 15
+        check: "10 * Fraction(12, 8)"
+        hints:
+          - DF に対応する辺はどれでしょう。
+          - DE は AB の何倍でしょう。
+          - DF も AC の同じ倍です。
+        paths:
+          - [DE は AB の 12/8 = 3/2 倍, DF = 10 × 3/2 = 15 cm]
+      - part: 今日
+        text: 3 つの辺が 6 cm、8 cm、9 cm の三角形と相似な三角形はどれですか。
+        choices: [9 cm、11 cm、12 cm, 8 cm、10 cm、11 cm, 9 cm、12 cm、13.5 cm]
+        answer: 9 cm、12 cm、13.5 cm
+        check: "[c for c, s in {'9 cm、11 cm、12 cm': (9, 11, 12), '8 cm、10 cm、11 cm': (8, 10, 11), '9 cm、12 cm、13.5 cm': (9, 12, Fraction(27, 2))}.items() if len(set([Fraction(s[i], (6, 8, 9)[i]) for i in range(3)])) == 1][0]"
+        hints:
+          - 短い辺どうし、長い辺どうしを組にしましょう。
+          - それぞれの組で、何倍になっているかを調べましょう。
+          - 3 組とも同じ倍のものを選びましょう。
+        paths:
+          - [6 → 9、8 → 12、9 → 13.5, どれも 3/2 倍, 相似]
+      - part: 今日
+        text: 図の △ABC で、辺 BC の上に ∠DAC = ∠ABC となる点 D をとりました。△ABC と相似な三角形を、対応する頂点の順に正しく書いたものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="134.4,23.4 30,116.6 210,116.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="134.4" y1="23.4" x2="130" y2="116.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="134.4" y="18.6" font-size="12" text-anchor="middle">A</text><text x="22" y="128.8" font-size="12" text-anchor="middle">B</text><text x="218" y="128.8" font-size="12" text-anchor="middle">C</text><text x="132" y="132.7" font-size="12" text-anchor="middle">D</text><path d="M44 116.6 A14 14 0 0 0 40.4 107.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M133.8 37.4 A14 14 0 0 0 143.3 34.3" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        choices: [△ABC ∽ △ADC, △ABC ∽ △DAC, △ABC ∽ △CAD]
+        answer: △ABC ∽ △DAC
+        hints:
+          - ∠C は 2 つの三角形に共通です。
+          - ∠ABC と等しい角 ∠DAC は、△DAC のどの頂点の角でしょう。
+          - △ABC の A、B、C に対応する頂点を、順に書きましょう。
+        paths:
+          - [∠C は共通, ∠ABC = ∠DAC なので B と A が対応する, 残りの A と D が対応する, △ABC ∽ △DAC]
+      - part: 今日
+        text: ∠BAC = 90°の直角三角形 ABC で、AB = 20 cm、BC = 25 cm です。A から BC に垂線 AH をひくとき、BH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="145.2,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.2" y1="26.8" x2="145.2" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="138.8,31.6 143.6,38 150,33.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="145.2,105.2 153.2,105.2 153.2,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="145.2" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="145.2" y="129.4" font-size="12" text-anchor="middle">H</text><text x="80.7" y="64.6" font-size="12" text-anchor="end">20 cm</text><text x="170.4" y="130.4" font-size="12" text-anchor="middle">25 cm</text></svg>'
+        answer: 16
+        check: "20 * Fraction(20, 25)"
+        hints:
+          - △HBA と △ABC は相似です。
+          - HB に対応する △ABC の辺はどれでしょう。
+          - 相似比 BA:BC を使いましょう。
+        paths:
+          - [△HBA ∽ △ABC, "相似比 BA:BC = 20:25 = 4:5", BH = 20 × 4/5 = 16 cm]
+      - part: 今日
+        text: 図の △ABC で DE ∥ BC、AD = 4 cm、DB = 6 cm、BC = 20 cm です。DE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 69.2,59.6 135.8,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.2" y1="59.6" x2="135.8" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.2" y="63.8" font-size="12" text-anchor="middle">D</text><text x="144.8" y="63.8" font-size="12" text-anchor="middle">E</text><text x="68.1" y="43" font-size="12" text-anchor="end">4 cm</text><text x="41" y="95" font-size="12" text-anchor="end">6 cm</text><text x="120" y="139.2" font-size="12" text-anchor="middle">20 cm</text></svg>'
+        answer: 8
+        check: "20 * Fraction(4, 4 + 6)"
+        hints:
+          - DE:BC = AD:AB です。
+          - AB は何 cm でしょう。
+          - DE は BC の何倍でしょう。
+        paths:
+          - ["AD:AB = 4:10 = 2:5", DE = 20 × 2/5 = 8 cm]
+      - part: 今日
+        text: △ABC で AB = 14 cm、BC = 18 cm、CA = 16 cm です。辺 AB、AC の中点をそれぞれ M、N とするとき、△AMN のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="105.5,18 73.5,70 152,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="105.5,18 41.5,122 198.5,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73.5" y1="70" x2="152" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="105.5" y="13.2" font-size="12" text-anchor="middle">A</text><text x="33.5" y="134.2" font-size="12" text-anchor="middle">B</text><text x="206.5" y="134.2" font-size="12" text-anchor="middle">C</text><text x="63.5" y="72.2" font-size="12" text-anchor="middle">M</text><text x="162" y="72.2" font-size="12" text-anchor="middle">N</text><circle cx="73.5" cy="70" r="2.6" fill="currentColor"/><circle cx="152" cy="70" r="2.6" fill="currentColor"/><text x="49.4" y="93.9" font-size="12" text-anchor="end">14 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">18 cm</text><text x="182.8" y="92.2" font-size="12" text-anchor="start">16 cm</text></svg>'
+        answer: 24
+        check: "Fraction(14 + 18 + 16, 2)"
+        hints:
+          - AM と AN の長さを求めましょう。
+          - MN は BC の何倍でしょう。
+          - 3 つの辺をたしましょう。
+        paths:
+          - [AM = 7、AN = 8, MN = 18 × 1/2 = 9, 7 + 9 + 8 = 24 cm]
+      - part: 今日
+        text: 相似な 2 つの図形の相似比は 2:5 です。小さいほうの面積が 12 cm² のとき、大きいほうの面積は何 cm² ですか。
+        answer: 75
+        check: "12 * Fraction(5 * 5, 2 * 2)"
+        hints:
+          - 面積の比は、相似比の数をそれぞれ 2 回かけた比です。
+          - 面積の比は何:何でしょう。
+          - 大きいほうは小さいほうの何倍でしょう。
+        paths:
+          - ["面積の比 (2 × 2):(5 × 5) = 4:25", 12 × 25/4 = 75 cm²]
+      - part: 挑戦
+        text: 図の台形 ABCD で AD ∥ BC、AD = 5 cm、BC = 14 cm です。辺 AB の上に AE:EB = 2:1 となる点 E をとり、E を通って BC に平行な直線が辺 DC と交わる点を F とします。EF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.9,37.9 30,102.1 210,102.1 152.1,37.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.3" y1="80.7" x2="190.7" y2="80.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="83.9" y="33.1" font-size="12" text-anchor="middle">A</text><text x="23" y="115.3" font-size="12" text-anchor="middle">B</text><text x="217" y="115.3" font-size="12" text-anchor="middle">C</text><text x="156.1" y="33.1" font-size="12" text-anchor="middle">D</text><text x="39.3" y="84.9" font-size="12" text-anchor="middle">E</text><text x="200.7" y="84.9" font-size="12" text-anchor="middle">F</text><text x="120" y="30.1" font-size="12" text-anchor="middle">5 cm</text><text x="120" y="120.3" font-size="12" text-anchor="middle">14 cm</text></svg>'
+        answer: 11
+        check: "14 * Fraction(2, 3) + 5 * Fraction(1, 3)"
+        hints:
+          - 対角線 AC をひいて、EF との交点を G としましょう。
+          - △ABC で EG を、△CDA で GF を求めましょう。
+          - AG:GC は AE:EB と同じ比です。
+        paths:
+          - [対角線 AC と EF の交点を G とする, EG = 14 × 2/3 = 28/3, GF = 5 × 1/3 = 5/3, EF = 28/3 + 5/3 = 11 cm]
+    extra:
+      - part: 今日
+        text: 図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 10 cm、DC = 4 cm、OA = 7.5 cm のとき、OD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="34" x2="210" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120.7" y1="106" x2="48.7" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="34" x2="120.7" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="34" x2="48.7" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><text x="24" y="29.2" font-size="12" text-anchor="middle">A</text><text x="216" y="29.2" font-size="12" text-anchor="middle">B</text><text x="42.7" y="120.2" font-size="12" text-anchor="middle">C</text><text x="126.7" y="120.2" font-size="12" text-anchor="middle">D</text><text x="106.8" y="90.6" font-size="12" text-anchor="middle">O</text><text x="120" y="26.2" font-size="12" text-anchor="middle">10 cm</text><text x="84.7" y="124.2" font-size="12" text-anchor="middle">4 cm</text><text x="55.4" y="75.3" font-size="12" text-anchor="end">7.5 cm</text><polyline points="116,30 122,34 116,38" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="80.7,102 86.7,106 80.7,110" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 3
+        check: "Fraction(15, 2) * Fraction(4, 10)"
+        hints:
+          - △OAB ∽ △ODC です。
+          - DC は AB の何倍でしょう。
+          - OD は OA の同じ倍です。
+        paths:
+          - [DC は AB の 4/10 = 2/5 倍, OD = 7.5 × 2/5 = 3 cm]
+      - part: 今日
+        text: △ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、AD:DB = 3:5、AE:EC = 6:10 です。DE と BC は平行ですか。
+        choices: [平行ではない, 平行である]
+        answer: 平行である
+        check: "'平行である' if Fraction(3, 5) == Fraction(6, 10) else '平行ではない'"
+        hints:
+          - 三角形と比の定理の逆を使いましょう。
+          - 6:10 を簡単にしましょう。
+          - AD:DB と AE:EC が等しいかをくらべましょう。
+        paths:
+          - ["6:10 = 3:5", "AD:DB = AE:EC", DE ∥ BC]
+      - part: 今日
+        text: 相似な 2 つの図形の面積の比が 16:49 です。相似比はどれですか。
+        choices: ["16:49", "7:4", "4:7"]
+        answer: "4:7"
+        check: "[('%d:%d' % (a, b)) for a in range(1, 10) for b in range(1, 10) if a * a * 49 == b * b * 16 and Fraction(a, b).denominator == b][0]"
+        hints:
+          - 相似比の数をそれぞれ 2 回かけた比が、面積の比です。
+          - 2 回かけて 16 になる数、49 になる数を考えましょう。
+          - 面積の比を、そのまま相似比にしないようにしましょう。
+        paths:
+          - [4 × 4 = 16、7 × 7 = 49, "相似比は 4:7"]

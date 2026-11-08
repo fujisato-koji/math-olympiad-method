@@ -1,0 +1,694 @@
+# G-019 三平方の定理
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と √ の check は A-016 に合わせる。
+# 三平方の定理：直角三角形の直角をはさむ 2 辺を a、b、斜辺（直角に向かい合う辺）を c とすると a² + b² = c²。
+#   逆：三角形の 3 辺 a、b、c で a² + b² = c² ならば、c に向かい合う角は直角。
+# ことば：斜辺、直角二等辺三角形（辺の比 1:1:√2）、30°・60°・90° の直角三角形（辺の比 1:2:√3）、方眼の上の 2 点の距離。
+# 前提は G-017（三角形と四角形の性質）、A-016（平方根）、G-020（相似の証明）、G-008（面積）。G-017 から、二等辺三角形の頂角から
+#   底辺にひいた垂線は底辺を 2 等分すること、正三角形、ひし形の対角線は垂直に交わり互いに 2 等分すること、長方形の性質を使う。
+#   逆の証明の合同条件は G-016。
+# 前提の道に 1 次方程式（A-011）と 2 次方程式（A-017）がないので、「x² + 4² = (8 − x)²」のような方程式を立てる問題
+#   （折り返し、3 辺から高さを求める）は扱わない。わからない辺は「2 乗すると ○ になる正の数」として √ で求める（A-016）。
+# 円（G-010）と座標（G-050、A-006）は前提の道にないので、円の弦や接線、座標の 2 点の距離は扱わず、方眼（1 目 1 cm）の上の点で距離を求める。
+#   空間図形への使い方（直方体の対角線、円錐の高さ）は G-021 で扱う。
+# 図は svg（D-040）。長さの比は問題の数に合わせて描いた。直角のしるしは、直角とわかっている角だけにつけた（逆の問題ではつけない）。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 三平方の定理（方眼の正方形の面積で見る）、斜辺とほかの辺を求める　2 日目 特別な直角三角形、正方形の対角線、正三角形と二等辺三角形の高さ
+#   3 日目 三平方の定理の逆、方眼の上の長さ、台形とひし形　4 日目 わけ（面積による証明、相似による証明、逆の証明）
+#   5 日目 G-017（形の性質）・A-016（平方根の計算）・G-020（相似）・G-008（面積）と混ぜる　6 日目 確認
+# check：整数になる長さは、2 乗してその数になる整数をさがす式。√ を含む答えは choices にし、選択肢ごとの値（math.sqrt）が
+#   問題の長さの式と近い（math.isclose）ものを選び出す（A-016 と同じ）。逆の問題は、2 辺の 2 乗の和と残りの辺の 2 乗をくらべる式。
+# 三平方の定理は、2 点の距離と円の方程式（G-026）、三角比（G-024）、ベクトルの大きさ、空間の距離（G-021）、
+#   物理の速さの合成や波の干渉の計算の道具になる（D-026）。
+
+id: G-019
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 方眼の 1 目は 1 cm です。直角をはさむ 2 辺が 3 cm と 4 cm の直角三角形の、3 つの辺の上に正方形 あ、い、う をかきました。う の面積と、斜辺の長さを求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="51.8" y1="132" x2="51.8" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="64.2" y1="132" x2="64.2" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="76.6" y1="132" x2="76.6" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="89" y1="132" x2="89" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="101.4" y1="132" x2="101.4" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="113.8" y1="132" x2="113.8" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="126.2" y1="132" x2="126.2" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="138.6" y1="132" x2="138.6" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="151" y1="132" x2="151" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="163.4" y1="132" x2="163.4" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="175.8" y1="132" x2="175.8" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="188.2" y1="132" x2="188.2" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="132" x2="188.2" y2="132" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="119.6" x2="188.2" y2="119.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="107.2" x2="188.2" y2="107.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="94.8" x2="188.2" y2="94.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="82.4" x2="188.2" y2="82.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="70" x2="188.2" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="57.6" x2="188.2" y2="57.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="45.2" x2="188.2" y2="45.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="32.8" x2="188.2" y2="32.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="20.4" x2="188.2" y2="20.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.8" y1="8" x2="188.2" y2="8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="101.4,94.8 138.6,94.8 138.6,132 101.4,132" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="101.4,94.8 101.4,45.2 51.8,45.2 51.8,94.8" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="101.4,45.2 138.6,94.8 188.2,57.6 151,8" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="101.4,45.2 138.6,94.8 101.4,94.8" stroke="currentColor" stroke-width="2.5" fill="none"/><polyline points="101.4,86.8 109.4,86.8 109.4,94.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="118" font-size="13" text-anchor="middle">あ</text><text x="76.6" y="74.5" font-size="13" text-anchor="middle">い</text><text x="146" y="54.7" font-size="13" text-anchor="middle">う</text></svg>'
+        explain: あ は 3 × 3 = 9 cm²、い は 4 × 4 = 16 cm² です。う は、まわりの 1 辺 7 cm の正方形から 4 つの直角三角形をひくと 7 × 7 − 4 × 6 = 25 cm² で、あ + い = う になっています。直角三角形の直角をはさむ 2 辺を a、b、斜辺（直角に向かい合う辺）を c とすると、いつも a² + b² = c² がなりたちます（三平方の定理）。ここでは c² = 9 + 16 = 25 なので、斜辺は 2 乗して 25 になる正の数で 5 cm です。
+      - part: 思い出す
+        text: √72 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。
+        choices: [3√6, 6√2, 2√6]
+        answer: 6√2
+        check: "[c for c, v in {'3√6': 3 * math.sqrt(6), '6√2': 6 * math.sqrt(2), '2√6': 2 * math.sqrt(6)}.items() if math.isclose(v, math.sqrt(72))][0]"
+        hints:
+          - 72 を素因数分解しましょう。
+          - 72 の中に、2 乗の因数はあるでしょうか。
+          - できるだけ大きい 2 乗の因数を、根号の外に出しましょう。
+        paths:
+          - [72 = 6² × 2, √(6²) × √2, 6√2]
+        note: 72 = 2² × 18 として 2√18 で止めやすい。根号の中はできるだけ小さい自然数にする。
+      - part: 思い出す
+        text: 2 乗すると 196 になる正の数はいくつですか。
+        answer: 14
+        check: "[x for x in range(1, 30) if x * x == 196][0]"
+        hints:
+          - 10 × 10 = 100、20 × 20 = 400 です。
+          - 2 乗して一の位が 6 になるのは、一の位が 4 か 6 の数です。
+          - 10 と 20 の間で、一の位が 4 の数と 6 の数を 2 乗してみましょう。
+        paths:
+          - [10 と 20 の間, 一の位が 4 か 6, 14 × 14 = 196, 14]
+      - part: 今日
+        text: 直角をはさむ 2 辺が 8 cm と 15 cm の直角三角形の、斜辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,30.5 194,109.5 46,109.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,30.5 194,109.5 46,109.5" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,101.5 54,101.5 54,109.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="38.5" y="26.7" font-size="12" text-anchor="middle">A</text><text x="204.6" y="116.5" font-size="12" text-anchor="middle">B</text><text x="36.3" y="118.8" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">8 cm</text><text x="120" y="127.7" font-size="12" text-anchor="middle">15 cm</text></svg>'
+        answer: 17
+        check: "[c for c in range(1, 100) if c * c == 8 * 8 + 15 * 15][0]"
+        hints:
+          - 斜辺は、直角に向かい合う辺です。
+          - 8² + 15² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [8² + 15² = 64 + 225 = 289, 斜辺² = 289, 斜辺 = 17 cm]
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は 13 cm、辺 AC は 5 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,39.2 194,100.8 46,100.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,39.2 194,100.8 46,100.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,92.8 54,92.8 54,100.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="37.5" y="36.3" font-size="12" text-anchor="middle">A</text><text x="204.8" y="107.3" font-size="12" text-anchor="middle">B</text><text x="35.8" y="109.3" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">5 cm</text><text x="124.6" y="63.1" font-size="12" text-anchor="middle">13 cm</text></svg>'
+        answer: 12
+        check: "[b for b in range(1, 100) if 5 * 5 + b * b == 13 * 13][0]"
+        hints:
+          - 斜辺はどの辺でしょう。
+          - BC² + 5² = 13² です。
+          - 13² − 5² を計算しましょう。
+        paths:
+          - [BC² = 13² − 5² = 169 − 25 = 144, BC = 12 cm]
+        note: 13² + 5² としやすい。斜辺がわかっているときは、斜辺の 2 乗からひく。
+      - part: 今日
+        text: 直角をはさむ 2 辺が 2 cm と 3 cm の直角三角形の、斜辺の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,30 180,110 60,110" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="60,30 180,110 60,110" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="60,102 68,102 68,110" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="53.4" y="25.4" font-size="12" text-anchor="middle">A</text><text x="190.4" y="117.7" font-size="12" text-anchor="middle">B</text><text x="50.8" y="120.3" font-size="12" text-anchor="middle">C</text><text x="51.2" y="74.2" font-size="12" text-anchor="end">2 cm</text><text x="120" y="128.2" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        choices: [√5, √13, 5]
+        answer: √13
+        check: "[c for c, v in {'√5': math.sqrt(5), '√13': math.sqrt(13), '5': 5}.items() if math.isclose(v, math.sqrt(2 * 2 + 3 * 3))][0]"
+        hints:
+          - 斜辺² = 2² + 3² です。
+          - 2² + 3² を計算しましょう。
+          - 2 乗してその数になる正の数を、√ を使って表しましょう。
+        paths:
+          - [2² + 3² = 4 + 9 = 13, 斜辺 = √13 cm]
+        note: 2 乗せずに 2 + 3 = 5 としやすい。
+      - part: 挑戦
+        text: 図のように、OA = 1 cm の直角三角形 OAB に、長さ 1 cm の辺を直角につないで、直角三角形 OBC、OCD を順につくりました（AB = BC = CD = 1 cm）。OD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="113.9" y1="107.5" x2="153.9" y2="107.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="113.9" y1="107.5" x2="153.9" y2="67.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="113.9" y1="107.5" x2="125.6" y2="39.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="113.9" y1="107.5" x2="86.1" y2="32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.9" y1="107.5" x2="153.9" y2="67.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.9" y1="67.5" x2="125.6" y2="39.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="125.6" y1="39.2" x2="86.1" y2="32.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="105.9" y="117.7" font-size="12" text-anchor="middle">O</text><text x="160.4" y="120.6" font-size="12" text-anchor="middle">A</text><text x="164.8" y="70.4" font-size="12" text-anchor="middle">B</text><text x="125.2" y="32.4" font-size="12" text-anchor="middle">C</text><text x="78.2" y="29.1" font-size="12" text-anchor="middle">D</text><polyline points="147.9,107.5 147.9,101.5 153.9,101.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="149.6,71.8 145.4,67.5 149.6,63.3" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="124.6,45.2 118.6,44.1 119.7,38.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="162.8" y="86.9" font-size="11" text-anchor="middle">1</text><text x="144" y="48.2" font-size="11" text-anchor="middle">1</text><text x="104.7" y="29.8" font-size="11" text-anchor="middle">1</text><text x="133.9" y="122.4" font-size="11" text-anchor="middle">1</text></svg>'
+        answer: 2
+        check: "[d for d in range(1, 10) if d * d == 1 + 1 + 1 + 1][0]"
+        hints:
+          - OB は何 cm でしょう。√ を使って表しましょう。
+          - OC² = OB² + 1² です。
+          - OD² = OC² + 1² を、2 乗のまま計算しましょう。
+        paths:
+          - [OB² = 1 + 1 = 2, OC² = 2 + 1 = 3, OD² = 3 + 1 = 4, OD = 2 cm]
+        note: √ のまま足そうとして √2 + 1 のようにまちがえやすい。2 乗のまま進めると楽になる。
+    extra:
+      - part: 今日
+        text: 直角をはさむ 2 辺が 9 cm と 12 cm の直角三角形の、斜辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,18 189.3,122 50.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="50.7,18 189.3,122 50.7,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="50.7,114 58.7,114 58.7,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="44.6" y="13" font-size="12" text-anchor="middle">A</text><text x="199.6" y="130.1" font-size="12" text-anchor="middle">B</text><text x="41.9" y="132.8" font-size="12" text-anchor="middle">C</text><text x="41.9" y="74.2" font-size="12" text-anchor="end">9 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">12 cm</text></svg>'
+        answer: 15
+        check: "[c for c in range(1, 100) if c * c == 9 * 9 + 12 * 12][0]"
+        hints:
+          - 斜辺² = 9² + 12² です。
+          - 81 + 144 を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [9² + 12² = 81 + 144 = 225, 斜辺 = 15 cm]
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は 25 cm、辺 AC は 7 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,48.4 194,91.6 46,91.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,48.4 194,91.6 46,91.6" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,83.6 54,83.6 54,91.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.5" y="47.1" font-size="12" text-anchor="middle">A</text><text x="204.9" y="97.4" font-size="12" text-anchor="middle">B</text><text x="35.4" y="98.9" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">7 cm</text><text x="123.4" y="62.7" font-size="12" text-anchor="middle">25 cm</text></svg>'
+        answer: 24
+        check: "[b for b in range(1, 100) if 7 * 7 + b * b == 25 * 25][0]"
+        hints:
+          - BC² + 7² = 25² です。
+          - 25² − 7² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [BC² = 625 − 49 = 576, BC = 24 cm]
+      - part: 今日
+        text: 直角をはさむ 2 辺がどちらも 4 cm の直角三角形の、斜辺の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 172,122 68,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="68,18 172,122 68,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="68,114 76,114 76,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="63.1" y="12.4" font-size="12" text-anchor="middle">A</text><text x="181.8" y="131.1" font-size="12" text-anchor="middle">B</text><text x="60.2" y="134" font-size="12" text-anchor="middle">C</text><text x="59.2" y="74.2" font-size="12" text-anchor="end">4 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        choices: [8, 4√2, 2√2]
+        answer: 4√2
+        check: "[c for c, v in {'8': 8, '4√2': 4 * math.sqrt(2), '2√2': 2 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(4 * 4 + 4 * 4))][0]"
+        hints:
+          - 斜辺² = 4² + 4² です。
+          - 2 乗してその数になる正の数を、√ で表しましょう。
+          - √32 を a√b の形にしましょう。
+        paths:
+          - [4² + 4² = 32, 斜辺 = √32 = 4√2 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 1 辺 2 cm の正方形の対角線と、1 辺 2 cm の正三角形の高さを求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="40,41.4 40,98.6 97.1,98.6 97.1,41.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="171.4,49.1 142.9,98.6 200,98.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="40,41.4 40,98.6 97.1,98.6 97.1,41.4" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="171.4,49.1 142.9,98.6 200,98.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="98.6" x2="97.1" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="171.4" y1="49.1" x2="171.4" y2="98.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="40,90.6 48,90.6 48,98.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="171.4,90.6 179.4,90.6 179.4,98.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.6" y="114.8" font-size="12" text-anchor="middle">2 cm</text><text x="34" y="74.2" font-size="12" text-anchor="end">2 cm</text><text x="187.4" y="114.8" font-size="12" text-anchor="middle">2 cm</text><text x="149.1" y="74" font-size="12" text-anchor="end">2 cm</text></svg>'
+        explain: 正方形の対角線は、直角をはさむ 2 辺がどちらも 2 cm の直角二等辺三角形の斜辺なので、2² + 2² = 8 で、対角線は √8 = 2√2 cm です。この三角形の辺の比は 1:1:√2 です。正三角形の高さは、頂点から底辺に下ろした垂線で、底辺のまん中に下ります。斜辺 2 cm、底辺の半分 1 cm の直角三角形ができるので、高さ² = 2² − 1² = 3 で、高さは √3 cm です。この三角形の角は 30°、60°、90° で、辺の比は 1:2:√3 です。この 2 つの直角三角形はよく出てくるので、形と辺の比を覚えておきます。
+      - part: 思い出す
+        text: 直角をはさむ 2 辺が 7 cm と 24 cm の直角三角形の、斜辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,48.4 194,91.6 46,91.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,48.4 194,91.6 46,91.6" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,83.6 54,83.6 54,91.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.5" y="47.1" font-size="12" text-anchor="middle">A</text><text x="204.9" y="97.4" font-size="12" text-anchor="middle">B</text><text x="35.4" y="98.9" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">7 cm</text><text x="120" y="109.8" font-size="12" text-anchor="middle">24 cm</text></svg>'
+        answer: 25
+        check: "[c for c in range(1, 100) if c * c == 7 * 7 + 24 * 24][0]"
+        hints:
+          - 斜辺² = 7² + 24² です。
+          - 49 + 576 を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [49 + 576 = 625, 斜辺 = 25 cm]
+      - part: 思い出す
+        text: 図の二等辺三角形 ABC で AB = AC です。頂点 A から辺 BC に垂線 AH をひきます。BC = 10 cm のとき、BH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 50.5,122 189.5,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 50.5,122 189.5,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="40.2" y="130.1" font-size="12" text-anchor="middle">B</text><text x="199.8" y="130.1" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="154.7" y="139.2" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        answer: 5
+        check: "Fraction(10, 2)"
+        hints:
+          - 二等辺三角形の頂点から底辺にひいた垂線は、底辺をどのように分けるでしょう。
+          - △ABH と △ACH は合同です。
+          - BH = HC です。
+        paths:
+          - [△ABH ≡ △ACH, BH = HC, BH = 10 ÷ 2 = 5 cm]
+      - part: 今日
+        text: 1 辺 6 cm の正方形の対角線の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 68,122 172,122 172,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="68,114 76,114 76,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="60.2" y="14.4" font-size="12" text-anchor="middle">A</text><text x="60.2" y="134" font-size="12" text-anchor="middle">B</text><text x="179.8" y="134" font-size="12" text-anchor="middle">C</text><text x="179.8" y="14.4" font-size="12" text-anchor="middle">D</text><text x="120" y="139.2" font-size="12" text-anchor="middle">6 cm</text><text x="62" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        choices: [12, 6√3, 6√2]
+        answer: 6√2
+        check: "[c for c, v in {'12': 12, '6√3': 6 * math.sqrt(3), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(6 * 6 + 6 * 6))][0]"
+        hints:
+          - 対角線で、正方形は 2 つの直角二等辺三角形に分かれます。
+          - 対角線² = 6² + 6² です。
+          - 1:1:√2 の比を使ってもよいでしょう。
+        paths:
+          - [対角線² = 36 + 36 = 72, 対角線 = √72 = 6√2 cm]
+          - ["1:1:√2 より", 6 × √2 = 6√2 cm]
+      - part: 今日
+        text: 1 辺 8 cm の正三角形の高さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">8 cm</text></svg>'
+        choices: [4√2, 4√3, 8√3]
+        answer: 4√3
+        check: "[c for c, v in {'4√2': 4 * math.sqrt(2), '4√3': 4 * math.sqrt(3), '8√3': 8 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(8 * 8 - 4 * 4))][0]"
+        hints:
+          - 高さは底辺のまん中に下ります。底辺の半分は何 cm でしょう。
+          - 高さ² = 8² − 4² です。
+          - √48 を a√b の形にしましょう。
+        paths:
+          - [底辺の半分は 4 cm, 高さ² = 64 − 16 = 48, 高さ = √48 = 4√3 cm]
+      - part: 今日
+        text: 図の二等辺三角形 ABC で AB = AC = 13 cm、BC = 10 cm です。△ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 76.7,122 163.3,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 76.7,122 163.3,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="67.2" y="131.9" font-size="12" text-anchor="middle">B</text><text x="172.8" y="131.9" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="141.7" y="139.2" font-size="12" text-anchor="middle">10 cm</text><text x="89.9" y="69.6" font-size="12" text-anchor="end">13 cm</text><text x="150.1" y="69.6" font-size="12" text-anchor="start">13 cm</text></svg>'
+        answer: 60
+        check: "10 * [h for h in range(1, 30) if h * h + 5 * 5 == 13 * 13][0] // 2"
+        hints:
+          - 頂点 A から BC に垂線 AH をひきましょう。BH は何 cm でしょう。
+          - AH² = 13² − 5² です。
+          - 面積 = 底辺 × 高さ ÷ 2 です。
+        paths:
+          - [BH = 5 cm, AH² = 169 − 25 = 144 で AH = 12 cm, 10 × 12 ÷ 2 = 60 cm²]
+      - part: 挑戦
+        text: 1 辺 6 cm の正三角形の面積はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        choices: [18√3, 9√3, 36]
+        answer: 9√3
+        check: "[c for c, v in {'18√3': 18 * math.sqrt(3), '9√3': 9 * math.sqrt(3), '36': 36}.items() if math.isclose(v, 6 * math.sqrt(36 - 9) / 2)][0]"
+        hints:
+          - まず高さを求めましょう。
+          - 高さ² = 6² − 3² です。
+          - 面積 = 6 × 高さ ÷ 2 です。
+        paths:
+          - [高さ² = 36 − 9 = 27 で高さ = 3√3 cm, 6 × 3√3 ÷ 2, 9√3 cm²]
+        note: ÷ 2 を忘れて 18√3 としやすい。
+    extra:
+      - part: 今日
+        text: たて 5 cm、横 12 cm の長方形の対角線の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,38.3 44,101.7 196,101.7 196,38.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="101.7" x2="196" y2="38.3" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="44,93.7 52,93.7 52,101.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="33.8" y="38.3" font-size="12" text-anchor="middle">A</text><text x="33.8" y="110.1" font-size="12" text-anchor="middle">B</text><text x="206.2" y="110.1" font-size="12" text-anchor="middle">C</text><text x="206.2" y="38.3" font-size="12" text-anchor="middle">D</text><text x="120" y="118.9" font-size="12" text-anchor="middle">12 cm</text><text x="38" y="74.2" font-size="12" text-anchor="end">5 cm</text></svg>'
+        answer: 13
+        check: "[d for d in range(1, 100) if d * d == 5 * 5 + 12 * 12][0]"
+        hints:
+          - 対角線は、直角三角形の斜辺です。
+          - 対角線² = 5² + 12² です。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [25 + 144 = 169, 対角線 = 13 cm]
+      - part: 今日
+        text: ∠C = 90°、∠A = 30°の直角三角形 ABC で、斜辺 AB は 12 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90,18 150,122 90,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90,18 150,122 90,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,114 98,114 98,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86.9" y="11.6" font-size="12" text-anchor="middle">A</text><text x="158.3" y="133.4" font-size="12" text-anchor="middle">B</text><text x="84.5" y="135.7" font-size="12" text-anchor="middle">C</text><text x="128.2" y="68.2" font-size="12" text-anchor="start">12 cm</text><path d="M90 34 A16 16 0 0 0 98 31.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97.7" y="50.8" font-size="11" text-anchor="middle">30°</text></svg>'
+        answer: 6
+        check: "Fraction(12, 2)"
+        hints:
+          - この三角形は、正三角形を半分にした形です。
+          - 辺の比は 1:2:√3 です。斜辺は、比のどの数にあたるでしょう。
+          - BC は 30° の角に向かい合う辺です。
+        paths:
+          - ["1:2:√3 で斜辺が 2 にあたる", BC は 1 にあたる, 12 ÷ 2 = 6 cm]
+      - part: 今日
+        text: 斜辺が 10 cm の直角二等辺三角形の、等しい 2 辺の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 172,122 68,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="68,18 172,122 68,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="68,114 76,114 76,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="63.1" y="12.4" font-size="12" text-anchor="middle">A</text><text x="181.8" y="131.1" font-size="12" text-anchor="middle">B</text><text x="60.2" y="134" font-size="12" text-anchor="middle">C</text><text x="127.4" y="65.7" font-size="12" text-anchor="start">10 cm</text></svg>'
+        choices: [5, 5√2, 10√2]
+        answer: 5√2
+        check: "[c for c, v in {'5': 5, '5√2': 5 * math.sqrt(2), '10√2': 10 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(10 * 10 / 2))][0]"
+        hints:
+          - 等しい 2 辺の 2 乗の和が、10² になります。
+          - 1 辺の 2 乗は、100 の半分です。
+          - √50 を a√b の形にしましょう。
+        paths:
+          - [1 辺² × 2 = 100, 1 辺² = 50, 1 辺 = √50 = 5√2 cm]
+          - ["1:1:√2 より", 1 辺 = 10 ÷ √2 = 5√2 cm]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 3 つの辺が 5 cm、12 cm、13 cm の三角形は、直角三角形でしょうか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="56.6,38 30,102 210,102" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="56.6,38 30,102 210,102" stroke="currentColor" stroke-width="2" fill="none"/><text x="56.6" y="33.2" font-size="12" text-anchor="middle">A</text><text x="22" y="114.2" font-size="12" text-anchor="middle">B</text><text x="218" y="114.2" font-size="12" text-anchor="middle">C</text><text x="34.9" y="69.6" font-size="12" text-anchor="end">5 cm</text><text x="120" y="120.2" font-size="12" text-anchor="middle">13 cm</text><text x="137.9" y="63.1" font-size="12" text-anchor="middle">12 cm</text></svg>'
+        explain: 三平方の定理の逆：三角形の 3 辺を a、b、c とするとき、a² + b² = c² ならば、この三角形は c を斜辺とする直角三角形です。いちばん長い辺を c にして調べます。5² + 12² = 25 + 144 = 169、13² = 169 で等しいので、13 cm の辺に向かい合う角（∠A）が直角の直角三角形です。方眼の上の 2 点の距離も、横とたての長さを直角をはさむ 2 辺とみて、三平方の定理で求められます。
+      - part: 思い出す
+        text: 1 辺 3 cm の正方形の対角線の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 68,122 172,122 172,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="68,114 76,114 76,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="60.2" y="14.4" font-size="12" text-anchor="middle">A</text><text x="60.2" y="134" font-size="12" text-anchor="middle">B</text><text x="179.8" y="134" font-size="12" text-anchor="middle">C</text><text x="179.8" y="14.4" font-size="12" text-anchor="middle">D</text><text x="120" y="139.2" font-size="12" text-anchor="middle">3 cm</text><text x="62" y="74.2" font-size="12" text-anchor="end">3 cm</text></svg>'
+        choices: [3√3, 6, 3√2]
+        answer: 3√2
+        check: "[c for c, v in {'3√3': 3 * math.sqrt(3), '6': 6, '3√2': 3 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(3 * 3 + 3 * 3))][0]"
+        hints:
+          - 対角線は、直角二等辺三角形の斜辺です。
+          - 対角線² = 3² + 3² です。
+          - 1:1:√2 の比を使ってもよいでしょう。
+        paths:
+          - [対角線² = 18, 対角線 = √18 = 3√2 cm]
+      - part: 思い出す
+        text: 10/√5 の分母を有理化すると、どれになりますか。
+        choices: [5√2, 2√5, √2]
+        answer: 2√5
+        check: "[c for c, v in {'5√2': 5 * math.sqrt(2), '2√5': 2 * math.sqrt(5), '√2': math.sqrt(2)}.items() if math.isclose(v, 10 / math.sqrt(5))][0]"
+        hints:
+          - 分母と分子に、同じ数をかけましょう。
+          - √5 × √5 はいくつでしょう。
+          - 分母が整数になったら、約分しましょう。
+        paths:
+          - [(10 × √5)/(√5 × √5), 10√5/5, 2√5]
+      - part: 今日
+        text: 3 つの辺の長さが次のような三角形のうち、直角三角形はどれですか。
+        choices: [6 cm、7 cm、9 cm, 9 cm、40 cm、41 cm, 4 cm、5 cm、6 cm]
+        answer: 9 cm、40 cm、41 cm
+        check: "[c for c, (a, b, d) in {'6 cm、7 cm、9 cm': (6, 7, 9), '9 cm、40 cm、41 cm': (9, 40, 41), '4 cm、5 cm、6 cm': (4, 5, 6)}.items() if a * a + b * b == d * d][0]"
+        hints:
+          - いちばん長い辺を c としましょう。
+          - 残りの 2 辺の 2 乗の和と、c² をくらべましょう。
+          - 等しくなるものが直角三角形です。
+        paths:
+          - [9² + 40² = 81 + 1600 = 1681, 41² = 1681, 等しいので直角三角形]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="124.9" x2="24" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.4" y1="124.9" x2="51.4" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="78.9" y1="124.9" x2="78.9" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="106.3" y1="124.9" x2="106.3" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="133.7" y1="124.9" x2="133.7" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="161.1" y1="124.9" x2="161.1" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="188.6" y1="124.9" x2="188.6" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="124.9" x2="216" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="124.9" x2="216" y2="124.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="97.4" x2="216" y2="97.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="70" x2="216" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="42.6" x2="216" y2="42.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="15.1" x2="216" y2="15.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="51.4" y1="97.4" x2="188.6" y2="42.6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="51.4" cy="97.4" r="3" fill="currentColor"/><text x="41.2" y="104.7" font-size="12" text-anchor="middle">A</text><circle cx="188.6" cy="42.6" r="3" fill="currentColor"/><text x="198.8" y="41.7" font-size="12" text-anchor="middle">B</text></svg>'
+        choices: [7, √29, √21]
+        answer: √29
+        check: "[c for c, v in {'7': 7, '√29': math.sqrt(29), '√21': math.sqrt(21)}.items() if math.isclose(v, math.sqrt(5 * 5 + 2 * 2))][0]"
+        hints:
+          - A から B まで、横に何目、たてに何目進むでしょう。
+          - AB を斜辺とする直角三角形をかきましょう。
+          - AB² = 横² + たて² です。
+        paths:
+          - [横 5 cm、たて 2 cm, AB² = 25 + 4 = 29, AB = √29 cm]
+        note: 横とたてをそのまま足して 7 としやすい。
+      - part: 今日
+        text: 図の台形 ABCD で AD ∥ BC、AB = DC = 5 cm、AD = 4 cm、BC = 10 cm です。この台形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,34 30,106 210,106 156,34" stroke="currentColor" stroke-width="2" fill="none"/><text x="80" y="29.2" font-size="12" text-anchor="middle">A</text><text x="23" y="119.2" font-size="12" text-anchor="middle">B</text><text x="217" y="119.2" font-size="12" text-anchor="middle">C</text><text x="160" y="29.2" font-size="12" text-anchor="middle">D</text><text x="120" y="26.2" font-size="12" text-anchor="middle">4 cm</text><text x="120" y="124.2" font-size="12" text-anchor="middle">10 cm</text><text x="49.2" y="67" font-size="12" text-anchor="end">5 cm</text><text x="190.8" y="67" font-size="12" text-anchor="start">5 cm</text></svg>'
+        answer: 28
+        check: "(lambda h: 4 * h + 2 * Fraction(3 * h, 2))([h for h in range(1, 20) if h * h + 3 * 3 == 5 * 5][0])"
+        hints:
+          - A と D から BC に垂線をひきましょう。BC は 3 つに分かれます。
+          - 両はしの直角三角形の底辺は、(10 − 4) ÷ 2 cm です。
+          - 高さを三平方の定理で求め、長方形と 2 つの直角三角形に分けて面積を求めましょう。
+        paths:
+          - [両はしの底辺は 3 cm, 高さ² = 25 − 9 = 16 で高さ 4 cm, 長方形 4 × 4 = 16、三角形 2 つで 3 × 4 ÷ 2 × 2 = 12, 16 + 12 = 28 cm²]
+      - part: 挑戦
+        text: 方眼の 1 目は 1 cm です。△ABC は直角三角形です。直角の頂点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="81.3" y1="128" x2="81.3" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100.7" y1="128" x2="100.7" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="139.3" y1="128" x2="139.3" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="158.7" y1="128" x2="158.7" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="108.7" x2="178" y2="108.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="89.3" x2="178" y2="89.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="50.7" x2="178" y2="50.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="31.3" x2="178" y2="31.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="81.3,108.7 158.7,70 139.3,31.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="81.3" y1="108.7" x2="158.7" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.7" y1="70" x2="139.3" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.3" y1="31.3" x2="81.3" y2="108.7" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="81.3" cy="108.7" r="3" fill="currentColor"/><text x="73" y="119" font-size="12" text-anchor="middle">A</text><circle cx="158.7" cy="70" r="3" fill="currentColor"/><text x="169.7" y="73.2" font-size="12" text-anchor="middle">B</text><circle cx="139.3" cy="31.3" r="3" fill="currentColor"/><text x="142.8" y="24.1" font-size="12" text-anchor="middle">C</text></svg>'
+        choices: [A, B, C]
+        answer: B
+        check: "(lambda P: [v for v, (p, q) in {'A': ('B', 'C'), 'B': ('A', 'C'), 'C': ('A', 'B')}.items() if (lambda d: d(v, p) + d(v, q) == d(p, q))(lambda s, t: (P[s][0] - P[t][0]) ** 2 + (P[s][1] - P[t][1]) ** 2)][0])({'A': (1, 1), 'B': (5, 3), 'C': (4, 5)})"
+        hints:
+          - 3 つの辺の長さの 2 乗を、方眼から求めましょう。
+          - いちばん長い辺はどれでしょう。
+          - 直角は、いちばん長い辺に向かい合う頂点にあります。
+        paths:
+          - [AB² = 16 + 4 = 20、BC² = 1 + 4 = 5、CA² = 9 + 16 = 25, 20 + 5 = 25 なので CA が斜辺, 直角は B]
+        note: 方眼の上では、直角かどうかが見た目でわかりにくい。2 乗の和で確かめる（三平方の定理の逆）。
+    extra:
+      - part: 今日
+        text: 図のひし形 ABCD の対角線は 24 cm と 10 cm です。1 辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="30,70 120,107.5 210,70 120,32.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="30,70 120,107.5 210,70 120,32.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="70" x2="210" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="107.5" x2="120" y2="32.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="128,70 128,62 120,62" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="21" y="74.2" font-size="12" text-anchor="middle">A</text><text x="120" y="122.7" font-size="12" text-anchor="middle">B</text><text x="219" y="74.2" font-size="12" text-anchor="middle">C</text><text x="120" y="27.7" font-size="12" text-anchor="middle">D</text><text x="75" y="65.2" font-size="12" text-anchor="middle">24 cm</text><text x="125" y="55.5" font-size="12" text-anchor="start">10 cm</text></svg>'
+        answer: 13
+        check: "[s for s in range(1, 50) if s * s == 12 * 12 + 5 * 5][0]"
+        hints:
+          - ひし形の対角線は、それぞれのまん中の点で垂直に交わります。
+          - 対角線の半分の長さは、それぞれ何 cm でしょう。
+          - 1 辺は、直角をはさむ 2 辺が対角線の半分の、直角三角形の斜辺です。
+        paths:
+          - [対角線の半分は 12 cm と 5 cm, 1 辺² = 144 + 25 = 169, 13 cm]
+      - part: 今日
+        text: 3 つの辺が 8 cm、15 cm、17 cm の三角形は、直角三角形ですか。
+        choices: [直角三角形である, 直角三角形ではない]
+        answer: 直角三角形である
+        check: "'直角三角形である' if 8 * 8 + 15 * 15 == 17 * 17 else '直角三角形ではない'"
+        hints:
+          - いちばん長い辺は 17 cm です。
+          - 8² + 15² を計算しましょう。
+          - 17² とくらべましょう。
+        paths:
+          - [8² + 15² = 289, 17² = 289, 等しいので直角三角形]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="85.2" y1="128" x2="85.2" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="108.4" y1="128" x2="108.4" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="131.6" y1="128" x2="131.6" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="154.8" y1="128" x2="154.8" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="104.8" x2="178" y2="104.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="81.6" x2="178" y2="81.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="58.4" x2="178" y2="58.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="35.2" x2="178" y2="35.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="85.2" y1="104.8" x2="154.8" y2="35.2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="85.2" cy="104.8" r="3" fill="currentColor"/><text x="77.4" y="115.8" font-size="12" text-anchor="middle">A</text><circle cx="154.8" cy="35.2" r="3" fill="currentColor"/><text x="162.6" y="30.6" font-size="12" text-anchor="middle">B</text></svg>'
+        choices: [6, 3√2, 2√3]
+        answer: 3√2
+        check: "[c for c, v in {'6': 6, '3√2': 3 * math.sqrt(2), '2√3': 2 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(3 * 3 + 3 * 3))][0]"
+        hints:
+          - 横に何目、たてに何目進むでしょう。
+          - AB² = 横² + たて² です。
+          - √18 を a√b の形にしましょう。
+        paths:
+          - [横 3 cm、たて 3 cm, AB² = 18, AB = 3√2 cm]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 図は、1 辺が a + b の正方形の中に、直角をはさむ 2 辺が a、b で斜辺が c の合同な直角三角形を 4 つならべたものです。これを使って a² + b² = c² を証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,120 170,120 170,20 70,20" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="110,120 170,80 130,20 70,60" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="90" y="135.2" font-size="12" text-anchor="middle">a</text><text x="140" y="135.2" font-size="12" text-anchor="middle">b</text><text x="179" y="104.2" font-size="12" text-anchor="middle">a</text><text x="179" y="54.2" font-size="12" text-anchor="middle">b</text><text x="150" y="15.2" font-size="12" text-anchor="middle">a</text><text x="100" y="15.2" font-size="12" text-anchor="middle">b</text><text x="61" y="44.2" font-size="12" text-anchor="middle">a</text><text x="61" y="94.2" font-size="12" text-anchor="middle">b</text><text x="134" y="98.2" font-size="12" text-anchor="middle">c</text><text x="120" y="74.5" font-size="13" text-anchor="middle">c²</text></svg>'
+        explain: 例：「大きい正方形の 1 辺は a + b なので、面積は (a + b)² = a² + 2ab + b² …①。一方、大きい正方形は 4 つの直角三角形と中の四角形に分かれる。中の四角形は 4 つの辺がどれも c で、角はどれも 180° − （直角三角形の 2 つの鋭角の和 90°）= 90° なので、1 辺 c の正方形である。よって面積は c² + 4 × ab/2 = c² + 2ab …②。①と②は同じ正方形の面積なので a² + 2ab + b² = c² + 2ab。等しい量から同じ 2ab をひいて a² + b² = c²。」と書ければよい。① a、b、c を辺の長さとして決めている、② 面積を 2 通りの式で表し、展開している（A-015）、③ 中が正方形であることを角の和から確かめ、等しい量から同じ量をひいて結んでいる、の 3 点を見る。3 cm、4 cm、5 cm のような例で確かめただけなら、例ではすべての場合を示せないことを話す。
+        hints:
+          - 大きい正方形の面積を、1 辺 a + b から式に表しましょう。
+          - 同じ面積を、4 つの直角三角形と中の正方形の和でも表しましょう。
+          - 2 つの式は等しいので、くらべて同じ部分を取りのぞきましょう。
+        paths:
+          - [(a + b)² = a² + 2ab + b², 4 つの三角形と中の正方形で c² + 2ab, 中が正方形であることを角で確かめる, 等しいので a² + b² = c²]
+      - part: わけ
+        text: ∠C = 90°の直角三角形 ABC で、C から斜辺 AB に垂線 CH をひきます。BC = a、CA = b、AB = c とします。△ACH ∽ △ABC と △CBH ∽ △ABC を使って、a² + b² = c² を証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="30,113.2 210,113.2 94.8,26.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="30,113.2 210,113.2 94.8,26.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="22" y="123.4" font-size="12" text-anchor="middle">A</text><text x="218" y="123.4" font-size="12" text-anchor="middle">B</text><text x="94.8" y="22" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text><text x="160.4" y="70.2" font-size="12" text-anchor="start">a</text><text x="54.4" y="70.2" font-size="12" text-anchor="end">b</text><text x="174" y="129.4" font-size="12" text-anchor="middle">c</text></svg>'
+        explain: 例：「△ACH と △ABC で、∠AHC = ∠ACB = 90°、∠A は共通なので △ACH ∽ △ABC（A と A、C と B、H と C が対応）。対応する辺の比から AH:AC = AC:AB。この比の値を k とすると AC = k × AH、AB = k × AC なので、AH × AB = AH × k × AC = AC × AC。よって b² = AH × c …①。同じように △CBH ∽ △ABC から BC × BC = BH × AB で、a² = BH × c …②。①と②をたして a² + b² = (AH + BH) × c = c × c = c²。」と書ければよい。① 辺を文字で決めている、② 相似から AC × AC = AH × AB の形を導いている、③ AH + BH = AB を使って結んでいる、の 3 点を見る。比の式を積の式に直すところ（外項の積と内項の積）は A-005 で扱っていないので、比の値 k を使って示す。
+        hints:
+          - △ACH と △ABC で、等しい角を 2 組見つけましょう。
+          - 対応する辺の比から、AC × AC を AH と AB で表しましょう。
+          - BC × BC も同じように表して、2 つをたしましょう。
+        paths:
+          - [△ACH ∽ △ABC から b² = AH × c, △CBH ∽ △ABC から a² = BH × c, たして a² + b² = (AH + BH) × c = c²]
+      - part: わけ
+        text: △ABC で BC = a、CA = b、AB = c、a² + b² = c² のとき、∠C = 90°となること（三平方の定理の逆）を証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="25.8,42.4 96.6,97.6 24,96.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="142.5,42.4 216,97.6 142.5,97.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="25.8,42.4 96.6,97.6 24,96.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="142.5,42.4 216,97.6 142.5,97.6" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="142.5,89.6 150.5,89.6 150.5,97.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="21.8" y="37.6" font-size="12" text-anchor="middle">A</text><text x="104.6" y="107.8" font-size="12" text-anchor="middle">B</text><text x="16" y="106.8" font-size="12" text-anchor="middle">C</text><text x="138.5" y="37.6" font-size="12" text-anchor="middle">D</text><text x="224" y="107.8" font-size="12" text-anchor="middle">E</text><text x="134.5" y="107.8" font-size="12" text-anchor="middle">F</text><text x="60.3" y="113.3" font-size="12" text-anchor="middle">a</text><text x="16.9" y="73.7" font-size="12" text-anchor="end">b</text><text x="69.2" y="68.2" font-size="12" text-anchor="start">c</text><text x="179.3" y="113.8" font-size="12" text-anchor="middle">a</text><text x="134.5" y="74.2" font-size="12" text-anchor="end">b</text></svg>'
+        explain: 例：「EF = a、FD = b、∠F = 90°の直角三角形 DEF をつくる。三平方の定理より DE² = a² + b²。仮定より a² + b² = c² なので DE² = c²。DE も c も正の数なので DE = c。△ABC と △DEF で BC = EF、CA = FD、AB = DE なので、3 組の辺がそれぞれ等しく △ABC ≡ △DEF。よって ∠C = ∠F = 90°。」と書ければよい。① くらべるための直角三角形を「〜とする」でつくっている、② 三平方の定理と仮定から DE = c を導いている（どちらも正の数なので、2 乗が等しければ等しい）、③ 合同条件（G-016）で結んでいる、の 3 点を見る。「a² + b² = c² だから直角」とだけ書くのは、示したいことを使ってしまっていて証明にならないことを話す。
+        hints:
+          - 直角をはさむ 2 辺が a、b の直角三角形を、別に 1 つつくりましょう。
+          - その斜辺の長さを、三平方の定理で求めましょう。
+          - 2 つの三角形が合同であることを示しましょう。
+        paths:
+          - [∠F = 90°、EF = a、FD = b の △DEF をつくる, DE² = a² + b² = c² で DE = c, 3 組の辺が等しく △ABC ≡ △DEF, ∠C = ∠F = 90°]
+      - part: 今日
+        text: 直角をはさむ 2 辺が 20 cm と 21 cm の直角三角形の、斜辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="65.4,18 174.6,122 65.4,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="65.4,18 174.6,122 65.4,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="65.4,114 73.4,114 73.4,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="60.3" y="12.5" font-size="12" text-anchor="middle">A</text><text x="184.5" y="130.9" font-size="12" text-anchor="middle">B</text><text x="57.4" y="133.8" font-size="12" text-anchor="middle">C</text><text x="56.6" y="74.2" font-size="12" text-anchor="end">20 cm</text><text x="120" y="140.2" font-size="12" text-anchor="middle">21 cm</text></svg>'
+        answer: 29
+        check: "[c for c in range(1, 100) if c * c == 20 * 20 + 21 * 21][0]"
+        hints:
+          - 斜辺² = 20² + 21² です。
+          - 400 + 441 を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [400 + 441 = 841, 斜辺 = 29 cm]
+      - part: 今日
+        text: 3 つの辺が 2 cm、3 cm、√13 cm の三角形は、直角三角形ですか。
+        choices: [直角三角形である, 直角三角形ではない]
+        answer: 直角三角形である
+        check: "'直角三角形である' if 2 * 2 + 3 * 3 == 13 else '直角三角形ではない'"
+        hints:
+          - いちばん長い辺はどれでしょう。√13 は 3 より大きいでしょうか。
+          - (√13)² はいくつでしょう。
+          - 2² + 3² と (√13)² をくらべましょう。
+        paths:
+          - [√13 がいちばん長い（3² = 9 より 13 が大きい）, 2² + 3² = 13 = (√13)², 直角三角形]
+    extra:
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は 17 cm、辺 AC は 15 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="92.3,18 147.7,122 92.3,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="92.3,18 147.7,122 92.3,122" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="92.3,114 100.3,114 100.3,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="89.4" y="11.6" font-size="12" text-anchor="middle">A</text><text x="155.8" y="133.7" font-size="12" text-anchor="middle">B</text><text x="87.1" y="135.9" font-size="12" text-anchor="middle">C</text><text x="83.5" y="74.2" font-size="12" text-anchor="end">15 cm</text><text x="128.2" y="68.6" font-size="12" text-anchor="start">17 cm</text></svg>'
+        answer: 8
+        check: "[b for b in range(1, 100) if 15 * 15 + b * b == 17 * 17][0]"
+        hints:
+          - BC² + 15² = 17² です。
+          - 17² − 15² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [BC² = 289 − 225 = 64, BC = 8 cm]
+      - part: 今日
+        text: 直角をはさむ 2 辺が 1 cm と 2 cm の直角三角形の、斜辺の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="80,50 160,90 80,90" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="80,50 160,90 80,90" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="80,82 88,82 88,90" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="72.2" y="46.4" font-size="12" text-anchor="middle">A</text><text x="170.7" y="96.9" font-size="12" text-anchor="middle">B</text><text x="70.2" y="99.1" font-size="12" text-anchor="middle">C</text><text x="71.2" y="74.2" font-size="12" text-anchor="end">1 cm</text><text x="120" y="108.2" font-size="12" text-anchor="middle">2 cm</text></svg>'
+        choices: [3, √5, √3]
+        answer: √5
+        check: "[c for c, v in {'3': 3, '√5': math.sqrt(5), '√3': math.sqrt(3)}.items() if math.isclose(v, math.sqrt(1 * 1 + 2 * 2))][0]"
+        hints:
+          - 斜辺² = 1² + 2² です。
+          - 1 + 4 を計算しましょう。
+          - 2 乗してその数になる正の数を、√ で表しましょう。
+        paths:
+          - [1 + 4 = 5, 斜辺 = √5 cm]
+      - part: 今日
+        text: 3 つの辺が 7 cm、24 cm、25 cm の三角形は、直角三角形ですか。
+        choices: [直角三角形ではない, 直角三角形である]
+        answer: 直角三角形である
+        check: "'直角三角形である' if 7 * 7 + 24 * 24 == 25 * 25 else '直角三角形ではない'"
+        hints:
+          - いちばん長い辺は 25 cm です。
+          - 7² + 24² を計算しましょう。
+          - 25² とくらべましょう。
+        paths:
+          - [49 + 576 = 625, 25² = 625, 直角三角形]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 図の △ABC で DE ∥ BC、AD:DB = 1:2、BC = 12 cm です。DE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 72.9,52.7 128.3,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="52.7" x2="128.3" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="63.9" y="56.9" font-size="12" text-anchor="middle">D</text><text x="137.3" y="56.9" font-size="12" text-anchor="middle">E</text><text x="120" y="139.2" font-size="12" text-anchor="middle">12 cm</text></svg>'
+        answer: 4
+        check: "12 * Fraction(1, 1 + 2)"
+        hints:
+          - DE:BC = AD:AB です。
+          - AD:AB は何:何でしょう。
+          - DE は BC の何倍でしょう。
+        paths:
+          - ["AD:AB = 1:3", DE = 12 × 1/3 = 4 cm]
+      - part: 思い出す
+        text: √12 + √27 を計算すると、どれになりますか。
+        choices: [√39, 5√3, 6√3]
+        answer: 5√3
+        check: "[c for c, v in {'√39': math.sqrt(39), '5√3': 5 * math.sqrt(3), '6√3': 6 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(12) + math.sqrt(27))][0]"
+        hints:
+          - √12 と √27 を、それぞれ a√b の形にしましょう。
+          - 根号の中が同じになったら、同類項のようにまとめます。
+          - 根号の中どうしをたしてはいけません。
+        paths:
+          - [√12 = 2√3、√27 = 3√3, 2√3 + 3√3, 5√3]
+      - part: 今日
+        text: 1 辺 4 cm の正三角形の面積はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        choices: [8√3, 16, 4√3]
+        answer: 4√3
+        check: "[c for c, v in {'8√3': 8 * math.sqrt(3), '16': 16, '4√3': 4 * math.sqrt(3)}.items() if math.isclose(v, 4 * math.sqrt(16 - 4) / 2)][0]"
+        hints:
+          - 頂点から底辺に垂線をひくと、底辺の半分は 2 cm です。
+          - 高さ² = 4² − 2² です。
+          - 面積 = 4 × 高さ ÷ 2 です。
+        paths:
+          - [高さ = √12 = 2√3 cm, 4 × 2√3 ÷ 2, 4√3 cm²]
+      - part: 今日
+        text: ∠BAC = 90°の直角三角形 ABC で、AB = 3 cm、AC = 4 cm です。A から BC に垂線 AH をひくとき、AH は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.8,26.8 30,113.2 210,113.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.8" y1="26.8" x2="94.8" y2="113.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="90,33.2 96.4,38 101.2,31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="94.8,105.2 102.8,105.2 102.8,113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.8" y="22" font-size="12" text-anchor="middle">A</text><text x="22" y="125.4" font-size="12" text-anchor="middle">B</text><text x="218" y="125.4" font-size="12" text-anchor="middle">C</text><text x="94.8" y="129.4" font-size="12" text-anchor="middle">H</text><text x="54.6" y="67" font-size="12" text-anchor="end">3 cm</text><text x="159.3" y="64.6" font-size="12" text-anchor="start">4 cm</text></svg>'
+        answer: 12/5
+        accept: [2.4]
+        check: "Fraction(3 * 4, [c for c in range(1, 20) if c * c == 3 * 3 + 4 * 4][0])"
+        hints:
+          - まず BC の長さを求めましょう。
+          - △ABC の面積を、AB と AC を使う式と、BC と AH を使う式の 2 通りで表しましょう。
+          - 相似な △HBA と △ABC を使ってもよいでしょう。
+        paths:
+          - [BC = 5 cm, 3 × 4 ÷ 2 = 5 × AH ÷ 2, AH = 12 ÷ 5 = 12/5 cm]
+          - [BC = 5 cm, △HBA ∽ △ABC で AH は CA に対応する, AH = 4 × 3/5 = 12/5 cm]
+      - part: 今日
+        text: 対角線が 10 cm、たてが 6 cm の長方形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,18 50.7,122 189.3,122 189.3,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="122" x2="189.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="50.7,114 58.7,114 58.7,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="41.9" y="15.6" font-size="12" text-anchor="middle">A</text><text x="41.9" y="132.8" font-size="12" text-anchor="middle">B</text><text x="198.1" y="132.8" font-size="12" text-anchor="middle">C</text><text x="198.1" y="15.6" font-size="12" text-anchor="middle">D</text><text x="44.7" y="74.2" font-size="12" text-anchor="end">6 cm</text><text x="112" y="66.2" font-size="12" text-anchor="end">10 cm</text></svg>'
+        answer: 48
+        check: "6 * [x for x in range(1, 20) if x * x + 6 * 6 == 10 * 10][0]"
+        hints:
+          - 対角線は、たてと横を直角をはさむ 2 辺とする直角三角形の斜辺です。
+          - 横² = 10² − 6² です。
+          - 面積 = たて × 横 です。
+        paths:
+          - [横² = 100 − 36 = 64 で横 8 cm, 6 × 8 = 48 cm²]
+      - part: 挑戦
+        text: 図の正方形 ABCD の 1 辺は 4 cm で、M は辺 BC の中点、N は辺 CD の中点です。△AMN のまわりの長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72,22 120,118 168,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="72,22 72,118 168,118 168,22" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="72,22 120,118 168,70" stroke="currentColor" stroke-width="2" fill="none"/><text x="64" y="20.2" font-size="12" text-anchor="middle">A</text><text x="64" y="128.2" font-size="12" text-anchor="middle">B</text><text x="176" y="128.2" font-size="12" text-anchor="middle">C</text><text x="176" y="20.2" font-size="12" text-anchor="middle">D</text><text x="120" y="134.2" font-size="12" text-anchor="middle">M</text><text x="178" y="74.2" font-size="12" text-anchor="middle">N</text><circle cx="120" cy="118" r="2.6" fill="currentColor"/><circle cx="168" cy="70" r="2.6" fill="currentColor"/><text x="96" y="134.2" font-size="12" text-anchor="middle">2 cm</text><text x="66" y="74.2" font-size="12" text-anchor="end">4 cm</text></svg>'
+        choices: [4√5 + 2√2, 6√2, 4√5 + 2]
+        answer: 4√5 + 2√2
+        check: "[c for c, v in {'4√5 + 2√2': 4 * math.sqrt(5) + 2 * math.sqrt(2), '6√2': 6 * math.sqrt(2), '4√5 + 2': 4 * math.sqrt(5) + 2}.items() if math.isclose(v, math.sqrt(4 * 4 + 2 * 2) * 2 + math.sqrt(2 * 2 + 2 * 2))][0]"
+        hints:
+          - AM は、直角をはさむ 2 辺が何 cm と何 cm の直角三角形の斜辺でしょう。
+          - AN も同じように求めましょう。
+          - MN は、直角をはさむ 2 辺がどちらも 2 cm の直角三角形の斜辺です。
+        paths:
+          - [AM = AN = √(16 + 4) = 2√5 cm, MN = √(4 + 4) = 2√2 cm, 2√5 + 2√5 + 2√2 = 4√5 + 2√2 cm]
+        note: 根号の中がちがう数どうしはまとめられない（A-016）。
+    extra:
+      - part: 今日
+        text: 図の二等辺三角形 ABC で AB = AC = 6 cm、BC = 4 cm です。△ABC の面積はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 83.2,122 156.8,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 83.2,122 156.8,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="74.2" y="132.6" font-size="12" text-anchor="middle">B</text><text x="165.8" y="132.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="138.4" y="139.2" font-size="12" text-anchor="middle">4 cm</text><text x="93.1" y="70.2" font-size="12" text-anchor="end">6 cm</text><text x="146.9" y="70.2" font-size="12" text-anchor="start">6 cm</text></svg>'
+        choices: [4√2, 8√2, 16√2]
+        answer: 8√2
+        check: "[c for c, v in {'4√2': 4 * math.sqrt(2), '8√2': 8 * math.sqrt(2), '16√2': 16 * math.sqrt(2)}.items() if math.isclose(v, 4 * math.sqrt(36 - 4) / 2)][0]"
+        hints:
+          - 頂点 A から BC に垂線 AH をひくと、BH は 2 cm です。
+          - AH² = 6² − 2² です。
+          - 面積 = 4 × AH ÷ 2 です。
+        paths:
+          - [AH = √32 = 4√2 cm, 4 × 4√2 ÷ 2, 8√2 cm²]
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は √10 cm、辺 AC は 1 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,50 180,90 60,90" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="60,50 180,90 60,90" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="60,82 68,82 68,90" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="50.8" y="48.1" font-size="12" text-anchor="middle">A</text><text x="190.9" y="96" font-size="12" text-anchor="middle">B</text><text x="49.6" y="97.7" font-size="12" text-anchor="middle">C</text><text x="51.2" y="74.2" font-size="12" text-anchor="end">1 cm</text><text x="123.8" y="62.8" font-size="12" text-anchor="middle">√10 cm</text></svg>'
+        answer: 3
+        check: "[b for b in range(1, 10) if 1 + b * b == 10][0]"
+        hints:
+          - (√10)² はいくつでしょう。
+          - BC² = (√10)² − 1² です。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [(√10)² = 10, BC² = 10 − 1 = 9, BC = 3 cm]
+      - part: 今日
+        text: 直角をはさむ 2 辺が 5 cm と 12 cm の直角三角形 ABC があります。△ABC と相似で、相似比が 2:3 の三角形 DEF の斜辺は何 cm ですか。
+        answer: 39/2
+        accept: [19.5]
+        check: "Fraction([c for c in range(1, 50) if c * c == 5 * 5 + 12 * 12][0] * 3, 2)"
+        hints:
+          - まず △ABC の斜辺を求めましょう。
+          - △DEF の辺は、△ABC の辺の何倍でしょう。
+          - 斜辺にその数をかけましょう。
+        paths:
+          - [△ABC の斜辺 13 cm, △DEF は 3/2 倍, 13 × 3/2 = 39/2 cm]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 直角をはさむ 2 辺が 12 cm と 35 cm の直角三角形の、斜辺の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,44.6 194,95.4 46,95.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,44.6 194,95.4 46,95.4" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,87.4 54,87.4 54,95.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.9" y="42.6" font-size="12" text-anchor="middle">A</text><text x="204.8" y="101.4" font-size="12" text-anchor="middle">B</text><text x="35.6" y="103.1" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">12 cm</text><text x="120" y="113.6" font-size="12" text-anchor="middle">35 cm</text></svg>'
+        answer: 37
+        check: "[c for c in range(1, 100) if c * c == 12 * 12 + 35 * 35][0]"
+        hints:
+          - 斜辺² = 12² + 35² です。
+          - 144 + 1225 を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [144 + 1225 = 1369, 斜辺 = 37 cm]
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は 9 cm、辺 AC は 3 cm です。辺 BC の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,43.8 194,96.2 46,96.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,43.8 194,96.2 46,96.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,88.2 54,88.2 54,96.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="37" y="41.7" font-size="12" text-anchor="middle">A</text><text x="204.8" y="102.3" font-size="12" text-anchor="middle">B</text><text x="35.6" y="104" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">3 cm</text><text x="124" y="62.9" font-size="12" text-anchor="middle">9 cm</text></svg>'
+        choices: [6, 3√10, 6√2]
+        answer: 6√2
+        check: "[c for c, v in {'6': 6, '3√10': 3 * math.sqrt(10), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(9 * 9 - 3 * 3))][0]"
+        hints:
+          - BC² = 9² − 3² です。
+          - 81 − 9 を計算しましょう。
+          - √72 を a√b の形にしましょう。
+        paths:
+          - [BC² = 72, BC = √72 = 6√2 cm]
+      - part: 今日
+        text: 1 辺 7 cm の正方形の対角線の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 68,122 172,122 172,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="68,114 76,114 76,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="60.2" y="14.4" font-size="12" text-anchor="middle">A</text><text x="60.2" y="134" font-size="12" text-anchor="middle">B</text><text x="179.8" y="134" font-size="12" text-anchor="middle">C</text><text x="179.8" y="14.4" font-size="12" text-anchor="middle">D</text><text x="120" y="139.2" font-size="12" text-anchor="middle">7 cm</text><text x="62" y="74.2" font-size="12" text-anchor="end">7 cm</text></svg>'
+        choices: [14, 7√2, 7√3]
+        answer: 7√2
+        check: "[c for c, v in {'14': 14, '7√2': 7 * math.sqrt(2), '7√3': 7 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(7 * 7 + 7 * 7))][0]"
+        hints:
+          - 対角線は、直角二等辺三角形の斜辺です。
+          - 対角線² = 7² + 7² です。
+          - 1:1:√2 の比を使ってもよいでしょう。
+        paths:
+          - [対角線² = 98, 対角線 = √98 = 7√2 cm]
+      - part: 今日
+        text: 1 辺 10 cm の正三角形の高さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        choices: [5√3, 5√2, 10√3]
+        answer: 5√3
+        check: "[c for c, v in {'5√3': 5 * math.sqrt(3), '5√2': 5 * math.sqrt(2), '10√3': 10 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(10 * 10 - 5 * 5))][0]"
+        hints:
+          - 底辺の半分は 5 cm です。
+          - 高さ² = 10² − 5² です。
+          - 1:2:√3 の比を使ってもよいでしょう。
+        paths:
+          - [高さ² = 100 − 25 = 75, 高さ = √75 = 5√3 cm]
+      - part: 今日
+        text: 3 つの辺の長さが次のような三角形のうち、直角三角形はどれですか。
+        choices: [2 cm、3 cm、4 cm, 3 cm、5 cm、6 cm, 2 cm、√5 cm、3 cm]
+        answer: 2 cm、√5 cm、3 cm
+        check: "[k for k, (p, q, r) in {'2 cm、3 cm、4 cm': (4, 9, 16), '3 cm、5 cm、6 cm': (9, 25, 36), '2 cm、√5 cm、3 cm': (4, 5, 9)}.items() if p + q == r][0]"
+        hints:
+          - それぞれの辺を 2 乗した数を書き出しましょう。(√5)² は 5 です。
+          - いちばん長い辺の 2 乗と、残りの 2 辺の 2 乗の和をくらべましょう。
+          - 等しくなるものが直角三角形です。
+        paths:
+          - [2² = 4、(√5)² = 5、3² = 9, 4 + 5 = 9, 直角三角形]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="27.2" y1="128" x2="27.2" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="50.4" y1="128" x2="50.4" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="73.6" y1="128" x2="73.6" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96.8" y1="128" x2="96.8" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="143.2" y1="128" x2="143.2" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="166.4" y1="128" x2="166.4" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="189.6" y1="128" x2="189.6" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="212.8" y1="128" x2="212.8" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="128" x2="212.8" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="104.8" x2="212.8" y2="104.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="81.6" x2="212.8" y2="81.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="58.4" x2="212.8" y2="58.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="35.2" x2="212.8" y2="35.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="12" x2="212.8" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="50.4" y1="104.8" x2="189.6" y2="35.2" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="50.4" cy="104.8" r="3" fill="currentColor"/><text x="40.6" y="112.9" font-size="12" text-anchor="middle">A</text><circle cx="189.6" cy="35.2" r="3" fill="currentColor"/><text x="199.4" y="33.5" font-size="12" text-anchor="middle">B</text></svg>'
+        choices: [9, 3√5, 5√3]
+        answer: 3√5
+        check: "[c for c, v in {'9': 9, '3√5': 3 * math.sqrt(5), '5√3': 5 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(6 * 6 + 3 * 3))][0]"
+        hints:
+          - 横に何目、たてに何目進むでしょう。
+          - AB² = 横² + たて² です。
+          - √45 を a√b の形にしましょう。
+        paths:
+          - [横 6 cm、たて 3 cm, AB² = 36 + 9 = 45, AB = 3√5 cm]
+      - part: 今日
+        text: 図の二等辺三角形 ABC で AB = AC = 17 cm、BC = 16 cm です。△ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 64.5,122 175.5,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 64.5,122 175.5,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="54.6" y="130.9" font-size="12" text-anchor="middle">B</text><text x="185.4" y="130.9" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="147.7" y="139.2" font-size="12" text-anchor="middle">16 cm</text><text x="84" y="68.6" font-size="12" text-anchor="end">17 cm</text><text x="156" y="68.6" font-size="12" text-anchor="start">17 cm</text></svg>'
+        answer: 120
+        check: "16 * [h for h in range(1, 30) if h * h + 8 * 8 == 17 * 17][0] // 2"
+        hints:
+          - 頂点 A から BC に垂線 AH をひくと、BH は何 cm でしょう。
+          - AH² = 17² − 8² です。
+          - 面積 = 底辺 × 高さ ÷ 2 です。
+        paths:
+          - [BH = 8 cm, AH² = 289 − 64 = 225 で AH = 15 cm, 16 × 15 ÷ 2 = 120 cm²]
+      - part: 挑戦
+        text: 図の △ABC で ∠B = 45°、∠C = 30°、A から BC への垂線 AH の長さは 2 cm です。BC の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="95.9,37.1 30,102.9 210,102.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="95.9,37.1 30,102.9 210,102.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95.9" y1="37.1" x2="95.9" y2="102.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="95.9,94.9 103.9,94.9 103.9,102.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.9" y="32.3" font-size="12" text-anchor="middle">A</text><text x="22" y="113.1" font-size="12" text-anchor="middle">B</text><text x="218" y="113.1" font-size="12" text-anchor="middle">C</text><text x="95.9" y="119.1" font-size="12" text-anchor="middle">H</text><text x="100.9" y="74.2" font-size="12" text-anchor="start">2 cm</text><path d="M46 102.9 A16 16 0 0 0 41.3 91.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.7" y="95.3" font-size="11" text-anchor="middle">45°</text><path d="M190.9 91.9 A22 22 0 0 0 188 102.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="173.3" y="97" font-size="11" text-anchor="middle">30°</text></svg>'
+        choices: [2 + √3, 4√3, 2 + 2√3]
+        answer: 2 + 2√3
+        check: "[c for c, v in {'2 + √3': 2 + math.sqrt(3), '4√3': 4 * math.sqrt(3), '2 + 2√3': 2 + 2 * math.sqrt(3)}.items() if math.isclose(v, 2 / math.tan(math.radians(45)) + 2 / math.tan(math.radians(30)))][0]"
+        hints:
+          - △ABH は、どんな形の直角三角形でしょう。
+          - △ACH は、辺の比が 1:2:√3 の直角三角形です。HC は AH の何倍でしょう。
+          - BC = BH + HC です。
+        paths:
+          - [△ABH は直角二等辺三角形で BH = 2 cm, "△ACH は 1:2:√3 で HC = 2√3 cm", BC = 2 + 2√3 cm]
+        note: 2 + 2√3 は、これ以上まとめられない。
+    extra:
+      - part: 今日
+        text: 図の直角三角形で、斜辺 AB は 41 cm、辺 AC は 9 cm です。辺 BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,53.4 194,86.7 46,86.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46,53.4 194,86.7 46,86.7" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="46,78.7 54,78.7 54,86.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36" y="53" font-size="12" text-anchor="middle">A</text><text x="204.9" y="92.1" font-size="12" text-anchor="middle">B</text><text x="35.3" y="93.3" font-size="12" text-anchor="middle">C</text><text x="37.2" y="74.2" font-size="12" text-anchor="end">9 cm</text><text x="122.6" y="62.5" font-size="12" text-anchor="middle">41 cm</text></svg>'
+        answer: 40
+        check: "[b for b in range(1, 100) if 9 * 9 + b * b == 41 * 41][0]"
+        hints:
+          - BC² + 9² = 41² です。
+          - 41² − 9² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [BC² = 1681 − 81 = 1600, BC = 40 cm]
+      - part: 今日
+        text: 1 辺 6 cm の正三角形の高さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,18 60,122 180,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114 128,114 128,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="13.2" font-size="12" text-anchor="middle">A</text><text x="49.9" y="130.6" font-size="12" text-anchor="middle">B</text><text x="190.1" y="130.6" font-size="12" text-anchor="middle">C</text><text x="120" y="138.2" font-size="12" text-anchor="middle">H</text><text x="150" y="139.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        choices: [3√2, 3√3, 6√3]
+        answer: 3√3
+        check: "[c for c, v in {'3√2': 3 * math.sqrt(2), '3√3': 3 * math.sqrt(3), '6√3': 6 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(6 * 6 - 3 * 3))][0]"
+        hints:
+          - 底辺の半分は 3 cm です。
+          - 高さ² = 6² − 3² です。
+          - √27 を a√b の形にしましょう。
+        paths:
+          - [高さ² = 27, 高さ = 3√3 cm]
+      - part: 今日
+        text: たて 12 cm、横 16 cm の長方形の対角線の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,18 50.7,122 189.3,122 189.3,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="122" x2="189.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="50.7,114 58.7,114 58.7,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="41.9" y="15.6" font-size="12" text-anchor="middle">A</text><text x="41.9" y="132.8" font-size="12" text-anchor="middle">B</text><text x="198.1" y="132.8" font-size="12" text-anchor="middle">C</text><text x="198.1" y="15.6" font-size="12" text-anchor="middle">D</text><text x="120" y="139.2" font-size="12" text-anchor="middle">16 cm</text><text x="44.7" y="74.2" font-size="12" text-anchor="end">12 cm</text></svg>'
+        answer: 20
+        check: "[d for d in range(1, 100) if d * d == 12 * 12 + 16 * 16][0]"
+        hints:
+          - 対角線は、直角三角形の斜辺です。
+          - 対角線² = 12² + 16² です。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [144 + 256 = 400, 対角線 = 20 cm]

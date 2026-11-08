@@ -38348,6 +38348,7 @@ window.ROADMAP = {
     "A-013",
     "A-015",
     "A-016",
+    "A-017",
     "C-001",
     "C-002",
     "C-003",
@@ -78225,9 +78226,9 @@ window.ROADMAP = {
    "P-230",
    "H-018",
    "E-003",
+   "D-035",
    "P-232",
    "B-171",
-   "D-035",
    "P-153",
    "P-008",
    "D-082",
@@ -78400,6 +78401,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "bunshi-saibo",
+    "b": "houteishiki",
+    "o": 1,
+    "e": 2.4,
+    "ex": [
+     "B-024"
+    ]
+   },
+   {
     "a": "kansu",
     "b": "programming",
     "o": 1,
@@ -78425,15 +78435,6 @@ window.ROADMAP = {
     "ex": [
      "W-101",
      "P-153"
-    ]
-   },
-   {
-    "a": "bunshi-saibo",
-    "b": "houteishiki",
-    "o": 1,
-    "e": 2.3,
-    "ex": [
-     "B-024"
     ]
    },
    {
@@ -78528,7 +78529,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-2016-3"
     ],
-    "d": 0.95
+    "d": 0.89
    },
    {
     "a": "kazoekata",
@@ -78538,7 +78539,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1984-5"
     ],
-    "d": 0.96
+    "d": 0.91
    },
    {
     "a": "hakaru",
@@ -78569,7 +78570,7 @@ window.ROADMAP = {
      "USAMO-2000-2",
      "USAMO-2010-4"
     ],
-    "d": 0.87
+    "d": 0.84
    },
    {
     "a": "haichi",
@@ -78625,7 +78626,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2012-1"
     ],
-    "d": 0.37
+    "d": 0.35
    },
    {
     "a": "hakaru",
@@ -78637,7 +78638,7 @@ window.ROADMAP = {
      "CL-KHWARIZMI-1",
      "CL-SANGAKU-3CIRCLES"
     ],
-    "d": 0.53
+    "d": 0.51
    },
    {
     "a": "hakaru",
@@ -78657,7 +78658,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.72
+    "d": 0.68
    },
    {
     "a": "haichi",
@@ -78668,7 +78669,7 @@ window.ROADMAP = {
      "IMO-1972-6",
      "IMO-1989-4"
     ],
-    "d": 0.9
+    "d": 0.86
    },
    {
     "a": "futoshiki",
@@ -78681,7 +78682,7 @@ window.ROADMAP = {
      "IMO-1991-1",
      "JJMO-P-2023-8"
     ],
-    "d": 0.82
+    "d": 0.73
    },
    {
     "a": "futoshiki",
@@ -78709,7 +78710,7 @@ window.ROADMAP = {
      "IMO-1973-4",
      "IMO-1983-4"
     ],
-    "d": 0.95
+    "d": 0.91
    },
    {
     "a": "seisuron",
@@ -78798,7 +78799,7 @@ window.ROADMAP = {
      "CL-SANGAKU-3CIRCLES",
      "IMO-1960-7"
     ],
-    "d": 0.9
+    "d": 0.86
    },
    {
     "a": "graph",
@@ -78936,9 +78937,9 @@ window.ROADMAP = {
      "graphics",
      "kazu",
      "ryoshi",
-     "houteishiki"
+     "seigyo"
     ],
-    "s": 2.73,
+    "s": 2.72,
     "d": 0.97
    },
    {
@@ -79242,18 +79243,6 @@ window.ROADMAP = {
     "d": 0.81
    },
    {
-    "a": "iden-shinka",
-    "b": "rikigaku",
-    "via": [
-     "tenmon",
-     "chiso",
-     "hakaru",
-     "houteishiki"
-    ],
-    "s": 2.3,
-    "d": 0.93
-   },
-   {
     "a": "hakaru",
     "b": "programming",
     "via": [
@@ -79264,6 +79253,18 @@ window.ROADMAP = {
     ],
     "s": 2.25,
     "d": 0.95
+   },
+   {
+    "a": "iden-shinka",
+    "b": "rikigaku",
+    "via": [
+     "tenmon",
+     "chiso",
+     "hakaru",
+     "houteishiki"
+    ],
+    "s": 2.29,
+    "d": 0.93
    },
    {
     "a": "gunkantai",
@@ -79358,7 +79359,7 @@ window.ROADMAP = {
      "hakaru",
      "houteishiki"
     ],
-    "s": 2.31,
+    "s": 2.3,
     "d": 0.89
    },
    {
@@ -79398,18 +79399,6 @@ window.ROADMAP = {
     "d": 0.7
    },
    {
-    "a": "busshitsu",
-    "b": "rikigaku",
-    "via": [
-     "mizu-kori",
-     "hakaru",
-     "houteishiki",
-     "netsu"
-    ],
-    "s": 2.24,
-    "d": 0.9
-   },
-   {
     "a": "kakuritsu-daigaku",
     "b": "rikigaku",
     "via": [
@@ -79432,6 +79421,18 @@ window.ROADMAP = {
     ],
     "s": 2.12,
     "d": 0.95
+   },
+   {
+    "a": "busshitsu",
+    "b": "rikigaku",
+    "via": [
+     "mizu-kori",
+     "hakaru",
+     "houteishiki",
+     "netsu"
+    ],
+    "s": 2.23,
+    "d": 0.9
    },
    {
     "a": "bunshi-saibo",
@@ -79542,18 +79543,6 @@ window.ROADMAP = {
     "d": 0.92
    },
    {
-    "a": "katachi",
-    "b": "shiki",
-    "via": [
-     "haichi",
-     "shomei-zukei",
-     "genshi-ketsugo",
-     "kazu"
-    ],
-    "s": 2.11,
-    "d": 0.92
-   },
-   {
     "a": "seigyo",
     "b": "shiki",
     "via": [
@@ -79600,6 +79589,18 @@ window.ROADMAP = {
     ],
     "s": 2.82,
     "d": 0.68
+   },
+   {
+    "a": "bibun-hoteishiki",
+    "b": "bussei",
+    "via": [
+     "soutai",
+     "seibutsu-butsuri",
+     "ryoshi",
+     "netsu"
+    ],
+    "s": 2.31,
+    "d": 0.83
    }
   ],
   "probUnseen": [
@@ -79619,7 +79620,7 @@ window.ROADMAP = {
     "a": "seisu",
     "b": "shomei-zukei",
     "e": 39.9,
-    "d": 0.97
+    "d": 0.93
    },
    {
     "a": "hakaru",
@@ -79637,7 +79638,7 @@ window.ROADMAP = {
     "a": "graph",
     "b": "shomei-zukei",
     "e": 14.6,
-    "d": 0.98
+    "d": 0.97
    },
    {
     "a": "kazoekata",
@@ -79703,7 +79704,7 @@ window.ROADMAP = {
     "a": "keisan",
     "b": "shomei-zukei",
     "e": 2.6,
-    "d": 0.75
+    "d": 0.67
    },
    {
     "a": "seisuron",
@@ -93982,7 +93983,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.38,
-    "r": 0.03,
+    "r": 0.07,
     "rg": [
      "houteishiki",
      "programming"
@@ -118442,7 +118443,7 @@ window.ROADMAP = {
     16.96
    ],
    "comb": {
-    "b": 0.185,
+    "b": 0.175,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -130039,7 +130040,7 @@ window.ROADMAP = {
     -1.98
    ],
    "comb": {
-    "b": 0.241,
+    "b": 0.242,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -133285,7 +133286,7 @@ window.ROADMAP = {
     -2.77
    ],
    "comb": {
-    "b": 0.298,
+    "b": 0.299,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -134295,7 +134296,7 @@ window.ROADMAP = {
     0.4
    ],
    "comb": {
-    "b": 0.332,
+    "b": 0.333,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -136753,7 +136754,7 @@ window.ROADMAP = {
     0.94
    ],
    "comb": {
-    "b": 0.263,
+    "b": 0.264,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -143582,7 +143583,7 @@ window.ROADMAP = {
     3.29
    ],
    "comb": {
-    "b": 0.281,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -173620,7 +173621,7 @@ window.ROADMAP = {
     -16.36
    ],
    "comb": {
-    "b": 0.419,
+    "b": 0.42,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -188836,7 +188837,7 @@ window.ROADMAP = {
     -2.99
    ],
    "comb": {
-    "b": 0.114,
+    "b": 0.116,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -192206,7 +192207,7 @@ window.ROADMAP = {
     1.35
    ],
    "comb": {
-    "b": 0.343,
+    "b": 0.342,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -194757,7 +194758,7 @@ window.ROADMAP = {
     -0.33
    ],
    "comb": {
-    "b": 0.286,
+    "b": 0.287,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -197606,7 +197607,7 @@ window.ROADMAP = {
     2.96
    ],
    "comb": {
-    "b": 0.315,
+    "b": 0.316,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -198695,7 +198696,7 @@ window.ROADMAP = {
     3.36
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.288,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -200013,7 +200014,7 @@ window.ROADMAP = {
     8.73
    ],
    "comb": {
-    "b": 0.122,
+    "b": 0.121,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -201239,7 +201240,7 @@ window.ROADMAP = {
     4.54
    ],
    "comb": {
-    "b": 0.114,
+    "b": 0.113,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -202375,7 +202376,7 @@ window.ROADMAP = {
     -5.73
    ],
    "comb": {
-    "b": 0.174,
+    "b": 0.175,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -205381,7 +205382,7 @@ window.ROADMAP = {
     -4.5
    ],
    "comb": {
-    "b": 0.239,
+    "b": 0.24,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -206861,7 +206862,7 @@ window.ROADMAP = {
     12.2
    ],
    "comb": {
-    "b": 0.295,
+    "b": 0.293,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -206881,32 +206882,1256 @@ window.ROADMAP = {
     "G-017",
     "A-016",
     "G-020",
-    "G-008"
+    "G-008",
+    "A-017"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "方眼の 1 目は 1 cm です。直角をはさむ 2 辺が 3 cm と 4 cm の直角三角形の、3 つの辺の上に正方形 あ、い、う をかきました。う の面積と、斜辺の長さを求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"51.8\" y1=\"132\" x2=\"51.8\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"64.2\" y1=\"132\" x2=\"64.2\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"76.6\" y1=\"132\" x2=\"76.6\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"89\" y1=\"132\" x2=\"89\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"101.4\" y1=\"132\" x2=\"101.4\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"113.8\" y1=\"132\" x2=\"113.8\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"126.2\" y1=\"132\" x2=\"126.2\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"138.6\" y1=\"132\" x2=\"138.6\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"151\" y1=\"132\" x2=\"151\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"163.4\" y1=\"132\" x2=\"163.4\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"175.8\" y1=\"132\" x2=\"175.8\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"188.2\" y1=\"132\" x2=\"188.2\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"132\" x2=\"188.2\" y2=\"132\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"119.6\" x2=\"188.2\" y2=\"119.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"107.2\" x2=\"188.2\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"94.8\" x2=\"188.2\" y2=\"94.8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"82.4\" x2=\"188.2\" y2=\"82.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"70\" x2=\"188.2\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"57.6\" x2=\"188.2\" y2=\"57.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"45.2\" x2=\"188.2\" y2=\"45.2\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"32.8\" x2=\"188.2\" y2=\"32.8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"20.4\" x2=\"188.2\" y2=\"20.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.8\" y1=\"8\" x2=\"188.2\" y2=\"8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"101.4,94.8 138.6,94.8 138.6,132 101.4,132\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"101.4,94.8 101.4,45.2 51.8,45.2 51.8,94.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"101.4,45.2 138.6,94.8 188.2,57.6 151,8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"101.4,45.2 138.6,94.8 101.4,94.8\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><polyline points=\"101.4,86.8 109.4,86.8 109.4,94.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"118\" font-size=\"13\" text-anchor=\"middle\">あ</text><text x=\"76.6\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">い</text><text x=\"146\" y=\"54.7\" font-size=\"13\" text-anchor=\"middle\">う</text></svg>",
+       "explain": "あ は 3 × 3 = 9 cm²、い は 4 × 4 = 16 cm² です。う は、まわりの 1 辺 7 cm の正方形から 4 つの直角三角形をひくと 7 × 7 − 4 × 6 = 25 cm² で、あ + い = う になっています。直角三角形の直角をはさむ 2 辺を a、b、斜辺（直角に向かい合う辺）を c とすると、いつも a² + b² = c² がなりたちます（三平方の定理）。ここでは c² = 9 + 16 = 25 なので、斜辺は 2 乗して 25 になる正の数で 5 cm です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "√72 を a√b の形（b はできるだけ小さい自然数）に表すと、どれになりますか。",
+       "choices": [
+        "3√6",
+        "6√2",
+        "2√6"
+       ],
+       "answer": "6√2",
+       "check": "[c for c, v in {'3√6': 3 * math.sqrt(6), '6√2': 6 * math.sqrt(2), '2√6': 2 * math.sqrt(6)}.items() if math.isclose(v, math.sqrt(72))][0]",
+       "hints": [
+        "72 を素因数分解しましょう。",
+        "72 の中に、2 乗の因数はあるでしょうか。",
+        "できるだけ大きい 2 乗の因数を、根号の外に出しましょう。"
+       ],
+       "paths": [
+        [
+         "72 = 6² × 2",
+         "√(6²) × √2",
+         "6√2"
+        ]
+       ],
+       "note": "72 = 2² × 18 として 2√18 で止めやすい。根号の中はできるだけ小さい自然数にする。"
+      },
+      {
+       "part": "思い出す",
+       "text": "2 乗すると 196 になる正の数はいくつですか。",
+       "answer": 14,
+       "check": "[x for x in range(1, 30) if x * x == 196][0]",
+       "hints": [
+        "10 × 10 = 100、20 × 20 = 400 です。",
+        "2 乗して一の位が 6 になるのは、一の位が 4 か 6 の数です。",
+        "10 と 20 の間で、一の位が 4 の数と 6 の数を 2 乗してみましょう。"
+       ],
+       "paths": [
+        [
+         "10 と 20 の間",
+         "一の位が 4 か 6",
+         "14 × 14 = 196",
+         14
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 8 cm と 15 cm の直角三角形の、斜辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,30.5 194,109.5 46,109.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,30.5 194,109.5 46,109.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,101.5 54,101.5 54,109.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"38.5\" y=\"26.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.6\" y=\"116.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"36.3\" y=\"118.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">8 cm</text><text x=\"120\" y=\"127.7\" font-size=\"12\" text-anchor=\"middle\">15 cm</text></svg>",
+       "answer": 17,
+       "check": "[c for c in range(1, 100) if c * c == 8 * 8 + 15 * 15][0]",
+       "hints": [
+        "斜辺は、直角に向かい合う辺です。",
+        "8² + 15² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "8² + 15² = 64 + 225 = 289",
+         "斜辺² = 289",
+         "斜辺 = 17 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は 13 cm、辺 AC は 5 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,39.2 194,100.8 46,100.8\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,39.2 194,100.8 46,100.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,92.8 54,92.8 54,100.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"37.5\" y=\"36.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.8\" y=\"107.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.8\" y=\"109.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">5 cm</text><text x=\"124.6\" y=\"63.1\" font-size=\"12\" text-anchor=\"middle\">13 cm</text></svg>",
+       "answer": 12,
+       "check": "[b for b in range(1, 100) if 5 * 5 + b * b == 13 * 13][0]",
+       "hints": [
+        "斜辺はどの辺でしょう。",
+        "BC² + 5² = 13² です。",
+        "13² − 5² を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "BC² = 13² − 5² = 169 − 25 = 144",
+         "BC = 12 cm"
+        ]
+       ],
+       "note": "13² + 5² としやすい。斜辺がわかっているときは、斜辺の 2 乗からひく。"
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 2 cm と 3 cm の直角三角形の、斜辺の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60,30 180,110 60,110\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"60,30 180,110 60,110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"60,102 68,102 68,110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"53.4\" y=\"25.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"190.4\" y=\"117.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"50.8\" y=\"120.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"51.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">2 cm</text><text x=\"120\" y=\"128.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "choices": [
+        "√5",
+        "√13",
+        5
+       ],
+       "answer": "√13",
+       "check": "[c for c, v in {'√5': math.sqrt(5), '√13': math.sqrt(13), '5': 5}.items() if math.isclose(v, math.sqrt(2 * 2 + 3 * 3))][0]",
+       "hints": [
+        "斜辺² = 2² + 3² です。",
+        "2² + 3² を計算しましょう。",
+        "2 乗してその数になる正の数を、√ を使って表しましょう。"
+       ],
+       "paths": [
+        [
+         "2² + 3² = 4 + 9 = 13",
+         "斜辺 = √13 cm"
+        ]
+       ],
+       "note": "2 乗せずに 2 + 3 = 5 としやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "図のように、OA = 1 cm の直角三角形 OAB に、長さ 1 cm の辺を直角につないで、直角三角形 OBC、OCD を順につくりました（AB = BC = CD = 1 cm）。OD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"113.9\" y1=\"107.5\" x2=\"153.9\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"113.9\" y1=\"107.5\" x2=\"153.9\" y2=\"67.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"113.9\" y1=\"107.5\" x2=\"125.6\" y2=\"39.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"113.9\" y1=\"107.5\" x2=\"86.1\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.9\" y1=\"107.5\" x2=\"153.9\" y2=\"67.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"153.9\" y1=\"67.5\" x2=\"125.6\" y2=\"39.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.6\" y1=\"39.2\" x2=\"86.1\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"105.9\" y=\"117.7\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"160.4\" y=\"120.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"164.8\" y=\"70.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"125.2\" y=\"32.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"78.2\" y=\"29.1\" font-size=\"12\" text-anchor=\"middle\">D</text><polyline points=\"147.9,107.5 147.9,101.5 153.9,101.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"149.6,71.8 145.4,67.5 149.6,63.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"124.6,45.2 118.6,44.1 119.7,38.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.8\" y=\"86.9\" font-size=\"11\" text-anchor=\"middle\">1</text><text x=\"144\" y=\"48.2\" font-size=\"11\" text-anchor=\"middle\">1</text><text x=\"104.7\" y=\"29.8\" font-size=\"11\" text-anchor=\"middle\">1</text><text x=\"133.9\" y=\"122.4\" font-size=\"11\" text-anchor=\"middle\">1</text></svg>",
+       "answer": 2,
+       "check": "[d for d in range(1, 10) if d * d == 1 + 1 + 1 + 1][0]",
+       "hints": [
+        "OB は何 cm でしょう。√ を使って表しましょう。",
+        "OC² = OB² + 1² です。",
+        "OD² = OC² + 1² を、2 乗のまま計算しましょう。"
+       ],
+       "paths": [
+        [
+         "OB² = 1 + 1 = 2",
+         "OC² = 2 + 1 = 3",
+         "OD² = 3 + 1 = 4",
+         "OD = 2 cm"
+        ]
+       ],
+       "note": "√ のまま足そうとして √2 + 1 のようにまちがえやすい。2 乗のまま進めると楽になる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 9 cm と 12 cm の直角三角形の、斜辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50.7,18 189.3,122 50.7,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"50.7,18 189.3,122 50.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"50.7,114 58.7,114 58.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"44.6\" y=\"13\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"199.6\" y=\"130.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"41.9\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"41.9\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">9 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">12 cm</text></svg>",
+       "answer": 15,
+       "check": "[c for c in range(1, 100) if c * c == 9 * 9 + 12 * 12][0]",
+       "hints": [
+        "斜辺² = 9² + 12² です。",
+        "81 + 144 を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "9² + 12² = 81 + 144 = 225",
+         "斜辺 = 15 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は 25 cm、辺 AC は 7 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,48.4 194,91.6 46,91.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,48.4 194,91.6 46,91.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,83.6 54,83.6 54,91.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.5\" y=\"47.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.9\" y=\"97.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.4\" y=\"98.9\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">7 cm</text><text x=\"123.4\" y=\"62.7\" font-size=\"12\" text-anchor=\"middle\">25 cm</text></svg>",
+       "answer": 24,
+       "check": "[b for b in range(1, 100) if 7 * 7 + b * b == 25 * 25][0]",
+       "hints": [
+        "BC² + 7² = 25² です。",
+        "25² − 7² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "BC² = 625 − 49 = 576",
+         "BC = 24 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺がどちらも 4 cm の直角三角形の、斜辺の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,18 172,122 68,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"68,18 172,122 68,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68,114 76,114 76,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.1\" y=\"12.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"181.8\" y=\"131.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"59.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "choices": [
+        8,
+        "4√2",
+        "2√2"
+       ],
+       "answer": "4√2",
+       "check": "[c for c, v in {'8': 8, '4√2': 4 * math.sqrt(2), '2√2': 2 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(4 * 4 + 4 * 4))][0]",
+       "hints": [
+        "斜辺² = 4² + 4² です。",
+        "2 乗してその数になる正の数を、√ で表しましょう。",
+        "√32 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "4² + 4² = 32",
+         "斜辺 = √32 = 4√2 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 辺 2 cm の正方形の対角線と、1 辺 2 cm の正三角形の高さを求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,41.4 40,98.6 97.1,98.6 97.1,41.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"171.4,49.1 142.9,98.6 200,98.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"40,41.4 40,98.6 97.1,98.6 97.1,41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"171.4,49.1 142.9,98.6 200,98.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"98.6\" x2=\"97.1\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.4\" y1=\"49.1\" x2=\"171.4\" y2=\"98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"40,90.6 48,90.6 48,98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"171.4,90.6 179.4,90.6 179.4,98.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.6\" y=\"114.8\" font-size=\"12\" text-anchor=\"middle\">2 cm</text><text x=\"34\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">2 cm</text><text x=\"187.4\" y=\"114.8\" font-size=\"12\" text-anchor=\"middle\">2 cm</text><text x=\"149.1\" y=\"74\" font-size=\"12\" text-anchor=\"end\">2 cm</text></svg>",
+       "explain": "正方形の対角線は、直角をはさむ 2 辺がどちらも 2 cm の直角二等辺三角形の斜辺なので、2² + 2² = 8 で、対角線は √8 = 2√2 cm です。この三角形の辺の比は 1:1:√2 です。正三角形の高さは、頂点から底辺に下ろした垂線で、底辺のまん中に下ります。斜辺 2 cm、底辺の半分 1 cm の直角三角形ができるので、高さ² = 2² − 1² = 3 で、高さは √3 cm です。この三角形の角は 30°、60°、90° で、辺の比は 1:2:√3 です。この 2 つの直角三角形はよく出てくるので、形と辺の比を覚えておきます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "直角をはさむ 2 辺が 7 cm と 24 cm の直角三角形の、斜辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,48.4 194,91.6 46,91.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,48.4 194,91.6 46,91.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,83.6 54,83.6 54,91.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.5\" y=\"47.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.9\" y=\"97.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.4\" y=\"98.9\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">7 cm</text><text x=\"120\" y=\"109.8\" font-size=\"12\" text-anchor=\"middle\">24 cm</text></svg>",
+       "answer": 25,
+       "check": "[c for c in range(1, 100) if c * c == 7 * 7 + 24 * 24][0]",
+       "hints": [
+        "斜辺² = 7² + 24² です。",
+        "49 + 576 を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "49 + 576 = 625",
+         "斜辺 = 25 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "図の二等辺三角形 ABC で AB = AC です。頂点 A から辺 BC に垂線 AH をひきます。BC = 10 cm のとき、BH は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 50.5,122 189.5,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 50.5,122 189.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"40.2\" y=\"130.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"199.8\" y=\"130.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"154.7\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text></svg>",
+       "answer": 5,
+       "check": "Fraction(10, 2)",
+       "hints": [
+        "二等辺三角形の頂点から底辺にひいた垂線は、底辺をどのように分けるでしょう。",
+        "△ABH と △ACH は合同です。",
+        "BH = HC です。"
+       ],
+       "paths": [
+        [
+         "△ABH ≡ △ACH",
+         "BH = HC",
+         "BH = 10 ÷ 2 = 5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 6 cm の正方形の対角線の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,18 68,122 172,122 172,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68,114 76,114 76,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.2\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"60.2\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"179.8\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"179.8\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"62\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "choices": [
+        12,
+        "6√3",
+        "6√2"
+       ],
+       "answer": "6√2",
+       "check": "[c for c, v in {'12': 12, '6√3': 6 * math.sqrt(3), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(6 * 6 + 6 * 6))][0]",
+       "hints": [
+        "対角線で、正方形は 2 つの直角二等辺三角形に分かれます。",
+        "対角線² = 6² + 6² です。",
+        "1:1:√2 の比を使ってもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "対角線² = 36 + 36 = 72",
+         "対角線 = √72 = 6√2 cm"
+        ],
+        [
+         "1:1:√2 より",
+         "6 × √2 = 6√2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 8 cm の正三角形の高さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.9\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.1\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"150\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">8 cm</text></svg>",
+       "choices": [
+        "4√2",
+        "4√3",
+        "8√3"
+       ],
+       "answer": "4√3",
+       "check": "[c for c, v in {'4√2': 4 * math.sqrt(2), '4√3': 4 * math.sqrt(3), '8√3': 8 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(8 * 8 - 4 * 4))][0]",
+       "hints": [
+        "高さは底辺のまん中に下ります。底辺の半分は何 cm でしょう。",
+        "高さ² = 8² − 4² です。",
+        "√48 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "底辺の半分は 4 cm",
+         "高さ² = 64 − 16 = 48",
+         "高さ = √48 = 4√3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の二等辺三角形 ABC で AB = AC = 13 cm、BC = 10 cm です。△ABC の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 76.7,122 163.3,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 76.7,122 163.3,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"67.2\" y=\"131.9\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"172.8\" y=\"131.9\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"141.7\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text><text x=\"89.9\" y=\"69.6\" font-size=\"12\" text-anchor=\"end\">13 cm</text><text x=\"150.1\" y=\"69.6\" font-size=\"12\" text-anchor=\"start\">13 cm</text></svg>",
+       "answer": 60,
+       "check": "10 * [h for h in range(1, 30) if h * h + 5 * 5 == 13 * 13][0] // 2",
+       "hints": [
+        "頂点 A から BC に垂線 AH をひきましょう。BH は何 cm でしょう。",
+        "AH² = 13² − 5² です。",
+        "面積 = 底辺 × 高さ ÷ 2 です。"
+       ],
+       "paths": [
+        [
+         "BH = 5 cm",
+         "AH² = 169 − 25 = 144 で AH = 12 cm",
+         "10 × 12 ÷ 2 = 60 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 辺 6 cm の正三角形の面積はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.9\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.1\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"150\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "choices": [
+        "18√3",
+        "9√3",
+        36
+       ],
+       "answer": "9√3",
+       "check": "[c for c, v in {'18√3': 18 * math.sqrt(3), '9√3': 9 * math.sqrt(3), '36': 36}.items() if math.isclose(v, 6 * math.sqrt(36 - 9) / 2)][0]",
+       "hints": [
+        "まず高さを求めましょう。",
+        "高さ² = 6² − 3² です。",
+        "面積 = 6 × 高さ ÷ 2 です。"
+       ],
+       "paths": [
+        [
+         "高さ² = 36 − 9 = 27 で高さ = 3√3 cm",
+         "6 × 3√3 ÷ 2",
+         "9√3 cm²"
+        ]
+       ],
+       "note": "÷ 2 を忘れて 18√3 としやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "たて 5 cm、横 12 cm の長方形の対角線の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"44,38.3 44,101.7 196,101.7 196,38.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"101.7\" x2=\"196\" y2=\"38.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"44,93.7 52,93.7 52,101.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"33.8\" y=\"38.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"33.8\" y=\"110.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"206.2\" y=\"110.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"206.2\" y=\"38.3\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"118.9\" font-size=\"12\" text-anchor=\"middle\">12 cm</text><text x=\"38\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 13,
+       "check": "[d for d in range(1, 100) if d * d == 5 * 5 + 12 * 12][0]",
+       "hints": [
+        "対角線は、直角三角形の斜辺です。",
+        "対角線² = 5² + 12² です。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "25 + 144 = 169",
+         "対角線 = 13 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠C = 90°、∠A = 30°の直角三角形 ABC で、斜辺 AB は 12 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90,18 150,122 90,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90,18 150,122 90,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,114 98,114 98,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"86.9\" y=\"11.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"158.3\" y=\"133.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"84.5\" y=\"135.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"128.2\" y=\"68.2\" font-size=\"12\" text-anchor=\"start\">12 cm</text><path d=\"M90 34 A16 16 0 0 0 98 31.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.7\" y=\"50.8\" font-size=\"11\" text-anchor=\"middle\">30°</text></svg>",
+       "answer": 6,
+       "check": "Fraction(12, 2)",
+       "hints": [
+        "この三角形は、正三角形を半分にした形です。",
+        "辺の比は 1:2:√3 です。斜辺は、比のどの数にあたるでしょう。",
+        "BC は 30° の角に向かい合う辺です。"
+       ],
+       "paths": [
+        [
+         "1:2:√3 で斜辺が 2 にあたる",
+         "BC は 1 にあたる",
+         "12 ÷ 2 = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "斜辺が 10 cm の直角二等辺三角形の、等しい 2 辺の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,18 172,122 68,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"68,18 172,122 68,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68,114 76,114 76,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.1\" y=\"12.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"181.8\" y=\"131.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"60.2\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"127.4\" y=\"65.7\" font-size=\"12\" text-anchor=\"start\">10 cm</text></svg>",
+       "choices": [
+        5,
+        "5√2",
+        "10√2"
+       ],
+       "answer": "5√2",
+       "check": "[c for c, v in {'5': 5, '5√2': 5 * math.sqrt(2), '10√2': 10 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(10 * 10 / 2))][0]",
+       "hints": [
+        "等しい 2 辺の 2 乗の和が、10² になります。",
+        "1 辺の 2 乗は、100 の半分です。",
+        "√50 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "1 辺² × 2 = 100",
+         "1 辺² = 50",
+         "1 辺 = √50 = 5√2 cm"
+        ],
+        [
+         "1:1:√2 より",
+         "1 辺 = 10 ÷ √2 = 5√2 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "3 つの辺が 5 cm、12 cm、13 cm の三角形は、直角三角形でしょうか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"56.6,38 30,102 210,102\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"56.6,38 30,102 210,102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"56.6\" y=\"33.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"114.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"114.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"34.9\" y=\"69.6\" font-size=\"12\" text-anchor=\"end\">5 cm</text><text x=\"120\" y=\"120.2\" font-size=\"12\" text-anchor=\"middle\">13 cm</text><text x=\"137.9\" y=\"63.1\" font-size=\"12\" text-anchor=\"middle\">12 cm</text></svg>",
+       "explain": "三平方の定理の逆：三角形の 3 辺を a、b、c とするとき、a² + b² = c² ならば、この三角形は c を斜辺とする直角三角形です。いちばん長い辺を c にして調べます。5² + 12² = 25 + 144 = 169、13² = 169 で等しいので、13 cm の辺に向かい合う角（∠A）が直角の直角三角形です。方眼の上の 2 点の距離も、横とたての長さを直角をはさむ 2 辺とみて、三平方の定理で求められます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 辺 3 cm の正方形の対角線の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,18 68,122 172,122 172,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68,114 76,114 76,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.2\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"60.2\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"179.8\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"179.8\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"62\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">3 cm</text></svg>",
+       "choices": [
+        "3√3",
+        6,
+        "3√2"
+       ],
+       "answer": "3√2",
+       "check": "[c for c, v in {'3√3': 3 * math.sqrt(3), '6': 6, '3√2': 3 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(3 * 3 + 3 * 3))][0]",
+       "hints": [
+        "対角線は、直角二等辺三角形の斜辺です。",
+        "対角線² = 3² + 3² です。",
+        "1:1:√2 の比を使ってもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "対角線² = 18",
+         "対角線 = √18 = 3√2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "10/√5 の分母を有理化すると、どれになりますか。",
+       "choices": [
+        "5√2",
+        "2√5",
+        "√2"
+       ],
+       "answer": "2√5",
+       "check": "[c for c, v in {'5√2': 5 * math.sqrt(2), '2√5': 2 * math.sqrt(5), '√2': math.sqrt(2)}.items() if math.isclose(v, 10 / math.sqrt(5))][0]",
+       "hints": [
+        "分母と分子に、同じ数をかけましょう。",
+        "√5 × √5 はいくつでしょう。",
+        "分母が整数になったら、約分しましょう。"
+       ],
+       "paths": [
+        [
+         "(10 × √5)/(√5 × √5)",
+         "10√5/5",
+         "2√5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺の長さが次のような三角形のうち、直角三角形はどれですか。",
+       "choices": [
+        "6 cm、7 cm、9 cm",
+        "9 cm、40 cm、41 cm",
+        "4 cm、5 cm、6 cm"
+       ],
+       "answer": "9 cm、40 cm、41 cm",
+       "check": "[c for c, (a, b, d) in {'6 cm、7 cm、9 cm': (6, 7, 9), '9 cm、40 cm、41 cm': (9, 40, 41), '4 cm、5 cm、6 cm': (4, 5, 6)}.items() if a * a + b * b == d * d][0]",
+       "hints": [
+        "いちばん長い辺を c としましょう。",
+        "残りの 2 辺の 2 乗の和と、c² をくらべましょう。",
+        "等しくなるものが直角三角形です。"
+       ],
+       "paths": [
+        [
+         "9² + 40² = 81 + 1600 = 1681",
+         "41² = 1681",
+         "等しいので直角三角形"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"124.9\" x2=\"24\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.4\" y1=\"124.9\" x2=\"51.4\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"78.9\" y1=\"124.9\" x2=\"78.9\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"106.3\" y1=\"124.9\" x2=\"106.3\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"133.7\" y1=\"124.9\" x2=\"133.7\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"161.1\" y1=\"124.9\" x2=\"161.1\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"188.6\" y1=\"124.9\" x2=\"188.6\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"124.9\" x2=\"216\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"124.9\" x2=\"216\" y2=\"124.9\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"97.4\" x2=\"216\" y2=\"97.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"70\" x2=\"216\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"42.6\" x2=\"216\" y2=\"42.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"15.1\" x2=\"216\" y2=\"15.1\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"51.4\" y1=\"97.4\" x2=\"188.6\" y2=\"42.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"51.4\" cy=\"97.4\" r=\"3\" fill=\"currentColor\"/><text x=\"41.2\" y=\"104.7\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"188.6\" cy=\"42.6\" r=\"3\" fill=\"currentColor\"/><text x=\"198.8\" y=\"41.7\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        7,
+        "√29",
+        "√21"
+       ],
+       "answer": "√29",
+       "check": "[c for c, v in {'7': 7, '√29': math.sqrt(29), '√21': math.sqrt(21)}.items() if math.isclose(v, math.sqrt(5 * 5 + 2 * 2))][0]",
+       "hints": [
+        "A から B まで、横に何目、たてに何目進むでしょう。",
+        "AB を斜辺とする直角三角形をかきましょう。",
+        "AB² = 横² + たて² です。"
+       ],
+       "paths": [
+        [
+         "横 5 cm、たて 2 cm",
+         "AB² = 25 + 4 = 29",
+         "AB = √29 cm"
+        ]
+       ],
+       "note": "横とたてをそのまま足して 7 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "図の台形 ABCD で AD ∥ BC、AB = DC = 5 cm、AD = 4 cm、BC = 10 cm です。この台形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"84,34 30,106 210,106 156,34\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"80\" y=\"29.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"23\" y=\"119.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"217\" y=\"119.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"160\" y=\"29.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"26.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"120\" y=\"124.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text><text x=\"49.2\" y=\"67\" font-size=\"12\" text-anchor=\"end\">5 cm</text><text x=\"190.8\" y=\"67\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 28,
+       "check": "(lambda h: 4 * h + 2 * Fraction(3 * h, 2))([h for h in range(1, 20) if h * h + 3 * 3 == 5 * 5][0])",
+       "hints": [
+        "A と D から BC に垂線をひきましょう。BC は 3 つに分かれます。",
+        "両はしの直角三角形の底辺は、(10 − 4) ÷ 2 cm です。",
+        "高さを三平方の定理で求め、長方形と 2 つの直角三角形に分けて面積を求めましょう。"
+       ],
+       "paths": [
+        [
+         "両はしの底辺は 3 cm",
+         "高さ² = 25 − 9 = 16 で高さ 4 cm",
+         "長方形 4 × 4 = 16、三角形 2 つで 3 × 4 ÷ 2 × 2 = 12",
+         "16 + 12 = 28 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "方眼の 1 目は 1 cm です。△ABC は直角三角形です。直角の頂点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"81.3\" y1=\"128\" x2=\"81.3\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100.7\" y1=\"128\" x2=\"100.7\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"139.3\" y1=\"128\" x2=\"139.3\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"158.7\" y1=\"128\" x2=\"158.7\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"108.7\" x2=\"178\" y2=\"108.7\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"89.3\" x2=\"178\" y2=\"89.3\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"50.7\" x2=\"178\" y2=\"50.7\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"31.3\" x2=\"178\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"81.3,108.7 158.7,70 139.3,31.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"81.3\" y1=\"108.7\" x2=\"158.7\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"158.7\" y1=\"70\" x2=\"139.3\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.3\" y1=\"31.3\" x2=\"81.3\" y2=\"108.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"81.3\" cy=\"108.7\" r=\"3\" fill=\"currentColor\"/><text x=\"73\" y=\"119\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"158.7\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><text x=\"169.7\" y=\"73.2\" font-size=\"12\" text-anchor=\"middle\">B</text><circle cx=\"139.3\" cy=\"31.3\" r=\"3\" fill=\"currentColor\"/><text x=\"142.8\" y=\"24.1\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "A",
+        "B",
+        "C"
+       ],
+       "answer": "B",
+       "check": "(lambda P: [v for v, (p, q) in {'A': ('B', 'C'), 'B': ('A', 'C'), 'C': ('A', 'B')}.items() if (lambda d: d(v, p) + d(v, q) == d(p, q))(lambda s, t: (P[s][0] - P[t][0]) ** 2 + (P[s][1] - P[t][1]) ** 2)][0])({'A': (1, 1), 'B': (5, 3), 'C': (4, 5)})",
+       "hints": [
+        "3 つの辺の長さの 2 乗を、方眼から求めましょう。",
+        "いちばん長い辺はどれでしょう。",
+        "直角は、いちばん長い辺に向かい合う頂点にあります。"
+       ],
+       "paths": [
+        [
+         "AB² = 16 + 4 = 20、BC² = 1 + 4 = 5、CA² = 9 + 16 = 25",
+         "20 + 5 = 25 なので CA が斜辺",
+         "直角は B"
+        ]
+       ],
+       "note": "方眼の上では、直角かどうかが見た目でわかりにくい。2 乗の和で確かめる（三平方の定理の逆）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図のひし形 ABCD の対角線は 24 cm と 10 cm です。1 辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"30,70 120,107.5 210,70 120,32.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"30,70 120,107.5 210,70 120,32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"30\" y1=\"70\" x2=\"210\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"107.5\" x2=\"120\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"128,70 128,62 120,62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"21\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"122.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"219\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"75\" y=\"65.2\" font-size=\"12\" text-anchor=\"middle\">24 cm</text><text x=\"125\" y=\"55.5\" font-size=\"12\" text-anchor=\"start\">10 cm</text></svg>",
+       "answer": 13,
+       "check": "[s for s in range(1, 50) if s * s == 12 * 12 + 5 * 5][0]",
+       "hints": [
+        "ひし形の対角線は、それぞれのまん中の点で垂直に交わります。",
+        "対角線の半分の長さは、それぞれ何 cm でしょう。",
+        "1 辺は、直角をはさむ 2 辺が対角線の半分の、直角三角形の斜辺です。"
+       ],
+       "paths": [
+        [
+         "対角線の半分は 12 cm と 5 cm",
+         "1 辺² = 144 + 25 = 169",
+         "13 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 8 cm、15 cm、17 cm の三角形は、直角三角形ですか。",
+       "choices": [
+        "直角三角形である",
+        "直角三角形ではない"
+       ],
+       "answer": "直角三角形である",
+       "check": "'直角三角形である' if 8 * 8 + 15 * 15 == 17 * 17 else '直角三角形ではない'",
+       "hints": [
+        "いちばん長い辺は 17 cm です。",
+        "8² + 15² を計算しましょう。",
+        "17² とくらべましょう。"
+       ],
+       "paths": [
+        [
+         "8² + 15² = 289",
+         "17² = 289",
+         "等しいので直角三角形"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"85.2\" y1=\"128\" x2=\"85.2\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"108.4\" y1=\"128\" x2=\"108.4\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"131.6\" y1=\"128\" x2=\"131.6\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"154.8\" y1=\"128\" x2=\"154.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"104.8\" x2=\"178\" y2=\"104.8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"81.6\" x2=\"178\" y2=\"81.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"58.4\" x2=\"178\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"35.2\" x2=\"178\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"85.2\" y1=\"104.8\" x2=\"154.8\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"85.2\" cy=\"104.8\" r=\"3\" fill=\"currentColor\"/><text x=\"77.4\" y=\"115.8\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"154.8\" cy=\"35.2\" r=\"3\" fill=\"currentColor\"/><text x=\"162.6\" y=\"30.6\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        6,
+        "3√2",
+        "2√3"
+       ],
+       "answer": "3√2",
+       "check": "[c for c, v in {'6': 6, '3√2': 3 * math.sqrt(2), '2√3': 2 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(3 * 3 + 3 * 3))][0]",
+       "hints": [
+        "横に何目、たてに何目進むでしょう。",
+        "AB² = 横² + たて² です。",
+        "√18 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "横 3 cm、たて 3 cm",
+         "AB² = 18",
+         "AB = 3√2 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "図は、1 辺が a + b の正方形の中に、直角をはさむ 2 辺が a、b で斜辺が c の合同な直角三角形を 4 つならべたものです。これを使って a² + b² = c² を証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,120 170,120 170,20 70,20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"110,120 170,80 130,20 70,60\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"90\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"140\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">b</text><text x=\"179\" y=\"104.2\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"179\" y=\"54.2\" font-size=\"12\" text-anchor=\"middle\">b</text><text x=\"150\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"100\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">b</text><text x=\"61\" y=\"44.2\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"61\" y=\"94.2\" font-size=\"12\" text-anchor=\"middle\">b</text><text x=\"134\" y=\"98.2\" font-size=\"12\" text-anchor=\"middle\">c</text><text x=\"120\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">c²</text></svg>",
+       "explain": "例：「大きい正方形の 1 辺は a + b なので、面積は (a + b)² = a² + 2ab + b² …①。一方、大きい正方形は 4 つの直角三角形と中の四角形に分かれる。中の四角形は 4 つの辺がどれも c で、角はどれも 180° − （直角三角形の 2 つの鋭角の和 90°）= 90° なので、1 辺 c の正方形である。よって面積は c² + 4 × ab/2 = c² + 2ab …②。①と②は同じ正方形の面積なので a² + 2ab + b² = c² + 2ab。等しい量から同じ 2ab をひいて a² + b² = c²。」と書ければよい。① a、b、c を辺の長さとして決めている、② 面積を 2 通りの式で表し、展開している（A-015）、③ 中が正方形であることを角の和から確かめ、等しい量から同じ量をひいて結んでいる、の 3 点を見る。3 cm、4 cm、5 cm のような例で確かめただけなら、例ではすべての場合を示せないことを話す。",
+       "hints": [
+        "大きい正方形の面積を、1 辺 a + b から式に表しましょう。",
+        "同じ面積を、4 つの直角三角形と中の正方形の和でも表しましょう。",
+        "2 つの式は等しいので、くらべて同じ部分を取りのぞきましょう。"
+       ],
+       "paths": [
+        [
+         "(a + b)² = a² + 2ab + b²",
+         "4 つの三角形と中の正方形で c² + 2ab",
+         "中が正方形であることを角で確かめる",
+         "等しいので a² + b² = c²"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "∠C = 90°の直角三角形 ABC で、C から斜辺 AB に垂線 CH をひきます。BC = a、CA = b、AB = c とします。△ACH ∽ △ABC と △CBH ∽ △ABC を使って、a² + b² = c² を証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"30,113.2 210,113.2 94.8,26.8\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"30,113.2 210,113.2 94.8,26.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"22\" y=\"123.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"218\" y=\"123.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"160.4\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">a</text><text x=\"54.4\" y=\"70.2\" font-size=\"12\" text-anchor=\"end\">b</text><text x=\"174\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">c</text></svg>",
+       "explain": "例：「△ACH と △ABC で、∠AHC = ∠ACB = 90°、∠A は共通なので △ACH ∽ △ABC（A と A、C と B、H と C が対応）。対応する辺の比から AH:AC = AC:AB。この比の値を k とすると AC = k × AH、AB = k × AC なので、AH × AB = AH × k × AC = AC × AC。よって b² = AH × c …①。同じように △CBH ∽ △ABC から BC × BC = BH × AB で、a² = BH × c …②。①と②をたして a² + b² = (AH + BH) × c = c × c = c²。」と書ければよい。① 辺を文字で決めている、② 相似から AC × AC = AH × AB の形を導いている、③ AH + BH = AB を使って結んでいる、の 3 点を見る。比の式を積の式に直すところ（外項の積と内項の積）は A-005 で扱っていないので、比の値 k を使って示す。",
+       "hints": [
+        "△ACH と △ABC で、等しい角を 2 組見つけましょう。",
+        "対応する辺の比から、AC × AC を AH と AB で表しましょう。",
+        "BC × BC も同じように表して、2 つをたしましょう。"
+       ],
+       "paths": [
+        [
+         "△ACH ∽ △ABC から b² = AH × c",
+         "△CBH ∽ △ABC から a² = BH × c",
+         "たして a² + b² = (AH + BH) × c = c²"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "△ABC で BC = a、CA = b、AB = c、a² + b² = c² のとき、∠C = 90°となること（三平方の定理の逆）を証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"25.8,42.4 96.6,97.6 24,96.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"142.5,42.4 216,97.6 142.5,97.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"25.8,42.4 96.6,97.6 24,96.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"142.5,42.4 216,97.6 142.5,97.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"142.5,89.6 150.5,89.6 150.5,97.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"21.8\" y=\"37.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"104.6\" y=\"107.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"16\" y=\"106.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"138.5\" y=\"37.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"224\" y=\"107.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"134.5\" y=\"107.8\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"60.3\" y=\"113.3\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"16.9\" y=\"73.7\" font-size=\"12\" text-anchor=\"end\">b</text><text x=\"69.2\" y=\"68.2\" font-size=\"12\" text-anchor=\"start\">c</text><text x=\"179.3\" y=\"113.8\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"134.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">b</text></svg>",
+       "explain": "例：「EF = a、FD = b、∠F = 90°の直角三角形 DEF をつくる。三平方の定理より DE² = a² + b²。仮定より a² + b² = c² なので DE² = c²。DE も c も正の数なので DE = c。△ABC と △DEF で BC = EF、CA = FD、AB = DE なので、3 組の辺がそれぞれ等しく △ABC ≡ △DEF。よって ∠C = ∠F = 90°。」と書ければよい。① くらべるための直角三角形を「〜とする」でつくっている、② 三平方の定理と仮定から DE = c を導いている（どちらも正の数なので、2 乗が等しければ等しい）、③ 合同条件（G-016）で結んでいる、の 3 点を見る。「a² + b² = c² だから直角」とだけ書くのは、示したいことを使ってしまっていて証明にならないことを話す。",
+       "hints": [
+        "直角をはさむ 2 辺が a、b の直角三角形を、別に 1 つつくりましょう。",
+        "その斜辺の長さを、三平方の定理で求めましょう。",
+        "2 つの三角形が合同であることを示しましょう。"
+       ],
+       "paths": [
+        [
+         "∠F = 90°、EF = a、FD = b の △DEF をつくる",
+         "DE² = a² + b² = c² で DE = c",
+         "3 組の辺が等しく △ABC ≡ △DEF",
+         "∠C = ∠F = 90°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 20 cm と 21 cm の直角三角形の、斜辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"65.4,18 174.6,122 65.4,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"65.4,18 174.6,122 65.4,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"65.4,114 73.4,114 73.4,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.3\" y=\"12.5\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"184.5\" y=\"130.9\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"57.4\" y=\"133.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"56.6\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">20 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">21 cm</text></svg>",
+       "answer": 29,
+       "check": "[c for c in range(1, 100) if c * c == 20 * 20 + 21 * 21][0]",
+       "hints": [
+        "斜辺² = 20² + 21² です。",
+        "400 + 441 を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "400 + 441 = 841",
+         "斜辺 = 29 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 2 cm、3 cm、√13 cm の三角形は、直角三角形ですか。",
+       "choices": [
+        "直角三角形である",
+        "直角三角形ではない"
+       ],
+       "answer": "直角三角形である",
+       "check": "'直角三角形である' if 2 * 2 + 3 * 3 == 13 else '直角三角形ではない'",
+       "hints": [
+        "いちばん長い辺はどれでしょう。√13 は 3 より大きいでしょうか。",
+        "(√13)² はいくつでしょう。",
+        "2² + 3² と (√13)² をくらべましょう。"
+       ],
+       "paths": [
+        [
+         "√13 がいちばん長い（3² = 9 より 13 が大きい）",
+         "2² + 3² = 13 = (√13)²",
+         "直角三角形"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は 17 cm、辺 AC は 15 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"92.3,18 147.7,122 92.3,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"92.3,18 147.7,122 92.3,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"92.3,114 100.3,114 100.3,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"89.4\" y=\"11.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"155.8\" y=\"133.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"87.1\" y=\"135.9\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"83.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">15 cm</text><text x=\"128.2\" y=\"68.6\" font-size=\"12\" text-anchor=\"start\">17 cm</text></svg>",
+       "answer": 8,
+       "check": "[b for b in range(1, 100) if 15 * 15 + b * b == 17 * 17][0]",
+       "hints": [
+        "BC² + 15² = 17² です。",
+        "17² − 15² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "BC² = 289 − 225 = 64",
+         "BC = 8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 1 cm と 2 cm の直角三角形の、斜辺の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"80,50 160,90 80,90\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"80,50 160,90 80,90\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"80,82 88,82 88,90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"72.2\" y=\"46.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"170.7\" y=\"96.9\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"70.2\" y=\"99.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"71.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">1 cm</text><text x=\"120\" y=\"108.2\" font-size=\"12\" text-anchor=\"middle\">2 cm</text></svg>",
+       "choices": [
+        3,
+        "√5",
+        "√3"
+       ],
+       "answer": "√5",
+       "check": "[c for c, v in {'3': 3, '√5': math.sqrt(5), '√3': math.sqrt(3)}.items() if math.isclose(v, math.sqrt(1 * 1 + 2 * 2))][0]",
+       "hints": [
+        "斜辺² = 1² + 2² です。",
+        "1 + 4 を計算しましょう。",
+        "2 乗してその数になる正の数を、√ で表しましょう。"
+       ],
+       "paths": [
+        [
+         "1 + 4 = 5",
+         "斜辺 = √5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 7 cm、24 cm、25 cm の三角形は、直角三角形ですか。",
+       "choices": [
+        "直角三角形ではない",
+        "直角三角形である"
+       ],
+       "answer": "直角三角形である",
+       "check": "'直角三角形である' if 7 * 7 + 24 * 24 == 25 * 25 else '直角三角形ではない'",
+       "hints": [
+        "いちばん長い辺は 25 cm です。",
+        "7² + 24² を計算しましょう。",
+        "25² とくらべましょう。"
+       ],
+       "paths": [
+        [
+         "49 + 576 = 625",
+         "25² = 625",
+         "直角三角形"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 1:2、BC = 12 cm です。DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 72.9,52.7 128.3,52.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.9\" y1=\"52.7\" x2=\"128.3\" y2=\"52.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"63.9\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"137.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">12 cm</text></svg>",
+       "answer": 4,
+       "check": "12 * Fraction(1, 1 + 2)",
+       "hints": [
+        "DE:BC = AD:AB です。",
+        "AD:AB は何:何でしょう。",
+        "DE は BC の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:AB = 1:3",
+         "DE = 12 × 1/3 = 4 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "√12 + √27 を計算すると、どれになりますか。",
+       "choices": [
+        "√39",
+        "5√3",
+        "6√3"
+       ],
+       "answer": "5√3",
+       "check": "[c for c, v in {'√39': math.sqrt(39), '5√3': 5 * math.sqrt(3), '6√3': 6 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(12) + math.sqrt(27))][0]",
+       "hints": [
+        "√12 と √27 を、それぞれ a√b の形にしましょう。",
+        "根号の中が同じになったら、同類項のようにまとめます。",
+        "根号の中どうしをたしてはいけません。"
+       ],
+       "paths": [
+        [
+         "√12 = 2√3、√27 = 3√3",
+         "2√3 + 3√3",
+         "5√3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 4 cm の正三角形の面積はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.9\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.1\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"150\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "choices": [
+        "8√3",
+        16,
+        "4√3"
+       ],
+       "answer": "4√3",
+       "check": "[c for c, v in {'8√3': 8 * math.sqrt(3), '16': 16, '4√3': 4 * math.sqrt(3)}.items() if math.isclose(v, 4 * math.sqrt(16 - 4) / 2)][0]",
+       "hints": [
+        "頂点から底辺に垂線をひくと、底辺の半分は 2 cm です。",
+        "高さ² = 4² − 2² です。",
+        "面積 = 4 × 高さ ÷ 2 です。"
+       ],
+       "paths": [
+        [
+         "高さ = √12 = 2√3 cm",
+         "4 × 2√3 ÷ 2",
+         "4√3 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠BAC = 90°の直角三角形 ABC で、AB = 3 cm、AC = 4 cm です。A から BC に垂線 AH をひくとき、AH は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.8,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"54.6\" y=\"67\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"159.3\" y=\"64.6\" font-size=\"12\" text-anchor=\"start\">4 cm</text></svg>",
+       "answer": "12/5",
+       "accept": [
+        2.4
+       ],
+       "check": "Fraction(3 * 4, [c for c in range(1, 20) if c * c == 3 * 3 + 4 * 4][0])",
+       "hints": [
+        "まず BC の長さを求めましょう。",
+        "△ABC の面積を、AB と AC を使う式と、BC と AH を使う式の 2 通りで表しましょう。",
+        "相似な △HBA と △ABC を使ってもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "BC = 5 cm",
+         "3 × 4 ÷ 2 = 5 × AH ÷ 2",
+         "AH = 12 ÷ 5 = 12/5 cm"
+        ],
+        [
+         "BC = 5 cm",
+         "△HBA ∽ △ABC で AH は CA に対応する",
+         "AH = 4 × 3/5 = 12/5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "対角線が 10 cm、たてが 6 cm の長方形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50.7,18 50.7,122 189.3,122 189.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.7\" y1=\"122\" x2=\"189.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"50.7,114 58.7,114 58.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"41.9\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"41.9\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.1\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"198.1\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"44.7\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"112\" y=\"66.2\" font-size=\"12\" text-anchor=\"end\">10 cm</text></svg>",
+       "answer": 48,
+       "check": "6 * [x for x in range(1, 20) if x * x + 6 * 6 == 10 * 10][0]",
+       "hints": [
+        "対角線は、たてと横を直角をはさむ 2 辺とする直角三角形の斜辺です。",
+        "横² = 10² − 6² です。",
+        "面積 = たて × 横 です。"
+       ],
+       "paths": [
+        [
+         "横² = 100 − 36 = 64 で横 8 cm",
+         "6 × 8 = 48 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の正方形 ABCD の 1 辺は 4 cm で、M は辺 BC の中点、N は辺 CD の中点です。△AMN のまわりの長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72,22 120,118 168,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"72,22 72,118 168,118 168,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"72,22 120,118 168,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"64\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"64\" y=\"128.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"176\" y=\"128.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"176\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"178\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"120\" cy=\"118\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"168\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"96\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">2 cm</text><text x=\"66\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "choices": [
+        "4√5 + 2√2",
+        "6√2",
+        "4√5 + 2"
+       ],
+       "answer": "4√5 + 2√2",
+       "check": "[c for c, v in {'4√5 + 2√2': 4 * math.sqrt(5) + 2 * math.sqrt(2), '6√2': 6 * math.sqrt(2), '4√5 + 2': 4 * math.sqrt(5) + 2}.items() if math.isclose(v, math.sqrt(4 * 4 + 2 * 2) * 2 + math.sqrt(2 * 2 + 2 * 2))][0]",
+       "hints": [
+        "AM は、直角をはさむ 2 辺が何 cm と何 cm の直角三角形の斜辺でしょう。",
+        "AN も同じように求めましょう。",
+        "MN は、直角をはさむ 2 辺がどちらも 2 cm の直角三角形の斜辺です。"
+       ],
+       "paths": [
+        [
+         "AM = AN = √(16 + 4) = 2√5 cm",
+         "MN = √(4 + 4) = 2√2 cm",
+         "2√5 + 2√5 + 2√2 = 4√5 + 2√2 cm"
+        ]
+       ],
+       "note": "根号の中がちがう数どうしはまとめられない（A-016）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の二等辺三角形 ABC で AB = AC = 6 cm、BC = 4 cm です。△ABC の面積はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 83.2,122 156.8,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 83.2,122 156.8,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"74.2\" y=\"132.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"165.8\" y=\"132.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"138.4\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"93.1\" y=\"70.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"146.9\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">6 cm</text></svg>",
+       "choices": [
+        "4√2",
+        "8√2",
+        "16√2"
+       ],
+       "answer": "8√2",
+       "check": "[c for c, v in {'4√2': 4 * math.sqrt(2), '8√2': 8 * math.sqrt(2), '16√2': 16 * math.sqrt(2)}.items() if math.isclose(v, 4 * math.sqrt(36 - 4) / 2)][0]",
+       "hints": [
+        "頂点 A から BC に垂線 AH をひくと、BH は 2 cm です。",
+        "AH² = 6² − 2² です。",
+        "面積 = 4 × AH ÷ 2 です。"
+       ],
+       "paths": [
+        [
+         "AH = √32 = 4√2 cm",
+         "4 × 4√2 ÷ 2",
+         "8√2 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は √10 cm、辺 AC は 1 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60,50 180,90 60,90\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"60,50 180,90 60,90\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"60,82 68,82 68,90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"50.8\" y=\"48.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"190.9\" y=\"96\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"49.6\" y=\"97.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"51.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">1 cm</text><text x=\"123.8\" y=\"62.8\" font-size=\"12\" text-anchor=\"middle\">√10 cm</text></svg>",
+       "answer": 3,
+       "check": "[b for b in range(1, 10) if 1 + b * b == 10][0]",
+       "hints": [
+        "(√10)² はいくつでしょう。",
+        "BC² = (√10)² − 1² です。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "(√10)² = 10",
+         "BC² = 10 − 1 = 9",
+         "BC = 3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 5 cm と 12 cm の直角三角形 ABC があります。△ABC と相似で、相似比が 2:3 の三角形 DEF の斜辺は何 cm ですか。",
+       "answer": "39/2",
+       "accept": [
+        19.5
+       ],
+       "check": "Fraction([c for c in range(1, 50) if c * c == 5 * 5 + 12 * 12][0] * 3, 2)",
+       "hints": [
+        "まず △ABC の斜辺を求めましょう。",
+        "△DEF の辺は、△ABC の辺の何倍でしょう。",
+        "斜辺にその数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "△ABC の斜辺 13 cm",
+         "△DEF は 3/2 倍",
+         "13 × 3/2 = 39/2 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "直角をはさむ 2 辺が 12 cm と 35 cm の直角三角形の、斜辺の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,44.6 194,95.4 46,95.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,44.6 194,95.4 46,95.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,87.4 54,87.4 54,95.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.9\" y=\"42.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.8\" y=\"101.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.6\" y=\"103.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">12 cm</text><text x=\"120\" y=\"113.6\" font-size=\"12\" text-anchor=\"middle\">35 cm</text></svg>",
+       "answer": 37,
+       "check": "[c for c in range(1, 100) if c * c == 12 * 12 + 35 * 35][0]",
+       "hints": [
+        "斜辺² = 12² + 35² です。",
+        "144 + 1225 を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "144 + 1225 = 1369",
+         "斜辺 = 37 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は 9 cm、辺 AC は 3 cm です。辺 BC の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,43.8 194,96.2 46,96.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,43.8 194,96.2 46,96.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,88.2 54,88.2 54,96.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"37\" y=\"41.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.8\" y=\"102.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.6\" y=\"104\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"124\" y=\"62.9\" font-size=\"12\" text-anchor=\"middle\">9 cm</text></svg>",
+       "choices": [
+        6,
+        "3√10",
+        "6√2"
+       ],
+       "answer": "6√2",
+       "check": "[c for c, v in {'6': 6, '3√10': 3 * math.sqrt(10), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(9 * 9 - 3 * 3))][0]",
+       "hints": [
+        "BC² = 9² − 3² です。",
+        "81 − 9 を計算しましょう。",
+        "√72 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "BC² = 72",
+         "BC = √72 = 6√2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 7 cm の正方形の対角線の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,18 68,122 172,122 172,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68,114 76,114 76,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.2\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"60.2\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"179.8\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"179.8\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">7 cm</text><text x=\"62\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">7 cm</text></svg>",
+       "choices": [
+        14,
+        "7√2",
+        "7√3"
+       ],
+       "answer": "7√2",
+       "check": "[c for c, v in {'14': 14, '7√2': 7 * math.sqrt(2), '7√3': 7 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(7 * 7 + 7 * 7))][0]",
+       "hints": [
+        "対角線は、直角二等辺三角形の斜辺です。",
+        "対角線² = 7² + 7² です。",
+        "1:1:√2 の比を使ってもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "対角線² = 98",
+         "対角線 = √98 = 7√2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 10 cm の正三角形の高さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.9\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.1\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"150\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text></svg>",
+       "choices": [
+        "5√3",
+        "5√2",
+        "10√3"
+       ],
+       "answer": "5√3",
+       "check": "[c for c, v in {'5√3': 5 * math.sqrt(3), '5√2': 5 * math.sqrt(2), '10√3': 10 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(10 * 10 - 5 * 5))][0]",
+       "hints": [
+        "底辺の半分は 5 cm です。",
+        "高さ² = 10² − 5² です。",
+        "1:2:√3 の比を使ってもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "高さ² = 100 − 25 = 75",
+         "高さ = √75 = 5√3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺の長さが次のような三角形のうち、直角三角形はどれですか。",
+       "choices": [
+        "2 cm、3 cm、4 cm",
+        "3 cm、5 cm、6 cm",
+        "2 cm、√5 cm、3 cm"
+       ],
+       "answer": "2 cm、√5 cm、3 cm",
+       "check": "[k for k, (p, q, r) in {'2 cm、3 cm、4 cm': (4, 9, 16), '3 cm、5 cm、6 cm': (9, 25, 36), '2 cm、√5 cm、3 cm': (4, 5, 9)}.items() if p + q == r][0]",
+       "hints": [
+        "それぞれの辺を 2 乗した数を書き出しましょう。(√5)² は 5 です。",
+        "いちばん長い辺の 2 乗と、残りの 2 辺の 2 乗の和をくらべましょう。",
+        "等しくなるものが直角三角形です。"
+       ],
+       "paths": [
+        [
+         "2² = 4、(√5)² = 5、3² = 9",
+         "4 + 5 = 9",
+         "直角三角形"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "方眼の 1 目は 1 cm です。2 点 A、B の間の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"27.2\" y1=\"128\" x2=\"27.2\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"50.4\" y1=\"128\" x2=\"50.4\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"73.6\" y1=\"128\" x2=\"73.6\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"96.8\" y1=\"128\" x2=\"96.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"143.2\" y1=\"128\" x2=\"143.2\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"166.4\" y1=\"128\" x2=\"166.4\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"189.6\" y1=\"128\" x2=\"189.6\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"212.8\" y1=\"128\" x2=\"212.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"128\" x2=\"212.8\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"104.8\" x2=\"212.8\" y2=\"104.8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"81.6\" x2=\"212.8\" y2=\"81.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"58.4\" x2=\"212.8\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"35.2\" x2=\"212.8\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"27.2\" y1=\"12\" x2=\"212.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"50.4\" y1=\"104.8\" x2=\"189.6\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"50.4\" cy=\"104.8\" r=\"3\" fill=\"currentColor\"/><text x=\"40.6\" y=\"112.9\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"189.6\" cy=\"35.2\" r=\"3\" fill=\"currentColor\"/><text x=\"199.4\" y=\"33.5\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        9,
+        "3√5",
+        "5√3"
+       ],
+       "answer": "3√5",
+       "check": "[c for c, v in {'9': 9, '3√5': 3 * math.sqrt(5), '5√3': 5 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(6 * 6 + 3 * 3))][0]",
+       "hints": [
+        "横に何目、たてに何目進むでしょう。",
+        "AB² = 横² + たて² です。",
+        "√45 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "横 6 cm、たて 3 cm",
+         "AB² = 36 + 9 = 45",
+         "AB = 3√5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の二等辺三角形 ABC で AB = AC = 17 cm、BC = 16 cm です。△ABC の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 64.5,122 175.5,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 64.5,122 175.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"54.6\" y=\"130.9\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"185.4\" y=\"130.9\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"147.7\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">16 cm</text><text x=\"84\" y=\"68.6\" font-size=\"12\" text-anchor=\"end\">17 cm</text><text x=\"156\" y=\"68.6\" font-size=\"12\" text-anchor=\"start\">17 cm</text></svg>",
+       "answer": 120,
+       "check": "16 * [h for h in range(1, 30) if h * h + 8 * 8 == 17 * 17][0] // 2",
+       "hints": [
+        "頂点 A から BC に垂線 AH をひくと、BH は何 cm でしょう。",
+        "AH² = 17² − 8² です。",
+        "面積 = 底辺 × 高さ ÷ 2 です。"
+       ],
+       "paths": [
+        [
+         "BH = 8 cm",
+         "AH² = 289 − 64 = 225 で AH = 15 cm",
+         "16 × 15 ÷ 2 = 120 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の △ABC で ∠B = 45°、∠C = 30°、A から BC への垂線 AH の長さは 2 cm です。BC の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"95.9,37.1 30,102.9 210,102.9\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"95.9,37.1 30,102.9 210,102.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.9\" y1=\"37.1\" x2=\"95.9\" y2=\"102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"95.9,94.9 103.9,94.9 103.9,102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.9\" y=\"32.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"113.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"113.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"95.9\" y=\"119.1\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"100.9\" y=\"74.2\" font-size=\"12\" text-anchor=\"start\">2 cm</text><path d=\"M46 102.9 A16 16 0 0 0 41.3 91.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.7\" y=\"95.3\" font-size=\"11\" text-anchor=\"middle\">45°</text><path d=\"M190.9 91.9 A22 22 0 0 0 188 102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"173.3\" y=\"97\" font-size=\"11\" text-anchor=\"middle\">30°</text></svg>",
+       "choices": [
+        "2 + √3",
+        "4√3",
+        "2 + 2√3"
+       ],
+       "answer": "2 + 2√3",
+       "check": "[c for c, v in {'2 + √3': 2 + math.sqrt(3), '4√3': 4 * math.sqrt(3), '2 + 2√3': 2 + 2 * math.sqrt(3)}.items() if math.isclose(v, 2 / math.tan(math.radians(45)) + 2 / math.tan(math.radians(30)))][0]",
+       "hints": [
+        "△ABH は、どんな形の直角三角形でしょう。",
+        "△ACH は、辺の比が 1:2:√3 の直角三角形です。HC は AH の何倍でしょう。",
+        "BC = BH + HC です。"
+       ],
+       "paths": [
+        [
+         "△ABH は直角二等辺三角形で BH = 2 cm",
+         "△ACH は 1:2:√3 で HC = 2√3 cm",
+         "BC = 2 + 2√3 cm"
+        ]
+       ],
+       "note": "2 + 2√3 は、これ以上まとめられない。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の直角三角形で、斜辺 AB は 41 cm、辺 AC は 9 cm です。辺 BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,53.4 194,86.7 46,86.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"46,53.4 194,86.7 46,86.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"46,78.7 54,78.7 54,86.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36\" y=\"53\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"204.9\" y=\"92.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"35.3\" y=\"93.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"37.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">9 cm</text><text x=\"122.6\" y=\"62.5\" font-size=\"12\" text-anchor=\"middle\">41 cm</text></svg>",
+       "answer": 40,
+       "check": "[b for b in range(1, 100) if 9 * 9 + b * b == 41 * 41][0]",
+       "hints": [
+        "BC² + 9² = 41² です。",
+        "41² − 9² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "BC² = 1681 − 81 = 1600",
+         "BC = 40 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 6 cm の正三角形の高さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,18 60,122 180,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,114 128,114 128,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.9\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.1\" y=\"130.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"150\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "choices": [
+        "3√2",
+        "3√3",
+        "6√3"
+       ],
+       "answer": "3√3",
+       "check": "[c for c, v in {'3√2': 3 * math.sqrt(2), '3√3': 3 * math.sqrt(3), '6√3': 6 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(6 * 6 - 3 * 3))][0]",
+       "hints": [
+        "底辺の半分は 3 cm です。",
+        "高さ² = 6² − 3² です。",
+        "√27 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "高さ² = 27",
+         "高さ = 3√3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たて 12 cm、横 16 cm の長方形の対角線の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50.7,18 50.7,122 189.3,122 189.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.7\" y1=\"122\" x2=\"189.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"50.7,114 58.7,114 58.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"41.9\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"41.9\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.1\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"198.1\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">16 cm</text><text x=\"44.7\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">12 cm</text></svg>",
+       "answer": 20,
+       "check": "[d for d in range(1, 100) if d * d == 12 * 12 + 16 * 16][0]",
+       "hints": [
+        "対角線は、直角三角形の斜辺です。",
+        "対角線² = 12² + 16² です。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "144 + 256 = 400",
+         "対角線 = 20 cm"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -206915,7 +208140,7 @@ window.ROADMAP = {
     14.3
    ],
    "comb": {
-    "b": 0.439,
+    "b": 0.451,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -206934,44 +208159,1812 @@ window.ROADMAP = {
    "region": "shomei-zukei",
    "needs": [
     "G-013",
-    "G-016"
+    "G-016",
+    "A-010"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "△ABC ∽ △DEF です。AB = 4 cm、BC = 6 cm、DE = 10 cm のとき、相似比と辺 EF の長さを求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"41.9,75.9 26,99.3 68.5,99.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"147.6,40.7 107.8,99.3 214,99.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"41.9,75.9 26,99.3 68.5,99.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"147.6,40.7 107.8,99.3 214,99.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"41.9\" y=\"71.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"112.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"75.5\" y=\"112.5\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"147.6\" y=\"35.9\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"100.8\" y=\"112.5\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"112.5\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"26\" y=\"85\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"47.2\" y=\"117.5\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"119.7\" y=\"67.5\" font-size=\"12\" text-anchor=\"end\">10 cm</text></svg>",
+       "explain": "1 つの図形を拡大または縮小した図形と合同な図形を、もとの図形と相似であるといい、記号 ∽ を使って △ABC ∽ △DEF と書きます。対応する頂点を同じ順に書くので、A と D、B と E、C と F が対応します。対応する辺の長さの比を相似比といいます。AB と DE が対応するので、相似比は 4:10 = 2:5 です。EF は BC に対応するので BC の 5/2 倍で、EF = 6 × 5/2 = 15 cm。対応する角の大きさは等しいので、∠E = ∠B です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形 DEF は三角形 ABC の拡大図で、辺 BC に辺 EF が対応しています。BC = 4 cm、EF = 10 cm のとき、EF は BC の何倍ですか。",
+       "answer": "5/2",
+       "accept": [
+        2.5
+       ],
+       "check": "Fraction(10, 4)",
+       "hints": [
+        "何倍かは、EF ÷ BC で求めましょう。",
+        "10 ÷ 4 を分数で表しましょう。",
+        "分数は約分しておきましょう。"
+       ],
+       "paths": [
+        [
+         "10 ÷ 4",
+         "10/4 を約分する",
+         "5/2 倍（2.5 倍）"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "△ABC ≡ △PQR です。辺 AC に対応する辺はどれですか。",
+       "choices": [
+        "PQ",
+        "PR",
+        "QR"
+       ],
+       "answer": "PR",
+       "hints": [
+        "合同の記号では、対応する頂点を同じ順に書きます。",
+        "A に対応する頂点と、C に対応する頂点はどれでしょう。",
+        "その 2 つの頂点を結んだ辺が答えです。"
+       ],
+       "paths": [
+        [
+         "A と P、C と R が対応する",
+         "AC に対応するのは PR"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF です。AB = 6 cm、BC = 8 cm、CA = 7 cm、DE = 9 cm のとき、△ABC と △DEF の相似比はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"49.6,60.6 26,98.2 85.2,98.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"160.6,41.8 125.2,98.2 214,98.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"49.6,60.6 26,98.2 85.2,98.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"160.6,41.8 125.2,98.2 214,98.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"49.6\" y=\"55.8\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"92.2\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"160.6\" y=\"37\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"118.2\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"29.7\" y=\"77.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"55.6\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"74.9\" y=\"75.4\" font-size=\"12\" text-anchor=\"start\">7 cm</text><text x=\"134.8\" y=\"67.8\" font-size=\"12\" text-anchor=\"end\">9 cm</text></svg>",
+       "choices": [
+        "3:2",
+        "2:3",
+        "3:4"
+       ],
+       "answer": "2:3",
+       "check": "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(6, 9))",
+       "hints": [
+        "相似比は、対応する辺の長さの比です。",
+        "長さがわかっている、対応する辺の組はどれでしょう。",
+        "比の両方を同じ数でわって、簡単にしましょう。"
+       ],
+       "paths": [
+        [
+         "AB と DE が対応する",
+         "AB:DE = 6:9",
+         "= 2:3"
+        ]
+       ],
+       "note": "相似比は △ABC:△DEF の順に書く。逆にして 3:2 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF で、AB = 6 cm、BC = 8 cm、DE = 9 cm です。辺 EF の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"49.6,60.6 26,98.2 85.2,98.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"160.6,41.8 125.2,98.2 214,98.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"49.6,60.6 26,98.2 85.2,98.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"160.6,41.8 125.2,98.2 214,98.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"49.6\" y=\"55.8\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"92.2\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"160.6\" y=\"37\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"118.2\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"111.4\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"29.7\" y=\"77.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"55.6\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"134.8\" y=\"67.8\" font-size=\"12\" text-anchor=\"end\">9 cm</text></svg>",
+       "answer": 12,
+       "check": "8 * Fraction(9, 6)",
+       "hints": [
+        "EF に対応する △ABC の辺はどれでしょう。",
+        "DE は AB の何倍でしょう。",
+        "EF も BC の同じ倍になります。"
+       ],
+       "paths": [
+        [
+         "DE は AB の 9/6 = 3/2 倍",
+         "EF = 8 × 3/2",
+         "12 cm"
+        ],
+        [
+         "三角形の中で AB:BC = 6:8 = 3:4",
+         "DE:EF も 3:4",
+         "9 は 3 の 3 倍なので EF = 4 × 3 = 12 cm"
+        ]
+       ],
+       "note": "EF に対応する辺を CA と取りちがえやすい。頂点の順（E と B、F と C）で対応を確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF で、∠A = 50°、∠B = 75° です。∠F は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"42.2,51.9 26,112.2 84.4,112.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"154.9,27.8 132.3,112.2 214,112.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"42.2,51.9 26,112.2 84.4,112.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"154.9,27.8 132.3,112.2 214,112.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"42.2\" y=\"47.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"91.4\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"154.9\" y=\"23\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"125.3\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">F</text><path d=\"M38.8 64.5 A13 13 0 0 0 49.6 62.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"46.7\" y=\"81.4\" font-size=\"11\" text-anchor=\"middle\">50°</text><path d=\"M39 112.2 A13 13 0 0 0 29.4 99.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"46.6\" y=\"100.2\" font-size=\"11\" text-anchor=\"middle\">75°</text></svg>",
+       "answer": 55,
+       "check": "180 - 50 - 75",
+       "hints": [
+        "∠F に対応する △ABC の角はどれでしょう。",
+        "相似な図形では、対応する角の大きさは等しくなります。",
+        "三角形の 3 つの角の和は 180° です。"
+       ],
+       "paths": [
+        [
+         "∠F は ∠C に対応する",
+         "∠C = 180° − 50° − 75°",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "四角形 ABCD ∽ 四角形 EFGH です。AB = 4 cm、BC = 5 cm、CD = 6 cm、DA = 3 cm、EF = 6 cm のとき、四角形 EFGH のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"36.4,110.2 79.9,110.2 89.4,56.6 28,78.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"132.5,110.2 197.8,110.2 212,29.8 119.9,62.9\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"36.4,110.2 79.9,110.2 89.4,56.6 28,78.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"132.5,110.2 197.8,110.2 212,29.8 119.9,62.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"29.4\" y=\"122.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"86.9\" y=\"122.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"97.4\" y=\"56.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"21\" y=\"76.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"125.5\" y=\"122.4\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"204.8\" y=\"122.4\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"220\" y=\"30\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"112.9\" y=\"61.1\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"58.2\" y=\"128.4\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"93.4\" y=\"91.7\" font-size=\"12\" text-anchor=\"start\">5 cm</text><text x=\"54.7\" y=\"60.5\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"23.6\" y=\"103.7\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"165.2\" y=\"128.4\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 27,
+       "check": "(4 + 5 + 6 + 3) * Fraction(6, 4)",
+       "hints": [
+        "相似比を求めましょう。",
+        "四角形 EFGH の辺は、それぞれ四角形 ABCD の辺の何倍でしょう。",
+        "まわりの長さも同じ倍になるかを考えましょう。"
+       ],
+       "paths": [
+        [
+         "EF は AB の 6/4 = 3/2 倍",
+         "ABCD のまわりは 4 + 5 + 6 + 3 = 18",
+         "18 × 3/2 = 27 cm"
+        ],
+        [
+         "FG = 15/2、GH = 9、HE = 9/2",
+         "6 + 15/2 + 9 + 9/2 = 27 cm"
+        ]
+       ],
+       "note": "まわりの長さの比も相似比に等しい。面積の比はちがう（6 日目）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "△PQR ∽ △XYZ です。PQ = 10 cm、QR = 15 cm、XY = 4 cm のとき、YZ は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"64.8,44.4 26,95.6 122.4,95.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"190.9,75.1 175.4,95.6 214,95.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"64.8,44.4 26,95.6 122.4,95.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"190.9,75.1 175.4,95.6 214,95.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"64.8\" y=\"39.6\" font-size=\"12\" text-anchor=\"middle\">P</text><text x=\"19\" y=\"108.8\" font-size=\"12\" text-anchor=\"middle\">Q</text><text x=\"129.4\" y=\"108.8\" font-size=\"12\" text-anchor=\"middle\">R</text><text x=\"190.9\" y=\"70.3\" font-size=\"12\" text-anchor=\"middle\">X</text><text x=\"168.4\" y=\"108.8\" font-size=\"12\" text-anchor=\"middle\">Y</text><text x=\"221\" y=\"108.8\" font-size=\"12\" text-anchor=\"middle\">Z</text><text x=\"37.6\" y=\"67\" font-size=\"12\" text-anchor=\"end\">10 cm</text><text x=\"74.2\" y=\"113.8\" font-size=\"12\" text-anchor=\"middle\">15 cm</text><text x=\"175.4\" y=\"82.3\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "answer": 6,
+       "check": "15 * Fraction(4, 10)",
+       "hints": [
+        "YZ に対応する辺はどれでしょう。",
+        "XY は PQ の何倍でしょう。1 より小さい数になります。",
+        "QR に同じ数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "XY は PQ の 4/10 = 2/5 倍",
+         "YZ = 15 × 2/5",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF で、∠A = 40°、∠E = 110° です。∠C は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"26,48.6 41.6,91.4 100.2,91.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"147.3,52.9 161.3,91.4 214,91.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"26,48.6 41.6,91.4 100.2,91.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"147.3,52.9 161.3,91.4 214,91.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"26\" y=\"43.8\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"34.6\" y=\"104.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"107.2\" y=\"104.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"147.3\" y=\"48.1\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"154.3\" y=\"104.6\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"104.6\" font-size=\"12\" text-anchor=\"middle\">F</text><path d=\"M30.4 60.8 A13 13 0 0 0 37.3 55.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"42.7\" y=\"72.4\" font-size=\"11\" text-anchor=\"middle\">40°</text><path d=\"M174.3 91.4 A13 13 0 0 0 156.8 79.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"176.2\" y=\"74\" font-size=\"11\" text-anchor=\"middle\">110°</text></svg>",
+       "answer": 30,
+       "check": "180 - 40 - 110",
+       "hints": [
+        "∠E に対応する △ABC の角はどれでしょう。",
+        "∠B は何度でしょう。",
+        "三角形の 3 つの角の和を使いましょう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠E = 110°",
+         "∠C = 180° − 40° − 110°",
+         "30°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの三角形の相似比は 3:5 です。小さいほうの三角形の 12 cm の辺に対応する、大きいほうの三角形の辺は何 cm ですか。",
+       "answer": 20,
+       "check": "12 * Fraction(5, 3)",
+       "hints": [
+        "大きいほうの辺は、小さいほうの辺の何倍でしょう。",
+        "3:5 のとき、5 は 3 の何倍かを分数で表しましょう。",
+        "12 にその数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "大きいほうは小さいほうの 5/3 倍",
+         "12 × 5/3",
+         "20 cm"
+        ],
+        [
+         "12 ÷ 3 = 4 が比の 1 にあたる",
+         "4 × 5 = 20 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "△ABC と △DEF で、AB = 4 cm、AC = 6 cm、∠A = 50°、DE = 6 cm、DF = 9 cm、∠D = 50° です。2 つの三角形は相似といえるでしょうか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"73.9,18 45.3,55.9 89.9,87.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"170.7,18 127.8,74.8 194.7,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"73.9,18 45.3,55.9 89.9,87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"170.7,18 127.8,74.8 194.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"73.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"38.3\" y=\"69.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"96.9\" y=\"100.5\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"170.7\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120.8\" y=\"88\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"201.7\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"51.8\" y=\"33.9\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"90.6\" y=\"54.2\" font-size=\"12\" text-anchor=\"start\">6 cm</text><text x=\"141.4\" y=\"43.4\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"191.3\" y=\"71.5\" font-size=\"12\" text-anchor=\"start\">9 cm</text><path d=\"M66.1 28.4 A13 13 0 0 0 76.8 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.5\" y=\"47.3\" font-size=\"11\" text-anchor=\"middle\">50°</text><path d=\"M162.8 28.4 A13 13 0 0 0 173.6 30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"165.3\" y=\"47.3\" font-size=\"11\" text-anchor=\"middle\">50°</text></svg>",
+       "explain": "2 つの三角形は、次のどれかがなりたてば相似です（三角形の相似条件）。① 3 組の辺の比がすべて等しい。② 2 組の辺の比とその間の角がそれぞれ等しい。③ 2 組の角がそれぞれ等しい。ここでは AB:DE = 4:6 = 2:3、AC:DF = 6:9 = 2:3 で、その間の角 ∠A と ∠D がどちらも 50° なので、② により △ABC ∽ △DEF です。合同条件（G-016）の「等しい辺」が「比の等しい辺」に変わった形です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "△ABC ∽ △DEF で、相似比は 3:4 です。BC = 7.5 cm のとき、EF は何 cm ですか。",
+       "answer": 10,
+       "check": "Fraction(15, 2) * Fraction(4, 3)",
+       "hints": [
+        "EF は BC に対応します。",
+        "相似比 3:4 から、EF は BC の何倍かを分数で表しましょう。",
+        "7.5 にその数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "EF は BC の 4/3 倍",
+         "7.5 × 4/3",
+         "10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "直線 ℓ と m は平行です。図の ∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"56.1\" y1=\"38\" x2=\"183.9\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"187.9\" y=\"42.2\" font-size=\"12\" text-anchor=\"start\">ℓ</text><line x1=\"56.1\" y1=\"102\" x2=\"183.9\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"187.9\" y=\"106.2\" font-size=\"12\" text-anchor=\"start\">m</text><line x1=\"102.1\" y1=\"122\" x2=\"139.9\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M116.6 38 A16 16 0 0 0 127.1 53.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108\" y=\"59.4\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M114.8 86.9 A16 16 0 0 0 93.3 102\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.1\" y=\"81.6\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "平行線の同位角や錯角は等しくなります。",
+        "70° の角と同じ大きさの角を、下の交わる点で探しましょう。",
+        "一直線の角は 180° です。"
+       ],
+       "paths": [
+        [
+         "錯角で 70° を下の交わる点へ移す",
+         "∠x = 180° − 70°",
+         "110°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC の 3 つの辺は 4 cm、6 cm、8 cm です。△ABC と相似な三角形はどれですか。",
+       "choices": [
+        "5 cm、7 cm、9 cm",
+        "6 cm、9 cm、12 cm",
+        "6 cm、8 cm、10 cm"
+       ],
+       "answer": "6 cm、9 cm、12 cm",
+       "check": "[c for c, s in {'5 cm、7 cm、9 cm': (5, 7, 9), '6 cm、9 cm、12 cm': (6, 9, 12), '6 cm、8 cm、10 cm': (6, 8, 10)}.items() if len(set([Fraction(s[i], (4, 6, 8)[i]) for i in range(3)])) == 1][0]",
+       "hints": [
+        "短い辺どうし、長い辺どうしを組にしましょう。",
+        "それぞれの組で、何倍になっているかを調べましょう。",
+        "3 組とも同じ倍なら、3 組の辺の比がすべて等しくなります。"
+       ],
+       "paths": [
+        [
+         "4 → 6、6 → 9、8 → 12",
+         "どれも 3/2 倍",
+         "3 組の辺の比がすべて等しいので相似"
+        ]
+       ],
+       "note": "6 cm、8 cm、10 cm は、どの辺も 2 cm ずつ長いだけで、倍は同じではない（4 → 6 は 3/2 倍、8 → 10 は 5/4 倍）。"
+      },
+      {
+       "part": "今日",
+       "text": "△ABC と △DEF で、∠B = ∠E = 60°、∠C = ∠F = 45° です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"49.5,55.7 26,96.5 90.3,96.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"161,43.5 130.4,96.5 214,96.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"49.5,55.7 26,96.5 90.3,96.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"161,43.5 130.4,96.5 214,96.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"49.5\" y=\"50.9\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"109.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"97.3\" y=\"109.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"161\" y=\"38.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"123.4\" y=\"109.7\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"109.7\" font-size=\"12\" text-anchor=\"middle\">F</text><path d=\"M39 96.5 A13 13 0 0 0 32.5 85.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"48.5\" y=\"87.3\" font-size=\"11\" text-anchor=\"middle\">60°</text><path d=\"M81.1 87.3 A13 13 0 0 0 77.3 96.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"66.3\" y=\"90.4\" font-size=\"11\" text-anchor=\"middle\">45°</text><path d=\"M143.4 96.5 A13 13 0 0 0 136.9 85.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"153\" y=\"87.3\" font-size=\"11\" text-anchor=\"middle\">60°</text><path d=\"M204.8 87.3 A13 13 0 0 0 201 96.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"90.4\" font-size=\"11\" text-anchor=\"middle\">45°</text></svg>",
+       "choices": [
+        "3 組の辺の比がすべて等しい",
+        "2 組の辺の比とその間の角がそれぞれ等しい",
+        "2 組の角がそれぞれ等しい"
+       ],
+       "answer": "2 組の角がそれぞれ等しい",
+       "hints": [
+        "わかっているのは、辺と角のどちらでしょう。",
+        "等しいとわかっている角は何組でしょう。",
+        "角だけで相似がいえる条件を選びましょう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠E、∠C = ∠F",
+         "2 組の角がそれぞれ等しい"
+        ]
+       ],
+       "note": "2 組の角が等しければ、残りの角も 180° からひいて等しくなる。辺の長さは使わない。"
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、点 D は辺 AB の上、点 E は辺 AC の上にあり、AD = 3 cm、DB = 5 cm、AE = 4 cm、EC = 2 cm です。△ADE と相似な三角形を、対応する頂点の順に書いたものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"155.8,18 57.3,122 182.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"118.9\" y1=\"57\" x2=\"173.7\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"155.8\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"49.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"190.7\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"114.1\" y=\"50.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"185.7\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"129.9\" y=\"33.5\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"80.6\" y=\"85.5\" font-size=\"12\" text-anchor=\"end\">5 cm</text><text x=\"173.4\" y=\"53.9\" font-size=\"12\" text-anchor=\"start\">4 cm</text><text x=\"186.8\" y=\"105.9\" font-size=\"12\" text-anchor=\"start\">2 cm</text></svg>",
+       "choices": [
+        "△ABC",
+        "△ACB",
+        "△CAB"
+       ],
+       "answer": "△ACB",
+       "check": "'△ACB' if Fraction(3, 4 + 2) == Fraction(4, 3 + 5) else '△ABC' if Fraction(3, 3 + 5) == Fraction(4, 4 + 2) else 'なし'",
+       "hints": [
+        "AB と AC の長さを求めましょう。",
+        "AD:AC と AE:AB をくらべましょう。",
+        "∠A は 2 つの三角形に共通です。対応する頂点の順に気をつけましょう。"
+       ],
+       "paths": [
+        [
+         "AB = 8、AC = 6",
+         "AD:AC = 3:6 = 1:2、AE:AB = 4:8 = 1:2",
+         "∠A は共通",
+         "△ADE ∽ △ACB（D と C、E と B が対応）"
+        ]
+       ],
+       "note": "AD:AB と AE:AC（3:8 と 4:6）は等しくないので、△ABC の順にはならない。重なった三角形では、対応が入れかわることが多い。"
+      },
+      {
+       "part": "挑戦",
+       "text": "△ABC で AB = 6 cm、BC = 9 cm、CA = 7.5 cm です。辺 BC の上に BD = 4 cm となる点 D をとります。AD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"97.5,20.4 30,119.6 210,119.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.5\" y1=\"20.4\" x2=\"110\" y2=\"119.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"97.5\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"131.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"131.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"109.1\" y=\"135.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"55.8\" y=\"67.5\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"160.9\" y=\"65.2\" font-size=\"12\" text-anchor=\"start\">7.5 cm</text><text x=\"70\" y=\"137.8\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 5,
+       "check": "Fraction(15, 2) * Fraction(4, 6)",
+       "hints": [
+        "∠B が共通な 2 つの三角形、△DBA と △ABC を考えましょう。",
+        "BD:BA と BA:BC は等しいでしょうか。",
+        "相似な三角形で、AD に対応する辺を探しましょう。"
+       ],
+       "paths": [
+        [
+         "BD:BA = 4:6 = 2:3、BA:BC = 6:9 = 2:3",
+         "∠B は共通",
+         "△DBA ∽ △ABC",
+         "AD = CA × 2/3 = 7.5 × 2/3 = 5 cm"
+        ]
+       ],
+       "note": "2 つの三角形で同じ辺 BA を使うのがポイント。△DBA の頂点の順（D と A、B と B、A と C）に気をつける。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 つの辺が 5 cm、6 cm、8 cm の三角形と相似な三角形はどれですか。",
+       "choices": [
+        "10 cm、12 cm、15 cm",
+        "7.5 cm、9 cm、12 cm",
+        "6 cm、7 cm、9 cm"
+       ],
+       "answer": "7.5 cm、9 cm、12 cm",
+       "check": "[c for c, s in {'10 cm、12 cm、15 cm': (10, 12, 15), '7.5 cm、9 cm、12 cm': (Fraction(15, 2), 9, 12), '6 cm、7 cm、9 cm': (6, 7, 9)}.items() if len(set([Fraction(s[i], (5, 6, 8)[i]) for i in range(3)])) == 1][0]",
+       "hints": [
+        "短い辺どうし、長い辺どうしを組にしましょう。",
+        "5 cm が 7.5 cm になるのは何倍でしょう。",
+        "3 組とも同じ倍になっているものを選びましょう。"
+       ],
+       "paths": [
+        [
+         "5 → 7.5、6 → 9、8 → 12",
+         "どれも 3/2 倍",
+         "相似"
+        ]
+       ],
+       "note": "10 cm、12 cm、15 cm は、2 倍、2 倍、15/8 倍で、1 組だけ倍がちがう。"
+      },
+      {
+       "part": "今日",
+       "text": "△ABC と △DEF で、AB:DE = BC:EF = 2:3、∠B = ∠E です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。",
+       "choices": [
+        "3 組の辺の比がすべて等しい",
+        "2 組の辺の比とその間の角がそれぞれ等しい",
+        "2 組の角がそれぞれ等しい"
+       ],
+       "answer": "2 組の辺の比とその間の角がそれぞれ等しい",
+       "hints": [
+        "比が等しいとわかっている辺は何組でしょう。",
+        "∠B は、AB と BC の間の角でしょうか。",
+        "辺の比と角を使う条件を選びましょう。"
+       ],
+       "paths": [
+        [
+         "AB:DE = BC:EF",
+         "∠B は AB と BC の間の角",
+         "2 組の辺の比とその間の角がそれぞれ等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC で ∠A = 40°、∠B = 80°、△DEF で ∠D = 40°、∠F = 60° です。2 つの三角形は相似といえますか。",
+       "choices": [
+        "相似といえる",
+        "相似とはいえない"
+       ],
+       "answer": "相似といえる",
+       "check": "'相似といえる' if 180 - 40 - 80 == 60 else '相似とはいえない'",
+       "hints": [
+        "△ABC の ∠C は何度でしょう。",
+        "等しい角は何組あるでしょう。",
+        "2 組の角が等しければ、相似です。"
+       ],
+       "paths": [
+        [
+         "∠C = 180° − 40° − 80° = 60°",
+         "∠A = ∠D、∠C = ∠F",
+         "2 組の角が等しいので相似"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。△OAB ∽ △ODC を証明してみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"97.5\" y1=\"32.5\" x2=\"210\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198.8\" y1=\"107.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.5\" y1=\"32.5\" x2=\"198.8\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"32.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"91.5\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.8\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"150\" y=\"67.7\" font-size=\"12\" text-anchor=\"middle\">O</text><polyline points=\"149.8,28.5 155.8,32.5 149.8,36.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"110.4,103.5 116.4,107.5 110.4,111.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "explain": "証明は次のように書きます。「△OAB と △ODC で、AB ∥ DC より、平行線の錯角は等しいので ∠OAB = ∠ODC …①。対頂角は等しいので ∠AOB = ∠DOC …②。①、②より、2 組の角がそれぞれ等しいので、△OAB ∽ △ODC。」 はじめにどの三角形について話すかを書き、等しい角ごとに根拠（錯角、対頂角）を書き、最後に相似条件で結びます。対応する頂点（A と D、B と C）が同じ順になるように書くことにも気をつけます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠AOB = ∠DOC といえる根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"89.5\" y1=\"29.8\" x2=\"210\" y2=\"29.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.7\" y1=\"110.2\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.5\" y1=\"29.8\" x2=\"190.7\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"29.8\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"83.5\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"196.7\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.9\" y=\"69.5\" font-size=\"12\" text-anchor=\"middle\">O</text><path d=\"M145.6 58.6 A14 14 0 0 0 121.9 55.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M120.1 70 A14 14 0 0 0 143.8 73\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"145.7,25.8 151.7,29.8 145.7,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"106.4,106.2 112.4,110.2 106.4,114.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "choices": [
+        "平行線の錯角は等しい",
+        "対頂角は等しい",
+        "平行線の同位角は等しい"
+       ],
+       "answer": "対頂角は等しい",
+       "hints": [
+        "∠AOB と ∠DOC は、点 O で向かい合っています。",
+        "2 本の直線が交わってできる、向かい合う角を何というでしょう。",
+        "AB ∥ DC を使わなくてもいえます。"
+       ],
+       "paths": [
+        [
+         "2 直線 AD、BC が O で交わる",
+         "∠AOB と ∠DOC は向かい合う角",
+         "対頂角は等しい"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "△ABC ∽ △DEF で、相似比は 5:2 です。DE = 4 cm のとき、AB は何 cm ですか。",
+       "answer": 10,
+       "check": "4 * Fraction(5, 2)",
+       "hints": [
+        "AB は DE に対応します。",
+        "△ABC のほうが大きいでしょうか、小さいでしょうか。",
+        "AB は DE の何倍かを分数で表しましょう。"
+       ],
+       "paths": [
+        [
+         "AB は DE の 5/2 倍",
+         "4 × 5/2",
+         "10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、辺 AB の上に ∠ACD = ∠ABC となる点 D をとります。次の証明の（　）にあてはまるものはどれですか。「△ACD と △ABC で、仮定より ∠ACD = ∠ABC …①、共通な角なので ∠CAD = ∠BAC …②。①、②より（　）ので、△ACD ∽ △ABC。」",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"169.7,18 49.3,122 190.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.7\" y1=\"122\" x2=\"116.2\" y2=\"64.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"169.7\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"41.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.7\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"108.3\" y=\"59.4\" font-size=\"12\" text-anchor=\"middle\">D</text><path d=\"M63.3 122 A14 14 0 0 0 59.9 112.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M188 108.3 A14 14 0 0 0 179.7 113.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "choices": [
+        "3 組の辺の比がすべて等しい",
+        "2 組の辺の比とその間の角がそれぞれ等しい",
+        "2 組の角がそれぞれ等しい"
+       ],
+       "answer": "2 組の角がそれぞれ等しい",
+       "hints": [
+        "①と②は、辺と角のどちらについての式でしょう。",
+        "等しいといえた角は何組でしょう。",
+        "角だけを使う相似条件を選びましょう。"
+       ],
+       "paths": [
+        [
+         "①と②は角が等しいこと",
+         "2 組の角がそれぞれ等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC です。△ADE ∽ △ABC の証明で、∠ADE と等しい角と、その根拠の組はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "choices": [
+        "∠ACB（同位角）",
+        "∠ABC（錯角）",
+        "∠ABC（同位角）"
+       ],
+       "answer": "∠ABC（同位角）",
+       "hints": [
+        "直線 AB は、平行な 2 本の直線 DE と BC に交わっています。",
+        "∠ADE と同じ位置にある角を、点 B で探しましょう。",
+        "同じ位置にある角を同位角、Z の形の位置にある角を錯角といいます。"
+       ],
+       "paths": [
+        [
+         "直線 AB が DE と BC に交わる",
+         "∠ADE と ∠ABC は同位角",
+         "DE ∥ BC なので等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠BAC = 90°の直角三角形 ABC で、頂点 A から辺 BC に垂線 AH をひきました。∠B が共通なので、△ABC と △ABH は相似です。対応する頂点の順に正しく書いたものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.8,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "choices": [
+        "△ABC ∽ △ABH",
+        "△ABC ∽ △HBA",
+        "△ABC ∽ △BHA"
+       ],
+       "answer": "△ABC ∽ △HBA",
+       "hints": [
+        "△ABC の直角は ∠A です。△ABH の直角はどの角でしょう。",
+        "直角どうし、∠B どうしが対応します。",
+        "△ABC の A、B、C に対応する頂点を、順に書きましょう。"
+       ],
+       "paths": [
+        [
+         "∠BAC = ∠BHA = 90°",
+         "∠B は共通",
+         "A と H、B と B、C と A が対応する",
+         "△ABC ∽ △HBA"
+        ]
+       ],
+       "note": "同じ三角形でも、書く順で対応が変わる。△ABH と書くと A と A が対応することになってしまう。"
+      },
+      {
+       "part": "挑戦",
+       "text": "「AB:DE = AC:DF = 2:3、∠B = ∠E だから △ABC ∽ △DEF」という説明はまちがいです。2 組の辺の比を使って相似といえるようにするには、∠B = ∠E の代わりに何がいえればよいですか。",
+       "choices": [
+        "∠C = ∠F",
+        "BC = EF",
+        "∠A = ∠D"
+       ],
+       "answer": "∠A = ∠D",
+       "hints": [
+        "2 組の辺の比と、その「間の角」が等しいことが条件です。",
+        "AB と AC の間にある角はどれでしょう。",
+        "∠B は、AB と BC の間の角です。"
+       ],
+       "paths": [
+        [
+         "比が等しいのは AB と AC",
+         "AB と AC の間の角は ∠A",
+         "∠A = ∠D がいえればよい"
+        ]
+       ],
+       "note": "合同条件と同じく、角は 2 つの辺の「間」の角でなければならない。間でない角では、形が 1 つに決まらないことがある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠OBA = ∠OCD といえる根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"97.5\" y1=\"32.5\" x2=\"210\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198.8\" y1=\"107.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.5\" y1=\"32.5\" x2=\"198.8\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"32.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"91.5\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.8\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"150\" y=\"67.7\" font-size=\"12\" text-anchor=\"middle\">O</text><path d=\"M196 32.5 A14 14 0 0 0 197.1 37.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M44 107.5 A14 14 0 0 0 42.9 102.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"149.8,28.5 155.8,32.5 149.8,36.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"110.4,103.5 116.4,107.5 110.4,111.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "choices": [
+        "対頂角は等しい",
+        "平行線の同位角は等しい",
+        "平行線の錯角は等しい"
+       ],
+       "answer": "平行線の錯角は等しい",
+       "hints": [
+        "∠OBA と ∠OCD は、直線 BC と 2 本の平行線でできる角です。",
+        "2 つの角は、直線 BC の同じ側にあるでしょうか、反対側でしょうか。",
+        "Z の形の位置にある角を錯角といいます。"
+       ],
+       "paths": [
+        [
+         "直線 BC が AB と DC に交わる",
+         "∠OBA と ∠OCD は錯角",
+         "AB ∥ DC なので等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 6 cm、DC = 9 cm、AO = 5 cm のとき、OD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"97.5\" y1=\"32.5\" x2=\"210\" y2=\"32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198.8\" y1=\"107.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.5\" y1=\"32.5\" x2=\"198.8\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"32.5\" x2=\"30\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"91.5\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.8\" y=\"121.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"150\" y=\"67.7\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"153.8\" y=\"24.7\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"114.4\" y=\"125.7\" font-size=\"12\" text-anchor=\"middle\">9 cm</text><text x=\"110.9\" y=\"63.3\" font-size=\"12\" text-anchor=\"end\">5 cm</text><polyline points=\"149.8,28.5 155.8,32.5 149.8,36.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"110.4,103.5 116.4,107.5 110.4,111.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": "15/2",
+       "accept": [
+        7.5
+       ],
+       "check": "5 * Fraction(9, 6)",
+       "hints": [
+        "△OAB ∽ △ODC で、OA に対応する辺はどれでしょう。",
+        "DC は AB の何倍でしょう。",
+        "OD は OA の同じ倍になります。"
+       ],
+       "paths": [
+        [
+         "△OAB ∽ △ODC",
+         "OD は OA の 9/6 = 3/2 倍",
+         "5 × 3/2 = 15/2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC と △DEF で、AB = 6 cm、BC = 8 cm、CA = 10 cm、DE = 9 cm、EF = 12 cm、FD = 15 cm です。△ABC ∽ △DEF といえるのは、どの相似条件によりますか。",
+       "choices": [
+        "2 組の角がそれぞれ等しい",
+        "3 組の辺の比がすべて等しい",
+        "2 組の辺の比とその間の角がそれぞれ等しい"
+       ],
+       "answer": "3 組の辺の比がすべて等しい",
+       "check": "'3 組の辺の比がすべて等しい' if Fraction(6, 9) == Fraction(8, 12) == Fraction(10, 15) else 'ほか'",
+       "hints": [
+        "わかっているのは、辺の長さだけです。",
+        "AB:DE、BC:EF、CA:FD を、それぞれ簡単にしましょう。",
+        "3 つの比がすべて等しいかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "AB:DE = 6:9 = 2:3",
+         "BC:EF = 8:12 = 2:3",
+         "CA:FD = 10:15 = 2:3",
+         "3 組の辺の比がすべて等しい"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "∠BAC = 90°の直角三角形 ABC で、AB = 6 cm、AC = 8 cm、BC = 10 cm です。A から BC に垂線 AH をひくとき、BH の長さを求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.8,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"54.6\" y=\"67\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"159.3\" y=\"64.6\" font-size=\"12\" text-anchor=\"start\">8 cm</text><text x=\"170.4\" y=\"130.4\" font-size=\"12\" text-anchor=\"middle\">10 cm</text></svg>",
+       "explain": "△HBA と △ABC で、∠BHA = ∠BAC = 90°、∠B は共通なので、2 組の角がそれぞれ等しく △HBA ∽ △ABC です。対応する辺は、HB と AB、BA と BC、AH と CA です。相似比は BA:BC = 6:10 = 3:5 なので、HB は AB の 3/5 倍で、BH = 6 × 3/5 = 18/5 cm（3.6 cm）です。相似な三角形を見つけたら、対応する辺の組を書き出してから、何倍かを使って長さを求めます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "同じ時刻に、高さ 120 cm の棒の影が 90 cm、木の影が 360 cm でした。木の高さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,122 90.9,18 168.9,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"71.1,122 71.1,96 90.6,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"71\" y1=\"122\" x2=\"169\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"71.1\" y1=\"122\" x2=\"71.1\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.9\" y1=\"122\" x2=\"90.9\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"71.1\" y1=\"96\" x2=\"90.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90.9\" y1=\"18\" x2=\"168.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"66.1\" y=\"113.2\" font-size=\"12\" text-anchor=\"end\">120 cm</text><text x=\"80.9\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">90 cm</text><text x=\"129.9\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">360 cm</text><text x=\"71.1\" y=\"91.2\" font-size=\"12\" text-anchor=\"middle\">棒</text><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">木</text><line x1=\"71.1\" y1=\"122\" x2=\"90.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"4\" fill=\"none\"/><line x1=\"90.9\" y1=\"122\" x2=\"168.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"4\" fill=\"none\"/><polyline points=\"71.1,114 79.1,114 79.1,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"90.9,114 98.9,114 98.9,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 480,
+       "check": "120 * Fraction(360, 90)",
+       "hints": [
+        "棒と影、木と影でできる 2 つの三角形は相似です。",
+        "木の影は、棒の影の何倍でしょう。",
+        "木の高さも、棒の高さの同じ倍です。"
+       ],
+       "paths": [
+        [
+         "木の影は棒の影の 360 ÷ 90 = 4 倍",
+         "120 × 4",
+         "480 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "図の △ABC で DE ∥ BC、AD = 4 cm、DB = 6 cm です。△ADE と △ABC の相似比はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"68.1\" y=\"43\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"41\" y=\"95\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "choices": [
+        "2:3",
+        "2:5",
+        "5:2"
+       ],
+       "answer": "2:5",
+       "check": "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(4, 4 + 6))",
+       "hints": [
+        "△ADE の AD に対応するのは、△ABC のどの辺でしょう。",
+        "AB の長さを求めましょう。",
+        "AD:AB を簡単にしましょう。"
+       ],
+       "paths": [
+        [
+         "AD と AB が対応する",
+         "AB = 4 + 6 = 10",
+         "4:10 = 2:5"
+        ]
+       ],
+       "note": "AD:DB = 4:6 = 2:3 としやすい。相似比は対応する辺の比で、DB は △ABC の辺ではない。"
+      },
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 6 cm、DC = 8 cm、BO = 3 cm のとき、OC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"89.5\" y1=\"29.8\" x2=\"210\" y2=\"29.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.7\" y1=\"110.2\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.5\" y1=\"29.8\" x2=\"190.7\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"29.8\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"83.5\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"196.7\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.9\" y=\"69.5\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"149.7\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"110.4\" y=\"128.4\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"176.3\" y=\"64.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><polyline points=\"145.7,25.8 151.7,29.8 145.7,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"106.4,106.2 112.4,110.2 106.4,114.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 4,
+       "check": "3 * Fraction(8, 6)",
+       "hints": [
+        "△OAB と相似な三角形はどれでしょう。",
+        "OB に対応する辺はどれでしょう。",
+        "DC は AB の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "△OAB ∽ △ODC",
+         "OC は OB に対応する",
+         "OC = 3 × 8/6 = 4 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、辺 AB の上の点 D と辺 AC の上の点 E を、∠ADE = ∠ACB となるようにとりました。AD = 4 cm、AE = 5 cm、AC = 8 cm のとき、AB は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"147.4,18 58.4,122 181.6,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111.8\" y1=\"59.6\" x2=\"168.8\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"147.4\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"105.4\" y=\"53.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"180.7\" y=\"85.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"121.9\" y=\"35.2\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"166.6\" y=\"51\" font-size=\"12\" text-anchor=\"start\">5 cm</text><path d=\"M124.7 64.9 A14 14 0 0 0 120.9 49\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M177.2 108.7 A14 14 0 0 0 167.6 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 10,
+       "check": "5 * Fraction(8, 4)",
+       "hints": [
+        "∠A は共通です。△ADE と相似な三角形の、対応する頂点の順を考えましょう。",
+        "∠ADE = ∠ACB なので、D と C が対応します。",
+        "AE に対応する辺を探しましょう。"
+       ],
+       "paths": [
+        [
+         "△ADE ∽ △ACB",
+         "AC は AD の 8/4 = 2 倍",
+         "AB = AE × 2 = 10 cm"
+        ]
+       ],
+       "note": "△ABC の順に対応すると思いこむと、AD と AB を組にしてしまう。等しい角の位置から対応を決める。"
+      },
+      {
+       "part": "今日",
+       "text": "∠BAC = 90°の直角三角形 ABC で、AB = 9 cm、AC = 12 cm、BC = 15 cm です。A から BC に垂線 AH をひくとき、AH は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.8,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"54.6\" y=\"67\" font-size=\"12\" text-anchor=\"end\">9 cm</text><text x=\"159.3\" y=\"64.6\" font-size=\"12\" text-anchor=\"start\">12 cm</text><text x=\"170.4\" y=\"130.4\" font-size=\"12\" text-anchor=\"middle\">15 cm</text></svg>",
+       "answer": "36/5",
+       "accept": [
+        7.2
+       ],
+       "check": "12 * Fraction(9, 15)",
+       "hints": [
+        "△HBA と △ABC は相似です。",
+        "AH に対応する △ABC の辺はどれでしょう。",
+        "相似比 BA:BC を使いましょう。"
+       ],
+       "paths": [
+        [
+         "△HBA ∽ △ABC",
+         "AH は CA に対応する",
+         "AH = 12 × 9/15 = 36/5 cm"
+        ],
+        [
+         "面積を 2 通りに書く",
+         "9 × 12 ÷ 2 = 15 × AH ÷ 2",
+         "AH = 108 ÷ 15 = 36/5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "高さ 480 cm の街灯の真下から 300 cm はなれたところに、身長 160 cm の人が立っています。この人の影の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"56.1\" y1=\"122\" x2=\"183.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"69.1\" y1=\"18\" x2=\"166.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"63.1\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">480 cm</text><text x=\"101.6\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">300 cm</text><text x=\"128.1\" y=\"108.9\" font-size=\"12\" text-anchor=\"end\">160 cm</text><text x=\"69.1\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">街灯</text><text x=\"125.1\" y=\"84.5\" font-size=\"12\" text-anchor=\"middle\">人</text><line x1=\"69.1\" y1=\"122\" x2=\"69.1\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"134.1\" y1=\"122\" x2=\"134.1\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"3\" fill=\"none\"/><line x1=\"134.1\" y1=\"122\" x2=\"166.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><circle cx=\"69.1\" cy=\"18\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "answer": 150,
+       "check": "300 * Fraction(160, 480 - 160)",
+       "hints": [
+        "街灯の先と影の先を結ぶ直線で、相似な 2 つの三角形ができます。",
+        "人の身長は、街灯の高さの何分の 1 でしょう。",
+        "影の長さは、街灯の真下から影の先までの長さの、同じ分になります。"
+       ],
+       "paths": [
+        [
+         "人の三角形と街灯の三角形は相似",
+         "相似比 160:480 = 1:3",
+         "影は（300 + 影）の 1/3",
+         "300 cm が 3 − 1 = 2 つ分なので影は 150 cm"
+        ]
+       ],
+       "note": "影を 300 の 1/3 の 100 としやすい。小さいほうの三角形の底辺は影だけ、大きいほうの底辺は 300 + 影。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠BAC = 90°の直角三角形 ABC で、AB = 15 cm、BC = 25 cm です。A から BC に垂線 AH をひくとき、BH は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.8,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.8\" y1=\"26.8\" x2=\"94.8\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"90,33.2 96.4,38 101.2,31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"94.8,105.2 102.8,105.2 102.8,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.8\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.8\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"54.6\" y=\"67\" font-size=\"12\" text-anchor=\"end\">15 cm</text><text x=\"170.4\" y=\"130.4\" font-size=\"12\" text-anchor=\"middle\">25 cm</text></svg>",
+       "answer": 9,
+       "check": "15 * Fraction(15, 25)",
+       "hints": [
+        "△HBA と △ABC は相似です。",
+        "HB に対応する △ABC の辺はどれでしょう。",
+        "相似比 BA:BC を簡単にしましょう。"
+       ],
+       "paths": [
+        [
+         "△HBA ∽ △ABC",
+         "相似比 BA:BC = 15:25 = 3:5",
+         "HB = AB × 3/5 = 9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AO = 6 cm、OD = 9 cm、AB = 8 cm のとき、DC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"97.5\" y1=\"41.9\" x2=\"210\" y2=\"41.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"198.8\" y1=\"98.1\" x2=\"30\" y2=\"98.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.5\" y1=\"41.9\" x2=\"198.8\" y2=\"98.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"41.9\" x2=\"30\" y2=\"98.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"91.5\" y=\"37.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"37.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"112.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.8\" y=\"112.3\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"150\" y=\"69.6\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"153.8\" y=\"34.1\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"111.4\" y=\"69.8\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"174.7\" y=\"75\" font-size=\"12\" text-anchor=\"start\">9 cm</text><polyline points=\"149.8,37.9 155.8,41.9 149.8,45.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"110.4,94.1 116.4,98.1 110.4,102.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 12,
+       "check": "8 * Fraction(9, 6)",
+       "hints": [
+        "△OAB ∽ △ODC です。",
+        "OD は OA の何倍でしょう。",
+        "DC は AB の同じ倍です。"
+       ],
+       "paths": [
+        [
+         "OD は OA の 9/6 = 3/2 倍",
+         "DC = 8 × 3/2 = 12 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、辺 AC の上に ∠ABD = ∠ACB となる点 D をとります。AB = 6 cm、AC = 9 cm のとき、AD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70.3,18 49.3,122 190.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.3\" y1=\"122\" x2=\"123.8\" y2=\"64.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"70.3\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"41.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.7\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"131.7\" y=\"59.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"51.1\" y=\"71.8\" font-size=\"12\" text-anchor=\"end\">6 cm</text><path d=\"M60.3 113.4 A14 14 0 0 0 52 108.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M180.1 112.9 A14 14 0 0 0 176.7 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 4,
+       "check": "6 * Fraction(6, 9)",
+       "hints": [
+        "∠A は共通です。△ABD と相似な三角形の、対応する頂点の順を考えましょう。",
+        "∠ABD = ∠ACB なので、B と C が対応します。",
+        "AD に対応する辺は AB です。"
+       ],
+       "paths": [
+        [
+         "△ABD ∽ △ACB",
+         "相似比 AB:AC = 6:9 = 2:3",
+         "AD = AB × 2/3 = 4 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "図の △ABC で DE ∥ BC、AD = 4 cm、DB = 2 cm、AE = 6 cm です。EC の長さと、DE:BC を求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 54.8,87.3 165.8,87.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.8\" y1=\"87.3\" x2=\"165.8\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"45.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"174.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"60.9\" y=\"56.9\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"33.8\" y=\"108.9\" font-size=\"12\" text-anchor=\"end\">2 cm</text><text x=\"140.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"start\">6 cm</text></svg>",
+       "explain": "DE ∥ BC のとき △ADE ∽ △ABC なので、AD:AB = AE:AC = DE:BC です（三角形と比の定理）。ここから、AD:DB = AE:EC もなりたちます（AB を AD と DB に、AC を AE と EC に同じ比で分けるから）。AD:DB = 4:2 = 2:1 なので AE:EC も 2:1 で、EC = 6 × 1/2 = 3 cm。DE:BC は AD:AB = 4:6 = 2:3 です。DE:BC を求めるときは、DB ではなく AB = AD + DB を使います。逆に、AD:DB = AE:EC ならば DE ∥ BC です（逆の定理）。"
+      },
+      {
+       "part": "思い出す",
+       "text": "△ADE ∽ △ABC で、相似比は 3:5 です。BC = 10 cm のとき、DE は何 cm ですか。",
+       "answer": 6,
+       "check": "10 * Fraction(3, 5)",
+       "hints": [
+        "DE は BC に対応します。",
+        "DE は BC の何倍でしょう。",
+        "3:5 を、分数の倍に直しましょう。"
+       ],
+       "paths": [
+        [
+         "DE は BC の 3/5 倍",
+         "10 × 3/5 = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "比 12:18 を簡単にすると、どれになりますか。",
+       "choices": [
+        "4:6",
+        "3:2",
+        "2:3"
+       ],
+       "answer": "2:3",
+       "check": "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(12, 18))",
+       "hints": [
+        "12 と 18 を、同じ数でわりましょう。",
+        "12 と 18 の最大公約数は何でしょう。",
+        "これ以上われなくなるまでわりましょう。"
+       ],
+       "paths": [
+        [
+         "12 と 18 の最大公約数は 6",
+         "12:18 = 2:3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD = 6 cm、DB = 4 cm、AE = 7.5 cm です。EC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 58.4,80.4 158.3,80.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"58.4\" y1=\"80.4\" x2=\"158.3\" y2=\"80.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"49.4\" y=\"84.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"167.3\" y=\"84.6\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"62.7\" y=\"53.4\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"35.6\" y=\"105.4\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"136.6\" y=\"53.4\" font-size=\"12\" text-anchor=\"start\">7.5 cm</text></svg>",
+       "answer": 5,
+       "check": "Fraction(15, 2) * Fraction(4, 6)",
+       "hints": [
+        "DE ∥ BC なので、AD:DB = AE:EC です。",
+        "AD:DB を簡単にしましょう。",
+        "EC は AE の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:DB = 6:4 = 3:2",
+         "AE:EC = 3:2",
+         "EC = 7.5 × 2/3 = 5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD = 3 cm、DB = 6 cm、BC = 12 cm です。DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 72.9,52.7 128.3,52.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.9\" y1=\"52.7\" x2=\"128.3\" y2=\"52.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"63.9\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"137.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"69.9\" y=\"39.5\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"42.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">12 cm</text></svg>",
+       "answer": 4,
+       "check": "12 * Fraction(3, 3 + 6)",
+       "hints": [
+        "DE:BC と等しいのは、AD:DB と AD:AB のどちらでしょう。",
+        "AB の長さを求めましょう。",
+        "DE は BC の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "DE:BC = AD:AB",
+         "AD:AB = 3:9 = 1:3",
+         "DE = 12 × 1/3 = 4 cm"
+        ]
+       ],
+       "note": "AD:DB = 1:2 を使って DE = 6 としやすい。DE:BC は △ADE と △ABC の相似比なので、AD:AB を使う。"
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、AD = 4 cm、DB = 6 cm、AE = 6 cm、EC = 9 cm、BF = 5 cm、FC = 10 cm です。平行な 2 つの線分の組はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"74,18 37.3,122 202.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.3\" y1=\"59.6\" x2=\"125.5\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"125.5\" y1=\"59.6\" x2=\"92.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.3\" y1=\"59.6\" x2=\"92.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"74\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.7\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"49.3\" y=\"61.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"135.5\" y=\"61.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"92.4\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"58.2\" y=\"39\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"39.8\" y=\"91\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"106.8\" y=\"33.7\" font-size=\"12\" text-anchor=\"start\">6 cm</text><text x=\"171.1\" y=\"85.7\" font-size=\"12\" text-anchor=\"start\">9 cm</text><text x=\"64.8\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"147.6\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text></svg>",
+       "choices": [
+        "EF と AB",
+        "DE と BC",
+        "DF と AC"
+       ],
+       "answer": "DE と BC",
+       "check": "[k for k, (a, b, c, d) in {'DE と BC': (4, 6, 6, 9), 'EF と AB': (9, 6, 10, 5), 'DF と AC': (6, 4, 5, 10)}.items() if Fraction(a, b) == Fraction(c, d)][0]",
+       "hints": [
+        "三角形と比の定理の逆を使います。",
+        "DE と BC なら、AD:DB と AE:EC をくらべます。",
+        "ほかの組も、平行かどうかを調べる線分に合わせて、2 つの比をくらべましょう。"
+       ],
+       "paths": [
+        [
+         "AD:DB = 4:6 = 2:3",
+         "AE:EC = 6:9 = 2:3",
+         "比が等しいので DE ∥ BC"
+        ]
+       ],
+       "note": "EF と AB なら CE:EA（9:6）と CF:FB（10:5）、DF と AC なら BD:DA（6:4）と BF:FC（5:10）をくらべる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "図の台形 ABCD で AD ∥ BC、AD = 6 cm、BC = 12 cm です。辺 AB の上に AE:EB = 1:2 となる点 E をとり、E を通って BC に平行な直線が辺 DC と交わる点を F とします。EF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"75,32.5 30,107.5 210,107.5 165,32.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"57.5\" x2=\"180\" y2=\"57.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"71\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"23\" y=\"120.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"217\" y=\"120.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"169\" y=\"27.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"50\" y=\"61.7\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"190\" y=\"61.7\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"120\" y=\"24.7\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"120\" y=\"125.7\" font-size=\"12\" text-anchor=\"middle\">12 cm</text></svg>",
+       "answer": 8,
+       "check": "12 * Fraction(1, 3) + 6 * Fraction(2, 3)",
+       "hints": [
+        "対角線 AC をひいて、EF との交点を G としましょう。",
+        "△ABC で EG を、△CDA で GF を求めましょう。",
+        "AE:EB = 1:2 のとき、AG:GC も同じ比になります。"
+       ],
+       "paths": [
+        [
+         "対角線 AC と EF の交点を G とする",
+         "△ABC で EG = 12 × 1/3 = 4",
+         "△CDA で GF = 6 × 2/3 = 4",
+         "EF = 4 + 4 = 8 cm"
+        ]
+       ],
+       "note": "AD と BC のまん中の 9 cm としやすい。9 cm になるのは、E が AB の中点のときだけ。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図で、3 本の直線 ℓ、m、n は平行です。AB = 8 cm、BC = 6 cm、DE = 10 cm のとき、EF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"34\" y1=\"25.2\" x2=\"206\" y2=\"25.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"210\" y=\"29.4\" font-size=\"12\" text-anchor=\"start\">ℓ</text><line x1=\"34\" y1=\"76.4\" x2=\"206\" y2=\"76.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"210\" y=\"80.6\" font-size=\"12\" text-anchor=\"start\">m</text><line x1=\"34\" y1=\"114.8\" x2=\"206\" y2=\"114.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"210\" y=\"119\" font-size=\"12\" text-anchor=\"start\">n</text><line x1=\"58.6\" y1=\"14\" x2=\"98.9\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.8\" y1=\"14\" x2=\"192.6\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"52.7\" y=\"22.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"71.1\" y=\"73.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"84.9\" y=\"112\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"162.3\" y=\"22.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"182.7\" y=\"73.6\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"198.1\" y=\"112\" font-size=\"12\" text-anchor=\"middle\">F</text><circle cx=\"62.7\" cy=\"25.2\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"81.1\" cy=\"76.4\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"94.9\" cy=\"114.8\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"152.3\" cy=\"25.2\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"172.7\" cy=\"76.4\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"188.1\" cy=\"114.8\" r=\"2.6\" fill=\"currentColor\"/><text x=\"63.9\" y=\"55\" font-size=\"12\" text-anchor=\"end\">8 cm</text><text x=\"80\" y=\"99.8\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"170.5\" y=\"55\" font-size=\"12\" text-anchor=\"start\">10 cm</text></svg>",
+       "answer": "15/2",
+       "accept": [
+        7.5
+       ],
+       "check": "10 * Fraction(6, 8)",
+       "hints": [
+        "平行線にはさまれた線分の比は等しくなります。",
+        "AB:BC = DE:EF です。",
+        "EF は DE の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AB:BC = 8:6 = 4:3",
+         "DE:EF = 4:3",
+         "EF = 10 × 3/4 = 15/2 cm"
+        ]
+       ],
+       "note": "平行線にはさまれた線分の比は、2 本の直線が交わっていなくてもなりたつ。"
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD = 5 cm、AB = 15 cm、AC = 12 cm です。AE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 72.9,52.7 128.3,52.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.9\" y1=\"52.7\" x2=\"128.3\" y2=\"52.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"63.9\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"137.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"69.9\" y=\"39.5\" font-size=\"12\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 4,
+       "check": "12 * Fraction(5, 15)",
+       "hints": [
+        "AD:AB = AE:AC です。",
+        "AD:AB を簡単にしましょう。",
+        "AE は AC の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:AB = 5:15 = 1:3",
+         "AE = 12 × 1/3 = 4 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、AD:DB = 2:3、AE:EC = 4:6 です。DE と BC は平行ですか。",
+       "choices": [
+        "平行である",
+        "平行ではない"
+       ],
+       "answer": "平行である",
+       "check": "'平行である' if Fraction(2, 3) == Fraction(4, 6) else '平行ではない'",
+       "hints": [
+        "三角形と比の定理の逆を使いましょう。",
+        "4:6 を簡単にしましょう。",
+        "AD:DB と AE:EC が等しいかをくらべましょう。"
+       ],
+       "paths": [
+        [
+         "4:6 = 2:3",
+         "AD:DB = AE:EC",
+         "DE ∥ BC"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "△ABC で、辺 AB、AC の中点をそれぞれ M、N とします。BC = 10 cm のとき、MN の長さと、△AMN と △ABC の面積の比を求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"132.9,18 88.4,70 164.5,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"132.9,18 44,122 196,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.4\" y1=\"70\" x2=\"164.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"132.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"36\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"204\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"78.4\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"174.5\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"88.4\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"164.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text></svg>",
+       "explain": "M、N が AB、AC の中点のとき、MN ∥ BC、MN = BC × 1/2 です（中点連結定理）。MN = 10 × 1/2 = 5 cm。△AMN ∽ △ABC で、相似比は 1:2 です。相似な図形の面積の比は、相似比の 2 つの数をそれぞれ 2 回かけた比になります（底辺も高さも同じ倍になるから）。面積の比は (1 × 1):(2 × 2) = 1:4 です。まわりの長さの比は、相似比と同じ 1:2 です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 2:1、BC = 9 cm です。DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 54.8,87.3 165.8,87.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.8\" y1=\"87.3\" x2=\"165.8\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"45.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"174.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">9 cm</text></svg>",
+       "answer": 6,
+       "check": "9 * Fraction(2, 2 + 1)",
+       "hints": [
+        "DE:BC = AD:AB です。",
+        "AD:AB は何:何でしょう。",
+        "DE は BC の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:AB = 2:3",
+         "DE = 9 × 2/3 = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ある図形を 3 倍に拡大した図形の面積は、もとの図形の面積の何倍ですか。",
+       "answer": 9,
+       "check": "3 * 3",
+       "hints": [
+        "たて 1 cm、横 1 cm の正方形で考えてみましょう。",
+        "3 倍の拡大図では、たてと横はそれぞれ何 cm でしょう。",
+        "面積は たて × 横 です。"
+       ],
+       "paths": [
+        [
+         "たても横も 3 倍",
+         "面積は 3 × 3 = 9 倍"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC で AB = 10 cm、BC = 14 cm、CA = 12 cm です。辺 AB、AC の中点をそれぞれ M、N とするとき、△AMN のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"100.5,18 66.9,70 153.6,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"100.5,18 33.3,122 206.7,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"66.9\" y1=\"70\" x2=\"153.6\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"100.5\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"25.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"214.7\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"56.9\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"163.6\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"66.9\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"153.6\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"42.1\" y=\"93.7\" font-size=\"12\" text-anchor=\"end\">10 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">14 cm</text><text x=\"187.5\" y=\"91.6\" font-size=\"12\" text-anchor=\"start\">12 cm</text></svg>",
+       "answer": 18,
+       "check": "Fraction(10, 2) + Fraction(14, 2) + Fraction(12, 2)",
+       "hints": [
+        "AM と AN の長さを求めましょう。",
+        "MN の長さは、中点連結定理で求めましょう。",
+        "3 つの辺をたしましょう。"
+       ],
+       "paths": [
+        [
+         "AM = 5、AN = 6",
+         "MN = 14 × 1/2 = 7",
+         "5 + 7 + 6 = 18 cm"
+        ],
+        [
+         "△AMN と △ABC の相似比は 1:2",
+         "△ABC のまわりは 36 cm",
+         "36 × 1/2 = 18 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD の辺 AB、BC、CD、DA の中点を、それぞれ P、Q、R、S とします。対角線が AC = 12 cm、BD = 9 cm のとき、四角形 PQRS のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"79.1,95.7 149.2,89.9 155.1,37.9 84.9,43.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"49.9,69.4 108.3,122 190.1,57.7 120,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"79.1,95.7 149.2,89.9 155.1,37.9 84.9,43.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.9\" y1=\"69.4\" x2=\"190.1\" y2=\"57.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"108.3\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"38.9\" y=\"74\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"106.6\" y=\"137.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"201\" y=\"60.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"120.7\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"70.3\" y=\"106.6\" font-size=\"12\" text-anchor=\"middle\">P</text><text x=\"158.1\" y=\"100.5\" font-size=\"12\" text-anchor=\"middle\">Q</text><text x=\"163.8\" y=\"35.4\" font-size=\"12\" text-anchor=\"middle\">R</text><text x=\"76\" y=\"41.5\" font-size=\"12\" text-anchor=\"middle\">S</text><circle cx=\"79.1\" cy=\"95.7\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"149.2\" cy=\"89.9\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"155.1\" cy=\"37.9\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"84.9\" cy=\"43.7\" r=\"2.6\" fill=\"currentColor\"/></svg>",
+       "answer": 21,
+       "check": "Fraction(12, 2) * 2 + Fraction(9, 2) * 2",
+       "hints": [
+        "△ABC で、P と Q は AB と BC の中点です。",
+        "PQ は AC の何倍でしょう。SR も同じように考えましょう。",
+        "QR と PS は、△BCD と △ABD で BD を使って求めましょう。"
+       ],
+       "paths": [
+        [
+         "PQ = SR = 12 × 1/2 = 6",
+         "QR = PS = 9 × 1/2 = 9/2",
+         "6 + 6 + 9/2 + 9/2 = 21 cm"
+        ]
+       ],
+       "note": "四角形の形によらず、まわりの長さは 2 本の対角線の長さの和になる。"
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 2:3 です。△ADE の面積が 8 cm² のとき、△ABC の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 50,
+       "check": "8 * Fraction(5 * 5, 2 * 2)",
+       "hints": [
+        "△ADE と △ABC の相似比 AD:AB を求めましょう。",
+        "面積の比は、相似比の数をそれぞれ 2 回かけた比です。",
+        "△ABC の面積は、△ADE の面積の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "相似比 AD:AB = 2:5",
+         "面積の比 (2 × 2):(5 × 5) = 4:25",
+         "8 × 25/4 = 50 cm²"
+        ]
+       ],
+       "note": "相似比を 2:3（AD:DB）としたり、面積を 5/2 倍にしたりしやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 1:2 です。△ABC の面積が 90 cm² のとき、四角形 DBCE の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72.9,52.7 36.8,122 203.2,122 128.3,52.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.9\" y1=\"52.7\" x2=\"128.3\" y2=\"52.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"63.9\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"137.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 80,
+       "check": "90 - 90 * Fraction(1 * 1, 3 * 3)",
+       "hints": [
+        "△ADE と △ABC の相似比を求めましょう。",
+        "△ADE の面積は、△ABC の面積の何分の 1 でしょう。",
+        "四角形 DBCE は、△ABC から △ADE を取りのぞいた部分です。"
+       ],
+       "paths": [
+        [
+         "相似比 1:3",
+         "面積の比 1:9",
+         "△ADE = 90 × 1/9 = 10",
+         "90 − 10 = 80 cm²"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "△ABC で、辺 AB の中点 M を通り辺 BC に平行な直線が、辺 AC と点 N で交わります。MN = 6 cm のとき、BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"132.9,18 88.4,70 164.5,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"132.9,18 44,122 196,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.4\" y1=\"70\" x2=\"164.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"132.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"36\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"204\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"78.4\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"174.5\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"88.4\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"164.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"126.5\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 12,
+       "check": "6 * 2",
+       "hints": [
+        "M は AB の中点で、MN ∥ BC です。",
+        "三角形と比の定理で、MN:BC は AM:AB と等しくなります。",
+        "AM:AB は何:何でしょう。"
+       ],
+       "paths": [
+        [
+         "AM:AB = 1:2",
+         "MN:BC = 1:2",
+         "BC = 6 × 2 = 12 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの図形の相似比は 3:4 です。小さいほうの面積が 18 cm² のとき、大きいほうの面積は何 cm² ですか。",
+       "answer": 32,
+       "check": "18 * Fraction(4 * 4, 3 * 3)",
+       "hints": [
+        "面積の比は、相似比の数をそれぞれ 2 回かけた比です。",
+        "面積の比は何:何でしょう。",
+        "大きいほうは小さいほうの何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "面積の比 (3 × 3):(4 × 4) = 9:16",
+         "18 × 16/9 = 32 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの三角形の面積の比が 9:25 です。相似比はどれですか。",
+       "choices": [
+        "9:25",
+        "3:5",
+        "5:3"
+       ],
+       "answer": "3:5",
+       "check": "[('%d:%d' % (a, b)) for a in range(1, 10) for b in range(1, 10) if a * a * 25 == b * b * 9 and Fraction(a, b).denominator == b][0]",
+       "hints": [
+        "相似比の数をそれぞれ 2 回かけた比が、面積の比です。",
+        "2 回かけて 9 になる数、25 になる数を考えましょう。",
+        "面積の比を、そのまま相似比にしないようにしましょう。"
+       ],
+       "paths": [
+        [
+         "3 × 3 = 9、5 × 5 = 25",
+         "相似比は 3:5"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "△ABC の辺 AB、AC の上に点 D、E があり、DE ∥ BC です。このとき AD:AB = AE:AC = DE:BC となること（三角形と比の定理）を証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "例：「△ADE と △ABC で、DE ∥ BC より、平行線の同位角は等しいので ∠ADE = ∠ABC …①。∠A は共通なので ∠DAE = ∠BAC …②。①、②より、2 組の角がそれぞれ等しいので △ADE ∽ △ABC。相似な図形の対応する辺の比は等しいので、AD:AB = AE:AC = DE:BC。」と書ければよい。① はじめにどの 2 つの三角形の相似を使うかを決めている、② 等しい角ごとに根拠（同位角、共通な角）を書いている、③ 相似条件（約束した事実）で結び、対応する辺の比につないでいる、の 3 点を見る。AD = 2 cm、AB = 5 cm のような例で測ってくらべただけなら、例ではすべての場合を示せないことを話す。",
+       "hints": [
+        "どの 2 つの三角形が相似になるかを考えましょう。",
+        "DE ∥ BC から、等しい角を 1 組見つけましょう。根拠も書きます。",
+        "もう 1 組の等しい角を見つけ、相似条件を書いて結びましょう。"
+       ],
+       "paths": [
+        [
+         "△ADE と △ABC に目をつける",
+         "∠ADE = ∠ABC（同位角）",
+         "∠A は共通",
+         "2 組の角で △ADE ∽ △ABC",
+         "対応する辺の比は等しい"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "△ABC の辺 AB、AC の中点をそれぞれ M、N とします。MN ∥ BC、MN = BC × 1/2 となること（中点連結定理）を証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"132.9,18 44,122 196,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.4\" y1=\"70\" x2=\"164.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"132.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"36\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"204\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"78.4\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"174.5\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"88.4\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"164.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/></svg>",
+       "explain": "例：「△AMN と △ABC で、M、N は中点なので AM:AB = 1:2 …①、AN:AC = 1:2 …②。∠A は共通 …③。①、②、③より、2 組の辺の比とその間の角がそれぞれ等しいので △AMN ∽ △ABC。よって MN:BC = 1:2 で、MN = BC × 1/2。また、対応する角は等しいので ∠AMN = ∠ABC。同位角が等しいので MN ∥ BC。」と書ければよい。① 中点であることを比の式に直している、② 間の角が共通であることを書いている、③ 相似条件で結び、長さと平行の両方を示している、の 3 点を見る。平行を示すところで「同位角が等しければ 2 直線は平行」（G-016）を使っていることも確かめる。",
+       "hints": [
+        "中点であることを、AM:AB のような比で書きましょう。",
+        "2 組の辺の比とその間の角を使う相似条件で、相似を示しましょう。",
+        "相似からわかる等しい角を使って、平行を示しましょう。"
+       ],
+       "paths": [
+        [
+         "AM:AB = AN:AC = 1:2",
+         "∠A は共通",
+         "△AMN ∽ △ABC",
+         "MN:BC = 1:2",
+         "∠AMN = ∠ABC で同位角が等しいので MN ∥ BC"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "△ABC ∽ △DEF で、相似比は 2:3 です。面積の比が 4:9 になることを、高さを使って証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"45.7,61.3 22,96.1 85.2,96.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"158.7,43.9 123.2,96.1 218,96.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"45.7,61.3 22,96.1 85.2,96.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"158.7,43.9 123.2,96.1 218,96.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"45.7\" y1=\"61.3\" x2=\"45.7\" y2=\"96.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"158.7\" y1=\"43.9\" x2=\"158.7\" y2=\"96.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"45.7,88.1 53.7,88.1 53.7,96.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"158.7,88.1 166.7,88.1 166.7,96.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45.7\" y=\"56.5\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"15\" y=\"109.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"92.2\" y=\"109.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"158.7\" y=\"39.1\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"116.2\" y=\"109.3\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"225\" y=\"109.3\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"45.7\" y=\"112.3\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"158.7\" y=\"112.3\" font-size=\"12\" text-anchor=\"middle\">K</text></svg>",
+       "explain": "例：「A から BC に垂線 AH、D から EF に垂線 DK をひく。△ABH と △DEK で、∠AHB = ∠DKE = 90°、∠B = ∠E（△ABC ∽ △DEF の対応する角）なので、2 組の角がそれぞれ等しく △ABH ∽ △DEK。よって AH:DK = AB:DE = 2:3 で、DK は AH の 3/2 倍。EF も BC の 3/2 倍。△DEF の面積 = EF × DK ÷ 2 = (BC × 3/2) × (AH × 3/2) ÷ 2 = (BC × AH ÷ 2) × 9/4 なので、△DEF の面積は △ABC の面積の 9/4 倍で、面積の比は 4:9。」と書ければよい。① 高さを垂線として決めている、② 高さの比も 2:3 になることを相似で示している、③ 底辺と高さがどちらも 3/2 倍なので面積は 3/2 × 3/2 倍、と結んでいる、の 3 点を見る。底辺だけが 3/2 倍になると考えて 2:3 としていないかも見る。",
+       "hints": [
+        "面積は 底辺 × 高さ ÷ 2 です。BC と EF に高さをひきましょう。",
+        "高さの比も 2:3 になることを、小さな直角三角形の相似で示しましょう。",
+        "底辺も高さも 3/2 倍のとき、面積は何倍になるでしょう。"
+       ],
+       "paths": [
+        [
+         "高さ AH、DK をひく",
+         "△ABH ∽ △DEK で AH:DK = 2:3",
+         "EF と DK はどちらも 3/2 倍",
+         "面積は 3/2 × 3/2 = 9/4 倍",
+         "面積の比 4:9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC で AB = 8 cm、BC = 12 cm、CA = 10 cm です。辺 AB、BC、CA の中点をそれぞれ D、E、F とするとき、△DEF のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"63.8,70 120,119.6 153.8,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"97.5,20.4 30,119.6 210,119.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"63.8,70 120,119.6 153.8,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"97.5\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"131.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"131.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"53.8\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"135.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"163.8\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">F</text><circle cx=\"63.8\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"119.6\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"153.8\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"38.9\" y=\"92.3\" font-size=\"12\" text-anchor=\"end\">8 cm</text><text x=\"165\" y=\"137.8\" font-size=\"12\" text-anchor=\"middle\">12 cm</text><text x=\"132.8\" y=\"40.4\" font-size=\"12\" text-anchor=\"start\">10 cm</text></svg>",
+       "answer": 15,
+       "check": "Fraction(8 + 12 + 10, 2)",
+       "hints": [
+        "DE は、△ABC のどの辺の半分でしょう。",
+        "3 つの辺 DE、EF、FD を、中点連結定理で求めましょう。",
+        "3 つの辺をたしましょう。"
+       ],
+       "paths": [
+        [
+         "DE = CA × 1/2 = 5",
+         "EF = AB × 1/2 = 4",
+         "FD = BC × 1/2 = 6",
+         "5 + 4 + 6 = 15 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD = 2 cm、DB = 3 cm、DE = 4 cm です。BC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"68.1\" y=\"43\" font-size=\"12\" text-anchor=\"end\">2 cm</text><text x=\"41\" y=\"95\" font-size=\"12\" text-anchor=\"end\">3 cm</text><text x=\"102.5\" y=\"55.8\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 10,
+       "check": "4 * Fraction(2 + 3, 2)",
+       "hints": [
+        "DE:BC = AD:AB です。",
+        "AB は何 cm でしょう。",
+        "BC は DE の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:AB = 2:5",
+         "BC = 4 × 5/2 = 10 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 3:2、AE = 9 cm です。EC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 58.4,80.4 158.3,80.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"58.4\" y1=\"80.4\" x2=\"158.3\" y2=\"80.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"49.4\" y=\"84.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"167.3\" y=\"84.6\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"136.6\" y=\"53.4\" font-size=\"12\" text-anchor=\"start\">9 cm</text></svg>",
+       "answer": 6,
+       "check": "9 * Fraction(2, 3)",
+       "hints": [
+        "AD:DB = AE:EC です。",
+        "EC は AE の何倍でしょう。",
+        "3:2 を、分数の倍に直しましょう。"
+       ],
+       "paths": [
+        [
+         "AE:EC = 3:2",
+         "EC = 9 × 2/3 = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの三角形の相似比は 3:2 です。大きいほうの面積が 27 cm² のとき、小さいほうの面積は何 cm² ですか。",
+       "answer": 12,
+       "check": "27 * Fraction(2 * 2, 3 * 3)",
+       "hints": [
+        "面積の比は何:何でしょう。",
+        "小さいほうは、大きいほうの何倍でしょう。",
+        "27 にその数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "面積の比 (3 × 3):(2 × 2) = 9:4",
+         "27 × 4/9 = 12 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC の辺 AB、AC の中点を M、N とします。△ABC の面積が 36 cm² のとき、△AMN の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"132.9,18 88.4,70 164.5,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"132.9,18 44,122 196,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.4\" y1=\"70\" x2=\"164.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"132.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"36\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"204\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"78.4\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"174.5\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"88.4\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"164.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/></svg>",
+       "answer": 9,
+       "check": "36 * Fraction(1, 4)",
+       "hints": [
+        "△AMN と △ABC の相似比は何:何でしょう。",
+        "面積の比は何:何でしょう。",
+        "△AMN は △ABC の何分の 1 でしょう。"
+       ],
+       "paths": [
+        [
+         "相似比 1:2",
+         "面積の比 1:4",
+         "36 × 1/4 = 9 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "縮尺 1/200 の縮図で 3.5 cm の長さは、実際には何 cm ですか。",
+       "answer": 700,
+       "check": "Fraction(7, 2) * 200",
+       "hints": [
+        "縮尺 1/200 は、実際の長さを 1/200 にちぢめたということです。",
+        "実際の長さは、縮図の長さの何倍でしょう。",
+        "3.5 × 200 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "実際は縮図の 200 倍",
+         "3.5 × 200 = 700 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "△ABC で ∠A = 45°、∠B = 70° です。∠C の外角は何度ですか。",
+       "answer": 115,
+       "check": "45 + 70",
+       "hints": [
+        "外角は、辺をのばしてできる角です。",
+        "∠C と ∠C の外角をあわせると 180° です。",
+        "外角は、となりにない 2 つの内角の和にも等しくなります。"
+       ],
+       "paths": [
+        [
+         "∠C = 180° − 45° − 70° = 65°",
+         "外角 = 180° − 65° = 115°"
+        ],
+        [
+         "外角 = ∠A + ∠B",
+         "45° + 70° = 115°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "台形 ABCD で AD ∥ BC、AD = 4 cm、BC = 6 cm です。対角線 AC と BD の交点を O とするとき、△OAD と △OCB の面積の比はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,59.6 68,18 172,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,59.6 198,122 42,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"68,18 42,122 198,122 172,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"18\" x2=\"198\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"64\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"35\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"205\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"176\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"75.8\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"120\" y=\"10.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "choices": [
+        "2:3",
+        "4:9",
+        "9:4"
+       ],
+       "answer": "4:9",
+       "check": "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(4 * 4, 6 * 6))",
+       "hints": [
+        "△OAD と △OCB は相似です。等しい角を 2 組見つけましょう。",
+        "相似比は AD:CB です。",
+        "面積の比は、相似比の数をそれぞれ 2 回かけた比です。"
+       ],
+       "paths": [
+        [
+         "AD ∥ BC の錯角と対頂角",
+         "△OAD ∽ △OCB",
+         "相似比 4:6 = 2:3",
+         "面積の比 4:9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF で、∠A = 52°、∠E = 63° です。∠F は何度ですか。",
+       "answer": 65,
+       "check": "180 - 52 - 63",
+       "hints": [
+        "∠A に対応する △DEF の角はどれでしょう。",
+        "∠D は何度でしょう。",
+        "三角形の 3 つの角の和は 180° です。"
+       ],
+       "paths": [
+        [
+         "∠D = ∠A = 52°",
+         "∠F = 180° − 52° − 63°",
+         "65°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "同じ時刻に、高さ 150 cm の棒の影が 200 cm、ビルの影が 1600 cm でした。ビルの高さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"59.4,122 59.4,18 198.1,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"41.9,122 41.9,109 59.3,122\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"41.9\" y1=\"122\" x2=\"198.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"41.9\" y1=\"122\" x2=\"41.9\" y2=\"109\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.4\" y1=\"122\" x2=\"59.4\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"41.9\" y1=\"109\" x2=\"59.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"59.4\" y1=\"18\" x2=\"198.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"36.9\" y=\"119.7\" font-size=\"12\" text-anchor=\"end\">150 cm</text><text x=\"50.6\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">200 cm</text><text x=\"128.7\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">1600 cm</text><text x=\"41.9\" y=\"104.2\" font-size=\"12\" text-anchor=\"middle\">棒</text><text x=\"59.4\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">ビル</text><line x1=\"41.9\" y1=\"122\" x2=\"59.3\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"4\" fill=\"none\"/><line x1=\"59.4\" y1=\"122\" x2=\"198.1\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"4\" fill=\"none\"/><polyline points=\"41.9,114 49.9,114 49.9,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"59.4,114 67.4,114 67.4,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 1200,
+       "check": "150 * Fraction(1600, 200)",
+       "hints": [
+        "棒と影、ビルと影でできる三角形は相似です。",
+        "ビルの影は、棒の影の何倍でしょう。",
+        "ビルの高さも同じ倍です。"
+       ],
+       "paths": [
+        [
+         "1600 ÷ 200 = 8 倍",
+         "150 × 8 = 1200 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "△ABC の辺 AB の上に AD:DB = 3:1 となる点 D をとります。D を通り BC に平行な直線と辺 AC の交点を E、E を通り AB に平行な直線と辺 BC の交点を F とします。BC = 16 cm のとき、BF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"108.8,18 35,122 205,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"53.4\" y1=\"96\" x2=\"181\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"181\" y1=\"96\" x2=\"162.5\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"108.8\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"27\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"213\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"43.4\" y=\"98.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"191\" y=\"98.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"162.5\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">16 cm</text></svg>",
+       "answer": 12,
+       "check": "16 - 16 * Fraction(1, 4)",
+       "hints": [
+        "DE ∥ BC から、AE:EC を求めましょう。",
+        "EF ∥ AB です。△CEF と △CAB で、CF:CB を求めましょう。",
+        "BF = BC − CF です。"
+       ],
+       "paths": [
+        [
+         "AE:EC = AD:DB = 3:1",
+         "CF:CB = CE:CA = 1:4",
+         "CF = 16 × 1/4 = 4",
+         "BF = 16 − 4 = 12 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD:DB = 2:1 です。△ABC の面積が 45 cm² のとき、四角形 DBCE の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"54.8,87.3 36.8,122 203.2,122 165.8,87.3\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"54.8\" y1=\"87.3\" x2=\"165.8\" y2=\"87.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"45.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"174.8\" y=\"91.5\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 25,
+       "check": "45 - 45 * Fraction(2 * 2, 3 * 3)",
+       "hints": [
+        "相似比 AD:AB を求めましょう。",
+        "△ADE の面積は、△ABC の面積の何倍でしょう。",
+        "四角形 DBCE は、△ABC から △ADE を取りのぞいた部分です。"
+       ],
+       "paths": [
+        [
+         "相似比 2:3",
+         "面積の比 4:9",
+         "△ADE = 45 × 4/9 = 20",
+         "45 − 20 = 25 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。∠OAB = 35°、∠AOB = 100° のとき、∠OCD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"89.5\" y1=\"29.8\" x2=\"210\" y2=\"29.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.7\" y1=\"110.2\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.5\" y1=\"29.8\" x2=\"190.7\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"29.8\" x2=\"30\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"83.5\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"25\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"24\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"196.7\" y=\"124.4\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.9\" y=\"69.5\" font-size=\"12\" text-anchor=\"middle\">O</text><path d=\"M100.4 38.5 A14 14 0 0 0 103.5 29.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114\" y=\"42.2\" font-size=\"11\" text-anchor=\"middle\">35°</text><path d=\"M145.6 58.6 A14 14 0 0 0 121.9 55.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"136.1\" y=\"42.3\" font-size=\"11\" text-anchor=\"middle\">100°</text><polyline points=\"145.7,25.8 151.7,29.8 145.7,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"106.4,106.2 112.4,110.2 106.4,114.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 45,
+       "check": "180 - 35 - 100",
+       "hints": [
+        "△OAB の ∠OBA は何度でしょう。",
+        "∠OCD と ∠OBA は錯角です。",
+        "平行線の錯角は等しくなります。"
+       ],
+       "paths": [
+        [
+         "∠OBA = 180° − 35° − 100° = 45°",
+         "∠OCD = ∠OBA（錯角）",
+         "45°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "縮尺 1:500 の縮図で 1.8 cm の長さは、実際には何 cm ですか。",
+       "answer": 900,
+       "check": "Fraction(9, 5) * 500",
+       "hints": [
+        "縮尺 1:500 では、実際の長さは縮図の長さの何倍でしょう。",
+        "1.8 × 500 を計算しましょう。",
+        "1.8 × 5 を先に計算してもよいでしょう。"
+       ],
+       "paths": [
+        [
+         "実際は縮図の 500 倍",
+         "1.8 × 500 = 900 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "△ABC ∽ △DEF で、AB = 8 cm、AC = 10 cm、DE = 12 cm です。DF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"42.1,57.8 26,106.6 83.8,106.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"151.3,33.4 127.2,106.6 214,106.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"42.1,57.8 26,106.6 83.8,106.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"151.3,33.4 127.2,106.6 214,106.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"42.1\" y=\"53\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"19\" y=\"119.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"90.8\" y=\"119.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"151.3\" y=\"28.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120.2\" y=\"119.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"221\" y=\"119.8\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"25.5\" y=\"82.7\" font-size=\"12\" text-anchor=\"end\">8 cm</text><text x=\"70.6\" y=\"78.6\" font-size=\"12\" text-anchor=\"start\">10 cm</text><text x=\"130.7\" y=\"70.5\" font-size=\"12\" text-anchor=\"end\">12 cm</text></svg>",
+       "answer": 15,
+       "check": "10 * Fraction(12, 8)",
+       "hints": [
+        "DF に対応する辺はどれでしょう。",
+        "DE は AB の何倍でしょう。",
+        "DF も AC の同じ倍です。"
+       ],
+       "paths": [
+        [
+         "DE は AB の 12/8 = 3/2 倍",
+         "DF = 10 × 3/2 = 15 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺が 6 cm、8 cm、9 cm の三角形と相似な三角形はどれですか。",
+       "choices": [
+        "9 cm、11 cm、12 cm",
+        "8 cm、10 cm、11 cm",
+        "9 cm、12 cm、13.5 cm"
+       ],
+       "answer": "9 cm、12 cm、13.5 cm",
+       "check": "[c for c, s in {'9 cm、11 cm、12 cm': (9, 11, 12), '8 cm、10 cm、11 cm': (8, 10, 11), '9 cm、12 cm、13.5 cm': (9, 12, Fraction(27, 2))}.items() if len(set([Fraction(s[i], (6, 8, 9)[i]) for i in range(3)])) == 1][0]",
+       "hints": [
+        "短い辺どうし、長い辺どうしを組にしましょう。",
+        "それぞれの組で、何倍になっているかを調べましょう。",
+        "3 組とも同じ倍のものを選びましょう。"
+       ],
+       "paths": [
+        [
+         "6 → 9、8 → 12、9 → 13.5",
+         "どれも 3/2 倍",
+         "相似"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で、辺 BC の上に ∠DAC = ∠ABC となる点 D をとりました。△ABC と相似な三角形を、対応する頂点の順に正しく書いたものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"134.4,23.4 30,116.6 210,116.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134.4\" y1=\"23.4\" x2=\"130\" y2=\"116.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"134.4\" y=\"18.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"128.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"128.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"132\" y=\"132.7\" font-size=\"12\" text-anchor=\"middle\">D</text><path d=\"M44 116.6 A14 14 0 0 0 40.4 107.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M133.8 37.4 A14 14 0 0 0 143.3 34.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "choices": [
+        "△ABC ∽ △ADC",
+        "△ABC ∽ △DAC",
+        "△ABC ∽ △CAD"
+       ],
+       "answer": "△ABC ∽ △DAC",
+       "hints": [
+        "∠C は 2 つの三角形に共通です。",
+        "∠ABC と等しい角 ∠DAC は、△DAC のどの頂点の角でしょう。",
+        "△ABC の A、B、C に対応する頂点を、順に書きましょう。"
+       ],
+       "paths": [
+        [
+         "∠C は共通",
+         "∠ABC = ∠DAC なので B と A が対応する",
+         "残りの A と D が対応する",
+         "△ABC ∽ △DAC"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠BAC = 90°の直角三角形 ABC で、AB = 20 cm、BC = 25 cm です。A から BC に垂線 AH をひくとき、BH は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"145.2,26.8 30,113.2 210,113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.2\" y1=\"26.8\" x2=\"145.2\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"138.8,31.6 143.6,38 150,33.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"145.2,105.2 153.2,105.2 153.2,113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.2\" y=\"22\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"22\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"218\" y=\"125.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"145.2\" y=\"129.4\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"80.7\" y=\"64.6\" font-size=\"12\" text-anchor=\"end\">20 cm</text><text x=\"170.4\" y=\"130.4\" font-size=\"12\" text-anchor=\"middle\">25 cm</text></svg>",
+       "answer": 16,
+       "check": "20 * Fraction(20, 25)",
+       "hints": [
+        "△HBA と △ABC は相似です。",
+        "HB に対応する △ABC の辺はどれでしょう。",
+        "相似比 BA:BC を使いましょう。"
+       ],
+       "paths": [
+        [
+         "△HBA ∽ △ABC",
+         "相似比 BA:BC = 20:25 = 4:5",
+         "BH = 20 × 4/5 = 16 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の △ABC で DE ∥ BC、AD = 4 cm、DB = 6 cm、BC = 20 cm です。DE は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"90.9,18 69.2,59.6 135.8,59.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.9,18 36.8,122 203.2,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.2\" y1=\"59.6\" x2=\"135.8\" y2=\"59.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"90.9\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"29.8\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"210.2\" y=\"135.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"60.2\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"144.8\" y=\"63.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"68.1\" y=\"43\" font-size=\"12\" text-anchor=\"end\">4 cm</text><text x=\"41\" y=\"95\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">20 cm</text></svg>",
+       "answer": 8,
+       "check": "20 * Fraction(4, 4 + 6)",
+       "hints": [
+        "DE:BC = AD:AB です。",
+        "AB は何 cm でしょう。",
+        "DE は BC の何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "AD:AB = 4:10 = 2:5",
+         "DE = 20 × 2/5 = 8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC で AB = 14 cm、BC = 18 cm、CA = 16 cm です。辺 AB、AC の中点をそれぞれ M、N とするとき、△AMN のまわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"105.5,18 73.5,70 152,70\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"105.5,18 41.5,122 198.5,122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"73.5\" y1=\"70\" x2=\"152\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"105.5\" y=\"13.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"33.5\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"206.5\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"63.5\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">M</text><text x=\"162\" y=\"72.2\" font-size=\"12\" text-anchor=\"middle\">N</text><circle cx=\"73.5\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"152\" cy=\"70\" r=\"2.6\" fill=\"currentColor\"/><text x=\"49.4\" y=\"93.9\" font-size=\"12\" text-anchor=\"end\">14 cm</text><text x=\"120\" y=\"140.2\" font-size=\"12\" text-anchor=\"middle\">18 cm</text><text x=\"182.8\" y=\"92.2\" font-size=\"12\" text-anchor=\"start\">16 cm</text></svg>",
+       "answer": 24,
+       "check": "Fraction(14 + 18 + 16, 2)",
+       "hints": [
+        "AM と AN の長さを求めましょう。",
+        "MN は BC の何倍でしょう。",
+        "3 つの辺をたしましょう。"
+       ],
+       "paths": [
+        [
+         "AM = 7、AN = 8",
+         "MN = 18 × 1/2 = 9",
+         "7 + 9 + 8 = 24 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの図形の相似比は 2:5 です。小さいほうの面積が 12 cm² のとき、大きいほうの面積は何 cm² ですか。",
+       "answer": 75,
+       "check": "12 * Fraction(5 * 5, 2 * 2)",
+       "hints": [
+        "面積の比は、相似比の数をそれぞれ 2 回かけた比です。",
+        "面積の比は何:何でしょう。",
+        "大きいほうは小さいほうの何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "面積の比 (2 × 2):(5 × 5) = 4:25",
+         "12 × 25/4 = 75 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の台形 ABCD で AD ∥ BC、AD = 5 cm、BC = 14 cm です。辺 AB の上に AE:EB = 2:1 となる点 E をとり、E を通って BC に平行な直線が辺 DC と交わる点を F とします。EF は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"87.9,37.9 30,102.1 210,102.1 152.1,37.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.3\" y1=\"80.7\" x2=\"190.7\" y2=\"80.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"83.9\" y=\"33.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"23\" y=\"115.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"217\" y=\"115.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"156.1\" y=\"33.1\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"39.3\" y=\"84.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"200.7\" y=\"84.9\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"120\" y=\"30.1\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"120\" y=\"120.3\" font-size=\"12\" text-anchor=\"middle\">14 cm</text></svg>",
+       "answer": 11,
+       "check": "14 * Fraction(2, 3) + 5 * Fraction(1, 3)",
+       "hints": [
+        "対角線 AC をひいて、EF との交点を G としましょう。",
+        "△ABC で EG を、△CDA で GF を求めましょう。",
+        "AG:GC は AE:EB と同じ比です。"
+       ],
+       "paths": [
+        [
+         "対角線 AC と EF の交点を G とする",
+         "EG = 14 × 2/3 = 28/3",
+         "GF = 5 × 1/3 = 5/3",
+         "EF = 28/3 + 5/3 = 11 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図で AB ∥ DC です。直線 AD と BC は点 O で交わっています。AB = 10 cm、DC = 4 cm、OA = 7.5 cm のとき、OD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"34\" x2=\"210\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120.7\" y1=\"106\" x2=\"48.7\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"30\" y1=\"34\" x2=\"120.7\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"210\" y1=\"34\" x2=\"48.7\" y2=\"106\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"24\" y=\"29.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"216\" y=\"29.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"42.7\" y=\"120.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"126.7\" y=\"120.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"106.8\" y=\"90.6\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"120\" y=\"26.2\" font-size=\"12\" text-anchor=\"middle\">10 cm</text><text x=\"84.7\" y=\"124.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"55.4\" y=\"75.3\" font-size=\"12\" text-anchor=\"end\">7.5 cm</text><polyline points=\"116,30 122,34 116,38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"80.7,102 86.7,106 80.7,110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 3,
+       "check": "Fraction(15, 2) * Fraction(4, 10)",
+       "hints": [
+        "△OAB ∽ △ODC です。",
+        "DC は AB の何倍でしょう。",
+        "OD は OA の同じ倍です。"
+       ],
+       "paths": [
+        [
+         "DC は AB の 4/10 = 2/5 倍",
+         "OD = 7.5 × 2/5 = 3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、AD:DB = 3:5、AE:EC = 6:10 です。DE と BC は平行ですか。",
+       "choices": [
+        "平行ではない",
+        "平行である"
+       ],
+       "answer": "平行である",
+       "check": "'平行である' if Fraction(3, 5) == Fraction(6, 10) else '平行ではない'",
+       "hints": [
+        "三角形と比の定理の逆を使いましょう。",
+        "6:10 を簡単にしましょう。",
+        "AD:DB と AE:EC が等しいかをくらべましょう。"
+       ],
+       "paths": [
+        [
+         "6:10 = 3:5",
+         "AD:DB = AE:EC",
+         "DE ∥ BC"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの図形の面積の比が 16:49 です。相似比はどれですか。",
+       "choices": [
+        "16:49",
+        "7:4",
+        "4:7"
+       ],
+       "answer": "4:7",
+       "check": "[('%d:%d' % (a, b)) for a in range(1, 10) for b in range(1, 10) if a * a * 49 == b * b * 16 and Fraction(a, b).denominator == b][0]",
+       "hints": [
+        "相似比の数をそれぞれ 2 回かけた比が、面積の比です。",
+        "2 回かけて 16 になる数、49 になる数を考えましょう。",
+        "面積の比を、そのまま相似比にしないようにしましょう。"
+       ],
+       "paths": [
+        [
+         "4 × 4 = 16、7 × 7 = 49",
+         "相似比は 4:7"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -206980,10 +209973,11 @@ window.ROADMAP = {
     14.12
    ],
    "comb": {
-    "b": 0.295,
+    "b": 0.4,
     "r": 0.0,
     "rg": [
      "hakaru",
+     "houteishiki",
      "shomei-zukei"
     ],
     "pr": []
@@ -207003,27 +209997,1178 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "図の直方体 ABCD-EFGH で、辺 AB と平行な辺、交わる辺、どちらでもない辺をさがしてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "explain": "空間の 2 直線の位置関係は 3 つあります。① 平行（同じ平面の上にあって交わらない）、② 交わる、③ ねじれの位置（平行でもなく、交わりもしない。同じ平面の上にない）。辺 AB と平行な辺は DC、EF、HG。交わる辺は AD、AE、BC、BF。ねじれの位置にある辺は CG、DH、EH、FG の 4 本です。直線と平面では、直線 AE が平面 EFGH と点 E で交わり、E を通る平面の上の 2 直線 EF、EH の両方と垂直なとき、AE は平面 EFGH に垂直であるといいます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "たて 3 cm、横 4 cm、高さ 5 cm の直方体の体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"75.6\" y1=\"36.6\" x2=\"142.4\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.4\" y1=\"36.6\" x2=\"164.4\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"20\" x2=\"97.6\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.6\" y1=\"20\" x2=\"75.6\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"120\" x2=\"142.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.4\" y1=\"120\" x2=\"164.4\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"103.4\" x2=\"97.6\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"97.6\" y1=\"103.4\" x2=\"75.6\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"75.6\" y1=\"36.6\" x2=\"75.6\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.4\" y1=\"36.6\" x2=\"142.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"20\" x2=\"164.4\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.6\" y1=\"20\" x2=\"97.6\" y2=\"103.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"109\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"161.4\" y=\"123.9\" font-size=\"12\" text-anchor=\"start\">3 cm</text><text x=\"69.6\" y=\"82.5\" font-size=\"12\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 60,
+       "check": "3 * 4 * 5",
+       "hints": [
+        "直方体の体積 = たて × 横 × 高さ です。",
+        "まず たて × 横 で底面積を求めましょう。",
+        "底面積に高さをかけましょう。"
+       ],
+       "paths": [
+        [
+         "底面積 3 × 4 = 12",
+         "12 × 5 = 60 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "図の立方体を、3 つの頂点 A、C、F を通る平面で切りました。切り口の形はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"61.6\" y1=\"42.9\" x2=\"142.8\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"97.2\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.6\" y1=\"124\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"124\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"97.1\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"97.2\" y1=\"97.1\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"52.6\" y=\"41.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"148.8\" y=\"56.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"186.4\" y=\"14.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"93.2\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"52.6\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"146.8\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"187.4\" y=\"105.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"88.2\" y=\"104.3\" font-size=\"12\" text-anchor=\"middle\">H</text><circle cx=\"61.6\" cy=\"42.9\" r=\"2.8\" fill=\"currentColor\"/><text x=\"61.6\" y=\"47.1\" font-size=\"12\" text-anchor=\"middle\"></text><circle cx=\"178.4\" cy=\"16\" r=\"2.8\" fill=\"currentColor\"/><text x=\"178.4\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\"></text><circle cx=\"142.8\" cy=\"124\" r=\"2.8\" fill=\"currentColor\"/><text x=\"142.8\" y=\"128.2\" font-size=\"12\" text-anchor=\"middle\"></text></svg>",
+       "choices": [
+        "二等辺三角形",
+        "正三角形",
+        "長方形"
+       ],
+       "answer": "正三角形",
+       "check": "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 0, 0)))",
+       "hints": [
+        "同じ面の上にある 2 つの点は、まっすぐ結びます。",
+        "AC、CF、FA は、それぞれどの面の対角線でしょう。",
+        "同じ大きさの正方形の対角線の長さは等しくなります。"
+       ],
+       "paths": [
+        [
+         "AC、CF、FA はどれも面の対角線",
+         "3 つの辺の長さが等しい",
+         "正三角形"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直方体で、辺 CG とねじれの位置にある辺は何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 4,
+       "check": "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, ['AB', 'BC', 'CD', 'DA', 'EF', 'FG', 'GH', 'HE', 'AE', 'BF', 'CG', 'DH'], 'C', 'G')",
+       "hints": [
+        "CG と平行な辺と、CG と交わる辺を、先に除きましょう。",
+        "CG と交わる辺は、点 C か点 G を通ります。",
+        "残った辺が、ねじれの位置にある辺です。"
+       ],
+       "paths": [
+        [
+         "平行な辺 AE、BF、DH",
+         "交わる辺 BC、CD、FG、GH",
+         "残りの AB、AD、EF、EH の 4 本"
+        ]
+       ],
+       "note": "ねじれの位置かどうかは、図の上で線が交わって見えるかではなく、同じ平面の上にあるかで決まる。"
+      },
+      {
+       "part": "今日",
+       "text": "図の直方体で、辺 AE と垂直な面はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "choices": [
+        "面 BFGC",
+        "面 EFGH",
+        "面 AEHD"
+       ],
+       "answer": "面 EFGH",
+       "check": "(lambda V, e: [f for f in ['面 BFGC', '面 EFGH', '面 AEHD'] if (lambda d, n: d[1] * n[2] - d[2] * n[1] == 0 and d[2] * n[0] - d[0] * n[2] == 0 and d[0] * n[1] - d[1] * n[0] == 0)([V[e[1]][i] - V[e[0]][i] for i in range(3)], (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)]))(V[f[2]], V[f[3]], V[f[4]]))][0])({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, 'AE')",
+       "hints": [
+        "AE は、ある面の上の 2 本の辺と、垂直に交わっています。",
+        "AE と点 E で交わる辺 EF と EH を見ましょう。",
+        "EF と EH の両方をふくむ面を選びましょう。"
+       ],
+       "paths": [
+        [
+         "AE ⊥ EF、AE ⊥ EH",
+         "EF と EH は面 EFGH の上",
+         "AE ⊥ 面 EFGH"
+        ]
+       ],
+       "note": "面 AEHD は AE をふくむ面で、垂直ではない。面 BFGC は AE と平行。"
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形を、直線 ℓ を軸として 1 回転させると、どんな立体ができますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"91.9,116.8 148.1,116.8 91.9,23.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"91.9\" y1=\"128\" x2=\"91.9\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"8 3 2 3\"/><text x=\"99.9\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">ℓ</text></svg>",
+       "choices": [
+        "円柱",
+        "円錐",
+        "球"
+       ],
+       "answer": "円錐",
+       "hints": [
+        "軸のまわりに回すと、軸からはなれた点は円をえがきます。",
+        "底の辺は、回すと何になるでしょう。",
+        "軸の上にある上の頂点は、回しても動きません。"
+       ],
+       "paths": [
+        [
+         "底の辺が回って円になる",
+         "上の頂点は動かない",
+         "円錐"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の三角柱 ABC-DEF で、辺 AB とねじれの位置にある辺は何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"64.1\" y1=\"40.1\" x2=\"175.9\" y2=\"40.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"175.9\" y1=\"40.1\" x2=\"129.6\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129.6\" y1=\"16\" x2=\"64.1\" y2=\"40.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.1\" y1=\"124\" x2=\"175.9\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.1\" y1=\"40.1\" x2=\"64.1\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"175.9\" y1=\"40.1\" x2=\"175.9\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129.6\" y1=\"16\" x2=\"129.6\" y2=\"99.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"175.9\" y1=\"124\" x2=\"129.6\" y2=\"99.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"129.6\" y1=\"99.9\" x2=\"64.1\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"55.1\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"184.9\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"129.6\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"55.1\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"184.9\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"137.6\" y=\"110.1\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 3,
+       "check": "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (2, 0, 1), 'C': (1, 2, 1), 'D': (0, 0, 0), 'E': (2, 0, 0), 'F': (1, 2, 0)}, ['AB', 'BC', 'CA', 'DE', 'EF', 'FD', 'AD', 'BE', 'CF'], 'A', 'B')",
+       "hints": [
+        "AB と平行な辺はどれでしょう。",
+        "AB と交わる辺は、点 A か点 B を通ります。",
+        "残った辺が、AB と同じ平面の上にないかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "平行な辺 DE",
+         "交わる辺 BC、CA、AD、BE",
+         "残りの CF、EF、FD の 3 本"
+        ]
+       ],
+       "note": "直方体とちがい、三角柱では 3 本になる。立体によって数がちがうので、1 本ずつ確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の直方体で、辺 AB と平行な面はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "choices": [
+        "面 ABFE",
+        "面 DCGH",
+        "面 BFGC"
+       ],
+       "answer": "面 DCGH",
+       "check": "(lambda V, e: [f for f in ['面 ABFE', '面 DCGH', '面 BFGC'] if (lambda d, n, q: d[0] * n[0] + d[1] * n[1] + d[2] * n[2] == 0 and q[0] * n[0] + q[1] * n[1] + q[2] * n[2] != 0)([V[e[1]][i] - V[e[0]][i] for i in range(3)], (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)]))(V[f[2]], V[f[3]], V[f[4]]), [V[e[0]][i] - V[f[2]][i] for i in range(3)])][0])({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, 'AB')",
+       "hints": [
+        "辺 AB をふくむ面は、平行とはいいません。",
+        "AB と平行な辺 DC や HG をふくむ面を考えましょう。",
+        "その面と AB が交わらないかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "AB ∥ DC",
+         "DC は面 DCGH の上",
+         "AB は面 DCGH と交わらない",
+         "AB ∥ 面 DCGH"
+        ]
+       ],
+       "note": "面 EFGH も AB と平行。選択肢の中では面 DCGH。"
+      },
+      {
+       "part": "今日",
+       "text": "図は、ある立体を正面から見た図（立面図）と、真上から見た図（平面図）です。この立体はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"74\" x2=\"200\" y2=\"74\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"22\" y=\"37.5\" font-size=\"10\" text-anchor=\"middle\">立面図</text><text x=\"22\" y=\"109.5\" font-size=\"10\" text-anchor=\"middle\">平面図</text><polygon points=\"120,8 94,66 146,66\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"94\" y=\"82\" width=\"52\" height=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"82\" x2=\"146\" y2=\"134\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146\" y1=\"82\" x2=\"94\" y2=\"134\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "choices": [
+        "三角柱",
+        "正四角錐",
+        "円錐"
+       ],
+       "answer": "正四角錐",
+       "hints": [
+        "正面から見ると三角形です。",
+        "真上から見ると、正方形に対角線がかかれています。",
+        "対角線は、とがった頂点から底面の頂点へ向かう辺です。"
+       ],
+       "paths": [
+        [
+         "立面図が三角形なので先がとがった立体",
+         "平面図が正方形なので底面は正方形",
+         "正四角錐"
+        ]
+       ],
+       "note": "円錐なら平面図は円、三角柱なら平面図は長方形（または三角形）になる。"
+      },
+      {
+       "part": "今日",
+       "text": "図の直方体で、面 ABCD と垂直な面はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"49.7,42.1 161,42.1 190.3,20 79,20\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 4,
+       "check": "(lambda V, N: len([f for f in ['ABFE', 'BFGC', 'CGHD', 'DHEA', 'EFGH'] if (lambda a, b: a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0)(N(V[f[0]], V[f[1]], V[f[2]]), N(V['A'], V['B'], V['C']))]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)])))",
+       "hints": [
+        "面 ABCD と交わる面を考えましょう。",
+        "側面は、上の面と垂直に交わっています。",
+        "面 ABCD と平行な面は数えません。"
+       ],
+       "paths": [
+        [
+         "側面 ABFE、BFGC、CGHD、DHEA",
+         "どれも面 ABCD と垂直",
+         "4 つ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "底面の半径が 3 cm、高さが 4 cm の円錐の体積を求めてみましょう。円周率は π とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"28.7\" x2=\"55\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"28.7\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 0 185 115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 1 185 115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"115.3\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"28.7\" x2=\"120\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,108.3 127,108.3 127,115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"115.3\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.5\" y=\"134.9\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"115\" y=\"82.2\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "explain": "角錐や円錐の体積は、底面積と高さが同じ角柱や円柱の体積の 1/3 です（立方体は、1 つの頂点を共通の頂点とする合同な 3 つの四角錐に分けられます）。体積 = 底面積 × 高さ × 1/3。円周率を π と書くと、底面積は π × 3 × 3 = 9π cm² なので、体積は 9π × 4 × 1/3 = 12π cm³ です。球の体積は 4/3 × π × 半径³、表面積は 4 × π × 半径² です。答えは「□π」の形にして、□ の数を答えます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 3 cm、高さが 5 cm の円柱の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M78.4 38 L78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3 L161.6 38 A41.6 13.3 0 0 1 78.4 38 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><ellipse cx=\"120\" cy=\"38\" rx=\"41.6\" ry=\"13.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"78.4\" y1=\"38\" x2=\"78.4\" y2=\"107.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161.6\" y1=\"38\" x2=\"161.6\" y2=\"107.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.4 107.3 A41.6 13.3 0 0 1 161.6 107.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"38\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"38\" x2=\"161.6\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.8\" y=\"52.8\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"167.6\" y=\"76.9\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 45,
+       "check": "3 * 3 * 5",
+       "hints": [
+        "円柱の体積 = 底面積 × 高さ です。",
+        "底面積は 3 × 3 × π です。",
+        "π は最後まで残しておきましょう。"
+       ],
+       "paths": [
+        [
+         "底面積 9π",
+         "9π × 5 = 45π",
+         45
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "半径 6 cm、中心角 120° のおうぎ形の弧の長さは □π cm です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104.2 97.3 L174.2 97.3 A70 70 0 0 0 69.3 36.7 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"104.2\" cy=\"97.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M120.2 97.3 A16 16 0 0 0 96.2 83.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.2\" y=\"75.5\" font-size=\"12\" text-anchor=\"middle\">120°</text><text x=\"139.2\" y=\"111.5\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 4,
+       "check": "Fraction(2 * 6 * 120, 360)",
+       "hints": [
+        "弧の長さは、円周の何分の 1 でしょう。",
+        "中心角 120° は、360° の何分の 1 でしょう。",
+        "半径 6 cm の円周は 12π cm です。"
+       ],
+       "paths": [
+        [
+         "120/360 = 1/3",
+         "円周 12π",
+         "12π × 1/3 = 4π",
+         4
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面が 1 辺 6 cm の正方形で、高さが 5 cm の正四角錐の体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,17.3 44,122.7 149.6,122.7\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,17.3 149.6,122.7 196,87.8\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"44\" y1=\"122.7\" x2=\"149.6\" y2=\"122.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.6\" y1=\"122.7\" x2=\"196\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"17.3\" x2=\"44\" y2=\"122.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"17.3\" x2=\"149.6\" y2=\"122.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"17.3\" x2=\"196\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"196\" y1=\"87.8\" x2=\"90.4\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90.4\" y1=\"87.8\" x2=\"44\" y2=\"122.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"17.3\" x2=\"90.4\" y2=\"87.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"17.3\" x2=\"120\" y2=\"105.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"105.3\" r=\"2.2\" fill=\"currentColor\"/><text x=\"96.8\" y=\"139.9\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"115\" y=\"65.5\" font-size=\"12\" text-anchor=\"end\">5 cm</text><text x=\"120\" y=\"12.5\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"36\" y=\"134.9\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"157.6\" y=\"134.9\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"205\" y=\"90\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"81.4\" y=\"90\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 60,
+       "check": "Fraction(6 * 6 * 5, 3)",
+       "hints": [
+        "角錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "底面積は 6 × 6 です。",
+        "1/3 をかけるのを忘れないようにしましょう。"
+       ],
+       "paths": [
+        [
+         "底面積 36",
+         "36 × 5 × 1/3 = 60 cm³"
+        ]
+       ],
+       "note": "1/3 をかけ忘れて 180 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 3 cm、高さが 7 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 23.6 L78.5 120.4 A41.5 13.3 0 0 0 161.5 120.4 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"23.6\" x2=\"78.5\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"23.6\" x2=\"161.5\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.5 120.4 A41.5 13.3 0 0 0 161.5 120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.5 120.4 A41.5 13.3 0 0 1 161.5 120.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"120.4\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"23.6\" x2=\"120\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,113.4 127,113.4 127,120.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"120.4\" x2=\"161.5\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.7\" y=\"136.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"115\" y=\"82.2\" font-size=\"12\" text-anchor=\"end\">7 cm</text></svg>",
+       "answer": 21,
+       "check": "Fraction(3 * 3 * 7, 3)",
+       "hints": [
+        "円錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "底面積は 9π cm² です。",
+        "9 × 7 × 1/3 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "底面積 9π",
+         "9π × 7 × 1/3 = 21π",
+         21
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 3 cm の球の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M62 70 A58 17.4 0 0 0 178 70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M62 70 A58 17.4 0 0 1 178 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "answer": 36,
+       "check": "Fraction(4, 3) * 3 * 3 * 3",
+       "hints": [
+        "球の体積 = 4/3 × π × 半径³ です。",
+        "3³ を先に計算しましょう。",
+        "4/3 をかけましょう。"
+       ],
+       "paths": [
+        [
+         "3³ = 27",
+         "4/3 × 27 = 36",
+         "36π",
+         36
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "底面の半径が 3 cm、母線の長さが 5 cm の円錐の表面積は □π cm² です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"28.7\" x2=\"55\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"28.7\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 0 185 115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 1 185 115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"115.3\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"115.3\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.5\" y=\"134.9\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"160.5\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 24,
+       "check": "Fraction(5 * 5 * 3, 5) + 3 * 3",
+       "hints": [
+        "展開図は、側面のおうぎ形と底面の円です。",
+        "おうぎ形の弧の長さは、底面の円周と等しくなります。弧は、半径 5 cm の円周の何分の 1 でしょう。",
+        "側面積は、半径 5 cm の円の面積の、同じ分だけです。"
+       ],
+       "paths": [
+        [
+         "弧 = 底面の円周 6π",
+         "半径 5 cm の円周 10π の 3/5",
+         "側面積 = 25π × 3/5 = 15π",
+         "底面 9π と合わせて 24π",
+         24
+        ]
+       ],
+       "note": "側面積だけで 15 と答えやすい。表面積は底面もふくむ。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径 5 cm の球の表面積は □π cm² です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M62 70 A58 17.4 0 0 0 178 70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M62 70 A58 17.4 0 0 1 178 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text></svg>",
+       "answer": 100,
+       "check": "4 * 5 * 5",
+       "hints": [
+        "球の表面積 = 4 × π × 半径² です。",
+        "5² を先に計算しましょう。",
+        "4 をかけましょう。"
+       ],
+       "paths": [
+        [
+         "5² = 25",
+         "4 × 25 = 100",
+         "100π",
+         100
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面積が 12 cm²、高さが 8 cm の三角錐の体積は何 cm³ ですか。",
+       "answer": 32,
+       "check": "Fraction(12 * 8, 3)",
+       "hints": [
+        "角錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "12 × 8 を計算しましょう。",
+        "1/3 をかけましょう。"
+       ],
+       "paths": [
+        [
+         "12 × 8 = 96",
+         "96 × 1/3 = 32 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 2 cm、母線の長さが 6 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 8 L70.6 36.5 A57 57 0 0 0 169.4 36.5 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"84\" r=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"8\" r=\"2.5\" fill=\"currentColor\"/><text x=\"87.3\" y=\"26.5\" font-size=\"12\" text-anchor=\"end\">6 cm</text><line x1=\"120\" y1=\"84\" x2=\"139\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143\" y=\"88.2\" font-size=\"12\" text-anchor=\"start\">2 cm</text></svg>",
+       "answer": 120,
+       "check": "Fraction(360 * 2, 6)",
+       "hints": [
+        "おうぎ形の弧の長さは、底面の円周と等しくなります。",
+        "弧は、半径 6 cm の円周の何分の 1 でしょう。",
+        "中心角も、360° の同じ分だけです。"
+       ],
+       "paths": [
+        [
+         "弧 = 4π",
+         "半径 6 cm の円周 12π の 1/3",
+         "360° × 1/3 = 120°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "図の直方体 ABCD-EFGH で、EF = 4 cm、FG = 3 cm、AE = 12 cm です。対角線 AG の長さを求めてみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"99.5\" y1=\"27.6\" x2=\"130.3\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130.3\" y1=\"27.6\" x2=\"140.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.5\" y1=\"20\" x2=\"109.7\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.7\" y1=\"20\" x2=\"99.5\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99.5\" y1=\"120\" x2=\"130.3\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130.3\" y1=\"120\" x2=\"140.5\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.5\" y1=\"112.4\" x2=\"109.7\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"109.7\" y1=\"112.4\" x2=\"99.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"99.5\" y1=\"27.6\" x2=\"99.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"130.3\" y1=\"27.6\" x2=\"130.3\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.5\" y1=\"20\" x2=\"140.5\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.7\" y1=\"20\" x2=\"109.7\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"99.5\" y1=\"27.6\" x2=\"140.5\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"99.5\" y1=\"120\" x2=\"140.5\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114.9\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"143.4\" y=\"128.4\" font-size=\"12\" text-anchor=\"start\">3 cm</text><text x=\"93.5\" y=\"78\" font-size=\"12\" text-anchor=\"end\">12 cm</text><text x=\"90.5\" y=\"25.8\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"136.3\" y=\"40.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"148.5\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"105.7\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"90.5\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"134.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"149.5\" y=\"120.6\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"100.7\" y=\"119.6\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "explain": "AG は、直角三角形 AEG の斜辺です。まず底面の対角線 EG を、直角三角形 EFG で求めます。EG² = 4² + 3² = 25。AE は底面に垂直なので ∠AEG = 90°で、AG² = AE² + EG² = 144 + 25 = 169、AG = 13 cm。たて a、横 b、高さ c の直方体の対角線は √(a² + b² + c²) です。また、相似な立体では、相似比が m:n のとき、表面積の比は m²:n²、体積の比は m³:n³ になります（G-020 の面積の比を立体に広げたもの。わけは 4 日目）。"
+      },
+      {
+       "part": "思い出す",
+       "text": "たて 6 cm、横 8 cm の長方形の対角線の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50.7,18 50.7,122 189.3,122 189.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"50.7\" y1=\"122\" x2=\"189.3\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"50.7,114 58.7,114 58.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"41.9\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"41.9\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.1\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"198.1\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"44.7\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 10,
+       "check": "[d for d in range(1, 50) if d * d == 6 * 6 + 8 * 8][0]",
+       "hints": [
+        "対角線は、直角三角形の斜辺です。",
+        "対角線² = 6² + 8² です。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "36 + 64 = 100",
+         "対角線 = 10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 3 cm、高さが 10 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 21.8 L89.9 122.2 A30.1 9.6 0 0 0 150.1 122.2 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"21.8\" x2=\"89.9\" y2=\"122.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"21.8\" x2=\"150.1\" y2=\"122.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.9 122.2 A30.1 9.6 0 0 0 150.1 122.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.9 122.2 A30.1 9.6 0 0 1 150.1 122.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"122.2\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"21.8\" x2=\"120\" y2=\"122.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,115.2 127,115.2 127,122.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"122.2\" x2=\"150.1\" y2=\"122.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.1\" y=\"136.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"115\" y=\"82.2\" font-size=\"12\" text-anchor=\"end\">10 cm</text></svg>",
+       "answer": 30,
+       "check": "Fraction(3 * 3 * 10, 3)",
+       "hints": [
+        "円錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "底面積は 9π cm² です。",
+        "9 × 10 × 1/3 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "9π × 10 × 1/3 = 30π",
+         30
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 4 cm の立方体の対角線 AG の長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.9\" y1=\"44.9\" x2=\"141.1\" y2=\"44.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.1\" y1=\"44.9\" x2=\"174.1\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.1\" y1=\"20\" x2=\"98.9\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.9\" y1=\"20\" x2=\"65.9\" y2=\"44.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.9\" y1=\"120\" x2=\"141.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.1\" y1=\"120\" x2=\"174.1\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.1\" y1=\"95.1\" x2=\"98.9\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"98.9\" y1=\"95.1\" x2=\"65.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"65.9\" y1=\"44.9\" x2=\"65.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.1\" y1=\"44.9\" x2=\"141.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.1\" y1=\"20\" x2=\"174.1\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.9\" y1=\"20\" x2=\"98.9\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"65.9\" y1=\"44.9\" x2=\"174.1\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"65.9\" y1=\"120\" x2=\"174.1\" y2=\"95.1\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"103.5\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"56.9\" y=\"43.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"147.1\" y=\"58.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"182.1\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"94.9\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"56.9\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"145.1\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"183.1\" y=\"103.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"89.9\" y=\"102.3\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "choices": [
+        "4√2",
+        12,
+        "4√3"
+       ],
+       "answer": "4√3",
+       "check": "[c for c, v in {'4√2': 4 * math.sqrt(2), '12': 12, '4√3': 4 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(4 * 4 + 4 * 4 + 4 * 4))][0]",
+       "hints": [
+        "まず底面の対角線 EG を求めましょう。",
+        "△AEG は ∠AEG = 90°の直角三角形です。",
+        "AG² = AE² + EG² です。"
+       ],
+       "paths": [
+        [
+         "EG² = 16 + 16 = 32",
+         "AG² = 16 + 32 = 48",
+         "AG = √48 = 4√3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "母線の長さが 10 cm、底面の半径が 6 cm の円錐の高さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"28.7\" x2=\"55\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"28.7\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 0 185 115.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 115.3 A65 20.8 0 0 1 185 115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"115.3\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"28.7\" x2=\"120\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,108.3 127,108.3 127,115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"115.3\" x2=\"185\" y2=\"115.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.5\" y=\"134.9\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"160.5\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">10 cm</text></svg>",
+       "answer": 8,
+       "check": "[h for h in range(1, 20) if h * h + 6 * 6 == 10 * 10][0]",
+       "hints": [
+        "頂点、底面の中心、底面の円周上の点を結ぶと、直角三角形ができます。",
+        "その直角三角形の斜辺は母線です。",
+        "高さ² = 10² − 6² です。"
+       ],
+       "paths": [
+        [
+         "高さ² = 100 − 36 = 64",
+         "高さ = 8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐 O-ABCD の底面は 1 辺 8 cm の正方形で、OA = OB = OC = OD = 9 cm です。M を底面の対角線の交点とするとき、高さ OM は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,15.1 44,124.9 149.6,124.9\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,15.1 149.6,124.9 196,90\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"44\" y1=\"124.9\" x2=\"149.6\" y2=\"124.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.6\" y1=\"124.9\" x2=\"196\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"15.1\" x2=\"44\" y2=\"124.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"15.1\" x2=\"149.6\" y2=\"124.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"15.1\" x2=\"196\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"196\" y1=\"90\" x2=\"90.4\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90.4\" y1=\"90\" x2=\"44\" y2=\"124.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"15.1\" x2=\"90.4\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"15.1\" x2=\"120\" y2=\"107.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"107.5\" r=\"2.2\" fill=\"currentColor\"/><text x=\"96.8\" y=\"142.1\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"142.8\" y=\"74.2\" font-size=\"12\" text-anchor=\"start\">9 cm</text><text x=\"120\" y=\"10.3\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"36\" y=\"137.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"157.6\" y=\"137.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"205\" y=\"92.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"81.4\" y=\"92.2\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 7,
+       "check": "[h for h in range(1, 20) if h * h + (8 * 8 + 8 * 8) // 4 == 9 * 9][0]",
+       "hints": [
+        "M は底面の正方形の中心で、AM は対角線 AC の半分です。",
+        "AC と AM の長さを求めましょう。√ のままでかまいません。",
+        "△OAM は ∠OMA = 90°の直角三角形です。"
+       ],
+       "paths": [
+        [
+         "AC = 8√2 で AM = 4√2",
+         "AM² = 32",
+         "OM² = 81 − 32 = 49",
+         "OM = 7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の直方体で EF = 5 cm、FG = 3 cm、AE = 6 cm です。頂点 A から辺 BF を通って頂点 G まで、糸をいちばん短くなるようにかけます。糸の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"74.8\" y1=\"34.2\" x2=\"146.3\" y2=\"34.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.3\" y1=\"34.2\" x2=\"165.2\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.2\" y1=\"20\" x2=\"93.7\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.7\" y1=\"20\" x2=\"74.8\" y2=\"34.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.8\" y1=\"120\" x2=\"146.3\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.3\" y1=\"120\" x2=\"165.2\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.2\" y1=\"105.8\" x2=\"93.7\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"93.7\" y1=\"105.8\" x2=\"74.8\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"74.8\" y1=\"34.2\" x2=\"74.8\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.3\" y1=\"34.2\" x2=\"146.3\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.2\" y1=\"20\" x2=\"165.2\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.7\" y1=\"20\" x2=\"93.7\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"110.6\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"163.8\" y=\"125.1\" font-size=\"12\" text-anchor=\"start\">3 cm</text><text x=\"68.8\" y=\"81.3\" font-size=\"12\" text-anchor=\"end\">6 cm</text><polyline points=\"74.8,34.2 146.3,87.8 165.2,105.8\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"65.8\" y=\"32.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"152.3\" y=\"47.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"173.2\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"89.7\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"65.8\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"150.3\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"174.2\" y=\"114\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"84.7\" y=\"113\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 10,
+       "check": "[d for d in range(1, 30) if d * d == (5 + 3) * (5 + 3) + 6 * 6][0]",
+       "hints": [
+        "糸が通る 2 つの面 ABFE と BFGC を、展開図で 1 つの平面に広げましょう。",
+        "広げた図で、A と G を結ぶ線分が糸の長さです。",
+        "その線分は、横が何 cm、たてが何 cm の直角三角形の斜辺でしょう。"
+       ],
+       "paths": [
+        [
+         "面 ABFE と面 BFGC を広げる",
+         "横 5 + 3 = 8 cm、たて 6 cm",
+         "8² + 6² = 100",
+         "10 cm"
+        ]
+       ],
+       "note": "立体の中を通る対角線 AG（√70 cm）と取りちがえやすい。糸は面の上を通るので、展開図で考える。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "母線の長さが 17 cm、底面の半径が 8 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 25 L69.9 119 A50.1 16 0 0 0 170.1 119 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"25\" x2=\"69.9\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"25\" x2=\"170.1\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M69.9 119 A50.1 16 0 0 0 170.1 119\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M69.9 119 A50.1 16 0 0 1 170.1 119\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"119\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"25\" x2=\"120\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,112 127,112 127,119\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"119\" x2=\"170.1\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.1\" y=\"136.2\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"153.1\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">17 cm</text></svg>",
+       "answer": 320,
+       "check": "Fraction(8 * 8 * [h for h in range(1, 30) if h * h + 8 * 8 == 17 * 17][0], 3)",
+       "hints": [
+        "まず高さを、三平方の定理で求めましょう。",
+        "高さ² = 17² − 8² です。",
+        "体積 = 底面積 × 高さ × 1/3 です。"
+       ],
+       "paths": [
+        [
+         "高さ² = 289 − 64 = 225 で高さ 15 cm",
+         "64π × 15 × 1/3 = 320π",
+         320
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの円柱があり、相似比は 2:3 です。小さいほうの体積が 16π cm³ のとき、大きいほうの体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "answer": 54,
+       "check": "16 * Fraction(3 ** 3, 2 ** 3)",
+       "hints": [
+        "相似な立体では、半径も高さも同じ倍になります。",
+        "体積の比は、相似比の数をそれぞれ 3 乗した比です。",
+        "2³:3³ は何:何でしょう。"
+       ],
+       "paths": [
+        [
+         "体積の比 2³:3³ = 8:27",
+         "16 × 27/8 = 54",
+         54
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "EF = 3 cm、FG = 2 cm、AE = 6 cm の直方体の対角線 AG は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"90.9\" y1=\"29.9\" x2=\"135.9\" y2=\"29.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.9\" y1=\"29.9\" x2=\"149.1\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.1\" y1=\"20\" x2=\"104.1\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104.1\" y1=\"20\" x2=\"90.9\" y2=\"29.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.9\" y1=\"120\" x2=\"135.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.9\" y1=\"120\" x2=\"149.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.1\" y1=\"110.1\" x2=\"104.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104.1\" y1=\"110.1\" x2=\"90.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90.9\" y1=\"29.9\" x2=\"90.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135.9\" y1=\"29.9\" x2=\"135.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.1\" y1=\"20\" x2=\"149.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104.1\" y1=\"20\" x2=\"104.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"90.9\" y1=\"29.9\" x2=\"149.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"90.9\" y1=\"120\" x2=\"149.1\" y2=\"110.1\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"113.4\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"150.5\" y=\"127.2\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"84.9\" y=\"79.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text><text x=\"81.9\" y=\"28.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"141.9\" y=\"43.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"157.1\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"100.1\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"81.9\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"139.9\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"158.1\" y=\"118.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"95.1\" y=\"117.3\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 7,
+       "check": "[d for d in range(1, 20) if d * d == 3 * 3 + 2 * 2 + 6 * 6][0]",
+       "hints": [
+        "対角線は √(たて² + 横² + 高さ²) です。",
+        "3² + 2² + 6² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "9 + 4 + 36 = 49",
+         "AG = 7 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "直方体 ABCD-EFGH で EF = a、FG = b、AE = c とします。対角線 AG の長さが √(a² + b² + c²) になることを証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"56.7\" y1=\"39.9\" x2=\"156.9\" y2=\"39.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.9\" y1=\"39.9\" x2=\"183.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"183.3\" y1=\"20\" x2=\"83.1\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"83.1\" y1=\"20\" x2=\"56.7\" y2=\"39.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"56.7\" y1=\"120\" x2=\"156.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.9\" y1=\"120\" x2=\"183.3\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"183.3\" y1=\"100.1\" x2=\"83.1\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"83.1\" y1=\"100.1\" x2=\"56.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"56.7\" y1=\"39.9\" x2=\"56.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"156.9\" y1=\"39.9\" x2=\"156.9\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"183.3\" y1=\"20\" x2=\"183.3\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"83.1\" y1=\"20\" x2=\"83.1\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"56.7\" y1=\"39.9\" x2=\"183.3\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"56.7\" y1=\"120\" x2=\"183.3\" y2=\"100.1\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"106.8\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">a</text><text x=\"178.1\" y=\"122.3\" font-size=\"12\" text-anchor=\"start\">b</text><text x=\"50.7\" y=\"84.1\" font-size=\"12\" text-anchor=\"end\">c</text><text x=\"47.7\" y=\"38.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"162.9\" y=\"53.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"191.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"79.1\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"47.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"160.9\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"192.3\" y=\"108.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"74.1\" y=\"107.3\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "explain": "例：「EF = a、FG = b、AE = c とする。底面 EFGH で、△EFG は ∠EFG = 90°の直角三角形なので、三平方の定理より EG² = a² + b² …①。AE は底面 EFGH に垂直なので、AE は底面の上の直線 EG とも垂直で、△AEG は ∠AEG = 90°の直角三角形。三平方の定理より AG² = AE² + EG² = c² + a² + b²（①を使った）。AG は正の数なので AG = √(a² + b² + c²)。」と書ければよい。① 辺を文字で決めている、② 三平方の定理を 2 回、どの直角三角形で使うかを書いている（AE ⊥ EG の根拠は「直線が平面に垂直なら、平面の上の交わる直線とも垂直」）、③ 正の数なので √ をとる、と結んでいる、の 3 点を見る。3 cm、4 cm、12 cm のような例で確かめただけなら、例ではすべての場合を示せないことを話す。",
+       "hints": [
+        "まず底面の対角線 EG の長さを、a と b で表しましょう。",
+        "△AEG で、どの角が直角かを、根拠をつけて書きましょう。",
+        "AG² を a、b、c で表し、√ をとりましょう。"
+       ],
+       "paths": [
+        [
+         "EF = a、FG = b、AE = c とする",
+         "△EFG で EG² = a² + b²",
+         "AE ⊥ 底面なので ∠AEG = 90°",
+         "AG² = c² + a² + b²",
+         "AG = √(a² + b² + c²)"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "底面の半径が r、母線の長さが ℓ の円錐の展開図で、側面のおうぎ形の中心角が 360° × r/ℓ になることを証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 8 L63 8 A57 57 0 0 0 177 8 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"93.5\" r=\"28.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"8\" r=\"2.5\" fill=\"currentColor\"/><text x=\"83.5\" y=\"12.2\" font-size=\"12\" text-anchor=\"end\">ℓ</text><line x1=\"120\" y1=\"93.5\" x2=\"148.5\" y2=\"93.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.5\" y=\"97.7\" font-size=\"12\" text-anchor=\"start\">r</text></svg>",
+       "explain": "例：「おうぎ形の弧は、組み立てると底面の円周にぴったり重なるので、弧の長さは 2πr。おうぎ形の半径は母線の長さ ℓ なので、同じ半径の円の円周は 2πℓ。おうぎ形の弧の長さは中心角に比例する（中心角が 360° の何分の 1 なら、弧も円周の同じ分。G-010）ので、中心角 = 360° × 2πr/(2πℓ) = 360° × r/ℓ。」と書ければよい。① 弧の長さと底面の円周が等しいことを、組み立てたときの重なりで説明している、② おうぎ形の半径が母線であることを使っている、③ 弧と中心角の比例で結んでいる、の 3 点を見る。半径 3 cm、母線 6 cm の例で 180° と出して終わったら、例ではすべての場合を示せないことを話す。",
+       "hints": [
+        "展開図を組み立てると、おうぎ形の弧はどこに重なるでしょう。",
+        "おうぎ形の半径は、円錐のどの長さでしょう。",
+        "弧の長さが円周の何分の 1 かと、中心角が 360° の何分の 1 かは同じです。"
+       ],
+       "paths": [
+        [
+         "弧の長さ = 底面の円周 2πr",
+         "半径 ℓ の円周は 2πℓ",
+         "中心角 = 360° × 2πr/(2πℓ)",
+         "= 360° × r/ℓ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "円錐 P の底面の半径を r、高さを h とします。P と相似で、相似比が 1:k の円錐 Q の体積が、P の体積の k³ 倍になることを証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M62 62 L42 110 A20 6.4 0 0 0 82 110 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"62\" y1=\"62\" x2=\"42\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62\" y1=\"62\" x2=\"82\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M42 110 A20 6.4 0 0 0 82 110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M42 110 A20 6.4 0 0 1 82 110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"62\" y1=\"62\" x2=\"62\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"62\" y1=\"110\" x2=\"82\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"72\" y=\"127.6\" font-size=\"12\" text-anchor=\"middle\">r</text><text x=\"58\" y=\"90.2\" font-size=\"12\" text-anchor=\"end\">h</text><text x=\"62\" y=\"57.2\" font-size=\"12\" text-anchor=\"middle\">P</text><path d=\"M165 33.2 L133 110 A32 10.2 0 0 0 197 110 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"165\" y1=\"33.2\" x2=\"133\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165\" y1=\"33.2\" x2=\"197\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M133 110 A32 10.2 0 0 0 197 110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M133 110 A32 10.2 0 0 1 197 110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"165\" y1=\"33.2\" x2=\"165\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"165\" y1=\"110\" x2=\"197\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"181\" y=\"131.4\" font-size=\"12\" text-anchor=\"middle\">kr</text><text x=\"161\" y=\"75.8\" font-size=\"12\" text-anchor=\"end\">kh</text><text x=\"165\" y=\"28.4\" font-size=\"12\" text-anchor=\"middle\">Q</text></svg>",
+       "explain": "例：「相似な立体では、対応する長さはすべて k 倍になるので、Q の底面の半径は kr、高さは kh。P の体積は 1/3 × π × r² × h。Q の体積は 1/3 × π × (kr)² × kh = 1/3 × π × k²r² × kh = k³ × (1/3 × π × r² × h)。よって Q の体積は P の体積の k³ 倍。」と書ければよい。① 相似比から、半径と高さをどちらも k 倍と文字で表している、② 体積の式に入れて、指数法則（A-009）で k³ をまとめている、③ P の体積の式と見くらべて結んでいる、の 3 点を見る。k = 2 のような例だけで 8 倍と出したら、例ではすべての k について示せないことを話す。表面積が k² 倍になることも、同じように示せる。",
+       "hints": [
+        "相似比が 1:k のとき、Q の半径と高さは P の何倍でしょう。",
+        "Q の体積を、文字 r、h、k を使って式に書きましょう。",
+        "式を、k³ × （P の体積）の形に変形しましょう。"
+       ],
+       "paths": [
+        [
+         "Q の半径 kr、高さ kh",
+         "Q の体積 = 1/3 × π × (kr)² × kh",
+         "= k³ × 1/3 × π × r² × h",
+         "P の体積の k³ 倍"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "EF = 4 cm、FG = 4 cm、AE = 7 cm の直方体の対角線 AG は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"85.4\" y1=\"35.9\" x2=\"133.5\" y2=\"35.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"133.5\" y1=\"35.9\" x2=\"154.6\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.6\" y1=\"20\" x2=\"106.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.5\" y1=\"20\" x2=\"85.4\" y2=\"35.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.4\" y1=\"120\" x2=\"133.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"133.5\" y1=\"120\" x2=\"154.6\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.6\" y1=\"104.1\" x2=\"106.5\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"106.5\" y1=\"104.1\" x2=\"85.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85.4\" y1=\"35.9\" x2=\"85.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"133.5\" y1=\"35.9\" x2=\"133.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.6\" y1=\"20\" x2=\"154.6\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.5\" y1=\"20\" x2=\"106.5\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85.4\" y1=\"35.9\" x2=\"154.6\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"85.4\" y1=\"120\" x2=\"154.6\" y2=\"104.1\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"109.4\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"152\" y=\"124.2\" font-size=\"12\" text-anchor=\"start\">4 cm</text><text x=\"79.4\" y=\"82.2\" font-size=\"12\" text-anchor=\"end\">7 cm</text><text x=\"76.4\" y=\"34.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"139.5\" y=\"49.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"162.6\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"102.5\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"76.4\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"137.5\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"163.6\" y=\"112.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"97.5\" y=\"111.3\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 9,
+       "check": "[d for d in range(1, 20) if d * d == 4 * 4 + 4 * 4 + 7 * 7][0]",
+       "hints": [
+        "対角線は √(たて² + 横² + 高さ²) です。",
+        "4² + 4² + 7² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "16 + 16 + 49 = 81",
+         "AG = 9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 4 cm、母線の長さが 10 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 8 L54.5 29.3 A68.9 68.9 0 0 0 185.5 29.3 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"104.4\" r=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"8\" r=\"2.5\" fill=\"currentColor\"/><text x=\"79.2\" y=\"22.8\" font-size=\"12\" text-anchor=\"end\">10 cm</text><line x1=\"120\" y1=\"104.4\" x2=\"147.6\" y2=\"104.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"151.6\" y=\"108.6\" font-size=\"12\" text-anchor=\"start\">4 cm</text></svg>",
+       "answer": 144,
+       "check": "Fraction(360 * 4, 10)",
+       "hints": [
+        "中心角 = 360° × 半径/母線 です。",
+        "4/10 を約分しましょう。",
+        "360 にその分数をかけましょう。"
+       ],
+       "paths": [
+        [
+         "360° × 4/10",
+         "360° × 2/5",
+         "144°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "立方体の対角線の長さが 6√3 cm です。この立方体の 1 辺は何 cm ですか。",
+       "answer": 6,
+       "check": "[a for a in range(1, 20) if 3 * a * a == 6 * 6 * 3][0]",
+       "hints": [
+        "1 辺を a cm とすると、対角線は √(a² + a² + a²) です。",
+        "√(3a²) = a√3 です。",
+        "1 辺を a とした対角線の式と、6√3 cm を見くらべましょう。"
+       ],
+       "paths": [
+        [
+         "対角線 = √(3a²) = a√3",
+         "a√3 = 6√3",
+         "a = 6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの円錐があり、相似比は 1:2 です。小さいほうの体積が 5π cm³ のとき、大きいほうの体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "answer": 40,
+       "check": "5 * 2 ** 3",
+       "hints": [
+        "体積の比は、相似比の数をそれぞれ 3 乗した比です。",
+        "1³:2³ は何:何でしょう。",
+        "大きいほうは小さいほうの何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "体積の比 1:8",
+         "5 × 8 = 40",
+         40
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円錐の展開図で、側面のおうぎ形の中心角が 90°、母線の長さが 8 cm です。底面の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 8 L66.3 61.7 A76 76 0 0 0 173.7 61.7 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"103\" r=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"8\" r=\"2.5\" fill=\"currentColor\"/><text x=\"85.1\" y=\"39.1\" font-size=\"12\" text-anchor=\"end\">8 cm</text></svg>",
+       "answer": 2,
+       "check": "Fraction(8 * 90, 360)",
+       "hints": [
+        "中心角 = 360° × 半径/母線 です。",
+        "90° は 360° の何分の 1 でしょう。",
+        "半径は母線の同じ分です。"
+       ],
+       "paths": [
+        [
+         "90/360 = 1/4",
+         "半径 = 8 × 1/4 = 2 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "図の立方体を、3 つの頂点 A、C、G を通る平面で切りました。切り口の形はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"61.6\" y1=\"42.9\" x2=\"142.8\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"97.2\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.6\" y1=\"124\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"124\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"97.1\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"97.2\" y1=\"97.1\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"52.6\" y=\"41.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"148.8\" y=\"56.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"186.4\" y=\"14.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"93.2\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"52.6\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"146.8\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"187.4\" y=\"105.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"88.2\" y=\"104.3\" font-size=\"12\" text-anchor=\"middle\">H</text><circle cx=\"61.6\" cy=\"42.9\" r=\"2.8\" fill=\"currentColor\"/><text x=\"61.6\" y=\"47.1\" font-size=\"12\" text-anchor=\"middle\"></text><circle cx=\"178.4\" cy=\"16\" r=\"2.8\" fill=\"currentColor\"/><text x=\"178.4\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\"></text><circle cx=\"178.4\" cy=\"97.1\" r=\"2.8\" fill=\"currentColor\"/><text x=\"178.4\" y=\"101.3\" font-size=\"12\" text-anchor=\"middle\"></text></svg>",
+       "choices": [
+        "正方形",
+        "長方形",
+        "ひし形"
+       ],
+       "answer": "長方形",
+       "check": "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 4, 0)))",
+       "hints": [
+        "同じ面の上にある 2 つの点は、まっすぐ結びます。",
+        "向かい合う平行な面にできる切り口の線は、平行になります。",
+        "切り口の 4 つの辺の長さをくらべましょう。"
+       ],
+       "paths": [
+        [
+         "切り口は A、C、G、E を通る",
+         "AC と EG は面の対角線、AE と CG は辺",
+         "角はどれも直角で、となりの辺の長さはちがう",
+         "長方形"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 2 cm、高さが 5 cm の円柱の表面積は □π cm² です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M89.4 32.7 L89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1 L150.6 32.7 A30.6 9.8 0 0 1 89.4 32.7 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><ellipse cx=\"120\" cy=\"32.7\" rx=\"30.6\" ry=\"9.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"89.4\" y1=\"32.7\" x2=\"89.4\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.6\" y1=\"32.7\" x2=\"150.6\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.4 109.1 A30.6 9.8 0 0 1 150.6 109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"32.7\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"32.7\" x2=\"150.6\" y2=\"32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.6\" y=\"21.1\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"156.6\" y=\"75.1\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 28,
+       "check": "2 * 2 * 2 + 2 * 2 * 5",
+       "hints": [
+        "表面積 = 底面積 × 2 + 側面積 です。",
+        "側面は、たてが高さ、横が底面の円周の長方形です。",
+        "底面の円周は 4π cm です。"
+       ],
+       "paths": [
+        [
+         "底面 4π × 2 = 8π",
+         "側面 5 × 4π = 20π",
+         "8π + 20π = 28π",
+         28
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 6 cm の立方体を、3 つの頂点 A、C、F を通る平面で切りました。切り口の正三角形の 1 辺はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"142.8,124 61.6,42.9 178.4,16\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"142.8\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"97.2\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.6\" y1=\"124\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"124\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"97.1\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"97.2\" y1=\"97.1\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"142.8\" y1=\"124\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"52.6\" y=\"41.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"148.8\" y=\"56.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"186.4\" y=\"14.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"93.2\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"52.6\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"146.8\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"187.4\" y=\"105.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"88.2\" y=\"104.3\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"102.2\" y=\"139.8\" font-size=\"11\" text-anchor=\"middle\">6 cm</text></svg>",
+       "choices": [
+        6,
+        "6√3",
+        "6√2"
+       ],
+       "answer": "6√2",
+       "check": "[c for c, v in {'6': 6, '6√3': 6 * math.sqrt(3), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(6 * 6 + 6 * 6))][0]",
+       "hints": [
+        "切り口の辺 AC は、どの面の対角線でしょう。",
+        "正方形の対角線は、直角二等辺三角形の斜辺です。",
+        "AC² = 6² + 6² です。"
+       ],
+       "paths": [
+        [
+         "AC は面 ABCD の対角線",
+         "AC² = 72",
+         "AC = 6√2 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の直角三角形を、直線 ℓ を軸として 1 回転させてできる立体の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"95.8,118.3 144.2,118.3 95.8,21.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"95.8\" y1=\"128\" x2=\"95.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"8 3 2 3\"/><text x=\"103.8\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">ℓ</text><text x=\"120\" y=\"134.5\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"87.8\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 18,
+       "check": "Fraction(3 * 3 * 6, 3)",
+       "hints": [
+        "回転させると、どんな立体ができるでしょう。",
+        "底面の半径と高さは何 cm でしょう。",
+        "円錐の体積 = 底面積 × 高さ × 1/3 です。"
+       ],
+       "paths": [
+        [
+         "半径 3 cm、高さ 6 cm の円錐",
+         "9π × 6 × 1/3 = 18π",
+         18
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正十二面体は、合同な正五角形の面が 12 あり、どの頂点にも 3 つの面が集まっています。頂点は全部でいくつありますか。",
+       "answer": 20,
+       "check": "Fraction(12 * 5, 3)",
+       "hints": [
+        "面をばらばらにすると、正五角形の頂点は全部でいくつあるでしょう。",
+        "組み立てると、1 つの頂点にいくつの面の頂点が集まるでしょう。",
+        "全部の数を、集まる数でわりましょう。"
+       ],
+       "paths": [
+        [
+         "12 × 5 = 60",
+         "1 つの頂点に 3 つ集まる",
+         "60 ÷ 3 = 20"
+        ],
+        [
+         "辺は 12 × 5 ÷ 2 = 30",
+         "頂点 − 辺 + 面 = 2（オイラーの多面体定理）",
+         "頂点 = 2 + 30 − 12 = 20"
+        ]
+       ],
+       "note": "頂点 − 辺 + 面 = 2（オイラーの多面体定理）は、へこみのない多面体ならいつもなりたつ。位相幾何学の入口になる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "球が円柱にぴったり入っています（球の直径、円柱の高さ、円柱の底面の直径が等しい）。球の体積は、円柱の体積の何倍ですか。分数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"46\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M74 70 A46 13.8 0 0 0 166 70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M74 70 A46 13.8 0 0 1 166 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><ellipse cx=\"120\" cy=\"24\" rx=\"46\" ry=\"13.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74\" y1=\"24\" x2=\"74\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"166\" y1=\"24\" x2=\"166\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M74 116 A46 13.8 0 0 0 166 116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M74 116 A46 13.8 0 0 1 166 116\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": "2/3",
+       "check": "Fraction(4, 3) / (1 * 1 * 2)",
+       "hints": [
+        "球の半径を r として、円柱の底面の半径と高さを r で表しましょう。",
+        "球の体積と円柱の体積を、r と π を使って書きましょう。",
+        "球の体積 ÷ 円柱の体積 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "円柱は半径 r、高さ 2r",
+         "円柱 = 2πr³、球 = 4/3 × πr³",
+         "4/3 ÷ 2 = 2/3 倍"
+        ]
+       ],
+       "note": "アルキメデスが墓にきざませたといわれる関係。球の表面積 4πr² も、円柱の側面積 2πr × 2r と等しい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 辺 4 cm の立方体を、4 つの頂点 A、C、G、E を通る平面で切りました。切り口の長方形 AEGC の面積はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"61.6,124 61.6,42.9 178.4,16 178.4,97.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"142.8\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"97.2\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.6\" y1=\"124\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"124\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"97.1\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"97.2\" y1=\"97.1\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"42.9\" x2=\"142.8\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"16\" x2=\"97.2\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"124\" x2=\"61.6\" y2=\"42.9\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"61.6\" y1=\"42.9\" x2=\"178.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"178.4\" y1=\"16\" x2=\"178.4\" y2=\"97.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"178.4\" y1=\"97.1\" x2=\"61.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"52.6\" y=\"41.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"148.8\" y=\"56.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"186.4\" y=\"14.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"93.2\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"52.6\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"146.8\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"187.4\" y=\"105.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"88.2\" y=\"104.3\" font-size=\"12\" text-anchor=\"middle\">H</text><text x=\"102.2\" y=\"139.8\" font-size=\"11\" text-anchor=\"middle\">4 cm</text></svg>",
+       "choices": [
+        16,
+        "16√2",
+        32
+       ],
+       "answer": "16√2",
+       "check": "[c for c, v in {'16': 16, '16√2': 16 * math.sqrt(2), '32': 32}.items() if math.isclose(v, 4 * math.sqrt(4 * 4 + 4 * 4))][0]",
+       "hints": [
+        "長方形 AEGC のたては AE、横は AC です。",
+        "AC は正方形の対角線です。",
+        "面積 = AE × AC です。"
+       ],
+       "paths": [
+        [
+         "AC = 4√2 cm",
+         "4 × 4√2 = 16√2 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の長方形を、直線 ℓ を軸として 1 回転させてできる立体の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,90 170,90 170,50 70,50\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"70\" y1=\"102\" x2=\"70\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"8 3 2 3\"/><text x=\"78\" y=\"46.2\" font-size=\"12\" text-anchor=\"middle\">ℓ</text><text x=\"120\" y=\"106.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"62\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">2 cm</text></svg>",
+       "answer": 50,
+       "check": "5 * 5 * 2",
+       "hints": [
+        "回転させると、どんな立体ができるでしょう。",
+        "底面の半径と高さは何 cm でしょう。軸からいちばん遠い辺が半径になります。",
+        "円柱の体積 = 底面積 × 高さ です。"
+       ],
+       "paths": [
+        [
+         "半径 5 cm、高さ 2 cm の円柱",
+         "25π × 2 = 50π",
+         50
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正八面体は、合同な正三角形の面が 8 あり、どの頂点にも 4 つの面が集まっています。頂点はいくつありますか。",
+       "answer": 6,
+       "check": "Fraction(8 * 3, 4)",
+       "hints": [
+        "面をばらばらにすると、正三角形の頂点は全部でいくつあるでしょう。",
+        "1 つの頂点に、いくつの面の頂点が集まるでしょう。",
+        "全部の数を、集まる数でわりましょう。"
+       ],
+       "paths": [
+        [
+         "8 × 3 = 24",
+         "1 つの頂点に 4 つ集まる",
+         "24 ÷ 4 = 6"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "図の直方体で、辺 AD とねじれの位置にある辺は何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"49.7\" y1=\"42.1\" x2=\"161\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"190.3\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"49.7\" y2=\"42.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.7\" y1=\"120\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"120\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"97.9\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"79\" y1=\"97.9\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"49.7\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161\" y1=\"42.1\" x2=\"161\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.3\" y1=\"20\" x2=\"190.3\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"79\" y1=\"20\" x2=\"79\" y2=\"97.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"49.7\" y1=\"42.1\" x2=\"79\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"40.7\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"198.3\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"75\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"40.7\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"165\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"199.3\" y=\"106.1\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"70\" y=\"105.1\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 4,
+       "check": "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, ['AB', 'BC', 'CD', 'DA', 'EF', 'FG', 'GH', 'HE', 'AE', 'BF', 'CG', 'DH'], 'A', 'D')",
+       "hints": [
+        "AD と平行な辺と、AD と交わる辺を、先に除きましょう。",
+        "AD と交わる辺は、点 A か点 D を通ります。",
+        "残った辺が、ねじれの位置にある辺です。"
+       ],
+       "paths": [
+        [
+         "平行な辺 BC、FG、EH",
+         "交わる辺 AB、AE、DC、DH",
+         "残りの BF、CG、EF、HG の 4 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 4 cm、高さが 9 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 23.8 L77.2 120.2 A42.8 13.7 0 0 0 162.8 120.2 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"23.8\" x2=\"77.2\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"23.8\" x2=\"162.8\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M77.2 120.2 A42.8 13.7 0 0 0 162.8 120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M77.2 120.2 A42.8 13.7 0 0 1 162.8 120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"120.2\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"23.8\" x2=\"120\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,113.2 127,113.2 127,120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"120.2\" x2=\"162.8\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.4\" y=\"136.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"115\" y=\"82.2\" font-size=\"12\" text-anchor=\"end\">9 cm</text></svg>",
+       "answer": 48,
+       "check": "Fraction(4 * 4 * 9, 3)",
+       "hints": [
+        "円錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "底面積は 16π cm² です。",
+        "16 × 9 × 1/3 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "16π × 9 × 1/3 = 48π",
+         48
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm の球の表面積は □π cm² です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M62 70 A58 17.4 0 0 0 178 70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M62 70 A58 17.4 0 0 1 178 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149\" y=\"66.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 144,
+       "check": "4 * 6 * 6",
+       "hints": [
+        "球の表面積 = 4 × π × 半径² です。",
+        "6² を先に計算しましょう。",
+        "4 をかけましょう。"
+       ],
+       "paths": [
+        [
+         "6² = 36",
+         "4 × 36 = 144",
+         "144π",
+         144
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "EF = 6 cm、FG = 2 cm、AE = 9 cm の直方体の対角線 AG は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"84.4\" y1=\"26.9\" x2=\"146.5\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.5\" y1=\"26.9\" x2=\"155.6\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.6\" y1=\"20\" x2=\"93.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.5\" y1=\"20\" x2=\"84.4\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.4\" y1=\"120\" x2=\"146.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.5\" y1=\"120\" x2=\"155.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.6\" y1=\"113.1\" x2=\"93.5\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"93.5\" y1=\"113.1\" x2=\"84.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"84.4\" y1=\"26.9\" x2=\"84.4\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.5\" y1=\"26.9\" x2=\"146.5\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.6\" y1=\"20\" x2=\"155.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.5\" y1=\"20\" x2=\"93.5\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"84.4\" y1=\"26.9\" x2=\"155.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"84.4\" y1=\"120\" x2=\"155.6\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"115.5\" y=\"137.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"159\" y=\"128.8\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"78.4\" y=\"77.6\" font-size=\"12\" text-anchor=\"end\">9 cm</text><text x=\"75.4\" y=\"25.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"152.5\" y=\"40.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"163.6\" y=\"18.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"89.5\" y=\"15.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"75.4\" y=\"130.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"150.5\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"164.6\" y=\"121.3\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"84.5\" y=\"120.3\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "answer": 11,
+       "check": "[d for d in range(1, 30) if d * d == 6 * 6 + 2 * 2 + 9 * 9][0]",
+       "hints": [
+        "対角線は √(たて² + 横² + 高さ²) です。",
+        "6² + 2² + 9² を計算しましょう。",
+        "2 乗してその数になる正の数を求めましょう。"
+       ],
+       "paths": [
+        [
+         "36 + 4 + 81 = 121",
+         "AG = 11 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐 O-ABCD の底面は 1 辺 4 cm の正方形で、OA = OB = OC = OD = 6 cm です。M を底面の対角線の交点とするとき、高さ OM はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,14 65.9,126 141.1,126\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,14 141.1,126 174.1,101.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"65.9\" y1=\"126\" x2=\"141.1\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.1\" y1=\"126\" x2=\"174.1\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"14\" x2=\"65.9\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"14\" x2=\"141.1\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"14\" x2=\"174.1\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.1\" y1=\"101.1\" x2=\"98.9\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"98.9\" y1=\"101.1\" x2=\"65.9\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"14\" x2=\"98.9\" y2=\"101.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"14\" x2=\"120\" y2=\"113.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"113.6\" r=\"2.2\" fill=\"currentColor\"/><text x=\"103.5\" y=\"143.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"138.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"start\">6 cm</text><text x=\"120\" y=\"9.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"57.9\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"149.1\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"183.1\" y=\"103.3\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"89.9\" y=\"103.3\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "choices": [
+        "2√5",
+        "4√2",
+        "2√7"
+       ],
+       "answer": "2√7",
+       "check": "[c for c, v in {'2√5': 2 * math.sqrt(5), '4√2': 4 * math.sqrt(2), '2√7': 2 * math.sqrt(7)}.items() if math.isclose(v, math.sqrt(6 * 6 - (4 * 4 + 4 * 4) / 4))][0]",
+       "hints": [
+        "AM は対角線 AC の半分です。",
+        "AM² は何 cm² でしょう。",
+        "OM² = OA² − AM² です。"
+       ],
+       "paths": [
+        [
+         "AC = 4√2 で AM = 2√2",
+         "AM² = 8",
+         "OM² = 36 − 8 = 28",
+         "OM = 2√7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 4 cm、母線の長さが 6 cm の円錐の表面積は □π cm² です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 35.4 L55 108.6 A65 20.8 0 0 0 185 108.6 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"35.4\" x2=\"55\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"35.4\" x2=\"185\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 108.6 A65 20.8 0 0 0 185 108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M55 108.6 A65 20.8 0 0 1 185 108.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"108.6\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"108.6\" x2=\"185\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"152.5\" y=\"128.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"160.5\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 40,
+       "check": "Fraction(6 * 6 * 4, 6) + 4 * 4",
+       "hints": [
+        "側面のおうぎ形の弧は、底面の円周と等しくなります。",
+        "側面積は、半径 6 cm の円の面積の 4/6 です。",
+        "底面積もたしましょう。"
+       ],
+       "paths": [
+        [
+         "側面積 = 36π × 4/6 = 24π",
+         "底面 16π",
+         "24π + 16π = 40π",
+         40
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "相似な 2 つの立体の相似比は 3:5 です。小さいほうの体積が 54 cm³ のとき、大きいほうの体積は何 cm³ ですか。",
+       "answer": 250,
+       "check": "54 * Fraction(5 ** 3, 3 ** 3)",
+       "hints": [
+        "体積の比は、相似比の数をそれぞれ 3 乗した比です。",
+        "3³:5³ は何:何でしょう。",
+        "大きいほうは小さいほうの何倍でしょう。"
+       ],
+       "paths": [
+        [
+         "体積の比 27:125",
+         "54 × 125/27 = 250 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "底面の半径が 3 cm、母線の長さが 12 cm の円錐があります。底面の円周上の点 A から、側面をちょうど 1 周して A にもどるように糸をかけます。糸のいちばん短い長さはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 21.2 L93.7 122.8 A26.3 8.4 0 0 0 146.3 122.8 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"21.2\" x2=\"93.7\" y2=\"122.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"21.2\" x2=\"146.3\" y2=\"122.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.7 122.8 A26.3 8.4 0 0 0 146.3 122.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.7 122.8 A26.3 8.4 0 0 1 146.3 122.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"122.8\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"122.8\" x2=\"146.3\" y2=\"122.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.1\" y=\"136.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"141.1\" y=\"70.2\" font-size=\"12\" text-anchor=\"start\">12 cm</text><circle cx=\"120\" cy=\"131.2\" r=\"3\" fill=\"currentColor\"/><text x=\"110\" y=\"139.4\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "choices": [
+        24,
+        "12√2",
+        "12√3"
+       ],
+       "answer": "12√2",
+       "check": "[c for c, v in {'24': 24, '12√2': 12 * math.sqrt(2), '12√3': 12 * math.sqrt(3)}.items() if math.isclose(v, 2 * 12 * math.sin(math.radians(360 * 3 / 12 / 2)))][0]",
+       "hints": [
+        "側面の展開図（おうぎ形）をかきましょう。中心角は何度でしょう。",
+        "糸は、展開図の上で、A ともう一方のはしの点 A′ を結ぶ線分になります。",
+        "中心角 90° のおうぎ形で、A と A′ を結ぶ線分は、直角二等辺三角形の斜辺です。"
+       ],
+       "paths": [
+        [
+         "中心角 = 360° × 3/12 = 90°",
+         "展開図で A と A′ を結ぶ",
+         "直角をはさむ 2 辺が 12 cm の直角二等辺三角形",
+         "AA′ = 12√2 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 辺 5 cm の立方体の対角線の長さはどれですか。",
+       "choices": [
+        "5√2",
+        15,
+        "5√3"
+       ],
+       "answer": "5√3",
+       "check": "[c for c, v in {'5√2': 5 * math.sqrt(2), '15': 15, '5√3': 5 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(5 * 5 * 3))][0]",
+       "hints": [
+        "対角線は √(たて² + 横² + 高さ²) です。",
+        "5² + 5² + 5² を計算しましょう。",
+        "√75 を a√b の形にしましょう。"
+       ],
+       "paths": [
+        [
+         "25 × 3 = 75",
+         "√75 = 5√3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面が、直角をはさむ 2 辺が 3 cm と 4 cm の直角三角形で、高さが 5 cm の三角錐の体積は何 cm³ ですか。",
+       "answer": 10,
+       "check": "Fraction(3 * 4 * 5, 2 * 3)",
+       "hints": [
+        "底面の直角三角形の面積を求めましょう。",
+        "角錐の体積 = 底面積 × 高さ × 1/3 です。",
+        "6 × 5 × 1/3 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "底面積 3 × 4 ÷ 2 = 6",
+         "6 × 5 × 1/3 = 10 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の三角柱 ABC-DEF で、辺 AD とねじれの位置にある辺は何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"64.1\" y1=\"40.1\" x2=\"175.9\" y2=\"40.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"175.9\" y1=\"40.1\" x2=\"129.6\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129.6\" y1=\"16\" x2=\"64.1\" y2=\"40.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.1\" y1=\"124\" x2=\"175.9\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"64.1\" y1=\"40.1\" x2=\"64.1\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"175.9\" y1=\"40.1\" x2=\"175.9\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"129.6\" y1=\"16\" x2=\"129.6\" y2=\"99.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"175.9\" y1=\"124\" x2=\"129.6\" y2=\"99.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"129.6\" y1=\"99.9\" x2=\"64.1\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"55.1\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"184.9\" y=\"40.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"129.6\" y=\"11.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"55.1\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"184.9\" y=\"134.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"137.6\" y=\"110.1\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "answer": 2,
+       "check": "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (2, 0, 1), 'C': (1, 2, 1), 'D': (0, 0, 0), 'E': (2, 0, 0), 'F': (1, 2, 0)}, ['AB', 'BC', 'CA', 'DE', 'EF', 'FD', 'AD', 'BE', 'CF'], 'A', 'D')",
+       "hints": [
+        "AD と平行な辺はどれでしょう。",
+        "AD と交わる辺は、点 A か点 D を通ります。",
+        "残った辺が、AD と同じ平面の上にないかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "平行な辺 BE、CF",
+         "交わる辺 AB、AC、DE、DF",
+         "残りの BC、EF の 2 本"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -207032,7 +211177,7 @@ window.ROADMAP = {
     22.82
    ],
    "comb": {
-    "b": 0.192,
+    "b": 0.198,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -208779,7 +212924,7 @@ window.ROADMAP = {
     9.12
    ],
    "comb": {
-    "b": 0.322,
+    "b": 0.323,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -211172,7 +215317,7 @@ window.ROADMAP = {
     8.17
    ],
    "comb": {
-    "b": 0.137,
+    "b": 0.136,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -212364,7 +216509,7 @@ window.ROADMAP = {
     2.55
    ],
    "comb": {
-    "b": 0.215,
+    "b": 0.216,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -218832,7 +222977,7 @@ window.ROADMAP = {
     31.89
    ],
    "comb": {
-    "b": 0.449,
+    "b": 0.45,
     "r": 0.0,
     "rg": [
      "hanno",
@@ -218884,7 +223029,7 @@ window.ROADMAP = {
     22.23
    ],
    "comb": {
-    "b": 0.43,
+    "b": 0.431,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -219289,7 +223434,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.652,
-    "r": 1.23,
+    "r": 1.27,
     "rg": [
      "bunshi-saibo",
      "houteishiki",
@@ -220460,7 +224605,7 @@ window.ROADMAP = {
     -5.53
    ],
    "comb": {
-    "b": 0.261,
+    "b": 0.262,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -220710,7 +224855,7 @@ window.ROADMAP = {
     11.68
    ],
    "comb": {
-    "b": 0.151,
+    "b": 0.142,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -221855,7 +226000,7 @@ window.ROADMAP = {
     7.24
    ],
    "comb": {
-    "b": 0.211,
+    "b": 0.213,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -221956,7 +226101,7 @@ window.ROADMAP = {
     3.63
    ],
    "comb": {
-    "b": 0.315,
+    "b": 0.316,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -222358,7 +226503,7 @@ window.ROADMAP = {
     19.84
    ],
    "comb": {
-    "b": 0.357,
+    "b": 0.337,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -222771,7 +226916,7 @@ window.ROADMAP = {
     14.74
    ],
    "comb": {
-    "b": 0.422,
+    "b": 0.423,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -222831,7 +226976,7 @@ window.ROADMAP = {
     26.7
    ],
    "comb": {
-    "b": 0.374,
+    "b": 0.363,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -222951,8 +227096,8 @@ window.ROADMAP = {
     16.03
    ],
    "comb": {
-    "b": 0.377,
-    "r": 0.03,
+    "b": 0.376,
+    "r": 0.07,
     "rg": [
      "houteishiki",
      "programming"
@@ -224702,7 +228847,7 @@ window.ROADMAP = {
     6.19
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -224754,7 +228899,7 @@ window.ROADMAP = {
     4.92
    ],
    "comb": {
-    "b": 0.212,
+    "b": 0.213,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -225547,7 +229692,7 @@ window.ROADMAP = {
     36.43
    ],
    "comb": {
-    "b": 0.384,
+    "b": 0.38,
     "r": 0.0,
     "rg": [
      "hanno",
@@ -227091,7 +231236,7 @@ window.ROADMAP = {
     29.66
    ],
    "comb": {
-    "b": 0.381,
+    "b": 0.382,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -228466,7 +232611,7 @@ window.ROADMAP = {
     5.38
    ],
    "comb": {
-    "b": 0.137,
+    "b": 0.138,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -229021,7 +233166,7 @@ window.ROADMAP = {
     -8.85
    ],
    "comb": {
-    "b": 0.326,
+    "b": 0.327,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -229137,7 +233282,7 @@ window.ROADMAP = {
     -7.15
    ],
    "comb": {
-    "b": 0.32,
+    "b": 0.321,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -229336,7 +233481,7 @@ window.ROADMAP = {
     -9.19
    ],
    "comb": {
-    "b": 0.394,
+    "b": 0.395,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -229492,7 +233637,7 @@ window.ROADMAP = {
     -5.53
    ],
    "comb": {
-    "b": 0.426,
+    "b": 0.427,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -229574,7 +233719,7 @@ window.ROADMAP = {
     -8.98
    ],
    "comb": {
-    "b": 0.358,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -229686,7 +233831,7 @@ window.ROADMAP = {
     -10.15
    ],
    "comb": {
-    "b": 0.328,
+    "b": 0.329,
     "r": 0.0,
     "rg": [
      "seisuron",
@@ -230097,7 +234242,7 @@ window.ROADMAP = {
     5.11
    ],
    "comb": {
-    "b": 0.331,
+    "b": 0.332,
     "r": 0.0,
     "rg": [
      "seisuron",
@@ -230432,7 +234577,7 @@ window.ROADMAP = {
     4.92
    ],
    "comb": {
-    "b": 0.417,
+    "b": 0.4,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -230610,7 +234755,7 @@ window.ROADMAP = {
     17.38
    ],
    "comb": {
-    "b": 0.269,
+    "b": 0.266,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -230662,7 +234807,7 @@ window.ROADMAP = {
     17.63
    ],
    "comb": {
-    "b": 0.293,
+    "b": 0.291,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -232651,7 +236796,7 @@ window.ROADMAP = {
     30.85
    ],
    "comb": {
-    "b": 0.53,
+    "b": 0.531,
     "r": 1.57,
     "rg": [
      "bisekibun",
@@ -237359,7 +241504,7 @@ window.ROADMAP = {
     15.46
    ],
    "comb": {
-    "b": 0.463,
+    "b": 0.459,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -237531,7 +241676,7 @@ window.ROADMAP = {
     -0.79
    ],
    "comb": {
-    "b": 0.191,
+    "b": 0.192,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -237645,7 +241790,7 @@ window.ROADMAP = {
     -0.27
    ],
    "comb": {
-    "b": 0.259,
+    "b": 0.26,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -237756,7 +241901,7 @@ window.ROADMAP = {
     22.17
    ],
    "comb": {
-    "b": 0.406,
+    "b": 0.396,
     "r": 0.0,
     "rg": [
      "shiki",
@@ -237929,7 +242074,7 @@ window.ROADMAP = {
     21.95
    ],
    "comb": {
-    "b": 0.43,
+    "b": 0.419,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -239129,7 +243274,7 @@ window.ROADMAP = {
     7.8
    ],
    "comb": {
-    "b": 0.538,
+    "b": 0.539,
     "r": 2.03,
     "rg": [
      "bibun-hoteishiki",

@@ -1,0 +1,680 @@
+# G-021 空間図形
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と √ の check は A-016、G-019 に合わせる。
+# ことば：空間の 2 直線の位置関係（平行、交わる、ねじれの位置）、直線と平面の垂直・平行、2 つの平面の垂直・平行、
+#   角錐・円錐、母線、球、回転体（平面の図形を、直線 ℓ を軸として 1 回転させてできる立体）、投影図（立面図と平面図）、
+#   正多面体、相似な立体（相似比、表面積の比、体積の比）。
+# 直方体の頂点の名前は G-014 と同じ（上の面 ABCD、下の面 EFGH。A が手前の左、A の真下が E）。三角柱は ABC-DEF（A の真下が D）、
+#   正四角錐は O-ABCD（M は底面の対角線の交点）。
+# 円周率は π と書く。G-010、G-011 の「□ × 円周率」と同じく、かける計算を最後まで残し、「□π cm³」の □ の数を答える。
+# 前提は G-019（三平方の定理）と G-014（立体の切断）。前提の道に G-011（体積と表面積）、G-010（円とおうぎ形）、G-020（相似）、
+#   A-016（平方根）、A-009（累乗）、A-010（文字と式）がある。G-011 で扱わなかった角錐・円錐・球の体積と球の表面積はここで約束する：
+#   角錐・円錐の体積 = 底面積 × 高さ × 1/3（立方体を合同な 3 つの四角錐に分けると、その四角錐で確かめられる）、
+#   球の体積 = 4/3 × π × 半径³、球の表面積 = 4 × π × 半径²。一般の角錐の 1/3 と球の式のわけ（切り口の面積が等しい立体の体積、
+#   積分）は、前提の道具では示せないので約束にした。わけの日は、直方体の対角線、円錐の展開図の中心角、相似な立体の体積の比を示す。
+# 方程式（A-011）は前提の道にないので、母線や高さを方程式で求める問題は出さず、三平方の定理と「2 乗すると ○ になる正の数」で求める。
+# ねじれの位置などの位置関係は、図の上で線が交わって見えるかではなく、同じ平面の上にあるかで決める。
+# 図は svg（D-040）。見取り図は斜めから見た図で、見えない辺は点線。長さの比はおおよそ合わせた。回転の軸 ℓ は一点鎖線。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 空間の直線と平面の位置関係、回転体、投影図　2 日目 角錐・円錐・球の体積、球と円錐の表面積（展開図）
+#   3 日目 三平方の定理を空間へ（直方体の対角線、円錐と正四角錐の高さ、展開図で最短の長さ）、相似な立体の体積の比
+#   4 日目 わけ（直方体の対角線、円錐の展開図の中心角、相似な立体の体積の比）
+#   5 日目 G-014（切断）・G-011（体積・表面積）・G-019 と混ぜる、回転体の体積、正多面体の頂点の数　6 日目 確認
+# check：ねじれの位置の辺の数は、頂点の座標から 2 直線が同じ平面の上にないか（三重積が 0 でないか）を数える式。
+#   垂直・平行な面は、面の法線と辺の向きをくらべる式。切り口の形は G-014 と同じ式（geo_g11/mf.py の SEC と SHAPE）。
+#   体積と表面積は π をのぞいた数の式（Fraction）。√ を含む答えは choices にし、math.isclose で選ぶ。
+#   回転体や投影図から立体の名前を選ぶ問題は約束ごとなので check を付けない。
+# 空間図形は、空間座標とベクトル（G-049）、結晶と分子の形（H-019、H-018）、CAD と図面（E-204）、球充填（G-048）、
+#   オイラーの多面体定理から位相幾何学への入口になる（D-026）。
+
+id: G-021
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 図の直方体 ABCD-EFGH で、辺 AB と平行な辺、交わる辺、どちらでもない辺をさがしてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: 空間の 2 直線の位置関係は 3 つあります。① 平行（同じ平面の上にあって交わらない）、② 交わる、③ ねじれの位置（平行でもなく、交わりもしない。同じ平面の上にない）。辺 AB と平行な辺は DC、EF、HG。交わる辺は AD、AE、BC、BF。ねじれの位置にある辺は CG、DH、EH、FG の 4 本です。直線と平面では、直線 AE が平面 EFGH と点 E で交わり、E を通る平面の上の 2 直線 EF、EH の両方と垂直なとき、AE は平面 EFGH に垂直であるといいます。
+      - part: 思い出す
+        text: たて 3 cm、横 4 cm、高さ 5 cm の直方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="75.6" y1="36.6" x2="142.4" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.4" y1="36.6" x2="164.4" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="20" x2="97.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.6" y1="20" x2="75.6" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="120" x2="142.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.4" y1="120" x2="164.4" y2="103.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="103.4" x2="97.6" y2="103.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.6" y1="103.4" x2="75.6" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="75.6" y1="36.6" x2="75.6" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.4" y1="36.6" x2="142.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="20" x2="164.4" y2="103.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.6" y1="20" x2="97.6" y2="103.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="109" y="137.2" font-size="12" text-anchor="middle">4 cm</text><text x="161.4" y="123.9" font-size="12" text-anchor="start">3 cm</text><text x="69.6" y="82.5" font-size="12" text-anchor="end">5 cm</text></svg>'
+        answer: 60
+        check: "3 * 4 * 5"
+        hints:
+          - 直方体の体積 = たて × 横 × 高さ です。
+          - まず たて × 横 で底面積を求めましょう。
+          - 底面積に高さをかけましょう。
+        paths:
+          - [底面積 3 × 4 = 12, 12 × 5 = 60 cm³]
+      - part: 思い出す
+        text: 図の立方体を、3 つの頂点 A、C、F を通る平面で切りました。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [二等辺三角形, 正三角形, 長方形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 0, 0)))"
+        hints:
+          - 同じ面の上にある 2 つの点は、まっすぐ結びます。
+          - AC、CF、FA は、それぞれどの面の対角線でしょう。
+          - 同じ大きさの正方形の対角線の長さは等しくなります。
+        paths:
+          - [AC、CF、FA はどれも面の対角線, 3 つの辺の長さが等しい, 正三角形]
+      - part: 今日
+        text: 図の直方体で、辺 CG とねじれの位置にある辺は何本ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 4
+        check: "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, ['AB', 'BC', 'CD', 'DA', 'EF', 'FG', 'GH', 'HE', 'AE', 'BF', 'CG', 'DH'], 'C', 'G')"
+        hints:
+          - CG と平行な辺と、CG と交わる辺を、先に除きましょう。
+          - CG と交わる辺は、点 C か点 G を通ります。
+          - 残った辺が、ねじれの位置にある辺です。
+        paths:
+          - [平行な辺 AE、BF、DH, 交わる辺 BC、CD、FG、GH, 残りの AB、AD、EF、EH の 4 本]
+        note: ねじれの位置かどうかは、図の上で線が交わって見えるかではなく、同じ平面の上にあるかで決まる。
+      - part: 今日
+        text: 図の直方体で、辺 AE と垂直な面はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        choices: [面 BFGC, 面 EFGH, 面 AEHD]
+        answer: 面 EFGH
+        check: "(lambda V, e: [f for f in ['面 BFGC', '面 EFGH', '面 AEHD'] if (lambda d, n: d[1] * n[2] - d[2] * n[1] == 0 and d[2] * n[0] - d[0] * n[2] == 0 and d[0] * n[1] - d[1] * n[0] == 0)([V[e[1]][i] - V[e[0]][i] for i in range(3)], (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)]))(V[f[2]], V[f[3]], V[f[4]]))][0])({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, 'AE')"
+        hints:
+          - AE は、ある面の上の 2 本の辺と、垂直に交わっています。
+          - AE と点 E で交わる辺 EF と EH を見ましょう。
+          - EF と EH の両方をふくむ面を選びましょう。
+        paths:
+          - [AE ⊥ EF、AE ⊥ EH, EF と EH は面 EFGH の上, AE ⊥ 面 EFGH]
+        note: 面 AEHD は AE をふくむ面で、垂直ではない。面 BFGC は AE と平行。
+      - part: 今日
+        text: 図の直角三角形を、直線 ℓ を軸として 1 回転させると、どんな立体ができますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="91.9,116.8 148.1,116.8 91.9,23.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="91.9" y1="128" x2="91.9" y2="12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="8 3 2 3"/><text x="99.9" y="20.2" font-size="12" text-anchor="middle">ℓ</text></svg>'
+        choices: [円柱, 円錐, 球]
+        answer: 円錐
+        hints:
+          - 軸のまわりに回すと、軸からはなれた点は円をえがきます。
+          - 底の辺は、回すと何になるでしょう。
+          - 軸の上にある上の頂点は、回しても動きません。
+        paths:
+          - [底の辺が回って円になる, 上の頂点は動かない, 円錐]
+      - part: 挑戦
+        text: 図の三角柱 ABC-DEF で、辺 AB とねじれの位置にある辺は何本ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="64.1" y1="40.1" x2="175.9" y2="40.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="175.9" y1="40.1" x2="129.6" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.6" y1="16" x2="64.1" y2="40.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.1" y1="124" x2="175.9" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.1" y1="40.1" x2="64.1" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="175.9" y1="40.1" x2="175.9" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.6" y1="16" x2="129.6" y2="99.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="175.9" y1="124" x2="129.6" y2="99.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="129.6" y1="99.9" x2="64.1" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="55.1" y="40.3" font-size="12" text-anchor="middle">A</text><text x="184.9" y="40.3" font-size="12" text-anchor="middle">B</text><text x="129.6" y="11.2" font-size="12" text-anchor="middle">C</text><text x="55.1" y="134.2" font-size="12" text-anchor="middle">D</text><text x="184.9" y="134.2" font-size="12" text-anchor="middle">E</text><text x="137.6" y="110.1" font-size="12" text-anchor="middle">F</text></svg>'
+        answer: 3
+        check: "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (2, 0, 1), 'C': (1, 2, 1), 'D': (0, 0, 0), 'E': (2, 0, 0), 'F': (1, 2, 0)}, ['AB', 'BC', 'CA', 'DE', 'EF', 'FD', 'AD', 'BE', 'CF'], 'A', 'B')"
+        hints:
+          - AB と平行な辺はどれでしょう。
+          - AB と交わる辺は、点 A か点 B を通ります。
+          - 残った辺が、AB と同じ平面の上にないかを確かめましょう。
+        paths:
+          - [平行な辺 DE, 交わる辺 BC、CA、AD、BE, 残りの CF、EF、FD の 3 本]
+        note: 直方体とちがい、三角柱では 3 本になる。立体によって数がちがうので、1 本ずつ確かめる。
+    extra:
+      - part: 今日
+        text: 図の直方体で、辺 AB と平行な面はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        choices: [面 ABFE, 面 DCGH, 面 BFGC]
+        answer: 面 DCGH
+        check: "(lambda V, e: [f for f in ['面 ABFE', '面 DCGH', '面 BFGC'] if (lambda d, n, q: d[0] * n[0] + d[1] * n[1] + d[2] * n[2] == 0 and q[0] * n[0] + q[1] * n[1] + q[2] * n[2] != 0)([V[e[1]][i] - V[e[0]][i] for i in range(3)], (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)]))(V[f[2]], V[f[3]], V[f[4]]), [V[e[0]][i] - V[f[2]][i] for i in range(3)])][0])({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, 'AB')"
+        hints:
+          - 辺 AB をふくむ面は、平行とはいいません。
+          - AB と平行な辺 DC や HG をふくむ面を考えましょう。
+          - その面と AB が交わらないかを確かめましょう。
+        paths:
+          - [AB ∥ DC, DC は面 DCGH の上, AB は面 DCGH と交わらない, AB ∥ 面 DCGH]
+        note: 面 EFGH も AB と平行。選択肢の中では面 DCGH。
+      - part: 今日
+        text: 図は、ある立体を正面から見た図（立面図）と、真上から見た図（平面図）です。この立体はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="74" x2="200" y2="74" stroke="currentColor" stroke-width="1" fill="none"/><text x="22" y="37.5" font-size="10" text-anchor="middle">立面図</text><text x="22" y="109.5" font-size="10" text-anchor="middle">平面図</text><polygon points="120,8 94,66 146,66" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><rect x="94" y="82" width="52" height="52" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="82" x2="146" y2="134" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146" y1="82" x2="94" y2="134" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        choices: [三角柱, 正四角錐, 円錐]
+        answer: 正四角錐
+        hints:
+          - 正面から見ると三角形です。
+          - 真上から見ると、正方形に対角線がかかれています。
+          - 対角線は、とがった頂点から底面の頂点へ向かう辺です。
+        paths:
+          - [立面図が三角形なので先がとがった立体, 平面図が正方形なので底面は正方形, 正四角錐]
+        note: 円錐なら平面図は円、三角柱なら平面図は長方形（または三角形）になる。
+      - part: 今日
+        text: 図の直方体で、面 ABCD と垂直な面はいくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="49.7,42.1 161,42.1 190.3,20 79,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 4
+        check: "(lambda V, N: len([f for f in ['ABFE', 'BFGC', 'CGHD', 'DHEA', 'EFGH'] if (lambda a, b: a[0] * b[0] + a[1] * b[1] + a[2] * b[2] == 0)(N(V[f[0]], V[f[1]], V[f[2]]), N(V['A'], V['B'], V['C']))]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, (lambda p, q, r: (lambda u, w: (u[1] * w[2] - u[2] * w[1], u[2] * w[0] - u[0] * w[2], u[0] * w[1] - u[1] * w[0]))([q[i] - p[i] for i in range(3)], [r[i] - p[i] for i in range(3)])))"
+        hints:
+          - 面 ABCD と交わる面を考えましょう。
+          - 側面は、上の面と垂直に交わっています。
+          - 面 ABCD と平行な面は数えません。
+        paths:
+          - [側面 ABFE、BFGC、CGHD、DHEA, どれも面 ABCD と垂直, 4 つ]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 底面の半径が 3 cm、高さが 4 cm の円錐の体積を求めてみましょう。円周率は π とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="28.7" x2="55" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="28.7" x2="185" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 0 185 115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 1 185 115.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="115.3" r="2.5" fill="currentColor"/><line x1="120" y1="28.7" x2="120" y2="115.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,108.3 127,108.3 127,115.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="115.3" x2="185" y2="115.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.5" y="134.9" font-size="12" text-anchor="middle">3 cm</text><text x="115" y="82.2" font-size="12" text-anchor="end">4 cm</text></svg>'
+        explain: 角錐や円錐の体積は、底面積と高さが同じ角柱や円柱の体積の 1/3 です（立方体は、1 つの頂点を共通の頂点とする合同な 3 つの四角錐に分けられます）。体積 = 底面積 × 高さ × 1/3。円周率を π と書くと、底面積は π × 3 × 3 = 9π cm² なので、体積は 9π × 4 × 1/3 = 12π cm³ です。球の体積は 4/3 × π × 半径³、表面積は 4 × π × 半径² です。答えは「□π」の形にして、□ の数を答えます。
+      - part: 思い出す
+        text: 底面の半径が 3 cm、高さが 5 cm の円柱の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M78.4 38 L78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3 L161.6 38 A41.6 13.3 0 0 1 78.4 38 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><ellipse cx="120" cy="38" rx="41.6" ry="13.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="78.4" y1="38" x2="78.4" y2="107.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.6" y1="38" x2="161.6" y2="107.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.4 107.3 A41.6 13.3 0 0 1 161.6 107.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="38" r="2.5" fill="currentColor"/><line x1="120" y1="38" x2="161.6" y2="38" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.8" y="52.8" font-size="12" text-anchor="middle">3 cm</text><text x="167.6" y="76.9" font-size="12" text-anchor="start">5 cm</text></svg>'
+        answer: 45
+        check: "3 * 3 * 5"
+        hints:
+          - 円柱の体積 = 底面積 × 高さ です。
+          - 底面積は 3 × 3 × π です。
+          - π は最後まで残しておきましょう。
+        paths:
+          - [底面積 9π, 9π × 5 = 45π, 45]
+      - part: 思い出す
+        text: 半径 6 cm、中心角 120° のおうぎ形の弧の長さは □π cm です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M104.2 97.3 L174.2 97.3 A70 70 0 0 0 69.3 36.7 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="104.2" cy="97.3" r="2.5" fill="currentColor"/><path d="M120.2 97.3 A16 16 0 0 0 96.2 83.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.2" y="75.5" font-size="12" text-anchor="middle">120°</text><text x="139.2" y="111.5" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 4
+        check: "Fraction(2 * 6 * 120, 360)"
+        hints:
+          - 弧の長さは、円周の何分の 1 でしょう。
+          - 中心角 120° は、360° の何分の 1 でしょう。
+          - 半径 6 cm の円周は 12π cm です。
+        paths:
+          - [120/360 = 1/3, 円周 12π, 12π × 1/3 = 4π, 4]
+      - part: 今日
+        text: 底面が 1 辺 6 cm の正方形で、高さが 5 cm の正四角錐の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,17.3 44,122.7 149.6,122.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,17.3 149.6,122.7 196,87.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="122.7" x2="149.6" y2="122.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.6" y1="122.7" x2="196" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="17.3" x2="44" y2="122.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="17.3" x2="149.6" y2="122.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="17.3" x2="196" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="87.8" x2="90.4" y2="87.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.4" y1="87.8" x2="44" y2="122.7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="17.3" x2="90.4" y2="87.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="17.3" x2="120" y2="105.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="105.3" r="2.2" fill="currentColor"/><text x="96.8" y="139.9" font-size="12" text-anchor="middle">6 cm</text><text x="115" y="65.5" font-size="12" text-anchor="end">5 cm</text><text x="120" y="12.5" font-size="12" text-anchor="middle">O</text><text x="36" y="134.9" font-size="12" text-anchor="middle">A</text><text x="157.6" y="134.9" font-size="12" text-anchor="middle">B</text><text x="205" y="90" font-size="12" text-anchor="middle">C</text><text x="81.4" y="90" font-size="12" text-anchor="middle">D</text></svg>'
+        answer: 60
+        check: "Fraction(6 * 6 * 5, 3)"
+        hints:
+          - 角錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 底面積は 6 × 6 です。
+          - 1/3 をかけるのを忘れないようにしましょう。
+        paths:
+          - [底面積 36, 36 × 5 × 1/3 = 60 cm³]
+        note: 1/3 をかけ忘れて 180 としやすい。
+      - part: 今日
+        text: 底面の半径が 3 cm、高さが 7 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 23.6 L78.5 120.4 A41.5 13.3 0 0 0 161.5 120.4 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="23.6" x2="78.5" y2="120.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="23.6" x2="161.5" y2="120.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.5 120.4 A41.5 13.3 0 0 0 161.5 120.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.5 120.4 A41.5 13.3 0 0 1 161.5 120.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="120.4" r="2.5" fill="currentColor"/><line x1="120" y1="23.6" x2="120" y2="120.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,113.4 127,113.4 127,120.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="120.4" x2="161.5" y2="120.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.7" y="136.2" font-size="12" text-anchor="middle">3 cm</text><text x="115" y="82.2" font-size="12" text-anchor="end">7 cm</text></svg>'
+        answer: 21
+        check: "Fraction(3 * 3 * 7, 3)"
+        hints:
+          - 円錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 底面積は 9π cm² です。
+          - 9 × 7 × 1/3 を計算しましょう。
+        paths:
+          - [底面積 9π, 9π × 7 × 1/3 = 21π, 21]
+      - part: 今日
+        text: 半径 3 cm の球の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M62 70 A58 17.4 0 0 0 178 70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M62 70 A58 17.4 0 0 1 178 70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><line x1="120" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="149" y="66.2" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        answer: 36
+        check: "Fraction(4, 3) * 3 * 3 * 3"
+        hints:
+          - 球の体積 = 4/3 × π × 半径³ です。
+          - 3³ を先に計算しましょう。
+          - 4/3 をかけましょう。
+        paths:
+          - [3³ = 27, 4/3 × 27 = 36, 36π, 36]
+      - part: 挑戦
+        text: 底面の半径が 3 cm、母線の長さが 5 cm の円錐の表面積は □π cm² です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="28.7" x2="55" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="28.7" x2="185" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 0 185 115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 1 185 115.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="115.3" r="2.5" fill="currentColor"/><line x1="120" y1="115.3" x2="185" y2="115.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.5" y="134.9" font-size="12" text-anchor="middle">3 cm</text><text x="160.5" y="70.2" font-size="12" text-anchor="start">5 cm</text></svg>'
+        answer: 24
+        check: "Fraction(5 * 5 * 3, 5) + 3 * 3"
+        hints:
+          - 展開図は、側面のおうぎ形と底面の円です。
+          - おうぎ形の弧の長さは、底面の円周と等しくなります。弧は、半径 5 cm の円周の何分の 1 でしょう。
+          - 側面積は、半径 5 cm の円の面積の、同じ分だけです。
+        paths:
+          - [弧 = 底面の円周 6π, 半径 5 cm の円周 10π の 3/5, 側面積 = 25π × 3/5 = 15π, 底面 9π と合わせて 24π, 24]
+        note: 側面積だけで 15 と答えやすい。表面積は底面もふくむ。
+    extra:
+      - part: 今日
+        text: 半径 5 cm の球の表面積は □π cm² です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M62 70 A58 17.4 0 0 0 178 70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M62 70 A58 17.4 0 0 1 178 70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><line x1="120" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="149" y="66.2" font-size="12" text-anchor="middle">5 cm</text></svg>'
+        answer: 100
+        check: "4 * 5 * 5"
+        hints:
+          - 球の表面積 = 4 × π × 半径² です。
+          - 5² を先に計算しましょう。
+          - 4 をかけましょう。
+        paths:
+          - [5² = 25, 4 × 25 = 100, 100π, 100]
+      - part: 今日
+        text: 底面積が 12 cm²、高さが 8 cm の三角錐の体積は何 cm³ ですか。
+        answer: 32
+        check: "Fraction(12 * 8, 3)"
+        hints:
+          - 角錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 12 × 8 を計算しましょう。
+          - 1/3 をかけましょう。
+        paths:
+          - [12 × 8 = 96, 96 × 1/3 = 32 cm³]
+      - part: 今日
+        text: 底面の半径が 2 cm、母線の長さが 6 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 8 L70.6 36.5 A57 57 0 0 0 169.4 36.5 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="84" r="19" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="8" r="2.5" fill="currentColor"/><text x="87.3" y="26.5" font-size="12" text-anchor="end">6 cm</text><line x1="120" y1="84" x2="139" y2="84" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="143" y="88.2" font-size="12" text-anchor="start">2 cm</text></svg>'
+        answer: 120
+        check: "Fraction(360 * 2, 6)"
+        hints:
+          - おうぎ形の弧の長さは、底面の円周と等しくなります。
+          - 弧は、半径 6 cm の円周の何分の 1 でしょう。
+          - 中心角も、360° の同じ分だけです。
+        paths:
+          - [弧 = 4π, 半径 6 cm の円周 12π の 1/3, 360° × 1/3 = 120°]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 図の直方体 ABCD-EFGH で、EF = 4 cm、FG = 3 cm、AE = 12 cm です。対角線 AG の長さを求めてみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="99.5" y1="27.6" x2="130.3" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="130.3" y1="27.6" x2="140.5" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140.5" y1="20" x2="109.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.7" y1="20" x2="99.5" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.5" y1="120" x2="130.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="130.3" y1="120" x2="140.5" y2="112.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140.5" y1="112.4" x2="109.7" y2="112.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="109.7" y1="112.4" x2="99.5" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="99.5" y1="27.6" x2="99.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="130.3" y1="27.6" x2="130.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140.5" y1="20" x2="140.5" y2="112.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.7" y1="20" x2="109.7" y2="112.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="99.5" y1="27.6" x2="140.5" y2="112.4" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="99.5" y1="120" x2="140.5" y2="112.4" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="114.9" y="137.2" font-size="12" text-anchor="middle">4 cm</text><text x="143.4" y="128.4" font-size="12" text-anchor="start">3 cm</text><text x="93.5" y="78" font-size="12" text-anchor="end">12 cm</text><text x="90.5" y="25.8" font-size="12" text-anchor="middle">A</text><text x="136.3" y="40.8" font-size="12" text-anchor="middle">B</text><text x="148.5" y="18.2" font-size="12" text-anchor="middle">C</text><text x="105.7" y="15.2" font-size="12" text-anchor="middle">D</text><text x="90.5" y="130.2" font-size="12" text-anchor="middle">E</text><text x="134.3" y="134.2" font-size="12" text-anchor="middle">F</text><text x="149.5" y="120.6" font-size="12" text-anchor="middle">G</text><text x="100.7" y="119.6" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: AG は、直角三角形 AEG の斜辺です。まず底面の対角線 EG を、直角三角形 EFG で求めます。EG² = 4² + 3² = 25。AE は底面に垂直なので ∠AEG = 90°で、AG² = AE² + EG² = 144 + 25 = 169、AG = 13 cm。たて a、横 b、高さ c の直方体の対角線は √(a² + b² + c²) です。また、相似な立体では、相似比が m:n のとき、表面積の比は m²:n²、体積の比は m³:n³ になります（G-020 の面積の比を立体に広げたもの。わけは 4 日目）。
+      - part: 思い出す
+        text: たて 6 cm、横 8 cm の長方形の対角線の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,18 50.7,122 189.3,122 189.3,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="122" x2="189.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="50.7,114 58.7,114 58.7,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="41.9" y="15.6" font-size="12" text-anchor="middle">A</text><text x="41.9" y="132.8" font-size="12" text-anchor="middle">B</text><text x="198.1" y="132.8" font-size="12" text-anchor="middle">C</text><text x="198.1" y="15.6" font-size="12" text-anchor="middle">D</text><text x="120" y="139.2" font-size="12" text-anchor="middle">8 cm</text><text x="44.7" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        answer: 10
+        check: "[d for d in range(1, 50) if d * d == 6 * 6 + 8 * 8][0]"
+        hints:
+          - 対角線は、直角三角形の斜辺です。
+          - 対角線² = 6² + 8² です。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [36 + 64 = 100, 対角線 = 10 cm]
+      - part: 思い出す
+        text: 底面の半径が 3 cm、高さが 10 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 21.8 L89.9 122.2 A30.1 9.6 0 0 0 150.1 122.2 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="21.8" x2="89.9" y2="122.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="21.8" x2="150.1" y2="122.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M89.9 122.2 A30.1 9.6 0 0 0 150.1 122.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M89.9 122.2 A30.1 9.6 0 0 1 150.1 122.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="122.2" r="2.5" fill="currentColor"/><line x1="120" y1="21.8" x2="120" y2="122.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,115.2 127,115.2 127,122.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="122.2" x2="150.1" y2="122.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135.1" y="136.2" font-size="12" text-anchor="middle">3 cm</text><text x="115" y="82.2" font-size="12" text-anchor="end">10 cm</text></svg>'
+        answer: 30
+        check: "Fraction(3 * 3 * 10, 3)"
+        hints:
+          - 円錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 底面積は 9π cm² です。
+          - 9 × 10 × 1/3 を計算しましょう。
+        paths:
+          - [9π × 10 × 1/3 = 30π, 30]
+      - part: 今日
+        text: 1 辺 4 cm の立方体の対角線 AG の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.9" y1="44.9" x2="141.1" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="174.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="20" x2="98.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="20" x2="65.9" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.9" y1="120" x2="141.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="120" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="95.1" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="98.9" y1="95.1" x2="65.9" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="44.9" x2="65.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="141.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="20" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="20" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="44.9" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="65.9" y1="120" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="103.5" y="137.2" font-size="12" text-anchor="middle">4 cm</text><text x="56.9" y="43.1" font-size="12" text-anchor="middle">A</text><text x="147.1" y="58.1" font-size="12" text-anchor="middle">B</text><text x="182.1" y="18.2" font-size="12" text-anchor="middle">C</text><text x="94.9" y="15.2" font-size="12" text-anchor="middle">D</text><text x="56.9" y="130.2" font-size="12" text-anchor="middle">E</text><text x="145.1" y="134.2" font-size="12" text-anchor="middle">F</text><text x="183.1" y="103.3" font-size="12" text-anchor="middle">G</text><text x="89.9" y="102.3" font-size="12" text-anchor="middle">H</text></svg>'
+        choices: [4√2, 12, 4√3]
+        answer: 4√3
+        check: "[c for c, v in {'4√2': 4 * math.sqrt(2), '12': 12, '4√3': 4 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(4 * 4 + 4 * 4 + 4 * 4))][0]"
+        hints:
+          - まず底面の対角線 EG を求めましょう。
+          - △AEG は ∠AEG = 90°の直角三角形です。
+          - AG² = AE² + EG² です。
+        paths:
+          - [EG² = 16 + 16 = 32, AG² = 16 + 32 = 48, AG = √48 = 4√3 cm]
+      - part: 今日
+        text: 母線の長さが 10 cm、底面の半径が 6 cm の円錐の高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 28.7 L55 115.3 A65 20.8 0 0 0 185 115.3 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="28.7" x2="55" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="28.7" x2="185" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 0 185 115.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 115.3 A65 20.8 0 0 1 185 115.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="115.3" r="2.5" fill="currentColor"/><line x1="120" y1="28.7" x2="120" y2="115.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,108.3 127,108.3 127,115.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="115.3" x2="185" y2="115.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.5" y="134.9" font-size="12" text-anchor="middle">6 cm</text><text x="160.5" y="70.2" font-size="12" text-anchor="start">10 cm</text></svg>'
+        answer: 8
+        check: "[h for h in range(1, 20) if h * h + 6 * 6 == 10 * 10][0]"
+        hints:
+          - 頂点、底面の中心、底面の円周上の点を結ぶと、直角三角形ができます。
+          - その直角三角形の斜辺は母線です。
+          - 高さ² = 10² − 6² です。
+        paths:
+          - [高さ² = 100 − 36 = 64, 高さ = 8 cm]
+      - part: 今日
+        text: 正四角錐 O-ABCD の底面は 1 辺 8 cm の正方形で、OA = OB = OC = OD = 9 cm です。M を底面の対角線の交点とするとき、高さ OM は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,15.1 44,124.9 149.6,124.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,15.1 149.6,124.9 196,90" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="124.9" x2="149.6" y2="124.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.6" y1="124.9" x2="196" y2="90" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="15.1" x2="44" y2="124.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="15.1" x2="149.6" y2="124.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="15.1" x2="196" y2="90" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="90" x2="90.4" y2="90" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.4" y1="90" x2="44" y2="124.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="15.1" x2="90.4" y2="90" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="15.1" x2="120" y2="107.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="107.5" r="2.2" fill="currentColor"/><text x="96.8" y="142.1" font-size="12" text-anchor="middle">8 cm</text><text x="142.8" y="74.2" font-size="12" text-anchor="start">9 cm</text><text x="120" y="10.3" font-size="12" text-anchor="middle">O</text><text x="36" y="137.1" font-size="12" text-anchor="middle">A</text><text x="157.6" y="137.1" font-size="12" text-anchor="middle">B</text><text x="205" y="92.2" font-size="12" text-anchor="middle">C</text><text x="81.4" y="92.2" font-size="12" text-anchor="middle">D</text></svg>'
+        answer: 7
+        check: "[h for h in range(1, 20) if h * h + (8 * 8 + 8 * 8) // 4 == 9 * 9][0]"
+        hints:
+          - M は底面の正方形の中心で、AM は対角線 AC の半分です。
+          - AC と AM の長さを求めましょう。√ のままでかまいません。
+          - △OAM は ∠OMA = 90°の直角三角形です。
+        paths:
+          - [AC = 8√2 で AM = 4√2, AM² = 32, OM² = 81 − 32 = 49, OM = 7 cm]
+      - part: 挑戦
+        text: 図の直方体で EF = 5 cm、FG = 3 cm、AE = 6 cm です。頂点 A から辺 BF を通って頂点 G まで、糸をいちばん短くなるようにかけます。糸の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="74.8" y1="34.2" x2="146.3" y2="34.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.3" y1="34.2" x2="165.2" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165.2" y1="20" x2="93.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.7" y1="20" x2="74.8" y2="34.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="74.8" y1="120" x2="146.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.3" y1="120" x2="165.2" y2="105.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165.2" y1="105.8" x2="93.7" y2="105.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="93.7" y1="105.8" x2="74.8" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="74.8" y1="34.2" x2="74.8" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.3" y1="34.2" x2="146.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165.2" y1="20" x2="165.2" y2="105.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.7" y1="20" x2="93.7" y2="105.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="110.6" y="137.2" font-size="12" text-anchor="middle">5 cm</text><text x="163.8" y="125.1" font-size="12" text-anchor="start">3 cm</text><text x="68.8" y="81.3" font-size="12" text-anchor="end">6 cm</text><polyline points="74.8,34.2 146.3,87.8 165.2,105.8" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="65.8" y="32.4" font-size="12" text-anchor="middle">A</text><text x="152.3" y="47.4" font-size="12" text-anchor="middle">B</text><text x="173.2" y="18.2" font-size="12" text-anchor="middle">C</text><text x="89.7" y="15.2" font-size="12" text-anchor="middle">D</text><text x="65.8" y="130.2" font-size="12" text-anchor="middle">E</text><text x="150.3" y="134.2" font-size="12" text-anchor="middle">F</text><text x="174.2" y="114" font-size="12" text-anchor="middle">G</text><text x="84.7" y="113" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 10
+        check: "[d for d in range(1, 30) if d * d == (5 + 3) * (5 + 3) + 6 * 6][0]"
+        hints:
+          - 糸が通る 2 つの面 ABFE と BFGC を、展開図で 1 つの平面に広げましょう。
+          - 広げた図で、A と G を結ぶ線分が糸の長さです。
+          - その線分は、横が何 cm、たてが何 cm の直角三角形の斜辺でしょう。
+        paths:
+          - [面 ABFE と面 BFGC を広げる, 横 5 + 3 = 8 cm、たて 6 cm, 8² + 6² = 100, 10 cm]
+        note: 立体の中を通る対角線 AG（√70 cm）と取りちがえやすい。糸は面の上を通るので、展開図で考える。
+    extra:
+      - part: 今日
+        text: 母線の長さが 17 cm、底面の半径が 8 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 25 L69.9 119 A50.1 16 0 0 0 170.1 119 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="25" x2="69.9" y2="119" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="25" x2="170.1" y2="119" stroke="currentColor" stroke-width="2" fill="none"/><path d="M69.9 119 A50.1 16 0 0 0 170.1 119" stroke="currentColor" stroke-width="2" fill="none"/><path d="M69.9 119 A50.1 16 0 0 1 170.1 119" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="119" r="2.5" fill="currentColor"/><line x1="120" y1="25" x2="120" y2="119" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,112 127,112 127,119" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="119" x2="170.1" y2="119" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="145.1" y="136.2" font-size="12" text-anchor="middle">8 cm</text><text x="153.1" y="70.2" font-size="12" text-anchor="start">17 cm</text></svg>'
+        answer: 320
+        check: "Fraction(8 * 8 * [h for h in range(1, 30) if h * h + 8 * 8 == 17 * 17][0], 3)"
+        hints:
+          - まず高さを、三平方の定理で求めましょう。
+          - 高さ² = 17² − 8² です。
+          - 体積 = 底面積 × 高さ × 1/3 です。
+        paths:
+          - [高さ² = 289 − 64 = 225 で高さ 15 cm, 64π × 15 × 1/3 = 320π, 320]
+      - part: 今日
+        text: 相似な 2 つの円柱があり、相似比は 2:3 です。小さいほうの体積が 16π cm³ のとき、大きいほうの体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        answer: 54
+        check: "16 * Fraction(3 ** 3, 2 ** 3)"
+        hints:
+          - 相似な立体では、半径も高さも同じ倍になります。
+          - 体積の比は、相似比の数をそれぞれ 3 乗した比です。
+          - 2³:3³ は何:何でしょう。
+        paths:
+          - ["体積の比 2³:3³ = 8:27", 16 × 27/8 = 54, 54]
+      - part: 今日
+        text: EF = 3 cm、FG = 2 cm、AE = 6 cm の直方体の対角線 AG は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="90.9" y1="29.9" x2="135.9" y2="29.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135.9" y1="29.9" x2="149.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.1" y1="20" x2="104.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.1" y1="20" x2="90.9" y2="29.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.9" y1="120" x2="135.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135.9" y1="120" x2="149.1" y2="110.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.1" y1="110.1" x2="104.1" y2="110.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="104.1" y1="110.1" x2="90.9" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.9" y1="29.9" x2="90.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135.9" y1="29.9" x2="135.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.1" y1="20" x2="149.1" y2="110.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.1" y1="20" x2="104.1" y2="110.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.9" y1="29.9" x2="149.1" y2="110.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="90.9" y1="120" x2="149.1" y2="110.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="113.4" y="137.2" font-size="12" text-anchor="middle">3 cm</text><text x="150.5" y="127.2" font-size="12" text-anchor="start">2 cm</text><text x="84.9" y="79.2" font-size="12" text-anchor="end">6 cm</text><text x="81.9" y="28.1" font-size="12" text-anchor="middle">A</text><text x="141.9" y="43.1" font-size="12" text-anchor="middle">B</text><text x="157.1" y="18.2" font-size="12" text-anchor="middle">C</text><text x="100.1" y="15.2" font-size="12" text-anchor="middle">D</text><text x="81.9" y="130.2" font-size="12" text-anchor="middle">E</text><text x="139.9" y="134.2" font-size="12" text-anchor="middle">F</text><text x="158.1" y="118.3" font-size="12" text-anchor="middle">G</text><text x="95.1" y="117.3" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 7
+        check: "[d for d in range(1, 20) if d * d == 3 * 3 + 2 * 2 + 6 * 6][0]"
+        hints:
+          - 対角線は √(たて² + 横² + 高さ²) です。
+          - 3² + 2² + 6² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [9 + 4 + 36 = 49, AG = 7 cm]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 直方体 ABCD-EFGH で EF = a、FG = b、AE = c とします。対角線 AG の長さが √(a² + b² + c²) になることを証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="56.7" y1="39.9" x2="156.9" y2="39.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.9" y1="39.9" x2="183.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="183.3" y1="20" x2="83.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.1" y1="20" x2="56.7" y2="39.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="120" x2="156.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.9" y1="120" x2="183.3" y2="100.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="183.3" y1="100.1" x2="83.1" y2="100.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="83.1" y1="100.1" x2="56.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="56.7" y1="39.9" x2="56.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.9" y1="39.9" x2="156.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="183.3" y1="20" x2="183.3" y2="100.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.1" y1="20" x2="83.1" y2="100.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="56.7" y1="39.9" x2="183.3" y2="100.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="56.7" y1="120" x2="183.3" y2="100.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="106.8" y="137.2" font-size="12" text-anchor="middle">a</text><text x="178.1" y="122.3" font-size="12" text-anchor="start">b</text><text x="50.7" y="84.1" font-size="12" text-anchor="end">c</text><text x="47.7" y="38.1" font-size="12" text-anchor="middle">A</text><text x="162.9" y="53.1" font-size="12" text-anchor="middle">B</text><text x="191.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="79.1" y="15.2" font-size="12" text-anchor="middle">D</text><text x="47.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="160.9" y="134.2" font-size="12" text-anchor="middle">F</text><text x="192.3" y="108.3" font-size="12" text-anchor="middle">G</text><text x="74.1" y="107.3" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: 例：「EF = a、FG = b、AE = c とする。底面 EFGH で、△EFG は ∠EFG = 90°の直角三角形なので、三平方の定理より EG² = a² + b² …①。AE は底面 EFGH に垂直なので、AE は底面の上の直線 EG とも垂直で、△AEG は ∠AEG = 90°の直角三角形。三平方の定理より AG² = AE² + EG² = c² + a² + b²（①を使った）。AG は正の数なので AG = √(a² + b² + c²)。」と書ければよい。① 辺を文字で決めている、② 三平方の定理を 2 回、どの直角三角形で使うかを書いている（AE ⊥ EG の根拠は「直線が平面に垂直なら、平面の上の交わる直線とも垂直」）、③ 正の数なので √ をとる、と結んでいる、の 3 点を見る。3 cm、4 cm、12 cm のような例で確かめただけなら、例ではすべての場合を示せないことを話す。
+        hints:
+          - まず底面の対角線 EG の長さを、a と b で表しましょう。
+          - △AEG で、どの角が直角かを、根拠をつけて書きましょう。
+          - AG² を a、b、c で表し、√ をとりましょう。
+        paths:
+          - [EF = a、FG = b、AE = c とする, △EFG で EG² = a² + b², AE ⊥ 底面なので ∠AEG = 90°, AG² = c² + a² + b², AG = √(a² + b² + c²)]
+      - part: わけ
+        text: 底面の半径が r、母線の長さが ℓ の円錐の展開図で、側面のおうぎ形の中心角が 360° × r/ℓ になることを証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 8 L63 8 A57 57 0 0 0 177 8 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="93.5" r="28.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="8" r="2.5" fill="currentColor"/><text x="83.5" y="12.2" font-size="12" text-anchor="end">ℓ</text><line x1="120" y1="93.5" x2="148.5" y2="93.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.5" y="97.7" font-size="12" text-anchor="start">r</text></svg>'
+        explain: 例：「おうぎ形の弧は、組み立てると底面の円周にぴったり重なるので、弧の長さは 2πr。おうぎ形の半径は母線の長さ ℓ なので、同じ半径の円の円周は 2πℓ。おうぎ形の弧の長さは中心角に比例する（中心角が 360° の何分の 1 なら、弧も円周の同じ分。G-010）ので、中心角 = 360° × 2πr/(2πℓ) = 360° × r/ℓ。」と書ければよい。① 弧の長さと底面の円周が等しいことを、組み立てたときの重なりで説明している、② おうぎ形の半径が母線であることを使っている、③ 弧と中心角の比例で結んでいる、の 3 点を見る。半径 3 cm、母線 6 cm の例で 180° と出して終わったら、例ではすべての場合を示せないことを話す。
+        hints:
+          - 展開図を組み立てると、おうぎ形の弧はどこに重なるでしょう。
+          - おうぎ形の半径は、円錐のどの長さでしょう。
+          - 弧の長さが円周の何分の 1 かと、中心角が 360° の何分の 1 かは同じです。
+        paths:
+          - [弧の長さ = 底面の円周 2πr, 半径 ℓ の円周は 2πℓ, 中心角 = 360° × 2πr/(2πℓ), = 360° × r/ℓ]
+      - part: わけ
+        text: 円錐 P の底面の半径を r、高さを h とします。P と相似で、相似比が 1:k の円錐 Q の体積が、P の体積の k³ 倍になることを証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M62 62 L42 110 A20 6.4 0 0 0 82 110 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="62" y1="62" x2="42" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62" y1="62" x2="82" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><path d="M42 110 A20 6.4 0 0 0 82 110" stroke="currentColor" stroke-width="2" fill="none"/><path d="M42 110 A20 6.4 0 0 1 82 110" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="62" y1="62" x2="62" y2="110" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="62" y1="110" x2="82" y2="110" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="72" y="127.6" font-size="12" text-anchor="middle">r</text><text x="58" y="90.2" font-size="12" text-anchor="end">h</text><text x="62" y="57.2" font-size="12" text-anchor="middle">P</text><path d="M165 33.2 L133 110 A32 10.2 0 0 0 197 110 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="165" y1="33.2" x2="133" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165" y1="33.2" x2="197" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><path d="M133 110 A32 10.2 0 0 0 197 110" stroke="currentColor" stroke-width="2" fill="none"/><path d="M133 110 A32 10.2 0 0 1 197 110" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="165" y1="33.2" x2="165" y2="110" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="165" y1="110" x2="197" y2="110" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="181" y="131.4" font-size="12" text-anchor="middle">kr</text><text x="161" y="75.8" font-size="12" text-anchor="end">kh</text><text x="165" y="28.4" font-size="12" text-anchor="middle">Q</text></svg>'
+        explain: 例：「相似な立体では、対応する長さはすべて k 倍になるので、Q の底面の半径は kr、高さは kh。P の体積は 1/3 × π × r² × h。Q の体積は 1/3 × π × (kr)² × kh = 1/3 × π × k²r² × kh = k³ × (1/3 × π × r² × h)。よって Q の体積は P の体積の k³ 倍。」と書ければよい。① 相似比から、半径と高さをどちらも k 倍と文字で表している、② 体積の式に入れて、指数法則（A-009）で k³ をまとめている、③ P の体積の式と見くらべて結んでいる、の 3 点を見る。k = 2 のような例だけで 8 倍と出したら、例ではすべての k について示せないことを話す。表面積が k² 倍になることも、同じように示せる。
+        hints:
+          - 相似比が 1:k のとき、Q の半径と高さは P の何倍でしょう。
+          - Q の体積を、文字 r、h、k を使って式に書きましょう。
+          - 式を、k³ × （P の体積）の形に変形しましょう。
+        paths:
+          - [Q の半径 kr、高さ kh, Q の体積 = 1/3 × π × (kr)² × kh, = k³ × 1/3 × π × r² × h, P の体積の k³ 倍]
+      - part: 今日
+        text: EF = 4 cm、FG = 4 cm、AE = 7 cm の直方体の対角線 AG は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="85.4" y1="35.9" x2="133.5" y2="35.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="133.5" y1="35.9" x2="154.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="20" x2="106.5" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.5" y1="20" x2="85.4" y2="35.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.4" y1="120" x2="133.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="133.5" y1="120" x2="154.6" y2="104.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="104.1" x2="106.5" y2="104.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="106.5" y1="104.1" x2="85.4" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="85.4" y1="35.9" x2="85.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="133.5" y1="35.9" x2="133.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="20" x2="154.6" y2="104.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.5" y1="20" x2="106.5" y2="104.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="85.4" y1="35.9" x2="154.6" y2="104.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="85.4" y1="120" x2="154.6" y2="104.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="109.4" y="137.2" font-size="12" text-anchor="middle">4 cm</text><text x="152" y="124.2" font-size="12" text-anchor="start">4 cm</text><text x="79.4" y="82.2" font-size="12" text-anchor="end">7 cm</text><text x="76.4" y="34.1" font-size="12" text-anchor="middle">A</text><text x="139.5" y="49.1" font-size="12" text-anchor="middle">B</text><text x="162.6" y="18.2" font-size="12" text-anchor="middle">C</text><text x="102.5" y="15.2" font-size="12" text-anchor="middle">D</text><text x="76.4" y="130.2" font-size="12" text-anchor="middle">E</text><text x="137.5" y="134.2" font-size="12" text-anchor="middle">F</text><text x="163.6" y="112.3" font-size="12" text-anchor="middle">G</text><text x="97.5" y="111.3" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 9
+        check: "[d for d in range(1, 20) if d * d == 4 * 4 + 4 * 4 + 7 * 7][0]"
+        hints:
+          - 対角線は √(たて² + 横² + 高さ²) です。
+          - 4² + 4² + 7² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [16 + 16 + 49 = 81, AG = 9 cm]
+      - part: 今日
+        text: 底面の半径が 4 cm、母線の長さが 10 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 8 L54.5 29.3 A68.9 68.9 0 0 0 185.5 29.3 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="104.4" r="27.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="8" r="2.5" fill="currentColor"/><text x="79.2" y="22.8" font-size="12" text-anchor="end">10 cm</text><line x1="120" y1="104.4" x2="147.6" y2="104.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="151.6" y="108.6" font-size="12" text-anchor="start">4 cm</text></svg>'
+        answer: 144
+        check: "Fraction(360 * 4, 10)"
+        hints:
+          - 中心角 = 360° × 半径/母線 です。
+          - 4/10 を約分しましょう。
+          - 360 にその分数をかけましょう。
+        paths:
+          - [360° × 4/10, 360° × 2/5, 144°]
+    extra:
+      - part: 今日
+        text: 立方体の対角線の長さが 6√3 cm です。この立方体の 1 辺は何 cm ですか。
+        answer: 6
+        check: "[a for a in range(1, 20) if 3 * a * a == 6 * 6 * 3][0]"
+        hints:
+          - 1 辺を a cm とすると、対角線は √(a² + a² + a²) です。
+          - √(3a²) = a√3 です。
+          - 1 辺を a とした対角線の式と、6√3 cm を見くらべましょう。
+        paths:
+          - [対角線 = √(3a²) = a√3, a√3 = 6√3, a = 6 cm]
+      - part: 今日
+        text: 相似な 2 つの円錐があり、相似比は 1:2 です。小さいほうの体積が 5π cm³ のとき、大きいほうの体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        answer: 40
+        check: "5 * 2 ** 3"
+        hints:
+          - 体積の比は、相似比の数をそれぞれ 3 乗した比です。
+          - 1³:2³ は何:何でしょう。
+          - 大きいほうは小さいほうの何倍でしょう。
+        paths:
+          - ["体積の比 1:8", 5 × 8 = 40, 40]
+      - part: 今日
+        text: 円錐の展開図で、側面のおうぎ形の中心角が 90°、母線の長さが 8 cm です。底面の半径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 8 L66.3 61.7 A76 76 0 0 0 173.7 61.7 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="103" r="19" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="8" r="2.5" fill="currentColor"/><text x="85.1" y="39.1" font-size="12" text-anchor="end">8 cm</text></svg>'
+        answer: 2
+        check: "Fraction(8 * 90, 360)"
+        hints:
+          - 中心角 = 360° × 半径/母線 です。
+          - 90° は 360° の何分の 1 でしょう。
+          - 半径は母線の同じ分です。
+        paths:
+          - [90/360 = 1/4, 半径 = 8 × 1/4 = 2 cm]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 図の立方体を、3 つの頂点 A、C、G を通る平面で切りました。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正方形, 長方形, ひし形]
+        answer: 長方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 4, 0)))"
+        hints:
+          - 同じ面の上にある 2 つの点は、まっすぐ結びます。
+          - 向かい合う平行な面にできる切り口の線は、平行になります。
+          - 切り口の 4 つの辺の長さをくらべましょう。
+        paths:
+          - [切り口は A、C、G、E を通る, AC と EG は面の対角線、AE と CG は辺, 角はどれも直角で、となりの辺の長さはちがう, 長方形]
+      - part: 思い出す
+        text: 底面の半径が 2 cm、高さが 5 cm の円柱の表面積は □π cm² です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M89.4 32.7 L89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1 L150.6 32.7 A30.6 9.8 0 0 1 89.4 32.7 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><ellipse cx="120" cy="32.7" rx="30.6" ry="9.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="89.4" y1="32.7" x2="89.4" y2="109.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150.6" y1="32.7" x2="150.6" y2="109.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M89.4 109.1 A30.6 9.8 0 0 1 150.6 109.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="32.7" r="2.5" fill="currentColor"/><line x1="120" y1="32.7" x2="150.6" y2="32.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.6" y="21.1" font-size="12" text-anchor="start">2 cm</text><text x="156.6" y="75.1" font-size="12" text-anchor="start">5 cm</text></svg>'
+        answer: 28
+        check: "2 * 2 * 2 + 2 * 2 * 5"
+        hints:
+          - 表面積 = 底面積 × 2 + 側面積 です。
+          - 側面は、たてが高さ、横が底面の円周の長方形です。
+          - 底面の円周は 4π cm です。
+        paths:
+          - [底面 4π × 2 = 8π, 側面 5 × 4π = 20π, 8π + 20π = 28π, 28]
+      - part: 今日
+        text: 1 辺 6 cm の立方体を、3 つの頂点 A、C、F を通る平面で切りました。切り口の正三角形の 1 辺はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="142.8,124 61.6,42.9 178.4,16" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="142.8" y1="124" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="61.6" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="178.4" y1="16" x2="142.8" y2="124" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><text x="102.2" y="139.8" font-size="11" text-anchor="middle">6 cm</text></svg>'
+        choices: [6, 6√3, 6√2]
+        answer: 6√2
+        check: "[c for c, v in {'6': 6, '6√3': 6 * math.sqrt(3), '6√2': 6 * math.sqrt(2)}.items() if math.isclose(v, math.sqrt(6 * 6 + 6 * 6))][0]"
+        hints:
+          - 切り口の辺 AC は、どの面の対角線でしょう。
+          - 正方形の対角線は、直角二等辺三角形の斜辺です。
+          - AC² = 6² + 6² です。
+        paths:
+          - [AC は面 ABCD の対角線, AC² = 72, AC = 6√2 cm]
+      - part: 今日
+        text: 図の直角三角形を、直線 ℓ を軸として 1 回転させてできる立体の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="95.8,118.3 144.2,118.3 95.8,21.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="95.8" y1="128" x2="95.8" y2="12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="8 3 2 3"/><text x="103.8" y="20.2" font-size="12" text-anchor="middle">ℓ</text><text x="120" y="134.5" font-size="12" text-anchor="middle">3 cm</text><text x="87.8" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        answer: 18
+        check: "Fraction(3 * 3 * 6, 3)"
+        hints:
+          - 回転させると、どんな立体ができるでしょう。
+          - 底面の半径と高さは何 cm でしょう。
+          - 円錐の体積 = 底面積 × 高さ × 1/3 です。
+        paths:
+          - [半径 3 cm、高さ 6 cm の円錐, 9π × 6 × 1/3 = 18π, 18]
+      - part: 今日
+        text: 正十二面体は、合同な正五角形の面が 12 あり、どの頂点にも 3 つの面が集まっています。頂点は全部でいくつありますか。
+        answer: 20
+        check: "Fraction(12 * 5, 3)"
+        hints:
+          - 面をばらばらにすると、正五角形の頂点は全部でいくつあるでしょう。
+          - 組み立てると、1 つの頂点にいくつの面の頂点が集まるでしょう。
+          - 全部の数を、集まる数でわりましょう。
+        paths:
+          - [12 × 5 = 60, 1 つの頂点に 3 つ集まる, 60 ÷ 3 = 20]
+          - [辺は 12 × 5 ÷ 2 = 30, 頂点 − 辺 + 面 = 2（オイラーの多面体定理）, 頂点 = 2 + 30 − 12 = 20]
+        note: 頂点 − 辺 + 面 = 2（オイラーの多面体定理）は、へこみのない多面体ならいつもなりたつ。位相幾何学の入口になる。
+      - part: 挑戦
+        text: 球が円柱にぴったり入っています（球の直径、円柱の高さ、円柱の底面の直径が等しい）。球の体積は、円柱の体積の何倍ですか。分数で答えましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="46" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M74 70 A46 13.8 0 0 0 166 70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74 70 A46 13.8 0 0 1 166 70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><ellipse cx="120" cy="24" rx="46" ry="13.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="74" y1="24" x2="74" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166" y1="24" x2="166" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74 116 A46 13.8 0 0 0 166 116" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74 116 A46 13.8 0 0 1 166 116" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 2/3
+        check: "Fraction(4, 3) / (1 * 1 * 2)"
+        hints:
+          - 球の半径を r として、円柱の底面の半径と高さを r で表しましょう。
+          - 球の体積と円柱の体積を、r と π を使って書きましょう。
+          - 球の体積 ÷ 円柱の体積 を計算しましょう。
+        paths:
+          - [円柱は半径 r、高さ 2r, 円柱 = 2πr³、球 = 4/3 × πr³, 4/3 ÷ 2 = 2/3 倍]
+        note: アルキメデスが墓にきざませたといわれる関係。球の表面積 4πr² も、円柱の側面積 2πr × 2r と等しい。
+    extra:
+      - part: 今日
+        text: 1 辺 4 cm の立方体を、4 つの頂点 A、C、G、E を通る平面で切りました。切り口の長方形 AEGC の面積はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="61.6,124 61.6,42.9 178.4,16 178.4,97.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="178.4" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><text x="102.2" y="139.8" font-size="11" text-anchor="middle">4 cm</text></svg>'
+        choices: [16, 16√2, 32]
+        answer: 16√2
+        check: "[c for c, v in {'16': 16, '16√2': 16 * math.sqrt(2), '32': 32}.items() if math.isclose(v, 4 * math.sqrt(4 * 4 + 4 * 4))][0]"
+        hints:
+          - 長方形 AEGC のたては AE、横は AC です。
+          - AC は正方形の対角線です。
+          - 面積 = AE × AC です。
+        paths:
+          - [AC = 4√2 cm, 4 × 4√2 = 16√2 cm²]
+      - part: 今日
+        text: 図の長方形を、直線 ℓ を軸として 1 回転させてできる立体の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,90 170,90 170,50 70,50" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="70" y1="102" x2="70" y2="38" stroke="currentColor" stroke-width="1.2" stroke-dasharray="8 3 2 3"/><text x="78" y="46.2" font-size="12" text-anchor="middle">ℓ</text><text x="120" y="106.2" font-size="12" text-anchor="middle">5 cm</text><text x="62" y="74.2" font-size="12" text-anchor="end">2 cm</text></svg>'
+        answer: 50
+        check: "5 * 5 * 2"
+        hints:
+          - 回転させると、どんな立体ができるでしょう。
+          - 底面の半径と高さは何 cm でしょう。軸からいちばん遠い辺が半径になります。
+          - 円柱の体積 = 底面積 × 高さ です。
+        paths:
+          - [半径 5 cm、高さ 2 cm の円柱, 25π × 2 = 50π, 50]
+      - part: 今日
+        text: 正八面体は、合同な正三角形の面が 8 あり、どの頂点にも 4 つの面が集まっています。頂点はいくつありますか。
+        answer: 6
+        check: "Fraction(8 * 3, 4)"
+        hints:
+          - 面をばらばらにすると、正三角形の頂点は全部でいくつあるでしょう。
+          - 1 つの頂点に、いくつの面の頂点が集まるでしょう。
+          - 全部の数を、集まる数でわりましょう。
+        paths:
+          - [8 × 3 = 24, 1 つの頂点に 4 つ集まる, 24 ÷ 4 = 6]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 図の直方体で、辺 AD とねじれの位置にある辺は何本ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="49.7" y1="42.1" x2="161" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="190.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="79" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="49.7" y2="42.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.7" y1="120" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="120" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="97.9" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="79" y1="97.9" x2="49.7" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="49.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161" y1="42.1" x2="161" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.3" y1="20" x2="190.3" y2="97.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79" y1="20" x2="79" y2="97.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="49.7" y1="42.1" x2="79" y2="20" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="40.7" y="40.3" font-size="12" text-anchor="middle">A</text><text x="167" y="55.3" font-size="12" text-anchor="middle">B</text><text x="198.3" y="18.2" font-size="12" text-anchor="middle">C</text><text x="75" y="15.2" font-size="12" text-anchor="middle">D</text><text x="40.7" y="130.2" font-size="12" text-anchor="middle">E</text><text x="165" y="134.2" font-size="12" text-anchor="middle">F</text><text x="199.3" y="106.1" font-size="12" text-anchor="middle">G</text><text x="70" y="105.1" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 4
+        check: "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (1, 0, 1), 'C': (1, 1, 1), 'D': (0, 1, 1), 'E': (0, 0, 0), 'F': (1, 0, 0), 'G': (1, 1, 0), 'H': (0, 1, 0)}, ['AB', 'BC', 'CD', 'DA', 'EF', 'FG', 'GH', 'HE', 'AE', 'BF', 'CG', 'DH'], 'A', 'D')"
+        hints:
+          - AD と平行な辺と、AD と交わる辺を、先に除きましょう。
+          - AD と交わる辺は、点 A か点 D を通ります。
+          - 残った辺が、ねじれの位置にある辺です。
+        paths:
+          - [平行な辺 BC、FG、EH, 交わる辺 AB、AE、DC、DH, 残りの BF、CG、EF、HG の 4 本]
+      - part: 今日
+        text: 底面の半径が 4 cm、高さが 9 cm の円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 23.8 L77.2 120.2 A42.8 13.7 0 0 0 162.8 120.2 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="23.8" x2="77.2" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="23.8" x2="162.8" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M77.2 120.2 A42.8 13.7 0 0 0 162.8 120.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M77.2 120.2 A42.8 13.7 0 0 1 162.8 120.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="120.2" r="2.5" fill="currentColor"/><line x1="120" y1="23.8" x2="120" y2="120.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,113.2 127,113.2 127,120.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="120.2" x2="162.8" y2="120.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141.4" y="136.2" font-size="12" text-anchor="middle">4 cm</text><text x="115" y="82.2" font-size="12" text-anchor="end">9 cm</text></svg>'
+        answer: 48
+        check: "Fraction(4 * 4 * 9, 3)"
+        hints:
+          - 円錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 底面積は 16π cm² です。
+          - 16 × 9 × 1/3 を計算しましょう。
+        paths:
+          - [16π × 9 × 1/3 = 48π, 48]
+      - part: 今日
+        text: 半径 6 cm の球の表面積は □π cm² です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M62 70 A58 17.4 0 0 0 178 70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M62 70 A58 17.4 0 0 1 178 70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><line x1="120" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="149" y="66.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 144
+        check: "4 * 6 * 6"
+        hints:
+          - 球の表面積 = 4 × π × 半径² です。
+          - 6² を先に計算しましょう。
+          - 4 をかけましょう。
+        paths:
+          - [6² = 36, 4 × 36 = 144, 144π, 144]
+      - part: 今日
+        text: EF = 6 cm、FG = 2 cm、AE = 9 cm の直方体の対角線 AG は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="84.4" y1="26.9" x2="146.5" y2="26.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.5" y1="26.9" x2="155.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.6" y1="20" x2="93.5" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.5" y1="20" x2="84.4" y2="26.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.4" y1="120" x2="146.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.5" y1="120" x2="155.6" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.6" y1="113.1" x2="93.5" y2="113.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="93.5" y1="113.1" x2="84.4" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="84.4" y1="26.9" x2="84.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.5" y1="26.9" x2="146.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.6" y1="20" x2="155.6" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.5" y1="20" x2="93.5" y2="113.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="84.4" y1="26.9" x2="155.6" y2="113.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="84.4" y1="120" x2="155.6" y2="113.1" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><text x="115.5" y="137.2" font-size="12" text-anchor="middle">6 cm</text><text x="159" y="128.8" font-size="12" text-anchor="start">2 cm</text><text x="78.4" y="77.6" font-size="12" text-anchor="end">9 cm</text><text x="75.4" y="25.1" font-size="12" text-anchor="middle">A</text><text x="152.5" y="40.1" font-size="12" text-anchor="middle">B</text><text x="163.6" y="18.2" font-size="12" text-anchor="middle">C</text><text x="89.5" y="15.2" font-size="12" text-anchor="middle">D</text><text x="75.4" y="130.2" font-size="12" text-anchor="middle">E</text><text x="150.5" y="134.2" font-size="12" text-anchor="middle">F</text><text x="164.6" y="121.3" font-size="12" text-anchor="middle">G</text><text x="84.5" y="120.3" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 11
+        check: "[d for d in range(1, 30) if d * d == 6 * 6 + 2 * 2 + 9 * 9][0]"
+        hints:
+          - 対角線は √(たて² + 横² + 高さ²) です。
+          - 6² + 2² + 9² を計算しましょう。
+          - 2 乗してその数になる正の数を求めましょう。
+        paths:
+          - [36 + 4 + 81 = 121, AG = 11 cm]
+      - part: 今日
+        text: 正四角錐 O-ABCD の底面は 1 辺 4 cm の正方形で、OA = OB = OC = OD = 6 cm です。M を底面の対角線の交点とするとき、高さ OM はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,14 65.9,126 141.1,126" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="120,14 141.1,126 174.1,101.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="65.9" y1="126" x2="141.1" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="126" x2="174.1" y2="101.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="14" x2="65.9" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="14" x2="141.1" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="14" x2="174.1" y2="101.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="101.1" x2="98.9" y2="101.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="98.9" y1="101.1" x2="65.9" y2="126" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="14" x2="98.9" y2="101.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="14" x2="120" y2="113.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="113.6" r="2.2" fill="currentColor"/><text x="103.5" y="143.2" font-size="12" text-anchor="middle">4 cm</text><text x="138.5" y="74.2" font-size="12" text-anchor="start">6 cm</text><text x="120" y="9.2" font-size="12" text-anchor="middle">O</text><text x="57.9" y="138.2" font-size="12" text-anchor="middle">A</text><text x="149.1" y="138.2" font-size="12" text-anchor="middle">B</text><text x="183.1" y="103.3" font-size="12" text-anchor="middle">C</text><text x="89.9" y="103.3" font-size="12" text-anchor="middle">D</text></svg>'
+        choices: [2√5, 4√2, 2√7]
+        answer: 2√7
+        check: "[c for c, v in {'2√5': 2 * math.sqrt(5), '4√2': 4 * math.sqrt(2), '2√7': 2 * math.sqrt(7)}.items() if math.isclose(v, math.sqrt(6 * 6 - (4 * 4 + 4 * 4) / 4))][0]"
+        hints:
+          - AM は対角線 AC の半分です。
+          - AM² は何 cm² でしょう。
+          - OM² = OA² − AM² です。
+        paths:
+          - [AC = 4√2 で AM = 2√2, AM² = 8, OM² = 36 − 8 = 28, OM = 2√7 cm]
+      - part: 今日
+        text: 底面の半径が 4 cm、母線の長さが 6 cm の円錐の表面積は □π cm² です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 35.4 L55 108.6 A65 20.8 0 0 0 185 108.6 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="35.4" x2="55" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="35.4" x2="185" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 108.6 A65 20.8 0 0 0 185 108.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55 108.6 A65 20.8 0 0 1 185 108.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="108.6" r="2.5" fill="currentColor"/><line x1="120" y1="108.6" x2="185" y2="108.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.5" y="128.2" font-size="12" text-anchor="middle">4 cm</text><text x="160.5" y="70.2" font-size="12" text-anchor="start">6 cm</text></svg>'
+        answer: 40
+        check: "Fraction(6 * 6 * 4, 6) + 4 * 4"
+        hints:
+          - 側面のおうぎ形の弧は、底面の円周と等しくなります。
+          - 側面積は、半径 6 cm の円の面積の 4/6 です。
+          - 底面積もたしましょう。
+        paths:
+          - [側面積 = 36π × 4/6 = 24π, 底面 16π, 24π + 16π = 40π, 40]
+      - part: 今日
+        text: 相似な 2 つの立体の相似比は 3:5 です。小さいほうの体積が 54 cm³ のとき、大きいほうの体積は何 cm³ ですか。
+        answer: 250
+        check: "54 * Fraction(5 ** 3, 3 ** 3)"
+        hints:
+          - 体積の比は、相似比の数をそれぞれ 3 乗した比です。
+          - 3³:5³ は何:何でしょう。
+          - 大きいほうは小さいほうの何倍でしょう。
+        paths:
+          - ["体積の比 27:125", 54 × 125/27 = 250 cm³]
+      - part: 挑戦
+        text: 底面の半径が 3 cm、母線の長さが 12 cm の円錐があります。底面の円周上の点 A から、側面をちょうど 1 周して A にもどるように糸をかけます。糸のいちばん短い長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 21.2 L93.7 122.8 A26.3 8.4 0 0 0 146.3 122.8 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="21.2" x2="93.7" y2="122.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="21.2" x2="146.3" y2="122.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M93.7 122.8 A26.3 8.4 0 0 0 146.3 122.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M93.7 122.8 A26.3 8.4 0 0 1 146.3 122.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="122.8" r="2.5" fill="currentColor"/><line x1="120" y1="122.8" x2="146.3" y2="122.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="133.1" y="136.2" font-size="12" text-anchor="middle">3 cm</text><text x="141.1" y="70.2" font-size="12" text-anchor="start">12 cm</text><circle cx="120" cy="131.2" r="3" fill="currentColor"/><text x="110" y="139.4" font-size="12" text-anchor="middle">A</text></svg>'
+        choices: [24, 12√2, 12√3]
+        answer: 12√2
+        check: "[c for c, v in {'24': 24, '12√2': 12 * math.sqrt(2), '12√3': 12 * math.sqrt(3)}.items() if math.isclose(v, 2 * 12 * math.sin(math.radians(360 * 3 / 12 / 2)))][0]"
+        hints:
+          - 側面の展開図（おうぎ形）をかきましょう。中心角は何度でしょう。
+          - 糸は、展開図の上で、A ともう一方のはしの点 A′ を結ぶ線分になります。
+          - 中心角 90° のおうぎ形で、A と A′ を結ぶ線分は、直角二等辺三角形の斜辺です。
+        paths:
+          - [中心角 = 360° × 3/12 = 90°, 展開図で A と A′ を結ぶ, 直角をはさむ 2 辺が 12 cm の直角二等辺三角形, AA′ = 12√2 cm]
+    extra:
+      - part: 今日
+        text: 1 辺 5 cm の立方体の対角線の長さはどれですか。
+        choices: [5√2, 15, 5√3]
+        answer: 5√3
+        check: "[c for c, v in {'5√2': 5 * math.sqrt(2), '15': 15, '5√3': 5 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(5 * 5 * 3))][0]"
+        hints:
+          - 対角線は √(たて² + 横² + 高さ²) です。
+          - 5² + 5² + 5² を計算しましょう。
+          - √75 を a√b の形にしましょう。
+        paths:
+          - [25 × 3 = 75, √75 = 5√3 cm]
+      - part: 今日
+        text: 底面が、直角をはさむ 2 辺が 3 cm と 4 cm の直角三角形で、高さが 5 cm の三角錐の体積は何 cm³ ですか。
+        answer: 10
+        check: "Fraction(3 * 4 * 5, 2 * 3)"
+        hints:
+          - 底面の直角三角形の面積を求めましょう。
+          - 角錐の体積 = 底面積 × 高さ × 1/3 です。
+          - 6 × 5 × 1/3 を計算しましょう。
+        paths:
+          - [底面積 3 × 4 ÷ 2 = 6, 6 × 5 × 1/3 = 10 cm³]
+      - part: 今日
+        text: 図の三角柱 ABC-DEF で、辺 AD とねじれの位置にある辺は何本ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="64.1" y1="40.1" x2="175.9" y2="40.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="175.9" y1="40.1" x2="129.6" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.6" y1="16" x2="64.1" y2="40.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.1" y1="124" x2="175.9" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64.1" y1="40.1" x2="64.1" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="175.9" y1="40.1" x2="175.9" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.6" y1="16" x2="129.6" y2="99.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="175.9" y1="124" x2="129.6" y2="99.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="129.6" y1="99.9" x2="64.1" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="55.1" y="40.3" font-size="12" text-anchor="middle">A</text><text x="184.9" y="40.3" font-size="12" text-anchor="middle">B</text><text x="129.6" y="11.2" font-size="12" text-anchor="middle">C</text><text x="55.1" y="134.2" font-size="12" text-anchor="middle">D</text><text x="184.9" y="134.2" font-size="12" text-anchor="middle">E</text><text x="137.6" y="110.1" font-size="12" text-anchor="middle">F</text></svg>'
+        answer: 2
+        check: "(lambda V, E, a, b: len([e for e in E if (lambda u, w, t: u[0] * (w[1] * t[2] - w[2] * t[1]) - u[1] * (w[0] * t[2] - w[2] * t[0]) + u[2] * (w[0] * t[1] - w[1] * t[0]))([V[b][i] - V[a][i] for i in range(3)], [V[e[1]][i] - V[e[0]][i] for i in range(3)], [V[e[0]][i] - V[a][i] for i in range(3)]) != 0]))({'A': (0, 0, 1), 'B': (2, 0, 1), 'C': (1, 2, 1), 'D': (0, 0, 0), 'E': (2, 0, 0), 'F': (1, 2, 0)}, ['AB', 'BC', 'CA', 'DE', 'EF', 'FD', 'AD', 'BE', 'CF'], 'A', 'D')"
+        hints:
+          - AD と平行な辺はどれでしょう。
+          - AD と交わる辺は、点 A か点 D を通ります。
+          - 残った辺が、AD と同じ平面の上にないかを確かめましょう。
+        paths:
+          - [平行な辺 BE、CF, 交わる辺 AB、AC、DE、DF, 残りの BC、EF の 2 本]
