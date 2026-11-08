@@ -108,6 +108,7 @@ items:
   units:
   - G-011
   - G-021
+  - G-052
 - id: V-07
   field: 検証で足した論題
   topic: 外積

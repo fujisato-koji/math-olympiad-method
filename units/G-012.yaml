@@ -1,0 +1,865 @@
+# G-012 等積変形と面積比
+#
+# 書き方は N-001 の頭の注のとおり。
+# 柱は 2 つ：① 底辺が同じで、頂点が底辺に平行な直線の上にある三角形は、面積が同じ（等積変形）。
+#   ② 高さが同じ三角形の面積の比は、底辺の比と同じ。底辺が同じなら高さの比（三角形の中を 2 回分ける形で使う）。
+# ことば：等積変形（面積を変えずに形を変える）、平行（G-006）、底辺と高さ（G-008）、比 a:b と比を簡単にする（A-005）、台形、対角線。
+#   「平行な 2 本の直線のはばはどこでも同じ」は G-006 と G-008（台形の挑戦）で見たことを使う。
+# 相似を使う面積比（形が同じ三角形の辺の比、ちょうちょ形の相似）は G-013 と G-020 で扱うので、ここでは使わない。
+#   台形の対角線の交わる点が対角線を AD:BC に分けること（5 日目と 8 日目の挑戦）も、面積の比だけで導く。
+# 前提の計算は A-005 まで（N-074 のかけ算の筆算と N-075 のわり算の筆算を含む）。面積は 100 まで、比は簡単にした形。
+#   比の答えは選ぶ問題にし、YAML では引用符で囲む。check は Fraction で約分してから '%d:%d' % (分子, 分母) で比の文字を作る（A-005 と同じ）。
+# 図は svg（D-040）。長さの比はおおよそ合わせた（面積の数を文で与える問題では、図の面積はその数に合っていない）。
+#   色のついた三角形が、たずねている三角形。平行な直線は ア、イ と名前をつけた。方眼の図の 1 目は 1 cm。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 平行な直線の間の三角形（等積変形）　2 日目 等積変形で面積を求める（平行四辺形・長方形の中の三角形、折れ線をまっすぐにする）
+#   3 日目 高さが同じ三角形の面積の比 = 底辺の比　4 日目 三角形の中を 2 回分ける　5 日目 面積の比から長さを求める、台形の対角線
+#   6 日目 わけ（等積変形、面積の比 = 底辺の比、台形の中の等しい三角形）　7 日目 G-008（面積）・A-005（比と割合）と混ぜる　8 日目 確認
+# check：面積と比の式。方眼の上の点を選ぶ問題は、頂点の座標から面積を出す式（座標の公式）。
+
+id: G-012
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 直線 ア と イ は平行です。三角形 ABC と三角形 DBC（点線）の面積をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="37.6" x2="210" y2="37.6" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="41.8" font-size="12" text-anchor="start">ア</text><line x1="30" y1="102.4" x2="210" y2="102.4" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="106.6" font-size="12" text-anchor="start">イ</text><polygon points="73.8,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="73.8,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="171.1,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="201.9" y1="37.6" x2="201.9" y2="102.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="73.8" y="31.8" font-size="12" text-anchor="middle">A</text><text x="46.5" y="118.6" font-size="12" text-anchor="middle">B</text><text x="149.8" y="118.6" font-size="12" text-anchor="middle">C</text><text x="171.1" y="31.8" font-size="12" text-anchor="middle">D</text><text x="98.1" y="119.6" font-size="12" text-anchor="middle">6 cm</text><text x="197.9" y="74.2" font-size="12" text-anchor="end">4 cm</text><polyline points="201.9,94.4 193.9,94.4 193.9,102.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 平行な 2 本の直線のはばは、どこでも同じです。三角形 ABC も三角形 DBC も、底辺は BC で 6 cm、高さは A や D から イ に直角にひいた長さで、どちらも ア と イ のはばの 4 cm です。面積はどちらも 6 × 4 ÷ 2 = 12 cm² で同じです。頂点を、底辺に平行な直線の上で動かしても、三角形の面積は変わりません。このように、面積を変えずに形を変えることを等積変形といいます。
+      - part: 思い出す
+        text: 底辺 7 cm、高さ 6 cm の三角形の面積は何 cm² ですか。
+        answer: 21
+        check: "7 * 6 // 2"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 だね。
+          - 6 を先に 2 でわってもよいよ。
+          - 7 × 3 を計算しよう。
+        paths:
+          - [6 ÷ 2 = 3, 7 × 3 = 21, 21 cm²]
+      - part: 思い出す
+        text: 8:12 を簡単にした比はどれですか。
+        choices: ["2:3", "3:2", "4:6", "3:4"]
+        answer: "2:3"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(8, 12))"
+        hints:
+          - 2 つの数を、同じ数でわろう。
+          - 8 と 12 をどちらもわり切れる、いちばん大きい数は何かな。
+          - 4 でわってみよう。
+        paths:
+          - [8 と 12 を 4 でわる, 2:3]
+        note: 4:6 も等しい比だが、まだ簡単にできる。
+      - part: 今日
+        text: 直線 ア と イ は平行で、はばは 6 cm です。三角形 ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="25.4" x2="210" y2="25.4" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="29.6" font-size="12" text-anchor="start">ア</text><line x1="30" y1="114.6" x2="210" y2="114.6" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="118.8" font-size="12" text-anchor="start">イ</text><polygon points="174.3,25.4 47.9,114.6 122.2,114.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="174.3,25.4 47.9,114.6 122.2,114.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="202.6" y1="25.4" x2="202.6" y2="114.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="174.3" y="19.6" font-size="12" text-anchor="middle">A</text><text x="44.9" y="130.8" font-size="12" text-anchor="middle">B</text><text x="125.2" y="130.8" font-size="12" text-anchor="middle">C</text><text x="85" y="131.8" font-size="12" text-anchor="middle">5 cm</text><text x="198.6" y="74.2" font-size="12" text-anchor="end">6 cm</text><polyline points="202.6,106.6 194.6,106.6 194.6,114.6" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 15
+        check: "5 * 6 // 2"
+        hints:
+          - 底辺は BC だね。
+          - 高さは、A から イ に直角にひいた長さだよ。三角形の外に出てもよいよ。
+          - 高さは、ア と イ のはばと同じだね。
+        paths:
+          - [底辺 5 cm、高さはば 6 cm, 5 × 6 ÷ 2 = 15, 15 cm²]
+        note: ななめの辺 AB や AC の長さを高さと思いやすい。高さは イ に直角な長さ。
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。三角形 PBC、QBC、RBC のうち、三角形 ABC と面積が同じものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="36.8" y1="122" x2="36.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="57.6" y1="122" x2="57.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="78.4" y1="122" x2="78.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="99.2" y1="122" x2="99.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140.8" y1="122" x2="140.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="161.6" y1="122" x2="161.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="182.4" y1="122" x2="182.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="203.2" y1="122" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="122" x2="203.2" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="101.2" x2="203.2" y2="101.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="80.4" x2="203.2" y2="80.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="59.6" x2="203.2" y2="59.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="38.8" x2="203.2" y2="38.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="18" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="78.4,38.8 57.6,101.2 140.8,101.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="78.4,38.8 57.6,101.2 140.8,101.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="68.3" y="38.7" font-size="12" text-anchor="middle">A</text><text x="48.2" y="111.1" font-size="12" text-anchor="middle">B</text><text x="144.3" y="115.8" font-size="12" text-anchor="middle">C</text><text x="171" y="37.3" font-size="12" text-anchor="middle">P</text><text x="151.8" y="63.8" font-size="12" text-anchor="middle">Q</text><text x="191.2" y="15.6" font-size="12" text-anchor="middle">R</text><circle cx="161.6" cy="38.8" r="2.6" fill="currentColor"/><circle cx="140.8" cy="59.6" r="2.6" fill="currentColor"/><circle cx="182.4" cy="18" r="2.6" fill="currentColor"/></svg>'
+        choices: [三角形 PBC, 三角形 QBC, 三角形 RBC]
+        answer: 三角形 PBC
+        check: "[s for s, q in (('三角形 PBC', (6, 4)), ('三角形 QBC', (5, 3)), ('三角形 RBC', (7, 5))) if abs((5 - 1) * (q[1] - 1) - (1 - 1) * (q[0] - 1)) == abs((5 - 1) * (4 - 1) - (1 - 1) * (2 - 1))][0]"
+        hints:
+          - どの三角形も、底辺は BC で同じだね。
+          - 面積が同じになるのは、高さが同じときだよ。
+          - A と同じ高さ（BC から同じ目の数）にある点はどれかな。
+        paths:
+          - [底辺はどれも BC, A は BC から 3 目上, P も 3 目上, 三角形 PBC]
+        note: 見た目の形が似ている三角形を選びやすい。形ではなく、底辺と高さで決まる。
+      - part: 今日
+        text: 直線 ア と イ は平行です。三角形 ABC の面積は 21 cm²、BC は 6 cm です。ア と イ のはばは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="48.7" y1="18" x2="191.3" y2="18" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="195.3" y="22.2" font-size="12" text-anchor="start">ア</text><line x1="48.7" y1="122" x2="191.3" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="195.3" y="126.2" font-size="12" text-anchor="start">イ</text><polygon points="96.2,18 66.5,122 155.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="96.2,18 66.5,122 155.7,122" stroke="currentColor" stroke-width="2" fill="none"/><text x="96.2" y="12.2" font-size="12" text-anchor="middle">A</text><text x="63.5" y="138.2" font-size="12" text-anchor="middle">B</text><text x="158.7" y="138.2" font-size="12" text-anchor="middle">C</text><text x="111.1" y="139.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 7
+        check: "[w for w in range(1, 30) if 6 * w == 21 * 2][0]"
+        hints:
+          - 三角形の高さは、ア と イ のはばと同じだね。
+          - 6 × 高さ ÷ 2 = 21 だよ。
+          - ÷ 2 する前は 21 の 2 倍だね。
+        paths:
+          - [6 × □ ÷ 2 = 21, 6 × □ = 42, □ = 7, 7 cm]
+      - part: 挑戦
+        text: 四角形 ABCD は、AD と BC が平行な台形です。対角線 AC と BD が点 O で交わっています。三角形 ABC の面積は 12 cm²、三角形 OBC の面積は 8 cm² です。三角形 DOC（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="151.2,18 114.8,52.7 198,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="73.2,18 42,122 198,122 151.2,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73.2" y1="18" x2="198" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42" y1="122" x2="151.2" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="69.2" y="12.2" font-size="12" text-anchor="middle">A</text><text x="36" y="136.2" font-size="12" text-anchor="middle">B</text><text x="204" y="136.2" font-size="12" text-anchor="middle">C</text><text x="155.2" y="12.2" font-size="12" text-anchor="middle">D</text><text x="114.8" y="68.9" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 4
+        check: "12 - 8"
+        hints:
+          - 三角形 DBC の面積を考えよう。
+          - 三角形 ABC と三角形 DBC は、底辺 BC が同じで、A と D は BC に平行な AD の上にあるね。
+          - 三角形 DBC から三角形 OBC をのぞくと、何がのこるかな。
+        paths:
+          - [三角形 DBC = 三角形 ABC = 12, 三角形 DOC = 三角形 DBC − 三角形 OBC, 12 − 8 = 4, 4 cm²]
+        note: 三角形 DBC と三角形 ABC の面積が同じことに気づきにくい。底辺 BC を共通にして、頂点が平行線の上にあることを図で指さす。
+    extra:
+      - part: 今日
+        text: 直線 ア と イ は平行で、はばは 8 cm です。三角形 ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="64.1" y1="18" x2="175.9" y2="18" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="179.9" y="22.2" font-size="12" text-anchor="start">ア</text><line x1="64.1" y1="122" x2="175.9" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="179.9" y="126.2" font-size="12" text-anchor="start">イ</text><polygon points="144.7,18 79.7,122 118.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="144.7,18 79.7,122 118.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="169.4" y1="18" x2="169.4" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="144.7" y="12.2" font-size="12" text-anchor="middle">A</text><text x="76.7" y="138.2" font-size="12" text-anchor="middle">B</text><text x="121.7" y="138.2" font-size="12" text-anchor="middle">C</text><text x="99.2" y="139.2" font-size="12" text-anchor="middle">3 cm</text><text x="165.4" y="74.2" font-size="12" text-anchor="end">8 cm</text><polyline points="169.4,114 161.4,114 161.4,122" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 12
+        check: "3 * 8 // 2"
+        hints:
+          - 底辺は BC だね。
+          - 高さは、A から イ に直角にひいた長さだよ。
+          - 高さは、ア と イ のはばと同じだね。
+        paths:
+          - [3 × 8 ÷ 2 = 12, 12 cm²]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。三角形 PBC、QBC、RBC のうち、三角形 ABC と面積が同じものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="36.8" y1="122" x2="36.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="57.6" y1="122" x2="57.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="78.4" y1="122" x2="78.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="99.2" y1="122" x2="99.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140.8" y1="122" x2="140.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="161.6" y1="122" x2="161.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="182.4" y1="122" x2="182.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="203.2" y1="122" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="122" x2="203.2" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="101.2" x2="203.2" y2="101.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="80.4" x2="203.2" y2="80.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="59.6" x2="203.2" y2="59.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="38.8" x2="203.2" y2="38.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="18" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="78.4,38.8 57.6,101.2 120,101.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="78.4,38.8 57.6,101.2 120,101.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="68.4" y="38.4" font-size="12" text-anchor="middle">A</text><text x="48.3" y="111.3" font-size="12" text-anchor="middle">B</text><text x="119.1" y="116.4" font-size="12" text-anchor="middle">C</text><text x="151.8" y="63.8" font-size="12" text-anchor="middle">P</text><text x="191.4" y="15.9" font-size="12" text-anchor="middle">Q</text><text x="171.3" y="37.7" font-size="12" text-anchor="middle">R</text><circle cx="140.8" cy="59.6" r="2.6" fill="currentColor"/><circle cx="182.4" cy="18" r="2.6" fill="currentColor"/><circle cx="161.6" cy="38.8" r="2.6" fill="currentColor"/></svg>'
+        choices: [三角形 PBC, 三角形 QBC, 三角形 RBC]
+        answer: 三角形 RBC
+        check: "[s for s, q in (('三角形 PBC', (5, 3)), ('三角形 QBC', (7, 5)), ('三角形 RBC', (6, 4))) if abs((4 - 1) * (q[1] - 1) - (1 - 1) * (q[0] - 1)) == abs((4 - 1) * (4 - 1) - (1 - 1) * (2 - 1))][0]"
+        hints:
+          - どの三角形も、底辺は BC で同じだね。
+          - 面積が同じになるのは、高さが同じときだよ。
+          - A と同じ高さにある点はどれかな。
+        paths:
+          - [A は BC から 3 目上, R も 3 目上, 三角形 RBC]
+      - part: 今日
+        text: 直線 ア と イ は平行で、はばは 4 cm です。イ の上に底辺 BC をとり、ア の上に頂点 A をとった三角形 ABC の面積は 18 cm² です。BC は何 cm ですか。
+        answer: 9
+        check: "[b for b in range(1, 40) if b * 4 == 18 * 2][0]"
+        hints:
+          - 三角形の高さは、はばの 4 cm だね。
+          - □ × 4 ÷ 2 = 18 だよ。
+          - ÷ 2 する前は 18 の 2 倍だね。
+        paths:
+          - [□ × 4 ÷ 2 = 18, □ × 4 = 36, □ = 9, 9 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 四角形 ABCD は平行四辺形です。点 P は辺 AD の上にあります。三角形 PBC の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="105.8,22.6 30,117.4 181.6,117.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="58.4,22.6 30,117.4 181.6,117.4 210,22.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.8" y1="22.6" x2="30" y2="117.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.8" y1="22.6" x2="181.6" y2="117.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="22.6" x2="210" y2="117.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="181.6" y1="117.4" x2="210" y2="117.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="210,109.4 202,109.4 202,117.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="52.4" y="17.8" font-size="12" text-anchor="middle">A</text><text x="24" y="131.6" font-size="12" text-anchor="middle">B</text><text x="183.6" y="132.6" font-size="12" text-anchor="middle">C</text><text x="216" y="17.8" font-size="12" text-anchor="middle">D</text><text x="105.8" y="17.8" font-size="12" text-anchor="middle">P</text><text x="105.8" y="134.6" font-size="12" text-anchor="middle">8 cm</text><text x="214" y="74.2" font-size="12" text-anchor="start">5 cm</text></svg>'
+        explain: AD と BC は平行なので、P を AD の上で A まで動かしても、三角形 PBC の面積は変わりません（等積変形）。三角形 ABC は、平行四辺形を対角線 AC で 2 つに分けた 1 つなので、平行四辺形の半分です。平行四辺形は 8 × 5 = 40 cm² なので、三角形 PBC は 40 ÷ 2 = 20 cm²。P が AD の上のどこにあっても、三角形 PBC は平行四辺形の半分です。
+      - part: 思い出す
+        text: 平行な 2 本の直線 ア と イ のはばは 4 cm です。イ の上に底辺 9 cm をとり、ア の上に頂点をとった三角形の面積は何 cm² ですか。
+        answer: 18
+        check: "9 * 4 // 2"
+        hints:
+          - 三角形の高さは、ア と イ のはばと同じだね。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 4 を先に 2 でわってもよいよ。
+        paths:
+          - [4 ÷ 2 = 2, 9 × 2 = 18, 18 cm²]
+      - part: 思い出す
+        text: 底辺 6 cm、高さ 7 cm の平行四辺形の面積は何 cm² ですか。
+        answer: 42
+        check: "6 * 7"
+        hints:
+          - 平行四辺形の面積は、底辺 × 高さ だね。
+          - ななめの辺は使わないよ。
+          - 6 × 7 を計算しよう。
+        paths:
+          - [6 × 7 = 42, 42 cm²]
+      - part: 今日
+        text: 長方形 ABCD の辺 AD の上に点 P があります。三角形 PBC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="33.3,18 33.3,122 206.7,122 206.7,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="18" x2="33.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="18" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="25.3" y="13.2" font-size="12" text-anchor="middle">A</text><text x="214.7" y="13.2" font-size="12" text-anchor="middle">D</text><text x="25.3" y="137.2" font-size="12" text-anchor="middle">B</text><text x="214.7" y="137.2" font-size="12" text-anchor="middle">C</text><text x="94" y="13.2" font-size="12" text-anchor="middle">P</text><text x="120" y="139.2" font-size="12" text-anchor="middle">10 cm</text><text x="27.3" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        answer: 30
+        check: "10 * 6 // 2"
+        hints:
+          - P を AD の上で動かしても、三角形 PBC の面積は変わらないね。
+          - 底辺は BC、高さは AB と同じ長さだよ。
+          - 長方形の面積の何分の 1 かな。
+        paths:
+          - [底辺 10 cm、高さ 6 cm, 10 × 6 ÷ 2 = 30, 30 cm²]
+          - [長方形は 60 cm², その半分で 30]
+      - part: 今日
+        text: 長方形 ABCD の中に点 P があります。色のついた 2 つの三角形 PAD と PBC の面積の和は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="102.7,83.9 50.7,18 189.3,18" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="102.7,83.9 50.7,122 189.3,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="50.7,18 50.7,122 189.3,122 189.3,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.7" y1="83.9" x2="50.7" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.7" y1="83.9" x2="189.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.7" y1="83.9" x2="50.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.7" y1="83.9" x2="189.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.7" y="13.2" font-size="12" text-anchor="middle">A</text><text x="197.3" y="13.2" font-size="12" text-anchor="middle">D</text><text x="42.7" y="137.2" font-size="12" text-anchor="middle">B</text><text x="197.3" y="137.2" font-size="12" text-anchor="middle">C</text><text x="102.7" y="100.1" font-size="12" text-anchor="middle">P</text><text x="120" y="139.2" font-size="12" text-anchor="middle">8 cm</text><text x="44.7" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        answer: 24
+        check: "8 * 6 // 2"
+        hints:
+          - 2 つの三角形の底辺は、AD と BC で、どちらも 8 cm だね。
+          - 2 つの高さをたすと、どこの長さになるかな。
+          - 高さの和は AB と同じ 6 cm だよ。
+        paths:
+          - [8 × (上の高さ) ÷ 2 + 8 × (下の高さ) ÷ 2, 高さの和は 6 cm, 8 × 6 ÷ 2 = 24, 24 cm²]
+          - [P を AB と平行に動かしても和は同じ, P を AB の上におくと長方形の半分, 48 ÷ 2 = 24]
+        note: P の位置がわからないので「求められない」と思いやすい。高さの和が いつも 6 cm になることに目を向けさせる。
+      - part: 今日
+        text: 平行四辺形 ABCD の面積は 56 cm² です。点 P は辺 BC の上にあります。色のついた 2 つの三角形 ABP と DPC の面積の和は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="66,25 30,115 84,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="210,25 84,115 174,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="66,25 30,115 174,115 210,25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="115" x2="66" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="115" x2="210" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><text x="60" y="20.2" font-size="12" text-anchor="middle">A</text><text x="24" y="129.2" font-size="12" text-anchor="middle">B</text><text x="176" y="130.2" font-size="12" text-anchor="middle">C</text><text x="216" y="20.2" font-size="12" text-anchor="middle">D</text><text x="84" y="130.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 28
+        check: "56 // 2"
+        hints:
+          - まず、三角形 APD の面積を考えよう。
+          - 三角形 APD は、底辺 AD と高さが平行四辺形と同じだね。
+          - 平行四辺形から三角形 APD をのぞいたのこりが、色のついた部分だよ。
+        paths:
+          - [三角形 APD は平行四辺形の半分で 28, のこりも 56 − 28 = 28, 28 cm²]
+      - part: 挑戦
+        text: 方眼の 1 目は 1 cm です。点 D を通り AC に平行な直線（点線）と、BC をのばした直線が交わる点を E とします。四角形 ABCD の面積は何 cm² ですか。三角形 ABE におきかえて求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="36.8" y1="122" x2="36.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="57.6" y1="122" x2="57.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="78.4" y1="122" x2="78.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="99.2" y1="122" x2="99.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140.8" y1="122" x2="140.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="161.6" y1="122" x2="161.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="182.4" y1="122" x2="182.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="203.2" y1="122" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="122" x2="203.2" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="101.2" x2="203.2" y2="101.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="80.4" x2="203.2" y2="80.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="59.6" x2="203.2" y2="59.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="38.8" x2="203.2" y2="38.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.8" y1="18" x2="203.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="57.6,38.8 36.8,122 140.8,122 120,59.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="57.6,38.8 36.8,122 140.8,122 120,59.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="57.6" y1="38.8" x2="140.8" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="59.6" x2="182.4" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="140.8" y1="122" x2="182.4" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="53.6" y="34" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="140.8" y="137.2" font-size="12" text-anchor="middle">C</text><text x="126" y="55.8" font-size="12" text-anchor="middle">D</text><text x="182.4" y="137.2" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 14
+        check: "abs(1 * 0 - 0 * 4 + 0 * 0 - 5 * 0 + 5 * 3 - 4 * 0 + 4 * 4 - 1 * 3) // 2"
+        hints:
+          - 四角形 ABCD を、対角線 AC で三角形 ABC と三角形 ACD に分けよう。
+          - 三角形 ACD と三角形 ACE は、底辺 AC が同じで、D と E は AC に平行な直線の上にあるね。
+          - 三角形 ABE の底辺 BE と高さを、方眼で数えよう。
+        paths:
+          - [三角形 ACD = 三角形 ACE, 四角形 ABCD = 三角形 ABC + 三角形 ACE = 三角形 ABE, BE は 7 cm、高さは 4 cm, 7 × 4 ÷ 2 = 14, 14 cm²]
+          - [方眼で四角形を三角形と台形に分ける, 合わせて 14 cm²]
+        note: 三角形 ACD と ACE の面積が同じことに気づきにくい。ずっと先で、折れ曲がった土地の境界をまっすぐに引き直すときに使う考え。
+    extra:
+      - part: 今日
+        text: 平行四辺形 ABCD の辺 AD の上に点 P があります。三角形 PBC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="115.7,35.7 30,104.3 184.3,104.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="55.7,35.7 30,104.3 184.3,104.3 210,35.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.7" y1="35.7" x2="30" y2="104.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.7" y1="35.7" x2="184.3" y2="104.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="210" y1="35.7" x2="210" y2="104.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="184.3" y1="104.3" x2="210" y2="104.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="210,96.3 202,96.3 202,104.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="49.7" y="30.9" font-size="12" text-anchor="middle">A</text><text x="24" y="118.5" font-size="12" text-anchor="middle">B</text><text x="186.3" y="119.5" font-size="12" text-anchor="middle">C</text><text x="216" y="30.9" font-size="12" text-anchor="middle">D</text><text x="115.7" y="30.9" font-size="12" text-anchor="middle">P</text><text x="107.1" y="121.5" font-size="12" text-anchor="middle">9 cm</text><text x="214" y="74.2" font-size="12" text-anchor="start">4 cm</text></svg>'
+        answer: 18
+        check: "9 * 4 // 2"
+        hints:
+          - P を A まで動かしても、三角形 PBC の面積は変わらないね。
+          - 三角形 ABC は、平行四辺形の半分だよ。
+          - 平行四辺形の面積は 底辺 × 高さ だね。
+        paths:
+          - [平行四辺形は 9 × 4 = 36, その半分で 18, 18 cm²]
+      - part: 今日
+        text: 長方形 ABCD の中に点 P があります。色のついた 2 つの三角形 PAB と PCD の面積の和は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="145.7,54.6 30,18.6 30,121.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="145.7,54.6 210,121.4 210,18.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="30,18.6 30,121.4 210,121.4 210,18.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.7" y1="54.6" x2="30" y2="18.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.7" y1="54.6" x2="210" y2="18.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.7" y1="54.6" x2="30" y2="121.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.7" y1="54.6" x2="210" y2="121.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="22" y="13.8" font-size="12" text-anchor="middle">A</text><text x="218" y="13.8" font-size="12" text-anchor="middle">D</text><text x="22" y="136.6" font-size="12" text-anchor="middle">B</text><text x="218" y="136.6" font-size="12" text-anchor="middle">C</text><text x="145.7" y="49.8" font-size="12" text-anchor="middle">P</text><text x="120" y="138.6" font-size="12" text-anchor="middle">7 cm</text><text x="24" y="74.2" font-size="12" text-anchor="end">4 cm</text></svg>'
+        answer: 14
+        check: "4 * 7 // 2"
+        hints:
+          - 2 つの三角形の底辺は、AB と CD で、どちらも 4 cm だね。
+          - 2 つの高さをたすと、どこの長さになるかな。
+          - 高さの和は BC と同じ 7 cm だよ。
+        paths:
+          - [底辺はどちらも 4 cm, 高さの和は 7 cm, 4 × 7 ÷ 2 = 14, 14 cm²]
+      - part: 今日
+        text: 四角形 ABCD は、AD と BC が平行な台形です。対角線が点 O で交わっています。三角形 ABC の面積は 20 cm²、三角形 OBC の面積は 12 cm² です。三角形 DOC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="180,25 120,61 210,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="60,25 30,115 210,115 180,25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="25" x2="210" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="115" x2="180" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><text x="56" y="19.2" font-size="12" text-anchor="middle">A</text><text x="24" y="129.2" font-size="12" text-anchor="middle">B</text><text x="216" y="129.2" font-size="12" text-anchor="middle">C</text><text x="184" y="19.2" font-size="12" text-anchor="middle">D</text><text x="120" y="77.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 8
+        check: "20 - 12"
+        hints:
+          - 三角形 DBC の面積を考えよう。
+          - 三角形 ABC と三角形 DBC は、底辺も高さも同じだね。
+          - 三角形 DBC から三角形 OBC をのぞこう。
+        paths:
+          - [三角形 DBC = 三角形 ABC = 20, 20 − 12 = 8, 8 cm²]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 点 D は辺 BC の上にあります。三角形 ABD（色のついた部分）と三角形 ADC の面積の比を考えよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,25 30,115 102,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="84,25 30,115 210,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="25" x2="102" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="84" y="20.2" font-size="12" text-anchor="middle">A</text><text x="23" y="128.2" font-size="12" text-anchor="middle">B</text><text x="217" y="128.2" font-size="12" text-anchor="middle">C</text><text x="102" y="131.2" font-size="12" text-anchor="middle">D</text><text x="66" y="132.2" font-size="12" text-anchor="middle">4 cm</text><text x="156" y="132.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        explain: 底辺を BD と DC とみると、2 つの三角形の高さは、どちらも A から BC に直角にひいた長さで同じです。たとえば高さが 5 cm なら、三角形 ABD は 4 × 5 ÷ 2 = 10 cm²、三角形 ADC は 6 × 5 ÷ 2 = 15 cm² で、面積の比は 10:15 = 2:3。底辺の比 4:6 = 2:3 と同じです。高さが同じ三角形の面積の比は、底辺の比と同じです（わけは 6 日目）。
+      - part: 思い出す
+        text: 30 を 2:3 の比に分けます。小さいほうはいくつですか。
+        answer: 12
+        check: "30 * 2 // (2 + 3)"
+        hints:
+          - 全体を 2 + 3 = 5 つ分とみよう。
+          - 1 つ分は 30 ÷ 5 だね。
+          - 小さいほうは 2 つ分だよ。
+        paths:
+          - [30 ÷ 5 = 6, 6 × 2 = 12]
+      - part: 思い出す
+        text: 平行四辺形 ABCD の面積は 36 cm² です。点 P は辺 AD の上にあります。三角形 PBC の面積は何 cm² ですか。
+        answer: 18
+        check: "36 // 2"
+        hints:
+          - P を A まで動かしても、三角形 PBC の面積は変わらないね。
+          - 三角形 ABC は、平行四辺形の何分の 1 かな。
+          - 36 の半分だよ。
+        paths:
+          - [三角形 PBC = 三角形 ABC, 平行四辺形の半分, 18 cm²]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD と三角形 ADC の面積の比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="75,25 30,115 97.5,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="75,25 30,115 210,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75" y1="25" x2="97.5" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="75" y="20.2" font-size="12" text-anchor="middle">A</text><text x="23" y="128.2" font-size="12" text-anchor="middle">B</text><text x="217" y="128.2" font-size="12" text-anchor="middle">C</text><text x="97.5" y="131.2" font-size="12" text-anchor="middle">D</text><text x="63.8" y="132.2" font-size="12" text-anchor="middle">3 cm</text><text x="153.8" y="132.2" font-size="12" text-anchor="middle">5 cm</text></svg>'
+        choices: ["3:5", "5:3", "3:8", "5:8"]
+        answer: "3:5"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(3, 5))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 高さが同じなら、面積の比は底辺の比と同じだよ。
+          - 底辺は BD と DC だね。
+        paths:
+          - [高さが同じ, 面積の比 = BD:DC, 3:5]
+        note: 三角形 ABC 全体とくらべて 3:8 としやすい。たずねているのは 2 つの三角形どうし。
+      - part: 今日
+        text: 三角形 ABC の面積は 35 cm² です。点 D は辺 BC を BD:DC = 2:5 に分けています。三角形 ABD の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.3,18.6 30,121.4 81.4,121.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="94.3,18.6 30,121.4 210,121.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.3" y1="18.6" x2="81.4" y2="121.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="94.3" y="13.8" font-size="12" text-anchor="middle">A</text><text x="23" y="134.6" font-size="12" text-anchor="middle">B</text><text x="217" y="134.6" font-size="12" text-anchor="middle">C</text><text x="81.4" y="137.6" font-size="12" text-anchor="middle">D</text></svg>'
+        answer: 10
+        check: "35 * 2 // (2 + 5)"
+        hints:
+          - 三角形 ABD と三角形 ADC の面積の比は、BD:DC と同じだね。
+          - 三角形 ABC を 2 + 5 = 7 つ分とみよう。
+          - ABD はそのうちの 2 つ分だよ。
+        paths:
+          - [ABD:ADC = 2:5, 35 ÷ 7 = 5, 5 × 2 = 10, 10 cm²]
+      - part: 今日
+        text: 点 D は辺 BC を BD:DC = 3:4 に分けています。三角形 ABD の面積は 12 cm² です。三角形 ADC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="94.3,18.6 30,121.4 107.1,121.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="94.3,18.6 30,121.4 210,121.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.3" y1="18.6" x2="107.1" y2="121.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="94.3" y="13.8" font-size="12" text-anchor="middle">A</text><text x="23" y="134.6" font-size="12" text-anchor="middle">B</text><text x="217" y="134.6" font-size="12" text-anchor="middle">C</text><text x="107.1" y="137.6" font-size="12" text-anchor="middle">D</text></svg>'
+        answer: 16
+        check: "12 // 3 * 4"
+        hints:
+          - 三角形 ABD と三角形 ADC の面積の比は 3:4 だね。
+          - ABD の 12 cm² が 3 つ分だよ。
+          - 1 つ分を出してから、4 つ分を求めよう。
+        paths:
+          - [3 つ分が 12, 1 つ分は 4, 4 つ分で 16, 16 cm²]
+        note: 12 を 3:4 に分けて（12 ÷ 7）しまいやすい。12 は全体ではなく ABD の面積。
+      - part: 挑戦
+        text: 三角形 ABC の面積は 42 cm² です。点 D と E は辺 BC の上にあり、BD:DE:EC = 1:2:3 です。三角形 ADE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="80,25 60,115 120,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="80,25 30,115 210,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="25" x2="60" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="25" x2="120" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="80" y="20.2" font-size="12" text-anchor="middle">A</text><text x="23" y="128.2" font-size="12" text-anchor="middle">B</text><text x="217" y="128.2" font-size="12" text-anchor="middle">C</text><text x="60" y="131.2" font-size="12" text-anchor="middle">D</text><text x="120" y="131.2" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 14
+        check: "42 * 2 // (1 + 2 + 3)"
+        hints:
+          - 3 つの三角形 ABD、ADE、AEC は、高さが同じだね。
+          - 面積の比は 1:2:3 になるよ。
+          - 全体を 1 + 2 + 3 = 6 つ分とみよう。
+        paths:
+          - [ABD:ADE:AEC = 1:2:3, 42 ÷ 6 = 7, 7 × 2 = 14, 14 cm²]
+    extra:
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD と三角形 ADC の面積の比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.5,25 30,115 165,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="97.5,25 30,115 210,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.5" y1="25" x2="165" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="97.5" y="20.2" font-size="12" text-anchor="middle">A</text><text x="23" y="128.2" font-size="12" text-anchor="middle">B</text><text x="217" y="128.2" font-size="12" text-anchor="middle">C</text><text x="165" y="131.2" font-size="12" text-anchor="middle">D</text><text x="97.5" y="132.2" font-size="12" text-anchor="middle">6 cm</text><text x="187.5" y="132.2" font-size="12" text-anchor="middle">2 cm</text></svg>'
+        choices: ["3:1", "1:3", "3:4", "6:8"]
+        answer: "3:1"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(6, 2))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 面積の比は、底辺の比と同じだよ。
+          - 6:2 を簡単にしよう。
+        paths:
+          - [面積の比 = 6:2, 簡単にして 3:1]
+      - part: 今日
+        text: 三角形 ABC の面積は 48 cm² です。点 D は辺 BC を BD:DC = 5:3 に分けています。三角形 ADC の面積は何 cm² ですか。
+        answer: 18
+        check: "48 * 3 // (5 + 3)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 5:3 だね。
+          - 全体を 5 + 3 = 8 つ分とみよう。
+          - ADC は 3 つ分だよ。
+        paths:
+          - [48 ÷ 8 = 6, 6 × 3 = 18, 18 cm²]
+      - part: 今日
+        text: 点 D は辺 BC を BD:DC = 4:3 に分けています。三角形 ADC の面積は 21 cm² です。三角形 ABD の面積は何 cm² ですか。
+        answer: 28
+        check: "21 // 3 * 4"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 4:3 だね。
+          - ADC の 21 cm² が 3 つ分だよ。
+          - 1 つ分を出してから、4 つ分を求めよう。
+        paths:
+          - [1 つ分は 21 ÷ 3 = 7, 7 × 4 = 28, 28 cm²]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 三角形 ABC の面積は 60 cm² です。点 D は辺 AB を AD:DB = 2:1 に、点 E は辺 AC を AE:EC = 3:2 に分けています。三角形 ADE の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 51.5,87.3 159.1,80.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.5" y1="87.3" x2="159.1" y2="80.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.5" y1="87.3" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="42.5" y="91.5" font-size="12" text-anchor="middle">D</text><text x="168.1" y="82.6" font-size="12" text-anchor="middle">E</text></svg>'
+        explain: 2 回に分けて考えます。まず三角形 ADC と三角形 DBC。底辺を AD、DB とみると、高さはどちらも C から AB までの長さで同じなので、面積の比は 2:1。三角形 ADC は 60 ÷ 3 × 2 = 40 cm²。次に三角形 ADC の中の、三角形 ADE と三角形 DEC。底辺を AE、EC とみると高さが同じなので、面積の比は 3:2。三角形 ADE は 40 ÷ 5 × 3 = 24 cm² です。
+      - part: 思い出す
+        text: 三角形 ABC の面積は 28 cm² です。点 D は辺 BC を BD:DC = 3:4 に分けています。三角形 ABD の面積は何 cm² ですか。
+        answer: 12
+        check: "28 * 3 // (3 + 4)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 3:4 だね。
+          - 全体を 3 + 4 = 7 つ分とみよう。
+          - ABD は 3 つ分だよ。
+        paths:
+          - [28 ÷ 7 = 4, 4 × 3 = 12, 12 cm²]
+      - part: 思い出す
+        text: 45 の 2/5 はいくつですか。
+        answer: 18
+        check: "45 * 2 // 5"
+        hints:
+          - 45 を 5 つに分けた 2 つ分だよ。
+          - 45 ÷ 5 を先に計算しよう。
+          - その 2 つ分だね。
+        paths:
+          - [45 ÷ 5 = 9, 9 × 2 = 18]
+      - part: 今日
+        text: 三角形 ABC の面積は 36 cm² です。点 D は辺 AB を AD:DB = 1:2 に、点 E は辺 AC を AE:EC = 1:1 に分けています。三角形 ADE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 69.7,52.7 147.2,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.7" y1="52.7" x2="147.2" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.7" y1="52.7" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="60.7" y="56.9" font-size="12" text-anchor="middle">D</text><text x="156.2" y="72.2" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 6
+        check: "36 * Fraction(1, 3) * Fraction(1, 2)"
+        hints:
+          - まず三角形 ADC の面積を求めよう。
+          - 三角形 ADC と DBC の面積の比は、AD:DB と同じだね。
+          - 次に、三角形 ADC を AE:EC で分けよう。
+        paths:
+          - [ADC は 36 ÷ 3 × 1 = 12, ADE は 12 ÷ 2 × 1 = 6, 6 cm²]
+        note: 1/3 と 1/2 をたしてしまいやすい。1 回目に分けた三角形を、2 回目にまた分ける。
+      - part: 今日
+        text: 三角形 ABC の面積は 50 cm² です。点 D は辺 BC を BD:DC = 3:2 に分け、点 E は AD を AE:ED = 2:3 に分けています。三角形 EBD の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="107,59.9 30,120.6 138,120.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="86.2,19.4 30,120.6 210,120.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.2" y1="19.4" x2="138" y2="120.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107" y1="59.9" x2="30" y2="120.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="86.2" y="14.6" font-size="12" text-anchor="middle">A</text><text x="23" y="133.8" font-size="12" text-anchor="middle">B</text><text x="217" y="133.8" font-size="12" text-anchor="middle">C</text><text x="138" y="136.8" font-size="12" text-anchor="middle">D</text><text x="116" y="61.1" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 18
+        check: "50 * 3 // 5 * 3 // 5"
+        hints:
+          - まず三角形 ABD の面積を求めよう。
+          - 三角形 ABD を、AE:ED で 2 つに分けよう。
+          - 三角形 ABE と EBD の面積の比は 2:3 だね。
+        paths:
+          - [ABD は 50 ÷ 5 × 3 = 30, EBD は 30 ÷ 5 × 3 = 18, 18 cm²]
+      - part: 今日
+        text: 三角形 ABC の面積は 48 cm² です。点 D は辺 BC のまん中の点、点 E は AD のまん中の点です。三角形 EBC（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="103.9,70 33.3,122 206.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.8" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="103.9" y1="70" x2="33.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="103.9" y1="70" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="111" y="126.2" font-size="12" text-anchor="middle">D</text><text x="112.9" y="72.2" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 24
+        check: "48 // 2 // 2 * 2"
+        hints:
+          - 三角形 EBC を、ED で 2 つに分けて考えよう。
+          - 三角形 ABD は、三角形 ABC の何分の 1 かな。
+          - 三角形 EBD は、三角形 ABD の何分の 1 かな。
+        paths:
+          - [ABD = ADC = 24, EBD は ABD の半分で 12, ECD も 12, EBC = 12 + 12 = 24, 24 cm²]
+      - part: 挑戦
+        text: 三角形 ABC の面積は 72 cm² です。点 D は辺 AB を AD:DB = 1:2 に、点 E は辺 BC を BE:EC = 3:1 に、点 F は辺 CA を CF:FA = 1:1 に分けています。三角形 DEF の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,52.7 163.3,122 146,70" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="85.3,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,52.7 163.3,122 146,70" stroke="currentColor" stroke-width="2" fill="none"/><text x="85.3" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="59" y="56.9" font-size="12" text-anchor="middle">D</text><text x="163.3" y="138.2" font-size="12" text-anchor="middle">E</text><text x="155" y="71.2" font-size="12" text-anchor="middle">F</text></svg>'
+        answer: 15
+        check: "72 * (1 - Fraction(1, 3) * Fraction(1, 2) - Fraction(2, 3) * Fraction(3, 4) - Fraction(1, 2) * Fraction(1, 4))"
+        hints:
+          - 三角形 ABC から、まわりの 3 つの三角形 ADF、DBE、FEC をのぞこう。
+          - 三角形 ADF は、まず三角形 ABF を考えると、2 回分ける形になるね。
+          - DBE も FEC も、同じように 2 回分けて求めよう。
+        paths:
+          - [ABF は 72 ÷ 2 = 36、ADF は 36 ÷ 3 = 12, ABE は 72 ÷ 4 × 3 = 54、DBE は 54 ÷ 3 × 2 = 36, AEC は 18、FEC は 18 ÷ 2 = 9, 72 − 12 − 36 − 9 = 15, 15 cm²]
+        note: まわりの三角形のどれをどの順に分けるかで迷いやすい。どの三角形も、ABC から 1 回目、そのあと 2 回目と分ける。
+    extra:
+      - part: 今日
+        text: 三角形 ABC の面積は 30 cm² です。点 D は辺 AB を AD:DB = 1:1 に、点 E は辺 AC を AE:EC = 2:1 に分けています。三角形 ADE の面積は何 cm² ですか。
+        answer: 10
+        check: "30 * Fraction(1, 2) * Fraction(2, 3)"
+        hints:
+          - まず三角形 ADC の面積を求めよう。
+          - 三角形 ADC は 三角形 ABC の半分だね。
+          - 次に、三角形 ADC を AE:EC = 2:1 で分けよう。
+        paths:
+          - [ADC は 15, ADE は 15 ÷ 3 × 2 = 10, 10 cm²]
+      - part: 今日
+        text: 三角形 ABC の面積は 56 cm² です。点 D は辺 BC を BD:DC = 1:3 に分け、点 E は AD のまん中の点です。三角形 EBD の面積は何 cm² ですか。
+        answer: 7
+        check: "56 * Fraction(1, 4) * Fraction(1, 2)"
+        hints:
+          - まず三角形 ABD の面積を求めよう。
+          - 三角形 ABD は 三角形 ABC の 4 分の 1 だね。
+          - 三角形 EBD は、三角形 ABD の半分だよ。
+        paths:
+          - [ABD は 56 ÷ 4 = 14, EBD は 14 ÷ 2 = 7, 7 cm²]
+      - part: 今日
+        text: 三角形 ABC の面積は 40 cm² です。点 D は辺 AB を AD:DB = 3:1 に、点 E は辺 AC を AE:EC = 1:1 に分けています。三角形 ADE の面積は何 cm² ですか。
+        answer: 15
+        check: "40 * Fraction(3, 4) * Fraction(1, 2)"
+        hints:
+          - まず三角形 ADC の面積を求めよう。
+          - 三角形 ADC と DBC の面積の比は 3:1 だね。
+          - 次に、三角形 ADC を半分にしよう。
+        paths:
+          - [ADC は 40 ÷ 4 × 3 = 30, ADE は 30 ÷ 2 = 15, 15 cm²]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 15 cm²、三角形 ADC の面積は 10 cm²、BC は 10 cm です。BD の長さを求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="86,36 35,104 137,104" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="86,36 35,104 205,104" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86" y1="36" x2="137" y2="104" stroke="currentColor" stroke-width="2" fill="none"/><text x="86" y="31.2" font-size="12" text-anchor="middle">A</text><text x="28" y="114.2" font-size="12" text-anchor="middle">B</text><text x="212" y="114.2" font-size="12" text-anchor="middle">C</text><text x="137" y="119.2" font-size="12" text-anchor="middle">D</text><text x="86" y="86.1" font-size="12" text-anchor="middle">15 cm²</text><text x="138.7" y="94.6" font-size="12" text-anchor="middle">10 cm²</text><line x1="35" y1="119" x2="205" y2="119" stroke="currentColor" stroke-width="1" fill="none"/><line x1="35" y1="115" x2="35" y2="123" stroke="currentColor" stroke-width="1" fill="none"/><line x1="205" y1="115" x2="205" y2="123" stroke="currentColor" stroke-width="1" fill="none"/><text x="120" y="133.2" font-size="12" text-anchor="middle">10 cm</text></svg>'
+        explain: 2 つの三角形は高さが同じなので、底辺の比は面積の比と同じです。BD:DC = 15:10 = 3:2。BC の 10 cm を 3:2 に分けると、1 つ分は 10 ÷ 5 = 2 cm で、BD は 2 × 3 = 6 cm です。面積の比から、長さの比がわかります。
+      - part: 思い出す
+        text: 三角形 ABC の面積は 24 cm² です。点 D は辺 AB を AD:DB = 1:1 に、点 E は辺 AC を AE:EC = 1:2 に分けています。三角形 ADE の面積は何 cm² ですか。
+        answer: 4
+        check: "24 * Fraction(1, 2) * Fraction(1, 3)"
+        hints:
+          - まず三角形 ADC の面積を求めよう。
+          - 三角形 ADC は 三角形 ABC の半分だね。
+          - 次に、三角形 ADC を AE:EC = 1:2 で分けよう。
+        paths:
+          - [ADC は 12, ADE は 12 ÷ 3 = 4, 4 cm²]
+      - part: 思い出す
+        text: 21:35 を簡単にした比はどれですか。
+        choices: ["3:5", "5:3", "7:5", "3:7"]
+        answer: "3:5"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(21, 35))"
+        hints:
+          - 2 つの数を、同じ数でわろう。
+          - 21 と 35 は、どちらも何のだんの数かな。
+          - 7 でわってみよう。
+        paths:
+          - [21 ÷ 7 = 3, 35 ÷ 7 = 5, 3:5]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 18 cm²、三角形 ADC の面積は 12 cm² です。BD:DC はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,34 30,106 138,106" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="84,34 30,106 210,106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="34" x2="138" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><text x="84" y="29.2" font-size="12" text-anchor="middle">A</text><text x="23" y="119.2" font-size="12" text-anchor="middle">B</text><text x="217" y="119.2" font-size="12" text-anchor="middle">C</text><text x="138" y="122.2" font-size="12" text-anchor="middle">D</text><text x="84" y="86.8" font-size="12" text-anchor="middle">18 cm²</text><text x="139.8" y="95.8" font-size="12" text-anchor="middle">12 cm²</text></svg>'
+        choices: ["3:2", "2:3", "3:5", "2:5"]
+        answer: "3:2"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(18, 12))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 高さが同じなら、底辺の比は面積の比と同じだよ。
+          - 18:12 を簡単にしよう。
+        paths:
+          - [BD:DC = 18:12, 6 でわって 3:2]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 20 cm²、三角形 ADC の面積は 28 cm²、BC は 12 cm です。BD は何 cm ですか。
+        answer: 5
+        check: "12 * 20 // (20 + 28)"
+        hints:
+          - BD:DC は、面積の比と同じだね。
+          - 20:28 を簡単にしよう。
+          - BC の 12 cm を、その比に分けよう。
+        paths:
+          - [BD:DC = 20:28 = 5:7, 12 ÷ 12 = 1, 1 × 5 = 5, 5 cm]
+      - part: 今日
+        text: 平行四辺形 ABCD の面積は 60 cm² です。点 E は辺 BC を BE:EC = 1:2 に分けています。三角形 ABE（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="62.7,29.1 30,110.9 79.1,110.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="62.7,29.1 30,110.9 177.3,110.9 210,29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79.1" y1="110.9" x2="62.7" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="56.7" y="24.3" font-size="12" text-anchor="middle">A</text><text x="24" y="125.1" font-size="12" text-anchor="middle">B</text><text x="179.3" y="126.1" font-size="12" text-anchor="middle">C</text><text x="216" y="24.3" font-size="12" text-anchor="middle">D</text><text x="79.1" y="126.1" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 10
+        check: "60 // 2 * 1 // 3"
+        hints:
+          - まず、三角形 ABC の面積を考えよう。
+          - 三角形 ABC は、平行四辺形の半分だね。
+          - 三角形 ABE と AEC の面積の比は、BE:EC と同じだよ。
+        paths:
+          - [ABC は 60 ÷ 2 = 30, ABE は 30 ÷ 3 = 10, 10 cm²]
+      - part: 挑戦
+        text: 四角形 ABCD は、AD と BC が平行な台形で、AD = 4 cm、BC = 6 cm です。対角線が点 O で交わっています。AO:OC はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,25 30,115 210,115 180,25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="25" x2="210" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30" y1="115" x2="180" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><text x="51" y="26.2" font-size="12" text-anchor="middle">A</text><text x="22" y="125.2" font-size="12" text-anchor="middle">B</text><text x="218" y="125.2" font-size="12" text-anchor="middle">C</text><text x="189" y="26.2" font-size="12" text-anchor="middle">D</text><text x="120" y="78.2" font-size="12" text-anchor="middle">O</text><text x="120" y="19.2" font-size="12" text-anchor="middle">4 cm</text><text x="120" y="132.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        choices: ["2:3", "3:2", "2:5", "4:6"]
+        answer: "2:3"
+        check: "(lambda A, B, C, D: (lambda t: (lambda f: '%d:%d' % (f.numerator, f.denominator))(t / (1 - t)))(Fraction((B[0] - A[0]) * (D[1] - B[1]) - (B[1] - A[1]) * (D[0] - B[0]), (C[0] - A[0]) * (D[1] - B[1]) - (C[1] - A[1]) * (D[0] - B[0]))))((1, 3), (0, 0), (6, 0), (5, 3))"
+        hints:
+          - 三角形 ABD と三角形 CBD の面積の比は、AD:BC と同じだね（高さが台形の高さで同じ）。
+          - 三角形 ABO と CBO は、B から AC までの高さが同じ。ADO と CDO も、D から AC までの高さが同じだよ。
+          - ABD = ABO + ADO、CBD = CBO + CDO で、どちらの組も面積の比は AO:OC だね。
+        paths:
+          - [ABD:CBD = AD:BC = 4:6 = 2:3, ABO:CBO = AO:OC と ADO:CDO = AO:OC, 合わせて ABD:CBD = AO:OC, AO:OC = 2:3]
+        note: 対角線の長さの比を図の見た目で決めやすい。三角形の組を 2 通りに見る、高さの同じ三角形の使い方。
+    extra:
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 14 cm²、三角形 ADC の面積は 21 cm² です。BD:DC はどれですか。
+        choices: ["2:3", "3:2", "2:5", "3:5"]
+        answer: "2:3"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(14, 21))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 底辺の比は面積の比と同じだよ。
+          - 14:21 を簡単にしよう。
+        paths:
+          - [BD:DC = 14:21, 7 でわって 2:3]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 9 cm²、三角形 ADC の面積は 15 cm²、BC は 16 cm です。BD は何 cm ですか。
+        answer: 6
+        check: "16 * 9 // (9 + 15)"
+        hints:
+          - BD:DC は、面積の比と同じだね。
+          - 9:15 を簡単にしよう。
+          - BC の 16 cm を、その比に分けよう。
+        paths:
+          - [BD:DC = 9:15 = 3:5, 16 ÷ 8 = 2, 2 × 3 = 6, 6 cm]
+      - part: 今日
+        text: 平行四辺形 ABCD の面積は 48 cm² です。点 E は辺 BC を BE:EC = 3:1 に分けています。三角形 ABE の面積は何 cm² ですか。
+        answer: 18
+        check: "48 // 2 * 3 // 4"
+        hints:
+          - 三角形 ABC は、平行四辺形の半分だね。
+          - 三角形 ABE と AEC の面積の比は 3:1 だよ。
+          - 三角形 ABC を 4 つ分とみよう。
+        paths:
+          - [ABC は 24, 24 ÷ 4 × 3 = 18, 18 cm²]
+
+  - day: 6
+    items:
+      - part: わけ
+        text: 直線 ア と イ は平行です。三角形 ABC と三角形 DBC の面積が等しいのはなぜですか。図の例（BC 6 cm、はば 4 cm）を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="37.6" x2="210" y2="37.6" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="41.8" font-size="12" text-anchor="start">ア</text><line x1="30" y1="102.4" x2="210" y2="102.4" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="106.6" font-size="12" text-anchor="start">イ</text><polygon points="73.8,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="73.8,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="171.1,37.6 49.5,102.4 146.8,102.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="201.9" y1="37.6" x2="201.9" y2="102.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="73.8" y="31.8" font-size="12" text-anchor="middle">A</text><text x="46.5" y="118.6" font-size="12" text-anchor="middle">B</text><text x="149.8" y="118.6" font-size="12" text-anchor="middle">C</text><text x="171.1" y="31.8" font-size="12" text-anchor="middle">D</text><text x="98.1" y="119.6" font-size="12" text-anchor="middle">6 cm</text><text x="197.9" y="74.2" font-size="12" text-anchor="end">4 cm</text><polyline points="201.9,94.4 193.9,94.4 193.9,102.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 例：「2 つの三角形は、どちらも BC を底辺にしている。A と D は、BC に平行な直線 ア の上にある。平行な 2 本の直線のはばはどこでも同じなので、A から イ までの長さも、D から イ までの長さも 4 cm で、高さが同じ。底辺も高さも同じだから、面積はどちらも 6 × 4 ÷ 2 = 12 cm² で等しい。」と書ければよい。① 底辺が同じ、② 高さが平行な直線のはばで同じ、③ 底辺 × 高さ ÷ 2 が同じになる、の 3 点を見る。② が大切で、「形がちがうのに面積が同じ」ふしぎを、高さの見方で説明できているかを見る。
+        hints:
+          - 2 つの三角形の底辺はどこかな。
+          - A と D から イ までの長さは、どうなっているかな。
+          - 「底辺は〜、高さは〜だから」と書こう。
+        paths:
+          - [底辺はどちらも BC, 高さはどちらも ア と イ のはば, 6 × 4 ÷ 2 = 12 で同じ]
+      - part: わけ
+        text: 高さが同じ三角形の面積の比が、底辺の比と同じになるのはなぜですか。図の三角形 ABD と ADC（BD 2 cm、DC 3 cm、高さ 4 cm）を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="35.5,18 74.5,122 126.5,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="35.5,18 74.5,122 204.5,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="35.5" y1="18" x2="126.5" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="35.5" y1="18" x2="35.5" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="35.5" y1="122" x2="74.5" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="35.5,114 43.5,114 43.5,122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="35.5" y="13.2" font-size="12" text-anchor="middle">A</text><text x="68.5" y="137.2" font-size="12" text-anchor="middle">B</text><text x="211.5" y="135.2" font-size="12" text-anchor="middle">C</text><text x="126.5" y="138.2" font-size="12" text-anchor="middle">D</text><text x="100.5" y="139.2" font-size="12" text-anchor="middle">2 cm</text><text x="165.5" y="139.2" font-size="12" text-anchor="middle">3 cm</text><text x="31.5" y="74.2" font-size="12" text-anchor="end">4 cm</text></svg>'
+        explain: 例：「三角形 ABD は 2 × 4 ÷ 2 = 4 cm²、三角形 ADC は 3 × 4 ÷ 2 = 6 cm² で、面積の比は 4:6 = 2:3。底辺の比 2:3 と同じ。どちらの面積も、底辺に同じ数（高さ 4 ÷ 2 = 2）をかけたものなので、面積の比は底辺の比と同じになる。高さが何 cm でも同じことがいえる。」と書ければよい。① 2 つの高さが同じ、② 面積は底辺に同じ数（高さ ÷ 2）をかけたもの、③ だから比が底辺の比と同じ、の 3 点を見る。計算して 2:3 になったことだけで終わったら、「高さが 6 cm だったら比はどうなる？」と聞いて、高さによらないことを言わせる。
+        hints:
+          - 2 つの三角形の面積を、それぞれ計算しよう。
+          - どちらの面積も、底辺に何をかけたものかな。
+          - 「どちらも底辺に同じ数をかけているから」と書こう。
+        paths:
+          - [ABD は 4 cm²、ADC は 6 cm², 4:6 = 2:3, どちらも底辺 × 2, 比は底辺の比と同じ]
+      - part: わけ
+        text: 四角形 ABCD は、AD と BC が平行な台形で、対角線が点 O で交わっています。色のついた三角形 ABO と三角形 DCO の面積が等しいのはなぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="73.2,18 42,122 114.8,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="151.2,18 114.8,52.7 198,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="73.2,18 42,122 198,122 151.2,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73.2" y1="18" x2="198" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42" y1="122" x2="151.2" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="69.2" y="12.2" font-size="12" text-anchor="middle">A</text><text x="36" y="136.2" font-size="12" text-anchor="middle">B</text><text x="204" y="136.2" font-size="12" text-anchor="middle">C</text><text x="155.2" y="12.2" font-size="12" text-anchor="middle">D</text><text x="114.8" y="68.9" font-size="12" text-anchor="middle">O</text></svg>'
+        explain: 例：「三角形 ABC と三角形 DBC は、底辺 BC が同じで、A と D は BC に平行な AD の上にあるので高さも同じ。だから面積が等しい。三角形 ABC から三角形 OBC をのぞくと三角形 ABO、三角形 DBC から三角形 OBC をのぞくと三角形 DCO になる。等しい面積から同じものをのぞいたので、ABO と DCO の面積は等しい。」と書ければよい。① ABC と DBC が等しい（1 日目の考え）、② どちらからも OBC をのぞく、の 2 点を見る。ABO と DCO の形がちがうので、「見た目が同じ」では説明にならないことを話す。
+        hints:
+          - 三角形 ABC と三角形 DBC の面積をくらべよう。
+          - どちらにも入っている三角形はどれかな。
+          - 「〜から〜をのぞくと」と書こう。
+        paths:
+          - [ABC = DBC（底辺も高さも同じ）, どちらからも OBC をのぞく, ABO = DCO]
+      - part: 今日
+        text: 三角形 ABC の面積は 45 cm² です。点 D は辺 BC を BD:DC = 4:5 に分けています。三角形 ABD の面積は何 cm² ですか。
+        answer: 20
+        check: "45 * 4 // (4 + 5)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 4:5 だね。
+          - 全体を 4 + 5 = 9 つ分とみよう。
+          - ABD は 4 つ分だよ。
+        paths:
+          - [45 ÷ 9 = 5, 5 × 4 = 20, 20 cm²]
+      - part: 今日
+        text: 直線 ア と イ は平行で、はばは 6 cm です。三角形 ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="27.1" x2="210" y2="27.1" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="31.3" font-size="12" text-anchor="start">ア</text><line x1="30" y1="112.9" x2="210" y2="112.9" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="117.1" font-size="12" text-anchor="start">イ</text><polygon points="47.1,27.1 75.7,112.9 175.7,112.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="47.1,27.1 75.7,112.9 175.7,112.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="202.9" y1="27.1" x2="202.9" y2="112.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="47.1" y="21.3" font-size="12" text-anchor="middle">A</text><text x="72.7" y="129.1" font-size="12" text-anchor="middle">B</text><text x="178.7" y="129.1" font-size="12" text-anchor="middle">C</text><text x="125.7" y="130.1" font-size="12" text-anchor="middle">7 cm</text><text x="198.9" y="74.2" font-size="12" text-anchor="end">6 cm</text><polyline points="202.9,104.9 194.9,104.9 194.9,112.9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 21
+        check: "7 * 6 // 2"
+        hints:
+          - 底辺は BC だね。
+          - 高さは、A から イ に直角にひいた長さだよ。
+          - 高さは、ア と イ のはばと同じだね。
+        paths:
+          - [7 × 6 ÷ 2 = 21, 21 cm²]
+    extra:
+      - part: 今日
+        text: 三角形 ABC の面積は 63 cm² です。点 D は辺 BC を BD:DC = 2:7 に分けています。三角形 ADC の面積は何 cm² ですか。
+        answer: 49
+        check: "63 * 7 // (2 + 7)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 2:7 だね。
+          - 全体を 2 + 7 = 9 つ分とみよう。
+          - ADC は 7 つ分だよ。
+        paths:
+          - [63 ÷ 9 = 7, 7 × 7 = 49, 49 cm²]
+      - part: 今日
+        text: たて 4 cm、横 9 cm の長方形 ABCD の辺 AD の上に点 P があります。三角形 PBC の面積は何 cm² ですか。
+        answer: 18
+        check: "9 * 4 // 2"
+        hints:
+          - 底辺は BC で 9 cm だね。
+          - 高さは、長方形のたての長さだよ。
+          - 長方形の半分になるね。
+        paths:
+          - [9 × 4 ÷ 2 = 18, 18 cm²]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 10 cm²、三角形 ADC の面積は 25 cm² です。BD:DC はどれですか。
+        choices: ["2:5", "5:2", "2:7", "10:25"]
+        answer: "2:5"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(10, 25))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 底辺の比は面積の比と同じだよ。
+          - 10:25 を簡単にしよう。
+        paths:
+          - [BD:DC = 10:25, 5 でわって 2:5]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 上の辺 4 cm、下の辺 6 cm、高さ 5 cm の台形の面積は何 cm² ですか。対角線で 2 つの三角形に分けて求めよう。
+        answer: 25
+        check: "6 * 5 // 2 + 4 * 5 // 2"
+        hints:
+          - 対角線で分けると、底辺 6 cm の三角形と、底辺 4 cm の三角形ができるね。
+          - どちらの三角形も、高さは 5 cm だよ。
+          - 2 つの三角形の面積をたそう。
+        paths:
+          - [6 × 5 ÷ 2 = 15, 4 × 5 ÷ 2 = 10, 15 + 10 = 25, 25 cm²]
+      - part: 思い出す
+        text: 40 の 25% はいくつですか。
+        answer: 10
+        check: "40 * 25 // 100"
+        hints:
+          - 25% は、100 に対して 25 の割合だね。
+          - 1% は 40 ÷ 100 にあたるよ。25% は 4 分の 1 と同じだね。
+          - 40 を 4 つに分けた 1 つ分だよ。
+        paths:
+          - [25% = 1/4, 40 ÷ 4 = 10]
+      - part: 今日
+        text: 点 D は辺 BC を BD:DC = 3:2 に分けています。三角形 ABD の面積は、三角形 ABC の面積の何 % ですか。
+        answer: 60
+        check: "3 * 100 // (3 + 2)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 3:2 だね。
+          - 三角形 ABC を 3 + 2 = 5 つ分とみよう。
+          - ABD は 5 つ分のうちの 3 つ分だよ。百分率にしよう。
+        paths:
+          - [ABD は ABC の 3/5, 3/5 = 60/100, 60%]
+      - part: 今日
+        text: 長方形 ABCD の辺 BC の上に点 E があります。三角形 ABE と四角形 AECD の面積の比はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,18 50.7,122 85.3,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="50.7,18 50.7,122 189.3,122 189.3,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="18" x2="85.3" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.7" y="13.2" font-size="12" text-anchor="middle">A</text><text x="197.3" y="13.2" font-size="12" text-anchor="middle">D</text><text x="42.7" y="137.2" font-size="12" text-anchor="middle">B</text><text x="197.3" y="137.2" font-size="12" text-anchor="middle">C</text><text x="90.3" y="138.2" font-size="12" text-anchor="middle">E</text><text x="68" y="139.2" font-size="12" text-anchor="middle">2 cm</text><text x="137.3" y="139.2" font-size="12" text-anchor="middle">6 cm</text><text x="44.7" y="74.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        choices: ["1:7", "1:8", "1:6", "1:4"]
+        answer: "1:7"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(6 * 2 // 2, 6 * 8 - 6 * 2 // 2))"
+        hints:
+          - 三角形 ABE の面積を求めよう。
+          - 四角形 AECD は、長方形から三角形 ABE をのぞいたものだね。
+          - 2 つの面積の比を簡単にしよう。
+        paths:
+          - [ABE は 2 × 6 ÷ 2 = 6, 長方形は 6 × 8 = 48, AECD は 48 − 6 = 42, 6:42 = 1:7]
+        note: BE:EC = 1:3 から 1:3 と答えやすい。四角形は三角形ではないので、底辺の比は使えない。
+      - part: 今日
+        text: 三角形 ABC の辺 AB は 12 cm です。点 D は辺 AB の上にあり、AD は 8 cm です。三角形 ADC の面積は、三角形 ABC の面積の何分の何ですか。分数で答えましょう。
+        answer: 2/3
+        check: "Fraction(8, 12)"
+        hints:
+          - 三角形 ADC と三角形 ABC は、底辺を AD と AB とみると高さが同じだね。
+          - 面積の比は、AD:AB と同じだよ。
+          - 8/12 を約分しよう。
+        paths:
+          - [高さが同じ, ADC:ABC = 8:12, 8/12 = 2/3]
+      - part: 挑戦
+        text: 四角形 ABCD は、AD と BC が平行な台形で、AD = 2 cm、BC = 8 cm、高さは 4 cm です。点 P を辺 BC の上にとり、直線 AP で台形の面積を 2 等分します。BP は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="86.2,25 30,115 129,115" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="86.2,25 30,115 210,115 131.2,25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.2" y1="25" x2="129" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><text x="82.2" y="19.2" font-size="12" text-anchor="middle">A</text><text x="24" y="129.2" font-size="12" text-anchor="middle">B</text><text x="216" y="129.2" font-size="12" text-anchor="middle">C</text><text x="135.2" y="19.2" font-size="12" text-anchor="middle">D</text><text x="129" y="131.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 5
+        check: "[p for p in range(1, 9) if p * 4 // 2 * 2 == 2 * 4 // 2 + 8 * 4 // 2][0]"
+        hints:
+          - 台形の面積を先に求めよう。
+          - 三角形 ABP の面積が、台形の半分になればよいね。
+          - 三角形 ABP の高さは、台形の高さと同じ 4 cm だよ。
+        paths:
+          - [台形は 2 × 4 ÷ 2 + 8 × 4 ÷ 2 = 20, 半分は 10, BP × 4 ÷ 2 = 10, BP = 5, 5 cm]
+        note: BC のまん中（4 cm）と答えやすい。上の辺 AD があるので、まん中では 2 等分にならない。
+    extra:
+      - part: 今日
+        text: 点 D は辺 BC を BD:DC = 1:4 に分けています。三角形 ABD の面積は、三角形 ABC の面積の何 % ですか。
+        answer: 20
+        check: "1 * 100 // (1 + 4)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 1:4 だね。
+          - 三角形 ABC を 5 つ分とみよう。
+          - ABD は 5 つ分のうちの 1 つ分だよ。
+        paths:
+          - [ABD は ABC の 1/5, 1/5 = 20/100, 20%]
+      - part: 今日
+        text: 三角形 ABC の面積は 63 cm² です。点 D は辺 AB を AD:DB = 4:3 に分けています。三角形 ADC の面積は何 cm² ですか。
+        answer: 36
+        check: "63 * 4 // (4 + 3)"
+        hints:
+          - 三角形 ADC と DBC は、底辺を AD と DB とみると高さが同じだね。
+          - 面積の比は 4:3 だよ。
+          - 全体を 7 つ分とみよう。
+        paths:
+          - [63 ÷ 7 = 9, 9 × 4 = 36, 36 cm²]
+      - part: 今日
+        text: たて 4 cm、横 10 cm の長方形 ABCD の辺 BC の上に点 E があり、BE は 3 cm です。三角形 ABE と四角形 AECD の面積の比はどれですか。
+        choices: ["3:17", "3:7", "3:20", "6:34"]
+        answer: "3:17"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(4 * 3 // 2, 4 * 10 - 4 * 3 // 2))"
+        hints:
+          - 三角形 ABE の面積を求めよう。
+          - 四角形 AECD は、長方形から三角形 ABE をのぞいたものだね。
+          - 2 つの面積の比を簡単にしよう。
+        paths:
+          - [ABE は 3 × 4 ÷ 2 = 6, AECD は 40 − 6 = 34, 6:34 = 3:17]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 直線 ア と イ は平行で、はばは 5 cm です。三角形 ABC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="38.1" x2="210" y2="38.1" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="42.3" font-size="12" text-anchor="start">ア</text><line x1="30" y1="101.9" x2="210" y2="101.9" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="214" y="106.1" font-size="12" text-anchor="start">イ</text><polygon points="179.4,38.1 45.3,101.9 147.4,101.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="179.4,38.1 45.3,101.9 147.4,101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.6" y1="38.1" x2="203.6" y2="101.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="179.4" y="32.3" font-size="12" text-anchor="middle">A</text><text x="42.3" y="118.1" font-size="12" text-anchor="middle">B</text><text x="150.4" y="118.1" font-size="12" text-anchor="middle">C</text><text x="96.4" y="119.1" font-size="12" text-anchor="middle">8 cm</text><text x="199.6" y="74.2" font-size="12" text-anchor="end">5 cm</text><polyline points="203.6,93.9 195.6,93.9 195.6,101.9" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 20
+        check: "8 * 5 // 2"
+        hints:
+          - 底辺は BC だね。
+          - 高さは、A から イ に直角にひいた長さだよ。
+          - 高さは、ア と イ のはばと同じだね。
+        paths:
+          - [8 × 5 ÷ 2 = 20, 20 cm²]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。三角形 PBC、QBC、RBC のうち、三角形 ABC と面積が同じものはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="47.2" y1="122" x2="47.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="68" y1="122" x2="68" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88.8" y1="122" x2="88.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="109.6" y1="122" x2="109.6" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="130.4" y1="122" x2="130.4" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="151.2" y1="122" x2="151.2" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="172" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192.8" y1="122" x2="192.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="122" x2="192.8" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="101.2" x2="192.8" y2="101.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="80.4" x2="192.8" y2="80.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="59.6" x2="192.8" y2="59.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="38.8" x2="192.8" y2="38.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.2" y1="18" x2="192.8" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="88.8,59.6 68,101.2 130.4,101.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="88.8,59.6 68,101.2 130.4,101.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="78.7" y="59.3" font-size="12" text-anchor="middle">A</text><text x="58.3" y="110.6" font-size="12" text-anchor="middle">B</text><text x="134.3" y="115.7" font-size="12" text-anchor="middle">C</text><text x="161.9" y="87" font-size="12" text-anchor="middle">P</text><text x="182.6" y="61" font-size="12" text-anchor="middle">Q</text><text x="106.4" y="32.5" font-size="12" text-anchor="middle">R</text><circle cx="151.2" cy="80.4" r="2.6" fill="currentColor"/><circle cx="172" cy="59.6" r="2.6" fill="currentColor"/><circle cx="109.6" cy="38.8" r="2.6" fill="currentColor"/></svg>'
+        choices: [三角形 PBC, 三角形 QBC, 三角形 RBC]
+        answer: 三角形 QBC
+        check: "[s for s, q in (('三角形 PBC', (5, 2)), ('三角形 QBC', (6, 3)), ('三角形 RBC', (3, 4))) if abs((4 - 1) * (q[1] - 1) - (1 - 1) * (q[0] - 1)) == abs((4 - 1) * (3 - 1) - (1 - 1) * (2 - 1))][0]"
+        hints:
+          - どの三角形も、底辺は BC で同じだね。
+          - 面積が同じになるのは、高さが同じときだよ。
+          - A と同じ高さにある点はどれかな。
+        paths:
+          - [A は BC から 2 目上, Q も 2 目上, 三角形 QBC]
+      - part: 今日
+        text: 平行四辺形 ABCD の面積は 64 cm² です。点 P は辺 AD の上にあります。三角形 PBC の面積は何 cm² ですか。
+        answer: 32
+        check: "64 // 2"
+        hints:
+          - P を A まで動かしても、三角形 PBC の面積は変わらないね。
+          - 三角形 ABC は、平行四辺形の何分の 1 かな。
+          - 64 の半分だよ。
+        paths:
+          - [三角形 PBC = 三角形 ABC, 平行四辺形の半分, 32 cm²]
+      - part: 今日
+        text: 点 D は辺 BC を BD:DC = 2:7 に分けています。三角形 ABD と三角形 ADC の面積の比はどれですか。
+        choices: ["2:7", "7:2", "2:9", "7:9"]
+        answer: "2:7"
+        check: "(lambda f: '%d:%d' % (f.numerator, f.denominator))(Fraction(2, 7))"
+        hints:
+          - 2 つの三角形の高さは同じだね。
+          - 高さが同じなら、面積の比は底辺の比と同じだよ。
+          - 底辺は BD と DC だね。
+        paths:
+          - [面積の比 = BD:DC = 2:7]
+      - part: 今日
+        text: 三角形 ABC の面積は 54 cm² です。点 D は辺 BC を BD:DC = 4:5 に分けています。三角形 ADC の面積は何 cm² ですか。
+        answer: 30
+        check: "54 * 5 // (4 + 5)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 4:5 だね。
+          - 全体を 9 つ分とみよう。
+          - ADC は 5 つ分だよ。
+        paths:
+          - [54 ÷ 9 = 6, 6 × 5 = 30, 30 cm²]
+      - part: 今日
+        text: 三角形 ABC の面積は 60 cm² です。点 D は辺 AB を AD:DB = 3:2 に、点 E は辺 AC を AE:EC = 1:2 に分けています。三角形 ADE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 55.1,80.4 127.4,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.1" y1="80.4" x2="127.4" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.1" y1="80.4" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="87.8" y="13.2" font-size="12" text-anchor="middle">A</text><text x="26.3" y="135.2" font-size="12" text-anchor="middle">B</text><text x="213.7" y="135.2" font-size="12" text-anchor="middle">C</text><text x="46.1" y="84.6" font-size="12" text-anchor="middle">D</text><text x="136.4" y="54.9" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 12
+        check: "60 * Fraction(3, 5) * Fraction(1, 3)"
+        hints:
+          - まず三角形 ADC の面積を求めよう。
+          - 三角形 ADC と DBC の面積の比は 3:2 だね。
+          - 次に、三角形 ADC を AE:EC = 1:2 で分けよう。
+        paths:
+          - [ADC は 60 ÷ 5 × 3 = 36, ADE は 36 ÷ 3 = 12, 12 cm²]
+      - part: 今日
+        text: 点 D は辺 BC の上にあります。三角形 ABD の面積は 24 cm²、三角形 ADC の面積は 16 cm²、BC は 15 cm です。BD は何 cm ですか。
+        answer: 9
+        check: "15 * 24 // (24 + 16)"
+        hints:
+          - BD:DC は、面積の比と同じだね。
+          - 24:16 を簡単にしよう。
+          - BC の 15 cm を、その比に分けよう。
+        paths:
+          - [BD:DC = 24:16 = 3:2, 15 ÷ 5 = 3, 3 × 3 = 9, 9 cm]
+      - part: 挑戦
+        text: 四角形 ABCD は、AD と BC が平行な台形で、AD = 3 cm、BC = 6 cm です。対角線が点 O で交わり、三角形 AOD の面積は 4 cm² です。三角形 OBC の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 114.2,52.7 154.7,18" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="114.2,52.7 33.3,122 206.7,122" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="68,18 33.3,122 206.7,122 154.7,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="18" x2="206.7" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="33.3" y1="122" x2="154.7" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="59" y="19.2" font-size="12" text-anchor="middle">A</text><text x="25.3" y="132.2" font-size="12" text-anchor="middle">B</text><text x="214.7" y="132.2" font-size="12" text-anchor="middle">C</text><text x="163.7" y="19.2" font-size="12" text-anchor="middle">D</text><text x="126.2" y="58.9" font-size="12" text-anchor="middle">O</text><text x="111.3" y="12.2" font-size="12" text-anchor="middle">3 cm</text><text x="120" y="139.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 16
+        check: "4 * 2 * 2"
+        hints:
+          - 5 日目の挑戦のように、AO:OC と DO:OB は AD:BC と同じ 1:2 になるよ。
+          - 三角形 AOD と AOB は、A から BD までの高さが同じだね。
+          - 三角形 AOB と OBC は、B から AC までの高さが同じだね。
+        paths:
+          - [DO:OB = 1:2 なので AOB は 4 × 2 = 8, AO:OC = 1:2 なので OBC は 8 × 2 = 16, 16 cm²]
+        note: AD:BC = 1:2 から 4 × 2 = 8 と答えやすい。比を 2 回使う。
+    extra:
+      - part: 今日
+        text: 平行な 2 本の直線のはばは 4 cm です。一方の直線の上に底辺 11 cm をとり、もう一方の直線の上に頂点をとった三角形の面積は何 cm² ですか。
+        answer: 22
+        check: "11 * 4 // 2"
+        hints:
+          - 三角形の高さは、はばと同じだね。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 4 を先に 2 でわってもよいよ。
+        paths:
+          - [11 × 2 = 22, 22 cm²]
+      - part: 今日
+        text: 三角形 ABC の面積は 44 cm² です。点 D は辺 BC を BD:DC = 3:8 に分けています。三角形 ABD の面積は何 cm² ですか。
+        answer: 12
+        check: "44 * 3 // (3 + 8)"
+        hints:
+          - 三角形 ABD と ADC の面積の比は 3:8 だね。
+          - 全体を 11 こ分とみよう。
+          - ABD は 3 つ分だよ。
+        paths:
+          - [44 ÷ 11 = 4, 4 × 3 = 12, 12 cm²]
+      - part: 今日
+        text: 平行四辺形 ABCD の面積は 50 cm² です。点 E は辺 BC を BE:EC = 2:3 に分けています。三角形 ABE の面積は何 cm² ですか。
+        answer: 10
+        check: "50 // 2 * 2 // 5"
+        hints:
+          - 三角形 ABC は、平行四辺形の半分だね。
+          - 三角形 ABE と AEC の面積の比は 2:3 だよ。
+          - 三角形 ABC を 5 つ分とみよう。
+        paths:
+          - [ABC は 25, 25 ÷ 5 × 2 = 10, 10 cm²]

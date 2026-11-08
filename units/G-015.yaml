@@ -1,0 +1,643 @@
+# G-015 点の移動と図形の回転
+#
+# 書き方は N-001 の頭の注のとおり。
+# 点の移動：辺の上を「1 秒に □ cm」ずつ進む点の位置と、その点を頂点にした三角形の面積（G-008）。速さ（A-007）は前提にないので、
+#   「1 秒に □ cm」を「□ 秒で □ cm 進む」とかけ算で読むだけにし、速さという言葉と、時間と面積のグラフは使わない。
+# 図形の回転：回転移動（1 つの点を中心に、同じ角度だけ回す）。回しても長さ・角・面積は変わらず、各点は中心を中心にした円の上を動く。
+#   G-004 は「はんぶん回す」までなので、回す角（90°、180°、時計の針と反対向き＝左回り）はここで約束する。回す向きは問題文に書いた。
+#   点がえがく線（弧）と、線分が通ったあと（おうぎ形）は G-010 の「円の何分の 1」で求める。
+# 転がる移動：直線の上を、すべらないように転がる正方形・正三角形・長方形・円。転がるたびに、直線についた頂点を中心に回る。
+#   正方形は 90°、正三角形は 180° − 60° = 120° 回る（G-009 の角）。長方形の対角線は問題文で長さを与える（三平方の定理は G-019）。
+# 円周率は G-010 と同じく「（□ × 円周率）cm」の □ を答える。□ が分数になるときは分数で、小数でもよいときは accept に小数を入れた。
+#   3.14 を使うのは 5 日目と 6 日目の挑戦だけで、3.14 を 2〜4 回たす形にした。
+# 平行移動、線対称・点対称の名前と性質は扱わない（座標の上の移動と対称は G-050）。5 日目に「180° 回すと重なる形」だけ入れた。
+# 図は svg（D-040）。回したあとの形と、動いたあとの形は点線。点がえがく線は細い点線。方眼の図の 1 目は 1 cm。
+#   「どの辺の上にあるか」「どこへ移るか」をたずねる図には、答えの点をかいていない。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 辺の上を動く点（位置と三角形の面積）　2 日目 回転移動（方眼の上で回す、点がえがく弧、通ったあとのおうぎ形）
+#   3 日目 転がる移動（正方形、正三角形、円）　4 日目 わけ（円の上を動く、120° 回る、面積が変わらない）
+#   5 日目 G-010（円とおうぎ形）・G-004（回す）と混ぜる　6 日目 確認
+# check：面積と弧の □ の式（Fraction）。方眼で回す問題は、O から見た目の数 (x, y) を 90° 左回りなら (−y, x) にする式。
+#   転がる問題は、回る中心からの長さ（半径）と回る角から、円の何分の 1 かを出す式。
+
+id: G-015
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。3 秒後の三角形 ABP の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="51,24 51,116 120,116" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="51,24 51,116 189,116 189,24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51" y1="24" x2="120" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><text x="44" y="21.2" font-size="12" text-anchor="middle">A</text><text x="44" y="129.2" font-size="12" text-anchor="middle">B</text><text x="196" y="129.2" font-size="12" text-anchor="middle">C</text><text x="196" y="21.2" font-size="12" text-anchor="middle">D</text><text x="120" y="132.2" font-size="12" text-anchor="middle">P</text><circle cx="120" cy="116" r="2.6" fill="currentColor"/><text x="120" y="19.2" font-size="12" text-anchor="middle">6 cm</text><text x="45" y="74.2" font-size="12" text-anchor="end">4 cm</text><line x1="129.2" y1="134" x2="161.4" y2="134" stroke="currentColor" stroke-width="1.2" fill="none"/><polyline points="156.4,130 161.4,134 156.4,138" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>'
+        explain: 1 秒に 1 cm ずつ進むので、3 秒では 1 × 3 = 3 cm 進み、BP は 3 cm です。三角形 ABP は、底辺 BP が 3 cm、高さ AB が 4 cm なので、面積は 3 × 4 ÷ 2 = 6 cm²。P が進むと底辺 BP がのびるので、三角形 ABP の面積は、1 秒ごとに 1 × 4 ÷ 2 = 2 cm² ずつふえていきます。
+      - part: 思い出す
+        text: 底辺 5 cm、高さ 6 cm の三角形の面積は何 cm² ですか。
+        answer: 15
+        check: "5 * 6 // 2"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 だね。
+          - 6 を先に 2 でわってもよいよ。
+          - 5 × 3 を計算しよう。
+        paths:
+          - [6 ÷ 2 = 3, 5 × 3 = 15, 15 cm²]
+      - part: 思い出す
+        text: 半径が 6 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 12
+        check: "6 * 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 直径は半径の 2 つ分だよ。
+          - 6 × 2 を計算しよう。
+        paths:
+          - [直径は 12, 円周は 12 × 円周率, □ は 12]
+      - part: 今日
+        text: たて 6 cm、横 8 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 2 cm ずつ C に向かって進みます。3 秒後の三角形 ABP の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="58.7,24 58.7,116 150.7,116" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="58.7,24 58.7,116 181.3,116 181.3,24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.7" y1="24" x2="150.7" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><text x="51.7" y="21.2" font-size="12" text-anchor="middle">A</text><text x="51.7" y="129.2" font-size="12" text-anchor="middle">B</text><text x="188.3" y="129.2" font-size="12" text-anchor="middle">C</text><text x="188.3" y="21.2" font-size="12" text-anchor="middle">D</text><text x="150.7" y="132.2" font-size="12" text-anchor="middle">P</text><circle cx="150.7" cy="116" r="2.6" fill="currentColor"/><text x="120" y="19.2" font-size="12" text-anchor="middle">8 cm</text><text x="52.7" y="74.2" font-size="12" text-anchor="end">6 cm</text><line x1="156.8" y1="134" x2="172.1" y2="134" stroke="currentColor" stroke-width="1.2" fill="none"/><polyline points="167.1,130 172.1,134 167.1,138" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>'
+        answer: 18
+        check: "(2 * 3) * 6 // 2"
+        hints:
+          - まず、3 秒で P が何 cm 進むかを求めよう。
+          - BP は 2 × 3 = 6 cm だね。
+          - 底辺 BP、高さ AB の三角形だよ。
+        paths:
+          - [BP は 2 × 3 = 6 cm, 6 × 6 ÷ 2 = 18, 18 cm²]
+        note: 3 秒を BP の 3 cm としやすい。1 秒に 2 cm なので、進んだ長さは 2 × 3。
+      - part: 今日
+        text: 1 辺 6 cm の正方形 ABCD の辺の上を、点 P が A を出発して、A → B → C → D の順に、1 秒に 1 cm ずつ進みます。10 秒後、P はどの辺の上にありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,18 172,18 172,122 68,122" stroke="currentColor" stroke-width="2" fill="none"/><text x="61" y="15.2" font-size="12" text-anchor="middle">A</text><text x="179" y="15.2" font-size="12" text-anchor="middle">B</text><text x="179" y="135.2" font-size="12" text-anchor="middle">C</text><text x="61" y="135.2" font-size="12" text-anchor="middle">D</text><line x1="83.6" y1="9" x2="114.8" y2="9" stroke="currentColor" stroke-width="1.2" fill="none"/><polyline points="109.8,5 114.8,9 109.8,13" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>'
+        choices: [辺 AB, 辺 BC, 辺 CD, 辺 DA]
+        answer: 辺 BC
+        check: "('辺 AB', '辺 BC', '辺 CD', '辺 DA')[(1 * 10) // 6]"
+        hints:
+          - 10 秒で何 cm 進むかな。
+          - A から B までは 6 cm だね。B に着くのは何秒後かな。
+          - B に着いてから、あと何 cm 進むかな。
+        paths:
+          - [10 秒で 10 cm, AB で 6 cm, のこり 4 cm は辺 BC の上, 辺 BC]
+      - part: 今日
+        text: たて 5 cm、横 8 cm の長方形 ABCD の辺 BC の上を、点 P が B から C へ、1 秒に 1 cm ずつ進みます。4 秒後の三角形 APD（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46.4,24 120,116 193.6,24" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46.4,24 46.4,116 193.6,116 193.6,24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.4" y1="24" x2="120" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="193.6" y1="24" x2="120" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><text x="39.4" y="21.2" font-size="12" text-anchor="middle">A</text><text x="39.4" y="129.2" font-size="12" text-anchor="middle">B</text><text x="200.6" y="129.2" font-size="12" text-anchor="middle">C</text><text x="200.6" y="21.2" font-size="12" text-anchor="middle">D</text><text x="120" y="132.2" font-size="12" text-anchor="middle">P</text><circle cx="120" cy="116" r="2.6" fill="currentColor"/><text x="120" y="19.2" font-size="12" text-anchor="middle">8 cm</text><text x="40.4" y="74.2" font-size="12" text-anchor="end">5 cm</text><line x1="127.4" y1="134" x2="153.1" y2="134" stroke="currentColor" stroke-width="1.2" fill="none"/><polyline points="148.1,130 153.1,134 148.1,138" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>'
+        answer: 20
+        check: "8 * 5 // 2"
+        hints:
+          - 三角形 APD の底辺を AD とみよう。
+          - 高さは、P から AD までの長さだね。P が BC の上のどこにあっても同じだよ。
+          - 底辺 8 cm、高さ 5 cm の三角形だね。
+        paths:
+          - [底辺 AD は 8 cm, 高さは AB と同じ 5 cm, 8 × 5 ÷ 2 = 20, 20 cm²]
+        note: BP の 4 cm を使おうとしやすい。三角形 APD の面積は、P が BC の上にあるあいだ変わらない（4 日目のわけ）。
+      - part: 挑戦
+        text: たて 6 cm、横 10 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。三角形 ABP の面積が 21 cm² になるのは、出発してから何秒後ですか。
+        answer: 7
+        check: "[t for t in range(1, 11) if (1 * t) * 6 == 21 * 2][0]"
+        hints:
+          - 三角形 ABP の高さは AB の 6 cm だね。
+          - BP × 6 ÷ 2 = 21 になる BP をさがそう。
+          - BP が何 cm になるのは、何秒後かな。
+        paths:
+          - [BP × 6 ÷ 2 = 21, BP × 6 = 42, BP = 7 cm, 1 秒に 1 cm なので 7 秒後]
+    extra:
+      - part: 今日
+        text: たて 4 cm、横 9 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。5 秒後の三角形 ABP の面積は何 cm² ですか。
+        answer: 10
+        check: "(1 * 5) * 4 // 2"
+        hints:
+          - 5 秒で P は何 cm 進むかな。
+          - BP は 5 cm だね。
+          - 底辺 BP、高さ AB の三角形だよ。
+        paths:
+          - [BP は 5 cm, 5 × 4 ÷ 2 = 10, 10 cm²]
+      - part: 今日
+        text: 1 辺 5 cm の正方形 ABCD の辺の上を、点 P が A を出発して、A → B → C → D の順に、1 秒に 1 cm ずつ進みます。13 秒後、P はどの辺の上にありますか。
+        choices: [辺 AB, 辺 BC, 辺 CD, 辺 DA]
+        answer: 辺 CD
+        check: "('辺 AB', '辺 BC', '辺 CD', '辺 DA')[(1 * 13) // 5]"
+        hints:
+          - 13 秒で何 cm 進むかな。
+          - 1 つの辺は 5 cm だね。B、C に着くのは何秒後かな。
+          - C に着いてから、あと何 cm 進むかな。
+        paths:
+          - [13 cm 進む, B に 5 秒、C に 10 秒, のこり 3 cm は辺 CD の上, 辺 CD]
+      - part: 今日
+        text: 底辺 BC が 12 cm、高さが 6 cm の三角形 ABC があります。点 P が B を出発して、辺 BC の上を 1 秒に 2 cm ずつ C に向かって進みます。4 秒後の三角形 ABP の面積は何 cm² ですか。
+        answer: 24
+        check: "(2 * 4) * 6 // 2"
+        hints:
+          - 4 秒で P は何 cm 進むかな。
+          - BP は 2 × 4 = 8 cm だね。
+          - 三角形 ABP の高さは、三角形 ABC の高さと同じだよ。
+        paths:
+          - [BP は 8 cm, 8 × 6 ÷ 2 = 24, 24 cm²]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 方眼の 1 目は 1 cm です。三角形 ABC を、点 O を中心にして、時計の針と反対の向き（左回り）に 90° 回します。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="130" x2="24" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="48" y1="130" x2="48" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="130" x2="72" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96" y1="130" x2="96" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144" y1="130" x2="144" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="168" y1="130" x2="168" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192" y1="130" x2="192" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="130" x2="216" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="130" x2="216" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="106" x2="216" y2="106" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="82" x2="216" y2="82" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="58" x2="216" y2="58" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="34" x2="216" y2="34" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="10" x2="216" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="192,82 192,34 144,58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="96,34 48,34 72,82" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="106" r="3" fill="currentColor"/><text x="112" y="119.2" font-size="12" text-anchor="middle">O</text><circle cx="192" cy="82" r="2.6" fill="currentColor"/><text x="201.5" y="83" font-size="12" text-anchor="middle">A</text><circle cx="96" cy="34" r="2.6" fill="currentColor"/><text x="92.5" y="27.8" font-size="12" text-anchor="middle">A′</text><circle cx="192" cy="34" r="2.6" fill="currentColor"/><text x="199.1" y="31.1" font-size="12" text-anchor="middle">B</text><circle cx="48" cy="34" r="2.6" fill="currentColor"/><text x="40.2" y="30.4" font-size="12" text-anchor="middle">B′</text><circle cx="144" cy="58" r="2.6" fill="currentColor"/><text x="148.5" y="53.3" font-size="12" text-anchor="middle">C</text><circle cx="72" cy="82" r="2.6" fill="currentColor"/><text x="62.2" y="81.3" font-size="12" text-anchor="middle">C′</text><path d="M192 82 A75.9 75.9 0 0 0 96 34" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><line x1="120" y1="106" x2="192" y2="82" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="106" x2="96" y2="34" stroke="currentColor" stroke-width="1" fill="none"/></svg>'
+        explain: 図形を、1 つの点を中心にして同じ角度だけ回すことを、回転移動といいます。O から A までの長さと、O から A′ までの長さは同じで、OA と OA′ のつくる角は回した角の 90° です。B、C も同じです。A は、O を中心とした円の 4 分の 1（点線の弧）をえがいて A′ に動きます。回しても、辺の長さ、角の大きさ、面積は変わりません。O から A へ「右へ 3 目、上へ 1 目」のとき、90° 左に回すと A′ は O から「左へ 1 目、上へ 3 目」になります。
+      - part: 思い出す
+        text: たて 4 cm、横 8 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。6 秒後の三角形 ABP の面積は何 cm² ですか。
+        answer: 12
+        check: "(1 * 6) * 4 // 2"
+        hints:
+          - 6 秒で P は何 cm 進むかな。
+          - BP は 6 cm だね。
+          - 底辺 BP、高さ AB の三角形だよ。
+        paths:
+          - [BP は 6 cm, 6 × 4 ÷ 2 = 12, 12 cm²]
+      - part: 思い出す
+        text: 半径 4 cm、中心角 90° のおうぎ形の弧の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(4 * 2, 360 // 90)"
+        hints:
+          - 中心角 90° のおうぎ形は、円の何分の 1 かな。
+          - 円周は（8 × 円周率）cm だね。
+          - その 4 分の 1 だよ。
+        paths:
+          - [円の 4 分の 1, 円周 8 × 円周率, 8 ÷ 4 = 2, □ は 2]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 A を、点 O を中心にして左回りに 90° 回します。回したあとの点 A′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="36" y1="130" x2="36" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="84" y1="130" x2="84" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="108" y1="130" x2="108" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="132" y1="130" x2="132" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="156" y1="130" x2="156" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="204" y1="130" x2="204" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="130" x2="204" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="106" x2="204" y2="106" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="82" x2="204" y2="82" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="58" x2="204" y2="58" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="34" x2="204" y2="34" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36" y1="10" x2="204" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><circle cx="108" cy="106" r="3" fill="currentColor"/><text x="100" y="119.2" font-size="12" text-anchor="middle">O</text><circle cx="180" cy="82" r="2.6" fill="currentColor"/><text x="189.5" y="83" font-size="12" text-anchor="middle">A</text></svg>'
+        choices: [左へ 1 目、上へ 3 目, 右へ 1 目、上へ 3 目, 左へ 3 目、上へ 1 目, 右へ 3 目、下へ 1 目]
+        answer: 左へ 1 目、上へ 3 目
+        check: "(lambda x, y: (lambda X, Y: '%sへ %d 目、%sへ %d 目' % ('左' if X < 0 else '右', abs(X), '上' if Y > 0 else '下', abs(Y)))(-y, x))(6 - 3, 2 - 1)"
+        hints:
+          - O から A までは、右へ何目、上へ何目かな。
+          - 90° 左に回すと、「右へ」の向きは「上へ」に、「上へ」の向きは「左へ」に変わるよ。
+          - 目の数は、入れかわるだけで変わらないよ。
+        paths:
+          - [O から A は 右へ 3 目、上へ 1 目, 右へ 3 は 上へ 3 に、上へ 1 は 左へ 1 に, 左へ 1 目、上へ 3 目]
+        note: 目の数を入れかえずに「左へ 3 目、上へ 1 目」としやすい。紙を O でおさえて実際に回すとよい。
+      - part: 今日
+        text: 長さ 6 cm の線分 OA を、点 O を中心にして 60° 回しました。点 A がえがいた線（点線）の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M180 122 A120.1 120.1 0 0 0 120 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/><line x1="60" y1="122" x2="180" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M74 122 A14 14 0 0 0 67 109.9" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="83.3" y="112.3" font-size="11" text-anchor="middle">60°</text><circle cx="60" cy="122" r="3" fill="currentColor"/><circle cx="180" cy="122" r="3" fill="currentColor"/><text x="52" y="134.2" font-size="12" text-anchor="middle">O</text><text x="188" y="134.2" font-size="12" text-anchor="middle">A</text><text x="118" y="13.2" font-size="12" text-anchor="middle">A′</text><text x="120" y="138.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 2
+        check: "Fraction(6 * 2, 360 // 60)"
+        hints:
+          - A は、O を中心とした半径 6 cm の円の上を動くね。
+          - 60° は、1 回転の何分の 1 かな。
+          - 円周（12 × 円周率）cm の 6 分の 1 だよ。
+        paths:
+          - [半径 6 cm の円の 6 分の 1, 12 ÷ 6 = 2, □ は 2]
+      - part: 今日
+        text: 長さ 6 cm の線分 OA を、点 O を中心にして 90° 回しました。線分 OA が通ったあと（色のついた部分）の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M68 122 L172 122 A104 104 0 0 0 68 18 Z" stroke="none" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><path d="M172 122 A104 104 0 0 0 68 18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="3 3"/><line x1="68" y1="122" x2="172" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="122" x2="68" y2="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M82 122 A14 14 0 0 0 68 108" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="87.1" y="106.8" font-size="11" text-anchor="middle">90°</text><circle cx="68" cy="122" r="3" fill="currentColor"/><circle cx="172" cy="122" r="3" fill="currentColor"/><text x="60" y="134.2" font-size="12" text-anchor="middle">O</text><text x="180" y="134.2" font-size="12" text-anchor="middle">A</text><text x="66" y="13.2" font-size="12" text-anchor="middle">A′</text><text x="120" y="138.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 9
+        check: "Fraction(6 * 6, 360 // 90)"
+        hints:
+          - 通ったあとは、どんな形かな。
+          - 半径 6 cm、中心角 90° のおうぎ形だね。
+          - 円の面積（36 × 円周率）cm² の 4 分の 1 だよ。
+        paths:
+          - [半径 6 cm、中心角 90° のおうぎ形, 36 ÷ 4 = 9, □ は 9]
+      - part: 挑戦
+        text: たて 3 cm、横 4 cm の長方形 ABCD を、頂点 B を中心にして 90° 回しました。対角線 BD の長さは 5 cm です。頂点 D がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。分数で答えましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="130" x2="30" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="50" y1="130" x2="50" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="130" x2="70" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="90" y1="130" x2="90" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="110" y1="130" x2="110" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="130" y1="130" x2="130" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="150" y1="130" x2="150" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="130" x2="170" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="190" y1="130" x2="190" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="210" y1="130" x2="210" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="130" x2="210" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="110" x2="210" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="90" x2="210" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="70" x2="210" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="50" x2="210" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="30" x2="210" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="10" x2="210" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="110,50 110,110 190,110 190,50" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="50,110 110,110 110,30 50,30" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><circle cx="110" cy="110" r="3" fill="currentColor"/><circle cx="110" cy="50" r="2.6" fill="currentColor"/><text x="110" y="44.2" font-size="12" text-anchor="middle">A</text><circle cx="50" cy="110" r="2.6" fill="currentColor"/><text x="39" y="114.2" font-size="12" text-anchor="middle">A′</text><circle cx="110" cy="110" r="2.6" fill="currentColor"/><text x="102" y="123.2" font-size="12" text-anchor="middle">B</text><circle cx="190" cy="110" r="2.6" fill="currentColor"/><text x="200" y="114.2" font-size="12" text-anchor="middle">C</text><circle cx="110" cy="30" r="2.6" fill="currentColor"/><text x="110" y="23.2" font-size="12" text-anchor="middle">C′</text><circle cx="190" cy="50" r="2.6" fill="currentColor"/><text x="198" y="48.2" font-size="12" text-anchor="middle">D</text><circle cx="50" cy="30" r="2.6" fill="currentColor"/><text x="43.4" y="25.4" font-size="12" text-anchor="middle">D′</text><path d="M190 50 A100 100 0 0 0 50 30" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><line x1="110" y1="110" x2="190" y2="50" stroke="currentColor" stroke-width="1" fill="none"/><line x1="110" y1="110" x2="50" y2="30" stroke="currentColor" stroke-width="1" fill="none"/></svg>'
+        answer: 5/2
+        check: "Fraction(5 * 2, 360 // 90)"
+        hints:
+          - D は、B を中心とした円の上を動くね。半径は何 cm かな。
+          - 半径は BD の 5 cm だよ。
+          - 円周（10 × 円周率）cm の 4 分の 1 だね。
+        paths:
+          - [半径 BD = 5 cm, 円周は 10 × 円周率, その 4 分の 1, 10/4 = 5/2, □ は 5/2]
+        note: 辺の 3 cm や 4 cm を半径にしやすい。回る中心 B から D までの長さが半径。
+    extra:
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 A を、点 O を中心にして 180° 回します。回したあとの点 A′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="130" x2="30" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="90" y1="130" x2="90" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="150" y1="130" x2="150" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="210" y1="130" x2="210" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="130" x2="210" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="100" x2="210" y2="100" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="70" x2="210" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="40" x2="210" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30" y1="10" x2="210" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><circle cx="120" cy="70" r="3" fill="currentColor"/><text x="112" y="83.2" font-size="12" text-anchor="middle">O</text><circle cx="180" cy="40" r="2.6" fill="currentColor"/><text x="188.9" y="39.7" font-size="12" text-anchor="middle">A</text></svg>'
+        choices: [左へ 2 目、下へ 1 目, 右へ 2 目、下へ 1 目, 左へ 1 目、下へ 2 目, 左へ 2 目、上へ 1 目]
+        answer: 左へ 2 目、下へ 1 目
+        check: "(lambda x, y: (lambda X, Y: '%sへ %d 目、%sへ %d 目' % ('左' if X < 0 else '右', abs(X), '上' if Y > 0 else '下', abs(Y)))(-x, -y))(5 - 3, 3 - 2)"
+        hints:
+          - O から A までは、右へ何目、上へ何目かな。
+          - 180° 回すと、向きがちょうど反対になるよ。
+          - 右は左に、上は下に変わるね。
+        paths:
+          - [O から A は 右へ 2 目、上へ 1 目, 反対の向き, 左へ 2 目、下へ 1 目]
+      - part: 今日
+        text: 長さ 9 cm の線分 OA を、点 O を中心にして 120° 回しました。点 A がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 6
+        check: "Fraction(9 * 2, 360 // 120)"
+        hints:
+          - 120° は、1 回転の何分の 1 かな。
+          - 半径 9 cm の円の円周は（18 × 円周率）cm だね。
+          - その 3 分の 1 だよ。
+        paths:
+          - [円の 3 分の 1, 18 ÷ 3 = 6, □ は 6]
+      - part: 今日
+        text: 長さ 3 cm の線分 OA を、点 O を中心にして 1 回転させました。線分 OA が通ったあとの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 9
+        check: "3 * 3"
+        hints:
+          - 1 回転すると、通ったあとはどんな形かな。
+          - 半径 3 cm の円だね。
+          - 円の面積は 半径 × 半径 × 円周率 だよ。
+        paths:
+          - [半径 3 cm の円, 3 × 3 = 9, □ は 9]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 1 辺 3 cm の正方形 ABCD を、直線の上を、すべらないように右へ 1 回転がします。頂点 D がえがく線の長さを求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="9.9" y1="115.9" x2="230.1" y2="115.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="28.2,115.9 120,115.9 120,24.1 28.2,24.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,24.1 120,115.9 211.8,115.9 211.8,24.1" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M211.8 115.9 A91.8 91.8 0 0 0 120 24.1" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="120" cy="24.1" r="3" fill="currentColor"/><text x="21.2" y="129.1" font-size="12" text-anchor="middle">B</text><text x="127" y="129.1" font-size="12" text-anchor="middle">C</text><text x="127" y="21.3" font-size="12" text-anchor="middle">D</text><text x="21.2" y="21.3" font-size="12" text-anchor="middle">A</text><text x="74.1" y="131.7" font-size="11" text-anchor="middle">3 cm</text></svg>'
+        explain: 右へ転がすと、正方形は、直線についている頂点 C を中心にして 90° 回ります（点線が転がしたあとの正方形）。D は、C を中心とした半径 CD = 3 cm の円の上を、4 分の 1 だけ動きます。半径 3 cm の円周は（6 × 円周率）cm なので、D がえがく線の長さは、その 4 分の 1 で（3/2 × 円周率）cm です。転がる移動では、「どの点を中心に、何度回るか」と「半径はどこか」を考えます。
+      - part: 思い出す
+        text: 長さ 8 cm の線分 OA を、点 O を中心にして 45° 回しました。点 A がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(8 * 2, 360 // 45)"
+        hints:
+          - 45° は、1 回転の何分の 1 かな。
+          - 半径 8 cm の円周は（16 × 円周率）cm だね。
+          - その 8 分の 1 だよ。
+        paths:
+          - [円の 8 分の 1, 16 ÷ 8 = 2, □ は 2]
+      - part: 思い出す
+        text: 3 つの辺の長さがみな等しい三角形を正三角形といい、1 つの角は 60° です。一直線の角 180° から 60° をひくと、何度ですか。
+        answer: 120
+        check: "180 - 60"
+        hints:
+          - 一直線の角は 180° だね。
+          - 180 − 60 を計算しよう。
+          - 一の位から順にひこう。
+        paths:
+          - [180 − 60 = 120, 120°]
+      - part: 今日
+        text: 1 辺 4 cm の正方形 ABCD を、直線の上を、すべらないように右へ 1 回転がします。頂点 B がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="11.3" y1="117.3" x2="228.7" y2="117.3" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="25.5,117.3 120,117.3 120,22.7 25.5,22.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,22.7 120,117.3 214.5,117.3 214.5,22.7" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M120 22.7 A94.5 94.5 0 0 0 25.5 117.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="25.5" cy="117.3" r="3" fill="currentColor"/><text x="18.5" y="130.5" font-size="12" text-anchor="middle">B</text><text x="127" y="130.5" font-size="12" text-anchor="middle">C</text><text x="127" y="19.9" font-size="12" text-anchor="middle">D</text><text x="18.5" y="19.9" font-size="12" text-anchor="middle">A</text><text x="72.7" y="133.1" font-size="11" text-anchor="middle">4 cm</text></svg>'
+        answer: 2
+        check: "Fraction(4 * 2, 4)"
+        hints:
+          - 正方形は、頂点 C を中心にして 90° 回るね。
+          - B は、C を中心とした半径 CB の円の上を動くよ。
+          - 半径 4 cm の円周（8 × 円周率）cm の 4 分の 1 だね。
+        paths:
+          - [C を中心に 90°, 半径 CB = 4 cm, 8 ÷ 4 = 2, □ は 2]
+      - part: 今日
+        text: 1 辺 6 cm の正三角形 ABC を、直線の上を、すべらないように右へ 1 回転がします。転がすと、三角形は頂点 B を中心にして 120° 回ります。頂点 C がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="12.8" y1="112.2" x2="227.2" y2="112.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="22.5,112.2 120,112.2 71.2,27.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="168.7,27.8 120,112.2 217.5,112.2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M217.5 112.2 A97.5 97.5 0 0 0 71.3 27.8" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="71.2" cy="27.8" r="3" fill="currentColor"/><text x="15.5" y="125.4" font-size="12" text-anchor="middle">A</text><text x="127" y="125.4" font-size="12" text-anchor="middle">B</text><text x="71.2" y="23" font-size="12" text-anchor="middle">C</text><text x="71.2" y="128.1" font-size="11" text-anchor="middle">6 cm</text></svg>'
+        answer: 4
+        check: "Fraction(6 * 2 * 120, 360)"
+        hints:
+          - C は、B を中心とした半径 BC の円の上を動くね。
+          - 120° は、1 回転の何分の 1 かな。
+          - 半径 6 cm の円周（12 × 円周率）cm の 3 分の 1 だよ。
+        paths:
+          - [半径 BC = 6 cm, 120° は 3 分の 1, 12 ÷ 3 = 4, □ は 4]
+        note: 正三角形の角の 60° で計算して 2 としやすい。回る角は 180° − 60° = 120°。
+      - part: 今日
+        text: 半径 3 cm の円が、直線の上を、すべらないように 1 回転しました。円の中心が動いた長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14.4" y1="94.5" x2="225.6" y2="94.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="43" cy="70" r="24.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="197" cy="70" r="24.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="43" cy="70" r="2.5" fill="currentColor"/><circle cx="197" cy="70" r="2.5" fill="currentColor"/><line x1="43" y1="70" x2="197" y2="70" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 6
+        check: "3 * 2"
+        hints:
+          - 1 回転すると、円周の長さだけ直線にふれるよ。
+          - 円が進んだ長さは、円周と同じだね。
+          - 中心も同じ長さだけ進むよ。
+        paths:
+          - [1 回転で円周の長さだけ進む, 円周は 6 × 円周率, □ は 6]
+      - part: 挑戦
+        text: たて 3 cm、横 4 cm の長方形 ABCD を、直線の上を、すべらないように右へ 4 回転がして、もとの向きにもどしました。対角線の長さは 5 cm です。頂点 A がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="90" x2="216" y2="90" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="30,90 70,90 70,60 30,60" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="70,50 70,90 100,90 100,50" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><polygon points="140,60 100,60 100,90 140,90" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><polygon points="170,90 170,50 140,50 140,90" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><polygon points="170,90 210,90 210,60 170,60" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M100 50 A50 50 0 0 0 30 60" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><path d="M140 90 A40 40 0 0 0 100 50" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><path d="M170 60 A30 30 0 0 0 140 90" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="30" cy="60" r="3" fill="currentColor"/><text x="23" y="103.2" font-size="12" text-anchor="middle">B</text><text x="77" y="103.2" font-size="12" text-anchor="middle">C</text><text x="77" y="57.2" font-size="12" text-anchor="middle">D</text><text x="23" y="57.2" font-size="12" text-anchor="middle">A</text></svg>'
+        answer: 6
+        check: "Fraction((5 + 4 + 0 + 3) * 2, 4)"
+        hints:
+          - 1 回転がすごとに、直線についている右がわの頂点を中心に 90° 回るよ。中心は C、D、A、B の順だね。
+          - A から、回る中心までの長さ（半径）を、4 回分調べよう。A が中心のときは、A は動かないよ。
+          - 4 つの弧は、どれも円の 4 分の 1 だね。
+        paths:
+          - [半径は CA = 5、DA = 4、0、BA = 3, 1 回ごとに 半径 × 2 ÷ 4, (5 + 4 + 0 + 3) × 2 ÷ 4 = 6, □ は 6]
+        note: どの頂点が中心になるかを取りちがえやすい。紙で長方形を作って、実際に転がして確かめるとよい。
+    extra:
+      - part: 今日
+        text: 1 辺 10 cm の正方形 ABCD を、直線の上を、すべらないように右へ 1 回転がします。頂点 D がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 5
+        check: "Fraction(10 * 2, 4)"
+        hints:
+          - 正方形は、頂点 C を中心にして 90° 回るね。
+          - D は、半径 CD = 10 cm の円の上を動くよ。
+          - 円周（20 × 円周率）cm の 4 分の 1 だね。
+        paths:
+          - [半径 10 cm, 20 ÷ 4 = 5, □ は 5]
+      - part: 今日
+        text: 1 辺 3 cm の正三角形 ABC を、直線の上を、すべらないように右へ 1 回転がします。頂点 C がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(3 * 2 * 120, 360)"
+        hints:
+          - 三角形は、頂点 B を中心にして何度回るかな。
+          - 180° − 60° = 120° だね。
+          - 半径 3 cm の円周（6 × 円周率）cm の 3 分の 1 だよ。
+        paths:
+          - [120° は 3 分の 1, 6 ÷ 3 = 2, □ は 2]
+      - part: 今日
+        text: 半径 5 cm の円が、直線の上を、すべらないように 1 回転しました。円の中心が動いた長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 10
+        check: "5 * 2"
+        hints:
+          - 1 回転すると、円周の長さだけ進むよ。
+          - 円周 = 直径 × 円周率 だね。
+          - 中心も同じ長さだけ進むよ。
+        paths:
+          - [円周は 10 × 円周率, □ は 10]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 図形を点 O を中心に回すと、図形の点 A は、O を中心とした円の上を動きます。なぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="130" x2="24" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="48" y1="130" x2="48" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="130" x2="72" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96" y1="130" x2="96" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144" y1="130" x2="144" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="168" y1="130" x2="168" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192" y1="130" x2="192" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="130" x2="216" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="130" x2="216" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="106" x2="216" y2="106" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="82" x2="216" y2="82" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="58" x2="216" y2="58" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="34" x2="216" y2="34" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="10" x2="216" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="192,82 192,34 144,58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="96,34 48,34 72,82" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="106" r="3" fill="currentColor"/><text x="112" y="119.2" font-size="12" text-anchor="middle">O</text><circle cx="192" cy="82" r="2.6" fill="currentColor"/><text x="201.5" y="83" font-size="12" text-anchor="middle">A</text><circle cx="96" cy="34" r="2.6" fill="currentColor"/><text x="92.5" y="27.8" font-size="12" text-anchor="middle">A′</text><circle cx="192" cy="34" r="2.6" fill="currentColor"/><text x="199.1" y="31.1" font-size="12" text-anchor="middle">B</text><circle cx="48" cy="34" r="2.6" fill="currentColor"/><text x="40.2" y="30.4" font-size="12" text-anchor="middle">B′</text><circle cx="144" cy="58" r="2.6" fill="currentColor"/><text x="148.5" y="53.3" font-size="12" text-anchor="middle">C</text><circle cx="72" cy="82" r="2.6" fill="currentColor"/><text x="62.2" y="81.3" font-size="12" text-anchor="middle">C′</text><path d="M192 82 A75.9 75.9 0 0 0 96 34" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><line x1="120" y1="106" x2="192" y2="82" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="106" x2="96" y2="34" stroke="currentColor" stroke-width="1" fill="none"/></svg>'
+        explain: 例：「回転移動では、図形は O のまわりを回るだけで、形も大きさも変わらない。だから、O から A までの長さは、回しているとちゅうもずっと同じ。円は、中心から同じ長さにある点の集まりなので、A は O を中心とし OA を半径とする円の上を動く。」と書ければよい。① 回しても O からの長さは変わらない、② 円は中心から同じ長さの点の集まり、の 2 点を見る。② の円の決まり（G-010）を使えているかが大切。
+        hints:
+          - 回しているとき、O から A までの長さは変わるかな。
+          - 円は、どんな点の集まりだったかな。
+          - 「O からの長さが〜だから、〜の上を動く」と書こう。
+        paths:
+          - [O から A までの長さは変わらない, 円は中心から同じ長さの点の集まり, A は O を中心とした円の上]
+      - part: わけ
+        text: 正三角形を直線の上で転がすと、1 回に 120° 回ります。なぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="12.8" y1="112.2" x2="227.2" y2="112.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="22.5,112.2 120,112.2 71.2,27.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="168.7,27.8 120,112.2 217.5,112.2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M217.5 112.2 A97.5 97.5 0 0 0 71.3 27.8" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="71.2" cy="27.8" r="3" fill="currentColor"/><text x="15.5" y="125.4" font-size="12" text-anchor="middle">A</text><text x="127" y="125.4" font-size="12" text-anchor="middle">B</text><text x="71.2" y="23" font-size="12" text-anchor="middle">C</text></svg>'
+        explain: 例：「転がる前、正三角形の辺 AB が直線の上にある。B を中心に回って、辺 BC が直線の上にくるまで転がる。直線の上の一直線の角 180° のうち、三角形の角 ABC の 60° をのぞいた 180° − 60° = 120° の分だけ、辺 BC が回って直線に重なるので、120° 回る。」と書ければよい。① 回る中心は直線についた頂点 B、② 辺 BC が直線に重なるまで回る、③ 一直線の 180° から三角形の角 60° をひく、の 3 点を見る。60° 回ると答えてしまったら、図で辺 BC の動きを指でなぞらせる。正方形なら 180° − 90° = 90° になることも確かめるとよい。
+        hints:
+          - 転がるとき、どの点を中心に回るかな。
+          - 辺 BC は、どこまで回ると直線に重なるかな。
+          - 「一直線の角は〜で、三角形の角は〜だから」と書こう。
+        paths:
+          - [中心は B, 辺 BC が直線に重なるまで回る, 180° − 60° = 120°]
+      - part: わけ
+        text: 長方形 ABCD の辺 BC の上を点 P が動くとき、三角形 APD の面積は変わりません。なぜですか。たて 5 cm、横 8 cm の長方形を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46.4,24 101.6,116 193.6,24" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="46.4,24 46.4,116 193.6,116 193.6,24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.4" y1="24" x2="101.6" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="193.6" y1="24" x2="101.6" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><text x="39.4" y="21.2" font-size="12" text-anchor="middle">A</text><text x="39.4" y="129.2" font-size="12" text-anchor="middle">B</text><text x="200.6" y="129.2" font-size="12" text-anchor="middle">C</text><text x="200.6" y="21.2" font-size="12" text-anchor="middle">D</text><text x="101.6" y="132.2" font-size="12" text-anchor="middle">P</text><circle cx="101.6" cy="116" r="2.6" fill="currentColor"/><text x="120" y="19.2" font-size="12" text-anchor="middle">8 cm</text><text x="40.4" y="74.2" font-size="12" text-anchor="end">5 cm</text><line x1="109" y1="134" x2="134.7" y2="134" stroke="currentColor" stroke-width="1.2" fill="none"/><polyline points="129.7,130 134.7,134 129.7,138" stroke="currentColor" stroke-width="1.2" fill="none"/></svg>'
+        explain: 例：「三角形 APD の底辺を AD とみると、底辺は P がどこにあっても 8 cm。高さは P から AD までの長さで、BC と AD は平行なので、P が BC の上のどこにあっても長方形のたての 5 cm。底辺も高さも変わらないので、面積はいつも 8 × 5 ÷ 2 = 20 cm²。」と書ければよい。① 底辺 AD は変わらない、② 高さは平行な BC と AD のはばで変わらない、の 2 点を見る。P を B に置いたときと C に置いたときで面積が同じことを、計算で確かめてもよい。
+        hints:
+          - 三角形 APD の底辺を AD とみよう。
+          - P が動くと、高さは変わるかな。BC と AD の関係を思い出そう。
+          - 「底辺は〜、高さは〜だから、面積は変わらない」と書こう。
+        paths:
+          - [底辺 AD = 8 cm で変わらない, 高さは BC と AD のはば 5 cm で変わらない, 面積はいつも 20 cm²]
+      - part: 今日
+        text: 1 辺 14 cm の正方形 ABCD を、直線の上を、すべらないように右へ 1 回転がします。頂点 D がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 7
+        check: "Fraction(14 * 2, 4)"
+        hints:
+          - 正方形は、頂点 C を中心にして 90° 回るね。
+          - D は、半径 CD = 14 cm の円の上を動くよ。
+          - 円周（28 × 円周率）cm の 4 分の 1 だね。
+        paths:
+          - [半径 14 cm, 28 ÷ 4 = 7, □ は 7]
+      - part: 今日
+        text: たて 6 cm、横 9 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。5 秒後の三角形 ABP の面積は何 cm² ですか。
+        answer: 15
+        check: "(1 * 5) * 6 // 2"
+        hints:
+          - 5 秒で P は何 cm 進むかな。
+          - BP は 5 cm だね。
+          - 底辺 BP、高さ AB の三角形だよ。
+        paths:
+          - [BP は 5 cm, 5 × 6 ÷ 2 = 15, 15 cm²]
+    extra:
+      - part: 今日
+        text: 長さ 7 cm の線分 OA を、点 O を中心にして 90° 回しました。点 A がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 7/2
+        accept: [3.5]
+        check: "Fraction(7 * 2, 360 // 90)"
+        hints:
+          - 90° は、1 回転の何分の 1 かな。
+          - 半径 7 cm の円周は（14 × 円周率）cm だね。
+          - その 4 分の 1 だよ。わり切れなければ分数で表そう。
+        paths:
+          - [円の 4 分の 1, 14 ÷ 4 = 7/2, □ は 7/2（3.5）]
+      - part: 今日
+        text: 1 辺 9 cm の正三角形 ABC を、直線の上を、すべらないように右へ 1 回転がします。頂点 C がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 6
+        check: "Fraction(9 * 2 * 120, 360)"
+        hints:
+          - 三角形は、頂点 B を中心にして 120° 回るね。
+          - 半径 9 cm の円周は（18 × 円周率）cm だよ。
+          - その 3 分の 1 だね。
+        paths:
+          - [18 ÷ 3 = 6, □ は 6]
+      - part: 今日
+        text: たて 4 cm、横 7 cm の長方形 ABCD の辺 BC の上を、点 P が B から C へ動きます。P が BC のまん中にあるとき、三角形 APD の面積は何 cm² ですか。
+        answer: 14
+        check: "7 * 4 // 2"
+        hints:
+          - 三角形 APD の底辺を AD とみよう。
+          - 高さは、長方形のたての長さだね。
+          - P がどこにあっても同じ面積だよ。
+        paths:
+          - [底辺 7 cm、高さ 4 cm, 7 × 4 ÷ 2 = 14, 14 cm²]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 半径 6 cm、中心角 40° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 4
+        check: "Fraction(6 * 6, 360 // 40)"
+        hints:
+          - 中心角 40° のおうぎ形は、円の何分の 1 かな。
+          - 円の面積は（36 × 円周率）cm² だね。
+          - 360 ÷ 40 = 9 で、その 9 分の 1 だよ。
+        paths:
+          - [円の 9 分の 1, 36 ÷ 9 = 4, □ は 4]
+      - part: 思い出す
+        text: 形のまん中の点を中心にして 180° 回すと、もとの形にぴったり重なるか考えます。ぴったり重ならない形はどれですか。
+        choices: [正方形, 長方形, 平行四辺形, 正三角形]
+        answer: 正三角形
+        check: "[s for s, P in (('正方形', ((0, 0), (2, 0), (2, 2), (0, 2))), ('長方形', ((0, 0), (3, 0), (3, 1), (0, 1))), ('平行四辺形', ((0, 0), (3, 0), (4, 2), (1, 2))), ('正三角形', ((0, 0), (2, 0), (1, math.sqrt(3))))) if not (lambda cx, cy: all(min(abs(2 * cx - p[0] - q[0]) + abs(2 * cy - p[1] - q[1]) for q in P) < 1e-9 for p in P))(sum(p[0] for p in P) / len(P), sum(p[1] for p in P) / len(P))][0]"
+        hints:
+          - 紙に形をかいて、まん中をおさえて半分回してみよう。
+          - 180° 回すと、上と下、右と左が入れかわるね。
+          - 上にとがったかどがある形は、回すとどうなるかな。
+        paths:
+          - [正方形・長方形・平行四辺形は重なる, 正三角形は上のかどが下にくる, 正三角形]
+      - part: 今日
+        text: たて 3 cm、横 4 cm の長方形 ABCD を、頂点 B を中心にして 90° 回しました。辺 AB が通ったあとの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。分数で答えましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="73.3" y1="130" x2="73.3" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="86.7" y1="130" x2="86.7" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="113.3" y1="130" x2="113.3" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="126.7" y1="130" x2="126.7" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="153.3" y1="130" x2="153.3" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="166.7" y1="130" x2="166.7" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="180" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="116.7" x2="180" y2="116.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="103.3" x2="180" y2="103.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="76.7" x2="180" y2="76.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="63.3" x2="180" y2="63.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="50" x2="180" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="36.7" x2="180" y2="36.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="23.3" x2="180" y2="23.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="10" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="73.3,23.3 73.3,63.3 126.7,63.3 126.7,23.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="113.3,63.3 73.3,63.3 73.3,116.7 113.3,116.7" stroke="currentColor" stroke-width="1.8" fill="none" stroke-dasharray="5 4"/><circle cx="73.3" cy="63.3" r="3" fill="currentColor"/><circle cx="73.3" cy="23.3" r="2.6" fill="currentColor"/><text x="73.3" y="17.5" font-size="12" text-anchor="middle">A</text><circle cx="113.3" cy="63.3" r="2.6" fill="currentColor"/><text x="124.3" y="67.5" font-size="12" text-anchor="middle">A′</text><circle cx="73.3" cy="63.3" r="2.6" fill="currentColor"/><text x="65.3" y="76.5" font-size="12" text-anchor="middle">B</text><circle cx="126.7" cy="63.3" r="2.6" fill="currentColor"/><text x="136.7" y="67.5" font-size="12" text-anchor="middle">C</text><circle cx="73.3" cy="116.7" r="2.6" fill="currentColor"/><text x="73.3" y="131.9" font-size="12" text-anchor="middle">C′</text><circle cx="126.7" cy="23.3" r="2.6" fill="currentColor"/><text x="134.7" y="21.5" font-size="12" text-anchor="middle">D</text><circle cx="113.3" cy="116.7" r="2.6" fill="currentColor"/><text x="119.9" y="129.7" font-size="12" text-anchor="middle">D′</text><path d="M113.3 63.3 A40 40 0 0 0 73.3 23.3" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><line x1="73.3" y1="63.3" x2="73.3" y2="23.3" stroke="currentColor" stroke-width="1" fill="none"/><line x1="73.3" y1="63.3" x2="113.3" y2="63.3" stroke="currentColor" stroke-width="1" fill="none"/></svg>'
+        answer: 9/4
+        check: "Fraction(3 * 3, 4)"
+        hints:
+          - 辺 AB は、B を中心にして回るね。
+          - 通ったあとは、半径 AB = 3 cm、中心角 90° のおうぎ形だよ。
+          - 円の面積（9 × 円周率）cm² の 4 分の 1 だね。
+        paths:
+          - [半径 3 cm、中心角 90° のおうぎ形, 9 ÷ 4 = 9/4, □ は 9/4]
+      - part: 今日
+        text: 半径 1 cm の円が、直線の上を、すべらないように 1 回転しました。円の中心が動いた長さは、約何 cm ですか。円周率は 3.14 とします。
+        answer: 6.28
+        check: "314 * 2 / 100"
+        hints:
+          - 1 回転で、円周の長さだけ進むね。
+          - 円周 = 直径 × 円周率 だよ。
+          - 直径は 2 cm なので、3.14 を 2 回たそう。
+        paths:
+          - [円周は 2 × 3.14, 3.14 + 3.14 = 6.28, 6.28 cm]
+      - part: 今日
+        text: 半径 6 cm の円の周の上を、点 P が A を出発して進み、円周の 3 分の 1 だけ進みました。P が動いた長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><path d="M176 70 A56 56 0 0 0 92 21.5" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><circle cx="176" cy="70" r="3" fill="currentColor"/><circle cx="92" cy="21.5" r="3" fill="currentColor"/><line x1="120" y1="70" x2="176" y2="70" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="113" y="82.2" font-size="12" text-anchor="middle">O</text><text x="185" y="77.2" font-size="12" text-anchor="middle">A</text><text x="87" y="17" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 4
+        check: "Fraction(6 * 2, 3)"
+        hints:
+          - 円周は（12 × 円周率）cm だね。
+          - P はその 3 分の 1 を進んだよ。
+          - 12 ÷ 3 を計算しよう。
+        paths:
+          - [円周は 12 × 円周率, 12 ÷ 3 = 4, □ は 4]
+      - part: 挑戦
+        text: 1 辺 5 cm の正方形のまわりを、半径 1 cm の円が、辺からはなれずに外がわを転がって 1 周しました。円の中心がえがいた線（点線）の長さは、約何 cm ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="85.6,104.4 154.4,104.4 154.4,35.6 85.6,35.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="118.2" r="13.8" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="118.2" r="2.5" fill="currentColor"/><line x1="85.6" y1="118.2" x2="154.4" y2="118.2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="168.2" y1="104.4" x2="168.2" y2="35.6" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="154.4" y1="21.8" x2="85.6" y2="21.8" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="71.8" y1="35.6" x2="71.8" y2="104.4" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M154.4 118.2 A13.8 13.8 0 0 0 168.2 104.4" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M168.2 35.6 A13.8 13.8 0 0 0 154.4 21.8" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M85.6 21.8 A13.8 13.8 0 0 0 71.8 35.6" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M71.8 104.4 A13.8 13.8 0 0 0 85.6 118.2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><text x="120" y="74.2" font-size="12" text-anchor="middle">5 cm</text></svg>'
+        answer: 26.28
+        check: "(4 * 5 * 100 + 314 * 2) / 100"
+        hints:
+          - 中心のえがく線は、まっすぐな部分と、かどのまるい部分に分かれるね。
+          - まっすぐな部分は、正方形の辺と同じ長さで 4 本だよ。
+          - かどのまるい部分は、半径 1 cm の円の 4 分の 1 が 4 つ。合わせると何になるかな。
+        paths:
+          - [まっすぐな部分 5 × 4 = 20, かどの 4 つで半径 1 cm の円 1 つ分, 円周 2 × 3.14 = 6.28, 20 + 6.28 = 26.28, 26.28 cm]
+        note: かどのまるい部分をわすれて 20、または正方形のまわりに円の半径をたした 28 にしやすい。かどでは、円は正方形の頂点を中心に回る。
+    extra:
+      - part: 今日
+        text: 半径 9 cm、中心角 40° のおうぎ形の弧の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(9 * 2, 360 // 40)"
+        hints:
+          - 中心角 40° は、1 回転の何分の 1 かな。
+          - 円周は（18 × 円周率）cm だね。
+          - その 9 分の 1 だよ。
+        paths:
+          - [360 ÷ 40 = 9, 18 ÷ 9 = 2, □ は 2]
+      - part: 今日
+        text: 形のまん中の点を中心にして 90° 回すと、もとの形にぴったり重なる形はどれですか。
+        choices: [正方形, 長方形, 平行四辺形, 正三角形]
+        answer: 正方形
+        check: "[s for s, P in (('正方形', ((0, 0), (2, 0), (2, 2), (0, 2))), ('長方形', ((0, 0), (3, 0), (3, 1), (0, 1))), ('平行四辺形', ((0, 0), (3, 0), (4, 2), (1, 2))), ('正三角形', ((0, 0), (2, 0), (1, math.sqrt(3))))) if (lambda cx, cy: all(min(abs(cx - (p[1] - cy) - q[0]) + abs(cy + (p[0] - cx) - q[1]) for q in P) < 1e-9 for p in P))(sum(p[0] for p in P) / len(P), sum(p[1] for p in P) / len(P))][0]"
+        hints:
+          - 90° 回すと、たてと横が入れかわるね。
+          - たてと横の長さがちがう形は、重なるかな。
+          - 4 つの辺とかどが、みな同じ形はどれかな。
+        paths:
+          - [90° でたてと横が入れかわる, たてと横が同じ長さの正方形だけが重なる, 正方形]
+      - part: 今日
+        text: 半径 4 cm の円の周の上を、点 P が A を出発して進み、円周の 4 分の 1 だけ進みました。P が動いた長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(4 * 2, 4)"
+        hints:
+          - 円周は（8 × 円周率）cm だね。
+          - P はその 4 分の 1 を進んだよ。
+          - 8 ÷ 4 を計算しよう。
+        paths:
+          - [8 ÷ 4 = 2, □ は 2]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: たて 6 cm、横 10 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 2 cm ずつ C に向かって進みます。4 秒後の三角形 ABP の面積は何 cm² ですか。
+        answer: 24
+        check: "(2 * 4) * 6 // 2"
+        hints:
+          - 4 秒で P は何 cm 進むかな。
+          - BP は 2 × 4 = 8 cm だね。
+          - 底辺 BP、高さ AB の三角形だよ。
+        paths:
+          - [BP は 8 cm, 8 × 6 ÷ 2 = 24, 24 cm²]
+      - part: 今日
+        text: 1 辺 4 cm の正方形 ABCD の辺の上を、点 P が A を出発して、A → B → C → D の順に、1 秒に 1 cm ずつ進みます。9 秒後、P はどの辺の上にありますか。
+        choices: [辺 AB, 辺 BC, 辺 CD, 辺 DA]
+        answer: 辺 CD
+        check: "('辺 AB', '辺 BC', '辺 CD', '辺 DA')[(1 * 9) // 4]"
+        hints:
+          - 9 秒で何 cm 進むかな。
+          - B、C に着くのは何秒後かな。
+          - C に着いてから、あと何 cm 進むかな。
+        paths:
+          - [9 cm 進む, B に 4 秒、C に 8 秒, のこり 1 cm は辺 CD の上, 辺 CD]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 A を、点 O を中心にして時計の針と同じ向き（右回り）に 90° 回します。回したあとの点 A′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="180" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="110" x2="180" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="90" x2="180" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="50" x2="180" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="30" x2="180" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="10" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><circle cx="100" cy="90" r="3" fill="currentColor"/><text x="92" y="103.2" font-size="12" text-anchor="middle">O</text><circle cx="120" cy="30" r="2.6" fill="currentColor"/><text x="123.2" y="24.7" font-size="12" text-anchor="middle">A</text></svg>'
+        choices: [右へ 3 目、下へ 1 目, 右へ 1 目、下へ 3 目, 左へ 3 目、上へ 1 目, 右へ 3 目、上へ 1 目]
+        answer: 右へ 3 目、下へ 1 目
+        check: "(lambda x, y: (lambda X, Y: '%sへ %d 目、%sへ %d 目' % ('左' if X < 0 else '右', abs(X), '上' if Y > 0 else '下', abs(Y)))(y, -x))(3 - 2, 5 - 2)"
+        hints:
+          - O から A までは、右へ何目、上へ何目かな。
+          - 右回りに 90° 回すと、「上へ」は「右へ」に、「右へ」は「下へ」に変わるよ。
+          - 目の数は入れかわるだけだね。
+        paths:
+          - [O から A は 右へ 1 目、上へ 3 目, 上へ 3 は 右へ 3 に、右へ 1 は 下へ 1 に, 右へ 3 目、下へ 1 目]
+      - part: 今日
+        text: 長さ 3 cm の線分 OA を、点 O を中心にして 120° 回しました。点 A がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 2
+        check: "Fraction(3 * 2, 360 // 120)"
+        hints:
+          - 120° は、1 回転の何分の 1 かな。
+          - 半径 3 cm の円周は（6 × 円周率）cm だね。
+          - その 3 分の 1 だよ。
+        paths:
+          - [円の 3 分の 1, 6 ÷ 3 = 2, □ は 2]
+      - part: 今日
+        text: 長さ 6 cm の線分 OA を、点 O を中心にして 30° 回しました。線分 OA が通ったあとの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 3
+        check: "Fraction(6 * 6, 360 // 30)"
+        hints:
+          - 通ったあとは、半径 6 cm、中心角 30° のおうぎ形だね。
+          - 円の面積は（36 × 円周率）cm² だよ。
+          - 30° は 1 回転の 12 分の 1 だね。
+        paths:
+          - [360 ÷ 30 = 12, 36 ÷ 12 = 3, □ は 3]
+      - part: 今日
+        text: 1 辺 6 cm の正方形 ABCD を、直線の上を、すべらないように右へ 1 回転がします。頂点 D がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="12.8" y1="118.8" x2="227.2" y2="118.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="22.5,118.8 120,118.8 120,21.2 22.5,21.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,21.2 120,118.8 217.5,118.8 217.5,21.2" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M217.5 118.8 A97.5 97.5 0 0 0 120 21.2" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="3 3"/><circle cx="120" cy="21.2" r="3" fill="currentColor"/><text x="15.5" y="131.9" font-size="12" text-anchor="middle">B</text><text x="127" y="131.9" font-size="12" text-anchor="middle">C</text><text x="127" y="18.4" font-size="12" text-anchor="middle">D</text><text x="15.5" y="18.4" font-size="12" text-anchor="middle">A</text><text x="71.2" y="134.6" font-size="11" text-anchor="middle">6 cm</text></svg>'
+        answer: 3
+        check: "Fraction(6 * 2, 4)"
+        hints:
+          - 正方形は、頂点 C を中心にして 90° 回るね。
+          - D は、半径 CD = 6 cm の円の上を動くよ。
+          - 円周（12 × 円周率）cm の 4 分の 1 だね。
+        paths:
+          - [半径 6 cm, 12 ÷ 4 = 3, □ は 3]
+      - part: 今日
+        text: 半径 4 cm の円が、直線の上を、すべらないように 1 回転しました。円の中心が動いた長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 8
+        check: "4 * 2"
+        hints:
+          - 1 回転すると、円周の長さだけ進むね。
+          - 円周 = 直径 × 円周率 だよ。
+          - 中心も同じ長さだけ進むよ。
+        paths:
+          - [円周は 8 × 円周率, □ は 8]
+      - part: 挑戦
+        text: 1 辺 3 cm の正方形のまわりを、半径 2 cm の円が、辺からはなれずに外がわを転がって 1 周しました。円の中心がえがいた線の長さは、約何 cm ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="103.1,86.9 136.9,86.9 136.9,53.1 103.1,53.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="109.5" r="22.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="109.5" r="2.5" fill="currentColor"/><line x1="103.1" y1="109.5" x2="136.9" y2="109.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="159.5" y1="86.9" x2="159.5" y2="53.1" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="136.9" y1="30.5" x2="103.1" y2="30.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="80.5" y1="53.1" x2="80.5" y2="86.9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><path d="M136.9 109.5 A22.5 22.5 0 0 0 159.5 86.9" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M159.5 53.1 A22.5 22.5 0 0 0 136.9 30.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M103.1 30.5 A22.5 22.5 0 0 0 80.5 53.1" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><path d="M80.5 86.9 A22.5 22.5 0 0 0 103.1 109.5" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="3 3"/><text x="120" y="74.2" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        answer: 24.56
+        check: "(4 * 3 * 100 + 314 * 4) / 100"
+        hints:
+          - まっすぐな部分と、かどのまるい部分に分けよう。
+          - かどの 4 つのまるい部分を合わせると、半径 2 cm の円 1 つ分だね。
+          - 半径 2 cm の円周は、直径 4 cm × 3.14 だよ。
+        paths:
+          - [まっすぐな部分 3 × 4 = 12, 円周 4 × 3.14 = 12.56, 12 + 12.56 = 24.56, 24.56 cm]
+    extra:
+      - part: 今日
+        text: たて 8 cm、横 6 cm の長方形 ABCD の辺 BC の上を、点 P が B を出発して、1 秒に 1 cm ずつ C に向かって進みます。三角形 ABP の面積が 20 cm² になるのは、出発してから何秒後ですか。
+        answer: 5
+        check: "[t for t in range(1, 7) if (1 * t) * 8 == 20 * 2][0]"
+        hints:
+          - 三角形 ABP の高さは AB の 8 cm だね。
+          - BP × 8 ÷ 2 = 20 になる BP をさがそう。
+          - BP が何 cm になるのは、何秒後かな。
+        paths:
+          - [BP × 8 = 40, BP = 5 cm, 5 秒後]
+      - part: 今日
+        text: 1 辺 12 cm の正三角形 ABC を、直線の上を、すべらないように右へ 1 回転がします。頂点 C がえがく線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 8
+        check: "Fraction(12 * 2 * 120, 360)"
+        hints:
+          - 三角形は、頂点 B を中心にして 120° 回るね。
+          - 半径 12 cm の円周は（24 × 円周率）cm だよ。
+          - その 3 分の 1 だね。
+        paths:
+          - [24 ÷ 3 = 8, □ は 8]
+      - part: 今日
+        text: 長さ 5 cm の線分 OA を、点 O を中心にして 1 回転させました。点 A がえがいた線の長さは、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 10
+        check: "5 * 2"
+        hints:
+          - A は、半径 5 cm の円をえがくね。
+          - 円周 = 直径 × 円周率 だよ。
+          - 直径は半径の 2 つ分だね。
+        paths:
+          - [円周は 10 × 円周率, □ は 10]

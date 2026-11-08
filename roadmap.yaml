@@ -655,9 +655,9 @@ units:
   - {id: G-008, title: 面積, stage: 3, level: 2, region: hakaru, needs: [G-006, N-013, G-005, N-014, G-046], days: 8}
   - {id: G-009, title: 角度, stage: 3, level: 2, region: hakaru, needs: [G-006, N-009, N-014], days: 6}
   - {id: G-010, title: 円とおうぎ形, stage: 3, level: 2, region: hakaru, needs: [G-008, N-020, G-009, N-019, N-077], days: 6}
-  - {id: G-011, title: 体積と表面積, stage: 3, level: 2, region: hakaru, needs: [G-007, G-008, G-010], days: 6}
+  - {id: G-011, title: 体積と表面積, stage: 3, level: 2, region: hakaru, needs: [G-007, G-008, G-010, N-074, G-046], days: 6}
   - {id: G-012, title: 等積変形と面積比, stage: 3, level: 2, region: hakaru, needs: [G-008, A-005], days: 8}
-  - {id: G-013, title: 拡大と縮小（相似の入口）, stage: 3, level: 2, region: hakaru, needs: [G-008, A-005], days: 8}
+  - {id: G-013, title: 拡大と縮小（相似の入口）, stage: 3, level: 2, region: hakaru, needs: [G-008, A-005, G-009, G-046], days: 8}
   - {id: G-014, title: 立体の切断, stage: 3, level: 2, region: katachi, needs: [G-011], days: 6}
   - {id: G-015, title: 点の移動と図形の回転, stage: 3, level: 2, region: katachi, needs: [G-010, G-004], days: 6}
   - {id: L-005, title: 偶奇で考える, stage: 3, level: 2, region: ronpo, needs: [N-008], days: 5}
@@ -714,6 +714,7 @@ units:
   - {id: N-076, title: 計算の順序（かっこ、かけ算とわり算を先に）, stage: 3, level: 2, region: keisan, needs: [N-015, N-014], days: 4}
   - {id: N-077, title: 小数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-020, N-074, N-075], days: 6}
   - {id: N-078, title: 分数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-019, N-014], days: 6}
+  - {id: G-053, title: 線対称と点対称（対称の軸と中心、対称な図形の性質）, stage: 3, level: 2, region: katachi, needs: [G-004, G-006], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}
@@ -777,6 +778,7 @@ units:
   - {id: W-073, title: 天球と地球・月・太陽の動き（自転と公転、天球と日周運動・年周運動、緯度と経度、季節と太陽の高度、月の満ち欠けと日食・月食、潮の満ち干の入口、恒星日と太陽日、均時差と時刻と暦）, stage: 4, level: 3, region: sora, needs: [W-045, G-021, N-059], days: 6}
   - {id: I-009, title: 食べ物と栄養（食品のなかまとはたらき、エネルギーになる物と体をつくる物、ビタミンとミネラル、栄養成分表示を読んで 1 日の量と比べる）, stage: 4, level: 2, region: eiyo, needs: [B-020, A-005], days: 6}
   - {id: I-010, title: くすりと体（飲んだ薬が血にのって運ばれる、決まった量と回数を守るわけ、効き目と副作用、抗菌薬はウイルスに効かない）, stage: 4, level: 2, region: kusuri-doku, needs: [B-020, B-074], days: 5}
+  - {id: G-052, title: 錐体と球の体積と表面積（角錐、円錐、球）, stage: 4, level: 2, region: hakaru, needs: [G-011, G-010, A-010], days: 5}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, level: 3, region: kansu, needs: [A-006, A-011, A-012], days: 6}

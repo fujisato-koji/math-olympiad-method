@@ -1,0 +1,664 @@
+# G-011 体積と表面積
+#
+# 書き方は N-001 の頭の注のとおり。
+# 体積は「1 辺が 1 cm の立方体（1 cm³）のいくつ分」。G-008 の面積（1 cm² のいくつ分）を立体に広げる。
+# ことば：直方体、立方体、体積、cm³（立方センチメートル）、角柱、円柱、底面、側面、底面積、表面積。
+#   角柱は「同じ形の 2 つの面（底面）が向かい合い、まわりが長方形の面（側面）でかこまれた立体」と言う。底面は下にあるとはかぎらない。
+#   m³ は扱わない（1 m³ = 1000000 cm³ は N-073 が前提にないため）。容積と L の換算（1 L = 1000 cm³）も G-046 が前提にないので扱わない。
+# 前提の計算は九九（N-013）と、何十 × 1 けた（20 × 3 は 2 × 3 = 6 の 10 こ分。G-009 の「何十 ÷ 1 けた」と同じ考え）、
+#   2 けたの数を 2〜3 回たす計算（N-007）まで。かけ算の筆算（N-074）は前提にないので、体積は「たて × 横」を九九で出し、
+#   その数 × 高さが上の計算でできる数にした。表面積は、3 種類の面の面積をたして 2 倍（同じ数を 2 回たす）。
+# 円周率は G-010 と同じく、かける計算を最後まで残して「（□ × 円周率）cm³」の形で答える。
+#   3.14 を使って数で答えるのは、3.14 を 2〜3 回たす形だけ（G-010 と同じ）。
+# 角すい・円すい・球の体積は、前提の道具でわけを示せないので扱わない（G-010 の頭の注は球を G-011 としていたが入れていない）。
+# 立体の切断は G-014。
+# 図は svg（D-040）。見取り図は斜めから見た図で、見えない辺は点線。長さの比はおおよそ合わせた。
+#   細い線で 1 cm ごとに区切った図は、1 cm³ の立方体を数える図。三角柱は、底面（直角三角形）を手前に向けて横にねかせた図にした。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 体積と cm³、直方体と立方体の体積　2 日目 底面積 × 高さ（角柱と円柱）、組み合わせた立体
+#   3 日目 表面積（直方体、立方体、円柱）　4 日目 わけ（たて × 横 × 高さ、底面積 × 高さ、体積が同じでも表面積はちがう）
+#   5 日目 G-007（展開図）・G-008（面積）・G-010（円）と混ぜる　6 日目 確認
+# check：体積と表面積の式。「□ × 円周率」の問題は □ の数の式。3.14 を使う答えは 100 倍した整数で計算して 100 でわる。
+#   展開図の向かい合う面は、G-007 と同じく展開図を転がして調べる式（直方体の展開図も、面のつながり方は立方体と同じ）。
+
+id: G-011
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 1 辺が 1 cm の立方体を、すき間なく積んで直方体を作りました。この直方体の大きさを考えよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="54.1,115.3 156.1,115.3 156.1,47.3 54.1,47.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.1,115.3 156.1,47.3 185.9,24.7 185.9,92.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.1,47.3 54.1,47.3 83.9,24.7 185.9,24.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="88.1" y1="115.3" x2="88.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="81.3" x2="88.1" y2="47.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="115.3" x2="122.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="81.3" x2="122.1" y2="47.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="54.1" y1="81.3" x2="88.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="81.3" x2="122.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="81.3" x2="156.1" y2="81.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="156.1" y1="81.3" x2="185.9" y2="58.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="171" y1="104" x2="171" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="122.1" y1="47.3" x2="151.9" y2="24.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="88.1" y1="47.3" x2="117.9" y2="24.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="171" y1="36" x2="69" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="54.1" y1="115.3" x2="156.1" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="115.3" x2="156.1" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="185.9" y1="92.7" x2="185.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="115.3" x2="185.9" y2="92.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="47.3" x2="54.1" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="185.9" y1="24.7" x2="83.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="47.3" x2="185.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.1" y1="47.3" x2="54.1" y2="115.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.1" y1="47.3" x2="83.9" y2="24.7" stroke="currentColor" stroke-width="2" fill="none"/></svg>'
+        explain: もののかさ（大きさ）を体積といいます。1 辺が 1 cm の立方体の体積を 1 cm³（1 立方センチメートル）といいます。この直方体は、1 だん目に横 3 こ、おくに 2 列で 3 × 2 = 6 こ。それが 2 だんあるので 6 × 2 = 12 こ。体積は 12 cm³ です。1 だんのこ数は たて × 横、だんの数は高さなので、直方体の体積 = たて × 横 × 高さ、立方体の体積 = 1 辺 × 1 辺 × 1 辺 で求められます（わけは 4 日目）。
+      - part: 思い出す
+        text: たて 6 cm、横 8 cm の長方形の面積は何 cm² ですか。
+        answer: 48
+        check: "6 * 8"
+        hints:
+          - 長方形の面積は、たて × 横 だね。
+          - 6 のだんの九九を思い出そう。
+          - 単位は cm² だよ。
+        paths:
+          - [6 × 8 = 48, 48 cm²]
+      - part: 思い出す
+        text: 立方体には、面がいくつありますか。
+        answer: 6
+        check: "len([(i, v) for i in range(3) for v in (0, 1)])"
+        hints:
+          - さいころを思い出そう。
+          - 上と下、前と後ろ、左と右があるね。
+          - 向かい合う面の組は 3 組だよ。
+        paths:
+          - [上と下・前と後ろ・左と右, 2 つずつ 3 組, 6 つ]
+      - part: 今日
+        text: 1 辺が 1 cm の立方体を、すき間なく積んで直方体を作りました。体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 162.6,120 162.6,38.1 53.4,38.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="162.6,120 162.6,38.1 186.6,20 186.6,101.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="162.6,38.1 53.4,38.1 77.4,20 186.6,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="80.7" y1="120" x2="80.7" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="80.7" y1="92.7" x2="80.7" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="80.7" y1="65.4" x2="80.7" y2="38.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="120" x2="108" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="92.7" x2="108" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="65.4" x2="108" y2="38.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="120" x2="135.3" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="92.7" x2="135.3" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="65.4" x2="135.3" y2="38.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="53.4" y1="92.7" x2="80.7" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="80.7" y1="92.7" x2="108" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="92.7" x2="135.3" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="92.7" x2="162.6" y2="92.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="53.4" y1="65.4" x2="80.7" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="80.7" y1="65.4" x2="108" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="65.4" x2="135.3" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="65.4" x2="162.6" y2="65.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="162.6" y1="92.7" x2="186.6" y2="74.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="162.6" y1="65.4" x2="186.6" y2="47.3" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="174.6" y1="111" x2="174.6" y2="29" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="135.3" y1="38.1" x2="159.3" y2="20" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="108" y1="38.1" x2="132" y2="20" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="80.7" y1="38.1" x2="104.7" y2="20" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="174.6" y1="29" x2="65.4" y2="29" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="53.4" y1="120" x2="162.6" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="120" x2="162.6" y2="38.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="101.9" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="120" x2="186.6" y2="101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="38.1" x2="53.4" y2="38.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="20" x2="77.4" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="38.1" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="38.1" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="38.1" x2="77.4" y2="20" stroke="currentColor" stroke-width="2" fill="none"/></svg>'
+        answer: 24
+        check: "4 * 2 * 3"
+        hints:
+          - 1 だん目には、何こならんでいるかな。
+          - 横に 4 こ、おくに 2 列だね。
+          - それが何だん重なっているかな。
+        paths:
+          - [1 だんに 4 × 2 = 8 こ, 3 だん, 8 × 3 = 24, 24 cm³]
+        note: 見える面の立方体だけを数えて、おくや内がわの立方体を数えわすれやすい。1 だんずつ数えさせる。
+      - part: 今日
+        text: 直方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,106 164.3,106 164.3,57.9 44,57.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="164.3,106 164.3,57.9 196,34 196,82.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="164.3,57.9 44,57.9 75.7,34 196,34" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="106" x2="164.3" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="82.1" x2="196" y2="82.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="106" x2="75.7" y2="82.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="164.3" y1="106" x2="164.3" y2="57.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="82.1" x2="196" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="106" x2="196" y2="82.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="57.9" x2="44" y2="57.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="34" x2="75.7" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="57.9" x2="196" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="57.9" x2="44" y2="106" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="34" x2="75.7" y2="82.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="57.9" x2="75.7" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><text x="104.1" y="123.6" font-size="13" text-anchor="middle">5 cm</text><text x="187.1" y="105.6" font-size="13" text-anchor="start">3 cm</text><text x="38" y="86.5" font-size="13" text-anchor="end">2 cm</text></svg>'
+        answer: 30
+        check: "3 * 5 * 2"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [3 × 5 = 15, 15 × 2 = 30, 30 cm³]
+          - [5 × 2 = 10, 10 × 3 = 30]
+      - part: 今日
+        text: 1 辺が 3 cm の立方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="65.9,120 141.1,120 141.1,44.9 65.9,44.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="141.1,120 141.1,44.9 174.1,20 174.1,95.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="141.1,44.9 65.9,44.9 98.9,20 174.1,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="65.9" y1="120" x2="141.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="95.1" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="120" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="141.1" y1="120" x2="141.1" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="95.1" x2="174.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="120" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="65.9" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="20" x2="98.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="174.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.9" y1="44.9" x2="65.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="20" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="44.9" x2="98.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="103.5" y="137.6" font-size="13" text-anchor="middle">3 cm</text></svg>'
+        answer: 27
+        check: "3 * 3 * 3"
+        hints:
+          - 立方体は、たても横も高さも同じ長さだね。
+          - 1 辺 × 1 辺 × 1 辺 で求めよう。
+          - 3 × 3 を先に計算しよう。
+        paths:
+          - [3 × 3 = 9, 9 × 3 = 27, 27 cm³]
+        note: 3 × 3 = 9 で止めたり、3 × 3 の面積（9 cm²）と答えたりしやすい。体積は 3 つの長さをかける。
+      - part: 挑戦
+        text: 体積が 42 cm³ の直方体があります。たては 2 cm、横は 3 cm です。高さは何 cm ですか。
+        answer: 7
+        check: "42 // (2 * 3)"
+        hints:
+          - 1 だん目には、1 cm³ の立方体が何こならぶかな。
+          - 2 × 3 = 6 こ。42 こになるには何だん要るかな。
+          - 6 × □ = 42 の □ をさがそう。
+        paths:
+          - [1 だんに 2 × 3 = 6 こ, 6 × □ = 42, □ = 7, 7 cm]
+        note: 42 ÷ 2 や 42 ÷ 3 だけで止めやすい。1 だんのこ数（たて × 横）を先に出す。
+    extra:
+      - part: 今日
+        text: 1 辺が 1 cm の立方体を、すき間なく積んで直方体を作りました。体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="47.9,120 148.1,120 148.1,53.2 47.9,53.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="148.1,120 148.1,53.2 192.1,20 192.1,86.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="148.1,53.2 47.9,53.2 91.9,20 192.1,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="81.3" y1="120" x2="81.3" y2="86.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="81.3" y1="86.6" x2="81.3" y2="53.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="114.7" y1="120" x2="114.7" y2="86.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="114.7" y1="86.6" x2="114.7" y2="53.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="47.9" y1="86.6" x2="81.3" y2="86.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="81.3" y1="86.6" x2="114.7" y2="86.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="114.7" y1="86.6" x2="148.1" y2="86.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="148.1" y1="86.6" x2="192.1" y2="53.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="162.8" y1="108.9" x2="162.8" y2="42.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="177.5" y1="97.9" x2="177.5" y2="31.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="114.7" y1="53.2" x2="158.7" y2="20" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="81.3" y1="53.2" x2="125.3" y2="20" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="162.8" y1="42.1" x2="62.5" y2="42.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="177.5" y1="31.1" x2="77.2" y2="31.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="47.9" y1="120" x2="148.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148.1" y1="120" x2="148.1" y2="53.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="192.1" y1="86.8" x2="192.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148.1" y1="120" x2="192.1" y2="86.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148.1" y1="53.2" x2="47.9" y2="53.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="192.1" y1="20" x2="91.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148.1" y1="53.2" x2="192.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="47.9" y1="53.2" x2="47.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="47.9" y1="53.2" x2="91.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/></svg>'
+        answer: 18
+        check: "3 * 3 * 2"
+        hints:
+          - 1 だん目には、何こならんでいるかな。
+          - 横に 3 こ、おくに 3 列だね。
+          - それが何だん重なっているかな。
+        paths:
+          - [1 だんに 3 × 3 = 9 こ, 2 だん, 9 × 2 = 18, 18 cm³]
+      - part: 今日
+        text: 直方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.3,120 121.9,120 121.9,40.9 90.3,40.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="121.9,120 121.9,40.9 149.7,20 149.7,99.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="121.9,40.9 90.3,40.9 118.1,20 149.7,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="90.3" y1="120" x2="121.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.1" y1="99.1" x2="149.7" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.3" y1="120" x2="118.1" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="121.9" y1="120" x2="121.9" y2="40.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.7" y1="99.1" x2="149.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.9" y1="120" x2="149.7" y2="99.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.9" y1="40.9" x2="90.3" y2="40.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.7" y1="20" x2="118.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.9" y1="40.9" x2="149.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.3" y1="40.9" x2="90.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="118.1" y1="20" x2="118.1" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="90.3" y1="40.9" x2="118.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.1" y="137.6" font-size="13" text-anchor="middle">2 cm</text><text x="142.8" y="121.1" font-size="13" text-anchor="start">4 cm</text><text x="84.3" y="85" font-size="13" text-anchor="end">5 cm</text></svg>'
+        answer: 40
+        check: "4 * 2 * 5"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [4 × 2 = 8, 8 × 5 = 40, 40 cm³]
+      - part: 今日
+        text: 1 辺が 2 cm の立方体の体積は何 cm³ ですか。
+        answer: 8
+        check: "2 * 2 * 2"
+        hints:
+          - 立方体は、たても横も高さも同じ長さだね。
+          - 1 辺 × 1 辺 × 1 辺 で求めよう。
+          - 2 × 2 を先に計算しよう。
+        paths:
+          - [2 × 2 = 4, 4 × 2 = 8, 8 cm³]
+        note: 2 × 3 = 6 のように、辺の数（3）をかけやすい。同じ長さを 3 回かける。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 三角柱の体積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 139.4,120 53.4,55.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="139.4,120 53.4,55.6 100.6,20 186.6,84.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="139.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="84.4" x2="186.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="120" x2="100.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="139.4" y1="120" x2="53.4" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="84.4" x2="100.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="120" x2="186.6" y2="84.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="55.6" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="20" x2="100.6" y2="84.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="55.6" x2="100.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="96.4" y="137.6" font-size="13" text-anchor="middle">4 cm</text><text x="47.4" y="92.3" font-size="13" text-anchor="end">3 cm</text><text x="170" y="113.8" font-size="13" text-anchor="start">5 cm</text><polyline points="61.4,120 61.4,112 53.4,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 同じ形の 2 つの面が向かい合い、まわりが長方形の面でかこまれた立体を角柱といいます。向かい合う 2 つの面を底面、まわりの面を側面、底面の面積を底面積、2 つの底面の間の長さを高さといいます。底面が三角形なら三角柱、四角形なら四角柱です。角柱の体積 = 底面積 × 高さ。この三角柱は、手前の直角三角形が底面で、底面積は 4 × 3 ÷ 2 = 6 cm²、高さは 5 cm なので、体積は 6 × 5 = 30 cm³ です。底面は下にあるとはかぎりません。直方体も四角柱で、たて × 横 が底面積です。
+      - part: 思い出す
+        text: たて 2 cm、横 4 cm、高さ 3 cm の直方体の体積は何 cm³ ですか。
+        answer: 24
+        check: "2 * 4 * 3"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [2 × 4 = 8, 8 × 3 = 24, 24 cm³]
+      - part: 思い出す
+        text: 半径が 4 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 16
+        check: "4 * 4"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 半径は 4 cm だよ。
+          - 4 × 4 を計算しよう。
+        paths:
+          - [4 × 4 × 円周率, 16 × 円周率, □ は 16]
+        note: 直径 × 円周率（円周）と取りちがえて 8 と答えやすい。
+      - part: 今日
+        text: 底面積が 9 cm²、高さが 7 cm の四角柱の体積は何 cm³ ですか。
+        answer: 63
+        check: "9 * 7"
+        hints:
+          - 角柱の体積は、底面積 × 高さ だね。
+          - 底面積はもうわかっているよ。
+          - 9 のだんの九九を思い出そう。
+        paths:
+          - [9 × 7 = 63, 63 cm³]
+      - part: 今日
+        text: 三角柱の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46.7,120 166.9,120 46.7,39.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="166.9,120 46.7,39.9 73.1,20 193.3,100.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="46.7" y1="120" x2="166.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73.1" y1="100.1" x2="193.3" y2="100.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="46.7" y1="120" x2="73.1" y2="100.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="166.9" y1="120" x2="46.7" y2="39.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="193.3" y1="100.1" x2="73.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="120" x2="193.3" y2="100.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.7" y1="39.9" x2="46.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73.1" y1="20" x2="73.1" y2="100.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="46.7" y1="39.9" x2="73.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.8" y="137.6" font-size="13" text-anchor="middle">6 cm</text><text x="40.7" y="84.5" font-size="13" text-anchor="end">4 cm</text><text x="187.1" y="121.6" font-size="13" text-anchor="start">3 cm</text><polyline points="54.7,120 54.7,112 46.7,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 36
+        check: "6 * 4 // 2 * 3"
+        hints:
+          - 底面は、手前の直角三角形だよ。
+          - 底面積は 6 × 4 ÷ 2 で求めよう。
+          - 底面積 × 高さ。高さは、おくへの長さだよ。
+        paths:
+          - [底面積は 6 × 4 ÷ 2 = 12, 12 × 3 = 36, 36 cm³]
+          - [6 × 4 × 3 = 72 の直方体の半分, 72 ÷ 2 = 36]
+        note: 「÷ 2」をわすれて 72 と答えやすい。底面が三角形であることを図で確かめる。
+      - part: 今日
+        text: 円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M78.4 38 L78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3 L161.6 38 A41.6 13.3 0 0 1 78.4 38 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><ellipse cx="120" cy="38" rx="41.6" ry="13.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="78.4" y1="38" x2="78.4" y2="107.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.6" y1="38" x2="161.6" y2="107.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.4 107.3 A41.6 13.3 0 0 0 161.6 107.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.4 107.3 A41.6 13.3 0 0 1 161.6 107.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="38" r="2.5" fill="currentColor"/><line x1="120" y1="38" x2="161.6" y2="38" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.8" y="52.8" font-size="12" text-anchor="middle">3 cm</text><text x="167.6" y="76.9" font-size="12" text-anchor="start">5 cm</text></svg>'
+        answer: 45
+        check: "3 * 3 * 5"
+        hints:
+          - 円柱の底面は円だね。円柱の体積も 底面積 × 高さ だよ。
+          - 底面積は（3 × 3 × 円周率）cm² だね。
+          - 9 × 5 を計算しよう。
+        paths:
+          - [底面積は 9 × 円周率, 9 × 5 = 45, （45 × 円周率）cm³, □ は 45]
+        note: 半径 × 2（直径）を使って 6 × 6 としやすい。底面積は 半径 × 半径 × 円周率。
+      - part: 挑戦
+        text: 2 つの直方体を組み合わせた形の立体です。体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46.7,120 166.9,120 166.9,79.9 106.8,79.9 106.8,39.9 46.7,39.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="166.9,120 166.9,79.9 193.3,60.1 193.3,100.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="166.9,79.9 106.8,79.9 133.2,60.1 193.3,60.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="106.8,79.9 106.8,39.9 133.2,20 133.2,60.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="106.8,39.9 46.7,39.9 73.1,20 133.2,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="46.7" y1="120" x2="166.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="120" x2="166.9" y2="79.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="193.3" y1="100.1" x2="193.3" y2="60.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="120" x2="193.3" y2="100.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="79.9" x2="106.8" y2="79.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="193.3" y1="60.1" x2="133.2" y2="60.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="79.9" x2="193.3" y2="60.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.8" y1="79.9" x2="106.8" y2="39.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="133.2" y1="60.1" x2="133.2" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.8" y1="79.9" x2="133.2" y2="60.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.8" y1="39.9" x2="46.7" y2="39.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="133.2" y1="20" x2="73.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.8" y1="39.9" x2="133.2" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.7" y1="39.9" x2="46.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.7" y1="39.9" x2="73.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.8" y="137.6" font-size="13" text-anchor="middle">6 cm</text><text x="40.7" y="84.5" font-size="13" text-anchor="end">4 cm</text><text x="187.1" y="121.6" font-size="13" text-anchor="start">3 cm</text><text x="136.8" y="94.5" font-size="13" text-anchor="middle">3 cm</text><text x="198.3" y="84.6" font-size="13" text-anchor="start">2 cm</text></svg>'
+        answer: 54
+        check: "(6 * 4 - 3 * 2) * 3"
+        hints:
+          - 下の直方体と上の直方体に分けてみよう。
+          - 下は 横 6 cm、高さ 2 cm、上は 横 3 cm、高さ 2 cm だね。おくはどちらも 3 cm。
+          - 手前の面を底面とみて、底面積 × おくの長さ としてもよいよ。
+        paths:
+          - [下 6 × 2 × 3 = 36, 上 3 × 2 × 3 = 18, 36 + 18 = 54, 54 cm³]
+          - [手前の面の面積 6 × 4 − 3 × 2 = 18, 18 × 3 = 54]
+        note: 大きい直方体 6 × 4 × 3 = 72 からひくとき、切り取った部分の大きさ（3 × 2 × 3 = 18）をまちがえやすい。2 つの道で答えが同じか確かめる。
+    extra:
+      - part: 今日
+        text: 三角柱の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.5,120 124.3,120 53.5,66.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="124.3,120 53.5,66.9 115.7,20 186.5,73.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.5" y1="120" x2="124.3" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.7" y1="73.1" x2="186.5" y2="73.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.5" y1="120" x2="115.7" y2="73.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="124.3" y1="120" x2="53.5" y2="66.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.5" y1="73.1" x2="115.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="124.3" y1="120" x2="186.5" y2="73.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.5" y1="66.9" x2="53.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.7" y1="20" x2="115.7" y2="73.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.5" y1="66.9" x2="115.7" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="88.9" y="137.6" font-size="13" text-anchor="middle">4 cm</text><text x="47.5" y="98" font-size="13" text-anchor="end">3 cm</text><text x="162.4" y="108.1" font-size="13" text-anchor="start">8 cm</text><polyline points="61.5,120 61.5,112 53.5,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 48
+        check: "4 * 3 // 2 * 8"
+        hints:
+          - 底面は、手前の直角三角形だよ。
+          - 底面積は 4 × 3 ÷ 2 で求めよう。
+          - 底面積 × 高さ。高さは、おくへの長さだよ。
+        paths:
+          - [底面積は 4 × 3 ÷ 2 = 6, 6 × 8 = 48, 48 cm³]
+      - part: 今日
+        text: 半径 2 cm、高さ 7 cm の円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        answer: 28
+        check: "2 * 2 * 7"
+        hints:
+          - 円柱の体積も 底面積 × 高さ だよ。
+          - 底面積は（2 × 2 × 円周率）cm² だね。
+          - 4 × 7 を計算しよう。
+        paths:
+          - [底面積は 4 × 円周率, 4 × 7 = 28, □ は 28]
+      - part: 今日
+        text: 底面積が 8 cm² の角柱の体積は 56 cm³ です。高さは何 cm ですか。
+        answer: 7
+        check: "56 // 8"
+        hints:
+          - 底面積 × 高さ = 体積 だね。
+          - 8 × □ = 56 になる □ をさがそう。
+          - 8 のだんの九九を思い出そう。
+        paths:
+          - [8 × □ = 56, 56 ÷ 8 = 7, 7 cm]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 立体のすべての面の面積の和を、表面積といいます。展開図を見て、この直方体の表面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="93,124 147,124 147,102.4 93,102.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="93,102.4 147,102.4 147,70 93,70" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="93,70 147,70 147,48.4 93,48.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="93,48.4 147,48.4 147,16 93,16" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="60.6,70 93,70 93,48.4 60.6,48.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="147,70 179.4,70 179.4,48.4 147,48.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="10.6" font-size="13" text-anchor="middle">5 cm</text><text x="88" y="36.7" font-size="13" text-anchor="end">3 cm</text><text x="184.4" y="63.7" font-size="13" text-anchor="start">2 cm</text></svg>'
+        explain: 直方体の向かい合う面は同じ形です。5 × 3 = 15 cm² の面（上と下）が 2 つ、5 × 2 = 10 cm² の面（前と後ろ）が 2 つ、3 × 2 = 6 cm² の面（左と右）が 2 つ。3 種類の面をたすと 15 + 10 + 6 = 31、それが 2 つずつなので 31 + 31 = 62。表面積は 62 cm² です。
+      - part: 思い出す
+        text: たて 2 cm、横 3 cm、高さ 6 cm の直方体の体積は何 cm³ ですか。
+        answer: 36
+        check: "2 * 3 * 6"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [2 × 3 = 6, 6 × 6 = 36, 36 cm³]
+      - part: 思い出す
+        text: 半径が 4 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 8
+        check: "4 * 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 直径は、半径の 2 つ分だよ。
+          - 4 × 2 を計算しよう。
+        paths:
+          - [直径は 4 × 2 = 8, 円周は 8 × 円周率, □ は 8]
+      - part: 今日
+        text: 1 辺が 3 cm の立方体の表面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="65.9,120 141.1,120 141.1,44.9 65.9,44.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="141.1,120 141.1,44.9 174.1,20 174.1,95.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="141.1,44.9 65.9,44.9 98.9,20 174.1,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="65.9" y1="120" x2="141.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="95.1" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="120" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="141.1" y1="120" x2="141.1" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="95.1" x2="174.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="120" x2="174.1" y2="95.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="65.9" y2="44.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.1" y1="20" x2="98.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.1" y1="44.9" x2="174.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.9" y1="44.9" x2="65.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="20" x2="98.9" y2="95.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="65.9" y1="44.9" x2="98.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="103.5" y="137.6" font-size="13" text-anchor="middle">3 cm</text></svg>'
+        answer: 54
+        check: "3 * 3 * 6"
+        hints:
+          - 立方体の面は、みな同じ大きさの正方形だよ。
+          - 1 つの面の面積は 3 × 3 だね。
+          - 面はいくつあったかな。
+        paths:
+          - [1 つの面は 3 × 3 = 9, 面は 6 つ, 9 × 6 = 54, 54 cm²]
+        note: 体積（3 × 3 × 3 = 27）と取りちがえやすい。表面積は面の面積の和で、単位は cm²。
+      - part: 今日
+        text: 直方体の表面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 162.6,120 162.6,38.1 53.4,38.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="162.6,120 162.6,38.1 186.6,20 186.6,101.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="162.6,38.1 53.4,38.1 77.4,20 186.6,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="162.6" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="77.4" y1="101.9" x2="186.6" y2="101.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="120" x2="77.4" y2="101.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="162.6" y1="120" x2="162.6" y2="38.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="101.9" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="120" x2="186.6" y2="101.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="38.1" x2="53.4" y2="38.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="20" x2="77.4" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.6" y1="38.1" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="38.1" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="77.4" y1="20" x2="77.4" y2="101.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="38.1" x2="77.4" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="108" y="137.6" font-size="13" text-anchor="middle">4 cm</text><text x="181.6" y="122.5" font-size="13" text-anchor="start">2 cm</text><text x="47.4" y="83.6" font-size="13" text-anchor="end">3 cm</text></svg>'
+        answer: 52
+        check: "(4 * 2 + 4 * 3 + 2 * 3) * 2"
+        hints:
+          - 直方体の面は 3 種類で、同じ面が 2 つずつあるよ。
+          - 上の面は 4 × 2、前の面は 4 × 3、右の面は 2 × 3 だね。
+          - 3 つをたしてから、2 つ分にしよう。
+        paths:
+          - [4 × 2 = 8, 4 × 3 = 12, 2 × 3 = 6, 8 + 12 + 6 = 26, 26 + 26 = 52, 52 cm²]
+        note: 見えている 3 つの面だけをたして 26 と答えやすい。見えない面（下、後ろ、左）もある。
+      - part: 今日
+        text: 円柱の側面を切り開くと長方形になります。長方形の横の長さは、底面の円の円周と同じです。この円柱の側面の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M71.4 41.4 L71.4 106.2 A48.6 15.6 0 0 0 168.6 106.2 L168.6 41.4 A48.6 15.6 0 0 1 71.4 41.4 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><ellipse cx="120" cy="41.4" rx="48.6" ry="15.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="71.4" y1="41.4" x2="71.4" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.6" y1="41.4" x2="168.6" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M71.4 106.2 A48.6 15.6 0 0 0 168.6 106.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M71.4 106.2 A48.6 15.6 0 0 1 168.6 106.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="41.4" r="2.5" fill="currentColor"/><line x1="120" y1="41.4" x2="168.6" y2="41.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.3" y="57.3" font-size="12" text-anchor="middle">3 cm</text><text x="174.6" y="78" font-size="12" text-anchor="start">4 cm</text></svg>'
+        answer: 24
+        check: "3 * 2 * 4"
+        hints:
+          - 側面の長方形のたては、円柱の高さだよ。
+          - 横は円周で、（直径 × 円周率）cm だね。
+          - 長方形の面積は たて × 横 だよ。
+        paths:
+          - [円周は 6 × 円周率, 側面は 4 × 6 × 円周率, 24 × 円周率, □ は 24]
+        note: 半径 3 cm をそのまま横の長さに使って 12 としやすい。横は円周（直径 × 円周率）。
+      - part: 挑戦
+        text: 1 辺が 2 cm の立方体を 2 こ、面と面をぴったり合わせて直方体を作りました。この直方体の表面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,111.5 168.6,111.5 168.6,49.2 44,49.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="168.6,111.5 168.6,49.2 196,28.5 196,90.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="168.6,49.2 44,49.2 71.4,28.5 196,28.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="111.5" x2="168.6" y2="111.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="71.4" y1="90.8" x2="196" y2="90.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="111.5" x2="71.4" y2="90.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="168.6" y1="111.5" x2="168.6" y2="49.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="90.8" x2="196" y2="28.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.6" y1="111.5" x2="196" y2="90.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.6" y1="49.2" x2="44" y2="49.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="28.5" x2="71.4" y2="28.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.6" y1="49.2" x2="196" y2="28.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="49.2" x2="44" y2="111.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="71.4" y1="28.5" x2="71.4" y2="90.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="49.2" x2="71.4" y2="28.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.3" y="129" font-size="13" text-anchor="middle">4 cm</text><text x="189.3" y="112.7" font-size="13" text-anchor="start">2 cm</text><text x="38" y="84.9" font-size="13" text-anchor="end">2 cm</text><line x1="106.3" y1="111.5" x2="106.3" y2="49.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="106.3" y1="49.2" x2="133.7" y2="28.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 40
+        check: "2 * 2 * 6 * 2 - 2 * 2 * 2"
+        hints:
+          - 立方体 1 この表面積は、2 × 2 × 6 だね。
+          - 合わせた面は、外から見えなくなるよ。
+          - 見えなくなった面は、2 この立方体で何まいかな。
+        paths:
+          - [1 こは 4 × 6 = 24, 2 こで 24 + 24 = 48, 合わせた面 2 まいで 8, 48 − 8 = 40, 40 cm²]
+          - [横 4 cm、たて 2 cm、高さ 2 cm の直方体, 8 + 8 + 4 = 20, 20 + 20 = 40]
+        note: 2 この表面積をたしただけの 48 や、合わせた面を 1 まいだけひいた 44 になりやすい。くっつけた面は両がわの 2 まい。
+    extra:
+      - part: 今日
+        text: たて 2 cm、横 5 cm、高さ 2 cm の直方体の表面積は何 cm² ですか。
+        answer: 48
+        check: "(2 * 5 + 5 * 2 + 2 * 2) * 2"
+        hints:
+          - 直方体の面は 3 種類で、同じ面が 2 つずつあるよ。
+          - 上の面、前の面、右の面の面積を出そう。
+          - 3 つをたしてから、2 つ分にしよう。
+        paths:
+          - [2 × 5 = 10, 5 × 2 = 10, 2 × 2 = 4, 10 + 10 + 4 = 24, 24 + 24 = 48, 48 cm²]
+      - part: 今日
+        text: 1 辺が 2 cm の立方体の表面積は何 cm² ですか。
+        answer: 24
+        check: "2 * 2 * 6"
+        hints:
+          - 立方体の面は、みな同じ大きさの正方形だよ。
+          - 1 つの面の面積は 2 × 2 だね。
+          - 面はいくつあったかな。
+        paths:
+          - [1 つの面は 4, 面は 6 つ, 4 × 6 = 24, 24 cm²]
+      - part: 今日
+        text: 半径 2 cm、高さ 3 cm の円柱の表面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="49.2,86.9 190.8,86.9 190.8,53.1 49.2,53.1" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="30.5" r="22.5" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="109.5" r="22.5" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="30.5" r="2" fill="currentColor"/><line x1="120" y1="30.5" x2="142.5" y2="30.5" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="146.5" y="34.4" font-size="11" text-anchor="start">2 cm</text><text x="44.2" y="74.5" font-size="13" text-anchor="end">3 cm</text></svg>'
+        answer: 20
+        check: "2 * 2 * 2 + 2 * 2 * 3"
+        hints:
+          - 表面積は、2 つの底面と側面の面積の和だよ。
+          - 底面 1 つは（4 × 円周率）cm²、側面の横は円周（4 × 円周率）cm だね。
+          - 側面は たて 3 cm の長方形だよ。
+        paths:
+          - [底面 2 つで 4 + 4 = 8, 側面は 3 × 4 = 12, 8 + 12 = 20, □ は 20]
+        note: 底面を 1 つしか入れないと 16 になる。展開図で、円が 2 つあることを確かめる。
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 直方体の体積が「たて × 横 × 高さ」で求められるのはなぜですか。図の直方体（たて 3 cm、横 4 cm、高さ 2 cm）を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,112.8 158.3,112.8 158.3,55.6 44,55.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="158.3,112.8 158.3,55.6 196,27.2 196,84.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="158.3,55.6 44,55.6 81.7,27.2 196,27.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="72.6" y1="112.8" x2="72.6" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="84.2" x2="72.6" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="112.8" x2="101.2" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="84.2" x2="101.2" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="112.8" x2="129.8" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="84.2" x2="129.8" y2="55.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="84.2" x2="72.6" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="84.2" x2="101.2" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="84.2" x2="129.8" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="84.2" x2="158.3" y2="84.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="158.3" y1="84.2" x2="196" y2="55.8" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="170.9" y1="103.3" x2="170.9" y2="46.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="183.4" y1="93.9" x2="183.4" y2="36.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="129.8" y1="55.6" x2="167.4" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="101.2" y1="55.6" x2="138.8" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="72.6" y1="55.6" x2="110.2" y2="27.2" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="170.9" y1="46.1" x2="56.6" y2="46.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="183.4" y1="36.7" x2="69.1" y2="36.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="112.8" x2="158.3" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="112.8" x2="158.3" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="84.4" x2="196" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="112.8" x2="196" y2="84.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="55.6" x2="44" y2="55.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="27.2" x2="81.7" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.3" y1="55.6" x2="196" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="55.6" x2="44" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="55.6" x2="81.7" y2="27.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="101.2" y="130.3" font-size="13" text-anchor="middle">4 cm</text><text x="184.2" y="110.1" font-size="13" text-anchor="start">3 cm</text><text x="38" y="88.7" font-size="13" text-anchor="end">2 cm</text></svg>'
+        explain: 例：「1 cm³ の立方体を 1 だん目にしきつめると、横に 4 こ、たてに 3 列で 4 × 3 = 12 こならぶ。このこ数は たて × 横 と同じ。高さが 2 cm なので、それが 2 だん重なって 12 × 2 = 24 こ。だから体積は たて × 横 × 高さ で 24 cm³ になる。」と書ければよい。① 1 だんのこ数が たて × 横 になる、② だんの数が高さになる、の 2 点を見る。数えて 24 になったことだけで終わったら、「高さが 5 cm になったら何だん？」と聞いて、長さとこ数・だんの数の結びつきを言わせる。
+        hints:
+          - 1 だん目には、1 cm³ の立方体が何こならぶかな。
+          - それは何だん重なるかな。
+          - 「1 だんのこ数は〜、だんの数は〜だから」と書こう。
+        paths:
+          - [1 だんに 4 × 3 = 12 こ, 2 だん, 12 × 2 = 24 こ, 1 だんのこ数が たて × 横、だんの数が 高さ]
+      - part: わけ
+        text: 角柱の体積が「底面積 × 高さ」で求められるのはなぜですか。図のように、底面積 6 cm²、高さ 4 cm の三角柱を、底面と同じ形の、厚さ 1 cm の板に切り分けた例を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 145.9,120 53.4,50.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="145.9,120 53.4,50.6 94.1,20 186.6,89.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="145.9" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="120" x2="53.4" y2="50.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="89.4" x2="94.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="120" x2="186.6" y2="89.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="50.6" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="50.6" x2="94.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.1" y1="112.3" x2="63.6" y2="43" stroke="currentColor" stroke-width="1" fill="none"/><line x1="166.3" y1="104.7" x2="73.7" y2="35.3" stroke="currentColor" stroke-width="1" fill="none"/><line x1="176.4" y1="97" x2="83.9" y2="27.7" stroke="currentColor" stroke-width="1" fill="none"/><text x="84.3" y="101.4" font-size="13" text-anchor="middle">底面</text><polyline points="61.4,120 61.4,112 53.4,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 例：「三角柱を、底面と同じ形の、厚さ 1 cm の板に切り分ける。板 1 まいの体積は、底面の 1 cm² の 1 つ 1 つの上に、高さ 1 cm の分が乗っているので 6 cm³ で、底面積の数と同じ。板は高さの 4 cm の分だけ 4 まいあるので、6 × 4 = 24 cm³。だから体積は 底面積 × 高さ になる。」と書ければよい。① 厚さ 1 cm の板の体積が底面積の数と同じ、② 板の数が高さ、の 2 点を見る。直方体の「1 だんのこ数 × だんの数」と同じ考えで、1 cm³ の立方体にきちんと分けられない形（三角形や円）でも使えることに気づけばなお良い。
+        hints:
+          - 厚さ 1 cm の板は、何まいできるかな。
+          - 板 1 まいの体積は、底面積とくらべてどうかな。
+          - 「板 1 まいは〜、板の数は〜だから」と書こう。
+        paths:
+          - [厚さ 1 cm の板に切る, 板 1 まいは 6 cm³（底面積の数）, 板は 4 まい, 6 × 4 = 24, 底面積 × 高さ]
+      - part: わけ
+        text: 1 cm³ の立方体を 12 こずつ使って、2 つの直方体 あ（横 6 cm、たて 2 cm、高さ 1 cm）と い（横 3 cm、たて 2 cm、高さ 2 cm）を作りました。「体積が同じ直方体なら、表面積も同じ」といえますか。あ と い を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="20,88 101.3,88 101.3,74.5 20,74.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="101.3,88 101.3,74.5 113.2,65.5 113.2,79.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="101.3,74.5 20,74.5 31.9,65.5 113.2,65.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="33.6" y1="88" x2="33.6" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="47.1" y1="88" x2="47.1" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="60.7" y1="88" x2="60.7" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="74.2" y1="88" x2="74.2" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="87.8" y1="88" x2="87.8" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="107.3" y1="83.6" x2="107.3" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="87.8" y1="74.5" x2="99.7" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="74.2" y1="74.5" x2="86.1" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="60.7" y1="74.5" x2="72.6" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="47.1" y1="74.5" x2="59" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="33.6" y1="74.5" x2="45.5" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="107.3" y1="70" x2="26" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="20" y1="88" x2="101.3" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.3" y1="88" x2="101.3" y2="74.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="113.2" y1="79.1" x2="113.2" y2="65.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.3" y1="88" x2="113.2" y2="79.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.3" y1="74.5" x2="20" y2="74.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="113.2" y1="65.5" x2="31.9" y2="65.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.3" y1="74.5" x2="113.2" y2="65.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="20" y1="74.5" x2="20" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="20" y1="74.5" x2="31.9" y2="65.5" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="167.4,88 208.1,88 208.1,60.9 167.4,60.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="208.1,88 208.1,60.9 220,52 220,79.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="208.1,60.9 167.4,60.9 179.3,52 220,52" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="169.1" y1="88" x2="169.1" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="169.1" y1="74.5" x2="169.1" y2="60.9" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="182.6" y1="88" x2="182.6" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="182.6" y1="74.5" x2="182.6" y2="60.9" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="169.1" y1="74.5" x2="182.6" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="182.6" y1="74.5" x2="196.2" y2="74.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="208.1" y1="74.5" x2="220" y2="65.5" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="214" y1="83.6" x2="214" y2="56.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="194.5" y1="60.9" x2="206.4" y2="52" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="181" y1="60.9" x2="192.9" y2="52" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="214" y1="56.4" x2="173.4" y2="56.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="167.4" y1="88" x2="208.1" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="208.1" y1="88" x2="208.1" y2="60.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="220" y1="79.1" x2="220" y2="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="208.1" y1="88" x2="220" y2="79.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="208.1" y1="60.9" x2="167.4" y2="60.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="220" y1="52" x2="179.3" y2="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="208.1" y1="60.9" x2="220" y2="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.4" y1="60.9" x2="167.4" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.4" y1="60.9" x2="179.3" y2="52" stroke="currentColor" stroke-width="2" fill="none"/><text x="60.7" y="56.4" font-size="14" text-anchor="middle">あ</text><text x="187.8" y="42.9" font-size="14" text-anchor="middle">い</text></svg>'
+        explain: 例：「いえない。あ の表面積は (12 + 6 + 2) × 2 = 40 cm²、い の表面積は (6 + 6 + 4) × 2 = 32 cm²。どちらも体積は 12 cm³ なのに、表面積はちがう。合わない例が 1 つあるので、体積が同じでも表面積が同じとはいえない。」と書ければよい。① 2 つの体積が同じ、② 表面積を計算するとちがう、③ 合わない例が 1 つでもあれば「いつも同じ」とはいえない、の 3 点を見る。③ が大切で、言い切りをくずすには例が 1 つあればよいことを話す。立方体に近い形ほど表面積が小さく、細長い形ほど大きい（氷を小さく切ると早くとける、体の小さい動物は冷えやすい）ことに話を広げてもよい。
+        hints:
+          - あ と い の体積をくらべよう。
+          - それぞれの表面積を計算しよう。
+          - 「〜なのに〜だから、〜とはいえない」と書こう。
+        paths:
+          - [体積はどちらも 12 cm³, あ は 40 cm², い は 32 cm², 表面積がちがう例がある, 同じとはいえない]
+      - part: 今日
+        text: たて 4 cm、横 5 cm、高さ 3 cm の直方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,118.6 156.5,118.6 156.5,51.1 44,51.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.5,118.6 156.5,51.1 196,21.4 196,88.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="156.5,51.1 44,51.1 83.5,21.4 196,21.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="118.6" x2="156.5" y2="118.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.5" y1="88.9" x2="196" y2="88.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="118.6" x2="83.5" y2="88.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="156.5" y1="118.6" x2="156.5" y2="51.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="88.9" x2="196" y2="21.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.5" y1="118.6" x2="196" y2="88.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.5" y1="51.1" x2="44" y2="51.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="21.4" x2="83.5" y2="21.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.5" y1="51.1" x2="196" y2="21.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="51.1" x2="44" y2="118.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.5" y1="21.4" x2="83.5" y2="88.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44" y1="51.1" x2="83.5" y2="21.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="100.2" y="136.2" font-size="13" text-anchor="middle">5 cm</text><text x="183.2" y="115.3" font-size="13" text-anchor="start">4 cm</text><text x="38" y="89.4" font-size="13" text-anchor="end">3 cm</text></svg>'
+        answer: 60
+        check: "4 * 5 * 3"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 は 4 × 5 = 20 だよ。
+          - 20 × 3 は、2 × 3 の 10 こ分だね。
+        paths:
+          - [4 × 5 = 20, 20 × 3 = 60, 60 cm³]
+      - part: 今日
+        text: 半径 2 cm、高さ 8 cm の円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M99.3 27.9 L99.3 110.7 A20.7 6.6 0 0 0 140.7 110.7 L140.7 27.9 A20.7 6.6 0 0 1 99.3 27.9 Z" stroke="none" fill="#f3c969" fill-opacity=".35"/><ellipse cx="120" cy="27.9" rx="20.7" ry="6.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="99.3" y1="27.9" x2="99.3" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140.7" y1="27.9" x2="140.7" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M99.3 110.7 A20.7 6.6 0 0 0 140.7 110.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M99.3 110.7 A20.7 6.6 0 0 1 140.7 110.7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="27.9" r="2.5" fill="currentColor"/><line x1="120" y1="27.9" x2="140.7" y2="27.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.7" y="19.5" font-size="12" text-anchor="start">2 cm</text><text x="146.7" y="73.5" font-size="12" text-anchor="start">8 cm</text></svg>'
+        answer: 32
+        check: "2 * 2 * 8"
+        hints:
+          - 円柱の体積も 底面積 × 高さ だよ。
+          - 底面積は（2 × 2 × 円周率）cm² だね。
+          - 4 × 8 を計算しよう。
+        paths:
+          - [底面積は 4 × 円周率, 4 × 8 = 32, □ は 32]
+    extra:
+      - part: 今日
+        text: 三角柱の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="86.1,120 125.2,120 86.1,41.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="125.2,120 86.1,41.6 114.8,20 153.9,98.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="86.1" y1="120" x2="125.2" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114.8" y1="98.4" x2="153.9" y2="98.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="86.1" y1="120" x2="114.8" y2="98.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="125.2" y1="120" x2="86.1" y2="41.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.9" y1="98.4" x2="114.8" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="125.2" y1="120" x2="153.9" y2="98.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.1" y1="41.6" x2="86.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114.8" y1="20" x2="114.8" y2="98.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="86.1" y1="41.6" x2="114.8" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="105.7" y="137.6" font-size="13" text-anchor="middle">3 cm</text><text x="80.1" y="85.4" font-size="13" text-anchor="end">6 cm</text><text x="146.6" y="120.7" font-size="13" text-anchor="start">5 cm</text><polyline points="94.1,120 94.1,112 86.1,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 45
+        check: "3 * 6 // 2 * 5"
+        hints:
+          - 底面は、手前の直角三角形だよ。
+          - 底面積は 3 × 6 ÷ 2 で求めよう。
+          - 底面積 × 高さ。高さは、おくへの長さだよ。
+        paths:
+          - [底面積は 3 × 6 ÷ 2 = 9, 9 × 5 = 45, 45 cm³]
+      - part: 今日
+        text: たて 1 cm、横 3 cm、高さ 2 cm の直方体の表面積は何 cm² ですか。
+        answer: 22
+        check: "(1 * 3 + 3 * 2 + 1 * 2) * 2"
+        hints:
+          - 直方体の面は 3 種類で、同じ面が 2 つずつあるよ。
+          - 上の面は 1 × 3、前の面は 3 × 2、右の面は 1 × 2 だね。
+          - 3 つをたしてから、2 つ分にしよう。
+        paths:
+          - [3 + 6 + 2 = 11, 11 + 11 = 22, 22 cm²]
+      - part: 今日
+        text: たて 2 cm、横 2 cm、高さ 9 cm の直方体の体積は何 cm³ ですか。
+        answer: 36
+        check: "2 * 2 * 9"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [2 × 2 = 4, 4 × 9 = 36, 36 cm³]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 直方体の展開図を組み立てます。面 あ と向かい合う面はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="104.6,124 135.4,124 135.4,85.4 104.6,85.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="108.9" font-size="12" text-anchor="middle">え</text><polygon points="104.6,85.4 135.4,85.4 135.4,70 104.6,70" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="81.9" font-size="12" text-anchor="middle">う</text><polygon points="104.6,70 135.4,70 135.4,31.4 104.6,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="54.9" font-size="12" text-anchor="middle">い</text><polygon points="104.6,31.4 135.4,31.4 135.4,16 104.6,16" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="27.9" font-size="12" text-anchor="middle">あ</text><polygon points="89.1,70 104.6,70 104.6,31.4 89.1,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="96.9" y="54.9" font-size="12" text-anchor="middle">お</text><polygon points="135.4,70 150.9,70 150.9,31.4 135.4,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="143.1" y="54.9" font-size="12" text-anchor="middle">か</text></svg>'
+        choices: [い, う, え, お, か]
+        answer: う
+        check: "(lambda d: [s for s, q in (('い', (1, 1)), ('う', (2, 1)), ('え', (3, 1)), ('お', (1, 0)), ('か', (1, 2))) if d[q][0] == d[(0, 1)][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((0, 1), (1, 1), (1, 0), (1, 2), (2, 1), (3, 1))))"
+        hints:
+          - 頭の中で、面 い を下にして組み立ててみよう。
+          - あ は い の上がわのへんで折れるね。
+          - となりの面は向かい合わないよ。あ と 1 つあいだをおいて、同じ列にある面はどれかな。
+        paths:
+          - [い を底にする, あ・う・え は い のまわりを まわって立つ, あ と う が向かい合う]
+        note: となり合う面（い、お、か）を選びやすい。紙に写して組み立てて確かめるとよい。
+      - part: 思い出す
+        text: 底辺 6 cm、高さ 5 cm の三角形の面積は何 cm² ですか。
+        answer: 15
+        check: "6 * 5 // 2"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 だね。
+          - 6 を先に 2 でわってもよいよ。
+          - 3 × 5 を計算しよう。
+        paths:
+          - [6 ÷ 2 = 3, 3 × 5 = 15, 15 cm²]
+      - part: 今日
+        text: この展開図を組み立ててできる直方体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="82.2,124 157.8,124 157.8,91.6 82.2,91.6" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="82.2,91.6 157.8,91.6 157.8,70 82.2,70" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="82.2,70 157.8,70 157.8,37.6 82.2,37.6" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="82.2,37.6 157.8,37.6 157.8,16 82.2,16" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="60.6,70 82.2,70 82.2,37.6 60.6,37.6" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><polygon points="157.8,70 179.4,70 179.4,37.6 157.8,37.6" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="10.6" font-size="13" text-anchor="middle">7 cm</text><text x="77.2" y="31.3" font-size="13" text-anchor="end">2 cm</text><text x="184.4" y="58.3" font-size="13" text-anchor="start">3 cm</text></svg>'
+        answer: 42
+        check: "7 * 2 * 3"
+        hints:
+          - 展開図から、直方体のたて・横・高さを読みとろう。
+          - 上の面は 横 7 cm、たて 2 cm だね。
+          - 前の面のたての長さが高さだよ。
+        paths:
+          - [横 7 cm、たて 2 cm、高さ 3 cm, 7 × 2 = 14, 14 × 3 = 42, 42 cm³]
+          - [2 × 3 = 6, 6 × 7 = 42]
+        note: 展開図の全体のたて・横（10 cm や 11 cm）を使いやすい。1 つの面の辺の長さを読む。
+      - part: 今日
+        text: 半径 1 cm、高さ 3 cm の円柱の体積は、約何 cm³ ですか。円周率は 3.14 とします。
+        answer: 9.42
+        check: "314 * 1 * 1 * 3 / 100"
+        hints:
+          - 円柱の体積は 底面積 × 高さ だね。
+          - 底面積は 1 × 1 × 3.14 = 3.14 cm² だよ。
+          - 3.14 を 3 回たそう。
+        paths:
+          - [底面積は 3.14, 3.14 × 3 = 3.14 + 3.14 + 3.14, 9.42 cm³]
+          - [（3 × 円周率）cm³, 3.14 + 3.14 + 3.14 = 9.42]
+      - part: 今日
+        text: 底面が台形の四角柱です。体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,112.4 161.6,112.4 142,53.6 63.6,53.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="161.6,112.4 142,53.6 176.4,27.6 196,86.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="142,53.6 63.6,53.6 98,27.6 176.4,27.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="44" y1="112.4" x2="161.6" y2="112.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.6" y1="112.4" x2="142" y2="53.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="86.4" x2="176.4" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.6" y1="112.4" x2="196" y2="86.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142" y1="53.6" x2="63.6" y2="53.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="176.4" y1="27.6" x2="98" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142" y1="53.6" x2="176.4" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.6" y1="53.6" x2="44" y2="112.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.6" y1="53.6" x2="98" y2="27.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.6" y1="53.6" x2="63.6" y2="112.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="102.8" y="129.9" font-size="13" text-anchor="middle">6 cm</text><text x="102.8" y="68.1" font-size="13" text-anchor="middle">4 cm</text><text x="185.8" y="110.9" font-size="13" text-anchor="start">4 cm</text><text x="67.6" y="87.5" font-size="13" text-anchor="start">3 cm</text></svg>'
+        answer: 60
+        check: "(6 * 3 // 2 + 4 * 3 // 2) * 4"
+        hints:
+          - 底面は、手前の台形だよ。高さ（おくへの長さ）は 4 cm。
+          - 台形は、対角線で 2 つの三角形に分けると面積を出せるね。
+          - 台形の面積 × おくへの長さ を計算しよう。
+        paths:
+          - [6 × 3 ÷ 2 = 9, 4 × 3 ÷ 2 = 6, 底面積は 9 + 6 = 15, 15 × 4 = 60, 60 cm³]
+          - [三角柱 2 つに分ける, 9 × 4 = 36, 6 × 4 = 24, 36 + 24 = 60]
+        note: 台形の 4 cm（上の辺）と、おくへの 4 cm をまちがえやすい。底面の形と、底面の間の長さを分けて見る。
+      - part: 挑戦
+        text: 内がわが たて 4 cm、横 6 cm の直方体の水そうに、水が入っています。1 辺が 2 cm の立方体を水の中にしずめると、水の深さは何 cm ふえますか。分数で答えましょう。立方体は全部水にしずみ、水はあふれません。
+        answer: 1/3
+        check: "Fraction(2 * 2 * 2, 4 * 6)"
+        hints:
+          - 立方体が入った分だけ、水が上におしあげられるよ。
+          - ふえた水の部分は、底面が たて 4 cm、横 6 cm の直方体だね。
+          - その直方体の体積が、立方体の体積と同じになるよ。
+        paths:
+          - [立方体は 2 × 2 × 2 = 8 cm³, 水そうの底面積は 4 × 6 = 24 cm², 24 × □ = 8, □ = 8 ÷ 24 = 1/3, 1/3 cm]
+        note: 立方体の 1 辺（2 cm）だけ上がると考えやすい。ふえた部分の体積が立方体の体積と同じになることを、図をかいて確かめる。
+    extra:
+      - part: 今日
+        text: 半径 1 cm、高さ 2 cm の円柱の体積は、約何 cm³ ですか。円周率は 3.14 とします。
+        answer: 6.28
+        check: "314 * 1 * 1 * 2 / 100"
+        hints:
+          - 円柱の体積は 底面積 × 高さ だね。
+          - 底面積は 1 × 1 × 3.14 = 3.14 cm² だよ。
+          - 3.14 を 2 回たそう。
+        paths:
+          - [底面積は 3.14, 3.14 + 3.14 = 6.28, 6.28 cm³]
+      - part: 今日
+        text: 直方体の展開図を組み立てます。面 い と向かい合う面はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="104.6,124 135.4,124 135.4,85.4 104.6,85.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="108.9" font-size="12" text-anchor="middle">え</text><polygon points="104.6,85.4 135.4,85.4 135.4,70 104.6,70" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="81.9" font-size="12" text-anchor="middle">う</text><polygon points="104.6,70 135.4,70 135.4,31.4 104.6,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="54.9" font-size="12" text-anchor="middle">い</text><polygon points="104.6,31.4 135.4,31.4 135.4,16 104.6,16" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="120" y="27.9" font-size="12" text-anchor="middle">あ</text><polygon points="89.1,70 104.6,70 104.6,31.4 89.1,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="96.9" y="54.9" font-size="12" text-anchor="middle">お</text><polygon points="135.4,70 150.9,70 150.9,31.4 135.4,31.4" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="143.1" y="54.9" font-size="12" text-anchor="middle">か</text></svg>'
+        choices: [あ, う, え, お, か]
+        answer: え
+        check: "(lambda d: [s for s, q in (('あ', (0, 1)), ('う', (2, 1)), ('え', (3, 1)), ('お', (1, 0)), ('か', (1, 2))) if d[q][0] == d[(1, 1)][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((0, 1), (1, 1), (1, 0), (1, 2), (2, 1), (3, 1))))"
+        hints:
+          - 頭の中で、面 う を下にして組み立ててみよう。
+          - う のまわりの 4 つのへんで、まわりの面が立ち上がるね。
+          - い と、う をはさんで反対がわに立つ面はどれかな。
+        paths:
+          - [う を底にする, い と え が う の前と後ろに立つ, い と え が向かい合う]
+      - part: 今日
+        text: 底面が、底辺 5 cm、高さ 4 cm の三角形で、高さが 7 cm の三角柱の体積は何 cm³ ですか。
+        answer: 70
+        check: "5 * 4 // 2 * 7"
+        hints:
+          - 底面積を先に求めよう。
+          - 三角形の面積は 底辺 × 高さ ÷ 2 だね。
+          - 底面積 × 三角柱の高さ だよ。
+        paths:
+          - [底面積は 5 × 4 ÷ 2 = 10, 10 × 7 = 70, 70 cm³]
+        note: 三角形の高さ（4 cm）と三角柱の高さ（7 cm）を取りちがえやすい。
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 1 辺が 1 cm の立方体を、すき間なく積んで直方体を作りました。体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="44,104.4 173.3,104.4 173.3,52.7 44,52.7" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="173.3,104.4 173.3,52.7 196,35.6 196,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="173.3,52.7 44,52.7 66.7,35.6 196,35.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="69.9" y1="104.4" x2="69.9" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="69.9" y1="78.6" x2="69.9" y2="52.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="95.7" y1="104.4" x2="95.7" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="95.7" y1="78.6" x2="95.7" y2="52.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="121.6" y1="104.4" x2="121.6" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="121.6" y1="78.6" x2="121.6" y2="52.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="147.4" y1="104.4" x2="147.4" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="147.4" y1="78.6" x2="147.4" y2="52.7" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="78.6" x2="69.9" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="69.9" y1="78.6" x2="95.7" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="95.7" y1="78.6" x2="121.6" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="121.6" y1="78.6" x2="147.4" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="147.4" y1="78.6" x2="173.3" y2="78.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="173.3" y1="78.6" x2="196" y2="61.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="184.6" y1="95.9" x2="184.6" y2="44.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="147.4" y1="52.7" x2="170.1" y2="35.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="121.6" y1="52.7" x2="144.3" y2="35.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="95.7" y1="52.7" x2="118.4" y2="35.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="69.9" y1="52.7" x2="92.6" y2="35.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="184.6" y1="44.1" x2="55.4" y2="44.1" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="44" y1="104.4" x2="173.3" y2="104.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.3" y1="104.4" x2="173.3" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="87.3" x2="196" y2="35.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.3" y1="104.4" x2="196" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.3" y1="52.7" x2="44" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196" y1="35.6" x2="66.7" y2="35.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.3" y1="52.7" x2="196" y2="35.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="52.7" x2="44" y2="104.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="52.7" x2="66.7" y2="35.6" stroke="currentColor" stroke-width="2" fill="none"/></svg>'
+        answer: 20
+        check: "5 * 2 * 2"
+        hints:
+          - 1 だん目には、何こならんでいるかな。
+          - 横に 5 こ、おくに 2 列だね。
+          - それが何だん重なっているかな。
+        paths:
+          - [1 だんに 5 × 2 = 10 こ, 2 だん, 10 × 2 = 20, 20 cm³]
+      - part: 今日
+        text: たて 3 cm、横 6 cm、高さ 2 cm の直方体の体積は何 cm³ ですか。
+        answer: 36
+        check: "3 * 6 * 2"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [3 × 6 = 18, 18 × 2 = 36, 36 cm³]
+          - [6 × 2 = 12, 12 × 3 = 36]
+      - part: 今日
+        text: 体積が 27 cm³ の立方体があります。1 辺は何 cm ですか。
+        answer: 3
+        check: "[a for a in range(1, 10) if a * a * a == 27][0]"
+        hints:
+          - 立方体の体積は 1 辺 × 1 辺 × 1 辺 だね。
+          - 1 辺 × 1 辺 × 1 辺 = 27 になる長さをさがそう。
+          - 1 から順にためしてみよう。
+        paths:
+          - [1 × 1 × 1 = 1, 2 × 2 × 2 = 8, 3 × 3 × 3 = 27, 3 cm]
+        note: 27 ÷ 3 = 9 と答えやすい。9 × 9 × 9 は 27 にならないことを確かめる。
+      - part: 今日
+        text: 三角柱の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="84,120 110.1,120 84,54.6" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="110.1,120 84,54.6 129.9,20 156,85.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="84" y1="120" x2="110.1" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.9" y1="85.4" x2="156" y2="85.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="84" y1="120" x2="129.9" y2="85.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="110.1" y1="120" x2="84" y2="54.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156" y1="85.4" x2="129.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="110.1" y1="120" x2="156" y2="85.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84" y1="54.6" x2="84" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="129.9" y1="20" x2="129.9" y2="85.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="84" y1="54.6" x2="129.9" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="97" y="137.6" font-size="13" text-anchor="middle">2 cm</text><text x="78" y="91.9" font-size="13" text-anchor="end">5 cm</text><text x="140.1" y="114.2" font-size="13" text-anchor="start">8 cm</text><polyline points="92,120 92,112 84,112" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 40
+        check: "2 * 5 // 2 * 8"
+        hints:
+          - 底面は、手前の直角三角形だよ。
+          - 底面積は 2 × 5 ÷ 2 で求めよう。
+          - 底面積 × 高さ。高さは、おくへの長さだよ。
+        paths:
+          - [底面積は 2 × 5 ÷ 2 = 5, 5 × 8 = 40, 40 cm³]
+      - part: 今日
+        text: 半径 2 cm、高さ 4 cm の円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        answer: 16
+        check: "2 * 2 * 4"
+        hints:
+          - 円柱の体積も 底面積 × 高さ だよ。
+          - 底面積は（2 × 2 × 円周率）cm² だね。
+          - 4 × 4 を計算しよう。
+        paths:
+          - [底面積は 4 × 円周率, 4 × 4 = 16, □ は 16]
+      - part: 今日
+        text: 直方体の表面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="53.4,120 173.4,120 173.4,29.9 53.4,29.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="173.4,120 173.4,29.9 186.6,20 186.6,110.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="173.4,29.9 53.4,29.9 66.6,20 186.6,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="53.4" y1="120" x2="173.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="66.6" y1="110.1" x2="186.6" y2="110.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="120" x2="66.6" y2="110.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="173.4" y1="120" x2="173.4" y2="29.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="110.1" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.4" y1="120" x2="186.6" y2="110.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.4" y1="29.9" x2="53.4" y2="29.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.6" y1="20" x2="66.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.4" y1="29.9" x2="186.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="29.9" x2="53.4" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="66.6" y1="20" x2="66.6" y2="110.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="53.4" y1="29.9" x2="66.6" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="113.4" y="137.6" font-size="13" text-anchor="middle">4 cm</text><text x="187" y="126.6" font-size="13" text-anchor="start">1 cm</text><text x="47.4" y="79.5" font-size="13" text-anchor="end">3 cm</text></svg>'
+        answer: 38
+        check: "(4 * 1 + 4 * 3 + 1 * 3) * 2"
+        hints:
+          - 直方体の面は 3 種類で、同じ面が 2 つずつあるよ。
+          - 上の面は 4 × 1、前の面は 4 × 3、右の面は 1 × 3 だね。
+          - 3 つをたしてから、2 つ分にしよう。
+        paths:
+          - [4 + 12 + 3 = 19, 19 + 19 = 38, 38 cm²]
+      - part: 今日
+        text: 半径 1 cm、高さ 5 cm の円柱の側面の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 10
+        check: "1 * 2 * 5"
+        hints:
+          - 側面を切り開くと長方形だね。たては高さだよ。
+          - 横は円周で、（直径 × 円周率）cm だね。
+          - たて × 横 を計算しよう。
+        paths:
+          - [円周は 2 × 円周率, 5 × 2 = 10, □ は 10]
+      - part: 挑戦
+        text: 1 cm³ の立方体を 24 こ全部使って、すき間なく積み、直方体を作ります。たて・横・高さは何 cm でもかまいません。表面積がいちばん小さくなるとき、表面積は何 cm² ですか。
+        answer: 52
+        check: "min(2 * (a * b + b * c + a * c) for a in range(1, 25) for b in range(a, 25) for c in range(b, 25) if a * b * c == 24)"
+        hints:
+          - かけて 24 になる 3 つの数の組を、全部書き出そう。
+          - 1 × 1 × 24、1 × 2 × 12、… と順にさがそう。
+          - 4 日目のわけを思い出そう。立方体に近い形ほど、表面積はどうなったかな。
+        paths:
+          - [組は 1・1・24、1・2・12、1・3・8、1・4・6、2・2・6、2・3・4, 表面積は 98、76、70、68、56、52, いちばん小さいのは 2・3・4 の 52, 52 cm²]
+        note: 組を書きもらしやすい。いちばん小さい数を 1、2、… と決めて、もれなく書き出させる。
+    extra:
+      - part: 今日
+        text: たて 2 cm、横 7 cm、高さ 2 cm の直方体の体積は何 cm³ ですか。
+        answer: 28
+        check: "2 * 7 * 2"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [2 × 7 = 14, 14 × 2 = 28, 28 cm³]
+      - part: 今日
+        text: 底面積が 5 cm²、高さが 9 cm の角柱の体積は何 cm³ ですか。
+        answer: 45
+        check: "5 * 9"
+        hints:
+          - 角柱の体積は、底面積 × 高さ だね。
+          - 底面積はもうわかっているよ。
+          - 5 のだんの九九を思い出そう。
+        paths:
+          - [5 × 9 = 45, 45 cm³]
+      - part: 今日
+        text: 半径 3 cm、高さ 3 cm の円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        answer: 27
+        check: "3 * 3 * 3"
+        hints:
+          - 円柱の体積も 底面積 × 高さ だよ。
+          - 底面積は（3 × 3 × 円周率）cm² だね。
+          - 9 × 3 を計算しよう。
+        paths:
+          - [底面積は 9 × 円周率, 9 × 3 = 27, □ は 27]

@@ -1,0 +1,845 @@
+# G-013 拡大と縮小（相似の入口）
+#
+# 書き方は N-001 の頭の注のとおり。
+# 拡大図は「形を変えずに、どの辺の長さも同じ倍にのばした図」、縮図は「同じ倍にちぢめた図」。○ 倍の拡大図、□ 分の 1 の縮図と言う。
+# ことば：拡大図、縮図、対応する頂点・辺、縮尺（1/100、1:100）、O を中心にした拡大図。相似という言葉は G-020 で使う。
+# 角の大きさ（度）の G-009 は前提にないので、角は「かどの開きぐあいは変わらない」と言うだけにし、角度の計算はしない。
+# 長さの単位は cm のまま扱う。G-046（長さの単位）が前提にないので、縮尺の答えを m に直すことはしない。
+#   N-073（万の位）も前提にないので、実際の長さは 1000 cm まで（縮尺は 1/50〜1/500）。
+# 前提の計算は A-005 まで（N-074 のかけ算の筆算、N-077 の小数のかけ算とわり算を含む）。何倍かは整数・小数・分数で答える。
+#   「何倍」の答えが小数になる問題は、分数も正しいとして accept に入れた。「分数で答えましょう」の問題には入れない。
+# 拡大図の面積は 5 日目（2 倍の拡大図は 4 倍）。立体の体積の倍（8 倍）は、G-011 が前提にないので扱わない。
+# 相似の条件と証明は G-020 で扱う。3 日目の「DE と BC が平行なら 三角形 ADE は 三角形 ABC の縮図」は、ここでは文で約束して使う。
+# 図は svg（D-040）。方眼の図の 1 目は 1 cm。長さの比はおおよそ合わせた。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 拡大図と縮図（方眼で、どの辺も同じ倍）　2 日目 対応する辺と何倍か、辺の長さを求める
+#   3 日目 1 つの点を中心にした拡大と縮小、平行な辺で切った三角形　4 日目 縮尺と影（縮図で実際の長さを求める）
+#   5 日目 拡大図の面積　6 日目 わけ（面積が 4 倍になる、拡大図にならない形、影で高さがわかる）
+#   7 日目 G-008（面積）・A-005（比と割合）と混ぜる　8 日目 確認
+# check：長さは「何倍か」をかける式（Fraction）。方眼で拡大図を選ぶ問題は、頂点の座標が同じ倍になっているかを調べる式。
+#   拡大図かどうかを選ぶ問題は、対応する辺の倍が等しいかを Fraction でくらべる式。
+
+id: G-013
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 方眼の 1 目は 1 cm です。い は あ の 2 倍の拡大図です。辺の長さを数えて、くらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="118.9" x2="14" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30.3" y1="118.9" x2="30.3" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="46.6" y1="118.9" x2="46.6" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62.9" y1="118.9" x2="62.9" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="79.2" y1="118.9" x2="79.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95.5" y1="118.9" x2="95.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="111.8" y1="118.9" x2="111.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="128.2" y1="118.9" x2="128.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144.5" y1="118.9" x2="144.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160.8" y1="118.9" x2="160.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="177.1" y1="118.9" x2="177.1" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="193.4" y1="118.9" x2="193.4" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="209.7" y1="118.9" x2="209.7" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="118.9" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="118.9" x2="226" y2="118.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="102.6" x2="226" y2="102.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.3" x2="226" y2="86.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="70" x2="226" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.7" x2="226" y2="53.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="37.4" x2="226" y2="37.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="21.1" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="30.3,102.6 79.2,102.6 30.3,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="46.6" y="96.6" font-size="14" text-anchor="middle">あ</text><polygon points="111.8,102.6 209.7,102.6 111.8,37.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="144.5" y="85.8" font-size="14" text-anchor="middle">い</text></svg>'
+        explain: 形を変えずに、どの辺の長さも同じ倍にのばした図を拡大図、ちぢめた図を縮図といいます。あ の横の辺は 3 目、たての辺は 2 目。い では 6 目と 4 目で、どちらも 2 倍です。ななめの辺も 2 倍になっています。い は あ の 2 倍の拡大図、あ は い の 1/2 の縮図です。拡大図や縮図では、かどの開きぐあい（角）は変わりません。重なる位置にある頂点や辺を、対応する頂点、対応する辺といいます。
+      - part: 思い出す
+        text: 3:5 = 6:□ の □ に入る数はいくつですか。
+        answer: 10
+        check: "5 * (6 // 3)"
+        hints:
+          - 3 が 6 になるには、何倍すればよいかな。
+          - 3 × 2 = 6 だね。
+          - 5 も同じ倍にしよう。
+        paths:
+          - [3 × 2 = 6, 5 × 2 = 10]
+      - part: 思い出す
+        text: たて 4 cm、横 7 cm の長方形の面積は何 cm² ですか。
+        answer: 28
+        check: "4 * 7"
+        hints:
+          - 長方形の面積は、たて × 横 だね。
+          - 4 のだんの九九を思い出そう。
+          - 単位は cm² だよ。
+        paths:
+          - [4 × 7 = 28, 28 cm²]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の 3 倍の拡大図です。辺 BC は 4 cm です。BC に対応する辺 EF は何 cm ですか。
+        answer: 12
+        check: "4 * 3"
+        hints:
+          - 3 倍の拡大図では、どの辺も 3 倍になるよ。
+          - EF は BC に対応する辺だね。
+          - 4 cm の 3 倍を求めよう。
+        paths:
+          - [EF は BC の 3 倍, 4 × 3 = 12, 12 cm]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。い、う、え のうち、あ の 2 倍の拡大図はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="118.9" x2="14" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30.3" y1="118.9" x2="30.3" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="46.6" y1="118.9" x2="46.6" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62.9" y1="118.9" x2="62.9" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="79.2" y1="118.9" x2="79.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95.5" y1="118.9" x2="95.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="111.8" y1="118.9" x2="111.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="128.2" y1="118.9" x2="128.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144.5" y1="118.9" x2="144.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160.8" y1="118.9" x2="160.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="177.1" y1="118.9" x2="177.1" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="193.4" y1="118.9" x2="193.4" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="209.7" y1="118.9" x2="209.7" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="118.9" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="118.9" x2="226" y2="118.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="102.6" x2="226" y2="102.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.3" x2="226" y2="86.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="70" x2="226" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.7" x2="226" y2="53.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="37.4" x2="226" y2="37.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="21.1" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="30.3,102.6 46.6,102.6 30.3,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="35.7" y="95.9" font-size="12" text-anchor="middle">あ</text><polygon points="62.9,102.6 95.5,102.6 62.9,37.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="73.8" y="85.1" font-size="12" text-anchor="middle">い</text><polygon points="111.8,102.6 144.5,102.6 111.8,53.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="122.7" y="90.5" font-size="12" text-anchor="middle">う</text><polygon points="160.8,102.6 209.7,102.6 160.8,37.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="177.1" y="85.1" font-size="12" text-anchor="middle">え</text></svg>'
+        choices: [い, う, え]
+        answer: い
+        check: "(lambda P: [s for s, Q in (('い', ((3, 1), (5, 1), (3, 5))), ('う', ((6, 1), (8, 1), (6, 4))), ('え', ((9, 1), (12, 1), (9, 5)))) if all(Q[i][j] - Q[0][j] == 2 * (P[i][j] - P[0][j]) for i in range(3) for j in range(2))][0])(((1, 1), (2, 1), (1, 3)))"
+        hints:
+          - あ の横の辺とたての辺は、それぞれ何目かな。
+          - 2 倍の拡大図では、横もたても 2 倍になるよ。
+          - い、う、え の横とたてを数えて、両方とも 2 倍になっているものをさがそう。
+        paths:
+          - [あ は 横 1 目、たて 2 目, 2 倍は 横 2 目、たて 4 目, い が 横 2 目、たて 4 目, い]
+        note: 横だけ 2 倍のもの（う）や、たてだけ 2 倍のもの（え）を選びやすい。すべての辺が同じ倍か確かめる。
+      - part: 今日
+        text: 四角形 EFGH は、四角形 ABCD の 1/2 の縮図です。辺 AB は 10 cm です。AB に対応する辺 EF は何 cm ですか。
+        answer: 5
+        check: "10 // 2"
+        hints:
+          - 1/2 の縮図では、どの辺も 1/2 になるよ。
+          - EF は AB に対応する辺だね。
+          - 10 cm の半分を求めよう。
+        paths:
+          - [EF は AB の 1/2, 10 ÷ 2 = 5, 5 cm]
+      - part: 挑戦
+        text: たて 2 cm、横 3 cm の長方形 あ と、たて 4 cm、横 5 cm の長方形 い があります。い は あ の拡大図といえますか。
+        choices: [拡大図といえる, 拡大図とはいえない]
+        answer: 拡大図とはいえない
+        check: "'拡大図といえる' if Fraction(4, 2) == Fraction(5, 3) else '拡大図とはいえない'"
+        hints:
+          - たては何倍になったかな。
+          - 横は何倍になったかな。
+          - 拡大図なら、どの辺も同じ倍になるはずだね。
+        paths:
+          - [たては 2 → 4 で 2 倍, 横は 3 → 5 で 2 倍ではない, 同じ倍でないので拡大図とはいえない]
+        note: どちらも長方形で「形が同じ」と思いやすい。長方形どうしでも、たてと横の倍が同じでないと拡大図ではない。
+    extra:
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の 2 倍の拡大図です。辺 AB は 7 cm です。AB に対応する辺 DE は何 cm ですか。
+        answer: 14
+        check: "7 * 2"
+        hints:
+          - 2 倍の拡大図では、どの辺も 2 倍になるよ。
+          - DE は AB に対応する辺だね。
+          - 7 cm の 2 倍を求めよう。
+        paths:
+          - [7 × 2 = 14, 14 cm]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。い、う、え のうち、あ の 1/2 の縮図はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="96.5" x2="14" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="27.2" y1="96.5" x2="27.2" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40.5" y1="96.5" x2="40.5" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="53.8" y1="96.5" x2="53.8" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="67" y1="96.5" x2="67" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80.2" y1="96.5" x2="80.2" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="93.5" y1="96.5" x2="93.5" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="106.8" y1="96.5" x2="106.8" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="96.5" x2="120" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="133.2" y1="96.5" x2="133.2" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="146.5" y1="96.5" x2="146.5" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="159.8" y1="96.5" x2="159.8" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="173" y1="96.5" x2="173" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="186.2" y1="96.5" x2="186.2" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="199.5" y1="96.5" x2="199.5" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="212.8" y1="96.5" x2="212.8" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="96.5" x2="226" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="96.5" x2="226" y2="96.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="83.2" x2="226" y2="83.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="70" x2="226" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="56.8" x2="226" y2="56.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="43.5" x2="226" y2="43.5" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="27.2,83.2 80.2,83.2 80.2,56.8 27.2,56.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="53.8" y="74.2" font-size="12" text-anchor="middle">あ</text><polygon points="93.5,83.2 120,83.2 120,56.8 93.5,56.8" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.8" y="74.2" font-size="12" text-anchor="middle">い</text><polygon points="133.2,83.2 159.8,83.2 159.8,70 133.2,70" stroke="currentColor" stroke-width="2" fill="none"/><text x="146.5" y="80.8" font-size="12" text-anchor="middle">う</text><polygon points="173,83.2 212.8,83.2 212.8,70 173,70" stroke="currentColor" stroke-width="2" fill="none"/><text x="192.9" y="80.8" font-size="12" text-anchor="middle">え</text></svg>'
+        choices: [い, う, え]
+        answer: う
+        check: "(lambda P: [s for s, Q in (('い', ((6, 1), (8, 1), (8, 3), (6, 3))), ('う', ((9, 1), (11, 1), (11, 2), (9, 2))), ('え', ((12, 1), (15, 1), (15, 2), (12, 2)))) if all(2 * (Q[i][j] - Q[0][j]) == P[i][j] - P[0][j] for i in range(4) for j in range(2))][0])(((1, 1), (5, 1), (5, 3), (1, 3)))"
+        hints:
+          - あ の横とたては、それぞれ何目かな。
+          - 1/2 の縮図では、横もたても半分になるよ。
+          - 横もたても あ の半分のものをさがそう。
+        paths:
+          - [あ は 横 4 目、たて 2 目, 半分は 横 2 目、たて 1 目, う]
+        note: 正方形の い（横 2 目、たて 2 目）を選びやすい。横もたても半分か確かめる。
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の 1/3 の縮図です。辺 CA は 12 cm です。CA に対応する辺 FD は何 cm ですか。
+        answer: 4
+        check: "12 // 3"
+        hints:
+          - 1/3 の縮図では、どの辺も 1/3 になるよ。
+          - FD は CA に対応する辺だね。
+          - 12 ÷ 3 を計算しよう。
+        paths:
+          - [12 ÷ 3 = 4, 4 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 三角形 DEF は、三角形 ABC の拡大図です。辺 FD の長さを求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="54.4,62.5 34,92.5 88.3,92.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="155.1,47.5 124.5,92.5 206,92.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="54.4,62.5 34,92.5 88.3,92.5" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="155.1,47.5 124.5,92.5 206,92.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="54.4" y="57.7" font-size="12" text-anchor="middle">A</text><text x="28" y="106.7" font-size="12" text-anchor="middle">B</text><text x="94.3" y="106.7" font-size="12" text-anchor="middle">C</text><text x="155.1" y="42.7" font-size="12" text-anchor="middle">D</text><text x="118.5" y="106.7" font-size="12" text-anchor="middle">E</text><text x="212" y="106.7" font-size="12" text-anchor="middle">F</text><text x="61.2" y="109.7" font-size="12" text-anchor="middle">6 cm</text><text x="79.3" y="79.7" font-size="12" text-anchor="start">5 cm</text><text x="36.2" y="79.7" font-size="12" text-anchor="end">4 cm</text><text x="165.3" y="109.7" font-size="12" text-anchor="middle">9 cm</text><text x="131.8" y="72.2" font-size="12" text-anchor="end">6 cm</text></svg>'
+        explain: 対応する辺は、BC と EF、CA と FD、AB と DE です。BC 6 cm が EF 9 cm になっているので、9 ÷ 6 = 1.5 で 1.5 倍の拡大図です（AB 4 cm → DE 6 cm も 1.5 倍）。FD は CA の 1.5 倍で、5 × 1.5 = 7.5 cm です。比で見ると BC:EF = 6:9 = 2:3 で、どの対応する辺の比も 2:3 です。
+      - part: 思い出す
+        text: 四角形 EFGH は、四角形 ABCD の 1/4 の縮図です。辺 BC は 20 cm です。辺 FG は何 cm ですか。
+        answer: 5
+        check: "20 // 4"
+        hints:
+          - 1/4 の縮図では、どの辺も 1/4 になるよ。
+          - FG は BC に対応する辺だね。
+          - 20 ÷ 4 を計算しよう。
+        paths:
+          - [20 ÷ 4 = 5, 5 cm]
+      - part: 思い出す
+        text: 6:9 の比の値はいくつですか。分数で答えましょう。
+        answer: 2/3
+        check: "Fraction(6, 9)"
+        hints:
+          - 比の値は、前の数 ÷ うしろの数 だね。
+          - 6 ÷ 9 を分数で表そう。
+          - 約分しよう。
+        paths:
+          - [6 ÷ 9 = 6/9, 約分して 2/3]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図です。辺 AB は 4 cm、対応する辺 DE は 12 cm です。三角形 DEF は三角形 ABC の何倍の拡大図ですか。
+        answer: 3
+        check: "12 // 4"
+        hints:
+          - 対応する辺の長さをくらべよう。
+          - DE は AB の何倍かな。
+          - 12 ÷ 4 を計算しよう。
+        paths:
+          - [12 ÷ 4 = 3, 3 倍]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図です。辺 EF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="56.8,60.9 34,97.3 91.3,97.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="154.3,42.7 120,97.3 206,97.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="56.8,60.9 34,97.3 91.3,97.3" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="154.3,42.7 120,97.3 206,97.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="56.8" y="56.1" font-size="12" text-anchor="middle">A</text><text x="28" y="111.5" font-size="12" text-anchor="middle">B</text><text x="97.3" y="111.5" font-size="12" text-anchor="middle">C</text><text x="154.3" y="37.9" font-size="12" text-anchor="middle">D</text><text x="114" y="111.5" font-size="12" text-anchor="middle">E</text><text x="212" y="111.5" font-size="12" text-anchor="middle">F</text><text x="62.7" y="114.5" font-size="12" text-anchor="middle">8 cm</text><text x="37.4" y="81.3" font-size="12" text-anchor="end">6 cm</text><text x="129.1" y="72.2" font-size="12" text-anchor="end">9 cm</text></svg>'
+        answer: 12
+        check: "8 * Fraction(9, 6)"
+        hints:
+          - AB と DE が対応する辺だね。何倍になっているかな。
+          - 9 ÷ 6 で、何倍かがわかるよ。
+          - EF は BC に対応する辺だよ。
+        paths:
+          - [9 ÷ 6 = 1.5 倍, 8 × 1.5 = 12, 12 cm]
+          - [AB:DE = 6:9 = 2:3, BC:EF = 2:3, 8:□ = 2:3, □ = 12]
+        note: 9 − 6 = 3 をたして 8 + 3 = 11 としやすい。拡大図は、同じ長さをたすのではなく、同じ倍をかける。
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の縮図です。AB は 10 cm、DE は 4 cm、CA は 15 cm です。CA に対応する辺 FD は何 cm ですか。
+        answer: 6
+        check: "15 * Fraction(4, 10)"
+        hints:
+          - AB と DE で、何分の 1 にちぢめたかを調べよう。
+          - 4 ÷ 10 を分数で表そう。
+          - CA の 15 cm に、その分数をかけよう。
+        paths:
+          - [4/10 = 2/5 の縮図, 15 × 2/5 = 6, 6 cm]
+          - [AB:DE = 10:4 = 5:2, CA:FD = 5:2, 15:□ = 5:2, □ = 6]
+      - part: 挑戦
+        text: 四角形 EFGH は、四角形 ABCD の拡大図です。AB = 4 cm、BC = 5 cm、CD = 6 cm、DA = 3 cm で、EF は 6 cm です。四角形 EFGH のまわりの長さは何 cm ですか。
+        answer: 27
+        check: "(4 + 5 + 6 + 3) * Fraction(6, 4)"
+        hints:
+          - AB と EF をくらべて、何倍の拡大図かを調べよう。
+          - どの辺も同じ倍になるよ。
+          - まわりの長さも同じ倍になるね。
+        paths:
+          - [6 ÷ 4 = 1.5 倍, ABCD のまわりは 18 cm, 18 × 1.5 = 27, 27 cm]
+          - [辺を 1 つずつ 1.5 倍 6、7.5、9、4.5, たして 27]
+    extra:
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図です。辺 AB は 4 cm、対応する辺 DE は 10 cm です。三角形 DEF は三角形 ABC の何倍の拡大図ですか。
+        answer: 2.5
+        accept: [5/2]
+        check: "10 / 4"
+        hints:
+          - 対応する辺の長さをくらべよう。
+          - DE は AB の何倍かな。
+          - 10 ÷ 4 を計算しよう。わり切れなくても小数で表せるよ。
+        paths:
+          - [10 ÷ 4 = 2.5, 2.5 倍]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の縮図です。辺 AB は 8 cm、対応する辺 DE は 6 cm です。三角形 DEF は三角形 ABC の何分の何の縮図ですか。分数で答えましょう。
+        answer: 3/4
+        check: "Fraction(6, 8)"
+        hints:
+          - DE は AB の何倍かを分数で表そう。
+          - 6 ÷ 8 を分数にしよう。
+          - 約分しよう。
+        paths:
+          - [6/8 = 3/4, 3/4 の縮図]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の縮図です。BC は 12 cm、EF は 8 cm、AB は 9 cm です。AB に対応する辺 DE は何 cm ですか。
+        answer: 6
+        check: "9 * Fraction(8, 12)"
+        hints:
+          - BC と EF で、何分の何にちぢめたかを調べよう。
+          - 8/12 を約分しよう。
+          - AB の 9 cm に、その分数をかけよう。
+        paths:
+          - [8/12 = 2/3, 9 × 2/3 = 6, 6 cm]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 方眼の 1 目は 1 cm です。点 O を中心にして、三角形 ABC の 2 倍の拡大図 A′B′C′ をかこう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="130" x2="40" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="130" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="130" x2="200" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="90" x2="200" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="80,70 100,110 120,90" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="100,30 140,110 180,70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="110" x2="100" y2="30" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="110" x2="140" y2="110" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="110" x2="180" y2="70" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><circle cx="60" cy="110" r="3" fill="currentColor"/><text x="52" y="122.2" font-size="12" text-anchor="middle">O</text><circle cx="80" cy="70" r="3" fill="currentColor"/><text x="72" y="70.2" font-size="12" text-anchor="middle">A</text><circle cx="100" cy="110" r="3" fill="currentColor"/><text x="100" y="125.2" font-size="12" text-anchor="middle">B</text><circle cx="120" cy="90" r="3" fill="currentColor"/><text x="128" y="98.2" font-size="12" text-anchor="middle">C</text><circle cx="100" cy="30" r="3" fill="currentColor"/><text x="91" y="31.2" font-size="12" text-anchor="middle">A′</text><circle cx="140" cy="110" r="3" fill="currentColor"/><text x="140" y="125.2" font-size="12" text-anchor="middle">B′</text><circle cx="180" cy="70" r="3" fill="currentColor"/><text x="189" y="71.2" font-size="12" text-anchor="middle">C′</text></svg>'
+        explain: O から A までは、右へ 1 目、上へ 2 目。その 2 倍の、右へ 2 目、上へ 4 目の所に A′ をとります。B、C も同じように、O からの長さを 2 倍にした所に B′、C′ をとって結ぶと、2 倍の拡大図ができます。OA′ は OA の 2 倍、OB′ は OB の 2 倍です。このような図を、O を中心にした拡大図といいます。1/2 にすれば、O を中心にした縮図になります。
+      - part: 思い出す
+        text: 三角形 DEF は、三角形 ABC の拡大図です。AB は 4 cm、DE は 6 cm、BC は 7 cm です。辺 EF は何 cm ですか。
+        answer: 10.5
+        check: "7 * 6 / 4"
+        hints:
+          - AB と DE で、何倍の拡大図かを調べよう。
+          - 6 ÷ 4 = 1.5 倍だね。
+          - BC の 7 cm を 1.5 倍しよう。
+        paths:
+          - [1.5 倍, 7 × 1.5 = 10.5, 10.5 cm]
+      - part: 思い出す
+        text: 三角形 DEF は、三角形 ABC の 1/2 の縮図です。辺 AB は 9 cm です。辺 DE は何 cm ですか。
+        answer: 4.5
+        check: "9 / 2"
+        hints:
+          - 1/2 の縮図では、どの辺も半分になるよ。
+          - 9 ÷ 2 を計算しよう。
+          - わり切れなくても、小数で表せるよ。
+        paths:
+          - [9 ÷ 2 = 4.5, 4.5 cm]
+      - part: 今日
+        text: 点 O を中心にして、三角形 ABC の 3 倍の拡大図 A′B′C′ をかきました。OA は 2 cm です。OA′ は何 cm ですか。
+        answer: 6
+        check: "2 * 3"
+        hints:
+          - O を中心にした拡大図では、O からの長さが同じ倍になるよ。
+          - OA′ は OA の何倍かな。
+          - 2 cm の 3 倍だね。
+        paths:
+          - [OA′ は OA の 3 倍, 2 × 3 = 6, 6 cm]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 O を中心にして、三角形 ABC の 2 倍の拡大図 A′B′C′ をかきます。点 C′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="130" x2="40" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="130" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="130" x2="200" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="90" x2="200" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="80,90 100,110 120,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="60" y1="110" x2="120" y2="70" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><circle cx="60" cy="110" r="3" fill="currentColor"/><text x="52" y="122.2" font-size="12" text-anchor="middle">O</text><circle cx="80" cy="90" r="3" fill="currentColor"/><text x="72" y="90.2" font-size="12" text-anchor="middle">A</text><circle cx="100" cy="110" r="3" fill="currentColor"/><text x="100" y="125.2" font-size="12" text-anchor="middle">B</text><circle cx="120" cy="70" r="3" fill="currentColor"/><text x="128" y="70.2" font-size="12" text-anchor="middle">C</text></svg>'
+        choices: [右へ 6 目、上へ 4 目, 右へ 3 目、上へ 2 目, 右へ 7 目、上へ 5 目, 右へ 6 目、上へ 2 目]
+        answer: 右へ 6 目、上へ 4 目
+        check: "'右へ %d 目、上へ %d 目' % (2 * (4 - 1), 2 * (3 - 1))"
+        hints:
+          - O から C までは、右へ何目、上へ何目かな。
+          - その長さを、どちらも 2 倍にしよう。
+          - 横も たても 2 倍だよ。
+        paths:
+          - [O から C は 右へ 3 目、上へ 2 目, 2 倍して 右へ 6 目、上へ 4 目]
+        note: C から さらに 2 倍の分を進めてしまい（右へ 7 目、上へ 5 目のように）、数えはじめの点をまちがえやすい。数えるのは いつも O から。
+      - part: 今日
+        text: 点 O を中心にして、三角形 ABC の 1/3 の縮図 A′B′C′ をかきました。OB は 12 cm です。OB′ は何 cm ですか。
+        answer: 4
+        check: "12 // 3"
+        hints:
+          - O を中心にした縮図では、O からの長さが同じ分数になるよ。
+          - OB′ は OB の 1/3 だね。
+          - 12 ÷ 3 を計算しよう。
+        paths:
+          - [12 ÷ 3 = 4, 4 cm]
+      - part: 挑戦
+        text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です。このとき、三角形 ADE は A を中心にした三角形 ABC の縮図になっています。AD は 4 cm、AB は 6 cm、BC は 15 cm です。DE は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="90.9,18 54.8,87.3 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text><text x="62.9" y="56.9" font-size="12" text-anchor="end">4 cm</text><text x="120" y="139.2" font-size="12" text-anchor="middle">15 cm</text></svg>'
+        answer: 10
+        check: "15 * Fraction(4, 6)"
+        hints:
+          - AD と AB は対応する辺だね。何分の何の縮図かな。
+          - 4/6 を約分しよう。
+          - DE は BC に対応する辺だよ。
+        paths:
+          - [AD:AB = 4:6 = 2:3, 2/3 の縮図, 15 × 2/3 = 10, 10 cm]
+        note: 「DB = 2 cm」を使って 15 × 2/6 としやすい。対応するのは AD と AB（A からの長さどうし）。
+    extra:
+      - part: 今日
+        text: 点 O を中心にして、三角形 ABC の 2 倍の拡大図 A′B′C′ をかきました。OB は 3.5 cm です。OB′ は何 cm ですか。
+        answer: 7
+        check: "35 * 2 // 10"
+        hints:
+          - O からの長さが 2 倍になるよ。
+          - 3.5 cm の 2 倍を求めよう。
+          - 3.5 + 3.5 を計算してもよいよ。
+        paths:
+          - [3.5 × 2 = 7, 7 cm]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 O を中心にして、三角形 ABC の 1/2 の縮図 A′B′C′ をかきます。点 A′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="130" x2="40" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="130" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="130" x2="200" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="90" x2="200" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="180,30 140,110 100,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="60" y1="110" x2="180" y2="30" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><circle cx="60" cy="110" r="3" fill="currentColor"/><text x="52" y="122.2" font-size="12" text-anchor="middle">O</text><circle cx="180" cy="30" r="3" fill="currentColor"/><text x="188" y="30.2" font-size="12" text-anchor="middle">A</text><circle cx="140" cy="110" r="3" fill="currentColor"/><text x="140" y="125.2" font-size="12" text-anchor="middle">B</text><circle cx="100" cy="70" r="3" fill="currentColor"/><text x="92" y="70.2" font-size="12" text-anchor="middle">C</text></svg>'
+        choices: [右へ 3 目、上へ 2 目, 右へ 6 目、上へ 4 目, 右へ 4 目、上へ 3 目, 右へ 2 目、上へ 3 目]
+        answer: 右へ 3 目、上へ 2 目
+        check: "'右へ %d 目、上へ %d 目' % ((7 - 1) // 2, (5 - 1) // 2)"
+        hints:
+          - O から A までは、右へ何目、上へ何目かな。
+          - その長さを、どちらも半分にしよう。
+          - 横も たても 1/2 だよ。
+        paths:
+          - [O から A は 右へ 6 目、上へ 4 目, 半分で 右へ 3 目、上へ 2 目]
+      - part: 今日
+        text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です（三角形 ADE は 三角形 ABC の縮図）。AD は 3 cm、AB は 9 cm、DE は 4 cm です。BC は何 cm ですか。
+        answer: 12
+        check: "4 * Fraction(9, 3)"
+        hints:
+          - AD と AB をくらべよう。
+          - 三角形 ABC は 三角形 ADE の何倍の拡大図かな。
+          - BC は DE に対応する辺だよ。
+        paths:
+          - [9 ÷ 3 = 3 倍, 4 × 3 = 12, 12 cm]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 縮図で、実際の長さをちぢめた割合を縮尺といいます。縮尺 1/100 の縮図で 3 cm の長さは、実際は何 cm か考えよう。
+        explain: 縮尺 1/100 は、実際の長さを 1/100 にちぢめたということです。1:100 とも書きます。縮図の 1 cm は実際の 100 cm にあたるので、縮図で 3 cm の長さは、実際は 3 × 100 = 300 cm です。反対に、実際の長さを縮図の長さにするには 100 でわります。
+      - part: 思い出す
+        text: 点 O を中心にして、三角形 ABC の 2 倍の拡大図をかきました。OA は 4.5 cm です。OA′ は何 cm ですか。
+        answer: 9
+        check: "45 * 2 // 10"
+        hints:
+          - O からの長さが 2 倍になるよ。
+          - 4.5 cm の 2 倍を求めよう。
+          - 4.5 + 4.5 を計算してもよいよ。
+        paths:
+          - [4.5 × 2 = 9, 9 cm]
+      - part: 思い出す
+        text: 2:5 = □:20 の □ に入る数はいくつですか。
+        answer: 8
+        check: "2 * (20 // 5)"
+        hints:
+          - 5 が 20 になるには、何倍すればよいかな。
+          - 5 × 4 = 20 だね。
+          - 2 も同じ倍にしよう。
+        paths:
+          - [5 × 4 = 20, 2 × 4 = 8]
+      - part: 今日
+        text: 縮尺 1/200 の縮図で 4 cm の長さは、実際は何 cm ですか。
+        answer: 800
+        check: "4 * 200"
+        hints:
+          - 縮図の 1 cm は、実際の何 cm にあたるかな。
+          - 1 cm が 200 cm だね。
+          - 4 cm はその 4 つ分だよ。
+        paths:
+          - [1 cm が 200 cm, 4 × 200 = 800, 800 cm]
+      - part: 今日
+        text: 実際の長さが 600 cm の通りを、縮尺 1/200 の縮図にかきます。縮図では何 cm になりますか。
+        answer: 3
+        check: "600 // 200"
+        hints:
+          - 縮図の長さは、実際の長さの 1/200 だね。
+          - 実際の 200 cm が、縮図の 1 cm だよ。
+          - 600 cm の中に 200 cm がいくつあるかな。
+        paths:
+          - [600 ÷ 200 = 3, 3 cm]
+      - part: 今日
+        text: 同じ時刻に、高さ 100 cm の棒の影の長さは 150 cm、木の影の長さは 600 cm でした。棒と影でできる三角形と、木と影でできる三角形は、形が同じです。木の高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,103 92.8,37 191.8,103" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="48.2,103 48.2,86.5 73,103" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="103" x2="200" y2="103" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48.2" y1="103" x2="48.2" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.8" y1="103" x2="92.8" y2="37" stroke="currentColor" stroke-width="2" fill="none"/><line x1="48.2" y1="86.5" x2="73" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="92.8" y1="37" x2="191.8" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="43.2" y="98.9" font-size="12" text-anchor="end">100 cm</text><text x="60.6" y="120.2" font-size="12" text-anchor="middle">150 cm</text><text x="142.3" y="120.2" font-size="12" text-anchor="middle">600 cm</text><text x="48.2" y="81.7" font-size="12" text-anchor="middle">棒</text><text x="92.8" y="32.2" font-size="12" text-anchor="middle">木</text><line x1="48.2" y1="103" x2="73" y2="103" stroke="currentColor" stroke-width="4" fill="none"/><line x1="92.8" y1="103" x2="191.8" y2="103" stroke="currentColor" stroke-width="4" fill="none"/><polyline points="48.2,95 56.2,95 56.2,103" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="92.8,95 100.8,95 100.8,103" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 400
+        check: "100 * Fraction(600, 150)"
+        hints:
+          - 木の三角形は、棒の三角形の拡大図だね。
+          - 影の長さは何倍になっているかな。
+          - 高さも同じ倍になるよ。
+        paths:
+          - [影は 600 ÷ 150 = 4 倍, 高さも 4 倍, 100 × 4 = 400, 400 cm]
+          - [高さ:影 = 100:150 = 2:3, □:600 = 2:3, □ = 400]
+        note: 影の差（450 cm）をたして考えやすい。拡大図なので、同じ倍をかける。
+      - part: 挑戦
+        text: 縮尺 1/100 の縮図で 6 cm の長さは、縮尺 1/300 の縮図では何 cm になりますか。
+        answer: 2
+        check: "6 * 100 // 300"
+        hints:
+          - まず、実際の長さを求めよう。
+          - 縮尺 1/100 の 6 cm は、実際は何 cm かな。
+          - その長さを、1/300 の縮図にしよう。
+        paths:
+          - [実際は 6 × 100 = 600 cm, 600 ÷ 300 = 2, 2 cm]
+          - [1/300 は 1/100 の 1/3 の大きさ, 6 ÷ 3 = 2]
+        note: 300 が 100 の 3 倍なので 6 × 3 = 18 としやすい。縮尺の分母が大きいほど、縮図は小さい。
+    extra:
+      - part: 今日
+        text: 縮尺 1/50 の縮図で 7 cm の長さは、実際は何 cm ですか。
+        answer: 350
+        check: "7 * 50"
+        hints:
+          - 縮図の 1 cm は、実際の 50 cm にあたるよ。
+          - 7 cm はその 7 つ分だね。
+          - 7 × 50 を計算しよう。
+        paths:
+          - [7 × 50 = 350, 350 cm]
+      - part: 今日
+        text: 実際の長さが 900 cm のへいを、縮図にかくと 3 cm になりました。この縮図の縮尺はいくつですか。分数で答えましょう。
+        answer: 1/300
+        check: "Fraction(3, 900)"
+        hints:
+          - 縮尺は、縮図の長さ ÷ 実際の長さ だね。
+          - 3/900 を約分しよう。
+          - 分子が 1 になるまで約分しよう。
+        paths:
+          - [3/900, 3 でわって 1/300]
+      - part: 今日
+        text: 同じ時刻に、高さ 60 cm の棒の影の長さは 80 cm、へいの影の長さは 200 cm でした。へいの高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="107.7,100.8 107.7,39.2 189.7,100.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="50.3,100.8 50.3,76.2 83.1,100.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="100.8" x2="200" y2="100.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="50.3" y1="100.8" x2="50.3" y2="76.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.7" y1="100.8" x2="107.7" y2="39.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.3" y1="76.2" x2="83.1" y2="100.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="107.7" y1="39.2" x2="189.7" y2="100.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="45.3" y="92.7" font-size="12" text-anchor="end">60 cm</text><text x="66.7" y="118" font-size="12" text-anchor="middle">80 cm</text><text x="148.7" y="118" font-size="12" text-anchor="middle">200 cm</text><text x="50.3" y="71.4" font-size="12" text-anchor="middle">棒</text><text x="107.7" y="34.4" font-size="12" text-anchor="middle">へい</text><line x1="50.3" y1="100.8" x2="83.1" y2="100.8" stroke="currentColor" stroke-width="4" fill="none"/><line x1="107.7" y1="100.8" x2="189.7" y2="100.8" stroke="currentColor" stroke-width="4" fill="none"/><polyline points="50.3,92.8 58.3,92.8 58.3,100.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="107.7,92.8 115.7,92.8 115.7,100.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 150
+        check: "60 * Fraction(200, 80)"
+        hints:
+          - へいの三角形は、棒の三角形の拡大図だね。
+          - 影は何倍になっているかな。
+          - 高さも同じ倍になるよ。
+        paths:
+          - [影は 200 ÷ 80 = 2.5 倍, 60 × 2.5 = 150, 150 cm]
+          - [高さ:影 = 60:80 = 3:4, □:200 = 3:4, □ = 150]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 方眼の 1 目は 1 cm です。い は あ の 2 倍の拡大図です。面積をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="118.9" x2="14" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30.3" y1="118.9" x2="30.3" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="46.6" y1="118.9" x2="46.6" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62.9" y1="118.9" x2="62.9" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="79.2" y1="118.9" x2="79.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95.5" y1="118.9" x2="95.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="111.8" y1="118.9" x2="111.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="128.2" y1="118.9" x2="128.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144.5" y1="118.9" x2="144.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160.8" y1="118.9" x2="160.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="177.1" y1="118.9" x2="177.1" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="193.4" y1="118.9" x2="193.4" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="209.7" y1="118.9" x2="209.7" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="118.9" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="118.9" x2="226" y2="118.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="102.6" x2="226" y2="102.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.3" x2="226" y2="86.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="70" x2="226" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.7" x2="226" y2="53.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="37.4" x2="226" y2="37.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="21.1" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="30.3,102.6 79.2,102.6 79.2,70 30.3,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="54.8" y="91.2" font-size="14" text-anchor="middle">あ</text><polygon points="111.8,102.6 209.7,102.6 209.7,37.4 111.8,37.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="160.8" y="74.9" font-size="14" text-anchor="middle">い</text></svg>'
+        explain: あ は たて 2 cm、横 3 cm で、面積は 6 cm²。い は たて 4 cm、横 6 cm で、面積は 24 cm²。24 ÷ 6 = 4 で、面積は 4 倍です。たても横も 2 倍になるので、面積は 2 × 2 = 4 倍になります。3 倍の拡大図なら 3 × 3 = 9 倍、1/2 の縮図なら 1/2 × 1/2 = 1/4 になります（わけは 6 日目）。
+      - part: 思い出す
+        text: 縮尺 1/100 の縮図で 5 cm の長さは、実際は何 cm ですか。
+        answer: 500
+        check: "5 * 100"
+        hints:
+          - 縮図の 1 cm は、実際の 100 cm にあたるよ。
+          - 5 cm はその 5 つ分だね。
+          - 5 × 100 を計算しよう。
+        paths:
+          - [5 × 100 = 500, 500 cm]
+      - part: 思い出す
+        text: 底辺 8 cm、高さ 5 cm の三角形の面積は何 cm² ですか。
+        answer: 20
+        check: "8 * 5 // 2"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 だね。
+          - 8 を先に 2 でわってもよいよ。
+          - 4 × 5 を計算しよう。
+        paths:
+          - [8 ÷ 2 = 4, 4 × 5 = 20, 20 cm²]
+      - part: 今日
+        text: 面積が 5 cm² の三角形の、3 倍の拡大図をかきました。拡大図の面積は何 cm² ですか。
+        answer: 45
+        check: "5 * 3 * 3"
+        hints:
+          - 3 倍の拡大図では、底辺も高さも 3 倍になるね。
+          - 面積は 3 × 3 = 9 倍になるよ。
+          - 5 cm² の 9 倍を求めよう。
+        paths:
+          - [面積は 3 × 3 = 9 倍, 5 × 9 = 45, 45 cm²]
+        note: 面積も 3 倍として 15 と答えやすい。底辺と高さの両方が 3 倍になる。
+      - part: 今日
+        text: 底辺 4 cm、高さ 3 cm の三角形の、2 倍の拡大図の面積は何 cm² ですか。
+        answer: 24
+        check: "(4 * 2) * (3 * 2) // 2"
+        hints:
+          - 2 倍の拡大図の底辺と高さは何 cm かな。
+          - 底辺 8 cm、高さ 6 cm だね。
+          - 三角形の面積を求めよう。もとの面積の何倍かも確かめよう。
+        paths:
+          - [底辺 8 cm、高さ 6 cm, 8 × 6 ÷ 2 = 24, 24 cm²]
+          - [もとは 4 × 3 ÷ 2 = 6, 6 × 4 = 24]
+      - part: 今日
+        text: 面積が 36 cm² の長方形の、1/2 の縮図をかきました。縮図の面積は何 cm² ですか。
+        answer: 9
+        check: "36 * Fraction(1, 2) * Fraction(1, 2)"
+        hints:
+          - 1/2 の縮図では、たても横も半分になるね。
+          - 面積は 1/2 × 1/2 = 1/4 になるよ。
+          - 36 cm² の 1/4 を求めよう。
+        paths:
+          - [面積は 1/4, 36 ÷ 4 = 9, 9 cm²]
+        note: 面積も半分として 18 と答えやすい。
+      - part: 挑戦
+        text: 三角形 DEF は、三角形 ABC の拡大図で、AB:DE = 2:3 です。三角形 ABC の面積は 12 cm² です。三角形 DEF の面積は何 cm² ですか。
+        answer: 27
+        check: "12 * Fraction(3, 2) * Fraction(3, 2)"
+        hints:
+          - DEF は ABC の何倍の拡大図かな。
+          - 3 ÷ 2 = 1.5 倍だね。
+          - 面積は 1.5 × 1.5 倍になるよ。
+        paths:
+          - [1.5 倍の拡大図, 面積は 1.5 × 1.5 = 2.25 倍, 12 × 2.25 = 27, 27 cm²]
+          - [面積の比は 2 × 2 と 3 × 3 で 4:9, 12 ÷ 4 × 9 = 27]
+        note: 面積の比を 2:3 として 18 と答えやすい。辺の比が 2:3 なら面積の比は 4:9。
+    extra:
+      - part: 今日
+        text: 面積が 3 cm² の四角形の、4 倍の拡大図をかきました。拡大図の面積は何 cm² ですか。
+        answer: 48
+        check: "3 * 4 * 4"
+        hints:
+          - 4 倍の拡大図では、面積は何倍になるかな。
+          - 4 × 4 = 16 倍だよ。
+          - 3 cm² の 16 倍を求めよう。
+        paths:
+          - [面積は 16 倍, 3 × 16 = 48, 48 cm²]
+      - part: 今日
+        text: 面積が 45 cm² の三角形の、1/3 の縮図をかきました。縮図の面積は何 cm² ですか。
+        answer: 5
+        check: "45 * Fraction(1, 3) * Fraction(1, 3)"
+        hints:
+          - 1/3 の縮図では、面積は何分の 1 になるかな。
+          - 1/3 × 1/3 = 1/9 だよ。
+          - 45 cm² の 1/9 を求めよう。
+        paths:
+          - [面積は 1/9, 45 ÷ 9 = 5, 5 cm²]
+      - part: 今日
+        text: ある三角形の拡大図をかいたら、面積が 9 倍になりました。何倍の拡大図ですか。
+        answer: 3
+        check: "[k for k in range(1, 10) if k * k == 9][0]"
+        hints:
+          - □ 倍の拡大図では、面積は □ × □ 倍になるね。
+          - 同じ数を 2 回かけて 9 になる数をさがそう。
+          - 1 から順にためしてみよう。
+        paths:
+          - [□ × □ = 9, □ = 3, 3 倍]
+
+  - day: 6
+    items:
+      - part: わけ
+        text: 2 倍の拡大図の面積が、もとの面積の 4 倍になるのはなぜですか。たて 2 cm、横 3 cm の長方形 あ と、その 2 倍の拡大図 い を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="118.9" x2="14" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="30.3" y1="118.9" x2="30.3" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="46.6" y1="118.9" x2="46.6" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62.9" y1="118.9" x2="62.9" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="79.2" y1="118.9" x2="79.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95.5" y1="118.9" x2="95.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="111.8" y1="118.9" x2="111.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="128.2" y1="118.9" x2="128.2" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144.5" y1="118.9" x2="144.5" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160.8" y1="118.9" x2="160.8" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="177.1" y1="118.9" x2="177.1" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="193.4" y1="118.9" x2="193.4" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="209.7" y1="118.9" x2="209.7" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="118.9" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="118.9" x2="226" y2="118.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="102.6" x2="226" y2="102.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.3" x2="226" y2="86.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="70" x2="226" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.7" x2="226" y2="53.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="37.4" x2="226" y2="37.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="21.1" x2="226" y2="21.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="30.3,102.6 79.2,102.6 79.2,70 30.3,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="54.8" y="91.2" font-size="14" text-anchor="middle">あ</text><polygon points="111.8,102.6 209.7,102.6 209.7,37.4 111.8,37.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="160.8" y="74.9" font-size="14" text-anchor="middle">い</text></svg>'
+        explain: 例：「あ は 1 cm² の正方形が、横に 3 こ、たてに 2 列で 6 こ。2 倍の拡大図 い は、横が 6 cm、たてが 4 cm になるので、横に 6 こ、たてに 4 列で 24 こ。横のこ数が 2 倍、列の数も 2 倍になるので、こ数は 2 × 2 = 4 倍になる。だから面積は 4 倍。」と書ければよい。① たても横も 2 倍になる、② 面積は たて × 横 なので 2 × 2 倍、の 2 点を見る。「2 倍だから面積も 2 倍」と書いたら、図の正方形の数を数えさせる。三角形でも、底辺と高さがどちらも 2 倍になるので同じことがいえる。
+        hints:
+          - い の横とたては何 cm かな。
+          - 1 cm² の正方形は、あ と い にそれぞれ何こあるかな。
+          - 「たても横も〜倍だから、面積は〜」と書こう。
+        paths:
+          - [あ は 3 × 2 = 6 こ, い は 6 × 4 = 24 こ, たても横も 2 倍, 2 × 2 = 4 倍]
+      - part: わけ
+        text: たて 2 cm、横 3 cm の長方形の、たてと横をどちらも 1 cm ずつのばして、たて 3 cm、横 4 cm の長方形を作りました。この長方形は、もとの長方形の拡大図ではありません。そのわけを、文で書きましょう。
+        explain: 例：「たては 2 cm から 3 cm で 3/2 倍（1.5 倍）、横は 3 cm から 4 cm で 4/3 倍。同じ倍になっていないので、拡大図ではない。拡大図にするなら、横も 1.5 倍の 4.5 cm にしなければならない。」と書ければよい。① たてと横のそれぞれの倍を出す、② 倍が同じでないから拡大図ではない、の 2 点を見る。「同じ長さをたす」と「同じ倍をかける」のちがいに気づけば十分。比で「2:3 と 3:4 は等しくない」と書いてもよい。
+        hints:
+          - たては何倍になったかな。
+          - 横は何倍になったかな。
+          - 「たては〜倍、横は〜倍で、〜だから」と書こう。
+        paths:
+          - [たては 3/2 倍, 横は 4/3 倍, 同じ倍ではない, 拡大図ではない]
+      - part: わけ
+        text: 同じ時刻の、棒と影の長さを測ると、木の高さがわかるのはなぜですか。高さ 100 cm の棒の影が 150 cm、木の影が 600 cm のときを例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="92.8,103 92.8,37 191.8,103" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="48.2,103 48.2,86.5 73,103" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="103" x2="200" y2="103" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48.2" y1="103" x2="48.2" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.8" y1="103" x2="92.8" y2="37" stroke="currentColor" stroke-width="2" fill="none"/><line x1="48.2" y1="86.5" x2="73" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="92.8" y1="37" x2="191.8" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="43.2" y="98.9" font-size="12" text-anchor="end">100 cm</text><text x="60.6" y="120.2" font-size="12" text-anchor="middle">150 cm</text><text x="142.3" y="120.2" font-size="12" text-anchor="middle">600 cm</text><text x="48.2" y="81.7" font-size="12" text-anchor="middle">棒</text><text x="92.8" y="32.2" font-size="12" text-anchor="middle">木</text><line x1="48.2" y1="103" x2="73" y2="103" stroke="currentColor" stroke-width="4" fill="none"/><line x1="92.8" y1="103" x2="191.8" y2="103" stroke="currentColor" stroke-width="4" fill="none"/><polyline points="48.2,95 56.2,95 56.2,103" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="92.8,95 100.8,95 100.8,103" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 例：「同じ時刻なら、日光は同じ向きにさしているので、棒と影の三角形と、木と影の三角形は、形が同じになる（木の三角形は棒の三角形の拡大図）。影が 600 ÷ 150 = 4 倍なので、高さも 4 倍で、木の高さは 100 × 4 = 400 cm とわかる。」と書ければよい。① 同じ時刻なら日光の向きが同じ、② だから 2 つの三角形は拡大図の関係、③ 影の倍と高さの倍が同じ、の 3 点を見る。時刻がちがうと影の長さが変わるので、同じ時刻でなければならないことに気づけばなお良い。
+        hints:
+          - 2 つの三角形の形をくらべよう。どうして同じ形になるのかな。
+          - 影の長さは何倍かな。
+          - 「同じ時刻なので〜。だから〜倍」と書こう。
+        paths:
+          - [日光の向きが同じ, 2 つの三角形は拡大図の関係, 影が 4 倍なので高さも 4 倍, 400 cm]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図です。AB は 6 cm、DE は 15 cm、BC は 4 cm です。辺 EF は何 cm ですか。
+        answer: 10
+        check: "4 * Fraction(15, 6)"
+        hints:
+          - AB と DE で、何倍の拡大図かを調べよう。
+          - 15 ÷ 6 = 2.5 倍だね。
+          - BC の 4 cm を 2.5 倍しよう。
+        paths:
+          - [2.5 倍, 4 × 2.5 = 10, 10 cm]
+      - part: 今日
+        text: 縮尺 1/250 の縮図で 2 cm の長さは、実際は何 cm ですか。
+        answer: 500
+        check: "2 * 250"
+        hints:
+          - 縮図の 1 cm は、実際の 250 cm にあたるよ。
+          - 2 cm はその 2 つ分だね。
+          - 2 × 250 を計算しよう。
+        paths:
+          - [2 × 250 = 500, 500 cm]
+    extra:
+      - part: 今日
+        text: 面積が 7 cm² の三角形の、2 倍の拡大図の面積は何 cm² ですか。
+        answer: 28
+        check: "7 * 2 * 2"
+        hints:
+          - 2 倍の拡大図では、面積は何倍になるかな。
+          - 2 × 2 = 4 倍だよ。
+          - 7 cm² の 4 倍を求めよう。
+        paths:
+          - [面積は 4 倍, 7 × 4 = 28, 28 cm²]
+      - part: 今日
+        text: 同じ時刻に、高さ 50 cm の棒の影の長さは 30 cm、木の影の長さは 240 cm でした。木の高さは何 cm ですか。
+        answer: 400
+        check: "50 * Fraction(240, 30)"
+        hints:
+          - 木の三角形は、棒の三角形の拡大図だね。
+          - 影は何倍になっているかな。
+          - 高さも同じ倍になるよ。
+        paths:
+          - [影は 240 ÷ 30 = 8 倍, 50 × 8 = 400, 400 cm]
+      - part: 今日
+        text: 点 O を中心にして、三角形 ABC の 1/2 の縮図をかきました。OA は 9 cm です。OA′ は何 cm ですか。
+        answer: 4.5
+        check: "9 / 2"
+        hints:
+          - O からの長さが半分になるよ。
+          - 9 ÷ 2 を計算しよう。
+          - わり切れなくても、小数で表せるよ。
+        paths:
+          - [9 ÷ 2 = 4.5, 4.5 cm]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 底辺 9 cm、高さ 6 cm の平行四辺形の面積は何 cm² ですか。
+        answer: 54
+        check: "9 * 6"
+        hints:
+          - 平行四辺形の面積は、底辺 × 高さ だね。
+          - ななめの辺は使わないよ。
+          - 9 × 6 を計算しよう。
+        paths:
+          - [9 × 6 = 54, 54 cm²]
+      - part: 思い出す
+        text: 120 の 30% はいくつですか。
+        answer: 36
+        check: "120 * 30 // 100"
+        hints:
+          - 10% は 120 ÷ 10 にあたるね。
+          - 10% は 12 だよ。
+          - 30% は 10% の 3 つ分だね。
+        paths:
+          - [10% は 12, 12 × 3 = 36]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図で、辺 DE の長さは辺 AB の 150% です。辺 BC は 8 cm です。辺 EF は何 cm ですか。
+        answer: 12
+        check: "8 * 150 // 100"
+        hints:
+          - 150% は、何倍のことかな。
+          - 150% = 1.5 倍だね。どの辺も 1.5 倍になるよ。
+          - 8 cm の 1.5 倍を求めよう。
+        paths:
+          - [150% = 1.5 倍, 8 × 1.5 = 12, 12 cm]
+      - part: 今日
+        text: 上の辺 2 cm、下の辺 4 cm、高さ 3 cm の台形の、2 倍の拡大図の面積は何 cm² ですか。
+        answer: 36
+        check: "(2 * 3 // 2 + 4 * 3 // 2) * 2 * 2"
+        hints:
+          - まず、もとの台形の面積を求めよう。対角線で 2 つの三角形に分けるとよいね。
+          - 2 倍の拡大図では、面積は何倍になるかな。
+          - もとの面積の 4 倍だよ。
+        paths:
+          - [もとは 2 × 3 ÷ 2 + 4 × 3 ÷ 2 = 3 + 6 = 9, 9 × 4 = 36, 36 cm²]
+          - [拡大図は 上 4 cm、下 8 cm、高さ 6 cm, 4 × 6 ÷ 2 + 8 × 6 ÷ 2 = 12 + 24 = 36]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図で、AB:DE = 3:5 です。DE は 20 cm です。AB は何 cm ですか。
+        answer: 12
+        check: "20 * 3 // 5"
+        hints:
+          - 3:5 = □:20 の □ を求めよう。
+          - 5 が 20 になるのは何倍かな。
+          - 3 も同じ倍にしよう。
+        paths:
+          - [5 × 4 = 20, 3 × 4 = 12, 12 cm]
+      - part: 挑戦
+        text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です（三角形 ADE は 三角形 ABC の縮図）。AD:DB = 2:1 で、三角形 ABC の面積は 45 cm² です。四角形 DBCE（色のついた部分）の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="54.8,87.3 36.8,122 203.2,122 165.8,87.3" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="54.8" y1="87.3" x2="165.8" y2="87.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="45.8" y="91.5" font-size="12" text-anchor="middle">D</text><text x="174.8" y="91.5" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 25
+        check: "45 - 45 * Fraction(2, 3) * Fraction(2, 3)"
+        hints:
+          - 三角形 ADE は、三角形 ABC の何分の何の縮図かな。AD と AB をくらべよう。
+          - AD:AB = 2:3 なので 2/3 の縮図だね。面積は 2/3 × 2/3 になるよ。
+          - 三角形 ABC から三角形 ADE をのぞこう。
+        paths:
+          - [2/3 の縮図, ADE の面積は 45 × 4/9 = 20, 45 − 20 = 25, 25 cm²]
+        note: AD:DB = 2:1 をそのまま使って 2/3 や 1/3 の面積にしやすい。縮図の割合は AD:AB で、面積はその 2 回かけた分。
+    extra:
+      - part: 今日
+        text: 縮尺 1:300 の縮図で 2.5 cm の長さは、実際は何 cm ですか。
+        answer: 750
+        check: "25 * 300 // 10"
+        hints:
+          - 1:300 は、縮図の 1 cm が実際の 300 cm ということだね。
+          - 2.5 cm は 1 cm の 2.5 倍だよ。
+          - 300 × 2.5 を計算しよう。
+        paths:
+          - [300 × 2.5 = 750, 750 cm]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図で、AB:DE = 4:7 です。AB は 12 cm です。DE は何 cm ですか。
+        answer: 21
+        check: "12 * 7 // 4"
+        hints:
+          - 4:7 = 12:□ の □ を求めよう。
+          - 4 が 12 になるのは何倍かな。
+          - 7 も同じ倍にしよう。
+        paths:
+          - [4 × 3 = 12, 7 × 3 = 21, 21 cm]
+      - part: 今日
+        text: ある長方形の 1/2 の縮図をかきました。縮図の面積は、もとの長方形の面積の何 % ですか。
+        answer: 25
+        check: "100 * Fraction(1, 2) * Fraction(1, 2)"
+        hints:
+          - 1/2 の縮図では、たても横も半分になるね。
+          - 面積は 1/2 × 1/2 = 1/4 だよ。
+          - 1/4 を百分率で表そう。
+        paths:
+          - [面積は 1/4, 1/4 = 25/100, 25%]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。い、う、え のうち、あ の 2 倍の拡大図はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14" y1="97.9" x2="14" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="25.2" y1="97.9" x2="25.2" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="36.3" y1="97.9" x2="36.3" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="97.9" x2="47.5" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="58.6" y1="97.9" x2="58.6" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="69.8" y1="97.9" x2="69.8" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80.9" y1="97.9" x2="80.9" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="92.1" y1="97.9" x2="92.1" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="103.3" y1="97.9" x2="103.3" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="114.4" y1="97.9" x2="114.4" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="125.6" y1="97.9" x2="125.6" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="136.7" y1="97.9" x2="136.7" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="147.9" y1="97.9" x2="147.9" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="159.1" y1="97.9" x2="159.1" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170.2" y1="97.9" x2="170.2" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="181.4" y1="97.9" x2="181.4" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192.5" y1="97.9" x2="192.5" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="203.7" y1="97.9" x2="203.7" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="214.8" y1="97.9" x2="214.8" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="226" y1="97.9" x2="226" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="97.9" x2="226" y2="97.9" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="86.7" x2="226" y2="86.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="75.6" x2="226" y2="75.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="64.4" x2="226" y2="64.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="53.3" x2="226" y2="53.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="14" y1="42.1" x2="226" y2="42.1" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="25.2,86.7 47.5,86.7 36.3,75.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="36.3" y="87.2" font-size="12" text-anchor="middle">あ</text><polygon points="58.6,86.7 103.3,86.7 80.9,64.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="80.9" y="83.5" font-size="12" text-anchor="middle">い</text><polygon points="114.4,86.7 159.1,86.7 147.9,64.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="140.5" y="83.5" font-size="12" text-anchor="middle">う</text><polygon points="170.2,86.7 214.8,86.7 192.5,53.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="192.5" y="79.8" font-size="12" text-anchor="middle">え</text></svg>'
+        choices: [い, う, え]
+        answer: い
+        check: "(lambda P: [s for s, Q in (('い', ((4, 1), (8, 1), (6, 3))), ('う', ((9, 1), (13, 1), (12, 3))), ('え', ((14, 1), (18, 1), (16, 4)))) if all(Q[i][j] - Q[0][j] == 2 * (P[i][j] - P[0][j]) for i in range(3) for j in range(2))][0])(((1, 1), (3, 1), (2, 2)))"
+        hints:
+          - あ の底辺は何目かな。上の頂点は、左はしから右へ何目、上へ何目かな。
+          - 2 倍の拡大図では、どれも 2 倍になるよ。
+          - 底辺が 2 倍で、上の頂点も 左はしから右へ、上へ、それぞれ 2 倍の所にあるものをさがそう。
+        paths:
+          - [あ は 底辺 2 目、頂点は右へ 1 目・上へ 1 目, 2 倍は 底辺 4 目、右へ 2 目・上へ 2 目, い]
+        note: 底辺と高さが 2 倍でも、頂点の横の位置がずれていると（う）、形が変わる。
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の 3 倍の拡大図です。辺 AB は 2.5 cm です。辺 DE は何 cm ですか。
+        answer: 7.5
+        check: "25 * 3 / 10"
+        hints:
+          - 3 倍の拡大図では、どの辺も 3 倍になるよ。
+          - 2.5 cm の 3 倍を求めよう。
+          - 2.5 + 2.5 + 2.5 を計算してもよいよ。
+        paths:
+          - [2.5 × 3 = 7.5, 7.5 cm]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図です。AB は 6 cm、DE は 8 cm、CA は 9 cm です。辺 FD は何 cm ですか。
+        answer: 12
+        check: "9 * Fraction(8, 6)"
+        hints:
+          - AB と DE で、何倍の拡大図かを調べよう。
+          - 8/6 を約分すると 4/3 倍だね。
+          - CA の 9 cm を 4/3 倍しよう。
+        paths:
+          - [8/6 = 4/3 倍, 9 × 4/3 = 12, 12 cm]
+          - [AB:DE = 6:8 = 3:4, 9:□ = 3:4, □ = 12]
+      - part: 今日
+        text: 方眼の 1 目は 1 cm です。点 O を中心にして、三角形 ABC の 2 倍の拡大図 A′B′C′ をかきます。点 B′ は、O からどこにありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="130" x2="40" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="130" x2="60" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="130" x2="80" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="130" x2="100" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="130" x2="120" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="130" x2="140" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="130" x2="160" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="130" x2="180" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="130" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="130" x2="200" y2="130" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="90" x2="200" y2="90" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="10" x2="200" y2="10" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="80,70 100,90 80,90" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="60" y1="110" x2="100" y2="90" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><circle cx="60" cy="110" r="3" fill="currentColor"/><text x="52" y="122.2" font-size="12" text-anchor="middle">O</text><circle cx="80" cy="70" r="3" fill="currentColor"/><text x="72" y="70.2" font-size="12" text-anchor="middle">A</text><circle cx="100" cy="90" r="3" fill="currentColor"/><text x="108" y="98.2" font-size="12" text-anchor="middle">B</text><circle cx="80" cy="90" r="3" fill="currentColor"/><text x="72" y="100.2" font-size="12" text-anchor="middle">C</text></svg>'
+        choices: [右へ 4 目、上へ 2 目, 右へ 2 目、上へ 1 目, 右へ 5 目、上へ 3 目, 右へ 4 目、上へ 4 目]
+        answer: 右へ 4 目、上へ 2 目
+        check: "'右へ %d 目、上へ %d 目' % (2 * (3 - 1), 2 * (2 - 1))"
+        hints:
+          - O から B までは、右へ何目、上へ何目かな。
+          - その長さを、どちらも 2 倍にしよう。
+          - 数えはじめは O だよ。
+        paths:
+          - [O から B は 右へ 2 目、上へ 1 目, 2 倍で 右へ 4 目、上へ 2 目]
+      - part: 今日
+        text: 縮尺 1/200 の縮図で 3.5 cm の長さは、実際は何 cm ですか。
+        answer: 700
+        check: "35 * 200 // 10"
+        hints:
+          - 縮図の 1 cm は、実際の 200 cm にあたるよ。
+          - 3.5 cm は 1 cm の 3.5 倍だね。
+          - 200 × 3.5 を計算しよう。
+        paths:
+          - [200 × 3.5 = 700, 700 cm]
+      - part: 今日
+        text: 同じ時刻に、高さ 100 cm の棒の影の長さは 80 cm、木の影の長さは 400 cm でした。木の高さは何 cm ですか。
+        answer: 500
+        check: "100 * Fraction(400, 80)"
+        hints:
+          - 木の三角形は、棒の三角形の拡大図だね。
+          - 影は何倍になっているかな。
+          - 高さも同じ倍になるよ。
+        paths:
+          - [影は 400 ÷ 80 = 5 倍, 100 × 5 = 500, 500 cm]
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の拡大図で、AB:DE = 1:3 です。三角形 ABC の面積は 4 cm² です。三角形 DEF の面積は何 cm² ですか。
+        answer: 36
+        check: "4 * 3 * 3"
+        hints:
+          - DEF は ABC の何倍の拡大図かな。
+          - 3 倍の拡大図では、面積は何倍かな。
+          - 3 × 3 = 9 倍だよ。
+        paths:
+          - [3 倍の拡大図, 面積は 9 倍, 4 × 9 = 36, 36 cm²]
+      - part: 挑戦
+        text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です（三角形 ADE は 三角形 ABC の縮図）。AD:DB = 3:2 で、三角形 ADE の面積は 18 cm² です。四角形 DBCE の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="58.4,80.4 36.8,122 203.2,122 158.3,80.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="90.9,18 36.8,122 203.2,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.4" y1="80.4" x2="158.3" y2="80.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="90.9" y="13.2" font-size="12" text-anchor="middle">A</text><text x="29.8" y="135.2" font-size="12" text-anchor="middle">B</text><text x="210.2" y="135.2" font-size="12" text-anchor="middle">C</text><text x="49.4" y="84.6" font-size="12" text-anchor="middle">D</text><text x="167.3" y="84.6" font-size="12" text-anchor="middle">E</text></svg>'
+        answer: 32
+        check: "18 * Fraction(5, 3) * Fraction(5, 3) - 18"
+        hints:
+          - 三角形 ABC は、三角形 ADE の何倍の拡大図かな。AB と AD をくらべよう。
+          - AD:AB = 3:5 なので、面積の比は 3 × 3 と 5 × 5 で 9:25 だよ。
+          - 三角形 ABC の面積から三角形 ADE をのぞこう。
+        paths:
+          - [AD:AB = 3:5, 面積の比は 9:25, ABC は 18 ÷ 9 × 25 = 50, 50 − 18 = 32, 32 cm²]
+    extra:
+      - part: 今日
+        text: 三角形 DEF は、三角形 ABC の 1/4 の縮図です。辺 BC は 10 cm です。辺 EF は何 cm ですか。
+        answer: 2.5
+        check: "10 / 4"
+        hints:
+          - 1/4 の縮図では、どの辺も 1/4 になるよ。
+          - 10 ÷ 4 を計算しよう。
+          - わり切れなくても、小数で表せるよ。
+        paths:
+          - [10 ÷ 4 = 2.5, 2.5 cm]
+      - part: 今日
+        text: 実際の長さが 800 cm のろうかを、縮図にかくと 4 cm になりました。この縮図の縮尺はいくつですか。分数で答えましょう。
+        answer: 1/200
+        check: "Fraction(4, 800)"
+        hints:
+          - 縮尺は、縮図の長さ ÷ 実際の長さ だね。
+          - 4/800 を約分しよう。
+          - 分子が 1 になるまで約分しよう。
+        paths:
+          - [4/800, 4 でわって 1/200]
+      - part: 今日
+        text: 面積が 8 cm² の正方形の、2 倍の拡大図の面積は何 cm² ですか。
+        answer: 32
+        check: "8 * 2 * 2"
+        hints:
+          - 2 倍の拡大図では、面積は何倍になるかな。
+          - 2 × 2 = 4 倍だよ。
+          - 8 cm² の 4 倍を求めよう。
+        paths:
+          - [面積は 4 倍, 8 × 4 = 32, 32 cm²]

@@ -1,0 +1,677 @@
+# G-014 立体の切断
+#
+# 書き方は N-001 の頭の注のとおり。
+# 立方体を 1 つの平面で切ったときの切り口の形を、3 つの点から決める。切り口の線のきまりは 2 つ：
+#   ① 同じ面の上にある 2 つの点は、まっすぐ結ぶ。② 向かい合う平行な面にできる切り口の線は、平行になる。
+# 立方体の頂点の名前：上の面が ABCD（A が手前の左、B が手前の右、C が奥の右、D が奥の左）、下の面が EFGH（A の真下が E、B の真下が F…）。
+#   図にはいつも名前を書いた。点線は見えない辺。辺の「まん中の点」を P、Q、R とした。
+# ことば：切り口、正三角形（3 つの辺の長さがみな等しい三角形）、二等辺三角形（2 つの辺の長さが等しい三角形）、
+#   ひし形（4 つの辺の長さがみな等しい四角形）、台形（G-008）、正六角形（6 つの辺の長さがみな等しく、6 つの角がみな等しい六角形）。
+#   ことばは問題文で約束して使い、二等辺三角形やひし形の性質（G-017）は使わない。長さが等しいことは「同じ大きさの正方形の対角線」などで見る。
+# 前提は G-011（体積と表面積）だけ。計算は G-011 と同じく九九と何十 × 1 けた、2 けたの数を数回たすまで。
+#   角すい（立方体の角を切りとった立体）の体積は G-011 で扱っていないので求めない。のこった立体は面・辺・頂点の数を数える。
+#   切り口の面積は、正方形・長方形の辺がわかるものだけ（ななめの辺の長さは三平方の定理 G-019 が要るので求めない）。
+# 円柱の切り口（底面に平行なら円、軸をふくむ平面なら長方形）は、面積の問題として 3 日目と 5 日目に入れた。
+# 図は svg（D-040）。形を答える問題の図には、通る点だけをかき、切り口はかかない（図を見て答えがわからないように）。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 切り口の形（頂点や辺のまん中を通る、三角形と四角形）　2 日目 切り口の線のきまり（台形、五角形、六角形）
+#   3 日目 切ったあとの立体（体積、面・辺・頂点の数）、円柱の切り口　4 日目 わけ（正三角形になる、平行になる、七角形にならない）
+#   5 日目 G-011（体積・表面積）と混ぜる、色をぬった立方体を切り分ける　6 日目 確認
+# check：切り口は、1 辺 4 の立方体（頂点の座標は 0 か 4）と 3 つの点の座標から、切る平面と 12 本の辺が交わる点を求め、
+#   点の数と辺・対角線の長さから形の名前を出す式（同じ式を各問題に書いた）。体積と数は式。
+
+id: G-014
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 立方体を、3 つの頂点 B、D、E を通る平面で切ります。切り口の形を見よう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.2,16 61.6,124 142.8,42.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="16" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="142.8" y1="42.9" x2="97.2" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: 切り口は、3 つの点を結んだ三角形 BDE です。BD は上の面の対角線、DE は左の面の対角線、EB は前の面の対角線です。立方体の面はみな同じ大きさの正方形なので、3 つの対角線の長さは同じです。3 つの辺の長さがみな等しい三角形を、正三角形といいます。切り口は正三角形です。
+      - part: 思い出す
+        text: たて 2 cm、横 3 cm、高さ 5 cm の直方体の体積は何 cm³ ですか。
+        answer: 30
+        check: "2 * 3 * 5"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [2 × 3 = 6, 6 × 5 = 30, 30 cm³]
+      - part: 思い出す
+        text: 立方体には、辺が何本ありますか。
+        answer: 12
+        check: "len([1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(a[i] != b[i] for i in range(3)) == 1])"
+        hints:
+          - 上の面のまわりの辺は何本かな。
+          - 下の面のまわりの辺も同じ数だね。
+          - 上と下をつなぐ、たての辺もあるよ。
+        paths:
+          - [上 4 本, 下 4 本, たて 4 本, 4 + 4 + 4 = 12, 12 本]
+      - part: 今日
+        text: 立方体を、3 つの頂点 A、C、G を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 長方形, 正方形, 台形]
+        answer: 長方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 4, 0)))"
+        hints:
+          - A と C は上の面、C と G は右がわの面の上にあるね。
+          - A の真下の頂点 E も、この平面の上にあるよ。
+          - 切り口の辺は、上の面の対角線 AC、辺 CG、下の面の対角線 GE、辺 EA だね。
+        paths:
+          - [切り口は ACGE, AC と GE は面の対角線で同じ長さ, CG と EA は辺で同じ長さ, 対角線は辺より長い, 長方形]
+        note: 正方形と答えやすい。AC は正方形の対角線なので、辺の CG より長い。
+      - part: 今日
+        text: 立方体を、辺 AE、BF、CG のまん中の点 P、Q、R を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="83.4" r="2.8" fill="currentColor"/><text x="52.6" y="87.6" font-size="12" text-anchor="middle">P</text><circle cx="142.8" cy="83.4" r="2.8" fill="currentColor"/><text x="151.8" y="87.6" font-size="12" text-anchor="middle">Q</text><circle cx="178.4" cy="56.6" r="2.8" fill="currentColor"/><text x="187.4" y="60.8" font-size="12" text-anchor="middle">R</text></svg>'
+        choices: [正方形, 長方形, 正三角形, 台形]
+        answer: 正方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 2), (4, 0, 2), (4, 4, 2)))"
+        hints:
+          - P、Q、R は、どれも同じ高さにあるね。
+          - 辺 DH のまん中の点も、同じ高さにあるよ。
+          - 切り口は、上の面と同じ形になるね。
+        paths:
+          - [4 つの辺のまん中を通る, 上の面と平行, 上の面と同じ正方形, 正方形]
+      - part: 今日
+        text: 立方体を、3 つの頂点 A、F、H を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text><circle cx="97.2" cy="97.1" r="2.8" fill="currentColor"/><text x="97.2" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 二等辺三角形, 長方形, 正方形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 0, 0), (0, 4, 0)))"
+        hints:
+          - AF、FH、HA は、それぞれどの面の上にあるかな。
+          - 3 つとも、面の対角線だね。
+          - 立方体の面はみな同じ大きさの正方形だよ。
+        paths:
+          - [AF は前の面、FH は下の面、HA は左の面の対角線, 3 つとも同じ長さ, 正三角形]
+      - part: 挑戦
+        text: 立方体を、辺 AE のまん中の点 P と、頂点 B、D を通る平面で切ります。2 つの辺の長さが等しい三角形を二等辺三角形といいます。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="83.4" r="2.8" fill="currentColor"/><text x="52.6" y="87.6" font-size="12" text-anchor="middle">P</text><circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/><text x="142.8" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="97.2" cy="16" r="2.8" fill="currentColor"/><text x="97.2" y="20.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 二等辺三角形, 長方形, 台形]
+        answer: 二等辺三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 2), (4, 0, 4), (0, 4, 4)))"
+        hints:
+          - 切り口は三角形 PBD だね。BD は上の面の対角線だよ。
+          - PB は前の面の上、PD は左の面の上にあるね。2 つの面での形をくらべよう。
+          - PB と PD は同じ長さだけど、BD とくらべるとどうかな。
+        paths:
+          - [切り口は三角形 PBD, PB と PD は同じ形の長方形の対角線で同じ長さ, BD は正方形の対角線で、PB より長い, 二等辺三角形]
+        note: 見本の正三角形と同じと思いやすい。P は頂点ではなく辺のまん中なので、PB は正方形の対角線より短い。
+    extra:
+      - part: 今日
+        text: 立方体を、3 つの頂点 B、C、H を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/><text x="142.8" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="97.2" cy="97.1" r="2.8" fill="currentColor"/><text x="97.2" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正方形, 長方形, 正三角形, 台形]
+        answer: 長方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((4, 0, 4), (4, 4, 4), (0, 4, 0)))"
+        hints:
+          - B と C は上の面の辺の両はしだね。
+          - H の前にある頂点 E も、この平面の上にあるよ。
+          - 切り口の辺は、BC、CH、HE、EB だね。
+        paths:
+          - [切り口は BCHE, BC と HE は辺, CH と EB は面の対角線, 長方形]
+      - part: 今日
+        text: 立方体を、頂点 B に集まる 3 本の辺 BA、BC、BF のまん中の点 P、Q、R を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="142.8" cy="83.4" r="2.8" fill="currentColor"/><text x="151.8" y="87.6" font-size="12" text-anchor="middle">R</text></svg>'
+        choices: [正三角形, 二等辺三角形, 正方形, 台形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (4, 0, 2)))"
+        hints:
+          - PQ は上の面、QR は右の面、RP は前の面の上にあるね。
+          - 3 つとも、同じ大きさの小さい正方形の対角線だよ。
+          - 3 つの辺の長さをくらべよう。
+        paths:
+          - [3 辺とも 1 辺が半分の正方形の対角線, 同じ長さ, 正三角形]
+      - part: 今日
+        text: 1 辺 6 cm の立方体を、辺 AE、BF、CG、DH のまん中の点を通る平面で切りました。切り口の面積は何 cm² ですか。
+        answer: 36
+        check: "6 * 6"
+        hints:
+          - 切り口は、上の面と同じ形だね。
+          - 1 辺 6 cm の正方形だよ。
+          - 正方形の面積は 1 辺 × 1 辺 だね。
+        paths:
+          - [切り口は 1 辺 6 cm の正方形, 6 × 6 = 36, 36 cm²]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 立方体を、辺 AB のまん中の点 P、辺 BC のまん中の点 Q、頂点 G を通る平面で切ります。切り口の線のかき方を知ろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="102.2,42.9 160.6,29.4 178.4,97.1 61.6,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.2" y1="42.9" x2="160.6" y2="29.4" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="160.6" y1="29.4" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="178.4" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text></svg>'
+        explain: 切り口の線は 2 つのきまりでかきます。① 同じ面の上にある 2 つの点は、まっすぐ結ぶ。P と Q は上の面、Q と G は右の面の上にあるので、PQ と QG をひきます。② 向かい合う平行な面にできる切り口の線は平行。上の面の PQ と平行に、下の面で G から線をひくと、頂点 E に着きます。最後に、前の面の上にある E と P を結びます。PQ と EG は平行で長さがちがうので、切り口は台形 PQGE です。
+      - part: 思い出す
+        text: 立方体を、3 つの頂点 B、D、G を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/><text x="142.8" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="97.2" cy="16" r="2.8" fill="currentColor"/><text x="97.2" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 二等辺三角形, 長方形, 正方形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((4, 0, 4), (0, 4, 4), (4, 4, 0)))"
+        hints:
+          - BD、DG、GB は、それぞれどの面の上にあるかな。
+          - 3 つとも、面の対角線だね。
+          - 面はみな同じ大きさの正方形だよ。
+        paths:
+          - [3 辺とも面の対角線, 同じ長さ, 正三角形]
+      - part: 思い出す
+        text: 1 辺が 3 cm の立方体の表面積は何 cm² ですか。
+        answer: 54
+        check: "3 * 3 * 6"
+        hints:
+          - 1 つの面の面積は 3 × 3 だね。
+          - 立方体の面はいくつかな。
+          - 9 × 6 を計算しよう。
+        paths:
+          - [9 × 6 = 54, 54 cm²]
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 AD のまん中の点 Q、頂点 G を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [台形, 五角形, 六角形, 長方形]
+        answer: 五角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (0, 2, 4), (4, 4, 0)))"
+        hints:
+          - P と Q は上の面の上にあるので、PQ をひこう。
+          - 下の面には、PQ と平行な線を G からひくよ。その線は、下の面の中にほとんど入らないね。
+          - だから切り口は、前の面と左の面で、辺 BF と辺 DH を切るよ。切り口の頂点を数えよう。
+        paths:
+          - [上の面に PQ, G から PQ と平行な線は 下の面の FH の向き（G を通る）, その線は 下の面の外へ出る, 前の面と左の面で BF・DH を切る, 頂点は P、Q、DH の上、G、BF の上 の 5 つ, 五角形]
+        note: P、Q、G の 3 点を結んだ三角形と答えやすい。G は P、Q と同じ面にないので、PG、QG を直接は結べない。
+      - part: 今日
+        text: 立方体を、辺 AB、BC、CG のまん中の点 P、Q、R を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="178.4" cy="56.6" r="2.8" fill="currentColor"/><text x="187.4" y="60.8" font-size="12" text-anchor="middle">R</text></svg>'
+        choices: [五角形, 六角形, 正六角形, 台形]
+        answer: 正六角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (4, 4, 2)))"
+        hints:
+          - PQ は上の面、QR は右の面の上にあるね。
+          - 向かい合う下の面、左の面、前の面にも、PQ、QR と平行な線ができるよ。
+          - 切り口は、6 つの辺のまん中を通るね。辺の長さもくらべよう。
+        paths:
+          - [PQ と QR をひく, 平行な面に平行な線をひく, GH、HE、EA のまん中も通る, 6 つの辺がみな同じ長さ, 正六角形]
+        note: 6 つの辺の長さが等しく、6 つの角も等しい六角形を正六角形という。
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 AD のまん中の点 Q、頂点 F を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [三角形, 台形, 長方形, 五角形]
+        answer: 台形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (0, 2, 4), (4, 0, 0)))"
+        hints:
+          - P と F は、前の面の上にあるね。
+          - 下の面には、PQ と平行な線を F からひこう。
+          - その線は、下の面の対角線 FH になるよ。H と Q は同じ面の上かな。
+        paths:
+          - [PQ と PF をひく, F から PQ に平行な線は FH, H と Q を結ぶ, 切り口は PFHQ, PQ と FH は平行で長さがちがう, 台形]
+      - part: 挑戦
+        text: 立方体を 1 つの平面で切ります。切り口に、なることがない形はどれですか。
+        choices: [三角形, 四角形, 五角形, 六角形, 七角形]
+        answer: 七角形
+        check: "(lambda K: [s for k, s in ((3, '三角形'), (4, '四角形'), (5, '五角形'), (6, '六角形'), (7, '七角形')) if k not in K][0])(set(len(S) for S in ((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))(p, q, r) for p, q, r in itertools.combinations([v for v in itertools.product((0, 2, 4), repeat=3) if sum(x == 2 for x in v) <= 1], 3)) if len(S) < 8))"
+        hints:
+          - 今日の問題で、三角形、四角形、五角形、六角形の切り口が出てきたね。
+          - 切り口の辺は、立方体の面の上にできるよ。1 つの面に、切り口の辺は何本できるかな。
+          - 立方体の面はいくつあるかな。
+        paths:
+          - [1 つの面に切り口の辺は 1 本, 面は 6 つ, 辺は多くても 6 本, 七角形にはならない]
+        note: わけは 4 日目にくわしく書く。ここでは、面の数と辺の数の結びつきに気づけばよい。
+    extra:
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 BC のまん中の点 Q、頂点 H を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="97.2" cy="97.1" r="2.8" fill="currentColor"/><text x="97.2" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [台形, 五角形, 六角形, 三角形]
+        answer: 五角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (0, 4, 0)))"
+        hints:
+          - P と Q は上の面の上にあるので、PQ をひこう。
+          - 下の面に、PQ と平行な線を H からひこう。
+          - その線が下の面からはみ出すとき、切り口は前の面や右の面でも辺を切るよ。
+        paths:
+          - [PQ をひく, H から PQ に平行な線, 辺 AE と CG を切る, 頂点は 5 つ, 五角形]
+      - part: 今日
+        text: 立方体を、辺 AE のまん中の点 P、辺 CG のまん中の点 Q、頂点 B を通る平面で切ります。4 つの辺の長さがみな等しい四角形を、ひし形といいます。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="83.4" r="2.8" fill="currentColor"/><text x="52.6" y="87.6" font-size="12" text-anchor="middle">P</text><circle cx="178.4" cy="56.6" r="2.8" fill="currentColor"/><text x="187.4" y="60.8" font-size="12" text-anchor="middle">Q</text><circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/><text x="142.8" y="47.1" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [ひし形, 正方形, 長方形, 五角形]
+        answer: ひし形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 2), (4, 4, 2), (4, 0, 4)))"
+        hints:
+          - P と B は前の面、B と Q は右の面の上にあるね。
+          - 向かい合う面には平行な線ができるよ。切り口は頂点 H も通るよ。
+          - 4 つの辺 BP、PH、HQ、QB の長さをくらべよう。対角線の長さもくらべよう。
+        paths:
+          - [切り口は BPHQ, 4 つの辺はどれも 同じ形の長方形の対角線で同じ長さ, 対角線 BH と PQ は長さがちがう, ひし形]
+        note: 4 つの辺が同じ長さなので正方形と答えやすい。正方形なら 2 本の対角線の長さが同じになる。
+      - part: 今日
+        text: 立方体を、辺 AB、BF、GH のまん中の点 P、Q、R を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="142.8" cy="83.4" r="2.8" fill="currentColor"/><text x="151.8" y="87.6" font-size="12" text-anchor="middle">Q</text><circle cx="137.8" cy="97.1" r="2.8" fill="currentColor"/><text x="137.8" y="112.3" font-size="12" text-anchor="middle">R</text></svg>'
+        choices: [五角形, 正六角形, 台形, 長方形]
+        answer: 正六角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 0, 2), (2, 4, 0)))"
+        hints:
+          - P と Q は前の面の上にあるので、PQ をひこう。
+          - 向かい合う後ろの面に、PQ と平行な線を R を通るようにひこう。
+          - 切り口が通る辺のまん中の点を、全部数えよう。
+        paths:
+          - [PQ をひく, 後ろの面に PQ と平行な線, 6 つの辺のまん中を通る, 正六角形]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 1 辺 4 cm の立方体を、4 つの頂点 B、D、H、F を通る平面で切って、2 つの立体に分けました。1 つの立体の体積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="142.8,42.9 97.2,16 97.2,97.1 142.8,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="142.8" y1="42.9" x2="97.2" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="142.8" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="142.8" y1="124" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: 切り口は長方形 BDHF です。分けた 2 つの立体は、どちらも、底面が直角三角形（上の面の半分）で高さが 4 cm の三角柱です。底面積は 4 × 4 ÷ 2 = 8 cm² なので、体積は 8 × 4 = 32 cm³。立方体の体積 4 × 4 × 4 = 64 cm³ の半分になっています。
+      - part: 思い出す
+        text: 立方体を、辺 AB のまん中の点 P、辺 AD のまん中の点 Q、頂点 F を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [三角形, 台形, 長方形, 五角形]
+        answer: 台形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (0, 2, 4), (4, 0, 0)))"
+        hints:
+          - P と F は前の面の上にあるね。
+          - 下の面に、PQ と平行な線を F からひこう。
+          - その線の先の頂点と Q を結ぼう。
+        paths:
+          - [PQ、PF, F から PQ に平行な FH, HQ, 台形 PFHQ]
+      - part: 思い出す
+        text: 底面が、直角をはさむ 2 つの辺が 3 cm と 4 cm の直角三角形で、高さが 5 cm の三角柱の体積は何 cm³ ですか。
+        answer: 30
+        check: "3 * 4 // 2 * 5"
+        hints:
+          - 角柱の体積は、底面積 × 高さ だね。
+          - 底面積は 3 × 4 ÷ 2 だよ。
+          - 6 × 5 を計算しよう。
+        paths:
+          - [底面積は 6, 6 × 5 = 30, 30 cm³]
+      - part: 今日
+        text: 1 辺 6 cm の立方体を、下の面から 2 cm の高さで、下の面に平行な平面で切りました。下の立体の体積は何 cm³ ですか。
+        answer: 72
+        check: "6 * 6 * 2"
+        hints:
+          - 下の立体は、どんな形かな。
+          - たて 6 cm、横 6 cm、高さ 2 cm の直方体だね。
+          - 6 × 6 を先に計算しよう。
+        paths:
+          - [たて 6、横 6、高さ 2 の直方体, 36 × 2 = 72, 72 cm³]
+      - part: 今日
+        text: 立方体の頂点 A に集まる 3 本の辺 AB、AD、AE のまん中の点を通る平面で切り、頂点 A のある小さい立体を切りとりました。のこった立体の頂点はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="61.6,83.4 102.2,42.9 79.4,29.4" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="83.4" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="102.2" y1="42.9" x2="79.4" y2="29.4" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="79.4" y1="29.4" x2="61.6" y2="83.4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="79.4" cy="29.4" r="2.8" fill="currentColor"/><text x="70.4" y="28.6" font-size="12" text-anchor="middle">Q</text><circle cx="61.6" cy="83.4" r="2.8" fill="currentColor"/><text x="52.6" y="87.6" font-size="12" text-anchor="middle">R</text></svg>'
+        answer: 10
+        check: "len(set(itertools.product((0, 4), repeat=3)) - set([(0, 0, 4)])) + len(set([(2, 0, 4), (0, 2, 4), (0, 0, 2)]))"
+        hints:
+          - 立方体の頂点は 8 つだね。
+          - 切りとったとき、なくなる頂点はどれかな。
+          - 切り口の三角形の 3 つの頂点 P、Q、R が、新しい頂点になるよ。
+        paths:
+          - [もとの頂点 8 つから A をのぞいて 7 つ, P、Q、R の 3 つがふえる, 7 + 3 = 10]
+        note: 切りとった分だけへると考えて 7 と答えやすい。切り口の三角形の頂点が新しくできる。
+      - part: 今日
+        text: 1 辺 4 cm の立方体を、辺 AB のまん中の点 P、辺 DC のまん中の点 Q、頂点 G、F を通る平面で切りました。頂点 B のある小さいほうの立体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="102.2,42.9 137.8,16 178.4,97.1 142.8,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.2" y1="42.9" x2="137.8" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="137.8" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="178.4" y1="97.1" x2="142.8" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="142.8" y1="124" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="137.8" cy="16" r="2.8" fill="currentColor"/><text x="137.8" y="11.2" font-size="12" text-anchor="middle">Q</text></svg>'
+        answer: 16
+        check: "2 * 4 // 2 * 4"
+        hints:
+          - 小さいほうの立体は、前の面の三角形 PBF を底面とする三角柱だね。
+          - 三角形 PBF は、PB が 2 cm、BF が 4 cm の直角三角形だよ。
+          - 底面積 × 高さ（おくへの長さ 4 cm）だね。
+        paths:
+          - [底面は三角形 PBF, 底面積は 2 × 4 ÷ 2 = 4, 4 × 4 = 16, 16 cm³]
+        note: 見本と同じく半分と考えて 32 としやすい。切り口は対角線を通っていないので、半分にはならない。
+      - part: 挑戦
+        text: 1 辺 1 cm の立方体を 27 こ積んで、1 辺 3 cm の立方体を作りました。この大きな立方体を、3 つの頂点 B、D、E を通る平面で切ります。切られる小さい立方体は何こですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.2,16 61.6,124 142.8,42.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="16" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="142.8" y1="42.9" x2="97.2" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text></svg>'
+        answer: 9
+        check: "sum(1 for i in range(3) for j in range(3) for k in range(3) if min(k + c - i - a - j - b for a in (0, 1) for b in (0, 1) for c in (0, 1)) < 0 < max(k + c - i - a - j - b for a in (0, 1) for b in (0, 1) for c in (0, 1)))"
+        hints:
+          - 1 だんずつ考えよう。だんごとに、上から見た 3 まい × 3 列の正方形の図をかこう。
+          - 切る平面は、上のだんほど、前の左の頂点から遠くを通るよ。1 だんの上と下で、切り口の線がどこを通るか見よう。
+          - 各だんで、上の線と下の線の間にかかる小さい立方体を数えよう。
+        paths:
+          - [下のだん 1 こ, まん中のだん 3 こ, 上のだん 5 こ, 1 + 3 + 5 = 9, 9 こ]
+        note: とても難しい問題。だんごとに、上から見た図（3 × 3 のマス）をかいて、切り口の線が通るマスに色をぬるとよい。
+    extra:
+      - part: 今日
+        text: 1 辺 6 cm の立方体を、下の面から 3 cm の高さで、下の面に平行な平面で切りました。下の立体の体積は何 cm³ ですか。
+        answer: 108
+        check: "6 * 6 * 3"
+        hints:
+          - 下の立体は、直方体だね。
+          - たて 6 cm、横 6 cm、高さ 3 cm だよ。
+          - 36 × 3 は、36 を 3 回たそう。
+        paths:
+          - [6 × 6 = 36, 36 + 36 + 36 = 108, 108 cm³]
+      - part: 今日
+        text: 立方体の頂点 A に集まる 3 本の辺のまん中の点を通る平面で、頂点 A のある小さい立体を切りとりました。のこった立体の面はいくつですか。
+        answer: 7
+        check: "len([(i, v) for i in range(3) for v in (0, 1)]) + 1"
+        hints:
+          - 立方体の面は 6 つだね。
+          - 切りとっても、もとの 6 つの面は（かけるけれど）のこっているよ。
+          - 切り口の面が 1 つふえるね。
+        paths:
+          - [もとの面 6 つ, 切り口の面 1 つ, 6 + 1 = 7]
+      - part: 今日
+        text: 半径 3 cm、高さ 5 cm の円柱を、2 つの底面の円の中心を通る平面で、たてに切りました。切り口の長方形の面積は何 cm² ですか。
+        answer: 30
+        check: "3 * 2 * 5"
+        hints:
+          - 切り口は長方形だね。たては円柱の高さだよ。
+          - 横は、底面の円の直径だね。
+          - 直径は 半径 × 2 だよ。
+        paths:
+          - [たて 5 cm、横は直径 6 cm, 5 × 6 = 30, 30 cm²]
+        note: 横に半径の 3 cm を使って 15 としやすい。中心を通るので、切り口の横は直径。
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 立方体を 3 つの頂点 B、D、E を通る平面で切ると、切り口が正三角形になるのはなぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="97.2,16 61.6,124 142.8,42.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="16" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="142.8" y1="42.9" x2="97.2" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text></svg>'
+        explain: 例：「切り口の 3 つの辺 BD、DE、EB は、それぞれ上の面、左の面、前の面の対角線になっている。立方体の面は、どれも同じ大きさの正方形なので、その対角線の長さも同じ。だから 3 つの辺の長さがみな等しく、切り口は正三角形になる。」と書ければよい。① 3 つの辺がそれぞれどの面の上にあるか、② 面がみな同じ大きさの正方形なので対角線も同じ長さ、の 2 点を見る。「見た目がそう見える」だけで終わったら、BD がどの面の上にあるか指でなぞらせる。
+        hints:
+          - BD、DE、EB は、それぞれどの面の上にあるかな。
+          - その面は、どんな形で、どんな大きさかな。
+          - 「〜は〜の対角線で、面はみな〜だから」と書こう。
+        paths:
+          - [BD は上の面、DE は左の面、EB は前の面の対角線, 面はみな同じ大きさの正方形, 対角線も同じ長さ, 正三角形]
+      - part: わけ
+        text: 2 日目の見本で、上の面の切り口の線 PQ と、下の面の切り口の線 EG が平行になったのはなぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="102.2,42.9 160.6,29.4 178.4,97.1 61.6,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.2" y1="42.9" x2="160.6" y2="29.4" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="160.6" y1="29.4" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="178.4" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="124" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text></svg>'
+        explain: 例：「立方体の上の面と下の面は平行で、どこまで広げても交わらない。PQ は上の面の上に、EG は下の面の上にあるので、PQ と EG も、どこまでのばしても交わらない。しかも PQ と EG は、どちらも切る平面の上にある。1 つの平面の上にあって交わらない 2 本の直線は平行なので、PQ と EG は平行になる。」と書ければよい。① 上の面と下の面が平行（交わらない）、② 2 本の線はどちらも 1 つの切る平面の上にある、③ 同じ平面の上で交わらない 2 本の直線は平行、の 3 点を見る。② を書きわすれやすい。立方体のねじれた位置にある 2 本の辺（たとえば AB と CG）は交わらないのに平行ではないので、「同じ平面の上」が大切なことを話す。
+        hints:
+          - 上の面と下の面は、どんな関係かな。
+          - PQ と EG は、どの平面の上にもあるかな。
+          - 「〜と〜は交わらない。しかも同じ平面の上にあるから」と書こう。
+        paths:
+          - [上の面と下の面は平行で交わらない, PQ と EG も交わらない, 2 本とも切る平面の上, だから平行]
+      - part: わけ
+        text: 立方体を 1 つの平面で切ったとき、切り口が七角形にならないのはなぜですか。文で書きましょう。
+        explain: 例：「切り口の辺は、立方体の面の上にできる。1 つの面は平らなので、切る平面と交わるところは 1 本のまっすぐな線になり、1 つの面には切り口の辺が 1 本しかできない。立方体の面は 6 つなので、切り口の辺は多くても 6 本。だから七角形（辺が 7 本）にはならない。」と書ければよい。① 切り口の辺は面の上にできる、② 1 つの面に辺は 1 本だけ、③ 面が 6 つなので辺は 6 本まで、の 3 点を見る。② のわけ（平らな面と平面が交わると 1 本の直線）まで書ければなお良い。
+        hints:
+          - 切り口の辺は、立方体のどこにできるかな。
+          - 1 つの面に、切り口の辺は何本できるかな。
+          - 「面は〜つなので、辺は多くても〜本」と書こう。
+        paths:
+          - [切り口の辺は面の上, 1 つの面に 1 本, 面は 6 つ, 辺は 6 本まで, 七角形にならない]
+      - part: 今日
+        text: 立方体を、頂点 A、C と、辺 BF のまん中の点 P を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="142.8" cy="83.4" r="2.8" fill="currentColor"/><text x="151.8" y="87.6" font-size="12" text-anchor="middle">P</text></svg>'
+        choices: [正三角形, 二等辺三角形, ひし形, 台形]
+        answer: 二等辺三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 0, 2)))"
+        hints:
+          - A と C、A と P、C と P は、それぞれ同じ面の上にあるかな。
+          - 切り口は三角形 ACP だね。AP は前の面、CP は右の面の上だよ。
+          - AP と CP は、同じ形の長方形の対角線だね。AC とくらべよう。
+        paths:
+          - [切り口は三角形 ACP, AP と CP は同じ長さ, AC は正方形の対角線でそれより長い, 二等辺三角形]
+      - part: 今日
+        text: たて 2 cm、横 6 cm、高さ 5 cm の直方体を、上の面の対角線と下の面の対角線を通る平面で、2 つの同じ三角柱に切り分けました。1 つの三角柱の体積は何 cm³ ですか。
+        answer: 30
+        check: "2 * 6 // 2 * 5"
+        hints:
+          - 三角柱の底面は、上の面を対角線で半分にした直角三角形だね。
+          - 底面積は 2 × 6 ÷ 2 だよ。
+          - 底面積 × 高さ だね。
+        paths:
+          - [底面積は 6, 6 × 5 = 30, 30 cm³]
+          - [直方体は 60 cm³, 半分で 30]
+    extra:
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 BC のまん中の点 Q、頂点 F を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 二等辺三角形, 台形, 五角形]
+        answer: 二等辺三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (4, 0, 0)))"
+        hints:
+          - P と Q は上の面、P と F は前の面、Q と F は右の面の上にあるね。
+          - 切り口は三角形 PQF だよ。
+          - PF と QF は同じ形の長方形の対角線だね。PQ とくらべよう。
+        paths:
+          - [切り口は三角形 PQF, PF と QF は同じ長さ, PQ は短い, 二等辺三角形]
+      - part: 今日
+        text: 1 辺 4 cm の立方体を、4 つの頂点 A、C、G、E を通る平面で 2 つに切りました。1 つの立体の体積は何 cm³ ですか。
+        answer: 32
+        check: "4 * 4 // 2 * 4"
+        hints:
+          - 2 つの立体は、どちらも三角柱だね。
+          - 底面は、上の面を対角線 AC で半分にした直角三角形だよ。
+          - 底面積 × 高さ だね。
+        paths:
+          - [底面積は 4 × 4 ÷ 2 = 8, 8 × 4 = 32, 32 cm³]
+      - part: 今日
+        text: 立方体を、辺 AE、BF、CG、DH のまん中の点を通る平面で切りました。切り口の形はどれですか。
+        choices: [正方形, 長方形, 正六角形, ひし形]
+        answer: 正方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 2), (4, 0, 2), (4, 4, 2)))"
+        hints:
+          - 4 つの点は、どれも同じ高さにあるね。
+          - 切り口は、上の面と平行だよ。
+          - 上の面と同じ形になるね。
+        paths:
+          - [上の面と平行に切る, 上の面と同じ正方形]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: たて 2 cm、横 4 cm、高さ 3 cm の直方体の表面積は何 cm² ですか。
+        answer: 52
+        check: "(2 * 4 + 4 * 3 + 2 * 3) * 2"
+        hints:
+          - 直方体の面は 3 種類で、同じ面が 2 つずつあるよ。
+          - 3 種類の面の面積は 2 × 4、4 × 3、2 × 3 だね。
+          - 3 つをたしてから、2 つ分にしよう。
+        paths:
+          - [8 + 12 + 6 = 26, 26 + 26 = 52, 52 cm²]
+      - part: 思い出す
+        text: 半径 2 cm、高さ 5 cm の円柱の体積は、（□ × 円周率）cm³ です。□ に入る数はいくつですか。
+        answer: 20
+        check: "2 * 2 * 5"
+        hints:
+          - 円柱の体積は 底面積 × 高さ だね。
+          - 底面積は（2 × 2 × 円周率）cm² だよ。
+          - 4 × 5 を計算しよう。
+        paths:
+          - [4 × 5 = 20, □ は 20]
+      - part: 今日
+        text: たて 4 cm、横 6 cm、高さ 5 cm の直方体を、横の辺のまん中を通り、左右の面に平行な平面で切りました。切り口の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="58.7,120 153.5,120 153.5,40.9 58.7,40.9" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="153.5,120 153.5,40.9 181.3,20 181.3,99.1" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="153.5,40.9 58.7,40.9 86.5,20 181.3,20" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="58.7" y1="120" x2="153.5" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.5" y1="99.1" x2="181.3" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="58.7" y1="120" x2="86.5" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="153.5" y1="120" x2="153.5" y2="40.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181.3" y1="99.1" x2="181.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.5" y1="120" x2="181.3" y2="99.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.5" y1="40.9" x2="58.7" y2="40.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181.3" y1="20" x2="86.5" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.5" y1="40.9" x2="181.3" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.7" y1="40.9" x2="58.7" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.5" y1="20" x2="86.5" y2="99.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="58.7" y1="40.9" x2="86.5" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><text x="106.1" y="137.6" font-size="13" text-anchor="middle">6 cm</text><text x="174.4" y="121.1" font-size="13" text-anchor="start">4 cm</text><text x="52.7" y="85" font-size="13" text-anchor="end">5 cm</text><line x1="106.1" y1="120" x2="106.1" y2="40.9" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="106.1" y1="40.9" x2="133.9" y2="20" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="133.9" y1="20" x2="133.9" y2="99.1" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="133.9" y1="99.1" x2="106.1" y2="120" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 20
+        check: "4 * 5"
+        hints:
+          - 切り口は、左右の面と平行だね。
+          - 切り口の形は、右の面と同じ長方形だよ。
+          - 右の面のたてと横は、直方体のたてと高さだね。
+        paths:
+          - [切り口は たて 4 cm、高さ 5 cm の長方形, 4 × 5 = 20, 20 cm²]
+        note: 横の 6 cm をかけて 6 × 5 や 6 × 4 としやすい。切り口は右の面と同じ形。
+      - part: 今日
+        text: 1 辺 2 cm の立方体を、上の面に平行な平面で、高さのまん中で 2 つに切りました。2 つの立体の表面積の合計は何 cm² ですか。
+        answer: 32
+        check: "2 * 2 * 6 + 2 * 2 * 2"
+        hints:
+          - もとの立方体の表面積は 2 × 2 × 6 だね。
+          - 切ると、新しい面がいくつできるかな。
+          - 切り口の正方形が、上の立体と下の立体に 1 つずつできるよ。
+        paths:
+          - [もとは 24 cm², 切り口が 2 つで 4 + 4 = 8, 24 + 8 = 32, 32 cm²]
+          - [1 つは たて 2、横 2、高さ 1 の直方体で (4 + 2 + 2) × 2 = 16, 2 つで 32]
+        note: 切っても表面積は変わらないと思いやすい。切るたびに、切り口の面が 2 まいふえる。
+      - part: 今日
+        text: 1 辺 4 cm の立方体を、辺 AB のまん中の点 P、辺 DC のまん中の点 Q、頂点 G、F を通る平面で切りました。頂点 A のある大きいほうの立体の体積は何 cm³ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="102.2,42.9 137.8,16 178.4,97.1 142.8,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.2" y1="42.9" x2="137.8" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="137.8" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="178.4" y1="97.1" x2="142.8" y2="124" stroke="currentColor" stroke-width="2.5" fill="none" stroke-dasharray="5 4"/><line x1="142.8" y1="124" x2="102.2" y2="42.9" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="137.8" cy="16" r="2.8" fill="currentColor"/><text x="137.8" y="11.2" font-size="12" text-anchor="middle">Q</text></svg>'
+        answer: 48
+        check: "(2 * 4 // 2 + 4 * 4 // 2) * 4"
+        hints:
+          - 大きいほうの立体は、前の面の台形 APFE を底面とする四角柱だね。
+          - 台形は、対角線で 2 つの三角形に分けて面積を出そう。
+          - 立方体（64 cm³）から、小さいほうの三角柱（3 日目）をひいてもよいよ。
+        paths:
+          - [台形 APFE は 2 × 4 ÷ 2 + 4 × 4 ÷ 2 = 4 + 8 = 12, 12 × 4 = 48, 48 cm³]
+          - [64 − 16 = 48]
+      - part: 挑戦
+        text: 1 辺 3 cm の立方体の表面全体に色をぬってから、1 cm ごとに面に平行に切って、1 辺 1 cm の立方体 27 こに分けました。2 つの面だけに色がついている立方体は何こですか。
+        answer: 12
+        check: "sum(1 for i in range(3) for j in range(3) for k in range(3) if (i in (0, 2)) + (j in (0, 2)) + (k in (0, 2)) == 2)"
+        hints:
+          - 色のついた面の数は、小さい立方体がもとの立方体のどこにあったかで決まるよ。
+          - 頂点のところにあったものは 3 つの面、辺のまん中のところは 2 つの面に色がつくね。
+          - 辺のまん中にある小さい立方体は、1 本の辺に何こあるかな。辺は何本あるかな。
+        paths:
+          - [2 面に色は 辺のまん中の立方体, 1 本の辺に 1 こ, 辺は 12 本, 12 こ]
+        note: 頂点の 8 こ（3 面に色）と取りちがえやすい。1 だんずつの図をかいて確かめる。
+    extra:
+      - part: 今日
+        text: たて 3 cm、横 5 cm、高さ 2 cm の直方体の体積は何 cm³ ですか。
+        answer: 30
+        check: "3 * 5 * 2"
+        hints:
+          - 直方体の体積は、たて × 横 × 高さ だね。
+          - たて × 横 を先に計算しよう。
+          - その答え × 高さ だよ。
+        paths:
+          - [3 × 5 = 15, 15 × 2 = 30, 30 cm³]
+      - part: 今日
+        text: 半径 4 cm、高さ 3 cm の円柱を、底面に平行な平面で切りました。切り口の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 16
+        check: "4 * 4"
+        hints:
+          - 底面に平行に切ると、切り口はどんな形かな。
+          - 切り口は、底面と同じ円だね。
+          - 円の面積は 半径 × 半径 × 円周率 だよ。
+        paths:
+          - [切り口は半径 4 cm の円, 4 × 4 = 16, □ は 16]
+      - part: 今日
+        text: 1 辺 3 cm の立方体の表面全体に色をぬってから、1 cm ごとに面に平行に切って、27 こに分けました。3 つの面に色がついている立方体は何こですか。
+        answer: 8
+        check: "sum(1 for i in range(3) for j in range(3) for k in range(3) if (i in (0, 2)) + (j in (0, 2)) + (k in (0, 2)) == 3)"
+        hints:
+          - 3 つの面に色がつくのは、もとの立方体のどこにあったものかな。
+          - 頂点のところだね。
+          - 立方体の頂点はいくつかな。
+        paths:
+          - [3 面に色は 頂点の立方体, 頂点は 8 つ, 8 こ]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 立方体を、3 つの頂点 A、C、F を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="16" r="2.8" fill="currentColor"/><text x="178.4" y="20.2" font-size="12" text-anchor="middle"></text><circle cx="142.8" cy="124" r="2.8" fill="currentColor"/><text x="142.8" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正三角形, 二等辺三角形, 長方形, 正方形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 4, 4), (4, 0, 0)))"
+        hints:
+          - AC、CF、FA は、それぞれどの面の上にあるかな。
+          - 3 つとも、面の対角線だね。
+          - 面はみな同じ大きさの正方形だよ。
+        paths:
+          - [3 辺とも面の対角線, 同じ長さ, 正三角形]
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 BC のまん中の点 Q、頂点 H を通る平面で切ります。切り口は何角形ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="97.2" cy="97.1" r="2.8" fill="currentColor"/><text x="97.2" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [三角形, 四角形, 五角形, 六角形]
+        answer: 五角形
+        check: "('三角形', '四角形', '五角形', '六角形')[len((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (0, 4, 0))) - 3]"
+        hints:
+          - P と Q は上の面の上にあるので、PQ をひこう。
+          - 下の面に、PQ と平行な線を H からひこう。
+          - 切り口が切る辺を、全部数えよう。
+        paths:
+          - [PQ, H から PQ に平行な線, AE と CG も切る, 頂点は 5 つ, 五角形]
+      - part: 今日
+        text: 立方体を、辺 AB のまん中の点 P、辺 BC のまん中の点 Q、頂点 E を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="61.6" cy="124" r="2.8" fill="currentColor"/><text x="61.6" y="128.2" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [三角形, 台形, 長方形, 五角形]
+        answer: 台形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (0, 0, 0)))"
+        hints:
+          - P と E は前の面の上にあるね。
+          - 下の面に、PQ と平行な線を E からひこう。
+          - その線の先の頂点と Q を結ぼう。
+        paths:
+          - [PQ と PE, E から PQ に平行な EG, GQ, 台形 PQGE]
+      - part: 今日
+        text: 立方体を、辺 AB、BC、CG のまん中の点 P、Q、R を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="102.2" cy="42.9" r="2.8" fill="currentColor"/><text x="102.2" y="38.1" font-size="12" text-anchor="middle">P</text><circle cx="160.6" cy="29.4" r="2.8" fill="currentColor"/><text x="169.6" y="30.6" font-size="12" text-anchor="middle">Q</text><circle cx="178.4" cy="56.6" r="2.8" fill="currentColor"/><text x="187.4" y="60.8" font-size="12" text-anchor="middle">R</text></svg>'
+        choices: [五角形, 正六角形, 台形, ひし形]
+        answer: 正六角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((2, 0, 4), (4, 2, 4), (4, 4, 2)))"
+        hints:
+          - PQ は上の面、QR は右の面の上にあるね。
+          - 向かい合う面にも、平行な線ができるよ。
+          - 切り口が通る辺のまん中の点を数えよう。
+        paths:
+          - [6 つの辺のまん中を通る, 辺はみな同じ長さ, 正六角形]
+      - part: 今日
+        text: たて 2 cm、横 4 cm、高さ 6 cm の直方体を、上の面の対角線と下の面の対角線を通る平面で、2 つの同じ立体に切りました。1 つの立体の体積は何 cm³ ですか。
+        answer: 24
+        check: "2 * 4 // 2 * 6"
+        hints:
+          - 2 つの立体は、どちらも三角柱だね。
+          - 底面は、上の面を対角線で半分にした直角三角形だよ。
+          - 底面積 × 高さ だね。
+        paths:
+          - [底面積は 2 × 4 ÷ 2 = 4, 4 × 6 = 24, 24 cm³]
+          - [直方体は 48 cm³, その半分で 24]
+      - part: 今日
+        text: 立方体の頂点 A に集まる 3 本の辺のまん中の点を通る平面で、頂点 A のある小さい立体を切りとりました。のこった立体の辺は何本ですか。
+        answer: 15
+        check: "len([1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(a[i] != b[i] for i in range(3)) == 1]) + 3"
+        hints:
+          - 立方体の辺は 12 本だね。
+          - 切りとっても、A に集まっていた 3 本の辺は短くなるだけで、なくならないよ。
+          - 切り口の三角形の辺が、新しい辺になるね。
+        paths:
+          - [もとの辺 12 本, 切り口の三角形の辺 3 本, 12 + 3 = 15]
+        note: A に集まる 3 本の辺がなくなると考えて 12 − 3 + 3 = 12 としやすい。辺は短くなるだけ。
+      - part: 今日
+        text: 半径 2 cm、高さ 7 cm の円柱を、2 つの底面の円の中心を通る平面で、たてに切りました。切り口の長方形の面積は何 cm² ですか。
+        answer: 28
+        check: "2 * 2 * 7"
+        hints:
+          - 切り口は長方形だね。たては円柱の高さだよ。
+          - 横は、底面の円の直径だね。
+          - たて × 横 を計算しよう。
+        paths:
+          - [たて 7 cm、横は直径 4 cm, 7 × 4 = 28, 28 cm²]
+      - part: 挑戦
+        text: 1 辺 3 cm の立方体の表面全体に色をぬってから、1 cm ごとに面に平行に切って、27 こに分けました。どの面にも色がついていない立方体と、1 つの面だけに色がついている立方体は、合わせて何こですか。
+        answer: 7
+        check: "sum(1 for i in range(3) for j in range(3) for k in range(3) if (i in (0, 2)) + (j in (0, 2)) + (k in (0, 2)) <= 1)"
+        hints:
+          - 色がついていないのは、外から見えないところにある立方体だね。
+          - 1 つの面だけに色がつくのは、もとの立方体の面のまん中にある立方体だよ。
+          - 面のまん中の立方体は、1 つの面に何こあるかな。面はいくつかな。
+        paths:
+          - [色なしは まん中の 1 こ, 1 面だけは 面のまん中で 6 こ, 1 + 6 = 7, 7 こ]
+          - [27 − 8（3 面）− 12（2 面）= 7]
+    extra:
+      - part: 今日
+        text: 立方体を、3 つの頂点 B、D、E を通る平面で切ります。切り口の形はどれですか。
+        choices: [正三角形, 二等辺三角形, 長方形, 正方形]
+        answer: 正三角形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((4, 0, 4), (0, 4, 4), (0, 0, 0)))"
+        hints:
+          - BD、DE、EB は、それぞれどの面の上にあるかな。
+          - 3 つとも、面の対角線だね。
+          - 面はみな同じ大きさの正方形だよ。
+        paths:
+          - [3 辺とも面の対角線, 正三角形]
+      - part: 今日
+        text: 立方体を、3 つの頂点 A、B、G を通る平面で切ります。切り口の形はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="61.6" y1="42.9" x2="142.8" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="178.4" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="97.2" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="61.6" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.6" y1="124" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="124" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="97.1" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="97.2" y1="97.1" x2="61.6" y2="124" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="61.6" y1="42.9" x2="61.6" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.8" y1="42.9" x2="142.8" y2="124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.4" y1="16" x2="178.4" y2="97.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.2" y1="16" x2="97.2" y2="97.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="52.6" y="41.1" font-size="12" text-anchor="middle">A</text><text x="148.8" y="56.1" font-size="12" text-anchor="middle">B</text><text x="186.4" y="14.2" font-size="12" text-anchor="middle">C</text><text x="93.2" y="11.2" font-size="12" text-anchor="middle">D</text><text x="52.6" y="134.2" font-size="12" text-anchor="middle">E</text><text x="146.8" y="138.2" font-size="12" text-anchor="middle">F</text><text x="187.4" y="105.3" font-size="12" text-anchor="middle">G</text><text x="88.2" y="104.3" font-size="12" text-anchor="middle">H</text><circle cx="61.6" cy="42.9" r="2.8" fill="currentColor"/><text x="61.6" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="142.8" cy="42.9" r="2.8" fill="currentColor"/><text x="142.8" y="47.1" font-size="12" text-anchor="middle"></text><circle cx="178.4" cy="97.1" r="2.8" fill="currentColor"/><text x="178.4" y="101.3" font-size="12" text-anchor="middle"></text></svg>'
+        choices: [正方形, 長方形, 台形, 正三角形]
+        answer: 長方形
+        check: "(lambda S: (lambda L, d2: (('正三角形' if d2(L[0], L[1]) == d2(L[1], L[2]) == d2(L[0], L[2]) else '二等辺三角形' if len(set([d2(L[0], L[1]), d2(L[1], L[2]), d2(L[0], L[2])])) == 2 else '三角形') if len(L) == 3 else (lambda js: '台形' if not js else (lambda j: (lambda t, u: ('正方形' if d2(L[0], L[t]) == d2(L[0], L[u]) and d2(L[0], L[j]) == d2(L[t], L[u]) else 'ひし形' if d2(L[0], L[t]) == d2(L[0], L[u]) else '長方形' if d2(L[0], L[j]) == d2(L[t], L[u]) else '平行四辺形'))(*[k for k in range(1, 4) if k != j]))(js[0]))([j for j in range(1, 4) if all(L[0][i] + L[j][i] == sum(L[k][i] for k in range(1, 4) if k != j) for i in range(3))]) if len(L) == 4 else '五角形' if len(L) == 5 else ('正六角形' if len(set(d2(a, b) for a in L for b in L if a < b)) == 3 else '六角形')))(sorted(S), lambda a, b: sum((a[i] - b[i]) ** 2 for i in range(3))))((lambda P, Q, R, m=4: (lambda N: (lambda s: (lambda V: set([v for v in V if s(v) == 0] + [(a[0] + (b[0] - a[0]) * Fraction(s(a), s(a) - s(b)), a[1] + (b[1] - a[1]) * Fraction(s(a), s(a) - s(b)), a[2] + (b[2] - a[2]) * Fraction(s(a), s(a) - s(b))) for a in V for b in V if a < b and sum(a[i] != b[i] for i in range(3)) == 1 and s(a) * s(b) < 0]))(sorted(itertools.product((0, m), repeat=3))))(lambda v: N[0] * (v[0] - P[0]) + N[1] * (v[1] - P[1]) + N[2] * (v[2] - P[2])))(((Q[1] - P[1]) * (R[2] - P[2]) - (Q[2] - P[2]) * (R[1] - P[1]), (Q[2] - P[2]) * (R[0] - P[0]) - (Q[0] - P[0]) * (R[2] - P[2]), (Q[0] - P[0]) * (R[1] - P[1]) - (Q[1] - P[1]) * (R[0] - P[0]))))((0, 0, 4), (4, 0, 4), (4, 4, 0)))"
+        hints:
+          - A と B は上の面の辺の両はしだね。
+          - G のとなりの頂点 H も、この平面の上にあるよ。
+          - 切り口の辺は AB、BG、GH、HA だね。
+        paths:
+          - [切り口は ABGH, AB と GH は辺, BG と HA は面の対角線, 長方形]
+      - part: 今日
+        text: 1 辺 6 cm の立方体を、下の面から 4 cm の高さで、下の面に平行な平面で切りました。上の立体の体積は何 cm³ ですか。
+        answer: 72
+        check: "6 * 6 * (6 - 4)"
+        hints:
+          - 上の立体の高さは何 cm かな。
+          - たて 6 cm、横 6 cm、高さ 2 cm の直方体だね。
+          - 6 × 6 を先に計算しよう。
+        paths:
+          - [高さは 6 − 4 = 2, 36 × 2 = 72, 72 cm³]
