@@ -589,8 +589,8 @@ units:
   - {id: G-007, title: 立方体と展開図, stage: 2, level: 2, region: katachi, needs: [G-003], days: 6}
   - {id: L-003, title: 本当とうその推理, stage: 2, level: 2, region: suiri, needs: [L-002], days: 5}
   - {id: L-004, title: 取り合いゲーム, stage: 2, level: 2, region: suiri, needs: [N-003], days: 6}
-  - {id: N-059, title: 時刻と時間, stage: 2, level: 2, region: kazu, needs: [N-006], days: 5}
-  - {id: N-060, title: お金の計算, stage: 2, level: 2, region: keisan, needs: [N-007], days: 4}
+  - {id: N-059, title: 時刻と時間, stage: 2, level: 2, region: kazu, needs: [N-006, N-007], days: 5}
+  - {id: N-060, title: お金の計算, stage: 2, level: 2, region: keisan, needs: [N-007, N-009], days: 4}
   - {id: G-046, title: 長さ・重さ・かさの単位と測定, stage: 2, level: 2, region: hakaru, needs: [G-005, N-007], days: 5}
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, level: 2, region: data, needs: [N-006], days: 5}
   - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, level: 2, region: risoku, needs: [N-060], days: 4}
@@ -709,6 +709,11 @@ units:
   - {id: E-210, title: 水をきれいにする（にごった水をしばらく置いて沈める、砂と小石と炭の層でこす、こした水のきれいさを目盛りの見え方で比べる、こしただけでは飲めないわけ）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, E-171, G-046], days: 5}
   - {id: E-211, title: ごみを分けて資源にもどす（燃やすごみと資源ごみ、缶を磁石で分ける、紙・びん・ペットボトルが何に生まれ変わるか、1 週間の家のごみを量って表にし減らし方を考える）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, H-064, S-027], days: 5}
   - {id: N-073, title: 大きな数（万・億の位と位取り、10 倍と 10 分の 1、およその数）, stage: 3, level: 2, region: kazu, needs: [N-009, N-013], days: 5}
+  - {id: N-074, title: かけ算の筆算（何けた × 1 けた、何けた × 2 けた）, stage: 3, level: 2, region: keisan, needs: [N-013, N-015, N-009], days: 6}
+  - {id: N-075, title: わり算の筆算（わる数が 1 けた・2 けた、商の見当）, stage: 3, level: 2, region: keisan, needs: [N-014, N-074], days: 6}
+  - {id: N-076, title: 計算の順序（かっこ、かけ算とわり算を先に）, stage: 3, level: 2, region: keisan, needs: [N-015, N-014], days: 4}
+  - {id: N-077, title: 小数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-020, N-074, N-075], days: 6}
+  - {id: N-078, title: 分数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-019, N-014], days: 6}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}

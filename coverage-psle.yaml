@@ -133,6 +133,8 @@ items:
   units:
   - N-013
   - N-014
+  - N-074
+  - N-075
 - id: T-19
   field: P3
   topic: 分数（同値分数、加減）
@@ -194,6 +196,9 @@ items:
   - N-015
   - N-013
   - N-014
+  - N-074
+  - N-075
+  - N-076
 - id: T-28
   field: P4
   topic: 帯分数と仮分数、集合の分数
@@ -219,6 +224,7 @@ items:
   sources: *id001
   units:
   - N-020
+  - N-077
 - id: T-32
   field: P4
   topic: 面積と周の長さ
@@ -253,6 +259,7 @@ items:
   units:
   - N-073
   - N-015
+  - N-076
 - id: T-37
   field: P5
   topic: 分数と除法、分数の四則
@@ -260,12 +267,14 @@ items:
   units:
   - N-016
   - N-019
+  - N-078
 - id: T-38
   field: P5
   topic: 小数の四則と単位の換算
   sources: *id001
   units:
   - N-020
+  - N-077
 - id: T-39
   field: P5
   topic: 百分率（割引、GST、年利）
@@ -319,6 +328,7 @@ items:
   sources: *id001
   units:
   - N-019
+  - N-078
 - id: T-47
   field: P6
   topic: 百分率（全体を求める、増減の百分率）
