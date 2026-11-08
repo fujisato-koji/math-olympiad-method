@@ -95,7 +95,7 @@
       const blob = keep.blob;
       resuming = post('/token', { blob }).then(j => {
         take(j);
-        if (keep) setKeep({ blob: j.blob || blob, scope: granted });  // 取り直すあいだに「つながない」を押したら、置き直さない
+        if (keep) setKeep({ blob: j.blob || blob, scope: granted });  // 取り直すあいだにログアウトしたら、置き直さない
         return true;
       }, e => { if (e.code === 'auth') { setKeep(null); return false; } throw e; }).finally(() => { resuming = null; });
     }
@@ -112,7 +112,7 @@
       if (authUrl) client.requestCode(); else client.requestAccessToken({ prompt: '' });
     });
   }
-  // この端末でつなぐのをやめる。サーバを使うときは、Google の許可を取り消さない（取り消すと、ほかの端末の塊も使えなくなる）。
+  // この端末でログアウトする。サーバを使うときは、Google の許可を取り消さない（取り消すと、ほかの端末の塊も使えなくなる）。
   // この端末の塊を捨てるだけにする。すべての端末でやめるときは、Google アカウントの設定で取り消す
   function signOut() {
     if (!authUrl && token && window.google && google.accounts && google.accounts.oauth2) google.accounts.oauth2.revoke(token, () => {});

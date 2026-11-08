@@ -1811,6 +1811,7 @@
   const DRIVE_KEY = 'michisuji.drive.v2';
   const drive = Object.assign({ on: false, at: '', who: '' }, load(DRIVE_KEY, {}));
   let driveTimer = 0, driveBusy = false, driveAgain = false, driveState = drive.on ? 'wait' : 'off';  // off、ok、wait、offline、need、err
+  let askedLogin = false;  // ログインの窓を出したか（開いているあいだに 1 度だけ、D-059）
   const lastDay = r => Object.values((r && r.days) || {}).reduce((a, v) => v && v.date > a ? v.date : a, '');
   const newer = (p, q) => ((p && p.date) || '') >= ((q && q.date) || '') ? p : q;
   function keys2(a, b, f) {
@@ -1893,22 +1894,41 @@
     if (b) {
       b.hidden = !CLIENT_ID || !drive.on;
       b.dataset.s = driveState;
-      // 言葉は保存にそろえる（D-057、施主「ドライブという言い方がわかりにくい」）
+      // 言葉は保存にそろえる（D-057、施主「ドライブという言い方がわかりにくい」）。ログインはログインと言う（D-059）
       const t = b.querySelector('.t');
-      if (t) t.textContent = { ok: '保存済み', wait: '保存中', offline: '保存待ち', need: 'つなぐ', err: 'つなぐ' }[driveState] || '保存';
+      if (t) t.textContent = { ok: '保存済み', wait: '保存中', offline: '保存待ち', need: 'ログイン', err: '未保存' }[driveState] || '保存';
       b.title = { ok: '保存済み（どの端末でも開けます）', wait: '保存の途中です', offline: 'つながったら保存します',
-        need: 'つながりが切れました。押すとつなぎ直して保存します', err: '保存できませんでした。押すともう一度保存します' }[driveState] || '';
+        need: 'ログインが切れました。押すとログインして保存します', err: '保存できませんでした。押すともう一度保存します' }[driveState] || '';
     }
     const st = $('#drive-status');
     if (st) st.textContent = !drive.on ? 'この端末だけに保存'
       : [drive.who, drive.at && drive.at + ' に保存', DriveSync.linked && '家族と共有中', driveState === 'offline' && 'つながったら保存します',
-        driveState === 'need' && 'つなぎ直してください', driveState === 'err' && '保存できませんでした'].filter(Boolean).join('・');
+        driveState === 'need' && 'ログインし直してください', driveState === 'err' && '保存できませんでした'].filter(Boolean).join('・');
     const show = showEl;
     show('#btn-drive-in', !drive.on || driveState === 'need');
     show('#btn-drive-take', !drive.on);
     show('#btn-drive-now', drive.on && driveState !== 'need');
     show('#btn-drive-out', drive.on);
     familyChip();
+    askLogin();
+  }
+  // ログインが切れていて電波があるときは、ログインの窓を自動で出す（D-059、施主「オンラインなのにつながってなかったら自動でログイン画面」）。
+  // Google の窓は押したときしか開けない（ブラウザが止める）ので、この窓のボタンを 1 回押してもらう。
+  // 開いているあいだに 1 度だけ。問題を解いている途中と、ほかの窓が開いているときは出さず、あとで出す
+  function askLogin() {
+    if (askedLogin || driveState !== 'need' || !drive.on || navigator.onLine === false) return;
+    if (['day', 'join'].includes(parse().name) || document.querySelector('dialog[open]')) return;
+    askedLogin = true;
+    let d = $('#login-sheet');
+    if (!d) { d = document.createElement('dialog'); d.id = 'login-sheet'; d.className = 'sheet'; document.body.appendChild(d); }
+    d.innerHTML = `<h2>ログインが切れました</h2>${drive.who ? `<p class="muted">${esc(drive.who)}</p>` : ''}
+      <div class="row"><button class="pill solid" type="button" data-login>Google でログイン</button><button class="pill" type="button" data-sheetclose>あとで</button></div>`;
+    d.onclick = e => {
+      // 押したその場で Google の窓を開く（待つと、ブラウザが止める）
+      if (e.target.closest('[data-login]')) { d.close(); driveSync(true); return; }
+      if (e.target.closest('[data-sheetclose]') || e.target === d) d.close();
+    };
+    d.showModal();
   }
   const showEl = (id, on) => { const e = $(id); if (e) e.hidden = !on; };
   // ---- 家族と共有する（D-052） ----
@@ -2017,6 +2037,7 @@
   async function driveSync(interactive) {
     if (!CLIENT_ID || !window.DriveSync) return;
     if (driveBusy) { driveAgain = true; return; }
+    if (interactive) askedLogin = true;  // 自分で押したら、ログインの窓は出さない（Google の窓を閉じたときなど）
     driveBusy = true;
     try {
       if (!DriveSync.ready) await DriveSync.init(CLIENT_ID, AUTH_URL);
@@ -2061,7 +2082,7 @@
       if (!DriveSync.usable()) await DriveSync.signIn();
       const remote = await DriveSync.pull();
       if (!remote || remote.schema !== 2 || !remote.profiles || !Object.keys(remote.profiles).length) {
-        alert('保存してある記録がまだありません。先に、記録のある端末で「Google でつなぐ」を押してください。');
+        alert('保存してある記録がまだありません。先に、記録のある端末で「Google でログイン」を押してください。');
         return;
       }
       const names = Object.values(remote.profiles).map(pr => pr.name).join('、');
@@ -2101,7 +2122,7 @@
     $('#btn-family-leave').addEventListener('click', familyLeave);
     $('#btn-menu').addEventListener('click', refreshFamily);
     $('#btn-drive-out').addEventListener('click', () => {
-      if (!confirm('この端末ではつなぐのをやめます。記録はこの端末に残り、保存してある記録も消えません。')) return;
+      if (!confirm('この端末でログアウトします。記録はこの端末に残り、保存してある記録も消えません。ほかの端末はログインしたままです。')) return;
       DriveSync.signOut(); drive.on = false; drive.who = ''; save(DRIVE_KEY, drive); driveState = 'off'; driveChip();
     });
     document.addEventListener('visibilitychange', () => { if (document.hidden && driveState === 'wait') { clearTimeout(driveTimer); driveSync(false); } });
@@ -2119,6 +2140,7 @@
   syncWho();
 
   window.addEventListener('hashchange', render);
+  window.addEventListener('hashchange', askLogin);  // 問題を解き終えて地図などに戻ったとき
   window.addEventListener('resize', () => { if (parse().name !== 'map') return; setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d') paint(); });
 
   Music.init(prefs.music);
