@@ -257,6 +257,8 @@ def check(data, problems):
                 where = f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
+                if "time" in item and not (isinstance(item["time"], int) and 10 <= item["time"] <= 3600):
+                    errors.append(f"{where}: time は目安の秒（10〜3600 の整数）")
                 for tid in item.get("type") or []:
                     if tid not in units:
                         errors.append(f"{where}: 組み合わせの型の単元 {tid} が地図にない")

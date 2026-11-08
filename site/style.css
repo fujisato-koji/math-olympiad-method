@@ -33,6 +33,7 @@
   --lane-Q: #7a62b8;
   --ok: #1f9d63;
   --bad: #d4553a;
+  --warn: #c27c14;
   --glow: rgba(255, 196, 61, .55);
   --shadow: 0 1px 2px rgba(28, 34, 48, .05), 0 10px 30px rgba(28, 34, 48, .07);
   --radius: 20px;
@@ -74,6 +75,7 @@
     --lane-Q: #b9a6f0;
     --ok: #43c98a;
     --bad: #ff7b61;
+    --warn: #f0b056;
     --glow: rgba(255, 205, 90, .4);
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .28);
     color-scheme: dark;
@@ -112,6 +114,7 @@
   --lane-Q: #b9a6f0;
   --ok: #43c98a;
   --bad: #ff7b61;
+  --warn: #f0b056;
   --glow: rgba(255, 205, 90, .4);
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 32px rgba(0, 0, 0, .28);
   color-scheme: dark;
@@ -765,8 +768,43 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 @media (max-width: 520px) { .fig.balances { padding: 10px 6px; gap: 2px 6px; } }
 
 /* だれの記録か（D-044） */
+.who-chip[hidden] { display: none; }
 .who-chip { font-size: 13px; padding: 6px 12px; max-width: 9em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .who-box { margin: 14px 0; padding: 12px 14px; border-radius: 16px; background: var(--surface-2); }
 .who-box .k { font-size: 12px; color: var(--muted); letter-spacing: .08em; margin-bottom: 6px; }
 .who-list .pill[aria-pressed="true"] { background: var(--solid); color: var(--solid-ink); border-color: var(--solid); }
 @media (max-width: 520px) { .who-chip { max-width: 5.5em; } }
+
+/* 目安の時間と「わからない」（D-045） */
+.clock { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.clock svg { width: 22px; height: 22px; transform: rotate(-90deg); flex: none; }
+.clock circle { fill: none; stroke: var(--line); stroke-width: 3.5; }
+.clock .arc { stroke: var(--c); stroke-linecap: round; transition: stroke-dasharray .5s linear; }
+.clock.over { color: var(--warn); }
+.clock.over .arc { stroke: var(--warn); }
+.steps b.slow, .finish .line b.slow { background: color-mix(in srgb, var(--warn) 40%, var(--surface)); border-color: var(--warn); }
+.finish .note2 { font-size: 15px; color: var(--ink-2); margin: 4px 0 0; }
+.dk { margin-top: 18px; padding: 18px; border-radius: 18px; background: var(--surface-2); animation: enter .3s ease; }
+.dk-q { font-size: 20px; margin: 4px 0 14px; text-align: center; }
+.dk-opts { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.dk-opts .pill { font-size: 17px; padding: 11px 22px; }
+.dk-path { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 0; margin: 4px 0 16px; }
+.dk-path .stn { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 8px; border-radius: 999px; background: var(--surface); font-size: 17px; }
+.dk-path .stn::before { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 3px solid var(--c); background: var(--c); flex: none; }
+.dk-path .stn.cur { box-shadow: 0 0 0 3px var(--c); font-weight: 700; }
+.dk-path .stn.cur::before { background: var(--surface); }
+.dk-path .link { width: 22px; height: 4px; background: var(--c); }
+.dk-note { font-size: 18px; line-height: 1.7; margin: 0 0 6px; }
+.dk .hints { margin-top: 10px; }
+.dk-h { font-size: 14px; color: var(--muted); letter-spacing: .1em; margin: 18px 0 10px; font-weight: 500; }
+.dk-cands { display: grid; gap: 10px; }
+.dk-cand { display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; align-items: center; padding: 12px 14px; border-radius: 14px; background: var(--surface); border-left: 6px solid var(--c); }
+.dk-cand .mode { font-size: 12px; color: var(--muted); letter-spacing: .06em; }
+.dk-cand .t { font-size: 17px; font-weight: 700; grid-column: 1; }
+.dk-btns { grid-column: 2; grid-row: 1 / span 2; display: flex; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
+.dk-btns .pill { font-size: 15px; padding: 8px 14px; }
+.dk-btns .pill[disabled] { opacity: .6; cursor: default; }
+@media (max-width: 520px) {
+  .dk-cand { grid-template-columns: 1fr; }
+  .dk-btns { grid-column: 1; grid-row: auto; justify-content: flex-start; flex-wrap: nowrap; margin-top: 8px; }
+}

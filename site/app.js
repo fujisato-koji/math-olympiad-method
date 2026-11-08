@@ -87,6 +87,9 @@
       const i = q.indexOf(':'), u = q.slice(0, i);
       if (i > 0 && ren[u]) { const nq = ren[u] + q.slice(i); if (!p.items[nq]) p.items[nq] = p.items[q]; delete p.items[q]; }
     });
+    // ふりかえりの課題（D-045）
+    p.asks = (p.asks || []).map(a => ({ ...a, u: ren[a.u] || a.u, from: ren[a.from] || a.from })).filter(a => UNITS[a.u]);
+    p.asks.forEach(a => { const m = a.key ? UNITS[a.u].days.findIndex(d => d.key === a.key) + 1 : 0; a.day = m || Math.min(a.day || 1, UNITS[a.u].days.length); });
     // 日の並びが変わったら、日の印（ねらい、なければ種類と何番目か）で記録の日を合わせ直す
     Object.entries(p.units).forEach(([id, r]) => {
       const u = UNITS[id];
@@ -110,7 +113,7 @@
   let progress = store.profiles[store.current].rec;
   const persist = () => save(STORE_KEY, store);
   persist();
-  // 問題ごとの記録：解いた回数、一度でできた回数、ヒント、間違い、とばした、わからない、最後にかかった秒
+  // 問題ごとの記録：解いた回数、一度でできた回数、ヒント、間違い、とばした、わからない、目安をすぎた、最後にかかった秒
   function noteItem(it, res) {
     if (!it || !it.qid || !res) return;
     const x = progress.items[it.qid] || (progress.items[it.qid] = { n: 0, ok: 0, h: 0, w: 0 });
@@ -118,6 +121,7 @@
     x.h += res.hints || 0; x.w += Math.max(0, (res.tries || 1) - 1);
     if (res.skipped) x.s = (x.s || 0) + 1;
     if (res.dunno) x.d = (x.d || 0) + 1;
+    if (res.over) x.o = (x.o || 0) + 1;
     if (res.ms) x.t = Math.round(res.ms / 1000);
     x.last = new Date().toLocaleDateString('sv-SE');
   }
@@ -236,7 +240,8 @@
     });
     const ready = R.units.filter(u => status(u.id) === 'ready' && inGoal(u.id)).sort(order)
       .slice(0, Math.max(0, 4 - doing.length)).map(u => ({ u, href: `#/day/${u.id}/1`, mode: 'はじめる', label: '1 日目' }));
-    return [...due, ...doing, ...ready];
+    const asks = (progress.asks || []).filter(a => UNITS[a.u]).map(a => ({ u: UNITS[a.u], href: `#/look/${a.u}/${a.day}`, mode: 'ふりかえり', label: `${a.day} 日目` }));
+    return [...asks, ...due, ...doing, ...ready];
   }
   // 全体の見込み（R-35）：残りの基本量 × 流れごとの係数 ＋ 復習の量
   function forecast(only = inGoal) {
@@ -270,6 +275,7 @@
       return { name: 'day', type: p[0], id: p[1], day: n };
     }
     if (p[0] === 'review' && UNITS[p[1]]) return { name: 'day', type: 'review', id: p[1], day: UNITS[p[1]].days.length };
+    if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
     return { name: 'map' };
@@ -281,7 +287,7 @@
     const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
     if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
-    if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
+    if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'look' ? 'ふりかえり' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
     return parts.map(([href, t], i) => i === parts.length - 1
       ? `<span class="here">${esc(t)}</span>`
       : `<a href="${href}">${esc(t)}</a><span class="sep">›</span>`).join('');
@@ -1048,6 +1054,7 @@
     // おさらいの日は予備の問題、なければその日の問題をもう一度
     if (type === 'extra') items = d.extra && d.extra.length ? d.extra : items.filter(x => x.part !== '見本');
     if (type === 'review') items = pickReview(u);
+    if (type === 'look') items = lookItems(id, n);
     session = { id, n, type, items, idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false };
     return `<section class="play" id="play" style="${lc(u.lane)}"></section>`;
   }
@@ -1067,11 +1074,14 @@
     let h = '';
     s.items.forEach((_, i) => {
       const r = s.results[i];
-      const cls = r ? (r.first ? 'ok' : 'help') : r === null ? 'ok' : i === s.idx ? 'on' : '';
+      const cls = r ? (r.first ? 'ok' : slow(r) ? 'slow' : 'help') : r === null ? 'ok' : i === s.idx ? 'on' : '';
       h += (i ? `<i class="${i <= s.idx ? 'on' : ''}"></i>` : '') + `<b class="${cls}"></b>`;
     });
+    const lim = s.solved || s.dunno ? 0 : timeFor(s, s.items[s.idx]);
     return `<div class="play-top"><div class="steps">${h}</div>
-      <span class="play-count">${Math.min(s.idx + 1, s.items.length)} / ${s.items.length}</span></div>`;
+      <span class="play-count">${Math.min(s.idx + 1, s.items.length)} / ${s.items.length}</span>${lim ? `<span class="clock" id="clock" data-lim="${lim}" title="目安の時間">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle class="arc" cx="12" cy="12" r="9" pathLength="100" stroke-dasharray="0 100"/></svg>
+        <span class="clock-t"></span></span>` : ''}</div>`;
   }
   function pathsHtml(it) {
     return `<div class="paths">${(it.paths || []).map((p, i) => `
@@ -1093,9 +1103,176 @@
       ${it.note ? `<br><b>見どころ</b> ${fmt(it.note)}` : ''}
       <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
   }
+  // ---- 目安の時間（D-045） ----
+  // 段の 1 日の分（stages の minutes）の 8 割を、問題の種類の重みで割り振る（30 秒きざみ）。問題に time（秒）を書けば、それにする。
+  // 目安をすぎても解き続けられる。ただし、そうしてできた問題は「一度にできた」に数えない（確認の 8 割、おさらい、練習をとばす判定）
+  const TIME_W = { 思い出す: 1, 今日: 1.5, 挑戦: 3, わけ: 2 };
+  const STAGE_TIME = Object.fromEntries(R.stages.map(st => {
+    const reason = (st.reason || [1, 1]).reduce((a, b) => a + b, 0) / 2;
+    const w = Object.entries(st.day || {}).reduce((a, [p, k]) => a + k * (TIME_W[p] || 1), 0) + reason * TIME_W['わけ'];
+    const per = (st.minutes || 20) * 60 * .8 / (w || 1);
+    return [st.id, Object.fromEntries(Object.entries(TIME_W).map(([p, x]) => [p, Math.max(30, Math.round(per * x / 30) * 30)]))];
+  }));
+  const timeFor = (s, it) => s.type === 'look' || !it || it.part === '見本' ? 0 : it.time || (STAGE_TIME[UNITS[s.id].stage] || {})[it.part] || 0;
+  // かかった時間：画面が隠れている間は数えない。解けたとき、「わからない」を押したときに止める
+  const spent = s => (s.el || 0) + (s.t0 ? Date.now() - s.t0 : 0);
+  const freeze = s => { s.el = spent(s); s.t0 = 0; s.paused = true; };
+  const fmtSec = x => x >= 60 ? `${Math.floor(x / 60)} 分${x % 60 ? ` ${x % 60} 秒` : ''}` : `${x} 秒`;
+  // 目安をすぎたほかは一度にできた問題（点の色を変える）
+  const slow = r => r.over && !r.hints && (r.tries || 1) <= 1 && !r.dunno && !r.skipped;
+  function outcome(s, it, more) {
+    const ms = spent(s), lim = timeFor(s, it), over = !!lim && ms > lim * 1000;
+    return { first: s.tries === 1 && s.hints === 0 && !over && !s.dunno, hints: s.hints, tries: s.tries, ms,
+      ...(over ? { over: true } : {}), ...(s.dunno ? { dunno: true } : {}), ...more };
+  }
+  function tick() {
+    const c = document.getElementById('clock'), s = session;
+    if (!c || !s) return;
+    const lim = +c.dataset.lim, t = spent(s) / 1000, over = t > lim, small = UNITS[s.id].stage <= 2, arc = c.querySelector('.arc');
+    if (arc) arc.setAttribute('stroke-dasharray', `${Math.min(100, t / lim * 100).toFixed(1)} 100`);
+    c.classList.toggle('over', over);
+    c.querySelector('.clock-t').textContent = (over ? (small ? 'めやすを すぎたよ' : '目安をすぎました') : (small ? 'めやす' : '目安'))
+      + (prefs.parent ? ` ${fmtSec(lim)}` : '');
+  }
+  setInterval(tick, 500);
+  document.addEventListener('visibilitychange', () => {
+    const s = session;
+    if (!s || !s.run || s.solved || s.paused) return;
+    if (document.hidden) { s.el = spent(s); s.t0 = 0; } else s.t0 = Date.now();
+  });
+
+  // ---- わからない（D-045） ----
+  // どこで止まったか（問題の意味、何から始めるか、道筋のどの駅か）を聞き、ふりかえる駅を出す。
+  // 候補は、この単元の見本と、前提の単元（2 段前まで）。止まった文と、各単元の日の文（ねらい、問題、道筋）の近さで並べる
+  const WORDS = {
+    small: { ask: 'どこが わからない？', mean: 'もんだいの いみ', start: 'なにから するか', mid: 'とちゅうから',
+      here: 'ここまでは わかる？', yes: 'わかる', no: 'ここが わからない', allok: 'ぜんぶ わかるね。こたえまで あと すこし。もう いちど やってみよう。',
+      read: 'おうちの ひとに、もんだいを ゆっくり よんで もらおう。', first: 'さいしょは ここから かんがえるよ', stuck: 'ここで とまったね',
+      offer: 'ふりかえる えき', now: 'いま ふりかえる', later: 'あとで', added: 'きょうの かだいに いれたよ',
+      back: 'もんだいに もどる', skip: 'この もんだいは とばす', self: 'この えきの みほん', need: 'まえの えき', done: 'ふりかえり、できた！', ret: 'もとの もんだいに もどる' },
+    big: { ask: 'どこが分からない？', mean: '問題の意味', start: '何から始めるか', mid: '途中から',
+      here: 'ここまでは分かる？', yes: '分かる', no: 'ここが分からない', allok: 'どの段も分かるなら、あとは答えまで。もう一度やってみよう。',
+      read: '問題の文を、区切りながらゆっくり読み直そう。分からない言葉は、おうちの人に聞こう。', first: '最初はここから考える', stuck: 'ここで止まった',
+      offer: 'ふりかえる駅', now: '今ふりかえる', later: 'あとで', added: '今日の課題に入れた',
+      back: '問題にもどる', skip: 'この問題はとばす', self: 'この駅の見本', need: '前の駅', done: 'ふりかえり、できた！', ret: 'もとの問題にもどる' },
+  };
+  const words = id => WORDS[UNITS[id].stage <= 2 ? 'small' : 'big'];
+  // 文字の 1 つ組（ひらがなを除く）と 2 つ組。数字、空白、句読点は除く
+  function grams(t) {
+    const s = String(t || '').replace(/[\s\d.,、。・「」『』（）()？！?!:：]/g, ''), g = new Set();
+    for (let i = 0; i < s.length; i++) {
+      if (!/[ぁ-ゟ]/.test(s[i])) g.add(s[i]);
+      if (i + 1 < s.length) g.add(s.slice(i, i + 2));
+    }
+    return g;
+  }
+  const DAY_GRAMS = {};
+  function dayGrams(id, k) {
+    const key = id + '/' + k;
+    if (!DAY_GRAMS[key]) {
+      const u = UNITS[id], d = u.days[k - 1];
+      DAY_GRAMS[key] = grams([u.title, d.aim || '', ...[...(d.items || []), ...(d.extra || [])]
+        .flatMap(it => [it.text, it.explain || '', ...(it.paths || []).flat()])].join(' '));
+    }
+    return DAY_GRAMS[key];
+  }
+  function lookCands(s, text, why) {
+    const u = UNITS[s.id], w = new Map(), alt = u.alt || {};
+    const add = (id, x) => { if (UNITS[id] && !w.has(id)) w.set(id, x); };
+    if (why !== 'mid') add(u.id, 1.3);
+    u.needs.forEach(n => [n, ...(alt[n] || [])].forEach(x => add(x, 1)));
+    u.needs.forEach(n => (UNITS[n] ? UNITS[n].needs : []).forEach(x => add(x, .7)));
+    add(u.id, .8);
+    const q = grams(text), cand = [...w].map(([id, x]) => ({ id, x, days: id === u.id ? s.n : UNITS[id].days.length }));
+    // 候補のうち少ない単元にしか出ない文字の組ほど重く数える
+    const df = {};
+    cand.forEach(c => {
+      const seen = new Set();
+      for (let k = 1; k <= c.days; k++) dayGrams(c.id, k).forEach(g => { if (q.has(g)) seen.add(g); });
+      seen.forEach(g => { df[g] = (df[g] || 0) + 1; });
+    });
+    return cand.map(c => {
+      let best = 0, day = 1;
+      for (let k = 1; k <= c.days; k++) {
+        const dg = dayGrams(c.id, k);
+        let sc = 0;
+        q.forEach(g => { if (dg.has(g)) sc += Math.log(1 + cand.length / df[g]); });
+        sc /= Math.sqrt(dg.size || 1);
+        if (sc > best) { best = sc; day = k; }
+      }
+      const self = c.id === u.id;
+      return { id: c.id, day: self && why !== 'mid' ? 1 : day, score: best * c.x, self };
+    }).sort((a, b) => b.score - a.score).slice(0, 3);
+  }
+  function dkOffer(s, it, why, i = 0) {
+    const path = ((it.paths || [])[0] || []).slice(0, -1);
+    // 比べる文：止まった駅と、そこに当たるヒント（ヒントには「わり切れる」のような考えの言葉が入る）
+    const hint = why === 'start' ? 0 : why === 'mid' ? Math.min(i, 2) : null, ht = hint !== null ? (it.hints || [])[hint] || '' : '';
+    const text = why === 'mid' ? `${path[i]} ${ht}` : why === 'start' ? `${it.text} ${path[0] || ''} ${ht}` : `${it.text} ${it.explain || ''}`;
+    if (hint !== null && (it.hints || [])[hint]) s.hints = Math.max(s.hints, hint + 1);
+    s.dk = { step: 'offer', why, i, hint, cands: lookCands(s, text, why) };
+  }
+  function dunnoHtml(s, it) {
+    const W = words(s.id), k = s.dk, path = ((it.paths || [])[0] || []).slice(0, -1);
+    if (k.step === 'what') return `<div class="dk"><p class="dk-q">${W.ask}</p><div class="dk-opts">
+      <button class="pill" data-act="dk" data-w="mean" type="button">${W.mean}</button>
+      <button class="pill" data-act="dk" data-w="start" type="button">${W.start}</button>
+      ${path.length ? `<button class="pill" data-act="dk" data-w="mid" type="button">${W.mid}</button>` : ''}</div>
+      <div class="actions"><button class="pill" data-act="dk-close" type="button">${W.back}</button></div></div>`;
+    if (k.step === 'path') return `<div class="dk"><div class="dk-path">${path.slice(0, k.i + 1)
+      .map((x, j) => `<span class="stn${j === k.i ? ' cur' : ''}">${fmt(x)}</span>`).join('<span class="link"></span>')}</div>
+      <p class="dk-q">${W.here}</p><div class="dk-opts"><button class="pill" data-act="dk-yes" type="button">${W.yes}</button>
+      <button class="pill solid" data-act="dk-no" type="button">${W.no}</button></div></div>`;
+    if (k.step === 'allok') return `<div class="dk"><p class="dk-q">${W.allok}</p>
+      <div class="actions"><button class="pill solid" data-act="dk-close" type="button">${W.back}</button></div></div>`;
+    const head = k.why === 'mean' ? `<p class="dk-note">${W.read}</p>`
+      : k.why === 'start' && path.length ? `<p class="dk-note"><b>${W.first}</b>　${fmt(path[0])}</p>`
+      : k.why === 'mid' ? `<p class="dk-note"><b>${W.stuck}</b>　${fmt(path[k.i])}</p>` : '';
+    const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${fmt(it.hints[k.hint])}</div></div>` : '';
+    const asks = progress.asks || [];
+    return `<div class="dk">${head}${hint}<h3 class="dk-h">${W.offer}</h3><div class="dk-cands">${k.cands.map(c => {
+      const cu = UNITS[c.id], put = asks.some(a => a.u === c.id);
+      return `<div class="dk-cand" style="${lc(cu.lane)}"><span class="mode">${c.self ? W.self : W.need}・${STATUS_NAME[status(c.id)]}</span>
+        <span class="t">${esc(cu.title)}</span><span class="dk-btns">
+        <button class="pill solid" data-act="look-now" data-u="${esc(c.id)}" data-day="${c.day}" type="button">${W.now}</button>
+        <button class="pill" data-act="look-later" data-u="${esc(c.id)}" data-day="${c.day}" type="button" title="今日の課題に入れる"${put ? ' disabled' : ''}>${put ? W.added : W.later}</button></span></div>`;
+    }).join('')}</div>
+      <div class="actions"><button class="pill" data-act="dk-close" type="button">${W.back}</button>
+        ${it.part === '見本' ? '' : `<button class="pill" data-act="skip" type="button">${W.skip}</button>`}</div></div>`;
+  }
+  // ふりかえり：その日の見本と、思い出す・今日の問題から 4 問まで（その日に見本がなければ 1 日目の見本を前に置く）
+  function lookItems(id, k) {
+    const u = UNITS[id], d = u.days[k - 1] || u.days[0], its = d.items || [];
+    let show = its.filter(x => x.part === '見本');
+    if (!show.length) show = (u.days[0].items || []).filter(x => x.part === '見本').slice(0, 1);
+    return [...show.slice(0, 2), ...its.filter(x => x.part === '思い出す' || x.part === '今日')].slice(0, 4);
+  }
+  // 今日の課題に入れる（同じ単元は 1 つだけ、30 件まで）
+  function addAsk(s, id, day) {
+    const a = progress.asks || (progress.asks = []), it = s.items[s.idx];
+    if (a.some(x => x.u === id)) return;
+    a.push({ u: id, day, key: UNITS[id].days[day - 1].key, from: s.id, qid: it && it.qid, why: s.dk && s.dk.why, date: localDate() });
+    if (a.length > 30) a.splice(0, a.length - 30);
+    persist();
+  }
+  // 今ふりかえる：解いている日を残したまま、ふりかえりの問題を出し、済んだらもとの問題にもどる
+  function startLook(id, day, back) {
+    session = { id, n: day, type: 'look', items: lookItems(id, day), idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false, back };
+    const el = $('#play');
+    if (el) el.setAttribute('style', lc(UNITS[id].lane));
+    Music.tap(); drawItem(); window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  function endLook() {
+    const b = session && session.back;
+    if (!b) return;
+    b.dk = null; session = b;
+    const el = $('#play');
+    if (el) el.setAttribute('style', lc(UNITS[b.id].lane));
+    Music.tap(); drawItem();
+  }
   function drawItem() {
     const s = session, el = $('#play'), u = UNITS[s.id], d = u.days[s.n - 1];
-    if (!s.t0 && !s.solved) s.t0 = Date.now();
+    if (!s.run && !s.solved && s.idx < s.items.length) { s.run = true; s.el = 0; s.paused = false; s.t0 = document.hidden ? 0 : Date.now(); }
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
         <h2 style="margin:18px 0 8px">${esc(d.aim || R.kinds[d.kind])}</h2>
@@ -1114,7 +1291,10 @@
       + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '')
       + (it.balance ? balanceHtml(it.balance) : '');
     let body;
-    if (it.part === 'わけ' && !s.solved) {
+    const dk = s.type === 'look' ? '' : '<button class="pill" data-act="dunno" type="button">わからない</button>';
+    if (s.dk && !s.solved) {
+      body = `${fig}${dunnoHtml(s, it)}`;
+    } else if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
       const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
       const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
@@ -1123,13 +1303,13 @@
       body = `${fig}<p class="explain">${ask[0]}</p>
         <div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}
-          <button class="pill solid" data-act="said" type="button">${ask[1]}</button></div>`;
+          ${dk}<button class="pill solid" data-act="said" type="button">${ask[1]}</button></div>`;
     } else if (it.part === 'わけ') {
       body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
     } else if (it.part === '見本') {
       body = `${fig}<p class="explain">${fmt(it.explain)}</p>
-        <div class="actions"><button class="pill solid" data-act="next" type="button">わかった</button></div>`;
+        <div class="actions">${dk}<button class="pill solid" data-act="next" type="button">わかった</button></div>`;
     } else if (s.solved) {
       body = `${fig}<div class="feedback">できた！ こたえは <b>${fmt(it.answer)}</b></div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
@@ -1142,10 +1322,11 @@
               <button class="ok" data-key="ok" type="button">こたえる</button></div></div>`;
       const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
       body = `${fig}${input}<div class="feedback" id="fb"></div><div class="hints">${hints}</div>
-        <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}</div>`;
+        <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
-    el.innerHTML = steps() + `<article class="card" id="card">
+    el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
       <span class="part">${esc(it.part)}</span><p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
+    tick();
   }
   function submit(val) {
     const s = session, it = s.items[s.idx];
@@ -1153,7 +1334,7 @@
     s.tries++;
     if (isRight(it, val)) {
       s.solved = true;
-      s.results[s.idx] = { first: s.tries === 1 && s.hints === 0, hints: s.hints, tries: s.tries, ms: Date.now() - (s.t0 || Date.now()) };
+      s.results[s.idx] = outcome(s, it); freeze(s);
       noteItem(it, s.results[s.idx]); persist();
       Music.good(s.idx);
       drawItem();
@@ -1169,13 +1350,25 @@
   function advance(skipped) {
     const s = session, it = s.items[s.idx];
     if (it.part === '見本') s.results[s.idx] = null;
-    else if (skipped) { s.results[s.idx] = { first: false, hints: s.hints, tries: s.tries, skipped: true }; noteItem(it, s.results[s.idx]); persist(); }
-    Object.assign(s, { idx: s.idx + 1, entry: '', hints: 0, tries: 0, solved: false, t0: 0 });
+    else if (skipped) { s.results[s.idx] = outcome(s, it, { first: false, skipped: true }); noteItem(it, s.results[s.idx]); persist(); }
+    Object.assign(s, { idx: s.idx + 1, entry: '', hints: 0, tries: 0, solved: false, run: false, el: 0, t0: 0, paused: false, dunno: false, dk: null });
     drawItem();
   }
   function drawFinish() {
     const s = session, u = UNITS[s.id], d = u.days[s.n - 1], el = $('#play');
+    if (s.type === 'look') {
+      // ふりかえり：判定はしない。今日の課題から外し、もとの問題があればもどる
+      const W = words(s.id);
+      progress.asks = (progress.asks || []).filter(a => a.u !== s.id); persist();
+      Music.melody(s.results.filter(Boolean));
+      el.innerHTML = `<article class="card finish"><span class="part">ふりかえり</span><h1>${W.done}</h1>
+        <p class="score">${esc(u.title)}</p>
+        <div class="actions">${s.back ? `<button class="pill solid" data-act="back" type="button">${W.ret}</button>`
+          : `<a class="pill" href="#/unit/${s.id}">単元へ</a><a class="pill solid" href="#/">地図へ</a>`}</div></article>`;
+      return;
+    }
     const res = s.results.filter(Boolean), firsts = res.filter(r => r.first).length;
+    const overN = res.filter(x => x.over).length, dunN = res.filter(x => x.dunno).length;
     const rate = res.length ? firsts / res.length : 1, r = rec(s.id), today = localDate(), before = satisfied();
     let title = 'きょうの みちすじ、できた！', note = 'たどった みちすじが、メロディに なりました。';
     if (s.type === 'review') {
@@ -1199,7 +1392,7 @@
         note = u.needs.length ? `前の単元（${u.needs.map(x => UNITS[x].title).join('、')}）をふりかえってみましょう。` : '少し日をおいて、またためしましょう。';
       } else { title = 'おさらい、できた！'; note = 'もう 1 日、おさらいをしましょう。'; }
     } else {
-      r.days[s.n] = { date: today, first: firsts, total: res.length, hints: res.reduce((a, x) => a + x.hints, 0), key: d.key };
+      r.days[s.n] = { date: today, first: firsts, total: res.length, hints: res.reduce((a, x) => a + x.hints, 0), key: d.key, ...(overN ? { over: overN } : {}), ...(dunN ? { dunno: dunN } : {}) };
       if (d.kind === '確認') {
         if (rate >= RULE.pass) {
           r.done = today; r.pending = null; r.low = 0; r.ver = u.ver;
@@ -1231,7 +1424,8 @@
       <span class="part">${esc(label)}</span>
       <h1>${title}</h1>
       <p class="score">${res.length} 問のうち、ヒントなしで一度にできたのは ${firsts} 問。</p>
-      <div class="line">${res.map((x, i) => (i ? '<i></i>' : '') + `<b class="${x.first ? 'ok' : 'help'}"></b>`).join('')}</div>
+      ${overN || dunN ? `<p class="note2">${overN ? `目安の時間をすぎた問題が ${overN} 問（一度にできた数には入れません）。` : ''}${dunN ? `「わからない」を ${dunN} 問で言えました。` : ''}</p>` : ''}
+      <div class="line">${res.map((x, i) => (i ? '<i></i>' : '') + `<b class="${x.first ? 'ok' : slow(x) ? 'slow' : 'help'}"></b>`).join('')}</div>
       <p class="muted">${note}</p>
       <div class="actions">
         <button class="pill" data-act="replay" type="button">もう一度きく</button>
@@ -1270,16 +1464,30 @@
     if (act === 'hint') { s.hints = Math.min(3, s.hints + 1); Music.hint(); drawItem(); }
     if (act === 'said') {
       s.solved = true; s.tries = 1;
-      s.results[s.idx] = { first: s.hints === 0, hints: s.hints, tries: 1, ms: Date.now() - (s.t0 || Date.now()) };
+      s.results[s.idx] = outcome(s, s.items[s.idx]); freeze(s);
       noteItem(s.items[s.idx], s.results[s.idx]); persist();
       Music.good(s.idx); drawItem();
     }
     if (act === 'next') { Music.tap(); advance(false); }
     if (act === 'skip') advance(true);
     if (act === 'replay') Music.melody(s.melody || []);
+    // わからない（D-045）
+    const it = s.items[s.idx];
+    if (act === 'dunno') {
+      s.dunno = true; freeze(s); Music.hint();
+      if (it.part === '見本') dkOffer(s, it, 'mean'); else s.dk = { step: 'what' };
+      drawItem();
+    }
+    if (act === 'dk') { if (t.dataset.w === 'mid') s.dk = { step: 'path', i: 0 }; else dkOffer(s, it, t.dataset.w); Music.tap(); drawItem(); }
+    if (act === 'dk-yes') { s.dk.i++; if (s.dk.i >= ((it.paths || [])[0] || []).length - 1) s.dk = { step: 'allok' }; Music.tap(); drawItem(); }
+    if (act === 'dk-no') { dkOffer(s, it, 'mid', s.dk.i); Music.hint(); drawItem(); }
+    if (act === 'dk-close') { s.dk = null; Music.tap(); drawItem(); }
+    if (act === 'look-later') { addAsk(s, t.dataset.u, +t.dataset.day); Music.tap(); drawItem(); }
+    if (act === 'look-now') { addAsk(s, t.dataset.u, +t.dataset.day); startLook(t.dataset.u, +t.dataset.day, s); }
+    if (act === 'back') endLook();
   });
   document.addEventListener('keydown', e => {
-    if (!session || session.solved || $('#menu').open) return;
+    if (!session || session.solved || session.dk || $('#menu').open) return;
     const it = session.items[session.idx];
     if (!it || it.part === '見本' || it.choices) return;
     const k = e.key === '-' ? '−' : e.key;
