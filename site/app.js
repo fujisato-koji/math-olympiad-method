@@ -835,8 +835,9 @@
       return;
     }
     if (act === 'full') {
-      const el = $('#explore');
-      if (document.fullscreenElement) document.exitFullscreen(); else if (el && el.requestFullscreen) el.requestFullscreen();
+      // 全画面はページ全体にする。探索の画面だけを全画面にすると、単元のページへ移ったとき枠の外になって押せなかった（D-055）
+      const el = document.documentElement;
+      if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); else if (el.requestFullscreen) el.requestFullscreen().catch(() => { /* 全画面にできない端末では、そのまま */ });
       return;
     }
     if (act === 'down') $('#view').scrollIntoView({ behavior: 'smooth' });
@@ -913,7 +914,7 @@
     pick(id);
     if (!X.pair) paint(true);
   });
-  document.addEventListener('fullscreenchange', () => { if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
+  document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
   // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は名前を付けた領域（D-019）
   function drawMap() {
