@@ -1,0 +1,692 @@
+# N-012 数のパズル（魔方陣、虫食い算）
+#
+# 書き方は N-001 の頭の注のとおり。段の物差しの大会のための単元（measure: true）。
+# 前提は L-001（きまりを見つける）と N-007（2 けたの計算、筆算の入口）。
+# 虫食い算は 2 けたのたし算・ひき算の筆算に限る（N-007 の範囲）。かけ算の虫食い算と 3 けたの筆算は扱わない。
+# 魔方陣は 3×3 で、たて・よこ・ななめの 3 つの和が同じもの。数は 0〜9（和 15 と 12）と、その 10 足し（和 45）。
+#   中央が平均になる・和は全体の 3 分の 1、などの性質は、わり算が前提にないので扱わない（全部わかっている並びから和を出す）。
+# 図は行ごとに中央そろえなので、全角の数字・空白・記号（＋ － ━）でどの行も同じ字数にする。□ や ア、イ は 1 字の数字の代わり。
+# check は □（または ア、イ）に入る数を総当たりで探し、答えが 1 つだけのときにその数を返す式（2 つ以上なら一覧が返り、道具が止まる）。
+#   虫食い算：図の 1・2・4 行目を数として読み、2 行目の頭の ＋ か － で式を決める。魔方陣：入れた数で 8 本の和がそろうかを見る。
+# 日の並び：1 日目 虫食い算（たし算）、2 日目 くり上がり・ひき算・くり下がり、3 日目 魔方陣、4 日目 わけ、5 日目 L-001 と N-007 と混ぜる。
+
+id: N-012
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: むしくいざん です。□に はいる すうじを みつけよう。
+        figure: "　２□\n＋３４\n━━━\n　５９"
+        explain: いちの くらいから みます。□ + 4 が 9 に なるので、□ は 5 です。じゅうの くらいは 2 + 3 = 5 で、あって います。25 + 34 = 59 です。
+      - part: 思い出す
+        text: 43 + 25 は いくつですか。
+        answer: 68
+        check: "43 + 25"
+        hints:
+          - いちの くらいどうし、じゅうの くらいどうしを たそう。
+          - いちの くらいは 3 + 5 だね。
+          - じゅうの くらいは 4 + 2 だね。
+        paths:
+          - [3 + 5 = 8, 4 + 2 = 6, 68]
+      - part: 思い出す
+        text: きまりを みつけよう。□に はいる かずは なんですか。
+        figure: "3、5、7、□、11"
+        answer: 9
+        check: "Fraction(fig.split('、')[0]) + 2 * fig.split('、').index('□')"
+        hints:
+          - となりの かずは、いくつずつ ふえて いるかな。
+          - 7 の つぎは、いくつ ふえるかな。
+          - □の つぎの 11 から もどって たしかめよう。
+        paths:
+          - [2 ずつ ふえる, 7 + 2 = 9, 9]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　４□\n＋２３\n━━━\n　６９"
+        answer: 6
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。
+          - □ + 3 が 9 に なる すうじを さがそう。
+          - じゅうの くらいも あって いるか たしかめよう。
+        paths:
+          - [□ + 3 = 9, □ は 6, 4 + 2 = 6 で あう]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□３\n＋３２\n━━━\n　７５"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - □は じゅうの くらいに あるね。
+          - □ + 3 が 7 に なる すうじを さがそう。
+          - いちの くらいの 3 + 2 も あって いるか たしかめよう。
+        paths:
+          - [いちの くらい 3 + 2 = 5 で あう, □ + 3 = 7, □ は 4]
+      - part: 今日
+        text: □□に はいる 2 けたの かずは なんですか。
+        figure: "　５２\n＋□□\n━━━\n　８９"
+        answer: 37
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(10, 100) if 52 + x == 89])"
+        hints:
+          - いちの くらいから きめよう。2 + □ が 9 に なるね。
+          - つぎに じゅうの くらい。5 + □ が 8 に なるね。
+          - 2 つの すうじを、じゅうの くらい、いちの くらいの じゅんに ならべよう。
+        paths:
+          - [いちの くらいは 7, じゅうの くらいは 3, 37]
+          - [89 − 52 を けいさん, 37]
+        note: 2 ほんめの みち（ひきざんで もとめる）に きづけば すばらしい。
+      - part: 挑戦
+        text: ア と イ には、すうじが 1 つずつ はいります。ア に はいる すうじは なんですか。
+        figure: "　ア６\n＋２イ\n━━━\n　５８"
+        answer: 3
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([a for a in range(1, 10) for b in range(10) if (lambda x, y, z: x + y == z if L[1][0] == '＋' else x - y == z)(*[Fraction(L[k][1:].replace('ア', '０１２３４５６７８９'[a]).replace('イ', '０１２３４５６７８９'[b])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。6 + イ が 8 に なるね。
+          - じゅうの くらいは、ア + 2 が 5 に なるね。
+          - ア に すうじを いれて、たしかめよう。
+        paths:
+          - [6 + イ = 8 で イ は 2, ア + 2 = 5, ア は 3]
+        note: ア と イ は べつべつに きめられる。わかる ところから きめる。
+    extra:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　３□\n＋４１\n━━━\n　７７"
+        answer: 6
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。
+          - □ + 1 が 7 に なる すうじを さがそう。
+          - じゅうの くらいも あって いるか たしかめよう。
+        paths:
+          - [□ + 1 = 7, □ は 6]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□２\n＋１５\n━━━\n　８７"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - □は じゅうの くらいに あるね。
+          - □ + 1 が 8 に なる すうじを さがそう。
+          - いちの くらいの 2 + 5 も あって いるか たしかめよう。
+        paths:
+          - [□ + 1 = 8, □ は 7]
+      - part: 挑戦
+        text: ア と イ には、すうじが 1 つずつ はいります。ア に はいる すうじは なんですか。
+        figure: "　ア３\n＋４イ\n━━━\n　６９"
+        answer: 2
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([a for a in range(1, 10) for b in range(10) if (lambda x, y, z: x + y == z if L[1][0] == '＋' else x - y == z)(*[Fraction(L[k][1:].replace('ア', '０１２３４５６７８９'[a]).replace('イ', '０１２３４５６７８９'[b])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。3 + イ が 9 に なるね。
+          - じゅうの くらいは、ア + 4 が 6 に なるね。
+          - ア に すうじを いれて、たしかめよう。
+        paths:
+          - [3 + イ = 9 で イ は 6, ア + 4 = 6, ア は 2]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: くりあがりの ある むしくいざん です。
+        figure: "　２□\n＋３７\n━━━\n　６４"
+        explain: いちの くらいは、□ + 7 の こたえの いちの くらいが 4 です。□ + 7 は 7 より ちいさく ならないので、4 では なく 14 です。7 + 7 = 14 だから □ は 7。くりあがった 1 を じゅうの くらいに たすと、2 + 3 + 1 = 6 で あって います。27 + 37 = 64 です。
+      - part: 思い出す
+        text: □に はいる すうじは なんですか。
+        figure: "　□１\n＋３５\n━━━\n　７６"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - □は じゅうの くらいに あるね。
+          - □ + 3 が 7 に なる すうじを さがそう。
+          - いちの くらいの 1 + 5 も あって いるか たしかめよう。
+        paths:
+          - [□ + 3 = 7, □ は 4]
+      - part: 思い出す
+        text: 56 + 27 は いくつですか。
+        answer: 83
+        check: "56 + 27"
+        hints:
+          - いちの くらいから たそう。6 + 7 で くりあがるね。
+          - じゅうの くらいは、くりあがった 1 も たそう。
+          - じゅうの くらいは 5 + 2 + 1 だね。
+        paths:
+          - [6 + 7 = 13 で 1 くりあがる, 5 + 2 + 1 = 8, 83]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　３□\n＋２６\n━━━\n　６４"
+        answer: 8
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ + 6 の こたえの いちの くらいが 4 だね。
+          - □ + 6 は 4 には ならないね。いくつに なるかな。
+          - くりあがった 1 を いれて、じゅうの くらいも たしかめよう。
+        paths:
+          - [□ + 6 = 14, □ は 8, 3 + 2 + 1 = 6 で あう]
+        note: 「□ + 6 = 4」に なる すうじを さがして こまりやすい。くりあがりで 14 に なる ことに きづかせる。
+      - part: 今日
+        text: ひきざんの むしくいざん です。□に はいる すうじは なんですか。
+        figure: "　５□\n－２３\n━━━\n　３４"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。□ − 3 が 4 に なるね。
+          - 3 を ひいて 4 に なる かずは なにかな。
+          - たしざんで たしかめよう。34 + 23 は いくつかな。
+        paths:
+          - [□ − 3 = 4, □ は 7]
+          - [34 + 23 = 57, □ は 7]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□６\n－４２\n━━━\n　５４"
+        answer: 9
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - □は じゅうの くらいに あるね。
+          - □ − 4 が 5 に なる すうじを さがそう。
+          - いちの くらいの 6 − 2 も あって いるか たしかめよう。
+        paths:
+          - [□ − 4 = 5, □ は 9]
+          - [54 + 42 = 96, □ は 9]
+      - part: 挑戦
+        text: くりさがりの ある ひきざんです。□に はいる すうじは なんですか。
+        figure: "　５□\n－１８\n━━━\n　３６"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ − 8 が 6 に なるね。
+          - □ から 8 は ひけないね。じゅうの くらいから 10 を かりよう。
+          - たしざんで たしかめても いいよ。36 + 18 は いくつかな。
+        paths:
+          - [10 を かりて 1□ − 8 = 6, 1□ は 14, □ は 4]
+          - [36 + 18 = 54, □ は 4]
+        note: じゅうの くらいは 5 − 1 − 1 = 3 で、かりた 1 も ひく。
+    extra:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　４□\n＋１６\n━━━\n　６３"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ + 6 の こたえの いちの くらいが 3 だね。
+          - □ + 6 は 3 には ならないね。いくつに なるかな。
+          - くりあがった 1 を いれて、じゅうの くらいも たしかめよう。
+        paths:
+          - [□ + 6 = 13, □ は 7, 4 + 1 + 1 = 6 で あう]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□９\n－３４\n━━━\n　５５"
+        answer: 8
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - □は じゅうの くらいに あるね。
+          - □ − 3 が 5 に なる すうじを さがそう。
+          - たしざんで たしかめよう。55 + 34 は いくつかな。
+        paths:
+          - [□ − 3 = 5, □ は 8]
+      - part: 挑戦
+        text: □に はいる すうじは なんですか。
+        figure: "　７□\n－２９\n━━━\n　４３"
+        answer: 2
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ − 9 が 3 に なるね。
+          - □ から 9 は ひけないね。10 を かりよう。
+          - たしざんで たしかめても いいよ。43 + 29 は いくつかな。
+        paths:
+          - [10 を かりて 1□ − 9 = 3, 1□ は 12, □ は 2]
+          - [43 + 29 = 72, □ は 2]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: まほうじん です。たて、よこ、ななめに ならんだ 3 つの かずを たすと、どれも おなじに なります。
+        figure: "２　７　６\n９　５　１\n４　３　８"
+        explain: よこの いちばん うえは 2 + 7 + 6 = 15。たての まんなかは 7 + 5 + 3 = 15。ななめは 2 + 5 + 8 = 15。たて 3 つ、よこ 3 つ、ななめ 2 つの どの ならびも 15 に なります。このような ならびを まほうじん と いいます。
+      - part: 思い出す
+        text: □に はいる すうじは なんですか。
+        figure: "　３□\n＋４７\n━━━\n　８２"
+        answer: 5
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ + 7 の こたえの いちの くらいが 2 だね。
+          - □ + 7 は 2 には ならないね。いくつに なるかな。
+          - くりあがった 1 を いれて、じゅうの くらいも たしかめよう。
+        paths:
+          - [□ + 7 = 12, □ は 5, 3 + 4 + 1 = 8 で あう]
+      - part: 思い出す
+        text: 6 + 3 + 9 は いくつですか。
+        answer: 18
+        check: "6 + 3 + 9"
+        hints:
+          - まえから じゅんに たそう。
+          - 6 + 3 は いくつかな。
+          - その こたえに 9 を たそう。
+        paths:
+          - [6 + 3 = 9, 9 + 9 = 18]
+          - [6 + 9 = 15 を さきに, 15 + 3 = 18]
+      - part: 今日
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。□に はいる かずは なんですか。
+        figure: "４　９　２\n３　５　７\n８　１　□"
+        answer: 6
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの いちばん したは、8 + 1 + □ だね。
+          - 8 + 1 に いくつを たすと 15 に なるかな。
+        paths:
+          - [8 + 1 = 9, 15 に するには あと 6, 6]
+          - [たての みぎ 2 + 7 = 9, あと 6, 6]
+      - part: 今日
+        text: どの ならびも、たすと 12 です。イ に はいる かずは なんですか。
+        figure: "１　６　５\n８　ア　０\n３　イ　７"
+        answer: 2
+        check: "(lambda s: s[0] if len(s) == 1 else s)([b for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - イ が はいって いる よこの ならびを みよう。
+          - 3 + イ + 7 が 12 に なるね。
+          - 3 + 7 は いくつかな。12 まで あと いくつかな。
+        paths:
+          - [3 + 7 = 10, 12 まで あと 2, 2]
+        note: ア が わからなくても、ア の ない ならびを えらべば イ が きまる。
+      - part: 今日
+        text: この まほうじんの、1 つの ならびの 3 つの かずを たすと、いくつですか。
+        figure: "１２　１９　１４\n１７　１５　１３\n１６　１１　１８"
+        answer: 45
+        check: "(lambda m: sum(m[0]) if len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1 else 'まほうじんで ない')([[Fraction(v) for v in r.split('　')] for r in fig.splitlines()])"
+        hints:
+          - よこの いちばん うえの 3 つを たそう。
+          - 12 + 19 を さきに けいさん しよう。
+          - ほかの ならびでも おなじに なるか たしかめよう。
+        paths:
+          - [12 + 19 = 31, 31 + 14 = 45]
+      - part: 挑戦
+        text: この まほうじんは、たした かずが かいて ありません。ア に はいる かずは なんですか。
+        figure: "ア　１　６\n３　５　７\n４　９　イ"
+        answer: 8
+        check: "(lambda s: s[0] if len(s) == 1 else s)([a for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - 3 つ ぜんぶ わかって いる ならびを さがそう。
+          - その ならびを たすと いくつかな。
+          - ア が はいって いる ならびも、おなじ かずに なるね。
+        paths:
+          - [よこの まんなか 3 + 5 + 7 = 15, うえの よこ ア + 1 + 6 = 15, ア は 8]
+        note: たした かずが かいて いない ときは、まず ぜんぶ わかって いる ならびを さがす。
+    extra:
+      - part: 今日
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。□に はいる かずは なんですか。
+        figure: "２　９　４\n７　５　３\n６　□　８"
+        answer: 1
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの いちばん したは、6 + □ + 8 だね。
+          - 6 + 8 に いくつを たすと 15 に なるかな。
+        paths:
+          - [6 + 8 = 14, 15 まで あと 1, 1]
+      - part: 今日
+        text: この まほうじんの、1 つの ならびの 3 つの かずを たすと、いくつですか。
+        figure: "３　８　１\n２　４　６\n７　０　５"
+        answer: 12
+        check: "(lambda m: sum(m[0]) if len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1 else 'まほうじんで ない')([[Fraction(v) for v in r.split('　')] for r in fig.splitlines()])"
+        hints:
+          - よこの いちばん うえの 3 つを たそう。
+          - 3 + 8 を さきに けいさん しよう。
+          - ほかの ならびでも おなじに なるか たしかめよう。
+        paths:
+          - [3 + 8 = 11, 11 + 1 = 12]
+      - part: 挑戦
+        text: この まほうじんは、たした かずが かいて ありません。ア に はいる かずは なんですか。
+        figure: "ア　９　２\n３　５　７\n８　イ　６"
+        answer: 4
+        check: "(lambda s: s[0] if len(s) == 1 else s)([a for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - 3 つ ぜんぶ わかって いる ならびを さがそう。
+          - その ならびを たすと いくつかな。
+          - ア が はいって いる ならびも、おなじ かずに なるね。
+        paths:
+          - [よこの まんなか 3 + 5 + 7 = 15, うえの よこ ア + 9 + 2 = 15, ア は 4]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: □に はいる すうじは なんですか。
+        figure: "　４□\n＋２７\n━━━\n　７２"
+        answer: 5
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ + 7 の こたえの いちの くらいが 2 だね。
+          - □ + 7 は 2 には ならないね。いくつに なるかな。
+          - くりあがった 1 を いれて、じゅうの くらいも たしかめよう。
+        paths:
+          - [□ + 7 = 12, □ は 5, 4 + 2 + 1 = 7 で あう]
+      - part: 思い出す
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。□に はいる かずは なんですか。
+        figure: "６　１　８\n７　５　３\n□　９　４"
+        answer: 2
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの いちばん したは、□ + 9 + 4 だね。
+          - 9 + 4 に いくつを たすと 15 に なるかな。
+        paths:
+          - [9 + 4 = 13, 15 まで あと 2, 2]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□５\n－２８\n━━━\n　３７"
+        answer: 6
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、5 から 8 が ひけないね。くりさがりが あるよ。
+          - たしざんで たしかめよう。37 + 28 は いくつかな。
+          - その こたえの じゅうの くらいを みよう。
+        paths:
+          - [37 + 28 = 65, □ は 6]
+          - [じゅうの くらい □ − 1 − 2 = 3, □ は 6]
+      - part: 今日
+        text: どの ならびも、たすと 12 です。イ に はいる かずは なんですか。
+        figure: "３　２　７\n８　ア　０\n１　イ　５"
+        answer: 6
+        check: "(lambda s: s[0] if len(s) == 1 else s)([b for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - イ が はいって いる よこの ならびを みよう。
+          - 1 + イ + 5 が 12 に なるね。
+          - 1 + 5 は いくつかな。12 まで あと いくつかな。
+        paths:
+          - [1 + 5 = 6, 12 まで あと 6, 6]
+      - part: わけ
+        text: □ は 7 です。どうして 7 と いえるのか、くちで いってみよう。
+        figure: "　４□\n＋２６\n━━━\n　７３"
+        explain: 「いちの くらいは、□ + 6 の こたえの いちの くらいが 3。□ + 6 は 6 より ちいさく ならないから 3 では なく 13。13 に なるのは 7 + 6。だから □ は 7」や「47 + 26 を けいさん すると 73 に なって あう。6 を いれると 72、8 を いれると 74 で あわない。だから 7」と いえれば よい。2 つめの いいかたは たしかめ。1 つめの ように「7 の ほかには ない」わけまで いえれば なお よい。
+        hints:
+          - いちの くらいの □ + 6 は、いくつに なれば いいかな。
+          - □ + 6 が 3 に ならない ときは、くりあがりを かんがえよう。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [□ + 6 の いちの くらいが 3, □ + 6 = 13, だから □ は 7]
+          - [47 + 26 = 73 で あう, ほかの すうじでは あわない, だから 7]
+      - part: わけ
+        text: □ は 4 です。どうして 4 と いえるのか、くちで いってみよう。
+        figure: "８　１　６\n３　５　７\n□　９　２"
+        explain: 「よこの まんなかは 3 + 5 + 7 = 15。まほうじん だから、どの ならびも 15。したの よこは 9 + 2 = 11 で、15 に するには あと 4。だから 4」や「ななめの 6 + 5 = 11 で、あと 4。だから 4」と いえれば よい。たした かずが かいて いないので、まず ぜんぶ わかって いる ならびを さがす ところが かなめ。
+        hints:
+          - 3 つ ぜんぶ わかって いる ならびを さがそう。
+          - その ならびを たすと いくつかな。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [よこの まんなかは 15, どの ならびも 15, 9 + 2 に あと 4 で 15, だから 4]
+      - part: わけ
+        text: □ は 6 です。どうして 6 と いえるのか、くちで いってみよう。
+        figure: "　□２\n－１７\n━━━\n　４５"
+        explain: 「ひきざんは たしざんで たしかめられる。45 + 17 = 62 だから、□ は 6」や「いちの くらいは 2 から 7 が ひけないので、じゅうの くらいから 10 を かりる。じゅうの くらいは □ − 1 − 1 = 4 だから、□ は 6」と いえれば よい。1 つめは「ひきざんは たしざんの ぎゃく」を つかった いいかた。
+        hints:
+          - ひきざんの こたえに、ひいた かずを たすと どう なるかな。
+          - 45 + 17 を けいさん してみよう。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [45 + 17 = 62, だから □ は 6]
+          - [10 を かりる, □ − 1 − 1 = 4, だから □ は 6]
+    extra:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□６\n＋１８\n━━━\n　５４"
+        answer: 3
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは 6 + 8 で くりあがるね。
+          - じゅうの くらいは、□ + 1 + 1 が 5 に なるね。
+          - □ + 2 が 5 に なる すうじを さがそう。
+        paths:
+          - [6 + 8 = 14 で 1 くりあがる, □ + 1 + 1 = 5, □ は 3]
+      - part: 今日
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。□に はいる かずは なんですか。
+        figure: "４　３　８\n９　□　１\n２　７　６"
+        answer: 5
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの まんなかは、9 + □ + 1 だね。
+          - 9 + 1 に いくつを たすと 15 に なるかな。
+        paths:
+          - [9 + 1 = 10, 15 まで あと 5, 5]
+      - part: 挑戦
+        text: ア と イ には、すうじが 1 つずつ はいります。イ に はいる すうじは なんですか。
+        figure: "　ア４\n－１イ\n━━━\n　２６"
+        answer: 8
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([b for a in range(1, 10) for b in range(10) if (lambda x, y, z: x + y == z if L[1][0] == '＋' else x - y == z)(*[Fraction(L[k][1:].replace('ア', '０１２３４５６７８９'[a]).replace('イ', '０１２３４５６７８９'[b])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、4 − イ が 6 に なるね。4 から ひいて 6 には ならないね。
+          - じゅうの くらいから 10 を かりると、14 − イ = 6 だね。
+          - 14 から いくつ ひくと 6 に なるかな。
+        paths:
+          - [10 を かりて 14 − イ = 6, イ は 8]
+          - [26 + 1イ = ア4 で いちの くらい 6 + イ が 4 か 14, イ は 8]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: きまりを みつけよう。つぎに くるのは どちらですか。
+        figure: "🔴🔵🔵🔴🔵🔵🔴"
+        choices: [🔴, 🔵]
+        answer: 🔵
+        check: "'🔴🔵🔵'[len(fig) % 3]"
+        hints:
+          - おなじ ならびが くりかえして いるね。
+          - 「🔴🔵🔵」が いくつ あるかな。
+          - さいごの 🔴 の つぎは なにかな。
+        paths:
+          - [🔴🔵🔵 の くりかえし, 🔴 の つぎは 🔵]
+      - part: 思い出す
+        text: 62 − 37 は いくつですか。
+        answer: 25
+        check: "62 - 37"
+        hints:
+          - いちの くらいの 2 から 7 は ひけないね。
+          - じゅうの くらいから 10 を かりよう。12 − 7 は いくつかな。
+          - じゅうの くらいは 6 − 1 − 3 だね。
+        paths:
+          - [12 − 7 = 5, 6 − 1 − 3 = 2, 25]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　２□\n＋４８\n━━━\n　７５"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ + 8 の こたえの いちの くらいが 5 だね。
+          - □ + 8 は 5 には ならないね。いくつに なるかな。
+          - くりあがった 1 を いれて、じゅうの くらいも たしかめよう。
+        paths:
+          - [□ + 8 = 15, □ は 7, 2 + 4 + 1 = 7 で あう]
+      - part: 今日
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。ア に はいる かずは なんですか。
+        figure: "６　７　２\n１　５　９\n８　ア　イ"
+        answer: 3
+        check: "(lambda s: s[0] if len(s) == 1 else s)([a for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - ア が はいって いて、ほかが ぜんぶ わかる ならびを さがそう。
+          - たての まんなかは、7 + 5 + ア だね。
+          - 7 + 5 に いくつを たすと 15 に なるかな。
+        paths:
+          - [たての まんなか 7 + 5 = 12, 15 まで あと 3, 3]
+        note: よこの いちばん したは ア と イ の 2 つが わからないので つかえない。
+      - part: 今日
+        text: きまりを みつけよう。□に はいる かずは なんですか。
+        figure: "12、15、18、□、24"
+        answer: 21
+        check: "Fraction(fig.split('、')[0]) + 3 * fig.split('、').index('□')"
+        hints:
+          - となりの かずは、いくつずつ ふえて いるかな。
+          - 15 − 12 や 18 − 15 を けいさん しよう。
+          - 18 に おなじ かずを たそう。
+        paths:
+          - [3 ずつ ふえる, 18 + 3 = 21]
+          - [□の つぎは 24, 24 − 3 = 21]
+      - part: 挑戦
+        text: ア と イ には、すうじが 1 つずつ はいります。ア に はいる すうじは なんですか。
+        figure: "　ア８\n＋２イ\n━━━\n　７１"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([a for a in range(1, 10) for b in range(10) if (lambda x, y, z: x + y == z if L[1][0] == '＋' else x - y == z)(*[Fraction(L[k][1:].replace('ア', '０１２３４５６７８９'[a]).replace('イ', '０１２３４５６７８９'[b])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、8 + イ の こたえの いちの くらいが 1 だね。
+          - くりあがりが あるか かんがえよう。8 + イ は いくつかな。
+          - じゅうの くらいは、ア + 2 + くりあがりの 1 が 7 に なるね。
+        paths:
+          - [8 + イ = 11 で イ は 3, ア + 2 + 1 = 7, ア は 4]
+        note: くりあがりの 1 を わすれて 5 と こたえやすい。
+    extra:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□３\n－２６\n━━━\n　４７"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、3 から 6 が ひけないね。くりさがりが あるよ。
+          - たしざんで たしかめよう。47 + 26 は いくつかな。
+          - その こたえの じゅうの くらいを みよう。
+        paths:
+          - [47 + 26 = 73, □ は 7]
+      - part: 今日
+        text: きまりを みつけよう。□に はいる かずは なんですか。
+        figure: "1、4、7、□、13"
+        answer: 10
+        check: "Fraction(fig.split('、')[0]) + 3 * fig.split('、').index('□')"
+        hints:
+          - となりの かずは、いくつずつ ふえて いるかな。
+          - 4 − 1 や 7 − 4 を けいさん しよう。
+          - 7 に おなじ かずを たそう。
+        paths:
+          - [3 ずつ ふえる, 7 + 3 = 10]
+      - part: 挑戦
+        text: この まほうじんは、たした かずが かいて ありません。イ に はいる かずは なんですか。
+        figure: "ア　３　４\n１　５　９\n６　７　イ"
+        answer: 2
+        check: "(lambda s: s[0] if len(s) == 1 else s)([b for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - 3 つ ぜんぶ わかって いる ならびを さがそう。
+          - その ならびを たすと いくつかな。
+          - イ が はいって いる ならびも、おなじ かずに なるね。
+        paths:
+          - [よこの まんなか 1 + 5 + 9 = 15, したの よこ 6 + 7 + イ = 15, イ は 2]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　３□\n＋５２\n━━━\n　８６"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。
+          - □ + 2 が 6 に なる すうじを さがそう。
+          - じゅうの くらいも あって いるか たしかめよう。
+        paths:
+          - [□ + 2 = 6, □ は 4]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□７\n＋１６\n━━━\n　７３"
+        answer: 5
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは 7 + 6 で くりあがるね。
+          - じゅうの くらいは、□ + 1 + 1 が 7 に なるね。
+          - □ + 2 が 7 に なる すうじを さがそう。
+        paths:
+          - [7 + 6 = 13 で 1 くりあがる, □ + 1 + 1 = 7, □ は 5]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　６□\n－２４\n━━━\n　４３"
+        answer: 7
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいから みよう。□ − 4 が 3 に なるね。
+          - 4 を ひいて 3 に なる かずは なにかな。
+          - たしざんで たしかめよう。43 + 24 は いくつかな。
+        paths:
+          - [□ − 4 = 3, □ は 7]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　８□\n－４７\n━━━\n　３５"
+        answer: 2
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ − 7 が 5 に なるね。
+          - □ から 7 は ひけないね。10 を かりよう。
+          - たしざんで たしかめても いいよ。35 + 47 は いくつかな。
+        paths:
+          - [10 を かりて 1□ − 7 = 5, 1□ は 12, □ は 2]
+          - [35 + 47 = 82, □ は 2]
+      - part: 今日
+        text: たて、よこ、ななめの 3 つを たすと、どれも 15 です。□に はいる かずは なんですか。
+        figure: "８　３　４\n１　□　９\n６　７　２"
+        answer: 5
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの まんなかは、1 + □ + 9 だね。
+          - 1 + 9 に いくつを たすと 15 に なるかな。
+        paths:
+          - [1 + 9 = 10, 15 まで あと 5, 5]
+      - part: 今日
+        text: この まほうじんの、1 つの ならびの 3 つの かずを たすと、いくつですか。
+        figure: "５　０　７\n６　４　２\n１　８　３"
+        answer: 12
+        check: "(lambda m: sum(m[0]) if len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1 else 'まほうじんで ない')([[Fraction(v) for v in r.split('　')] for r in fig.splitlines()])"
+        hints:
+          - よこの いちばん うえの 3 つを たそう。
+          - 5 + 0 を さきに けいさん しよう。
+          - ほかの ならびでも おなじに なるか たしかめよう。
+        paths:
+          - [5 + 0 + 7 = 12]
+      - part: 今日
+        text: この まほうじんは、たした かずが かいて ありません。ア に はいる かずは なんですか。
+        figure: "４　９　２\nア　５　７\n８　１　イ"
+        answer: 3
+        check: "(lambda s: s[0] if len(s) == 1 else s)([a for a in range(30) for b in range(30) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[a if v == 'ア' else b if v == 'イ' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - 3 つ ぜんぶ わかって いる ならびを さがそう。
+          - その ならびを たすと いくつかな。
+          - ア が はいって いる ならびも、おなじ かずに なるね。
+        paths:
+          - [よこの いちばん うえ 4 + 9 + 2 = 15, たての ひだり 4 + ア + 8 = 15, ア は 3]
+      - part: 今日
+        text: ア と イ には、すうじが 1 つずつ はいります。イ に はいる すうじは なんですか。
+        figure: "　ア５\n＋３イ\n━━━\n　９３"
+        answer: 8
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([b for a in range(1, 10) for b in range(10) if (lambda x, y, z: x + y == z if L[1][0] == '＋' else x - y == z)(*[Fraction(L[k][1:].replace('ア', '０１２３４５６７８９'[a]).replace('イ', '０１２３４５６７８９'[b])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、5 + イ の こたえの いちの くらいが 3 だね。
+          - 5 + イ は 3 には ならないね。いくつに なるかな。
+          - 13 に するには、5 に いくつ たせば いいかな。
+        paths:
+          - [5 + イ = 13, イ は 8]
+    extra:
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　□６\n＋１９\n━━━\n　６５"
+        answer: 4
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは 6 + 9 で くりあがるね。
+          - じゅうの くらいは、□ + 1 + 1 が 6 に なるね。
+          - □ + 2 が 6 に なる すうじを さがそう。
+        paths:
+          - [6 + 9 = 15 で 1 くりあがる, □ + 1 + 1 = 6, □ は 4]
+      - part: 今日
+        text: □に はいる すうじは なんですか。
+        figure: "　７□\n－３６\n━━━\n　３９"
+        answer: 5
+        check: "(lambda L: (lambda s: s[0] if len(s) == 1 else s)([d for d in range(10) if not (d == 0 and '□' in L[0][1] + L[1][1] + L[3][1]) and (lambda a, b, c: a + b == c if L[1][0] == '＋' else a - b == c)(*[Fraction(L[k][1:].replace('□', '０１２３４５６７８９'[d])) for k in (0, 1, 3)])]))(fig.splitlines())"
+        hints:
+          - いちの くらいは、□ − 6 が 9 に なるね。
+          - □ から 6 を ひいて 9 には ならないね。10 を かりよう。
+          - たしざんで たしかめても いいよ。39 + 36 は いくつかな。
+        paths:
+          - [10 を かりて 1□ − 6 = 9, 1□ は 15, □ は 5]
+          - [39 + 36 = 75, □ は 5]
+      - part: 今日
+        text: どの ならびも、たすと 12 です。□に はいる かずは なんですか。
+        figure: "７　０　５\n２　□　６\n３　８　１"
+        answer: 4
+        check: "(lambda s: s[0] if len(s) == 1 else s)([x for x in range(100) if (lambda m: len(set([sum(r) for r in m] + [sum([r[j] for r in m]) for j in range(3)] + [m[0][0] + m[1][1] + m[2][2], m[0][2] + m[1][1] + m[2][0]])) == 1)([[x if v == '□' else Fraction(v) for v in r.split('　')] for r in fig.splitlines()])])"
+        hints:
+          - □が はいって いる ならびを 1 つ えらぼう。
+          - よこの まんなかは、2 + □ + 6 だね。
+          - 2 + 6 に いくつを たすと 12 に なるかな。
+        paths:
+          - [2 + 6 = 8, 12 まで あと 4, 4]

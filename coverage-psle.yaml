@@ -119,7 +119,7 @@ items:
   topic: 10 000 までの数
   sources: *id001
   units:
-  - N-009
+  - N-073
 - id: T-17
   field: P3
   topic: たし算とひき算
@@ -178,7 +178,7 @@ items:
   topic: 100 000 までの数
   sources: *id001
   units:
-  - N-009
+  - N-073
 - id: T-26
   field: P4
   topic: 約数と倍数
@@ -251,7 +251,7 @@ items:
   topic: 1 千万までの数、四則（計算の順序、かっこ）
   sources: *id001
   units:
-  - N-009
+  - N-073
   - N-015
 - id: T-37
   field: P5

@@ -252,6 +252,13 @@ def check(data, problems):
                             errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
+                if "svg" in item:
+                    # SVG の図（D-040）：<svg> で始まり viewBox がある。script、on…= の属性、外への参照は使わない
+                    s = str(item["svg"])
+                    if not re.match(r'\s*<svg\b[^>]*\bviewBox="[^"]+"', s) or not s.rstrip().endswith("</svg>"):
+                        errors.append(f"{where}: svg は viewBox のある <svg>…</svg> にする")
+                    if re.search(r"<script|<foreignObject|\son[a-z]+\s*=|href\s*=|url\(", s, re.I):
+                        errors.append(f"{where}: svg に script、on…= の属性、外への参照は書かない")
                 if "check" in item:
                     try:
                         got = run_check(item, str(item.get("figure", "")))

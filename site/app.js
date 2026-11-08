@@ -1020,7 +1020,9 @@
     const it = s.items[s.idx];
     // 図の並びが折り返すと意味が変わるので、いちばん長い行が 1 行に収まる大きさにする
     const longest = it.figure ? Math.max(...String(it.figure).split('\n').map(l => Array.from(l).length)) : 0;
-    const fig = it.figure ? `<div class="fig" style="--n:${longest}" aria-label="え">${esc(it.figure)}</div>` : '';
+    // 図：文字の図（figure）と、線や形の図（svg、D-040）。svg は地図の問題ファイルに書いたものだけを出す（道具が確かめる）
+    const fig = (it.figure ? `<div class="fig" style="--n:${longest}" aria-label="え">${esc(it.figure)}</div>` : '')
+      + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '');
     let body;
     if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）

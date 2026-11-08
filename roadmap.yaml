@@ -399,7 +399,7 @@ units:
     stage: 1
     level: 1
     region: houteishiki
-    needs: [N-001]
+    needs: [N-001, L-002]
     plan:
       - 導入: どちらが重いか（てんびん 1 つ）
       - 練習: 3 つを重い順に並べる
@@ -435,7 +435,7 @@ units:
     stage: 1
     level: 1
     region: katachi
-    needs: []
+    needs: [N-001]
     plan:
       - 導入: さんかく、しかく、まるを見分ける
       - 練習: 辺と角（かど）の数
@@ -577,11 +577,11 @@ units:
       - 混ぜる: N-006 と混ぜる
       - 確認: 2 けたの計算
   - {id: N-008, title: 偶数と奇数, stage: 2, level: 2, region: seisu, needs: [N-007], days: 5}
-  - {id: N-009, title: 大きな数と位, stage: 2, level: 2, region: kazu, needs: [N-007], days: 5}
+  - {id: N-009, title: 1000 までの数と位, stage: 2, level: 2, region: kazu, needs: [N-007], days: 5}
   - {id: N-010, title: 正負の数のたし算とひき算, stage: 2, level: 2, region: keisan, needs: [N-004, N-007], days: 6, keys: [−]}
-  - {id: N-011, title: 絶対値（数直線の上の距離）, stage: 2, level: 2, region: kazu, needs: [N-010], days: 5}
+  - {id: N-011, title: 絶対値（数直線の上の距離）, stage: 2, level: 2, region: kazu, needs: [N-010], days: 5, keys: [−]}
   - {id: N-012, title: 数のパズル（魔方陣、虫食い算）, stage: 2, level: 2, region: kazu, needs: [L-001, N-007], days: 6, measure: true}
-  - {id: A-002, title: □を使った式, stage: 2, level: 2, region: houteishiki, needs: [N-007], days: 5}
+  - {id: A-002, title: □を使った式, stage: 2, level: 2, region: houteishiki, needs: [N-007, A-001], days: 5}
   - {id: C-003, title: 表と樹形図で数える, stage: 2, level: 2, region: kazoekata, needs: [C-002], days: 5}
   - {id: C-004, title: 道順を数える, stage: 2, level: 2, region: kazoekata, needs: [C-003], days: 5}
   - {id: G-005, title: 長さとまわりの長さ, stage: 2, level: 2, region: hakaru, needs: [G-002, N-007], days: 5}
@@ -637,9 +637,9 @@ units:
   - {id: N-024, title: 約数の個数と和、階乗の素因数の個数（割り算のくり返し）, stage: 3, level: 2, region: seisu, needs: [N-021, C-005, A-009], days: 5}
   - {id: N-025, title: n 進法, stage: 3, level: 2, region: seisu, needs: [N-009, N-014, A-009], days: 5, measure: true}
   - {id: N-026, title: 分数の計算のくふう, stage: 3, level: 2, region: keisan, needs: [N-019, N-018], days: 6, measure: true}
-  - {id: A-003, title: 図にして考える（線分図）, stage: 3, level: 2, region: houteishiki, needs: [A-002], days: 6}
-  - {id: A-004, title: 等差数列とその和, stage: 3, level: 2, region: shiki, needs: [N-015, L-001, N-014], days: 6}
-  - {id: A-005, title: 比と割合, stage: 3, level: 2, region: kansu, needs: [N-019, N-020], days: 8}
+  - {id: A-003, title: 図にして考える（線分図）, stage: 3, level: 2, region: houteishiki, needs: [A-002, N-013, N-014], days: 6}
+  - {id: A-004, title: 等差数列とその和, stage: 3, level: 2, region: shiki, needs: [N-015, L-001, N-014, N-009], days: 6}
+  - {id: A-005, title: 比と割合, stage: 3, level: 2, region: kansu, needs: [N-019, N-020, N-018], days: 8}
   - {id: A-006, title: 比例と反比例, stage: 3, level: 2, region: kansu, needs: [A-005], days: 6}
   - {id: A-007, title: 速さ、仕事、濃度を比例で解く, stage: 3, level: 2, region: kansu, needs: [A-006, G-046, N-059], days: 8, measure: true}
   - {id: A-008, title: 規則性と群数列, stage: 3, level: 2, region: shiki, needs: [A-004], days: 6}
@@ -708,6 +708,7 @@ units:
   - {id: B-083, title: 呼吸のしくみの入口（細胞の呼吸の式、酸素を使う呼吸と使わない呼吸、酵母と乳酸菌の発酵、光合成との比べ）, stage: 3, level: 2, region: bunshi-saibo, needs: [B-019, B-020, B-074], days: 4}
   - {id: E-210, title: 水をきれいにする（にごった水をしばらく置いて沈める、砂と小石と炭の層でこす、こした水のきれいさを目盛りの見え方で比べる、こしただけでは飲めないわけ）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, E-171, G-046], days: 5}
   - {id: E-211, title: ごみを分けて資源にもどす（燃やすごみと資源ごみ、缶を磁石で分ける、紙・びん・ペットボトルが何に生まれ変わるか、1 週間の家のごみを量って表にし減らし方を考える）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, H-064, S-027], days: 5}
+  - {id: N-073, title: 大きな数（万・億の位と位取り、10 倍と 10 分の 1、およその数）, stage: 3, level: 2, region: kazu, needs: [N-009, N-013], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015], days: 5}

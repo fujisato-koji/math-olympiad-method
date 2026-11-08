@@ -66,6 +66,7 @@ items:
   units:
   - N-009
   - N-012
+  - N-073
 - id: T-08
   field: データ
   topic: 平均（相加平均）
