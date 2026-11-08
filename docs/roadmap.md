@@ -27,14 +27,14 @@
 | IMO | 176 | 1176 |
 | 東京大学大学院数理科学研究科（修士課程入試） | 129 | 1031 |
 | GRE Mathematics Subject Test（ETS） | 175 | 1322 |
-| UC Berkeley Preliminary Examination | 160 | 1269 |
+| UC Berkeley Preliminary Examination | 162 | 1279 |
 | 国際物理オリンピック（IPhO）Syllabus | 166 | 1114 |
 | 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 245 | 1879 |
 | GRE Physics Test（ETS） | 210 | 1581 |
 | University of Cambridge ほか（STEP 2・3） | 168 | 1086 |
 | Indian Institutes of Technology（JEE Advanced、数学・物理・化学） | 236 | 1538 |
 | National Testing Agency（JEE Main、数学・物理・化学） | 222 | 1442 |
-| University of Oxford ほか（TMUA） | 106 | 645 |
+| University of Oxford ほか（TMUA） | 108 | 655 |
 | 東京大学（理科の入学試験、数学と理科） | 138 | 891 |
 | 中国の普通高等学校招生全国統一考試（高考、数学と理科） | 121 | 764 |
 | 韓国の大学修学能力試験（修能、数学と科学探究） | 81 | 519 |
@@ -52,7 +52,7 @@
 | GCE O-Level Mathematics（シンガポール） | 97 | 593 |
 | GCE O-Level Additional Mathematics（シンガポール） | 80 | 493 |
 | AMC 8（MAA） | 103 | 619 |
-| Math Kangaroo | 103 | 637 |
+| Math Kangaroo | 104 | 642 |
 | Google DeepMind の Research Scientist | 299 | 2248 |
 | FE Mechanical（NCEES） | 269 | 1978 |
 | FE Electrical and Computer（NCEES） | 260 | 1994 |
@@ -85,9 +85,9 @@
 | 工学者（エリザベス女王工学賞の研究に届く知識） | 392 | 3141 |
 | Math Kangaroo（1・2 年生） | 43 | 237 |
 | Math Kangaroo（3・4 年生） | 38 | 208 |
-| Math Kangaroo（5・6 年生） | 53 | 305 |
-| Math Kangaroo（7・8 年生） | 76 | 453 |
-| Math Kangaroo（9・10 年生） | 90 | 567 |
+| Math Kangaroo（5・6 年生） | 54 | 310 |
+| Math Kangaroo（7・8 年生） | 78 | 463 |
+| Math Kangaroo（9・10 年生） | 92 | 577 |
 | Math Kangaroo（11・12 年生） | 112 | 725 |
 | European Girls' Mathematical Olympiad（EGMO） | 121 | 812 |
 | Asian Pacific Mathematics Olympiad（APMO） | 135 | 912 |
@@ -111,7 +111,7 @@
 | Bebras（International Challenge on Informatics and Computational Thinking） | 76 | 439 |
 | ICAS Science（2〜6 年生、Introductory〜Paper D） | 106 | 561 |
 | 国際ジュニア科学オリンピック（IJSO） | 245 | 1531 |
-| World Robot Olympiad（RoboMission） | 102 | 624 |
+| World Robot Olympiad（RoboMission） | 105 | 639 |
 | World Robot Olympiad（Future Engineers、自動運転車） | 103 | 644 |
 | ISLP International Statistical Literacy Poster Competition | 30 | 174 |
 | 国際情報オリンピック（IOI） | 127 | 859 |
@@ -146,10 +146,10 @@
 | 天文学の大きな未解決問題（暗黒エネルギー、ハッブル定数の食い違い、地球外生命など） | 327 | 2379 |
 | 生態学の大きな未解決問題（種の多様性、共存、生態系の転換点など） | 217 | 1540 |
 | 神経科学の大きな未解決問題（意識、記憶、眠り、脳の配線と働き） | 238 | 1642 |
-| 材料科学の大きな未解決問題（常温超伝導、ガラス、金属水素など） | 277 | 2114 |
+| 材料科学の大きな未解決問題（常温超伝導、ガラス、金属水素など） | 279 | 2124 |
 | 計算機科学の大きな未解決問題（P 対 NP、行列の積、量子計算など） | 226 | 1779 |
 | 統計学の大きな未解決問題（因果推論、再現性、過剰パラメータのモデルの汎化など） | 124 | 850 |
-| 工学の大きな未解決問題（核融合の発電、炭素の回収、きれいな水など） | 374 | 2850 |
+| 工学の大きな未解決問題（核融合の発電、炭素の回収、きれいな水など） | 376 | 2860 |
 | 経済学の大きな未解決問題（株式プレミアムの謎、国の豊かさの違い、生産性の鈍化など） | 137 | 932 |
 | 子どもでも問いが分かる理科の未解決問題（宇宙はなぜ物質でできているのか、生命はどう始まったかなど） | 419 | 3199 |
 | 食料と農業の研究者（世界食糧賞の研究に届く知識） | 295 | 2062 |
@@ -313,11 +313,11 @@
 | G-014 立体の切断 | 図形 | G-011 | 6 | — |
 | G-015 点の移動と図形の回転 | 図形 | G-010、G-004 | 6 | — |
 | L-005 偶奇で考える | 論理 | N-008 | 5 | 5 日分、予備 15 問 |
-| L-006 鳩の巣原理の入口 | 論理 | C-001 | 5 | — |
-| L-007 場合分けで考える | 論理 | C-002 | 9 | — |
-| L-008 条件を整理する推理 | 論理 | L-003 | 5 | — |
-| L-009 変わらないものを探す（不変量の入口） | 論理 | L-005 | 5 | — |
-| L-010 後ろから考える必勝法 | 論理 | L-004 | 5 | — |
+| L-006 鳩の巣原理の入口 | 論理 | C-001、N-007 | 5 | 5 日分、予備 15 問 |
+| L-007 場合分けで考える | 論理 | C-002、N-007、C-003、L-005 | 9 | 9 日分、予備 27 問 |
+| L-008 条件を整理する推理 | 論理 | L-003 | 5 | 5 日分、予備 15 問 |
+| L-009 変わらないものを探す（不変量の入口） | 論理 | L-005 | 5 | 5 日分、予備 15 問 |
+| L-010 後ろから考える必勝法 | 論理 | L-004、N-007 | 5 | 5 日分、予備 15 問 |
 | N-061 概数と見積もり（四捨五入） | 数 | N-009、N-013 | 5 | — |
 | S-028 平均と代表値 | 確率と統計 | S-027、N-014、N-020 | 5 | — |
 | F-002 利息と複利（元金が何倍になるか） | 経済と金融 | F-001、A-005、A-009 | 5 | — |

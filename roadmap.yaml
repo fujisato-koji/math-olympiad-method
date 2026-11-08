@@ -661,11 +661,11 @@ units:
   - {id: G-014, title: 立体の切断, stage: 3, level: 2, region: katachi, needs: [G-011], days: 6}
   - {id: G-015, title: 点の移動と図形の回転, stage: 3, level: 2, region: katachi, needs: [G-010, G-004], days: 6}
   - {id: L-005, title: 偶奇で考える, stage: 3, level: 2, region: ronpo, needs: [N-008], days: 5}
-  - {id: L-006, title: 鳩の巣原理の入口, stage: 3, level: 2, region: ronpo, needs: [C-001], days: 5}
-  - {id: L-007, title: 場合分けで考える, stage: 3, level: 2, region: ronpo, needs: [C-002], days: 9}
+  - {id: L-006, title: 鳩の巣原理の入口, stage: 3, level: 2, region: ronpo, needs: [C-001, N-007], days: 5}
+  - {id: L-007, title: 場合分けで考える, stage: 3, level: 2, region: ronpo, needs: [C-002, N-007, C-003, L-005], days: 9}
   - {id: L-008, title: 条件を整理する推理, stage: 3, level: 2, region: suiri, needs: [L-003], days: 5}
   - {id: L-009, title: 変わらないものを探す（不変量の入口）, stage: 3, level: 2, region: ronpo, needs: [L-005], days: 5}
-  - {id: L-010, title: 後ろから考える必勝法, stage: 3, level: 2, region: suiri, needs: [L-004], days: 5}
+  - {id: L-010, title: 後ろから考える必勝法, stage: 3, level: 2, region: suiri, needs: [L-004, N-007], days: 5}
   - {id: N-061, title: 概数と見積もり（四捨五入）, stage: 3, level: 2, region: keisan, needs: [N-009, N-013], days: 5}
   - {id: S-028, title: 平均と代表値, stage: 3, level: 2, region: data, needs: [S-027, N-014, N-020], days: 5}
   - {id: F-002, title: 利息と複利（元金が何倍になるか）, stage: 3, level: 2, region: risoku, needs: [F-001, A-005, A-009], days: 5}
