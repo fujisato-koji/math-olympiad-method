@@ -77180,8 +77180,8 @@ window.ROADMAP = {
     "a": "bibun-hoteishiki",
     "b": "soryushi",
     "via": [
-     "kansu-kaiseki",
      "kaiseki-rikigaku",
+     "kansu-kaiseki",
      "hyogen",
      "soutai"
     ],
@@ -77386,8 +77386,8 @@ window.ROADMAP = {
     "via": [
      "kaiseki-rikigaku",
      "netsu-suishin",
-     "soutai",
-     "ryutai"
+     "ryutai",
+     "soutai"
     ],
     "s": 3.16,
     "d": 0.74
@@ -77410,8 +77410,8 @@ window.ROADMAP = {
     "via": [
      "jikken",
      "seigyo",
-     "butsuri-kagaku",
-     "doboku"
+     "bisekibun-nyumon",
+     "butsuri-kagaku"
     ],
     "s": 3.07,
     "d": 0.75
@@ -77555,7 +77555,7 @@ window.ROADMAP = {
      "jikken",
      "ryoshi",
      "gunkantai",
-     "seitai-kogaku"
+     "seigyo"
     ],
     "s": 2.28,
     "d": 0.92

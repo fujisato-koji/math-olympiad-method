@@ -30,7 +30,7 @@ def region_distance(units):
 
     def cos(a, b):
         va, vb = out_[a], out_[b]
-        keys = set(va) | set(vb) | {a, b}
+        keys = sorted(set(va) | set(vb) | {a, b})  # 足す順を固定する（集合の順は起動ごとに変わる）
         # 自分自身のつながりも 1 とみなす（互いに直接使い合う領域は近い）
         x = [va.get(k, 0) + (1 if k == a else 0) for k in keys]
         y = [vb.get(k, 0) + (1 if k == b else 0) for k in keys]
@@ -135,7 +135,7 @@ def layer(units, catalog, comb, top=30):
         if len(via) < 2:
             continue
         score = sum(1 / math.log(1 + len(nb[w])) for w in via)
-        hints.append({"a": a, "b": b, "via": sorted(via, key=lambda w: len(nb[w]))[:4], "s": round(score, 2),
+        hints.append({"a": a, "b": b, "via": sorted(via, key=lambda w: (len(nb[w]), w))[:4], "s": round(score, 2),
                       "d": round(dist.get((a, b), 1.0), 2)})
     hints.sort(key=lambda h: -h["s"] * h["d"])
     return {"cut": round(cut, 3), "bridges": bridges, "unitPairs": upairs[:top], "probPairs": prare[:top], "hints": hints[:60],
