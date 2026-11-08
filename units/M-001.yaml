@@ -1,0 +1,1575 @@
+# M-001 連立 1 次方程式と行列（高校）
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-019、A-012 に合わせる（負の数は「−」U+2212、分数は約分した形）。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜5 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# ことば：行列、成分、行と列、(i, j) 成分、2 次の正方行列、列ベクトル、係数行列、行列の和・差・実数倍・積、
+#   単位行列 E、零行列 O、逆行列 A⁻¹、ケーリー・ハミルトンの定理。
+# 前提は A-012（連立方程式）と G-027（ベクトル）。G-027 はまだ中身ができていないので、地図の題と前提から、平面のベクトルの成分、
+#   和と実数倍、平行の条件（一方が他方の実数倍）、ベクトルを 2 つのベクトルの和で表すことを済んだものとした。
+#   連立方程式の列の見方 x(a；c) + y(b；d) と、ad − bc = 0 が 2 つの列ベクトルの平行と同じであることに使う。
+#   前提のたどりに A-017（2 次方程式）、A-015（展開）、G-026（直線の式、2 直線の交点と平行）がある。
+# 行列は問題の svg に、かっこでくくった形で描く。文の中では「(2 1；3 4)」のように、行を「；」で区切り、成分を空白で区切って書く
+#   （1 日目の見本で約束した）。列ベクトルは「(x；y)」。成分が式のときは「(1, 2) 成分は …」と成分ごとに言う。
+#   行列そのものを答える問題は少なくし、成分を 1 つ聞いて数を打たせる。行列を選ぶ問題は、この書き方の choices にした。
+# 2 次の正方行列だけを扱い、3 行 3 列の行列、掃き出し法、階数（M-003）は扱わない。ad − bc に名前（行列式）は付けず、
+#   面積との関係と名前は M-002 で扱う。1 次変換（M-002）と固有値も先取りしない（ケーリー・ハミルトンの定理は計算の道具として使う）。
+# わけの日は、(1) 逆行列の公式（ad − bc ≠ 0 のとき AX = XA = E）、(2) ケーリー・ハミルトンの定理、
+#   (3) ad − bc = 0 のとき逆行列はない（あると仮定して O = E の食いちがいを出す）。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 行列と成分、和・差・実数倍、行列と列ベクトルの積、連立方程式を行列で書く
+#   2 日目 行列の積（B の列ごとに A をかける、代入をつなぐ）、累乗　3 日目 積の性質（AB と BA、単位行列、零行列）、ケーリー・ハミルトンの定理
+#   4 日目 逆行列（公式と、もたない条件）　5 日目 逆行列で連立方程式を解く、ad − bc = 0 のとき（解がない、解が限りなくある）
+#   6 日目 わけ　7 日目 A-012・G-027 と混ぜる（買い物の連立方程式、ベクトルを 2 つのベクトルで表す、(AB)⁻¹）　8 日目 確認
+# check：行列は入れ子の組にし、積は lambda（行と列の成分の積の和）で計算する。逆行列の成分は Fraction。累乗はくり返しかける。
+#   連立方程式の解は、整数の総当たりか、逆行列の式（Fraction）で求める。
+# 行列は、行列と 1 次変換（M-002）、掃き出し法と階数（M-003）、連立方程式を解く数値計算（K の流れ）、コンピュータグラフィックス、
+#   回路と構造の計算、量子力学の状態の入口になる（D-026）。
+
+id: M-001
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 連立方程式 2x + y = 5、3x + 4y = 10 を、行列を使って書いてみましょう。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(58.8 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M83.9 7.0 Q76.9 32.2 83.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="95.4" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">x</tspan></text>
+              <text x="95.4" y="49.4" font-size="16" text-anchor="middle"><tspan font-style="italic">y</tspan></text>
+              <path d="M107.9 7.0 Q114.9 32.2 107.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="120.9" y="37.8" font-size="16"> = </text>
+              <path d="M150.4 7.0 Q143.4 32.2 150.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="166.4" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="166.4" y="49.4" font-size="16" text-anchor="middle">10</text>
+              <path d="M183.4 7.0 Q190.4 32.2 183.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        explain: 数を長方形に並べてかっこでくくったものを行列といい、並べた数を成分といいます。横の並びを行、縦の並びを列といい、上から i 番目の行、左から j 番目の列にある成分を (i, j) 成分といいます。2 行 2 列の行列を 2 次の正方行列、1 列だけの行列を列ベクトルといいます。連立方程式の x と y の係数を並べた A = (2 1；3 4) を係数行列といいます（文の中では、行を「；」で区切り、成分を空白で区切って書きます。列ベクトルは (x；y) です）。行列 A と列ベクトル (x；y) の積を A(x；y) = (2x + y；3x + 4y) と決めます。1 行目の成分 2、1 を x、y にかけて足したものが上の成分、2 行目の 3、4 を x、y にかけて足したものが下の成分です。すると連立方程式は、図のように A(x；y) = (5；10) と 1 つの式で書けます。同じ型の行列の和と差は成分ごとに足したりひいたりし、実数倍 kA は成分をすべて k 倍します。たとえば (2 1；3 4) + (1 −1；0 2) = (3 0；3 6)、3(2 1；3 4) = (6 3；9 12) です。A(x；y) は、A の列 (2；3) と (1；4) を使って x(2；3) + y(1；4) とも書けます（ベクトルの実数倍と和、G-027）。
+      - part: 思い出す
+        text: 連立方程式を解きましょう。x はいくつですか。
+        figure: "x + 2y = 7 …①\n3x − y = 7 …②"
+        answer: 3
+        check: "[x for x in range(-20, 21) for y in range(-20, 21) if x + 2 * y == 7 and 3 * x - y == 7][0]"
+        hints:
+          - ② を 2 倍して ① に足すと、y が消えます（A-012）。
+          - 7x = 21 になります。
+          - x を求めたら、① に代入して y も確かめましょう。
+        paths:
+          - [② × 2 は 6x − 2y = 14, ① と足して 7x = 21, x = 3（y = 2）]
+      - part: 思い出す
+        text: ベクトル a = (1, 3)、b = (2, −1) のとき、2a + 3b の x 成分はいくつですか。
+        answer: 8
+        check: "2 * 1 + 3 * 2"
+        hints:
+          - 実数倍は、成分をそれぞれその倍にします（G-027）。
+          - 2a = (2, 6)、3b = (6, −3) です。
+          - 和は成分ごとに足します。
+        paths:
+          - ["2a + 3b = (2 + 6, 6 − 3) = (8, 3)", "8"]
+      - part: 今日
+        text: A = (3 −1；2 5) のとき、A(2；1) の下の成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(91.8 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="56.2" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="56.2" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <path d="M73.5 7.0 Q80.5 32.2 73.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M93.5 7.0 Q86.5 32.2 93.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="105.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="105.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M117.5 7.0 Q124.5 32.2 117.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 9
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, -1), (2, 5)), ((2,), (1,)))[1][0]"
+        hints:
+          - 下の成分は、A の 2 行目を使います。
+          - 2 行目の成分 2、5 を、それぞれ 2、1 にかけましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [2 × 2 + 5 × 1, "9"]
+      - part: 今日
+        text: A = (1 2；−3 4)、B = (2 0；1 −1) のとき、2A − B の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(33.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="62.8" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="92.6" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="62.8" y="49.4" font-size="16" text-anchor="middle">−3</text>
+              <text x="92.6" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="118.0" y="37.8" font-size="16">　</text>
+              <text x="138.0" y="37.8" font-size="16">B = </text>
+              <path d="M176.6 7.0 Q169.6 32.2 176.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="188.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="217.8" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="188.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="217.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M235.1 7.0 Q242.1 32.2 235.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −7
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 * (-3) - 1)"
+        hints:
+          - (2, 1) 成分は、2 行目・1 列目の成分です。
+          - A の (2, 1) 成分は −3、B の (2, 1) 成分は 1 です。
+          - 2 × (−3) − 1 を計算しましょう。
+        paths:
+          - [2 × (−3) − 1, −7]
+        note: (2, 1) 成分を 1 行目・2 列目と取りちがえやすい。(i, j) は「i 行目、j 列目」。
+      - part: 挑戦
+        text: A = (a 2；3 b) が A(1；2) = (8；−1) を満たすとき、a + b はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(58.5 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">a</tspan></text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle"><tspan font-style="italic">b</tspan></text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M83.9 7.0 Q76.9 32.2 83.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="95.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="95.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M107.9 7.0 Q114.9 32.2 107.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="120.9" y="37.8" font-size="16"> = </text>
+              <path d="M150.4 7.0 Q143.4 32.2 150.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="166.7" y="26.2" font-size="16" text-anchor="middle">8</text>
+              <text x="166.7" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M184.0 7.0 Q191.0 32.2 184.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "[a + b for a in range(-20, 21) for b in range(-20, 21) if a * 1 + 2 * 2 == 8 and 3 * 1 + b * 2 == -1][0]"
+        hints:
+          - A(1；2) を a、b の式で計算しましょう。
+          - 上の成分 a + 4 が 8、下の成分 3 + 2b が −1 です。
+          - a と b をそれぞれ求めましょう。
+        paths:
+          - [A(1；2) = (a + 4；3 + 2b), a + 4 = 8 で a = 4, 3 + 2b = −1 で b = −2, a + b = 2]
+    extra:
+      - part: 今日
+        text: (4 −2；1 3)(−1；2) の上の成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(87.0 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="56.2" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="56.2" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M73.5 7.0 Q80.5 32.2 73.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M93.5 7.0 Q86.5 32.2 93.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="109.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="109.8" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M127.1 7.0 Q134.1 32.2 127.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −8
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((4, -2), (1, 3)), ((-1,), (2,)))[0][0])"
+        hints:
+          - 上の成分は、1 行目を使います。
+          - 4 × (−1) と (−2) × 2 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [4 × (−1) + (−2) × 2, −4 − 4 = −8]
+      - part: 今日
+        text: A = (2 −5；1 0) のとき、3A の (1, 2) 成分はいくつですか。
+        answer: −15
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(3 * (-5))"
+        hints:
+          - (1, 2) 成分は、1 行目・2 列目の成分です。
+          - A の (1, 2) 成分は −5 です。
+          - 実数倍は、成分をすべてその倍にします。
+        paths:
+          - [3 × (−5), −15]
+      - part: 挑戦
+        text: A = (1 2；0 −1)、B = (5 0；4 1) のとき、2X − A = B を満たす行列 X の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(37.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="118.0" y="37.8" font-size="16">　</text>
+              <text x="138.0" y="37.8" font-size="16">B = </text>
+              <path d="M176.6 7.0 Q169.6 32.2 176.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="188.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="213.0" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="188.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="213.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M225.5 7.0 Q232.5 32.2 225.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "Fraction(0 + 4, 2)"
+        hints:
+          - 数の方程式と同じように、X について解きましょう。
+          - 2X = A + B です。
+          - X = (1/2)(A + B) の (2, 1) 成分を求めましょう。
+        paths:
+          - [2X = A + B = (6 2；4 0), X = (3 1；2 0), "(2, 1) 成分は 2"]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: A = (1 2；3 4)、B = (2 0；1 3) の積 AB を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        explain: 行列の積 AB は、B の列ごとに A をかけた列ベクトルを並べたものと決めます。B の 1 列目 (2；1) に A をかけると (1 × 2 + 2 × 1；3 × 2 + 4 × 1) = (4；10)、2 列目 (0；3) では (1 × 0 + 2 × 3；3 × 0 + 4 × 3) = (6；12) なので、AB = (4 6；10 12) です。成分で言うと、AB の (i, j) 成分は「A の i 行目と B の j 列目の成分を、順にかけて足したもの」です。このように決めるわけは、代入をつなぐことにあります。x = 2u、y = u + 3v、つまり (x；y) = B(u；v) を A(x；y) に入れると、A(x；y) = (x + 2y；3x + 4y) = (4u + 6v；10u + 12v) となり、これは (AB)(u；v) に等しくなります。逆の順の BA は (2 4；10 14) で、AB と BA はちがいます。A を 2 回かけた AA を A²、3 回かけたものを A³ と書きます。
+      - part: 思い出す
+        text: (2 3；−1 4)(1；−2) の下の成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(87.0 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="31.3" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="61.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="31.3" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <text x="61.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M73.5 7.0 Q80.5 32.2 73.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M93.5 7.0 Q86.5 32.2 93.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="109.8" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="109.8" y="49.4" font-size="16" text-anchor="middle">−2</text>
+              <path d="M127.1 7.0 Q134.1 32.2 127.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −9
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 3), (-1, 4)), ((1,), (-2,)))[1][0])"
+        hints:
+          - 下の成分は、2 行目を使います。
+          - (−1) × 1 と 4 × (−2) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [(−1) × 1 + 4 × (−2), −1 − 8 = −9]
+      - part: 思い出す
+        text: x = 2u + v、y = u − v のとき、3x + y を u、v で表した式はどれですか。
+        choices:
+          - 7u + 2v
+          - 7u + 4v
+          - 5u + 2v
+          - 7u − 2v
+        answer: 7u + 2v
+        check: "[c for c, f in {'7u + 2v': lambda u, v: 7 * u + 2 * v, '7u + 4v': lambda u, v: 7 * u + 4 * v, '5u + 2v': lambda u, v: 5 * u + 2 * v, '7u − 2v': lambda u, v: 7 * u - 2 * v}.items() if all(f(u, v) == 3 * (2 * u + v) + (u - v) for u in range(-3, 4) for v in range(-3, 4))][0]"
+        hints:
+          - 3x + y に、x と y の式を代入しましょう（A-010）。
+          - 3(2u + v) + (u − v) です。
+          - かっこをはずして、u の項と v の項をまとめましょう。
+        paths:
+          - [3(2u + v) + (u − v), 6u + 3v + u − v, 7u + 2v]
+      - part: 今日
+        text: A = (2 1；0 3)、B = (1 −1；2 4) のとき、AB の (2, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(37.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="208.2" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="208.2" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M225.5 7.0 Q232.5 32.2 225.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 12
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 1), (0, 3)), ((1, -1), (2, 4)))[1][1]"
+        hints:
+          - AB の (2, 2) 成分は、A の 2 行目と B の 2 列目を使います。
+          - A の 2 行目は 0、3、B の 2 列目は −1、4 です。
+          - 順にかけて足しましょう。
+        paths:
+          - [0 × (−1) + 3 × 4, "12"]
+      - part: 今日
+        text: A = (1 2；3 −1) のとき、A² の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 7
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 2), (3, -1)), ((1, 2), (3, -1)))[0][0]"
+        hints:
+          - A² = AA です。
+          - (1, 1) 成分は、A の 1 行目と A の 1 列目を使います。
+          - 1 × 1 + 2 × 3 を計算しましょう。
+        paths:
+          - [1 × 1 + 2 × 3, "7"]
+        note: A² の成分を、成分の 2 乗（1² = 1）としやすい。A² は行列の積 AA。この A では A² = (7 0；0 7) になる。
+      - part: 挑戦
+        text: A = (1 1；0 1) のとき、A⁵ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 5
+        check: "(lambda m: (lambda p: p(p, ((1, 1), (0, 1)), 4))(lambda p, P, k: P if k == 0 else p(p, m(P, ((1, 1), (0, 1))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][1]"
+        hints:
+          - A²、A³ を計算してみましょう。
+          - (1, 2) 成分は、かけるたびにどう変わるでしょう。
+          - 決まりを見つけて、A⁵ を考えましょう。
+        paths:
+          - [A² = (1 2；0 1)、A³ = (1 3；0 1), "かけるたびに (1, 2) 成分が 1 ずつ増える", "A⁵ の (1, 2) 成分は 5"]
+    extra:
+      - part: 今日
+        text: A = (3 −2；1 0)、B = (1 2；4 −1) のとき、AB の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(33.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="118.0" y="37.8" font-size="16">　</text>
+              <text x="138.0" y="37.8" font-size="16">B = </text>
+              <path d="M176.6 7.0 Q169.6 32.2 176.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="188.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="217.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="188.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="217.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M235.1 7.0 Q242.1 32.2 235.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, -2), (1, 0)), ((1, 2), (4, -1)))[0][0])"
+        hints:
+          - A の 1 行目と B の 1 列目を使います。
+          - 3 × 1 と (−2) × 4 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [3 × 1 + (−2) × 4, 3 − 8 = −5]
+      - part: 今日
+        text: A = (3 −2；1 0)、B = (1 2；4 −1) のとき、BA の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(33.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="118.0" y="37.8" font-size="16">　</text>
+              <text x="138.0" y="37.8" font-size="16">B = </text>
+              <path d="M176.6 7.0 Q169.6 32.2 176.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="188.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="217.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="188.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="217.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M235.1 7.0 Q242.1 32.2 235.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 5
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 2), (4, -1)), ((3, -2), (1, 0)))[0][0]"
+        hints:
+          - BA の (1, 1) 成分は、B の 1 行目と A の 1 列目を使います。
+          - B の 1 行目は 1、2、A の 1 列目は 3、1 です。
+          - 順にかけて足しましょう。
+        paths:
+          - [1 × 3 + 2 × 1, "5"]
+        note: 同じ A、B で AB の (1, 1) 成分は −5。かける順で答えが変わる。
+      - part: 挑戦
+        text: A = (2 0；0 3) のとき、A⁴ の (2, 2) 成分はいくつですか。
+        answer: 81
+        check: "(lambda m: (lambda p: p(p, ((2, 0), (0, 3)), 3))(lambda p, P, k: P if k == 0 else p(p, m(P, ((2, 0), (0, 3))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[1][1]"
+        hints:
+          - A² を計算してみましょう。
+          - 0 が並ぶところは、かけても 0 のままです。
+          - (2, 2) 成分は、かけるたびに 3 倍になります。
+        paths:
+          - [A² = (4 0；0 9), A⁴ = (16 0；0 81), "81"]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: A = (1 2；3 4) について、A² − 5A − 2E を計算してみましょう。E は単位行列です。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">E = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        explain: E = (1 0；0 1) を単位行列といい、どの 2 次の正方行列 A についても AE = EA = A です（数の 1 のはたらき）。成分がすべて 0 の行列 O を零行列といい、A + O = A、AO = OA = O です。行列の積には、(AB)C = A(BC)（結合法則）、A(B + C) = AB + AC（分配法則）が成り立ちますが、AB と BA は等しいとは限りません（2 日目）。また、A ≠ O、B ≠ O でも AB = O となることがあります。たとえば (1 1；1 1)(1 −1；−1 1) = O です。A = (1 2；3 4) では A² = (7 10；15 22) です。A² − 5A − 2E の (1, 1) 成分は 7 − 5 − 2 = 0、(1, 2) 成分は 10 − 10 = 0、(2, 1) 成分は 15 − 15 = 0、(2, 2) 成分は 22 − 20 − 2 = 0 で、O になります。一般に、A = (a b；c d) について A² − (a + d)A + (ad − bc)E = O が成り立ちます。これをケーリー・ハミルトンの定理といいます（わけは 6 日目）。この式を A² = (a + d)A − (ad − bc)E と見ると、A² や A³ を A と E だけで表して計算できます。
+      - part: 思い出す
+        text: A = (0 1；1 0)、B = (2 3；4 5) のとき、AB の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 4
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, 1), (1, 0)), ((2, 3), (4, 5)))[0][0]"
+        hints:
+          - A の 1 行目と B の 1 列目を使います。
+          - 0 × 2 と 1 × 4 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [0 × 2 + 1 × 4, "4"]
+      - part: 思い出す
+        text: (x − 2)(x − 3) を展開した式はどれですか。
+        choices:
+          - x² + 5x + 6
+          - x² − 5x + 6
+          - x² − 5x − 6
+          - x² − 6x + 5
+        answer: x² − 5x + 6
+        check: "[c for c, f in {'x² − 5x + 6': lambda x: x * x - 5 * x + 6, 'x² + 5x + 6': lambda x: x * x + 5 * x + 6, 'x² − 5x − 6': lambda x: x * x - 5 * x - 6, 'x² − 6x + 5': lambda x: x * x - 6 * x + 5}.items() if all(f(x) == (x - 2) * (x - 3) for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)(x + b) = x² + (a + b)x + ab です（A-015）。
+          - a = −2、b = −3 です。
+          - a + b と ab を計算しましょう。
+        paths:
+          - [x² + (−2 − 3)x + (−2) × (−3), x² − 5x + 6]
+      - part: 今日
+        text: A = (3 1；2 4) のとき、A² − 7A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 10
+        check: "(lambda S: [k for k in range(-50, 51) if S[0][0] - 7 * 3 + k == 0 and S[1][1] - 7 * 4 + k == 0 and S[0][1] - 7 * 1 == 0 and S[1][0] - 7 * 2 == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, 1), (2, 4)), ((3, 1), (2, 4))))"
+        hints:
+          - ケーリー・ハミルトンの定理を思い出しましょう。
+          - A² − (a + d)A + (ad − bc)E = O です。
+          - a + d = 7 なので、k は ad − bc です。
+        paths:
+          - [a + d = 3 + 4 = 7, k = ad − bc = 12 − 2 = 10]
+          - [A² = (11 7；14 18), "(1, 1) 成分 11 − 21 + k = 0", k = 10]
+      - part: 今日
+        text: A = (1 2；0 1)、B = (1 0；3 1) のとき、AB − BA の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 6
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 2), (0, 1)), ((1, 0), (3, 1)))[0][0] - (lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 0), (3, 1)), ((1, 2), (0, 1)))[0][0]"
+        hints:
+          - AB の (1, 1) 成分と BA の (1, 1) 成分を、それぞれ求めましょう。
+          - AB の (1, 1) 成分は 1 × 1 + 2 × 3 です。
+          - BA の (1, 1) 成分は 1 × 1 + 0 × 0 です。
+        paths:
+          - ["AB の (1, 1) 成分は 7", "BA の (1, 1) 成分は 1", 7 − 1 = 6]
+        note: AB − BA が O でないので、AB ≠ BA。1 つの例で「いつも等しいとは限らない」ことが示せる（反例）。
+      - part: 挑戦
+        text: A = (2 1；1 2) のとき、A³ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 13
+        check: "(lambda m: (lambda p: p(p, ((2, 1), (1, 2)), 2))(lambda p, P, k: P if k == 0 else p(p, m(P, ((2, 1), (1, 2))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][1]"
+        hints:
+          - ケーリー・ハミルトンの定理で、A² を A と E で表しましょう。
+          - A² = 4A − 3E です。両辺に A をかけましょう。
+          - A³ = 4A² − 3A に、A² = 4A − 3E を入れましょう。
+        paths:
+          - [A² = 4A − 3E, A³ = 4A² − 3A = 4(4A − 3E) − 3A = 13A − 12E, "(1, 2) 成分は 13 × 1 − 12 × 0 = 13"]
+          - [A² = (5 4；4 5), A³ = A²A = (14 13；13 14), "13"]
+    extra:
+      - part: 今日
+        text: A = (2 −1；4 −2) のとき、A² の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">−2</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 0
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, -1), (4, -2)), ((2, -1), (4, -2)))[0][1]"
+        hints:
+          - A の 1 行目と A の 2 列目を使います。
+          - 2 × (−1) と (−1) × (−2) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [2 × (−1) + (−1) × (−2), −2 + 2 = 0]
+        note: この A では A² = O になる（a + d = 0、ad − bc = 0 なので、ケーリー・ハミルトンの定理から A² = O）。
+      - part: 今日
+        text: A = (4 −1；2 1) のとき、A² − 5A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 6
+        check: "(lambda S: [k for k in range(-50, 51) if S[0][0] - 5 * 4 + k == 0 and S[1][1] - 5 * 1 + k == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((4, -1), (2, 1)), ((4, -1), (2, 1))))"
+        hints:
+          - ケーリー・ハミルトンの定理を使いましょう。
+          - a + d = 5 です。
+          - k は ad − bc です。
+        paths:
+          - [k = ad − bc = 4 × 1 − (−1) × 2, "6"]
+      - part: 挑戦
+        text: A = (1 2；2 1) のとき、A³ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 14
+        check: "(lambda m: (lambda p: p(p, ((1, 2), (2, 1)), 2))(lambda p, P, k: P if k == 0 else p(p, m(P, ((1, 2), (2, 1))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][1]"
+        hints:
+          - ケーリー・ハミルトンの定理で、A² = 2A + 3E です。
+          - A³ = 2A² + 3A に、A² の式を入れましょう。
+          - A³ を A と E で表してから、(1, 2) 成分を読みましょう。
+        paths:
+          - [A³ = 2(2A + 3E) + 3A = 7A + 6E, "(1, 2) 成分は 7 × 2 = 14"]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: A = (3 1；5 2) の逆行列を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        explain: 正方行列 A に対して AX = XA = E となる行列 X があるとき、X を A の逆行列といい、A⁻¹ と書きます（数の逆数のはたらき）。A = (a b；c d) で ad − bc ≠ 0 のとき、A⁻¹ = (1/(ad − bc))(d −b；−c a) です。ad − bc = 0 のときは、逆行列はありません（わけは 6 日目）。A = (3 1；5 2) では ad − bc = 6 − 5 = 1 なので、A⁻¹ = (2 −1；−5 3) です。AA⁻¹ の (1, 1) 成分は 3 × 2 + 1 × (−5) = 1、(1, 2) 成分は 3 × (−1) + 1 × 3 = 0 のように 4 つの成分を確かめると、AA⁻¹ = E になります。「a と d を入れかえ、b と c の符号を変えて、ad − bc でわる」と覚えます。
+      - part: 思い出す
+        text: A = (2 3；1 4) のとき、A² − 6A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 5
+        check: "(lambda S: [k for k in range(-50, 51) if S[0][0] - 6 * 2 + k == 0 and S[1][1] - 6 * 4 + k == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 3), (1, 4)), ((2, 3), (1, 4))))"
+        hints:
+          - ケーリー・ハミルトンの定理を使いましょう。
+          - a + d = 6 です。
+          - k は ad − bc です。
+        paths:
+          - [k = 2 × 4 − 3 × 1, "5"]
+      - part: 思い出す
+        text: A = (1 2；3 4)、B = (4 −2；−3 1) のとき、AB の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(33.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="183.2" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="217.8" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="183.2" y="49.4" font-size="16" text-anchor="middle">−3</text>
+              <text x="217.8" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M235.1 7.0 Q242.1 32.2 235.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 2), (3, 4)), ((4, -2), (-3, 1)))[0][0])"
+        hints:
+          - A の 1 行目と B の 1 列目を使います。
+          - 1 × 4 と 2 × (−3) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [1 × 4 + 2 × (−3), 4 − 6 = −2]
+        note: この A、B では AB = (−2 0；0 −2) = −2E になる。B を −2 でわると A の逆行列になる。
+      - part: 今日
+        text: A = (5 3；3 2) のとき、A⁻¹ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((5, 3), (3, 2)))[0][1])"
+        hints:
+          - まず ad − bc を計算しましょう。
+          - A⁻¹ = (1/(ad − bc))(d −b；−c a) です。
+          - (1, 2) 成分は −b ÷ (ad − bc) です。
+        paths:
+          - [ad − bc = 10 − 9 = 1, A⁻¹ = (2 −3；−3 5), "(1, 2) 成分は −3"]
+      - part: 今日
+        text: A = (4 2；3 1) のとき、A⁻¹ の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 3/2
+        accept: ["1.5"]
+        check: "(lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((4, 2), (3, 1)))[1][0]"
+        hints:
+          - まず ad − bc を計算しましょう。負の数になります。
+          - (2, 1) 成分は −c ÷ (ad − bc) です。
+          - −3 ÷ (−2) を計算しましょう。
+        paths:
+          - [ad − bc = 4 − 6 = −2, "(2, 1) 成分は −3 ÷ (−2) = 3/2"]
+        note: ad − bc が負のとき、全体の符号を変えるのを忘れやすい。A⁻¹ = (−1/2 1；3/2 −2)。
+      - part: 挑戦
+        text: A = (k 2；3 k + 1) が逆行列をもたないとき、k が正の数なら k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(89.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">k</tspan></text>
+              <text x="96.7" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="96.7" y="49.4" font-size="16" text-anchor="middle"><tspan font-style="italic">k</tspan> + 1</text>
+              <path d="M123.0 7.0 Q130.0 32.2 123.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "[k for k in range(1, 50) if k * (k + 1) - 2 * 3 == 0][0]"
+        hints:
+          - 逆行列をもたないのは、ad − bc = 0 のときです。
+          - k(k + 1) − 6 = 0 を解きましょう（A-017）。
+          - k² + k − 6 を因数分解しましょう。
+        paths:
+          - [k(k + 1) − 6 = 0, k² + k − 6 = 0, (k + 3)(k − 2) = 0, k > 0 なので k = 2]
+    extra:
+      - part: 今日
+        text: A = (2 5；1 3) のとき、A⁻¹ の (2, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "(lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, 5), (1, 3)))[1][1]"
+        hints:
+          - ad − bc を計算しましょう。
+          - (2, 2) 成分は a ÷ (ad − bc) です。
+          - a と d を入れかえることに気をつけましょう。
+        paths:
+          - [ad − bc = 6 − 5 = 1, A⁻¹ = (3 −5；−1 2), "(2, 2) 成分は 2"]
+      - part: 今日
+        text: 次の行列のうち、逆行列をもたないものはどれですか。
+        choices:
+          - (2 1；4 1)
+          - (1 2；3 4)
+          - (2 4；1 2)
+          - (3 0；0 −1)
+        answer: (2 4；1 2)
+        check: "[c for c, f in {'(2 4；1 2)': ((2, 4), (1, 2)), '(2 1；4 1)': ((2, 1), (4, 1)), '(1 2；3 4)': ((1, 2), (3, 4)), '(3 0；0 −1)': ((3, 0), (0, -1))}.items() if f[0][0] * f[1][1] - f[0][1] * f[1][0] == 0][0]"
+        hints:
+          - それぞれの ad − bc を計算しましょう。
+          - ad − bc = 0 なら、逆行列はありません。
+          - (2 4；1 2) では 2 × 2 − 4 × 1 です。
+        paths:
+          - [(2 4；1 2) は 4 − 4 = 0, 逆行列をもたない]
+        note: (2 4；1 2) は、2 つの列 (2；1) と (4；2) が平行（一方が他方の 2 倍）。
+      - part: 挑戦
+        text: A⁻¹ = (2 1；5 3) のとき、A の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(90.3 0)">
+              <text x="8.0" y="37.8" font-size="16">A⁻¹ = </text>
+              <path d="M71.5 7.0 Q64.5 32.2 71.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="107.9" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <text x="107.9" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M120.4 7.0 Q127.4 32.2 120.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, 1), (5, 3)))[1][0])"
+        hints:
+          - A⁻¹ の逆行列は A です。
+          - (2 1；5 3) の逆行列を求めましょう。
+          - ad − bc = 6 − 5 = 1 です。
+        paths:
+          - [A = (A⁻¹)⁻¹, (2 1；5 3) の逆行列は (3 −1；−5 2), "(2, 1) 成分は −5"]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 連立方程式 2x + 3y = 8、x + 2y = 5 を、逆行列を使って解いてみましょう。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(63.3 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M83.9 7.0 Q76.9 32.2 83.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="95.4" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">x</tspan></text>
+              <text x="95.4" y="49.4" font-size="16" text-anchor="middle"><tspan font-style="italic">y</tspan></text>
+              <path d="M107.9 7.0 Q114.9 32.2 107.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="120.9" y="37.8" font-size="16"> = </text>
+              <path d="M150.4 7.0 Q143.4 32.2 150.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="161.9" y="26.2" font-size="16" text-anchor="middle">8</text>
+              <text x="161.9" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <path d="M174.4 7.0 Q181.4 32.2 174.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        explain: 係数行列 A = (2 3；1 2) を使うと、連立方程式は A(x；y) = (8；5) と書けます。ad − bc = 4 − 3 = 1 なので A⁻¹ = (2 −3；−1 2) です。両辺に左から A⁻¹ をかけると、A⁻¹A = E なので (x；y) = A⁻¹(8；5) = (16 − 15；−8 + 10) = (1；2)、つまり x = 1、y = 2 です。ad − bc ≠ 0 なら、この方法で解はただ 1 組に決まります。ad − bc = 0 のときは逆行列がなく、解がないか、解が限りなくあるかのどちらかです。たとえば x + 2y = 3 と 2x + 4y = 6 は、2 つ目の式が 1 つ目の 2 倍なので、x + 2y = 3 を満たす組はすべて解です（2 つの直線が一致する）。x + 2y = 3 と 2x + 4y = 7 では、1 つ目を 2 倍すると 2x + 4y = 6 となり、同時に 7 にはならないので解はありません（2 つの直線が平行）。列で見ると A(x；y) = x(2；1) + y(3；2) で、ad − bc = 0 は 2 つの列ベクトルが平行になることと同じです（G-027）。
+      - part: 思い出す
+        text: A = (3 2；4 3) のとき、A⁻¹ の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((3, 2), (4, 3)))[1][0])"
+        hints:
+          - ad − bc を計算しましょう。
+          - (2, 1) 成分は −c ÷ (ad − bc) です。
+          - c = 4 です。
+        paths:
+          - [ad − bc = 9 − 8 = 1, "(2, 1) 成分は −4"]
+      - part: 思い出す
+        text: ベクトル (1, 2) と (k, 6) が平行になるとき、k はいくつですか。
+        answer: 3
+        check: "[k for k in range(-20, 21) if 1 * 6 - 2 * k == 0][0]"
+        hints:
+          - 平行なら、一方は他方の実数倍です（G-027）。
+          - (k, 6) = t(1, 2) となる t を考えましょう。
+          - y 成分をくらべて、t を求めましょう。
+        paths:
+          - ["(k, 6) = 3(1, 2)", k = 3]
+      - part: 今日
+        text: 連立方程式 3x + 5y = 1、x + 2y = 1 を解きましょう。x はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(63.3 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M83.9 7.0 Q76.9 32.2 83.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="95.4" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">x</tspan></text>
+              <text x="95.4" y="49.4" font-size="16" text-anchor="middle"><tspan font-style="italic">y</tspan></text>
+              <path d="M107.9 7.0 Q114.9 32.2 107.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="120.9" y="37.8" font-size="16"> = </text>
+              <path d="M150.4 7.0 Q143.4 32.2 150.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="161.9" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="161.9" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M174.4 7.0 Q181.4 32.2 174.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([x for x in range(-20, 21) for y in range(-20, 21) if 3 * x + 5 * y == 1 and x + 2 * y == 1][0])"
+        hints:
+          - 係数行列 (3 5；1 2) の逆行列を求めましょう。
+          - ad − bc = 6 − 5 = 1 です。
+          - (x；y) = A⁻¹(1；1) を計算しましょう。
+        paths:
+          - [A⁻¹ = (2 −5；−1 3), x = 2 × 1 − 5 × 1 = −3, y = −1 + 3 = 2]
+      - part: 今日
+        text: 連立方程式 2x + ky = 1、3x + 6y = 4 が、ただ 1 組の解をもたないとき、k はいくつですか。
+        answer: 4
+        check: "[k for k in range(-20, 21) if 2 * 6 - k * 3 == 0][0]"
+        hints:
+          - 係数行列は (2 k；3 6) です。
+          - ただ 1 組の解をもたないのは、ad − bc = 0 のときです。
+          - 12 − 3k = 0 を解きましょう。
+        paths:
+          - [ad − bc = 12 − 3k, 12 − 3k = 0, k = 4]
+        note: k = 4 のとき、2x + 4y = 1 と 3x + 6y = 4 は平行な 2 直線で、解はない。
+      - part: 挑戦
+        text: 連立方程式 ax + 2y = 4、2x + ay = b が解を限りなくもちます。a が正の数のとき、b はいくつですか。
+        answer: 4
+        check: "[b for a in range(1, 20) for b in range(-20, 21) if a * a - 4 == 0 and all(a * x + 2 * y == 4 and 2 * x + a * y == b for x, y in ((0, 2), (2, 0)))][0]"
+        hints:
+          - 解が限りなくあるなら、逆行列はありません。ad − bc = 0 です。
+          - a² − 4 = 0 で、a は正の数です。
+          - a を入れた 2 つの式が、同じ直線を表す b を求めましょう。
+        paths:
+          - [a² − 4 = 0 で a = 2, 2x + 2y = 4 と 2x + 2y = b, 同じ直線になるのは b = 4]
+        note: ad − bc = 0 だけでは、解がないか限りなくあるかは決まらない。b = 4 以外では 2 直線が平行で、解はない。
+    extra:
+      - part: 今日
+        text: 連立方程式 4x + 3y = 2、3x + 2y = 1 を解きましょう。y はいくつですか。
+        answer: 2
+        check: "[y for x in range(-20, 21) for y in range(-20, 21) if 4 * x + 3 * y == 2 and 3 * x + 2 * y == 1][0]"
+        hints:
+          - 係数行列 (4 3；3 2) の ad − bc を計算しましょう。
+          - ad − bc = 8 − 9 = −1 です。
+          - A⁻¹ = (−2 3；3 −4) で (x；y) = A⁻¹(2；1) です。
+        paths:
+          - [A⁻¹ = (−2 3；3 −4), x = −4 + 3 = −1, y = 6 − 4 = 2]
+      - part: 今日
+        text: 連立方程式 2x − y = 3、−4x + 2y = 1 の解は何組ありますか。
+        answer: 0
+        check: "len([(x, y) for x in [Fraction(k, 4) for k in range(-40, 41)] for y in [Fraction(k, 4) for k in range(-40, 41)] if 2 * x - y == 3 and -4 * x + 2 * y == 1])"
+        hints:
+          - 係数行列の ad − bc を計算しましょう。
+          - 1 つ目の式を −2 倍してみましょう。
+          - 2 つ目の式とくらべましょう。
+        paths:
+          - [ad − bc = 4 − 4 = 0, 1 つ目を −2 倍すると −4x + 2y = −6, 同時に 1 にはならないので、解はない, 0 組]
+      - part: 挑戦
+        text: A = (2 1；1 1)、B = (3 1；2 0) のとき、AX = B を満たす行列 X の (2, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, 1), (1, 1))), ((3, 1), (2, 0)))[1][1])"
+        hints:
+          - 両辺に左から A⁻¹ をかけましょう。
+          - X = A⁻¹B です。BA⁻¹ ではありません。
+          - A⁻¹ = (1 −1；−1 2) です。
+        paths:
+          - [X = A⁻¹B, A⁻¹ = (1 −1；−1 2), "(2, 2) 成分は (−1) × 1 + 2 × 0 = −1"]
+        note: 行列の積は順を入れかえられないので、左からかけたか右からかけたかを区別する。BA⁻¹ の (2, 2) 成分は −2 になる。
+
+  - day: 6
+    items:
+      - part: 思い出す
+        text: A = (1 3；2 5) のとき、A⁻¹ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((1, 3), (2, 5)))[0][0])"
+        hints:
+          - ad − bc を計算しましょう。
+          - (1, 1) 成分は d ÷ (ad − bc) です。
+          - ad − bc = 5 − 6 = −1 です。
+        paths:
+          - [ad − bc = −1, "(1, 1) 成分は 5 ÷ (−1) = −5"]
+      - part: 思い出す
+        text: A = (2 3；4 5) のとき、A² − 7A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda S: [k for k in range(-50, 51) if S[0][0] - 7 * 2 + k == 0 and S[1][1] - 7 * 5 + k == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 3), (4, 5)), ((2, 3), (4, 5)))))"
+        hints:
+          - ケーリー・ハミルトンの定理を使いましょう。
+          - a + d = 7 です。
+          - k は ad − bc です。
+        paths:
+          - [k = 2 × 5 − 3 × 4, −2]
+      - part: 今日
+        text: 連立方程式 5x + 2y = 1、7x + 3y = 2 を解きましょう。y はいくつですか。
+        answer: 3
+        check: "[y for x in range(-20, 21) for y in range(-20, 21) if 5 * x + 2 * y == 1 and 7 * x + 3 * y == 2][0]"
+        hints:
+          - 係数行列 (5 2；7 3) の逆行列を求めましょう。
+          - ad − bc = 15 − 14 = 1 です。
+          - (x；y) = A⁻¹(1；2) を計算しましょう。
+        paths:
+          - [A⁻¹ = (3 −2；−7 5), x = 3 − 4 = −1, y = −7 + 10 = 3]
+      - part: わけ
+        text: A = (a b；c d) で ad − bc ≠ 0 のとき、X = (1/(ad − bc))(d −b；−c a) が AX = XA = E を満たすわけを、筋道を立てて書きましょう。
+        explain: 例：「Δ = ad − bc（Δ ≠ 0）とし、Y = (d −b；−c a) とする。AY の (1, 1) 成分は ad + b(−c) = Δ、(1, 2) 成分は a(−b) + ba = 0、(2, 1) 成分は cd + d(−c) = 0、(2, 2) 成分は c(−b) + da = Δ なので、AY = ΔE である。YA の成分も、(1, 1) が da − bc = Δ、(1, 2) が db − bd = 0、(2, 1) が −ca + ac = 0、(2, 2) が −cb + ad = Δ で、YA = ΔE である。Δ ≠ 0 なので X = (1/Δ)Y とおくことができ、AX = (1/Δ)(AY) = (1/Δ)ΔE = E、同じく XA = E となる。よって X は A の逆行列である。」と書ければよい。①「〜とする」で Δ と Y を決める、② AY と YA を成分ごとに計算して ΔE にまとめる、③ 約束した事実（実数倍は積のどこに出してもよい、逆行列の定義）で結ぶ、の 3 つがそろっているかを見る。AY だけを計算して YA を忘れやすい（行列の積は順で変わるので、両方が要る）。(3 1；5 2) のような例で確かめただけで終わっていたら、例ではすべての場合を示せないことを話す。
+        hints:
+          - Δ = ad − bc、Y = (d −b；−c a) として、AY の 4 つの成分を計算しましょう。
+          - YA も計算しましょう。行列の積は順で変わるので、両方が要ります。
+          - Δ が 0 でないことを使って、(1/Δ)Y が逆行列の決まりを満たすことを書きましょう。
+        paths:
+          - [Δ = ad − bc、Y = (d −b；−c a) とする, AY = ΔE、YA = ΔE, Δ ≠ 0 なので X = (1/Δ)Y で AX = XA = E, X は A の逆行列]
+      - part: わけ
+        text: A = (a b；c d) について、A² − (a + d)A + (ad − bc)E = O（ケーリー・ハミルトンの定理）が成り立つわけを、筋道を立てて書きましょう。
+        explain: 例：「A = (a b；c d) とする。A² の成分は、(1, 1) が a² + bc、(1, 2) が ab + bd、(2, 1) が ca + dc、(2, 2) が cb + d² である。(a + d)A の成分は、(1, 1) が a² + ad、(1, 2) が ab + bd、(2, 1) が ac + cd、(2, 2) が ad + d² である。(ad − bc)E は、(1, 1) と (2, 2) が ad − bc、ほかは 0 である。よって A² − (a + d)A + (ad − bc)E の (1, 1) 成分は a² + bc − a² − ad + ad − bc = 0、(1, 2) 成分は ab + bd − ab − bd = 0、(2, 1) 成分は ca + dc − ac − cd = 0、(2, 2) 成分は cb + d² − ad − d² + ad − bc = 0 である。4 つの成分がすべて 0 なので、O に等しい。」と書ければよい。①「〜とする」で成分を文字で置く、② A²、(a + d)A、(ad − bc)E を成分ごとに計算し、同類項をまとめる、③ 約束した事実（行列が等しいのは 4 つの成分がすべて等しいとき、和と実数倍は成分ごと）で結ぶ、の 3 つがそろっているかを見る。(1 2；3 4) で確かめただけで終わっていたら、例ではすべての場合を示せないことを話す。x² − (a + d)x + (ad − bc) という 2 次式は、後の固有値の計算につながる。
+        hints:
+          - A² を成分ごとに計算しましょう。
+          - (a + d)A と (ad − bc)E の成分も書きましょう。
+          - 4 つの成分ごとに A² − (a + d)A + (ad − bc)E を計算して、0 になるか調べましょう。
+        paths:
+          - [A = (a b；c d) とする, "A² の (1, 1) 成分は a² + bc など、成分ごとに計算する", どの成分も同類項が消えて 0, O に等しい]
+      - part: わけ
+        text: A = (a b；c d) で ad − bc = 0 のとき、A は逆行列をもちません。このわけを、Y = (d −b；−c a) を使って、筋道を立てて書きましょう。
+        explain: 例：「ad − bc = 0 とし、Y = (d −b；−c a) とする。前の問題（逆行列の公式のわけ）の計算から YA = (ad − bc)E = O である。もし A に逆行列 X があるとすると AX = E なので、結合法則より Y = YE = Y(AX) = (YA)X = OX = O となる。Y = O なので d = b = c = a = 0、つまり A = O である。すると AX = OX = O となって、AX = E に反する。よって A は逆行列をもたない。」と書ければよい。①「〜とする」で Y と、逆行列があると仮定した X を決める、② 結合法則で Y = (YA)X と変形する、③ 約束した事実（YA = (ad − bc)E、OX = O、O と E はちがう）で食いちがいを出して結ぶ、の 3 つがそろっているかを見る。「あると仮定して食いちがいを出す」書き方（背理法）になることを話す。ad − bc = 0 は 2 つの列ベクトル (a；c)、(b；d) が平行になることで、5 日目の「解がただ 1 組に決まらない」と同じことだと結びつける。
+        hints:
+          - ad − bc = 0 のとき、YA はどうなるでしょう（逆行列の公式のわけの計算）。
+          - 逆行列 X があると仮定して、Y = Y(AX) を結合法則で変形しましょう。
+          - Y = O になると、A はどんな行列でしょう。そのとき AX = E は成り立つでしょうか。
+        paths:
+          - [ad − bc = 0、Y = (d −b；−c a) とする, YA = O, 逆行列 X があると Y = (YA)X = O で A = O, AX = O で E に反するので、逆行列はない]
+    extra:
+      - part: 今日
+        text: A = (2 −1；3 1) のとき、A⁻¹ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 1/5
+        accept: ["0.2"]
+        check: "(lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, -1), (3, 1)))[0][1]"
+        hints:
+          - ad − bc を計算しましょう。
+          - (1, 2) 成分は −b ÷ (ad − bc) です。
+          - b = −1 なので −b = 1 です。
+        paths:
+          - [ad − bc = 2 + 3 = 5, "(1, 2) 成分は 1/5"]
+      - part: 今日
+        text: A = (0 2；−2 0) のとき、A² の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="62.8" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="92.6" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="62.8" y="49.4" font-size="16" text-anchor="middle">−2</text>
+              <text x="92.6" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, 2), (-2, 0)), ((0, 2), (-2, 0)))[0][0])"
+        hints:
+          - A の 1 行目と A の 1 列目を使います。
+          - 0 × 0 と 2 × (−2) を計算しましょう。
+          - ケーリー・ハミルトンの定理を使ってもよいです。
+        paths:
+          - [0 × 0 + 2 × (−2), −4]
+      - part: 挑戦
+        text: A = (1 1；−1 0) のとき、A³ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="62.8" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="92.6" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="62.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <text x="92.6" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda m: (lambda p: p(p, ((1, 1), (-1, 0)), 2))(lambda p, P, k: P if k == 0 else p(p, m(P, ((1, 1), (-1, 0))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][0])"
+        hints:
+          - ケーリー・ハミルトンの定理で A² を表しましょう。a + d = 1、ad − bc = 1 です。
+          - A² = A − E です。両辺に A をかけましょう。
+          - A³ = A² − A に A² = A − E を入れましょう。
+        paths:
+          - [A² = A − E, A³ = A² − A = −E, "(1, 1) 成分は −1"]
+        note: A³ = −E なので A⁶ = E。かけ続けると 6 回でもとにもどる。
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: りんご 2 個とみかん 3 個で 360 円、りんご 1 個とみかん 2 個で 200 円です。りんご 1 個は何円ですか。
+        answer: 120
+        check: "[a for a in range(0, 400) for m in range(0, 400) if 2 * a + 3 * m == 360 and a + 2 * m == 200][0]"
+        hints:
+          - りんご 1 個を x 円、みかん 1 個を y 円として、連立方程式をつくりましょう（A-012）。
+          - 2 つ目の式を 2 倍して、1 つ目の式からひきましょう。
+          - y を求めてから x を求めましょう。
+        paths:
+          - [2x + 3y = 360、x + 2y = 200, 2 つ目を 2 倍してひくと −y = −40 で y = 40, x = 200 − 80 = 120, 120 円]
+      - part: 思い出す
+        text: ベクトル a = (2, 1)、b = (1, 1) を使って、c = (7, 4) を c = sa + tb と表します。s はいくつですか。
+        answer: 3
+        check: "[s for s in range(-20, 21) for t in range(-20, 21) if 2 * s + t == 7 and s + t == 4][0]"
+        hints:
+          - sa + tb を成分で書きましょう（G-027）。
+          - x 成分と y 成分で、2 つの式ができます。
+          - 2s + t = 7、s + t = 4 を解きましょう。
+        paths:
+          - ["(2s + t, s + t) = (7, 4)", ひくと s = 3, t = 1]
+      - part: 今日
+        text: 品物 P を 3 個と Q を 2 個で 1300 円、P を 4 個と Q を 3 個で 1800 円でした。連立方程式を行列で表し、逆行列を使って解きます。P は 1 個何円ですか。
+        answer: 300
+        check: "(lambda d: Fraction(3 * 1300 - 2 * 1800, d))(3 * 3 - 2 * 4)"
+        hints:
+          - P を x 円、Q を y 円として、係数行列 (3 2；4 3) をつくりましょう。
+          - ad − bc = 9 − 8 = 1 です。
+          - (x；y) = A⁻¹(1300；1800) を計算しましょう。
+        paths:
+          - [A⁻¹ = (3 −2；−4 3), x = 3 × 1300 − 2 × 1800 = 300, y = −4 × 1300 + 3 × 1800 = 200, 300 円]
+      - part: 今日
+        text: ベクトル c = (5, −1) を、a = (3, 1)、b = (4, 2) を使って c = sa + tb と表します。t はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(3 * (-1) - 1 * 5, 3 * 2 - 4 * 1))"
+        hints:
+          - sa + tb = c を、行列 (3 4；1 2) と列ベクトル (s；t) の積で表しましょう。
+          - ad − bc = 6 − 4 = 2 です。
+          - (s；t) = A⁻¹(5；−1) を計算しましょう。
+        paths:
+          - [(3 4；1 2)(s；t) = (5；−1), A⁻¹ = (1/2)(2 −4；−1 3), t = (1/2)(−5 − 3) = −4, s = (1/2)(10 + 4) = 7]
+        note: ベクトルを 2 つのベクトルで表すことは、列を a、b にした行列の連立方程式と同じ。a と b が平行でない（ad − bc ≠ 0）ので、表し方はただ 1 通り。
+      - part: 挑戦
+        text: A = (2 1；1 1)、B = (1 1；0 1) のとき、(AB)⁻¹ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 1), (1, 1)), ((1, 1), (0, 1))))[0][1])"
+        hints:
+          - まず AB を計算しましょう。
+          - AB = (2 3；1 2) です。
+          - その逆行列を求めましょう。
+        paths:
+          - [AB = (2 3；1 2), ad − bc = 4 − 3 = 1, (AB)⁻¹ = (2 −3；−1 2), "(1, 2) 成分は −3"]
+          - [(AB)⁻¹ = B⁻¹A⁻¹, B⁻¹ = (1 −1；0 1)、A⁻¹ = (1 −1；−1 2), "(1, 2) 成分は 1 × (−1) + (−1) × 2 = −3"]
+        note: (AB)⁻¹ = B⁻¹A⁻¹ と順が逆になる。A⁻¹B⁻¹ では (1, 2) 成分が −2 になり、合わない。
+    extra:
+      - part: 今日
+        text: 連立方程式 x + y = 7、3x + 2y = 18 を、逆行列を使って解きましょう。x はいくつですか。
+        answer: 4
+        check: "[x for x in range(-20, 21) for y in range(-20, 21) if x + y == 7 and 3 * x + 2 * y == 18][0]"
+        hints:
+          - 係数行列は (1 1；3 2) です。
+          - ad − bc = 2 − 3 = −1 です。
+          - A⁻¹ = (−2 1；3 −1) で (x；y) = A⁻¹(7；18) です。
+        paths:
+          - [x = −14 + 18 = 4, y = 21 − 18 = 3]
+      - part: 今日
+        text: A = (1 −2；3 −5) のとき、A⁻¹ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">−5</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((1, -2), (3, -5)))[0][0])"
+        hints:
+          - ad − bc を計算しましょう。
+          - ad − bc = −5 + 6 = 1 です。
+          - (1, 1) 成分は d ÷ (ad − bc) です。
+        paths:
+          - [ad − bc = 1, "(1, 1) 成分は −5"]
+      - part: 挑戦
+        text: A = (5 −6；1 0) のとき、A³ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−6</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 65
+        check: "(lambda m: (lambda p: p(p, ((5, -6), (1, 0)), 2))(lambda p, P, k: P if k == 0 else p(p, m(P, ((5, -6), (1, 0))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][0]"
+        hints:
+          - ケーリー・ハミルトンの定理で、A² = 5A − 6E です。
+          - A³ = 5A² − 6A に、A² の式を入れましょう。
+          - A³ = 19A − 30E になります。
+        paths:
+          - [A³ = 5(5A − 6E) − 6A = 19A − 30E, "(1, 1) 成分は 19 × 5 − 30 = 65"]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: (3 4；−2 1)(2；−1) の下の成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(87.0 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="31.3" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="61.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="31.3" y="49.4" font-size="16" text-anchor="middle">−2</text>
+              <text x="61.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M73.5 7.0 Q80.5 32.2 73.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M93.5 7.0 Q86.5 32.2 93.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="109.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="109.8" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M127.1 7.0 Q134.1 32.2 127.1 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, 4), (-2, 1)), ((2,), (-1,)))[1][0])"
+        hints:
+          - 下の成分は、2 行目を使います。
+          - (−2) × 2 と 1 × (−1) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [(−2) × 2 + 1 × (−1), −5]
+      - part: 今日
+        text: A = (1 −1；2 3)、B = (4 1；0 2) のとき、AB の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(37.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="118.0" y="37.8" font-size="16">　</text>
+              <text x="138.0" y="37.8" font-size="16">B = </text>
+              <path d="M176.6 7.0 Q169.6 32.2 176.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="188.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="213.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="188.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="213.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M225.5 7.0 Q232.5 32.2 225.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, -1), (2, 3)), ((4, 1), (0, 2)))[0][1])"
+        hints:
+          - A の 1 行目と B の 2 列目を使います。
+          - 1 × 1 と (−1) × 2 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [1 × 1 + (−1) × 2, −1]
+      - part: 今日
+        text: A = (2 1；−3 1) のとき、A² の (2, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="62.8" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="92.6" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="62.8" y="49.4" font-size="16" text-anchor="middle">−3</text>
+              <text x="92.6" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 1), (-3, 1)), ((2, 1), (-3, 1)))[1][1])"
+        hints:
+          - A の 2 行目と A の 2 列目を使います。
+          - (−3) × 1 と 1 × 1 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [(−3) × 1 + 1 × 1, −2]
+      - part: 今日
+        text: A = (4 1；2 3) のとき、A² − 7A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 10
+        check: "(lambda S: [k for k in range(-50, 51) if S[0][0] - 7 * 4 + k == 0 and S[1][1] - 7 * 3 + k == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((4, 1), (2, 3)), ((4, 1), (2, 3))))"
+        hints:
+          - ケーリー・ハミルトンの定理を使いましょう。
+          - a + d = 7 です。
+          - k は ad − bc です。
+        paths:
+          - [k = 12 − 2 = 10]
+      - part: 今日
+        text: A = (3 5；1 2) のとき、A⁻¹ の (2, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((3, 5), (1, 2)))[1][0])"
+        hints:
+          - ad − bc を計算しましょう。
+          - (2, 1) 成分は −c ÷ (ad − bc) です。
+          - c = 1 です。
+        paths:
+          - [ad − bc = 6 − 5 = 1, "(2, 1) 成分は −1"]
+      - part: 今日
+        text: 連立方程式 2x + 5y = 1、x + 3y = 2 を、逆行列を使って解きましょう。x はいくつですか。
+        answer: −7
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([x for x in range(-20, 21) for y in range(-20, 21) if 2 * x + 5 * y == 1 and x + 3 * y == 2][0])"
+        hints:
+          - 係数行列 (2 5；1 3) の逆行列を求めましょう。
+          - ad − bc = 6 − 5 = 1 です。
+          - (x；y) = A⁻¹(1；2) を計算しましょう。
+        paths:
+          - [A⁻¹ = (3 −5；−1 2), x = 3 − 10 = −7, y = −1 + 4 = 3]
+      - part: 今日
+        text: A = (k 3；4 6) が逆行列をもたないとき、k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle"><tspan font-style="italic">k</tspan></text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">6</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "[k for k in range(-20, 21) if 6 * k - 3 * 4 == 0][0]"
+        hints:
+          - 逆行列をもたないのは ad − bc = 0 のときです。
+          - 6k − 12 = 0 です。
+          - k を求めましょう。
+        paths:
+          - [6k − 12 = 0, k = 2]
+    extra:
+      - part: 今日
+        text: A = (2 1；0 4)、B = (1 −2；3 1) のとき、2A − 3B の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(37.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="208.2" y="26.2" font-size="16" text-anchor="middle">−2</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="208.2" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M225.5 7.0 Q232.5 32.2 225.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 1
+        check: "2 * 2 - 3 * 1"
+        hints:
+          - (1, 1) 成分どうしで計算します。
+          - A の (1, 1) 成分は 2、B の (1, 1) 成分は 1 です。
+          - 2 × 2 − 3 × 1 を計算しましょう。
+        paths:
+          - [4 − 3 = 1]
+      - part: 今日
+        text: A = (1 4；1 3) のとき、A⁻¹ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 4
+        check: "(lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((1, 4), (1, 3)))[0][1]"
+        hints:
+          - ad − bc を計算しましょう。
+          - ad − bc = 3 − 4 = −1 です。
+          - (1, 2) 成分は −b ÷ (ad − bc) です。
+        paths:
+          - [−4 ÷ (−1) = 4]
+      - part: 今日
+        text: 連立方程式 3x + 2y = 7、4x + 3y = 10 を、逆行列を使って解きましょう。y はいくつですか。
+        answer: 2
+        check: "[y for x in range(-20, 21) for y in range(-20, 21) if 3 * x + 2 * y == 7 and 4 * x + 3 * y == 10][0]"
+        hints:
+          - 係数行列 (3 2；4 3) の逆行列を求めましょう。
+          - ad − bc = 9 − 8 = 1 です。
+          - (x；y) = A⁻¹(7；10) を計算しましょう。
+        paths:
+          - [A⁻¹ = (3 −2；−4 3), x = 21 − 20 = 1, y = −28 + 30 = 2]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [C-009]
+    text: A = (1 1；1 0) のとき、A¹⁰ の (1, 2) 成分はいくつですか。
+    svg: |
+      <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(102.8 0)">
+          <text x="8.0" y="37.8" font-size="16">A = </text>
+          <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+          <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+          <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+          <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+          <text x="83.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+          <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+        </g>
+      </svg>
+    answer: 55
+    check: "(lambda m: (lambda p: p(p, ((1, 1), (1, 0)), 9))(lambda p, P, k: P if k == 0 else p(p, m(P, ((1, 1), (1, 0))), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))[0][1]"
+    hints:
+      - A²、A³、A⁴ を計算して、成分の並びに決まりがないか見ましょう。
+      - Aⁿ⁺¹ = AⁿA を成分で書くと、前の成分から次の成分が決まります（C-009 の前の結果から数える考え）。
+      - 1、1、2、3、5、… と続く数の並びを、10 番目まで書きましょう。
+    paths:
+      - [A² = (2 1；1 1)、A³ = (3 2；2 1)、A⁴ = (5 3；3 2), "Aⁿ の (1, 2) 成分は 1、1、2、3、5、… と前の 2 つの和で増える", 1、1、2、3、5、8、13、21、34、55, "55"]
+    note: 行列の積を 9 回くり返す手数を、成分の並びの決まり（フィボナッチ数）に言いかえる道筋。Aⁿ = (Fₙ₊₁ Fₙ；Fₙ Fₙ₋₁) は帰納法で示せる。階段を 1 段か 2 段ずつ上る上り方の数（C-009）と同じ並び。
+  - part: 離
+    kinds: [道筋]
+    text: 行列 A が A(1；2) = (3；1)、A(2；3) = (4；3) を満たします。A の 4 つの成分の和はいくつですか。
+    answer: 3
+    check: "(lambda A: A[0][0] + A[0][1] + A[1][0] + A[1][1])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, 4), (1, 3)), (lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((1, 2), (2, 3)))))"
+    hints:
+      - 2 つの式を、列ベクトルを横に並べた 1 つの行列の式 AP = Q にまとめましょう。
+      - P = (1 2；2 3) の逆行列を求めましょう。
+      - 右から P⁻¹ をかけると A = QP⁻¹ です。かける順に気をつけましょう。
+    paths:
+      - [AP = Q、P = (1 2；2 3)、Q = (3 4；1 3), P⁻¹ = (−3 2；2 −1), A = QP⁻¹ = (−1 2；3 −1), 成分の和は 3]
+    note: 成分を a、b、c、d とおいて 4 つの文字の連立方程式を解く道もあるが、列を並べて 1 つの行列の式にすると逆行列 1 回で済む。P⁻¹Q と順を逆にする間違いに注意。
+  - part: 離
+    kinds: [数]
+    text: 連立方程式 (3/2)x + (1/3)y = 7/6、(3/4)x + (1/2)y = 1 を、逆行列を使って解きましょう。y はいくつですか。
+    answer: 5/4
+    accept: ["1.25"]
+    check: "(lambda Ai: Ai[1][0] * Fraction(7, 6) + Ai[1][1] * 1)((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((Fraction(3, 2), Fraction(1, 3)), (Fraction(3, 4), Fraction(1, 2)))))"
+    hints:
+      - 係数行列 (3/2 1/3；3/4 1/2) の ad − bc を計算しましょう。
+      - ad − bc = 3/4 − 1/4 = 1/2 です。
+      - A⁻¹ = 2(1/2 −1/3；−3/4 3/2) を求めて、(7/6；1) にかけましょう。
+    paths:
+      - [ad − bc = 1/2, A⁻¹ = (1 −2/3；−3/2 3), x = 7/6 − 2/3 = 1/2, y = −(3/2) × (7/6) + 3 = 5/4]
+    note: 分数の成分の逆行列。1/(ad − bc) = 2 をかけ忘れやすい。分母をはらって 9x + 2y = 7、3x + 2y = 4 にしてから解く道もある。

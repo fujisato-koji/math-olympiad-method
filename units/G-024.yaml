@@ -1,0 +1,873 @@
+# G-024 三角比と正弦・余弦定理
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-019 と G-019 に合わせる（負の数は「−」U+2212、分数は約分した形）。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜5 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# 地図に plan がないので、既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 鋭角の三角比（直角三角形の辺の比。相似なので角だけで決まる）、30°・45°・60° の値、辺を求める
+#   2 日目 相互関係（sin²θ + cos²θ = 1、tan θ = sin θ/cos θ、1 + tan²θ = 1/cos²θ）と 90° − θ
+#   3 日目 0°〜180° の三角比（半円の上の点で定める）、180° − θ、sin θ = 1/2 のような θ を求める
+#   4 日目 正弦定理と外接円の半径、三角形の面積 S = (1/2)bc sin A　5 日目 余弦定理（辺を求める、3 辺から角、鋭角か鈍角か）
+#   6 日目 わけ（sin²θ + cos²θ = 1、余弦定理、正弦定理。どれも ③）　7 日目 G-019・G-020・G-018・G-017 と混ぜる（高さの測量、
+#   円に内接する三角形、平行四辺形の対角線、角の二等分線を面積で）　8 日目 確認
+# 前提は G-019（三平方の定理）、G-020（相似）、G-018（円周角の定理）。前提のたどりに A-016（平方根と有理化）、A-017（2 次方程式）、
+#   A-015（展開）、G-017（二等辺三角形と平行四辺形）、G-016（平行線と角）がある。
+#   座標平面（G-050、A-006）は前提のたどりにないので、鈍角の三角比は「半円の上の点 P の、O からの横の位置 x（右を正、左を負）と高さ y」で
+#   定めた（負の数は N-027 まで済んでいる）。単位円と一般角、弧度法は G-025 で扱うので、角は度だけを使い、0° ≦ θ ≦ 180° に限った。
+#   加法定理（G-025）は使わない（sin 75° のような値が要らないように、向かい合う辺と角の組を選ばせる）。
+#   内接四角形の性質（G-023）とヘロンの公式は前提にないので日の問題では使わない（正弦定理のわけの鈍角の場合は注で触れるだけ）。
+#   角の二等分線の定理（G-042）も前提にないので、二等分線の長さは面積の和で求めた。
+# 角の大きさの答えは選ぶ問題にした（段 5 の決まり）。√ を含む答えも選ぶ問題にし、check は選択肢ごとの値（math.sqrt）が
+#   問題の量（math.sin、math.cos で計算した値）と近い（math.isclose）ものを選び出す。打つ答えは Fraction で計算する。
+#   θ を求める問題の check は、0°〜180° の整数の角で条件を満たすものの集まりと、選択肢の角の集まりをくらべる。
+# 「√3/2」は画面で 3/2 だけが上下に重なり √(3/2) に見えるので、「(√3)/2」のように √ をかっこでくくって書いた（D-042 のかっこの決まり）。
+# 図は svg（D-040）。三角形は問題の長さと角のとおりに描き、求める辺や角の値は図に書かない。直角のしるしは直角とわかっている角だけ。
+# 三角比は、ベクトルの内積（G-027）、三角関数と加法定理（G-025）、測量と天体の距離、力の分解（P-002）、交流と波の計算の入口になる（D-026）。
+
+id: G-024
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 直角三角形 ABC（∠C = 90°）で、∠A = θ とします。辺の長さの比で、角 θ の大きさを表してみましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="54.7,124 185.3,124 185.3,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="54.7,124 185.3,124 185.3,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="176.3,124 176.3,115 185.3,115" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M67.5 114.4 A16 16 0 0 1 70.7 124" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="84.7" y="118" font-size="12" text-anchor="middle">θ</text><text x="113.4" y="70.2" font-size="12" text-anchor="end">5</text><text x="196.3" y="79" font-size="12" text-anchor="start">3</text><text x="120" y="139" font-size="12" text-anchor="middle">4</text><text x="43.4" y="132.7" font-size="13" text-anchor="middle">A</text><text x="194.9" y="135.7" font-size="13" text-anchor="middle">C</text><text x="192" y="20.5" font-size="13" text-anchor="middle">B</text></svg>'
+        explain: ∠C = 90° の直角三角形で ∠A = θ と決めると、2 つの角が等しいので、どの大きさの三角形も相似です（G-020）。だから、辺の長さの比は θ だけで決まります。斜辺 AB、A と向かい合う辺 BC、A のとなりの辺 AC を使って、sin θ = BC/AB、cos θ = AC/AB、tan θ = BC/AC と定めます。これらをまとめて三角比といい、sin をサイン（正弦）、cos をコサイン（余弦）、tan をタンジェント（正接）と読みます。図の三角形では、sin θ = 3/5、cos θ = 4/5、tan θ = 3/4 です。直角二等辺三角形（辺の比 1:1:√2）から sin 45° = cos 45° = 1/√2、tan 45° = 1、30°・60°・90° の直角三角形（辺の比 1:2:√3）から sin 30° = 1/2、cos 30° = (√3)/2、tan 30° = 1/√3、sin 60° = (√3)/2、cos 60° = 1/2、tan 60° = √3 です。式を変形すると BC = AB sin θ、AC = AB cos θ、BC = AC tan θ で、斜辺と角から ほかの辺が求められます。
+      - part: 思い出す
+        text: 直角三角形で、直角をはさむ 2 辺の長さが 5 と 12 のとき、斜辺の長さはいくつですか。
+        answer: 13
+        check: "[c for c in range(1, 100) if c * c == 5 * 5 + 12 * 12][0]"
+        hints:
+          - 三平方の定理を使いましょう（G-019）。
+          - 5² + 12² を計算しましょう。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["5² + 12² = 25 + 144 = 169", "13² = 169", "斜辺は 13"]
+      - part: 思い出す
+        text: △ABC ∽ △DEF で、AB = 6、BC = 10、DE = 9 です。EF の長さはいくつですか。
+        answer: 15
+        check: "Fraction(10 * 9, 6)"
+        hints:
+          - 相似な図形では、対応する辺の比が等しくなります（G-020）。
+          - AB と DE、BC と EF が対応します。
+          - DE は AB の何倍でしょう。
+        paths:
+          - ["DE は AB の 9/6 = 3/2 倍", "EF = 10 × 3/2 = 15"]
+      - part: 今日
+        text: 図の直角三角形 ABC で、sin A の値はいくつですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="28.1,124 211.9,124 211.9,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="28.1,124 211.9,124 211.9,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="202.9,124 202.9,115 211.9,115" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="114.8" y="69.3" font-size="12" text-anchor="middle">17</text><text x="222.9" y="79" font-size="12" text-anchor="start">8</text><text x="120" y="139" font-size="12" text-anchor="middle">15</text><text x="16.5" y="131.6" font-size="13" text-anchor="middle">A</text><text x="222.5" y="134.1" font-size="13" text-anchor="middle">C</text><text x="220.1" y="21.7" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 8/17
+        check: "Fraction(8, 17)"
+        hints:
+          - sin A は、(A と向かい合う辺) ÷ (斜辺) です。
+          - 斜辺は、直角と向かい合う辺です。
+          - A と向かい合う辺は、A を通らない辺です。
+        paths:
+          - ["斜辺は AB = 17", "A と向かい合う辺は BC = 8", "sin A = 8/17"]
+        note: cos A と取り違えて 15/17 としやすい。斜辺がどれかを最初に決めさせる。
+      - part: 今日
+        text: 図の直角三角形 ABC で、tan B の値はいくつですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="99.6,26 99.6,124 140.4,124" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="99.6,26 99.6,124 140.4,124" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="99.6,115 108.6,115 108.6,124" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="130.2" y="74.8" font-size="12" text-anchor="start">13</text><text x="120" y="139" font-size="12" text-anchor="middle">5</text><text x="88.6" y="79" font-size="12" text-anchor="end">12</text><text x="97.1" y="18.8" font-size="13" text-anchor="middle">A</text><text x="95" y="139.6" font-size="13" text-anchor="middle">C</text><text x="148.1" y="137.7" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 12/5
+        check: "Fraction(12, 5)"
+        hints:
+          - tan B は、(B と向かい合う辺) ÷ (B のとなりの辺) です。となりの辺は、斜辺でないほうです。
+          - B と向かい合う辺は、B を通らない辺です。
+          - 角 B から見ると、角 A から見るときと、向かい合う辺ととなりの辺が入れかわります。
+        paths:
+          - ["B と向かい合う辺は AC = 12", "B のとなりの辺は BC = 5", "tan B = 12/5"]
+        note: 角 A の比 5/12 としやすい。tan は 1 より大きくなることもある。
+      - part: 挑戦
+        text: 直角三角形 ABC（∠C = 90°）で、AB = 20、cos A = 3/5 です。この三角形の面積はいくつですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="83.2,124 156.8,124 156.8,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="83.2,124 156.8,124 156.8,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="147.8,124 147.8,115 156.8,115" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="111.2" y="72.4" font-size="12" text-anchor="end">20</text><text x="73.3" y="135.2" font-size="13" text-anchor="middle">A</text><text x="163.9" y="138.1" font-size="13" text-anchor="middle">C</text><text x="161" y="19.3" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 96
+        check: "(lambda ac: ac * [b for b in range(1, 40) if b * b + ac * ac == 400][0] / 2)(20 * Fraction(3, 5))"
+        hints:
+          - cos A = AC ÷ AB から、AC を求めましょう。
+          - BC は、三平方の定理で求められます。
+          - 直角をはさむ 2 辺から、面積を求めましょう。
+        paths:
+          - ["AC = 20 × 3/5 = 12", "BC² = 20² − 12² = 256 で BC = 16", "面積は 12 × 16 ÷ 2 = 96"]
+          - ["cos A = 3/5 から、辺の比が 3:4:5 の直角三角形", "AC = 12、BC = 16", "面積は 96"]
+        note: cos A = 3/5 から、辺の比が 3:4:5 の直角三角形とわかる。AB を直角をはさむ辺とまちがえないように。
+    extra:
+      - part: 今日
+        text: 図の直角三角形 ABC で、cos A の値はいくつですか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><polygon points="26,87.4 214,87.4 214,32.6" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="26,87.4 214,87.4 214,32.6" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="205,87.4 205,78.4 214,78.4" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="116.9" y="53.4" font-size="12" text-anchor="middle">25</text><text x="225" y="64" font-size="12" text-anchor="start">7</text><text x="120" y="102.4" font-size="12" text-anchor="middle">24</text><text x="14.1" y="93.6" font-size="13" text-anchor="middle">A</text><text x="225.5" y="95.3" font-size="13" text-anchor="middle">C</text><text x="224.4" y="31" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 24/25
+        check: "Fraction(24, 25)"
+        hints:
+          - cos A は、(A のとなりの辺) ÷ (斜辺) です。
+          - 斜辺はどれでしょう。
+          - A のとなりの辺は、A と C を結ぶ辺です。
+        paths:
+          - ["斜辺は AB = 25", "A のとなりの辺は AC = 24", "cos A = 24/25"]
+      - part: 今日
+        text: tan 45° の値はいくつですか。
+        answer: 1
+        check: "[k for k in range(-3, 4) if math.isclose(math.tan(math.radians(45)), k)][0]"
+        hints:
+          - 直角二等辺三角形を思いうかべましょう（G-019）。
+          - 直角をはさむ 2 辺の長さは等しいです。
+          - tan は、(向かい合う辺) ÷ (となりの辺) です。
+        paths:
+          - ["直角二等辺三角形の辺の比は 1:1:√2", "tan 45° = 1 ÷ 1 = 1"]
+      - part: 挑戦
+        text: 直角三角形 ABC（∠C = 90°）で、∠A = 60°、AC = 7 です。斜辺 AB の長さはいくつですか。
+        svg: '<svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg"><polygon points="65.9,144 134.1,144 134.1,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="65.9,144 134.1,144 134.1,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="125.1,144 125.1,135 134.1,135" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M73.9 130.1 A16 16 0 0 1 81.9 144" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="89.3" y="134.5" font-size="12" text-anchor="middle">60°</text><text x="100" y="159" font-size="12" text-anchor="middle">7</text><text x="56.9" y="156.4" font-size="13" text-anchor="middle">A</text><text x="140.1" y="158.9" font-size="13" text-anchor="middle">C</text><text x="137.4" y="19" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 14
+        check: "Fraction(7) / Fraction(1, 2)"
+        hints:
+          - AC は、A のとなりの辺です。
+          - cos 60° の値を思い出しましょう。
+          - AC = AB cos 60° です。
+        paths:
+          - ["cos 60° = 1/2", "7 = AB × 1/2", "AB = 14"]
+          - ["30°・60°・90° の直角三角形の辺の比は 1:2:√3", "AC:AB = 1:2", "AB = 14"]
+  - day: 2
+    items:
+      - part: 見本
+        text: θ を鋭角とします。sin θ、cos θ、tan θ の間の関係を調べてみましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="50,124 190,124 190,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="50,124 190,124 190,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="181,124 181,115 190,115" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M63.1 114.8 A16 16 0 0 1 66 124" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="81.7" y="118" font-size="12" text-anchor="middle">θ</text><path d="M190 42 A16 16 0 0 1 176.9 35.2" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="113.7" y="70" font-size="12" text-anchor="end">1</text><text x="201" y="79" font-size="12" text-anchor="start">sin θ</text><text x="120" y="139" font-size="12" text-anchor="middle">cos θ</text><text x="38.7" y="132.5" font-size="13" text-anchor="middle">A</text><text x="199.8" y="135.4" font-size="13" text-anchor="middle">C</text><text x="197" y="20.7" font-size="13" text-anchor="middle">B</text></svg>'
+        explain: 斜辺の長さが 1 の直角三角形 ABC（∠C = 90°、∠A = θ）では、BC = sin θ、AC = cos θ です。三平方の定理から BC² + AC² = AB² なので、(sin θ)² + (cos θ)² = 1 です。(sin θ)² を sin²θ と書いて、sin²θ + cos²θ = 1 と表します。また、tan θ = BC ÷ AC なので、tan θ = sin θ/cos θ です。sin²θ + cos²θ = 1 の両辺を cos²θ でわると、tan²θ + 1 = 1/cos²θ になります。さらに、∠B = 90° − θ で、角 B から見ると向かい合う辺ととなりの辺が入れかわるので、sin(90° − θ) = cos θ、cos(90° − θ) = sin θ、tan(90° − θ) = 1/tan θ です。例：θ が鋭角で sin θ = 3/5 のとき、cos²θ = 1 − 9/25 = 16/25 で、cos θ は正の数なので cos θ = 4/5、tan θ = (3/5) ÷ (4/5) = 3/4 です。1 つの三角比がわかれば、残りの 2 つが求められます。
+      - part: 思い出す
+        text: 図の直角三角形 ABC で、sin B の値はいくつですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="54.7,124 185.3,124 185.3,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="54.7,124 185.3,124 185.3,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="176.3,124 176.3,115 185.3,115" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="113.4" y="70.2" font-size="12" text-anchor="end">10</text><text x="196.3" y="79" font-size="12" text-anchor="start">6</text><text x="120" y="139" font-size="12" text-anchor="middle">8</text><text x="43.4" y="132.7" font-size="13" text-anchor="middle">A</text><text x="194.9" y="135.7" font-size="13" text-anchor="middle">C</text><text x="192" y="20.5" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 4/5
+        check: "Fraction(8, 10)"
+        hints:
+          - sin B は、(B と向かい合う辺) ÷ (斜辺) です。
+          - B と向かい合う辺は、B を通らない辺です。
+          - 約分しましょう。
+        paths:
+          - ["B と向かい合う辺は AC = 8", "斜辺は AB = 10", "sin B = 8/10 = 4/5"]
+      - part: 思い出す
+        text: tan 60° の値はどれですか。
+        choices: ["√3", "(√3)/3", "(√3)/2", "1/2"]
+        answer: √3
+        check: "[k for k, v in {'√3': math.sqrt(3), '(√3)/3': math.sqrt(3) / 3, '(√3)/2': math.sqrt(3) / 2, '1/2': 0.5}.items() if math.isclose(v, math.tan(math.radians(60)))][0]"
+        hints:
+          - 30°・60°・90° の直角三角形の辺の比は 1:2:√3 です。
+          - 60° の角と向かい合う辺は、いちばん短い辺ではありません。
+          - tan は、(向かい合う辺) ÷ (となりの辺) です。
+        paths:
+          - ["60° と向かい合う辺は √3、となりの辺は 1", "tan 60° = √3 ÷ 1 = √3"]
+      - part: 今日
+        text: θ は鋭角で、cos θ = 5/13 です。sin θ の値はいくつですか。
+        answer: 12/13
+        check: "[Fraction(k, 13) for k in range(1, 13) if Fraction(k, 13) ** 2 + Fraction(5, 13) ** 2 == 1][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - sin²θ = 1 − (5/13)² です。
+          - θ が鋭角なら、sin θ は正の数です。
+        paths:
+          - ["sin²θ = 1 − 25/169 = 144/169", "sin θ は正なので sin θ = 12/13"]
+          - ["となりの辺 5、斜辺 13 の直角三角形を描く", "向かい合う辺は 12", "sin θ = 12/13"]
+      - part: 今日
+        text: θ は鋭角で、tan θ = 2 です。cos θ の値はどれですか。
+        choices: ["(√5)/5", "(2√5)/5", "1/5", "√5"]
+        answer: (√5)/5
+        check: "[k for k, v in {'(√5)/5': math.sqrt(5) / 5, '(2√5)/5': 2 * math.sqrt(5) / 5, '1/5': 0.2, '√5': math.sqrt(5)}.items() if math.isclose(v, math.cos(math.atan(2)))][0]"
+        hints:
+          - 1 + tan²θ = 1/cos²θ を使いましょう。
+          - cos²θ はいくつになるでしょう。
+          - 分母に √ が残らないように、有理化しましょう（A-016）。
+        paths:
+          - ["1 + 2² = 1/cos²θ", "cos²θ = 1/5", "cos θ = 1/√5 = (√5)/5"]
+          - ["となりの辺 1、向かい合う辺 2 の直角三角形を描く", "斜辺は √5", "cos θ = 1/√5 = (√5)/5"]
+        note: (2√5)/5 は sin θ。1/5 は cos²θ のまま止めたもの。
+      - part: 挑戦
+        text: θ は鋭角で、sin θ + cos θ = 7/5 です。sin θ cos θ の値はいくつですか。
+        answer: 12/25
+        check: "(Fraction(7, 5) ** 2 - 1) / 2"
+        hints:
+          - sin θ + cos θ = 7/5 の両辺を 2 乗してみましょう。
+          - (a + b)² = a² + 2ab + b² で展開します（A-015）。
+          - sin²θ + cos²θ はいくつでしょう。
+        paths:
+          - ["(sin θ + cos θ)² = 49/25", "sin²θ + 2sin θ cos θ + cos²θ = 49/25", "1 + 2sin θ cos θ = 49/25", "sin θ cos θ = 12/25"]
+        note: sin θ と cos θ を別々に求めなくてよいのが要点（求めると 3/5 と 4/5 で、積は 12/25）。
+    extra:
+      - part: 今日
+        text: θ は鋭角で、sin θ = 2/3 です。cos θ の値はどれですか。
+        choices: ["(√5)/3", "1/3", "5/9", "(√5)/9"]
+        answer: (√5)/3
+        check: "[k for k, v in {'(√5)/3': math.sqrt(5) / 3, '1/3': 1 / 3, '5/9': 5 / 9, '(√5)/9': math.sqrt(5) / 9}.items() if math.isclose(v, math.cos(math.asin(2 / 3)))][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - cos²θ = 1 − (2/3)² です。
+          - θ が鋭角なので、cos θ は正の数です。
+        paths:
+          - ["cos²θ = 1 − 4/9 = 5/9", "cos θ = √(5/9) = (√5)/3"]
+        note: 2 乗を忘れて 1 − 2/3 = 1/3 としやすい。5/9 は cos²θ。
+      - part: 今日
+        text: cos 50° を、45° 以下の角の三角比で表したものはどれですか。
+        choices: [sin 40°, cos 40°, sin 50°, tan 40°]
+        answer: sin 40°
+        check: "[k for k, v in {'sin 40°': math.sin(math.radians(40)), 'cos 40°': math.cos(math.radians(40)), 'sin 50°': math.sin(math.radians(50)), 'tan 40°': math.tan(math.radians(40))}.items() if math.isclose(v, math.cos(math.radians(50)))][0]"
+        hints:
+          - cos(90° − θ) = sin θ を使いましょう。
+          - 50° を 90° − □ の形で表しましょう。
+          - 直角三角形で、一方の鋭角のとなりの辺は、もう一方の鋭角と向かい合う辺です。
+        paths:
+          - ["50° = 90° − 40°", "cos(90° − 40°) = sin 40°"]
+      - part: 挑戦
+        text: θ は鋭角で、tan θ = 3/4 です。sin θ + cos θ の値はいくつですか。
+        answer: 7/5
+        check: "(lambda co: co * Fraction(3, 4) + co)([Fraction(k, 5) for k in range(1, 6) if Fraction(k, 5) ** 2 == 1 / (1 + Fraction(3, 4) ** 2)][0])"
+        hints:
+          - 1 + tan²θ = 1/cos²θ で、cos θ を求めましょう。
+          - sin θ = tan θ × cos θ です。
+          - 2 つを足しましょう。
+        paths:
+          - ["1/cos²θ = 1 + 9/16 = 25/16", "cos θ = 4/5", "sin θ = (3/4) × (4/5) = 3/5", "3/5 + 4/5 = 7/5"]
+          - ["となりの辺 4、向かい合う辺 3 の直角三角形を描く", "斜辺は 5", "3/5 + 4/5 = 7/5"]
+  - day: 3
+    items:
+      - part: 見本
+        text: 鈍角の三角比を、半円を使って定めましょう。
+        svg: '<svg viewBox="0 0 260 150" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="118" x2="232" y2="118" stroke="currentColor" fill="none" stroke-width="2"/><path d="M232 118 L224 114 L224 122 Z" fill="currentColor"/><path d="M208 118 A78 78 0 0 0 52 118" stroke="currentColor" fill="none" stroke-width="2"/><line x1="130" y1="118" x2="91" y2="50.5" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="91" y1="50.5" x2="91" y2="118" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="91" cy="50.5" r="3.5" fill="currentColor"/><text x="85" y="42.5" font-size="13" text-anchor="end">P</text><text x="130" y="133" font-size="12" text-anchor="middle">O</text><text x="212" y="133" font-size="12" text-anchor="middle">A</text><path d="M148 118 A18 18 0 0 0 121 102.4" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="152" y="96" font-size="13" text-anchor="start">θ</text><text x="120.5" y="86.2" font-size="13" text-anchor="middle"><tspan font-style="italic">r</tspan></text><text x="110.5" y="133" font-size="13" text-anchor="middle"><tspan font-style="italic">x</tspan></text><text x="81" y="88.2" font-size="13" text-anchor="middle"><tspan font-style="italic">y</tspan></text></svg>'
+        explain: 点 O を中心とする半径 r の半円をかき、右のはしを A とします。半円の上に点 P をとり、∠AOP = θ とします。P から直線 OA にひいた垂線の足の、O からの位置を x（O より右なら正の数、左なら負の数）、P の高さを y とします。このとき、sin θ = y/r、cos θ = x/r、tan θ = y/x と定めます（θ = 90° のときは x = 0 なので、tan 90° は定めません）。θ が鋭角なら、直角三角形で定めた三角比と同じです。θ = 120° のとき、∠POA の外側の角が 60° なので、r = 2 とすると x = −1、y = √3 で、sin 120° = (√3)/2、cos 120° = −1/2、tan 120° = −√3 です。O を通り OA に垂直な直線について P と対称な点を P′ とすると、∠AOP′ = 180° − θ で、高さは同じ、横の位置は符号だけが変わります。よって sin(180° − θ) = sin θ、cos(180° − θ) = −cos θ、tan(180° − θ) = −tan θ です。θ = 0° では P が A に重なるので sin 0° = 0、cos 0° = 1、tan 0° = 0、θ = 90° では sin 90° = 1、cos 90° = 0、θ = 180° では sin 180° = 0、cos 180° = −1、tan 180° = 0 です。0° ≦ θ ≦ 180° では sin θ は 0 以上で、θ が鈍角なら cos θ と tan θ は負の数になります。x² + y² = r²（三平方の定理）なので、sin²θ + cos²θ = 1 は鈍角でも成り立ちます。
+      - part: 思い出す
+        text: θ は鋭角で、sin θ = 8/17 です。cos θ の値はいくつですか。
+        answer: 15/17
+        check: "[Fraction(k, 17) for k in range(1, 17) if Fraction(k, 17) ** 2 + Fraction(8, 17) ** 2 == 1][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - cos²θ = 1 − (8/17)² です。
+          - θ が鋭角なので、cos θ は正の数です。
+        paths:
+          - ["cos²θ = 1 − 64/289 = 225/289", "cos θ = 15/17"]
+      - part: 思い出す
+        text: sin 45° の値はどれですか。
+        choices: ["(√2)/2", "√2", "1/2", "(√3)/2"]
+        answer: (√2)/2
+        check: "[k for k, v in {'(√2)/2': math.sqrt(2) / 2, '√2': math.sqrt(2), '1/2': 0.5, '(√3)/2': math.sqrt(3) / 2}.items() if math.isclose(v, math.sin(math.radians(45)))][0]"
+        hints:
+          - 直角二等辺三角形の辺の比は 1:1:√2 です。
+          - 斜辺は √2 です。
+          - 1/√2 の分母を有理化しましょう。
+        paths:
+          - ["sin 45° = 1/√2", "有理化して (√2)/2"]
+      - part: 今日
+        text: cos 150° の値はどれですか。
+        choices: ["−(√3)/2", "(√3)/2", "−1/2", "1/2"]
+        answer: −(√3)/2
+        check: "[k for k, v in {'−(√3)/2': -math.sqrt(3) / 2, '(√3)/2': math.sqrt(3) / 2, '−1/2': -0.5, '1/2': 0.5}.items() if math.isclose(v, math.cos(math.radians(150)))][0]"
+        hints:
+          - cos(180° − θ) = −cos θ を使いましょう。
+          - 150° = 180° − 30° です。
+          - 鈍角の cos は負の数です。
+        paths:
+          - ["cos 150° = cos(180° − 30°) = −cos 30°", "−(√3)/2"]
+          - ["半径 2 の半円で、P は左上", "横の位置は −√3、高さは 1", "cos 150° = −(√3)/2"]
+        note: 符号を落として (√3)/2 としやすい。−1/2 は sin と cos を取り違えたもの。
+      - part: 今日
+        text: 0° ≦ θ ≦ 180° で、sin θ = 1/2 となる θ はどれですか。
+        choices: [30° と 150°, 30°, 60° と 120°, 150°]
+        answer: 30° と 150°
+        check: "[k for k, v in {'30° と 150°': {30, 150}, '30°': {30}, '60° と 120°': {60, 120}, '150°': {150}}.items() if v == set(t for t in range(0, 181) if math.isclose(math.sin(math.radians(t)), 0.5))][0]"
+        hints:
+          - 半径 2 の半円で、高さが 1 になる点 P をさがしましょう。
+          - 高さが 1 の点は、半円の上にいくつあるでしょう。
+          - sin(180° − θ) = sin θ です。
+        paths:
+          - ["鋭角では sin 30° = 1/2", "sin 150° = sin(180° − 30°) = 1/2", "θ = 30° と 150°"]
+        note: 鋭角の 30° だけで止めやすい。sin の値が等しい角は、θ と 180° − θ の 2 つある（90° のときだけ 1 つ）。
+      - part: 挑戦
+        text: 0° ≦ θ ≦ 180° で、cos θ = −1/3 のとき、tan θ の値はどれですか。
+        choices: ["−2√2", "2√2", "−(√2)/4", "(√2)/4"]
+        answer: −2√2
+        check: "[k for k, v in {'−2√2': -2 * math.sqrt(2), '2√2': 2 * math.sqrt(2), '−(√2)/4': -math.sqrt(2) / 4, '(√2)/4': math.sqrt(2) / 4}.items() if math.isclose(v, math.tan(math.acos(-1 / 3)))][0]"
+        hints:
+          - まず、sin²θ + cos²θ = 1 から sin θ を求めましょう。
+          - 0° ≦ θ ≦ 180° では、sin θ は 0 以上です。
+          - tan θ = sin θ/cos θ です。
+        paths:
+          - ["sin²θ = 1 − 1/9 = 8/9", "sin θ = (2√2)/3", "tan θ = (2√2)/3 ÷ (−1/3) = −2√2"]
+        note: cos θ が負なので θ は鈍角で、tan θ も負になる。−(√2)/4 は cos θ ÷ sin θ と逆にわったもの。
+    extra:
+      - part: 今日
+        text: tan 135° の値はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-5, 6) if math.isclose(math.tan(math.radians(135)), k)][0])"
+        hints:
+          - tan(180° − θ) = −tan θ を使いましょう。
+          - 135° = 180° − 45° です。
+          - tan 45° の値を思い出しましょう。
+        paths:
+          - ["tan 135° = −tan 45°", "−1"]
+      - part: 今日
+        text: 0° ≦ θ ≦ 180° で、cos θ = −(√3)/2 となる θ はどれですか。
+        choices: [150°, 30°, 120°, 210°]
+        answer: 150°
+        check: "[k for k, v in {'150°': 150, '30°': 30, '120°': 120, '210°': 210}.items() if v <= 180 and math.isclose(math.cos(math.radians(v)), -math.sqrt(3) / 2)][0]"
+        hints:
+          - cos θ が負の数なので、θ は鈍角です。
+          - cos 30° = (√3)/2 です。
+          - cos(180° − θ) = −cos θ を使いましょう。
+        paths:
+          - ["cos 30° = (√3)/2", "cos(180° − 30°) = −(√3)/2", "θ = 150°"]
+        note: 210° は 0° ≦ θ ≦ 180° の外。120° は cos が −1/2 になる角。
+      - part: 挑戦
+        text: 0° ≦ θ ≦ 180° で、sin θ = 4/5 で、θ は鈍角です。cos θ の値はいくつですか。
+        answer: −3/5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-[Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 + Fraction(4, 5) ** 2 == 1][0])"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - cos²θ はいくつでしょう。
+          - θ が鈍角なので、cos θ は負の数です。
+        paths:
+          - ["cos²θ = 1 − 16/25 = 9/25", "鈍角なので cos θ = −3/5"]
+        note: 正の 3/5 としやすい。sin θ = 4/5 となる θ は鋭角と鈍角の 2 つあり、どちらかで cos の符号が変わる。
+
+  - day: 4
+    items:
+      - part: 見本
+        text: △ABC の辺と角と、外接円（3 つの頂点を通る円）の半径 R の関係を調べましょう。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="59" stroke="currentColor" fill="none" stroke-width="2"/><polygon points="99.8,29.6 67.9,112.7 172.1,112.7" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="99.8,29.6 67.9,112.7 172.1,112.7" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="85" x2="67.9" y2="112.7" stroke="currentColor" fill="none" stroke-width="2"/><text x="120" y="127.7" font-size="12" text-anchor="middle"><tspan font-style="italic">a</tspan></text><text x="144.3" y="67.9" font-size="12" text-anchor="start"><tspan font-style="italic">b</tspan></text><text x="73.6" y="71.2" font-size="12" text-anchor="end"><tspan font-style="italic">c</tspan></text><text x="88.8" y="93.1" font-size="12" text-anchor="middle">R</text><text x="96.7" y="22.5" font-size="13" text-anchor="middle">A</text><text x="57.6" y="123.3" font-size="13" text-anchor="middle">B</text><text x="182.9" y="122.4" font-size="13" text-anchor="middle">C</text><circle cx="120" cy="85" r="2.5" fill="currentColor"/><text x="125" y="100" font-size="12" text-anchor="start">O</text></svg>'
+        explain: △ABC で、∠A、∠B、∠C の大きさを A、B、C、それと向かい合う辺 BC、CA、AB の長さを a、b、c と書きます。外接円の半径を R とすると、a/sin A = b/sin B = c/sin C = 2R が成り立ちます。これを正弦定理といいます（わけは 6 日目）。例：A = 30°、a = 5 なら、5 ÷ sin 30° = 5 ÷ (1/2) = 10 = 2R なので、R = 5 です。2 つの角と 1 つの辺がわかれば、ほかの辺が求められます（3 つめの角は内角の和から）。また、△ABC の面積 S は S = (1/2)bc sin A です。C から直線 AB にひいた垂線の長さ（高さ）は、A が鋭角なら b sin A、A が鈍角でも b sin(180° − A) = b sin A になるからです。例：b = 6、c = 5、A = 150° なら、S = (1/2) × 6 × 5 × sin 150° = (1/2) × 6 × 5 × (1/2) = 15/2 です。
+      - part: 思い出す
+        text: sin 135° の値はどれですか。
+        choices: ["(√2)/2", "−(√2)/2", "√2", "1/2"]
+        answer: (√2)/2
+        check: "[k for k, v in {'(√2)/2': math.sqrt(2) / 2, '−(√2)/2': -math.sqrt(2) / 2, '√2': math.sqrt(2), '1/2': 0.5}.items() if math.isclose(v, math.sin(math.radians(135)))][0]"
+        hints:
+          - sin(180° − θ) = sin θ を使いましょう。
+          - 135° = 180° − 45° です。
+          - 0° から 180° までの sin は、0 以上です。
+        paths:
+          - ["sin 135° = sin 45° = (√2)/2"]
+      - part: 思い出す
+        text: 円 O で、弧 BC に対する中心角 ∠BOC が 110° です。弧 BC の上にない円周上の点 A について、∠BAC はどれですか。
+        choices: [55°, 110°, 220°, 70°]
+        answer: 55°
+        check: "[k for k, v in {'55°': 55, '110°': 110, '220°': 220, '70°': 70}.items() if 2 * v == 110][0]"
+        hints:
+          - 円周角は、同じ弧に対する中心角の半分です（G-018）。
+          - ∠BAC は、弧 BC に対する円周角です。
+          - 110° を 2 でわりましょう。
+        paths:
+          - ["∠BAC は弧 BC に対する円周角", "110° ÷ 2 = 55°"]
+      - part: 今日
+        text: △ABC で、a = 8、A = 45° のとき、外接円の半径 R はどれですか。
+        choices: ["4√2", "8√2", "4", "2√2"]
+        answer: 4√2
+        check: "[k for k, v in {'4√2': 4 * math.sqrt(2), '8√2': 8 * math.sqrt(2), '4': 4, '2√2': 2 * math.sqrt(2)}.items() if math.isclose(v, 8 / (2 * math.sin(math.radians(45))))][0]"
+        hints:
+          - 正弦定理 a/sin A = 2R を使いましょう。
+          - sin 45° = (√2)/2 です。
+          - 2R を求めてから、2 でわりましょう。
+        paths:
+          - ["2R = 8 ÷ ((√2)/2) = 16/√2 = 8√2", "R = 4√2"]
+        note: 2R を R と取り違えて 8√2 としやすい。
+      - part: 今日
+        text: 図の △ABC の面積はいくつですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="35.1,124 203.1,124 204.9,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="35.1,124 203.1,124 204.9,26" stroke="currentColor" fill="none" stroke-width="2"/><path d="M49 116 A16 16 0 0 1 51.1 124" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="72.5" y="118" font-size="12" text-anchor="middle">30°</text><text x="119.1" y="139" font-size="12" text-anchor="middle">6</text><text x="114.5" y="69.5" font-size="12" text-anchor="middle">7</text><text x="23.6" y="131.8" font-size="13" text-anchor="middle">A</text><text x="213.5" y="134.6" font-size="13" text-anchor="middle">B</text><text x="212.8" y="21.5" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 21/2
+        accept: [10.5]
+        check: "Fraction(1, 2) * 7 * 6 * Fraction(1, 2)"
+        hints:
+          - S = (1/2)bc sin A を使いましょう。
+          - b と c は、角 A をはさむ 2 辺です。
+          - sin 30° の値を思い出しましょう。
+        paths:
+          - ["S = (1/2) × 7 × 6 × sin 30°", "(1/2) × 42 × (1/2) = 21/2"]
+      - part: 挑戦
+        text: 図の △ABC で、A = 75°、B = 45°、AB = 6 です。辺 CA の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="51.5,134 188.5,134 80.5,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="51.5,134 188.5,134 80.5,26" stroke="currentColor" fill="none" stroke-width="2"/><path d="M55.7 118.5 A16 16 0 0 1 67.5 134" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="73" y="121.6" font-size="12" text-anchor="middle">75°</text><path d="M172.5 134 A16 16 0 0 1 177.2 122.7" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="163.5" y="127.7" font-size="12" text-anchor="middle">45°</text><text x="120" y="149" font-size="12" text-anchor="middle">6</text><text x="41.5" y="145" font-size="13" text-anchor="middle">A</text><text x="199.4" y="143.3" font-size="13" text-anchor="middle">B</text><text x="76.3" y="19.2" font-size="13" text-anchor="middle">C</text></svg>'
+        choices: ["2√6", "3√6", "3√2", "6√6"]
+        answer: 2√6
+        check: "[k for k, v in {'2√6': 2 * math.sqrt(6), '3√6': 3 * math.sqrt(6), '3√2': 3 * math.sqrt(2), '6√6': 6 * math.sqrt(6)}.items() if math.isclose(v, 6 * math.sin(math.radians(45)) / math.sin(math.radians(180 - 75 - 45)))][0]"
+        hints:
+          - まず、C の大きさを内角の和から求めましょう。
+          - AB = c と向かい合う角は C、CA = b と向かい合う角は B です。
+          - 正弦定理 b/sin B = c/sin C を使いましょう。
+        paths:
+          - ["C = 180° − 75° − 45° = 60°", "b ÷ sin 45° = 6 ÷ sin 60°", "b = 6 × ((√2)/2) ÷ ((√3)/2) = 6√2/√3 = 2√6"]
+        note: 75° の sin は要らない。わかっている辺と、求める辺に向かい合う角の組を選ぶのが要点（sin 75° は G-025 の加法定理で求める）。
+    extra:
+      - part: 今日
+        text: △ABC で、A = 60°、外接円の半径が 4 のとき、a はどれですか。
+        choices: ["4√3", "2√3", "8√3", "4"]
+        answer: 4√3
+        check: "[k for k, v in {'4√3': 4 * math.sqrt(3), '2√3': 2 * math.sqrt(3), '8√3': 8 * math.sqrt(3), '4': 4}.items() if math.isclose(v, 2 * 4 * math.sin(math.radians(60)))][0]"
+        hints:
+          - 正弦定理から a = 2R sin A です。
+          - sin 60° の値を思い出しましょう。
+          - 2 × 4 × sin 60° を計算しましょう。
+        paths:
+          - ["a = 2 × 4 × sin 60° = 8 × (√3)/2 = 4√3"]
+      - part: 今日
+        text: △ABC で、b = 4、c = 5、A = 120° のとき、面積はどれですか。
+        choices: ["5√3", "10√3", "5", "(5√3)/2"]
+        answer: 5√3
+        check: "[k for k, v in {'5√3': 5 * math.sqrt(3), '10√3': 10 * math.sqrt(3), '5': 5, '(5√3)/2': 5 * math.sqrt(3) / 2}.items() if math.isclose(v, 0.5 * 4 * 5 * math.sin(math.radians(120)))][0]"
+        hints:
+          - S = (1/2)bc sin A を使いましょう。
+          - sin 120° = sin 60° です。
+          - 鈍角の sin も正の数です。
+        paths:
+          - ["S = (1/2) × 4 × 5 × sin 120°", "10 × (√3)/2 = 5√3"]
+      - part: 挑戦
+        text: 半径 5 の円に内接する △ABC で、BC = 8 のとき、sin A の値はいくつですか。
+        answer: 4/5
+        check: "Fraction(8, 2 * 5)"
+        hints:
+          - 外接円の半径がわかっています。
+          - 正弦定理 a/sin A = 2R を使いましょう。
+          - a は BC の長さです。
+        paths:
+          - ["8 ÷ sin A = 2 × 5 = 10", "sin A = 8/10 = 4/5"]
+        note: A が鋭角でも鈍角でも、sin A は同じ値になる。
+
+  - day: 5
+    items:
+      - part: 見本
+        text: △ABC で、2 つの辺とその間の角から、残りの辺を求めましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="29.5,124 210.5,124 86.1,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="29.5,124 210.5,124 86.1,26" stroke="currentColor" fill="none" stroke-width="2"/><path d="M37.5 110.1 A16 16 0 0 1 45.5 124" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="52.9" y="114.5" font-size="12" text-anchor="middle">A</text><text x="120" y="139" font-size="12" text-anchor="middle"><tspan font-style="italic">c</tspan></text><text x="48.2" y="73.5" font-size="12" text-anchor="end"><tspan font-style="italic">b</tspan></text><text x="155.1" y="70.4" font-size="12" text-anchor="start"><tspan font-style="italic">a</tspan></text><text x="18.4" y="133.1" font-size="13" text-anchor="middle">A</text><text x="222" y="132.2" font-size="13" text-anchor="middle">B</text><text x="82.1" y="19.2" font-size="13" text-anchor="middle">C</text></svg>'
+        explain: △ABC で、a² = b² + c² − 2bc cos A が成り立ちます。同じように、b² = c² + a² − 2ca cos B、c² = a² + b² − 2ab cos C です。これを余弦定理といいます（わけは 6 日目）。A = 90° なら cos A = 0 で、三平方の定理 a² = b² + c² になります。例：b = 5、c = 8、A = 60° なら、a² = 25 + 64 − 2 × 5 × 8 × (1/2) = 49 で、a = 7 です。式を変形すると cos A = (b² + c² − a²)/(2bc) なので、3 辺から角が求められます。例：a = 7、b = 3、c = 5 なら、cos A = (9 + 25 − 49)/30 = −1/2 で、A = 120° です。b² + c² − a² が正なら A は鋭角、0 なら直角、負なら鈍角です。
+      - part: 思い出す
+        text: △ABC で、b = 8、c = 5、A = 30° のとき、面積はいくつですか。
+        answer: 10
+        check: "Fraction(1, 2) * 8 * 5 * Fraction(1, 2)"
+        hints:
+          - S = (1/2)bc sin A を使いましょう。
+          - sin 30° の値を思い出しましょう。
+          - (1/2) × 8 × 5 × sin 30° を計算しましょう。
+        paths:
+          - ["S = (1/2) × 8 × 5 × (1/2) = 10"]
+      - part: 思い出す
+        text: cos 120° の値はいくつですか。
+        answer: −1/2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-2, 3) if math.isclose(math.cos(math.radians(120)), k / 2)][0])"
+        hints:
+          - cos(180° − θ) = −cos θ を使いましょう。
+          - 120° = 180° − 60° です。
+          - 鈍角の cos は負の数です。
+        paths:
+          - ["cos 120° = −cos 60° = −1/2"]
+      - part: 今日
+        text: △ABC で、b = 8、c = 15、A = 60° のとき、a はいくつですか。
+        answer: 13
+        check: "[a for a in range(1, 50) if a * a == 8 * 8 + 15 * 15 - 2 * 8 * 15 * Fraction(1, 2)][0]"
+        hints:
+          - 余弦定理 a² = b² + c² − 2bc cos A を使いましょう。
+          - cos 60° = 1/2 です。
+          - a² を求めてから、2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["a² = 64 + 225 − 2 × 8 × 15 × (1/2)", "289 − 120 = 169", "a = 13"]
+      - part: 今日
+        text: △ABC で、a = 7、b = 8、c = 5 のとき、cos B の値はいくつですか。
+        answer: 1/7
+        check: "Fraction(7 * 7 + 5 * 5 - 8 * 8, 2 * 7 * 5)"
+        hints:
+          - B と向かい合う辺は b です。
+          - cos B = (c² + a² − b²)/(2ca) です。
+          - 分子と分母を計算して、約分しましょう。
+        paths:
+          - ["cos B = (25 + 49 − 64)/(2 × 5 × 7)", "10/70 = 1/7"]
+        note: cos A の式に入れてしまいやすい。向かい合う辺の 2 乗をひく形になっているかを確かめさせる。
+      - part: 挑戦
+        text: 図の △ABC（AB = 6、BC = 4、CA = 5）の面積はどれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="31.1,124 208.9,124 142.2,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="31.1,124 208.9,124 142.2,26" stroke="currentColor" fill="none" stroke-width="2"/><text x="120" y="139" font-size="12" text-anchor="middle">6</text><text x="79.4" y="70.8" font-size="12" text-anchor="end">5</text><text x="184.7" y="72.8" font-size="12" text-anchor="start">4</text><text x="19.7" y="132.4" font-size="13" text-anchor="middle">A</text><text x="220" y="133" font-size="13" text-anchor="middle">B</text><text x="144.9" y="18.8" font-size="13" text-anchor="middle">C</text></svg>'
+        choices: ["(15√7)/4", "(15√7)/2", "15/4", "(5√7)/4"]
+        answer: (15√7)/4
+        check: "[k for k, v in {'(15√7)/4': 15 * math.sqrt(7) / 4, '(15√7)/2': 15 * math.sqrt(7) / 2, '15/4': 15 / 4, '(5√7)/4': 5 * math.sqrt(7) / 4}.items() if math.isclose(v, math.sqrt(7.5 * 3.5 * 2.5 * 1.5))][0]"
+        hints:
+          - まず、1 つの角の cos を余弦定理で求めましょう。
+          - sin²A + cos²A = 1 で、sin A を求めましょう。
+          - S = (1/2)bc sin A を使いましょう。
+        paths:
+          - ["cos A = (25 + 36 − 16)/(2 × 5 × 6) = 3/4", "sin A = √(1 − 9/16) = (√7)/4", "S = (1/2) × 5 × 6 × (√7)/4 = (15√7)/4"]
+        note: 3 辺から面積を出すには、余弦定理 → sin² + cos² = 1 → 面積の式と 3 段つなぐ。
+    extra:
+      - part: 今日
+        text: △ABC で、b = 2、c = 3、A = 120° のとき、a はどれですか。
+        choices: ["√19", "√7", "19", "√13"]
+        answer: √19
+        check: "[k for k, v in {'√19': math.sqrt(19), '√7': math.sqrt(7), '19': 19, '√13': math.sqrt(13)}.items() if math.isclose(v, math.sqrt(4 + 9 - 2 * 2 * 3 * math.cos(math.radians(120))))][0]"
+        hints:
+          - 余弦定理 a² = b² + c² − 2bc cos A を使いましょう。
+          - cos 120° は負の数です。
+          - 負の数をひくことは、正の数を足すことです。
+        paths:
+          - ["a² = 4 + 9 − 2 × 2 × 3 × (−1/2) = 13 + 6 = 19", "a = √19"]
+        note: cos 120° を 1/2 とすると √7 になる。
+      - part: 今日
+        text: 3 辺の長さが 5、7、9 の三角形で、いちばん大きい角はどれですか。
+        choices: [鋭角, 直角, 鈍角]
+        answer: 鈍角
+        check: "[k for k, v in {'鋭角': 1, '直角': 0, '鈍角': -1}.items() if v == (lambda d: (d > 0) - (d < 0))(5 * 5 + 7 * 7 - 9 * 9)][0]"
+        hints:
+          - いちばん大きい角は、いちばん長い辺と向かい合う角です。
+          - cos の式の分子 b² + c² − a² の符号を調べましょう。
+          - 5² + 7² と 9² をくらべましょう。
+        paths:
+          - ["5² + 7² − 9² = 74 − 81 = −7", "負なので cos は負", "鈍角"]
+      - part: 挑戦
+        text: 3 辺の長さが 7、8、13 の三角形の面積はどれですか。
+        choices: ["14√3", "28√3", "14", "7√3"]
+        answer: 14√3
+        check: "[k for k, v in {'14√3': 14 * math.sqrt(3), '28√3': 28 * math.sqrt(3), '14': 14, '7√3': 7 * math.sqrt(3)}.items() if math.isclose(v, math.sqrt(14 * 7 * 6 * 1))][0]"
+        hints:
+          - いちばん長い辺と向かい合う角を、余弦定理で求めましょう。
+          - その角の cos は (7² + 8² − 13²)/(2 × 7 × 8) です。
+          - 角がわかったら、S = (1/2)bc sin A を使いましょう。
+        paths:
+          - ["cos θ = (49 + 64 − 169)/112 = −1/2", "θ = 120°", "S = (1/2) × 7 × 8 × (√3)/2 = 14√3"]
+  - day: 6
+    items:
+      - part: 思い出す
+        text: △ABC で、b = 3、c = 5、A = 120° のとき、a はいくつですか。
+        answer: 7
+        check: "[a for a in range(1, 50) if a * a == 9 + 25 - 2 * 3 * 5 * Fraction(-1, 2)][0]"
+        hints:
+          - 余弦定理を使いましょう。
+          - cos 120° = −1/2 です。
+          - a² を求めて、2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["a² = 9 + 25 − 2 × 3 × 5 × (−1/2) = 49", "a = 7"]
+      - part: 思い出す
+        text: △ABC で、A = 135°、a = 6 のとき、外接円の半径 R はどれですか。
+        choices: ["3√2", "6√2", "3", "6"]
+        answer: 3√2
+        check: "[k for k, v in {'3√2': 3 * math.sqrt(2), '6√2': 6 * math.sqrt(2), '3': 3, '6': 6}.items() if math.isclose(v, 6 / (2 * math.sin(math.radians(135))))][0]"
+        hints:
+          - 正弦定理 a/sin A = 2R を使いましょう。
+          - sin 135° = sin 45° です。
+          - 2R を求めてから、2 でわりましょう。
+        paths:
+          - ["2R = 6 ÷ ((√2)/2) = 12/√2 = 6√2", "R = 3√2"]
+      - part: 今日
+        text: △ABC で、AB = 4、AC = 6、面積が 6√3 で、A は鋭角です。A はどれですか。
+        choices: [60°, 30°, 120°, 45°]
+        answer: 60°
+        check: "[k for k, v in {'60°': 60, '30°': 30, '120°': 120, '45°': 45}.items() if v < 90 and math.isclose(0.5 * 4 * 6 * math.sin(math.radians(v)), 6 * math.sqrt(3))][0]"
+        hints:
+          - S = (1/2)bc sin A に、わかっている数を入れましょう。
+          - sin A の値を求めましょう。
+          - sin A がその値になる角は 2 つあります。A は鋭角です。
+        paths:
+          - ["6√3 = (1/2) × 4 × 6 × sin A", "sin A = (√3)/2", "A は鋭角なので A = 60°"]
+        note: 120° も sin が (√3)/2 になる。鋭角という条件で 1 つに決まる。
+      - part: わけ
+        text: 0° ≦ θ ≦ 180° のどの θ でも、sin²θ + cos²θ = 1 が成り立ちます。このわけを、半円を使った三角比の定め方から、筋道を立てて書きましょう。
+        explain: 例：「半径 r の半円の上の点 P で ∠AOP = θ とし、P の横の位置を x、高さを y とする。定め方から sin θ = y/r、cos θ = x/r である。P から直線 OA にひいた垂線の足を H とすると、OH は x の大きさ、PH = y、OP = r の直角三角形 OPH ができ、三平方の定理（G-019）から x² + y² = r² である（x が負の数でも、2 乗すれば OH² と等しい）。両辺を r² でわると (x/r)² + (y/r)² = 1、すなわち cos²θ + sin²θ = 1 である。θ = 0°、90°、180° のときは直角三角形ができないが、P は A、真上、左のはしにあり、x² + y² = r² はそのまま成り立つ。」と書ければよい。①「〜とする」で r、θ、x、y を決める、② x² + y² = r² の両辺を r² でわって式を変形する、③ 約束した事実（三角比の定め方、三平方の定理）で結ぶ、の 3 つがそろっているかを見る。30° や 120° で確かめただけで終わっていたら、例ではすべての θ を示せないことを話す。鈍角で x が負の数でも、2 乗すれば正になることに気づいているかを見る。
+        hints:
+          - 「半径 r の半円の上に P をとり、∠AOP = θ とする」から書き始めましょう。
+          - P の横の位置 x、高さ y、半径 r の間には、どんな関係があるでしょう。
+          - sin θ と cos θ を x、y、r で表し、2 乗して足しましょう。
+        paths:
+          - ["P の横の位置を x、高さを y とする", "x² + y² = r²（三平方の定理）", "両辺を r² でわる", "cos²θ + sin²θ = 1"]
+      - part: わけ
+        text: A が鋭角の △ABC で、a² = b² + c² − 2bc cos A（余弦定理）が成り立ちます。このわけを、C から直線 AB にひいた垂線 CH を使って、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="27.7,134 212.3,134 103.3,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="27.7,134 212.3,134 103.3,26" stroke="currentColor" fill="none" stroke-width="2"/><line x1="103.3" y1="26" x2="103.3" y2="134" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><polyline points="112.3,134 112.3,125 103.3,125" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M36.9 120.9 A16 16 0 0 1 43.7 134" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="51.7" y="125.5" font-size="12" text-anchor="middle">A</text><text x="120" y="149" font-size="12" text-anchor="middle"><tspan font-style="italic">c</tspan></text><text x="56.5" y="77.7" font-size="12" text-anchor="end"><tspan font-style="italic">b</tspan></text><text x="165.6" y="76.2" font-size="12" text-anchor="start"><tspan font-style="italic">a</tspan></text><text x="16.3" y="142.2" font-size="13" text-anchor="middle">A</text><text x="223.9" y="141.6" font-size="13" text-anchor="middle">B</text><text x="102.1" y="18.6" font-size="13" text-anchor="middle">C</text><text x="99.8" y="150" font-size="13" text-anchor="middle">H</text></svg>'
+        explain: 例：「C から直線 AB にひいた垂線の足を H とする。直角三角形 ACH で、三角比の定め方から CH = b sin A、AH = b cos A である。H が辺 AB の上にあるとき BH = c − b cos A、H が B の外側にあるとき BH = b cos A − c で、どちらでも BH² = (c − b cos A)² である。直角三角形 BCH で三平方の定理から、a² = CH² + BH² = b²sin²A + c² − 2bc cos A + b²cos²A = b²(sin²A + cos²A) + c² − 2bc cos A。sin²A + cos²A = 1 なので、a² = b² + c² − 2bc cos A である。」と書ければよい。① H を決め、CH と AH を b と A で表す、② a² を展開して式を変形する（b² でくくる）、③ 約束した事実（三角比の定め方、三平方の定理、sin²A + cos²A = 1）で結ぶ、の 3 つを見る。A が鈍角のときは H が A の外側に出て AH = b cos(180° − A) = −b cos A となり、BH = c − b cos A は同じ式になるので、同じ筋道で成り立つことにも触れる。A = 90° なら cos A = 0 で、三平方の定理そのものになる。
+        hints:
+          - CH と AH を、b と A で表しましょう。
+          - BH を、c、b、A で表しましょう。
+          - 直角三角形 BCH で三平方の定理を使い、sin²A + cos²A = 1 でまとめましょう。
+        paths:
+          - ["垂線の足を H とする", "CH = b sin A、AH = b cos A", "BH = c − b cos A", "a² = CH² + BH² を展開する", "sin²A + cos²A = 1 でまとめる"]
+      - part: わけ
+        text: A が鋭角の △ABC で、外接円の半径を R とすると、a/sin A = 2R（正弦定理）が成り立ちます。外接円の中心を O とし、図のように B を通る直径 BD をひきます（D は直線 BC について A と同じ側にあります）。このわけを、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="59" stroke="currentColor" fill="none" stroke-width="2"/><polygon points="130.2,26.9 76.2,124.5 163.8,124.5" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="130.2,26.9 76.2,124.5 163.8,124.5" stroke="currentColor" fill="none" stroke-width="2"/><line x1="76.2" y1="124.5" x2="163.8" y2="45.5" stroke="currentColor" fill="none" stroke-width="2"/><line x1="163.8" y1="45.5" x2="163.8" y2="124.5" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="154.8,124.5 154.8,115.5 163.8,115.5" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M135.5 42 A16 16 0 0 1 122.5 40.9" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M163.8 61.5 A16 16 0 0 1 152 56.2" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="130.1" y="19.4" font-size="13" text-anchor="middle">A</text><text x="66.7" y="136.4" font-size="13" text-anchor="middle">B</text><text x="171.1" y="138.5" font-size="13" text-anchor="middle">C</text><text x="172" y="41.2" font-size="13" text-anchor="middle">D</text><circle cx="120" cy="85" r="2.5" fill="currentColor"/><text x="116" y="79" font-size="12" text-anchor="end">O</text></svg>'
+        explain: 例：「∠BDC と ∠BAC は、同じ弧 BC に対する円周角なので、∠BDC = ∠BAC = A である（円周角の定理、G-018）。BD は直径なので、半円の弧に対する円周角 ∠BCD = 90° である（G-018）。直角三角形 BCD で、三角比の定め方から sin ∠BDC = BC/BD、つまり sin A = a/(2R)。両辺に 2R をかけて sin A でわると、a/sin A = 2R である。」と書ければよい。① D を決め、∠BDC と ∠BCD の大きさを示す、② sin の式を変形する、③ 約束した事実（円周角の定理、半円の弧に対する円周角は 90°、三角比の定め方）で結ぶ、の 3 つを見る。BC が直径のとき（A = 90°）は sin A = 1 で、a = 2R がそのまま成り立つ。A が鈍角のときは D が A と反対側に来て ∠BDC = 180° − A になるが、sin(180° − A) = sin A なので同じ式になる（円に内接する四角形の向かい合う角の和が 180° であることを使う。G-023）。b/sin B、c/sin C も、同じ筋道で 2R に等しい。
+        hints:
+          - ∠BDC と ∠BAC は、どの弧に対する円周角でしょう。
+          - ∠BCD の大きさは、BD が直径であることからわかります。
+          - 直角三角形 BCD で、sin ∠BDC を辺の比で表しましょう。
+        paths:
+          - ["∠BDC = ∠BAC = A（同じ弧 BC に対する円周角）", "∠BCD = 90°（直径に対する円周角）", "sin A = BC/BD = a/(2R)", "a/sin A = 2R"]
+    extra:
+      - part: 今日
+        text: 3 辺の長さが 2、3、4 の三角形で、いちばん大きい角の cos の値はいくつですか。
+        answer: −1/4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(2 * 2 + 3 * 3 - 4 * 4, 2 * 2 * 3))"
+        hints:
+          - いちばん大きい角は、いちばん長い辺と向かい合う角です。
+          - cos = (2² + 3² − 4²)/(2 × 2 × 3) です。
+          - 分子が負の数になることに気をつけましょう。
+        paths:
+          - ["(4 + 9 − 16)/12 = −3/12 = −1/4"]
+      - part: 今日
+        text: △ABC で、外接円の半径が 3、A = 60° のとき、a はどれですか。
+        choices: ["3√3", "6√3", "(3√3)/2", "3"]
+        answer: 3√3
+        check: "[k for k, v in {'3√3': 3 * math.sqrt(3), '6√3': 6 * math.sqrt(3), '(3√3)/2': 3 * math.sqrt(3) / 2, '3': 3}.items() if math.isclose(v, 2 * 3 * math.sin(math.radians(60)))][0]"
+        hints:
+          - 正弦定理から a = 2R sin A です。
+          - sin 60° = (√3)/2 です。
+          - 2 × 3 × (√3)/2 を計算しましょう。
+        paths:
+          - ["a = 2 × 3 × (√3)/2 = 3√3"]
+      - part: 今日
+        text: 0° ≦ θ ≦ 180° で、sin θ = 1/3 で、θ は鈍角です。cos θ の値はどれですか。
+        choices: ["−(2√2)/3", "(2√2)/3", "−2/3", "−(√2)/3"]
+        answer: −(2√2)/3
+        check: "[k for k, v in {'−(2√2)/3': -2 * math.sqrt(2) / 3, '(2√2)/3': 2 * math.sqrt(2) / 3, '−2/3': -2 / 3, '−(√2)/3': -math.sqrt(2) / 3}.items() if math.isclose(v, -math.sqrt(1 - 1 / 9))][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - cos²θ = 1 − 1/9 です。
+          - θ が鈍角なので、cos θ は負の数です。
+        paths:
+          - ["cos²θ = 8/9", "cos θ = −√(8/9) = −(2√2)/3"]
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 1 辺の長さが 6 の正三角形の高さはどれですか。
+        choices: ["3√3", "6√3", "3√2", "(3√3)/2"]
+        answer: 3√3
+        check: "[k for k, v in {'3√3': 3 * math.sqrt(3), '6√3': 6 * math.sqrt(3), '3√2': 3 * math.sqrt(2), '(3√3)/2': 3 * math.sqrt(3) / 2}.items() if math.isclose(v, math.sqrt(36 - 9))][0]"
+        hints:
+          - 正三角形の頂点から底辺に垂線をひくと、底辺は 2 等分されます（G-017）。
+          - 斜辺 6、底辺の半分 3 の直角三角形ができます。
+          - 三平方の定理を使いましょう（G-019）。
+        paths:
+          - ["高さの 2 乗 = 6² − 3² = 27", "高さ = √27 = 3√3"]
+          - ["高さ = 6 × sin 60° = 6 × (√3)/2 = 3√3"]
+      - part: 思い出す
+        text: 高さ 1.5 m の棒の影の長さが 2 m のとき、同じ時刻に影の長さが 12 m の木の高さは何 m ですか。
+        answer: 9
+        check: "Fraction(15, 10) * Fraction(12, 2)"
+        hints:
+          - 棒と影、木と影は、相似な直角三角形をつくります（G-020）。
+          - 木の影は、棒の影の何倍でしょう。
+          - 木の高さも、棒の高さの同じ倍になります。
+        paths:
+          - ["影は 12 ÷ 2 = 6 倍", "木の高さは 1.5 × 6 = 9 m"]
+      - part: 今日
+        text: 木の根もとから水平に 20 m はなれた地点で、木の先を見上げる角が 30° でした。木の高さはどれですか（目の高さは考えません）。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><polygon points="52.5,104 187.5,104 187.5,26" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="52.5,104 187.5,104 187.5,26" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="178.5,104 178.5,95 187.5,95" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M66.3 96 A16 16 0 0 1 68.5 104" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="89.8" y="98" font-size="12" text-anchor="middle">30°</text><text x="120" y="119" font-size="12" text-anchor="middle">20 m</text></svg>'
+        choices: ["(20√3)/3 m", "20√3 m", "10 m", "10√3 m"]
+        answer: (20√3)/3 m
+        check: "[k for k, v in {'(20√3)/3 m': 20 * math.sqrt(3) / 3, '20√3 m': 20 * math.sqrt(3), '10 m': 10, '10√3 m': 10 * math.sqrt(3)}.items() if math.isclose(v, 20 * math.tan(math.radians(30)))][0]"
+        hints:
+          - 20 m の辺と木の高さは、30° の角から見てどの辺でしょう。
+          - tan 30° を使いましょう。
+          - 分母を有理化しましょう。
+        paths:
+          - ["木の高さ = 20 × tan 30°", "20 × 1/√3 = 20/√3", "(20√3)/3"]
+        note: 10 m は sin 30° を使ったもの。斜辺は地点と木の先を結ぶ線で、20 m の辺ではない。
+      - part: 今日
+        text: 図のように、円 O に △ABC が内接していて、∠BOC = 120°、BC = 6 です。円 O の半径はどれですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="59" stroke="currentColor" fill="none" stroke-width="2"/><polygon points="114.9,26.2 68.9,114.5 171.1,114.5" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="114.9,26.2 68.9,114.5 171.1,114.5" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="85" x2="68.9" y2="114.5" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="85" x2="171.1" y2="114.5" stroke="currentColor" fill="none" stroke-width="2"/><path d="M128.7 90 A10 10 0 0 1 111.3 90" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="120" y="110" font-size="12" text-anchor="middle">120°</text><text x="120" y="129.5" font-size="12" text-anchor="middle">6</text><text x="114.1" y="18.8" font-size="13" text-anchor="middle">A</text><text x="58.6" y="125.1" font-size="13" text-anchor="middle">B</text><text x="181.6" y="124.9" font-size="13" text-anchor="middle">C</text><circle cx="120" cy="85" r="2.5" fill="currentColor"/><text x="120" y="77" font-size="12" text-anchor="middle">O</text></svg>'
+        choices: ["2√3", "4√3", "3", "6"]
+        answer: 2√3
+        check: "[k for k, v in {'2√3': 2 * math.sqrt(3), '4√3': 4 * math.sqrt(3), '3': 3, '6': 6}.items() if math.isclose(v, 6 / (2 * math.sin(math.radians(120 / 2))))][0]"
+        hints:
+          - ∠BAC は、弧 BC に対する円周角です（G-018）。
+          - 正弦定理 a/sin A = 2R を使いましょう。
+          - 2R を求めてから 2 でわりましょう。
+        paths:
+          - ["∠BAC = 120° ÷ 2 = 60°", "2R = 6 ÷ sin 60° = 12/√3 = 4√3", "R = 2√3"]
+          - ["△OBC は OB = OC の二等辺三角形", "O から BC に垂線をひくと BC の半分は 3、∠BOC の半分は 60°", "3 = R sin 60° で R = 2√3"]
+      - part: 挑戦
+        text: 図の平行四辺形 ABCD で、AB = 5、AD = 8、∠DAB = 60° です。対角線 AC の長さはどれですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><polygon points="26,103.8 70.8,26.2 214,26.2 169.2,103.8" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="26,103.8 70.8,26.2 214,26.2 169.2,103.8" stroke="currentColor" fill="none" stroke-width="2"/><line x1="26" y1="103.8" x2="214" y2="26.2" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M34 89.9 A16 16 0 0 1 42 103.8" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="49.4" y="94.3" font-size="12" text-anchor="middle">60°</text><text x="38.9" y="63.5" font-size="12" text-anchor="end">5</text><text x="97.6" y="118.8" font-size="12" text-anchor="middle">8</text><text x="14.9" y="112.8" font-size="13" text-anchor="middle">A</text><text x="61.3" y="23.3" font-size="13" text-anchor="middle">B</text><text x="225.1" y="26.2" font-size="13" text-anchor="middle">C</text><text x="178.7" y="115.7" font-size="13" text-anchor="middle">D</text></svg>'
+        choices: ["√129", "7", "√89", "13"]
+        answer: √129
+        check: "[k for k, v in {'√129': math.sqrt(129), '7': 7, '√89': math.sqrt(89), '13': 13}.items() if math.isclose(v, math.sqrt(25 + 64 - 2 * 5 * 8 * math.cos(math.radians(180 - 60))))][0]"
+        hints:
+          - AC を辺にもつ △ABC を考えましょう。
+          - 平行四辺形のとなり合う角の和は 180° です（G-016、G-017）。∠ABC は何度でしょう。
+          - BC = AD です。余弦定理を使いましょう。
+        paths:
+          - ["∠ABC = 180° − 60° = 120°", "BC = AD = 8", "AC² = 25 + 64 − 2 × 5 × 8 × cos 120° = 89 + 40 = 129", "AC = √129"]
+        note: 7 は もう 1 本の対角線 BD の長さ（∠A = 60° の三角形 ABD で求めたもの）。
+    extra:
+      - part: 今日
+        text: 塔の根もとから水平に 30 m はなれた地点で、塔の先を見上げる角が 60° でした。塔の高さはどれですか（目の高さは考えません）。
+        choices: ["30√3 m", "10√3 m", "15√3 m", "60 m"]
+        answer: 30√3 m
+        check: "[k for k, v in {'30√3 m': 30 * math.sqrt(3), '10√3 m': 10 * math.sqrt(3), '15√3 m': 15 * math.sqrt(3), '60 m': 60}.items() if math.isclose(v, 30 * math.tan(math.radians(60)))][0]"
+        hints:
+          - 30 m の辺は、60° の角のとなりの辺です。
+          - tan 60° を使いましょう。
+          - 塔の高さ = 30 × tan 60° です。
+        paths:
+          - ["塔の高さ = 30 × tan 60° = 30√3"]
+      - part: 今日
+        text: 半径 6 の円 O の周上に 3 点 A、B、C があり、∠BAC = 45° です。弦 BC の長さはどれですか。
+        choices: ["6√2", "12√2", "6", "3√2"]
+        answer: 6√2
+        check: "[k for k, v in {'6√2': 6 * math.sqrt(2), '12√2': 12 * math.sqrt(2), '6': 6, '3√2': 3 * math.sqrt(2)}.items() if math.isclose(v, 2 * 6 * math.sin(math.radians(45)))][0]"
+        hints:
+          - 円 O は △ABC の外接円です。
+          - 正弦定理から BC = 2R sin A です。
+          - sin 45° = (√2)/2 です。
+        paths:
+          - ["BC = 2 × 6 × sin 45° = 12 × (√2)/2 = 6√2"]
+          - ["中心角 ∠BOC = 90°（G-018）", "△OBC は直角二等辺三角形", "BC = 6√2"]
+      - part: 挑戦
+        text: 図の △ABC で、AB = 6、AC = 4、∠BAC = 120° です。∠BAC の二等分線が辺 BC と交わる点を D とするとき、AD の長さはいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="73,110.7 214,110.7 26,29.3" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="73,110.7 214,110.7 26,29.3" stroke="currentColor" fill="none" stroke-width="2"/><line x1="73" y1="110.7" x2="101.2" y2="61.9" stroke="currentColor" fill="none" stroke-width="2"/><path d="M81 96.8 A16 16 0 0 1 89 110.7" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="96.4" y="101.2" font-size="12" text-anchor="middle">60°</text><path d="M65 96.8 A16 16 0 0 1 81 96.8" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="73" y="87.7" font-size="12" text-anchor="middle">60°</text><text x="143.5" y="125.7" font-size="12" text-anchor="middle">6</text><text x="40" y="79.5" font-size="12" text-anchor="end">4</text><text x="64.8" y="124" font-size="13" text-anchor="middle">A</text><text x="225.5" y="118.6" font-size="13" text-anchor="middle">B</text><text x="15.8" y="27.4" font-size="13" text-anchor="middle">C</text><text x="99.5" y="54.5" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 12/5
+        accept: [2.4]
+        check: "[Fraction(k, 5) for k in range(1, 50) if math.isclose(0.5 * 6 * 4 * math.sin(math.radians(120)), 0.5 * (6 + 4) * (k / 5) * math.sin(math.radians(60)))][0]"
+        hints:
+          - △ABC を、△ABD と △ADC の 2 つに分けて、面積を考えましょう。
+          - どちらの三角形も、A の角は 60° です。
+          - AD = x とおいて、面積の式 S = (1/2)bc sin A で方程式をつくりましょう。
+        paths:
+          - ["△ABC = (1/2) × 6 × 4 × sin 120° = 6√3", "△ABD + △ADC = (1/2) × 6 × x × sin 60° + (1/2) × 4 × x × sin 60° = ((5√3)/2)x", "((5√3)/2)x = 6√3", "x = 12/5"]
+        note: 角の二等分線の定理（G-042）は使わずに、面積の和で求めている。
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 図の直角三角形 ABC（∠C = 90°）で、AB = 25、AC = 7 です。tan B の値はいくつですか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><polygon points="26,27.6 26,82.4 214,82.4" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="26,27.6 26,82.4 214,82.4" stroke="currentColor" fill="none" stroke-width="2"/><polyline points="26,73.4 35,73.4 35,82.4" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="123.1" y="48.4" font-size="12" text-anchor="middle">25</text><text x="15" y="59" font-size="12" text-anchor="end">7</text><text x="14.5" y="90.3" font-size="13" text-anchor="middle">C</text><text x="15.6" y="26" font-size="13" text-anchor="middle">A</text><text x="225.9" y="88.6" font-size="13" text-anchor="middle">B</text></svg>'
+        answer: 7/24
+        check: "Fraction(7, [b for b in range(1, 30) if b * b + 7 * 7 == 25 * 25][0])"
+        hints:
+          - BC を三平方の定理で求めましょう。
+          - tan B = (B と向かい合う辺) ÷ (B のとなりの辺) です。
+          - B と向かい合う辺は、B を通らない辺です。
+        paths:
+          - ["BC² = 625 − 49 = 576 で BC = 24", "tan B = AC/BC = 7/24"]
+      - part: 今日
+        text: θ は鋭角で、cos θ = 2/3 です。tan θ の値はどれですか。
+        choices: ["(√5)/2", "(√5)/3", "(2√5)/5", "3/2"]
+        answer: (√5)/2
+        check: "[k for k, v in {'(√5)/2': math.sqrt(5) / 2, '(√5)/3': math.sqrt(5) / 3, '(2√5)/5': 2 * math.sqrt(5) / 5, '3/2': 1.5}.items() if math.isclose(v, math.tan(math.acos(2 / 3)))][0]"
+        hints:
+          - まず sin θ を求めましょう。
+          - sin²θ = 1 − (2/3)² です。
+          - tan θ = sin θ/cos θ です。
+        paths:
+          - ["sin θ = (√5)/3", "tan θ = (√5)/3 ÷ (2/3) = (√5)/2"]
+      - part: 今日
+        text: tan 150° の値はどれですか。
+        choices: ["−(√3)/3", "(√3)/3", "−√3", "√3"]
+        answer: −(√3)/3
+        check: "[k for k, v in {'−(√3)/3': -math.sqrt(3) / 3, '(√3)/3': math.sqrt(3) / 3, '−√3': -math.sqrt(3), '√3': math.sqrt(3)}.items() if math.isclose(v, math.tan(math.radians(150)))][0]"
+        hints:
+          - tan(180° − θ) = −tan θ を使いましょう。
+          - 150° = 180° − 30° です。
+          - tan 30° = 1/√3 です。
+        paths:
+          - ["tan 150° = −tan 30° = −1/√3 = −(√3)/3"]
+      - part: 今日
+        text: 0° ≦ θ ≦ 180° で、cos θ = −1/2 となる θ はどれですか。
+        choices: [120°, 60°, 150°, 240°]
+        answer: 120°
+        check: "[k for k, v in {'120°': 120, '60°': 60, '150°': 150, '240°': 240}.items() if v <= 180 and math.isclose(math.cos(math.radians(v)), -0.5)][0]"
+        hints:
+          - cos θ が負の数なので、θ は鈍角です。
+          - cos 60° = 1/2 です。
+          - cos(180° − θ) = −cos θ を使いましょう。
+        paths:
+          - ["cos(180° − 60°) = −cos 60° = −1/2", "θ = 120°"]
+      - part: 今日
+        text: △ABC で、A = 30°、B = 45°、b = 4 のとき、a はどれですか。
+        choices: ["2√2", "4√2", "√2", "2√6"]
+        answer: 2√2
+        check: "[k for k, v in {'2√2': 2 * math.sqrt(2), '4√2': 4 * math.sqrt(2), '√2': math.sqrt(2), '2√6': 2 * math.sqrt(6)}.items() if math.isclose(v, 4 * math.sin(math.radians(30)) / math.sin(math.radians(45)))][0]"
+        hints:
+          - 正弦定理 a/sin A = b/sin B を使いましょう。
+          - a = b × sin A ÷ sin B です。
+          - sin 30° と sin 45° の値を入れましょう。
+        paths:
+          - ["a = 4 × (1/2) ÷ ((√2)/2) = 4/√2 = 2√2"]
+      - part: 今日
+        text: 3 辺の長さが 5、7、8 の三角形で、長さ 7 の辺と向かい合う角はどれですか。
+        choices: [60°, 30°, 120°, 45°]
+        answer: 60°
+        check: "[k for k, v in {'60°': 60, '30°': 30, '120°': 120, '45°': 45}.items() if math.isclose(math.cos(math.radians(v)), (25 + 64 - 49) / (2 * 5 * 8))][0]"
+        hints:
+          - 余弦定理で、cos の値を求めましょう。
+          - 長さ 7 の辺の 2 乗を、ほかの 2 辺の 2 乗の和からひきます。
+          - cos の値が正なら鋭角です。
+        paths:
+          - ["cos θ = (25 + 64 − 49)/(2 × 5 × 8) = 40/80 = 1/2", "θ = 60°"]
+      - part: 今日
+        text: △ABC で、b = 10、c = 9、A = 150° のとき、面積はいくつですか。
+        answer: 45/2
+        accept: [22.5]
+        check: "Fraction(1, 2) * 10 * 9 * Fraction(1, 2)"
+        hints:
+          - S = (1/2)bc sin A を使いましょう。
+          - sin 150° = sin 30° です。
+          - (1/2) × 10 × 9 × sin 150° を計算しましょう。
+        paths:
+          - ["S = (1/2) × 10 × 9 × (1/2) = 45/2"]
+    extra:
+      - part: 今日
+        text: sin 120° の値はどれですか。
+        choices: ["(√3)/2", "−(√3)/2", "1/2", "−1/2"]
+        answer: (√3)/2
+        check: "[k for k, v in {'(√3)/2': math.sqrt(3) / 2, '−(√3)/2': -math.sqrt(3) / 2, '1/2': 0.5, '−1/2': -0.5}.items() if math.isclose(v, math.sin(math.radians(120)))][0]"
+        hints:
+          - sin(180° − θ) = sin θ を使いましょう。
+          - 120° = 180° − 60° です。
+          - 0° から 180° までの sin は 0 以上です。
+        paths:
+          - ["sin 120° = sin 60° = (√3)/2"]
+      - part: 今日
+        text: △ABC で、b = 3、c = 8、A = 60° のとき、a はいくつですか。
+        answer: 7
+        check: "[a for a in range(1, 50) if a * a == 9 + 64 - 2 * 3 * 8 * Fraction(1, 2)][0]"
+        hints:
+          - 余弦定理 a² = b² + c² − 2bc cos A を使いましょう。
+          - cos 60° = 1/2 です。
+          - a² を求めて、2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["a² = 9 + 64 − 24 = 49", "a = 7"]
+      - part: 今日
+        text: 3 辺の長さが 3、5、7 の三角形の面積はどれですか。
+        choices: ["(15√3)/4", "(15√3)/2", "15/4", "(15√2)/4"]
+        answer: (15√3)/4
+        check: "[k for k, v in {'(15√3)/4': 15 * math.sqrt(3) / 4, '(15√3)/2': 15 * math.sqrt(3) / 2, '15/4': 15 / 4, '(15√2)/4': 15 * math.sqrt(2) / 4}.items() if math.isclose(v, math.sqrt(7.5 * 4.5 * 2.5 * 0.5))][0]"
+        hints:
+          - いちばん長い辺と向かい合う角を、余弦定理で求めましょう。
+          - cos = (3² + 5² − 7²)/(2 × 3 × 5) です。
+          - 角がわかったら、S = (1/2)bc sin A を使いましょう。
+        paths:
+          - ["cos θ = (9 + 25 − 49)/30 = −1/2", "θ = 120°", "S = (1/2) × 3 × 5 × (√3)/2 = (15√3)/4"]
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-023]
+    text: 図のように、円に内接する四角形 ABCD で、AB = 3、BC = 3、CD = 5、DA = 8 です。対角線 BD の長さはいくつですか。
+    svg: '<svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="90" r="64" stroke="currentColor" fill="none" stroke-width="2"/><polygon points="59.9,111.9 91.5,147.3 138.9,151.2 183.9,86" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="59.9,111.9 91.5,147.3 138.9,151.2 183.9,86" stroke="currentColor" fill="none" stroke-width="2"/><text x="67.5" y="140.9" font-size="12" text-anchor="end">3</text><text x="114.3" y="164.2" font-size="12" text-anchor="middle">3</text><text x="170.4" y="128.8" font-size="12" text-anchor="start">5</text><text x="119.6" y="92.2" font-size="12" text-anchor="middle">8</text><text x="48.1" y="113.9" font-size="13" text-anchor="middle">A</text><text x="82.4" y="159.6" font-size="13" text-anchor="middle">B</text><text x="146.1" y="165.2" font-size="13" text-anchor="middle">C</text><text x="194.2" y="84.5" font-size="13" text-anchor="middle">D</text></svg>'
+    answer: 7
+    check: "(lambda cA: [d for d in range(1, 20) if d * d == 9 + 64 - 2 * 3 * 8 * cA][0])(Fraction((9 + 64) - (9 + 25), 2 * 3 * 8 + 2 * 3 * 5))"
+    hints:
+      - 円に内接する四角形の向かい合う角の和は 180° です（G-023）。cos A と cos C の間には、どんな関係があるでしょう。
+      - △ABD と △CBD のそれぞれで、BD² を余弦定理で表しましょう。
+      - 2 つの式を等しいとおいて、cos A を求めましょう。
+    paths:
+      - ["C = 180° − A なので cos C = −cos A", "BD² = 9 + 64 − 48cos A = 73 − 48cos A", "BD² = 9 + 25 − 30cos C = 34 + 30cos A", "73 − 48cos A = 34 + 30cos A で cos A = 1/2", "BD² = 73 − 24 = 49 で BD = 7"]
+    note: 内接四角形の対角の和（G-023）と cos(180° − θ) = −cos θ をつなぎ、2 つの余弦定理を 1 つの方程式にする。A = 60° までわかるので、面積 (39√3)/4 まで求めさせてもよい。
+  - part: 離
+    kinds: [数, 手数]
+    text: 3 辺の長さが BC = 5、CA = 6、AB = 7 の △ABC があります。この三角形の外接円の半径はどれですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="141.7,26 78.3,124 161.7,124" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="141.7,26 78.3,124 161.7,124" stroke="currentColor" fill="none" stroke-width="2"/><text x="120" y="139" font-size="12" text-anchor="middle">5</text><text x="162.5" y="76.8" font-size="12" text-anchor="start">6</text><text x="100.8" y="73" font-size="12" text-anchor="end">7</text><text x="68.3" y="135.2" font-size="13" text-anchor="middle">B</text><text x="170.4" y="136.8" font-size="13" text-anchor="middle">C</text><text x="144.3" y="18.8" font-size="13" text-anchor="middle">A</text></svg>'
+    choices: ["(35√6)/24", "(35√6)/12", "(5√6)/4", "(7√6)/6"]
+    answer: (35√6)/24
+    check: "[k for k, v in {'(35√6)/24': 35 * math.sqrt(6) / 24, '(35√6)/12': 35 * math.sqrt(6) / 12, '(5√6)/4': 5 * math.sqrt(6) / 4, '(7√6)/6': 7 * math.sqrt(6) / 6}.items() if math.isclose(v, 5 * 6 * 7 / (4 * math.sqrt(9 * 4 * 3 * 2)))][0]"
+    hints:
+      - まず、1 つの角の cos を余弦定理で求めましょう。どの角を選ぶと計算が楽でしょう。
+      - その角の sin を、sin² + cos² = 1 で求めましょう。
+      - 正弦定理で 2R を求め、分母を有理化しましょう。
+    paths:
+      - ["cos A = (36 + 49 − 25)/(2 × 6 × 7) = 60/84 = 5/7", "sin A = √(1 − 25/49) = (2√6)/7", "2R = 5 ÷ ((2√6)/7) = 35/(2√6)", "R = 35/(4√6) = (35√6)/24"]
+    note: 分数と √ が重なる計算が続く。どの角で求めても答えは同じだが、A（辺 5 と向かい合う角）を選ぶと cos A = 5/7 で計算が軽い。2R を R と取り違えると (35√6)/12 になる。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-020, A-017]
+    text: 図の △ABC は、AB = AC = 1、∠A = 36° の二等辺三角形です。∠B の二等分線が辺 AC と交わる点を D とします。この図を使って cos 36° の値を求めると、どれになりますか。
+    svg: '<svg viewBox="0 0 200 190" xmlns="http://www.w3.org/2000/svg"><polygon points="100,26 55.2,164 144.8,164" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="100,26 55.2,164 144.8,164" stroke="currentColor" fill="none" stroke-width="2"/><line x1="55.2" y1="164" x2="127.7" y2="111.3" stroke="currentColor" fill="none" stroke-width="2"/><path d="M104.9 41.2 A16 16 0 0 1 95.1 41.2" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="100" y="62.4" font-size="12" text-anchor="middle">36°</text><text x="67.1" y="95.6" font-size="12" text-anchor="end">1</text><text x="132.9" y="95.6" font-size="12" text-anchor="start">1</text><text x="99.1" y="18.5" font-size="13" text-anchor="middle">A</text><text x="46.3" y="176.6" font-size="13" text-anchor="middle">B</text><text x="152.3" y="177.9" font-size="13" text-anchor="middle">C</text><text x="139.4" y="113" font-size="13" text-anchor="middle">D</text></svg>'
+    choices: ["(1 + √5)/4", "(√5 − 1)/4", "(1 + √5)/2", "(√5)/4"]
+    answer: (1 + √5)/4
+    check: "[k for k, v in {'(1 + √5)/4': (1 + math.sqrt(5)) / 4, '(√5 − 1)/4': (math.sqrt(5) - 1) / 4, '(1 + √5)/2': (1 + math.sqrt(5)) / 2, '(√5)/4': math.sqrt(5) / 4}.items() if math.isclose(v, math.cos(math.radians(36)))][0]"
+    hints:
+      - △ABC と △BCD の角の大きさを調べましょう。どんな関係があるでしょう。
+      - BC = x とおくと、BD、AD、CD はどう表せるでしょう（二等辺三角形をさがしましょう）。
+      - 相似から x の 2 次方程式をつくり、x がわかったら △ABC で余弦定理を使いましょう。
+    paths:
+      - ["∠B = ∠C = 72°、∠DBC = 36° なので △ABC ∽ △BCD", "BC = BD = AD = x、CD = 1 − x", "AB:BC = BC:CD から x² + x − 1 = 0 で x = (√5 − 1)/2", "余弦定理 x² = 1 + 1 − 2cos 36° より cos 36° = (2 − x²)/2 = (1 + x)/2 = (1 + √5)/4"]
+      - ["AD = BD なので D から AB にひいた垂線は AB を 2 等分する", "cos 36° = (1/2) ÷ x = 1/(√5 − 1) = (√5 + 1)/4"]
+    note: 補助線（角の二等分線）でできる 2 つの二等辺三角形に気づき、相似（G-020）、2 次方程式（A-017）、余弦定理をつなぐ。x² = 1 − x を使うと cos 36° の計算が軽くなる。正五角形の対角線と辺の比（黄金比）につながる。

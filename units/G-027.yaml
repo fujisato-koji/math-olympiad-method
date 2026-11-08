@@ -1,0 +1,649 @@
+# G-027 ベクトル
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は G-026 と G-024 に合わせる（負の数は「−」U+2212、成分と式と角は選ぶ問題）。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜3 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# 地図に plan がないので、既定の並び（導入・練習 2 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 ベクトル（向きと大きさ、等しいベクトル）、和・差・実数倍、成分と大きさ、→AB の成分
+#   2 日目 平行の条件（→b = k→a、a₁b₂ − a₂b₁ = 0）、単位ベクトル、位置ベクトル、内分点、直線のベクトル方程式
+#   3 日目 内積（|→a||→b|cos θ と成分 a₁b₁ + a₂b₂）、なす角、垂直の条件、|→a + →b|² の展開
+#   4 日目 わけ（内積の成分の式を余弦定理で、内分点の位置ベクトル、△OAB の面積 (1/2)|a₁b₂ − a₂b₁|。どれも ③）
+#   5 日目 G-026・G-024 と混ぜる（法線ベクトルと直線の式、2 直線のなす角、中線の長さ、cos ∠BAC）　6 日目 確認
+# 前提は G-026（座標と直線・円）と G-024（三角比と正弦・余弦定理）。前提のたどりに A-012（連立方程式）、A-017（平方完成）、
+#   G-020（相似）、G-015（平行移動）がある。弧度法と加法定理（G-025）は前提にないので、角は度で表し、0° ≦ θ ≦ 180° に限った。
+#   空間のベクトルは G-049（空間座標）、外積は M-013、行列は M-001 で扱うので、ここでは平面のベクトルだけにした。
+#   1 次独立（係数を比べてよいわけ）は、日の問題では使わず、腕だめしで「→a と →b は平行でなく →0 でもない」として使う。
+# ベクトルの書き方：画面で文字の上に矢印をのせられないので、→a、→AB のように矢印を字の前に書いた。大きさは |→a|、内積は →a・→b。
+#   成分は (3, −2) のように書く。成分、式、角は選ぶ問題にし、打つ答えは大きさ、内積、文字の値、面積、cos の値（Fraction）。
+#   成分を選ぶ check は、成分の計算の結果の組と等しいものを、→a、→b で表した式を選ぶ check は、具体的な点の座標を入れて
+#   係数の組が問題の点を表すものを選ぶ。角を選ぶ check は、内積から求めた cos の値と選択肢の角の cos が近いものを選ぶ。
+# 図は svg（D-040）。方眼の上の矢印は成分が読めるように格子の点から格子の点へ描き、求める和や点は描かない。
+# ベクトルは、運動と力（P-001、P-002）、行列と 1 次変換（M-001、M-002）、空間の図形（G-049）、外積（M-013）、
+#   分子の形（H-018）、コンピュータの図形処理と機械学習の特徴量の入口になる（D-026）。
+
+id: G-027
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 向きと大きさをもつ量を、矢印で表してみましょう。
+        svg: '<svg viewBox="0 0 204 178" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="154" x2="24" y2="24"/><line x1="50" y1="154" x2="50" y2="24"/><line x1="76" y1="154" x2="76" y2="24"/><line x1="102" y1="154" x2="102" y2="24"/><line x1="128" y1="154" x2="128" y2="24"/><line x1="154" y1="154" x2="154" y2="24"/><line x1="180" y1="154" x2="180" y2="24"/><line x1="24" y1="154" x2="180" y2="154"/><line x1="24" y1="128" x2="180" y2="128"/><line x1="24" y1="102" x2="180" y2="102"/><line x1="24" y1="76" x2="180" y2="76"/><line x1="24" y1="50" x2="180" y2="50"/><line x1="24" y1="24" x2="180" y2="24"/></g><line x1="16" y1="128" x2="190" y2="128" stroke="currentColor" fill="none" stroke-width="2"/><line x1="50" y1="162" x2="50" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M190 128 L182 124 L182 132 Z" fill="currentColor"/><path d="M50 14 L46 22 L54 22 Z" fill="currentColor"/><text x="192" y="142" font-size="14" text-anchor="end" font-style="italic">x</text><text x="57" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="46" y="141" font-size="11" text-anchor="end">O</text><text x="24" y="141" font-size="10" text-anchor="middle">−1</text><text x="76" y="141" font-size="10" text-anchor="middle">1</text><text x="102" y="141" font-size="10" text-anchor="middle">2</text><text x="128" y="141" font-size="10" text-anchor="middle">3</text><text x="154" y="141" font-size="10" text-anchor="middle">4</text><text x="180" y="141" font-size="10" text-anchor="middle">5</text><text x="46" y="157.5" font-size="10" text-anchor="end">−1</text><text x="46" y="105.5" font-size="10" text-anchor="end">1</text><text x="46" y="79.5" font-size="10" text-anchor="end">2</text><text x="46" y="53.5" font-size="10" text-anchor="end">3</text><text x="46" y="27.5" font-size="10" text-anchor="end">4</text><line x1="50" y1="128" x2="118.5" y2="105.2" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M128 102 L119.9 109.4 L117.1 100.9 Z" fill="currentColor"/><text x="91.6" y="124.1" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan></text><line x1="128" y1="102" x2="149.5" y2="58.9" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M154 50 L153.6 61 L145.5 56.9 Z" fill="currentColor"/><text x="152.7" y="83.8" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">b</tspan></text><line x1="50" y1="128" x2="146" y2="56" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M154 50 L148.7 59.6 L143.3 52.4 Z" fill="currentColor"/><text x="83.8" y="68.2" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan> + →<tspan font-style="italic">b</tspan></text></svg>'
+        explain: 点 A から点 B への向きのついた線分を有向線分といい、その向きと長さだけに目をつけたものをベクトルといって →AB と書きます。1 つの文字で →a のようにも書きます。向きも大きさ（長さ）も等しいベクトルは、位置がちがっても等しいとします。→AB の大きさを |→AB| と書きます。→AB + →BC = →AC と定め、→a + →b は、→a の終わりの点から →b をかいたときの、はじめの点から終わりの点までの矢印です。→a と大きさが等しく向きが反対のベクトルを −→a と書き、→a − →b = →a + (−→b) とします。どんな点 O についても →OB − →OA = →AB です。大きさが 0 のベクトルを →0 と書きます。実数 k に対して k→a は、k が正なら →a と同じ向きで大きさが k 倍、k が負なら反対の向きで大きさが |k| 倍のベクトルです。座標平面で、→a を原点から始まる矢印にしたときの終わりの点が (a₁, a₂) なら、→a = (a₁, a₂) と書き、これを →a の成分といいます。|→a| = √(a₁² + a₂²)（三平方の定理）、(a₁, a₂) + (b₁, b₂) = (a₁ + b₁, a₂ + b₂)、k(a₁, a₂) = (ka₁, ka₂) です。A(x₁, y₁)、B(x₂, y₂) なら →AB = (x₂ − x₁, y₂ − y₁) です。図では →a = (3, 1)、→b = (1, 2) で、→a + →b = (4, 3)、|→a + →b| = √(16 + 9) = 5 です。
+      - part: 思い出す
+        text: 2 点 (−2, 3)、(4, −5) の間の距離はいくつですか。
+        answer: 10
+        check: "[d for d in range(1, 100) if d * d == (4 - (-2)) ** 2 + (-5 - 3) ** 2][0]"
+        hints:
+          - x 座標の差と、y 座標の差を求めましょう（G-026）。
+          - 差の 2 乗の和が、距離の 2 乗です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["差は 6 と 8", "36 + 64 = 100", "距離は 10"]
+      - part: 思い出す
+        text: △ABC で、AB = 5、AC = 3、∠A = 120° のとき、BC の長さはいくつですか。
+        answer: 7
+        check: "[a for a in range(1, 50) if a * a == 25 + 9 - 2 * 5 * 3 * Fraction(-1, 2)][0]"
+        hints:
+          - 余弦定理を使いましょう（G-024）。
+          - cos 120° = −1/2 です。
+          - BC² を求めてから、2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["BC² = 25 + 9 − 2 × 5 × 3 × (−1/2) = 49", "BC = 7"]
+      - part: 今日
+        text: →a = (2, −1)、→b = (−1, 3) のとき、2→a − →b の成分はどれですか。
+        choices: ["(5, −5)", "(3, 1)", "(5, 1)", "(3, −5)"]
+        answer: (5, −5)
+        check: "[k for k, p in {'(5, −5)': (5, -5), '(3, 1)': (3, 1), '(5, 1)': (5, 1), '(3, −5)': (3, -5)}.items() if p == (2 * 2 - (-1), 2 * (-1) - 3)][0]"
+        hints:
+          - 2→a の成分は、→a の成分をそれぞれ 2 倍したものです。
+          - 2→a − →b は、x 成分どうし、y 成分どうしで計算します。
+          - 負の数をひくときの符号に気をつけましょう。
+        paths:
+          - ["2→a = (4, −2)", "2→a − →b = (4 − (−1), −2 − 3) = (5, −5)"]
+        note: (3, 1) は 2→a + →b。
+      - part: 今日
+        text: 図の →a、→b について、→a + →b の成分はどれですか。
+        svg: '<svg viewBox="0 0 240 192" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="168" x2="24" y2="24"/><line x1="48" y1="168" x2="48" y2="24"/><line x1="72" y1="168" x2="72" y2="24"/><line x1="96" y1="168" x2="96" y2="24"/><line x1="120" y1="168" x2="120" y2="24"/><line x1="144" y1="168" x2="144" y2="24"/><line x1="168" y1="168" x2="168" y2="24"/><line x1="192" y1="168" x2="192" y2="24"/><line x1="216" y1="168" x2="216" y2="24"/><line x1="24" y1="168" x2="216" y2="168"/><line x1="24" y1="144" x2="216" y2="144"/><line x1="24" y1="120" x2="216" y2="120"/><line x1="24" y1="96" x2="216" y2="96"/><line x1="24" y1="72" x2="216" y2="72"/><line x1="24" y1="48" x2="216" y2="48"/><line x1="24" y1="24" x2="216" y2="24"/></g><line x1="16" y1="96" x2="226" y2="96" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="176" x2="120" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M226 96 L218 92 L218 100 Z" fill="currentColor"/><path d="M120 14 L116 22 L124 22 Z" fill="currentColor"/><text x="228" y="110" font-size="14" text-anchor="end" font-style="italic">x</text><text x="127" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="116" y="109" font-size="11" text-anchor="end">O</text><text x="24" y="109" font-size="10" text-anchor="middle">−4</text><text x="48" y="109" font-size="10" text-anchor="middle">−3</text><text x="72" y="109" font-size="10" text-anchor="middle">−2</text><text x="96" y="109" font-size="10" text-anchor="middle">−1</text><text x="144" y="109" font-size="10" text-anchor="middle">1</text><text x="168" y="109" font-size="10" text-anchor="middle">2</text><text x="192" y="109" font-size="10" text-anchor="middle">3</text><text x="216" y="109" font-size="10" text-anchor="middle">4</text><text x="116" y="171.5" font-size="10" text-anchor="end">−3</text><text x="116" y="147.5" font-size="10" text-anchor="end">−2</text><text x="116" y="123.5" font-size="10" text-anchor="end">−1</text><text x="116" y="75.5" font-size="10" text-anchor="end">1</text><text x="116" y="51.5" font-size="10" text-anchor="end">2</text><text x="116" y="27.5" font-size="10" text-anchor="end">3</text><line x1="48" y1="72" x2="110.5" y2="51.2" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M120 48 L111.9 55.4 L109.1 46.9 Z" fill="currentColor"/><text x="79.2" y="44.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan></text><line x1="168" y1="144" x2="148.5" y2="104.9" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M144 96 L152.5 102.9 L144.4 107 Z" fill="currentColor"/><text x="170.4" y="112.8" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">b</tspan></text></svg>'
+        choices: ["(2, 3)", "(4, −1)", "(2, 1)", "(4, 3)"]
+        answer: (2, 3)
+        check: "[k for k, p in {'(2, 3)': (2, 3), '(4, −1)': (4, -1), '(2, 1)': (2, 1), '(4, 3)': (4, 3)}.items() if p == ((0 - (-3)) + (1 - 2), (2 - 1) + (0 - (-2)))][0]"
+        hints:
+          - それぞれの矢印が、右へいくつ、上へいくつ進むかを読みましょう。
+          - 左へ進むときは x 成分が負、下へ進むときは y 成分が負です。
+          - 成分どうしを足しましょう。
+        paths:
+          - ["→a = (3, 1)", "→b = (−1, 2)", "→a + →b = (2, 3)"]
+        note: 矢印のはじめの点の座標を成分としやすい。ベクトルは位置によらず、進む向きと量で決まる。
+      - part: 挑戦
+        text: →a = (1, 2)、→b = (3, −2) とします。→c = (17, −6) を s→a + t→b の形で表すとき、t はいくつですか。
+        answer: 5
+        check: "[t for s in range(-20, 21) for t in range(-20, 21) if s + 3 * t == 17 and 2 * s - 2 * t == -6][0]"
+        hints:
+          - s→a + t→b の成分を、s と t で表しましょう。
+          - x 成分と y 成分が →c と等しくなるように、2 つの式をつくりましょう。
+          - 連立方程式を解きましょう（A-012）。
+        paths:
+          - ["s→a + t→b = (s + 3t, 2s − 2t)", "s + 3t = 17、2s − 2t = −6", "2 つめから s = t − 3", "t − 3 + 3t = 17 で t = 5"]
+    extra:
+      - part: 今日
+        text: →a = (−5, 12) の大きさ |→a| はいくつですか。
+        answer: 13
+        check: "[d for d in range(1, 100) if d * d == 5 * 5 + 12 * 12][0]"
+        hints:
+          - "|→a| = √(a₁² + a₂²) です。"
+          - (−5)² は正の数です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["25 + 144 = 169", "|→a| = 13"]
+      - part: 今日
+        text: 2 点 A(2, 5)、B(−1, 1) について、→BA の成分はどれですか。
+        choices: ["(3, 4)", "(−3, −4)", "(1, 6)", "(−1, 6)"]
+        answer: (3, 4)
+        check: "[k for k, p in {'(3, 4)': (3, 4), '(−3, −4)': (-3, -4), '(1, 6)': (1, 6), '(−1, 6)': (-1, 6)}.items() if p == (2 - (-1), 5 - 1)][0]"
+        hints:
+          - →BA は、B から A への矢印です。
+          - 成分は (A の x 座標 − B の x 座標, A の y 座標 − B の y 座標) です。
+          - 終わりの点からはじめの点をひきます。
+        paths:
+          - ["→BA = (2 − (−1), 5 − 1) = (3, 4)"]
+        note: (−3, −4) は →AB。はじめと終わりを取り違えやすい。
+      - part: 挑戦
+        text: 平行四辺形 ABCD で、A(1, 1)、B(5, 2)、D(2, 4) のとき、C の座標はどれですか。
+        choices: ["(6, 5)", "(4, 3)", "(8, 3)", "(6, 7)"]
+        answer: (6, 5)
+        check: "[k for k, p in {'(6, 5)': (6, 5), '(4, 3)': (4, 3), '(8, 3)': (8, 3), '(6, 7)': (6, 7)}.items() if p == (2 + (5 - 1), 4 + (2 - 1))][0]"
+        hints:
+          - 平行四辺形では、→AB = →DC です。
+          - →AB の成分を求めましょう。
+          - D から →AB だけ進んだ点が C です。
+        paths:
+          - ["→AB = (4, 1)", "C = D + →AB の成分で (2 + 4, 4 + 1) = (6, 5)"]
+  - day: 2
+    items:
+      - part: 見本
+        text: ベクトルの平行と、点の位置をベクトルで表す方法を調べましょう。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><line x1="196.5" y1="113.6" x2="92.5" y2="28" stroke="currentColor" fill="none" stroke-width="2"/><line x1="43.5" y1="132" x2="186.5" y2="114.8" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M196.5 113.6 L187.1 119.3 L186 110.4 Z" fill="currentColor"/><line x1="43.5" y1="132" x2="88.2" y2="37" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M92.5 28 L92.3 39 L84.1 35.1 Z" fill="currentColor"/><line x1="43.5" y1="132" x2="126.1" y2="68.4" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M134.1 62.3 L128.9 71.9 L123.4 64.8 Z" fill="currentColor"/><text x="121.5" y="139.7" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan></text><text x="56.2" y="78.5" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">b</tspan></text><text x="96.7" y="111.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">p</tspan></text><circle cx="134.1" cy="62.3" r="3" fill="currentColor"/><text x="32.7" y="143.6" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">O</text><text x="208.7" y="122.7" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><text x="87.3" y="20.6" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><text x="146.1" y="58.3" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P</text><text x="175.3" y="90" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">m</tspan></text><text x="123.3" y="47.1" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">n</tspan></text></svg>'
+        explain: →0 でない 2 つのベクトル →a、→b が同じ向きか反対の向きのとき、→a と →b は平行であるといい、→a ∥ →b と書きます。→a ∥ →b であることは、→b = k→a となる実数 k があることと同じです。成分では、→a = (a₁, a₂)、→b = (b₁, b₂) が平行であることは a₁b₂ − a₂b₁ = 0 と同じです。3 点 A、B、C が 1 つの直線の上にあることは、→AC = k→AB となる k があることと同じです。大きさが 1 のベクトルを単位ベクトルといい、→a と同じ向きの単位ベクトルは (1/|→a|)→a です。点 O を決めて、点 A を →OA = →a で表すとき、→a を A の位置ベクトルといい、A(→a) と書きます。A(→a)、B(→b) のとき →AB = →b − →a です。線分 AB を m:n に内分する点 P の位置ベクトルは →p = (n→a + m→b)/(m + n) です（わけは 4 日目）。中点は (→a + →b)/2 です。点 A(→a) を通り、→d に平行な直線の上の点 P(→p) は、実数 t を使って →p = →a + t→d と表せます（直線のベクトル方程式。→d を方向ベクトルといいます）。例：A(1, 3) を通り →d = (2, −1) に平行な直線は (x, y) = (1, 3) + t(2, −1)、つまり x = 1 + 2t、y = 3 − t です。
+      - part: 思い出す
+        text: →a = (3, −2)、→b = (−1, 4) のとき、→a + 2→b の成分はどれですか。
+        choices: ["(1, 6)", "(5, 0)", "(2, 2)", "(1, 2)"]
+        answer: (1, 6)
+        check: "[k for k, p in {'(1, 6)': (1, 6), '(5, 0)': (5, 0), '(2, 2)': (2, 2), '(1, 2)': (1, 2)}.items() if p == (3 + 2 * (-1), -2 + 2 * 4)][0]"
+        hints:
+          - 2→b の成分を先に求めましょう。
+          - x 成分どうし、y 成分どうしを足しましょう。
+          - 負の数の計算に気をつけましょう。
+        paths:
+          - ["2→b = (−2, 8)", "→a + 2→b = (1, 6)"]
+      - part: 思い出す
+        text: 2 点 A(−1, 4)、B(5, −2) を結ぶ線分 AB を 2:1 に内分する点の座標はどれですか。
+        choices: ["(3, 0)", "(1, 2)", "(2, 1)", "(3, 2)"]
+        answer: (3, 0)
+        check: "[k for k, p in {'(3, 0)': (3, 0), '(1, 2)': (1, 2), '(2, 1)': (2, 1), '(3, 2)': (3, 2)}.items() if p == (Fraction(1 * (-1) + 2 * 5, 3), Fraction(1 * 4 + 2 * (-2), 3))][0]"
+        hints:
+          - 内分する点の式で、m = 2、n = 1 です（G-026）。
+          - B の座標に 2 を、A の座標に 1 をかけます。
+          - 3 でわりましょう。
+        paths:
+          - ["x = (−1 + 10)/3 = 3", "y = (4 − 4)/3 = 0", "(3, 0)"]
+      - part: 今日
+        text: →a = (2, −3) と →b = (x, 6) が平行になるとき、x はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([x for x in range(-30, 31) if 2 * 6 - (-3) * x == 0][0])"
+        hints:
+          - 平行の条件は a₁b₂ − a₂b₁ = 0 です。
+          - 2 × 6 − (−3) × x = 0 です。
+          - →b = k→a とおいて、y 成分から k を求めてもよいです。
+        paths:
+          - ["12 + 3x = 0", "x = −4"]
+          - ["→b = k→a とおく", "6 = −3k で k = −2", "x = 2 × (−2) = −4"]
+      - part: 今日
+        text: △OAB で、→OA = →a、→OB = →b とします。辺 AB を 3:1 に内分する点 P について、→OP を →a、→b で表したものはどれですか。
+        choices: [(1/4)→a + (3/4)→b, (3/4)→a + (1/4)→b, (1/3)→a + (2/3)→b, 3→a + →b]
+        answer: (1/4)→a + (3/4)→b
+        check: "[k for k, (s, t) in {'(1/4)→a + (3/4)→b': (Fraction(1, 4), Fraction(3, 4)), '(3/4)→a + (1/4)→b': (Fraction(3, 4), Fraction(1, 4)), '(1/3)→a + (2/3)→b': (Fraction(1, 3), Fraction(2, 3)), '3→a + →b': (3, 1)}.items() if (s * 4 + t * 0, s * 0 + t * 4) == (4 + Fraction(3, 4) * (0 - 4), 0 + Fraction(3, 4) * (4 - 0))][0]"
+        hints:
+          - 内分する点の位置ベクトルは (n→a + m→b)/(m + n) です。
+          - m = 3、n = 1 です。
+          - →b に 3 を、→a に 1 をかけます。
+        paths:
+          - ["→OP = (1 × →a + 3 × →b)/4", "(1/4)→a + (3/4)→b"]
+        note: 係数を逆にしやすい。AP:PB = 3:1 なので P は B に近く、→b の係数のほうが大きい。
+      - part: 挑戦
+        text: →a = (1, 2)、→b = (3, −1) とします。→a + t→b が →c = (1, 1) と平行になるとき、t はいくつですか。
+        answer: 1/4
+        check: "[Fraction(k, 4) for k in range(-40, 41) if (1 + 3 * Fraction(k, 4)) * 1 - (2 - Fraction(k, 4)) * 1 == 0][0]"
+        hints:
+          - →a + t→b の成分を、t で表しましょう。
+          - (1 + 3t, 2 − t) と (1, 1) が平行になる条件を書きましょう。
+          - a₁b₂ − a₂b₁ = 0 を t の方程式として解きましょう。
+        paths:
+          - ["→a + t→b = (1 + 3t, 2 − t)", "(1 + 3t) × 1 − (2 − t) × 1 = 0", "4t − 1 = 0", "t = 1/4"]
+    extra:
+      - part: 今日
+        text: →a = (6, −8) と同じ向きの単位ベクトルはどれですか。
+        choices: ["(3/5, −4/5)", "(−3/5, 4/5)", "(3/4, −1)", "(6, −8)"]
+        answer: (3/5, −4/5)
+        check: "[k for k, (x, y) in {'(3/5, −4/5)': (Fraction(3, 5), Fraction(-4, 5)), '(−3/5, 4/5)': (Fraction(-3, 5), Fraction(4, 5)), '(3/4, −1)': (Fraction(3, 4), Fraction(-1)), '(6, −8)': (Fraction(6), Fraction(-8))}.items() if x * x + y * y == 1 and x * (-8) - y * 6 == 0 and x * 6 > 0][0]"
+        hints:
+          - まず |→a| を求めましょう。
+          - (1/|→a|)→a が、同じ向きの単位ベクトルです。
+          - 成分をそれぞれ |→a| でわりましょう。
+        paths:
+          - ["|→a| = √(36 + 64) = 10", "(1/10)→a = (3/5, −4/5)"]
+        note: (−3/5, 4/5) は反対の向きの単位ベクトル。
+      - part: 今日
+        text: △OAB で、→OA = →a、→OB = →b とします。線分 AB の中点を M、線分 AM の中点を N とするとき、→ON を →a、→b で表したものはどれですか。
+        choices: [(3/4)→a + (1/4)→b, (1/4)→a + (3/4)→b, (1/2)→a + (1/2)→b, (3/4)→a + (3/4)→b]
+        answer: (3/4)→a + (1/4)→b
+        check: "[k for k, (s, t) in {'(3/4)→a + (1/4)→b': (Fraction(3, 4), Fraction(1, 4)), '(1/4)→a + (3/4)→b': (Fraction(1, 4), Fraction(3, 4)), '(1/2)→a + (1/2)→b': (Fraction(1, 2), Fraction(1, 2)), '(3/4)→a + (3/4)→b': (Fraction(3, 4), Fraction(3, 4))}.items() if (s * 4, t * 4) == ((4 + (4 + 0) / Fraction(2)) / 2, (0 + (0 + 4) / Fraction(2)) / 2)][0]"
+        hints:
+          - →OM = (→a + →b)/2 です。
+          - N は A と M の中点なので、→ON = (→OA + →OM)/2 です。
+          - →OM を入れて整理しましょう。
+        paths:
+          - ["→OM = (1/2)→a + (1/2)→b", "→ON = (→a + →OM)/2 = (3/4)→a + (1/4)→b"]
+        note: N は AB を 1:3 に内分する点とみてもよい。
+      - part: 挑戦
+        text: 直線 (x, y) = (1, 3) + t(2, −1) が x 軸と交わる点の x 座標はいくつですか。
+        answer: 7
+        check: "[1 + 2 * t for t in range(-20, 21) if 3 - t == 0][0]"
+        hints:
+          - 直線の上の点は x = 1 + 2t、y = 3 − t と表せます。
+          - x 軸の上では y = 0 です。
+          - t を求めてから x を求めましょう。
+        paths:
+          - ["3 − t = 0 で t = 3", "x = 1 + 2 × 3 = 7"]
+  - day: 3
+    items:
+      - part: 見本
+        text: 2 つのベクトルの内積を定め、なす角や垂直を調べましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="112" x2="170.2" y2="90" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M180 88 L171.1 94.4 L169.3 85.5 Z" fill="currentColor"/><line x1="60" y1="112" x2="92.1" y2="37.2" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M96 28 L96.2 39 L87.9 35.4 Z" fill="currentColor"/><text x="122.5" y="116.7" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan></text><text x="66.1" y="68.9" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">b</tspan></text><text x="49.3" y="123.9" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">O</text><path d="M83.5 107.3 A24 24 0 0 0 69.5 89.9" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="88" y="93.3" font-size="13" text-anchor="middle">θ</text></svg>'
+        explain: →0 でない 2 つのベクトル →a、→b を、はじめの点をそろえてかいたときにできる角 θ（0° ≦ θ ≦ 180°）を、→a と →b のなす角といいます。|→a||→b|cos θ を →a と →b の内積といい、→a・→b と書きます。内積はベクトルではなく数です。成分で →a = (a₁, a₂)、→b = (b₁, b₂) のとき、→a・→b = a₁b₁ + a₂b₂ です（わけは 4 日目）。→a・→a = |→a|² です。なす角は cos θ = →a・→b/(|→a||→b|) で求めます。→a と →b が垂直であることは、θ = 90°、つまり →a・→b = 0 と同じです。例：→a = (1, 2)、→b = (3, 1) なら、→a・→b = 3 + 2 = 5、|→a| = √5、|→b| = √10 なので cos θ = 5/√50 = 1/√2 で、θ = 45° です。内積には →a・→b = →b・→a、→a・(→b + →c) = →a・→b + →a・→c、(k→a)・→b = k(→a・→b) が成り立つので（成分で確かめられます）、文字の式と同じように展開できます。例：|→a + →b|² = (→a + →b)・(→a + →b) = |→a|² + 2→a・→b + |→b|² です。
+      - part: 思い出す
+        text: →a = (3, k) と →b = (−6, 4) が平行になるとき、k はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-30, 31) if 3 * 4 - k * (-6) == 0][0])"
+        hints:
+          - 平行の条件は a₁b₂ − a₂b₁ = 0 です。
+          - 3 × 4 − k × (−6) = 0 です。
+          - k の 1 次方程式を解きましょう。
+        paths:
+          - ["12 + 6k = 0", "k = −2"]
+      - part: 思い出す
+        text: cos 150° の値はどれですか。
+        choices: ["−(√3)/2", "(√3)/2", "−1/2", "1/2"]
+        answer: −(√3)/2
+        check: "[k for k, v in {'−(√3)/2': -math.sqrt(3) / 2, '(√3)/2': math.sqrt(3) / 2, '−1/2': -0.5, '1/2': 0.5}.items() if math.isclose(v, math.cos(math.radians(150)))][0]"
+        hints:
+          - cos(180° − θ) = −cos θ です（G-024）。
+          - 150° = 180° − 30° です。
+          - 鈍角の cos は負の数です。
+        paths:
+          - ["cos 150° = −cos 30° = −(√3)/2"]
+      - part: 今日
+        text: "|→a| = 2、|→b| = 3 で、→a と →b のなす角が 120° のとき、内積 →a・→b はいくつですか。"
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 * 3 * [Fraction(k, 2) for k in range(-2, 3) if math.isclose(math.cos(math.radians(120)), k / 2)][0])"
+        hints:
+          - →a・→b = |→a||→b|cos θ です。
+          - cos 120° の値を思い出しましょう。
+          - 2 × 3 × cos 120° を計算しましょう。
+        paths:
+          - ["→a・→b = 2 × 3 × (−1/2) = −3"]
+        note: なす角が鈍角なら、内積は負の数になる。
+      - part: 今日
+        text: →a = (1, 2)、→b = (−3, −1) のなす角はどれですか。
+        choices: [135°, 45°, 120°, 150°]
+        answer: 135°
+        check: "[k for k, v in {'135°': 135, '45°': 45, '120°': 120, '150°': 150}.items() if math.isclose(math.cos(math.radians(v)), (1 * (-3) + 2 * (-1)) / (math.hypot(1, 2) * math.hypot(-3, -1)))][0]"
+        hints:
+          - まず内積 →a・→b を成分で計算しましょう。
+          - "|→a| と |→b| を求めましょう。"
+          - cos θ = →a・→b/(|→a||→b|) です。
+        paths:
+          - ["→a・→b = −3 − 2 = −5", "|→a| = √5、|→b| = √10", "cos θ = −5/√50 = −1/√2", "θ = 135°"]
+        note: 内積が負なので、なす角は鈍角。45° としやすい。
+      - part: 挑戦
+        text: "|→a| = 3、|→b| = 2、|→a − →b| = √7 のとき、→a と →b のなす角はどれですか。"
+        choices: [60°, 30°, 120°, 45°]
+        answer: 60°
+        check: "[k for k, v in {'60°': 60, '30°': 30, '120°': 120, '45°': 45}.items() if math.isclose(math.cos(math.radians(v)), ((9 + 4 - 7) / 2) / (3 * 2))][0]"
+        hints:
+          - "|→a − →b|² を展開しましょう。"
+          - "|→a − →b|² = |→a|² − 2→a・→b + |→b|² です。"
+          - →a・→b を求めてから、cos θ を求めましょう。
+        paths:
+          - ["7 = 9 − 2→a・→b + 4", "→a・→b = 3", "cos θ = 3/(3 × 2) = 1/2", "θ = 60°"]
+    extra:
+      - part: 今日
+        text: →a = (4, −3) と →b = (k, 2) が垂直になるとき、k はいくつですか。
+        answer: 3/2
+        check: "[Fraction(j, 2) for j in range(-40, 41) if 4 * Fraction(j, 2) + (-3) * 2 == 0][0]"
+        hints:
+          - 垂直の条件は →a・→b = 0 です。
+          - 4k + (−3) × 2 = 0 です。
+          - k の 1 次方程式を解きましょう。
+        paths:
+          - ["4k − 6 = 0", "k = 3/2"]
+      - part: 今日
+        text: →a = (5, −1)、→b = (2, 3) の内積はいくつですか。
+        answer: 7
+        check: "5 * 2 + (-1) * 3"
+        hints:
+          - →a・→b = a₁b₁ + a₂b₂ です。
+          - 5 × 2 と (−1) × 3 を求めましょう。
+          - 2 つを足しましょう。
+        paths:
+          - ["10 + (−3) = 7"]
+      - part: 挑戦
+        text: "|→a| = 2、|→b| = 1、→a・→b = −1 のとき、|2→a + 3→b| はどれですか。"
+        choices: ["√13", "√37", "7", "13"]
+        answer: √13
+        check: "[k for k, v in {'√13': math.sqrt(13), '√37': math.sqrt(37), '7': 7, '13': 13}.items() if math.isclose(v, math.sqrt(4 * 4 + 12 * (-1) + 9 * 1))][0]"
+        hints:
+          - "|2→a + 3→b|² を展開しましょう。"
+          - (2→a + 3→b)・(2→a + 3→b) = 4|→a|² + 12→a・→b + 9|→b|² です。
+          - 最後に √ をとりましょう。
+        paths:
+          - ["|2→a + 3→b|² = 4 × 4 + 12 × (−1) + 9 × 1 = 13", "|2→a + 3→b| = √13"]
+        note: √37 は →a・→b の符号を落としたもの。13 は 2 乗のまま止めたもの。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: →a = (2, 3)、→b = (−1, 4) の内積はいくつですか。
+        answer: 10
+        check: "2 * (-1) + 3 * 4"
+        hints:
+          - →a・→b = a₁b₁ + a₂b₂ です。
+          - 2 × (−1) と 3 × 4 を求めましょう。
+          - 2 つを足しましょう。
+        paths:
+          - ["−2 + 12 = 10"]
+      - part: 思い出す
+        text: △OAB で、→OA = →a、→OB = →b とします。辺 AB を 2:3 に内分する点 P について、→OP を →a、→b で表したものはどれですか。
+        choices: [(3/5)→a + (2/5)→b, (2/5)→a + (3/5)→b, (2/3)→a + (1/3)→b, 2→a + 3→b]
+        answer: (3/5)→a + (2/5)→b
+        check: "[k for k, (s, t) in {'(3/5)→a + (2/5)→b': (Fraction(3, 5), Fraction(2, 5)), '(2/5)→a + (3/5)→b': (Fraction(2, 5), Fraction(3, 5)), '(2/3)→a + (1/3)→b': (Fraction(2, 3), Fraction(1, 3)), '2→a + 3→b': (2, 3)}.items() if (s * 5, t * 5) == (5 + Fraction(2, 5) * (0 - 5), 0 + Fraction(2, 5) * (5 - 0))][0]"
+        hints:
+          - 内分する点の位置ベクトルは (n→a + m→b)/(m + n) です。
+          - m = 2、n = 3 です。
+          - →a に 3 を、→b に 2 をかけます。
+        paths:
+          - ["→OP = (3→a + 2→b)/5", "(3/5)→a + (2/5)→b"]
+      - part: 今日
+        text: "|→a| = 4、|→b| = 3、→a・→b = −6 のとき、→a と →b のなす角はどれですか。"
+        choices: [120°, 60°, 150°, 135°]
+        answer: 120°
+        check: "[k for k, v in {'120°': 120, '60°': 60, '150°': 150, '135°': 135}.items() if math.isclose(math.cos(math.radians(v)), -6 / (4 * 3))][0]"
+        hints:
+          - cos θ = →a・→b/(|→a||→b|) です。
+          - −6 ÷ (4 × 3) を計算しましょう。
+          - cos が負の数なので、θ は鈍角です。
+        paths:
+          - ["cos θ = −6/12 = −1/2", "θ = 120°"]
+      - part: わけ
+        text: →a = (a₁, a₂)、→b = (b₁, b₂) のとき、→a・→b = a₁b₁ + a₂b₂ となるわけを、余弦定理を使って、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 216 192" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="144" x2="202" y2="144" stroke="currentColor" fill="none" stroke-width="2"/><line x1="48" y1="176" x2="48" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M202 144 L194 140 L194 148 Z" fill="currentColor"/><path d="M48 14 L44 22 L52 22 Z" fill="currentColor"/><text x="204" y="158" font-size="14" text-anchor="end" font-style="italic">x</text><text x="55" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="44" y="157" font-size="11" text-anchor="end">O</text><polygon points="48,144 168,108 91.2,48" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="48,144 168,108 91.2,48" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="168" cy="108" r="3.5" fill="currentColor"/><text x="172" y="100" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A(<tspan font-style="italic">a</tspan>₁, <tspan font-style="italic">a</tspan>₂)</text><circle cx="91.2" cy="48" r="3.5" fill="currentColor"/><text x="97.2" y="44" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B(<tspan font-style="italic">b</tspan>₁, <tspan font-style="italic">b</tspan>₂)</text><line x1="48" y1="144" x2="158.4" y2="110.9" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M168 108 L159.7 115.2 L157.1 106.6 Z" fill="currentColor"/><line x1="48" y1="144" x2="87.1" y2="57.1" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M91.2 48 L91.2 59 L83 55.3 Z" fill="currentColor"/><text x="117.6" y="147.2" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">a</tspan></text><text x="58.8" y="91.2" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">→<tspan font-style="italic">b</tspan></text></svg>'
+        explain: 例：「O を原点とし、→OA = →a、→OB = →b となる点 A(a₁, a₂)、B(b₁, b₂) をとり、→a と →b のなす角を θ とする。O、A、B が 1 つの直線の上にないとき、△OAB で余弦定理（G-024）から AB² = OA² + OB² − 2 × OA × OB × cos θ = |→a|² + |→b|² − 2→a・→b である。一方、2 点間の距離の式（G-026）から AB² = (b₁ − a₁)² + (b₂ − a₂)² = (a₁² + a₂²) + (b₁² + b₂²) − 2(a₁b₁ + a₂b₂) = |→a|² + |→b|² − 2(a₁b₁ + a₂b₂) である。2 つの式をくらべて、→a・→b = a₁b₁ + a₂b₂ である。O、A、B が 1 つの直線の上にあるとき（θ = 0° か 180°）は、→b = k→a と表せて、両辺がどちらも k(a₁² + a₂²) になる。」と書ければよい。① A、B と θ を決める、② AB² を 2 通りに表して展開する、③ 約束した事実（内積の定め方、余弦定理、2 点間の距離）で結ぶ、の 3 つがそろっているかを見る。θ = 0°、180° のときは三角形ができないので、分けて確かめているかも見る。具体的なベクトルで計算しただけで終わっていたら、例ではすべての場合を示せないことを話す。
+        hints:
+          - △OAB で、AB² を余弦定理で表しましょう。
+          - AB² を、2 点間の距離の式でも表しましょう。
+          - 2 つの式をくらべましょう。O、A、B が 1 つの直線の上にあるときも考えましょう。
+        paths:
+          - ["AB² = |→a|² + |→b|² − 2→a・→b（余弦定理）", "AB² = |→a|² + |→b|² − 2(a₁b₁ + a₂b₂)（距離の式）", "くらべて →a・→b = a₁b₁ + a₂b₂", "1 つの直線の上のときは →b = k→a で確かめる"]
+      - part: わけ
+        text: A(→a)、B(→b) を結ぶ線分 AB を m:n に内分する点 P の位置ベクトルが →p = (n→a + m→b)/(m + n) になるわけを、筋道を立てて書きましょう。
+        explain: 例：「P は線分 AB の上にあり AP:PB = m:n なので、AP は AB の m/(m + n) 倍で、→AP と →AB は同じ向きである。よって →AP = (m/(m + n))→AB（実数倍の意味）。→AP = →p − →a、→AB = →b − →a なので、→p − →a = (m/(m + n))(→b − →a)。→p = →a + (m/(m + n))(→b − →a) = ((m + n)→a − m→a + m→b)/(m + n) = (n→a + m→b)/(m + n) である。」と書ければよい。① AP:PB = m:n から →AP を →AB の実数倍で表す、② 位置ベクトルの差に直して式を変形する（通分してまとめる）、③ 約束した事実（実数倍の意味、→AB = →b − →a）で結ぶ、の 3 つを見る。成分で書くと、G-026 の内分点の座標の式と同じになることにも触れる。中点（m = n）で確かめただけなら、例ではすべての m:n を示せないことを話す。
+        hints:
+          - AP は AB の何倍でしょう。→AP と →AB の向きはどうでしょう。
+          - →AP と →AB を、位置ベクトル →p、→a、→b で表しましょう。
+          - →p について解いて、通分しましょう。
+        paths:
+          - ["→AP = (m/(m + n))→AB", "→p − →a = (m/(m + n))(→b − →a)", "→p = (n→a + m→b)/(m + n)"]
+      - part: わけ
+        text: →OA = →a = (a₁, a₂)、→OB = →b = (b₁, b₂) のとき、△OAB の面積 S が (1/2)|a₁b₂ − a₂b₁| になるわけを、筋道を立てて書きましょう。
+        explain: 例：「→a と →b のなす角を θ とすると、三角形の面積の式（G-024）から S = (1/2)|→a||→b|sin θ である。0° < θ < 180° なので sin θ は正で、sin θ = √(1 − cos²θ)。よって S = (1/2)√(|→a|²|→b|² − |→a|²|→b|²cos²θ) = (1/2)√(|→a|²|→b|² − (→a・→b)²)。成分で計算すると、|→a|²|→b|² − (→a・→b)² = (a₁² + a₂²)(b₁² + b₂²) − (a₁b₁ + a₂b₂)² = a₁²b₂² + a₂²b₁² − 2a₁b₂a₂b₁ = (a₁b₂ − a₂b₁)²。よって S = (1/2)√((a₁b₂ − a₂b₁)²) = (1/2)|a₁b₂ − a₂b₁| である。」と書ければよい。① θ を決め、面積を sin θ で表す、② cos θ を内積で表し、成分で展開して 2 乗の形にまとめる、③ 約束した事実（三角形の面積の式、sin²θ + cos²θ = 1、内積の成分の式）で結ぶ、の 3 つを見る。√ の中の 2 乗をはずすと、もとの数が負のこともあるので絶対値がつくことに触れる。G-026 の 7 日目の、長方形からひく面積の求め方と答えが合うことも確かめさせるとよい。
+        hints:
+          - △OAB の面積を、|→a|、|→b|、sin θ で表しましょう。
+          - sin θ = √(1 − cos²θ) と、cos θ = →a・→b/(|→a||→b|) を使いましょう。
+          - √ の中を成分で展開すると、(a₁b₂ − a₂b₁)² にまとまります。
+        paths:
+          - ["S = (1/2)|→a||→b|sin θ", "= (1/2)√(|→a|²|→b|² − (→a・→b)²)", "成分で √ の中は (a₁b₂ − a₂b₁)²", "S = (1/2)|a₁b₂ − a₂b₁|"]
+    extra:
+      - part: 今日
+        text: →a = (3, −4)、→b = (2, 1) の内積はいくつですか。
+        answer: 2
+        check: "3 * 2 + (-4) * 1"
+        hints:
+          - →a・→b = a₁b₁ + a₂b₂ です。
+          - 3 × 2 と (−4) × 1 を求めましょう。
+          - 2 つを足しましょう。
+        paths:
+          - ["6 − 4 = 2"]
+      - part: 今日
+        text: O(0, 0)、A(3, 1)、B(1, 4) を頂点とする △OAB の面積はいくつですか。
+        answer: 11/2
+        accept: [5.5]
+        check: "Fraction(abs(3 * 4 - 1 * 1), 2)"
+        hints:
+          - →OA = (3, 1)、→OB = (1, 4) です。
+          - S = (1/2)|a₁b₂ − a₂b₁| を使いましょう。
+          - 3 × 4 − 1 × 1 を計算しましょう。
+        paths:
+          - ["S = (1/2)|12 − 1| = 11/2"]
+      - part: 今日
+        text: →a = (2, k) と →b = (k − 3, 4) が垂直になるとき、k はいくつですか。
+        answer: 1
+        check: "[k for k in range(-20, 21) if 2 * (k - 3) + k * 4 == 0][0]"
+        hints:
+          - 垂直の条件は →a・→b = 0 です。
+          - 2(k − 3) + 4k = 0 です。
+          - k の 1 次方程式を解きましょう。
+        paths:
+          - ["2k − 6 + 4k = 0", "6k = 6", "k = 1"]
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 点 (2, −1) と直線 3x − 4y + 15 = 0 の距離はいくつですか。
+        answer: 5
+        check: "Fraction(abs(3 * 2 - 4 * (-1) + 15), [r for r in range(1, 50) if r * r == 9 + 16][0])"
+        hints:
+          - d = |ax₁ + by₁ + c|/√(a² + b²) です（G-026）。
+          - 分子は |6 + 4 + 15| です。
+          - 分母は √(9 + 16) です。
+        paths:
+          - ["d = 25/5 = 5"]
+      - part: 思い出す
+        text: △ABC で、b = 5、c = 6、A = 150° のとき、面積はいくつですか。
+        answer: 15/2
+        accept: [7.5]
+        check: "Fraction(1, 2) * 5 * 6 * Fraction(1, 2)"
+        hints:
+          - S = (1/2)bc sin A です（G-024）。
+          - sin 150° = sin 30° です。
+          - (1/2) × 5 × 6 × (1/2) を計算しましょう。
+        paths:
+          - ["S = (1/2) × 5 × 6 × (1/2) = 15/2"]
+      - part: 今日
+        text: 直線 2x − 3y + 1 = 0 に垂直なベクトルはどれですか。
+        choices: ["(2, −3)", "(3, 2)", "(2, 3)", "(−3, 1)"]
+        answer: (2, −3)
+        check: "[k for k, (p, q) in {'(2, −3)': (2, -3), '(3, 2)': (3, 2), '(2, 3)': (2, 3), '(−3, 1)': (-3, 1)}.items() if p * 3 + q * 2 == 0][0]"
+        hints:
+          - 直線の傾きは 2/3 なので、(3, 2) は直線に平行なベクトルです。
+          - 直線に垂直なベクトルは、(3, 2) との内積が 0 になります。
+          - それぞれのベクトルと (3, 2) の内積を計算しましょう。
+        paths:
+          - ["直線の方向ベクトルは (3, 2)", "(2, −3)・(3, 2) = 6 − 6 = 0", "(2, −3) は垂直"]
+        note: 直線 ax + by + c = 0 には (a, b) が垂直になる（法線ベクトル）。(3, 2) は平行なほう。
+      - part: 今日
+        text: 3 点 A(1, 1)、B(5, 2)、C(2, 5) があります。cos ∠BAC の値はいくつですか。
+        answer: 8/17
+        check: "Fraction(4 * 1 + 1 * 4, 4 * 4 + 1 * 1)"
+        hints:
+          - →AB と →AC の成分を求めましょう。
+          - →AB・→AC と、|→AB|、|→AC| を求めましょう。
+          - cos ∠BAC = →AB・→AC/(|→AB||→AC|) です。
+        paths:
+          - ["→AB = (4, 1)、→AC = (1, 4)", "→AB・→AC = 8", "|→AB| = |→AC| = √17", "cos ∠BAC = 8/17"]
+          - ["AB² = 17、AC² = 17、BC² = 9 + 9 = 18", "余弦定理で cos ∠BAC = (17 + 17 − 18)/(2 × 17) = 8/17"]
+      - part: 挑戦
+        text: △ABC で、AB = 5、AC = 3、∠BAC = 120° です。辺 BC の中点を M とするとき、AM の長さはどれですか。
+        choices: ["(√19)/2", "(√19)/4", "√19", "7/2"]
+        answer: (√19)/2
+        check: "[k for k, v in {'(√19)/2': math.sqrt(19) / 2, '(√19)/4': math.sqrt(19) / 4, '√19': math.sqrt(19), '7/2': 3.5}.items() if math.isclose(v, math.sqrt((25 + 2 * 5 * 3 * math.cos(math.radians(120)) + 9) / 4))][0]"
+        hints:
+          - →AM = (→AB + →AC)/2 です。
+          - "|→AM|² を展開して、→AB・→AC を使いましょう。"
+          - →AB・→AC = |→AB||→AC|cos 120° です。
+        paths:
+          - ["→AB・→AC = 5 × 3 × (−1/2) = −15/2", "|→AM|² = (25 + 2 × (−15/2) + 9)/4 = 19/4", "AM = (√19)/2"]
+        note: BC = 7 なので、7/2 は BC の半分（M までの長さ BM）。中線の長さは別に求める。
+    extra:
+      - part: 今日
+        text: 点 A(1, 2) を通り、ベクトル →n = (3, −1) に垂直な直線の式はどれですか。
+        choices: [3x − y − 1 = 0, x + 3y − 7 = 0, 3x − y + 1 = 0, x − 3y + 5 = 0]
+        answer: 3x − y − 1 = 0
+        check: "[k for k, (p, q, r) in {'3x − y − 1 = 0': (3, -1, -1), 'x + 3y − 7 = 0': (1, 3, -7), '3x − y + 1 = 0': (3, -1, 1), 'x − 3y + 5 = 0': (1, -3, 5)}.items() if p * 1 + q * 2 + r == 0 and p * (-1) - q * 3 == 0][0]"
+        hints:
+          - 直線の上の点を P(x, y) とすると、→AP と →n は垂直です。
+          - →n・→AP = 0 を成分で書きましょう。
+          - 3(x − 1) − (y − 2) = 0 を整理しましょう。
+        paths:
+          - ["→AP = (x − 1, y − 2)", "3(x − 1) − (y − 2) = 0", "3x − y − 1 = 0"]
+        note: x + 3y − 7 = 0 は A を通り →n に平行な直線。
+      - part: 今日
+        text: 2 直線 x − 3y = 0 と 2x − y = 0 のなす角はどれですか（鋭角で答えましょう）。
+        choices: [45°, 30°, 60°, 135°]
+        answer: 45°
+        check: "[k for k, v in {'45°': 45, '30°': 30, '60°': 60, '135°': 135}.items() if v <= 90 and math.isclose(math.cos(math.radians(v)), abs(1 * 2 + (-3) * (-1)) / (math.hypot(1, -3) * math.hypot(2, -1)))][0]"
+        hints:
+          - それぞれの直線に垂直なベクトル (1, −3) と (2, −1) を考えましょう。
+          - 2 つの垂直なベクトルのなす角は、2 直線のなす角と同じか、足して 180° になります。
+          - 内積から cos を求めましょう。
+        paths:
+          - ["(1, −3)・(2, −1) = 2 + 3 = 5", "大きさは √10 と √5", "cos θ = 5/√50 = 1/√2", "θ = 45°"]
+      - part: 挑戦
+        text: "|→a| = 1、|→b| = 2 で、→a と →b のなす角が 60° です。→a + t→b と →a が垂直になるとき、t はいくつですか。"
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([t for t in range(-10, 11) if 1 + t * (1 * 2 * Fraction(1, 2)) == 0][0])"
+        hints:
+          - (→a + t→b)・→a = 0 です。
+          - 展開すると |→a|² + t→a・→b = 0 です。
+          - →a・→b = 1 × 2 × cos 60° です。
+        paths:
+          - ["→a・→b = 1", "1 + t × 1 = 0", "t = −1"]
+  - day: 6
+    items:
+      - part: 今日
+        text: →a = (1, −2)、→b = (2, 1) のとき、3→a − 2→b の成分はどれですか。
+        choices: ["(−1, −8)", "(7, −4)", "(−1, −4)", "(1, −8)"]
+        answer: (−1, −8)
+        check: "[k for k, p in {'(−1, −8)': (-1, -8), '(7, −4)': (7, -4), '(−1, −4)': (-1, -4), '(1, −8)': (1, -8)}.items() if p == (3 * 1 - 2 * 2, 3 * (-2) - 2 * 1)][0]"
+        hints:
+          - 3→a と 2→b の成分を先に求めましょう。
+          - x 成分どうし、y 成分どうしでひきましょう。
+          - 負の数の計算に気をつけましょう。
+        paths:
+          - ["3→a = (3, −6)、2→b = (4, 2)", "3→a − 2→b = (−1, −8)"]
+      - part: 今日
+        text: →a = (−8, 15) の大きさはいくつですか。
+        answer: 17
+        check: "[d for d in range(1, 100) if d * d == 64 + 225][0]"
+        hints:
+          - "|→a| = √(a₁² + a₂²) です。"
+          - 64 + 225 を計算しましょう。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["|→a|² = 289", "|→a| = 17"]
+      - part: 今日
+        text: →a = (k, 4) と →b = (3, −6) が平行になるとき、k はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-30, 31) if k * (-6) - 4 * 3 == 0][0])"
+        hints:
+          - 平行の条件は a₁b₂ − a₂b₁ = 0 です。
+          - k × (−6) − 4 × 3 = 0 です。
+          - k の 1 次方程式を解きましょう。
+        paths:
+          - ["−6k − 12 = 0", "k = −2"]
+      - part: 今日
+        text: △OAB で、→OA = →a、→OB = →b とします。辺 AB を 2:1 に内分する点 P について、→OP を →a、→b で表したものはどれですか。
+        choices: [(1/3)→a + (2/3)→b, (2/3)→a + (1/3)→b, (1/2)→a + (1/2)→b, 2→a + →b]
+        answer: (1/3)→a + (2/3)→b
+        check: "[k for k, (s, t) in {'(1/3)→a + (2/3)→b': (Fraction(1, 3), Fraction(2, 3)), '(2/3)→a + (1/3)→b': (Fraction(2, 3), Fraction(1, 3)), '(1/2)→a + (1/2)→b': (Fraction(1, 2), Fraction(1, 2)), '2→a + →b': (2, 1)}.items() if (s * 3, t * 3) == (3 + Fraction(2, 3) * (0 - 3), 0 + Fraction(2, 3) * (3 - 0))][0]"
+        hints:
+          - 内分する点の位置ベクトルは (n→a + m→b)/(m + n) です。
+          - m = 2、n = 1 です。
+          - P は B に近いので、→b の係数のほうが大きくなります。
+        paths:
+          - ["→OP = (→a + 2→b)/3", "(1/3)→a + (2/3)→b"]
+      - part: 今日
+        text: "|→a| = √2、|→b| = 3 で、なす角が 135° のとき、→a・→b はいくつですか。"
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-20, 21) if math.isclose(math.sqrt(2) * 3 * math.cos(math.radians(135)), k)][0])"
+        hints:
+          - →a・→b = |→a||→b|cos θ です。
+          - cos 135° = −(√2)/2 です。
+          - √2 × (√2)/2 = 1 です。
+        paths:
+          - ["→a・→b = √2 × 3 × (−(√2)/2) = −3"]
+      - part: 今日
+        text: →a = (1, 7)、→b = (−3, 4) のなす角はどれですか。
+        choices: [45°, 60°, 30°, 135°]
+        answer: 45°
+        check: "[k for k, v in {'45°': 45, '60°': 60, '30°': 30, '135°': 135}.items() if math.isclose(math.cos(math.radians(v)), (1 * (-3) + 7 * 4) / (math.hypot(1, 7) * math.hypot(-3, 4)))][0]"
+        hints:
+          - 内積を成分で計算しましょう。
+          - "|→a| と |→b| を求めましょう。"
+          - cos θ = →a・→b/(|→a||→b|) です。
+        paths:
+          - ["→a・→b = −3 + 28 = 25", "|→a| = √50 = 5√2、|→b| = 5", "cos θ = 25/(25√2) = 1/√2", "θ = 45°"]
+      - part: 今日
+        text: O(0, 0)、A(5, 2)、B(1, 4) を頂点とする △OAB の面積はいくつですか。
+        answer: 9
+        check: "Fraction(abs(5 * 4 - 2 * 1), 2)"
+        hints:
+          - →OA = (5, 2)、→OB = (1, 4) です。
+          - S = (1/2)|a₁b₂ − a₂b₁| を使いましょう。
+          - 5 × 4 − 2 × 1 を計算しましょう。
+        paths:
+          - ["S = (1/2)|20 − 2| = 9"]
+    extra:
+      - part: 今日
+        text: →a = (2, 3) と →b = (k, −4) が垂直になるとき、k はいくつですか。
+        answer: 6
+        check: "[k for k in range(-30, 31) if 2 * k + 3 * (-4) == 0][0]"
+        hints:
+          - 垂直の条件は →a・→b = 0 です。
+          - 2k + 3 × (−4) = 0 です。
+          - k の 1 次方程式を解きましょう。
+        paths:
+          - ["2k − 12 = 0", "k = 6"]
+      - part: 今日
+        text: "|→a| = 2、|→b| = 3、→a・→b = 1 のとき、|→a + →b| はどれですか。"
+        choices: ["√15", "√13", "5", "√11"]
+        answer: √15
+        check: "[k for k, v in {'√15': math.sqrt(15), '√13': math.sqrt(13), '5': 5, '√11': math.sqrt(11)}.items() if math.isclose(v, math.sqrt(4 + 2 * 1 + 9))][0]"
+        hints:
+          - "|→a + →b|² を展開しましょう。"
+          - "|→a|² + 2→a・→b + |→b|² です。"
+          - 最後に √ をとりましょう。
+        paths:
+          - ["|→a + →b|² = 4 + 2 + 9 = 15", "|→a + →b| = √15"]
+      - part: 今日
+        text: A(→a)、B(→b) を結ぶ線分 AB の中点 M の位置ベクトルはどれですか。
+        choices: [(1/2)→a + (1/2)→b, →a + →b, (1/2)→b − (1/2)→a, 2→a + 2→b]
+        answer: (1/2)→a + (1/2)→b
+        check: "[k for k, (s, t) in {'(1/2)→a + (1/2)→b': (Fraction(1, 2), Fraction(1, 2)), '→a + →b': (1, 1), '(1/2)→b − (1/2)→a': (Fraction(-1, 2), Fraction(1, 2)), '2→a + 2→b': (2, 2)}.items() if (s * 2 + t * 6, s * 4 + t * 0) == (Fraction(2 + 6, 2), Fraction(4 + 0, 2))][0]"
+        hints:
+          - 中点は、線分を 1:1 に内分する点です。
+          - (n→a + m→b)/(m + n) で m = n = 1 です。
+          - 座標の平均と同じ形になります。
+        paths:
+          - ["→OM = (→a + →b)/2"]
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [A-012]
+    text: △OAB で、→OA = →a、→OB = →b とします。辺 OA を 1:2 に内分する点を C、辺 OB の中点を D とし、線分 AD と線分 BC の交点を P とします。→OP = s→a + t→b と表すとき、t はいくつですか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><polygon points="34.5,142 205.5,142 77.2,28" stroke="none" fill="#f3c969" fill-opacity=".35"/><line x1="34.5" y1="142" x2="205.5" y2="142" stroke="currentColor" fill="none" stroke-width="2"/><line x1="34.5" y1="142" x2="77.2" y2="28" stroke="currentColor" fill="none" stroke-width="2"/><line x1="205.5" y1="142" x2="55.9" y2="85" stroke="currentColor" fill="none" stroke-width="2"/><line x1="77.2" y1="28" x2="91.5" y2="142" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="91.5" cy="142" r="3" fill="currentColor"/><circle cx="55.9" cy="85" r="3" fill="currentColor"/><circle cx="85.8" cy="96.4" r="3" fill="currentColor"/><text x="23.5" y="153.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">O</text><text x="217.9" y="150.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><text x="74.9" y="19.7" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><text x="91.4" y="159.5" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">C</text><text x="44.6" y="83" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">D</text><text x="95.8" y="90.4" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P</text></svg>'
+    answer: 2/5
+    check: "[u / 2 for u in [Fraction(k, 100) for k in range(0, 101)] for v in [Fraction(k, 100) for k in range(0, 101)] if 1 - u == v / 3 and u / 2 == 1 - v][0]"
+    hints:
+      - P は AD の上にあるので、→OP = (1 − u)→OA + u→OD と表せます。
+      - P は BC の上にもあるので、→OP = (1 − v)→OB + v→OC とも表せます。
+      - →a と →b は平行でなく →0 でもないので、係数を比べられます。u と v の連立方程式を解きましょう（A-012）。
+    paths:
+      - ["→OP = (1 − u)→a + (u/2)→b", "→OP = (v/3)→a + (1 − v)→b", "1 − u = v/3、u/2 = 1 − v", "u = 4/5、v = 3/5", "→OP = (1/5)→a + (2/5)→b で t = 2/5"]
+      - ["O(0、0)、A(1、0)、B(0、1) とおく", "直線 AD は y = (1 − x)/2、直線 BC は y = 1 − 3x", "交点は (1/5、2/5)", "係数は座標と同じで t = 2/5"]
+    note: 交点の位置ベクトルを 2 通りに表して係数を比べる。係数を比べてよいのは、→a と →b が平行でなく →0 でもない（どちらか一方の実数倍で他方を表せない）から、と言えるかを確かめる。2 本目は、比が変わらない座標をとる見方。
+  - part: 離
+    kinds: [道筋]
+    text: →a = (3, 1)、→b = (1, 2) とします。実数 t がいろいろな値をとるとき、|→a + t→b| のいちばん小さい値はどれですか。
+    choices: ["√5", "5", "√10", "1"]
+    answer: √5
+    check: "[k for k, v in {'√5': math.sqrt(5), '5': 5, '√10': math.sqrt(10), '1': 1}.items() if math.isclose(v, min(math.hypot(3 + j / 100, 1 + 2 * j / 100) for j in range(-500, 501)))][0]"
+    hints:
+      - "|→a + t→b|² を t の式で表しましょう。"
+      - 平方完成しましょう（A-017）。
+      - 図で考えると、→a + t→b の終わりの点は直線の上を動きます。原点にいちばん近いのはどこでしょう。
+    paths:
+      - ["|→a + t→b|² = |→a|² + 2t→a・→b + t²|→b|² = 10 + 10t + 5t²", "= 5(t + 1)² + 5", "t = −1 のとき いちばん小さく √5"]
+      - ["終わりの点 (3 + t、1 + 2t) は、(3、1) を通り方向ベクトル (1、2) の直線の上", "その直線は 2x − y − 5 = 0", "原点との距離は 5/√5 = √5"]
+    note: 2 次式の最小（平方完成）と、点と直線の距離（G-026）の 2 つの道筋がある。いちばん小さくなるとき、→a + t→b = (2, −1) は →b と垂直になる（内積 0）ことにも気づかせたい。
+  - part: 離
+    kinds: [読み取り]
+    text: 川は東へ毎秒 3 m の速さで流れていて、川はばは 60 m です。静かな水の上なら毎秒 5 m で進むボートで、こちらの岸の地点から、真北にある向かい岸の地点へまっすぐ進みます。ボートは流れに流されないように、少し上流に向けて進みます。向かい岸に着くまで何秒かかりますか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="140" x2="230" y2="140" stroke="currentColor" fill="none" stroke-width="2"/><line x1="10" y1="40" x2="230" y2="40" stroke="currentColor" fill="none" stroke-width="2"/><text x="14" y="156" font-size="11" text-anchor="start">こちらの岸</text><text x="14" y="32" font-size="11" text-anchor="start">向かい岸</text><line x1="150" y1="92" x2="200" y2="92" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M210 92 L200 96.5 L200 87.5 Z" fill="currentColor"/><text x="180" y="108" font-size="10" text-anchor="middle">流れ 毎秒 3 m</text><line x1="110" y1="140" x2="110" y2="40" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><text x="114" y="92" font-size="11" text-anchor="start">60 m</text><circle cx="110" cy="140" r="3.5" fill="currentColor"/><circle cx="110" cy="40" r="3.5" fill="currentColor"/><text x="228" y="20" font-size="12" text-anchor="end">北</text><line x1="214" y1="30" x2="214" y2="18" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M214 8 L218.5 18 L209.5 18 Z" fill="currentColor"/></svg>'
+    answer: 15
+    check: "Fraction(60, [v for v in range(1, 10) if v * v + 3 * 3 == 5 * 5][0])"
+    hints:
+      - 岸から見たボートの速度は、（静かな水に対するボートの速度）＋（川の流れの速度）です。
+      - 岸から見て真北に進むので、足したベクトルの東西の成分が 0 になります。
+      - 静かな水に対する速度の、北向きの成分を求めましょう。大きさは 5 です。
+    paths:
+      - ["東を x、北を y とする", "流れは (3、0)、ボートの水に対する速度は (−3、v)", "大きさが 5 なので 9 + v² = 25 で v = 4", "岸から見た速度は (0、4)", "60 ÷ 4 = 15 秒"]
+    note: 速度をベクトルとして足す見方（P-001 の運動の表し方につながる）。毎秒 5 m のまま 60 ÷ 5 = 12 秒としやすい。ボートは北から上流の側へ、cos の値が 4/5 の角だけ向ける。

@@ -1,0 +1,839 @@
+# G-025 三角関数と加法定理
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は G-024 に合わせる（負の数は「−」U+2212、√ と π と角は選ぶ問題）。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜5 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# 地図に plan がないので、既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 一般角（動径、正と負の向き、360° をこえる角）、弧度法（180° = π）、おうぎ形の弧 l = rθ と面積 S = (1/2)r²θ
+#   2 日目 単位円で三角関数を定める（値、象限と符号、相互関係、θ + 2nπ、−θ、θ + π、π/2 − θ）
+#   3 日目 グラフ（周期 2π/b、振幅、平行に動かす）と方程式（0 ≦ θ < 2π の解、sin θ の 2 次方程式）
+#   4 日目 加法定理（sin、cos、tan）、2 直線のなす角　5 日目 2 倍角・半角の公式、三角関数の合成、最大値と方程式
+#   6 日目 わけ（cos(α − β) を単位円と 2 点間の距離で、sin(α + β) を cos(α − β) から、合成。どれも ③）
+#   7 日目 G-024・G-026・G-010 と混ぜる（sin 75° を使う正弦定理、点を原点のまわりに回す、直線を回す、弧の長さ）　8 日目 確認
+# 前提は G-024（三角比と正弦・余弦定理）、G-026（座標と直線・円）、G-010（円とおうぎ形）。前提のたどりに A-017（2 次方程式）、
+#   A-016（平方根）、G-015（回転しても長さは変わらない）がある。G-024 で半円の上の点の「横の位置と高さ」で定めた三角比は、
+#   ここで座標（G-026）の単位円の x 座標と y 座標に置きかえ、どの角でも同じ形で定めた。
+#   不等式（A-013）は前提にないので、三角関数の不等式は扱わない（0 ≦ θ < 2π は範囲を読むだけ）。2 次関数（A-020）も前提にないので、
+#   sin θ の 2 次式の最大・最小は扱わず、最大・最小は合成した sin の値が −1 から 1 までであることだけで求める。
+#   微分（D-005）、複素数の極形式（A-034）、行列（M-002）は後ろの単元なので使わない（回転は加法定理で計算する）。
+#   和と積の公式、3 倍角の公式は日の問題では扱わず、3 倍角は腕だめしで自分で導く形にした。
+# 答え：π を含む角は「□π の □」を打つ問題か、選ぶ問題にした。√ を含む値と、θ の値の組は選ぶ問題。
+#   check は、値を選ぶ問題は選択肢の値と math.sin などで計算した値が近い（math.isclose）ものを、θ を求める問題は 0 ≦ θ < 2π を
+#   π/12 ごとに調べて条件を満たす角の集まり（π/12 の何倍かの集まり）と選択肢の集まりをくらべる。式を選ぶ問題は、
+#   いくつかの θ で元の式と値が等しいもの（グラフの問題は、グラフの読み取れる点を通るもの）を選び出す。
+# 「√3/2」は画面で 3/2 だけが上下に重なるので「(√3)/2」と書いた（G-024 と同じ）。π/6 などはそのまま書いた（重ならない）。
+# 図は svg（D-040）。単位円は原点と軸と目もり 1、−1 を描き、点の座標の値は書かない。グラフは 120 点の折れ線で、
+#   横軸の目もりは π/2、π/4、π/3 ごと。式を答える問題では、グラフに式を書かない。回した点を求める問題では、回した点を描かない。
+# 三角関数と加法定理は、導関数（D-005）、波と振動（P-007、P-021）、交流、フーリエ級数、回転と行列（M-002）、
+#   複素数の極形式（A-034）、極座標（G-047）、天体の座標の変換（P-210）の入口になる（D-026）。
+
+id: G-025
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 角を回る向きと量で表し、弧の長さで測る方法を調べましょう。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="100" x2="210" y2="100" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="110" cy="100" r="70" stroke="currentColor" fill="none" stroke-width="1.2" stroke-opacity=".5"/><line x1="110" y1="100" x2="147.8" y2="41.1" stroke="currentColor" fill="none" stroke-width="2.5"/><path d="M180 100 A70 70 0 0 0 147.8 41.1" stroke="currentColor" fill="none" stroke-width="4"/><path d="M128 100 A18 18 0 0 0 119.7 84.9" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="136.3" y="89.6" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">1</text><circle cx="110" cy="100" r="3.5" fill="currentColor"/><text x="104" y="114" font-size="12" text-anchor="end">O</text><text x="210" y="114" font-size="11" text-anchor="end">始線</text><text x="145" y="115" font-size="13" text-anchor="middle"><tspan font-style="italic">r</tspan></text><text x="118.9" y="70.5" font-size="13" text-anchor="middle"><tspan font-style="italic">r</tspan></text><text x="182.8" y="64.2" font-size="13" text-anchor="middle"><tspan font-style="italic">r</tspan></text><text x="151.8" y="35.1" font-size="13" text-anchor="start">P</text></svg>'
+        explain: 点 O のまわりを回る半直線 OP を動径、はじめの位置を始線といいます。時計の針と反対の向きに回る角を正の角、同じ向きに回る角を負の角とし、1 回転（360°）をこえる角も考えます。例えば 390° の動径は 30° の動径と同じ位置にあり、−60° の動径は 300° の動径と同じ位置にあります。θ と θ + 360° × n（n は整数）の動径は同じ位置です。このように考えた角を一般角といいます。次に、半径 r の円で、長さが r の弧に対する中心角を 1 ラジアン（弧度）とし、角を「弧の長さ ÷ 半径」で測ります。これを弧度法といいます。半円の弧の長さは πr（G-010）なので、180° = π ラジアンです。30° = π/6、45° = π/4、60° = π/3、90° = π/2、120° = 2π/3、135° = 3π/4、150° = 5π/6、360° = 2π です。弧度法では、ふつう単位のラジアンを省きます。半径 r、中心角 θ のおうぎ形は円の θ/(2π) にあたるので（G-010）、弧の長さは l = rθ、面積は S = (1/2)r²θ = (1/2)lr です。例：半径 6、中心角 π/3 のおうぎ形の弧の長さは 6 × π/3 = 2π、面積は (1/2) × 36 × π/3 = 6π です。
+      - part: 思い出す
+        text: 半径 6 cm、中心角 120° のおうぎ形の弧の長さは □π cm です。□ に入る数はいくつですか。
+        answer: 4
+        check: "Fraction(2 * 6 * 120, 360)"
+        hints:
+          - 円周は 2π × 半径です（G-010）。
+          - 中心角 120° のおうぎ形は、円の何分の 1 でしょう。
+          - 円周に、その分数をかけましょう。
+        paths:
+          - ["円周は 12π", "120° は円の 1/3", "12π × 1/3 = 4π"]
+      - part: 思い出す
+        text: cos 135° の値はどれですか。
+        choices: ["−(√2)/2", "(√2)/2", "−1/2", "−√2"]
+        answer: −(√2)/2
+        check: "[k for k, v in {'−(√2)/2': -math.sqrt(2) / 2, '(√2)/2': math.sqrt(2) / 2, '−1/2': -0.5, '−√2': -math.sqrt(2)}.items() if math.isclose(v, math.cos(math.radians(135)))][0]"
+        hints:
+          - cos(180° − θ) = −cos θ です（G-024）。
+          - 135° = 180° − 45° です。
+          - 鈍角の cos は負の数です。
+        paths:
+          - ["cos 135° = −cos 45° = −(√2)/2"]
+      - part: 今日
+        text: 135° を弧度法で表すと □π です。□ に入る数はいくつですか。
+        answer: 3/4
+        check: "Fraction(135, 180)"
+        hints:
+          - 180° = π です。
+          - 135° は 180° の何倍でしょう。
+          - 約分しましょう。
+        paths:
+          - ["135 ÷ 180 = 3/4", "135° = 3π/4"]
+      - part: 今日
+        text: 半径 4、中心角 3π/4 のおうぎ形の面積は □π です。□ に入る数はいくつですか。
+        answer: 6
+        check: "Fraction(1, 2) * 4 * 4 * Fraction(3, 4)"
+        hints:
+          - おうぎ形の面積は S = (1/2)r²θ です。
+          - r = 4、θ = 3π/4 を入れましょう。
+          - (1/2) × 16 × 3/4 を計算しましょう。
+        paths:
+          - ["S = (1/2) × 16 × 3π/4 = 6π"]
+      - part: 挑戦
+        text: 弧の長さが 10、面積が 25 のおうぎ形の中心角は何ラジアンですか。
+        answer: 2
+        check: "(lambda r: Fraction(10) / r)(Fraction(2 * 25, 10))"
+        hints:
+          - S = (1/2)lr を使うと、半径がわかります。
+          - l = rθ から θ を求めましょう。
+          - 弧度法の角は、π を含まない数になることもあります。
+        paths:
+          - ["25 = (1/2) × 10 × r で r = 5", "10 = 5θ", "θ = 2"]
+        note: 中心角は約 115°。π を含まない角にとまどう子がいるので、「弧の長さ ÷ 半径」が角だと確かめさせる。
+    extra:
+      - part: 今日
+        text: 5π/6 は何度ですか。
+        choices: [150°, 120°, 210°, 300°]
+        answer: 150°
+        check: "[k for k, v in {'150°': 150, '120°': 120, '210°': 210, '300°': 300}.items() if v == Fraction(5, 6) * 180][0]"
+        hints:
+          - π = 180° です。
+          - π/6 は何度でしょう。
+          - その 5 倍です。
+        paths:
+          - ["π/6 = 30°", "5π/6 = 150°"]
+      - part: 今日
+        text: −300° の動径と同じ位置にある、0° 以上 360° 未満の角はどれですか。
+        choices: [60°, 300°, −60°, 120°]
+        answer: 60°
+        check: "[k for k, v in {'60°': 60, '300°': 300, '−60°': -60, '120°': 120}.items() if 0 <= v < 360 and (v - (-300)) % 360 == 0][0]"
+        hints:
+          - 360° を足しても、動径の位置は変わりません。
+          - −300° + 360° を計算しましょう。
+          - 負の角は、時計の針と同じ向きに回る角です。
+        paths:
+          - ["−300° + 360° = 60°"]
+        note: 300° は、向きを逆にして考えたもの。
+      - part: 挑戦
+        text: 周の長さが 12 で、中心角が 1 ラジアンのおうぎ形の面積はいくつですか。
+        answer: 8
+        check: "(lambda r: Fraction(1, 2) * r * r * 1)(Fraction(12, 3))"
+        hints:
+          - おうぎ形の周は、半径 2 つと弧です。
+          - 中心角が 1 ラジアンなので、弧の長さは半径と等しくなります。
+          - 半径がわかったら、S = (1/2)r²θ を使いましょう。
+        paths:
+          - ["2r + r = 12 で r = 4", "S = (1/2) × 16 × 1 = 8"]
+  - day: 2
+    items:
+      - part: 見本
+        text: 単位円（原点を中心とする半径 1 の円）を使って、一般角の三角関数を定めましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><line x1="26" y1="100" x2="216" y2="100" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="190" x2="120" y2="6" stroke="currentColor" fill="none" stroke-width="2"/><path d="M216 100 L208 96 L208 104 Z" fill="currentColor"/><path d="M120 6 L116 14 L124 14 Z" fill="currentColor"/><text x="216" y="115" font-size="14" text-anchor="end" font-style="italic">x</text><text x="127" y="14" font-size="14" text-anchor="start" font-style="italic">y</text><text x="116" y="113" font-size="11" text-anchor="end">O</text><text x="195" y="113" font-size="10" text-anchor="start">1</text><text x="45" y="113" font-size="10" text-anchor="end">−1</text><text x="116" y="25" font-size="10" text-anchor="end">1</text><text x="116" y="184" font-size="10" text-anchor="end">−1</text><circle cx="120" cy="100" r="72" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="100" x2="57.6" y2="136" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="57.6" y1="136" x2="57.6" y2="100" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="57.6" y1="136" x2="120" y2="136" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="57.6" cy="136" r="3.5" fill="currentColor"/><text x="51.6" y="150" font-size="13" text-anchor="end">P</text><path d="M136 100 A16 16 0 1 0 106.1 108" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M106.1 108 L98.7 103.1 L105.6 99.1 Z" fill="currentColor"/><text x="112.8" y="77" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">θ</text></svg>'
+        explain: 座標平面で x 軸の正の部分を始線とし、角 θ の動径と単位円の交点を P(x, y) とします。このとき sin θ = y、cos θ = x、tan θ = y/x と定めます（x = 0 となる θ = π/2 + nπ では tan θ は定めません）。0 ≦ θ ≦ π では、G-024 で半円を使って定めた三角比と同じです。これらを θ の関数とみて、三角関数といいます。tan θ は直線 OP の傾きです。例：θ = 7π/6 のとき、P は第 3 象限にあって P(−(√3)/2, −1/2) なので、sin(7π/6) = −1/2、cos(7π/6) = −(√3)/2、tan(7π/6) = (√3)/3 です。sin θ の符号は P の y 座標で、cos θ の符号は x 座標で決まります。第 1 象限ではどちらも正、第 2 象限では sin だけ正、第 3 象限ではどちらも負（tan は正）、第 4 象限では cos だけ正です。P は単位円の上にあるので、sin²θ + cos²θ = 1、tan θ = sin θ/cos θ はどの θ でも成り立ちます。また、動径の位置から sin(θ + 2nπ) = sin θ、cos(θ + 2nπ) = cos θ（n は整数）、x 軸について対称な点から sin(−θ) = −sin θ、cos(−θ) = cos θ、原点について対称な点から sin(θ + π) = −sin θ、cos(θ + π) = −cos θ、tan(θ + π) = tan θ、直線 y = x について対称な点から sin(π/2 − θ) = cos θ、cos(π/2 − θ) = sin θ が成り立ちます。
+      - part: 思い出す
+        text: 300° を弧度法で表すと □π です。□ に入る数はいくつですか。
+        answer: 5/3
+        check: "Fraction(300, 180)"
+        hints:
+          - 180° = π です。
+          - 300° は 180° の何倍でしょう。
+          - 約分しましょう。
+        paths:
+          - ["300 ÷ 180 = 5/3", "300° = 5π/3"]
+      - part: 思い出す
+        text: 0° ≦ θ ≦ 180° で、cos θ = −1/3 のとき、sin θ の値はどれですか。
+        choices: ["(2√2)/3", "−(2√2)/3", "2/3", "(√2)/3"]
+        answer: (2√2)/3
+        check: "[k for k, v in {'(2√2)/3': 2 * math.sqrt(2) / 3, '−(2√2)/3': -2 * math.sqrt(2) / 3, '2/3': 2 / 3, '(√2)/3': math.sqrt(2) / 3}.items() if math.isclose(v, math.sin(math.acos(-1 / 3)))][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう（G-024）。
+          - sin²θ = 1 − 1/9 です。
+          - 0° ≦ θ ≦ 180° では、sin θ は 0 以上です。
+        paths:
+          - ["sin²θ = 8/9", "sin θ = (2√2)/3"]
+      - part: 今日
+        text: sin(4π/3) の値はどれですか。
+        choices: ["−(√3)/2", "(√3)/2", "−1/2", "1/2"]
+        answer: −(√3)/2
+        check: "[k for k, v in {'−(√3)/2': -math.sqrt(3) / 2, '(√3)/2': math.sqrt(3) / 2, '−1/2': -0.5, '1/2': 0.5}.items() if math.isclose(v, math.sin(4 * math.pi / 3))][0]"
+        hints:
+          - 4π/3 = π + π/3 です。
+          - 動径は第 3 象限にあります。
+          - sin(θ + π) = −sin θ を使いましょう。
+        paths:
+          - ["sin(4π/3) = sin(π/3 + π) = −sin(π/3)", "−(√3)/2"]
+        note: 第 3 象限で sin が負になることを、単位円の点の y 座標で確かめさせる。
+      - part: 今日
+        text: θ の動径が第 3 象限にあり、cos θ = −3/5 です。sin θ の値はいくつですか。
+        answer: −4/5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-[Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 + Fraction(-3, 5) ** 2 == 1][0])"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - sin²θ = 1 − 9/25 です。
+          - 第 3 象限では、sin θ は負の数です。
+        paths:
+          - ["sin²θ = 16/25", "第 3 象限なので sin θ = −4/5"]
+      - part: 挑戦
+        text: sin(θ + π) + cos(θ + π/2) + sin(−θ) を簡単にした式はどれですか。
+        choices: [−3sin θ, −sin θ, sin θ, 3sin θ]
+        answer: −3sin θ
+        check: "[k for k, a in {'−3sin θ': -3, '−sin θ': -1, 'sin θ': 1, '3sin θ': 3}.items() if all(math.isclose(math.sin(t + math.pi) + math.cos(t + math.pi / 2) + math.sin(-t), a * math.sin(t), abs_tol=1e-9) for t in (0.3, 1.1, 2.5, 4.0))][0]"
+        hints:
+          - sin(θ + π) は、原点について対称な点を考えましょう。
+          - cos(θ + π/2) は cos(π/2 − (−θ)) と見ると、sin(−θ) になります。
+          - sin(−θ) = −sin θ です。
+        paths:
+          - ["sin(θ + π) = −sin θ", "cos(θ + π/2) = sin(−θ) = −sin θ", "sin(−θ) = −sin θ", "合わせて −3sin θ"]
+        note: cos(θ + π/2) を sin θ としやすい。θ = π/6 などを入れて確かめる習慣をつける。
+    extra:
+      - part: 今日
+        text: cos(11π/6) の値はどれですか。
+        choices: ["(√3)/2", "−(√3)/2", "1/2", "−1/2"]
+        answer: (√3)/2
+        check: "[k for k, v in {'(√3)/2': math.sqrt(3) / 2, '−(√3)/2': -math.sqrt(3) / 2, '1/2': 0.5, '−1/2': -0.5}.items() if math.isclose(v, math.cos(11 * math.pi / 6))][0]"
+        hints:
+          - 11π/6 = 2π − π/6 です。
+          - 動径は第 4 象限にあります。
+          - cos(−θ) = cos θ を使いましょう。
+        paths:
+          - ["cos(11π/6) = cos(−π/6) = cos(π/6) = (√3)/2"]
+      - part: 今日
+        text: θ の動径が第 4 象限にあり、sin θ = −5/13 です。cos θ の値はいくつですか。
+        answer: 12/13
+        check: "[Fraction(k, 13) for k in range(0, 14) if Fraction(k, 13) ** 2 + Fraction(-5, 13) ** 2 == 1][0]"
+        hints:
+          - sin²θ + cos²θ = 1 を使いましょう。
+          - cos²θ = 1 − 25/169 です。
+          - 第 4 象限では、cos θ は正の数です。
+        paths:
+          - ["cos²θ = 144/169", "第 4 象限なので cos θ = 12/13"]
+      - part: 挑戦
+        text: θ の動径が第 3 象限にあり、tan θ = 3 です。sin θ の値はどれですか。
+        choices: ["−(3√10)/10", "(3√10)/10", "−(√10)/10", "−3/10"]
+        answer: −(3√10)/10
+        check: "[k for k, v in {'−(3√10)/10': -3 * math.sqrt(10) / 10, '(3√10)/10': 3 * math.sqrt(10) / 10, '−(√10)/10': -math.sqrt(10) / 10, '−3/10': -0.3}.items() if math.isclose(v, -3 / math.sqrt(10))][0]"
+        hints:
+          - 1 + tan²θ = 1/cos²θ で、cos θ を求めましょう。
+          - 第 3 象限では cos θ も sin θ も負の数です。
+          - sin θ = tan θ × cos θ です。
+        paths:
+          - ["1/cos²θ = 1 + 9 = 10", "cos θ = −1/√10", "sin θ = 3 × (−1/√10) = −(3√10)/10"]
+        note: −(√10)/10 は cos θ。
+
+  - day: 3
+    items:
+      - part: 見本
+        text: y = sin θ のグラフをかき、三角関数のグラフの形と、方程式の解き方を調べましょう。
+        svg: '<svg viewBox="0 0 260 144" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="26" y1="118" x2="26" y2="26"/><line x1="74" y1="118" x2="74" y2="26"/><line x1="122" y1="118" x2="122" y2="26"/><line x1="170" y1="118" x2="170" y2="26"/><line x1="218" y1="118" x2="218" y2="26"/><line x1="26" y1="118" x2="218" y2="118"/><line x1="26" y1="72" x2="218" y2="72"/><line x1="26" y1="26" x2="218" y2="26"/></g><line x1="20" y1="72" x2="232" y2="72" stroke="currentColor" fill="none" stroke-width="2"/><line x1="26" y1="124" x2="26" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M232 72 L224 68 L224 76 Z" fill="currentColor"/><path d="M26 14 L22 22 L30 22 Z" fill="currentColor"/><text x="232" y="87" font-size="14" text-anchor="end" font-style="italic">θ</text><text x="33" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="22" y="85" font-size="11" text-anchor="end">O</text><text x="74" y="86" font-size="10" text-anchor="middle">π/2</text><text x="122" y="86" font-size="10" text-anchor="middle">π</text><text x="170" y="86" font-size="10" text-anchor="middle">3π/2</text><text x="218" y="86" font-size="10" text-anchor="middle">2π</text><text x="22" y="121.5" font-size="10" text-anchor="end">−1</text><text x="22" y="29.5" font-size="10" text-anchor="end">1</text><polyline points="26,72 27.6,69.6 29.2,67.2 30.8,64.8 32.4,62.4 34,60.1 35.6,57.8 37.2,55.5 38.8,53.3 40.4,51.1 42,49 43.6,46.9 45.2,45 46.8,43.1 48.4,41.2 50,39.5 51.6,37.8 53.2,36.3 54.8,34.8 56.4,33.4 58,32.2 59.6,31 61.2,30 62.8,29.1 64.4,28.3 66,27.6 67.6,27 69.2,26.6 70.8,26.3 72.4,26.1 74,26 75.6,26.1 77.2,26.3 78.8,26.6 80.4,27 82,27.6 83.6,28.3 85.2,29.1 86.8,30 88.4,31 90,32.2 91.6,33.4 93.2,34.8 94.8,36.3 96.4,37.8 98,39.5 99.6,41.2 101.2,43.1 102.8,45 104.4,46.9 106,49 107.6,51.1 109.2,53.3 110.8,55.5 112.4,57.8 114,60.1 115.6,62.4 117.2,64.8 118.8,67.2 120.4,69.6 122,72 123.6,74.4 125.2,76.8 126.8,79.2 128.4,81.6 130,83.9 131.6,86.2 133.2,88.5 134.8,90.7 136.4,92.9 138,95 139.6,97.1 141.2,99 142.8,100.9 144.4,102.8 146,104.5 147.6,106.2 149.2,107.7 150.8,109.2 152.4,110.6 154,111.8 155.6,113 157.2,114 158.8,114.9 160.4,115.7 162,116.4 163.6,117 165.2,117.4 166.8,117.7 168.4,117.9 170,118 171.6,117.9 173.2,117.7 174.8,117.4 176.4,117 178,116.4 179.6,115.7 181.2,114.9 182.8,114 184.4,113 186,111.8 187.6,110.6 189.2,109.2 190.8,107.7 192.4,106.2 194,104.5 195.6,102.8 197.2,100.9 198.8,99 200.4,97.1 202,95 203.6,92.9 205.2,90.7 206.8,88.5 208.4,86.2 210,83.9 211.6,81.6 213.2,79.2 214.8,76.8 216.4,74.4 218,72" stroke="currentColor" fill="none" stroke-width="2.5"/></svg>'
+        explain: θ を横軸、y = sin θ を縦軸にとってグラフをかくと、図のような波の形になります。sin(θ + 2π) = sin θ なので、同じ形が 2π ごとにくり返されます。このような関数を周期関数といい、2π を周期といいます。y の値は −1 から 1 までです。cos θ = sin(θ + π/2) なので、y = cos θ のグラフは、y = sin θ のグラフを θ 軸の向きに −π/2 だけ平行に動かしたものです。tan θ は周期が π で、θ が π/2 + nπ に近づくと、限りなく大きく（または小さく）なります。y = 2sin θ のグラフは y = sin θ のグラフを縦に 2 倍にのばしたもので、y の値は −2 から 2 までです。y = sin 2θ は、θ が π 進むと 2θ が 2π 進むので、周期は π です。一般に y = a sin bθ（b は正の数）の周期は 2π/b です。y = sin(θ − π/3) のグラフは、y = sin θ のグラフを θ 軸の向きに π/3 だけ平行に動かしたものです。方程式 sin θ = 1/2（0 ≦ θ < 2π）は、単位円で y 座標が 1/2 の点を見つけて、θ = π/6、5π/6 と解きます。これは、グラフと直線 y = 1/2 の交点の θ と同じです。
+      - part: 思い出す
+        text: cos(5π/3) の値はいくつですか。
+        answer: 1/2
+        check: "[Fraction(k, 2) for k in range(-2, 3) if math.isclose(math.cos(5 * math.pi / 3), k / 2)][0]"
+        hints:
+          - 5π/3 = 2π − π/3 です。
+          - 動径は第 4 象限にあります。
+          - cos(−θ) = cos θ を使いましょう。
+        paths:
+          - ["cos(5π/3) = cos(−π/3) = cos(π/3) = 1/2"]
+      - part: 思い出す
+        text: 半径 3、中心角 5π/6 のおうぎ形の弧の長さは □π です。□ に入る数はいくつですか。
+        answer: 5/2
+        check: "3 * Fraction(5, 6)"
+        hints:
+          - 弧の長さは l = rθ です。
+          - r = 3、θ = 5π/6 を入れましょう。
+          - 約分しましょう。
+        paths:
+          - ["l = 3 × 5π/6 = 5π/2"]
+      - part: 今日
+        text: 図は、y = a sin bθ（a、b は正の数）のグラフです。式はどれですか。
+        svg: '<svg viewBox="0 0 324 148" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="26" y1="122" x2="26" y2="26"/><line x1="58" y1="122" x2="58" y2="26"/><line x1="90" y1="122" x2="90" y2="26"/><line x1="122" y1="122" x2="122" y2="26"/><line x1="154" y1="122" x2="154" y2="26"/><line x1="186" y1="122" x2="186" y2="26"/><line x1="218" y1="122" x2="218" y2="26"/><line x1="250" y1="122" x2="250" y2="26"/><line x1="282" y1="122" x2="282" y2="26"/><line x1="26" y1="122" x2="282" y2="122"/><line x1="26" y1="106" x2="282" y2="106"/><line x1="26" y1="90" x2="282" y2="90"/><line x1="26" y1="74" x2="282" y2="74"/><line x1="26" y1="58" x2="282" y2="58"/><line x1="26" y1="42" x2="282" y2="42"/><line x1="26" y1="26" x2="282" y2="26"/></g><line x1="20" y1="74" x2="296" y2="74" stroke="currentColor" fill="none" stroke-width="2"/><line x1="26" y1="128" x2="26" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M296 74 L288 70 L288 78 Z" fill="currentColor"/><path d="M26 14 L22 22 L30 22 Z" fill="currentColor"/><text x="296" y="89" font-size="14" text-anchor="end" font-style="italic">θ</text><text x="33" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="22" y="87" font-size="11" text-anchor="end">O</text><text x="58" y="88" font-size="10" text-anchor="middle">π/4</text><text x="90" y="88" font-size="10" text-anchor="middle">π/2</text><text x="122" y="88" font-size="10" text-anchor="middle">3π/4</text><text x="154" y="88" font-size="10" text-anchor="middle">π</text><text x="186" y="88" font-size="10" text-anchor="middle">5π/4</text><text x="218" y="88" font-size="10" text-anchor="middle">3π/2</text><text x="250" y="88" font-size="10" text-anchor="middle">7π/4</text><text x="282" y="88" font-size="10" text-anchor="middle">2π</text><text x="22" y="125.5" font-size="10" text-anchor="end">−3</text><text x="22" y="109.5" font-size="10" text-anchor="end">−2</text><text x="22" y="93.5" font-size="10" text-anchor="end">−1</text><text x="22" y="61.5" font-size="10" text-anchor="end">1</text><text x="22" y="45.5" font-size="10" text-anchor="end">2</text><text x="22" y="29.5" font-size="10" text-anchor="end">3</text><polyline points="26,74 28.1,69 30.3,64 32.4,59.2 34.5,54.5 36.7,50 38.8,45.8 40.9,41.9 43.1,38.3 45.2,35.2 47.3,32.4 49.5,30.1 51.6,28.3 53.7,27 55.9,26.3 58,26 60.1,26.3 62.3,27 64.4,28.3 66.5,30.1 68.7,32.4 70.8,35.2 72.9,38.3 75.1,41.9 77.2,45.8 79.3,50 81.5,54.5 83.6,59.2 85.7,64 87.9,69 90,74 92.1,79 94.3,84 96.4,88.8 98.5,93.5 100.7,98 102.8,102.2 104.9,106.1 107.1,109.7 109.2,112.8 111.3,115.6 113.5,117.9 115.6,119.7 117.7,121 119.9,121.7 122,122 124.1,121.7 126.3,121 128.4,119.7 130.5,117.9 132.7,115.6 134.8,112.8 136.9,109.7 139.1,106.1 141.2,102.2 143.3,98 145.5,93.5 147.6,88.8 149.7,84 151.9,79 154,74 156.1,69 158.3,64 160.4,59.2 162.5,54.5 164.7,50 166.8,45.8 168.9,41.9 171.1,38.3 173.2,35.2 175.3,32.4 177.5,30.1 179.6,28.3 181.7,27 183.9,26.3 186,26 188.1,26.3 190.3,27 192.4,28.3 194.5,30.1 196.7,32.4 198.8,35.2 200.9,38.3 203.1,41.9 205.2,45.8 207.3,50 209.5,54.5 211.6,59.2 213.7,64 215.9,69 218,74 220.1,79 222.3,84 224.4,88.8 226.5,93.5 228.7,98 230.8,102.2 232.9,106.1 235.1,109.7 237.2,112.8 239.3,115.6 241.5,117.9 243.6,119.7 245.7,121 247.9,121.7 250,122 252.1,121.7 254.3,121 256.4,119.7 258.5,117.9 260.7,115.6 262.8,112.8 264.9,109.7 267.1,106.1 269.2,102.2 271.3,98 273.5,93.5 275.6,88.8 277.7,84 279.9,79 282,74" stroke="currentColor" fill="none" stroke-width="2.5"/></svg>'
+        choices: [y = 3sin 2θ, y = 3sin(θ/2), y = 2sin 3θ, y = (1/3)sin 2θ]
+        answer: y = 3sin 2θ
+        check: "[k for k, g in {'y = 3sin 2θ': lambda t: 3 * math.sin(2 * t), 'y = 3sin(θ/2)': lambda t: 3 * math.sin(t / 2), 'y = 2sin 3θ': lambda t: 2 * math.sin(3 * t), 'y = (1/3)sin 2θ': lambda t: math.sin(2 * t) / 3}.items() if all(math.isclose(g(t), y, abs_tol=1e-9) for t, y in ((math.pi / 4, 3), (math.pi / 2, 0), (3 * math.pi / 4, -3), (5 * math.pi / 4, 3)))][0]"
+        hints:
+          - グラフの y のいちばん大きい値を読みましょう。
+          - 同じ形が、θ がいくつ進むごとにくり返されているでしょう（周期）。
+          - y = a sin bθ の周期は 2π/b です。
+        paths:
+          - ["いちばん大きい値は 3 なので a = 3", "周期は π", "2π/b = π で b = 2", "y = 3sin 2θ"]
+        note: 周期 π を見て b = 1/2 としやすい。周期が短いほど b は大きい。
+      - part: 今日
+        text: 0 ≦ θ < 2π で、cos θ = −(√2)/2 を解きましょう。解はどれですか。
+        choices: [θ = 3π/4、5π/4, θ = π/4、7π/4, θ = 3π/4、7π/4, θ = 5π/4、7π/4]
+        answer: θ = 3π/4、5π/4
+        check: "[k for k, v in {'θ = 3π/4、5π/4': {9, 15}, 'θ = π/4、7π/4': {3, 21}, 'θ = 3π/4、7π/4': {9, 21}, 'θ = 5π/4、7π/4': {15, 21}}.items() if v == set(j for j in range(0, 24) if math.isclose(math.cos(j * math.pi / 12), -math.sqrt(2) / 2))][0]"
+        hints:
+          - 単位円で、x 座標が −(√2)/2 になる点をさがしましょう。
+          - その点は、第 2 象限と第 3 象限に 1 つずつあります。
+          - cos(π/4) = (√2)/2 です。
+        paths:
+          - ["x 座標が −(√2)/2 の点は第 2 象限と第 3 象限", "θ = π − π/4 = 3π/4", "θ = π + π/4 = 5π/4"]
+      - part: 挑戦
+        text: 0 ≦ θ < 2π で、方程式 2sin²θ − sin θ − 1 = 0 の解はいくつありますか。
+        answer: 3
+        check: "len(set(j for j in range(0, 24) if math.isclose(2 * math.sin(j * math.pi / 12) ** 2 - math.sin(j * math.pi / 12) - 1, 0, abs_tol=1e-9)))"
+        hints:
+          - sin θ = t とおくと、t の 2 次方程式になります（A-017）。
+          - 因数分解しましょう。t は −1 以上 1 以下です。
+          - それぞれの t について、0 ≦ θ < 2π の θ がいくつあるかを数えましょう。
+        paths:
+          - ["(2sin θ + 1)(sin θ − 1) = 0", "sin θ = 1 のとき θ = π/2", "sin θ = −1/2 のとき θ = 7π/6、11π/6", "解は 3 個"]
+        note: t の解の個数 2 を答えにしやすい。sin θ = 1 となる θ は 1 つだけ。
+    extra:
+      - part: 今日
+        text: 0 ≦ θ < 2π で、tan θ = −√3 を解きましょう。解はどれですか。
+        choices: [θ = 2π/3、5π/3, θ = π/3、4π/3, θ = 2π/3、4π/3, θ = 5π/6、11π/6]
+        answer: θ = 2π/3、5π/3
+        check: "[k for k, v in {'θ = 2π/3、5π/3': {8, 20}, 'θ = π/3、4π/3': {4, 16}, 'θ = 2π/3、4π/3': {8, 16}, 'θ = 5π/6、11π/6': {10, 22}}.items() if v == set(j for j in range(0, 24) if j % 12 != 6 and math.isclose(math.tan(j * math.pi / 12), -math.sqrt(3)))][0]"
+        hints:
+          - tan θ は直線 OP の傾きです。
+          - 傾きが −√3 の、原点を通る直線をかきましょう。
+          - その直線と単位円の交点は 2 つあります。tan の周期は π です。
+        paths:
+          - ["tan(π/3) = √3", "傾き −√3 の直線は第 2 象限と第 4 象限を通る", "θ = 2π/3、5π/3"]
+      - part: 今日
+        text: 図は、y = sin θ のグラフを θ 軸の向きに平行に動かしたグラフです。式はどれですか。
+        svg: '<svg viewBox="0 0 320 144" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="26" y1="118" x2="26" y2="26"/><line x1="47" y1="118" x2="47" y2="26"/><line x1="68" y1="118" x2="68" y2="26"/><line x1="89" y1="118" x2="89" y2="26"/><line x1="110" y1="118" x2="110" y2="26"/><line x1="131" y1="118" x2="131" y2="26"/><line x1="152" y1="118" x2="152" y2="26"/><line x1="173" y1="118" x2="173" y2="26"/><line x1="194" y1="118" x2="194" y2="26"/><line x1="215" y1="118" x2="215" y2="26"/><line x1="236" y1="118" x2="236" y2="26"/><line x1="257" y1="118" x2="257" y2="26"/><line x1="278" y1="118" x2="278" y2="26"/><line x1="26" y1="118" x2="278" y2="118"/><line x1="26" y1="72" x2="278" y2="72"/><line x1="26" y1="26" x2="278" y2="26"/></g><line x1="20" y1="72" x2="292" y2="72" stroke="currentColor" fill="none" stroke-width="2"/><line x1="26" y1="124" x2="26" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M292 72 L284 68 L284 76 Z" fill="currentColor"/><path d="M26 14 L22 22 L30 22 Z" fill="currentColor"/><text x="292" y="87" font-size="14" text-anchor="end" font-style="italic">θ</text><text x="33" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="22" y="85" font-size="11" text-anchor="end">O</text><text x="68" y="86" font-size="10" text-anchor="middle">π/3</text><text x="110" y="86" font-size="10" text-anchor="middle">2π/3</text><text x="152" y="86" font-size="10" text-anchor="middle">π</text><text x="194" y="86" font-size="10" text-anchor="middle">4π/3</text><text x="236" y="86" font-size="10" text-anchor="middle">5π/3</text><text x="278" y="86" font-size="10" text-anchor="middle">2π</text><text x="22" y="121.5" font-size="10" text-anchor="end">−1</text><text x="22" y="29.5" font-size="10" text-anchor="end">1</text><polyline points="26,111.8 28.1,110.6 30.2,109.2 32.3,107.7 34.4,106.2 36.5,104.5 38.6,102.8 40.7,100.9 42.8,99 44.9,97.1 47,95 49.1,92.9 51.2,90.7 53.3,88.5 55.4,86.2 57.5,83.9 59.6,81.6 61.7,79.2 63.8,76.8 65.9,74.4 68,72 70.1,69.6 72.2,67.2 74.3,64.8 76.4,62.4 78.5,60.1 80.6,57.8 82.7,55.5 84.8,53.3 86.9,51.1 89,49 91.1,46.9 93.2,45 95.3,43.1 97.4,41.2 99.5,39.5 101.6,37.8 103.7,36.3 105.8,34.8 107.9,33.4 110,32.2 112.1,31 114.2,30 116.3,29.1 118.4,28.3 120.5,27.6 122.6,27 124.7,26.6 126.8,26.3 128.9,26.1 131,26 133.1,26.1 135.2,26.3 137.3,26.6 139.4,27 141.5,27.6 143.6,28.3 145.7,29.1 147.8,30 149.9,31 152,32.2 154.1,33.4 156.2,34.8 158.3,36.3 160.4,37.8 162.5,39.5 164.6,41.2 166.7,43.1 168.8,45 170.9,46.9 173,49 175.1,51.1 177.2,53.3 179.3,55.5 181.4,57.8 183.5,60.1 185.6,62.4 187.7,64.8 189.8,67.2 191.9,69.6 194,72 196.1,74.4 198.2,76.8 200.3,79.2 202.4,81.6 204.5,83.9 206.6,86.2 208.7,88.5 210.8,90.7 212.9,92.9 215,95 217.1,97.1 219.2,99 221.3,100.9 223.4,102.8 225.5,104.5 227.6,106.2 229.7,107.7 231.8,109.2 233.9,110.6 236,111.8 238.1,113 240.2,114 242.3,114.9 244.4,115.7 246.5,116.4 248.6,117 250.7,117.4 252.8,117.7 254.9,117.9 257,118 259.1,117.9 261.2,117.7 263.3,117.4 265.4,117 267.5,116.4 269.6,115.7 271.7,114.9 273.8,114 275.9,113 278,111.8" stroke="currentColor" fill="none" stroke-width="2.5"/></svg>'
+        choices: [y = sin(θ − π/3), y = sin(θ + π/3), y = sin θ − π/3, y = cos(θ − π/3)]
+        answer: y = sin(θ − π/3)
+        check: "[k for k, g in {'y = sin(θ − π/3)': lambda t: math.sin(t - math.pi / 3), 'y = sin(θ + π/3)': lambda t: math.sin(t + math.pi / 3), 'y = sin θ − π/3': lambda t: math.sin(t) - math.pi / 3, 'y = cos(θ − π/3)': lambda t: math.cos(t - math.pi / 3)}.items() if all(math.isclose(g(t), y, abs_tol=1e-9) for t, y in ((math.pi / 3, 0), (5 * math.pi / 6, 1), (4 * math.pi / 3, 0), (11 * math.pi / 6, -1)))][0]"
+        hints:
+          - グラフが θ 軸と交わって上がっていく点の θ を読みましょう。
+          - y = sin θ では、その点は θ = 0 です。
+          - 右へ π/3 動かすと、式の θ は θ − π/3 に変わります。
+        paths:
+          - ["上がっていく点は θ = π/3", "y = sin θ を右へ π/3 動かしたもの", "y = sin(θ − π/3)"]
+        note: 右へ動かすのに θ + π/3 としやすい。y = sin(θ − π/3) では θ = π/3 のとき かっこの中が 0 になることで確かめさせる。
+      - part: 挑戦
+        text: 0 ≦ θ < 2π で、方程式 2cos²θ + 3sin θ − 3 = 0 のすべての解の和は □π です。□ に入る数はいくつですか。
+        answer: 3/2
+        check: "sum(Fraction(j, 12) for j in range(0, 24) if math.isclose(2 * math.cos(j * math.pi / 12) ** 2 + 3 * math.sin(j * math.pi / 12) - 3, 0, abs_tol=1e-9))"
+        hints:
+          - cos²θ = 1 − sin²θ を使って、sin θ だけの式にしましょう。
+          - sin θ = t とおくと、2t² − 3t + 1 = 0 です。
+          - それぞれの t について θ を求めて、足しましょう。
+        paths:
+          - ["2(1 − sin²θ) + 3sin θ − 3 = 0", "2sin²θ − 3sin θ + 1 = 0", "sin θ = 1 で θ = π/2、sin θ = 1/2 で θ = π/6、5π/6", "和は 3π/2"]
+  - day: 4
+    items:
+      - part: 見本
+        text: 2 つの角の和や差の三角関数を、もとの角の三角関数で表しましょう。
+        explain: 次の加法定理が成り立ちます（わけは 6 日目）。sin(α + β) = sin α cos β + cos α sin β、sin(α − β) = sin α cos β − cos α sin β、cos(α + β) = cos α cos β − sin α sin β、cos(α − β) = cos α cos β + sin α sin β、tan(α + β) = (tan α + tan β)/(1 − tan α tan β)、tan(α − β) = (tan α − tan β)/(1 + tan α tan β)。例：sin 75° = sin(45° + 30°) = sin 45° cos 30° + cos 45° sin 30° = ((√2)/2) × ((√3)/2) + ((√2)/2) × (1/2) = (√6 + √2)/4 です。tan の式は、sin(α + β)/cos(α + β) の分子と分母を cos α cos β でわると得られます。直線 y = mx の傾き m は、直線と x 軸の正の向きのなす角を θ とすると m = tan θ です。2 直線 y = 3x、y = (1/2)x と x 軸の正の向きのなす角を α、β とすると、tan(α − β) = (3 − 1/2)/(1 + 3 × (1/2)) = 1 なので、2 直線のなす角は π/4 です。
+      - part: 思い出す
+        text: 0 ≦ θ < 2π で、sin θ = −1/2 を解きましょう。解はどれですか。
+        choices: [θ = 7π/6、11π/6, θ = π/6、5π/6, θ = 4π/3、5π/3, θ = 5π/6、7π/6]
+        answer: θ = 7π/6、11π/6
+        check: "[k for k, v in {'θ = 7π/6、11π/6': {14, 22}, 'θ = π/6、5π/6': {2, 10}, 'θ = 4π/3、5π/3': {16, 20}, 'θ = 5π/6、7π/6': {10, 14}}.items() if v == set(j for j in range(0, 24) if math.isclose(math.sin(j * math.pi / 12), -0.5))][0]"
+        hints:
+          - 単位円で、y 座標が −1/2 になる点をさがしましょう。
+          - その点は、第 3 象限と第 4 象限に 1 つずつあります。
+          - sin(π/6) = 1/2 です。
+        paths:
+          - ["θ = π + π/6 = 7π/6", "θ = 2π − π/6 = 11π/6"]
+      - part: 思い出す
+        text: tan(4π/3) の値はどれですか。
+        choices: ["√3", "−√3", "(√3)/3", "−(√3)/3"]
+        answer: √3
+        check: "[k for k, v in {'√3': math.sqrt(3), '−√3': -math.sqrt(3), '(√3)/3': math.sqrt(3) / 3, '−(√3)/3': -math.sqrt(3) / 3}.items() if math.isclose(v, math.tan(4 * math.pi / 3))][0]"
+        hints:
+          - 4π/3 = π + π/3 です。
+          - tan(θ + π) = tan θ です。
+          - 第 3 象限では、tan は正の数です。
+        paths:
+          - ["tan(4π/3) = tan(π/3) = √3"]
+      - part: 今日
+        text: cos 15° の値はどれですか。
+        choices: ["(√6 + √2)/4", "(√6 − √2)/4", "(√3 + 1)/2", "(√2)/4"]
+        answer: (√6 + √2)/4
+        check: "[k for k, v in {'(√6 + √2)/4': (math.sqrt(6) + math.sqrt(2)) / 4, '(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '(√3 + 1)/2': (math.sqrt(3) + 1) / 2, '(√2)/4': math.sqrt(2) / 4}.items() if math.isclose(v, math.cos(math.radians(15)))][0]"
+        hints:
+          - 15° = 45° − 30° です。
+          - cos(α − β) = cos α cos β + sin α sin β を使いましょう。
+          - (√2)/2 × (√3)/2 = (√6)/4 です。
+        paths:
+          - ["cos 15° = cos 45° cos 30° + sin 45° sin 30°", "(√6)/4 + (√2)/4 = (√6 + √2)/4"]
+        note: (√6 − √2)/4 は sin 15°（cos の式の符号を取り違えたもの）。
+      - part: 今日
+        text: α、β は鋭角で、sin α = 3/5、cos β = 5/13 です。sin(α + β) の値はいくつですか。
+        answer: 63/65
+        check: "(lambda sa, cb: (lambda ca, sb: sa * cb + ca * sb)([Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 == 1 - sa ** 2][0], [Fraction(k, 13) for k in range(0, 14) if Fraction(k, 13) ** 2 == 1 - cb ** 2][0]))(Fraction(3, 5), Fraction(5, 13))"
+        hints:
+          - まず cos α と sin β を求めましょう。鋭角なので、どちらも正です。
+          - sin(α + β) = sin α cos β + cos α sin β です。
+          - 分母は 65 になります。
+        paths:
+          - ["cos α = 4/5、sin β = 12/13", "(3/5)(5/13) + (4/5)(12/13)", "15/65 + 48/65 = 63/65"]
+      - part: 挑戦
+        text: 2 直線 y = 2x と y = −3x のなす鋭角はどれですか。
+        choices: [π/4, π/3, π/6, 3π/4]
+        answer: π/4
+        check: "[k for k, v in {'π/4': math.pi / 4, 'π/3': math.pi / 3, 'π/6': math.pi / 6, '3π/4': 3 * math.pi / 4}.items() if math.isclose(v, (lambda d: min(d, math.pi - d))(abs(math.atan(2) - math.atan(-3))))][0]"
+        hints:
+          - 2 直線と x 軸の正の向きのなす角を α、β とすると、tan α = 2、tan β = −3 です。
+          - tan(α − β) を加法定理で計算しましょう。
+          - 2 直線のなす角は 2 つあり、足すと π です。鋭角のほうを答えます。
+        paths:
+          - ["tan(α − β) = (2 − (−3))/(1 + 2 × (−3)) = 5/(−5) = −1", "α − β = 3π/4", "なす鋭角は π − 3π/4 = π/4"]
+        note: tan が −1 になったので 3π/4 と答えやすい。鋭角のほうを選ぶ。
+    extra:
+      - part: 今日
+        text: tan 105° の値はどれですか。
+        choices: ["−2 − √3", "2 + √3", "−2 + √3", "2 − √3"]
+        answer: −2 − √3
+        check: "[k for k, v in {'−2 − √3': -2 - math.sqrt(3), '2 + √3': 2 + math.sqrt(3), '−2 + √3': -2 + math.sqrt(3), '2 − √3': 2 - math.sqrt(3)}.items() if math.isclose(v, math.tan(math.radians(105)))][0]"
+        hints:
+          - 105° = 60° + 45° です。
+          - tan(α + β) = (tan α + tan β)/(1 − tan α tan β) を使いましょう。
+          - 分母を有理化しましょう。
+        paths:
+          - ["(√3 + 1)/(1 − √3)", "分子と分母に (1 + √3) をかける", "(4 + 2√3)/(−2) = −2 − √3"]
+      - part: 今日
+        text: α は鈍角で sin α = 4/5、β は鋭角で cos β = 12/13 です。cos(α − β) の値はいくつですか。
+        answer: −16/65
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda ca, sb: ca * Fraction(12, 13) + Fraction(4, 5) * sb)(-[Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 == 1 - Fraction(4, 5) ** 2][0], [Fraction(k, 13) for k in range(0, 14) if Fraction(k, 13) ** 2 == 1 - Fraction(12, 13) ** 2][0]))"
+        hints:
+          - α は鈍角なので、cos α は負の数です。
+          - cos α と sin β を求めましょう。
+          - cos(α − β) = cos α cos β + sin α sin β です。
+        paths:
+          - ["cos α = −3/5、sin β = 5/13", "(−3/5)(12/13) + (4/5)(5/13)", "−36/65 + 20/65 = −16/65"]
+      - part: 挑戦
+        text: α、β は鋭角で、tan α = 2、tan β = 3 です。α + β はどれですか。
+        choices: [3π/4, π/4, π/2, 2π/3]
+        answer: 3π/4
+        check: "[k for k, v in {'3π/4': 3 * math.pi / 4, 'π/4': math.pi / 4, 'π/2': math.pi / 2, '2π/3': 2 * math.pi / 3}.items() if math.isclose(v, math.atan(2) + math.atan(3))][0]"
+        hints:
+          - tan(α + β) を加法定理で計算しましょう。
+          - α と β はどちらも鋭角なので、α + β は 0 から π の間です。
+          - その範囲で、tan がその値になる角をさがしましょう。
+        paths:
+          - ["tan(α + β) = (2 + 3)/(1 − 6) = −1", "0 < α + β < π", "α + β = 3π/4"]
+        note: tan(α + β) = −1 から −π/4 としやすい。α + β の範囲を先に決める。
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 加法定理から、2 倍角の公式と、三角関数の合成を導きましょう。
+        svg: '<svg viewBox="0 0 220 170" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="135" x2="200" y2="135" stroke="currentColor" fill="none" stroke-width="2"/><line x1="50" y1="150" x2="50" y2="15" stroke="currentColor" fill="none" stroke-width="2"/><path d="M200 135 L192 131 L192 139 Z" fill="currentColor"/><path d="M50 15 L46 23 L54 23 Z" fill="currentColor"/><text x="200" y="150" font-size="14" text-anchor="end" font-style="italic">x</text><text x="57" y="23" font-size="14" text-anchor="start" font-style="italic">y</text><text x="46" y="148" font-size="11" text-anchor="end">O</text><path d="M150 135 A100 100 0 0 0 75.9 38.4" stroke="currentColor" fill="none" stroke-width="1.2" stroke-opacity=".5"/><line x1="50" y1="135" x2="100" y2="48.4" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="100" y1="48.4" x2="100" y2="135" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="100" y1="48.4" x2="50" y2="48.4" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="100" cy="48.4" r="3.5" fill="currentColor"/><text x="106" y="44.4" font-size="12" text-anchor="start">(1, √3)</text><text x="100" y="149" font-size="11" text-anchor="middle">1</text><text x="45" y="52.4" font-size="11" text-anchor="end">√3</text><text x="65" y="91.7" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">2</text><path d="M70 135 A20 20 0 0 0 60 117.7" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="77.7" y="123" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">α</text></svg>'
+        explain: 加法定理で β = α とおくと、2 倍角の公式 sin 2α = 2sin α cos α、cos 2α = cos²α − sin²α = 1 − 2sin²α = 2cos²α − 1、tan 2α = 2tan α/(1 − tan²α) が得られます。cos 2α = 1 − 2sin²α を変形すると sin²α = (1 − cos 2α)/2、cos²α = (1 + cos 2α)/2 で、α を α/2 におきかえると sin²(α/2) = (1 − cos α)/2、cos²(α/2) = (1 + cos α)/2（半角の公式）です。また、a sin θ + b cos θ（a、b は 0 でない数）は、r = √(a² + b²) とし、点 (a, b) を表す動径の角を α とすると（cos α = a/r、sin α = b/r）、a sin θ + b cos θ = r(sin θ cos α + cos θ sin α) = r sin(θ + α) と 1 つの sin にまとめられます。これを三角関数の合成といいます（わけは 6 日目）。例：sin θ + √3 cos θ は、図の点 (1, √3) で r = 2、α = π/3 なので 2sin(θ + π/3) です。sin の値は −1 から 1 までなので、最大値は 2、最小値は −2 です。
+      - part: 思い出す
+        text: sin 15° の値はどれですか。
+        choices: ["(√6 − √2)/4", "(√6 + √2)/4", "(√3 − 1)/2", "(√2)/4"]
+        answer: (√6 − √2)/4
+        check: "[k for k, v in {'(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '(√6 + √2)/4': (math.sqrt(6) + math.sqrt(2)) / 4, '(√3 − 1)/2': (math.sqrt(3) - 1) / 2, '(√2)/4': math.sqrt(2) / 4}.items() if math.isclose(v, math.sin(math.radians(15)))][0]"
+        hints:
+          - 15° = 45° − 30° です。
+          - sin(α − β) = sin α cos β − cos α sin β を使いましょう。
+          - (√2)/2 × (√3)/2 = (√6)/4 です。
+        paths:
+          - ["sin 45° cos 30° − cos 45° sin 30°", "(√6)/4 − (√2)/4 = (√6 − √2)/4"]
+      - part: 思い出す
+        text: y = 4sin 3θ の周期は □π です。□ に入る数はいくつですか。
+        answer: 2/3
+        check: "Fraction(2, 3)"
+        hints:
+          - y = a sin bθ の周期は 2π/b です。
+          - b = 3 です。
+          - 振幅の 4 は、周期には関係しません。
+        paths:
+          - ["周期は 2π/3"]
+      - part: 今日
+        text: α は鋭角で、sin α = 1/3 です。cos 2α の値はいくつですか。
+        answer: 7/9
+        check: "1 - 2 * Fraction(1, 3) ** 2"
+        hints:
+          - cos 2α を sin α だけで表す公式を選びましょう。
+          - cos 2α = 1 − 2sin²α です。
+          - sin²α = 1/9 です。
+        paths:
+          - ["cos 2α = 1 − 2 × (1/9) = 7/9"]
+      - part: 今日
+        text: √3 sin θ − cos θ を r sin(θ + α)（r は正の数、α は −π から π までの角）の形にしたものはどれですか。
+        choices: [2sin(θ − π/6), 2sin(θ + π/6), 2sin(θ − π/3), √2 sin(θ − π/6)]
+        answer: 2sin(θ − π/6)
+        check: "[k for k, g in {'2sin(θ − π/6)': lambda t: 2 * math.sin(t - math.pi / 6), '2sin(θ + π/6)': lambda t: 2 * math.sin(t + math.pi / 6), '2sin(θ − π/3)': lambda t: 2 * math.sin(t - math.pi / 3), '√2 sin(θ − π/6)': lambda t: math.sqrt(2) * math.sin(t - math.pi / 6)}.items() if all(math.isclose(g(t), math.sqrt(3) * math.sin(t) - math.cos(t), abs_tol=1e-9) for t in (0.2, 1.3, 2.9, 5.0))][0]"
+        hints:
+          - 点 (√3, −1) を考えましょう。
+          - r は、原点と点 (√3, −1) の距離です。
+          - 点 (√3, −1) を表す動径の角が α です。第 4 象限にあります。
+        paths:
+          - ["r = √(3 + 1) = 2", "cos α = (√3)/2、sin α = −1/2 なので α = −π/6", "2sin(θ − π/6)"]
+        note: sin の係数 √3 を a、cos の係数 −1 を b とする。符号を落として 2sin(θ + π/6) としやすい。
+      - part: 挑戦
+        text: y = 3sin θ + 4cos θ が最大になるときの、sin θ の値はいくつですか。
+        answer: 3/5
+        check: "[Fraction(k, 5) for k in range(-5, 6) if math.isclose(math.sin(math.pi / 2 - math.atan2(4, 3)), k / 5)][0]"
+        hints:
+          - 合成して r sin(θ + α) の形にしましょう。r = 5 で、cos α = 3/5、sin α = 4/5 です。
+          - 最大になるのは θ + α = π/2 のときです。
+          - θ = π/2 − α なので、sin θ = cos α です。
+        paths:
+          - ["3sin θ + 4cos θ = 5sin(θ + α)（cos α = 3/5、sin α = 4/5）", "最大値 5 は θ + α = π/2 のとき", "sin θ = sin(π/2 − α) = cos α = 3/5"]
+        note: 最大値 5 を答えにしやすい。最大になる θ そのものはきれいな角にならないが、sin θ は求められる。
+    extra:
+      - part: 今日
+        text: cos²(π/8) の値はどれですか。
+        choices: ["(2 + √2)/4", "(2 − √2)/4", "(1 + √2)/2", "(√2)/4"]
+        answer: (2 + √2)/4
+        check: "[k for k, v in {'(2 + √2)/4': (2 + math.sqrt(2)) / 4, '(2 − √2)/4': (2 - math.sqrt(2)) / 4, '(1 + √2)/2': (1 + math.sqrt(2)) / 2, '(√2)/4': math.sqrt(2) / 4}.items() if math.isclose(v, math.cos(math.pi / 8) ** 2)][0]"
+        hints:
+          - 半角の公式 cos²(α/2) = (1 + cos α)/2 を使いましょう。
+          - α = π/4 です。
+          - cos(π/4) = (√2)/2 です。
+        paths:
+          - ["cos²(π/8) = (1 + (√2)/2)/2 = (2 + √2)/4"]
+      - part: 今日
+        text: θ は鋭角で、sin θ = 3/5 です。sin 2θ の値はいくつですか。
+        answer: 24/25
+        check: "2 * Fraction(3, 5) * [Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 == 1 - Fraction(3, 5) ** 2][0]"
+        hints:
+          - sin 2θ = 2sin θ cos θ です。
+          - まず cos θ を求めましょう。鋭角なので正です。
+          - 2 × 3/5 × cos θ を計算しましょう。
+        paths:
+          - ["cos θ = 4/5", "sin 2θ = 2 × (3/5) × (4/5) = 24/25"]
+      - part: 挑戦
+        text: 0 ≦ θ < 2π で、sin θ − √3 cos θ = 1 を解きましょう。解はどれですか。
+        choices: [θ = π/2、7π/6, θ = π/6、5π/6, θ = π/2、3π/2, θ = 7π/6、11π/6]
+        answer: θ = π/2、7π/6
+        check: "[k for k, v in {'θ = π/2、7π/6': {6, 14}, 'θ = π/6、5π/6': {2, 10}, 'θ = π/2、3π/2': {6, 18}, 'θ = 7π/6、11π/6': {14, 22}}.items() if v == set(j for j in range(0, 24) if math.isclose(math.sin(j * math.pi / 12) - math.sqrt(3) * math.cos(j * math.pi / 12), 1))][0]"
+        hints:
+          - 左辺を合成しましょう。
+          - sin θ − √3 cos θ = 2sin(θ − π/3) です。
+          - sin(θ − π/3) = 1/2 で、θ − π/3 は −π/3 から 5π/3 の間です。
+        paths:
+          - ["2sin(θ − π/3) = 1", "θ − π/3 = π/6、5π/6", "θ = π/2、7π/6"]
+  - day: 6
+    items:
+      - part: 思い出す
+        text: α は鋭角で、cos α = 1/4 です。cos 2α の値はいくつですか。
+        answer: −7/8
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 * Fraction(1, 4) ** 2 - 1)"
+        hints:
+          - cos 2α を cos α だけで表す公式を選びましょう。
+          - cos 2α = 2cos²α − 1 です。
+          - cos²α = 1/16 です。
+        paths:
+          - ["cos 2α = 2 × (1/16) − 1 = 1/8 − 1 = −7/8"]
+      - part: 思い出す
+        text: cos 105° の値はどれですか。
+        choices: ["(√2 − √6)/4", "(√6 − √2)/4", "−(√6 + √2)/4", "(√2 + √6)/4"]
+        answer: (√2 − √6)/4
+        check: "[k for k, v in {'(√2 − √6)/4': (math.sqrt(2) - math.sqrt(6)) / 4, '(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '−(√6 + √2)/4': -(math.sqrt(6) + math.sqrt(2)) / 4, '(√2 + √6)/4': (math.sqrt(2) + math.sqrt(6)) / 4}.items() if math.isclose(v, math.cos(math.radians(105)))][0]"
+        hints:
+          - 105° = 60° + 45° です。
+          - cos(α + β) = cos α cos β − sin α sin β を使いましょう。
+          - 105° は鈍角なので、cos は負の数です。
+        paths:
+          - ["cos 60° cos 45° − sin 60° sin 45°", "(√2)/4 − (√6)/4 = (√2 − √6)/4"]
+      - part: 今日
+        text: y = √3 sin θ + cos θ の最小値はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-[r for r in range(1, 10) if r * r == 3 + 1][0])"
+        hints:
+          - 合成して r sin(θ + α) の形にしましょう。
+          - r = √(3 + 1) です。
+          - sin の値は −1 から 1 までです。
+        paths:
+          - ["√3 sin θ + cos θ = 2sin(θ + π/6)", "最小値は 2 × (−1) = −2"]
+      - part: わけ
+        text: cos(α − β) = cos α cos β + sin α sin β が成り立つわけを、単位円の上の点 P(cos α, sin α)、Q(cos β, sin β) と、2 点間の距離の式を使って、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><line x1="26" y1="100" x2="216" y2="100" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="190" x2="120" y2="6" stroke="currentColor" fill="none" stroke-width="2"/><path d="M216 100 L208 96 L208 104 Z" fill="currentColor"/><path d="M120 6 L116 14 L124 14 Z" fill="currentColor"/><text x="216" y="115" font-size="14" text-anchor="end" font-style="italic">x</text><text x="127" y="14" font-size="14" text-anchor="start" font-style="italic">y</text><text x="116" y="113" font-size="11" text-anchor="end">O</text><circle cx="120" cy="100" r="72" stroke="currentColor" fill="none" stroke-width="2"/><line x1="120" y1="100" x2="57.6" y2="64" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="120" y1="100" x2="170.9" y2="49.1" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="57.6" y1="64" x2="170.9" y2="49.1" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="192" y1="100" x2="101.4" y2="30.5" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="57.6" cy="64" r="3.5" fill="currentColor"/><text x="45.5" y="61" font-size="13" text-anchor="middle">P</text><circle cx="170.9" cy="49.1" r="3.5" fill="currentColor"/><text x="180.8" y="43.2" font-size="13" text-anchor="middle">Q</text><circle cx="192" cy="100" r="3.5" fill="currentColor"/><text x="186" y="115" font-size="13" text-anchor="middle">A</text><circle cx="101.4" cy="30.5" r="3.5" fill="currentColor"/><text x="89.7" y="20.9" font-size="13" text-anchor="middle">P′</text><path d="M136 100 A16 16 0 0 0 131.3 88.7" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="144.9" y="93.7" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">β</text><path d="M150 100 A30 30 0 0 0 94 85" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="130.6" y="64.4" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">α</text></svg>'
+        explain: 例：「単位円の上に P(cos α, sin α)、Q(cos β, sin β) をとる。2 点間の距離の式（G-026）から、PQ² = (cos α − cos β)² + (sin α − sin β)² = (cos²α + sin²α) + (cos²β + sin²β) − 2(cos α cos β + sin α sin β) = 2 − 2(cos α cos β + sin α sin β) である。次に、P と Q を原点のまわりに −β だけ回すと、Q は A(1, 0) に、P は角 α − β の動径の上の点 P′(cos(α − β), sin(α − β)) に移る。回しても 2 点の距離は変わらない（G-015）ので PQ = AP′ で、AP′² = (cos(α − β) − 1)² + sin²(α − β) = 2 − 2cos(α − β) である。2 つの式を等しいとおくと、cos(α − β) = cos α cos β + sin α sin β である。」と書ければよい。① P、Q、A、P′ を決める、② 距離の 2 乗を展開して sin² + cos² = 1 でまとめる、③ 約束した事実（三角関数の定め方、2 点間の距離、回しても長さは変わらない）で結ぶ、の 3 つがそろっているかを見る。α − β が 0 から π の間なら、△OPQ に余弦定理（G-024）を使って PQ² = 1 + 1 − 2cos(α − β) としてもよい。60° と 30° のような例で確かめただけで終わっていたら、例ではすべての角を示せないことを話す。
+        hints:
+          - PQ² を、2 点間の距離の式で計算しましょう。
+          - Q が点 (1, 0) に重なるように、P と Q を原点のまわりに回すと、P はどこに移るでしょう。
+          - 回しても長さは変わらないので、2 通りに表した PQ² を等しいとおきましょう。
+        paths:
+          - ["PQ² = 2 − 2(cos α cos β + sin α sin β)", "−β 回すと Q は A(1、0)、P は P′(cos(α − β)、sin(α − β))", "AP′² = 2 − 2cos(α − β)", "PQ = AP′ から cos(α − β) = cos α cos β + sin α sin β"]
+      - part: わけ
+        text: cos(α − β) = cos α cos β + sin α sin β を使って、sin(α + β) = sin α cos β + cos α sin β が成り立つわけを、筋道を立てて書きましょう。
+        explain: 例：「どの θ でも sin θ = cos(π/2 − θ) が成り立つ（2 日目）ので、sin(α + β) = cos(π/2 − (α + β)) = cos((π/2 − α) − β) である。cos(α − β) の式の α に π/2 − α を入れると、cos((π/2 − α) − β) = cos(π/2 − α)cos β + sin(π/2 − α)sin β。cos(π/2 − α) = sin α、sin(π/2 − α) = cos α なので、sin(α + β) = sin α cos β + cos α sin β である。」と書ければよい。① sin を cos(π/2 − θ) に言いかえる、② かっこをまとめ直して、約束した式の α に π/2 − α を入れる、③ 約束した事実（π/2 − θ の公式、cos(α − β) の式）で結ぶ、の 3 つを見る。β を −β におきかえると、cos(−β) = cos β、sin(−β) = −sin β から cos(α + β)、sin(α − β) の式も同じように出せることにも触れる。
+        hints:
+          - sin θ = cos(π/2 − θ) を使って、sin(α + β) を cos で表しましょう。
+          - π/2 − (α + β) = (π/2 − α) − β と見ましょう。
+          - cos(α − β) の式の α に π/2 − α を入れ、cos(π/2 − α)、sin(π/2 − α) を書きかえましょう。
+        paths:
+          - ["sin(α + β) = cos((π/2 − α) − β)", "= cos(π/2 − α)cos β + sin(π/2 − α)sin β", "= sin α cos β + cos α sin β"]
+      - part: わけ
+        text: a sin θ + b cos θ（a、b は 0 でない数）が r sin(θ + α)（r = √(a² + b²)、α は点 (a, b) を表す動径の角）と等しくなるわけを、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 220 160" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="125" x2="200" y2="125" stroke="currentColor" fill="none" stroke-width="2"/><line x1="40" y1="140" x2="40" y2="15" stroke="currentColor" fill="none" stroke-width="2"/><path d="M200 125 L192 121 L192 129 Z" fill="currentColor"/><path d="M40 15 L36 23 L44 23 Z" fill="currentColor"/><text x="200" y="140" font-size="14" text-anchor="end" font-style="italic">x</text><text x="47" y="23" font-size="14" text-anchor="start" font-style="italic">y</text><text x="36" y="138" font-size="11" text-anchor="end">O</text><line x1="40" y1="125" x2="160" y2="45" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="160" y1="45" x2="160" y2="125" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="160" y1="45" x2="40" y2="45" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="160" cy="45" r="3.5" fill="currentColor"/><text x="166" y="39" font-size="12" text-anchor="start">(<tspan font-style="italic">a</tspan>, <tspan font-style="italic">b</tspan>)</text><text x="160" y="139" font-size="12" text-anchor="middle"><tspan font-style="italic">a</tspan></text><text x="35" y="49" font-size="12" text-anchor="end"><tspan font-style="italic">b</tspan></text><text x="94" y="79" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">r</tspan></text><path d="M64 125 A24 24 0 0 0 60 111.7" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="74.5" y="118.6" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">α</text></svg>'
+        explain: 例：「r = √(a² + b²) とする。(a/r)² + (b/r)² = (a² + b²)/r² = 1 なので、点 (a/r, b/r) は単位円の上にあり、その動径の角は点 (a, b) と同じ α である。三角関数の定め方から a/r = cos α、b/r = sin α、つまり a = r cos α、b = r sin α。よって a sin θ + b cos θ = r cos α sin θ + r sin α cos θ = r(sin θ cos α + cos θ sin α)。加法定理から sin θ cos α + cos θ sin α = sin(θ + α) なので、a sin θ + b cos θ = r sin(θ + α) である。」と書ければよい。① r と α を決める、② a、b を r と α で表して式を変形する（r でくくる）、③ 約束した事実（三角関数の定め方、加法定理）で結ぶ、の 3 つを見る。sin θ + cos θ = √2 sin(θ + π/4) のような例で確かめただけなら、例ではすべての a、b を示せないことを話す。a、b の符号で α の動径の象限が決まることも確かめる。
+        hints:
+          - r = √(a² + b²) とすると、点 (a/r, b/r) は単位円の上にあります。
+          - a と b を、r と α で表しましょう。
+          - r でくくって、加法定理を使いましょう。
+        paths:
+          - ["点 (a/r、b/r) は単位円の上", "a = r cos α、b = r sin α", "a sin θ + b cos θ = r(sin θ cos α + cos θ sin α)", "= r sin(θ + α)"]
+    extra:
+      - part: 今日
+        text: α、β は鋭角で、sin α = 4/5、sin β = 12/13 です。cos(α + β) の値はいくつですか。
+        answer: −33/65
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda ca, cb: ca * cb - Fraction(4, 5) * Fraction(12, 13))([Fraction(k, 5) for k in range(0, 6) if Fraction(k, 5) ** 2 == 1 - Fraction(4, 5) ** 2][0], [Fraction(k, 13) for k in range(0, 14) if Fraction(k, 13) ** 2 == 1 - Fraction(12, 13) ** 2][0]))"
+        hints:
+          - まず cos α と cos β を求めましょう。
+          - cos(α + β) = cos α cos β − sin α sin β です。
+          - 分母は 65 になります。
+        paths:
+          - ["cos α = 3/5、cos β = 5/13", "15/65 − 48/65 = −33/65"]
+      - part: 今日
+        text: tan α = 1/2 のとき、tan 2α の値はいくつですか。
+        answer: 4/3
+        check: "2 * Fraction(1, 2) / (1 - Fraction(1, 2) ** 2)"
+        hints:
+          - tan 2α = 2tan α/(1 − tan²α) です。
+          - 分子は 2 × 1/2 です。
+          - 分母は 1 − 1/4 です。
+        paths:
+          - ["tan 2α = 1 ÷ (3/4) = 4/3"]
+      - part: 今日
+        text: 2sin θ + 2cos θ を r sin(θ + α)（r は正の数）の形にしたものはどれですか。
+        choices: [2√2 sin(θ + π/4), 2sin(θ + π/4), 4sin(θ + π/4), 2√2 sin(θ − π/4)]
+        answer: 2√2 sin(θ + π/4)
+        check: "[k for k, g in {'2√2 sin(θ + π/4)': lambda t: 2 * math.sqrt(2) * math.sin(t + math.pi / 4), '2sin(θ + π/4)': lambda t: 2 * math.sin(t + math.pi / 4), '4sin(θ + π/4)': lambda t: 4 * math.sin(t + math.pi / 4), '2√2 sin(θ − π/4)': lambda t: 2 * math.sqrt(2) * math.sin(t - math.pi / 4)}.items() if all(math.isclose(g(t), 2 * math.sin(t) + 2 * math.cos(t), abs_tol=1e-9) for t in (0.2, 1.3, 2.9, 5.0))][0]"
+        hints:
+          - 点 (2, 2) を考えましょう。
+          - r は原点と点 (2, 2) の距離です。
+          - 点 (2, 2) を表す動径の角は π/4 です。
+        paths:
+          - ["r = √(4 + 4) = 2√2", "α = π/4", "2√2 sin(θ + π/4)"]
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 3 辺の長さが 3、5、7 の三角形で、いちばん大きい角を弧度法で表したものはどれですか。
+        choices: [2π/3, π/3, 5π/6, 3π/4]
+        answer: 2π/3
+        check: "[k for k, v in {'2π/3': 2 * math.pi / 3, 'π/3': math.pi / 3, '5π/6': 5 * math.pi / 6, '3π/4': 3 * math.pi / 4}.items() if math.isclose(math.cos(v), (9 + 25 - 49) / (2 * 3 * 5))][0]"
+        hints:
+          - いちばん大きい角は、いちばん長い辺と向かい合う角です。
+          - 余弦定理で cos の値を求めましょう（G-024）。
+          - その角を度で求めてから、弧度法に直しましょう。
+        paths:
+          - ["cos θ = (9 + 25 − 49)/30 = −1/2", "θ = 120°", "2π/3"]
+      - part: 思い出す
+        text: 半径 9、中心角 40° のおうぎ形の弧の長さは □π です。□ に入る数はいくつですか。
+        answer: 2
+        check: "9 * Fraction(40, 180)"
+        hints:
+          - 40° を弧度法に直しましょう。
+          - 40° = 40π/180 = 2π/9 です。
+          - 弧の長さは l = rθ です。
+        paths:
+          - ["40° = 2π/9", "l = 9 × 2π/9 = 2π"]
+      - part: 今日
+        text: △ABC で、A = 75°、B = 45°、AB = 6 です。辺 BC の長さはどれですか。
+        choices: ["3√2 + √6", "3√6 + √2", "6√2", "2√6"]
+        answer: 3√2 + √6
+        check: "[k for k, v in {'3√2 + √6': 3 * math.sqrt(2) + math.sqrt(6), '3√6 + √2': 3 * math.sqrt(6) + math.sqrt(2), '6√2': 6 * math.sqrt(2), '2√6': 2 * math.sqrt(6)}.items() if math.isclose(v, 6 * math.sin(math.radians(75)) / math.sin(math.radians(60)))][0]"
+        hints:
+          - C の大きさを、内角の和から求めましょう。
+          - 正弦定理 a/sin A = c/sin C を使いましょう（G-024）。
+          - sin 75° は、加法定理で求めましょう。
+        paths:
+          - ["C = 60°", "sin 75° = sin(45° + 30°) = (√6 + √2)/4", "a = 6 × ((√6 + √2)/4) ÷ ((√3)/2) = √3(√6 + √2) = 3√2 + √6"]
+        note: G-024 の 4 日目の挑戦と同じ三角形で、そこでは sin 75° を使わずに CA を求めた。2√6 は CA の長さ。
+      - part: 今日
+        text: 点 P(4, 2) を、原点 O のまわりに π/3 だけ回した点を Q とします。Q の x 座標はどれですか。
+        svg: '<svg viewBox="0 0 228 198" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="174" x2="24" y2="24"/><line x1="54" y1="174" x2="54" y2="24"/><line x1="84" y1="174" x2="84" y2="24"/><line x1="114" y1="174" x2="114" y2="24"/><line x1="144" y1="174" x2="144" y2="24"/><line x1="174" y1="174" x2="174" y2="24"/><line x1="204" y1="174" x2="204" y2="24"/><line x1="24" y1="174" x2="204" y2="174"/><line x1="24" y1="144" x2="204" y2="144"/><line x1="24" y1="114" x2="204" y2="114"/><line x1="24" y1="84" x2="204" y2="84"/><line x1="24" y1="54" x2="204" y2="54"/><line x1="24" y1="24" x2="204" y2="24"/></g><line x1="16" y1="144" x2="214" y2="144" stroke="currentColor" fill="none" stroke-width="2"/><line x1="54" y1="182" x2="54" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M214 144 L206 140 L206 148 Z" fill="currentColor"/><path d="M54 14 L50 22 L58 22 Z" fill="currentColor"/><text x="216" y="158" font-size="14" text-anchor="end" font-style="italic">x</text><text x="61" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="50" y="157" font-size="11" text-anchor="end">O</text><text x="24" y="157" font-size="10" text-anchor="middle">−1</text><text x="84" y="157" font-size="10" text-anchor="middle">1</text><text x="114" y="157" font-size="10" text-anchor="middle">2</text><text x="144" y="157" font-size="10" text-anchor="middle">3</text><text x="174" y="157" font-size="10" text-anchor="middle">4</text><text x="204" y="157" font-size="10" text-anchor="middle">5</text><text x="50" y="177.5" font-size="10" text-anchor="end">−1</text><text x="50" y="117.5" font-size="10" text-anchor="end">1</text><text x="50" y="87.5" font-size="10" text-anchor="end">2</text><text x="50" y="57.5" font-size="10" text-anchor="end">3</text><text x="50" y="27.5" font-size="10" text-anchor="end">4</text><line x1="54" y1="144" x2="174" y2="84" stroke="currentColor" fill="none" stroke-width="2.5"/><circle cx="174" cy="84" r="3.5" fill="currentColor"/><text x="180" y="78" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P(4, 2)</text><path d="M103.2 119.4 A55 55 0 0 0 57.3 89.1" stroke="currentColor" fill="none" stroke-width="1.5"/><path d="M57.3 89.1 L65.5 85.6 L65 93.6 Z" fill="currentColor"/><text x="92.6" y="89.6" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">π/3</text></svg>'
+        choices: ["2 − √3", "2 + √3", "1 + 2√3", "2√3 − 1"]
+        answer: 2 − √3
+        check: "[k for k, v in {'2 − √3': 2 - math.sqrt(3), '2 + √3': 2 + math.sqrt(3), '1 + 2√3': 1 + 2 * math.sqrt(3), '2√3 − 1': 2 * math.sqrt(3) - 1}.items() if math.isclose(v, math.hypot(4, 2) * math.cos(math.atan2(2, 4) + math.pi / 3))][0]"
+        hints:
+          - OP = r、OP を表す動径の角を α とすると、P(r cos α, r sin α) です。
+          - Q は (r cos(α + π/3), r sin(α + π/3)) です。
+          - 加法定理で cos(α + π/3) を展開し、r cos α = 4、r sin α = 2 を使いましょう。
+        paths:
+          - ["r cos α = 4、r sin α = 2", "Q の x 座標は r cos(α + π/3) = r cos α cos(π/3) − r sin α sin(π/3)", "4 × (1/2) − 2 × ((√3)/2) = 2 − √3"]
+        note: 回した点の座標は (x cos θ − y sin θ, x sin θ + y cos θ) で、加法定理そのもの。行列による回転（M-002）につながる。
+      - part: 挑戦
+        text: 直線 y = 2x を、原点のまわりに π/4 だけ回した直線の傾きはいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((Fraction(2) + 1) / (1 - Fraction(2) * 1))"
+        hints:
+          - 直線 y = 2x と x 軸の正の向きのなす角を α とすると、tan α = 2 です。
+          - 回した直線の傾きは tan(α + π/4) です。
+          - tan の加法定理を使いましょう。
+        paths:
+          - ["tan(α + π/4) = (tan α + 1)/(1 − tan α)", "(2 + 1)/(1 − 2) = −3"]
+    extra:
+      - part: 今日
+        text: 半径 2 の円に内接する △ABC で、A = π/12 のとき、BC の長さはどれですか。
+        choices: ["√6 − √2", "√6 + √2", "(√6 − √2)/2", "2√6 − 2√2"]
+        answer: √6 − √2
+        check: "[k for k, v in {'√6 − √2': math.sqrt(6) - math.sqrt(2), '√6 + √2': math.sqrt(6) + math.sqrt(2), '(√6 − √2)/2': (math.sqrt(6) - math.sqrt(2)) / 2, '2√6 − 2√2': 2 * math.sqrt(6) - 2 * math.sqrt(2)}.items() if math.isclose(v, 2 * 2 * math.sin(math.pi / 12))][0]"
+        hints:
+          - 正弦定理から BC = 2R sin A です（G-024）。
+          - π/12 = 15° です。
+          - sin 15° を加法定理で求めましょう。
+        paths:
+          - ["BC = 4 sin 15°", "sin 15° = (√6 − √2)/4", "BC = √6 − √2"]
+      - part: 今日
+        text: 点 (√3, 1) を、原点のまわりに π/2 だけ回した点の座標はどれですか。
+        choices: ["(−1, √3)", "(1, −√3)", "(−√3, 1)", "(−1, −√3)"]
+        answer: (−1, √3)
+        check: "[k for k, (x, y) in {'(−1, √3)': (-1, math.sqrt(3)), '(1, −√3)': (1, -math.sqrt(3)), '(−√3, 1)': (-math.sqrt(3), 1), '(−1, −√3)': (-1, -math.sqrt(3))}.items() if math.isclose(x, 2 * math.cos(math.pi / 6 + math.pi / 2), abs_tol=1e-9) and math.isclose(y, 2 * math.sin(math.pi / 6 + math.pi / 2), abs_tol=1e-9)][0]"
+        hints:
+          - 点 (√3, 1) は、半径 2 の円の上で、角 π/6 の動径の上にあります。
+          - π/2 回すと、角は π/6 + π/2 になります。
+          - cos(θ + π/2) = −sin θ、sin(θ + π/2) = cos θ です。
+        paths:
+          - ["x = 2cos(π/6 + π/2) = −2sin(π/6) = −1", "y = 2sin(π/6 + π/2) = 2cos(π/6) = √3", "(−1, √3)"]
+      - part: 挑戦
+        text: 直線 y = 3x と、傾きが正の数 m の直線 y = mx のなす角が π/4 です。m はいくつですか。
+        answer: 1/2
+        check: "[Fraction(k, 2) for k in range(1, 20) if math.isclose(abs((3 - k / 2) / (1 + 3 * k / 2)), 1)][0]"
+        hints:
+          - y = 3x と x 軸の正の向きのなす角を α とすると、もう 1 本は α − π/4 か α + π/4 の向きです。
+          - tan(α − π/4) と tan(α + π/4) を、加法定理で計算しましょう。
+          - 傾きが正のほうを選びましょう。
+        paths:
+          - ["tan(α − π/4) = (3 − 1)/(1 + 3) = 1/2", "tan(α + π/4) = (3 + 1)/(1 − 3) = −2", "正なので m = 1/2"]
+  - day: 8
+    items:
+      - part: 今日
+        text: 210° を弧度法で表すと □π です。□ に入る数はいくつですか。
+        answer: 7/6
+        check: "Fraction(210, 180)"
+        hints:
+          - 180° = π です。
+          - 210° は 180° の何倍でしょう。
+          - 約分しましょう。
+        paths:
+          - ["210 ÷ 180 = 7/6"]
+      - part: 今日
+        text: cos(5π/4) の値はどれですか。
+        choices: ["−(√2)/2", "(√2)/2", "−1/2", "−√2"]
+        answer: −(√2)/2
+        check: "[k for k, v in {'−(√2)/2': -math.sqrt(2) / 2, '(√2)/2': math.sqrt(2) / 2, '−1/2': -0.5, '−√2': -math.sqrt(2)}.items() if math.isclose(v, math.cos(5 * math.pi / 4))][0]"
+        hints:
+          - 5π/4 = π + π/4 です。
+          - cos(θ + π) = −cos θ です。
+          - 第 3 象限では cos は負の数です。
+        paths:
+          - ["cos(5π/4) = −cos(π/4) = −(√2)/2"]
+      - part: 今日
+        text: θ の動径が第 2 象限にあり、sin θ = 5/13 です。tan θ の値はいくつですか。
+        answer: −5/12
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(5, 13) / -[Fraction(k, 13) for k in range(0, 14) if Fraction(k, 13) ** 2 == 1 - Fraction(5, 13) ** 2][0])"
+        hints:
+          - まず cos θ を求めましょう。
+          - 第 2 象限では cos θ は負の数です。
+          - tan θ = sin θ/cos θ です。
+        paths:
+          - ["cos θ = −12/13", "tan θ = (5/13) ÷ (−12/13) = −5/12"]
+      - part: 今日
+        text: 0 ≦ θ < 2π で、2sin θ + √3 = 0 を解きましょう。解はどれですか。
+        choices: [θ = 4π/3、5π/3, θ = π/3、2π/3, θ = 7π/6、11π/6, θ = 2π/3、4π/3]
+        answer: θ = 4π/3、5π/3
+        check: "[k for k, v in {'θ = 4π/3、5π/3': {16, 20}, 'θ = π/3、2π/3': {4, 8}, 'θ = 7π/6、11π/6': {14, 22}, 'θ = 2π/3、4π/3': {8, 16}}.items() if v == set(j for j in range(0, 24) if math.isclose(2 * math.sin(j * math.pi / 12) + math.sqrt(3), 0, abs_tol=1e-9))][0]"
+        hints:
+          - sin θ = −(√3)/2 です。
+          - 単位円で、y 座標が −(√3)/2 の点をさがしましょう。
+          - sin(π/3) = (√3)/2 です。
+        paths:
+          - ["sin θ = −(√3)/2", "θ = π + π/3 = 4π/3", "θ = 2π − π/3 = 5π/3"]
+      - part: 今日
+        text: cos 75° の値はどれですか。
+        choices: ["(√6 − √2)/4", "(√6 + √2)/4", "(√2 − √6)/4", "(√3 − 1)/2"]
+        answer: (√6 − √2)/4
+        check: "[k for k, v in {'(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '(√6 + √2)/4': (math.sqrt(6) + math.sqrt(2)) / 4, '(√2 − √6)/4': (math.sqrt(2) - math.sqrt(6)) / 4, '(√3 − 1)/2': (math.sqrt(3) - 1) / 2}.items() if math.isclose(v, math.cos(math.radians(75)))][0]"
+        hints:
+          - 75° = 45° + 30° です。
+          - cos(α + β) = cos α cos β − sin α sin β です。
+          - 75° は鋭角なので、cos は正の数です。
+        paths:
+          - ["cos 45° cos 30° − sin 45° sin 30°", "(√6)/4 − (√2)/4 = (√6 − √2)/4"]
+      - part: 今日
+        text: cos α = −1/3 のとき、cos 2α の値はいくつですか。
+        answer: −7/9
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 * Fraction(-1, 3) ** 2 - 1)"
+        hints:
+          - cos 2α を cos α だけで表す公式を選びましょう。
+          - cos 2α = 2cos²α − 1 です。
+          - cos²α = 1/9 です。
+        paths:
+          - ["cos 2α = 2 × (1/9) − 1 = −7/9"]
+      - part: 今日
+        text: y = 5sin θ − 12cos θ の最大値はいくつですか。
+        answer: 13
+        check: "[r for r in range(1, 30) if r * r == 5 * 5 + 12 * 12][0]"
+        hints:
+          - 合成して r sin(θ + α) の形にしましょう。
+          - r = √(5² + 12²) です。
+          - sin の値のいちばん大きい値は 1 です。
+        paths:
+          - ["r = √169 = 13", "5sin θ − 12cos θ = 13sin(θ + α)", "最大値は 13"]
+    extra:
+      - part: 今日
+        text: 半径 6、面積 15 のおうぎ形の中心角は何ラジアンですか。
+        answer: 5/6
+        check: "Fraction(2 * 15, 6 * 6)"
+        hints:
+          - おうぎ形の面積は S = (1/2)r²θ です。
+          - 15 = (1/2) × 36 × θ です。
+          - θ について解きましょう。
+        paths:
+          - ["15 = 18θ", "θ = 15/18 = 5/6"]
+      - part: 今日
+        text: tan α = 3、tan β = 1/2 のとき、tan(α − β) の値はいくつですか。
+        answer: 1
+        check: "(Fraction(3) - Fraction(1, 2)) / (1 + Fraction(3) * Fraction(1, 2))"
+        hints:
+          - tan(α − β) = (tan α − tan β)/(1 + tan α tan β) です。
+          - 分子は 3 − 1/2 です。
+          - 分母は 1 + 3 × 1/2 です。
+        paths:
+          - ["(5/2) ÷ (5/2) = 1"]
+      - part: 今日
+        text: sin θ − cos θ = 1/3 のとき、sin θ cos θ の値はいくつですか。
+        answer: 4/9
+        check: "(1 - Fraction(1, 3) ** 2) / 2"
+        hints:
+          - 両辺を 2 乗しましょう。
+          - sin²θ + cos²θ = 1 です。
+          - 1 − 2sin θ cos θ = 1/9 になります。
+        paths:
+          - ["(sin θ − cos θ)² = 1/9", "1 − 2sin θ cos θ = 1/9", "sin θ cos θ = 4/9"]
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-026]
+    text: 単位円 x² + y² = 1 の上を動く点 P と、2 点 A(2, 0)、B(0, 2) があります。△ABP の面積のいちばん大きい値はどれですか。
+    svg: '<svg viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="184" x2="24" y2="24"/><line x1="56" y1="184" x2="56" y2="24"/><line x1="88" y1="184" x2="88" y2="24"/><line x1="120" y1="184" x2="120" y2="24"/><line x1="152" y1="184" x2="152" y2="24"/><line x1="184" y1="184" x2="184" y2="24"/><line x1="24" y1="184" x2="184" y2="184"/><line x1="24" y1="152" x2="184" y2="152"/><line x1="24" y1="120" x2="184" y2="120"/><line x1="24" y1="88" x2="184" y2="88"/><line x1="24" y1="56" x2="184" y2="56"/><line x1="24" y1="24" x2="184" y2="24"/></g><line x1="16" y1="120" x2="194" y2="120" stroke="currentColor" fill="none" stroke-width="2"/><line x1="88" y1="192" x2="88" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M194 120 L186 116 L186 124 Z" fill="currentColor"/><path d="M88 14 L84 22 L92 22 Z" fill="currentColor"/><text x="196" y="134" font-size="14" text-anchor="end" font-style="italic">x</text><text x="95" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="84" y="133" font-size="11" text-anchor="end">O</text><text x="24" y="133" font-size="10" text-anchor="middle">−2</text><text x="56" y="133" font-size="10" text-anchor="middle">−1</text><text x="120" y="133" font-size="10" text-anchor="middle">1</text><text x="152" y="133" font-size="10" text-anchor="middle">2</text><text x="184" y="133" font-size="10" text-anchor="middle">3</text><text x="84" y="187.5" font-size="10" text-anchor="end">−2</text><text x="84" y="155.5" font-size="10" text-anchor="end">−1</text><text x="84" y="91.5" font-size="10" text-anchor="end">1</text><text x="84" y="59.5" font-size="10" text-anchor="end">2</text><text x="84" y="27.5" font-size="10" text-anchor="end">3</text><circle cx="88" cy="120" r="32" stroke="currentColor" fill="none" stroke-width="2.5"/><polygon points="152,120 88,56 57.9,109.1" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="152,120 88,56 57.9,109.1" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="152" cy="120" r="3.5" fill="currentColor"/><text x="156" y="114" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="88" cy="56" r="3.5" fill="currentColor"/><text x="94" y="52" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><circle cx="57.9" cy="109.1" r="3.5" fill="currentColor"/><text x="51.9" y="103.1" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P</text></svg>'
+    choices: ["2 + √2", "2√2", "2 + 2√2", "3"]
+    answer: 2 + √2
+    check: "[k for k, v in {'2 + √2': 2 + math.sqrt(2), '2√2': 2 * math.sqrt(2), '2 + 2√2': 2 + 2 * math.sqrt(2), '3': 3}.items() if math.isclose(v, max(abs(math.cos(j * math.pi / 360) + math.sin(j * math.pi / 360) - 2) for j in range(0, 720)))][0]"
+    hints:
+      - AB を底辺とすると、高さは P と直線 AB の距離です（G-026）。
+      - P(cos θ, sin θ) とおいて、点と直線の距離の式で高さを表しましょう。
+      - sin θ + cos θ を合成しましょう。
+    paths:
+      - ["直線 AB は x + y − 2 = 0、AB = 2√2", "P(cos θ、sin θ) と直線 AB の距離は (2 − sin θ − cos θ)/√2", "面積は 2 − (sin θ + cos θ) = 2 − √2 sin(θ + π/4)", "いちばん大きい値は 2 + √2"]
+      - ["AB から最も遠い単位円の点で面積が最大", "原点と直線 AB の距離は √2 なので、高さのいちばん大きい値は √2 + 1", "面積は (1/2) × 2√2 × (√2 + 1) = 2 + √2"]
+    note: 点と直線の距離（G-026）、三角関数による円の上の点の表し方、合成をつなぐ。面積が最大になるのは θ = 5π/4 の点。図で見る 2 本目の道筋と答え合わせさせるとよい。
+  - part: 離
+    kinds: [道筋, 手数]
+    text: θ = 18° とします。2θ + 3θ = 90° であることに目をつけて、sin 18° の値を求めると、どれになりますか。
+    choices: ["(√5 − 1)/4", "(√5 + 1)/4", "(√5 − 1)/2", "(3 − √5)/4"]
+    answer: (√5 − 1)/4
+    check: "[k for k, v in {'(√5 − 1)/4': (math.sqrt(5) - 1) / 4, '(√5 + 1)/4': (math.sqrt(5) + 1) / 4, '(√5 − 1)/2': (math.sqrt(5) - 1) / 2, '(3 − √5)/4': (3 - math.sqrt(5)) / 4}.items() if math.isclose(v, math.sin(math.radians(18)))][0]"
+    hints:
+      - 2θ = 90° − 3θ なので、sin 2θ = cos 3θ です。
+      - cos 3θ = cos(2θ + θ) を、加法定理と 2 倍角の公式で cos θ の式にしましょう。
+      - 両辺を cos θ（0 でない）でわると、sin θ の 2 次方程式になります。
+    paths:
+      - ["sin 2θ = sin(90° − 3θ) = cos 3θ", "cos 3θ = cos 2θ cos θ − sin 2θ sin θ = 4cos³θ − 3cos θ", "2sin θ cos θ = 4cos³θ − 3cos θ を cos θ でわって 2sin θ = 4cos²θ − 3 = 1 − 4sin²θ", "4sin²θ + 2sin θ − 1 = 0", "sin θ は正なので sin θ = (−1 + √5)/4"]
+    note: 3 倍角の公式 cos 3θ = 4cos³θ − 3cos θ を自分で導き、2 次方程式（A-017）に帰着させる。G-024 の腕だめしの cos 36° = (1 + √5)/4 と、cos 36° − sin 18° = 1/2 の関係でつながる。
+  - part: 離
+    kinds: [読み取り]
+    text: 観覧車の中心は地面から 22 m の高さにあり、半径は 20 m で、一定の速さで 16 分で 1 周します。いちばん下の地点（地面から 2 m）で乗ってから、1 周する間に、高さがちょうど 32 m になるときが 2 回あります。その 2 回の間の時間は何分ですか。
+    svg: '<svg viewBox="0 0 240 206" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="186" x2="230" y2="186" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="135" cy="106.8" r="72" stroke="currentColor" fill="none" stroke-width="2"/><line x1="105" y1="186" x2="135" y2="106.8" stroke="currentColor" fill="none" stroke-width="1.5"/><line x1="165" y1="186" x2="135" y2="106.8" stroke="currentColor" fill="none" stroke-width="1.5"/><circle cx="135" cy="106.8" r="3.5" fill="currentColor"/><circle cx="135" cy="178.8" r="3.5" fill="currentColor"/><text x="143" y="174.8" font-size="11" text-anchor="start">乗る所</text><line x1="135" y1="106.8" x2="197.4" y2="70.8" stroke="currentColor" fill="none" stroke-width="1.5"/><text x="161" y="84.8" font-size="11" text-anchor="start">20 m</text><line x1="34" y1="186" x2="34" y2="106.8" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="34" y1="106.8" x2="135" y2="106.8" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><text x="30" y="150.4" font-size="11" text-anchor="end">22 m</text><text x="175" y="199" font-size="11" text-anchor="start">地面</text></svg>'
+    answer: 16/3
+    check: "(lambda ts: max(ts) - min(ts))([Fraction(k, 3) for k in range(0, 48) if math.isclose(22 - 20 * math.cos(math.pi * (k / 3) / 8), 32)])"
+    hints:
+      - 1 分間に、観覧車は何ラジアン回るでしょう。
+      - いちばん下から角 φ だけ回ったときの高さは 22 − 20cos φ です。
+      - 高さが 32 m になるのは、cos φ がいくつのときでしょう。0 ≦ φ < 2π で 2 つの φ を求めましょう。
+    paths:
+      - ["1 分間に 2π/16 = π/8 回る", "t 分後の高さは 22 − 20cos(πt/8)", "cos(πt/8) = −1/2 から πt/8 = 2π/3、4π/3", "t = 16/3、32/3", "間の時間は 16/3 分"]
+    note: 場面から、回る角の速さ（毎分 π/8）と、いちばん下から測った高さの式を自分で立てるのが要点。答えは 5 分 20 秒。cos の符号（いちばん下から測るので − がつく）で迷いやすい。

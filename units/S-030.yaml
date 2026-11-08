@@ -1,0 +1,1225 @@
+# S-030 散布図と相関（記述統計）
+#
+# 書き方は N-001 の頭の注、段 5 の決まりは A-019 の頭の注のとおり（1 日の組は 思い出す 2・今日 2・挑戦 1、わけの深さは ③）。
+#   わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問にした。
+# 地図に plan がないので、既定の並び（導入、練習、練習、わけ、混ぜる、確認）に次のねらいを当てた。
+#   1 日目：散布図、正の相関・負の相関・相関がない、散布図から条件に合う人数を読む（直線 y = x などを引いて読む）。
+#   2 日目：偏差、分散（偏差の 2 乗の平均）、標準偏差（頭に見本）。人が加わったときの分散。
+#   3 日目：共分散（偏差の積の平均）、相関係数 r ＝ 共分散 ÷ (x の標準偏差 × y の標準偏差)（頭に見本）。
+#   4 日目：わけ（3 問とも ③：偏差の合計は 0、値に同じ数を足す・何倍かするときの分散と標準偏差、相関係数は単位によらない）。
+#   5 日目：S-029（箱ひげ図）、A-019（直線の式）と混ぜる。回帰直線（平均値の点を通る直線）で予測する、相関と因果、外れ値、得点の換算。
+#   6 日目：確認。
+# 分散と標準偏差は、地図のどの単元にもまだないので、相関係数の前にこの単元で扱う（S-041 の標準化の前提にもなる）。
+# 前提は S-029 と A-019（たどると A-010、A-011、A-012、A-009、N-027 など）。平方根（A-016）と展開（A-015）は前提のたどりにないので、
+#   標準偏差は「2 乗すると分散になる正の数」と決め、分散が 4、16、25、36 のように整数の 2 乗になるデータだけで求めさせる。
+#   分散の公式「(2 乗の平均) − (平均の 2 乗)」は展開がいるので扱わない。−1 ≦ r ≦ 1 は事実として示すだけにする（わけは S-020 以降）。
+#   回帰直線は「平均値の点を通り、傾きが r × (y の標準偏差) ÷ (x の標準偏差) の直線」と問題の中で決めて使い、
+#   最小二乗法で求めるわけ（2 次関数 A-020 が要る）は扱わない（S-020 線形モデル）。Σ の記号（A-018）は使わず、言葉で「合計」と書く。
+# 平均は「平均値」、x の平均値を x̄ のように上線で書く書き方は画面に出ないので使わない。
+# データはすべて自作の場面（点数、勉強時間、身長と体重、気温と売上）で、実在の調査の数ではない。
+# 答えは整数、約分した分数、小数（分数が有限小数になるときは accept に小数）。負の数は「−」U+2212。
+#   相関の向きや強さ、相関と因果を選ぶ問題は choices。散布図の点の数は、check にデータを書き直して数える。
+#   相関係数を選ぶ問題の check は、データから r を計算して、いちばん近い選択肢を選ぶ。
+# 散布図は svg（方眼、目盛り、点）。答えの数や直線は図に書かない（読み取りの手がかりの直線は、ヒントで引かせる）。
+# 相関と回帰は、線形モデル（S-020）、因果推論（S-042）、測定と誤差の直線の当てはめ（P-117）、表計算での分析（K-143）の入口になる（D-026）。
+
+id: S-030
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 8 人の数学の点数 x と理科の点数 y を、1 人を 1 つの点 (x, y) として座標平面に表しました。2 つの点数の関係を調べてみましょう。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="93.2" y1="200.0" x2="93.2" y2="16.0"/>
+              <line x1="140.4" y1="200.0" x2="140.4" y2="16.0"/>
+              <line x1="187.6" y1="200.0" x2="187.6" y2="16.0"/>
+              <line x1="234.8" y1="200.0" x2="234.8" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="163.2" x2="282.0" y2="163.2"/>
+              <line x1="46.0" y1="126.4" x2="282.0" y2="126.4"/>
+              <line x1="46.0" y1="89.6" x2="282.0" y2="89.6"/>
+              <line x1="46.0" y1="52.8" x2="282.0" y2="52.8"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">40</text>
+            <text x="93.2" y="214.0" font-size="10" text-anchor="middle">50</text>
+            <text x="140.4" y="214.0" font-size="10" text-anchor="middle">60</text>
+            <text x="187.6" y="214.0" font-size="10" text-anchor="middle">70</text>
+            <text x="234.8" y="214.0" font-size="10" text-anchor="middle">80</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">90</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="166.7" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="129.9" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="93.1" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="56.3" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">90</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">数学（点）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">理科（点）</text>
+            <circle cx="69.6" cy="163.2" r="3.5" fill="currentColor"/>
+            <circle cx="102.6" cy="170.6" r="3.5" fill="currentColor"/>
+            <circle cx="131.0" cy="119.0" r="3.5" fill="currentColor"/>
+            <circle cx="154.6" cy="126.4" r="3.5" fill="currentColor"/>
+            <circle cx="187.6" cy="82.2" r="3.5" fill="currentColor"/>
+            <circle cx="206.5" cy="97.0" r="3.5" fill="currentColor"/>
+            <circle cx="234.8" cy="34.4" r="3.5" fill="currentColor"/>
+            <circle cx="272.6" cy="45.4" r="3.5" fill="currentColor"/>
+          </svg>
+        explain: 2 つの量の組を点で表した図を散布図といいます。この散布図では、点が右上がりに並んでいます。数学の点数が高い人ほど、理科の点数も高い傾向があります。このように、一方が大きいほど他方も大きい傾向があるとき、2 つの量には正の相関があるといいます。反対に、一方が大きいほど他方が小さい傾向がある（点が右下がりに並ぶ）とき負の相関があるといい、どちらの傾向も見られないとき相関がないといいます。点が 1 本の直線の近くに集まっているほど、相関が強いといいます。相関の強さを数で表す相関係数は 3 日目に学びます。散布図から人数を読むときは、条件の境目に縦や横の線、または y = x のような直線を引くと、点を数えやすくなります。
+      - part: 思い出す
+        text: 9 人の記録は、21、15、30、12、26、17、33、20、24（回）でした。四分位範囲は何回ですか。
+        answer: 12
+        check: "(lambda s: (lambda h: Fraction(h[1] + h[2], 2))(s[5:]) - (lambda h: Fraction(h[1] + h[2], 2))(s[:4]))(sorted([21, 15, 30, 12, 26, 17, 33, 20, 24]))"
+        hints:
+          - まず、小さい順に並べましょう。
+          - 9 個なので、中央値を除いて前半 4 個と後半 4 個に分けます。
+          - 第 3 四分位数から第 1 四分位数をひきましょう。
+        paths:
+          - [12、15、17、20、21、24、26、30、33, 第 1 四分位数は (15 + 17) ÷ 2 = 16、第 3 四分位数は (26 + 30) ÷ 2 = 28, 28 − 16 = 12]
+      - part: 思い出す
+        text: 2 点 (2, 3)、(6, 11) を通る直線の傾きはいくつですか。
+        answer: 2
+        check: "Fraction(11 - 3, 6 - 2)"
+        hints:
+          - x の増える量を求めましょう。
+          - y の増える量を求めましょう。
+          - 傾きは (y の増える量) ÷ (x の増える量) です。
+        paths:
+          - [x は 4 増え、y は 8 増える, 8 ÷ 4 = 2]
+      - part: 今日
+        text: 10 人の数学の点数と理科の点数の散布図です。数学が 60 点以上で、理科が 60 点未満の人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="93.2" y1="200.0" x2="93.2" y2="16.0"/>
+              <line x1="140.4" y1="200.0" x2="140.4" y2="16.0"/>
+              <line x1="187.6" y1="200.0" x2="187.6" y2="16.0"/>
+              <line x1="234.8" y1="200.0" x2="234.8" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="163.2" x2="282.0" y2="163.2"/>
+              <line x1="46.0" y1="126.4" x2="282.0" y2="126.4"/>
+              <line x1="46.0" y1="89.6" x2="282.0" y2="89.6"/>
+              <line x1="46.0" y1="52.8" x2="282.0" y2="52.8"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">40</text>
+            <text x="93.2" y="214.0" font-size="10" text-anchor="middle">50</text>
+            <text x="140.4" y="214.0" font-size="10" text-anchor="middle">60</text>
+            <text x="187.6" y="214.0" font-size="10" text-anchor="middle">70</text>
+            <text x="234.8" y="214.0" font-size="10" text-anchor="middle">80</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">90</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="166.7" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="129.9" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="93.1" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="56.3" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">90</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">数学（点）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">理科（点）</text>
+            <circle cx="60.2" cy="170.6" r="3.5" fill="currentColor"/>
+            <circle cx="79.0" cy="141.1" r="3.5" fill="currentColor"/>
+            <circle cx="112.1" cy="159.5" r="3.5" fill="currentColor"/>
+            <circle cx="107.4" cy="100.6" r="3.5" fill="currentColor"/>
+            <circle cx="159.3" cy="152.2" r="3.5" fill="currentColor"/>
+            <circle cx="178.2" cy="141.1" r="3.5" fill="currentColor"/>
+            <circle cx="197.0" cy="71.2" r="3.5" fill="currentColor"/>
+            <circle cx="220.6" cy="89.6" r="3.5" fill="currentColor"/>
+            <circle cx="253.7" cy="144.8" r="3.5" fill="currentColor"/>
+            <circle cx="267.8" cy="23.4" r="3.5" fill="currentColor"/>
+          </svg>
+        answer: 3
+        check: "sum(1 for x, y in [(43, 48), (47, 56), (54, 51), (53, 67), (64, 53), (68, 56), (72, 75), (77, 70), (84, 55), (87, 88)] if x >= 60 and y < 60)"
+        hints:
+          - 数学 60 点のところに縦の線、理科 60 点のところに横の線を引きましょう。
+          - 数学 60 点以上は、縦の線より右の点です。
+          - その中で、横の線より下の点を数えましょう。
+        paths:
+          - [縦の線の右で横の線の下にある点を数える, 3 人]
+      - part: 今日
+        text: 3 つの散布図 A、B、C があります。負の相関があるのはどれですか。
+        svg: |
+          <svg viewBox="0 0 330 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="120" x2="106" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="14" y1="120" x2="14" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="58" y="136" font-size="13" text-anchor="middle">A</text>
+            <circle cx="22.8" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="40.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="49.2" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="58.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="58.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="66.8" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="75.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="84.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="84.4" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="93.2" cy="49.6" r="2.8" fill="currentColor"/>
+            <line x1="122" y1="120" x2="214" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="122" y1="120" x2="122" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="166" y="136" font-size="13" text-anchor="middle">B</text>
+            <circle cx="130.8" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="148.4" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="157.2" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="174.8" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="183.6" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="201.2" cy="93.6" r="2.8" fill="currentColor"/>
+            <line x1="230" y1="120" x2="322" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="230" y1="120" x2="230" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="274" y="136" font-size="13" text-anchor="middle">C</text>
+            <circle cx="238.8" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="256.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="265.2" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="282.8" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="291.6" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="111.2" r="2.8" fill="currentColor"/>
+            <circle cx="309.2" cy="102.4" r="2.8" fill="currentColor"/>
+          </svg>
+        choices: [A, B, C]
+        answer: C
+        check: "[k for k, p in {'A': [(1, 2), (2, 2), (2, 4), (3, 3), (4, 5), (5, 4), (5, 6), (6, 6), (7, 7), (8, 7), (8, 9), (9, 8)], 'B': [(1, 5), (2, 8), (2, 2), (3, 6), (4, 3), (5, 8), (5, 5), (6, 2), (7, 6), (8, 4), (8, 8), (9, 3)], 'C': [(1, 8), (2, 9), (2, 7), (3, 7), (4, 6), (5, 6), (5, 4), (6, 4), (7, 3), (8, 3), (8, 1), (9, 2)]}.items() if (lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))(p) < -0.5][0]"
+        hints:
+          - 負の相関は、一方が大きいほど他方が小さい傾向です。
+          - 点は、右上がりと右下がりのどちらに並んでいるでしょう。
+          - 右下がりに並んでいるものを選びましょう。
+        paths:
+          - [A は右上がり、B は傾向がない、C は右下がり, C]
+      - part: 挑戦
+        text: 10 人の数学の点数と理科の点数の散布図です。理科の点数が数学の点数より高い人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="85.3" y1="200.0" x2="85.3" y2="16.0"/>
+              <line x1="124.7" y1="200.0" x2="124.7" y2="16.0"/>
+              <line x1="164.0" y1="200.0" x2="164.0" y2="16.0"/>
+              <line x1="203.3" y1="200.0" x2="203.3" y2="16.0"/>
+              <line x1="242.7" y1="200.0" x2="242.7" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="169.3" x2="282.0" y2="169.3"/>
+              <line x1="46.0" y1="138.7" x2="282.0" y2="138.7"/>
+              <line x1="46.0" y1="108.0" x2="282.0" y2="108.0"/>
+              <line x1="46.0" y1="77.3" x2="282.0" y2="77.3"/>
+              <line x1="46.0" y1="46.7" x2="282.0" y2="46.7"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">40</text>
+            <text x="85.3" y="214.0" font-size="10" text-anchor="middle">50</text>
+            <text x="124.7" y="214.0" font-size="10" text-anchor="middle">60</text>
+            <text x="164.0" y="214.0" font-size="10" text-anchor="middle">70</text>
+            <text x="203.3" y="214.0" font-size="10" text-anchor="middle">80</text>
+            <text x="242.7" y="214.0" font-size="10" text-anchor="middle">90</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">100</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="172.8" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="142.2" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="111.5" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="80.8" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="50.2" font-size="10" text-anchor="end">90</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">100</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">数学（点）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">理科（点）</text>
+            <circle cx="65.7" cy="163.2" r="3.5" fill="currentColor"/>
+            <circle cx="85.3" cy="181.6" r="3.5" fill="currentColor"/>
+            <circle cx="108.9" cy="135.6" r="3.5" fill="currentColor"/>
+            <circle cx="124.7" cy="154.0" r="3.5" fill="currentColor"/>
+            <circle cx="144.3" cy="101.9" r="3.5" fill="currentColor"/>
+            <circle cx="164.0" cy="126.4" r="3.5" fill="currentColor"/>
+            <circle cx="179.7" cy="77.3" r="3.5" fill="currentColor"/>
+            <circle cx="203.3" cy="92.7" r="3.5" fill="currentColor"/>
+            <circle cx="223.0" cy="77.3" r="3.5" fill="currentColor"/>
+            <circle cx="242.7" cy="34.4" r="3.5" fill="currentColor"/>
+          </svg>
+        answer: 5
+        check: "sum(1 for x, y in [(45, 52), (50, 46), (56, 61), (60, 55), (65, 72), (70, 64), (74, 80), (80, 75), (85, 80), (90, 94)] if y > x)"
+        hints:
+          - 理科と数学が同じ点の人は、どんな直線の上にあるでしょう。
+          - (40, 40) と (90, 90) を通る直線 y = x を引きましょう。
+          - 理科のほうが高い人は、その直線より上にある点です。
+        paths:
+          - [直線 y = x を引く, 直線より上の点を数える, 5 人]
+        note: 「理科が数学より高い」を「y > x」と言いかえ、直線 y = x の上側の点を数える。縦と横の線だけでは読めないところが要点。
+    extra:
+      - part: 今日
+        text: ある店で、8 日間の最高気温 x（℃）とアイスクリームの売上 y（個）を散布図に表しました。x と y の関係として、あてはまるものはどれですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="75.5" y1="200.0" x2="75.5" y2="16.0"/>
+              <line x1="105.0" y1="200.0" x2="105.0" y2="16.0"/>
+              <line x1="134.5" y1="200.0" x2="134.5" y2="16.0"/>
+              <line x1="164.0" y1="200.0" x2="164.0" y2="16.0"/>
+              <line x1="193.5" y1="200.0" x2="193.5" y2="16.0"/>
+              <line x1="223.0" y1="200.0" x2="223.0" y2="16.0"/>
+              <line x1="252.5" y1="200.0" x2="252.5" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="169.3" x2="282.0" y2="169.3"/>
+              <line x1="46.0" y1="138.7" x2="282.0" y2="138.7"/>
+              <line x1="46.0" y1="108.0" x2="282.0" y2="108.0"/>
+              <line x1="46.0" y1="77.3" x2="282.0" y2="77.3"/>
+              <line x1="46.0" y1="46.7" x2="282.0" y2="46.7"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">20</text>
+            <text x="75.5" y="214.0" font-size="10" text-anchor="middle">22</text>
+            <text x="105.0" y="214.0" font-size="10" text-anchor="middle">24</text>
+            <text x="134.5" y="214.0" font-size="10" text-anchor="middle">26</text>
+            <text x="164.0" y="214.0" font-size="10" text-anchor="middle">28</text>
+            <text x="193.5" y="214.0" font-size="10" text-anchor="middle">30</text>
+            <text x="223.0" y="214.0" font-size="10" text-anchor="middle">32</text>
+            <text x="252.5" y="214.0" font-size="10" text-anchor="middle">34</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">36</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">30</text>
+            <text x="42.0" y="172.8" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="142.2" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="111.5" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="80.8" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="50.2" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">90</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">気温（℃）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">売上（個）</text>
+            <circle cx="90.2" cy="166.3" r="3.5" fill="currentColor"/>
+            <circle cx="119.8" cy="132.5" r="3.5" fill="currentColor"/>
+            <circle cx="149.2" cy="141.7" r="3.5" fill="currentColor"/>
+            <circle cx="164.0" cy="98.8" r="3.5" fill="currentColor"/>
+            <circle cx="193.5" cy="108.0" r="3.5" fill="currentColor"/>
+            <circle cx="208.2" cy="71.2" r="3.5" fill="currentColor"/>
+            <circle cx="237.8" cy="77.3" r="3.5" fill="currentColor"/>
+            <circle cx="252.5" cy="43.6" r="3.5" fill="currentColor"/>
+          </svg>
+        choices: [正の相関がある, 負の相関がある, 相関はほとんどない]
+        answer: 正の相関がある
+        check: "(lambda r: '正の相関がある' if r > 0.5 else ('負の相関がある' if r < -0.5 else '相関はほとんどない'))((lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))([(23, 41), (25, 52), (27, 49), (28, 63), (30, 60), (31, 72), (33, 70), (34, 81)]))"
+        hints:
+          - 点は、どの向きに並んでいるでしょう。
+          - 気温が高い日ほど、売上はどうなっているでしょう。
+          - 右上がりなら正の相関です。
+        paths:
+          - [気温が高い日ほど売上が多い, 右上がりなので正の相関がある]
+      - part: 今日
+        text: 「気温が高い日ほど、温かい飲み物の売上が少ない」という傾向があるとき、気温と温かい飲み物の売上の関係はどれですか。
+        choices: [正の相関がある, 負の相関がある, 相関はない]
+        answer: 負の相関がある
+        hints:
+          - 一方が大きいほど、他方はどうなっているでしょう。
+          - 散布図にかくと、点はどの向きに並ぶでしょう。
+          - 右下がりなら負の相関です。
+        paths:
+          - [気温が高いほど売上が少ない, 負の相関がある]
+      - part: 挑戦
+        text: 12 人の数学の点数と理科の点数の散布図です。2 教科の合計点が 140 点以上の人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="93.2" y1="200.0" x2="93.2" y2="16.0"/>
+              <line x1="140.4" y1="200.0" x2="140.4" y2="16.0"/>
+              <line x1="187.6" y1="200.0" x2="187.6" y2="16.0"/>
+              <line x1="234.8" y1="200.0" x2="234.8" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="163.2" x2="282.0" y2="163.2"/>
+              <line x1="46.0" y1="126.4" x2="282.0" y2="126.4"/>
+              <line x1="46.0" y1="89.6" x2="282.0" y2="89.6"/>
+              <line x1="46.0" y1="52.8" x2="282.0" y2="52.8"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">40</text>
+            <text x="93.2" y="214.0" font-size="10" text-anchor="middle">50</text>
+            <text x="140.4" y="214.0" font-size="10" text-anchor="middle">60</text>
+            <text x="187.6" y="214.0" font-size="10" text-anchor="middle">70</text>
+            <text x="234.8" y="214.0" font-size="10" text-anchor="middle">80</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">90</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="166.7" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="129.9" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="93.1" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="56.3" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">90</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">数学（点）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">理科（点）</text>
+            <circle cx="69.6" cy="126.4" r="3.5" fill="currentColor"/>
+            <circle cx="93.2" cy="45.4" r="3.5" fill="currentColor"/>
+            <circle cx="116.8" cy="89.6" r="3.5" fill="currentColor"/>
+            <circle cx="140.4" cy="23.4" r="3.5" fill="currentColor"/>
+            <circle cx="149.8" cy="85.9" r="3.5" fill="currentColor"/>
+            <circle cx="178.2" cy="133.8" r="3.5" fill="currentColor"/>
+            <circle cx="187.6" cy="67.5" r="3.5" fill="currentColor"/>
+            <circle cx="206.5" cy="119.0" r="3.5" fill="currentColor"/>
+            <circle cx="225.4" cy="89.6" r="3.5" fill="currentColor"/>
+            <circle cx="244.2" cy="148.5" r="3.5" fill="currentColor"/>
+            <circle cx="263.1" cy="104.3" r="3.5" fill="currentColor"/>
+            <circle cx="282.0" cy="60.2" r="3.5" fill="currentColor"/>
+          </svg>
+        answer: 5
+        check: "sum(1 for x, y in [(45, 60), (50, 82), (55, 70), (60, 88), (62, 71), (68, 58), (70, 76), (74, 62), (78, 70), (82, 54), (86, 66), (90, 78)] if x + y >= 140)"
+        hints:
+          - 合計がちょうど 140 点になる点を、いくつか考えましょう。たとえば (50, 90)、(90, 50) です。
+          - それらを通る直線を引くと、合計が 140 点の人はその直線の上にあります。
+          - 合計が 140 点以上の人は、直線のどちら側にあるでしょう。
+        paths:
+          - ["(50, 90) と (90, 50) を通る直線を引く", 直線より右上の点を数える, 5 人]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 5 人の上体起こしの回数は、7、9、10、11、13（回）でした。記録の散らばりの大きさを、1 つの数で表してみましょう。
+        explain: 平均値は 50 ÷ 5 = 10 回です。それぞれの値から平均値をひいた数を偏差といいます。偏差は −3、−1、0、1、3 です。偏差の合計はいつも 0 になるので（わけは 4 日目）、偏差の平均では散らばりを表せません。そこで、偏差を 2 乗して 9、1、0、1、9 とし、その平均 20 ÷ 5 = 4 を考えます。偏差の 2 乗の平均を分散といいます。分散の単位は（回）² になるので、もとの単位にもどすために、2 乗すると分散になる正の数を使います。これを標準偏差といいます（分散の正の平方根）。分散 4 の標準偏差は、2² = 4 なので 2 回です。標準偏差が大きいほど、データは平均値から離れて散らばっています。この単元では、分散が 4、16、25 のように整数の 2 乗になるデータで標準偏差を求めます。
+      - part: 思い出す
+        text: 6 人の記録は、12、15、9、18、14、16（回）でした。平均値は何回ですか。
+        answer: 14
+        check: "Fraction(12 + 15 + 9 + 18 + 14 + 16, 6)"
+        hints:
+          - 6 人の記録をすべてたしましょう。
+          - 合計を人数でわります。
+          - 合計は 84 になるか確かめましょう。
+        paths:
+          - [合計は 84, 84 ÷ 6 = 14]
+      - part: 思い出す
+        text: (−3)² + (−1)² + 2² + 2² を計算しましょう。
+        answer: 18
+        check: "(-3) ** 2 + (-1) ** 2 + 2 ** 2 + 2 ** 2"
+        hints:
+          - (−3)² は (−3) × (−3) です。
+          - 負の数どうしのかけ算は正の数になります。
+          - 4 つの数をたしましょう。
+        paths:
+          - [9 + 1 + 4 + 4 = 18]
+      - part: 今日
+        text: 5 人の点数は、12、6、9、15、8（点）でした。分散を求めましょう。
+        answer: 10
+        check: "(lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([12, 6, 9, 15, 8])"
+        hints:
+          - まず平均値を求めましょう。
+          - それぞれの偏差を求めて、2 乗しましょう。
+          - 偏差の 2 乗の合計を、人数でわりましょう。
+        paths:
+          - [平均値は 50 ÷ 5 = 10, 偏差は 2、−4、−1、5、−2, 4 + 16 + 1 + 25 + 4 = 50 で、50 ÷ 5 = 10]
+      - part: 今日
+        text: 5 人の記録は、14、18、20、22、26（回）でした。標準偏差は何回ですか。
+        answer: 4
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([14, 18, 20, 22, 26]))"
+        hints:
+          - 平均値と偏差を求めましょう。
+          - 偏差の 2 乗の平均が分散です。
+          - 2 乗すると分散になる正の数が、標準偏差です。
+        paths:
+          - [平均値は 20、偏差は −6、−2、0、2、6, 分散は (36 + 4 + 0 + 4 + 36) ÷ 5 = 16, 4² = 16 なので 4]
+        note: 分散 16 を答えてしまうまちがいが多い。標準偏差はもとの単位（回）にもどした数。
+      - part: 挑戦
+        text: 5 人の記録の平均値は 12 回、分散は 6 でした。ここに、記録がちょうど 12 回の人が 1 人加わりました。6 人の記録の分散を求めましょう。
+        answer: 5
+        check: "Fraction(6 * 5 + (12 - 12) ** 2, 6)"
+        hints:
+          - 6 人の平均値は、12 回から変わるでしょうか。
+          - 5 人の偏差の 2 乗の合計はいくつでしょう（分散 × 人数）。
+          - 加わった人の偏差は 0 です。合計を 6 でわりましょう。
+        paths:
+          - [平均値は 12 回のまま, 5 人の偏差の 2 乗の合計は 6 × 5 = 30, 加わった人の偏差は 0 なので、30 ÷ 6 = 5]
+        note: 平均値と同じ値が加わると、散らばりの合計は変わらず人数だけ増えるので、分散は小さくなる。分散が「平均」であることを使う問題。
+    extra:
+      - part: 今日
+        text: 4 人の点数は、3、7、5、9（点）でした。分散を求めましょう。
+        answer: 5
+        check: "(lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([3, 7, 5, 9])"
+        hints:
+          - 平均値を求めましょう。
+          - 偏差を求めて 2 乗しましょう。
+          - 2 乗の合計を 4 でわりましょう。
+        paths:
+          - [平均値は 6、偏差は −3、1、−1、3, (9 + 1 + 1 + 9) ÷ 4 = 5]
+      - part: 今日
+        text: 4 人の点数は、5、11、11、13（点）でした。標準偏差は何点ですか。
+        answer: 3
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([5, 11, 11, 13]))"
+        hints:
+          - 平均値と偏差を求めましょう。
+          - 分散は偏差の 2 乗の平均です。
+          - 2 乗すると分散になる正の数を考えましょう。
+        paths:
+          - [平均値は 10、偏差は −5、1、1、3, 分散は (25 + 1 + 1 + 9) ÷ 4 = 9, 3² = 9 なので 3]
+      - part: 挑戦
+        text: ある組の点数の分散は 16 でした。全員の点数に 5 点ずつ足すと、標準偏差は何点になりますか。
+        answer: 4
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([x + 5 for x in [14, 18, 20, 22, 26]]))"
+        hints:
+          - 全員に 5 点足すと、平均値はどうなるでしょう。
+          - それぞれの偏差は変わるでしょうか。
+          - 偏差が変わらなければ、分散も標準偏差も変わりません。
+        paths:
+          - [平均値も 5 点上がるので、偏差は変わらない, 分散は 16 のまま, 標準偏差は 4]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 5 人の 1 週間の勉強時間 x（時間）と、小テストの点数 y（点）です。x と y の相関の強さを、1 つの数で表してみましょう。
+        svg: |
+          <svg viewBox="0 0 296 104" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="276" height="28" fill="#f3c969" fill-opacity=".35" stroke="none"/>
+            <rect x="10" y="10" width="276" height="84" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="86" y1="10" x2="86" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="126" y1="10" x2="126" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="166" y1="10" x2="166" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="206" y1="10" x2="206" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="246" y1="10" x2="246" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="38" x2="286" y2="38" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="66" x2="286" y2="66" stroke="currentColor" stroke-width="1.5"/>
+            <text x="106" y="29" font-size="13" text-anchor="middle">A</text>
+            <text x="146" y="29" font-size="13" text-anchor="middle">B</text>
+            <text x="186" y="29" font-size="13" text-anchor="middle">C</text>
+            <text x="226" y="29" font-size="13" text-anchor="middle">D</text>
+            <text x="266" y="29" font-size="13" text-anchor="middle">E</text>
+            <text x="48" y="57" font-size="13" text-anchor="middle">x（時間）</text>
+            <text x="106" y="57" font-size="13" text-anchor="middle">7</text>
+            <text x="146" y="57" font-size="13" text-anchor="middle">9</text>
+            <text x="186" y="57" font-size="13" text-anchor="middle">10</text>
+            <text x="226" y="57" font-size="13" text-anchor="middle">11</text>
+            <text x="266" y="57" font-size="13" text-anchor="middle">13</text>
+            <text x="48" y="85" font-size="13" text-anchor="middle">y（点）</text>
+            <text x="106" y="85" font-size="13" text-anchor="middle">14</text>
+            <text x="146" y="85" font-size="13" text-anchor="middle">18</text>
+            <text x="186" y="85" font-size="13" text-anchor="middle">20</text>
+            <text x="226" y="85" font-size="13" text-anchor="middle">26</text>
+            <text x="266" y="85" font-size="13" text-anchor="middle">22</text>
+          </svg>
+        explain: x の平均値は 10、y の平均値は 20 です。偏差は、x が −3、−1、0、1、3、y が −6、−2、0、6、2 です。x の偏差と y の偏差の積の平均を共分散といいます。積は 18、2、0、6、6 なので、共分散は 32 ÷ 5 = 6.4 です。散布図を平均値の点 (10, 20) を通る縦と横の線で 4 つに分けると、右上と左下の点では偏差の積が正、左上と右下の点では負になります。右上がりの傾向が強いほど、共分散は大きい正の数になります。ただし共分散は単位で大きさが変わるので、x の標準偏差と y の標準偏差の積でわった数を使います。これを相関係数 r といいます。x の分散は 20 ÷ 5 = 4 で標準偏差は 2、y の分散は 80 ÷ 5 = 16 で標準偏差は 4 なので、r = 6.4 ÷ (2 × 4) = 0.8 です。相関係数はいつも −1 以上 1 以下で、1 に近いほど強い正の相関、−1 に近いほど強い負の相関、0 に近いほど相関が弱いことを表します。全部の点が右上がりの直線の上にあると r = 1 です。
+      - part: 思い出す
+        text: 5 人の記録は、3、9、6、8、4（回）でした。分散を求めましょう。
+        answer: 26/5
+        accept: [5.2]
+        check: "(lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([3, 9, 6, 8, 4])"
+        hints:
+          - 平均値を求めましょう。
+          - 偏差を求めて 2 乗しましょう。
+          - 2 乗の合計を 5 でわりましょう。
+        paths:
+          - [平均値は 6、偏差は −3、3、0、2、−2, (9 + 9 + 0 + 4 + 4) ÷ 5 = 26/5]
+      - part: 思い出す
+        text: 3 つの散布図 A、B、C があります。正の相関がいちばん強いのはどれですか。
+        svg: |
+          <svg viewBox="0 0 330 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="120" x2="106" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="14" y1="120" x2="14" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="58" y="136" font-size="13" text-anchor="middle">A</text>
+            <circle cx="22.8" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="40.4" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="49.2" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="49.2" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="58.0" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="66.8" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="66.8" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="75.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="84.4" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="93.2" cy="49.6" r="2.8" fill="currentColor"/>
+            <line x1="122" y1="120" x2="214" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="122" y1="120" x2="122" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="166" y="136" font-size="13" text-anchor="middle">B</text>
+            <circle cx="130.8" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="148.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="157.2" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="174.8" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="183.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="201.2" cy="49.6" r="2.8" fill="currentColor"/>
+            <line x1="230" y1="120" x2="322" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="230" y1="120" x2="230" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="274" y="136" font-size="13" text-anchor="middle">C</text>
+            <circle cx="238.8" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="256.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="265.2" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="282.8" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="291.6" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="111.2" r="2.8" fill="currentColor"/>
+            <circle cx="309.2" cy="102.4" r="2.8" fill="currentColor"/>
+          </svg>
+        choices: [A, B, C]
+        answer: B
+        check: "max({'A': [(1, 3), (2, 6), (2, 2), (3, 5), (4, 3), (4, 7), (5, 5), (6, 8), (6, 4), (7, 7), (8, 5), (9, 8)], 'B': [(1, 2), (2, 2), (2, 4), (3, 3), (4, 5), (5, 4), (5, 6), (6, 6), (7, 7), (8, 7), (8, 9), (9, 8)], 'C': [(1, 8), (2, 9), (2, 7), (3, 7), (4, 6), (5, 6), (5, 4), (6, 4), (7, 3), (8, 3), (8, 1), (9, 2)]}.items(), key=lambda kv: (lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))(kv[1]))[0]"
+        hints:
+          - 正の相関は、右上がりの傾向です。
+          - 右上がりのものの中で、点が直線の近くに集まっているのはどれでしょう。
+          - C は右下がりなので、正の相関ではありません。
+        paths:
+          - [A と B は右上がり、C は右下がり, B のほうが直線の近くに集まっている, B]
+      - part: 今日
+        text: 5 人の x と y は、x が 4、6、7、8、10、y が 11、9、12、15、13 でした（同じ順に組になっています）。x と y の共分散を求めましょう。
+        answer: 12/5
+        accept: [2.4]
+        check: "(lambda xs, ys: sum((xs[i] - Fraction(sum(xs), len(xs))) * (ys[i] - Fraction(sum(ys), len(ys))) for i in range(len(xs))) / len(xs))([4, 6, 7, 8, 10], [11, 9, 12, 15, 13])"
+        hints:
+          - x の平均値と y の平均値を求めましょう。
+          - 組ごとに、x の偏差と y の偏差をかけましょう。
+          - 偏差の積の合計を 5 でわりましょう。
+        paths:
+          - [x の平均値は 7、y の平均値は 12, 偏差の積は 3、3、0、3、3, 12 ÷ 5 = 12/5]
+      - part: 今日
+        text: あるデータで、x の標準偏差は 4、y の標準偏差は 5、x と y の共分散は −12 でした。相関係数 r を求めましょう。
+        answer: −3/5
+        accept: [−0.6]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-12, 4 * 5))"
+        hints:
+          - 相関係数は、共分散を標準偏差の積でわった数です。
+          - 標準偏差の積は 4 × 5 です。
+          - 共分散が負なので、相関係数も負になります。
+        paths:
+          - [−12 ÷ (4 × 5) = −12/20 = −3/5]
+      - part: 挑戦
+        text: 5 人の 2 つのテストの点数 x、y です。相関係数 r を求めましょう。
+        svg: |
+          <svg viewBox="0 0 300 104" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="280" height="28" fill="#f3c969" fill-opacity=".35" stroke="none"/>
+            <rect x="10" y="10" width="280" height="84" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="80" y1="10" x2="80" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="122" y1="10" x2="122" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="164" y1="10" x2="164" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="206" y1="10" x2="206" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="248" y1="10" x2="248" y2="94" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="38" x2="290" y2="38" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="10" y1="66" x2="290" y2="66" stroke="currentColor" stroke-width="1.5"/>
+            <text x="101" y="29" font-size="13" text-anchor="middle">A</text>
+            <text x="143" y="29" font-size="13" text-anchor="middle">B</text>
+            <text x="185" y="29" font-size="13" text-anchor="middle">C</text>
+            <text x="227" y="29" font-size="13" text-anchor="middle">D</text>
+            <text x="269" y="29" font-size="13" text-anchor="middle">E</text>
+            <text x="45" y="57" font-size="13" text-anchor="middle">x（点）</text>
+            <text x="101" y="57" font-size="13" text-anchor="middle">53</text>
+            <text x="143" y="57" font-size="13" text-anchor="middle">58</text>
+            <text x="185" y="57" font-size="13" text-anchor="middle">63</text>
+            <text x="227" y="57" font-size="13" text-anchor="middle">63</text>
+            <text x="269" y="57" font-size="13" text-anchor="middle">63</text>
+            <text x="45" y="85" font-size="13" text-anchor="middle">y（点）</text>
+            <text x="101" y="85" font-size="13" text-anchor="middle">63</text>
+            <text x="143" y="85" font-size="13" text-anchor="middle">72</text>
+            <text x="185" y="85" font-size="13" text-anchor="middle">71</text>
+            <text x="227" y="85" font-size="13" text-anchor="middle">75</text>
+            <text x="269" y="85" font-size="13" text-anchor="middle">69</text>
+          </svg>
+        answer: 3/4
+        accept: [0.75]
+        check: "(lambda xs, ys: (lambda xs, ys: sum((xs[i] - Fraction(sum(xs), len(xs))) * (ys[i] - Fraction(sum(ys), len(ys))) for i in range(len(xs))) / len(xs))(xs, ys) / ((lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))(xs)) * (lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))(ys))))([53, 58, 63, 63, 63], [63, 72, 71, 75, 69])"
+        hints:
+          - x と y の平均値を求め、偏差の表をつくりましょう。
+          - 分散と標準偏差を、x と y それぞれで求めましょう。
+          - 共分散を、標準偏差の積でわりましょう。
+        paths:
+          - [x の平均値は 60、偏差は −7、−2、3、3、3, y の平均値は 70、偏差は −7、2、1、5、−1, x の分散は 80 ÷ 5 = 16、y の分散も 80 ÷ 5 = 16 で、標準偏差はどちらも 4, 共分散は (49 − 4 + 3 + 15 − 3) ÷ 5 = 12、r = 12 ÷ 16 = 3/4]
+    extra:
+      - part: 今日
+        text: 5 人の x と y は、x が 1、3、4、5、7、y が 8、7、5、4、1 でした（同じ順に組になっています）。x と y の共分散を求めましょう。
+        answer: −24/5
+        accept: [−4.8]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda xs, ys: sum((xs[i] - Fraction(sum(xs), len(xs))) * (ys[i] - Fraction(sum(ys), len(ys))) for i in range(len(xs))) / len(xs))([1, 3, 4, 5, 7], [8, 7, 5, 4, 1]))"
+        hints:
+          - x の平均値と y の平均値を求めましょう。
+          - 組ごとに偏差の積を求めましょう。符号に気をつけましょう。
+          - 積の合計を 5 でわりましょう。
+        paths:
+          - [x の平均値は 4、y の平均値は 5, 偏差の積は −9、−2、0、−1、−12, −24 ÷ 5 = −24/5]
+      - part: 今日
+        text: あるデータで、x の標準偏差は 3、y の標準偏差は 6、共分散は 9 でした。相関係数 r を求めましょう。
+        answer: 1/2
+        accept: [0.5]
+        check: "Fraction(9, 3 * 6)"
+        hints:
+          - 相関係数は、共分散 ÷ (x の標準偏差 × y の標準偏差) です。
+          - 分母は 3 × 6 です。
+          - 約分しましょう。
+        paths:
+          - [9 ÷ 18 = 1/2]
+      - part: 挑戦
+        text: あるデータで、x の分散は 16、y の分散は 25、相関係数は 0.6 でした。x と y の共分散を求めましょう。
+        answer: 12
+        check: "Fraction(6, 10) * 4 * 5"
+        hints:
+          - 分散から、x と y の標準偏差を求めましょう。
+          - 相関係数 ＝ 共分散 ÷ (標準偏差の積) を、共分散について解きましょう。
+          - 共分散 ＝ 相関係数 × 標準偏差の積 です。
+        paths:
+          - [標準偏差は 4 と 5, 共分散 = 0.6 × 4 × 5 = 12]
+        note: 分散 16 と 25 をそのままかけて 0.6 × 400 = 240 としやすい。相関係数の分母は標準偏差の積。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 5 人の記録は、23、29、31、32、35（回）でした。標準偏差は何回ですか。
+        answer: 4
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([23, 29, 31, 32, 35]))"
+        hints:
+          - 平均値と偏差を求めましょう。
+          - 偏差の 2 乗の平均が分散です。
+          - 2 乗すると分散になる正の数を考えましょう。
+        paths:
+          - [平均値は 30、偏差は −7、−1、1、2、5, 分散は (49 + 1 + 1 + 4 + 25) ÷ 5 = 16, 標準偏差は 4]
+      - part: 思い出す
+        text: あるデータで、x の標準偏差は 2、y の標準偏差は 5、共分散は 8 でした。相関係数 r を求めましょう。
+        answer: 4/5
+        accept: [0.8]
+        check: "Fraction(8, 2 * 5)"
+        hints:
+          - 相関係数は、共分散を標準偏差の積でわった数です。
+          - 分母は 2 × 5 です。
+          - 約分しましょう。
+        paths:
+          - [8 ÷ 10 = 4/5]
+      - part: 今日
+        text: 10 人のデータの散布図です。x と y の相関係数に最も近いものはどれですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="69.6" y1="200.0" x2="69.6" y2="16.0"/>
+              <line x1="93.2" y1="200.0" x2="93.2" y2="16.0"/>
+              <line x1="116.8" y1="200.0" x2="116.8" y2="16.0"/>
+              <line x1="140.4" y1="200.0" x2="140.4" y2="16.0"/>
+              <line x1="164.0" y1="200.0" x2="164.0" y2="16.0"/>
+              <line x1="187.6" y1="200.0" x2="187.6" y2="16.0"/>
+              <line x1="211.2" y1="200.0" x2="211.2" y2="16.0"/>
+              <line x1="234.8" y1="200.0" x2="234.8" y2="16.0"/>
+              <line x1="258.4" y1="200.0" x2="258.4" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="181.6" x2="282.0" y2="181.6"/>
+              <line x1="46.0" y1="163.2" x2="282.0" y2="163.2"/>
+              <line x1="46.0" y1="144.8" x2="282.0" y2="144.8"/>
+              <line x1="46.0" y1="126.4" x2="282.0" y2="126.4"/>
+              <line x1="46.0" y1="108.0" x2="282.0" y2="108.0"/>
+              <line x1="46.0" y1="89.6" x2="282.0" y2="89.6"/>
+              <line x1="46.0" y1="71.2" x2="282.0" y2="71.2"/>
+              <line x1="46.0" y1="52.8" x2="282.0" y2="52.8"/>
+              <line x1="46.0" y1="34.4" x2="282.0" y2="34.4"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">0</text>
+            <text x="69.6" y="214.0" font-size="10" text-anchor="middle">1</text>
+            <text x="93.2" y="214.0" font-size="10" text-anchor="middle">2</text>
+            <text x="116.8" y="214.0" font-size="10" text-anchor="middle">3</text>
+            <text x="140.4" y="214.0" font-size="10" text-anchor="middle">4</text>
+            <text x="164.0" y="214.0" font-size="10" text-anchor="middle">5</text>
+            <text x="187.6" y="214.0" font-size="10" text-anchor="middle">6</text>
+            <text x="211.2" y="214.0" font-size="10" text-anchor="middle">7</text>
+            <text x="234.8" y="214.0" font-size="10" text-anchor="middle">8</text>
+            <text x="258.4" y="214.0" font-size="10" text-anchor="middle">9</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">10</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">0</text>
+            <text x="42.0" y="185.1" font-size="10" text-anchor="end">1</text>
+            <text x="42.0" y="166.7" font-size="10" text-anchor="end">2</text>
+            <text x="42.0" y="148.3" font-size="10" text-anchor="end">3</text>
+            <text x="42.0" y="129.9" font-size="10" text-anchor="end">4</text>
+            <text x="42.0" y="111.5" font-size="10" text-anchor="end">5</text>
+            <text x="42.0" y="93.1" font-size="10" text-anchor="end">6</text>
+            <text x="42.0" y="74.7" font-size="10" text-anchor="end">7</text>
+            <text x="42.0" y="56.3" font-size="10" text-anchor="end">8</text>
+            <text x="42.0" y="37.9" font-size="10" text-anchor="end">9</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">10</text>
+            <circle cx="69.6" cy="52.8" r="3.5" fill="currentColor"/>
+            <circle cx="93.2" cy="34.4" r="3.5" fill="currentColor"/>
+            <circle cx="116.8" cy="89.6" r="3.5" fill="currentColor"/>
+            <circle cx="140.4" cy="71.2" r="3.5" fill="currentColor"/>
+            <circle cx="164.0" cy="126.4" r="3.5" fill="currentColor"/>
+            <circle cx="187.6" cy="89.6" r="3.5" fill="currentColor"/>
+            <circle cx="211.2" cy="144.8" r="3.5" fill="currentColor"/>
+            <circle cx="234.8" cy="108.0" r="3.5" fill="currentColor"/>
+            <circle cx="258.4" cy="163.2" r="3.5" fill="currentColor"/>
+            <circle cx="282.0" cy="126.4" r="3.5" fill="currentColor"/>
+          </svg>
+        choices:
+          - "0.9"
+          - "0.1"
+          - −0.7
+        answer: −0.7
+        check: "min({'0.9': 0.9, '0.1': 0.1, '−0.7': -0.7}.items(), key=lambda kv: abs(kv[1] - (lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))([(1, 8), (2, 9), (3, 6), (4, 7), (5, 4), (6, 6), (7, 3), (8, 5), (9, 2), (10, 4)])))[0]"
+        hints:
+          - 点は右上がりと右下がりのどちらに並んでいるでしょう。
+          - 右下がりなら、相関係数は負の数です。
+          - 点が直線のまわりにある程度まとまっているかを見ましょう。
+        paths:
+          - [右下がりで、直線のまわりにある程度まとまっている, −0.7]
+      - part: わけ
+        text: どんなデータでも、偏差（それぞれの値 − 平均値）の合計は 0 になります。このわけを、筋道を立てて書きましょう。
+        explain: 例：「データの値が n 個あり、その合計を S、平均値を m とする。平均値の決め方から m = S ÷ n なので、S = n × m である。偏差の合計は (1 個目の値 − m) + (2 個目の値 − m) + … + (n 個目の値 − m) で、たす順を入れかえてまとめると、(値の合計) − (m を n 個たした数) = S − n × m になる。S = n × m なので、これは 0 である。」と書ければよい。①「n 個、合計 S、平均値 m とする」で文字を決める、② 偏差の合計を「値の合計 − m の n 個分」に変形する、③ 平均値の決め方（m = S ÷ n）で結ぶ、の 3 つがそろっているかを見る。2 日目の 7、9、10、11、13 の偏差の合計が 0 になることを確かめただけで終わっていたら、例ではすべてのデータを示せないことを話す。だから偏差をそのまま平均しても散らばりを表せず、2 乗してから平均する（分散）ことにも触れる。
+        hints:
+          - データの値を n 個、その合計を S、平均値を m としましょう。
+          - 偏差の合計を、値の合計と、m を何個かたした数に分けましょう。
+          - 平均値の決め方 m = S ÷ n を使いましょう。
+        paths:
+          - [n 個の値の合計を S、平均値を m とする, 偏差の合計 = S − n × m, m = S ÷ n なので S − n × m = 0]
+      - part: わけ
+        text: あるデータのすべての値に 5 を足しても、分散は変わりません。また、すべての値を 3 倍すると、分散は 9 倍、標準偏差は 3 倍になります。この 2 つのわけを、筋道を立てて書きましょう。
+        explain: 例：「データの値が n 個あり、平均値を m とする。すべての値に 5 を足すと、合計は 5 × n だけ増えるので、平均値は m + 5 になる。それぞれの偏差は (値 + 5) − (m + 5) = 値 − m で、もとの偏差と同じなので、偏差の 2 乗の平均である分散は変わらない。すべての値を 3 倍すると、合計も 3 倍になるので平均値は 3m になり、偏差は 3 × 値 − 3m = 3 × (値 − m) で、もとの偏差の 3 倍になる。偏差の 2 乗は (3 × 偏差)² = 9 × (偏差)²（指数法則、A-009）なので、その平均の分散は 9 倍になる。標準偏差を s とすると (3s)² = 9s² は新しい分散と等しく、3s は正なので、新しい標準偏差は 3s である。」と書ければよい。①「n 個、平均値 m とする」で文字を決める、② 新しい平均値と偏差を式で表す（分配法則）、③ 分散と標準偏差の決め方、指数法則で結ぶ、の 3 つを見る。5 と 3 をほかの数にしても同じ筋道で、a 倍して b を足すと分散は a² 倍、標準偏差は a 倍（a が正のとき）になることに触れる。点数を 2 倍する例で確かめただけで終わっていたら、例ではすべてのデータを示せないことを話す。
+        hints:
+          - データの値を n 個、平均値を m としましょう。
+          - 5 を足したとき、3 倍したときの平均値と偏差を、それぞれ式で表しましょう。
+          - 分散は偏差の 2 乗の平均、標準偏差は 2 乗して分散になる正の数です。
+        paths:
+          - [n 個の値の平均値を m とする, 5 を足すと平均値は m + 5 で、偏差は変わらない, 3 倍すると平均値は 3m で、偏差は 3 倍、偏差の 2 乗は 9 倍, 分散は 9 倍、標準偏差は 3 倍]
+      - part: わけ
+        text: 5 人の身長 x（cm）と体重 y（kg）の相関係数は 0.6 でした。身長を mm で表した値（x の 10 倍）に変えても、相関係数は 0.6 のままです。このわけを、前の問題を使って筋道を立てて書きましょう。
+        explain: 例：「身長を mm で表した値を X とすると、X は x の 10 倍である。X の平均値は x の平均値の 10 倍なので、X の偏差は x の偏差の 10 倍になる（前の問題）。y は変わらないので、X の偏差と y の偏差の積はどれも 10 倍になり、その平均である共分散も 10 倍になる。X の標準偏差は x の標準偏差の 10 倍である（前の問題）。よって X と y の相関係数は (10 × 共分散) ÷ (10 × x の標準偏差 × y の標準偏差) で、分子と分母の 10 が約分されて、もとの相関係数 0.6 と同じになる。」と書ければよい。① X を決める、② 偏差・共分散・標準偏差がそれぞれ何倍になるかを式で表す、③ 相関係数の決め方と約分で結ぶ、の 3 つを見る。値に同じ数を足しても偏差は変わらないので、相関係数は変わらないことにも触れる（たとえば体重から 40 をひいても同じ）。相関係数は単位の取り方によらないので、ちがう量の関係の強さを比べられる。負の数をかけると共分散の符号だけが変わり、相関係数の符号が逆になることも話すとよい。
+        hints:
+          - 身長を mm で表した値を X とし、X の偏差は x の偏差の何倍かを考えましょう。
+          - 共分散と、X の標準偏差は、それぞれ何倍になるでしょう。
+          - 相関係数の式の分子と分母を比べましょう。
+        paths:
+          - [X は x の 10 倍とする, X の偏差は x の偏差の 10 倍, 共分散も X の標準偏差も 10 倍, 相関係数は約分されて変わらない]
+    extra:
+      - part: 今日
+        text: ある組の点数の分散は 9 でした。全員の点数を 2 倍して 10 点を足したとき、標準偏差は何点になりますか。
+        answer: 6
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([2 * x + 10 for x in [5, 11, 11, 13]]))"
+        hints:
+          - 10 点を足しても、偏差は変わりません。
+          - 2 倍すると、偏差は 2 倍、分散は 4 倍になります。
+          - 新しい分散から標準偏差を求めましょう。
+        paths:
+          - [もとの標準偏差は 3, 2 倍すると標準偏差は 2 倍の 6, 10 点を足しても変わらず 6]
+      - part: 今日
+        text: 5 人の記録の偏差は、−4、3、□、5、−1 でした。□ にあてはまる数はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-(-4 + 3 + 5 - 1))"
+        hints:
+          - 偏差の合計は、いつもいくつになるでしょう。
+          - わかっている 4 つの偏差をたしましょう。
+          - 合計が 0 になるように □ を決めましょう。
+        paths:
+          - [−4 + 3 + 5 − 1 = 3, 合計が 0 なので □ = −3]
+      - part: 挑戦
+        text: あるデータで、x の分散は 4、y の分散は 9、x と y の共分散は 3 でした。u = 2x + 1、v = 3y − 5 とするとき、u と v の相関係数を求めましょう。
+        answer: 1/2
+        accept: [0.5]
+        check: "Fraction(2 * 3 * 3, (2 * 2) * (3 * 3))"
+        hints:
+          - まず、x と y の相関係数を求めましょう。
+          - x を 2 倍して 1 を足しても、相関係数は変わるでしょうか（今日のわけの 3 問目）。
+          - y を 3 倍して 5 をひいたときも同じように考えましょう。
+        paths:
+          - [x と y の相関係数は 3 ÷ (2 × 3) = 1/2, 正の数をかけて数を足しても相関係数は変わらない, 1/2]
+          - [u と v の共分散は 2 × 3 × 3 = 18、標準偏差は 4 と 9, 18 ÷ 36 = 1/2]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: ある組の点数を箱ひげ図に表しました。四分位範囲は何点ですか。
+        svg: |
+          <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="30" font-size="12" text-anchor="end"></text>
+            <line x1="81.7" y1="26" x2="132.3" y2="26" stroke="currentColor" stroke-width="2"/>
+            <line x1="189.6" y1="26" x2="250.3" y2="26" stroke="currentColor" stroke-width="2"/>
+            <line x1="81.7" y1="19" x2="81.7" y2="33" stroke="currentColor" stroke-width="2"/>
+            <line x1="250.3" y1="19" x2="250.3" y2="33" stroke="currentColor" stroke-width="2"/>
+            <rect x="132.3" y="15" width="57.3" height="22" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <line x1="166.0" y1="15" x2="166.0" y2="37" stroke="currentColor" stroke-width="2"/>
+            <line x1="48" y1="46" x2="284" y2="46" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="48.0" y1="46" x2="48.0" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="48.0" y="64" font-size="10" text-anchor="middle">20</text>
+            <line x1="81.7" y1="46" x2="81.7" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="81.7" y="64" font-size="10" text-anchor="middle">30</text>
+            <line x1="115.4" y1="46" x2="115.4" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="115.4" y="64" font-size="10" text-anchor="middle">40</text>
+            <line x1="149.1" y1="46" x2="149.1" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="149.1" y="64" font-size="10" text-anchor="middle">50</text>
+            <line x1="182.9" y1="46" x2="182.9" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="182.9" y="64" font-size="10" text-anchor="middle">60</text>
+            <line x1="216.6" y1="46" x2="216.6" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="216.6" y="64" font-size="10" text-anchor="middle">70</text>
+            <line x1="250.3" y1="46" x2="250.3" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="250.3" y="64" font-size="10" text-anchor="middle">80</text>
+            <line x1="284.0" y1="46" x2="284.0" y2="51" stroke="currentColor" stroke-width="1"/>
+            <text x="284.0" y="64" font-size="10" text-anchor="middle">90</text>
+          </svg>
+        answer: 17
+        check: "62 - 45"
+        hints:
+          - 箱の左はしが第 1 四分位数、右はしが第 3 四分位数です。
+          - 目盛りを読んで、2 つの値を求めましょう。
+          - 第 3 四分位数から第 1 四分位数をひきましょう。
+        paths:
+          - [第 1 四分位数は 45、第 3 四分位数は 62, 62 − 45 = 17]
+      - part: 思い出す
+        text: 傾きが 3 で、点 (2, 5) を通る直線の切片はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(5 - 3 * 2)"
+        hints:
+          - 式を y = 3x + b とおきましょう。
+          - x = 2、y = 5 を代入しましょう。
+          - b について解きましょう。
+        paths:
+          - [5 = 3 × 2 + b, b = −1]
+      - part: 今日
+        text: あるデータで、x の平均値は 10、y の平均値は 30 でした。散布図の点の近くを通るように引いた直線（回帰直線）は、平均値の点 (10, 30) を通り、傾きは 2 です。この直線を使って、x = 14 のときの y を予測しましょう。
+        answer: 38
+        check: "30 + 2 * (14 - 10)"
+        hints:
+          - 傾きと 1 点がわかっている直線の式を求めましょう（A-019）。
+          - x が 10 から 14 まで増えると、y はいくつ増えるでしょう。
+          - 30 にその増える量を足しましょう。
+        paths:
+          - [x が 4 増えると、y は 2 × 4 = 8 増える, 30 + 8 = 38]
+          - [回帰直線は y = 2x + 10, x = 14 を代入して 38]
+      - part: 今日
+        text: ある町の 1 年間の月ごとのデータで、アイスクリームの売上と、水の事故の件数の間に強い正の相関がありました。この結果の説明として、正しいものはどれですか。
+        choices: [アイスクリームを食べると、水の事故が起こりやすくなる, 気温のような別のことがらが、両方に関係している可能性がある, 相関係数が正なので、一方が他方の原因である]
+        answer: 気温のような別のことがらが、両方に関係している可能性がある
+        hints:
+          - 暑い月には、どんなことが増えるでしょう。
+          - 相関があることと、一方が他方の原因であることは同じでしょうか。
+          - 両方に影響する、別のことがらを考えましょう。
+        paths:
+          - [暑い月にはアイスクリームも水遊びも増える, 気温が両方に関係している可能性がある]
+        note: 相関があっても、因果関係があるとは限らない（見かけの相関）。原因を確かめるには、実験（S-031）が必要になる。
+      - part: 挑戦
+        text: あるデータで、x の平均値は 50、標準偏差は 10、y の平均値は 60、標準偏差は 8、相関係数は 0.75 でした。回帰直線は、平均値の点を通り、傾きが (相関係数) × (y の標準偏差) ÷ (x の標準偏差) の直線です。x = 70 のときの y の予測値を求めましょう。
+        answer: 72
+        check: "60 + Fraction(75, 100) * 8 / 10 * (70 - 50)"
+        hints:
+          - まず、回帰直線の傾きを求めましょう。
+          - x が 50 から 70 まで増えると、y はいくつ増えるでしょう。
+          - y の平均値 60 に、その増える量を足しましょう。
+        paths:
+          - [傾きは 0.75 × 8 ÷ 10 = 0.6, x が 20 増えると y は 0.6 × 20 = 12 増える, 60 + 12 = 72]
+        note: x が平均より標準偏差 2 つ分大きいとき、予測は y の平均より標準偏差 2 つ分ではなく、r 倍の 1.5 つ分だけ大きい（平均への回帰）。
+    extra:
+      - part: 今日
+        text: 5 人の x と y は、(1, 2)、(2, 4)、(3, 6)、(4, 8)、(5, 10) で、相関係数は 1 です。ここに (6, 0) の人が 1 人加わると、6 人の相関係数はどうなりますか。
+        choices: [1 のまま, 1 より小さくなる, 1 より大きくなる]
+        answer: 1 より小さくなる
+        check: "(lambda r: '1 のまま' if abs(r - 1) < 1e-9 else ('1 より小さくなる' if r < 1 else '1 より大きくなる'))((lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))([(1, 2), (2, 4), (3, 6), (4, 8), (5, 10), (6, 0)]))"
+        hints:
+          - はじめの 5 人の点は、1 本の直線の上にあります。
+          - (6, 0) は、その直線から大きくはずれています。
+          - 相関係数は 1 より大きくなることはありません。
+        paths:
+          - ["(6, 0) は直線から大きくはずれた点", 点が直線の上に並ばなくなるので、1 より小さくなる]
+        note: 外れた値が 1 つあるだけで、相関係数は大きく変わる（この例ではおよそ 0.14）。散布図を見ずに相関係数だけで判断しない。
+      - part: 今日
+        text: あるデータで、x の平均値は 20、y の平均値は 50 で、回帰直線は平均値の点を通り、傾きは −1.5 です。x = 24 のときの y の予測値を求めましょう。
+        answer: 44
+        check: "50 + Fraction(-15, 10) * (24 - 20)"
+        hints:
+          - x が 20 から 24 まで増えると、x の増える量は 4 です。
+          - 傾きが −1.5 なので、y は減ります。
+          - 50 から減る量をひきましょう。
+        paths:
+          - [y の増える量は −1.5 × 4 = −6, 50 − 6 = 44]
+      - part: 挑戦
+        text: 20 人のテストの点数の平均値は 60 点、標準偏差は 8 点でした。全員の点数に同じ数をかけて同じ数を足し、平均値が 50 点、標準偏差が 10 点になるように直します。もとの点数が 76 点だった人は、何点になりますか。
+        answer: 70
+        check: "50 + Fraction(76 - 60, 8) * 10"
+        hints:
+          - 76 点は、平均値より標準偏差のいくつ分大きいでしょう。
+          - 直したあとも、平均値から標準偏差のいくつ分かは変わりません。
+          - 50 点に、10 点のその数の分を足しましょう。
+        paths:
+          - [76 − 60 = 16 は標準偏差 8 の 2 つ分, 直したあとは 50 + 10 × 2 = 70]
+        note: 偏差を標準偏差でわった値（標準偏差のいくつ分か）は、かける数が正なら直しても変わらない。S-041 の標準化と偏差値の考えの入口。
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 10 人の数学の点数と理科の点数の散布図です。数学が 70 点以上の人のうち、理科が 60 点未満の人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="46.0" y1="200.0" x2="46.0" y2="16.0"/>
+              <line x1="93.2" y1="200.0" x2="93.2" y2="16.0"/>
+              <line x1="140.4" y1="200.0" x2="140.4" y2="16.0"/>
+              <line x1="187.6" y1="200.0" x2="187.6" y2="16.0"/>
+              <line x1="234.8" y1="200.0" x2="234.8" y2="16.0"/>
+              <line x1="282.0" y1="200.0" x2="282.0" y2="16.0"/>
+              <line x1="46.0" y1="200.0" x2="282.0" y2="200.0"/>
+              <line x1="46.0" y1="163.2" x2="282.0" y2="163.2"/>
+              <line x1="46.0" y1="126.4" x2="282.0" y2="126.4"/>
+              <line x1="46.0" y1="89.6" x2="282.0" y2="89.6"/>
+              <line x1="46.0" y1="52.8" x2="282.0" y2="52.8"/>
+              <line x1="46.0" y1="16.0" x2="282.0" y2="16.0"/>
+            </g>
+            <line x1="46.0" y1="200.0" x2="288.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="46.0" y1="200.0" x2="46.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="46.0" y="214.0" font-size="10" text-anchor="middle">40</text>
+            <text x="93.2" y="214.0" font-size="10" text-anchor="middle">50</text>
+            <text x="140.4" y="214.0" font-size="10" text-anchor="middle">60</text>
+            <text x="187.6" y="214.0" font-size="10" text-anchor="middle">70</text>
+            <text x="234.8" y="214.0" font-size="10" text-anchor="middle">80</text>
+            <text x="282.0" y="214.0" font-size="10" text-anchor="middle">90</text>
+            <text x="42.0" y="203.5" font-size="10" text-anchor="end">40</text>
+            <text x="42.0" y="166.7" font-size="10" text-anchor="end">50</text>
+            <text x="42.0" y="129.9" font-size="10" text-anchor="end">60</text>
+            <text x="42.0" y="93.1" font-size="10" text-anchor="end">70</text>
+            <text x="42.0" y="56.3" font-size="10" text-anchor="end">80</text>
+            <text x="42.0" y="19.5" font-size="10" text-anchor="end">90</text>
+            <text x="288.0" y="230.0" font-size="12" text-anchor="end">数学（点）</text>
+            <text x="52.0" y="12.0" font-size="12" text-anchor="start">理科（点）</text>
+            <circle cx="64.9" cy="155.8" r="3.5" fill="currentColor"/>
+            <circle cx="88.5" cy="115.4" r="3.5" fill="currentColor"/>
+            <circle cx="121.5" cy="174.2" r="3.5" fill="currentColor"/>
+            <circle cx="131.0" cy="85.9" r="3.5" fill="currentColor"/>
+            <circle cx="154.6" cy="104.3" r="3.5" fill="currentColor"/>
+            <circle cx="173.4" cy="148.5" r="3.5" fill="currentColor"/>
+            <circle cx="201.8" cy="144.8" r="3.5" fill="currentColor"/>
+            <circle cx="215.9" cy="60.2" r="3.5" fill="currentColor"/>
+            <circle cx="249.0" cy="155.8" r="3.5" fill="currentColor"/>
+            <circle cx="272.6" cy="38.1" r="3.5" fill="currentColor"/>
+          </svg>
+        answer: 2
+        check: "sum(1 for x, y in [(44, 52), (49, 63), (56, 47), (58, 71), (63, 66), (67, 54), (73, 55), (76, 78), (83, 52), (88, 84)] if x >= 70 and y < 60)"
+        hints:
+          - 数学 70 点に縦の線、理科 60 点に横の線を引きましょう。
+          - 縦の線より右の点を見ましょう。
+          - その中で、横の線より下の点を数えましょう。
+        paths:
+          - [縦の線の右で、横の線の下の点を数える, 2 人]
+      - part: 今日
+        text: 3 つの散布図 A、B、C があります。相関がほとんどないのはどれですか。
+        svg: |
+          <svg viewBox="0 0 330 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="14" y1="120" x2="106" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="14" y1="120" x2="14" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="58" y="136" font-size="13" text-anchor="middle">A</text>
+            <circle cx="22.8" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="31.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="40.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="49.2" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="58.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="58.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="66.8" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="75.6" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="84.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="84.4" cy="111.2" r="2.8" fill="currentColor"/>
+            <circle cx="93.2" cy="102.4" r="2.8" fill="currentColor"/>
+            <line x1="122" y1="120" x2="214" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="122" y1="120" x2="122" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="166" y="136" font-size="13" text-anchor="middle">B</text>
+            <circle cx="130.8" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="139.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="148.4" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="157.2" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="166.0" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="174.8" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="183.6" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="192.4" cy="49.6" r="2.8" fill="currentColor"/>
+            <circle cx="201.2" cy="93.6" r="2.8" fill="currentColor"/>
+            <line x1="230" y1="120" x2="322" y2="120" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="230" y1="120" x2="230" y2="28" stroke="currentColor" stroke-width="1.5"/>
+            <text x="274" y="136" font-size="13" text-anchor="middle">C</text>
+            <circle cx="238.8" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="102.4" r="2.8" fill="currentColor"/>
+            <circle cx="247.6" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="256.4" cy="93.6" r="2.8" fill="currentColor"/>
+            <circle cx="265.2" cy="76.0" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="84.8" r="2.8" fill="currentColor"/>
+            <circle cx="274.0" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="282.8" cy="67.2" r="2.8" fill="currentColor"/>
+            <circle cx="291.6" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="58.4" r="2.8" fill="currentColor"/>
+            <circle cx="300.4" cy="40.8" r="2.8" fill="currentColor"/>
+            <circle cx="309.2" cy="49.6" r="2.8" fill="currentColor"/>
+          </svg>
+        choices: [A, B, C]
+        answer: B
+        check: "[k for k, p in {'A': [(1, 8), (2, 9), (2, 7), (3, 7), (4, 6), (5, 6), (5, 4), (6, 4), (7, 3), (8, 3), (8, 1), (9, 2)], 'B': [(1, 5), (2, 8), (2, 2), (3, 6), (4, 3), (5, 8), (5, 5), (6, 2), (7, 6), (8, 4), (8, 8), (9, 3)], 'C': [(1, 2), (2, 2), (2, 4), (3, 3), (4, 5), (5, 4), (5, 6), (6, 6), (7, 7), (8, 7), (8, 9), (9, 8)]}.items() if abs((lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))(p)) < 0.3][0]"
+        hints:
+          - 右上がりか右下がりの傾向があるものは、相関があります。
+          - どちらの傾向も見られないものはどれでしょう。
+          - 点が全体に散らばっているものを選びましょう。
+        paths:
+          - [A は右下がり、C は右上がり、B は傾向がない, B]
+      - part: 今日
+        text: 5 人の記録は、8、12、10、15、5（回）でした。分散を求めましょう。
+        answer: 58/5
+        accept: [11.6]
+        check: "(lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([8, 12, 10, 15, 5])"
+        hints:
+          - 平均値を求めましょう。
+          - 偏差を 2 乗しましょう。
+          - 2 乗の合計を 5 でわりましょう。
+        paths:
+          - [平均値は 10、偏差は −2、2、0、5、−5, (4 + 4 + 0 + 25 + 25) ÷ 5 = 58/5]
+      - part: 今日
+        text: 5 人の記録は、35、37、39、43、46（回）でした。標準偏差は何回ですか。
+        answer: 4
+        check: "(lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([35, 37, 39, 43, 46]))"
+        hints:
+          - 平均値と偏差を求めましょう。
+          - 分散を求めましょう。
+          - 2 乗すると分散になる正の数が標準偏差です。
+        paths:
+          - [平均値は 40、偏差は −5、−3、−1、3、6, 分散は (25 + 9 + 1 + 9 + 36) ÷ 5 = 16, 標準偏差は 4]
+      - part: 今日
+        text: 5 人の x と y は、x が 2、4、5、6、8、y が 9、5、6、7、3 でした（同じ順に組になっています）。x と y の共分散を求めましょう。
+        answer: −16/5
+        accept: [−3.2]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda xs, ys: sum((xs[i] - Fraction(sum(xs), len(xs))) * (ys[i] - Fraction(sum(ys), len(ys))) for i in range(len(xs))) / len(xs))([2, 4, 5, 6, 8], [9, 5, 6, 7, 3]))"
+        hints:
+          - x の平均値と y の平均値を求めましょう。
+          - 組ごとに偏差の積を求めましょう。
+          - 積の合計を 5 でわりましょう。
+        paths:
+          - [x の平均値は 5、y の平均値は 6, 偏差の積は −9、1、0、1、−9, −16 ÷ 5 = −16/5]
+      - part: 今日
+        text: 前の問題の 5 人の x と y の相関係数 r を求めましょう。
+        answer: −4/5
+        accept: [−0.8]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda xs, ys: (lambda xs, ys: sum((xs[i] - Fraction(sum(xs), len(xs))) * (ys[i] - Fraction(sum(ys), len(ys))) for i in range(len(xs))) / len(xs))(xs, ys) / ((lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))(xs)) * (lambda v: [k for k in range(0, 101) if k * k == v][0])((lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))(ys))))([2, 4, 5, 6, 8], [9, 5, 6, 7, 3]))"
+        hints:
+          - x と y の分散と標準偏差を求めましょう。
+          - 共分散は前の問題で求めました。
+          - 共分散を標準偏差の積でわりましょう。
+        paths:
+          - [x の分散は 20 ÷ 5 = 4 で標準偏差 2、y の分散も 4 で標準偏差 2, −16/5 ÷ 4 = −4/5]
+      - part: 今日
+        text: あるデータの分散は 25 でした。すべての値を 3 倍して 2 を足したデータの標準偏差を求めましょう。
+        answer: 15
+        check: "[k for k in range(0, 101) if k * k == 9 * 25][0]"
+        hints:
+          - 2 を足しても、散らばりは変わりません。
+          - 3 倍すると、標準偏差は何倍になるでしょう。
+          - もとの標準偏差を先に求めましょう。
+        paths:
+          - [もとの標準偏差は 5, 3 倍すると 15、2 を足しても 15]
+    extra:
+      - part: 今日
+        text: あるデータで、x の平均値は 8、y の平均値は 40 で、回帰直線は平均値の点を通り、傾きは 3 です。x = 11 のときの y の予測値を求めましょう。
+        answer: 49
+        check: "40 + 3 * (11 - 8)"
+        hints:
+          - x の増える量を求めましょう。
+          - y の増える量は、傾き × (x の増える量) です。
+          - 40 に足しましょう。
+        paths:
+          - [x は 3 増えて、y は 9 増える, 40 + 9 = 49]
+      - part: 今日
+        text: あるデータで、x の標準偏差は 5、y の標準偏差は 4、共分散は −10 でした。相関係数 r を求めましょう。
+        answer: −1/2
+        accept: [−0.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-10, 5 * 4))"
+        hints:
+          - 相関係数は、共分散を標準偏差の積でわった数です。
+          - 分母は 5 × 4 です。
+          - 符号に気をつけて約分しましょう。
+        paths:
+          - [−10 ÷ 20 = −1/2]
+      - part: 今日
+        text: 5 人の点数は、6、10、8、12、4（点）でした。分散を求めましょう。
+        answer: 8
+        check: "(lambda d: sum((x - Fraction(sum(d), len(d))) ** 2 for x in d) / len(d))([6, 10, 8, 12, 4])"
+        hints:
+          - 平均値を求めましょう。
+          - 偏差を 2 乗しましょう。
+          - 2 乗の合計を 5 でわりましょう。
+        paths:
+          - [平均値は 8、偏差は −2、2、0、4、−4, (4 + 4 + 0 + 16 + 16) ÷ 5 = 8]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: ある組の 6 人が国語と数学のテストを受けたところ、どの人も 2 教科の合計点がちょうど 150 点でした（6 人の点はすべて同じではありません）。国語の点と数学の点の相関係数を求めましょう。
+    answer: −1
+    check: "(lambda r: '−1' if abs(r + 1) < 1e-9 else r)((lambda p: (lambda n, mx, my: sum((x - mx) * (y - my) for x, y in p) / math.sqrt(sum((x - mx) ** 2 for x, y in p) * sum((y - my) ** 2 for x, y in p)))(len(p), sum(x for x, y in p) / len(p), sum(y for x, y in p) / len(p)))([(x, 150 - x) for x in [62, 70, 75, 81, 88, 94]]))"
+    hints:
+      - 国語の点を x、数学の点を y とすると、y はどんな式で表せるかな。
+      - 散布図の点は、どんな形に並ぶかな。
+      - y の偏差は x の偏差の何倍かな。それを使って、共分散と標準偏差を x の分散で表そう。
+    paths:
+      - [y = 150 − x, y の平均値は 150 − (x の平均値) なので、y の偏差は x の偏差の −1 倍, 共分散 = −(x の分散)、y の標準偏差 = x の標準偏差, r = −(x の分散) ÷ (x の標準偏差)² = −1]
+    note: 1 人ずつの点数がわからなくても、変わらない量（合計点）に目をつけると決まる。相関係数が −1 になるのは、点がすべて右下がりの直線の上にあるときだけであることにも触れる。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [A-012]
+    text: あるデータで、x から y を予測する回帰直線は y = 0.5x + 20、y から x を予測する回帰直線は x = 0.8y − 4 でした。どちらの回帰直線も、x の平均値と y の平均値の点を通ります。y の平均値を求めましょう。
+    answer: 30
+    check: "[y for x in range(0, 100) for y in range(0, 100) if 2 * y == x + 40 and 5 * x == 4 * y - 20][0]"
+    hints:
+      - 2 本の直線がどちらも通る点は、どんな点かな。
+      - 平均値の点は、2 本の回帰直線の交点だね。
+      - 2 つの式を連立方程式として解こう（A-012）。
+    paths:
+      - [平均値の点は 2 本の回帰直線の交点, x = 0.8(0.5x + 20) − 4 = 0.4x + 12, 0.6x = 12 で x = 20、y = 0.5 × 20 + 20 = 30]
+    note: 「どちらの直線も平均値の点を通る」を「交点が平均値の点」と言いかえ、連立方程式（A-012）で解く。y から x を予測する直線は、y を横軸にした回帰直線で、x から y を予測する直線とは一般にちがう直線になる。
+  - part: 離
+    kinds: [数, 手数]
+    text: 5 人の身長と体重です。身長と体重の相関係数 r を求めましょう。
+    svg: |
+      <svg viewBox="0 0 310 104" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="10" width="290" height="28" fill="#f3c969" fill-opacity=".35" stroke="none"/>
+        <rect x="10" y="10" width="290" height="84" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="90" y1="10" x2="90" y2="94" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="132" y1="10" x2="132" y2="94" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="174" y1="10" x2="174" y2="94" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="216" y1="10" x2="216" y2="94" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="258" y1="10" x2="258" y2="94" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="10" y1="38" x2="300" y2="38" stroke="currentColor" stroke-width="1.5"/>
+        <line x1="10" y1="66" x2="300" y2="66" stroke="currentColor" stroke-width="1.5"/>
+        <text x="111" y="28" font-size="12" text-anchor="middle">A</text>
+        <text x="153" y="28" font-size="12" text-anchor="middle">B</text>
+        <text x="195" y="28" font-size="12" text-anchor="middle">C</text>
+        <text x="237" y="28" font-size="12" text-anchor="middle">D</text>
+        <text x="279" y="28" font-size="12" text-anchor="middle">E</text>
+        <text x="50" y="56" font-size="12" text-anchor="middle">身長（m）</text>
+        <text x="111" y="56" font-size="12" text-anchor="middle">1.54</text>
+        <text x="153" y="56" font-size="12" text-anchor="middle">1.58</text>
+        <text x="195" y="56" font-size="12" text-anchor="middle">1.60</text>
+        <text x="237" y="56" font-size="12" text-anchor="middle">1.62</text>
+        <text x="279" y="56" font-size="12" text-anchor="middle">1.66</text>
+        <text x="50" y="84" font-size="12" text-anchor="middle">体重（kg）</text>
+        <text x="111" y="84" font-size="12" text-anchor="middle">50.5</text>
+        <text x="153" y="84" font-size="12" text-anchor="middle">46.5</text>
+        <text x="195" y="84" font-size="12" text-anchor="middle">52.5</text>
+        <text x="237" y="84" font-size="12" text-anchor="middle">58.5</text>
+        <text x="279" y="84" font-size="12" text-anchor="middle">54.5</text>
+      </svg>
+    answer: 3/5
+    accept: [0.6]
+    check: "(lambda xs, ys: (lambda mx, my: (lambda c, vx, vy: [Fraction(k, 100) for k in range(101) if Fraction(k * k, 10000) == c * c / (vx * vy)][0] if c > 0 else None)(sum((xs[i] - mx) * (ys[i] - my) for i in range(5)) / 5, sum((x - mx) ** 2 for x in xs) / 5, sum((y - my) ** 2 for y in ys) / 5))(sum(xs) / 5, sum(ys) / 5))([Fraction(s) for s in ('1.54', '1.58', '1.60', '1.62', '1.66')], [Fraction(s) for s in ('50.5', '46.5', '52.5', '58.5', '54.5')])"
+    hints:
+      - 小数のままでは計算が大変だね。数を足したり、正の数をかけたりしても、相関係数は変わらない（4 日目のわけ）ことを使えないかな。
+      - 身長は 1.60 をひいて 100 倍、体重は 52.5 をひくと、どんな数になるかな。
+      - 直した値で、分散、標準偏差、共分散を求めよう。
+    paths:
+      - [身長を (身長 − 1.60) × 100 に直すと −6、−2、0、2、6, 体重を 体重 − 52.5 に直すと −2、−6、0、6、2, 分散は 16 と 16、標準偏差は 4 と 4、共分散は (12 + 12 + 0 + 12 + 12) ÷ 5 = 48/5, r = 48/5 ÷ 16 = 3/5]
+    note: 小数のデータを、相関係数が変わらない直し方（数を足す、正の数をかける）で整数に直すのが要点。直さずに計算すると、0.0016 のような小さい数で桁をまちがえやすい。

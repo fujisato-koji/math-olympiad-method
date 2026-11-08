@@ -1,0 +1,1275 @@
+# M-002 平面の線形変換と行列式
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-019、M-001 に合わせる。行列の書き方は M-001 と同じ（svg にかっこでくくった形、
+#   文の中では「(2 1；3 4)」、列ベクトルは「(x；y)」）。成分が式のときは「(cos θ、−sin θ；sin θ、cos θ)」と成分を「、」で区切る。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜5 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# ことば：1 次変換（線形変換）、像、1 次変換を表す行列、対称移動、拡大、原点のまわりの回転 R(θ)、合成変換 g∘f、逆変換、線形性、
+#   行列式 det A = ad − bc（面積の倍率と向き）。
+# 前提は M-001（行列、積、逆行列、ad − bc、ケーリー・ハミルトンの定理）と G-025（三角関数と加法定理）。G-025 はまだ中身ができていないので、
+#   地図の題と前提（G-024、G-026、G-010）から、一般角の sin と cos、加法定理、2 倍角の公式を済んだものとした。
+#   角は度で書き（弧度法は使わない）、回転の角は 30°、45°、60°、90°、120°、180° と、cos θ と sin θ を分数で与えた角にした。
+#   前提のたどりに G-027（ベクトル、内積、直線のベクトル方程式）、G-024（三角比、sin²θ + cos²θ = 1、三角形の面積 (1/2)bc sin A）、
+#   G-026（直線の式、座標で面積）がある。G-027 もまだ中身ができていないので、M-001 の注と同じものを済んだとした。
+# 1 次変換は、点 (x, y) を (ax + by, cx + dy) に移す変換とし、(x′；y′) = A(x；y)。平行移動は原点を動かすので 1 次変換でない（見本で触れる）。
+# 固有値と固有ベクトル、対角化、3 次の行列式、行列式の一般の定義（M-003 より後ろ）は扱わない。
+#   「自分自身に移る直線」は、離の問題で、像を直線の式に入れた 2 次方程式（A-017）として 1 問だけ扱う。
+# わけの日は、(1) 線形性 f(sp + tq) = s f(p) + t f(q)、(2) 回転の合成 R(β)R(α) = R(α + β)（加法定理）、
+#   (3) 単位正方形の像の面積が |ad − bc|（平行四辺形の面積 |u||v| sin θ と内積から、(a² + c²)(b² + d²) − (ab + cd)² = (ad − bc)²）。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 1 次変換と行列（像、(1, 0) と (0, 1) の像が列、2 点の像から行列を決める）
+#   2 日目 代表的な変換（x 軸・y 軸・原点・直線 y = x についての対称移動、拡大、原点のまわりの回転）
+#   3 日目 合成変換（行列の積、あとの変換が左）と逆変換（逆行列）、回転をくり返す
+#   4 日目 線形性と図形の像（直線の像、ad − bc = 0 のとき平面が直線につぶれる）　5 日目 行列式と面積（向き、det(AB) = det A × det B）
+#   6 日目 わけ　7 日目 M-001・G-025 と混ぜる（2 倍角と回転、回転と拡大の累乗、像の面積）　8 日目 確認
+# 答えは像の座標の 1 つ、成分、面積、行列式を打つ。√ を含む値、行列、直線の式は choices にした。
+#   check は、行列の積（M-001 と同じ lambda）、回転は math.cos と math.sin で計算して math.isclose で比べるか、分数で与えた cos と sin を
+#   Fraction で計算する。面積は |ad − bc| と元の面積の積。
+# 図は svg（D-040）。座標平面に、もとの図形（1 辺 1 の正方形など）と像を淡い色でぬり分け、点の像は点線で結ぶ。答えの座標は図に書かない。
+# 1 次変換と行列式は、掃き出し法と階数（M-003）、抽象的なベクトル空間と線形写像、コンピュータグラフィックスの変換、ロボットの姿勢、
+#   一次分数変換（D-034）の入口になる（D-026）。
+
+id: M-002
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: x′ = 2x + y、y′ = x + 3y で、点 P(x, y) を点 P′(x′, y′) に移す変換を調べてみましょう。
+        svg: |
+          <svg viewBox="0 0 208.0 220.0" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="26.0" y1="194.0" x2="26.0" y2="26.0"/>
+              <line x1="54.0" y1="194.0" x2="54.0" y2="26.0"/>
+              <line x1="82.0" y1="194.0" x2="82.0" y2="26.0"/>
+              <line x1="110.0" y1="194.0" x2="110.0" y2="26.0"/>
+              <line x1="138.0" y1="194.0" x2="138.0" y2="26.0"/>
+              <line x1="166.0" y1="194.0" x2="166.0" y2="26.0"/>
+              <line x1="26.0" y1="194.0" x2="166.0" y2="194.0"/>
+              <line x1="26.0" y1="166.0" x2="166.0" y2="166.0"/>
+              <line x1="26.0" y1="138.0" x2="166.0" y2="138.0"/>
+              <line x1="26.0" y1="110.0" x2="166.0" y2="110.0"/>
+              <line x1="26.0" y1="82.0" x2="166.0" y2="82.0"/>
+              <line x1="26.0" y1="54.0" x2="166.0" y2="54.0"/>
+              <line x1="26.0" y1="26.0" x2="166.0" y2="26.0"/>
+            </g>
+            <line x1="18.0" y1="166.0" x2="178.0" y2="166.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="54.0" y1="202.0" x2="54.0" y2="14.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M178.0 166.0 L170.0 162.0 L170.0 170.0 Z" fill="currentColor"/>
+            <path d="M54.0 14.0 L50.0 22.0 L58.0 22.0 Z" fill="currentColor"/>
+            <text x="180.0" y="180.0" font-size="14" font-style="italic">x</text>
+            <text x="61.0" y="18.0" font-size="14" font-style="italic">y</text>
+            <text x="50.0" y="179.0" font-size="11" text-anchor="end">O</text>
+            <text x="26.0" y="179.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="82.0" y="179.0" font-size="10" text-anchor="middle">1</text>
+            <text x="110.0" y="179.0" font-size="10" text-anchor="middle">2</text>
+            <text x="138.0" y="179.0" font-size="10" text-anchor="middle">3</text>
+            <text x="166.0" y="179.0" font-size="10" text-anchor="middle">4</text>
+            <text x="50.0" y="198.0" font-size="10" text-anchor="end">−1</text>
+            <text x="50.0" y="142.0" font-size="10" text-anchor="end">1</text>
+            <text x="50.0" y="114.0" font-size="10" text-anchor="end">2</text>
+            <text x="50.0" y="86.0" font-size="10" text-anchor="end">3</text>
+            <text x="50.0" y="58.0" font-size="10" text-anchor="end">4</text>
+            <text x="50.0" y="30.0" font-size="10" text-anchor="end">5</text>
+            <polygon points="54.0,166.0 82.0,166.0 82.0,138.0 54.0,138.0" fill="#7fb3d5" fill-opacity=".35" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="54.0,166.0 110.0,138.0 138.0,54.0 82.0,82.0" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="110.0" cy="138.0" r="3" fill="currentColor"/>
+            <text x="116.0" y="148.0" font-size="13">(2, 1)</text>
+            <circle cx="82.0" cy="82.0" r="3" fill="currentColor"/>
+            <text x="40.0" y="73.0" font-size="13">(1, 3)</text>
+          </svg>
+        explain: このように、点 P(x, y) を、x′ = ax + by、y′ = cx + dy で決まる点 P′(x′, y′) に移す変換を 1 次変換（線形変換）といい、P′ を P の像といいます。行列で書くと (x′；y′) = A(x；y) で、A = (a b；c d) を、この 1 次変換を表す行列といいます。この例では A = (2 1；1 3) で、P(1, 2) の像は (2 + 2, 1 + 6) = (4, 7) です。点 (1, 0) の像は (a, c) = (2, 1)、点 (0, 1) の像は (b, d) = (1, 3) で、行列の 1 列目と 2 列目になります。つまり、(1, 0) と (0, 1) の像がわかれば、行列が決まります。図のように、1 辺 1 の正方形（青）は、(2, 1) と (1, 3) を 2 辺とする平行四辺形（黄）に移ります。原点 O の像は、いつも O です。そのため、平行移動 (x, y) → (x + 1, y) は 1 次変換ではありません。
+      - part: 思い出す
+        text: (4 1；3 2)(2；−1) の上の成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(91.8 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <path d="M83.9 7.0 Q76.9 32.2 83.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="100.2" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="100.2" y="49.4" font-size="16" text-anchor="middle">−1</text>
+              <path d="M117.5 7.0 Q124.5 32.2 117.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 7
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((4, 1), (3, 2)), ((2,), (-1,)))[0][0]"
+        hints:
+          - 上の成分は、1 行目を使います（M-001）。
+          - 4 × 2 と 1 × (−1) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [4 × 2 + 1 × (−1), "7"]
+      - part: 思い出す
+        text: A = (3 2；1 1) のとき、A⁻¹ の (1, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((3, 2), (1, 1)))[0][1])"
+        hints:
+          - ad − bc を計算しましょう（M-001）。
+          - A⁻¹ = (1/(ad − bc))(d −b；−c a) です。
+          - (1, 2) 成分は −b ÷ (ad − bc) です。
+        paths:
+          - [ad − bc = 3 − 2 = 1, "(1, 2) 成分は −2"]
+      - part: 今日
+        text: 行列 (3 −1；2 4) で表される 1 次変換による、点 (2, 1) の像の y 座標はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(113.7 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="56.2" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="56.2" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M73.5 7.0 Q80.5 32.2 73.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 8
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, -1), (2, 4)), ((2,), (1,)))[1][0]"
+        hints:
+          - 像は、行列と列ベクトル (2；1) の積です。
+          - y 座標は、行列の 2 行目を使います。
+          - 2 × 2 + 4 × 1 を計算しましょう。
+        paths:
+          - [y′ = 2 × 2 + 4 × 1, "8"]
+      - part: 今日
+        text: 1 次変換 f は、点 (1, 0) を (2, 5) に、点 (0, 1) を (−1, 3) に移します。点 (3, 2) の f による像の x 座標はいくつですか。
+        answer: 4
+        check: "3 * 2 + 2 * (-1)"
+        hints:
+          - (1, 0) と (0, 1) の像は、f を表す行列の列になります。
+          - f の行列は (2 −1；5 3) です。
+          - (3, 2) の像は 3 × (2, 5) + 2 × (−1, 3) とも計算できます。
+        paths:
+          - [行列は (2 −1；5 3), x′ = 2 × 3 + (−1) × 2 = 4]
+        note: 列と行を取りちがえて (2 5；−1 3) とする間違いが多い。(1, 0) の像が 1 列目。
+      - part: 挑戦
+        text: 1 次変換 f は、点 (1, 1) を (3, 1) に、点 (1, −1) を (1, 5) に移します。点 (2, 3) の f による像の x 座標はいくつですか。
+        answer: 7
+        check: "[a * 2 + b * 3 for a in range(-10, 11) for b in range(-10, 11) if a + b == 3 and a - b == 1][0]"
+        hints:
+          - f の行列を (a b；c d) として、2 つの条件を式にしましょう。
+          - x 座標について a + b = 3、a − b = 1 です。
+          - a、b を求めて、(2, 3) の像の x 座標 2a + 3b を計算しましょう。
+        paths:
+          - [a + b = 3、a − b = 1 で a = 2、b = 1, x′ = 2 × 2 + 1 × 3 = 7]
+          - ["(2, 3) = (5/2)(1, 1) + (−1/2)(1, −1)", "線形性で像は (5/2)(3, 1) − (1/2)(1, 5)", x′ = 15/2 − 1/2 = 7]
+    extra:
+      - part: 今日
+        text: 行列 (1 −2；3 0) で表される 1 次変換による、点 (−1, 2) の像の x 座標はいくつですか。
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, -2), (3, 0)), ((-1,), (2,)))[0][0])"
+        hints:
+          - x 座標は、行列の 1 行目を使います。
+          - 1 × (−1) と (−2) × 2 を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [1 × (−1) + (−2) × 2, −5]
+      - part: 今日
+        text: 点 (x, y) を点 (x + 2y, 3x − y) に移す 1 次変換を表す行列はどれですか。
+        choices:
+          - (1 2；3 −1)
+          - (1 3；2 −1)
+          - (2 1；−1 3)
+          - (1 2；−1 3)
+        answer: (1 2；3 −1)
+        check: "[c for c, f in {'(1 2；3 −1)': ((1, 2), (3, -1)), '(1 3；2 −1)': ((1, 3), (2, -1)), '(2 1；−1 3)': ((2, 1), (-1, 3)), '(1 2；−1 3)': ((1, 2), (-1, 3))}.items() if all(f[0][0] * x + f[0][1] * y == x + 2 * y and f[1][0] * x + f[1][1] * y == 3 * x - y for x, y in ((1, 0), (0, 1), (2, 3)))][0]"
+        hints:
+          - x′ = x + 2y の係数が、1 行目になります。
+          - y′ = 3x − y の係数が、2 行目になります。
+          - y の係数 −1 の符号に気をつけましょう。
+        paths:
+          - [1 行目は 1、2, 2 行目は 3、−1, (1 2；3 −1)]
+      - part: 挑戦
+        text: 行列 (2 1；1 1) で表される 1 次変換で、点 (5, 4) に移る点の y 座標はいくつですか。
+        answer: 3
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, 1), (1, 1))), ((5,), (4,)))[1][0]"
+        hints:
+          - 移る前の点を (x, y) として、行列の式を書きましょう。
+          - 両辺に左から逆行列をかけましょう（M-001）。
+          - 逆行列は (1 −1；−1 2) です。
+        paths:
+          - [(x；y) = (1 −1；−1 2)(5；4), x = 1、y = −5 + 8 = 3]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 点 P(3, 1) を、原点 O のまわりに 90° 回転した点 P′ を求めてみましょう。いろいろな変換を表す行列も調べましょう。
+        svg: |
+          <svg viewBox="0 0 264.0 192.0" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="26.0" y1="166.0" x2="26.0" y2="26.0"/>
+              <line x1="54.0" y1="166.0" x2="54.0" y2="26.0"/>
+              <line x1="82.0" y1="166.0" x2="82.0" y2="26.0"/>
+              <line x1="110.0" y1="166.0" x2="110.0" y2="26.0"/>
+              <line x1="138.0" y1="166.0" x2="138.0" y2="26.0"/>
+              <line x1="166.0" y1="166.0" x2="166.0" y2="26.0"/>
+              <line x1="194.0" y1="166.0" x2="194.0" y2="26.0"/>
+              <line x1="222.0" y1="166.0" x2="222.0" y2="26.0"/>
+              <line x1="26.0" y1="166.0" x2="222.0" y2="166.0"/>
+              <line x1="26.0" y1="138.0" x2="222.0" y2="138.0"/>
+              <line x1="26.0" y1="110.0" x2="222.0" y2="110.0"/>
+              <line x1="26.0" y1="82.0" x2="222.0" y2="82.0"/>
+              <line x1="26.0" y1="54.0" x2="222.0" y2="54.0"/>
+              <line x1="26.0" y1="26.0" x2="222.0" y2="26.0"/>
+            </g>
+            <line x1="18.0" y1="138.0" x2="234.0" y2="138.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="110.0" y1="174.0" x2="110.0" y2="14.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M234.0 138.0 L226.0 134.0 L226.0 142.0 Z" fill="currentColor"/>
+            <path d="M110.0 14.0 L106.0 22.0 L114.0 22.0 Z" fill="currentColor"/>
+            <text x="236.0" y="152.0" font-size="14" font-style="italic">x</text>
+            <text x="117.0" y="18.0" font-size="14" font-style="italic">y</text>
+            <text x="106.0" y="151.0" font-size="11" text-anchor="end">O</text>
+            <text x="26.0" y="151.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="54.0" y="151.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="82.0" y="151.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="138.0" y="151.0" font-size="10" text-anchor="middle">1</text>
+            <text x="166.0" y="151.0" font-size="10" text-anchor="middle">2</text>
+            <text x="194.0" y="151.0" font-size="10" text-anchor="middle">3</text>
+            <text x="222.0" y="151.0" font-size="10" text-anchor="middle">4</text>
+            <text x="106.0" y="170.0" font-size="10" text-anchor="end">−1</text>
+            <text x="106.0" y="114.0" font-size="10" text-anchor="end">1</text>
+            <text x="106.0" y="86.0" font-size="10" text-anchor="end">2</text>
+            <text x="106.0" y="58.0" font-size="10" text-anchor="end">3</text>
+            <text x="106.0" y="30.0" font-size="10" text-anchor="end">4</text>
+            <line x1="110.0" y1="138.0" x2="194.0" y2="110.0" stroke="currentColor" fill="none" stroke-width="1.8"/>
+            <line x1="110.0" y1="138.0" x2="82.0" y2="54.0" stroke="currentColor" fill="none" stroke-width="1.8"/>
+            <polyline points="133.9,130.0 133.5,128.8 132.9,127.6 132.4,126.4 131.7,125.2 131.0,124.1 130.3,123.0 129.5,122.0 128.6,121.0 127.7,120.0 126.7,119.1 125.7,118.3 124.7,117.5 123.6,116.8 122.4,116.1 121.3,115.5 120.1,114.9 118.9,114.4 117.6,114.0 116.3,113.6 115.1,113.3 113.8,113.1 112.4,112.9 111.1,112.8 109.8,112.8 108.5,112.8 107.2,113.0 105.9,113.1 104.6,113.4 103.3,113.7 102.0,114.1" stroke="currentColor" fill="none" stroke-width="1.4"/>
+            <circle cx="194.0" cy="110.0" r="3.5" fill="currentColor"/>
+            <text x="200.0" y="104.0" font-size="13">P</text>
+            <circle cx="82.0" cy="54.0" r="3.5" fill="currentColor"/>
+            <text x="62.0" y="48.0" font-size="13">P′</text>
+          </svg>
+        explain: x 軸についての対称移動は (x, y) → (x, −y) で、行列は (1 0；0 −1) です。同じように、y 軸については (−1 0；0 1)、原点については (−1 0；0 −1)、直線 y = x については (x, y) → (y, x) で (0 1；1 0) です。原点を中心に k 倍に拡大する変換は (k 0；0 k) です。次に、原点のまわりに角 θ だけ回転する変換を考えます。P を、O からの距離 r と、x 軸の正の向きから測った角 α で P(r cos α, r sin α) と表すと、回転した点は (r cos(α + θ), r sin(α + θ)) です。加法定理（G-025）で展開すると、x′ = r cos α cos θ − r sin α sin θ = x cos θ − y sin θ、y′ = r sin α cos θ + r cos α sin θ = x sin θ + y cos θ なので、回転を表す行列は R(θ) = (cos θ、−sin θ；sin θ、cos θ) です（成分が式のときは「、」で区切ります）。θ = 90° では R(90°) = (0 −1；1 0) で、P(3, 1) の像は (0 × 3 − 1 × 1, 1 × 3 + 0 × 1) = (−1, 3) です。回転では、(1, 0) は (cos θ, sin θ) に、(0, 1) は (−sin θ, cos θ) に移ります。
+      - part: 思い出す
+        text: sin α = 3/5、cos α = 4/5、sin β = 5/13、cos β = 12/13 のとき、sin(α + β) はいくつですか。
+        answer: 56/65
+        check: "Fraction(3, 5) * Fraction(12, 13) + Fraction(4, 5) * Fraction(5, 13)"
+        hints:
+          - 加法定理 sin(α + β) = sin α cos β + cos α sin β を使いましょう（G-025）。
+          - (3/5) × (12/13) と (4/5) × (5/13) を計算しましょう。
+          - 分母は 65 にそろいます。
+        paths:
+          - [(3/5)(12/13) + (4/5)(5/13), 36/65 + 20/65, 56/65]
+      - part: 思い出す
+        text: 行列 (2 −1；1 3) で表される 1 次変換による、点 (1, −2) の像の y 座標はいくつですか。
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, -1), (1, 3)), ((1,), (-2,)))[1][0])"
+        hints:
+          - y 座標は、行列の 2 行目を使います。
+          - 1 × 1 と 3 × (−2) を計算しましょう。
+          - 2 つの積を足しましょう。
+        paths:
+          - [1 × 1 + 3 × (−2), −5]
+      - part: 今日
+        text: 点 (4, −3) を、原点のまわりに 90° 回転した点の x 座標はいくつですか。
+        answer: 3
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((4,), (-3,)))[0][0]"
+        hints:
+          - 90° の回転の行列は (0 −1；1 0) です。
+          - x′ = 0 × 4 + (−1) × (−3) です。
+          - (x, y) は (−y, x) に移ります。
+        paths:
+          - ["(x, y) → (−y, x)", "(4, −3) → (3, 4)", "3"]
+        note: 回転の向きは、反時計回りが正。時計回りに回して (−3, −4) としやすい。
+      - part: 今日
+        text: 点 (6, 0) を、原点のまわりに 120° 回転した点の x 座標はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose(math.cos(math.radians(120)) * (6) - math.sin(math.radians(120)) * (0), k, abs_tol=1e-9)][0])"
+        hints:
+          - (6, 0) の像は (6 cos 120°, 6 sin 120°) です。
+          - cos 120° = −1/2 です（G-025）。
+          - 6 × (−1/2) を計算しましょう。
+        paths:
+          - [x′ = 6 cos 120°, 6 × (−1/2) = −3]
+      - part: 挑戦
+        text: 原点のまわりのある回転で、点 (5, 0) は点 (3, 4) に移ります。この回転で、点 (0, 5) が移る点の x 座標はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-5 * Fraction(4, 5))"
+        hints:
+          - (5, 0) の像から、cos θ と sin θ がわかります。
+          - cos θ = 3/5、sin θ = 4/5 です。
+          - (0, 1) は (−sin θ, cos θ) に移ります。
+        paths:
+          - [cos θ = 3/5、sin θ = 4/5, "(0, 5) → 5(−sin θ, cos θ) = (−4, 3)", −4]
+        note: θ の大きさがわからなくても、cos θ と sin θ だけで計算できる。(0, 5) は (5, 0) から 90° 回った点なので、像も (3, 4) から 90° 回った (−4, 3) と見てもよい。
+    extra:
+      - part: 今日
+        text: 原点を中心に 3 倍に拡大する変換で、点 (2, −1) の像の y 座標はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, 0), (0, 3)), ((2,), (-1,)))[1][0])"
+        hints:
+          - k 倍の拡大の行列は (k 0；0 k) です。
+          - x 座標も y 座標も 3 倍になります。
+          - −1 × 3 を計算しましょう。
+        paths:
+          - ["(2, −1) → (6, −3)", −3]
+      - part: 今日
+        text: 点 (0, 4) を、原点のまわりに 30° 回転した点の x 座標はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose(math.cos(math.radians(30)) * (0) - math.sin(math.radians(30)) * (4), k, abs_tol=1e-9)][0])"
+        hints:
+          - (0, 1) は (−sin θ, cos θ) に移ります。
+          - sin 30° = 1/2 です。
+          - (0, 4) の像の x 座標は −4 sin 30° です。
+        paths:
+          - [x′ = −4 sin 30°, −2]
+      - part: 挑戦
+        text: 原点のまわりのある回転で、点 (2, 1) は点 (1, 2) に移ります。この回転で、点 (5, 0) が移る点の y 座標はいくつですか。
+        answer: 3
+        check: "[5 * s for c in [Fraction(k, 5) for k in range(-5, 6)] for s in [Fraction(k, 5) for k in range(-5, 6)] if 2 * c - s == 1 and 2 * s + c == 2][0]"
+        hints:
+          - cos θ = c、sin θ = s として、(2, 1) の像を c、s で表しましょう。
+          - 2c − s = 1、2s + c = 2 です。
+          - c、s を求めて、(5, 0) の像 (5c, 5s) を計算しましょう。
+        paths:
+          - ["(2c − s, 2s + c) = (1, 2)", c = 4/5、s = 3/5, "(5, 0) → (4, 3)", "3"]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: x 軸についての対称移動 f のあとに、原点のまわりの 90° 回転 g を続けて行う変換を表す行列を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 208.0 220.0" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="26.0" y1="194.0" x2="26.0" y2="26.0"/>
+              <line x1="54.0" y1="194.0" x2="54.0" y2="26.0"/>
+              <line x1="82.0" y1="194.0" x2="82.0" y2="26.0"/>
+              <line x1="110.0" y1="194.0" x2="110.0" y2="26.0"/>
+              <line x1="138.0" y1="194.0" x2="138.0" y2="26.0"/>
+              <line x1="166.0" y1="194.0" x2="166.0" y2="26.0"/>
+              <line x1="26.0" y1="194.0" x2="166.0" y2="194.0"/>
+              <line x1="26.0" y1="166.0" x2="166.0" y2="166.0"/>
+              <line x1="26.0" y1="138.0" x2="166.0" y2="138.0"/>
+              <line x1="26.0" y1="110.0" x2="166.0" y2="110.0"/>
+              <line x1="26.0" y1="82.0" x2="166.0" y2="82.0"/>
+              <line x1="26.0" y1="54.0" x2="166.0" y2="54.0"/>
+              <line x1="26.0" y1="26.0" x2="166.0" y2="26.0"/>
+            </g>
+            <line x1="18.0" y1="138.0" x2="178.0" y2="138.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="54.0" y1="202.0" x2="54.0" y2="14.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M178.0 138.0 L170.0 134.0 L170.0 142.0 Z" fill="currentColor"/>
+            <path d="M54.0 14.0 L50.0 22.0 L58.0 22.0 Z" fill="currentColor"/>
+            <text x="180.0" y="152.0" font-size="14" font-style="italic">x</text>
+            <text x="61.0" y="18.0" font-size="14" font-style="italic">y</text>
+            <text x="50.0" y="151.0" font-size="11" text-anchor="end">O</text>
+            <text x="26.0" y="151.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="82.0" y="151.0" font-size="10" text-anchor="middle">1</text>
+            <text x="110.0" y="151.0" font-size="10" text-anchor="middle">2</text>
+            <text x="138.0" y="151.0" font-size="10" text-anchor="middle">3</text>
+            <text x="166.0" y="151.0" font-size="10" text-anchor="middle">4</text>
+            <text x="50.0" y="198.0" font-size="10" text-anchor="end">−2</text>
+            <text x="50.0" y="170.0" font-size="10" text-anchor="end">−1</text>
+            <text x="50.0" y="114.0" font-size="10" text-anchor="end">1</text>
+            <text x="50.0" y="86.0" font-size="10" text-anchor="end">2</text>
+            <text x="50.0" y="58.0" font-size="10" text-anchor="end">3</text>
+            <text x="50.0" y="30.0" font-size="10" text-anchor="end">4</text>
+            <circle cx="138.0" cy="110.0" r="3.5" fill="currentColor"/>
+            <text x="144.0" y="106.0" font-size="13">P</text>
+            <circle cx="138.0" cy="166.0" r="3.5" fill="currentColor"/>
+            <text x="144.0" y="176.0" font-size="13">P₁</text>
+            <circle cx="82.0" cy="54.0" r="3.5" fill="currentColor"/>
+            <text x="88.0" y="48.0" font-size="13">P₂</text>
+            <line x1="138.0" y1="110.0" x2="138.0" y2="166.0" stroke="currentColor" fill="none" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="54.0" y1="138.0" x2="138.0" y2="166.0" stroke="currentColor" fill="none" stroke-width="1.2" stroke-dasharray="4 3"/>
+            <line x1="54.0" y1="138.0" x2="82.0" y2="54.0" stroke="currentColor" fill="none" stroke-width="1.2" stroke-dasharray="4 3"/>
+          </svg>
+        explain: f を表す行列を A、g を表す行列を B とすると、点 P は f で AP に、続けて g で B(AP) = (BA)P に移ります。f のあとに g を行う変換を f と g の合成変換といい、g∘f と書きます。g∘f を表す行列は BA で、あとから行う変換の行列が左にきます。ここでは A = (1 0；0 −1)、B = (0 −1；1 0) なので、BA = (0 1；1 0) で、これは直線 y = x についての対称移動です。図では、P(3, 1) が f で P₁(3, −1) に、g で P₂(1, 3) に移っています。順を逆にした f∘g の行列は AB = (0 −1；−1 0) で、ちがう変換です。回転を続けると、R(α) のあとに R(β) を行う変換は R(α + β) です（わけは 6 日目）。行列 A の逆行列 A⁻¹ が表す変換は、A で移った点をもとの点にもどす変換で、逆変換といいます。回転 R(θ) の逆変換は R(−θ) です。
+      - part: 思い出す
+        text: A = (0 1；1 0)、B = (2 3；1 4) のとき、BA の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 3
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 3), (1, 4)), ((0, 1), (1, 0)))[0][0]"
+        hints:
+          - BA の (1, 1) 成分は、B の 1 行目と A の 1 列目を使います。
+          - B の 1 行目は 2、3、A の 1 列目は 0、1 です。
+          - 順にかけて足しましょう。
+        paths:
+          - [2 × 0 + 3 × 1, "3"]
+      - part: 思い出す
+        text: 点 (2, 5) を、原点のまわりに 90° 回転した点の x 座標はいくつですか。
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((2,), (5,)))[0][0])"
+        hints:
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - x′ は −y です。
+          - 符号に気をつけましょう。
+        paths:
+          - ["(2, 5) → (−5, 2)", −5]
+      - part: 今日
+        text: f を x 軸についての対称移動、g を原点のまわりの 90° 回転とします。点 (2, 5) に f を行ってから g を行った点の x 座標はいくつですか。
+        answer: 5
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((1, 0), (0, -1))), ((2,), (5,)))[0][0]"
+        hints:
+          - まず f で (2, 5) を移しましょう。
+          - f の像 (2, −5) を、g で移しましょう。
+          - g∘f の行列 (0 1；1 0) を使ってもよいです。
+        paths:
+          - ["f で (2, −5)", "g で (5, 2)", "5"]
+      - part: 今日
+        text: 点 (2, 0) に、原点のまわりの 30° 回転を 4 回続けて行った点の x 座標はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose(math.cos(math.radians(120)) * (2) - math.sin(math.radians(120)) * (0), k, abs_tol=1e-9)][0])"
+        hints:
+          - 30° の回転を 4 回続けると、何度の回転と同じでしょう。
+          - R(30°)⁴ = R(120°) です。
+          - (2, 0) の像は (2 cos 120°, 2 sin 120°) です。
+        paths:
+          - [30° × 4 = 120°, x′ = 2 cos 120° = −1]
+      - part: 挑戦
+        text: 行列 (2 1；5 3) で表される 1 次変換 f で、点 (4, 7) に移る点の y 座標はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(118.5 0)">
+              <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="26.5" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="51.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="26.5" y="49.4" font-size="16" text-anchor="middle">5</text>
+              <text x="51.4" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −6
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((2, 1), (5, 3))), ((4,), (7,)))[1][0])"
+        hints:
+          - 移る前の点は、逆変換で (4, 7) を移した点です。
+          - 逆行列は (3 −1；−5 2) です。
+          - (3 −1；−5 2)(4；7) を計算しましょう。
+        paths:
+          - [逆行列 (3 −1；−5 2), x = 12 − 7 = 5、y = −20 + 14 = −6]
+    extra:
+      - part: 今日
+        text: f を表す行列が A = (1 2；0 1)、g を表す行列が B = (1 0；3 1) のとき、f のあとに g を行う変換を表す行列の (2, 2) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">0</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">0</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 7
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 0), (3, 1)), ((1, 2), (0, 1)))[1][1]"
+        hints:
+          - f のあとに g を行う変換の行列は BA です。
+          - BA の (2, 2) 成分は、B の 2 行目と A の 2 列目を使います。
+          - 3 × 2 + 1 × 1 を計算しましょう。
+        paths:
+          - ["BA の (2, 2) 成分は 3 × 2 + 1 × 1", "7"]
+        note: AB の (2, 2) 成分は 1。順をまちがえると答えが変わる。
+      - part: 今日
+        text: 点 (4, 1) に、原点のまわりの 60° 回転を 3 回続けて行った点の y 座標はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose(math.sin(math.radians(180)) * (4) + math.cos(math.radians(180)) * (1), k, abs_tol=1e-9)][0])"
+        hints:
+          - 60° の回転を 3 回続けると、何度の回転でしょう。
+          - 180° の回転は、原点についての対称移動です。
+          - (x, y) は (−x, −y) に移ります。
+        paths:
+          - [60° × 3 = 180°, "(4, 1) → (−4, −1)", −1]
+      - part: 挑戦
+        text: 点 (4, 0) に、原点のまわりの 120° 回転を 2026 回続けて行った点の x 座標はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda k: 4 * [Fraction(1), Fraction(-1, 2), Fraction(-1, 2)][k])(2026 % 3))"
+        hints:
+          - 120° の回転を 3 回続けると、どうなるでしょう。
+          - 3 回でもとにもどるので、2026 を 3 でわったあまりを考えましょう。
+          - 2026 = 3 × 675 + 1 です。
+        paths:
+          - [R(120°)³ = R(360°) = E, 2026 回は 1 回と同じ, "(4, 0) → (4 cos 120°, 4 sin 120°)", x 座標は −2]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 行列 A = (1 1；0 2) で表される 1 次変換 f による、直線 y = 2x + 1 の像を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 228.0 232.0" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="26.0" y1="206.0" x2="26.0" y2="26.0"/>
+              <line x1="46.0" y1="206.0" x2="46.0" y2="26.0"/>
+              <line x1="66.0" y1="206.0" x2="66.0" y2="26.0"/>
+              <line x1="86.0" y1="206.0" x2="86.0" y2="26.0"/>
+              <line x1="106.0" y1="206.0" x2="106.0" y2="26.0"/>
+              <line x1="126.0" y1="206.0" x2="126.0" y2="26.0"/>
+              <line x1="146.0" y1="206.0" x2="146.0" y2="26.0"/>
+              <line x1="166.0" y1="206.0" x2="166.0" y2="26.0"/>
+              <line x1="186.0" y1="206.0" x2="186.0" y2="26.0"/>
+              <line x1="26.0" y1="206.0" x2="186.0" y2="206.0"/>
+              <line x1="26.0" y1="186.0" x2="186.0" y2="186.0"/>
+              <line x1="26.0" y1="166.0" x2="186.0" y2="166.0"/>
+              <line x1="26.0" y1="146.0" x2="186.0" y2="146.0"/>
+              <line x1="26.0" y1="126.0" x2="186.0" y2="126.0"/>
+              <line x1="26.0" y1="106.0" x2="186.0" y2="106.0"/>
+              <line x1="26.0" y1="86.0" x2="186.0" y2="86.0"/>
+              <line x1="26.0" y1="66.0" x2="186.0" y2="66.0"/>
+              <line x1="26.0" y1="46.0" x2="186.0" y2="46.0"/>
+              <line x1="26.0" y1="26.0" x2="186.0" y2="26.0"/>
+            </g>
+            <line x1="18.0" y1="166.0" x2="198.0" y2="166.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="66.0" y1="214.0" x2="66.0" y2="14.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M198.0 166.0 L190.0 162.0 L190.0 170.0 Z" fill="currentColor"/>
+            <path d="M66.0 14.0 L62.0 22.0 L70.0 22.0 Z" fill="currentColor"/>
+            <text x="200.0" y="180.0" font-size="14" font-style="italic">x</text>
+            <text x="73.0" y="18.0" font-size="14" font-style="italic">y</text>
+            <text x="62.0" y="179.0" font-size="11" text-anchor="end">O</text>
+            <text x="26.0" y="179.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="46.0" y="179.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="86.0" y="179.0" font-size="10" text-anchor="middle">1</text>
+            <text x="106.0" y="179.0" font-size="10" text-anchor="middle">2</text>
+            <text x="126.0" y="179.0" font-size="10" text-anchor="middle">3</text>
+            <text x="146.0" y="179.0" font-size="10" text-anchor="middle">4</text>
+            <text x="166.0" y="179.0" font-size="10" text-anchor="middle">5</text>
+            <text x="186.0" y="179.0" font-size="10" text-anchor="middle">6</text>
+            <text x="62.0" y="210.0" font-size="10" text-anchor="end">−2</text>
+            <text x="62.0" y="190.0" font-size="10" text-anchor="end">−1</text>
+            <text x="62.0" y="150.0" font-size="10" text-anchor="end">1</text>
+            <text x="62.0" y="130.0" font-size="10" text-anchor="end">2</text>
+            <text x="62.0" y="110.0" font-size="10" text-anchor="end">3</text>
+            <text x="62.0" y="90.0" font-size="10" text-anchor="end">4</text>
+            <text x="62.0" y="70.0" font-size="10" text-anchor="end">5</text>
+            <text x="62.0" y="50.0" font-size="10" text-anchor="end">6</text>
+            <text x="62.0" y="30.0" font-size="10" text-anchor="end">7</text>
+            <line x1="36.0" y1="206.0" x2="126.0" y2="26.0" stroke="currentColor" fill="none" stroke-width="1.8" stroke-dasharray="5 4"/>
+            <line x1="26.0" y1="206.0" x2="161.0" y2="26.0" stroke="currentColor" fill="none" stroke-width="2.4"/>
+            <circle cx="66.0" cy="146.0" r="3.5" fill="currentColor"/>
+            <text x="50.0" y="142.0" font-size="13">Q</text>
+            <circle cx="86.0" cy="106.0" r="3.5" fill="currentColor"/>
+            <text x="70.0" y="102.0" font-size="13">R</text>
+            <circle cx="86.0" cy="126.0" r="3.5" fill="currentColor"/>
+            <text x="92.0" y="138.0" font-size="13">Q′</text>
+            <circle cx="146.0" cy="46.0" r="3.5" fill="currentColor"/>
+            <text x="152.0" y="58.0" font-size="13">R′</text>
+          </svg>
+        explain: 1 次変換 f では、ベクトル p、q と実数 s、t について f(sp + tq) = s f(p) + t f(q) が成り立ちます（線形性。わけは 6 日目）。直線 y = 2x + 1 の上の点は、点 (0, 1) と方向ベクトル (1, 2) を使って (x, y) = (0, 1) + t(1, 2) と表せます（G-027）。線形性から、その像は f(0, 1) + t f(1, 2) です。f(0, 1) = (1, 2)、f(1, 2) = (3, 4) なので、像は (x′, y′) = (1, 2) + t(3, 4) で、点 (1, 2) を通り傾き 4/3 の直線 4x − 3y + 2 = 0 です（図の実線。点線がもとの直線で、Q、R が Q′、R′ に移る）。このように、1 次変換で直線は直線に移ります。ただし、方向ベクトルの像が 0 ベクトルになると、直線は 1 点に移ります。また、ad − bc = 0 の行列では、平面全体が原点を通る 1 本の直線（または原点だけ）に移ります。たとえば (1 2；2 4) では像は (x + 2y, 2x + 4y) で、すべて直線 y = 2x の上にあります。線分の中点は像の線分の中点に、平行四辺形は平行四辺形に移ります。
+      - part: 思い出す
+        text: 点 (1, 2) を通り、方向ベクトルが (3, 1) の直線の式はどれですか。
+        choices:
+          - 3x − y − 1 = 0
+          - x − 3y + 5 = 0
+          - x + 3y − 7 = 0
+          - x − 3y − 5 = 0
+        answer: x − 3y + 5 = 0
+        check: "[c for c, f in {'x − 3y + 5 = 0': (1, -3, 5), '3x − y − 1 = 0': (3, -1, -1), 'x + 3y − 7 = 0': (1, 3, -7), 'x − 3y − 5 = 0': (1, -3, -5)}.items() if f[0] * 1 + f[1] * 2 + f[2] == 0 and f[0] * 3 + f[1] * 1 == 0][0]"
+        hints:
+          - 方向ベクトル (3, 1) の直線の傾きは 1/3 です（G-027、G-026）。
+          - 点 (1, 2) を通る傾き 1/3 の直線は y − 2 = (1/3)(x − 1) です。
+          - 分母をはらって整理しましょう。
+        paths:
+          - [y − 2 = (1/3)(x − 1), 3y − 6 = x − 1, x − 3y + 5 = 0]
+      - part: 思い出す
+        text: 行列 (2 0；1 1) で表される 1 次変換による、点 (3, −1) の像の y 座標はいくつですか。
+        answer: 2
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 0), (1, 1)), ((3,), (-1,)))[1][0]"
+        hints:
+          - y 座標は、行列の 2 行目を使います。
+          - 1 × 3 + 1 × (−1) を計算しましょう。
+          - x 座標は 6 です。
+        paths:
+          - [y′ = 3 − 1, "2"]
+      - part: 今日
+        text: 行列 (2 1；1 1) で表される 1 次変換による、直線 y = x の像はどれですか。
+        choices:
+          - y = (3/2)x
+          - y = x
+          - y = (2/3)x
+          - y = 2x
+        answer: y = (2/3)x
+        check: "[c for c, f in {'y = (2/3)x': Fraction(2, 3), 'y = (3/2)x': Fraction(3, 2), 'y = x': Fraction(1), 'y = 2x': Fraction(2)}.items() if all(f * (2 * t + t) == t + t for t in range(1, 6))][0]"
+        hints:
+          - 直線 y = x の上の点は (t, t) と表せます。
+          - (t, t) の像を計算しましょう。
+          - 像 (3t, 2t) が通る直線を求めましょう。
+        paths:
+          - ["(t, t) → (3t, 2t)", y′ = (2/3)x′, y = (2/3)x]
+      - part: 今日
+        text: 1 次変換 f で、ベクトル p の像が (3, 1)、q の像が (−1, 2) です。2p − q の像の x 座標はいくつですか。
+        answer: 7
+        check: "2 * 3 - (-1)"
+        hints:
+          - 線形性 f(sp + tq) = s f(p) + t f(q) を使いましょう。
+          - f(2p − q) = 2f(p) − f(q) です。
+          - x 座標は 2 × 3 − (−1) です。
+        paths:
+          - ["2(3, 1) − (−1, 2) = (7, 0)", "7"]
+      - part: 挑戦
+        text: 行列 (1 2；2 4) で表される 1 次変換で、平面全体はどんな図形に移りますか。
+        choices:
+          - 直線 y = (1/2)x
+          - 直線 y = x
+          - 平面全体
+          - 直線 y = 2x
+        answer: 直線 y = 2x
+        check: "[c for c, f in {'直線 y = 2x': lambda X, Y: Y == 2 * X, '直線 y = (1/2)x': lambda X, Y: 2 * Y == X, '直線 y = x': lambda X, Y: Y == X, '平面全体': lambda X, Y: False}.items() if all(f(x + 2 * y, 2 * x + 4 * y) for x in range(-3, 4) for y in range(-3, 4))][0]"
+        hints:
+          - 点 (x, y) の像を計算しましょう。
+          - 像は (x + 2y, 2x + 4y) です。y 座標は x 座標の何倍でしょう。
+          - ad − bc を計算すると、どうなるでしょう。
+        paths:
+          - ["像は (x + 2y, 2(x + 2y))", y′ = 2x′ がいつも成り立つ, 直線 y = 2x]
+        note: ad − bc = 0 のとき、2 つの列 (1；2)、(2；4) が平行で、像はその向きの直線の上にしかない。逆変換はない。
+    extra:
+      - part: 今日
+        text: 原点のまわりの 90° 回転による、直線 x + y = 1 の像はどれですか。
+        choices:
+          - y = x + 1
+          - y = −x + 1
+          - y = x − 1
+          - y = −x − 1
+        answer: y = x + 1
+        check: "[c for c, f in {'y = x + 1': (1, 1), 'y = −x + 1': (-1, 1), 'y = x − 1': (1, -1), 'y = −x − 1': (-1, -1)}.items() if all(t == f[0] * (t - 1) + f[1] for t in range(-4, 5))][0]"
+        hints:
+          - 直線 x + y = 1 の上の点を (t, 1 − t) と表しましょう。
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - 像 (t − 1, t) が通る直線を求めましょう。
+        paths:
+          - ["(t, 1 − t) → (t − 1, t)", y′ = x′ + 1, y = x + 1]
+      - part: 今日
+        text: 1 次変換 f で、ベクトル p の像が (2, −1)、q の像が (1, 3) です。p + 3q の像の y 座標はいくつですか。
+        answer: 8
+        check: "-1 + 3 * 3"
+        hints:
+          - 線形性を使いましょう。
+          - f(p + 3q) = f(p) + 3f(q) です。
+          - y 座標は −1 + 3 × 3 です。
+        paths:
+          - ["(2, −1) + 3(1, 3) = (5, 8)", "8"]
+      - part: 挑戦
+        text: 行列 A = (1 −1；−2 2) で表される 1 次変換で、点 (3, 1) と同じ点に移る点のうち、y 座標が 0 の点の x 座標はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(93.2 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="62.8" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="97.4" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="62.8" y="49.4" font-size="16" text-anchor="middle">−2</text>
+              <text x="97.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <path d="M114.6 7.0 Q121.6 32.2 114.6 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "[x for x in range(-20, 21) if (lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, -1), (-2, 2)), ((x,), (0,))) == (lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, -1), (-2, 2)), ((3,), (1,)))][0]"
+        hints:
+          - (3, 1) の像を求めましょう。
+          - (x, 0) の像を x で表しましょう。
+          - 2 つの像が等しくなる x を求めましょう。
+        paths:
+          - ["(3, 1) の像は (2, −4)", "(x, 0) の像は (x, −2x)", x = 2]
+        note: ad − bc = 0 なので、ちがう点が同じ点に移ることがある。(3, 1) と (2, 0) の差 (1, 1) は、O に移る向き。
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 行列 A = (3 1；1 2) で表される 1 次変換で、1 辺 1 の正方形がどんな図形に移り、面積が何倍になるかを調べてみましょう。
+        svg: |
+          <svg viewBox="0 0 236.0 192.0" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="26.0" y1="166.0" x2="26.0" y2="26.0"/>
+              <line x1="54.0" y1="166.0" x2="54.0" y2="26.0"/>
+              <line x1="82.0" y1="166.0" x2="82.0" y2="26.0"/>
+              <line x1="110.0" y1="166.0" x2="110.0" y2="26.0"/>
+              <line x1="138.0" y1="166.0" x2="138.0" y2="26.0"/>
+              <line x1="166.0" y1="166.0" x2="166.0" y2="26.0"/>
+              <line x1="194.0" y1="166.0" x2="194.0" y2="26.0"/>
+              <line x1="26.0" y1="166.0" x2="194.0" y2="166.0"/>
+              <line x1="26.0" y1="138.0" x2="194.0" y2="138.0"/>
+              <line x1="26.0" y1="110.0" x2="194.0" y2="110.0"/>
+              <line x1="26.0" y1="82.0" x2="194.0" y2="82.0"/>
+              <line x1="26.0" y1="54.0" x2="194.0" y2="54.0"/>
+              <line x1="26.0" y1="26.0" x2="194.0" y2="26.0"/>
+            </g>
+            <line x1="18.0" y1="138.0" x2="206.0" y2="138.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="54.0" y1="174.0" x2="54.0" y2="14.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M206.0 138.0 L198.0 134.0 L198.0 142.0 Z" fill="currentColor"/>
+            <path d="M54.0 14.0 L50.0 22.0 L58.0 22.0 Z" fill="currentColor"/>
+            <text x="208.0" y="152.0" font-size="14" font-style="italic">x</text>
+            <text x="61.0" y="18.0" font-size="14" font-style="italic">y</text>
+            <text x="50.0" y="151.0" font-size="11" text-anchor="end">O</text>
+            <text x="26.0" y="151.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="82.0" y="151.0" font-size="10" text-anchor="middle">1</text>
+            <text x="110.0" y="151.0" font-size="10" text-anchor="middle">2</text>
+            <text x="138.0" y="151.0" font-size="10" text-anchor="middle">3</text>
+            <text x="166.0" y="151.0" font-size="10" text-anchor="middle">4</text>
+            <text x="194.0" y="151.0" font-size="10" text-anchor="middle">5</text>
+            <text x="50.0" y="170.0" font-size="10" text-anchor="end">−1</text>
+            <text x="50.0" y="114.0" font-size="10" text-anchor="end">1</text>
+            <text x="50.0" y="86.0" font-size="10" text-anchor="end">2</text>
+            <text x="50.0" y="58.0" font-size="10" text-anchor="end">3</text>
+            <text x="50.0" y="30.0" font-size="10" text-anchor="end">4</text>
+            <polygon points="54.0,138.0 82.0,138.0 82.0,110.0 54.0,110.0" fill="#7fb3d5" fill-opacity=".35" stroke="currentColor" stroke-width="1.5"/>
+            <polygon points="54.0,138.0 138.0,110.0 166.0,54.0 82.0,82.0" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        explain: 1 辺 1 の正方形（青）の頂点 (0, 0)、(1, 0)、(1, 1)、(0, 1) は、(0, 0)、(3, 1)、(4, 3)、(1, 2) に移り、正方形は平行四辺形（黄）に移ります。この平行四辺形の面積は、まわりの長方形 4 × 3 = 12 から、まわりの 4 つの直角三角形（3/2、1、3/2、1）と 2 つの正方形（1 ずつ）をひいて 5 です。これは ad − bc = 3 × 2 − 1 × 1 = 5 と等しくなります。一般に、行列 (a b；c d) で表される 1 次変換で、図形の面積は |ad − bc| 倍になります（わけは 6 日目）。ad − bc を A の行列式といい、det A と書きます。det A が正なら図形の向き（頂点を回る向き）は変わらず、負なら図形は裏返ります（たとえば x 軸についての対称移動では det A = −1）。2 つの変換を続けると面積は |det A| × |det B| 倍になり、det(AB) = det A × det B が成り立ちます（成分の計算でも確かめられます）。det A = 0 のときは、平面全体が直線か点につぶれて面積が 0 になり、逆変換はありません（逆行列がない、M-001）。回転の行列では det R(θ) = cos²θ + sin²θ = 1 で、面積も向きも変わりません。
+      - part: 思い出す
+        text: 行列 (k 2；8 k) が逆行列をもたないとき、k が正の数なら k はいくつですか。
+        answer: 4
+        check: "[k for k in range(1, 50) if k * k - 16 == 0][0]"
+        hints:
+          - 逆行列をもたないのは ad − bc = 0 のときです（M-001）。
+          - k² − 16 = 0 です。
+          - k は正の数です。
+        paths:
+          - [k² − 16 = 0, k = 4]
+      - part: 思い出す
+        text: 3 点 (0, 0)、(4, 1)、(1, 3) を頂点とする三角形の面積はいくつですか。
+        answer: 11/2
+        accept: ["5.5"]
+        check: "Fraction(abs(4 * 3 - 1 * 1), 2)"
+        hints:
+          - まわりの長方形の面積から、まわりの直角三角形をひきましょう（G-026）。
+          - 長方形は 4 × 3 = 12 です。
+          - まわりの 3 つの直角三角形は 2、3/2、3 です。
+        paths:
+          - [12 − 2 − 3/2 − 3, 11/2]
+      - part: 今日
+        text: 4 点 (0, 0)、(2, 0)、(2, 2)、(0, 2) を頂点とする正方形を、行列 (3 1；1 2) で表される 1 次変換で移した図形の面積はいくつですか。
+        answer: 20
+        check: "4 * abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((3, 1), (1, 2))))"
+        hints:
+          - もとの正方形の面積を求めましょう。
+          - 面積は |ad − bc| 倍になります。
+          - ad − bc = 6 − 1 です。
+        paths:
+          - [もとの面積 4, "|ad − bc| = 5", 4 × 5 = 20]
+      - part: 今日
+        text: A = (2 1；1 3)、B = (1 −1；2 1) のとき、行列 AB で表される 1 次変換で、1 辺 1 の正方形を移した図形の面積はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(37.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="208.2" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="208.2" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M225.5 7.0 Q232.5 32.2 225.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 15
+        check: "abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 1), (1, 3)), ((1, -1), (2, 1)))))"
+        hints:
+          - det(AB) = det A × det B です。
+          - det A = 6 − 1、det B = 1 + 2 です。
+          - 面積は |det(AB)| です。
+        paths:
+          - [det A = 5、det B = 3, det(AB) = 15, "15"]
+      - part: 挑戦
+        text: 行列 (a 2；3 4) で表される 1 次変換で、どの三角形も、面積が 2 倍で向きが逆の三角形に移ります。a はいくつですか。
+        answer: 1
+        check: "[a for a in range(-20, 21) if 4 * a - 2 * 3 == -2][0]"
+        hints:
+          - 面積が 2 倍なので、|ad − bc| = 2 です。
+          - 向きが逆なので、ad − bc は負の数です。
+          - 4a − 6 = −2 を解きましょう。
+        paths:
+          - [ad − bc = −2, 4a − 6 = −2, a = 1]
+        note: 4a − 6 = 2 として a = 2 とする間違いが多い。向きが逆になるのは行列式が負のとき。
+    extra:
+      - part: 今日
+        text: 行列 (5 3；4 2) の行列式はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((5, 3), (4, 2))))"
+        hints:
+          - 行列式は ad − bc です。
+          - 5 × 2 − 3 × 4 を計算しましょう。
+          - 負の数になります。
+        paths:
+          - [10 − 12, −2]
+      - part: 今日
+        text: 面積 3 の三角形を、行列 (2 −1；1 1) で表される 1 次変換で移した図形の面積はいくつですか。
+        answer: 9
+        check: "3 * abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((2, -1), (1, 1))))"
+        hints:
+          - 面積は |ad − bc| 倍になります。
+          - ad − bc = 2 + 1 です。
+          - 3 × 3 を計算しましょう。
+        paths:
+          - ["|ad − bc| = 3", "9"]
+      - part: 挑戦
+        text: A = (2 3；1 4) のとき、det(A³) はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">3</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">4</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 125
+        check: "(lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])((lambda m: lambda A, n: (lambda p: p(p, ((1, 0), (0, 1)), n))(lambda p, P, k: P if k == 0 else p(p, m(P, A), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))(((2, 3), (1, 4)), 3))"
+        hints:
+          - det(AB) = det A × det B を使いましょう。
+          - det(A³) = (det A)³ です。
+          - det A = 8 − 3 です。
+        paths:
+          - [det A = 5, det(A³) = 5³ = 125]
+
+  - day: 6
+    items:
+      - part: 思い出す
+        text: 行列 (4 −3；2 1) の行列式はいくつですか。
+        answer: 10
+        check: "(lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((4, -3), (2, 1)))"
+        hints:
+          - 行列式は ad − bc です。
+          - 4 × 1 − (−3) × 2 を計算しましょう。
+          - 負の数をひくときに気をつけましょう。
+        paths:
+          - [4 + 6, "10"]
+      - part: 思い出す
+        text: cos α = 4/5、sin α = 3/5、cos β = 3/5、sin β = 4/5 のとき、cos(α + β) はいくつですか。
+        answer: 0
+        check: "Fraction(4, 5) * Fraction(3, 5) - Fraction(3, 5) * Fraction(4, 5)"
+        hints:
+          - 加法定理 cos(α + β) = cos α cos β − sin α sin β を使いましょう（G-025）。
+          - (4/5)(3/5) − (3/5)(4/5) を計算しましょう。
+          - 2 つの積は等しくなります。
+        paths:
+          - [12/25 − 12/25, "0"]
+        note: cos(α + β) = 0 なので α + β = 90°。
+      - part: 今日
+        text: 点 (3, −2) に、原点のまわりの 45° 回転を 2 回続けて行った点の x 座標はいくつですか。
+        answer: 2
+        check: "[k for k in range(-200, 200) if math.isclose(math.cos(math.radians(90)) * (3) - math.sin(math.radians(90)) * (-2), k, abs_tol=1e-9)][0]"
+        hints:
+          - 45° の回転を 2 回続けると、何度の回転でしょう。
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - x′ は −y です。負の数の符号に気をつけましょう。
+        paths:
+          - [45° × 2 = 90°, "(3, −2) → (2, 3)", "2"]
+      - part: わけ
+        text: 行列 A = (a b；c d) で表される 1 次変換 f について、ベクトル p = (p₁, p₂)、q = (q₁, q₂) と実数 s、t に対して f(sp + tq) = s f(p) + t f(q) が成り立つわけを、筋道を立てて書きましょう。
+        explain: 例：「sp + tq = (sp₁ + tq₁, sp₂ + tq₂) である。その像の x 座標は a(sp₁ + tq₁) + b(sp₂ + tq₂) = s(ap₁ + bp₂) + t(aq₁ + bq₂)、y 座標は c(sp₁ + tq₁) + d(sp₂ + tq₂) = s(cp₁ + dp₂) + t(cq₁ + dq₂) である。f(p) = (ap₁ + bp₂, cp₁ + dp₂)、f(q) = (aq₁ + bq₂, cq₁ + dq₂) なので、像は s f(p) + t f(q) に等しい。」と書ければよい。①「〜とする」で成分を文字で置く、② 分配法則で展開し、s のつく項と t のつく項にまとめ直す、③ 約束した事実（ベクトルの和と実数倍は成分ごと、1 次変換の式）で結ぶ、の 3 つがそろっているかを見る。行列の性質 A(sp + tq) = s(Ap) + t(Aq)（分配法則と実数倍、M-001）を約束した事実として使ってもよい。この性質から、直線 a + td の像が f(a) + t f(d) になり、直線は直線か 1 点に移ることを話す。
+        hints:
+          - sp + tq の成分を書きましょう。
+          - その像の x 座標を、分配法則で展開しましょう。
+          - s がつく項と t がつく項に分けて、f(p)、f(q) の成分と見くらべましょう。
+        paths:
+          - ["sp + tq = (sp₁ + tq₁, sp₂ + tq₂) とする", 像の x 座標は s(ap₁ + bp₂) + t(aq₁ + bq₂)、y 座標も同じ形, f(p)、f(q) の成分と一致する, f(sp + tq) = s f(p) + t f(q)]
+      - part: わけ
+        text: 原点のまわりの角 θ の回転を表す行列を R(θ) とします。R(β)R(α) = R(α + β) が成り立つわけを、加法定理を使って、筋道を立てて書きましょう。
+        explain: 例：「R(θ) = (cos θ、−sin θ；sin θ、cos θ) である。R(β)R(α) の (1, 1) 成分は cos β cos α − sin β sin α = cos(α + β)、(1, 2) 成分は −cos β sin α − sin β cos α = −sin(α + β)、(2, 1) 成分は sin β cos α + cos β sin α = sin(α + β)、(2, 2) 成分は −sin β sin α + cos β cos α = cos(α + β) である（加法定理、G-025）。4 つの成分が R(α + β) の成分と等しいので、R(β)R(α) = R(α + β) である。」と書ければよい。①「〜とする」で R(θ) の成分を書く、② 積を成分ごとに計算する、③ 約束した事実（加法定理、行列が等しいのは成分がすべて等しいとき）で結ぶ、の 3 つがそろっているかを見る。これは「α 回してから β 回すのは、α + β 回すのと同じ」という図形の事実を、行列の計算で確かめたものである。R(α)R(β) も同じく R(α + β) に等しく、回転どうしは積の順を入れかえてよい（行列の積では特別なこと）。
+        hints:
+          - R(θ) の 4 つの成分を書きましょう。
+          - R(β)R(α) を成分ごとに計算しましょう。
+          - 加法定理で、それぞれの成分を cos(α + β) か sin(α + β) にまとめましょう。
+        paths:
+          - [R(θ) = (cos θ、−sin θ；sin θ、cos θ) とする, "R(β)R(α) の (1, 1) 成分は cos β cos α − sin β sin α など、成分ごとに計算する", 加法定理で cos(α + β)、sin(α + β) にまとまる, R(α + β) に等しい]
+      - part: わけ
+        text: 行列 A = (a b；c d) で表される 1 次変換で、1 辺 1 の正方形は、u = (a, c) と v = (b, d) を 2 辺とする平行四辺形に移ります。この平行四辺形の面積が |ad − bc| になるわけを、筋道を立てて書きましょう（u と v は平行でないとします）。
+        explain: 例：「u と v のなす角を θ とすると、平行四辺形の面積は S = |u||v| sin θ である（三角形の面積 (1/2)|u||v| sin θ の 2 倍、G-024）。sin θ > 0 で sin²θ = 1 − cos²θ、cos θ = (u・v) ÷ (|u||v|)（G-027）なので、S² = |u|²|v|²(1 − cos²θ) = |u|²|v|² − (u・v)² である。成分で計算すると、|u|²|v|² − (u・v)² = (a² + c²)(b² + d²) − (ab + cd)² = a²b² + a²d² + b²c² + c²d² − a²b² − 2abcd − c²d² = a²d² − 2abcd + b²c² = (ad − bc)² である。S は正なので、S = |ad − bc| である。」と書ければよい。①「〜とする」で θ を決め、面積を |u||v| sin θ で表す、② S² を内積で表し、成分で展開して (ad − bc)² にまとめる、③ 約束した事実（三角形の面積の公式、sin²θ + cos²θ = 1、内積となす角）で結ぶ、の 3 つがそろっているかを見る。どんな図形でも面積が |ad − bc| 倍になるのは、図形を小さな正方形の集まりと見ると、どの正方形も |ad − bc| 倍の平行四辺形に移るからだと話す（細かくして近づける考えは積分につながる）。
+        hints:
+          - u と v のなす角を θ として、平行四辺形の面積を |u|、|v|、sin θ で表しましょう。
+          - sin²θ = 1 − cos²θ と、cos θ を内積で表す式を使って、面積の 2 乗を内積で表しましょう。
+          - 成分で展開して、(ad − bc)² になることを確かめましょう。
+        paths:
+          - [なす角を θ とし、S = |u||v| sin θ, S² = |u|²|v|² − (u・v)², = (a² + c²)(b² + d²) − (ab + cd)² = (ad − bc)², S = |ad − bc|]
+    extra:
+      - part: 今日
+        text: 点 (1, 4) に、原点のまわりの 30° 回転を 3 回続けて行った点の x 座標はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose(math.cos(math.radians(90)) * (1) - math.sin(math.radians(90)) * (4), k, abs_tol=1e-9)][0])"
+        hints:
+          - 30° の回転を 3 回続けると、何度の回転でしょう。
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - y = 4 です。
+        paths:
+          - [30° × 3 = 90°, "(1, 4) → (−4, 1)", −4]
+      - part: 今日
+        text: 2 次の正方行列 A、B で det A = −2、det B = 3 のとき、det(AB) はいくつですか。
+        answer: −6
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((-2) * 3)"
+        hints:
+          - det(AB) = det A × det B です。
+          - (−2) × 3 を計算しましょう。
+          - 符号に気をつけましょう。
+        paths:
+          - [(−2) × 3, −6]
+      - part: 挑戦
+        text: 3 点 (0, 0)、(1, 0)、(0, 1) を頂点とする三角形を、行列 (4 1；2 3) で表される 1 次変換で移した図形の面積はいくつですか。
+        answer: 5
+        check: "Fraction(1, 2) * abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((4, 1), (2, 3))))"
+        hints:
+          - もとの三角形の面積を求めましょう。
+          - 面積は |ad − bc| 倍になります。
+          - ad − bc = 12 − 2 です。
+        paths:
+          - [もとの面積 1/2, "|ad − bc| = 10", 1/2 × 10 = 5]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: A = (1 2；3 1) のとき、A² − 2A + kE = O となる数 k はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(102.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda S: [k for k in range(-50, 51) if S[0][0] - 2 * 1 + k == 0 and S[1][1] - 2 * 1 + k == 0][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((1, 2), (3, 1)), ((1, 2), (3, 1)))))"
+        hints:
+          - ケーリー・ハミルトンの定理を使いましょう（M-001）。
+          - a + d = 2 です。
+          - k は ad − bc です。
+        paths:
+          - [k = 1 × 1 − 2 × 3, −5]
+      - part: 思い出す
+        text: sin α = 3/5、cos α = 4/5 のとき、sin 2α はいくつですか。
+        answer: 24/25
+        check: "2 * Fraction(3, 5) * Fraction(4, 5)"
+        hints:
+          - 2 倍角の公式 sin 2α = 2 sin α cos α を使いましょう（G-025）。
+          - 2 × (3/5) × (4/5) を計算しましょう。
+          - 分母は 25 です。
+        paths:
+          - [2 × 3/5 × 4/5, 24/25]
+      - part: 今日
+        text: cos θ = 3/5、sin θ = 4/5 の角 θ の回転を、点 (5, 0) に 2 回続けて行った点の x 座標はいくつですか。
+        answer: −7/5
+        accept: [−1.4]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(5 * (Fraction(3, 5) ** 2 - Fraction(4, 5) ** 2))"
+        hints:
+          - θ の回転を 2 回続けると、2θ の回転です。
+          - (5, 0) の像は (5 cos 2θ, 5 sin 2θ) です。
+          - cos 2θ = cos²θ − sin²θ です（G-025）。
+        paths:
+          - [cos 2θ = 9/25 − 16/25 = −7/25, x 座標は 5 × (−7/25) = −7/5]
+      - part: 今日
+        text: 行列 (3 1；2 2) で表される 1 次変換 f のあとに、原点を中心に 2 倍に拡大する変換 g を行います。この合成変換で、面積 1 の図形は面積いくつの図形に移りますか。
+        answer: 16
+        check: "abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 0), (0, 2)), ((3, 1), (2, 2)))))"
+        hints:
+          - f の行列式は 6 − 2 です。
+          - g の行列は (2 0；0 2) で、行列式は 4 です。
+          - 合成変換の面積の倍率は、行列式の積の絶対値です。
+        paths:
+          - [det f = 4、det g = 4, 4 × 4 = 16]
+      - part: 挑戦
+        text: A = (1 −1；1 1) のとき、A⁸ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(98.0 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="87.8" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 16
+        check: "(lambda m: lambda A, n: (lambda p: p(p, ((1, 0), (0, 1)), n))(lambda p, P, k: P if k == 0 else p(p, m(P, A), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))(((1, -1), (1, 1)), 8)[0][0]"
+        hints:
+          - A を、ある回転の行列の何倍かとして表しましょう。
+          - A = √2 × (1/√2、−1/√2；1/√2、1/√2) = √2 R(45°) です。
+          - A⁸ = (√2)⁸ R(360°) です。
+        paths:
+          - [A = √2 R(45°), A⁸ = (√2)⁸ R(45° × 8) = 16 R(360°) = 16E, "(1, 1) 成分は 16"]
+          - [A² = (0 −2；2 0) = 2R(90°), A⁸ = (A²)⁴ = 16 R(360°), "16"]
+        note: A を 8 回かける手数を、「√2 倍しながら 45° 回す」と読みかえる道筋。
+    extra:
+      - part: 今日
+        text: 原点のまわりの 60° 回転の逆変換で、点 (1, √3) が移る点の x 座標はいくつですか。
+        answer: 2
+        check: "[k for k in range(-10, 11) if math.isclose(math.cos(math.radians(-60)) * (1) - math.sin(math.radians(-60)) * (math.sqrt(3)), k, abs_tol=1e-9)][0]"
+        hints:
+          - 60° 回転の逆変換は、−60° の回転です。
+          - R(−60°) = (cos 60°、sin 60°；−sin 60°、cos 60°) です。
+          - x′ = (1/2) × 1 + ((√3)/2) × √3 を計算しましょう。
+        paths:
+          - [x′ = 1/2 + 3/2, "2"]
+      - part: 今日
+        text: 面積 2 の三角形を、行列 (1 2；−1 3) で表される 1 次変換で移した図形の面積はいくつですか。
+        answer: 10
+        check: "2 * abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((1, 2), (-1, 3))))"
+        hints:
+          - 面積は |ad − bc| 倍になります。
+          - ad − bc = 3 + 2 です。
+          - 2 × 5 を計算しましょう。
+        paths:
+          - ["|ad − bc| = 5", "10"]
+      - part: 挑戦
+        text: A = (√3 −1；1 √3) のとき、A⁶ の (1, 1) 成分はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(86.8 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="66.0" y="26.2" font-size="16" text-anchor="middle">√3</text>
+              <text x="107.0" y="26.2" font-size="16" text-anchor="middle">−1</text>
+              <text x="66.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="107.0" y="49.4" font-size="16" text-anchor="middle">√3</text>
+              <path d="M127.4 7.0 Q134.4 32.2 127.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: −64
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-200, 200) if math.isclose((lambda m: lambda A, n: (lambda p: p(p, ((1, 0), (0, 1)), n))(lambda p, P, k: P if k == 0 else p(p, m(P, A), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))(((math.sqrt(3), -1), (1, math.sqrt(3))), 6)[0][0], k, abs_tol=1e-9)][0])"
+        hints:
+          - A を、ある回転の行列の何倍かとして表しましょう。
+          - A = 2 × ((√3)/2、−1/2；1/2、(√3)/2) = 2R(30°) です。
+          - A⁶ = 2⁶ R(180°) です。
+        paths:
+          - [A = 2R(30°), A⁶ = 64 R(180°) = −64E, "(1, 1) 成分は −64"]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 行列 (2 −3；1 4) で表される 1 次変換による、点 (2, 1) の像の y 座標はいくつですか。
+        answer: 6
+        check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, -3), (1, 4)), ((2,), (1,)))[1][0]"
+        hints:
+          - y 座標は、行列の 2 行目を使います。
+          - 1 × 2 + 4 × 1 を計算しましょう。
+          - x 座標は 1 です。
+        paths:
+          - [y′ = 2 + 4, "6"]
+      - part: 今日
+        text: 1 次変換 f は、点 (1, 0) を (3, −1) に、点 (0, 1) を (2, 5) に移します。点 (−1, 2) の f による像の y 座標はいくつですか。
+        answer: 11
+        check: "(-1) * (-1) + 2 * 5"
+        hints:
+          - (1, 0) と (0, 1) の像が、行列の列になります。
+          - f の行列は (3 2；−1 5) です。
+          - (−1, 2) の像は −1 × (3, −1) + 2 × (2, 5) です。
+        paths:
+          - [y′ = (−1) × (−1) + 2 × 5, "11"]
+      - part: 今日
+        text: 点 (5, 2) を、原点のまわりに 90° 回転した点の x 座標はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((5,), (2,)))[0][0])"
+        hints:
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - x′ は −y です。
+          - 符号に気をつけましょう。
+        paths:
+          - ["(5, 2) → (−2, 5)", −2]
+      - part: 今日
+        text: 点 (3, 4) を、x 軸について対称に移してから、原点について対称に移した点の x 座標はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((-1, 0), (0, -1)), ((1, 0), (0, -1))), ((3,), (4,)))[0][0])"
+        hints:
+          - x 軸についての対称移動で (x, y) は (x, −y) に移ります。
+          - 原点についての対称移動で (x, y) は (−x, −y) に移ります。
+          - 2 つを続けると、どんな変換でしょう。
+        paths:
+          - ["(3, 4) → (3, −4) → (−3, 4)", y 軸についての対称移動と同じ, −3]
+      - part: 今日
+        text: 行列 (3 2；4 3) で表される 1 次変換で、点 (1, 2) に移る点の x 座標はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])((lambda A: (lambda d: [[Fraction(A[1][1], d), Fraction(-A[0][1], d)], [Fraction(-A[1][0], d), Fraction(A[0][0], d)]])(A[0][0] * A[1][1] - A[0][1] * A[1][0]))(((3, 2), (4, 3))), ((1,), (2,)))[0][0])"
+        hints:
+          - 移る前の点は、逆変換で (1, 2) を移した点です。
+          - 逆行列は (3 −2；−4 3) です。
+          - (3 −2；−4 3)(1；2) を計算しましょう。
+        paths:
+          - [x = 3 − 4 = −1, y = −4 + 6 = 2]
+      - part: 今日
+        text: 面積 3 の正方形を、行列 (4 1；2 1) で表される 1 次変換で移した図形の面積はいくつですか。
+        answer: 6
+        check: "3 * abs((lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])(((4, 1), (2, 1))))"
+        hints:
+          - 面積は |ad − bc| 倍になります。
+          - ad − bc = 4 − 2 です。
+          - 3 × 2 を計算しましょう。
+        paths:
+          - ["|ad − bc| = 2", "6"]
+      - part: 今日
+        text: 原点のまわりの 90° 回転による、直線 y = 2x の像はどれですか。
+        choices:
+          - y = −2x
+          - y = −(1/2)x
+          - y = (1/2)x
+          - y = 2x
+        answer: y = −(1/2)x
+        check: "[c for c, f in {'y = −(1/2)x': Fraction(-1, 2), 'y = −2x': Fraction(-2), 'y = (1/2)x': Fraction(1, 2), 'y = 2x': Fraction(2)}.items() if all(t == f * (-2 * t) for t in range(1, 6))][0]"
+        hints:
+          - 直線 y = 2x の上の点を (t, 2t) と表しましょう。
+          - 90° の回転で (x, y) は (−y, x) に移ります。
+          - 像 (−2t, t) が通る直線を求めましょう。
+        paths:
+          - ["(t, 2t) → (−2t, t)", y′ = −(1/2)x′]
+        note: 90° 回すと、傾き m の直線は傾き −1/m の直線（もとの直線に垂直）に移る。
+    extra:
+      - part: 今日
+        text: 点 (0, 2) を、原点のまわりに 60° 回転した点の y 座標はいくつですか。
+        answer: 1
+        check: "[k for k in range(-10, 11) if math.isclose(math.sin(math.radians(60)) * (0) + math.cos(math.radians(60)) * (2), k, abs_tol=1e-9)][0]"
+        hints:
+          - (0, 1) は (−sin θ, cos θ) に移ります。
+          - cos 60° = 1/2 です。
+          - y′ = 2 cos 60° です。
+        paths:
+          - [y′ = 2 × 1/2, "1"]
+      - part: 今日
+        text: A = (2 5；1 3)、B = (4 1；2 1) のとき、det(AB) はいくつですか。
+        svg: |
+          <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+            <g transform="translate(42.6 0)">
+              <text x="8.0" y="37.8" font-size="16">A = </text>
+              <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="58.0" y="26.2" font-size="16" text-anchor="middle">2</text>
+              <text x="83.0" y="26.2" font-size="16" text-anchor="middle">5</text>
+              <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <text x="83.0" y="49.4" font-size="16" text-anchor="middle">3</text>
+              <path d="M95.4 7.0 Q102.4 32.2 95.4 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="108.4" y="37.8" font-size="16">　</text>
+              <text x="128.4" y="37.8" font-size="16">B = </text>
+              <path d="M167.0 7.0 Q160.0 32.2 167.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+              <text x="178.4" y="26.2" font-size="16" text-anchor="middle">4</text>
+              <text x="203.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+              <text x="178.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+              <text x="203.4" y="49.4" font-size="16" text-anchor="middle">1</text>
+              <path d="M215.9 7.0 Q222.9 32.2 215.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+            </g>
+          </svg>
+        answer: 2
+        check: "(lambda M: M[0][0] * M[1][1] - M[0][1] * M[1][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((2, 5), (1, 3)), ((4, 1), (2, 1))))"
+        hints:
+          - det(AB) = det A × det B です。
+          - det A = 6 − 5、det B = 4 − 2 です。
+          - 2 つをかけましょう。
+        paths:
+          - [det A = 1、det B = 2, "2"]
+      - part: 今日
+        text: x 軸についての対称移動のあとに、原点のまわりの 90° 回転を行う変換を表す行列はどれですか。
+        choices:
+          - (0 −1；−1 0)
+          - (1 0；0 −1)
+          - (0 1；1 0)
+          - (0 −1；1 0)
+        answer: (0 1；1 0)
+        check: "(lambda M: [c for c, f in {'(0 1；1 0)': ((0, 1), (1, 0)), '(0 −1；−1 0)': ((0, -1), (-1, 0)), '(1 0；0 −1)': ((1, 0), (0, -1)), '(0 −1；1 0)': ((0, -1), (1, 0))}.items() if all(f[i][j] == M[i][j] for i in range(2) for j in range(2))][0])((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((1, 0), (0, -1))))"
+        hints:
+          - あとから行う変換の行列が左にきます。
+          - (0 −1；1 0)(1 0；0 −1) を計算しましょう。
+          - 答えは直線 y = x についての対称移動です。
+        paths:
+          - [(0 −1；1 0)(1 0；0 −1), (0 1；1 0)]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋, 数]
+    text: A = (1 −1；1 1) とし、点 P₀(2, 0) から始めて、P₁ を P₀ の A による像、P₂ を P₁ の A による像、…と順に点をとります。三角形 P₁₀P₁₁P₁₂ の面積はいくつですか。
+    svg: |
+      <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(98.0 0)">
+          <text x="8.0" y="37.8" font-size="16">A = </text>
+          <path d="M46.5 7.0 Q39.5 32.2 46.5 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+          <text x="58.0" y="26.2" font-size="16" text-anchor="middle">1</text>
+          <text x="87.8" y="26.2" font-size="16" text-anchor="middle">−1</text>
+          <text x="58.0" y="49.4" font-size="16" text-anchor="middle">1</text>
+          <text x="87.8" y="49.4" font-size="16" text-anchor="middle">1</text>
+          <path d="M105.0 7.0 Q112.0 32.2 105.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+        </g>
+      </svg>
+    answer: 2048
+    check: "(lambda P: Fraction(abs((P(11)[0] - P(10)[0]) * (P(12)[1] - P(10)[1]) - (P(11)[1] - P(10)[1]) * (P(12)[0] - P(10)[0])), 2))(lambda n: (lambda M: (M[0][0] * 2, M[1][0] * 2))((lambda m: lambda A, n: (lambda p: p(p, ((1, 0), (0, 1)), n))(lambda p, P, k: P if k == 0 else p(p, m(P, A), k - 1)))((lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))]))(((1, -1), (1, 1)), n)))"
+    hints:
+      - 三角形 P₀P₁P₂ の面積を求めましょう。
+      - 三角形 P₁P₂P₃ は、三角形 P₀P₁P₂ を A で移したものです。面積は何倍になるでしょう。
+      - 三角形 P₁₀P₁₁P₁₂ は、三角形 P₀P₁P₂ を A で 10 回移したものです。
+    paths:
+      - ["P₁(2, 2)、P₂(0, 4) で、三角形 P₀P₁P₂ の面積は 2", det A = 2 なので、A で移すたびに面積は 2 倍, 2 × 2¹⁰ = 2048]
+    note: 点の座標を 12 個計算する手数を、「三角形ごと A で移る」「面積は毎回 |det A| 倍」に言いかえる道筋。A = √2 R(45°) と見ると、点は 45° ずつ回りながら √2 倍ずつ遠ざかる（らせん）。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [A-017]
+    text: 原点を通る直線 y = mx のうち、行列 (3 1；2 2) で表される 1 次変換で自分自身に移るもの（直線の上の点の像が、また同じ直線の上にあるもの）があります。そのような m のうち、負のものはいくつですか。
+    svg: |
+      <svg viewBox="0 0 320.0 64.4" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(118.5 0)">
+          <path d="M15.0 7.0 Q8.0 32.2 15.0 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+          <text x="26.5" y="26.2" font-size="16" text-anchor="middle">3</text>
+          <text x="51.4" y="26.2" font-size="16" text-anchor="middle">1</text>
+          <text x="26.5" y="49.4" font-size="16" text-anchor="middle">2</text>
+          <text x="51.4" y="49.4" font-size="16" text-anchor="middle">2</text>
+          <path d="M63.9 7.0 Q70.9 32.2 63.9 57.4" stroke="currentColor" fill="none" stroke-width="1.6"/>
+        </g>
+      </svg>
+    answer: −2
+    check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([m for m in range(-20, 21) if m * (3 + m) == 2 + 2 * m and m < 0][0])"
+    hints:
+      - 直線 y = mx の上の点 (1, m) の像を求めましょう。
+      - 像が y = mx の上にある条件を、m の式で書きましょう。
+      - 線形性から、(1, m) の像が直線の上にあれば、直線の上のどの点の像も直線の上にあります。2 次方程式を解きましょう（A-017）。
+    paths:
+      - ["(1, m) の像は (3 + m, 2 + 2m)", 2 + 2m = m(3 + m), m² + m − 2 = 0、(m + 2)(m − 1) = 0, 負のものは m = −2]
+    note: 自分自身に移る直線の向きは、後で学ぶ固有ベクトル。ここでは像を直線の式に入れて 2 次方程式にするだけで求まる。m = 1 の直線の上では点は 4 倍の位置に、m = −2 の直線の上では動かない（1 倍）。
+  - part: 離
+    kinds: [読み取り, 手数]
+    text: 画面の図形に、次の 3 つの操作を順に行います。① x 軸について対称に移す。② 原点のまわりに 90° 回す。③ x 座標だけを 3 倍にする（y 座標はそのまま）。この 3 つをまとめて 1 つの 1 次変換とみるとき、それを表す行列の (1, 2) 成分はいくつですか。
+    answer: 3
+    check: "(lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((3, 0), (0, 1)), (lambda A, B: [[sum(A[i][k] * B[k][j] for k in range(len(B))) for j in range(len(B[0]))] for i in range(len(A))])(((0, -1), (1, 0)), ((1, 0), (0, -1))))[0][1]"
+    hints:
+      - ① ② ③ を表す行列を、それぞれ書きましょう。
+      - あとから行う変換の行列が左にきます。③、②、① の行列の順に並べてかけます。
+      - まず ② × ① を計算し、次に ③ を左からかけましょう。
+    paths:
+      - [① (1 0；0 −1)、② (0 −1；1 0)、③ (3 0；0 1), ② × ① = (0 1；1 0), ③ × (② × ①) = (0 3；1 0), "(1, 2) 成分は 3"]
+    note: 操作の文を行列に読みかえ、かける順（あとの操作が左）を守るのが要点。①、②、③ の行列を左から順にかけると (0 −1；−3 0) になり、(1, 2) 成分は −1 で合わない。まとめた行列の行列式は −3 で、面積は 3 倍になり、図形は裏返る。

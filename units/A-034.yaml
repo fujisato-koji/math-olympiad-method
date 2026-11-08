@@ -1,0 +1,783 @@
+# A-034 複素数の極形式と 1 の累乗根（ド・モアブル）
+#
+# 書き方は N-001 の頭の注のとおり。段 5 の決まりは A-019 の頭の注と同じ（思い出す 2・今日 2・挑戦 1、わけの深さ ③、各日に予備 3 問）。
+#   練習の日は新しい決まりが出るので頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 8 問にした。
+# 地図に plan がないので、既定の並び（導入、練習、練習、わけ、混ぜる、確認）で作った。
+#   1 日目：複素数平面（実軸、虚軸）、絶対値 |z| = √(a² + b²)、2 点の距離 |z − w|、偏角、極形式 r(cos θ + i sin θ)。
+#   2 日目：積と商（絶対値はかけ算・わり算、偏角はたし算・ひき算。加法定理から）、原点のまわりの回転（i をかけると 90°）。
+#   3 日目：ド・モアブルの定理、(1 + i)ⁿ のような累乗、1 の n 乗根（単位円に内接する正 n 角形）、zⁿ = a の形。
+#   4 日目：わけ（3 問とも ③：積の公式を加法定理から、ド・モアブルを数学的帰納法で、ω² + ω + 1 = 0）。
+#   5 日目：A-021、G-025 と混ぜる（ω の計算、正三角形の頂点、実数になる累乗、回転）。6 日目：確認。
+# 前提は G-025（三角関数と加法定理）、A-021（複素数の計算）、L-012（数学的帰納法の入口）、A-009（累乗）。
+#   たどると G-024（三角比）、G-026（座標と距離）、G-019（三平方の定理）、A-017、A-016 まで使える。
+#   G-025 のファイルは同時に作られていて読めなかったので、題と G-024 の頭の注（「単位円と一般角、弧度法は G-025 で扱う」）から、
+#   一般角の三角関数（0° 以上 360° 未満の角と負の角）と加法定理が済んでいるものとした。角はすべて度で書き、弧度法（π）は使わない
+#   （G-025 が弧度法を扱うなら、言いかえの問題を足してよい）。2 倍角・3 倍角の公式は使わない。
+#   偏角は「0° 以上 360° 未満」で答える約束にした（−15° のような角は見本で 345° と同じと話すだけ）。
+#   複素数平面での図形（三角形の形、回転の中心が原点でない回転、軌跡）は、正三角形の頂点の 1 問を除いて扱わない（後の単元）。
+# 「√3/2」は画面で 3/2 だけが上下に重なるので、複素数は (−1 + √3 i)/2、実数は (√3)/2 のように書く（G-024 と同じ）。
+# 角、√ をふくむ値、複素数、極形式は choices。打つ答えは、絶対値、実部、虚部、個数、実数の値（整数と分数）。
+#   check は Python の複素数と math.cos、math.sin（math.radians で度を変換）で計算し、選択肢の値との差の絶対値が 1e-9（累乗は 1e-6）より
+#   小さいものを選ぶ。打つ値は、計算した数に近い整数や分数（math.isclose）を選ぶ。
+# 図は svg（D-040）。複素数平面は方眼と目もりつきで、横の軸を「実軸」、縦の軸を「虚軸」とした。答えの点や角の値は図に書かない。
+# 極形式と 1 の累乗根は、多項式の根の配置（A-036）、円分多項式と整数論（N の流れ）、交流回路と信号の周波数解析、高速フーリエ変換、
+#   量子計算の位相（K の流れ）につながる（D-026）。
+
+id: A-034
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 複素数 1 + √3 i と −2 + 2i を、複素数平面の点として表し、絶対値と偏角を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 316 184" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="164.0" x2="50.0" y2="20.0"/>
+              <line x1="86.0" y1="164.0" x2="86.0" y2="20.0"/>
+              <line x1="122.0" y1="164.0" x2="122.0" y2="20.0"/>
+              <line x1="158.0" y1="164.0" x2="158.0" y2="20.0"/>
+              <line x1="194.0" y1="164.0" x2="194.0" y2="20.0"/>
+              <line x1="230.0" y1="164.0" x2="230.0" y2="20.0"/>
+              <line x1="266.0" y1="164.0" x2="266.0" y2="20.0"/>
+              <line x1="50.0" y1="164.0" x2="266.0" y2="164.0"/>
+              <line x1="50.0" y1="128.0" x2="266.0" y2="128.0"/>
+              <line x1="50.0" y1="92.0" x2="266.0" y2="92.0"/>
+              <line x1="50.0" y1="56.0" x2="266.0" y2="56.0"/>
+              <line x1="50.0" y1="20.0" x2="266.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="128.0" x2="276.0" y2="128.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="158.0" y1="172.0" x2="158.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M276.0 128.0 L268.0 124.0 L268.0 132.0 Z" fill="currentColor"/>
+            <path d="M158.0 10.0 L154.0 18.0 L162.0 18.0 Z" fill="currentColor"/>
+            <text x="272.0" y="120.0" font-size="11" text-anchor="end">実軸</text>
+            <text x="164.0" y="14.0" font-size="11">虚軸</text>
+            <text x="154.0" y="141.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="141.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="86.0" y="141.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="122.0" y="141.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="194.0" y="141.0" font-size="10" text-anchor="middle">1</text>
+            <text x="230.0" y="141.0" font-size="10" text-anchor="middle">2</text>
+            <text x="266.0" y="141.0" font-size="10" text-anchor="middle">3</text>
+            <text x="154.0" y="167.0" font-size="10" text-anchor="end">−1</text>
+            <text x="154.0" y="95.0" font-size="10" text-anchor="end">1</text>
+            <text x="154.0" y="59.0" font-size="10" text-anchor="end">2</text>
+            <text x="154.0" y="23.0" font-size="10" text-anchor="end">3</text>
+            <line x1="158.0" y1="128.0" x2="194.0" y2="65.6" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="158.0" y1="128.0" x2="86.0" y2="56.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <polyline points="177.8,128.0 177.8,127.5 177.8,127.0 177.7,126.4 177.7,125.9 177.6,125.4 177.6,124.9 177.5,124.4 177.4,123.9 177.3,123.4 177.1,122.9 177.0,122.4 176.8,121.9 176.7,121.4 176.5,120.9 176.3,120.4 176.1,119.9 175.9,119.5 175.6,119.0 175.4,118.6 175.1,118.1 174.9,117.7 174.6,117.2 174.3,116.8 174.0,116.4 173.7,115.9 173.4,115.5 173.1,115.1 172.7,114.8 172.4,114.4 172.0,114.0 171.6,113.6 171.2,113.3 170.9,112.9 170.5,112.6 170.1,112.3 169.6,112.0 169.2,111.7 168.8,111.4 168.3,111.1 167.9,110.9" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <polyline points="171.7,128.0 171.7,127.2 171.6,126.4 171.5,125.6 171.3,124.8 171.1,124.0 170.8,123.3 170.5,122.5 170.2,121.8 169.8,121.1 169.4,120.4 168.9,119.7 168.4,119.1 167.9,118.5 167.3,118.0 166.7,117.4 166.0,116.9 165.4,116.5 164.7,116.1 164.0,115.7 163.2,115.4 162.5,115.1 161.7,114.8 160.9,114.6 160.1,114.5 159.3,114.4 158.5,114.3 157.7,114.3 156.9,114.4 156.1,114.4 155.3,114.6 154.5,114.8 153.8,115.0 153.0,115.3 152.3,115.6 151.6,115.9 150.9,116.3 150.2,116.8 149.5,117.3 148.9,117.8 148.3,118.3" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="194.0" cy="65.6" r="4" fill="currentColor"/>
+            <circle cx="86.0" cy="56.0" r="4" fill="currentColor"/>
+            <text x="200.0" y="61.6" font-size="13" text-anchor="start">1 + √3 <tspan font-style="italic">i</tspan></text>
+            <text x="80.0" y="50.0" font-size="13" text-anchor="end">−2 + 2<tspan font-style="italic">i</tspan></text>
+          </svg>
+        explain: 複素数 z = a + bi（a、b は実数）を、座標平面の点 (a, b) で表します。この平面を複素数平面といい、横の軸を実軸、縦の軸を虚軸といいます。実数は実軸の上に、純虚数は虚軸の上にあります。原点 O と点 z の距離を z の絶対値といい、|z| と書きます。三平方の定理（G-019）から |a + bi| = √(a² + b²) です。また、z が 0 でないとき、実軸の正の向きから線分 Oz まで、反時計回りに測った角を z の偏角といいます（ここでは 0° 以上 360° 未満で答えます）。|z| = r、偏角を θ とすると、z の実部は r cos θ、虚部は r sin θ なので（G-025 の三角関数）、z = r(cos θ + i sin θ) と書けます。これを z の極形式といいます。1 + √3 i は、絶対値が √(1 + 3) = 2 で、cos θ = 1/2、sin θ = (√3)/2 から θ = 60° なので、1 + √3 i = 2(cos 60° + i sin 60°) です。−2 + 2i は、絶対値が √(4 + 4) = 2√2、偏角が 135° で、−2 + 2i = 2√2(cos 135° + i sin 135°) です。2 つの複素数 z、w の点の距離は |z − w| です。a + bi と共役な複素数 a − bi は、実軸について対称な点になります。
+      - part: 思い出す
+        text: (2 + i)(2 − i) の値はいくつですか。
+        answer: 5
+        check: "Fraction(((2 + 1j) * (2 - 1j)).real)"
+        hints:
+          - 共役な複素数どうしの積です（A-021）。
+          - (a + bi)(a − bi) = a² + b² です。
+          - 2² + 1² を計算しましょう。
+        paths:
+          - [4 − i², 4 + 1, 5]
+      - part: 思い出す
+        text: cos 120° の値はいくつですか。
+        answer: −1/2
+        accept: [−0.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-4, 5) if math.isclose(math.cos(math.radians(120)), k / 2)][0])"
+        hints:
+          - 単位円の上で、120° の点を考えましょう（G-025）。
+          - 120° = 180° − 60° です。
+          - 点は y 軸の左側にあるので、cos は負の数です。
+        paths:
+          - [cos 120° = −cos 60°, −1/2]
+      - part: 今日
+        text: 複素数 −6 + 8i の絶対値はいくつですか。
+        answer: 10
+        check: "[k for k in range(0, 100) if math.isclose(abs(-6 + 8j), k)][0]"
+        hints:
+          - "|a + bi| = √(a² + b²) です。"
+          - (−6)² + 8² を計算しましょう。
+          - 2 乗すると 100 になる正の数をさがしましょう。
+        paths:
+          - [√((−6)² + 8²), √100, 10]
+      - part: 今日
+        text: −1 + i を極形式で表したものはどれですか。
+        choices: [√2(cos 135° + i sin 135°), √2(cos 45° + i sin 45°), 2(cos 135° + i sin 135°), √2(cos 225° + i sin 225°)]
+        answer: √2(cos 135° + i sin 135°)
+        check: "[c for c, (r, t) in {'√2(cos 135° + i sin 135°)': (math.sqrt(2), 135), '√2(cos 45° + i sin 45°)': (math.sqrt(2), 45), '2(cos 135° + i sin 135°)': (2, 135), '√2(cos 225° + i sin 225°)': (math.sqrt(2), 225)}.items() if abs(r * (math.cos(math.radians(t)) + 1j * math.sin(math.radians(t))) - (-1 + 1j)) < 1e-9][0]"
+        hints:
+          - まず、絶対値 √((−1)² + 1²) を求めましょう。
+          - 点 (−1, 1) は、第何象限にあるでしょう。
+          - 実軸の正の向きから反時計回りに、何度回ると点の向きになるでしょう。
+        paths:
+          - [絶対値は √2, 点 (−1, 1) は第 2 象限で 偏角は 135°, √2(cos 135° + i sin 135°)]
+        note: 偏角を 45° としやすい。点の位置を図にかかせて、象限から角を決めさせる。
+      - part: 挑戦
+        text: 複素数平面の 2 点 1 + 2i と 4 − 2i の距離はいくつですか。
+        answer: 5
+        check: "[k for k in range(0, 100) if math.isclose(abs((4 - 2j) - (1 + 2j)), k)][0]"
+        hints:
+          - 2 点 z、w の距離は |z − w| です。
+          - (4 − 2i) − (1 + 2i) を計算しましょう。
+          - その複素数の絶対値を求めましょう。
+        paths:
+          - [(4 − 2i) − (1 + 2i) = 3 − 4i, "|3 − 4i| = √(9 + 16)", 5]
+          - ["点 (1, 2) と (4, −2) の距離を三平方の定理で求める", √(3² + 4²) = 5]
+    extra:
+      - part: 今日
+        text: 複素数 2 − √5 i の絶対値はいくつですか。
+        answer: 3
+        check: "[k for k in range(0, 100) if math.isclose(abs(2 - math.sqrt(5) * 1j), k)][0]"
+        hints:
+          - "|a + bi| = √(a² + b²) です。"
+          - 虚部は −√5 です。
+          - (−√5)² = 5 です。
+        paths:
+          - [√(4 + 5), √9, 3]
+      - part: 今日
+        text: 2(cos 300° + i sin 300°) を a + bi の形で表したものはどれですか。
+        choices: [1 − √3 i, 1 + √3 i, √3 − i, −1 − √3 i]
+        answer: 1 − √3 i
+        check: "[c for c, v in {'1 − √3 i': 1 - math.sqrt(3) * 1j, '1 + √3 i': 1 + math.sqrt(3) * 1j, '√3 − i': math.sqrt(3) - 1j, '−1 − √3 i': -1 - math.sqrt(3) * 1j}.items() if abs(v - 2 * (math.cos(math.radians(300)) + 1j * math.sin(math.radians(300)))) < 1e-9][0]"
+        hints:
+          - cos 300° と sin 300° の値を求めましょう（G-025）。
+          - 300° = 360° − 60° です。
+          - cos 300° = 1/2、sin 300° = −(√3)/2 です。
+        paths:
+          - [2(1/2 − ((√3)/2)i), 1 − √3 i]
+      - part: 挑戦
+        text: 複素数 √3 − i の偏角はどれですか。偏角は 0° 以上 360° 未満で答えます。
+        choices: [330°, 30°, 150°, 210°]
+        answer: 330°
+        check: "[c for c, t in {'330°': 330, '30°': 30, '150°': 150, '210°': 210}.items() if abs(2 * (math.cos(math.radians(t)) + 1j * math.sin(math.radians(t))) - (math.sqrt(3) - 1j)) < 1e-9][0]"
+        hints:
+          - 絶対値は 2 です。
+          - cos θ = (√3)/2、sin θ = −1/2 となる θ をさがしましょう。
+          - 点 (√3, −1) は第 4 象限にあります。
+        paths:
+          - [絶対値は 2, cos θ = (√3)/2、sin θ = −1/2, 第 4 象限なので θ = 330°]
+        note: 30° としやすい。虚部が負なので、点は実軸の下にある。−30° と答えたら、0° 以上 360° 未満では 330° になると話す。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: z = 2(cos 30° + i sin 30°)、w = 3(cos 45° + i sin 45°) の積 zw と商 z/w を、極形式で表してみましょう。また、点 3 + i を原点のまわりに 90° 回転した点を求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 292 200" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="180.0" x2="50.0" y2="20.0"/>
+              <line x1="82.0" y1="180.0" x2="82.0" y2="20.0"/>
+              <line x1="114.0" y1="180.0" x2="114.0" y2="20.0"/>
+              <line x1="146.0" y1="180.0" x2="146.0" y2="20.0"/>
+              <line x1="178.0" y1="180.0" x2="178.0" y2="20.0"/>
+              <line x1="210.0" y1="180.0" x2="210.0" y2="20.0"/>
+              <line x1="242.0" y1="180.0" x2="242.0" y2="20.0"/>
+              <line x1="50.0" y1="180.0" x2="242.0" y2="180.0"/>
+              <line x1="50.0" y1="148.0" x2="242.0" y2="148.0"/>
+              <line x1="50.0" y1="116.0" x2="242.0" y2="116.0"/>
+              <line x1="50.0" y1="84.0" x2="242.0" y2="84.0"/>
+              <line x1="50.0" y1="52.0" x2="242.0" y2="52.0"/>
+              <line x1="50.0" y1="20.0" x2="242.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="148.0" x2="252.0" y2="148.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="114.0" y1="188.0" x2="114.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M252.0 148.0 L244.0 144.0 L244.0 152.0 Z" fill="currentColor"/>
+            <path d="M114.0 10.0 L110.0 18.0 L118.0 18.0 Z" fill="currentColor"/>
+            <text x="248.0" y="140.0" font-size="11" text-anchor="end">実軸</text>
+            <text x="120.0" y="14.0" font-size="11">虚軸</text>
+            <text x="110.0" y="161.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="161.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="82.0" y="161.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="146.0" y="161.0" font-size="10" text-anchor="middle">1</text>
+            <text x="178.0" y="161.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="161.0" font-size="10" text-anchor="middle">3</text>
+            <text x="242.0" y="161.0" font-size="10" text-anchor="middle">4</text>
+            <text x="110.0" y="183.0" font-size="10" text-anchor="end">−1</text>
+            <text x="110.0" y="119.0" font-size="10" text-anchor="end">1</text>
+            <text x="110.0" y="87.0" font-size="10" text-anchor="end">2</text>
+            <text x="110.0" y="55.0" font-size="10" text-anchor="end">3</text>
+            <text x="110.0" y="23.0" font-size="10" text-anchor="end">4</text>
+            <line x1="114.0" y1="148.0" x2="210.0" y2="116.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="114.0" y1="148.0" x2="82.0" y2="52.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <polyline points="141.3,138.9 140.9,137.8 140.5,136.8 140.1,135.7 139.6,134.7 139.0,133.7 138.4,132.8 137.8,131.8 137.2,130.9 136.5,130.0 135.8,129.1 135.0,128.3 134.2,127.5 133.4,126.7 132.5,126.0 131.7,125.2 130.8,124.6 129.8,123.9 128.9,123.3 127.9,122.8 126.9,122.2 125.9,121.8 124.8,121.3 123.8,120.9 122.7,120.5 121.6,120.2 120.5,119.9 119.4,119.7 118.3,119.5 117.2,119.4 116.0,119.3 114.9,119.2 113.8,119.2 112.7,119.2 111.5,119.3 110.4,119.4 109.3,119.6 108.2,119.8 107.1,120.0 106.0,120.3 104.9,120.7" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <circle cx="210.0" cy="116.0" r="4" fill="currentColor"/>
+            <circle cx="82.0" cy="52.0" r="4" fill="currentColor"/>
+            <text x="216.0" y="120.0" font-size="13" text-anchor="start">3 + <tspan font-style="italic">i</tspan></text>
+            <text x="76.0" y="48.0" font-size="13" text-anchor="end">−1 + 3<tspan font-style="italic">i</tspan></text>
+          </svg>
+        explain: zw = 6(cos 30° + i sin 30°)(cos 45° + i sin 45°) を展開して i² = −1 を使うと、6((cos 30° cos 45° − sin 30° sin 45°) + i(sin 30° cos 45° + cos 30° sin 45°)) です。加法定理（G-025）から、かっこの中は cos 75° と sin 75° なので、zw = 6(cos 75° + i sin 75°) です（わけは 4 日目）。つまり、積の絶対値は絶対値の積（|zw| = |z||w|）、積の偏角は偏角の和になります。商は、z/w = (2/3)(cos(30° − 45°) + i sin(30° − 45°)) = (2/3)(cos(−15°) + i sin(−15°)) で、絶対値は商、偏角は差になります（−15° の向きは 345° と同じ）。とくに、cos θ + i sin θ（絶対値 1、偏角 θ）をかけると、点は原点からの距離を変えずに、原点のまわりに θ だけ回転します。i = cos 90° + i sin 90° なので、i をかけると 90° の回転です。点 3 + i を 90° 回転した点は i(3 + i) = 3i + i² = −1 + 3i で、図のように回転しています。
+      - part: 思い出す
+        text: 複素数 −3√3 + 3i の絶対値はいくつですか。
+        answer: 6
+        check: "[k for k in range(0, 100) if math.isclose(abs(-3 * math.sqrt(3) + 3j), k)][0]"
+        hints:
+          - "|a + bi| = √(a² + b²) です。"
+          - (−3√3)² = 27 です。
+          - 27 + 9 を計算しましょう。
+        paths:
+          - [√(27 + 9), √36, 6]
+      - part: 思い出す
+        text: sin 75° の値はどれですか。
+        choices: [(√6 + √2)/4, (√6 − √2)/4, (√3 + 1)/2, (√2 + 1)/2]
+        answer: (√6 + √2)/4
+        check: "[c for c, v in {'(√6 + √2)/4': (math.sqrt(6) + math.sqrt(2)) / 4, '(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '(√3 + 1)/2': (math.sqrt(3) + 1) / 2, '(√2 + 1)/2': (math.sqrt(2) + 1) / 2}.items() if math.isclose(v, math.sin(math.radians(75)))][0]"
+        hints:
+          - 75° = 45° + 30° です。
+          - 加法定理 sin(α + β) = sin α cos β + cos α sin β を使いましょう（G-025）。
+          - (√2)/2 × (√3)/2 + (√2)/2 × 1/2 を計算しましょう。
+        paths:
+          - [sin 75° = sin 45° cos 30° + cos 45° sin 30°, = (√6)/4 + (√2)/4, (√6 + √2)/4]
+      - part: 今日
+        text: z = 2(cos 50° + i sin 50°)、w = 4(cos 70° + i sin 70°) のとき、zw の実部はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-50, 51) if math.isclose((2 * (math.cos(math.radians(50)) + 1j * math.sin(math.radians(50))) * 4 * (math.cos(math.radians(70)) + 1j * math.sin(math.radians(70)))).real, k, abs_tol=1e-9)][0])"
+        hints:
+          - 積の絶対値は絶対値の積、偏角は偏角の和です。
+          - zw = 8(cos 120° + i sin 120°) です。
+          - 実部は 8 cos 120° です。
+        paths:
+          - [zw = 8(cos 120° + i sin 120°), 実部は 8 × (−1/2), −4]
+        note: 偏角どうしもかけて 3500° のようにするまちがいがある。極形式のかけ算は「絶対値はかけ、偏角は足す」。
+      - part: 今日
+        text: 点 4 + 2i を、原点のまわりに 90° 回転した点はどれですか。
+        choices: [−2 + 4i, 2 − 4i, −4 + 2i, 4 − 2i]
+        answer: −2 + 4i
+        check: "[c for c, v in {'−2 + 4i': -2 + 4j, '2 − 4i': 2 - 4j, '−4 + 2i': -4 + 2j, '4 − 2i': 4 - 2j}.items() if abs(v - (4 + 2j) * 1j) < 1e-9][0]"
+        hints:
+          - 90° 回転するには、i をかけます。
+          - i(4 + 2i) を計算しましょう。
+          - i² = −1 です。
+        paths:
+          - [i(4 + 2i) = 4i + 2i², −2 + 4i]
+      - part: 挑戦
+        text: 点 2 + 2i を、原点のまわりに 60° 回転した点はどれですか。
+        choices: [(1 − √3) + (1 + √3)i, (1 + √3) + (1 − √3)i, (1 + √3) + (1 + √3)i, (√3 − 1) + (√3 + 1)i]
+        answer: (1 − √3) + (1 + √3)i
+        check: "[c for c, v in {'(1 − √3) + (1 + √3)i': (1 - math.sqrt(3)) + (1 + math.sqrt(3)) * 1j, '(1 + √3) + (1 − √3)i': (1 + math.sqrt(3)) + (1 - math.sqrt(3)) * 1j, '(1 + √3) + (1 + √3)i': (1 + math.sqrt(3)) + (1 + math.sqrt(3)) * 1j, '(√3 − 1) + (√3 + 1)i': (math.sqrt(3) - 1) + (math.sqrt(3) + 1) * 1j}.items() if abs(v - (2 + 2j) * (math.cos(math.radians(60)) + 1j * math.sin(math.radians(60)))) < 1e-9][0]"
+        hints:
+          - 60° 回転するには、cos 60° + i sin 60° をかけます。
+          - cos 60° + i sin 60° = (1 + √3 i)/2 です。
+          - (2 + 2i)(1 + √3 i)/2 を展開しましょう。
+        paths:
+          - [(2 + 2i)(1 + √3 i)/2 = (1 + i)(1 + √3 i), = 1 + √3 i + i + √3 i², (1 − √3) + (1 + √3)i]
+          - [2 + 2i = 2√2(cos 45° + i sin 45°), 60° 回転して 2√2(cos 105° + i sin 105°), 加法定理で cos 105° と sin 105° を求める]
+        note: 実部 1 − √3 は負の数。回転した点は第 2 象限にあることを図で確かめさせる。
+    extra:
+      - part: 今日
+        text: z = 6(cos 100° + i sin 100°)、w = 2(cos 40° + i sin 40°) のとき、z/w の実部はいくつですか。
+        answer: 3/2
+        accept: [1.5]
+        check: "[Fraction(k, 2) for k in range(-20, 21) if math.isclose((6 * (math.cos(math.radians(100)) + 1j * math.sin(math.radians(100))) / (2 * (math.cos(math.radians(40)) + 1j * math.sin(math.radians(40))))).real, k / 2)][0]"
+        hints:
+          - 商の絶対値は絶対値の商、偏角は偏角の差です。
+          - z/w = 3(cos 60° + i sin 60°) です。
+          - 実部は 3 cos 60° です。
+        paths:
+          - [z/w = 3(cos 60° + i sin 60°), 実部は 3 × 1/2, 3/2]
+      - part: 今日
+        text: 点 −1 + 3i を、原点のまわりに −90°（時計回りに 90°）回転した点はどれですか。
+        choices: [3 + i, −3 − i, 1 − 3i, −3 + i]
+        answer: 3 + i
+        check: "[c for c, v in {'3 + i': 3 + 1j, '−3 − i': -3 - 1j, '1 − 3i': 1 - 3j, '−3 + i': -3 + 1j}.items() if abs(v - (-1 + 3j) * (math.cos(math.radians(-90)) + 1j * math.sin(math.radians(-90)))) < 1e-9][0]"
+        hints:
+          - −90° 回転するには、cos(−90°) + i sin(−90°) をかけます。
+          - cos(−90°) + i sin(−90°) = −i です。
+          - (−1 + 3i)(−i) を計算しましょう。
+        paths:
+          - [(−1 + 3i)(−i) = i − 3i², 3 + i]
+        note: 2 日目の見本の点を逆に回したもの。i をかける（反時計回り）と −i をかける（時計回り）の向きを確かめさせる。
+      - part: 挑戦
+        text: "|z| = 2、|w| = 3 のとき、|z²w| の値はいくつですか。"
+        answer: 12
+        check: "[k for k in range(0, 200) if math.isclose(abs((2 + 0j) ** 2 * (3j)), k)][0]"
+        hints:
+          - 積の絶対値は、絶対値の積です。
+          - "|z²| = |z × z| = |z| × |z| です。"
+          - 2 × 2 × 3 を計算しましょう。
+        paths:
+          - ["|z²w| = |z||z||w|", 2 × 2 × 3, 12]
+        note: z と w がどんな複素数でも、絶対値だけで決まる。check では z = 2、w = 3i のように 1 つの例で計算している。
+
+  - day: 3
+    items:
+      - part: 見本
+        text: (1 + i)⁸ を計算してみましょう。また、z³ = 1 をみたす複素数 z をすべて求めてみましょう。図は単位円と、求める 3 つの点です。
+        svg: |
+          <svg viewBox="0 0 268 208" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="188.0" x2="50.0" y2="20.0"/>
+              <line x1="92.0" y1="188.0" x2="92.0" y2="20.0"/>
+              <line x1="134.0" y1="188.0" x2="134.0" y2="20.0"/>
+              <line x1="176.0" y1="188.0" x2="176.0" y2="20.0"/>
+              <line x1="218.0" y1="188.0" x2="218.0" y2="20.0"/>
+              <line x1="50.0" y1="188.0" x2="218.0" y2="188.0"/>
+              <line x1="50.0" y1="146.0" x2="218.0" y2="146.0"/>
+              <line x1="50.0" y1="104.0" x2="218.0" y2="104.0"/>
+              <line x1="50.0" y1="62.0" x2="218.0" y2="62.0"/>
+              <line x1="50.0" y1="20.0" x2="218.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="104.0" x2="228.0" y2="104.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="134.0" y1="196.0" x2="134.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M228.0 104.0 L220.0 100.0 L220.0 108.0 Z" fill="currentColor"/>
+            <path d="M134.0 10.0 L130.0 18.0 L138.0 18.0 Z" fill="currentColor"/>
+            <text x="224.0" y="96.0" font-size="11" text-anchor="end">実軸</text>
+            <text x="140.0" y="14.0" font-size="11">虚軸</text>
+            <text x="130.0" y="117.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="117.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="92.0" y="117.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="176.0" y="117.0" font-size="10" text-anchor="middle">1</text>
+            <text x="218.0" y="117.0" font-size="10" text-anchor="middle">2</text>
+            <text x="130.0" y="191.0" font-size="10" text-anchor="end">−2</text>
+            <text x="130.0" y="149.0" font-size="10" text-anchor="end">−1</text>
+            <text x="130.0" y="65.0" font-size="10" text-anchor="end">1</text>
+            <text x="130.0" y="23.0" font-size="10" text-anchor="end">2</text>
+            <circle cx="134.0" cy="104.0" r="42.0" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <polygon points="176.0,104.0 113.0,67.6 113.0,140.4" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="176.0" cy="104.0" r="4" fill="currentColor"/>
+            <circle cx="113.0" cy="67.6" r="4" fill="currentColor"/>
+            <circle cx="113.0" cy="140.4" r="4" fill="currentColor"/>
+            <text x="182.0" y="98.0" font-size="13" text-anchor="start">1</text>
+            <polyline points="146.6,104.0 146.6,103.3 146.5,102.7 146.4,102.0 146.3,101.4 146.2,100.7 146.0,100.1 145.8,99.5 145.5,98.9 145.2,98.3 144.9,97.7 144.6,97.1 144.2,96.6 143.8,96.1 143.4,95.6 142.9,95.1 142.4,94.6 141.9,94.2 141.4,93.8 140.9,93.4 140.3,93.1 139.7,92.8 139.1,92.5 138.5,92.2 137.9,92.0 137.3,91.8 136.6,91.7 136.0,91.6 135.3,91.5 134.7,91.4 134.0,91.4 133.3,91.4 132.7,91.5 132.0,91.6 131.4,91.7 130.7,91.8 130.1,92.0 129.5,92.2 128.9,92.5 128.3,92.8 127.7,93.1" stroke="currentColor" fill="none" stroke-width="1.5"/>
+          </svg>
+        explain: 積の決まりをくり返すと、(cos θ + i sin θ)² = cos 2θ + i sin 2θ、(cos θ + i sin θ)³ = cos 3θ + i sin 3θ、… となります。一般に、自然数 n について (cos θ + i sin θ)ⁿ = cos nθ + i sin nθ が成り立ちます。これをド・モアブルの定理といいます（わけは 4 日目、数学的帰納法 L-012）。1 + i = √2(cos 45° + i sin 45°) なので、(1 + i)⁸ = (√2)⁸(cos 360° + i sin 360°) = 16 × 1 = 16 です（(√2)⁸ = 2⁴、A-009）。次に、z³ = 1 を解きます。z = r(cos θ + i sin θ)（r は正の数、0° ≦ θ < 360°）とおくと、z³ = r³(cos 3θ + i sin 3θ) で、1 = 1 × (cos 0° + i sin 0°) です。絶対値をくらべて r³ = 1 から r = 1、偏角をくらべて 3θ は 360° の整数倍なので、θ = 0°、120°、240° です。よって z = 1、(−1 + √3 i)/2、(−1 − √3 i)/2 の 3 つです。このように、zⁿ = 1 をみたす z を 1 の n 乗根といいます。1 の n 乗根は n 個あり、複素数平面では、単位円（原点を中心とする半径 1 の円）に内接し 1 を頂点にもつ正 n 角形の頂点になります。
+      - part: 思い出す
+        text: z = 2(cos 15° + i sin 15°)、w = 3(cos 75° + i sin 75°) のとき、zw の虚部はいくつですか。
+        answer: 6
+        check: "[k for k in range(-50, 51) if math.isclose((2 * (math.cos(math.radians(15)) + 1j * math.sin(math.radians(15))) * 3 * (math.cos(math.radians(75)) + 1j * math.sin(math.radians(75)))).imag, k)][0]"
+        hints:
+          - 積の絶対値と偏角を求めましょう。
+          - zw の絶対値は 2 × 3、偏角は 15° + 75° です。
+          - cos 90° と sin 90° の値を使いましょう。
+        paths:
+          - [zw = 6(cos 90° + i sin 90°) = 6i, 虚部は 6]
+      - part: 思い出す
+        text: (√2)⁶ の値はいくつですか。
+        answer: 8
+        check: "[k for k in range(0, 100) if math.isclose(math.sqrt(2) ** 6, k)][0]"
+        hints:
+          - (√2)² = 2 です（A-016）。
+          - (√2)⁶ = ((√2)²)³ と書けます（A-009）。
+          - 2³ を計算しましょう。
+        paths:
+          - [(√2)⁶ = ((√2)²)³, 2³, 8]
+      - part: 今日
+        text: (1 + √3 i)⁶ の値はいくつですか。
+        answer: 64
+        check: "[k for k in range(-100, 101) if abs((1 + math.sqrt(3) * 1j) ** 6 - k) < 1e-6][0]"
+        hints:
+          - まず 1 + √3 i を極形式で表しましょう。
+          - 1 + √3 i = 2(cos 60° + i sin 60°) です。
+          - ド・モアブルの定理で 6 乗しましょう。
+        paths:
+          - [1 + √3 i = 2(cos 60° + i sin 60°), (1 + √3 i)⁶ = 2⁶(cos 360° + i sin 360°), 64]
+      - part: 今日
+        text: 1 の 3 乗根のうち、虚部が負の数のものはどれですか。
+        choices: [(−1 − √3 i)/2, (−1 + √3 i)/2, (1 − √3 i)/2, (−√3 − i)/2]
+        answer: (−1 − √3 i)/2
+        check: "[c for c, v in {'(−1 − √3 i)/2': (-1 - math.sqrt(3) * 1j) / 2, '(−1 + √3 i)/2': (-1 + math.sqrt(3) * 1j) / 2, '(1 − √3 i)/2': (1 - math.sqrt(3) * 1j) / 2, '(−√3 − i)/2': (-math.sqrt(3) - 1j) / 2}.items() if abs(v ** 3 - 1) < 1e-9 and v.imag < 0][0]"
+        hints:
+          - 1 の 3 乗根の偏角は 0°、120°、240° です。
+          - 虚部が負なのは、偏角が 180° より大きいものです。
+          - cos 240° と sin 240° を求めましょう。
+        paths:
+          - [偏角は 240°, cos 240° = −1/2、sin 240° = −(√3)/2, (−1 − √3 i)/2]
+      - part: 挑戦
+        text: (1 − i)¹⁰ の値はどれですか。
+        choices: [−32i, 32i, −32, 32]
+        answer: −32i
+        check: "[c for c, v in {'−32i': -32j, '32i': 32j, '−32': -32, '32': 32}.items() if abs(v - (1 - 1j) ** 10) < 1e-6][0]"
+        hints:
+          - 1 − i を極形式で表しましょう。偏角は 315° です。
+          - ド・モアブルの定理で、偏角は 3150° になります。
+          - 3150° から 360° を何回ひけるかを考えましょう。
+        paths:
+          - [1 − i = √2(cos 315° + i sin 315°), (1 − i)¹⁰ = 32(cos 3150° + i sin 3150°), 3150° = 360° × 8 + 270°, 32(cos 270° + i sin 270°) = −32i]
+          - [(1 − i)² = −2i, (1 − i)¹⁰ = (−2i)⁵ = −32i⁵, i⁵ = i なので −32i]
+        note: 2 本目は A-021 の計算の道。偏角を −45° として −450° = −360° − 90° と考えてもよい。
+    extra:
+      - part: 今日
+        text: (cos 18° + i sin 18°)⁵ の値はどれですか。
+        choices: [i, −i, 1, −1]
+        answer: i
+        check: "[c for c, v in {'i': 1j, '−i': -1j, '1': 1, '−1': -1}.items() if abs(v - (math.cos(math.radians(18)) + 1j * math.sin(math.radians(18))) ** 5) < 1e-9][0]"
+        hints:
+          - ド・モアブルの定理を使いましょう。
+          - 5 × 18° = 90° です。
+          - cos 90° + i sin 90° はいくつでしょう。
+        paths:
+          - [cos 90° + i sin 90°, 0 + i × 1, i]
+      - part: 今日
+        text: (−1 + i)⁴ の値はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-100, 101) if abs((-1 + 1j) ** 4 - k) < 1e-9][0])"
+        hints:
+          - −1 + i = √2(cos 135° + i sin 135°) です。
+          - 4 乗すると、絶対値は (√2)⁴、偏角は 540° です。
+          - 540° = 360° + 180° です。
+        paths:
+          - [(√2)⁴(cos 540° + i sin 540°), 4(cos 180° + i sin 180°), −4]
+      - part: 挑戦
+        text: z³ = 8i をみたす複素数 z のうち、実部も虚部も正の数のものはどれですか。
+        choices: [√3 + i, −√3 + i, 1 + √3 i, 2i]
+        answer: √3 + i
+        check: "[c for c, v in {'√3 + i': math.sqrt(3) + 1j, '−√3 + i': -math.sqrt(3) + 1j, '1 + √3 i': 1 + math.sqrt(3) * 1j, '2i': 2j}.items() if abs(v ** 3 - 8j) < 1e-9 and v.real > 0 and v.imag > 0][0]"
+        hints:
+          - 8i = 8(cos 90° + i sin 90°) です。
+          - z = r(cos θ + i sin θ) とおくと、r³ = 8、3θ = 90° + 360° × k です。
+          - θ = 30°、150°、270° のうち、第 1 象限にあるものを選びましょう。
+        paths:
+          - [r = 2、θ = 30°、150°、270°, 第 1 象限は θ = 30°, 2(cos 30° + i sin 30°) = √3 + i]
+        note: 1 + √3 i は 3 乗すると −8 になる。偏角を 3 でわる前に、360° の整数倍を足しておくことを確かめさせる。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: "|(3 + 4i)²| の値はいくつですか。"
+        answer: 25
+        check: "[k for k in range(0, 200) if math.isclose(abs((3 + 4j) ** 2), k)][0]"
+        hints:
+          - 積の絶対値は、絶対値の積です。
+          - "|3 + 4i| = 5 です。"
+          - 5 × 5 を計算しましょう。
+        paths:
+          - ["|3 + 4i| = 5", "|(3 + 4i)²| = 5²", 25]
+      - part: 思い出す
+        text: (cos 40° + i sin 40°)⁹ の値はいくつですか。
+        answer: 1
+        check: "[k for k in range(-5, 6) if abs((math.cos(math.radians(40)) + 1j * math.sin(math.radians(40))) ** 9 - k) < 1e-9][0]"
+        hints:
+          - ド・モアブルの定理を使いましょう。
+          - 9 × 40° = 360° です。
+          - cos 360° + i sin 360° はいくつでしょう。
+        paths:
+          - [cos 360° + i sin 360°, 1]
+      - part: 今日
+        text: z⁶ = 1 をみたす複素数 z のうち、実部が負の数で虚部が正の数のものはどれですか。
+        choices: [(−1 + √3 i)/2, (1 + √3 i)/2, (−√3 + i)/2, −1]
+        answer: (−1 + √3 i)/2
+        check: "[c for c, v in {'(−1 + √3 i)/2': (-1 + math.sqrt(3) * 1j) / 2, '(1 + √3 i)/2': (1 + math.sqrt(3) * 1j) / 2, '(−√3 + i)/2': (-math.sqrt(3) + 1j) / 2, '−1': -1 + 0j}.items() if abs(v ** 6 - 1) < 1e-9 and v.real < 0 and v.imag > 0][0]"
+        hints:
+          - 1 の 6 乗根の偏角は、60° ずつです。
+          - 第 2 象限にあるのは、偏角が 90° と 180° の間のものです。
+          - 偏角 120° の点を a + bi の形にしましょう。
+        paths:
+          - [偏角は 0°、60°、120°、180°、240°、300°, 第 2 象限は 120°, cos 120° + i sin 120° = (−1 + √3 i)/2]
+      - part: わけ
+        text: z = r(cos α + i sin α)、w = s(cos β + i sin β)（r、s は正の数）のとき、zw = rs(cos(α + β) + i sin(α + β)) が成り立ちます。このわけを、筋道を立てて書きましょう。
+        explain: 例：「z = r(cos α + i sin α)、w = s(cos β + i sin β) とする（r、s は正の数）。zw = rs(cos α + i sin α)(cos β + i sin β) を展開すると、rs(cos α cos β + i cos α sin β + i sin α cos β + i² sin α sin β) である。i² = −1 なので、zw = rs((cos α cos β − sin α sin β) + i(sin α cos β + cos α sin β)) となる。加法定理（G-025）より、cos α cos β − sin α sin β = cos(α + β)、sin α cos β + cos α sin β = sin(α + β) なので、zw = rs(cos(α + β) + i sin(α + β)) である。」と書ければよい。①「〜とする」で z、w を極形式で決める、② 展開して i² = −1 を使い、実部と虚部に分ける、③ 約束した事実（加法定理）で結ぶ、の 3 つがそろっているかを見る。cos の加法定理の符号（cos α cos β − sin α sin β の「−」）を取りちがえやすい。rs が正の数なので、これは絶対値 rs、偏角 α + β の極形式であり、「絶対値はかけ算、偏角はたし算」の決まりになる、と話す。商は、w × (z/w) = z にこの決まりを使えば出てくる。
+        hints:
+          - z と w を極形式で書いて、積を展開しましょう。
+          - i² = −1 を使って、実部と虚部に分けましょう。
+          - 実部と虚部を、加法定理（G-025）の形と見くらべましょう。
+        paths:
+          - [z、w を極形式で書く, 展開して実部は rs(cos α cos β − sin α sin β)、虚部は rs(sin α cos β + cos α sin β), 加法定理から rs(cos(α + β) + i sin(α + β))]
+      - part: わけ
+        text: どんな自然数 n でも、(cos θ + i sin θ)ⁿ = cos nθ + i sin nθ が成り立ちます（ド・モアブルの定理）。このわけを、数学的帰納法で筋道を立てて書きましょう。
+        explain: 例：「はじめ：n = 1 のとき、両辺とも cos θ + i sin θ で、成り立つ。つぎへ：n = k のとき成り立つ、つまり (cos θ + i sin θ)ᵏ = cos kθ + i sin kθ とする。このとき (cos θ + i sin θ)ᵏ⁺¹ = (cos θ + i sin θ)ᵏ × (cos θ + i sin θ)（A-009）= (cos kθ + i sin kθ)(cos θ + i sin θ) である。前の問題の積の決まり（r = s = 1）から、これは cos(kθ + θ) + i sin(kθ + θ) = cos (k + 1)θ + i sin (k + 1)θ となり、n = k + 1 のときも成り立つ。はじめとつぎへが示せたので、数学的帰納法（L-012）により、すべての自然数 n で成り立つ。」と書ければよい。①「〜とする」で n = k のときを仮定する、② 指数法則で 1 つ分け、仮定と積の決まりで式を変形する、③ 約束した事実（数学的帰納法の 2 つの段）で結ぶ、の 3 つがそろっているかを見る。「つぎへ」で、n = k のときの式（仮定）をどこで使ったかを言えるかを見る。n = 2、3 で確かめただけで終わっていたら、例ではすべての n を示せないことを話す。
+        hints:
+          - 「はじめ」として、n = 1 のときを確かめましょう。
+          - 「つぎへ」として、n = k のとき成り立つとして、(cos θ + i sin θ)ᵏ⁺¹ を 2 つの積に分けましょう。
+          - 積の決まり（前の問題）を使いましょう。
+        paths:
+          - [n = 1 のとき成り立つ, n = k のとき成り立つとする, (cos θ + i sin θ)ᵏ⁺¹ = (cos kθ + i sin kθ)(cos θ + i sin θ), 積の決まりで cos (k + 1)θ + i sin (k + 1)θ となり n = k + 1 でも成り立つ]
+      - part: わけ
+        text: ω を、1 の 3 乗根のうち 1 でないものとします。このとき、ω² + ω + 1 = 0 が成り立ちます。このわけを、筋道を立てて書きましょう。
+        explain: 例：「ω は 1 の 3 乗根なので、ω³ = 1、つまり ω³ − 1 = 0 である。(ω − 1)(ω² + ω + 1) を展開すると ω³ + ω² + ω − ω² − ω − 1 = ω³ − 1 なので、(ω − 1)(ω² + ω + 1) = 0 である。ω は 1 でないので ω − 1 は 0 でない。0 でない数でわってよいので（A-021）、両辺を ω − 1 でわると ω² + ω + 1 = 0 である。」と書ければよい。①「〜とする」で ω の条件（ω³ = 1、ω は 1 でない）を置く、② ω³ − 1 を (ω − 1)(ω² + ω + 1) と因数分解する（展開で確かめる）、③ 約束した事実（AB = 0 で A が 0 でなければ B = 0、A-017）で結ぶ、の 3 つがそろっているかを見る。ω = (−1 + √3 i)/2 を代入して確かめるだけで終わっていたら、もう 1 つの (−1 − √3 i)/2 でも成り立つことを、この筋道なら一度に示せると話す。1 + ω + ω² = 0 は、単位円に内接する正三角形の 3 つの頂点の和が 0（重心が原点）であることも表している。
+        hints:
+          - ω³ = 1 を、ω³ − 1 = 0 と書きましょう。
+          - (ω − 1)(ω² + ω + 1) を展開してみましょう。
+          - ω が 1 でないことを、どこで使うでしょう。
+        paths:
+          - [ω³ − 1 = 0, ω³ − 1 = (ω − 1)(ω² + ω + 1), ω − 1 は 0 でないのでわって ω² + ω + 1 = 0]
+    extra:
+      - part: 今日
+        text: (√3 + i)³ の値はどれですか。
+        choices: [8i, −8i, 8, 8√3 i]
+        answer: 8i
+        check: "[c for c, v in {'8i': 8j, '−8i': -8j, '8': 8, '8√3 i': 8 * math.sqrt(3) * 1j}.items() if abs(v - (math.sqrt(3) + 1j) ** 3) < 1e-9][0]"
+        hints:
+          - √3 + i = 2(cos 30° + i sin 30°) です。
+          - 3 乗すると、絶対値は 2³、偏角は 90° です。
+          - cos 90° + i sin 90° = i です。
+        paths:
+          - [2³(cos 90° + i sin 90°), 8i]
+      - part: 今日
+        text: 1 の 8 乗根のうち、実数であるものはいくつありますか。
+        answer: 2
+        check: "len([k for k in range(8) if abs(math.sin(math.radians(45 * k))) < 1e-9])"
+        hints:
+          - 1 の 8 乗根の偏角は、45° ずつです。
+          - 実数は、実軸の上にある点です。
+          - 偏角が 0° と 180° のものを数えましょう。
+        paths:
+          - [偏角は 0°、45°、…、315°, 実軸の上は 0° と 180°, 1 と −1 の 2 つ]
+      - part: 今日
+        text: "|z| = 3、z の偏角が 40° のとき、z³ の実部はいくつですか。"
+        answer: −27/2
+        accept: [−13.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-100, 101) if math.isclose(((3 * (math.cos(math.radians(40)) + 1j * math.sin(math.radians(40)))) ** 3).real, k / 2, abs_tol=1e-9)][0])"
+        hints:
+          - z = 3(cos 40° + i sin 40°) です。
+          - z³ の絶対値は 27、偏角は 120° です。
+          - 実部は 27 cos 120° です。
+        paths:
+          - [z³ = 27(cos 120° + i sin 120°), 実部は 27 × (−1/2), −27/2]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: (1 + 2i)/(2 − i) を計算しましょう。
+        choices: [i, −i, 1, (4 + 5i)/5]
+        answer: i
+        check: "[c for c, v in {'i': 1j, '−i': -1j, '1': 1, '(4 + 5i)/5': (4 + 5j) / 5}.items() if abs(v - (1 + 2j) / (2 - 1j)) < 1e-9][0]"
+        hints:
+          - 分母と共役な複素数 2 + i を、分母と分子にかけましょう（A-021）。
+          - 分子は (1 + 2i)(2 + i) です。
+          - 分母は 5 になります。
+        paths:
+          - [(1 + 2i)(2 + i)/5, (2 + i + 4i + 2i²)/5, 5i/5 = i]
+          - [i(2 − i) = 2i + 1 なので 1 + 2i = i(2 − i), 商は i]
+      - part: 思い出す
+        text: cos 105° の値はどれですか。
+        choices: [(√2 − √6)/4, (√6 − √2)/4, (√2 + √6)/4, −(√2 + √6)/4]
+        answer: (√2 − √6)/4
+        check: "[c for c, v in {'(√2 − √6)/4': (math.sqrt(2) - math.sqrt(6)) / 4, '(√6 − √2)/4': (math.sqrt(6) - math.sqrt(2)) / 4, '(√2 + √6)/4': (math.sqrt(2) + math.sqrt(6)) / 4, '−(√2 + √6)/4': -(math.sqrt(2) + math.sqrt(6)) / 4}.items() if math.isclose(v, math.cos(math.radians(105)))][0]"
+        hints:
+          - 105° = 60° + 45° です。
+          - 加法定理 cos(α + β) = cos α cos β − sin α sin β を使いましょう（G-025）。
+          - 105° は 90° より大きいので、cos 105° は負の数です。
+        paths:
+          - [cos 105° = cos 60° cos 45° − sin 60° sin 45°, = (√2)/4 − (√6)/4, (√2 − √6)/4]
+      - part: 今日
+        text: ω を、1 の 3 乗根のうち 1 でないものとします。ω¹⁰ + ω⁵ + 1 の値はいくつですか。
+        answer: 0
+        check: "[k for k in range(-5, 6) if abs((lambda w: w ** 10 + w ** 5 + 1)((-1 + math.sqrt(3) * 1j) / 2) - k) < 1e-9][0]"
+        hints:
+          - ω³ = 1 を使って、指数を小さくしましょう。
+          - ω¹⁰ = (ω³)³ × ω = ω、ω⁵ = ω³ × ω² = ω² です。
+          - ω² + ω + 1 の値を思い出しましょう（4 日目）。
+        paths:
+          - [ω¹⁰ = ω、ω⁵ = ω², ω¹⁰ + ω⁵ + 1 = ω + ω² + 1, 0]
+        note: ω の値を代入しなくても、ω³ = 1 と ω² + ω + 1 = 0 だけで計算できる。どちらの ω でも同じ答えになる。
+      - part: 今日
+        text: 複素数平面で、3 点 0、2、z が正三角形の頂点になっています。z の虚部が正の数のとき、z はどれですか。
+        choices: [1 + √3 i, √3 + i, 2 + √3 i, 1 + 2i]
+        answer: 1 + √3 i
+        check: "[c for c, v in {'1 + √3 i': 1 + math.sqrt(3) * 1j, '√3 + i': math.sqrt(3) + 1j, '2 + √3 i': 2 + math.sqrt(3) * 1j, '1 + 2i': 1 + 2j}.items() if math.isclose(abs(v), 2) and math.isclose(abs(v - 2), 2) and v.imag > 0][0]"
+        hints:
+          - 点 z は、点 2 を原点のまわりに 60° 回転した点です。
+          - 2 に cos 60° + i sin 60° をかけましょう。
+          - cos 60° + i sin 60° = (1 + √3 i)/2 です。
+        paths:
+          - [z = 2(cos 60° + i sin 60°), = 2 × (1 + √3 i)/2, 1 + √3 i]
+          - [正三角形の 1 辺は 2 で 高さは √3, z の実部は 1、虚部は √3]
+      - part: 挑戦
+        text: (1 + √3 i)ⁿ が正の実数になる、いちばん小さい自然数 n はいくつですか。
+        answer: 6
+        check: "[n for n in range(1, 30) if abs(((1 + math.sqrt(3) * 1j) ** n).imag) < 1e-6 and ((1 + math.sqrt(3) * 1j) ** n).real > 0][0]"
+        hints:
+          - 1 + √3 i を極形式で表しましょう。
+          - (1 + √3 i)ⁿ の偏角は 60° × n です。
+          - 正の実数になるのは、偏角が 360° の整数倍のときです。
+        paths:
+          - [1 + √3 i = 2(cos 60° + i sin 60°), (1 + √3 i)ⁿ の偏角は 60n°, 60n が 360 の倍数になるいちばん小さい n は 6]
+        note: n = 3 のときは偏角 180° で、−8 という負の実数になる。「正の」という条件を見落とさないようにする。
+    extra:
+      - part: 今日
+        text: (cos 15° + i sin 15°)⁸ の実部はいくつですか。
+        answer: −1/2
+        accept: [−0.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-4, 5) if math.isclose(((math.cos(math.radians(15)) + 1j * math.sin(math.radians(15))) ** 8).real, k / 2)][0])"
+        hints:
+          - ド・モアブルの定理を使いましょう。
+          - 8 × 15° = 120° です。
+          - cos 120° を求めましょう。
+        paths:
+          - [cos 120° + i sin 120°, 実部は cos 120°, −1/2]
+      - part: 今日
+        text: 点 1 + i を、原点のまわりに 45° 回転した点はどれですか。
+        choices: [√2 i, √2, 2i, 1 + √2 i]
+        answer: √2 i
+        check: "[c for c, v in {'√2 i': math.sqrt(2) * 1j, '√2': math.sqrt(2), '2i': 2j, '1 + √2 i': 1 + math.sqrt(2) * 1j}.items() if abs(v - (1 + 1j) * (math.cos(math.radians(45)) + 1j * math.sin(math.radians(45)))) < 1e-9][0]"
+        hints:
+          - 1 + i = √2(cos 45° + i sin 45°) です。
+          - 45° 回転すると、偏角は 90° になります。
+          - 絶対値は √2 のままです。
+        paths:
+          - [√2(cos 90° + i sin 90°), √2 i]
+      - part: 挑戦
+        text: ω を、1 の 3 乗根のうち 1 でないものとします。(1 + ω)(1 + ω²) の値はいくつですか。
+        answer: 1
+        check: "[k for k in range(-5, 6) if abs((lambda w: (1 + w) * (1 + w * w))((-1 + math.sqrt(3) * 1j) / 2) - k) < 1e-9][0]"
+        hints:
+          - (1 + ω)(1 + ω²) を展開しましょう。
+          - 1 + ω² + ω + ω³ になります。
+          - ω³ = 1 と ω² + ω + 1 = 0 を使いましょう。
+        paths:
+          - [(1 + ω)(1 + ω²) = 1 + ω + ω² + ω³, = 0 + 1, 1]
+          - [1 + ω = −ω²、1 + ω² = −ω, (−ω²)(−ω) = ω³ = 1]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 複素数 −5 + 12i の絶対値はいくつですか。
+        answer: 13
+        check: "[k for k in range(0, 100) if math.isclose(abs(-5 + 12j), k)][0]"
+        hints:
+          - "|a + bi| = √(a² + b²) です。"
+          - 25 + 144 を計算しましょう。
+          - 2 乗すると 169 になる正の数をさがしましょう。
+        paths:
+          - [√(25 + 144), √169, 13]
+      - part: 今日
+        text: 2√3 − 2i を極形式で表したものはどれですか。偏角は 0° 以上 360° 未満とします。
+        choices: [4(cos 330° + i sin 330°), 4(cos 30° + i sin 30°), 4(cos 150° + i sin 150°), 2(cos 330° + i sin 330°)]
+        answer: 4(cos 330° + i sin 330°)
+        check: "[c for c, (r, t) in {'4(cos 330° + i sin 330°)': (4, 330), '4(cos 30° + i sin 30°)': (4, 30), '4(cos 150° + i sin 150°)': (4, 150), '2(cos 330° + i sin 330°)': (2, 330)}.items() if abs(r * (math.cos(math.radians(t)) + 1j * math.sin(math.radians(t))) - (2 * math.sqrt(3) - 2j)) < 1e-9][0]"
+        hints:
+          - 絶対値 √(12 + 4) を求めましょう。
+          - cos θ = (√3)/2、sin θ = −1/2 となる θ をさがしましょう。
+          - 点は第 4 象限にあります。
+        paths:
+          - [絶対値は 4, cos θ = (√3)/2、sin θ = −1/2, θ = 330°, 4(cos 330° + i sin 330°)]
+      - part: 今日
+        text: 3(cos 80° + i sin 80°) × 2(cos 40° + i sin 40°) の実部はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-50, 51) if math.isclose((3 * (math.cos(math.radians(80)) + 1j * math.sin(math.radians(80))) * 2 * (math.cos(math.radians(40)) + 1j * math.sin(math.radians(40)))).real, k, abs_tol=1e-9)][0])"
+        hints:
+          - 絶対値はかけ算、偏角はたし算です。
+          - 積は 6(cos 120° + i sin 120°) です。
+          - 実部は 6 cos 120° です。
+        paths:
+          - [6(cos 120° + i sin 120°), 6 × (−1/2), −3]
+      - part: 今日
+        text: 点 3 − 2i を、原点のまわりに 90° 回転した点はどれですか。
+        choices: [2 + 3i, −2 − 3i, −3 + 2i, 3 + 2i]
+        answer: 2 + 3i
+        check: "[c for c, v in {'2 + 3i': 2 + 3j, '−2 − 3i': -2 - 3j, '−3 + 2i': -3 + 2j, '3 + 2i': 3 + 2j}.items() if abs(v - (3 - 2j) * 1j) < 1e-9][0]"
+        hints:
+          - 90° 回転するには、i をかけます。
+          - i(3 − 2i) を計算しましょう。
+          - i² = −1 です。
+        paths:
+          - [i(3 − 2i) = 3i − 2i², 2 + 3i]
+      - part: 今日
+        text: (1 + i)⁶ の値はどれですか。
+        choices: [−8i, 8i, −8, 8]
+        answer: −8i
+        check: "[c for c, v in {'−8i': -8j, '8i': 8j, '−8': -8, '8': 8}.items() if abs(v - (1 + 1j) ** 6) < 1e-9][0]"
+        hints:
+          - 1 + i = √2(cos 45° + i sin 45°) です。
+          - 6 乗すると、絶対値は (√2)⁶ = 8、偏角は 270° です。
+          - cos 270° + i sin 270° を求めましょう。
+        paths:
+          - [8(cos 270° + i sin 270°), 8 × (−i), −8i]
+      - part: 今日
+        text: (cos 20° + i sin 20°)⁶ の実部はいくつですか。
+        answer: −1/2
+        accept: [−0.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-4, 5) if math.isclose(((math.cos(math.radians(20)) + 1j * math.sin(math.radians(20))) ** 6).real, k / 2)][0])"
+        hints:
+          - ド・モアブルの定理を使いましょう。
+          - 6 × 20° = 120° です。
+          - 実部は cos 120° です。
+        paths:
+          - [cos 120° + i sin 120°, 実部は −1/2]
+      - part: 今日
+        text: z³ = −8 をみたす複素数 z のうち、実数であるものはいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-10, 11) if k ** 3 == -8][0])"
+        hints:
+          - −8 = 8(cos 180° + i sin 180°) です。
+          - z = 2(cos θ + i sin θ) とおくと、3θ = 180° + 360° × k です。
+          - θ = 60°、180°、300° のうち、実軸の上にあるものを選びましょう。
+        paths:
+          - [r = 2、θ = 60°、180°、300°, 実数は θ = 180° のもの, 2(cos 180° + i sin 180°) = −2]
+        note: ほかの 2 つの解は 1 ± √3 i。実数の範囲では z³ = −8 の解は −2 だけ。
+      - part: 今日
+        text: ω を、1 の 3 乗根のうち 1 でないものとします。ω²⁰ + ω¹⁰ の値はいくつですか。
+        answer: −1
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-5, 6) if abs((lambda w: w ** 20 + w ** 10)((-1 + math.sqrt(3) * 1j) / 2) - k) < 1e-9][0])"
+        hints:
+          - ω³ = 1 を使って、指数を小さくしましょう。
+          - ω²⁰ = ω²、ω¹⁰ = ω です。
+          - ω² + ω + 1 = 0 を使いましょう。
+        paths:
+          - [ω²⁰ = (ω³)⁶ × ω² = ω², ω¹⁰ = (ω³)³ × ω = ω, ω² + ω = −1]
+    extra:
+      - part: 今日
+        text: "|(1 + √3 i)⁴| の値はいくつですか。"
+        answer: 16
+        check: "[k for k in range(0, 200) if math.isclose(abs((1 + math.sqrt(3) * 1j) ** 4), k)][0]"
+        hints:
+          - 積の絶対値は、絶対値の積です。
+          - "|1 + √3 i| = 2 です。"
+          - 2⁴ を計算しましょう。
+        paths:
+          - ["|1 + √3 i| = 2", 2⁴ = 16]
+      - part: 今日
+        text: (√3 + i)⁶ の値はいくつですか。
+        answer: −64
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-100, 101) if abs((math.sqrt(3) + 1j) ** 6 - k) < 1e-6][0])"
+        hints:
+          - √3 + i = 2(cos 30° + i sin 30°) です。
+          - 6 乗すると、偏角は 180° です。
+          - 2⁶(cos 180° + i sin 180°) を計算しましょう。
+        paths:
+          - [2⁶(cos 180° + i sin 180°), 64 × (−1), −64]
+      - part: 今日
+        text: 複素数 −3i の偏角はどれですか。偏角は 0° 以上 360° 未満とします。
+        choices: [270°, 90°, 180°, 0°]
+        answer: 270°
+        check: "[c for c, t in {'270°': 270, '90°': 90, '180°': 180, '0°': 0}.items() if abs(3 * (math.cos(math.radians(t)) + 1j * math.sin(math.radians(t))) - (-3j)) < 1e-9][0]"
+        hints:
+          - −3i は、虚軸の上の点です。
+          - 原点より下にあります。
+          - 実軸の正の向きから反時計回りに何度でしょう。
+        paths:
+          - ["点 (0, −3) は原点の真下", 偏角は 270°]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: cos 72° + cos 144° の値はいくつですか。
+    answer: −1/2
+    accept: [−0.5]
+    check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([Fraction(k, 2) for k in range(-4, 5) if math.isclose(math.cos(math.radians(72)) + math.cos(math.radians(144)), k / 2)][0])"
+    hints:
+      - z = cos 72° + i sin 72° とおくと、z⁵ はいくつかな。
+      - z⁵ − 1 = (z − 1)(z⁴ + z³ + z² + z + 1) だね。z は 1 でないから、z⁴ + z³ + z² + z + 1 はいくつかな。
+      - z⁴ = cos 288° + i sin 288° は、z と共役な数だね。z + z⁴ と z² + z³ の実部を考えよう。
+    paths:
+      - [z = cos 72° + i sin 72° とすると z⁵ = cos 360° + i sin 360° = 1, z は 1 でないので z⁴ + z³ + z² + z + 1 = 0, z + z⁴ = 2cos 72°、z² + z³ = 2cos 144°（共役どうしの和）, 2cos 72° + 2cos 144° + 1 = 0 より −1/2]
+    note: 三角関数の値を、1 の 5 乗根の和が 0 になることに言いかえる問題。z⁴ = cos 288° + i sin 288° = cos 72° − i sin 72° が z の共役であることに気づけるかが鍵。正五角形の頂点の x 座標の和が 0 になる、と図で見せてもよい。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [N-018]
+    text: 1 の 12 乗根のうち、z、z²、z³、…、z¹¹ がどれも 1 にならない（12 乗して初めて 1 になる）ものは、いくつありますか。
+    answer: 4
+    check: "len([k for k in range(12) if all(abs((math.cos(math.radians(30 * k)) + 1j * math.sin(math.radians(30 * k))) ** m - 1) > 1e-6 for m in range(1, 12))])"
+    hints:
+      - 1 の 12 乗根は、偏角が 30° × k（k = 0、1、…、11）の点だね。
+      - 偏角 30k° の点を m 乗すると、偏角は 30km° だよ。これが 360° の倍数になるのは、km が 12 の倍数のときだね。
+      - m を 1 から 11 まで動かしても km が 12 の倍数にならない k は、12 とどんな関係かな（N-018 の公約数）。
+    paths:
+      - [z = cos 30k° + i sin 30k°（k = 0、1、…、11）とする, zᵐ = 1 となるのは km が 12 の倍数のとき, k と 12 の公約数が 1 だけなら 12 より小さい m では km は 12 の倍数にならない, k = 1、5、7、11 の 4 つ]
+    note: 1 の累乗根（この単元）と、公約数（N-018）を合わせる。k と 12 の最大公約数が d なら、m = 12/d で初めて 1 になる。たとえば k = 4 なら 3 乗で 1 になる。この 4 つを原始 12 乗根といい、整数論の円分多項式につながる。
+  - part: 離
+    kinds: [数, 手数]
+    text: (√3 + i)¹⁰ を (1 − i)⁶ でわった複素数の虚部はいくつですか。
+    answer: −64
+    check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')([k for k in range(-500, 501) if abs(((math.sqrt(3) + 1j) ** 10 / (1 - 1j) ** 6).imag - k) < 1e-6][0])"
+    hints:
+      - √3 + i と 1 − i を、それぞれ極形式で表そう。
+      - (√3 + i)¹⁰ の偏角は 300°（3600° から 360° の倍数をひく）、(1 − i)⁶ の偏角は 1890° で、90° と同じ向きだね。
+      - わり算では、絶対値はわり算、偏角はひき算だよ。
+    paths:
+      - [√3 + i = 2(cos 30° + i sin 30°) なので (√3 + i)¹⁰ = 1024(cos 300° + i sin 300°), 1 − i = √2(cos 315° + i sin 315°) なので (1 − i)⁶ = 8(cos 90° + i sin 90°), 商は 128(cos 210° + i sin 210°) = −64√3 − 64i, 虚部は −64]
+      - [(1 − i)² = −2i なので (1 − i)⁶ = (−2i)³ = 8i, (√3 + i)¹⁰ = 512 − 512√3 i, (512 − 512√3 i)/(8i) = −64√3 − 64i]
+    note: 大きな累乗と角の計算（3600°、1890° を 360° でへらす）が続く。偏角のひき算 300° − 90° = 210°、128 × sin 210° = −64 のどこでつまずいたかを見る。

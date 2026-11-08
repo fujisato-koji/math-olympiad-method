@@ -1,0 +1,851 @@
+# G-026 座標と図形の方程式（直線と円）
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-019 と G-050 に合わせる（負の数は「−」U+2212、座標の組と式は選ぶ問題）。
+# 段 5 の単元なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   新しいきまりが出る日（1〜5 日目）は頭に見本を置いた。わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問。
+# 地図に plan がないので、既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 2 点間の距離（三平方の定理）、中点、線分を m:n に内分する点　2 日目 直線の式（点と傾き、2 点、y 軸に平行な直線、
+#   ax + by + c = 0）、2 直線の交点　3 日目 平行と垂直の条件（m₁m₂ = −1）、垂直二等分線、直線について対称な点、点と直線の距離
+#   4 日目 円の式（中心と半径、平方完成で中心と半径を読む、直径の両はし、3 点を通る円）
+#   5 日目 円と直線（共有点、共有点の個数、弦の長さ、円の上の点における接線）
+#   6 日目 わけ（2 点間の距離の式、垂直の条件、内分点の式。どれも ③）　7 日目 A-019・G-019 と混ぜる（座標で面積、
+#   等しい距離の点、原点を通る接線、接線の長さ）　8 日目 確認
+# 前提は A-019（1 次関数とグラフ）と G-019（三平方の定理）。前提のたどりに A-012（連立方程式）、A-017（2 次方程式、平方完成、
+#   b² − 4ac の符号）、A-016（平方根）、G-050（座標平面）、G-020（平行線と線分の比、相似）、G-017（二等辺三角形）がある。
+#   三角比（G-024）と円周角（G-018）は前提のたどりにないので、直線のなす角や「直径に対する円周角は直角」は使わない
+#   （3 点を通る円は、一般形に代入するか、垂直二等分線の交点で求める）。ベクトル（G-027）も使わない。
+#   不等式（A-013）も前提にないので、不等式の表す領域は扱わず、共有点の個数は 2 次方程式の b² − 4ac の符号と、
+#   中心と直線の距離と半径を数としてくらべることで調べる。軌跡と 2 つの円の位置関係は扱わない。
+#   3 つの文字の連立方程式は A-012 で扱っていないので、3 点を通る円は 1 点が原点のもの（n = 0 になる）にした。
+#   円の接線が接点を通る半径に垂直であることは、5 日目の見本で「接点を通り半径に垂直な直線は、中心からの距離が半径に等しい」と
+#   点と直線の距離で確かめてから使った（G-054 は前提にない）。点と直線の距離の式は、3 日目の見本で相似（G-020）から導いた。
+# 座標の組、直線と円の式、中心と半径の組は選ぶ問題にした。打つ答えは、距離、傾き、切片、個数、文字の値（Fraction）。
+#   式を選ぶ問題の check は、選択肢の式（lambda）が、問題の点をすべて通るか、傾きの条件を満たすかで選び出す。
+#   接線を選ぶ問題の check は、ax + by = c が接点を通り、原点からの距離が半径に等しい（c² = r²(a² + b²)）ものを選ぶ。
+# 下つきの数字は x₁、y₁ のように書いた。図は svg（D-040）。座標平面は方眼と目もりつきで、求める点や交点の座標は図に書かない。
+# 座標と図形の方程式は、ベクトル（G-027）、三角関数（G-025）、2 次曲線（G-041）、空間の座標（G-049）、CAD（E-204）、
+#   コンピュータの図形処理と位置の推定の入口になる（D-026）。
+
+id: G-026
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 2 点 A(1, 2)、B(4, 6) の間の距離と、線分 AB の中点 M、AB を 2:1 に内分する点を求めてみましょう。
+        svg: '<svg viewBox="0 0 188 208" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="184" x2="24" y2="24"/><line x1="44" y1="184" x2="44" y2="24"/><line x1="64" y1="184" x2="64" y2="24"/><line x1="84" y1="184" x2="84" y2="24"/><line x1="104" y1="184" x2="104" y2="24"/><line x1="124" y1="184" x2="124" y2="24"/><line x1="144" y1="184" x2="144" y2="24"/><line x1="164" y1="184" x2="164" y2="24"/><line x1="24" y1="184" x2="164" y2="184"/><line x1="24" y1="164" x2="164" y2="164"/><line x1="24" y1="144" x2="164" y2="144"/><line x1="24" y1="124" x2="164" y2="124"/><line x1="24" y1="104" x2="164" y2="104"/><line x1="24" y1="84" x2="164" y2="84"/><line x1="24" y1="64" x2="164" y2="64"/><line x1="24" y1="44" x2="164" y2="44"/><line x1="24" y1="24" x2="164" y2="24"/></g><line x1="16" y1="164" x2="174" y2="164" stroke="currentColor" fill="none" stroke-width="2"/><line x1="44" y1="192" x2="44" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M174 164 L166 160 L166 168 Z" fill="currentColor"/><path d="M44 14 L40 22 L48 22 Z" fill="currentColor"/><text x="176" y="178" font-size="14" text-anchor="end" font-style="italic">x</text><text x="51" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="40" y="177" font-size="11" text-anchor="end">O</text><text x="24" y="177" font-size="10" text-anchor="middle">−1</text><text x="64" y="177" font-size="10" text-anchor="middle">1</text><text x="84" y="177" font-size="10" text-anchor="middle">2</text><text x="104" y="177" font-size="10" text-anchor="middle">3</text><text x="124" y="177" font-size="10" text-anchor="middle">4</text><text x="144" y="177" font-size="10" text-anchor="middle">5</text><text x="164" y="177" font-size="10" text-anchor="middle">6</text><text x="40" y="187.5" font-size="10" text-anchor="end">−1</text><text x="40" y="147.5" font-size="10" text-anchor="end">1</text><text x="40" y="127.5" font-size="10" text-anchor="end">2</text><text x="40" y="107.5" font-size="10" text-anchor="end">3</text><text x="40" y="87.5" font-size="10" text-anchor="end">4</text><text x="40" y="67.5" font-size="10" text-anchor="end">5</text><text x="40" y="47.5" font-size="10" text-anchor="end">6</text><text x="40" y="27.5" font-size="10" text-anchor="end">7</text><line x1="64" y1="124" x2="124" y2="124" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="124" y1="124" x2="124" y2="44" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="64" y1="124" x2="124" y2="44" stroke="currentColor" fill="none" stroke-width="2.5"/><circle cx="64" cy="124" r="3.5" fill="currentColor"/><text x="58" y="118" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="124" cy="44" r="3.5" fill="currentColor"/><text x="130" y="38" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><circle cx="124" cy="124" r="3.5" fill="currentColor"/><text x="130" y="138" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">C</text><circle cx="94" cy="84" r="3.5" fill="currentColor"/><text x="88" y="80" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">M</text></svg>'
+        explain: 点 C(4, 2) をとると、△ABC は ∠C = 90° の直角三角形で、AC = 4 − 1 = 3、BC = 6 − 2 = 4 です。三平方の定理から AB² = 3² + 4² = 25 なので、AB = 5 です。一般に、2 点 A(x₁, y₁)、B(x₂, y₂) の間の距離は AB = √((x₂ − x₁)² + (y₂ − y₁)²) です（わけは 6 日目）。原点 O と点 (x, y) の距離は √(x² + y²) です。線分 AB の上にあって AP:PB = m:n となる点 P を、AB を m:n に内分する点といい、その座標は ((nx₁ + mx₂)/(m + n), (ny₁ + my₂)/(m + n)) です（わけは 6 日目）。m を B の座標に、n を A の座標にかけます（AP:PB = 2:1 なら、P は B に近い）。中点は m = n のときで、((x₁ + x₂)/2, (y₁ + y₂)/2) です。この例では、中点 M は ((1 + 4)/2, (2 + 6)/2) = (5/2, 4)、2:1 に内分する点は ((1 × 1 + 2 × 4)/3, (1 × 2 + 2 × 6)/3) = (3, 14/3) です。
+      - part: 思い出す
+        text: 直角をはさむ 2 辺の長さが 8 と 15 の直角三角形で、斜辺の長さはいくつですか。
+        answer: 17
+        check: "[c for c in range(1, 100) if c * c == 8 * 8 + 15 * 15][0]"
+        hints:
+          - 三平方の定理を使いましょう（G-019）。
+          - 8² + 15² を計算しましょう。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["8² + 15² = 64 + 225 = 289", "17² = 289", "斜辺は 17"]
+      - part: 思い出す
+        text: 2 点 (−1, 3)、(3, 11) を通る直線の傾きはいくつですか。
+        answer: 2
+        check: "Fraction(11 - 3, 3 - (-1))"
+        hints:
+          - 傾きは、(y の増える量) ÷ (x の増える量) です（A-019）。
+          - x は −1 から 3 まで、いくつ増えるでしょう。
+          - y の増える量をわりましょう。
+        paths:
+          - ["x の増える量は 4", "y の増える量は 8", "傾きは 8 ÷ 4 = 2"]
+      - part: 今日
+        text: 2 点 A(−2, 1)、B(4, 9) の間の距離はいくつですか。
+        answer: 10
+        check: "[d for d in range(1, 100) if d * d == (4 - (-2)) ** 2 + (9 - 1) ** 2][0]"
+        hints:
+          - x 座標の差と、y 座標の差を求めましょう。
+          - AB² = (x 座標の差)² + (y 座標の差)² です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["x 座標の差は 6、y 座標の差は 8", "AB² = 36 + 64 = 100", "AB = 10"]
+        note: 4 − (−2) を 2 としやすい。負の数をひくときの符号に気をつけさせる。
+      - part: 今日
+        text: 2 点 A(−3, 5)、B(7, −1) を結ぶ線分 AB を 3:2 に内分する点の座標はどれですか。
+        choices: ["(3, 7/5)", "(1, 13/5)", "(2, 2)", "(3, 13/5)"]
+        answer: (3, 7/5)
+        check: "[k for k, p in {'(3, 7/5)': (3, Fraction(7, 5)), '(1, 13/5)': (1, Fraction(13, 5)), '(2, 2)': (2, 2), '(3, 13/5)': (3, Fraction(13, 5))}.items() if p == (Fraction(2 * (-3) + 3 * 7, 5), Fraction(2 * 5 + 3 * (-1), 5))][0]"
+        hints:
+          - 内分する点の式で、m = 3、n = 2 です。
+          - B の座標に 3 を、A の座標に 2 をかけます。
+          - AP:PB = 3:2 なので、P は B に近い点です。
+        paths:
+          - ["x = (2 × (−3) + 3 × 7)/5 = 15/5 = 3", "y = (2 × 5 + 3 × (−1))/5 = 7/5", "(3, 7/5)"]
+        note: 3 と 2 を逆にかけると (1, 13/5)（2:3 に内分する点）になる。(2, 2) は中点。
+      - part: 挑戦
+        text: x 軸の上の点 P で、2 点 A(1, 3)、B(5, 1) からの距離が等しいものの x 座標はいくつですか。
+        svg: '<svg viewBox="0 0 202 158" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="134" x2="24" y2="24"/><line x1="46" y1="134" x2="46" y2="24"/><line x1="68" y1="134" x2="68" y2="24"/><line x1="90" y1="134" x2="90" y2="24"/><line x1="112" y1="134" x2="112" y2="24"/><line x1="134" y1="134" x2="134" y2="24"/><line x1="156" y1="134" x2="156" y2="24"/><line x1="178" y1="134" x2="178" y2="24"/><line x1="24" y1="134" x2="178" y2="134"/><line x1="24" y1="112" x2="178" y2="112"/><line x1="24" y1="90" x2="178" y2="90"/><line x1="24" y1="68" x2="178" y2="68"/><line x1="24" y1="46" x2="178" y2="46"/><line x1="24" y1="24" x2="178" y2="24"/></g><line x1="16" y1="112" x2="188" y2="112" stroke="currentColor" fill="none" stroke-width="2"/><line x1="46" y1="142" x2="46" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M188 112 L180 108 L180 116 Z" fill="currentColor"/><path d="M46 14 L42 22 L50 22 Z" fill="currentColor"/><text x="190" y="126" font-size="14" text-anchor="end" font-style="italic">x</text><text x="53" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="42" y="125" font-size="11" text-anchor="end">O</text><text x="24" y="125" font-size="10" text-anchor="middle">−1</text><text x="68" y="125" font-size="10" text-anchor="middle">1</text><text x="90" y="125" font-size="10" text-anchor="middle">2</text><text x="112" y="125" font-size="10" text-anchor="middle">3</text><text x="134" y="125" font-size="10" text-anchor="middle">4</text><text x="156" y="125" font-size="10" text-anchor="middle">5</text><text x="178" y="125" font-size="10" text-anchor="middle">6</text><text x="42" y="137.5" font-size="10" text-anchor="end">−1</text><text x="42" y="93.5" font-size="10" text-anchor="end">1</text><text x="42" y="71.5" font-size="10" text-anchor="end">2</text><text x="42" y="49.5" font-size="10" text-anchor="end">3</text><text x="42" y="27.5" font-size="10" text-anchor="end">4</text><circle cx="68" cy="46" r="3.5" fill="currentColor"/><text x="74" y="40" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="156" cy="90" r="3.5" fill="currentColor"/><text x="162" y="84" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text></svg>'
+        answer: 2
+        check: "[x for x in range(-20, 21) if (x - 1) ** 2 + 3 ** 2 == (x - 5) ** 2 + 1 ** 2][0]"
+        hints:
+          - x 軸の上の点なので、P(x, 0) とおきましょう。
+          - AP² と BP² を、x を使って表しましょう。
+          - AP² = BP² の方程式を解きましょう。展開すると x² の項は消えます。
+        paths:
+          - ["P(x, 0) とする", "(x − 1)² + 9 = (x − 5)² + 1", "x² − 2x + 10 = x² − 10x + 26", "8x = 16 で x = 2"]
+        note: 距離どうしではなく、距離の 2 乗どうしを等しいとおくと √ が要らない。
+    extra:
+      - part: 今日
+        text: 原点 O と点 (−5, 12) の距離はいくつですか。
+        answer: 13
+        check: "[d for d in range(1, 100) if d * d == 5 * 5 + 12 * 12][0]"
+        hints:
+          - 原点と点 (x, y) の距離は √(x² + y²) です。
+          - (−5)² は正の数です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["25 + 144 = 169", "√169 = 13"]
+      - part: 今日
+        text: 2 点 (2, −4)、(−6, 8) を結ぶ線分の中点の座標はどれですか。
+        choices: ["(−2, 2)", "(4, −6)", "(−4, 6)", "(2, −2)"]
+        answer: (−2, 2)
+        check: "[k for k, p in {'(−2, 2)': (-2, 2), '(4, −6)': (4, -6), '(−4, 6)': (-4, 6), '(2, −2)': (2, -2)}.items() if p == (Fraction(2 + (-6), 2), Fraction(-4 + 8, 2))][0]"
+        hints:
+          - 中点の座標は、x 座標どうし、y 座標どうしの平均です。
+          - x 座標は (2 + (−6))/2 です。
+          - y 座標も同じように求めましょう。
+        paths:
+          - ["x = (2 − 6)/2 = −2", "y = (−4 + 8)/2 = 2", "(−2, 2)"]
+        note: (−4, 6) は差の半分（引き算をして 2 でわったもの）。
+      - part: 挑戦
+        text: 2 点 A(1, 8)、B(7, −4) を結ぶ線分 AB を 1:2 に内分する点を P とします。原点 O と P の距離はいくつですか。
+        answer: 5
+        check: "(lambda x, y: [d for d in range(0, 50) if d * d == x * x + y * y][0])(Fraction(2 * 1 + 1 * 7, 3), Fraction(2 * 8 + 1 * (-4), 3))"
+        hints:
+          - まず、内分する点 P の座標を求めましょう。m = 1、n = 2 です。
+          - A の座標に 2 を、B の座標に 1 をかけます。
+          - P がわかったら、原点との距離を求めましょう。
+        paths:
+          - ["P の x 座標は (2 × 1 + 1 × 7)/3 = 3", "P の y 座標は (2 × 8 + 1 × (−4))/3 = 4", "OP = √(9 + 16) = 5"]
+  - day: 2
+    items:
+      - part: 見本
+        text: 直線の式を、通る点と傾きや、通る 2 点から求めましょう。
+        svg: '<svg viewBox="0 0 264 210" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="186" x2="24" y2="24"/><line x1="42" y1="186" x2="42" y2="24"/><line x1="60" y1="186" x2="60" y2="24"/><line x1="78" y1="186" x2="78" y2="24"/><line x1="96" y1="186" x2="96" y2="24"/><line x1="114" y1="186" x2="114" y2="24"/><line x1="132" y1="186" x2="132" y2="24"/><line x1="150" y1="186" x2="150" y2="24"/><line x1="168" y1="186" x2="168" y2="24"/><line x1="186" y1="186" x2="186" y2="24"/><line x1="204" y1="186" x2="204" y2="24"/><line x1="222" y1="186" x2="222" y2="24"/><line x1="240" y1="186" x2="240" y2="24"/><line x1="24" y1="186" x2="240" y2="186"/><line x1="24" y1="168" x2="240" y2="168"/><line x1="24" y1="150" x2="240" y2="150"/><line x1="24" y1="132" x2="240" y2="132"/><line x1="24" y1="114" x2="240" y2="114"/><line x1="24" y1="96" x2="240" y2="96"/><line x1="24" y1="78" x2="240" y2="78"/><line x1="24" y1="60" x2="240" y2="60"/><line x1="24" y1="42" x2="240" y2="42"/><line x1="24" y1="24" x2="240" y2="24"/></g><line x1="16" y1="114" x2="250" y2="114" stroke="currentColor" fill="none" stroke-width="2"/><line x1="150" y1="194" x2="150" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M250 114 L242 110 L242 118 Z" fill="currentColor"/><path d="M150 14 L146 22 L154 22 Z" fill="currentColor"/><text x="252" y="128" font-size="14" text-anchor="end" font-style="italic">x</text><text x="157" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="146" y="127" font-size="11" text-anchor="end">O</text><text x="24" y="127" font-size="10" text-anchor="middle">−7</text><text x="42" y="127" font-size="10" text-anchor="middle">−6</text><text x="60" y="127" font-size="10" text-anchor="middle">−5</text><text x="78" y="127" font-size="10" text-anchor="middle">−4</text><text x="96" y="127" font-size="10" text-anchor="middle">−3</text><text x="114" y="127" font-size="10" text-anchor="middle">−2</text><text x="132" y="127" font-size="10" text-anchor="middle">−1</text><text x="168" y="127" font-size="10" text-anchor="middle">1</text><text x="186" y="127" font-size="10" text-anchor="middle">2</text><text x="204" y="127" font-size="10" text-anchor="middle">3</text><text x="222" y="127" font-size="10" text-anchor="middle">4</text><text x="240" y="127" font-size="10" text-anchor="middle">5</text><text x="146" y="189.5" font-size="10" text-anchor="end">−4</text><text x="146" y="171.5" font-size="10" text-anchor="end">−3</text><text x="146" y="153.5" font-size="10" text-anchor="end">−2</text><text x="146" y="135.5" font-size="10" text-anchor="end">−1</text><text x="146" y="99.5" font-size="10" text-anchor="end">1</text><text x="146" y="81.5" font-size="10" text-anchor="end">2</text><text x="146" y="63.5" font-size="10" text-anchor="end">3</text><text x="146" y="45.5" font-size="10" text-anchor="end">4</text><text x="146" y="27.5" font-size="10" text-anchor="end">5</text><line x1="165.6" y1="193.2" x2="224.4" y2="16.8" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="222" y="52.8" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">y</tspan> = 3<tspan font-style="italic">x</tspan> − 7</text><line x1="168" y1="193.2" x2="168" y2="16.8" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="187.8" y="34.8" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">x</tspan> = 1</text><line x1="58.2" y1="16.8" x2="247.2" y2="142.8" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="70.8" y="160.8" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">2<tspan font-style="italic">x</tspan> + 3<tspan font-style="italic">y</tspan> − 6 = 0</text><circle cx="186" cy="132" r="3.5" fill="currentColor"/></svg>'
+        explain: 点 (x₁, y₁) を通り、傾きが m の直線の式は y − y₁ = m(x − x₁) です。y = mx + b と、(x₁, y₁) を代入した y₁ = mx₁ + b の差をとると b が消えて、この形になります。例：点 (2, −1) を通り傾きが 3 の直線は y − (−1) = 3(x − 2)、つまり y = 3x − 7 です。2 点を通る直線は、まず傾き (y₂ − y₁)/(x₂ − x₁) を求めてから、この式に入れます。x₁ = x₂ のとき（2 点 (1, 4)、(1, −2) など）は、直線は y 軸に平行で、式は x = 1 です。これは y = mx + b の形では表せません。どの直線も ax + by + c = 0（a と b の少なくとも一方は 0 でない）の形で表せます。b が 0 でなければ y について解いて 1 次関数の形になり、b = 0 なら x = (決まった数) の直線です。例：2x + 3y − 6 = 0 は y = −(2/3)x + 2 なので、傾き −2/3、切片 2 の直線です。2 直線の交点は、2 つの式を連立方程式として解いて求めます（A-012）。
+      - part: 思い出す
+        text: 2 点 (−3, 2)、(2, 14) の間の距離はいくつですか。
+        answer: 13
+        check: "[d for d in range(1, 100) if d * d == (2 - (-3)) ** 2 + (14 - 2) ** 2][0]"
+        hints:
+          - x 座標の差と、y 座標の差を求めましょう。
+          - 2 点間の距離の 2 乗は、差の 2 乗の和です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["差は 5 と 12", "25 + 144 = 169", "距離は 13"]
+      - part: 思い出す
+        text: 連立方程式 2x + y = 7、x − y = 2 の解で、x はいくつですか。
+        answer: 3
+        check: "[x for x in range(-20, 21) for y in range(-20, 21) if 2 * x + y == 7 and x - y == 2][0]"
+        hints:
+          - 2 つの式を足すと、y が消えます（A-012）。
+          - 3x はいくつになるでしょう。
+          - 両辺を 3 でわりましょう。
+        paths:
+          - ["2 つの式を足して 3x = 9", "x = 3"]
+      - part: 今日
+        text: 点 (−1, 5) を通り、傾きが −2 の直線の式はどれですか。
+        choices: [y = −2x + 3, y = −2x + 7, y = −2x − 3, y = 2x + 7]
+        answer: y = −2x + 3
+        check: "[k for k, g in {'y = −2x + 3': lambda x: -2 * x + 3, 'y = −2x + 7': lambda x: -2 * x + 7, 'y = −2x − 3': lambda x: -2 * x - 3, 'y = 2x + 7': lambda x: 2 * x + 7}.items() if g(-1) == 5 and g(1) - g(0) == -2][0]"
+        hints:
+          - y − y₁ = m(x − x₁) を使いましょう。
+          - y − 5 = −2(x − (−1)) です。
+          - 右辺を展開して、y = の形にしましょう。
+        paths:
+          - ["y − 5 = −2(x + 1)", "y − 5 = −2x − 2", "y = −2x + 3"]
+        note: x − (−1) を x − 1 とすると y = −2x + 7 になる。
+      - part: 今日
+        text: 直線 3x − 2y + 4 = 0 の傾きはいくつですか。
+        answer: 3/2
+        check: "Fraction(-3, -2)"
+        hints:
+          - 式を y について解きましょう。
+          - 2y = 3x + 4 です。
+          - 両辺を 2 でわりましょう。
+        paths:
+          - ["2y = 3x + 4", "y = (3/2)x + 2", "傾きは 3/2"]
+        note: x の係数 3 をそのまま傾きとしやすい。
+      - part: 挑戦
+        text: 2 直線 2x + y − 5 = 0 と x − 3y + 8 = 0 の交点と、点 (4, 2) を通る直線の式はどれですか。
+        choices: [x + 3y − 10 = 0, 3x + y − 6 = 0, x − 2y = 0, x + 3y − 14 = 0]
+        answer: x + 3y − 10 = 0
+        check: "[k for k, g in {'x + 3y − 10 = 0': lambda x, y: x + 3 * y - 10, '3x + y − 6 = 0': lambda x, y: 3 * x + y - 6, 'x − 2y = 0': lambda x, y: x - 2 * y, 'x + 3y − 14 = 0': lambda x, y: x + 3 * y - 14}.items() for p, q in [(x, y) for x in range(-20, 21) for y in range(-20, 21) if 2 * x + y - 5 == 0 and x - 3 * y + 8 == 0] if g(p, q) == 0 and g(4, 2) == 0][0]"
+        hints:
+          - まず、2 直線の交点を連立方程式で求めましょう。
+          - 交点と (4, 2) の 2 点から、傾きを求めましょう。
+          - 式を ax + by + c = 0 の形に整えましょう。
+        paths:
+          - ["y = 5 − 2x を x − 3y + 8 = 0 に代入", "7x − 7 = 0 で x = 1、y = 3", "傾きは (2 − 3)/(4 − 1) = −1/3", "y − 3 = −(1/3)(x − 1) から x + 3y − 10 = 0"]
+    extra:
+      - part: 今日
+        text: 2 点 (2, 1)、(2, −5) を通る直線の式はどれですか。
+        choices: [x = 2, y = 2, y = x − 1, x = −2]
+        answer: x = 2
+        check: "[k for k, g in {'x = 2': lambda x, y: x - 2, 'y = 2': lambda x, y: y - 2, 'y = x − 1': lambda x, y: y - x + 1, 'x = −2': lambda x, y: x + 2}.items() if g(2, 1) == 0 and g(2, -5) == 0][0]"
+        hints:
+          - 2 点の x 座標をくらべましょう。
+          - x 座標が等しいとき、直線は y 軸に平行です。
+          - y 軸に平行な直線の式は x = (決まった数) です。
+        paths:
+          - ["x 座標がどちらも 2", "y 軸に平行な直線", "x = 2"]
+      - part: 今日
+        text: 2 点 (−2, −3)、(4, 9) を通る直線の式はどれですか。
+        choices: [y = 2x + 1, y = 2x − 1, y = (1/2)x − 2, y = 2x + 7]
+        answer: y = 2x + 1
+        check: "[k for k, g in {'y = 2x + 1': lambda x: 2 * x + 1, 'y = 2x − 1': lambda x: 2 * x - 1, 'y = (1/2)x − 2': lambda x: Fraction(x, 2) - 2, 'y = 2x + 7': lambda x: 2 * x + 7}.items() if g(-2) == -3 and g(4) == 9][0]"
+        hints:
+          - まず、傾きを求めましょう。
+          - 傾きは (9 − (−3))/(4 − (−2)) です。
+          - どちらかの点を y − y₁ = m(x − x₁) に入れましょう。
+        paths:
+          - ["傾きは 12/6 = 2", "y − 9 = 2(x − 4)", "y = 2x + 1"]
+      - part: 挑戦
+        text: 3 点 A(1, 2)、B(3, 8)、C(k, 14) が 1 つの直線の上にあるとき、k はいくつですか。
+        answer: 5
+        check: "[k for k in range(-30, 31) if (14 - 2) * (3 - 1) == (8 - 2) * (k - 1)][0]"
+        hints:
+          - 直線 AB の傾きを求めましょう。
+          - 直線 AC の傾きも、直線 AB の傾きと等しくなります。
+          - (14 − 2)/(k − 1) = 3 を解きましょう。
+        paths:
+          - ["AB の傾きは 6/2 = 3", "(14 − 2)/(k − 1) = 3", "12 = 3(k − 1)", "k = 5"]
+  - day: 3
+    items:
+      - part: 見本
+        text: 2 直線が平行・垂直になる条件と、点と直線の距離を調べましょう。
+        svg: '<svg viewBox="0 0 202 224" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="200" x2="24" y2="24"/><line x1="46" y1="200" x2="46" y2="24"/><line x1="68" y1="200" x2="68" y2="24"/><line x1="90" y1="200" x2="90" y2="24"/><line x1="112" y1="200" x2="112" y2="24"/><line x1="134" y1="200" x2="134" y2="24"/><line x1="156" y1="200" x2="156" y2="24"/><line x1="178" y1="200" x2="178" y2="24"/><line x1="24" y1="200" x2="178" y2="200"/><line x1="24" y1="178" x2="178" y2="178"/><line x1="24" y1="156" x2="178" y2="156"/><line x1="24" y1="134" x2="178" y2="134"/><line x1="24" y1="112" x2="178" y2="112"/><line x1="24" y1="90" x2="178" y2="90"/><line x1="24" y1="68" x2="178" y2="68"/><line x1="24" y1="46" x2="178" y2="46"/><line x1="24" y1="24" x2="178" y2="24"/></g><line x1="16" y1="156" x2="188" y2="156" stroke="currentColor" fill="none" stroke-width="2"/><line x1="46" y1="208" x2="46" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M188 156 L180 152 L180 160 Z" fill="currentColor"/><path d="M46 14 L42 22 L50 22 Z" fill="currentColor"/><text x="190" y="170" font-size="14" text-anchor="end" font-style="italic">x</text><text x="53" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="42" y="169" font-size="11" text-anchor="end">O</text><text x="24" y="169" font-size="10" text-anchor="middle">−1</text><text x="68" y="169" font-size="10" text-anchor="middle">1</text><text x="90" y="169" font-size="10" text-anchor="middle">2</text><text x="112" y="169" font-size="10" text-anchor="middle">3</text><text x="134" y="169" font-size="10" text-anchor="middle">4</text><text x="156" y="169" font-size="10" text-anchor="middle">5</text><text x="178" y="169" font-size="10" text-anchor="middle">6</text><text x="42" y="203.5" font-size="10" text-anchor="end">−2</text><text x="42" y="181.5" font-size="10" text-anchor="end">−1</text><text x="42" y="137.5" font-size="10" text-anchor="end">1</text><text x="42" y="115.5" font-size="10" text-anchor="end">2</text><text x="42" y="93.5" font-size="10" text-anchor="end">3</text><text x="42" y="71.5" font-size="10" text-anchor="end">4</text><text x="42" y="49.5" font-size="10" text-anchor="end">5</text><text x="42" y="27.5" font-size="10" text-anchor="end">6</text><line x1="15.2" y1="94.4" x2="167.7" y2="208.8" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="134" y1="46" x2="68" y2="134" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="134" y1="46" x2="134" y2="183.5" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="134" cy="46" r="3.5" fill="currentColor"/><text x="140" y="40" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P</text><circle cx="68" cy="134" r="3.5" fill="currentColor"/><text x="61" y="130" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">H</text><circle cx="134" cy="183.5" r="3.5" fill="currentColor"/><text x="141" y="195.5" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">Q</text><polyline points="73.4,126.8 80.6,132.2 75.2,139.4" stroke="currentColor" fill="none" stroke-width="1.5"/></svg>'
+        explain: 2 直線 y = m₁x + n₁、y = m₂x + n₂ は、m₁ = m₂ のとき平行です（n₁ = n₂ なら同じ直線）。また、m₁m₂ = −1 のとき垂直です（わけは 6 日目）。例：点 (2, 3) を通り、直線 y = 2x + 1 に垂直な直線は、傾きが −1/2 なので y − 3 = −(1/2)(x − 2)、つまり y = −(1/2)x + 4 です。点 P(x₁, y₁) から直線 ax + by + c = 0 にひいた垂線を PH とすると、その長さ（点と直線の距離）は d = |ax₁ + by₁ + c|/√(a² + b²) です。| | は絶対値です。わけ：P を通り y 軸に平行な線と直線の交点を Q とすると、Q の y 座標は −(ax₁ + c)/b なので PQ = |ax₁ + by₁ + c|/|b| です。直角三角形 PQH は、2 辺が |a| と |b| で斜辺が √(a² + b²) の直角三角形と相似で（傾きが同じ直線と、それに垂直な直線でできるため。G-020）、PH:PQ = |b|:√(a² + b²) なので、上の式になります。例：図の点 P(4, 5) と直線 3x + 4y − 7 = 0 の距離は |12 + 20 − 7|/√(9 + 16) = 25/5 = 5 です。
+      - part: 思い出す
+        text: 点 (3, −2) を通り、傾きが 4 の直線の式はどれですか。
+        choices: [y = 4x − 14, y = 4x − 10, y = 4x + 14, y = −4x + 10]
+        answer: y = 4x − 14
+        check: "[k for k, g in {'y = 4x − 14': lambda x: 4 * x - 14, 'y = 4x − 10': lambda x: 4 * x - 10, 'y = 4x + 14': lambda x: 4 * x + 14, 'y = −4x + 10': lambda x: -4 * x + 10}.items() if g(3) == -2 and g(1) - g(0) == 4][0]"
+        hints:
+          - y − y₁ = m(x − x₁) を使いましょう。
+          - y − (−2) = 4(x − 3) です。
+          - 展開して、y = の形にしましょう。
+        paths:
+          - ["y + 2 = 4(x − 3)", "y = 4x − 12 − 2", "y = 4x − 14"]
+      - part: 思い出す
+        text: 2 点 (−4, 7)、(6, −1) を結ぶ線分の中点の座標はどれですか。
+        choices: ["(1, 3)", "(5, −4)", "(2, 6)", "(−1, 3)"]
+        answer: (1, 3)
+        check: "[k for k, p in {'(1, 3)': (1, 3), '(5, −4)': (5, -4), '(2, 6)': (2, 6), '(−1, 3)': (-1, 3)}.items() if p == (Fraction(-4 + 6, 2), Fraction(7 - 1, 2))][0]"
+        hints:
+          - 中点は、座標の平均です。
+          - x 座標は (−4 + 6)/2 です。
+          - y 座標は (7 + (−1))/2 です。
+        paths:
+          - ["x = 2/2 = 1", "y = 6/2 = 3", "(1, 3)"]
+      - part: 今日
+        text: 点 (6, 1) を通り、直線 y = 3x − 2 に垂直な直線の式はどれですか。
+        choices: [y = −(1/3)x + 3, y = 3x − 17, y = (1/3)x − 1, y = −3x + 19]
+        answer: y = −(1/3)x + 3
+        check: "[k for k, g in {'y = −(1/3)x + 3': lambda x: Fraction(-x, 3) + 3, 'y = 3x − 17': lambda x: 3 * x - 17, 'y = (1/3)x − 1': lambda x: Fraction(x, 3) - 1, 'y = −3x + 19': lambda x: -3 * x + 19}.items() if g(6) == 1 and (g(1) - g(0)) * 3 == -1][0]"
+        hints:
+          - 垂直な 2 直線の傾きの積は −1 です。
+          - 傾き 3 の直線に垂直な直線の傾きはいくつでしょう。
+          - y − y₁ = m(x − x₁) に入れましょう。
+        paths:
+          - ["傾きは −1/3", "y − 1 = −(1/3)(x − 6)", "y = −(1/3)x + 3"]
+        note: どの選択肢も (6, 1) を通る。符号だけを変えた −3 や、逆数だけの 1/3 としやすい。
+      - part: 今日
+        text: 点 (2, −1) と直線 4x − 3y + 5 = 0 の距離はいくつですか。
+        answer: 16/5
+        accept: [3.2]
+        check: "Fraction(abs(4 * 2 - 3 * (-1) + 5), [r for r in range(1, 50) if r * r == 4 * 4 + 3 * 3][0])"
+        hints:
+          - d = |ax₁ + by₁ + c|/√(a² + b²) を使いましょう。
+          - a = 4、b = −3、c = 5 です。
+          - 分子と分母を別々に計算しましょう。
+        paths:
+          - ["分子は |8 + 3 + 5| = 16", "分母は √(16 + 9) = 5", "d = 16/5"]
+        note: −3 × (−1) の符号で、分子を |8 − 3 + 5| = 10 としやすい。
+      - part: 挑戦
+        text: 直線 y = 2x について、点 A(5, 0) と対称な点 B の座標はどれですか。
+        svg: '<svg viewBox="0 0 228 174" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="150" x2="24" y2="24"/><line x1="42" y1="150" x2="42" y2="24"/><line x1="60" y1="150" x2="60" y2="24"/><line x1="78" y1="150" x2="78" y2="24"/><line x1="96" y1="150" x2="96" y2="24"/><line x1="114" y1="150" x2="114" y2="24"/><line x1="132" y1="150" x2="132" y2="24"/><line x1="150" y1="150" x2="150" y2="24"/><line x1="168" y1="150" x2="168" y2="24"/><line x1="186" y1="150" x2="186" y2="24"/><line x1="204" y1="150" x2="204" y2="24"/><line x1="24" y1="150" x2="204" y2="150"/><line x1="24" y1="132" x2="204" y2="132"/><line x1="24" y1="114" x2="204" y2="114"/><line x1="24" y1="96" x2="204" y2="96"/><line x1="24" y1="78" x2="204" y2="78"/><line x1="24" y1="60" x2="204" y2="60"/><line x1="24" y1="42" x2="204" y2="42"/><line x1="24" y1="24" x2="204" y2="24"/></g><line x1="16" y1="132" x2="214" y2="132" stroke="currentColor" fill="none" stroke-width="2"/><line x1="96" y1="158" x2="96" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M214 132 L206 128 L206 136 Z" fill="currentColor"/><path d="M96 14 L92 22 L100 22 Z" fill="currentColor"/><text x="216" y="146" font-size="14" text-anchor="end" font-style="italic">x</text><text x="103" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="92" y="145" font-size="11" text-anchor="end">O</text><text x="24" y="145" font-size="10" text-anchor="middle">−4</text><text x="42" y="145" font-size="10" text-anchor="middle">−3</text><text x="60" y="145" font-size="10" text-anchor="middle">−2</text><text x="78" y="145" font-size="10" text-anchor="middle">−1</text><text x="114" y="145" font-size="10" text-anchor="middle">1</text><text x="132" y="145" font-size="10" text-anchor="middle">2</text><text x="150" y="145" font-size="10" text-anchor="middle">3</text><text x="168" y="145" font-size="10" text-anchor="middle">4</text><text x="186" y="145" font-size="10" text-anchor="middle">5</text><text x="204" y="145" font-size="10" text-anchor="middle">6</text><text x="92" y="153.5" font-size="10" text-anchor="end">−1</text><text x="92" y="117.5" font-size="10" text-anchor="end">1</text><text x="92" y="99.5" font-size="10" text-anchor="end">2</text><text x="92" y="81.5" font-size="10" text-anchor="end">3</text><text x="92" y="63.5" font-size="10" text-anchor="end">4</text><text x="92" y="45.5" font-size="10" text-anchor="end">5</text><text x="92" y="27.5" font-size="10" text-anchor="end">6</text><line x1="83.4" y1="157.2" x2="153.6" y2="16.8" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="166.2" y="36.6" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">y</tspan> = 2<tspan font-style="italic">x</tspan></text><circle cx="186" cy="132" r="3.5" fill="currentColor"/><text x="190" y="126" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text></svg>'
+        choices: ["(−3, 4)", "(0, 5)", "(3, −4)", "(−4, 3)"]
+        answer: (−3, 4)
+        check: "[k for k, (p, q) in {'(−3, 4)': (-3, 4), '(0, 5)': (0, 5), '(3, −4)': (3, -4), '(−4, 3)': (-4, 3)}.items() if Fraction(q, 2) == 2 * Fraction(5 + p, 2) and q * 2 == -(p - 5)][0]"
+        hints:
+          - B(p, q) とおきましょう。
+          - 線分 AB の中点は、直線 y = 2x の上にあります。
+          - 直線 AB は、直線 y = 2x に垂直です。2 つの条件を連立しましょう。
+        paths:
+          - ["B(p, q) とする", "中点 ((5 + p)/2, q/2) が y = 2x の上にあるので q = 2(5 + p)", "AB の傾き q/(p − 5) が −1/2 なので p − 5 = −2q", "連立して p = −3、q = 4"]
+        note: (0, 5) は原点からの距離は同じだが、線分 AB の中点が直線の上にない。
+    extra:
+      - part: 今日
+        text: 点 (3, 4) を通り、直線 y = −(2/3)x + 1 に平行な直線の式はどれですか。
+        choices: [y = −(2/3)x + 6, y = −(2/3)x + 2, y = (3/2)x − 1/2, y = −(2/3)x + 1]
+        answer: y = −(2/3)x + 6
+        check: "[k for k, g in {'y = −(2/3)x + 6': lambda x: Fraction(-2 * x, 3) + 6, 'y = −(2/3)x + 2': lambda x: Fraction(-2 * x, 3) + 2, 'y = (3/2)x − 1/2': lambda x: Fraction(3 * x, 2) - Fraction(1, 2), 'y = −(2/3)x + 1': lambda x: Fraction(-2 * x, 3) + 1}.items() if g(3) == 4 and g(1) - g(0) == Fraction(-2, 3)][0]"
+        hints:
+          - 平行な直線は、傾きが等しくなります。
+          - 傾き −2/3 で、点 (3, 4) を通る直線を求めましょう。
+          - x = 3 を代入して、切片を求めましょう。
+        paths:
+          - ["4 = −(2/3) × 3 + b", "4 = −2 + b", "b = 6"]
+      - part: 今日
+        text: 2 直線 ax + 2y − 1 = 0 と 3x − y + 4 = 0 が垂直になるとき、a はいくつですか。
+        answer: 2/3
+        check: "[Fraction(k, 3) for k in range(-30, 31) if Fraction(-k, 3) / 2 * 3 == -1][0]"
+        hints:
+          - それぞれの直線を、y について解いて傾きを求めましょう。
+          - 1 本目の傾きは −a/2、2 本目の傾きは 3 です。
+          - 傾きの積が −1 になる a を求めましょう。
+        paths:
+          - ["傾きは −a/2 と 3", "(−a/2) × 3 = −1", "a = 2/3"]
+      - part: 挑戦
+        text: 2 点 A(−1, 3)、B(5, 1) を結ぶ線分 AB の垂直二等分線の式はどれですか。
+        choices: [y = 3x − 4, y = −(1/3)x + 8/3, y = 3x + 2, y = −3x + 8]
+        answer: y = 3x − 4
+        check: "[k for k, g in {'y = 3x − 4': lambda x: 3 * x - 4, 'y = −(1/3)x + 8/3': lambda x: Fraction(-x + 8, 3), 'y = 3x + 2': lambda x: 3 * x + 2, 'y = −3x + 8': lambda x: -3 * x + 8}.items() if g(Fraction(-1 + 5, 2)) == Fraction(3 + 1, 2) and (g(1) - g(0)) * Fraction(1 - 3, 5 - (-1)) == -1][0]"
+        hints:
+          - 垂直二等分線は、AB の中点を通り、AB に垂直な直線です。
+          - AB の中点と、AB の傾きを求めましょう。
+          - AB に垂直な直線の傾きは、AB の傾きとの積が −1 になる数です。
+        paths:
+          - ["中点は (2, 2)", "AB の傾きは −2/6 = −1/3", "垂直な傾きは 3", "y − 2 = 3(x − 2) で y = 3x − 4"]
+        note: y = −(1/3)x + 8/3 は直線 AB そのもの。
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 中心と半径から円の式をつくり、式から中心と半径を読みましょう。
+        svg: '<svg viewBox="0 0 208 208" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="184" x2="24" y2="24"/><line x1="44" y1="184" x2="44" y2="24"/><line x1="64" y1="184" x2="64" y2="24"/><line x1="84" y1="184" x2="84" y2="24"/><line x1="104" y1="184" x2="104" y2="24"/><line x1="124" y1="184" x2="124" y2="24"/><line x1="144" y1="184" x2="144" y2="24"/><line x1="164" y1="184" x2="164" y2="24"/><line x1="184" y1="184" x2="184" y2="24"/><line x1="24" y1="184" x2="184" y2="184"/><line x1="24" y1="164" x2="184" y2="164"/><line x1="24" y1="144" x2="184" y2="144"/><line x1="24" y1="124" x2="184" y2="124"/><line x1="24" y1="104" x2="184" y2="104"/><line x1="24" y1="84" x2="184" y2="84"/><line x1="24" y1="64" x2="184" y2="64"/><line x1="24" y1="44" x2="184" y2="44"/><line x1="24" y1="24" x2="184" y2="24"/></g><line x1="16" y1="84" x2="194" y2="84" stroke="currentColor" fill="none" stroke-width="2"/><line x1="64" y1="192" x2="64" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M194 84 L186 80 L186 88 Z" fill="currentColor"/><path d="M64 14 L60 22 L68 22 Z" fill="currentColor"/><text x="196" y="98" font-size="14" text-anchor="end" font-style="italic">x</text><text x="71" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="60" y="97" font-size="11" text-anchor="end">O</text><text x="24" y="97" font-size="10" text-anchor="middle">−2</text><text x="44" y="97" font-size="10" text-anchor="middle">−1</text><text x="84" y="97" font-size="10" text-anchor="middle">1</text><text x="104" y="97" font-size="10" text-anchor="middle">2</text><text x="124" y="97" font-size="10" text-anchor="middle">3</text><text x="144" y="97" font-size="10" text-anchor="middle">4</text><text x="164" y="97" font-size="10" text-anchor="middle">5</text><text x="184" y="97" font-size="10" text-anchor="middle">6</text><text x="60" y="187.5" font-size="10" text-anchor="end">−5</text><text x="60" y="167.5" font-size="10" text-anchor="end">−4</text><text x="60" y="147.5" font-size="10" text-anchor="end">−3</text><text x="60" y="127.5" font-size="10" text-anchor="end">−2</text><text x="60" y="107.5" font-size="10" text-anchor="end">−1</text><text x="60" y="67.5" font-size="10" text-anchor="end">1</text><text x="60" y="47.5" font-size="10" text-anchor="end">2</text><text x="60" y="27.5" font-size="10" text-anchor="end">3</text><circle cx="104" cy="104" r="60" stroke="currentColor" fill="none" stroke-width="2.5"/><circle cx="104" cy="104" r="3.5" fill="currentColor"/><text x="110" y="118" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">C</text></svg>'
+        explain: 点 C(a, b) を中心とする半径 r の円は、C からの距離が r の点の集まりです。点 P(x, y) が円の上にあることは CP = r、つまり CP² = r² と同じなので、円の式は (x − a)² + (y − b)² = r² です。例：中心 (2, −1)、半径 3 の円は (x − 2)² + (y + 1)² = 9 です。展開すると x² + y² − 4x + 2y − 4 = 0 になります。逆に、x² + y² + 6x − 4y + 4 = 0 は、x と y のそれぞれで平方完成すると（A-017）(x + 3)² − 9 + (y − 2)² − 4 + 4 = 0、つまり (x + 3)² + (y − 2)² = 9 なので、中心 (−3, 2)、半径 3 の円です。x² + y² + lx + my + n = 0 の形の式は、平方完成して右辺が正の数になれば円を表します。円の上の点がわかっていれば、この形に代入して l、m、n を求められます。
+      - part: 思い出す
+        text: 点 (4, 6) と直線 3x + 4y − 1 = 0 の距離はいくつですか。
+        answer: 7
+        check: "Fraction(abs(3 * 4 + 4 * 6 - 1), [r for r in range(1, 50) if r * r == 3 * 3 + 4 * 4][0])"
+        hints:
+          - d = |ax₁ + by₁ + c|/√(a² + b²) を使いましょう。
+          - 分子は |3 × 4 + 4 × 6 − 1| です。
+          - 分母は √(3² + 4²) です。
+        paths:
+          - ["分子は |12 + 24 − 1| = 35", "分母は 5", "d = 35/5 = 7"]
+      - part: 思い出す
+        text: x² + 8x + 3 = (x + 4)² − □ の □ に入る数はいくつですか。
+        answer: 13
+        check: "4 * 4 - 3"
+        hints:
+          - (x + 4)² を展開しましょう（A-015）。
+          - (x + 4)² = x² + 8x + 16 です。
+          - x² + 8x + 3 にするには、16 からいくつひけばよいでしょう。
+        paths:
+          - ["(x + 4)² = x² + 8x + 16", "16 − 3 = 13"]
+      - part: 今日
+        text: 中心が (−1, 4)、半径が 5 の円の式はどれですか。
+        choices: ["(x + 1)² + (y − 4)² = 25", "(x − 1)² + (y + 4)² = 25", "(x + 1)² + (y − 4)² = 5", "(x − 1)² + (y − 4)² = 25"]
+        answer: (x + 1)² + (y − 4)² = 25
+        check: "[k for k, g in {'(x + 1)² + (y − 4)² = 25': lambda x, y: (x + 1) ** 2 + (y - 4) ** 2 - 25, '(x − 1)² + (y + 4)² = 25': lambda x, y: (x - 1) ** 2 + (y + 4) ** 2 - 25, '(x + 1)² + (y − 4)² = 5': lambda x, y: (x + 1) ** 2 + (y - 4) ** 2 - 5, '(x − 1)² + (y − 4)² = 25': lambda x, y: (x - 1) ** 2 + (y - 4) ** 2 - 25}.items() if all(g(x, y) == 0 for x, y in ((4, 4), (-1, 9), (2, 8), (-6, 4)))][0]"
+        hints:
+          - 円の式は (x − a)² + (y − b)² = r² です。
+          - a = −1 なので、x − (−1) = x + 1 です。
+          - 右辺は半径の 2 乗です。
+        paths:
+          - ["(x − (−1))² + (y − 4)² = 5²", "(x + 1)² + (y − 4)² = 25"]
+        note: 中心の符号を逆にしやすい。右辺を 5 のままにしやすい。
+      - part: 今日
+        text: 円 x² + y² − 8x + 2y + 8 = 0 の半径はいくつですか。
+        answer: 3
+        check: "[r for r in range(1, 30) if r * r == 4 * 4 + 1 * 1 - 8][0]"
+        hints:
+          - x と y のそれぞれで平方完成しましょう。
+          - x² − 8x = (x − 4)² − 16、y² + 2y = (y + 1)² − 1 です。
+          - (x − 4)² + (y + 1)² = □ の形にしましょう。
+        paths:
+          - ["(x − 4)² − 16 + (y + 1)² − 1 + 8 = 0", "(x − 4)² + (y + 1)² = 9", "半径は 3"]
+        note: 右辺の 9 を半径としやすい。
+      - part: 挑戦
+        text: 2 点 A(−1, 2)、B(5, −6) を直径の両はしとする円の式はどれですか。
+        choices: ["(x − 2)² + (y + 2)² = 25", "(x − 2)² + (y + 2)² = 100", "(x + 2)² + (y − 2)² = 25", "(x − 3)² + (y + 4)² = 25"]
+        answer: (x − 2)² + (y + 2)² = 25
+        check: "[k for k, g in {'(x − 2)² + (y + 2)² = 25': lambda x, y: (x - 2) ** 2 + (y + 2) ** 2 - 25, '(x − 2)² + (y + 2)² = 100': lambda x, y: (x - 2) ** 2 + (y + 2) ** 2 - 100, '(x + 2)² + (y − 2)² = 25': lambda x, y: (x + 2) ** 2 + (y - 2) ** 2 - 25, '(x − 3)² + (y + 4)² = 25': lambda x, y: (x - 3) ** 2 + (y + 4) ** 2 - 25}.items() if g(-1, 2) == 0 and g(5, -6) == 0][0]"
+        hints:
+          - 円の中心は、直径 AB の中点です。
+          - 半径は、AB の長さの半分です。
+          - 中心と半径を、円の式に入れましょう。
+        paths:
+          - ["中心は ((−1 + 5)/2, (2 − 6)/2) = (2, −2)", "AB = √(36 + 64) = 10 なので半径は 5", "(x − 2)² + (y + 2)² = 25"]
+        note: 直径 10 の 2 乗を右辺にすると 100 になる。
+    extra:
+      - part: 今日
+        text: 円 x² + y² + 4x − 6y − 3 = 0 の中心の座標はどれですか。
+        choices: ["(−2, 3)", "(2, −3)", "(4, −6)", "(−4, 6)"]
+        answer: (−2, 3)
+        check: "[k for k, p in {'(−2, 3)': (-2, 3), '(2, −3)': (2, -3), '(4, −6)': (4, -6), '(−4, 6)': (-4, 6)}.items() if p == (Fraction(-4, 2), Fraction(6, 2))][0]"
+        hints:
+          - x と y のそれぞれで平方完成しましょう。
+          - x² + 4x = (x + 2)² − 4 です。
+          - (x − a)² の形になおすと、中心の x 座標は a です。
+        paths:
+          - ["(x + 2)² + (y − 3)² = 16", "中心は (−2, 3)"]
+      - part: 今日
+        text: 中心が (3, −2) で、原点を通る円の半径を r とします。r² の値はいくつですか。
+        answer: 13
+        check: "3 ** 2 + (-2) ** 2"
+        hints:
+          - 半径は、中心と円の上の点の距離です。
+          - 原点は円の上の点です。
+          - r² = 3² + (−2)² です。
+        paths:
+          - ["r² = 9 + 4 = 13"]
+      - part: 挑戦
+        text: 3 点 O(0, 0)、A(6, 0)、B(0, 8) を通る円の半径はいくつですか。
+        answer: 5
+        check: "(lambda l, m: [r for r in range(1, 30) if r * r == Fraction(l * l + m * m, 4)][0])(Fraction(-36, 6), Fraction(-64, 8))"
+        hints:
+          - 円の式を x² + y² + lx + my + n = 0 とおきましょう。
+          - 3 点をそれぞれ代入しましょう。O を代入すると n がわかります。
+          - l と m がわかったら、平方完成して半径を読みましょう。
+        paths:
+          - ["O を代入して n = 0", "A を代入して 36 + 6l = 0 で l = −6", "B を代入して 64 + 8m = 0 で m = −8", "(x − 3)² + (y − 4)² = 25 で半径 5"]
+          - ["OA の垂直二等分線は x = 3、OB の垂直二等分線は y = 4", "中心は (3, 4)", "半径は原点までの距離で 5"]
+  - day: 5
+    items:
+      - part: 見本
+        text: 円と直線の共有点と、円の上の点における接線を調べましょう。
+        svg: '<svg viewBox="0 0 238 219" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="195" x2="24" y2="24"/><line x1="43" y1="195" x2="43" y2="24"/><line x1="62" y1="195" x2="62" y2="24"/><line x1="81" y1="195" x2="81" y2="24"/><line x1="100" y1="195" x2="100" y2="24"/><line x1="119" y1="195" x2="119" y2="24"/><line x1="138" y1="195" x2="138" y2="24"/><line x1="157" y1="195" x2="157" y2="24"/><line x1="176" y1="195" x2="176" y2="24"/><line x1="195" y1="195" x2="195" y2="24"/><line x1="214" y1="195" x2="214" y2="24"/><line x1="24" y1="195" x2="214" y2="195"/><line x1="24" y1="176" x2="214" y2="176"/><line x1="24" y1="157" x2="214" y2="157"/><line x1="24" y1="138" x2="214" y2="138"/><line x1="24" y1="119" x2="214" y2="119"/><line x1="24" y1="100" x2="214" y2="100"/><line x1="24" y1="81" x2="214" y2="81"/><line x1="24" y1="62" x2="214" y2="62"/><line x1="24" y1="43" x2="214" y2="43"/><line x1="24" y1="24" x2="214" y2="24"/></g><line x1="16" y1="119" x2="224" y2="119" stroke="currentColor" fill="none" stroke-width="2"/><line x1="119" y1="203" x2="119" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M224 119 L216 115 L216 123 Z" fill="currentColor"/><path d="M119 14 L115 22 L123 22 Z" fill="currentColor"/><text x="226" y="133" font-size="14" text-anchor="end" font-style="italic">x</text><text x="126" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="115" y="132" font-size="11" text-anchor="end">O</text><text x="24" y="132" font-size="10" text-anchor="middle">−5</text><text x="43" y="132" font-size="10" text-anchor="middle">−4</text><text x="62" y="132" font-size="10" text-anchor="middle">−3</text><text x="81" y="132" font-size="10" text-anchor="middle">−2</text><text x="100" y="132" font-size="10" text-anchor="middle">−1</text><text x="138" y="132" font-size="10" text-anchor="middle">1</text><text x="157" y="132" font-size="10" text-anchor="middle">2</text><text x="176" y="132" font-size="10" text-anchor="middle">3</text><text x="195" y="132" font-size="10" text-anchor="middle">4</text><text x="214" y="132" font-size="10" text-anchor="middle">5</text><text x="115" y="198.5" font-size="10" text-anchor="end">−4</text><text x="115" y="179.5" font-size="10" text-anchor="end">−3</text><text x="115" y="160.5" font-size="10" text-anchor="end">−2</text><text x="115" y="141.5" font-size="10" text-anchor="end">−1</text><text x="115" y="103.5" font-size="10" text-anchor="end">1</text><text x="115" y="84.5" font-size="10" text-anchor="end">2</text><text x="115" y="65.5" font-size="10" text-anchor="end">3</text><text x="115" y="46.5" font-size="10" text-anchor="end">4</text><text x="115" y="27.5" font-size="10" text-anchor="end">5</text><circle cx="119" cy="119" r="60.1" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="16.4" y1="183.6" x2="183.6" y2="16.4" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="54.4" y="54.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">y</tspan> = <tspan font-style="italic">x</tspan> + 2</text><line x1="16.4" y1="21.5" x2="221.6" y2="89.9" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="185.5" y="54.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">x</tspan> + 3<tspan font-style="italic">y</tspan> = 10</text><circle cx="138" cy="62" r="3.5" fill="currentColor"/><circle cx="62" cy="138" r="3.5" fill="currentColor"/></svg>'
+        explain: 円 x² + y² = 10 と直線 y = x + 2 の共有点は、2 つの式を連立して求めます。y = x + 2 を代入すると x² + (x + 2)² = 10、2x² + 4x − 6 = 0、x² + 2x − 3 = 0、(x + 3)(x − 1) = 0 で x = −3、1 なので、共有点は (−3, −1)、(1, 3) です。代入してできる 2 次方程式の b² − 4ac（A-017）が正なら共有点は 2 つ、0 なら 1 つ（円と直線は接する）、負なら共有点はありません。円の中心と直線の距離 d と半径 r をくらべて、d が r より小さければ 2 つ、等しければ接する、大きければ 0、と調べることもできます。円が直線から切り取る弦の長さは、中心から弦にひいた垂線が弦を 2 等分するので（二等辺三角形、G-017）、三平方の定理で 2√(r² − d²) です。円 x² + y² = r² の上の点 (x₁, y₁) を通り、半径に垂直な直線は x₁x + y₁y = r² です。原点との距離は r²/√(x₁² + y₁²) = r²/r = r なので、この直線は円に接します。これを、点 (x₁, y₁) における接線といいます。例：点 (1, 3) における接線は x + 3y = 10 です。
+      - part: 思い出す
+        text: 円 x² + y² − 2x + 4y − 20 = 0 の半径はいくつですか。
+        answer: 5
+        check: "[r for r in range(1, 30) if r * r == 1 * 1 + 2 * 2 + 20][0]"
+        hints:
+          - x と y のそれぞれで平方完成しましょう。
+          - x² − 2x = (x − 1)² − 1、y² + 4y = (y + 2)² − 4 です。
+          - 右辺の数は半径の 2 乗です。
+        paths:
+          - ["(x − 1)² + (y + 2)² = 25", "半径は 5"]
+      - part: 思い出す
+        text: 2 次方程式 x² − 4x + 7 = 0 の解の個数はいくつですか。
+        answer: 0
+        check: "(lambda D: 2 if D > 0 else (1 if D == 0 else 0))((-4) ** 2 - 4 * 1 * 7)"
+        hints:
+          - 解の個数は、b² − 4ac の符号で決まります（A-017）。
+          - a = 1、b = −4、c = 7 です。
+          - b² − 4ac が負の数なら、解はありません。
+        paths:
+          - ["b² − 4ac = 16 − 28 = −12", "負なので解はない", "0 個"]
+      - part: 今日
+        text: 円 x² + y² = 5 と直線 y = 2x − 5 の共有点の個数はいくつですか。
+        answer: 1
+        check: "(lambda D: 2 if D > 0 else (1 if D == 0 else 0))((-20) ** 2 - 4 * 5 * 20)"
+        hints:
+          - y = 2x − 5 を円の式に代入しましょう。
+          - できた 2 次方程式を整理しましょう。
+          - b² − 4ac の符号を調べましょう。
+        paths:
+          - ["x² + (2x − 5)² = 5", "5x² − 20x + 20 = 0", "b² − 4ac = 400 − 400 = 0", "1 個（接する）"]
+          - ["中心 O と直線 2x − y − 5 = 0 の距離は 5/√5 = √5", "半径 √5 と等しいので接する", "1 個"]
+      - part: 今日
+        text: 円 x² + y² = 25 の上の点 (3, −4) における接線の式はどれですか。
+        choices: [3x − 4y = 25, 3x + 4y = 25, 4x − 3y = 25, 3x − 4y = 5]
+        answer: 3x − 4y = 25
+        check: "[k for k, (a, b, c) in {'3x − 4y = 25': (3, -4, 25), '3x + 4y = 25': (3, 4, 25), '4x − 3y = 25': (4, -3, 25), '3x − 4y = 5': (3, -4, 5)}.items() if a * 3 + b * (-4) == c and c * c == 25 * (a * a + b * b)][0]"
+        hints:
+          - 点 (x₁, y₁) における接線は x₁x + y₁y = r² です。
+          - x₁ = 3、y₁ = −4、r² = 25 です。
+          - 答えの式が、点 (3, −4) を通るか確かめましょう。
+        paths:
+          - ["3x + (−4)y = 25", "3x − 4y = 25"]
+        note: 右辺を r = 5 にしやすい。接点を代入して確かめる習慣をつける。
+      - part: 挑戦
+        text: 円 x² + y² = 25 が直線 x − 2y + 5 = 0 から切り取る弦の長さはどれですか。
+        svg: '<svg viewBox="0 0 204 204" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="180" x2="24" y2="24"/><line x1="37" y1="180" x2="37" y2="24"/><line x1="50" y1="180" x2="50" y2="24"/><line x1="63" y1="180" x2="63" y2="24"/><line x1="76" y1="180" x2="76" y2="24"/><line x1="89" y1="180" x2="89" y2="24"/><line x1="102" y1="180" x2="102" y2="24"/><line x1="115" y1="180" x2="115" y2="24"/><line x1="128" y1="180" x2="128" y2="24"/><line x1="141" y1="180" x2="141" y2="24"/><line x1="154" y1="180" x2="154" y2="24"/><line x1="167" y1="180" x2="167" y2="24"/><line x1="180" y1="180" x2="180" y2="24"/><line x1="24" y1="180" x2="180" y2="180"/><line x1="24" y1="167" x2="180" y2="167"/><line x1="24" y1="154" x2="180" y2="154"/><line x1="24" y1="141" x2="180" y2="141"/><line x1="24" y1="128" x2="180" y2="128"/><line x1="24" y1="115" x2="180" y2="115"/><line x1="24" y1="102" x2="180" y2="102"/><line x1="24" y1="89" x2="180" y2="89"/><line x1="24" y1="76" x2="180" y2="76"/><line x1="24" y1="63" x2="180" y2="63"/><line x1="24" y1="50" x2="180" y2="50"/><line x1="24" y1="37" x2="180" y2="37"/><line x1="24" y1="24" x2="180" y2="24"/></g><line x1="16" y1="102" x2="190" y2="102" stroke="currentColor" fill="none" stroke-width="2"/><line x1="102" y1="188" x2="102" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M190 102 L182 98 L182 106 Z" fill="currentColor"/><path d="M102 14 L98 22 L106 22 Z" fill="currentColor"/><text x="192" y="116" font-size="14" text-anchor="end" font-style="italic">x</text><text x="109" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="98" y="115" font-size="11" text-anchor="end">O</text><text x="37" y="115" font-size="10" text-anchor="middle">−5</text><text x="167" y="115" font-size="10" text-anchor="middle">5</text><text x="98" y="170.5" font-size="10" text-anchor="end">−5</text><text x="98" y="40.5" font-size="10" text-anchor="end">5</text><circle cx="102" cy="102" r="65" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="18.8" y1="111.1" x2="185.2" y2="27.9" stroke="currentColor" fill="none" stroke-width="2.5"/></svg>'
+        choices: ["4√5", "2√5", "2√15", "√5"]
+        answer: 4√5
+        check: "[k for k, v in {'4√5': 4 * math.sqrt(5), '2√5': 2 * math.sqrt(5), '2√15': 2 * math.sqrt(15), '√5': math.sqrt(5)}.items() if math.isclose(v, 2 * math.sqrt(25 - 5 ** 2 / 5))][0]"
+        hints:
+          - 円の中心 O と直線の距離 d を求めましょう。
+          - 中心から弦にひいた垂線は、弦を 2 等分します。
+          - 弦の半分の長さを、三平方の定理で求めましょう。
+        paths:
+          - ["d = |5|/√(1 + 4) = √5", "弦の半分は √(25 − 5) = 2√5", "弦の長さは 4√5"]
+          - ["x = 2y − 5 を代入", "5y² − 20y = 0 で y = 0、4", "共有点は (−5, 0)、(3, 4)", "距離は √(64 + 16) = 4√5"]
+        note: 2√5 は弦の半分で止めたもの。
+    extra:
+      - part: 今日
+        text: 円 x² + y² = 4 と直線 y = x + k が接するとき、k の正の値はどれですか。
+        choices: ["2√2", "2", "4", "√2"]
+        answer: 2√2
+        check: "[k for k, v in {'2√2': 2 * math.sqrt(2), '2': 2, '4': 4, '√2': math.sqrt(2)}.items() if math.isclose(v / math.sqrt(1 + 1), 2)][0]"
+        hints:
+          - 円と直線が接するのは、中心と直線の距離が半径と等しいときです。
+          - 直線を x − y + k = 0 と表しましょう。
+          - 原点との距離 |k|/√2 が 2 になる k を求めましょう。
+        paths:
+          - ["|k|/√2 = 2", "|k| = 2√2", "正の値は 2√2"]
+      - part: 今日
+        text: 円 x² + y² = 13 と直線 x + y = 5 の共有点の座標はどれですか。
+        choices: ["(2, 3) と (3, 2)", "(2, 3) だけ", "(−2, 7) と (7, −2)", 共有点はない]
+        answer: (2, 3) と (3, 2)
+        check: "[k for k, v in {'(2, 3) と (3, 2)': {(2, 3), (3, 2)}, '(2, 3) だけ': {(2, 3)}, '(−2, 7) と (7, −2)': {(-2, 7), (7, -2)}, '共有点はない': set()}.items() if v == set((x, 5 - x) for x in range(-20, 21) if x * x + (5 - x) ** 2 == 13)][0]"
+        hints:
+          - y = 5 − x を円の式に代入しましょう。
+          - 2x² − 10x + 12 = 0 になります。
+          - x を求めたら、y = 5 − x で y も求めましょう。
+        paths:
+          - ["x² + (5 − x)² = 13", "x² − 5x + 6 = 0", "x = 2、3", "(2, 3) と (3, 2)"]
+      - part: 挑戦
+        text: 円 (x − 2)² + (y + 1)² = 10 の上の点 (5, 0) における接線の y 切片はいくつですか。
+        answer: 15
+        check: "(lambda m: 0 - m * 5)(Fraction(-1) / Fraction(0 - (-1), 5 - 2))"
+        hints:
+          - 接線は、接点を通り、接点を通る半径に垂直な直線です。
+          - 中心 (2, −1) と接点 (5, 0) を結ぶ半径の傾きを求めましょう。
+          - 接線の傾きは、半径の傾きとの積が −1 になる数です。
+        paths:
+          - ["半径の傾きは (0 − (−1))/(5 − 2) = 1/3", "接線の傾きは −3", "y = −3(x − 5) = −3x + 15", "y 切片は 15"]
+        note: 中心が原点でないので x₁x + y₁y = r² は使えない。半径に垂直という性質にもどって求める。
+
+  - day: 6
+    items:
+      - part: 思い出す
+        text: 円 x² + y² = 10 の上の点 (−1, 3) における接線の式はどれですか。
+        choices: [−x + 3y = 10, x + 3y = 10, −x + 3y = 1, 3x − y = 10]
+        answer: −x + 3y = 10
+        check: "[k for k, (a, b, c) in {'−x + 3y = 10': (-1, 3, 10), 'x + 3y = 10': (1, 3, 10), '−x + 3y = 1': (-1, 3, 1), '3x − y = 10': (3, -1, 10)}.items() if a * (-1) + b * 3 == c and c * c == 10 * (a * a + b * b)][0]"
+        hints:
+          - 点 (x₁, y₁) における接線は x₁x + y₁y = r² です。
+          - x₁ = −1、y₁ = 3 です。
+          - 右辺は半径の 2 乗です。
+        paths:
+          - ["(−1)x + 3y = 10", "−x + 3y = 10"]
+      - part: 思い出す
+        text: 直線 y = −(3/4)x + 1 に垂直な直線の傾きはいくつですか。
+        answer: 4/3
+        check: "Fraction(-1) / Fraction(-3, 4)"
+        hints:
+          - 垂直な 2 直線の傾きの積は −1 です。
+          - −(3/4) × m = −1 となる m をさがしましょう。
+          - 逆数にして、符号を変えます。
+        paths:
+          - ["−(3/4) × m = −1", "m = 4/3"]
+      - part: 今日
+        text: 式 x² + y² − 4x + 6y + k = 0 が半径 4 の円を表すとき、k はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 * 2 + 3 * 3 - 4 * 4)"
+        hints:
+          - x と y のそれぞれで平方完成しましょう。
+          - (x − 2)² + (y + 3)² = 13 − k になります。
+          - 右辺が半径の 2 乗 16 になる k を求めましょう。
+        paths:
+          - ["(x − 2)² + (y + 3)² = 13 − k", "13 − k = 16", "k = −3"]
+      - part: わけ
+        text: 2 点 A(x₁, y₁)、B(x₂, y₂) の距離が AB = √((x₂ − x₁)² + (y₂ − y₁)²) になるわけを、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 224 180" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="134" x2="210" y2="134" stroke="currentColor" fill="none" stroke-width="2"/><line x1="46" y1="164" x2="46" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M210 134 L202 130 L202 138 Z" fill="currentColor"/><path d="M46 14 L42 22 L50 22 Z" fill="currentColor"/><text x="212" y="148" font-size="14" text-anchor="end" font-style="italic">x</text><text x="53" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="42" y="147" font-size="11" text-anchor="end">O</text><line x1="68" y1="112" x2="156" y2="112" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="156" y1="112" x2="156" y2="46" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><line x1="68" y1="112" x2="156" y2="46" stroke="currentColor" fill="none" stroke-width="2.5"/><circle cx="68" cy="112" r="3.5" fill="currentColor"/><text x="62" y="106" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A(<tspan font-style="italic">x</tspan>₁, <tspan font-style="italic">y</tspan>₁)</text><circle cx="156" cy="46" r="3.5" fill="currentColor"/><text x="154" y="38" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B(<tspan font-style="italic">x</tspan>₂, <tspan font-style="italic">y</tspan>₂)</text><circle cx="156" cy="112" r="3.5" fill="currentColor"/><text x="160" y="128" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">C(<tspan font-style="italic">x</tspan>₂, <tspan font-style="italic">y</tspan>₁)</text></svg>'
+        explain: 例：「x₁ と x₂、y₁ と y₂ がどちらも等しくないとき、点 C(x₂, y₁) をとる。AC は x 軸に平行、BC は y 軸に平行なので、∠ACB = 90° である。AC の長さは x 座標の差の大きさ |x₂ − x₁|、BC の長さは |y₂ − y₁| である（軸に平行な 2 点の間の長さ、G-050）。三平方の定理（G-019）から AB² = AC² + BC² = (x₂ − x₁)² + (y₂ − y₁)² である（2 乗すれば、差が負の数でも同じ）。AB は正の数なので AB = √((x₂ − x₁)² + (y₂ − y₁)²)。x₁ = x₂ のときは AB = |y₂ − y₁| で、式の (x₂ − x₁)² が 0 になるので同じ式で表せる。y₁ = y₂ のときも同じ。」と書ければよい。①「〜とする」で C を決める、② AB² を式で表して 2 乗で絶対値を外す、③ 約束した事実（三平方の定理、軸に平行な 2 点の間の長さ）で結ぶ、の 3 つがそろっているかを見る。具体的な 2 点で確かめただけで終わっていたら、例ではすべての点を示せないことを話す。2 点が軸に平行に並ぶ場合を分けて書いているかも見る。
+        hints:
+          - 点 C(x₂, y₁) をとると、どんな三角形ができるでしょう。
+          - AC と BC の長さを、座標を使って表しましょう。
+          - 三平方の定理を使いましょう。2 点が軸に平行に並ぶときも考えましょう。
+        paths:
+          - ["C(x₂, y₁) とする", "∠ACB = 90°、AC = |x₂ − x₁|、BC = |y₂ − y₁|", "AB² = (x₂ − x₁)² + (y₂ − y₁)²", "軸に平行なときも同じ式"]
+      - part: わけ
+        text: 傾きが m₁、m₂ の 2 直線が垂直ならば m₁m₂ = −1 です。このわけを、原点を通る 2 直線 y = m₁x、y = m₂x の上の点 P(1, m₁)、Q(1, m₂) を使って、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 198 198" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="114" x2="184" y2="114" stroke="currentColor" fill="none" stroke-width="2"/><line x1="84" y1="182" x2="84" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M184 114 L176 110 L176 118 Z" fill="currentColor"/><path d="M84 14 L80 22 L88 22 Z" fill="currentColor"/><text x="186" y="128" font-size="14" text-anchor="end" font-style="italic">x</text><text x="91" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="80" y="127" font-size="11" text-anchor="end">O</text><line x1="48" y1="186" x2="135" y2="12" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="12" y1="78" x2="186" y2="165" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="114" y1="171" x2="114" y2="27" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="114" cy="54" r="3.5" fill="currentColor"/><text x="120" y="48" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P(1, <tspan font-style="italic">m</tspan>₁)</text><circle cx="114" cy="129" r="3.5" fill="currentColor"/><text x="120" y="143" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">Q(1, <tspan font-style="italic">m</tspan>₂)</text><text x="115.8" y="110" font-size="10" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">1</text></svg>'
+        explain: 例：「傾きが等しい直線は平行なので、2 直線をそれぞれ平行に動かして原点を通る y = m₁x、y = m₂x にしても、垂直かどうかは変わらない。P(1, m₁) は y = m₁x の上、Q(1, m₂) は y = m₂x の上の点である。2 直線が垂直なとき ∠POQ = 90° なので、三平方の定理から OP² + OQ² = PQ² である。2 点間の距離の式から OP² = 1 + m₁²、OQ² = 1 + m₂²、PQ² = (m₁ − m₂)² なので、2 + m₁² + m₂² = m₁² − 2m₁m₂ + m₂²。整理すると 2 = −2m₁m₂、すなわち m₁m₂ = −1 である。逆に m₁m₂ = −1 ならば OP² + OQ² = PQ² となり、三平方の定理の逆から ∠POQ = 90° で、2 直線は垂直である。」と書ければよい。① 平行に動かして原点を通る 2 直線と P、Q を決める、② 距離の式で OP²、OQ²、PQ² を表し、展開して整理する、③ 約束した事実（三平方の定理とその逆、2 点間の距離）で結ぶ、の 3 つを見る。y 軸に平行な直線（傾きがない）と x 軸に平行な直線の組は、この式の外であることにも触れる。
+        hints:
+          - ∠POQ = 90° のとき、三平方の定理から、OP、OQ、PQ の間にどんな式が成り立つでしょう。
+          - OP²、OQ²、PQ² を、2 点間の距離の式で m₁、m₂ を使って表しましょう。
+          - 式を展開して整理しましょう。
+        paths:
+          - ["原点を通る 2 直線として P(1, m₁)、Q(1, m₂) をとる", "OP² + OQ² = PQ²（三平方の定理）", "2 + m₁² + m₂² = (m₁ − m₂)²", "m₁m₂ = −1"]
+      - part: わけ
+        text: 2 点 A(x₁, y₁)、B(x₂, y₂) を結ぶ線分 AB を m:n に内分する点 P の x 座標が (nx₁ + mx₂)/(m + n) になるわけを、筋道を立てて書きましょう。
+        svg: '<svg viewBox="0 0 224 180" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="134" x2="210" y2="134" stroke="currentColor" fill="none" stroke-width="2"/><line x1="46" y1="164" x2="46" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M210 134 L202 130 L202 138 Z" fill="currentColor"/><path d="M46 14 L42 22 L50 22 Z" fill="currentColor"/><text x="212" y="148" font-size="14" text-anchor="end" font-style="italic">x</text><text x="53" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="42" y="147" font-size="11" text-anchor="end">O</text><line x1="68" y1="103.2" x2="178" y2="46" stroke="currentColor" fill="none" stroke-width="2.5"/><line x1="68" y1="103.2" x2="68" y2="134" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="68" cy="103.2" r="3.5" fill="currentColor"/><text x="62" y="97.2" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><text x="68" y="150" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A′</text><line x1="134" y1="68.9" x2="134" y2="134" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="134" cy="68.9" r="3.5" fill="currentColor"/><text x="128" y="62.9" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P</text><text x="134" y="150" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">P′</text><line x1="178" y1="46" x2="178" y2="134" stroke="currentColor" fill="none" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="178" cy="46" r="3.5" fill="currentColor"/><text x="172" y="40" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><text x="178" y="150" font-size="12" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B′</text><text x="101" y="78" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">m</tspan></text><text x="156" y="49.4" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">n</tspan></text></svg>'
+        explain: 例：「A、P、B から x 軸に垂線をひき、足をそれぞれ A′、P′、B′ とする。AA′、PP′、BB′ は平行なので、平行線にはさまれた線分の比（G-020）から A′P′:P′B′ = AP:PB = m:n である。P の x 座標を x とすると、x₁ < x₂ のとき A′P′ = x − x₁、P′B′ = x₂ − x なので、(x − x₁):(x₂ − x) = m:n。比が等しいので n(x − x₁) = m(x₂ − x)、nx − nx₁ = mx₂ − mx、(m + n)x = nx₁ + mx₂ で、x = (nx₁ + mx₂)/(m + n) である。x₁ > x₂ のときも、長さが x₁ − x、x − x₂ となって同じ式になり、x₁ = x₂ のときは x = x₁ でこの式も x₁ になる。y 座標も、y 軸に垂線をひいて同じように示せる。」と書ければよい。① 垂線の足を決め、P の x 座標を x とする、② 比の式を 1 次方程式に直して解く、③ 約束した事実（平行線と線分の比）で結ぶ、の 3 つを見る。中点（m = n）で確かめただけなら、例ではすべての m:n を示せないことを話す。
+        hints:
+          - A、P、B から x 軸に垂線をひきましょう。
+          - 垂線の足どうしの間の長さの比は、どうなるでしょう（G-020）。
+          - P の x 座標を x とおいて、比の式を方程式に直しましょう。
+        paths:
+          - ["垂線の足 A′、P′、B′ をとる", "A′P′:P′B′ = m:n（平行線と線分の比）", "(x − x₁):(x₂ − x) = m:n", "n(x − x₁) = m(x₂ − x) を解いて x = (nx₁ + mx₂)/(m + n)"]
+    extra:
+      - part: 今日
+        text: 2 点 A(−2, −1)、B(6, 3) を結ぶ線分 AB を 3:1 に内分する点の座標はどれですか。
+        choices: ["(4, 2)", "(0, 0)", "(2, 1)", "(5, 5/2)"]
+        answer: (4, 2)
+        check: "[k for k, p in {'(4, 2)': (4, 2), '(0, 0)': (0, 0), '(2, 1)': (2, 1), '(5, 5/2)': (5, Fraction(5, 2))}.items() if p == (Fraction(1 * (-2) + 3 * 6, 4), Fraction(1 * (-1) + 3 * 3, 4))][0]"
+        hints:
+          - 内分する点の式で、m = 3、n = 1 です。
+          - B の座標に 3 を、A の座標に 1 をかけます。
+          - 4 でわりましょう。
+        paths:
+          - ["x = (−2 + 18)/4 = 4", "y = (−1 + 9)/4 = 2", "(4, 2)"]
+        note: (0, 0) は 1:3 に内分する点。(2, 1) は中点。
+      - part: 今日
+        text: 2 直線 y = (k + 1)x + 2 と y = −(1/2)x + 3 が垂直になるとき、k はいくつですか。
+        answer: 1
+        check: "[k for k in range(-20, 21) if (k + 1) * Fraction(-1, 2) == -1][0]"
+        hints:
+          - 垂直な 2 直線の傾きの積は −1 です。
+          - (k + 1) × (−1/2) = −1 です。
+          - k + 1 を求めてから、k を求めましょう。
+        paths:
+          - ["(k + 1) × (−1/2) = −1", "k + 1 = 2", "k = 1"]
+      - part: 今日
+        text: 3 点 A(0, 0)、B(4, 2)、C(1, 3) を頂点とする三角形で、直角になっている角はどれですか。
+        choices: [∠A, ∠B, ∠C, 直角はない]
+        answer: ∠C
+        check: "[k for k, v in {'∠A': 'A', '∠B': 'B', '∠C': 'C', '直角はない': ''}.items() if v == (lambda ab, bc, ca: 'C' if ca + bc == ab else ('A' if ab + ca == bc else ('B' if ab + bc == ca else '')))(4 ** 2 + 2 ** 2, 3 ** 2 + 1 ** 2, 1 ** 2 + 3 ** 2)][0]"
+        hints:
+          - 3 辺の長さの 2 乗を、2 点間の距離の式で求めましょう。
+          - いちばん長い辺の 2 乗が、ほかの 2 辺の 2 乗の和と等しいかを調べましょう。
+          - 三平方の定理の逆を使います（G-019）。
+        paths:
+          - ["AB² = 20、BC² = 10、CA² = 10", "BC² + CA² = AB²", "AB と向かい合う ∠C が直角"]
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 直線 y = −2x + 6 と x 軸、y 軸で囲まれた三角形の面積はいくつですか。
+        answer: 9
+        check: "Fraction(6, 2) * 6 / 2"
+        hints:
+          - 直線と y 軸の交点は、切片から読めます（A-019）。
+          - 直線と x 軸の交点は、y = 0 とおいて求めましょう。
+          - 直角をはさむ 2 辺から面積を求めましょう。
+        paths:
+          - ["y 軸との交点は (0, 6)", "x 軸との交点は (3, 0)", "面積は 3 × 6 ÷ 2 = 9"]
+      - part: 思い出す
+        text: 1 辺の長さが 4 の正方形の対角線の長さはどれですか。
+        choices: ["4√2", "2√2", "8", "16"]
+        answer: 4√2
+        check: "[k for k, v in {'4√2': 4 * math.sqrt(2), '2√2': 2 * math.sqrt(2), '8': 8, '16': 16}.items() if math.isclose(v, math.sqrt(4 * 4 + 4 * 4))][0]"
+        hints:
+          - 対角線で、直角二等辺三角形が 2 つできます。
+          - 三平方の定理を使いましょう（G-019）。
+          - √32 を簡単にしましょう。
+        paths:
+          - ["対角線² = 16 + 16 = 32", "対角線 = √32 = 4√2"]
+      - part: 今日
+        text: 3 点 A(1, 1)、B(7, 3)、C(3, 6) を頂点とする △ABC の面積はいくつですか。
+        svg: '<svg viewBox="0 0 208 188" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="164" x2="24" y2="24"/><line x1="44" y1="164" x2="44" y2="24"/><line x1="64" y1="164" x2="64" y2="24"/><line x1="84" y1="164" x2="84" y2="24"/><line x1="104" y1="164" x2="104" y2="24"/><line x1="124" y1="164" x2="124" y2="24"/><line x1="144" y1="164" x2="144" y2="24"/><line x1="164" y1="164" x2="164" y2="24"/><line x1="184" y1="164" x2="184" y2="24"/><line x1="24" y1="164" x2="184" y2="164"/><line x1="24" y1="144" x2="184" y2="144"/><line x1="24" y1="124" x2="184" y2="124"/><line x1="24" y1="104" x2="184" y2="104"/><line x1="24" y1="84" x2="184" y2="84"/><line x1="24" y1="64" x2="184" y2="64"/><line x1="24" y1="44" x2="184" y2="44"/><line x1="24" y1="24" x2="184" y2="24"/></g><line x1="16" y1="164" x2="194" y2="164" stroke="currentColor" fill="none" stroke-width="2"/><line x1="24" y1="172" x2="24" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M194 164 L186 160 L186 168 Z" fill="currentColor"/><path d="M24 14 L20 22 L28 22 Z" fill="currentColor"/><text x="196" y="178" font-size="14" text-anchor="end" font-style="italic">x</text><text x="31" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="20" y="177" font-size="11" text-anchor="end">O</text><text x="44" y="177" font-size="10" text-anchor="middle">1</text><text x="64" y="177" font-size="10" text-anchor="middle">2</text><text x="84" y="177" font-size="10" text-anchor="middle">3</text><text x="104" y="177" font-size="10" text-anchor="middle">4</text><text x="124" y="177" font-size="10" text-anchor="middle">5</text><text x="144" y="177" font-size="10" text-anchor="middle">6</text><text x="164" y="177" font-size="10" text-anchor="middle">7</text><text x="184" y="177" font-size="10" text-anchor="middle">8</text><text x="20" y="147.5" font-size="10" text-anchor="end">1</text><text x="20" y="127.5" font-size="10" text-anchor="end">2</text><text x="20" y="107.5" font-size="10" text-anchor="end">3</text><text x="20" y="87.5" font-size="10" text-anchor="end">4</text><text x="20" y="67.5" font-size="10" text-anchor="end">5</text><text x="20" y="47.5" font-size="10" text-anchor="end">6</text><text x="20" y="27.5" font-size="10" text-anchor="end">7</text><polygon points="44,144 164,104 84,44" stroke="none" fill="#f3c969" fill-opacity=".35"/><polygon points="44,144 164,104 84,44" stroke="currentColor" fill="none" stroke-width="2"/><circle cx="44" cy="144" r="3.5" fill="currentColor"/><text x="38" y="154" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="164" cy="104" r="3.5" fill="currentColor"/><text x="170" y="108" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text><circle cx="84" cy="44" r="3.5" fill="currentColor"/><text x="78" y="40" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">C</text></svg>'
+        answer: 13
+        check: "Fraction(abs((7 - 1) * (6 - 1) - (3 - 1) * (3 - 1)), 2)"
+        hints:
+          - 3 点を囲む、辺が軸に平行な長方形を考えましょう。
+          - 長方形から、まわりの 3 つの直角三角形をひきます。
+          - 直角三角形の面積は、それぞれの横とたての長さから求めましょう。
+        paths:
+          - ["囲む長方形は横 6、たて 5 で面積 30", "まわりの直角三角形は 6、6、5", "30 − 17 = 13"]
+          - ["AB = √40 = 2√10、直線 AB は x − 3y + 2 = 0", "C と直線 AB の距離は |3 − 18 + 2|/√10 = 13/√10", "面積は (1/2) × 2√10 × 13/√10 = 13"]
+      - part: 今日
+        text: 直線 y = −x + 2 の上の点 P で、2 点 A(0, 4)、B(6, 2) からの距離が等しいものの座標はどれですか。
+        choices: ["(2, 0)", "(3, 3)", "(0, 2)", "(4, −2)"]
+        answer: (2, 0)
+        check: "[k for k, (x, y) in {'(2, 0)': (2, 0), '(3, 3)': (3, 3), '(0, 2)': (0, 2), '(4, −2)': (4, -2)}.items() if y == -x + 2 and x ** 2 + (y - 4) ** 2 == (x - 6) ** 2 + (y - 2) ** 2][0]"
+        hints:
+          - A と B から等しい距離にある点は、線分 AB の垂直二等分線の上にあります。
+          - AB の中点と、AB の傾きから、垂直二等分線の式を求めましょう。
+          - 垂直二等分線と直線 y = −x + 2 の交点を求めましょう。
+        paths:
+          - ["AB の中点は (3、3)、AB の傾きは −1/3", "垂直二等分線は y = 3x − 6", "3x − 6 = −x + 2 で x = 2", "P(2, 0)"]
+          - ["P(t, −t + 2) とおく", "AP² = BP² から t² + (t + 2)² = (t − 6)² + t²", "16t = 32 で t = 2"]
+        note: (3, 3) は AB の中点で、直線 y = −x + 2 の上にない。
+      - part: 挑戦
+        text: 原点を通り、円 (x − 4)² + y² = 8 に接する直線のうち、傾きが正のものの傾きはいくつですか。
+        answer: 1
+        check: "[m for m in range(1, 20) if 16 * m * m == 8 * (m * m + 1)][0]"
+        hints:
+          - 直線を y = mx、つまり mx − y = 0 とおきましょう。
+          - 円の中心 (4, 0) と直線の距離が、半径と等しくなります。
+          - 距離の式で方程式をつくり、両辺を 2 乗しましょう。
+        paths:
+          - ["直線を mx − y = 0 とする", "|4m|/√(m² + 1) = 2√2", "16m² = 8(m² + 1) で m² = 1", "正なので m = 1"]
+          - ["y = mx を円の式に代入", "(1 + m²)x² − 8x + 8 = 0", "接するので b² − 4ac = 64 − 32(1 + m²) = 0", "m² = 1 で m = 1"]
+    extra:
+      - part: 今日
+        text: 3 点 A(−1, 0)、B(3, 2)、C(1, 6) を頂点とする △ABC の面積はいくつですか。
+        answer: 10
+        check: "Fraction(abs((3 - (-1)) * (6 - 0) - (1 - (-1)) * (2 - 0)), 2)"
+        hints:
+          - 3 点を囲む、辺が軸に平行な長方形を考えましょう。
+          - 長方形は、横 4、たて 6 です。
+          - まわりの 3 つの直角三角形をひきましょう。
+        paths:
+          - ["長方形の面積は 24", "まわりの直角三角形は 4、4、6", "24 − 14 = 10"]
+      - part: 今日
+        text: 2 直線 y = 2x − 1 と y = −x + 5 の交点を通り、直線 y = 3x に平行な直線の式はどれですか。
+        choices: [y = 3x − 3, y = 3x + 3, y = 3x − 1, y = −(1/3)x + 11/3]
+        answer: y = 3x − 3
+        check: "[k for k, g in {'y = 3x − 3': lambda x: 3 * x - 3, 'y = 3x + 3': lambda x: 3 * x + 3, 'y = 3x − 1': lambda x: 3 * x - 1, 'y = −(1/3)x + 11/3': lambda x: Fraction(-x + 11, 3)}.items() for p in [x for x in range(-20, 21) if 2 * x - 1 == -x + 5] if g(p) == 2 * p - 1 and g(1) - g(0) == 3][0]"
+        hints:
+          - まず、2 直線の交点を求めましょう。
+          - 平行な直線は、傾きが等しくなります。
+          - 傾き 3 で、交点を通る直線を求めましょう。
+        paths:
+          - ["2x − 1 = −x + 5 で x = 2、y = 3", "y − 3 = 3(x − 2)", "y = 3x − 3"]
+      - part: 挑戦
+        text: 点 A(0, 5) から円 x² + y² = 9 に接線をひきます。A から接点までの長さはいくつですか。
+        answer: 4
+        check: "[t for t in range(1, 20) if t * t + 3 * 3 == 5 * 5][0]"
+        hints:
+          - 接点を T とします。接線は、接点を通る半径に垂直です。
+          - △OAT は、どんな三角形でしょう。
+          - OA と OT の長さから、三平方の定理で AT を求めましょう。
+        paths:
+          - ["∠OTA = 90°", "OA = 5、OT = 3", "AT² = 25 − 9 = 16 で AT = 4"]
+  - day: 8
+    items:
+      - part: 今日
+        text: 2 点 A(−4, 1)、B(4, 16) の間の距離はいくつですか。
+        answer: 17
+        check: "[d for d in range(1, 100) if d * d == (4 - (-4)) ** 2 + (16 - 1) ** 2][0]"
+        hints:
+          - x 座標の差と、y 座標の差を求めましょう。
+          - 差の 2 乗の和が、距離の 2 乗です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["差は 8 と 15", "64 + 225 = 289", "距離は 17"]
+      - part: 今日
+        text: 2 点 A(2, 5)、B(8, −1) を結ぶ線分 AB を 1:2 に内分する点の座標はどれですか。
+        choices: ["(4, 3)", "(6, 1)", "(5, 2)", "(4, 1)"]
+        answer: (4, 3)
+        check: "[k for k, p in {'(4, 3)': (4, 3), '(6, 1)': (6, 1), '(5, 2)': (5, 2), '(4, 1)': (4, 1)}.items() if p == (Fraction(2 * 2 + 1 * 8, 3), Fraction(2 * 5 + 1 * (-1), 3))][0]"
+        hints:
+          - 内分する点の式で、m = 1、n = 2 です。
+          - A の座標に 2 を、B の座標に 1 をかけます。
+          - 3 でわりましょう。
+        paths:
+          - ["x = (4 + 8)/3 = 4", "y = (10 − 1)/3 = 3", "(4, 3)"]
+      - part: 今日
+        text: 2 点 (−2, 1)、(4, −2) を通る直線の式はどれですか。
+        choices: [y = −(1/2)x, y = −2x − 3, y = −(1/2)x + 2, y = (1/2)x + 2]
+        answer: y = −(1/2)x
+        check: "[k for k, g in {'y = −(1/2)x': lambda x: Fraction(-x, 2), 'y = −2x − 3': lambda x: -2 * x - 3, 'y = −(1/2)x + 2': lambda x: Fraction(-x, 2) + 2, 'y = (1/2)x + 2': lambda x: Fraction(x, 2) + 2}.items() if g(-2) == 1 and g(4) == -2][0]"
+        hints:
+          - まず、傾きを求めましょう。
+          - 傾きは (−2 − 1)/(4 − (−2)) です。
+          - どちらかの点を代入して、切片を求めましょう。
+        paths:
+          - ["傾きは −3/6 = −1/2", "1 = −(1/2) × (−2) + b", "b = 0", "y = −(1/2)x"]
+      - part: 今日
+        text: 点 (1, −3) を通り、直線 2x − y + 3 = 0 に垂直な直線の式はどれですか。
+        choices: [x + 2y + 5 = 0, 2x − y − 5 = 0, x − 2y − 7 = 0, x + 2y − 5 = 0]
+        answer: x + 2y + 5 = 0
+        check: "[k for k, (p, q, r) in {'x + 2y + 5 = 0': (1, 2, 5), '2x − y − 5 = 0': (2, -1, -5), 'x − 2y − 7 = 0': (1, -2, -7), 'x + 2y − 5 = 0': (1, 2, -5)}.items() if p * 1 + q * (-3) + r == 0 and Fraction(-p, q) * 2 == -1][0]"
+        hints:
+          - 直線 2x − y + 3 = 0 の傾きを求めましょう。
+          - 垂直な直線の傾きは、その傾きとの積が −1 になる数です。
+          - 点 (1, −3) を通る式をつくり、ax + by + c = 0 の形に整えましょう。
+        paths:
+          - ["2x − y + 3 = 0 の傾きは 2", "垂直な傾きは −1/2", "y + 3 = −(1/2)(x − 1)", "x + 2y + 5 = 0"]
+      - part: 今日
+        text: 点 (3, 1) と直線 x − 2y + 9 = 0 の距離はどれですか。
+        choices: ["2√5", "10", "√5", "(2√5)/5"]
+        answer: 2√5
+        check: "[k for k, v in {'2√5': 2 * math.sqrt(5), '10': 10, '√5': math.sqrt(5), '(2√5)/5': 2 * math.sqrt(5) / 5}.items() if math.isclose(v, abs(3 - 2 * 1 + 9) / math.sqrt(1 + 4))][0]"
+        hints:
+          - d = |ax₁ + by₁ + c|/√(a² + b²) を使いましょう。
+          - 分子は |3 − 2 + 9| です。
+          - 分母の √5 を有理化しましょう。
+        paths:
+          - ["d = 10/√5 = (10√5)/5 = 2√5"]
+      - part: 今日
+        text: 円 x² + y² + 2x − 8y + 8 = 0 の中心と半径はどれですか。
+        choices: ["中心 (−1, 4)、半径 3", "中心 (1, −4)、半径 3", "中心 (−1, 4)、半径 9", "中心 (−2, 8)、半径 3"]
+        answer: 中心 (−1, 4)、半径 3
+        check: "[k for k, (a, b, r) in {'中心 (−1, 4)、半径 3': (-1, 4, 3), '中心 (1, −4)、半径 3': (1, -4, 3), '中心 (−1, 4)、半径 9': (-1, 4, 9), '中心 (−2, 8)、半径 3': (-2, 8, 3)}.items() if (a, b) == (Fraction(-2, 2), Fraction(8, 2)) and r * r == a * a + b * b - 8][0]"
+        hints:
+          - x と y のそれぞれで平方完成しましょう。
+          - (x + 1)² + (y − 4)² = □ の形にしましょう。
+          - 右辺は半径の 2 乗です。
+        paths:
+          - ["(x + 1)² − 1 + (y − 4)² − 16 + 8 = 0", "(x + 1)² + (y − 4)² = 9", "中心 (−1, 4)、半径 3"]
+      - part: 今日
+        text: 円 x² + y² = 20 の上の点 (2, −4) における接線の式はどれですか。
+        choices: [x − 2y = 10, 2x + 4y = 20, x − 2y = 20, 2x − y = 10]
+        answer: x − 2y = 10
+        check: "[k for k, (a, b, c) in {'x − 2y = 10': (1, -2, 10), '2x + 4y = 20': (2, 4, 20), 'x − 2y = 20': (1, -2, 20), '2x − y = 10': (2, -1, 10)}.items() if a * 2 + b * (-4) == c and c * c == 20 * (a * a + b * b)][0]"
+        hints:
+          - 点 (x₁, y₁) における接線は x₁x + y₁y = r² です。
+          - 2x − 4y = 20 になります。
+          - 両辺を 2 でわって簡単にしましょう。
+        paths:
+          - ["2x + (−4)y = 20", "x − 2y = 10"]
+    extra:
+      - part: 今日
+        text: 2 点 (−1, 2)、(11, −3) の間の距離はいくつですか。
+        answer: 13
+        check: "[d for d in range(1, 100) if d * d == (11 - (-1)) ** 2 + (-3 - 2) ** 2][0]"
+        hints:
+          - x 座標の差と、y 座標の差を求めましょう。
+          - 差の 2 乗の和が、距離の 2 乗です。
+          - 2 乗すると その数になる正の数をさがしましょう。
+        paths:
+          - ["差は 12 と 5", "144 + 25 = 169", "距離は 13"]
+      - part: 今日
+        text: 中心が (2, 3) の円が点 (5, 7) を通るとき、半径はいくつですか。
+        answer: 5
+        check: "[r for r in range(1, 50) if r * r == (5 - 2) ** 2 + (7 - 3) ** 2][0]"
+        hints:
+          - 半径は、中心と円の上の点の距離です。
+          - 2 点間の距離の式を使いましょう。
+          - 差は 3 と 4 です。
+        paths:
+          - ["半径² = 9 + 16 = 25", "半径は 5"]
+      - part: 今日
+        text: 円 x² + y² = 4 と直線 x + y = 3 の共有点の個数はいくつですか。
+        answer: 0
+        check: "(lambda D: 2 if D > 0 else (1 if D == 0 else 0))((-6) ** 2 - 4 * 2 * 5)"
+        hints:
+          - y = 3 − x を円の式に代入しましょう。
+          - 2x² − 6x + 5 = 0 になります。
+          - b² − 4ac の符号を調べましょう。
+        paths:
+          - ["2x² − 6x + 5 = 0", "b² − 4ac = 36 − 40 = −4", "負なので 0 個"]
+          - ["中心と直線の距離は 3/√2", "半径 2 より大きい", "0 個"]
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-018]
+    text: 2 点 A(−3, 0)、B(3, 0) があります。直線 y = x + 1 の上の点 P で、∠APB = 90° となるものは 2 つあります。その 2 つの点の間の距離はどれですか。
+    svg: '<svg viewBox="0 0 224 180" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="156" x2="24" y2="24"/><line x1="46" y1="156" x2="46" y2="24"/><line x1="68" y1="156" x2="68" y2="24"/><line x1="90" y1="156" x2="90" y2="24"/><line x1="112" y1="156" x2="112" y2="24"/><line x1="134" y1="156" x2="134" y2="24"/><line x1="156" y1="156" x2="156" y2="24"/><line x1="178" y1="156" x2="178" y2="24"/><line x1="200" y1="156" x2="200" y2="24"/><line x1="24" y1="156" x2="200" y2="156"/><line x1="24" y1="134" x2="200" y2="134"/><line x1="24" y1="112" x2="200" y2="112"/><line x1="24" y1="90" x2="200" y2="90"/><line x1="24" y1="68" x2="200" y2="68"/><line x1="24" y1="46" x2="200" y2="46"/><line x1="24" y1="24" x2="200" y2="24"/></g><line x1="16" y1="134" x2="210" y2="134" stroke="currentColor" fill="none" stroke-width="2"/><line x1="112" y1="164" x2="112" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M210 134 L202 130 L202 138 Z" fill="currentColor"/><path d="M112 14 L108 22 L116 22 Z" fill="currentColor"/><text x="212" y="148" font-size="14" text-anchor="end" font-style="italic">x</text><text x="119" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="108" y="147" font-size="11" text-anchor="end">O</text><text x="24" y="147" font-size="10" text-anchor="middle">−4</text><text x="46" y="147" font-size="10" text-anchor="middle">−3</text><text x="68" y="147" font-size="10" text-anchor="middle">−2</text><text x="90" y="147" font-size="10" text-anchor="middle">−1</text><text x="134" y="147" font-size="10" text-anchor="middle">1</text><text x="156" y="147" font-size="10" text-anchor="middle">2</text><text x="178" y="147" font-size="10" text-anchor="middle">3</text><text x="200" y="147" font-size="10" text-anchor="middle">4</text><text x="108" y="159.5" font-size="10" text-anchor="end">−1</text><text x="108" y="115.5" font-size="10" text-anchor="end">1</text><text x="108" y="93.5" font-size="10" text-anchor="end">2</text><text x="108" y="71.5" font-size="10" text-anchor="end">3</text><text x="108" y="49.5" font-size="10" text-anchor="end">4</text><text x="108" y="27.5" font-size="10" text-anchor="end">5</text><line x1="59.2" y1="164.8" x2="208.8" y2="15.2" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="160.4" y="37.2" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">y</tspan> = <tspan font-style="italic">x</tspan> + 1</text><circle cx="46" cy="134" r="3.5" fill="currentColor"/><text x="42" y="126" font-size="13" text-anchor="end" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="178" cy="134" r="3.5" fill="currentColor"/><text x="182" y="126" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text></svg>'
+    choices: ["√34", "√17", "2√17", "√30"]
+    answer: √34
+    check: "[k for k, v in {'√34': math.sqrt(34), '√17': math.sqrt(17), '2√17': 2 * math.sqrt(17), '√30': math.sqrt(30)}.items() if math.isclose(v, (lambda r: math.hypot(r[0] - r[1], r[0] - r[1]))(((-1 + math.sqrt(17)) / 2, (-1 - math.sqrt(17)) / 2)))][0]"
+    hints:
+      - ∠APB = 90° となる点 P は、どんな図形の上にあるでしょう（G-018）。
+      - その図形の式を求めて、直線の式と連立しましょう。
+      - 2 つの共有点の x 座標の差がわかれば、直線の傾きから距離がわかります。
+    paths:
+      - ["∠APB = 90° となる P は、AB を直径とする円 x² + y² = 9 の上にある", "y = x + 1 を代入して x² + x − 4 = 0", "2 つの解の差は √17（解の公式）", "傾きが 1 なので y 座標の差も √17", "距離は √(17 + 17) = √34"]
+      - ["中心 O と直線 x − y + 1 = 0 の距離は 1/√2", "弦の半分は √(9 − 1/2) = √(17/2)", "弦の長さは 2√(17/2) = √34"]
+    note: 半円の弧に対する円周角が 90° であることとその逆（G-018）から、条件を「円の上の点」と言いかえるのが要点。円の式が見えれば、あとは円と直線の共有点の計算になる。
+  - part: 離
+    kinds: [道筋, 手数]
+    text: 2 点 A(3, 0)、B(5, −4) と直線 ℓ：y = x + 1 があります。ℓ の上を点 P が動くとき、AP + PB のいちばん小さい値はいくつですか。
+    svg: '<svg viewBox="0 0 192 228" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none"><line x1="24" y1="204" x2="24" y2="24"/><line x1="42" y1="204" x2="42" y2="24"/><line x1="60" y1="204" x2="60" y2="24"/><line x1="78" y1="204" x2="78" y2="24"/><line x1="96" y1="204" x2="96" y2="24"/><line x1="114" y1="204" x2="114" y2="24"/><line x1="132" y1="204" x2="132" y2="24"/><line x1="150" y1="204" x2="150" y2="24"/><line x1="168" y1="204" x2="168" y2="24"/><line x1="24" y1="204" x2="168" y2="204"/><line x1="24" y1="186" x2="168" y2="186"/><line x1="24" y1="168" x2="168" y2="168"/><line x1="24" y1="150" x2="168" y2="150"/><line x1="24" y1="132" x2="168" y2="132"/><line x1="24" y1="114" x2="168" y2="114"/><line x1="24" y1="96" x2="168" y2="96"/><line x1="24" y1="78" x2="168" y2="78"/><line x1="24" y1="60" x2="168" y2="60"/><line x1="24" y1="42" x2="168" y2="42"/><line x1="24" y1="24" x2="168" y2="24"/></g><line x1="16" y1="114" x2="178" y2="114" stroke="currentColor" fill="none" stroke-width="2"/><line x1="60" y1="212" x2="60" y2="14" stroke="currentColor" fill="none" stroke-width="2"/><path d="M178 114 L170 110 L170 118 Z" fill="currentColor"/><path d="M60 14 L56 22 L64 22 Z" fill="currentColor"/><text x="180" y="128" font-size="14" text-anchor="end" font-style="italic">x</text><text x="67" y="20" font-size="14" text-anchor="start" font-style="italic">y</text><text x="56" y="127" font-size="11" text-anchor="end">O</text><text x="24" y="127" font-size="10" text-anchor="middle">−2</text><text x="42" y="127" font-size="10" text-anchor="middle">−1</text><text x="78" y="127" font-size="10" text-anchor="middle">1</text><text x="96" y="127" font-size="10" text-anchor="middle">2</text><text x="114" y="127" font-size="10" text-anchor="middle">3</text><text x="132" y="127" font-size="10" text-anchor="middle">4</text><text x="150" y="127" font-size="10" text-anchor="middle">5</text><text x="168" y="127" font-size="10" text-anchor="middle">6</text><text x="56" y="207.5" font-size="10" text-anchor="end">−5</text><text x="56" y="189.5" font-size="10" text-anchor="end">−4</text><text x="56" y="171.5" font-size="10" text-anchor="end">−3</text><text x="56" y="153.5" font-size="10" text-anchor="end">−2</text><text x="56" y="135.5" font-size="10" text-anchor="end">−1</text><text x="56" y="99.5" font-size="10" text-anchor="end">1</text><text x="56" y="81.5" font-size="10" text-anchor="end">2</text><text x="56" y="63.5" font-size="10" text-anchor="end">3</text><text x="56" y="45.5" font-size="10" text-anchor="end">4</text><text x="56" y="27.5" font-size="10" text-anchor="end">5</text><line x1="16.8" y1="139.2" x2="139.2" y2="16.8" stroke="currentColor" fill="none" stroke-width="2.5"/><text x="103.2" y="31.2" font-size="13" text-anchor="middle" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round"><tspan font-style="italic">y</tspan> = <tspan font-style="italic">x</tspan> + 1</text><circle cx="114" cy="114" r="3.5" fill="currentColor"/><text x="120" y="108" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">A</text><circle cx="150" cy="186" r="3.5" fill="currentColor"/><text x="156" y="182" font-size="13" text-anchor="start" style="paint-order:stroke;stroke:var(--surface-2,#fff);stroke-width:4px;stroke-linejoin:round">B</text></svg>'
+    answer: 10
+    check: "(lambda p, q: [d for d in range(1, 50) if d * d == (5 - p) ** 2 + (-4 - q) ** 2][0])(0 - 1, 3 + 1)"
+    hints:
+      - A と B は、直線 ℓ について同じ側にあります。A を ℓ について対称に移した点 A′ を考えましょう。
+      - A′ の座標は、AA′ の中点が ℓ の上にあり、AA′ が ℓ に垂直であることから求めましょう。
+      - AP + PB = A′P + PB は、A′、P、B が 1 つの直線の上に並ぶとき、いちばん小さくなります。
+    paths:
+      - ["A′(p, q) とする", "中点 ((3 + p)/2, q/2) が ℓ の上で、AA′ の傾き q/(p − 3) が −1", "p = −1、q = 4 で A′(−1, 4)", "AP + PB = A′P + PB で、いちばん小さいのは A′B = √(36 + 64) = 10"]
+    note: 対称な点に移して折れ線をまっすぐにする（光の反射と同じ道筋）。ℓ が軸でないので、対称な点を 3 日目の方法（中点と垂直）で求める手数がかかる。そのときの P は (5/7, 12/7)。
+  - part: 離
+    kinds: [数, 手数]
+    text: 3 点 A(0, 1)、B(5, 0)、C(4, 5) を通る円の中心の x 座標はいくつですか。
+    answer: 17/6
+    check: "(Fraction(8, 5) + 12) / (5 - Fraction(1, 5))"
+    hints:
+      - 円の中心は、AB の垂直二等分線と BC の垂直二等分線の交点です。
+      - AB の中点は (5/2, 1/2)、AB の傾きは −1/5 です。BC についても同じように求めましょう。
+      - 2 本の垂直二等分線の式を連立しましょう。分数の計算に気をつけましょう。
+    paths:
+      - ["AB の垂直二等分線は傾き 5 で (5/2、1/2) を通るので y = 5x − 12", "BC の垂直二等分線は傾き 1/5 で (9/2、5/2) を通るので y = (1/5)x + 8/5", "5x − 12 = (1/5)x + 8/5 から (24/5)x = 68/5", "x = 17/6"]
+      - ["x² + y² + lx + my + n = 0 に 3 点を代入", "n = −1 − m を使って 5l − m = −24、l + m = −10", "l = −17/3", "中心の x 座標は −l/2 = 17/6"]
+    note: 中心は (17/6, 13/6)、半径の 2 乗は 169/18 で、どれも分数になる。垂直二等分線の式を分数のまま扱い、連立方程式を解き切る力を見る。
