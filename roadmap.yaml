@@ -680,7 +680,7 @@ units:
   - {id: B-020, title: 人のからだのつくりとはたらき（骨と筋肉、感覚器、呼吸、消化、血液の循環）, stage: 3, level: 2, region: karada, needs: [B-017, H-004, B-075], days: 7}
   - {id: B-021, title: 生き物と環境（季節と生き物、食物連鎖、分解者、数のつりあい）, stage: 3, level: 2, region: seitai, needs: [B-018, B-019, A-005, B-161], days: 6}
   - {id: B-022, title: 顕微鏡で見る細胞（細胞のつくり、単細胞と多細胞、植物と動物の細胞）, stage: 3, level: 2, region: bunshi-saibo, needs: [B-018, G-013], days: 6}
-  - {id: G-050, title: 座標平面の入口（格子の点、4 象限、移動と対称、表から直線を描く）, stage: 3, level: 2, region: zahyo, needs: [N-010, G-015], days: 6}
+  - {id: G-050, title: 座標平面の入口（格子の点、4 象限、移動と対称、表から直線を描く）, stage: 3, level: 2, region: zahyo, needs: [N-010, G-015], days: 6, keys: [−]}
   - {id: G-051, title: 結び目と折りたたみ（紐と紙の空間での動き）, stage: 3, level: 1, region: katachi, needs: [G-004, G-002], days: 6}
   - {id: K-125, title: 並べ替えと探し方をくらべる（選んで並べる、となりと入れかえる、半分ずつ探す数当て、比べる回数を数える）, stage: 3, level: 2, region: programming, needs: [K-123, K-124, N-014], days: 6}
   - {id: K-126, title: 状態と移り変わり（信号機や自動販売機のきまり、状態と矢印の図をかく、入力で次の状態が決まる）, stage: 3, level: 2, region: programming, needs: [K-124], days: 5}
@@ -737,8 +737,8 @@ units:
   - {id: C-015, title: 二項係数とパスカルの三角形, stage: 4, level: 2, region: kazoekata, needs: [C-007, A-010, C-004], days: 6}
   - {id: C-016, title: 二項定理, stage: 4, level: 2, region: kazoekata, needs: [C-015, A-015, A-009], days: 5}
   - {id: C-017, title: 盤面とタイル張り（塗り分けの論法）, stage: 4, level: 3, region: kazoekata, needs: [L-009, L-005, N-013, A-010], days: 6}
-  - {id: G-016, title: 平行線と角、合同の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-009], days: 8}
-  - {id: G-017, title: 三角形と四角形の性質, stage: 4, level: 3, region: shomei-zukei, needs: [G-016], days: 6}
+  - {id: G-016, title: 平行線と角、合同の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-009, A-010, N-074], days: 8}
+  - {id: G-017, title: 三角形と四角形の性質, stage: 4, level: 3, region: shomei-zukei, needs: [G-016, G-012], days: 6}
   - {id: G-018, title: 円周角の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, G-010], days: 6}
   - {id: G-019, title: 三平方の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, A-016, G-020, G-008, A-017], days: 6}
   - {id: G-020, title: 相似の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-013, G-016, A-010], days: 9}

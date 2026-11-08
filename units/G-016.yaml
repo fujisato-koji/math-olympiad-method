@@ -1,0 +1,926 @@
+# G-016 平行線と角、合同の証明
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：対頂角、同位角、錯角、平行（ℓ ∥ m）、補助線、内角、外角、多角形、正多角形、合同（≡）、対応する頂点・辺・角、
+#   三角形の合同条件、仮定、結論、証明、根拠。
+# 約束した事実（証明の根拠に使ってよいもの）：一直線の角は 180°、平行線の同位角・錯角は等しい、同位角か錯角が等しければ平行、
+#   合同な図形の対応する辺・角は等しい、三角形の合同条件（3 組の辺／2 組の辺とその間の角／1 組の辺とその両端の角）。
+#   ここで示すもの：対頂角は等しい、三角形の内角の和は 180°（G-009 では切って集めた例だった）、外角はとなり合わない 2 つの内角の和、
+#   多角形の内角の和、合同を使った証明。
+# 前提は G-009 だけなので、数の計算は G-009 と同じ範囲（1000 まで、九九の範囲のわり算と、何十 ÷ 1 けた）にした。
+#   多角形の内角の和は七角形の 900° まで、正多角形の 1 つの角は 360 ÷ 6、360 ÷ 9 のように割り切れるものだけ。
+# 角の名前は ∠x、∠a のように文字で書くが、文字の式（A-010）は前提にないので、問題の答えはすべて数で出す。
+#   わけの日の証明だけ ∠a + ∠c = 180° のような等式と、両辺から同じものをひく変形を使う（□ の式と同じ扱い）。
+#   多角形の内角の和も「180° ×（頂点の数 − 2）」と言葉で書き、n は使わない。
+# 二等辺三角形と平行四辺形の性質は G-017、相似は G-020 で扱うので、ここでは「2 つの角が等しい三角形」と言うだけにした。
+# 図は svg（D-040）。角は本当の大きさで描いた。平行のしるしは線の上の ＞、等しい辺は辺の上の短い線、等しい角は同じ数の弧。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 対頂角・同位角・錯角　2 日目 平行線の角の計算、補助線、平行の見分け方　3 日目 三角形の外角、多角形の内角の和
+#   4 日目 合同と三角形の合同条件　5 日目 証明のしくみ（仮定、結論、根拠）　6 日目 わけ（対頂角、内角の和 180°、合同から平行）
+#   7 日目 G-009 と 1〜5 日目を混ぜる　8 日目 確認
+# check：角の大きさは計算の式。平行な 2 本を選ぶ問題は、同位角が等しい組を選ぶ式。
+#   合同条件・根拠・仮定と結論を選ぶ問題は約束ごとなので check を付けない。
+
+id: G-016
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 2 本の平行な直線 ℓ、m に、直線 n が交わっています。できた 8 つの角の関係を調べましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.4" y1="135.2" x2="162.6" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="171.6" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M160.1 43.8 A11 11 0 0 0 153.7 33.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167.6" y="36.2" font-size="12" text-anchor="middle">a</text><path d="M153.7 33.9 A11 11 0 0 0 138.1 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="137.2" y="29.5" font-size="12" text-anchor="middle">b</text><path d="M138.1 43.8 A11 11 0 0 0 144.4 53.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130.5" y="59.9" font-size="12" text-anchor="middle">c</text><path d="M144.4 53.8 A11 11 0 0 0 160.1 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.9" y="66.6" font-size="12" text-anchor="middle">d</text><path d="M131 106.2 A11 11 0 0 0 124.6 96.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138.6" y="98.5" font-size="12" text-anchor="middle">e</text><path d="M124.6 96.2 A11 11 0 0 0 109 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.2" y="91.8" font-size="12" text-anchor="middle">f</text><path d="M109 106.2 A11 11 0 0 0 115.4 116.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.4" y="122.2" font-size="12" text-anchor="middle">g</text><path d="M115.4 116.1 A11 11 0 0 0 131 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="131.8" y="128.9" font-size="12" text-anchor="middle">h</text></svg>'
+        explain: 2 直線が交わってできる角のうち、∠a と ∠c、∠b と ∠d のように向かい合った角を対頂角といい、対頂角は等しくなります。直線 n が 2 直線 ℓ、m と交わるとき、∠a と ∠e、∠d と ∠h のように同じ位置にある角を同位角、∠c と ∠e、∠d と ∠f のように ℓ と m の内側で n をはさんで反対がわにある角を錯角といいます。ℓ と m が平行（ℓ ∥ m と書きます）なら、同位角は等しく、錯角も等しくなります。反対に、同位角か錯角が等しければ、ℓ と m は平行です。図では ∠a = 65° なので、∠c = ∠e = ∠g = 65°、∠b = ∠d = ∠f = ∠h = 180° − 65° = 115° です。
+      - part: 思い出す
+        text: 一直線に、1 本の線を引きました。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="96.4" x2="220" y2="96.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="96.4" x2="148.8" y2="17.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 96.4 A18 18 0 0 0 126.2 79.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.2" y="82.2" font-size="12" text-anchor="middle">70°</text><path d="M128.2 73.8 A24 24 0 0 0 96 96.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.2" y="69.4" font-size="12" text-anchor="middle">x</text><circle cx="120" cy="96.4" r="2.5" fill="currentColor"/></svg>'
+        answer: 110
+        check: "180 - 70"
+        hints:
+          - 一直線の角は何度だったかな。
+          - ∠x と 70° を合わせると一直線になるね。
+          - 180 から 70 をひこう。
+        paths:
+          - [∠x + 70° = 180°, ∠x = 110°]
+      - part: 思い出す
+        text: 三角形の、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="125.5" y1="29.8" x2="62.3" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.3" y1="120.2" x2="177.7" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="177.7" y1="120.2" x2="125.5" y2="29.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M116.4 43 A16 16 0 0 0 133.5 43.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="124.3" y="62.4" font-size="13" text-anchor="middle">x</text><path d="M78.3 120.2 A16 16 0 0 0 71.5 107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="87.1" y="111.8" font-size="13" text-anchor="middle">55°</text><path d="M169.7 106.3 A16 16 0 0 0 161.7 120.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="153.4" y="110.7" font-size="13" text-anchor="middle">60°</text><text x="126.2" y="23.4" font-size="13" text-anchor="middle">A</text><text x="54.5" y="132.5" font-size="13" text-anchor="middle">B</text><text x="185.5" y="132.5" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 65
+        check: "180 - 55 - 60"
+        hints:
+          - 三角形の 3 つの角の和は何度だったかな。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [55 + 60 = 115, 180 − 115 = 65]
+      - part: 今日
+        text: 2 直線が交わっています。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="23.7" y1="65" x2="216.2" y2="65" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44.7" y1="117.7" x2="195.3" y2="12.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M133.1 55.8 A16 16 0 0 0 104 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="111.3" y="41.5" font-size="12" text-anchor="middle">145°</text><path d="M106.9 74.2 A16 16 0 0 0 136 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="128.7" y="96.9" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 145
+        check: "180 - (180 - 145)"
+        hints:
+          - ∠x と 145° の角は、どんな位置にあるかな。
+          - 向かい合った角を何というかな。
+          - 対頂角は等しいね。
+        paths:
+          - [∠x と 145° は対頂角, 対頂角は等しい, 145°]
+          - [145° のとなりの角は 35°, ∠x は 180 − 35 = 145]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.4" y1="135.2" x2="153.3" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="162.3" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M155.7 43.8 A13 13 0 0 0 147.1 31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="162.3" y="34.3" font-size="12" text-anchor="middle">70°</text><path d="M133 106.2 A13 13 0 0 0 124.4 93.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="139.7" y="96.6" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 70
+        check: "70"
+        hints:
+          - ∠x と 70° の角は、ℓ と m のそれぞれで、同じ位置にあるかな。
+          - 同じ位置にある角を何というかな。
+          - 平行線では、その角はどうなるかな。
+        paths:
+          - [∠x と 70° は同位角, ℓ ∥ m なので等しい, 70°]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.8" y1="135.2" x2="177.1" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="186.1" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M145.9 43.8 A13 13 0 0 0 152 54.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="137.9" y="59.7" font-size="12" text-anchor="middle">58°</text><path d="M133 106.2 A13 13 0 0 0 126.9 95.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141" y="98.7" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 58
+        check: "58"
+        hints:
+          - 2 つの角は、ℓ と m の内側にあるかな、外側にあるかな。
+          - n をはさんで反対がわにある、内側の 2 つの角を何というかな。
+          - 平行線の錯角はどうなるかな。
+        paths:
+          - [∠x と 58° は錯角, ℓ ∥ m なので等しい, 58°]
+        note: 錯角は「Z の字」の形の内側の 2 つの角、と見ると見つけやすい。
+      - part: 挑戦
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.4" y1="135.2" x2="153.3" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="162.3" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M155.7 43.8 A13 13 0 0 0 147.1 31.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="162.3" y="34.3" font-size="12" text-anchor="middle">70°</text><path d="M124.4 93.9 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.2" y="90.7" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 110
+        check: "180 - 70"
+        hints:
+          - m の上で、∠x のとなりの角を考えよう。
+          - そのとなりの角は、70° の角と同位角だね。
+          - ∠x ととなりの角を合わせると一直線だよ。
+        paths:
+          - [∠x のとなりの角は 70°（同位角）, ∠x = 180 − 70 = 110]
+        note: 70° とそのまま答えやすい。位置が同じかどうかを、ℓ と m の両方で指でさして確かめる。
+    extra:
+      - part: 今日
+        text: 2 直線が交わっています。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="23.7" y1="65" x2="216.2" y2="65" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92" y1="117.7" x2="148" y2="12.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M136 65 A16 16 0 0 0 127.5 50.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.9" y="54.3" font-size="12" text-anchor="middle">62°</text><path d="M127.5 50.9 A16 16 0 0 0 104 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105.1" y="44.3" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 118
+        check: "180 - 62"
+        hints:
+          - ∠x と 62° の角は、向かい合っているかな、となり合っているかな。
+          - となり合う 2 つの角で、一直線になるね。
+          - 180 から 62 をひこう。
+        paths:
+          - [∠x + 62° = 180°, ∠x = 118°]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.6" y1="135.2" x2="184" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="193" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M156.2 54.5 A13 13 0 0 0 176.6 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="174.7" y="69.3" font-size="12" text-anchor="middle">125°</text><path d="M127.5 95.5 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.9" y="89.1" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 125
+        check: "125"
+        hints:
+          - 2 つの角は、ℓ と m の内側にあるね。
+          - n をはさんで反対がわにある、内側の角を何というかな。
+          - 平行線の錯角は等しいね。
+        paths:
+          - [∠x と 125° は錯角, 125°]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95.6" y1="135.2" x2="196.7" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="205.7" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M159.3 43.8 A13 13 0 0 0 163.9 53.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="150.5" y="58.2" font-size="12" text-anchor="middle">50°</text><path d="M107 106.2 A13 13 0 0 0 111.6 116.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.2" y="120.5" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 50
+        check: "50"
+        hints:
+          - 2 つの角は、ℓ と m のそれぞれで、同じ位置にあるかな。
+          - 同じ位置にある角を何というかな。
+          - 平行線の同位角は等しいね。
+        paths:
+          - [∠x と 50° は同位角, 50°]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: ℓ ∥ m のとき、折れ線の角 ∠x を、補助線を引いて求めましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="21.2" y1="37.8" x2="218.8" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21.2" y1="102.2" x2="218.8" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="51.8,41.8 56.8,37.8 51.8,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="51.8,106.2 56.8,102.2 51.8,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="29.2" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="29.2" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="115.9" y1="37.8" x2="154.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.5" y1="102.2" x2="154.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="47" y1="70" x2="218.8" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M128.2 48.1 A16 16 0 0 0 131.9 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.1" y="52.6" font-size="13" text-anchor="middle">40°</text><path d="M114.5 102.2 A16 16 0 0 0 112.4 94.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127.5" y="99" font-size="13" text-anchor="middle">30°</text><path d="M143.6 61 A14 14 0 0 0 142.2 77" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="128.4" y="72.3" font-size="13" text-anchor="middle">x</text><text x="115.9" y="32" font-size="12" text-anchor="middle">A</text><text x="98.5" y="116.4" font-size="12" text-anchor="middle">B</text><text x="164.3" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        explain: 点 P を通り、ℓ に平行な直線（点線）を引きます。点線は m とも平行です。∠x は点線で上と下の 2 つに分かれます。上の部分は、ℓ と点線の錯角なので 40° に等しく、下の部分は、m と点線の錯角なので 30° に等しくなります。だから ∠x = 40° + 30° = 70° です。このように、もとの図にない線を引いて考えるとき、その線を補助線といいます。
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="110.6" y1="135.2" x2="149.7" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="158.7" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M144.3 31.5 A13 13 0 0 0 127.2 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="126.1" y="28.6" font-size="12" text-anchor="middle">108°</text><path d="M124 93.8 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105.9" y="90.9" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 108
+        check: "108"
+        hints:
+          - 2 つの角は、同じ位置にあるかな。
+          - 同じ位置にある角を何というかな。
+          - 平行線の同位角は等しいね。
+        paths:
+          - [∠x と 108° は同位角, 108°]
+      - part: 思い出す
+        text: 一直線に、2 本の線を引きました。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="96.4" x2="220" y2="96.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="96.4" x2="179.5" y2="36.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="96.4" x2="78" y2="23.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 96.4 A18 18 0 0 0 132.7 83.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="149.6" y="88.3" font-size="12" text-anchor="middle">45°</text><path d="M137 79.4 A24 24 0 0 0 108 75.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="125" y="62.9" font-size="12" text-anchor="middle">x</text><path d="M111 80.8 A18 18 0 0 0 102 96.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="92.3" y="84.6" font-size="12" text-anchor="middle">60°</text><circle cx="120" cy="96.4" r="2.5" fill="currentColor"/></svg>'
+        answer: 75
+        check: "180 - 45 - 60"
+        hints:
+          - 3 つの角を合わせると何度かな。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [45 + 60 = 105, 180 − 105 = 75]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="26.1" y1="37.8" x2="213.9" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.1" y1="102.2" x2="213.9" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="54.9,41.8 59.9,37.8 54.9,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="54.9,106.2 59.9,102.2 54.9,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="34.1" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="34.1" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="103.4" y1="37.8" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="117.2" y1="102.2" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M116.5 47 A16 16 0 0 0 119.4 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="132" y="51.3" font-size="13" text-anchor="middle">35°</text><path d="M133.2 102.2 A16 16 0 0 0 128.5 90.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.9" y="95.3" font-size="13" text-anchor="middle">45°</text><path d="M138 62 A14 14 0 0 0 139.6 79.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="123.6" y="76.8" font-size="13" text-anchor="middle">x</text><text x="103.4" y="32" font-size="12" text-anchor="middle">A</text><text x="117.2" y="116.4" font-size="12" text-anchor="middle">B</text><text x="159.5" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 80
+        check: "35 + 45"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は、補助線で 2 つに分かれるね。
+          - 分かれたそれぞれの角は、どの角と錯角になるかな。
+        paths:
+          - [P を通り ℓ に平行な線を引く, 上は 35°、下は 45°（錯角）, ∠x = 35 + 45 = 80]
+      - part: 今日
+        text: 3 本の直線 ℓ、m、k に、直線 n が交わっています。平行な 2 本はどれとどれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="110" y1="142" x2="144.8" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><text x="101" y="144.6" font-size="13" text-anchor="middle">n</text><line x1="52.5" y1="42.9" x2="218.8" y2="34.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="226.8" y="32.7" font-size="13" text-anchor="middle">ℓ</text><path d="M150.7 37.8 A13 13 0 0 0 141.1 25.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157.1" y="26.6" font-size="11" text-anchor="middle">72°</text><line x1="41.5" y1="79.1" x2="208.1" y2="79.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="216.1" y="77.6" font-size="13" text-anchor="middle">m</text><path d="M139.8 79.1 A13 13 0 0 0 130.2 66.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.7" y="67.7" font-size="11" text-anchor="middle">75°</text><line x1="30.7" y1="124.2" x2="197.1" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="205.1" y="114" font-size="13" text-anchor="middle">k</text><path d="M128.9 119 A13 13 0 0 0 119.3 107.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135.4" y="107.8" font-size="11" text-anchor="middle">72°</text></svg>'
+        choices: [ℓ と m, ℓ と k, m と k]
+        answer: ℓ と k
+        check: "(lambda d: [k for k in ['ℓ と m', 'ℓ と k', 'm と k'] if d[k[0]] == d[k[-1]]][0])({'ℓ': 72, 'm': 75, 'k': 72})"
+        hints:
+          - 図の 3 つの角は、どれも n の右上にあるね。
+          - 同じ位置にある角を何というかな。
+          - 同位角が等しければ、2 直線は平行だね。
+        paths:
+          - [3 つの角は同位角, ℓ と k の同位角はどちらも 72°, ℓ ∥ k]
+        note: 見た目ではほとんど区別がつかない。図ではなく、角の大きさで決めることを確かめる。
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108.3" y1="135.2" x2="156.9" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="165.9" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M133 106.2 A13 13 0 0 0 124.9 94.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="139.9" y="96.9" font-size="12" text-anchor="middle">68°</text><path d="M140.3 55.9 A13 13 0 0 0 158.2 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="158.6" y="67.9" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 112
+        check: "180 - 68"
+        hints:
+          - ∠x のとなりの角（ℓ の上で ∠x と一直線をつくる角）を考えよう。
+          - そのとなりの角と 68° は、錯角かな、同位角かな。
+          - 一直線は 180° だね。
+        paths:
+          - [∠x のとなりの角は 68° と錯角で 68°, ∠x = 180 − 68 = 112]
+          - [∠x と 68° は ℓ と m の内側で同じがわ, 和は 180°, 112°]
+      - part: 挑戦
+        text: ℓ ∥ m です。∠APB = 100° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="26.1" y1="37.8" x2="213.9" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.1" y1="102.2" x2="213.9" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="54.9,41.8 59.9,37.8 54.9,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="54.9,106.2 59.9,102.2 54.9,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="34.1" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="34.1" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="134.4" y1="37.8" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="103.4" y1="102.2" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M141.2 52.3 A16 16 0 0 0 150.4 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.7" y="58.4" font-size="13" text-anchor="middle">x</text><path d="M119.4 102.2 A16 16 0 0 0 116.5 93" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="132" y="97.8" font-size="13" text-anchor="middle">35°</text><path d="M143.5 57.3 A14 14 0 0 0 138 78" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="124.3" y="67.8" font-size="13" text-anchor="middle">100°</text><text x="134.4" y="32" font-size="12" text-anchor="middle">A</text><text x="103.4" y="116.4" font-size="12" text-anchor="middle">B</text><text x="159.5" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 65
+        check: "100 - 35"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠APB は、補助線で 2 つに分かれるね。下の部分は何度かな。
+          - 上の部分は ∠x と等しいね。
+        paths:
+          - [補助線で ∠APB を分ける, 下の部分は 35°（錯角）, 上の部分は 100 − 35 = 65, ∠x = 65]
+    extra:
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14.6" y1="37.8" x2="225.4" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="14.6" y1="102.2" x2="225.4" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="47.5,41.8 52.5,37.8 47.5,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="47.5,106.2 52.5,102.2 47.5,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="22.6" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="22.6" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="91.9" y1="37.8" x2="161" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="134" y1="102.2" x2="161" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M106.4 44.5 A16 16 0 0 0 107.9 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="121.2" y="48.8" font-size="13" text-anchor="middle">25°</text><path d="M150 102.2 A16 16 0 0 0 144.2 90" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="161.1" y="94.1" font-size="13" text-anchor="middle">50°</text><path d="M148.3 64.1 A14 14 0 0 0 152 80.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135.6" y="80.2" font-size="13" text-anchor="middle">x</text><text x="91.9" y="32" font-size="12" text-anchor="middle">A</text><text x="134" y="116.4" font-size="12" text-anchor="middle">B</text><text x="171" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 75
+        check: "25 + 50"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は 2 つに分かれるね。
+          - それぞれの角は錯角で等しいね。
+        paths:
+          - [上は 25°、下は 50°, 75°]
+      - part: 今日
+        text: 2 直線 ℓ、m に直線 n が交わり、同位角がどちらも 80° です。ℓ と m は平行ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114.9" y1="135.2" x2="136.1" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="145.1" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M144 43.8 A13 13 0 0 0 133.2 31" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="149.4" y="32.6" font-size="12" text-anchor="middle">80°</text><path d="M133 106.2 A13 13 0 0 0 122.3 93.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138.4" y="94.9" font-size="12" text-anchor="middle">80°</text></svg>'
+        choices: [平行である, 平行でない]
+        answer: 平行である
+        check: "'平行である' if 80 == 80 else '平行でない'"
+        hints:
+          - 2 つの 80° の角は、同じ位置にあるかな。
+          - 同位角が等しいとき、2 直線はどうなるかな。
+          - 見本の説明の「反対に」の文を思い出そう。
+        paths:
+          - [同位角が等しい, ℓ ∥ m]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="112.2" y1="135.2" x2="144.5" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="153.5" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M123.7 43.8 A13 13 0 0 0 133.3 56.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.7" y="62.7" font-size="12" text-anchor="middle">x</text><path d="M123.4 93.6 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105.4" y="91.3" font-size="12" text-anchor="middle">105°</text></svg>'
+        answer: 75
+        check: "180 - 105"
+        hints:
+          - ∠x と 105° は、ℓ と m の内側で、n の同じがわにあるね。
+          - m の上で、105° のとなりの角を考えよう。
+          - そのとなりの角と ∠x は錯角だね。
+        paths:
+          - [105° のとなりは 180 − 105 = 75, ∠x と錯角, 75°]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 三角形の外角と、多角形の角の和を調べましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="122" y1="30.5" x2="59.7" y2="119.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.7" y1="119.5" x2="145.9" y2="119.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="119.5" x2="122" y2="30.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="119.5" x2="180.3" y2="119.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.9" y1="119.5" x2="169.3" y2="86" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M112.8 43.6 A16 16 0 0 0 126.1 45.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.1" y="62.6" font-size="13" text-anchor="middle">a</text><path d="M75.7 119.5 A16 16 0 0 0 68.8 106.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.5" y="111.1" font-size="13" text-anchor="middle">b</text><path d="M158.5 101.5 A22 22 0 0 0 140.2 98.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="151.8" y="90.6" font-size="13" text-anchor="middle">a</text><path d="M167.9 119.5 A22 22 0 0 0 158.5 101.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="176" y="108.4" font-size="13" text-anchor="middle">b</text><text x="119.8" y="24.3" font-size="13" text-anchor="middle">A</text><text x="51.9" y="131.8" font-size="13" text-anchor="middle">B</text><text x="145.9" y="135.1" font-size="13" text-anchor="middle">C</text><text x="180.3" y="135.1" font-size="13" text-anchor="middle">D</text><text x="177.1" y="82.7" font-size="13" text-anchor="middle">E</text></svg>'
+        explain: 三角形の 1 つの辺をのばしてできる角 ∠ACD を、頂点 C の外角といいます。C を通り BA に平行な直線 CE を引くと、∠ACE = ∠a（錯角）、∠ECD = ∠b（同位角）なので、外角 ∠ACD = ∠a + ∠b です。三角形の外角は、となり合わない 2 つの内角の和に等しくなります。また、多角形は 1 つの頂点から引いた対角線で、（頂点の数 − 2）個の三角形に分けられます。だから、六角形の内角の和は 180° × 4 = 720° です。辺の長さがすべて等しく、角の大きさもすべて等しい多角形を正多角形といいます。多角形の外角の和は、何角形でも 360° です。
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="14.6" y1="37.8" x2="225.4" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="14.6" y1="102.2" x2="225.4" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="47.5,41.8 52.5,37.8 47.5,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="47.5,106.2 52.5,102.2 47.5,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="22.6" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="22.6" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="105.2" y1="37.8" x2="161" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="91.9" y1="102.2" x2="161" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M119 45.8 A16 16 0 0 0 121.2 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="134.2" y="50.1" font-size="13" text-anchor="middle">30°</text><path d="M107.9 102.2 A16 16 0 0 0 106.4 95.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="121.2" y="100.3" font-size="13" text-anchor="middle">25°</text><path d="M148.9 63 A14 14 0 0 0 148.3 75.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135" y="73.4" font-size="13" text-anchor="middle">x</text><text x="105.2" y="32" font-size="12" text-anchor="middle">A</text><text x="91.9" y="116.4" font-size="12" text-anchor="middle">B</text><text x="171" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 55
+        check: "30 + 25"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は 2 つに分かれるね。
+          - それぞれの角は錯角で等しいね。
+        paths:
+          - [上は 30°、下は 25°, 55°]
+      - part: 思い出す
+        text: 四角形の 3 つの角が 90°、85°、100° です。のこりの角は何度ですか。
+        answer: 85
+        check: "360 - 90 - 85 - 100"
+        hints:
+          - 四角形の 4 つの角の和は何度だったかな。
+          - わかっている 3 つの角をたそう。
+          - 360 から、その和をひこう。
+        paths:
+          - [90 + 85 + 100 = 275, 360 − 275 = 85]
+      - part: 今日
+        text: ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="93.6" y1="30.2" x2="60.9" y2="119.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.9" y1="119.8" x2="145.3" y2="119.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.3" y1="119.8" x2="93.6" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.3" y1="119.8" x2="179.1" y2="119.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M88.1 45.2 A16 16 0 0 0 101.6 44" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="96" y="62.6" font-size="13" text-anchor="middle">50°</text><path d="M76.9 119.8 A16 16 0 0 0 66.4 104.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83.9" y="108.3" font-size="13" text-anchor="middle">70°</text><path d="M159.3 119.8 A14 14 0 0 0 138.3 107.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="158.3" y="101.9" font-size="13" text-anchor="middle">x</text><text x="89.6" y="24.5" font-size="13" text-anchor="middle">A</text><text x="53.2" y="132.2" font-size="13" text-anchor="middle">B</text><text x="145.3" y="135.4" font-size="13" text-anchor="middle">C</text><text x="179.1" y="135.4" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 120
+        check: "50 + 70"
+        hints:
+          - ∠x は、頂点 C の外角だね。
+          - 外角と、となり合わない 2 つの内角の関係を思い出そう。
+          - 50° と 70° をたそう。
+        paths:
+          - [外角 = となり合わない 2 つの内角の和, 50 + 70 = 120]
+          - [∠ACB = 180 − 50 − 70 = 60, ∠x = 180 − 60 = 120]
+      - part: 今日
+        text: ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="90.7" y1="36.1" x2="36.2" y2="113.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.2" y1="113.9" x2="155.9" y2="113.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.9" y1="113.9" x2="90.7" y2="36.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.9" y1="113.9" x2="203.8" y2="113.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M81.5 49.2 A16 16 0 0 0 100.9 48.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="91.9" y="68.6" font-size="13" text-anchor="middle">75°</text><path d="M52.2 113.9 A16 16 0 0 0 45.4 100.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="61" y="105.5" font-size="13" text-anchor="middle">x</text><path d="M169.9 113.9 A14 14 0 0 0 146.9 103.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="166.9" y="94.9" font-size="13" text-anchor="middle">130°</text><text x="85.5" y="30.9" font-size="13" text-anchor="middle">A</text><text x="28.4" y="126.2" font-size="13" text-anchor="middle">B</text><text x="155.9" y="129.4" font-size="13" text-anchor="middle">C</text><text x="203.8" y="129.4" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 55
+        check: "130 - 75"
+        hints:
+          - 130° の角は、頂点 C の外角だね。
+          - 外角は、∠x と 75° の和に等しいね。
+          - 130 から 75 をひこう。
+        paths:
+          - [130 = ∠x + 75, ∠x = 55]
+        note: 外角の 130° と 75° をたしてしまいやすい。どの角とどの角の和が外角になるかを指でさして確かめる。
+      - part: 今日
+        text: 六角形の 6 つの内角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,26.5 82.3,48.2 82.3,91.8 120,113.5 157.7,91.8 157.7,48.2" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="26.5" x2="82.3" y2="48.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="82.3" y1="48.2" x2="82.3" y2="91.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="82.3" y1="91.8" x2="120" y2="113.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="113.5" x2="157.7" y2="91.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="157.7" y1="91.8" x2="157.7" y2="48.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="157.7" y1="48.2" x2="120" y2="26.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="26.5" x2="82.3" y2="91.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.5" x2="120" y2="113.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.5" x2="157.7" y2="91.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 720
+        check: "180 * (6 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引くと、三角形はいくつできるかな。
+          - 三角形 1 つの内角の和は 180° だね。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 6 − 2 = 4 こ, 180 × 4 = 720]
+      - part: 挑戦
+        text: 正九角形の 1 つの内角は何度ですか。
+        answer: 140
+        check: "180 - 360 // 9"
+        hints:
+          - 多角形の外角の和は何度だったかな。
+          - 正九角形の 9 つの外角は、みな等しいね。
+          - 1 つの頂点で、内角と外角を合わせると何度かな。
+        paths:
+          - [1 つの外角は 360 ÷ 9 = 40, 内角は 180 − 40 = 140]
+          - [内角の和は 180 × 7 = 1260, 1260 ÷ 9 = 140]
+        note: 2 本目のみちすじは 1000 をこえる数と 2 けたのわり算になるので、外角から求める道をすすめる。
+    extra:
+      - part: 今日
+        text: 五角形の 5 つの内角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,26.9 74.7,59.8 92,113.1 148,113.1 165.3,59.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="26.9" x2="74.7" y2="59.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="74.7" y1="59.8" x2="92" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92" y1="113.1" x2="148" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148" y1="113.1" x2="165.3" y2="59.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="165.3" y1="59.8" x2="120" y2="26.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="26.9" x2="92" y2="113.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.9" x2="148" y2="113.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 540
+        check: "180 * (5 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引こう。
+          - 三角形はいくつできるかな。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 3 こ, 180 × 3 = 540]
+      - part: 今日
+        text: 正六角形の 1 つの内角は何度ですか。
+        answer: 120
+        check: "180 - 360 // 6"
+        hints:
+          - 外角の和は何度だったかな。
+          - 正六角形の 1 つの外角は何度かな。
+          - 内角と外角を合わせると 180° だね。
+        paths:
+          - [外角は 360 ÷ 6 = 60, 内角は 180 − 60 = 120]
+      - part: 今日
+        text: 1 つの外角が 40° の正多角形は、正何角形ですか。数で答えましょう。
+        answer: 9
+        check: "360 // 40"
+        hints:
+          - 外角の和は何度だったかな。
+          - 40° の外角が、いくつ集まると和になるかな。
+          - 360 ÷ 40 を考えよう。
+        paths:
+          - [360 ÷ 40 = 9, 正九角形]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 合同な 2 つの三角形と、三角形の合同条件を知りましょう。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.4" y1="67.2" x2="42.4" y2="62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.6" y1="62.8" x2="188.6" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="66.4" y1="81.5" x2="66.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="70.4" y1="81.5" x2="70.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.6" y1="91.5" x2="173.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="169.6" y1="91.5" x2="169.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="78.4" y1="71.4" x2="85.5" y2="64.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="75.6" y1="68.5" x2="82.7" y2="61.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="72.8" y1="65.7" x2="79.8" y2="58.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.5" y1="64.3" x2="161.6" y2="71.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="157.3" y1="61.5" x2="164.4" y2="68.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="160.2" y1="58.6" x2="167.2" y2="65.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M92.2 78 A12 12 0 0 0 88.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M89.3 75.2 A16 16 0 0 0 84.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M151.4 86.5 A12 12 0 0 0 147.8 78" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M155.4 86.5 A16 16 0 0 0 150.7 75.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M53.2 52.4 A10 10 0 0 0 64.7 50.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M51.4 56 A14 14 0 0 0 67.5 53.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M49.6 59.6 A18 18 0 0 0 70.4 56.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M175.3 50.6 A10 10 0 0 0 186.8 52.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M172.5 53.4 A14 14 0 0 0 188.6 56" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M169.6 56.2 A18 18 0 0 0 190.4 59.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">A</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">B</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">C</text><text x="182.4" y="37" font-size="13" text-anchor="middle">D</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">E</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">F</text></svg>'
+        explain: 2 つの図形の一方を動かして（ずらす、回す、裏返す）ぴったり重ねられるとき、2 つの図形は合同であるといい、△ABC ≡ △DEF と書きます。≡ の式では、重なる頂点（対応する頂点）を同じ順に書きます。図では A と D、B と E、C と F が対応します。合同な図形では、対応する辺の長さも、対応する角の大きさも等しくなります。図の同じしるしは、等しい辺や角を表します。2 つの三角形は、次のどれかが成り立てば合同です（三角形の合同条件）。① 3 組の辺がそれぞれ等しい。② 2 組の辺とその間の角がそれぞれ等しい。③ 1 組の辺とその両端の角がそれぞれ等しい。
+      - part: 思い出す
+        text: ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="86.9" y1="31.5" x2="55.3" y2="118.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.3" y1="118.5" x2="147.7" y2="118.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="147.7" y1="118.5" x2="86.9" y2="31.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="147.7" y1="118.5" x2="184.7" y2="118.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M81.4 46.6 A16 16 0 0 0 96.1 44.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.5" y="63.9" font-size="13" text-anchor="middle">55°</text><path d="M71.3 118.5 A16 16 0 0 0 60.7 103.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="78.2" y="107" font-size="13" text-anchor="middle">70°</text><path d="M161.7 118.5 A14 14 0 0 0 139.7 107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.8" y="99.9" font-size="13" text-anchor="middle">x</text><text x="82.1" y="26.2" font-size="13" text-anchor="middle">A</text><text x="47.5" y="130.8" font-size="13" text-anchor="middle">B</text><text x="147.7" y="134" font-size="13" text-anchor="middle">C</text><text x="184.7" y="134" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 125
+        check: "55 + 70"
+        hints:
+          - ∠x は、頂点 C の外角だね。
+          - 外角は、となり合わない 2 つの内角の和だね。
+          - 55° と 70° をたそう。
+        paths:
+          - [55 + 70 = 125]
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.9" y1="135.2" x2="205.2" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="214.2" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M191.1 43.8 A13 13 0 0 0 187 34.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="200.1" y="38.5" font-size="12" text-anchor="middle">47°</text><path d="M107 106.2 A13 13 0 0 0 111.1 115.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98" y="119.9" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 47
+        check: "47"
+        hints:
+          - m の上で、∠x と向かい合う角を考えよう。
+          - その角と 47° は、どんな関係かな。
+          - 対頂角と同位角を続けて使おう。
+        paths:
+          - [∠x の対頂角は 47° の同位角, 47°]
+      - part: 今日
+        text: △ABC ≡ △DEF です。辺 EF の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">A</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">B</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">C</text><text x="182.4" y="37" font-size="13" text-anchor="middle">D</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">E</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">F</text><text x="28.6" y="65.2" font-size="13" text-anchor="middle">5 cm</text><text x="68.4" y="100.1" font-size="13" text-anchor="middle">7 cm</text><text x="97.4" y="64.2" font-size="13" text-anchor="middle">6 cm</text></svg>'
+        answer: 7
+        check: "{'AB': 5, 'BC': 7, 'CA': 6}['BC']"
+        hints:
+          - ≡ の式で、E と F は、それぞれどの頂点と対応するかな。
+          - E は B と、F は C と対応するね。
+          - 辺 EF は、△ABC のどの辺と等しいかな。
+        paths:
+          - [E と B、F と C が対応, EF = BC = 7 cm]
+        note: 図の位置だけで対応を決めると取りちがえる。≡ の式の順で対応を読む。
+      - part: 今日
+        text: △ABC ≡ △PQR で、∠A = 50°、∠B = 60° です。∠R は何度ですか。
+        answer: 70
+        check: "180 - 50 - 60"
+        hints:
+          - R は、△ABC のどの頂点と対応するかな。
+          - ∠R は ∠C と等しいね。
+          - ∠C を、三角形の内角の和から求めよう。
+        paths:
+          - [R と C が対応, ∠C = 180 − 50 − 60 = 70, ∠R = 70]
+      - part: 今日
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.4" y1="67.2" x2="42.4" y2="62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.6" y1="62.8" x2="188.6" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="66.4" y1="81.5" x2="66.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="70.4" y1="81.5" x2="70.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.6" y1="91.5" x2="173.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="169.6" y1="91.5" x2="169.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">A</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">B</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">C</text><text x="182.4" y="37" font-size="13" text-anchor="middle">D</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">E</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 2 組の辺とその間の角がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - しるしのある角は、しるしのある 2 つの辺の間にあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [AB = DE、BC = EF, ∠B = ∠E は 2 辺の間の角, 2 組の辺とその間の角]
+      - part: 挑戦
+        text: 図の 2 つの三角形は、AB = DE、AC = DF、∠B = ∠E です。この 2 つの三角形について、正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="81.3" y1="47.3" x2="36.1" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="82.7" x2="97" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97" y1="82.7" x2="81.3" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.7" y1="47.3" x2="203.9" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="82.7" x2="174.3" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.3" y1="82.7" x2="158.7" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.8" y1="68.9" x2="55.7" y2="61.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="184.3" y1="61.1" x2="178.2" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="61.1" x2="83.8" y2="65.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="94.5" y1="64.8" x2="85.4" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="170.2" y1="61.1" x2="161.1" y2="65.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.8" y1="64.8" x2="162.7" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 82.7 A14 14 0 0 0 47.2 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M192.8 74 A14 14 0 0 0 189.9 82.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.3" y="40.9" font-size="13" text-anchor="middle">A</text><text x="28.4" y="95" font-size="13" text-anchor="middle">B</text><text x="104.7" y="95" font-size="13" text-anchor="middle">C</text><text x="158.7" y="40.9" font-size="13" text-anchor="middle">D</text><text x="196.1" y="95" font-size="13" text-anchor="middle">E</text><text x="182" y="95" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しいので合同
+          - 2 組の辺とその間の角がそれぞれ等しいので合同
+          - 1 組の辺とその両端の角がそれぞれ等しいので合同
+          - 合同とはいえない
+        answer: 合同とはいえない
+        hints:
+          - ∠B は、AB と AC の間の角かな。
+          - 等しい角が、等しい 2 辺の間にないと、どうなるかな。
+          - 図の 2 つの三角形を、重ねられるかな。
+        paths:
+          - [∠B は AB と AC の間の角ではない, どの合同条件にも当たらない, 図のように形がちがう三角形ができる, 合同とはいえない]
+        note: 2 辺と、その間でない角が等しくても、三角形は 2 通りできることがある。図の 2 つがその例。
+    extra:
+      - part: 今日
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.4" y1="81.5" x2="68.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.6" y1="91.5" x2="171.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M92.2 78 A12 12 0 0 0 88.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M89.3 75.2 A16 16 0 0 0 84.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M151.4 86.5 A12 12 0 0 0 147.8 78" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M155.4 86.5 A16 16 0 0 0 150.7 75.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">A</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">B</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">C</text><text x="182.4" y="37" font-size="13" text-anchor="middle">D</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">E</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 1 組の辺とその両端の角がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - しるしのある角は、その辺のどこにあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [BC = EF, ∠B = ∠E、∠C = ∠F は BC の両端, 1 組の辺とその両端の角]
+      - part: 今日
+        text: △ABC ≡ △DEF で、∠E = 70° です。∠B は何度ですか。
+        answer: 70
+        check: "70"
+        hints:
+          - ≡ の式で、E はどの頂点と対応するかな。
+          - 対応する角は等しいね。
+          - 2 つ目の文字どうしが対応するよ。
+        paths:
+          - [E と B が対応, ∠B = ∠E = 70°]
+      - part: 今日
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.4" y1="67.2" x2="42.4" y2="62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.6" y1="62.8" x2="188.6" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="66.4" y1="81.5" x2="66.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="70.4" y1="81.5" x2="70.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.6" y1="91.5" x2="173.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="169.6" y1="91.5" x2="169.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="78.4" y1="71.4" x2="85.5" y2="64.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="75.6" y1="68.5" x2="82.7" y2="61.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="72.8" y1="65.7" x2="79.8" y2="58.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.5" y1="64.3" x2="161.6" y2="71.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="157.3" y1="61.5" x2="164.4" y2="68.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="160.2" y1="58.6" x2="167.2" y2="65.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">P</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">Q</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">R</text><text x="182.4" y="37" font-size="13" text-anchor="middle">S</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">T</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">U</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 3 組の辺がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - 角のしるしはあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [3 組の辺に同じしるし, 3 組の辺がそれぞれ等しい]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 図で、AO = BO、CO = DO ならば AC = BD であることを、証明してみましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="55.7" y1="37.9" x2="184.3" y2="102.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.6" y1="108.6" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="37.9" x2="68.6" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184.3" y1="102.1" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.1" y1="49.5" x2="85.6" y2="58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.4" y1="81.6" x2="149.9" y2="90.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="89.7" y1="86.5" x2="95.7" y2="94.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="84.1" x2="98.9" y2="92.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="141.1" y1="47.9" x2="147.1" y2="55.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="144.3" y1="45.5" x2="150.3" y2="53.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M109.3 64.6 A12 12 0 0 0 110.4 77.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M130.7 75.4 A12 12 0 0 0 129.6 62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.9" y="34.6" font-size="13" text-anchor="middle">A</text><text x="192.1" y="114.5" font-size="13" text-anchor="middle">B</text><text x="60.8" y="120.9" font-size="13" text-anchor="middle">C</text><text x="179.2" y="28.2" font-size="13" text-anchor="middle">D</text><text x="120" y="63.5" font-size="13" text-anchor="middle">O</text></svg>'
+        explain: 「〜ならば…」の文で、「〜」の部分を仮定、「…」の部分を結論といいます。仮定から、約束した事実（根拠）を使って結論を導くことを証明といいます。この例では、仮定は AO = BO、CO = DO、結論は AC = BD です。証明「△AOC と △BOD で、仮定から AO = BO …①、CO = DO …②。対頂角は等しいので ∠AOC = ∠BOD …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので、△AOC ≡ △BOD。合同な図形の対応する辺は等しいので、AC = BD。」1 文ごとに、なぜそういえるのか（根拠）をそえて書きます。
+      - part: 思い出す
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.4" y1="81.5" x2="68.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.6" y1="91.5" x2="171.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M92.2 78 A12 12 0 0 0 88.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M89.3 75.2 A16 16 0 0 0 84.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M151.4 86.5 A12 12 0 0 0 147.8 78" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M155.4 86.5 A16 16 0 0 0 150.7 75.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">P</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">Q</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">R</text><text x="182.4" y="37" font-size="13" text-anchor="middle">S</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">T</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">U</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 1 組の辺とその両端の角がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - しるしのある角は、その辺の両端にあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [QR = TU, その両端の角が等しい, 1 組の辺とその両端の角]
+      - part: 思い出す
+        text: 正六角形の 1 つの外角は何度ですか。
+        answer: 60
+        check: "360 // 6"
+        hints:
+          - 多角形の外角の和は何度だったかな。
+          - 正六角形の外角は、みな等しいね。
+          - 360 を 6 つに分けよう。
+        paths:
+          - [360 ÷ 6 = 60]
+      - part: 今日
+        text: 「△ABC ≡ △DEF ならば、∠A = ∠D である」で、仮定はどれですか。
+        choices:
+          - △ABC ≡ △DEF
+          - ∠A = ∠D
+          - AB = DE
+        answer: △ABC ≡ △DEF
+        hints:
+          - 「〜ならば…」の「〜」の部分はどこかな。
+          - 仮定は、はじめにわかっていることだね。
+          - 「ならば」の前を見よう。
+        paths:
+          - [「ならば」の前が仮定, △ABC ≡ △DEF]
+      - part: 今日
+        text: 図で、AB ∥ CD、AM = DM ならば △ABM ≡ △DCM であることを証明します。∠BAM = ∠CDM といえる根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.5" y1="42.7" x2="152.7" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.3" y1="110.9" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.5" y1="42.7" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.7" y1="29.1" x2="87.3" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95" y1="51.9" x2="90.5" y2="60.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="149.5" y1="79.2" x2="145" y2="88.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="104.8,40.6 109.1,35.9 103.5,32.7" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="126.6,108.8 130.9,104.1 125.4,100.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="54.5" y="47.3" font-size="13" text-anchor="middle">A</text><text x="185.5" y="101.8" font-size="13" text-anchor="middle">D</text><text x="160.5" y="25.9" font-size="13" text-anchor="middle">B</text><text x="79.5" y="123.2" font-size="13" text-anchor="middle">C</text><text x="131" y="74.5" font-size="13" text-anchor="middle">M</text></svg>'
+        choices:
+          - 対頂角は等しい
+          - 平行線の錯角は等しい
+          - 平行線の同位角は等しい
+          - 仮定
+        answer: 平行線の錯角は等しい
+        hints:
+          - ∠BAM と ∠CDM は、どの 2 本の平行線と、どの直線がつくる角かな。
+          - 2 つの角は、AD をはさんで反対がわの、内側の角だね。
+          - そういう位置の角を何というかな。
+        paths:
+          - [AB ∥ CD に AD が交わる, ∠BAM と ∠CDM は錯角, 平行線の錯角は等しい]
+      - part: 今日
+        text: 前の問題の証明では、AM = DM、∠BAM = ∠CDM、∠AMB = ∠DMC を使います。どの合同条件を使いますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.5" y1="42.7" x2="152.7" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.3" y1="110.9" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.5" y1="42.7" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.7" y1="29.1" x2="87.3" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95" y1="51.9" x2="90.5" y2="60.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="149.5" y1="79.2" x2="145" y2="88.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="104.8,40.6 109.1,35.9 103.5,32.7" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="126.6,108.8 130.9,104.1 125.4,100.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="54.5" y="47.3" font-size="13" text-anchor="middle">A</text><text x="185.5" y="101.8" font-size="13" text-anchor="middle">D</text><text x="160.5" y="25.9" font-size="13" text-anchor="middle">B</text><text x="79.5" y="123.2" font-size="13" text-anchor="middle">C</text><text x="131" y="74.5" font-size="13" text-anchor="middle">M</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 1 組の辺とその両端の角がそれぞれ等しい
+        hints:
+          - 辺はいくつ、角はいくつ使っているかな。
+          - 2 つの角は、辺 AM（DM）のどこにあるかな。
+          - 辺の両端にある角だね。
+        paths:
+          - [辺 AM = DM, ∠A と ∠M は AM の両端, 1 組の辺とその両端の角]
+      - part: 挑戦
+        text: 見本の証明（AC = BD を示す）で、根拠に使ってはいけないものはどれですか。
+        choices:
+          - 仮定の AO = BO
+          - 対頂角は等しいこと
+          - AC = BD であること
+          - 三角形の合同条件
+        answer: AC = BD であること
+        hints:
+          - 証明で示したいことは何だったかな。
+          - 示したいことを根拠に使うと、どうなるかな。
+          - 「わかっていること」と「示したいこと」を分けよう。
+        paths:
+          - [AC = BD は結論, 結論を根拠に使うと示したことにならない]
+        note: 結論を使って結論を示すと、何も示していない（ぐるぐる回りの説明）。証明を書いたら、根拠に結論がまぎれていないか確かめる。
+    extra:
+      - part: 今日
+        text: 「AB = AC ならば、∠B = ∠C である」で、結論はどれですか。
+        choices:
+          - AB = AC
+          - ∠B = ∠C
+        answer: ∠B = ∠C
+        hints:
+          - 「〜ならば…」の「…」の部分はどこかな。
+          - 結論は、示したいことだね。
+          - 「ならば」のあとを見よう。
+        paths:
+          - [「ならば」のあとが結論, ∠B = ∠C]
+      - part: 今日
+        text: 見本の証明で、∠AOC = ∠BOD といえる根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="55.7" y1="37.9" x2="184.3" y2="102.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.6" y1="108.6" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="37.9" x2="68.6" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184.3" y1="102.1" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.1" y1="49.5" x2="85.6" y2="58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.4" y1="81.6" x2="149.9" y2="90.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="89.7" y1="86.5" x2="95.7" y2="94.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="84.1" x2="98.9" y2="92.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="141.1" y1="47.9" x2="147.1" y2="55.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="144.3" y1="45.5" x2="150.3" y2="53.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M109.3 64.6 A12 12 0 0 0 110.4 77.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M130.7 75.4 A12 12 0 0 0 129.6 62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.9" y="34.6" font-size="13" text-anchor="middle">A</text><text x="192.1" y="114.5" font-size="13" text-anchor="middle">B</text><text x="60.8" y="120.9" font-size="13" text-anchor="middle">C</text><text x="179.2" y="28.2" font-size="13" text-anchor="middle">D</text><text x="120" y="63.5" font-size="13" text-anchor="middle">O</text></svg>'
+        choices:
+          - 対頂角は等しい
+          - 平行線の錯角は等しい
+          - 仮定
+        answer: 対頂角は等しい
+        hints:
+          - ∠AOC と ∠BOD は、どこで交わる 2 直線の角かな。
+          - 2 つの角は向かい合っているね。
+          - 向かい合う角を何というかな。
+        paths:
+          - [AB と CD が O で交わる, 向かい合う角は対頂角, 対頂角は等しい]
+      - part: 今日
+        text: 見本の図で △AOC ≡ △BOD がいえました。そこからいえることはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="55.7" y1="37.9" x2="184.3" y2="102.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.6" y1="108.6" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="37.9" x2="68.6" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184.3" y1="102.1" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.1" y1="49.5" x2="85.6" y2="58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.4" y1="81.6" x2="149.9" y2="90.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="89.7" y1="86.5" x2="95.7" y2="94.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="84.1" x2="98.9" y2="92.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="141.1" y1="47.9" x2="147.1" y2="55.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="144.3" y1="45.5" x2="150.3" y2="53.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M109.3 64.6 A12 12 0 0 0 110.4 77.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M130.7 75.4 A12 12 0 0 0 129.6 62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.9" y="34.6" font-size="13" text-anchor="middle">A</text><text x="192.1" y="114.5" font-size="13" text-anchor="middle">B</text><text x="60.8" y="120.9" font-size="13" text-anchor="middle">C</text><text x="179.2" y="28.2" font-size="13" text-anchor="middle">D</text><text x="120" y="63.5" font-size="13" text-anchor="middle">O</text></svg>'
+        choices:
+          - AC = BD
+          - AO = CO
+          - ∠OAC = ∠ODB
+        answer: AC = BD
+        hints:
+          - ≡ の式で、A、O、C は、それぞれどの頂点と対応するかな。
+          - 対応する辺は等しいね。
+          - 辺 AC と対応するのはどの辺かな。
+        paths:
+          - [A と B、O と O、C と D が対応, AC と BD が対応, AC = BD]
+
+  - day: 6
+    items:
+      - part: わけ
+        text: 2 直線が交わるとき、対頂角 ∠a と ∠b は等しくなります。このことを、一直線の角が 180° であることを使って証明しましょう。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="23.7" y1="65" x2="216.2" y2="65" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.8" y1="117.7" x2="164.2" y2="12.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M136 65 A16 16 0 0 0 130.3 52.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.3" y="56.9" font-size="12" text-anchor="middle">∠a</text><path d="M130.3 52.7 A16 16 0 0 0 104 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.7" y="42.9" font-size="12" text-anchor="middle">∠c</text><path d="M104 65 A16 16 0 0 0 109.7 77.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="93.7" y="81.5" font-size="12" text-anchor="middle">∠b</text></svg>'
+        explain: 例：「図のように、∠a と ∠b のとなりの角を ∠c とする。∠a と ∠c で一直線をつくるので、∠a + ∠c = 180°、よって ∠a = 180° − ∠c。∠b と ∠c も一直線をつくるので、∠b + ∠c = 180°、よって ∠b = 180° − ∠c。したがって ∠a = ∠b。」と書ければよい。①「となりの角を ∠c とする」と名前を決める、② 2 つの等式から、∠a と ∠b をどちらも 180° − ∠c で表す、③ 一直線の角は 180° という約束した事実で結ぶ、の 3 点を見る。分度器で測って同じだった（例）だけで終わったら、例ではすべての交わり方を示せないことを話す。G-009 で計算から気づいたこと（向かい合う角が等しい）を、どの交わり方でも成り立つ形にしたものだと伝える。
+        hints:
+          - ∠a と ∠b のとなりの角に、名前をつけよう。
+          - ∠a とその角で一直線だね。式に書こう。
+          - ∠b とその角も一直線だね。2 つの式をくらべよう。
+        paths:
+          - [となりの角を ∠c とする, ∠a + ∠c = 180°, ∠b + ∠c = 180°, どちらも 180° − ∠c, ∠a = ∠b]
+      - part: わけ
+        text: 三角形の 3 つの内角の和が 180° であることを、平行線を使って証明しましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="129.4" y1="29.2" x2="65.2" y2="120.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.2" y1="120.8" x2="172.1" y2="120.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172.1" y1="120.8" x2="129.4" y2="29.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.9" y1="29.2" x2="174.8" y2="29.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="92.6,33.2 97.6,29.2 92.6,25.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="113.6,124.8 118.6,120.8 113.6,116.8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M111.4 29.2 A18 18 0 0 0 119 43.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="102.8" y="47.6" font-size="13" text-anchor="middle">∠b</text><path d="M137 45.5 A18 18 0 0 0 147.4 29.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.7" y="49.8" font-size="13" text-anchor="middle">∠c</text><path d="M120.8 41.4 A15 15 0 0 0 135.7 42.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127" y="60.6" font-size="13" text-anchor="middle">∠a</text><path d="M81.2 120.8 A16 16 0 0 0 74.4 107.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90" y="112.5" font-size="13" text-anchor="middle">∠b</text><path d="M165.4 106.3 A16 16 0 0 0 156.1 120.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="148.5" y="110.3" font-size="13" text-anchor="middle">∠c</text><text x="129.4" y="22.7" font-size="13" text-anchor="middle">A</text><text x="57.4" y="133.2" font-size="13" text-anchor="middle">B</text><text x="179.9" y="133.2" font-size="13" text-anchor="middle">C</text><text x="72.9" y="33.7" font-size="13" text-anchor="middle">D</text><text x="185.8" y="33.7" font-size="13" text-anchor="middle">E</text></svg>'
+        explain: 例：「△ABC の頂点 A を通り、辺 BC に平行な直線 DE を引く。平行線の錯角は等しいので、∠DAB = ∠ABC（∠b）、∠EAC = ∠ACB（∠c）。D、A、E は一直線の上にあるので、∠DAB + ∠BAC + ∠EAC = 180°。等しい角におきかえると、∠b + ∠a + ∠c = 180° で、3 つの内角の和は 180°。」と書ければよい。① 補助線 DE を BC に平行に引く、② 錯角が等しいことで角を A に集める、③ 一直線の角は 180° で結ぶ、の 3 点を見る。G-009 では 3 つの角を切って集めた例で確かめたが、その方法では試した三角形のことしかいえない。この証明は、どんな三角形でも成り立つことを示していると話す。
+        hints:
+          - 頂点 A を通り、BC に平行な補助線を引こう。
+          - ∠b と ∠c と等しい角は、A のどこにあるかな。
+          - A の所で、3 つの角は何をつくっているかな。
+        paths:
+          - [A を通り BC に平行な DE を引く, ∠DAB = ∠b、∠EAC = ∠c（錯角）, 3 つで一直線, ∠a + ∠b + ∠c = 180°]
+      - part: わけ
+        text: 図で、AO = BO、CO = DO ならば、AC ∥ DB であることを証明しましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="55.7" y1="37.9" x2="184.3" y2="102.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.6" y1="108.6" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="37.9" x2="68.6" y2="108.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184.3" y1="102.1" x2="171.4" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90.1" y1="49.5" x2="85.6" y2="58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.4" y1="81.6" x2="149.9" y2="90.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="89.7" y1="86.5" x2="95.7" y2="94.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="84.1" x2="98.9" y2="92.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="141.1" y1="47.9" x2="147.1" y2="55.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="144.3" y1="45.5" x2="150.3" y2="53.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M109.3 64.6 A12 12 0 0 0 110.4 77.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M130.7 75.4 A12 12 0 0 0 129.6 62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.9" y="34.6" font-size="13" text-anchor="middle">A</text><text x="192.1" y="114.5" font-size="13" text-anchor="middle">B</text><text x="60.8" y="120.9" font-size="13" text-anchor="middle">C</text><text x="179.2" y="28.2" font-size="13" text-anchor="middle">D</text><text x="120" y="63.5" font-size="13" text-anchor="middle">O</text></svg>'
+        explain: 例：「△AOC と △BOD で、仮定から AO = BO、CO = DO。対頂角は等しいので ∠AOC = ∠BOD。2 組の辺とその間の角がそれぞれ等しいので △AOC ≡ △BOD。合同な図形の対応する角は等しいので ∠OAC = ∠OBD。この 2 つの角は、直線 AB が AC、DB と交わってできる錯角で、錯角が等しいので AC ∥ DB。」と書ければよい。① 合同を示す 2 つの三角形と、そのための 3 つの等しいもの、② 合同から対応する角が等しい、③「錯角が等しければ平行」で結ぶ、の 3 点を見る。見本（5 日目）の証明と同じ合同を、別の結論に使っていることに気づかせる。
+        hints:
+          - 見本と同じ 2 つの三角形の合同から始めよう。
+          - 合同から、どの角とどの角が等しいといえるかな。
+          - その 2 つの角は、AC と DB にとって何という角かな。
+        paths:
+          - [△AOC ≡ △BOD（2 組の辺とその間の角）, ∠OAC = ∠OBD, 錯角が等しい, AC ∥ DB]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="24.1" y1="37.2" x2="215.9" y2="37.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="24.1" y1="112.8" x2="215.9" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="191.7,41.2 196.7,37.2 191.7,33.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="191.7,116.8 196.7,112.8 191.7,108.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="30.1" y="32.8" font-size="13" text-anchor="middle">ℓ</text><text x="30.1" y="108.3" font-size="13" text-anchor="middle">m</text><polygon points="138,37.2 74.5,112.8 165.5,112.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M123 37.2 A15 15 0 0 0 128.3 48.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="112.6" y="53.6" font-size="13" text-anchor="middle">50°</text><path d="M160.3 98.7 A15 15 0 0 0 150.5 112.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="142.5" y="101.3" font-size="13" text-anchor="middle">70°</text><path d="M128.3 48.7 A15 15 0 0 0 143.1 51.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="133.1" y="69.3" font-size="13" text-anchor="middle">x</text><text x="138" y="30.4" font-size="12" text-anchor="middle">A</text><text x="74.5" y="128" font-size="12" text-anchor="middle">B</text><text x="165.5" y="128" font-size="12" text-anchor="middle">C</text></svg>'
+        answer: 60
+        check: "180 - 50 - 70"
+        hints:
+          - 50° の角と錯角になる、三角形の角はどれかな。
+          - ∠ABC は何度かな。
+          - 三角形の内角の和を使おう。
+        paths:
+          - [∠ABC = 50°（錯角）, ∠x = 180 − 50 − 70 = 60]
+      - part: 今日
+        text: 五角形の外角の和は何度ですか。1 つの頂点で、内角と外角を合わせると 180° になることを使いましょう。
+        answer: 360
+        check: "180 * 5 - 180 * (5 - 2)"
+        hints:
+          - 5 つの頂点で、内角と外角を合わせると、全部で何度かな。
+          - 五角形の内角の和は何度だったかな。
+          - 全部から内角の和をひこう。
+        paths:
+          - [内角と外角の和は 180 × 5 = 900, 内角の和は 540, 900 − 540 = 360]
+    extra:
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="20.8" y1="41.9" x2="219.2" y2="41.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="20.8" y1="108.1" x2="219.2" y2="108.1" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="194.3,45.9 199.3,41.9 194.3,37.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="194.3,112.1 199.3,108.1 194.3,104.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="26.8" y="37.4" font-size="13" text-anchor="middle">ℓ</text><text x="26.8" y="103.7" font-size="13" text-anchor="middle">m</text><polygon points="144,41.9 65,108.1 175,108.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M129 41.9 A15 15 0 0 0 132.6 51.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.7" y="56" font-size="13" text-anchor="middle">40°</text><path d="M150.4 55.4 A15 15 0 0 0 159 41.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167.7" y="61.4" font-size="13" text-anchor="middle">65°</text><path d="M132.6 51.5 A15 15 0 0 0 150.4 55.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138" y="73.7" font-size="13" text-anchor="middle">x</text><text x="144" y="35.1" font-size="12" text-anchor="middle">A</text><text x="65" y="123.3" font-size="12" text-anchor="middle">B</text><text x="175" y="123.3" font-size="12" text-anchor="middle">C</text></svg>'
+        answer: 75
+        check: "180 - 40 - 65"
+        hints:
+          - A の所で、3 つの角は何をつくっているかな。
+          - 一直線は 180° だね。
+          - 180 から 40 と 65 をひこう。
+        paths:
+          - [ℓ の上で 40 + ∠x + 65 = 180, ∠x = 75]
+          - [∠B = 40°、∠C = 65°（錯角）, 三角形の内角の和から 75]
+      - part: 今日
+        text: 六角形の外角の和は何度ですか。
+        answer: 360
+        check: "180 * 6 - 180 * (6 - 2)"
+        hints:
+          - 6 つの頂点で、内角と外角を合わせると全部で何度かな。
+          - 六角形の内角の和は何度だったかな。
+          - 全部から内角の和をひこう。
+        paths:
+          - [180 × 6 = 1080, 1080 − 720 = 360]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.7" y1="135.2" x2="221.5" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="230.5" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M179.5 52.5 A13 13 0 0 0 202.2 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="197.8" y="70.5" font-size="12" text-anchor="middle">x</text><path d="M129.7 97.5 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="111.4" y="87.9" font-size="12" text-anchor="middle">138°</text></svg>'
+        answer: 138
+        check: "138"
+        hints:
+          - 2 つの角は、ℓ と m の内側にあるね。
+          - n をはさんで反対がわにあるかな。
+          - 平行線の錯角は等しいね。
+        paths:
+          - [∠x と 138° は錯角, 138°]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 図の三角形で、底辺の 2 つの角は等しい大きさです。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113.2 41.9 A16 16 0 0 0 126.8 41.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">50°</text><path d="M91.6 122.6 A16 16 0 0 0 82.4 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.2" y="112.1" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 65
+        check: "(180 - 50) // 2"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - 2 つの等しい角を合わせると何度かな。
+          - それを、等しい 2 つに分けよう。
+        paths:
+          - [180 − 50 = 130, 130 ÷ 2 = 65]
+      - part: 思い出す
+        text: 1 つの点のまわりに、3 本の線を引きました。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="65" x2="120" y2="10.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="65" x2="72.6" y2="92.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="65" x2="172.9" y2="79.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 48 A17 17 0 0 0 105.3 73.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86.2" y="49.7" font-size="12" text-anchor="middle">120°</text><path d="M100.9 76 A22 22 0 0 0 141.3 70.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="125.1" y="107.9" font-size="12" text-anchor="middle">135°</text><path d="M136.4 69.4 A17 17 0 0 0 120 48" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="150.9" y="45.5" font-size="12" text-anchor="middle">x</text><circle cx="120" cy="65" r="2.5" fill="currentColor"/></svg>'
+        answer: 105
+        check: "360 - 120 - 135"
+        hints:
+          - 1 つの点のまわりを 1 回転すると何度かな。
+          - 3 つの角を合わせると 1 回転だね。
+          - 360 から、わかっている 2 つの角をひこう。
+        paths:
+          - [120 + 135 = 255, 360 − 255 = 105]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="21.4" y1="39.7" x2="218.6" y2="39.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21.4" y1="110.3" x2="218.6" y2="110.3" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="193.9,43.7 198.9,39.7 193.9,35.7" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="193.9,114.3 198.9,110.3 193.9,106.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="27.4" y="35.3" font-size="13" text-anchor="middle">ℓ</text><text x="27.4" y="105.8" font-size="13" text-anchor="middle">m</text><polygon points="87.4,39.7 68.5,110.3 171.5,110.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M98.9 49.3 A15 15 0 0 0 102.4 39.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.7" y="53.8" font-size="13" text-anchor="middle">40°</text><path d="M83.5 110.3 A15 15 0 0 0 72.4 95.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.7" y="97.8" font-size="13" text-anchor="middle">75°</text><path d="M83.5 54.2 A15 15 0 0 0 98.9 49.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.8" y="71" font-size="13" text-anchor="middle">x</text><text x="87.4" y="32.9" font-size="12" text-anchor="middle">A</text><text x="68.5" y="125.5" font-size="12" text-anchor="middle">B</text><text x="171.5" y="125.5" font-size="12" text-anchor="middle">C</text></svg>'
+        answer: 65
+        check: "180 - 75 - 40"
+        hints:
+          - 40° の角と錯角になる、三角形の角はどれかな。
+          - ∠ACB は何度かな。
+          - 三角形の内角の和を使おう。
+        paths:
+          - [∠ACB = 40°（錯角）, ∠x = 180 − 75 − 40 = 65]
+      - part: 今日
+        text: 七角形の 7 つの内角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,26.7 84.4,43.8 75.6,82.4 100.2,113.3 139.8,113.3 164.4,82.4 155.6,43.8" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="26.7" x2="84.4" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.4" y1="43.8" x2="75.6" y2="82.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="82.4" x2="100.2" y2="113.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.2" y1="113.3" x2="139.8" y2="113.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.8" y1="113.3" x2="164.4" y2="82.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="82.4" x2="155.6" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="155.6" y1="43.8" x2="120" y2="26.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="26.7" x2="75.6" y2="82.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.7" x2="100.2" y2="113.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.7" x2="139.8" y2="113.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="26.7" x2="164.4" y2="82.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 900
+        check: "180 * (7 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引こう。
+          - 三角形はいくつできるかな。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 7 − 2 = 5 こ, 180 × 5 = 900]
+      - part: 今日
+        text: △ABC ≡ △DEF で、∠A = 45°、∠E = 80° です。∠F は何度ですか。
+        answer: 55
+        check: "180 - 45 - 80"
+        hints:
+          - ∠D と ∠E は、△ABC のどの角と等しいかな。
+          - △DEF の 2 つの角がわかれば、のこりの角も求められるね。
+          - ∠D = ∠A だね。
+        paths:
+          - [∠D = ∠A = 45°, ∠F = 180 − 45 − 80 = 55]
+      - part: 挑戦
+        text: 星形の 5 つの先の角 ∠a〜∠e の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polyline points="120,19.1 84.5,128.5 177.5,60.9 62.5,60.9 155.5,128.5 120,19.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M115.1 34.3 A16 16 0 0 0 124.9 34.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="51.6" font-size="13" text-anchor="middle">∠a</text><path d="M75.4 70.3 A16 16 0 0 0 78.5 60.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="89.1" y="74.1" font-size="13" text-anchor="middle">∠b</text><path d="M97.4 119 A16 16 0 0 0 89.4 113.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="100.9" y="110.3" font-size="13" text-anchor="middle">∠c</text><path d="M150.6 113.2 A16 16 0 0 0 142.6 119" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="139.1" y="110.3" font-size="13" text-anchor="middle">∠d</text><path d="M161.5 60.9 A16 16 0 0 0 164.6 70.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="150.9" y="74.1" font-size="13" text-anchor="middle">∠e</text></svg>'
+        answer: 180
+        check: "5 * (180 - 2 * 72)"
+        hints:
+          - ∠b と ∠e を 2 つの内角にもつ小さな三角形を見つけて、外角の性質を使おう。
+          - ∠a と ∠d も、同じように 1 つの角にまとめよう。
+          - まとめた 2 つの角と ∠c は、1 つの三角形の内角になっているかな。
+        paths:
+          - [∠b + ∠e を外角の性質で 1 つの角にまとめる, ∠a + ∠d も同じようにまとめる, その 2 つと ∠c で 1 つの三角形の内角, 180°]
+        note: どの星形でも 180°（図は正五角形からつくった星で、1 つの先は 36°）。先の角を分度器で測ってたすのは、確かめの例にすぎない。
+    extra:
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="39.8" x2="228" y2="39.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="100.2" x2="228" y2="100.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="45.9,43.8 50.9,39.8 45.9,35.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="45.9,104.2 50.9,100.2 45.9,96.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="20" y="35.3" font-size="13" text-anchor="middle">ℓ</text><text x="20" y="95.8" font-size="13" text-anchor="middle">m</text><line x1="84.5" y1="39.8" x2="167.6" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137.3" y1="100.2" x2="167.6" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M99.6 45.3 A16 16 0 0 0 100.5 39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="114.1" y="49.5" font-size="13" text-anchor="middle">20°</text><path d="M153.3 100.2 A16 16 0 0 0 148.7 88.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165.1" y="93.3" font-size="13" text-anchor="middle">45°</text><path d="M154.4 65.2 A14 14 0 0 0 157.7 79.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="142.2" y="80.2" font-size="13" text-anchor="middle">x</text><text x="84.5" y="34" font-size="12" text-anchor="middle">A</text><text x="137.3" y="114.4" font-size="12" text-anchor="middle">B</text><text x="177.6" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 65
+        check: "20 + 45"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は 2 つに分かれるね。
+          - それぞれの角は錯角で等しいね。
+        paths:
+          - [20 + 45 = 65]
+      - part: 今日
+        text: 四角形の外角の和は何度ですか。
+        answer: 360
+        check: "180 * 4 - 360"
+        hints:
+          - 4 つの頂点で、内角と外角を合わせると全部で何度かな。
+          - 四角形の内角の和は何度かな。
+          - 全部から内角の和をひこう。
+        paths:
+          - [180 × 4 = 720, 720 − 360 = 360]
+      - part: 今日
+        text: △ABM ≡ △DCM がいえたあと、AB = DC と書きました。この根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.5" y1="42.7" x2="152.7" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.3" y1="110.9" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.5" y1="42.7" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.7" y1="29.1" x2="87.3" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95" y1="51.9" x2="90.5" y2="60.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="149.5" y1="79.2" x2="145" y2="88.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="104.8,40.6 109.1,35.9 103.5,32.7" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="126.6,108.8 130.9,104.1 125.4,100.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="54.5" y="47.3" font-size="13" text-anchor="middle">A</text><text x="185.5" y="101.8" font-size="13" text-anchor="middle">D</text><text x="160.5" y="25.9" font-size="13" text-anchor="middle">B</text><text x="79.5" y="123.2" font-size="13" text-anchor="middle">C</text><text x="131" y="74.5" font-size="13" text-anchor="middle">M</text></svg>'
+        choices:
+          - 合同な図形の対応する辺は等しい
+          - 平行線の錯角は等しい
+          - 仮定
+        answer: 合同な図形の対応する辺は等しい
+        hints:
+          - AB と DC は、どちらの三角形の辺かな。
+          - ≡ の式で、AB と DC は対応しているかな。
+          - 合同な図形の、対応する辺はどうなるかな。
+        paths:
+          - [AB と DC は対応する辺, 合同な図形の対応する辺は等しい]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 2 直線が交わっています。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="23.7" y1="65" x2="216.2" y2="65" stroke="currentColor" stroke-width="2" fill="none"/><line x1="57.2" y1="117.7" x2="182.8" y2="12.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M132.3 54.7 A16 16 0 0 0 104 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="110.1" y="41.9" font-size="12" text-anchor="middle">x</text><path d="M107.7 75.3 A16 16 0 0 0 136 65" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129.9" y="96.5" font-size="12" text-anchor="middle">140°</text></svg>'
+        answer: 140
+        check: "140"
+        hints:
+          - ∠x と 140° は、向かい合っているかな。
+          - 向かい合う角を何というかな。
+          - 対頂角は等しいね。
+        paths:
+          - [対頂角, 140°]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.5" y1="135.2" x2="168.6" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="177.6" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M159.2 32.4 A13 13 0 0 0 140.1 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.8" y="27.5" font-size="12" text-anchor="middle">118°</text><path d="M126.1 94.7 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.6" y="89.8" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 118
+        check: "118"
+        hints:
+          - 2 つの角は、同じ位置にあるかな。
+          - 同じ位置の角を何というかな。
+          - 平行線の同位角は等しいね。
+        paths:
+          - [同位角, 118°]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.8" y1="135.2" x2="164.6" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="173.6" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M137.4 43.8 A13 13 0 0 0 144.7 55.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="60.8" font-size="12" text-anchor="middle">64°</text><path d="M125.7 94.5 A13 13 0 0 0 107 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.3" y="90" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 116
+        check: "180 - 64"
+        hints:
+          - ∠x のとなりの角を考えよう。
+          - そのとなりの角と 64° は、錯角だね。
+          - 一直線は 180° だね。
+        paths:
+          - [∠x のとなりは 64°（錯角）, 180 − 64 = 116]
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="21.2" y1="37.8" x2="218.8" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="21.2" y1="102.2" x2="218.8" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="51.8,41.8 56.8,37.8 51.8,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="51.8,106.2 56.8,102.2 51.8,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="29.2" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="29.2" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="98.5" y1="37.8" x2="154.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="131.8" y1="102.2" x2="154.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M112.4 45.8 A16 16 0 0 0 114.5 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127.5" y="50.1" font-size="13" text-anchor="middle">30°</text><path d="M147.8 102.2 A16 16 0 0 0 141 89.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="158.4" y="92.9" font-size="13" text-anchor="middle">55°</text><path d="M142.2 63 A14 14 0 0 0 146.3 81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129" y="80.2" font-size="13" text-anchor="middle">x</text><text x="98.5" y="32" font-size="12" text-anchor="middle">A</text><text x="131.8" y="116.4" font-size="12" text-anchor="middle">B</text><text x="164.3" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 85
+        check: "30 + 55"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は 2 つに分かれるね。
+          - それぞれの角は錯角で等しいね。
+        paths:
+          - [30 + 55 = 85]
+      - part: 今日
+        text: ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="129.3" y1="33.6" x2="46.6" y2="116.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.6" y1="116.4" x2="151.5" y2="116.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="151.5" y1="116.4" x2="129.3" y2="33.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="151.5" y1="116.4" x2="193.4" y2="116.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M118 44.9 A16 16 0 0 0 133.4 49.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122.1" y="65.2" font-size="13" text-anchor="middle">60°</text><path d="M62.6 116.4 A16 16 0 0 0 57.9 105.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="72.4" y="110.2" font-size="13" text-anchor="middle">45°</text><path d="M165.5 116.4 A14 14 0 0 0 147.9 102.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167.3" y="100.3" font-size="13" text-anchor="middle">x</text><text x="129.1" y="27.2" font-size="13" text-anchor="middle">A</text><text x="38.8" y="128.7" font-size="13" text-anchor="middle">B</text><text x="151.5" y="131.9" font-size="13" text-anchor="middle">C</text><text x="193.4" y="131.9" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 105
+        check: "60 + 45"
+        hints:
+          - ∠x は、頂点 C の外角だね。
+          - 外角は、となり合わない 2 つの内角の和だね。
+          - 60° と 45° をたそう。
+        paths:
+          - [60 + 45 = 105]
+      - part: 今日
+        text: 五角形の 5 つの内角の和は何度ですか。
+        answer: 540
+        check: "180 * (5 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引こう。
+          - 三角形はいくつできるかな。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 3 こ, 180 × 3 = 540]
+      - part: 今日
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.4" y1="81.5" x2="68.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.6" y1="91.5" x2="171.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M92.2 78 A12 12 0 0 0 88.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M89.3 75.2 A16 16 0 0 0 84.6 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M151.4 86.5 A12 12 0 0 0 147.8 78" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M155.4 86.5 A16 16 0 0 0 150.7 75.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">G</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">H</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">I</text><text x="182.4" y="37" font-size="13" text-anchor="middle">J</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">K</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">L</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 1 組の辺とその両端の角がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - しるしのある角は、その辺のどこにあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [HI = KL, その両端の角が等しい, 1 組の辺とその両端の角]
+      - part: 今日
+        text: 図で、AB ∥ CD、AM = DM ならば △ABM ≡ △DCM です。∠AMB = ∠DMC といえる根拠はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="65.5" y1="42.7" x2="152.7" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.3" y1="110.9" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.5" y1="42.7" x2="174.5" y2="97.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.7" y1="29.1" x2="87.3" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95" y1="51.9" x2="90.5" y2="60.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="149.5" y1="79.2" x2="145" y2="88.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="104.8,40.6 109.1,35.9 103.5,32.7" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="126.6,108.8 130.9,104.1 125.4,100.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="54.5" y="47.3" font-size="13" text-anchor="middle">A</text><text x="185.5" y="101.8" font-size="13" text-anchor="middle">D</text><text x="160.5" y="25.9" font-size="13" text-anchor="middle">B</text><text x="79.5" y="123.2" font-size="13" text-anchor="middle">C</text><text x="131" y="74.5" font-size="13" text-anchor="middle">M</text></svg>'
+        choices:
+          - 対頂角は等しい
+          - 平行線の錯角は等しい
+          - 仮定
+        answer: 対頂角は等しい
+        hints:
+          - ∠AMB と ∠DMC は、どこで交わる 2 直線の角かな。
+          - 2 つの角は向かい合っているかな。
+          - 向かい合う角を何というかな。
+        paths:
+          - [AD と BC が M で交わる, 対頂角は等しい]
+    extra:
+      - part: 今日
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.1" y1="135.2" x2="188.9" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="197.9" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M154 43.8 A13 13 0 0 0 159.1 54.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="145.5" y="58.8" font-size="12" text-anchor="middle">53°</text><path d="M133 106.2 A13 13 0 0 0 127.8 95.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141.5" y="99.6" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 53
+        check: "53"
+        hints:
+          - 2 つの角は、ℓ と m の内側にあるね。
+          - n をはさんで反対がわにあるかな。
+          - 平行線の錯角は等しいね。
+        paths:
+          - [錯角, 53°]
+      - part: 今日
+        text: 六角形の 6 つの内角の和は何度ですか。
+        answer: 720
+        check: "180 * (6 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引こう。
+          - 三角形はいくつできるかな。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 4 こ, 180 × 4 = 720]
+      - part: 今日
+        text: 図の 2 つの三角形は、AB = DE、AC = DF、∠B = ∠E です。正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="81.3" y1="47.3" x2="36.1" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="82.7" x2="97" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97" y1="82.7" x2="81.3" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.7" y1="47.3" x2="203.9" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="82.7" x2="174.3" y2="82.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="174.3" y1="82.7" x2="158.7" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="61.8" y1="68.9" x2="55.7" y2="61.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="184.3" y1="61.1" x2="178.2" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="92.9" y1="61.1" x2="83.8" y2="65.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="94.5" y1="64.8" x2="85.4" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="170.2" y1="61.1" x2="161.1" y2="65.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.8" y1="64.8" x2="162.7" y2="68.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 82.7 A14 14 0 0 0 47.2 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M192.8 74 A14 14 0 0 0 189.9 82.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.3" y="40.9" font-size="13" text-anchor="middle">A</text><text x="28.4" y="95" font-size="13" text-anchor="middle">B</text><text x="104.7" y="95" font-size="13" text-anchor="middle">C</text><text x="158.7" y="40.9" font-size="13" text-anchor="middle">D</text><text x="196.1" y="95" font-size="13" text-anchor="middle">E</text><text x="182" y="95" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 2 組の辺とその間の角がそれぞれ等しいので合同
+          - 1 組の辺とその両端の角がそれぞれ等しいので合同
+          - 合同とはいえない
+        answer: 合同とはいえない
+        hints:
+          - ∠B は、AB と AC の間の角かな。
+          - 合同条件のどれかに当たるかな。
+          - 図の 2 つは重ねられるかな。
+        paths:
+          - [∠B は等しい 2 辺の間の角ではない, 合同とはいえない]

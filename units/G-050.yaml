@@ -1,0 +1,791 @@
+# G-050 座標平面の入口（格子の点、4 象限、移動と対称、表から直線を描く）
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：x 軸、y 軸、原点 O、座標 (x, y)、x 座標、y 座標、格子の点（方眼の線が交わる所の点）、第 1〜第 4 象限、
+#   平行移動（向きを変えずにずらす）、x 軸について対称・y 軸について対称（軸で折って重なる）、原点 O のまわりに 180° 回す。
+# 前提は N-010（正負の数のたし算とひき算）と G-015（点の移動と図形の回転）。座標の計算は N-010 のたし算・ひき算だけにした。
+#   マイナスの数のかけ算（N-027）は前提にないので、表の x と y の関係は「y は x より 3 大きい」「x と y の和が 4」のような
+#   たし算・ひき算の形と、x が 0 以上のときの「y は x の 2 倍」までにした。比例・関数・傾きの言葉は使わない（後の単元）。
+#   長方形と三角形の面積は G-015 の前の G-008 の考え方で、格子の上の辺が軸に平行な形だけにした。
+# 答えの鍵盤：段 3 で地図に keys: [−] がないので「−」は打てない。座標の組と、マイナスの数になる答えは選ぶ問題にし、
+#   打つ答えは 0 以上の数（何目もり、y 座標、面積）にした。
+# 図は svg（D-040）。座標平面は 1 目もりごとの方眼に、目もりの数を書いた。表は 2 行の表の図。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 座標の読み方と 4 つの象限　2 日目 移動と対称（平行移動、x 軸・y 軸について対称、原点のまわりに 180°）
+#   3 日目 表の組を点に打ち、直線を引いて読む　4 日目 わけ（x 軸について対称、軸に平行な 2 点の間、180° 回す）
+#   5 日目 N-010（計算）・G-015（回転）と 1〜3 日目を混ぜる　6 日目 確認
+# check：座標の組は (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x の式, y の式)、象限は x と y の正負から名前を出す式、
+#   マイナスの数の答えは (lambda v: f'−{-v}' if v < 0 else f'{v}')(式)。直線の上の点を選ぶ問題は、選択肢の組を関係の式で調べる。
+#   軸の名前などの約束ごとを選ぶ問題には check を付けない。
+
+id: G-050
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 点の位置を、2 つの数の組で表そう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="174.6" cy="65.4" r="3.2" fill="currentColor"/><text x="181.7" y="62.5" font-size="12" text-anchor="middle">A</text><circle cx="47.1" cy="120" r="3.2" fill="currentColor"/><text x="40.1" y="131.3" font-size="12" text-anchor="middle">B</text><line x1="120" y1="101.8" x2="174.6" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="174.6" y1="101.8" x2="174.6" y2="65.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 横の数直線を x 軸、たての数直線を y 軸といい、2 つの軸が交わる点を原点 O といいます。点 A は、O から右へ 3、上へ 2 進んだ所にあるので、A の位置を (3, 2) と書きます。3 を A の x 座標、2 を A の y 座標といい、x 座標を先に書きます。左と下へ進むときは、マイナスの数を使います。点 B は O から左へ 4、下へ 1 進んだ所なので (−4, −1) です。O は (0, 0) です。方眼の線が交わる所の点を、格子の点といいます。また、2 つの軸で平面は 4 つに分かれ、右上を第 1 象限（しょうげん）、左上を第 2 象限、左下を第 3 象限、右下を第 4 象限といいます。
+      - part: 思い出す
+        text: (−3) + 7 はいくつですか。
+        answer: 4
+        check: "(-3) + 7"
+        hints:
+          - 数直線の −3 から始めよう。
+          - 7 をたすので、右へ 7 進もう。
+          - 0 までで何進んだかな。のこりはいくつ進むかな。
+        paths:
+          - [−3 から右へ 3 進むと 0, のこり 4 進んで 4]
+      - part: 思い出す
+        text: 2 − 6 はいくつですか。
+        choices: [−4, −2, 2, 4]
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 - 6)"
+        hints:
+          - 数直線の 2 から始めよう。
+          - 6 をひくので、左へ 6 進もう。
+          - 0 をこえて、さらに左へ行くね。
+        paths:
+          - [2 から左へ 2 進むと 0, のこり 4 進んで −4]
+        note: ひく数が大きいと 6 − 2 = 4 と入れかえやすい。
+      - part: 今日
+        text: 点 A の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="192.9" cy="83.6" r="3.2" fill="currentColor"/><text x="199.9" y="80.7" font-size="12" text-anchor="middle">A</text></svg>'
+        choices:
+          - (4, 1)
+          - (1, 4)
+          - (4, 0)
+          - (5, 1)
+        answer: (4, 1)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(4, 1)"
+        hints:
+          - 原点 O から、右へいくつ進むと A の真下に来るかな。
+          - そこから、上へいくつ進むかな。
+          - (右へ進んだ数, 上へ進んだ数) の順に書こう。
+        paths:
+          - [右へ 4, 上へ 1, "(4, 1)"]
+        note: x 座標と y 座標を入れかえて (1, 4) を選びやすい。「横が先、たてが後」と確かめる。
+      - part: 今日
+        text: 点 B の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="65.4" cy="65.4" r="3.2" fill="currentColor"/><text x="58.3" y="62.5" font-size="12" text-anchor="middle">B</text></svg>'
+        choices:
+          - (−3, 2)
+          - (3, 2)
+          - (2, −3)
+          - (−2, 3)
+        answer: (−3, 2)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-3, 2)"
+        hints:
+          - 原点 O から、B の真下まで、右と左のどちらへ進むかな。
+          - 左へ進んだときの x 座標は、マイナスの数だね。
+          - 次に、上へいくつ進むかな。
+        paths:
+          - [左へ 3 で x 座標は −3, 上へ 2 で y 座標は 2, "(−3, 2)"]
+      - part: 今日
+        text: 点 C は、どの象限にありますか。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="101.8" cy="174.6" r="3.2" fill="currentColor"/><text x="94.7" y="185.9" font-size="12" text-anchor="middle">C</text></svg>'
+        choices: [第 1 象限, 第 2 象限, 第 3 象限, 第 4 象限]
+        answer: 第 3 象限
+        check: "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(-1, -4)"
+        hints:
+          - C は、y 軸の右と左のどちらにあるかな。
+          - C は、x 軸の上と下のどちらにあるかな。
+          - 右上が第 1 象限で、そこから時計の針と反対の向きに、第 2、第 3、第 4 だよ。
+        paths:
+          - [y 軸の左で x 軸の下, 左下は第 3 象限]
+          - [C は (−1, −4), x 座標も y 座標もマイナス, 第 3 象限]
+      - part: 挑戦
+        text: x 座標と y 座標をたすと 1 になる格子の点のうち、x 座標が −2 の点はどれですか。
+        choices:
+          - (−2, 3)
+          - (−2, −1)
+          - (3, −2)
+          - (−2, 1)
+        answer: (−2, 3)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-2, 1 - (-2))"
+        hints:
+          - x 座標は −2 と決まっているね。
+          - (−2) + □ = 1 の □ をさがそう。
+          - 数直線で、−2 から 1 まで右へいくつ進むかな。
+        paths:
+          - [x 座標は −2, (−2) + □ = 1 の □ は −2 から 1 までの 3, "(−2, 3)"]
+        note: (3, −2) は x と y を入れかえた組。(−2, 1) は「たして 1」でなく y 座標を 1 にしてしまった組。
+    extra:
+      - part: 今日
+        text: 点 D の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="211.1" cy="138.2" r="3.2" fill="currentColor"/><text x="221.1" y="142.4" font-size="12" text-anchor="middle">D</text></svg>'
+        choices:
+          - (5, −2)
+          - (−2, 5)
+          - (5, 2)
+          - (−5, −2)
+        answer: (5, −2)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(5, -2)"
+        hints:
+          - 原点 O から、右へいくつ進むかな。
+          - 次に、上と下のどちらへ進むかな。
+          - 下へ進んだときの y 座標は、マイナスの数だね。
+        paths:
+          - [右へ 5, 下へ 2 で y 座標は −2, "(5, −2)"]
+      - part: 今日
+        text: 図の ア〜エ のうち、座標が (−2, −3) の点はどれですか。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="83.6" cy="156.4" r="3.2" fill="currentColor"/><text x="73.6" y="160.6" font-size="12" text-anchor="middle">ア</text><circle cx="65.4" cy="138.2" r="3.2" fill="currentColor"/><text x="55.4" y="142.4" font-size="12" text-anchor="middle">イ</text><circle cx="156.4" cy="156.4" r="3.2" fill="currentColor"/><text x="166.4" y="160.6" font-size="12" text-anchor="middle">ウ</text><circle cx="83.6" cy="47.1" r="3.2" fill="currentColor"/><text x="73.6" y="51.3" font-size="12" text-anchor="middle">エ</text></svg>'
+        choices: [ア, イ, ウ, エ]
+        answer: ア
+        check: "(lambda d: [k for k in d if d[k] == (-2, -3)][0])({'ア': (-2, -3), 'イ': (-3, -2), 'ウ': (2, -3), 'エ': (-2, 3)})"
+        hints:
+          - x 座標の −2 は、O から左と右のどちらへいくつかな。
+          - y 座標の −3 は、上と下のどちらへいくつかな。
+          - 左へ 2、下へ 3 の所にある点をさがそう。
+        paths:
+          - [左へ 2, 下へ 3, ア]
+        note: イ は x と y を入れかえた点。
+      - part: 今日
+        text: 点 (4, −3) は、どの象限にありますか。
+        choices: [第 1 象限, 第 2 象限, 第 3 象限, 第 4 象限]
+        answer: 第 4 象限
+        check: "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(4, -3)"
+        hints:
+          - x 座標の 4 は、y 軸の右と左のどちらかな。
+          - y 座標の −3 は、x 軸の上と下のどちらかな。
+          - 右下の象限の名前を思い出そう。
+        paths:
+          - [右へ 4、下へ 3, 右下は第 4 象限]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 点を動かしたり、軸で折ったりすると、座標はどう変わるでしょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="65.4" cy="83.6" r="3.2" fill="currentColor"/><text x="55.4" y="87.8" font-size="12" text-anchor="middle">A</text><circle cx="138.2" cy="47.1" r="3.2" fill="currentColor"/><text x="145.3" y="44.3" font-size="12" text-anchor="middle">P</text><line x1="65.4" y1="83.6" x2="138.2" y2="83.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="138.2" y1="83.6" x2="138.2" y2="47.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 点 A (−3, 1) を右へ 4、上へ 2 動かすと、点 P (1, 3) になります。右へ動かすと x 座標に動かした数をたし（(−3) + 4 = 1）、上へ動かすと y 座標にたします（1 + 2 = 3）。左と下へ動かすときは、動かした数をひきます。このように、向きを変えずにずらすことを平行移動といいます。また、x 軸で折って点 (2, 3) と重なる点 (2, −3) を「x 軸について対称な点」、y 軸で折って重なる点 (−2, 3) を「y 軸について対称な点」といいます。点 (2, 3) を原点 O のまわりに 180° 回すと、(−2, −3) になります。
+      - part: 思い出す
+        text: 点 B の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="47.1" cy="47.1" r="3.2" fill="currentColor"/><text x="54.2" y="44.3" font-size="12" text-anchor="middle">B</text></svg>'
+        choices:
+          - (−4, 3)
+          - (3, −4)
+          - (4, 3)
+          - (−4, −3)
+        answer: (−4, 3)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-4, 3)"
+        hints:
+          - 原点 O から、左へいくつ進むかな。
+          - 次に、上へいくつ進むかな。
+          - 左へ進んだときの x 座標は、マイナスの数だね。
+        paths:
+          - [左へ 4, 上へ 3, "(−4, 3)"]
+      - part: 思い出す
+        text: (−5) + 3 はいくつですか。
+        choices: [−8, −2, 2, 8]
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((-5) + 3)"
+        hints:
+          - 数直線の −5 から始めよう。
+          - 3 をたすので、右へ 3 進もう。
+          - 0 まで行くかな。
+        paths:
+          - [−5 から右へ 3, −2]
+      - part: 今日
+        text: 点 A を右へ 5、下へ 4 動かした点の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="83.6" cy="47.1" r="3.2" fill="currentColor"/><text x="76.5" y="44.3" font-size="12" text-anchor="middle">A</text></svg>'
+        choices:
+          - (3, −1)
+          - (−7, 7)
+          - (3, 7)
+          - (−1, 3)
+        answer: (3, −1)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-2 + 5, 3 - 4)"
+        hints:
+          - まず、A の座標を読もう。
+          - 右へ動かすと x 座標はふえ、下へ動かすと y 座標はへるね。
+          - (−2) + 5 と 3 − 4 を計算しよう。
+        paths:
+          - ["A は (−2, 3)", x 座標は (−2) + 5 = 3, y 座標は 3 − 4 = −1, "(3, −1)"]
+          - [方眼の上で、A から右へ 5 目もり、下へ 4 目もり数える]
+        note: 右と左、上と下で、たすかひくかを取りちがえやすい。方眼を指でたどって確かめる。
+      - part: 今日
+        text: 点 B と、x 軸について対称な点の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="192.9" cy="120" r="3.2" fill="currentColor"/><text x="199.9" y="131.3" font-size="12" text-anchor="middle">B</text></svg>'
+        choices:
+          - (4, 1)
+          - (−4, −1)
+          - (−4, 1)
+          - (−1, 4)
+        answer: (4, 1)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(4, -1)"
+        hints:
+          - x 軸で紙を折ると、B はどこに重なるかな。
+          - x 軸で折っても、横の位置は変わらないね。
+          - B は x 軸から下へ 1。折ると、x 軸からどちらへ 1 かな。
+        paths:
+          - ["B は (4, −1)", x 軸で折ると横の位置はそのまま, x 軸の下 1 が上 1 になる, "(4, 1)"]
+        note: y 軸について対称な点 (−4, −1) と取りちがえやすい。「どの軸で折るか」を指で確かめる。
+      - part: 今日
+        text: 点 C を、原点 O のまわりに 180° 回した点の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="65.4" cy="138.2" r="3.2" fill="currentColor"/><text x="58.3" y="149.5" font-size="12" text-anchor="middle">C</text></svg>'
+        choices:
+          - (3, 2)
+          - (−3, 2)
+          - (3, −2)
+          - (2, 3)
+        answer: (3, 2)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(-3, -2)"
+        hints:
+          - C と O を結ぶ線を、O の先までのばしてみよう。
+          - 180° 回すと、C は O をはさんで反対がわの、同じ遠さの所に来るね。
+          - O から左へ 3、下へ 2 の点は、回すとどちらへいくつになるかな。
+        paths:
+          - [C は O から左へ 3、下へ 2, 180° 回すと右へ 3、上へ 2, "(3, 2)"]
+      - part: 挑戦
+        text: 点 P を右へ 3、上へ 1 動かすと、(1, −2) になりました。もとの点 P の座標を選びましょう。
+        choices:
+          - (−2, −3)
+          - (4, −1)
+          - (−2, −1)
+          - (4, −3)
+        answer: (−2, −3)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(1 - 3, -2 - 1)"
+        hints:
+          - 動かした後の点から、もとにもどすには、どう動かせばよいかな。
+          - 右へ 3 の反対は左へ 3、上へ 1 の反対は下へ 1 だね。
+          - 1 − 3 と (−2) − 1 を計算しよう。
+        paths:
+          - [もどすには左へ 3、下へ 1, x 座標は 1 − 3 = −2, y 座標は (−2) − 1 = −3, "(−2, −3)"]
+        note: (4, −1) は、もとにもどさずに、さらに右へ 3、上へ 1 動かした点。
+    extra:
+      - part: 今日
+        text: 点 (0, −4) を左へ 2、上へ 6 動かした点の座標を選びましょう。
+        choices:
+          - (−2, 2)
+          - (2, 2)
+          - (−2, −10)
+          - (6, −2)
+        answer: (−2, 2)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(0 - 2, -4 + 6)"
+        hints:
+          - 左へ動かすと、x 座標はどうなるかな。
+          - 上へ動かすと、y 座標はどうなるかな。
+          - 0 − 2 と (−4) + 6 を計算しよう。
+        paths:
+          - [x 座標は 0 − 2 = −2, y 座標は (−4) + 6 = 2, "(−2, 2)"]
+      - part: 今日
+        text: 点 (5, 2) と、y 軸について対称な点の座標を選びましょう。
+        choices:
+          - (−5, 2)
+          - (5, −2)
+          - (−5, −2)
+          - (2, 5)
+        answer: (−5, 2)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(5, 2)"
+        hints:
+          - y 軸で紙を折ると、点はどこに重なるかな。
+          - y 軸で折っても、たての位置は変わらないね。
+          - 点は y 軸から右へ 5。折ると、y 軸からどちらへ 5 かな。
+        paths:
+          - [たての位置はそのまま, 右へ 5 が左へ 5 になる, "(−5, 2)"]
+      - part: 今日
+        text: 点 A を右へ動かして、点 B に重ねます。右へ何目もり動かしますか。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="65.4" cy="28.9" r="3.2" fill="currentColor"/><text x="65.4" y="43.1" font-size="12" text-anchor="middle">A</text><circle cx="156.4" cy="28.9" r="3.2" fill="currentColor"/><text x="156.4" y="43.1" font-size="12" text-anchor="middle">B</text></svg>'
+        answer: 5
+        check: "2 - (-3)"
+        hints:
+          - A と B は、同じ高さにあるね。
+          - A から y 軸まで、何目もりかな。
+          - y 軸から B までの目もりとあわせよう。
+        paths:
+          - [A から y 軸まで 3, y 軸から B まで 2, 3 + 2 = 5]
+          - [x 座標のちがい, 2 − (−3) = 5]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 表の x と y の組を点にして、座標平面に打とう。
+        svg: '<svg viewBox="0 0 240 284" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="216" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="12" y1="30" x2="228" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48" y1="6" x2="48" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="84" y1="6" x2="84" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="6" x2="120" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="156" y1="6" x2="156" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="192" y1="6" x2="192" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="30" y="22.6" font-size="13" text-anchor="middle">x</text><text x="66" y="22.6" font-size="13" text-anchor="middle">−2</text><text x="102" y="22.6" font-size="13" text-anchor="middle">−1</text><text x="138" y="22.6" font-size="13" text-anchor="middle">0</text><text x="174" y="22.6" font-size="13" text-anchor="middle">1</text><text x="210" y="22.6" font-size="13" text-anchor="middle">2</text><text x="30" y="46.5" font-size="13" text-anchor="middle">y</text><text x="66" y="46.5" font-size="13" text-anchor="middle">1</text><text x="102" y="46.5" font-size="13" text-anchor="middle">2</text><text x="138" y="46.5" font-size="13" text-anchor="middle">3</text><text x="174" y="46.5" font-size="13" text-anchor="middle">4</text><text x="210" y="46.5" font-size="13" text-anchor="middle">5</text><g transform="translate(0,64)"><line x1="50" y1="190" x2="50" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="190" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="190" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="190" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="190" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="190" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="190" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="190" y1="190" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="190" x2="190" y2="190" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="170" x2="190" y2="170" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="130" x2="190" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="110" x2="190" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="90" x2="190" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="70" x2="190" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="50" x2="190" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="30" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="170" x2="201" y2="170" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="195,166 201,170 195,174" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="165.2" font-size="12" text-anchor="middle">x</text><line x1="110" y1="200" x2="110" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="106,25 110,19 114,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="27.2" font-size="12" text-anchor="middle">y</text><text x="103" y="183.5" font-size="10" text-anchor="middle">O</text><text x="50" y="183.2" font-size="9" text-anchor="middle">−3</text><text x="70" y="183.2" font-size="9" text-anchor="middle">−2</text><text x="90" y="183.2" font-size="9" text-anchor="middle">−1</text><text x="130" y="183.2" font-size="9" text-anchor="middle">1</text><text x="150" y="183.2" font-size="9" text-anchor="middle">2</text><text x="170" y="183.2" font-size="9" text-anchor="middle">3</text><text x="190" y="183.2" font-size="9" text-anchor="middle">4</text><text x="102" y="193.2" font-size="9" text-anchor="middle">−1</text><text x="102" y="153.2" font-size="9" text-anchor="middle">1</text><text x="102" y="133.2" font-size="9" text-anchor="middle">2</text><text x="102" y="113.2" font-size="9" text-anchor="middle">3</text><text x="102" y="93.2" font-size="9" text-anchor="middle">4</text><text x="102" y="73.2" font-size="9" text-anchor="middle">5</text><text x="102" y="53.1" font-size="9" text-anchor="middle">6</text><text x="102" y="33.1" font-size="9" text-anchor="middle">7</text><line x1="38" y1="182" x2="202" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="70" cy="150" r="3" fill="currentColor"/><circle cx="90" cy="130" r="3" fill="currentColor"/><circle cx="110" cy="110" r="3" fill="currentColor"/><circle cx="130" cy="90" r="3" fill="currentColor"/><circle cx="150" cy="70" r="3" fill="currentColor"/></g></svg>'
+        explain: 表の x と y の組 (−2, 1)、(−1, 2)、(0, 3)、(1, 4)、(2, 5) を点で打つと、点が一直線にならびます。点を通る直線を引くと、表にない x のときの y も、直線から読めます。たとえば x が 3 のときは、直線の上の点 (3, 6) から、y は 6 です。この表では、y はいつも x より 3 大きくなっています。直線が y 軸と交わる点は (0, 3) です。
+      - part: 思い出す
+        text: 点 (1, 2) を左へ 4、下へ 3 動かした点の座標を選びましょう。
+        choices:
+          - (−3, −1)
+          - (5, 5)
+          - (−3, 5)
+          - (5, −1)
+        answer: (−3, −1)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(1 - 4, 2 - 3)"
+        hints:
+          - 左へ動かすと、x 座標はどうなるかな。
+          - 下へ動かすと、y 座標はどうなるかな。
+          - 1 − 4 と 2 − 3 を計算しよう。
+        paths:
+          - [x 座標は 1 − 4 = −3, y 座標は 2 − 3 = −1, "(−3, −1)"]
+      - part: 思い出す
+        text: 点 (−2, 5) は、どの象限にありますか。
+        choices: [第 1 象限, 第 2 象限, 第 3 象限, 第 4 象限]
+        answer: 第 2 象限
+        check: "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(-2, 5)"
+        hints:
+          - x 座標の −2 は、y 軸の右と左のどちらかな。
+          - y 座標の 5 は、x 軸の上と下のどちらかな。
+          - 左上の象限の名前を思い出そう。
+        paths:
+          - [左へ 2、上へ 5, 左上は第 2 象限]
+      - part: 今日
+        text: 表の点を打って、点を通る直線を引きました。x が 4 のとき、y はいくつですか。
+        svg: '<svg viewBox="0 0 240 304" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="6" width="180" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="30" y1="30" x2="210" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="6" x2="66" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="102" y1="6" x2="102" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="138" y1="6" x2="138" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="174" y1="6" x2="174" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="22.6" font-size="13" text-anchor="middle">x</text><text x="84" y="22.6" font-size="13" text-anchor="middle">0</text><text x="120" y="22.6" font-size="13" text-anchor="middle">1</text><text x="156" y="22.6" font-size="13" text-anchor="middle">2</text><text x="192" y="22.6" font-size="13" text-anchor="middle">3</text><text x="48" y="46.5" font-size="13" text-anchor="middle">y</text><text x="84" y="46.5" font-size="13" text-anchor="middle">0</text><text x="120" y="46.5" font-size="13" text-anchor="middle">2</text><text x="156" y="46.5" font-size="13" text-anchor="middle">4</text><text x="192" y="46.5" font-size="13" text-anchor="middle">6</text><g transform="translate(0,64)"><line x1="70" y1="210" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="210" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="210" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="210" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="210" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="210" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="210" x2="170" y2="210" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="190" x2="170" y2="190" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="170" x2="170" y2="170" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="150" x2="170" y2="150" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="130" x2="170" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="110" x2="170" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="90" x2="170" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="70" x2="170" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="50" x2="170" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="30" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="60" y1="210" x2="181" y2="210" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="175,206 181,210 175,214" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="178" y="205.2" font-size="12" text-anchor="middle">x</text><line x1="70" y1="220" x2="70" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="66,25 70,19 74,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="80" y="27.2" font-size="12" text-anchor="middle">y</text><text x="63" y="223.5" font-size="10" text-anchor="middle">O</text><text x="90" y="223.2" font-size="9" text-anchor="middle">1</text><text x="110" y="223.2" font-size="9" text-anchor="middle">2</text><text x="130" y="223.2" font-size="9" text-anchor="middle">3</text><text x="150" y="223.2" font-size="9" text-anchor="middle">4</text><text x="170" y="223.2" font-size="9" text-anchor="middle">5</text><text x="62" y="193.2" font-size="9" text-anchor="middle">1</text><text x="62" y="173.2" font-size="9" text-anchor="middle">2</text><text x="62" y="153.2" font-size="9" text-anchor="middle">3</text><text x="62" y="133.2" font-size="9" text-anchor="middle">4</text><text x="62" y="113.2" font-size="9" text-anchor="middle">5</text><text x="62" y="93.2" font-size="9" text-anchor="middle">6</text><text x="62" y="73.2" font-size="9" text-anchor="middle">7</text><text x="62" y="53.1" font-size="9" text-anchor="middle">8</text><text x="62" y="33.1" font-size="9" text-anchor="middle">9</text><line x1="64" y1="222" x2="166" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="70" cy="210" r="3" fill="currentColor"/><circle cx="90" cy="170" r="3" fill="currentColor"/><circle cx="110" cy="130" r="3" fill="currentColor"/><circle cx="130" cy="90" r="3" fill="currentColor"/></g></svg>'
+        answer: 8
+        check: "2 * 4"
+        hints:
+          - 表で、x が 1 ふえると、y はいくつふえるかな。
+          - 直線を、x が 4 の所までのばそう。
+          - x が 4 の所で、直線の上の点の y 座標を読もう。
+        paths:
+          - [x が 1 ふえると y は 2 ふえる, x が 3 で y は 6, x が 4 で y は 8]
+          - [y はいつも x の 2 倍, 4 × 2 = 8]
+      - part: 今日
+        text: 表の点を通る直線は、x 軸とどこで交わりますか。交わる点の x 座標を答えましょう。
+        svg: '<svg viewBox="0 0 240 264" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="216" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="12" y1="30" x2="228" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48" y1="6" x2="48" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="84" y1="6" x2="84" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="6" x2="120" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="156" y1="6" x2="156" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="192" y1="6" x2="192" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="30" y="22.6" font-size="13" text-anchor="middle">x</text><text x="66" y="22.6" font-size="13" text-anchor="middle">−1</text><text x="102" y="22.6" font-size="13" text-anchor="middle">0</text><text x="138" y="22.6" font-size="13" text-anchor="middle">1</text><text x="174" y="22.6" font-size="13" text-anchor="middle">2</text><text x="210" y="22.6" font-size="13" text-anchor="middle">3</text><text x="30" y="46.5" font-size="13" text-anchor="middle">y</text><text x="66" y="46.5" font-size="13" text-anchor="middle">5</text><text x="102" y="46.5" font-size="13" text-anchor="middle">4</text><text x="138" y="46.5" font-size="13" text-anchor="middle">3</text><text x="174" y="46.5" font-size="13" text-anchor="middle">2</text><text x="210" y="46.5" font-size="13" text-anchor="middle">1</text><g transform="translate(0,64)"><line x1="50" y1="170" x2="50" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="170" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="170" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="170" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="170" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="170" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="170" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="190" y1="170" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="170" x2="190" y2="170" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="130" x2="190" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="110" x2="190" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="90" x2="190" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="70" x2="190" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="50" x2="190" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="30" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="150" x2="201" y2="150" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="195,146 201,150 195,154" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="145.2" font-size="12" text-anchor="middle">x</text><line x1="90" y1="180" x2="90" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,25 90,19 94,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="100" y="27.2" font-size="12" text-anchor="middle">y</text><text x="83" y="163.5" font-size="10" text-anchor="middle">O</text><text x="50" y="163.2" font-size="9" text-anchor="middle">−2</text><text x="70" y="163.2" font-size="9" text-anchor="middle">−1</text><text x="110" y="163.2" font-size="9" text-anchor="middle">1</text><text x="130" y="163.2" font-size="9" text-anchor="middle">2</text><text x="150" y="163.2" font-size="9" text-anchor="middle">3</text><text x="170" y="163.2" font-size="9" text-anchor="middle">4</text><text x="190" y="163.2" font-size="9" text-anchor="middle">5</text><text x="82" y="173.2" font-size="9" text-anchor="middle">−1</text><text x="82" y="133.2" font-size="9" text-anchor="middle">1</text><text x="82" y="113.2" font-size="9" text-anchor="middle">2</text><text x="82" y="93.2" font-size="9" text-anchor="middle">3</text><text x="82" y="73.2" font-size="9" text-anchor="middle">4</text><text x="82" y="53.1" font-size="9" text-anchor="middle">5</text><text x="82" y="33.1" font-size="9" text-anchor="middle">6</text><line x1="38" y1="18" x2="202" y2="182" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="70" cy="50" r="3" fill="currentColor"/><circle cx="90" cy="70" r="3" fill="currentColor"/><circle cx="110" cy="90" r="3" fill="currentColor"/><circle cx="130" cy="110" r="3" fill="currentColor"/><circle cx="150" cy="130" r="3" fill="currentColor"/></g></svg>'
+        answer: 4
+        check: "4 - 0"
+        hints:
+          - x 軸の上の点は、y 座標がいくつかな。
+          - 表で、x が 1 ふえると、y はいくつへるかな。
+          - 表の x と y をたすと、いつもいくつになるかな。
+        paths:
+          - [x 軸の上では y は 0, x と y の和はいつも 4, x は 4 − 0 = 4]
+          - [直線を x 軸までのばして読む, 4]
+        note: x 軸と交わる点は「y が 0 の点」。表にない点を、きまりか直線から求める。
+      - part: 今日
+        text: 下の表の点を通る直線の上にある点はどれですか。
+        svg: '<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="216" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="12" y1="30" x2="228" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48" y1="6" x2="48" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="84" y1="6" x2="84" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="6" x2="120" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="156" y1="6" x2="156" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="192" y1="6" x2="192" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="30" y="22.6" font-size="13" text-anchor="middle">x</text><text x="66" y="22.6" font-size="13" text-anchor="middle">0</text><text x="102" y="22.6" font-size="13" text-anchor="middle">1</text><text x="138" y="22.6" font-size="13" text-anchor="middle">2</text><text x="174" y="22.6" font-size="13" text-anchor="middle">3</text><text x="210" y="22.6" font-size="13" text-anchor="middle">4</text><text x="30" y="46.5" font-size="13" text-anchor="middle">y</text><text x="66" y="46.5" font-size="13" text-anchor="middle">−2</text><text x="102" y="46.5" font-size="13" text-anchor="middle">−1</text><text x="138" y="46.5" font-size="13" text-anchor="middle">0</text><text x="174" y="46.5" font-size="13" text-anchor="middle">1</text><text x="210" y="46.5" font-size="13" text-anchor="middle">2</text></svg>'
+        choices:
+          - (5, 3)
+          - (3, 5)
+          - (−1, 1)
+          - (2, 2)
+        answer: (5, 3)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(*[c for c in [(5, 3), (3, 5), (-1, 1), (2, 2)] if c[1] == c[0] - 2][0])"
+        hints:
+          - 表で、y は x よりいくつ大きいかな、小さいかな。
+          - 選んだ点の x と y が、そのきまりに合うか調べよう。
+          - x が 5 のとき、y はいくつになるかな。
+        paths:
+          - [y はいつも x より 2 小さい, "(5, 3) は 5 − 2 = 3 で合う"]
+          - [表の点を打って直線をのばし、通る点を読む]
+        note: (3, 5) は x と y を入れかえた組。(−1, 1) は、x が −1 のとき y は (−1) − 2 = −3 なので通らない。
+      - part: 挑戦
+        text: x と y の和がいつも 2 になるように、表をつくります。x が −3 のとき、y はいくつですか。
+        svg: '<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="216" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="12" y1="30" x2="228" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48" y1="6" x2="48" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="84" y1="6" x2="84" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="6" x2="120" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="156" y1="6" x2="156" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="192" y1="6" x2="192" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="30" y="22.6" font-size="13" text-anchor="middle">x</text><text x="66" y="22.6" font-size="13" text-anchor="middle">−3</text><text x="102" y="22.6" font-size="13" text-anchor="middle">−2</text><text x="138" y="22.6" font-size="13" text-anchor="middle">−1</text><text x="174" y="22.6" font-size="13" text-anchor="middle">0</text><text x="210" y="22.6" font-size="13" text-anchor="middle">1</text><text x="30" y="46.5" font-size="13" text-anchor="middle">y</text><text x="66" y="46.5" font-size="13" text-anchor="middle">□</text><text x="102" y="46.5" font-size="13" text-anchor="middle">4</text><text x="138" y="46.5" font-size="13" text-anchor="middle">3</text><text x="174" y="46.5" font-size="13" text-anchor="middle">2</text><text x="210" y="46.5" font-size="13" text-anchor="middle">1</text></svg>'
+        answer: 5
+        check: "2 - (-3)"
+        hints:
+          - (−3) + □ = 2 の □ をさがそう。
+          - 表で、x が 1 へると、y はいくつふえるかな。
+          - x が −2 のとき y は 4 だね。そこから 1 つ左を考えよう。
+        paths:
+          - [(−3) + □ = 2, □ は −3 から 2 まで右へ 5, 5]
+          - [x が 1 へると y が 1 ふえる, 4 + 1 = 5]
+    extra:
+      - part: 今日
+        text: 表の点を通る直線は、y 軸とどこで交わりますか。交わる点の y 座標を答えましょう。
+        svg: '<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="6" width="180" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="30" y1="30" x2="210" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="6" x2="66" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="102" y1="6" x2="102" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="138" y1="6" x2="138" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="174" y1="6" x2="174" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="22.6" font-size="13" text-anchor="middle">x</text><text x="84" y="22.6" font-size="13" text-anchor="middle">1</text><text x="120" y="22.6" font-size="13" text-anchor="middle">2</text><text x="156" y="22.6" font-size="13" text-anchor="middle">3</text><text x="192" y="22.6" font-size="13" text-anchor="middle">4</text><text x="48" y="46.5" font-size="13" text-anchor="middle">y</text><text x="84" y="46.5" font-size="13" text-anchor="middle">4</text><text x="120" y="46.5" font-size="13" text-anchor="middle">5</text><text x="156" y="46.5" font-size="13" text-anchor="middle">6</text><text x="192" y="46.5" font-size="13" text-anchor="middle">7</text></svg>'
+        answer: 3
+        check: "4 - 1"
+        hints:
+          - y 軸の上の点は、x 座標がいくつかな。
+          - 表で、x が 1 へると、y はいくつへるかな。
+          - x が 1 から 0 になると、y はいくつになるかな。
+        paths:
+          - [y はいつも x より 3 大きい, x が 0 のとき y は 3]
+      - part: 今日
+        text: 表の点を通る直線の上で、x が 3 のとき、y はいくつですか。
+        svg: '<svg viewBox="0 0 240 264" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="6" width="180" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="30" y1="30" x2="210" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="6" x2="66" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="102" y1="6" x2="102" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="138" y1="6" x2="138" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="174" y1="6" x2="174" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="22.6" font-size="13" text-anchor="middle">x</text><text x="84" y="22.6" font-size="13" text-anchor="middle">−2</text><text x="120" y="22.6" font-size="13" text-anchor="middle">−1</text><text x="156" y="22.6" font-size="13" text-anchor="middle">0</text><text x="192" y="22.6" font-size="13" text-anchor="middle">1</text><text x="48" y="46.5" font-size="13" text-anchor="middle">y</text><text x="84" y="46.5" font-size="13" text-anchor="middle">−4</text><text x="120" y="46.5" font-size="13" text-anchor="middle">−3</text><text x="156" y="46.5" font-size="13" text-anchor="middle">−2</text><text x="192" y="46.5" font-size="13" text-anchor="middle">−1</text><g transform="translate(0,64)"><line x1="50" y1="170" x2="50" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="170" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="170" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="170" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="170" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="170" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="170" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="190" y1="170" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="170" x2="190" y2="170" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="150" x2="190" y2="150" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="130" x2="190" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="110" x2="190" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="90" x2="190" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="70" x2="190" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="50" x2="190" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="50" y1="30" x2="190" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="70" x2="201" y2="70" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="195,66 201,70 195,74" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="65.2" font-size="12" text-anchor="middle">x</text><line x1="110" y1="180" x2="110" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="106,25 110,19 114,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="27.2" font-size="12" text-anchor="middle">y</text><text x="103" y="83.5" font-size="10" text-anchor="middle">O</text><text x="50" y="83.2" font-size="9" text-anchor="middle">−3</text><text x="70" y="83.2" font-size="9" text-anchor="middle">−2</text><text x="90" y="83.2" font-size="9" text-anchor="middle">−1</text><text x="130" y="83.2" font-size="9" text-anchor="middle">1</text><text x="150" y="83.2" font-size="9" text-anchor="middle">2</text><text x="170" y="83.2" font-size="9" text-anchor="middle">3</text><text x="190" y="83.2" font-size="9" text-anchor="middle">4</text><text x="102" y="173.2" font-size="9" text-anchor="middle">−5</text><text x="102" y="153.2" font-size="9" text-anchor="middle">−4</text><text x="102" y="133.2" font-size="9" text-anchor="middle">−3</text><text x="102" y="113.2" font-size="9" text-anchor="middle">−2</text><text x="102" y="93.2" font-size="9" text-anchor="middle">−1</text><text x="102" y="53.1" font-size="9" text-anchor="middle">1</text><text x="102" y="33.1" font-size="9" text-anchor="middle">2</text><line x1="38" y1="182" x2="202" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="70" cy="150" r="3" fill="currentColor"/><circle cx="90" cy="130" r="3" fill="currentColor"/><circle cx="110" cy="110" r="3" fill="currentColor"/><circle cx="130" cy="90" r="3" fill="currentColor"/></g></svg>'
+        answer: 1
+        check: "3 - 2"
+        hints:
+          - 表で、x が 1 ふえると、y はいくつふえるかな。
+          - y は x より、いくつ小さいかな。
+          - 直線を x が 3 の所までのばして読んでもよいよ。
+        paths:
+          - [y はいつも x より 2 小さい, 3 − 2 = 1]
+      - part: 今日
+        text: y がいつも x より 1 大きい表の点を通る直線があります。この直線の上にない点はどれですか。
+        choices:
+          - (1, 0)
+          - (−3, −2)
+          - (0, 1)
+          - (2, 3)
+        answer: (1, 0)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(*[c for c in [(1, 0), (-3, -2), (0, 1), (2, 3)] if c[1] != c[0] + 1][0])"
+        hints:
+          - 1 つずつ、y が x より 1 大きいかを調べよう。
+          - (−3, −2) は、(−3) + 1 を計算しよう。
+          - y が x より小さい点はどれかな。
+        paths:
+          - ["(1, 0) は y が x より 1 小さい", 直線の上にない]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 点 P (3, 2) と x 軸について対称な点 Q は (3, −2) です。x 座標は同じで、y 座標が −2 になるのはなぜですか。図を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="174.6" cy="65.4" r="3.2" fill="currentColor"/><text x="184.6" y="69.6" font-size="12" text-anchor="middle">P</text><circle cx="174.6" cy="138.2" r="3.2" fill="currentColor"/><text x="184.6" y="142.4" font-size="12" text-anchor="middle">Q</text><line x1="174.6" y1="65.4" x2="174.6" y2="138.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="174.6,95.8 180.6,95.8 180.6,101.8" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 例：「x 軸で折ると、P は Q に重なる。折っても横の位置は変わらないので、x 座標は 3 のまま。P は x 軸から上へ 2 の所にあり、折ると x 軸から下へ 2 の所に移る。下へ 2 は −2 なので、Q は (3, −2)。」と書ければよい。① 横の位置は変わらない、② x 軸からの遠さは同じ 2、③ 上が下になるのでマイナスの数になる、の 3 点を見る。ほかの点（(−1, 4) など）でも同じになるか、1 つ試させるとよい。PQ が x 軸と直角に交わることに気づけばなおよい。
+        hints:
+          - x 軸で折ると、点は横に動くかな。
+          - P は、x 軸からどれだけはなれているかな。
+          - 折ると、x 軸の上にあった点は、どちらへ行くかな。
+        paths:
+          - [折っても横の位置はそのまま, x 軸からの遠さは 2 のまま, 上の 2 が下の 2 になる, "(3, −2)"]
+      - part: わけ
+        text: 2 点 A (−2, 1)、B (3, 1) の間は 5 目もりです。これが 3 − (−2) で求められるのはなぜですか。図を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><line x1="83.6" y1="83.6" x2="174.6" y2="83.6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="83.6" cy="83.6" r="3.2" fill="currentColor"/><text x="83.6" y="77.8" font-size="12" text-anchor="middle">A</text><circle cx="174.6" cy="83.6" r="3.2" fill="currentColor"/><text x="174.6" y="77.8" font-size="12" text-anchor="middle">B</text></svg>'
+        explain: 例：「A から y 軸までは 2 目もり、y 軸から B までは 3 目もりで、あわせて 2 + 3 = 5 目もり。3 − (−2) は『−2 から 3 までいくつ』というちがいなので、同じ 5 になる。」と書ければよい。N-010 でひき算を「ちがい」と見たことにつなげる。① 0（y 軸）で 2 つに分ける、② ひき算は 2 つの数のちがい、の 2 点を見る。y 座標が同じでない 2 点（ななめの線）では、このひき算だけでは長さが出ないことにも触れる。
+        hints:
+          - A から y 軸まで、何目もりかな。
+          - y 軸から B までは、何目もりかな。
+          - ひき算 3 − (−2) は、どの数とどの数のちがいかな。
+        paths:
+          - [A から y 軸まで 2, y 軸から B まで 3, 2 + 3 = 5, 3 − (−2) は −2 から 3 までのちがいで 5]
+      - part: わけ
+        text: 点 (4, 1) を原点 O のまわりに 180° 回すと、(−4, −1) になります。x 座標も y 座標もマイナスの数に変わるのはなぜですか。例を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="192.9" cy="83.6" r="3.2" fill="currentColor"/><text x="199.9" y="80.7" font-size="12" text-anchor="middle">P</text><circle cx="47.1" cy="120" r="3.2" fill="currentColor"/><text x="40.1" y="131.3" font-size="12" text-anchor="middle">R</text><line x1="192.9" y1="83.6" x2="47.1" y2="120" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 例：「180° 回すと、点は O をはさんで反対がわの、O から同じ遠さの所に移る。O から右へ 4、上へ 1 の点は、左へ 4、下へ 1 の点に移るので (−4, −1)。」と書ければよい。また「y 軸について対称に移すと (−4, 1)、それを x 軸について対称に移すと (−4, −1) で、180° 回したのと同じ所になる」と書く道もある。① O をはさんで反対がわ、② O から同じ遠さ、③ 右が左に、上が下になる、の 3 点を見る。(−3, 2) のように、もとからマイナスの数があるときは、回すと 3 と −2 になる（マイナスの数がふつうの数にもどる）ことも確かめる。
+        hints:
+          - P と O を結ぶ線を、O の先までのばしてみよう。
+          - 180° 回すと、P は O から見てどちらの向きに来るかな。
+          - 右へ 4、上へ 1 の動きは、反対向きにするとどうなるかな。
+        paths:
+          - [O をはさんで反対がわ, 右へ 4 が左へ 4、上へ 1 が下へ 1, "(−4, −1)"]
+          - ["y 軸について対称で (−4, 1)", "x 軸について対称で (−4, −1)"]
+      - part: 今日
+        text: 2 点 (−4, 2)、(3, 2) の間は、何目もりですか。
+        answer: 7
+        check: "3 - (-4)"
+        hints:
+          - 2 つの点は、同じ高さにあるね。
+          - x 座標のちがいを考えよう。
+          - 3 − (−4) を計算しよう。
+        paths:
+          - [x 座標のちがい, 3 − (−4) = 7]
+          - [y 軸まで 4、y 軸から 3, 4 + 3 = 7]
+      - part: 今日
+        text: 4 つの点 (−2, 1)、(3, 1)、(3, −2)、(−2, −2) を順に結んで、長方形をかきました。1 目もりを 1 cm とすると、この長方形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><polygon points="83.6,83.6 174.6,83.6 174.6,138.2 83.6,138.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 15
+        check: "(3 - (-2)) * (1 - (-2))"
+        hints:
+          - 横の辺の長さは、x 座標のちがいだね。
+          - たての辺の長さは、y 座標のちがいだね。
+          - たてと横の長さをかけよう。
+        paths:
+          - [横は 3 − (−2) = 5 cm, たては 1 − (−2) = 3 cm, 5 × 3 = 15]
+          - [方眼のマスを数える, 15]
+        note: 横を 3 − 2 = 1 としやすい。マイナスの数をひくときは、数直線のちがいで確かめる。
+    extra:
+      - part: 今日
+        text: 2 点 (0, −3)、(0, 4) の間は、何目もりですか。
+        answer: 7
+        check: "4 - (-3)"
+        hints:
+          - 2 つの点は、どちらも y 軸の上にあるね。
+          - y 座標のちがいを考えよう。
+          - 4 − (−3) を計算しよう。
+        paths:
+          - [y 座標のちがい, 4 − (−3) = 7]
+      - part: 今日
+        text: 点 (2, −5) と、x 軸について対称な点の座標を選びましょう。
+        choices:
+          - (2, 5)
+          - (−2, −5)
+          - (−2, 5)
+          - (5, 2)
+        answer: (2, 5)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(2, -5)"
+        hints:
+          - x 軸で折っても、横の位置は変わらないね。
+          - 点は x 軸から下へ 5 の所にあるね。
+          - 折ると、x 軸からどちらへ 5 の所に来るかな。
+        paths:
+          - [横はそのまま, 下へ 5 が上へ 5 になる, "(2, 5)"]
+      - part: 今日
+        text: 点 (−3, 2) と、y 軸について対称な点の間は、何目もりですか。
+        answer: 6
+        check: "(lambda x: -x - x)(-3)"
+        hints:
+          - まず、y 軸について対称な点の座標を考えよう。
+          - 2 つの点は、同じ高さにあるね。
+          - x 座標のちがいを計算しよう。
+        paths:
+          - ["対称な点は (3, 2)", 3 − (−3) = 6]
+          - [y 軸から 3 ずつはなれている, 3 + 3 = 6]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: (−4) − (−6) はいくつですか。
+        answer: 2
+        check: "(-4) - (-6)"
+        hints:
+          - ひき算は「ちがい」と考えよう。
+          - 数直線で、−6 から −4 まで、右へいくつ進むかな。
+          - −6 と −4 のどちらが右にあるかな。
+        paths:
+          - [−6 から −4 まで右へ 2, 2]
+          - [(−4) + 6 = 2]
+      - part: 思い出す
+        text: 点 O のまわりに図形を回しました。点 A は点 A′ に移りました。OA が 3 cm のとき、OA′ は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="130" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="130" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="130" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="130" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="130" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="130" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="130" x2="170" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="110" x2="170" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="90" x2="170" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="70" x2="170" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="50" x2="170" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="30" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="60" y1="110" x2="181" y2="110" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="175,106 181,110 175,114" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="178" y="105.2" font-size="12" text-anchor="middle">x</text><line x1="90" y1="140" x2="90" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,25 90,19 94,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="100" y="27.2" font-size="12" text-anchor="middle">y</text><text x="83" y="123.5" font-size="10" text-anchor="middle">O</text><circle cx="150" cy="110" r="3.2" fill="currentColor"/><text x="150" y="124.2" font-size="12" text-anchor="middle">A</text><circle cx="90" cy="50" r="3.2" fill="currentColor"/><text x="80" y="54.2" font-size="12" text-anchor="middle">A′</text><line x1="90" y1="110" x2="150" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="90" y1="110" x2="90" y2="50" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><path d="M102 110 A12 12 0 0 0 90 98" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 3
+        hints:
+          - 図形を回すと、形や大きさは変わるかな。
+          - 回しても、回す中心からの遠さは変わらないね。
+          - OA と OA′ をくらべよう。
+        paths:
+          - [回しても中心からの遠さは同じ, OA′ = OA = 3 cm]
+        note: G-015 の思い出す。回転の中心から点までの長さは、回しても変わらない。
+      - part: 今日
+        text: 三角形 ABC を、y 軸について対称に移しました。点 B が移った点の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><polygon points="138.2,83.6 192.9,83.6 138.2,47.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="138.2" cy="83.6" r="3.2" fill="currentColor"/><text x="131.1" y="94.8" font-size="12" text-anchor="middle">A</text><circle cx="192.9" cy="83.6" r="3.2" fill="currentColor"/><text x="199.9" y="94.8" font-size="12" text-anchor="middle">B</text><circle cx="138.2" cy="47.1" r="3.2" fill="currentColor"/><text x="138.2" y="41.3" font-size="12" text-anchor="middle">C</text></svg>'
+        choices:
+          - (−4, 1)
+          - (4, −1)
+          - (−4, −1)
+          - (−1, 4)
+        answer: (−4, 1)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(4, 1)"
+        hints:
+          - まず、B の座標を読もう。
+          - y 軸で折ると、たての位置は変わるかな。
+          - y 軸から右へ 4 の点は、折るとどちらへ 4 かな。
+        paths:
+          - ["B は (4, 1)", たての位置はそのまま, 右へ 4 が左へ 4, "(−4, 1)"]
+      - part: 今日
+        text: y がいつも x より 4 小さい表をつくり、点を通る直線を引きます。この直線が y 軸と交わる点の座標を選びましょう。
+        choices:
+          - (0, −4)
+          - (−4, 0)
+          - (0, 4)
+          - (4, 0)
+        answer: (0, −4)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(0, 0 - 4)"
+        hints:
+          - y 軸の上の点は、x 座標がいくつかな。
+          - x が 0 のとき、y はいくつかな。
+          - 0 − 4 を計算しよう。
+        paths:
+          - [y 軸の上では x は 0, y は 0 − 4 = −4, "(0, −4)"]
+        note: (4, 0) は x 軸と交わる点。x 軸と y 軸のどちらとの交わりかを確かめる。
+      - part: 今日
+        text: 点 A (−1, −2) を上へ 5 動かした点を B とします。B の y 座標はいくつですか。
+        answer: 3
+        check: "-2 + 5"
+        hints:
+          - 上へ動かすと、y 座標はどうなるかな。
+          - (−2) + 5 を考えよう。
+          - 数直線で、−2 から右へ 5 進もう。
+        paths:
+          - [y 座標は (−2) + 5 = 3, 3]
+      - part: 今日
+        text: 3 つの点 O (0, 0)、A (4, 0)、B (0, −3) を結んだ三角形の面積は、何 cm² ですか。1 目もりは 1 cm です。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><polygon points="120,101.8 192.9,101.8 120,156.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="192.9" cy="101.8" r="3.2" fill="currentColor"/><text x="199.9" y="98.9" font-size="12" text-anchor="middle">A</text><circle cx="120" cy="156.4" r="3.2" fill="currentColor"/><text x="127.1" y="167.7" font-size="12" text-anchor="middle">B</text></svg>'
+        answer: 6
+        check: "4 * (0 - (-3)) // 2"
+        hints:
+          - OA の長さは何 cm かな。
+          - OB の長さは、y 座標のちがいで考えよう。
+          - 直角三角形の面積は、長方形の半分だね。
+        paths:
+          - [OA は 4 cm, OB は 0 − (−3) = 3 cm, 4 × 3 ÷ 2 = 6]
+      - part: 挑戦
+        text: 点 P を、原点 O のまわりに、時計の針と反対の向きに 90° 回した点の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="174.6" cy="83.6" r="3.2" fill="currentColor"/><text x="181.7" y="80.7" font-size="12" text-anchor="middle">P</text><line x1="120" y1="101.8" x2="174.6" y2="83.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        choices:
+          - (−1, 3)
+          - (1, −3)
+          - (−3, 1)
+          - (3, −1)
+        answer: (−1, 3)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-y, x))(3, 1)"
+        hints:
+          - O から P までの動きは「右へ 3、上へ 1」だね。
+          - 90° 回すと、「右へ」の向きは「上へ」の向きになるよ。
+          - 「上へ」の向きは、90° 回すとどの向きになるかな。
+        paths:
+          - [右へ 3 は上へ 3 になる, 上へ 1 は左へ 1 になる, 左へ 1、上へ 3 で "(−1, 3)"]
+          - [方眼の紙を O で押さえて 90° 回して確かめる]
+        note: G-015 の回転を座標で表す。(−3, 1) は 90° 回したつもりで、y 軸について対称に移した点。紙を回して確かめる。
+    extra:
+      - part: 今日
+        text: 点 (−2, 4) を原点 O のまわりに 180° 回した点の座標を選びましょう。
+        choices:
+          - (2, −4)
+          - (−2, −4)
+          - (2, 4)
+          - (4, −2)
+        answer: (2, −4)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(-2, 4)"
+        hints:
+          - 180° 回すと、O をはさんで反対がわに来るね。
+          - 左へ 2 の反対は、どちらへ 2 かな。
+          - 上へ 4 の反対は、どちらへ 4 かな。
+        paths:
+          - [左へ 2 が右へ 2、上へ 4 が下へ 4, "(2, −4)"]
+      - part: 今日
+        text: 2 点 (−5, −1)、(1, −1) の間は、何目もりですか。
+        answer: 6
+        check: "1 - (-5)"
+        hints:
+          - 2 つの点は、同じ高さにあるね。
+          - x 座標のちがいを考えよう。
+          - 1 − (−5) を計算しよう。
+        paths:
+          - [1 − (−5) = 6]
+      - part: 今日
+        text: x と y の和がいつも 1 になる表の点を通る直線は、x 軸とどこで交わりますか。交わる点の x 座標を答えましょう。
+        answer: 1
+        check: "1 - 0"
+        hints:
+          - x 軸の上の点は、y 座標がいくつかな。
+          - □ + 0 = 1 の □ をさがそう。
+          - 表をつくって、点を打ってもよいよ。
+        paths:
+          - [x 軸の上では y は 0, x は 1 − 0 = 1]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 点 A の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="28.9" cy="65.4" r="3.2" fill="currentColor"/><text x="36" y="62.5" font-size="12" text-anchor="middle">A</text></svg>'
+        choices:
+          - (−5, 2)
+          - (2, −5)
+          - (5, 2)
+          - (−5, −2)
+        answer: (−5, 2)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-5, 2)"
+        hints:
+          - 原点 O から、右と左のどちらへいくつ進むかな。
+          - 次に、上と下のどちらへいくつ進むかな。
+          - x 座標を先に書こう。
+        paths:
+          - [左へ 5、上へ 2, "(−5, 2)"]
+      - part: 今日
+        text: 点 (3, −1) は、どの象限にありますか。
+        choices: [第 1 象限, 第 2 象限, 第 3 象限, 第 4 象限]
+        answer: 第 4 象限
+        check: "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(3, -1)"
+        hints:
+          - x 座標の 3 は、y 軸の右と左のどちらかな。
+          - y 座標の −1 は、x 軸の上と下のどちらかな。
+          - 右下の象限の名前を思い出そう。
+        paths:
+          - [右へ 3、下へ 1, 第 4 象限]
+      - part: 今日
+        text: 点 (2, −3) を左へ 6、上へ 4 動かした点の座標を選びましょう。
+        choices:
+          - (−4, 1)
+          - (8, 1)
+          - (−4, −7)
+          - (8, −7)
+        answer: (−4, 1)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(2 - 6, -3 + 4)"
+        hints:
+          - 左へ動かすと、x 座標はどうなるかな。
+          - 上へ動かすと、y 座標はどうなるかな。
+          - 2 − 6 と (−3) + 4 を計算しよう。
+        paths:
+          - [x 座標は 2 − 6 = −4, y 座標は (−3) + 4 = 1, "(−4, 1)"]
+      - part: 今日
+        text: 点 (−2, −4) と、y 軸について対称な点の座標を選びましょう。
+        choices:
+          - (2, −4)
+          - (−2, 4)
+          - (2, 4)
+          - (−4, −2)
+        answer: (2, −4)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(-2, -4)"
+        hints:
+          - y 軸で折っても、たての位置は変わらないね。
+          - 点は y 軸から左へ 2 の所にあるね。
+          - 折ると、y 軸からどちらへ 2 の所に来るかな。
+        paths:
+          - [たてはそのまま, 左へ 2 が右へ 2, "(2, −4)"]
+      - part: 今日
+        text: 点 (5, −3) を原点 O のまわりに 180° 回した点の座標を選びましょう。
+        choices:
+          - (−5, 3)
+          - (5, 3)
+          - (−5, −3)
+          - (−3, 5)
+        answer: (−5, 3)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(5, -3)"
+        hints:
+          - 180° 回すと、O をはさんで反対がわに来るね。
+          - 右へ 5 の反対は、どちらへ 5 かな。
+          - 下へ 3 の反対は、どちらへ 3 かな。
+        paths:
+          - [右へ 5 が左へ 5、下へ 3 が上へ 3, "(−5, 3)"]
+      - part: 今日
+        text: 表の点を打って、点を通る直線を引きます。x が 4 のとき、y はいくつですか。
+        svg: '<svg viewBox="0 0 240 324" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="6" width="180" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="30" y1="30" x2="210" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="6" x2="66" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="102" y1="6" x2="102" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="138" y1="6" x2="138" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="174" y1="6" x2="174" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="22.6" font-size="13" text-anchor="middle">x</text><text x="84" y="22.6" font-size="13" text-anchor="middle">0</text><text x="120" y="22.6" font-size="13" text-anchor="middle">1</text><text x="156" y="22.6" font-size="13" text-anchor="middle">2</text><text x="192" y="22.6" font-size="13" text-anchor="middle">3</text><text x="48" y="46.5" font-size="13" text-anchor="middle">y</text><text x="84" y="46.5" font-size="13" text-anchor="middle">1</text><text x="120" y="46.5" font-size="13" text-anchor="middle">3</text><text x="156" y="46.5" font-size="13" text-anchor="middle">5</text><text x="192" y="46.5" font-size="13" text-anchor="middle">7</text><g transform="translate(0,64)"><line x1="70" y1="230" x2="70" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="90" y1="230" x2="90" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="230" x2="110" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="130" y1="230" x2="130" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="150" y1="230" x2="150" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="170" y1="230" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="230" x2="170" y2="230" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="210" x2="170" y2="210" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="190" x2="170" y2="190" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="170" x2="170" y2="170" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="150" x2="170" y2="150" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="130" x2="170" y2="130" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="110" x2="170" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="90" x2="170" y2="90" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="70" x2="170" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="50" x2="170" y2="50" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="70" y1="30" x2="170" y2="30" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="60" y1="230" x2="181" y2="230" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="175,226 181,230 175,234" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="178" y="225.2" font-size="12" text-anchor="middle">x</text><line x1="70" y1="240" x2="70" y2="19" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="66,25 70,19 74,25" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="80" y="27.2" font-size="12" text-anchor="middle">y</text><text x="63" y="243.5" font-size="10" text-anchor="middle">O</text><text x="90" y="243.2" font-size="9" text-anchor="middle">1</text><text x="110" y="243.2" font-size="9" text-anchor="middle">2</text><text x="130" y="243.2" font-size="9" text-anchor="middle">3</text><text x="150" y="243.2" font-size="9" text-anchor="middle">4</text><text x="170" y="243.2" font-size="9" text-anchor="middle">5</text><text x="62" y="213.2" font-size="9" text-anchor="middle">1</text><text x="62" y="193.2" font-size="9" text-anchor="middle">2</text><text x="62" y="173.2" font-size="9" text-anchor="middle">3</text><text x="62" y="153.2" font-size="9" text-anchor="middle">4</text><text x="62" y="133.2" font-size="9" text-anchor="middle">5</text><text x="62" y="113.2" font-size="9" text-anchor="middle">6</text><text x="62" y="93.2" font-size="9" text-anchor="middle">7</text><text x="62" y="73.2" font-size="9" text-anchor="middle">8</text><text x="62" y="53.1" font-size="9" text-anchor="middle">9</text><text x="62" y="33.1" font-size="9" text-anchor="middle">10</text><line x1="58" y1="234" x2="166" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="70" cy="210" r="3" fill="currentColor"/><circle cx="90" cy="170" r="3" fill="currentColor"/><circle cx="110" cy="130" r="3" fill="currentColor"/><circle cx="130" cy="90" r="3" fill="currentColor"/></g></svg>'
+        answer: 9
+        check: "2 * 4 + 1"
+        hints:
+          - 表で、x が 1 ふえると、y はいくつふえるかな。
+          - x が 3 のとき y は 7 だね。
+          - 直線を x が 4 の所までのばして読もう。
+        paths:
+          - [x が 1 ふえると y は 2 ふえる, 7 + 2 = 9]
+      - part: 今日
+        text: 2 点 (−6, −1)、(2, −1) の間は、何目もりですか。
+        answer: 8
+        check: "2 - (-6)"
+        hints:
+          - 2 つの点は、同じ高さにあるね。
+          - x 座標のちがいを考えよう。
+          - 2 − (−6) を計算しよう。
+        paths:
+          - [2 − (−6) = 8]
+          - [y 軸まで 6、y 軸から 2, 6 + 2 = 8]
+    extra:
+      - part: 今日
+        text: 点 B の座標を選びましょう。
+        svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="101.8" cy="156.4" r="3.2" fill="currentColor"/><text x="94.7" y="167.7" font-size="12" text-anchor="middle">B</text></svg>'
+        choices:
+          - (−1, −3)
+          - (−3, −1)
+          - (1, −3)
+          - (−1, 3)
+        answer: (−1, −3)
+        check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-1, -3)"
+        hints:
+          - 原点 O から、左へいくつ進むかな。
+          - 次に、下へいくつ進むかな。
+          - 左と下は、マイナスの数で表すね。
+        paths:
+          - [左へ 1、下へ 3, "(−1, −3)"]
+      - part: 今日
+        text: 点 (−3, 1) と、x 軸について対称な点の座標を選びましょう。
+        choices:
+          - (−3, −1)
+          - (3, 1)
+          - (3, −1)
+          - (1, −3)
+        answer: (−3, −1)
+        check: "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(-3, 1)"
+        hints:
+          - x 軸で折っても、横の位置は変わらないね。
+          - 点は x 軸から上へ 1 の所にあるね。
+          - 折ると、x 軸からどちらへ 1 かな。
+        paths:
+          - [横はそのまま, 上へ 1 が下へ 1, "(−3, −1)"]
+      - part: 今日
+        text: 下の表の点を通る直線で、x が −1 のとき、y はいくつですか。
+        svg: '<svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg"><rect x="12" y="6" width="216" height="48" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="12" y1="30" x2="228" y2="30" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="48" y1="6" x2="48" y2="54" stroke="currentColor" stroke-width="1.8" fill="none"/><line x1="84" y1="6" x2="84" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="6" x2="120" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="156" y1="6" x2="156" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="192" y1="6" x2="192" y2="54" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="30" y="22.6" font-size="13" text-anchor="middle">x</text><text x="66" y="22.6" font-size="13" text-anchor="middle">−1</text><text x="102" y="22.6" font-size="13" text-anchor="middle">0</text><text x="138" y="22.6" font-size="13" text-anchor="middle">1</text><text x="174" y="22.6" font-size="13" text-anchor="middle">2</text><text x="210" y="22.6" font-size="13" text-anchor="middle">3</text><text x="30" y="46.5" font-size="13" text-anchor="middle">y</text><text x="66" y="46.5" font-size="13" text-anchor="middle">□</text><text x="102" y="46.5" font-size="13" text-anchor="middle">5</text><text x="138" y="46.5" font-size="13" text-anchor="middle">4</text><text x="174" y="46.5" font-size="13" text-anchor="middle">3</text><text x="210" y="46.5" font-size="13" text-anchor="middle">2</text></svg>'
+        answer: 6
+        check: "5 - (-1)"
+        hints:
+          - 表で、x が 1 ふえると、y はいくつへるかな。
+          - x と y をたすと、いつもいくつかな。
+          - (−1) + □ = 5 の □ をさがそう。
+        paths:
+          - [x と y の和はいつも 5, 5 − (−1) = 6]
+          - [x が 1 へると y は 1 ふえる, 5 + 1 = 6]

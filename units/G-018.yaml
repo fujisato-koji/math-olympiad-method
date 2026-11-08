@@ -1,0 +1,645 @@
+# G-018 円周角の定理
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：円周角、中心角、弧 AB（AB の弧）、直径、円周角の定理、円周角の定理の逆、1 つの円周上にある。
+# 約束した事実は G-016、G-017 のもの（平行線と角、外角、二等辺三角形の底角、合同条件）と、G-010 の円の性質
+#   （半径はみな等しい、弧の長さは円周の「中心角 ÷ 360」）。ここで示すもの：円周角の定理（中心が角の辺の上にある場合、
+#   内側にある場合）、半円の弧に対する円周角は 90°。同じ弧に対する円周角が等しいこと、等しい弧と等しい円周角、
+#   円周角の定理の逆は、見本で知らせて使う（中心が角の外側にある場合は、わけの日に「場合分け」として話すだけにした）。
+# 円に内接する四角形の性質は G-023（角度の追跡と内接四角形）、方べきの定理は G-030、相似は G-020 で扱うので、ここでは使わない。
+#   接線と弦のつくる角も扱わない。
+# 前提の数は G-009 の範囲（1000 まで、九九の範囲のわり算、何十 ÷ 1 けた）と、G-010 の分数（約分）と「（□ × 円周率）cm」の答え方。
+#   弧の長さは G-010 と同じく □ を打つ。分数の答えは約分した形（1/6）で、check は Fraction。
+# 図は svg（D-040）。点の位置は、角の大きさから円の上の角度を決めて描いたので、図の角は本当の大きさ。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 円周角と中心角（円周角は中心角の半分）　2 日目 同じ弧に対する円周角、半円の弧に対する円周角
+#   3 日目 等しい弧と円周角、弧の長さ、円周角の定理の逆　4 日目 わけ（円周角の定理の 2 つの場合、半円の弧に対する円周角）
+#   5 日目 G-017（二等辺三角形）・G-010（弧の長さ）と 1〜3 日目を混ぜる　6 日目 確認
+# check：角の大きさと弧の長さの計算の式。4 点が 1 つの円周上にあるかを選ぶ問題は、角が等しいかを調べる式。
+
+id: G-018
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 円周角と中心角の関係を調べましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="67.3" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="67.3" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M112.4 47.5 A18 18 0 0 0 127.6 47.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="65.7" font-size="13" text-anchor="middle">50°</text><path d="M109.3 109 A14 14 0 0 0 130.7 109" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">100°</text><text x="58.8" y="155.9" font-size="13" text-anchor="middle">A</text><text x="181.2" y="155.9" font-size="13" text-anchor="middle">B</text><text x="120" y="24.7" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        explain: 円 O の円周の上に 3 点 A、B、P があるとき、∠APB を、弧 AB（P をふくまない方の弧）に対する円周角といいます。∠AOB は弧 AB に対する中心角です。1 つの弧に対する円周角の大きさは、その弧に対する中心角の半分です（円周角の定理）。図では ∠AOB = 100° なので、∠APB = 100° ÷ 2 = 50° です。反対に、円周角がわかれば、中心角はその 2 倍です。
+      - part: 思い出す
+        text: O は円の中心です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="67.3" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="67.3" y1="144.3" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M109.3 109 A14 14 0 0 0 130.7 109" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">100°</text><path d="M85.3 144.3 A18 18 0 0 0 81 132.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.4" y="138.5" font-size="13" text-anchor="middle">x</text><text x="58.8" y="155.9" font-size="13" text-anchor="middle">A</text><text x="181.2" y="155.9" font-size="13" text-anchor="middle">B</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 40
+        check: "(180 - 100) // 2"
+        hints:
+          - OA と OB は、円の何かな。
+          - 半径は等しいので、△OAB は何という三角形かな。
+          - 二等辺三角形の底角は等しいね。
+        paths:
+          - [OA = OB（半径）, △OAB は二等辺三角形, ∠x = (180 − 100) ÷ 2 = 40]
+      - part: 思い出す
+        text: 半径 6 cm の円で、中心角 60° のおうぎ形の弧の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        answer: 1/6
+        check: "Fraction(60, 360)"
+        hints:
+          - おうぎ形は、円の何分の 1 かを、中心角で考えるね。
+          - 60 ÷ 360 を分数にしよう。
+          - 約分しよう。
+        paths:
+          - [60/360 = 1/6]
+      - part: 今日
+        text: O は円の中心です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M121 46.5 A18 18 0 0 0 140.3 48.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129.3" y="66.6" font-size="13" text-anchor="middle">x</text><path d="M107.3 105.9 A14 14 0 0 0 132.7 105.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">130°</text><text x="47.6" y="138.3" font-size="13" text-anchor="middle">A</text><text x="192.4" y="138.3" font-size="13" text-anchor="middle">B</text><text x="133.9" y="25.9" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 65
+        check: "130 // 2"
+        hints:
+          - ∠x は、どの弧に対する円周角かな。
+          - その弧に対する中心角は何度かな。
+          - 円周角は中心角の何倍かな。
+        paths:
+          - [∠x は弧 AB に対する円周角, 中心角は 130°, 130 ÷ 2 = 65]
+      - part: 今日
+        text: O は円の中心です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="80.5" y2="156.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="159.5" y2="156.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="80.5" y2="156.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="159.5" y2="156.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M104.1 49.8 A18 18 0 0 0 114.9 48.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="110.7" y="66.6" font-size="13" text-anchor="middle">35°</text><path d="M112 111.5 A14 14 0 0 0 128 111.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">x</text><text x="74.2" y="170" font-size="13" text-anchor="middle">A</text><text x="165.8" y="170" font-size="13" text-anchor="middle">B</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 70
+        check: "35 * 2"
+        hints:
+          - ∠x は、弧 AB に対する中心角だね。
+          - 弧 AB に対する円周角は何度かな。
+          - 中心角は円周角の何倍かな。
+        paths:
+          - [円周角は 35°, 中心角はその 2 倍, 70°]
+        note: 35 ÷ 2 と、半分にしてしまいやすい。どちらが大きい角かを図で確かめる。
+      - part: 今日
+        text: O は円の中心です。∠ACB = 48° のとき、∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="68.8" y2="146.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="171.2" y2="146.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="68.8" y2="146.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="171.2" y2="146.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M143.1 54.4 A18 18 0 0 0 157.2 58.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.7" y="73.9" font-size="13" text-anchor="middle">48°</text><path d="M109.6 109.4 A14 14 0 0 0 130.4 109.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">x</text><text x="60.7" y="158" font-size="13" text-anchor="middle">A</text><text x="179.3" y="158" font-size="13" text-anchor="middle">B</text><text x="159.9" y="35.4" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 96
+        check: "48 * 2"
+        hints:
+          - ∠ACB は、どの弧に対する円周角かな。
+          - 同じ弧に対する中心角はどれかな。
+          - 中心角は円周角の 2 倍だね。
+        paths:
+          - [∠AOB = 48 × 2 = 96]
+      - part: 挑戦
+        text: O は円の中心で、点 P は短い方の弧 AB の上にあります。∠AOB = 110° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="63.6" y2="60.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="176.4" y2="60.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="63.6" y2="60.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="176.4" y2="60.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M109.4 36.7 A12 12 0 0 0 130.6 36.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="59.7" font-size="13" text-anchor="middle">x</text><path d="M131.5 92 A14 14 0 0 0 108.5 92" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="78.5" font-size="13" text-anchor="middle">110°</text><text x="54.6" y="58.7" font-size="13" text-anchor="middle">A</text><text x="185.4" y="58.7" font-size="13" text-anchor="middle">B</text><text x="120" y="24.7" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 125
+        check: "(360 - 110) // 2"
+        hints:
+          - ∠APB は、どの弧に対する円周角かな。P をふくまない方の弧だよ。
+          - その弧に対する中心角は、110° の角の反対がわの角だね。
+          - 1 回転は 360° だね。
+        paths:
+          - [∠x は長い方の弧 AB に対する円周角, その中心角は 360 − 110 = 250, 250 ÷ 2 = 125]
+        note: 110 ÷ 2 = 55 としやすい。円周角は「P をふくまない方の弧」の中心角の半分。
+    extra:
+      - part: 今日
+        text: O は円の中心です。∠AOB = 80° のとき、∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="164.3" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="164.3" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M84 58.3 A18 18 0 0 0 95.9 55.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="93.3" y="73.9" font-size="13" text-anchor="middle">x</text><path d="M111 110.7 A14 14 0 0 0 129 110.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">80°</text><text x="68.7" y="165.7" font-size="13" text-anchor="middle">A</text><text x="171.3" y="165.7" font-size="13" text-anchor="middle">B</text><text x="80.1" y="35.4" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 40
+        check: "80 // 2"
+        hints:
+          - ∠APB は弧 AB に対する円周角だね。
+          - 弧 AB に対する中心角は何度かな。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [80 ÷ 2 = 40]
+      - part: 今日
+        text: O は円の中心です。∠APB = 55° のとき、∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="176.4" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="176.4" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M132.6 49.6 A18 18 0 0 0 149 52.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138.3" y="69.4" font-size="13" text-anchor="middle">55°</text><path d="M108.5 108 A14 14 0 0 0 131.5 108" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">x</text><text x="54.6" y="150.4" font-size="13" text-anchor="middle">A</text><text x="185.4" y="150.4" font-size="13" text-anchor="middle">B</text><text x="147.3" y="29.5" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 110
+        check: "55 * 2"
+        hints:
+          - ∠AOB は弧 AB に対する中心角だね。
+          - 弧 AB に対する円周角は何度かな。
+          - 中心角は円周角の 2 倍だね。
+        paths:
+          - [55 × 2 = 110]
+      - part: 今日
+        text: O は円の中心で、∠AOB = 90° です。∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="71.3" y2="148.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="168.7" y2="148.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="71.3" y2="148.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="168.7" y2="148.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M102.6 49.4 A18 18 0 0 0 116.4 48.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="110.7" y="66.6" font-size="13" text-anchor="middle">x</text><polyline points="114.3,105.7 120,111.3 125.7,105.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="63.5" y="161" font-size="13" text-anchor="middle">A</text><text x="176.5" y="161" font-size="13" text-anchor="middle">B</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 45
+        check: "90 // 2"
+        hints:
+          - 直角のしるしは何度かな。
+          - ∠APB は弧 AB に対する円周角だね。
+          - 中心角の半分を求めよう。
+        paths:
+          - [90 ÷ 2 = 45]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 同じ弧に対する円周角と、半円の弧に対する円周角を調べましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="60.4" y2="134.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="179.6" y2="134.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="47.3" x2="60.4" y2="134.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="47.3" x2="179.6" y2="134.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M132 49.1 A18 18 0 0 0 149.7 52.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138.3" y="69.4" font-size="13" text-anchor="middle">60°</text><path d="M72.6 65 A18 18 0 0 0 89.5 58.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86" y="80" font-size="13" text-anchor="middle">60°</text><text x="50.8" y="144.5" font-size="13" text-anchor="middle">A</text><text x="189.2" y="144.5" font-size="13" text-anchor="middle">B</text><text x="147.3" y="29.5" font-size="13" text-anchor="middle">P</text><text x="68.7" y="43.4" font-size="13" text-anchor="middle">Q</text></svg>'
+        explain: 1 つの弧に対する円周角は、どれも中心角の半分なので、同じ弧に対する円周角はすべて等しくなります。図では、∠APB と ∠AQB は、どちらも弧 AB に対する円周角なので等しく、60° です。また、AB が円の直径のとき、弧 AB は半円で、中心角は一直線の 180° です。だから、半円の弧に対する円周角は 180° ÷ 2 = 90° です。直径の両はしと円周の上の点を結ぶと、いつも直角ができます。
+      - part: 思い出す
+        text: O は円の中心です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="55.3" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="55.3" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M104.3 46.6 A18 18 0 0 0 125 45.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="115.3" y="65.9" font-size="13" text-anchor="middle">x</text><path d="M106.8 104.8 A14 14 0 0 0 133.2 104.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">140°</text><text x="45" y="131.9" font-size="13" text-anchor="middle">A</text><text x="195" y="131.9" font-size="13" text-anchor="middle">B</text><text x="113" y="25" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 70
+        check: "140 // 2"
+        hints:
+          - ∠x は弧 AB に対する円周角だね。
+          - 中心角は何度かな。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [140 ÷ 2 = 70]
+      - part: 思い出す
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="94.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.5" y1="122.6" x2="145.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.5" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="112.1" y1="76.3" x2="102.4" y2="73.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="137.6" y1="73.7" x2="127.9" y2="76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M115.9 42.9 A16 16 0 0 0 124.1 42.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">30°</text><path d="M110.5 122.6 A16 16 0 0 0 98.6 107.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="116.7" y="110.1" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="86.7" y="134.9" font-size="13" text-anchor="middle">B</text><text x="153.3" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 75
+        check: "(180 - 30) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 30 = 150, 150 ÷ 2 = 75]
+      - part: 今日
+        text: ∠APB = 40° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="164.3" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="67.3" y1="55.7" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="67.3" y1="55.7" x2="164.3" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M144.1 55.1 A18 18 0 0 0 156 58.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.7" y="73.9" font-size="13" text-anchor="middle">40°</text><path d="M68.8 73.7 A18 18 0 0 0 80 68.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79.9" y="87.5" font-size="13" text-anchor="middle">x</text><text x="68.7" y="165.7" font-size="13" text-anchor="middle">A</text><text x="171.3" y="165.7" font-size="13" text-anchor="middle">B</text><text x="159.9" y="35.4" font-size="13" text-anchor="middle">P</text><text x="58.8" y="53.2" font-size="13" text-anchor="middle">Q</text></svg>'
+        answer: 40
+        check: "40"
+        hints:
+          - ∠APB と ∠AQB は、どの弧に対する円周角かな。
+          - 2 つの角は、同じ弧に対する円周角だね。
+          - 同じ弧に対する円周角はどうなるかな。
+        paths:
+          - [どちらも弧 AB に対する円周角, 等しい, 40°]
+      - part: 今日
+        text: AB は円 O の直径です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="35.3" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><path d="M71.1 100 A20 20 0 0 0 67.5 88.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.7" y="94.9" font-size="13" text-anchor="middle">35°</text><path d="M177.4 83.6 A20 20 0 0 0 168.9 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.5" y="89.8" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="147.3" y="29.5" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 55
+        check: "180 - 90 - 35"
+        hints:
+          - ∠APB は、どの弧に対する円周角かな。
+          - 半円の弧に対する円周角は何度かな。
+          - △PAB の内角の和を使おう。
+        paths:
+          - [∠APB = 90°（半円の弧）, ∠x = 180 − 90 − 35 = 55]
+      - part: 今日
+        text: AB は円 O の直径です。∠ACD = 35° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="96.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="188.9" y1="100" x2="96.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="96.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M95.2 47.5 A20 20 0 0 0 106.3 52.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.8" y="66.3" font-size="13" text-anchor="middle">35°</text><path d="M62.6 116.4 A20 20 0 0 0 71.1 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79.5" y="119.3" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">C</text><text x="92.7" y="179.6" font-size="13" text-anchor="middle">D</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 55
+        check: "90 - 35"
+        hints:
+          - ∠ACD と同じ弧に対する円周角を、ほかにさがそう。
+          - ∠ABD は何度かな。
+          - ∠ADB は、半円の弧に対する円周角だね。
+        paths:
+          - [∠ABD = ∠ACD = 35°（弧 AD）, ∠ADB = 90°, ∠x = 180 − 90 − 35 = 55]
+      - part: 挑戦
+        text: 円の上の 4 点 A、B、C、D で、AC と BD が点 E で交わっています。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.3" y1="123.5" x2="143.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="187.8" y1="88" x2="60.4" y2="65.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.3" y1="123.5" x2="187.8" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="143.5" y1="164.7" x2="60.4" y2="65.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M73.4 132 A20 20 0 0 0 74.6 118.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="87.2" y="130.9" font-size="13" text-anchor="middle">40°</text><path d="M168.1 84.6 A20 20 0 0 0 168.5 93.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="155.8" y="94" font-size="13" text-anchor="middle">25°</text><path d="M106.9 121 A12 12 0 0 0 110.7 108.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122" y="123.6" font-size="13" text-anchor="middle">x</text><text x="45" y="131.9" font-size="13" text-anchor="middle">A</text><text x="147.3" y="179.6" font-size="13" text-anchor="middle">B</text><text x="198.6" y="90.7" font-size="13" text-anchor="middle">C</text><text x="50.8" y="64.6" font-size="13" text-anchor="middle">D</text><text x="110.2" y="116.3" font-size="13" text-anchor="middle">E</text></svg>'
+        answer: 65
+        check: "40 + 25"
+        hints:
+          - ∠BAC と同じ弧に対する円周角を、ほかにさがそう。
+          - ∠BDC は何度かな。
+          - ∠x は △ECD の外角だね。
+        paths:
+          - [∠BDC = ∠BAC = 40°（弧 BC）, ∠x は △EDC の外角, 40 + 25 = 65]
+    extra:
+      - part: 今日
+        text: ∠APB = 52° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="47.3" x2="65.7" y2="142.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="47.3" x2="174.3" y2="142.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.4" y1="65.6" x2="65.7" y2="142.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.4" y1="65.6" x2="174.3" y2="142.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M151.3 59.8 A18 18 0 0 0 166.1 65.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154" y="80" font-size="13" text-anchor="middle">52°</text><path d="M61.6 83.5 A18 18 0 0 0 75.3 75.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="75.4" y="96.1" font-size="13" text-anchor="middle">x</text><text x="57.1" y="153.7" font-size="13" text-anchor="middle">A</text><text x="182.9" y="153.7" font-size="13" text-anchor="middle">B</text><text x="171.3" y="43.4" font-size="13" text-anchor="middle">P</text><text x="50.8" y="64.6" font-size="13" text-anchor="middle">Q</text></svg>'
+        answer: 52
+        check: "52"
+        hints:
+          - 2 つの角は、どの弧に対する円周角かな。
+          - 同じ弧に対する円周角だね。
+          - 同じ弧に対する円周角は等しいね。
+        paths:
+          - [どちらも弧 AB, 52°]
+      - part: 今日
+        text: AB は円 O の直径です。∠PBA = 48° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="127.2" y1="31.5" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="127.2" y1="31.5" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><path d="M175.5 85.1 A20 20 0 0 0 168.9 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.6" y="91.5" font-size="13" text-anchor="middle">48°</text><path d="M71.1 100 A20 20 0 0 0 66 86.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81" y="93.1" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="128.3" y="25.1" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 42
+        check: "180 - 90 - 48"
+        hints:
+          - ∠APB は何度かな。
+          - 半円の弧に対する円周角だね。
+          - 内角の和を使おう。
+        paths:
+          - [∠APB = 90°, ∠x = 180 − 90 − 48 = 42]
+      - part: 今日
+        text: O は円の中心です。∠ACB = 65° のとき、∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="57.6" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M89.6 51.9 A18 18 0 0 0 108.6 48.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.7" y="69.4" font-size="13" text-anchor="middle">65°</text><path d="M107.3 105.9 A14 14 0 0 0 132.7 105.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">x</text><text x="47.6" y="138.3" font-size="13" text-anchor="middle">A</text><text x="192.4" y="138.3" font-size="13" text-anchor="middle">B</text><text x="92.7" y="29.5" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 130
+        check: "65 * 2"
+        hints:
+          - ∠ACB は弧 AB に対する円周角だね。
+          - ∠AOB は弧 AB に対する中心角だね。
+          - 中心角は円周角の 2 倍だね。
+        paths:
+          - [65 × 2 = 130]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 等しい弧と円周角、円周角の定理の逆を知りましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="55.3" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="96.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="143.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M98 49.5 A20 20 0 0 0 106.3 52.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.4" y="67.3" font-size="13" text-anchor="middle">25°</text><path d="M152.7 60.3 A20 20 0 0 0 161.3 59.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="158.6" y="76.6" font-size="13" text-anchor="middle">25°</text><text x="45" y="131.9" font-size="13" text-anchor="middle">A</text><text x="92.7" y="179.6" font-size="13" text-anchor="middle">B</text><text x="147.3" y="179.6" font-size="13" text-anchor="middle">C</text><text x="195" y="131.9" font-size="13" text-anchor="middle">D</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text><text x="159.9" y="35.4" font-size="13" text-anchor="middle">Q</text></svg>'
+        explain: 1 つの円で、等しい弧に対する円周角は等しく、反対に、等しい円周角に対する弧は等しくなります。図では、弧 AB = 弧 CD なので ∠APB = ∠CQD です。弧の長さは中心角で決まり（G-010）、円周角は中心角の半分なので、円周角が 2 倍になると弧の長さも 2 倍になります。また、円周角の定理には逆が成り立ちます。2 点 P、Q が直線 AB について同じがわにあって ∠APB = ∠AQB ならば、4 点 A、B、P、Q は 1 つの円周の上にあります。
+      - part: 思い出す
+        text: AB は円 O の直径です。∠PAB = 40° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><path d="M71.1 100 A20 20 0 0 0 66.5 87.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.2" y="93.6" font-size="13" text-anchor="middle">40°</text><path d="M176 84.7 A20 20 0 0 0 168.9 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.9" y="91" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="133.9" y="25.9" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 50
+        check: "180 - 90 - 40"
+        hints:
+          - ∠APB は何度かな。
+          - 半円の弧に対する円周角だね。
+          - 内角の和を使おう。
+        paths:
+          - [∠APB = 90°, ∠x = 180 − 90 − 40 = 50]
+      - part: 思い出す
+        text: 半径 3 cm の円の円周は（□ × 円周率）cm です。□ にあてはまる数はいくつですか。
+        answer: 6
+        check: "3 * 2"
+        hints:
+          - 円周は、直径 × 円周率だね。
+          - 直径は半径の何倍かな。
+          - 直径を求めよう。
+        paths:
+          - [直径は 3 × 2 = 6, 円周は (6 × 円周率) cm]
+      - part: 今日
+        text: 弧 AB と弧 CD の長さは等しいです。∠APB = 27° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="52.2" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172.7" y1="55.7" x2="143.5" y2="164.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172.7" y1="55.7" x2="186.2" y2="119" stroke="currentColor" stroke-width="2" fill="none"/><path d="M96.6 48.6 A20 20 0 0 0 105.3 52" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="96.3" y="66.5" font-size="13" text-anchor="middle">27°</text><path d="M167.6 75.1 A20 20 0 0 0 176.9 75.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="171.9" y="92.3" font-size="13" text-anchor="middle">x</text><text x="41.4" y="118.4" font-size="13" text-anchor="middle">A</text><text x="85" y="176.3" font-size="13" text-anchor="middle">B</text><text x="147.3" y="179.6" font-size="13" text-anchor="middle">C</text><text x="196.8" y="126.6" font-size="13" text-anchor="middle">D</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text><text x="181.2" y="53.2" font-size="13" text-anchor="middle">Q</text></svg>'
+        answer: 27
+        check: "27"
+        hints:
+          - ∠APB と ∠CQD は、それぞれどの弧に対する円周角かな。
+          - 弧 AB と弧 CD は等しいね。
+          - 等しい弧に対する円周角はどうなるかな。
+        paths:
+          - [弧 AB = 弧 CD, 等しい弧に対する円周角は等しい, 27°]
+      - part: 今日
+        text: ∠APB = 30° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="85.6" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M114.8 50.5 A20 20 0 0 0 125.2 50.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="67.7" font-size="13" text-anchor="middle">30°</text><text x="80.1" y="173.7" font-size="13" text-anchor="middle">A</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">B</text><text x="120" y="24.7" font-size="13" text-anchor="middle">P</text></svg>'
+        answer: 1/6
+        check: "Fraction(30 * 2, 360)"
+        hints:
+          - 弧 AB に対する中心角は何度かな。
+          - 中心角は円周角の 2 倍だね。
+          - 中心角 ÷ 360 を分数にしよう。
+        paths:
+          - [中心角は 30 × 2 = 60, 60/360 = 1/6]
+        note: 30/360 = 1/12 としやすい。弧の長さを決めるのは中心角。
+      - part: 今日
+        text: ∠ADB = ∠ACB = 50°、∠DBC = 32° です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg"><line x1="59.5" y1="158.7" x2="180.5" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180.5" y1="158.7" x2="180.5" y2="57.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180.5" y1="57.2" x2="100.9" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.9" y1="31.3" x2="59.5" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.5" y1="158.7" x2="180.5" y2="57.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180.5" y1="158.7" x2="100.9" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M95.3 48.4 A18 18 0 0 0 110.4 46.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="104.5" y="65.6" font-size="13" text-anchor="middle">50°</text><path d="M166.7 68.7 A18 18 0 0 0 180.5 75.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167.8" y="88.9" font-size="13" text-anchor="middle">50°</text><path d="M180.5 136.7 A22 22 0 0 0 168.9 140.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="171.1" y="130.6" font-size="13" text-anchor="middle">32°</text><path d="M76.3 144.6 A22 22 0 0 0 66.3 137.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="78.5" y="135.1" font-size="13" text-anchor="middle">x</text><text x="51.1" y="170.3" font-size="13" text-anchor="middle">A</text><text x="188.9" y="170.3" font-size="13" text-anchor="middle">B</text><text x="188.9" y="54.6" font-size="13" text-anchor="middle">C</text><text x="98.2" y="25.2" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 32
+        check: "32 if 50 == 50 else 0"
+        hints:
+          - C と D は、直線 AB について同じがわにあるね。
+          - ∠ADB = ∠ACB なので、4 点 A、B、C、D はどうなっているかな。
+          - 4 点が 1 つの円周の上にあれば、∠DAC と ∠DBC はどんな角かな。
+        paths:
+          - [∠ADB = ∠ACB で C、D は AB の同じがわ, 4 点は 1 つの円周の上（円周角の定理の逆）, ∠x と ∠DBC は弧 DC に対する円周角, 32°]
+        note: 円がかいていない図で、円周角の定理の逆を使って円を見つける。図に円をかきこんで確かめるとよい。
+      - part: 挑戦
+        text: 円周を 12 等分した点に、1〜12 の番号を付けました。点 12、4、7 を結んだ三角形で、点 12 の角は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="67.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="32.8" x2="178.2" y2="133.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178.2" y1="133.6" x2="86.4" y2="158.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.4" y1="158.2" x2="120" y2="32.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M115.3 50.2 A18 18 0 0 0 129 48.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="123.9" y="67.1" font-size="13" text-anchor="middle">x</text><text x="120" y="26.3" font-size="13" text-anchor="middle">12</text><text x="159.1" y="36.8" font-size="13" text-anchor="middle">1</text><text x="187.7" y="65.5" font-size="13" text-anchor="middle">2</text><text x="198.2" y="104.5" font-size="13" text-anchor="middle">3</text><text x="187.7" y="143.7" font-size="13" text-anchor="middle">4</text><text x="159.1" y="172.3" font-size="13" text-anchor="middle">5</text><text x="120" y="182.8" font-size="13" text-anchor="middle">6</text><text x="80.9" y="172.3" font-size="13" text-anchor="middle">7</text><text x="52.3" y="143.7" font-size="13" text-anchor="middle">8</text><text x="41.8" y="104.6" font-size="13" text-anchor="middle">9</text><text x="52.3" y="65.4" font-size="13" text-anchor="middle">10</text><text x="80.9" y="36.8" font-size="13" text-anchor="middle">11</text><circle cx="120" cy="32.8" r="2.5" fill="currentColor"/><circle cx="153.6" cy="41.8" r="2.5" fill="currentColor"/><circle cx="178.2" cy="66.4" r="2.5" fill="currentColor"/><circle cx="187.2" cy="100" r="2.5" fill="currentColor"/><circle cx="178.2" cy="133.6" r="2.5" fill="currentColor"/><circle cx="153.6" cy="158.2" r="2.5" fill="currentColor"/><circle cx="120" cy="167.2" r="2.5" fill="currentColor"/><circle cx="86.4" cy="158.2" r="2.5" fill="currentColor"/><circle cx="61.8" cy="133.6" r="2.5" fill="currentColor"/><circle cx="52.8" cy="100" r="2.5" fill="currentColor"/><circle cx="61.8" cy="66.4" r="2.5" fill="currentColor"/><circle cx="86.4" cy="41.8" r="2.5" fill="currentColor"/></svg>'
+        answer: 45
+        check: "360 // 12 * 3 // 2"
+        hints:
+          - となり合う 2 点の間の弧に対する中心角は何度かな。
+          - 点 12 の角は、どの弧に対する円周角かな。
+          - 点 4 から点 7 までの弧は、何こ分かな。
+        paths:
+          - [1 こ分の中心角は 360 ÷ 12 = 30, 弧 4〜7 は 3 こ分で 90, 円周角は 90 ÷ 2 = 45]
+    extra:
+      - part: 今日
+        text: 弧 AB の長さは、弧 CD の長さの 2 倍です。∠CQD = 20° のとき、∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="52.2" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="120" y2="168.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M86.5 52.6 A20 20 0 0 0 99.9 55" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.9" y="71.4" font-size="13" text-anchor="middle">x</text><path d="M154.4 62.4 A22 22 0 0 0 162 61" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.3" y="78.4" font-size="13" text-anchor="middle">20°</text><text x="41.4" y="118.4" font-size="13" text-anchor="middle">A</text><text x="120" y="184.4" font-size="13" text-anchor="middle">B</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">C</text><text x="195" y="131.9" font-size="13" text-anchor="middle">D</text><text x="92.7" y="29.5" font-size="13" text-anchor="middle">P</text><text x="159.9" y="35.4" font-size="13" text-anchor="middle">Q</text></svg>'
+        answer: 40
+        check: "20 * 2"
+        hints:
+          - 弧の長さが 2 倍のとき、円周角はどうなるかな。
+          - 円周角は、中心角の半分だったね。
+          - 20° を 2 倍しよう。
+        paths:
+          - [弧が 2 倍なら円周角も 2 倍, 20 × 2 = 40]
+      - part: 今日
+        text: ∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        answer: 1/4
+        check: "Fraction(45 * 2, 360)"
+        hints:
+          - 弧 AB に対する中心角は何度かな。
+          - 中心角は円周角の 2 倍だね。
+          - 中心角 ÷ 360 を約分しよう。
+        paths:
+          - [中心角 90, 90/360 = 1/4]
+      - part: 今日
+        text: 点 P、Q は直線 AB について同じがわにあり、∠APB = ∠AQB = 40° です。4 点 A、B、P、Q について、正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg"><line x1="71.8" y1="127.7" x2="157" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.2" y1="31.3" x2="71.8" y2="127.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.2" y1="31.3" x2="157" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.6" y1="31.3" x2="71.8" y2="127.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.6" y1="31.3" x2="157" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M154.1 45.4 A20 20 0 0 0 166.5 51.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.7" y="64.8" font-size="13" text-anchor="middle">40°</text><path d="M92.5 50.6 A20 20 0 0 0 106.1 49.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="100.4" y="67.7" font-size="13" text-anchor="middle">40°</text><text x="62.3" y="137.7" font-size="13" text-anchor="middle">A</text><text x="160.8" y="173.6" font-size="13" text-anchor="middle">B</text><text x="173.7" y="26.3" font-size="13" text-anchor="middle">P</text><text x="92.1" y="26.3" font-size="13" text-anchor="middle">Q</text></svg>'
+        choices:
+          - 1 つの円周の上にある
+          - 1 つの円周の上にあるとはかぎらない
+        answer: 1 つの円周の上にある
+        check: "'1 つの円周の上にある' if 40 == 40 else '1 つの円周の上にあるとはかぎらない'"
+        hints:
+          - P と Q は、AB について同じがわにあるね。
+          - ∠APB と ∠AQB は等しいね。
+          - 円周角の定理の逆を思い出そう。
+        paths:
+          - [同じがわで角が等しい, 円周角の定理の逆, 1 つの円周の上]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 円 O で、PB が直径のとき、∠APB = ∠AOB ÷ 2 であることを証明しましょう（中心が角の辺の上にある場合）。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M83.7 62.3 A22 22 0 0 0 96.6 59.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="92.9" y="78.1" font-size="13" text-anchor="middle">∠a</text><path d="M89.9 135.9 A22 22 0 0 0 77.7 130.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.8" y="125.9" font-size="13" text-anchor="middle">∠a</text><path d="M111 110.7 A14 14 0 0 0 127 112.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.7" y="165.7" font-size="13" text-anchor="middle">A</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">B</text><text x="80.1" y="35.4" font-size="13" text-anchor="middle">P</text><text x="127.8" y="96.8" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        explain: 例：「∠APB = ∠a とする。OA と OP は円の半径なので OA = OP で、△OAP は二等辺三角形。二等辺三角形の底角は等しいので ∠OAP = ∠OPA = ∠a。∠AOB は △OAP の頂点 O の外角なので、∠AOB = ∠OAP + ∠OPA = ∠a + ∠a。したがって ∠AOB は ∠a の 2 倍で、∠APB = ∠AOB ÷ 2。」と書ければよい。①「∠APB = ∠a とする」と名前を決める、② 半径が等しいことから二等辺三角形、底角が等しい（G-010、G-017）、③ 外角はとなり合わない 2 つの内角の和（G-016）で結ぶ、の 3 点を見る。中心角と円周角を分度器で測って半分になった、という例だけでは、どの位置の P でもいえるとは示せないことを話す。
+        hints:
+          - OA と OP は、円の何かな。
+          - △OAP は何という三角形かな。底角はどうなるかな。
+          - ∠AOB は、△OAP のどの角かな。外角の性質を使おう。
+        paths:
+          - [∠APB = ∠a とする, OA = OP で ∠OAP = ∠a, ∠AOB は外角で ∠a + ∠a, ∠APB = ∠AOB ÷ 2]
+      - part: わけ
+        text: 中心 O が ∠APB の内側にあるとき、∠APB = ∠AOB ÷ 2 であることを証明しましょう。P を通る直径 PQ を引いて考えます。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="182.4" y2="129.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="126" y2="168.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M103 55 A26 26 0 0 0 116.3 57.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.4" y="73.4" font-size="13" text-anchor="middle">∠a</text><path d="M116.3 57.3 A26 26 0 0 0 128.9 52.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127" y="71.7" font-size="13" text-anchor="middle">∠b</text><text x="54.6" y="150.4" font-size="13" text-anchor="middle">A</text><text x="192.4" y="138.3" font-size="13" text-anchor="middle">B</text><text x="113" y="25" font-size="13" text-anchor="middle">P</text><text x="127" y="184.1" font-size="13" text-anchor="middle">Q</text><text x="131" y="104.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        explain: 例：「直径 PQ を引き、∠APQ = ∠a、∠QPB = ∠b とする。前の問題（中心が辺の上にある場合）から、∠AOQ = 2∠a、∠QOB = 2∠b。∠APB = ∠a + ∠b、∠AOB = ∠AOQ + ∠QOB = 2∠a + 2∠b なので、∠AOB は ∠APB の 2 倍で、∠APB = ∠AOB ÷ 2。」と書ければよい。① 補助線（直径 PQ）を引いて 2 つの角に名前を決める、② すでに示した場合（中心が辺の上）を 2 回使う、③ 角を足し合わせて結ぶ、の 3 点を見る。中心が角の外側にあるときも、直径 PQ を引いて、2 つの場合の「ひき算」で同じように示せる（場合分け）ことを話す。3 つの場合をすべて示して、はじめて定理が証明できたことになる。
+        hints:
+          - 直径 PQ で、∠APB を 2 つに分けよう。それぞれに名前をつけよう。
+          - 分けたそれぞれの角は、「中心が辺の上にある場合」になっているね。
+          - 2 つの場合の式をたそう。
+        paths:
+          - [直径 PQ を引く, ∠APQ = ∠a、∠QPB = ∠b とする, ∠AOQ = 2∠a、∠QOB = 2∠b, たして ∠AOB = 2(∠a + ∠b) = 2∠APB]
+      - part: わけ
+        text: AB が円 O の直径のとき、円周の上の点 P について ∠APB = 90° であることを、二等辺三角形を使って証明しましょう。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96.5" y1="35.3" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="96.5" y2="35.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M73.1 100 A22 22 0 0 0 63.8 82" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.3" y="88.9" font-size="13" text-anchor="middle">∠a</text><path d="M86.1 50 A18 18 0 0 0 102.6 52.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="92.5" y="69.6" font-size="13" text-anchor="middle">∠a</text><path d="M170.8 87.4 A22 22 0 0 0 166.9 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="156.4" y="94.3" font-size="13" text-anchor="middle">∠b</text><path d="M105.3 59.7 A26 26 0 0 0 117.7 50.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.6" y="70" font-size="13" text-anchor="middle">∠b</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="92.7" y="29.5" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        explain: 例：「OA、OP、OB は半径なので等しい。△OAP は二等辺三角形なので ∠OAP = ∠OPA、これを ∠a とする。△OBP も二等辺三角形なので ∠OBP = ∠OPB、これを ∠b とする。△PAB の内角の和は 180° なので、∠a + ∠b + (∠a + ∠b) = 180°。よって ∠a + ∠b = 90° で、∠APB = ∠a + ∠b = 90°。」と書ければよい。① 半径を引き、2 つの二等辺三角形の底角に名前を決める、② 内角の和の式を変形する（2 つ分が 180° なので 1 つ分は 90°）、③ 二等辺三角形の底角、三角形の内角の和という約束した事実で結ぶ、の 3 点を見る。円周角の定理から「中心角 180° の半分」として示す道もあることに触れる。
+        hints:
+          - O と P を結ぼう。OA、OP、OB はどれも何かな。
+          - できた 2 つの二等辺三角形の底角に、名前をつけよう。
+          - △PAB の内角の和を、その名前で式に書こう。
+        paths:
+          - [OP を引く, ∠OAP = ∠OPA = ∠a、∠OBP = ∠OPB = ∠b, 2∠a + 2∠b = 180°, ∠a + ∠b = 90°]
+          - [中心角 ∠AOB = 180°, 円周角はその半分で 90°]
+      - part: 今日
+        text: 円 O で PB は直径です。∠APO = 28° のとき、∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.6" y1="40.4" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="89.8" y2="161.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M86.3 62.4 A22 22 0 0 0 96.6 59.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.9" y="77.6" font-size="13" text-anchor="middle">28°</text><path d="M113.9 112.6 A14 14 0 0 0 127 112.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120.9" y="130.5" font-size="13" text-anchor="middle">x</text><text x="85" y="176.3" font-size="13" text-anchor="middle">A</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">B</text><text x="80.1" y="35.4" font-size="13" text-anchor="middle">P</text><text x="127.8" y="96.8" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 56
+        check: "28 * 2"
+        hints:
+          - OA = OP なので、∠OAP は何度かな。
+          - ∠AOB は △OAP の外角だね。
+          - 外角は、となり合わない 2 つの内角の和だね。
+        paths:
+          - [∠OAP = 28°, ∠AOB = 28 + 28 = 56]
+      - part: 今日
+        text: AB は円 O の直径です。∠BAC = 25° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="164.3" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="188.9" y1="100" x2="164.3" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="164.3" y2="47.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M73.1 100 A22 22 0 0 0 71.1 90.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.3" y="97.2" font-size="13" text-anchor="middle">25°</text><path d="M152.7 61 A18 18 0 0 0 171.9 63.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.3" y="81.5" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="171.3" y="43.4" font-size="13" text-anchor="middle">C</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 65
+        check: "90 - 25"
+        hints:
+          - OA = OC なので、∠OCA は何度かな。
+          - ∠ACB は、半円の弧に対する円周角だね。
+          - ∠ACB から ∠OCA をひこう。
+        paths:
+          - [∠OCA = ∠OAC = 25°, ∠ACB = 90°, ∠x = 90 − 25 = 65]
+          - [OB = OC で ∠x = ∠OBC, ∠ABC = 90 − 25 = 65]
+    extra:
+      - part: 今日
+        text: O は円の中心で、∠ACB = 36° です。∠AOB は何度ですか。
+        answer: 72
+        check: "36 * 2"
+        hints:
+          - ∠ACB と ∠AOB は、同じ弧 AB に対する角だね。
+          - 中心角は円周角の何倍かな。
+          - 36° を 2 倍しよう。
+        paths:
+          - [36 × 2 = 72]
+      - part: 今日
+        text: AB は円 O の直径で、P は円周の上の点です。∠PAB = 33° のとき、∠PBA は何度ですか。
+        answer: 57
+        check: "90 - 33"
+        hints:
+          - ∠APB は何度かな。
+          - 半円の弧に対する円周角だね。
+          - 三角形の内角の和を使おう。
+        paths:
+          - [∠APB = 90°, 180 − 90 − 33 = 57]
+      - part: 今日
+        text: 円 O で、PB は直径です。∠AOB = 64° のとき、∠APB は何度ですか。
+        answer: 32
+        check: "64 // 2"
+        hints:
+          - OA = OP なので、△OAP は二等辺三角形だね。
+          - ∠AOB は △OAP の外角だね。
+          - 外角は、等しい 2 つの底角の和だね。
+        paths:
+          - [∠APB = 64 ÷ 2 = 32]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="32.9" x2="49.4" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.4" y1="117.1" x2="190.6" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.6" y1="117.1" x2="120" y2="32.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.5" y1="78.2" x2="80.9" y2="71.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="159.1" y1="71.8" x2="151.5" y2="78.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M109.7 45.2 A16 16 0 0 0 130.3 45.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="65.5" font-size="13" text-anchor="middle">80°</text><path d="M180.3 104.8 A16 16 0 0 0 174.6 117.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165.2" y="109.8" font-size="13" text-anchor="middle">x</text><text x="120" y="26.5" font-size="13" text-anchor="middle">A</text><text x="41.6" y="129.4" font-size="13" text-anchor="middle">B</text><text x="198.4" y="129.4" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 50
+        check: "(180 - 80) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 80 = 100, 100 ÷ 2 = 50]
+      - part: 思い出す
+        text: 半径 6 cm、中心角 120° のおうぎ形の弧の長さは（□ × 円周率）cm です。□ にあてはまる数はいくつですか。
+        answer: 4
+        check: "6 * 2 * Fraction(120, 360)"
+        hints:
+          - 円周は（12 × 円周率）cm だね。
+          - おうぎ形は、円の何分の 1 かな。
+          - 12 の 3 分の 1 を求めよう。
+        paths:
+          - [円周は (12 × 円周率) cm, 120/360 = 1/3, 12 の 1/3 は 4]
+      - part: 今日
+        text: O は円の中心で、∠ACB = 50° です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="67.3" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="67.3" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="67.3" y1="144.3" x2="172.7" y2="144.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M107.1 48 A18 18 0 0 0 122.3 47.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="115.3" y="65.9" font-size="13" text-anchor="middle">50°</text><path d="M87.3 144.3 A20 20 0 0 0 82.6 131.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97.3" y="137.9" font-size="13" text-anchor="middle">x</text><text x="58.8" y="155.9" font-size="13" text-anchor="middle">A</text><text x="181.2" y="155.9" font-size="13" text-anchor="middle">B</text><text x="113" y="25" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 40
+        check: "(180 - 50 * 2) // 2"
+        hints:
+          - まず、∠AOB を求めよう。
+          - OA = OB なので、△OAB は何という三角形かな。
+          - 底角は等しいね。
+        paths:
+          - [∠AOB = 50 × 2 = 100, (180 − 100) ÷ 2 = 40]
+      - part: 今日
+        text: 半径 9 cm の円で、∠APB = 40° です。弧 AB（P をふくまない方）の長さは（□ × 円周率）cm です。□ にあてはまる数はいくつですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="75.7" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108" y1="32.2" x2="164.3" y2="152.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M102.9 51.5 A20 20 0 0 0 116.5 50.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="110.8" y="68.6" font-size="13" text-anchor="middle">40°</text><text x="68.7" y="165.7" font-size="13" text-anchor="middle">A</text><text x="171.3" y="165.7" font-size="13" text-anchor="middle">B</text><text x="106.1" y="25.9" font-size="13" text-anchor="middle">P</text></svg>'
+        answer: 4
+        check: "9 * 2 * Fraction(40 * 2, 360)"
+        hints:
+          - 弧 AB に対する中心角は何度かな。
+          - 弧 AB は、円周の何分の 1 かな。
+          - 円周は（18 × 円周率）cm だね。
+        paths:
+          - [中心角は 80, 80/360 = 2/9, 18 の 2/9 は 4]
+        note: 円周角の 40 をそのまま使って 40/360 とすると 2 になる。弧は中心角で決まる。
+      - part: 今日
+        text: AB は円 O の直径です。∠BOC = 70° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="143.5" y2="35.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="188.9" y1="100" x2="143.5" y2="35.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="143.5" y2="35.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M134 100 A14 14 0 0 0 124.8 86.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141.3" y="89.6" font-size="13" text-anchor="middle">70°</text><path d="M73.1 100 A22 22 0 0 0 69.2 87.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83.6" y="94.3" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="147.3" y="29.5" font-size="13" text-anchor="middle">C</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 35
+        check: "70 // 2"
+        hints:
+          - ∠BAC は、どの弧に対する円周角かな。
+          - 弧 BC に対する中心角は何度かな。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [∠x は弧 BC に対する円周角, 70 ÷ 2 = 35]
+          - [OA = OC で ∠OCA = ∠x, 外角 70 = 2∠x, 35]
+      - part: 挑戦
+        text: 円周を 9 等分する点を、順に A〜I とします。AD と BG の交点を P とするとき、∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="67.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="32.8" x2="178.2" y2="133.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="163.2" y1="48.5" x2="61.8" y2="133.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M149.4 60.1 A12 12 0 0 0 134.2 57.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.4" y="48.7" font-size="13" text-anchor="middle">x</text><text x="120" y="26.3" font-size="13" text-anchor="middle">A</text><text x="170.3" y="44.6" font-size="13" text-anchor="middle">B</text><text x="197" y="91" font-size="13" text-anchor="middle">C</text><text x="187.7" y="143.7" font-size="13" text-anchor="middle">D</text><text x="146.7" y="178" font-size="13" text-anchor="middle">E</text><text x="93.3" y="178" font-size="13" text-anchor="middle">F</text><text x="52.3" y="143.7" font-size="13" text-anchor="middle">G</text><text x="43" y="91" font-size="13" text-anchor="middle">H</text><text x="69.7" y="44.6" font-size="13" text-anchor="middle">I</text><text x="146.1" y="63" font-size="13" text-anchor="middle">P</text><circle cx="120" cy="32.8" r="2.5" fill="currentColor"/><circle cx="163.2" cy="48.5" r="2.5" fill="currentColor"/><circle cx="186.2" cy="88.3" r="2.5" fill="currentColor"/><circle cx="178.2" cy="133.6" r="2.5" fill="currentColor"/><circle cx="143" cy="163.1" r="2.5" fill="currentColor"/><circle cx="97" cy="163.1" r="2.5" fill="currentColor"/><circle cx="61.8" cy="133.6" r="2.5" fill="currentColor"/><circle cx="53.8" cy="88.3" r="2.5" fill="currentColor"/><circle cx="76.8" cy="48.5" r="2.5" fill="currentColor"/></svg>'
+        answer: 80
+        check: "(360 // 9 * 1 + 360 // 9 * 3) // 2"
+        hints:
+          - となり合う 2 点の間の弧に対する円周角は何度かな。
+          - AG を結ぶと、∠APB は △APG の外角になるね。
+          - ∠BGA と ∠DAG は、それぞれ何こ分の弧に対する円周角かな。
+        paths:
+          - [1 こ分の弧の円周角は 40 ÷ 2 = 20, ∠BGA は弧 AB（1 こ分）で 20, ∠DAG は弧 DG（3 こ分）で 60, ∠APB = 20 + 60 = 80]
+    extra:
+      - part: 今日
+        text: O は円の中心で、∠ACB = 64° です。∠AOB は何度ですか。
+        answer: 128
+        check: "64 * 2"
+        hints:
+          - 同じ弧 AB に対する角だね。
+          - 中心角は円周角の何倍かな。
+          - 64° を 2 倍しよう。
+        paths:
+          - [64 × 2 = 128]
+      - part: 今日
+        text: O は円の中心で、∠OAB = 35° です。C は長い方の弧 AB の上にあります。∠ACB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="176.4" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="63.6" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="176.4" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.6" y1="139.5" x2="176.4" y2="139.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M85.6 139.5 A22 22 0 0 0 81.6 126.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="96" y="133.8" font-size="13" text-anchor="middle">35°</text><path d="M122.3 47.4 A18 18 0 0 0 138.8 48.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129.3" y="66.6" font-size="13" text-anchor="middle">x</text><text x="54.6" y="150.4" font-size="13" text-anchor="middle">A</text><text x="185.4" y="150.4" font-size="13" text-anchor="middle">B</text><text x="133.9" y="25.9" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 55
+        check: "(180 - 35 * 2) // 2"
+        hints:
+          - OA = OB なので、∠OBA は何度かな。
+          - ∠AOB を求めよう。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [∠AOB = 180 − 35 − 35 = 110, 110 ÷ 2 = 55]
+      - part: 今日
+        text: ∠ADB = 38° のとき、∠ACB は何度ですか。C と D は、長い方の弧 AB の上にあります。
+        answer: 38
+        check: "38"
+        hints:
+          - ∠ADB と ∠ACB は、どの弧に対する円周角かな。
+          - 同じ弧に対する円周角だね。
+          - 同じ弧に対する円周角は等しいね。
+        paths:
+          - [どちらも弧 AB, 38°]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: O は円の中心です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="53.5" y2="117.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="31.4" x2="186.5" y2="117.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="53.5" y2="117.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="186.5" y2="117.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M103.7 46.2 A18 18 0 0 0 125.6 45.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="115.3" y="65.9" font-size="13" text-anchor="middle">x</text><path d="M106.5 103.6 A14 14 0 0 0 133.5 103.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">150°</text><text x="42.9" y="125.2" font-size="13" text-anchor="middle">A</text><text x="197.1" y="125.2" font-size="13" text-anchor="middle">B</text><text x="113" y="25" font-size="13" text-anchor="middle">P</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 75
+        check: "150 // 2"
+        hints:
+          - ∠x は弧 AB に対する円周角だね。
+          - 中心角は何度かな。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [150 ÷ 2 = 75]
+      - part: 今日
+        text: O は円の中心です。∠ACB = 42° のとき、∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="73.9" y2="151.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="132" y1="32.2" x2="166.1" y2="151.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="73.9" y2="151.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="166.1" y2="151.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M124.1 48.4 A18 18 0 0 0 136.9 49.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129.3" y="66.6" font-size="13" text-anchor="middle">42°</text><path d="M110.6 110.4 A14 14 0 0 0 129.4 110.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="130.6" font-size="13" text-anchor="middle">x</text><text x="66.6" y="163.9" font-size="13" text-anchor="middle">A</text><text x="173.4" y="163.9" font-size="13" text-anchor="middle">B</text><text x="133.9" y="25.9" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 84
+        check: "42 * 2"
+        hints:
+          - 2 つの角は、同じ弧 AB に対する角だね。
+          - 中心角は円周角の何倍かな。
+          - 42° を 2 倍しよう。
+        paths:
+          - [42 × 2 = 84]
+      - part: 今日
+        text: ∠APB = 33° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="82.5" y2="157.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.4" y1="40.4" x2="157.5" y2="157.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="47.3" x2="82.5" y2="157.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.7" y1="47.3" x2="157.5" y2="157.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M145 55.7 A18 18 0 0 0 154.9 58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.7" y="73.9" font-size="13" text-anchor="middle">33°</text><path d="M76.8 65.2 A18 18 0 0 0 86.4 61.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86" y="80" font-size="13" text-anchor="middle">x</text><text x="76.5" y="171.5" font-size="13" text-anchor="middle">A</text><text x="163.5" y="171.5" font-size="13" text-anchor="middle">B</text><text x="159.9" y="35.4" font-size="13" text-anchor="middle">P</text><text x="68.7" y="43.4" font-size="13" text-anchor="middle">Q</text></svg>'
+        answer: 33
+        check: "33"
+        hints:
+          - 2 つの角は、どの弧に対する円周角かな。
+          - 同じ弧に対する円周角だね。
+          - 同じ弧に対する円周角は等しいね。
+        paths:
+          - [どちらも弧 AB, 33°]
+      - part: 今日
+        text: AB は円 O の直径です。∠PAB = 26° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.1" y1="100" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.4" y1="45.7" x2="51.1" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.4" y1="45.7" x2="188.9" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><path d="M73.1 100 A22 22 0 0 0 70.9 90.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.3" y="96.9" font-size="13" text-anchor="middle">26°</text><path d="M180.1 82 A20 20 0 0 0 168.9 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="161.7" y="87.6" font-size="13" text-anchor="middle">x</text><text x="40.1" y="104.5" font-size="13" text-anchor="middle">A</text><text x="199.9" y="104.5" font-size="13" text-anchor="middle">B</text><text x="169.2" y="41.6" font-size="13" text-anchor="middle">P</text><text x="120" y="115.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 64
+        check: "180 - 90 - 26"
+        hints:
+          - ∠APB は何度かな。
+          - 半円の弧に対する円周角だね。
+          - 内角の和を使おう。
+        paths:
+          - [∠APB = 90°, 180 − 90 − 26 = 64]
+      - part: 今日
+        text: ∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        answer: 1/4
+        check: "Fraction(45 * 2, 360)"
+        hints:
+          - 弧 AB に対する中心角は何度かな。
+          - 中心角は円周角の 2 倍だね。
+          - 中心角 ÷ 360 を約分しよう。
+        paths:
+          - [中心角は 90, 90/360 = 1/4]
+      - part: 今日
+        text: ∠ADB = ∠ACB = 40°、∠CAD = 28° です。∠x（∠CBD）は何度ですか。
+        svg: '<svg viewBox="0 0 240 190" xmlns="http://www.w3.org/2000/svg"><line x1="63" y1="129.8" x2="142.5" y2="158.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.5" y1="158.7" x2="177" y2="64" stroke="currentColor" stroke-width="2" fill="none"/><line x1="177" y1="64" x2="124.6" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="124.6" y1="31.3" x2="63" y2="129.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63" y1="129.8" x2="177" y2="64" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142.5" y1="158.7" x2="124.6" y2="31.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M115 46.6 A18 18 0 0 0 127.1 49.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.4" y="65.2" font-size="13" text-anchor="middle">40°</text><path d="M161.4 73 A18 18 0 0 0 170.8 80.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157.7" y="91.5" font-size="13" text-anchor="middle">40°</text><path d="M83.8 117.8 A24 24 0 0 0 75.8 109.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.9" y="109.3" font-size="13" text-anchor="middle">28°</text><path d="M150.7 136.2 A24 24 0 0 0 139.2 134.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.3" y="127.5" font-size="13" text-anchor="middle">x</text><text x="53.5" y="139.8" font-size="13" text-anchor="middle">A</text><text x="146.3" y="173.6" font-size="13" text-anchor="middle">B</text><text x="186.5" y="63.1" font-size="13" text-anchor="middle">C</text><text x="125.4" y="24.9" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 28
+        check: "28 if 40 == 40 else 0"
+        hints:
+          - ∠ADB = ∠ACB で、C と D は AB について同じがわだね。
+          - 4 点 A、B、C、D は、どうなっているかな。
+          - ∠CAD と ∠CBD は、どの弧に対する円周角かな。
+        paths:
+          - [円周角の定理の逆で 4 点は 1 つの円周の上, ∠x と ∠CAD は弧 CD に対する円周角, 28°]
+      - part: 今日
+        text: O は円の中心です。∠ACB = 70° のとき、∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="55.3" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="55.3" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="100" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.3" y1="123.5" x2="184.7" y2="123.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M109.7 45.9 A18 18 0 0 0 130.3 45.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="65.7" font-size="13" text-anchor="middle">70°</text><path d="M77.3 123.5 A22 22 0 0 0 76 116" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.8" y="122.2" font-size="13" text-anchor="middle">x</text><text x="45" y="131.9" font-size="13" text-anchor="middle">A</text><text x="195" y="131.9" font-size="13" text-anchor="middle">B</text><text x="120" y="24.7" font-size="13" text-anchor="middle">C</text><text x="120" y="93.5" font-size="13" text-anchor="middle">O</text><circle cx="120" cy="100" r="2.5" fill="currentColor"/></svg>'
+        answer: 20
+        check: "(180 - 70 * 2) // 2"
+        hints:
+          - まず、∠AOB を求めよう。
+          - OA = OB なので、△OAB は二等辺三角形だね。
+          - 底角は等しいね。
+        paths:
+          - [∠AOB = 140, (180 − 140) ÷ 2 = 20]
+    extra:
+      - part: 今日
+        text: O は円の中心です。∠AOB = 120° のとき、∠APB（P は長い方の弧の上）は何度ですか。
+        answer: 60
+        check: "120 // 2"
+        hints:
+          - ∠APB は弧 AB に対する円周角だね。
+          - 中心角は何度かな。
+          - 半分にしよう。
+        paths:
+          - [120 ÷ 2 = 60]
+      - part: 今日
+        text: AB は円 O の直径です。円周の上の点 P について、∠APB は何度ですか。
+        answer: 90
+        check: "180 // 2"
+        hints:
+          - 弧 AB は、円のどれだけかな。
+          - 半円の弧に対する中心角は何度かな。
+          - 円周角は中心角の半分だね。
+        paths:
+          - [中心角 180°, 180 ÷ 2 = 90]
+      - part: 今日
+        text: 弧 AB と弧 CD の長さは等しく、∠CQD = 34° です。弧 AB に対する円周角 ∠APB は何度ですか。
+        answer: 34
+        check: "34"
+        hints:
+          - 等しい弧に対する円周角はどうなるかな。
+          - ∠APB と ∠CQD をくらべよう。
+          - 等しい弧なら、円周角も等しいね。
+        paths:
+          - [等しい弧の円周角は等しい, 34°]

@@ -1,0 +1,674 @@
+# G-051 結び目と折りたたみ（紐と紙の空間での動き）
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：折り目、重なり（何まい重なっているか）、じゃばら折り、結び目、交わり（ひもが重なって交わる所）、上を通る・下を通る、
+#   輪、つながっている・はずれる。
+# 考え方の水準は 1（体で分かる）。どの日も、紙のテープ・折り紙・ひも（くつひもや毛糸、60 cm ほど）を手元に置き、
+#   折って、穴をあけて、結んで確かめる。穴は穴あけパンチか、えんぴつの先でつついてあける。はさみを使う問題は「おとなといっしょに」。
+# 前提は G-004（折る、映す、回す）と G-002（形を分ける、組み合わせる）で、数の単元は N-001（10 まで）だけがつながる。
+#   そのため、答えは 10 までの数を数えて出す形にし、たし算・かけ算の式は子の文に出さない（「倍」も使わない）。
+#   紙を半分に折るのは 3 回まで（重なり 8 まい、折り目 7 本）。check の式（2 ** n など）は保護者が確かめるためのもの。
+# 段 3 なので文は学年に合う漢字にした（ひも、はさみはかな）。わけは、代表の例を使って短い文で書く。
+# 最先端へのつながり（D-026）：結び目は、ひもの結び目を数で区別する結び目理論（T-056）や DNA の結び目へ、
+#   折りたたみは人工衛星の太陽電池パネルや、折り紙を使った工学（ミウラ折り）へつながる。ここでは名前は出さない。
+# 図は svg（D-040）。ひもの図は、下を通る所を切って描いた（すき間のある方が下）。両はしの黒い点はひものはし。
+#   紙の図の点線は折り目、太い線は折ってできた辺（折り目）、小さい丸は穴。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 テープを折る（重なりと折り目）　2 日目 折って穴をあけて広げる（G-004 の折ると重なる形）　3 日目 ひもの交わりと結び目
+#   4 日目 わけ（折り目がふえるわけ、穴の位置、上ばかり通るひもはほどける）と 2 つの輪　5 日目 G-004・G-002 と 1〜4 日目を混ぜる　6 日目 確認
+# check：重なりは 2 ** n、折り目は 2 ** n − 1（n は半分に折った回数）。穴の数は、穴の位置を 2 つの折り目について写した位置の集まりの数
+#   （折り目の上の穴は、写しても同じ位置なので 1 つに重なる）。広げた紙を選ぶ問題は、写した位置の集まりと候補を比べる。
+#   ひもは、図を作るときに片はしからたどって読んだ「交わり（a、b、c…）の上（O）と下（U）」の列を使う。交わりの数は列の長さ ÷ 4。
+#   どの交わりでも先に上を通る（または、どの交わりでも先に下を通る）ひもは、持ち上げるとほどける。そうでない図は、ひと結び（交わり 3）と
+#   8 の字結び（交わり 4）の、上下が交互の図だけを使った（どちらもほどけないことが知られている）。
+#   2 つの輪は、片方の輪が 2 つの交わりで両方とも上（または両方とも下）ならはずれる。3 つの輪がいくつに分かれるかは、
+#   つながった組の数から出す（ボロメオの輪のように、どの 2 つもはずれるのに 3 つははずれない輪は、この式では出せないので check を付けない）。
+
+id: G-051
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 紙のテープを半分に折って、また広げてみよう。
+        svg: '<svg viewBox="0 0 240 174" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="10" width="200" height="20" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><text x="120" y="45.9" font-size="11" text-anchor="middle">① テープ</text><line x1="120" y1="50" x2="120" y2="62" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,56 120,62 124,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="73" y="71" width="100" height="20" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><rect x="70" y="68" width="100" height="20" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><text x="120" y="107.8" font-size="11" text-anchor="middle">② 半分に折る</text><line x1="120" y1="110" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,116 120,122 124,116" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="20" y="128" width="200" height="20" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="124" x2="120" y2="152" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="120" y="169.8" font-size="11" text-anchor="middle">③ 広げる</text></svg>'
+        explain: テープを半分に折ると、テープが 2 まい重なります。広げると、まん中に折り目が 1 本できています。重なったまま、もう一度半分に折ると、重なりは 4 まいになります。折るたびに、重なった紙ぜんぶを一度に折るので、重なりも折り目もふえていきます。じっさいにテープを折って、はしを指でさわって数えてみましょう。
+      - part: 思い出す
+        text: まん中のたての線で折ると、ぴったり重なる並びはどれですか。
+        choices: [🟦🟦🟥, 🟦🟥🟦, 🟥🟦🟦]
+        answer: 🟦🟥🟦
+        check: "[c for c in ['🟦🟦🟥', '🟦🟥🟦', '🟥🟦🟦'] if c == c[::-1]][0]"
+        hints:
+          - 折ると、左のはしと右のはしが重なるよ。
+          - 左のはしと右のはしの色をくらべよう。
+          - 左から読んでも右から読んでも同じ並びをさがそう。
+        paths:
+          - [はしとはしの色が同じ, 🟦🟥🟦]
+      - part: 思い出す
+        text: この形は、四角の色板が何まいでできていますか。
+        figure: "🟥🟥🟥\n🟥🟥⬜"
+        answer: 5
+        check: "n('🟥')"
+        hints:
+          - 色板を 1 まいずつ指でさそう。
+          - 上の列から数えよう。
+          - ⬜ は色板のない所だよ。
+        paths:
+          - [上の列 3 まい, 下の列に続けて 4、5, 5 まい]
+      - part: 今日
+        text: テープを半分に折り、重なったまま、もう一度半分に折りました。テープは何まい重なっていますか。
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - 1 回折ると、何まい重なるかな。
+          - 2 回目は、重なったテープを一度に折るね。
+          - テープを折って、はしを数えてみよう。
+        paths:
+          - [1 回で 2 まい, 2 まいがもう一度重なって 4 まい]
+        note: 2 回折ったから 2 まい、と答えやすい。じっさいに折って、はしの紙を数える。
+      - part: 今日
+        text: 前の問題のように 2 回折ったテープを、広げました。折り目は何本ありますか。
+        answer: 3
+        check: "2 ** 2 - 1"
+        hints:
+          - 1 回目の折り目は、どこにできたかな。
+          - 2 回目に折ると、新しい折り目はいくつできるかな。
+          - テープを広げて、折り目を指でなぞって数えよう。
+        paths:
+          - [まん中に 1 本, 2 回目で左右に 1 本ずつ, ぜんぶで 3 本]
+        note: 2 回折ったから 2 本、と答えやすい。広げて数えると確かめられる。
+      - part: 今日
+        text: テープを半分に折るのを、3 回くり返しました。テープは何まい重なっていますか。
+        answer: 8
+        check: "2 ** 3"
+        hints:
+          - 2 回折ったときは、何まい重なったかな。
+          - 3 回目は、その重なりを一度に折るね。
+          - テープを 3 回折って、はしを数えよう。
+        paths:
+          - [2 回で 4 まい, 3 回目でその 4 まいがもう一度重なる, 8 まい]
+      - part: 挑戦
+        text: テープを半分に折るのを 3 回くり返してから、広げました。折り目は何本ありますか。
+        answer: 7
+        check: "2 ** 3 - 1"
+        hints:
+          - 3 回折ったテープは、何まい重なっていたかな。
+          - 広げると、テープはいくつの部分に分かれて見えるかな。
+          - となりの部分のさかい目が折り目だね。
+        paths:
+          - [8 まい重なる, 広げると 8 つの部分, さかい目は 7 本]
+          - [じっさいに 3 回折って広げ、折り目を数える]
+        note: 部分の数と折り目の数は 1 ちがう。植木算と同じ考え。
+    extra:
+      - part: 今日
+        text: 正方形の紙を、図のように左を右へ、下を上へ折りました。紙は何まい重なっていますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ できた形</text></svg>'
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - ① で折ると、何まい重なるかな。
+          - ② は、重なった紙を一度に折るね。
+          - 折り紙で折って、かどを数えよう。
+        paths:
+          - [① で 2 まい, ② で 4 まい]
+      - part: 今日
+        text: テープを図の左のように、じゃばらに 3 つに折りました。テープは何まい重なっていますか。
+        svg: '<svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg"><polyline points="20,16 80,16 20,26 80,36" stroke="currentColor" stroke-width="2.2" fill="none"/><text x="62" y="61.5" font-size="10" text-anchor="middle">折ったところ（横から）</text><rect x="110" y="20" width="120" height="20" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="150" y1="16" x2="150" y2="44" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><line x1="190" y1="16" x2="190" y2="44" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="170" y="61.5" font-size="10" text-anchor="middle">広げたところ</text></svg>'
+        answer: 3
+        check: "2 + 1"
+        hints:
+          - 横から見た図の、線の重なりを数えよう。
+          - 広げた図では、テープはいくつの部分に分かれているかな。
+          - 部分が 1 つずつ重なっているよ。
+        paths:
+          - [折り目 2 本で 3 つの部分, 3 まい重なる]
+      - part: 今日
+        text: テープを半分に 2 回折ってから広げました。おとなといっしょに、折り目ぜんぶにそってはさみで切ると、テープは何本に分かれますか。
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - 2 回折ったテープの折り目は、何本だったかな。
+          - 折り目で分かれた部分を数えよう。
+          - 部分の数は、折り目の数より多いかな、少ないかな。
+        paths:
+          - [折り目は 3 本, 分かれた部分は 4 つ, 4 本]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 折った紙に穴をあけて広げると、穴はどこにできるでしょう。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="199.6" cy="61.6" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        explain: 正方形の紙の左を右へ折り、下を上へ折ると、紙は 4 まい重なります。太い線は折り目です。重なったまま穴を 1 つあけると、4 まいに一度に穴があくので、広げると穴は 4 つあります。広げた紙を、折り目で折りもどすと、穴はぴったり重なります。だから、穴は折り目をはさんで左右、上下に、鏡に映したような位置にできます。
+      - part: 思い出す
+        text: 正方形の紙を、図のように三角に 2 回折りました。紙は何まい重なっていますか。
+        svg: '<svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="18" width="60" height="60" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="10" y1="78" x2="70" y2="18" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="97.8" font-size="11" text-anchor="middle">① 三角に</text><line x1="76" y1="48" x2="92" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,44 92,48 86,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="98,78 158,78 158,18" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="128" y1="48" x2="158" y2="78" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="132" y="97.8" font-size="11" text-anchor="middle">② もう一度</text><line x1="164" y1="48" x2="178" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="172,44 178,48 172,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="184,66 230,66 207,43" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - ① で折ると、何まい重なるかな。
+          - ② は、重なった紙を一度に折るね。
+          - 折り紙で折って、数えてみよう。
+        paths:
+          - [① で 2 まい, ② で 4 まい]
+      - part: 思い出す
+        text: ｜ は鏡です。鏡に映った並びはどれですか。
+        figure: 🟩🟥🟦｜
+        choices: [🟦🟥🟩, 🟩🟥🟦, 🟥🟦🟩]
+        answer: 🟦🟥🟩
+        check: "fig.split('｜')[0][::-1]"
+        hints:
+          - 鏡にいちばん近いのはどれかな。
+          - 鏡に近いものは、鏡の中でも鏡のそばに映るよ。
+          - 鏡のそばから順にならべよう。
+        paths:
+          - [鏡のそばは 🟦, 次に 🟥、いちばん遠くに 🟩, 🟦🟥🟩]
+      - part: 今日
+        text: 図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="190" cy="42.4" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 4
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((5, 7))"
+        hints:
+          - 穴をあけたとき、紙は何まい重なっていたかな。
+          - 重なった紙ぜんぶに、一度に穴があくね。
+          - 折り紙で折って、えんぴつの先で穴をあけて確かめよう。
+        paths:
+          - [4 まい重なっている, 4 まいに 1 つずつ, 4 つ]
+      - part: 今日
+        text: 見本と同じように折って、穴を 1 つあけました。広げた紙はどれですか。
+        svg: '<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="199.6" cy="42.4" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text><g transform="translate(0,114)"><rect x="10" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="42" y1="8" x2="42" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="10" y1="40" x2="74" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="64.4" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="32.4" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="64.4" cy="49.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="32.4" cy="49.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="42" y="89.2" font-size="12" text-anchor="middle">ア</text><rect x="88" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="8" x2="120" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="88" y1="40" x2="152" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="142.4" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.6" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="142.4" cy="62.4" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.6" cy="62.4" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="89.2" font-size="12" text-anchor="middle">イ</text><rect x="166" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="198" y1="8" x2="198" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="166" y1="40" x2="230" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="220.4" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="175.6" cy="17.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="89.2" font-size="12" text-anchor="middle">ウ</text></g></svg>'
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "[k for k, v in {'ア': {(7, 7), (-3, 7), (7, -3), (-3, -3)}, 'イ': {(7, 7), (-7, 7), (7, -7), (-7, -7)}, 'ウ': {(7, 7), (-7, 7)}}.items() if v == {(a * 7, b * 7) for a in (1, -1) for b in (1, -1)}][0]"
+        hints:
+          - 広げた紙には、穴がいくつあるはずかな。
+          - 広げた紙を折り目で折ると、穴はぴったり重なるはずだね。
+          - 折り目のたての点線をはさんで、左右の穴が鏡に映した位置にあるかを見よう。
+        paths:
+          - [穴は 4 つ, 折り目をはさんで鏡に映した位置, イ]
+        note: ア は穴を「ずらした」位置。折り目で折ると重ならない。G-004 の「折ると重なる形」を思い出させる。
+      - part: 今日
+        text: 図のように折った紙の、折り目（太い線）の上に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="166" cy="52" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 2
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 5))"
+        hints:
+          - 穴は、どの折り目にかかっているかな。
+          - 折り目にかかった穴は、広げると左右がつながって 1 つの穴になるよ。
+          - 折り紙で折って、穴をあけて確かめよう。
+        paths:
+          - [たての折り目にかかっている, 左右の 2 まいの穴が 1 つにつながる, 上下に 1 つずつで 2 つ]
+        note: 4 つと答えやすい。折り目の上の穴は、広げると 1 つにつながる。
+      - part: 挑戦
+        text: 図のように折った紙に、穴を 2 つあけました。1 つは折り目の上にあります。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="194.8" cy="47.2" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="180.4" cy="76" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 6
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((6, 6), (3, 0))"
+        hints:
+          - 折り目にかかっていない穴は、広げるといくつになるかな。
+          - 下の折り目にかかった穴は、広げるといくつになるかな。
+          - 2 つの穴を分けて考えよう。
+        paths:
+          - [かかっていない穴は 4 つ, 下の折り目の穴は 2 つ, あわせて 6 つ]
+    extra:
+      - part: 今日
+        text: 図のように折った紙の、2 つの折り目が交わるかど（太い線のかど）に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="166" cy="76" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 1
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 0))"
+        hints:
+          - 穴は、2 つの折り目のどちらにもかかっているね。
+          - 広げると、そのかどは紙のどこになるかな。
+          - 折り紙で確かめよう。
+        paths:
+          - [かどは紙のまん中, 4 まいの穴がまん中で 1 つにつながる, 1 つ]
+      - part: 今日
+        text: 正方形の紙を、図のように三角に 2 回折って、穴を 1 つあけました。どの折り目にもかかっていません。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="18" width="60" height="60" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="10" y1="78" x2="70" y2="18" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="97.8" font-size="11" text-anchor="middle">① 三角に</text><line x1="76" y1="48" x2="92" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,44 92,48 86,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="98,78 158,78 158,18" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="128" y1="48" x2="158" y2="78" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="132" y="97.8" font-size="11" text-anchor="middle">② もう一度</text><line x1="164" y1="48" x2="178" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="172,44 178,48 172,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="184,66 230,66 207,43" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - 紙は何まい重なっていたかな。
+          - 重なった紙ぜんぶに、一度に穴があくね。
+          - 折り紙で確かめよう。
+        paths:
+          - [4 まい重なる, 4 つ]
+      - part: 今日
+        text: 見本と同じように折って、穴を 1 つあけました。広げた紙はどれですか。
+        svg: '<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="180.4" cy="47.2" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text><g transform="translate(0,114)"><rect x="10" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="42" y1="8" x2="42" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="10" y1="40" x2="74" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="51.6" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="32.4" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="42" y="89.2" font-size="12" text-anchor="middle">ア</text><rect x="88" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="8" x2="120" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="88" y1="40" x2="152" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="129.6" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.6" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="129.6" cy="52.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.6" cy="52.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="89.2" font-size="12" text-anchor="middle">イ</text><rect x="166" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="198" y1="8" x2="198" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="166" y1="40" x2="230" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="207.6" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="188.4" cy="20.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="207.6" cy="59.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="188.4" cy="59.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="89.2" font-size="12" text-anchor="middle">ウ</text></g></svg>'
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "[k for k, v in {'ア': {(3, 6), (-3, 6)}, 'イ': {(3, 6), (-7, 6), (3, -4), (-7, -4)}, 'ウ': {(3, 6), (-3, 6), (3, -6), (-3, -6)}}.items() if v == {(a * 3, b * 6) for a in (1, -1) for b in (1, -1)}][0]"
+        hints:
+          - 広げた紙には、穴がいくつあるはずかな。
+          - 折り目で折ると、穴はぴったり重なるはずだね。
+          - 横の点線をはさんで、上下の穴が鏡に映した位置にあるかも見よう。
+        paths:
+          - [穴は 4 つ, 折り目をはさんで鏡に映した位置, ウ]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: ひもの結び目を見てみよう。ひもが重なって交わる所を「交わり」といいます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="149.8" cy="126" r="4" fill="currentColor"/><circle cx="90.2" cy="126" r="4" fill="currentColor"/></svg>'
+        explain: 図はひもで作った「ひと結び」です。黒い点がひもの両はしです。交わりでは、1 本が上を、もう 1 本が下を通ります。図ですき間がある方が下を通るひもです。この結び目には交わりが 3 つあり、左のはしからたどると、上、下、上、下…と交互に通ります。両はしを持ったまま、手をはなさずに引っぱると、結び目はほどけずに小さくしまります。ひもで同じ形を作って、確かめてみましょう。
+      - part: 思い出す
+        text: 図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="185.2" cy="37.6" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 4
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((4, 8))"
+        hints:
+          - 穴をあけたとき、紙は何まい重なっていたかな。
+          - 穴は、折り目にかかっているかな。
+          - 重なった紙ぜんぶに、一度に穴があくね。
+        paths:
+          - [4 まい重なる, 折り目にかかっていない, 4 つ]
+      - part: 思い出す
+        text: テープを半分に折るのを 2 回くり返して、広げました。折り目は何本ありますか。
+        answer: 3
+        check: "2 ** 2 - 1"
+        hints:
+          - 1 回目の折り目は、まん中に 1 本だね。
+          - 2 回目に折ると、新しい折り目はいくつできるかな。
+          - テープを折って、広げて数えよう。
+        paths:
+          - [まん中に 1 本, 左右に 1 本ずつ, 3 本]
+      - part: 今日
+        text: このひもの結び目には、交わりがいくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.3,53.5 179.8,55.2 177.3,56.9 175.1,57.8 174.4,54.9 173.5,52 172.5,49.1 171.3,46.4 170,43.7 168.5,41 166.9,38.5 165.2,36 163.3,33.6 161.3,31.4 159.2,29.2 157,27.2 154.6,25.3 152.2,23.5 149.6,21.8 147,20.3 144.3,19 141.6,17.8 138.7,16.7 135.8,15.9 132.9,15.1 129.9,14.6 126.9,14.2 123.9,14 120.9,14 117.9,14.2 114.9,14.5 111.9,15 109,15.7 106.1,16.6 103.3,17.7 100.5,18.9 97.8,20.3 95.3,21.9 92.8,23.6 90.4,25.5 88.2,27.5 86.1,29.7 84.2,32 82.5,34.5 80.9,37.1 79.5,39.7 78.3,42.5 77.3,45.4 76.5,48.3 75.9,51.2 75.6,54.2 75.5,57.3 75.7,60.3 76.1,63.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="81.1,76.2 82.8,78.7 84.8,81 86.9,83.1 89.3,85 91.8,86.7 94.5,88.2 97.2,89.4 100.1,90.4 103,91.1 106,91.6 109,91.8 112.1,91.9 115.1,91.6 118.1,91.2 121,90.5 123.9,89.6 126.7,88.4 129.3,87 131.9,85.3 134.2,83.4 136.4,81.3 138.4,79 140.2,76.6 141.8,74 143.1,71.3 144.1,68.4 145,65.5 145.6,62.6 145.9,59.6 146,56.5 145.8,53.5 145.5,50.5 144.8,47.5 144,44.6 143,41.8 141.7,39 140.3,36.4 138.6,33.8 136.8,31.4 134.8,29.1 132.7,27 130.4,25 128.1,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="140.4,63.8 138.7,61.3 136.7,59 134.6,56.9 132.2,55 129.7,53.3 127.1,51.8 124.3,50.6 121.4,49.6 118.5,48.9 115.5,48.4 112.5,48.2 109.5,48.1 106.4,48.4 103.4,48.8 100.5,49.5 97.6,50.4 94.8,51.6 92.2,53 89.6,54.7 87.3,56.6 85.1,58.7 83.1,61 81.3,63.4 79.8,66 78.4,68.7 77.4,71.6 76.5,74.5 76,77.4 75.6,80.4 75.5,83.5 75.7,86.5 76.1,89.5 76.7,92.5 77.5,95.4 78.6,98.2 79.8,101 81.3,103.6 82.9,106.2 84.7,108.6 86.7,110.9 88.8,113 91.1,115 93.5,116.9 96,118.6 98.6,120.1 101.3,121.5 104.1,122.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="194.9" cy="45.1" r="4" fill="currentColor"/><circle cx="194.9" cy="94.9" r="4" fill="currentColor"/></svg>'
+        answer: 4
+        check: "len('aObUcOaUdOcUbOdU') // 4"
+        hints:
+          - すき間のある所が交わりだよ。
+          - 片方のはしから、ひもを指でたどろう。
+          - 数えた交わりに、心の中でしるしをつけよう。
+        paths:
+          - [はしからたどる, すき間のある所を数える, 4 つ]
+        note: 同じ交わりを 2 回数えやすい（ひもは 1 つの交わりを 2 回通る）。交わりに小さく印をつけて数える。
+      - part: 今日
+        text: このひもの両はしを持ったまま引っぱると、交わりはほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="32" cy="126" r="4" fill="currentColor"/><circle cx="208" cy="126" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどける
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aOaU')"
+        hints:
+          - 交わりはいくつあるかな。
+          - 輪の所は、ひもが 1 回重なっているだけだね。
+          - ひもで同じ形を作って、引っぱってみよう。
+        paths:
+          - [交わりは 1 つ, 引くと輪が小さくなって消える, ほどける]
+      - part: 今日
+        text: 見本のひもと形は同じですが、交わりの上と下が少しちがいます。両はしを持ったまま引っぱると、ほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="149.8,126 148.3,123.4 146.9,120.7 145.4,118.1 143.9,115.4 142.5,112.8 141,110.1 139.5,107.5 141.1,104.9 142.6,102.3 143.8,99.5 144.9,96.7 145.7,93.8 146.4,90.8 146.9,87.8 147.2,84.8 147.3,81.8 147.3,78.8 147.2,75.7 146.9,72.7 146.4,69.7 145.9,66.8 145.1,63.8 144.3,60.9 143.3,58 142.3,55.2 141.1,52.4 139.7,49.7 138.3,47 136.8,44.4 135.1,41.9 133.4,39.4 131.6,37 129.6,34.7 127.6,32.4 125.4,30.3 123.2,28.2 120.9,26.3 118.5,24.5 116,22.7 113.4,21.1 110.8,19.7 108.1,18.3 105.3,17.2 102.4,16.2 99.5,15.3 96.5,14.7 93.5,14.2 90.5,14 87.5,14 84.5,14.3 81.5,14.9 78.6,15.8 75.8,17 73.2,18.5 70.8,20.3 68.7,22.4 66.9,24.9 65.4,27.5 64.4,30.4 63.8,33.4 63.6,36.4 63.8,39.4 64.3,42.4 65.1,45.3 66.2,48.1 67.6,50.8 69.2,53.4 71,55.8 72.9,58.1 75,60.3 77.2,62.4 79.6,64.3 82.1,66 84.6,67.7 87.2,69.2 89.9,70.5 92.7,71.8 95.5,72.9 98.4,73.9 101.3,74.7 104.2,75.4 107.2,76 110.2,76.5 113.2,76.8 116.2,77.1 119.2,77.1 122.3,77.1 125.3,77 128.3,76.7 131.3,76.3 134.3,75.7 137.3,75.1 140.2,74.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="153.1,69 155.7,67.5 158.3,65.8 160.7,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,53 172.7,50.3 174,47.6 175.1,44.8 175.8,41.8 176.3,38.8 176.4,35.8 176.1,32.7 175.4,29.8 174.3,26.9 172.8,24.3 170.9,21.9 168.7,19.8 166.2,18.1 163.5,16.6 160.7,15.5 157.7,14.7 154.7,14.2 151.7,14 148.7,14.1 145.6,14.3 142.6,14.8 139.7,15.5 136.7,16.4 133.9,17.5 131.1,18.7 128.4,20.1 125.8,21.6" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.7,30.2 112.5,32.4 110.4,34.7 108.3,37.1 106.4,39.6 104.6,42.2 102.9,44.9 101.4,47.6 99.9,50.4 98.6,53.2 97.4,56.1 96.3,59.1 95.3,62.1 94.5,65.1" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="149.8" cy="126" r="4" fill="currentColor"/><circle cx="90.2" cy="126" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどける
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObOcOaUbUcU')"
+        hints:
+          - 右のはしから指でたどって、交わりで上と下のどちらを通るか、言ってみよう。
+          - 見本のひもは、上、下、上…と交互だったね。このひもはどうかな。
+          - ひもで同じ形を作って、引っぱってみよう。
+        paths:
+          - [右のはしからたどると、はじめに 3 つとも上を通る, あとは下を通るだけ, 持ち上げるとほどける]
+        note: 形が同じでも、上と下で結び目になるかが決まる。見本と見くらべ、ひもで作って確かめる。
+      - part: 挑戦
+        text: こみ入って見えるひもです。両はしを持ったまま引っぱると、ほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.4,53.5 179.9,55.2 177.4,56.8 175.1,57.9 174.4,54.9 173.5,52 172.5,49.2 171.3,46.4 170,43.7 168.6,41.1 167,38.5 165.2,36.1 163.4,33.7 161.4,31.4 159.3,29.3 157,27.3 154.7,25.3 152.3,23.6 149.8,21.9 147.2,20.4 144.5,19.1 141.7,17.8 138.9,16.8 136,15.9 133.1,15.2 130.1,14.6 127.1,14.3 124.1,14 121.1,14 118.1,14.2 115.1,14.5 112.2,15 109.2,15.7 106.3,16.5 103.5,17.6 100.7,18.8 98.1,20.2 95.5,21.7 93,23.4 90.7,25.3 88.4,27.3 86.3,29.5 84.4,31.8 82.6,34.2 81,36.8 79.6,39.4 78.4,42.2 77.4,45 76.6,47.9 76,50.9 75.6,53.9 75.5,56.9 75.6,59.9 76,62.9 76.6,65.8 77.5,68.7 78.6,71.5 79.9,74.2 81.5,76.8 83.2,79.2 85.2,81.5 87.4,83.6 89.8,85.4 92.3,87.1 95,88.5 97.8,89.6 100.6,90.5 103.6,91.2 106.6,91.7 109.6,91.9 112.6,91.8 115.6,91.6 118.5,91.1 121.5,90.4 124.3,89.4 127.1,88.2 129.7,86.7 132.2,85.1 134.5,83.2 136.7,81 138.7,78.8 140.4,76.3 141.9,73.7 143.2,71 144.2,68.1 145,65.2 145.6,62.3 145.9,59.3 146,56.3 145.8,53.3 145.4,50.3 144.8,47.3 144,44.5 142.9,41.6 141.6,38.9 140.2,36.3 138.5,33.7 136.7,31.3 134.8,29 132.6,26.9 130.4,24.9 128,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="140.4,63.8 138.7,61.3 136.7,59 134.5,56.8 132.2,54.9 129.6,53.2 127,51.8 124.2,50.5 121.3,49.6 118.3,48.9 115.3,48.4 112.3,48.1 109.2,48.1 106.2,48.4 103.2,48.9 100.2,49.6 97.3,50.5 94.6,51.8 91.9,53.2 89.4,54.9 87,56.8 84.8,59 82.8,61.3 81.1,63.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="76.1,76.7 75.7,79.8 75.5,82.8 75.6,85.9 76,88.9 76.5,91.9 77.4,94.9 78.4,97.8 79.6,100.6 81.1,103.3 82.7,105.9 84.5,108.4 86.5,110.7 88.6,112.9 90.9,114.9 93.3,116.8 95.9,118.5 98.5,120.1 101.3,121.5 104.1,122.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="194.9" cy="45.1" r="4" fill="currentColor"/><circle cx="194.9" cy="94.9" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどける
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObOcOaUdOcUbUdU')"
+        hints:
+          - 右上のはしから指でたどってみよう。
+          - 交わりにはじめて来たとき、いつも上と下のどちらを通っているかな。
+          - はじめにいつも上を通るひもは、はしから持ち上げていくと、どうなるかな。
+        paths:
+          - [右上のはしからたどる, どの交わりも、はじめて来たときは上を通る, はしから持ち上げるとほどける]
+        note: 交わりの数が多くても、ほどけることがある。上と下の通り方を、1 つずつたどって確かめる。
+    extra:
+      - part: 今日
+        text: 見本のひもの結び目（ひと結び）には、交わりがいくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="149.8" cy="126" r="4" fill="currentColor"/><circle cx="90.2" cy="126" r="4" fill="currentColor"/></svg>'
+        answer: 3
+        check: "len('aObUcOaUbOcU') // 4"
+        hints:
+          - すき間のある所が交わりだよ。
+          - 片方のはしからたどろう。
+          - 数えた交わりに、しるしをつけよう。
+        paths:
+          - [はしからたどる, 3 つ]
+      - part: 今日
+        text: このひもの両はしを持ったまま引っぱると、ほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.3,53.5 179.8,55.2 177.3,56.9 175.1,57.8 174.4,54.9 173.5,52 172.5,49.1 171.3,46.4 170,43.7 168.5,41 166.9,38.5 165.2,36 163.3,33.6 161.3,31.4 159.2,29.2 157,27.2 154.6,25.3 152.2,23.5 149.6,21.8 147,20.3 144.3,19 141.6,17.8 138.7,16.7 135.8,15.9 132.9,15.1 129.9,14.6 126.9,14.2 123.9,14 120.9,14 117.9,14.2 114.9,14.5 111.9,15 109,15.7 106.1,16.6 103.3,17.7 100.5,18.9 97.8,20.3 95.3,21.9 92.8,23.6 90.4,25.5 88.2,27.5 86.1,29.7 84.2,32 82.5,34.5 80.9,37.1 79.5,39.7 78.3,42.5 77.3,45.4 76.5,48.3 75.9,51.2 75.6,54.2 75.5,57.3 75.7,60.3 76.1,63.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="81.1,76.2 82.8,78.7 84.8,81 86.9,83.1 89.3,85 91.8,86.7 94.5,88.2 97.2,89.4 100.1,90.4 103,91.1 106,91.6 109,91.8 112.1,91.9 115.1,91.6 118.1,91.2 121,90.5 123.9,89.6 126.7,88.4 129.3,87 131.9,85.3 134.2,83.4 136.4,81.3 138.4,79 140.2,76.6 141.8,74 143.1,71.3 144.1,68.4 145,65.5 145.6,62.6 145.9,59.6 146,56.5 145.8,53.5 145.5,50.5 144.8,47.5 144,44.6 143,41.8 141.7,39 140.3,36.4 138.6,33.8 136.8,31.4 134.8,29.1 132.7,27 130.4,25 128.1,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="140.4,63.8 138.7,61.3 136.7,59 134.6,56.9 132.2,55 129.7,53.3 127.1,51.8 124.3,50.6 121.4,49.6 118.5,48.9 115.5,48.4 112.5,48.2 109.5,48.1 106.4,48.4 103.4,48.8 100.5,49.5 97.6,50.4 94.8,51.6 92.2,53 89.6,54.7 87.3,56.6 85.1,58.7 83.1,61 81.3,63.4 79.8,66 78.4,68.7 77.4,71.6 76.5,74.5 76,77.4 75.6,80.4 75.5,83.5 75.7,86.5 76.1,89.5 76.7,92.5 77.5,95.4 78.6,98.2 79.8,101 81.3,103.6 82.9,106.2 84.7,108.6 86.7,110.9 88.8,113 91.1,115 93.5,116.9 96,118.6 98.6,120.1 101.3,121.5 104.1,122.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="194.9" cy="45.1" r="4" fill="currentColor"/><circle cx="194.9" cy="94.9" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどけない
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObUcOaUdOcUbOdU')"
+        hints:
+          - 右上のはしからたどって、上と下を言ってみよう。
+          - 上、下、上、下…と交互になっているかな。
+          - ひもで同じ形を作って、引っぱってみよう。
+        paths:
+          - [上と下が交互, 引いても結び目が残る, ほどけない]
+        note: この結び目は「8 の字結び」。ほどけないことは、ひもで作って確かめる。
+      - part: 今日
+        text: このひもには、交わりがいくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="32" cy="126" r="4" fill="currentColor"/><circle cx="208" cy="126" r="4" fill="currentColor"/></svg>'
+        answer: 1
+        check: "len('aOaU') // 4"
+        hints:
+          - すき間のある所をさがそう。
+          - 輪の根もとを見よう。
+          - 片方のはしからたどって数えよう。
+        paths:
+          - [輪の根もとに 1 つ]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: テープを半分に 2 回折って広げると、折り目は 3 本になります。なぜ 3 本になるのか、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg"><rect x="20" y="9" width="200" height="22" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="70" y1="5" x2="70" y2="35" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="5" x2="120" y2="35" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><line x1="170" y1="5" x2="170" y2="35" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 例：「1 回目に折ると、まん中に折り目が 1 本できる。2 回目は、2 まい重なったテープを一度に折るので、1 まいに 1 本ずつ、新しい折り目が 2 本できる。だから、あわせて 3 本。」と書ければよい。① 1 回目の折り目は 1 本、② 2 回目は重なった 2 まいを一度に折る、③ 新しい折り目が 2 本、の 3 点を見る。「3 回折ると、4 まい重なったテープを一度に折るので、新しい折り目が 4 本ふえて 7 本」と続けて言えれば、なおよい。
+        hints:
+          - 1 回目に折ったとき、折り目は何本できたかな。
+          - 2 回目に折るとき、テープは何まい重なっているかな。
+          - 「2 まいを一度に折るので〜」と書こう。
+        paths:
+          - [1 回目で 1 本, 2 回目は 2 まいを一度に折る, 新しく 2 本, あわせて 3 本]
+      - part: わけ
+        text: 折った紙に穴を 1 つあけて広げると、穴は折り目をはさんで、鏡に映したような位置にできます。なぜですか。見本の紙を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="199.6" cy="61.6" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text><g transform="translate(0,114)"><rect x="10" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="42" y1="8" x2="42" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="10" y1="40" x2="74" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="64.4" cy="30.4" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="19.6" cy="30.4" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="64.4" cy="49.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="19.6" cy="49.6" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="42" y="89.2" font-size="12" text-anchor="middle">④ 広げた紙</text></g></svg>'
+        explain: 例：「穴をあけたとき、紙は重なっていて、一度に全部の紙に穴があく。広げた紙を折り目で折りもどすと、もとのように重なるので、穴もぴったり重なる。折り目で折って重なる 2 つの位置は、折り目を鏡にして映した位置になる。」と書ければよい。① 重なった紙に一度に穴があく、② 折りもどすと穴が重なる、③ 折って重なる位置は鏡に映した位置（G-004）、の 3 点を見る。「ずらした位置」と「鏡に映した位置」のちがいを、2 日目のア（ずらした図）で話すとよい。
+        hints:
+          - 穴をあけたとき、紙は重なっていたね。
+          - 広げた紙を折り目で折りもどすと、穴はどうなるかな。
+          - 折って重なる位置は、折り目を鏡にするとどんな位置かな。
+        paths:
+          - [重なった紙に一度に穴, 折りもどすと穴が重なる, 折って重なる位置は鏡に映した位置]
+      - part: わけ
+        text: このひもは、右のはしからたどると、どの交わりにも先に上を通って来ます。両はしを引っぱると ほどけるのはなぜですか。文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="149.8,126 148.3,123.4 146.9,120.7 145.4,118.1 143.9,115.4 142.5,112.8 141,110.1 139.5,107.5 141.1,104.9 142.6,102.3 143.8,99.5 144.9,96.7 145.7,93.8 146.4,90.8 146.9,87.8 147.2,84.8 147.3,81.8 147.3,78.8 147.2,75.7 146.9,72.7 146.4,69.7 145.9,66.8 145.1,63.8 144.3,60.9 143.3,58 142.3,55.2 141.1,52.4 139.7,49.7 138.3,47 136.8,44.4 135.1,41.9 133.4,39.4 131.6,37 129.6,34.7 127.6,32.4 125.4,30.3 123.2,28.2 120.9,26.3 118.5,24.5 116,22.7 113.4,21.1 110.8,19.7 108.1,18.3 105.3,17.2 102.4,16.2 99.5,15.3 96.5,14.7 93.5,14.2 90.5,14 87.5,14 84.5,14.3 81.5,14.9 78.6,15.8 75.8,17 73.2,18.5 70.8,20.3 68.7,22.4 66.9,24.9 65.4,27.5 64.4,30.4 63.8,33.4 63.6,36.4 63.8,39.4 64.3,42.4 65.1,45.3 66.2,48.1 67.6,50.8 69.2,53.4 71,55.8 72.9,58.1 75,60.3 77.2,62.4 79.6,64.3 82.1,66 84.6,67.7 87.2,69.2 89.9,70.5 92.7,71.8 95.5,72.9 98.4,73.9 101.3,74.7 104.2,75.4 107.2,76 110.2,76.5 113.2,76.8 116.2,77.1 119.2,77.1 122.3,77.1 125.3,77 128.3,76.7 131.3,76.3 134.3,75.7 137.3,75.1 140.2,74.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="153.1,69 155.7,67.5 158.3,65.8 160.7,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,53 172.7,50.3 174,47.6 175.1,44.8 175.8,41.8 176.3,38.8 176.4,35.8 176.1,32.7 175.4,29.8 174.3,26.9 172.8,24.3 170.9,21.9 168.7,19.8 166.2,18.1 163.5,16.6 160.7,15.5 157.7,14.7 154.7,14.2 151.7,14 148.7,14.1 145.6,14.3 142.6,14.8 139.7,15.5 136.7,16.4 133.9,17.5 131.1,18.7 128.4,20.1 125.8,21.6" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.7,30.2 112.5,32.4 110.4,34.7 108.3,37.1 106.4,39.6 104.6,42.2 102.9,44.9 101.4,47.6 99.9,50.4 98.6,53.2 97.4,56.1 96.3,59.1 95.3,62.1 94.5,65.1" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="149.8" cy="126" r="4" fill="currentColor"/><circle cx="90.2" cy="126" r="4" fill="currentColor"/></svg>'
+        explain: 例：「右のはしからたどると、どの交わりも先に上を通り、2 回目に来るときは下を通る。だから、右のはしの方から順にひもを持ち上げていくと、上にあるひもは下のひもに引っかからずに持ち上がる。全部持ち上げると、ひもは 1 本のまっすぐなひもにもどる。」と書ければよい。① 先に通る所がいつも上、② はしから持ち上げると引っかからない、の 2 点を見る。ひもを机に置いて、じっさいに右のはしから持ち上げて見せるとよい。見本のひと結び（上、下、上…と交互）は、どのはしから持ち上げても下のひもに引っかかることも見せる。
+        hints:
+          - 右のはしから指でたどって、交わりで上と下のどちらを通るか言おう。
+          - 先に上を通るひもを、はしから持ち上げるとどうなるかな。
+          - 下を通るひもに、引っかかるかな。
+        paths:
+          - [どの交わりも先に上を通る, はしから持ち上げる, 引っかからない, ほどける]
+      - part: 今日
+        text: 2 つの輪が重なっています。左の輪を持ち上げると、2 つの輪ははずれますか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><polyline points="137.2,60 137.1,57 136.8,54 136.4,51 135.7,48.1 134.8,45.2 133.7,42.4 132.5,39.7 131.1,37 129.5,34.5 127.7,32 125.8,29.7 123.8,27.5 121.6,25.4 119.2,23.5 116.8,21.8 114.2,20.2 111.6,18.8 108.8,17.5 106,16.5 103.2,15.6 100.2,14.9 97.3,14.4 94.3,14.1 91.3,14 88.2,14.1 85.2,14.4 82.3,14.9 79.3,15.6 76.5,16.5 73.7,17.5 70.9,18.8 68.3,20.2 65.7,21.8 63.3,23.5 60.9,25.4 58.7,27.5 56.7,29.7 54.8,32 53,34.5 51.4,37 50,39.7 48.8,42.4 47.7,45.2 46.8,48.1 46.1,51 45.7,54 45.4,57 45.2,60 45.4,63 45.7,66 46.1,69 46.8,71.9 47.7,74.8 48.8,77.6 50,80.3 51.4,83 53,85.5 54.8,88 56.7,90.3 58.7,92.5 60.9,94.6 63.3,96.5 65.7,98.2 68.2,99.8 70.9,101.2 73.7,102.5 76.5,103.5 79.3,104.4 82.3,105.1 85.2,105.6 88.2,105.9 91.2,106 94.3,105.9 97.3,105.6 100.2,105.1 103.2,104.4 106,103.5 108.8,102.5 111.6,101.2 114.2,99.8 116.8,98.2 119.2,96.5 121.6,94.6 123.8,92.5 125.8,90.3 127.7,88 129.5,85.5 131.1,83 132.5,80.3 133.7,77.6 134.8,74.8 135.7,71.9 136.4,69 136.8,66 137.1,63 137.2,60" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.8,105.1 142.8,105.6 145.8,105.9 148.8,106 151.8,105.9 154.8,105.6 157.7,105.1 160.7,104.4 163.5,103.5 166.4,102.5 169.1,101.2 171.8,99.8 174.3,98.2 176.8,96.5 179.1,94.6 181.3,92.5 183.3,90.3 185.2,88 187,85.5 188.6,83 190,80.3 191.2,77.6 192.3,74.8 193.2,71.9 193.9,69 194.3,66 194.6,63 194.8,60 194.6,57 194.3,54 193.9,51 193.2,48.1 192.3,45.2 191.2,42.4 190,39.7 188.6,37 187,34.5 185.2,32 183.3,29.7 181.3,27.5 179.1,25.4 176.8,23.5 174.3,21.8 171.8,20.2 169.1,18.8 166.4,17.5 163.5,16.5 160.7,15.6 157.7,14.9 154.8,14.4 151.8,14.1 148.8,14 145.8,14.1 142.8,14.4 139.8,14.9 136.9,15.6 134,16.4 131.2,17.5 128.4,18.7 125.8,20.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.9,28.9 112.9,31.2 111,33.7 109.3,36.3 107.8,39 106.5,41.9 105.4,44.8 104.4,47.7 103.7,50.7 103.2,53.8 102.9,56.9 102.8,60 102.9,63.1 103.2,66.2 103.7,69.3 104.4,72.3 105.4,75.2 106.5,78.1 107.8,81 109.3,83.7 111,86.3 112.9,88.8 114.9,91.1" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        choices: [はずれる, はずれない]
+        answer: はずれる
+        check: "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OO')"
+        hints:
+          - 2 つの輪の交わりは、いくつあるかな。
+          - それぞれの交わりで、左の輪は上と下のどちらを通っているかな。
+          - 左の輪が、どの交わりでも上なら、どうなるかな。
+        paths:
+          - [交わりは 2 つ, 左の輪はどちらも上, 持ち上げるとはずれる]
+      - part: 今日
+        text: 2 つの輪が重なっています。この 2 つの輪は、はずれますか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><polyline points="114.2,20.2 111.6,18.7 108.8,17.5 106,16.4 103.1,15.6 100.1,14.9 97.2,14.4 94.2,14.1 91.1,14 88.1,14.1 85.1,14.4 82.1,14.9 79.2,15.6 76.3,16.5 73.5,17.6 70.7,18.8 68.1,20.3 65.5,21.9 63.1,23.7 60.7,25.6 58.5,27.7 56.5,29.9 54.6,32.2 52.8,34.7 51.3,37.3 49.9,39.9 48.6,42.7 47.6,45.5 46.7,48.4 46.1,51.4 45.6,54.4 45.3,57.4 45.3,60.4 45.4,63.4 45.7,66.4 46.2,69.4 46.9,72.3 47.9,75.2 48.9,78 50.2,80.8 51.7,83.4 53.3,86 55.1,88.4 57,90.7 59.1,92.9 61.3,94.9 63.7,96.8 66.2,98.6 68.8,100.1 71.4,101.5 74.2,102.7 77,103.8 80,104.6 82.9,105.2 85.9,105.7 88.9,105.9 91.9,106 94.9,105.8 97.9,105.5 100.9,105 103.8,104.2 106.7,103.3 109.5,102.2 112.3,100.9 114.9,99.4 117.4,97.8 119.9,96 122.2,94 124.3,91.9 126.4,89.7 128.2,87.3 130,84.8 131.5,82.2 132.9,79.6 134.1,76.8 135.1,73.9 135.9,71 136.5,68.1 137,65.1 137.2,62.1 137.2,59.1 137.1,56 136.7,53 136.2,50.1 135.4,47.1 134.5,44.3 133.3,41.5 132,38.7 130.5,36.1 128.9,33.6 127.1,31.2 125.1,28.9" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.9,105.1 142.8,105.6 145.8,105.9 148.9,106 151.9,105.9 154.9,105.6 157.9,105.1 160.8,104.4 163.7,103.5 166.5,102.4 169.3,101.2 171.9,99.7 174.5,98.1 176.9,96.3 179.3,94.4 181.5,92.3 183.5,90.1 185.4,87.8 187.2,85.3 188.7,82.7 190.1,80.1 191.4,77.3 192.4,74.5 193.3,71.6 193.9,68.6 194.4,65.6 194.7,62.6 194.7,59.6 194.6,56.6 194.3,53.6 193.8,50.6 193.1,47.7 192.1,44.8 191.1,42 189.8,39.2 188.3,36.6 186.7,34 184.9,31.6 183,29.3 180.9,27.1 178.7,25.1 176.3,23.2 173.8,21.4 171.2,19.9 168.6,18.5 165.8,17.3 163,16.2 160,15.4 157.1,14.8 154.1,14.3 151.1,14.1 148.1,14 145.1,14.2 142.1,14.5 139.1,15 136.2,15.8 133.3,16.7 130.5,17.8 127.7,19.1 125.1,20.6 122.6,22.2 120.1,24 117.8,26 115.7,28.1 113.6,30.3 111.8,32.7 110,35.2 108.5,37.8 107.1,40.4 105.9,43.2 104.9,46.1 104.1,49 103.5,51.9 103,54.9 102.8,57.9 102.8,60.9 102.9,64 103.3,67 103.8,69.9 104.6,72.9 105.5,75.7 106.7,78.5 108,81.3 109.5,83.9 111.1,86.4 112.9,88.8 114.9,91.1" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        choices: [はずれる, はずれない]
+        answer: はずれない
+        check: "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OU')"
+        hints:
+          - 左の輪は、上の交わりで上と下のどちらを通っているかな。
+          - 下の交わりではどうかな。
+          - 上と下を両方通る輪は、持ち上げると引っかかるかな。
+        paths:
+          - [左の輪は、上の交わりで下、下の交わりで上, くさりのようにつながっている, はずれない]
+        note: 紙の輪やゴムの輪で作ると確かめられる。
+    extra:
+      - part: 今日
+        text: テープを半分に折るのを 3 回くり返したとき、重なりは何まいですか。
+        answer: 8
+        check: "2 ** 3"
+        hints:
+          - 2 回折ったときは 4 まいだったね。
+          - 3 回目は、4 まいを一度に折るね。
+          - テープを折って数えよう。
+        paths:
+          - [4 まいを一度に折る, 8 まい]
+      - part: 今日
+        text: 図のように折った紙の、たての折り目（左の太い線）の上に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="166" cy="42.4" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 2
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 7))"
+        hints:
+          - 穴はどの折り目にかかっているかな。
+          - 折り目にかかった穴は、広げると 1 つにつながるよ。
+          - 上と下には、いくつずつできるかな。
+        paths:
+          - [たての折り目で左右がつながる, 上下に 1 つずつ, 2 つ]
+      - part: 今日
+        text: 2 つの輪が重なっています。右の輪は、2 つの交わりのどちらでも下を通っています。この 2 つの輪は、はずれますか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><polyline points="137.2,60 137.1,57 136.8,54 136.4,51 135.7,48.1 134.8,45.2 133.7,42.4 132.5,39.7 131.1,37 129.5,34.5 127.7,32 125.8,29.7 123.8,27.5 121.6,25.4 119.2,23.5 116.8,21.8 114.2,20.2 111.6,18.8 108.8,17.5 106,16.5 103.2,15.6 100.2,14.9 97.3,14.4 94.3,14.1 91.3,14 88.2,14.1 85.2,14.4 82.3,14.9 79.3,15.6 76.5,16.5 73.7,17.5 70.9,18.8 68.3,20.2 65.7,21.8 63.3,23.5 60.9,25.4 58.7,27.5 56.7,29.7 54.8,32 53,34.5 51.4,37 50,39.7 48.8,42.4 47.7,45.2 46.8,48.1 46.1,51 45.7,54 45.4,57 45.2,60 45.4,63 45.7,66 46.1,69 46.8,71.9 47.7,74.8 48.8,77.6 50,80.3 51.4,83 53,85.5 54.8,88 56.7,90.3 58.7,92.5 60.9,94.6 63.3,96.5 65.7,98.2 68.2,99.8 70.9,101.2 73.7,102.5 76.5,103.5 79.3,104.4 82.3,105.1 85.2,105.6 88.2,105.9 91.2,106 94.3,105.9 97.3,105.6 100.2,105.1 103.2,104.4 106,103.5 108.8,102.5 111.6,101.2 114.2,99.8 116.8,98.2 119.2,96.5 121.6,94.6 123.8,92.5 125.8,90.3 127.7,88 129.5,85.5 131.1,83 132.5,80.3 133.7,77.6 134.8,74.8 135.7,71.9 136.4,69 136.8,66 137.1,63 137.2,60" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.8,105.1 142.8,105.6 145.8,105.9 148.8,106 151.8,105.9 154.8,105.6 157.7,105.1 160.7,104.4 163.5,103.5 166.4,102.5 169.1,101.2 171.8,99.8 174.3,98.2 176.8,96.5 179.1,94.6 181.3,92.5 183.3,90.3 185.2,88 187,85.5 188.6,83 190,80.3 191.2,77.6 192.3,74.8 193.2,71.9 193.9,69 194.3,66 194.6,63 194.8,60 194.6,57 194.3,54 193.9,51 193.2,48.1 192.3,45.2 191.2,42.4 190,39.7 188.6,37 187,34.5 185.2,32 183.3,29.7 181.3,27.5 179.1,25.4 176.8,23.5 174.3,21.8 171.8,20.2 169.1,18.8 166.4,17.5 163.5,16.5 160.7,15.6 157.7,14.9 154.8,14.4 151.8,14.1 148.8,14 145.8,14.1 142.8,14.4 139.8,14.9 136.9,15.6 134,16.4 131.2,17.5 128.4,18.7 125.8,20.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.9,28.9 112.9,31.2 111,33.7 109.3,36.3 107.8,39 106.5,41.9 105.4,44.8 104.4,47.7 103.7,50.7 103.2,53.8 102.9,56.9 102.8,60 102.9,63.1 103.2,66.2 103.7,69.3 104.4,72.3 105.4,75.2 106.5,78.1 107.8,81 109.3,83.7 111,86.3 112.9,88.8 114.9,91.1" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        choices: [はずれる, はずれない]
+        answer: はずれる
+        check: "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('UU')"
+        hints:
+          - 右の輪はどちらの交わりでも下だね。
+          - 右の輪を、下へ引きぬくとどうなるかな。
+          - 上と下が入れかわっていない輪は、引っかかるかな。
+        paths:
+          - [右の輪はどちらも下, 下へぬける, はずれる]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: まん中のせん（｜）で折ってぴったり重なるように、❓ に色をぬります。❓ は何色ですか。
+        figure: 🟦🟨🟥｜🟥🟨❓
+        choices: [青, 黄, 赤]
+        answer: 青
+        check: "{'🟦': '青', '🟨': '黄', '🟥': '赤'}[fig.split('｜')[0][0]]"
+        hints:
+          - 折ると、｜ に近いものどうしが重なるよ。
+          - ❓ は ｜ からいちばん遠いね。
+          - 左がわで、｜ からいちばん遠い色を見よう。
+        paths:
+          - [❓ と重なるのは左のはし, 🟦, 青]
+      - part: 思い出す
+        text: この形を、たての線で 2 つに分けました。左の部分には、四角の色板が何まいありますか。
+        figure: "🟥🟥｜🟦🟦\n🟥🟥｜🟦⬜\n🟥⬜｜🟦⬜"
+        answer: 5
+        check: "n('🟥')"
+        hints:
+          - ｜ の左だけを見よう。
+          - 上の列から順に数えよう。
+          - ⬜ は色板のない所だよ。
+        paths:
+          - [左の部分の 🟥 を数える, 5 まい]
+      - part: 今日
+        text: 3 つの輪がならんでいます。左の輪と中の輪はつながっていて、中の輪は右の輪のどちらの交わりでも上を通っています。3 つの輪は、いくつに分かれますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><polyline points="82.5,27.6 80.4,25.5 78,23.5 75.6,21.8 73,20.2 70.3,18.9 67.5,17.7 64.6,16.8 61.7,16.1 58.7,15.6 55.7,15.3 52.7,15.3 49.7,15.5 46.7,15.9 43.7,16.5 40.8,17.4 38,18.5 35.3,19.8 32.7,21.3 30.2,23 27.8,24.9 25.6,27 23.5,29.2 21.7,31.5 20,34.1 18.5,36.7 17.2,39.4 16.1,42.2 15.3,45.1 14.6,48.1 14.2,51.1 14,54.1 14.1,57.1 14.3,60.1 14.8,63.1 15.6,66 16.5,68.9 17.7,71.7 19.1,74.4 20.6,77 22.4,79.4 24.3,81.7 26.5,83.9 28.7,85.9 31.1,87.7 33.7,89.3 36.4,90.7 39.1,91.9 42,93 44.9,93.7 47.9,94.3 50.9,94.6 53.9,94.7 56.9,94.6 59.9,94.3 62.9,93.7 65.8,92.9 68.6,91.9 71.4,90.6 74,89.2 76.6,87.5 79,85.7 81.2,83.7 83.3,81.5 85.3,79.2 87,76.8 88.6,74.2 89.9,71.5 91.1,68.7 92,65.8 92.7,62.9 93.2,59.9 93.5,56.9 93.5,53.8 93.3,50.8 92.8,47.8 92.2,44.9 91.3,42 90.2,39.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="91.2,82.4 93.4,84.5 95.7,86.5 98.2,88.2 100.8,89.8 103.5,91.1 106.3,92.3 109.1,93.2 112.1,93.9 115,94.4 118.1,94.7 121.1,94.7 124.1,94.5 127.1,94.1 130,93.5 132.9,92.6 135.7,91.5 138.5,90.2 141.1,88.7 143.6,87 145.9,85.1 148.2,83 150.2,80.8 152.1,78.5 153.8,75.9 155.3,73.3 156.6,70.6 157.6,67.8 158.5,64.9 159.1,61.9 159.6,58.9 159.7,55.9 159.7,52.9 159.4,49.9 158.9,46.9 158.2,44 157.2,41.1 156.1,38.3 154.7,35.6 153.1,33 151.4,30.6 149.4,28.3 147.3,26.1 145,24.1 142.6,22.3 140.1,20.7 137.4,19.3 134.6,18.1 131.8,17 128.9,16.3 125.9,15.7 122.9,15.4 119.9,15.3 116.9,15.4 113.9,15.7 110.9,16.3 108,17.1 105.1,18.1 102.4,19.4 99.7,20.8 97.2,22.5 94.8,24.3 92.5,26.3 90.4,28.5 88.5,30.8 86.7,33.2 85.2,35.8 83.8,38.5 82.7,41.3 81.8,44.2 81,47.1 80.6,50.1 80.3,53.1 80.3,56.2 80.5,59.2 80.9,62.2 81.6,65.1 82.4,68 83.5,70.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="157.5,82.4 159.6,84.5 161.9,86.4 164.4,88.2 167,89.7 169.6,91.1 172.4,92.3 175.3,93.2 178.2,93.9 181.1,94.4 184.1,94.7 187.1,94.7 190.1,94.6 193.1,94.1 196,93.5 198.9,92.7 201.7,91.6 204.4,90.3 207,88.9 209.5,87.2 211.9,85.3 214.1,83.3 216.2,81.1 218.1,78.8 219.8,76.3 221.3,73.7 222.6,71 223.7,68.3 224.6,65.4 225.3,62.5 225.7,59.5 226,56.5 226,53.5 225.7,50.5 225.3,47.5 224.6,44.6 223.7,41.7 222.6,39 221.3,36.3 219.8,33.7 218.1,31.2 216.2,28.9 214.1,26.7 211.9,24.7 209.5,22.8 207,21.1 204.4,19.7 201.7,18.4 198.9,17.3 196,16.5 193.1,15.9 190.1,15.4 187.1,15.3 184.1,15.3 181.1,15.6 178.2,16.1 175.3,16.8 172.4,17.7 169.6,18.9 167,20.3 164.4,21.8 161.9,23.6 159.6,25.5 157.5,27.6" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="149.8,39.2 148.6,42.2 147.7,45.3 147,48.5 146.6,51.8 146.5,55 146.6,58.2 147,61.5 147.7,64.7 148.6,67.8 149.8,70.8" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        answer: 2
+        check: "(lambda E: max(1, 3 - len(E)))(['左と中'])"
+        hints:
+          - 左と中の輪は、はずれるかな。
+          - 中と右の輪は、交わりで上と下が入れかわっているかな。
+          - はずれる組をはずすと、いくつのかたまりになるかな。
+        paths:
+          - [左と中はつながる, 中と右ははずれる, 2 つに分かれる]
+      - part: 今日
+        text: 図のように折った紙に、穴を 2 つあけました。どちらも折り目にかかっていません。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="199.6" cy="42.4" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="180.4" cy="56.8" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 8
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((7, 7), (3, 4))"
+        hints:
+          - 1 つの穴は、広げるといくつになるかな。
+          - 穴は 2 つあけたね。
+          - 折り紙で折って、確かめよう。
+        paths:
+          - [1 つの穴が 4 つになる, 2 つの穴で 4 つと 4 つ, 8 つ]
+      - part: 今日
+        text: 形は同じで、交わりの上と下だけがちがう 2 本のひも ア、イ があります。両はしを引っぱっても ほどけないのはどちらですか。
+        svg: '<svg viewBox="0 0 240 246" xmlns="http://www.w3.org/2000/svg"><polyline points="144.5,106 143,103.3 141.5,100.6 140,97.9 138.5,95.3 137,92.6 136.6,89.9 138.2,87.3 139.5,84.5 140.5,81.7 141.3,78.7 141.9,75.7 142.3,72.6 142.5,69.6 142.4,66.5 142.2,63.4 141.8,60.4 141.2,57.4 140.5,54.4 139.6,51.5 138.6,48.6 137.4,45.8 136,43 134.6,40.3 133,37.7 131.2,35.2 129.4,32.7 127.4,30.4 125.2,28.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.2,19.6 111.5,18.2 108.8,17 105.9,15.9 103,15.1 100.1,14.4 97.1,14.1 94,14 91,14.2 88.1,14.8 85.2,15.8 82.5,17.1 80,18.8 77.8,20.9 76.1,23.4 74.8,26.1 74,29 73.7,32 73.8,35.1 74.4,38 75.4,40.9 76.6,43.7 78.2,46.2 80,48.7 82,51 84.1,53.1 86.5,55 88.9,56.8 91.5,58.4 94.1,59.9 96.8,61.2 99.7,62.3 102.5,63.3 105.4,64.1 108.4,64.7 111.4,65.3 114.4,65.6 117.4,65.8 120.4,65.9 123.4,65.8 126.5,65.5 129.5,65.1 132.4,64.6 135.4,63.9" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="148.3,58.6 150.9,57 153.3,55.2 155.6,53.3 157.8,51.2 159.8,48.9 161.7,46.5 163.2,43.9 164.5,41.2 165.5,38.3 166.1,35.4 166.3,32.3 166.1,29.3 165.3,26.4 164.1,23.7 162.4,21.2 160.2,19 157.8,17.2 155.1,15.9 152.2,14.9 149.3,14.3 146.3,14 143.2,14.1 140.2,14.4 137.3,15 134.3,15.8 131.5,16.8 128.7,18.1 126.1,19.5 123.5,21.1 121,22.8 118.6,24.6 116.3,26.6 114.2,28.7 112.1,31 110.2,33.3 108.4,35.7 106.7,38.2 105.1,40.8 103.7,43.5 102.4,46.2 101.3,49 100.2,51.9 99.4,54.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="97.5,68.6 97.6,71.8 97.9,74.9 98.5,78 99.3,81 100.3,84 101.6,86.9 103.2,89.6 103.2,92.3 101.6,95 100.1,97.8 98.6,100.5 97,103.3 95.5,106" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="144.5" cy="106" r="4" fill="currentColor"/><circle cx="95.5" cy="106" r="4" fill="currentColor"/><text x="14" y="20.9" font-size="14" text-anchor="middle">ア</text><g transform="translate(0,126)"><polyline points="144.5,106 143,103.4 141.5,100.7 140.1,98.1 138.6,95.4 137.1,92.8 136.4,90.2 138,87.6 139.3,84.9 140.4,82 141.2,79.1 141.9,76.2 142.3,73.2 142.5,70.1 142.5,67.1 142.3,64.1 141.9,61.1 141.4,58.1 140.7,55.1 139.9,52.2 138.9,49.4 137.7,46.6 136.5,43.8 135.1,41.2 133.5,38.5 131.8,36 130,33.6 128.1,31.3 126.1,29 123.9,26.9 121.7,24.9 119.3,23 116.8,21.2 114.2,19.7 111.6,18.2 108.8,17 106,15.9 103.1,15.1 100.1,14.4 97.1,14.1 94.1,14 91.1,14.2 88.1,14.8 85.2,15.7 82.5,17.1 80,18.8 77.9,20.9 76.1,23.4 74.8,26.1 74,29 73.7,32 73.8,35 74.4,38 75.3,40.9 76.6,43.6 78.2,46.2 80,48.7 81.9,50.9 84.1,53.1 86.4,55 88.9,56.8 91.4,58.4 94.1,59.9 96.8,61.1 99.6,62.3 102.5,63.3 105.4,64.1 108.4,64.7 111.4,65.2 114.4,65.6 117.4,65.8 120.4,65.9 123.4,65.8 126.5,65.5 129.5,65.1 132.4,64.6 135.4,63.9" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="148.3,58.6 150.9,57 153.3,55.2 155.7,53.3 157.9,51.1 159.9,48.9 161.7,46.4 163.3,43.8 164.6,41.1 165.5,38.2 166.1,35.3 166.3,32.2 166.1,29.2 165.3,26.3 164,23.5 162.3,21 160.1,18.9 157.6,17.2 154.9,15.8 152,14.8 149.1,14.3 146,14 143,14.1 140,14.4 137,15 134.1,15.9 131.2,16.9 128.5,18.2 125.8,19.6" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.8,28.2 112.6,30.4 110.6,32.8 108.7,35.2 107,37.8 105.3,40.5 103.8,43.2 102.5,46 101.3,48.9 100.3,51.8 99.4,54.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="97.5,68.6 97.6,71.8 97.9,74.9 98.5,78 99.3,81 100.3,84 101.6,86.9 103.2,89.6 103.2,92.3 101.6,95 100.1,97.8 98.6,100.5 97,103.3 95.5,106" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="144.5" cy="106" r="4" fill="currentColor"/><circle cx="95.5" cy="106" r="4" fill="currentColor"/></g><text x="14" y="146.9" font-size="14" text-anchor="middle">イ</text></svg>'
+        choices: [上のひも（ア）, 下のひも（イ）]
+        answer: 上のひも（ア）
+        check: "['上のひも（ア）', '下のひも（イ）'][[(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')(g) for g in ['aObUcOaUbOcU', 'aObOcOaUbUcU']].index('ほどけない')]"
+        hints:
+          - 2 本とも、右のはしから指でたどろう。
+          - 交わりで、上と下が交互になっているのはどちらかな。
+          - どの交わりにも先に上を通るひもは、持ち上げるとどうなったかな。
+        paths:
+          - [アは上、下、上…と交互, イは先に上ばかり通る, イはほどける, アはほどけない]
+      - part: 挑戦
+        text: 3 つの輪がからんでいます。どの 2 つの輪を取り出しても、その 2 つは、かたほうがいつも上を通っています。いちばん上の輪を切って取りのぞくと、のこりの 2 つの輪は はずれますか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polyline points="160.8,54.8 160.7,51.8 160.3,48.7 159.8,45.7 159,42.8 158,39.9 156.8,37.1 155.4,34.4 153.7,31.8 151.9,29.4 149.9,27.1 147.8,24.9 145.5,22.9 143,21.1 140.4,19.5 137.7,18.1 134.9,16.8 132.1,15.8 129.1,15 126.1,14.5 123.1,14.1 120.1,14 117,14.1 114,14.5 111,15 108,15.8 105.2,16.8 102.4,18 99.7,19.4 97.1,21.1 94.6,22.9 92.3,24.8 90.2,27 88.2,29.3 86.3,31.7 84.7,34.3 83.3,37 82.1,39.8 81,42.7 80.3,45.6 79.7,48.6 79.3,51.6 79.2,54.7 79.3,57.7 79.6,60.8 80.2,63.8 81,66.7 82,69.6 83.2,72.4 84.6,75.1 86.2,77.7 88,80.1 90,82.5 92.1,84.6 94.4,86.6 96.9,88.4" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="109.5,94.3 112.5,94.9 115.6,95.4 118.6,95.6 121.7,95.6 124.7,95.3 127.8,94.9 130.7,94.2 133.7,93.2 136.5,92.1 139.3,90.8 141.9,89.2 144.4,87.5 146.8,85.6 149.1,83.5 151.1,81.2 153,78.8 154.7,76.2 156.2,73.6 157.5,70.8 158.6,67.9 159.5,65" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="135.9,85 135,82.1 133.9,79.2 132.6,76.4 131.1,73.8 129.4,71.2 127.5,68.8 125.4,66.5 123.2,64.4 120.8,62.5 118.3,60.8 115.6,59.2 112.9,57.9 110,56.8 107.1,55.8 104.1,55.1 101.1,54.7 98.1,54.4 95,54.4 91.9,54.6 88.9,55.1 85.9,55.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="73.3,61.6 70.8,63.4 68.5,65.4 66.4,67.5 64.4,69.9 62.6,72.3 61,74.9 59.6,77.6 58.3,80.4 57.3,83.3 56.6,86.2 56,89.2 55.7,92.3 55.6,95.3 55.7,98.4 56,101.4 56.6,104.4 57.4,107.3 58.4,110.2 59.7,113 61.1,115.7 62.7,118.3 64.5,120.7 66.5,123 68.7,125.2 71,127.1 73.5,128.9 76,130.6 78.7,132 81.5,133.2 84.4,134.2 87.4,135 90.4,135.5 93.4,135.9 96.4,136 99.5,135.9 102.5,135.5 105.5,135 108.4,134.2 111.3,133.2 114.1,131.9 116.8,130.5 119.4,128.9 121.8,127.1 124.1,125.1 126.3,122.9 128.3,120.6 130.1,118.2 131.7,115.6 133.1,112.9 134.4,110.1 135.4,107.2 136.2,104.3 136.7,101.3 137.1,98.2 137.2,95.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="126,132 128.8,133.2 131.7,134.2 134.6,135 137.6,135.5 140.7,135.9 143.7,136 146.8,135.9 149.8,135.5 152.8,134.9 155.7,134.2 158.6,133.1 161.4,131.9 164.1,130.5 166.7,128.9 169.1,127.1 171.4,125.1 173.6,122.9 175.6,120.6 177.4,118.1 179,115.6 180.4,112.9 181.6,110.1 182.6,107.2 183.4,104.3 184,101.3 184.3,98.2 184.4,95.2 184.3,92.1 184,89.1 183.4,86.1 182.6,83.2 181.6,80.3 180.4,77.5 179,74.8 177.4,72.2 175.6,69.8 173.6,67.5 171.4,65.3 169.1,63.3 166.7,61.5 164.1,59.9 161.4,58.5 158.6,57.2 155.7,56.2 152.8,55.4 149.8,54.9 146.8,54.5 143.7,54.4 140.7,54.5 137.6,54.8 134.6,55.4 131.7,56.2 128.8,57.2 126,58.4" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.7,66.4 112.6,68.7 110.7,71.1 109,73.6 107.5,76.2 106.2,78.9 105.1,81.8 104.2,84.7 103.5,87.6 103.1,90.6 102.9,93.7 102.9,96.7 103.1,99.7 103.5,102.7 104.2,105.7 105.1,108.6 106.2,111.4 107.5,114.2 109,116.8 110.7,119.3 112.6,121.7 114.7,123.9" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        choices: [はずれる, はずれない]
+        answer: はずれる
+        check: "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OO')"
+        hints:
+          - 左下の輪と右下の輪の、2 つの交わりを見よう。
+          - 左下の輪は、右下の輪との交わりで、上と下のどちらを通っているかな。
+          - どちらの交わりでも上なら、どうなったかな。
+        paths:
+          - [左下の輪は、右下の輪との交わりでどちらも上, 持ち上げるとはずれる, はずれる]
+        note: どの 2 つもはずれるのに、3 つそろうとはずれない輪（ボロメオの輪）。紙の輪で作るのはむずかしいので、図で上と下をたどる。3 つのときにはずれないことは、図の上と下を 1 つずつ確かめて話すだけでよい。
+    extra:
+      - part: 今日
+        text: 鏡に映った並びはどれですか。
+        figure: 🟨🟦🟪｜
+        choices: [🟪🟦🟨, 🟨🟦🟪, 🟦🟪🟨]
+        answer: 🟪🟦🟨
+        check: "fig.split('｜')[0][::-1]"
+        hints:
+          - 鏡にいちばん近いのはどれかな。
+          - 鏡に近いものは、鏡の中でも鏡のそばに映るよ。
+          - 鏡のそばから順にならべよう。
+        paths:
+          - [鏡のそばは 🟪, 🟪🟦🟨]
+      - part: 今日
+        text: テープを半分に折るのを 3 回くり返して広げると、テープはいくつの部分に分かれて見えますか。
+        answer: 8
+        check: "2 ** 3"
+        hints:
+          - 3 回折ったとき、何まい重なっていたかな。
+          - 重なっていた 1 まい 1 まいが、広げると 1 つの部分になるよ。
+          - テープを折って広げ、部分を数えよう。
+        paths:
+          - [8 まい重なる, 広げると 8 つの部分]
+      - part: 今日
+        text: 3 つの輪がならんでいます。どのとなりどうしも、交わりで上と下が入れかわっていて、つながっています。3 つの輪は、いくつに分かれますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><polyline points="82.5,27.6 80.4,25.5 78,23.5 75.6,21.8 73,20.2 70.3,18.9 67.5,17.7 64.6,16.8 61.7,16.1 58.7,15.6 55.7,15.3 52.7,15.3 49.7,15.5 46.7,15.9 43.7,16.5 40.8,17.4 38,18.5 35.3,19.8 32.7,21.3 30.2,23 27.8,24.9 25.6,27 23.5,29.2 21.7,31.5 20,34.1 18.5,36.7 17.2,39.4 16.1,42.2 15.3,45.1 14.6,48.1 14.2,51.1 14,54.1 14.1,57.1 14.3,60.1 14.8,63.1 15.6,66 16.5,68.9 17.7,71.7 19.1,74.4 20.6,77 22.4,79.4 24.3,81.7 26.5,83.9 28.7,85.9 31.1,87.7 33.7,89.3 36.4,90.7 39.1,91.9 42,93 44.9,93.7 47.9,94.3 50.9,94.6 53.9,94.7 56.9,94.6 59.9,94.3 62.9,93.7 65.8,92.9 68.6,91.9 71.4,90.6 74,89.2 76.6,87.5 79,85.7 81.2,83.7 83.3,81.5 85.3,79.2 87,76.8 88.6,74.2 89.9,71.5 91.1,68.7 92,65.8 92.7,62.9 93.2,59.9 93.5,56.9 93.5,53.8 93.3,50.8 92.8,47.8 92.2,44.9 91.3,42 90.2,39.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="91.2,82.4 93.4,84.6 95.8,86.5 98.3,88.3 101,89.9 103.7,91.3 106.6,92.4 109.5,93.3 112.5,94 115.6,94.5 118.6,94.7 121.7,94.7 124.8,94.5 127.8,94 130.8,93.2 133.7,92.3 136.6,91.1 139.3,89.7 142,88.1 144.5,86.3 146.8,84.3 149,82.2 151,79.9 152.8,77.4 154.5,74.8 155.9,72 157.1,69.2 158.1,66.3 158.9,63.3 159.4,60.3 159.7,57.2 159.7,54.1 159.5,51.1 159.1,48 158.5,45 157.6,42.1 156.5,39.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="148.8,27.6 146.6,25.4 144.2,23.5 141.7,21.7 139,20.1 136.3,18.7 133.4,17.6 130.5,16.7 127.5,16 124.4,15.5 121.4,15.3 118.3,15.3 115.2,15.5 112.2,16 109.2,16.8 106.3,17.7 103.4,18.9 100.7,20.3 98,21.9 95.5,23.7 93.2,25.7 91,27.8 89,30.1 87.2,32.6 85.5,35.2 84.1,38 82.9,40.8 81.9,43.7 81.1,46.7 80.6,49.7 80.3,52.8 80.3,55.9 80.5,58.9 80.9,62 81.5,65 82.4,67.9 83.5,70.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="157.5,82.4 159.6,84.5 162,86.5 164.4,88.2 167,89.8 169.7,91.1 172.5,92.3 175.4,93.2 178.3,93.9 181.3,94.4 184.3,94.7 187.3,94.7 190.3,94.5 193.3,94.1 196.3,93.5 199.2,92.6 202,91.5 204.7,90.2 207.3,88.7 209.8,87 212.2,85.1 214.4,83 216.5,80.8 218.3,78.5 220,75.9 221.5,73.3 222.8,70.6 223.9,67.8 224.7,64.9 225.4,61.9 225.8,58.9 226,55.9 225.9,52.9 225.7,49.9 225.2,46.9 224.4,44 223.5,41.1 222.3,38.3 220.9,35.6 219.4,33 217.6,30.6 215.7,28.3 213.5,26.1 211.3,24.1 208.9,22.3 206.3,20.7 203.6,19.3 200.9,18.1 198,17 195.1,16.3 192.1,15.7 189.1,15.4 186.1,15.3 183.1,15.4 180.1,15.7 177.1,16.3 174.2,17.1 171.4,18.1 168.6,19.4 166,20.8 163.4,22.5 161,24.3 158.8,26.3 156.7,28.5 154.7,30.8 153,33.2 151.4,35.8 150.1,38.5 148.9,41.3 148,44.2 147.3,47.1 146.8,50.1 146.5,53.1 146.5,56.2 146.7,59.2 147.2,62.2 147.8,65.1 148.7,68 149.8,70.8" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        answer: 1
+        check: "(lambda E: max(1, 3 - len(E)))(['左と中', '中と右'])"
+        hints:
+          - 左と中の輪は、はずれるかな。
+          - 中と右の輪は、はずれるかな。
+          - くさりのようにつながっているかな。
+        paths:
+          - [左と中、中と右がつながる, くさりのように 1 つ]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: テープを半分に折るのを 3 回くり返して、広げました。折り目は何本ありますか。
+        answer: 7
+        check: "2 ** 3 - 1"
+        hints:
+          - 3 回折ると、何まい重なるかな。
+          - 広げると、いくつの部分に分かれるかな。
+          - 部分と部分のさかい目を数えよう。
+        paths:
+          - [8 つの部分, さかい目は 7 本]
+      - part: 今日
+        text: 正方形の紙を、三角に 2 回折りました。紙は何まい重なっていますか。
+        svg: '<svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg"><rect x="10" y="18" width="60" height="60" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="10" y1="78" x2="70" y2="18" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="97.8" font-size="11" text-anchor="middle">① 三角に</text><line x1="76" y1="48" x2="92" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,44 92,48 86,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="98,78 158,78 158,18" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="128" y1="48" x2="158" y2="78" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="132" y="97.8" font-size="11" text-anchor="middle">② もう一度</text><line x1="164" y1="48" x2="178" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="172,44 178,48 172,52" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="184,66 230,66 207,43" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - 1 回目で何まい重なるかな。
+          - 2 回目は、重なった紙を一度に折るね。
+          - 折り紙で確かめよう。
+        paths:
+          - [1 回目で 2 まい, 2 回目で 4 まい]
+      - part: 今日
+        text: 図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="190" cy="76" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 2
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((5, 0))"
+        hints:
+          - 穴は、折り目にかかっているかな。
+          - 折り目にかかった穴は、広げるとつながるよ。
+          - 左と右には、いくつずつできるかな。
+        paths:
+          - [下の折り目にかかっている, 上下がつながる, 左右に 1 つずつで 2 つ]
+      - part: 今日
+        text: 図のように折って、穴を 1 つあけました。広げた紙はどれですか。
+        svg: '<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="194.8" cy="56.8" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text><g transform="translate(0,114)"><rect x="10" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="42" y1="8" x2="42" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="10" y1="40" x2="74" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="61.2" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="22.8" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="61.2" cy="52.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="22.8" cy="52.8" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="42" y="89.2" font-size="12" text-anchor="middle">ア</text><rect x="88" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="8" x2="120" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="88" y1="40" x2="152" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="139.2" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="100.8" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="89.2" font-size="12" text-anchor="middle">イ</text><rect x="166" y="8" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="198" y1="8" x2="198" y2="72" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="166" y1="40" x2="230" y2="40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><circle cx="217.2" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="185.2" cy="27.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="217.2" cy="59.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="185.2" cy="59.2" r="3.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="198" y="89.2" font-size="12" text-anchor="middle">ウ</text></g></svg>'
+        choices: [ア, イ, ウ]
+        answer: ア
+        check: "[k for k, v in {'ア': {(6, 4), (-6, 4), (6, -4), (-6, -4)}, 'イ': {(6, 4), (-6, 4)}, 'ウ': {(6, 4), (-4, 4), (6, -6), (-4, -6)}}.items() if v == {(a * 6, b * 4) for a in (1, -1) for b in (1, -1)}][0]"
+        hints:
+          - 広げた紙には、穴がいくつあるはずかな。
+          - 折り目で折ると、穴がぴったり重なるのはどれかな。
+          - たての点線と横の点線の両方で、鏡に映した位置かを見よう。
+        paths:
+          - [穴は 4 つ, 2 つの折り目について鏡に映した位置, ア]
+      - part: 今日
+        text: このひもには、交わりがいくつありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.4,53.5 179.9,55.2 177.4,56.8 175.1,57.9 174.4,54.9 173.5,52 172.5,49.2 171.3,46.4 170,43.7 168.6,41.1 167,38.5 165.2,36.1 163.4,33.7 161.4,31.4 159.3,29.3 157,27.3 154.7,25.3 152.3,23.6 149.8,21.9 147.2,20.4 144.5,19.1 141.7,17.8 138.9,16.8 136,15.9 133.1,15.2 130.1,14.6 127.1,14.3 124.1,14 121.1,14 118.1,14.2 115.1,14.5 112.2,15 109.2,15.7 106.3,16.5 103.5,17.6 100.7,18.8 98.1,20.2 95.5,21.7 93,23.4 90.7,25.3 88.4,27.3 86.3,29.5 84.4,31.8 82.6,34.2 81,36.8 79.6,39.4 78.4,42.2 77.4,45 76.6,47.9 76,50.9 75.6,53.9 75.5,56.9 75.6,59.9 76,62.9 76.6,65.8 77.5,68.7 78.6,71.5 79.9,74.2 81.5,76.8 83.2,79.2 85.2,81.5 87.4,83.6 89.8,85.4 92.3,87.1 95,88.5 97.8,89.6 100.6,90.5 103.6,91.2 106.6,91.7 109.6,91.9 112.6,91.8 115.6,91.6 118.5,91.1 121.5,90.4 124.3,89.4 127.1,88.2 129.7,86.7 132.2,85.1 134.5,83.2 136.7,81 138.7,78.8 140.4,76.3 141.9,73.7 143.2,71 144.2,68.1 145,65.2 145.6,62.3 145.9,59.3 146,56.3 145.8,53.3 145.4,50.3 144.8,47.3 144,44.5 142.9,41.6 141.6,38.9 140.2,36.3 138.5,33.7 136.7,31.3 134.8,29 132.6,26.9 130.4,24.9 128,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="140.4,63.8 138.7,61.3 136.7,59 134.5,56.8 132.2,54.9 129.6,53.2 127,51.8 124.2,50.5 121.3,49.6 118.3,48.9 115.3,48.4 112.3,48.1 109.2,48.1 106.2,48.4 103.2,48.9 100.2,49.6 97.3,50.5 94.6,51.8 91.9,53.2 89.4,54.9 87,56.8 84.8,59 82.8,61.3 81.1,63.8" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="76.1,76.7 75.7,79.8 75.5,82.8 75.6,85.9 76,88.9 76.5,91.9 77.4,94.9 78.4,97.8 79.6,100.6 81.1,103.3 82.7,105.9 84.5,108.4 86.5,110.7 88.6,112.9 90.9,114.9 93.3,116.8 95.9,118.5 98.5,120.1 101.3,121.5 104.1,122.7" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="194.9" cy="45.1" r="4" fill="currentColor"/><circle cx="194.9" cy="94.9" r="4" fill="currentColor"/></svg>'
+        answer: 4
+        check: "len('aObOcOaUdOcUbUdU') // 4"
+        hints:
+          - すき間のある所が交わりだよ。
+          - 片方のはしからたどろう。
+          - 数えた交わりに、しるしをつけよう。
+        paths:
+          - [はしからたどる, 4 つ]
+      - part: 今日
+        text: このひもの両はしを持ったまま引っぱると、ほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="149.8" cy="126" r="4" fill="currentColor"/><circle cx="90.2" cy="126" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどけない
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObUcOaUbOcU')"
+        hints:
+          - 左のはしからたどって、交わりで上と下を言おう。
+          - 上と下が交互になっているかな。
+          - 見本の「ひと結び」と同じかな。
+        paths:
+          - [上と下が交互, ひと結び, ほどけない]
+      - part: 今日
+        text: 2 つの輪は、はずれますか。
+        svg: '<svg viewBox="0 0 240 120" xmlns="http://www.w3.org/2000/svg"><polyline points="114.2,20.2 111.6,18.7 108.8,17.5 106,16.4 103.1,15.6 100.1,14.9 97.2,14.4 94.2,14.1 91.1,14 88.1,14.1 85.1,14.4 82.1,14.9 79.2,15.6 76.3,16.5 73.5,17.6 70.7,18.8 68.1,20.3 65.5,21.9 63.1,23.7 60.7,25.6 58.5,27.7 56.5,29.9 54.6,32.2 52.8,34.7 51.3,37.3 49.9,39.9 48.6,42.7 47.6,45.5 46.7,48.4 46.1,51.4 45.6,54.4 45.3,57.4 45.3,60.4 45.4,63.4 45.7,66.4 46.2,69.4 46.9,72.3 47.9,75.2 48.9,78 50.2,80.8 51.7,83.4 53.3,86 55.1,88.4 57,90.7 59.1,92.9 61.3,94.9 63.7,96.8 66.2,98.6 68.8,100.1 71.4,101.5 74.2,102.7 77,103.8 80,104.6 82.9,105.2 85.9,105.7 88.9,105.9 91.9,106 94.9,105.8 97.9,105.5 100.9,105 103.8,104.2 106.7,103.3 109.5,102.2 112.3,100.9 114.9,99.4 117.4,97.8 119.9,96 122.2,94 124.3,91.9 126.4,89.7 128.2,87.3 130,84.8 131.5,82.2 132.9,79.6 134.1,76.8 135.1,73.9 135.9,71 136.5,68.1 137,65.1 137.2,62.1 137.2,59.1 137.1,56 136.7,53 136.2,50.1 135.4,47.1 134.5,44.3 133.3,41.5 132,38.7 130.5,36.1 128.9,33.6 127.1,31.2 125.1,28.9" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.9,105.1 142.8,105.6 145.8,105.9 148.9,106 151.9,105.9 154.9,105.6 157.9,105.1 160.8,104.4 163.7,103.5 166.5,102.4 169.3,101.2 171.9,99.7 174.5,98.1 176.9,96.3 179.3,94.4 181.5,92.3 183.5,90.1 185.4,87.8 187.2,85.3 188.7,82.7 190.1,80.1 191.4,77.3 192.4,74.5 193.3,71.6 193.9,68.6 194.4,65.6 194.7,62.6 194.7,59.6 194.6,56.6 194.3,53.6 193.8,50.6 193.1,47.7 192.1,44.8 191.1,42 189.8,39.2 188.3,36.6 186.7,34 184.9,31.6 183,29.3 180.9,27.1 178.7,25.1 176.3,23.2 173.8,21.4 171.2,19.9 168.6,18.5 165.8,17.3 163,16.2 160,15.4 157.1,14.8 154.1,14.3 151.1,14.1 148.1,14 145.1,14.2 142.1,14.5 139.1,15 136.2,15.8 133.3,16.7 130.5,17.8 127.7,19.1 125.1,20.6 122.6,22.2 120.1,24 117.8,26 115.7,28.1 113.6,30.3 111.8,32.7 110,35.2 108.5,37.8 107.1,40.4 105.9,43.2 104.9,46.1 104.1,49 103.5,51.9 103,54.9 102.8,57.9 102.8,60.9 102.9,64 103.3,67 103.8,69.9 104.6,72.9 105.5,75.7 106.7,78.5 108,81.3 109.5,83.9 111.1,86.4 112.9,88.8 114.9,91.1" stroke="currentColor" stroke-width="2.6" fill="none"/></svg>'
+        choices: [はずれる, はずれない]
+        answer: はずれない
+        check: "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OU')"
+        hints:
+          - 左の輪は、上の交わりで上と下のどちらかな。
+          - 下の交わりではどうかな。
+          - 上と下が入れかわっているかな。
+        paths:
+          - [上と下が入れかわる, つながっている, はずれない]
+    extra:
+      - part: 今日
+        text: テープを半分に 2 回折りました。重なりは何まいですか。
+        answer: 4
+        check: "2 ** 2"
+        hints:
+          - 1 回で何まいかな。
+          - 2 回目は、重なったテープを一度に折るね。
+          - 折って数えよう。
+        paths:
+          - [2 まい、4 まい]
+      - part: 今日
+        text: 図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。
+        svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><rect x="8" y="20" width="64" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="16" x2="40" y2="88" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="40" y="105.8" font-size="11" text-anchor="middle">① 左を右へ</text><line x1="76" y1="52" x2="92" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="86,48 92,52 86,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="98" y="20" width="32" height="64" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="94" y1="52" x2="134" y2="52" stroke="currentColor" stroke-width="1.4" fill="none" stroke-dasharray="5 4"/><text x="114" y="105.8" font-size="11" text-anchor="middle">② 下を上へ</text><line x1="138" y1="52" x2="154" y2="52" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="148,48 154,52 148,56" stroke="currentColor" stroke-width="1.5" fill="none"/><rect x="166" y="28" width="48" height="48" stroke="currentColor" stroke-width="1.8" fill="#f3c969" fill-opacity=".35"/><line x1="166" y1="28" x2="166" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><line x1="166" y1="76" x2="214" y2="76" stroke="currentColor" stroke-width="3.5" fill="none"/><circle cx="204.4" cy="52" r="4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190" y="105.8" font-size="11" text-anchor="middle">③ 穴をあける</text></svg>'
+        answer: 4
+        check: "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((8, 5))"
+        hints:
+          - 穴は、折り目にかかっているかな。
+          - 紙は何まい重なっていたかな。
+          - 一度に全部の紙に穴があくね。
+        paths:
+          - [4 まい重なる, 4 つ]
+      - part: 今日
+        text: このひもの両はしを持ったまま引っぱると、ほどけますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polyline points="32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4" stroke="currentColor" stroke-width="2.6" fill="none"/><polyline points="124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126" stroke="currentColor" stroke-width="2.6" fill="none"/><circle cx="32" cy="126" r="4" fill="currentColor"/><circle cx="208" cy="126" r="4" fill="currentColor"/></svg>'
+        choices: [ほどける, ほどけない]
+        answer: ほどける
+        check: "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aOaU')"
+        hints:
+          - 交わりはいくつかな。
+          - 輪は、ひもが 1 回重なっているだけだね。
+          - ひもで作って引っぱってみよう。
+        paths:
+          - [交わり 1 つ, ほどける]

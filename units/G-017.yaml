@@ -1,0 +1,663 @@
+# G-017 三角形と四角形の性質
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：定義、定理、二等辺三角形（頂角、底辺、底角）、正三角形、逆、反例、直角三角形の斜辺、鋭角、
+#   平行四辺形（対辺、対角、対角線）、長方形、ひし形、正方形。
+# 定義：二等辺三角形は 2 つの辺が等しい三角形、正三角形は 3 つの辺が等しい三角形、平行四辺形は 2 組の対辺がそれぞれ平行な四角形、
+#   長方形は 4 つの角が等しい四角形、ひし形は 4 つの辺が等しい四角形、正方形は 4 つの角と 4 つの辺が等しい四角形。
+# 約束した事実は G-016 のもの（平行線と角、三角形の合同条件、内角の和など）。ここで示すもの：二等辺三角形の底角は等しい、
+#   平行四辺形の対辺・対角は等しい、長方形の対角線は等しい。2 つの角が等しい三角形は二等辺三角形（底角の定理の逆）、
+#   直角三角形の合同条件、平行四辺形になる条件、ひし形の対角線が垂直に交わることは、見本で知らせて使う。
+# 前提は G-016（→ G-009）なので、数の計算は G-009 の範囲（1000 まで、九九の範囲のわり算、何十 ÷ 1 けた）にした。
+#   面積（G-008）は前提にないので、平行線と面積（等積変形）は扱わない（G-012）。文字の式を使った計算はしない。
+# 図は svg（D-040）。角はおおよそ本当の大きさで描いた。等しい辺は短い線、平行は ＞、直角は四角のしるし。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 二等辺三角形（定義と定理、頂角の二等分線）　2 日目 二等辺三角形になる条件、逆と反例、正三角形、直角三角形の合同条件
+#   3 日目 平行四辺形の性質と条件、長方形・ひし形・正方形の対角線　4 日目 わけ（底角、平行四辺形の対辺と対角、長方形の対角線）
+#   5 日目 G-016 と 1〜3 日目を混ぜる　6 日目 確認
+# check：角と長さは計算の式。逆の文、正しいかどうか、合同条件、平行四辺形になる条件を選ぶ問題は約束ごとなので check を付けない。
+
+id: G-017
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 二等辺三角形の角と、頂角の二等分線について調べましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="27.4" x2="120" y2="122.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.3" y1="77.1" x2="93.3" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146.7" y1="72.9" x2="137.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M113.2 41.9 A16 16 0 0 0 126.8 41.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M91.6 122.6 A16 16 0 0 0 82.4 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M157.6 108.1 A16 16 0 0 0 148.4 122.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="120,114.6 112,114.6 112,122.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text><text x="120" y="138.1" font-size="13" text-anchor="middle">D</text><text x="136.6" y="35.3" font-size="13" text-anchor="middle">頂角</text><text x="98.9" y="117.1" font-size="13" text-anchor="middle">底角</text><text x="141.1" y="117.1" font-size="13" text-anchor="middle">底角</text><text x="97.8" y="138.2" font-size="13" text-anchor="middle">底辺</text></svg>'
+        explain: 2 つの辺が等しい三角形を二等辺三角形といいます。このように、ことばの意味をはっきり決めたものを定義といいます。等しい 2 辺の間の角を頂角、頂角に向かい合う辺を底辺、底辺の両端の角を底角といいます。二等辺三角形の 2 つの底角は等しくなります。また、頂角の二等分線は、底辺を垂直に 2 等分します。証明されたことがらのうち、よく使う大切なものを定理といいます。図で AB = AC、∠A = 40° なら、∠B = ∠C = (180° − 40°) ÷ 2 = 70° です。
+      - part: 思い出す
+        text: ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="86.9" y1="35" x2="40.7" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40.7" y1="115" x2="154" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154" y1="115" x2="86.9" y2="35" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154" y1="115" x2="199.3" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><path d="M78.9 48.9 A16 16 0 0 0 97.2 47.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="89.3" y="67.5" font-size="13" text-anchor="middle">70°</text><path d="M56.7 115 A16 16 0 0 0 48.7 101.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="65" y="105.5" font-size="13" text-anchor="middle">60°</text><path d="M168 115 A14 14 0 0 0 145 104.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165" y="96" font-size="13" text-anchor="middle">x</text><text x="81.5" y="30" font-size="13" text-anchor="middle">A</text><text x="33" y="127.3" font-size="13" text-anchor="middle">B</text><text x="154" y="130.5" font-size="13" text-anchor="middle">C</text><text x="199.3" y="130.5" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 130
+        check: "70 + 60"
+        hints:
+          - ∠x は、頂点 C の外角だね。
+          - 外角は、となり合わない 2 つの内角の和だね。
+          - 70° と 60° をたそう。
+        paths:
+          - [70 + 60 = 130]
+      - part: 思い出す
+        text: 図の 2 つの三角形は、どの合同条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="57.6" y1="43.5" x2="36.1" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="86.5" x2="100.6" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="86.5" x2="57.6" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.4" y1="43.5" x2="203.9" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="86.5" x2="139.4" y2="86.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="139.4" y1="86.5" x2="182.4" y2="43.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.4" y1="67.2" x2="42.4" y2="62.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.6" y1="62.8" x2="188.6" y2="67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="66.4" y1="81.5" x2="66.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="70.4" y1="81.5" x2="70.4" y2="91.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.6" y1="91.5" x2="173.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="169.6" y1="91.5" x2="169.6" y2="81.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M50.1 86.5 A14 14 0 0 0 42.4 74" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M197.6 74 A14 14 0 0 0 189.9 86.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="57.6" y="37" font-size="13" text-anchor="middle">P</text><text x="28.4" y="98.8" font-size="13" text-anchor="middle">Q</text><text x="108.4" y="98.8" font-size="13" text-anchor="middle">R</text><text x="182.4" y="37" font-size="13" text-anchor="middle">S</text><text x="211.6" y="98.8" font-size="13" text-anchor="middle">T</text><text x="131.6" y="98.8" font-size="13" text-anchor="middle">U</text></svg>'
+        choices:
+          - 3 組の辺がそれぞれ等しい
+          - 2 組の辺とその間の角がそれぞれ等しい
+          - 1 組の辺とその両端の角がそれぞれ等しい
+        answer: 2 組の辺とその間の角がそれぞれ等しい
+        hints:
+          - しるしのある辺は何組かな。
+          - しるしのある角は、2 つの辺の間にあるかな。
+          - 合同条件の 3 つを思い出そう。
+        paths:
+          - [PQ = ST、QR = TU, ∠Q = ∠T はその間の角, 2 組の辺とその間の角]
+      - part: 今日
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="85.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.4" y1="122.6" x2="154.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.4" y1="76.7" x2="98" y2="73.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="142" y1="73.3" x2="132.6" y2="76.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M114.5 42.5 A16 16 0 0 0 125.5 42.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">40°</text><path d="M101.4 122.6 A16 16 0 0 0 90.8 107.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.3" y="111.1" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="77.6" y="134.9" font-size="13" text-anchor="middle">B</text><text x="162.4" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 70
+        check: "(180 - 40) // 2"
+        hints:
+          - 二等辺三角形の 2 つの底角は、どうなっているかな。
+          - 2 つの底角を合わせると何度かな。
+          - それを、等しい 2 つに分けよう。
+        paths:
+          - [底角 2 つで 180 − 40 = 140, 140 ÷ 2 = 70]
+      - part: 今日
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.3" y1="77.1" x2="93.3" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146.7" y1="72.9" x2="137.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M113.2 41.9 A16 16 0 0 0 126.8 41.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">x</text><path d="M91.6 122.6 A16 16 0 0 0 82.4 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.2" y="112.1" font-size="13" text-anchor="middle">65°</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 50
+        check: "180 - 65 * 2"
+        hints:
+          - ∠C は何度かな。
+          - 2 つの底角を合わせると何度かな。
+          - 180 から、底角 2 つ分をひこう。
+        paths:
+          - [∠C = ∠B = 65°, 180 − 65 − 65 = 50]
+        note: ∠x を 65° と答えやすい。どの角が底角かを、等しい辺のしるしから確かめる。
+      - part: 今日
+        text: AB = AC の二等辺三角形で、AD は頂角の二等分線です。BC = 10 cm のとき、BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="27.4" x2="120" y2="122.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.3" y1="77.1" x2="93.3" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146.7" y1="72.9" x2="137.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text><text x="120" y="138.1" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 5
+        check: "10 // 2"
+        hints:
+          - 頂角の二等分線は、底辺をどのように分けるかな。
+          - D は BC のどこにあるかな。
+          - 10 を 2 つに等しく分けよう。
+        paths:
+          - [頂角の二等分線は底辺を 2 等分, BD = 10 ÷ 2 = 5]
+      - part: 挑戦
+        text: AB = AC の二等辺三角形で、辺 BC を C の先へのばしました。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="107" y1="27.4" x2="72.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.4" y1="122.6" x2="141.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.6" y1="122.6" x2="107" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="141.6" y1="122.6" x2="167.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.4" y1="76.7" x2="85" y2="73.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="129" y1="73.3" x2="119.6" y2="76.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M101.5 42.5 A16 16 0 0 0 112.5 42.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107" y="60" font-size="13" text-anchor="middle">x</text><path d="M155.6 122.6 A14 14 0 0 0 136.9 109.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="156.6" y="105.8" font-size="13" text-anchor="middle">110°</text><text x="107" y="21" font-size="13" text-anchor="middle">A</text><text x="64.6" y="134.9" font-size="13" text-anchor="middle">B</text><text x="149.4" y="134.9" font-size="13" text-anchor="middle">C</text><text x="167.6" y="138.1" font-size="13" text-anchor="middle">E</text></svg>'
+        answer: 40
+        check: "180 - 2 * (180 - 110)"
+        hints:
+          - まず、∠ACB を求めよう。
+          - ∠B は ∠ACB と等しいね。
+          - 三角形の内角の和から ∠x を求めよう。
+        paths:
+          - [∠ACB = 180 − 110 = 70, ∠B = 70, ∠x = 180 − 70 − 70 = 40]
+          - [外角 110 = ∠x + ∠B, ∠B = 70 なので ∠x = 40]
+    extra:
+      - part: 今日
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="94.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94.5" y1="122.6" x2="145.5" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.5" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="112.1" y1="76.3" x2="102.4" y2="73.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="137.6" y1="73.7" x2="127.9" y2="76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M115.9 42.9 A16 16 0 0 0 124.1 42.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">x</text><path d="M110.5 122.6 A16 16 0 0 0 98.6 107.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="116.7" y="110.1" font-size="13" text-anchor="middle">75°</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="86.7" y="134.9" font-size="13" text-anchor="middle">B</text><text x="153.3" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 30
+        check: "180 - 75 * 2"
+        hints:
+          - ∠C は何度かな。
+          - 2 つの底角を合わせると何度かな。
+          - 180 から、その和をひこう。
+        paths:
+          - [180 − 75 − 75 = 30]
+      - part: 今日
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="39.8" x2="36.1" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="110.2" x2="203.9" y2="110.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="110.2" x2="120" y2="39.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="81.3" y1="78.8" x2="74.9" y2="71.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="165.1" y1="71.2" x2="158.7" y2="78.8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M107.7 50.1 A16 16 0 0 0 132.3 50.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="72.4" font-size="13" text-anchor="middle">100°</text><path d="M191.6 99.9 A16 16 0 0 0 187.9 110.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="177.6" y="105.2" font-size="13" text-anchor="middle">x</text><text x="120" y="33.4" font-size="13" text-anchor="middle">A</text><text x="28.4" y="122.5" font-size="13" text-anchor="middle">B</text><text x="211.6" y="122.5" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 40
+        check: "(180 - 100) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 100 = 80, 80 ÷ 2 = 40]
+      - part: 今日
+        text: AB = AC の二等辺三角形で、AD は頂角の二等分線です。∠ADB は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="32.9" x2="49.4" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.4" y1="117.1" x2="190.6" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.6" y1="117.1" x2="120" y2="32.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="32.9" x2="120" y2="117.1" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="88.5" y1="78.2" x2="80.9" y2="71.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="159.1" y1="71.8" x2="151.5" y2="78.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="26.5" font-size="13" text-anchor="middle">A</text><text x="41.6" y="129.4" font-size="13" text-anchor="middle">B</text><text x="198.4" y="129.4" font-size="13" text-anchor="middle">C</text><text x="120" y="132.6" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 90
+        check: "180 // 2"
+        hints:
+          - 頂角の二等分線は、底辺とどのように交わるかな。
+          - ∠ADB と ∠ADC は等しいね。
+          - 2 つを合わせると一直線だよ。
+        paths:
+          - [∠ADB = ∠ADC, 2 つで 180°, 90°]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: ことがらの「逆」と、二等辺三角形になる条件、直角三角形の合同条件を知りましょう。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M91.6 122.6 A16 16 0 0 0 82.4 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.2" y="112.1" font-size="13" text-anchor="middle">65°</text><path d="M157.6 108.1 A16 16 0 0 0 148.4 122.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.8" y="112.1" font-size="13" text-anchor="middle">65°</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        explain: 「〜ならば…」の仮定と結論を入れかえた文を、もとの文の逆といいます。「△ABC で AB = AC ならば ∠B = ∠C」の逆は「△ABC で ∠B = ∠C ならば AB = AC」で、これも正しいことが証明できます。だから、図のように 2 つの角が等しい三角形は二等辺三角形です。でも、逆はいつも正しいとはかぎりません。「△ABC ≡ △DEF ならば ∠A = ∠D」の逆「∠A = ∠D ならば △ABC ≡ △DEF」は正しくありません。∠A = ∠D でも、大きさのちがう三角形があるからです。このように、正しくないことを示す例を反例といいます。3 つの辺が等しい三角形を正三角形といい、3 つの角はどれも 60° です。また、2 つの直角三角形は、斜辺（直角に向かい合う辺）と 1 つの鋭角（90° より小さい角）、または斜辺と他の 1 辺がそれぞれ等しければ合同です。
+      - part: 思い出す
+        text: AB = AC の二等辺三角形です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.3" y1="77.1" x2="93.3" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146.7" y1="72.9" x2="137.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M113.2 41.9 A16 16 0 0 0 126.8 41.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="60" font-size="13" text-anchor="middle">50°</text><path d="M91.6 122.6 A16 16 0 0 0 82.4 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.2" y="112.1" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 65
+        check: "(180 - 50) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 50 = 130, 130 ÷ 2 = 65]
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.1" y1="135.2" x2="160.7" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="169.7" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M134.7 43.8 A13 13 0 0 0 142.5 55.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127.6" y="61.1" font-size="12" text-anchor="middle">66°</text><path d="M133 106.2 A13 13 0 0 0 125.3 94.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.1" y="97.3" font-size="12" text-anchor="middle">x</text></svg>'
+        answer: 66
+        check: "66"
+        hints:
+          - 2 つの角は、ℓ と m の内側にあるね。
+          - n をはさんで反対がわにあるかな。
+          - 平行線の錯角は等しいね。
+        paths:
+          - [錯角, 66°]
+      - part: 今日
+        text: ∠B = ∠C = 55° の △ABC で、AB = 6 cm です。AC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="30.8" x2="58.2" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.2" y1="119.2" x2="181.8" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181.8" y1="119.2" x2="120" y2="30.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74.2 119.2 A16 16 0 0 0 67.3 106.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83" y="110.8" font-size="13" text-anchor="middle">55°</text><path d="M172.7 106.1 A16 16 0 0 0 165.8 119.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157" y="110.8" font-size="13" text-anchor="middle">55°</text><text x="120" y="24.4" font-size="13" text-anchor="middle">A</text><text x="50.4" y="131.5" font-size="13" text-anchor="middle">B</text><text x="189.6" y="131.5" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 6
+        check: "6"
+        hints:
+          - 2 つの角が等しい三角形は、何という三角形かな。
+          - 等しい 2 辺は、どの辺とどの辺かな。
+          - 等しい角に向かい合う辺を見よう。
+        paths:
+          - [∠B = ∠C なので二等辺三角形, AB = AC, 6 cm]
+      - part: 今日
+        text: 「△ABC ≡ △DEF ならば、AB = DE である」の逆はどれですか。
+        choices:
+          - AB = DE ならば、△ABC ≡ △DEF である
+          - △ABC ≡ △DEF ならば、AB = DE である
+          - AB = DE ならば、∠A = ∠D である
+        answer: AB = DE ならば、△ABC ≡ △DEF である
+        hints:
+          - もとの文の仮定と結論はどれかな。
+          - 逆は、仮定と結論を入れかえた文だね。
+          - 「ならば」の前とあとを入れかえよう。
+        paths:
+          - [仮定 △ABC ≡ △DEF、結論 AB = DE, 入れかえる, AB = DE ならば △ABC ≡ △DEF]
+      - part: 今日
+        text: 「正三角形ならば、二等辺三角形である」は正しいことがらです。この逆は正しいですか。
+        choices: [正しい, 正しくない]
+        answer: 正しくない
+        hints:
+          - 逆の文をつくろう。
+          - 二等辺三角形でも、正三角形でないものはあるかな。
+          - 頂角が 40° の二等辺三角形を考えよう。
+        paths:
+          - [逆は「二等辺三角形ならば正三角形」, 反例：頂角 40° の二等辺三角形, 正しくない]
+        note: 正三角形は 2 つの辺が等しいので二等辺三角形の仲間。逆の反例を 1 つあげられればよい。
+      - part: 挑戦
+        text: 図の 2 つの直角三角形は、斜辺どうしと、しるしの辺どうしが等しくなっています。正しいものはどれですか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="36.1" y1="41.4" x2="102.3" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.3" y1="88.6" x2="36.1" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="88.6" x2="36.1" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="41.4" x2="137.7" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137.7" y1="88.6" x2="203.9" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="88.6" x2="203.9" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.1" y1="60.9" x2="66.3" y2="69.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.7" y1="69.1" x2="167.9" y2="60.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="41.1" y1="63" x2="31.1" y2="63" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="41.1" y1="67" x2="31.1" y2="67" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="208.9" y1="63" x2="198.9" y2="63" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="208.9" y1="67" x2="198.9" y2="67" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="36.1,80.6 44.1,80.6 44.1,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="203.9,80.6 195.9,80.6 195.9,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.1" y="34.9" font-size="13" text-anchor="middle">A</text><text x="110.1" y="101" font-size="13" text-anchor="middle">B</text><text x="28.4" y="101" font-size="13" text-anchor="middle">C</text><text x="203.9" y="34.9" font-size="13" text-anchor="middle">D</text><text x="129.9" y="101" font-size="13" text-anchor="middle">E</text><text x="211.6" y="101" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 斜辺と 1 つの鋭角がそれぞれ等しいので合同
+          - 斜辺と他の 1 辺がそれぞれ等しいので合同
+          - 合同とはいえない
+        answer: 斜辺と他の 1 辺がそれぞれ等しいので合同
+        hints:
+          - 2 つの三角形は、どちらも直角三角形だね。
+          - 等しいのは、斜辺と、どの辺かな。
+          - 直角三角形の合同条件を思い出そう。
+        paths:
+          - [どちらも直角三角形, 斜辺 AB = DE、AC = DF, 斜辺と他の 1 辺]
+        note: G-016 で、2 辺と間でない角では合同といえないことがあった。直角のときだけは、この形でも合同になる。
+    extra:
+      - part: 今日
+        text: 正三角形 ABC の辺 BC を、C の先へのばしてできる外角は何度ですか。
+        answer: 120
+        check: "180 - 60"
+        hints:
+          - 正三角形の 1 つの角は何度かな。
+          - 内角と外角を合わせると何度かな。
+          - 180 から 60 をひこう。
+        paths:
+          - [内角は 60°, 外角は 180 − 60 = 120]
+      - part: 今日
+        text: 図の 2 つの直角三角形は、どの条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="36.1" y1="41.4" x2="102.3" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.3" y1="88.6" x2="36.1" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="88.6" x2="36.1" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="41.4" x2="137.7" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137.7" y1="88.6" x2="203.9" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="88.6" x2="203.9" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.1" y1="60.9" x2="66.3" y2="69.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.7" y1="69.1" x2="167.9" y2="60.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M90.9 80.5 A14 14 0 0 0 88.3 88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M151.7 88.6 A14 14 0 0 0 149.1 80.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="36.1,80.6 44.1,80.6 44.1,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="203.9,80.6 195.9,80.6 195.9,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.1" y="34.9" font-size="13" text-anchor="middle">A</text><text x="110.1" y="101" font-size="13" text-anchor="middle">B</text><text x="28.4" y="101" font-size="13" text-anchor="middle">C</text><text x="203.9" y="34.9" font-size="13" text-anchor="middle">D</text><text x="129.9" y="101" font-size="13" text-anchor="middle">E</text><text x="211.6" y="101" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 斜辺と 1 つの鋭角がそれぞれ等しい
+          - 斜辺と他の 1 辺がそれぞれ等しい
+          - 合同とはいえない
+        answer: 斜辺と 1 つの鋭角がそれぞれ等しい
+        hints:
+          - しるしのある辺は、斜辺かな。
+          - しるしのある角は、直角かな、鋭角かな。
+          - 直角三角形の合同条件を思い出そう。
+        paths:
+          - [斜辺 AB = DE, 鋭角 ∠B = ∠E, 斜辺と 1 つの鋭角]
+      - part: 今日
+        text: 「2 直線が平行ならば、同位角は等しい」の逆は正しいですか。
+        choices: [正しい, 正しくない]
+        answer: 正しい
+        hints:
+          - 逆の文をつくろう。
+          - 「同位角が等しいならば、2 直線は平行」は、G-016 で約束した事実かな。
+          - 平行かどうかを見分けるのに使ったね。
+        paths:
+          - [逆は「同位角が等しければ平行」, G-016 で約束した事実, 正しい]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 平行四辺形の性質と、長方形・ひし形・正方形の対角線を調べましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76" y1="34.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="98.4,109.5 103.4,105.5 98.4,101.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="131.6,38.5 136.6,34.5 131.6,30.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="59.9,78.5 58.4,72.3 52.7,75.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="62,74 60.5,67.7 54.8,70.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="181,78.5 179.5,72.3 173.7,75.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="183.1,74 181.6,67.7 175.9,70.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text><text x="120" y="85.5" font-size="13" text-anchor="middle">O</text></svg>'
+        explain: 2 組の対辺（向かい合う辺）がそれぞれ平行な四角形を平行四辺形といいます（定義）。平行四辺形では、① 2 組の対辺はそれぞれ等しく、② 2 組の対角はそれぞれ等しく、③ 対角線はそれぞれの中点で交わります（定理）。となり合う角の和は、平行線の内側の角なので 180° です。反対に、四角形が「2 組の対辺がそれぞれ平行」「2 組の対辺がそれぞれ等しい」「2 組の対角がそれぞれ等しい」「対角線がそれぞれの中点で交わる」「1 組の対辺が平行で、その長さが等しい」のどれかにあてはまれば、平行四辺形です。長方形・ひし形・正方形は特別な平行四辺形で、長方形の対角線は長さが等しく、ひし形の対角線は垂直に交わり、正方形の対角線は長さが等しく垂直に交わります。
+      - part: 思い出す
+        text: △ABC で ∠B = ∠C です。等しい 2 辺はどれとどれですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="30.8" x2="58.2" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.2" y1="119.2" x2="181.8" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181.8" y1="119.2" x2="120" y2="30.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M74.2 119.2 A16 16 0 0 0 67.3 106.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83" y="110.8" font-size="13" text-anchor="middle">55°</text><path d="M172.7 106.1 A16 16 0 0 0 165.8 119.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157" y="110.8" font-size="13" text-anchor="middle">55°</text><text x="120" y="24.4" font-size="13" text-anchor="middle">A</text><text x="50.4" y="131.5" font-size="13" text-anchor="middle">B</text><text x="189.6" y="131.5" font-size="13" text-anchor="middle">C</text></svg>'
+        choices: [AB と AC, AB と BC, BC と CA]
+        answer: AB と AC
+        hints:
+          - 2 つの角が等しい三角形は、何という三角形かな。
+          - ∠B に向かい合う辺はどれかな。
+          - ∠C に向かい合う辺はどれかな。
+        paths:
+          - [∠B に向かい合う辺は AC, ∠C に向かい合う辺は AB, AB = AC]
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="12" y1="43.8" x2="228" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="12" y1="106.2" x2="228" y2="106.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.4" y1="135.2" x2="153.3" y2="14.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="184.1,47.8 189.1,43.8 184.1,39.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="184.1,110.2 189.1,106.2 184.1,102.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="226" y="39.4" font-size="13" text-anchor="middle">ℓ</text><text x="226" y="101.7" font-size="13" text-anchor="middle">m</text><text x="162.3" y="23.3" font-size="13" text-anchor="middle">n</text><path d="M138.2 56.1 A13 13 0 0 0 155.7 43.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="156.4" y="67.7" font-size="12" text-anchor="middle">x</text><path d="M133 106.2 A13 13 0 0 0 124.4 93.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="139.7" y="96.6" font-size="12" text-anchor="middle">70°</text></svg>'
+        answer: 110
+        check: "180 - 70"
+        hints:
+          - ∠x と 70° は、ℓ と m の内側で同じがわにあるね。
+          - ℓ の上で、∠x のとなりの角を考えよう。
+          - そのとなりの角と 70° は錯角だね。
+        paths:
+          - [∠x のとなりは 70°（錯角）, 180 − 70 = 110]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 115° です。∠B は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M69.3 49 A16 16 0 0 0 92 34.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="91.1" y="62.7" font-size="13" text-anchor="middle">115°</text><path d="M58.9 105.5 A16 16 0 0 0 49.7 91" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="66.5" y="95" font-size="13" text-anchor="middle">x</text><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 65
+        check: "180 - 115"
+        hints:
+          - AD と BC は平行だね。
+          - ∠A と ∠B は、平行線の内側で同じがわにある角だね。
+          - となり合う角の和は 180° だよ。
+        paths:
+          - [∠A + ∠B = 180°, ∠B = 180 − 115 = 65]
+      - part: 今日
+        text: 平行四辺形 ABCD で、AB = 5 cm、BC = 8 cm です。まわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="78.4" y1="35.5" x2="38.6" y2="104.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="38.6" y1="104.5" x2="161.6" y2="104.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.6" y1="104.5" x2="201.4" y2="35.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="201.4" y1="35.5" x2="78.4" y2="35.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="70.6" y="32.3" font-size="13" text-anchor="middle">A</text><text x="30.8" y="116.8" font-size="13" text-anchor="middle">B</text><text x="169.4" y="116.8" font-size="13" text-anchor="middle">C</text><text x="209.2" y="32.3" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 26
+        check: "(5 + 8) * 2"
+        hints:
+          - CD と AD の長さは、それぞれどの辺と等しいかな。
+          - 平行四辺形の対辺は等しいね。
+          - 4 つの辺をたそう。
+        paths:
+          - [CD = AB = 5、AD = BC = 8, 5 + 8 + 5 + 8 = 26]
+      - part: 今日
+        text: 平行四辺形 ABCD の対角線の交点を O とします。BD = 14 cm のとき、OD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76" y1="34.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text><text x="120" y="85.5" font-size="13" text-anchor="middle">O</text></svg>'
+        answer: 7
+        check: "14 // 2"
+        hints:
+          - 平行四辺形の対角線は、どこで交わるかな。
+          - O は BD の中点だね。
+          - 14 を 2 つに等しく分けよう。
+        paths:
+          - [対角線はそれぞれの中点で交わる, OD = 14 ÷ 2 = 7]
+      - part: 挑戦
+        text: 四角形 ABCD が、かならず平行四辺形になるのはどれですか。
+        choices:
+          - 1 組の対辺が平行で、その長さが等しい
+          - 1 組の対辺が平行で、もう 1 組の対辺の長さが等しい
+          - 対角線が垂直に交わる
+        answer: 1 組の対辺が平行で、その長さが等しい
+        hints:
+          - 平行四辺形になる条件の 5 つを思い出そう。
+          - 2 つ目は、上と下が平行で、左と右の長さが等しい台形でもあてはまるかな。
+          - 3 つ目は、たこの形（2 組のとなり合う辺が等しい四角形）でもあてはまるかな。
+        paths:
+          - [1 つ目は平行四辺形になる条件の 1 つ, 2 つ目は左右の長さが等しい台形が反例, 3 つ目はたこの形が反例]
+        note: 「かならず」を示すには条件、「かならずではない」を示すには反例を 1 つ。紙に反例の形をかいて確かめる。
+    extra:
+      - part: 今日
+        text: 長方形 ABCD の対角線の交点を O とします。AC = 10 cm のとき、OB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="59.1" y1="30.6" x2="59.1" y2="109.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.1" y1="109.4" x2="180.9" y2="109.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180.9" y1="109.4" x2="180.9" y2="30.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180.9" y1="30.6" x2="59.1" y2="30.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.1" y1="30.6" x2="180.9" y2="109.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59.1" y1="109.4" x2="180.9" y2="30.6" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="59.1,101.4 67.1,101.4 67.1,109.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="51.3" y="27.4" font-size="13" text-anchor="middle">A</text><text x="51.3" y="121.7" font-size="13" text-anchor="middle">B</text><text x="188.7" y="121.7" font-size="13" text-anchor="middle">C</text><text x="188.7" y="27.4" font-size="13" text-anchor="middle">D</text><text x="120" y="85.5" font-size="13" text-anchor="middle">O</text></svg>'
+        answer: 5
+        check: "10 // 2"
+        hints:
+          - 長方形の対角線の長さは、どうなっているかな。
+          - BD は何 cm かな。
+          - O は BD の中点だね。
+        paths:
+          - [BD = AC = 10, OB = 10 ÷ 2 = 5]
+      - part: 今日
+        text: ひし形 ABCD の対角線の交点を O とします。∠AOB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="98" y1="31.9" x2="53.9" y2="108.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.9" y1="108.1" x2="142" y2="108.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="142" y1="108.1" x2="186.1" y2="31.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.1" y1="31.9" x2="98" y2="31.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98" y1="31.9" x2="142" y2="108.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.9" y1="108.1" x2="186.1" y2="31.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80.3" y1="72.5" x2="71.6" y2="67.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="98" y1="103.1" x2="98" y2="113.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="159.7" y1="67.5" x2="168.4" y2="72.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="142" y1="36.9" x2="142" y2="26.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.2" y="28.6" font-size="13" text-anchor="middle">A</text><text x="46.2" y="120.5" font-size="13" text-anchor="middle">B</text><text x="149.8" y="120.5" font-size="13" text-anchor="middle">C</text><text x="193.8" y="28.6" font-size="13" text-anchor="middle">D</text><text x="120" y="85.5" font-size="13" text-anchor="middle">O</text></svg>'
+        answer: 90
+        check: "90"
+        hints:
+          - ひし形の対角線は、どのように交わるかな。
+          - 垂直に交わるとき、交わる角は何度かな。
+          - 直角は何度だったかな。
+        paths:
+          - [ひし形の対角線は垂直に交わる, 90°]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠B = 65° です。∠D は何度ですか。
+        answer: 65
+        check: "65"
+        hints:
+          - ∠B と ∠D は、向かい合う角かな、となり合う角かな。
+          - 平行四辺形の対角はどうなっているかな。
+          - 対角は等しいね。
+        paths:
+          - [∠D は ∠B の対角, 65°]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: AB = AC の二等辺三角形 ABC で、∠B = ∠C であることを証明しましょう。頂角 ∠A の二等分線と BC の交点を D とします。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="85.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85.4" y1="122.6" x2="154.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="154.6" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="27.4" x2="120" y2="122.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="107.4" y1="76.7" x2="98" y2="73.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="142" y1="73.3" x2="132.6" y2="76.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M112.5 48.1 A22 22 0 0 0 120 49.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M120 49.4 A22 22 0 0 0 127.5 48.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="77.6" y="134.9" font-size="13" text-anchor="middle">B</text><text x="162.4" y="134.9" font-size="13" text-anchor="middle">C</text><text x="120" y="138.1" font-size="13" text-anchor="middle">D</text></svg>'
+        explain: 例：「△ABD と △ACD で、仮定から AB = AC …①。AD は ∠A の二等分線なので ∠BAD = ∠CAD …②。AD は共通 …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので △ABD ≡ △ACD。合同な図形の対応する角は等しいので ∠B = ∠C。」と書ければよい。①「頂角の二等分線と BC の交点を D とする」と補助線と名前を決める、② 合同を示す 3 つの等しいもの（AD が共通であることを落としやすい）、③ 合同な図形の対応する角は等しい、で結ぶ、の 3 点を見る。分度器で測った例だけでは、すべての二等辺三角形について示せないことを話す。同じ合同から BD = CD と ∠ADB = ∠ADC = 90° もいえる（頂角の二等分線は底辺を垂直に 2 等分する）ことに触れる。
+        hints:
+          - △ABD と △ACD が合同になることを示そう。
+          - 等しい辺 2 組と、その間の角は何かな。AD はどちらの三角形の辺かな。
+          - 合同から、どの角とどの角が等しいといえるかな。
+        paths:
+          - [AB = AC（仮定）, ∠BAD = ∠CAD（二等分線）, AD は共通, △ABD ≡ △ACD, ∠B = ∠C]
+      - part: わけ
+        text: 平行四辺形 ABCD で、AB = CD、∠B = ∠D であることを証明しましょう。対角線 AC を引いて考えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76" y1="34.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="98.4,109.5 103.4,105.5 98.4,101.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="131.6,38.5 136.6,34.5 131.6,30.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="59.9,78.5 58.4,72.3 52.7,75.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="62,74 60.5,67.7 54.8,70.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="181,78.5 179.5,72.3 173.7,75.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="183.1,74 181.6,67.7 175.9,70.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text></svg>'
+        explain: 例：「△ABC と △CDA で、AB ∥ DC より、平行線の錯角は等しいので ∠BAC = ∠DCA …①。AD ∥ BC より ∠BCA = ∠DAC …②。AC は共通 …③。①、②、③ から、1 組の辺とその両端の角がそれぞれ等しいので △ABC ≡ △CDA。合同な図形の対応する辺と角は等しいので AB = CD、∠B = ∠D。」と書ければよい。① 対角線 AC で 2 つの三角形に分ける、② 定義の「対辺が平行」から錯角が等しい、と共通の辺、③ 合同から対応する辺と角、の 3 点を見る。対応の順（A と C、B と D、C と A）をまちがえやすいので、≡ の式の順を確かめる。
+        hints:
+          - 対角線 AC で、平行四辺形は 2 つの三角形に分かれるね。
+          - 平行な辺と AC がつくる錯角を 2 組さがそう。
+          - AC は 2 つの三角形の両方の辺だね。
+        paths:
+          - [∠BAC = ∠DCA（AB ∥ DC の錯角）, ∠BCA = ∠DAC（AD ∥ BC の錯角）, AC は共通, △ABC ≡ △CDA, AB = CD、∠B = ∠D]
+      - part: わけ
+        text: 長方形 ABCD で、対角線 AC と BD の長さが等しいことを証明しましょう。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="60.8" y1="30.2" x2="60.8" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.8" y1="99.8" x2="179.2" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179.2" y1="99.8" x2="179.2" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179.2" y1="30.2" x2="60.8" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.8" y1="30.2" x2="179.2" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.8" y1="99.8" x2="179.2" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="60.8,91.8 68.8,91.8 68.8,99.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="171.2,99.8 171.2,91.8 179.2,91.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="179.2,38.2 171.2,38.2 171.2,30.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="68.8,30.2 68.8,38.2 60.8,38.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="53.1" y="27" font-size="13" text-anchor="middle">A</text><text x="53.1" y="112.1" font-size="13" text-anchor="middle">B</text><text x="186.9" y="112.1" font-size="13" text-anchor="middle">C</text><text x="186.9" y="27" font-size="13" text-anchor="middle">D</text></svg>'
+        explain: 例：「△ABC と △DCB で、長方形は平行四辺形なので、対辺は等しく AB = DC …①。BC は共通 …②。長方形の 4 つの角は等しいので ∠ABC = ∠DCB …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので △ABC ≡ △DCB。合同な図形の対応する辺は等しいので AC = DB。」と書ければよい。① 2 つの三角形（△ABC と △DCB）を選ぶ、② 長方形が平行四辺形でもあることを使って AB = DC、③ 合同から対応する辺、の 3 点を見る。ふつうの平行四辺形（∠B が 60° など）では対角線の長さが等しくないことと比べさせる。
+        hints:
+          - 対角線 AC と BD を、それぞれ辺にもつ三角形を選ぼう。
+          - 長方形は平行四辺形でもあるね。対辺はどうなるかな。
+          - BC は、2 つの三角形のどちらの辺でもあるね。
+        paths:
+          - [AB = DC（対辺）, BC は共通, ∠ABC = ∠DCB, △ABC ≡ △DCB, AC = DB]
+      - part: 今日
+        text: AB = AC の二等辺三角形 ABC で、∠A = 36° です。∠B の二等分線が AC と交わる点を D とします。∠BDC は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="89.1" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="150.9" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150.9" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="139.1" y2="86.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.3" y1="76.5" x2="99.8" y2="73.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="140.2" y1="73.5" x2="130.7" y2="76.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M115.4 41.7 A15 15 0 0 0 124.6 41.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="59" font-size="13" text-anchor="middle">36°</text><path d="M127 95 A15 15 0 0 0 143.7 100.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130.8" y="116.5" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="81.3" y="134.9" font-size="13" text-anchor="middle">B</text><text x="158.7" y="134.9" font-size="13" text-anchor="middle">C</text><text x="150.1" y="90.8" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 72
+        check: "180 - (180 - 36) // 2 // 2 - (180 - 36) // 2"
+        hints:
+          - まず、底角 ∠B と ∠C を求めよう。
+          - ∠DBC は、∠B の半分だね。
+          - △DBC の内角の和を使おう。
+        paths:
+          - [∠B = ∠C = 72, ∠DBC = 36, ∠BDC = 180 − 36 − 72 = 72]
+          - [∠BDC は △ABD の外角, 36 + 36 = 72]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 120° です。∠B の二等分線が AD と交わる点を E とします。∠AEB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="72.6" y1="38.4" x2="36.1" y2="101.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="101.6" x2="167.4" y2="101.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.4" y1="101.6" x2="203.9" y2="38.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="38.4" x2="72.6" y2="38.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="101.6" x2="145.5" y2="38.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M64.6 52.3 A16 16 0 0 0 88.6 38.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86.6" y="67.2" font-size="13" text-anchor="middle">120°</text><path d="M129.5 38.4 A16 16 0 0 0 131.7 46.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.5" y="50.2" font-size="13" text-anchor="middle">x</text><text x="64.8" y="35.2" font-size="13" text-anchor="middle">A</text><text x="28.4" y="113.9" font-size="13" text-anchor="middle">B</text><text x="175.2" y="113.9" font-size="13" text-anchor="middle">C</text><text x="211.6" y="35.2" font-size="13" text-anchor="middle">D</text><text x="145.5" y="32" font-size="13" text-anchor="middle">E</text></svg>'
+        answer: 30
+        check: "(180 - 120) // 2"
+        hints:
+          - まず、∠B を求めよう。
+          - ∠EBC は ∠B の半分だね。
+          - AD ∥ BC なので、∠AEB と錯角になる角はどれかな。
+        paths:
+          - [∠B = 180 − 120 = 60, ∠EBC = 30, ∠AEB = ∠EBC = 30（錯角）]
+        note: 同じ図から、∠ABE = ∠AEB なので △ABE は二等辺三角形（AB = AE）になる。気づけばほめる。
+    extra:
+      - part: 今日
+        text: AB = AC の二等辺三角形で、∠B = 68° です。∠A は何度ですか。
+        answer: 44
+        check: "180 - 68 * 2"
+        hints:
+          - ∠C は何度かな。
+          - 2 つの底角を合わせると何度かな。
+          - 180 から、その和をひこう。
+        paths:
+          - [∠C = 68, 180 − 136 = 44]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 105° です。∠C は何度ですか。
+        answer: 105
+        check: "105"
+        hints:
+          - ∠A と ∠C は、向かい合う角かな。
+          - 平行四辺形の対角はどうなっているかな。
+          - 対角は等しいね。
+        paths:
+          - [∠C は ∠A の対角, 105°]
+      - part: 今日
+        text: 長方形 ABCD で、対角線 BD = 9 cm です。対角線 AC は何 cm ですか。
+        answer: 9
+        check: "9"
+        hints:
+          - 長方形の対角線の長さは、どうなっているかな。
+          - わけの日に証明したことを思い出そう。
+          - AC と BD をくらべよう。
+        paths:
+          - [長方形の対角線は等しい, 9 cm]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: ℓ ∥ m です。∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="26.1" y1="37.8" x2="213.9" y2="37.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.1" y1="102.2" x2="213.9" y2="102.2" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="54.9,41.8 59.9,37.8 54.9,33.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="54.9,106.2 59.9,102.2 54.9,98.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="34.1" y="33.3" font-size="13" text-anchor="middle">ℓ</text><text x="34.1" y="97.8" font-size="13" text-anchor="middle">m</text><line x1="103.4" y1="37.8" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111.1" y1="102.2" x2="149.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><path d="M116.5 47 A16 16 0 0 0 119.4 37.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="132" y="51.3" font-size="13" text-anchor="middle">35°</text><path d="M127.1 102.2 A16 16 0 0 0 123.3 91.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="139.2" y="96.5" font-size="13" text-anchor="middle">40°</text><path d="M138 62 A14 14 0 0 0 138.7 79" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="123.5" y="75.7" font-size="13" text-anchor="middle">x</text><text x="103.4" y="32" font-size="12" text-anchor="middle">A</text><text x="111.1" y="116.4" font-size="12" text-anchor="middle">B</text><text x="159.5" y="74.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 75
+        check: "35 + 40"
+        hints:
+          - 点 P を通って、ℓ に平行な補助線を引こう。
+          - ∠x は 2 つに分かれるね。
+          - それぞれの角は錯角で等しいね。
+        paths:
+          - [35 + 40 = 75]
+      - part: 思い出す
+        text: 七角形の 7 つの内角の和は何度ですか。
+        answer: 900
+        check: "180 * (7 - 2)"
+        hints:
+          - 1 つの頂点から対角線を引こう。
+          - 三角形はいくつできるかな。
+          - 180° を、三角形の数だけ合わせよう。
+        paths:
+          - [三角形は 5 こ, 180 × 5 = 900]
+      - part: 今日
+        text: AB = AC の二等辺三角形で、∠A = 50° です。辺 BC を C の先へのばしてできる角 ∠x は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="104.2" y1="29.9" x2="62.1" y2="120.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.1" y1="120.1" x2="146.3" y2="120.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.3" y1="120.1" x2="104.2" y2="29.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.3" y1="120.1" x2="177.9" y2="120.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.7" y1="77.1" x2="78.7" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="129.8" y1="72.9" x2="120.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M97.5 44.4 A16 16 0 0 0 111 44.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="104.2" y="62.4" font-size="13" text-anchor="middle">50°</text><path d="M160.3 120.1 A14 14 0 0 0 140.4 107.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.3" y="102.7" font-size="13" text-anchor="middle">x</text><text x="104.2" y="23.4" font-size="13" text-anchor="middle">A</text><text x="54.4" y="132.4" font-size="13" text-anchor="middle">B</text><text x="154.1" y="132.4" font-size="13" text-anchor="middle">C</text><text x="177.9" y="135.7" font-size="13" text-anchor="middle">E</text></svg>'
+        answer: 115
+        check: "180 - (180 - 50) // 2"
+        hints:
+          - まず、底角 ∠ACB を求めよう。
+          - ∠x と ∠ACB を合わせると一直線だね。
+          - 外角の性質を使ってもよいよ。
+        paths:
+          - [∠ACB = (180 − 50) ÷ 2 = 65, ∠x = 180 − 65 = 115]
+          - [外角 = ∠A + ∠B = 50 + 65 = 115]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠BAC = 40°、∠ACB = 75° です。∠D は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="108.8" y1="28.1" x2="69.7" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.7" y1="111.9" x2="131.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="131.2" y1="111.9" x2="170.3" y2="28.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="170.3" y1="28.1" x2="108.8" y2="28.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="108.8" y1="28.1" x2="131.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M101.2 44.4 A18 18 0 0 0 113.4 45.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.2" y="62.5" font-size="13" text-anchor="middle">40°</text><path d="M126.6 94.5 A18 18 0 0 0 113.2 111.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.4" y="98.2" font-size="13" text-anchor="middle">75°</text><path d="M152.3 28.1 A18 18 0 0 0 162.7 44.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="145" y="48.7" font-size="13" text-anchor="middle">x</text><text x="101" y="24.9" font-size="13" text-anchor="middle">A</text><text x="61.9" y="124.2" font-size="13" text-anchor="middle">B</text><text x="139" y="124.2" font-size="13" text-anchor="middle">C</text><text x="178.1" y="24.9" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 65
+        check: "180 - 40 - 75"
+        hints:
+          - △ABC で、∠B を求めよう。
+          - ∠D は、∠B とどんな関係かな。
+          - 平行四辺形の対角は等しいね。
+        paths:
+          - [∠B = 180 − 40 − 75 = 65, ∠D = ∠B = 65]
+      - part: 今日
+        text: 正三角形 ABC で、辺 BC に平行な直線が AB、AC と D、E で交わっています。∠ADE は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="28.8" x2="66.7" y2="121.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="66.7" y1="121.2" x2="173.3" y2="121.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="173.3" y1="121.2" x2="120" y2="28.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="96" y1="70.4" x2="144" y2="70.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.7" y1="77.5" x2="89" y2="72.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="116.2" x2="120" y2="126.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="142.3" y1="77.5" x2="151" y2="72.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="115,74.4 120,70.4 115,66.4" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="115,125.2 120,121.2 115,117.2" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M110 70.4 A14 14 0 0 0 103 58.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.5" y="61.9" font-size="13" text-anchor="middle">x</text><text x="120" y="22.4" font-size="13" text-anchor="middle">A</text><text x="58.9" y="133.5" font-size="13" text-anchor="middle">B</text><text x="181.1" y="133.5" font-size="13" text-anchor="middle">C</text><text x="85" y="74.9" font-size="13" text-anchor="middle">D</text><text x="155" y="74.9" font-size="13" text-anchor="middle">E</text></svg>'
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - 正三角形の 1 つの角は何度かな。
+          - ∠ADE と ∠ABC は、DE と BC が平行なとき、どんな関係かな。
+          - 同位角は等しいね。
+        paths:
+          - [∠ABC = 60°, ∠ADE は ∠ABC の同位角, 60°]
+        note: △ADE も 3 つの角が 60° なので正三角形になる。
+      - part: 挑戦
+        text: AB = AC の二等辺三角形 ABC で、∠A = 36° です。AC の上に BD = BC となる点 D をとります。∠ABD は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="89.1" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="150.9" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150.9" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="89.1" y1="122.6" x2="139.1" y2="86.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.3" y1="76.5" x2="99.8" y2="73.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="140.2" y1="73.5" x2="130.7" y2="76.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="109.5" y1="101.5" x2="115.4" y2="109.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="112.8" y1="99.2" x2="118.7" y2="107.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="118" y1="117.6" x2="118" y2="127.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="122" y1="117.6" x2="122" y2="127.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M115.4 41.7 A15 15 0 0 0 124.6 41.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="59" font-size="13" text-anchor="middle">36°</text><path d="M103.6 112 A18 18 0 0 0 94.6 105.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.7" y="102.9" font-size="13" text-anchor="middle">x</text><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="81.3" y="134.9" font-size="13" text-anchor="middle">B</text><text x="158.7" y="134.9" font-size="13" text-anchor="middle">C</text><text x="150.1" y="90.8" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 36
+        check: "(180 - 36) // 2 - (180 - 2 * ((180 - 36) // 2))"
+        hints:
+          - まず、底角 ∠B と ∠C を求めよう。
+          - △BCD は BD = BC の二等辺三角形だね。∠BDC は何度かな。
+          - ∠DBC を求めて、∠B からひこう。
+        paths:
+          - [∠B = ∠C = 72, △BCD で ∠BDC = ∠C = 72, ∠DBC = 180 − 72 − 72 = 36, ∠ABD = 72 − 36 = 36]
+        note: ∠ABD = ∠A になるので、△ABD も二等辺三角形（AD = BD）。二等辺三角形が 3 つ重なった図。
+    extra:
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 110° です。∠B は何度ですか。
+        answer: 70
+        check: "180 - 110"
+        hints:
+          - ∠A と ∠B は、となり合う角だね。
+          - となり合う角の和は何度かな。
+          - 180 から 110 をひこう。
+        paths:
+          - [180 − 110 = 70]
+      - part: 今日
+        text: AB = AC の二等辺三角形で、AD は頂角の二等分線です。BC = 12 cm のとき、DC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="27.4" x2="75.6" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.6" y1="122.6" x2="164.4" y2="122.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.4" y1="122.6" x2="120" y2="27.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="27.4" x2="120" y2="122.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="102.3" y1="77.1" x2="93.3" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="146.7" y1="72.9" x2="137.7" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="21" font-size="13" text-anchor="middle">A</text><text x="67.8" y="134.9" font-size="13" text-anchor="middle">B</text><text x="172.2" y="134.9" font-size="13" text-anchor="middle">C</text><text x="120" y="138.1" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 6
+        check: "12 // 2"
+        hints:
+          - 頂角の二等分線は、底辺をどう分けるかな。
+          - D は BC の中点だね。
+          - 12 を 2 つに等しく分けよう。
+        paths:
+          - [DC = 12 ÷ 2 = 6]
+      - part: 今日
+        text: 図の 2 つの直角三角形は、どの条件で合同といえますか。
+        svg: '<svg viewBox="0 0 240 130" xmlns="http://www.w3.org/2000/svg"><line x1="36.1" y1="41.4" x2="102.3" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="102.3" y1="88.6" x2="36.1" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="88.6" x2="36.1" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="41.4" x2="137.7" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137.7" y1="88.6" x2="203.9" y2="88.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="88.6" x2="203.9" y2="41.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.1" y1="60.9" x2="66.3" y2="69.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="173.7" y1="69.1" x2="167.9" y2="60.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="41.1" y1="63" x2="31.1" y2="63" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="41.1" y1="67" x2="31.1" y2="67" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="208.9" y1="63" x2="198.9" y2="63" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="208.9" y1="67" x2="198.9" y2="67" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="36.1,80.6 44.1,80.6 44.1,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="203.9,80.6 195.9,80.6 195.9,88.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="36.1" y="34.9" font-size="13" text-anchor="middle">A</text><text x="110.1" y="101" font-size="13" text-anchor="middle">B</text><text x="28.4" y="101" font-size="13" text-anchor="middle">C</text><text x="203.9" y="34.9" font-size="13" text-anchor="middle">D</text><text x="129.9" y="101" font-size="13" text-anchor="middle">E</text><text x="211.6" y="101" font-size="13" text-anchor="middle">F</text></svg>'
+        choices:
+          - 斜辺と 1 つの鋭角がそれぞれ等しい
+          - 斜辺と他の 1 辺がそれぞれ等しい
+          - 合同とはいえない
+        answer: 斜辺と他の 1 辺がそれぞれ等しい
+        hints:
+          - しるしのある辺は、斜辺かな。
+          - もう 1 組のしるしは、辺かな、角かな。
+          - 直角三角形の合同条件を思い出そう。
+        paths:
+          - [斜辺 AB = DE, AC = DF, 斜辺と他の 1 辺]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: AB = AC の二等辺三角形で、∠A = 70° です。∠B は何度ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="30.8" x2="58.2" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.2" y1="119.2" x2="181.8" y2="119.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="181.8" y1="119.2" x2="120" y2="30.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.2" y1="77.9" x2="85" y2="72.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="155" y1="72.1" x2="146.8" y2="77.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M110.8 43.9 A16 16 0 0 0 129.2 43.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="63.4" font-size="13" text-anchor="middle">70°</text><path d="M74.2 119.2 A16 16 0 0 0 67.3 106.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83" y="110.8" font-size="13" text-anchor="middle">x</text><text x="120" y="24.4" font-size="13" text-anchor="middle">A</text><text x="50.4" y="131.5" font-size="13" text-anchor="middle">B</text><text x="189.6" y="131.5" font-size="13" text-anchor="middle">C</text></svg>'
+        answer: 55
+        check: "(180 - 70) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 70 = 110, 110 ÷ 2 = 55]
+      - part: 今日
+        text: AB = AC の二等辺三角形で、∠C = 72° です。∠A は何度ですか。
+        answer: 36
+        check: "180 - 72 * 2"
+        hints:
+          - ∠B は何度かな。
+          - 2 つの底角を合わせると何度かな。
+          - 180 から、その和をひこう。
+        paths:
+          - [∠B = 72, 180 − 144 = 36]
+      - part: 今日
+        text: △ABC で ∠B = ∠C、AB = 9 cm です。AC は何 cm ですか。
+        answer: 9
+        check: "9"
+        hints:
+          - 2 つの角が等しい三角形は、何という三角形かな。
+          - 等しい 2 辺はどれとどれかな。
+          - 等しい角に向かい合う辺を見よう。
+        paths:
+          - [二等辺三角形, AB = AC = 9]
+      - part: 今日
+        text: 「2 直線が平行ならば、錯角は等しい」の逆はどれですか。
+        choices:
+          - 錯角が等しいならば、2 直線は平行である
+          - 2 直線が平行ならば、同位角は等しい
+          - 錯角が等しくないならば、2 直線は平行でない
+        answer: 錯角が等しいならば、2 直線は平行である
+        hints:
+          - もとの文の仮定と結論はどれかな。
+          - 逆は、その 2 つを入れかえた文だね。
+          - 「ならば」の前とあとを入れかえよう。
+        paths:
+          - [仮定「2 直線が平行」と結論「錯角は等しい」を入れかえる]
+      - part: 今日
+        text: 平行四辺形 ABCD で、∠A = 125° です。∠B は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="81.5" y1="37.6" x2="36.1" y2="102.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="36.1" y1="102.4" x2="158.5" y2="102.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="158.5" y1="102.4" x2="203.9" y2="37.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="203.9" y1="37.6" x2="81.5" y2="37.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M72.4 50.7 A16 16 0 0 0 97.5 37.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="94.5" y="67" font-size="13" text-anchor="middle">125°</text><path d="M52.1 102.4 A16 16 0 0 0 45.3 89.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="61" y="94" font-size="13" text-anchor="middle">x</text><text x="73.8" y="34.3" font-size="13" text-anchor="middle">A</text><text x="28.4" y="114.8" font-size="13" text-anchor="middle">B</text><text x="166.2" y="114.8" font-size="13" text-anchor="middle">C</text><text x="211.6" y="34.3" font-size="13" text-anchor="middle">D</text></svg>'
+        answer: 55
+        check: "180 - 125"
+        hints:
+          - AD と BC は平行だね。
+          - となり合う角の和は何度かな。
+          - 180 から 125 をひこう。
+        paths:
+          - [∠A + ∠B = 180, ∠B = 55]
+      - part: 今日
+        text: 平行四辺形 ABCD の対角線の交点を O とします。AC = 16 cm のとき、AO は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="76" y1="34.5" x2="42.9" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="197.1" y1="34.5" x2="76" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76" y1="34.5" x2="164" y2="105.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="42.9" y1="105.5" x2="197.1" y2="34.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="68.2" y="31.3" font-size="13" text-anchor="middle">A</text><text x="35.1" y="117.8" font-size="13" text-anchor="middle">B</text><text x="171.8" y="117.8" font-size="13" text-anchor="middle">C</text><text x="204.9" y="31.3" font-size="13" text-anchor="middle">D</text><text x="120" y="85.5" font-size="13" text-anchor="middle">O</text></svg>'
+        answer: 8
+        check: "16 // 2"
+        hints:
+          - 平行四辺形の対角線は、どこで交わるかな。
+          - O は AC の中点だね。
+          - 16 を 2 つに等しく分けよう。
+        paths:
+          - [AO = 16 ÷ 2 = 8]
+      - part: 今日
+        text: 四角形 ABCD が、かならず平行四辺形になるのはどれですか。
+        choices:
+          - 2 組の対角がそれぞれ等しい
+          - 1 組の対辺が平行
+          - 2 本の対角線の長さが等しい
+        answer: 2 組の対角がそれぞれ等しい
+        hints:
+          - 平行四辺形になる条件の 5 つを思い出そう。
+          - 2 つ目は、台形でもあてはまるかな。
+          - 3 つ目は、左右の長さが等しい台形でもあてはまるかな。
+        paths:
+          - [2 組の対角がそれぞれ等しいは条件の 1 つ, ほかは台形が反例]
+    extra:
+      - part: 今日
+        text: AB = AC の二等辺三角形で、∠A = 20° です。∠C は何度ですか。
+        answer: 80
+        check: "(180 - 20) // 2"
+        hints:
+          - 2 つの底角は等しいね。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [180 − 20 = 160, 160 ÷ 2 = 80]
+      - part: 今日
+        text: 平行四辺形 ABCD で、AB = 6 cm、AD = 9 cm です。CD は何 cm ですか。
+        answer: 6
+        check: "6"
+        hints:
+          - CD は、どの辺と向かい合っているかな。
+          - 平行四辺形の対辺はどうなっているかな。
+          - 対辺は等しいね。
+        paths:
+          - [CD は AB の対辺, 6 cm]
+      - part: 今日
+        text: 正三角形 ABC で、∠A の二等分線が BC と交わる点を D とします。∠BAD は何度ですか。
+        answer: 30
+        check: "60 // 2"
+        hints:
+          - 正三角形の 1 つの角は何度かな。
+          - 二等分線は、角を等しく 2 つに分けるね。
+          - 60 を 2 つに分けよう。
+        paths:
+          - [∠A = 60, 60 ÷ 2 = 30]

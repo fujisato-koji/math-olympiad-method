@@ -2198,6 +2198,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -3108,6 +3109,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -3504,6 +3506,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -3918,6 +3921,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -4238,6 +4242,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -4876,6 +4881,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -5272,6 +5278,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -6270,6 +6277,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -7595,6 +7603,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -8380,6 +8389,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -10348,6 +10358,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -11808,6 +11819,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -13362,6 +13374,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -13793,6 +13806,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -14540,6 +14554,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -14810,6 +14825,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -15108,6 +15124,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -15462,6 +15479,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -15778,6 +15796,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -17379,6 +17398,7 @@ window.ROADMAP = {
     "A-007",
     "A-008",
     "A-009",
+    "A-010",
     "B-015",
     "B-016",
     "B-017",
@@ -17410,6 +17430,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -17446,6 +17467,7 @@ window.ROADMAP = {
     "N-019",
     "N-020",
     "N-021",
+    "N-027",
     "N-059",
     "N-060",
     "N-061",
@@ -20445,6 +20467,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -21792,6 +21815,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -22389,6 +22413,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -22888,6 +22913,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -23403,6 +23429,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -23900,6 +23927,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -24443,6 +24471,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -25249,6 +25278,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -26115,6 +26145,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -26702,6 +26733,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -27098,6 +27130,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -27583,6 +27616,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -28030,6 +28064,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -28414,6 +28449,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -28847,6 +28883,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -29226,6 +29263,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -29575,6 +29613,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -30070,6 +30109,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -31245,6 +31285,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -31776,6 +31817,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -32375,6 +32417,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -33965,6 +34008,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -34515,6 +34559,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -34915,6 +34960,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -35200,6 +35246,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -35504,6 +35551,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -36018,6 +36066,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -36456,6 +36505,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -36859,6 +36909,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -37268,6 +37319,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -38151,6 +38203,8 @@ window.ROADMAP = {
     "A-005",
     "A-006",
     "A-007",
+    "A-009",
+    "A-010",
     "C-001",
     "C-002",
     "C-003",
@@ -38165,6 +38219,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-015",
     "G-016",
     "G-017",
@@ -38194,6 +38249,7 @@ window.ROADMAP = {
     "N-018",
     "N-019",
     "N-020",
+    "N-027",
     "N-059",
     "N-073",
     "N-074",
@@ -39626,6 +39682,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -40649,6 +40706,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -41574,6 +41632,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -41873,6 +41932,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -42613,6 +42673,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -43146,6 +43207,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -43622,6 +43684,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -44032,6 +44095,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -44519,6 +44583,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -44973,6 +45038,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -45598,6 +45664,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -46435,6 +46502,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -47236,6 +47304,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -47818,6 +47887,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -48243,6 +48313,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -48588,6 +48659,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -48962,6 +49034,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -49342,6 +49415,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -50263,6 +50337,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -50902,6 +50977,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -51092,6 +51168,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -51382,6 +51459,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -51744,6 +51822,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -52134,6 +52213,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -52538,6 +52618,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -52930,6 +53011,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -53235,6 +53317,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -53582,6 +53665,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -54012,6 +54096,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -54501,6 +54586,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -54847,6 +54933,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -55249,6 +55336,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -55720,6 +55808,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -56244,6 +56333,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -56773,6 +56863,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -57410,6 +57501,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -57790,6 +57882,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -58159,6 +58252,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -58719,6 +58813,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -59181,6 +59276,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -59488,6 +59584,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -60060,6 +60157,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -60458,6 +60556,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -60784,6 +60883,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -61027,6 +61127,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -61387,6 +61488,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -61803,6 +61905,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -62168,6 +62271,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -62504,6 +62608,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -62943,6 +63048,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -63380,6 +63486,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -63687,6 +63794,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -63961,6 +64069,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -64325,6 +64434,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -64617,6 +64727,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -64921,6 +65032,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -65309,6 +65421,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -65598,6 +65711,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -66198,6 +66312,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -66707,6 +66822,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -67049,6 +67165,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -67422,6 +67539,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -67908,6 +68026,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -68757,6 +68876,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -69367,6 +69487,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -70197,6 +70318,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -72372,6 +72494,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -72909,6 +73032,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -73470,6 +73594,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -74340,6 +74465,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -74782,6 +74908,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -75264,6 +75391,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -75709,6 +75837,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -76103,6 +76232,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -76565,6 +76695,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -76993,6 +77124,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -77374,6 +77506,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-011",
+    "G-012",
     "G-013",
     "G-014",
     "G-015",
@@ -77812,6 +77945,7 @@ window.ROADMAP = {
     "G-008",
     "G-009",
     "G-010",
+    "G-012",
     "G-013",
     "G-015",
     "G-016",
@@ -78182,8 +78316,8 @@ window.ROADMAP = {
    "E-191",
    "K-166",
    "V-005",
-   "E-174",
    "H-092",
+   "E-174",
    "B-013",
    "W-036",
    "P-188",
@@ -78199,10 +78333,10 @@ window.ROADMAP = {
    "K-076",
    "H-045",
    "E-137",
+   "B-073",
    "V-006",
    "I-024",
    "E-044",
-   "B-073",
    "F-021",
    "Q-004",
    "V-016",
@@ -78219,8 +78353,8 @@ window.ROADMAP = {
    "V-031",
    "B-021",
    "H-042",
-   "E-225",
    "E-210",
+   "E-225",
    "H-018",
    "P-175",
    "Q-016",
@@ -78295,7 +78429,7 @@ window.ROADMAP = {
     "a": "keisan",
     "b": "programming",
     "o": 1,
-    "e": 3.6,
+    "e": 3.7,
     "ex": [
      "K-125"
     ]
@@ -78383,6 +78517,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "bunshi-saibo",
+    "b": "houteishiki",
+    "o": 1,
+    "e": 2.5,
+    "ex": [
+     "B-024"
+    ]
+   },
+   {
     "a": "hanno",
     "b": "programming",
     "o": 1,
@@ -78398,15 +78541,6 @@ window.ROADMAP = {
     "e": 2.5,
     "ex": [
      "K-124"
-    ]
-   },
-   {
-    "a": "bunshi-saibo",
-    "b": "houteishiki",
-    "o": 1,
-    "e": 2.4,
-    "ex": [
-     "B-024"
     ]
    },
    {
@@ -78529,7 +78663,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-2016-3"
     ],
-    "d": 0.89
+    "d": 0.88
    },
    {
     "a": "kazoekata",
@@ -78539,7 +78673,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1984-5"
     ],
-    "d": 0.91
+    "d": 0.86
    },
    {
     "a": "hakaru",
@@ -78549,7 +78683,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1997-1"
     ],
-    "d": 0.68
+    "d": 0.69
    },
    {
     "a": "seisu",
@@ -78626,7 +78760,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2012-1"
     ],
-    "d": 0.35
+    "d": 0.34
    },
    {
     "a": "hakaru",
@@ -78638,7 +78772,7 @@ window.ROADMAP = {
      "CL-KHWARIZMI-1",
      "CL-SANGAKU-3CIRCLES"
     ],
-    "d": 0.51
+    "d": 0.52
    },
    {
     "a": "hakaru",
@@ -78648,7 +78782,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.55
+    "d": 0.56
    },
    {
     "a": "kansu",
@@ -78658,7 +78792,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.68
+    "d": 0.61
    },
    {
     "a": "haichi",
@@ -78669,7 +78803,7 @@ window.ROADMAP = {
      "IMO-1972-6",
      "IMO-1989-4"
     ],
-    "d": 0.86
+    "d": 0.81
    },
    {
     "a": "futoshiki",
@@ -78682,7 +78816,7 @@ window.ROADMAP = {
      "IMO-1991-1",
      "JJMO-P-2023-8"
     ],
-    "d": 0.73
+    "d": 0.74
    },
    {
     "a": "futoshiki",
@@ -78695,7 +78829,7 @@ window.ROADMAP = {
      "IMO-1976-1",
      "IMO-1981-1"
     ],
-    "d": 0.82
+    "d": 0.83
    },
    {
     "a": "ronpo",
@@ -78710,7 +78844,7 @@ window.ROADMAP = {
      "IMO-1973-4",
      "IMO-1983-4"
     ],
-    "d": 0.91
+    "d": 0.9
    },
    {
     "a": "seisuron",
@@ -78799,7 +78933,7 @@ window.ROADMAP = {
      "CL-SANGAKU-3CIRCLES",
      "IMO-1960-7"
     ],
-    "d": 0.86
+    "d": 0.8
    },
    {
     "a": "graph",
@@ -78848,7 +78982,7 @@ window.ROADMAP = {
      "IMO-1995-3",
      "IMO-2006-6"
     ],
-    "d": 0.98
+    "d": 0.97
    },
    {
     "a": "katachi",
@@ -79243,18 +79377,6 @@ window.ROADMAP = {
     "d": 0.81
    },
    {
-    "a": "hakaru",
-    "b": "programming",
-    "via": [
-     "chiri-joho",
-     "keisan",
-     "kazu",
-     "houteishiki"
-    ],
-    "s": 2.25,
-    "d": 0.95
-   },
-   {
     "a": "iden-shinka",
     "b": "rikigaku",
     "via": [
@@ -79265,6 +79387,18 @@ window.ROADMAP = {
     ],
     "s": 2.29,
     "d": 0.93
+   },
+   {
+    "a": "hakaru",
+    "b": "programming",
+    "via": [
+     "chiri-joho",
+     "kazu",
+     "keisan",
+     "houteishiki"
+    ],
+    "s": 2.24,
+    "d": 0.95
    },
    {
     "a": "gunkantai",
@@ -79375,18 +79509,6 @@ window.ROADMAP = {
     "d": 0.74
    },
    {
-    "a": "data",
-    "b": "shiki",
-    "via": [
-     "keiei-kogaku",
-     "keisan",
-     "kazu",
-     "iden-shinka"
-    ],
-    "s": 2.6,
-    "d": 0.78
-   },
-   {
     "a": "fukuso",
     "b": "suchi",
     "via": [
@@ -79397,6 +79519,18 @@ window.ROADMAP = {
     ],
     "s": 2.89,
     "d": 0.7
+   },
+   {
+    "a": "data",
+    "b": "shiki",
+    "via": [
+     "keiei-kogaku",
+     "kazu",
+     "keisan",
+     "iden-shinka"
+    ],
+    "s": 2.59,
+    "d": 0.78
    },
    {
     "a": "kakuritsu-daigaku",
@@ -79560,10 +79694,10 @@ window.ROADMAP = {
     "via": [
      "suiri",
      "seisu",
-     "keisan",
-     "kazoekata"
+     "kazoekata",
+     "keisan"
     ],
-    "s": 2.88,
+    "s": 2.87,
     "d": 0.67
    },
    {
@@ -79620,7 +79754,7 @@ window.ROADMAP = {
     "a": "seisu",
     "b": "shomei-zukei",
     "e": 39.9,
-    "d": 0.93
+    "d": 0.87
    },
    {
     "a": "hakaru",
@@ -79632,7 +79766,7 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "seisu",
     "e": 39.7,
-    "d": 0.57
+    "d": 0.58
    },
    {
     "a": "graph",
@@ -79674,7 +79808,7 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "keisan",
     "e": 3.5,
-    "d": 0.74
+    "d": 0.71
    },
    {
     "a": "haichi",
@@ -79692,7 +79826,7 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.78
+    "d": 0.77
    },
    {
     "a": "kakuritsu",
@@ -79710,7 +79844,7 @@ window.ROADMAP = {
     "a": "keisan",
     "b": "shomei-zukei",
     "e": 2.6,
-    "d": 0.66
+    "d": 0.59
    },
    {
     "a": "futoshiki",
@@ -93982,8 +94116,8 @@ window.ROADMAP = {
     4.02
    ],
    "comb": {
-    "b": 0.38,
-    "r": 0.07,
+    "b": 0.381,
+    "r": 0.11,
     "rg": [
      "houteishiki",
      "programming"
@@ -105996,7 +106130,7 @@ window.ROADMAP = {
     1.7
    ],
    "comb": {
-    "b": 0.273,
+    "b": 0.272,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -108910,7 +109044,7 @@ window.ROADMAP = {
     7.05
    ],
    "comb": {
-    "b": 0.243,
+    "b": 0.241,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -114943,7 +115077,7 @@ window.ROADMAP = {
     -0.27
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -116812,7 +116946,7 @@ window.ROADMAP = {
     8.79
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.361,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -117981,7 +118115,7 @@ window.ROADMAP = {
     17.11
    ],
    "comb": {
-    "b": 0.355,
+    "b": 0.356,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -118443,7 +118577,7 @@ window.ROADMAP = {
     16.96
    ],
    "comb": {
-    "b": 0.173,
+    "b": 0.168,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -118602,7 +118736,7 @@ window.ROADMAP = {
     12.07
    ],
    "comb": {
-    "b": 0.558,
+    "b": 0.56,
     "r": 0.0,
     "rg": [
      "data",
@@ -134296,7 +134430,7 @@ window.ROADMAP = {
     0.4
    ],
    "comb": {
-    "b": 0.335,
+    "b": 0.334,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -136754,7 +136888,7 @@ window.ROADMAP = {
     0.94
    ],
    "comb": {
-    "b": 0.265,
+    "b": 0.264,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -142353,7 +142487,7 @@ window.ROADMAP = {
     7.73
    ],
    "comb": {
-    "b": 0.259,
+    "b": 0.263,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -143583,7 +143717,7 @@ window.ROADMAP = {
     3.29
    ],
    "comb": {
-    "b": 0.285,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -145744,7 +145878,7 @@ window.ROADMAP = {
     -3.13
    ],
    "comb": {
-    "b": 0.305,
+    "b": 0.306,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -154893,7 +155027,7 @@ window.ROADMAP = {
     8.08
    ],
    "comb": {
-    "b": 0.358,
+    "b": 0.354,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -156034,7 +156168,7 @@ window.ROADMAP = {
     6.78
    ],
    "comb": {
-    "b": 0.358,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -157174,7 +157308,7 @@ window.ROADMAP = {
     6.1
    ],
    "comb": {
-    "b": 0.353,
+    "b": 0.348,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -158381,7 +158515,7 @@ window.ROADMAP = {
     10.75
    ],
    "comb": {
-    "b": 0.423,
+    "b": 0.418,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -159966,7 +160100,7 @@ window.ROADMAP = {
     13.85
    ],
    "comb": {
-    "b": 0.274,
+    "b": 0.278,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161496,7 +161630,7 @@ window.ROADMAP = {
     15.66
    ],
    "comb": {
-    "b": 0.19,
+    "b": 0.194,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -163972,7 +164106,7 @@ window.ROADMAP = {
     12.2
    ],
    "comb": {
-    "b": 0.373,
+    "b": 0.372,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -174171,7 +174305,7 @@ window.ROADMAP = {
     19.97
    ],
    "comb": {
-    "b": 0.473,
+    "b": 0.474,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -174194,28 +174328,1329 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "点の位置を、2 つの数の組で表そう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"174.6\" cy=\"65.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"181.7\" y=\"62.5\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"47.1\" cy=\"120\" r=\"3.2\" fill=\"currentColor\"/><text x=\"40.1\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">B</text><line x1=\"120\" y1=\"101.8\" x2=\"174.6\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"174.6\" y1=\"101.8\" x2=\"174.6\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "横の数直線を x 軸、たての数直線を y 軸といい、2 つの軸が交わる点を原点 O といいます。点 A は、O から右へ 3、上へ 2 進んだ所にあるので、A の位置を (3, 2) と書きます。3 を A の x 座標、2 を A の y 座標といい、x 座標を先に書きます。左と下へ進むときは、マイナスの数を使います。点 B は O から左へ 4、下へ 1 進んだ所なので (−4, −1) です。O は (0, 0) です。方眼の線が交わる所の点を、格子の点といいます。また、2 つの軸で平面は 4 つに分かれ、右上を第 1 象限（しょうげん）、左上を第 2 象限、左下を第 3 象限、右下を第 4 象限といいます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "(−3) + 7 はいくつですか。",
+       "answer": 4,
+       "check": "(-3) + 7",
+       "hints": [
+        "数直線の −3 から始めよう。",
+        "7 をたすので、右へ 7 進もう。",
+        "0 までで何進んだかな。のこりはいくつ進むかな。"
+       ],
+       "paths": [
+        [
+         "−3 から右へ 3 進むと 0",
+         "のこり 4 進んで 4"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "2 − 6 はいくつですか。",
+       "choices": [
+        "−4",
+        "−2",
+        2,
+        4
+       ],
+       "answer": "−4",
+       "check": "(lambda v: f'−{-v}' if v < 0 else f'{v}')(2 - 6)",
+       "hints": [
+        "数直線の 2 から始めよう。",
+        "6 をひくので、左へ 6 進もう。",
+        "0 をこえて、さらに左へ行くね。"
+       ],
+       "paths": [
+        [
+         "2 から左へ 2 進むと 0",
+         "のこり 4 進んで −4"
+        ]
+       ],
+       "note": "ひく数が大きいと 6 − 2 = 4 と入れかえやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "点 A の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"192.9\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"199.9\" y=\"80.7\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "choices": [
+        "(4, 1)",
+        "(1, 4)",
+        "(4, 0)",
+        "(5, 1)"
+       ],
+       "answer": "(4, 1)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(4, 1)",
+       "hints": [
+        "原点 O から、右へいくつ進むと A の真下に来るかな。",
+        "そこから、上へいくつ進むかな。",
+        "(右へ進んだ数, 上へ進んだ数) の順に書こう。"
+       ],
+       "paths": [
+        [
+         "右へ 4",
+         "上へ 1",
+         "(4, 1)"
+        ]
+       ],
+       "note": "x 座標と y 座標を入れかえて (1, 4) を選びやすい。「横が先、たてが後」と確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 B の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"65.4\" cy=\"65.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"58.3\" y=\"62.5\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        "(−3, 2)",
+        "(3, 2)",
+        "(2, −3)",
+        "(−2, 3)"
+       ],
+       "answer": "(−3, 2)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-3, 2)",
+       "hints": [
+        "原点 O から、B の真下まで、右と左のどちらへ進むかな。",
+        "左へ進んだときの x 座標は、マイナスの数だね。",
+        "次に、上へいくつ進むかな。"
+       ],
+       "paths": [
+        [
+         "左へ 3 で x 座標は −3",
+         "上へ 2 で y 座標は 2",
+         "(−3, 2)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 C は、どの象限にありますか。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"101.8\" cy=\"174.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"94.7\" y=\"185.9\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "第 1 象限",
+        "第 2 象限",
+        "第 3 象限",
+        "第 4 象限"
+       ],
+       "answer": "第 3 象限",
+       "check": "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(-1, -4)",
+       "hints": [
+        "C は、y 軸の右と左のどちらにあるかな。",
+        "C は、x 軸の上と下のどちらにあるかな。",
+        "右上が第 1 象限で、そこから時計の針と反対の向きに、第 2、第 3、第 4 だよ。"
+       ],
+       "paths": [
+        [
+         "y 軸の左で x 軸の下",
+         "左下は第 3 象限"
+        ],
+        [
+         "C は (−1",
+         "−4)",
+         "x 座標も y 座標もマイナス",
+         "第 3 象限"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "x 座標と y 座標をたすと 1 になる格子の点のうち、x 座標が −2 の点はどれですか。",
+       "choices": [
+        "(−2, 3)",
+        "(−2, −1)",
+        "(3, −2)",
+        "(−2, 1)"
+       ],
+       "answer": "(−2, 3)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-2, 1 - (-2))",
+       "hints": [
+        "x 座標は −2 と決まっているね。",
+        "(−2) + □ = 1 の □ をさがそう。",
+        "数直線で、−2 から 1 まで右へいくつ進むかな。"
+       ],
+       "paths": [
+        [
+         "x 座標は −2",
+         "(−2) + □ = 1 の □ は −2 から 1 までの 3",
+         "(−2, 3)"
+        ]
+       ],
+       "note": "(3, −2) は x と y を入れかえた組。(−2, 1) は「たして 1」でなく y 座標を 1 にしてしまった組。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "点 D の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"211.1\" cy=\"138.2\" r=\"3.2\" fill=\"currentColor\"/><text x=\"221.1\" y=\"142.4\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "choices": [
+        "(5, −2)",
+        "(−2, 5)",
+        "(5, 2)",
+        "(−5, −2)"
+       ],
+       "answer": "(5, −2)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(5, -2)",
+       "hints": [
+        "原点 O から、右へいくつ進むかな。",
+        "次に、上と下のどちらへ進むかな。",
+        "下へ進んだときの y 座標は、マイナスの数だね。"
+       ],
+       "paths": [
+        [
+         "右へ 5",
+         "下へ 2 で y 座標は −2",
+         "(5, −2)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の ア〜エ のうち、座標が (−2, −3) の点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"83.6\" cy=\"156.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"73.6\" y=\"160.6\" font-size=\"12\" text-anchor=\"middle\">ア</text><circle cx=\"65.4\" cy=\"138.2\" r=\"3.2\" fill=\"currentColor\"/><text x=\"55.4\" y=\"142.4\" font-size=\"12\" text-anchor=\"middle\">イ</text><circle cx=\"156.4\" cy=\"156.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"166.4\" y=\"160.6\" font-size=\"12\" text-anchor=\"middle\">ウ</text><circle cx=\"83.6\" cy=\"47.1\" r=\"3.2\" fill=\"currentColor\"/><text x=\"73.6\" y=\"51.3\" font-size=\"12\" text-anchor=\"middle\">エ</text></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+       ],
+       "answer": "ア",
+       "check": "(lambda d: [k for k in d if d[k] == (-2, -3)][0])({'ア': (-2, -3), 'イ': (-3, -2), 'ウ': (2, -3), 'エ': (-2, 3)})",
+       "hints": [
+        "x 座標の −2 は、O から左と右のどちらへいくつかな。",
+        "y 座標の −3 は、上と下のどちらへいくつかな。",
+        "左へ 2、下へ 3 の所にある点をさがそう。"
+       ],
+       "paths": [
+        [
+         "左へ 2",
+         "下へ 3",
+         "ア"
+        ]
+       ],
+       "note": "イ は x と y を入れかえた点。"
+      },
+      {
+       "part": "今日",
+       "text": "点 (4, −3) は、どの象限にありますか。",
+       "choices": [
+        "第 1 象限",
+        "第 2 象限",
+        "第 3 象限",
+        "第 4 象限"
+       ],
+       "answer": "第 4 象限",
+       "check": "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(4, -3)",
+       "hints": [
+        "x 座標の 4 は、y 軸の右と左のどちらかな。",
+        "y 座標の −3 は、x 軸の上と下のどちらかな。",
+        "右下の象限の名前を思い出そう。"
+       ],
+       "paths": [
+        [
+         "右へ 4、下へ 3",
+         "右下は第 4 象限"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "点を動かしたり、軸で折ったりすると、座標はどう変わるでしょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"65.4\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"55.4\" y=\"87.8\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"138.2\" cy=\"47.1\" r=\"3.2\" fill=\"currentColor\"/><text x=\"145.3\" y=\"44.3\" font-size=\"12\" text-anchor=\"middle\">P</text><line x1=\"65.4\" y1=\"83.6\" x2=\"138.2\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"138.2\" y1=\"83.6\" x2=\"138.2\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "点 A (−3, 1) を右へ 4、上へ 2 動かすと、点 P (1, 3) になります。右へ動かすと x 座標に動かした数をたし（(−3) + 4 = 1）、上へ動かすと y 座標にたします（1 + 2 = 3）。左と下へ動かすときは、動かした数をひきます。このように、向きを変えずにずらすことを平行移動といいます。また、x 軸で折って点 (2, 3) と重なる点 (2, −3) を「x 軸について対称な点」、y 軸で折って重なる点 (−2, 3) を「y 軸について対称な点」といいます。点 (2, 3) を原点 O のまわりに 180° 回すと、(−2, −3) になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "点 B の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"47.1\" cy=\"47.1\" r=\"3.2\" fill=\"currentColor\"/><text x=\"54.2\" y=\"44.3\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        "(−4, 3)",
+        "(3, −4)",
+        "(4, 3)",
+        "(−4, −3)"
+       ],
+       "answer": "(−4, 3)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-4, 3)",
+       "hints": [
+        "原点 O から、左へいくつ進むかな。",
+        "次に、上へいくつ進むかな。",
+        "左へ進んだときの x 座標は、マイナスの数だね。"
+       ],
+       "paths": [
+        [
+         "左へ 4",
+         "上へ 3",
+         "(−4, 3)"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "(−5) + 3 はいくつですか。",
+       "choices": [
+        "−8",
+        "−2",
+        2,
+        8
+       ],
+       "answer": "−2",
+       "check": "(lambda v: f'−{-v}' if v < 0 else f'{v}')((-5) + 3)",
+       "hints": [
+        "数直線の −5 から始めよう。",
+        "3 をたすので、右へ 3 進もう。",
+        "0 まで行くかな。"
+       ],
+       "paths": [
+        [
+         "−5 から右へ 3",
+         "−2"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 A を右へ 5、下へ 4 動かした点の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"83.6\" cy=\"47.1\" r=\"3.2\" fill=\"currentColor\"/><text x=\"76.5\" y=\"44.3\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "choices": [
+        "(3, −1)",
+        "(−7, 7)",
+        "(3, 7)",
+        "(−1, 3)"
+       ],
+       "answer": "(3, −1)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-2 + 5, 3 - 4)",
+       "hints": [
+        "まず、A の座標を読もう。",
+        "右へ動かすと x 座標はふえ、下へ動かすと y 座標はへるね。",
+        "(−2) + 5 と 3 − 4 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "A は (−2, 3)",
+         "x 座標は (−2) + 5 = 3",
+         "y 座標は 3 − 4 = −1",
+         "(3, −1)"
+        ],
+        [
+         "方眼の上で、A から右へ 5 目もり、下へ 4 目もり数える"
+        ]
+       ],
+       "note": "右と左、上と下で、たすかひくかを取りちがえやすい。方眼を指でたどって確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 B と、x 軸について対称な点の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"192.9\" cy=\"120\" r=\"3.2\" fill=\"currentColor\"/><text x=\"199.9\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        "(4, 1)",
+        "(−4, −1)",
+        "(−4, 1)",
+        "(−1, 4)"
+       ],
+       "answer": "(4, 1)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(4, -1)",
+       "hints": [
+        "x 軸で紙を折ると、B はどこに重なるかな。",
+        "x 軸で折っても、横の位置は変わらないね。",
+        "B は x 軸から下へ 1。折ると、x 軸からどちらへ 1 かな。"
+       ],
+       "paths": [
+        [
+         "B は (4, −1)",
+         "x 軸で折ると横の位置はそのまま",
+         "x 軸の下 1 が上 1 になる",
+         "(4, 1)"
+        ]
+       ],
+       "note": "y 軸について対称な点 (−4, −1) と取りちがえやすい。「どの軸で折るか」を指で確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 C を、原点 O のまわりに 180° 回した点の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"65.4\" cy=\"138.2\" r=\"3.2\" fill=\"currentColor\"/><text x=\"58.3\" y=\"149.5\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "(3, 2)",
+        "(−3, 2)",
+        "(3, −2)",
+        "(2, 3)"
+       ],
+       "answer": "(3, 2)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(-3, -2)",
+       "hints": [
+        "C と O を結ぶ線を、O の先までのばしてみよう。",
+        "180° 回すと、C は O をはさんで反対がわの、同じ遠さの所に来るね。",
+        "O から左へ 3、下へ 2 の点は、回すとどちらへいくつになるかな。"
+       ],
+       "paths": [
+        [
+         "C は O から左へ 3、下へ 2",
+         "180° 回すと右へ 3、上へ 2",
+         "(3, 2)"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "点 P を右へ 3、上へ 1 動かすと、(1, −2) になりました。もとの点 P の座標を選びましょう。",
+       "choices": [
+        "(−2, −3)",
+        "(4, −1)",
+        "(−2, −1)",
+        "(4, −3)"
+       ],
+       "answer": "(−2, −3)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(1 - 3, -2 - 1)",
+       "hints": [
+        "動かした後の点から、もとにもどすには、どう動かせばよいかな。",
+        "右へ 3 の反対は左へ 3、上へ 1 の反対は下へ 1 だね。",
+        "1 − 3 と (−2) − 1 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "もどすには左へ 3、下へ 1",
+         "x 座標は 1 − 3 = −2",
+         "y 座標は (−2) − 1 = −3",
+         "(−2, −3)"
+        ]
+       ],
+       "note": "(4, −1) は、もとにもどさずに、さらに右へ 3、上へ 1 動かした点。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "点 (0, −4) を左へ 2、上へ 6 動かした点の座標を選びましょう。",
+       "choices": [
+        "(−2, 2)",
+        "(2, 2)",
+        "(−2, −10)",
+        "(6, −2)"
+       ],
+       "answer": "(−2, 2)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(0 - 2, -4 + 6)",
+       "hints": [
+        "左へ動かすと、x 座標はどうなるかな。",
+        "上へ動かすと、y 座標はどうなるかな。",
+        "0 − 2 と (−4) + 6 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "x 座標は 0 − 2 = −2",
+         "y 座標は (−4) + 6 = 2",
+         "(−2, 2)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (5, 2) と、y 軸について対称な点の座標を選びましょう。",
+       "choices": [
+        "(−5, 2)",
+        "(5, −2)",
+        "(−5, −2)",
+        "(2, 5)"
+       ],
+       "answer": "(−5, 2)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(5, 2)",
+       "hints": [
+        "y 軸で紙を折ると、点はどこに重なるかな。",
+        "y 軸で折っても、たての位置は変わらないね。",
+        "点は y 軸から右へ 5。折ると、y 軸からどちらへ 5 かな。"
+       ],
+       "paths": [
+        [
+         "たての位置はそのまま",
+         "右へ 5 が左へ 5 になる",
+         "(−5, 2)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 A を右へ動かして、点 B に重ねます。右へ何目もり動かしますか。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"65.4\" cy=\"28.9\" r=\"3.2\" fill=\"currentColor\"/><text x=\"65.4\" y=\"43.1\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"156.4\" cy=\"28.9\" r=\"3.2\" fill=\"currentColor\"/><text x=\"156.4\" y=\"43.1\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "answer": 5,
+       "check": "2 - (-3)",
+       "hints": [
+        "A と B は、同じ高さにあるね。",
+        "A から y 軸まで、何目もりかな。",
+        "y 軸から B までの目もりとあわせよう。"
+       ],
+       "paths": [
+        [
+         "A から y 軸まで 3",
+         "y 軸から B まで 2",
+         "3 + 2 = 5"
+        ],
+        [
+         "x 座標のちがい",
+         "2 − (−3) = 5"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "表の x と y の組を点にして、座標平面に打とう。",
+       "svg": "<svg viewBox=\"0 0 240 284\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"6\" width=\"216\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"12\" y1=\"30\" x2=\"228\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"48\" y1=\"6\" x2=\"48\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"84\" y1=\"6\" x2=\"84\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"156\" y1=\"6\" x2=\"156\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"30\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−2</text><text x=\"102\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"138\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"174\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"210\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"30\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"66\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"102\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"138\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"174\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"210\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">5</text><g transform=\"translate(0,64)\"><line x1=\"50\" y1=\"190\" x2=\"50\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"190\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"190\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"190\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"190\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"190\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"190\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"190\" y1=\"190\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"190\" x2=\"190\" y2=\"190\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"170\" x2=\"190\" y2=\"170\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"150\" x2=\"190\" y2=\"150\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"130\" x2=\"190\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"110\" x2=\"190\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"90\" x2=\"190\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"50\" x2=\"190\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"30\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"40\" y1=\"170\" x2=\"201\" y2=\"170\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"195,166 201,170 195,174\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"165.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"110\" y1=\"200\" x2=\"110\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"106,25 110,19 114,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"103\" y=\"183.5\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"50\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"70\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"90\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"130\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"150\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"170\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"190\" y=\"183.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"102\" y=\"193.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"102\" y=\"153.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"102\" y=\"133.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"102\" y=\"113.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"102\" y=\"93.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"102\" y=\"73.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"102\" y=\"53.1\" font-size=\"9\" text-anchor=\"middle\">6</text><text x=\"102\" y=\"33.1\" font-size=\"9\" text-anchor=\"middle\">7</text><line x1=\"38\" y1=\"182\" x2=\"202\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"70\" cy=\"150\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"130\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"110\" r=\"3\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"90\" r=\"3\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"70\" r=\"3\" fill=\"currentColor\"/></g></svg>",
+       "explain": "表の x と y の組 (−2, 1)、(−1, 2)、(0, 3)、(1, 4)、(2, 5) を点で打つと、点が一直線にならびます。点を通る直線を引くと、表にない x のときの y も、直線から読めます。たとえば x が 3 のときは、直線の上の点 (3, 6) から、y は 6 です。この表では、y はいつも x より 3 大きくなっています。直線が y 軸と交わる点は (0, 3) です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "点 (1, 2) を左へ 4、下へ 3 動かした点の座標を選びましょう。",
+       "choices": [
+        "(−3, −1)",
+        "(5, 5)",
+        "(−3, 5)",
+        "(5, −1)"
+       ],
+       "answer": "(−3, −1)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(1 - 4, 2 - 3)",
+       "hints": [
+        "左へ動かすと、x 座標はどうなるかな。",
+        "下へ動かすと、y 座標はどうなるかな。",
+        "1 − 4 と 2 − 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "x 座標は 1 − 4 = −3",
+         "y 座標は 2 − 3 = −1",
+         "(−3, −1)"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "点 (−2, 5) は、どの象限にありますか。",
+       "choices": [
+        "第 1 象限",
+        "第 2 象限",
+        "第 3 象限",
+        "第 4 象限"
+       ],
+       "answer": "第 2 象限",
+       "check": "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(-2, 5)",
+       "hints": [
+        "x 座標の −2 は、y 軸の右と左のどちらかな。",
+        "y 座標の 5 は、x 軸の上と下のどちらかな。",
+        "左上の象限の名前を思い出そう。"
+       ],
+       "paths": [
+        [
+         "左へ 2、上へ 5",
+         "左上は第 2 象限"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "表の点を打って、点を通る直線を引きました。x が 4 のとき、y はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 304\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"6\" width=\"180\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"30\" y1=\"30\" x2=\"210\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"6\" x2=\"66\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"102\" y1=\"6\" x2=\"102\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"138\" y1=\"6\" x2=\"138\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"174\" y1=\"6\" x2=\"174\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"84\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"120\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"156\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"192\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"48\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"84\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"120\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"156\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"192\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">6</text><g transform=\"translate(0,64)\"><line x1=\"70\" y1=\"210\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"210\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"210\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"210\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"210\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"210\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"210\" x2=\"170\" y2=\"210\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"190\" x2=\"170\" y2=\"190\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"170\" x2=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"150\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"110\" x2=\"170\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"90\" x2=\"170\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"70\" x2=\"170\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"30\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"60\" y1=\"210\" x2=\"181\" y2=\"210\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"175,206 181,210 175,214\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"178\" y=\"205.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"70\" y1=\"220\" x2=\"70\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"66,25 70,19 74,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"80\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"63\" y=\"223.5\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"90\" y=\"223.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"110\" y=\"223.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"130\" y=\"223.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"150\" y=\"223.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"170\" y=\"223.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"62\" y=\"193.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"62\" y=\"173.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"62\" y=\"153.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"62\" y=\"133.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"62\" y=\"113.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"62\" y=\"93.2\" font-size=\"9\" text-anchor=\"middle\">6</text><text x=\"62\" y=\"73.2\" font-size=\"9\" text-anchor=\"middle\">7</text><text x=\"62\" y=\"53.1\" font-size=\"9\" text-anchor=\"middle\">8</text><text x=\"62\" y=\"33.1\" font-size=\"9\" text-anchor=\"middle\">9</text><line x1=\"64\" y1=\"222\" x2=\"166\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"70\" cy=\"210\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"170\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"130\" r=\"3\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"90\" r=\"3\" fill=\"currentColor\"/></g></svg>",
+       "answer": 8,
+       "check": "2 * 4",
+       "hints": [
+        "表で、x が 1 ふえると、y はいくつふえるかな。",
+        "直線を、x が 4 の所までのばそう。",
+        "x が 4 の所で、直線の上の点の y 座標を読もう。"
+       ],
+       "paths": [
+        [
+         "x が 1 ふえると y は 2 ふえる",
+         "x が 3 で y は 6",
+         "x が 4 で y は 8"
+        ],
+        [
+         "y はいつも x の 2 倍",
+         "4 × 2 = 8"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "表の点を通る直線は、x 軸とどこで交わりますか。交わる点の x 座標を答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 264\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"6\" width=\"216\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"12\" y1=\"30\" x2=\"228\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"48\" y1=\"6\" x2=\"48\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"84\" y1=\"6\" x2=\"84\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"156\" y1=\"6\" x2=\"156\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"30\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"102\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"138\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"174\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"210\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"30\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"66\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">5</text><text x=\"102\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"138\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"174\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"210\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">1</text><g transform=\"translate(0,64)\"><line x1=\"50\" y1=\"170\" x2=\"50\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"170\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"170\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"170\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"170\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"170\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"190\" y1=\"170\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"170\" x2=\"190\" y2=\"170\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"150\" x2=\"190\" y2=\"150\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"130\" x2=\"190\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"110\" x2=\"190\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"90\" x2=\"190\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"50\" x2=\"190\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"30\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"40\" y1=\"150\" x2=\"201\" y2=\"150\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"195,146 201,150 195,154\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"145.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"90\" y1=\"180\" x2=\"90\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,25 90,19 94,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"83\" y=\"163.5\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"50\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"70\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"110\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"130\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"150\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"170\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"190\" y=\"163.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"82\" y=\"173.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"82\" y=\"133.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"82\" y=\"113.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"82\" y=\"93.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"82\" y=\"73.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"82\" y=\"53.1\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"82\" y=\"33.1\" font-size=\"9\" text-anchor=\"middle\">6</text><line x1=\"38\" y1=\"18\" x2=\"202\" y2=\"182\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"70\" cy=\"50\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"90\" r=\"3\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"110\" r=\"3\" fill=\"currentColor\"/><circle cx=\"150\" cy=\"130\" r=\"3\" fill=\"currentColor\"/></g></svg>",
+       "answer": 4,
+       "check": "4 - 0",
+       "hints": [
+        "x 軸の上の点は、y 座標がいくつかな。",
+        "表で、x が 1 ふえると、y はいくつへるかな。",
+        "表の x と y をたすと、いつもいくつになるかな。"
+       ],
+       "paths": [
+        [
+         "x 軸の上では y は 0",
+         "x と y の和はいつも 4",
+         "x は 4 − 0 = 4"
+        ],
+        [
+         "直線を x 軸までのばして読む",
+         4
+        ]
+       ],
+       "note": "x 軸と交わる点は「y が 0 の点」。表にない点を、きまりか直線から求める。"
+      },
+      {
+       "part": "今日",
+       "text": "下の表の点を通る直線の上にある点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 60\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"6\" width=\"216\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"12\" y1=\"30\" x2=\"228\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"48\" y1=\"6\" x2=\"48\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"84\" y1=\"6\" x2=\"84\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"156\" y1=\"6\" x2=\"156\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"30\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"102\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"138\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"174\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"210\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"30\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"66\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−2</text><text x=\"102\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"138\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"174\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"210\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text></svg>",
+       "choices": [
+        "(5, 3)",
+        "(3, 5)",
+        "(−1, 1)",
+        "(2, 2)"
+       ],
+       "answer": "(5, 3)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(*[c for c in [(5, 3), (3, 5), (-1, 1), (2, 2)] if c[1] == c[0] - 2][0])",
+       "hints": [
+        "表で、y は x よりいくつ大きいかな、小さいかな。",
+        "選んだ点の x と y が、そのきまりに合うか調べよう。",
+        "x が 5 のとき、y はいくつになるかな。"
+       ],
+       "paths": [
+        [
+         "y はいつも x より 2 小さい",
+         "(5, 3) は 5 − 2 = 3 で合う"
+        ],
+        [
+         "表の点を打って直線をのばし、通る点を読む"
+        ]
+       ],
+       "note": "(3, 5) は x と y を入れかえた組。(−1, 1) は、x が −1 のとき y は (−1) − 2 = −3 なので通らない。"
+      },
+      {
+       "part": "挑戦",
+       "text": "x と y の和がいつも 2 になるように、表をつくります。x が −3 のとき、y はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 60\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"6\" width=\"216\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"12\" y1=\"30\" x2=\"228\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"48\" y1=\"6\" x2=\"48\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"84\" y1=\"6\" x2=\"84\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"156\" y1=\"6\" x2=\"156\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"30\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−3</text><text x=\"102\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−2</text><text x=\"138\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"174\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"210\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"30\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"66\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">□</text><text x=\"102\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"138\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"174\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"210\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">1</text></svg>",
+       "answer": 5,
+       "check": "2 - (-3)",
+       "hints": [
+        "(−3) + □ = 2 の □ をさがそう。",
+        "表で、x が 1 へると、y はいくつふえるかな。",
+        "x が −2 のとき y は 4 だね。そこから 1 つ左を考えよう。"
+       ],
+       "paths": [
+        [
+         "(−3) + □ = 2",
+         "□ は −3 から 2 まで右へ 5",
+         5
+        ],
+        [
+         "x が 1 へると y が 1 ふえる",
+         "4 + 1 = 5"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "表の点を通る直線は、y 軸とどこで交わりますか。交わる点の y 座標を答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 60\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"6\" width=\"180\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"30\" y1=\"30\" x2=\"210\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"6\" x2=\"66\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"102\" y1=\"6\" x2=\"102\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"138\" y1=\"6\" x2=\"138\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"174\" y1=\"6\" x2=\"174\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"84\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"120\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"156\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"192\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"48\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"84\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"120\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">5</text><text x=\"156\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">6</text><text x=\"192\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">7</text></svg>",
+       "answer": 3,
+       "check": "4 - 1",
+       "hints": [
+        "y 軸の上の点は、x 座標がいくつかな。",
+        "表で、x が 1 へると、y はいくつへるかな。",
+        "x が 1 から 0 になると、y はいくつになるかな。"
+       ],
+       "paths": [
+        [
+         "y はいつも x より 3 大きい",
+         "x が 0 のとき y は 3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "表の点を通る直線の上で、x が 3 のとき、y はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 264\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"6\" width=\"180\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"30\" y1=\"30\" x2=\"210\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"6\" x2=\"66\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"102\" y1=\"6\" x2=\"102\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"138\" y1=\"6\" x2=\"138\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"174\" y1=\"6\" x2=\"174\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"84\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−2</text><text x=\"120\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"156\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"192\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"48\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"84\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−4</text><text x=\"120\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−3</text><text x=\"156\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−2</text><text x=\"192\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">−1</text><g transform=\"translate(0,64)\"><line x1=\"50\" y1=\"170\" x2=\"50\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"170\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"170\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"170\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"170\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"170\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"170\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"190\" y1=\"170\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"170\" x2=\"190\" y2=\"170\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"150\" x2=\"190\" y2=\"150\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"130\" x2=\"190\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"110\" x2=\"190\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"90\" x2=\"190\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"70\" x2=\"190\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"50\" x2=\"190\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"50\" y1=\"30\" x2=\"190\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"40\" y1=\"70\" x2=\"201\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"195,66 201,70 195,74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"65.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"110\" y1=\"180\" x2=\"110\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"106,25 110,19 114,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"103\" y=\"83.5\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"50\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"70\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"90\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"130\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"150\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"170\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"190\" y=\"83.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"102\" y=\"173.2\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"102\" y=\"153.2\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"102\" y=\"133.2\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"102\" y=\"113.2\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"102\" y=\"93.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"102\" y=\"53.1\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"102\" y=\"33.1\" font-size=\"9\" text-anchor=\"middle\">2</text><line x1=\"38\" y1=\"182\" x2=\"202\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"70\" cy=\"150\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"130\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"110\" r=\"3\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"90\" r=\"3\" fill=\"currentColor\"/></g></svg>",
+       "answer": 1,
+       "check": "3 - 2",
+       "hints": [
+        "表で、x が 1 ふえると、y はいくつふえるかな。",
+        "y は x より、いくつ小さいかな。",
+        "直線を x が 3 の所までのばして読んでもよいよ。"
+       ],
+       "paths": [
+        [
+         "y はいつも x より 2 小さい",
+         "3 − 2 = 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "y がいつも x より 1 大きい表の点を通る直線があります。この直線の上にない点はどれですか。",
+       "choices": [
+        "(1, 0)",
+        "(−3, −2)",
+        "(0, 1)",
+        "(2, 3)"
+       ],
+       "answer": "(1, 0)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(*[c for c in [(1, 0), (-3, -2), (0, 1), (2, 3)] if c[1] != c[0] + 1][0])",
+       "hints": [
+        "1 つずつ、y が x より 1 大きいかを調べよう。",
+        "(−3, −2) は、(−3) + 1 を計算しよう。",
+        "y が x より小さい点はどれかな。"
+       ],
+       "paths": [
+        [
+         "(1, 0) は y が x より 1 小さい",
+         "直線の上にない"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "点 P (3, 2) と x 軸について対称な点 Q は (3, −2) です。x 座標は同じで、y 座標が −2 になるのはなぜですか。図を使って、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"174.6\" cy=\"65.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"184.6\" y=\"69.6\" font-size=\"12\" text-anchor=\"middle\">P</text><circle cx=\"174.6\" cy=\"138.2\" r=\"3.2\" fill=\"currentColor\"/><text x=\"184.6\" y=\"142.4\" font-size=\"12\" text-anchor=\"middle\">Q</text><line x1=\"174.6\" y1=\"65.4\" x2=\"174.6\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"174.6,95.8 180.6,95.8 180.6,101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "explain": "例：「x 軸で折ると、P は Q に重なる。折っても横の位置は変わらないので、x 座標は 3 のまま。P は x 軸から上へ 2 の所にあり、折ると x 軸から下へ 2 の所に移る。下へ 2 は −2 なので、Q は (3, −2)。」と書ければよい。① 横の位置は変わらない、② x 軸からの遠さは同じ 2、③ 上が下になるのでマイナスの数になる、の 3 点を見る。ほかの点（(−1, 4) など）でも同じになるか、1 つ試させるとよい。PQ が x 軸と直角に交わることに気づけばなおよい。",
+       "hints": [
+        "x 軸で折ると、点は横に動くかな。",
+        "P は、x 軸からどれだけはなれているかな。",
+        "折ると、x 軸の上にあった点は、どちらへ行くかな。"
+       ],
+       "paths": [
+        [
+         "折っても横の位置はそのまま",
+         "x 軸からの遠さは 2 のまま",
+         "上の 2 が下の 2 になる",
+         "(3, −2)"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "2 点 A (−2, 1)、B (3, 1) の間は 5 目もりです。これが 3 − (−2) で求められるのはなぜですか。図を使って、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><line x1=\"83.6\" y1=\"83.6\" x2=\"174.6\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"83.6\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"83.6\" y=\"77.8\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"174.6\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"174.6\" y=\"77.8\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "explain": "例：「A から y 軸までは 2 目もり、y 軸から B までは 3 目もりで、あわせて 2 + 3 = 5 目もり。3 − (−2) は『−2 から 3 までいくつ』というちがいなので、同じ 5 になる。」と書ければよい。N-010 でひき算を「ちがい」と見たことにつなげる。① 0（y 軸）で 2 つに分ける、② ひき算は 2 つの数のちがい、の 2 点を見る。y 座標が同じでない 2 点（ななめの線）では、このひき算だけでは長さが出ないことにも触れる。",
+       "hints": [
+        "A から y 軸まで、何目もりかな。",
+        "y 軸から B までは、何目もりかな。",
+        "ひき算 3 − (−2) は、どの数とどの数のちがいかな。"
+       ],
+       "paths": [
+        [
+         "A から y 軸まで 2",
+         "y 軸から B まで 3",
+         "2 + 3 = 5",
+         "3 − (−2) は −2 から 3 までのちがいで 5"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "点 (4, 1) を原点 O のまわりに 180° 回すと、(−4, −1) になります。x 座標も y 座標もマイナスの数に変わるのはなぜですか。例を使って、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"192.9\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"199.9\" y=\"80.7\" font-size=\"12\" text-anchor=\"middle\">P</text><circle cx=\"47.1\" cy=\"120\" r=\"3.2\" fill=\"currentColor\"/><text x=\"40.1\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">R</text><line x1=\"192.9\" y1=\"83.6\" x2=\"47.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "例：「180° 回すと、点は O をはさんで反対がわの、O から同じ遠さの所に移る。O から右へ 4、上へ 1 の点は、左へ 4、下へ 1 の点に移るので (−4, −1)。」と書ければよい。また「y 軸について対称に移すと (−4, 1)、それを x 軸について対称に移すと (−4, −1) で、180° 回したのと同じ所になる」と書く道もある。① O をはさんで反対がわ、② O から同じ遠さ、③ 右が左に、上が下になる、の 3 点を見る。(−3, 2) のように、もとからマイナスの数があるときは、回すと 3 と −2 になる（マイナスの数がふつうの数にもどる）ことも確かめる。",
+       "hints": [
+        "P と O を結ぶ線を、O の先までのばしてみよう。",
+        "180° 回すと、P は O から見てどちらの向きに来るかな。",
+        "右へ 4、上へ 1 の動きは、反対向きにするとどうなるかな。"
+       ],
+       "paths": [
+        [
+         "O をはさんで反対がわ",
+         "右へ 4 が左へ 4、上へ 1 が下へ 1",
+         "(−4, −1)"
+        ],
+        [
+         "y 軸について対称で (−4, 1)",
+         "x 軸について対称で (−4, −1)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 点 (−4, 2)、(3, 2) の間は、何目もりですか。",
+       "answer": 7,
+       "check": "3 - (-4)",
+       "hints": [
+        "2 つの点は、同じ高さにあるね。",
+        "x 座標のちがいを考えよう。",
+        "3 − (−4) を計算しよう。"
+       ],
+       "paths": [
+        [
+         "x 座標のちがい",
+         "3 − (−4) = 7"
+        ],
+        [
+         "y 軸まで 4、y 軸から 3",
+         "4 + 3 = 7"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 つの点 (−2, 1)、(3, 1)、(3, −2)、(−2, −2) を順に結んで、長方形をかきました。1 目もりを 1 cm とすると、この長方形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><polygon points=\"83.6,83.6 174.6,83.6 174.6,138.2 83.6,138.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 15,
+       "check": "(3 - (-2)) * (1 - (-2))",
+       "hints": [
+        "横の辺の長さは、x 座標のちがいだね。",
+        "たての辺の長さは、y 座標のちがいだね。",
+        "たてと横の長さをかけよう。"
+       ],
+       "paths": [
+        [
+         "横は 3 − (−2) = 5 cm",
+         "たては 1 − (−2) = 3 cm",
+         "5 × 3 = 15"
+        ],
+        [
+         "方眼のマスを数える",
+         15
+        ]
+       ],
+       "note": "横を 3 − 2 = 1 としやすい。マイナスの数をひくときは、数直線のちがいで確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 点 (0, −3)、(0, 4) の間は、何目もりですか。",
+       "answer": 7,
+       "check": "4 - (-3)",
+       "hints": [
+        "2 つの点は、どちらも y 軸の上にあるね。",
+        "y 座標のちがいを考えよう。",
+        "4 − (−3) を計算しよう。"
+       ],
+       "paths": [
+        [
+         "y 座標のちがい",
+         "4 − (−3) = 7"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (2, −5) と、x 軸について対称な点の座標を選びましょう。",
+       "choices": [
+        "(2, 5)",
+        "(−2, −5)",
+        "(−2, 5)",
+        "(5, 2)"
+       ],
+       "answer": "(2, 5)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(2, -5)",
+       "hints": [
+        "x 軸で折っても、横の位置は変わらないね。",
+        "点は x 軸から下へ 5 の所にあるね。",
+        "折ると、x 軸からどちらへ 5 の所に来るかな。"
+       ],
+       "paths": [
+        [
+         "横はそのまま",
+         "下へ 5 が上へ 5 になる",
+         "(2, 5)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (−3, 2) と、y 軸について対称な点の間は、何目もりですか。",
+       "answer": 6,
+       "check": "(lambda x: -x - x)(-3)",
+       "hints": [
+        "まず、y 軸について対称な点の座標を考えよう。",
+        "2 つの点は、同じ高さにあるね。",
+        "x 座標のちがいを計算しよう。"
+       ],
+       "paths": [
+        [
+         "対称な点は (3, 2)",
+         "3 − (−3) = 6"
+        ],
+        [
+         "y 軸から 3 ずつはなれている",
+         "3 + 3 = 6"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "(−4) − (−6) はいくつですか。",
+       "answer": 2,
+       "check": "(-4) - (-6)",
+       "hints": [
+        "ひき算は「ちがい」と考えよう。",
+        "数直線で、−6 から −4 まで、右へいくつ進むかな。",
+        "−6 と −4 のどちらが右にあるかな。"
+       ],
+       "paths": [
+        [
+         "−6 から −4 まで右へ 2",
+         2
+        ],
+        [
+         "(−4) + 6 = 2"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "点 O のまわりに図形を回しました。点 A は点 A′ に移りました。OA が 3 cm のとき、OA′ は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"70\" y1=\"130\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"130\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"130\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"130\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"130\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"130\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"110\" x2=\"170\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"90\" x2=\"170\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"70\" x2=\"170\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"30\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"60\" y1=\"110\" x2=\"181\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"175,106 181,110 175,114\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"178\" y=\"105.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"90\" y1=\"140\" x2=\"90\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,25 90,19 94,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"83\" y=\"123.5\" font-size=\"10\" text-anchor=\"middle\">O</text><circle cx=\"150\" cy=\"110\" r=\"3.2\" fill=\"currentColor\"/><text x=\"150\" y=\"124.2\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"90\" cy=\"50\" r=\"3.2\" fill=\"currentColor\"/><text x=\"80\" y=\"54.2\" font-size=\"12\" text-anchor=\"middle\">A′</text><line x1=\"90\" y1=\"110\" x2=\"150\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90\" y1=\"110\" x2=\"90\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M102 110 A12 12 0 0 0 90 98\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 3,
+       "hints": [
+        "図形を回すと、形や大きさは変わるかな。",
+        "回しても、回す中心からの遠さは変わらないね。",
+        "OA と OA′ をくらべよう。"
+       ],
+       "paths": [
+        [
+         "回しても中心からの遠さは同じ",
+         "OA′ = OA = 3 cm"
+        ]
+       ],
+       "note": "G-015 の思い出す。回転の中心から点までの長さは、回しても変わらない。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形 ABC を、y 軸について対称に移しました。点 B が移った点の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><polygon points=\"138.2,83.6 192.9,83.6 138.2,47.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"138.2\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"131.1\" y=\"94.8\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"192.9\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"199.9\" y=\"94.8\" font-size=\"12\" text-anchor=\"middle\">B</text><circle cx=\"138.2\" cy=\"47.1\" r=\"3.2\" fill=\"currentColor\"/><text x=\"138.2\" y=\"41.3\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "(−4, 1)",
+        "(4, −1)",
+        "(−4, −1)",
+        "(−1, 4)"
+       ],
+       "answer": "(−4, 1)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(4, 1)",
+       "hints": [
+        "まず、B の座標を読もう。",
+        "y 軸で折ると、たての位置は変わるかな。",
+        "y 軸から右へ 4 の点は、折るとどちらへ 4 かな。"
+       ],
+       "paths": [
+        [
+         "B は (4, 1)",
+         "たての位置はそのまま",
+         "右へ 4 が左へ 4",
+         "(−4, 1)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "y がいつも x より 4 小さい表をつくり、点を通る直線を引きます。この直線が y 軸と交わる点の座標を選びましょう。",
+       "choices": [
+        "(0, −4)",
+        "(−4, 0)",
+        "(0, 4)",
+        "(4, 0)"
+       ],
+       "answer": "(0, −4)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(0, 0 - 4)",
+       "hints": [
+        "y 軸の上の点は、x 座標がいくつかな。",
+        "x が 0 のとき、y はいくつかな。",
+        "0 − 4 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "y 軸の上では x は 0",
+         "y は 0 − 4 = −4",
+         "(0, −4)"
+        ]
+       ],
+       "note": "(4, 0) は x 軸と交わる点。x 軸と y 軸のどちらとの交わりかを確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 A (−1, −2) を上へ 5 動かした点を B とします。B の y 座標はいくつですか。",
+       "answer": 3,
+       "check": "-2 + 5",
+       "hints": [
+        "上へ動かすと、y 座標はどうなるかな。",
+        "(−2) + 5 を考えよう。",
+        "数直線で、−2 から右へ 5 進もう。"
+       ],
+       "paths": [
+        [
+         "y 座標は (−2) + 5 = 3",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの点 O (0, 0)、A (4, 0)、B (0, −3) を結んだ三角形の面積は、何 cm² ですか。1 目もりは 1 cm です。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><polygon points=\"120,101.8 192.9,101.8 120,156.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"192.9\" cy=\"101.8\" r=\"3.2\" fill=\"currentColor\"/><text x=\"199.9\" y=\"98.9\" font-size=\"12\" text-anchor=\"middle\">A</text><circle cx=\"120\" cy=\"156.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"127.1\" y=\"167.7\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "answer": 6,
+       "check": "4 * (0 - (-3)) // 2",
+       "hints": [
+        "OA の長さは何 cm かな。",
+        "OB の長さは、y 座標のちがいで考えよう。",
+        "直角三角形の面積は、長方形の半分だね。"
+       ],
+       "paths": [
+        [
+         "OA は 4 cm",
+         "OB は 0 − (−3) = 3 cm",
+         "4 × 3 ÷ 2 = 6"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "点 P を、原点 O のまわりに、時計の針と反対の向きに 90° 回した点の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"174.6\" cy=\"83.6\" r=\"3.2\" fill=\"currentColor\"/><text x=\"181.7\" y=\"80.7\" font-size=\"12\" text-anchor=\"middle\">P</text><line x1=\"120\" y1=\"101.8\" x2=\"174.6\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "choices": [
+        "(−1, 3)",
+        "(1, −3)",
+        "(−3, 1)",
+        "(3, −1)"
+       ],
+       "answer": "(−1, 3)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-y, x))(3, 1)",
+       "hints": [
+        "O から P までの動きは「右へ 3、上へ 1」だね。",
+        "90° 回すと、「右へ」の向きは「上へ」の向きになるよ。",
+        "「上へ」の向きは、90° 回すとどの向きになるかな。"
+       ],
+       "paths": [
+        [
+         "右へ 3 は上へ 3 になる",
+         "上へ 1 は左へ 1 になる",
+         "左へ 1、上へ 3 で \"(−1",
+         "3)\""
+        ],
+        [
+         "方眼の紙を O で押さえて 90° 回して確かめる"
+        ]
+       ],
+       "note": "G-015 の回転を座標で表す。(−3, 1) は 90° 回したつもりで、y 軸について対称に移した点。紙を回して確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "点 (−2, 4) を原点 O のまわりに 180° 回した点の座標を選びましょう。",
+       "choices": [
+        "(2, −4)",
+        "(−2, −4)",
+        "(2, 4)",
+        "(4, −2)"
+       ],
+       "answer": "(2, −4)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(-2, 4)",
+       "hints": [
+        "180° 回すと、O をはさんで反対がわに来るね。",
+        "左へ 2 の反対は、どちらへ 2 かな。",
+        "上へ 4 の反対は、どちらへ 4 かな。"
+       ],
+       "paths": [
+        [
+         "左へ 2 が右へ 2、上へ 4 が下へ 4",
+         "(2, −4)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 点 (−5, −1)、(1, −1) の間は、何目もりですか。",
+       "answer": 6,
+       "check": "1 - (-5)",
+       "hints": [
+        "2 つの点は、同じ高さにあるね。",
+        "x 座標のちがいを考えよう。",
+        "1 − (−5) を計算しよう。"
+       ],
+       "paths": [
+        [
+         "1 − (−5) = 6"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "x と y の和がいつも 1 になる表の点を通る直線は、x 軸とどこで交わりますか。交わる点の x 座標を答えましょう。",
+       "answer": 1,
+       "check": "1 - 0",
+       "hints": [
+        "x 軸の上の点は、y 座標がいくつかな。",
+        "□ + 0 = 1 の □ をさがそう。",
+        "表をつくって、点を打ってもよいよ。"
+       ],
+       "paths": [
+        [
+         "x 軸の上では y は 0",
+         "x は 1 − 0 = 1"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "点 A の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"28.9\" cy=\"65.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"36\" y=\"62.5\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "choices": [
+        "(−5, 2)",
+        "(2, −5)",
+        "(5, 2)",
+        "(−5, −2)"
+       ],
+       "answer": "(−5, 2)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-5, 2)",
+       "hints": [
+        "原点 O から、右と左のどちらへいくつ進むかな。",
+        "次に、上と下のどちらへいくつ進むかな。",
+        "x 座標を先に書こう。"
+       ],
+       "paths": [
+        [
+         "左へ 5、上へ 2",
+         "(−5, 2)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (3, −1) は、どの象限にありますか。",
+       "choices": [
+        "第 1 象限",
+        "第 2 象限",
+        "第 3 象限",
+        "第 4 象限"
+       ],
+       "answer": "第 4 象限",
+       "check": "(lambda x, y: '第 ' + ('1' if x > 0 and y > 0 else '2' if x < 0 and y > 0 else '3' if x < 0 and y < 0 else '4') + ' 象限')(3, -1)",
+       "hints": [
+        "x 座標の 3 は、y 軸の右と左のどちらかな。",
+        "y 座標の −1 は、x 軸の上と下のどちらかな。",
+        "右下の象限の名前を思い出そう。"
+       ],
+       "paths": [
+        [
+         "右へ 3、下へ 1",
+         "第 4 象限"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (2, −3) を左へ 6、上へ 4 動かした点の座標を選びましょう。",
+       "choices": [
+        "(−4, 1)",
+        "(8, 1)",
+        "(−4, −7)",
+        "(8, −7)"
+       ],
+       "answer": "(−4, 1)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(2 - 6, -3 + 4)",
+       "hints": [
+        "左へ動かすと、x 座標はどうなるかな。",
+        "上へ動かすと、y 座標はどうなるかな。",
+        "2 − 6 と (−3) + 4 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "x 座標は 2 − 6 = −4",
+         "y 座標は (−3) + 4 = 1",
+         "(−4, 1)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (−2, −4) と、y 軸について対称な点の座標を選びましょう。",
+       "choices": [
+        "(2, −4)",
+        "(−2, 4)",
+        "(2, 4)",
+        "(−4, −2)"
+       ],
+       "answer": "(2, −4)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, y))(-2, -4)",
+       "hints": [
+        "y 軸で折っても、たての位置は変わらないね。",
+        "点は y 軸から左へ 2 の所にあるね。",
+        "折ると、y 軸からどちらへ 2 の所に来るかな。"
+       ],
+       "paths": [
+        [
+         "たてはそのまま",
+         "左へ 2 が右へ 2",
+         "(2, −4)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (5, −3) を原点 O のまわりに 180° 回した点の座標を選びましょう。",
+       "choices": [
+        "(−5, 3)",
+        "(5, 3)",
+        "(−5, −3)",
+        "(−3, 5)"
+       ],
+       "answer": "(−5, 3)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(-x, -y))(5, -3)",
+       "hints": [
+        "180° 回すと、O をはさんで反対がわに来るね。",
+        "右へ 5 の反対は、どちらへ 5 かな。",
+        "下へ 3 の反対は、どちらへ 3 かな。"
+       ],
+       "paths": [
+        [
+         "右へ 5 が左へ 5、下へ 3 が上へ 3",
+         "(−5, 3)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "表の点を打って、点を通る直線を引きます。x が 4 のとき、y はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 324\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"30\" y=\"6\" width=\"180\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"30\" y1=\"30\" x2=\"210\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"6\" x2=\"66\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"102\" y1=\"6\" x2=\"102\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"138\" y1=\"6\" x2=\"138\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"174\" y1=\"6\" x2=\"174\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"84\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"120\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"156\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"192\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"48\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"84\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"120\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"156\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">5</text><text x=\"192\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">7</text><g transform=\"translate(0,64)\"><line x1=\"70\" y1=\"230\" x2=\"70\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"90\" y1=\"230\" x2=\"90\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"110\" y1=\"230\" x2=\"110\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"130\" y1=\"230\" x2=\"130\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"150\" y1=\"230\" x2=\"150\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"170\" y1=\"230\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"230\" x2=\"170\" y2=\"230\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"210\" x2=\"170\" y2=\"210\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"190\" x2=\"170\" y2=\"190\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"170\" x2=\"170\" y2=\"170\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"150\" x2=\"170\" y2=\"150\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"130\" x2=\"170\" y2=\"130\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"110\" x2=\"170\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"90\" x2=\"170\" y2=\"90\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"70\" x2=\"170\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"50\" x2=\"170\" y2=\"50\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"70\" y1=\"30\" x2=\"170\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"60\" y1=\"230\" x2=\"181\" y2=\"230\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"175,226 181,230 175,234\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"178\" y=\"225.2\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"70\" y1=\"240\" x2=\"70\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"66,25 70,19 74,25\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"80\" y=\"27.2\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"63\" y=\"243.5\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"90\" y=\"243.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"110\" y=\"243.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"130\" y=\"243.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"150\" y=\"243.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"170\" y=\"243.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"62\" y=\"213.2\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"62\" y=\"193.2\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"62\" y=\"173.2\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"62\" y=\"153.2\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"62\" y=\"133.2\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"62\" y=\"113.2\" font-size=\"9\" text-anchor=\"middle\">6</text><text x=\"62\" y=\"93.2\" font-size=\"9\" text-anchor=\"middle\">7</text><text x=\"62\" y=\"73.2\" font-size=\"9\" text-anchor=\"middle\">8</text><text x=\"62\" y=\"53.1\" font-size=\"9\" text-anchor=\"middle\">9</text><text x=\"62\" y=\"33.1\" font-size=\"9\" text-anchor=\"middle\">10</text><line x1=\"58\" y1=\"234\" x2=\"166\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"70\" cy=\"210\" r=\"3\" fill=\"currentColor\"/><circle cx=\"90\" cy=\"170\" r=\"3\" fill=\"currentColor\"/><circle cx=\"110\" cy=\"130\" r=\"3\" fill=\"currentColor\"/><circle cx=\"130\" cy=\"90\" r=\"3\" fill=\"currentColor\"/></g></svg>",
+       "answer": 9,
+       "check": "2 * 4 + 1",
+       "hints": [
+        "表で、x が 1 ふえると、y はいくつふえるかな。",
+        "x が 3 のとき y は 7 だね。",
+        "直線を x が 4 の所までのばして読もう。"
+       ],
+       "paths": [
+        [
+         "x が 1 ふえると y は 2 ふえる",
+         "7 + 2 = 9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 点 (−6, −1)、(2, −1) の間は、何目もりですか。",
+       "answer": 8,
+       "check": "2 - (-6)",
+       "hints": [
+        "2 つの点は、同じ高さにあるね。",
+        "x 座標のちがいを考えよう。",
+        "2 − (−6) を計算しよう。"
+       ],
+       "paths": [
+        [
+         "2 − (−6) = 8"
+        ],
+        [
+         "y 軸まで 6、y 軸から 2",
+         "6 + 2 = 8"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "点 B の座標を選びましょう。",
+       "svg": "<svg viewBox=\"0 0 240 204\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"28.9\" y1=\"174.6\" x2=\"28.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"47.1\" y1=\"174.6\" x2=\"47.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"65.4\" y1=\"174.6\" x2=\"65.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"83.6\" y1=\"174.6\" x2=\"83.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"101.8\" y1=\"174.6\" x2=\"101.8\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"174.6\" x2=\"120\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"138.2\" y1=\"174.6\" x2=\"138.2\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156.4\" y1=\"174.6\" x2=\"156.4\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"174.6\" y1=\"174.6\" x2=\"174.6\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"192.9\" y1=\"174.6\" x2=\"192.9\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"211.1\" y1=\"174.6\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"174.6\" x2=\"211.1\" y2=\"174.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"156.4\" x2=\"211.1\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"138.2\" x2=\"211.1\" y2=\"138.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"120\" x2=\"211.1\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"101.8\" x2=\"211.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"83.6\" x2=\"211.1\" y2=\"83.6\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"65.4\" x2=\"211.1\" y2=\"65.4\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"47.1\" x2=\"211.1\" y2=\"47.1\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"28.9\" y1=\"28.9\" x2=\"211.1\" y2=\"28.9\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"19.8\" y1=\"101.8\" x2=\"221.1\" y2=\"101.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"215.1,97.8 221.1,101.8 215.1,105.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"218.1\" y=\"97\" font-size=\"12\" text-anchor=\"middle\">x</text><line x1=\"120\" y1=\"183.8\" x2=\"120\" y2=\"18.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,24.9 120,18.9 124,24.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"27.1\" font-size=\"12\" text-anchor=\"middle\">y</text><text x=\"113\" y=\"115.3\" font-size=\"10\" text-anchor=\"middle\">O</text><text x=\"28.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−5</text><text x=\"47.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"65.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"83.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"101.8\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"138.2\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"156.4\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"174.6\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"192.9\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">4</text><text x=\"211.1\" y=\"114.9\" font-size=\"9\" text-anchor=\"middle\">5</text><text x=\"112\" y=\"177.8\" font-size=\"9\" text-anchor=\"middle\">−4</text><text x=\"112\" y=\"159.6\" font-size=\"9\" text-anchor=\"middle\">−3</text><text x=\"112\" y=\"141.4\" font-size=\"9\" text-anchor=\"middle\">−2</text><text x=\"112\" y=\"123.2\" font-size=\"9\" text-anchor=\"middle\">−1</text><text x=\"112\" y=\"86.7\" font-size=\"9\" text-anchor=\"middle\">1</text><text x=\"112\" y=\"68.5\" font-size=\"9\" text-anchor=\"middle\">2</text><text x=\"112\" y=\"50.3\" font-size=\"9\" text-anchor=\"middle\">3</text><text x=\"112\" y=\"32.1\" font-size=\"9\" text-anchor=\"middle\">4</text><circle cx=\"101.8\" cy=\"156.4\" r=\"3.2\" fill=\"currentColor\"/><text x=\"94.7\" y=\"167.7\" font-size=\"12\" text-anchor=\"middle\">B</text></svg>",
+       "choices": [
+        "(−1, −3)",
+        "(−3, −1)",
+        "(1, −3)",
+        "(−1, 3)"
+       ],
+       "answer": "(−1, −3)",
+       "check": "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(-1, -3)",
+       "hints": [
+        "原点 O から、左へいくつ進むかな。",
+        "次に、下へいくつ進むかな。",
+        "左と下は、マイナスの数で表すね。"
+       ],
+       "paths": [
+        [
+         "左へ 1、下へ 3",
+         "(−1, −3)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 (−3, 1) と、x 軸について対称な点の座標を選びましょう。",
+       "choices": [
+        "(−3, −1)",
+        "(3, 1)",
+        "(3, −1)",
+        "(1, −3)"
+       ],
+       "answer": "(−3, −1)",
+       "check": "(lambda x, y: (lambda x, y: f'({x}, {y})'.replace('-', '−'))(x, -y))(-3, 1)",
+       "hints": [
+        "x 軸で折っても、横の位置は変わらないね。",
+        "点は x 軸から上へ 1 の所にあるね。",
+        "折ると、x 軸からどちらへ 1 かな。"
+       ],
+       "paths": [
+        [
+         "横はそのまま",
+         "上へ 1 が下へ 1",
+         "(−3, −1)"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "下の表の点を通る直線で、x が −1 のとき、y はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 60\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"6\" width=\"216\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"12\" y1=\"30\" x2=\"228\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"48\" y1=\"6\" x2=\"48\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"none\"/><line x1=\"84\" y1=\"6\" x2=\"84\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"156\" y1=\"6\" x2=\"156\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"54\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"30\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">−1</text><text x=\"102\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">0</text><text x=\"138\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"174\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"210\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"30\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">y</text><text x=\"66\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">□</text><text x=\"102\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">5</text><text x=\"138\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"174\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"210\" y=\"46.5\" font-size=\"13\" text-anchor=\"middle\">2</text></svg>",
+       "answer": 6,
+       "check": "5 - (-1)",
+       "hints": [
+        "表で、x が 1 ふえると、y はいくつへるかな。",
+        "x と y をたすと、いつもいくつかな。",
+        "(−1) + □ = 5 の □ をさがそう。"
+       ],
+       "paths": [
+        [
+         "x と y の和はいつも 5",
+         "5 − (−1) = 6"
+        ],
+        [
+         "x が 1 へると y は 1 ふえる",
+         "5 + 1 = 6"
+        ]
+       ]
+      }
+     ]
     }
+   ],
+   "keys": [
+    "−"
    ],
    "p": [
     7.42,
@@ -174223,7 +175658,7 @@ window.ROADMAP = {
     10.4
    ],
    "comb": {
-    "b": 0.245,
+    "b": 0.243,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -174246,27 +175681,1160 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "紙のテープを半分に折って、また広げてみよう。",
+       "svg": "<svg viewBox=\"0 0 240 174\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"10\" width=\"200\" height=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"45.9\" font-size=\"11\" text-anchor=\"middle\">① テープ</text><line x1=\"120\" y1=\"50\" x2=\"120\" y2=\"62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,56 120,62 124,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"73\" y=\"71\" width=\"100\" height=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"70\" y=\"68\" width=\"100\" height=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"107.8\" font-size=\"11\" text-anchor=\"middle\">② 半分に折る</text><line x1=\"120\" y1=\"110\" x2=\"120\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"116,116 120,122 124,116\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"20\" y=\"128\" width=\"200\" height=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"124\" x2=\"120\" y2=\"152\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"120\" y=\"169.8\" font-size=\"11\" text-anchor=\"middle\">③ 広げる</text></svg>",
+       "explain": "テープを半分に折ると、テープが 2 まい重なります。広げると、まん中に折り目が 1 本できています。重なったまま、もう一度半分に折ると、重なりは 4 まいになります。折るたびに、重なった紙ぜんぶを一度に折るので、重なりも折り目もふえていきます。じっさいにテープを折って、はしを指でさわって数えてみましょう。"
+      },
+      {
+       "part": "思い出す",
+       "text": "まん中のたての線で折ると、ぴったり重なる並びはどれですか。",
+       "choices": [
+        "🟦🟦🟥",
+        "🟦🟥🟦",
+        "🟥🟦🟦"
+       ],
+       "answer": "🟦🟥🟦",
+       "check": "[c for c in ['🟦🟦🟥', '🟦🟥🟦', '🟥🟦🟦'] if c == c[::-1]][0]",
+       "hints": [
+        "折ると、左のはしと右のはしが重なるよ。",
+        "左のはしと右のはしの色をくらべよう。",
+        "左から読んでも右から読んでも同じ並びをさがそう。"
+       ],
+       "paths": [
+        [
+         "はしとはしの色が同じ",
+         "🟦🟥🟦"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "この形は、四角の色板が何まいでできていますか。",
+       "figure": "🟥🟥🟥\n🟥🟥⬜",
+       "answer": 5,
+       "check": "n('🟥')",
+       "hints": [
+        "色板を 1 まいずつ指でさそう。",
+        "上の列から数えよう。",
+        "⬜ は色板のない所だよ。"
+       ],
+       "paths": [
+        [
+         "上の列 3 まい",
+         "下の列に続けて 4、5",
+         "5 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープを半分に折り、重なったまま、もう一度半分に折りました。テープは何まい重なっていますか。",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "1 回折ると、何まい重なるかな。",
+        "2 回目は、重なったテープを一度に折るね。",
+        "テープを折って、はしを数えてみよう。"
+       ],
+       "paths": [
+        [
+         "1 回で 2 まい",
+         "2 まいがもう一度重なって 4 まい"
+        ]
+       ],
+       "note": "2 回折ったから 2 まい、と答えやすい。じっさいに折って、はしの紙を数える。"
+      },
+      {
+       "part": "今日",
+       "text": "前の問題のように 2 回折ったテープを、広げました。折り目は何本ありますか。",
+       "answer": 3,
+       "check": "2 ** 2 - 1",
+       "hints": [
+        "1 回目の折り目は、どこにできたかな。",
+        "2 回目に折ると、新しい折り目はいくつできるかな。",
+        "テープを広げて、折り目を指でなぞって数えよう。"
+       ],
+       "paths": [
+        [
+         "まん中に 1 本",
+         "2 回目で左右に 1 本ずつ",
+         "ぜんぶで 3 本"
+        ]
+       ],
+       "note": "2 回折ったから 2 本、と答えやすい。広げて数えると確かめられる。"
+      },
+      {
+       "part": "今日",
+       "text": "テープを半分に折るのを、3 回くり返しました。テープは何まい重なっていますか。",
+       "answer": 8,
+       "check": "2 ** 3",
+       "hints": [
+        "2 回折ったときは、何まい重なったかな。",
+        "3 回目は、その重なりを一度に折るね。",
+        "テープを 3 回折って、はしを数えよう。"
+       ],
+       "paths": [
+        [
+         "2 回で 4 まい",
+         "3 回目でその 4 まいがもう一度重なる",
+         "8 まい"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "テープを半分に折るのを 3 回くり返してから、広げました。折り目は何本ありますか。",
+       "answer": 7,
+       "check": "2 ** 3 - 1",
+       "hints": [
+        "3 回折ったテープは、何まい重なっていたかな。",
+        "広げると、テープはいくつの部分に分かれて見えるかな。",
+        "となりの部分のさかい目が折り目だね。"
+       ],
+       "paths": [
+        [
+         "8 まい重なる",
+         "広げると 8 つの部分",
+         "さかい目は 7 本"
+        ],
+        [
+         "じっさいに 3 回折って広げ、折り目を数える"
+        ]
+       ],
+       "note": "部分の数と折り目の数は 1 ちがう。植木算と同じ考え。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "正方形の紙を、図のように左を右へ、下を上へ折りました。紙は何まい重なっていますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ できた形</text></svg>",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "① で折ると、何まい重なるかな。",
+        "② は、重なった紙を一度に折るね。",
+        "折り紙で折って、かどを数えよう。"
+       ],
+       "paths": [
+        [
+         "① で 2 まい",
+         "② で 4 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープを図の左のように、じゃばらに 3 つに折りました。テープは何まい重なっていますか。",
+       "svg": "<svg viewBox=\"0 0 240 70\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"20,16 80,16 20,26 80,36\" stroke=\"currentColor\" stroke-width=\"2.2\" fill=\"none\"/><text x=\"62\" y=\"61.5\" font-size=\"10\" text-anchor=\"middle\">折ったところ（横から）</text><rect x=\"110\" y=\"20\" width=\"120\" height=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"150\" y1=\"16\" x2=\"150\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"190\" y1=\"16\" x2=\"190\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"170\" y=\"61.5\" font-size=\"10\" text-anchor=\"middle\">広げたところ</text></svg>",
+       "answer": 3,
+       "check": "2 + 1",
+       "hints": [
+        "横から見た図の、線の重なりを数えよう。",
+        "広げた図では、テープはいくつの部分に分かれているかな。",
+        "部分が 1 つずつ重なっているよ。"
+       ],
+       "paths": [
+        [
+         "折り目 2 本で 3 つの部分",
+         "3 まい重なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープを半分に 2 回折ってから広げました。おとなといっしょに、折り目ぜんぶにそってはさみで切ると、テープは何本に分かれますか。",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "2 回折ったテープの折り目は、何本だったかな。",
+        "折り目で分かれた部分を数えよう。",
+        "部分の数は、折り目の数より多いかな、少ないかな。"
+       ],
+       "paths": [
+        [
+         "折り目は 3 本",
+         "分かれた部分は 4 つ",
+         "4 本"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "折った紙に穴をあけて広げると、穴はどこにできるでしょう。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"199.6\" cy=\"61.6\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "explain": "正方形の紙の左を右へ折り、下を上へ折ると、紙は 4 まい重なります。太い線は折り目です。重なったまま穴を 1 つあけると、4 まいに一度に穴があくので、広げると穴は 4 つあります。広げた紙を、折り目で折りもどすと、穴はぴったり重なります。だから、穴は折り目をはさんで左右、上下に、鏡に映したような位置にできます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "正方形の紙を、図のように三角に 2 回折りました。紙は何まい重なっていますか。",
+       "svg": "<svg viewBox=\"0 0 240 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"18\" width=\"60\" height=\"60\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"10\" y1=\"78\" x2=\"70\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">① 三角に</text><line x1=\"76\" y1=\"48\" x2=\"92\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,44 92,48 86,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"98,78 158,78 158,18\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"128\" y1=\"48\" x2=\"158\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"132\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">② もう一度</text><line x1=\"164\" y1=\"48\" x2=\"178\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"172,44 178,48 172,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"184,66 230,66 207,43\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "① で折ると、何まい重なるかな。",
+        "② は、重なった紙を一度に折るね。",
+        "折り紙で折って、数えてみよう。"
+       ],
+       "paths": [
+        [
+         "① で 2 まい",
+         "② で 4 まい"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "｜ は鏡です。鏡に映った並びはどれですか。",
+       "figure": "🟩🟥🟦｜",
+       "choices": [
+        "🟦🟥🟩",
+        "🟩🟥🟦",
+        "🟥🟦🟩"
+       ],
+       "answer": "🟦🟥🟩",
+       "check": "fig.split('｜')[0][::-1]",
+       "hints": [
+        "鏡にいちばん近いのはどれかな。",
+        "鏡に近いものは、鏡の中でも鏡のそばに映るよ。",
+        "鏡のそばから順にならべよう。"
+       ],
+       "paths": [
+        [
+         "鏡のそばは 🟦",
+         "次に 🟥、いちばん遠くに 🟩",
+         "🟦🟥🟩"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"190\" cy=\"42.4\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 4,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((5, 7))",
+       "hints": [
+        "穴をあけたとき、紙は何まい重なっていたかな。",
+        "重なった紙ぜんぶに、一度に穴があくね。",
+        "折り紙で折って、えんぴつの先で穴をあけて確かめよう。"
+       ],
+       "paths": [
+        [
+         "4 まい重なっている",
+         "4 まいに 1 つずつ",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "見本と同じように折って、穴を 1 つあけました。広げた紙はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"199.6\" cy=\"42.4\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text><g transform=\"translate(0,114)\"><rect x=\"10\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42\" y1=\"8\" x2=\"42\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"10\" y1=\"40\" x2=\"74\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"64.4\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"32.4\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"64.4\" cy=\"49.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"32.4\" cy=\"49.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"42\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ア</text><rect x=\"88\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"8\" x2=\"120\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88\" y1=\"40\" x2=\"152\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"142.4\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"97.6\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"142.4\" cy=\"62.4\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"97.6\" cy=\"62.4\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">イ</text><rect x=\"166\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"198\" y1=\"8\" x2=\"198\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"166\" y1=\"40\" x2=\"230\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"220.4\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"175.6\" cy=\"17.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ウ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "イ",
+       "check": "[k for k, v in {'ア': {(7, 7), (-3, 7), (7, -3), (-3, -3)}, 'イ': {(7, 7), (-7, 7), (7, -7), (-7, -7)}, 'ウ': {(7, 7), (-7, 7)}}.items() if v == {(a * 7, b * 7) for a in (1, -1) for b in (1, -1)}][0]",
+       "hints": [
+        "広げた紙には、穴がいくつあるはずかな。",
+        "広げた紙を折り目で折ると、穴はぴったり重なるはずだね。",
+        "折り目のたての点線をはさんで、左右の穴が鏡に映した位置にあるかを見よう。"
+       ],
+       "paths": [
+        [
+         "穴は 4 つ",
+         "折り目をはさんで鏡に映した位置",
+         "イ"
+        ]
+       ],
+       "note": "ア は穴を「ずらした」位置。折り目で折ると重ならない。G-004 の「折ると重なる形」を思い出させる。"
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙の、折り目（太い線）の上に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"166\" cy=\"52\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 2,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 5))",
+       "hints": [
+        "穴は、どの折り目にかかっているかな。",
+        "折り目にかかった穴は、広げると左右がつながって 1 つの穴になるよ。",
+        "折り紙で折って、穴をあけて確かめよう。"
+       ],
+       "paths": [
+        [
+         "たての折り目にかかっている",
+         "左右の 2 まいの穴が 1 つにつながる",
+         "上下に 1 つずつで 2 つ"
+        ]
+       ],
+       "note": "4 つと答えやすい。折り目の上の穴は、広げると 1 つにつながる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "図のように折った紙に、穴を 2 つあけました。1 つは折り目の上にあります。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"194.8\" cy=\"47.2\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"180.4\" cy=\"76\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 6,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((6, 6), (3, 0))",
+       "hints": [
+        "折り目にかかっていない穴は、広げるといくつになるかな。",
+        "下の折り目にかかった穴は、広げるといくつになるかな。",
+        "2 つの穴を分けて考えよう。"
+       ],
+       "paths": [
+        [
+         "かかっていない穴は 4 つ",
+         "下の折り目の穴は 2 つ",
+         "あわせて 6 つ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図のように折った紙の、2 つの折り目が交わるかど（太い線のかど）に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"166\" cy=\"76\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 1,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 0))",
+       "hints": [
+        "穴は、2 つの折り目のどちらにもかかっているね。",
+        "広げると、そのかどは紙のどこになるかな。",
+        "折り紙で確かめよう。"
+       ],
+       "paths": [
+        [
+         "かどは紙のまん中",
+         "4 まいの穴がまん中で 1 つにつながる",
+         "1 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正方形の紙を、図のように三角に 2 回折って、穴を 1 つあけました。どの折り目にもかかっていません。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"18\" width=\"60\" height=\"60\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"10\" y1=\"78\" x2=\"70\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">① 三角に</text><line x1=\"76\" y1=\"48\" x2=\"92\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,44 92,48 86,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"98,78 158,78 158,18\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"128\" y1=\"48\" x2=\"158\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"132\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">② もう一度</text><line x1=\"164\" y1=\"48\" x2=\"178\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"172,44 178,48 172,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"184,66 230,66 207,43\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "紙は何まい重なっていたかな。",
+        "重なった紙ぜんぶに、一度に穴があくね。",
+        "折り紙で確かめよう。"
+       ],
+       "paths": [
+        [
+         "4 まい重なる",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "見本と同じように折って、穴を 1 つあけました。広げた紙はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"180.4\" cy=\"47.2\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text><g transform=\"translate(0,114)\"><rect x=\"10\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42\" y1=\"8\" x2=\"42\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"10\" y1=\"40\" x2=\"74\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"51.6\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"32.4\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"42\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ア</text><rect x=\"88\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"8\" x2=\"120\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88\" y1=\"40\" x2=\"152\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"129.6\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"97.6\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"129.6\" cy=\"52.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"97.6\" cy=\"52.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">イ</text><rect x=\"166\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"198\" y1=\"8\" x2=\"198\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"166\" y1=\"40\" x2=\"230\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"207.6\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"188.4\" cy=\"20.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"207.6\" cy=\"59.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"188.4\" cy=\"59.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ウ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ウ",
+       "check": "[k for k, v in {'ア': {(3, 6), (-3, 6)}, 'イ': {(3, 6), (-7, 6), (3, -4), (-7, -4)}, 'ウ': {(3, 6), (-3, 6), (3, -6), (-3, -6)}}.items() if v == {(a * 3, b * 6) for a in (1, -1) for b in (1, -1)}][0]",
+       "hints": [
+        "広げた紙には、穴がいくつあるはずかな。",
+        "折り目で折ると、穴はぴったり重なるはずだね。",
+        "横の点線をはさんで、上下の穴が鏡に映した位置にあるかも見よう。"
+       ],
+       "paths": [
+        [
+         "穴は 4 つ",
+         "折り目をはさんで鏡に映した位置",
+         "ウ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "ひもの結び目を見てみよう。ひもが重なって交わる所を「交わり」といいます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"149.8\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"90.2\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "explain": "図はひもで作った「ひと結び」です。黒い点がひもの両はしです。交わりでは、1 本が上を、もう 1 本が下を通ります。図ですき間がある方が下を通るひもです。この結び目には交わりが 3 つあり、左のはしからたどると、上、下、上、下…と交互に通ります。両はしを持ったまま、手をはなさずに引っぱると、結び目はほどけずに小さくしまります。ひもで同じ形を作って、確かめてみましょう。"
+      },
+      {
+       "part": "思い出す",
+       "text": "図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"185.2\" cy=\"37.6\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 4,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((4, 8))",
+       "hints": [
+        "穴をあけたとき、紙は何まい重なっていたかな。",
+        "穴は、折り目にかかっているかな。",
+        "重なった紙ぜんぶに、一度に穴があくね。"
+       ],
+       "paths": [
+        [
+         "4 まい重なる",
+         "折り目にかかっていない",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "テープを半分に折るのを 2 回くり返して、広げました。折り目は何本ありますか。",
+       "answer": 3,
+       "check": "2 ** 2 - 1",
+       "hints": [
+        "1 回目の折り目は、まん中に 1 本だね。",
+        "2 回目に折ると、新しい折り目はいくつできるかな。",
+        "テープを折って、広げて数えよう。"
+       ],
+       "paths": [
+        [
+         "まん中に 1 本",
+         "左右に 1 本ずつ",
+         "3 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "このひもの結び目には、交わりがいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.3,53.5 179.8,55.2 177.3,56.9 175.1,57.8 174.4,54.9 173.5,52 172.5,49.1 171.3,46.4 170,43.7 168.5,41 166.9,38.5 165.2,36 163.3,33.6 161.3,31.4 159.2,29.2 157,27.2 154.6,25.3 152.2,23.5 149.6,21.8 147,20.3 144.3,19 141.6,17.8 138.7,16.7 135.8,15.9 132.9,15.1 129.9,14.6 126.9,14.2 123.9,14 120.9,14 117.9,14.2 114.9,14.5 111.9,15 109,15.7 106.1,16.6 103.3,17.7 100.5,18.9 97.8,20.3 95.3,21.9 92.8,23.6 90.4,25.5 88.2,27.5 86.1,29.7 84.2,32 82.5,34.5 80.9,37.1 79.5,39.7 78.3,42.5 77.3,45.4 76.5,48.3 75.9,51.2 75.6,54.2 75.5,57.3 75.7,60.3 76.1,63.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"81.1,76.2 82.8,78.7 84.8,81 86.9,83.1 89.3,85 91.8,86.7 94.5,88.2 97.2,89.4 100.1,90.4 103,91.1 106,91.6 109,91.8 112.1,91.9 115.1,91.6 118.1,91.2 121,90.5 123.9,89.6 126.7,88.4 129.3,87 131.9,85.3 134.2,83.4 136.4,81.3 138.4,79 140.2,76.6 141.8,74 143.1,71.3 144.1,68.4 145,65.5 145.6,62.6 145.9,59.6 146,56.5 145.8,53.5 145.5,50.5 144.8,47.5 144,44.6 143,41.8 141.7,39 140.3,36.4 138.6,33.8 136.8,31.4 134.8,29.1 132.7,27 130.4,25 128.1,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"140.4,63.8 138.7,61.3 136.7,59 134.6,56.9 132.2,55 129.7,53.3 127.1,51.8 124.3,50.6 121.4,49.6 118.5,48.9 115.5,48.4 112.5,48.2 109.5,48.1 106.4,48.4 103.4,48.8 100.5,49.5 97.6,50.4 94.8,51.6 92.2,53 89.6,54.7 87.3,56.6 85.1,58.7 83.1,61 81.3,63.4 79.8,66 78.4,68.7 77.4,71.6 76.5,74.5 76,77.4 75.6,80.4 75.5,83.5 75.7,86.5 76.1,89.5 76.7,92.5 77.5,95.4 78.6,98.2 79.8,101 81.3,103.6 82.9,106.2 84.7,108.6 86.7,110.9 88.8,113 91.1,115 93.5,116.9 96,118.6 98.6,120.1 101.3,121.5 104.1,122.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"194.9\" cy=\"45.1\" r=\"4\" fill=\"currentColor\"/><circle cx=\"194.9\" cy=\"94.9\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "answer": 4,
+       "check": "len('aObUcOaUdOcUbOdU') // 4",
+       "hints": [
+        "すき間のある所が交わりだよ。",
+        "片方のはしから、ひもを指でたどろう。",
+        "数えた交わりに、心の中でしるしをつけよう。"
+       ],
+       "paths": [
+        [
+         "はしからたどる",
+         "すき間のある所を数える",
+         "4 つ"
+        ]
+       ],
+       "note": "同じ交わりを 2 回数えやすい（ひもは 1 つの交わりを 2 回通る）。交わりに小さく印をつけて数える。"
+      },
+      {
+       "part": "今日",
+       "text": "このひもの両はしを持ったまま引っぱると、交わりはほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"32\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどける",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aOaU')",
+       "hints": [
+        "交わりはいくつあるかな。",
+        "輪の所は、ひもが 1 回重なっているだけだね。",
+        "ひもで同じ形を作って、引っぱってみよう。"
+       ],
+       "paths": [
+        [
+         "交わりは 1 つ",
+         "引くと輪が小さくなって消える",
+         "ほどける"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "見本のひもと形は同じですが、交わりの上と下が少しちがいます。両はしを持ったまま引っぱると、ほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"149.8,126 148.3,123.4 146.9,120.7 145.4,118.1 143.9,115.4 142.5,112.8 141,110.1 139.5,107.5 141.1,104.9 142.6,102.3 143.8,99.5 144.9,96.7 145.7,93.8 146.4,90.8 146.9,87.8 147.2,84.8 147.3,81.8 147.3,78.8 147.2,75.7 146.9,72.7 146.4,69.7 145.9,66.8 145.1,63.8 144.3,60.9 143.3,58 142.3,55.2 141.1,52.4 139.7,49.7 138.3,47 136.8,44.4 135.1,41.9 133.4,39.4 131.6,37 129.6,34.7 127.6,32.4 125.4,30.3 123.2,28.2 120.9,26.3 118.5,24.5 116,22.7 113.4,21.1 110.8,19.7 108.1,18.3 105.3,17.2 102.4,16.2 99.5,15.3 96.5,14.7 93.5,14.2 90.5,14 87.5,14 84.5,14.3 81.5,14.9 78.6,15.8 75.8,17 73.2,18.5 70.8,20.3 68.7,22.4 66.9,24.9 65.4,27.5 64.4,30.4 63.8,33.4 63.6,36.4 63.8,39.4 64.3,42.4 65.1,45.3 66.2,48.1 67.6,50.8 69.2,53.4 71,55.8 72.9,58.1 75,60.3 77.2,62.4 79.6,64.3 82.1,66 84.6,67.7 87.2,69.2 89.9,70.5 92.7,71.8 95.5,72.9 98.4,73.9 101.3,74.7 104.2,75.4 107.2,76 110.2,76.5 113.2,76.8 116.2,77.1 119.2,77.1 122.3,77.1 125.3,77 128.3,76.7 131.3,76.3 134.3,75.7 137.3,75.1 140.2,74.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"153.1,69 155.7,67.5 158.3,65.8 160.7,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,53 172.7,50.3 174,47.6 175.1,44.8 175.8,41.8 176.3,38.8 176.4,35.8 176.1,32.7 175.4,29.8 174.3,26.9 172.8,24.3 170.9,21.9 168.7,19.8 166.2,18.1 163.5,16.6 160.7,15.5 157.7,14.7 154.7,14.2 151.7,14 148.7,14.1 145.6,14.3 142.6,14.8 139.7,15.5 136.7,16.4 133.9,17.5 131.1,18.7 128.4,20.1 125.8,21.6\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.7,30.2 112.5,32.4 110.4,34.7 108.3,37.1 106.4,39.6 104.6,42.2 102.9,44.9 101.4,47.6 99.9,50.4 98.6,53.2 97.4,56.1 96.3,59.1 95.3,62.1 94.5,65.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"149.8\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"90.2\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどける",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObOcOaUbUcU')",
+       "hints": [
+        "右のはしから指でたどって、交わりで上と下のどちらを通るか、言ってみよう。",
+        "見本のひもは、上、下、上…と交互だったね。このひもはどうかな。",
+        "ひもで同じ形を作って、引っぱってみよう。"
+       ],
+       "paths": [
+        [
+         "右のはしからたどると、はじめに 3 つとも上を通る",
+         "あとは下を通るだけ",
+         "持ち上げるとほどける"
+        ]
+       ],
+       "note": "形が同じでも、上と下で結び目になるかが決まる。見本と見くらべ、ひもで作って確かめる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "こみ入って見えるひもです。両はしを持ったまま引っぱると、ほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.4,53.5 179.9,55.2 177.4,56.8 175.1,57.9 174.4,54.9 173.5,52 172.5,49.2 171.3,46.4 170,43.7 168.6,41.1 167,38.5 165.2,36.1 163.4,33.7 161.4,31.4 159.3,29.3 157,27.3 154.7,25.3 152.3,23.6 149.8,21.9 147.2,20.4 144.5,19.1 141.7,17.8 138.9,16.8 136,15.9 133.1,15.2 130.1,14.6 127.1,14.3 124.1,14 121.1,14 118.1,14.2 115.1,14.5 112.2,15 109.2,15.7 106.3,16.5 103.5,17.6 100.7,18.8 98.1,20.2 95.5,21.7 93,23.4 90.7,25.3 88.4,27.3 86.3,29.5 84.4,31.8 82.6,34.2 81,36.8 79.6,39.4 78.4,42.2 77.4,45 76.6,47.9 76,50.9 75.6,53.9 75.5,56.9 75.6,59.9 76,62.9 76.6,65.8 77.5,68.7 78.6,71.5 79.9,74.2 81.5,76.8 83.2,79.2 85.2,81.5 87.4,83.6 89.8,85.4 92.3,87.1 95,88.5 97.8,89.6 100.6,90.5 103.6,91.2 106.6,91.7 109.6,91.9 112.6,91.8 115.6,91.6 118.5,91.1 121.5,90.4 124.3,89.4 127.1,88.2 129.7,86.7 132.2,85.1 134.5,83.2 136.7,81 138.7,78.8 140.4,76.3 141.9,73.7 143.2,71 144.2,68.1 145,65.2 145.6,62.3 145.9,59.3 146,56.3 145.8,53.3 145.4,50.3 144.8,47.3 144,44.5 142.9,41.6 141.6,38.9 140.2,36.3 138.5,33.7 136.7,31.3 134.8,29 132.6,26.9 130.4,24.9 128,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"140.4,63.8 138.7,61.3 136.7,59 134.5,56.8 132.2,54.9 129.6,53.2 127,51.8 124.2,50.5 121.3,49.6 118.3,48.9 115.3,48.4 112.3,48.1 109.2,48.1 106.2,48.4 103.2,48.9 100.2,49.6 97.3,50.5 94.6,51.8 91.9,53.2 89.4,54.9 87,56.8 84.8,59 82.8,61.3 81.1,63.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"76.1,76.7 75.7,79.8 75.5,82.8 75.6,85.9 76,88.9 76.5,91.9 77.4,94.9 78.4,97.8 79.6,100.6 81.1,103.3 82.7,105.9 84.5,108.4 86.5,110.7 88.6,112.9 90.9,114.9 93.3,116.8 95.9,118.5 98.5,120.1 101.3,121.5 104.1,122.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"194.9\" cy=\"45.1\" r=\"4\" fill=\"currentColor\"/><circle cx=\"194.9\" cy=\"94.9\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどける",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObOcOaUdOcUbUdU')",
+       "hints": [
+        "右上のはしから指でたどってみよう。",
+        "交わりにはじめて来たとき、いつも上と下のどちらを通っているかな。",
+        "はじめにいつも上を通るひもは、はしから持ち上げていくと、どうなるかな。"
+       ],
+       "paths": [
+        [
+         "右上のはしからたどる",
+         "どの交わりも、はじめて来たときは上を通る",
+         "はしから持ち上げるとほどける"
+        ]
+       ],
+       "note": "交わりの数が多くても、ほどけることがある。上と下の通り方を、1 つずつたどって確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "見本のひもの結び目（ひと結び）には、交わりがいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"149.8\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"90.2\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "answer": 3,
+       "check": "len('aObUcOaUbOcU') // 4",
+       "hints": [
+        "すき間のある所が交わりだよ。",
+        "片方のはしからたどろう。",
+        "数えた交わりに、しるしをつけよう。"
+       ],
+       "paths": [
+        [
+         "はしからたどる",
+         "3 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "このひもの両はしを持ったまま引っぱると、ほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.3,53.5 179.8,55.2 177.3,56.9 175.1,57.8 174.4,54.9 173.5,52 172.5,49.1 171.3,46.4 170,43.7 168.5,41 166.9,38.5 165.2,36 163.3,33.6 161.3,31.4 159.2,29.2 157,27.2 154.6,25.3 152.2,23.5 149.6,21.8 147,20.3 144.3,19 141.6,17.8 138.7,16.7 135.8,15.9 132.9,15.1 129.9,14.6 126.9,14.2 123.9,14 120.9,14 117.9,14.2 114.9,14.5 111.9,15 109,15.7 106.1,16.6 103.3,17.7 100.5,18.9 97.8,20.3 95.3,21.9 92.8,23.6 90.4,25.5 88.2,27.5 86.1,29.7 84.2,32 82.5,34.5 80.9,37.1 79.5,39.7 78.3,42.5 77.3,45.4 76.5,48.3 75.9,51.2 75.6,54.2 75.5,57.3 75.7,60.3 76.1,63.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"81.1,76.2 82.8,78.7 84.8,81 86.9,83.1 89.3,85 91.8,86.7 94.5,88.2 97.2,89.4 100.1,90.4 103,91.1 106,91.6 109,91.8 112.1,91.9 115.1,91.6 118.1,91.2 121,90.5 123.9,89.6 126.7,88.4 129.3,87 131.9,85.3 134.2,83.4 136.4,81.3 138.4,79 140.2,76.6 141.8,74 143.1,71.3 144.1,68.4 145,65.5 145.6,62.6 145.9,59.6 146,56.5 145.8,53.5 145.5,50.5 144.8,47.5 144,44.6 143,41.8 141.7,39 140.3,36.4 138.6,33.8 136.8,31.4 134.8,29.1 132.7,27 130.4,25 128.1,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"140.4,63.8 138.7,61.3 136.7,59 134.6,56.9 132.2,55 129.7,53.3 127.1,51.8 124.3,50.6 121.4,49.6 118.5,48.9 115.5,48.4 112.5,48.2 109.5,48.1 106.4,48.4 103.4,48.8 100.5,49.5 97.6,50.4 94.8,51.6 92.2,53 89.6,54.7 87.3,56.6 85.1,58.7 83.1,61 81.3,63.4 79.8,66 78.4,68.7 77.4,71.6 76.5,74.5 76,77.4 75.6,80.4 75.5,83.5 75.7,86.5 76.1,89.5 76.7,92.5 77.5,95.4 78.6,98.2 79.8,101 81.3,103.6 82.9,106.2 84.7,108.6 86.7,110.9 88.8,113 91.1,115 93.5,116.9 96,118.6 98.6,120.1 101.3,121.5 104.1,122.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"194.9\" cy=\"45.1\" r=\"4\" fill=\"currentColor\"/><circle cx=\"194.9\" cy=\"94.9\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどけない",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObUcOaUdOcUbOdU')",
+       "hints": [
+        "右上のはしからたどって、上と下を言ってみよう。",
+        "上、下、上、下…と交互になっているかな。",
+        "ひもで同じ形を作って、引っぱってみよう。"
+       ],
+       "paths": [
+        [
+         "上と下が交互",
+         "引いても結び目が残る",
+         "ほどけない"
+        ]
+       ],
+       "note": "この結び目は「8 の字結び」。ほどけないことは、ひもで作って確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "このひもには、交わりがいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"32\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "answer": 1,
+       "check": "len('aOaU') // 4",
+       "hints": [
+        "すき間のある所をさがそう。",
+        "輪の根もとを見よう。",
+        "片方のはしからたどって数えよう。"
+       ],
+       "paths": [
+        [
+         "輪の根もとに 1 つ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "テープを半分に 2 回折って広げると、折り目は 3 本になります。なぜ 3 本になるのか、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 40\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"20\" y=\"9\" width=\"200\" height=\"22\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"70\" y1=\"5\" x2=\"70\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"5\" x2=\"120\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"170\" y1=\"5\" x2=\"170\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "例：「1 回目に折ると、まん中に折り目が 1 本できる。2 回目は、2 まい重なったテープを一度に折るので、1 まいに 1 本ずつ、新しい折り目が 2 本できる。だから、あわせて 3 本。」と書ければよい。① 1 回目の折り目は 1 本、② 2 回目は重なった 2 まいを一度に折る、③ 新しい折り目が 2 本、の 3 点を見る。「3 回折ると、4 まい重なったテープを一度に折るので、新しい折り目が 4 本ふえて 7 本」と続けて言えれば、なおよい。",
+       "hints": [
+        "1 回目に折ったとき、折り目は何本できたかな。",
+        "2 回目に折るとき、テープは何まい重なっているかな。",
+        "「2 まいを一度に折るので〜」と書こう。"
+       ],
+       "paths": [
+        [
+         "1 回目で 1 本",
+         "2 回目は 2 まいを一度に折る",
+         "新しく 2 本",
+         "あわせて 3 本"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "折った紙に穴を 1 つあけて広げると、穴は折り目をはさんで、鏡に映したような位置にできます。なぜですか。見本の紙を例にして、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"199.6\" cy=\"61.6\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text><g transform=\"translate(0,114)\"><rect x=\"10\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42\" y1=\"8\" x2=\"42\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"10\" y1=\"40\" x2=\"74\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"64.4\" cy=\"30.4\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"19.6\" cy=\"30.4\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"64.4\" cy=\"49.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"19.6\" cy=\"49.6\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"42\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">④ 広げた紙</text></g></svg>",
+       "explain": "例：「穴をあけたとき、紙は重なっていて、一度に全部の紙に穴があく。広げた紙を折り目で折りもどすと、もとのように重なるので、穴もぴったり重なる。折り目で折って重なる 2 つの位置は、折り目を鏡にして映した位置になる。」と書ければよい。① 重なった紙に一度に穴があく、② 折りもどすと穴が重なる、③ 折って重なる位置は鏡に映した位置（G-004）、の 3 点を見る。「ずらした位置」と「鏡に映した位置」のちがいを、2 日目のア（ずらした図）で話すとよい。",
+       "hints": [
+        "穴をあけたとき、紙は重なっていたね。",
+        "広げた紙を折り目で折りもどすと、穴はどうなるかな。",
+        "折って重なる位置は、折り目を鏡にするとどんな位置かな。"
+       ],
+       "paths": [
+        [
+         "重なった紙に一度に穴",
+         "折りもどすと穴が重なる",
+         "折って重なる位置は鏡に映した位置"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "このひもは、右のはしからたどると、どの交わりにも先に上を通って来ます。両はしを引っぱると ほどけるのはなぜですか。文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"149.8,126 148.3,123.4 146.9,120.7 145.4,118.1 143.9,115.4 142.5,112.8 141,110.1 139.5,107.5 141.1,104.9 142.6,102.3 143.8,99.5 144.9,96.7 145.7,93.8 146.4,90.8 146.9,87.8 147.2,84.8 147.3,81.8 147.3,78.8 147.2,75.7 146.9,72.7 146.4,69.7 145.9,66.8 145.1,63.8 144.3,60.9 143.3,58 142.3,55.2 141.1,52.4 139.7,49.7 138.3,47 136.8,44.4 135.1,41.9 133.4,39.4 131.6,37 129.6,34.7 127.6,32.4 125.4,30.3 123.2,28.2 120.9,26.3 118.5,24.5 116,22.7 113.4,21.1 110.8,19.7 108.1,18.3 105.3,17.2 102.4,16.2 99.5,15.3 96.5,14.7 93.5,14.2 90.5,14 87.5,14 84.5,14.3 81.5,14.9 78.6,15.8 75.8,17 73.2,18.5 70.8,20.3 68.7,22.4 66.9,24.9 65.4,27.5 64.4,30.4 63.8,33.4 63.6,36.4 63.8,39.4 64.3,42.4 65.1,45.3 66.2,48.1 67.6,50.8 69.2,53.4 71,55.8 72.9,58.1 75,60.3 77.2,62.4 79.6,64.3 82.1,66 84.6,67.7 87.2,69.2 89.9,70.5 92.7,71.8 95.5,72.9 98.4,73.9 101.3,74.7 104.2,75.4 107.2,76 110.2,76.5 113.2,76.8 116.2,77.1 119.2,77.1 122.3,77.1 125.3,77 128.3,76.7 131.3,76.3 134.3,75.7 137.3,75.1 140.2,74.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"153.1,69 155.7,67.5 158.3,65.8 160.7,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,53 172.7,50.3 174,47.6 175.1,44.8 175.8,41.8 176.3,38.8 176.4,35.8 176.1,32.7 175.4,29.8 174.3,26.9 172.8,24.3 170.9,21.9 168.7,19.8 166.2,18.1 163.5,16.6 160.7,15.5 157.7,14.7 154.7,14.2 151.7,14 148.7,14.1 145.6,14.3 142.6,14.8 139.7,15.5 136.7,16.4 133.9,17.5 131.1,18.7 128.4,20.1 125.8,21.6\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.7,30.2 112.5,32.4 110.4,34.7 108.3,37.1 106.4,39.6 104.6,42.2 102.9,44.9 101.4,47.6 99.9,50.4 98.6,53.2 97.4,56.1 96.3,59.1 95.3,62.1 94.5,65.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"149.8\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"90.2\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "explain": "例：「右のはしからたどると、どの交わりも先に上を通り、2 回目に来るときは下を通る。だから、右のはしの方から順にひもを持ち上げていくと、上にあるひもは下のひもに引っかからずに持ち上がる。全部持ち上げると、ひもは 1 本のまっすぐなひもにもどる。」と書ければよい。① 先に通る所がいつも上、② はしから持ち上げると引っかからない、の 2 点を見る。ひもを机に置いて、じっさいに右のはしから持ち上げて見せるとよい。見本のひと結び（上、下、上…と交互）は、どのはしから持ち上げても下のひもに引っかかることも見せる。",
+       "hints": [
+        "右のはしから指でたどって、交わりで上と下のどちらを通るか言おう。",
+        "先に上を通るひもを、はしから持ち上げるとどうなるかな。",
+        "下を通るひもに、引っかかるかな。"
+       ],
+       "paths": [
+        [
+         "どの交わりも先に上を通る",
+         "はしから持ち上げる",
+         "引っかからない",
+         "ほどける"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 つの輪が重なっています。左の輪を持ち上げると、2 つの輪ははずれますか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"137.2,60 137.1,57 136.8,54 136.4,51 135.7,48.1 134.8,45.2 133.7,42.4 132.5,39.7 131.1,37 129.5,34.5 127.7,32 125.8,29.7 123.8,27.5 121.6,25.4 119.2,23.5 116.8,21.8 114.2,20.2 111.6,18.8 108.8,17.5 106,16.5 103.2,15.6 100.2,14.9 97.3,14.4 94.3,14.1 91.3,14 88.2,14.1 85.2,14.4 82.3,14.9 79.3,15.6 76.5,16.5 73.7,17.5 70.9,18.8 68.3,20.2 65.7,21.8 63.3,23.5 60.9,25.4 58.7,27.5 56.7,29.7 54.8,32 53,34.5 51.4,37 50,39.7 48.8,42.4 47.7,45.2 46.8,48.1 46.1,51 45.7,54 45.4,57 45.2,60 45.4,63 45.7,66 46.1,69 46.8,71.9 47.7,74.8 48.8,77.6 50,80.3 51.4,83 53,85.5 54.8,88 56.7,90.3 58.7,92.5 60.9,94.6 63.3,96.5 65.7,98.2 68.2,99.8 70.9,101.2 73.7,102.5 76.5,103.5 79.3,104.4 82.3,105.1 85.2,105.6 88.2,105.9 91.2,106 94.3,105.9 97.3,105.6 100.2,105.1 103.2,104.4 106,103.5 108.8,102.5 111.6,101.2 114.2,99.8 116.8,98.2 119.2,96.5 121.6,94.6 123.8,92.5 125.8,90.3 127.7,88 129.5,85.5 131.1,83 132.5,80.3 133.7,77.6 134.8,74.8 135.7,71.9 136.4,69 136.8,66 137.1,63 137.2,60\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.8,105.1 142.8,105.6 145.8,105.9 148.8,106 151.8,105.9 154.8,105.6 157.7,105.1 160.7,104.4 163.5,103.5 166.4,102.5 169.1,101.2 171.8,99.8 174.3,98.2 176.8,96.5 179.1,94.6 181.3,92.5 183.3,90.3 185.2,88 187,85.5 188.6,83 190,80.3 191.2,77.6 192.3,74.8 193.2,71.9 193.9,69 194.3,66 194.6,63 194.8,60 194.6,57 194.3,54 193.9,51 193.2,48.1 192.3,45.2 191.2,42.4 190,39.7 188.6,37 187,34.5 185.2,32 183.3,29.7 181.3,27.5 179.1,25.4 176.8,23.5 174.3,21.8 171.8,20.2 169.1,18.8 166.4,17.5 163.5,16.5 160.7,15.6 157.7,14.9 154.8,14.4 151.8,14.1 148.8,14 145.8,14.1 142.8,14.4 139.8,14.9 136.9,15.6 134,16.4 131.2,17.5 128.4,18.7 125.8,20.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.9,28.9 112.9,31.2 111,33.7 109.3,36.3 107.8,39 106.5,41.9 105.4,44.8 104.4,47.7 103.7,50.7 103.2,53.8 102.9,56.9 102.8,60 102.9,63.1 103.2,66.2 103.7,69.3 104.4,72.3 105.4,75.2 106.5,78.1 107.8,81 109.3,83.7 111,86.3 112.9,88.8 114.9,91.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "choices": [
+        "はずれる",
+        "はずれない"
+       ],
+       "answer": "はずれる",
+       "check": "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OO')",
+       "hints": [
+        "2 つの輪の交わりは、いくつあるかな。",
+        "それぞれの交わりで、左の輪は上と下のどちらを通っているかな。",
+        "左の輪が、どの交わりでも上なら、どうなるかな。"
+       ],
+       "paths": [
+        [
+         "交わりは 2 つ",
+         "左の輪はどちらも上",
+         "持ち上げるとはずれる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 つの輪が重なっています。この 2 つの輪は、はずれますか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"114.2,20.2 111.6,18.7 108.8,17.5 106,16.4 103.1,15.6 100.1,14.9 97.2,14.4 94.2,14.1 91.1,14 88.1,14.1 85.1,14.4 82.1,14.9 79.2,15.6 76.3,16.5 73.5,17.6 70.7,18.8 68.1,20.3 65.5,21.9 63.1,23.7 60.7,25.6 58.5,27.7 56.5,29.9 54.6,32.2 52.8,34.7 51.3,37.3 49.9,39.9 48.6,42.7 47.6,45.5 46.7,48.4 46.1,51.4 45.6,54.4 45.3,57.4 45.3,60.4 45.4,63.4 45.7,66.4 46.2,69.4 46.9,72.3 47.9,75.2 48.9,78 50.2,80.8 51.7,83.4 53.3,86 55.1,88.4 57,90.7 59.1,92.9 61.3,94.9 63.7,96.8 66.2,98.6 68.8,100.1 71.4,101.5 74.2,102.7 77,103.8 80,104.6 82.9,105.2 85.9,105.7 88.9,105.9 91.9,106 94.9,105.8 97.9,105.5 100.9,105 103.8,104.2 106.7,103.3 109.5,102.2 112.3,100.9 114.9,99.4 117.4,97.8 119.9,96 122.2,94 124.3,91.9 126.4,89.7 128.2,87.3 130,84.8 131.5,82.2 132.9,79.6 134.1,76.8 135.1,73.9 135.9,71 136.5,68.1 137,65.1 137.2,62.1 137.2,59.1 137.1,56 136.7,53 136.2,50.1 135.4,47.1 134.5,44.3 133.3,41.5 132,38.7 130.5,36.1 128.9,33.6 127.1,31.2 125.1,28.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.9,105.1 142.8,105.6 145.8,105.9 148.9,106 151.9,105.9 154.9,105.6 157.9,105.1 160.8,104.4 163.7,103.5 166.5,102.4 169.3,101.2 171.9,99.7 174.5,98.1 176.9,96.3 179.3,94.4 181.5,92.3 183.5,90.1 185.4,87.8 187.2,85.3 188.7,82.7 190.1,80.1 191.4,77.3 192.4,74.5 193.3,71.6 193.9,68.6 194.4,65.6 194.7,62.6 194.7,59.6 194.6,56.6 194.3,53.6 193.8,50.6 193.1,47.7 192.1,44.8 191.1,42 189.8,39.2 188.3,36.6 186.7,34 184.9,31.6 183,29.3 180.9,27.1 178.7,25.1 176.3,23.2 173.8,21.4 171.2,19.9 168.6,18.5 165.8,17.3 163,16.2 160,15.4 157.1,14.8 154.1,14.3 151.1,14.1 148.1,14 145.1,14.2 142.1,14.5 139.1,15 136.2,15.8 133.3,16.7 130.5,17.8 127.7,19.1 125.1,20.6 122.6,22.2 120.1,24 117.8,26 115.7,28.1 113.6,30.3 111.8,32.7 110,35.2 108.5,37.8 107.1,40.4 105.9,43.2 104.9,46.1 104.1,49 103.5,51.9 103,54.9 102.8,57.9 102.8,60.9 102.9,64 103.3,67 103.8,69.9 104.6,72.9 105.5,75.7 106.7,78.5 108,81.3 109.5,83.9 111.1,86.4 112.9,88.8 114.9,91.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "choices": [
+        "はずれる",
+        "はずれない"
+       ],
+       "answer": "はずれない",
+       "check": "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OU')",
+       "hints": [
+        "左の輪は、上の交わりで上と下のどちらを通っているかな。",
+        "下の交わりではどうかな。",
+        "上と下を両方通る輪は、持ち上げると引っかかるかな。"
+       ],
+       "paths": [
+        [
+         "左の輪は、上の交わりで下、下の交わりで上",
+         "くさりのようにつながっている",
+         "はずれない"
+        ]
+       ],
+       "note": "紙の輪やゴムの輪で作ると確かめられる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "テープを半分に折るのを 3 回くり返したとき、重なりは何まいですか。",
+       "answer": 8,
+       "check": "2 ** 3",
+       "hints": [
+        "2 回折ったときは 4 まいだったね。",
+        "3 回目は、4 まいを一度に折るね。",
+        "テープを折って数えよう。"
+       ],
+       "paths": [
+        [
+         "4 まいを一度に折る",
+         "8 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙の、たての折り目（左の太い線）の上に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"166\" cy=\"42.4\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 2,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((0, 7))",
+       "hints": [
+        "穴はどの折り目にかかっているかな。",
+        "折り目にかかった穴は、広げると 1 つにつながるよ。",
+        "上と下には、いくつずつできるかな。"
+       ],
+       "paths": [
+        [
+         "たての折り目で左右がつながる",
+         "上下に 1 つずつ",
+         "2 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 つの輪が重なっています。右の輪は、2 つの交わりのどちらでも下を通っています。この 2 つの輪は、はずれますか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"137.2,60 137.1,57 136.8,54 136.4,51 135.7,48.1 134.8,45.2 133.7,42.4 132.5,39.7 131.1,37 129.5,34.5 127.7,32 125.8,29.7 123.8,27.5 121.6,25.4 119.2,23.5 116.8,21.8 114.2,20.2 111.6,18.8 108.8,17.5 106,16.5 103.2,15.6 100.2,14.9 97.3,14.4 94.3,14.1 91.3,14 88.2,14.1 85.2,14.4 82.3,14.9 79.3,15.6 76.5,16.5 73.7,17.5 70.9,18.8 68.3,20.2 65.7,21.8 63.3,23.5 60.9,25.4 58.7,27.5 56.7,29.7 54.8,32 53,34.5 51.4,37 50,39.7 48.8,42.4 47.7,45.2 46.8,48.1 46.1,51 45.7,54 45.4,57 45.2,60 45.4,63 45.7,66 46.1,69 46.8,71.9 47.7,74.8 48.8,77.6 50,80.3 51.4,83 53,85.5 54.8,88 56.7,90.3 58.7,92.5 60.9,94.6 63.3,96.5 65.7,98.2 68.2,99.8 70.9,101.2 73.7,102.5 76.5,103.5 79.3,104.4 82.3,105.1 85.2,105.6 88.2,105.9 91.2,106 94.3,105.9 97.3,105.6 100.2,105.1 103.2,104.4 106,103.5 108.8,102.5 111.6,101.2 114.2,99.8 116.8,98.2 119.2,96.5 121.6,94.6 123.8,92.5 125.8,90.3 127.7,88 129.5,85.5 131.1,83 132.5,80.3 133.7,77.6 134.8,74.8 135.7,71.9 136.4,69 136.8,66 137.1,63 137.2,60\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.8,105.1 142.8,105.6 145.8,105.9 148.8,106 151.8,105.9 154.8,105.6 157.7,105.1 160.7,104.4 163.5,103.5 166.4,102.5 169.1,101.2 171.8,99.8 174.3,98.2 176.8,96.5 179.1,94.6 181.3,92.5 183.3,90.3 185.2,88 187,85.5 188.6,83 190,80.3 191.2,77.6 192.3,74.8 193.2,71.9 193.9,69 194.3,66 194.6,63 194.8,60 194.6,57 194.3,54 193.9,51 193.2,48.1 192.3,45.2 191.2,42.4 190,39.7 188.6,37 187,34.5 185.2,32 183.3,29.7 181.3,27.5 179.1,25.4 176.8,23.5 174.3,21.8 171.8,20.2 169.1,18.8 166.4,17.5 163.5,16.5 160.7,15.6 157.7,14.9 154.8,14.4 151.8,14.1 148.8,14 145.8,14.1 142.8,14.4 139.8,14.9 136.9,15.6 134,16.4 131.2,17.5 128.4,18.7 125.8,20.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.9,28.9 112.9,31.2 111,33.7 109.3,36.3 107.8,39 106.5,41.9 105.4,44.8 104.4,47.7 103.7,50.7 103.2,53.8 102.9,56.9 102.8,60 102.9,63.1 103.2,66.2 103.7,69.3 104.4,72.3 105.4,75.2 106.5,78.1 107.8,81 109.3,83.7 111,86.3 112.9,88.8 114.9,91.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "choices": [
+        "はずれる",
+        "はずれない"
+       ],
+       "answer": "はずれる",
+       "check": "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('UU')",
+       "hints": [
+        "右の輪はどちらの交わりでも下だね。",
+        "右の輪を、下へ引きぬくとどうなるかな。",
+        "上と下が入れかわっていない輪は、引っかかるかな。"
+       ],
+       "paths": [
+        [
+         "右の輪はどちらも下",
+         "下へぬける",
+         "はずれる"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "まん中のせん（｜）で折ってぴったり重なるように、❓ に色をぬります。❓ は何色ですか。",
+       "figure": "🟦🟨🟥｜🟥🟨❓",
+       "choices": [
+        "青",
+        "黄",
+        "赤"
+       ],
+       "answer": "青",
+       "check": "{'🟦': '青', '🟨': '黄', '🟥': '赤'}[fig.split('｜')[0][0]]",
+       "hints": [
+        "折ると、｜ に近いものどうしが重なるよ。",
+        "❓ は ｜ からいちばん遠いね。",
+        "左がわで、｜ からいちばん遠い色を見よう。"
+       ],
+       "paths": [
+        [
+         "❓ と重なるのは左のはし",
+         "🟦",
+         "青"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "この形を、たての線で 2 つに分けました。左の部分には、四角の色板が何まいありますか。",
+       "figure": "🟥🟥｜🟦🟦\n🟥🟥｜🟦⬜\n🟥⬜｜🟦⬜",
+       "answer": 5,
+       "check": "n('🟥')",
+       "hints": [
+        "｜ の左だけを見よう。",
+        "上の列から順に数えよう。",
+        "⬜ は色板のない所だよ。"
+       ],
+       "paths": [
+        [
+         "左の部分の 🟥 を数える",
+         "5 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの輪がならんでいます。左の輪と中の輪はつながっていて、中の輪は右の輪のどちらの交わりでも上を通っています。3 つの輪は、いくつに分かれますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"82.5,27.6 80.4,25.5 78,23.5 75.6,21.8 73,20.2 70.3,18.9 67.5,17.7 64.6,16.8 61.7,16.1 58.7,15.6 55.7,15.3 52.7,15.3 49.7,15.5 46.7,15.9 43.7,16.5 40.8,17.4 38,18.5 35.3,19.8 32.7,21.3 30.2,23 27.8,24.9 25.6,27 23.5,29.2 21.7,31.5 20,34.1 18.5,36.7 17.2,39.4 16.1,42.2 15.3,45.1 14.6,48.1 14.2,51.1 14,54.1 14.1,57.1 14.3,60.1 14.8,63.1 15.6,66 16.5,68.9 17.7,71.7 19.1,74.4 20.6,77 22.4,79.4 24.3,81.7 26.5,83.9 28.7,85.9 31.1,87.7 33.7,89.3 36.4,90.7 39.1,91.9 42,93 44.9,93.7 47.9,94.3 50.9,94.6 53.9,94.7 56.9,94.6 59.9,94.3 62.9,93.7 65.8,92.9 68.6,91.9 71.4,90.6 74,89.2 76.6,87.5 79,85.7 81.2,83.7 83.3,81.5 85.3,79.2 87,76.8 88.6,74.2 89.9,71.5 91.1,68.7 92,65.8 92.7,62.9 93.2,59.9 93.5,56.9 93.5,53.8 93.3,50.8 92.8,47.8 92.2,44.9 91.3,42 90.2,39.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"91.2,82.4 93.4,84.5 95.7,86.5 98.2,88.2 100.8,89.8 103.5,91.1 106.3,92.3 109.1,93.2 112.1,93.9 115,94.4 118.1,94.7 121.1,94.7 124.1,94.5 127.1,94.1 130,93.5 132.9,92.6 135.7,91.5 138.5,90.2 141.1,88.7 143.6,87 145.9,85.1 148.2,83 150.2,80.8 152.1,78.5 153.8,75.9 155.3,73.3 156.6,70.6 157.6,67.8 158.5,64.9 159.1,61.9 159.6,58.9 159.7,55.9 159.7,52.9 159.4,49.9 158.9,46.9 158.2,44 157.2,41.1 156.1,38.3 154.7,35.6 153.1,33 151.4,30.6 149.4,28.3 147.3,26.1 145,24.1 142.6,22.3 140.1,20.7 137.4,19.3 134.6,18.1 131.8,17 128.9,16.3 125.9,15.7 122.9,15.4 119.9,15.3 116.9,15.4 113.9,15.7 110.9,16.3 108,17.1 105.1,18.1 102.4,19.4 99.7,20.8 97.2,22.5 94.8,24.3 92.5,26.3 90.4,28.5 88.5,30.8 86.7,33.2 85.2,35.8 83.8,38.5 82.7,41.3 81.8,44.2 81,47.1 80.6,50.1 80.3,53.1 80.3,56.2 80.5,59.2 80.9,62.2 81.6,65.1 82.4,68 83.5,70.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"157.5,82.4 159.6,84.5 161.9,86.4 164.4,88.2 167,89.7 169.6,91.1 172.4,92.3 175.3,93.2 178.2,93.9 181.1,94.4 184.1,94.7 187.1,94.7 190.1,94.6 193.1,94.1 196,93.5 198.9,92.7 201.7,91.6 204.4,90.3 207,88.9 209.5,87.2 211.9,85.3 214.1,83.3 216.2,81.1 218.1,78.8 219.8,76.3 221.3,73.7 222.6,71 223.7,68.3 224.6,65.4 225.3,62.5 225.7,59.5 226,56.5 226,53.5 225.7,50.5 225.3,47.5 224.6,44.6 223.7,41.7 222.6,39 221.3,36.3 219.8,33.7 218.1,31.2 216.2,28.9 214.1,26.7 211.9,24.7 209.5,22.8 207,21.1 204.4,19.7 201.7,18.4 198.9,17.3 196,16.5 193.1,15.9 190.1,15.4 187.1,15.3 184.1,15.3 181.1,15.6 178.2,16.1 175.3,16.8 172.4,17.7 169.6,18.9 167,20.3 164.4,21.8 161.9,23.6 159.6,25.5 157.5,27.6\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"149.8,39.2 148.6,42.2 147.7,45.3 147,48.5 146.6,51.8 146.5,55 146.6,58.2 147,61.5 147.7,64.7 148.6,67.8 149.8,70.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "answer": 2,
+       "check": "(lambda E: max(1, 3 - len(E)))(['左と中'])",
+       "hints": [
+        "左と中の輪は、はずれるかな。",
+        "中と右の輪は、交わりで上と下が入れかわっているかな。",
+        "はずれる組をはずすと、いくつのかたまりになるかな。"
+       ],
+       "paths": [
+        [
+         "左と中はつながる",
+         "中と右ははずれる",
+         "2 つに分かれる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙に、穴を 2 つあけました。どちらも折り目にかかっていません。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"199.6\" cy=\"42.4\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"180.4\" cy=\"56.8\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 8,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((7, 7), (3, 4))",
+       "hints": [
+        "1 つの穴は、広げるといくつになるかな。",
+        "穴は 2 つあけたね。",
+        "折り紙で折って、確かめよう。"
+       ],
+       "paths": [
+        [
+         "1 つの穴が 4 つになる",
+         "2 つの穴で 4 つと 4 つ",
+         "8 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "形は同じで、交わりの上と下だけがちがう 2 本のひも ア、イ があります。両はしを引っぱっても ほどけないのはどちらですか。",
+       "svg": "<svg viewBox=\"0 0 240 246\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"144.5,106 143,103.3 141.5,100.6 140,97.9 138.5,95.3 137,92.6 136.6,89.9 138.2,87.3 139.5,84.5 140.5,81.7 141.3,78.7 141.9,75.7 142.3,72.6 142.5,69.6 142.4,66.5 142.2,63.4 141.8,60.4 141.2,57.4 140.5,54.4 139.6,51.5 138.6,48.6 137.4,45.8 136,43 134.6,40.3 133,37.7 131.2,35.2 129.4,32.7 127.4,30.4 125.2,28.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.2,19.6 111.5,18.2 108.8,17 105.9,15.9 103,15.1 100.1,14.4 97.1,14.1 94,14 91,14.2 88.1,14.8 85.2,15.8 82.5,17.1 80,18.8 77.8,20.9 76.1,23.4 74.8,26.1 74,29 73.7,32 73.8,35.1 74.4,38 75.4,40.9 76.6,43.7 78.2,46.2 80,48.7 82,51 84.1,53.1 86.5,55 88.9,56.8 91.5,58.4 94.1,59.9 96.8,61.2 99.7,62.3 102.5,63.3 105.4,64.1 108.4,64.7 111.4,65.3 114.4,65.6 117.4,65.8 120.4,65.9 123.4,65.8 126.5,65.5 129.5,65.1 132.4,64.6 135.4,63.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"148.3,58.6 150.9,57 153.3,55.2 155.6,53.3 157.8,51.2 159.8,48.9 161.7,46.5 163.2,43.9 164.5,41.2 165.5,38.3 166.1,35.4 166.3,32.3 166.1,29.3 165.3,26.4 164.1,23.7 162.4,21.2 160.2,19 157.8,17.2 155.1,15.9 152.2,14.9 149.3,14.3 146.3,14 143.2,14.1 140.2,14.4 137.3,15 134.3,15.8 131.5,16.8 128.7,18.1 126.1,19.5 123.5,21.1 121,22.8 118.6,24.6 116.3,26.6 114.2,28.7 112.1,31 110.2,33.3 108.4,35.7 106.7,38.2 105.1,40.8 103.7,43.5 102.4,46.2 101.3,49 100.2,51.9 99.4,54.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"97.5,68.6 97.6,71.8 97.9,74.9 98.5,78 99.3,81 100.3,84 101.6,86.9 103.2,89.6 103.2,92.3 101.6,95 100.1,97.8 98.6,100.5 97,103.3 95.5,106\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"144.5\" cy=\"106\" r=\"4\" fill=\"currentColor\"/><circle cx=\"95.5\" cy=\"106\" r=\"4\" fill=\"currentColor\"/><text x=\"14\" y=\"20.9\" font-size=\"14\" text-anchor=\"middle\">ア</text><g transform=\"translate(0,126)\"><polyline points=\"144.5,106 143,103.4 141.5,100.7 140.1,98.1 138.6,95.4 137.1,92.8 136.4,90.2 138,87.6 139.3,84.9 140.4,82 141.2,79.1 141.9,76.2 142.3,73.2 142.5,70.1 142.5,67.1 142.3,64.1 141.9,61.1 141.4,58.1 140.7,55.1 139.9,52.2 138.9,49.4 137.7,46.6 136.5,43.8 135.1,41.2 133.5,38.5 131.8,36 130,33.6 128.1,31.3 126.1,29 123.9,26.9 121.7,24.9 119.3,23 116.8,21.2 114.2,19.7 111.6,18.2 108.8,17 106,15.9 103.1,15.1 100.1,14.4 97.1,14.1 94.1,14 91.1,14.2 88.1,14.8 85.2,15.7 82.5,17.1 80,18.8 77.9,20.9 76.1,23.4 74.8,26.1 74,29 73.7,32 73.8,35 74.4,38 75.3,40.9 76.6,43.6 78.2,46.2 80,48.7 81.9,50.9 84.1,53.1 86.4,55 88.9,56.8 91.4,58.4 94.1,59.9 96.8,61.1 99.6,62.3 102.5,63.3 105.4,64.1 108.4,64.7 111.4,65.2 114.4,65.6 117.4,65.8 120.4,65.9 123.4,65.8 126.5,65.5 129.5,65.1 132.4,64.6 135.4,63.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"148.3,58.6 150.9,57 153.3,55.2 155.7,53.3 157.9,51.1 159.9,48.9 161.7,46.4 163.3,43.8 164.6,41.1 165.5,38.2 166.1,35.3 166.3,32.2 166.1,29.2 165.3,26.3 164,23.5 162.3,21 160.1,18.9 157.6,17.2 154.9,15.8 152,14.8 149.1,14.3 146,14 143,14.1 140,14.4 137,15 134.1,15.9 131.2,16.9 128.5,18.2 125.8,19.6\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.8,28.2 112.6,30.4 110.6,32.8 108.7,35.2 107,37.8 105.3,40.5 103.8,43.2 102.5,46 101.3,48.9 100.3,51.8 99.4,54.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"97.5,68.6 97.6,71.8 97.9,74.9 98.5,78 99.3,81 100.3,84 101.6,86.9 103.2,89.6 103.2,92.3 101.6,95 100.1,97.8 98.6,100.5 97,103.3 95.5,106\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"144.5\" cy=\"106\" r=\"4\" fill=\"currentColor\"/><circle cx=\"95.5\" cy=\"106\" r=\"4\" fill=\"currentColor\"/></g><text x=\"14\" y=\"146.9\" font-size=\"14\" text-anchor=\"middle\">イ</text></svg>",
+       "choices": [
+        "上のひも（ア）",
+        "下のひも（イ）"
+       ],
+       "answer": "上のひも（ア）",
+       "check": "['上のひも（ア）', '下のひも（イ）'][[(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')(g) for g in ['aObUcOaUbOcU', 'aObOcOaUbUcU']].index('ほどけない')]",
+       "hints": [
+        "2 本とも、右のはしから指でたどろう。",
+        "交わりで、上と下が交互になっているのはどちらかな。",
+        "どの交わりにも先に上を通るひもは、持ち上げるとどうなったかな。"
+       ],
+       "paths": [
+        [
+         "アは上、下、上…と交互",
+         "イは先に上ばかり通る",
+         "イはほどける",
+         "アはほどけない"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "3 つの輪がからんでいます。どの 2 つの輪を取り出しても、その 2 つは、かたほうがいつも上を通っています。いちばん上の輪を切って取りのぞくと、のこりの 2 つの輪は はずれますか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"160.8,54.8 160.7,51.8 160.3,48.7 159.8,45.7 159,42.8 158,39.9 156.8,37.1 155.4,34.4 153.7,31.8 151.9,29.4 149.9,27.1 147.8,24.9 145.5,22.9 143,21.1 140.4,19.5 137.7,18.1 134.9,16.8 132.1,15.8 129.1,15 126.1,14.5 123.1,14.1 120.1,14 117,14.1 114,14.5 111,15 108,15.8 105.2,16.8 102.4,18 99.7,19.4 97.1,21.1 94.6,22.9 92.3,24.8 90.2,27 88.2,29.3 86.3,31.7 84.7,34.3 83.3,37 82.1,39.8 81,42.7 80.3,45.6 79.7,48.6 79.3,51.6 79.2,54.7 79.3,57.7 79.6,60.8 80.2,63.8 81,66.7 82,69.6 83.2,72.4 84.6,75.1 86.2,77.7 88,80.1 90,82.5 92.1,84.6 94.4,86.6 96.9,88.4\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"109.5,94.3 112.5,94.9 115.6,95.4 118.6,95.6 121.7,95.6 124.7,95.3 127.8,94.9 130.7,94.2 133.7,93.2 136.5,92.1 139.3,90.8 141.9,89.2 144.4,87.5 146.8,85.6 149.1,83.5 151.1,81.2 153,78.8 154.7,76.2 156.2,73.6 157.5,70.8 158.6,67.9 159.5,65\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"135.9,85 135,82.1 133.9,79.2 132.6,76.4 131.1,73.8 129.4,71.2 127.5,68.8 125.4,66.5 123.2,64.4 120.8,62.5 118.3,60.8 115.6,59.2 112.9,57.9 110,56.8 107.1,55.8 104.1,55.1 101.1,54.7 98.1,54.4 95,54.4 91.9,54.6 88.9,55.1 85.9,55.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"73.3,61.6 70.8,63.4 68.5,65.4 66.4,67.5 64.4,69.9 62.6,72.3 61,74.9 59.6,77.6 58.3,80.4 57.3,83.3 56.6,86.2 56,89.2 55.7,92.3 55.6,95.3 55.7,98.4 56,101.4 56.6,104.4 57.4,107.3 58.4,110.2 59.7,113 61.1,115.7 62.7,118.3 64.5,120.7 66.5,123 68.7,125.2 71,127.1 73.5,128.9 76,130.6 78.7,132 81.5,133.2 84.4,134.2 87.4,135 90.4,135.5 93.4,135.9 96.4,136 99.5,135.9 102.5,135.5 105.5,135 108.4,134.2 111.3,133.2 114.1,131.9 116.8,130.5 119.4,128.9 121.8,127.1 124.1,125.1 126.3,122.9 128.3,120.6 130.1,118.2 131.7,115.6 133.1,112.9 134.4,110.1 135.4,107.2 136.2,104.3 136.7,101.3 137.1,98.2 137.2,95.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"126,132 128.8,133.2 131.7,134.2 134.6,135 137.6,135.5 140.7,135.9 143.7,136 146.8,135.9 149.8,135.5 152.8,134.9 155.7,134.2 158.6,133.1 161.4,131.9 164.1,130.5 166.7,128.9 169.1,127.1 171.4,125.1 173.6,122.9 175.6,120.6 177.4,118.1 179,115.6 180.4,112.9 181.6,110.1 182.6,107.2 183.4,104.3 184,101.3 184.3,98.2 184.4,95.2 184.3,92.1 184,89.1 183.4,86.1 182.6,83.2 181.6,80.3 180.4,77.5 179,74.8 177.4,72.2 175.6,69.8 173.6,67.5 171.4,65.3 169.1,63.3 166.7,61.5 164.1,59.9 161.4,58.5 158.6,57.2 155.7,56.2 152.8,55.4 149.8,54.9 146.8,54.5 143.7,54.4 140.7,54.5 137.6,54.8 134.6,55.4 131.7,56.2 128.8,57.2 126,58.4\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.7,66.4 112.6,68.7 110.7,71.1 109,73.6 107.5,76.2 106.2,78.9 105.1,81.8 104.2,84.7 103.5,87.6 103.1,90.6 102.9,93.7 102.9,96.7 103.1,99.7 103.5,102.7 104.2,105.7 105.1,108.6 106.2,111.4 107.5,114.2 109,116.8 110.7,119.3 112.6,121.7 114.7,123.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "choices": [
+        "はずれる",
+        "はずれない"
+       ],
+       "answer": "はずれる",
+       "check": "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OO')",
+       "hints": [
+        "左下の輪と右下の輪の、2 つの交わりを見よう。",
+        "左下の輪は、右下の輪との交わりで、上と下のどちらを通っているかな。",
+        "どちらの交わりでも上なら、どうなったかな。"
+       ],
+       "paths": [
+        [
+         "左下の輪は、右下の輪との交わりでどちらも上",
+         "持ち上げるとはずれる",
+         "はずれる"
+        ]
+       ],
+       "note": "どの 2 つもはずれるのに、3 つそろうとはずれない輪（ボロメオの輪）。紙の輪で作るのはむずかしいので、図で上と下をたどる。3 つのときにはずれないことは、図の上と下を 1 つずつ確かめて話すだけでよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "鏡に映った並びはどれですか。",
+       "figure": "🟨🟦🟪｜",
+       "choices": [
+        "🟪🟦🟨",
+        "🟨🟦🟪",
+        "🟦🟪🟨"
+       ],
+       "answer": "🟪🟦🟨",
+       "check": "fig.split('｜')[0][::-1]",
+       "hints": [
+        "鏡にいちばん近いのはどれかな。",
+        "鏡に近いものは、鏡の中でも鏡のそばに映るよ。",
+        "鏡のそばから順にならべよう。"
+       ],
+       "paths": [
+        [
+         "鏡のそばは 🟪",
+         "🟪🟦🟨"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープを半分に折るのを 3 回くり返して広げると、テープはいくつの部分に分かれて見えますか。",
+       "answer": 8,
+       "check": "2 ** 3",
+       "hints": [
+        "3 回折ったとき、何まい重なっていたかな。",
+        "重なっていた 1 まい 1 まいが、広げると 1 つの部分になるよ。",
+        "テープを折って広げ、部分を数えよう。"
+       ],
+       "paths": [
+        [
+         "8 まい重なる",
+         "広げると 8 つの部分"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの輪がならんでいます。どのとなりどうしも、交わりで上と下が入れかわっていて、つながっています。3 つの輪は、いくつに分かれますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"82.5,27.6 80.4,25.5 78,23.5 75.6,21.8 73,20.2 70.3,18.9 67.5,17.7 64.6,16.8 61.7,16.1 58.7,15.6 55.7,15.3 52.7,15.3 49.7,15.5 46.7,15.9 43.7,16.5 40.8,17.4 38,18.5 35.3,19.8 32.7,21.3 30.2,23 27.8,24.9 25.6,27 23.5,29.2 21.7,31.5 20,34.1 18.5,36.7 17.2,39.4 16.1,42.2 15.3,45.1 14.6,48.1 14.2,51.1 14,54.1 14.1,57.1 14.3,60.1 14.8,63.1 15.6,66 16.5,68.9 17.7,71.7 19.1,74.4 20.6,77 22.4,79.4 24.3,81.7 26.5,83.9 28.7,85.9 31.1,87.7 33.7,89.3 36.4,90.7 39.1,91.9 42,93 44.9,93.7 47.9,94.3 50.9,94.6 53.9,94.7 56.9,94.6 59.9,94.3 62.9,93.7 65.8,92.9 68.6,91.9 71.4,90.6 74,89.2 76.6,87.5 79,85.7 81.2,83.7 83.3,81.5 85.3,79.2 87,76.8 88.6,74.2 89.9,71.5 91.1,68.7 92,65.8 92.7,62.9 93.2,59.9 93.5,56.9 93.5,53.8 93.3,50.8 92.8,47.8 92.2,44.9 91.3,42 90.2,39.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"91.2,82.4 93.4,84.6 95.8,86.5 98.3,88.3 101,89.9 103.7,91.3 106.6,92.4 109.5,93.3 112.5,94 115.6,94.5 118.6,94.7 121.7,94.7 124.8,94.5 127.8,94 130.8,93.2 133.7,92.3 136.6,91.1 139.3,89.7 142,88.1 144.5,86.3 146.8,84.3 149,82.2 151,79.9 152.8,77.4 154.5,74.8 155.9,72 157.1,69.2 158.1,66.3 158.9,63.3 159.4,60.3 159.7,57.2 159.7,54.1 159.5,51.1 159.1,48 158.5,45 157.6,42.1 156.5,39.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"148.8,27.6 146.6,25.4 144.2,23.5 141.7,21.7 139,20.1 136.3,18.7 133.4,17.6 130.5,16.7 127.5,16 124.4,15.5 121.4,15.3 118.3,15.3 115.2,15.5 112.2,16 109.2,16.8 106.3,17.7 103.4,18.9 100.7,20.3 98,21.9 95.5,23.7 93.2,25.7 91,27.8 89,30.1 87.2,32.6 85.5,35.2 84.1,38 82.9,40.8 81.9,43.7 81.1,46.7 80.6,49.7 80.3,52.8 80.3,55.9 80.5,58.9 80.9,62 81.5,65 82.4,67.9 83.5,70.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"157.5,82.4 159.6,84.5 162,86.5 164.4,88.2 167,89.8 169.7,91.1 172.5,92.3 175.4,93.2 178.3,93.9 181.3,94.4 184.3,94.7 187.3,94.7 190.3,94.5 193.3,94.1 196.3,93.5 199.2,92.6 202,91.5 204.7,90.2 207.3,88.7 209.8,87 212.2,85.1 214.4,83 216.5,80.8 218.3,78.5 220,75.9 221.5,73.3 222.8,70.6 223.9,67.8 224.7,64.9 225.4,61.9 225.8,58.9 226,55.9 225.9,52.9 225.7,49.9 225.2,46.9 224.4,44 223.5,41.1 222.3,38.3 220.9,35.6 219.4,33 217.6,30.6 215.7,28.3 213.5,26.1 211.3,24.1 208.9,22.3 206.3,20.7 203.6,19.3 200.9,18.1 198,17 195.1,16.3 192.1,15.7 189.1,15.4 186.1,15.3 183.1,15.4 180.1,15.7 177.1,16.3 174.2,17.1 171.4,18.1 168.6,19.4 166,20.8 163.4,22.5 161,24.3 158.8,26.3 156.7,28.5 154.7,30.8 153,33.2 151.4,35.8 150.1,38.5 148.9,41.3 148,44.2 147.3,47.1 146.8,50.1 146.5,53.1 146.5,56.2 146.7,59.2 147.2,62.2 147.8,65.1 148.7,68 149.8,70.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "answer": 1,
+       "check": "(lambda E: max(1, 3 - len(E)))(['左と中', '中と右'])",
+       "hints": [
+        "左と中の輪は、はずれるかな。",
+        "中と右の輪は、はずれるかな。",
+        "くさりのようにつながっているかな。"
+       ],
+       "paths": [
+        [
+         "左と中、中と右がつながる",
+         "くさりのように 1 つ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "テープを半分に折るのを 3 回くり返して、広げました。折り目は何本ありますか。",
+       "answer": 7,
+       "check": "2 ** 3 - 1",
+       "hints": [
+        "3 回折ると、何まい重なるかな。",
+        "広げると、いくつの部分に分かれるかな。",
+        "部分と部分のさかい目を数えよう。"
+       ],
+       "paths": [
+        [
+         "8 つの部分",
+         "さかい目は 7 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正方形の紙を、三角に 2 回折りました。紙は何まい重なっていますか。",
+       "svg": "<svg viewBox=\"0 0 240 100\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"18\" width=\"60\" height=\"60\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"10\" y1=\"78\" x2=\"70\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">① 三角に</text><line x1=\"76\" y1=\"48\" x2=\"92\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,44 92,48 86,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"98,78 158,78 158,18\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"128\" y1=\"48\" x2=\"158\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"132\" y=\"97.8\" font-size=\"11\" text-anchor=\"middle\">② もう一度</text><line x1=\"164\" y1=\"48\" x2=\"178\" y2=\"48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"172,44 178,48 172,52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"184,66 230,66 207,43\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "1 回目で何まい重なるかな。",
+        "2 回目は、重なった紙を一度に折るね。",
+        "折り紙で確かめよう。"
+       ],
+       "paths": [
+        [
+         "1 回目で 2 まい",
+         "2 回目で 4 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"190\" cy=\"76\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 2,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((5, 0))",
+       "hints": [
+        "穴は、折り目にかかっているかな。",
+        "折り目にかかった穴は、広げるとつながるよ。",
+        "左と右には、いくつずつできるかな。"
+       ],
+       "paths": [
+        [
+         "下の折り目にかかっている",
+         "上下がつながる",
+         "左右に 1 つずつで 2 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折って、穴を 1 つあけました。広げた紙はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 210\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"194.8\" cy=\"56.8\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text><g transform=\"translate(0,114)\"><rect x=\"10\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42\" y1=\"8\" x2=\"42\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"10\" y1=\"40\" x2=\"74\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"61.2\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"22.8\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"61.2\" cy=\"52.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"22.8\" cy=\"52.8\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"42\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ア</text><rect x=\"88\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"8\" x2=\"120\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88\" y1=\"40\" x2=\"152\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"139.2\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"100.8\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">イ</text><rect x=\"166\" y=\"8\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"198\" y1=\"8\" x2=\"198\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"166\" y1=\"40\" x2=\"230\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"217.2\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"185.2\" cy=\"27.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"217.2\" cy=\"59.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"185.2\" cy=\"59.2\" r=\"3.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"198\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">ウ</text></g></svg>",
+       "choices": [
+        "ア",
+        "イ",
+        "ウ"
+       ],
+       "answer": "ア",
+       "check": "[k for k, v in {'ア': {(6, 4), (-6, 4), (6, -4), (-6, -4)}, 'イ': {(6, 4), (-6, 4)}, 'ウ': {(6, 4), (-4, 4), (6, -6), (-4, -6)}}.items() if v == {(a * 6, b * 4) for a in (1, -1) for b in (1, -1)}][0]",
+       "hints": [
+        "広げた紙には、穴がいくつあるはずかな。",
+        "折り目で折ると、穴がぴったり重なるのはどれかな。",
+        "たての点線と横の点線の両方で、鏡に映した位置かを見よう。"
+       ],
+       "paths": [
+        [
+         "穴は 4 つ",
+         "2 つの折り目について鏡に映した位置",
+         "ア"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "このひもには、交わりがいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"194.9,45.1 192.4,46.8 189.9,48.5 187.4,50.2 184.9,51.8 182.4,53.5 179.9,55.2 177.4,56.8 175.1,57.9 174.4,54.9 173.5,52 172.5,49.2 171.3,46.4 170,43.7 168.6,41.1 167,38.5 165.2,36.1 163.4,33.7 161.4,31.4 159.3,29.3 157,27.3 154.7,25.3 152.3,23.6 149.8,21.9 147.2,20.4 144.5,19.1 141.7,17.8 138.9,16.8 136,15.9 133.1,15.2 130.1,14.6 127.1,14.3 124.1,14 121.1,14 118.1,14.2 115.1,14.5 112.2,15 109.2,15.7 106.3,16.5 103.5,17.6 100.7,18.8 98.1,20.2 95.5,21.7 93,23.4 90.7,25.3 88.4,27.3 86.3,29.5 84.4,31.8 82.6,34.2 81,36.8 79.6,39.4 78.4,42.2 77.4,45 76.6,47.9 76,50.9 75.6,53.9 75.5,56.9 75.6,59.9 76,62.9 76.6,65.8 77.5,68.7 78.6,71.5 79.9,74.2 81.5,76.8 83.2,79.2 85.2,81.5 87.4,83.6 89.8,85.4 92.3,87.1 95,88.5 97.8,89.6 100.6,90.5 103.6,91.2 106.6,91.7 109.6,91.9 112.6,91.8 115.6,91.6 118.5,91.1 121.5,90.4 124.3,89.4 127.1,88.2 129.7,86.7 132.2,85.1 134.5,83.2 136.7,81 138.7,78.8 140.4,76.3 141.9,73.7 143.2,71 144.2,68.1 145,65.2 145.6,62.3 145.9,59.3 146,56.3 145.8,53.3 145.4,50.3 144.8,47.3 144,44.5 142.9,41.6 141.6,38.9 140.2,36.3 138.5,33.7 136.7,31.3 134.8,29 132.6,26.9 130.4,24.9 128,23.1 125.5,21.4 122.9,19.9 120.2,18.5 117.4,17.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"103.8,14.2 100.8,14 97.8,14 94.8,14.2 91.8,14.6 88.8,15.1 85.9,15.8 83,16.7 80.1,17.7 77.3,18.9 74.6,20.3 72,21.8 69.5,23.4 67,25.2 64.7,27.1 62.4,29.1 60.3,31.3 58.3,33.6 56.4,35.9 54.7,38.4 53,41 51.6,43.6 50.2,46.3 49.1,49.1 48,51.9 47.1,54.8 46.4,57.8 45.9,60.8 45.4,63.8 45.2,66.8 45.1,69.8 45.2,72.8 45.4,75.8 45.8,78.8 46.3,81.8 47,84.8 47.9,87.7 48.9,90.5 50.1,93.3 51.4,96 52.8,98.7 54.4,101.3 56.2,103.7 58,106.1 60,108.4 62.1,110.6 64.3,112.6 66.7,114.6 69.1,116.4 71.6,118 74.3,119.5 77,120.9 79.7,122.1 82.6,123.2 85.5,124.1 88.4,124.8 91.4,125.4 94.4,125.7 97.4,126 100.4,126 103.4,125.8 106.4,125.5 109.4,125 112.4,124.3 115.3,123.4 118.1,122.4 120.9,121.2 123.6,119.8 126.2,118.2 128.6,116.5 131,114.6 133.2,112.5 135.3,110.4 137.3,108 139,105.6 140.6,103 142,100.3 143.2,97.5 144.2,94.7 145,91.8 145.6,88.8 145.9,85.8 146,82.8 145.8,79.7 145.4,76.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"140.4,63.8 138.7,61.3 136.7,59 134.5,56.8 132.2,54.9 129.6,53.2 127,51.8 124.2,50.5 121.3,49.6 118.3,48.9 115.3,48.4 112.3,48.1 109.2,48.1 106.2,48.4 103.2,48.9 100.2,49.6 97.3,50.5 94.6,51.8 91.9,53.2 89.4,54.9 87,56.8 84.8,59 82.8,61.3 81.1,63.8\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"76.1,76.7 75.7,79.8 75.5,82.8 75.6,85.9 76,88.9 76.5,91.9 77.4,94.9 78.4,97.8 79.6,100.6 81.1,103.3 82.7,105.9 84.5,108.4 86.5,110.7 88.6,112.9 90.9,114.9 93.3,116.8 95.9,118.5 98.5,120.1 101.3,121.5 104.1,122.7\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"117.7,125.8 120.7,126 123.7,126 126.7,125.8 129.7,125.4 132.7,124.9 135.7,124.2 138.6,123.3 141.4,122.3 144.2,121.1 146.9,119.7 149.5,118.2 152.1,116.6 154.5,114.8 156.8,112.9 159.1,110.9 161.2,108.7 163.2,106.5 165.1,104.1 166.8,101.6 168.5,99.1 169.9,96.4 171.3,93.7 172.4,90.9 173.5,88.1 174.4,85.2 175.1,82.2 177.3,83.1 179.8,84.8 182.3,86.5 184.8,88.1 187.3,89.8 189.9,91.5 192.4,93.2 194.9,94.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"194.9\" cy=\"45.1\" r=\"4\" fill=\"currentColor\"/><circle cx=\"194.9\" cy=\"94.9\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "answer": 4,
+       "check": "len('aObOcOaUdOcUbUdU') // 4",
+       "hints": [
+        "すき間のある所が交わりだよ。",
+        "片方のはしからたどろう。",
+        "数えた交わりに、しるしをつけよう。"
+       ],
+       "paths": [
+        [
+         "はしからたどる",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "このひもの両はしを持ったまま引っぱると、ほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"149.8,126 148.3,123.3 146.9,120.7 145.4,118 143.9,115.4 142.4,112.7 141,110.1 139.5,107.4 141.2,104.9 142.6,102.2 143.9,99.5 144.9,96.6 145.8,93.7 146.4,90.8 146.9,87.8 147.2,84.7 147.4,81.7 147.3,78.7 147.2,75.6 146.9,72.6 146.4,69.6 145.8,66.7 145.1,63.7 144.3,60.8 143.3,57.9 142.2,55.1 141,52.3 139.7,49.6 138.2,46.9 136.7,44.3 135.1,41.7 133.3,39.3 131.4,36.9 129.5,34.5 127.4,32.3 125.3,30.2\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"114.2,21.6 111.6,20.1 108.9,18.7 106.1,17.5 103.2,16.4 100.3,15.5 97.4,14.8 94.4,14.3 91.3,14.1 88.3,14 85.3,14.2 82.2,14.7 79.3,15.5 76.5,16.6 73.8,18.1 71.3,19.9 69.1,21.9 67.2,24.3 65.7,27 64.6,29.8 63.9,32.8 63.6,35.8 63.7,38.8 64.2,41.8 64.9,44.8 66,47.6 67.4,50.4 68.9,53 70.7,55.5 72.6,57.8 74.7,60 76.9,62.1 79.3,64 81.8,65.8 84.3,67.5 86.9,69 89.7,70.4 92.4,71.7 95.3,72.8 98.1,73.8 101.1,74.6 104,75.4 107,76 110,76.5 113,76.8 116.1,77 119.1,77.1 122.2,77.1 125.2,77 128.2,76.7 131.3,76.3 134.3,75.7 137.2,75.1 140.2,74.3\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"153.1,69 155.7,67.5 158.3,65.8 160.8,64 163.1,62.1 165.3,60 167.4,57.8 169.4,55.4 171.1,52.9 172.7,50.3 174,47.6 175.1,44.7 175.9,41.8 176.3,38.8 176.4,35.7 176.1,32.7 175.4,29.7 174.3,26.9 172.7,24.3 170.9,21.9 168.6,19.8 166.2,18 163.5,16.6 160.6,15.5 157.7,14.7 154.7,14.2 151.7,14 148.6,14.1 145.6,14.3 142.6,14.8 139.6,15.6 136.7,16.5 133.8,17.5 131.1,18.8 128.3,20.1 125.7,21.7 123.1,23.3 120.7,25.1 118.3,27 116,29 113.8,31.1 111.7,33.3 109.6,35.5 107.7,37.9 105.9,40.4 104.2,42.9 102.6,45.5 101.1,48.1 99.7,50.8 98.4,53.6 97.3,56.4 96.2,59.3 95.3,62.2 94.5,65.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"92.7,79 92.7,82 92.8,85 93.1,88 93.6,91 94.3,93.9 95.2,96.8 96.2,99.6 97.4,102.4 98.9,105 100.4,107.5 99,110.2 97.5,112.8 96.1,115.5 94.6,118.1 93.1,120.7 91.7,123.4 90.2,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"149.8\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"90.2\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどけない",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aObUcOaUbOcU')",
+       "hints": [
+        "左のはしからたどって、交わりで上と下を言おう。",
+        "上と下が交互になっているかな。",
+        "見本の「ひと結び」と同じかな。"
+       ],
+       "paths": [
+        [
+         "上と下が交互",
+         "ひと結び",
+         "ほどけない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 つの輪は、はずれますか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"114.2,20.2 111.6,18.7 108.8,17.5 106,16.4 103.1,15.6 100.1,14.9 97.2,14.4 94.2,14.1 91.1,14 88.1,14.1 85.1,14.4 82.1,14.9 79.2,15.6 76.3,16.5 73.5,17.6 70.7,18.8 68.1,20.3 65.5,21.9 63.1,23.7 60.7,25.6 58.5,27.7 56.5,29.9 54.6,32.2 52.8,34.7 51.3,37.3 49.9,39.9 48.6,42.7 47.6,45.5 46.7,48.4 46.1,51.4 45.6,54.4 45.3,57.4 45.3,60.4 45.4,63.4 45.7,66.4 46.2,69.4 46.9,72.3 47.9,75.2 48.9,78 50.2,80.8 51.7,83.4 53.3,86 55.1,88.4 57,90.7 59.1,92.9 61.3,94.9 63.7,96.8 66.2,98.6 68.8,100.1 71.4,101.5 74.2,102.7 77,103.8 80,104.6 82.9,105.2 85.9,105.7 88.9,105.9 91.9,106 94.9,105.8 97.9,105.5 100.9,105 103.8,104.2 106.7,103.3 109.5,102.2 112.3,100.9 114.9,99.4 117.4,97.8 119.9,96 122.2,94 124.3,91.9 126.4,89.7 128.2,87.3 130,84.8 131.5,82.2 132.9,79.6 134.1,76.8 135.1,73.9 135.9,71 136.5,68.1 137,65.1 137.2,62.1 137.2,59.1 137.1,56 136.7,53 136.2,50.1 135.4,47.1 134.5,44.3 133.3,41.5 132,38.7 130.5,36.1 128.9,33.6 127.1,31.2 125.1,28.9\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"125.8,99.8 128.4,101.3 131.2,102.5 134,103.6 136.9,104.4 139.9,105.1 142.8,105.6 145.8,105.9 148.9,106 151.9,105.9 154.9,105.6 157.9,105.1 160.8,104.4 163.7,103.5 166.5,102.4 169.3,101.2 171.9,99.7 174.5,98.1 176.9,96.3 179.3,94.4 181.5,92.3 183.5,90.1 185.4,87.8 187.2,85.3 188.7,82.7 190.1,80.1 191.4,77.3 192.4,74.5 193.3,71.6 193.9,68.6 194.4,65.6 194.7,62.6 194.7,59.6 194.6,56.6 194.3,53.6 193.8,50.6 193.1,47.7 192.1,44.8 191.1,42 189.8,39.2 188.3,36.6 186.7,34 184.9,31.6 183,29.3 180.9,27.1 178.7,25.1 176.3,23.2 173.8,21.4 171.2,19.9 168.6,18.5 165.8,17.3 163,16.2 160,15.4 157.1,14.8 154.1,14.3 151.1,14.1 148.1,14 145.1,14.2 142.1,14.5 139.1,15 136.2,15.8 133.3,16.7 130.5,17.8 127.7,19.1 125.1,20.6 122.6,22.2 120.1,24 117.8,26 115.7,28.1 113.6,30.3 111.8,32.7 110,35.2 108.5,37.8 107.1,40.4 105.9,43.2 104.9,46.1 104.1,49 103.5,51.9 103,54.9 102.8,57.9 102.8,60.9 102.9,64 103.3,67 103.8,69.9 104.6,72.9 105.5,75.7 106.7,78.5 108,81.3 109.5,83.9 111.1,86.4 112.9,88.8 114.9,91.1\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/></svg>",
+       "choices": [
+        "はずれる",
+        "はずれない"
+       ],
+       "answer": "はずれない",
+       "check": "(lambda s: 'はずれる' if s in ('OO', 'UU') else 'はずれない')('OU')",
+       "hints": [
+        "左の輪は、上の交わりで上と下のどちらかな。",
+        "下の交わりではどうかな。",
+        "上と下が入れかわっているかな。"
+       ],
+       "paths": [
+        [
+         "上と下が入れかわる",
+         "つながっている",
+         "はずれない"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "テープを半分に 2 回折りました。重なりは何まいですか。",
+       "answer": 4,
+       "check": "2 ** 2",
+       "hints": [
+        "1 回で何まいかな。",
+        "2 回目は、重なったテープを一度に折るね。",
+        "折って数えよう。"
+       ],
+       "paths": [
+        [
+         "2 まい、4 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のように折った紙に、穴を 1 つあけました。広げると、穴はいくつありますか。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"8\" y=\"20\" width=\"64\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"16\" x2=\"40\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"40\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">① 左を右へ</text><line x1=\"76\" y1=\"52\" x2=\"92\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"86,48 92,52 86,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"98\" y=\"20\" width=\"32\" height=\"64\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"94\" y1=\"52\" x2=\"134\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.4\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"114\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">② 下を上へ</text><line x1=\"138\" y1=\"52\" x2=\"154\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"148,48 154,52 148,56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><rect x=\"166\" y=\"28\" width=\"48\" height=\"48\" stroke=\"currentColor\" stroke-width=\"1.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"166\" y1=\"28\" x2=\"166\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><line x1=\"166\" y1=\"76\" x2=\"214\" y2=\"76\" stroke=\"currentColor\" stroke-width=\"3.5\" fill=\"none\"/><circle cx=\"204.4\" cy=\"52\" r=\"4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"190\" y=\"105.8\" font-size=\"11\" text-anchor=\"middle\">③ 穴をあける</text></svg>",
+       "answer": 4,
+       "check": "(lambda *hs: len({(a * x, b * y) for x, y in hs for a in (1, -1) for b in (1, -1)}))((8, 5))",
+       "hints": [
+        "穴は、折り目にかかっているかな。",
+        "紙は何まい重なっていたかな。",
+        "一度に全部の紙に穴があくね。"
+       ],
+       "paths": [
+        [
+         "4 まい重なる",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "このひもの両はしを持ったまま引っぱると、ほどけますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"32,126 35.1,126 38.1,125.9 41.1,125.7 44.1,125.4 47.1,125.1 50.1,124.7 53,124.2 56,123.7 59,123.1 61.9,122.4 64.8,121.6 67.7,120.8 70.6,119.9 73.5,118.9 76.3,117.9 79.1,116.8 81.9,115.6 84.6,114.4 87.3,113 90,111.6 92.6,110.2 95.2,108.6 97.8,107 100.3,105.4 102.8,103.6 105.2,101.8 107.5,100 109.8,98 112.1,96 114.3,93.9 116.4,91.8 118.5,89.6 120.5,87.3 122.4,85 124.2,82.6 126,80.2 127.7,77.7 129.2,75.1 130.7,72.5 132.1,69.8 133.4,67.1 134.6,64.3 135.6,61.5 136.6,58.6 137.4,55.7 138.1,52.8 138.6,49.8 138.9,46.8 139.1,43.8 139.2,40.8 139,37.8 138.6,34.8 138,31.8 137.1,28.9 136,26.1 134.6,23.4 132.9,21 130.9,18.7 128.6,16.8 126,15.3 123.1,14.4 120.1,14 117.1,14.3 114.3,15.2 111.6,16.7 109.3,18.5 107.2,20.8 105.5,23.2 104.1,25.9 103,28.7 102.1,31.6 101.4,34.5 101,37.5 100.8,40.5 100.8,43.5 101,46.5 101.4,49.5 101.9,52.5 102.5,55.4 103.3,58.3 104.3,61.2 105.3,64 106.5,66.8 107.8,69.6 109.1,72.2 110.6,74.9 112.2,77.4 113.9,79.9 115.6,82.4\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><polyline points=\"124.8,93 127,95.1 129.2,97.2 131.5,99.2 133.9,101.1 136.3,103 138.8,104.8 141.4,106.5 143.9,108.1 146.6,109.7 149.2,111.2 151.9,112.6 154.7,114 157.4,115.3 160.3,116.5 163.1,117.7 166,118.7 168.8,119.7 171.8,120.7 174.7,121.5 177.7,122.3 180.6,123 183.6,123.6 186.6,124.2 189.7,124.7 192.7,125.1 195.7,125.4 198.8,125.7 201.8,125.8 204.9,126 208,126\" stroke=\"currentColor\" stroke-width=\"2.6\" fill=\"none\"/><circle cx=\"32\" cy=\"126\" r=\"4\" fill=\"currentColor\"/><circle cx=\"208\" cy=\"126\" r=\"4\" fill=\"currentColor\"/></svg>",
+       "choices": [
+        "ほどける",
+        "ほどけない"
+       ],
+       "answer": "ほどける",
+       "check": "(lambda g: 'ほどける' if all(g.index(c + 'O') < g.index(c + 'U') for c in set(g[::2])) or all(g.index(c + 'U') < g.index(c + 'O') for c in set(g[::2])) else 'ほどけない')('aOaU')",
+       "hints": [
+        "交わりはいくつかな。",
+        "輪は、ひもが 1 回重なっているだけだね。",
+        "ひもで作って引っぱってみよう。"
+       ],
+       "paths": [
+        [
+         "交わり 1 つ",
+         "ほどける"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -174320,7 +176888,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.309,
-    "r": 1.86,
+    "r": 1.88,
     "rg": [
      "keisan",
      "programming"
@@ -174510,7 +177078,7 @@ window.ROADMAP = {
     20.85
    ],
    "comb": {
-    "b": 0.51,
+    "b": 0.512,
     "r": 1.07,
     "rg": [
      "hakaru",
@@ -174670,8 +177238,8 @@ window.ROADMAP = {
     15.25
    ],
    "comb": {
-    "b": 0.576,
-    "r": 1.67,
+    "b": 0.575,
+    "r": 1.69,
     "rg": [
      "hakaru",
      "keisan",
@@ -174908,7 +177476,7 @@ window.ROADMAP = {
     9.45
    ],
    "comb": {
-    "b": 0.405,
+    "b": 0.407,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -175463,7 +178031,7 @@ window.ROADMAP = {
     11.8
    ],
    "comb": {
-    "b": 0.545,
+    "b": 0.546,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -186021,7 +188589,7 @@ window.ROADMAP = {
     -3.2
    ],
    "comb": {
-    "b": 0.335,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -187551,7 +190119,7 @@ window.ROADMAP = {
     -5.03
    ],
    "comb": {
-    "b": 0.3,
+    "b": 0.301,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -191626,7 +194194,7 @@ window.ROADMAP = {
     -0.74
    ],
    "comb": {
-    "b": 0.305,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -193232,7 +195800,7 @@ window.ROADMAP = {
     1.35
    ],
    "comb": {
-    "b": 0.344,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -195783,7 +198351,7 @@ window.ROADMAP = {
     -0.33
    ],
    "comb": {
-    "b": 0.288,
+    "b": 0.289,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -198632,7 +201200,7 @@ window.ROADMAP = {
     2.96
    ],
    "comb": {
-    "b": 0.318,
+    "b": 0.316,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -201039,7 +203607,7 @@ window.ROADMAP = {
     8.73
    ],
    "comb": {
-    "b": 0.121,
+    "b": 0.12,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -202265,7 +204833,7 @@ window.ROADMAP = {
     4.54
    ],
    "comb": {
-    "b": 0.113,
+    "b": 0.111,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -203401,7 +205969,7 @@ window.ROADMAP = {
     -5.73
    ],
    "comb": {
-    "b": 0.175,
+    "b": 0.176,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -207760,47 +210328,1545 @@ window.ROADMAP = {
    "level": 3,
    "region": "shomei-zukei",
    "needs": [
-    "G-009"
+    "G-009",
+    "A-010",
+    "N-074"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "2 本の平行な直線 ℓ、m に、直線 n が交わっています。できた 8 つの角の関係を調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"106.4\" y1=\"135.2\" x2=\"162.6\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"171.6\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M160.1 43.8 A11 11 0 0 0 153.7 33.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"167.6\" y=\"36.2\" font-size=\"12\" text-anchor=\"middle\">a</text><path d=\"M153.7 33.9 A11 11 0 0 0 138.1 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"137.2\" y=\"29.5\" font-size=\"12\" text-anchor=\"middle\">b</text><path d=\"M138.1 43.8 A11 11 0 0 0 144.4 53.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.5\" y=\"59.9\" font-size=\"12\" text-anchor=\"middle\">c</text><path d=\"M144.4 53.8 A11 11 0 0 0 160.1 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.9\" y=\"66.6\" font-size=\"12\" text-anchor=\"middle\">d</text><path d=\"M131 106.2 A11 11 0 0 0 124.6 96.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.6\" y=\"98.5\" font-size=\"12\" text-anchor=\"middle\">e</text><path d=\"M124.6 96.2 A11 11 0 0 0 109 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.2\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\">f</text><path d=\"M109 106.2 A11 11 0 0 0 115.4 116.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.4\" y=\"122.2\" font-size=\"12\" text-anchor=\"middle\">g</text><path d=\"M115.4 116.1 A11 11 0 0 0 131 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"131.8\" y=\"128.9\" font-size=\"12\" text-anchor=\"middle\">h</text></svg>",
+       "explain": "2 直線が交わってできる角のうち、∠a と ∠c、∠b と ∠d のように向かい合った角を対頂角といい、対頂角は等しくなります。直線 n が 2 直線 ℓ、m と交わるとき、∠a と ∠e、∠d と ∠h のように同じ位置にある角を同位角、∠c と ∠e、∠d と ∠f のように ℓ と m の内側で n をはさんで反対がわにある角を錯角といいます。ℓ と m が平行（ℓ ∥ m と書きます）なら、同位角は等しく、錯角も等しくなります。反対に、同位角か錯角が等しければ、ℓ と m は平行です。図では ∠a = 65° なので、∠c = ∠e = ∠g = 65°、∠b = ∠d = ∠f = ∠h = 180° − 65° = 115° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "一直線に、1 本の線を引きました。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"96.4\" x2=\"220\" y2=\"96.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"96.4\" x2=\"148.8\" y2=\"17.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M138 96.4 A18 18 0 0 0 126.2 79.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.2\" y=\"82.2\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M128.2 73.8 A24 24 0 0 0 96 96.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.2\" y=\"69.4\" font-size=\"12\" text-anchor=\"middle\">x</text><circle cx=\"120\" cy=\"96.4\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "一直線の角は何度だったかな。",
+        "∠x と 70° を合わせると一直線になるね。",
+        "180 から 70 をひこう。"
+       ],
+       "paths": [
+        [
+         "∠x + 70° = 180°",
+         "∠x = 110°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形の、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"125.5\" y1=\"29.8\" x2=\"62.3\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62.3\" y1=\"120.2\" x2=\"177.7\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"177.7\" y1=\"120.2\" x2=\"125.5\" y2=\"29.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M116.4 43 A16 16 0 0 0 133.5 43.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"124.3\" y=\"62.4\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M78.3 120.2 A16 16 0 0 0 71.5 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"87.1\" y=\"111.8\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M169.7 106.3 A16 16 0 0 0 161.7 120.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"153.4\" y=\"110.7\" font-size=\"13\" text-anchor=\"middle\">60°</text><text x=\"126.2\" y=\"23.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"54.5\" y=\"132.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"185.5\" y=\"132.5\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 65,
+       "check": "180 - 55 - 60",
+       "hints": [
+        "三角形の 3 つの角の和は何度だったかな。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "55 + 60 = 115",
+         "180 − 115 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 直線が交わっています。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"23.7\" y1=\"65\" x2=\"216.2\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44.7\" y1=\"117.7\" x2=\"195.3\" y2=\"12.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M133.1 55.8 A16 16 0 0 0 104 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.3\" y=\"41.5\" font-size=\"12\" text-anchor=\"middle\">145°</text><path d=\"M106.9 74.2 A16 16 0 0 0 136 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"128.7\" y=\"96.9\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 145,
+       "check": "180 - (180 - 145)",
+       "hints": [
+        "∠x と 145° の角は、どんな位置にあるかな。",
+        "向かい合った角を何というかな。",
+        "対頂角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠x と 145° は対頂角",
+         "対頂角は等しい",
+         "145°"
+        ],
+        [
+         "145° のとなりの角は 35°",
+         "∠x は 180 − 35 = 145"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.4\" y1=\"135.2\" x2=\"153.3\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"162.3\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M155.7 43.8 A13 13 0 0 0 147.1 31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.3\" y=\"34.3\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M133 106.2 A13 13 0 0 0 124.4 93.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.7\" y=\"96.6\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 70,
+       "check": "70",
+       "hints": [
+        "∠x と 70° の角は、ℓ と m のそれぞれで、同じ位置にあるかな。",
+        "同じ位置にある角を何というかな。",
+        "平行線では、その角はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "∠x と 70° は同位角",
+         "ℓ ∥ m なので等しい",
+         "70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"101.8\" y1=\"135.2\" x2=\"177.1\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"186.1\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M145.9 43.8 A13 13 0 0 0 152 54.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"137.9\" y=\"59.7\" font-size=\"12\" text-anchor=\"middle\">58°</text><path d=\"M133 106.2 A13 13 0 0 0 126.9 95.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141\" y=\"98.7\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 58,
+       "check": "58",
+       "hints": [
+        "2 つの角は、ℓ と m の内側にあるかな、外側にあるかな。",
+        "n をはさんで反対がわにある、内側の 2 つの角を何というかな。",
+        "平行線の錯角はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "∠x と 58° は錯角",
+         "ℓ ∥ m なので等しい",
+         "58°"
+        ]
+       ],
+       "note": "錯角は「Z の字」の形の内側の 2 つの角、と見ると見つけやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.4\" y1=\"135.2\" x2=\"153.3\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"162.3\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M155.7 43.8 A13 13 0 0 0 147.1 31.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.3\" y=\"34.3\" font-size=\"12\" text-anchor=\"middle\">70°</text><path d=\"M124.4 93.9 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.2\" y=\"90.7\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "m の上で、∠x のとなりの角を考えよう。",
+        "そのとなりの角は、70° の角と同位角だね。",
+        "∠x ととなりの角を合わせると一直線だよ。"
+       ],
+       "paths": [
+        [
+         "∠x のとなりの角は 70°（同位角）",
+         "∠x = 180 − 70 = 110"
+        ]
+       ],
+       "note": "70° とそのまま答えやすい。位置が同じかどうかを、ℓ と m の両方で指でさして確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 直線が交わっています。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"23.7\" y1=\"65\" x2=\"216.2\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"92\" y1=\"117.7\" x2=\"148\" y2=\"12.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M136 65 A16 16 0 0 0 127.5 50.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.9\" y=\"54.3\" font-size=\"12\" text-anchor=\"middle\">62°</text><path d=\"M127.5 50.9 A16 16 0 0 0 104 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.1\" y=\"44.3\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 118,
+       "check": "180 - 62",
+       "hints": [
+        "∠x と 62° の角は、向かい合っているかな、となり合っているかな。",
+        "となり合う 2 つの角で、一直線になるね。",
+        "180 から 62 をひこう。"
+       ],
+       "paths": [
+        [
+         "∠x + 62° = 180°",
+         "∠x = 118°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99.6\" y1=\"135.2\" x2=\"184\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"193\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M156.2 54.5 A13 13 0 0 0 176.6 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"174.7\" y=\"69.3\" font-size=\"12\" text-anchor=\"middle\">125°</text><path d=\"M127.5 95.5 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.9\" y=\"89.1\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 125,
+       "check": "125",
+       "hints": [
+        "2 つの角は、ℓ と m の内側にあるね。",
+        "n をはさんで反対がわにある、内側の角を何というかな。",
+        "平行線の錯角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠x と 125° は錯角",
+         "125°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.6\" y1=\"135.2\" x2=\"196.7\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"205.7\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M159.3 43.8 A13 13 0 0 0 163.9 53.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.5\" y=\"58.2\" font-size=\"12\" text-anchor=\"middle\">50°</text><path d=\"M107 106.2 A13 13 0 0 0 111.6 116.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.2\" y=\"120.5\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 50,
+       "check": "50",
+       "hints": [
+        "2 つの角は、ℓ と m のそれぞれで、同じ位置にあるかな。",
+        "同じ位置にある角を何というかな。",
+        "平行線の同位角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠x と 50° は同位角",
+         "50°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "ℓ ∥ m のとき、折れ線の角 ∠x を、補助線を引いて求めましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"21.2\" y1=\"37.8\" x2=\"218.8\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"21.2\" y1=\"102.2\" x2=\"218.8\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"51.8,41.8 56.8,37.8 51.8,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"51.8,106.2 56.8,102.2 51.8,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"29.2\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"29.2\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"115.9\" y1=\"37.8\" x2=\"154.3\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.5\" y1=\"102.2\" x2=\"154.3\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"47\" y1=\"70\" x2=\"218.8\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M128.2 48.1 A16 16 0 0 0 131.9 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.1\" y=\"52.6\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M114.5 102.2 A16 16 0 0 0 112.4 94.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.5\" y=\"99\" font-size=\"13\" text-anchor=\"middle\">30°</text><path d=\"M143.6 61 A14 14 0 0 0 142.2 77\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"128.4\" y=\"72.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"115.9\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"98.5\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"164.3\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "explain": "点 P を通り、ℓ に平行な直線（点線）を引きます。点線は m とも平行です。∠x は点線で上と下の 2 つに分かれます。上の部分は、ℓ と点線の錯角なので 40° に等しく、下の部分は、m と点線の錯角なので 30° に等しくなります。だから ∠x = 40° + 30° = 70° です。このように、もとの図にない線を引いて考えるとき、その線を補助線といいます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"110.6\" y1=\"135.2\" x2=\"149.7\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"158.7\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M144.3 31.5 A13 13 0 0 0 127.2 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"126.1\" y=\"28.6\" font-size=\"12\" text-anchor=\"middle\">108°</text><path d=\"M124 93.8 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.9\" y=\"90.9\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 108,
+       "check": "108",
+       "hints": [
+        "2 つの角は、同じ位置にあるかな。",
+        "同じ位置にある角を何というかな。",
+        "平行線の同位角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠x と 108° は同位角",
+         "108°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "一直線に、2 本の線を引きました。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 120\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"96.4\" x2=\"220\" y2=\"96.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"96.4\" x2=\"179.5\" y2=\"36.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"96.4\" x2=\"78\" y2=\"23.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M138 96.4 A18 18 0 0 0 132.7 83.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149.6\" y=\"88.3\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M137 79.4 A24 24 0 0 0 108 75.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125\" y=\"62.9\" font-size=\"12\" text-anchor=\"middle\">x</text><path d=\"M111 80.8 A18 18 0 0 0 102 96.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.3\" y=\"84.6\" font-size=\"12\" text-anchor=\"middle\">60°</text><circle cx=\"120\" cy=\"96.4\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 75,
+       "check": "180 - 45 - 60",
+       "hints": [
+        "3 つの角を合わせると何度かな。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "45 + 60 = 105",
+         "180 − 105 = 75"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"26.1\" y1=\"37.8\" x2=\"213.9\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"26.1\" y1=\"102.2\" x2=\"213.9\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"54.9,41.8 59.9,37.8 54.9,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"54.9,106.2 59.9,102.2 54.9,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"34.1\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"34.1\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"103.4\" y1=\"37.8\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"117.2\" y1=\"102.2\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M116.5 47 A16 16 0 0 0 119.4 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"132\" y=\"51.3\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M133.2 102.2 A16 16 0 0 0 128.5 90.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.9\" y=\"95.3\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M138 62 A14 14 0 0 0 139.6 79.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"123.6\" y=\"76.8\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"103.4\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"117.2\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"159.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 80,
+       "check": "35 + 45",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は、補助線で 2 つに分かれるね。",
+        "分かれたそれぞれの角は、どの角と錯角になるかな。"
+       ],
+       "paths": [
+        [
+         "P を通り ℓ に平行な線を引く",
+         "上は 35°、下は 45°（錯角）",
+         "∠x = 35 + 45 = 80"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 本の直線 ℓ、m、k に、直線 n が交わっています。平行な 2 本はどれとどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"110\" y1=\"142\" x2=\"144.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"101\" y=\"144.6\" font-size=\"13\" text-anchor=\"middle\">n</text><line x1=\"52.5\" y1=\"42.9\" x2=\"218.8\" y2=\"34.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"226.8\" y=\"32.7\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><path d=\"M150.7 37.8 A13 13 0 0 0 141.1 25.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157.1\" y=\"26.6\" font-size=\"11\" text-anchor=\"middle\">72°</text><line x1=\"41.5\" y1=\"79.1\" x2=\"208.1\" y2=\"79.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"216.1\" y=\"77.6\" font-size=\"13\" text-anchor=\"middle\">m</text><path d=\"M139.8 79.1 A13 13 0 0 0 130.2 66.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"67.7\" font-size=\"11\" text-anchor=\"middle\">75°</text><line x1=\"30.7\" y1=\"124.2\" x2=\"197.1\" y2=\"115.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"205.1\" y=\"114\" font-size=\"13\" text-anchor=\"middle\">k</text><path d=\"M128.9 119 A13 13 0 0 0 119.3 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.4\" y=\"107.8\" font-size=\"11\" text-anchor=\"middle\">72°</text></svg>",
+       "choices": [
+        "ℓ と m",
+        "ℓ と k",
+        "m と k"
+       ],
+       "answer": "ℓ と k",
+       "check": "(lambda d: [k for k in ['ℓ と m', 'ℓ と k', 'm と k'] if d[k[0]] == d[k[-1]]][0])({'ℓ': 72, 'm': 75, 'k': 72})",
+       "hints": [
+        "図の 3 つの角は、どれも n の右上にあるね。",
+        "同じ位置にある角を何というかな。",
+        "同位角が等しければ、2 直線は平行だね。"
+       ],
+       "paths": [
+        [
+         "3 つの角は同位角",
+         "ℓ と k の同位角はどちらも 72°",
+         "ℓ ∥ k"
+        ]
+       ],
+       "note": "見た目ではほとんど区別がつかない。図ではなく、角の大きさで決めることを確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108.3\" y1=\"135.2\" x2=\"156.9\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"165.9\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M133 106.2 A13 13 0 0 0 124.9 94.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.9\" y=\"96.9\" font-size=\"12\" text-anchor=\"middle\">68°</text><path d=\"M140.3 55.9 A13 13 0 0 0 158.2 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.6\" y=\"67.9\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 112,
+       "check": "180 - 68",
+       "hints": [
+        "∠x のとなりの角（ℓ の上で ∠x と一直線をつくる角）を考えよう。",
+        "そのとなりの角と 68° は、錯角かな、同位角かな。",
+        "一直線は 180° だね。"
+       ],
+       "paths": [
+        [
+         "∠x のとなりの角は 68° と錯角で 68°",
+         "∠x = 180 − 68 = 112"
+        ],
+        [
+         "∠x と 68° は ℓ と m の内側で同じがわ",
+         "和は 180°",
+         "112°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ℓ ∥ m です。∠APB = 100° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"26.1\" y1=\"37.8\" x2=\"213.9\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"26.1\" y1=\"102.2\" x2=\"213.9\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"54.9,41.8 59.9,37.8 54.9,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"54.9,106.2 59.9,102.2 54.9,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"34.1\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"34.1\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"134.4\" y1=\"37.8\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"103.4\" y1=\"102.2\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M141.2 52.3 A16 16 0 0 0 150.4 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.7\" y=\"58.4\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M119.4 102.2 A16 16 0 0 0 116.5 93\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"132\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M143.5 57.3 A14 14 0 0 0 138 78\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"124.3\" y=\"67.8\" font-size=\"13\" text-anchor=\"middle\">100°</text><text x=\"134.4\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"103.4\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"159.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 65,
+       "check": "100 - 35",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠APB は、補助線で 2 つに分かれるね。下の部分は何度かな。",
+        "上の部分は ∠x と等しいね。"
+       ],
+       "paths": [
+        [
+         "補助線で ∠APB を分ける",
+         "下の部分は 35°（錯角）",
+         "上の部分は 100 − 35 = 65",
+         "∠x = 65"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"14.6\" y1=\"37.8\" x2=\"225.4\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"14.6\" y1=\"102.2\" x2=\"225.4\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"47.5,41.8 52.5,37.8 47.5,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"47.5,106.2 52.5,102.2 47.5,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"22.6\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"22.6\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"91.9\" y1=\"37.8\" x2=\"161\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134\" y1=\"102.2\" x2=\"161\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M106.4 44.5 A16 16 0 0 0 107.9 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.2\" y=\"48.8\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M150 102.2 A16 16 0 0 0 144.2 90\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"161.1\" y=\"94.1\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M148.3 64.1 A14 14 0 0 0 152 80.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.6\" y=\"80.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"91.9\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"134\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"171\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 75,
+       "check": "25 + 50",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は 2 つに分かれるね。",
+        "それぞれの角は錯角で等しいね。"
+       ],
+       "paths": [
+        [
+         "上は 25°、下は 50°",
+         "75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 直線 ℓ、m に直線 n が交わり、同位角がどちらも 80° です。ℓ と m は平行ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114.9\" y1=\"135.2\" x2=\"136.1\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"145.1\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M144 43.8 A13 13 0 0 0 133.2 31\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149.4\" y=\"32.6\" font-size=\"12\" text-anchor=\"middle\">80°</text><path d=\"M133 106.2 A13 13 0 0 0 122.3 93.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.4\" y=\"94.9\" font-size=\"12\" text-anchor=\"middle\">80°</text></svg>",
+       "choices": [
+        "平行である",
+        "平行でない"
+       ],
+       "answer": "平行である",
+       "check": "'平行である' if 80 == 80 else '平行でない'",
+       "hints": [
+        "2 つの 80° の角は、同じ位置にあるかな。",
+        "同位角が等しいとき、2 直線はどうなるかな。",
+        "見本の説明の「反対に」の文を思い出そう。"
+       ],
+       "paths": [
+        [
+         "同位角が等しい",
+         "ℓ ∥ m"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.2\" y1=\"135.2\" x2=\"144.5\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"153.5\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M123.7 43.8 A13 13 0 0 0 133.3 56.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.7\" y=\"62.7\" font-size=\"12\" text-anchor=\"middle\">x</text><path d=\"M123.4 93.6 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105.4\" y=\"91.3\" font-size=\"12\" text-anchor=\"middle\">105°</text></svg>",
+       "answer": 75,
+       "check": "180 - 105",
+       "hints": [
+        "∠x と 105° は、ℓ と m の内側で、n の同じがわにあるね。",
+        "m の上で、105° のとなりの角を考えよう。",
+        "そのとなりの角と ∠x は錯角だね。"
+       ],
+       "paths": [
+        [
+         "105° のとなりは 180 − 105 = 75",
+         "∠x と錯角",
+         "75°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形の外角と、多角形の角の和を調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"122\" y1=\"30.5\" x2=\"59.7\" y2=\"119.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.7\" y1=\"119.5\" x2=\"145.9\" y2=\"119.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.9\" y1=\"119.5\" x2=\"122\" y2=\"30.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.9\" y1=\"119.5\" x2=\"180.3\" y2=\"119.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.9\" y1=\"119.5\" x2=\"169.3\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M112.8 43.6 A16 16 0 0 0 126.1 45.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.1\" y=\"62.6\" font-size=\"13\" text-anchor=\"middle\">a</text><path d=\"M75.7 119.5 A16 16 0 0 0 68.8 106.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"84.5\" y=\"111.1\" font-size=\"13\" text-anchor=\"middle\">b</text><path d=\"M158.5 101.5 A22 22 0 0 0 140.2 98.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"151.8\" y=\"90.6\" font-size=\"13\" text-anchor=\"middle\">a</text><path d=\"M167.9 119.5 A22 22 0 0 0 158.5 101.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"176\" y=\"108.4\" font-size=\"13\" text-anchor=\"middle\">b</text><text x=\"119.8\" y=\"24.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"51.9\" y=\"131.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"145.9\" y=\"135.1\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"180.3\" y=\"135.1\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"177.1\" y=\"82.7\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "三角形の 1 つの辺をのばしてできる角 ∠ACD を、頂点 C の外角といいます。C を通り BA に平行な直線 CE を引くと、∠ACE = ∠a（錯角）、∠ECD = ∠b（同位角）なので、外角 ∠ACD = ∠a + ∠b です。三角形の外角は、となり合わない 2 つの内角の和に等しくなります。また、多角形は 1 つの頂点から引いた対角線で、（頂点の数 − 2）個の三角形に分けられます。だから、六角形の内角の和は 180° × 4 = 720° です。辺の長さがすべて等しく、角の大きさもすべて等しい多角形を正多角形といいます。多角形の外角の和は、何角形でも 360° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"14.6\" y1=\"37.8\" x2=\"225.4\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"14.6\" y1=\"102.2\" x2=\"225.4\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"47.5,41.8 52.5,37.8 47.5,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"47.5,106.2 52.5,102.2 47.5,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"22.6\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"22.6\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"105.2\" y1=\"37.8\" x2=\"161\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"91.9\" y1=\"102.2\" x2=\"161\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M119 45.8 A16 16 0 0 0 121.2 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"134.2\" y=\"50.1\" font-size=\"13\" text-anchor=\"middle\">30°</text><path d=\"M107.9 102.2 A16 16 0 0 0 106.4 95.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.2\" y=\"100.3\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M148.9 63 A14 14 0 0 0 148.3 75.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135\" y=\"73.4\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"105.2\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"91.9\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"171\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 55,
+       "check": "30 + 25",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は 2 つに分かれるね。",
+        "それぞれの角は錯角で等しいね。"
+       ],
+       "paths": [
+        [
+         "上は 30°、下は 25°",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "四角形の 3 つの角が 90°、85°、100° です。のこりの角は何度ですか。",
+       "answer": 85,
+       "check": "360 - 90 - 85 - 100",
+       "hints": [
+        "四角形の 4 つの角の和は何度だったかな。",
+        "わかっている 3 つの角をたそう。",
+        "360 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "90 + 85 + 100 = 275",
+         "360 − 275 = 85"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"93.6\" y1=\"30.2\" x2=\"60.9\" y2=\"119.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.9\" y1=\"119.8\" x2=\"145.3\" y2=\"119.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.3\" y1=\"119.8\" x2=\"93.6\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.3\" y1=\"119.8\" x2=\"179.1\" y2=\"119.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M88.1 45.2 A16 16 0 0 0 101.6 44\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96\" y=\"62.6\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M76.9 119.8 A16 16 0 0 0 66.4 104.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83.9\" y=\"108.3\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M159.3 119.8 A14 14 0 0 0 138.3 107.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.3\" y=\"101.9\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"89.6\" y=\"24.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"53.2\" y=\"132.2\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"145.3\" y=\"135.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"179.1\" y=\"135.4\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 120,
+       "check": "50 + 70",
+       "hints": [
+        "∠x は、頂点 C の外角だね。",
+        "外角と、となり合わない 2 つの内角の関係を思い出そう。",
+        "50° と 70° をたそう。"
+       ],
+       "paths": [
+        [
+         "外角 = となり合わない 2 つの内角の和",
+         "50 + 70 = 120"
+        ],
+        [
+         "∠ACB = 180 − 50 − 70 = 60",
+         "∠x = 180 − 60 = 120"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"90.7\" y1=\"36.1\" x2=\"36.2\" y2=\"113.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.2\" y1=\"113.9\" x2=\"155.9\" y2=\"113.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.9\" y1=\"113.9\" x2=\"90.7\" y2=\"36.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.9\" y1=\"113.9\" x2=\"203.8\" y2=\"113.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.5 49.2 A16 16 0 0 0 100.9 48.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.9\" y=\"68.6\" font-size=\"13\" text-anchor=\"middle\">75°</text><path d=\"M52.2 113.9 A16 16 0 0 0 45.4 100.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"61\" y=\"105.5\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M169.9 113.9 A14 14 0 0 0 146.9 103.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"166.9\" y=\"94.9\" font-size=\"13\" text-anchor=\"middle\">130°</text><text x=\"85.5\" y=\"30.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"126.2\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"155.9\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"203.8\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 55,
+       "check": "130 - 75",
+       "hints": [
+        "130° の角は、頂点 C の外角だね。",
+        "外角は、∠x と 75° の和に等しいね。",
+        "130 から 75 をひこう。"
+       ],
+       "paths": [
+        [
+         "130 = ∠x + 75",
+         "∠x = 55"
+        ]
+       ],
+       "note": "外角の 130° と 75° をたしてしまいやすい。どの角とどの角の和が外角になるかを指でさして確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "六角形の 6 つの内角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,26.5 82.3,48.2 82.3,91.8 120,113.5 157.7,91.8 157.7,48.2\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"26.5\" x2=\"82.3\" y2=\"48.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82.3\" y1=\"48.2\" x2=\"82.3\" y2=\"91.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"82.3\" y1=\"91.8\" x2=\"120\" y2=\"113.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"113.5\" x2=\"157.7\" y2=\"91.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"157.7\" y1=\"91.8\" x2=\"157.7\" y2=\"48.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"157.7\" y1=\"48.2\" x2=\"120\" y2=\"26.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"26.5\" x2=\"82.3\" y2=\"91.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.5\" x2=\"120\" y2=\"113.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.5\" x2=\"157.7\" y2=\"91.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 720,
+       "check": "180 * (6 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引くと、三角形はいくつできるかな。",
+        "三角形 1 つの内角の和は 180° だね。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 6 − 2 = 4 こ",
+         "180 × 4 = 720"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "正九角形の 1 つの内角は何度ですか。",
+       "answer": 140,
+       "check": "180 - 360 // 9",
+       "hints": [
+        "多角形の外角の和は何度だったかな。",
+        "正九角形の 9 つの外角は、みな等しいね。",
+        "1 つの頂点で、内角と外角を合わせると何度かな。"
+       ],
+       "paths": [
+        [
+         "1 つの外角は 360 ÷ 9 = 40",
+         "内角は 180 − 40 = 140"
+        ],
+        [
+         "内角の和は 180 × 7 = 1260",
+         "1260 ÷ 9 = 140"
+        ]
+       ],
+       "note": "2 本目のみちすじは 1000 をこえる数と 2 けたのわり算になるので、外角から求める道をすすめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "五角形の 5 つの内角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,26.9 74.7,59.8 92,113.1 148,113.1 165.3,59.8\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"26.9\" x2=\"74.7\" y2=\"59.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"74.7\" y1=\"59.8\" x2=\"92\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"92\" y1=\"113.1\" x2=\"148\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"148\" y1=\"113.1\" x2=\"165.3\" y2=\"59.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"165.3\" y1=\"59.8\" x2=\"120\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"26.9\" x2=\"92\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.9\" x2=\"148\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 540,
+       "check": "180 * (5 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引こう。",
+        "三角形はいくつできるかな。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 3 こ",
+         "180 × 3 = 540"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正六角形の 1 つの内角は何度ですか。",
+       "answer": 120,
+       "check": "180 - 360 // 6",
+       "hints": [
+        "外角の和は何度だったかな。",
+        "正六角形の 1 つの外角は何度かな。",
+        "内角と外角を合わせると 180° だね。"
+       ],
+       "paths": [
+        [
+         "外角は 360 ÷ 6 = 60",
+         "内角は 180 − 60 = 120"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 つの外角が 40° の正多角形は、正何角形ですか。数で答えましょう。",
+       "answer": 9,
+       "check": "360 // 40",
+       "hints": [
+        "外角の和は何度だったかな。",
+        "40° の外角が、いくつ集まると和になるかな。",
+        "360 ÷ 40 を考えよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 40 = 9",
+         "正九角形"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "合同な 2 つの三角形と、三角形の合同条件を知りましょう。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.4\" y1=\"67.2\" x2=\"42.4\" y2=\"62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"197.6\" y1=\"62.8\" x2=\"188.6\" y2=\"67.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"66.4\" y1=\"81.5\" x2=\"66.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"70.4\" y1=\"81.5\" x2=\"70.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.6\" y1=\"91.5\" x2=\"173.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"169.6\" y1=\"91.5\" x2=\"169.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"78.4\" y1=\"71.4\" x2=\"85.5\" y2=\"64.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"75.6\" y1=\"68.5\" x2=\"82.7\" y2=\"61.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"72.8\" y1=\"65.7\" x2=\"79.8\" y2=\"58.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.5\" y1=\"64.3\" x2=\"161.6\" y2=\"71.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"157.3\" y1=\"61.5\" x2=\"164.4\" y2=\"68.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"160.2\" y1=\"58.6\" x2=\"167.2\" y2=\"65.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M92.2 78 A12 12 0 0 0 88.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M89.3 75.2 A16 16 0 0 0 84.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M151.4 86.5 A12 12 0 0 0 147.8 78\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M155.4 86.5 A16 16 0 0 0 150.7 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M53.2 52.4 A10 10 0 0 0 64.7 50.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M51.4 56 A14 14 0 0 0 67.5 53.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M49.6 59.6 A18 18 0 0 0 70.4 56.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M175.3 50.6 A10 10 0 0 0 186.8 52.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M172.5 53.4 A14 14 0 0 0 188.6 56\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M169.6 56.2 A18 18 0 0 0 190.4 59.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "explain": "2 つの図形の一方を動かして（ずらす、回す、裏返す）ぴったり重ねられるとき、2 つの図形は合同であるといい、△ABC ≡ △DEF と書きます。≡ の式では、重なる頂点（対応する頂点）を同じ順に書きます。図では A と D、B と E、C と F が対応します。合同な図形では、対応する辺の長さも、対応する角の大きさも等しくなります。図の同じしるしは、等しい辺や角を表します。2 つの三角形は、次のどれかが成り立てば合同です（三角形の合同条件）。① 3 組の辺がそれぞれ等しい。② 2 組の辺とその間の角がそれぞれ等しい。③ 1 組の辺とその両端の角がそれぞれ等しい。"
+      },
+      {
+       "part": "思い出す",
+       "text": "∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"86.9\" y1=\"31.5\" x2=\"55.3\" y2=\"118.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.3\" y1=\"118.5\" x2=\"147.7\" y2=\"118.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.7\" y1=\"118.5\" x2=\"86.9\" y2=\"31.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"147.7\" y1=\"118.5\" x2=\"184.7\" y2=\"118.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M81.4 46.6 A16 16 0 0 0 96.1 44.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.5\" y=\"63.9\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M71.3 118.5 A16 16 0 0 0 60.7 103.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"78.2\" y=\"107\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M161.7 118.5 A14 14 0 0 0 139.7 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.8\" y=\"99.9\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"82.1\" y=\"26.2\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"47.5\" y=\"130.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.7\" y=\"134\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"184.7\" y=\"134\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 125,
+       "check": "55 + 70",
+       "hints": [
+        "∠x は、頂点 C の外角だね。",
+        "外角は、となり合わない 2 つの内角の和だね。",
+        "55° と 70° をたそう。"
+       ],
+       "paths": [
+        [
+         "55 + 70 = 125"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"92.9\" y1=\"135.2\" x2=\"205.2\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"214.2\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M191.1 43.8 A13 13 0 0 0 187 34.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"200.1\" y=\"38.5\" font-size=\"12\" text-anchor=\"middle\">47°</text><path d=\"M107 106.2 A13 13 0 0 0 111.1 115.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98\" y=\"119.9\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 47,
+       "check": "47",
+       "hints": [
+        "m の上で、∠x と向かい合う角を考えよう。",
+        "その角と 47° は、どんな関係かな。",
+        "対頂角と同位角を続けて使おう。"
+       ],
+       "paths": [
+        [
+         "∠x の対頂角は 47° の同位角",
+         "47°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ≡ △DEF です。辺 EF の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">F</text><text x=\"28.6\" y=\"65.2\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"68.4\" y=\"100.1\" font-size=\"13\" text-anchor=\"middle\">7 cm</text><text x=\"97.4\" y=\"64.2\" font-size=\"13\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 7,
+       "check": "{'AB': 5, 'BC': 7, 'CA': 6}['BC']",
+       "hints": [
+        "≡ の式で、E と F は、それぞれどの頂点と対応するかな。",
+        "E は B と、F は C と対応するね。",
+        "辺 EF は、△ABC のどの辺と等しいかな。"
+       ],
+       "paths": [
+        [
+         "E と B、F と C が対応",
+         "EF = BC = 7 cm"
+        ]
+       ],
+       "note": "図の位置だけで対応を決めると取りちがえる。≡ の式の順で対応を読む。"
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ≡ △PQR で、∠A = 50°、∠B = 60° です。∠R は何度ですか。",
+       "answer": 70,
+       "check": "180 - 50 - 60",
+       "hints": [
+        "R は、△ABC のどの頂点と対応するかな。",
+        "∠R は ∠C と等しいね。",
+        "∠C を、三角形の内角の和から求めよう。"
+       ],
+       "paths": [
+        [
+         "R と C が対応",
+         "∠C = 180 − 50 − 60 = 70",
+         "∠R = 70"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.4\" y1=\"67.2\" x2=\"42.4\" y2=\"62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"197.6\" y1=\"62.8\" x2=\"188.6\" y2=\"67.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"66.4\" y1=\"81.5\" x2=\"66.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"70.4\" y1=\"81.5\" x2=\"70.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.6\" y1=\"91.5\" x2=\"173.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"169.6\" y1=\"91.5\" x2=\"169.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "2 組の辺とその間の角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "しるしのある角は、しるしのある 2 つの辺の間にあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "AB = DE、BC = EF",
+         "∠B = ∠E は 2 辺の間の角",
+         "2 組の辺とその間の角"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "図の 2 つの三角形は、AB = DE、AC = DF、∠B = ∠E です。この 2 つの三角形について、正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"81.3\" y1=\"47.3\" x2=\"36.1\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"82.7\" x2=\"97\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97\" y1=\"82.7\" x2=\"81.3\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"158.7\" y1=\"47.3\" x2=\"203.9\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"82.7\" x2=\"174.3\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.3\" y1=\"82.7\" x2=\"158.7\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.8\" y1=\"68.9\" x2=\"55.7\" y2=\"61.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"184.3\" y1=\"61.1\" x2=\"178.2\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"61.1\" x2=\"83.8\" y2=\"65.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"94.5\" y1=\"64.8\" x2=\"85.4\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"170.2\" y1=\"61.1\" x2=\"161.1\" y2=\"65.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"171.8\" y1=\"64.8\" x2=\"162.7\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 82.7 A14 14 0 0 0 47.2 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M192.8 74 A14 14 0 0 0 189.9 82.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.3\" y=\"40.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"104.7\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"158.7\" y=\"40.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"196.1\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"182\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しいので合同",
+        "2 組の辺とその間の角がそれぞれ等しいので合同",
+        "1 組の辺とその両端の角がそれぞれ等しいので合同",
+        "合同とはいえない"
+       ],
+       "answer": "合同とはいえない",
+       "hints": [
+        "∠B は、AB と AC の間の角かな。",
+        "等しい角が、等しい 2 辺の間にないと、どうなるかな。",
+        "図の 2 つの三角形を、重ねられるかな。"
+       ],
+       "paths": [
+        [
+         "∠B は AB と AC の間の角ではない",
+         "どの合同条件にも当たらない",
+         "図のように形がちがう三角形ができる",
+         "合同とはいえない"
+        ]
+       ],
+       "note": "2 辺と、その間でない角が等しくても、三角形は 2 通りできることがある。図の 2 つがその例。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.4\" y1=\"81.5\" x2=\"68.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"171.6\" y1=\"91.5\" x2=\"171.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M92.2 78 A12 12 0 0 0 88.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M89.3 75.2 A16 16 0 0 0 84.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M151.4 86.5 A12 12 0 0 0 147.8 78\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M155.4 86.5 A16 16 0 0 0 150.7 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "1 組の辺とその両端の角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "しるしのある角は、その辺のどこにあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "BC = EF",
+         "∠B = ∠E、∠C = ∠F は BC の両端",
+         "1 組の辺とその両端の角"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ≡ △DEF で、∠E = 70° です。∠B は何度ですか。",
+       "answer": 70,
+       "check": "70",
+       "hints": [
+        "≡ の式で、E はどの頂点と対応するかな。",
+        "対応する角は等しいね。",
+        "2 つ目の文字どうしが対応するよ。"
+       ],
+       "paths": [
+        [
+         "E と B が対応",
+         "∠B = ∠E = 70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.4\" y1=\"67.2\" x2=\"42.4\" y2=\"62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"197.6\" y1=\"62.8\" x2=\"188.6\" y2=\"67.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"66.4\" y1=\"81.5\" x2=\"66.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"70.4\" y1=\"81.5\" x2=\"70.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.6\" y1=\"91.5\" x2=\"173.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"169.6\" y1=\"91.5\" x2=\"169.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"78.4\" y1=\"71.4\" x2=\"85.5\" y2=\"64.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"75.6\" y1=\"68.5\" x2=\"82.7\" y2=\"61.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"72.8\" y1=\"65.7\" x2=\"79.8\" y2=\"58.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.5\" y1=\"64.3\" x2=\"161.6\" y2=\"71.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"157.3\" y1=\"61.5\" x2=\"164.4\" y2=\"68.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"160.2\" y1=\"58.6\" x2=\"167.2\" y2=\"65.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">Q</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">R</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">S</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">T</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">U</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "3 組の辺がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "角のしるしはあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "3 組の辺に同じしるし",
+         "3 組の辺がそれぞれ等しい"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "図で、AO = BO、CO = DO ならば AC = BD であることを、証明してみましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"55.7\" y1=\"37.9\" x2=\"184.3\" y2=\"102.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"108.6\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.7\" y1=\"37.9\" x2=\"68.6\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"184.3\" y1=\"102.1\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.1\" y1=\"49.5\" x2=\"85.6\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.4\" y1=\"81.6\" x2=\"149.9\" y2=\"90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"89.7\" y1=\"86.5\" x2=\"95.7\" y2=\"94.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"84.1\" x2=\"98.9\" y2=\"92.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"141.1\" y1=\"47.9\" x2=\"147.1\" y2=\"55.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"144.3\" y1=\"45.5\" x2=\"150.3\" y2=\"53.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.3 64.6 A12 12 0 0 0 110.4 77.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M130.7 75.4 A12 12 0 0 0 129.6 62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.9\" y=\"34.6\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.1\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"120.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"28.2\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"63.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "「〜ならば…」の文で、「〜」の部分を仮定、「…」の部分を結論といいます。仮定から、約束した事実（根拠）を使って結論を導くことを証明といいます。この例では、仮定は AO = BO、CO = DO、結論は AC = BD です。証明「△AOC と △BOD で、仮定から AO = BO …①、CO = DO …②。対頂角は等しいので ∠AOC = ∠BOD …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので、△AOC ≡ △BOD。合同な図形の対応する辺は等しいので、AC = BD。」1 文ごとに、なぜそういえるのか（根拠）をそえて書きます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.4\" y1=\"81.5\" x2=\"68.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"171.6\" y1=\"91.5\" x2=\"171.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M92.2 78 A12 12 0 0 0 88.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M89.3 75.2 A16 16 0 0 0 84.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M151.4 86.5 A12 12 0 0 0 147.8 78\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M155.4 86.5 A16 16 0 0 0 150.7 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">Q</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">R</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">S</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">T</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">U</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "1 組の辺とその両端の角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "しるしのある角は、その辺の両端にあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "QR = TU",
+         "その両端の角が等しい",
+         "1 組の辺とその両端の角"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "正六角形の 1 つの外角は何度ですか。",
+       "answer": 60,
+       "check": "360 // 6",
+       "hints": [
+        "多角形の外角の和は何度だったかな。",
+        "正六角形の外角は、みな等しいね。",
+        "360 を 6 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 6 = 60"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「△ABC ≡ △DEF ならば、∠A = ∠D である」で、仮定はどれですか。",
+       "choices": [
+        "△ABC ≡ △DEF",
+        "∠A = ∠D",
+        "AB = DE"
+       ],
+       "answer": "△ABC ≡ △DEF",
+       "hints": [
+        "「〜ならば…」の「〜」の部分はどこかな。",
+        "仮定は、はじめにわかっていることだね。",
+        "「ならば」の前を見よう。"
+       ],
+       "paths": [
+        [
+         "「ならば」の前が仮定",
+         "△ABC ≡ △DEF"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図で、AB ∥ CD、AM = DM ならば △ABM ≡ △DCM であることを証明します。∠BAM = ∠CDM といえる根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.5\" y1=\"42.7\" x2=\"152.7\" y2=\"29.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.3\" y1=\"110.9\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.5\" y1=\"42.7\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.7\" y1=\"29.1\" x2=\"87.3\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"51.9\" x2=\"90.5\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"149.5\" y1=\"79.2\" x2=\"145\" y2=\"88.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"104.8,40.6 109.1,35.9 103.5,32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"126.6,108.8 130.9,104.1 125.4,100.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"54.5\" y=\"47.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.5\" y=\"101.8\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"160.5\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"79.5\" y=\"123.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">M</text></svg>",
+       "choices": [
+        "対頂角は等しい",
+        "平行線の錯角は等しい",
+        "平行線の同位角は等しい",
+        "仮定"
+       ],
+       "answer": "平行線の錯角は等しい",
+       "hints": [
+        "∠BAM と ∠CDM は、どの 2 本の平行線と、どの直線がつくる角かな。",
+        "2 つの角は、AD をはさんで反対がわの、内側の角だね。",
+        "そういう位置の角を何というかな。"
+       ],
+       "paths": [
+        [
+         "AB ∥ CD に AD が交わる",
+         "∠BAM と ∠CDM は錯角",
+         "平行線の錯角は等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "前の問題の証明では、AM = DM、∠BAM = ∠CDM、∠AMB = ∠DMC を使います。どの合同条件を使いますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.5\" y1=\"42.7\" x2=\"152.7\" y2=\"29.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.3\" y1=\"110.9\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.5\" y1=\"42.7\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.7\" y1=\"29.1\" x2=\"87.3\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"51.9\" x2=\"90.5\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"149.5\" y1=\"79.2\" x2=\"145\" y2=\"88.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"104.8,40.6 109.1,35.9 103.5,32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"126.6,108.8 130.9,104.1 125.4,100.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"54.5\" y=\"47.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.5\" y=\"101.8\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"160.5\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"79.5\" y=\"123.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">M</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "1 組の辺とその両端の角がそれぞれ等しい",
+       "hints": [
+        "辺はいくつ、角はいくつ使っているかな。",
+        "2 つの角は、辺 AM（DM）のどこにあるかな。",
+        "辺の両端にある角だね。"
+       ],
+       "paths": [
+        [
+         "辺 AM = DM",
+         "∠A と ∠M は AM の両端",
+         "1 組の辺とその両端の角"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "見本の証明（AC = BD を示す）で、根拠に使ってはいけないものはどれですか。",
+       "choices": [
+        "仮定の AO = BO",
+        "対頂角は等しいこと",
+        "AC = BD であること",
+        "三角形の合同条件"
+       ],
+       "answer": "AC = BD であること",
+       "hints": [
+        "証明で示したいことは何だったかな。",
+        "示したいことを根拠に使うと、どうなるかな。",
+        "「わかっていること」と「示したいこと」を分けよう。"
+       ],
+       "paths": [
+        [
+         "AC = BD は結論",
+         "結論を根拠に使うと示したことにならない"
+        ]
+       ],
+       "note": "結論を使って結論を示すと、何も示していない（ぐるぐる回りの説明）。証明を書いたら、根拠に結論がまぎれていないか確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "「AB = AC ならば、∠B = ∠C である」で、結論はどれですか。",
+       "choices": [
+        "AB = AC",
+        "∠B = ∠C"
+       ],
+       "answer": "∠B = ∠C",
+       "hints": [
+        "「〜ならば…」の「…」の部分はどこかな。",
+        "結論は、示したいことだね。",
+        "「ならば」のあとを見よう。"
+       ],
+       "paths": [
+        [
+         "「ならば」のあとが結論",
+         "∠B = ∠C"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "見本の証明で、∠AOC = ∠BOD といえる根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"55.7\" y1=\"37.9\" x2=\"184.3\" y2=\"102.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"108.6\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.7\" y1=\"37.9\" x2=\"68.6\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"184.3\" y1=\"102.1\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.1\" y1=\"49.5\" x2=\"85.6\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.4\" y1=\"81.6\" x2=\"149.9\" y2=\"90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"89.7\" y1=\"86.5\" x2=\"95.7\" y2=\"94.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"84.1\" x2=\"98.9\" y2=\"92.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"141.1\" y1=\"47.9\" x2=\"147.1\" y2=\"55.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"144.3\" y1=\"45.5\" x2=\"150.3\" y2=\"53.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.3 64.6 A12 12 0 0 0 110.4 77.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M130.7 75.4 A12 12 0 0 0 129.6 62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.9\" y=\"34.6\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.1\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"120.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"28.2\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"63.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "choices": [
+        "対頂角は等しい",
+        "平行線の錯角は等しい",
+        "仮定"
+       ],
+       "answer": "対頂角は等しい",
+       "hints": [
+        "∠AOC と ∠BOD は、どこで交わる 2 直線の角かな。",
+        "2 つの角は向かい合っているね。",
+        "向かい合う角を何というかな。"
+       ],
+       "paths": [
+        [
+         "AB と CD が O で交わる",
+         "向かい合う角は対頂角",
+         "対頂角は等しい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "見本の図で △AOC ≡ △BOD がいえました。そこからいえることはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"55.7\" y1=\"37.9\" x2=\"184.3\" y2=\"102.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"108.6\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.7\" y1=\"37.9\" x2=\"68.6\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"184.3\" y1=\"102.1\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.1\" y1=\"49.5\" x2=\"85.6\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.4\" y1=\"81.6\" x2=\"149.9\" y2=\"90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"89.7\" y1=\"86.5\" x2=\"95.7\" y2=\"94.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"84.1\" x2=\"98.9\" y2=\"92.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"141.1\" y1=\"47.9\" x2=\"147.1\" y2=\"55.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"144.3\" y1=\"45.5\" x2=\"150.3\" y2=\"53.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.3 64.6 A12 12 0 0 0 110.4 77.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M130.7 75.4 A12 12 0 0 0 129.6 62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.9\" y=\"34.6\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.1\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"120.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"28.2\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"63.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "choices": [
+        "AC = BD",
+        "AO = CO",
+        "∠OAC = ∠ODB"
+       ],
+       "answer": "AC = BD",
+       "hints": [
+        "≡ の式で、A、O、C は、それぞれどの頂点と対応するかな。",
+        "対応する辺は等しいね。",
+        "辺 AC と対応するのはどの辺かな。"
+       ],
+       "paths": [
+        [
+         "A と B、O と O、C と D が対応",
+         "AC と BD が対応",
+         "AC = BD"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "2 直線が交わるとき、対頂角 ∠a と ∠b は等しくなります。このことを、一直線の角が 180° であることを使って証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"23.7\" y1=\"65\" x2=\"216.2\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.8\" y1=\"117.7\" x2=\"164.2\" y2=\"12.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M136 65 A16 16 0 0 0 130.3 52.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.3\" y=\"56.9\" font-size=\"12\" text-anchor=\"middle\">∠a</text><path d=\"M130.3 52.7 A16 16 0 0 0 104 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.7\" y=\"42.9\" font-size=\"12\" text-anchor=\"middle\">∠c</text><path d=\"M104 65 A16 16 0 0 0 109.7 77.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.7\" y=\"81.5\" font-size=\"12\" text-anchor=\"middle\">∠b</text></svg>",
+       "explain": "例：「図のように、∠a と ∠b のとなりの角を ∠c とする。∠a と ∠c で一直線をつくるので、∠a + ∠c = 180°、よって ∠a = 180° − ∠c。∠b と ∠c も一直線をつくるので、∠b + ∠c = 180°、よって ∠b = 180° − ∠c。したがって ∠a = ∠b。」と書ければよい。①「となりの角を ∠c とする」と名前を決める、② 2 つの等式から、∠a と ∠b をどちらも 180° − ∠c で表す、③ 一直線の角は 180° という約束した事実で結ぶ、の 3 点を見る。分度器で測って同じだった（例）だけで終わったら、例ではすべての交わり方を示せないことを話す。G-009 で計算から気づいたこと（向かい合う角が等しい）を、どの交わり方でも成り立つ形にしたものだと伝える。",
+       "hints": [
+        "∠a と ∠b のとなりの角に、名前をつけよう。",
+        "∠a とその角で一直線だね。式に書こう。",
+        "∠b とその角も一直線だね。2 つの式をくらべよう。"
+       ],
+       "paths": [
+        [
+         "となりの角を ∠c とする",
+         "∠a + ∠c = 180°",
+         "∠b + ∠c = 180°",
+         "どちらも 180° − ∠c",
+         "∠a = ∠b"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形の 3 つの内角の和が 180° であることを、平行線を使って証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"129.4\" y1=\"29.2\" x2=\"65.2\" y2=\"120.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.2\" y1=\"120.8\" x2=\"172.1\" y2=\"120.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172.1\" y1=\"120.8\" x2=\"129.4\" y2=\"29.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"83.9\" y1=\"29.2\" x2=\"174.8\" y2=\"29.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"92.6,33.2 97.6,29.2 92.6,25.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"113.6,124.8 118.6,120.8 113.6,116.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M111.4 29.2 A18 18 0 0 0 119 43.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.8\" y=\"47.6\" font-size=\"13\" text-anchor=\"middle\">∠b</text><path d=\"M137 45.5 A18 18 0 0 0 147.4 29.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.7\" y=\"49.8\" font-size=\"13\" text-anchor=\"middle\">∠c</text><path d=\"M120.8 41.4 A15 15 0 0 0 135.7 42.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127\" y=\"60.6\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M81.2 120.8 A16 16 0 0 0 74.4 107.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90\" y=\"112.5\" font-size=\"13\" text-anchor=\"middle\">∠b</text><path d=\"M165.4 106.3 A16 16 0 0 0 156.1 120.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148.5\" y=\"110.3\" font-size=\"13\" text-anchor=\"middle\">∠c</text><text x=\"129.4\" y=\"22.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"57.4\" y=\"133.2\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"179.9\" y=\"133.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"72.9\" y=\"33.7\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"185.8\" y=\"33.7\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "例：「△ABC の頂点 A を通り、辺 BC に平行な直線 DE を引く。平行線の錯角は等しいので、∠DAB = ∠ABC（∠b）、∠EAC = ∠ACB（∠c）。D、A、E は一直線の上にあるので、∠DAB + ∠BAC + ∠EAC = 180°。等しい角におきかえると、∠b + ∠a + ∠c = 180° で、3 つの内角の和は 180°。」と書ければよい。① 補助線 DE を BC に平行に引く、② 錯角が等しいことで角を A に集める、③ 一直線の角は 180° で結ぶ、の 3 点を見る。G-009 では 3 つの角を切って集めた例で確かめたが、その方法では試した三角形のことしかいえない。この証明は、どんな三角形でも成り立つことを示していると話す。",
+       "hints": [
+        "頂点 A を通り、BC に平行な補助線を引こう。",
+        "∠b と ∠c と等しい角は、A のどこにあるかな。",
+        "A の所で、3 つの角は何をつくっているかな。"
+       ],
+       "paths": [
+        [
+         "A を通り BC に平行な DE を引く",
+         "∠DAB = ∠b、∠EAC = ∠c（錯角）",
+         "3 つで一直線",
+         "∠a + ∠b + ∠c = 180°"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "図で、AO = BO、CO = DO ならば、AC ∥ DB であることを証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"55.7\" y1=\"37.9\" x2=\"184.3\" y2=\"102.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.6\" y1=\"108.6\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.7\" y1=\"37.9\" x2=\"68.6\" y2=\"108.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"184.3\" y1=\"102.1\" x2=\"171.4\" y2=\"31.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.1\" y1=\"49.5\" x2=\"85.6\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"154.4\" y1=\"81.6\" x2=\"149.9\" y2=\"90.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"89.7\" y1=\"86.5\" x2=\"95.7\" y2=\"94.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"84.1\" x2=\"98.9\" y2=\"92.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"141.1\" y1=\"47.9\" x2=\"147.1\" y2=\"55.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"144.3\" y1=\"45.5\" x2=\"150.3\" y2=\"53.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.3 64.6 A12 12 0 0 0 110.4 77.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M130.7 75.4 A12 12 0 0 0 129.6 62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.9\" y=\"34.6\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.1\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"60.8\" y=\"120.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"179.2\" y=\"28.2\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"63.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "例：「△AOC と △BOD で、仮定から AO = BO、CO = DO。対頂角は等しいので ∠AOC = ∠BOD。2 組の辺とその間の角がそれぞれ等しいので △AOC ≡ △BOD。合同な図形の対応する角は等しいので ∠OAC = ∠OBD。この 2 つの角は、直線 AB が AC、DB と交わってできる錯角で、錯角が等しいので AC ∥ DB。」と書ければよい。① 合同を示す 2 つの三角形と、そのための 3 つの等しいもの、② 合同から対応する角が等しい、③「錯角が等しければ平行」で結ぶ、の 3 点を見る。見本（5 日目）の証明と同じ合同を、別の結論に使っていることに気づかせる。",
+       "hints": [
+        "見本と同じ 2 つの三角形の合同から始めよう。",
+        "合同から、どの角とどの角が等しいといえるかな。",
+        "その 2 つの角は、AC と DB にとって何という角かな。"
+       ],
+       "paths": [
+        [
+         "△AOC ≡ △BOD（2 組の辺とその間の角）",
+         "∠OAC = ∠OBD",
+         "錯角が等しい",
+         "AC ∥ DB"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24.1\" y1=\"37.2\" x2=\"215.9\" y2=\"37.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"24.1\" y1=\"112.8\" x2=\"215.9\" y2=\"112.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"191.7,41.2 196.7,37.2 191.7,33.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"191.7,116.8 196.7,112.8 191.7,108.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"30.1\" y=\"32.8\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"30.1\" y=\"108.3\" font-size=\"13\" text-anchor=\"middle\">m</text><polygon points=\"138,37.2 74.5,112.8 165.5,112.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M123 37.2 A15 15 0 0 0 128.3 48.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"112.6\" y=\"53.6\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M160.3 98.7 A15 15 0 0 0 150.5 112.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.5\" y=\"101.3\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M128.3 48.7 A15 15 0 0 0 143.1 51.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.1\" y=\"69.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"138\" y=\"30.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"74.5\" y=\"128\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"165.5\" y=\"128\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 60,
+       "check": "180 - 50 - 70",
+       "hints": [
+        "50° の角と錯角になる、三角形の角はどれかな。",
+        "∠ABC は何度かな。",
+        "三角形の内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ABC = 50°（錯角）",
+         "∠x = 180 − 50 − 70 = 60"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "五角形の外角の和は何度ですか。1 つの頂点で、内角と外角を合わせると 180° になることを使いましょう。",
+       "answer": 360,
+       "check": "180 * 5 - 180 * (5 - 2)",
+       "hints": [
+        "5 つの頂点で、内角と外角を合わせると、全部で何度かな。",
+        "五角形の内角の和は何度だったかな。",
+        "全部から内角の和をひこう。"
+       ],
+       "paths": [
+        [
+         "内角と外角の和は 180 × 5 = 900",
+         "内角の和は 540",
+         "900 − 540 = 360"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20.8\" y1=\"41.9\" x2=\"219.2\" y2=\"41.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"20.8\" y1=\"108.1\" x2=\"219.2\" y2=\"108.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"194.3,45.9 199.3,41.9 194.3,37.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"194.3,112.1 199.3,108.1 194.3,104.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"26.8\" y=\"37.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"26.8\" y=\"103.7\" font-size=\"13\" text-anchor=\"middle\">m</text><polygon points=\"144,41.9 65,108.1 175,108.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M129 41.9 A15 15 0 0 0 132.6 51.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.7\" y=\"56\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M150.4 55.4 A15 15 0 0 0 159 41.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"167.7\" y=\"61.4\" font-size=\"13\" text-anchor=\"middle\">65°</text><path d=\"M132.6 51.5 A15 15 0 0 0 150.4 55.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138\" y=\"73.7\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"144\" y=\"35.1\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"65\" y=\"123.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"175\" y=\"123.3\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 75,
+       "check": "180 - 40 - 65",
+       "hints": [
+        "A の所で、3 つの角は何をつくっているかな。",
+        "一直線は 180° だね。",
+        "180 から 40 と 65 をひこう。"
+       ],
+       "paths": [
+        [
+         "ℓ の上で 40 + ∠x + 65 = 180",
+         "∠x = 75"
+        ],
+        [
+         "∠B = 40°、∠C = 65°（錯角）",
+         "三角形の内角の和から 75"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "六角形の外角の和は何度ですか。",
+       "answer": 360,
+       "check": "180 * 6 - 180 * (6 - 2)",
+       "hints": [
+        "6 つの頂点で、内角と外角を合わせると全部で何度かな。",
+        "六角形の内角の和は何度だったかな。",
+        "全部から内角の和をひこう。"
+       ],
+       "paths": [
+        [
+         "180 × 6 = 1080",
+         "1080 − 720 = 360"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.7\" y1=\"135.2\" x2=\"221.5\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"230.5\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M179.5 52.5 A13 13 0 0 0 202.2 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"197.8\" y=\"70.5\" font-size=\"12\" text-anchor=\"middle\">x</text><path d=\"M129.7 97.5 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.4\" y=\"87.9\" font-size=\"12\" text-anchor=\"middle\">138°</text></svg>",
+       "answer": 138,
+       "check": "138",
+       "hints": [
+        "2 つの角は、ℓ と m の内側にあるね。",
+        "n をはさんで反対がわにあるかな。",
+        "平行線の錯角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠x と 138° は錯角",
+         "138°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "図の三角形で、底辺の 2 つの角は等しい大きさです。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M113.2 41.9 A16 16 0 0 0 126.8 41.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M91.6 122.6 A16 16 0 0 0 82.4 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.2\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 65,
+       "check": "(180 - 50) // 2",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "2 つの等しい角を合わせると何度かな。",
+        "それを、等しい 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 50 = 130",
+         "130 ÷ 2 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 つの点のまわりに、3 本の線を引きました。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"65\" x2=\"120\" y2=\"10.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"65\" x2=\"72.6\" y2=\"92.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"65\" x2=\"172.9\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 48 A17 17 0 0 0 105.3 73.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"86.2\" y=\"49.7\" font-size=\"12\" text-anchor=\"middle\">120°</text><path d=\"M100.9 76 A22 22 0 0 0 141.3 70.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"125.1\" y=\"107.9\" font-size=\"12\" text-anchor=\"middle\">135°</text><path d=\"M136.4 69.4 A17 17 0 0 0 120 48\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.9\" y=\"45.5\" font-size=\"12\" text-anchor=\"middle\">x</text><circle cx=\"120\" cy=\"65\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 105,
+       "check": "360 - 120 - 135",
+       "hints": [
+        "1 つの点のまわりを 1 回転すると何度かな。",
+        "3 つの角を合わせると 1 回転だね。",
+        "360 から、わかっている 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "120 + 135 = 255",
+         "360 − 255 = 105"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"21.4\" y1=\"39.7\" x2=\"218.6\" y2=\"39.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"21.4\" y1=\"110.3\" x2=\"218.6\" y2=\"110.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"193.9,43.7 198.9,39.7 193.9,35.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"193.9,114.3 198.9,110.3 193.9,106.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"27.4\" y=\"35.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"27.4\" y=\"105.8\" font-size=\"13\" text-anchor=\"middle\">m</text><polygon points=\"87.4,39.7 68.5,110.3 171.5,110.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M98.9 49.3 A15 15 0 0 0 102.4 39.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"113.7\" y=\"53.8\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M83.5 110.3 A15 15 0 0 0 72.4 95.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.7\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">75°</text><path d=\"M83.5 54.2 A15 15 0 0 0 98.9 49.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.8\" y=\"71\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"87.4\" y=\"32.9\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"68.5\" y=\"125.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"171.5\" y=\"125.5\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 65,
+       "check": "180 - 75 - 40",
+       "hints": [
+        "40° の角と錯角になる、三角形の角はどれかな。",
+        "∠ACB は何度かな。",
+        "三角形の内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 40°（錯角）",
+         "∠x = 180 − 75 − 40 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "七角形の 7 つの内角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,26.7 84.4,43.8 75.6,82.4 100.2,113.3 139.8,113.3 164.4,82.4 155.6,43.8\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"26.7\" x2=\"84.4\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"84.4\" y1=\"43.8\" x2=\"75.6\" y2=\"82.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"82.4\" x2=\"100.2\" y2=\"113.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.2\" y1=\"113.3\" x2=\"139.8\" y2=\"113.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.8\" y1=\"113.3\" x2=\"164.4\" y2=\"82.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"82.4\" x2=\"155.6\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"155.6\" y1=\"43.8\" x2=\"120\" y2=\"26.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"26.7\" x2=\"75.6\" y2=\"82.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.7\" x2=\"100.2\" y2=\"113.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.7\" x2=\"139.8\" y2=\"113.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"26.7\" x2=\"164.4\" y2=\"82.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 900,
+       "check": "180 * (7 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引こう。",
+        "三角形はいくつできるかな。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 7 − 2 = 5 こ",
+         "180 × 5 = 900"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC ≡ △DEF で、∠A = 45°、∠E = 80° です。∠F は何度ですか。",
+       "answer": 55,
+       "check": "180 - 45 - 80",
+       "hints": [
+        "∠D と ∠E は、△ABC のどの角と等しいかな。",
+        "△DEF の 2 つの角がわかれば、のこりの角も求められるね。",
+        "∠D = ∠A だね。"
+       ],
+       "paths": [
+        [
+         "∠D = ∠A = 45°",
+         "∠F = 180 − 45 − 80 = 55"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "星形の 5 つの先の角 ∠a〜∠e の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polyline points=\"120,19.1 84.5,128.5 177.5,60.9 62.5,60.9 155.5,128.5 120,19.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M115.1 34.3 A16 16 0 0 0 124.9 34.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"51.6\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M75.4 70.3 A16 16 0 0 0 78.5 60.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"89.1\" y=\"74.1\" font-size=\"13\" text-anchor=\"middle\">∠b</text><path d=\"M97.4 119 A16 16 0 0 0 89.4 113.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.9\" y=\"110.3\" font-size=\"13\" text-anchor=\"middle\">∠c</text><path d=\"M150.6 113.2 A16 16 0 0 0 142.6 119\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.1\" y=\"110.3\" font-size=\"13\" text-anchor=\"middle\">∠d</text><path d=\"M161.5 60.9 A16 16 0 0 0 164.6 70.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.9\" y=\"74.1\" font-size=\"13\" text-anchor=\"middle\">∠e</text></svg>",
+       "answer": 180,
+       "check": "5 * (180 - 2 * 72)",
+       "hints": [
+        "∠b と ∠e を 2 つの内角にもつ小さな三角形を見つけて、外角の性質を使おう。",
+        "∠a と ∠d も、同じように 1 つの角にまとめよう。",
+        "まとめた 2 つの角と ∠c は、1 つの三角形の内角になっているかな。"
+       ],
+       "paths": [
+        [
+         "∠b + ∠e を外角の性質で 1 つの角にまとめる",
+         "∠a + ∠d も同じようにまとめる",
+         "その 2 つと ∠c で 1 つの三角形の内角",
+         "180°"
+        ]
+       ],
+       "note": "どの星形でも 180°（図は正五角形からつくった星で、1 つの先は 36°）。先の角を分度器で測ってたすのは、確かめの例にすぎない。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"39.8\" x2=\"228\" y2=\"39.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"100.2\" x2=\"228\" y2=\"100.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"45.9,43.8 50.9,39.8 45.9,35.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"45.9,104.2 50.9,100.2 45.9,96.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"35.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"20\" y=\"95.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"84.5\" y1=\"39.8\" x2=\"167.6\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.3\" y1=\"100.2\" x2=\"167.6\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M99.6 45.3 A16 16 0 0 0 100.5 39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"114.1\" y=\"49.5\" font-size=\"13\" text-anchor=\"middle\">20°</text><path d=\"M153.3 100.2 A16 16 0 0 0 148.7 88.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"165.1\" y=\"93.3\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M154.4 65.2 A14 14 0 0 0 157.7 79.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.2\" y=\"80.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"84.5\" y=\"34\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"137.3\" y=\"114.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"177.6\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 65,
+       "check": "20 + 45",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は 2 つに分かれるね。",
+        "それぞれの角は錯角で等しいね。"
+       ],
+       "paths": [
+        [
+         "20 + 45 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形の外角の和は何度ですか。",
+       "answer": 360,
+       "check": "180 * 4 - 360",
+       "hints": [
+        "4 つの頂点で、内角と外角を合わせると全部で何度かな。",
+        "四角形の内角の和は何度かな。",
+        "全部から内角の和をひこう。"
+       ],
+       "paths": [
+        [
+         "180 × 4 = 720",
+         "720 − 360 = 360"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABM ≡ △DCM がいえたあと、AB = DC と書きました。この根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.5\" y1=\"42.7\" x2=\"152.7\" y2=\"29.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.3\" y1=\"110.9\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.5\" y1=\"42.7\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.7\" y1=\"29.1\" x2=\"87.3\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"51.9\" x2=\"90.5\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"149.5\" y1=\"79.2\" x2=\"145\" y2=\"88.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"104.8,40.6 109.1,35.9 103.5,32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"126.6,108.8 130.9,104.1 125.4,100.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"54.5\" y=\"47.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.5\" y=\"101.8\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"160.5\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"79.5\" y=\"123.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">M</text></svg>",
+       "choices": [
+        "合同な図形の対応する辺は等しい",
+        "平行線の錯角は等しい",
+        "仮定"
+       ],
+       "answer": "合同な図形の対応する辺は等しい",
+       "hints": [
+        "AB と DC は、どちらの三角形の辺かな。",
+        "≡ の式で、AB と DC は対応しているかな。",
+        "合同な図形の、対応する辺はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "AB と DC は対応する辺",
+         "合同な図形の対応する辺は等しい"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "2 直線が交わっています。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"23.7\" y1=\"65\" x2=\"216.2\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"57.2\" y1=\"117.7\" x2=\"182.8\" y2=\"12.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M132.3 54.7 A16 16 0 0 0 104 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.1\" y=\"41.9\" font-size=\"12\" text-anchor=\"middle\">x</text><path d=\"M107.7 75.3 A16 16 0 0 0 136 65\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.9\" y=\"96.5\" font-size=\"12\" text-anchor=\"middle\">140°</text></svg>",
+       "answer": 140,
+       "check": "140",
+       "hints": [
+        "∠x と 140° は、向かい合っているかな。",
+        "向かい合う角を何というかな。",
+        "対頂角は等しいね。"
+       ],
+       "paths": [
+        [
+         "対頂角",
+         "140°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104.5\" y1=\"135.2\" x2=\"168.6\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"177.6\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M159.2 32.4 A13 13 0 0 0 140.1 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.8\" y=\"27.5\" font-size=\"12\" text-anchor=\"middle\">118°</text><path d=\"M126.1 94.7 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.6\" y=\"89.8\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 118,
+       "check": "118",
+       "hints": [
+        "2 つの角は、同じ位置にあるかな。",
+        "同じ位置の角を何というかな。",
+        "平行線の同位角は等しいね。"
+       ],
+       "paths": [
+        [
+         "同位角",
+         "118°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"105.8\" y1=\"135.2\" x2=\"164.6\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"173.6\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M137.4 43.8 A13 13 0 0 0 144.7 55.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130\" y=\"60.8\" font-size=\"12\" text-anchor=\"middle\">64°</text><path d=\"M125.7 94.5 A13 13 0 0 0 107 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.3\" y=\"90\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 116,
+       "check": "180 - 64",
+       "hints": [
+        "∠x のとなりの角を考えよう。",
+        "そのとなりの角と 64° は、錯角だね。",
+        "一直線は 180° だね。"
+       ],
+       "paths": [
+        [
+         "∠x のとなりは 64°（錯角）",
+         "180 − 64 = 116"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"21.2\" y1=\"37.8\" x2=\"218.8\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"21.2\" y1=\"102.2\" x2=\"218.8\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"51.8,41.8 56.8,37.8 51.8,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"51.8,106.2 56.8,102.2 51.8,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"29.2\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"29.2\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"98.5\" y1=\"37.8\" x2=\"154.3\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"131.8\" y1=\"102.2\" x2=\"154.3\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.4 45.8 A16 16 0 0 0 114.5 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.5\" y=\"50.1\" font-size=\"13\" text-anchor=\"middle\">30°</text><path d=\"M147.8 102.2 A16 16 0 0 0 141 89.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.4\" y=\"92.9\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M142.2 63 A14 14 0 0 0 146.3 81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129\" y=\"80.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"98.5\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"131.8\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"164.3\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 85,
+       "check": "30 + 55",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は 2 つに分かれるね。",
+        "それぞれの角は錯角で等しいね。"
+       ],
+       "paths": [
+        [
+         "30 + 55 = 85"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"129.3\" y1=\"33.6\" x2=\"46.6\" y2=\"116.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"46.6\" y1=\"116.4\" x2=\"151.5\" y2=\"116.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"151.5\" y1=\"116.4\" x2=\"129.3\" y2=\"33.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"151.5\" y1=\"116.4\" x2=\"193.4\" y2=\"116.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M118 44.9 A16 16 0 0 0 133.4 49.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.1\" y=\"65.2\" font-size=\"13\" text-anchor=\"middle\">60°</text><path d=\"M62.6 116.4 A16 16 0 0 0 57.9 105.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"72.4\" y=\"110.2\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M165.5 116.4 A14 14 0 0 0 147.9 102.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"167.3\" y=\"100.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"129.1\" y=\"27.2\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"38.8\" y=\"128.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"151.5\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"193.4\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 105,
+       "check": "60 + 45",
+       "hints": [
+        "∠x は、頂点 C の外角だね。",
+        "外角は、となり合わない 2 つの内角の和だね。",
+        "60° と 45° をたそう。"
+       ],
+       "paths": [
+        [
+         "60 + 45 = 105"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "五角形の 5 つの内角の和は何度ですか。",
+       "answer": 540,
+       "check": "180 * (5 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引こう。",
+        "三角形はいくつできるかな。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 3 こ",
+         "180 × 3 = 540"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68.4\" y1=\"81.5\" x2=\"68.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"171.6\" y1=\"91.5\" x2=\"171.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M92.2 78 A12 12 0 0 0 88.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M89.3 75.2 A16 16 0 0 0 84.6 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M151.4 86.5 A12 12 0 0 0 147.8 78\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M155.4 86.5 A16 16 0 0 0 150.7 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">G</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">H</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">I</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">J</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">K</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">L</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "1 組の辺とその両端の角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "しるしのある角は、その辺のどこにあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "HI = KL",
+         "その両端の角が等しい",
+         "1 組の辺とその両端の角"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図で、AB ∥ CD、AM = DM ならば △ABM ≡ △DCM です。∠AMB = ∠DMC といえる根拠はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"65.5\" y1=\"42.7\" x2=\"152.7\" y2=\"29.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.3\" y1=\"110.9\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.5\" y1=\"42.7\" x2=\"174.5\" y2=\"97.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"152.7\" y1=\"29.1\" x2=\"87.3\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95\" y1=\"51.9\" x2=\"90.5\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"149.5\" y1=\"79.2\" x2=\"145\" y2=\"88.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"104.8,40.6 109.1,35.9 103.5,32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"126.6,108.8 130.9,104.1 125.4,100.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"54.5\" y=\"47.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.5\" y=\"101.8\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"160.5\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"79.5\" y=\"123.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"131\" y=\"74.5\" font-size=\"13\" text-anchor=\"middle\">M</text></svg>",
+       "choices": [
+        "対頂角は等しい",
+        "平行線の錯角は等しい",
+        "仮定"
+       ],
+       "answer": "対頂角は等しい",
+       "hints": [
+        "∠AMB と ∠DMC は、どこで交わる 2 直線の角かな。",
+        "2 つの角は向かい合っているかな。",
+        "向かい合う角を何というかな。"
+       ],
+       "paths": [
+        [
+         "AD と BC が M で交わる",
+         "対頂角は等しい"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.1\" y1=\"135.2\" x2=\"188.9\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"197.9\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M154 43.8 A13 13 0 0 0 159.1 54.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.5\" y=\"58.8\" font-size=\"12\" text-anchor=\"middle\">53°</text><path d=\"M133 106.2 A13 13 0 0 0 127.8 95.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.5\" y=\"99.6\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 53,
+       "check": "53",
+       "hints": [
+        "2 つの角は、ℓ と m の内側にあるね。",
+        "n をはさんで反対がわにあるかな。",
+        "平行線の錯角は等しいね。"
+       ],
+       "paths": [
+        [
+         "錯角",
+         "53°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "六角形の 6 つの内角の和は何度ですか。",
+       "answer": 720,
+       "check": "180 * (6 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引こう。",
+        "三角形はいくつできるかな。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 4 こ",
+         "180 × 4 = 720"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの三角形は、AB = DE、AC = DF、∠B = ∠E です。正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"81.3\" y1=\"47.3\" x2=\"36.1\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"82.7\" x2=\"97\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97\" y1=\"82.7\" x2=\"81.3\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"158.7\" y1=\"47.3\" x2=\"203.9\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"82.7\" x2=\"174.3\" y2=\"82.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.3\" y1=\"82.7\" x2=\"158.7\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61.8\" y1=\"68.9\" x2=\"55.7\" y2=\"61.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"184.3\" y1=\"61.1\" x2=\"178.2\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"92.9\" y1=\"61.1\" x2=\"83.8\" y2=\"65.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"94.5\" y1=\"64.8\" x2=\"85.4\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"170.2\" y1=\"61.1\" x2=\"161.1\" y2=\"65.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"171.8\" y1=\"64.8\" x2=\"162.7\" y2=\"68.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 82.7 A14 14 0 0 0 47.2 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M192.8 74 A14 14 0 0 0 189.9 82.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.3\" y=\"40.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"104.7\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"158.7\" y=\"40.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"196.1\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"182\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "2 組の辺とその間の角がそれぞれ等しいので合同",
+        "1 組の辺とその両端の角がそれぞれ等しいので合同",
+        "合同とはいえない"
+       ],
+       "answer": "合同とはいえない",
+       "hints": [
+        "∠B は、AB と AC の間の角かな。",
+        "合同条件のどれかに当たるかな。",
+        "図の 2 つは重ねられるかな。"
+       ],
+       "paths": [
+        [
+         "∠B は等しい 2 辺の間の角ではない",
+         "合同とはいえない"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     10.53,
     13.82,
     8.48
-   ]
+   ],
+   "comb": {
+    "b": 0.378,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "houteishiki",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-017",
@@ -207810,39 +211876,1121 @@ window.ROADMAP = {
    "level": 3,
    "region": "shomei-zukei",
    "needs": [
-    "G-016"
+    "G-016",
+    "G-012"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "二等辺三角形の角と、頂角の二等分線について調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"27.4\" x2=\"120\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"102.3\" y1=\"77.1\" x2=\"93.3\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146.7\" y1=\"72.9\" x2=\"137.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M113.2 41.9 A16 16 0 0 0 126.8 41.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M91.6 122.6 A16 16 0 0 0 82.4 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M157.6 108.1 A16 16 0 0 0 148.4 122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"120,114.6 112,114.6 112,122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.1\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"136.6\" y=\"35.3\" font-size=\"13\" text-anchor=\"middle\">頂角</text><text x=\"98.9\" y=\"117.1\" font-size=\"13\" text-anchor=\"middle\">底角</text><text x=\"141.1\" y=\"117.1\" font-size=\"13\" text-anchor=\"middle\">底角</text><text x=\"97.8\" y=\"138.2\" font-size=\"13\" text-anchor=\"middle\">底辺</text></svg>",
+       "explain": "2 つの辺が等しい三角形を二等辺三角形といいます。このように、ことばの意味をはっきり決めたものを定義といいます。等しい 2 辺の間の角を頂角、頂角に向かい合う辺を底辺、底辺の両端の角を底角といいます。二等辺三角形の 2 つの底角は等しくなります。また、頂角の二等分線は、底辺を垂直に 2 等分します。証明されたことがらのうち、よく使う大切なものを定理といいます。図で AB = AC、∠A = 40° なら、∠B = ∠C = (180° − 40°) ÷ 2 = 70° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"86.9\" y1=\"35\" x2=\"40.7\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40.7\" y1=\"115\" x2=\"154\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154\" y1=\"115\" x2=\"86.9\" y2=\"35\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154\" y1=\"115\" x2=\"199.3\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M78.9 48.9 A16 16 0 0 0 97.2 47.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"89.3\" y=\"67.5\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M56.7 115 A16 16 0 0 0 48.7 101.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"65\" y=\"105.5\" font-size=\"13\" text-anchor=\"middle\">60°</text><path d=\"M168 115 A14 14 0 0 0 145 104.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"165\" y=\"96\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"81.5\" y=\"30\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"33\" y=\"127.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"154\" y=\"130.5\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"199.3\" y=\"130.5\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 130,
+       "check": "70 + 60",
+       "hints": [
+        "∠x は、頂点 C の外角だね。",
+        "外角は、となり合わない 2 つの内角の和だね。",
+        "70° と 60° をたそう。"
+       ],
+       "paths": [
+        [
+         "70 + 60 = 130"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "図の 2 つの三角形は、どの合同条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"57.6\" y1=\"43.5\" x2=\"36.1\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"86.5\" x2=\"100.6\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.6\" y1=\"86.5\" x2=\"57.6\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"182.4\" y1=\"43.5\" x2=\"203.9\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"86.5\" x2=\"139.4\" y2=\"86.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"139.4\" y1=\"86.5\" x2=\"182.4\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.4\" y1=\"67.2\" x2=\"42.4\" y2=\"62.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"197.6\" y1=\"62.8\" x2=\"188.6\" y2=\"67.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"66.4\" y1=\"81.5\" x2=\"66.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"70.4\" y1=\"81.5\" x2=\"70.4\" y2=\"91.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.6\" y1=\"91.5\" x2=\"173.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"169.6\" y1=\"91.5\" x2=\"169.6\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M50.1 86.5 A14 14 0 0 0 42.4 74\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M197.6 74 A14 14 0 0 0 189.9 86.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"57.6\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"28.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">Q</text><text x=\"108.4\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">R</text><text x=\"182.4\" y=\"37\" font-size=\"13\" text-anchor=\"middle\">S</text><text x=\"211.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">T</text><text x=\"131.6\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">U</text></svg>",
+       "choices": [
+        "3 組の辺がそれぞれ等しい",
+        "2 組の辺とその間の角がそれぞれ等しい",
+        "1 組の辺とその両端の角がそれぞれ等しい"
+       ],
+       "answer": "2 組の辺とその間の角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は何組かな。",
+        "しるしのある角は、2 つの辺の間にあるかな。",
+        "合同条件の 3 つを思い出そう。"
+       ],
+       "paths": [
+        [
+         "PQ = ST、QR = TU",
+         "∠Q = ∠T はその間の角",
+         "2 組の辺とその間の角"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"85.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.4\" y1=\"122.6\" x2=\"154.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.6\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"107.4\" y1=\"76.7\" x2=\"98\" y2=\"73.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"142\" y1=\"73.3\" x2=\"132.6\" y2=\"76.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M114.5 42.5 A16 16 0 0 0 125.5 42.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M101.4 122.6 A16 16 0 0 0 90.8 107.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.3\" y=\"111.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"77.6\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"162.4\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 70,
+       "check": "(180 - 40) // 2",
+       "hints": [
+        "二等辺三角形の 2 つの底角は、どうなっているかな。",
+        "2 つの底角を合わせると何度かな。",
+        "それを、等しい 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "底角 2 つで 180 − 40 = 140",
+         "140 ÷ 2 = 70"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.3\" y1=\"77.1\" x2=\"93.3\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146.7\" y1=\"72.9\" x2=\"137.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M113.2 41.9 A16 16 0 0 0 126.8 41.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M91.6 122.6 A16 16 0 0 0 82.4 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.2\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">65°</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 50,
+       "check": "180 - 65 * 2",
+       "hints": [
+        "∠C は何度かな。",
+        "2 つの底角を合わせると何度かな。",
+        "180 から、底角 2 つ分をひこう。"
+       ],
+       "paths": [
+        [
+         "∠C = ∠B = 65°",
+         "180 − 65 − 65 = 50"
+        ]
+       ],
+       "note": "∠x を 65° と答えやすい。どの角が底角かを、等しい辺のしるしから確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、AD は頂角の二等分線です。BC = 10 cm のとき、BD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"27.4\" x2=\"120\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"102.3\" y1=\"77.1\" x2=\"93.3\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146.7\" y1=\"72.9\" x2=\"137.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.1\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "頂角の二等分線は、底辺をどのように分けるかな。",
+        "D は BC のどこにあるかな。",
+        "10 を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "頂角の二等分線は底辺を 2 等分",
+         "BD = 10 ÷ 2 = 5"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "AB = AC の二等辺三角形で、辺 BC を C の先へのばしました。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"107\" y1=\"27.4\" x2=\"72.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.4\" y1=\"122.6\" x2=\"141.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.6\" y1=\"122.6\" x2=\"107\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.6\" y1=\"122.6\" x2=\"167.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.4\" y1=\"76.7\" x2=\"85\" y2=\"73.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"129\" y1=\"73.3\" x2=\"119.6\" y2=\"76.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M101.5 42.5 A16 16 0 0 0 112.5 42.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M155.6 122.6 A14 14 0 0 0 136.9 109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"156.6\" y=\"105.8\" font-size=\"13\" text-anchor=\"middle\">110°</text><text x=\"107\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"64.6\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"149.4\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"167.6\" y=\"138.1\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 40,
+       "check": "180 - 2 * (180 - 110)",
+       "hints": [
+        "まず、∠ACB を求めよう。",
+        "∠B は ∠ACB と等しいね。",
+        "三角形の内角の和から ∠x を求めよう。"
+       ],
+       "paths": [
+        [
+         "∠ACB = 180 − 110 = 70",
+         "∠B = 70",
+         "∠x = 180 − 70 − 70 = 40"
+        ],
+        [
+         "外角 110 = ∠x + ∠B",
+         "∠B = 70 なので ∠x = 40"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"94.5\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.5\" y1=\"122.6\" x2=\"145.5\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.5\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.1\" y1=\"76.3\" x2=\"102.4\" y2=\"73.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"137.6\" y1=\"73.7\" x2=\"127.9\" y2=\"76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M115.9 42.9 A16 16 0 0 0 124.1 42.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M110.5 122.6 A16 16 0 0 0 98.6 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.7\" y=\"110.1\" font-size=\"13\" text-anchor=\"middle\">75°</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"86.7\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"153.3\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 30,
+       "check": "180 - 75 * 2",
+       "hints": [
+        "∠C は何度かな。",
+        "2 つの底角を合わせると何度かな。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "180 − 75 − 75 = 30"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"39.8\" x2=\"36.1\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"110.2\" x2=\"203.9\" y2=\"110.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"110.2\" x2=\"120\" y2=\"39.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"81.3\" y1=\"78.8\" x2=\"74.9\" y2=\"71.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"165.1\" y1=\"71.2\" x2=\"158.7\" y2=\"78.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M107.7 50.1 A16 16 0 0 0 132.3 50.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"72.4\" font-size=\"13\" text-anchor=\"middle\">100°</text><path d=\"M191.6 99.9 A16 16 0 0 0 187.9 110.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"177.6\" y=\"105.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"33.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"211.6\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 40,
+       "check": "(180 - 100) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 100 = 80",
+         "80 ÷ 2 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、AD は頂角の二等分線です。∠ADB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"32.9\" x2=\"49.4\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.4\" y1=\"117.1\" x2=\"190.6\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.6\" y1=\"117.1\" x2=\"120\" y2=\"32.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"32.9\" x2=\"120\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88.5\" y1=\"78.2\" x2=\"80.9\" y2=\"71.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"159.1\" y1=\"71.8\" x2=\"151.5\" y2=\"78.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"26.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"41.6\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"198.4\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"132.6\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 90,
+       "check": "180 // 2",
+       "hints": [
+        "頂角の二等分線は、底辺とどのように交わるかな。",
+        "∠ADB と ∠ADC は等しいね。",
+        "2 つを合わせると一直線だよ。"
+       ],
+       "paths": [
+        [
+         "∠ADB = ∠ADC",
+         "2 つで 180°",
+         "90°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "ことがらの「逆」と、二等辺三角形になる条件、直角三角形の合同条件を知りましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M91.6 122.6 A16 16 0 0 0 82.4 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.2\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">65°</text><path d=\"M157.6 108.1 A16 16 0 0 0 148.4 122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.8\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">65°</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "explain": "「〜ならば…」の仮定と結論を入れかえた文を、もとの文の逆といいます。「△ABC で AB = AC ならば ∠B = ∠C」の逆は「△ABC で ∠B = ∠C ならば AB = AC」で、これも正しいことが証明できます。だから、図のように 2 つの角が等しい三角形は二等辺三角形です。でも、逆はいつも正しいとはかぎりません。「△ABC ≡ △DEF ならば ∠A = ∠D」の逆「∠A = ∠D ならば △ABC ≡ △DEF」は正しくありません。∠A = ∠D でも、大きさのちがう三角形があるからです。このように、正しくないことを示す例を反例といいます。3 つの辺が等しい三角形を正三角形といい、3 つの角はどれも 60° です。また、2 つの直角三角形は、斜辺（直角に向かい合う辺）と 1 つの鋭角（90° より小さい角）、または斜辺と他の 1 辺がそれぞれ等しければ合同です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.3\" y1=\"77.1\" x2=\"93.3\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146.7\" y1=\"72.9\" x2=\"137.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M113.2 41.9 A16 16 0 0 0 126.8 41.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M91.6 122.6 A16 16 0 0 0 82.4 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.2\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 65,
+       "check": "(180 - 50) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 50 = 130",
+         "130 ÷ 2 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"107.1\" y1=\"135.2\" x2=\"160.7\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"169.7\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M134.7 43.8 A13 13 0 0 0 142.5 55.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.6\" y=\"61.1\" font-size=\"12\" text-anchor=\"middle\">66°</text><path d=\"M133 106.2 A13 13 0 0 0 125.3 94.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"140.1\" y=\"97.3\" font-size=\"12\" text-anchor=\"middle\">x</text></svg>",
+       "answer": 66,
+       "check": "66",
+       "hints": [
+        "2 つの角は、ℓ と m の内側にあるね。",
+        "n をはさんで反対がわにあるかな。",
+        "平行線の錯角は等しいね。"
+       ],
+       "paths": [
+        [
+         "錯角",
+         "66°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠B = ∠C = 55° の △ABC で、AB = 6 cm です。AC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"30.8\" x2=\"58.2\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"58.2\" y1=\"119.2\" x2=\"181.8\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"181.8\" y1=\"119.2\" x2=\"120\" y2=\"30.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M74.2 119.2 A16 16 0 0 0 67.3 106.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"110.8\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M172.7 106.1 A16 16 0 0 0 165.8 119.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"110.8\" font-size=\"13\" text-anchor=\"middle\">55°</text><text x=\"120\" y=\"24.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 6,
+       "check": "6",
+       "hints": [
+        "2 つの角が等しい三角形は、何という三角形かな。",
+        "等しい 2 辺は、どの辺とどの辺かな。",
+        "等しい角に向かい合う辺を見よう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠C なので二等辺三角形",
+         "AB = AC",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「△ABC ≡ △DEF ならば、AB = DE である」の逆はどれですか。",
+       "choices": [
+        "AB = DE ならば、△ABC ≡ △DEF である",
+        "△ABC ≡ △DEF ならば、AB = DE である",
+        "AB = DE ならば、∠A = ∠D である"
+       ],
+       "answer": "AB = DE ならば、△ABC ≡ △DEF である",
+       "hints": [
+        "もとの文の仮定と結論はどれかな。",
+        "逆は、仮定と結論を入れかえた文だね。",
+        "「ならば」の前とあとを入れかえよう。"
+       ],
+       "paths": [
+        [
+         "仮定 △ABC ≡ △DEF、結論 AB = DE",
+         "入れかえる",
+         "AB = DE ならば △ABC ≡ △DEF"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「正三角形ならば、二等辺三角形である」は正しいことがらです。この逆は正しいですか。",
+       "choices": [
+        "正しい",
+        "正しくない"
+       ],
+       "answer": "正しくない",
+       "hints": [
+        "逆の文をつくろう。",
+        "二等辺三角形でも、正三角形でないものはあるかな。",
+        "頂角が 40° の二等辺三角形を考えよう。"
+       ],
+       "paths": [
+        [
+         "逆は「二等辺三角形ならば正三角形」",
+         "反例：頂角 40° の二等辺三角形",
+         "正しくない"
+        ]
+       ],
+       "note": "正三角形は 2 つの辺が等しいので二等辺三角形の仲間。逆の反例を 1 つあげられればよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "図の 2 つの直角三角形は、斜辺どうしと、しるしの辺どうしが等しくなっています。正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"36.1\" y1=\"41.4\" x2=\"102.3\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.3\" y1=\"88.6\" x2=\"36.1\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"88.6\" x2=\"36.1\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"41.4\" x2=\"137.7\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.7\" y1=\"88.6\" x2=\"203.9\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"88.6\" x2=\"203.9\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.1\" y1=\"60.9\" x2=\"66.3\" y2=\"69.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.7\" y1=\"69.1\" x2=\"167.9\" y2=\"60.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"41.1\" y1=\"63\" x2=\"31.1\" y2=\"63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"41.1\" y1=\"67\" x2=\"31.1\" y2=\"67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"208.9\" y1=\"63\" x2=\"198.9\" y2=\"63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"208.9\" y1=\"67\" x2=\"198.9\" y2=\"67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"36.1,80.6 44.1,80.6 44.1,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"203.9,80.6 195.9,80.6 195.9,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.1\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"110.1\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"28.4\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"203.9\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"129.9\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"211.6\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "斜辺と 1 つの鋭角がそれぞれ等しいので合同",
+        "斜辺と他の 1 辺がそれぞれ等しいので合同",
+        "合同とはいえない"
+       ],
+       "answer": "斜辺と他の 1 辺がそれぞれ等しいので合同",
+       "hints": [
+        "2 つの三角形は、どちらも直角三角形だね。",
+        "等しいのは、斜辺と、どの辺かな。",
+        "直角三角形の合同条件を思い出そう。"
+       ],
+       "paths": [
+        [
+         "どちらも直角三角形",
+         "斜辺 AB = DE、AC = DF",
+         "斜辺と他の 1 辺"
+        ]
+       ],
+       "note": "G-016 で、2 辺と間でない角では合同といえないことがあった。直角のときだけは、この形でも合同になる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "正三角形 ABC の辺 BC を、C の先へのばしてできる外角は何度ですか。",
+       "answer": 120,
+       "check": "180 - 60",
+       "hints": [
+        "正三角形の 1 つの角は何度かな。",
+        "内角と外角を合わせると何度かな。",
+        "180 から 60 をひこう。"
+       ],
+       "paths": [
+        [
+         "内角は 60°",
+         "外角は 180 − 60 = 120"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの直角三角形は、どの条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"36.1\" y1=\"41.4\" x2=\"102.3\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.3\" y1=\"88.6\" x2=\"36.1\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"88.6\" x2=\"36.1\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"41.4\" x2=\"137.7\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.7\" y1=\"88.6\" x2=\"203.9\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"88.6\" x2=\"203.9\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.1\" y1=\"60.9\" x2=\"66.3\" y2=\"69.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.7\" y1=\"69.1\" x2=\"167.9\" y2=\"60.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M90.9 80.5 A14 14 0 0 0 88.3 88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M151.7 88.6 A14 14 0 0 0 149.1 80.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"36.1,80.6 44.1,80.6 44.1,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"203.9,80.6 195.9,80.6 195.9,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.1\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"110.1\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"28.4\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"203.9\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"129.9\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"211.6\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "斜辺と 1 つの鋭角がそれぞれ等しい",
+        "斜辺と他の 1 辺がそれぞれ等しい",
+        "合同とはいえない"
+       ],
+       "answer": "斜辺と 1 つの鋭角がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は、斜辺かな。",
+        "しるしのある角は、直角かな、鋭角かな。",
+        "直角三角形の合同条件を思い出そう。"
+       ],
+       "paths": [
+        [
+         "斜辺 AB = DE",
+         "鋭角 ∠B = ∠E",
+         "斜辺と 1 つの鋭角"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「2 直線が平行ならば、同位角は等しい」の逆は正しいですか。",
+       "choices": [
+        "正しい",
+        "正しくない"
+       ],
+       "answer": "正しい",
+       "hints": [
+        "逆の文をつくろう。",
+        "「同位角が等しいならば、2 直線は平行」は、G-016 で約束した事実かな。",
+        "平行かどうかを見分けるのに使ったね。"
+       ],
+       "paths": [
+        [
+         "逆は「同位角が等しければ平行」",
+         "G-016 で約束した事実",
+         "正しい"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "平行四辺形の性質と、長方形・ひし形・正方形の対角線を調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"76\" y1=\"34.5\" x2=\"42.9\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"197.1\" y1=\"34.5\" x2=\"76\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"76\" y1=\"34.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"98.4,109.5 103.4,105.5 98.4,101.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"131.6,38.5 136.6,34.5 131.6,30.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"59.9,78.5 58.4,72.3 52.7,75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"62,74 60.5,67.7 54.8,70.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"181,78.5 179.5,72.3 173.7,75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"183.1,74 181.6,67.7 175.9,70.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.2\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"35.1\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.8\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"204.9\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "2 組の対辺（向かい合う辺）がそれぞれ平行な四角形を平行四辺形といいます（定義）。平行四辺形では、① 2 組の対辺はそれぞれ等しく、② 2 組の対角はそれぞれ等しく、③ 対角線はそれぞれの中点で交わります（定理）。となり合う角の和は、平行線の内側の角なので 180° です。反対に、四角形が「2 組の対辺がそれぞれ平行」「2 組の対辺がそれぞれ等しい」「2 組の対角がそれぞれ等しい」「対角線がそれぞれの中点で交わる」「1 組の対辺が平行で、その長さが等しい」のどれかにあてはまれば、平行四辺形です。長方形・ひし形・正方形は特別な平行四辺形で、長方形の対角線は長さが等しく、ひし形の対角線は垂直に交わり、正方形の対角線は長さが等しく垂直に交わります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "△ABC で ∠B = ∠C です。等しい 2 辺はどれとどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"30.8\" x2=\"58.2\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"58.2\" y1=\"119.2\" x2=\"181.8\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"181.8\" y1=\"119.2\" x2=\"120\" y2=\"30.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M74.2 119.2 A16 16 0 0 0 67.3 106.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"110.8\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M172.7 106.1 A16 16 0 0 0 165.8 119.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"110.8\" font-size=\"13\" text-anchor=\"middle\">55°</text><text x=\"120\" y=\"24.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "choices": [
+        "AB と AC",
+        "AB と BC",
+        "BC と CA"
+       ],
+       "answer": "AB と AC",
+       "hints": [
+        "2 つの角が等しい三角形は、何という三角形かな。",
+        "∠B に向かい合う辺はどれかな。",
+        "∠C に向かい合う辺はどれかな。"
+       ],
+       "paths": [
+        [
+         "∠B に向かい合う辺は AC",
+         "∠C に向かい合う辺は AB",
+         "AB = AC"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"12\" y1=\"43.8\" x2=\"228\" y2=\"43.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"12\" y1=\"106.2\" x2=\"228\" y2=\"106.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.4\" y1=\"135.2\" x2=\"153.3\" y2=\"14.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"184.1,47.8 189.1,43.8 184.1,39.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"184.1,110.2 189.1,106.2 184.1,102.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"226\" y=\"39.4\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"226\" y=\"101.7\" font-size=\"13\" text-anchor=\"middle\">m</text><text x=\"162.3\" y=\"23.3\" font-size=\"13\" text-anchor=\"middle\">n</text><path d=\"M138.2 56.1 A13 13 0 0 0 155.7 43.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"156.4\" y=\"67.7\" font-size=\"12\" text-anchor=\"middle\">x</text><path d=\"M133 106.2 A13 13 0 0 0 124.4 93.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.7\" y=\"96.6\" font-size=\"12\" text-anchor=\"middle\">70°</text></svg>",
+       "answer": 110,
+       "check": "180 - 70",
+       "hints": [
+        "∠x と 70° は、ℓ と m の内側で同じがわにあるね。",
+        "ℓ の上で、∠x のとなりの角を考えよう。",
+        "そのとなりの角と 70° は錯角だね。"
+       ],
+       "paths": [
+        [
+         "∠x のとなりは 70°（錯角）",
+         "180 − 70 = 110"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠A = 115° です。∠B は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"76\" y1=\"34.5\" x2=\"42.9\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"197.1\" y1=\"34.5\" x2=\"76\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M69.3 49 A16 16 0 0 0 92 34.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.1\" y=\"62.7\" font-size=\"13\" text-anchor=\"middle\">115°</text><path d=\"M58.9 105.5 A16 16 0 0 0 49.7 91\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"66.5\" y=\"95\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"68.2\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"35.1\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.8\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"204.9\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 65,
+       "check": "180 - 115",
+       "hints": [
+        "AD と BC は平行だね。",
+        "∠A と ∠B は、平行線の内側で同じがわにある角だね。",
+        "となり合う角の和は 180° だよ。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠B = 180°",
+         "∠B = 180 − 115 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、AB = 5 cm、BC = 8 cm です。まわりの長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"78.4\" y1=\"35.5\" x2=\"38.6\" y2=\"104.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"38.6\" y1=\"104.5\" x2=\"161.6\" y2=\"104.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"161.6\" y1=\"104.5\" x2=\"201.4\" y2=\"35.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"201.4\" y1=\"35.5\" x2=\"78.4\" y2=\"35.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"70.6\" y=\"32.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"30.8\" y=\"116.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"169.4\" y=\"116.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"209.2\" y=\"32.3\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 26,
+       "check": "(5 + 8) * 2",
+       "hints": [
+        "CD と AD の長さは、それぞれどの辺と等しいかな。",
+        "平行四辺形の対辺は等しいね。",
+        "4 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "CD = AB = 5、AD = BC = 8",
+         "5 + 8 + 5 + 8 = 26"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD の対角線の交点を O とします。BD = 14 cm のとき、OD は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"76\" y1=\"34.5\" x2=\"42.9\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"197.1\" y1=\"34.5\" x2=\"76\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"76\" y1=\"34.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"68.2\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"35.1\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.8\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"204.9\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "平行四辺形の対角線は、どこで交わるかな。",
+        "O は BD の中点だね。",
+        "14 を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "対角線はそれぞれの中点で交わる",
+         "OD = 14 ÷ 2 = 7"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "四角形 ABCD が、かならず平行四辺形になるのはどれですか。",
+       "choices": [
+        "1 組の対辺が平行で、その長さが等しい",
+        "1 組の対辺が平行で、もう 1 組の対辺の長さが等しい",
+        "対角線が垂直に交わる"
+       ],
+       "answer": "1 組の対辺が平行で、その長さが等しい",
+       "hints": [
+        "平行四辺形になる条件の 5 つを思い出そう。",
+        "2 つ目は、上と下が平行で、左と右の長さが等しい台形でもあてはまるかな。",
+        "3 つ目は、たこの形（2 組のとなり合う辺が等しい四角形）でもあてはまるかな。"
+       ],
+       "paths": [
+        [
+         "1 つ目は平行四辺形になる条件の 1 つ",
+         "2 つ目は左右の長さが等しい台形が反例",
+         "3 つ目はたこの形が反例"
+        ]
+       ],
+       "note": "「かならず」を示すには条件、「かならずではない」を示すには反例を 1 つ。紙に反例の形をかいて確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "長方形 ABCD の対角線の交点を O とします。AC = 10 cm のとき、OB は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"59.1\" y1=\"30.6\" x2=\"59.1\" y2=\"109.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.1\" y1=\"109.4\" x2=\"180.9\" y2=\"109.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.9\" y1=\"109.4\" x2=\"180.9\" y2=\"30.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.9\" y1=\"30.6\" x2=\"59.1\" y2=\"30.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.1\" y1=\"30.6\" x2=\"180.9\" y2=\"109.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.1\" y1=\"109.4\" x2=\"180.9\" y2=\"30.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"59.1,101.4 67.1,101.4 67.1,109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"51.3\" y=\"27.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"51.3\" y=\"121.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"188.7\" y=\"121.7\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"188.7\" y=\"27.4\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 5,
+       "check": "10 // 2",
+       "hints": [
+        "長方形の対角線の長さは、どうなっているかな。",
+        "BD は何 cm かな。",
+        "O は BD の中点だね。"
+       ],
+       "paths": [
+        [
+         "BD = AC = 10",
+         "OB = 10 ÷ 2 = 5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ひし形 ABCD の対角線の交点を O とします。∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"98\" y1=\"31.9\" x2=\"53.9\" y2=\"108.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"53.9\" y1=\"108.1\" x2=\"142\" y2=\"108.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142\" y1=\"108.1\" x2=\"186.1\" y2=\"31.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"186.1\" y1=\"31.9\" x2=\"98\" y2=\"31.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98\" y1=\"31.9\" x2=\"142\" y2=\"108.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"53.9\" y1=\"108.1\" x2=\"186.1\" y2=\"31.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80.3\" y1=\"72.5\" x2=\"71.6\" y2=\"67.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"98\" y1=\"103.1\" x2=\"98\" y2=\"113.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"159.7\" y1=\"67.5\" x2=\"168.4\" y2=\"72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"142\" y1=\"36.9\" x2=\"142\" y2=\"26.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.2\" y=\"28.6\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"46.2\" y=\"120.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"149.8\" y=\"120.5\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"193.8\" y=\"28.6\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 90,
+       "check": "90",
+       "hints": [
+        "ひし形の対角線は、どのように交わるかな。",
+        "垂直に交わるとき、交わる角は何度かな。",
+        "直角は何度だったかな。"
+       ],
+       "paths": [
+        [
+         "ひし形の対角線は垂直に交わる",
+         "90°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠B = 65° です。∠D は何度ですか。",
+       "answer": 65,
+       "check": "65",
+       "hints": [
+        "∠B と ∠D は、向かい合う角かな、となり合う角かな。",
+        "平行四辺形の対角はどうなっているかな。",
+        "対角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠D は ∠B の対角",
+         "65°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "AB = AC の二等辺三角形 ABC で、∠B = ∠C であることを証明しましょう。頂角 ∠A の二等分線と BC の交点を D とします。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"85.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.4\" y1=\"122.6\" x2=\"154.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.6\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"27.4\" x2=\"120\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"107.4\" y1=\"76.7\" x2=\"98\" y2=\"73.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"142\" y1=\"73.3\" x2=\"132.6\" y2=\"76.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M112.5 48.1 A22 22 0 0 0 120 49.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M120 49.4 A22 22 0 0 0 127.5 48.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"77.6\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"162.4\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.1\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "例：「△ABD と △ACD で、仮定から AB = AC …①。AD は ∠A の二等分線なので ∠BAD = ∠CAD …②。AD は共通 …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので △ABD ≡ △ACD。合同な図形の対応する角は等しいので ∠B = ∠C。」と書ければよい。①「頂角の二等分線と BC の交点を D とする」と補助線と名前を決める、② 合同を示す 3 つの等しいもの（AD が共通であることを落としやすい）、③ 合同な図形の対応する角は等しい、で結ぶ、の 3 点を見る。分度器で測った例だけでは、すべての二等辺三角形について示せないことを話す。同じ合同から BD = CD と ∠ADB = ∠ADC = 90° もいえる（頂角の二等分線は底辺を垂直に 2 等分する）ことに触れる。",
+       "hints": [
+        "△ABD と △ACD が合同になることを示そう。",
+        "等しい辺 2 組と、その間の角は何かな。AD はどちらの三角形の辺かな。",
+        "合同から、どの角とどの角が等しいといえるかな。"
+       ],
+       "paths": [
+        [
+         "AB = AC（仮定）",
+         "∠BAD = ∠CAD（二等分線）",
+         "AD は共通",
+         "△ABD ≡ △ACD",
+         "∠B = ∠C"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "平行四辺形 ABCD で、AB = CD、∠B = ∠D であることを証明しましょう。対角線 AC を引いて考えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"76\" y1=\"34.5\" x2=\"42.9\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"197.1\" y1=\"34.5\" x2=\"76\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"76\" y1=\"34.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"98.4,109.5 103.4,105.5 98.4,101.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"131.6,38.5 136.6,34.5 131.6,30.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"59.9,78.5 58.4,72.3 52.7,75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"62,74 60.5,67.7 54.8,70.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"181,78.5 179.5,72.3 173.7,75.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"183.1,74 181.6,67.7 175.9,70.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.2\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"35.1\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.8\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"204.9\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "例：「△ABC と △CDA で、AB ∥ DC より、平行線の錯角は等しいので ∠BAC = ∠DCA …①。AD ∥ BC より ∠BCA = ∠DAC …②。AC は共通 …③。①、②、③ から、1 組の辺とその両端の角がそれぞれ等しいので △ABC ≡ △CDA。合同な図形の対応する辺と角は等しいので AB = CD、∠B = ∠D。」と書ければよい。① 対角線 AC で 2 つの三角形に分ける、② 定義の「対辺が平行」から錯角が等しい、と共通の辺、③ 合同から対応する辺と角、の 3 点を見る。対応の順（A と C、B と D、C と A）をまちがえやすいので、≡ の式の順を確かめる。",
+       "hints": [
+        "対角線 AC で、平行四辺形は 2 つの三角形に分かれるね。",
+        "平行な辺と AC がつくる錯角を 2 組さがそう。",
+        "AC は 2 つの三角形の両方の辺だね。"
+       ],
+       "paths": [
+        [
+         "∠BAC = ∠DCA（AB ∥ DC の錯角）",
+         "∠BCA = ∠DAC（AD ∥ BC の錯角）",
+         "AC は共通",
+         "△ABC ≡ △CDA",
+         "AB = CD、∠B = ∠D"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "長方形 ABCD で、対角線 AC と BD の長さが等しいことを証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60.8\" y1=\"30.2\" x2=\"60.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.8\" y1=\"99.8\" x2=\"179.2\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179.2\" y1=\"99.8\" x2=\"179.2\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179.2\" y1=\"30.2\" x2=\"60.8\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.8\" y1=\"30.2\" x2=\"179.2\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.8\" y1=\"99.8\" x2=\"179.2\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"60.8,91.8 68.8,91.8 68.8,99.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"171.2,99.8 171.2,91.8 179.2,91.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"179.2,38.2 171.2,38.2 171.2,30.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"68.8,30.2 68.8,38.2 60.8,38.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"53.1\" y=\"27\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"53.1\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"186.9\" y=\"112.1\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"186.9\" y=\"27\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "例：「△ABC と △DCB で、長方形は平行四辺形なので、対辺は等しく AB = DC …①。BC は共通 …②。長方形の 4 つの角は等しいので ∠ABC = ∠DCB …③。①、②、③ から、2 組の辺とその間の角がそれぞれ等しいので △ABC ≡ △DCB。合同な図形の対応する辺は等しいので AC = DB。」と書ければよい。① 2 つの三角形（△ABC と △DCB）を選ぶ、② 長方形が平行四辺形でもあることを使って AB = DC、③ 合同から対応する辺、の 3 点を見る。ふつうの平行四辺形（∠B が 60° など）では対角線の長さが等しくないことと比べさせる。",
+       "hints": [
+        "対角線 AC と BD を、それぞれ辺にもつ三角形を選ぼう。",
+        "長方形は平行四辺形でもあるね。対辺はどうなるかな。",
+        "BC は、2 つの三角形のどちらの辺でもあるね。"
+       ],
+       "paths": [
+        [
+         "AB = DC（対辺）",
+         "BC は共通",
+         "∠ABC = ∠DCB",
+         "△ABC ≡ △DCB",
+         "AC = DB"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形 ABC で、∠A = 36° です。∠B の二等分線が AC と交わる点を D とします。∠BDC は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"89.1\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.1\" y1=\"122.6\" x2=\"150.9\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.9\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.1\" y1=\"122.6\" x2=\"139.1\" y2=\"86.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.3\" y1=\"76.5\" x2=\"99.8\" y2=\"73.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"140.2\" y1=\"73.5\" x2=\"130.7\" y2=\"76.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M115.4 41.7 A15 15 0 0 0 124.6 41.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"59\" font-size=\"13\" text-anchor=\"middle\">36°</text><path d=\"M127 95 A15 15 0 0 0 143.7 100.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.8\" y=\"116.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"81.3\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"158.7\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"150.1\" y=\"90.8\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 72,
+       "check": "180 - (180 - 36) // 2 // 2 - (180 - 36) // 2",
+       "hints": [
+        "まず、底角 ∠B と ∠C を求めよう。",
+        "∠DBC は、∠B の半分だね。",
+        "△DBC の内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠C = 72",
+         "∠DBC = 36",
+         "∠BDC = 180 − 36 − 72 = 72"
+        ],
+        [
+         "∠BDC は △ABD の外角",
+         "36 + 36 = 72"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠A = 120° です。∠B の二等分線が AD と交わる点を E とします。∠AEB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"72.6\" y1=\"38.4\" x2=\"36.1\" y2=\"101.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"101.6\" x2=\"167.4\" y2=\"101.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"167.4\" y1=\"101.6\" x2=\"203.9\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"38.4\" x2=\"72.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"101.6\" x2=\"145.5\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M64.6 52.3 A16 16 0 0 0 88.6 38.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"86.6\" y=\"67.2\" font-size=\"13\" text-anchor=\"middle\">120°</text><path d=\"M129.5 38.4 A16 16 0 0 0 131.7 46.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.5\" y=\"50.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"64.8\" y=\"35.2\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"113.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"175.2\" y=\"113.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"211.6\" y=\"35.2\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"145.5\" y=\"32\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 30,
+       "check": "(180 - 120) // 2",
+       "hints": [
+        "まず、∠B を求めよう。",
+        "∠EBC は ∠B の半分だね。",
+        "AD ∥ BC なので、∠AEB と錯角になる角はどれかな。"
+       ],
+       "paths": [
+        [
+         "∠B = 180 − 120 = 60",
+         "∠EBC = 30",
+         "∠AEB = ∠EBC = 30（錯角）"
+        ]
+       ],
+       "note": "同じ図から、∠ABE = ∠AEB なので △ABE は二等辺三角形（AB = AE）になる。気づけばほめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、∠B = 68° です。∠A は何度ですか。",
+       "answer": 44,
+       "check": "180 - 68 * 2",
+       "hints": [
+        "∠C は何度かな。",
+        "2 つの底角を合わせると何度かな。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "∠C = 68",
+         "180 − 136 = 44"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠A = 105° です。∠C は何度ですか。",
+       "answer": 105,
+       "check": "105",
+       "hints": [
+        "∠A と ∠C は、向かい合う角かな。",
+        "平行四辺形の対角はどうなっているかな。",
+        "対角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠C は ∠A の対角",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長方形 ABCD で、対角線 BD = 9 cm です。対角線 AC は何 cm ですか。",
+       "answer": 9,
+       "check": "9",
+       "hints": [
+        "長方形の対角線の長さは、どうなっているかな。",
+        "わけの日に証明したことを思い出そう。",
+        "AC と BD をくらべよう。"
+       ],
+       "paths": [
+        [
+         "長方形の対角線は等しい",
+         "9 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ℓ ∥ m です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"26.1\" y1=\"37.8\" x2=\"213.9\" y2=\"37.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"26.1\" y1=\"102.2\" x2=\"213.9\" y2=\"102.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"54.9,41.8 59.9,37.8 54.9,33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"54.9,106.2 59.9,102.2 54.9,98.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"34.1\" y=\"33.3\" font-size=\"13\" text-anchor=\"middle\">ℓ</text><text x=\"34.1\" y=\"97.8\" font-size=\"13\" text-anchor=\"middle\">m</text><line x1=\"103.4\" y1=\"37.8\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111.1\" y1=\"102.2\" x2=\"149.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M116.5 47 A16 16 0 0 0 119.4 37.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"132\" y=\"51.3\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M127.1 102.2 A16 16 0 0 0 123.3 91.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.2\" y=\"96.5\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M138 62 A14 14 0 0 0 138.7 79\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"123.5\" y=\"75.7\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"103.4\" y=\"32\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"111.1\" y=\"116.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"159.5\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 75,
+       "check": "35 + 40",
+       "hints": [
+        "点 P を通って、ℓ に平行な補助線を引こう。",
+        "∠x は 2 つに分かれるね。",
+        "それぞれの角は錯角で等しいね。"
+       ],
+       "paths": [
+        [
+         "35 + 40 = 75"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "七角形の 7 つの内角の和は何度ですか。",
+       "answer": 900,
+       "check": "180 * (7 - 2)",
+       "hints": [
+        "1 つの頂点から対角線を引こう。",
+        "三角形はいくつできるかな。",
+        "180° を、三角形の数だけ合わせよう。"
+       ],
+       "paths": [
+        [
+         "三角形は 5 こ",
+         "180 × 5 = 900"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、∠A = 50° です。辺 BC を C の先へのばしてできる角 ∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"104.2\" y1=\"29.9\" x2=\"62.1\" y2=\"120.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"62.1\" y1=\"120.1\" x2=\"146.3\" y2=\"120.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.3\" y1=\"120.1\" x2=\"104.2\" y2=\"29.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.3\" y1=\"120.1\" x2=\"177.9\" y2=\"120.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"87.7\" y1=\"77.1\" x2=\"78.7\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"129.8\" y1=\"72.9\" x2=\"120.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M97.5 44.4 A16 16 0 0 0 111 44.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.2\" y=\"62.4\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M160.3 120.1 A14 14 0 0 0 140.4 107.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.3\" y=\"102.7\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"104.2\" y=\"23.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"54.4\" y=\"132.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"154.1\" y=\"132.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"177.9\" y=\"135.7\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 115,
+       "check": "180 - (180 - 50) // 2",
+       "hints": [
+        "まず、底角 ∠ACB を求めよう。",
+        "∠x と ∠ACB を合わせると一直線だね。",
+        "外角の性質を使ってもよいよ。"
+       ],
+       "paths": [
+        [
+         "∠ACB = (180 − 50) ÷ 2 = 65",
+         "∠x = 180 − 65 = 115"
+        ],
+        [
+         "外角 = ∠A + ∠B = 50 + 65 = 115"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠BAC = 40°、∠ACB = 75° です。∠D は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"108.8\" y1=\"28.1\" x2=\"69.7\" y2=\"111.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.7\" y1=\"111.9\" x2=\"131.2\" y2=\"111.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"131.2\" y1=\"111.9\" x2=\"170.3\" y2=\"28.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"170.3\" y1=\"28.1\" x2=\"108.8\" y2=\"28.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108.8\" y1=\"28.1\" x2=\"131.2\" y2=\"111.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M101.2 44.4 A18 18 0 0 0 113.4 45.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.2\" y=\"62.5\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M126.6 94.5 A18 18 0 0 0 113.2 111.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.4\" y=\"98.2\" font-size=\"13\" text-anchor=\"middle\">75°</text><path d=\"M152.3 28.1 A18 18 0 0 0 162.7 44.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"48.7\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"101\" y=\"24.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"61.9\" y=\"124.2\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"139\" y=\"124.2\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"178.1\" y=\"24.9\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 65,
+       "check": "180 - 40 - 75",
+       "hints": [
+        "△ABC で、∠B を求めよう。",
+        "∠D は、∠B とどんな関係かな。",
+        "平行四辺形の対角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠B = 180 − 40 − 75 = 65",
+         "∠D = ∠B = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形 ABC で、辺 BC に平行な直線が AB、AC と D、E で交わっています。∠ADE は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"28.8\" x2=\"66.7\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"66.7\" y1=\"121.2\" x2=\"173.3\" y2=\"121.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"173.3\" y1=\"121.2\" x2=\"120\" y2=\"28.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96\" y1=\"70.4\" x2=\"144\" y2=\"70.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.7\" y1=\"77.5\" x2=\"89\" y2=\"72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"116.2\" x2=\"120\" y2=\"126.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"142.3\" y1=\"77.5\" x2=\"151\" y2=\"72.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"115,74.4 120,70.4 115,66.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"115,125.2 120,121.2 115,117.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M110 70.4 A14 14 0 0 0 103 58.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.5\" y=\"61.9\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"22.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"58.9\" y=\"133.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"181.1\" y=\"133.5\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"85\" y=\"74.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"155\" y=\"74.9\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "正三角形の 1 つの角は何度かな。",
+        "∠ADE と ∠ABC は、DE と BC が平行なとき、どんな関係かな。",
+        "同位角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠ABC = 60°",
+         "∠ADE は ∠ABC の同位角",
+         "60°"
+        ]
+       ],
+       "note": "△ADE も 3 つの角が 60° なので正三角形になる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "AB = AC の二等辺三角形 ABC で、∠A = 36° です。AC の上に BD = BC となる点 D をとります。∠ABD は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"89.1\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.1\" y1=\"122.6\" x2=\"150.9\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.9\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"89.1\" y1=\"122.6\" x2=\"139.1\" y2=\"86.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"109.3\" y1=\"76.5\" x2=\"99.8\" y2=\"73.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"140.2\" y1=\"73.5\" x2=\"130.7\" y2=\"76.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"109.5\" y1=\"101.5\" x2=\"115.4\" y2=\"109.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"112.8\" y1=\"99.2\" x2=\"118.7\" y2=\"107.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"118\" y1=\"117.6\" x2=\"118\" y2=\"127.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"122\" y1=\"117.6\" x2=\"122\" y2=\"127.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M115.4 41.7 A15 15 0 0 0 124.6 41.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"59\" font-size=\"13\" text-anchor=\"middle\">36°</text><path d=\"M103.6 112 A18 18 0 0 0 94.6 105.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.7\" y=\"102.9\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"81.3\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"158.7\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"150.1\" y=\"90.8\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 36,
+       "check": "(180 - 36) // 2 - (180 - 2 * ((180 - 36) // 2))",
+       "hints": [
+        "まず、底角 ∠B と ∠C を求めよう。",
+        "△BCD は BD = BC の二等辺三角形だね。∠BDC は何度かな。",
+        "∠DBC を求めて、∠B からひこう。"
+       ],
+       "paths": [
+        [
+         "∠B = ∠C = 72",
+         "△BCD で ∠BDC = ∠C = 72",
+         "∠DBC = 180 − 72 − 72 = 36",
+         "∠ABD = 72 − 36 = 36"
+        ]
+       ],
+       "note": "∠ABD = ∠A になるので、△ABD も二等辺三角形（AD = BD）。二等辺三角形が 3 つ重なった図。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠A = 110° です。∠B は何度ですか。",
+       "answer": 70,
+       "check": "180 - 110",
+       "hints": [
+        "∠A と ∠B は、となり合う角だね。",
+        "となり合う角の和は何度かな。",
+        "180 から 110 をひこう。"
+       ],
+       "paths": [
+        [
+         "180 − 110 = 70"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、AD は頂角の二等分線です。BC = 12 cm のとき、DC は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"75.6\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.6\" y1=\"122.6\" x2=\"164.4\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.4\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"27.4\" x2=\"120\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"102.3\" y1=\"77.1\" x2=\"93.3\" y2=\"72.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"146.7\" y1=\"72.9\" x2=\"137.7\" y2=\"77.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"67.8\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"172.2\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"138.1\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 6,
+       "check": "12 // 2",
+       "hints": [
+        "頂角の二等分線は、底辺をどう分けるかな。",
+        "D は BC の中点だね。",
+        "12 を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "DC = 12 ÷ 2 = 6"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図の 2 つの直角三角形は、どの条件で合同といえますか。",
+       "svg": "<svg viewBox=\"0 0 240 130\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"36.1\" y1=\"41.4\" x2=\"102.3\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"102.3\" y1=\"88.6\" x2=\"36.1\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"88.6\" x2=\"36.1\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"41.4\" x2=\"137.7\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.7\" y1=\"88.6\" x2=\"203.9\" y2=\"88.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"88.6\" x2=\"203.9\" y2=\"41.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.1\" y1=\"60.9\" x2=\"66.3\" y2=\"69.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"173.7\" y1=\"69.1\" x2=\"167.9\" y2=\"60.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"41.1\" y1=\"63\" x2=\"31.1\" y2=\"63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"41.1\" y1=\"67\" x2=\"31.1\" y2=\"67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"208.9\" y1=\"63\" x2=\"198.9\" y2=\"63\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"208.9\" y1=\"67\" x2=\"198.9\" y2=\"67\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"36.1,80.6 44.1,80.6 44.1,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"203.9,80.6 195.9,80.6 195.9,88.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"36.1\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"110.1\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"28.4\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"203.9\" y=\"34.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"129.9\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"211.6\" y=\"101\" font-size=\"13\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "斜辺と 1 つの鋭角がそれぞれ等しい",
+        "斜辺と他の 1 辺がそれぞれ等しい",
+        "合同とはいえない"
+       ],
+       "answer": "斜辺と他の 1 辺がそれぞれ等しい",
+       "hints": [
+        "しるしのある辺は、斜辺かな。",
+        "もう 1 組のしるしは、辺かな、角かな。",
+        "直角三角形の合同条件を思い出そう。"
+       ],
+       "paths": [
+        [
+         "斜辺 AB = DE",
+         "AC = DF",
+         "斜辺と他の 1 辺"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、∠A = 70° です。∠B は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"30.8\" x2=\"58.2\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"58.2\" y1=\"119.2\" x2=\"181.8\" y2=\"119.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"181.8\" y1=\"119.2\" x2=\"120\" y2=\"30.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"93.2\" y1=\"77.9\" x2=\"85\" y2=\"72.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"155\" y1=\"72.1\" x2=\"146.8\" y2=\"77.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M110.8 43.9 A16 16 0 0 0 129.2 43.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"63.4\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M74.2 119.2 A16 16 0 0 0 67.3 106.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"110.8\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"24.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"50.4\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"189.6\" y=\"131.5\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 55,
+       "check": "(180 - 70) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 70 = 110",
+         "110 ÷ 2 = 55"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、∠C = 72° です。∠A は何度ですか。",
+       "answer": 36,
+       "check": "180 - 72 * 2",
+       "hints": [
+        "∠B は何度かな。",
+        "2 つの底角を合わせると何度かな。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "∠B = 72",
+         "180 − 144 = 36"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "△ABC で ∠B = ∠C、AB = 9 cm です。AC は何 cm ですか。",
+       "answer": 9,
+       "check": "9",
+       "hints": [
+        "2 つの角が等しい三角形は、何という三角形かな。",
+        "等しい 2 辺はどれとどれかな。",
+        "等しい角に向かい合う辺を見よう。"
+       ],
+       "paths": [
+        [
+         "二等辺三角形",
+         "AB = AC = 9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「2 直線が平行ならば、錯角は等しい」の逆はどれですか。",
+       "choices": [
+        "錯角が等しいならば、2 直線は平行である",
+        "2 直線が平行ならば、同位角は等しい",
+        "錯角が等しくないならば、2 直線は平行でない"
+       ],
+       "answer": "錯角が等しいならば、2 直線は平行である",
+       "hints": [
+        "もとの文の仮定と結論はどれかな。",
+        "逆は、その 2 つを入れかえた文だね。",
+        "「ならば」の前とあとを入れかえよう。"
+       ],
+       "paths": [
+        [
+         "仮定「2 直線が平行」と結論「錯角は等しい」を入れかえる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、∠A = 125° です。∠B は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"81.5\" y1=\"37.6\" x2=\"36.1\" y2=\"102.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"36.1\" y1=\"102.4\" x2=\"158.5\" y2=\"102.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"158.5\" y1=\"102.4\" x2=\"203.9\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"203.9\" y1=\"37.6\" x2=\"81.5\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M72.4 50.7 A16 16 0 0 0 97.5 37.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.5\" y=\"67\" font-size=\"13\" text-anchor=\"middle\">125°</text><path d=\"M52.1 102.4 A16 16 0 0 0 45.3 89.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"61\" y=\"94\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"73.8\" y=\"34.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"28.4\" y=\"114.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"166.2\" y=\"114.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"211.6\" y=\"34.3\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 55,
+       "check": "180 - 125",
+       "hints": [
+        "AD と BC は平行だね。",
+        "となり合う角の和は何度かな。",
+        "180 から 125 をひこう。"
+       ],
+       "paths": [
+        [
+         "∠A + ∠B = 180",
+         "∠B = 55"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD の対角線の交点を O とします。AC = 16 cm のとき、AO は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"76\" y1=\"34.5\" x2=\"42.9\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"197.1\" y1=\"34.5\" x2=\"76\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"76\" y1=\"34.5\" x2=\"164\" y2=\"105.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"42.9\" y1=\"105.5\" x2=\"197.1\" y2=\"34.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"68.2\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"35.1\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.8\" y=\"117.8\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"204.9\" y=\"31.3\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"85.5\" font-size=\"13\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 8,
+       "check": "16 // 2",
+       "hints": [
+        "平行四辺形の対角線は、どこで交わるかな。",
+        "O は AC の中点だね。",
+        "16 を 2 つに等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "AO = 16 ÷ 2 = 8"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形 ABCD が、かならず平行四辺形になるのはどれですか。",
+       "choices": [
+        "2 組の対角がそれぞれ等しい",
+        "1 組の対辺が平行",
+        "2 本の対角線の長さが等しい"
+       ],
+       "answer": "2 組の対角がそれぞれ等しい",
+       "hints": [
+        "平行四辺形になる条件の 5 つを思い出そう。",
+        "2 つ目は、台形でもあてはまるかな。",
+        "3 つ目は、左右の長さが等しい台形でもあてはまるかな。"
+       ],
+       "paths": [
+        [
+         "2 組の対角がそれぞれ等しいは条件の 1 つ",
+         "ほかは台形が反例"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "AB = AC の二等辺三角形で、∠A = 20° です。∠C は何度ですか。",
+       "answer": 80,
+       "check": "(180 - 20) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 20 = 160",
+         "160 ÷ 2 = 80"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形 ABCD で、AB = 6 cm、AD = 9 cm です。CD は何 cm ですか。",
+       "answer": 6,
+       "check": "6",
+       "hints": [
+        "CD は、どの辺と向かい合っているかな。",
+        "平行四辺形の対辺はどうなっているかな。",
+        "対辺は等しいね。"
+       ],
+       "paths": [
+        [
+         "CD は AB の対辺",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正三角形 ABC で、∠A の二等分線が BC と交わる点を D とします。∠BAD は何度ですか。",
+       "answer": 30,
+       "check": "60 // 2",
+       "hints": [
+        "正三角形の 1 つの角は何度かな。",
+        "二等分線は、角を等しく 2 つに分けるね。",
+        "60 を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "∠A = 60",
+         "60 ÷ 2 = 30"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     11.1,
     15.29,
     9.31
-   ]
+   ],
+   "comb": {
+    "b": 0.278,
+    "r": 0.0,
+    "rg": [
+     "hakaru",
+     "shomei-zukei"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "G-018",
@@ -207858,27 +213006,1058 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円周角と中心角の関係を調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"67.3\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"67.3\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M112.4 47.5 A18 18 0 0 0 127.6 47.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"65.7\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M109.3 109 A14 14 0 0 0 130.7 109\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">100°</text><text x=\"58.8\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"181.2\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"24.7\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "explain": "円 O の円周の上に 3 点 A、B、P があるとき、∠APB を、弧 AB（P をふくまない方の弧）に対する円周角といいます。∠AOB は弧 AB に対する中心角です。1 つの弧に対する円周角の大きさは、その弧に対する中心角の半分です（円周角の定理）。図では ∠AOB = 100° なので、∠APB = 100° ÷ 2 = 50° です。反対に、円周角がわかれば、中心角はその 2 倍です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "O は円の中心です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"67.3\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.3\" y1=\"144.3\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M109.3 109 A14 14 0 0 0 130.7 109\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">100°</text><path d=\"M85.3 144.3 A18 18 0 0 0 81 132.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.4\" y=\"138.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"58.8\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"181.2\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 40,
+       "check": "(180 - 100) // 2",
+       "hints": [
+        "OA と OB は、円の何かな。",
+        "半径は等しいので、△OAB は何という三角形かな。",
+        "二等辺三角形の底角は等しいね。"
+       ],
+       "paths": [
+        [
+         "OA = OB（半径）",
+         "△OAB は二等辺三角形",
+         "∠x = (180 − 100) ÷ 2 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "半径 6 cm の円で、中心角 60° のおうぎ形の弧の長さは、円周の何分の 1 ですか。分数で答えましょう。",
+       "answer": "1/6",
+       "check": "Fraction(60, 360)",
+       "hints": [
+        "おうぎ形は、円の何分の 1 かを、中心角で考えるね。",
+        "60 ÷ 360 を分数にしよう。",
+        "約分しよう。"
+       ],
+       "paths": [
+        [
+         "60/360 = 1/6"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"57.6\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"57.6\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M121 46.5 A18 18 0 0 0 140.3 48.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.3\" y=\"66.6\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M107.3 105.9 A14 14 0 0 0 132.7 105.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">130°</text><text x=\"47.6\" y=\"138.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.4\" y=\"138.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"133.9\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 65,
+       "check": "130 // 2",
+       "hints": [
+        "∠x は、どの弧に対する円周角かな。",
+        "その弧に対する中心角は何度かな。",
+        "円周角は中心角の何倍かな。"
+       ],
+       "paths": [
+        [
+         "∠x は弧 AB に対する円周角",
+         "中心角は 130°",
+         "130 ÷ 2 = 65"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"80.5\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"159.5\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"80.5\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"159.5\" y2=\"156.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.1 49.8 A18 18 0 0 0 114.9 48.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.7\" y=\"66.6\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M112 111.5 A14 14 0 0 0 128 111.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"74.2\" y=\"170\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"165.8\" y=\"170\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 70,
+       "check": "35 * 2",
+       "hints": [
+        "∠x は、弧 AB に対する中心角だね。",
+        "弧 AB に対する円周角は何度かな。",
+        "中心角は円周角の何倍かな。"
+       ],
+       "paths": [
+        [
+         "円周角は 35°",
+         "中心角はその 2 倍",
+         "70°"
+        ]
+       ],
+       "note": "35 ÷ 2 と、半分にしてしまいやすい。どちらが大きい角かを図で確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠ACB = 48° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"68.8\" y2=\"146.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"171.2\" y2=\"146.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"68.8\" y2=\"146.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"171.2\" y2=\"146.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M143.1 54.4 A18 18 0 0 0 157.2 58.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"73.9\" font-size=\"13\" text-anchor=\"middle\">48°</text><path d=\"M109.6 109.4 A14 14 0 0 0 130.4 109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"60.7\" y=\"158\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"179.3\" y=\"158\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"159.9\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 96,
+       "check": "48 * 2",
+       "hints": [
+        "∠ACB は、どの弧に対する円周角かな。",
+        "同じ弧に対する中心角はどれかな。",
+        "中心角は円周角の 2 倍だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 48 × 2 = 96"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "O は円の中心で、点 P は短い方の弧 AB の上にあります。∠AOB = 110° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"63.6\" y2=\"60.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"176.4\" y2=\"60.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"63.6\" y2=\"60.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"176.4\" y2=\"60.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M109.4 36.7 A12 12 0 0 0 130.6 36.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"59.7\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M131.5 92 A14 14 0 0 0 108.5 92\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"78.5\" font-size=\"13\" text-anchor=\"middle\">110°</text><text x=\"54.6\" y=\"58.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.4\" y=\"58.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"24.7\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 125,
+       "check": "(360 - 110) // 2",
+       "hints": [
+        "∠APB は、どの弧に対する円周角かな。P をふくまない方の弧だよ。",
+        "その弧に対する中心角は、110° の角の反対がわの角だね。",
+        "1 回転は 360° だね。"
+       ],
+       "paths": [
+        [
+         "∠x は長い方の弧 AB に対する円周角",
+         "その中心角は 360 − 110 = 250",
+         "250 ÷ 2 = 125"
+        ]
+       ],
+       "note": "110 ÷ 2 = 55 としやすい。円周角は「P をふくまない方の弧」の中心角の半分。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠AOB = 80° のとき、∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"164.3\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"164.3\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M84 58.3 A18 18 0 0 0 95.9 55.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.3\" y=\"73.9\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M111 110.7 A14 14 0 0 0 129 110.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">80°</text><text x=\"68.7\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"171.3\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"80.1\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 40,
+       "check": "80 // 2",
+       "hints": [
+        "∠APB は弧 AB に対する円周角だね。",
+        "弧 AB に対する中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "80 ÷ 2 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠APB = 55° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"176.4\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"176.4\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M132.6 49.6 A18 18 0 0 0 149 52.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.3\" y=\"69.4\" font-size=\"13\" text-anchor=\"middle\">55°</text><path d=\"M108.5 108 A14 14 0 0 0 131.5 108\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"54.6\" y=\"150.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.4\" y=\"150.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 110,
+       "check": "55 * 2",
+       "hints": [
+        "∠AOB は弧 AB に対する中心角だね。",
+        "弧 AB に対する円周角は何度かな。",
+        "中心角は円周角の 2 倍だね。"
+       ],
+       "paths": [
+        [
+         "55 × 2 = 110"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心で、∠AOB = 90° です。∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"71.3\" y2=\"148.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"168.7\" y2=\"148.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"71.3\" y2=\"148.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"168.7\" y2=\"148.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M102.6 49.4 A18 18 0 0 0 116.4 48.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.7\" y=\"66.6\" font-size=\"13\" text-anchor=\"middle\">x</text><polyline points=\"114.3,105.7 120,111.3 125.7,105.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"63.5\" y=\"161\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"176.5\" y=\"161\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 45,
+       "check": "90 // 2",
+       "hints": [
+        "直角のしるしは何度かな。",
+        "∠APB は弧 AB に対する円周角だね。",
+        "中心角の半分を求めよう。"
+       ],
+       "paths": [
+        [
+         "90 ÷ 2 = 45"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "同じ弧に対する円周角と、半円の弧に対する円周角を調べましょう。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"60.4\" y2=\"134.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"179.6\" y2=\"134.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.7\" y1=\"47.3\" x2=\"60.4\" y2=\"134.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.7\" y1=\"47.3\" x2=\"179.6\" y2=\"134.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M132 49.1 A18 18 0 0 0 149.7 52.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"138.3\" y=\"69.4\" font-size=\"13\" text-anchor=\"middle\">60°</text><path d=\"M72.6 65 A18 18 0 0 0 89.5 58.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"86\" y=\"80\" font-size=\"13\" text-anchor=\"middle\">60°</text><text x=\"50.8\" y=\"144.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"189.2\" y=\"144.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"68.7\" y=\"43.4\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "explain": "1 つの弧に対する円周角は、どれも中心角の半分なので、同じ弧に対する円周角はすべて等しくなります。図では、∠APB と ∠AQB は、どちらも弧 AB に対する円周角なので等しく、60° です。また、AB が円の直径のとき、弧 AB は半円で、中心角は一直線の 180° です。だから、半円の弧に対する円周角は 180° ÷ 2 = 90° です。直径の両はしと円周の上の点を結ぶと、いつも直角ができます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "O は円の中心です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"55.3\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"55.3\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M104.3 46.6 A18 18 0 0 0 125 45.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.3\" y=\"65.9\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M106.8 104.8 A14 14 0 0 0 133.2 104.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">140°</text><text x=\"45\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"195\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"113\" y=\"25\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 70,
+       "check": "140 // 2",
+       "hints": [
+        "∠x は弧 AB に対する円周角だね。",
+        "中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "140 ÷ 2 = 70"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"27.4\" x2=\"94.5\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94.5\" y1=\"122.6\" x2=\"145.5\" y2=\"122.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145.5\" y1=\"122.6\" x2=\"120\" y2=\"27.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"112.1\" y1=\"76.3\" x2=\"102.4\" y2=\"73.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"137.6\" y1=\"73.7\" x2=\"127.9\" y2=\"76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M115.9 42.9 A16 16 0 0 0 124.1 42.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"60\" font-size=\"13\" text-anchor=\"middle\">30°</text><path d=\"M110.5 122.6 A16 16 0 0 0 98.6 107.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"116.7\" y=\"110.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"21\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"86.7\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"153.3\" y=\"134.9\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 75,
+       "check": "(180 - 30) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 30 = 150",
+         "150 ÷ 2 = 75"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠APB = 40° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"164.3\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.3\" y1=\"55.7\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.3\" y1=\"55.7\" x2=\"164.3\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M144.1 55.1 A18 18 0 0 0 156 58.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"73.9\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M68.8 73.7 A18 18 0 0 0 80 68.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.9\" y=\"87.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"68.7\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"171.3\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"159.9\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"58.8\" y=\"53.2\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 40,
+       "check": "40",
+       "hints": [
+        "∠APB と ∠AQB は、どの弧に対する円周角かな。",
+        "2 つの角は、同じ弧に対する円周角だね。",
+        "同じ弧に対する円周角はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "どちらも弧 AB に対する円周角",
+         "等しい",
+         "40°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"35.3\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M71.1 100 A20 20 0 0 0 67.5 88.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.7\" y=\"94.9\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M177.4 83.6 A20 20 0 0 0 168.9 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.5\" y=\"89.8\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 55,
+       "check": "180 - 90 - 35",
+       "hints": [
+        "∠APB は、どの弧に対する円周角かな。",
+        "半円の弧に対する円周角は何度かな。",
+        "△PAB の内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = 90°（半円の弧）",
+         "∠x = 180 − 90 − 35 = 55"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠ACD = 35° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"96.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"188.9\" y1=\"100\" x2=\"96.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"96.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95.2 47.5 A20 20 0 0 0 106.3 52.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.8\" y=\"66.3\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M62.6 116.4 A20 20 0 0 0 71.1 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.5\" y=\"119.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"92.7\" y=\"179.6\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 55,
+       "check": "90 - 35",
+       "hints": [
+        "∠ACD と同じ弧に対する円周角を、ほかにさがそう。",
+        "∠ABD は何度かな。",
+        "∠ADB は、半円の弧に対する円周角だね。"
+       ],
+       "paths": [
+        [
+         "∠ABD = ∠ACD = 35°（弧 AD）",
+         "∠ADB = 90°",
+         "∠x = 180 − 90 − 35 = 55"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円の上の 4 点 A、B、C、D で、AC と BD が点 E で交わっています。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.3\" y1=\"123.5\" x2=\"143.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"187.8\" y1=\"88\" x2=\"60.4\" y2=\"65.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.3\" y1=\"123.5\" x2=\"187.8\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"143.5\" y1=\"164.7\" x2=\"60.4\" y2=\"65.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M73.4 132 A20 20 0 0 0 74.6 118.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"87.2\" y=\"130.9\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M168.1 84.6 A20 20 0 0 0 168.5 93.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.8\" y=\"94\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M106.9 121 A12 12 0 0 0 110.7 108.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122\" y=\"123.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"45\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"147.3\" y=\"179.6\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"198.6\" y=\"90.7\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"50.8\" y=\"64.6\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"110.2\" y=\"116.3\" font-size=\"13\" text-anchor=\"middle\">E</text></svg>",
+       "answer": 65,
+       "check": "40 + 25",
+       "hints": [
+        "∠BAC と同じ弧に対する円周角を、ほかにさがそう。",
+        "∠BDC は何度かな。",
+        "∠x は △ECD の外角だね。"
+       ],
+       "paths": [
+        [
+         "∠BDC = ∠BAC = 40°（弧 BC）",
+         "∠x は △EDC の外角",
+         "40 + 25 = 65"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "∠APB = 52° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.3\" y1=\"47.3\" x2=\"65.7\" y2=\"142.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"164.3\" y1=\"47.3\" x2=\"174.3\" y2=\"142.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.4\" y1=\"65.6\" x2=\"65.7\" y2=\"142.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60.4\" y1=\"65.6\" x2=\"174.3\" y2=\"142.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M151.3 59.8 A18 18 0 0 0 166.1 65.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154\" y=\"80\" font-size=\"13\" text-anchor=\"middle\">52°</text><path d=\"M61.6 83.5 A18 18 0 0 0 75.3 75.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"75.4\" y=\"96.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"57.1\" y=\"153.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"182.9\" y=\"153.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.3\" y=\"43.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"50.8\" y=\"64.6\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 52,
+       "check": "52",
+       "hints": [
+        "2 つの角は、どの弧に対する円周角かな。",
+        "同じ弧に対する円周角だね。",
+        "同じ弧に対する円周角は等しいね。"
+       ],
+       "paths": [
+        [
+         "どちらも弧 AB",
+         "52°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠PBA = 48° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"127.2\" y1=\"31.5\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"127.2\" y1=\"31.5\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M175.5 85.1 A20 20 0 0 0 168.9 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.6\" y=\"91.5\" font-size=\"13\" text-anchor=\"middle\">48°</text><path d=\"M71.1 100 A20 20 0 0 0 66 86.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81\" y=\"93.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"128.3\" y=\"25.1\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 42,
+       "check": "180 - 90 - 48",
+       "hints": [
+        "∠APB は何度かな。",
+        "半円の弧に対する円周角だね。",
+        "内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = 90°",
+         "∠x = 180 − 90 − 48 = 42"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠ACB = 65° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"57.6\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"57.6\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.6 51.9 A18 18 0 0 0 108.6 48.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.7\" y=\"69.4\" font-size=\"13\" text-anchor=\"middle\">65°</text><path d=\"M107.3 105.9 A14 14 0 0 0 132.7 105.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"47.6\" y=\"138.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.4\" y=\"138.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"92.7\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 130,
+       "check": "65 * 2",
+       "hints": [
+        "∠ACB は弧 AB に対する円周角だね。",
+        "∠AOB は弧 AB に対する中心角だね。",
+        "中心角は円周角の 2 倍だね。"
+       ],
+       "paths": [
+        [
+         "65 × 2 = 130"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "等しい弧と円周角、円周角の定理の逆を知りましょう。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"55.3\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"96.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"143.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M98 49.5 A20 20 0 0 0 106.3 52.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.4\" y=\"67.3\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M152.7 60.3 A20 20 0 0 0 161.3 59.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.6\" y=\"76.6\" font-size=\"13\" text-anchor=\"middle\">25°</text><text x=\"45\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"92.7\" y=\"179.6\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"179.6\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"195\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"159.9\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "explain": "1 つの円で、等しい弧に対する円周角は等しく、反対に、等しい円周角に対する弧は等しくなります。図では、弧 AB = 弧 CD なので ∠APB = ∠CQD です。弧の長さは中心角で決まり（G-010）、円周角は中心角の半分なので、円周角が 2 倍になると弧の長さも 2 倍になります。また、円周角の定理には逆が成り立ちます。2 点 P、Q が直線 AB について同じがわにあって ∠APB = ∠AQB ならば、4 点 A、B、P、Q は 1 つの円周の上にあります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "AB は円 O の直径です。∠PAB = 40° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M71.1 100 A20 20 0 0 0 66.5 87.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.2\" y=\"93.6\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M176 84.7 A20 20 0 0 0 168.9 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.9\" y=\"91\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"133.9\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 50,
+       "check": "180 - 90 - 40",
+       "hints": [
+        "∠APB は何度かな。",
+        "半円の弧に対する円周角だね。",
+        "内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = 90°",
+         "∠x = 180 − 90 − 40 = 50"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "半径 3 cm の円の円周は（□ × 円周率）cm です。□ にあてはまる数はいくつですか。",
+       "answer": 6,
+       "check": "3 * 2",
+       "hints": [
+        "円周は、直径 × 円周率だね。",
+        "直径は半径の何倍かな。",
+        "直径を求めよう。"
+       ],
+       "paths": [
+        [
+         "直径は 3 × 2 = 6",
+         "円周は (6 × 円周率) cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "弧 AB と弧 CD の長さは等しいです。∠APB = 27° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"52.2\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"89.8\" y2=\"161.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172.7\" y1=\"55.7\" x2=\"143.5\" y2=\"164.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"172.7\" y1=\"55.7\" x2=\"186.2\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M96.6 48.6 A20 20 0 0 0 105.3 52\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96.3\" y=\"66.5\" font-size=\"13\" text-anchor=\"middle\">27°</text><path d=\"M167.6 75.1 A20 20 0 0 0 176.9 75.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"171.9\" y=\"92.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"41.4\" y=\"118.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"85\" y=\"176.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"179.6\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"196.8\" y=\"126.6\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"181.2\" y=\"53.2\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 27,
+       "check": "27",
+       "hints": [
+        "∠APB と ∠CQD は、それぞれどの弧に対する円周角かな。",
+        "弧 AB と弧 CD は等しいね。",
+        "等しい弧に対する円周角はどうなるかな。"
+       ],
+       "paths": [
+        [
+         "弧 AB = 弧 CD",
+         "等しい弧に対する円周角は等しい",
+         "27°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠APB = 30° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"85.6\" y2=\"159.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"154.4\" y2=\"159.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M114.8 50.5 A20 20 0 0 0 125.2 50.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"67.7\" font-size=\"13\" text-anchor=\"middle\">30°</text><text x=\"80.1\" y=\"173.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"159.9\" y=\"173.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"24.7\" font-size=\"13\" text-anchor=\"middle\">P</text></svg>",
+       "answer": "1/6",
+       "check": "Fraction(30 * 2, 360)",
+       "hints": [
+        "弧 AB に対する中心角は何度かな。",
+        "中心角は円周角の 2 倍だね。",
+        "中心角 ÷ 360 を分数にしよう。"
+       ],
+       "paths": [
+        [
+         "中心角は 30 × 2 = 60",
+         "60/360 = 1/6"
+        ]
+       ],
+       "note": "30/360 = 1/12 としやすい。弧の長さを決めるのは中心角。"
+      },
+      {
+       "part": "今日",
+       "text": "∠ADB = ∠ACB = 50°、∠DBC = 32° です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 190\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"59.5\" y1=\"158.7\" x2=\"180.5\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.5\" y1=\"158.7\" x2=\"180.5\" y2=\"57.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.5\" y1=\"57.2\" x2=\"100.9\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100.9\" y1=\"31.3\" x2=\"59.5\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"59.5\" y1=\"158.7\" x2=\"180.5\" y2=\"57.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180.5\" y1=\"158.7\" x2=\"100.9\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M95.3 48.4 A18 18 0 0 0 110.4 46.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"104.5\" y=\"65.6\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M166.7 68.7 A18 18 0 0 0 180.5 75.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"167.8\" y=\"88.9\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M180.5 136.7 A22 22 0 0 0 168.9 140.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"171.1\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">32°</text><path d=\"M76.3 144.6 A22 22 0 0 0 66.3 137.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"78.5\" y=\"135.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"51.1\" y=\"170.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"188.9\" y=\"170.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"188.9\" y=\"54.6\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"98.2\" y=\"25.2\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 32,
+       "check": "32 if 50 == 50 else 0",
+       "hints": [
+        "C と D は、直線 AB について同じがわにあるね。",
+        "∠ADB = ∠ACB なので、4 点 A、B、C、D はどうなっているかな。",
+        "4 点が 1 つの円周の上にあれば、∠DAC と ∠DBC はどんな角かな。"
+       ],
+       "paths": [
+        [
+         "∠ADB = ∠ACB で C、D は AB の同じがわ",
+         "4 点は 1 つの円周の上（円周角の定理の逆）",
+         "∠x と ∠DBC は弧 DC に対する円周角",
+         "32°"
+        ]
+       ],
+       "note": "円がかいていない図で、円周角の定理の逆を使って円を見つける。図に円をかきこんで確かめるとよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "円周を 12 等分した点に、1〜12 の番号を付けました。点 12、4、7 を結んだ三角形で、点 12 の角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"67.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"32.8\" x2=\"178.2\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"178.2\" y1=\"133.6\" x2=\"86.4\" y2=\"158.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.4\" y1=\"158.2\" x2=\"120\" y2=\"32.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M115.3 50.2 A18 18 0 0 0 129 48.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"123.9\" y=\"67.1\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"26.3\" font-size=\"13\" text-anchor=\"middle\">12</text><text x=\"159.1\" y=\"36.8\" font-size=\"13\" text-anchor=\"middle\">1</text><text x=\"187.7\" y=\"65.5\" font-size=\"13\" text-anchor=\"middle\">2</text><text x=\"198.2\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">3</text><text x=\"187.7\" y=\"143.7\" font-size=\"13\" text-anchor=\"middle\">4</text><text x=\"159.1\" y=\"172.3\" font-size=\"13\" text-anchor=\"middle\">5</text><text x=\"120\" y=\"182.8\" font-size=\"13\" text-anchor=\"middle\">6</text><text x=\"80.9\" y=\"172.3\" font-size=\"13\" text-anchor=\"middle\">7</text><text x=\"52.3\" y=\"143.7\" font-size=\"13\" text-anchor=\"middle\">8</text><text x=\"41.8\" y=\"104.6\" font-size=\"13\" text-anchor=\"middle\">9</text><text x=\"52.3\" y=\"65.4\" font-size=\"13\" text-anchor=\"middle\">10</text><text x=\"80.9\" y=\"36.8\" font-size=\"13\" text-anchor=\"middle\">11</text><circle cx=\"120\" cy=\"32.8\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"153.6\" cy=\"41.8\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"178.2\" cy=\"66.4\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"187.2\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"178.2\" cy=\"133.6\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"153.6\" cy=\"158.2\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"167.2\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"86.4\" cy=\"158.2\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"61.8\" cy=\"133.6\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"52.8\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"61.8\" cy=\"66.4\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"86.4\" cy=\"41.8\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 45,
+       "check": "360 // 12 * 3 // 2",
+       "hints": [
+        "となり合う 2 点の間の弧に対する中心角は何度かな。",
+        "点 12 の角は、どの弧に対する円周角かな。",
+        "点 4 から点 7 までの弧は、何こ分かな。"
+       ],
+       "paths": [
+        [
+         "1 こ分の中心角は 360 ÷ 12 = 30",
+         "弧 4〜7 は 3 こ分で 90",
+         "円周角は 90 ÷ 2 = 45"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "弧 AB の長さは、弧 CD の長さの 2 倍です。∠CQD = 20° のとき、∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"52.2\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"120\" y2=\"168.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"154.4\" y2=\"159.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.5 52.6 A20 20 0 0 0 99.9 55\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.9\" y=\"71.4\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M154.4 62.4 A22 22 0 0 0 162 61\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.3\" y=\"78.4\" font-size=\"13\" text-anchor=\"middle\">20°</text><text x=\"41.4\" y=\"118.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"184.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"159.9\" y=\"173.7\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"195\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"92.7\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"159.9\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 40,
+       "check": "20 * 2",
+       "hints": [
+        "弧の長さが 2 倍のとき、円周角はどうなるかな。",
+        "円周角は、中心角の半分だったね。",
+        "20° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "弧が 2 倍なら円周角も 2 倍",
+         "20 × 2 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。",
+       "answer": "1/4",
+       "check": "Fraction(45 * 2, 360)",
+       "hints": [
+        "弧 AB に対する中心角は何度かな。",
+        "中心角は円周角の 2 倍だね。",
+        "中心角 ÷ 360 を約分しよう。"
+       ],
+       "paths": [
+        [
+         "中心角 90",
+         "90/360 = 1/4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 P、Q は直線 AB について同じがわにあり、∠APB = ∠AQB = 40° です。4 点 A、B、P、Q について、正しいものはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 190\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"71.8\" y1=\"127.7\" x2=\"157\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.2\" y1=\"31.3\" x2=\"71.8\" y2=\"127.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.2\" y1=\"31.3\" x2=\"157\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.6\" y1=\"31.3\" x2=\"71.8\" y2=\"127.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.6\" y1=\"31.3\" x2=\"157\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M154.1 45.4 A20 20 0 0 0 166.5 51.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.7\" y=\"64.8\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M92.5 50.6 A20 20 0 0 0 106.1 49.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.4\" y=\"67.7\" font-size=\"13\" text-anchor=\"middle\">40°</text><text x=\"62.3\" y=\"137.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"160.8\" y=\"173.6\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"173.7\" y=\"26.3\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"92.1\" y=\"26.3\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "choices": [
+        "1 つの円周の上にある",
+        "1 つの円周の上にあるとはかぎらない"
+       ],
+       "answer": "1 つの円周の上にある",
+       "check": "'1 つの円周の上にある' if 40 == 40 else '1 つの円周の上にあるとはかぎらない'",
+       "hints": [
+        "P と Q は、AB について同じがわにあるね。",
+        "∠APB と ∠AQB は等しいね。",
+        "円周角の定理の逆を思い出そう。"
+       ],
+       "paths": [
+        [
+         "同じがわで角が等しい",
+         "円周角の定理の逆",
+         "1 つの円周の上"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "円 O で、PB が直径のとき、∠APB = ∠AOB ÷ 2 であることを証明しましょう（中心が角の辺の上にある場合）。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"154.4\" y2=\"159.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M83.7 62.3 A22 22 0 0 0 96.6 59.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.9\" y=\"78.1\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M89.9 135.9 A22 22 0 0 0 77.7 130.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.8\" y=\"125.9\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M111 110.7 A14 14 0 0 0 127 112.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.7\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"159.9\" y=\"173.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"80.1\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"127.8\" y=\"96.8\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "explain": "例：「∠APB = ∠a とする。OA と OP は円の半径なので OA = OP で、△OAP は二等辺三角形。二等辺三角形の底角は等しいので ∠OAP = ∠OPA = ∠a。∠AOB は △OAP の頂点 O の外角なので、∠AOB = ∠OAP + ∠OPA = ∠a + ∠a。したがって ∠AOB は ∠a の 2 倍で、∠APB = ∠AOB ÷ 2。」と書ければよい。①「∠APB = ∠a とする」と名前を決める、② 半径が等しいことから二等辺三角形、底角が等しい（G-010、G-017）、③ 外角はとなり合わない 2 つの内角の和（G-016）で結ぶ、の 3 点を見る。中心角と円周角を分度器で測って半分になった、という例だけでは、どの位置の P でもいえるとは示せないことを話す。",
+       "hints": [
+        "OA と OP は、円の何かな。",
+        "△OAP は何という三角形かな。底角はどうなるかな。",
+        "∠AOB は、△OAP のどの角かな。外角の性質を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = ∠a とする",
+         "OA = OP で ∠OAP = ∠a",
+         "∠AOB は外角で ∠a + ∠a",
+         "∠APB = ∠AOB ÷ 2"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "中心 O が ∠APB の内側にあるとき、∠APB = ∠AOB ÷ 2 であることを証明しましょう。P を通る直径 PQ を引いて考えます。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"182.4\" y2=\"129.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"126\" y2=\"168.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><path d=\"M103 55 A26 26 0 0 0 116.3 57.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.4\" y=\"73.4\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M116.3 57.3 A26 26 0 0 0 128.9 52.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127\" y=\"71.7\" font-size=\"13\" text-anchor=\"middle\">∠b</text><text x=\"54.6\" y=\"150.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"192.4\" y=\"138.3\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"113\" y=\"25\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"127\" y=\"184.1\" font-size=\"13\" text-anchor=\"middle\">Q</text><text x=\"131\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "explain": "例：「直径 PQ を引き、∠APQ = ∠a、∠QPB = ∠b とする。前の問題（中心が辺の上にある場合）から、∠AOQ = 2∠a、∠QOB = 2∠b。∠APB = ∠a + ∠b、∠AOB = ∠AOQ + ∠QOB = 2∠a + 2∠b なので、∠AOB は ∠APB の 2 倍で、∠APB = ∠AOB ÷ 2。」と書ければよい。① 補助線（直径 PQ）を引いて 2 つの角に名前を決める、② すでに示した場合（中心が辺の上）を 2 回使う、③ 角を足し合わせて結ぶ、の 3 点を見る。中心が角の外側にあるときも、直径 PQ を引いて、2 つの場合の「ひき算」で同じように示せる（場合分け）ことを話す。3 つの場合をすべて示して、はじめて定理が証明できたことになる。",
+       "hints": [
+        "直径 PQ で、∠APB を 2 つに分けよう。それぞれに名前をつけよう。",
+        "分けたそれぞれの角は、「中心が辺の上にある場合」になっているね。",
+        "2 つの場合の式をたそう。"
+       ],
+       "paths": [
+        [
+         "直径 PQ を引く",
+         "∠APQ = ∠a、∠QPB = ∠b とする",
+         "∠AOQ = 2∠a、∠QOB = 2∠b",
+         "たして ∠AOB = 2(∠a + ∠b) = 2∠APB"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "AB が円 O の直径のとき、円周の上の点 P について ∠APB = 90° であることを、二等辺三角形を使って証明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"96.5\" y1=\"35.3\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"96.5\" y2=\"35.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M73.1 100 A22 22 0 0 0 63.8 82\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.3\" y=\"88.9\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M86.1 50 A18 18 0 0 0 102.6 52.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.5\" y=\"69.6\" font-size=\"13\" text-anchor=\"middle\">∠a</text><path d=\"M170.8 87.4 A22 22 0 0 0 166.9 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"156.4\" y=\"94.3\" font-size=\"13\" text-anchor=\"middle\">∠b</text><path d=\"M105.3 59.7 A26 26 0 0 0 117.7 50.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.6\" y=\"70\" font-size=\"13\" text-anchor=\"middle\">∠b</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"92.7\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "explain": "例：「OA、OP、OB は半径なので等しい。△OAP は二等辺三角形なので ∠OAP = ∠OPA、これを ∠a とする。△OBP も二等辺三角形なので ∠OBP = ∠OPB、これを ∠b とする。△PAB の内角の和は 180° なので、∠a + ∠b + (∠a + ∠b) = 180°。よって ∠a + ∠b = 90° で、∠APB = ∠a + ∠b = 90°。」と書ければよい。① 半径を引き、2 つの二等辺三角形の底角に名前を決める、② 内角の和の式を変形する（2 つ分が 180° なので 1 つ分は 90°）、③ 二等辺三角形の底角、三角形の内角の和という約束した事実で結ぶ、の 3 点を見る。円周角の定理から「中心角 180° の半分」として示す道もあることに触れる。",
+       "hints": [
+        "O と P を結ぼう。OA、OP、OB はどれも何かな。",
+        "できた 2 つの二等辺三角形の底角に、名前をつけよう。",
+        "△PAB の内角の和を、その名前で式に書こう。"
+       ],
+       "paths": [
+        [
+         "OP を引く",
+         "∠OAP = ∠OPA = ∠a、∠OBP = ∠OPB = ∠b",
+         "2∠a + 2∠b = 180°",
+         "∠a + ∠b = 90°"
+        ],
+        [
+         "中心角 ∠AOB = 180°",
+         "円周角はその半分で 90°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O で PB は直径です。∠APO = 28° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"89.8\" y2=\"161.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85.6\" y1=\"40.4\" x2=\"154.4\" y2=\"159.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"89.8\" y2=\"161.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M86.3 62.4 A22 22 0 0 0 96.6 59.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"94.9\" y=\"77.6\" font-size=\"13\" text-anchor=\"middle\">28°</text><path d=\"M113.9 112.6 A14 14 0 0 0 127 112.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120.9\" y=\"130.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"85\" y=\"176.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"159.9\" y=\"173.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"80.1\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"127.8\" y=\"96.8\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 56,
+       "check": "28 * 2",
+       "hints": [
+        "OA = OP なので、∠OAP は何度かな。",
+        "∠AOB は △OAP の外角だね。",
+        "外角は、となり合わない 2 つの内角の和だね。"
+       ],
+       "paths": [
+        [
+         "∠OAP = 28°",
+         "∠AOB = 28 + 28 = 56"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠BAC = 25° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"164.3\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"188.9\" y1=\"100\" x2=\"164.3\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"164.3\" y2=\"47.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M73.1 100 A22 22 0 0 0 71.1 90.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"84.3\" y=\"97.2\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M152.7 61 A18 18 0 0 0 171.9 63.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.3\" y=\"81.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"171.3\" y=\"43.4\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 65,
+       "check": "90 - 25",
+       "hints": [
+        "OA = OC なので、∠OCA は何度かな。",
+        "∠ACB は、半円の弧に対する円周角だね。",
+        "∠ACB から ∠OCA をひこう。"
+       ],
+       "paths": [
+        [
+         "∠OCA = ∠OAC = 25°",
+         "∠ACB = 90°",
+         "∠x = 90 − 25 = 65"
+        ],
+        [
+         "OB = OC で ∠x = ∠OBC",
+         "∠ABC = 90 − 25 = 65"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "O は円の中心で、∠ACB = 36° です。∠AOB は何度ですか。",
+       "answer": 72,
+       "check": "36 * 2",
+       "hints": [
+        "∠ACB と ∠AOB は、同じ弧 AB に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "36° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "36 × 2 = 72"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径で、P は円周の上の点です。∠PAB = 33° のとき、∠PBA は何度ですか。",
+       "answer": 57,
+       "check": "90 - 33",
+       "hints": [
+        "∠APB は何度かな。",
+        "半円の弧に対する円周角だね。",
+        "三角形の内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = 90°",
+         "180 − 90 − 33 = 57"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円 O で、PB は直径です。∠AOB = 64° のとき、∠APB は何度ですか。",
+       "answer": 32,
+       "check": "64 // 2",
+       "hints": [
+        "OA = OP なので、△OAP は二等辺三角形だね。",
+        "∠AOB は △OAP の外角だね。",
+        "外角は、等しい 2 つの底角の和だね。"
+       ],
+       "paths": [
+        [
+         "∠APB = 64 ÷ 2 = 32"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "AB = AC の二等辺三角形です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"32.9\" x2=\"49.4\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"49.4\" y1=\"117.1\" x2=\"190.6\" y2=\"117.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"190.6\" y1=\"117.1\" x2=\"120\" y2=\"32.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"88.5\" y1=\"78.2\" x2=\"80.9\" y2=\"71.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"159.1\" y1=\"71.8\" x2=\"151.5\" y2=\"78.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M109.7 45.2 A16 16 0 0 0 130.3 45.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"65.5\" font-size=\"13\" text-anchor=\"middle\">80°</text><path d=\"M180.3 104.8 A16 16 0 0 0 174.6 117.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"165.2\" y=\"109.8\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"26.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"41.6\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"198.4\" y=\"129.4\" font-size=\"13\" text-anchor=\"middle\">C</text></svg>",
+       "answer": 50,
+       "check": "(180 - 80) // 2",
+       "hints": [
+        "2 つの底角は等しいね。",
+        "2 つの底角を合わせると何度かな。",
+        "それを 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "180 − 80 = 100",
+         "100 ÷ 2 = 50"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "半径 6 cm、中心角 120° のおうぎ形の弧の長さは（□ × 円周率）cm です。□ にあてはまる数はいくつですか。",
+       "answer": 4,
+       "check": "6 * 2 * Fraction(120, 360)",
+       "hints": [
+        "円周は（12 × 円周率）cm だね。",
+        "おうぎ形は、円の何分の 1 かな。",
+        "12 の 3 分の 1 を求めよう。"
+       ],
+       "paths": [
+        [
+         "円周は (12 × 円周率) cm",
+         "120/360 = 1/3",
+         "12 の 1/3 は 4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心で、∠ACB = 50° です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"67.3\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"67.3\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"67.3\" y1=\"144.3\" x2=\"172.7\" y2=\"144.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M107.1 48 A18 18 0 0 0 122.3 47.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.3\" y=\"65.9\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M87.3 144.3 A20 20 0 0 0 82.6 131.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.3\" y=\"137.9\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"58.8\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"181.2\" y=\"155.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"113\" y=\"25\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 40,
+       "check": "(180 - 50 * 2) // 2",
+       "hints": [
+        "まず、∠AOB を求めよう。",
+        "OA = OB なので、△OAB は何という三角形かな。",
+        "底角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 50 × 2 = 100",
+         "(180 − 100) ÷ 2 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 9 cm の円で、∠APB = 40° です。弧 AB（P をふくまない方）の長さは（□ × 円周率）cm です。□ にあてはまる数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"75.7\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"108\" y1=\"32.2\" x2=\"164.3\" y2=\"152.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M102.9 51.5 A20 20 0 0 0 116.5 50.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"110.8\" y=\"68.6\" font-size=\"13\" text-anchor=\"middle\">40°</text><text x=\"68.7\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"171.3\" y=\"165.7\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"106.1\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 4,
+       "check": "9 * 2 * Fraction(40 * 2, 360)",
+       "hints": [
+        "弧 AB に対する中心角は何度かな。",
+        "弧 AB は、円周の何分の 1 かな。",
+        "円周は（18 × 円周率）cm だね。"
+       ],
+       "paths": [
+        [
+         "中心角は 80",
+         "80/360 = 2/9",
+         "18 の 2/9 は 4"
+        ]
+       ],
+       "note": "円周角の 40 をそのまま使って 40/360 とすると 2 になる。弧は中心角で決まる。"
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠BOC = 70° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"143.5\" y2=\"35.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"188.9\" y1=\"100\" x2=\"143.5\" y2=\"35.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"143.5\" y2=\"35.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M134 100 A14 14 0 0 0 124.8 86.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.3\" y=\"89.6\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M73.1 100 A22 22 0 0 0 69.2 87.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83.6\" y=\"94.3\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"147.3\" y=\"29.5\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 35,
+       "check": "70 // 2",
+       "hints": [
+        "∠BAC は、どの弧に対する円周角かな。",
+        "弧 BC に対する中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠x は弧 BC に対する円周角",
+         "70 ÷ 2 = 35"
+        ],
+        [
+         "OA = OC で ∠OCA = ∠x",
+         "外角 70 = 2∠x",
+         35
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "円周を 9 等分する点を、順に A〜I とします。AD と BG の交点を P とするとき、∠APB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"67.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"32.8\" x2=\"178.2\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163.2\" y1=\"48.5\" x2=\"61.8\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M149.4 60.1 A12 12 0 0 0 134.2 57.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.4\" y=\"48.7\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"120\" y=\"26.3\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"170.3\" y=\"44.6\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"197\" y=\"91\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"187.7\" y=\"143.7\" font-size=\"13\" text-anchor=\"middle\">D</text><text x=\"146.7\" y=\"178\" font-size=\"13\" text-anchor=\"middle\">E</text><text x=\"93.3\" y=\"178\" font-size=\"13\" text-anchor=\"middle\">F</text><text x=\"52.3\" y=\"143.7\" font-size=\"13\" text-anchor=\"middle\">G</text><text x=\"43\" y=\"91\" font-size=\"13\" text-anchor=\"middle\">H</text><text x=\"69.7\" y=\"44.6\" font-size=\"13\" text-anchor=\"middle\">I</text><text x=\"146.1\" y=\"63\" font-size=\"13\" text-anchor=\"middle\">P</text><circle cx=\"120\" cy=\"32.8\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"163.2\" cy=\"48.5\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"186.2\" cy=\"88.3\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"178.2\" cy=\"133.6\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"143\" cy=\"163.1\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"97\" cy=\"163.1\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"61.8\" cy=\"133.6\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"53.8\" cy=\"88.3\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"76.8\" cy=\"48.5\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 80,
+       "check": "(360 // 9 * 1 + 360 // 9 * 3) // 2",
+       "hints": [
+        "となり合う 2 点の間の弧に対する円周角は何度かな。",
+        "AG を結ぶと、∠APB は △APG の外角になるね。",
+        "∠BGA と ∠DAG は、それぞれ何こ分の弧に対する円周角かな。"
+       ],
+       "paths": [
+        [
+         "1 こ分の弧の円周角は 40 ÷ 2 = 20",
+         "∠BGA は弧 AB（1 こ分）で 20",
+         "∠DAG は弧 DG（3 こ分）で 60",
+         "∠APB = 20 + 60 = 80"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "O は円の中心で、∠ACB = 64° です。∠AOB は何度ですか。",
+       "answer": 128,
+       "check": "64 * 2",
+       "hints": [
+        "同じ弧 AB に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "64° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "64 × 2 = 128"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心で、∠OAB = 35° です。C は長い方の弧 AB の上にあります。∠ACB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"176.4\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"63.6\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"176.4\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63.6\" y1=\"139.5\" x2=\"176.4\" y2=\"139.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M85.6 139.5 A22 22 0 0 0 81.6 126.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96\" y=\"133.8\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M122.3 47.4 A18 18 0 0 0 138.8 48.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.3\" y=\"66.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"54.6\" y=\"150.4\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"185.4\" y=\"150.4\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"133.9\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 55,
+       "check": "(180 - 35 * 2) // 2",
+       "hints": [
+        "OA = OB なので、∠OBA は何度かな。",
+        "∠AOB を求めよう。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 180 − 35 − 35 = 110",
+         "110 ÷ 2 = 55"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠ADB = 38° のとき、∠ACB は何度ですか。C と D は、長い方の弧 AB の上にあります。",
+       "answer": 38,
+       "check": "38",
+       "hints": [
+        "∠ADB と ∠ACB は、どの弧に対する円周角かな。",
+        "同じ弧に対する円周角だね。",
+        "同じ弧に対する円周角は等しいね。"
+       ],
+       "paths": [
+        [
+         "どちらも弧 AB",
+         "38°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"53.5\" y2=\"117.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"31.4\" x2=\"186.5\" y2=\"117.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"53.5\" y2=\"117.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"186.5\" y2=\"117.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M103.7 46.2 A18 18 0 0 0 125.6 45.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"115.3\" y=\"65.9\" font-size=\"13\" text-anchor=\"middle\">x</text><path d=\"M106.5 103.6 A14 14 0 0 0 133.5 103.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">150°</text><text x=\"42.9\" y=\"125.2\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"197.1\" y=\"125.2\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"113\" y=\"25\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 75,
+       "check": "150 // 2",
+       "hints": [
+        "∠x は弧 AB に対する円周角だね。",
+        "中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "150 ÷ 2 = 75"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠ACB = 42° のとき、∠AOB は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"73.9\" y2=\"151.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"132\" y1=\"32.2\" x2=\"166.1\" y2=\"151.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"73.9\" y2=\"151.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"166.1\" y2=\"151.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M124.1 48.4 A18 18 0 0 0 136.9 49.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"129.3\" y=\"66.6\" font-size=\"13\" text-anchor=\"middle\">42°</text><path d=\"M110.6 110.4 A14 14 0 0 0 129.4 110.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"130.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"66.6\" y=\"163.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"173.4\" y=\"163.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"133.9\" y=\"25.9\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 84,
+       "check": "42 * 2",
+       "hints": [
+        "2 つの角は、同じ弧 AB に対する角だね。",
+        "中心角は円周角の何倍かな。",
+        "42° を 2 倍しよう。"
+       ],
+       "paths": [
+        [
+         "42 × 2 = 84"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠APB = 33° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"82.5\" y2=\"157.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"154.4\" y1=\"40.4\" x2=\"157.5\" y2=\"157.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.7\" y1=\"47.3\" x2=\"82.5\" y2=\"157.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"75.7\" y1=\"47.3\" x2=\"157.5\" y2=\"157.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M145 55.7 A18 18 0 0 0 154.9 58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"73.9\" font-size=\"13\" text-anchor=\"middle\">33°</text><path d=\"M76.8 65.2 A18 18 0 0 0 86.4 61.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"86\" y=\"80\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"76.5\" y=\"171.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"163.5\" y=\"171.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"159.9\" y=\"35.4\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"68.7\" y=\"43.4\" font-size=\"13\" text-anchor=\"middle\">Q</text></svg>",
+       "answer": 33,
+       "check": "33",
+       "hints": [
+        "2 つの角は、どの弧に対する円周角かな。",
+        "同じ弧に対する円周角だね。",
+        "同じ弧に対する円周角は等しいね。"
+       ],
+       "paths": [
+        [
+         "どちらも弧 AB",
+         "33°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。∠PAB = 26° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51.1\" y1=\"100\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.4\" y1=\"45.7\" x2=\"51.1\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"162.4\" y1=\"45.7\" x2=\"188.9\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M73.1 100 A22 22 0 0 0 70.9 90.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"84.3\" y=\"96.9\" font-size=\"13\" text-anchor=\"middle\">26°</text><path d=\"M180.1 82 A20 20 0 0 0 168.9 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"161.7\" y=\"87.6\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"40.1\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"199.9\" y=\"104.5\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"169.2\" y=\"41.6\" font-size=\"13\" text-anchor=\"middle\">P</text><text x=\"120\" y=\"115.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 64,
+       "check": "180 - 90 - 26",
+       "hints": [
+        "∠APB は何度かな。",
+        "半円の弧に対する円周角だね。",
+        "内角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "∠APB = 90°",
+         "180 − 90 − 26 = 64"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。",
+       "answer": "1/4",
+       "check": "Fraction(45 * 2, 360)",
+       "hints": [
+        "弧 AB に対する中心角は何度かな。",
+        "中心角は円周角の 2 倍だね。",
+        "中心角 ÷ 360 を約分しよう。"
+       ],
+       "paths": [
+        [
+         "中心角は 90",
+         "90/360 = 1/4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "∠ADB = ∠ACB = 40°、∠CAD = 28° です。∠x（∠CBD）は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 190\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"63\" y1=\"129.8\" x2=\"142.5\" y2=\"158.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.5\" y1=\"158.7\" x2=\"177\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"177\" y1=\"64\" x2=\"124.6\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"124.6\" y1=\"31.3\" x2=\"63\" y2=\"129.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63\" y1=\"129.8\" x2=\"177\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.5\" y1=\"158.7\" x2=\"124.6\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M115 46.6 A18 18 0 0 0 127.1 49.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.4\" y=\"65.2\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M161.4 73 A18 18 0 0 0 170.8 80.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157.7\" y=\"91.5\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M83.8 117.8 A24 24 0 0 0 75.8 109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.9\" y=\"109.3\" font-size=\"13\" text-anchor=\"middle\">28°</text><path d=\"M150.7 136.2 A24 24 0 0 0 139.2 134.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.3\" y=\"127.5\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"53.5\" y=\"139.8\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"146.3\" y=\"173.6\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"186.5\" y=\"63.1\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"125.4\" y=\"24.9\" font-size=\"13\" text-anchor=\"middle\">D</text></svg>",
+       "answer": 28,
+       "check": "28 if 40 == 40 else 0",
+       "hints": [
+        "∠ADB = ∠ACB で、C と D は AB について同じがわだね。",
+        "4 点 A、B、C、D は、どうなっているかな。",
+        "∠CAD と ∠CBD は、どの弧に対する円周角かな。"
+       ],
+       "paths": [
+        [
+         "円周角の定理の逆で 4 点は 1 つの円周の上",
+         "∠x と ∠CAD は弧 CD に対する円周角",
+         "28°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠ACB = 70° のとき、∠x は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 200\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"100\" r=\"68.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"55.3\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"31.1\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"55.3\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"100\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"55.3\" y1=\"123.5\" x2=\"184.7\" y2=\"123.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M109.7 45.9 A18 18 0 0 0 130.3 45.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"65.7\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M77.3 123.5 A22 22 0 0 0 76 116\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.8\" y=\"122.2\" font-size=\"13\" text-anchor=\"middle\">x</text><text x=\"45\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">A</text><text x=\"195\" y=\"131.9\" font-size=\"13\" text-anchor=\"middle\">B</text><text x=\"120\" y=\"24.7\" font-size=\"13\" text-anchor=\"middle\">C</text><text x=\"120\" y=\"93.5\" font-size=\"13\" text-anchor=\"middle\">O</text><circle cx=\"120\" cy=\"100\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 20,
+       "check": "(180 - 70 * 2) // 2",
+       "hints": [
+        "まず、∠AOB を求めよう。",
+        "OA = OB なので、△OAB は二等辺三角形だね。",
+        "底角は等しいね。"
+       ],
+       "paths": [
+        [
+         "∠AOB = 140",
+         "(180 − 140) ÷ 2 = 20"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "O は円の中心です。∠AOB = 120° のとき、∠APB（P は長い方の弧の上）は何度ですか。",
+       "answer": 60,
+       "check": "120 // 2",
+       "hints": [
+        "∠APB は弧 AB に対する円周角だね。",
+        "中心角は何度かな。",
+        "半分にしよう。"
+       ],
+       "paths": [
+        [
+         "120 ÷ 2 = 60"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "AB は円 O の直径です。円周の上の点 P について、∠APB は何度ですか。",
+       "answer": 90,
+       "check": "180 // 2",
+       "hints": [
+        "弧 AB は、円のどれだけかな。",
+        "半円の弧に対する中心角は何度かな。",
+        "円周角は中心角の半分だね。"
+       ],
+       "paths": [
+        [
+         "中心角 180°",
+         "180 ÷ 2 = 90"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "弧 AB と弧 CD の長さは等しく、∠CQD = 34° です。弧 AB に対する円周角 ∠APB は何度ですか。",
+       "answer": 34,
+       "check": "34",
+       "hints": [
+        "等しい弧に対する円周角はどうなるかな。",
+        "∠APB と ∠CQD をくらべよう。",
+        "等しい弧なら、円周角も等しいね。"
+       ],
+       "paths": [
+        [
+         "等しい弧の円周角は等しい",
+         "34°"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -207887,7 +214066,7 @@ window.ROADMAP = {
     12.2
    ],
    "comb": {
-    "b": 0.304,
+    "b": 0.278,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -209165,7 +215344,7 @@ window.ROADMAP = {
     14.3
    ],
    "comb": {
-    "b": 0.455,
+    "b": 0.427,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -210998,7 +217177,7 @@ window.ROADMAP = {
     14.12
    ],
    "comb": {
-    "b": 0.405,
+    "b": 0.372,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -212202,7 +218381,7 @@ window.ROADMAP = {
     22.82
    ],
    "comb": {
-    "b": 0.196,
+    "b": 0.179,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -216342,7 +222521,7 @@ window.ROADMAP = {
     8.17
    ],
    "comb": {
-    "b": 0.136,
+    "b": 0.135,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -217534,7 +223713,7 @@ window.ROADMAP = {
     2.55
    ],
    "comb": {
-    "b": 0.216,
+    "b": 0.218,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -223724,7 +229903,7 @@ window.ROADMAP = {
     -24.2
    ],
    "comb": {
-    "b": 0.349,
+    "b": 0.35,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -224458,8 +230637,8 @@ window.ROADMAP = {
     15.65
    ],
    "comb": {
-    "b": 0.652,
-    "r": 1.27,
+    "b": 0.651,
+    "r": 1.31,
     "rg": [
      "bunshi-saibo",
      "houteishiki",
@@ -226858,7 +233037,7 @@ window.ROADMAP = {
     11.68
    ],
    "comb": {
-    "b": 0.352,
+    "b": 0.347,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -227952,7 +234131,7 @@ window.ROADMAP = {
     3.59
    ],
    "comb": {
-    "b": 0.184,
+    "b": 0.186,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -228447,7 +234626,7 @@ window.ROADMAP = {
     21.84
    ],
    "comb": {
-    "b": 0.228,
+    "b": 0.223,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -228507,7 +234686,7 @@ window.ROADMAP = {
     19.84
    ],
    "comb": {
-    "b": 0.337,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -228980,7 +235159,7 @@ window.ROADMAP = {
     26.7
    ],
    "comb": {
-    "b": 0.363,
+    "b": 0.352,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -229101,7 +235280,7 @@ window.ROADMAP = {
    ],
    "comb": {
     "b": 0.376,
-    "r": 0.07,
+    "r": 0.11,
     "rg": [
      "houteishiki",
      "programming"
@@ -230851,7 +237030,7 @@ window.ROADMAP = {
     6.19
    ],
    "comb": {
-    "b": 0.286,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -231216,7 +237395,7 @@ window.ROADMAP = {
     -18.08
    ],
    "comb": {
-    "b": 0.204,
+    "b": 0.206,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -233397,7 +239576,7 @@ window.ROADMAP = {
     4.09
    ],
    "comb": {
-    "b": 0.448,
+    "b": 0.449,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -233751,7 +239930,7 @@ window.ROADMAP = {
     16.44
    ],
    "comb": {
-    "b": 0.475,
+    "b": 0.476,
     "r": 0.0,
     "rg": [
      "chiso",
@@ -235116,7 +241295,7 @@ window.ROADMAP = {
     -7.14
    ],
    "comb": {
-    "b": 0.108,
+    "b": 0.11,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -235723,7 +241902,7 @@ window.ROADMAP = {
     -8.98
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.36,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -235926,7 +242105,7 @@ window.ROADMAP = {
     2.7
    ],
    "comb": {
-    "b": 0.123,
+    "b": 0.122,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -236581,7 +242760,7 @@ window.ROADMAP = {
     4.92
    ],
    "comb": {
-    "b": 0.4,
+    "b": 0.393,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -236759,7 +242938,7 @@ window.ROADMAP = {
     17.38
    ],
    "comb": {
-    "b": 0.276,
+    "b": 0.253,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -236811,7 +242990,7 @@ window.ROADMAP = {
     17.63
    ],
    "comb": {
-    "b": 0.302,
+    "b": 0.277,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -236927,7 +243106,7 @@ window.ROADMAP = {
     18.51
    ],
    "comb": {
-    "b": 0.385,
+    "b": 0.377,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -237038,7 +243217,7 @@ window.ROADMAP = {
     19.57
    ],
    "comb": {
-    "b": 0.306,
+    "b": 0.288,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -237451,7 +243630,7 @@ window.ROADMAP = {
     19.12
    ],
    "comb": {
-    "b": 0.269,
+    "b": 0.253,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -244140,7 +250319,7 @@ window.ROADMAP = {
     22.97
    ],
    "comb": {
-    "b": 0.368,
+    "b": 0.357,
     "r": 0.0,
     "rg": [
      "haichi",
