@@ -18,7 +18,9 @@ import space  # noqa: E402  知の宇宙の位置（D-037）
 
 ROOT = Path(__file__).resolve().parent.parent
 ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
-PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ")
+PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ", "離")
+# 難しさの種類（D-047）：挑戦と離の問題に付ける。総動員は合わせる駅（uses）を書く
+RI_KINDS = ("総動員", "数", "道筋", "手数", "読み取り")
 GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の頂点", "第一線の仕事", "未解決問題")  # 目標の種類。画面ではこの順にまとめる（2.12）
 # 研究の頂点と第一線の仕事の分野。どちらも分野ごとに 1〜2（研究の頂点はその分野の国際的な最高の賞、2.12、D-032）
 GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "農学と獣医学", "心理学", "経済学")
@@ -250,15 +252,34 @@ def check(data, problems):
             errors.append(f"{uid}: 日は 1 から順に並べる")
         if len(days) > len(plan):
             errors.append(f"{uid}: 地図の日数より多い")
-        for d in days:
+        # 腕だめし（離、D-047）は ri に置く。日の問題と同じ決まりで確かめる
+        for d in [*days, {"day": "腕だめし", "items": doc.get("ri") or [], "ri": True}]:
             pool = [(f"{i} 問目", it) for i, it in enumerate(d.get("items", []), 1)]
             pool += [(f"予備 {i} 問目", it) for i, it in enumerate(d.get("extra", []), 1)]
             for i, item in pool:
-                where = f"{uid} {d.get('day')} 日目 {i}"
+                where = f"{uid} 腕だめし {i}" if d.get("ri") else f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
                 if "time" in item and not (isinstance(item["time"], int) and 10 <= item["time"] <= 3600):
                     errors.append(f"{where}: time は目安の秒（10〜3600 の整数）")
+                if bool(d.get("ri")) != (item.get("part") == "離"):
+                    errors.append(f"{where}: 離の問題は ri に、ri には離の問題だけを置く")
+                bad = [k for k in item.get("kinds") or [] if k not in RI_KINDS]
+                if bad:
+                    errors.append(f"{where}: kinds は {'、'.join(RI_KINDS)} から選ぶ（{'、'.join(bad)}）")
+                if item.get("part") == "離" and not item.get("kinds"):
+                    errors.append(f"{where}: 離の問題には kinds（難しさの種類）が要る")
+                if item.get("kinds") and item.get("part") not in ("挑戦", "離"):
+                    errors.append(f"{where}: kinds は挑戦と離の問題だけに付ける")
+                if item.get("uses") and item.get("part") != "離":
+                    errors.append(f"{where}: uses は離の問題だけに付ける")
+                if "総動員" in (item.get("kinds") or []) and not item.get("uses"):
+                    errors.append(f"{where}: 総動員の問題には uses（合わせる駅）が要る")
+                for x in item.get("uses") or []:
+                    if x not in units or x == uid:
+                        errors.append(f"{where}: uses の {x} が地図にないか、この単元そのもの")
+                    elif units[x][1] > units[uid][1]:
+                        errors.append(f"{where}: uses の {x} は段 {units[x][1]} で、この単元（段 {units[uid][1]}）より後ろ")
                 for tid in item.get("type") or []:
                     if tid not in units:
                         errors.append(f"{where}: 組み合わせの型の単元 {tid} が地図にない")
@@ -405,8 +426,9 @@ def build(data, problems):
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
         ver = mark_ids(u["id"], days)
+        ri = [dict(it, qid=qid(u["id"], it)) for it in doc.get("ri") or []]
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}),
+                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}), **({"ri": ri} if ri else {}),
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),

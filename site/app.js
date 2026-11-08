@@ -123,6 +123,8 @@
     if (res.dunno) x.d = (x.d || 0) + 1;
     if (res.over) x.o = (x.o || 0) + 1;
     if (res.ms) x.t = Math.round(res.ms / 1000);
+    // 腕だめしの星（D-047）：解けた ★、ヒントなし ★★、一度に目安の内 ★★★。いちばんよいものを残す
+    if (it.part === '離' && !res.skipped) x.star = Math.max(x.star || 0, res.first ? 3 : !res.hints && !res.dunno ? 2 : 1);
     x.last = new Date().toLocaleDateString('sv-SE');
     // 日の記録（D-046）：解いた問題、一度にできた問題、かかった秒、終えた日の数。400 日分まで残す
     const L = progress.log || (progress.log = {}), g = L[x.last] || (L[x.last] = { n: 0, ok: 0, sec: 0, days: 0 });
@@ -248,7 +250,9 @@
     const ready = R.units.filter(u => status(u.id) === 'ready' && inGoal(u.id)).sort(order)
       .slice(0, Math.max(0, 4 - doing.length)).map(u => ({ u, href: `#/day/${u.id}/1`, mode: 'はじめる', label: '1 日目' }));
     const asks = (progress.asks || []).filter(a => UNITS[a.u]).map(a => ({ u: UNITS[a.u], href: `#/look/${a.u}/${a.day}`, mode: 'ふりかえり', label: `${a.day} 日目` }));
-    return [...asks, ...due, ...doing, ...ready];
+    const ri = R.units.filter(u => riOpen(u).some(it => !riStar(it))).sort(order).slice(0, 2)
+      .map(u => ({ u, href: `#/ri/${u.id}`, mode: '腕だめし', label: `★ ${riStars(u)} / ${u.ri.length * 3}` }));
+    return [...asks, ...due, ...doing, ...ready, ...ri];
   }
   // 全体の見込み（R-35）：残りの基本量 × 流れごとの係数 ＋ 復習の量
   function forecast(only = inGoal) {
@@ -282,6 +286,7 @@
       return { name: 'day', type: p[0], id: p[1], day: n };
     }
     if (p[0] === 'review' && UNITS[p[1]]) return { name: 'day', type: 'review', id: p[1], day: UNITS[p[1]].days.length };
+    if (p[0] === 'ri' && UNITS[p[1]]) return { name: 'day', type: 'ri', id: p[1], day: UNITS[p[1]].days.length };
     if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
@@ -294,7 +299,7 @@
     const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
     if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
-    if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'look' ? 'ふりかえり' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
+    if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'look' ? 'ふりかえり' : r.type === 'ri' ? '腕だめし' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
     return parts.map(([href, t], i) => i === parts.length - 1
       ? `<span class="here">${esc(t)}</span>`
       : `<a href="${href}">${esc(t)}</a><span class="sep">›</span>`).join('');
@@ -370,13 +375,14 @@
         <span class="ay-days">${u.days.map((_, i) => `<i class="${(r.days || {})[i + 1] ? 'on' : (r.skip || []).includes(i + 1) ? 'skip' : i + 1 === s.day ? 'nx' : ''}"></i>`).join('')}</span>
         <span class="muted">${Math.min(got, u.days.length)} / ${u.days.length} 日${status(u.id) === 'review' ? '・復習' : s.type === 'extra' ? '・おさらい' : ''}</span></a>`;
     }).join('');
-    const min = Math.round(t.sec / 60);
+    const min = Math.round(t.sec / 60), stars = R.units.reduce((a, u) => a + riStars(u), 0);
     return `<section class="ayumi">
       <div class="ay-head"><h2>あゆみ</h2><span class="muted">${esc(name)}</span></div>
       <div class="ay-grid">
         <div class="ay-card ay-today"><span class="k">きょう</span>
           <span class="ay-big"><b>${t.n}</b><span class="u">問</span></span>
-          <span class="muted">${t.n ? `一度にできた ${t.ok} 問${min ? `・${min} 分` : ''}${t.days ? `・${t.days} 日分` : ''}` : 'まだ はじめていません'}</span></div>
+          <span class="muted">${t.n ? `一度にできた ${t.ok} 問${min ? `・${min} 分` : ''}${t.days ? `・${t.days} 日分` : ''}` : 'まだ はじめていません'}</span>
+          ${stars ? `<span class="muted">腕だめし <span class="stars">★</span> ${stars}</span>` : ''}</div>
         <div class="ay-card ay-week"><span class="k">この 7 日${streak > 1 ? `<span class="streak">${streak} 日つづけて</span>` : ''}</span>
           <span class="ay-bars">${bars}</span></div>
         ${goal}
@@ -1068,7 +1074,45 @@
         <span class="go">${go}</span>
       </a>`;
     }).join('')}</div>
+    ${riHtml(id)}
     ${problemsHtml(id)}`;
+  }
+
+  // ---- 難しさの 3 段と腕だめし（D-047） ----
+  // 守は型をなぞる（見本、思い出す、今日、わけ）、破は型を崩して使う（挑戦）、離は型を離れる（腕だめし）。
+  // 腕だめしは単元のファイルの ri に置き、単元が済になってから開く。合わせる駅（uses）がすべて済の問題から挑める。済の判定には入れない
+  const TIER = { 見本: '守', 思い出す: '守', 今日: '守', わけ: '守', 挑戦: '破', 離: '離' };
+  const TIER_NOTE = { 守: '守：型をなぞる', 破: '破：型を崩して使う', 離: '離：型を離れる' };
+  const KIND_NAME = { 総動員: ['いろいろ つかう', 'いくつもの駅を合わせる'], 数: ['かずが ややこしい', '数がややこしい'],
+    道筋: ['みちが みえにくい', '道筋が見えにくい'], 手数: ['てかずが おおい', '手数が多い'], 読み取り: ['よみとりが いる', '条件を読み取る'] };
+  const kindName = (k, small) => (KIND_NAME[k] || [k, k])[small ? 0 : 1];
+  const tierHtml = it => {
+    const t = TIER[it.part];
+    return t ? `<i class="tier t-${{ 守: 'shu', 破: 'ha', 離: 'ri' }[t]}" title="${TIER_NOTE[t]}">${t}</i>` : '';
+  };
+  const kindsHtml = (it, small) => (it.kinds || []).length
+    ? `<div class="kinds">${it.kinds.map(k => `<span class="kind">${esc(kindName(k, small))}</span>`).join('')}</div>` : '';
+  const riStar = it => (progress.items[it.qid] || {}).star || 0;
+  const riStars = u => (u.ri || []).reduce((a, it) => a + riStar(it), 0);
+  const riOpen = u => isDone(u.id) ? (u.ri || []).filter(it => (it.uses || []).every(isDone)) : [];
+  // 星の少ない問題から 3 問
+  const riPick = u => riOpen(u).map((it, i) => [it, i]).sort((a, b) => riStar(a[0]) - riStar(b[0]) || a[1] - b[1]).slice(0, 3).map(x => x[0]);
+  const starsHtml = n => `<span class="stars" aria-label="星 ${n}">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
+  function riHtml(id) {
+    const u = UNITS[id], its = u.ri || [];
+    if (!its.length) return '';
+    const done = isDone(id), open = riOpen(u).length;
+    const cards = its.map((it, i) => {
+      const lock = !done || (it.uses || []).some(x => !isDone(x));
+      return `<div class="ri-card${lock ? ' lock' : ''}"><span class="ri-n">問 ${i + 1}${lock ? '・まだ開いていない' : ''}</span>${starsHtml(riStar(it))}
+        ${kindsHtml(it, false)}
+        ${(it.uses || []).length ? `<div class="row">合わせる駅 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`;
+    }).join('');
+    return `<section class="ri"><h2 class="section-title">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
+      <p class="muted">${done ? '型を離れた問題です。いくつもの駅を合わせる、数がややこしい、道筋が見えにくい問題があります。済の判定には入れません。星は、解けた ★、ヒントなし ★★、一度に目安の時間の内 ★★★ です。'
+        : 'この駅が済になると開きます。合わせる駅のある問題は、その駅も済になると開きます。'}</p>
+      <div class="ri-list">${cards}</div>
+      ${open ? `<div class="actions"><a class="pill solid" href="#/ri/${id}">腕だめしをする</a></div>` : ''}</section>`;
   }
 
   // ---- 目標：単元を組み合わせた結果として届く場所 ----
@@ -1147,6 +1191,7 @@
     if (type === 'extra') items = d.extra && d.extra.length ? d.extra : items.filter(x => x.part !== '見本');
     if (type === 'review') items = pickReview(u);
     if (type === 'look') items = lookItems(id, n);
+    if (type === 'ri') items = riPick(u);
     session = { id, n, type, items, idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false };
     return `<section class="play" id="play" style="${lc(u.lane)}"></section>`;
   }
@@ -1198,7 +1243,7 @@
   // ---- 目安の時間（D-045） ----
   // 段の 1 日の分（stages の minutes）の 8 割を、問題の種類の重みで割り振る（30 秒きざみ）。問題に time（秒）を書けば、それにする。
   // 目安をすぎても解き続けられる。ただし、そうしてできた問題は「一度にできた」に数えない（確認の 8 割、おさらい、練習をとばす判定）
-  const TIME_W = { 思い出す: 1, 今日: 1.5, 挑戦: 3, わけ: 2 };
+  const TIME_W = { 思い出す: 1, 今日: 1.5, 挑戦: 3, わけ: 2, 離: 6 };
   const STAGE_TIME = Object.fromEntries(R.stages.map(st => {
     const reason = (st.reason || [1, 1]).reduce((a, b) => a + b, 0) / 2;
     const w = Object.entries(st.day || {}).reduce((a, [p, k]) => a + k * (TIME_W[p] || 1), 0) + reason * TIME_W['わけ'];
@@ -1272,6 +1317,7 @@
     const u = UNITS[s.id], w = new Map(), alt = u.alt || {};
     const add = (id, x) => { if (UNITS[id] && !w.has(id)) w.set(id, x); };
     if (why !== 'mid') add(u.id, 1.3);
+    ((s.items[s.idx] || {}).uses || []).forEach(x => add(x, 1.1));
     u.needs.forEach(n => [n, ...(alt[n] || [])].forEach(x => add(x, 1)));
     u.needs.forEach(n => (UNITS[n] ? UNITS[n].needs : []).forEach(x => add(x, .7)));
     add(u.id, .8);
@@ -1367,8 +1413,8 @@
     if (!s.run && !s.solved && s.idx < s.items.length) { s.run = true; s.el = 0; s.paused = false; s.t0 = document.hidden ? 0 : Date.now(); }
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
-        <h2 style="margin:18px 0 8px">${esc(d.aim || R.kinds[d.kind])}</h2>
-        <p>この日の問題は、まだ作っていません。</p>
+        <h2 style="margin:18px 0 8px">${esc(s.type === 'ri' ? '腕だめし（離）' : d.aim || R.kinds[d.kind])}</h2>
+        <p>${s.type === 'ri' ? (u.ri ? 'この駅が済になると、腕だめしが開きます。' : 'この駅の腕だめしは、まだ作っていません。') : 'この日の問題は、まだ作っていません。'}</p>
         <div class="actions"><a class="pill" href="#/unit/${s.id}">単元へもどる</a></div></div>`;
       return;
     }
@@ -1417,7 +1463,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part)}</span><p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
     tick();
   }
   function submit(val) {
@@ -1448,6 +1494,18 @@
   }
   function drawFinish() {
     const s = session, u = UNITS[s.id], d = u.days[s.n - 1], el = $('#play');
+    if (s.type === 'ri') {
+      // 腕だめし：判定はしない。星を見せる
+      const res = s.results.filter(Boolean), got = res.map(x => x.skipped ? 0 : x.first ? 3 : !x.hints && !x.dunno ? 2 : 1);
+      Music.melody(res); s.melody = res;
+      el.innerHTML = `<article class="card finish"><span class="part">腕だめし${tierHtml({ part: '離' })}</span>
+        <h1>${got.length && got.every(x => x === 3) ? 'みごと！' : 'よく いどんだね！'}</h1>
+        <div class="ri-got">${got.map(starsHtml).join('')}</div>
+        <p class="muted">${esc(u.title)}の腕だめし ★ ${riStars(u)} / ${u.ri.length * 3}</p>
+        <div class="actions"><button class="pill" data-act="replay" type="button">もう一度きく</button>
+          <a class="pill" href="#/unit/${s.id}">単元へ</a><a class="pill solid" href="#/">地図へ</a></div></article>`;
+      return;
+    }
     if (s.type === 'look') {
       // ふりかえり：判定はしない。今日の課題から外し、もとの問題があればもどる
       const W = words(s.id);
