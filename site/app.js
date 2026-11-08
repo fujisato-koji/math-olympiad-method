@@ -142,12 +142,14 @@
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
   const prefs = Object.assign({ music: true, parent: false, goal: 'all' }, load(PREF, {}));
+  // 探索の画面の見方は前提のつながりだけにした（D-050）。前に「橋」を選んでいても前提で開く
+  prefs.mapComb = false;
   // 目標：網羅表が指す単元とその前提。'all' はすべての単元（大会のための単元も含む）
   const GOALS = R.goals || [];
   const GOAL_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.units)]));
   if (prefs.goal !== 'all' && !GOAL_SETS[prefs.goal]) prefs.goal = 'all';
   const inGoal = id => prefs.goal === 'all' || GOAL_SETS[prefs.goal].has(id);
-  // 選んで解く論題（選択科目）の駅：道のりには入らないが、関係図に薄く描く
+  // 選んで解く論題（選択科目）の単元：道のりには入らないが、関係図に薄く描く
   const CHOICE_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.choiceUnits || [])]));
   const inChoice = id => prefs.goal !== 'all' && CHOICE_SETS[prefs.goal].has(id);
   // 論題に届いた＝その論題を受け持つ単元がすべて済
@@ -178,7 +180,7 @@
     const c = u.comb;
     if (!c) return '';
     const rare = c.r >= 1 ? `<span class="pill rare" title="地図の中で、期待より少ない組（${esc(c.pr.map(r => REGION_NAME[r]).join(' × '))}）">珍しい組み合わせ</span>` : '';
-    const bridge = BRIDGES.has(u.id) ? '<a class="pill rare" href="#/comb">橋の駅</a>' : '';
+    const bridge = BRIDGES.has(u.id) ? '<a class="pill rare" href="#/comb">橋の単元</a>' : '';
     return `<div class="row comb">組み合わせ ${c.rg.map(r => `<span class="from">${esc(REGION_NAME[r] || r)}</span>`).join('<span class="x">×</span>')}
       <span class="comb-bar" title="組み合わせの広さ ${c.b}"><i style="width:${Math.round(100 * c.b / 0.7)}%"></i></span>${rare}${bridge}</div>`;
   }
@@ -197,7 +199,7 @@
   const FIELD_ORDER = R.goalFields || [], fieldOf = g => (FIELD_ORDER.indexOf(g.field) + 1) || 99;
   const goalsOf = k => GOALS.filter(g => g.kind === k).sort((a, b) => fieldOf(a) - fieldOf(b) || levelOf(a) - levelOf(b));
   const kindNow = () => KINDS.includes(prefs.goalKind) ? prefs.goalKind : ((GOALS.find(g => g.id === prefs.goal) || {}).kind || KINDS[0]);
-  // 近い目標：まだ届いていない目標のうち、論題の割合が高く、残りの駅が少ないもの。種類ごとに 1 つ
+  // 近い目標：まだ届いていない目標のうち、論題の割合が高く、残りの単元が少ないもの。種類ごとに 1 つ
   function nearGoals(n) {
     const st = new Map(GOALS.map(g => [g.id, goalStats(g)]));
     const left = g => st.get(g.id).units - st.get(g.id).done;
@@ -221,7 +223,7 @@
     const alt = UNITS[id].alt || {};
     return UNITS[id].needs.every(n => [n, ...(alt[n] || [])].some(isDone)) ? 'ready' : 'later';
   }
-  // 見せる状態（D-048）：済のうち、腕だめしをすべて解いた駅は「腕だめしまで」（ri）。
+  // 見せる状態（D-048）：済のうち、腕だめしをすべて解いた単元は「腕だめしまで」（ri）。
   // 進みは、途中なら日の割合（やった日ととばした日）、済なら腕だめしの解けた割合
   const riSolved = id => (UNITS[id].ri || []).filter(it => ((progress.items[it.qid] || {}).star || 0) > 0).length;
   function stateOf(id) {
@@ -340,7 +342,7 @@
     window.scrollTo(0, 0);
   }
 
-  // ---- あゆみ（D-046）：きょう、この 7 日、いまの駅、目標までの道のり。保護者の表示では、つまずきも ----
+  // ---- あゆみ（D-046）：きょう、この 7 日、いまの単元、目標までの道のり。保護者の表示では、つまずきも ----
   const WEEK = ['日', '月', '火', '水', '木', '金', '土'];
   // 日の記録。D-046 より前の日は、単元の日のまとめの日付から数える
   function dayLog(date) {
@@ -383,7 +385,7 @@
       goal = `<a class="ay-card ay-goal" href="#/goal/${g.id}">
         <span class="ring big" style="--p:${pd.pct}"><b>${pd.pct}<small>%</small></b></span>
         <span class="ay-goal-t"><span class="k">目標までの道のり</span><span class="g">${esc(g.name)}</span>
-          <span class="muted">日 ${pd.got} / ${pd.all}・駅 ${st.done} / ${st.units}・論題 ${st.got} / ${st.topics}・見込み 残り約 ${f.est} 日</span></span></a>`;
+          <span class="muted">日 ${pd.got} / ${pd.all}・単元 ${st.done} / ${st.units}・論題 ${st.got} / ${st.topics}・見込み 残り約 ${f.est} 日</span></span></a>`;
     }
     const doing = R.units.filter(u => ['doing', 'review'].includes(status(u.id))).sort(order).slice(0, 4).map(u => {
       const r = progress.units[u.id] || {}, s = nextStep(u.id), got = new Set([...Object.keys(r.days || {}).map(Number), ...(r.skip || [])]).size;
@@ -403,7 +405,7 @@
           <span class="ay-bars">${bars}</span></div>
         ${goal}
       </div>
-      ${doing ? `<div class="ay-units"><span class="k">いまの駅</span>${doing}</div>` : ''}
+      ${doing ? `<div class="ay-units"><span class="k">いまの単元</span>${doing}</div>` : ''}
       ${prefs.parent ? stumbleHtml(week) : ''}
     </section>`;
   }
@@ -438,11 +440,10 @@
       <div class="reach"><span class="k">近い目標</span>${near.list.map(([g, st]) =>
         `<a class="reach-item" href="#/goal/${g.id}"><span class="ring" style="--p:${st.pct}"></span>${esc(g.name)} ${st.pct}%<span class="muted">（論題 ${st.got} / ${st.topics}）</span></a>`).join('')}
         <span class="reach-item">届いた目標 ${near.reached} / ${GOALS.length}</span>
-        <span class="reach-item">古今東西の問題 ${solvable()} / ${PROBS.length} 問<span class="muted">（済んだ駅だけで組み合わせがそろう問題）</span></span></div>
+        <span class="reach-item" title="済んだ単元だけで組み合わせがそろう問題">古今東西の問題 ${solvable()} / ${PROBS.length} 問</span></div>
       <div class="gauge">
         <div><span class="k">基本</span><b>${f.base}</b><span class="u">日分</span></div>
-        <div><span class="k">いまの見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
-        <p class="muted">見込みは、できぐあいに合わせて毎日計算し直します。</p>
+        <div title="できぐあいに合わせて毎日計算し直します"><span class="k">いまの見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
       </div>
     </section>
     <section class="next">
@@ -452,7 +453,7 @@
           <span class="dot ${stateOf(o.u.id)}"></span>
           <span class="mode">${o.mode}・${esc(LANES[o.u.lane].name)}・${o.label}</span>
           <span class="t">${esc(o.u.title)}</span>
-        </a>`).join('') || '<p class="muted">すべての駅を通りました。</p>'}
+        </a>`).join('') || '<p class="muted">すべての単元を終えました。</p>'}
       </div>
     </section>
     <section class="goals">
@@ -465,7 +466,7 @@
             <span class="eyebrow">${g.field ? esc(g.field) + '・' : g.fields ? esc(g.fields.join('・')) + '・' : ''}${esc(g.level)}・${esc(g.region)}</span>
             <span class="goal-name">${esc(g.name)}</span>
             <span class="muted">${esc(g.note)}</span>
-            <span class="goal-nums">論題 ${st.got} / ${st.topics}・駅 ${st.done} / ${st.units}・見込み 残り約 ${f.est} 日</span>
+            <span class="goal-nums">論題 ${st.got} / ${st.topics}・単元 ${st.done} / ${st.units}・見込み 残り約 ${f.est} 日</span>
             <span class="goal-bar"><i style="width:${st.pct}%"></i></span>
           </a>`;
         }).join('')}</div>
@@ -531,10 +532,6 @@
         ${b('data-cos="goals"', 'stars', g ? '星座：' + g.name : '目標の星座', !!g)}
         ${g ? b('data-goal="all"', 'close', '星座をやめる') : ''}
         ${b('data-x="fields"', 'fields', '分野：' + grp[1], grp[0] !== 'all')}
-        <div class="xseg" role="group" aria-label="見方">
-          <button type="button" data-mapcomb="0" aria-pressed="${!prefs.mapComb}" title="前提のつながり">前提</button>
-          <button type="button" data-mapcomb="1" aria-pressed="${!!prefs.mapComb}" title="橋の星と、領域をまたぐ前提">橋</button>
-        </div>
         ${b('data-cos="home"', 'home', '全体')}
         <a class="xb" href="#/comb" title="組み合わせの層">${ICON.layer}<span>組み合わせの層</span></a>
         ${b('data-x="full"', 'full', '全画面')}
@@ -546,7 +543,7 @@
       <div class="cosmos-gl" id="cosmos-gl"></div>
       <div class="flat" id="flat"><div id="map" class="map${prefs.mapComb ? ' comb' : ''}"></div></div>
       <div class="cosmos-head">
-        <div class="cosmos-title"><div class="eyebrow">知の宇宙</div><p id="x-caption">${caption()}</p></div>
+        <div class="cosmos-title"><div class="eyebrow">知の宇宙</div></div>
         <input class="cosmos-q" id="cosmos-q" type="search" placeholder="星をさがす（光合成、フーリエ、確率…）" autocomplete="off" aria-label="星をさがす">
       </div>
       ${barHtml()}
@@ -558,14 +555,10 @@
       <button class="xdown" type="button" data-x="down">つぎのみちすじ ▾</button>
     </div>`;
   }
-  const caption = () => X.view === '3d'
-    ? `${R.units.length} の星。中心は数える・観る駅、外へ行くほど最前線、方角は分野。星を押すと、そこへ続く道が光ります。`
-    : `${R.units.length} の駅。横は理解の深さ、縦は領域、上の目盛りは考え方の水準。駅を押すと鎖が光り、もう一度押すと駅に入ります。`;
   function syncBar() {
     const nav = $('.xbar');
     if (nav) nav.outerHTML = barHtml();
     const c = $('#cosmos'); if (c) c.dataset.view = X.view;
-    const cap = $('#x-caption'); if (cap) cap.textContent = caption();
     const m = $('#map'); if (m) m.classList.toggle('comb', !!prefs.mapComb);
   }
   function setBarH() { const b = $('.bar'); if (b) document.documentElement.style.setProperty('--bar-h', b.offsetHeight + 'px'); }
@@ -735,7 +728,7 @@
       <div class="cc-meta">${STATUS_NAME[status(id)]}・${up.size} の星を通って届く・この先 ${down.size} の星へ開ける</div>
       ${u.comb ? `<div class="cc-meta">組み合わせ ${u.comb.rg.map(r => esc(REGION_NAME[r] || r)).join(' × ')}${BRIDGES.has(id) ? '　<b class="cc-bridge">橋の星</b>' : ''}</div>` : ''}
       <div class="cc-actions">
-        <a class="cpill solid" href="#/unit/${id}">駅をひらく</a>
+        <a class="cpill solid" href="#/unit/${id}">単元をひらく</a>
         <button class="cpill" type="button" data-cos="combine-from" data-id="${id}">これと組み合わせる</button>
         <button class="cpill" type="button" data-cos="close" aria-label="とじる">×</button>
       </div>`);
@@ -846,7 +839,6 @@
     const draw = () => {
       d.innerHTML = `
         <h2>目標を星座で見る</h2>
-        <p class="muted">目標を選ぶと、その目標に要る星だけが星座のように残ります。3D でも 2D でも同じです。</p>
         <div class="goal-pick">${KINDS.map(k => `<button class="pill kind" type="button" data-sheetkind="${esc(k)}" aria-pressed="${k === kind}">${esc(k)}<span class="n">${goalsOf(k).length}</span></button>`).join('')}</div>
         <div class="sheet-goals">${goalsOf(kind).map(g => `<button class="sheet-goal" type="button" data-sheetgoal="${g.id}" aria-pressed="${prefs.goal === g.id}">
           <span class="eyebrow">${g.field ? esc(g.field) + '・' : g.fields ? esc(g.fields.join('・')) + '・' : ''}${esc(g.level)}</span>
@@ -917,14 +909,14 @@
   function drawMap() {
     const host = $('#map');
     if (!host) return;
-    // 目標を選んでいるときは、その目標の駅と、その駅がある島だけで描き直す（D-015）
+    // 目標を選んでいるときは、その目標の単元と、その単元がある島だけで描き直す（D-015）
     const grp = group()[2];
     const shown = id => inGoal(id) || inChoice(id);
     const shownRegions = (R.regions || []).filter(grp).filter(rg => R.units.some(u => u.region === rg.id && shown(u.id)));
     const shownIds = new Set(shownRegions.map(r => r.id));
     const shownUnits = R.units.filter(u => shownIds.has(u.region) && shown(u.id));
     if (!shownUnits.length) {
-      host.innerHTML = `<p class="muted">${prefs.goal === 'all' ? 'この切り替えの駅はまだありません。' : 'この範囲には、選んでいる目標の駅がありません。範囲を「すべて」にすると見えます。'}</p>`;
+      host.innerHTML = `<p class="muted">${prefs.goal === 'all' ? 'この切り替えの単元はまだありません。' : 'この範囲には、選んでいる目標の単元がありません。範囲を「すべて」にすると見えます。'}</p>`;
       return;
     }
     const minD = Math.min(...shownUnits.map(u => DEPTH[u.id])), maxD = Math.max(...shownUnits.map(u => DEPTH[u.id]));
@@ -947,7 +939,7 @@
       y += h + 8;
     });
     const H = y + 6;
-    // 考え方の水準：描いている駅の深さの中央値を、水準ごとにおよその位置として上に置く
+    // 考え方の水準：描いている単元の深さの中央値を、水準ごとにおよその位置として上に置く
     const marks = (R.levels || []).map(s => {
       const ds = shownUnits.filter(u => u.level === s.id).map(u => DEPTH[u.id]).sort((a, b) => a - b);
       return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
@@ -967,17 +959,16 @@
     };
     svg += '<g class="edges">' + R.units.flatMap(u => [...u.needs.map(n => edge(n, u, 'need')),
       ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
-    svg += '<g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
       return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
-    }).join('') + '</g></svg>';
+    }).join('') + '</g><g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g></svg>';
     host.innerHTML = svg;
     POS2D = pos;
     apply2D();
   }
 
-  // 駅の状態の飾り（D-048）：途中は日の割合の弧、済は閉じた輪と腕だめしの金の弧、腕だめしまでは金の光と輪
+  // 単元の状態の飾り（D-048）：途中は日の割合の弧、済は閉じた輪と腕だめしの金の弧、腕だめしまでは金の光と輪
   const arcSvg = (x, y, r, k, cls) => `<circle class="${cls}" cx="${x}" cy="${y}" r="${r}" pathLength="100" stroke-dasharray="${(k * 100).toFixed(1)} 100" transform="rotate(-90 ${x} ${y})"/>`;
   function sparkPath(x, y, R, r) {
     let d = '';
@@ -987,17 +978,27 @@
     }
     return d + 'Z';
   }
+  // 2D では丸の縁と中だけに描く（縦の間隔 18 に収める、D-050）：途中は中抜きの縁にやった日の割合の弧、
+  // 済は塗った丸の縁に腕だめしの解けた割合の金の弧、腕だめしまでは金の丸に白い星
   function decoSvg(u, p) {
     if (!p) return '';
     const s = stateOf(u.id), k = progOf(u.id), [x, y] = p;
     const head = `<g class="dc ${s}${inGoal(u.id) || inChoice(u.id) ? '' : ' off'}" data-d="${u.id}" style="${lc(u.lane)}">`;
-    if (s === 'doing' || s === 'review') return `${head}<circle class="trk" cx="${x}" cy="${y}" r="10.5"/>${arcSvg(x, y, 10.5, k, 'arc')}</g>`;
-    if (s === 'done') return `${head}<circle class="ring" cx="${x}" cy="${y}" r="10.5"/>${k > 0 ? arcSvg(x, y, 14, k, 'garc') : ''}</g>`;
-    if (s === 'ri') return `${head}<path class="spark" d="${sparkPath(x, y, 19, 3)}"/><circle class="gring" cx="${x}" cy="${y}" r="10.5"/></g>`;
+    if ((s === 'doing' || s === 'review') && k > 0) return `${head}${arcSvg(x, y, 6, k, 'arc')}</g>`;
+    if (s === 'done' && k > 0) return `${head}${arcSvg(x, y, 6, k, 'garc')}</g>`;
+    if (s === 'ri') return `${head}<path class="spark" d="${sparkPath(x, y, 4.6, 1.5)}"/></g>`;
     return '';
   }
-  // 探索の画面の凡例（D-048）：星の状態の見分け方
+  // 探索の画面の凡例（D-048）：星の状態の見分け方。3D と 2D で絵が違うので両方を置き、見ている方だけ出す
   function legendHtml() {
+    const dot = (fill, stroke) => `<circle cx="12" cy="12" r="5.5" fill="${fill}" stroke="${stroke}" stroke-width="3"/>`;
+    const ic2 = {
+      later: dot('#0d1330', '#3d4f8a'),
+      ready: dot('#0d1330', '#9fb4ff'),
+      doing: dot('#0d1330', '#33457a') + '<circle cx="12" cy="12" r="5.5" fill="none" stroke="#86a6ff" stroke-width="3" stroke-linecap="round" pathLength="100" stroke-dasharray="55 100" transform="rotate(-90 12 12)"/>',
+      done: dot('#86a6ff', '#86a6ff'),
+      ri: dot('#f5c451', '#f0b429') + `<path d="${sparkPath(12, 12, 4.2, 1.4)}" fill="#fff"/>`,
+    };
     const ic = {
       later: '<circle cx="12" cy="12" r="4" fill="none" stroke="#8f9be0" stroke-opacity=".6" stroke-width="2"/>',
       ready: '<circle cx="12" cy="12" r="4.5" fill="none" stroke="#b9c6ff" stroke-width="2.4"/>',
@@ -1007,11 +1008,11 @@
     };
     const names = { later: 'まだ', ready: '次にできる', doing: '途中', done: '済', ri: '腕だめしまで' };
     return `<div class="xlegend" aria-label="星の状態">${Object.keys(names).map(k =>
-      `<span><svg viewBox="0 0 24 24" aria-hidden="true">${ic[k]}</svg>${names[k]}</span>`).join('')}</div>`;
+      `<span><svg class="i3" viewBox="0 0 24 24" aria-hidden="true">${ic[k]}</svg><svg class="i2" viewBox="0 0 24 24" aria-hidden="true">${ic2[k]}</svg>${names[k]}</span>`).join('')}</div>`;
   }
 
   // ---- 組み合わせの層（D-031、D-035） ----
-  // 地図のデータから出す 3 つ：橋の駅、単元の中で珍しい領域の組、古今東西の問題の中で少ない組・まだない組
+  // 地図のデータから出す 3 つ：橋の単元、単元の中で珍しい領域の組、古今東西の問題の中で少ない組・まだない組
   function viewComb() {
     const rn = r => esc(REGION_NAME[r] || r);
     const pair = r => `<span class="from">${rn(r.a)}</span><span class="x">×</span><span class="from">${rn(r.b)}</span>`;
@@ -1023,11 +1024,11 @@
       <div class="eyebrow">組み合わせの層</div>
       <h1>何と何を組み合わせるか</h1>
       <p>多くの単元は、ほかの領域の考えを組み合わせてできています。ここに並べるのは手で付けたものではなく、地図の前提のつながりと、古今東西の ${LAYER.problems} 問が使う単元から数えたものです。</p>
-      ${g ? `<p class="goal-banner">橋の駅は、目標「${esc(g.name)}」に要る駅だけです。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
+      ${g ? `<p class="goal-banner">橋の単元は、目標「${esc(g.name)}」に要る単元だけです。<button class="pill" type="button" data-goal="all">すべての単元を見る</button></p>` : ''}
     </section>
     <section class="comb-sec">
-      <h2>橋の駅 <span class="muted">${bridges.length}</span></h2>
-      <p class="muted">直接の前提が、遠い領域を広く組み合わせる駅（広さ ${LAYER.cut} 以上、上位 1 割）と、珍しい組み合わせの駅。</p>
+      <h2>橋の単元 <span class="muted">${bridges.length}</span></h2>
+      <p class="muted">直接の前提が、遠い領域を広く組み合わせる単元（広さ ${LAYER.cut} 以上、上位 1 割）と、珍しい組み合わせの単元。</p>
       <div class="station-list">${bridges.map(u => `<a class="station ${stateOf(u.id)}" href="#/unit/${u.id}" style="${lc(u.lane)}">
         <span class="dot ${stateOf(u.id)}"></span><span class="sid">${u.id}・水準 ${u.level}</span><span class="st">${esc(u.title)}</span>
         <span class="sub">${u.comb.rg.map(r => `<span class="from">${rn(r)}</span>`).join('')}</span></a>`).join('')}</div>
@@ -1053,14 +1054,14 @@
   }
 
   // ---- 考え方の水準のページ ----
-  // 水準ごとに、流れの帯の中へ駅を前提の浅い順に並べる。いま進めている・次にできる駅のある流れを開いておく
+  // 水準ごとに、流れの帯の中へ単元を前提の浅い順に並べる。いま進めている・次にできる単元のある流れを開いておく
   function viewLevel(n) {
     const s = THINK[n], g = GOALS.find(x => x.id === prefs.goal);
     const us = R.units.filter(u => u.level === n && inGoal(u.id)).sort(order);
     const lanes = LANE_ORDER.filter(l => us.some(u => u.lane === l)).map(l => {
       const ls = us.filter(u => u.lane === l), open = ls.some(u => ['doing', 'review', 'ready'].includes(status(u.id)));
       return `<details class="level-lane" style="${lc(l)}"${open ? ' open' : ''}>
-        <summary><b>${esc(LANES[l].name)}</b><span class="muted">${ls.filter(u => isDone(u.id)).length} / ${ls.length} 駅</span></summary>
+        <summary><b>${esc(LANES[l].name)}</b><span class="muted">${ls.filter(u => isDone(u.id)).length} / ${ls.length} 単元</span></summary>
         <div class="station-list">${ls.map(station).join('')}</div></details>`;
     }).join('');
     return `
@@ -1068,12 +1069,12 @@
       <div class="eyebrow">考え方の水準 ${n}</div>
       <h1>${esc(s.name)}</h1>
       <p>${esc(s.about)}。わけの示し方は ${circled(n)} ${esc(REASON[n])}。</p>
-      ${g ? `<p class="goal-banner">目標「${esc(g.name)}」に要る駅だけで組み替えています。<button class="pill" type="button" data-goal="all">すべての駅を見る</button></p>` : ''}
+      ${g ? `<p class="goal-banner">目標「${esc(g.name)}」の単元だけ<button class="pill" type="button" data-goal="all">すべて</button></p>` : ''}
     </section>
     <div class="legend">${['ri', 'done', 'doing', 'review', 'ready', 'later'].map(k =>
       `<span><span class="dot ${k}" style="${lc('N')}"></span>${STATUS_NAME[k]}</span>`).join('')}
       <span><span class="from" style="${lc('C')}">C-001</span>ほかの流れの前提</span></div>
-    ${us.length ? lanes : '<p class="empty">この目標では、この水準の駅は要りません。</p>'}
+    ${us.length ? lanes : '<p class="empty">この目標では、この水準の単元は要りません。</p>'}
     <div class="actions">
       ${THINK[n - 1] ? `<a class="pill" href="#/level/${n - 1}">← 水準 ${n - 1}</a>` : ''}
       ${THINK[n + 1] ? `<a class="pill" href="#/level/${n + 1}">水準 ${n + 1} →</a>` : ''}
@@ -1108,7 +1109,7 @@
       <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・<a href="#/level/${u.level}">水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</a>・${u.id}</div>
       <h1>${esc(u.title)}</h1>
       <div class="row"><span class="dot ${stateOf(id)}" style="${lc(u.lane)}"></span>${STATUS_NAME[stateOf(id)]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
-      <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし。ここから始められます。'}</div>
+      <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし'}</div>
       ${u.alt ? `<div class="row">代わりの前提 ${Object.entries(u.alt).map(([n, bs]) => `<span class="muted">${n} の代わりに</span>${bs.map(chip).join('')}`).join('')}</div>` : ''}
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
       ${topicsHtml(topicsOf(id))}
@@ -1135,10 +1136,10 @@
 
   // ---- 難しさの 3 段と腕だめし（D-047） ----
   // 守は型をなぞる（見本、思い出す、今日、わけ）、破は型を崩して使う（挑戦）、離は型を離れる（腕だめし）。
-  // 腕だめしは単元のファイルの ri に置き、単元が済になってから開く。合わせる駅（uses）がすべて済の問題から挑める。済の判定には入れない
+  // 腕だめしは単元のファイルの ri に置き、単元が済になってから開く。合わせる単元（uses）がすべて済の問題から挑める。済の判定には入れない
   const TIER = { 見本: '守', 思い出す: '守', 今日: '守', わけ: '守', 挑戦: '破', 離: '離' };
   const TIER_NOTE = { 守: '守：型をなぞる', 破: '破：型を崩して使う', 離: '離：型を離れる' };
-  const KIND_NAME = { 総動員: ['いろいろ つかう', 'いくつもの駅を合わせる'], 数: ['かずが ややこしい', '数がややこしい'],
+  const KIND_NAME = { 総動員: ['いろいろ つかう', 'いくつもの単元を合わせる'], 数: ['かずが ややこしい', '数がややこしい'],
     道筋: ['みちが みえにくい', '道筋が見えにくい'], 手数: ['てかずが おおい', '手数が多い'], 読み取り: ['よみとりが いる', '条件を読み取る'] };
   const kindName = (k, small) => (KIND_NAME[k] || [k, k])[small ? 0 : 1];
   const tierHtml = it => {
@@ -1159,13 +1160,11 @@
     const done = isDone(id), open = riOpen(u).length;
     const cards = its.map((it, i) => {
       const lock = !done || (it.uses || []).some(x => !isDone(x));
-      return `<div class="ri-card${lock ? ' lock' : ''}"><span class="ri-n">問 ${i + 1}${lock ? '・まだ開いていない' : ''}</span>${starsHtml(riStar(it))}
+      return `<div class="ri-card${lock ? ' lock' : ''}"><span class="ri-n">問 ${i + 1}${lock ? '・🔒' : ''}</span>${starsHtml(riStar(it))}
         ${kindsHtml(it, false)}
-        ${(it.uses || []).length ? `<div class="row">合わせる駅 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`;
+        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`;
     }).join('');
-    return `<section class="ri"><h2 class="section-title">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
-      <p class="muted">${done ? '型を離れた問題です。いくつもの駅を合わせる、数がややこしい、道筋が見えにくい問題があります。済の判定には入れません。星は、解けた ★、ヒントなし ★★、一度に目安の時間の内 ★★★ です。'
-        : 'この駅が済になると開きます。合わせる駅のある問題は、その駅も済になると開きます。'}</p>
+    return `<section class="ri"><h2 class="section-title" title="型を離れた問題。済の判定には入れない。★ 解けた　★★ ヒントなし　★★★ 一度に目安の時間の内">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
       <div class="ri-list">${cards}</div>
       ${open ? `<div class="actions"><a class="pill solid" href="#/ri/${id}">腕だめしをする</a></div>` : ''}</section>`;
   }
@@ -1180,8 +1179,7 @@
     const ps = (PBY[id] || []).slice().sort((a, b) => (b.pd ? 1 : 0) - (a.pd ? 1 : 0) || (a.u || []).length - (b.u || []).length || String(b.y).localeCompare(String(a.y)));
     if (!ps.length) return '';
     const shown = ps.slice(0, 24);
-    return `<section class="probs"><h2 class="section-title">この駅が鍵になる古今東西の問題（${ps.length} 問）</h2>
-      <p class="muted">組み合わせの札が、その問題を解くのに一緒に使う駅です。著作権のある問題は、骨格だけを書き、問題そのものは出典で読みます。</p>
+    return `<section class="probs"><h2 class="section-title" title="札は、その問題で一緒に使う単元。著作権のある問題は骨格だけを書き、問題は出典で読む">この単元が鍵になる古今東西の問題（${ps.length} 問）</h2>
       <div class="prob-list">${shown.map(p => `<article class="prob">
         <div class="prob-head"><b>${esc(p.src)}${p.y ? ' ' + esc(p.y) : ''}${p.no ? ' 第 ' + esc(p.no) + ' 問' : ''}</b>
           ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">出典</a>` : ''}</div>
@@ -1205,34 +1203,33 @@
     <section class="unit-head goal-head">
       <div class="eyebrow">目標・${esc(g.kind)}${g.field ? '・' + esc(g.field) : g.fields ? '・' + esc(g.fields.join('・')) : ''}・${esc(g.level)}・${esc(g.region)}</div>
       <h1>${esc(g.name)}</h1>
-      <div class="row">${esc(g.note.replace(/。$/, ''))}。単元を組み合わせた結果として届く場所です。</div>
+      <div class="row">${esc(g.note)}</div>
       ${g.basis ? `<div class="row muted">範囲の根拠：${esc(g.basis)}</div>` : ''}
-      ${g.beyond ? `<div class="row muted">知識のほかに要ること：${esc(g.beyond)}（地図が受け持つのは知識の土台だけです）</div>` : ''}
+      ${g.beyond ? `<div class="row muted">知識のほかに要ること：${esc(g.beyond)}</div>` : ''}
       <div class="gauge">
         <div><span class="k">届いた論題</span><b>${st.got} / ${st.topics}</b></div>
-        <div><span class="k">済んだ駅</span><b>${st.done} / ${st.units}</b></div>
+        <div><span class="k">済んだ単元</span><b>${st.done} / ${st.units}</b></div>
         <div><span class="k">見込み</span><b>残り 約 ${f.est}</b><span class="u">日</span></div>
       </div>
       <div class="row"><button class="pill solid" type="button" data-goal="${id}" data-go="#/">この目標の道だけで地図を見る</button></div>
     </section>
     <section class="next">
-      <h2>次に進める駅</h2>
+      <h2>次に進める単元</h2>
       <div class="next-list">${next.slice(0, 8).map(u => `
         <a class="next-card" href="#/unit/${u.id}" style="${lc(u.lane)}">
           <span class="dot ${stateOf(u.id)}"></span>
           <span class="mode">${STATUS_NAME[stateOf(u.id)]}・${esc(LANES[u.lane].name)}・水準 ${u.level}</span>
           <span class="t">${esc(u.title)}</span>
-        </a>`).join('') || '<p class="muted">この目標の駅はすべて済みました。</p>'}</div>
+        </a>`).join('') || '<p class="muted">この目標の単元はすべて済みました。</p>'}</div>
     </section>
     <section>
-      <h2 class="section-title">論題（✓ は、受け持つ駅がすべて済んで届いたもの）</h2>
+      <h2 class="section-title">論題（✓ は、受け持つ単元がすべて済んで届いたもの）</h2>
       ${fields.map(fd => `<h3 class="field">${esc(fd)}</h3><div class="topics">${must.filter(i => i.field === fd).map(row).join('')}</div>`).join('')}
     </section>
     ${Object.entries(g.choices || {}).map(([k, c]) => {
       const picks = g.items.filter(i => i.choice === k), pf = [...new Set(picks.map(i => i.field))];
       return `<section>
-      <h2 class="section-title">選んで解く論題：${esc(c.label)}</h2>
-      <p class="muted">得意な論題を選んで解く問題です。道のりには入れず、届いた論題は ${c.pick} つまで数えます。</p>
+      <h2 class="section-title">選んで解く論題：${esc(c.label)}（${c.pick} つ選ぶ）</h2>
       ${pf.map(fd => `<h3 class="field">${esc(fd)}</h3><div class="topics">${picks.filter(i => i.field === fd).map(row).join('')}</div>`).join('')}
     </section>`;
     }).join('')}`;
@@ -1334,19 +1331,19 @@
   });
 
   // ---- わからない（D-045） ----
-  // どこで止まったか（問題の意味、何から始めるか、道筋のどの駅か）を聞き、ふりかえる駅を出す。
+  // どこで止まったか（問題の意味、何から始めるか、道筋のどの一歩か）を聞き、ふりかえる単元を出す。
   // 候補は、この単元の見本と、前提の単元（2 段前まで）。止まった文と、各単元の日の文（ねらい、問題、道筋）の近さで並べる
   const WORDS = {
     small: { ask: 'どこが わからない？', mean: 'もんだいの いみ', start: 'なにから するか', mid: 'とちゅうから',
       here: 'ここまでは わかる？', yes: 'わかる', no: 'ここが わからない', allok: 'ぜんぶ わかるね。こたえまで あと すこし。もう いちど やってみよう。',
       read: 'おうちの ひとに、もんだいを ゆっくり よんで もらおう。', first: 'さいしょは ここから かんがえるよ', stuck: 'ここで とまったね',
-      offer: 'ふりかえる えき', now: 'いま ふりかえる', later: 'あとで', added: 'きょうの かだいに いれたよ',
-      back: 'もんだいに もどる', skip: 'この もんだいは とばす', self: 'この えきの みほん', need: 'まえの えき', done: 'ふりかえり、できた！', ret: 'もとの もんだいに もどる' },
+      offer: 'ふりかえる ところ', now: 'いま ふりかえる', later: 'あとで', added: 'きょうの かだいに いれたよ',
+      back: 'もんだいに もどる', skip: 'この もんだいは とばす', self: 'この べんきょうの みほん', need: 'まえの べんきょう', done: 'ふりかえり、できた！', ret: 'もとの もんだいに もどる' },
     big: { ask: 'どこが分からない？', mean: '問題の意味', start: '何から始めるか', mid: '途中から',
       here: 'ここまでは分かる？', yes: '分かる', no: 'ここが分からない', allok: 'どの段も分かるなら、あとは答えまで。もう一度やってみよう。',
       read: '問題の文を、区切りながらゆっくり読み直そう。分からない言葉は、おうちの人に聞こう。', first: '最初はここから考える', stuck: 'ここで止まった',
-      offer: 'ふりかえる駅', now: '今ふりかえる', later: 'あとで', added: '今日の課題に入れた',
-      back: '問題にもどる', skip: 'この問題はとばす', self: 'この駅の見本', need: '前の駅', done: 'ふりかえり、できた！', ret: 'もとの問題にもどる' },
+      offer: 'ふりかえる単元', now: '今ふりかえる', later: 'あとで', added: '今日の課題に入れた',
+      back: '問題にもどる', skip: 'この問題はとばす', self: 'この単元の見本', need: '前の単元', done: 'ふりかえり、できた！', ret: 'もとの問題にもどる' },
   };
   const words = id => WORDS[UNITS[id].stage <= 2 ? 'small' : 'big'];
   // 文字の 1 つ組（ひらがなを除く）と 2 つ組。数字、空白、句読点は除く
@@ -1399,7 +1396,7 @@
   }
   function dkOffer(s, it, why, i = 0) {
     const path = ((it.paths || [])[0] || []).slice(0, -1);
-    // 比べる文：止まった駅と、そこに当たるヒント（ヒントには「わり切れる」のような考えの言葉が入る）
+    // 比べる文：止まった一歩と、そこに当たるヒント（ヒントには「わり切れる」のような考えの言葉が入る）
     const hint = why === 'start' ? 0 : why === 'mid' ? Math.min(i, 2) : null, ht = hint !== null ? (it.hints || [])[hint] || '' : '';
     const text = why === 'mid' ? `${path[i]} ${ht}` : why === 'start' ? `${it.text} ${path[0] || ''} ${ht}` : `${it.text} ${it.explain || ''}`;
     if (hint !== null && (it.hints || [])[hint]) s.hints = Math.max(s.hints, hint + 1);
@@ -1469,7 +1466,7 @@
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
         <h2 style="margin:18px 0 8px">${esc(s.type === 'ri' ? '腕だめし（離）' : d.aim || R.kinds[d.kind])}</h2>
-        <p>${s.type === 'ri' ? (u.ri ? 'この駅が済になると、腕だめしが開きます。' : 'この駅の腕だめしは、まだ作っていません。') : 'この日の問題は、まだ作っていません。'}</p>
+        <p>${s.type === 'ri' ? (u.ri ? 'この単元が済になると、腕だめしが開きます。' : 'この単元の腕だめしは、まだ作っていません。') : 'この日の問題は、まだ作っていません。'}</p>
         <div class="actions"><a class="pill" href="#/unit/${s.id}">単元へもどる</a></div></div>`;
       return;
     }
@@ -1581,11 +1578,11 @@
       const v = r.review || (r.review = { step: 0, fails: 0 });
       if (firsts === res.length) {
         v.fails = 0; v.step = (v.step || 0) + 1;
-        if (v.step >= RULE.intervals.length) { v.complete = true; title = 'しっかり 身に ついた！'; note = 'この駅は定着しました。'; }
+        if (v.step >= RULE.intervals.length) { v.complete = true; title = 'しっかり 身に ついた！'; note = 'この単元は定着しました。'; }
         else { v.due = addDays(RULE.intervals[v.step]); title = 'おぼえて いた！'; note = `次は ${v.due} に確かめます。`; }
       } else {
         v.fails = (v.fails || 0) + 1; v.due = addDays(1);
-        if (v.fails >= 2) { v.lapsed = true; title = 'もう一度 ふりかえろう'; note = 'この駅は「復習」に戻りました。確認の日をもう一度ためしましょう。'; }
+        if (v.fails >= 2) { v.lapsed = true; title = 'もう一度 ふりかえろう'; note = 'この単元は「復習」に戻りました。確認の日をもう一度ためしましょう。'; }
         else { title = 'あと すこし！'; note = 'あした、もう一度確かめます。'; }
       }
     } else if (s.type === 'extra') {
@@ -1603,7 +1600,7 @@
         if (rate >= RULE.pass) {
           r.done = today; r.pending = null; r.low = 0; r.ver = u.ver;
           r.review = { step: 0, due: addDays(RULE.intervals[0]), fails: 0 };
-          title = 'この駅を通過！'; note = 'あした、1 週後、1 か月後に、2 問ずつ確かめます。';
+          title = 'この単元を クリア！'; note = 'あした、1 週後、1 か月後に、2 問ずつ確かめます。';
         } else { r.pending = s.n; title = 'あと すこし！'; note = '8 割で通過です。おさらいの日をはさんでから、もう一度ためしましょう。'; }
       } else if (rate < RULE.low) {
         r.pending = s.n; r.low = 1; note = '次は、同じ型のおさらいの日です。';
@@ -1621,7 +1618,7 @@
     persist();
     Music.melody(res);
     s.melody = res;
-    // この駅で新しく届いた論題（済んだ単元の組み合わせでできるようになったこと）
+    // この単元で新しく届いた論題（済んだ単元の組み合わせでできるようになったこと）
     const gained = [...satisfied()].filter(k => !before.has(k)).map(k => {
       const [gid, iid] = k.split(':'), g = GOALS.find(x => x.id === gid);
       return `${g.name}「${g.items.find(i => i.id === iid).topic}」`;
@@ -1632,7 +1629,7 @@
       <span class="part">${esc(label)}</span>
       <h1>${title}</h1>
       <p class="score">${res.length} 問のうち、ヒントなしで一度にできたのは ${firsts} 問。</p>
-      ${overN || dunN ? `<p class="note2">${overN ? `目安の時間をすぎた問題が ${overN} 問（一度にできた数には入れません）。` : ''}${dunN ? `「わからない」を ${dunN} 問で言えました。` : ''}</p>` : ''}
+      ${overN || dunN ? `<p class="note2">${overN ? `<span class="tag slow" title="一度にできた数には入れません">⏱ 目安すぎ ${overN}</span>` : ''}${dunN ? `<span class="tag">？ わからない ${dunN}</span>` : ''}</p>` : ''}
       <div class="line">${res.map((x, i) => (i ? '<i></i>' : '') + `<b class="${x.first ? 'ok' : slow(x) ? 'slow' : 'help'}"></b>`).join('')}</div>
       <p class="muted">${note}</p>
       <div class="actions">
@@ -1868,9 +1865,8 @@
         err: 'Google ドライブと合わせられませんでした。押すともう一度合わせます' }[driveState] || '';
     }
     const st = $('#drive-status');
-    if (st) st.textContent = !drive.on ? 'ログインしていません。記録はこの端末の中だけにあります。'
-      : `${drive.who ? drive.who + ' の ' : ''}Google ドライブと合わせています${drive.at ? `（最後に合わせたのは ${drive.at}）` : ''}。`
-        + (driveState === 'need' ? 'ログインが切れたので、ログインし直すと合わせます。' : driveState === 'err' ? '前回は合わせられませんでした。' : '');
+    if (st) st.textContent = !drive.on ? 'この端末だけに保存'
+      : [drive.who, drive.at && drive.at + ' に合わせ済み', driveState === 'need' && 'ログインが切れました', driveState === 'err' && '合わせられませんでした'].filter(Boolean).join('・');
     const show = (id, on) => { const e = $(id); if (e) e.hidden = !on; };
     show('#btn-drive-in', !drive.on || driveState === 'need');
     show('#btn-drive-now', drive.on && driveState !== 'need');
