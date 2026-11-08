@@ -1,0 +1,548 @@
+# C-004 道順を数える
+#
+# 書き方は N-001 の頭の注のとおり。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 道を全部なぞって数える、2 日目 マスに数を書きこんで数える（左と下を合わせる）、3 日目 わけ、
+#   4 日目 C-003（樹形図と表）と混ぜる（必ず通るマス、町を通る道）、5 日目 確認。
+# 道はマスで描く。🏠 から 🏁 まで、となりのマスへ右か上に 1 マスずつ進む（碁盤の目の道の角をマスに置きかえたもの）。
+# 🌳 のマスは通れない。⭐ のマスは必ず通る。
+# 書きこむ図はマスに全角の数字（１２３）を置き、□ が求めるマス。
+# 前提は C-003 までで、数は 10 まで。書きこみの「左と下を合わせる」は、N-001 の「いくつといくつ」の範囲（合わせて 10 まで）にした。
+# 町を通る道（🏠 → 🏪 → 🏫）は樹形図で数える。かけ算（C-005 の積の法則）は使わない。
+# check は、図の行を下から読み（g は fig.splitlines()[::-1]）、上へ進む回を itertools.combinations で選んで、通れる道を数える。
+# 書きこむ図は数字が入っているので、同じ形のマスの図を文字列で書き（行は「/」で区切る）、同じ式で数える。
+
+id: C-004
+days:
+  - day: 1
+    items:
+      - part: 思い出す
+        text: たべもの（🍞 🍙）を 1 つ、のみもの（🥛 🧃 🍵）を 1 つ えらびます。じゅけいずを かいて、くみあわせが なんとおりか こたえよう。
+        figure: "🍞🍙\n🥛🧃🍵"
+        answer: 6
+        check: "len(set(itertools.product(fig.splitlines()[0], fig.splitlines()[1])))"
+        hints:
+          - ひだりに たべものを たてに かこう。
+          - どの たべものからも、のみものの えだを のばそう。
+          - えだの さきを ぜんぶ かぞえよう。
+        paths:
+          - [たべものを たてに かく, どれからも えだが 3 ぼん, えだの さきを かぞえて 6 とおり]
+      - part: 思い出す
+        text: あかい カードと あおい カードから 1 まいずつ ひきます。カードの かずは ひょうの とおりです（たてが あか、よこが あお）。あわせて 5 に なる ひきかたは なんとおり ありますか。
+        figure: "　１２３\n１□□□\n２□□□\n３□□□"
+        answer: 2
+        check: "sum(1 for a in range(1, 4) for b in range(1, 4) if a + b == 5)"
+        hints:
+          - □ に、あわせた かずを かきこもう。
+          - かきこんだ かずの なかから 5 を さがそう。
+          - あかと あおを いれかえた ものは べつの ひきかただよ。
+        paths:
+          - [5 に なるのは あか 2 あお 3、あか 3 あお 2, 2 とおり]
+      - part: 見本
+        text: 🏠 から 🏁 まで、となりの マスへ みぎか うえに 1 マスずつ すすみます。いきかたを ぜんぶ さがそう。
+        figure: "⬜🏁\n🏠⬜"
+        explain: さきに みぎへ いって うえへ いく みちと、さきに うえへ いって みぎへ いく みちが あります。みちを 1 ぽんずつ ゆびで なぞり、なぞった みちを「みう」「うみ」（み は みぎ、う は うえ）と かいて おくと、もれも かさなりも なく かぞえられます。いきかたは 2 とおりです。
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n🏠⬜⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - さいしょに うえへ いく みちを なぞろう。
+          - みぎへ 1 マス すすんでから うえへ いく みちも あるね。
+          - なぞった みちを「み」と「う」で かいて かぞえよう。
+        paths:
+          - [うみみ, みうみ, みみう, 3 とおり]
+        note: 「み」2 つと「う」1 つの並べ方になる。C-002 の赤い玉 2 こと青い玉 1 この並べ方と同じ数え方。
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜🏁\n⬜⬜\n⬜⬜\n🏠⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - みぎへ すすむのは、ぜんぶで 1 かいだけだね。
+          - みぎへ すすむ ところは、どこに できるかな。
+          - なぞった みちを「み」と「う」で かいて かぞえよう。
+        paths:
+          - [みぎへ すすむ ところを きめる, いちばん した から いちばん うえまで, 4 とおり]
+          - [みううう、うみうう、ううみう、うううみ, 4 とおり]
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n🏠⬜⬜"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - さいしょに みぎへ いくか、うえへ いくかで わけよう。
+          - さいしょに みぎへ いった みちを ぜんぶ なぞろう。
+          - さいしょに うえへ いった みちも、おなじように なぞろう。
+        paths:
+          - [さいしょに みぎへ いく みち 3 ぼん, さいしょに うえへ いく みち 3 ぼん, 3 と 3 で 6 とおり]
+          - [「み」2 つと「う」2 つの ならべかたを かきだす, 6 とおり]
+        note: なぞった道を紙に書かずに数えると、同じ道を 2 回数えやすい。
+      - part: 挑戦
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜🌳⬜\n🏠⬜⬜"
+        answer: 2
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🌳 が なければ、いきかたは いくつ あったかな。
+          - 🌳 の マスを とおる みちには × を つけて、けしてみよう。
+          - のこった みちを なぞって かぞえよう。
+        paths:
+          - [🌳 を とおらない みちを さがす, いちばん したを とおる みちと いちばん ひだりを とおる みち, 2 とおり]
+    extra:
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜⬜🏁\n🏠⬜⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - うえへ すすむのは、ぜんぶで 1 かいだけだね。
+          - うえへ すすむ ところは、どこに できるかな。
+          - なぞった みちを「み」と「う」で かいて かぞえよう。
+        paths:
+          - [うえへ すすむ ところを きめる, いちばん ひだりから いちばん みぎまで, 4 とおり]
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜🏁\n⬜⬜\n🏠⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - みぎへ すすむのは、ぜんぶで 1 かいだけだね。
+          - みぎへ すすむ ところは、どこに できるかな。
+          - なぞった みちを「み」と「う」で かいて かぞえよう。
+        paths:
+          - [みうう、うみう、ううみ, 3 とおり]
+      - part: 挑戦
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n🏠🌳⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から、さいしょに どちらへ すすめるかな。
+          - さいしょは うえへ いくしか ないね。
+          - うえへ 1 マス すすんだ ところから、🏁 までの みちを なぞろう。
+        paths:
+          - [さいしょは うえ, そこから 🏁 まで みぎ 2 つと うえ 1 つ, 3 とおり]
+
+  - day: 2
+    items:
+      - part: 思い出す
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜⬜🏁\n🏠⬜⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - うえへ すすむのは、ぜんぶで 1 かいだけだね。
+          - うえへ すすむ ところは、どこに できるかな。
+          - なぞった みちを かいて かぞえよう。
+        paths:
+          - [うえへ すすむ ところを きめる, 4 とおり]
+      - part: 思い出す
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n🌳⬜⬜\n🏠⬜⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から、さいしょに どちらへ すすめるかな。
+          - さいしょは みぎへ いくしか ないね。
+          - みぎへ 1 マス すすんだ ところから、🏁 までの みちを なぞろう。
+        paths:
+          - [さいしょは みぎ, そこから 🏁 まで みぎ 1 つと うえ 2 つ, 3 とおり]
+      - part: 見本
+        text: マスに、そこまで いく いきかたの かずを かきこもう。みぎうえの マスが 🏁 です。
+        figure: "１３６\n１２３\n🏠１１"
+        explain: 🏠 の みぎに ならぶ マスと、うえに ならぶ マスへは、いきかたが 1 とおりずつです。ほかの マスへは、ひだりの マスから くるか、したの マスから くるかの どちらかです。だから、ひだりの かずと したの かずを あわせて かきます。まんなかは 1 と 1 で 2。🏁 は 3 と 3 で 6。いきかたは 6 とおりです。
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１２３□\n🏠１１１"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜⬜🏁/🏠⬜⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスには、いくつと かいて あるかな。
+          - □ の したの マスには、いくつと かいて あるかな。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 3, したは 1, 3 と 1 で 4]
+        note: 左の数だけ（3）を答えやすい。下から来る道も合わせる。
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１４□\n１３６\n１２３\n🏠１１"
+        answer: 10
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/⬜⬜⬜/⬜⬜⬜/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。まるを かいて かぞえても いいよ。
+        paths:
+          - [ひだりは 4, したは 6, 4 と 6 で 10]
+      - part: 今日
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。マスに かずを かきこんで、いきかたを かぞえよう。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n🏠⬜🌳"
+        answer: 5
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 の となりの マスから かずを かきこもう。
+          - 🌳 の マスには 0 を かこう。
+          - どの マスも、ひだりと したの かずを あわせよう。
+        paths:
+          - [いちばん したは 1、1、0, まんなかは 1、2、2, いちばん うえは 1、3、5, 5 とおり]
+        note: 🌳 のマスに 1 を書いてしまうことがある。通れないマスへの行き方はないので 0。
+      - part: 挑戦
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜⬜🏁\n⬜🌳⬜⬜\n🏠⬜⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。🌳 は 0 だよ。
+          - いちばん したの ならびから かきこもう。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [いちばん したは 1、1、1, まんなかは 1、0、1、2, いちばん うえは 1、1、2、4, 4 とおり]
+        note: 道を全部なぞるより、書きこむほうが速い。両方で数えて同じになるか確かめてもよい。
+    extra:
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１２□\n🏠１１"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 2, したは 1, 2 と 1 で 3]
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１□\n１３\n１２\n🏠１"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜🏁/⬜⬜/⬜⬜/🏠⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 1, したは 3, 1 と 3 で 4]
+      - part: 挑戦
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜🌳⬜\n⬜⬜⬜\n🏠⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。🌳 は 0 だよ。
+          - いちばん したの ならびから かきこもう。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [したから 1、1、1 と 1、2、3, つぎは 1、0、3, いちばん うえは 1、1、4, 4 とおり]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: マスに かずを かきこむ とき、ひだりの かずと したの かずを あわせます。どうしてか、くちで いってみよう。
+        figure: "１３６\n１２３\n🏠１１"
+        explain: 「その マスへは、ひだりの マスから くるか、したの マスから くるかの どちらかしか ないから」「ひだりから くる みちと、したから くる みちは べつの みちで、かさならないから」と言えればよい。右か上にしか進まないので、マスに入る直前はかならず左か下にいる、と言えれば、なおよい。
+        hints:
+          - まんなかの マスに くる まえは、どこに いたかな。
+          - ひだりから くる みちと、したから くる みちは、おなじ みちかな。
+          - 「どちらかから くるから」を つかって いってみよう。
+        paths:
+          - [マスに くる まえは ひだりか した, ひだりからの みちと したからの みちは べつ, だから あわせる]
+      - part: わけ
+        text: 🏠 の みぎに ならぶ マスには、どれも 1 を かきます。どうしてか、くちで いってみよう。
+        figure: "⬜⬜⬜\n⬜⬜⬜\n🏠１１"
+        explain: 「いちばん したの ならびの マスへは、みぎに まっすぐ すすむ みちしか ないから」「うえに いくと もう したに もどれないから、みちは 1 ぽんだけ」と言えればよい。🏠 の上に並ぶマスも同じ理由で 1 になることに気づけば、なおよい。
+        hints:
+          - いちばん したの マスへ いく とき、うえに いっても いいかな。
+          - うえに いったら、したに もどれるかな。
+          - 「だから 1 ぽんだけ」と いってみよう。
+        paths:
+          - [したの ならびへは みぎに すすむだけ, うえに いくと もどれない, だから みちは 1 ぽん]
+      - part: わけ
+        text: 🌳 の マスには 0 を かきます。どうしてか、くちで いってみよう。
+        figure: "１１２\n１０１\n🏠１１"
+        explain: 「🌳 の マスは とおれないから、そこまで いく みちは 1 ぽんも ないから」「0 を かいて おくと、となりの マスで あわせる とき、🌳 から くる みちを たさずに すむから」と言えればよい。
+        hints:
+          - 🌳 の マスに いく みちは あるかな。
+          - みちが 1 ぽんも ない ときの かずは なにかな。
+          - 「とおれないから」を つかって いってみよう。
+        paths:
+          - [🌳 は とおれない, そこへ いく みちは ない, だから 0]
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１２３４□\n🏠１１１１"
+        answer: 5
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜⬜⬜🏁/🏠⬜⬜⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 4, したは 1, 4 と 1 で 5]
+      - part: 今日
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。マスに かずを かきこんで、いきかたを かぞえよう。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n🏠⬜🌳⬜"
+        answer: 7
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - いちばん したの ならびから かきこもう。🌳 は 0 だよ。
+          - 🌳 の みぎの マスへは、どこから これるかな。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [いちばん したは 1、1、0、0, まんなかは 1、2、2、2, いちばん うえは 1、3、5、7, 7 とおり]
+        note: 🌳 の右のマスは、左が 0 なので下の段から来るしかない。
+    extra:
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１□\n１２\n🏠１"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜🏁/⬜⬜/🏠⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 1, したは 2, 1 と 2 で 3]
+      - part: 今日
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜🌳\n🏠⬜⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。🌳 は 0 だよ。
+          - いちばん したの ならびから かきこもう。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [いちばん したは 1、1、1, まんなかは 1、2、0, いちばん うえは 1、3、3, 3 とおり]
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。マスに かずを かきこんで、いきかたを かぞえよう。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n🏠⬜⬜⬜"
+        answer: 10
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - いちばん したの ならびと、いちばん ひだりの ならびは 1 だね。
+          - ひだりと したの かずを あわせて いこう。
+          - いちばん うえの みぎはしが 🏁 だよ。
+        paths:
+          - [いちばん したは 1、1、1、1, まんなかは 1、2、3、4, いちばん うえは 1、3、6、10, 10 とおり]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１３□\n１２３\n🏠１１"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/⬜⬜⬜/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 3, したは 3, 3 と 3 で 6]
+      - part: 思い出す
+        text: あかい カードと あおい カードから 1 まいずつ ひきます。カードの かずは ひょうの とおりです（たてが あか、よこが あお）。あわせて 7 に なる ひきかたは なんとおり ありますか。
+        figure: "　１２３４\n１□□□□\n２□□□□\n３□□□□\n４□□□□"
+        answer: 2
+        check: "sum(1 for a in range(1, 5) for b in range(1, 5) if a + b == 7)"
+        hints:
+          - □ に、あわせた かずを かきこもう。
+          - いちばん おおきい かずは、みぎの したに あるよ。
+          - かきこんだ かずの なかから 7 を さがそう。
+        paths:
+          - [7 に なるのは あか 3 あお 4、あか 4 あお 3, 2 とおり]
+      - part: 今日
+        text: ⭐ の マスを かならず とおって、🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⭐⬜\n🏠⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までの いきかたを かぞえよう。
+          - ⭐ から 🏁 までの いきかたも かぞえよう。
+          - じゅけいずの ように、まえの みち 1 ぽんずつから、あとの みちの えだを のばそう。
+        paths:
+          - [🏠 から ⭐ まで 2 とおり, ⭐ から 🏁 まで 2 とおり, じゅけいずの えだの さきを かぞえる, 4 とおり]
+          - [ぜんぶの みち 6 とおりから ⭐ を とおらない みちを のぞく, いちばん したと ひだりを まわる 2 ほんが とおらない, 4 とおり]
+        note: 前半と後半の道を樹形図にすると、C-003 の組み合わせと同じ形になる。
+      - part: 今日
+        text: 🏠 から 🏪 まで みちが 2 ほん、🏪 から 🏫 まで みちが 4 ほん あります。🏪 を とおって 🏠 から 🏫 まで いく いきかたは なんとおり ありますか。
+        figure: "🏠　🏪　🏫"
+        answer: 8
+        check: "len(set(itertools.product(range(2), range(4))))"
+        hints:
+          - 🏠 から 🏪 までの みちに、ア と イ と なまえを つけよう。
+          - 🏪 から 🏫 までの みちには、1 から 4 の ばんごうを つけよう。
+          - じゅけいずを かいて、えだの さきを かぞえよう。
+        paths:
+          - [ア から 4 ほんの えだ, イ から 4 ほんの えだ, えだの さきを かぞえて 8 とおり]
+        note: 2 と 4 を合わせて 6 と答えやすい。前の道 1 本ごとに後ろの道が 4 本ずつあることを樹形図で確かめる。
+      - part: 今日
+        text: あかい カードと あおい カードから 1 まいずつ ひきます。カードの かずは ひょうの とおりです（たてが あか、よこが あお）。あわせて 4 に なる ひきかたは なんとおり ありますか。
+        figure: "　１２３４\n１□□□□\n２□□□□\n３□□□□\n４□□□□"
+        answer: 3
+        check: "sum(1 for a in range(1, 5) for b in range(1, 5) if a + b == 4)"
+        hints:
+          - □ に、あわせた かずを かきこもう。
+          - かきこんだ かずの なかから 4 を さがそう。
+          - あかと あおを いれかえた ものは べつの ひきかただよ。
+        paths:
+          - [4 に なるのは あか 1 あお 3、あか 2 あお 2、あか 3 あお 1, 3 とおり]
+      - part: 挑戦
+        text: ⭐ の マスを かならず とおって、🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜⬜🏁\n⬜⬜⭐⬜\n🏠⬜⬜⬜"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までの いきかたを かぞえよう。
+          - ⭐ から 🏁 までの いきかたも かぞえよう。
+          - まえの みち 1 ぽんずつから、あとの みちの えだを のばそう。
+        paths:
+          - [🏠 から ⭐ まで 3 とおり, ⭐ から 🏁 まで 2 とおり, じゅけいずの えだの さきを かぞえる, 6 とおり]
+          - [⭐ より さきへ いけない マスを 0 に して かきこむ, 6 とおり]
+    extra:
+      - part: 今日
+        text: ⭐ の マスを かならず とおって、🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n🏠⭐⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - ⭐ を とおるには、さいしょに どちらへ すすむかな。
+          - ⭐ から 🏁 までの いきかたを かぞえよう。
+          - 🏠 から ⭐ までは 1 とおりだね。
+        paths:
+          - [さいしょは みぎの ⭐, ⭐ から 🏁 まで 3 とおり, 3 とおり]
+      - part: 今日
+        text: 🏠 から 🏪 まで みちが 3 ぼん、🏪 から 🏫 まで みちが 3 ぼん あります。🏪 を とおって 🏠 から 🏫 まで いく いきかたは なんとおり ありますか。
+        figure: "🏠　🏪　🏫"
+        answer: 9
+        check: "len(set(itertools.product(range(3), range(3))))"
+        hints:
+          - 🏠 から 🏪 までの みちに、ア イ ウ と なまえを つけよう。
+          - 🏪 から 🏫 までの みちには、1 2 3 の ばんごうを つけよう。
+          - じゅけいずを かいて、えだの さきを かぞえよう。
+        paths:
+          - [ア イ ウ の どれからも 3 ぼんの えだ, えだの さきを かぞえて 9 とおり]
+      - part: 挑戦
+        text: 🏠 から 🏫 へ いきます。🏪 を とおる いきかたは、🏠 から 🏪 まで みちが 2 ほん、🏪 から 🏫 まで みちが 2 ほん。ほかに、🏠 から 🏫 まで まっすぐ いく みちが 1 ぽん あります。いきかたは ぜんぶで なんとおり ありますか。
+        figure: "🏠　🏪　🏫"
+        answer: 5
+        check: "len(set(itertools.product(range(2), range(2)))) + 1"
+        hints:
+          - 🏪 を とおる いきかたを、じゅけいずで かぞえよう。
+          - まっすぐ いく みちも わすれないでね。
+          - 🏪 を とおる みちと、まっすぐの みちは べつの みちだよ。
+        paths:
+          - [🏪 を とおる いきかた 4 とおり, まっすぐ 1 とおり, 4 と 1 で 5 とおり]
+        note: 「または」で分けた行き方は、重ならないので合わせてよい。C-005 の和の法則の手前。
+
+  - day: 5
+    items:
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n🏠⬜⬜"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - うえへ すすむのは、ぜんぶで 1 かいだけだね。
+          - うえへ すすむ ところは、どこに できるかな。
+          - なぞった みちを かいて かぞえよう。
+        paths:
+          - [うみみ、みうみ、みみう, 3 とおり]
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n🏠⬜⬜"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこんでも いいよ。
+          - いちばん したと いちばん ひだりは 1 だね。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [かきこむ　したから 1、1、1 と 1、2、3 と 1、3、6, 6 とおり]
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１□\n１４\n１３\n１２\n🏠１"
+        answer: 5
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜🏁/⬜⬜/⬜⬜/⬜⬜/🏠⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 1, したは 4, 1 と 4 で 5]
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n⬜⬜⬜\n🏠⬜⬜"
+        answer: 10
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。
+          - いちばん したと いちばん ひだりは 1 だね。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [したから 1、1、1 と 1、2、3 と 1、3、6 と 1、4、10, 10 とおり]
+      - part: 今日
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⬜⬜\n⬜⬜🌳\n🏠⬜⬜"
+        answer: 7
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。🌳 は 0 だよ。
+          - いちばん したの ならびから かきこもう。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [したから 1、1、1 と 1、2、0 と 1、3、3 と 1、4、7, 7 とおり]
+      - part: 今日
+        text: ⭐ の マスを かならず とおって、🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜⭐⬜\n🏠⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までの いきかたを かぞえよう。
+          - ⭐ から 🏁 までの いきかたも かぞえよう。
+          - まえの みち 1 ぽんずつから、あとの みちの えだを のばそう。
+        paths:
+          - [🏠 から ⭐ まで 2 とおり, ⭐ から 🏁 まで 2 とおり, えだの さきを かぞえて 4 とおり]
+      - part: 今日
+        text: 🏠 から 🏪 まで みちが 3 ぼん、🏪 から 🏫 まで みちが 2 ほん あります。🏪 を とおって 🏠 から 🏫 まで いく いきかたは なんとおり ありますか。
+        figure: "🏠　🏪　🏫"
+        answer: 6
+        check: "len(set(itertools.product(range(3), range(2))))"
+        hints:
+          - 🏠 から 🏪 までの みちに、ア イ ウ と なまえを つけよう。
+          - 🏪 から 🏫 までの みちには、1 と 2 の ばんごうを つけよう。
+          - じゅけいずを かいて、えだの さきを かぞえよう。
+        paths:
+          - [ア イ ウ の どれからも 2 ほんの えだ, えだの さきを かぞえて 6 とおり]
+    extra:
+      - part: 今日
+        text: 🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜⬜🏁\n🏠⬜⬜⬜"
+        answer: 4
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - うえへ すすむのは、ぜんぶで 1 かいだけだね。
+          - うえへ すすむ ところは、どこに できるかな。
+          - なぞった みちを かいて かぞえよう。
+        paths:
+          - [うえへ すすむ ところを きめる, 4 とおり]
+      - part: 今日
+        text: マスの かずは、そこまで いく いきかたの かずです。□ の マスまでの いきかたは なんとおり ですか。
+        figure: "１２□\n🏠１１"
+        answer: 3
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ の ひだりの マスの かずを みよう。
+          - □ の したの マスの かずを みよう。
+          - 2 つの かずを あわせよう。
+        paths:
+          - [ひだりは 2, したは 1, 2 と 1 で 3]
+      - part: 今日
+        text: 🌳 の マスは とおれません。🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。いきかたは なんとおり ありますか。
+        figure: "⬜⬜🏁\n⬜🌳⬜\n🏠⬜⬜"
+        answer: 2
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - マスに かずを かきこもう。🌳 は 0 だよ。
+          - いちばん したの ならびから かきこもう。
+          - ひだりと したの かずを あわせて いこう。
+        paths:
+          - [したから 1、1、1 と 1、0、1 と 1、1、2, 2 とおり]

@@ -583,7 +583,7 @@ units:
   - {id: N-012, title: 数のパズル（魔方陣、虫食い算）, stage: 2, level: 2, region: kazu, needs: [L-001, N-007], days: 6, measure: true}
   - {id: A-002, title: □を使った式, stage: 2, level: 2, region: houteishiki, needs: [N-007, A-001], days: 5}
   - {id: C-003, title: 表と樹形図で数える, stage: 2, level: 2, region: kazoekata, needs: [C-002], days: 5}
-  - {id: C-004, title: 道順を数える, stage: 2, level: 2, region: kazoekata, needs: [C-003], days: 5}
+  - {id: C-004, title: 道順を数える, stage: 2, level: 2, region: kazoekata, needs: [C-003, N-005], days: 5}
   - {id: G-005, title: 長さとまわりの長さ, stage: 2, level: 2, region: hakaru, needs: [G-002, N-007], days: 5}
   - {id: G-006, title: 直角と平行、三角形と四角形, stage: 2, level: 2, region: hakaru, needs: [G-002], days: 5}
   - {id: G-007, title: 立方体と展開図, stage: 2, level: 2, region: katachi, needs: [G-003], days: 6}
