@@ -1,0 +1,692 @@
+# A-015 展開と因数分解
+#
+# 書き方は N-001 の頭の注のとおり。答えの形は A-011 に合わせる（負の数は「−」U+2212）。
+# 地図に plan がないので、既定の並び（導入、練習、練習、わけ、混ぜる、確認）で作った。
+#   1 日目：単項式どうしのかけ算（3x × 4x = 12x²）、単項式 × 多項式、多項式 × 多項式（(a + b)(c + d)、長方形の面積図）。
+#   2 日目：乗法公式（(x + a)(x + b)、(x + a)²、(x − a)²、(x + a)(x − a)）。
+#   3 日目：因数分解（共通な因数をくくり出す、乗法公式を逆に使う、両方を続けて使う）。
+#   4 日目：わけ（計算のくふうも少し）。5 日目：A-010、A-009、N-027 と混ぜる（式の値、計算のくふう）。6 日目：確認。
+# 前提は A-010（文字と式）、N-027（正負の数のかけ算）、A-009（累乗）。方程式（A-011）は前提にないので、
+#   2 次方程式を因数分解で解くことは扱わない（A-017）。前提の道に小数（N-020）がないので、数は整数と分数にした。
+# 累乗は上つきの数字（x²、a²b）で書く（A-009）。式の答えは鍵盤で打てないので choices にし、check は選択肢ごとの式（lambda）に
+#   −5〜5 の整数を入れて、元の式とどの数でも等しいものを選び出す（文字が 2 つなら −4〜4 の組で確かめる）。
+#   係数を打つ問題の check は、元の式に数を入れて係数を取り出す（定数項は x = 0 の値、2 次の式の x の係数は
+#   (f(1) − f(−1)) ÷ 2）。計算のくふうと式の値は、そのまま計算する。
+# 因数分解の選択肢は、元の式と等しいものが 1 つだけになるようにした（くくり出し方がちがうだけの、同じ式の選択肢は入れない）。
+# 展開と因数分解は、2 次方程式（A-017）、平方根の計算（A-016）、二項定理（C-016）、整数の性質の証明の道具になる（D-026）。
+
+id: A-015
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: (a + b)(c + d) を、長方形の面積を使って展開してみましょう。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="25" width="160" height="100" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <line x1="140" y1="25" x2="140" y2="125" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="40" y1="85" x2="200" y2="85" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="90" y="18" font-size="14" text-anchor="middle">a</text>
+            <text x="170" y="18" font-size="14" text-anchor="middle">b</text>
+            <text x="28" y="60" font-size="14" text-anchor="middle">c</text>
+            <text x="28" y="110" font-size="14" text-anchor="middle">d</text>
+            <text x="90" y="60" font-size="14" text-anchor="middle">ac</text>
+            <text x="170" y="60" font-size="14" text-anchor="middle">bc</text>
+            <text x="90" y="110" font-size="14" text-anchor="middle">ad</text>
+            <text x="170" y="110" font-size="14" text-anchor="middle">bd</text>
+          </svg>
+        explain: 横 a + b、たて c + d の長方形の面積は (a + b)(c + d) です。図のように 4 つの長方形に分けると、面積は ac、bc、ad、bd なので、(a + b)(c + d) = ac + ad + bc + bd です。c + d をひとまとまりと見て、分配法則（A-010）で a(c + d) + b(c + d)、さらに分配法則で ac + ad + bc + bd としても同じです。このように、かっこのある積を、かっこのない和の形に表すことを、式を展開するといいます。文字どうしのかけ算では、係数どうし、文字どうしをかけます。x × x = x²（A-009）なので、3x × 4x = 3 × 4 × x × x = 12x²、2x(x − 5) = 2x² − 10x です。
+      - part: 思い出す
+        text: 3(2x − 5) − 2(x − 4) を計算すると、どれになりますか。
+        choices: [4x − 7, 4x − 23, 4x + 7]
+        answer: 4x − 7
+        check: "[c for c, f in {'4x − 7': lambda x: 4 * x - 7, '4x − 23': lambda x: 4 * x - 23, '4x + 7': lambda x: 4 * x + 7}.items() if all(f(x) == 3 * (2 * x - 5) - 2 * (x - 4) for x in range(-5, 6))][0]"
+        hints:
+          - 2 つのかっこを、それぞれ分配法則で外しましょう。
+          - −2(x − 4) の − 4 には、−2 をかけます。
+          - x の項どうし、数の項どうしをまとめましょう。
+        paths:
+          - [6x − 15 − 2x + 8, 4x − 7]
+        note: −2 × (−4) を −8 として 4x − 23 としやすい（N-027）。
+      - part: 思い出す
+        text: 2³ × 2⁴ は、2 の何乗ですか。
+        answer: 7
+        check: "[k for k in range(1, 20) if 2 ** k == 2 ** 3 * 2 ** 4][0]"
+        hints:
+          - 2³ は 2 を 3 回かけた数です。
+          - 2³ × 2⁴ では、2 を全部で何回かけるでしょう。
+          - 指数どうしを足しましょう。
+        paths:
+          - [2 を 3 回と 4 回, 合わせて 7 回, 2⁷]
+      - part: 今日
+        text: 3x × (−4x) を計算すると、どれになりますか。
+        choices: [−12x², −12x, 12x²]
+        answer: −12x²
+        check: "[c for c, f in {'−12x²': lambda x: -12 * x ** 2, '−12x': lambda x: -12 * x, '12x²': lambda x: 12 * x ** 2}.items() if all(f(x) == 3 * x * (-4 * x) for x in range(-5, 6))][0]"
+        hints:
+          - 係数どうし、文字どうしを、それぞれかけましょう。
+          - 3 × (−4) の符号に気をつけましょう。
+          - x × x は、累乗で書くとどうなるでしょう。
+        paths:
+          - [3 × (−4) = −12, x × x = x², −12x²]
+        note: x × x を 2x としやすい。2x は x + x のこと。
+      - part: 今日
+        text: 2a(3a − 5b) を展開すると、どれになりますか。
+        choices: [6a² − 10ab, 6a² − 5b, 6a − 10ab]
+        answer: 6a² − 10ab
+        check: "[c for c, f in {'6a² − 10ab': lambda a, b: 6 * a ** 2 - 10 * a * b, '6a² − 5b': lambda a, b: 6 * a ** 2 - 5 * b, '6a − 10ab': lambda a, b: 6 * a - 10 * a * b}.items() if all(f(a, b) == 2 * a * (3 * a - 5 * b) for a in range(-4, 5) for b in range(-4, 5))][0]"
+        hints:
+          - 分配法則で、3a にも −5b にも 2a をかけます。
+          - 2a × 3a は、係数どうし、文字どうしをかけましょう。
+          - 2a × (−5b) の符号に気をつけましょう。
+        paths:
+          - [2a × 3a = 6a², 2a × (−5b) = −10ab, 6a² − 10ab]
+        note: 後ろの項にかけ忘れて 6a² − 5b としやすい。
+      - part: 今日
+        text: (x + 3)(y − 2) を展開すると、どれになりますか。
+        choices: [xy − 2x + 3y − 6, xy + 3y − 6, xy − 2x + 3y + 6]
+        answer: xy − 2x + 3y − 6
+        check: "[c for c, f in {'xy − 2x + 3y − 6': lambda x, y: x * y - 2 * x + 3 * y - 6, 'xy + 3y − 6': lambda x, y: x * y + 3 * y - 6, 'xy − 2x + 3y + 6': lambda x, y: x * y - 2 * x + 3 * y + 6}.items() if all(f(x, y) == (x + 3) * (y - 2) for x in range(-4, 5) for y in range(-4, 5))][0]"
+        hints:
+          - 前のかっこの x と 3 を、後ろのかっこの y と −2 に、それぞれかけます。
+          - 全部で 4 つの項ができます。
+          - 3 × (−2) の符号に気をつけましょう。
+        paths:
+          - [x × y、x × (−2)、3 × y、3 × (−2), xy − 2x + 3y − 6]
+        note: 4 つのかけ算のうち 1 つを落としやすい。面積図の 4 つの部分を思い出させる。
+      - part: 挑戦
+        text: (2x + 1)(3x − 4) を展開して同類項をまとめると、x の係数はいくつになりますか。
+        answer: −5
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda p: Fraction(p(1) - p(-1), 2))(lambda x: (2 * x + 1) * (3 * x - 4)))"
+        hints:
+          - 4 つのかけ算をして、展開しましょう。
+          - x の項は 2 つできます。
+          - 2 つの x の項をまとめましょう。
+        paths:
+          - [6x² − 8x + 3x − 4, −8x + 3x をまとめる, 6x² − 5x − 4 で係数は −5]
+    extra:
+      - part: 今日
+        text: −2x(x − 3y) を展開すると、どれになりますか。
+        choices: [−2x² + 6xy, −2x² − 6xy, −2x + 6xy]
+        answer: −2x² + 6xy
+        check: "[c for c, f in {'−2x² + 6xy': lambda x, y: -2 * x ** 2 + 6 * x * y, '−2x² − 6xy': lambda x, y: -2 * x ** 2 - 6 * x * y, '−2x + 6xy': lambda x, y: -2 * x + 6 * x * y}.items() if all(f(x, y) == -2 * x * (x - 3 * y) for x in range(-4, 5) for y in range(-4, 5))][0]"
+        hints:
+          - 分配法則で、x にも −3y にも −2x をかけます。
+          - (−2x) × (−3y) の符号は、どうなるでしょう。
+          - x × x は x² です。
+        paths:
+          - [(−2x) × x = −2x², (−2x) × (−3y) = 6xy, −2x² + 6xy]
+      - part: 今日
+        text: (a + 2)(b + 5) を展開すると、どれになりますか。
+        choices: [ab + 5a + 2b + 10, ab + 2a + 5b + 10, ab + 10]
+        answer: ab + 5a + 2b + 10
+        check: "[c for c, f in {'ab + 5a + 2b + 10': lambda a, b: a * b + 5 * a + 2 * b + 10, 'ab + 2a + 5b + 10': lambda a, b: a * b + 2 * a + 5 * b + 10, 'ab + 10': lambda a, b: a * b + 10}.items() if all(f(a, b) == (a + 2) * (b + 5) for a in range(-4, 5) for b in range(-4, 5))][0]"
+        hints:
+          - 前のかっこの a と 2 を、後ろのかっこの b と 5 に、それぞれかけます。
+          - a × 5 は 5a、2 × b は 2b です。
+          - 4 つの項を書き出しましょう。
+        paths:
+          - [ab、5a、2b、10, ab + 5a + 2b + 10]
+      - part: 挑戦
+        text: (3x − 2)(x + 4) を展開したとき、数だけの項（定数項）はいくつですか。
+        answer: −8
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((3 * 0 - 2) * (0 + 4))"
+        hints:
+          - 数だけの項は、数どうしをかけてできます。
+          - それぞれのかっこの、数の項はどれでしょう。
+          - (−2) × 4 の符号に気をつけましょう。
+        paths:
+          - [数どうしの積は (−2) × 4, −8]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: (x + a)(x + b) を展開して、乗法公式をつくってみましょう。
+        explain: (x + a)(x + b) = x² + bx + ax + ab = x² + (a + b)x + ab です。x の係数は a と b の和、数の項は a と b の積になります。たとえば (x + 3)(x + 5) = x² + 8x + 15、(x + 4)(x − 6) = x² − 2x − 24 です。b = a とすると (x + a)² = x² + 2ax + a²、a の代わりに −a とすると (x − a)² = x² − 2ax + a²、b = −a とすると (x + a)(x − a) = x² − a² です。この 4 つを乗法公式といいます。(x + a)² は x² + a² ではないことに注意します（2ax の項があります）。x の代わりに 2x や 3y のような式を入れても使えます。
+      - part: 思い出す
+        text: (x + 2)(y + 7) を展開すると、どれになりますか。
+        choices: [xy + 7x + 2y + 14, xy + 2x + 7y + 14, xy + 14]
+        answer: xy + 7x + 2y + 14
+        check: "[c for c, f in {'xy + 7x + 2y + 14': lambda x, y: x * y + 7 * x + 2 * y + 14, 'xy + 2x + 7y + 14': lambda x, y: x * y + 2 * x + 7 * y + 14, 'xy + 14': lambda x, y: x * y + 14}.items() if all(f(x, y) == (x + 2) * (y + 7) for x in range(-4, 5) for y in range(-4, 5))][0]"
+        hints:
+          - 4 つのかけ算をしましょう。
+          - x × 7 は 7x、2 × y は 2y です。
+          - 文字と係数の組み合わせを確かめましょう。
+        paths:
+          - [xy、7x、2y、14, xy + 7x + 2y + 14]
+      - part: 思い出す
+        text: (x − 4)(3x + 2) を展開して同類項をまとめると、x の係数はいくつになりますか。
+        answer: −10
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda p: Fraction(p(1) - p(-1), 2))(lambda x: (x - 4) * (3 * x + 2)))"
+        hints:
+          - 4 つのかけ算をして、展開しましょう。
+          - x の項は 2 つできます。
+          - (−4) × 3x の符号に気をつけましょう。
+        paths:
+          - [3x² + 2x − 12x − 8, 2x − 12x をまとめる, 係数は −10]
+      - part: 今日
+        text: (x + 4)(x − 7) を展開すると、どれになりますか。
+        choices: [x² − 3x − 28, x² + 3x − 28, x² − 3x + 28]
+        answer: x² − 3x − 28
+        check: "[c for c, f in {'x² − 3x − 28': lambda x: x ** 2 - 3 * x - 28, 'x² + 3x − 28': lambda x: x ** 2 + 3 * x - 28, 'x² − 3x + 28': lambda x: x ** 2 - 3 * x + 28}.items() if all(f(x) == (x + 4) * (x - 7) for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)(x + b) の公式で、a = 4、b = −7 です。
+          - x の係数は a と b の和です。
+          - 数の項は a と b の積です。符号に気をつけましょう。
+        paths:
+          - [和は 4 + (−7) = −3, 積は 4 × (−7) = −28, x² − 3x − 28]
+      - part: 今日
+        text: (x − 5)² を展開すると、どれになりますか。
+        choices: [x² − 10x + 25, x² − 25, x² − 10x − 25]
+        answer: x² − 10x + 25
+        check: "[c for c, f in {'x² − 10x + 25': lambda x: x ** 2 - 10 * x + 25, 'x² − 25': lambda x: x ** 2 - 25, 'x² − 10x − 25': lambda x: x ** 2 - 10 * x - 25}.items() if all(f(x) == (x - 5) ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (x − 5)² は (x − 5)(x − 5) のことです。
+          - (x − a)² = x² − 2ax + a² の公式を使いましょう。
+          - (−5) × (−5) の符号は、どうなるでしょう。
+        paths:
+          - [x² − 2 × 5 × x + 5², x² − 10x + 25]
+        note: x² − 25 としやすい。x = 1 を入れると (1 − 5)² = 16、1 − 25 = −24 で、ちがうことがわかる。
+      - part: 今日
+        text: (2x + 3)(2x − 3) を展開すると、どれになりますか。
+        choices: [4x² − 9, 2x² − 9, 4x² − 12x − 9]
+        answer: 4x² − 9
+        check: "[c for c, f in {'4x² − 9': lambda x: 4 * x ** 2 - 9, '2x² − 9': lambda x: 2 * x ** 2 - 9, '4x² − 12x − 9': lambda x: 4 * x ** 2 - 12 * x - 9}.items() if all(f(x) == (2 * x + 3) * (2 * x - 3) for x in range(-5, 6))][0]"
+        hints:
+          - 2x をひとまとまりと見ましょう。
+          - (a + b)(a − b) = a² − b² の公式で、a = 2x、b = 3 です。
+          - (2x)² は 2x × 2x です。
+        paths:
+          - [(2x)² − 3², 4x² − 9]
+        note: (2x)² を 2x² としやすい。係数も 2 乗する。
+      - part: 挑戦
+        text: (3x + 2y)² を展開すると、xy の係数はいくつになりますか。
+        answer: 12
+        check: "(lambda f: Fraction(f(1, 1) - f(1, -1), 2))(lambda x, y: (3 * x + 2 * y) ** 2)"
+        hints:
+          - (a + b)² = a² + 2ab + b² の公式で、a = 3x、b = 2y です。
+          - xy の項は 2ab の部分です。
+          - 2 × 3x × 2y を計算しましょう。
+        paths:
+          - [9x² + 2 × 3x × 2y + 4y², xy の項は 12xy, 係数は 12]
+    extra:
+      - part: 今日
+        text: (x + 6)² を展開すると、どれになりますか。
+        choices: [x² + 12x + 36, x² + 36, x² + 6x + 36]
+        answer: x² + 12x + 36
+        check: "[c for c, f in {'x² + 12x + 36': lambda x: x ** 2 + 12 * x + 36, 'x² + 36': lambda x: x ** 2 + 36, 'x² + 6x + 36': lambda x: x ** 2 + 6 * x + 36}.items() if all(f(x) == (x + 6) ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)² = x² + 2ax + a² の公式を使いましょう。
+          - x の係数は 2 × a です。
+          - 数の項は a の 2 乗です。
+        paths:
+          - [x² + 2 × 6 × x + 6², x² + 12x + 36]
+      - part: 今日
+        text: (a − 8)(a + 8) を展開すると、どれになりますか。
+        choices: [a² − 64, a² + 64, a² − 16a − 64]
+        answer: a² − 64
+        check: "[c for c, f in {'a² − 64': lambda a: a ** 2 - 64, 'a² + 64': lambda a: a ** 2 + 64, 'a² − 16a − 64': lambda a: a ** 2 - 16 * a - 64}.items() if all(f(a) == (a - 8) * (a + 8) for a in range(-5, 6))][0]"
+        hints:
+          - (a + b)(a − b) の形です。
+          - a の項は、−8a と 8a で消えます。
+          - 数の項は (−8) × 8 です。
+        paths:
+          - [a² + 8a − 8a − 64, a² − 64]
+      - part: 挑戦
+        text: (x − 9)(x + 4) を展開したとき、数だけの項（定数項）はいくつですか。
+        answer: −36
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((0 - 9) * (0 + 4))"
+        hints:
+          - (x + a)(x + b) の公式で、数の項は a と b の積です。
+          - a と b は、それぞれいくつでしょう。
+          - 積の符号に気をつけましょう。
+        paths:
+          - [a = −9、b = 4, 積は (−9) × 4, −36]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: x² + 7x + 12 と 3x² − 6x を、かけ算の形に表してみましょう。
+        explain: 多項式を、いくつかの式の積の形に表すことを因数分解といいます（展開の逆）。3x² − 6x は、どの項にも 3x がふくまれるので、この共通な因数 3x をかっこの外にくくり出して 3x(x − 2) です。x² + 7x + 12 は、乗法公式 x² + (a + b)x + ab を逆に使います。積が 12、和が 7 になる 2 つの数をさがすと 3 と 4 なので、x² + 7x + 12 = (x + 3)(x + 4) です。積から先にさがすと見つけやすくなります。x² − 10x + 25 = (x − 5)²、x² − 49 = (x + 7)(x − 7) のように、ほかの乗法公式も逆に使えます。共通な因数があるときは、先にくくり出します。因数分解したら、展開して元の式にもどるかを確かめます。
+      - part: 思い出す
+        text: (x − 3)(x + 8) を展開すると、どれになりますか。
+        choices: [x² + 5x − 24, x² − 5x − 24, x² + 5x + 24]
+        answer: x² + 5x − 24
+        check: "[c for c, f in {'x² + 5x − 24': lambda x: x ** 2 + 5 * x - 24, 'x² − 5x − 24': lambda x: x ** 2 - 5 * x - 24, 'x² + 5x + 24': lambda x: x ** 2 + 5 * x + 24}.items() if all(f(x) == (x - 3) * (x + 8) for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)(x + b) の公式で、a = −3、b = 8 です。
+          - x の係数は a と b の和です。
+          - 数の項は a と b の積です。
+        paths:
+          - [和は 5、積は −24, x² + 5x − 24]
+      - part: 思い出す
+        text: (2a − b)² を展開すると、どれになりますか。
+        choices: [4a² − 4ab + b², 4a² + b², 4a² − 2ab + b²]
+        answer: 4a² − 4ab + b²
+        check: "[c for c, f in {'4a² − 4ab + b²': lambda a, b: 4 * a ** 2 - 4 * a * b + b ** 2, '4a² + b²': lambda a, b: 4 * a ** 2 + b ** 2, '4a² − 2ab + b²': lambda a, b: 4 * a ** 2 - 2 * a * b + b ** 2}.items() if all(f(a, b) == (2 * a - b) ** 2 for a in range(-4, 5) for b in range(-4, 5))][0]"
+        hints:
+          - (x − y)² = x² − 2xy + y² の公式で、x = 2a、y = b です。
+          - (2a)² は 2a × 2a です。
+          - まん中の項は 2 × 2a × b です。
+        paths:
+          - [(2a)² − 2 × 2a × b + b², 4a² − 4ab + b²]
+      - part: 今日
+        text: 4a²b − 6ab² を因数分解すると、どれになりますか。
+        choices: [2ab(2a − 3b), 2ab(2a − 3), 2a(2a − 3b)]
+        answer: 2ab(2a − 3b)
+        check: "[c for c, f in {'2ab(2a − 3b)': lambda a, b: 2 * a * b * (2 * a - 3 * b), '2ab(2a − 3)': lambda a, b: 2 * a * b * (2 * a - 3), '2a(2a − 3b)': lambda a, b: 2 * a * (2 * a - 3 * b)}.items() if all(f(a, b) == 4 * a ** 2 * b - 6 * a * b ** 2 for a in range(-4, 5) for b in range(-4, 5))][0]"
+        hints:
+          - 2 つの項に共通な数と文字を、それぞれさがしましょう。
+          - 4 と 6 の最大公約数、a と a²、b と b² の共通な部分を考えます。
+          - くくり出したら、展開して元にもどるか確かめましょう。
+        paths:
+          - [共通な因数は 2ab, 4a²b ÷ 2ab = 2a、6ab² ÷ 2ab = 3b, 2ab(2a − 3b)]
+      - part: 今日
+        text: x² + 2x − 15 を因数分解すると、どれになりますか。
+        choices: [(x + 5)(x − 3), (x − 5)(x + 3), (x + 15)(x − 1)]
+        answer: (x + 5)(x − 3)
+        check: "[c for c, f in {'(x + 5)(x − 3)': lambda x: (x + 5) * (x - 3), '(x − 5)(x + 3)': lambda x: (x - 5) * (x + 3), '(x + 15)(x − 1)': lambda x: (x + 15) * (x - 1)}.items() if all(f(x) == x ** 2 + 2 * x - 15 for x in range(-5, 6))][0]"
+        hints:
+          - 積が −15、和が 2 になる 2 つの数をさがしましょう。
+          - 積が負の数なので、2 つの数の符号はちがいます。
+          - 見つけた 2 つの数で、(x + a)(x + b) の形に書きましょう。
+        paths:
+          - [積が −15 の組を書き出す, 和が 2 になるのは 5 と −3, (x + 5)(x − 3)]
+        note: 符号を逆にした (x − 5)(x + 3) を選びやすい。展開して x の係数を確かめさせる。
+      - part: 今日
+        text: x² − 12x + 36 を因数分解すると、どれになりますか。
+        choices: [(x − 6)², (x + 6)², (x + 6)(x − 6)]
+        answer: (x − 6)²
+        check: "[c for c, f in {'(x − 6)²': lambda x: (x - 6) ** 2, '(x + 6)²': lambda x: (x + 6) ** 2, '(x + 6)(x − 6)': lambda x: (x + 6) * (x - 6)}.items() if all(f(x) == x ** 2 - 12 * x + 36 for x in range(-5, 6))][0]"
+        hints:
+          - 36 は、どんな数の 2 乗でしょう。
+          - x の係数 −12 は、−6 の何倍でしょう。
+          - (x − a)² = x² − 2ax + a² の公式を逆に使いましょう。
+        paths:
+          - [36 = 6², −12 = −2 × 6, (x − 6)²]
+      - part: 挑戦
+        text: 2x² − 18 を因数分解すると、どれになりますか。
+        choices: [2(x + 3)(x − 3), (2x + 3)(x − 3), 2(x − 3)²]
+        answer: 2(x + 3)(x − 3)
+        check: "[c for c, f in {'2(x + 3)(x − 3)': lambda x: 2 * (x + 3) * (x - 3), '(2x + 3)(x − 3)': lambda x: (2 * x + 3) * (x - 3), '2(x − 3)²': lambda x: 2 * (x - 3) ** 2}.items() if all(f(x) == 2 * x ** 2 - 18 for x in range(-5, 6))][0]"
+        hints:
+          - まず、2 つの項に共通な因数をくくり出しましょう。
+          - かっこの中が、乗法公式のどれかの形になっていないか見ましょう。
+          - x² − 9 は、何かの 2 乗から何かの 2 乗をひいた形です。
+        paths:
+          - [2(x² − 9), x² − 9 = (x + 3)(x − 3), 2(x + 3)(x − 3)]
+        note: 2(x² − 9) で止めやすい。かっこの中がまだ因数分解できないかを見る。
+    extra:
+      - part: 今日
+        text: x² − 81 を因数分解すると、どれになりますか。
+        choices: [(x + 9)(x − 9), (x − 9)², (x + 81)(x − 1)]
+        answer: (x + 9)(x − 9)
+        check: "[c for c, f in {'(x + 9)(x − 9)': lambda x: (x + 9) * (x - 9), '(x − 9)²': lambda x: (x - 9) ** 2, '(x + 81)(x − 1)': lambda x: (x + 81) * (x - 1)}.items() if all(f(x) == x ** 2 - 81 for x in range(-5, 6))][0]"
+        hints:
+          - 81 は、どんな数の 2 乗でしょう。
+          - x² − 81 は、2 乗から 2 乗をひいた形です。
+          - (a + b)(a − b) = a² − b² を逆に使いましょう。
+        paths:
+          - [81 = 9², x² − 9², (x + 9)(x − 9)]
+      - part: 今日
+        text: x² − x − 20 を因数分解すると、どれになりますか。
+        choices: [(x − 5)(x + 4), (x + 5)(x − 4), (x − 10)(x + 2)]
+        answer: (x − 5)(x + 4)
+        check: "[c for c, f in {'(x − 5)(x + 4)': lambda x: (x - 5) * (x + 4), '(x + 5)(x − 4)': lambda x: (x + 5) * (x - 4), '(x − 10)(x + 2)': lambda x: (x - 10) * (x + 2)}.items() if all(f(x) == x ** 2 - x - 20 for x in range(-5, 6))][0]"
+        hints:
+          - 積が −20、和が −1 になる 2 つの数をさがしましょう。
+          - 積が負の数なので、2 つの数の符号はちがいます。
+          - 和が負の数なので、絶対値の大きいほうが負の数です。
+        paths:
+          - [積が −20 で和が −1, −5 と 4, (x − 5)(x + 4)]
+      - part: 挑戦
+        text: 3x² + 12x + 12 を因数分解すると、どれになりますか。
+        choices: [3(x + 2)², (3x + 2)², 3(x + 4)²]
+        answer: 3(x + 2)²
+        check: "[c for c, f in {'3(x + 2)²': lambda x: 3 * (x + 2) ** 2, '(3x + 2)²': lambda x: (3 * x + 2) ** 2, '3(x + 4)²': lambda x: 3 * (x + 4) ** 2}.items() if all(f(x) == 3 * x ** 2 + 12 * x + 12 for x in range(-5, 6))][0]"
+        hints:
+          - まず、3 つの項に共通な因数をくくり出しましょう。
+          - かっこの中が、乗法公式のどれかの形になっていないか見ましょう。
+          - x² + 4x + 4 の 4 は、どんな数の 2 乗でしょう。
+        paths:
+          - [3(x² + 4x + 4), x² + 4x + 4 = (x + 2)², 3(x + 2)²]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: x² + 9x + 14 を因数分解すると、どれになりますか。
+        choices: [(x + 2)(x + 7), (x + 1)(x + 14), (x − 2)(x − 7)]
+        answer: (x + 2)(x + 7)
+        check: "[c for c, f in {'(x + 2)(x + 7)': lambda x: (x + 2) * (x + 7), '(x + 1)(x + 14)': lambda x: (x + 1) * (x + 14), '(x − 2)(x − 7)': lambda x: (x - 2) * (x - 7)}.items() if all(f(x) == x ** 2 + 9 * x + 14 for x in range(-5, 6))][0]"
+        hints:
+          - 積が 14、和が 9 になる 2 つの数をさがしましょう。
+          - 積が 14 になる組を、先に書き出しましょう。
+          - 展開して、元の式にもどるか確かめましょう。
+        paths:
+          - [積が 14 の組は 1 と 14、2 と 7, 和が 9 なのは 2 と 7, (x + 2)(x + 7)]
+      - part: 思い出す
+        text: (x + 5)(x − 5) を展開すると、どれになりますか。
+        choices: [x² − 25, x² + 25, x² − 10x − 25]
+        answer: x² − 25
+        check: "[c for c, f in {'x² − 25': lambda x: x ** 2 - 25, 'x² + 25': lambda x: x ** 2 + 25, 'x² − 10x − 25': lambda x: x ** 2 - 10 * x - 25}.items() if all(f(x) == (x + 5) * (x - 5) for x in range(-5, 6))][0]"
+        hints:
+          - (a + b)(a − b) の形です。
+          - x の項は、−5x と 5x で消えます。
+          - 数の項は 5 × (−5) です。
+        paths:
+          - [x² − 5x + 5x − 25, x² − 25]
+      - part: 今日
+        text: 乗法公式を使って、51 × 49 をくふうして計算しましょう。
+        answer: 2499
+        check: "51 * 49"
+        hints:
+          - 51 = 50 + 1、49 = 50 − 1 と見ましょう。
+          - (a + b)(a − b) = a² − b² の公式を使いましょう。
+          - 50² と 1² を、それぞれ計算しましょう。
+        paths:
+          - [(50 + 1)(50 − 1), 50² − 1², 2500 − 1 = 2499]
+      - part: 今日
+        text: 乗法公式を使って、98² をくふうして計算しましょう。
+        answer: 9604
+        check: "98 ** 2"
+        hints:
+          - 98 = 100 − 2 と見ましょう。
+          - (a − b)² = a² − 2ab + b² の公式を使いましょう。
+          - 100²、2 × 100 × 2、2² を、それぞれ計算しましょう。
+        paths:
+          - [(100 − 2)², 100² − 2 × 100 × 2 + 2², 10000 − 400 + 4 = 9604]
+        note: 100² − 2² としやすい。まん中の 2ab の項を忘れない。
+      - part: わけ
+        text: (a + b)² = a² + 2ab + b² が、どんな数 a、b についても成り立つことを、分配法則を使って、筋道を立てて書きましょう。
+        explain: 例：「a、b を数とする。累乗の意味から (a + b)² = (a + b)(a + b) である。a + b をひとまとまりと見て分配法則を使うと、(a + b)(a + b) = a(a + b) + b(a + b)。もう一度分配法則を使うと a² + ab + ba + b²。かけ算の交換法則で ba = ab なので、同類項をまとめて ab + ab = 2ab。よって (a + b)² = a² + 2ab + b² である。」と書ければよい。①「〜とする」で a、b を決める、② 式を変形する、③ 約束した事実（累乗の意味、分配法則、交換法則）で結ぶ、の 3 つがそろっているかを見る。a = 2、b = 3 で 25 = 4 + 12 + 9 と確かめただけで終わっていたら、例ではすべての a、b について示せないことを話す。
+        hints:
+          - 「a、b を数とする」から書き始め、(a + b)² をかけ算の形に書きましょう。
+          - a + b をひとまとまりと見て、分配法則を 2 回使いましょう。
+          - ab と ba が同じになるわけ（交換法則）も書きましょう。
+        paths:
+          - [a、b を数とする, (a + b)² = (a + b)(a + b), 分配法則で a² + ab + ba + b², 交換法則で ba = ab、まとめて 2ab]
+      - part: わけ
+        text: 「連続する 2 つの偶数の積に 1 を足すと、その 2 つの偶数の間の奇数の 2 乗になる」ことを、文字を使って、筋道を立てて書きましょう（例：4 × 6 + 1 = 25 = 5²）。
+        explain: 例：「n を整数として、連続する 2 つの偶数を 2n、2n + 2 とする。その間の奇数は 2n + 1 である。積に 1 を足すと 2n(2n + 2) + 1 = 4n² + 4n + 1（分配法則で展開）。一方、乗法公式で (2n + 1)² = 4n² + 4n + 1。2 つは同じ式なので、2n(2n + 2) + 1 = (2n + 1)² である。よって、連続する 2 つの偶数の積に 1 を足すと、間の奇数の 2 乗になる。」と書ければよい。①「〜とする」で文字を決める、② 展開する、③ 約束した事実（偶数と奇数の表し方 A-010、乗法公式）で結ぶ、がそろっているかを見る。4n² + 4n + 1 を因数分解して (2n + 1)² としてもよい。4 × 6 + 1 = 25 のような例だけで終わっていたら、例ではすべての場合を示せないことを話す。
+        hints:
+          - 「n を整数として、連続する 2 つの偶数を 2n、2n + 2 とする」から書き始めましょう。
+          - 間の奇数を n で表し、積に 1 を足した式を展開しましょう。
+          - 展開した式が、間の奇数の 2 乗と同じになることを、乗法公式で示しましょう。
+        paths:
+          - [2n、2n + 2 とし間の奇数は 2n + 1, 2n(2n + 2) + 1 = 4n² + 4n + 1, (2n + 1)² も 4n² + 4n + 1, 同じなので成り立つ]
+      - part: わけ
+        text: 図のように、横 x + 3、たて x + 2 の長方形を 4 つに分けます。(x + 3)(x + 2) = x² + 5x + 6 となるわけを、図を使って文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="50" y="25" width="140" height="105" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <line x1="150" y1="25" x2="150" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="50" y1="95" x2="190" y2="95" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="18" font-size="14" text-anchor="middle">x</text>
+            <text x="170" y="18" font-size="14" text-anchor="middle">3</text>
+            <text x="38" y="65" font-size="14" text-anchor="middle">x</text>
+            <text x="38" y="117" font-size="14" text-anchor="middle">2</text>
+          </svg>
+        explain: 例：「長方形全体の面積は (x + 3)(x + 2)。4 つに分けると、x × x の正方形が x²、横 3・たて x の長方形が 3x、横 x・たて 2 の長方形が 2x、3 × 2 の長方形が 6 になる。3x と 2x を合わせると 5x なので、4 つの面積の和は x² + 5x + 6。全体の面積と 4 つの面積の和は等しいので、(x + 3)(x + 2) = x² + 5x + 6。」と書ければよい。「全体の面積と、分けた 4 つの面積の和は等しい」が書けているかを見る（代表の例で書くわけ ②）。x の係数 5 が 3 + 2、数の項 6 が 3 × 2 から来ていることに気づかせ、(x + a)(x + b) の公式とつなげる。
+        hints:
+          - 長方形全体の面積を、横 × たて の式で書きましょう。
+          - 分けた 4 つの長方形の面積を、それぞれ書きましょう。
+          - 4 つの面積を足したものと、全体の面積をくらべましょう。
+        paths:
+          - [全体は (x + 3)(x + 2), 4 つは x²、3x、2x、6, 和は x² + 5x + 6, 全体と等しい]
+    extra:
+      - part: 今日
+        text: 乗法公式を使って、103 × 97 をくふうして計算しましょう。
+        answer: 9991
+        check: "103 * 97"
+        hints:
+          - 103 = 100 + 3、97 = 100 − 3 と見ましょう。
+          - (a + b)(a − b) = a² − b² の公式を使いましょう。
+          - 100² と 3² を、それぞれ計算しましょう。
+        paths:
+          - [(100 + 3)(100 − 3), 100² − 3², 10000 − 9 = 9991]
+      - part: 今日
+        text: x² + 4x − 21 を因数分解すると、どれになりますか。
+        choices: [(x + 7)(x − 3), (x − 7)(x + 3), (x + 21)(x − 1)]
+        answer: (x + 7)(x − 3)
+        check: "[c for c, f in {'(x + 7)(x − 3)': lambda x: (x + 7) * (x - 3), '(x − 7)(x + 3)': lambda x: (x - 7) * (x + 3), '(x + 21)(x − 1)': lambda x: (x + 21) * (x - 1)}.items() if all(f(x) == x ** 2 + 4 * x - 21 for x in range(-5, 6))][0]"
+        hints:
+          - 積が −21、和が 4 になる 2 つの数をさがしましょう。
+          - 積が負の数なので、2 つの数の符号はちがいます。
+          - 和が正の数なので、絶対値の大きいほうが正の数です。
+        paths:
+          - [積が −21 で和が 4, 7 と −3, (x + 7)(x − 3)]
+      - part: 挑戦
+        text: 乗法公式を使って、65² − 35² をくふうして計算しましょう。
+        answer: 3000
+        check: "65 ** 2 - 35 ** 2"
+        hints:
+          - a² − b² の形をしています。
+          - a² − b² = (a + b)(a − b) と因数分解しましょう。
+          - 65 + 35 と 65 − 35 を、それぞれ計算しましょう。
+        paths:
+          - [(65 + 35)(65 − 35), 100 × 30, 3000]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: x = −3 のとき、2x² − 5x の値はいくつですか。
+        answer: 33
+        check: "2 * (-3) ** 2 - 5 * (-3)"
+        hints:
+          - 負の数を代入するときは、かっこをつけましょう。
+          - (−3)² は (−3) × (−3) です。
+          - −5 × (−3) の符号に気をつけましょう。
+        paths:
+          - [2 × (−3)² − 5 × (−3), 2 × 9 + 15, 33]
+        note: −3² と書いて −9 にしやすい。(−3)² = 9。
+      - part: 思い出す
+        text: (2³)² は、2 の何乗ですか。
+        answer: 6
+        check: "[k for k in range(1, 20) if 2 ** k == (2 ** 3) ** 2][0]"
+        hints:
+          - (2³)² は 2³ × 2³ のことです。
+          - 2 を全部で何回かけるでしょう。
+          - 指数どうしをかけましょう。
+        paths:
+          - [2³ × 2³, 2 を 3 + 3 回かける, 2⁶]
+      - part: 今日
+        text: x = 97 のとき、x² + 6x + 9 の値はいくつですか。くふうして計算しましょう。
+        answer: 10000
+        check: "97 ** 2 + 6 * 97 + 9"
+        hints:
+          - x² + 6x + 9 を、先に因数分解しましょう。
+          - 9 は 3 の 2 乗で、6 は 2 × 3 です。
+          - 因数分解した式に、x = 97 を代入しましょう。
+        paths:
+          - [x² + 6x + 9 = (x + 3)², (97 + 3)², 100² = 10000]
+        note: そのまま代入すると 97² の計算が大変。式の形を変えてから代入するよさに気づかせる。
+      - part: 今日
+        text: (x + 3)² − (x + 1)(x − 1) を計算すると、どれになりますか。
+        choices: [6x + 10, 6x + 8, 2x² + 6x + 10]
+        answer: 6x + 10
+        check: "[c for c, f in {'6x + 10': lambda x: 6 * x + 10, '6x + 8': lambda x: 6 * x + 8, '2x² + 6x + 10': lambda x: 2 * x ** 2 + 6 * x + 10}.items() if all(f(x) == (x + 3) ** 2 - (x + 1) * (x - 1) for x in range(-5, 6))][0]"
+        hints:
+          - 2 つの積を、それぞれ乗法公式で展開しましょう。
+          - (x + 1)(x − 1) を展開した式全体をひくので、かっこをつけます。
+          - −(x² − 1) のかっこを外すと、符号はどうなるでしょう。
+        paths:
+          - [x² + 6x + 9 − (x² − 1), x² + 6x + 9 − x² + 1, 6x + 10]
+        note: −(x² − 1) を −x² − 1 として 6x + 8 としやすい（A-010）。
+      - part: 今日
+        text: x²y − 9y を因数分解すると、どれになりますか。
+        choices: [y(x + 3)(x − 3), y(x − 3)², (xy + 3)(x − 3)]
+        answer: y(x + 3)(x − 3)
+        check: "[c for c, f in {'y(x + 3)(x − 3)': lambda x, y: y * (x + 3) * (x - 3), 'y(x − 3)²': lambda x, y: y * (x - 3) ** 2, '(xy + 3)(x − 3)': lambda x, y: (x * y + 3) * (x - 3)}.items() if all(f(x, y) == x ** 2 * y - 9 * y for x in range(-4, 5) for y in range(-4, 5))][0]"
+        hints:
+          - まず、2 つの項に共通な因数をくくり出しましょう。
+          - かっこの中が、乗法公式のどれかの形になっていないか見ましょう。
+          - x² − 9 は、2 乗から 2 乗をひいた形です。
+        paths:
+          - [y(x² − 9), x² − 9 = (x + 3)(x − 3), y(x + 3)(x − 3)]
+      - part: 挑戦
+        text: a + b = 7、ab = 10 のとき、a² + b² の値はいくつですか。
+        answer: 29
+        check: "[a * a + b * b for a in range(-20, 21) for b in range(-20, 21) if a + b == 7 and a * b == 10][0]"
+        hints:
+          - (a + b)² を展開すると、どんな式になるでしょう。
+          - (a + b)² の中に、a² + b² がふくまれています。
+          - (a + b)² から 2ab をひきましょう。
+        paths:
+          - [(a + b)² = a² + 2ab + b², a² + b² = (a + b)² − 2ab, 49 − 20 = 29]
+          - [和 7、積 10 の 2 数は 2 と 5, 4 + 25 = 29]
+        note: 2 本目の道で答えは出るが、a、b が整数でないときにも使えるのは 1 本目の道。
+    extra:
+      - part: 今日
+        text: 乗法公式を使って、99 × 101 をくふうして計算しましょう。
+        answer: 9999
+        check: "99 * 101"
+        hints:
+          - 99 と 101 を、100 を使って表しましょう。
+          - (a + b)(a − b) = a² − b² の公式を使いましょう。
+          - 100² と 1² を、それぞれ計算しましょう。
+        paths:
+          - [(100 − 1)(100 + 1), 100² − 1², 9999]
+      - part: 今日
+        text: (2x − 1)² − 4x² を計算すると、どれになりますか。
+        choices: [−4x + 1, 1, −4x − 1]
+        answer: −4x + 1
+        check: "[c for c, f in {'−4x + 1': lambda x: -4 * x + 1, '1': lambda x: 1, '−4x − 1': lambda x: -4 * x - 1}.items() if all(f(x) == (2 * x - 1) ** 2 - 4 * x ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (2x − 1)² を、乗法公式で展開しましょう。
+          - (2x)² は 4x² です。
+          - 展開してから、4x² をひきましょう。
+        paths:
+          - [4x² − 4x + 1 − 4x², −4x + 1]
+      - part: 挑戦
+        text: x + y = 5、x − y = 3 のとき、x² − y² の値はいくつですか。
+        answer: 15
+        check: "[x * x - y * y for x in range(-20, 21) for y in range(-20, 21) if x + y == 5 and x - y == 3][0]"
+        hints:
+          - x² − y² を因数分解しましょう。
+          - 因数分解した式は、x + y と x − y の積です。
+          - わかっている値を代入しましょう。
+        paths:
+          - [x² − y² = (x + y)(x − y), 5 × 3, 15]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: −3a(2a − 4b) を展開すると、どれになりますか。
+        choices: [−6a² + 12ab, −6a² − 12ab, −6a + 12ab]
+        answer: −6a² + 12ab
+        check: "[c for c, f in {'−6a² + 12ab': lambda a, b: -6 * a ** 2 + 12 * a * b, '−6a² − 12ab': lambda a, b: -6 * a ** 2 - 12 * a * b, '−6a + 12ab': lambda a, b: -6 * a + 12 * a * b}.items() if all(f(a, b) == -3 * a * (2 * a - 4 * b) for a in range(-4, 5) for b in range(-4, 5))][0]"
+        hints:
+          - 分配法則で、2a にも −4b にも −3a をかけます。
+          - (−3a) × (−4b) の符号は、どうなるでしょう。
+          - a × a は a² です。
+        paths:
+          - [(−3a) × 2a = −6a², (−3a) × (−4b) = 12ab, −6a² + 12ab]
+      - part: 今日
+        text: (x + 2)(y − 5) を展開すると、どれになりますか。
+        choices: [xy − 5x + 2y − 10, xy − 10, xy − 5x + 2y + 10]
+        answer: xy − 5x + 2y − 10
+        check: "[c for c, f in {'xy − 5x + 2y − 10': lambda x, y: x * y - 5 * x + 2 * y - 10, 'xy − 10': lambda x, y: x * y - 10, 'xy − 5x + 2y + 10': lambda x, y: x * y - 5 * x + 2 * y + 10}.items() if all(f(x, y) == (x + 2) * (y - 5) for x in range(-4, 5) for y in range(-4, 5))][0]"
+        hints:
+          - 4 つのかけ算をしましょう。
+          - x × (−5) と 2 × y を忘れないようにしましょう。
+          - 2 × (−5) の符号に気をつけましょう。
+        paths:
+          - [xy、−5x、2y、−10, xy − 5x + 2y − 10]
+      - part: 今日
+        text: (x − 6)(x + 2) を展開すると、どれになりますか。
+        choices: [x² − 4x − 12, x² + 4x − 12, x² − 4x + 12]
+        answer: x² − 4x − 12
+        check: "[c for c, f in {'x² − 4x − 12': lambda x: x ** 2 - 4 * x - 12, 'x² + 4x − 12': lambda x: x ** 2 + 4 * x - 12, 'x² − 4x + 12': lambda x: x ** 2 - 4 * x + 12}.items() if all(f(x) == (x - 6) * (x + 2) for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)(x + b) の公式で、a = −6、b = 2 です。
+          - x の係数は a と b の和です。
+          - 数の項は a と b の積です。
+        paths:
+          - [和は −4、積は −12, x² − 4x − 12]
+      - part: 今日
+        text: (x + 7)² を展開すると、どれになりますか。
+        choices: [x² + 14x + 49, x² + 49, x² + 7x + 49]
+        answer: x² + 14x + 49
+        check: "[c for c, f in {'x² + 14x + 49': lambda x: x ** 2 + 14 * x + 49, 'x² + 49': lambda x: x ** 2 + 49, 'x² + 7x + 49': lambda x: x ** 2 + 7 * x + 49}.items() if all(f(x) == (x + 7) ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (x + a)² = x² + 2ax + a² の公式を使いましょう。
+          - x の係数は 2 × a です。
+          - 数の項は a の 2 乗です。
+        paths:
+          - [x² + 2 × 7 × x + 7², x² + 14x + 49]
+      - part: 今日
+        text: (3a + 4)(3a − 4) を展開すると、どれになりますか。
+        choices: [9a² − 16, 3a² − 16, 9a² − 24a − 16]
+        answer: 9a² − 16
+        check: "[c for c, f in {'9a² − 16': lambda a: 9 * a ** 2 - 16, '3a² − 16': lambda a: 3 * a ** 2 - 16, '9a² − 24a − 16': lambda a: 9 * a ** 2 - 24 * a - 16}.items() if all(f(a) == (3 * a + 4) * (3 * a - 4) for a in range(-5, 6))][0]"
+        hints:
+          - 3a をひとまとまりと見ましょう。
+          - (x + y)(x − y) = x² − y² の公式で、x = 3a、y = 4 です。
+          - (3a)² は 3a × 3a です。
+        paths:
+          - [(3a)² − 4², 9a² − 16]
+      - part: 今日
+        text: 6x² − 9x を因数分解すると、どれになりますか。
+        choices: [3x(2x − 3), 3x(2x − 9), 3(2x² − 3)]
+        answer: 3x(2x − 3)
+        check: "[c for c, f in {'3x(2x − 3)': lambda x: 3 * x * (2 * x - 3), '3x(2x − 9)': lambda x: 3 * x * (2 * x - 9), '3(2x² − 3)': lambda x: 3 * (2 * x ** 2 - 3)}.items() if all(f(x) == 6 * x ** 2 - 9 * x for x in range(-5, 6))][0]"
+        hints:
+          - 2 つの項に共通な数と文字を、それぞれさがしましょう。
+          - 6 と 9 の最大公約数と、x² と x の共通な部分を考えます。
+          - くくり出したら、展開して元にもどるか確かめましょう。
+        paths:
+          - [共通な因数は 3x, 6x² ÷ 3x = 2x、9x ÷ 3x = 3, 3x(2x − 3)]
+      - part: 今日
+        text: x² − 5x − 14 を因数分解すると、どれになりますか。
+        choices: [(x − 7)(x + 2), (x + 7)(x − 2), (x − 14)(x + 1)]
+        answer: (x − 7)(x + 2)
+        check: "[c for c, f in {'(x − 7)(x + 2)': lambda x: (x - 7) * (x + 2), '(x + 7)(x − 2)': lambda x: (x + 7) * (x - 2), '(x − 14)(x + 1)': lambda x: (x - 14) * (x + 1)}.items() if all(f(x) == x ** 2 - 5 * x - 14 for x in range(-5, 6))][0]"
+        hints:
+          - 積が −14、和が −5 になる 2 つの数をさがしましょう。
+          - 積が負の数なので、2 つの数の符号はちがいます。
+          - 展開して、元の式にもどるか確かめましょう。
+        paths:
+          - [積が −14 で和が −5, −7 と 2, (x − 7)(x + 2)]
+      - part: 今日
+        text: 乗法公式を使って、49² をくふうして計算しましょう。
+        answer: 2401
+        check: "49 ** 2"
+        hints:
+          - 49 = 50 − 1 と見ましょう。
+          - (a − b)² = a² − 2ab + b² の公式を使いましょう。
+          - 50²、2 × 50 × 1、1² を、それぞれ計算しましょう。
+        paths:
+          - [(50 − 1)², 2500 − 100 + 1, 2401]
+    extra:
+      - part: 今日
+        text: x² + 10x + 25 を因数分解すると、どれになりますか。
+        choices: [(x + 5)², (x + 5)(x − 5), (x + 25)(x + 1)]
+        answer: (x + 5)²
+        check: "[c for c, f in {'(x + 5)²': lambda x: (x + 5) ** 2, '(x + 5)(x − 5)': lambda x: (x + 5) * (x - 5), '(x + 25)(x + 1)': lambda x: (x + 25) * (x + 1)}.items() if all(f(x) == x ** 2 + 10 * x + 25 for x in range(-5, 6))][0]"
+        hints:
+          - 25 は、どんな数の 2 乗でしょう。
+          - x の係数 10 は、その数の何倍でしょう。
+          - (x + a)² = x² + 2ax + a² を逆に使いましょう。
+        paths:
+          - [25 = 5²、10 = 2 × 5, (x + 5)²]
+      - part: 今日
+        text: (x − 4)² を展開すると、どれになりますか。
+        choices: [x² − 8x + 16, x² − 16, x² + 8x + 16]
+        answer: x² − 8x + 16
+        check: "[c for c, f in {'x² − 8x + 16': lambda x: x ** 2 - 8 * x + 16, 'x² − 16': lambda x: x ** 2 - 16, 'x² + 8x + 16': lambda x: x ** 2 + 8 * x + 16}.items() if all(f(x) == (x - 4) ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (x − a)² = x² − 2ax + a² の公式を使いましょう。
+          - x の係数は −2 × a です。
+          - 数の項は a の 2 乗で、正の数です。
+        paths:
+          - [x² − 2 × 4 × x + 4², x² − 8x + 16]
+      - part: 今日
+        text: 乗法公式を使って、102² をくふうして計算しましょう。
+        answer: 10404
+        check: "102 ** 2"
+        hints:
+          - 102 = 100 + 2 と見ましょう。
+          - (a + b)² = a² + 2ab + b² の公式を使いましょう。
+          - 100²、2 × 100 × 2、2² を、それぞれ計算しましょう。
+        paths:
+          - [(100 + 2)², 10000 + 400 + 4, 10404]

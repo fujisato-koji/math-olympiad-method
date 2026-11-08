@@ -722,12 +722,12 @@ units:
   - {id: N-030, title: 素数の性質, stage: 4, level: 3, region: seisu, needs: [N-021, L-011, N-029], days: 6}
   - {id: N-031, title: 平方数の性質, stage: 4, level: 3, region: seisu, needs: [N-028, A-015], days: 5}
   - {id: A-010, title: 文字と式（□から文字へ）, stage: 4, level: 2, region: houteishiki, needs: [A-002, N-015, N-010, A-003, N-019, N-027, A-009, N-009], days: 8}
-  - {id: A-011, title: 1 次方程式（つり合いで解く）, stage: 4, level: 2, region: houteishiki, needs: [A-010, A-001, N-027, A-005, N-077], days: 8}
+  - {id: A-011, title: 1 次方程式（つり合いで解く）, stage: 4, level: 2, region: houteishiki, needs: [A-010, A-001, N-027, A-005, N-077, G-046], days: 8}
   - {id: A-012, title: 連立方程式, stage: 4, level: 2, region: houteishiki, needs: [A-011], days: 6}
   - {id: A-013, title: 不等式の性質と 1 次不等式, stage: 4, level: 2, region: houteishiki, needs: [A-011, N-027, N-011], days: 6}
   - {id: A-014, title: 文章題を方程式にする（和差、つるかめ、過不足、植木）, stage: 4, level: 2, region: houteishiki, needs: [A-012, A-003], days: 8, measure: true}
   - {id: A-015, title: 展開と因数分解, stage: 4, level: 2, region: shiki, needs: [A-010, N-027, A-009], days: 6}
-  - {id: A-016, title: 平方根, stage: 4, level: 2, region: shiki, needs: [A-015, N-021, A-009], days: 5}
+  - {id: A-016, title: 平方根, stage: 4, level: 2, region: shiki, needs: [A-015, N-021, A-009, N-020], days: 5}
   - {id: A-017, title: 2 次方程式, stage: 4, level: 2, region: shiki, needs: [A-015, A-016], days: 6}
   - {id: A-018, title: Σ と和の変形, stage: 4, level: 2, region: shiki, needs: [A-004, A-010, A-015], days: 6}
   - {id: C-013, title: 区別と重複のある数え方, stage: 4, level: 2, region: kazoekata, needs: [C-007], days: 6}
@@ -743,7 +743,7 @@ units:
   - {id: G-021, title: 空間図形, stage: 4, level: 3, region: katachi, needs: [G-019, G-014], days: 6}
   - {id: G-022, title: 作図（定規とコンパス）, stage: 4, level: 3, region: shomei-zukei, needs: [G-017], days: 5}
   - {id: G-023, title: 角度の追跡と内接四角形, stage: 4, level: 3, region: hakaru, needs: [G-018], days: 16}
-  - {id: L-011, title: 背理法, stage: 4, level: 3, region: ronpo, needs: [L-013], days: 7}
+  - {id: L-011, title: 背理法, stage: 4, level: 3, region: ronpo, needs: [L-013, A-016], days: 7}
   - {id: L-012, title: 数学的帰納法の入口, stage: 4, level: 3, region: ronpo, needs: [A-004, A-010], days: 12}
   - {id: L-013, title: 命題と条件（必要条件と十分条件）, stage: 4, level: 3, region: ronpo, needs: [L-008, A-010, A-013], days: 5}
   - {id: L-014, title: 極端なものに着目する, stage: 4, level: 3, region: ronpo, needs: [L-011], days: 10}
