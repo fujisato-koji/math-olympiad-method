@@ -1876,11 +1876,11 @@
     const restB = LB.filter(([pb]) => !takenB.has(pb));
     restA.forEach(([pa, x]) => {
       const i = restB.findIndex(([, y]) => y.name === x.name);
-      if (i < 0) { profiles[pa] = x; return; }
+      if (i < 0) { profiles[pa] = mergeProfile(x, x); return; }
       const [pb, y] = restB.splice(i, 1)[0], id = pa < pb ? pa : pb;
       profiles[id] = mergeProfile(x, y); alias[pa] = alias[pb] = id;
     });
-    restB.forEach(([pb, y]) => { profiles[pb] = y; });
+    restB.forEach(([pb, y]) => { profiles[pb] = mergeProfile(y, y); });  // 片方にしかいない人も、同じ形にそろえる
     if (!Object.keys(profiles).length) profiles[newPid()] = newProfile('1 人目');
     Object.values(profiles).forEach(pr => migrate(pr.rec));
     const cur = alias[a.current] || a.current;
@@ -2003,6 +2003,9 @@
     await driveSync(true);
     familyChip();
   }
+  // 中身が同じかを比べる：キーの並びをそろえ、どの人を選んでいるか（端末ごとに違う）は除く
+  const canon = s => JSON.stringify(s, (k, v) => v && typeof v === 'object' && !Array.isArray(v) ? Object.fromEntries(Object.keys(v).sort().map(x => [x, v[x]])) : v);
+  const sameStore = (a, b) => !!a && !!b && canon({ ...a, current: 0 }) === canon({ ...b, current: 0 });
   // 合わせる：ドライブから読み、端末の記録と合わせ、合わせたものを端末とドライブの両方に置く。
   // interactive は、ボタンを押したとき（ログインが切れていれば Google の確認の窓を開く）
   async function driveSync(interactive) {
@@ -2021,7 +2024,9 @@
         progress = store.profiles[store.current].rec;
         save(STORE_KEY, store);
       }
-      await DriveSync.push(store);
+      // ドライブの中身と同じなら書き戻さない（1 分ごとに読みにいくので、D-056）
+      // ドライブの中身も同じ合わせ方で形をそろえてから比べる（形だけの違いで書き戻さないように）
+      if (!remote || !remote.profiles || !sameStore(store, mergeStore(remote, remote))) await DriveSync.push(store);
       if (!drive.who) { const u = await DriveSync.who(); if (u) drive.who = u.emailAddress || u.displayName || ''; }
       drive.on = true; drive.at = new Date().toLocaleString('sv-SE').slice(0, 16); save(DRIVE_KEY, drive);
       driveState = 'ok';
@@ -2091,6 +2096,11 @@
       DriveSync.signOut(); drive.on = false; drive.who = ''; save(DRIVE_KEY, drive); driveState = 'off'; driveChip();
     });
     document.addEventListener('visibilitychange', () => { if (document.hidden && driveState === 'wait') { clearTimeout(driveTimer); driveSync(false); } });
+    // 開いているあいだは 1 分ごとに、ほかのアプリやタブから戻ったときはすぐに、ドライブを読みにいく（D-056、施主「1 分とか」）。
+    // 送る前の変更があるとき（wait）は、そちらの送りに任せる
+    const drivePoll = () => { if (drive.on && !document.hidden && window.DriveSync && DriveSync.valid() && !driveBusy && driveState !== 'wait') driveSync(false); };
+    setInterval(drivePoll, 60000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) drivePoll(); });
     onPersist = driveDirty;
   }
   driveChip();
