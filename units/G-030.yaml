@@ -1,0 +1,970 @@
+# G-030 方べきの定理
+#
+# 書き方は N-001 の頭の注のとおり。
+# 方べきの定理：点 P を通る 2 本の直線が円と A、B と C、D で交わるとき PA × PB = PC × PD（P が円の中でも外でも）。
+#   接線のとき（T は接点）PT × PT = PA × PB。逆：PA × PB = PC × PD なら 4 点 A、B、C、D は 1 つの円の上にある。
+# 前提は G-018（円周角の定理とその逆、直径に対する円周角）と G-020（相似の条件、相似比、平行線と線分の比）。
+#   接線が接点を通る半径に垂直なこと、接線の長さが等しいこと、接弦定理は G-054 で扱う（作ったときは G-018 で扱うものとして使った。
+#   G-018 は接線を扱わないので、2026-11-08 に G-054 を足して前提にした）。
+# 作ったときは三平方の定理（G-019）と平方根（A-016）が前提になかった（2026-11-08 に前提に足した）。PT を求める問題は PT × PT が平方数（36、64、144 など）になる値にし、
+#   「2 回かけると 36 になる数」として求める。中心からの距離は、P を通る直径を 2 本目の弦とみて
+#   (半径 − OP) × (半径 + OP) で扱い、三平方の定理は使わない。
+# 2 次方程式（A-017）も前提にないので、PA と PB の和と積から求める問題は、かけて 18、たして 11 になる整数の組を探す形にした。
+# 文字の式（A-010）も前提にないので、未知の長さは文字で置かず「PD = 24 ÷ 3」のように積と商で求める。
+#   わけの日だけ、相似比を k と置いて「PA は PD の k 倍」と書く。
+# 根軸と 2 つの円（G-032）、円に内接する四角形の性質（G-023）、三角形の五心（G-028）は先取りしない。
+# 長さの単位は cm。図の円の上の点は、問題の長さのとおりに作図した（地平線の図だけは高さを大きくかいた）。
+# D-026：6 日目の挑戦の「地平線までの距離」は、電波塔や人工衛星からどこまで見通せるかを見積もる式と同じ形。
+# 地図に plan がないので既定の並び（導入・練習 5 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 円の中で交わる 2 本の弦　2 日目 円の外の点からの 2 本の直線（割線）　3 日目 接線と割線
+#   4 日目 直径を使う（半径と中心からの距離）、弓形の高さから半径　5 日目 方べきの定理の逆（4 点が 1 つの円の上にあるか）
+#   6 日目 P を通るどの直線でも積は同じ、和と積から長さ、地平線　7 日目 わけ（相似で示す 3 つの場合）
+#   8 日目 G-018（円周角）・G-020（相似）と混ぜる　9 日目 確認
+# check：長さは積と商の式（Fraction）、PT は math.isqrt。同じ円の上にあるかを選ぶ問題は、積をくらべる式。
+#   和と積から求める問題は、1 から順に試す式。地平線は math.sqrt で近い選択肢を選ぶ式。
+
+id: G-030
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 円の 2 本の弦 AB と CD が、点 P で交わっています。PA = 4 cm、PB = 6 cm、PC = 3 cm、PD = 8 cm です。PA × PB と PC × PD をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.3" y1="89.1" x2="106.7" y2="19.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.1" y1="42.4" x2="89.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="129.7" y="65.6" font-size="14" text-anchor="middle">P</text><text x="178.6" y="98.1" font-size="14" text-anchor="middle">A</text><text x="98.9" y="16.8" font-size="14" text-anchor="middle">B</text><text x="173.4" y="41.5" font-size="14" text-anchor="middle">C</text><text x="82.7" y="125.7" font-size="14" text-anchor="middle">D</text><text x="162.4" y="73.8" font-size="12" text-anchor="middle">4</text><text x="131.6" y="39" font-size="12" text-anchor="middle">6</text><text x="161.4" y="60.9" font-size="12" text-anchor="middle">3</text><text x="122.3" y="97.1" font-size="12" text-anchor="middle">8</text></svg>'
+        explain: PA × PB = 4 × 6 = 24、PC × PD = 3 × 8 = 24 で、等しくなります。円の 2 本の弦 AB、CD が点 P で交わるとき、いつも PA × PB = PC × PD が成り立ちます。これを方べきの定理といいます（わけは 7 日目）。長さは、どれも交わる点 P から測ります。4 つの長さのうち 3 つがわかれば、残りの 1 つは「積が等しい」ことから求められます。たとえば PD がわからなければ、3 × PD = 24 なので PD = 24 ÷ 3 = 8 cm です。
+      - part: 思い出す
+        text: 円 O で、∠BOC = 110° です。弧 BC に対する円周角 ∠BAC は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="77.4" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="162.6" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="77.4" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="162.6" y2="99.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M108.5 78 A14 14 0 0 0 131.5 78" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="101.2" font-size="12" text-anchor="middle">110°</text><path d="M103.3 37.3 A20 20 0 0 0 121.7 35.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="102" y="17.4" font-size="14" text-anchor="middle">A</text><text x="68.4" y="111" font-size="14" text-anchor="middle">B</text><text x="171.6" y="111" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 55
+        check: "110 // 2"
+        hints:
+          - 円周角は、同じ弧に対する中心角とどんな関係だったかな。
+          - 円周角は、中心角の何分の 1 かな。
+          - 110° をその分だけに分けよう。
+        paths:
+          - [円周角は中心角の半分, 110 ÷ 2 = 55, 55°]
+      - part: 思い出す
+        text: △ABC ∽ △DEF です。AB = 6 cm、DE = 9 cm、BC = 8 cm のとき、EF は何 cm ですか。
+        answer: 12
+        check: "Fraction(8 * 9, 6)"
+        hints:
+          - 相似な図形では、対応する辺の比が等しいね。
+          - AB:DE を簡単な比にしよう。
+          - BC:EF も同じ比になるよ。
+        paths:
+          - [AB:DE = 6:9 = 2:3, BC:EF = 2:3, EF = 8 × 3/2 = 12, 12 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 5 cm、PB = 6 cm、PC = 3 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.6" y1="22.2" x2="80.8" y2="104.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.4" y1="63.3" x2="166.4" y2="46.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="83.5" y="56.4" font-size="14" text-anchor="middle">P</text><text x="95.2" y="17" font-size="14" text-anchor="middle">A</text><text x="72.5" y="116.3" font-size="14" text-anchor="middle">B</text><text x="57.5" y="66.8" font-size="14" text-anchor="middle">C</text><text x="176.2" y="46.5" font-size="14" text-anchor="middle">D</text><text x="103.7" y="46.9" font-size="12" text-anchor="middle">5</text><text x="77.5" y="84.1" font-size="12" text-anchor="middle">6</text><text x="81.2" y="74.1" font-size="12" text-anchor="middle">3</text><text x="127.3" y="48.7" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 10
+        check: "Fraction(5 * 6, 3)"
+        hints:
+          - 方べきの定理 PA × PB = PC × PD を使おう。
+          - PA × PB を先に計算しよう。
+          - 3 × PD がその数になるような PD を求めよう。
+        paths:
+          - [PA × PB = 5 × 6 = 30, 3 × PD = 30, PD = 30 ÷ 3 = 10, 10 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 8 cm、PB = 3 cm、PD = 4 cm のとき、PC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="122.4" y1="18.1" x2="80.3" y2="103.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="122.9" y1="121.9" x2="71" y2="52.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="80.8" y="86.2" font-size="14" text-anchor="middle">P</text><text x="130.5" y="15.5" font-size="14" text-anchor="middle">A</text><text x="71.9" y="115.6" font-size="14" text-anchor="middle">B</text><text x="115.6" y="135" font-size="14" text-anchor="middle">C</text><text x="60.7" y="53.7" font-size="14" text-anchor="middle">D</text><text x="99.4" y="49.6" font-size="12" text-anchor="middle">8</text><text x="92.8" y="101.8" font-size="12" text-anchor="middle">3</text><text x="88.3" y="65.4" font-size="12" text-anchor="middle">4</text><text x="103" y="113.8" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 6
+        check: "Fraction(8 * 3, 4)"
+        hints:
+          - わかっている長さを PA × PB = PC × PD にあてはめよう。
+          - 左の積 PA × PB はいくつかな。
+          - PC × 4 がその数になる PC を求めよう。
+        paths:
+          - [PA × PB = 8 × 3 = 24, PC × 4 = 24, PC = 24 ÷ 4 = 6, 6 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 2 cm、PB = 12 cm、PC = 3 cm のとき、弦 CD の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="117" y1="18.1" x2="90.5" y2="112.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="93.1" y1="25.5" x2="167.1" y2="47.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="122.9" y="31.2" font-size="14" text-anchor="middle">P</text><text x="108.8" y="15.7" font-size="14" text-anchor="middle">A</text><text x="84.3" y="126.8" font-size="14" text-anchor="middle">B</text><text x="87.3" y="21" font-size="14" text-anchor="middle">C</text><text x="177" y="48.1" font-size="14" text-anchor="middle">D</text><text x="90.1" y="73.1" font-size="12" text-anchor="middle">12</text><text x="100.7" y="41" font-size="12" text-anchor="middle">3</text></svg>'
+        answer: 11
+        check: "3 + Fraction(2 * 12, 3)"
+        hints:
+          - まず PD を求めよう。
+          - CD は、PC と PD を合わせた長さだね。
+          - PD を求めたら、PC を足そう。
+        paths:
+          - [PA × PB = 24, PD = 24 ÷ 3 = 8, CD = 3 + 8 = 11, 11 cm]
+        note: PD を答えにしてしまいやすい。問われているのが弦全体か、P から先の部分かを読ませる。
+      - part: 挑戦
+        text: 円の弦 AB と CD が点 P で交わり、P は CD のまん中の点です。PA = 1 cm、PB = 9 cm のとき、CD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="148.9" y1="26.7" x2="72.6" y2="91.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.3" y1="18.2" x2="167.2" y2="48.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="142.2" y="49.1" font-size="14" text-anchor="middle">P</text><text x="155" y="22.5" font-size="14" text-anchor="middle">A</text><text x="62.6" y="100.9" font-size="14" text-anchor="middle">B</text><text x="106.8" y="16.1" font-size="14" text-anchor="middle">C</text><text x="177.2" y="48.5" font-size="14" text-anchor="middle">D</text><text x="101.4" y="60" font-size="12" text-anchor="middle">9</text><line x1="130.7" y1="21.4" x2="125.7" y2="30" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="151.7" y1="45" x2="156.7" y2="36.4" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 6
+        check: "2 * math.isqrt(1 * 9)"
+        hints:
+          - PC と PD は同じ長さだね。
+          - PC × PC は、PA × PB と同じ数になるよ。
+          - 2 回かけて PA × PB になる数を考えよう。
+        paths:
+          - [PC × PD = PA × PB = 9, PC = PD なので PC × PC = 9, PC = 3, CD = 3 × 2 = 6, 6 cm]
+        note: PC × PC = 9 から PC を求めるのは「2 回かけて 9 になる数」を探すこと。平方根（A-016）はまだ使わない。
+    extra:
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 6 cm、PB = 4 cm、PC = 8 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.7" y1="25.7" x2="94.6" y2="115.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.7" y1="99.7" x2="68" y2="71.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="105" y="75.9" font-size="14" text-anchor="middle">P</text><text x="86.9" y="21.3" font-size="14" text-anchor="middle">A</text><text x="89.2" y="129.9" font-size="14" text-anchor="middle">B</text><text x="171.7" y="110.9" font-size="14" text-anchor="middle">C</text><text x="57" y="77.3" font-size="14" text-anchor="middle">D</text><text x="84.7" y="57" font-size="12" text-anchor="middle">6</text><text x="85.6" y="99" font-size="12" text-anchor="middle">4</text><text x="125.8" y="102.1" font-size="12" text-anchor="middle">8</text><text x="78.5" y="88.2" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 3
+        check: "Fraction(6 * 4, 8)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 8 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 24, 8 × PD = 24, PD = 3, 3 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 9 cm、PB = 2 cm、PD = 3 cm のとき、PC は何 cm ですか。
+        answer: 6
+        check: "Fraction(9 * 2, 3)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - PC × 3 がその数になる PC を求めよう。
+        paths:
+          - [PA × PB = 18, PC × 3 = 18, PC = 6, 6 cm]
+      - part: 挑戦
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 4 cm、PB = 5 cm、PC = 6 cm のとき、PD は何 cm ですか。分数で答えましょう。
+        answer: 10/3
+        check: "Fraction(4 * 5, 6)"
+        hints:
+          - PA × PB はいくつかな。
+          - 6 × PD がその数になる PD を求めよう。
+          - わりきれないときは、分数で表そう。約分も忘れずに。
+        paths:
+          - [PA × PB = 20, PD = 20 ÷ 6 = 20/6, 約分して 10/3, 10/3 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 円の外の点 P から 2 本の直線をひきます。1 本は円と A、B で、もう 1 本は C、D で交わります。PA = 4 cm、AB = 5 cm、PC = 3 cm、CD = 9 cm です。PA × PB と PC × PD をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="129" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59" y1="79.8" x2="104.6" y2="24.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59" y1="79.8" x2="146.6" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="48.3" y="87.3" font-size="14" text-anchor="middle">P</text><text x="69.5" y="54.8" font-size="14" text-anchor="middle">A</text><text x="99.4" y="19.3" font-size="14" text-anchor="middle">B</text><text x="73" y="102.2" font-size="14" text-anchor="middle">C</text><text x="150.4" y="134.2" font-size="14" text-anchor="middle">D</text><text x="62.4" y="66.2" font-size="12" text-anchor="middle">4</text><text x="82.9" y="36.5" font-size="12" text-anchor="middle">5</text><text x="61.2" y="94.4" font-size="12" text-anchor="middle">3</text><text x="117.3" y="100.6" font-size="12" text-anchor="middle">9</text></svg>'
+        explain: PB は P から B までの長さで、PB = 4 + 5 = 9 cm、PD = 3 + 9 = 12 cm です。PA × PB = 4 × 9 = 36、PC × PD = 3 × 12 = 36 で、等しくなります。点 P が円の外にあっても、方べきの定理 PA × PB = PC × PD が成り立ちます（わけは 7 日目）。かけるのは、どれも P から円との交点までの長さです。AB や CD（円の中の部分）をかけないように気をつけます。
+      - part: 思い出す
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 3 cm、PB = 8 cm、PC = 4 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="161.1" y1="101.9" x2="106.4" y2="19.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.6" y1="51.6" x2="112.5" y2="121.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="160.1" y="85.1" font-size="14" text-anchor="middle">P</text><text x="169.7" y="113.6" font-size="14" text-anchor="middle">A</text><text x="98.6" y="16.9" font-size="14" text-anchor="middle">B</text><text x="178.9" y="52.6" font-size="14" text-anchor="middle">C</text><text x="105.6" y="135" font-size="14" text-anchor="middle">D</text><text x="146.4" y="99.7" font-size="12" text-anchor="middle">3</text><text x="133.5" y="49.1" font-size="12" text-anchor="middle">8</text><text x="150.7" y="64.4" font-size="12" text-anchor="middle">4</text><text x="136" y="110.1" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 6
+        check: "Fraction(3 * 8, 4)"
+        hints:
+          - 方べきの定理を使おう。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 24, 4 × PD = 24, PD = 6, 6 cm]
+      - part: 思い出す
+        text: AB は円の直径で、C は円の上の点です。∠CAB = 35° のとき、∠ABC は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="137.8" y2="21.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="137.8" y2="21.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M92 70 A24 24 0 0 0 87.7 56.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="103.3" y="63.1" font-size="12" text-anchor="middle">35°</text><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="183" y="74.9" font-size="14" text-anchor="middle">B</text><text x="144.1" y="17" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 55
+        check: "180 - 90 - 35"
+        hints:
+          - 直径に対する円周角は何度だったかな。
+          - △ABC の 3 つの角の和は 180° だね。
+          - 180 から、∠ACB と ∠CAB をひこう。
+        paths:
+          - [∠ACB = 90°（直径に対する円周角）, 180 − 90 − 35 = 55, 55°]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 5 cm、PB = 8 cm、PC = 4 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="138" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50" y1="60.8" x2="130" y2="18.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50" y1="60.8" x2="145.4" y2="121.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="39" y="65.2" font-size="14" text-anchor="middle">P</text><text x="93.4" y="30.6" font-size="14" text-anchor="middle">A</text><text x="121.2" y="17" font-size="14" text-anchor="middle">B</text><text x="79.4" y="96.6" font-size="14" text-anchor="middle">C</text><text x="152.2" y="135" font-size="14" text-anchor="middle">D</text><text x="71" y="44.2" font-size="12" text-anchor="middle">5</text><text x="64.5" y="84.4" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 10
+        check: "Fraction(5 * 8, 4)"
+        hints:
+          - P が円の外にあっても、PA × PB = PC × PD が成り立つよ。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 5 × 8 = 40, 4 × PD = 40, PD = 10, 10 cm]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 4 cm、AB = 6 cm、PC = 5 cm のとき、CD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="138.1" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.9" y1="76.2" x2="147.3" y2="18.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="49.9" y1="76.2" x2="128.4" y2="121.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="38.9" y="81.1" font-size="14" text-anchor="middle">P</text><text x="80.3" y="51.2" font-size="14" text-anchor="middle">A</text><text x="156.4" y="17.5" font-size="14" text-anchor="middle">B</text><text x="92" y="117.7" font-size="14" text-anchor="middle">C</text><text x="121.2" y="134.3" font-size="14" text-anchor="middle">D</text><text x="65" y="61.5" font-size="12" text-anchor="middle">4</text><text x="122.5" y="47.6" font-size="12" text-anchor="middle">6</text><text x="70.2" y="101.9" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 3
+        check: "Fraction(4 * (4 + 6), 5) - 5"
+        hints:
+          - かけるのは PA と PB だよ。PB は何 cm かな。
+          - PA × PB を求めたら、PD を求めよう。
+          - CD は、PD から PC をひいた長さだね。
+        paths:
+          - [PB = 4 + 6 = 10, PA × PB = 40, PD = 40 ÷ 5 = 8, CD = 8 − 5 = 3, 3 cm]
+        note: PA × AB（4 × 6）をかけてしまう誤りが多い。P から測った長さどうしをかけることを、図を指でたどって確かめさせる。
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 6 cm、AB = 4 cm、PD = 12 cm のとき、PC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="141.8" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.2" y1="63.3" x2="139.8" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.2" y1="63.3" x2="157.6" y2="119.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="35.2" y="68.1" font-size="14" text-anchor="middle">P</text><text x="95.6" y="32.3" font-size="14" text-anchor="middle">A</text><text x="131.7" y="15.5" font-size="14" text-anchor="middle">B</text><text x="84.3" y="98.9" font-size="14" text-anchor="middle">C</text><text x="160.9" y="134.9" font-size="14" text-anchor="middle">D</text><text x="70.5" y="46.2" font-size="12" text-anchor="middle">6</text><text x="124.8" y="39" font-size="12" text-anchor="middle">4</text><text x="65.5" y="86.9" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 5
+        check: "Fraction(6 * (6 + 4), 12)"
+        hints:
+          - PB を先に求めよう。
+          - PA × PB はいくつかな。
+          - PC × 12 がその数になる PC を求めよう。
+        paths:
+          - [PB = 6 + 4 = 10, PA × PB = 60, PC = 60 ÷ 12 = 5, 5 cm]
+      - part: 挑戦
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 4 cm、PB = 18 cm で、PC と CD の長さは等しくなっています。PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="131.7" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.3" y1="77.9" x2="162" y2="27.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.3" y1="77.9" x2="121.4" y2="121" stroke="currentColor" stroke-width="2" fill="none"/><text x="45.3" y="82" font-size="14" text-anchor="middle">P</text><text x="70.7" y="65.5" font-size="14" text-anchor="middle">A</text><text x="168.4" y="23.7" font-size="14" text-anchor="middle">B</text><text x="81.1" y="112.2" font-size="14" text-anchor="middle">C</text><text x="114.1" y="134.1" font-size="14" text-anchor="middle">D</text><text x="58.7" y="71.5" font-size="12" text-anchor="middle">4</text><line x1="69.8" y1="92.9" x2="75.3" y2="84.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="102.3" y1="114.4" x2="107.9" y2="106" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 12
+        check: "2 * math.isqrt(4 * 18 // 2)"
+        hints:
+          - PD は PC の何倍かな。
+          - PC × PD は、PC × PC の 2 倍になるね。
+          - PC × PC がいくつになるかを求めて、2 回かけてその数になる PC を探そう。
+        paths:
+          - [PA × PB = 72, PD = PC × 2 なので PC × PC × 2 = 72, PC × PC = 36 で PC = 6, PD = 12, 12 cm]
+    extra:
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 2 cm、PB = 15 cm、PC = 3 cm のとき、PD は何 cm ですか。
+        answer: 10
+        check: "Fraction(2 * 15, 3)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 3 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 30, PD = 30 ÷ 3 = 10, 10 cm]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 5 cm、AB = 7 cm、PC = 4 cm のとき、PD は何 cm ですか。
+        answer: 15
+        check: "Fraction(5 * (5 + 7), 4)"
+        hints:
+          - PB は PA と AB を合わせた長さだね。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PB = 12, PA × PB = 60, PD = 60 ÷ 4 = 15, 15 cm]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 8 cm、PB = 9 cm、PC = 6 cm のとき、PD は何 cm ですか。
+        answer: 12
+        check: "Fraction(8 * 9, 6)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 6 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 72, PD = 72 ÷ 6 = 12, 12 cm]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 円の外の点 P から、円に接線 PT（T は接点）と、円と A、B で交わる直線をひきます。PT = 6 cm、PA = 4 cm、AB = 5 cm です。PT × PT と PA × PB をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="146.6" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.4" y1="77.4" x2="167.6" y2="22.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.4" y1="77.4" x2="124.2" y2="116.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="30.4" y="82.1" font-size="14" text-anchor="middle">P</text><text x="89.4" y="50.4" font-size="14" text-anchor="middle">A</text><text x="172" y="17.3" font-size="14" text-anchor="middle">B</text><text x="119.4" y="131.7" font-size="14" text-anchor="middle">T</text><text x="79.1" y="109.1" font-size="12" text-anchor="middle">6</text><text x="66" y="61.5" font-size="12" text-anchor="middle">4</text><text x="129.1" y="34" font-size="12" text-anchor="middle">5</text></svg>'
+        explain: PB = 4 + 5 = 9 cm です。PT × PT = 6 × 6 = 36、PA × PB = 4 × 9 = 36 で、等しくなります。割線の 2 つの交点が近づいて 1 つの点 T に重なったものが接線だと考えると、2 本の割線の PC × PD が PT × PT になります。接線のときも方べきの定理 PT × PT = PA × PB が成り立ちます（わけは 7 日目）。PT は「2 回かけると PA × PB になる数」として求めます。
+      - part: 思い出す
+        text: 円 O の外の点 P から接線 PT をひきました（T は接点）。∠TOP = 50° のとき、∠TPO は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="105.6" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.6" y1="70" x2="139" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.6" y1="70" x2="186.4" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="186.4" y1="70" x2="139" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M119.6 70 A14 14 0 0 0 114.6 59.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="62.8" font-size="12" text-anchor="middle">50°</text><circle cx="105.6" cy="70" r="2.6" fill="currentColor"/><text x="95.6" y="79.5" font-size="14" text-anchor="middle">O</text><text x="146" y="26.6" font-size="14" text-anchor="middle">T</text><text x="196.8" y="78.7" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 40
+        check: "180 - 90 - 50"
+        hints:
+          - 接線は、接点を通る半径とどんな角で交わるかな。
+          - ∠OTP は何度かな。
+          - △OTP の 3 つの角の和を使おう。
+        paths:
+          - [∠OTP = 90°（接線は接点を通る半径に垂直）, 180 − 90 − 50 = 40, 40°]
+      - part: 思い出す
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 3 cm、PB = 16 cm、PC = 4 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="129.4" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.6" y1="70" x2="161.8" y2="29.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58.6" y1="70" x2="123.8" y2="121.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="47.7" y="73.3" font-size="14" text-anchor="middle">P</text><text x="69.3" y="60.4" font-size="14" text-anchor="middle">A</text><text x="168.7" y="25.6" font-size="14" text-anchor="middle">B</text><text x="71.4" y="98.5" font-size="14" text-anchor="middle">C</text><text x="117.3" y="135.5" font-size="14" text-anchor="middle">D</text><text x="60.5" y="64.2" font-size="12" text-anchor="middle">3</text><text x="60.6" y="86.8" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 12
+        check: "Fraction(3 * 16, 4)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 48, PD = 48 ÷ 4 = 12, 12 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 2 cm、AB = 6 cm のとき、PT は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="132.9" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.1" y1="70" x2="162.5" y2="27.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.1" y1="70" x2="98.1" y2="108.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="44.3" y="73" font-size="14" text-anchor="middle">P</text><text x="73.6" y="57.1" font-size="14" text-anchor="middle">A</text><text x="168.8" y="23.1" font-size="14" text-anchor="middle">B</text><text x="90.7" y="121.7" font-size="14" text-anchor="middle">T</text><text x="61.1" y="62.6" font-size="12" text-anchor="middle">2</text><text x="119.1" y="39.5" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 4
+        check: "math.isqrt(2 * (2 + 6))"
+        hints:
+          - 接線のときは PT × PT = PA × PB だね。
+          - PB は PA と AB を合わせた長さだよ。
+          - 2 回かけると PA × PB になる数を探そう。
+        paths:
+          - [PB = 2 + 6 = 8, PA × PB = 16, PT × PT = 16, PT = 4, 4 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 6 cm、PA = 3 cm のとき、AB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="134.6" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="70" x2="173.2" y2="35.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.4" y1="70" x2="101.3" y2="109.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.6" y="72.7" font-size="14" text-anchor="middle">P</text><text x="75.1" y="58.9" font-size="14" text-anchor="middle">A</text><text x="181.4" y="32.7" font-size="14" text-anchor="middle">B</text><text x="94.3" y="123.3" font-size="14" text-anchor="middle">T</text><text x="71.8" y="100.8" font-size="12" text-anchor="middle">6</text><text x="61.2" y="63" font-size="12" text-anchor="middle">3</text></svg>'
+        answer: 9
+        check: "Fraction(6 * 6, 3) - 3"
+        hints:
+          - PT × PT を先に計算しよう。
+          - PA × PB がその数になる PB を求めよう。
+          - AB は、PB から PA をひいた長さだね。
+        paths:
+          - [PT × PT = 36, PB = 36 ÷ 3 = 12, AB = 12 − 3 = 9, 9 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 12 cm、PB = 18 cm のとき、PA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="152.1" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="35.9" y1="70" x2="187" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="35.9" y1="70" x2="128.9" y2="116.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="24.9" y="73.7" font-size="14" text-anchor="middle">P</text><text x="95.6" y="49.7" font-size="14" text-anchor="middle">A</text><text x="194.4" y="28.2" font-size="14" text-anchor="middle">B</text><text x="124" y="131.2" font-size="14" text-anchor="middle">T</text><text x="76.9" y="108.4" font-size="12" text-anchor="middle">12</text><text x="67.3" y="57.3" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 8
+        check: "Fraction(12 * 12, 18)"
+        hints:
+          - PT × PT = PA × PB にあてはめよう。
+          - 12 × 12 はいくつかな。
+          - PA × 18 がその数になる PA を求めよう。
+        paths:
+          - [PT × PT = 144, PA = 144 ÷ 18 = 8, 8 cm]
+      - part: 挑戦
+        text: 円の外の点 P から、円に 2 本の接線 PS、PT（S、T は接点）と、円と A、B で交わる直線をひきました。PA = 4 cm、AB = 5 cm のとき、PS + PT は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="149.2" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="38.8" y1="70" x2="178.5" y2="27" stroke="currentColor" stroke-width="2" fill="none"/><line x1="38.8" y1="70" x2="124.8" y2="115.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="38.8" y1="70" x2="124.8" y2="24.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="27.8" y="74.9" font-size="14" text-anchor="middle">P</text><text x="90.4" y="52.5" font-size="14" text-anchor="middle">A</text><text x="184.7" y="22.9" font-size="14" text-anchor="middle">B</text><text x="119.6" y="130.5" font-size="14" text-anchor="middle">T</text><text x="119.6" y="19.3" font-size="14" text-anchor="middle">S</text><text x="72.3" y="72.9" font-size="12" text-anchor="middle">4</text><text x="137.2" y="35" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 12
+        check: "2 * math.isqrt(4 * (4 + 5))"
+        hints:
+          - PS にも PT にも、方べきの定理が使えるね。
+          - PS × PS と PT × PT は、どちらも PA × PB と等しいよ。
+          - PS と PT は同じ長さになるね。
+        paths:
+          - [PB = 9, PA × PB = 36, PS × PS = PT × PT = 36, PS = PT = 6, PS + PT = 12, 12 cm]
+        note: 円の外の点からひいた 2 本の接線の長さが等しいこと（G-018）が、方べきの定理からも言える。
+    extra:
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 4 cm、PB = 25 cm のとき、PT は何 cm ですか。
+        answer: 10
+        check: "math.isqrt(4 * 25)"
+        hints:
+          - PT × PT = PA × PB だね。
+          - PA × PB はいくつかな。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [PA × PB = 100, PT × PT = 100, PT = 10, 10 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 9 cm、PA = 3 cm のとき、PB は何 cm ですか。
+        answer: 27
+        check: "Fraction(9 * 9, 3)"
+        hints:
+          - PT × PT を計算しよう。
+          - PA × PB がその数になるよ。
+          - 3 × PB がその数になる PB を求めよう。
+        paths:
+          - [PT × PT = 81, PB = 81 ÷ 3 = 27, 27 cm]
+      - part: 挑戦
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 15 cm、PA = 9 cm のとき、AB は何 cm ですか。
+        answer: 16
+        check: "Fraction(15 * 15, 9) - 9"
+        hints:
+          - PT × PT を計算しよう。
+          - PA × PB がその数になる PB を求めよう。
+          - AB は PB から PA をひいた長さだね。
+        paths:
+          - [PT × PT = 225, PB = 225 ÷ 9 = 25, AB = 25 − 9 = 16, 16 cm]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 半径 7 cm の円 O の中に、OP = 3 cm の点 P があります。P を通る弦 AB で、PA = 5 cm のとき、PB の長さを求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="160.9" y1="102.2" x2="112.6" y2="18.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="68" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="147.8" y="65.4" font-size="14" text-anchor="middle">P</text><text x="169.5" y="113.9" font-size="14" text-anchor="middle">A</text><text x="103.8" y="16.8" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="57" y="74.9" font-size="14" text-anchor="middle">D</text><text x="159" y="86" font-size="12" text-anchor="middle">5</text><text x="131.1" y="82.8" font-size="12" text-anchor="middle">3</text></svg>'
+        explain: P を通る直径 CD をひきます（C は P に近いほう）。PC = 7 − 3 = 4 cm、PD = 7 + 3 = 10 cm です。AB と CD は P で交わる 2 本の弦なので、方べきの定理から PA × PB = PC × PD = 4 × 10 = 40。PB = 40 ÷ 5 = 8 cm です。P を通るどの弦でも、PA × PB は (半径 − OP) × (半径 + OP) になります。P が円の外にあるときは、P と O を通る直線と円の交点を使って、(OP − 半径) × (OP + 半径) です。
+      - part: 思い出す
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 6 cm、PB = 5 cm、PC = 3 cm のとき、PD は何 cm ですか。
+        answer: 10
+        check: "Fraction(6 * 5, 3)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 3 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 30, PD = 30 ÷ 3 = 10, 10 cm]
+      - part: 思い出す
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 4 cm、PB = 16 cm のとき、PT は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="135.2" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="52.8" y1="70" x2="176.9" y2="39" stroke="currentColor" stroke-width="2" fill="none"/><line x1="52.8" y1="70" x2="102.4" y2="110.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="42" y="72.5" font-size="14" text-anchor="middle">P</text><text x="75.7" y="59.7" font-size="14" text-anchor="middle">A</text><text x="185.8" y="37.3" font-size="14" text-anchor="middle">B</text><text x="95.5" y="123.8" font-size="14" text-anchor="middle">T</text><text x="61.2" y="63.2" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 8
+        check: "math.isqrt(4 * 16)"
+        hints:
+          - PT × PT = PA × PB だね。
+          - PA × PB はいくつかな。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [PA × PB = 64, PT × PT = 64, PT = 8, 8 cm]
+      - part: 今日
+        text: 半径 9 cm の円 O の中に、OP = 5 cm の点 P があります。P を通る弦 AB で、PA = 7 cm のとき、PB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="152.9" y1="110.2" x2="144.3" y2="24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="68" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="158.3" y="64.5" font-size="14" text-anchor="middle">P</text><text x="159.9" y="123.7" font-size="14" text-anchor="middle">A</text><text x="149.4" y="19.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="57" y="74.9" font-size="14" text-anchor="middle">D</text><text x="159.1" y="90.2" font-size="12" text-anchor="middle">7</text><text x="134.4" y="65.6" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 8
+        check: "Fraction((9 - 5) * (9 + 5), 7)"
+        hints:
+          - P を通る直径をひいて、2 本目の弦にしよう。
+          - 直径は P で、何 cm と何 cm に分かれるかな。
+          - その 2 つの積が PA × PB と等しいよ。
+        paths:
+          - [P を通る直径は 4 cm と 14 cm に分かれる, PA × PB = 4 × 14 = 56, PB = 56 ÷ 7 = 8, 8 cm]
+      - part: 今日
+        text: 半径 5 cm の円 O の外に、OP = 13 cm の点 P があります。P から円にひいた接線 PT（T は接点）は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="161.6" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.4" y1="70" x2="213.6" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="26.4" y1="70" x2="141.6" y2="118" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="161.6" cy="70" r="2.6" fill="currentColor"/><text x="161.6" y="63.9" font-size="14" text-anchor="middle">O</text><text x="15.6" y="72.7" font-size="14" text-anchor="middle">P</text><text x="119.5" y="65" font-size="14" text-anchor="middle">C</text><text x="224.6" y="74.9" font-size="14" text-anchor="middle">D</text><text x="137.4" y="133.1" font-size="14" text-anchor="middle">T</text><text x="94" y="62" font-size="12" text-anchor="middle">13</text></svg>'
+        answer: 12
+        check: "math.isqrt((13 - 5) * (13 + 5))"
+        hints:
+          - P と O を通る直線が、円と交わる 2 つの点 C、D を考えよう。
+          - P から C、D までは何 cm と何 cm かな。
+          - PT × PT がその 2 つの積になるよ。
+        paths:
+          - [PC = 13 − 5 = 8、PD = 13 + 5 = 18, PT × PT = 8 × 18 = 144, PT = 12, 12 cm]
+        note: 三平方の定理（G-019）を学ぶと、△OTP が直角三角形であることからも PT が求められる（5、12、13）。
+      - part: 今日
+        text: 円の弦 AB のまん中を M とし、M を通って AB に垂直な直線が円と C、D で交わります。CD は円の直径です。AB = 8 cm、CM = 2 cm のとき、この円の半径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="57" stroke="currentColor" stroke-width="2" fill="none"/><line x1="74.4" y1="40.8" x2="165.6" y2="40.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="132" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="112,40.8 112,32.8 120,32.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="65.6" y="39.1" font-size="14" text-anchor="middle">A</text><text x="174.4" y="39.1" font-size="14" text-anchor="middle">B</text><text x="131.5" y="53.7" font-size="14" text-anchor="middle">M</text><text x="120" y="11.9" font-size="14" text-anchor="middle">C</text><text x="112.2" y="144.7" font-size="14" text-anchor="middle">D</text><text x="97.2" y="36.4" font-size="12" text-anchor="middle">4</text><text x="128.6" y="33.6" font-size="12" text-anchor="middle">2</text></svg>'
+        answer: 5
+        check: "(Fraction(4 * 4, 2) + 2) / 2"
+        hints:
+          - 弦 AB と CD は M で交わる 2 本の弦だね。AM と MB は何 cm かな。
+          - 方べきの定理で MD を求めよう。
+          - 直径 CD は CM と MD を合わせた長さだね。半径はその半分だよ。
+        paths:
+          - [AM = MB = 4, CM × MD = 4 × 4 = 16, MD = 16 ÷ 2 = 8, CD = 2 + 8 = 10, 半径 5 cm]
+        note: 割れた皿や橋のアーチのように、円の一部しかなくても、弦の長さと高さから円の大きさがわかる。
+      - part: 挑戦
+        text: 半径 13 cm の円 O の中に、OP = 5 cm の点 P があります。P がまん中の点になる弦 AB の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140" y1="118" x2="140" y2="22" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="68" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="149.9" y="65" font-size="14" text-anchor="middle">P</text><text x="144.2" y="133.1" font-size="14" text-anchor="middle">A</text><text x="144.2" y="16.7" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="57" y="74.9" font-size="14" text-anchor="middle">D</text><text x="130" y="82.8" font-size="12" text-anchor="middle">5</text><line x1="135" y1="94" x2="145" y2="94" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="145" y1="46" x2="135" y2="46" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 24
+        check: "2 * math.isqrt((13 - 5) * (13 + 5))"
+        hints:
+          - P を通る直径をひくと、P で何 cm と何 cm に分かれるかな。
+          - PA と PB は等しいので、PA × PA がその積になるよ。
+          - 2 回かけてその積になる数を探そう。
+        paths:
+          - [直径は P で 8 cm と 18 cm に分かれる, PA × PA = 8 × 18 = 144, PA = 12, AB = 24, 24 cm]
+        note: P を通る弦のうち、OP に垂直な弦（P がまん中になる弦）がいちばん短い。
+    extra:
+      - part: 今日
+        text: 半径 8 cm の円 O の中に、OP = 2 cm の点 P があります。P を通る弦 AB で、PA = 5 cm のとき、PB は何 cm ですか。
+        answer: 12
+        check: "Fraction((8 - 2) * (8 + 2), 5)"
+        hints:
+          - P を通る直径をひこう。
+          - 直径は P で何 cm と何 cm に分かれるかな。
+          - その積を PA でわろう。
+        paths:
+          - [直径は 6 cm と 10 cm に分かれる, PA × PB = 60, PB = 60 ÷ 5 = 12, 12 cm]
+      - part: 今日
+        text: 半径 6 cm の円 O の外に、OP = 10 cm の点 P があります。P から円にひいた接線 PT（T は接点）は何 cm ですか。
+        answer: 8
+        check: "math.isqrt((10 - 6) * (10 + 6))"
+        hints:
+          - P と O を通る直線と円の交点を考えよう。
+          - P からその 2 つの点までは何 cm と何 cm かな。
+          - PT × PT がその積になるよ。
+        paths:
+          - [4 cm と 16 cm, PT × PT = 64, PT = 8, 8 cm]
+      - part: 挑戦
+        text: 円の弦 AB のまん中を M とし、M を通って AB に垂直な直径 CD をひきます。AB = 10 cm、CM = 1 cm のとき、この円の半径は何 cm ですか。
+        answer: 13
+        check: "(Fraction(5 * 5, 1) + 1) / 2"
+        hints:
+          - AM と MB は何 cm かな。
+          - CM × MD = AM × MB から MD を求めよう。
+          - 直径 CD の半分が半径だね。
+        paths:
+          - [AM = MB = 5, MD = 25 ÷ 1 = 25, CD = 26, 半径 13 cm]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 2 本の直線が点 P で交わり、1 本の上に A、B、もう 1 本の上に C、D があります。P は A と B のあいだ、C と D のあいだにあります。PA = 4 cm、PB = 6 cm、PC = 3 cm、PD = 8 cm のとき、4 点 A、B、C、D は 1 つの円の上にあるかを調べよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60.9" y1="85.3" x2="179.1" y2="106.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86" y1="122" x2="167.3" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="104.2" y="88.3" font-size="14" text-anchor="middle">P</text><text x="50.1" y="88.3" font-size="14" text-anchor="middle">A</text><text x="189.9" y="112.9" font-size="14" text-anchor="middle">B</text><text x="77.2" y="133.5" font-size="14" text-anchor="middle">C</text><text x="177.5" y="18.8" font-size="14" text-anchor="middle">D</text><text x="83.1" y="102.1" font-size="12" text-anchor="middle">4</text><text x="142.1" y="112.6" font-size="12" text-anchor="middle">6</text><text x="103.9" y="117.3" font-size="12" text-anchor="middle">3</text><text x="131" y="54.7" font-size="12" text-anchor="middle">8</text></svg>'
+        explain: PA × PB = 24、PC × PD = 24 で等しいので、4 点 A、B、C、D は 1 つの円の上にあります。「PA × PB = PC × PD ならば 4 点は 1 つの円の上にある」という、方べきの定理の逆が成り立ちます。P が A と B の外にあり、C と D の外にある（P から近い順に A、B と C、D が並ぶ）場合も同じです。もし PD = 7 cm なら、3 × 7 = 21 で 24 と等しくないので、4 点は 1 つの円の上にありません。
+      - part: 思い出す
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 2 cm、PB = 18 cm、PC = 4 cm のとき、PD は何 cm ですか。
+        answer: 9
+        check: "Fraction(2 * 18, 4)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 36, PD = 36 ÷ 4 = 9, 9 cm]
+      - part: 思い出す
+        text: 点 C、D は直線 AB について同じ側にあり、∠ACB = 48°、∠ADB = 48° です。4 点 A、B、C、D について正しいのはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="70.9" y1="122" x2="169.1" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70.9" y1="122" x2="92.1" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="169.1" y1="122" x2="92.1" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70.9" y1="122" x2="157.9" y2="23.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="169.1" y1="122" x2="157.9" y2="23.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M87.7 39.6 A22 22 0 0 0 105.2 35.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.7" y="56.4" font-size="12" text-anchor="middle">48°</text><path d="M143.3 40.2 A22 22 0 0 0 160.4 45.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147.3" y="61.3" font-size="12" text-anchor="middle">48°</text><text x="62.4" y="133.9" font-size="14" text-anchor="middle">A</text><text x="177.3" y="134.2" font-size="14" text-anchor="middle">B</text><text x="82.8" y="17" font-size="14" text-anchor="middle">C</text><text x="161.2" y="18.2" font-size="14" text-anchor="middle">D</text></svg>'
+        choices: [1 つの円の上にある, 1 つの円の上にない, これだけでは決まらない]
+        answer: 1 つの円の上にある
+        hints:
+          - 円周角の定理の逆を思い出そう。
+          - C と D は、AB について同じ側にあるね。
+          - ∠ACB と ∠ADB をくらべよう。
+        paths:
+          - [C、D は AB の同じ側, ∠ACB = ∠ADB, 円周角の定理の逆から 1 つの円の上にある]
+      - part: 今日
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあります。PA = 3 cm、PB = 10 cm、PC = 5 cm、PD = 6 cm のとき、4 点 A、B、C、D はどうなっていますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60.4" y1="67.4" x2="179.6" y2="99.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.8" y1="122" x2="92.9" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="76.4" y="87.7" font-size="14" text-anchor="middle">P</text><text x="49.8" y="69.4" font-size="14" text-anchor="middle">A</text><text x="190.2" y="107" font-size="14" text-anchor="middle">B</text><text x="75.4" y="134" font-size="14" text-anchor="middle">C</text><text x="102.8" y="18.3" font-size="14" text-anchor="middle">D</text><text x="76.4" y="66.9" font-size="12" text-anchor="middle">3</text><text x="130.6" y="103" font-size="12" text-anchor="middle">10</text><text x="77.3" y="101.8" font-size="12" text-anchor="middle">5</text><text x="81.8" y="49.8" font-size="12" text-anchor="middle">6</text></svg>'
+        choices: [1 つの円の上にある, 1 つの円の上にない]
+        answer: 1 つの円の上にある
+        check: "'1 つの円の上にある' if 3 * 10 == 5 * 6 else '1 つの円の上にない'"
+        hints:
+          - PA × PB と PC × PD をそれぞれ計算しよう。
+          - 2 つの積をくらべよう。
+          - 積が等しければ、方べきの定理の逆が使えるね。
+        paths:
+          - [PA × PB = 30, PC × PD = 30, 等しいので 1 つの円の上にある]
+      - part: 今日
+        text: 点 P から出る 2 本の直線の上に、P に近い順に A、B と C、D があります。PA = 4 cm、PB = 9 cm、PC = 5 cm、PD = 7 cm のとき、4 点 A、B、C、D はどうなっていますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="22.5" y1="94.6" x2="217.5" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="22.5" y1="94.6" x2="155.1" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="12.6" y="104.3" font-size="14" text-anchor="middle">P</text><text x="107.6" y="122.6" font-size="14" text-anchor="middle">A</text><text x="227.6" y="131.2" font-size="14" text-anchor="middle">B</text><text x="111.7" y="35.3" font-size="14" text-anchor="middle">C</text><text x="164.7" y="17.4" font-size="14" text-anchor="middle">D</text><text x="64.6" y="113.4" font-size="12" text-anchor="middle">4</text><text x="65.6" y="64" font-size="12" text-anchor="middle">5</text></svg>'
+        choices: [1 つの円の上にある, 1 つの円の上にない]
+        answer: 1 つの円の上にない
+        check: "'1 つの円の上にある' if 4 * 9 == 5 * 7 else '1 つの円の上にない'"
+        hints:
+          - PA × PB と PC × PD をそれぞれ計算しよう。
+          - 2 つの積は等しいかな。
+          - 積が等しくなければ、4 点は 1 つの円の上にはないよ。
+        paths:
+          - [PA × PB = 36, PC × PD = 35, 等しくないので 1 つの円の上にない]
+        note: 36 と 35 のように近い数でも、等しくなければ 1 つの円の上にはない。図では円にのっていそうに見えても、計算で確かめる。
+      - part: 今日
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあります。PA = 6 cm、PB = 8 cm、PC = 4 cm です。4 点 A、B、C、D が 1 つの円の上にあるようにするには、PD を何 cm にすればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="55.8" y1="84.7" x2="179.6" y2="111" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.7" y1="122" x2="184.2" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><text x="105.6" y="90.4" font-size="14" text-anchor="middle">P</text><text x="45.1" y="87.3" font-size="14" text-anchor="middle">A</text><text x="190.3" y="118.2" font-size="14" text-anchor="middle">B</text><text x="76.1" y="134.8" font-size="14" text-anchor="middle">C</text><text x="193.6" y="17.2" font-size="14" text-anchor="middle">D</text><text x="80.6" y="103" font-size="12" text-anchor="middle">6</text><text x="142.4" y="116.1" font-size="12" text-anchor="middle">8</text><text x="102.5" y="119.2" font-size="12" text-anchor="middle">4</text><text x="140.3" y="55.2" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 12
+        check: "Fraction(6 * 8, 4)"
+        hints:
+          - 1 つの円の上にあるのは、どんな積が等しいときかな。
+          - PA × PB はいくつかな。
+          - 4 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 48, 4 × PD = 48 にすればよい, PD = 12, 12 cm]
+      - part: 挑戦
+        text: 点 P から出る 2 本の直線の上に、P に近い順に A、B と C、D があります。PA = 5 cm、AB = 7 cm、PC = 4 cm です。4 点 A、B、C、D が 1 つの円の上にあるとき、CD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="134.8" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.2" y1="70" x2="135.7" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.2" y1="70" x2="168.4" y2="109.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="42.3" y="76.2" font-size="14" text-anchor="middle">P</text><text x="79.3" y="46" font-size="14" text-anchor="middle">A</text><text x="143.6" y="15.3" font-size="14" text-anchor="middle">B</text><text x="75.7" y="92.8" font-size="14" text-anchor="middle">C</text><text x="175.5" y="123" font-size="14" text-anchor="middle">D</text><text x="65.8" y="56.1" font-size="12" text-anchor="middle">5</text><text x="116.2" y="44.6" font-size="12" text-anchor="middle">7</text><text x="60.8" y="85.9" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 11
+        check: "Fraction(5 * (5 + 7), 4) - 4"
+        hints:
+          - 1 つの円の上にあるなら、方べきの定理が使えるね。
+          - PB を求めてから、PA × PB を計算しよう。
+          - PD を求めたら、PC をひこう。
+        paths:
+          - [PB = 12, PA × PB = 60, PD = 60 ÷ 4 = 15, CD = 15 − 4 = 11, 11 cm]
+    extra:
+      - part: 今日
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあります。PA = 2 cm、PB = 9 cm、PC = 3 cm、PD = 6 cm のとき、4 点 A、B、C、D はどうなっていますか。
+        choices: [1 つの円の上にある, 1 つの円の上にない]
+        answer: 1 つの円の上にある
+        check: "'1 つの円の上にある' if 2 * 9 == 3 * 6 else '1 つの円の上にない'"
+        hints:
+          - PA × PB を計算しよう。
+          - PC × PD を計算しよう。
+          - 2 つの積をくらべよう。
+        paths:
+          - [PA × PB = 18, PC × PD = 18, 1 つの円の上にある]
+      - part: 今日
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあります。PA = 4 cm、PB = 5 cm、PC = 2 cm です。4 点が 1 つの円の上にあるようにするには、PD を何 cm にすればよいですか。
+        answer: 10
+        check: "Fraction(4 * 5, 2)"
+        hints:
+          - PA × PB = PC × PD になればよいね。
+          - PA × PB はいくつかな。
+          - 2 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 20, PD = 20 ÷ 2 = 10, 10 cm]
+      - part: 挑戦
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあって、PA × PB = PC × PD です。このとき PA:PC = PD:PB となるので、△PAD と △PCB は相似になります。使う相似の条件はどれですか。
+        choices: [2 組の辺の比とその間の角がそれぞれ等しい, 2 組の角がそれぞれ等しい, 3 組の辺の比がすべて等しい]
+        answer: 2 組の辺の比とその間の角がそれぞれ等しい
+        hints:
+          - △PAD の辺 PA、PD と、△PCB の辺 PC、PB をくらべよう。
+          - ∠APD と ∠CPB は、どんな関係の角かな。
+          - 辺の比が 2 組と、そのあいだの角がわかっているね。
+        paths:
+          - [PA:PC = PD:PB, ∠APD = ∠CPB（対頂角）, 2 組の辺の比とその間の角]
+        note: 方べきの定理の逆のわけの前半。相似から ∠PAD = ∠PCB が言え、円周角の定理の逆で 4 点が 1 つの円の上にあると結ぶ。
+
+  - day: 6
+    items:
+      - part: 見本
+        text: 円の中の点 P を通る 3 本の弦 AB、CD、EF があります。PA = 6 cm、PB = 10 cm、PC = 5 cm、PE = 4 cm のとき、PD と PF を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.9" y1="92.4" x2="124" y2="18.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.9" y1="40.6" x2="121.8" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="68.1" x2="71.5" y2="51.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="138.3" y="75.8" font-size="14" text-anchor="middle">P</text><text x="176.8" y="102.1" font-size="14" text-anchor="middle">A</text><text x="132.3" y="15.9" font-size="14" text-anchor="middle">B</text><text x="172" y="39.3" font-size="14" text-anchor="middle">C</text><text x="129.8" y="134.4" font-size="14" text-anchor="middle">D</text><text x="183" y="72.7" font-size="14" text-anchor="middle">E</text><text x="61.3" y="52.1" font-size="14" text-anchor="middle">F</text><text x="151.4" y="87" font-size="12" text-anchor="middle">6</text><text x="126.8" y="51.7" font-size="12" text-anchor="middle">10</text><text x="163.6" y="62.6" font-size="12" text-anchor="middle">5</text><text x="165" y="79.9" font-size="12" text-anchor="middle">4</text></svg>'
+        explain: AB と CD で PA × PB = PC × PD、AB と EF で PA × PB = PE × PF です。PA × PB = 60 なので、PD = 60 ÷ 5 = 12 cm、PF = 60 ÷ 4 = 15 cm です。P を通る直線をどうひいても、P から円との 2 つの交点までの長さの積は同じ値になります。この値を、円についての点 P の方べきといいます。P が円の外にあるときも同じで、接線の PT × PT も同じ値になります。
+      - part: 思い出す
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 4 cm、AB = 12 cm のとき、PT は何 cm ですか。
+        answer: 8
+        check: "math.isqrt(4 * (4 + 12))"
+        hints:
+          - PB は何 cm かな。
+          - PT × PT = PA × PB だね。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [PB = 16, PA × PB = 64, PT = 8, 8 cm]
+      - part: 思い出す
+        text: 半径 10 cm の円 O の中に、OP = 8 cm の点 P があります。P を通る弦 AB で、PA = 3 cm のとき、PB は何 cm ですか。
+        answer: 12
+        check: "Fraction((10 - 8) * (10 + 8), 3)"
+        hints:
+          - P を通る直径をひこう。
+          - 直径は P で何 cm と何 cm に分かれるかな。
+          - その積を PA でわろう。
+        paths:
+          - [直径は 2 cm と 18 cm に分かれる, PA × PB = 36, PB = 36 ÷ 3 = 12, 12 cm]
+      - part: 今日
+        text: 円 O の直径 AB を A の側に延ばした直線の上に、PA = 4 cm の点 P があります。円の半径は 6 cm です。P から円にひいた接線 PT（T は接点）は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="137.3" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="70" x2="189.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="70" x2="106.1" y2="111.6" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="137.3" cy="70" r="2.6" fill="currentColor"/><text x="137.3" y="63.9" font-size="14" text-anchor="middle">O</text><text x="40.2" y="71.4" font-size="14" text-anchor="middle">P</text><text x="95.2" y="65" font-size="14" text-anchor="middle">A</text><text x="200.3" y="74.9" font-size="14" text-anchor="middle">B</text><text x="99.5" y="125.3" font-size="14" text-anchor="middle">T</text><text x="68" y="65.6" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 8
+        check: "math.isqrt(4 * (4 + 6 * 2))"
+        hints:
+          - PB は何 cm かな。直径の長さを考えよう。
+          - PT × PT = PA × PB だね。
+          - 2 回かけて PA × PB になる数を探そう。
+        paths:
+          - [AB = 12 なので PB = 4 + 12 = 16, PA × PB = 64, PT = 8, 8 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。AB = 11 cm、PC = 3 cm、PD = 6 cm で、PA は PB より短いです。PA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="153.5" y1="30.3" x2="68.4" y2="76.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="121.6" y1="18" x2="171" y2="80.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="32.6" font-size="14" text-anchor="middle">P</text><text x="160.6" y="26.8" font-size="14" text-anchor="middle">A</text><text x="57.5" y="83" font-size="14" text-anchor="middle">B</text><text x="129.6" y="15.4" font-size="14" text-anchor="middle">C</text><text x="181.8" y="87.1" font-size="14" text-anchor="middle">D</text><text x="123.1" y="37.9" font-size="12" text-anchor="middle">3</text><text x="158.6" y="54.9" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 2
+        check: "[a for a in range(1, 11) if a * (11 - a) == 3 * 6 and a < 11 - a][0]"
+        hints:
+          - PA × PB はいくつになるかな。
+          - PA と PB をたすと 11 だね。
+          - かけて PA × PB、たして 11 になる数の組を探そう。
+        paths:
+          - [PA × PB = 3 × 6 = 18, PA + PB = 11, かけて 18 でたして 11 は 2 と 9, PA = 2, 2 cm]
+        note: 2 次方程式（A-017）を学ぶと、PA を x とおいて x × (11 − x) = 18 を解く形になる。ここでは整数の組を順に試させる。
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 6 cm、AB = 5 cm のとき、PA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="146.7" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.3" y1="70" x2="171" y2="24" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.3" y1="70" x2="121.1" y2="115.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="30.3" y="73.9" font-size="14" text-anchor="middle">P</text><text x="91.4" y="46.4" font-size="14" text-anchor="middle">A</text><text x="176.1" y="19.2" font-size="14" text-anchor="middle">B</text><text x="115.7" y="129.7" font-size="14" text-anchor="middle">T</text><text x="76.9" y="104.3" font-size="12" text-anchor="middle">6</text><text x="132.1" y="32.9" font-size="12" text-anchor="middle">5</text><text x="67.2" y="55.9" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 4
+        check: "[a for a in range(1, 37) if a * (a + 5) == 6 * 6][0]"
+        hints:
+          - PA × PB は PT × PT と等しいね。
+          - PB は PA より 5 cm 長いよ。
+          - かけて PT × PT、差が 5 になる数の組を探そう。
+        paths:
+          - [PA × PB = 36, PB = PA + 5, 4 × 9 = 36 で差が 5, PA = 4, 4 cm]
+      - part: 挑戦
+        text: 地球を半径 6400 km の円とみます。海の上の高さ 125 m（0.125 km）の展望台 P から見える、いちばん遠い海の点を T とします。PT は地球に接する直線です。PT はおよそ何 km ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80.4" r="41.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="151" y2="52.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="80.4" r="2.6" fill="currentColor"/><circle cx="120" cy="18" r="2.6" fill="currentColor"/><text x="110" y="48.3" font-size="14" text-anchor="middle">A</text><text x="112.2" y="134.7" font-size="14" text-anchor="middle">B</text><text x="109.7" y="19.1" font-size="14" text-anchor="middle">P</text><text x="159.2" y="50.2" font-size="14" text-anchor="middle">T</text></svg>'
+        choices: [約 4 km, 約 40 km, 約 400 km]
+        answer: 約 40 km
+        check: "[c for c, v in (('約 4 km', 4), ('約 40 km', 40), ('約 400 km', 400)) if abs(math.sqrt(0.125 * (0.125 + 12800)) - v) < 1][0]"
+        hints:
+          - P の真下の地面を A、地球の中心を通って反対側の点を B とすると、PT × PT = PA × PB だね。
+          - PB は、PA に地球の直径を足した長さだよ。
+          - PA × PB はおよそ 0.125 × 12800 だね。2 回かけてその数になるのはどれかな。
+        paths:
+          - [PA = 0.125 km、PB = 0.125 + 12800 km, PT × PT ≒ 0.125 × 12800 = 1600, 40 × 40 = 1600, 約 40 km]
+        note: 図は高さを大きくかいてある。電波塔や人工衛星がどこまで見通せるかも、同じ式（PT × PT ≒ 地球の直径 × 高さ）で見積もる（D-026）。0.125 × 12800 は小数のかけ算（N-077）。
+    extra:
+      - part: 今日
+        text: 円の中の点 P を通る弦 AB と EF があります。PA = 4 cm、PB = 6 cm、PE = 12 cm のとき、弦 EF の長さは何 cm ですか。
+        answer: 14
+        check: "12 + Fraction(4 * 6, 12)"
+        hints:
+          - PA × PB = PE × PF だね。
+          - PF を求めよう。
+          - EF は PE と PF を合わせた長さだよ。
+        paths:
+          - [PA × PB = 24, PF = 24 ÷ 12 = 2, EF = 12 + 2 = 14, 14 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。AB = 13 cm、PC = 4 cm、PD = 10 cm で、PA は PB より短いです。PA は何 cm ですか。
+        answer: 5
+        check: "[a for a in range(1, 13) if a * (13 - a) == 4 * 10 and a < 13 - a][0]"
+        hints:
+          - PA × PB はいくつかな。
+          - PA + PB = 13 だね。
+          - かけて PA × PB、たして 13 になる数の組を探そう。
+        paths:
+          - [PA × PB = 40, PA + PB = 13, 5 と 8, PA = 5, 5 cm]
+      - part: 挑戦
+        text: 円 O の直径 AB を A の側に延ばした直線の上に、PA = 8 cm の点 P があります。円の半径は 5 cm です。P から円にひいた接線 PT（T は接点）は何 cm ですか。
+        answer: 12
+        check: "math.isqrt(8 * (8 + 5 * 2))"
+        hints:
+          - PB は PA と直径を合わせた長さだね。
+          - PT × PT = PA × PB だね。
+          - 2 回かけて PA × PB になる数を探そう。
+        paths:
+          - [PB = 8 + 10 = 18, PA × PB = 144, PT = 12, 12 cm]
+
+  - day: 7
+    items:
+      - part: わけ
+        text: 円の 2 本の弦 AB と CD が点 P で交わるとき、PA × PB = PC × PD となるわけを書きましょう。A と C、B と D を結んだ △PAC と △PDB を使います。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.3" y1="89.1" x2="106.7" y2="19.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.1" y1="42.4" x2="89.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.3" y1="89.1" x2="164.1" y2="42.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.7" y1="19.7" x2="89.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M166.2 65.2 A24 24 0 0 0 152.4 71.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="161.9" cy="74.2" r="1.9" fill="currentColor"/><path d="M106.8 95.6 A24 24 0 0 0 93.7 88.3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.1" cy="97.6" r="1.9" fill="currentColor"/><text x="129.7" y="65.6" font-size="14" text-anchor="middle">P</text><text x="178.6" y="98.1" font-size="14" text-anchor="middle">A</text><text x="98.9" y="16.8" font-size="14" text-anchor="middle">B</text><text x="173.4" y="41.5" font-size="14" text-anchor="middle">C</text><text x="82.7" y="125.7" font-size="14" text-anchor="middle">D</text></svg>'
+        explain: 例：「△PAC と △PDB で、∠PAC = ∠PDB（どちらも弧 BC に対する円周角）、∠APC = ∠DPB（対頂角）。2 組の角がそれぞれ等しいので △PAC ∽ △PDB。相似比を k とすると、PA は PD の k 倍、PC は PB の k 倍。よって PA × PB = k × PD × PB、PC × PD = k × PB × PD となり、PA × PB = PC × PD。」と書ければよい。① △PAC と △PDB を選び、等しい角を言う、② 相似から辺の関係を式にする、③ 積が等しいと結ぶ、の 3 つがそろっているかを見る。比例式 PA:PD = PC:PB から、外側の 2 つの積と内側の 2 つの積が等しいとして PA × PB = PC × PD としてもよい。いくつかの数で確かめただけでは、すべての弦について示したことにならない（例ではすべての場合を示せない）ことに触れる。
+        hints:
+          - ∠PAC と ∠PDB は、どの弧に対する円周角かな。
+          - ∠APC と ∠DPB の関係も使って、どの三角形どうしが相似と言えるかな。
+          - 対応する辺の比から、PA と PD、PC と PB の関係を式にしよう。
+        paths:
+          - [∠PAC = ∠PDB（弧 BC の円周角）, ∠APC = ∠DPB（対頂角）, △PAC ∽ △PDB, PA:PD = PC:PB, PA × PB = PC × PD]
+      - part: わけ
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わるとき（P に近いほうが A、C）、PA × PB = PC × PD となるわけを書きましょう。A と D、B と C を結んだ △PAD と △PCB を使います。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="129" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59" y1="79.8" x2="104.6" y2="24.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="59" y1="79.8" x2="146.6" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79.2" y1="55.1" x2="146.6" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.6" y1="24.1" x2="80.9" y2="89.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M129.2 102.4 A24 24 0 0 0 124.7 109.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="133.1" cy="109.9" r="1.9" fill="currentColor"/><path d="M89.4 42.7 A24 24 0 0 0 96.4 46.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="96.5" cy="38.3" r="1.9" fill="currentColor"/><text x="48.3" y="87.3" font-size="14" text-anchor="middle">P</text><text x="69.5" y="54.8" font-size="14" text-anchor="middle">A</text><text x="99.4" y="19.3" font-size="14" text-anchor="middle">B</text><text x="73" y="102.2" font-size="14" text-anchor="middle">C</text><text x="150.4" y="134.2" font-size="14" text-anchor="middle">D</text></svg>'
+        explain: 例：「△PAD と △PCB で、∠APD = ∠CPB（共通の角）、∠PDA = ∠PBC（どちらも弧 AC に対する円周角）。2 組の角がそれぞれ等しいので △PAD ∽ △PCB。相似比を k とすると、PA は PC の k 倍、PD は PB の k 倍。よって PA × PB = k × PC × PB、PC × PD = PC × k × PB となり、PA × PB = PC × PD。」と書ければよい。1 問目と同じく、三角形を決める、相似から式にする、積で結ぶ、の 3 つを見る。どの頂点どうしが対応するかを取り違えやすいので、等しい角の頂点から順に書かせる。
+        hints:
+          - ∠PDA と ∠PBC は、どの弧に対する円周角かな。
+          - 2 つの三角形に共通の角はどれかな。
+          - △PAD ∽ △PCB から、対応する辺の比を書こう。
+        paths:
+          - [∠P は共通, ∠PDA = ∠PBC（弧 AC の円周角）, △PAD ∽ △PCB, PA:PC = PD:PB, PA × PB = PC × PD]
+      - part: わけ
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線（P に近いほうが A）をひくとき、PT × PT = PA × PB となるわけを書きましょう。T と A、T と B を結んだ △PTA と △PBT を使います。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="146.6" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.4" y1="77.4" x2="167.6" y2="22.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="41.4" y1="77.4" x2="124.2" y2="116.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="124.2" y1="116.9" x2="97.5" y2="52.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="124.2" y1="116.9" x2="167.6" y2="22.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M114.9 94.8 A24 24 0 0 0 102.5 106.6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="112.9" cy="105.1" r="1.9" fill="currentColor"/><path d="M145.6 32 A24 24 0 0 0 157.6 44.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="155.9" cy="33.8" r="1.9" fill="currentColor"/><text x="30.4" y="82.1" font-size="14" text-anchor="middle">P</text><text x="89.4" y="50.4" font-size="14" text-anchor="middle">A</text><text x="172" y="17.3" font-size="14" text-anchor="middle">B</text><text x="119.4" y="131.7" font-size="14" text-anchor="middle">T</text></svg>'
+        explain: 例：「△PTA と △PBT で、∠TPA = ∠BPT（共通の角）。接弦定理より、接線 PT と弦 TA のつくる角 ∠PTA は、弧 TA に対する円周角 ∠TBA に等しいので ∠PTA = ∠PBT。2 組の角がそれぞれ等しいので △PTA ∽ △PBT。相似比を k とすると、PT は PB の k 倍、PA は PT の k 倍。よって PT × PT = k × PB × PT、PA × PB = k × PT × PB となり、PT × PT = PA × PB。」と書ければよい。接弦定理を使うところで、どの弧に対する円周角かを言えているかを見る。3 つの場合のどれも「相似な三角形を見つけ、辺の比を積に直す」という同じ筋道になっていることに気づかせる。
+        hints:
+          - 接線 PT と弦 TA のつくる角について、接弦定理を思い出そう。
+          - △PTA と △PBT に共通の角はどれかな。
+          - 相似から PT と PB、PA と PT の関係を式にしよう。
+        paths:
+          - [∠P は共通, ∠PTA = ∠PBT（接弦定理）, △PTA ∽ △PBT, PT:PB = PA:PT, PT × PT = PA × PB]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 4 cm、PD = 8 cm、AC = 6 cm のとき、BD は何 cm ですか。わけの 1 問目の △PAC ∽ △PDB を使おう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.4" y1="48.7" x2="68.3" y2="75.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="134.1" y1="20" x2="147.1" y2="114.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.4" y1="48.7" x2="134.1" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.3" y1="75.3" x2="147.1" y2="114.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="150.8" y="68.9" font-size="14" text-anchor="middle">P</text><text x="177.5" y="49.1" font-size="14" text-anchor="middle">A</text><text x="57.3" y="81.3" font-size="14" text-anchor="middle">B</text><text x="142" y="17.2" font-size="14" text-anchor="middle">C</text><text x="152.8" y="128.7" font-size="14" text-anchor="middle">D</text><text x="148.8" y="49" font-size="12" text-anchor="middle">4</text><text x="151.6" y="88.4" font-size="12" text-anchor="middle">8</text><text x="158.3" y="29.7" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 12
+        check: "Fraction(6 * 8, 4)"
+        hints:
+          - △PAC と △PDB は相似だったね。
+          - 相似比は PA:PD だよ。
+          - AC と DB も同じ比になるよ。
+        paths:
+          - [△PAC ∽ △PDB, 相似比 PA:PD = 4:8 = 1:2, DB = AC × 2 = 12, 12 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 6 cm、PA = 4 cm、TA = 5 cm のとき、TB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="141.7" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="90.6" x2="123.9" y2="118.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="90.6" x2="146.8" y2="18.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="123.9" y1="118.9" x2="91" y2="58.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="123.9" y1="118.9" x2="146.8" y2="18.3" stroke="currentColor" stroke-width="2" fill="none"/><text x="35.4" y="97" font-size="14" text-anchor="middle">P</text><text x="81.8" y="57.3" font-size="14" text-anchor="middle">A</text><text x="155.3" y="16.2" font-size="14" text-anchor="middle">B</text><text x="120.1" y="134.1" font-size="14" text-anchor="middle">T</text><text x="82.2" y="117" font-size="12" text-anchor="middle">6</text><text x="63.6" y="71.8" font-size="12" text-anchor="middle">4</text><text x="115" y="88.7" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 15/2
+        accept: [7.5]
+        check: "Fraction(5 * 6, 4)"
+        hints:
+          - わけの 3 問目で、△PTA と △PBT が相似だったね。
+          - TA に対応する辺は、△PBT のどの辺かな。
+          - 相似比 PA:PT を使おう。
+        paths:
+          - [△PTA ∽ △PBT, TA:BT = PA:PT = 4:6, BT = 5 × 6/4 = 15/2, 15/2 cm]
+    extra:
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 3 cm、PD = 6 cm、AC = 4 cm のとき、BD は何 cm ですか。
+        answer: 8
+        check: "Fraction(4 * 6, 3)"
+        hints:
+          - △PAC ∽ △PDB を使おう。
+          - 相似比は PA:PD だよ。
+          - AC と DB も同じ比になるよ。
+        paths:
+          - [相似比 PA:PD = 3:6 = 1:2, DB = 4 × 2 = 8, 8 cm]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 4 cm、PC = 6 cm、AD = 8 cm のとき、BC は何 cm ですか。
+        answer: 12
+        check: "Fraction(8 * 6, 4)"
+        hints:
+          - わけの 2 問目の △PAD ∽ △PCB を使おう。
+          - 相似比は PA:PC だよ。
+          - AD と CB も同じ比になるよ。
+        paths:
+          - [△PAD ∽ △PCB, 相似比 PA:PC = 4:6 = 2:3, CB = 8 × 3/2 = 12, 12 cm]
+      - part: 挑戦
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 6 cm、PB = 12 cm、TB = 8 cm のとき、TA は何 cm ですか。
+        answer: 4
+        check: "Fraction(8 * 6, 12)"
+        hints:
+          - △PTA ∽ △PBT を使おう。
+          - TA に対応する辺は BT だね。
+          - 相似比 PT:PB を使おう。
+        paths:
+          - [△PTA ∽ △PBT, TA:BT = PT:PB = 6:12 = 1:2, TA = 8 ÷ 2 = 4, 4 cm]
+
+  - day: 8
+    items:
+      - part: 思い出す
+        text: 円 O で、∠AOB = 140° です。弧 AB に対する円周角 ∠ACB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="71.1" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="168.9" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.5" y1="18.2" x2="71.1" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.5" y1="18.2" x2="168.9" y2="87.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M107.8 74.4 A13 13 0 0 0 132.2 74.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="100.2" font-size="12" text-anchor="middle">140°</text><path d="M104.7 35.1 A20 20 0 0 0 127.6 34.1" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="107" y="16" font-size="14" text-anchor="middle">C</text><text x="60.8" y="96.4" font-size="14" text-anchor="middle">A</text><text x="179.2" y="96.4" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 70
+        check: "140 // 2"
+        hints:
+          - 円周角と中心角の関係を思い出そう。
+          - 円周角は、同じ弧に対する中心角の何分の 1 かな。
+          - 140° をその分だけに分けよう。
+        paths:
+          - [円周角は中心角の半分, 140 ÷ 2 = 70, 70°]
+      - part: 思い出す
+        text: △ABC で、辺 AB の上の点 D と辺 AC の上の点 E を結んだ DE は、BC に平行です。AD = 4 cm、DB = 6 cm、AE = 6 cm のとき、EC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="87.8,18 33.3,122 206.7,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="66" y1="59.6" x2="135.4" y2="59.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="78.7" y="16.7" font-size="14" text-anchor="middle">A</text><text x="23.9" y="132.6" font-size="14" text-anchor="middle">B</text><text x="217" y="130.8" font-size="14" text-anchor="middle">C</text><text x="56.3" y="59.4" font-size="14" text-anchor="middle">D</text><text x="142.6" y="56.2" font-size="14" text-anchor="middle">E</text><text x="69.3" y="39" font-size="12" text-anchor="middle">4</text><text x="42.1" y="91" font-size="12" text-anchor="middle">6</text><text x="117.2" y="36.5" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 9
+        check: "Fraction(6 * 6, 4)"
+        hints:
+          - DE と BC が平行なとき、AD:DB と AE:EC はどうなるかな。
+          - AD:DB を簡単な比にしよう。
+          - AE:EC も同じ比になるよ。
+        paths:
+          - [AD:DB = 4:6 = 2:3, AE:EC = 2:3, EC = 6 × 3/2 = 9, 9 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 3 cm、PB = 7 cm、PC = 2 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="150" y1="112.5" x2="154.8" y2="31.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="167.3" y1="91.5" x2="68" y2="70.4" stroke="currentColor" stroke-width="2" fill="none"/><text x="140.3" y="101.5" font-size="14" text-anchor="middle">P</text><text x="156.3" y="126.4" font-size="14" text-anchor="middle">A</text><text x="162.2" y="28.1" font-size="14" text-anchor="middle">B</text><text x="177.3" y="101" font-size="14" text-anchor="middle">C</text><text x="57" y="75.3" font-size="14" text-anchor="middle">D</text><text x="159.6" y="99.2" font-size="12" text-anchor="middle">3</text><text x="161.7" y="64.5" font-size="12" text-anchor="middle">7</text><text x="107.9" y="91.9" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 21/2
+        accept: [10.5]
+        check: "Fraction(3 * 7, 2)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 2 × PD がその数になる PD を求めよう。わりきれなければ分数か小数で。
+        paths:
+          - [PA × PB = 21, PD = 21 ÷ 2 = 21/2, 21/2 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。∠BAC = 38°、∠APC = 100° のとき、∠ABD は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.8" y1="56.5" x2="145.2" y2="115.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="170.2" y1="56.5" x2="101.4" y2="118.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.8" y1="56.5" x2="170.2" y2="56.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145.2" y1="115.5" x2="101.4" y2="118.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M90.3 72.5 A26 26 0 0 0 95.8 56.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.6" y="73.4" font-size="12" text-anchor="middle">38°</text><path d="M132.5 90.5 A12 12 0 0 0 114.1 91.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122.7" y="77.8" font-size="12" text-anchor="middle">100°</text><text x="59.1" y="58.6" font-size="14" text-anchor="middle">A</text><text x="180.9" y="58.6" font-size="14" text-anchor="middle">C</text><text x="150.5" y="130" font-size="14" text-anchor="middle">B</text><text x="97.4" y="133.7" font-size="14" text-anchor="middle">D</text><text x="123.6" y="114.5" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 42
+        check: "180 - 38 - 100"
+        hints:
+          - △APC の 3 つの角のうち、2 つがわかっているね。
+          - ∠ACD と ∠ABD は、どの弧に対する円周角かな。
+          - 同じ弧に対する円周角は等しいよ。
+        paths:
+          - [△APC で ∠ACP = 180 − 38 − 100 = 42°, ∠ABD = ∠ACD（弧 AD の円周角）, 42°]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 3 cm、AB = 9 cm のとき、PT は何 cm ですか。
+        answer: 6
+        check: "math.isqrt(3 * (3 + 9))"
+        hints:
+          - PB は何 cm かな。
+          - PT × PT = PA × PB だね。
+          - 2 回かけて PA × PB になる数を探そう。
+        paths:
+          - [PB = 12, PA × PB = 36, PT = 6, 6 cm]
+      - part: 挑戦
+        text: 半径 10 cm の円 O の中に、OP = 4 cm の点 P があります。P を通る長さ 19 cm の弦 AB で、PA は PB より短いです。PA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="163.6" y1="98.4" x2="101.8" y2="21.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="68" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="63.9" font-size="14" text-anchor="middle">O</text><text x="145.6" y="65" font-size="14" text-anchor="middle">P</text><text x="172.8" y="109.3" font-size="14" text-anchor="middle">A</text><text x="95.4" y="17.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="57" y="74.9" font-size="14" text-anchor="middle">D</text><text x="130.4" y="82.8" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 7
+        check: "[a for a in range(1, 19) if a * (19 - a) == (10 - 4) * (10 + 4) and a < 19 - a][0]"
+        hints:
+          - P を通る直径をひいて、PA × PB を求めよう。
+          - PA と PB をたすと 19 だね。
+          - かけて PA × PB、たして 19 になる数の組を探そう。
+        paths:
+          - [直径は P で 6 cm と 14 cm に分かれる, PA × PB = 84, PA + PB = 19, 7 と 12, PA = 7, 7 cm]
+    extra:
+      - part: 今日
+        text: 点 P から出る 2 本の直線の上に、P に近い順に A、B と C、D があります。PA = 2 cm、PB = 12 cm、PC = 3 cm、PD = 8 cm のとき、4 点 A、B、C、D はどうなっていますか。
+        choices: [1 つの円の上にある, 1 つの円の上にない]
+        answer: 1 つの円の上にある
+        check: "'1 つの円の上にある' if 2 * 12 == 3 * 8 else '1 つの円の上にない'"
+        hints:
+          - PA × PB を計算しよう。
+          - PC × PD を計算しよう。
+          - 2 つの積をくらべよう。
+        paths:
+          - [PA × PB = 24, PC × PD = 24, 1 つの円の上にある]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 6 cm、AB = 9 cm、PC = 5 cm のとき、CD は何 cm ですか。
+        answer: 13
+        check: "Fraction(6 * (6 + 9), 5) - 5"
+        hints:
+          - PB を求めよう。
+          - PA × PB から PD を求めよう。
+          - CD は PD から PC をひいた長さだね。
+        paths:
+          - [PB = 15, PA × PB = 90, PD = 18, CD = 18 − 5 = 13, 13 cm]
+      - part: 挑戦
+        text: 円の弦 AB のまん中を M とし、M を通って AB に垂直な直径 CD をひきます。AB = 20 cm、CM = 2 cm のとき、この円の半径は何 cm ですか。
+        answer: 26
+        check: "(Fraction(10 * 10, 2) + 2) / 2"
+        hints:
+          - AM と MB は何 cm かな。
+          - CM × MD = AM × MB から MD を求めよう。
+          - 直径 CD の半分が半径だね。
+        paths:
+          - [AM = MB = 10, MD = 100 ÷ 2 = 50, CD = 52, 半径 26 cm]
+
+  - day: 9
+    items:
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 6 cm、PB = 4 cm、PC = 3 cm のとき、PD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.3" y1="42.7" x2="74.6" y2="44.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="88.1" y1="28.9" x2="170.2" y2="83.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="107.4" y="59.3" font-size="14" text-anchor="middle">P</text><text x="173.6" y="41.8" font-size="14" text-anchor="middle">A</text><text x="65" y="44.1" font-size="14" text-anchor="middle">B</text><text x="81.3" y="25.2" font-size="14" text-anchor="middle">C</text><text x="180.8" y="91.3" font-size="14" text-anchor="middle">D</text><text x="137.2" y="38.9" font-size="12" text-anchor="middle">6</text><text x="92.7" y="57" font-size="12" text-anchor="middle">4</text><text x="104" y="33.4" font-size="12" text-anchor="middle">3</text><text x="145.1" y="60.7" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 8
+        check: "Fraction(6 * 4, 3)"
+        hints:
+          - PA × PB = PC × PD を使おう。
+          - PA × PB はいくつかな。
+          - 3 × PD がその数になる PD を求めよう。
+        paths:
+          - [PA × PB = 24, PD = 24 ÷ 3 = 8, 8 cm]
+      - part: 今日
+        text: 円の外の点 P からひいた 2 本の直線が、円と A、B と C、D で交わっています（P に近いほうが A、C）。PA = 3 cm、AB = 9 cm、PC = 4 cm のとき、CD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="132.3" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="63.3" x2="163.7" y2="28.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="55.7" y1="63.3" x2="118.9" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><text x="44.9" y="65.9" font-size="14" text-anchor="middle">P</text><text x="74.8" y="51.8" font-size="14" text-anchor="middle">A</text><text x="170.3" y="24.6" font-size="14" text-anchor="middle">B</text><text x="74.7" y="99.7" font-size="14" text-anchor="middle">C</text><text x="113.4" y="134.7" font-size="14" text-anchor="middle">D</text><text x="62.2" y="56.3" font-size="12" text-anchor="middle">3</text><text x="120.5" y="37.6" font-size="12" text-anchor="middle">9</text><text x="64" y="86.5" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 5
+        check: "Fraction(3 * (3 + 9), 4) - 4"
+        hints:
+          - PB を求めよう。
+          - PA × PB から PD を求めよう。
+          - CD は PD から PC をひいた長さだね。
+        paths:
+          - [PB = 12, PA × PB = 36, PD = 9, CD = 9 − 4 = 5, 5 cm]
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PA = 5 cm、AB = 15 cm のとき、PT は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="134.1" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.9" y1="70" x2="170.4" y2="32.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.9" y1="70" x2="100.5" y2="109.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="43.1" y="72.7" font-size="14" text-anchor="middle">P</text><text x="74.7" y="58.3" font-size="14" text-anchor="middle">A</text><text x="178.1" y="29.7" font-size="14" text-anchor="middle">B</text><text x="93.3" y="122.9" font-size="14" text-anchor="middle">T</text><text x="61.1" y="62.8" font-size="12" text-anchor="middle">5</text><text x="123" y="39.3" font-size="12" text-anchor="middle">15</text></svg>'
+        answer: 10
+        check: "math.isqrt(5 * (5 + 15))"
+        hints:
+          - PB は何 cm かな。
+          - PT × PT = PA × PB だね。
+          - 2 回かけて PA × PB になる数を探そう。
+        paths:
+          - [PB = 20, PA × PB = 100, PT = 10, 10 cm]
+      - part: 今日
+        text: 半径 11 cm の円 O の中に、OP = 5 cm の点 P があります。P を通る弦 AB で、PA = 8 cm のとき、PB は何 cm ですか。
+        answer: 12
+        check: "Fraction((11 - 5) * (11 + 5), 8)"
+        hints:
+          - P を通る直径をひこう。
+          - 直径は P で何 cm と何 cm に分かれるかな。
+          - その積を PA でわろう。
+        paths:
+          - [直径は 6 cm と 16 cm に分かれる, PA × PB = 96, PB = 96 ÷ 8 = 12, 12 cm]
+      - part: 今日
+        text: 円の弦 AB のまん中を M とし、M を通って AB に垂直な直径 CD をひきます。AB = 12 cm、CM = 3 cm のとき、この円の半径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="57" stroke="currentColor" stroke-width="2" fill="none"/><line x1="74.4" y1="40.8" x2="165.6" y2="40.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="132" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="112,40.8 112,32.8 120,32.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="65.6" y="39.1" font-size="14" text-anchor="middle">A</text><text x="174.4" y="39.1" font-size="14" text-anchor="middle">B</text><text x="131.5" y="53.7" font-size="14" text-anchor="middle">M</text><text x="120" y="11.9" font-size="14" text-anchor="middle">C</text><text x="112.2" y="144.7" font-size="14" text-anchor="middle">D</text><text x="97.2" y="36.4" font-size="12" text-anchor="middle">6</text><text x="128.6" y="33.6" font-size="12" text-anchor="middle">3</text></svg>'
+        answer: 15/2
+        accept: [7.5]
+        check: "(Fraction(6 * 6, 3) + 3) / 2"
+        hints:
+          - AM と MB は何 cm かな。
+          - CM × MD = AM × MB から MD を求めよう。
+          - 直径 CD の半分が半径だね。
+        paths:
+          - [AM = MB = 6, MD = 36 ÷ 3 = 12, CD = 3 + 12 = 15, 半径 15/2 cm]
+      - part: 今日
+        text: 2 本の直線が点 P で交わり、P は A と B のあいだ、C と D のあいだにあります。PA = 3 cm、PB = 8 cm、PC = 4 cm、PD = 7 cm のとき、4 点 A、B、C、D はどうなっていますか。
+        choices: [1 つの円の上にある, 1 つの円の上にない]
+        answer: 1 つの円の上にない
+        check: "'1 つの円の上にある' if 3 * 8 == 4 * 7 else '1 つの円の上にない'"
+        hints:
+          - PA × PB を計算しよう。
+          - PC × PD を計算しよう。
+          - 2 つの積をくらべよう。
+        paths:
+          - [PA × PB = 24, PC × PD = 28, 等しくないので 1 つの円の上にない]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わるとき、△PAC ∽ △PDB を使って方べきの定理を示しました。∠PAC = ∠PDB と言えるわけはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.3" y1="89.1" x2="106.7" y2="19.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.1" y1="42.4" x2="89.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.3" y1="89.1" x2="164.1" y2="42.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="106.7" y1="19.7" x2="89.2" y2="111.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M166.2 65.2 A24 24 0 0 0 152.4 71.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="161.9" cy="74.2" r="1.9" fill="currentColor"/><path d="M106.8 95.6 A24 24 0 0 0 93.7 88.3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="97.1" cy="97.6" r="1.9" fill="currentColor"/><text x="129.7" y="65.6" font-size="14" text-anchor="middle">P</text><text x="178.6" y="98.1" font-size="14" text-anchor="middle">A</text><text x="98.9" y="16.8" font-size="14" text-anchor="middle">B</text><text x="173.4" y="41.5" font-size="14" text-anchor="middle">C</text><text x="82.7" y="125.7" font-size="14" text-anchor="middle">D</text></svg>'
+        choices: [どちらも弧 BC に対する円周角だから, 対頂角だから, 平行線の錯角だから]
+        answer: どちらも弧 BC に対する円周角だから
+        hints:
+          - ∠PAC は、頂点 A から B と C を見た角だね。
+          - ∠PDB は、頂点 D から C と B を見た角だね。
+          - 2 つの角は、同じ弧に対する円周角かな。
+        paths:
+          - [∠PAC = ∠BAC, ∠PDB = ∠CDB, どちらも弧 BC に対する円周角]
+      - part: 挑戦
+        text: 円の弦 AB と CD が点 P で交わっています。AB = 13 cm、PC = 3 cm、PD = 12 cm で、PA は PB より短いです。PA は何 cm ですか。
+        answer: 4
+        check: "[a for a in range(1, 13) if a * (13 - a) == 3 * 12 and a < 13 - a][0]"
+        hints:
+          - PA × PB はいくつかな。
+          - PA + PB = 13 だね。
+          - かけて PA × PB、たして 13 になる数の組を探そう。
+        paths:
+          - [PA × PB = 36, PA + PB = 13, 4 と 9, PA = 4, 4 cm]
+    extra:
+      - part: 今日
+        text: 円の外の点 P から接線 PT（T は接点）と、円と A、B で交わる直線をひきました。PT = 8 cm、PA = 4 cm のとき、AB は何 cm ですか。
+        answer: 12
+        check: "Fraction(8 * 8, 4) - 4"
+        hints:
+          - PT × PT を計算しよう。
+          - PA × PB がその数になる PB を求めよう。
+          - AB は PB から PA をひいた長さだね。
+        paths:
+          - [PT × PT = 64, PB = 16, AB = 16 − 4 = 12, 12 cm]
+      - part: 今日
+        text: 円の弦 AB と CD が点 P で交わっています。PA = 5 cm、PB = 4 cm、PD = 6 cm のとき、PC は何 cm ですか。分数で答えましょう。
+        answer: 10/3
+        check: "Fraction(5 * 4, 6)"
+        hints:
+          - PA × PB を計算しよう。
+          - PC × 6 がその数になる PC を求めよう。
+          - わりきれないので分数で表し、約分しよう。
+        paths:
+          - [PA × PB = 20, PC = 20 ÷ 6 = 10/3, 10/3 cm]
+      - part: 挑戦
+        text: 半径 7 cm の円 O の外に、OP = 25 cm の点 P があります。P から円にひいた接線 PT（T は接点）は何 cm ですか。
+        answer: 24
+        check: "math.isqrt((25 - 7) * (25 + 7))"
+        hints:
+          - P と O を通る直線と円の交点を考えよう。
+          - P からその 2 つの点までは何 cm と何 cm かな。
+          - PT × PT がその積になるよ。
+        paths:
+          - [18 cm と 32 cm, PT × PT = 576, PT = 24, 24 cm]

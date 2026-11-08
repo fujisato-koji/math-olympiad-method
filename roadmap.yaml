@@ -749,8 +749,8 @@ units:
   - {id: L-012, title: 数学的帰納法の入口, stage: 4, level: 3, region: ronpo, needs: [A-004, A-010, A-015, A-013], days: 12}
   - {id: L-013, title: 命題と条件（必要条件と十分条件）, stage: 4, level: 3, region: ronpo, needs: [L-008, A-010, A-013], days: 5}
   - {id: L-014, title: 極端なものに着目する, stage: 4, level: 3, region: ronpo, needs: [L-011], days: 10}
-  - {id: G-042, title: 角の二等分線の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-020], days: 6}
-  - {id: G-043, title: トレミーの定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-018, G-020], days: 6}
+  - {id: G-042, title: 角の二等分線の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-020, G-017], days: 6}
+  - {id: G-043, title: トレミーの定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-018, G-020, A-016], days: 6}
   - {id: L-032, title: 離散的な中間値の議論, stage: 4, level: 3, region: ronpo, needs: [L-011], days: 5}
   - {id: L-033, title: 作って示す、評価で示す（構成と評価の入口）, stage: 4, level: 3, region: ronpo, needs: [L-007, L-011, L-006], days: 8}
   - {id: S-029, title: 度数分布と箱ひげ図（データの分析）, stage: 4, level: 2, region: data, needs: [S-028, A-005], days: 6}
@@ -780,6 +780,7 @@ units:
   - {id: I-009, title: 食べ物と栄養（食品のなかまとはたらき、エネルギーになる物と体をつくる物、ビタミンとミネラル、栄養成分表示を読んで 1 日の量と比べる）, stage: 4, level: 2, region: eiyo, needs: [B-020, A-005], days: 6}
   - {id: I-010, title: くすりと体（飲んだ薬が血にのって運ばれる、決まった量と回数を守るわけ、効き目と副作用、抗菌薬はウイルスに効かない）, stage: 4, level: 2, region: kusuri-doku, needs: [B-020, B-074], days: 5}
   - {id: G-052, title: 錐体と球の体積と表面積（角錐、円錐、球）, stage: 4, level: 2, region: hakaru, needs: [G-011, G-010, A-010, N-078], days: 5}
+  - {id: G-054, title: 円の接線と接弦定理（接線と半径、接線の長さ、接線と弦のつくる角）, stage: 4, level: 3, region: shomei-zukei, needs: [G-018, G-017], days: 5}
 
   # ---- 段 5 関係 ----
   - {id: A-019, title: 1 次関数とグラフ, stage: 5, level: 3, region: kansu, needs: [A-006, A-011, A-012], days: 6}
@@ -950,7 +951,7 @@ units:
   - {id: C-025, title: 固い構造を決める, stage: 6, level: 3, region: graph, needs: [L-018, L-019], days: 8}
   - {id: G-028, title: 三角形の五心, stage: 4, level: 3, region: haichi, needs: [G-018, G-020, G-023], days: 12}
   - {id: G-029, title: チェバとメネラウスの定理, stage: 6, level: 3, region: haichi, needs: [G-020, G-012], days: 6}
-  - {id: G-030, title: 方べきの定理, stage: 4, level: 3, region: haichi, needs: [G-018, G-020], days: 9}
+  - {id: G-030, title: 方べきの定理, stage: 4, level: 3, region: haichi, needs: [G-018, G-020, G-054, G-019, A-016], days: 9}
   - {id: G-031, title: 相似拡大と回転相似（ミケル点）, stage: 6, level: 3, region: haichi, needs: [G-028, G-015, G-023], days: 8}
   - {id: G-032, title: 根軸と共円・共線, stage: 6, level: 3, region: haichi, needs: [G-030], days: 8}
   - {id: G-033, title: 典型的な配置（内心・傍心の補題、九点円など）, stage: 6, level: 3, region: haichi, needs: [G-028, G-023], days: 8}

@@ -1,0 +1,641 @@
+# G-043 トレミーの定理
+#
+# 書き方は N-001 の頭の注のとおり。
+# トレミーの定理：円に内接する四角形 ABCD で AC × BD = AB × CD + AD × BC（2 本の対角線の積 = 向かい合う辺の積の和）。
+# 前提は G-018（円周角の定理、直径に対する円周角）と G-020（相似の条件、相似比）。
+# わけは、対角線 BD の上に ∠BAE = ∠CAD となる点 E をとり、△ABE ∽ △ACD と △ADE ∽ △ACB の 2 組の相似を足す形。
+# 円に内接する四角形の角の性質（向かい合う角の和が 180°、G-023）は前提にないので使わない。
+# 三平方の定理（G-019）と平方根（A-016）は前提にない。対角線を求める問題は AC × AC が平方数になる値にするか、
+#   「AC × BD はいくつか」を問う。2 日目の挑戦とわけの 3 問目で、長方形にトレミーの定理を使うと
+#   三平方の定理と同じ式になることを見る（G-019 を先に学んでいなくても、ここから式が出る）。
+# 問題の四角形は、実際に円に内接するものにした：直径 AC を共有する 2 つの直角三角形（3、4、5 や 25、60、65 と 39、52、65）、
+#   等脚台形（上底 3、下底 5、脚 7、対角線 8 など）、正三角形と外接円の上の点、正方形、正五角形、正六角形、長方形。
+#   図はそれぞれの長さのとおりに作図した。
+# D-026：トレミーの定理は、昔の天文学で弦の表をつくるのに使われ、三角関数の加法定理（G-025）と同じ内容を持つ。
+#   3 日目の挑戦の正五角形の対角線と 1 辺の比は黄金比で、5 回対称の準結晶（2011 年ノーベル化学賞）につながる。
+# 円に内接しない四角形では AC × BD < AB × CD + AD × BC（トレミーの不等式）。3 日目と確認の日に数で確かめるだけにし、
+#   わけは G-034（幾何の不等式）にまわす。
+# 地図に plan がないので既定の並び（導入・練習 2 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 トレミーの定理で対角線を求める　2 日目 特別な形（正三角形と円の上の点、正方形、正六角形、長方形）
+#   3 日目 辺を求める、円に内接しない四角形では成り立たない　4 日目 わけ（相似で示す、PA = PB + PC、長方形と三平方）
+#   5 日目 G-018（円周角）・G-020（相似）と混ぜる　6 日目 確認
+# check：積と和の式（Fraction）、対角線は math.isqrt。くらべる問題は積の和をくらべる式。
+
+id: G-043
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 円に内接する四角形 ABCD があります。AB = 7 cm、BC = 5 cm、CD = 7 cm、DA = 3 cm、対角線 AC = BD = 8 cm です。AC × BD と AB × CD + AD × BC をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.7,21.7 87.8,110.9 152.2,110.9 139.3,21.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.7" y1="21.7" x2="152.2" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.8" y1="110.9" x2="139.3" y2="21.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="94.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="81" y="124.4" font-size="14" text-anchor="middle">B</text><text x="159" y="124.4" font-size="14" text-anchor="middle">C</text><text x="145.9" y="17.8" font-size="14" text-anchor="middle">D</text><text x="85.8" y="69.3" font-size="12" text-anchor="middle">7</text><text x="120" y="106.5" font-size="12" text-anchor="middle">5</text><text x="154.2" y="69.3" font-size="12" text-anchor="middle">7</text><text x="120" y="34.5" font-size="12" text-anchor="middle">3</text></svg>'
+        explain: AC × BD = 8 × 8 = 64、AB × CD + AD × BC = 7 × 7 + 3 × 5 = 49 + 15 = 64 で、等しくなります。円に内接する四角形 ABCD では、いつも AC × BD = AB × CD + AD × BC が成り立ちます。これをトレミーの定理といいます（わけは 4 日目）。左は 2 本の対角線の積、右は向かい合う辺の積 2 つの和です。どの辺とどの辺が向かい合うか（AB と CD、AD と BC）を、図で確かめてから使います。
+      - part: 思い出す
+        text: 円 O で、∠AOD = 100° です。弧 AD に対する円周角 ∠ABD は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="153.4" y2="109.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.5" y1="18.2" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="115.5" y1="18.2" x2="153.4" y2="109.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M108.7 76.5 A13 13 0 0 0 128.4 80" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="115.5" y="99.8" font-size="12" text-anchor="middle">100°</text><path d="M106.2 35.9 A20 20 0 0 0 123.1 36.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="121.9" y="64.1" font-size="14" text-anchor="middle">O</text><text x="107" y="16" font-size="14" text-anchor="middle">B</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">A</text><text x="160.5" y="123.2" font-size="14" text-anchor="middle">D</text></svg>'
+        answer: 50
+        check: "100 // 2"
+        hints:
+          - 円周角と中心角の関係を思い出そう。
+          - 円周角は、同じ弧に対する中心角の何分の 1 かな。
+          - 100° をその分だけに分けよう。
+        paths:
+          - [円周角は中心角の半分, 100 ÷ 2 = 50, 50°]
+      - part: 思い出す
+        text: △ABE ∽ △ACD で、AB = 6 cm、AC = 9 cm、CD = 12 cm です。BE は何 cm ですか。
+        answer: 8
+        check: "Fraction(12 * 6, 9)"
+        hints:
+          - BE に対応する辺は CD だね。
+          - 相似比 AB:AC を簡単な比にしよう。
+          - BE:CD も同じ比になるよ。
+        paths:
+          - [AB:AC = 6:9 = 2:3, BE:CD = 2:3, BE = 12 × 2/3 = 8, 8 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 3 cm、BC = 4 cm、CD = 4 cm、DA = 3 cm、対角線 AC = 5 cm です。対角線 BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 105.4,20.1 172,70 105.4,119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.4" y1="20.1" x2="105.4" y2="119.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="97.5" y="17.4" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="99.7" y="134.2" font-size="14" text-anchor="middle">D</text><text x="93.6" y="54.4" font-size="12" text-anchor="middle">3</text><text x="143.9" y="42.4" font-size="12" text-anchor="middle">4</text><text x="143.9" y="106" font-size="12" text-anchor="middle">4</text><text x="93.6" y="94" font-size="12" text-anchor="middle">3</text><text x="120" y="65.6" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 24/5
+        accept: [4.8]
+        check: "Fraction(3 * 4 + 3 * 4, 5)"
+        hints:
+          - トレミーの定理 AC × BD = AB × CD + AD × BC を使おう。
+          - 右の 2 つの積を計算して足そう。
+          - 5 × BD がその和になる BD を求めよう。
+        paths:
+          - [AB × CD + AD × BC = 12 + 12 = 24, 5 × BD = 24, BD = 24/5, 24/5 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 3 cm、AD = 5 cm、BC = 8 cm、対角線 AC と BD は同じ長さです。AC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="87.8,29.1 68.5,62.6 171.5,62.6 152.2,29.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.8" y1="29.1" x2="171.5" y2="62.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.5" y1="62.6" x2="152.2" y2="29.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="81" y="25.4" font-size="14" text-anchor="middle">A</text><text x="57.6" y="65.9" font-size="14" text-anchor="middle">B</text><text x="182.4" y="65.9" font-size="14" text-anchor="middle">C</text><text x="159" y="25.4" font-size="14" text-anchor="middle">D</text><text x="68.1" y="44.3" font-size="12" text-anchor="middle">3</text><text x="120" y="58.2" font-size="12" text-anchor="middle">8</text><text x="171.9" y="44.3" font-size="12" text-anchor="middle">3</text><text x="120" y="24.7" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 7
+        check: "math.isqrt(3 * 3 + 5 * 8)"
+        hints:
+          - AC = BD なので、左は AC × AC になるね。
+          - 右の AB × CD + AD × BC を計算しよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 3 × 3 + 5 × 8, = 9 + 40 = 49, AC = 7, 7 cm]
+      - part: 今日
+        text: 1 辺 5 cm の正方形 ABCD は円に内接します。トレミーの定理を使うと、AC × BD はいくつになりますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="83.2,33.2 156.8,33.2 156.8,106.8 83.2,106.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.2" y1="33.2" x2="156.8" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="156.8" y1="33.2" x2="83.2" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><text x="75.5" y="30.4" font-size="14" text-anchor="middle">A</text><text x="164.5" y="30.4" font-size="14" text-anchor="middle">B</text><text x="164.5" y="119.4" font-size="14" text-anchor="middle">C</text><text x="75.5" y="119.4" font-size="14" text-anchor="middle">D</text><text x="120" y="46" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 50
+        check: "5 * 5 + 5 * 5"
+        hints:
+          - 向かい合う辺の組は、AB と CD、AD と BC だね。
+          - それぞれの積を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB × CD = 25, AD × BC = 25, AC × BD = 25 + 25 = 50]
+        note: AC = BD なので AC × AC = 50。対角線を 1 辺とする正方形の面積が 50 cm² ということ（三平方の定理 G-019 でも同じ値になる）。
+      - part: 挑戦
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、BC = 60 cm、CD = 52 cm、DA = 39 cm、対角線 AC = 65 cm です。対角線 BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 83.4,33.1 172,70 105.4,119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.4" y1="33.1" x2="105.4" y2="119.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="75.6" y="30.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="99.7" y="134.2" font-size="14" text-anchor="middle">D</text><text x="64.4" y="51" font-size="12" text-anchor="middle">25</text><text x="132.4" y="44.5" font-size="12" text-anchor="middle">60</text><text x="131.4" y="89.4" font-size="12" text-anchor="middle">52</text><text x="88.1" y="85.7" font-size="12" text-anchor="middle">39</text><text x="111.7" y="62" font-size="12" text-anchor="middle">65</text></svg>'
+        answer: 56
+        check: "Fraction(25 * 52 + 39 * 60, 65)"
+        hints:
+          - 向かい合う辺の組をまちがえないようにしよう。
+          - AB × CD と AD × BC をそれぞれ計算しよう。
+          - その和を AC でわろう。
+        paths:
+          - [AB × CD = 1300, AD × BC = 2340, 和は 3640, BD = 3640 ÷ 65 = 56, 56 cm]
+        note: AC は円の直径で、△ABC と △ACD は直角三角形（25、60、65 と 39、52、65）。大きな数の計算は、筆算でていねいに。
+    extra:
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 6 cm、BC = 8 cm、CD = 8 cm、DA = 6 cm、対角線 AC = 10 cm です。対角線 BD は何 cm ですか。
+        answer: 48/5
+        accept: [9.6]
+        check: "Fraction(6 * 8 + 6 * 8, 10)"
+        hints:
+          - AC × BD = AB × CD + AD × BC だね。
+          - 右の和を計算しよう。
+          - 10 × BD がその和になる BD を求めよう。
+        paths:
+          - [AB × CD + AD × BC = 48 + 48 = 96, BD = 96 ÷ 10 = 48/5, 48/5 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 8 cm、AD = 4 cm、BC = 9 cm、対角線 AC と BD は同じ長さです。AC は何 cm ですか。
+        answer: 10
+        check: "math.isqrt(8 * 8 + 4 * 9)"
+        hints:
+          - 左は AC × AC になるね。
+          - 右の AB × CD + AD × BC を計算しよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 64 + 36 = 100, AC = 10, 10 cm]
+      - part: 挑戦
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、BC = 60 cm、CD = 39 cm、DA = 52 cm、対角線 AC = 65 cm です。対角線 BD は何 cm ですか。
+        answer: 63
+        check: "Fraction(25 * 39 + 52 * 60, 65)"
+        hints:
+          - AB × CD と AD × BC を計算しよう。
+          - その和を求めよう。
+          - 和を AC でわろう。
+        paths:
+          - [AB × CD = 975, AD × BC = 3120, 和は 4095, BD = 4095 ÷ 65 = 63, 63 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 3 cm、PC = 5 cm のとき、PA を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="99.6" y="134.2" font-size="14" text-anchor="middle">P</text><text x="83" y="121.3" font-size="12" text-anchor="middle">3</text><text x="117.6" y="109.9" font-size="12" text-anchor="middle">5</text></svg>'
+        explain: 四角形 ABPC は円に内接するので（頂点は A、B、P、C の順に円の上に並ぶ）、トレミーの定理から AP × BC = AB × PC + AC × BP。正三角形の 1 辺を ■ とすると AB = BC = CA = ■ なので、■ × AP = ■ × PC + ■ × PB = ■ × (PB + PC)。よって AP = PB + PC = 3 + 5 = 8 cm です。1 辺の長さがわからなくても PA が求まります。円の上に並ぶ順に四角形を見て、対角線と向かい合う辺を選ぶことが大切です。
+      - part: 思い出す
+        text: 円に内接する四角形 ABCD で、AB = CD = 8 cm、AD = 4 cm、BC = 9 cm、対角線 AC と BD は同じ長さです。AC × AC はいくつですか。
+        answer: 100
+        check: "8 * 8 + 4 * 9"
+        hints:
+          - トレミーの定理を使おう。
+          - AC = BD なので、左は AC × AC だね。
+          - 右の AB × CD + AD × BC を計算しよう。
+        paths:
+          - [AC × AC = AB × CD + AD × BC, = 64 + 36, = 100]
+      - part: 思い出す
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><path d="M107.9 102.1 A18 18 0 0 0 91.2 108.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="99.6" y="134.2" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - ∠APB は、どの弧に対する円周角かな。
+          - 同じ弧 AB に対する円周角は、ほかにどれがあるかな。
+          - 正三角形の 1 つの角は何度かな。
+        paths:
+          - [∠APB と ∠ACB は弧 AB の円周角, ∠ACB = 60°, 60°]
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 4 cm、PC = 7 cm のとき、PA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="119.5" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="100.6" y="134.9" font-size="14" text-anchor="middle">P</text><text x="82.2" y="121" font-size="12" text-anchor="middle">4</text><text x="116.8" y="109.6" font-size="12" text-anchor="middle">7</text></svg>'
+        answer: 11
+        check: "4 + 7"
+        hints:
+          - 見本の四角形 ABPC を思い出そう。
+          - トレミーの定理で、正三角形の 1 辺はどうなったかな。
+          - PA = PB + PC だったね。
+        paths:
+          - [PA = PB + PC, 4 + 7 = 11, 11 cm]
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 10 cm、PB = 3 cm のとき、PC は何 cm ですか。
+        answer: 7
+        check: "10 - 3"
+        hints:
+          - PA = PB + PC だったね。
+          - わかっている長さをあてはめよう。
+          - PC = PA − PB だね。
+        paths:
+          - [PA = PB + PC, PC = 10 − 3 = 7, 7 cm]
+      - part: 今日
+        text: 1 辺 4 cm の正六角形 ABCDEF は円に内接し、対角線 AD は 8 cm です。四角形 ABCD にトレミーの定理を使うと、AC × BD はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 94,25 146,25 172,70 146,115 94,115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="146" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="25" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="88.5" y="20.3" font-size="14" text-anchor="middle">B</text><text x="151.5" y="20.3" font-size="14" text-anchor="middle">C</text><text x="183" y="74.9" font-size="14" text-anchor="middle">D</text><text x="151.5" y="129.5" font-size="14" text-anchor="middle">E</text><text x="88.5" y="129.5" font-size="14" text-anchor="middle">F</text><text x="92.6" y="48.8" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 48
+        check: "4 * 4 + 8 * 4"
+        hints:
+          - 四角形 ABCD で、向かい合う辺の組はどれかな。
+          - AB × CD と AD × BC を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB × CD = 16, AD × BC = 32, AC × BD = 48]
+        note: AC = BD なので AC × AC = 48。AC は 6 と 7 のあいだの長さ（平方根 A-016 で 4√3 と書く）。
+      - part: 挑戦
+        text: 長方形 ABCD は円に内接します。AB = 5 cm、BC = 12 cm のとき、対角線 AC は何 cm ですか。トレミーの定理を使いましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="72,50 72,90 168,90 168,50" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72" y1="50" x2="168" y2="90" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72" y1="90" x2="168" y2="50" stroke="currentColor" stroke-width="2" fill="none"/><text x="61.8" y="50.7" font-size="14" text-anchor="middle">A</text><text x="61.8" y="99.1" font-size="14" text-anchor="middle">B</text><text x="178.2" y="99.1" font-size="14" text-anchor="middle">C</text><text x="178.2" y="50.7" font-size="14" text-anchor="middle">D</text><text x="60.4" y="74.2" font-size="12" text-anchor="middle">5</text><text x="120" y="106.4" font-size="12" text-anchor="middle">12</text></svg>'
+        answer: 13
+        check: "math.isqrt(5 * 5 + 12 * 12)"
+        hints:
+          - 長方形では、向かい合う辺の長さが等しく、2 本の対角線の長さも等しいね。
+          - AC × BD = AB × CD + AD × BC を、AB と BC だけで書こう。
+          - AC × AC がいくつになるかを求めよう。
+        paths:
+          - [AC × AC = AB × AB + BC × BC, = 25 + 144 = 169, AC = 13, 13 cm]
+        note: AC × AC = AB × AB + BC × BC は、三平方の定理（G-019）と同じ式。トレミーの定理から三平方の定理が出る（4 日目のわけの 3 問目）。
+    extra:
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 6 cm、PC = 9 cm のとき、PA は何 cm ですか。
+        answer: 15
+        check: "6 + 9"
+        hints:
+          - 四角形 ABPC にトレミーの定理を使ったね。
+          - そのとき、PA と PB、PC の関係はどうなったかな。
+          - PB と PC を足そう。
+        paths:
+          - [PA = PB + PC, 6 + 9 = 15, 15 cm]
+      - part: 今日
+        text: 1 辺 6 cm の正方形 ABCD は円に内接します。トレミーの定理を使うと、AC × BD はいくつになりますか。
+        answer: 72
+        check: "6 * 6 + 6 * 6"
+        hints:
+          - 向かい合う辺の組は、AB と CD、AD と BC だね。
+          - それぞれの積を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [36 + 36 = 72]
+      - part: 挑戦
+        text: 1 辺 3 cm の正六角形 ABCDEF は円に内接し、対角線 AD は 6 cm です。四角形 ABCD にトレミーの定理を使うと、AC × BD はいくつですか。
+        answer: 27
+        check: "3 * 3 + 6 * 3"
+        hints:
+          - 四角形 ABCD で、向かい合う辺の組はどれかな。
+          - AB × CD と AD × BC を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB × CD = 9, AD × BC = 18, AC × BD = 27]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 円に内接する四角形 ABCD で、AB = CD = 5 cm、AD = 3 cm、対角線 AC = BD = 7 cm です。BC の長さを求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.7,21.7 68.5,77.4 171.5,77.4 139.3,21.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.7" y1="21.7" x2="171.5" y2="77.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.5" y1="77.4" x2="139.3" y2="21.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="94.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="57.6" y="83.9" font-size="14" text-anchor="middle">B</text><text x="182.4" y="83.9" font-size="14" text-anchor="middle">C</text><text x="145.9" y="17.8" font-size="14" text-anchor="middle">D</text><text x="99.8" y="44.7" font-size="12" text-anchor="middle">5</text><text x="140.2" y="44.7" font-size="12" text-anchor="middle">5</text><text x="120" y="14.3" font-size="12" text-anchor="middle">3</text></svg>'
+        explain: トレミーの定理から AC × BD = AB × CD + AD × BC。7 × 7 = 5 × 5 + 3 × BC なので、3 × BC = 49 − 25 = 24、BC = 24 ÷ 3 = 8 cm です。わからない辺が 1 つだけなら、トレミーの定理の式から逆にたどって求められます。わからない辺が、どの積の中にあるかを先に見ます。
+      - part: 思い出す
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 5 cm、PC = 8 cm のとき、PA は何 cm ですか。
+        answer: 13
+        check: "5 + 8"
+        hints:
+          - 四角形 ABPC にトレミーの定理を使ったね。
+          - PA と PB、PC の関係を思い出そう。
+          - PB と PC を足そう。
+        paths:
+          - [PA = PB + PC, 5 + 8 = 13, 13 cm]
+      - part: 思い出す
+        text: △ABE ∽ △ACD で、AB = 4 cm、AC = 10 cm、CD = 15 cm です。BE は何 cm ですか。
+        answer: 6
+        check: "Fraction(15 * 4, 10)"
+        hints:
+          - BE に対応する辺は CD だね。
+          - 相似比 AB:AC を簡単な比にしよう。
+          - BE:CD も同じ比になるよ。
+        paths:
+          - [AB:AC = 2:5, BE = 15 × 2/5 = 6, 6 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 8 cm、AD = 4 cm、対角線 AC = BD = 10 cm です。BC は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.2,21.9 75.5,97 164.5,97 139.8,21.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.2" y1="21.9" x2="164.5" y2="97" stroke="currentColor" stroke-width="2" fill="none"/><line x1="75.5" y1="97" x2="139.8" y2="21.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="96.1" y="16.6" font-size="14" text-anchor="middle">A</text><text x="66.1" y="107.6" font-size="14" text-anchor="middle">B</text><text x="173.9" y="107.6" font-size="14" text-anchor="middle">C</text><text x="143.9" y="16.6" font-size="14" text-anchor="middle">D</text><text x="79.7" y="61" font-size="12" text-anchor="middle">8</text><text x="160.3" y="61" font-size="12" text-anchor="middle">8</text><text x="120" y="34.7" font-size="12" text-anchor="middle">4</text></svg>'
+        answer: 9
+        check: "Fraction(10 * 10 - 8 * 8, 4)"
+        hints:
+          - トレミーの定理の式に、わかっている長さを入れよう。
+          - AC × BD から AB × CD をひくと、AD × BC が残るね。
+          - 4 × BC がその数になる BC を求めよう。
+        paths:
+          - [10 × 10 = 8 × 8 + 4 × BC, 4 × BC = 100 − 64 = 36, BC = 9, 9 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、BC = 60 cm、DA = 39 cm、対角線 AC = 65 cm、BD = 56 cm です。CD は何 cm ですか。
+        answer: 52
+        check: "Fraction(65 * 56 - 60 * 39, 25)"
+        hints:
+          - CD は、どの積の中にあるかな。
+          - AC × BD から AD × BC をひこう。
+          - 残りを AB でわろう。
+        paths:
+          - [65 × 56 = 3640, AD × BC = 2340, AB × CD = 3640 − 2340 = 1300, CD = 1300 ÷ 25 = 52, 52 cm]
+      - part: 今日
+        text: 1 辺 5 cm、対角線 AC = 8 cm、BD = 6 cm のひし形 ABCD で、AC × BD と AB × CD + AD × BC をくらべると、どうなりますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50.7,70 120,18 189.3,70 120,122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="50.7" y1="70" x2="189.3" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><text x="39.7" y="74.9" font-size="14" text-anchor="middle">A</text><text x="110.5" y="17.4" font-size="14" text-anchor="middle">B</text><text x="200.3" y="74.9" font-size="14" text-anchor="middle">C</text><text x="112.2" y="134.7" font-size="14" text-anchor="middle">D</text><text x="80.2" y="41.3" font-size="12" text-anchor="middle">5</text></svg>'
+        choices: [AC × BD のほうが大きい, AB × CD + AD × BC のほうが大きい, 等しい]
+        answer: AB × CD + AD × BC のほうが大きい
+        check: "'AC × BD のほうが大きい' if 8 * 6 > 5 * 5 + 5 * 5 else ('等しい' if 8 * 6 == 5 * 5 + 5 * 5 else 'AB × CD + AD × BC のほうが大きい')"
+        hints:
+          - AC × BD を計算しよう。
+          - AB × CD + AD × BC を計算しよう。
+          - 2 つをくらべよう。
+        paths:
+          - [AC × BD = 48, AB × CD + AD × BC = 50, 右のほうが大きい]
+        note: 正方形でないひし形は円に内接しないので、トレミーの定理の等号は成り立たない。どんな四角形でも AC × BD ≦ AB × CD + AD × BC で、等号は円に内接するときだけ（トレミーの不等式、G-034）。
+      - part: 挑戦
+        text: 正五角形 ABCDE は円に内接します。1 辺を 1 cm、対角線の長さを ■ cm とすると、四角形 ABCD にトレミーの定理を使って ■ × ■ = ■ + 1 が成り立ちます。■ はおよそいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 169.5,53.9 150.6,112.1 89.4,112.1 70.5,53.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="150.6" y2="112.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="169.5" y1="53.9" x2="89.4" y2="112.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="89.4" y2="112.1" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="179.9" y="55.4" font-size="14" text-anchor="middle">B</text><text x="157" y="125.9" font-size="14" text-anchor="middle">C</text><text x="83" y="125.9" font-size="14" text-anchor="middle">D</text><text x="60.1" y="55.4" font-size="14" text-anchor="middle">E</text></svg>'
+        choices: [約 1.4, 約 1.6, 約 1.8]
+        answer: 約 1.6
+        check: "[c for c, v in (('約 1.4', 1.4), ('約 1.6', 1.6), ('約 1.8', 1.8)) if abs((1 + math.sqrt(5)) / 2 - v) < 0.05][0]"
+        hints:
+          - 四角形 ABCD で、対角線と向かい合う辺はどれかな。
+          - ■ に 1.4、1.6、1.8 を入れて、■ × ■ と ■ + 1 をくらべよう。
+          - 2 つの値がいちばん近くなるのはどれかな。
+        paths:
+          - [AC × BD = AB × CD + AD × BC, ■ × ■ = 1 × 1 + ■ × 1, 1.6 × 1.6 = 2.56 と 1.6 + 1 = 2.6 が近い, 約 1.6]
+        note: この数（約 1.618）は黄金比。5 回対称の準結晶（2011 年ノーベル化学賞）の原子の並びにも現れる（D-026）。1.6 × 1.6 は小数のかけ算（N-077）。
+    extra:
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 3 cm、AD = 5 cm、対角線 AC = BD = 7 cm です。BC は何 cm ですか。
+        answer: 8
+        check: "Fraction(7 * 7 - 3 * 3, 5)"
+        hints:
+          - トレミーの定理の式に、わかっている長さを入れよう。
+          - AC × BD から AB × CD をひこう。
+          - 5 × BC がその数になる BC を求めよう。
+        paths:
+          - [49 = 9 + 5 × BC, 5 × BC = 40, BC = 8, 8 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、BC = 60 cm、CD = 39 cm、対角線 AC = 65 cm、BD = 63 cm です。DA は何 cm ですか。
+        answer: 52
+        check: "Fraction(65 * 63 - 25 * 39, 60)"
+        hints:
+          - DA は、どの積の中にあるかな。
+          - AC × BD から AB × CD をひこう。
+          - 残りを BC でわろう。
+        paths:
+          - [65 × 63 = 4095, AB × CD = 975, AD × BC = 3120, DA = 3120 ÷ 60 = 52, 52 cm]
+      - part: 挑戦
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 9 cm、PB = 2 cm のとき、PC は何 cm ですか。
+        answer: 7
+        check: "9 - 2"
+        hints:
+          - PA と PB、PC の関係を思い出そう。
+          - PA = PB + PC だね。
+          - PA から PB をひこう。
+        paths:
+          - [PC = PA − PB = 9 − 2 = 7, 7 cm]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 円に内接する四角形 ABCD で、AC × BD = AB × CD + AD × BC となるわけを書きましょう。対角線 BD の上に、∠BAE = ∠CAD となる点 E をとって考えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="72.9,92 94,25 170.2,56.5 129,121.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="92" x2="170.2" y2="56.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="25" x2="129" y2="121.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.9" y1="92" x2="111.8" y2="73.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M96.4 81 A26 26 0 0 0 80.7 67.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="84.5" cy="78.7" r="1.9" fill="currentColor"/><path d="M95.9 104 A26 26 0 0 0 97.3 83.1" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="90.5" cy="93.1" r="1.9" fill="currentColor"/><path d="M86.8 47.9 A24 24 0 0 0 102.2 47.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="94.4" cy="41.3" r="2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M147.7 64.7 A24 24 0 0 0 157.3 76.8" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="157.5" cy="66.8" r="2" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="62.9" y="101.5" font-size="14" text-anchor="middle">A</text><text x="88.5" y="20.3" font-size="14" text-anchor="middle">B</text><text x="180.9" y="58.6" font-size="14" text-anchor="middle">C</text><text x="136.1" y="134.5" font-size="14" text-anchor="middle">D</text><text x="118.9" y="70.3" font-size="14" text-anchor="middle">E</text></svg>'
+        explain: 例：「BD の上に ∠BAE = ∠CAD となる点 E をとる。△ABE と △ACD で、∠BAE = ∠CAD、∠ABE = ∠ACD（弧 AD に対する円周角）なので △ABE ∽ △ACD。相似比を k とすると AB = k × AC、BE = k × CD なので、AB × CD と AC × BE はどちらも k × AC × CD で、AB × CD = AC × BE …①。また ∠DAE = ∠DAC + ∠CAE = ∠BAE + ∠CAE = ∠BAC。△ADE と △ACB で、∠DAE = ∠CAB、∠ADE = ∠ACB（弧 AB に対する円周角）なので △ADE ∽ △ACB、同じようにして AD × BC = AC × DE …②。①と②を足すと AB × CD + AD × BC = AC × (BE + DE) = AC × BD。」と書ければよい。① 点 E をとる（〜とする）、② 2 組の相似から積の式を 2 つつくる、③ 足して BE + DE = BD で結ぶ、の 3 つを見る。∠DAE = ∠CAB を言うところ（∠CAE を両方に足す）でつまずきやすい。数の例で確かめただけでは、すべての四角形について示したことにならないことに触れる。
+        hints:
+          - △ABE と △ACD で、等しい角を 2 組さがそう。∠ABE はどの弧に対する円周角かな。
+          - ∠DAE と ∠CAB が等しいことを使って、もう 1 組の相似な三角形を見つけよう。
+          - 2 つの相似から出る積の式を足して、BE + DE = BD を使おう。
+        paths:
+          - [△ABE ∽ △ACD で AB × CD = AC × BE, ∠DAE = ∠CAB, △ADE ∽ △ACB で AD × BC = AC × DE, 足して AC × (BE + DE) = AC × BD]
+      - part: わけ
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上の点 P について、PA = PB + PC となるわけを書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,18 75,96 165,96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="120" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="75" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.3" y1="119.9" x2="165" y2="96" stroke="currentColor" stroke-width="2" fill="none"/><text x="127.8" y="15.1" font-size="14" text-anchor="middle">A</text><text x="65.4" y="106.4" font-size="14" text-anchor="middle">B</text><text x="174.6" y="106.4" font-size="14" text-anchor="middle">C</text><text x="99.6" y="134.2" font-size="14" text-anchor="middle">P</text></svg>'
+        explain: 例：「正三角形の 1 辺を ■ とする。A、B、P、C はこの順に円の上に並ぶので、四角形 ABPC は円に内接し、トレミーの定理から AP × BC = AB × PC + AC × BP。AB = BC = CA = ■ なので ■ × AP = ■ × PC + ■ × PB = ■ × (PB + PC)。よって AP = PB + PC。」と書ければよい。① 1 辺を ■ とし、四角形 ABPC を選ぶ、② トレミーの定理の式を書く、③ ■ でわって結ぶ、を見る。頂点の順を A、B、C、P のように取り違えると対角線を誤る。2 日目の数の例（3 と 5 で 8）だけでは、すべての P について示したことにならないことに触れる。
+        hints:
+          - 四角形 ABPC は円に内接しているね。対角線はどれとどれかな。
+          - トレミーの定理の式を書こう。
+          - 正三角形なので、AB、BC、CA はどれも同じ長さだよ。
+        paths:
+          - [四角形 ABPC にトレミーの定理, AP × BC = AB × PC + AC × BP, 3 辺は等しいので ■ × AP = ■ × (PB + PC), AP = PB + PC]
+      - part: わけ
+        text: 長方形 ABCD は円に内接します。トレミーの定理を使って、AC × AC = AB × AB + BC × BC となるわけを書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="78.4,38.8 78.4,101.2 161.6,101.2 161.6,38.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="78.4" y1="38.8" x2="161.6" y2="101.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="78.4" y1="101.2" x2="161.6" y2="38.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="78.4,93.2 86.4,93.2 86.4,101.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="161.6,46.8 153.6,46.8 153.6,38.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="69.6" y="37.1" font-size="14" text-anchor="middle">A</text><text x="69.6" y="112.7" font-size="14" text-anchor="middle">B</text><text x="170.4" y="112.7" font-size="14" text-anchor="middle">C</text><text x="170.4" y="37.1" font-size="14" text-anchor="middle">D</text></svg>'
+        explain: 例：「∠ABC = ∠ADC = 90° なので、B と D は AC を直径とする円の上にあり、長方形 ABCD は円に内接する。トレミーの定理から AC × BD = AB × CD + AD × BC。長方形では BD = AC、CD = AB、AD = BC なので、AC × AC = AB × AB + BC × BC。」と書ければよい。① 円に内接することと、等しい辺と対角線を言う、② トレミーの定理の式を書く、③ 置きかえて結ぶ、を見る。これは直角三角形 ABC の三平方の定理（G-019）と同じ式で、トレミーの定理が三平方の定理をふくんでいることに気づかせる。
+        hints:
+          - 長方形の 4 つの頂点が 1 つの円の上にあるのはなぜかな。∠B と ∠D に注目しよう。
+          - トレミーの定理の式を書こう。
+          - 長方形で等しい辺と等しい対角線を使って、置きかえよう。
+        paths:
+          - [∠B = ∠D = 90° で 4 点は AC を直径とする円の上, AC × BD = AB × CD + AD × BC, BD = AC、CD = AB、AD = BC, AC × AC = AB × AB + BC × BC]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、CD = 52 cm、AC = 65 cm です。わけの 1 問目のように BD の上に ∠BAE = ∠CAD となる点 E をとると、BE は何 cm ですか。
+        answer: 20
+        check: "Fraction(25 * 52, 65)"
+        hints:
+          - △ABE ∽ △ACD で、BE に対応する辺は CD だね。
+          - 相似比 AB:AC を簡単な比にしよう。
+          - BE:CD も同じ比になるよ。
+        paths:
+          - [AB:AC = 25:65 = 5:13, BE = 52 × 5/13 = 20, 20 cm]
+      - part: 今日
+        text: 前の問題の四角形 ABCD で、AD = 39 cm、BC = 60 cm です（AC = 65 cm）。△ADE ∽ △ACB を使うと、DE は何 cm ですか。
+        answer: 36
+        check: "Fraction(39 * 60, 65)"
+        hints:
+          - △ADE ∽ △ACB で、DE に対応する辺は CB だね。
+          - 相似比 AD:AC を簡単な比にしよう。
+          - DE:CB も同じ比になるよ。
+        paths:
+          - [AD:AC = 39:65 = 3:5, DE = 60 × 3/5 = 36, 36 cm]
+        note: BE + DE = 20 + 36 = 56 で、1 日目の挑戦の BD と同じになる。
+    extra:
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、CD = 39 cm、AC = 65 cm です。BD の上に ∠BAE = ∠CAD となる点 E をとると、BE は何 cm ですか。
+        answer: 15
+        check: "Fraction(25 * 39, 65)"
+        hints:
+          - △ABE ∽ △ACD を使おう。
+          - BE に対応する辺は CD だね。
+          - 相似比 AB:AC を使おう。
+        paths:
+          - [AB:AC = 5:13, BE = 39 × 5/13 = 15, 15 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AD = 52 cm、BC = 60 cm、AC = 65 cm です。BD の上に ∠BAE = ∠CAD となる点 E をとると、DE は何 cm ですか。
+        answer: 48
+        check: "Fraction(52 * 60, 65)"
+        hints:
+          - △ADE ∽ △ACB を使おう。
+          - DE に対応する辺は CB だね。
+          - 相似比 AD:AC を使おう。
+        paths:
+          - [AD:AC = 4:5, DE = 60 × 4/5 = 48, 48 cm]
+      - part: 挑戦
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 12 cm で、PB:PC = 1:2 です。PB は何 cm ですか。
+        answer: 4
+        check: "Fraction(12 * 1, 1 + 2)"
+        hints:
+          - PA と PB、PC の関係を思い出そう。
+          - PB + PC = 12 cm だね。
+          - 12 cm を 1:2 に分けよう。
+        paths:
+          - [PB + PC = PA = 12, 12 を 1:2 に分ける, PB = 12 × 1/3 = 4, 4 cm]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: AC は円の直径で、B は円の上の点です。∠BAC = 37° のとき、∠BCA は何度ですか。
+        answer: 53
+        check: "180 - 90 - 37"
+        hints:
+          - 直径に対する円周角は何度だったかな。
+          - △ABC の 3 つの角の和は 180° だね。
+          - 180 から、∠ABC と ∠BAC をひこう。
+        paths:
+          - [∠ABC = 90°, 180 − 90 − 37 = 53, 53°]
+      - part: 思い出す
+        text: △ABE と △ACD で、∠BAE = ∠CAD、∠ABE = ∠ACD です。このとき △ABE ∽ △ACD と言える相似の条件はどれですか。
+        choices: [2 組の角がそれぞれ等しい, 2 組の辺の比とその間の角がそれぞれ等しい, 3 組の辺の比がすべて等しい]
+        answer: 2 組の角がそれぞれ等しい
+        hints:
+          - わかっているのは、辺かな、角かな。
+          - 等しい角は何組あるかな。
+          - 角だけで言える相似の条件はどれかな。
+        paths:
+          - [等しい角が 2 組, 2 組の角がそれぞれ等しい]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 9 cm、BC = 12 cm、CD = 12 cm、DA = 9 cm、対角線 AC = 15 cm です。対角線 BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 105.4,20.1 172,70 105.4,119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="105.4" y1="20.1" x2="105.4" y2="119.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="97.5" y="17.4" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="99.7" y="134.2" font-size="14" text-anchor="middle">D</text><text x="93.6" y="54.4" font-size="12" text-anchor="middle">9</text><text x="131.4" y="59" font-size="12" text-anchor="middle">12</text><text x="131.4" y="89.4" font-size="12" text-anchor="middle">12</text><text x="93.6" y="94" font-size="12" text-anchor="middle">9</text><text x="111.7" y="65" font-size="12" text-anchor="middle">15</text></svg>'
+        answer: 72/5
+        accept: [14.4]
+        check: "Fraction(9 * 12 + 9 * 12, 15)"
+        hints:
+          - トレミーの定理を使おう。
+          - AB × CD + AD × BC を計算しよう。
+          - 15 × BD がその和になる BD を求めよう。
+        paths:
+          - [AB × CD + AD × BC = 108 + 108 = 216, BD = 216 ÷ 15 = 72/5, 72/5 cm]
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 12 cm、PC = 5 cm のとき、PB は何 cm ですか。
+        answer: 7
+        check: "12 - 5"
+        hints:
+          - PA と PB、PC の関係を思い出そう。
+          - PA = PB + PC だね。
+          - PA から PC をひこう。
+        paths:
+          - [PB = PA − PC = 12 − 5 = 7, 7 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AD = 3 cm、BC = 5 cm、AB = CD、対角線 AC = BD = 8 cm です。AB は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.7,21.7 87.8,110.9 152.2,110.9 139.3,21.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.7" y1="21.7" x2="152.2" y2="110.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="87.8" y1="110.9" x2="139.3" y2="21.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="94.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="81" y="124.4" font-size="14" text-anchor="middle">B</text><text x="159" y="124.4" font-size="14" text-anchor="middle">C</text><text x="145.9" y="17.8" font-size="14" text-anchor="middle">D</text><text x="120" y="106.5" font-size="12" text-anchor="middle">5</text><text x="120" y="34.5" font-size="12" text-anchor="middle">3</text><text x="133.9" y="66.2" font-size="12" text-anchor="middle">8</text></svg>'
+        answer: 7
+        check: "math.isqrt(8 * 8 - 3 * 5)"
+        hints:
+          - トレミーの定理の式に、わかっている長さを入れよう。
+          - AB = CD なので、AB × CD は AB × AB だね。
+          - AB × AB がいくつかを求めて、2 回かけてその数になる数を探そう。
+        paths:
+          - [8 × 8 = AB × AB + 3 × 5, AB × AB = 64 − 15 = 49, AB = 7, 7 cm]
+      - part: 挑戦
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、BC = 60 cm、CD = 39 cm、DA = 52 cm、AC = 65 cm です。BD の上に ∠BAE = ∠CAD となる点 E をとり、BE と DE を求めてから BD を求めましょう。BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 83.4,33.1 172,70 134.6,119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.4" y1="33.1" x2="134.6" y2="119.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="95.6" y2="53.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M93.8 54.8 A30 30 0 0 0 79.5 42.3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="81.4" cy="54.6" r="1.9" fill="currentColor"/><path d="M92 88 A30 30 0 0 0 98 70" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="87.4" cy="76.5" r="1.9" fill="currentColor"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="75.6" y="30.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="140.3" y="134.2" font-size="14" text-anchor="middle">D</text><text x="106.6" y="58.6" font-size="14" text-anchor="middle">E</text></svg>'
+        answer: 63
+        check: "Fraction(25 * 39, 65) + Fraction(52 * 60, 65)"
+        hints:
+          - △ABE ∽ △ACD から BE を求めよう。
+          - △ADE ∽ △ACB から DE を求めよう。
+          - BD = BE + DE だね。
+        paths:
+          - [BE = 39 × 25/65 = 15, DE = 60 × 52/65 = 48, BD = 15 + 48 = 63, 63 cm]
+        note: トレミーの定理で求めた BD（1 日目の予備の挑戦）と同じになることを確かめさせる。
+    extra:
+      - part: 今日
+        text: 1 辺 7 cm の正方形 ABCD は円に内接します。トレミーの定理を使うと、AC × BD はいくつになりますか。
+        answer: 98
+        check: "7 * 7 + 7 * 7"
+        hints:
+          - 向かい合う辺の組は、AB と CD、AD と BC だね。
+          - それぞれの積を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [49 + 49 = 98]
+      - part: 今日
+        text: 1 辺 2 cm の正六角形 ABCDEF は円に内接し、対角線 AD は 4 cm です。四角形 ABCD にトレミーの定理を使うと、AC × BD はいくつですか。
+        answer: 12
+        check: "2 * 2 + 4 * 2"
+        hints:
+          - 四角形 ABCD で、向かい合う辺の組はどれかな。
+          - AB × CD と AD × BC を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB × CD = 4, AD × BC = 8, AC × BD = 12]
+      - part: 挑戦
+        text: 長方形 ABCD は円に内接します。AB = 8 cm、BC = 15 cm のとき、対角線 AC は何 cm ですか。トレミーの定理を使いましょう。
+        answer: 17
+        check: "math.isqrt(8 * 8 + 15 * 15)"
+        hints:
+          - 長方形では、BD = AC、CD = AB、AD = BC だね。
+          - AC × AC がいくつになるかを求めよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 64 + 225 = 289, AC = 17, 17 cm]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 5 cm、BC = 12 cm、CD = 12 cm、DA = 5 cm、対角線 AC = 13 cm です。対角線 BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="68,70 83.4,33.1 172,70 83.4,106.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="83.4" y1="33.1" x2="83.4" y2="106.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="75.6" y="30.2" font-size="14" text-anchor="middle">B</text><text x="183" y="74.9" font-size="14" text-anchor="middle">C</text><text x="75.6" y="119.6" font-size="14" text-anchor="middle">D</text><text x="65" y="51.3" font-size="12" text-anchor="middle">5</text><text x="132.4" y="44.5" font-size="12" text-anchor="middle">12</text><text x="132.4" y="103.9" font-size="12" text-anchor="middle">12</text><text x="65" y="97.1" font-size="12" text-anchor="middle">5</text><text x="111.7" y="62" font-size="12" text-anchor="middle">13</text></svg>'
+        answer: 120/13
+        check: "Fraction(5 * 12 + 5 * 12, 13)"
+        hints:
+          - トレミーの定理を使おう。
+          - AB × CD + AD × BC を計算しよう。
+          - 13 × BD がその和になる BD を求めよう。わりきれなければ分数で。
+        paths:
+          - [AB × CD + AD × BC = 60 + 60 = 120, BD = 120 ÷ 13 = 120/13, 120/13 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 5 cm、AD = 3 cm、BC = 8 cm、対角線 AC と BD は同じ長さです。AC は何 cm ですか。
+        answer: 7
+        check: "math.isqrt(5 * 5 + 3 * 8)"
+        hints:
+          - AC = BD なので、左は AC × AC だね。
+          - 右の AB × CD + AD × BC を計算しよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 25 + 24 = 49, AC = 7, 7 cm]
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PB = 6 cm、PC = 10 cm のとき、PA は何 cm ですか。
+        answer: 16
+        check: "6 + 10"
+        hints:
+          - 四角形 ABPC にトレミーの定理を使ったね。
+          - PA と PB、PC の関係を思い出そう。
+          - PB と PC を足そう。
+        paths:
+          - [PA = PB + PC = 16, 16 cm]
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = 25 cm、CD = 52 cm、DA = 39 cm、対角線 AC = 65 cm、BD = 56 cm です。BC は何 cm ですか。
+        answer: 60
+        check: "Fraction(65 * 56 - 25 * 52, 39)"
+        hints:
+          - BC は、どの積の中にあるかな。
+          - AC × BD から AB × CD をひこう。
+          - 残りを AD でわろう。
+        paths:
+          - [65 × 56 = 3640, AB × CD = 1300, AD × BC = 2340, BC = 2340 ÷ 39 = 60, 60 cm]
+      - part: 今日
+        text: 1 辺 5 cm の正六角形 ABCDEF は円に内接し、対角線 AD は 10 cm です。四角形 ABCD にトレミーの定理を使うと、AC × BD はいくつですか。
+        answer: 75
+        check: "5 * 5 + 10 * 5"
+        hints:
+          - 四角形 ABCD で、向かい合う辺の組はどれかな。
+          - AB × CD と AD × BC を計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AB × CD = 25, AD × BC = 50, AC × BD = 75]
+      - part: 今日
+        text: 長方形 ABCD は円に内接します。AB = 9 cm、BC = 12 cm のとき、対角線 AC は何 cm ですか。トレミーの定理を使いましょう。
+        answer: 15
+        check: "math.isqrt(9 * 9 + 12 * 12)"
+        hints:
+          - 長方形では、BD = AC、CD = AB、AD = BC だね。
+          - AC × AC がいくつになるかを求めよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 81 + 144 = 225, AC = 15, 15 cm]
+      - part: 今日
+        text: 1 辺 13 cm、対角線 AC = 24 cm、BD = 10 cm のひし形 ABCD で、AC × BD と AB × CD + AD × BC をくらべると、どうなりますか。
+        choices: [AC × BD のほうが大きい, AB × CD + AD × BC のほうが大きい, 等しい]
+        answer: AB × CD + AD × BC のほうが大きい
+        check: "'AC × BD のほうが大きい' if 24 * 10 > 13 * 13 + 13 * 13 else ('等しい' if 24 * 10 == 13 * 13 + 13 * 13 else 'AB × CD + AD × BC のほうが大きい')"
+        hints:
+          - AC × BD を計算しよう。
+          - AB × CD + AD × BC を計算しよう。
+          - 2 つをくらべよう。
+        paths:
+          - [AC × BD = 240, AB × CD + AD × BC = 338, 右のほうが大きい]
+        note: ひし形（正方形でない）は円に内接しないので、等号は成り立たない。
+      - part: 挑戦
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 14 cm で、PB:PC = 3:4 です。PB は何 cm ですか。
+        answer: 6
+        check: "Fraction(14 * 3, 3 + 4)"
+        hints:
+          - PA と PB、PC の関係を思い出そう。
+          - PB + PC = 14 cm だね。
+          - 14 cm を 3:4 に分けよう。
+        paths:
+          - [PB + PC = 14, 14 を 3:4 に分ける, PB = 14 × 3/7 = 6, 6 cm]
+    extra:
+      - part: 今日
+        text: 円に内接する四角形 ABCD で、AB = CD = 11 cm、AD = 4 cm、BC = 12 cm、対角線 AC と BD は同じ長さです。AC は何 cm ですか。
+        answer: 13
+        check: "math.isqrt(11 * 11 + 4 * 12)"
+        hints:
+          - 左は AC × AC になるね。
+          - 右の AB × CD + AD × BC を計算しよう。
+          - 2 回かけてその数になる数を探そう。
+        paths:
+          - [AC × AC = 121 + 48 = 169, AC = 13, 13 cm]
+      - part: 今日
+        text: 正三角形 ABC の外接円の、弧 BC（A をふくまないほう）の上に点 P があります。PA = 15 cm、PB = 6 cm のとき、PC は何 cm ですか。
+        answer: 9
+        check: "15 - 6"
+        hints:
+          - PA = PB + PC だね。
+          - わかっている長さをあてはめよう。
+          - PA から PB をひこう。
+        paths:
+          - [PC = 15 − 6 = 9, 9 cm]
+      - part: 挑戦
+        text: 1 辺 4 cm の正方形 ABCD は円に内接します。トレミーの定理を使うと、AC × AC はいくつになりますか。
+        answer: 32
+        check: "4 * 4 + 4 * 4"
+        hints:
+          - 正方形では AC = BD だね。
+          - 向かい合う辺の積をそれぞれ計算しよう。
+          - 2 つの積を足そう。
+        paths:
+          - [AC × AC = 16 + 16 = 32]

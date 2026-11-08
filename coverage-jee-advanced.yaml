@@ -292,6 +292,7 @@ items:
   units:
   - G-026
   - G-018
+  - G-054
 - id: T-40
   field: 幾何
   topic: 三角形の性質と五心
