@@ -204,6 +204,7 @@ items:
   sources: *id001
   units:
   - S-027
+  - S-055
 - id: T-27
   field: 数と計算
   topic: 暗算

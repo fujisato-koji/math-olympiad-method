@@ -667,7 +667,7 @@ units:
   - {id: L-009, title: 変わらないものを探す（不変量の入口）, stage: 3, level: 2, region: ronpo, needs: [L-005], days: 5}
   - {id: L-010, title: 後ろから考える必勝法, stage: 3, level: 2, region: suiri, needs: [L-004, N-007], days: 5}
   - {id: N-061, title: 概数と見積もり（四捨五入）, stage: 3, level: 2, region: keisan, needs: [N-009, N-013], days: 5}
-  - {id: S-028, title: 平均と代表値, stage: 3, level: 2, region: data, needs: [S-027, N-014, N-020], days: 5}
+  - {id: S-028, title: 平均と代表値, stage: 3, level: 2, region: data, needs: [S-027, N-014, N-020, N-075, N-077, G-046, N-059], days: 5}
   - {id: F-002, title: 利息と複利（元金が何倍になるか）, stage: 3, level: 2, region: risoku, needs: [F-001, A-005, A-009], days: 5}
   - {id: W-002, title: 流れる水のはたらきと地層のでき方（けずる・運ぶ・積もらせる）, stage: 3, level: 1, region: chiso, needs: [W-001, W-048], days: 5}
   - {id: W-003, title: 化石と地層の重なり（地層の新旧、示準化石と示相化石）, stage: 3, level: 2, region: chiso, needs: [W-002], days: 5}
@@ -715,6 +715,7 @@ units:
   - {id: N-077, title: 小数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-020, N-074, N-075, N-076], days: 6}
   - {id: N-078, title: 分数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-019, N-014, N-076], days: 6}
   - {id: G-053, title: 線対称と点対称（対称の軸と中心、対称な図形の性質）, stage: 3, level: 2, region: katachi, needs: [G-004, G-006], days: 5}
+  - {id: S-055, title: 折れ線グラフと割合のグラフ（円グラフ、帯グラフ）, stage: 3, level: 2, region: data, needs: [S-027, A-005], days: 5}
 
   # ---- 段 4 一般の数 ----
   - {id: N-027, title: 正負の数のかけ算とわり算, stage: 4, level: 2, region: keisan, needs: [N-010, N-014, N-015, N-078, N-076], days: 5}
@@ -751,7 +752,7 @@ units:
   - {id: G-042, title: 角の二等分線の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-020], days: 6}
   - {id: G-043, title: トレミーの定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-018, G-020], days: 6}
   - {id: L-032, title: 離散的な中間値の議論, stage: 4, level: 3, region: ronpo, needs: [L-011], days: 5}
-  - {id: L-033, title: 作って示す、評価で示す（構成と評価の入口）, stage: 4, level: 3, region: ronpo, needs: [L-007, L-011], days: 8}
+  - {id: L-033, title: 作って示す、評価で示す（構成と評価の入口）, stage: 4, level: 3, region: ronpo, needs: [L-007, L-011, L-006], days: 8}
   - {id: S-029, title: 度数分布と箱ひげ図（データの分析）, stage: 4, level: 2, region: data, needs: [S-028, A-005], days: 6}
   - {id: F-003, title: 現在価値と割引（将来のお金を今の値打ちに直す）, stage: 4, level: 2, region: risoku, needs: [F-002, A-010], days: 5}
   - {id: F-004, title: 複式簿記（仕訳、勘定、試算表）, stage: 4, level: 2, region: kaikei, needs: [F-001, A-011], days: 6}

@@ -1,0 +1,1147 @@
+# L-033 作って示す、評価で示す（構成と評価の入口）
+#
+# 書き方は N-001 の頭の注のとおり。段 4 なので、子に見せる文は普通の文（です・ます）。
+# 「いちばん大きい（小さい）値は □」と言うには、2 つがそろって要る：
+#   評価 … それより大きく（小さく）できないことを示す。 構成 … その値を実際に作る例を示す。
+#   「できる／できない」の問題では、できるなら例（構成）、できないなら理由（評価）を示す。
+# 前提は L-007（場合分け）と L-011（背理法）。たどると L-005（偶奇）、C-001〜C-003（数え方）、L-013（命題）、
+#   A-013（不等式）、A-010（文字と式）、N-014（わり算とあまり）、N-017・N-018（倍数）、N-021（素数）などなので、これらを道具にする。
+# 評価の道具はこの単元では次の 5 つにしぼる：
+#   ① 和で押さえる（L-011。どれも m 以下なら和は … 以下）、② 区画ごとの上限をたす（各行に 1 個まで、各区画に 1 個まで）、
+#   ③ 偶奇（L-005。全体の和が奇数なら 0 にならない）、④ ぬり分けて数える（白と黒のマスの数）、⑤ 全部調べる（L-007）。
+#   ② は、組や区画に分けて「どの組にも 1 個まで」の上限を足す形で言い、鳩の巣原理（L-006、L-015）の言い方はしない（どちらも前提にない）。
+#   極端なものに着目する（L-014）、不変量（L-009、L-016）、帰納法（L-012）も前提にないので使わない。
+#   一般の形と大会の水準の構成と評価は L-018 にまかせる。
+# 総当たり戦は「引き分けなし、どの 2 人も 1 回ずつ戦う」。試合数は C-003 の組の数え方で出す。
+# 盤の図は svg のマス目。x は取りのぞいたマス、色のマスはぬり分け。
+# 日の並びは地図の既定（導入、練習 4 日、わけ、混ぜる、確認）。ねらいは次のとおりにした。
+#   1 日目 導入：評価と構成の 2 つがそろって「最大」と言える。差が 1 にならない選び方、異なる整数の和、行と列に 1 個ずつ。
+#   2 日目 練習：構成（作って示す）。三角形の辺の和（頭に見本）、+ と − をつけて 0 にする、条件に合う並べ方。
+#   3 日目 練習：評価（それ以上できないことを示す）。偶奇で「できない」（頭に見本）、和で押さえる、区画に分けて上限をたす。
+#   4 日目 練習：整数の問題の評価と例。異なる整数の和と個数、いちばん大きい数の最小、3 の倍数にならない選び方、平均と最大。
+#   5 日目 練習：盤とぬり分け（頭に見本）、総当たり戦の勝ち数。
+#   6 日目 わけ：評価と構成の二部構成で書く（異なる整数の個数、+ − で 0 にできない、となり合わない石の最大。③）。
+#   7 日目 混ぜる：L-007（全部調べて数える）、L-011（和の押さえ）と、1〜5 日目の型を混ぜる。
+#   8 日目 確認。
+# check：最大・最小は、小さい場合を itertools で全部作って max、min を出す（評価と構成を同時に確かめる）。
+#   「できる」は any、「できない」は all（どの場合もできない）。+ と − のつけ方は 2 進数の m のけたで作る。
+#   しきつめは、左上の空きマスから右か下へ 1 × 2 を置いていく数え方（再帰の lambda）で、しきつめ方の数が 0 かどうかを見る。
+#   総当たり戦は、試合ごとの勝ち負けを m のけたで作って勝ち数を数える。大きすぎて全部作れないときは、評価の計算と構成の例の値が合うかを見る。
+
+id: L-033
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 1 から 10 までの整数から、どの 2 つも差が 1 にならないように、いくつかを選びます。いちばん多くて何個選べますか。
+        explain: 答えは 5 個です。これを言うには 2 つのことが要ります。1 つ目は「5 個選べる」こと（構成）で、1、3、5、7、9 が例です。2 つ目は「6 個以上は選べない」こと（評価）です。1 から 10 を (1, 2)、(3, 4)、(5, 6)、(7, 8)、(9, 10) の 5 組に分けると、同じ組の 2 つは差が 1 なので、どの組からも 1 個までしか選べません。5 組なので、選べるのは 5 個以下です。例を作るだけでは、6 個の選び方が本当にないかは分かりません。上限を示すだけでは、5 個が本当に選べるかは分かりません。2 つがそろって、はじめて「いちばん多くて 5 個」と言えます。
+      - part: 思い出す
+        text: 6 人で玉を合わせて 40 個持っています。「少なくとも 1 人は □ 個以上持っている」と必ず言えます。□ にあてはまる数のうち、いちばん大きいものはいくつですか。
+        answer: 7
+        check: max(m for m in range(1, 41) if 6 * (m - 1) < 40)
+        hints:
+          - どの人も 6 個以下と仮定すると、合わせて最大何個ですか。
+          - その数は 40 と比べてどうですか。
+          - それより大きい数では言えないことを、例を 1 つ作って確かめましょう。
+        paths:
+          - [どの人も 6 個以下なら合わせて 36 個以下で矛盾, 少なくとも 1 人は 7 個以上, 7、7、7、7、6、6 で 40 なので 8 個以上は言えない, 7]
+        note: 「7 個以上と言える」は評価、「7、7、7、7、6、6 の例で 8 個以上とは言えない」は構成。L-011 でもすでに 2 つを組にしていた。
+      - part: 思い出す
+        text: 1 から 6 までの数字が 1 つずつ書かれた 6 枚のカードから、2 枚を選びます。2 枚の数の和が 7 になる選び方は、何通りありますか。
+        answer: 3
+        check: len([c for c in itertools.combinations(range(1, 7), 2) if sum(c) == 7])
+        hints:
+          - 小さいほうのカードで場合に分けましょう。
+          - 小さいほうが 1 のとき、もう 1 枚は何ですか。
+          - 小さいほうが 4 以上のときはありますか。
+        paths:
+          - [小さいほうが 1 なら 6, 2 なら 5, 3 なら 4, 3 通り]
+      - part: 今日
+        text: ある問題の答えが「いちばん多くて 5 個」だと示したいとき、必要なことはどれですか。
+        choices: [5 個の例を 1 つ示す, 6 個以上はできないことを示す, 5 個の例を示し、6 個以上はできないことも示す]
+        answer: 5 個の例を示し、6 個以上はできないことも示す
+        hints:
+          - 例を 1 つ示すだけで、6 個の例がないと言えますか。
+          - 6 個以上はできないと示すだけで、5 個が本当にできると言えますか。
+          - 構成と評価の 2 つを思い出しましょう。
+        paths:
+          - [5 個の例だけでは 6 個がないと言えない, 上限だけでは 5 個ができると言えない, 両方を示す]
+        note: 約束ごと（「最大」の意味）を問う問題なので check はない。
+      - part: 今日
+        text: 異なる 4 つの正の整数の和は、いちばん小さくていくつですか。
+        answer: 10
+        check: min(sum(c) for c in itertools.combinations(range(1, 20), 4))
+        hints:
+          - 4 つを小さい順に並べると、いちばん小さい数はいくつ以上ですか。
+          - 2 番目はいくつ以上ですか。3 番目、4 番目はどうですか。
+          - その下限を全部たし、それがちょうど作れる例も確かめましょう。
+        paths:
+          - [評価 小さい順に 1 以上、2 以上、3 以上、4 以上, 和は 10 以上, 構成 1、2、3、4 で 10, いちばん小さくて 10]
+      - part: 今日
+        text: 4 × 4 のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 4
+        check: "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(4) for b in range(4)])"
+        hints:
+          - 1 つの行には、石を何個まで置けますか。
+          - 行は 4 つあります。これで何個以下と言えますか。
+          - その個数を、実際に置いてみましょう。
+        paths:
+          - [評価 各行に 1 個までで 4 行なので 4 個以下, 構成 ななめに 4 個置く, 4 個]
+      - part: 挑戦
+        text: 異なる正の整数をいくつか選んで、和をちょうど 30 にします。いちばん多くて何個選べますか。
+        answer: 7
+        check: max(k for k in range(1, 30) if sum(range(1, k + 1)) <= 30)
+        hints:
+          - k 個の異なる正の整数の和は、いちばん小さくていくつですか。
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 30 をこえますか。
+          - こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 30 にしましょう。
+        paths:
+          - [評価 8 個なら和は 1 + 2 + … + 8 = 36 以上で 30 をこえる, 構成 1、2、3、4、5、6、9 で 30, 7 個]
+        note: 1 から 7 までの和は 28 で 30 に 2 足りない。いちばん大きい 7 を 9 にかえれば例ができる。
+    extra:
+      - part: 今日
+        text: 1 から 12 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 6
+        check: max(len(s) for r in range(0, 13) for s in itertools.combinations(range(1, 13), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))
+        hints:
+          - となり合う 2 つずつの組に分けましょう。
+          - 1 つの組からは何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [評価 (1、2)、(3、4)、…、(11、12) の 6 組で各組 1 個まで, 構成 1、3、5、7、9、11, 6 個]
+      - part: 今日
+        text: 異なる 5 つの正の整数の和は、いちばん小さくていくつですか。
+        answer: 15
+        check: min(sum(c) for c in itertools.combinations(range(1, 20), 5))
+        hints:
+          - 5 つを小さい順に並べると、それぞれいくつ以上ですか。
+          - その下限を全部たしましょう。
+          - それがちょうど作れる例も確かめましょう。
+        paths:
+          - [評価 1 以上、2 以上、…、5 以上で和は 15 以上, 構成 1、2、3、4、5, 15]
+      - part: 今日
+        text: 3 行 5 列のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="55" y1="6" x2="185" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="32" x2="185" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="58" x2="185" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="84" x2="185" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="6" x2="55" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="81" y1="6" x2="81" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="107" y1="6" x2="107" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="133" y1="6" x2="133" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="159" y1="6" x2="159" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="185" y1="6" x2="185" y2="84" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 3
+        check: "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(3) for b in range(5)])"
+        hints:
+          - 行と列のうち、少ないのはどちらですか。
+          - 1 つの行には何個まで置けますか。
+          - その個数を、実際に置いてみましょう。
+        paths:
+          - [評価 各行に 1 個までで 3 行なので 3 個以下, 構成 ななめに 3 個, 3 個]
+        note: 列で考えると 5 個以下としか言えない。上限は、いちばんきびしいものを選ぶ。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 1 から 6 までの数を、図の三角形の 3 つの頂点と 3 つの辺のまん中に 1 つずつ置き、どの辺も 3 つの数の和が 10 になるようにしましょう。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <line x1="112.2" y1="32.4" x2="87.8" y2="64.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="72.2" y1="85.4" x2="47.8" y2="117.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="53" y1="128" x2="107" y2="128" stroke="currentColor" stroke-width="2"/>
+            <line x1="133" y1="128" x2="187" y2="128" stroke="currentColor" stroke-width="2"/>
+            <line x1="127.8" y1="32.4" x2="152.2" y2="64.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="167.8" y1="85.4" x2="192.2" y2="117.6" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="22" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="120" y="27" font-size="14" text-anchor="middle">1</text>
+            <circle cx="40" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="40" y="133" font-size="14" text-anchor="middle">3</text>
+            <circle cx="200" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="200" y="133" font-size="14" text-anchor="middle">5</text>
+            <circle cx="80" cy="75" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="80" y="80" font-size="14" text-anchor="middle">6</text>
+            <circle cx="120" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="120" y="133" font-size="14" text-anchor="middle">2</text>
+            <circle cx="160" cy="75" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="160" y="80" font-size="14" text-anchor="middle">4</text>
+          </svg>
+        explain: 「和を 10 にできる」と示すには、例を 1 つ見せれば十分です（構成）。例をさがす前に、条件から分かることを計算して、さがす範囲をしぼります。3 つの辺の和をたすと 30 です。このとき、頂点の数は 2 つの辺に入るので 2 回、まん中の数は 1 回数えています。1 から 6 までの和は 21 なので、30 = 21 + （頂点の 3 つの和）で、頂点の和は 9 です。そこで頂点を 1、3、5 にすると、辺のまん中はそれぞれ 10 − 1 − 3 = 6、10 − 3 − 5 = 2、10 − 5 − 1 = 4 で、図のようにできます。構成のこつは、先に計算でしぼる、小さい場合でためす、大きい数と小さい数を組にする、の 3 つです。
+      - part: 思い出す
+        text: 異なる 6 つの正の整数の和は、いちばん小さくていくつですか。
+        answer: 21
+        check: min(sum(c) for c in itertools.combinations(range(1, 20), 6))
+        hints:
+          - 6 つを小さい順に並べると、それぞれいくつ以上ですか。
+          - その下限を全部たしましょう。
+          - それがちょうど作れる例も確かめましょう。
+        paths:
+          - [評価 1 以上、2 以上、…、6 以上で和は 21 以上, 構成 1、2、3、4、5、6, 21]
+      - part: 思い出す
+        text: 1 から 9 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 5
+        check: max(len(s) for r in range(0, 10) for s in itertools.combinations(range(1, 10), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))
+        hints:
+          - (1, 2)、(3, 4)、(5, 6)、(7, 8) と組にすると、9 はどうなりますか。
+          - どの組からも何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [評価 4 組と 9 で 4 + 1 = 5 個以下, 構成 1、3、5、7、9, 5 個]
+      - part: 今日
+        text: 1 から 6 までの数を三角形の 3 つの頂点と 3 つの辺のまん中に 1 つずつ置き、どの辺も 3 つの数の和が 12 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <line x1="112.2" y1="32.4" x2="87.8" y2="64.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="72.2" y1="85.4" x2="47.8" y2="117.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="53" y1="128" x2="107" y2="128" stroke="currentColor" stroke-width="2"/>
+            <line x1="133" y1="128" x2="187" y2="128" stroke="currentColor" stroke-width="2"/>
+            <line x1="127.8" y1="32.4" x2="152.2" y2="64.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="167.8" y1="85.4" x2="192.2" y2="117.6" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="22" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="120" y="27" font-size="14" text-anchor="middle"></text>
+            <circle cx="40" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="40" y="133" font-size="14" text-anchor="middle"></text>
+            <circle cx="200" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="200" y="133" font-size="14" text-anchor="middle"></text>
+            <circle cx="80" cy="75" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="80" y="80" font-size="14" text-anchor="middle"></text>
+            <circle cx="120" cy="128" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="120" y="133" font-size="14" text-anchor="middle"></text>
+            <circle cx="160" cy="75" r="13" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="160" y="80" font-size="14" text-anchor="middle"></text>
+          </svg>
+        answer: 15
+        check: "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 12 and p[1] + p[4] + p[2] == 12 and p[2] + p[5] + p[0] == 12})"
+        hints:
+          - 3 つの辺の和を全部たすと、いくつですか。
+          - そのとき、頂点の数とまん中の数は、それぞれ何回ずつたされていますか。
+          - 1 から 6 までの和は 21 です。
+        paths:
+          - [3 辺の和をたすと 36, 36 = 21 + 頂点の和, 頂点の和は 15, 構成 頂点 4、5、6 とまん中 3、1、2]
+        note: 頂点の和が 15 になるのは 4、5、6 だけ。計算でしぼると、例はすぐ作れる。
+      - part: 今日
+        text: 1 から 8 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 9)) == 0 for m in range(256)) else 'できない'"
+        hints:
+          - 1 から 8 までの和は 36 です。+ の組と − の組の和を、それぞれいくつにすればよいですか。
+          - 和が 18 になる数の組をさがしましょう。
+          - 1 + 8、2 + 7、… のように、大きい数と小さい数を組にしてみましょう。
+        paths:
+          - [+ の組と − の組をどちらも 18 にする, 1 + 8 + 2 + 7 = 18, 残りの 3 + 4 + 5 + 6 = 18, 1 + 2 + 7 + 8 − 3 − 4 − 5 − 6 = 0, できる]
+      - part: 今日
+        text: 1 から 7 までの数を 1 列に並べて、となり合う 2 つの数の差がどれも 2 以上になるようにします。そのような並べ方はありますか。
+        choices: [ある, ない]
+        answer: ある
+        check: "'ある' if any(all(abs(p[i + 1] - p[i]) >= 2 for i in range(6)) for p in itertools.permutations(range(1, 8))) else 'ない'"
+        hints:
+          - 奇数を先に並べてみましょう。
+          - 奇数どうし、偶数どうしの差はいくつ以上ですか。
+          - 奇数の列と偶数の列のつなぎ目に気をつけましょう。
+        paths:
+          - [1、3、5、7 と並べる, 次に 2、4、6 をつなぐ, 7 と 2 の差は 5, 1、3、5、7、2、4、6, ある]
+      - part: 挑戦
+        text: 異なる 5 つの正の整数の和が 20 です。いちばん大きい数は、いちばん大きくていくつですか。
+        answer: 10
+        check: max(max(c) for c in itertools.combinations(range(1, 21), 5) if sum(c) == 20)
+        hints:
+          - いちばん大きい数を大きくするには、ほかの 4 つをどうすればよいですか。
+          - ほかの 4 つの和は、いちばん小さくていくつですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 4 つの和は 1 + 2 + 3 + 4 = 10 以上, いちばん大きい数は 20 − 10 = 10 以下, 構成 1、2、3、4、10, 10]
+    extra:
+      - part: 今日
+        text: 1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が 9 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。
+        answer: 6
+        check: "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 9 and p[1] + p[4] + p[2] == 9 and p[2] + p[5] + p[0] == 9})"
+        hints:
+          - 3 つの辺の和を全部たすと、いくつですか。
+          - 頂点の数は何回ずつたされていますか。
+          - 1 から 6 までの和 21 を使いましょう。
+        paths:
+          - [3 辺の和をたすと 27, 27 = 21 + 頂点の和, 頂点の和は 6, 構成 頂点 1、2、3]
+      - part: 今日
+        text: 1 から 7 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 8)) == 0 for m in range(128)) else 'できない'"
+        hints:
+          - 1 から 7 までの和はいくつですか。
+          - + の組と − の組の和を、それぞれいくつにすればよいですか。
+          - 和が 14 になる数の組をさがしましょう。
+        paths:
+          - [和は 28 で、どちらの組も 14 にする, 7 + 6 + 1 = 14, 7 + 6 + 1 − 2 − 3 − 4 − 5 = 0, できる]
+      - part: 今日
+        text: 1 から 6 までの数を 1 列に並べて、となり合う 2 つの数の差がどれも 2 以上になるようにします。そのような並べ方はありますか。
+        choices: [ある, ない]
+        answer: ある
+        check: "'ある' if any(all(abs(p[i + 1] - p[i]) >= 2 for i in range(5)) for p in itertools.permutations(range(1, 7))) else 'ない'"
+        hints:
+          - 偶数を先に並べてみましょう。
+          - 偶数の列と奇数の列のつなぎ目の差を見ましょう。
+          - つなぎ目の差が 1 になったら、並べる順を変えましょう。
+        paths:
+          - [2、4、6 と並べる, 次に 1、3、5 をつなぐ, 6 と 1 の差は 5, 2、4、6、1、3、5, ある]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 1 から 10 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        explain: できません。これを示すのが評価です（例をいくらためしても、「できない」は示せません）。+ をつけた数の和を P、− をつけた数の和を M とします。どの数もどちらかに入るので P + M = 1 + 2 + … + 10 = 55 です。合計は P − M = (P + M) − 2M = 55 − 2M です。55 は奇数、2M は偶数なので、55 − 2M はいつも奇数です。0 は偶数なので、合計は 0 になりません。このように、偶奇（L-005）で「どうやってもできない」ことを示せます。1 から 8 のときは和が 36（偶数）なので、この理由では止められず、2 日目のように例が作れました。
+      - part: 思い出す
+        text: 1 から 4 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 5)) == 0 for m in range(16)) else 'できない'"
+        hints:
+          - 1 から 4 までの和はいくつですか。
+          - + の組と − の組の和を、それぞれいくつにすればよいですか。
+          - 1 + 4 と 2 + 3 を比べましょう。
+        paths:
+          - [和は 10 でどちらの組も 5, 1 + 4 = 2 + 3, 1 − 2 − 3 + 4 = 0, できる]
+      - part: 思い出す
+        text: 1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が 11 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。
+        answer: 12
+        check: "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 11 and p[1] + p[4] + p[2] == 11 and p[2] + p[5] + p[0] == 11})"
+        hints:
+          - 3 つの辺の和を全部たすと、いくつですか。
+          - 頂点の数は何回ずつたされていますか。
+          - 1 から 6 までの和 21 を使いましょう。
+        paths:
+          - [3 辺の和をたすと 33, 33 = 21 + 頂点の和, 頂点の和は 12, 構成 頂点 2、4、6 とまん中 5、1、3]
+      - part: 今日
+        text: 1 から 6 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 7)) == 0 for m in range(64)) else 'できない'"
+        hints:
+          - 1 から 6 までの和は、偶数ですか、奇数ですか。
+          - + の数の和を P、− の数の和を M とすると、合計は (P + M) − 2M です。
+          - その値は、偶数ですか、奇数ですか。
+        paths:
+          - [P + M = 21, 合計は 21 − 2M で奇数, 0 は偶数なのでできない]
+      - part: 今日
+        text: 5 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。5 人の合計は 43 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。
+        answer: 3
+        check: min(min(t) for t in itertools.product(range(11), repeat=5) if sum(t) == 43)
+        hints:
+          - いちばん低い人の点数を低くするには、ほかの 4 人をどうすればよいですか。
+          - ほかの 4 人の合計は、いちばん多くて何点ですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 4 人は合わせて 40 点以下, いちばん低い人は 43 − 40 = 3 点以上, 構成 10、10、10、10、3, 3 点]
+        note: 「満点が 10 点」が上限を決める。上限のない問題なら、いちばん低い人は 0 点にもなれる。
+      - part: 今日
+        text: 4 × 4 のマスに石を置きます。どの 2 個も、たて・横・ななめにとなり合わないように置くと、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 4
+        check: "(lambda cells: max(k for k in range(0, 6) if any(all(max(abs(p[0] - q[0]), abs(p[1] - q[1])) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(4) for b in range(4)])"
+        hints:
+          - 盤を 2 × 2 の 4 つの区画に分けましょう。
+          - 1 つの区画の中に、石を 2 個置けますか。
+          - 各区画に 1 個ずつ、となり合わないように置いてみましょう。
+        paths:
+          - [評価 2 × 2 の区画の中の 2 マスはどれもとなり合うので各区画 1 個まで, 4 区画で 4 個以下, 構成 各区画の左上に置く, 4 個]
+      - part: 挑戦
+        text: 1 から 15 までの整数から、どの 2 つをたしても 16 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 8
+        check: max(k for k in range(16) if any(all(a + b != 16 for a, b in itertools.combinations(s, 2)) for s in itertools.combinations(range(1, 16), k)))
+        hints:
+          - 和が 16 になる 2 つの組を書き出しましょう。どの数が組に入りませんか。
+          - 1 つの組から、何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [(1、15)、(2、14)、…、(7、9) の 7 組と 8, 評価 各組 1 個までなので 7 + 1 = 8 個以下, 構成 1 から 8 まで, 8 個]
+        note: 8 は 8 + 8 = 16 だが、同じ数を 2 回は選べないので、ひとりで 1 つの組になる。
+    extra:
+      - part: 今日
+        text: 1 から 9 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 10)) == 0 for m in range(512)) else 'できない'"
+        hints:
+          - 1 から 9 までの和は、偶数ですか、奇数ですか。
+          - 合計は (P + M) − 2M と書けます。
+          - その値は、偶数ですか、奇数ですか。
+        paths:
+          - [P + M = 45, 合計は 45 − 2M で奇数, できない]
+      - part: 今日
+        text: 6 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。6 人の合計は 57 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。
+        answer: 7
+        check: min(m for m in range(11) if m + 10 * 5 >= 57)
+        hints:
+          - ほかの 5 人の合計は、いちばん多くて何点ですか。
+          - いちばん低い人は、何点以上ですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 5 人は 50 点以下, いちばん低い人は 7 点以上, 構成 10、10、10、10、10、7, 7 点]
+      - part: 今日
+        text: 2 行 6 列のマスに石を置きます。どの 2 個も、たて・横・ななめにとなり合わないように置くと、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg">
+            <line x1="42" y1="6" x2="198" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="32" x2="198" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="58" x2="198" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="6" x2="42" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="94" y1="6" x2="94" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="198" y1="6" x2="198" y2="58" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 3
+        check: "(lambda cells: max(k for k in range(0, 6) if any(all(max(abs(p[0] - q[0]), abs(p[1] - q[1])) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(2) for b in range(6)])"
+        hints:
+          - 盤を 2 × 2 の区画に分けると、いくつできますか。
+          - 1 つの区画に、石を何個まで置けますか。
+          - 各区画に 1 個ずつ置いてみましょう。
+        paths:
+          - [評価 2 × 2 の 3 区画で各 1 個まで, 構成 1、3、5 列目の上に置く, 3 個]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 1 から 5 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 6)) == 0 for m in range(32)) else 'できない'"
+        hints:
+          - 1 から 5 までの和は、偶数ですか、奇数ですか。
+          - 合計は (P + M) − 2M と書けます。
+          - その値は、偶数ですか、奇数ですか。
+        paths:
+          - [P + M = 15, 合計は 15 − 2M で奇数, できない]
+      - part: 思い出す
+        text: 4 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。4 人の合計は 35 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。
+        answer: 5
+        check: min(min(t) for t in itertools.product(range(11), repeat=4) if sum(t) == 35)
+        hints:
+          - ほかの 3 人の合計は、いちばん多くて何点ですか。
+          - いちばん低い人は、何点以上ですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 3 人は 30 点以下, いちばん低い人は 5 点以上, 構成 10、10、10、5, 5 点]
+      - part: 今日
+        text: 異なる正の整数をいくつか選んで、和をちょうど 50 にします。いちばん多くて何個選べますか。
+        answer: 9
+        check: max(k for k in range(1, 50) if sum(range(1, k + 1)) <= 50)
+        hints:
+          - k 個の異なる正の整数の和は、いちばん小さくていくつですか。
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 50 をこえますか。
+          - こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 50 にしましょう。
+        paths:
+          - [評価 10 個なら和は 55 以上で 50 をこえる, 構成 1 から 8 と 14 で 50, 9 個]
+      - part: 今日
+        text: 異なる 5 つの正の整数の和が 20 です。いちばん大きい数は、いちばん小さくていくつですか。
+        answer: 6
+        check: min(max(c) for c in itertools.combinations(range(1, 21), 5) if sum(c) == 20)
+        hints:
+          - いちばん大きい数を m とすると、5 つはどれも m 以下の異なる整数です。
+          - そのとき、5 つの和はいちばん大きくていくつですか。m の式で書きましょう。
+          - その式が 20 以上になる m を調べ、例も作りましょう。
+        paths:
+          - [評価 5 つの和は m + (m − 1) + … + (m − 4) = 5m − 10 以下, 5m − 10 ≥ 20 より m ≥ 6, 構成 2、3、4、5、6 で 20, 6]
+        note: 2 日目の挑戦（いちばん大きくて 10）と向きが反対。小さくするときは、ほかの数を大きいほうに寄せる。
+      - part: 今日
+        text: 1 から 10 までの整数から、どの 2 つをたしても 3 の倍数にならないように選びます。いちばん多くて何個選べますか。
+        answer: 5
+        check: max(k for k in range(11) if any(all((a + b) % 3 != 0 for a, b in itertools.combinations(s, 2)) for s in itertools.combinations(range(1, 11), k)))
+        hints:
+          - 3 でわったあまりで、あまり 0、1、2 の 3 つの組に分けましょう。
+          - あまり 1 の数とあまり 2 の数を 1 つずつ選ぶと、和はどうなりますか。あまり 0 の数を 2 つ選ぶとどうですか。
+          - あまり 1 の数は何個ありますか。
+        paths:
+          - [あまり 0 は 3、6、9、あまり 1 は 1、4、7、10、あまり 2 は 2、5、8, 評価 あまり 1 と 2 は同時に選べず多くて 4 個、あまり 0 は 1 個まで, 合わせて 5 個以下, 構成 1、4、7、10、3, 5 個]
+      - part: 挑戦
+        text: 黒板に、異なる正の整数がいくつか書いてあります。いちばん大きい数は 15 で、平均はちょうど 7 です。書いてある数は、いちばん多くて何個ですか。
+        answer: 12
+        check: max(n for n in range(1, 16) if any(sum(c) + 15 == 7 * n for c in itertools.combinations(range(1, 15), n - 1)))
+        hints:
+          - 数が n 個なら、合計は 7n です。
+          - 15 のほかの n − 1 個は、14 以下の異なる正の整数です。合計は、いちばん小さくていくつですか。
+          - その合計が 7n をこえない n を調べ、ちょうど 7n になる例も作りましょう。
+        paths:
+          - [評価 合計は 15 + (1 + 2 + … + (n − 1)) 以上, これが 7n 以下になるのは n ≤ 12, 構成 1 から 10 と 14 と 15 で合計 84 = 7 × 12, 12 個]
+        note: n = 13 なら合計は 15 + 78 = 93 以上で 7 × 13 = 91 をこえる。n = 12 は 81 以上 84 なので、1 から 11 の 11 を 14 にかえて例を作る。
+    extra:
+      - part: 今日
+        text: 異なる正の整数をいくつか選んで、和をちょうど 40 にします。いちばん多くて何個選べますか。
+        answer: 8
+        check: max(k for k in range(1, 40) if sum(range(1, k + 1)) <= 40)
+        hints:
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 40 をこえますか。
+          - それより多い個数でも、40 をこえますか。
+          - こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 40 にしましょう。
+        paths:
+          - [評価 9 個なら和は 45 以上, 構成 1 から 7 と 12 で 40, 8 個]
+      - part: 今日
+        text: 異なる 6 つの正の整数の和が 30 です。いちばん大きい数は、いちばん小さくていくつですか。
+        answer: 8
+        check: min(max(c) for c in itertools.combinations(range(1, 31), 6) if sum(c) == 30)
+        hints:
+          - いちばん大きい数を m とすると、6 つの和はいちばん大きくていくつですか。
+          - その式が 30 以上になる m を調べましょう。
+          - 例も作りましょう。
+        paths:
+          - [評価 和は 6m − 15 以下で 6m − 15 ≥ 30 より m ≥ 8, 構成 1、3、5、6、7、8 で 30, 8]
+      - part: 今日
+        text: 1 から 15 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 8
+        check: max(len(s) for r in range(0, 16) for s in itertools.combinations(range(1, 16), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))
+        hints:
+          - (1, 2)、(3, 4)、… と組にすると、どの数が残りますか。
+          - 1 つの組から何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [評価 7 組と 15 で 7 + 1 = 8 個以下, 構成 1、3、5、…、15, 8 個]
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 6 × 6 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイル（2 マス分の長方形）で、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 168" xmlns="http://www.w3.org/2000/svg">
+            <line x1="47" y1="11" x2="63" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="63" y1="11" x2="47" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <rect x="94" y="6" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="146" y="6" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="68" y="32" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="120" y="32" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="172" y="32" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="42" y="58" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="94" y="58" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="146" y="58" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="68" y="84" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="120" y="84" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="172" y="84" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="42" y="110" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="94" y="110" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="146" y="110" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="68" y="136" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="120" y="136" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <line x1="177" y1="141" x2="193" y2="157" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="193" y1="141" x2="177" y2="157" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="42" y1="6" x2="198" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="32" x2="198" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="58" x2="198" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="84" x2="198" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="110" x2="198" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="136" x2="198" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="162" x2="198" y2="162" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="6" x2="42" y2="162" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="94" y1="6" x2="94" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="198" y1="6" x2="198" y2="162" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        explain: しきつめられません。図のように盤を 2 色にぬり分けます（市松もよう）。1 × 2 のタイルは、どこに置いてもとなり合う 2 マスをおおうので、必ず色つきのマス 1 つと白いマス 1 つをおおいます。だから、しきつめられるなら、色つきと白のマスは同じ数のはずです。ところが、取りのぞいた 2 マス（左上と右下）は、どちらも色つきの側のマスです。残りは色つき 16 マス、白 18 マスで、数が合いません。よってしきつめられません（評価）。ぬり分けて数えるのは、「どこに置いても必ずそうなる」ことを見つけて、できないことを示す方法です。反対に、色の数が同じでも、しきつめられるとはかぎりません。そのときは、実際にしきつめた例（構成）を示します。
+      - part: 思い出す
+        text: 異なる正の整数をいくつか選んで、和をちょうど 60 にします。いちばん多くて何個選べますか。
+        answer: 10
+        check: max(k for k in range(1, 60) if sum(range(1, k + 1)) <= 60)
+        hints:
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 60 をこえますか。
+          - それより多い個数でも、60 をこえますか。
+          - こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 60 にしましょう。
+        paths:
+          - [評価 11 個なら和は 66 以上, 構成 1 から 9 と 15 で 60, 10 個]
+      - part: 思い出す
+        text: 6 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。6 人の合計は 52 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。
+        answer: 2
+        check: min(m for m in range(11) if m + 10 * 5 >= 52)
+        hints:
+          - ほかの 5 人の合計は、いちばん多くて何点ですか。
+          - いちばん低い人は、何点以上ですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 5 人は 50 点以下, いちばん低い人は 2 点以上, 構成 10、10、10、10、10、2, 2 点]
+      - part: 今日
+        text: 5 × 5 の盤から、左上の 1 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 142" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="11" x2="76" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="76" y1="11" x2="60" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="55" y1="6" x2="185" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="32" x2="185" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="58" x2="185" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="84" x2="185" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="110" x2="185" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="136" x2="185" y2="136" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="6" x2="55" y2="136" stroke="currentColor" stroke-width="2"/>
+            <line x1="81" y1="6" x2="81" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="107" y1="6" x2="107" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="133" y1="6" x2="133" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="159" y1="6" x2="159" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="185" y1="6" x2="185" y2="136" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(5) for b in range(5)) - {(0, 0)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - 残りのマスは何マスですか。偶数ですか。
+          - ぬり分けると、色つきと白のマスの数は同じですか。
+          - 数が同じでも、それだけでは「できる」とは言えません。実際にしきつめてみましょう。
+        paths:
+          - [残りは 24 マスで色の数も 12 と 12, 構成 1 行目の残り 4 マスを横に 2 枚, 1 列目の残り 4 マスをたてに 2 枚, 残りの 4 × 4 を横に 8 枚, できる]
+        note: 色の数が合うことは「できない理由がない」だけで、「できる」の理由にはならない。できることは例で示す。
+      - part: 今日
+        text: 5 × 5 の盤から、上の行の左から 2 番目の 1 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 142" xmlns="http://www.w3.org/2000/svg">
+            <line x1="86" y1="11" x2="102" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="102" y1="11" x2="86" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="55" y1="6" x2="185" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="32" x2="185" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="58" x2="185" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="84" x2="185" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="110" x2="185" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="55" y1="136" x2="185" y2="136" stroke="currentColor" stroke-width="2"/>
+            <line x1="55" y1="6" x2="55" y2="136" stroke="currentColor" stroke-width="2"/>
+            <line x1="81" y1="6" x2="81" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="107" y1="6" x2="107" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="133" y1="6" x2="133" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="159" y1="6" x2="159" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="185" y1="6" x2="185" y2="136" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(5) for b in range(5)) - {(0, 1)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - 盤を市松もようにぬり分けます。左上のマスを色つきとすると、色つきは何マスですか。
+          - 取りのぞいたマスは、何色ですか。
+          - 残りの色つきと白のマスの数を比べましょう。
+        paths:
+          - [色つき 13 マス、白 12 マス, 取りのぞいたのは白, 残りは色つき 13、白 11, タイル 1 枚は 1 つずつおおうので数が合わない, できない]
+      - part: 今日
+        text: 5 人で総当たり戦をします（どの人どうしも 1 回ずつ戦い、引き分けはありません）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。
+        answer: 2
+        check: "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(5)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(5), 2)])"
+        hints:
+          - 試合は全部で何試合ですか。1 試合で勝つのは 1 人です。
+          - どの人も 1 勝以下だと、勝ち数の合計はいくつ以下ですか。
+          - 全員が同じ数だけ勝つ例を作ってみましょう。輪に並べて考えます。
+        paths:
+          - [試合は 10 試合で勝ち数の合計は 10, 評価 どの人も 1 勝以下なら合計 5 以下で矛盾, いちばん多い人は 2 勝以上, 構成 輪に並べ自分の次の 2 人に勝つと全員 2 勝, 2]
+      - part: 挑戦
+        text: 6 人で総当たり戦をしました。全勝の人も全敗の人もいませんでした。6 人の勝ち数が、すべてちがうことはありえますか。
+        choices: [ありえる, ありえない]
+        answer: ありえない
+        check: "(lambda P: 'ありえる' if any(len(set(w)) == 6 and min(w) >= 1 and max(w) <= 4 for m in range(2 ** 15) for w in [[sum(1 for j in range(15) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(6)]]) else 'ありえない')([c for c in itertools.combinations(range(6), 2)])"
+        hints:
+          - 1 人は 5 試合します。全勝も全敗もいないとき、勝ち数はいくつからいくつまでですか。
+          - その中に、ちがう値は何通りありますか。
+          - 6 人の勝ち数をすべてちがう値にできますか。
+        paths:
+          - [勝ち数は 1、2、3、4 のどれか, ちがう値は 4 通りしかない, 6 人をすべてちがう値にはできない, ありえない]
+        note: 全勝や全敗を許すと、0、1、2、3、4、5 の 6 通りになり、ありえる（強い順に全員に勝つ）。条件が評価を決める。
+    extra:
+      - part: 今日
+        text: 4 × 4 の盤から、上の行の左はしと右はしの 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <line x1="73" y1="11" x2="89" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="89" y1="11" x2="73" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="151" y1="11" x2="167" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="167" y1="11" x2="151" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (0, 3)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - ぬり分けると、取りのぞいた 2 マスは同じ色ですか。
+          - 色の数が合っても、それだけでは「できる」とは言えません。
+          - 上の行の残り 2 マスに 1 枚置いて、残りの 3 × 4 をしきつめてみましょう。
+        paths:
+          - [取りのぞいた 2 マスは色がちがい色の数は合う, 構成 上の行の残りに横に 1 枚, 残りの 3 行は横に 2 枚ずつ, できる]
+      - part: 今日
+        text: 4 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。
+        answer: 2
+        check: "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(4)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(4), 2)])"
+        hints:
+          - 試合は全部で何試合ですか。
+          - どの人も 1 勝以下だと、勝ち数の合計はいくつ以下ですか。
+          - 勝ち数ができるだけそろう例を作りましょう。
+        paths:
+          - [試合は 6 試合, 評価 どの人も 1 勝以下なら合計 4 以下で矛盾, 構成 勝ち数 2、2、1、1 の例, 2]
+      - part: 今日
+        text: 8 × 8 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "(lambda S: 'できない' if sum(1 for a, b in S if (a + b) % 2 == 0) != sum(1 for a, b in S if (a + b) % 2 == 1) else 'きまらない')(set((a, b) for a in range(8) for b in range(8)) - {(0, 0), (7, 7)})"
+        hints:
+          - 盤を市松もようにぬり分けましょう。
+          - 取りのぞいた 2 マスは、同じ色ですか。
+          - 残りの 2 色のマスの数を比べましょう。
+        paths:
+          - [左上と右下は同じ色, 残りは 32 マスと 30 マス, タイルは 1 色ずつおおうので数が合わない, できない]
+
+  - day: 6
+    items:
+      - part: 思い出す
+        text: 4 × 4 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <line x1="73" y1="11" x2="89" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="89" y1="11" x2="73" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="151" y1="89" x2="167" y2="105" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="167" y1="89" x2="151" y2="105" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (3, 3)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - 盤を市松もようにぬり分けましょう。
+          - 取りのぞいた 2 マスは、同じ色ですか。
+          - 残りの 2 色のマスの数を比べましょう。
+        paths:
+          - [左上と右下は同じ色, 残りは 8 マスと 6 マス, 数が合わないのでできない]
+      - part: 思い出す
+        text: 異なる正の整数をいくつか選んで、和をちょうど 45 にします。いちばん多くて何個選べますか。
+        answer: 9
+        check: max(k for k in range(1, 45) if sum(range(1, k + 1)) <= 45)
+        hints:
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 45 をこえますか。
+          - それより多い個数でも、45 をこえますか。
+          - こえない個数のうちいちばん多い個数で、和がちょうど 45 になる例を作りましょう。
+        paths:
+          - [評価 10 個なら和は 55 以上, 構成 1 から 9 で 45, 9 個]
+      - part: わけ
+        text: 異なる正の整数をいくつか選んで和をちょうど 40 にするとき、いちばん多くて 8 個選べることを、評価と構成の両方を書いて示しましょう。
+        explain: 例：「（評価）異なる正の整数を k 個選び、小さい順に並べる。どれも整数で、前の数より 1 以上大きいので、小さいほうから i 番目の数は i 以上である。よって和は 1 + 2 + … + k 以上である。k = 9 なら和は 45 以上となり、40 をこえる。k が 10 以上なら、小さいほうの 9 個だけで 45 以上になるので、やはり 40 をこえる。よって 9 個以上は選べない。（構成）1、2、3、4、5、6、7、12 は異なる 8 個の正の整数で、和は 28 + 12 = 40 である。よって、いちばん多くて 8 個である。」と書ければよい。①「小さい順に並べると i 番目は i 以上」と下限を出す、② 9 個以上で和が 40 をこえると式で示す、③ 8 個の例を示して「いちばん多くて 8 個」と結ぶ、の 3 点と、評価と構成の両方がそろっているかを見る。例だけで終わっていたら、例では 9 個の選び方がないことは示せないことを話す。
+        hints:
+          - 選んだ数を小さい順に並べると、i 番目の数はいくつ以上ですか。
+          - 9 個選ぶと、和はいくつ以上ですか。10 個以上ならどうですか。
+          - 8 個で和がちょうど 40 になる例を書いて、2 つを合わせて結びましょう。
+        paths:
+          - [小さい順に並べると i 番目は i 以上, 9 個なら和は 45 以上で 40 をこえる, 10 個以上でも小さい 9 個で 45 以上, 構成 1 から 7 と 12, いちばん多くて 8 個]
+      - part: わけ
+        text: 1 から 14 までの数のそれぞれに + か − をつけてすべてたすとき、合計を 0 にできないことを示しましょう。
+        explain: 例：「+ をつけた数の和を P、− をつけた数の和を M とする。どの数もどちらか一方に入るので、P + M = 1 + 2 + … + 14 = 105 である。合計は P − M = (P + M) − 2M = 105 − 2M である。105 は奇数で、2M は偶数なので、105 − 2M は奇数である。0 は偶数なので、合計は 0 にならない。」と書ければよい。①「P、M とする」で文字を決める、② 合計を 105 − 2M に変形する、③「奇数 − 偶数 は奇数なので 0 にならない」と結ぶ、の 3 点を見る。いくつかの + − のつけ方をためして 0 にならなかった、で終わっていたら、ためしていないつけ方が残っているので「できない」とは言えないことを話す。
+        hints:
+          - + をつけた数の和を P、− をつけた数の和を M とします。P + M はいくつですか。
+          - 合計 P − M を、P + M と M を使って書きかえましょう。
+          - その式が偶数か奇数かを考えて、0 と比べましょう。
+        paths:
+          - [P と M を決める, P + M = 105, 合計 = 105 − 2M, 奇数なので 0 にならない]
+      - part: わけ
+        text: 4 × 4 のマスに、どの 2 個もたて・横・ななめにとなり合わないように石を置くとき、いちばん多くて 4 個置けることを、評価と構成の両方を書いて示しましょう。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <rect x="68" y="6" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="94" y="6" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="68" y="32" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="94" y="32" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="120" y="58" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="146" y="58" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="120" y="84" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="146" y="84" width="26" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        explain: 例：「（評価）4 × 4 の盤を、図のように 2 × 2 の 4 つの区画に分ける。1 つの区画の中のどの 2 マスも、たて・横・ななめのどれかでとなり合うので、1 つの区画には石を 1 個までしか置けない。区画は 4 つなので、石は 4 個以下である。（構成）各区画の左上のマス（1 行 1 列、1 行 3 列、3 行 1 列、3 行 3 列）に置くと、どの 2 個も 2 マスはなれていて、となり合わない。よって、いちばん多くて 4 個である。」と書ければよい。① 区画に分ける、②「区画の中の 2 マスはどれもとなり合う」ので各区画 1 個までと上限を足す、③ 4 個の例を示して結ぶ、の 3 点を見る。4 個置いた図だけで終わっていたら、5 個置けないことの理由が要ることを話す。
+        hints:
+          - 盤を 2 × 2 の区画に分けると、区画はいくつですか。
+          - 1 つの区画の中に、となり合わない 2 マスはありますか。
+          - 4 個の置き方の例を書いて、2 つを合わせて結びましょう。
+        paths:
+          - [2 × 2 の 4 区画に分ける, 区画の中の 2 マスはどれもとなり合う, 各区画 1 個までで 4 個以下, 構成 各区画の左上, いちばん多くて 4 個]
+      - part: 今日
+        text: 7 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。
+        answer: 3
+        check: "(lambda e, c: e if e == c else 'きまらない')(-(-21 // 7), max(sum(1 for j in range(7) if (j - i) % 7 in (1, 2, 3)) for i in range(7)))"
+        hints:
+          - 試合は全部で何試合ですか。
+          - どの人も 2 勝以下だと、勝ち数の合計はいくつ以下ですか。
+          - 7 人を輪に並べて、全員が同じ数だけ勝つ例を作りましょう。
+        paths:
+          - [試合は 21 試合, 評価 どの人も 2 勝以下なら合計 14 以下で矛盾, 構成 輪に並べ自分の次の 3 人に勝つと全員 3 勝, 3]
+      - part: 今日
+        text: 異なる 4 つの正の整数の和が 30 です。いちばん大きい数は、いちばん小さくていくつですか。
+        answer: 9
+        check: min(max(c) for c in itertools.combinations(range(1, 31), 4) if sum(c) == 30)
+        hints:
+          - いちばん大きい数を m とすると、4 つの和はいちばん大きくていくつですか。
+          - その式が 30 以上になる m を調べましょう。
+          - 例も作りましょう。
+        paths:
+          - [評価 和は m + (m − 1) + (m − 2) + (m − 3) = 4m − 6 以下, 4m − 6 ≥ 30 より m ≥ 9, 構成 6、7、8、9 で 30, 9]
+    extra:
+      - part: 今日
+        text: 6 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。
+        answer: 3
+        check: "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(6)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(6), 2)])"
+        hints:
+          - 試合は全部で何試合ですか。
+          - どの人も 2 勝以下だと、勝ち数の合計はいくつ以下ですか。
+          - 勝ち数ができるだけそろうように、例を作りましょう。
+        paths:
+          - [試合は 15 試合, 評価 どの人も 2 勝以下なら合計 12 以下で矛盾, 構成 勝ち数 3、3、3、2、2、2 の例, 3]
+      - part: 今日
+        text: 1 から 11 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 12)) == 0 for m in range(2 ** 11)) else 'できない'"
+        hints:
+          - 1 から 11 までの和は、偶数ですか、奇数ですか。
+          - 偶数なら偶奇の理由では止められません。どちらの組も和をいくつにすればよいですか。
+          - 和が 33 になる数の組を作りましょう。
+        paths:
+          - [和は 66 でどちらの組も 33, 11 + 10 + 9 + 3 = 33, 残りも 33, できる]
+      - part: 今日
+        text: 異なる 3 つの正の整数の和が 25 です。いちばん大きい数は、いちばん小さくていくつですか。
+        answer: 10
+        check: min(max(c) for c in itertools.combinations(range(1, 26), 3) if sum(c) == 25)
+        hints:
+          - いちばん大きい数を m とすると、3 つの和はいちばん大きくていくつですか。
+          - その式が 25 以上になる m を調べましょう。
+          - 例も作りましょう。
+        paths:
+          - [評価 和は 3m − 3 以下, 3m − 3 ≥ 25 より m ≥ 28/3 なので m ≥ 10, 構成 7、8、10 で 25, 10]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: 4 人で総当たり戦をします（引き分けなし）。いちばん少なく勝った人の勝ち数は、いちばん多くていくつですか。
+        answer: 1
+        check: "(lambda P: max(min(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(4)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(4), 2)])"
+        hints:
+          - 試合は全部で何試合ですか。
+          - どの人も 2 勝以上だと、勝ち数の合計はいくつ以上ですか。
+          - いちばん少ない人もできるだけ多く勝てるように、例を作りましょう。
+        paths:
+          - [試合は 6 試合, 評価 どの人も 2 勝以上なら合計 8 以上で矛盾, 構成 勝ち数 2、2、1、1 の例, 1]
+      - part: 思い出す
+        text: 4 × 4 の盤から、上の行の左から 1 番目と 2 番目の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 116" xmlns="http://www.w3.org/2000/svg">
+            <line x1="73" y1="11" x2="89" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="89" y1="11" x2="73" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="99" y1="11" x2="115" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="115" y1="11" x2="99" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="110" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (0, 1)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - 取りのぞいた 2 マスは、同じ色ですか。
+          - 色の数が合っても、それだけでは「できる」とは言えません。
+          - 実際にしきつめた例を作りましょう。
+        paths:
+          - [取りのぞいた 2 マスは色がちがう, 構成 上の行の残りに横に 1 枚, 残りの 3 行に横に 2 枚ずつ, できる]
+      - part: 今日
+        text: 1 から 9 までの数を 3 つずつの 3 組に分けて、どの組も 3 つの数の和が 15 になるようにします。分け方は何通りありますか（組の順番は区別しません）。
+        answer: 2
+        check: "(lambda tr: len([q for q in itertools.combinations(tr, 3) if len(set(q[0] + q[1] + q[2])) == 9]))([c for c in itertools.combinations(range(1, 10), 3) if sum(c) == 15])"
+        hints:
+          - 1 が入る組で場合に分けましょう。1 と同じ組に入れる数の組み合わせは何ですか。
+          - 1 の組を決めたら、残りの 6 つの数で、9 が入る組を考えましょう。
+          - もれも重なりもないように、全部の場合を書き出しましょう。
+        paths:
+          - [1 の組は (1、5、9) か (1、6、8), (1、5、9) なら残りは (2、6、7) と (3、4、8), (1、6、8) なら残りは (2、4、9) と (3、5、7), 2 通り]
+        note: 「できる」かどうかだけなら例 1 つでよいが、「何通り」は全部調べる（L-007）。
+      - part: 今日
+        text: 7 つの整数の和が 50 のとき、「少なくとも 1 つは □ 以上である」と必ず言えます。□ にあてはまる整数のうち、いちばん大きいものはいくつですか。
+        answer: 8
+        check: max(m for m in range(1, 51) if 7 * (m - 1) < 50)
+        hints:
+          - どれも 7 以下と仮定すると、和は最大でいくつですか。
+          - その和は 50 と比べてどうですか。
+          - それより大きい数では言えないことを、例を 1 つ作って確かめましょう。
+        paths:
+          - [どれも 7 以下なら和は 49 以下で矛盾, 少なくとも 1 つは 8 以上, 8 と 7 が 6 つで 50 なので 9 以上は言えない, 8]
+      - part: 今日
+        text: 3 × 3 のマスに石を置きます。どの 2 個も、たてや横にとなり合わないように置くと（ななめはよい）、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="81" y1="6" x2="159" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="81" y1="32" x2="159" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="81" y1="58" x2="159" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="81" y1="84" x2="159" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="81" y1="6" x2="81" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="107" y1="6" x2="107" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="133" y1="6" x2="133" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="159" y1="6" x2="159" y2="84" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 5
+        check: "(lambda cells: max(k for k in range(0, 10) if any(all(abs(p[0] - q[0]) + abs(p[1] - q[1]) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(3) for b in range(3)])"
+        hints:
+          - 盤を市松もようにぬり分けて、角と同じ色のマスに置いてみましょう。
+          - 6 個置くとすると、どこかの行に 2 個以上の石があります。それはどこに置けますか。
+          - 場合に分けて、6 個置けないことを確かめましょう。
+        paths:
+          - [構成 4 つの角とまん中で 5 個, 評価 1 行には多くて 2 個（両はし）なので 6 個なら 3 行とも 2 個, すると上の行とまん中の行の両はしがたてにとなり合い矛盾, 5 個]
+        note: 評価は、1 行に置けるのは 2 個まで（両はし）であることから場合に分ける（L-007）。
+      - part: 挑戦
+        text: 立方体の 8 つの頂点に、1 から 8 までの数を 1 つずつ置きます。どの面も、4 つの頂点の数の和が同じになるようにします。その和はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="50" width="80" height="80" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="100" y="20" width="80" height="80" stroke="currentColor" fill="none" stroke-width="2" stroke-dasharray="5 4"/>
+            <line x1="60" y1="50" x2="100" y2="20" stroke="currentColor" stroke-width="2"/>
+            <line x1="140" y1="50" x2="180" y2="20" stroke="currentColor" stroke-width="2"/>
+            <line x1="140" y1="130" x2="180" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="130" x2="100" y2="100" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+            <line x1="100" y1="20" x2="180" y2="20" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="20" x2="180" y2="100" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 18
+        check: "(lambda faces: (lambda v: v.pop() if len(v) == 1 else 'きまらない')({sum(p[i] for i in faces[0]) for p in itertools.permutations(range(1, 9)) if len({sum(p[i] for i in f) for f in faces}) == 1}))([[i for i in range(8) if (i >> b) & 1 == v] for b in range(3) for v in range(2)])"
+        hints:
+          - 6 つの面の和をすべてたすと、どの頂点の数も何回ずつたされますか。
+          - 1 から 8 までの和は 36 です。6 つの面の和の合計はいくつですか。
+          - その和が本当に作れるか、上の面から順に数を決めて、横の面も同じ和になるかを確かめましょう。
+        paths:
+          - [どの頂点も 3 つの面に入る, 6 面の和の合計は 3 × 36 = 108, 1 つの面は 108 ÷ 6 = 18, 構成 上の面にまわる順に 1、4、5、8、その真下に 6、7、2、3, 18]
+        note: 計算（評価）で和は 18 しかないと分かる。そのうえで実際に置けること（構成）を示すと、答えが確かになる。
+    extra:
+      - part: 今日
+        text: 1 から 8 までの数を 2 組に分けて、2 組の和を等しくします（組に入る数の個数は同じでなくてかまいません）。分け方は何通りありますか（組の順番は区別しません）。
+        answer: 7
+        check: len([c for k in range(1, 9) for c in itertools.combinations(range(1, 9), k) if sum(c) == 18 and 1 in c])
+        hints:
+          - 1 つの組の和はいくつにすればよいですか。1 が入る組だけを数えれば、分け方を 2 回数えずにすみます。
+          - 1 が入る組を、組に入る数の個数で場合に分けましょう。3 個の組や 6 個の組はできますか。
+          - 4 個の組と 5 個の組を、もれなく書き出しましょう。
+        paths:
+          - [1 組の和は 18, 3 個以下では 1 + 8 + 7 = 16 で足りず、6 個以上では 1 + 2 + 3 + 4 + 5 + 6 = 21 で多すぎる, 4 個の組は (1、2、7、8)、(1、3、6、8)、(1、4、5、8)、(1、4、6、7) の 4 通り, 5 個の組は (1、2、3、4、8)、(1、2、3、5、7)、(1、2、4、5、6) の 3 通り, 7 通り]
+      - part: 今日
+        text: 背理法で「異なる 9 つの正の整数の和は、40 にならない」を示します。はじめに仮定することは、どれですか。
+        choices: [異なる 9 つの正の整数で、和が 40 になるものがある, どの異なる 9 つの正の整数も、和が 40 になる, 異なる 9 つの正の整数の和は、40 より大きい]
+        answer: 異なる 9 つの正の整数で、和が 40 になるものがある
+        hints:
+          - 示したいことは「どの 9 つでも、和は 40 にならない」です。
+          - 「どの〜でも〜でない」の否定は、どんな形でしたか。
+          - 否定は「〜になるものがある」の形です。
+        paths:
+          - [示したいのは「どれも和が 40 にならない」, 否定は「和が 40 になるものがある」, それを仮定して矛盾を出す]
+        note: このあと「小さい順に i 番目は i 以上なので和は 45 以上」で矛盾する。否定の形を選ぶ問題なので check はない（L-013 の否定のきまり）。
+      - part: 今日
+        text: 1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が同じになるようにします。その和は、いちばん大きくていくつですか。
+        answer: 12
+        check: max({p[0] + p[3] + p[1] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == p[1] + p[4] + p[2] == p[2] + p[5] + p[0]})
+        hints:
+          - 辺の和を S とすると、3S = 21 + （頂点の和）です。
+          - 頂点の和は、いちばん大きくていくつですか。
+          - その場合に、本当に置けるかを確かめましょう。
+        paths:
+          - [評価 頂点の和は 4 + 5 + 6 = 15 以下, 3S ≤ 36 より S ≤ 12, 構成 頂点 4、5、6 とまん中 3、1、2, 12]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 異なる 7 つの正の整数の和は、いちばん小さくていくつですか。
+        answer: 28
+        check: min(sum(c) for c in itertools.combinations(range(1, 15), 7))
+        hints:
+          - 7 つを小さい順に並べると、それぞれいくつ以上ですか。
+          - その下限を全部たしましょう。
+          - それがちょうど作れる例も確かめましょう。
+        paths:
+          - [評価 1 以上、2 以上、…、7 以上で和は 28 以上, 構成 1 から 7, 28]
+      - part: 今日
+        text: 3 行 4 列のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。
+        svg: |
+          <svg viewBox="0 0 240 90" xmlns="http://www.w3.org/2000/svg">
+            <line x1="68" y1="6" x2="172" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="32" x2="172" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="58" x2="172" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="68" y1="84" x2="172" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="84" stroke="currentColor" stroke-width="2"/>
+            <line x1="94" y1="6" x2="94" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="84" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 3
+        check: "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(3) for b in range(4)])"
+        hints:
+          - 1 つの行には、石を何個まで置けますか。
+          - 行は 3 つです。これで何個以下と言えますか。
+          - その個数を、実際に置いてみましょう。
+        paths:
+          - [評価 各行に 1 個までで 3 個以下, 構成 ななめに 3 個, 3 個]
+      - part: 今日
+        text: 1 から 12 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 13)) == 0 for m in range(2 ** 12)) else 'できない'"
+        hints:
+          - 1 から 12 までの和は、偶数ですか、奇数ですか。
+          - どちらの組も和をいくつにすればよいですか。
+          - 大きい数と小さい数を組にしてみましょう。
+        paths:
+          - [和は 78 でどちらの組も 39, 1 + 12、2 + 11、3 + 10 で 39, 残りの 4 から 9 も 39, できる]
+      - part: 今日
+        text: 異なる正の整数をいくつか選んで、和をちょうど 70 にします。いちばん多くて何個選べますか。
+        answer: 11
+        check: max(k for k in range(1, 70) if sum(range(1, k + 1)) <= 70)
+        hints:
+          - 1 + 2 + 3 + … と順にたしていくと、何個目で 70 をこえますか。
+          - それより多い個数でも、70 をこえますか。
+          - こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 70 にしましょう。
+        paths:
+          - [評価 12 個なら和は 78 以上, 構成 1 から 10 と 15 で 70, 11 個]
+      - part: 今日
+        text: 5 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。5 人の合計は 46 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。
+        answer: 6
+        check: min(min(t) for t in itertools.product(range(11), repeat=5) if sum(t) == 46)
+        hints:
+          - ほかの 4 人の合計は、いちばん多くて何点ですか。
+          - いちばん低い人は、何点以上ですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 4 人は 40 点以下, いちばん低い人は 6 点以上, 構成 10、10、10、10、6, 6 点]
+      - part: 今日
+        text: 6 × 6 の盤から、左上のマスと、そこから右に 2、下に 2 進んだマスの 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 168" xmlns="http://www.w3.org/2000/svg">
+            <line x1="47" y1="11" x2="63" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="63" y1="11" x2="47" y2="27" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="99" y1="63" x2="115" y2="79" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="115" y1="63" x2="99" y2="79" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="42" y1="6" x2="198" y2="6" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="32" x2="198" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="58" x2="198" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="84" x2="198" y2="84" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="110" x2="198" y2="110" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="136" x2="198" y2="136" stroke="currentColor" stroke-width="1"/>
+            <line x1="42" y1="162" x2="198" y2="162" stroke="currentColor" stroke-width="2"/>
+            <line x1="42" y1="6" x2="42" y2="162" stroke="currentColor" stroke-width="2"/>
+            <line x1="68" y1="6" x2="68" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="94" y1="6" x2="94" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="120" y1="6" x2="120" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="146" y1="6" x2="146" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="172" y1="6" x2="172" y2="162" stroke="currentColor" stroke-width="1"/>
+            <line x1="198" y1="6" x2="198" y2="162" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda T: T(set((a, b) for a in range(6) for b in range(6)) - {(0, 0), (2, 2)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'"
+        hints:
+          - 盤を市松もようにぬり分けましょう。
+          - 取りのぞいた 2 マスは、同じ色ですか。
+          - 残りの 2 色のマスの数を比べましょう。
+        paths:
+          - [2 マスは同じ色, 残りは 16 マスと 18 マス, 数が合わないのでできない]
+      - part: 今日
+        text: 5 人で総当たり戦をします（引き分けなし）。いちばん少なく勝った人の勝ち数は、いちばん多くていくつですか。
+        answer: 2
+        check: "(lambda P: max(min(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(5)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(5), 2)])"
+        hints:
+          - 試合は全部で何試合ですか。
+          - どの人も 3 勝以上だと、勝ち数の合計はいくつ以上ですか。
+          - 全員が同じ数だけ勝つ例を作りましょう。
+        paths:
+          - [試合は 10 試合, 評価 どの人も 3 勝以上なら合計 15 以上で矛盾, 構成 輪に並べ次の 2 人に勝つと全員 2 勝, 2]
+      - part: 今日
+        text: 1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が同じになるようにします。その和は、いちばん小さくていくつですか。
+        answer: 9
+        check: min({p[0] + p[3] + p[1] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == p[1] + p[4] + p[2] == p[2] + p[5] + p[0]})
+        hints:
+          - 辺の和を S とすると、3S = 21 + （頂点の和）です。
+          - 頂点の和は、いちばん小さくていくつですか。
+          - その場合に、本当に置けるかを確かめましょう。
+        paths:
+          - [評価 頂点の和は 1 + 2 + 3 = 6 以上, 3S ≥ 27 より S ≥ 9, 構成 頂点 1、2、3 とまん中 6、4、5, 9]
+    extra:
+      - part: 今日
+        text: 1 から 20 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 10
+        check: "(lambda e, c: e if e == len(c) and all(c[i + 1] - c[i] > 1 for i in range(len(c) - 1)) else 'きまらない')(20 // 2, range(1, 21, 2))"
+        hints:
+          - となり合う 2 つずつの組に分けると、組はいくつですか。
+          - 1 つの組から何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [評価 10 組で各組 1 個まで, 構成 1、3、5、…、19, 10 個]
+      - part: 今日
+        text: 1 から 20 までの整数から、どの 2 つをたしても 21 にならないように選びます。いちばん多くて何個選べますか。
+        answer: 10
+        check: "(lambda e, c: e if e == len(c) and all(a + b != 21 for a, b in itertools.combinations(c, 2)) else 'きまらない')(20 // 2, range(1, 11))"
+        hints:
+          - 和が 21 になる 2 つの組を書き出しましょう。いくつありますか。
+          - 1 つの組から何個まで選べますか。
+          - その個数を、実際に選んでみましょう。
+        paths:
+          - [(1、20)、(2、19)、…、(10、11) の 10 組, 評価 各組 1 個まで, 構成 1 から 10, 10 個]
+      - part: 今日
+        text: 異なる 5 つの正の整数の和が 25 です。いちばん大きい数は、いちばん大きくていくつですか。
+        answer: 15
+        check: max(max(c) for c in itertools.combinations(range(1, 26), 5) if sum(c) == 25)
+        hints:
+          - いちばん大きい数を大きくするには、ほかの 4 つをどうすればよいですか。
+          - ほかの 4 つの和は、いちばん小さくていくつですか。
+          - その場合の例を作りましょう。
+        paths:
+          - [評価 ほかの 4 つの和は 10 以上, いちばん大きい数は 15 以下, 構成 1、2、3、4、15, 15]

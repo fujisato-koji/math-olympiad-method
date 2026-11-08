@@ -252,6 +252,7 @@ items:
   sources: *id001
   units:
   - S-027
+  - S-055
 - id: T-36
   field: P5
   topic: 1 千万までの数、四則（計算の順序、かっこ）

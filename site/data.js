@@ -3177,6 +3177,7 @@ window.ROADMAP = {
     "N-032",
     "N-033",
     "N-036",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -8424,6 +8425,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-061",
     "N-070",
@@ -8826,6 +8828,7 @@ window.ROADMAP = {
     "N-031",
     "N-032",
     "N-035",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -10170,7 +10173,6 @@ window.ROADMAP = {
     "M-003",
     "M-004",
     "M-013",
-    "N-059",
     "P-002",
     "P-003",
     "P-004",
@@ -10394,6 +10396,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -11649,7 +11652,6 @@ window.ROADMAP = {
     "I-009",
     "M-004",
     "M-013",
-    "N-059",
     "P-001",
     "P-002",
     "P-003",
@@ -13407,6 +13409,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -14588,6 +14591,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -15496,6 +15500,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -15795,6 +15800,7 @@ window.ROADMAP = {
     "L-002",
     "L-003",
     "L-005",
+    "L-006",
     "L-007",
     "L-008",
     "L-011",
@@ -17462,6 +17468,7 @@ window.ROADMAP = {
     "P-197",
     "S-027",
     "S-028",
+    "S-055",
     "W-001",
     "W-002",
     "W-003",
@@ -17604,7 +17611,8 @@ window.ROADMAP = {
       "S-027",
       "S-028",
       "G-050",
-      "G-053"
+      "G-053",
+      "S-055"
      ]
     },
     {
@@ -17938,6 +17946,7 @@ window.ROADMAP = {
     "S-028",
     "S-029",
     "S-030",
+    "S-055",
     "W-043",
     "W-044",
     "W-045",
@@ -18187,7 +18196,8 @@ window.ROADMAP = {
      "field": "データ",
      "topic": "度数表、棒グラフ、円グラフ",
      "units": [
-      "S-027"
+      "S-027",
+      "S-055"
      ]
     },
     {
@@ -19360,6 +19370,7 @@ window.ROADMAP = {
     "P-197",
     "S-027",
     "S-028",
+    "S-055",
     "W-047",
     "W-048",
     "W-049"
@@ -19670,7 +19681,8 @@ window.ROADMAP = {
      "field": "P4",
      "topic": "表、線グラフ、円グラフ",
      "units": [
-      "S-027"
+      "S-027",
+      "S-055"
      ]
     },
     {
@@ -29287,6 +29299,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -30176,6 +30189,7 @@ window.ROADMAP = {
     "N-054",
     "N-055",
     "N-058",
+    "N-059",
     "N-063",
     "N-066",
     "N-073",
@@ -34011,6 +34025,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -34558,6 +34573,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -34949,6 +34965,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -35253,6 +35270,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -36888,6 +36906,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -37955,6 +37974,8 @@ window.ROADMAP = {
     "N-073",
     "N-074",
     "N-075",
+    "N-076",
+    "N-077",
     "S-027",
     "S-028"
    ],
@@ -40687,6 +40708,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -41605,6 +41627,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -51229,6 +51252,10 @@ window.ROADMAP = {
     "C-006",
     "C-007",
     "C-011",
+    "G-001",
+    "G-002",
+    "G-005",
+    "G-046",
     "N-001",
     "N-002",
     "N-003",
@@ -51244,6 +51271,7 @@ window.ROADMAP = {
     "N-018",
     "N-019",
     "N-020",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -51253,7 +51281,8 @@ window.ROADMAP = {
     "S-027",
     "S-028",
     "S-029",
-    "S-031"
+    "S-031",
+    "S-055"
    ],
    "items": [
     {
@@ -51276,7 +51305,8 @@ window.ROADMAP = {
      "topic": "表とグラフ（ヒストグラム、棒・折れ線・円グラフ、箱ひげ図）を選んで描く",
      "units": [
       "S-027",
-      "S-029"
+      "S-029",
+      "S-055"
      ]
     },
     {
@@ -52552,6 +52582,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -64641,6 +64672,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -65321,6 +65353,7 @@ window.ROADMAP = {
     "N-020",
     "N-021",
     "N-027",
+    "N-059",
     "N-060",
     "N-073",
     "N-074",
@@ -75780,6 +75813,7 @@ window.ROADMAP = {
     "N-032",
     "N-033",
     "N-036",
+    "N-059",
     "N-073",
     "N-074",
     "N-075",
@@ -78120,13 +78154,10 @@ window.ROADMAP = {
    "K-176",
    "E-196",
    "E-167",
-   "E-173",
    "W-010",
    "C-036",
-   "P-188",
    "K-119",
    "B-144",
-   "B-075",
    "B-034",
    "W-029",
    "B-036",
@@ -78135,6 +78166,7 @@ window.ROADMAP = {
    "K-115",
    "I-052",
    "W-030",
+   "E-173",
    "E-222",
    "V-008",
    "B-042",
@@ -78142,7 +78174,6 @@ window.ROADMAP = {
    "E-169",
    "E-220",
    "E-231",
-   "B-073",
    "B-020",
    "B-006",
    "B-052",
@@ -78151,14 +78182,16 @@ window.ROADMAP = {
    "K-166",
    "V-005",
    "H-092",
-   "E-174",
    "B-013",
    "W-036",
+   "P-188",
    "D-034",
    "S-043",
+   "B-075",
    "W-062",
    "E-180",
    "E-168",
+   "E-174",
    "W-023",
    "N-067",
    "I-037",
@@ -78171,21 +78204,22 @@ window.ROADMAP = {
    "F-021",
    "Q-004",
    "V-016",
+   "B-073",
    "B-045",
    "K-111",
    "B-055",
    "T-041",
    "H-049",
    "B-156",
-   "B-011",
    "W-070",
+   "B-011",
    "E-223",
    "W-110",
-   "B-021",
    "V-031",
-   "E-210",
-   "E-225",
+   "B-021",
    "H-042",
+   "E-225",
+   "E-210",
    "P-175",
    "Q-016",
    "P-230",
@@ -78366,6 +78400,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "kansu",
+    "b": "programming",
+    "o": 1,
+    "e": 2.4,
+    "ex": [
+     "E-180"
+    ]
+   },
+   {
     "a": "kozo-zairyo",
     "b": "rikigaku",
     "o": 1,
@@ -78412,15 +78455,6 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "kansu",
-    "b": "programming",
-    "o": 1,
-    "e": 2.3,
-    "ex": [
-     "E-180"
-    ]
-   },
-   {
     "a": "gunkantai",
     "b": "programming",
     "o": 1,
@@ -78458,15 +78492,6 @@ window.ROADMAP = {
     ]
    },
    {
-    "a": "fukuso",
-    "b": "rikigaku",
-    "o": 1,
-    "e": 2.1,
-    "ex": [
-     "P-014"
-    ]
-   },
-   {
     "a": "kansu",
     "b": "rikigaku",
     "o": 1,
@@ -78482,6 +78507,15 @@ window.ROADMAP = {
     "e": 2.0,
     "ex": [
      "W-101"
+    ]
+   },
+   {
+    "a": "fukuso",
+    "b": "rikigaku",
+    "o": 1,
+    "e": 2.0,
+    "ex": [
+     "P-014"
     ]
    }
   ],
@@ -78613,7 +78647,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.55
+    "d": 0.54
    },
    {
     "a": "kansu",
@@ -78623,7 +78657,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.71
+    "d": 0.72
    },
    {
     "a": "haichi",
@@ -78713,7 +78747,7 @@ window.ROADMAP = {
      "APMO-2014-3",
      "JMO-P-2025-10"
     ],
-    "d": 0.76
+    "d": 0.77
    },
    {
     "a": "graph",
@@ -78868,7 +78902,7 @@ window.ROADMAP = {
      "chikyu-naibu",
      "seibutsu-butsuri"
     ],
-    "s": 3.91,
+    "s": 3.9,
     "d": 0.88
    },
    {
@@ -78976,7 +79010,7 @@ window.ROADMAP = {
      "kikai-gakushu",
      "seibutsu-keisan"
     ],
-    "s": 3.18,
+    "s": 3.17,
     "d": 0.79
    },
    {
@@ -79012,7 +79046,7 @@ window.ROADMAP = {
      "netsu",
      "doboku"
     ],
-    "s": 3.01,
+    "s": 3.0,
     "d": 0.81
    },
    {
@@ -79100,18 +79134,6 @@ window.ROADMAP = {
     "d": 0.74
    },
    {
-    "a": "data",
-    "b": "shiki",
-    "via": [
-     "keiei-kogaku",
-     "keisan",
-     "kazu",
-     "iden-shinka"
-    ],
-    "s": 2.6,
-    "d": 0.87
-   },
-   {
     "a": "fukuso",
     "b": "kakuritsu-daigaku",
     "via": [
@@ -79144,7 +79166,7 @@ window.ROADMAP = {
      "genshi-ketsugo",
      "hakaru"
     ],
-    "s": 2.49,
+    "s": 2.48,
     "d": 0.89
    },
    {
@@ -79158,6 +79180,18 @@ window.ROADMAP = {
     ],
     "s": 2.46,
     "d": 0.89
+   },
+   {
+    "a": "bunshi-saibo",
+    "b": "data",
+    "via": [
+     "shokubutsu",
+     "kusuri-doku",
+     "hakaru",
+     "karada"
+    ],
+    "s": 2.32,
+    "d": 0.94
    },
    {
     "a": "butsuri-kagaku",
@@ -79196,6 +79230,18 @@ window.ROADMAP = {
     "d": 0.91
    },
    {
+    "a": "chikyu",
+    "b": "data",
+    "via": [
+     "tenki",
+     "kankyo-kogaku",
+     "iden-shinka",
+     "seitai"
+    ],
+    "s": 2.66,
+    "d": 0.81
+   },
+   {
     "a": "iden-shinka",
     "b": "rikigaku",
     "via": [
@@ -79204,7 +79250,7 @@ window.ROADMAP = {
      "hakaru",
      "houteishiki"
     ],
-    "s": 2.31,
+    "s": 2.3,
     "d": 0.93
    },
    {
@@ -79218,18 +79264,6 @@ window.ROADMAP = {
     ],
     "s": 2.25,
     "d": 0.95
-   },
-   {
-    "a": "chikyu",
-    "b": "data",
-    "via": [
-     "tenki",
-     "kankyo-kogaku",
-     "iden-shinka",
-     "seitai"
-    ],
-    "s": 2.66,
-    "d": 0.8
    },
    {
     "a": "gunkantai",
@@ -79256,6 +79290,18 @@ window.ROADMAP = {
     "d": 0.92
    },
    {
+    "a": "bibun-hoteishiki",
+    "b": "data",
+    "via": [
+     "keizai",
+     "ekigaku",
+     "kusuri-doku",
+     "kozo-zairyo"
+    ],
+    "s": 2.3,
+    "d": 0.91
+   },
+   {
     "a": "butsuri-kagaku",
     "b": "hado",
     "via": [
@@ -79268,18 +79314,6 @@ window.ROADMAP = {
     "d": 0.8
    },
    {
-    "a": "iden-shinka",
-    "b": "kansu",
-    "via": [
-     "kakuritsu",
-     "chiso",
-     "hakaru",
-     "houteishiki"
-    ],
-    "s": 2.32,
-    "d": 0.9
-   },
-   {
     "a": "kozo-zairyo",
     "b": "netsu",
     "via": [
@@ -79290,30 +79324,6 @@ window.ROADMAP = {
     ],
     "s": 2.17,
     "d": 0.96
-   },
-   {
-    "a": "data",
-    "b": "houteishiki",
-    "via": [
-     "keizai",
-     "keisan",
-     "busshitsu",
-     "kazu"
-    ],
-    "s": 2.63,
-    "d": 0.79
-   },
-   {
-    "a": "bibun-hoteishiki",
-    "b": "data",
-    "via": [
-     "keizai",
-     "ekigaku",
-     "kusuri-doku",
-     "kozo-zairyo"
-    ],
-    "s": 2.3,
-    "d": 0.9
    },
    {
     "a": "kakuritsu-daigaku",
@@ -79340,16 +79350,16 @@ window.ROADMAP = {
     "d": 0.96
    },
    {
-    "a": "kansu",
-    "b": "kikai-gakushu",
+    "a": "iden-shinka",
+    "b": "kansu",
     "via": [
-     "suri-ronri",
      "kakuritsu",
-     "jishin-kazan",
-     "seigyo"
+     "chiso",
+     "hakaru",
+     "houteishiki"
     ],
-    "s": 2.13,
-    "d": 0.96
+    "s": 2.31,
+    "d": 0.89
    },
    {
     "a": "bisekibun",
@@ -79364,16 +79374,16 @@ window.ROADMAP = {
     "d": 0.74
    },
    {
-    "a": "busshitsu",
-    "b": "rikigaku",
+    "a": "data",
+    "b": "shiki",
     "via": [
-     "mizu-kori",
-     "hakaru",
-     "houteishiki",
-     "netsu"
+     "keiei-kogaku",
+     "keisan",
+     "kazu",
+     "iden-shinka"
     ],
-    "s": 2.25,
-    "d": 0.9
+    "s": 2.6,
+    "d": 0.78
    },
    {
     "a": "fukuso",
@@ -79388,6 +79398,18 @@ window.ROADMAP = {
     "d": 0.7
    },
    {
+    "a": "busshitsu",
+    "b": "rikigaku",
+    "via": [
+     "mizu-kori",
+     "hakaru",
+     "houteishiki",
+     "netsu"
+    ],
+    "s": 2.24,
+    "d": 0.9
+   },
+   {
     "a": "kakuritsu-daigaku",
     "b": "rikigaku",
     "via": [
@@ -79398,6 +79420,18 @@ window.ROADMAP = {
     ],
     "s": 2.29,
     "d": 0.88
+   },
+   {
+    "a": "kansu",
+    "b": "kikai-gakushu",
+    "via": [
+     "suri-ronri",
+     "kakuritsu",
+     "jishin-kazan",
+     "seigyo"
+    ],
+    "s": 2.12,
+    "d": 0.95
    },
    {
     "a": "bunshi-saibo",
@@ -79437,6 +79471,30 @@ window.ROADMAP = {
    },
    {
     "a": "bisekibun-nyumon",
+    "b": "data",
+    "via": [
+     "keiei-kogaku",
+     "hakaru",
+     "kozo-zairyo",
+     "seitai"
+    ],
+    "s": 2.25,
+    "d": 0.87
+   },
+   {
+    "a": "hakaru",
+    "b": "seitai",
+    "via": [
+     "chiri-joho",
+     "bisekibun-nyumon",
+     "iden-shinka",
+     "data"
+    ],
+    "s": 2.12,
+    "d": 0.92
+   },
+   {
+    "a": "bisekibun-nyumon",
     "b": "houteishiki",
     "via": [
      "risoku",
@@ -79444,7 +79502,7 @@ window.ROADMAP = {
      "hanno",
      "shiki"
     ],
-    "s": 2.47,
+    "s": 2.46,
     "d": 0.79
    },
    {
@@ -79542,30 +79600,6 @@ window.ROADMAP = {
     ],
     "s": 2.82,
     "d": 0.68
-   },
-   {
-    "a": "bibun-hoteishiki",
-    "b": "bussei",
-    "via": [
-     "soutai",
-     "seibutsu-butsuri",
-     "ryoshi",
-     "netsu"
-    ],
-    "s": 2.31,
-    "d": 0.83
-   },
-   {
-    "a": "data",
-    "b": "seitai-kogaku",
-    "via": [
-     "zairyo",
-     "shinri-ninchi",
-     "kusuri-doku",
-     "kozo-zairyo"
-    ],
-    "s": 2.09,
-    "d": 0.91
    }
   ],
   "probUnseen": [
@@ -79621,7 +79655,7 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "kansu",
     "e": 10.9,
-    "d": 0.67
+    "d": 0.68
    },
    {
     "a": "graph",
@@ -79633,7 +79667,7 @@ window.ROADMAP = {
     "a": "kansu",
     "b": "zahyo",
     "e": 4.5,
-    "d": 0.74
+    "d": 0.75
    },
    {
     "a": "haichi",
@@ -79657,7 +79691,7 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.78
+    "d": 0.77
    },
    {
     "a": "kakuritsu",
@@ -80898,9 +80932,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.06,
-    1.98,
-    -0.27
+    -0.14,
+    1.99,
+    -0.08
    ]
   },
   {
@@ -81975,9 +82009,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.96,
-    4.2,
-    -0.87
+    0.04,
+    4.26,
+    -1.1
    ]
   },
   {
@@ -83097,9 +83131,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.61,
-    6.09,
-    -1.51
+    -0.0,
+    6.25,
+    -1.71
    ]
   },
   {
@@ -84560,12 +84594,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.15,
-    8.37,
-    -0.28
+    -0.56,
+    8.09,
+    2.38
    ],
    "comb": {
-    "b": 0.324,
+    "b": 0.325,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -85696,9 +85730,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.8,
-    3.79,
-    -1.32
+    -2.41,
+    3.61,
+    -0.73
    ]
   },
   {
@@ -86809,9 +86843,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.49,
-    5.03,
-    -2.12
+    -4.33,
+    4.65,
+    -1.25
    ]
   },
   {
@@ -87927,9 +87961,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.53,
-    4.19,
-    1.23
+    1.6,
+    3.74,
+    1.69
    ]
   },
   {
@@ -89030,9 +89064,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.72,
-    5.57,
-    3.22
+    3.46,
+    4.26,
+    3.44
    ]
   },
   {
@@ -90130,9 +90164,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.46,
-    6.19,
-    1.86
+    2.68,
+    5.31,
+    2.56
    ],
    "comb": {
     "b": 0.422,
@@ -91333,9 +91367,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.45,
-    7.5,
-    3.61
+    4.5,
+    5.82,
+    4.16
    ]
   },
   {
@@ -92456,9 +92490,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.16,
-    3.93,
-    -1.97
+    -1.33,
+    4.17,
+    0.44
    ]
   },
   {
@@ -93691,9 +93725,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.62,
-    5.38,
-    -3.55
+    -2.48,
+    5.84,
+    1.31
    ]
   },
   {
@@ -93727,9 +93761,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.15,
-    -1.42,
-    1.4
+    -0.03,
+    -0.9,
+    1.78
    ]
   },
   {
@@ -93761,9 +93795,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.04,
-    -2.13,
-    3.7
+    0.63,
+    -1.27,
+    4.16
    ]
   },
   {
@@ -93797,9 +93831,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.2,
-    -1.44,
-    0.7
+    -1.41,
+    -0.77,
+    1.19
    ]
   },
   {
@@ -93835,9 +93869,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.86,
-    -3.98,
-    0.25
+    -2.91,
+    -2.92,
+    1.53
    ]
   },
   {
@@ -93873,9 +93907,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.61,
-    -3.76,
-    1.62
+    -2.24,
+    -2.63,
+    2.73
    ]
   },
   {
@@ -93907,9 +93941,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.59,
-    2.55,
-    -0.03
+    -3.42,
+    2.38,
+    1.41
    ]
   },
   {
@@ -93942,9 +93976,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.56,
-    5.83,
-    0.14
+    -7.86,
+    5.42,
+    4.02
    ],
    "comb": {
     "b": 0.38,
@@ -93986,9 +94020,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.02,
-    -0.23,
-    1.7
+    1.27,
+    -1.02,
+    1.16
    ]
   },
   {
@@ -94018,9 +94052,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.46,
-    1.03,
-    1.65
+    1.9,
+    0.14,
+    0.6
    ]
   },
   {
@@ -94056,9 +94090,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.33,
-    -1.21,
-    4.01
+    2.07,
+    -1.46,
+    3.6
    ]
   },
   {
@@ -94090,9 +94124,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.18,
-    -0.54,
-    4.36
+    1.72,
+    -0.06,
+    4.05
    ]
   },
   {
@@ -94124,9 +94158,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.7,
-    5.65,
-    8.51
+    5.31,
+    4.06,
+    7.91
    ]
   },
   {
@@ -94156,9 +94190,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.0,
-    0.99,
-    1.42
+    1.12,
+    1.33,
+    0.99
    ]
   },
   {
@@ -94188,9 +94222,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.45,
-    -0.18,
-    1.94
+    0.88,
+    0.25,
+    1.78
    ]
   },
   {
@@ -94226,9 +94260,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.95,
-    3.54,
-    6.58
+    6.95,
+    -3.1,
+    3.67
    ]
   },
   {
@@ -94264,9 +94298,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.9,
-    -3.38,
-    5.45
+    0.74,
+    -2.09,
+    6.09
    ]
   },
   {
@@ -94298,9 +94332,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.44,
-    -2.4,
-    3.66
+    -0.47,
+    -1.96,
+    3.91
    ]
   },
   {
@@ -94330,9 +94364,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.26,
-    -1.95,
-    -0.34
+    -0.89,
+    -1.78,
+    0.23
    ]
   },
   {
@@ -94368,9 +94402,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.47,
-    -1.55,
-    2.21
+    3.61,
+    -2.14,
+    1.32
    ]
   },
   {
@@ -94402,9 +94436,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.73,
-    -4.06,
-    -1.54
+    -3.34,
+    -2.87,
+    -0.07
    ]
   },
   {
@@ -94436,9 +94470,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.22,
-    -3.0,
-    -3.21
+    -1.01,
+    -3.58,
+    -2.35
    ]
   },
   {
@@ -95681,9 +95715,9 @@ window.ROADMAP = {
     "−"
    ],
    "p": [
-    2.71,
-    7.97,
-    -0.72
+    1.04,
+    8.21,
+    -1.7
    ]
   },
   {
@@ -96952,9 +96986,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.33,
-    8.22,
-    -1.43
+    -0.45,
+    8.2,
+    -1.98
    ]
   },
   {
@@ -97999,9 +98033,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.56,
-    10.34,
-    0.04
+    -2.42,
+    10.06,
+    -0.55
    ]
   },
   {
@@ -99303,9 +99337,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.41,
-    11.96,
-    -2.04
+    -2.39,
+    11.94,
+    -1.0
    ]
   },
   {
@@ -100449,9 +100483,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.07,
-    13.22,
-    -4.6
+    -3.4,
+    13.6,
+    -0.77
    ]
   },
   {
@@ -101453,9 +101487,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.46,
-    13.61,
-    -2.41
+    -0.8,
+    13.91,
+    -1.7
    ]
   },
   {
@@ -102659,12 +102693,12 @@ window.ROADMAP = {
     "−"
    ],
    "p": [
-    4.03,
-    13.29,
-    -2.06
+    -0.63,
+    13.63,
+    -3.29
    ],
    "comb": {
-    "b": 0.281,
+    "b": 0.277,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -103735,9 +103769,9 @@ window.ROADMAP = {
     "−"
    ],
    "p": [
-    4.05,
-    14.96,
-    -3.2
+    0.12,
+    15.2,
+    -4.4
    ]
   },
   {
@@ -104948,12 +104982,12 @@ window.ROADMAP = {
    ],
    "measure": true,
    "p": [
-    2.47,
-    13.25,
-    -3.93
+    -2.0,
+    13.63,
+    -2.71
    ],
    "comb": {
-    "b": 0.186,
+    "b": 0.189,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -105956,12 +105990,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.57,
-    13.95,
-    -1.44
+    -0.44,
+    13.93,
+    1.7
    ],
    "comb": {
-    "b": 0.27,
+    "b": 0.272,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -106914,9 +106948,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.99,
-    6.36,
-    -2.47
+    -5.98,
+    5.84,
+    -1.25
    ]
   },
   {
@@ -107859,12 +107893,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.24,
-    8.5,
-    -2.74
+    -6.39,
+    7.87,
+    -2.09
    ],
    "comb": {
-    "b": 0.249,
+    "b": 0.251,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -108870,12 +108904,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.72,
-    12.67,
-    5.79
+    4.91,
+    11.1,
+    7.05
    ],
    "comb": {
-    "b": 0.253,
+    "b": 0.255,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -109973,9 +110007,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.09,
-    6.83,
-    4.85
+    3.86,
+    5.29,
+    5.35
    ]
   },
   {
@@ -111312,9 +111346,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.55,
-    9.88,
-    2.71
+    3.76,
+    9.04,
+    3.39
    ],
    "comb": {
     "b": 0.425,
@@ -112565,9 +112599,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.92,
-    6.44,
-    -5.4
+    -3.81,
+    7.31,
+    1.87
    ]
   },
   {
@@ -113802,9 +113836,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.2,
-    7.15,
-    -4.51
+    -2.77,
+    7.97,
+    0.46
    ]
   },
   {
@@ -114903,12 +114937,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.91,
-    13.88,
-    0.86
+    -0.91,
+    14.01,
+    -0.27
    ],
    "comb": {
-    "b": 0.286,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -115754,12 +115788,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.08,
-    14.57,
-    -4.63
+    -2.31,
+    14.73,
+    -5.31
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -116772,12 +116806,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.15,
-    13.65,
-    8.02
+    3.61,
+    12.66,
+    8.79
    ],
    "comb": {
-    "b": 0.363,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -116800,29 +116834,1036 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "どうぶつの えが ならんで います。しゅるいごとに かずを しらべて、ひょうに しよう。",
+       "figure": "🐶🐱🐶🐰🐱🐶🐶🐰🐱",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"16.5\" y1=\"32\" x2=\"223.5\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"84.5\" y1=\"6\" x2=\"84.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"126.5\" y1=\"6\" x2=\"126.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"168.5\" y1=\"6\" x2=\"168.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"50.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">どうぶつ</text>\n  <text x=\"105.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いぬ</text>\n  <text x=\"147.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"196\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">うさぎ</text>\n  <text x=\"50.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"105.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"147.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"196\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n</svg>\n",
+       "explain": "いぬだけを ゆびで さしながら かぞえると 4 ひきです。かぞえた えに しるしを つけて おくと、2 かい かぞえません。おなじように ねこは 3 びき、うさぎは 2 ひきです。しらべた かずを ひょうに かくと、どれが いくつ あるかが すぐに わかります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "📦 は あめが 10 こ はいった はこ、🍬 は ばらの あめ です。あめは ぜんぶで なんこ ありますか。",
+       "figure": "📦📦📦🍬🍬🍬🍬🍬",
+       "answer": 35,
+       "check": "n('📦') * 10 + n('🍬')",
+       "hints": [
+        "はこは いくつ あるかな。",
+        "はこを 10、20、… と かぞえよう。",
+        "つづけて、ばらの あめを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "はこが 3 つで 30",
+         "ばらが 5 こ",
+         "35 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "8 + 6 は いくつですか。",
+       "answer": 14,
+       "check": "8 + 6",
+       "hints": [
+        "8 は、あと いくつで 10 に なるかな。",
+        "6 を 2 と 4 に わけよう。",
+        "10 と 4 で いくつかな。"
+       ],
+       "paths": [
+        [
+         "8 に 2 を たして 10",
+         "のこりの 4 を たす",
+         14
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くだものが ならんで います。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "🍎🍊🍇🍊🍎🍊🍇🍊🍎🍊",
+       "svg": "<svg viewBox=\"0 0 243 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"233\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"233\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"238\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"73\" y1=\"6\" x2=\"73\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"128\" y1=\"6\" x2=\"128\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"183\" y1=\"6\" x2=\"183\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"39\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">くだもの</text>\n  <text x=\"100.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">りんご</text>\n  <text x=\"155.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">みかん</text>\n  <text x=\"210.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ぶどう</text>\n  <text x=\"39\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"100.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"155.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"210.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n</svg>\n",
+       "answer": 5,
+       "check": "n('🍊')",
+       "hints": [
+        "□ は、どの くだものの ところかな。",
+        "みかんだけを ゆびで さそう。",
+        "かぞえた みかんに しるしを つけよう。"
+       ],
+       "paths": [
+        [
+         "□ は みかんの ところ",
+         "みかんだけを かぞえる",
+         "5 こ"
+        ]
+       ],
+       "note": "りんごやぶどうもいっしょに数えやすい。表のどの欄をたずねているかを先に確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "すきな どうぶつを えグラフに しました。いちばん おおいのは どれですか。",
+       "figure": "🐶🐶🐶🐶🐶\n🐱🐱🐱🐱🐱🐱🐱\n🐰🐰🐰🐰",
+       "choices": [
+        "いぬ",
+        "ねこ",
+        "うさぎ"
+       ],
+       "answer": "ねこ",
+       "check": "(lambda c: ['いぬ', 'ねこ', 'うさぎ'][c.index(max(c))])([n('🐶'), n('🐱'), n('🐰')])",
+       "hints": [
+        "えが いちばん ながく ならんで いるのは どれかな。",
+        "ひだりの はしが そろって いるか みよう。",
+        "かぞえて たしかめよう。"
+       ],
+       "paths": [
+        [
+         "ならびの ながさを くらべる",
+         "ねこが いちばん ながい",
+         "ねこ"
+        ],
+        [
+         "かぞえる（いぬ 5、ねこ 7、うさぎ 4）",
+         "いちばん おおいのは ねこ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "えグラフを みて こたえよう。りんごは みかんより なんこ おおいですか。",
+       "figure": "🍎🍎🍎🍎🍎🍎🍎🍎\n🍊🍊🍊🍊🍊",
+       "answer": 3,
+       "check": "n('🍎') - n('🍊')",
+       "hints": [
+        "りんごと みかんを うえと したで くらべよう。",
+        "みかんより みぎに でて いる りんごを みよう。",
+        "でて いる ぶんを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "うえと したで くらべる",
+         "みかんより でて いる りんごを かぞえる",
+         "3 こ"
+        ],
+        [
+         "りんご 8 こ、みかん 5 こ",
+         "8 − 5 = 3"
+        ]
+       ],
+       "note": "多いほうの数（8）を答えやすい。「なんこ おおい」はちがいをたずねていることを確かめる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "すきな あそびを しらべて ひょうに しました。ぜんぶで 17 にん です。ボールが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 282 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"272\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"272\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"277\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"73\" y1=\"6\" x2=\"73\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"154\" y1=\"6\" x2=\"154\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"222\" y1=\"6\" x2=\"222\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"39\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あそび</text>\n  <text x=\"113.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">おにごっこ</text>\n  <text x=\"188\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">なわとび</text>\n  <text x=\"249.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ボール</text>\n  <text x=\"39\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">にんずう</text>\n  <text x=\"113.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"188\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"249.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n</svg>\n",
+       "answer": 7,
+       "check": "17 - 6 - 4",
+       "hints": [
+        "おにごっこと なわとびを あわせると なんにんかな。",
+        "ぜんぶで 17 にん だね。",
+        "17 から、あわせた かずを ひこう。"
+       ],
+       "paths": [
+        [
+         "おにごっこと なわとびで 6 + 4 = 10",
+         "17 − 10 = 7",
+         "7 にん"
+        ]
+       ],
+       "note": "6 と 4 で 10 をつくると、ひき算がかんたんになる（N-005 の 10 をつくる考え）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "はなが さいて います。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "🌷🌻🌷🌷🌹🌻🌷🌹🌷",
+       "svg": "<svg viewBox=\"0 0 256 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"246\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"246\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"251\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"47\" y1=\"6\" x2=\"47\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"141\" y1=\"6\" x2=\"141\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"209\" y1=\"6\" x2=\"209\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"26\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">はな</text>\n  <text x=\"94\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">チューリップ</text>\n  <text x=\"175\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ひまわり</text>\n  <text x=\"230\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ばら</text>\n  <text x=\"26\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"94\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"175\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"230\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n</svg>\n",
+       "answer": 5,
+       "check": "n('🌷')",
+       "hints": [
+        "□ は、どの はなの ところかな。",
+        "チューリップだけを ゆびで さそう。",
+        "かぞえた はなに しるしを つけよう。"
+       ],
+       "paths": [
+        [
+         "□ は チューリップ",
+         "チューリップだけを かぞえる",
+         "5 ほん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "のりものの かずを えグラフに しました。いちばん すくないのは どれですか。",
+       "figure": "🚗🚗🚗🚗🚗🚗\n🚌🚌🚌\n🚲🚲🚲🚲🚲",
+       "choices": [
+        "くるま",
+        "バス",
+        "じてんしゃ"
+       ],
+       "answer": "バス",
+       "check": "(lambda c: ['くるま', 'バス', 'じてんしゃ'][c.index(min(c))])([n('🚗'), n('🚌'), n('🚲')])",
+       "hints": [
+        "えが いちばん みじかく ならんで いるのは どれかな。",
+        "ひだりの はしが そろって いるか みよう。",
+        "かぞえて たしかめよう。"
+       ],
+       "paths": [
+        [
+         "ならびの ながさを くらべる",
+         "バスが いちばん みじかい",
+         "バス"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "えグラフを みて こたえよう。さかなは かめより なんびき おおいですか。",
+       "figure": "🐟🐟🐟🐟🐟🐟🐟🐟🐟\n🐢🐢🐢🐢",
+       "answer": 5,
+       "check": "n('🐟') - n('🐢')",
+       "hints": [
+        "さかなと かめを うえと したで くらべよう。",
+        "かめより みぎに でて いる さかなを みよう。",
+        "でて いる ぶんを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "かめより でて いる さかなを かぞえる",
+         "5 ひき"
+        ],
+        [
+         "さかな 9、かめ 4",
+         "9 − 4 = 5"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "すきな くだものを ぼうグラフに しました。ぶどうが すきな ひとは なんにん かな。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"127.5\" x2=\"220\" y2=\"127.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"113\" x2=\"220\" y2=\"113\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"98.5\" x2=\"220\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"220\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"69.5\" x2=\"220\" y2=\"69.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"55\" x2=\"220\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.5\" x2=\"220\" y2=\"40.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"220\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"131.5\" font-size=\"12\" text-anchor=\"end\">1</text>\n  <text x=\"34\" y=\"117\" font-size=\"12\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"102.5\" font-size=\"12\" text-anchor=\"end\">3</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"73.5\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"59\" font-size=\"12\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"44.5\" font-size=\"12\" text-anchor=\"end\">7</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">8</text>\n  <rect x=\"52\" y=\"69.5\" width=\"24\" height=\"72.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">りんご</text>\n  <rect x=\"96\" y=\"40.5\" width=\"24\" height=\"101.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">みかん</text>\n  <rect x=\"140\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ぶどう</text>\n  <rect x=\"184\" y=\"113\" width=\"24\" height=\"29\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"196\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">もも</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "explain": "さきに めもりを みます。1 めもりは 1 にん です。ぶどうの ぼうの いちばん うえは 4 の めもりに あるので、4 にん です。ぼうグラフは ぼうの たかさで かずを あらわすので、どれが おおいかが ひとめで わかります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "おかしが ならんで います。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "🍩🍪🍪🍩🍪🍰🍪🍩",
+       "svg": "<svg viewBox=\"0 0 256 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"246\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"246\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"251\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"60\" y1=\"6\" x2=\"60\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"128\" y1=\"6\" x2=\"128\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"196\" y1=\"6\" x2=\"196\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"32.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">おかし</text>\n  <text x=\"94\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ドーナツ</text>\n  <text x=\"162\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">クッキー</text>\n  <text x=\"223.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ケーキ</text>\n  <text x=\"32.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"94\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"162\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"223.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1</text>\n</svg>\n",
+       "answer": 4,
+       "check": "n('🍪')",
+       "hints": [
+        "□ は、どの おかしの ところかな。",
+        "クッキーだけを ゆびで さそう。",
+        "かぞえた クッキーに しるしを つけよう。"
+       ],
+       "paths": [
+        [
+         "□ は クッキー",
+         "クッキーだけを かぞえる",
+         "4 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "えグラフを みて こたえよう。てんとうむしは とりより いくつ おおいですか。",
+       "figure": "🐦🐦🐦🐦🐦🐦\n🐞🐞🐞🐞🐞🐞🐞🐞🐞🐞",
+       "answer": 4,
+       "check": "n('🐞') - n('🐦')",
+       "hints": [
+        "うえと したで くらべよう。",
+        "とりより みぎに でて いる てんとうむしを みよう。",
+        "でて いる ぶんを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "とりより でて いる てんとうむしを かぞえる",
+         4
+        ],
+        [
+         "てんとうむし 10、とり 6",
+         "10 − 6 = 4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな どうぶつを ぼうグラフに しました。ねこが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"220\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"220\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"220\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"220\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"220\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"220\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"220\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"220\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"220\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"220\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"52\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">いぬ</text>\n  <rect x=\"96\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ねこ</text>\n  <rect x=\"140\" y=\"95.6\" width=\"24\" height=\"46.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">うさぎ</text>\n  <rect x=\"184\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"196\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">とり</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 9,
+       "check": "[6, 9, 4, 3][1]",
+       "hints": [
+        "1 めもりは いくつかな。0 から 5 までに めもりは いくつ あるかな。",
+        "ねこの ぼうの いちばん うえを、よこに たどろう。",
+        "5 の せんから うえに めもりを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 1 にん",
+         "ねこの ぼうは 5 の せんから 4 めもり うえ",
+         "6、7、8、9 で 9 にん"
+        ]
+       ],
+       "note": "数が書いてあるめもりは 5 ごと。5 の線から 6、7、8、9 と数えているかを見る。"
+      },
+      {
+       "part": "今日",
+       "text": "すきな いろを ぼうグラフに しました。あおが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"220\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"220\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"220\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"220\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"220\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"220\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"220\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"220\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"220\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"220\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <rect x=\"52\" y=\"95.6\" width=\"24\" height=\"46.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">あか</text>\n  <rect x=\"96\" y=\"60.8\" width=\"24\" height=\"81.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">あお</text>\n  <rect x=\"140\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">きいろ</text>\n  <rect x=\"184\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"196\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">みどり</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 14,
+       "check": "[8, 14, 6, 10][1]",
+       "hints": [
+        "0 から 10 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "あおの ぼうは、10 の せんから なん めもり うえかな。",
+        "10 から 2 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "0 から 10 まで 5 めもり なので 1 めもりは 2 にん",
+         "あおは 10 の せんから 2 めもり うえ",
+         "12、14 で 14 にん"
+        ]
+       ],
+       "note": "1 めもりを 1 と読んで 12 と答えやすい。先に 1 めもりの大きさを決めさせる。"
+      },
+      {
+       "part": "今日",
+       "text": "1くみと 2くみで、いぬと ねこの どちらが すきかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"19.1\" y=\"6\" width=\"201.8\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"19.1\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"19.1\" y=\"6\" width=\"201.8\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"19.1\" y1=\"32\" x2=\"220.9\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"19.1\" y1=\"58\" x2=\"220.9\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68.9\" y1=\"6\" x2=\"68.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"110.9\" y1=\"6\" x2=\"110.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"152.9\" y1=\"6\" x2=\"152.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"89.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いぬ</text>\n  <text x=\"131.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"186.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"44\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"89.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"131.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"186.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">12</text>\n  <text x=\"44\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"89.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"131.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"186.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">14</text>\n</svg>\n",
+       "answer": 8,
+       "check": "14 - 6",
+       "hints": [
+        "□ は、どの くみの、どの どうぶつの ところかな。",
+        "2くみは あわせて なんにん かな。",
+        "14 は、6 と いくつかな。"
+       ],
+       "paths": [
+        [
+         "□ は 2くみの ねこ",
+         "2くみは あわせて 14 にん",
+         "14 − 6 = 8"
+        ]
+       ],
+       "note": "となりの 1 くみのねこ（5）を見てしまいやすい。横の行とたての列が交わるところを指でたどらせる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "くみごとに あつめた どんぐりの かずを ぼうグラフに しました。いちばん おおい くみと、いちばん すくない くみの ちがいは なんこ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"127.5\" x2=\"204\" y2=\"127.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"113\" x2=\"204\" y2=\"113\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"98.5\" x2=\"204\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"204\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"69.5\" x2=\"204\" y2=\"69.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"55\" x2=\"204\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.5\" x2=\"204\" y2=\"40.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"204\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"117\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <text x=\"34\" y=\"59\" font-size=\"12\" text-anchor=\"end\">30</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">40</text>\n  <rect x=\"50\" y=\"69.5\" width=\"24\" height=\"72.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">1くみ</text>\n  <rect x=\"90\" y=\"26\" width=\"24\" height=\"116\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">2くみ</text>\n  <rect x=\"130\" y=\"98.5\" width=\"24\" height=\"43.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">3くみ</text>\n  <rect x=\"170\" y=\"55\" width=\"24\" height=\"87\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">4くみ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"204\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（こ）</text>\n</svg>\n",
+       "answer": 25,
+       "check": "max([25, 40, 15, 30]) - min([25, 40, 15, 30])",
+       "hints": [
+        "1 めもりは いくつかな。0 から 10 までの めもりを みよう。",
+        "いちばん たかい ぼうと、いちばん ひくい ぼうの ちがいは なん めもりかな。",
+        "その めもりを 5 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 5 こ",
+         "いちばん おおいのは 2くみ、すくないのは 3くみ",
+         "ちがいは 5 めもり",
+         "5、10、15、20、25 で 25 こ"
+        ]
+       ],
+       "note": "ひき算 40 − 15 は N-007 の計算なので、めもりのちがいを 5 ずつ数える道で出せればよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "すきな きせつを ぼうグラフに しました。なつが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"204\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"204\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"204\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"204\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"204\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"204\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"204\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"204\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"204\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"204\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"50\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">はる</text>\n  <rect x=\"90\" y=\"60.8\" width=\"24\" height=\"81.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">なつ</text>\n  <rect x=\"130\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">あき</text>\n  <rect x=\"170\" y=\"49.2\" width=\"24\" height=\"92.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ふゆ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"204\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 7,
+       "check": "[3, 7, 5, 8][1]",
+       "hints": [
+        "1 めもりは いくつかな。",
+        "なつの ぼうの いちばん うえを、よこに たどろう。",
+        "5 の せんから うえに めもりを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 1 にん",
+         "なつは 5 の せんから 2 めもり うえ",
+         "7 にん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな くだものを ぼうグラフに しました。バナナが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"220\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"220\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"220\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"220\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"220\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"220\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"220\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"220\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"220\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"220\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <rect x=\"52\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">いちご</text>\n  <rect x=\"96\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">メロン</text>\n  <rect x=\"140\" y=\"49.2\" width=\"24\" height=\"92.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">バナナ</text>\n  <rect x=\"184\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"196\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ぶどう</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 16,
+       "check": "[12, 6, 16, 10][2]",
+       "hints": [
+        "0 から 10 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "バナナの ぼうは、10 の せんから なん めもり うえかな。",
+        "10 から 2 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 2 にん",
+         "10 の せんから 3 めもり うえ",
+         "12、14、16 で 16 にん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1くみと 2くみで、いぬと ねこの どちらが すきかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"19.1\" y=\"6\" width=\"201.8\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"19.1\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"19.1\" y=\"6\" width=\"201.8\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"19.1\" y1=\"32\" x2=\"220.9\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"19.1\" y1=\"58\" x2=\"220.9\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68.9\" y1=\"6\" x2=\"68.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"110.9\" y1=\"6\" x2=\"110.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"152.9\" y1=\"6\" x2=\"152.9\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"89.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いぬ</text>\n  <text x=\"131.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"186.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"44\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"89.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"131.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"186.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">15</text>\n  <text x=\"44\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"89.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"131.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"186.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">15</text>\n</svg>\n",
+       "answer": 9,
+       "check": "15 - 6",
+       "hints": [
+        "□ は、どの くみの、どの どうぶつの ところかな。",
+        "1くみは あわせて なんにん かな。",
+        "15 は、6 と いくつかな。"
+       ],
+       "paths": [
+        [
+         "□ は 1くみの いぬ",
+         "1くみは あわせて 15 にん",
+         "15 − 6 = 9"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "すきな のりものを ぼうグラフに しました。ふねが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 276 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"125.429\" x2=\"268\" y2=\"125.429\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"108.857\" x2=\"268\" y2=\"108.857\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"92.2857\" x2=\"268\" y2=\"92.2857\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"75.7143\" x2=\"268\" y2=\"75.7143\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"59.1429\" x2=\"268\" y2=\"59.1429\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"42.5714\" x2=\"268\" y2=\"42.5714\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"268\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"63.1429\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"58\" y=\"59.1429\" width=\"24\" height=\"82.8571\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">でんしゃ</text>\n  <rect x=\"114\" y=\"108.857\" width=\"24\" height=\"33.1429\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"126\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">バス</text>\n  <rect x=\"170\" y=\"42.5714\" width=\"24\" height=\"99.4286\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ふね</text>\n  <rect x=\"226\" y=\"75.7143\" width=\"24\" height=\"66.2857\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"238\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ひこうき</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"268\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 12,
+       "check": "[10, 4, 12, 8][2]",
+       "hints": [
+        "0 から 10 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "ふねの ぼうは、10 の せんから なん めもり うえかな。",
+        "10 から 2 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 2 にん",
+         "ふねは 10 の せんから 1 めもり うえ",
+         "12 にん"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1くみと 2くみで、いぬが すきかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 250.8 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"240.8\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"240.8\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"245.8\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"5\" y1=\"58\" x2=\"245.8\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"54.8\" y1=\"6\" x2=\"54.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"96.8\" y1=\"6\" x2=\"96.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"177.8\" y1=\"6\" x2=\"177.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"75.8\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">すき</text>\n  <text x=\"137.3\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">すきでない</text>\n  <text x=\"211.8\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"29.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"75.8\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"137.3\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"211.8\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">13</text>\n  <text x=\"29.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"75.8\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"137.3\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"211.8\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">16</text>\n</svg>\n",
+       "answer": 11,
+       "check": "16 - 5",
+       "hints": [
+        "□ は、どの くみの どの らんかな。",
+        "2くみは あわせて なんにん かな。",
+        "16 は、5 と いくつかな。"
+       ],
+       "paths": [
+        [
+         "□ は 2くみの すき",
+         "2くみは あわせて 16 にん",
+         "16 − 5 = 11"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "ぼうグラフを みると、すきな ひとが いちばん おおい スポーツが すぐに わかります。どうしてか、くちで いって みよう。",
+       "svg": "<svg viewBox=\"0 0 276 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"268\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"268\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"268\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"268\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"268\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"268\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"268\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"268\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"268\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"268\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"58\" y=\"60.8\" width=\"24\" height=\"81.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">サッカー</text>\n  <rect x=\"114\" y=\"95.6\" width=\"24\" height=\"46.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"126\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">やきゅう</text>\n  <rect x=\"170\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">テニス</text>\n  <rect x=\"226\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"238\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">すいえい</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"268\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "explain": "「ぼうの たかさが にんずうを あらわして いるから、いちばん たかい ぼうを さがせば よい」や「ぼうの はしが そろって いるから、ながさを くらべるだけで わかる」と言えればよい。めもりの数を一つずつ読まなくても、長さで比べられることに気づかせる。",
+       "hints": [
+        "ぼうの たかさは、なにを あらわして いるかな。",
+        "いちばん たかい ぼうは どれかな。",
+        "「〜だから」を つかって いって みよう。"
+       ],
+       "paths": [
+        [
+         "ぼうの たかさが にんずう",
+         "いちばん たかい ぼうが いちばん おおい",
+         "だから すぐ わかる"
+        ],
+        [
+         "ぼうの はしが そろって いる",
+         "ながさを くらべるだけ",
+         "だから すぐ わかる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 めもりが 2 にんの ぼうグラフです。いちごの ぼうは 4 めもり ですが、4 にん では なく 8 にん です。どうしてか、くちで いって みよう。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"122.667\" x2=\"176\" y2=\"122.667\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"103.333\" x2=\"176\" y2=\"103.333\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"176\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"64.6667\" x2=\"176\" y2=\"64.6667\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"45.3333\" x2=\"176\" y2=\"45.3333\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"176\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"49.3333\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"52\" y=\"64.6667\" width=\"24\" height=\"77.3333\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">いちご</text>\n  <rect x=\"96\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">メロン</text>\n  <rect x=\"140\" y=\"45.3333\" width=\"24\" height=\"96.6667\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">もも</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"176\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "explain": "「1 めもりが 2 にんだから、2、4、6、8 と 2 ずつ かぞえるから 8 にん」や「10 の めもりより 1 めもり したで、1 めもりは 2 にんだから 8 にん」と言えればよい。めもりの数（4）と人数（8）を分けて言えているかを聞く。",
+       "hints": [
+        "1 めもりは なんにん かな。",
+        "1 めもりずつ 2、4、… と かぞえて みよう。",
+        "「1 めもりが 2 にん だから」と いって みよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 2 にん",
+         "2、4、6、8 と かぞえる",
+         "だから 8 にん"
+        ],
+        [
+         "10 の めもりより 1 めもり した",
+         "1 めもりは 2 にん",
+         "だから 8 にん"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "この えグラフでは、りんごの ほうが おおく みえますが、ほんとうは みかんの ほうが おおいです。えグラフで えの おおきさと はしを そろえるのは どうしてか、くちで いって みよう。",
+       "svg": "<svg viewBox=\"0 0 240 110\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"40\" y=\"38\" font-size=\"13\" text-anchor=\"end\">りんご</text>\n  <circle cx=\"62\" cy=\"33\" r=\"11\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"102\" cy=\"33\" r=\"11\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"142\" cy=\"33\" r=\"11\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"182\" cy=\"33\" r=\"11\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"40\" y=\"83\" font-size=\"13\" text-anchor=\"end\">みかん</text>\n  <circle cx=\"88\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"102\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"116\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"130\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"144\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"158\" cy=\"78\" r=\"5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n</svg>\n",
+       "explain": "「えグラフは ならべた ながさで くらべるから、えの おおきさが ちがうと、ながさと かずが あわなく なる」や「おなじ おおきさで はしを そろえれば、ながい ほうが おおいと いえるから」と言えればよい。数えると りんご 4、みかん 6 であることもいっしょに確かめる。",
+       "hints": [
+        "りんごと みかんは、それぞれ いくつ あるかな。",
+        "えの おおきさは おなじかな。はじまりの ばしょは おなじかな。",
+        "「ながさで くらべるから」と いって みよう。"
+       ],
+       "paths": [
+        [
+         "えグラフは ながさで くらべる",
+         "えの おおきさや はしが ちがうと ながさが かずと あわない",
+         "だから そろえる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな いろを ひょうに しました。2 ばんめに おおい いろは どれですか。",
+       "svg": "<svg viewBox=\"0 0 259 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"249\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"249\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"254\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"73\" y1=\"6\" x2=\"73\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"115\" y1=\"6\" x2=\"115\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"157\" y1=\"6\" x2=\"157\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"212\" y1=\"6\" x2=\"212\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"39\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いろ</text>\n  <text x=\"94\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あか</text>\n  <text x=\"136\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あお</text>\n  <text x=\"184.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">きいろ</text>\n  <text x=\"233\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">しろ</text>\n  <text x=\"39\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">にんずう</text>\n  <text x=\"94\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"136\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"184.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"233\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n</svg>\n",
+       "choices": [
+        "あか",
+        "あお",
+        "きいろ",
+        "しろ"
+       ],
+       "answer": "しろ",
+       "check": "(lambda d: sorted(d, key=lambda k: -d[k])[1])({'あか': 6, 'あお': 9, 'きいろ': 3, 'しろ': 7})",
+       "hints": [
+        "いちばん おおい いろは どれかな。",
+        "それの つぎに おおい いろを さがそう。",
+        "6 と 7 では、どちらが おおきいかな。"
+       ],
+       "paths": [
+        [
+         "いちばん おおいのは あお（9）",
+         "つぎは しろ（7）",
+         "しろ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみごとに よんだ ほんの かずを ぼうグラフに しました。4くみは なんさつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"204\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"204\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"204\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"204\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"204\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"204\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"204\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"204\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"204\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"204\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">50</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">100</text>\n  <rect x=\"50\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">1くみ</text>\n  <rect x=\"90\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">2くみ</text>\n  <rect x=\"130\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">3くみ</text>\n  <rect x=\"170\" y=\"49.2\" width=\"24\" height=\"92.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">4くみ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"204\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（さつ）</text>\n</svg>\n",
+       "answer": 80,
+       "check": "[30, 60, 50, 80][3]",
+       "hints": [
+        "0 から 50 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "4くみの ぼうは、50 の せんから なん めもり うえかな。",
+        "50 から 10 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 10 さつ",
+         "50 の せんから 3 めもり うえ",
+         "60、70、80 で 80 さつ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "くみごとに あつめた かんの かずを ぼうグラフに しました。2くみは なんこ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"127.5\" x2=\"164\" y2=\"127.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"113\" x2=\"164\" y2=\"113\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"98.5\" x2=\"164\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"164\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"69.5\" x2=\"164\" y2=\"69.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"55\" x2=\"164\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.5\" x2=\"164\" y2=\"40.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"164\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"117\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <text x=\"34\" y=\"59\" font-size=\"12\" text-anchor=\"end\">30</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">40</text>\n  <rect x=\"50\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">1くみ</text>\n  <rect x=\"90\" y=\"40.5\" width=\"24\" height=\"101.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">2くみ</text>\n  <rect x=\"130\" y=\"98.5\" width=\"24\" height=\"43.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">3くみ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"164\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（こ）</text>\n</svg>\n",
+       "answer": 35,
+       "check": "[20, 35, 15][1]",
+       "hints": [
+        "0 から 10 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "2くみの ぼうは、30 の せんから なん めもり うえかな。",
+        "30 から 5 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 5 こ",
+         "30 の せんから 1 めもり うえ",
+         "35 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな おやつを ひょうに しました。いちばん すくない ものは どれですか。",
+       "svg": "<svg viewBox=\"0 0 298 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"288\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"288\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"293\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"73\" y1=\"6\" x2=\"73\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"141\" y1=\"6\" x2=\"141\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"196\" y1=\"6\" x2=\"196\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"251\" y1=\"6\" x2=\"251\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"39\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">おやつ</text>\n  <text x=\"107\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">せんべい</text>\n  <text x=\"168.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ゼリー</text>\n  <text x=\"223.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">プリン</text>\n  <text x=\"272\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">グミ</text>\n  <text x=\"39\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">にんずう</text>\n  <text x=\"107\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"168.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"223.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">11</text>\n  <text x=\"272\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n</svg>\n",
+       "choices": [
+        "せんべい",
+        "ゼリー",
+        "プリン",
+        "グミ"
+       ],
+       "answer": "ゼリー",
+       "check": "(lambda d: sorted(d, key=lambda k: d[k])[0])({'せんべい': 8, 'ゼリー': 5, 'プリン': 11, 'グミ': 6})",
+       "hints": [
+        "ひょうの かずを ひとつずつ みよう。",
+        "いちばん ちいさい かずは どれかな。",
+        "5 と 6 では、どちらが ちいさいかな。"
+       ],
+       "paths": [
+        [
+         "かずを くらべる",
+         "いちばん ちいさいのは 5",
+         "ゼリー"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "えグラフを みて こたえよう。ねこは いぬより なんびき すくないですか。",
+       "figure": "🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶🐶\n🐱🐱🐱🐱🐱🐱🐱🐱",
+       "answer": 3,
+       "check": "n('🐶') - n('🐱')",
+       "hints": [
+        "いぬと ねこを うえと したで くらべよう。",
+        "ねこより みぎに でて いる いぬを みよう。",
+        "でて いる ぶんが、ねこの すくない ぶんだよ。"
+       ],
+       "paths": [
+        [
+         "ねこより でて いる いぬを かぞえる",
+         "3 びき すくない"
+        ],
+        [
+         "いぬ 11、ねこ 8",
+         "11 − 8 = 3"
+        ]
+       ],
+       "note": "「すくない」でも、ちがいは同じように出る。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "とおった くるまの かずを ぼうグラフに しました。ひるは なんだい ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"127.5\" x2=\"212\" y2=\"127.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"113\" x2=\"212\" y2=\"113\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"98.5\" x2=\"212\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"212\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"69.5\" x2=\"212\" y2=\"69.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"55\" x2=\"212\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.5\" x2=\"212\" y2=\"40.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"212\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"73.5\" font-size=\"12\" text-anchor=\"end\">50</text>\n  <rect x=\"58\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">あさ</text>\n  <rect x=\"114\" y=\"40.5\" width=\"24\" height=\"101.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"126\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ひる</text>\n  <rect x=\"170\" y=\"113\" width=\"24\" height=\"29\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ゆうがた</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"212\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（だい）</text>\n</svg>\n",
+       "answer": 70,
+       "check": "[40, 70, 20][1]",
+       "hints": [
+        "0 から 50 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "ひるの ぼうは、50 の せんから なん めもり うえかな。",
+        "50 から 10 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 10 だい",
+         "50 の せんから 2 めもり うえ",
+         "70 だい"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "えグラフを みて こたえよう。🍓 は 🍒 より いくつ おおいですか。",
+       "figure": "🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓🍓\n🍒🍒🍒🍒🍒🍒🍒🍒🍒",
+       "answer": 3,
+       "check": "n('🍓') - n('🍒')",
+       "hints": [
+        "うえと したで くらべよう。",
+        "🍒 より みぎに でて いる 🍓 を みよう。",
+        "でて いる ぶんを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "🍒 より でて いる 🍓 を かぞえる",
+         3
+        ],
+        [
+         "🍓 12、🍒 9",
+         "12 − 9 = 3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "あめを あじごとに しらべます。📦 は 10 こ いりの はこ、🍬 は ばらの あめ です。いちご あじの あめは この とおりです。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "📦📦🍬🍬🍬🍬",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"16.5\" y1=\"32\" x2=\"223.5\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"58.5\" y1=\"6\" x2=\"58.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"113.5\" y1=\"6\" x2=\"113.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"168.5\" y1=\"6\" x2=\"168.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"37.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あじ</text>\n  <text x=\"86\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いちご</text>\n  <text x=\"141\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">メロン</text>\n  <text x=\"196\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ぶどう</text>\n  <text x=\"37.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"86\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"141\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">31</text>\n  <text x=\"196\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">18</text>\n</svg>\n",
+       "answer": 24,
+       "check": "n('📦') * 10 + n('🍬')",
+       "hints": [
+        "□ は、どの あじの ところかな。",
+        "はこは 10、20、… と かぞえよう。",
+        "つづけて ばらを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "はこが 2 つで 20",
+         "ばらが 4 こ",
+         "24 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな どうぶつを ぼうグラフに しました。いぬと ねこを あわせると なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"125.429\" x2=\"220\" y2=\"125.429\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"108.857\" x2=\"220\" y2=\"108.857\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"92.2857\" x2=\"220\" y2=\"92.2857\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"75.7143\" x2=\"220\" y2=\"75.7143\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"59.1429\" x2=\"220\" y2=\"59.1429\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"42.5714\" x2=\"220\" y2=\"42.5714\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"220\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"63.1429\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"52\" y=\"75.7143\" width=\"24\" height=\"66.2857\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">いぬ</text>\n  <rect x=\"96\" y=\"92.2857\" width=\"24\" height=\"49.7143\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ねこ</text>\n  <rect x=\"140\" y=\"42.5714\" width=\"24\" height=\"99.4286\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">うさぎ</text>\n  <rect x=\"184\" y=\"108.857\" width=\"24\" height=\"33.1429\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"196\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">とり</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"220\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 14,
+       "check": "8 + 6",
+       "hints": [
+        "1 めもりは いくつかな。",
+        "いぬと ねこは、それぞれ なんにん かな。",
+        "8 に 6 を たすと、10 を こえるね。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 2 にん",
+         "いぬ 8 にん、ねこ 6 にん",
+         "8 + 6 = 14"
+        ]
+       ],
+       "note": "2 本の棒の人数をそれぞれ読んでからたす。めもりの数（4 と 3）をたして 7 としていないかを見る。"
+      },
+      {
+       "part": "今日",
+       "text": "1くみと 2くみで、なつやすみに プールへ いったかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 250.8 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"240.8\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"240.8\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"245.8\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"5\" y1=\"58\" x2=\"245.8\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"54.8\" y1=\"6\" x2=\"54.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"109.8\" y1=\"6\" x2=\"109.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"177.8\" y1=\"6\" x2=\"177.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.3\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いった</text>\n  <text x=\"143.8\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いかない</text>\n  <text x=\"211.8\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"29.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"82.3\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"143.8\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"211.8\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"29.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"82.3\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"143.8\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"211.8\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">15</text>\n</svg>\n",
+       "answer": 14,
+       "check": "9 + 5",
+       "hints": [
+        "□ は、どの くみの どの らんかな。",
+        "「あわせて」は、よこに ならんだ 2 つを たした かずだよ。",
+        "9 に 5 を たそう。"
+       ],
+       "paths": [
+        [
+         "□ は 1くみの あわせて",
+         "9 + 5 = 14"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 めもりが 1 にんの ぼうグラフで、ねこの ぼうは 14 めもり ありました。1 めもりが 2 にんの グラフに かきなおすと、ねこの ぼうは なん めもりに なりますか。",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "ねこが すきな ひとは なんにん かな。",
+        "1 めもりが 2 にんなら、2、4、6、… と かぞえるね。",
+        "14 まで かぞえるのに、なん めもり いるかな。"
+       ],
+       "paths": [
+        [
+         "ねこは 14 にん",
+         "2、4、6、8、10、12、14 と かぞえる",
+         "7 めもり"
+        ]
+       ],
+       "note": "わり算（N-014）は前提にないので、2 ずつ数えて 14 になるまでの回数で出せればよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1くみの ぼうグラフは 1 めもりが 1 にん、2くみの ぼうグラフは 1 めもりが 2 にん です。いぬの ぼうは、どちらも 6 めもり でした。いぬが すきな ひとが おおいのは どちらの くみ ですか。",
+       "choices": [
+        "1くみ",
+        "2くみ",
+        "おなじ"
+       ],
+       "answer": "2くみ",
+       "check": "'1くみ' if 6 * 1 > 6 * 2 else '2くみ' if 6 * 2 > 6 * 1 else 'おなじ'",
+       "hints": [
+        "1くみの いぬは なんにん かな。",
+        "2くみは 1 めもりが 2 にん。2、4、… と 6 めもり かぞえよう。",
+        "ぼうの たかさが おなじでも、にんずうは おなじかな。"
+       ],
+       "paths": [
+        [
+         "1くみは 6 にん",
+         "2くみは 2、4、6、8、10、12 で 12 にん",
+         "2くみ"
+        ]
+       ],
+       "note": "棒の高さが同じなので「おなじ」と答えやすい。めもりの大きさがちがうグラフは、高さだけでは比べられない。"
+      },
+      {
+       "part": "今日",
+       "text": "すきな くだものを ぼうグラフに しました。もも と メロンを あわせると なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"176\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"176\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"176\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"176\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"176\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"176\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"176\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"176\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"176\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"176\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"52\" y=\"60.8\" width=\"24\" height=\"81.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"64\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">もも</text>\n  <rect x=\"96\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"108\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">メロン</text>\n  <rect x=\"140\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"152\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">みかん</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"176\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 12,
+       "check": "7 + 5",
+       "hints": [
+        "1 めもりは いくつかな。",
+        "ももと メロンは、それぞれ なんにん かな。",
+        "7 に 5 を たそう。"
+       ],
+       "paths": [
+        [
+         "もも 7 にん、メロン 5 にん",
+         "7 + 5 = 12"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "あめを あじごとに しらべます。📦 は 10 こ いりの はこ、🍬 は ばらの あめ です。メロン あじの あめは この とおりです。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "📦📦📦📦🍬🍬🍬🍬🍬🍬🍬",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"44\" y=\"6\" width=\"152\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"44\" y=\"6\" width=\"152\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"44\" y1=\"32\" x2=\"196\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"86\" y1=\"6\" x2=\"86\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"141\" y1=\"6\" x2=\"141\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"65\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あじ</text>\n  <text x=\"113.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いちご</text>\n  <text x=\"168.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">メロン</text>\n  <text x=\"65\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"113.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">26</text>\n  <text x=\"168.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n</svg>\n",
+       "answer": 47,
+       "check": "n('📦') * 10 + n('🍬')",
+       "hints": [
+        "□ は、どの あじの ところかな。",
+        "はこは 10、20、… と かぞえよう。",
+        "つづけて ばらを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "はこが 4 つで 40",
+         "ばらが 7 こ",
+         "47 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "どうぶつの えが ならんで います。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "🐸🐢🐸🐟🐸🐢🐟🐸🐸🐢",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"10\" y=\"6\" width=\"220\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"10\" y=\"6\" width=\"220\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"32\" x2=\"230\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"78\" y1=\"6\" x2=\"78\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"133\" y1=\"6\" x2=\"133\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"175\" y1=\"6\" x2=\"175\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"44\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">どうぶつ</text>\n  <text x=\"105.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">かえる</text>\n  <text x=\"154\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">かめ</text>\n  <text x=\"202.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">さかな</text>\n  <text x=\"44\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"105.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"154\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"202.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n</svg>\n",
+       "answer": 5,
+       "check": "n('🐸')",
+       "hints": [
+        "□ は、どの どうぶつの ところかな。",
+        "かえるだけを ゆびで さそう。",
+        "かぞえた かえるに しるしを つけよう。"
+       ],
+       "paths": [
+        [
+         "□ は かえる",
+         "かえるだけを かぞえる",
+         "5 ひき"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな のみものを えグラフに しました。いちばん おおいのは どれですか。",
+       "figure": "🥛🥛🥛🥛🥛🥛\n🍵🍵🍵🍵\n🧃🧃🧃🧃🧃🧃🧃🧃",
+       "choices": [
+        "ぎゅうにゅう",
+        "おちゃ",
+        "ジュース"
+       ],
+       "answer": "ジュース",
+       "check": "(lambda c: ['ぎゅうにゅう', 'おちゃ', 'ジュース'][c.index(max(c))])([n('🥛'), n('🍵'), n('🧃')])",
+       "hints": [
+        "えが いちばん ながく ならんで いるのは どれかな。",
+        "ひだりの はしが そろって いるか みよう。",
+        "かぞえて たしかめよう。"
+       ],
+       "paths": [
+        [
+         "ならびの ながさを くらべる",
+         "ジュースが いちばん ながい",
+         "ジュース"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "えグラフを みて こたえよう。ほしは つきより いくつ おおいですか。",
+       "figure": "⭐⭐⭐⭐⭐⭐⭐⭐⭐⭐\n🌙🌙🌙🌙🌙🌙",
+       "answer": 4,
+       "check": "n('⭐') - n('🌙')",
+       "hints": [
+        "うえと したで くらべよう。",
+        "つきより みぎに でて いる ほしを みよう。",
+        "でて いる ぶんを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "つきより でて いる ほしを かぞえる",
+         4
+        ],
+        [
+         "ほし 10、つき 6",
+         "10 − 6 = 4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな あそびを ぼうグラフに しました。なわとびが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 324 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"316\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"316\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"316\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"316\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"316\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"316\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"316\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"316\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"316\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"316\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"64\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"76\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">おにごっこ</text>\n  <rect x=\"132\" y=\"49.2\" width=\"24\" height=\"92.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"144\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">なわとび</text>\n  <rect x=\"200\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"212\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ボール</text>\n  <rect x=\"268\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"280\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">すなば</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"316\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 8,
+       "check": "[5, 8, 6, 3][1]",
+       "hints": [
+        "1 めもりは いくつかな。",
+        "なわとびの ぼうの いちばん うえを、よこに たどろう。",
+        "5 の せんから うえに めもりを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 1 にん",
+         "5 の せんから 3 めもり うえ",
+         "8 にん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみごとに ひろった ごみの かずを ぼうグラフに しました。3くみは なんこ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"204\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"204\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"204\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"204\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"204\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"204\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"204\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"204\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"204\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"204\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"122.8\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"99.6\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <text x=\"34\" y=\"76.4\" font-size=\"12\" text-anchor=\"end\">30</text>\n  <text x=\"34\" y=\"53.2\" font-size=\"12\" text-anchor=\"end\">40</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">50</text>\n  <rect x=\"50\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">1くみ</text>\n  <rect x=\"90\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">2くみ</text>\n  <rect x=\"130\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">3くみ</text>\n  <rect x=\"170\" y=\"84\" width=\"24\" height=\"58\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">4くみ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"204\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（こ）</text>\n</svg>\n",
+       "answer": 45,
+       "check": "[30, 15, 45, 25][2]",
+       "hints": [
+        "0 から 10 までに めもりは いくつ あるかな。1 めもりは いくつかな。",
+        "3くみの ぼうは、40 の せんから なん めもり うえかな。",
+        "40 から 5 ずつ かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 5 こ",
+         "40 の せんから 1 めもり うえ",
+         "45 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1くみと 2くみで、あさごはんに パンと ごはんの どちらを たべたかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"12.6\" y=\"6\" width=\"214.8\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"12.6\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"12.6\" y=\"6\" width=\"214.8\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"12.6\" y1=\"32\" x2=\"227.4\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"12.6\" y1=\"58\" x2=\"227.4\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"62.4\" y1=\"6\" x2=\"62.4\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"104.4\" y1=\"6\" x2=\"104.4\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"159.4\" y1=\"6\" x2=\"159.4\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"83.4\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">パン</text>\n  <text x=\"131.9\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ごはん</text>\n  <text x=\"193.4\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"37.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"83.4\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">11</text>\n  <text x=\"131.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"193.4\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">17</text>\n  <text x=\"37.5\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"83.4\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"131.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"193.4\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">16</text>\n</svg>\n",
+       "answer": 9,
+       "check": "16 - 7",
+       "hints": [
+        "□ は、どの くみの どの らんかな。",
+        "2くみは あわせて なんにん かな。",
+        "16 は、7 と いくつかな。"
+       ],
+       "paths": [
+        [
+         "□ は 2くみの パン",
+         "2くみは あわせて 16 にん",
+         "16 − 7 = 9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな くだものを しらべて ひょうに しました。ぜんぶで 19 にん です。ぶどうが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 243 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"233\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"233\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"238\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"73\" y1=\"6\" x2=\"73\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"128\" y1=\"6\" x2=\"128\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"183\" y1=\"6\" x2=\"183\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"39\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">くだもの</text>\n  <text x=\"100.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">いちご</text>\n  <text x=\"155.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">バナナ</text>\n  <text x=\"210.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">ぶどう</text>\n  <text x=\"39\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">にんずう</text>\n  <text x=\"100.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"155.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"210.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n</svg>\n",
+       "answer": 9,
+       "check": "19 - 7 - 3",
+       "hints": [
+        "いちごと バナナを あわせると なんにん かな。",
+        "ぜんぶで 19 にん だね。",
+        "19 から、あわせた かずを ひこう。"
+       ],
+       "paths": [
+        [
+         "いちごと バナナで 7 + 3 = 10",
+         "19 − 10 = 9",
+         "9 にん"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "くだものが ならんで います。ひょうの □ に はいる かずは いくつですか。",
+       "figure": "🍑🍋🍑🍑🍋🍑🍐🍑",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"16.5\" y=\"6\" width=\"207\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"16.5\" y1=\"32\" x2=\"223.5\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"84.5\" y1=\"6\" x2=\"84.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"126.5\" y1=\"6\" x2=\"126.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"181.5\" y1=\"6\" x2=\"181.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"50.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">くだもの</text>\n  <text x=\"105.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">もも</text>\n  <text x=\"154\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">レモン</text>\n  <text x=\"202.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">なし</text>\n  <text x=\"50.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">かず</text>\n  <text x=\"105.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"154\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"202.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1</text>\n</svg>\n",
+       "answer": 5,
+       "check": "n('🍑')",
+       "hints": [
+        "□ は、どの くだものの ところかな。",
+        "ももだけを ゆびで さそう。",
+        "かぞえた ももに しるしを つけよう。"
+       ],
+       "paths": [
+        [
+         "□ は もも",
+         "ももだけを かぞえる",
+         "5 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "すきな いろを ぼうグラフに しました。ピンクが すきな ひとは なんにん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"212\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"212\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"212\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"212\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"212\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"212\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"212\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"212\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"212\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"212\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">20</text>\n  <rect x=\"58\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"70\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">ピンク</text>\n  <rect x=\"114\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"126\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">みずいろ</text>\n  <rect x=\"170\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">くろ</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"212\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（にん）</text>\n</svg>\n",
+       "answer": 18,
+       "check": "[18, 12, 6][0]",
+       "hints": [
+        "1 めもりは いくつかな。",
+        "ピンクの ぼうは、20 の せんから なん めもり したかな。",
+        "20 から 2 ずつ もどって かぞえよう。"
+       ],
+       "paths": [
+        [
+         "1 めもりは 2 にん",
+         "20 の せんから 1 めもり した",
+         "18 にん"
+        ],
+        [
+         "10 の せんから 4 めもり うえ",
+         "12、14、16、18",
+         "18 にん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1くみと 2くみで、いぬを かって いるかを しらべました。ひょうの □ に はいる かずは いくつですか。",
+       "svg": "<svg viewBox=\"0 0 318.4 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"308.4\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"49.8\" height=\"78\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"308.4\" height=\"78\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"313.4\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"5\" y1=\"58\" x2=\"313.4\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"54.8\" y1=\"6\" x2=\"54.8\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"143.6\" y1=\"6\" x2=\"143.6\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"245.4\" y1=\"6\" x2=\"245.4\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"99.2\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">かって いる</text>\n  <text x=\"194.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">かって いない</text>\n  <text x=\"279.4\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">あわせて</text>\n  <text x=\"29.9\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1くみ</text>\n  <text x=\"99.2\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"194.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">□</text>\n  <text x=\"279.4\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">17</text>\n  <text x=\"29.9\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">2くみ</text>\n  <text x=\"99.2\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"194.5\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">12</text>\n  <text x=\"279.4\" y=\"75.68\" font-size=\"13\" text-anchor=\"middle\">18</text>\n</svg>\n",
+       "answer": 13,
+       "check": "17 - 4",
+       "hints": [
+        "□ は、どの くみの どの らんかな。",
+        "1くみは あわせて なんにん かな。",
+        "17 は、4 と いくつかな。"
+       ],
+       "paths": [
+        [
+         "□ は 1くみの かって いない",
+         "1くみは あわせて 17 にん",
+         "17 − 4 = 13"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
-    -11.12,
-    -4.13,
-    2.91
+    -10.74,
+    -5.63,
+    1.47
    ]
   },
   {
@@ -116854,9 +117895,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.26,
-    9.36,
-    -13.53
+    -3.76,
+    10.27,
+    -13.78
    ]
   },
   {
@@ -116890,9 +117931,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.52,
-    -1.12,
-    0.65
+    1.63,
+    -1.14,
+    -0.19
    ]
   },
   {
@@ -116934,12 +117975,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.86,
-    -5.85,
-    16.49
+    2.9,
+    -2.89,
+    17.11
    ],
    "comb": {
-    "b": 0.357,
+    "b": 0.351,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -116981,9 +118022,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.29,
-    -12.45,
-    14.8
+    -0.45,
+    -8.47,
+    17.38
    ]
   },
   {
@@ -117020,9 +118061,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.57,
-    -10.83,
-    16.01
+    1.05,
+    -7.63,
+    17.74
    ]
   },
   {
@@ -117059,9 +118100,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.25,
-    -5.29,
-    1.86
+    -4.0,
+    -3.54,
+    3.66
    ],
    "comb": {
     "b": 0.25,
@@ -117111,13 +118152,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.57,
-    6.03,
-    1.06
+    -9.85,
+    4.94,
+    5.27
    ],
    "comb": {
-    "b": 0.428,
-    "r": 1.3,
+    "b": 0.429,
+    "r": 1.33,
     "rg": [
      "kazu",
      "programming"
@@ -117157,9 +118198,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.2,
-    6.26,
-    2.46
+    -9.9,
+    5.87,
+    4.1
    ]
   },
   {
@@ -117191,9 +118232,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.27,
-    -0.07,
-    4.21
+    3.29,
+    -1.03,
+    2.74
    ]
   },
   {
@@ -117231,12 +118272,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.29,
-    3.53,
-    11.47
+    6.41,
+    3.85,
+    9.66
    ],
    "comb": {
-    "b": 0.376,
+    "b": 0.372,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -117275,9 +118316,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.38,
-    3.03,
-    8.88
+    7.65,
+    -6.15,
+    3.3
    ],
    "comb": {
     "b": 0.414,
@@ -117323,9 +118364,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.38,
-    -4.98,
-    6.82
+    0.31,
+    -3.5,
+    7.68
    ]
   },
   {
@@ -117357,9 +118398,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.22,
-    -3.22,
-    3.0
+    0.77,
+    -2.48,
+    3.55
    ]
   },
   {
@@ -117396,12 +118437,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.19,
-    4.04,
-    17.08
+    2.17,
+    4.13,
+    16.96
    ],
    "comb": {
-    "b": 0.184,
+    "b": 0.185,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -117439,9 +118480,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.25,
-    -4.49,
-    4.66
+    0.6,
+    -3.45,
+    5.45
    ]
   },
   {
@@ -117481,9 +118522,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.36,
-    -5.21,
-    3.04
+    -2.97,
+    -3.33,
+    4.7
    ]
   },
   {
@@ -117515,9 +118556,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.91,
-    -5.9,
-    1.86
+    -2.83,
+    -4.43,
+    3.79
    ]
   },
   {
@@ -117555,12 +118596,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.73,
-    -8.43,
-    8.74
+    -11.9,
+    -4.73,
+    12.07
    ],
    "comb": {
-    "b": 0.581,
+    "b": 0.557,
     "r": 0.0,
     "rg": [
      "data",
@@ -117603,9 +118644,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.86,
-    -3.25,
-    0.78
+    -3.44,
+    -1.79,
+    2.08
    ]
   },
   {
@@ -117639,12 +118680,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.41,
-    -13.11,
-    2.83
+    -11.54,
+    -9.17,
+    5.77
    ],
    "comb": {
-    "b": 0.603,
+    "b": 0.573,
     "r": 0.0,
     "rg": [
      "data",
@@ -117683,9 +118724,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.27,
-    -3.05,
-    2.22
+    5.39,
+    -3.55,
+    0.57
    ]
   },
   {
@@ -117722,12 +118763,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.56,
-    -2.3,
-    13.38
+    8.1,
+    -3.76,
+    10.83
    ],
    "comb": {
-    "b": 0.433,
+    "b": 0.429,
     "r": 0.0,
     "rg": [
      "data",
@@ -117765,9 +118806,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.66,
-    -2.28,
-    4.84
+    4.44,
+    -2.19,
+    4.18
    ]
   },
   {
@@ -117803,9 +118844,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.0,
-    -6.88,
-    -10.66
+    -6.01,
+    -9.21,
+    -8.73
    ]
   },
   {
@@ -117841,9 +118882,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.7,
-    -2.75,
-    2.12
+    -2.73,
+    -1.23,
+    3.23
    ]
   },
   {
@@ -117883,9 +118924,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.42,
-    -6.45,
-    0.46
+    -2.71,
+    -5.66,
+    1.61
    ]
   },
   {
@@ -117921,9 +118962,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.63,
-    -6.37,
-    -0.98
+    -2.97,
+    -5.76,
+    0.19
    ]
   },
   {
@@ -117956,9 +118997,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.92,
-    -4.68,
-    5.85
+    4.63,
+    -4.52,
+    5.43
    ],
    "comb": {
     "b": 0.348,
@@ -119474,9 +120515,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.86,
-    13.86,
-    -1.24
+    -2.0,
+    13.83,
+    -1.39
    ]
   },
   {
@@ -120642,9 +121683,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.47,
-    15.6,
-    -2.22
+    -3.11,
+    15.41,
+    -1.87
    ]
   },
   {
@@ -121641,9 +122682,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.51,
-    15.25,
-    -3.44
+    -3.41,
+    14.99,
+    -3.8
    ]
   },
   {
@@ -122827,9 +123868,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.14,
-    16.18,
-    -3.16
+    -2.47,
+    16.52,
+    -5.52
    ]
   },
   {
@@ -124025,12 +125066,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.26,
-    16.6,
-    -4.84
+    -1.32,
+    17.4,
+    -2.29
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -125146,9 +126187,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.94,
-    18.17,
-    -5.32
+    -1.37,
+    19.03,
+    -3.19
    ]
   },
   {
@@ -126720,12 +127761,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.01,
-    20.2,
-    -3.22
+    -1.63,
+    20.54,
+    -4.37
    ],
    "comb": {
-    "b": 0.279,
+    "b": 0.281,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -127739,12 +128780,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.87,
-    18.7,
-    -3.04
+    -2.66,
+    18.73,
+    -4.04
    ],
    "comb": {
-    "b": 0.241,
+    "b": 0.238,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -128993,12 +130034,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.55,
-    20.26,
-    -5.16
+    -1.61,
+    20.91,
+    -1.98
    ],
    "comb": {
-    "b": 0.239,
+    "b": 0.241,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -130274,9 +131315,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.09,
-    17.91,
-    -6.6
+    -2.92,
+    18.95,
+    -2.53
    ],
    "comb": {
     "b": 0.348,
@@ -131255,9 +132296,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.03,
-    19.98,
-    -5.33
+    -2.35,
+    20.66,
+    -3.34
    ],
    "comb": {
     "b": 0.341,
@@ -132239,12 +133280,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.86,
-    21.99,
-    -5.85
+    -3.59,
+    22.32,
+    -2.77
    ],
    "comb": {
-    "b": 0.297,
+    "b": 0.298,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -133249,9 +134290,9 @@ window.ROADMAP = {
    ],
    "measure": true,
    "p": [
-    -3.47,
-    20.38,
-    -4.02
+    -6.93,
+    19.89,
+    0.4
    ],
    "comb": {
     "b": 0.332,
@@ -134503,12 +135544,12 @@ window.ROADMAP = {
    ],
    "measure": true,
    "p": [
-    7.01,
-    20.98,
-    -5.42
+    -2.92,
+    21.52,
+    -6.84
    ],
    "comb": {
-    "b": 0.257,
+    "b": 0.259,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -135707,12 +136748,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.21,
-    17.53,
-    -1.48
+    -0.68,
+    17.56,
+    0.94
    ],
    "comb": {
-    "b": 0.262,
+    "b": 0.263,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -136897,9 +137938,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.61,
-    17.39,
-    -2.58
+    -2.61,
+    17.35,
+    1.31
    ],
    "comb": {
     "b": 0.321,
@@ -138474,12 +139515,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.59,
-    22.47,
-    0.89
+    -6.46,
+    23.58,
+    0.88
    ],
    "comb": {
-    "b": 0.183,
+    "b": 0.186,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -139757,12 +140798,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.56,
-    27.19,
-    3.65
+    0.34,
+    28.3,
+    8.18
    ],
    "comb": {
-    "b": 0.36,
+    "b": 0.362,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -141306,12 +142347,12 @@ window.ROADMAP = {
    ],
    "measure": true,
    "p": [
-    -0.44,
-    29.02,
-    5.03
+    1.9,
+    30.07,
+    7.73
    ],
    "comb": {
-    "b": 0.264,
+    "b": 0.261,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -142536,12 +143577,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.31,
-    22.72,
-    -0.75
+    -1.6,
+    22.48,
+    3.29
    ],
    "comb": {
-    "b": 0.279,
+    "b": 0.281,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -143569,9 +144610,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.5,
-    19.25,
-    -1.03
+    -2.74,
+    19.1,
+    1.25
    ]
   },
   {
@@ -144697,12 +145738,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.89,
-    13.64,
-    -4.11
+    -9.09,
+    12.58,
+    -3.13
    ],
    "comb": {
-    "b": 0.301,
+    "b": 0.303,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -145848,12 +146889,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.04,
-    15.8,
-    -4.84
+    -9.24,
+    14.28,
+    -4.51
    ],
    "comb": {
-    "b": 0.301,
+    "b": 0.302,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -147003,12 +148044,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.22,
-    19.67,
-    -5.45
+    -9.91,
+    17.87,
+    -5.13
    ],
    "comb": {
-    "b": 0.244,
+    "b": 0.246,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -147943,9 +148984,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.07,
-    12.84,
-    -4.73
+    -12.66,
+    11.67,
+    -3.63
    ]
   },
   {
@@ -149046,9 +150087,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.71,
-    13.98,
-    -4.48
+    -11.21,
+    13.1,
+    -3.5
    ]
   },
   {
@@ -150032,12 +151073,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.22,
-    17.08,
-    -5.5
+    -10.68,
+    15.29,
+    -5.12
    ],
    "comb": {
-    "b": 0.3,
+    "b": 0.301,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -151184,12 +152225,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.43,
-    15.65,
-    -7.06
+    -20.07,
+    15.24,
+    -6.95
    ],
    "comb": {
-    "b": 0.32,
+    "b": 0.323,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -152253,9 +153294,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.63,
-    11.65,
-    -3.8
+    -14.89,
+    9.3,
+    1.21
    ]
   },
   {
@@ -153846,12 +154887,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.11,
-    16.1,
-    6.79
+    4.91,
+    14.84,
+    8.08
    ],
    "comb": {
-    "b": 0.354,
+    "b": 0.351,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -154987,12 +156028,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.0,
-    16.39,
-    5.65
+    5.28,
+    15.36,
+    6.78
    ],
    "comb": {
-    "b": 0.361,
+    "b": 0.357,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -156127,12 +157168,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.4,
-    21.44,
-    6.27
+    5.31,
+    23.09,
+    6.1
    ],
    "comb": {
-    "b": 0.35,
+    "b": 0.347,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -157334,12 +158375,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.61,
-    22.18,
-    9.66
+    9.29,
+    21.94,
+    10.75
    ],
    "comb": {
-    "b": 0.415,
+    "b": 0.414,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -158919,12 +159960,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.8,
-    21.79,
-    10.96
+    8.14,
+    20.62,
+    13.85
    ],
    "comb": {
-    "b": 0.274,
+    "b": 0.27,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -160449,12 +161490,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.49,
-    20.03,
-    13.61
+    9.27,
+    18.77,
+    15.66
    ],
    "comb": {
-    "b": 0.19,
+    "b": 0.186,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161767,9 +162808,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.5,
-    22.55,
-    12.44
+    13.12,
+    19.64,
+    14.68
    ]
   },
   {
@@ -162925,12 +163966,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.87,
-    21.74,
-    10.1
+    11.67,
+    19.95,
+    12.2
    ],
    "comb": {
-    "b": 0.358,
+    "b": 0.359,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -164128,9 +165169,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.84,
-    12.3,
-    -9.8
+    -9.26,
+    12.78,
+    1.28
    ]
   },
   {
@@ -165198,12 +166239,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.63,
-    11.49,
-    -7.89
+    -7.81,
+    11.65,
+    0.6
    ],
    "comb": {
-    "b": 0.296,
+    "b": 0.297,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -167025,12 +168066,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.69,
-    14.4,
-    -9.42
+    -10.27,
+    14.28,
+    -0.0
    ],
    "comb": {
-    "b": 0.251,
+    "b": 0.252,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -168322,9 +169363,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.21,
-    7.76,
-    -6.75
+    -4.91,
+    8.86,
+    2.18
    ]
   },
   {
@@ -169479,9 +170520,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.37,
-    12.16,
-    -12.64
+    -11.02,
+    13.53,
+    2.23
    ]
   },
   {
@@ -170548,12 +171589,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.24,
-    11.96,
-    -7.34
+    -5.41,
+    12.87,
+    1.44
    ],
    "comb": {
-    "b": 0.183,
+    "b": 0.186,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -171512,12 +172553,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.37,
-    14.64,
-    -2.72
+    -1.72,
+    15.22,
+    -4.01
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -171536,40 +172577,1004 @@ window.ROADMAP = {
    "needs": [
     "S-027",
     "N-014",
-    "N-020"
+    "N-020",
+    "N-075",
+    "N-077",
+    "G-046",
+    "N-059"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "4 人が貝をひろいました。多い人から少ない人へ貝を動かして、みんな同じ数にすると、1 人何こになるかな。",
+       "figure": "🐚🐚🐚🐚🐚\n🐚🐚🐚\n🐚🐚🐚🐚🐚🐚\n🐚🐚",
+       "explain": "6 この人から 2 こを 2 この人へ、5 この人から 1 こを 3 この人へ動かすと、みんな 4 こになります。このように、でこぼこをならして同じ大きさにした数を平均（へいきん）といいます。動かしても全部の数（合計）は 16 このままなので、平均は 合計 ÷ 人数 で、16 ÷ 4 = 4 と計算できます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "42 ÷ 6 はいくつですか。",
+       "answer": 7,
+       "check": "42 // 6",
+       "hints": [
+        "6 のだんの九九で、答えが 42 になるのはどれかな。",
+        "6 × □ = 42 の □ をさがそう。",
+        "6 × 6 = 36 から、6 ずつふやしてみよう。"
+       ],
+       "paths": [
+        [
+         "6 のだんで 42 になるのをさがす",
+         "6 × 7 = 42",
+         "42 ÷ 6 = 7"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "4 人が読んだ本のさっ数を表にしました。4 人の合計は何さつですか。",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"24.5\" y=\"6\" width=\"191\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"24.5\" y=\"6\" width=\"191\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"24.5\" y1=\"32\" x2=\"215.5\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"79.5\" y1=\"6\" x2=\"79.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"113.5\" y1=\"6\" x2=\"113.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"147.5\" y1=\"6\" x2=\"147.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"181.5\" y1=\"6\" x2=\"181.5\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"52\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">人</text>\n  <text x=\"96.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">A</text>\n  <text x=\"130.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">B</text>\n  <text x=\"164.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">C</text>\n  <text x=\"198.5\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">D</text>\n  <text x=\"52\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">さっ数</text>\n  <text x=\"96.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"130.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"164.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"198.5\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n</svg>\n",
+       "answer": 18,
+       "check": "3 + 5 + 4 + 6",
+       "hints": [
+        "表の数を 1 つずつ見よう。",
+        "3 と 5 で 8。つづけてたそう。",
+        "8 に 4 と 6 をたそう。"
+       ],
+       "paths": [
+        [
+         "3 + 5 = 8",
+         "8 + 4 = 12",
+         "12 + 6 = 18"
+        ],
+        [
+         "4 + 6 = 10、3 + 5 = 8",
+         "10 + 8 = 18"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 れつにならんだブロックを、多いれつから少ないれつへ動かして、どのれつも同じ数にします。1 れつ何こになりますか。",
+       "figure": "🟦🟦🟦🟦🟦🟦🟦\n🟦🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦🟦🟦🟦",
+       "answer": 6,
+       "check": "Fraction(n('🟦'), len(fig.splitlines()))",
+       "hints": [
+        "ブロックは全部で何こあるかな。",
+        "動かしても、全部の数はかわらないね。",
+        "全部の数を、4 れつに同じ数ずつ分けよう。"
+       ],
+       "paths": [
+        [
+         "全部で 7 + 4 + 5 + 8 = 24 こ",
+         "24 ÷ 4 = 6",
+         "6 こ"
+        ],
+        [
+         "8 このれつから 2 こを 4 このれつへ、7 このれつから 1 こを 5 このれつへ",
+         "みんな 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 回の小テスト（10 点まんてん）の点数は、6 点、9 点、4 点、8 点、8 点でした。平均は何点ですか。",
+       "answer": 7,
+       "check": "Fraction(sum([6, 9, 4, 8, 8]), 5)",
+       "hints": [
+        "5 回の点数の合計を出そう。",
+        "合計を回数でわろう。",
+        "合計 ÷ 5 は、5 のだんの九九でさがそう。"
+       ],
+       "paths": [
+        [
+         "合計は 6 + 9 + 4 + 8 + 8 = 35",
+         "35 ÷ 5 = 7",
+         "7 点"
+        ]
+       ],
+       "note": "7 点は 5 回のどれとも同じではない。平均は、データの中にない数になることもある。"
+      },
+      {
+       "part": "今日",
+       "text": "6 人がひろったどんぐりの数の平均は 8 こでした。6 人がひろったどんぐりは、合わせて何こですか。",
+       "answer": 48,
+       "check": "8 * 6",
+       "hints": [
+        "平均は、ならしたときの 1 人分の数だね。",
+        "ならすと、6 人がみんな 8 こずつ持っていることになるね。",
+        "8 こが 6 人分で、何こかな。"
+       ],
+       "paths": [
+        [
+         "ならすと 1 人 8 こ",
+         "8 × 6 = 48",
+         "48 こ"
+        ]
+       ],
+       "note": "平均 × 人数 = 合計。平均の式を、もとにもどす向きに使う。"
+      },
+      {
+       "part": "挑戦",
+       "text": "月曜日から金曜日までの 5 日間に読んだ本のさっ数は、5 さつ、0 さつ、7 さつ、1 さつ、2 さつでした。1 日の平均は何さつですか。",
+       "answer": 3,
+       "check": "Fraction(5 + 0 + 7 + 1 + 2, 5)",
+       "hints": [
+        "5 日間の合計は何さつかな。",
+        "0 さつの日も、日数に入れるかな。",
+        "合計を何日でわればよいかな。"
+       ],
+       "paths": [
+        [
+         "合計は 15 さつ",
+         "0 さつの日も入れて 5 日",
+         "15 ÷ 5 = 3",
+         "3 さつ"
+        ]
+       ],
+       "note": "0 さつの日を数えずに 15 ÷ 4 としやすい。0 も 1 つのデータとして日数に入れる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 れつにならんだブロックを、どのれつも同じ数になるように動かします。1 れつ何こになりますか。",
+       "figure": "🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦🟦\n🟦🟦🟦🟦🟦🟦🟦",
+       "answer": 6,
+       "check": "Fraction(n('🟦'), len(fig.splitlines()))",
+       "hints": [
+        "ブロックは全部で何こあるかな。",
+        "動かしても、全部の数はかわらないね。",
+        "全部の数を、3 れつに同じ数ずつ分けよう。"
+       ],
+       "paths": [
+        [
+         "全部で 9 + 2 + 7 = 18 こ",
+         "18 ÷ 3 = 6",
+         "6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 回のなわとびで、つづけてとんだ回数は 8 回、5 回、9 回、6 回でした。平均は何回ですか。",
+       "answer": 7,
+       "check": "Fraction(8 + 5 + 9 + 6, 4)",
+       "hints": [
+        "4 回の合計を出そう。",
+        "合計を 4 でわろう。",
+        "4 のだんの九九でさがそう。"
+       ],
+       "paths": [
+        [
+         "合計は 28 回",
+         "28 ÷ 4 = 7",
+         "7 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 回のゲームの点数の平均は 9 点でした。4 回の点数の合計は何点ですか。",
+       "answer": 36,
+       "check": "9 * 4",
+       "hints": [
+        "ならすと、4 回ともいくつになるかな。",
+        "9 点が 4 回分だね。",
+        "9 × 4 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "ならすと 4 回とも 9 点",
+         "9 × 4 = 36",
+         "36 点"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "7 人の小テスト（10 点まんてん）の点数は、8、5、9、6、8、3、7（点）でした。真ん中の点数と、いちばん多い点数を調べよう。",
+       "explain": "小さいじゅんにならべると 3、5、6、7、8、8、9 です。7 人の真ん中（4 番目）は 7 点です。このように、小さいじゅんにならべたときの真ん中の数を中央値（ちゅうおうち）といいます。データが 6 こ のように真ん中が 2 つあるときは、その 2 つの平均を中央値にします。いちばん多く出てくる数を最頻値（さいひんち）といい、ここでは 2 回出てくる 8 点です。平均、中央値、最頻値のように、データ全体を 1 つの数で表すものを代表値といいます。また、いちばん大きい数からいちばん小さい数をひいた 9 − 3 = 6 を範囲（はんい）といい、データの広がりを表します。"
+      },
+      {
+       "part": "思い出す",
+       "text": "4 人がとったカードのまい数は、9 まい、3 まい、8 まい、4 まいでした。平均は何まいですか。",
+       "answer": 6,
+       "check": "Fraction(9 + 3 + 8 + 4, 4)",
+       "hints": [
+        "4 人の合計を出そう。",
+        "合計を人数でわろう。",
+        "4 のだんの九九でさがそう。"
+       ],
+       "paths": [
+        [
+         "合計は 24 まい",
+         "24 ÷ 4 = 6",
+         "6 まい"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "4 回のゲームの点数の平均は 7 点でした。4 回の合計は何点ですか。",
+       "answer": 28,
+       "check": "7 * 4",
+       "hints": [
+        "ならすと、4 回ともいくつになるかな。",
+        "7 点が 4 回分だね。",
+        "7 × 4 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "ならすと 4 回とも 7 点",
+         "7 × 4 = 28",
+         "28 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人が 1 分間にとんだなわとびの回数は、12、7、15、9、11（回）でした。中央値は何回ですか。",
+       "answer": 11,
+       "check": "sorted([12, 7, 15, 9, 11])[2]",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "5 人の真ん中は、何番目かな。",
+        "ならべた数の、真ん中の番目を読もう。"
+       ],
+       "paths": [
+        [
+         "ならべると 7、9、11、12、15",
+         "真ん中は 3 番目",
+         "11 回"
+        ]
+       ],
+       "note": "ならべずに、書いてあるじゅんの真ん中（15）を答えやすい。先に小さいじゅんにならべる。"
+      },
+      {
+       "part": "今日",
+       "text": "11 人が 1 週間に図書室へ行った回数を、点で表しました。最頻値は何回ですか。",
+       "svg": "<svg viewBox=\"0 0 280 112\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"54.2857\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"88.5714\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"88.5714\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"37\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"24\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"157.143\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"191.429\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"191.429\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"260\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <line x1=\"14\" y1=\"72\" x2=\"266\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"20\" y1=\"72\" x2=\"20\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"20\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <line x1=\"54.2857\" y1=\"72\" x2=\"54.2857\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54.2857\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">1</text>\n  <line x1=\"88.5714\" y1=\"72\" x2=\"88.5714\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"88.5714\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">2</text>\n  <line x1=\"122.857\" y1=\"72\" x2=\"122.857\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"122.857\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">3</text>\n  <line x1=\"157.143\" y1=\"72\" x2=\"157.143\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"157.143\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">4</text>\n  <line x1=\"191.429\" y1=\"72\" x2=\"191.429\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"191.429\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">5</text>\n  <line x1=\"225.714\" y1=\"72\" x2=\"225.714\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"225.714\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">6</text>\n  <line x1=\"260\" y1=\"72\" x2=\"260\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"260\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">7</text>\n  <text x=\"274\" y=\"106\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "answer": 3,
+       "check": "(lambda d: max(set(d), key=d.count))([1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 7])",
+       "hints": [
+        "点がいちばん高くつみ上がっているのは、どの回数のところかな。",
+        "点の数を数えて、たしかめよう。",
+        "最頻値は、いちばん多く出てくる数だったね。"
+       ],
+       "paths": [
+        [
+         "3 回のところに点が 4 こ",
+         "ほかのどこよりも多い",
+         "最頻値は 3 回"
+        ]
+       ],
+       "note": "点の数（4）を答えやすい。たずねているのは人数ではなく、回数のほう。"
+      },
+      {
+       "part": "今日",
+       "text": "6 人の小テスト（10 点まんてん）の点数は、4、9、6、2、8、5（点）でした。中央値は何点ですか。",
+       "answer": 5.5,
+       "check": "(lambda s:(s[2] + s[3]) / 2)(sorted([4, 9, 6, 2, 8, 5]))",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "6 人の真ん中には、数が 2 つあるね。",
+        "その 2 つの平均を出そう。あまりは 0.1 のいくつ分と考えよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 2、4、5、6、8、9",
+         "真ん中は 5 と 6",
+         "(5 + 6) ÷ 2 = 5.5",
+         "5.5 点"
+        ],
+        [
+         "5 と 6 のちょうど真ん中",
+         "5 と 6 の間の 1 を 2 つに分けて 0.5",
+         "5.5 点"
+        ]
+       ],
+       "note": "11 ÷ 2 = 5 あまり 1。あまりの 1 を 0.1 の 10 こ分とみて 2 で分けると 0.1 の 5 こ分なので 5.5（N-020 の考え）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "4 回のゲームの点数は、7 点、5 点、8 点、6 点でした。平均は何点ですか。",
+       "answer": 6.5,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(7 + 5 + 8 + 6, 4))",
+       "hints": [
+        "合計を回数でわろう。",
+        "わり切れないときは、あまりを 0.1 のいくつ分と考えよう。",
+        "あまりは 0.1 の何こ分かな。それを 4 で分けよう。"
+       ],
+       "paths": [
+        [
+         "合計は 26 点",
+         "26 ÷ 4 = 6 あまり 2",
+         "あまりの 2 は 0.1 の 20 こ分で 4 で分けると 5 こ分",
+         "6.5 点"
+        ]
+       ],
+       "note": "平均は、点数としては出ない 6.5 のような小数になることがある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "7 人がひろったくりの数は、14、9、20、11、16、8、13（こ）でした。中央値は何こですか。",
+       "answer": 13,
+       "check": "sorted([14, 9, 20, 11, 16, 8, 13])[3]",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "7 人の真ん中は、何番目かな。",
+        "ならべた数の、真ん中の番目を読もう。"
+       ],
+       "paths": [
+        [
+         "ならべると 8、9、11、13、14、16、20",
+         "真ん中は 4 番目",
+         "13 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"14\" y=\"6\" width=\"42\" height=\"52\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"14\" y=\"6\" width=\"212\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"14\" y1=\"32\" x2=\"226\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"56\" y1=\"6\" x2=\"56\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"90\" y1=\"6\" x2=\"90\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"124\" y1=\"6\" x2=\"124\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"158\" y1=\"6\" x2=\"158\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"35\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">点数</text>\n  <text x=\"73\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"107\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"141\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"175\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"209\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">10</text>\n  <text x=\"35\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">人数</text>\n  <text x=\"73\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"107\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"141\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"175\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"209\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n</svg>\n",
+       "answer": 8,
+       "check": "(lambda d: max(d, key=d.get))({6: 3, 7: 6, 8: 9, 9: 4, 10: 2})",
+       "hints": [
+        "人数がいちばん多いのは、どの点数かな。",
+        "表の下の行で、いちばん大きい数をさがそう。",
+        "その上に書いてある点数を読もう。"
+       ],
+       "paths": [
+        [
+         "いちばん多い人数は 9 人",
+         "その点数は 8 点",
+         "最頻値は 8 点"
+        ]
+       ],
+       "note": "人数の 9 を答えやすい。最頻値は点数のほう。"
+      },
+      {
+       "part": "今日",
+       "text": "4 人の点数は、13、7、10、16（点）でした。中央値は何点ですか。",
+       "answer": 11.5,
+       "check": "(lambda s:(s[1] + s[2]) / 2)(sorted([13, 7, 10, 16]))",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "4 人の真ん中には、数が 2 つあるね。",
+        "その 2 つの平均を出そう。"
+       ],
+       "paths": [
+        [
+         "ならべると 7、10、13、16",
+         "真ん中は 10 と 13",
+         "(10 + 13) ÷ 2 = 11.5",
+         "11.5 点"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "9 人がつくったつるの数を、点で表しました。中央値は何わですか。",
+       "svg": "<svg viewBox=\"0 0 280 99\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"50\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"80\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"80\" cy=\"37\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"80\" cy=\"24\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"110\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"170\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"170\" cy=\"37\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"200\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"230\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <line x1=\"14\" y1=\"59\" x2=\"266\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"20\" y1=\"59\" x2=\"20\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"20\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <line x1=\"50\" y1=\"59\" x2=\"50\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"50\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">1</text>\n  <line x1=\"80\" y1=\"59\" x2=\"80\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"80\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">2</text>\n  <line x1=\"110\" y1=\"59\" x2=\"110\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"110\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">3</text>\n  <line x1=\"140\" y1=\"59\" x2=\"140\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">4</text>\n  <line x1=\"170\" y1=\"59\" x2=\"170\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"170\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">5</text>\n  <line x1=\"200\" y1=\"59\" x2=\"200\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"200\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">6</text>\n  <line x1=\"230\" y1=\"59\" x2=\"230\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"230\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">7</text>\n  <line x1=\"260\" y1=\"59\" x2=\"260\" y2=\"65\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"260\" y=\"77\" font-size=\"11\" text-anchor=\"middle\">8</text>\n  <text x=\"274\" y=\"93\" font-size=\"11\" text-anchor=\"end\">（わ）</text>\n</svg>\n",
+       "answer": 3,
+       "check": "sorted([1, 2, 2, 2, 3, 5, 5, 6, 7])[4]",
+       "hints": [
+        "点を左から 1 つずつ数えよう。",
+        "9 人の真ん中は、何番目かな。",
+        "左から数えて真ん中の点は、どの数のところにあるかな。"
+       ],
+       "paths": [
+        [
+         "9 人の真ん中は 5 番目",
+         "左から 1、2、2、2、3",
+         "3 わ"
+        ]
+       ],
+       "note": "いちばん多い 2 わ（最頻値）と取りちがえやすい。"
+      },
+      {
+       "part": "思い出す",
+       "text": "5 日間にシュートが入った数は、6 回、0 回、3 回、8 回、3 回でした。1 日の平均は何回ですか。",
+       "answer": 4,
+       "check": "Fraction(6 + 0 + 3 + 8 + 3, 5)",
+       "hints": [
+        "5 日間の合計を出そう。",
+        "0 回の日も、日数に入れるかな。",
+        "合計を 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "合計は 20 回",
+         "0 回の日も入れて 5 日",
+         "20 ÷ 5 = 4",
+         "4 回"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "4 人がひろったくりの数は、7 こ、2 こ、5 こ、2 こでした。平均を「合計 ÷ 人数」で出してよいわけを、ならす考えを使って文に書きましょう。",
+       "explain": "例：「7 この人から 3 こ、5 この人から 1 こを、2 この 2 人に 2 こずつ動かすと、みんな 4 こになる。動かしても全部の数は 16 このままかわらない。だから、ならすことは、合計の 16 こを 4 人で同じ数ずつ分けることと同じで、16 ÷ 4 = 4 と計算できる。」と書ければよい。① ならしても合計はかわらない、② 同じ数ずつ分けることだからわり算になる、の 2 つが書けているかを見る。動かし方だけを書いて終わっていたら、なぜわり算になるのかを聞く。",
+       "hints": [
+        "4 人がみんな同じ数になるように、くりを動かしてみよう。",
+        "動かす前と後で、全部の数はかわったかな。",
+        "「同じ数ずつ分ける」ことは、何の計算だったかな。"
+       ],
+       "paths": [
+        [
+         "動かしても合計 16 こはかわらない",
+         "ならすのは 16 こを 4 人で同じ数ずつ分けること",
+         "だから 16 ÷ 4 = 4"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "5 人が 1 か月に読んだ本のさっ数は、2、3、3、4、28（さつ）でした。平均と中央値を出して、「ふつう何さつぐらい読んだか」を表すのにどちらがよいかを、わけといっしょに文に書きましょう。",
+       "explain": "例：「平均は 40 ÷ 5 = 8 さつ、中央値は 3 さつ。5 人のうち 4 人は 4 さつ以下で、平均の 8 さつより少ない。平均は 28 さつ読んだ 1 人に引っぱられて大きくなっている。中央値は、いちばん多い人が 28 さつでも 10 さつでも 3 さつのままかわらない。だから、ふつうの数を表すのは中央値のほうがよい。」と書ければよい。大きく外れた数があると平均が動くこと、中央値は動きにくいこと、の 2 点を見る。どちらがよいかは目的で決まり、「全部で何さつ読んだか」を考えるときは平均（合計）が要ることにもふれる。",
+       "hints": [
+        "合計と平均、中央値をそれぞれ出そう。",
+        "平均の 8 さつより多く読んだ人は、何人いるかな。",
+        "いちばん多い人が 28 さつでなく 10 さつだったら、平均と中央値はどうかわるかな。"
+       ],
+       "paths": [
+        [
+         "平均 8 さつ、中央値 3 さつ",
+         "4 人は平均より少ない",
+         "平均は 28 さつの 1 人に引っぱられる",
+         "ふつうの数は中央値のほうがよい"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "4 回のなわとびの回数は、52、55、49、56（回）でした。49 回をもとにして、それより多い分だけをならすと、平均がわかります。このやり方でよいわけを文に書きましょう。",
+       "explain": "例：「52 は 49 と 3、55 は 49 と 6、49 は 49 と 0、56 は 49 と 7 に分けられる。49 の分はどれも同じなので、ならしても 49 のまま。多い分の 3、6、0、7 をならすと、合計 16 を 4 回で分けて 16 ÷ 4 = 4。だから平均は 49 + 4 = 53 回。」と書ければよい。どの数も「もとにする数と多い分」に分けられること、もとにする数の部分はならしてもかわらないこと、の 2 点を見る。合計 212 を 4 でわる（わり算の筆算は前の単元にない）より、計算が小さくてすむことにもふれる。",
+       "hints": [
+        "52 は、49 といくつに分けられるかな。",
+        "49 の部分は、ならしたらどうなるかな。",
+        "多い分だけをならして、49 にたそう。"
+       ],
+       "paths": [
+        [
+         "どの数も 49 と多い分に分ける",
+         "49 の部分はならしても 49",
+         "多い分 3、6、0、7 をならすと 4",
+         "平均は 53 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人がとんだなわとびの回数は、63、58、62、66、56（回）でした。いちばん少ない 56 回をもとにして、平均を出しましょう。平均は何回ですか。",
+       "answer": 61,
+       "check": "Fraction(63 + 58 + 62 + 66 + 56, 5)",
+       "hints": [
+        "それぞれ、56 回より何回多いかな。",
+        "多い分の合計を 5 人でならそう。",
+        "ならした数を 56 にたそう。"
+       ],
+       "paths": [
+        [
+         "多い分は 7、2、6、10、0",
+         "合計 25 を 5 でわって 5",
+         "56 + 5 = 61 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 回のゲームの点数は、17、25、12、31、22、16（点）でした。範囲は何点ですか。",
+       "answer": 19,
+       "check": "max([17, 25, 12, 31, 22, 16]) - min([17, 25, 12, 31, 22, 16])",
+       "hints": [
+        "いちばん大きい点数は何点かな。",
+        "いちばん小さい点数は何点かな。",
+        "大きいほうから小さいほうをひこう。"
+       ],
+       "paths": [
+        [
+         "いちばん大きいのは 31 点",
+         "いちばん小さいのは 12 点",
+         "31 − 12 = 19 点"
+        ]
+       ],
+       "note": "最後の数から最初の数をひく（16 − 17）のではなく、いちばん大きい数といちばん小さい数を使う。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 回のテストの点数は、86、81、84、89（点）でした。いちばん少ない 81 点をもとにして、平均を出しましょう。平均は何点ですか。",
+       "answer": 85,
+       "check": "Fraction(86 + 81 + 84 + 89, 4)",
+       "hints": [
+        "それぞれ、81 点より何点多いかな。",
+        "多い分の合計を 4 回でならそう。",
+        "ならした数を 81 にたそう。"
+       ],
+       "paths": [
+        [
+         "多い分は 5、0、3、8",
+         "合計 16 を 4 でわって 4",
+         "81 + 4 = 85 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人がひろった石の数は、15、9、23、11、18（こ）でした。範囲は何こですか。",
+       "answer": 14,
+       "check": "max([15, 9, 23, 11, 18]) - min([15, 9, 23, 11, 18])",
+       "hints": [
+        "いちばん大きい数は何こかな。",
+        "いちばん小さい数は何こかな。",
+        "大きいほうから小さいほうをひこう。"
+       ],
+       "paths": [
+        [
+         "いちばん大きいのは 23 こ",
+         "いちばん小さいのは 9 こ",
+         "23 − 9 = 14 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "7 人の点数は、2、9、4、4、7、10、4（点）でした。平均、中央値、最頻値のうち、いちばん大きいのはどれですか。",
+       "choices": [
+        "平均",
+        "中央値",
+        "最頻値"
+       ],
+       "answer": "平均",
+       "check": "(lambda d: (lambda v: max(v, key=v.get))({'平均': Fraction(sum(d), len(d)), '中央値': sorted(d)[3], '最頻値': max(set(d), key=d.count)}))([2, 9, 4, 4, 7, 10, 4])",
+       "hints": [
+        "平均は、合計を人数でわろう。",
+        "小さいじゅんにならべて、中央値を出そう。",
+        "いちばん多く出てくる数が最頻値だね。3 つをくらべよう。"
+       ],
+       "paths": [
+        [
+         "平均は 40 ÷ 7 で 5 より大きい",
+         "中央値は 4、最頻値も 4",
+         "いちばん大きいのは平均"
+        ]
+       ],
+       "note": "40 ÷ 7 はわり切れないが、5 あまり 5 なので 5 より大きいことだけ分かればよい。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "4 回のテストの点数は、47、53、45、47（点）でした。いちばん少ない 45 点をもとにして、平均を出しましょう。平均は何点ですか。",
+       "answer": 48,
+       "check": "Fraction(47 + 53 + 45 + 47, 4)",
+       "hints": [
+        "それぞれ、45 点より何点多いかな。",
+        "多い分の合計を 4 回でならそう。",
+        "ならした数を 45 にたそう。"
+       ],
+       "paths": [
+        [
+         "多い分は 2、8、0、2",
+         "合計 12 を 4 でわって 3",
+         "45 + 3 = 48 点"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "5 人がひろったどんぐりの数は、8、15、11、6、13（こ）でした。範囲は何こですか。",
+       "answer": 9,
+       "check": "max([8, 15, 11, 6, 13]) - min([8, 15, 11, 6, 13])",
+       "hints": [
+        "いちばん大きい数は何こかな。",
+        "いちばん小さい数は何こかな。",
+        "大きいほうから小さいほうをひこう。"
+       ],
+       "paths": [
+        [
+         "いちばん大きいのは 15 こ",
+         "いちばん小さいのは 6 こ",
+         "15 − 6 = 9 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "月曜日から金曜日まで、1 日におったつるの数をぼうグラフにしました。1 日の平均は何わですか。",
+       "svg": "<svg viewBox=\"0 0 252 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.4\" x2=\"244\" y2=\"130.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"118.8\" x2=\"244\" y2=\"118.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"107.2\" x2=\"244\" y2=\"107.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"95.6\" x2=\"244\" y2=\"95.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"84\" x2=\"244\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"72.4\" x2=\"244\" y2=\"72.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.8\" x2=\"244\" y2=\"60.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"49.2\" x2=\"244\" y2=\"49.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.6\" x2=\"244\" y2=\"37.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"244\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"146\" font-size=\"12\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"88\" font-size=\"12\" text-anchor=\"end\">5</text>\n  <text x=\"34\" y=\"30\" font-size=\"12\" text-anchor=\"end\">10</text>\n  <rect x=\"50\" y=\"95.6\" width=\"24\" height=\"46.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"62\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">月</text>\n  <rect x=\"90\" y=\"37.6\" width=\"24\" height=\"104.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"102\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">火</text>\n  <rect x=\"130\" y=\"107.2\" width=\"24\" height=\"34.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"142\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">水</text>\n  <rect x=\"170\" y=\"49.2\" width=\"24\" height=\"92.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"182\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">木</text>\n  <rect x=\"210\" y=\"72.4\" width=\"24\" height=\"69.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"222\" y=\"159\" font-size=\"12\" text-anchor=\"middle\">金</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"142\" x2=\"244\" y2=\"142\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"12\" text-anchor=\"end\">（わ）</text>\n</svg>\n",
+       "answer": 6,
+       "check": "Fraction(4 + 9 + 3 + 8 + 6, 5)",
+       "hints": [
+        "グラフから、1 日ずつの数を読もう。",
+        "5 日間の合計を出そう。",
+        "合計を 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "読むと 4、9、3、8、6",
+         "合計は 30 わ",
+         "30 ÷ 5 = 6",
+         "6 わ"
+        ]
+       ],
+       "note": "グラフの読み取り（S-027）でまちがえると平均もずれる。5 の線から数えているかを見る。"
+      },
+      {
+       "part": "今日",
+       "text": "3 本のびんに入っているお茶は、0.6 L、1.1 L、0.7 L です。ならすと 1 本何 L ですか。",
+       "answer": 0.8,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(6 + 11 + 7, 30))",
+       "hints": [
+        "3 本の合計は何 L かな。",
+        "0.1 L のいくつ分で考えよう。",
+        "0.1 L が何こ分になるかを出して、3 本で分けよう。"
+       ],
+       "paths": [
+        [
+         "合計は 2.4 L",
+         "0.1 L の 24 こ分",
+         "3 本で分けると 8 こ分",
+         "0.8 L"
+        ]
+       ],
+       "note": "小数のわり算（N-077）は前提にないので、0.1 L のいくつ分（整数）にもどして分ける。"
+      },
+      {
+       "part": "今日",
+       "text": "小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 256 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"5\" y=\"6\" width=\"42\" height=\"52\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"5\" y=\"6\" width=\"246\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"5\" y1=\"32\" x2=\"251\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"47\" y1=\"6\" x2=\"47\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"81\" y1=\"6\" x2=\"81\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"115\" y1=\"6\" x2=\"115\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"149\" y1=\"6\" x2=\"149\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"183\" y1=\"6\" x2=\"183\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"217\" y1=\"6\" x2=\"217\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"26\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">点数</text>\n  <text x=\"64\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"98\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"132\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"166\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"200\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"234\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">10</text>\n  <text x=\"26\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">人数</text>\n  <text x=\"64\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"98\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"132\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"166\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"200\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"234\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1</text>\n</svg>\n",
+       "answer": 7,
+       "check": "(lambda d: max(d, key=d.get))({5: 2, 6: 4, 7: 8, 8: 5, 9: 3, 10: 1})",
+       "hints": [
+        "人数がいちばん多いのは、どの点数かな。",
+        "表の下の行で、いちばん大きい数をさがそう。",
+        "その上に書いてある点数を読もう。"
+       ],
+       "paths": [
+        [
+         "いちばん多い人数は 8 人",
+         "その点数は 7 点",
+         "最頻値は 7 点"
+        ]
+       ],
+       "note": "人数の 8 を答えやすい。最頻値は点数のほう。"
+      },
+      {
+       "part": "挑戦",
+       "text": "4 回のゲームの点数の平均は 6 点でした。5 回目に何点とれば、5 回の平均が 7 点になりますか。",
+       "answer": 11,
+       "check": "7 * 5 - 6 * 4",
+       "hints": [
+        "4 回の合計は何点かな。",
+        "5 回の平均が 7 点なら、5 回の合計は何点かな。",
+        "2 つの合計のちがいが、5 回目の点数だね。"
+       ],
+       "paths": [
+        [
+         "4 回の合計は 6 × 4 = 24 点",
+         "5 回の合計は 7 × 5 = 35 点",
+         "35 − 24 = 11 点"
+        ]
+       ],
+       "note": "平均の差 1 点をそのまま使って 7 点や 8 点と答えやすい。合計にもどして考える。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 人が持っているカードは、9 まい、6 まい、8 まい、7 まいです。平均は何まいですか。",
+       "answer": 7.5,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(9 + 6 + 8 + 7, 4))",
+       "hints": [
+        "4 人の合計を出そう。",
+        "合計を 4 でわると、あまりが出るね。",
+        "あまりを 0.1 のいくつ分と考えて、4 で分けよう。"
+       ],
+       "paths": [
+        [
+         "合計は 30 まい",
+         "30 ÷ 4 = 7 あまり 2",
+         "2 は 0.1 の 20 こ分で 4 で分けると 5 こ分",
+         "7.5 まい"
+        ]
+       ],
+       "note": "カードは半分にできないが、平均は 7.5 のような小数でよい。平均は、ならしたと考えたときの数。"
+      },
+      {
+       "part": "今日",
+       "text": "8 人のゲームの点数は、5、6、6、7、7、7、8、40（点）でした。この 8 人の「ふつうの点数」を表すのに、いちばん合わないのはどれですか。",
+       "choices": [
+        "平均",
+        "中央値",
+        "最頻値"
+       ],
+       "answer": "平均",
+       "check": "(lambda d: [k for k, v in {'平均': Fraction(sum(d), len(d)), '中央値': Fraction(d[3] + d[4], 2), '最頻値': max(set(d), key=d.count)}.items() if sum(1 for x in d if x < v) >= 7][0])(sorted([5, 6, 6, 7, 7, 7, 8, 40]))",
+       "hints": [
+        "平均、中央値、最頻値をそれぞれ出そう。",
+        "8 人のうち、その数より小さい人は何人いるかな。",
+        "40 点の 1 人に引っぱられているのはどれかな。"
+       ],
+       "paths": [
+        [
+         "平均は 86 ÷ 8 で 10 より大きい",
+         "中央値と最頻値は 7 点",
+         "8 人のうち 7 人が平均より小さい",
+         "合わないのは平均"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人がひろった貝の数の平均は 6 こでした。そこへ 12 こひろった人が 1 人入りました。6 人の平均は何こですか。",
+       "answer": 7,
+       "check": "Fraction(6 * 5 + 12, 6)",
+       "hints": [
+        "5 人の合計は何こかな。",
+        "6 人の合計は何こかな。",
+        "6 人の合計を 6 でわろう。"
+       ],
+       "paths": [
+        [
+         "5 人の合計は 30 こ",
+         "6 人の合計は 42 こ",
+         "42 ÷ 6 = 7",
+         "7 こ"
+        ]
+       ],
+       "note": "平均どうし（6 と 12）を平均して 9 としやすい。人数がちがうので合計にもどす。"
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "4 れつにならんだブロックを、どのれつも同じ数になるように動かします。1 れつ何こになりますか。",
+       "figure": "🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦🟦🟦",
+       "answer": 6,
+       "check": "Fraction(n('🟦'), len(fig.splitlines()))",
+       "hints": [
+        "ブロックは全部で何こあるかな。",
+        "動かしても、全部の数はかわらないね。",
+        "全部の数を、4 れつに同じ数ずつ分けよう。"
+       ],
+       "paths": [
+        [
+         "全部で 9 + 3 + 5 + 7 = 24 こ",
+         "24 ÷ 4 = 6",
+         "6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 回の小テスト（10 点まんてん）の点数は、8 点、4 点、9 点、7 点、2 点でした。平均は何点ですか。",
+       "answer": 6,
+       "check": "Fraction(8 + 4 + 9 + 7 + 2, 5)",
+       "hints": [
+        "5 回の合計を出そう。",
+        "合計を回数でわろう。",
+        "5 のだんの九九でさがそう。"
+       ],
+       "paths": [
+        [
+         "合計は 30 点",
+         "30 ÷ 5 = 6",
+         "6 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 人がつくったつるの数の平均は 7 わでした。8 人がつくったつるは、合わせて何わですか。",
+       "answer": 56,
+       "check": "7 * 8",
+       "hints": [
+        "ならすと、8 人がみんな何わずつになるかな。",
+        "7 わが 8 人分だね。",
+        "7 × 8 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "ならすと 1 人 7 わ",
+         "7 × 8 = 56",
+         "56 わ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "7 人がとんだなわとびの回数は、21、15、30、18、26、12、24（回）でした。中央値は何回ですか。",
+       "answer": 21,
+       "check": "sorted([21, 15, 30, 18, 26, 12, 24])[3]",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "7 人の真ん中は、何番目かな。",
+        "ならべた数の、真ん中の番目を読もう。"
+       ],
+       "paths": [
+        [
+         "ならべると 12、15、18、21、24、26、30",
+         "真ん中は 4 番目",
+         "21 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人の点数は、3、8、5、10、6、1（点）でした。中央値は何点ですか。",
+       "answer": 5.5,
+       "check": "(lambda s:(s[2] + s[3]) / 2)(sorted([3, 8, 5, 10, 6, 1]))",
+       "hints": [
+        "小さいじゅんにならべよう。",
+        "6 人の真ん中には、数が 2 つあるね。",
+        "その 2 つの平均を出そう。"
+       ],
+       "paths": [
+        [
+         "ならべると 1、3、5、6、8、10",
+         "真ん中は 5 と 6",
+         "(5 + 6) ÷ 2 = 5.5",
+         "5.5 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "12 人が 1 週間に持ってきたペットボトルのふたの数を、点で表しました。最頻値は何こですか。",
+       "svg": "<svg viewBox=\"0 0 280 112\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"54.2857\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"88.5714\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"88.5714\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"122.857\" cy=\"37\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"157.143\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"157.143\" cy=\"50\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"157.143\" cy=\"37\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"157.143\" cy=\"24\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"191.429\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <circle cx=\"225.714\" cy=\"63\" r=\"5\" fill=\"currentColor\"/>\n  <line x1=\"14\" y1=\"72\" x2=\"266\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"20\" y1=\"72\" x2=\"20\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"20\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">3</text>\n  <line x1=\"54.2857\" y1=\"72\" x2=\"54.2857\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54.2857\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">4</text>\n  <line x1=\"88.5714\" y1=\"72\" x2=\"88.5714\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"88.5714\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">5</text>\n  <line x1=\"122.857\" y1=\"72\" x2=\"122.857\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"122.857\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">6</text>\n  <line x1=\"157.143\" y1=\"72\" x2=\"157.143\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"157.143\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">7</text>\n  <line x1=\"191.429\" y1=\"72\" x2=\"191.429\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"191.429\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">8</text>\n  <line x1=\"225.714\" y1=\"72\" x2=\"225.714\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"225.714\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">9</text>\n  <line x1=\"260\" y1=\"72\" x2=\"260\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"260\" y=\"90\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"274\" y=\"106\" font-size=\"11\" text-anchor=\"end\">（こ）</text>\n</svg>\n",
+       "answer": 7,
+       "check": "(lambda d: max(set(d), key=d.count))([4, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 9])",
+       "hints": [
+        "点がいちばん高くつみ上がっているのは、どこかな。",
+        "点の数を数えて、たしかめよう。",
+        "最頻値は、いちばん多く出てくる数だったね。"
+       ],
+       "paths": [
+        [
+         "7 こ のところに点が 4 こ",
+         "ほかより多い",
+         "最頻値は 7 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 回のゲームの点数は、42、35、50、38、47（点）でした。範囲は何点ですか。",
+       "answer": 15,
+       "check": "max([42, 35, 50, 38, 47]) - min([42, 35, 50, 38, 47])",
+       "hints": [
+        "いちばん大きい点数は何点かな。",
+        "いちばん小さい点数は何点かな。",
+        "大きいほうから小さいほうをひこう。"
+       ],
+       "paths": [
+        [
+         "いちばん大きいのは 50 点",
+         "いちばん小さいのは 35 点",
+         "50 − 35 = 15 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 回のテストの点数は、75、81、78、74（点）でした。いちばん少ない 74 点をもとにして、平均を出しましょう。平均は何点ですか。",
+       "answer": 77,
+       "check": "Fraction(75 + 81 + 78 + 74, 4)",
+       "hints": [
+        "それぞれ、74 点より何点多いかな。",
+        "多い分の合計を 4 回でならそう。",
+        "ならした数を 74 にたそう。"
+       ],
+       "paths": [
+        [
+         "多い分は 1、7、4、0",
+         "合計 12 を 4 でわって 3",
+         "74 + 3 = 77 点"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 回のゲームの点数は、7 点、3 点、6 点、6 点でした。平均は何点ですか。",
+       "answer": 5.5,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(7 + 3 + 6 + 6, 4))",
+       "hints": [
+        "合計を回数でわろう。",
+        "わり切れないときは、あまりを 0.1 のいくつ分と考えよう。",
+        "あまりは 0.1 の何こ分かな。それを 4 で分けよう。"
+       ],
+       "paths": [
+        [
+         "合計は 22 点",
+         "22 ÷ 4 = 5 あまり 2",
+         "2 は 0.1 の 20 こ分で 4 で分けると 5 こ分",
+         "5.5 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 日間に読んだ本のさっ数は、3 さつ、0 さつ、5 さつ、1 さつ、0 さつ、3 さつでした。1 日の平均は何さつですか。",
+       "answer": 2,
+       "check": "Fraction(3 + 0 + 5 + 1 + 0 + 3, 6)",
+       "hints": [
+        "6 日間の合計を出そう。",
+        "0 さつの日も、日数に入れるかな。",
+        "合計を 6 でわろう。"
+       ],
+       "paths": [
+        [
+         "合計は 12 さつ",
+         "0 さつの日も入れて 6 日",
+         "12 ÷ 6 = 2",
+         "2 さつ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"14\" y=\"6\" width=\"42\" height=\"52\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"14\" y=\"6\" width=\"212\" height=\"52\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"14\" y1=\"32\" x2=\"226\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"56\" y1=\"6\" x2=\"56\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"90\" y1=\"6\" x2=\"90\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"124\" y1=\"6\" x2=\"124\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"158\" y1=\"6\" x2=\"158\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"192\" y1=\"6\" x2=\"192\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"35\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">点数</text>\n  <text x=\"73\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"107\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"141\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"175\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"209\" y=\"23.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"35\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">人数</text>\n  <text x=\"73\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"107\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"141\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"175\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"209\" y=\"49.68\" font-size=\"13\" text-anchor=\"middle\">1</text>\n</svg>\n",
+       "answer": 5,
+       "check": "(lambda d: max(d, key=d.get))({4: 2, 5: 7, 6: 3, 7: 5, 8: 1})",
+       "hints": [
+        "人数がいちばん多いのは、どの点数かな。",
+        "表の下の行で、いちばん大きい数をさがそう。",
+        "その上に書いてある点数を読もう。"
+       ],
+       "paths": [
+        [
+         "いちばん多い人数は 7 人",
+         "その点数は 5 点",
+         "最頻値は 5 点"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
-    -19.52,
-    6.1,
-    -5.04
+    -11.06,
+    19.2,
+    -5.23
    ],
    "comb": {
-    "b": 0.403,
+    "b": 0.408,
     "r": 0.0,
     "rg": [
      "data",
+     "hakaru",
+     "kazu",
      "keisan"
     ],
     "pr": []
@@ -171610,12 +173615,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.88,
-    16.38,
-    -14.55
+    -6.9,
+    19.19,
+    -16.36
    ],
    "comb": {
-    "b": 0.415,
+    "b": 0.419,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -171659,9 +173664,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.32,
-    -4.17,
-    5.07
+    6.42,
+    -4.5,
+    3.15
    ],
    "comb": {
     "b": 0.361,
@@ -171706,9 +173711,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.49,
-    -5.15,
-    6.21
+    7.83,
+    -5.21,
+    4.34
    ]
   },
   {
@@ -171744,9 +173749,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.84,
-    -2.84,
-    1.8
+    3.18,
+    -3.02,
+    0.28
    ]
   },
   {
@@ -171794,12 +173799,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.93,
-    -17.05,
-    25.71
+    -1.68,
+    -13.29,
+    29.87
    ],
    "comb": {
-    "b": 0.418,
+    "b": 0.402,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -171844,12 +173849,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.12,
-    -1.09,
-    24.44
+    1.19,
+    2.38,
+    26.01
    ],
    "comb": {
-    "b": 0.297,
+    "b": 0.292,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -171897,9 +173902,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.88,
-    -12.09,
-    17.23
+    1.07,
+    -8.11,
+    19.41
    ]
   },
   {
@@ -171941,12 +173946,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.08,
-    -4.72,
-    29.0
+    5.22,
+    -0.1,
+    30.66
    ],
    "comb": {
-    "b": 0.314,
+    "b": 0.311,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -171994,9 +173999,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.95,
-    -17.54,
-    6.1
+    -12.56,
+    -12.01,
+    11.9
    ],
    "comb": {
     "b": 0.416,
@@ -172051,9 +174056,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.34,
-    -19.18,
-    4.67
+    -11.63,
+    -14.06,
+    10.52
    ],
    "comb": {
     "b": 0.581,
@@ -172106,12 +174111,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.89,
-    -17.09,
-    7.34
+    -18.9,
+    -9.54,
+    15.34
    ],
    "comb": {
-    "b": 0.549,
+    "b": 0.547,
     "r": 0.0,
     "rg": [
      "ikimono",
@@ -172160,9 +174165,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.49,
-    -20.01,
-    11.26
+    -14.84,
+    -12.41,
+    19.97
    ],
    "comb": {
     "b": 0.471,
@@ -172212,12 +174217,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.83,
-    24.92,
-    7.39
+    7.42,
+    24.7,
+    10.4
    ],
    "comb": {
-    "b": 0.254,
+    "b": 0.256,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -172264,9 +174269,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.51,
-    9.3,
-    4.3
+    5.72,
+    7.02,
+    5.03
    ]
   },
   {
@@ -172308,13 +174313,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.79,
-    9.52,
-    0.59
+    -14.28,
+    8.22,
+    6.18
    ],
    "comb": {
-    "b": 0.307,
-    "r": 1.84,
+    "b": 0.308,
+    "r": 1.83,
     "rg": [
      "keisan",
      "programming"
@@ -172358,9 +174363,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.52,
-    3.68,
-    0.89
+    -12.49,
+    2.97,
+    5.69
    ]
   },
   {
@@ -172397,12 +174402,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.47,
-    14.79,
-    1.08
+    -10.39,
+    12.96,
+    5.81
    ],
    "comb": {
-    "b": 0.272,
+    "b": 0.273,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -172450,12 +174455,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.31,
-    -0.81,
-    12.97
+    4.93,
+    -2.82,
+    12.84
    ],
    "comb": {
-    "b": 0.371,
+    "b": 0.37,
     "r": 0.0,
     "rg": [
      "data",
@@ -172499,13 +174504,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.42,
-    16.65,
-    23.69
+    16.01,
+    16.63,
+    20.85
    ],
    "comb": {
-    "b": 0.509,
-    "r": 1.04,
+    "b": 0.507,
+    "r": 1.07,
     "rg": [
      "hakaru",
      "kansu",
@@ -172552,13 +174557,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.73,
-    9.35,
-    19.27
+    9.73,
+    15.2,
+    16.51
    ],
    "comb": {
-    "b": 0.606,
-    "r": 1.11,
+    "b": 0.574,
+    "r": 1.14,
     "rg": [
      "data",
      "kazu",
@@ -172609,12 +174614,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.53,
-    3.1,
-    18.65
+    6.99,
+    -24.36,
+    6.42
    ],
    "comb": {
-    "b": 0.61,
+    "b": 0.593,
     "r": 0.0,
     "rg": [
      "data",
@@ -172659,13 +174664,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.85,
-    8.76,
-    13.08
+    8.24,
+    3.02,
+    15.25
    ],
    "comb": {
-    "b": 0.575,
-    "r": 1.65,
+    "b": 0.572,
+    "r": 1.64,
     "rg": [
      "hakaru",
      "keisan",
@@ -172710,9 +174715,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.29,
-    -1.19,
-    12.97
+    7.06,
+    -11.61,
+    13.76
    ]
   },
   {
@@ -172754,9 +174759,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.13,
-    2.54,
-    10.96
+    6.2,
+    -8.3,
+    11.97
    ],
    "comb": {
     "b": 0.618,
@@ -172810,12 +174815,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.93,
-    -10.59,
-    2.28
+    -10.41,
+    -7.87,
+    5.17
    ],
    "comb": {
-    "b": 0.471,
+    "b": 0.472,
     "r": 0.0,
     "rg": [
      "data",
@@ -172858,9 +174863,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.87,
-    -3.47,
-    3.49
+    7.24,
+    -4.14,
+    1.4
    ]
   },
   {
@@ -172897,9 +174902,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.06,
-    -4.64,
-    16.1
+    25.11,
+    -7.31,
+    9.45
    ],
    "comb": {
     "b": 0.407,
@@ -172949,9 +174954,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.29,
-    -3.58,
-    13.0
+    11.79,
+    -4.38,
+    9.61
    ]
   },
   {
@@ -172988,9 +174993,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.55,
-    14.18,
-    -3.06
+    -18.38,
+    12.98,
+    3.51
    ],
    "comb": {
     "b": 0.151,
@@ -173036,12 +175041,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.22,
-    9.43,
-    -1.91
+    -11.09,
+    8.43,
+    1.76
    ],
    "comb": {
-    "b": 0.3,
+    "b": 0.301,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -173084,9 +175089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.54,
-    9.74,
-    -2.38
+    -17.22,
+    8.36,
+    2.78
    ],
    "comb": {
     "b": 0.12,
@@ -173132,12 +175137,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.23,
-    -11.37,
-    0.27
+    -11.6,
+    -7.58,
+    2.26
    ],
    "comb": {
-    "b": 0.436,
+    "b": 0.44,
     "r": 0.0,
     "rg": [
      "data",
@@ -173179,9 +175184,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.43,
-    -20.14,
-    -4.9
+    -19.0,
+    -11.1,
+    5.86
    ]
   },
   {
@@ -173217,9 +175222,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.5,
-    -4.46,
-    -20.21
+    -8.73,
+    -4.54,
+    -22.39
    ]
   },
   {
@@ -173256,12 +175261,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.77,
-    -11.56,
-    1.76
+    -9.64,
+    -9.16,
+    4.49
    ],
    "comb": {
-    "b": 0.429,
+    "b": 0.433,
     "r": 0.0,
     "rg": [
      "data",
@@ -173304,9 +175309,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.06,
-    -8.38,
-    0.21
+    -5.1,
+    -6.48,
+    1.85
    ],
    "comb": {
     "b": 0.341,
@@ -173357,9 +175362,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.08,
-    7.57,
-    29.07
+    19.58,
+    6.98,
+    25.29
    ],
    "comb": {
     "b": 0.246,
@@ -173402,9 +175407,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.1,
-    -19.14,
-    5.36
+    -14.42,
+    -12.75,
+    12.17
    ],
    "comb": {
     "b": 0.334,
@@ -173452,12 +175457,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.58,
-    3.27,
-    15.01
+    11.26,
+    -6.6,
+    11.8
    ],
    "comb": {
-    "b": 0.547,
+    "b": 0.545,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -173502,12 +175507,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.56,
-    -3.98,
-    14.99
+    2.47,
+    -12.08,
+    14.89
    ],
    "comb": {
-    "b": 0.338,
+    "b": 0.323,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -174521,12 +176526,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.3,
-    15.35,
-    -2.0
+    -0.54,
+    15.54,
+    -2.99
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -175725,12 +177730,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.58,
-    16.84,
-    -2.29
+    -1.7,
+    17.13,
+    -3.66
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.283,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -177038,9 +179043,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.23,
-    18.24,
-    -3.74
+    -3.68,
+    18.23,
+    -5.31
    ]
   },
   {
@@ -177805,9 +179810,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.98,
-    16.4,
-    -3.98
+    -3.06,
+    16.82,
+    -4.16
    ]
   },
   {
@@ -178960,9 +180965,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.19,
-    19.96,
-    -2.63
+    -3.1,
+    20.26,
+    -4.86
    ]
   },
   {
@@ -180092,9 +182097,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.65,
-    21.05,
-    -4.1
+    -3.03,
+    22.14,
+    -4.37
    ]
   },
   {
@@ -180131,9 +182136,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.83,
-    8.61,
-    5.46
+    4.92,
+    6.72,
+    6.15
    ],
    "comb": {
     "b": 0.359,
@@ -180141,6 +182146,54 @@ window.ROADMAP = {
     "rg": [
      "hakaru",
      "katachi"
+    ],
+    "pr": []
+   }
+  },
+  {
+   "id": "S-055",
+   "title": "折れ線グラフと割合のグラフ（円グラフ、帯グラフ）",
+   "lane": "S",
+   "stage": 3,
+   "level": 2,
+   "region": "data",
+   "needs": [
+    "S-027",
+    "A-005"
+   ],
+   "days": [
+    {
+     "kind": "導入",
+     "aim": ""
+    },
+    {
+     "kind": "練習",
+     "aim": ""
+    },
+    {
+     "kind": "わけ",
+     "aim": ""
+    },
+    {
+     "kind": "混ぜる",
+     "aim": ""
+    },
+    {
+     "kind": "確認",
+     "aim": ""
+    }
+   ],
+   "p": [
+    -22.64,
+    2.94,
+    -12.73
+   ],
+   "comb": {
+    "b": 0.344,
+    "r": 0.0,
+    "rg": [
+     "data",
+     "kansu"
     ],
     "pr": []
    }
@@ -181136,9 +183189,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.51,
-    16.94,
-    -3.22
+    -3.5,
+    23.66,
+    -5.14
    ]
   },
   {
@@ -182937,9 +184990,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.88,
-    22.84,
-    -8.57
+    -5.23,
+    27.12,
+    -3.2
    ],
    "comb": {
     "b": 0.335,
@@ -184467,9 +186520,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.49,
-    25.08,
-    -5.86
+    -2.25,
+    28.94,
+    -5.03
    ],
    "comb": {
     "b": 0.298,
@@ -185709,9 +187762,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.84,
-    29.67,
-    -9.14
+    -6.02,
+    33.56,
+    -4.2
    ],
    "comb": {
     "b": 0.231,
@@ -186778,9 +188831,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.09,
-    24.94,
-    -7.18
+    -2.64,
+    29.19,
+    -2.99
    ],
    "comb": {
     "b": 0.114,
@@ -188542,12 +190595,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.61,
-    22.46,
-    -3.37
+    -4.78,
+    25.69,
+    -0.74
    ],
    "comb": {
-    "b": 0.302,
+    "b": 0.303,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -190148,12 +192201,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.81,
-    24.45,
-    -0.26
+    -1.65,
+    27.72,
+    1.35
    ],
    "comb": {
-    "b": 0.344,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -191409,9 +193462,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.09,
-    25.31,
-    4.08
+    3.01,
+    27.83,
+    9.2
    ]
   },
   {
@@ -192699,12 +194752,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.33,
-    25.82,
-    -4.08
+    -2.01,
+    29.39,
+    -0.33
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.286,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -194259,9 +196312,9 @@ window.ROADMAP = {
    ],
    "measure": true,
    "p": [
-    -2.46,
-    27.69,
-    -0.65
+    2.42,
+    30.44,
+    5.9
    ]
   },
   {
@@ -195548,12 +197601,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.55,
-    24.3,
-    -1.15
+    -4.24,
+    27.32,
+    2.96
    ],
    "comb": {
-    "b": 0.314,
+    "b": 0.315,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -196637,12 +198690,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.87,
-    26.1,
-    -1.13
+    -2.1,
+    29.19,
+    3.36
    ],
    "comb": {
-    "b": 0.285,
+    "b": 0.287,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -197955,9 +200008,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.79,
-    27.53,
-    2.7
+    0.19,
+    29.85,
+    8.73
    ],
    "comb": {
     "b": 0.122,
@@ -199181,9 +201234,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.07,
-    25.96,
-    -0.03
+    -1.15,
+    29.08,
+    4.54
    ],
    "comb": {
     "b": 0.114,
@@ -200317,9 +202370,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.3,
-    21.29,
-    -6.27
+    -15.21,
+    22.56,
+    -5.73
    ],
    "comb": {
     "b": 0.174,
@@ -201238,9 +203291,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.79,
-    20.26,
-    -7.35
+    -19.37,
+    21.11,
+    -6.89
    ]
   },
   {
@@ -202384,9 +204437,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.38,
-    20.03,
-    -6.64
+    -16.52,
+    21.58,
+    -5.88
    ],
    "comb": {
     "b": 0.142,
@@ -203323,9 +205376,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.16,
-    23.08,
-    -5.09
+    -14.78,
+    25.09,
+    -4.5
    ],
    "comb": {
     "b": 0.239,
@@ -204658,12 +206711,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.73,
-    21.7,
-    -9.73
+    -14.28,
+    23.79,
+    -1.79
    ],
    "comb": {
-    "b": 0.372,
+    "b": 0.373,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -204718,9 +206771,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.7,
-    16.77,
-    7.77
+    10.53,
+    13.82,
+    8.48
    ]
   },
   {
@@ -204760,9 +206813,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.74,
-    18.71,
-    7.78
+    11.1,
+    15.29,
+    9.31
    ]
   },
   {
@@ -204803,9 +206856,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.05,
-    20.75,
-    10.86
+    14.47,
+    18.03,
+    12.2
    ],
    "comb": {
     "b": 0.295,
@@ -204857,12 +206910,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.66,
-    24.94,
-    10.91
+    14.27,
+    23.65,
+    14.3
    ],
    "comb": {
-    "b": 0.438,
+    "b": 0.439,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -204922,12 +206975,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.29,
-    21.7,
-    12.62
+    15.65,
+    18.13,
+    14.12
    ],
    "comb": {
-    "b": 0.294,
+    "b": 0.295,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -204974,9 +207027,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.54,
-    19.75,
-    21.14
+    17.76,
+    15.34,
+    22.82
    ],
    "comb": {
     "b": 0.192,
@@ -205021,9 +207074,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.69,
-    19.29,
-    9.35
+    14.12,
+    14.8,
+    10.01
    ]
   },
   {
@@ -205103,9 +207156,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.95,
-    20.34,
-    15.31
+    15.63,
+    15.48,
+    17.01
    ]
   },
   {
@@ -206721,9 +208774,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.31,
-    22.03,
-    -9.09
+    -23.26,
+    21.15,
+    9.12
    ],
    "comb": {
     "b": 0.322,
@@ -209114,9 +211167,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.1,
-    22.94,
-    -4.37
+    -18.71,
+    23.46,
+    8.17
    ],
    "comb": {
     "b": 0.137,
@@ -210306,9 +212359,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.23,
-    22.97,
-    -15.09
+    -14.92,
+    27.17,
+    2.55
    ],
    "comb": {
     "b": 0.215,
@@ -212417,9 +214470,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.42,
-    23.36,
-    -19.15
+    -21.74,
+    25.88,
+    6.15
    ]
   },
   {
@@ -212459,9 +214512,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.57,
-    22.45,
-    13.33
+    18.78,
+    17.79,
+    14.1
    ]
   },
   {
@@ -212502,9 +214555,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.9,
-    23.29,
-    12.31
+    17.91,
+    18.99,
+    13.65
    ]
   },
   {
@@ -212520,29 +214573,1062 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "整数の列 3、4、5、4、5、6、7、6、7、8 は、となりどうしの差がいつも 1 です。はじめの項 3 と最後の項 8 のあいだの整数 4、5、6、7 は、どれも列に現れるでしょうか。",
+       "explain": "現れます。数直線の上で、コマを 1 ずつ右か左に動かすと考えると、3 から 8 へ行くあいだに 4、5、6、7 を通らずにはいられません。1 回に 1 しか動けないので、あいだの整数をとびこえられないからです。一般に、「整数の列 a₁、a₂、…、aₙ で、となりどうしの差がいつも 1 以下なら、a₁ と aₙ のあいだの整数はどれも、列のどこかに現れる」が成り立ちます。これを離散的な中間値の定理といいます（わけは 3 日目に背理法で示します）。差が 2 になれると、3、5、7、8 のように 4 と 6 をとびこえられるので、「差が 1 以下」が大事な条件です。使うときは、問題の中から「1 ずつしか変わらない量」を見つけるのがかぎです。試合の点差、続いて並んだいくつかの中の個数、それまでに数えた個数などがその例です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "「列の中に 6 に等しい項がある」ことを背理法で示します。はじめに仮定することは、どれですか。",
+       "choices": [
+        "列のどの項も 6 ではない",
+        "列のある項は 6 ではない",
+        "列のどの項も 6 より小さい"
+       ],
+       "answer": "列のどの項も 6 ではない",
+       "check": "(lambda c: c[0] if len(c) == 1 else 'きまらない')([k for k, f in {'列のどの項も 6 ではない': lambda t: all(x != 6 for x in t), '列のある項は 6 ではない': lambda t: any(x != 6 for x in t), '列のどの項も 6 より小さい': lambda t: all(x < 6 for x in t)}.items() if all(f(t) == (not any(x == 6 for x in t)) for t in itertools.product(range(4, 9), repeat=3))])",
+       "hints": [
+        "背理法では、示したいことの否定を仮定するのでした。",
+        "「6 に等しい項がある」の否定は、「6 に等しい項が □ 」の形です。",
+        "「ある」の否定は「どれも〜でない」でした。"
+       ],
+       "paths": [
+        [
+         "示したいのは「6 に等しい項がある」",
+         "否定は「6 に等しい項は 1 つもない」",
+         "列のどの項も 6 ではない"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "4 つの整数の和が 37 のとき、「少なくとも 1 つは □ 以上である」と必ず言えます。□ にあてはまる整数のうち、いちばん大きいものはいくつですか。",
+       "answer": 10,
+       "check": "max(m for m in range(1, 38) if 4 * (m - 1) < 37)",
+       "hints": [
+        "どれも 9 以下と仮定すると、和は最大でいくつですか。",
+        "その和は 37 と比べてどうですか。",
+        "それより大きい数では言えないことを、例を 1 つ作って確かめましょう。"
+       ],
+       "paths": [
+        [
+         "どれも 9 以下なら和は 36 以下で矛盾",
+         "少なくとも 1 つは 10 以上",
+         "10、9、9、9 で 37 なので 11 以上は言えない",
+         10
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "整数の列で、となりどうしの差はいつも 1 です。はじめの項は 3、最後の項は 11 です。この列に必ず現れる整数は、全部で何個ですか。",
+       "answer": 9,
+       "check": "len(range(3, 12))",
+       "hints": [
+        "3 と 11 のあいだの整数は、とびこえられますか。",
+        "はじめの項 3 と最後の項 11 も、列に現れています。",
+        "3 から 11 までの整数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "差が 1 なのであいだの整数はとびこえられない",
+         "3 から 11 までの整数はすべて現れる",
+         "11 − 3 + 1 = 9 個"
+        ]
+       ],
+       "note": "11 − 3 = 8 と答えやすい。両はしの 3 と 11 も入れて 9 個。12 や 2 が現れることもあるが、「必ず」ではない。"
+      },
+      {
+       "part": "今日",
+       "text": "1 点ずつ点が入るサッカーの試合で、前半のある時点では A チームが 2 点リードしていました。後半のある時点では B チームが 1 点リードしていました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "必ずあった",
+       "check": "(lambda ok: '必ずあった' if ok else 'なかったこともありうる')(all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([1, -1], repeat=8) for d in [[sum(g[:i]) for i in range(9)]] for s in range(9) for t in range(s, 9) if d[s] == 2 and d[t] == -1))",
+       "hints": [
+        "「A の点 − B の点」を点差とします。1 点入ると、点差はどれだけ変わりますか。",
+        "点差は 2 から −1 まで変わりました。",
+        "1 ずつしか変わらない数は、あいだの整数をとびこえられますか。"
+       ],
+       "paths": [
+        [
+         "点差 = A の点 − B の点",
+         "1 点入るごとに点差は 1 だけ変わる",
+         "2 から −1 へ変わるあいだに 0 を通る",
+         "必ず同点の時点があった"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "バスケットボールで、点は 1 回に 2 点か 3 点入るものとします。A チームが 1 点リードしていた時点のあとで、B チームが 2 点リードしていた時点がありました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "なかったこともありうる",
+       "check": "'必ずあった' if all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([2, 3, -2, -3], repeat=5) for d in [[sum(g[:i]) for i in range(6)]] for s in range(6) for t in range(s, 6) if d[s] == 1 and d[t] == -2) else 'なかったこともありうる'",
+       "hints": [
+        "1 回に点が入ると、点差はどれだけ変わりますか。",
+        "点差が 1 のときに B チームが 3 点入れると、点差はいくつになりますか。",
+        "同点を通らない点の入り方を、1 つ作ってみましょう。"
+       ],
+       "paths": [
+        [
+         "A が 3 点、B が 2 点で A の 1 点リード",
+         "次に B が 3 点入れて 3 対 5",
+         "点差は 1 から −2 へとんで同点がない",
+         "なかったこともありうる"
+        ]
+       ],
+       "note": "前の問題とのちがいは、点差が 1 回に 2 や 3 変わること。「1 以下しか変わらない」がこの考えのかぎ。反例を 1 つ作れば「必ず」ではないと示せる（L-013）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "● と ○ が 12 個並んでいます。続いて並んだ 3 個を 1 組とみて、その中の ● の個数を調べます。● の個数として現れる数は、何通りありますか。",
+       "figure": "●●●●○○○●○○●●",
+       "answer": 4,
+       "check": "len(set(fig[i:i + 3].count('●') for i in range(len(fig) - 2)))",
+       "hints": [
+        "3 個の組を 1 つ右へずらすと、● の個数はどれだけ変わりますか。",
+        "● の個数がいちばん多い組と、いちばん少ない組を探しましょう。",
+        "そのあいだの個数は、とびこえられますか。"
+       ],
+       "paths": [
+        [
+         "ずらすと 1 個出て 1 個入るので個数の変化は 1 以下",
+         "いちばん多いのは左はしの 3 個",
+         "いちばん少ないのは 5〜7 番目の 0 個",
+         "あいだの 1 と 2 も現れて 4 通り"
+        ],
+        [
+         "10 の組を全部数える",
+         "3、3、2、1、0、1、1、1、1、2",
+         "4 通り"
+        ]
+       ],
+       "note": "全部の組を数えてもよいが、いちばん多い組といちばん少ない組を見つければ、あいだの個数はこの日の考えで必ず現れると分かる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "整数の列で、となりどうしの差はいつも 1 です。はじめの項は −4、最後の項は 5 です。この列に必ず現れる整数は、全部で何個ですか。",
+       "answer": 10,
+       "check": "len(range(-4, 6))",
+       "hints": [
+        "−4 と 5 のあいだの整数は、とびこえられますか。",
+        "0 も整数です。",
+        "−4 から 5 までの整数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "−4 から 5 までの整数はすべて現れる",
+         "負の数が 4 個、0、正の数が 5 個",
+         "10 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階段を 1 段ずつ上ったり下りたりします。はじめは 3 段目にいて、そのあと 12 段目に立ったことがありました。そのあいだに、7 段目に立ったことは必ずありますか。",
+       "choices": [
+        "必ずある",
+        "ないこともある"
+       ],
+       "answer": "必ずある",
+       "check": "'必ずある' if all(7 in d for g in itertools.product([1, -1], repeat=11) for d in [[3 + sum(g[:i]) for i in range(12)]] if 12 in d) else 'ないこともある'",
+       "hints": [
+        "立っている段の番号は、1 回でどれだけ変わりますか。",
+        "3 から 12 へ変わるあいだに、とびこえられる番号はありますか。",
+        "7 は 3 と 12 のあいだにありますか。"
+       ],
+       "paths": [
+        [
+         "段の番号は 1 ずつしか変わらない",
+         "3 から 12 へ行くあいだにとびこえられない",
+         "7 段目に必ず立った"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 点ずつ点が入る試合で、A チームが 3 点リードした時点、そのあとで B チームが 4 点リードした時点、さらにそのあとで A チームが 1 点リードした時点がありました。同点の時点は、少なくとも何回ありましたか。",
+       "answer": 2,
+       "check": "(1 if 3 > 0 > -4 else 0) + (1 if -4 < 0 < 1 else 0)",
+       "hints": [
+        "点差（A − B）は、3 → −4 → 1 と変わりました。",
+        "3 から −4 へ変わるあいだに、点差は 0 を通りますか。",
+        "−4 から 1 へ変わるあいだはどうですか。その 2 つの時点は同じになりえますか。"
+       ],
+       "paths": [
+        [
+         "点差は 3 から −4 へ変わるあいだに 0 を通る",
+         "−4 から 1 へ変わるあいだにも 0 を通る",
+         "あいだに B のリードの時点があるので別の時点",
+         "少なくとも 2 回"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "整数の列で、となりどうしの差はいつも 1 です。はじめの項は 7、最後の項は −2 です。この列に必ず現れる整数は、全部で何個ですか。",
+       "answer": 10,
+       "check": "len(range(-2, 8))",
+       "hints": [
+        "7 から −2 へ減るあいだに、とびこえられる整数はありますか。",
+        "−2 から 7 までの整数を考えましょう。",
+        "0 も入れて数えましょう。"
+       ],
+       "paths": [
+        [
+         "−2 から 7 までの整数はすべて現れる",
+         "7 − (−2) + 1 = 10 個"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 点ずつ点が入る試合で、A チームが 1 点リードしていた時点のあとで、B チームが 3 点リードしていた時点がありました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "必ずあった",
+       "check": "(lambda ok: '必ずあった' if ok else 'なかったこともありうる')(all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([1, -1], repeat=8) for d in [[sum(g[:i]) for i in range(9)]] for s in range(9) for t in range(s, 9) if d[s] == 1 and d[t] == -3))",
+       "hints": [
+        "点差を「A の点 − B の点」とします。",
+        "点差は 1 から −3 まで、1 ずつ変わります。",
+        "0 は 1 と −3 のあいだにありますか。"
+       ],
+       "paths": [
+        [
+         "点差は 1 ずつ変わる",
+         "1 から −3 へ行くあいだに 0 を通る",
+         "必ずあった"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、3 の倍数の個数を c(n) とします。たとえば c(7) = 2 です。c(n) = 7 となる正の整数 n のうち、いちばん大きいものはいくつですか。",
+       "answer": 23,
+       "check": "max(n for n in range(1, 100) if n // 3 == 7)",
+       "hints": [
+        "n が 1 ふえると、c(n) はどれだけふえますか。",
+        "c(n) が 7 になるのは、7 個目の 3 の倍数に着いたときです。それはいくつですか。",
+        "c(n) が 8 になるのはいつですか。その直前の n を答えましょう。"
+       ],
+       "paths": [
+        [
+         "c(n) は 0 か 1 ずつふえる",
+         "7 個目の 3 の倍数は 21",
+         "8 個目は 24 なので c(n) = 7 は n = 21、22、23",
+         "いちばん大きいのは 23"
+        ]
+       ],
+       "note": "c(n) は 1 以下ずつしかふえないので、0、1、2、… のどの値もとびこえずにとる。だから c(n) = 7 となる n は必ずある。"
+      },
+      {
+       "part": "今日",
+       "text": "赤玉 6 個と白玉 6 個を 1 列に並べます。左はしと右はしは、どちらも赤玉です。左から何個か（1 個以上 11 個以下）を取ると、その中の赤玉と白玉を同じ数にできますか。",
+       "choices": [
+        "どう並べても必ずできる",
+        "できない並べ方もある"
+       ],
+       "answer": "どう並べても必ずできる",
+       "check": "'どう並べても必ずできる' if all(any(sum(1 for j in range(k) if j in s) * 2 == k for k in range(1, 12)) for s in [set((0, 11) + c) for c in itertools.combinations(range(1, 11), 4)]) else 'できない並べ方もある'",
+       "hints": [
+        "左から k 個の（赤の数 − 白の数）を d(k) とします。k が 1 ふえると、d はどれだけ変わりますか。",
+        "d(1) はいくつですか。全部の 12 個では d(12) = 0 です。右はしが赤なら d(11) はいくつですか。",
+        "1 ずつ変わる d が、1 から −1 まで変わります。"
+       ],
+       "paths": [
+        [
+         "d(k) = 左から k 個の赤 − 白",
+         "d(1) = 1",
+         "d(12) = 0 で右はしが赤なので d(11) = −1",
+         "d は 1 ずつ変わるので途中で 0 になる",
+         "必ずできる"
+        ]
+       ],
+       "note": "右はしが白玉だと d(11) = 1 となり、必ずできるとは言えない（3 日目の思い出す）。"
+      },
+      {
+       "part": "今日",
+       "text": "10 個の玉が輪の形に並んでいて、そのうち 4 個が ● です（図は並べ方の 1 つの例）。どう並べても、続いて並んだ 5 個の中に ● がちょうど 2 個のところがありますか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120.0\" cy=\"23.0\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"150.6\" cy=\"32.9\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"169.5\" cy=\"58.9\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"169.5\" cy=\"91.1\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"150.6\" cy=\"117.1\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"120.0\" cy=\"127.0\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"89.4\" cy=\"117.1\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"70.5\" cy=\"91.1\" r=\"8\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"70.5\" cy=\"58.9\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"89.4\" cy=\"32.9\" r=\"8\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "どう並べても必ずある",
+        "ない並べ方もある"
+       ],
+       "answer": "どう並べても必ずある",
+       "check": "'どう並べても必ずある' if all(any(sum(1 for j in range(i, i + 5) if j % 10 in s) == 2 for i in range(10)) for s in [set(c) for c in itertools.combinations(range(10), 4)]) else 'ない並べ方もある'",
+       "hints": [
+        "ある 5 個と、残りの 5 個（反対がわ）の ● の個数を足すと、いくつですか。",
+        "5 個の組を 1 つずつ回すと、● の個数はどれだけ変わりますか。",
+        "半周回すと、● の個数は x 個から 4 − x 個に変わります。2 をはさんでいますか。"
+       ],
+       "paths": [
+        [
+         "ある 5 個の ● を x 個とすると反対がわは 4 − x 個",
+         "x が 2 ならそれでよい",
+         "2 でないなら x と 4 − x は 2 をはさむ",
+         "1 つずつ回すと 1 以下しか変わらないので途中で 2 になる",
+         "必ずある"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "整数の列で、となりどうしの差はいつも 3 以下です。はじめの項は 0、最後の項は 30 です。「0 から 30 までの、続いた □ 個の整数のうち、少なくとも 1 つは必ず列に現れる」と言えます。□ にあてはまる数のうち、いちばん小さいものはいくつですか。",
+       "answer": 3,
+       "check": "min(m for m in range(1, 10) if all(any(x in range(k, k + m) for x in range(0, 31, 3)) for k in range(0, 31 - m + 1)))",
+       "hints": [
+        "0、3、6、…、30 の列では、どの整数がとびこえられていますか。続いた 2 個の整数が両方とびこえられることはありますか。",
+        "続いた 3 個の整数 k、k + 1、k + 2 をどれもとびこえるには、となり合う 2 項がどんな値でないといけませんか。",
+        "その 2 項の差はいくつ以上になりますか。"
+       ],
+       "paths": [
+        [
+         "0、3、6、…、30 では 1 と 2 がどちらも現れないので 2 では言えない",
+         "続いた 3 個をとびこえるには k − 1 以下から k + 3 以上へとぶ",
+         "差が 4 以上になり矛盾",
+         3
+        ]
+       ],
+       "note": "差が 1 以下のときは「1 個」で言えるのが中間値の定理。差が d 以下なら、続いた d 個のどれかが現れる、と広げられる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、4 の倍数の個数を c(n) とします。c(n) = 5 となる正の整数 n のうち、いちばん小さいものはいくつですか。",
+       "answer": 20,
+       "check": "min(n for n in range(1, 100) if n // 4 == 5)",
+       "hints": [
+        "c(n) は、4 の倍数に着くたびに 1 ふえます。",
+        "5 個目の 4 の倍数はいくつですか。",
+        "その直前では、c(n) はいくつですか。"
+       ],
+       "paths": [
+        [
+         "5 個目の 4 の倍数は 20",
+         "19 までは c(n) = 4",
+         "いちばん小さいのは 20"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 個の玉が輪の形に並んでいて、そのうち 4 個が ● です。どう並べても、続いて並んだ 4 個の中に ● がちょうど 2 個のところがありますか。",
+       "choices": [
+        "どう並べても必ずある",
+        "ない並べ方もある"
+       ],
+       "answer": "どう並べても必ずある",
+       "check": "'どう並べても必ずある' if all(any(sum(1 for j in range(i, i + 4) if j % 8 in s) == 2 for i in range(8)) for s in [set(c) for c in itertools.combinations(range(8), 4)]) else 'ない並べ方もある'",
+       "hints": [
+        "ある 4 個と、反対がわの 4 個の ● の個数を足すといくつですか。",
+        "1 つずつ回すと、● の個数はどれだけ変わりますか。",
+        "半周回すと、x 個から 4 − x 個に変わります。"
+       ],
+       "paths": [
+        [
+         "ある 4 個の ● を x 個とすると反対がわは 4 − x 個",
+         "2 をはさむか 2 そのもの",
+         "1 以下ずつ変わるので途中で 2 になる",
+         "必ずある"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "赤玉 7 個と白玉 7 個を 1 列に並べます。左はしは白玉、右はしも白玉です。左から何個か（1 個以上 13 個以下）を取ると、その中の赤玉と白玉を同じ数にできますか。",
+       "choices": [
+        "どう並べても必ずできる",
+        "できない並べ方もある"
+       ],
+       "answer": "どう並べても必ずできる",
+       "check": "'どう並べても必ずできる' if all(any(sum(1 for j in range(k) if j not in s) * 2 == k for k in range(1, 14)) for s in [set((0, 13) + c) for c in itertools.combinations(range(1, 13), 5)]) else 'できない並べ方もある'",
+       "hints": [
+        "左から k 個の（白の数 − 赤の数）を d(k) とします。",
+        "d(1) はいくつですか。右はしが白なら d(13) はいくつですか。",
+        "1 ずつ変わる d が、1 から −1 まで変わります。"
+       ],
+       "paths": [
+        [
+         "d(1) = 1",
+         "d(14) = 0 で右はしが白なので d(13) = −1",
+         "途中で 0 になる",
+         "必ずできる"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1 から n までの整数のうち、5 の倍数の個数を c(n) とします。c(n) = 3 となる正の整数 n のうち、いちばん大きいものはいくつですか。",
+       "answer": 19,
+       "check": "max(n for n in range(1, 100) if n // 5 == 3)",
+       "hints": [
+        "c(n) が 3 になるのは、3 個目の 5 の倍数に着いたときです。",
+        "c(n) が 4 になるのは、いつですか。",
+        "その直前の n を答えましょう。"
+       ],
+       "paths": [
+        [
+         "3 個目の 5 の倍数は 15",
+         "4 個目は 20",
+         "c(n) = 3 は n = 15 から 19",
+         19
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "赤玉 5 個と白玉 5 個を 1 列に並べます。左はしは赤玉、右はしは白玉です。左から何個か（1 個以上 9 個以下）を取ると、その中の赤玉と白玉を同じ数にできますか。",
+       "choices": [
+        "どう並べても必ずできる",
+        "できない並べ方もある"
+       ],
+       "answer": "できない並べ方もある",
+       "check": "'どう並べても必ずできる' if all(any(sum(1 for j in range(k) if j in s) * 2 == k for k in range(1, 10)) for s in [set((0,) + c) for c in itertools.combinations(range(1, 9), 4)]) else 'できない並べ方もある'",
+       "hints": [
+        "左から k 個の（赤の数 − 白の数）を d(k) とします。d(1) はいくつですか。",
+        "右はしが白なら、d(9) はいくつですか。",
+        "d(1) と d(9) は 0 をはさんでいますか。0 を通らない並べ方を作ってみましょう。"
+       ],
+       "paths": [
+        [
+         "d(1) = 1",
+         "d(10) = 0 で右はしが白なので d(9) = 1",
+         "両はしが 0 をはさまない",
+         "赤赤白赤白赤白赤白白 では d は 1、2、1、2、1、2、1、2、1 で 0 にならない",
+         "できない並べ方もある"
+        ]
+       ],
+       "note": "中間値の考えは「両はしが k をはさむとき」にしか使えない。はさまないときは、反例を作って確かめる。"
+      },
+      {
+       "part": "わけ",
+       "text": "「整数の列 a₁、a₂、…、aₙ で、となりどうしの差がいつも 1 以下とする。整数 k が a₁ < k < aₙ をみたすなら、列のどこかに k に等しい項がある」ことを、背理法で示しましょう。",
+       "explain": "例：「どの項も k に等しくないと仮定する。項はどれも整数なので、どの項も k − 1 以下か k + 1 以上のどちらかである。a₁ < k なので a₁ は k − 1 以下、aₙ > k なので aₙ は k + 1 以上である。列を前から見ていくと、k − 1 以下の項から k + 1 以上の項へ変わるところが少なくとも 1 か所あるので、となり合う 2 項 p、q（p が前）で、p ≤ k − 1、q ≥ k + 1 となるものがある。このとき q − p ≥ (k + 1) − (k − 1) = 2 となり、となりどうしの差が 1 以下であることと矛盾する。よって、列のどこかに k に等しい項がある。」と書ければよい。①「どの項も k でないと仮定する」と結論の否定を書き、項が k − 1 以下と k + 1 以上の 2 つに分かれることを示す、② 分かれ目のとなり合う 2 項を取り、差が 2 以上であることを式で出す、③「差が 1 以下であることと矛盾する」と結ぶ、の 3 点を見る。小さい列でためしただけで終わっていたら、例ではすべての列を示せないことを話す。「項が整数」を使ったところ（k − 1 以下か k + 1 以上に分かれる）を指させるかも聞く。0.5 ずつ変わる列や差が 2 の列では成り立たないことにふれると、どの仮定が要るかがはっきりする。",
+       "hints": [
+        "結論の否定は「どの項も k ではない」です。項は整数なので、それぞれの項はどんな範囲にありますか。",
+        "a₁ と aₙ は、どちらの範囲に入りますか。範囲が変わるところのとなり合う 2 項を考えましょう。",
+        "その 2 項の差は、いくつ以上ですか。何と矛盾しますか。"
+       ],
+       "paths": [
+        [
+         "どの項も k でないと仮定する",
+         "どの項も k − 1 以下か k + 1 以上",
+         "a₁ は k − 1 以下で aₙ は k + 1 以上",
+         "分かれ目のとなり合う 2 項の差は 2 以上",
+         "差が 1 以下と矛盾",
+         "よって k に等しい項がある"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 点ずつ点が入る試合で、A チームがリードしていた時点のあとに、B チームがリードしていた時点がありました。そのあいだに同点の時点があることを、前の問題の結果を使って示しましょう。",
+       "explain": "例：「試合の始まりと、点が入るたびの『A の点 − B の点』を、時間の順に並べた整数の列を d₁、d₂、…、dₘ とする。1 点入るたびに A か B の点が 1 ふえるので、となりどうしの差はいつも 1 である。A がリードしていた時点の値を dₛ、B がリードしていた時点の値を dₜ（s < t）とすると、dₛ > 0 > dₜ である。dₛ から dₜ までの列は、となりどうしの差が 1 以下で、0 は両はしのあいだにあるので、前の問題の結果より、どこかに 0 に等しい項がある。その時点が同点である。」と書ければよい。①「〜とする」で点差の列を決める、② となりどうしの差が 1 であることを示す、③ 両はしが 0 をはさむので前の結果で結ぶ、の 3 点を見る。列の向きが減る向き（dₛ > dₜ）でも、前の結果は使える（列を逆から読むか、−d を考える）ことにふれる。",
+       "hints": [
+        "点が入るたびの「A の点 − B の点」を、順に並べた列を考えましょう。",
+        "1 点入ると、この列のとなりどうしの差はいくつですか。",
+        "A がリードしているとき、B がリードしているとき、列の値は正ですか、負ですか。"
+       ],
+       "paths": [
+        [
+         "点差の列を d₁、d₂、… とする",
+         "1 点入るたびに差は 1",
+         "A のリードで正、B のリードで負",
+         "0 をはさむので前の結果より 0 の項がある",
+         "同点の時点がある"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "赤玉 6 個と白玉 6 個を輪の形に並べます。どう並べても、続いて並んだ 6 個の中に赤玉がちょうど 3 個のところがあることを示しましょう。",
+       "explain": "例：「玉に輪の順に 1 から 12 の番号をつけ、i 番から続く 6 個の中の赤玉の数を r(i) とする（12 番の次は 1 番）。i 番から続く 6 個と i + 6 番から続く 6 個を合わせると輪全体になるので、r(i) + r(i + 6) = 6。i を 1 ふやすと、玉が 1 個出て 1 個入るので、r は 1 以下しか変わらない。r(1) = 3 ならそれでよい。r(1) < 3 なら r(7) = 6 − r(1) > 3、r(1) > 3 なら r(7) < 3 である。どちらの場合も、列 r(1)、r(2)、…、r(7) は、となりどうしの差が 1 以下の整数の列で、両はしが 3 をはさむので、1 問目の結果より r(i) = 3 となる i がある。」と書ければよい。① r(i) を決めて r(i) + r(i + 6) = 6 を導く、② 1 つずらすと 1 以下しか変わらないことを書く、③ r(1) と r(7) が 3 をはさむので中間値の結果で結ぶ、の 3 点を見る。r(1) = 3 の場合を分けて書いているか（L-007 の場合分け）も見る。",
+       "hints": [
+        "i 番から続く 6 個の赤玉の数を r(i) とします。r(i) と r(i + 6) を足すと、いくつですか。",
+        "i を 1 ふやすと、r はどれだけ変わりますか。",
+        "r(1) が 3 より小さいとき、r(7) は 3 より大きいですか、小さいですか。1 問目の結果が使えます。"
+       ],
+       "paths": [
+        [
+         "r(i) を i 番から続く 6 個の赤玉の数とする",
+         "r(i) + r(i + 6) = 6",
+         "1 つずらすと r は 1 以下しか変わらない",
+         "r(1) が 3 でなければ r(1) と r(7) は 3 をはさむ",
+         "中間値の結果で r(i) = 3 の i がある"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、6 の倍数の個数を c(n) とします。c(n) = 4 となる正の整数 n のうち、いちばん小さいものはいくつですか。",
+       "answer": 24,
+       "check": "min(n for n in range(1, 100) if n // 6 == 4)",
+       "hints": [
+        "c(n) は、6 の倍数に着くたびに 1 ふえます。",
+        "4 個目の 6 の倍数はいくつですか。",
+        "その直前では、c(n) はいくつですか。"
+       ],
+       "paths": [
+        [
+         "4 個目の 6 の倍数は 24",
+         "23 までは c(n) = 3",
+         "いちばん小さいのは 24"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "● と ○ が 14 個並んでいます。続いて並んだ 5 個の中の ● の個数として現れる数は、何通りありますか。",
+       "figure": "●○○○○○●●●●●○●○",
+       "answer": 6,
+       "check": "len(set(fig[i:i + 5].count('●') for i in range(len(fig) - 4)))",
+       "hints": [
+        "5 個の組を 1 つずらすと、● の個数はどれだけ変わりますか。",
+        "いちばん多い組と、いちばん少ない組を探しましょう。",
+        "そのあいだの個数は、すべて現れますか。"
+       ],
+       "paths": [
+        [
+         "ずらすと個数の変化は 1 以下",
+         "いちばん少ないのは 2〜6 番目の 0 個",
+         "いちばん多いのは 7〜11 番目の 5 個",
+         "0 から 5 まですべて現れて 6 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、8 の倍数の個数を c(n) とします。c(n) = 3 となる正の整数 n のうち、いちばん大きいものはいくつですか。",
+       "answer": 31,
+       "check": "max(n for n in range(1, 100) if n // 8 == 3)",
+       "hints": [
+        "3 個目の 8 の倍数はいくつですか。",
+        "4 個目の 8 の倍数はいくつですか。",
+        "c(n) が 4 になる直前の n を答えましょう。"
+       ],
+       "paths": [
+        [
+         "3 個目は 24",
+         "4 個目は 32",
+         "いちばん大きいのは 31"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "● と ○ が 10 個並んでいます。続いて並んだ 3 個の中の ● の個数として現れる数は、何通りありますか。",
+       "figure": "●●●○○○●○○●",
+       "answer": 4,
+       "check": "len(set(fig[i:i + 3].count('●') for i in range(len(fig) - 2)))",
+       "hints": [
+        "3 個の組を 1 つずらすと、● の個数はどれだけ変わりますか。",
+        "いちばん多い組と、いちばん少ない組を探しましょう。",
+        "そのあいだの個数は、すべて現れますか。"
+       ],
+       "paths": [
+        [
+         "いちばん多いのは左はしの 3 個",
+         "いちばん少ないのは 4〜6 番目の 0 個",
+         "0 から 3 まで現れて 4 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "赤玉 4 個と白玉 4 個を輪の形に並べます。どう並べても、続いて並んだ 4 個の中に赤玉がちょうど 2 個のところがありますか。",
+       "choices": [
+        "どう並べても必ずある",
+        "ない並べ方もある"
+       ],
+       "answer": "どう並べても必ずある",
+       "check": "'どう並べても必ずある' if all(any(sum(1 for j in range(i, i + 4) if j % 8 in s) == 2 for i in range(8)) for s in [set(c) for c in itertools.combinations(range(8), 4)]) else 'ない並べ方もある'",
+       "hints": [
+        "i 番から続く 4 個の赤玉の数を r(i) とします。r(i) + r(i + 4) はいくつですか。",
+        "1 つずらすと、r はどれだけ変わりますか。",
+        "r(1) が 2 でないとき、r(1) と r(5) は 2 をはさみますか。"
+       ],
+       "paths": [
+        [
+         "r(i) + r(i + 4) = 4",
+         "r は 1 以下ずつ変わる",
+         "r(1) と r(5) は 2 をはさむか 2 そのもの",
+         "必ずある"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "赤玉 8 個と白玉 8 個を輪の形に並べます（図は 1 つの例で、● が赤玉、○ が白玉）。どう並べても、続いて並んだ 8 個の中に赤玉がちょうど 4 個のところがありますか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120.0\" cy=\"23.0\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"139.9\" cy=\"27.0\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"156.8\" cy=\"38.2\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"168.0\" cy=\"55.1\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"172.0\" cy=\"75.0\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"168.0\" cy=\"94.9\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"156.8\" cy=\"111.8\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"139.9\" cy=\"123.0\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120.0\" cy=\"127.0\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"100.1\" cy=\"123.0\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"83.2\" cy=\"111.8\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"72.0\" cy=\"94.9\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"68.0\" cy=\"75.0\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"72.0\" cy=\"55.1\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"83.2\" cy=\"38.2\" r=\"7\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"100.1\" cy=\"27.0\" r=\"7\" stroke=\"currentColor\" fill=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "どう並べても必ずある",
+        "ない並べ方もある"
+       ],
+       "answer": "どう並べても必ずある",
+       "check": "'どう並べても必ずある' if all(any(sum(1 for j in range(i, i + 8) if j % 16 in s) == 4 for i in range(16)) for s in [set(c) for c in itertools.combinations(range(16), 8)]) else 'ない並べ方もある'",
+       "hints": [
+        "i 番から続く 8 個の赤玉の数を r(i) とします。r(i) + r(i + 8) はいくつですか。",
+        "1 つずらすと、r はどれだけ変わりますか。",
+        "r(1) が 4 でないとき、r(1) と r(9) は 4 をはさみますか。"
+       ],
+       "paths": [
+        [
+         "r(i) + r(i + 8) = 8",
+         "r は 1 以下ずつ変わる",
+         "r(1) と r(9) は 4 をはさむか 4 そのもの",
+         "必ずある"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 点ずつ点が入る試合で、B チームが 2 点リードしていた時点のあとで、A チームが 2 点リードしていた時点がありました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "必ずあった",
+       "check": "(lambda ok: '必ずあった' if ok else 'なかったこともありうる')(all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([1, -1], repeat=8) for d in [[sum(g[:i]) for i in range(9)]] for s in range(9) for t in range(s, 9) if d[s] == -2 and d[t] == 2))",
+       "hints": [
+        "点差を「A の点 − B の点」とします。はじめの時点と、あとの時点の点差はいくつですか。",
+        "点差は 1 ずつ変わります。",
+        "0 は −2 と 2 のあいだにありますか。"
+       ],
+       "paths": [
+        [
+         "点差は −2 から 2 へ 1 ずつ変わる",
+         "0 をとびこえられない",
+         "必ずあった"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "整数の列について、「となりどうしの差がいつも 1 以下である」は、「はじめの項と最後の項のあいだの整数が、すべて列に現れる」ための何ですか。",
+       "choices": [
+        "必要条件だが十分条件ではない",
+        "十分条件だが必要条件ではない",
+        "必要十分条件",
+        "必要条件でも十分条件でもない"
+       ],
+       "answer": "十分条件だが必要条件ではない",
+       "check": "['必要条件でも十分条件でもない', '十分条件だが必要条件ではない', '必要条件だが十分条件ではない', '必要十分条件'][(lambda S, p, q: all(q(x) for x in S if p(x)) + 2 * all(p(x) for x in S if q(x)))([t for t in itertools.product(range(5), repeat=4)], lambda t: all(abs(t[i + 1] - t[i]) <= 1 for i in range(3)), lambda t: all(k in t for k in range(min(t[0], t[3]) + 1, max(t[0], t[3]))))]",
+       "hints": [
+        "差がいつも 1 以下ならば、あいだの整数はすべて現れますか（中間値の定理）。",
+        "反対に、あいだの整数がすべて現れていれば、差はいつも 1 以下ですか。列 1、3、2、4 で調べましょう。",
+        "「p ならば q」が真のとき、p は q の十分条件、q は p の必要条件でした。"
+       ],
+       "paths": [
+        [
+         "差が 1 以下ならばすべて現れるは真",
+         "1、3、2、4 は 2 と 3 が現れるが差 2 がある",
+         "逆は偽",
+         "十分条件だが必要条件ではない"
+        ]
+       ],
+       "note": "1、3、2、4 のような反例を 1 つ挙げれば、逆が成り立たないことを示せる（L-013）。"
+      },
+      {
+       "part": "今日",
+       "text": "背理法で「となりどうしの差がいつも 1 以下である」が成り立たないと仮定します。仮定したことを正しく言いかえたものは、どれですか。",
+       "choices": [
+        "差が 2 以上のとなり合う 2 項がある",
+        "どのとなり合う 2 項の差も 2 以上である",
+        "差が 1 以下のとなり合う 2 項がある"
+       ],
+       "answer": "差が 2 以上のとなり合う 2 項がある",
+       "check": "(lambda c: c[0] if len(c) == 1 else 'きまらない')([k for k, f in {'差が 2 以上のとなり合う 2 項がある': lambda t: any(abs(t[i + 1] - t[i]) >= 2 for i in range(3)), 'どのとなり合う 2 項の差も 2 以上である': lambda t: all(abs(t[i + 1] - t[i]) >= 2 for i in range(3)), '差が 1 以下のとなり合う 2 項がある': lambda t: any(abs(t[i + 1] - t[i]) <= 1 for i in range(3))}.items() if all(f(t) == (not all(abs(t[i + 1] - t[i]) <= 1 for i in range(3))) for t in itertools.product(range(5), repeat=4))])",
+       "hints": [
+        "「いつも（すべての組で）1 以下」の否定は、どんな形でしたか。",
+        "「すべて」の否定は「少なくとも 1 つは〜でない」でした。",
+        "整数で「1 以下でない」は、「いくつ以上」と言いかえられますか。"
+       ],
+       "paths": [
+        [
+         "すべての組で差が 1 以下",
+         "否定は「差が 1 以下でない組がある」",
+         "整数なので差が 2 以上のとなり合う 2 項がある"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "n 以下の素数の個数を p(n) とします。たとえば p(12) = 5 です。p(n) = 6 となる 30 以下の正の整数 n は、全部で何個ありますか。",
+       "answer": 4,
+       "check": "len([n for n in range(1, 31) if sum(1 for p in range(2, n + 1) if all(p % q for q in range(2, p))) == 6])",
+       "hints": [
+        "n が 1 ふえると、p(n) はどれだけふえますか。",
+        "小さい順に 6 個目の素数と、7 個目の素数はいくつですか。",
+        "そのあいだの n を数えましょう。"
+       ],
+       "paths": [
+        [
+         "素数は 2、3、5、7、11、13、17",
+         "6 個目は 13、7 個目は 17",
+         "n = 13、14、15、16 の 4 個"
+        ]
+       ],
+       "note": "p(n) も 0 か 1 ずつしかふえないので、どの値もとびこえない。ただし、同じ値が何回続くかは素数のあいだの間かくで決まる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "15 個の玉が 1 列に並んでいて、そのうち 6 個が ● です。どう並んでいても、続いて並んだ 5 個の中に ● がちょうど 2 個のところはありますか。",
+       "choices": [
+        "どう並んでいても必ずある",
+        "ないこともある"
+       ],
+       "answer": "どう並んでいても必ずある",
+       "check": "'どう並んでいても必ずある' if all(any(sum(1 for j in range(i, i + 5) if j in s) == 2 for i in range(11)) for s in [set(c) for c in itertools.combinations(range(15), 6)]) else 'ないこともある'",
+       "hints": [
+        "1〜5 番、6〜10 番、11〜15 番の 3 つの組の ● の個数を足すと、いくつですか。",
+        "3 つの数の和が 6 なら、2 以上の組と 2 以下の組がありますか（背理法の和の押さえ）。",
+        "5 個の組を 1 つずつずらすと、● の個数はどれだけ変わりますか。"
+       ],
+       "paths": [
+        [
+         "3 つの組の ● の和は 6",
+         "どれも 3 以上なら和は 9 以上、どれも 1 以下なら和は 3 以下で矛盾",
+         "2 以上の組と 2 以下の組がある",
+         "ずらすと 1 以下しか変わらないのであいだに 2 の組がある",
+         "必ずある"
+        ]
+       ],
+       "note": "和の押さえ（L-011）で「2 以上の組」と「2 以下の組」を見つけ、中間値の考えでつなぐ。2 つの考えを組み合わせる問題。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "「整数の列で、はじめの項が 1、最後の項が 5 ならば、3 に等しい項がある」は正しくありません。反例になっている列は、どれですか。",
+       "choices": [
+        "1、2、3、4、5",
+        "1、2、4、5",
+        "1、3、5"
+       ],
+       "answer": "1、2、4、5",
+       "check": "(lambda c: c[0] if len(c) == 1 else 'きまらない')([k for k, t in {'1、2、3、4、5': (1, 2, 3, 4, 5), '1、2、4、5': (1, 2, 4, 5), '1、3、5': (1, 3, 5)}.items() if t[0] == 1 and t[-1] == 5 and 3 not in t])",
+       "hints": [
+        "反例は、「はじめが 1、最後が 5」をみたして、「3 に等しい項がある」をみたさない列です。",
+        "それぞれの列に 3 があるかを見ましょう。",
+        "この反例で、となりどうしの差はいつも 1 以下ですか。"
+       ],
+       "paths": [
+        [
+         "はじめ 1 で最後 5",
+         "3 がない列は 1、2、4、5",
+         "2 から 4 へ差 2 でとびこえている"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "n 以下の素数の個数を p(n) とします。p(n) = 8 となる正の整数 n のうち、いちばん小さいものはいくつですか。",
+       "answer": 19,
+       "check": "min(n for n in range(1, 60) if sum(1 for p in range(2, n + 1) if all(p % q for q in range(2, p))) == 8)",
+       "hints": [
+        "小さい順に素数を書き出しましょう。",
+        "8 個目の素数はいくつですか。",
+        "その直前では、p(n) はいくつですか。"
+       ],
+       "paths": [
+        [
+         "素数は 2、3、5、7、11、13、17、19",
+         "8 個目は 19",
+         "いちばん小さいのは 19"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、偶数の個数を e(n) とします。e(n) = 9 となる正の整数 n は、全部で何個ありますか。",
+       "answer": 2,
+       "check": "len([n for n in range(1, 100) if n // 2 == 9])",
+       "hints": [
+        "9 個目の偶数はいくつですか。",
+        "10 個目の偶数はいくつですか。",
+        "そのあいだの n を数えましょう。"
+       ],
+       "paths": [
+        [
+         "9 個目の偶数は 18",
+         "10 個目は 20",
+         "n = 18、19 の 2 個"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "整数の列で、となりどうしの差はいつも 1 です。はじめの項は −6、最後の項は 2 です。この列に必ず現れる整数は、全部で何個ですか。",
+       "answer": 9,
+       "check": "len(range(-6, 3))",
+       "hints": [
+        "−6 と 2 のあいだの整数は、とびこえられますか。",
+        "両はしの −6 と 2 も、列に現れています。",
+        "−6 から 2 までの整数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "−6 から 2 までの整数はすべて現れる",
+         "2 − (−6) + 1 = 9 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 点ずつ点が入る卓球の試合で、A さんが 3 点リードしていた時点のあとで、B さんが 1 点リードしていた時点がありました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "必ずあった",
+       "check": "(lambda ok: '必ずあった' if ok else 'なかったこともありうる')(all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([1, -1], repeat=8) for d in [[sum(g[:i]) for i in range(9)]] for s in range(9) for t in range(s, 9) if d[s] == 3 and d[t] == -1))",
+       "hints": [
+        "点差を「A の点 − B の点」とします。",
+        "1 点入ると、点差はどれだけ変わりますか。",
+        "3 から −1 へ変わるあいだに、0 をとびこえられますか。"
+       ],
+       "paths": [
+        [
+         "点差は 1 ずつ変わる",
+         "3 から −1 へ変わるあいだに 0 を通る",
+         "必ずあった"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "あるゲームでは、1 回に 2 点か 5 点が入ります。A さんが 1 点リードしていた時点のあとで、B さんが 1 点リードしていた時点がありました。そのあいだに、同点の時点は必ずありましたか。",
+       "choices": [
+        "必ずあった",
+        "なかったこともありうる"
+       ],
+       "answer": "なかったこともありうる",
+       "check": "'必ずあった' if all(any(d[u] == 0 for u in range(s, t)) for g in itertools.product([2, 5, -2, -5], repeat=5) for d in [[sum(g[:i]) for i in range(6)]] for s in range(6) for t in range(s, 6) if d[s] == 1 and d[t] == -1) else 'なかったこともありうる'",
+       "hints": [
+        "1 回に点が入ると、点差はどれだけ変わりますか。",
+        "点差が 1 のときに B さんが 2 点入れると、点差はいくつですか。",
+        "同点を通らない点の入り方を、1 つ作ってみましょう。"
+       ],
+       "paths": [
+        [
+         "A 5 点、B 2 点、B 2 点で A の 1 点リード",
+         "B が 2 点入れて B の 1 点リード",
+         "点差は 1 から −1 へとぶ",
+         "なかったこともありうる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "● と ○ が 12 個並んでいます。続いて並んだ 3 個の中の ● の個数として現れる数は、何通りありますか。",
+       "figure": "○●●○○○●●●○●○",
+       "answer": 4,
+       "check": "len(set(fig[i:i + 3].count('●') for i in range(len(fig) - 2)))",
+       "hints": [
+        "3 個の組を 1 つずらすと、● の個数はどれだけ変わりますか。",
+        "いちばん多い組と、いちばん少ない組を探しましょう。",
+        "そのあいだの個数は、すべて現れますか。"
+       ],
+       "paths": [
+        [
+         "いちばん少ないのは 4〜6 番目の 0 個",
+         "いちばん多いのは 7〜9 番目の 3 個",
+         "0 から 3 まで現れて 4 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、9 の倍数の個数を c(n) とします。c(n) = 2 となる正の整数 n のうち、いちばん大きいものはいくつですか。",
+       "answer": 26,
+       "check": "max(n for n in range(1, 100) if n // 9 == 2)",
+       "hints": [
+        "2 個目の 9 の倍数はいくつですか。",
+        "3 個目の 9 の倍数はいくつですか。",
+        "c(n) が 3 になる直前の n を答えましょう。"
+       ],
+       "paths": [
+        [
+         "2 個目は 18",
+         "3 個目は 27",
+         "いちばん大きいのは 26"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "赤玉 4 個と白玉 4 個を 1 列に並べます。左はしと右はしは、どちらも赤玉です。左から何個か（1 個以上 7 個以下）を取ると、その中の赤玉と白玉を同じ数にできますか。",
+       "choices": [
+        "どう並べても必ずできる",
+        "できない並べ方もある"
+       ],
+       "answer": "どう並べても必ずできる",
+       "check": "'どう並べても必ずできる' if all(any(sum(1 for j in range(k) if j in s) * 2 == k for k in range(1, 8)) for s in [set((0, 7) + c) for c in itertools.combinations(range(1, 7), 2)]) else 'できない並べ方もある'",
+       "hints": [
+        "左から k 個の（赤の数 − 白の数）を d(k) とします。",
+        "d(1) はいくつですか。右はしが赤なら d(7) はいくつですか。",
+        "d は 1 ずつ変わります。"
+       ],
+       "paths": [
+        [
+         "d(1) = 1",
+         "d(8) = 0 で右はしが赤なので d(7) = −1",
+         "途中で 0 になる",
+         "必ずできる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "12 個の玉が輪の形に並んでいて、そのうち 6 個が ● です。どう並べても、続いて並んだ 6 個の中に ● がちょうど 3 個のところがありますか。",
+       "choices": [
+        "どう並べても必ずある",
+        "ない並べ方もある"
+       ],
+       "answer": "どう並べても必ずある",
+       "check": "'どう並べても必ずある' if all(any(sum(1 for j in range(i, i + 6) if j % 12 in s) == 3 for i in range(12)) for s in [set(c) for c in itertools.combinations(range(12), 6)]) else 'ない並べ方もある'",
+       "hints": [
+        "ある 6 個と、反対がわの 6 個の ● の個数を足すと、いくつですか。",
+        "1 つずつ回すと、● の個数はどれだけ変わりますか。",
+        "半周回すと、x 個から 6 − x 個に変わります。"
+       ],
+       "paths": [
+        [
+         "r(i) + r(i + 6) = 6",
+         "r は 1 以下ずつ変わる",
+         "r(1) と r(7) は 3 をはさむか 3 そのもの",
+         "必ずある"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "整数の列について、「はじめの項と最後の項のあいだの整数が、すべて列に現れる」は、「となりどうしの差がいつも 1 以下である」ための何ですか。",
+       "choices": [
+        "必要条件だが十分条件ではない",
+        "十分条件だが必要条件ではない",
+        "必要十分条件",
+        "必要条件でも十分条件でもない"
+       ],
+       "answer": "必要条件だが十分条件ではない",
+       "check": "['必要条件でも十分条件でもない', '十分条件だが必要条件ではない', '必要条件だが十分条件ではない', '必要十分条件'][(lambda S, p, q: all(q(x) for x in S if p(x)) + 2 * all(p(x) for x in S if q(x)))([t for t in itertools.product(range(5), repeat=4)], lambda t: all(k in t for k in range(min(t[0], t[3]) + 1, max(t[0], t[3]))), lambda t: all(abs(t[i + 1] - t[i]) <= 1 for i in range(3)))]",
+       "hints": [
+        "「差がいつも 1 以下ならば、あいだの整数がすべて現れる」は真ですか。",
+        "その逆は真ですか。列 1、3、2、4 で調べましょう。",
+        "今度は、たずねている向きが 4 日目と反対です。"
+       ],
+       "paths": [
+        [
+         "差が 1 以下ならばすべて現れるは真",
+         "だから「すべて現れる」は必要条件",
+         "1、3、2、4 が反例で十分条件ではない",
+         "必要条件だが十分条件ではない"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "整数の列で、となりどうしの差はいつも 1 です。はじめの項は 12、最後の項は 4 です。この列に必ず現れる整数は、全部で何個ですか。",
+       "answer": 9,
+       "check": "len(range(4, 13))",
+       "hints": [
+        "12 から 4 へ減るあいだに、とびこえられる整数はありますか。",
+        "両はしも数に入れます。",
+        "4 から 12 までの整数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "4 から 12 までの整数はすべて現れる",
+         "12 − 4 + 1 = 9 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "● と ○ が 11 個並んでいます。続いて並んだ 4 個の中の ● の個数として現れる数は、何通りありますか。",
+       "figure": "●●○○○○●●●●○",
+       "answer": 5,
+       "check": "len(set(fig[i:i + 4].count('●') for i in range(len(fig) - 3)))",
+       "hints": [
+        "4 個の組を 1 つずらすと、● の個数はどれだけ変わりますか。",
+        "いちばん多い組と、いちばん少ない組を探しましょう。",
+        "そのあいだの個数は、すべて現れますか。"
+       ],
+       "paths": [
+        [
+         "いちばん少ないのは 3〜6 番目の 0 個",
+         "いちばん多いのは 7〜10 番目の 4 個",
+         "0 から 4 まで現れて 5 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から n までの整数のうち、7 の倍数の個数を c(n) とします。c(n) = 3 となる正の整数 n のうち、いちばん小さいものはいくつですか。",
+       "answer": 21,
+       "check": "min(n for n in range(1, 100) if n // 7 == 3)",
+       "hints": [
+        "c(n) は、7 の倍数に着くたびに 1 ふえます。",
+        "3 個目の 7 の倍数はいくつですか。",
+        "その直前では、c(n) はいくつですか。"
+       ],
+       "paths": [
+        [
+         "3 個目の 7 の倍数は 21",
+         "20 までは c(n) = 2",
+         "いちばん小さいのは 21"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
-    -8.09,
-    21.01,
-    -21.46
+    -23.95,
+    23.28,
+    8.06
    ]
   },
   {
@@ -212554,46 +215640,1619 @@ window.ROADMAP = {
    "region": "ronpo",
    "needs": [
     "L-007",
-    "L-011"
+    "L-011",
+    "L-006"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 10 までの整数から、どの 2 つも差が 1 にならないように、いくつかを選びます。いちばん多くて何個選べますか。",
+       "explain": "答えは 5 個です。これを言うには 2 つのことが要ります。1 つ目は「5 個選べる」こと（構成）で、1、3、5、7、9 が例です。2 つ目は「6 個以上は選べない」こと（評価）です。1 から 10 を (1, 2)、(3, 4)、(5, 6)、(7, 8)、(9, 10) の 5 組に分けると、同じ組の 2 つは差が 1 なので、どの組からも 1 個までしか選べません。5 組なので、選べるのは 5 個以下です。例を作るだけでは、6 個の選び方が本当にないかは分かりません。上限を示すだけでは、5 個が本当に選べるかは分かりません。2 つがそろって、はじめて「いちばん多くて 5 個」と言えます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "6 人で玉を合わせて 40 個持っています。「少なくとも 1 人は □ 個以上持っている」と必ず言えます。□ にあてはまる数のうち、いちばん大きいものはいくつですか。",
+       "answer": 7,
+       "check": "max(m for m in range(1, 41) if 6 * (m - 1) < 40)",
+       "hints": [
+        "どの人も 6 個以下と仮定すると、合わせて最大何個ですか。",
+        "その数は 40 と比べてどうですか。",
+        "それより大きい数では言えないことを、例を 1 つ作って確かめましょう。"
+       ],
+       "paths": [
+        [
+         "どの人も 6 個以下なら合わせて 36 個以下で矛盾",
+         "少なくとも 1 人は 7 個以上",
+         "7、7、7、7、6、6 で 40 なので 8 個以上は言えない",
+         7
+        ]
+       ],
+       "note": "「7 個以上と言える」は評価、「7、7、7、7、6、6 の例で 8 個以上とは言えない」は構成。L-011 でもすでに 2 つを組にしていた。"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 から 6 までの数字が 1 つずつ書かれた 6 枚のカードから、2 枚を選びます。2 枚の数の和が 7 になる選び方は、何通りありますか。",
+       "answer": 3,
+       "check": "len([c for c in itertools.combinations(range(1, 7), 2) if sum(c) == 7])",
+       "hints": [
+        "小さいほうのカードで場合に分けましょう。",
+        "小さいほうが 1 のとき、もう 1 枚は何ですか。",
+        "小さいほうが 4 以上のときはありますか。"
+       ],
+       "paths": [
+        [
+         "小さいほうが 1 なら 6",
+         "2 なら 5",
+         "3 なら 4",
+         "3 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ある問題の答えが「いちばん多くて 5 個」だと示したいとき、必要なことはどれですか。",
+       "choices": [
+        "5 個の例を 1 つ示す",
+        "6 個以上はできないことを示す",
+        "5 個の例を示し、6 個以上はできないことも示す"
+       ],
+       "answer": "5 個の例を示し、6 個以上はできないことも示す",
+       "hints": [
+        "例を 1 つ示すだけで、6 個の例がないと言えますか。",
+        "6 個以上はできないと示すだけで、5 個が本当にできると言えますか。",
+        "構成と評価の 2 つを思い出しましょう。"
+       ],
+       "paths": [
+        [
+         "5 個の例だけでは 6 個がないと言えない",
+         "上限だけでは 5 個ができると言えない",
+         "両方を示す"
+        ]
+       ],
+       "note": "約束ごと（「最大」の意味）を問う問題なので check はない。"
+      },
+      {
+       "part": "今日",
+       "text": "異なる 4 つの正の整数の和は、いちばん小さくていくつですか。",
+       "answer": 10,
+       "check": "min(sum(c) for c in itertools.combinations(range(1, 20), 4))",
+       "hints": [
+        "4 つを小さい順に並べると、いちばん小さい数はいくつ以上ですか。",
+        "2 番目はいくつ以上ですか。3 番目、4 番目はどうですか。",
+        "その下限を全部たし、それがちょうど作れる例も確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 小さい順に 1 以上、2 以上、3 以上、4 以上",
+         "和は 10 以上",
+         "構成 1、2、3、4 で 10",
+         "いちばん小さくて 10"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 × 4 のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 4,
+       "check": "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(4) for b in range(4)])",
+       "hints": [
+        "1 つの行には、石を何個まで置けますか。",
+        "行は 4 つあります。これで何個以下と言えますか。",
+        "その個数を、実際に置いてみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 各行に 1 個までで 4 行なので 4 個以下",
+         "構成 ななめに 4 個置く",
+         "4 個"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 30 にします。いちばん多くて何個選べますか。",
+       "answer": 7,
+       "check": "max(k for k in range(1, 30) if sum(range(1, k + 1)) <= 30)",
+       "hints": [
+        "k 個の異なる正の整数の和は、いちばん小さくていくつですか。",
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 30 をこえますか。",
+        "こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 30 にしましょう。"
+       ],
+       "paths": [
+        [
+         "評価 8 個なら和は 1 + 2 + … + 8 = 36 以上で 30 をこえる",
+         "構成 1、2、3、4、5、6、9 で 30",
+         "7 個"
+        ]
+       ],
+       "note": "1 から 7 までの和は 28 で 30 に 2 足りない。いちばん大きい 7 を 9 にかえれば例ができる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 12 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 6,
+       "check": "max(len(s) for r in range(0, 13) for s in itertools.combinations(range(1, 13), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))",
+       "hints": [
+        "となり合う 2 つずつの組に分けましょう。",
+        "1 つの組からは何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 (1、2)、(3、4)、…、(11、12) の 6 組で各組 1 個まで",
+         "構成 1、3、5、7、9、11",
+         "6 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 5 つの正の整数の和は、いちばん小さくていくつですか。",
+       "answer": 15,
+       "check": "min(sum(c) for c in itertools.combinations(range(1, 20), 5))",
+       "hints": [
+        "5 つを小さい順に並べると、それぞれいくつ以上ですか。",
+        "その下限を全部たしましょう。",
+        "それがちょうど作れる例も確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 1 以上、2 以上、…、5 以上で和は 15 以上",
+         "構成 1、2、3、4、5",
+         15
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 行 5 列のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"55\" y1=\"6\" x2=\"185\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"32\" x2=\"185\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"58\" x2=\"185\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"84\" x2=\"185\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"6\" x2=\"55\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"81\" y1=\"6\" x2=\"81\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"107\" y1=\"6\" x2=\"107\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"133\" y1=\"6\" x2=\"133\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"159\" y1=\"6\" x2=\"159\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"185\" y1=\"6\" x2=\"185\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 3,
+       "check": "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(3) for b in range(5)])",
+       "hints": [
+        "行と列のうち、少ないのはどちらですか。",
+        "1 つの行には何個まで置けますか。",
+        "その個数を、実際に置いてみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 各行に 1 個までで 3 行なので 3 個以下",
+         "構成 ななめに 3 個",
+         "3 個"
+        ]
+       ],
+       "note": "列で考えると 5 個以下としか言えない。上限は、いちばんきびしいものを選ぶ。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 6 までの数を、図の三角形の 3 つの頂点と 3 つの辺のまん中に 1 つずつ置き、どの辺も 3 つの数の和が 10 になるようにしましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"112.2\" y1=\"32.4\" x2=\"87.8\" y2=\"64.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"72.2\" y1=\"85.4\" x2=\"47.8\" y2=\"117.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"53\" y1=\"128\" x2=\"107\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"133\" y1=\"128\" x2=\"187\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"127.8\" y1=\"32.4\" x2=\"152.2\" y2=\"64.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"167.8\" y1=\"85.4\" x2=\"192.2\" y2=\"117.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"27\" font-size=\"14\" text-anchor=\"middle\">1</text>\n  <circle cx=\"40\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"40\" y=\"133\" font-size=\"14\" text-anchor=\"middle\">3</text>\n  <circle cx=\"200\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"200\" y=\"133\" font-size=\"14\" text-anchor=\"middle\">5</text>\n  <circle cx=\"80\" cy=\"75\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"80\" font-size=\"14\" text-anchor=\"middle\">6</text>\n  <circle cx=\"120\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"133\" font-size=\"14\" text-anchor=\"middle\">2</text>\n  <circle cx=\"160\" cy=\"75\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"160\" y=\"80\" font-size=\"14\" text-anchor=\"middle\">4</text>\n</svg>\n",
+       "explain": "「和を 10 にできる」と示すには、例を 1 つ見せれば十分です（構成）。例をさがす前に、条件から分かることを計算して、さがす範囲をしぼります。3 つの辺の和をたすと 30 です。このとき、頂点の数は 2 つの辺に入るので 2 回、まん中の数は 1 回数えています。1 から 6 までの和は 21 なので、30 = 21 + （頂点の 3 つの和）で、頂点の和は 9 です。そこで頂点を 1、3、5 にすると、辺のまん中はそれぞれ 10 − 1 − 3 = 6、10 − 3 − 5 = 2、10 − 5 − 1 = 4 で、図のようにできます。構成のこつは、先に計算でしぼる、小さい場合でためす、大きい数と小さい数を組にする、の 3 つです。"
+      },
+      {
+       "part": "思い出す",
+       "text": "異なる 6 つの正の整数の和は、いちばん小さくていくつですか。",
+       "answer": 21,
+       "check": "min(sum(c) for c in itertools.combinations(range(1, 20), 6))",
+       "hints": [
+        "6 つを小さい順に並べると、それぞれいくつ以上ですか。",
+        "その下限を全部たしましょう。",
+        "それがちょうど作れる例も確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 1 以上、2 以上、…、6 以上で和は 21 以上",
+         "構成 1、2、3、4、5、6",
+         21
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 から 9 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 5,
+       "check": "max(len(s) for r in range(0, 10) for s in itertools.combinations(range(1, 10), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))",
+       "hints": [
+        "(1, 2)、(3, 4)、(5, 6)、(7, 8) と組にすると、9 はどうなりますか。",
+        "どの組からも何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 4 組と 9 で 4 + 1 = 5 個以下",
+         "構成 1、3、5、7、9",
+         "5 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数を三角形の 3 つの頂点と 3 つの辺のまん中に 1 つずつ置き、どの辺も 3 つの数の和が 12 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"112.2\" y1=\"32.4\" x2=\"87.8\" y2=\"64.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"72.2\" y1=\"85.4\" x2=\"47.8\" y2=\"117.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"53\" y1=\"128\" x2=\"107\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"133\" y1=\"128\" x2=\"187\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"127.8\" y1=\"32.4\" x2=\"152.2\" y2=\"64.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"167.8\" y1=\"85.4\" x2=\"192.2\" y2=\"117.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"27\" font-size=\"14\" text-anchor=\"middle\"></text>\n  <circle cx=\"40\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"40\" y=\"133\" font-size=\"14\" text-anchor=\"middle\"></text>\n  <circle cx=\"200\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"200\" y=\"133\" font-size=\"14\" text-anchor=\"middle\"></text>\n  <circle cx=\"80\" cy=\"75\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"80\" y=\"80\" font-size=\"14\" text-anchor=\"middle\"></text>\n  <circle cx=\"120\" cy=\"128\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"133\" font-size=\"14\" text-anchor=\"middle\"></text>\n  <circle cx=\"160\" cy=\"75\" r=\"13\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"160\" y=\"80\" font-size=\"14\" text-anchor=\"middle\"></text>\n</svg>\n",
+       "answer": 15,
+       "check": "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 12 and p[1] + p[4] + p[2] == 12 and p[2] + p[5] + p[0] == 12})",
+       "hints": [
+        "3 つの辺の和を全部たすと、いくつですか。",
+        "そのとき、頂点の数とまん中の数は、それぞれ何回ずつたされていますか。",
+        "1 から 6 までの和は 21 です。"
+       ],
+       "paths": [
+        [
+         "3 辺の和をたすと 36",
+         "36 = 21 + 頂点の和",
+         "頂点の和は 15",
+         "構成 頂点 4、5、6 とまん中 3、1、2"
+        ]
+       ],
+       "note": "頂点の和が 15 になるのは 4、5、6 だけ。計算でしぼると、例はすぐ作れる。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 8 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 9)) == 0 for m in range(256)) else 'できない'",
+       "hints": [
+        "1 から 8 までの和は 36 です。+ の組と − の組の和を、それぞれいくつにすればよいですか。",
+        "和が 18 になる数の組をさがしましょう。",
+        "1 + 8、2 + 7、… のように、大きい数と小さい数を組にしてみましょう。"
+       ],
+       "paths": [
+        [
+         "+ の組と − の組をどちらも 18 にする",
+         "1 + 8 + 2 + 7 = 18",
+         "残りの 3 + 4 + 5 + 6 = 18",
+         "1 + 2 + 7 + 8 − 3 − 4 − 5 − 6 = 0",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 7 までの数を 1 列に並べて、となり合う 2 つの数の差がどれも 2 以上になるようにします。そのような並べ方はありますか。",
+       "choices": [
+        "ある",
+        "ない"
+       ],
+       "answer": "ある",
+       "check": "'ある' if any(all(abs(p[i + 1] - p[i]) >= 2 for i in range(6)) for p in itertools.permutations(range(1, 8))) else 'ない'",
+       "hints": [
+        "奇数を先に並べてみましょう。",
+        "奇数どうし、偶数どうしの差はいくつ以上ですか。",
+        "奇数の列と偶数の列のつなぎ目に気をつけましょう。"
+       ],
+       "paths": [
+        [
+         "1、3、5、7 と並べる",
+         "次に 2、4、6 をつなぐ",
+         "7 と 2 の差は 5",
+         "1、3、5、7、2、4、6",
+         "ある"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "異なる 5 つの正の整数の和が 20 です。いちばん大きい数は、いちばん大きくていくつですか。",
+       "answer": 10,
+       "check": "max(max(c) for c in itertools.combinations(range(1, 21), 5) if sum(c) == 20)",
+       "hints": [
+        "いちばん大きい数を大きくするには、ほかの 4 つをどうすればよいですか。",
+        "ほかの 4 つの和は、いちばん小さくていくつですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 4 つの和は 1 + 2 + 3 + 4 = 10 以上",
+         "いちばん大きい数は 20 − 10 = 10 以下",
+         "構成 1、2、3、4、10",
+         10
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が 9 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。",
+       "answer": 6,
+       "check": "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 9 and p[1] + p[4] + p[2] == 9 and p[2] + p[5] + p[0] == 9})",
+       "hints": [
+        "3 つの辺の和を全部たすと、いくつですか。",
+        "頂点の数は何回ずつたされていますか。",
+        "1 から 6 までの和 21 を使いましょう。"
+       ],
+       "paths": [
+        [
+         "3 辺の和をたすと 27",
+         "27 = 21 + 頂点の和",
+         "頂点の和は 6",
+         "構成 頂点 1、2、3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 7 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 8)) == 0 for m in range(128)) else 'できない'",
+       "hints": [
+        "1 から 7 までの和はいくつですか。",
+        "+ の組と − の組の和を、それぞれいくつにすればよいですか。",
+        "和が 14 になる数の組をさがしましょう。"
+       ],
+       "paths": [
+        [
+         "和は 28 で、どちらの組も 14 にする",
+         "7 + 6 + 1 = 14",
+         "7 + 6 + 1 − 2 − 3 − 4 − 5 = 0",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数を 1 列に並べて、となり合う 2 つの数の差がどれも 2 以上になるようにします。そのような並べ方はありますか。",
+       "choices": [
+        "ある",
+        "ない"
+       ],
+       "answer": "ある",
+       "check": "'ある' if any(all(abs(p[i + 1] - p[i]) >= 2 for i in range(5)) for p in itertools.permutations(range(1, 7))) else 'ない'",
+       "hints": [
+        "偶数を先に並べてみましょう。",
+        "偶数の列と奇数の列のつなぎ目の差を見ましょう。",
+        "つなぎ目の差が 1 になったら、並べる順を変えましょう。"
+       ],
+       "paths": [
+        [
+         "2、4、6 と並べる",
+         "次に 1、3、5 をつなぐ",
+         "6 と 1 の差は 5",
+         "2、4、6、1、3、5",
+         "ある"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 10 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "explain": "できません。これを示すのが評価です（例をいくらためしても、「できない」は示せません）。+ をつけた数の和を P、− をつけた数の和を M とします。どの数もどちらかに入るので P + M = 1 + 2 + … + 10 = 55 です。合計は P − M = (P + M) − 2M = 55 − 2M です。55 は奇数、2M は偶数なので、55 − 2M はいつも奇数です。0 は偶数なので、合計は 0 になりません。このように、偶奇（L-005）で「どうやってもできない」ことを示せます。1 から 8 のときは和が 36（偶数）なので、この理由では止められず、2 日目のように例が作れました。"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 から 4 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 5)) == 0 for m in range(16)) else 'できない'",
+       "hints": [
+        "1 から 4 までの和はいくつですか。",
+        "+ の組と − の組の和を、それぞれいくつにすればよいですか。",
+        "1 + 4 と 2 + 3 を比べましょう。"
+       ],
+       "paths": [
+        [
+         "和は 10 でどちらの組も 5",
+         "1 + 4 = 2 + 3",
+         "1 − 2 − 3 + 4 = 0",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が 11 になるようにします。このとき、頂点の 3 つの数の和はいくつですか。",
+       "answer": 12,
+       "check": "(lambda v: v.pop() if len(v) == 1 else 'きまらない')({p[0] + p[1] + p[2] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == 11 and p[1] + p[4] + p[2] == 11 and p[2] + p[5] + p[0] == 11})",
+       "hints": [
+        "3 つの辺の和を全部たすと、いくつですか。",
+        "頂点の数は何回ずつたされていますか。",
+        "1 から 6 までの和 21 を使いましょう。"
+       ],
+       "paths": [
+        [
+         "3 辺の和をたすと 33",
+         "33 = 21 + 頂点の和",
+         "頂点の和は 12",
+         "構成 頂点 2、4、6 とまん中 5、1、3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 7)) == 0 for m in range(64)) else 'できない'",
+       "hints": [
+        "1 から 6 までの和は、偶数ですか、奇数ですか。",
+        "+ の数の和を P、− の数の和を M とすると、合計は (P + M) − 2M です。",
+        "その値は、偶数ですか、奇数ですか。"
+       ],
+       "paths": [
+        [
+         "P + M = 21",
+         "合計は 21 − 2M で奇数",
+         "0 は偶数なのでできない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。5 人の合計は 43 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。",
+       "answer": 3,
+       "check": "min(min(t) for t in itertools.product(range(11), repeat=5) if sum(t) == 43)",
+       "hints": [
+        "いちばん低い人の点数を低くするには、ほかの 4 人をどうすればよいですか。",
+        "ほかの 4 人の合計は、いちばん多くて何点ですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 4 人は合わせて 40 点以下",
+         "いちばん低い人は 43 − 40 = 3 点以上",
+         "構成 10、10、10、10、3",
+         "3 点"
+        ]
+       ],
+       "note": "「満点が 10 点」が上限を決める。上限のない問題なら、いちばん低い人は 0 点にもなれる。"
+      },
+      {
+       "part": "今日",
+       "text": "4 × 4 のマスに石を置きます。どの 2 個も、たて・横・ななめにとなり合わないように置くと、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 4,
+       "check": "(lambda cells: max(k for k in range(0, 6) if any(all(max(abs(p[0] - q[0]), abs(p[1] - q[1])) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(4) for b in range(4)])",
+       "hints": [
+        "盤を 2 × 2 の 4 つの区画に分けましょう。",
+        "1 つの区画の中に、石を 2 個置けますか。",
+        "各区画に 1 個ずつ、となり合わないように置いてみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 2 × 2 の区画の中の 2 マスはどれもとなり合うので各区画 1 個まで",
+         "4 区画で 4 個以下",
+         "構成 各区画の左上に置く",
+         "4 個"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 15 までの整数から、どの 2 つをたしても 16 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 8,
+       "check": "max(k for k in range(16) if any(all(a + b != 16 for a, b in itertools.combinations(s, 2)) for s in itertools.combinations(range(1, 16), k)))",
+       "hints": [
+        "和が 16 になる 2 つの組を書き出しましょう。どの数が組に入りませんか。",
+        "1 つの組から、何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "(1、15)、(2、14)、…、(7、9) の 7 組と 8",
+         "評価 各組 1 個までなので 7 + 1 = 8 個以下",
+         "構成 1 から 8 まで",
+         "8 個"
+        ]
+       ],
+       "note": "8 は 8 + 8 = 16 だが、同じ数を 2 回は選べないので、ひとりで 1 つの組になる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 9 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 10)) == 0 for m in range(512)) else 'できない'",
+       "hints": [
+        "1 から 9 までの和は、偶数ですか、奇数ですか。",
+        "合計は (P + M) − 2M と書けます。",
+        "その値は、偶数ですか、奇数ですか。"
+       ],
+       "paths": [
+        [
+         "P + M = 45",
+         "合計は 45 − 2M で奇数",
+         "できない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。6 人の合計は 57 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。",
+       "answer": 7,
+       "check": "min(m for m in range(11) if m + 10 * 5 >= 57)",
+       "hints": [
+        "ほかの 5 人の合計は、いちばん多くて何点ですか。",
+        "いちばん低い人は、何点以上ですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 5 人は 50 点以下",
+         "いちばん低い人は 7 点以上",
+         "構成 10、10、10、10、10、7",
+         "7 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 行 6 列のマスに石を置きます。どの 2 個も、たて・横・ななめにとなり合わないように置くと、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 64\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"42\" y1=\"6\" x2=\"198\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"32\" x2=\"198\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"58\" x2=\"198\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"6\" x2=\"42\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"198\" y1=\"6\" x2=\"198\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 3,
+       "check": "(lambda cells: max(k for k in range(0, 6) if any(all(max(abs(p[0] - q[0]), abs(p[1] - q[1])) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(2) for b in range(6)])",
+       "hints": [
+        "盤を 2 × 2 の区画に分けると、いくつできますか。",
+        "1 つの区画に、石を何個まで置けますか。",
+        "各区画に 1 個ずつ置いてみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 2 × 2 の 3 区画で各 1 個まで",
+         "構成 1、3、5 列目の上に置く",
+         "3 個"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1 から 5 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 6)) == 0 for m in range(32)) else 'できない'",
+       "hints": [
+        "1 から 5 までの和は、偶数ですか、奇数ですか。",
+        "合計は (P + M) − 2M と書けます。",
+        "その値は、偶数ですか、奇数ですか。"
+       ],
+       "paths": [
+        [
+         "P + M = 15",
+         "合計は 15 − 2M で奇数",
+         "できない"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "4 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。4 人の合計は 35 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。",
+       "answer": 5,
+       "check": "min(min(t) for t in itertools.product(range(11), repeat=4) if sum(t) == 35)",
+       "hints": [
+        "ほかの 3 人の合計は、いちばん多くて何点ですか。",
+        "いちばん低い人は、何点以上ですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 3 人は 30 点以下",
+         "いちばん低い人は 5 点以上",
+         "構成 10、10、10、5",
+         "5 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 50 にします。いちばん多くて何個選べますか。",
+       "answer": 9,
+       "check": "max(k for k in range(1, 50) if sum(range(1, k + 1)) <= 50)",
+       "hints": [
+        "k 個の異なる正の整数の和は、いちばん小さくていくつですか。",
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 50 をこえますか。",
+        "こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 50 にしましょう。"
+       ],
+       "paths": [
+        [
+         "評価 10 個なら和は 55 以上で 50 をこえる",
+         "構成 1 から 8 と 14 で 50",
+         "9 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 5 つの正の整数の和が 20 です。いちばん大きい数は、いちばん小さくていくつですか。",
+       "answer": 6,
+       "check": "min(max(c) for c in itertools.combinations(range(1, 21), 5) if sum(c) == 20)",
+       "hints": [
+        "いちばん大きい数を m とすると、5 つはどれも m 以下の異なる整数です。",
+        "そのとき、5 つの和はいちばん大きくていくつですか。m の式で書きましょう。",
+        "その式が 20 以上になる m を調べ、例も作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 5 つの和は m + (m − 1) + … + (m − 4) = 5m − 10 以下",
+         "5m − 10 ≥ 20 より m ≥ 6",
+         "構成 2、3、4、5、6 で 20",
+         6
+        ]
+       ],
+       "note": "2 日目の挑戦（いちばん大きくて 10）と向きが反対。小さくするときは、ほかの数を大きいほうに寄せる。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 10 までの整数から、どの 2 つをたしても 3 の倍数にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 5,
+       "check": "max(k for k in range(11) if any(all((a + b) % 3 != 0 for a, b in itertools.combinations(s, 2)) for s in itertools.combinations(range(1, 11), k)))",
+       "hints": [
+        "3 でわったあまりで、あまり 0、1、2 の 3 つの組に分けましょう。",
+        "あまり 1 の数とあまり 2 の数を 1 つずつ選ぶと、和はどうなりますか。あまり 0 の数を 2 つ選ぶとどうですか。",
+        "あまり 1 の数は何個ありますか。"
+       ],
+       "paths": [
+        [
+         "あまり 0 は 3、6、9、あまり 1 は 1、4、7、10、あまり 2 は 2、5、8",
+         "評価 あまり 1 と 2 は同時に選べず多くて 4 個、あまり 0 は 1 個まで",
+         "合わせて 5 個以下",
+         "構成 1、4、7、10、3",
+         "5 個"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "黒板に、異なる正の整数がいくつか書いてあります。いちばん大きい数は 15 で、平均はちょうど 7 です。書いてある数は、いちばん多くて何個ですか。",
+       "answer": 12,
+       "check": "max(n for n in range(1, 16) if any(sum(c) + 15 == 7 * n for c in itertools.combinations(range(1, 15), n - 1)))",
+       "hints": [
+        "数が n 個なら、合計は 7n です。",
+        "15 のほかの n − 1 個は、14 以下の異なる正の整数です。合計は、いちばん小さくていくつですか。",
+        "その合計が 7n をこえない n を調べ、ちょうど 7n になる例も作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 合計は 15 + (1 + 2 + … + (n − 1)) 以上",
+         "これが 7n 以下になるのは n ≤ 12",
+         "構成 1 から 10 と 14 と 15 で合計 84 = 7 × 12",
+         "12 個"
+        ]
+       ],
+       "note": "n = 13 なら合計は 15 + 78 = 93 以上で 7 × 13 = 91 をこえる。n = 12 は 81 以上 84 なので、1 から 11 の 11 を 14 にかえて例を作る。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 40 にします。いちばん多くて何個選べますか。",
+       "answer": 8,
+       "check": "max(k for k in range(1, 40) if sum(range(1, k + 1)) <= 40)",
+       "hints": [
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 40 をこえますか。",
+        "それより多い個数でも、40 をこえますか。",
+        "こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 40 にしましょう。"
+       ],
+       "paths": [
+        [
+         "評価 9 個なら和は 45 以上",
+         "構成 1 から 7 と 12 で 40",
+         "8 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 6 つの正の整数の和が 30 です。いちばん大きい数は、いちばん小さくていくつですか。",
+       "answer": 8,
+       "check": "min(max(c) for c in itertools.combinations(range(1, 31), 6) if sum(c) == 30)",
+       "hints": [
+        "いちばん大きい数を m とすると、6 つの和はいちばん大きくていくつですか。",
+        "その式が 30 以上になる m を調べましょう。",
+        "例も作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 和は 6m − 15 以下で 6m − 15 ≥ 30 より m ≥ 8",
+         "構成 1、3、5、6、7、8 で 30",
+         8
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 15 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 8,
+       "check": "max(len(s) for r in range(0, 16) for s in itertools.combinations(range(1, 16), r) if all(s[i + 1] - s[i] > 1 for i in range(len(s) - 1)))",
+       "hints": [
+        "(1, 2)、(3, 4)、… と組にすると、どの数が残りますか。",
+        "1 つの組から何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 7 組と 15 で 7 + 1 = 8 個以下",
+         "構成 1、3、5、…、15",
+         "8 個"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "6 × 6 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイル（2 マス分の長方形）で、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 168\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"47\" y1=\"11\" x2=\"63\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"63\" y1=\"11\" x2=\"47\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <rect x=\"94\" y=\"6\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"146\" y=\"6\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"68\" y=\"32\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"120\" y=\"32\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"172\" y=\"32\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"42\" y=\"58\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"94\" y=\"58\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"146\" y=\"58\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"68\" y=\"84\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"120\" y=\"84\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"172\" y=\"84\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"42\" y=\"110\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"94\" y=\"110\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"146\" y=\"110\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"68\" y=\"136\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"120\" y=\"136\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <line x1=\"177\" y1=\"141\" x2=\"193\" y2=\"157\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"193\" y1=\"141\" x2=\"177\" y2=\"157\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"42\" y1=\"6\" x2=\"198\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"32\" x2=\"198\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"58\" x2=\"198\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"84\" x2=\"198\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"110\" x2=\"198\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"136\" x2=\"198\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"162\" x2=\"198\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"6\" x2=\"42\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"198\" y1=\"6\" x2=\"198\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "explain": "しきつめられません。図のように盤を 2 色にぬり分けます（市松もよう）。1 × 2 のタイルは、どこに置いてもとなり合う 2 マスをおおうので、必ず色つきのマス 1 つと白いマス 1 つをおおいます。だから、しきつめられるなら、色つきと白のマスは同じ数のはずです。ところが、取りのぞいた 2 マス（左上と右下）は、どちらも色つきの側のマスです。残りは色つき 16 マス、白 18 マスで、数が合いません。よってしきつめられません（評価）。ぬり分けて数えるのは、「どこに置いても必ずそうなる」ことを見つけて、できないことを示す方法です。反対に、色の数が同じでも、しきつめられるとはかぎりません。そのときは、実際にしきつめた例（構成）を示します。"
+      },
+      {
+       "part": "思い出す",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 60 にします。いちばん多くて何個選べますか。",
+       "answer": 10,
+       "check": "max(k for k in range(1, 60) if sum(range(1, k + 1)) <= 60)",
+       "hints": [
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 60 をこえますか。",
+        "それより多い個数でも、60 をこえますか。",
+        "こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 60 にしましょう。"
+       ],
+       "paths": [
+        [
+         "評価 11 個なら和は 66 以上",
+         "構成 1 から 9 と 15 で 60",
+         "10 個"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "6 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。6 人の合計は 52 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。",
+       "answer": 2,
+       "check": "min(m for m in range(11) if m + 10 * 5 >= 52)",
+       "hints": [
+        "ほかの 5 人の合計は、いちばん多くて何点ですか。",
+        "いちばん低い人は、何点以上ですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 5 人は 50 点以下",
+         "いちばん低い人は 2 点以上",
+         "構成 10、10、10、10、10、2",
+         "2 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 × 5 の盤から、左上の 1 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 142\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"60\" y1=\"11\" x2=\"76\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"76\" y1=\"11\" x2=\"60\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"55\" y1=\"6\" x2=\"185\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"32\" x2=\"185\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"58\" x2=\"185\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"84\" x2=\"185\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"110\" x2=\"185\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"136\" x2=\"185\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"6\" x2=\"55\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"81\" y1=\"6\" x2=\"81\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"107\" y1=\"6\" x2=\"107\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"133\" y1=\"6\" x2=\"133\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"159\" y1=\"6\" x2=\"159\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"185\" y1=\"6\" x2=\"185\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(5) for b in range(5)) - {(0, 0)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "残りのマスは何マスですか。偶数ですか。",
+        "ぬり分けると、色つきと白のマスの数は同じですか。",
+        "数が同じでも、それだけでは「できる」とは言えません。実際にしきつめてみましょう。"
+       ],
+       "paths": [
+        [
+         "残りは 24 マスで色の数も 12 と 12",
+         "構成 1 行目の残り 4 マスを横に 2 枚",
+         "1 列目の残り 4 マスをたてに 2 枚",
+         "残りの 4 × 4 を横に 8 枚",
+         "できる"
+        ]
+       ],
+       "note": "色の数が合うことは「できない理由がない」だけで、「できる」の理由にはならない。できることは例で示す。"
+      },
+      {
+       "part": "今日",
+       "text": "5 × 5 の盤から、上の行の左から 2 番目の 1 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 142\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"86\" y1=\"11\" x2=\"102\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"102\" y1=\"11\" x2=\"86\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"55\" y1=\"6\" x2=\"185\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"32\" x2=\"185\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"58\" x2=\"185\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"84\" x2=\"185\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"110\" x2=\"185\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"55\" y1=\"136\" x2=\"185\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"55\" y1=\"6\" x2=\"55\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"81\" y1=\"6\" x2=\"81\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"107\" y1=\"6\" x2=\"107\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"133\" y1=\"6\" x2=\"133\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"159\" y1=\"6\" x2=\"159\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"185\" y1=\"6\" x2=\"185\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(5) for b in range(5)) - {(0, 1)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "盤を市松もようにぬり分けます。左上のマスを色つきとすると、色つきは何マスですか。",
+        "取りのぞいたマスは、何色ですか。",
+        "残りの色つきと白のマスの数を比べましょう。"
+       ],
+       "paths": [
+        [
+         "色つき 13 マス、白 12 マス",
+         "取りのぞいたのは白",
+         "残りは色つき 13、白 11",
+         "タイル 1 枚は 1 つずつおおうので数が合わない",
+         "できない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人で総当たり戦をします（どの人どうしも 1 回ずつ戦い、引き分けはありません）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。",
+       "answer": 2,
+       "check": "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(5)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(5), 2)])",
+       "hints": [
+        "試合は全部で何試合ですか。1 試合で勝つのは 1 人です。",
+        "どの人も 1 勝以下だと、勝ち数の合計はいくつ以下ですか。",
+        "全員が同じ数だけ勝つ例を作ってみましょう。輪に並べて考えます。"
+       ],
+       "paths": [
+        [
+         "試合は 10 試合で勝ち数の合計は 10",
+         "評価 どの人も 1 勝以下なら合計 5 以下で矛盾",
+         "いちばん多い人は 2 勝以上",
+         "構成 輪に並べ自分の次の 2 人に勝つと全員 2 勝",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "6 人で総当たり戦をしました。全勝の人も全敗の人もいませんでした。6 人の勝ち数が、すべてちがうことはありえますか。",
+       "choices": [
+        "ありえる",
+        "ありえない"
+       ],
+       "answer": "ありえない",
+       "check": "(lambda P: 'ありえる' if any(len(set(w)) == 6 and min(w) >= 1 and max(w) <= 4 for m in range(2 ** 15) for w in [[sum(1 for j in range(15) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(6)]]) else 'ありえない')([c for c in itertools.combinations(range(6), 2)])",
+       "hints": [
+        "1 人は 5 試合します。全勝も全敗もいないとき、勝ち数はいくつからいくつまでですか。",
+        "その中に、ちがう値は何通りありますか。",
+        "6 人の勝ち数をすべてちがう値にできますか。"
+       ],
+       "paths": [
+        [
+         "勝ち数は 1、2、3、4 のどれか",
+         "ちがう値は 4 通りしかない",
+         "6 人をすべてちがう値にはできない",
+         "ありえない"
+        ]
+       ],
+       "note": "全勝や全敗を許すと、0、1、2、3、4、5 の 6 通りになり、ありえる（強い順に全員に勝つ）。条件が評価を決める。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 × 4 の盤から、上の行の左はしと右はしの 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"73\" y1=\"11\" x2=\"89\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"89\" y1=\"11\" x2=\"73\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"151\" y1=\"11\" x2=\"167\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"167\" y1=\"11\" x2=\"151\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (0, 3)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "ぬり分けると、取りのぞいた 2 マスは同じ色ですか。",
+        "色の数が合っても、それだけでは「できる」とは言えません。",
+        "上の行の残り 2 マスに 1 枚置いて、残りの 3 × 4 をしきつめてみましょう。"
+       ],
+       "paths": [
+        [
+         "取りのぞいた 2 マスは色がちがい色の数は合う",
+         "構成 上の行の残りに横に 1 枚",
+         "残りの 3 行は横に 2 枚ずつ",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。",
+       "answer": 2,
+       "check": "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(4)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(4), 2)])",
+       "hints": [
+        "試合は全部で何試合ですか。",
+        "どの人も 1 勝以下だと、勝ち数の合計はいくつ以下ですか。",
+        "勝ち数ができるだけそろう例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "試合は 6 試合",
+         "評価 どの人も 1 勝以下なら合計 4 以下で矛盾",
+         "構成 勝ち数 2、2、1、1 の例",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 × 8 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "(lambda S: 'できない' if sum(1 for a, b in S if (a + b) % 2 == 0) != sum(1 for a, b in S if (a + b) % 2 == 1) else 'きまらない')(set((a, b) for a in range(8) for b in range(8)) - {(0, 0), (7, 7)})",
+       "hints": [
+        "盤を市松もようにぬり分けましょう。",
+        "取りのぞいた 2 マスは、同じ色ですか。",
+        "残りの 2 色のマスの数を比べましょう。"
+       ],
+       "paths": [
+        [
+         "左上と右下は同じ色",
+         "残りは 32 マスと 30 マス",
+         "タイルは 1 色ずつおおうので数が合わない",
+         "できない"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "4 × 4 の盤から、左上と右下の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"73\" y1=\"11\" x2=\"89\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"89\" y1=\"11\" x2=\"73\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"151\" y1=\"89\" x2=\"167\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"167\" y1=\"89\" x2=\"151\" y2=\"105\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (3, 3)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "盤を市松もようにぬり分けましょう。",
+        "取りのぞいた 2 マスは、同じ色ですか。",
+        "残りの 2 色のマスの数を比べましょう。"
+       ],
+       "paths": [
+        [
+         "左上と右下は同じ色",
+         "残りは 8 マスと 6 マス",
+         "数が合わないのでできない"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 45 にします。いちばん多くて何個選べますか。",
+       "answer": 9,
+       "check": "max(k for k in range(1, 45) if sum(range(1, k + 1)) <= 45)",
+       "hints": [
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 45 をこえますか。",
+        "それより多い個数でも、45 をこえますか。",
+        "こえない個数のうちいちばん多い個数で、和がちょうど 45 になる例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 10 個なら和は 55 以上",
+         "構成 1 から 9 で 45",
+         "9 個"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "異なる正の整数をいくつか選んで和をちょうど 40 にするとき、いちばん多くて 8 個選べることを、評価と構成の両方を書いて示しましょう。",
+       "explain": "例：「（評価）異なる正の整数を k 個選び、小さい順に並べる。どれも整数で、前の数より 1 以上大きいので、小さいほうから i 番目の数は i 以上である。よって和は 1 + 2 + … + k 以上である。k = 9 なら和は 45 以上となり、40 をこえる。k が 10 以上なら、小さいほうの 9 個だけで 45 以上になるので、やはり 40 をこえる。よって 9 個以上は選べない。（構成）1、2、3、4、5、6、7、12 は異なる 8 個の正の整数で、和は 28 + 12 = 40 である。よって、いちばん多くて 8 個である。」と書ければよい。①「小さい順に並べると i 番目は i 以上」と下限を出す、② 9 個以上で和が 40 をこえると式で示す、③ 8 個の例を示して「いちばん多くて 8 個」と結ぶ、の 3 点と、評価と構成の両方がそろっているかを見る。例だけで終わっていたら、例では 9 個の選び方がないことは示せないことを話す。",
+       "hints": [
+        "選んだ数を小さい順に並べると、i 番目の数はいくつ以上ですか。",
+        "9 個選ぶと、和はいくつ以上ですか。10 個以上ならどうですか。",
+        "8 個で和がちょうど 40 になる例を書いて、2 つを合わせて結びましょう。"
+       ],
+       "paths": [
+        [
+         "小さい順に並べると i 番目は i 以上",
+         "9 個なら和は 45 以上で 40 をこえる",
+         "10 個以上でも小さい 9 個で 45 以上",
+         "構成 1 から 7 と 12",
+         "いちばん多くて 8 個"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 から 14 までの数のそれぞれに + か − をつけてすべてたすとき、合計を 0 にできないことを示しましょう。",
+       "explain": "例：「+ をつけた数の和を P、− をつけた数の和を M とする。どの数もどちらか一方に入るので、P + M = 1 + 2 + … + 14 = 105 である。合計は P − M = (P + M) − 2M = 105 − 2M である。105 は奇数で、2M は偶数なので、105 − 2M は奇数である。0 は偶数なので、合計は 0 にならない。」と書ければよい。①「P、M とする」で文字を決める、② 合計を 105 − 2M に変形する、③「奇数 − 偶数 は奇数なので 0 にならない」と結ぶ、の 3 点を見る。いくつかの + − のつけ方をためして 0 にならなかった、で終わっていたら、ためしていないつけ方が残っているので「できない」とは言えないことを話す。",
+       "hints": [
+        "+ をつけた数の和を P、− をつけた数の和を M とします。P + M はいくつですか。",
+        "合計 P − M を、P + M と M を使って書きかえましょう。",
+        "その式が偶数か奇数かを考えて、0 と比べましょう。"
+       ],
+       "paths": [
+        [
+         "P と M を決める",
+         "P + M = 105",
+         "合計 = 105 − 2M",
+         "奇数なので 0 にならない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "4 × 4 のマスに、どの 2 個もたて・横・ななめにとなり合わないように石を置くとき、いちばん多くて 4 個置けることを、評価と構成の両方を書いて示しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"68\" y=\"6\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"94\" y=\"6\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"68\" y=\"32\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"94\" y=\"32\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"120\" y=\"58\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"146\" y=\"58\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"120\" y=\"84\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"146\" y=\"84\" width=\"26\" height=\"26\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "explain": "例：「（評価）4 × 4 の盤を、図のように 2 × 2 の 4 つの区画に分ける。1 つの区画の中のどの 2 マスも、たて・横・ななめのどれかでとなり合うので、1 つの区画には石を 1 個までしか置けない。区画は 4 つなので、石は 4 個以下である。（構成）各区画の左上のマス（1 行 1 列、1 行 3 列、3 行 1 列、3 行 3 列）に置くと、どの 2 個も 2 マスはなれていて、となり合わない。よって、いちばん多くて 4 個である。」と書ければよい。① 区画に分ける、②「区画の中の 2 マスはどれもとなり合う」ので各区画 1 個までと上限を足す、③ 4 個の例を示して結ぶ、の 3 点を見る。4 個置いた図だけで終わっていたら、5 個置けないことの理由が要ることを話す。",
+       "hints": [
+        "盤を 2 × 2 の区画に分けると、区画はいくつですか。",
+        "1 つの区画の中に、となり合わない 2 マスはありますか。",
+        "4 個の置き方の例を書いて、2 つを合わせて結びましょう。"
+       ],
+       "paths": [
+        [
+         "2 × 2 の 4 区画に分ける",
+         "区画の中の 2 マスはどれもとなり合う",
+         "各区画 1 個までで 4 個以下",
+         "構成 各区画の左上",
+         "いちばん多くて 4 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "7 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。",
+       "answer": 3,
+       "check": "(lambda e, c: e if e == c else 'きまらない')(-(-21 // 7), max(sum(1 for j in range(7) if (j - i) % 7 in (1, 2, 3)) for i in range(7)))",
+       "hints": [
+        "試合は全部で何試合ですか。",
+        "どの人も 2 勝以下だと、勝ち数の合計はいくつ以下ですか。",
+        "7 人を輪に並べて、全員が同じ数だけ勝つ例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "試合は 21 試合",
+         "評価 どの人も 2 勝以下なら合計 14 以下で矛盾",
+         "構成 輪に並べ自分の次の 3 人に勝つと全員 3 勝",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 4 つの正の整数の和が 30 です。いちばん大きい数は、いちばん小さくていくつですか。",
+       "answer": 9,
+       "check": "min(max(c) for c in itertools.combinations(range(1, 31), 4) if sum(c) == 30)",
+       "hints": [
+        "いちばん大きい数を m とすると、4 つの和はいちばん大きくていくつですか。",
+        "その式が 30 以上になる m を調べましょう。",
+        "例も作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 和は m + (m − 1) + (m − 2) + (m − 3) = 4m − 6 以下",
+         "4m − 6 ≥ 30 より m ≥ 9",
+         "構成 6、7、8、9 で 30",
+         9
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "6 人で総当たり戦をします（引き分けなし）。いちばん多く勝った人の勝ち数は、いちばん少なくていくつですか。",
+       "answer": 3,
+       "check": "(lambda P: min(max(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(6)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(6), 2)])",
+       "hints": [
+        "試合は全部で何試合ですか。",
+        "どの人も 2 勝以下だと、勝ち数の合計はいくつ以下ですか。",
+        "勝ち数ができるだけそろうように、例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "試合は 15 試合",
+         "評価 どの人も 2 勝以下なら合計 12 以下で矛盾",
+         "構成 勝ち数 3、3、3、2、2、2 の例",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 11 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 12)) == 0 for m in range(2 ** 11)) else 'できない'",
+       "hints": [
+        "1 から 11 までの和は、偶数ですか、奇数ですか。",
+        "偶数なら偶奇の理由では止められません。どちらの組も和をいくつにすればよいですか。",
+        "和が 33 になる数の組を作りましょう。"
+       ],
+       "paths": [
+        [
+         "和は 66 でどちらの組も 33",
+         "11 + 10 + 9 + 3 = 33",
+         "残りも 33",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 3 つの正の整数の和が 25 です。いちばん大きい数は、いちばん小さくていくつですか。",
+       "answer": 10,
+       "check": "min(max(c) for c in itertools.combinations(range(1, 26), 3) if sum(c) == 25)",
+       "hints": [
+        "いちばん大きい数を m とすると、3 つの和はいちばん大きくていくつですか。",
+        "その式が 25 以上になる m を調べましょう。",
+        "例も作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 和は 3m − 3 以下",
+         "3m − 3 ≥ 25 より m ≥ 28/3 なので m ≥ 10",
+         "構成 7、8、10 で 25",
+         10
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "4 人で総当たり戦をします（引き分けなし）。いちばん少なく勝った人の勝ち数は、いちばん多くていくつですか。",
+       "answer": 1,
+       "check": "(lambda P: max(min(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(4)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(4), 2)])",
+       "hints": [
+        "試合は全部で何試合ですか。",
+        "どの人も 2 勝以上だと、勝ち数の合計はいくつ以上ですか。",
+        "いちばん少ない人もできるだけ多く勝てるように、例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "試合は 6 試合",
+         "評価 どの人も 2 勝以上なら合計 8 以上で矛盾",
+         "構成 勝ち数 2、2、1、1 の例",
+         1
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "4 × 4 の盤から、上の行の左から 1 番目と 2 番目の 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 116\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"73\" y1=\"11\" x2=\"89\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"89\" y1=\"11\" x2=\"73\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"99\" y1=\"11\" x2=\"115\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"115\" y1=\"11\" x2=\"99\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"110\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(4) for b in range(4)) - {(0, 0), (0, 1)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "取りのぞいた 2 マスは、同じ色ですか。",
+        "色の数が合っても、それだけでは「できる」とは言えません。",
+        "実際にしきつめた例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "取りのぞいた 2 マスは色がちがう",
+         "構成 上の行の残りに横に 1 枚",
+         "残りの 3 行に横に 2 枚ずつ",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 9 までの数を 3 つずつの 3 組に分けて、どの組も 3 つの数の和が 15 になるようにします。分け方は何通りありますか（組の順番は区別しません）。",
+       "answer": 2,
+       "check": "(lambda tr: len([q for q in itertools.combinations(tr, 3) if len(set(q[0] + q[1] + q[2])) == 9]))([c for c in itertools.combinations(range(1, 10), 3) if sum(c) == 15])",
+       "hints": [
+        "1 が入る組で場合に分けましょう。1 と同じ組に入れる数の組み合わせは何ですか。",
+        "1 の組を決めたら、残りの 6 つの数で、9 が入る組を考えましょう。",
+        "もれも重なりもないように、全部の場合を書き出しましょう。"
+       ],
+       "paths": [
+        [
+         "1 の組は (1、5、9) か (1、6、8)",
+         "(1、5、9) なら残りは (2、6、7) と (3、4、8)",
+         "(1、6、8) なら残りは (2、4、9) と (3、5、7)",
+         "2 通り"
+        ]
+       ],
+       "note": "「できる」かどうかだけなら例 1 つでよいが、「何通り」は全部調べる（L-007）。"
+      },
+      {
+       "part": "今日",
+       "text": "7 つの整数の和が 50 のとき、「少なくとも 1 つは □ 以上である」と必ず言えます。□ にあてはまる整数のうち、いちばん大きいものはいくつですか。",
+       "answer": 8,
+       "check": "max(m for m in range(1, 51) if 7 * (m - 1) < 50)",
+       "hints": [
+        "どれも 7 以下と仮定すると、和は最大でいくつですか。",
+        "その和は 50 と比べてどうですか。",
+        "それより大きい数では言えないことを、例を 1 つ作って確かめましょう。"
+       ],
+       "paths": [
+        [
+         "どれも 7 以下なら和は 49 以下で矛盾",
+         "少なくとも 1 つは 8 以上",
+         "8 と 7 が 6 つで 50 なので 9 以上は言えない",
+         8
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 × 3 のマスに石を置きます。どの 2 個も、たてや横にとなり合わないように置くと（ななめはよい）、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"81\" y1=\"6\" x2=\"159\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"81\" y1=\"32\" x2=\"159\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"81\" y1=\"58\" x2=\"159\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"81\" y1=\"84\" x2=\"159\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"81\" y1=\"6\" x2=\"81\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"107\" y1=\"6\" x2=\"107\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"133\" y1=\"6\" x2=\"133\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"159\" y1=\"6\" x2=\"159\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 5,
+       "check": "(lambda cells: max(k for k in range(0, 10) if any(all(abs(p[0] - q[0]) + abs(p[1] - q[1]) >= 2 for p, q in itertools.combinations(s, 2)) for s in itertools.combinations(cells, k))))([(a, b) for a in range(3) for b in range(3)])",
+       "hints": [
+        "盤を市松もようにぬり分けて、角と同じ色のマスに置いてみましょう。",
+        "6 個置くとすると、どこかの行に 2 個以上の石があります。それはどこに置けますか。",
+        "場合に分けて、6 個置けないことを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "構成 4 つの角とまん中で 5 個",
+         "評価 1 行には多くて 2 個（両はし）なので 6 個なら 3 行とも 2 個",
+         "すると上の行とまん中の行の両はしがたてにとなり合い矛盾",
+         "5 個"
+        ]
+       ],
+       "note": "評価は、1 行に置けるのは 2 個まで（両はし）であることから場合に分ける（L-007）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "立方体の 8 つの頂点に、1 から 8 までの数を 1 つずつ置きます。どの面も、4 つの頂点の数の和が同じになるようにします。その和はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"60\" y=\"50\" width=\"80\" height=\"80\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"100\" y=\"20\" width=\"80\" height=\"80\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n  <line x1=\"60\" y1=\"50\" x2=\"100\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"140\" y1=\"50\" x2=\"180\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"140\" y1=\"130\" x2=\"180\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"60\" y1=\"130\" x2=\"100\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"5 4\"/>\n  <line x1=\"100\" y1=\"20\" x2=\"180\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"180\" y1=\"20\" x2=\"180\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 18,
+       "check": "(lambda faces: (lambda v: v.pop() if len(v) == 1 else 'きまらない')({sum(p[i] for i in faces[0]) for p in itertools.permutations(range(1, 9)) if len({sum(p[i] for i in f) for f in faces}) == 1}))([[i for i in range(8) if (i >> b) & 1 == v] for b in range(3) for v in range(2)])",
+       "hints": [
+        "6 つの面の和をすべてたすと、どの頂点の数も何回ずつたされますか。",
+        "1 から 8 までの和は 36 です。6 つの面の和の合計はいくつですか。",
+        "その和が本当に作れるか、上の面から順に数を決めて、横の面も同じ和になるかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "どの頂点も 3 つの面に入る",
+         "6 面の和の合計は 3 × 36 = 108",
+         "1 つの面は 108 ÷ 6 = 18",
+         "構成 上の面にまわる順に 1、4、5、8、その真下に 6、7、2、3",
+         18
+        ]
+       ],
+       "note": "計算（評価）で和は 18 しかないと分かる。そのうえで実際に置けること（構成）を示すと、答えが確かになる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 8 までの数を 2 組に分けて、2 組の和を等しくします（組に入る数の個数は同じでなくてかまいません）。分け方は何通りありますか（組の順番は区別しません）。",
+       "answer": 7,
+       "check": "len([c for k in range(1, 9) for c in itertools.combinations(range(1, 9), k) if sum(c) == 18 and 1 in c])",
+       "hints": [
+        "1 つの組の和はいくつにすればよいですか。1 が入る組だけを数えれば、分け方を 2 回数えずにすみます。",
+        "1 が入る組を、組に入る数の個数で場合に分けましょう。3 個の組や 6 個の組はできますか。",
+        "4 個の組と 5 個の組を、もれなく書き出しましょう。"
+       ],
+       "paths": [
+        [
+         "1 組の和は 18",
+         "3 個以下では 1 + 8 + 7 = 16 で足りず、6 個以上では 1 + 2 + 3 + 4 + 5 + 6 = 21 で多すぎる",
+         "4 個の組は (1、2、7、8)、(1、3、6、8)、(1、4、5、8)、(1、4、6、7) の 4 通り",
+         "5 個の組は (1、2、3、4、8)、(1、2、3、5、7)、(1、2、4、5、6) の 3 通り",
+         "7 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "背理法で「異なる 9 つの正の整数の和は、40 にならない」を示します。はじめに仮定することは、どれですか。",
+       "choices": [
+        "異なる 9 つの正の整数で、和が 40 になるものがある",
+        "どの異なる 9 つの正の整数も、和が 40 になる",
+        "異なる 9 つの正の整数の和は、40 より大きい"
+       ],
+       "answer": "異なる 9 つの正の整数で、和が 40 になるものがある",
+       "hints": [
+        "示したいことは「どの 9 つでも、和は 40 にならない」です。",
+        "「どの〜でも〜でない」の否定は、どんな形でしたか。",
+        "否定は「〜になるものがある」の形です。"
+       ],
+       "paths": [
+        [
+         "示したいのは「どれも和が 40 にならない」",
+         "否定は「和が 40 になるものがある」",
+         "それを仮定して矛盾を出す"
+        ]
+       ],
+       "note": "このあと「小さい順に i 番目は i 以上なので和は 45 以上」で矛盾する。否定の形を選ぶ問題なので check はない（L-013 の否定のきまり）。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が同じになるようにします。その和は、いちばん大きくていくつですか。",
+       "answer": 12,
+       "check": "max({p[0] + p[3] + p[1] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == p[1] + p[4] + p[2] == p[2] + p[5] + p[0]})",
+       "hints": [
+        "辺の和を S とすると、3S = 21 + （頂点の和）です。",
+        "頂点の和は、いちばん大きくていくつですか。",
+        "その場合に、本当に置けるかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 頂点の和は 4 + 5 + 6 = 15 以下",
+         "3S ≤ 36 より S ≤ 12",
+         "構成 頂点 4、5、6 とまん中 3、1、2",
+         12
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "異なる 7 つの正の整数の和は、いちばん小さくていくつですか。",
+       "answer": 28,
+       "check": "min(sum(c) for c in itertools.combinations(range(1, 15), 7))",
+       "hints": [
+        "7 つを小さい順に並べると、それぞれいくつ以上ですか。",
+        "その下限を全部たしましょう。",
+        "それがちょうど作れる例も確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 1 以上、2 以上、…、7 以上で和は 28 以上",
+         "構成 1 から 7",
+         28
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 行 4 列のマスに石を置きます。同じ行にも同じ列にも 2 個以上並ばないように置くと、いちばん多くて何個置けますか。",
+       "svg": "<svg viewBox=\"0 0 240 90\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"68\" y1=\"6\" x2=\"172\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"32\" x2=\"172\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"58\" x2=\"172\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"68\" y1=\"84\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 3,
+       "check": "(lambda cells: max(k for k in range(0, 6) for s in itertools.combinations(cells, k) if len(set(a for a, b in s)) == k and len(set(b for a, b in s)) == k))([(a, b) for a in range(3) for b in range(4)])",
+       "hints": [
+        "1 つの行には、石を何個まで置けますか。",
+        "行は 3 つです。これで何個以下と言えますか。",
+        "その個数を、実際に置いてみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 各行に 1 個までで 3 個以下",
+         "構成 ななめに 3 個",
+         "3 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 12 までの数のそれぞれに + か − をつけて、すべてたします。合計を 0 にできますか。",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できる",
+       "check": "'できる' if any(sum(k if (m >> (k - 1)) & 1 else -k for k in range(1, 13)) == 0 for m in range(2 ** 12)) else 'できない'",
+       "hints": [
+        "1 から 12 までの和は、偶数ですか、奇数ですか。",
+        "どちらの組も和をいくつにすればよいですか。",
+        "大きい数と小さい数を組にしてみましょう。"
+       ],
+       "paths": [
+        [
+         "和は 78 でどちらの組も 39",
+         "1 + 12、2 + 11、3 + 10 で 39",
+         "残りの 4 から 9 も 39",
+         "できる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる正の整数をいくつか選んで、和をちょうど 70 にします。いちばん多くて何個選べますか。",
+       "answer": 11,
+       "check": "max(k for k in range(1, 70) if sum(range(1, k + 1)) <= 70)",
+       "hints": [
+        "1 + 2 + 3 + … と順にたしていくと、何個目で 70 をこえますか。",
+        "それより多い個数でも、70 をこえますか。",
+        "こえる直前の個数で、いちばん大きい数を大きくして、和をちょうど 70 にしましょう。"
+       ],
+       "paths": [
+        [
+         "評価 12 個なら和は 78 以上",
+         "構成 1 から 10 と 15 で 70",
+         "11 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人が 10 点満点のテストを受けました（点数は 0 から 10 までの整数）。5 人の合計は 46 点でした。いちばん低い人の点数は、いちばん低くて何点ですか。",
+       "answer": 6,
+       "check": "min(min(t) for t in itertools.product(range(11), repeat=5) if sum(t) == 46)",
+       "hints": [
+        "ほかの 4 人の合計は、いちばん多くて何点ですか。",
+        "いちばん低い人は、何点以上ですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 4 人は 40 点以下",
+         "いちばん低い人は 6 点以上",
+         "構成 10、10、10、10、6",
+         "6 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 × 6 の盤から、左上のマスと、そこから右に 2、下に 2 進んだマスの 2 マスを取りのぞきます。残りを 1 × 2 のタイルで、重ならず、すき間なくしきつめられますか。",
+       "svg": "<svg viewBox=\"0 0 240 168\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"47\" y1=\"11\" x2=\"63\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"63\" y1=\"11\" x2=\"47\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"99\" y1=\"63\" x2=\"115\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"115\" y1=\"63\" x2=\"99\" y2=\"79\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"42\" y1=\"6\" x2=\"198\" y2=\"6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"32\" x2=\"198\" y2=\"32\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"58\" x2=\"198\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"84\" x2=\"198\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"110\" x2=\"198\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"136\" x2=\"198\" y2=\"136\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"42\" y1=\"162\" x2=\"198\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"42\" y1=\"6\" x2=\"42\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68\" y1=\"6\" x2=\"68\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"94\" y1=\"6\" x2=\"94\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"120\" y1=\"6\" x2=\"120\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"6\" x2=\"146\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"172\" y1=\"6\" x2=\"172\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"198\" y1=\"6\" x2=\"198\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "choices": [
+        "できる",
+        "できない"
+       ],
+       "answer": "できない",
+       "check": "'できる' if (lambda T: T(set((a, b) for a in range(6) for b in range(6)) - {(0, 0), (2, 2)}))((lambda f: lambda S: f(f, S))(lambda f, S: 1 if not S else (lambda c: sum(f(f, S - {c, d}) for d in [(c[0], c[1] + 1), (c[0] + 1, c[1])] if d in S))(min(S)))) > 0 else 'できない'",
+       "hints": [
+        "盤を市松もようにぬり分けましょう。",
+        "取りのぞいた 2 マスは、同じ色ですか。",
+        "残りの 2 色のマスの数を比べましょう。"
+       ],
+       "paths": [
+        [
+         "2 マスは同じ色",
+         "残りは 16 マスと 18 マス",
+         "数が合わないのでできない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人で総当たり戦をします（引き分けなし）。いちばん少なく勝った人の勝ち数は、いちばん多くていくつですか。",
+       "answer": 2,
+       "check": "(lambda P: max(min(sum(1 for j in range(len(P)) if (P[j][0] == i and (m >> j) & 1) or (P[j][1] == i and not (m >> j) & 1)) for i in range(5)) for m in range(2 ** len(P))))([c for c in itertools.combinations(range(5), 2)])",
+       "hints": [
+        "試合は全部で何試合ですか。",
+        "どの人も 3 勝以上だと、勝ち数の合計はいくつ以上ですか。",
+        "全員が同じ数だけ勝つ例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "試合は 10 試合",
+         "評価 どの人も 3 勝以上なら合計 15 以上で矛盾",
+         "構成 輪に並べ次の 2 人に勝つと全員 2 勝",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 6 までの数を三角形の頂点と辺のまん中に置き、どの辺も 3 つの数の和が同じになるようにします。その和は、いちばん小さくていくつですか。",
+       "answer": 9,
+       "check": "min({p[0] + p[3] + p[1] for p in itertools.permutations(range(1, 7)) if p[0] + p[3] + p[1] == p[1] + p[4] + p[2] == p[2] + p[5] + p[0]})",
+       "hints": [
+        "辺の和を S とすると、3S = 21 + （頂点の和）です。",
+        "頂点の和は、いちばん小さくていくつですか。",
+        "その場合に、本当に置けるかを確かめましょう。"
+       ],
+       "paths": [
+        [
+         "評価 頂点の和は 1 + 2 + 3 = 6 以上",
+         "3S ≥ 27 より S ≥ 9",
+         "構成 頂点 1、2、3 とまん中 6、4、5",
+         9
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 20 までの整数から、どの 2 つも差が 1 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 10,
+       "check": "(lambda e, c: e if e == len(c) and all(c[i + 1] - c[i] > 1 for i in range(len(c) - 1)) else 'きまらない')(20 // 2, range(1, 21, 2))",
+       "hints": [
+        "となり合う 2 つずつの組に分けると、組はいくつですか。",
+        "1 つの組から何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "評価 10 組で各組 1 個まで",
+         "構成 1、3、5、…、19",
+         "10 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 20 までの整数から、どの 2 つをたしても 21 にならないように選びます。いちばん多くて何個選べますか。",
+       "answer": 10,
+       "check": "(lambda e, c: e if e == len(c) and all(a + b != 21 for a, b in itertools.combinations(c, 2)) else 'きまらない')(20 // 2, range(1, 11))",
+       "hints": [
+        "和が 21 になる 2 つの組を書き出しましょう。いくつありますか。",
+        "1 つの組から何個まで選べますか。",
+        "その個数を、実際に選んでみましょう。"
+       ],
+       "paths": [
+        [
+         "(1、20)、(2、19)、…、(10、11) の 10 組",
+         "評価 各組 1 個まで",
+         "構成 1 から 10",
+         "10 個"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "異なる 5 つの正の整数の和が 25 です。いちばん大きい数は、いちばん大きくていくつですか。",
+       "answer": 15,
+       "check": "max(max(c) for c in itertools.combinations(range(1, 26), 5) if sum(c) == 25)",
+       "hints": [
+        "いちばん大きい数を大きくするには、ほかの 4 つをどうすればよいですか。",
+        "ほかの 4 つの和は、いちばん小さくていくつですか。",
+        "その場合の例を作りましょう。"
+       ],
+       "paths": [
+        [
+         "評価 ほかの 4 つの和は 10 以上",
+         "いちばん大きい数は 15 以下",
+         "構成 1、2、3、4、15",
+         15
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
-    -7.59,
-    22.3,
-    -20.31
+    -22.47,
+    25.53,
+    4.85
    ]
   },
   {
@@ -212610,36 +217269,1192 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "20 人が 30 秒間に上体起こしをした回数は、12、18、23、15、27、20、9、22、25、17、14、21、28、19、24、16、20、11、26、23（回）でした。5 回ごとに区切って整理しましょう。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"125.75\" x2=\"250\" y2=\"125.75\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"111.5\" x2=\"250\" y2=\"111.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"97.25\" x2=\"250\" y2=\"97.25\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"68.75\" x2=\"250\" y2=\"68.75\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"54.5\" x2=\"250\" y2=\"54.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.25\" x2=\"250\" y2=\"40.25\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"115.5\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"87\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"58.5\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <rect x=\"44\" y=\"125.75\" width=\"40.4\" height=\"14.25\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"97.25\" width=\"40.4\" height=\"42.75\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"68.75\" width=\"40.4\" height=\"71.25\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"40.25\" width=\"40.4\" height=\"99.75\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"83\" width=\"40.4\" height=\"57\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">5</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">15</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">25</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "explain": "「15 回以上 20 回未満」のように区切った区間を階級、区間の幅（ここでは 5 回）を階級の幅、それぞれの階級に入るデータの個数を度数といいます。15 回以上 20 回未満の階級には 15、16、17、18、19 が入り、20 は入りません（20 は次の 20 回以上 25 回未満に入ります）。数えると、度数は 5 回以上 10 回未満から順に 1、3、5、7、4 人です。階級ごとに度数を整理した表を度数分布表といい、それを柱のグラフにしたものをヒストグラムといいます。柱の幅が階級の幅、柱の高さが度数を表します。ヒストグラムを見ると、20 回以上 25 回未満の人がいちばん多く、データが全体としてどのあたりに集まっているかが分かります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "8 人の点数は、34、28、41、37、30、45、33、39（点）でした。中央値は何点ですか。",
+       "answer": 35.5,
+       "check": "(lambda s:(s[3] + s[4]) / 2)(sorted([34, 28, 41, 37, 30, 45, 33, 39]))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "8 人の真ん中には、数が 2 つあります。",
+        "その 2 つの平均を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 28、30、33、34、37、39、41、45",
+         "真ん中は 34 と 37",
+         "(34 + 37) ÷ 2 = 35.5"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "6 回のテストの点数は、56、72、64、81、60、75（点）でした。平均は何点ですか。",
+       "answer": 68,
+       "check": "Fraction(56 + 72 + 64 + 81 + 60 + 75, 6)",
+       "hints": [
+        "6 回の合計を求めましょう。",
+        "合計を回数でわりましょう。",
+        "56 をもとにして、多い分だけをならしてもかまいません。"
+       ],
+       "paths": [
+        [
+         "合計は 408 点",
+         "408 ÷ 6 = 68",
+         "68 点"
+        ],
+        [
+         "56 をもとにする",
+         "多い分は 0、16、8、25、4、19 で合計 72",
+         "72 ÷ 6 = 12",
+         "56 + 12 = 68"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "15 人の漢字テスト（100 点満点）の点数は、62、48、75、53、41、68、57、49、70、45、66、52、44、59、47（点）でした。40 点以上 50 点未満の階級の度数は何人ですか。",
+       "answer": 6,
+       "check": "sum(1 for x in [62, 48, 75, 53, 41, 68, 57, 49, 70, 45, 66, 52, 44, 59, 47] if 40 <= x < 50)",
+       "hints": [
+        "40 点以上 50 点未満に入るのは、どんな点数ですか。",
+        "前から順に、40 台の点数に印を付けましょう。",
+        "印を付けた点数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "40 点台は 48、41、49、45、44、47",
+         "6 人"
+        ]
+       ],
+       "note": "数えながら印を付けると、数え落としと二重に数えるのを防げる。"
+      },
+      {
+       "part": "今日",
+       "text": "ある学年の 30 人の小テスト（50 点満点）の結果をヒストグラムにしました。30 点以上の人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.5\" x2=\"250\" y2=\"130.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"121\" x2=\"250\" y2=\"121\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"111.5\" x2=\"250\" y2=\"111.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"102\" x2=\"250\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"92.5\" x2=\"250\" y2=\"92.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"73.5\" x2=\"250\" y2=\"73.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"64\" x2=\"250\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"54.5\" x2=\"250\" y2=\"54.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"45\" x2=\"250\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"35.5\" x2=\"250\" y2=\"35.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"125\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"106\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"87\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"68\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <text x=\"34\" y=\"49\" font-size=\"11\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">12</text>\n  <rect x=\"44\" y=\"111.5\" width=\"40.4\" height=\"28.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"73.5\" width=\"40.4\" height=\"66.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"35.5\" width=\"40.4\" height=\"104.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"83\" width=\"40.4\" height=\"57\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"111.5\" width=\"40.4\" height=\"28.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 9,
+       "check": "sum([3, 7, 11, 6, 3][3:])",
+       "hints": [
+        "30 点以上の人は、どの階級に入っていますか。",
+        "30 点以上 40 点未満と、40 点以上 50 点未満の柱を読みましょう。",
+        "2 つの度数をたしましょう。"
+       ],
+       "paths": [
+        [
+         "30 点以上 40 点未満は 6 人",
+         "40 点以上 50 点未満は 3 人",
+         "6 + 3 = 9 人"
+        ]
+       ],
+       "note": "30 点以上 40 点未満の柱だけを答えやすい。「以上」は、その上の階級をすべてふくむ。"
+      },
+      {
+       "part": "今日",
+       "text": "上体起こしの回数を、5 回ごとの階級に分けます。記録がちょうど 20 回の人は、どの階級に入りますか。",
+       "choices": [
+        "15 回以上 20 回未満",
+        "20 回以上 25 回未満"
+       ],
+       "answer": "20 回以上 25 回未満",
+       "check": "(lambda v: [k for k, (a, b) in {'15 回以上 20 回未満': (15, 20), '20 回以上 25 回未満': (20, 25)}.items() if a <= v < b][0])(20)",
+       "hints": [
+        "「未満」は、その数をふくみますか。",
+        "「以上」は、その数をふくみますか。",
+        "20 をふくむのは、どちらの階級ですか。"
+       ],
+       "paths": [
+        [
+         "20 回未満に 20 は入らない",
+         "20 回以上に 20 は入る",
+         "20 回以上 25 回未満"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "20 人の記録をヒストグラムにしました。記録の小さいほうから数えて 13 番目の人は、どの階級に入りますか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"125.75\" x2=\"250\" y2=\"125.75\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"111.5\" x2=\"250\" y2=\"111.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"97.25\" x2=\"250\" y2=\"97.25\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"68.75\" x2=\"250\" y2=\"68.75\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"54.5\" x2=\"250\" y2=\"54.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"40.25\" x2=\"250\" y2=\"40.25\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"115.5\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"87\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"58.5\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <rect x=\"44\" y=\"111.5\" width=\"40.4\" height=\"28.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"68.75\" width=\"40.4\" height=\"71.25\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"26\" width=\"40.4\" height=\"114\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"83\" width=\"40.4\" height=\"57\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"125.75\" width=\"40.4\" height=\"14.25\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">15</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">25</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">35</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "choices": [
+        "15 回以上 20 回未満",
+        "20 回以上 25 回未満",
+        "25 回以上 30 回未満"
+       ],
+       "answer": "20 回以上 25 回未満",
+       "check": "(lambda f, names: [names[i] for i in range(len(f)) if sum(f[:i]) < 13 <= sum(f[:i + 1])][0])([2, 5, 8, 4, 1], ['10 回以上 15 回未満', '15 回以上 20 回未満', '20 回以上 25 回未満', '25 回以上 30 回未満', '30 回以上 35 回未満'])",
+       "hints": [
+        "小さい階級から順に、度数をたしていきましょう。",
+        "20 回未満の人は、全部で何人ですか。",
+        "25 回未満の人は、全部で何人ですか。13 番目はどこに入りますか。"
+       ],
+       "paths": [
+        [
+         "20 回未満は 2 + 5 = 7 人",
+         "25 回未満は 7 + 8 = 15 人",
+         "13 番目は 8 番目から 15 番目の中",
+         "20 回以上 25 回未満"
+        ]
+       ],
+       "note": "13 番目の人の記録そのものはヒストグラムからは分からない。分かるのは、どの階級に入るかまで。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "12 人の点数は、71、58、83、66、79、62、90、75、68、77、55、72（点）でした。70 点以上 80 点未満の階級の度数は何人ですか。",
+       "answer": 5,
+       "check": "sum(1 for x in [71, 58, 83, 66, 79, 62, 90, 75, 68, 77, 55, 72] if 70 <= x < 80)",
+       "hints": [
+        "70 点以上 80 点未満に入るのは、どんな点数ですか。",
+        "前から順に、70 台の点数に印を付けましょう。",
+        "印を付けた点数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "70 点台は 71、79、75、77、72",
+         "5 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "25 人の記録をヒストグラムにしました。度数がいちばん少ない階級はどれですか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"128.6\" x2=\"250\" y2=\"128.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"117.2\" x2=\"250\" y2=\"117.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"105.8\" x2=\"250\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"94.4\" x2=\"250\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"71.6\" x2=\"250\" y2=\"71.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.2\" x2=\"250\" y2=\"60.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"48.8\" x2=\"250\" y2=\"48.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.4\" x2=\"250\" y2=\"37.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"121.2\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"98.4\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"75.6\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"52.8\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">10</text>\n  <rect x=\"44\" y=\"94.4\" width=\"40.4\" height=\"45.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"37.4\" width=\"40.4\" height=\"102.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"60.2\" width=\"40.4\" height=\"79.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"105.8\" width=\"40.4\" height=\"34.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"117.2\" width=\"40.4\" height=\"22.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">25</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">35</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">45</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "choices": [
+        "20 回以上 25 回未満",
+        "25 回以上 30 回未満",
+        "30 回以上 35 回未満",
+        "35 回以上 40 回未満",
+        "40 回以上 45 回未満"
+       ],
+       "answer": "40 回以上 45 回未満",
+       "check": "(lambda f, names: names[f.index(min(f))])([4, 9, 7, 3, 2], ['20 回以上 25 回未満', '25 回以上 30 回未満', '30 回以上 35 回未満', '35 回以上 40 回未満', '40 回以上 45 回未満'])",
+       "hints": [
+        "柱の高さが度数を表します。",
+        "いちばん低い柱はどれですか。",
+        "その柱の左はしと右はしの数を読みましょう。"
+       ],
+       "paths": [
+        [
+         "いちばん低い柱は右はし（2 人）",
+         "40 回以上 45 回未満"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 人の小テストの結果のヒストグラム（今日の 2 問目と同じもの）で、40 点未満の人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"130.5\" x2=\"250\" y2=\"130.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"121\" x2=\"250\" y2=\"121\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"111.5\" x2=\"250\" y2=\"111.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"102\" x2=\"250\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"92.5\" x2=\"250\" y2=\"92.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"73.5\" x2=\"250\" y2=\"73.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"64\" x2=\"250\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"54.5\" x2=\"250\" y2=\"54.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"45\" x2=\"250\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"35.5\" x2=\"250\" y2=\"35.5\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"125\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"106\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"87\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"68\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <text x=\"34\" y=\"49\" font-size=\"11\" text-anchor=\"end\">10</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">12</text>\n  <rect x=\"44\" y=\"111.5\" width=\"40.4\" height=\"28.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"73.5\" width=\"40.4\" height=\"66.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"35.5\" width=\"40.4\" height=\"104.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"83\" width=\"40.4\" height=\"57\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"111.5\" width=\"40.4\" height=\"28.5\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 27,
+       "check": "sum([3, 7, 11, 6, 3][:4])",
+       "hints": [
+        "40 点未満の人は、どの階級に入っていますか。",
+        "40 点以上の人を全体からひいてもかまいません。",
+        "度数をたしましょう。"
+       ],
+       "paths": [
+        [
+         "40 点未満は最初の 4 つの階級",
+         "3 + 7 + 11 + 6 = 27 人"
+        ],
+        [
+         "40 点以上は 3 人",
+         "30 − 3 = 27 人"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "25 人の小テスト（50 点満点）の度数分布表です。相対度数、累積度数、階級値と、表からの平均を求めましょう。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"138\" x2=\"221.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">0 以上 10 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">10 以上 20 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">20 以上 30 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">30 以上 40 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">40 以上 50 未満</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">25</text>\n</svg>\n",
+       "explain": "相対度数は、その階級の度数が全体のどれだけの割合かを表す数で、度数 ÷ 度数の合計 です。20 点以上 30 点未満は 8 ÷ 25 = 0.32 です。累積度数は、最初の階級からその階級までの度数の合計で、30 点未満の人は 2 + 5 + 8 = 15 人です（累積度数 ÷ 合計 が累積相対度数で、15 ÷ 25 = 0.6）。階級値は階級の真ん中の値で、20 点以上 30 点未満の階級値は 25 点です。表から平均を求めるときは、どの人も自分の階級の階級値をとったとみなして、（階級値 × 度数）の合計 ÷ 度数の合計 を計算します。5 × 2 + 15 × 5 + 25 × 8 + 35 × 6 + 45 × 4 = 675 なので、675 ÷ 25 = 27 点です。度数がいちばん多い階級の階級値 25 点を、表からの最頻値とします。"
+      },
+      {
+       "part": "思い出す",
+       "text": "12 人の記録は、31、27、35、22、38、29、33、25、36、30、24、34（回）でした。30 回以上 35 回未満の階級の度数は何人ですか。",
+       "answer": 4,
+       "check": "sum(1 for x in [31, 27, 35, 22, 38, 29, 33, 25, 36, 30, 24, 34] if 30 <= x < 35)",
+       "hints": [
+        "30 回以上 35 回未満に入るのは、どんな回数ですか。",
+        "35 回は、この階級に入りますか。",
+        "入る回数に印を付けて数えましょう。"
+       ],
+       "paths": [
+        [
+         "入るのは 30、31、32、33、34",
+         "データでは 31、33、30、34",
+         "4 人"
+        ]
+       ],
+       "note": "35 回の人をこの階級に入れて 5 人としやすい。35 は次の階級に入る。"
+      },
+      {
+       "part": "思い出す",
+       "text": "40 人のうち 14 人が、犬を飼っています。犬を飼っている人の割合を小数で答えましょう。",
+       "answer": 0.35,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(14, 40))",
+       "hints": [
+        "割合は、比べる量 ÷ もとにする量 でした。",
+        "もとにする量は何人ですか。",
+        "14/40 を、分母が 100 の分数に直しましょう。"
+       ],
+       "paths": [
+        [
+         "14 ÷ 40",
+         "= 35/100",
+         "= 0.35"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 人の点数の度数分布表です。70 点以上 80 点未満の階級の相対度数を、小数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"14.3\" y1=\"28\" x2=\"225.7\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"50\" x2=\"225.7\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"72\" x2=\"225.7\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"94\" x2=\"225.7\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"116\" x2=\"225.7\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"138\" x2=\"225.7\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"144.7\" y1=\"6\" x2=\"144.7\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"185.2\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">50 以上 60 未満</text>\n  <text x=\"185.2\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">60 以上 70 未満</text>\n  <text x=\"185.2\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">70 以上 80 未満</text>\n  <text x=\"185.2\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">80 以上 90 未満</text>\n  <text x=\"185.2\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">90 以上 100 未満</text>\n  <text x=\"185.2\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">1</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"185.2\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">20</text>\n</svg>\n",
+       "answer": 0.4,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(8, 20))",
+       "hints": [
+        "相対度数は、度数 ÷ 度数の合計 です。",
+        "70 点以上 80 点未満の度数は何人ですか。",
+        "合計の 20 人でわりましょう。"
+       ],
+       "paths": [
+        [
+         "度数は 8 人",
+         "8 ÷ 20 = 0.4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "26 人の点数の度数分布表です。60 点未満の人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"138\" x2=\"221.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">40 以上 50 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">50 以上 60 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">60 以上 70 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">70 以上 80 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">80 以上 90 未満</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">26</text>\n</svg>\n",
+       "answer": 10,
+       "check": "3 + 7",
+       "hints": [
+        "60 点未満の人は、どの階級に入っていますか。",
+        "60 点以上 70 点未満の階級は入りますか。",
+        "最初の階級から、60 点未満の階級までの度数をたしましょう。"
+       ],
+       "paths": [
+        [
+         "60 点未満は 40 以上 50 未満と 50 以上 60 未満",
+         "3 + 7 = 10 人"
+        ]
+       ],
+       "note": "これが 50 点以上 60 点未満の階級の累積度数。"
+      },
+      {
+       "part": "今日",
+       "text": "20 人の点数の度数分布表です。表から平均を求めると何点ですか。",
+       "svg": "<svg viewBox=\"0 0 240 144\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"132\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">0 以上 10 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">10 以上 20 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">20 以上 30 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">30 以上 40 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">20</text>\n</svg>\n",
+       "answer": 23,
+       "check": "Fraction(5 * 2 + 15 * 5 + 25 * 8 + 35 * 5, 20)",
+       "hints": [
+        "それぞれの階級の階級値は何点ですか。",
+        "（階級値 × 度数）を階級ごとに求めて、たしましょう。",
+        "その合計を、度数の合計でわりましょう。"
+       ],
+       "paths": [
+        [
+         "階級値は 5、15、25、35",
+         "10 + 75 + 200 + 175 = 460",
+         "460 ÷ 20 = 23 点"
+        ]
+       ],
+       "note": "階級の左はしの値（0、10、20、30）をかけて 18 点としやすい。階級値は真ん中の値。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 組は 30 人のうち 9 人、2 組は 25 人のうち 8 人が、なわとびで 50 回以上とびました。50 回以上とんだ人の割合が大きいのはどちらですか。",
+       "choices": [
+        "1 組",
+        "2 組",
+        "同じ"
+       ],
+       "answer": "2 組",
+       "check": "(lambda a, b: '1 組' if a > b else '2 組' if b > a else '同じ')(Fraction(9, 30), Fraction(8, 25))",
+       "hints": [
+        "人数がちがうので、度数のままでは比べられません。",
+        "それぞれの相対度数を求めましょう。",
+        "2 つの小数を比べましょう。"
+       ],
+       "paths": [
+        [
+         "1 組は 9 ÷ 30 = 0.3",
+         "2 組は 8 ÷ 25 = 0.32",
+         "2 組のほうが大きい"
+        ]
+       ],
+       "note": "人数（9 人と 8 人）だけで 1 組と答えやすい。全体の人数がちがうときは相対度数で比べる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "20 人の記録の度数分布表です。表から求めた最頻値は何回ですか。",
+       "svg": "<svg viewBox=\"0 0 240 144\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"132\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（回）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">10 以上 14 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">14 以上 18 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">18 以上 22 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">22 以上 26 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">20</text>\n</svg>\n",
+       "answer": 16,
+       "check": "(lambda t: (lambda c: Fraction(c[0] + c[1], 2))(max(t, key=t.get)))({(10, 14): 3, (14, 18): 9, (18, 22): 6, (22, 26): 2})",
+       "hints": [
+        "度数がいちばん多い階級はどれですか。",
+        "その階級の階級値は、階級の真ん中の値です。",
+        "14 と 18 の真ん中を求めましょう。"
+       ],
+       "paths": [
+        [
+         "度数がいちばん多いのは 14 以上 18 未満",
+         "階級値は (14 + 18) ÷ 2 = 16",
+         "16 回"
+        ]
+       ],
+       "note": "度数の 9 を答えやすい。最頻値は記録（回数）のほう。"
+      },
+      {
+       "part": "今日",
+       "text": "20 人の点数を、2、6、7、4、1 人のように 5 つの階級に分けました（小さい階級から順）。小さいほうから 3 番目の階級の累積相対度数を、小数で答えましょう。",
+       "answer": 0.75,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(2 + 6 + 7, 20))",
+       "hints": [
+        "累積度数は、最初の階級からその階級までの度数の合計です。",
+        "3 番目の階級までの累積度数は何人ですか。",
+        "それを合計の 20 人でわりましょう。"
+       ],
+       "paths": [
+        [
+         "累積度数は 2 + 6 + 7 = 15 人",
+         "15 ÷ 20 = 0.75"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "40 人の記録で、ある階級の相対度数は 0.15 でした。この階級の度数は何人ですか。",
+       "answer": 6,
+       "check": "40 * Fraction(15, 100)",
+       "hints": [
+        "相対度数 = 度数 ÷ 合計 でした。",
+        "度数 = 合計 × 相対度数 です。",
+        "40 × 0.15 を計算しましょう。"
+       ],
+       "paths": [
+        [
+         "度数 = 40 × 0.15",
+         "= 6 人"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "11 人の記録は、小さい順に 4、7、8、10、12、13、15、16、18、20、23（回）でした。四分位数を求めて、箱ひげ図に表しましょう。",
+       "svg": "<svg viewBox=\"0 0 300 98\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\"></text>\n  <line x1=\"90.8\" y1=\"33\" x2=\"127.6\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"219.6\" y1=\"33\" x2=\"265.6\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"90.8\" y1=\"26\" x2=\"90.8\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"265.6\" y1=\"26\" x2=\"265.6\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"127.6\" y=\"21\" width=\"92\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"173.6\" y1=\"21\" x2=\"173.6\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"284\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"54\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <line x1=\"63.2\" y1=\"58\" x2=\"63.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"72.4\" y1=\"58\" x2=\"72.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"81.6\" y1=\"58\" x2=\"81.6\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"90.8\" y1=\"58\" x2=\"90.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"100\" y1=\"58\" x2=\"100\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"100\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">5</text>\n  <line x1=\"109.2\" y1=\"58\" x2=\"109.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"118.4\" y1=\"58\" x2=\"118.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"127.6\" y1=\"58\" x2=\"127.6\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"136.8\" y1=\"58\" x2=\"136.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"146\" y1=\"58\" x2=\"146\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"146\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <line x1=\"155.2\" y1=\"58\" x2=\"155.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"164.4\" y1=\"58\" x2=\"164.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"173.6\" y1=\"58\" x2=\"173.6\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"182.8\" y1=\"58\" x2=\"182.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"192\" y1=\"58\" x2=\"192\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"192\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">15</text>\n  <line x1=\"201.2\" y1=\"58\" x2=\"201.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"210.4\" y1=\"58\" x2=\"210.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"219.6\" y1=\"58\" x2=\"219.6\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"228.8\" y1=\"58\" x2=\"228.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"238\" y1=\"58\" x2=\"238\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"238\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"247.2\" y1=\"58\" x2=\"247.2\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"256.4\" y1=\"58\" x2=\"256.4\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"265.6\" y1=\"58\" x2=\"265.6\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"274.8\" y1=\"58\" x2=\"274.8\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"58\" x2=\"284\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">25</text>\n  <text x=\"296\" y=\"92\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "explain": "中央値は 6 番目の 13 回です。データの数が奇数なので、中央値を除いて、前半の 4、7、8、10、12 と後半の 15、16、18、20、23 に分けます。前半の中央値 8 回を第 1 四分位数、後半の中央値 18 回を第 3 四分位数といいます（中央値は第 2 四分位数です）。データの数が偶数のときは、そのまま半分ずつに分けます。第 3 四分位数 − 第 1 四分位数 = 18 − 8 = 10 を四分位範囲といい、真ん中に集まった半分のデータの広がりを表します。最小値、第 1 四分位数、中央値、第 3 四分位数、最大値の 5 つを、図のように箱とひげで表したものを箱ひげ図といいます。箱の中に、真ん中の約半分のデータが入ります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "25 人のうち 7 人が入る階級の相対度数を、小数で答えましょう。",
+       "answer": 0.28,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(7, 25))",
+       "hints": [
+        "相対度数は、度数 ÷ 度数の合計 です。",
+        "7 ÷ 25 を計算しましょう。",
+        "分母を 100 にそろえてもかまいません。"
+       ],
+       "paths": [
+        [
+         "7 ÷ 25",
+         "= 28/100",
+         "= 0.28"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "10 人の記録は、15、8、22、11、19、25、13、17、9、20（回）でした。中央値は何回ですか。",
+       "answer": 16,
+       "check": "(lambda s:Fraction(s[4] + s[5], 2))(sorted([15, 8, 22, 11, 19, 25, 13, 17, 9, 20]))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "10 人の真ん中には、数が 2 つあります。",
+        "5 番目と 6 番目の平均を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 8、9、11、13、15、17、19、20、22、25",
+         "5 番目と 6 番目は 15 と 17",
+         "(15 + 17) ÷ 2 = 16"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "10 人の点数は、23、15、31、18、27、12、35、20、29、16（点）でした。第 1 四分位数は何点ですか。",
+       "answer": 16,
+       "check": "(lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[:len(s) // 2]))(sorted([23, 15, 31, 18, 27, 12, 35, 20, 29, 16]))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "10 人なので、前半の 5 人と後半の 5 人に分けます。",
+        "前半の 5 人の中央値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 12、15、16、18、20、23、27、29、31、35",
+         "前半は 12、15、16、18、20",
+         "その中央値は 16 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9 人の点数は、42、55、38、61、47、50、66、44、58（点）でした。四分位範囲は何点ですか。",
+       "answer": 16.5,
+       "check": "(lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)((lambda s, m: m(s[(len(s) + 1) // 2:]) - m(s[:len(s) // 2]))(sorted([42, 55, 38, 61, 47, 50, 66, 44, 58]), lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2)))",
+       "hints": [
+        "小さい順に並べて、中央値を求めましょう。",
+        "9 人なので、中央値を除いて前半の 4 人と後半の 4 人に分けます。",
+        "前半と後半の中央値をそれぞれ求めて、差を出しましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 38、42、44、47、50、55、58、61、66",
+         "中央値 50 を除く",
+         "前半の中央値は (42 + 44) ÷ 2 = 43",
+         "後半の中央値は (58 + 61) ÷ 2 = 59.5",
+         "59.5 − 43 = 16.5 点"
+        ]
+       ],
+       "note": "中央値の 50 を前半にも後半にも入れてしまいやすい。奇数個のときは中央値を除いて分ける。"
+      },
+      {
+       "part": "今日",
+       "text": "ある組の点数を箱ひげ図に表しました。四分位範囲は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 300 98\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\"></text>\n  <line x1=\"82.75\" y1=\"33\" x2=\"125.875\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"197.75\" y1=\"33\" x2=\"255.25\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"82.75\" y1=\"26\" x2=\"82.75\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"255.25\" y1=\"26\" x2=\"255.25\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"125.875\" y=\"21\" width=\"71.875\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"154.625\" y1=\"21\" x2=\"154.625\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"284\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"54\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"68.375\" y1=\"58\" x2=\"68.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"82.75\" y1=\"58\" x2=\"82.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"97.125\" y1=\"58\" x2=\"97.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"111.5\" y1=\"58\" x2=\"111.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"111.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"125.875\" y1=\"58\" x2=\"125.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.25\" y1=\"58\" x2=\"140.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"154.625\" y1=\"58\" x2=\"154.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"58\" x2=\"169\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <line x1=\"183.375\" y1=\"58\" x2=\"183.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"197.75\" y1=\"58\" x2=\"197.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"197.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">70</text>\n  <line x1=\"212.125\" y1=\"58\" x2=\"212.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"226.5\" y1=\"58\" x2=\"226.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"226.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">80</text>\n  <line x1=\"240.875\" y1=\"58\" x2=\"240.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"255.25\" y1=\"58\" x2=\"255.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"255.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">90</text>\n  <line x1=\"269.625\" y1=\"58\" x2=\"269.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"58\" x2=\"284\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">100</text>\n  <text x=\"296\" y=\"92\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 25,
+       "check": "70 - 45",
+       "hints": [
+        "箱の左はしと右はしは、それぞれ何を表していますか。",
+        "第 1 四分位数と第 3 四分位数を読みましょう。",
+        "第 3 四分位数から第 1 四分位数をひきましょう。"
+       ],
+       "paths": [
+        [
+         "箱の左はしは第 1 四分位数 45 点",
+         "右はしは第 3 四分位数 70 点",
+         "70 − 45 = 25 点"
+        ]
+       ],
+       "note": "ひげの両はし（最大値 − 最小値 = 範囲 60 点）と取りちがえやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "20 人の点数の第 1 四分位数は 55 点でした。55 点以上の人は、少なくとも何人いますか。",
+       "answer": 15,
+       "check": "sum(1 for i in range(6, 21))",
+       "hints": [
+        "20 人を小さい順に並べると、前半は 1 番目から 10 番目までです。",
+        "第 1 四分位数は、前半の何番目と何番目の平均ですか。",
+        "2 つの数の平均が 55 なら、大きいほうの数は 55 以上です。そこから後ろの人数を数えましょう。"
+       ],
+       "paths": [
+        [
+         "第 1 四分位数は 5 番目と 6 番目の平均",
+         "6 番目は 55 点以上",
+         "6 番目から 20 番目までの 15 人は 55 点以上",
+         "少なくとも 15 人"
+        ]
+       ],
+       "note": "「4 分の 3 なので 15 人」と答えるのはよいが、5 番目が 55 点ちょうどのときは 16 人になる。だから「少なくとも」。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "11 人の記録は、小さい順に 6、9、11、14、15、17、19、22、24、27、30（回）でした。第 3 四分位数は何回ですか。",
+       "answer": 24,
+       "check": "(lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[(len(s) + 1) // 2:]))([6, 9, 11, 14, 15, 17, 19, 22, 24, 27, 30])",
+       "hints": [
+        "中央値は何番目ですか。",
+        "中央値を除いた後半のデータを書き出しましょう。",
+        "後半の中央値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "中央値は 6 番目の 17",
+         "後半は 19、22、24、27、30",
+         "その中央値は 24 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ある組の点数を箱ひげ図に表しました。中央値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 300 98\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\"></text>\n  <line x1=\"97.125\" y1=\"33\" x2=\"140.25\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"212.125\" y1=\"33\" x2=\"269.625\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"97.125\" y1=\"26\" x2=\"97.125\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"269.625\" y1=\"26\" x2=\"269.625\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"140.25\" y=\"21\" width=\"71.875\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"183.375\" y1=\"21\" x2=\"183.375\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"284\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"54\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"68.375\" y1=\"58\" x2=\"68.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"82.75\" y1=\"58\" x2=\"82.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"97.125\" y1=\"58\" x2=\"97.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"111.5\" y1=\"58\" x2=\"111.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"111.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"125.875\" y1=\"58\" x2=\"125.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.25\" y1=\"58\" x2=\"140.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"154.625\" y1=\"58\" x2=\"154.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"58\" x2=\"169\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <line x1=\"183.375\" y1=\"58\" x2=\"183.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"197.75\" y1=\"58\" x2=\"197.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"197.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">70</text>\n  <line x1=\"212.125\" y1=\"58\" x2=\"212.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"226.5\" y1=\"58\" x2=\"226.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"226.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">80</text>\n  <line x1=\"240.875\" y1=\"58\" x2=\"240.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"255.25\" y1=\"58\" x2=\"255.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"255.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">90</text>\n  <line x1=\"269.625\" y1=\"58\" x2=\"269.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"58\" x2=\"284\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">100</text>\n  <text x=\"296\" y=\"92\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 65,
+       "check": "sorted([35, 50, 65, 75, 95])[2]",
+       "hints": [
+        "箱の中の線は何を表していますか。",
+        "箱の中の線の位置の目もりを読みましょう。",
+        "60 の目もりから右に何目もりですか。"
+       ],
+       "paths": [
+        [
+         "箱の中の線が中央値",
+         "60 から 1 目もり右",
+         "65 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ある組の点数の箱ひげ図で、最小値 30 点、第 1 四分位数 48 点、中央値 57 点、第 3 四分位数 66 点、最大値 85 点でした。範囲は、四分位範囲より何点大きいですか。",
+       "answer": 37,
+       "check": "(85 - 30) - (66 - 48)",
+       "hints": [
+        "範囲は、最大値 − 最小値 です。",
+        "四分位範囲は、第 3 四分位数 − 第 1 四分位数 です。",
+        "2 つの差を求めましょう。"
+       ],
+       "paths": [
+        [
+         "範囲は 85 − 30 = 55 点",
+         "四分位範囲は 66 − 48 = 18 点",
+         "55 − 18 = 37 点"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "8 人の記録は、27、14、33、20、18、30、24、11（回）でした。第 1 四分位数は何回ですか。",
+       "answer": 16,
+       "check": "(lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[:len(s) // 2]))(sorted([27, 14, 33, 20, 18, 30, 24, 11]))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "8 人なので、前半の 4 人と後半の 4 人に分けます。",
+        "前半の 4 人の中央値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 11、14、18、20、24、27、30、33",
+         "前半は 11、14、18、20",
+         "中央値は (14 + 18) ÷ 2 = 16 回"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "50 人のうち 12 人が入る階級の相対度数を、小数で答えましょう。",
+       "answer": 0.24,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(12, 50))",
+       "hints": [
+        "相対度数は、度数 ÷ 度数の合計 です。",
+        "12 ÷ 50 を計算しましょう。",
+        "分母を 100 にそろえてもかまいません。"
+       ],
+       "paths": [
+        [
+         "12 ÷ 50",
+         "= 24/100",
+         "= 0.24"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "A 組 25 人と B 組 40 人で、なわとびを 50 回以上とんだ人は、A 組 8 人、B 組 10 人でした。「50 回以上の人は B 組のほうが多いから、よくとべる人の割合は B 組のほうが高い」という意見は正しいですか。相対度数を使って、わけを文に書きましょう。",
+       "explain": "例：「A 組の相対度数は 8 ÷ 25 = 0.32、B 組は 10 ÷ 40 = 0.25。人数は B 組のほうが多いが、割合は A 組のほうが高い。2 つの組は全体の人数がちがうので、度数のままでは比べられず、全体を 1 としたときの割合（相対度数）で比べる。だから、この意見は正しくない。」と書ければよい。① 2 つの相対度数を計算する、② 全体の人数がちがうと度数では比べられないことを書く、③「正しくない」と結ぶ、の 3 つを見る。B 組が 25 人だったら 10 人は 0.4 になる、のように人数を変えた例を話すと、わけがはっきりする。",
+       "hints": [
+        "A 組と B 組の、50 回以上の相対度数を求めましょう。",
+        "2 つの組は、全体の人数が同じですか。",
+        "「全体の人数がちがうので、〜で比べる」と書きましょう。"
+       ],
+       "paths": [
+        [
+         "A 組は 8 ÷ 25 = 0.32",
+         "B 組は 10 ÷ 40 = 0.25",
+         "全体の人数がちがうので割合で比べる",
+         "意見は正しくない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "20 人ずつの A 組と B 組の点数を箱ひげ図に表しました。「70 点以上の人の割合は、B 組のほうが大きい」と言えるわけを、箱ひげ図の読み取りから文に書きましょう。",
+       "svg": "<svg viewBox=\"0 0 300 136\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\">A 組</text>\n  <line x1=\"88.5\" y1=\"33\" x2=\"125.875\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"192\" y1=\"33\" x2=\"240.875\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"88.5\" y1=\"26\" x2=\"88.5\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"240.875\" y1=\"26\" x2=\"240.875\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"125.875\" y=\"21\" width=\"66.125\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"163.25\" y1=\"21\" x2=\"163.25\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"46\" y=\"75\" font-size=\"12\" text-anchor=\"end\">B 組</text>\n  <line x1=\"111.5\" y1=\"71\" x2=\"154.625\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"226.5\" y1=\"71\" x2=\"261\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"111.5\" y1=\"64\" x2=\"111.5\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"261\" y1=\"64\" x2=\"261\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"154.625\" y=\"59\" width=\"71.875\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"203.5\" y1=\"59\" x2=\"203.5\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"96\" x2=\"284\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"96\" x2=\"54\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"68.375\" y1=\"96\" x2=\"68.375\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"82.75\" y1=\"96\" x2=\"82.75\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.75\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"97.125\" y1=\"96\" x2=\"97.125\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"111.5\" y1=\"96\" x2=\"111.5\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"111.5\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"125.875\" y1=\"96\" x2=\"125.875\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.25\" y1=\"96\" x2=\"140.25\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140.25\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"154.625\" y1=\"96\" x2=\"154.625\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"96\" x2=\"169\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <line x1=\"183.375\" y1=\"96\" x2=\"183.375\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"197.75\" y1=\"96\" x2=\"197.75\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"197.75\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">70</text>\n  <line x1=\"212.125\" y1=\"96\" x2=\"212.125\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"226.5\" y1=\"96\" x2=\"226.5\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"226.5\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">80</text>\n  <line x1=\"240.875\" y1=\"96\" x2=\"240.875\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"255.25\" y1=\"96\" x2=\"255.25\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"255.25\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">90</text>\n  <line x1=\"269.625\" y1=\"96\" x2=\"269.625\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"96\" x2=\"284\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">100</text>\n  <text x=\"296\" y=\"130\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "explain": "例：「B 組の中央値は 72 点。20 人を小さい順に並べると、中央値は 10 番目と 11 番目の平均なので、11 番目は 72 点以上で、11 番目から 20 番目までの 10 人（半分）は 70 点以上である。A 組の第 3 四分位数は 68 点。これは 15 番目と 16 番目の平均なので、15 番目は 68 点以下で、70 点以上になれるのは 16 番目から 20 番目までの 5 人（4 分の 1）以下である。だから 70 点以上の人の割合は、B 組は半分以上、A 組は 4 分の 1 以下で、B 組のほうが大きい。」と書ければよい。中央値より上に半分、第 3 四分位数より上に約 4 分の 1 のデータがある、という箱ひげ図の意味を使えているかを見る。「B 組の箱のほうが右にあるから」だけで終わっていたら、どの値を見て何人と言えるのかを聞く。",
+       "hints": [
+        "B 組の中央値は何点ですか。中央値より上には、全体のどれだけの人がいますか。",
+        "A 組の第 3 四分位数は何点ですか。それより上には、全体のどれだけの人がいますか。",
+        "「B 組は半分以上、A 組は〜以下」の形で書きましょう。"
+       ],
+       "paths": [
+        [
+         "B 組の中央値 72 点",
+         "B 組は半分以上が 70 点以上",
+         "A 組の第 3 四分位数 68 点",
+         "A 組で 70 点以上は 4 分の 1 以下",
+         "B 組のほうが大きい"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "9 人の記録は、12、14、15、15、16、17、18、19、20（回）でした。範囲と四分位範囲を求めましょう。また、いちばん大きい 20 回が 60 回だったら、それぞれどうなるかを調べて、散らばりを表すのに四分位範囲が使われるわけを文に書きましょう。",
+       "explain": "例：「範囲は 20 − 12 = 8 回。中央値 16 を除くと、前半 12、14、15、15 の中央値は 14.5、後半 17、18、19、20 の中央値は 18.5 なので、四分位範囲は 18.5 − 14.5 = 4 回。20 回が 60 回になると、範囲は 60 − 12 = 48 回に大きく変わるが、後半は 17、18、19、60 で中央値は 18.5 のままなので、四分位範囲は 4 回のまま。範囲はいちばん大きい値と小さい値だけで決まるので、1 つの外れた値で大きく変わる。四分位範囲は真ん中の半分のデータで決まるので、外れた値があっても変わりにくい。だから散らばりを表すのに四分位範囲が使われる。」と書ければよい。① 2 つの場合の範囲と四分位範囲を計算する、② 範囲は両はしの値だけで決まる、③ 四分位範囲は真ん中の半分で決まるので外れた値に左右されにくい、の 3 つを見る。",
+       "hints": [
+        "範囲は、最大値 − 最小値 です。四分位範囲は、前半と後半の中央値の差です。",
+        "20 を 60 に変えると、前半と後半のデータはどう変わりますか。",
+        "範囲と四分位範囲は、それぞれどの値で決まるかを書きましょう。"
+       ],
+       "paths": [
+        [
+         "範囲 8 回、四分位範囲 4 回",
+         "20 を 60 にすると範囲は 48 回、四分位範囲は 4 回のまま",
+         "範囲は両はしの値で決まる",
+         "四分位範囲は真ん中の半分で決まり外れた値に強い"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 人の点数は、64、58、71、49、66、80、53、75（点）でした。四分位範囲は何点ですか。",
+       "answer": 17.5,
+       "check": "(lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)((lambda s, m: m(s[(len(s) + 1) // 2:]) - m(s[:len(s) // 2]))(sorted([64, 58, 71, 49, 66, 80, 53, 75]), lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2)))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "8 人なので、前半の 4 人と後半の 4 人に分けます。",
+        "前半と後半の中央値をそれぞれ求めて、差を出しましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 49、53、58、64、66、71、75、80",
+         "前半の中央値は (53 + 58) ÷ 2 = 55.5",
+         "後半の中央値は (71 + 75) ÷ 2 = 73",
+         "73 − 55.5 = 17.5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "C 組は 32 人のうち 12 人、D 組は 28 人のうち 10 人が、80 点以上でした。80 点以上の人の割合が大きいのはどちらですか。",
+       "choices": [
+        "C 組",
+        "D 組",
+        "同じ"
+       ],
+       "answer": "C 組",
+       "check": "(lambda a, b: 'C 組' if a > b else 'D 組' if b > a else '同じ')(Fraction(12, 32), Fraction(10, 28))",
+       "hints": [
+        "全体の人数がちがうので、相対度数で比べます。",
+        "12 ÷ 32 と 10 ÷ 28 を求めましょう。",
+        "分数のまま、通分して比べてもかまいません。"
+       ],
+       "paths": [
+        [
+         "C 組は 12 ÷ 32 = 0.375",
+         "D 組は 10 ÷ 28 で約 0.357",
+         "C 組のほうが大きい"
+        ],
+        [
+         "12/32 = 3/8、10/28 = 5/14",
+         "通分して 21/56 と 20/56",
+         "C 組のほうが大きい"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "10 人の記録は、小さい順に 5、8、10、13、14、16、19、21、24、30（回）でした。四分位範囲は何回ですか。",
+       "answer": 11,
+       "check": "(lambda s, m: m(s[(len(s) + 1) // 2:]) - m(s[:len(s) // 2]))([5, 8, 10, 13, 14, 16, 19, 21, 24, 30], lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))",
+       "hints": [
+        "10 人なので、前半の 5 人と後半の 5 人に分けます。",
+        "前半と後半の中央値を求めましょう。",
+        "その差が四分位範囲です。"
+       ],
+       "paths": [
+        [
+         "前半 5、8、10、13、14 の中央値は 10",
+         "後半 16、19、21、24、30 の中央値は 21",
+         "21 − 10 = 11 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 組は 24 人のうち 6 人、2 組は 36 人のうち 9 人が、20 回以上でした。20 回以上の人の割合が大きいのはどちらですか。",
+       "choices": [
+        "1 組",
+        "2 組",
+        "同じ"
+       ],
+       "answer": "同じ",
+       "check": "(lambda a, b: '1 組' if a > b else '2 組' if b > a else '同じ')(Fraction(6, 24), Fraction(9, 36))",
+       "hints": [
+        "全体の人数がちがうので、相対度数で比べます。",
+        "6 ÷ 24 と 9 ÷ 36 を求めましょう。",
+        "2 つの値を比べましょう。"
+       ],
+       "paths": [
+        [
+         "1 組は 6 ÷ 24 = 0.25",
+         "2 組は 9 ÷ 36 = 0.25",
+         "同じ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "7 人の記録は、小さい順に 10、11、13、14、15、16、18（回）でした。いちばん大きい 18 回が 40 回だったとすると、範囲は何回大きくなりますか。",
+       "answer": 22,
+       "check": "(40 - 10) - (18 - 10)",
+       "hints": [
+        "もとの範囲は何回ですか。",
+        "18 を 40 にすると、範囲は何回ですか。",
+        "2 つの範囲の差を求めましょう。"
+       ],
+       "paths": [
+        [
+         "もとの範囲は 18 − 10 = 8 回",
+         "変えると 40 − 10 = 30 回",
+         "30 − 8 = 22 回"
+        ]
+       ],
+       "note": "このとき四分位範囲（16 − 11 = 5 回）は変わらない。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ある組の点数を箱ひげ図に表しました。中央値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 300 98\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\"></text>\n  <line x1=\"111.5\" y1=\"33\" x2=\"149.833\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"207.333\" y1=\"33\" x2=\"264.833\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"111.5\" y1=\"26\" x2=\"111.5\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"264.833\" y1=\"26\" x2=\"264.833\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"149.833\" y=\"21\" width=\"57.5\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"188.167\" y1=\"21\" x2=\"188.167\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"284\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"54\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <line x1=\"73.1667\" y1=\"58\" x2=\"73.1667\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"92.3333\" y1=\"58\" x2=\"92.3333\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"92.3333\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <line x1=\"111.5\" y1=\"58\" x2=\"111.5\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"130.667\" y1=\"58\" x2=\"130.667\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"130.667\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"149.833\" y1=\"58\" x2=\"149.833\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"58\" x2=\"169\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"188.167\" y1=\"58\" x2=\"188.167\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"207.333\" y1=\"58\" x2=\"207.333\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"207.333\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"226.5\" y1=\"58\" x2=\"226.5\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"245.667\" y1=\"58\" x2=\"245.667\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"245.667\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"264.833\" y1=\"58\" x2=\"264.833\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"58\" x2=\"284\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <text x=\"296\" y=\"92\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 35,
+       "check": "sorted([15, 25, 35, 40, 55])[2]",
+       "hints": [
+        "箱の中の線は何を表していますか。",
+        "箱の中の線の位置の目もりを読みましょう。",
+        "30 の目もりから右に何目もりですか。"
+       ],
+       "paths": [
+        [
+         "箱の中の線が中央値",
+         "30 から 1 目もり右",
+         "35 点"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "40 人の記録で、70 点以上の階級の相対度数は 0.35 でした。70 点以上の人は何人ですか。",
+       "answer": 14,
+       "check": "40 * Fraction(35, 100)",
+       "hints": [
+        "度数 = 合計 × 相対度数 です。",
+        "40 × 0.35 を計算しましょう。",
+        "0.35 は 35/100 です。"
+       ],
+       "paths": [
+        [
+         "40 × 0.35",
+         "= 14 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "25 人の点数の度数分布表です。60 点以上の人は、全体の何 % ですか。% の前の数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"138\" x2=\"221.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">40 以上 50 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">50 以上 60 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">60 以上 70 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">70 以上 80 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">5</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">80 以上 90 未満</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">25</text>\n</svg>\n",
+       "answer": 64,
+       "check": "Fraction(9 + 5 + 2, 25) * 100",
+       "hints": [
+        "60 点以上の人は、どの階級に入っていますか。何人ですか。",
+        "全体の 25 人をもとにした割合を求めましょう。",
+        "割合を百分率に直すには、100 をかけます。"
+       ],
+       "paths": [
+        [
+         "60 点以上は 9 + 5 + 2 = 16 人",
+         "16 ÷ 25 = 0.64",
+         "64 %"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 人の点数の度数分布表です。中央値が入っている階級はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"18.2\" y=\"6\" width=\"203.6\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"18.2\" y1=\"28\" x2=\"221.8\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"50\" x2=\"221.8\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"72\" x2=\"221.8\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"94\" x2=\"221.8\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"116\" x2=\"221.8\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"18.2\" y1=\"138\" x2=\"221.8\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.8\" y1=\"6\" x2=\"140.8\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"181.3\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">0 以上 10 未満</text>\n  <text x=\"181.3\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">10 以上 20 未満</text>\n  <text x=\"181.3\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">20 以上 30 未満</text>\n  <text x=\"181.3\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">10</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">30 以上 40 未満</text>\n  <text x=\"181.3\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">6</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">40 以上 50 未満</text>\n  <text x=\"181.3\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"181.3\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">30</text>\n</svg>\n",
+       "choices": [
+        "10 以上 20 未満",
+        "20 以上 30 未満",
+        "30 以上 40 未満"
+       ],
+       "answer": "20 以上 30 未満",
+       "check": "(lambda f, names: [names[i] for i in range(len(f)) if sum(f[:i]) < 15 and 16 <= sum(f[:i + 1])][0])([4, 7, 10, 6, 3], ['0 以上 10 未満', '10 以上 20 未満', '20 以上 30 未満', '30 以上 40 未満', '40 以上 50 未満'])",
+       "hints": [
+        "30 人の中央値は、小さいほうから何番目と何番目の平均ですか。",
+        "小さい階級から順に、累積度数を求めましょう。",
+        "15 番目と 16 番目は、どの階級に入りますか。"
+       ],
+       "paths": [
+        [
+         "中央値は 15 番目と 16 番目の平均",
+         "累積度数は 4、11、21",
+         "15 番目も 16 番目も 20 以上 30 未満",
+         "20 以上 30 未満"
+        ]
+       ],
+       "note": "度数がいちばん多い階級（最頻値の階級）と同じとはかぎらない。ここではたまたま同じ。"
+      },
+      {
+       "part": "今日",
+       "text": "8 人の記録は、3、4、4、5、6、6、7、29（回）でした。平均は中央値より何回大きいですか。",
+       "answer": 2.5,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(3 + 4 + 4 + 5 + 6 + 6 + 7 + 29, 8) - Fraction(5 + 6, 2))",
+       "hints": [
+        "8 人の合計を求めて、平均を出しましょう。",
+        "中央値は、4 番目と 5 番目の平均です。",
+        "平均から中央値をひきましょう。"
+       ],
+       "paths": [
+        [
+         "合計 64 で平均は 8 回",
+         "中央値は (5 + 6) ÷ 2 = 5.5 回",
+         "8 − 5.5 = 2.5 回"
+        ]
+       ],
+       "note": "29 回の 1 人に平均が引っぱられている（S-028 の 3 日目）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "9 人の記録は、10、12、15、18、20、21、25、27、30（回）でした。ここに 16 回の人が 1 人加わりました。10 人の中央値は何回ですか。",
+       "answer": 19,
+       "check": "(lambda s:Fraction(s[4] + s[5], 2))(sorted([10, 12, 15, 18, 20, 21, 25, 27, 30, 16]))",
+       "hints": [
+        "16 を入れて、小さい順に並べ直しましょう。",
+        "10 人の真ん中は、何番目と何番目ですか。",
+        "その 2 つの平均を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 10、12、15、16、18、20、21、25、27、30",
+         "5 番目と 6 番目は 18 と 20",
+         "(18 + 20) ÷ 2 = 19 回"
+        ]
+       ],
+       "note": "もとの中央値は 20 回。1 人加わると、中央値は 1 つの値から 2 つの値の平均に変わる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "20 人のうち、30 回以上とんだ人が 7 人いました。30 回以上の人は全体の何 % ですか。% の前の数で答えましょう。",
+       "answer": 35,
+       "check": "Fraction(7, 20) * 100",
+       "hints": [
+        "全体の 20 人をもとにした割合を求めましょう。",
+        "7 ÷ 20 を計算しましょう。",
+        "割合を百分率に直すには、100 をかけます。"
+       ],
+       "paths": [
+        [
+         "7 ÷ 20 = 0.35",
+         "35 %"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9 人の点数は、72、65、80、58、77、69、84、61、75（点）でした。四分位範囲は何点ですか。",
+       "answer": 15.5,
+       "check": "(lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)((lambda s, m: m(s[(len(s) + 1) // 2:]) - m(s[:len(s) // 2]))(sorted([72, 65, 80, 58, 77, 69, 84, 61, 75]), lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2)))",
+       "hints": [
+        "小さい順に並べて、中央値を求めましょう。",
+        "9 人なので、中央値を除いて前半と後半の 4 人ずつに分けます。",
+        "前半と後半の中央値をそれぞれ求めて、差を出しましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 58、61、65、69、72、75、77、80、84",
+         "前半の中央値は (61 + 65) ÷ 2 = 63",
+         "後半の中央値は (77 + 80) ÷ 2 = 78.5",
+         "78.5 − 63 = 15.5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "18 人の記録を、小さい階級から順に 2、5、6、4、1 人のように 5 つの階級に分けました。中央値が入っているのは、小さいほうから何番目の階級ですか。",
+       "answer": 3,
+       "check": "(lambda f: [i + 1 for i in range(len(f)) if sum(f[:i]) < 9 and 10 <= sum(f[:i + 1])][0])([2, 5, 6, 4, 1])",
+       "hints": [
+        "18 人の中央値は、小さいほうから何番目と何番目の平均ですか。",
+        "小さい階級から順に、累積度数を求めましょう。",
+        "その 2 人は、どの階級に入りますか。"
+       ],
+       "paths": [
+        [
+         "中央値は 9 番目と 10 番目の平均",
+         "累積度数は 2、7、13",
+         "3 番目の階級"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "14 人の点数は、55、63、48、70、59、66、52、61、74、57、68、50、65、60（点）でした。60 点以上 70 点未満の階級の度数は何人ですか。",
+       "answer": 6,
+       "check": "sum(1 for x in [55, 63, 48, 70, 59, 66, 52, 61, 74, 57, 68, 50, 65, 60] if 60 <= x < 70)",
+       "hints": [
+        "60 点以上 70 点未満に入るのは、どんな点数ですか。",
+        "60 点と 70 点は、それぞれこの階級に入りますか。",
+        "入る点数に印を付けて数えましょう。"
+       ],
+       "paths": [
+        [
+         "入るのは 63、66、61、68、65、60",
+         "70 は入らない",
+         "6 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "28 人の記録をヒストグラムにしました。25 回以上の人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"128.6\" x2=\"250\" y2=\"128.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"117.2\" x2=\"250\" y2=\"117.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"105.8\" x2=\"250\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"94.4\" x2=\"250\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"71.6\" x2=\"250\" y2=\"71.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.2\" x2=\"250\" y2=\"60.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"48.8\" x2=\"250\" y2=\"48.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.4\" x2=\"250\" y2=\"37.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"121.2\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"98.4\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"75.6\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"52.8\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">10</text>\n  <rect x=\"44\" y=\"105.8\" width=\"40.4\" height=\"34.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"71.6\" width=\"40.4\" height=\"68.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"37.4\" width=\"40.4\" height=\"102.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"60.2\" width=\"40.4\" height=\"79.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"105.8\" width=\"40.4\" height=\"34.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">15</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">25</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">35</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（回）</text>\n</svg>\n",
+       "answer": 10,
+       "check": "sum([3, 6, 9, 7, 3][3:])",
+       "hints": [
+        "25 回以上の人は、どの階級に入っていますか。",
+        "その柱の高さを読みましょう。",
+        "度数をたしましょう。"
+       ],
+       "paths": [
+        [
+         "25 回以上 30 回未満は 7 人",
+         "30 回以上 35 回未満は 3 人",
+         "7 + 3 = 10 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "32 人のうち 8 人が入る階級の相対度数を、小数で答えましょう。",
+       "answer": 0.25,
+       "check": "(lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(8, 32))",
+       "hints": [
+        "相対度数は、度数 ÷ 度数の合計 です。",
+        "8 ÷ 32 を計算しましょう。",
+        "約分してから小数に直してもかまいません。"
+       ],
+       "paths": [
+        [
+         "8 ÷ 32 = 1/4",
+         "= 0.25"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "24 人の点数の度数分布表です。70 点未満の人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 166\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"14.3\" y1=\"28\" x2=\"225.7\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"50\" x2=\"225.7\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"72\" x2=\"225.7\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"94\" x2=\"225.7\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"116\" x2=\"225.7\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"138\" x2=\"225.7\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"144.7\" y1=\"6\" x2=\"144.7\" y2=\"160\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"185.2\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">50 以上 60 未満</text>\n  <text x=\"185.2\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">4</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">60 以上 70 未満</text>\n  <text x=\"185.2\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">7</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">70 以上 80 未満</text>\n  <text x=\"185.2\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">80 以上 90 未満</text>\n  <text x=\"185.2\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">90 以上 100 未満</text>\n  <text x=\"185.2\" y=\"131.68\" font-size=\"13\" text-anchor=\"middle\">2</text>\n  <text x=\"79.5\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"185.2\" y=\"153.68\" font-size=\"13\" text-anchor=\"middle\">24</text>\n</svg>\n",
+       "answer": 11,
+       "check": "4 + 7",
+       "hints": [
+        "70 点未満の人は、どの階級に入っていますか。",
+        "70 点以上 80 点未満の階級は入りますか。",
+        "最初の階級から、60 点以上 70 点未満の階級までの度数をたしましょう。"
+       ],
+       "paths": [
+        [
+         "70 点未満は 50 以上 60 未満と 60 以上 70 未満",
+         "4 + 7 = 11 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 人の点数の度数分布表です。表から平均を求めると何点ですか。",
+       "svg": "<svg viewBox=\"0 0 240 122\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"22\" fill=\"#f3c969\" fill-opacity=\".35\"/>\n  <rect x=\"14.3\" y=\"6\" width=\"211.4\" height=\"110\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"14.3\" y1=\"28\" x2=\"225.7\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"50\" x2=\"225.7\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"72\" x2=\"225.7\" y2=\"72\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"14.3\" y1=\"94\" x2=\"225.7\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"144.7\" y1=\"6\" x2=\"144.7\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"79.5\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">階級（点）</text>\n  <text x=\"185.2\" y=\"21.68\" font-size=\"13\" text-anchor=\"middle\">度数（人）</text>\n  <text x=\"79.5\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">40 以上 60 未満</text>\n  <text x=\"185.2\" y=\"43.68\" font-size=\"13\" text-anchor=\"middle\">3</text>\n  <text x=\"79.5\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">60 以上 80 未満</text>\n  <text x=\"185.2\" y=\"65.68\" font-size=\"13\" text-anchor=\"middle\">9</text>\n  <text x=\"79.5\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">80 以上 100 未満</text>\n  <text x=\"185.2\" y=\"87.68\" font-size=\"13\" text-anchor=\"middle\">8</text>\n  <text x=\"79.5\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"185.2\" y=\"109.68\" font-size=\"13\" text-anchor=\"middle\">20</text>\n</svg>\n",
+       "answer": 75,
+       "check": "Fraction(50 * 3 + 70 * 9 + 90 * 8, 20)",
+       "hints": [
+        "それぞれの階級の階級値は何点ですか。",
+        "（階級値 × 度数）を階級ごとに求めて、たしましょう。",
+        "その合計を、度数の合計でわりましょう。"
+       ],
+       "paths": [
+        [
+         "階級値は 50、70、90",
+         "150 + 630 + 720 = 1500",
+         "1500 ÷ 20 = 75 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "12 人の記録は、小さい順に 8、11、12、15、17、18、20、22、23、26、29、33（回）でした。第 3 四分位数は何回ですか。",
+       "answer": 24.5,
+       "check": "(lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)((lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[(len(s) + 1) // 2:]))([8, 11, 12, 15, 17, 18, 20, 22, 23, 26, 29, 33]))",
+       "hints": [
+        "12 人なので、前半の 6 人と後半の 6 人に分けます。",
+        "後半の 6 人を書き出しましょう。",
+        "後半の 6 人の中央値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "後半は 20、22、23、26、29、33",
+         "真ん中は 23 と 26",
+         "(23 + 26) ÷ 2 = 24.5 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ある組の点数を箱ひげ図に表しました。四分位範囲は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 300 98\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\"></text>\n  <line x1=\"68.375\" y1=\"33\" x2=\"140.25\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"226.5\" y1=\"33\" x2=\"269.625\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"68.375\" y1=\"26\" x2=\"68.375\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"269.625\" y1=\"26\" x2=\"269.625\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"140.25\" y=\"21\" width=\"86.25\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"169\" y1=\"21\" x2=\"169\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"284\" y2=\"58\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"58\" x2=\"54\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"68.375\" y1=\"58\" x2=\"68.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"82.75\" y1=\"58\" x2=\"82.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"97.125\" y1=\"58\" x2=\"97.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"111.5\" y1=\"58\" x2=\"111.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"111.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"125.875\" y1=\"58\" x2=\"125.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.25\" y1=\"58\" x2=\"140.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"154.625\" y1=\"58\" x2=\"154.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"58\" x2=\"169\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <line x1=\"183.375\" y1=\"58\" x2=\"183.375\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"197.75\" y1=\"58\" x2=\"197.75\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"197.75\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">70</text>\n  <line x1=\"212.125\" y1=\"58\" x2=\"212.125\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"226.5\" y1=\"58\" x2=\"226.5\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"226.5\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">80</text>\n  <line x1=\"240.875\" y1=\"58\" x2=\"240.875\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"255.25\" y1=\"58\" x2=\"255.25\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"255.25\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">90</text>\n  <line x1=\"269.625\" y1=\"58\" x2=\"269.625\" y2=\"61\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"58\" x2=\"284\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"76\" font-size=\"11\" text-anchor=\"middle\">100</text>\n  <text x=\"296\" y=\"92\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 30,
+       "check": "80 - 50",
+       "hints": [
+        "箱の左はしと右はしは、それぞれ何を表していますか。",
+        "第 1 四分位数と第 3 四分位数を読みましょう。",
+        "第 3 四分位数から第 1 四分位数をひきましょう。"
+       ],
+       "paths": [
+        [
+         "第 1 四分位数は 50 点",
+         "第 3 四分位数は 80 点",
+         "80 − 50 = 30 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 人ずつの A 組と B 組の点数を箱ひげ図に表しました。60 点以上の人が必ず 10 人以上いると言えるのはどちらですか。",
+       "svg": "<svg viewBox=\"0 0 300 136\" xmlns=\"http://www.w3.org/2000/svg\">\n  <text x=\"46\" y=\"37\" font-size=\"12\" text-anchor=\"end\">A 組</text>\n  <line x1=\"82.75\" y1=\"33\" x2=\"125.875\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"197.75\" y1=\"33\" x2=\"255.25\" y2=\"33\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"82.75\" y1=\"26\" x2=\"82.75\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"255.25\" y1=\"26\" x2=\"255.25\" y2=\"40\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"125.875\" y=\"21\" width=\"71.875\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"154.625\" y1=\"21\" x2=\"154.625\" y2=\"45\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"46\" y=\"75\" font-size=\"12\" text-anchor=\"end\">B 組</text>\n  <line x1=\"97.125\" y1=\"71\" x2=\"140.25\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"212.125\" y1=\"71\" x2=\"240.875\" y2=\"71\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"97.125\" y1=\"64\" x2=\"97.125\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"240.875\" y1=\"64\" x2=\"240.875\" y2=\"78\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"140.25\" y=\"59\" width=\"71.875\" height=\"24\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"183.375\" y1=\"59\" x2=\"183.375\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"54\" y1=\"96\" x2=\"284\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1.5\"/>\n  <line x1=\"54\" y1=\"96\" x2=\"54\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"54\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <line x1=\"68.375\" y1=\"96\" x2=\"68.375\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"82.75\" y1=\"96\" x2=\"82.75\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"82.75\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <line x1=\"97.125\" y1=\"96\" x2=\"97.125\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"111.5\" y1=\"96\" x2=\"111.5\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"111.5\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <line x1=\"125.875\" y1=\"96\" x2=\"125.875\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"140.25\" y1=\"96\" x2=\"140.25\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"140.25\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"154.625\" y1=\"96\" x2=\"154.625\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"169\" y1=\"96\" x2=\"169\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"169\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">60</text>\n  <line x1=\"183.375\" y1=\"96\" x2=\"183.375\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"197.75\" y1=\"96\" x2=\"197.75\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"197.75\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">70</text>\n  <line x1=\"212.125\" y1=\"96\" x2=\"212.125\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"226.5\" y1=\"96\" x2=\"226.5\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"226.5\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">80</text>\n  <line x1=\"240.875\" y1=\"96\" x2=\"240.875\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"255.25\" y1=\"96\" x2=\"255.25\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"255.25\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">90</text>\n  <line x1=\"269.625\" y1=\"96\" x2=\"269.625\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"284\" y1=\"96\" x2=\"284\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"284\" y=\"114\" font-size=\"11\" text-anchor=\"middle\">100</text>\n  <text x=\"296\" y=\"130\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "choices": [
+        "A 組",
+        "B 組",
+        "どちらも",
+        "どちらも言えない"
+       ],
+       "answer": "B 組",
+       "check": "(lambda ok: {(True, False): 'A 組', (False, True): 'B 組', (True, True): 'どちらも', (False, False): 'どちらも言えない'}[(ok(55), ok(65))])(lambda med: med >= 60)",
+       "hints": [
+        "20 人の中央値は、10 番目と 11 番目の平均です。",
+        "中央値が 60 点以上なら、11 番目から 20 番目の人はどうですか。",
+        "A 組と B 組の中央値を読み比べましょう。"
+       ],
+       "paths": [
+        [
+         "B 組の中央値は 65 点",
+         "11 番目は 65 点以上なので 10 人以上が 60 点以上",
+         "A 組の中央値は 55 点で言えない",
+         "B 組"
+        ]
+       ],
+       "note": "A 組でも 60 点以上が 10 人いることはありうるが、箱ひげ図からは「必ず」とは言えない。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "10 人の点数は、45、60、52、71、38、66、58、49、75、63（点）でした。第 1 四分位数は何点ですか。",
+       "answer": 49,
+       "check": "(lambda s: (lambda h: Fraction(h[(len(h) - 1) // 2] + h[len(h) // 2], 2))(s[:len(s) // 2]))(sorted([45, 60, 52, 71, 38, 66, 58, 49, 75, 63]))",
+       "hints": [
+        "小さい順に並べましょう。",
+        "10 人なので、前半の 5 人と後半の 5 人に分けます。",
+        "前半の 5 人の中央値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "並べると 38、45、49、52、58、60、63、66、71、75",
+         "前半は 38、45、49、52、58",
+         "中央値は 49 点"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "40 人の記録で、ある階級の相対度数は 0.2 でした。この階級の度数は何人ですか。",
+       "answer": 8,
+       "check": "40 * Fraction(2, 10)",
+       "hints": [
+        "度数 = 合計 × 相対度数 です。",
+        "40 × 0.2 を計算しましょう。",
+        "0.2 は 2/10 です。"
+       ],
+       "paths": [
+        [
+         "40 × 0.2",
+         "= 8 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 人の小テストの結果のヒストグラムです。度数がいちばん多い階級の階級値は何点ですか。",
+       "svg": "<svg viewBox=\"0 0 280 180\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"128.6\" x2=\"250\" y2=\"128.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"117.2\" x2=\"250\" y2=\"117.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"105.8\" x2=\"250\" y2=\"105.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"94.4\" x2=\"250\" y2=\"94.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"83\" x2=\"250\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"71.6\" x2=\"250\" y2=\"71.6\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"60.2\" x2=\"250\" y2=\"60.2\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"48.8\" x2=\"250\" y2=\"48.8\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"37.4\" x2=\"250\" y2=\"37.4\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <line x1=\"40\" y1=\"26\" x2=\"250\" y2=\"26\" stroke=\"currentColor\" stroke-width=\"0.8\" stroke-opacity=\".35\"/>\n  <text x=\"34\" y=\"144\" font-size=\"11\" text-anchor=\"end\">0</text>\n  <text x=\"34\" y=\"121.2\" font-size=\"11\" text-anchor=\"end\">2</text>\n  <text x=\"34\" y=\"98.4\" font-size=\"11\" text-anchor=\"end\">4</text>\n  <text x=\"34\" y=\"75.6\" font-size=\"11\" text-anchor=\"end\">6</text>\n  <text x=\"34\" y=\"52.8\" font-size=\"11\" text-anchor=\"end\">8</text>\n  <text x=\"34\" y=\"30\" font-size=\"11\" text-anchor=\"end\">10</text>\n  <rect x=\"44\" y=\"117.2\" width=\"40.4\" height=\"22.8\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"84.4\" y=\"71.6\" width=\"40.4\" height=\"68.4\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"124.8\" y=\"48.8\" width=\"40.4\" height=\"91.2\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"165.2\" y=\"26\" width=\"40.4\" height=\"114\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <rect x=\"205.6\" y=\"94.4\" width=\"40.4\" height=\"45.6\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"1.5\"/>\n  <text x=\"44\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">0</text>\n  <text x=\"84.4\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">10</text>\n  <text x=\"124.8\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">20</text>\n  <text x=\"165.2\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">30</text>\n  <text x=\"205.6\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">40</text>\n  <text x=\"246\" y=\"155\" font-size=\"11\" text-anchor=\"middle\">50</text>\n  <line x1=\"40\" y1=\"18\" x2=\"40\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"140\" x2=\"250\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"36\" y=\"14\" font-size=\"11\" text-anchor=\"end\">（人）</text>\n  <text x=\"262\" y=\"171\" font-size=\"11\" text-anchor=\"end\">（点）</text>\n</svg>\n",
+       "answer": 35,
+       "check": "(lambda f, e: Fraction(e[f.index(max(f))] + e[f.index(max(f)) + 1], 2))([2, 6, 8, 10, 4], [0, 10, 20, 30, 40, 50])",
+       "hints": [
+        "いちばん高い柱はどれですか。",
+        "その柱の階級は、何点以上何点未満ですか。",
+        "その階級の真ん中の値を求めましょう。"
+       ],
+       "paths": [
+        [
+         "いちばん高い柱は 30 点以上 40 点未満",
+         "階級値は (30 + 40) ÷ 2 = 35 点"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
-    -22.6,
-    4.78,
-    -8.06
+    -20.28,
+    10.18,
+    -12.98
    ],
    "comb": {
-    "b": 0.388,
+    "b": 0.341,
     "r": 0.0,
     "rg": [
      "data",
@@ -212682,9 +218497,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.31,
-    14.23,
-    -17.43
+    -6.41,
+    17.77,
+    -20.41
    ],
    "comb": {
     "b": 0.343,
@@ -212734,9 +218549,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.43,
-    11.74,
-    -20.37
+    -5.05,
+    16.03,
+    -24.2
    ],
    "comb": {
     "b": 0.349,
@@ -212785,9 +218600,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.52,
-    -6.29,
-    22.51
+    27.98,
+    -9.36,
+    14.17
    ]
   },
   {
@@ -212828,9 +218643,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.61,
-    -10.25,
-    24.13
+    27.47,
+    -13.02,
+    16.0
    ],
    "comb": {
     "b": 0.181,
@@ -212879,9 +218694,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.41,
-    -3.2,
-    3.51
+    5.1,
+    -3.42,
+    2.06
    ]
   },
   {
@@ -212918,9 +218733,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.9,
-    -5.81,
-    7.28
+    9.45,
+    -6.16,
+    4.69
    ],
    "comb": {
     "b": 0.367,
@@ -212969,9 +218784,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.7,
-    -6.53,
-    7.85
+    8.48,
+    -6.68,
+    5.72
    ]
   },
   {
@@ -213012,9 +218827,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.22,
-    -7.94,
-    29.9
+    7.05,
+    -2.13,
+    31.89
    ],
    "comb": {
     "b": 0.449,
@@ -213064,9 +218879,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.03,
-    -10.05,
-    20.43
+    0.23,
+    -4.95,
+    22.23
    ],
    "comb": {
     "b": 0.43,
@@ -213115,9 +218930,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.11,
-    -15.45,
-    18.94
+    2.17,
+    -11.58,
+    21.44
    ]
   },
   {
@@ -213154,9 +218969,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.48,
-    -17.6,
-    19.33
+    0.55,
+    -13.22,
+    22.54
    ],
    "comb": {
     "b": 0.323,
@@ -213209,9 +219024,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.71,
-    -16.72,
-    22.15
+    4.55,
+    -13.35,
+    23.96
    ]
   },
   {
@@ -213257,12 +219072,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.62,
-    -9.02,
-    31.26
+    4.62,
+    -2.67,
+    33.94
    ],
    "comb": {
-    "b": 0.471,
+    "b": 0.473,
     "r": 0.0,
     "rg": [
      "genshi-ketsugo",
@@ -213310,9 +219125,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.1,
-    -10.99,
-    32.29
+    9.43,
+    -7.86,
+    33.81
    ],
    "comb": {
     "b": 0.451,
@@ -213362,9 +219177,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.2,
-    -19.43,
-    26.25
+    5.02,
+    -14.95,
+    30.52
    ],
    "comb": {
     "b": 0.309,
@@ -213414,9 +219229,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.78,
-    -22.42,
-    8.98
+    -17.57,
+    -15.28,
+    18.05
    ],
    "comb": {
     "b": 0.351,
@@ -213468,9 +219283,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.86,
-    -12.12,
-    7.22
+    -26.61,
+    -3.77,
+    15.65
    ],
    "comb": {
     "b": 0.652,
@@ -213525,9 +219340,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.95,
-    -23.05,
-    9.95
+    -15.35,
+    -16.64,
+    18.85
    ],
    "comb": {
     "b": 0.354,
@@ -213577,9 +219392,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.33,
-    -22.74,
-    7.12
+    -18.54,
+    -15.79,
+    16.58
    ],
    "comb": {
     "b": 0.429,
@@ -213630,9 +219445,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.5,
-    -23.86,
-    11.2
+    -18.93,
+    -16.31,
+    21.15
    ],
    "comb": {
     "b": 0.22,
@@ -214640,9 +220455,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.29,
-    21.6,
-    -3.55
+    -2.3,
+    21.97,
+    -5.53
    ],
    "comb": {
     "b": 0.261,
@@ -214686,12 +220501,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.02,
-    -10.5,
-    15.21
+    20.39,
+    -12.7,
+    10.31
    ],
    "comb": {
-    "b": 0.55,
+    "b": 0.551,
     "r": 0.0,
     "rg": [
      "chiso",
@@ -214740,9 +220555,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.31,
-    2.21,
-    21.56
+    31.33,
+    -1.74,
+    13.99
    ],
    "comb": {
     "b": 0.527,
@@ -214793,12 +220608,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.44,
-    -22.85,
-    -4.57
+    -23.94,
+    -10.16,
+    2.61
    ],
    "comb": {
-    "b": 0.459,
+    "b": 0.455,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -214841,9 +220656,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.36,
-    -20.28,
-    0.02
+    -17.13,
+    -12.56,
+    8.21
    ],
    "comb": {
     "b": 0.304,
@@ -214890,12 +220705,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.02,
-    24.24,
-    9.31
+    8.15,
+    23.88,
+    11.68
    ],
    "comb": {
-    "b": 0.15,
+    "b": 0.151,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -215983,12 +221798,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.45,
-    27.53,
-    -1.02
+    -1.45,
+    30.86,
+    3.59
    ],
    "comb": {
-    "b": 0.178,
+    "b": 0.184,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -216035,12 +221850,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.61,
-    30.11,
-    1.71
+    2.15,
+    31.85,
+    7.24
    ],
    "comb": {
-    "b": 0.205,
+    "b": 0.211,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -216082,9 +221897,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.79,
-    27.24,
-    10.15
+    6.69,
+    27.41,
+    16.6
    ]
   },
   {
@@ -216136,9 +221951,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.8,
-    26.49,
-    -1.54
+    -10.67,
+    30.73,
+    3.63
    ],
    "comb": {
     "b": 0.315,
@@ -216189,9 +222004,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.28,
-    29.27,
-    -4.92
+    -1.97,
+    32.54,
+    2.93
    ]
   },
   {
@@ -216228,12 +222043,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.09,
-    27.48,
-    -9.31
+    -6.67,
+    31.83,
+    3.7
    ],
    "comb": {
-    "b": 0.4,
+    "b": 0.402,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -216279,9 +222094,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.01,
-    19.29,
-    -7.41
+    -20.36,
+    20.0,
+    -7.32
    ]
   },
   {
@@ -216323,12 +222138,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.97,
-    25.06,
-    -9.19
+    -20.52,
+    26.92,
+    -5.9
    ],
    "comb": {
-    "b": 0.276,
+    "b": 0.28,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -216374,9 +222189,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.17,
-    11.16,
-    -8.2
+    -23.08,
+    12.01,
+    -9.8
    ]
   },
   {
@@ -216426,9 +222241,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.31,
-    25.24,
-    14.56
+    15.78,
+    22.18,
+    18.18
    ]
   },
   {
@@ -216478,12 +222293,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.73,
-    22.74,
-    23.54
+    20.1,
+    17.3,
+    21.84
    ],
    "comb": {
-    "b": 0.22,
+    "b": 0.221,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -216538,12 +222353,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.85,
-    26.59,
-    15.87
+    13.79,
+    22.08,
+    19.84
    ],
    "comb": {
-    "b": 0.354,
+    "b": 0.357,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -216590,9 +222405,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.85,
-    23.35,
-    22.92
+    16.44,
+    17.76,
+    24.39
    ]
   },
   {
@@ -216629,9 +222444,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.44,
-    22.36,
-    16.7
+    19.81,
+    16.61,
+    17.29
    ]
   },
   {
@@ -216679,9 +222494,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.21,
-    10.94,
-    30.56
+    27.56,
+    7.78,
+    18.98
    ]
   },
   {
@@ -216731,9 +222546,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.42,
-    27.4,
-    20.68
+    25.73,
+    25.13,
+    0.06
    ],
    "comb": {
     "b": 0.363,
@@ -216790,9 +222605,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.84,
-    23.37,
-    23.58
+    32.68,
+    14.2,
+    -4.93
    ]
   },
   {
@@ -216840,9 +222655,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.02,
-    13.41,
-    32.4
+    37.21,
+    2.78,
+    4.39
    ]
   },
   {
@@ -216891,9 +222706,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.17,
-    19.61,
-    32.03
+    38.38,
+    5.28,
+    5.79
    ],
    "comb": {
     "b": 0.283,
@@ -216951,9 +222766,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.15,
-    12.06,
-    37.14
+    37.54,
+    -5.93,
+    14.74
    ],
    "comb": {
     "b": 0.422,
@@ -217011,9 +222826,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.33,
-    27.41,
-    18.49
+    5.07,
+    23.57,
+    26.7
    ],
    "comb": {
     "b": 0.374,
@@ -217071,9 +222886,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.26,
-    25.5,
-    23.62
+    9.35,
+    19.82,
+    30.53
    ],
    "comb": {
     "b": 0.434,
@@ -217131,9 +222946,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.12,
-    5.13,
-    6.13
+    -22.7,
+    1.08,
+    16.03
    ],
    "comb": {
     "b": 0.377,
@@ -217193,9 +223008,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.33,
-    3.24,
-    5.59
+    -25.19,
+    -1.67,
+    15.18
    ]
   },
   {
@@ -217245,9 +223060,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.38,
-    6.7,
-    9.32
+    -29.24,
+    0.98,
+    20.93
    ],
    "comb": {
     "b": 0.427,
@@ -217309,9 +223124,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.14,
-    8.88,
-    36.49
+    27.86,
+    5.07,
+    27.06
    ],
    "comb": {
     "b": 0.434,
@@ -217370,9 +223185,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.87,
-    10.58,
-    32.56
+    23.04,
+    6.04,
+    26.95
    ],
    "comb": {
     "b": 0.38,
@@ -217429,9 +223244,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.51,
-    3.52,
-    35.79
+    26.02,
+    -1.43,
+    27.07
    ]
   },
   {
@@ -217479,9 +223294,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.23,
-    -0.33,
-    40.42
+    29.87,
+    -12.66,
+    27.21
    ]
   },
   {
@@ -217532,9 +223347,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.56,
-    6.67,
-    39.83
+    29.02,
+    -1.86,
+    30.78
    ],
    "comb": {
     "b": 0.467,
@@ -217593,9 +223408,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.29,
-    1.39,
-    42.19
+    29.67,
+    -5.84,
+    31.85
    ]
   },
   {
@@ -217645,9 +223460,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.35,
-    10.22,
-    36.0
+    25.74,
+    7.3,
+    28.61
    ],
    "comb": {
     "b": 0.311,
@@ -217705,9 +223520,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.18,
-    0.77,
-    43.32
+    28.82,
+    -8.74,
+    34.09
    ]
   },
   {
@@ -217756,9 +223571,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.45,
-    4.2,
-    38.92
+    30.74,
+    -3.81,
+    26.49
    ],
    "comb": {
     "b": 0.307,
@@ -217815,9 +223630,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.25,
-    -0.66,
-    35.42
+    25.26,
+    -13.34,
+    24.41
    ]
   },
   {
@@ -217865,9 +223680,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.69,
-    5.98,
-    33.79
+    26.14,
+    1.0,
+    24.69
    ]
   },
   {
@@ -217917,9 +223732,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.93,
-    5.44,
-    35.44
+    28.74,
+    -2.56,
+    24.06
    ],
    "comb": {
     "b": 0.267,
@@ -217978,9 +223793,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.45,
-    6.99,
-    35.28
+    25.78,
+    0.09,
+    27.34
    ],
    "comb": {
     "b": 0.267,
@@ -218038,9 +223853,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.23,
-    5.02,
-    26.38
+    16.41,
+    0.33,
+    26.42
    ],
    "comb": {
     "b": 0.473,
@@ -218098,9 +223913,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.82,
-    2.91,
-    39.9
+    26.61,
+    -5.24,
+    32.52
    ],
    "comb": {
     "b": 0.38,
@@ -218157,9 +223972,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.46,
-    2.65,
-    41.4
+    26.24,
+    -4.61,
+    34.91
    ]
   },
   {
@@ -218208,9 +224023,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.02,
-    5.55,
-    33.37
+    20.48,
+    -1.42,
+    29.54
    ],
    "comb": {
     "b": 0.352,
@@ -218267,9 +224082,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.61,
-    7.2,
-    29.53
+    19.72,
+    1.64,
+    28.08
    ]
   },
   {
@@ -218318,9 +224133,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.45,
-    -2.83,
-    19.08
+    11.17,
+    -3.73,
+    15.34
    ],
    "comb": {
     "b": 0.449,
@@ -218378,9 +224193,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.71,
-    -6.41,
-    41.82
+    28.3,
+    -13.55,
+    30.73
    ],
    "comb": {
     "b": 0.389,
@@ -218438,9 +224253,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.31,
-    -6.54,
-    41.83
+    28.72,
+    -12.19,
+    30.91
    ],
    "comb": {
     "b": 0.389,
@@ -218497,9 +224312,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.91,
-    -8.53,
-    43.07
+    29.69,
+    -14.14,
+    31.43
    ]
   },
   {
@@ -218548,9 +224363,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.34,
-    0.04,
-    49.28
+    29.74,
+    -8.22,
+    41.48
    ],
    "comb": {
     "b": 0.358,
@@ -218609,9 +224424,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.26,
-    2.98,
-    42.22
+    31.36,
+    -3.84,
+    30.51
    ],
    "comb": {
     "b": 0.389,
@@ -218669,9 +224484,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.49,
-    -9.21,
-    42.87
+    25.83,
+    -13.46,
+    34.94
    ]
   },
   {
@@ -218719,9 +224534,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.89,
-    -1.48,
-    34.2
+    22.64,
+    -6.35,
+    27.22
    ]
   },
   {
@@ -218770,9 +224585,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.9,
-    5.23,
-    43.43
+    29.48,
+    -0.18,
+    34.64
    ],
    "comb": {
     "b": 0.417,
@@ -218830,9 +224645,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.71,
-    13.55,
-    34.85
+    34.5,
+    8.92,
+    16.27
    ],
    "comb": {
     "b": 0.462,
@@ -218882,12 +224697,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.28,
-    25.7,
-    4.63
+    5.08,
+    28.35,
+    6.19
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -218934,12 +224749,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.82,
-    32.18,
-    1.53
+    4.2,
+    33.74,
+    4.92
    ],
    "comb": {
-    "b": 0.205,
+    "b": 0.212,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -218986,12 +224801,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.17,
-    2.22,
-    -10.55
+    -25.68,
+    8.29,
+    -18.52
    ],
    "comb": {
-    "b": 0.391,
+    "b": 0.344,
     "r": 0.0,
     "rg": [
      "data",
@@ -219038,12 +224853,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.78,
-    -5.56,
-    -11.55
+    -22.94,
+    -3.44,
+    -15.34
    ],
    "comb": {
-    "b": 0.391,
+    "b": 0.39,
     "r": 0.0,
     "rg": [
      "data",
@@ -219100,9 +224915,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.82,
-    20.2,
-    -14.8
+    -1.81,
+    25.05,
+    -27.94
    ],
    "comb": {
     "b": 0.511,
@@ -219152,9 +224967,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.96,
-    10.09,
-    -25.22
+    -6.47,
+    15.3,
+    -35.47
    ]
   },
   {
@@ -219195,12 +225010,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.76,
-    14.23,
-    -22.2
+    -3.13,
+    18.39,
+    -34.45
    ],
    "comb": {
-    "b": 0.328,
+    "b": 0.332,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -219247,12 +225062,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.91,
-    19.25,
-    -12.64
+    -8.17,
+    26.04,
+    -18.08
    ],
    "comb": {
-    "b": 0.197,
+    "b": 0.204,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -219305,9 +225120,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.52,
-    -2.64,
-    44.94
+    35.04,
+    -10.02,
+    29.76
    ],
    "comb": {
     "b": 0.507,
@@ -219360,9 +225175,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.38,
-    -7.81,
-    30.51
+    31.33,
+    -9.93,
+    18.2
    ],
    "comb": {
     "b": 0.61,
@@ -219418,9 +225233,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.94,
-    -6.08,
-    33.76
+    10.4,
+    -5.24,
+    34.03
    ],
    "comb": {
     "b": 0.541,
@@ -219472,9 +225287,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.89,
-    -13.45,
-    31.37
+    8.72,
+    -10.44,
+    33.3
    ],
    "comb": {
     "b": 0.52,
@@ -219524,9 +225339,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.66,
-    -22.26,
-    27.87
+    6.22,
+    -16.97,
+    32.94
    ]
   },
   {
@@ -219571,9 +225386,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.53,
-    -24.65,
-    28.24
+    5.2,
+    -20.31,
+    33.09
    ],
    "comb": {
     "b": 0.28,
@@ -219622,9 +225437,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.32,
-    -19.78,
-    30.04
+    9.59,
+    -21.9,
+    28.99
    ]
   },
   {
@@ -219670,9 +225485,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.15,
-    -12.93,
-    35.22
+    16.87,
+    -13.03,
+    32.86
    ],
    "comb": {
     "b": 0.407,
@@ -219727,9 +225542,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.69,
-    -18.92,
-    33.98
+    10.93,
+    -14.66,
+    36.43
    ],
    "comb": {
     "b": 0.384,
@@ -219784,9 +225599,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.91,
-    -17.18,
-    31.36
+    12.29,
+    -13.6,
+    32.8
    ],
    "comb": {
     "b": 0.5,
@@ -219845,9 +225660,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.92,
-    -27.39,
-    29.93
+    6.03,
+    -22.2,
+    35.55
    ]
   },
   {
@@ -219888,9 +225703,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.23,
-    -16.5,
-    30.05
+    10.72,
+    -13.61,
+    31.52
    ],
    "comb": {
     "b": 0.443,
@@ -219949,9 +225764,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.01,
-    -22.04,
-    30.42
+    4.02,
+    -16.99,
+    35.07
    ],
    "comb": {
     "b": 0.279,
@@ -220006,9 +225821,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.54,
-    -22.38,
-    35.94
+    3.94,
+    -17.13,
+    40.24
    ],
    "comb": {
     "b": 0.326,
@@ -220060,9 +225875,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.89,
-    -23.51,
-    37.08
+    5.41,
+    -17.81,
+    41.5
    ],
    "comb": {
     "b": 0.266,
@@ -220116,9 +225931,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.9,
-    -22.12,
-    26.0
+    -2.77,
+    -17.57,
+    31.27
    ],
    "comb": {
     "b": 0.278,
@@ -220167,9 +225982,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.84,
-    -16.8,
-    24.03
+    4.35,
+    -11.66,
+    26.7
    ]
   },
   {
@@ -220218,9 +226033,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.86,
-    -18.85,
-    28.46
+    6.14,
+    -13.1,
+    32.93
    ],
    "comb": {
     "b": 0.274,
@@ -220274,9 +226089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.39,
-    -19.79,
-    31.76
+    7.3,
+    -13.84,
+    35.91
    ],
    "comb": {
     "b": 0.275,
@@ -220327,12 +226142,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.88,
-    -16.71,
-    34.54
+    4.04,
+    -10.76,
+    39.11
    ],
    "comb": {
-    "b": 0.394,
+    "b": 0.397,
     "r": 0.0,
     "rg": [
      "data",
@@ -220383,9 +226198,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.29,
-    -24.75,
-    15.77
+    -11.54,
+    -17.42,
+    23.04
    ],
    "comb": {
     "b": 0.441,
@@ -220434,9 +226249,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.09,
-    -26.5,
-    11.89
+    -17.15,
+    -18.74,
+    20.64
    ]
   },
   {
@@ -220487,9 +226302,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.45,
-    -30.7,
-    17.73
+    -14.43,
+    -24.53,
+    26.91
    ],
    "comb": {
     "b": 0.511,
@@ -220540,9 +226355,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.39,
-    -32.64,
-    16.17
+    -16.74,
+    -26.52,
+    26.03
    ],
    "comb": {
     "b": 0.42,
@@ -220600,9 +226415,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.0,
-    -22.3,
-    11.55
+    -21.08,
+    -14.63,
+    20.32
    ]
   },
   {
@@ -220647,9 +226462,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.56,
-    -26.35,
-    13.33
+    -18.78,
+    -17.89,
+    22.53
    ],
    "comb": {
     "b": 0.459,
@@ -220708,9 +226523,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.28,
-    -35.16,
-    17.99
+    -13.98,
+    -32.56,
+    25.95
    ],
    "comb": {
     "b": 0.602,
@@ -220767,9 +226582,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.13,
-    -41.81,
-    2.87
+    -24.72,
+    -34.57,
+    16.2
    ]
   },
   {
@@ -220817,9 +226632,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.41,
-    -37.56,
-    9.84
+    -22.54,
+    -28.31,
+    21.99
    ],
    "comb": {
     "b": 0.598,
@@ -220876,9 +226691,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.08,
-    -42.75,
-    3.76
+    -28.52,
+    -32.65,
+    18.29
    ],
    "comb": {
     "b": 0.444,
@@ -220934,9 +226749,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.2,
-    -34.76,
-    12.54
+    -22.51,
+    -26.54,
+    24.13
    ],
    "comb": {
     "b": 0.397,
@@ -220986,9 +226801,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.83,
-    -28.99,
-    3.37
+    -20.87,
+    -23.84,
+    13.28
    ],
    "comb": {
     "b": 0.321,
@@ -221043,9 +226858,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.75,
-    -18.61,
-    13.07
+    -23.43,
+    -12.66,
+    24.18
    ],
    "comb": {
     "b": 0.579,
@@ -221100,9 +226915,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.21,
-    -33.77,
-    13.86
+    -16.92,
+    -27.96,
+    24.36
    ],
    "comb": {
     "b": 0.365,
@@ -221157,9 +226972,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.7,
-    -23.73,
-    10.09
+    -24.63,
+    -12.86,
+    20.2
    ],
    "comb": {
     "b": 0.59,
@@ -221218,9 +227033,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.97,
-    -32.35,
-    11.51
+    -26.51,
+    -22.92,
+    23.76
    ],
    "comb": {
     "b": 0.409,
@@ -221271,9 +227086,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.01,
-    25.03,
-    22.49
+    4.58,
+    29.87,
+    29.66
    ],
    "comb": {
     "b": 0.381,
@@ -221324,9 +227139,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.87,
-    -4.29,
-    -14.82
+    -26.91,
+    -1.88,
+    -21.28
    ],
    "comb": {
     "b": 0.346,
@@ -221376,9 +227191,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.5,
-    27.07,
-    21.11
+    15.98,
+    21.03,
+    24.42
    ],
    "comb": {
     "b": 0.343,
@@ -221428,12 +227243,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.89,
-    22.06,
-    32.82
+    41.31,
+    8.37,
+    4.09
    ],
    "comb": {
-    "b": 0.445,
+    "b": 0.446,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -221480,9 +227295,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.44,
-    16.1,
-    -9.17
+    -21.59,
+    15.21,
+    -8.7
    ],
    "comb": {
     "b": 0.404,
@@ -221527,9 +227342,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.78,
-    -5.74,
-    6.92
+    -4.23,
+    -13.01,
+    3.14
    ]
   },
   {
@@ -221570,9 +227385,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.88,
-    -26.23,
-    27.42
+    21.26,
+    -27.37,
+    24.34
    ],
    "comb": {
     "b": 0.39,
@@ -221622,9 +227437,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.82,
-    -26.17,
-    27.45
+    26.36,
+    -28.91,
+    19.96
    ],
    "comb": {
     "b": 0.208,
@@ -221680,9 +227495,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.9,
-    -25.33,
-    27.1
+    23.08,
+    -25.76,
+    24.43
    ],
    "comb": {
     "b": 0.573,
@@ -221734,9 +227549,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.46,
-    -6.41,
-    8.16
+    11.12,
+    -6.82,
+    5.19
    ],
    "comb": {
     "b": 0.367,
@@ -221782,9 +227597,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.09,
-    -10.12,
-    19.56
+    18.94,
+    -12.01,
+    16.44
    ],
    "comb": {
     "b": 0.473,
@@ -221842,9 +227657,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.09,
-    4.19,
-    4.67
+    -27.24,
+    0.76,
+    14.98
    ]
   },
   {
@@ -221872,9 +227687,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.64,
-    3.88,
-    3.29
+    -26.11,
+    2.01,
+    13.5
    ]
   },
   {
@@ -221914,9 +227729,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.24,
-    8.33,
-    44.41
+    29.2,
+    3.76,
+    36.7
    ]
   },
   {
@@ -221957,9 +227772,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.43,
-    -1.98,
-    35.5
+    18.87,
+    -4.97,
+    32.11
    ],
    "comb": {
     "b": 0.289,
@@ -222010,9 +227825,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.8,
-    -5.06,
-    46.62
+    35.56,
+    -12.05,
+    30.87
    ],
    "comb": {
     "b": 0.398,
@@ -222065,9 +227880,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.06,
-    -3.13,
-    42.12
+    27.85,
+    -9.46,
+    32.61
    ],
    "comb": {
     "b": 0.476,
@@ -222120,9 +227935,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.09,
-    -1.83,
-    37.4
+    22.26,
+    -7.01,
+    31.46
    ],
    "comb": {
     "b": 0.467,
@@ -222164,9 +227979,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.24,
-    2.27,
-    35.83
+    27.85,
+    -1.99,
+    25.15
    ]
   },
   {
@@ -222205,9 +228020,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.01,
-    -20.79,
-    27.33
+    4.73,
+    -16.82,
+    31.44
    ],
    "comb": {
     "b": 0.28,
@@ -222253,9 +228068,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.95,
-    -22.81,
-    25.21
+    3.29,
+    -23.1,
+    27.37
    ],
    "comb": {
     "b": 0.278,
@@ -222296,9 +228111,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.59,
-    -28.33,
-    5.01
+    -25.87,
+    -20.73,
+    17.68
    ]
   },
   {
@@ -222339,9 +228154,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.33,
-    -38.03,
-    13.23
+    -11.09,
+    -33.76,
+    23.02
    ],
    "comb": {
     "b": 0.384,
@@ -222392,9 +228207,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.4,
-    -36.35,
-    13.0
+    -20.42,
+    -29.94,
+    24.8
    ],
    "comb": {
     "b": 0.588,
@@ -222441,9 +228256,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.34,
-    -32.19,
-    18.02
+    -14.72,
+    -27.27,
+    28.86
    ],
    "comb": {
     "b": 0.392,
@@ -222490,9 +228305,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.12,
-    -29.41,
-    16.27
+    -19.74,
+    -22.56,
+    27.62
    ],
    "comb": {
     "b": 0.537,
@@ -222544,9 +228359,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.81,
-    -8.4,
-    26.94
+    34.46,
+    -11.8,
+    14.41
    ],
    "comb": {
     "b": 0.241,
@@ -222597,12 +228412,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.07,
-    -16.08,
-    -3.65
+    -25.6,
+    -5.29,
+    0.08
    ],
    "comb": {
-    "b": 0.446,
+    "b": 0.424,
     "r": 0.0,
     "rg": [
      "data",
@@ -222646,9 +228461,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.79,
-    17.26,
-    -1.37
+    -15.15,
+    16.13,
+    5.38
    ],
    "comb": {
     "b": 0.137,
@@ -222698,9 +228513,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.88,
-    22.46,
-    -2.64
+    -21.37,
+    22.21,
+    11.03
    ],
    "comb": {
     "b": 0.294,
@@ -222745,9 +228560,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.71,
-    11.39,
-    -0.75
+    -19.11,
+    10.17,
+    7.07
    ]
   },
   {
@@ -222780,13 +228595,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.09,
-    7.3,
-    -0.68
+    -27.66,
+    8.65,
+    5.27
    ],
    "comb": {
-    "b": 0.439,
-    "r": 0.15,
+    "b": 0.437,
+    "r": 0.19,
     "rg": [
      "data",
      "programming"
@@ -222827,9 +228642,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.29,
-    6.23,
-    2.28
+    -26.18,
+    4.87,
+    12.59
    ]
   },
   {
@@ -222866,9 +228681,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.31,
-    3.53,
-    37.26
+    26.64,
+    -3.21,
+    28.54
    ]
   },
   {
@@ -222909,9 +228724,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.03,
-    -3.76,
-    45.33
+    32.14,
+    -9.2,
+    33.1
    ],
    "comb": {
     "b": 0.378,
@@ -222957,9 +228772,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.67,
-    4.32,
-    37.03
+    24.31,
+    -0.42,
+    30.71
    ],
    "comb": {
     "b": 0.277,
@@ -223005,9 +228820,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.0,
-    -19.67,
-    29.7
+    5.98,
+    -13.42,
+    34.58
    ],
    "comb": {
     "b": 0.352,
@@ -223067,9 +228882,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.24,
-    -25.89,
-    37.4
+    6.95,
+    -21.1,
+    41.47
    ],
    "comb": {
     "b": 0.352,
@@ -223147,9 +228962,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.82,
-    25.61,
-    -3.58
+    -1.63,
+    28.53,
+    -7.14
    ],
    "comb": {
     "b": 0.108,
@@ -223201,9 +229016,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.06,
-    32.31,
-    -3.37
+    -1.92,
+    34.81,
+    -8.85
    ],
    "comb": {
     "b": 0.326,
@@ -223255,9 +229070,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.8,
-    31.8,
-    -6.78
+    -5.1,
+    33.86,
+    -11.01
    ],
    "comb": {
     "b": 0.133,
@@ -223317,9 +229132,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.76,
-    27.12,
-    -3.84
+    -1.14,
+    30.25,
+    -7.15
    ],
    "comb": {
     "b": 0.32,
@@ -223370,9 +229185,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.11,
-    27.59,
-    -1.53
+    -2.35,
+    29.76,
+    -8.72
    ],
    "comb": {
     "b": 0.348,
@@ -223429,9 +229244,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.57,
-    33.9,
-    -0.44
+    0.36,
+    35.31,
+    -12.85
    ]
   },
   {
@@ -223471,9 +229286,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.27,
-    33.03,
-    -1.95
+    3.29,
+    34.46,
+    -14.61
    ]
   },
   {
@@ -223516,9 +229331,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.06,
-    34.13,
-    -3.32
+    -3.68,
+    36.25,
+    -9.19
    ],
    "comb": {
     "b": 0.394,
@@ -223566,9 +229381,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.81,
-    35.0,
-    -6.78
+    -4.94,
+    37.7,
+    -9.43
    ],
    "comb": {
     "b": 0.424,
@@ -223619,9 +229434,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.18,
-    28.73,
-    -2.07
+    0.99,
+    31.42,
+    -9.14
    ],
    "comb": {
     "b": 0.331,
@@ -223672,9 +229487,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.21,
-    32.11,
-    -5.51
+    -4.26,
+    35.29,
+    -5.53
    ],
    "comb": {
     "b": 0.426,
@@ -223754,9 +229569,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.37,
-    28.46,
-    -4.14
+    -0.51,
+    31.47,
+    -8.98
    ],
    "comb": {
     "b": 0.358,
@@ -223815,9 +229630,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.87,
-    34.82,
-    -1.6
+    1.16,
+    35.74,
+    -15.99
    ]
   },
   {
@@ -223866,9 +229681,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.27,
-    33.73,
-    -1.79
+    0.96,
+    36.17,
+    -10.15
    ],
    "comb": {
     "b": 0.328,
@@ -223913,9 +229728,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.54,
-    31.21,
-    -4.94
+    -0.05,
+    33.29,
+    -13.62
    ]
   },
   {
@@ -223957,9 +229772,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.54,
-    29.18,
-    -3.74
+    1.17,
+    32.6,
+    2.7
    ],
    "comb": {
     "b": 0.123,
@@ -224016,9 +229831,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.89,
-    29.22,
-    2.33
+    0.3,
+    31.71,
+    8.12
    ]
   },
   {
@@ -224075,9 +229890,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.28,
-    30.86,
-    -3.65
+    4.21,
+    33.92,
+    3.43
    ],
    "comb": {
     "b": 0.382,
@@ -224129,12 +229944,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.63,
-    31.25,
-    -4.5
+    -2.28,
+    34.19,
+    2.55
    ],
    "comb": {
-    "b": 0.457,
+    "b": 0.46,
     "r": 0.0,
     "rg": [
      "futoshiki",
@@ -224226,9 +230041,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.41,
-    31.23,
-    -8.76
+    0.76,
+    34.31,
+    1.71
    ]
   },
   {
@@ -224277,9 +230092,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.56,
-    30.98,
-    0.9
+    -1.04,
+    33.96,
+    5.11
    ],
    "comb": {
     "b": 0.331,
@@ -224328,9 +230143,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.89,
-    30.78,
-    2.22
+    1.71,
+    32.56,
+    10.82
    ]
   },
   {
@@ -224387,9 +230202,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.87,
-    32.33,
-    -4.78
+    4.79,
+    35.42,
+    4.06
    ],
    "comb": {
     "b": 0.381,
@@ -224448,9 +230263,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.16,
-    33.7,
-    -5.89
+    1.71,
+    35.88,
+    1.78
    ],
    "comb": {
     "b": 0.303,
@@ -224500,9 +230315,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.01,
-    15.35,
-    -2.52
+    -24.74,
+    15.37,
+    4.4
    ]
   },
   {
@@ -224551,9 +230366,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.53,
-    17.6,
-    -2.08
+    -27.09,
+    16.98,
+    7.0
    ],
    "comb": {
     "b": 0.103,
@@ -224612,9 +230427,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.93,
-    29.49,
-    -9.07
+    -18.69,
+    30.34,
+    4.92
    ],
    "comb": {
     "b": 0.417,
@@ -224671,9 +230486,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.43,
-    19.0,
-    -3.08
+    -28.82,
+    18.67,
+    1.03
    ]
   },
   {
@@ -224722,9 +230537,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.76,
-    24.86,
-    -16.78
+    -28.15,
+    24.84,
+    1.57
    ]
   },
   {
@@ -224790,12 +230605,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.61,
-    21.22,
-    16.28
+    17.57,
+    16.03,
+    17.38
    ],
    "comb": {
-    "b": 0.268,
+    "b": 0.269,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -224842,9 +230657,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.25,
-    21.87,
-    15.99
+    16.23,
+    17.14,
+    17.63
    ],
    "comb": {
     "b": 0.293,
@@ -224906,9 +230721,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.92,
-    21.04,
-    15.84
+    18.65,
+    15.73,
+    16.51
    ]
   },
   {
@@ -224958,9 +230773,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.48,
-    22.81,
-    17.07
+    18.16,
+    17.18,
+    18.51
    ],
    "comb": {
     "b": 0.374,
@@ -225018,9 +230833,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.38,
-    20.58,
-    18.87
+    20.41,
+    13.65,
+    19.09
    ]
   },
   {
@@ -225069,9 +230884,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.96,
-    20.95,
-    19.12
+    19.3,
+    14.55,
+    19.57
    ],
    "comb": {
     "b": 0.295,
@@ -225121,9 +230936,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.08,
-    28.67,
-    14.58
+    18.34,
+    24.84,
+    18.45
    ],
    "comb": {
     "b": 0.324,
@@ -225185,9 +231000,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.07,
-    23.68,
-    -19.23
+    -21.76,
+    26.32,
+    3.73
    ]
   },
   {
@@ -225240,9 +231055,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.7,
-    15.66,
-    -14.07
+    -11.67,
+    17.4,
+    2.22
    ],
    "comb": {
     "b": 0.294,
@@ -225293,9 +231108,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.51,
-    24.83,
-    -18.4
+    -18.4,
+    28.66,
+    4.56
    ],
    "comb": {
     "b": 0.379,
@@ -225387,9 +231202,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.27,
-    22.69,
-    -22.45
+    -24.38,
+    26.05,
+    4.54
    ]
   },
   {
@@ -225430,9 +231245,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.21,
-    22.23,
-    -23.65
+    -23.38,
+    26.73,
+    5.71
    ]
   },
   {
@@ -225482,9 +231297,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.05,
-    21.84,
-    18.06
+    18.76,
+    15.81,
+    19.12
    ],
    "comb": {
     "b": 0.259,
@@ -225541,9 +231356,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.06,
-    10.5,
-    38.55
+    41.5,
+    -8.38,
+    0.53
    ]
   },
   {
@@ -225591,9 +231406,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.27,
-    11.81,
-    38.65
+    41.26,
+    -7.98,
+    5.21
    ]
   },
   {
@@ -225641,9 +231456,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.28,
-    11.69,
-    37.38
+    41.74,
+    -6.64,
+    -2.65
    ]
   },
   {
@@ -225692,9 +231507,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.4,
-    11.61,
-    40.65
+    42.08,
+    -9.4,
+    8.36
    ],
    "comb": {
     "b": 0.315,
@@ -225753,9 +231568,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.19,
-    13.54,
-    41.72
+    43.29,
+    -7.53,
+    11.76
    ],
    "comb": {
     "b": 0.396,
@@ -225813,9 +231628,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.37,
-    7.08,
-    44.91
+    38.71,
+    -13.81,
+    22.9
    ]
   },
   {
@@ -225864,9 +231679,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.04,
-    5.72,
-    43.44
+    40.63,
+    -18.28,
+    9.18
    ]
   },
   {
@@ -225914,9 +231729,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.01,
-    -14.84,
-    37.11
+    19.91,
+    -36.1,
+    9.67
    ]
   },
   {
@@ -225964,9 +231779,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.55,
-    -4.6,
-    40.48
+    26.66,
+    -31.86,
+    14.24
    ]
   },
   {
@@ -226015,9 +231830,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.27,
-    -4.25,
-    41.91
+    25.95,
+    -30.84,
+    17.45
    ],
    "comb": {
     "b": 0.326,
@@ -226074,9 +231889,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.93,
-    17.89,
-    27.76
+    7.09,
+    4.54,
+    38.26
    ]
   },
   {
@@ -226124,9 +231939,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.56,
-    23.83,
-    26.91
+    3.89,
+    14.51,
+    37.89
    ]
   },
   {
@@ -226174,9 +231989,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.43,
-    23.99,
-    29.12
+    4.05,
+    16.46,
+    38.8
    ]
   },
   {
@@ -226224,9 +232039,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.01,
-    13.18,
-    24.23
+    -16.42,
+    0.63,
+    39.03
    ]
   },
   {
@@ -226274,9 +232089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.19,
-    29.75,
-    26.01
+    5.55,
+    26.62,
+    34.48
    ]
   },
   {
@@ -226324,9 +232139,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.87,
-    18.14,
-    32.07
+    1.03,
+    7.74,
+    43.22
    ]
   },
   {
@@ -226375,9 +232190,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.15,
-    2.84,
-    -5.27
+    -28.93,
+    0.18,
+    -11.41
    ],
    "comb": {
     "b": 0.4,
@@ -226435,9 +232250,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.24,
-    4.91,
-    -6.79
+    -28.77,
+    4.11,
+    -15.06
    ],
    "comb": {
     "b": 0.454,
@@ -226495,9 +232310,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -44.25,
-    -1.22,
-    10.47
+    -40.11,
+    -23.83,
+    6.09
    ],
    "comb": {
     "b": 0.375,
@@ -226554,9 +232369,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.67,
-    -4.86,
-    -4.72
+    -27.06,
+    -8.82,
+    -16.17
    ]
   },
   {
@@ -226606,9 +232421,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.93,
-    -8.09,
-    -6.21
+    -42.03,
+    -12.15,
+    -21.17
    ]
   },
   {
@@ -226660,12 +232475,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.71,
-    -10.46,
-    -3.81
+    -40.78,
+    -19.97,
+    -17.34
    ],
    "comb": {
-    "b": 0.347,
+    "b": 0.357,
     "r": 0.0,
     "rg": [
      "data",
@@ -226719,9 +232534,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.93,
-    -19.29,
-    -7.81
+    -41.44,
+    -24.39,
+    -14.27
    ]
   },
   {
@@ -226770,12 +232585,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.55,
-    -16.55,
-    -13.85
+    -41.21,
+    -16.68,
+    -23.22
    ],
    "comb": {
-    "b": 0.298,
+    "b": 0.312,
     "r": 0.0,
     "rg": [
      "data",
@@ -226831,9 +232646,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.08,
-    11.93,
-    41.83
+    33.42,
+    0.59,
+    30.85
    ],
    "comb": {
     "b": 0.53,
@@ -226894,9 +232709,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.83,
-    0.83,
-    35.85
+    28.59,
+    -4.1,
+    24.03
    ]
   },
   {
@@ -226945,9 +232760,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.51,
-    4.77,
-    43.17
+    28.87,
+    -15.6,
+    33.72
    ],
    "comb": {
     "b": 0.357,
@@ -227010,9 +232825,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.72,
-    0.31,
-    45.0
+    28.6,
+    -18.37,
+    34.75
    ],
    "comb": {
     "b": 0.211,
@@ -227070,9 +232885,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.63,
-    -10.05,
-    43.7
+    26.45,
+    -19.72,
+    33.54
    ],
    "comb": {
     "b": 0.397,
@@ -227130,9 +232945,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.56,
-    -5.39,
-    32.53
+    -13.77,
+    -33.87,
+    32.03
    ]
   },
   {
@@ -227181,9 +232996,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.45,
-    -0.98,
-    47.67
+    29.11,
+    -10.38,
+    39.5
    ],
    "comb": {
     "b": 0.283,
@@ -227241,9 +233056,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.13,
-    -2.93,
-    49.92
+    27.3,
+    -12.57,
+    43.94
    ]
   },
   {
@@ -227298,9 +233113,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -1.91,
-    -5.34,
-    43.55
+    27.46,
+    -11.85,
+    34.27
    ],
    "comb": {
     "b": 0.505,
@@ -227358,9 +233173,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.7,
-    3.36,
-    38.9
+    25.99,
+    -7.6,
+    32.55
    ]
   },
   {
@@ -227408,9 +233223,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.17,
-    5.14,
-    39.13
+    26.08,
+    -3.14,
+    33.21
    ]
   },
   {
@@ -227458,9 +233273,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.42,
-    4.93,
-    38.82
+    25.57,
+    -4.31,
+    33.47
    ]
   },
   {
@@ -227501,9 +233316,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.66,
-    25.81,
-    22.67
+    19.54,
+    19.3,
+    23.23
    ]
   },
   {
@@ -227553,9 +233368,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.6,
-    18.51,
-    33.89
+    38.25,
+    6.13,
+    12.67
    ],
    "comb": {
     "b": 0.264,
@@ -227605,9 +233420,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.56,
-    25.96,
-    29.6
+    8.12,
+    17.48,
+    37.7
    ],
    "comb": {
     "b": 0.446,
@@ -227665,9 +233480,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.75,
-    13.18,
-    -21.81
+    -2.05,
+    14.1,
+    -38.19
    ],
    "comb": {
     "b": 0.408,
@@ -227733,9 +233548,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.23,
-    4.81,
-    -22.06
+    -6.44,
+    9.29,
+    -28.97
    ],
    "comb": {
     "b": 0.235,
@@ -227793,9 +233608,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.02,
-    11.05,
-    -25.76
+    -9.14,
+    16.5,
+    -34.33
    ],
    "comb": {
     "b": 0.235,
@@ -227861,9 +233676,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.17,
-    12.9,
-    -17.48
+    -9.97,
+    15.39,
+    -41.63
    ],
    "comb": {
     "b": 0.33,
@@ -227929,9 +233744,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.03,
-    9.76,
-    -21.77
+    -13.11,
+    15.43,
+    -33.53
    ],
    "comb": {
     "b": 0.325,
@@ -227989,9 +233804,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.62,
-    3.59,
-    -23.46
+    -33.32,
+    -0.13,
+    -35.38
    ]
   },
   {
@@ -228049,9 +233864,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.84,
-    13.0,
-    -31.3
+    -18.2,
+    17.43,
+    -43.37
    ],
    "comb": {
     "b": 0.517,
@@ -228110,9 +233925,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.2,
-    3.27,
-    -33.48
+    -2.84,
+    2.06,
+    -51.58
    ],
    "comb": {
     "b": 0.465,
@@ -228179,9 +233994,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.92,
-    -5.21,
-    -20.72
+    -32.59,
+    -7.5,
+    -35.27
    ]
   },
   {
@@ -228239,9 +234054,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.15,
-    -3.15,
-    -28.5
+    -25.37,
+    0.7,
+    -45.04
    ],
    "comb": {
     "b": 0.499,
@@ -228300,9 +234115,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.45,
-    -11.96,
-    -28.57
+    -29.13,
+    -9.36,
+    -41.67
    ],
    "comb": {
     "b": 0.353,
@@ -228370,9 +234185,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.37,
-    23.82,
-    -4.13
+    -20.78,
+    32.35,
+    -29.73
    ],
    "comb": {
     "b": 0.63,
@@ -228441,9 +234256,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.98,
-    13.07,
-    -21.63
+    -21.4,
+    15.98,
+    -32.86
    ],
    "comb": {
     "b": 0.558,
@@ -228501,9 +234316,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.6,
-    -0.38,
-    8.01
+    -8.67,
+    -15.91,
+    6.75
    ]
   },
   {
@@ -228559,9 +234374,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -41.39,
-    4.15,
-    25.15
+    -15.01,
+    -44.8,
+    16.83
    ],
    "comb": {
     "b": 0.647,
@@ -228630,9 +234445,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -45.1,
-    -20.09,
-    8.84
+    -28.35,
+    -42.24,
+    -9.25
    ]
   },
   {
@@ -228680,9 +234495,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.02,
-    -1.77,
-    -18.3
+    -11.19,
+    0.37,
+    -30.76
    ]
   },
   {
@@ -228731,9 +234546,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.81,
-    5.66,
-    -24.62
+    -11.63,
+    11.35,
+    -35.64
    ],
    "comb": {
     "b": 0.235,
@@ -228791,9 +234606,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.28,
-    4.33,
-    -31.2
+    -5.68,
+    9.81,
+    -39.15
    ]
   },
   {
@@ -228841,9 +234656,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.55,
-    0.07,
-    -25.02
+    -5.24,
+    4.84,
+    -31.95
    ]
   },
   {
@@ -228893,9 +234708,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.61,
-    -8.46,
-    32.1
+    30.44,
+    -11.77,
+    21.66
    ],
    "comb": {
     "b": 0.518,
@@ -228959,9 +234774,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.45,
-    -6.29,
-    37.08
+    32.33,
+    -10.9,
+    27.65
    ],
    "comb": {
     "b": 0.412,
@@ -229020,9 +234835,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.64,
-    -17.67,
-    25.89
+    23.67,
+    -18.14,
+    22.87
    ],
    "comb": {
     "b": 0.404,
@@ -229081,9 +234896,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.82,
-    -17.19,
-    28.38
+    30.11,
+    -19.3,
+    19.56
    ],
    "comb": {
     "b": 0.417,
@@ -229151,9 +234966,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.31,
-    -22.68,
-    33.45
+    16.39,
+    -24.19,
+    30.64
    ]
   },
   {
@@ -229211,9 +235026,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.7,
-    -23.57,
-    35.17
+    14.55,
+    -26.85,
+    31.56
    ],
    "comb": {
     "b": 0.391,
@@ -229274,9 +235089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.21,
-    -10.48,
-    28.82
+    9.25,
+    -7.0,
+    32.34
    ],
    "comb": {
     "b": 0.466,
@@ -229343,9 +235158,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.39,
-    -17.46,
-    34.65
+    11.09,
+    -12.79,
+    37.08
    ],
    "comb": {
     "b": 0.236,
@@ -229410,9 +235225,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.05,
-    -21.44,
-    34.13
+    8.19,
+    -14.62,
+    38.89
    ]
   },
   {
@@ -229469,9 +235284,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.61,
-    -24.46,
-    38.34
+    8.27,
+    -20.31,
+    41.63
    ],
    "comb": {
     "b": 0.472,
@@ -229530,12 +235345,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.73,
-    -25.47,
-    26.9
+    -11.2,
+    -19.59,
+    33.95
    ],
    "comb": {
-    "b": 0.545,
+    "b": 0.547,
     "r": 0.0,
     "rg": [
      "bunseki",
@@ -229592,9 +235407,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.41,
-    -29.45,
-    30.33
+    7.22,
+    -26.1,
+    34.57
    ],
    "comb": {
     "b": 0.27,
@@ -229661,9 +235476,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.85,
-    -24.87,
-    34.26
+    2.38,
+    -17.04,
+    40.41
    ],
    "comb": {
     "b": 0.375,
@@ -229720,9 +235535,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.88,
-    -26.77,
-    10.36
+    -20.87,
+    -19.39,
+    19.21
    ]
   },
   {
@@ -229777,9 +235592,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -33.37,
-    -35.77,
-    11.07
+    -38.4,
+    -26.09,
+    22.75
    ],
    "comb": {
     "b": 0.557,
@@ -229846,9 +235661,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.24,
-    -31.25,
-    10.7
+    -18.87,
+    -22.45,
+    20.83
    ]
   },
   {
@@ -229908,9 +235723,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.13,
-    -41.71,
-    8.34
+    -26.98,
+    -30.95,
+    22.97
    ],
    "comb": {
     "b": 0.519,
@@ -229979,9 +235794,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.56,
-    -42.6,
-    7.37
+    -28.22,
+    -35.7,
+    17.07
    ],
    "comb": {
     "b": 0.496,
@@ -230041,9 +235856,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.27,
-    -30.14,
-    17.18
+    -21.82,
+    -29.86,
+    23.69
    ],
    "comb": {
     "b": 0.555,
@@ -230103,9 +235918,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.86,
-    15.59,
-    38.36
+    43.86,
+    -1.31,
+    -1.95
    ],
    "comb": {
     "b": 0.28,
@@ -230163,9 +235978,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.85,
-    11.59,
-    29.84
+    25.83,
+    -7.23,
+    21.47
    ],
    "comb": {
     "b": 0.343,
@@ -230222,9 +236037,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.26,
-    -10.48,
-    12.96
+    1.65,
+    -27.97,
+    -19.88
    ]
   },
   {
@@ -230272,9 +236087,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.21,
-    2.12,
-    6.58
+    -24.56,
+    -0.02,
+    16.26
    ]
   },
   {
@@ -230320,9 +236135,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    12.72,
-    2.14,
-    45.25
+    38.78,
+    -4.76,
+    28.91
    ],
    "comb": {
     "b": 0.411,
@@ -230383,9 +236198,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.0,
-    -6.1,
-    48.13
+    36.16,
+    -12.77,
+    32.33
    ],
    "comb": {
     "b": 0.413,
@@ -230436,9 +236251,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.21,
-    -2.93,
-    37.32
+    29.28,
+    -8.32,
+    24.66
    ]
   },
   {
@@ -230484,13 +236299,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.01,
-    9.49,
-    18.65
+    6.94,
+    -5.0,
+    31.6
    ],
    "comb": {
     "b": 0.573,
-    "r": 1.23,
+    "r": 1.26,
     "rg": [
      "denjiki",
      "kansu",
@@ -230541,9 +236356,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
+    32.73,
     -16.29,
-    5.72,
-    42.08
+    29.61
    ],
    "comb": {
     "b": 0.334,
@@ -230594,9 +236409,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.3,
-    10.75,
-    28.27
+    15.75,
+    -9.47,
+    34.59
    ],
    "comb": {
     "b": 0.529,
@@ -230646,9 +236461,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.55,
-    2.74,
-    33.21
+    25.27,
+    -17.67,
+    21.48
    ]
   },
   {
@@ -230694,9 +236509,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.61,
-    -39.31,
-    18.43
+    -8.73,
+    -35.02,
+    27.69
    ],
    "comb": {
     "b": 0.534,
@@ -230752,9 +236567,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.73,
-    -33.35,
-    8.77
+    -26.29,
+    -24.69,
+    22.18
    ],
    "comb": {
     "b": 0.341,
@@ -230804,9 +236619,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.46,
-    6.86,
-    -27.65
+    -15.68,
+    12.53,
+    -42.55
    ]
   },
   {
@@ -230843,12 +236658,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.9,
-    6.63,
-    -24.26
+    -22.09,
+    13.62,
+    -39.24
    ],
    "comb": {
-    "b": 0.435,
+    "b": 0.432,
     "r": 0.0,
     "rg": [
      "data",
@@ -230891,9 +236706,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.77,
-    10.86,
-    -26.45
+    -14.29,
+    16.39,
+    -34.48
    ],
    "comb": {
     "b": 0.325,
@@ -230949,9 +236764,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    12.93,
-    -16.11,
-    38.76
+    29.02,
+    -20.3,
+    28.54
    ],
    "comb": {
     "b": 0.498,
@@ -231004,9 +236819,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.43,
-    -22.15,
-    30.53
+    35.8,
+    -25.27,
+    17.13
    ],
    "comb": {
     "b": 0.314,
@@ -231065,9 +236880,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.89,
-    -39.23,
-    1.11
+    -31.72,
+    -25.44,
+    16.6
    ],
    "comb": {
     "b": 0.348,
@@ -231125,12 +236940,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.19,
-    -21.32,
-    -7.53
+    -26.06,
+    -12.93,
+    -4.64
    ],
    "comb": {
-    "b": 0.228,
+    "b": 0.242,
     "r": 0.0,
     "rg": [
      "data",
@@ -231194,9 +237009,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.61,
-    -22.81,
-    -21.79
+    -14.01,
+    -27.48,
+    -18.5
    ],
    "comb": {
     "b": 0.558,
@@ -231272,9 +237087,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.29,
-    -12.61,
-    -29.5
+    -13.98,
+    -17.35,
+    -28.24
    ],
    "comb": {
     "b": 0.35,
@@ -231332,9 +237147,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.41,
-    -30.85,
-    15.88
+    -17.06,
+    -21.16,
+    25.94
    ],
    "comb": {
     "b": 0.254,
@@ -231393,9 +237208,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.68,
-    -34.68,
-    14.24
+    -21.86,
+    -28.02,
+    25.8
    ],
    "comb": {
     "b": 0.598,
@@ -231450,9 +237265,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.35,
-    -41.83,
-    14.0
+    -23.83,
+    -31.59,
+    28.23
    ],
    "comb": {
     "b": 0.441,
@@ -231494,9 +237309,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.59,
-    -29.47,
-    10.76
+    -20.88,
+    -19.82,
+    21.57
    ]
   },
   {
@@ -231539,9 +237354,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.01,
-    32.43,
-    10.19
+    6.17,
+    31.89,
+    15.46
    ],
    "comb": {
     "b": 0.463,
@@ -231599,9 +237414,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.28,
-    32.85,
-    -9.8
+    4.5,
+    35.68,
+    0.52
    ]
   },
   {
@@ -231658,9 +237473,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.83,
-    35.26,
-    5.21
+    2.4,
+    35.21,
+    12.91
    ]
   },
   {
@@ -231711,9 +237526,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.14,
-    27.9,
-    -4.03
+    -14.58,
+    31.1,
+    -0.79
    ],
    "comb": {
     "b": 0.191,
@@ -231772,9 +237587,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.14,
-    21.58,
-    -14.99
+    -28.9,
+    22.06,
+    -9.48
    ],
    "comb": {
     "b": 0.397,
@@ -231825,9 +237640,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.4,
-    28.18,
-    -2.92
+    -19.2,
+    30.41,
+    -0.27
    ],
    "comb": {
     "b": 0.259,
@@ -231885,9 +237700,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.06,
-    27.74,
-    20.27
+    15.87,
+    22.24,
+    23.4
    ]
   },
   {
@@ -231936,9 +237751,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.53,
-    31.87,
-    16.6
+    12.46,
+    27.66,
+    22.17
    ],
    "comb": {
     "b": 0.406,
@@ -232005,9 +237820,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.5,
-    26.1,
-    21.05
+    20.96,
+    18.89,
+    22.31
    ],
    "comb": {
     "b": 0.232,
@@ -232064,9 +237879,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.9,
-    20.91,
-    20.79
+    21.73,
+    13.1,
+    20.68
    ]
   },
   {
@@ -232109,9 +237924,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.66,
-    29.89,
-    19.2
+    18.85,
+    23.97,
+    21.95
    ],
    "comb": {
     "b": 0.43,
@@ -232171,9 +237986,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.3,
-    30.65,
-    18.68
+    15.36,
+    25.46,
+    22.97
    ],
    "comb": {
     "b": 0.359,
@@ -232224,12 +238039,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.36,
-    28.53,
-    15.98
+    13.56,
+    24.4,
+    20.03
    ],
    "comb": {
-    "b": 0.372,
+    "b": 0.375,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -232292,9 +238107,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.51,
-    33.28,
-    -0.64
+    1.78,
+    34.64,
+    -14.44
    ]
   },
   {
@@ -232352,9 +238167,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.03,
-    33.63,
-    -0.39
+    2.64,
+    35.59,
+    -11.76
    ]
   },
   {
@@ -232411,9 +238226,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.78,
-    33.42,
-    -1.79
+    2.55,
+    35.02,
+    -13.38
    ]
   },
   {
@@ -232469,9 +238284,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.47,
-    21.33,
-    -7.15
+    -25.78,
+    22.36,
+    -3.99
    ]
   },
   {
@@ -232527,9 +238342,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.54,
-    21.29,
-    -9.59
+    -25.68,
+    21.86,
+    -6.56
    ]
   },
   {
@@ -232585,9 +238400,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.0,
-    22.26,
-    -8.47
+    -24.75,
+    22.56,
+    -7.66
    ]
   },
   {
@@ -232644,9 +238459,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.82,
-    27.87,
-    -1.95
+    -35.06,
+    25.94,
+    5.19
    ],
    "comb": {
     "b": 0.401,
@@ -232711,9 +238526,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.68,
-    24.41,
-    -16.98
+    -23.51,
+    25.94,
+    -8.23
    ]
   },
   {
@@ -232771,9 +238586,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.22,
-    19.95,
-    -9.98
+    -31.7,
+    18.84,
+    -13.21
    ],
    "comb": {
     "b": 0.496,
@@ -232839,9 +238654,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.82,
-    23.19,
-    -11.86
+    -24.61,
+    23.73,
+    -11.19
    ]
   },
   {
@@ -232897,9 +238712,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.61,
-    26.2,
-    -15.4
+    -9.68,
+    30.86,
+    11.58
    ]
   },
   {
@@ -232965,9 +238780,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.46,
-    19.05,
-    37.07
+    43.56,
+    3.21,
+    4.58
    ],
    "comb": {
     "b": 0.392,
@@ -233043,9 +238858,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.56,
-    18.14,
-    38.58
+    45.21,
+    2.75,
+    4.15
    ]
   },
   {
@@ -233109,9 +238924,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.56,
-    19.5,
-    37.62
+    45.22,
+    4.29,
+    2.46
    ]
   },
   {
@@ -233175,9 +238990,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.09,
-    13.25,
-    41.67
+    44.13,
+    -6.05,
+    9.21
    ]
   },
   {
@@ -233241,9 +239056,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    12.24,
-    17.94,
-    38.17
+    45.28,
+    -0.07,
+    -4.37
    ]
   },
   {
@@ -233309,9 +239124,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.51,
-    18.38,
-    41.58
+    46.22,
+    -4.09,
+    7.8
    ],
    "comb": {
     "b": 0.538,
@@ -233390,9 +239205,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.81,
-    16.73,
-    41.14
+    46.99,
+    -1.8,
+    1.62
    ]
   },
   {
@@ -233449,9 +239264,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.99,
-    -1.36,
-    43.49
+    37.22,
+    -24.77,
+    8.37
    ]
   },
   {
@@ -233508,9 +239323,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.62,
-    -5.26,
-    43.36
+    30.99,
+    -28.24,
+    17.64
    ]
   },
   {
@@ -233567,9 +239382,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.07,
-    0.56,
-    43.62
+    38.13,
+    -23.59,
+    7.65
    ]
   },
   {
@@ -233625,9 +239440,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.61,
-    4.0,
-    43.84
+    44.84,
+    -18.56,
+    -2.69
    ]
   },
   {
@@ -233684,9 +239499,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.15,
-    3.23,
-    43.03
+    40.36,
+    -20.92,
+    -1.65
    ],
    "comb": {
     "b": 0.165,
@@ -233751,9 +239566,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.2,
-    -4.19,
-    43.28
+    27.83,
+    -32.78,
+    14.85
    ]
   },
   {
@@ -233809,9 +239624,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.5,
-    -2.63,
-    44.41
+    36.83,
+    -29.19,
+    -2.31
    ]
   },
   {
@@ -233867,9 +239682,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.92,
-    -0.36,
-    45.1
+    38.01,
+    -26.35,
+    8.63
    ]
   },
   {
@@ -233925,9 +239740,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.57,
-    23.16,
-    24.55
+    31.88,
+    24.57,
+    17.57
    ]
   },
   {
@@ -233983,9 +239798,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    32.46,
-    15.12,
-    25.43
+    43.89,
+    11.93,
+    0.6
    ]
   },
   {
@@ -234042,9 +239857,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.7,
-    -24.08,
-    -18.97
+    -35.18,
+    -23.84,
+    -29.44
    ]
   },
   {
@@ -234101,9 +239916,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.23,
-    -24.28,
-    -17.54
+    -36.81,
+    -23.6,
+    -27.59
    ]
   },
   {
@@ -234160,9 +239975,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.83,
-    -20.32,
-    -18.79
+    -36.49,
+    -20.06,
+    -30.65
    ]
   },
   {
@@ -234219,9 +240034,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.46,
-    -20.33,
-    -14.61
+    -39.71,
+    -20.65,
+    -25.88
    ]
   },
   {
@@ -234280,9 +240095,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.46,
-    -11.95,
-    -4.92
+    -47.58,
+    -18.17,
+    -8.9
    ],
    "comb": {
     "b": 0.433,
@@ -234347,9 +240162,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.96,
-    -22.54,
-    -15.26
+    -39.59,
+    -22.0,
+    -27.99
    ]
   },
   {
@@ -234405,9 +240220,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.19,
-    11.45,
-    27.4
+    -13.7,
+    -7.66,
+    41.02
    ]
   },
   {
@@ -234464,9 +240279,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.37,
-    5.65,
-    27.99
+    -19.15,
+    -10.84,
+    39.81
    ],
    "comb": {
     "b": 0.297,
@@ -234532,9 +240347,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.66,
-    12.01,
-    29.06
+    -12.12,
+    -4.61,
+    43.6
    ],
    "comb": {
     "b": 0.358,
@@ -234600,9 +240415,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.72,
-    14.4,
-    24.17
+    -14.58,
+    1.2,
+    43.07
    ],
    "comb": {
     "b": 0.316,
@@ -234667,9 +240482,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.72,
-    10.91,
-    16.68
+    -28.68,
+    4.84,
+    28.55
    ]
   },
   {
@@ -234725,9 +240540,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.62,
-    7.03,
-    6.49
+    -39.28,
+    2.46,
+    15.62
    ]
   },
   {
@@ -234785,9 +240600,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.61,
-    1.68,
-    9.65
+    -31.38,
+    -5.12,
+    20.03
    ]
   },
   {
@@ -234845,9 +240660,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.89,
-    5.25,
-    7.0
+    -32.07,
+    1.13,
+    19.54
    ]
   },
   {
@@ -234909,9 +240724,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.67,
-    14.87,
-    2.26
+    -31.93,
+    11.18,
+    16.34
    ],
    "comb": {
     "b": 0.408,
@@ -234984,9 +240799,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.51,
-    15.38,
-    0.82
+    -32.37,
+    11.9,
+    14.91
    ],
    "comb": {
     "b": 0.408,
@@ -235056,9 +240871,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.65,
-    17.3,
-    -3.22
+    -28.54,
+    16.44,
+    9.77
    ],
    "comb": {
     "b": 0.127,
@@ -235130,9 +240945,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.34,
-    13.47,
-    0.96
+    -32.87,
+    10.43,
+    14.91
    ],
    "comb": {
     "b": 0.408,
@@ -235201,9 +241016,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.76,
-    6.65,
-    6.41
+    -32.38,
+    2.38,
+    18.92
    ]
   },
   {
@@ -235260,13 +241075,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.38,
-    6.11,
-    -1.38
+    -28.13,
+    7.54,
+    4.44
    ],
    "comb": {
-    "b": 0.439,
-    "r": 0.15,
+    "b": 0.437,
+    "r": 0.19,
     "rg": [
      "data",
      "programming"
@@ -235331,9 +241146,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.77,
-    8.69,
-    -4.59
+    -31.38,
+    8.99,
+    -2.44
    ],
    "comb": {
     "b": 0.335,
@@ -235399,9 +241214,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.04,
-    -36.28,
-    14.08
+    -37.09,
+    -25.46,
+    28.47
    ],
    "comb": {
     "b": 0.368,
@@ -235469,9 +241284,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.15,
-    -37.28,
-    11.76
+    -41.15,
+    -26.66,
+    24.43
    ],
    "comb": {
     "b": 0.494,
@@ -235541,9 +241356,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.17,
-    -28.48,
-    36.04
+    4.05,
+    -30.11,
+    37.94
    ],
    "comb": {
     "b": 0.686,
@@ -235617,9 +241432,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.67,
-    -32.95,
-    29.83
+    -5.28,
+    -38.99,
+    31.11
    ],
    "comb": {
     "b": 0.641,
@@ -235692,9 +241507,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.86,
-    -32.07,
-    26.87
+    -5.22,
+    -39.16,
+    25.55
    ],
    "comb": {
     "b": 0.687,
@@ -235767,9 +241582,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.8,
-    4.2,
-    8.06
+    -31.59,
+    2.32,
+    20.21
    ],
    "comb": {
     "b": 0.226,
@@ -235838,9 +241653,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.65,
-    -0.99,
-    9.61
+    -30.9,
+    -1.4,
+    21.34
    ],
    "comb": {
     "b": 0.279,
@@ -235911,9 +241726,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.65,
-    -9.12,
-    20.34
+    -32.22,
+    -10.78,
+    32.54
    ],
    "comb": {
     "b": 0.606,
@@ -235986,9 +241801,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.87,
-    2.88,
-    42.24
+    30.62,
+    -4.97,
+    31.09
    ],
    "comb": {
     "b": 0.359,
@@ -236054,9 +241869,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.55,
-    6.97,
-    43.29
+    31.36,
+    -1.99,
+    32.89
    ],
    "comb": {
     "b": 0.38,
@@ -236125,9 +241940,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.41,
-    0.74,
-    47.02
+    37.61,
+    -15.46,
+    26.62
    ],
    "comb": {
     "b": 0.347,
@@ -236200,9 +242015,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.14,
-    3.01,
-    46.55
+    31.83,
+    -6.57,
+    36.14
    ],
    "comb": {
     "b": 0.259,
@@ -236269,9 +242084,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.68,
-    2.54,
-    43.89
+    25.89,
+    -10.68,
+    37.81
    ]
   },
   {
@@ -236327,9 +242142,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.83,
-    1.49,
-    48.58
+    35.02,
+    -5.17,
+    35.54
    ]
   },
   {
@@ -236385,9 +242200,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.1,
-    -2.46,
-    50.0
+    34.05,
+    -7.76,
+    38.12
    ]
   },
   {
@@ -236450,9 +242265,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -0.09,
-    2.57,
-    45.41
+    37.75,
+    -12.02,
+    25.38
    ],
    "comb": {
     "b": 0.322,
@@ -236518,9 +242333,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.18,
-    -0.39,
-    50.14
+    38.86,
+    -9.0,
+    32.9
    ]
   },
   {
@@ -236577,9 +242392,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.32,
-    1.15,
-    48.18
+    34.98,
+    -13.1,
+    33.47
    ],
    "comb": {
     "b": 0.292,
@@ -236646,9 +242461,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.82,
-    6.13,
-    50.18
+    28.84,
+    -3.24,
+    44.64
    ],
    "comb": {
     "b": 0.367,
@@ -236713,9 +242528,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.25,
-    4.76,
-    52.03
+    30.5,
+    -1.98,
+    45.46
    ]
   },
   {
@@ -236773,9 +242588,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.57,
-    1.14,
-    53.03
+    39.43,
+    -15.63,
+    34.66
    ],
    "comb": {
     "b": 0.269,
@@ -236841,9 +242656,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.44,
-    -5.82,
-    51.37
+    36.27,
+    -12.39,
+    36.95
    ],
    "comb": {
     "b": 0.287,
@@ -236910,9 +242725,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.52,
-    -4.21,
-    48.36
+    34.14,
+    -14.38,
+    33.81
    ],
    "comb": {
     "b": 0.494,
@@ -236980,9 +242795,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.95,
-    4.26,
-    46.82
+    34.65,
+    -6.41,
+    33.48
    ],
    "comb": {
     "b": 0.357,
@@ -237048,9 +242863,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.29,
-    3.05,
-    46.93
+    36.03,
+    -8.08,
+    31.61
    ]
   },
   {
@@ -237109,9 +242924,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.16,
-    8.06,
-    49.46
+    34.78,
+    -0.04,
+    38.26
    ],
    "comb": {
     "b": 0.498,
@@ -237180,9 +242995,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.19,
-    9.66,
-    47.35
+    30.62,
+    -0.17,
+    39.72
    ],
    "comb": {
     "b": 0.424,
@@ -237247,9 +243062,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.09,
-    5.11,
-    48.32
+    37.02,
+    -1.95,
+    33.79
    ]
   },
   {
@@ -237308,13 +243123,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.18,
-    1.19,
-    48.54
+    38.71,
+    -10.93,
+    29.97
    ],
    "comb": {
     "b": 0.44,
-    "r": 0.79,
+    "r": 0.78,
     "rg": [
      "bibun-hoteishiki",
      "ryoshi"
@@ -237378,9 +243193,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.12,
-    10.05,
-    50.55
+    34.0,
+    4.38,
+    40.74
    ]
   },
   {
@@ -237437,9 +243252,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.24,
-    -4.47,
-    49.78
+    38.99,
+    -12.68,
+    31.5
    ]
   },
   {
@@ -237497,9 +243312,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.37,
-    3.67,
-    38.85
+    29.53,
+    -3.82,
+    27.83
    ],
    "comb": {
     "b": 0.305,
@@ -237566,9 +243381,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.84,
-    7.69,
-    38.58
+    1.31,
+    -4.45,
+    46.82
    ],
    "comb": {
     "b": 0.37,
@@ -237635,9 +243450,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.61,
-    -6.12,
-    46.18
+    27.12,
+    -15.17,
+    37.38
    ],
    "comb": {
     "b": 0.264,
@@ -237704,9 +243519,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.87,
-    2.73,
-    40.55
+    24.41,
+    -5.12,
+    36.15
    ]
   },
   {
@@ -237764,9 +243579,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.85,
-    3.75,
-    40.17
+    24.08,
+    -3.59,
+    36.55
    ]
   },
   {
@@ -237824,9 +243639,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.09,
-    4.68,
-    40.31
+    25.14,
+    -4.09,
+    35.78
    ]
   },
   {
@@ -237884,9 +243699,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.56,
-    3.74,
-    40.56
+    23.37,
+    -4.71,
+    36.89
    ]
   },
   {
@@ -237944,9 +243759,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.15,
-    2.49,
-    40.17
+    23.07,
+    -3.6,
+    37.2
    ]
   },
   {
@@ -238002,9 +243817,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.53,
-    -3.17,
-    41.97
+    19.43,
+    -6.87,
+    40.55
    ]
   },
   {
@@ -238060,9 +243875,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.82,
-    0.95,
-    43.91
+    22.75,
+    -6.17,
+    40.72
    ]
   },
   {
@@ -238118,9 +243933,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.81,
-    -0.2,
-    43.65
+    21.15,
+    -6.41,
+    41.54
    ]
   },
   {
@@ -238176,9 +243991,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.46,
-    -0.54,
-    44.27
+    23.89,
+    -5.43,
+    40.17
    ]
   },
   {
@@ -238236,9 +244051,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.39,
-    4.65,
-    41.43
+    30.64,
+    -6.3,
+    30.83
    ],
    "comb": {
     "b": 0.258,
@@ -238305,9 +244120,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.12,
-    -3.54,
-    41.08
+    28.5,
+    -34.06,
+    9.84
    ],
    "comb": {
     "b": 0.32,
@@ -238375,9 +244190,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.39,
-    -6.81,
-    41.86
+    28.42,
+    -33.29,
+    12.37
    ],
    "comb": {
     "b": 0.32,
@@ -238446,9 +244261,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.04,
-    -4.41,
-    43.23
+    26.53,
+    -38.89,
+    12.09
    ],
    "comb": {
     "b": 0.54,
@@ -238519,9 +244334,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.41,
-    -3.72,
-    36.18
+    20.4,
+    -36.72,
+    5.35
    ],
    "comb": {
     "b": 0.439,
@@ -238586,9 +244401,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.57,
-    -3.78,
-    37.05
+    24.21,
+    -34.34,
+    5.24
    ]
   },
   {
@@ -238644,9 +244459,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.57,
-    -2.36,
-    37.17
+    25.16,
+    -33.53,
+    5.98
    ]
   },
   {
@@ -238702,9 +244517,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.46,
-    -3.07,
-    37.59
+    25.31,
+    -33.63,
+    4.61
    ]
   },
   {
@@ -238761,9 +244576,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.25,
-    -4.87,
-    41.69
+    27.67,
+    -37.24,
+    14.49
    ],
    "comb": {
     "b": 0.165,
@@ -238829,9 +244644,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.2,
-    -4.47,
-    42.26
+    28.32,
+    -37.16,
+    13.41
    ],
    "comb": {
     "b": 0.165,
@@ -238897,9 +244712,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.64,
-    -5.86,
-    37.18
+    19.06,
+    -35.72,
+    20.74
    ],
    "comb": {
     "b": 0.331,
@@ -238965,9 +244780,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.34,
-    -6.21,
-    37.88
+    18.8,
+    -35.03,
+    22.1
    ],
    "comb": {
     "b": 0.331,
@@ -239032,9 +244847,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.74,
-    -1.66,
-    42.93
+    30.43,
+    -36.23,
+    16.64
    ]
   },
   {
@@ -239090,9 +244905,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.47,
-    -4.69,
-    42.31
+    26.48,
+    -39.47,
+    16.0
    ]
   },
   {
@@ -239148,9 +244963,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.96,
-    -4.41,
-    41.47
+    26.1,
+    -39.09,
+    17.49
    ]
   },
   {
@@ -239206,9 +245021,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.14,
-    -3.88,
-    38.3
+    25.46,
+    -37.05,
+    6.95
    ]
   },
   {
@@ -239264,9 +245079,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.05,
-    -2.43,
-    38.47
+    26.57,
+    -36.38,
+    6.29
    ]
   },
   {
@@ -239322,9 +245137,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.98,
-    -3.29,
-    38.97
+    25.63,
+    -37.17,
+    5.51
    ]
   },
   {
@@ -239382,9 +245197,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.96,
-    1.15,
-    19.87
+    -12.89,
+    -27.81,
+    21.74
    ]
   },
   {
@@ -239442,9 +245257,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.49,
-    -0.0,
-    19.08
+    -13.99,
+    -28.25,
+    20.45
    ]
   },
   {
@@ -239502,9 +245317,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.76,
-    1.4,
-    18.59
+    -14.89,
+    -27.3,
+    21.1
    ]
   },
   {
@@ -239561,9 +245376,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.36,
-    -8.12,
-    32.89
+    2.99,
+    -46.74,
+    -4.5
    ],
    "comb": {
     "b": 0.372,
@@ -239629,9 +245444,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.94,
-    -10.15,
-    33.02
+    -3.67,
+    -48.45,
+    -1.4
    ],
    "comb": {
     "b": 0.46,
@@ -239689,9 +245504,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.76,
-    7.64,
-    -26.71
+    -26.5,
+    14.67,
+    -41.9
    ],
    "comb": {
     "b": 0.358,
@@ -239759,9 +245574,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.04,
-    7.93,
-    -38.09
+    -12.08,
+    15.18,
+    -49.58
    ],
    "comb": {
     "b": 0.32,
@@ -239828,9 +245643,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.69,
-    5.98,
-    -19.43
+    -31.15,
+    9.15,
+    -34.06
    ],
    "comb": {
     "b": 0.519,
@@ -239903,9 +245718,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -40.76,
-    2.48,
-    -11.19
+    -25.41,
+    1.19,
+    -35.8
    ],
    "comb": {
     "b": 0.479,
@@ -239964,9 +245779,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.21,
-    5.17,
-    -28.32
+    -22.21,
+    11.27,
+    -41.74
    ]
   },
   {
@@ -240022,9 +245837,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.89,
-    5.15,
-    -41.87
+    -5.43,
+    10.13,
+    -51.99
    ]
   },
   {
@@ -240081,9 +245896,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.68,
-    1.45,
-    -35.37
+    -16.89,
+    3.9,
+    -50.34
    ],
    "comb": {
     "b": 0.246,
@@ -240148,9 +245963,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.59,
-    7.77,
-    -40.47
+    -9.54,
+    14.26,
+    -48.77
    ]
   },
   {
@@ -240208,9 +246023,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.15,
-    6.73,
-    -42.16
+    -6.11,
+    12.31,
+    -51.44
    ],
    "comb": {
     "b": 0.232,
@@ -240268,9 +246083,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.24,
-    -14.46,
-    -30.4
+    -28.09,
+    -11.51,
+    -43.74
    ],
    "comb": {
     "b": 0.359,
@@ -240328,9 +246143,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.0,
-    0.28,
-    -27.61
+    -22.5,
+    5.87,
+    -44.44
    ],
    "comb": {
     "b": 0.17,
@@ -240396,9 +246211,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.46,
-    -12.08,
-    -34.6
+    -24.98,
+    -8.13,
+    -46.31
    ]
   },
   {
@@ -240456,9 +246271,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.41,
-    -0.24,
-    -33.46
+    -29.66,
+    5.2,
+    -43.91
    ],
    "comb": {
     "b": 0.44,
@@ -240518,9 +246333,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.73,
-    -0.58,
-    -20.93
+    -12.3,
+    4.06,
+    -30.06
    ]
   },
   {
@@ -240571,9 +246386,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.31,
-    -0.22,
-    -36.97
+    -18.19,
+    6.09,
+    -51.31
    ],
    "comb": {
     "b": 0.321,
@@ -240631,9 +246446,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.99,
-    9.62,
-    -27.68
+    -12.22,
+    16.15,
+    -35.38
    ]
   },
   {
@@ -240690,9 +246505,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.91,
-    9.41,
-    -42.31
+    -10.69,
+    15.74,
+    -51.37
    ],
    "comb": {
     "b": 0.237,
@@ -240751,9 +246566,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.44,
-    4.17,
-    -29.46
+    -26.04,
+    8.02,
+    -42.11
    ],
    "comb": {
     "b": 0.48,
@@ -240812,9 +246627,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.24,
-    12.34,
-    43.58
+    45.31,
+    -8.26,
+    9.62
    ],
    "comb": {
     "b": 0.229,
@@ -240872,9 +246687,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.41,
-    -0.76,
-    43.28
+    38.4,
+    -24.37,
+    -0.72
    ],
    "comb": {
     "b": 0.166,
@@ -240931,9 +246746,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.64,
-    2.22,
-    44.6
+    40.84,
+    -21.45,
+    9.23
    ]
   },
   {
@@ -240982,9 +246797,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.78,
-    16.0,
-    36.33
+    9.16,
+    -1.52,
+    44.53
    ],
    "comb": {
     "b": 0.321,
@@ -241042,9 +246857,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.89,
-    21.96,
-    28.05
+    -5.02,
+    12.4,
+    41.83
    ]
   },
   {
@@ -241093,9 +246908,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.61,
-    -16.19,
-    4.49
+    -20.04,
+    -32.52,
+    -32.5
    ],
    "comb": {
     "b": 0.461,
@@ -241156,9 +246971,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -44.64,
-    -21.24,
-    -15.14
+    -38.33,
+    -22.3,
+    -29.46
    ]
   },
   {
@@ -241206,9 +247021,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.03,
-    -23.73,
-    -16.4
+    -36.1,
+    -22.64,
+    -29.28
    ]
   },
   {
@@ -241258,9 +247073,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.88,
-    -7.81,
-    42.81
+    38.24,
+    -16.01,
+    25.38
    ],
    "comb": {
     "b": 0.458,
@@ -241325,9 +247140,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    23.07,
-    -20.21,
-    29.2
+    31.35,
+    -22.33,
+    21.15
    ],
    "comb": {
     "b": 0.344,
@@ -241386,9 +247201,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    21.42,
-    -20.46,
-    30.25
+    28.8,
+    -20.98,
+    25.68
    ],
    "comb": {
     "b": 0.497,
@@ -241448,9 +247263,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.74,
-    -20.74,
-    36.33
+    37.76,
+    -25.16,
+    21.38
    ],
    "comb": {
     "b": 0.537,
@@ -241509,9 +247324,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.12,
-    -21.14,
-    30.0
+    32.37,
+    -23.19,
+    22.0
    ],
    "comb": {
     "b": 0.423,
@@ -241569,9 +247384,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.39,
-    -15.42,
-    38.15
+    35.73,
+    -24.03,
+    18.96
    ],
    "comb": {
     "b": 0.461,
@@ -241635,9 +247450,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.46,
-    -15.42,
-    42.95
+    34.77,
+    -27.75,
+    19.58
    ],
    "comb": {
     "b": 0.664,
@@ -241703,9 +247518,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    15.54,
-    -11.11,
-    41.28
+    34.48,
+    -18.85,
+    25.88
    ],
    "comb": {
     "b": 0.493,
@@ -241765,9 +247580,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.14,
-    -24.63,
-    40.6
+    30.66,
+    -28.29,
+    30.53
    ],
    "comb": {
     "b": 0.572,
@@ -241827,9 +247642,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.54,
-    -6.16,
-    45.29
+    39.14,
+    -12.71,
+    28.68
    ],
    "comb": {
     "b": 0.326,
@@ -241895,9 +247710,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.67,
-    4.43,
-    -25.24
+    -19.35,
+    9.16,
+    -40.13
    ]
   },
   {
@@ -241946,9 +247761,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.82,
-    7.93,
-    -26.89
+    -15.18,
+    13.78,
+    -42.35
    ]
   },
   {
@@ -241997,9 +247812,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.51,
-    9.06,
-    -24.12
+    -12.03,
+    14.82,
+    -36.01
    ],
    "comb": {
     "b": 0.328,
@@ -242058,9 +247873,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.51,
-    6.11,
-    -29.0
+    -17.22,
+    12.61,
+    -41.93
    ]
   },
   {
@@ -242120,9 +247935,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.56,
-    -12.7,
-    -27.85
+    -36.04,
+    -11.98,
+    -39.47
    ],
    "comb": {
     "b": 0.313,
@@ -242198,9 +248013,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.21,
-    -14.72,
-    47.95
+    19.51,
+    -17.1,
+    44.72
    ],
    "comb": {
     "b": 0.566,
@@ -242266,9 +248081,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.12,
-    -24.61,
-    36.36
+    0.62,
+    -18.45,
+    41.57
    ]
   },
   {
@@ -242334,9 +248149,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.48,
-    -29.16,
-    36.92
+    1.82,
+    -21.43,
+    43.59
    ],
    "comb": {
     "b": 0.269,
@@ -242402,9 +248217,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.47,
-    -27.76,
-    33.59
+    14.66,
+    -27.56,
+    33.09
    ]
   },
   {
@@ -242462,9 +248277,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.25,
-    -20.96,
-    47.21
+    12.08,
+    -20.59,
+    47.59
    ],
    "comb": {
     "b": 0.552,
@@ -242529,12 +248344,12 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -34.36,
-    -35.29,
-    -9.47
+    -42.93,
+    -28.58,
+    -3.66
    ],
    "comb": {
-    "b": 0.47,
+    "b": 0.481,
     "r": 0.0,
     "rg": [
      "data",
@@ -242599,9 +248414,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.66,
-    -42.65,
-    2.11
+    -29.51,
+    -34.66,
+    11.9
    ],
    "comb": {
     "b": 0.394,
@@ -242676,9 +248491,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.35,
-    -36.06,
-    18.09
+    -15.22,
+    -35.66,
+    23.78
    ],
    "comb": {
     "b": 0.58,
@@ -242748,9 +248563,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.77,
-    -37.62,
-    11.09
+    -24.22,
+    -30.84,
+    23.05
    ]
   },
   {
@@ -242808,9 +248623,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.3,
-    -39.17,
-    19.35
+    -19.81,
+    -35.55,
+    29.31
    ],
    "comb": {
     "b": 0.359,
@@ -242877,9 +248692,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.67,
-    -25.2,
-    -0.15
+    -30.05,
+    -16.76,
+    10.5
    ],
    "comb": {
     "b": 0.502,
@@ -242948,9 +248763,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.93,
-    -40.84,
-    17.7
+    -35.68,
+    -30.31,
+    31.29
    ],
    "comb": {
     "b": 0.449,
@@ -243017,9 +248832,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.2,
-    -38.09,
-    8.96
+    -27.99,
+    -31.53,
+    20.88
    ]
   },
   {
@@ -243077,12 +248892,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.74,
-    -31.7,
-    -3.12
+    -44.46,
+    -25.9,
+    5.03
    ],
    "comb": {
-    "b": 0.464,
+    "b": 0.474,
     "r": 0.0,
     "rg": [
      "data",
@@ -243145,9 +248960,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.79,
-    -42.36,
-    5.02
+    -22.67,
+    -37.66,
+    16.79
    ]
   },
   {
@@ -243196,9 +249011,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.78,
-    -7.69,
-    39.62
+    24.37,
+    -38.62,
+    24.24
    ],
    "comb": {
     "b": 0.349,
@@ -243255,9 +249070,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.7,
-    -12.01,
-    40.57
+    19.74,
+    -42.62,
+    2.73
    ]
   },
   {
@@ -243307,9 +249122,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.95,
-    -17.87,
-    38.67
+    17.86,
+    -36.34,
+    23.95
    ],
    "comb": {
     "b": 0.395,
@@ -243367,9 +249182,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.02,
-    -0.11,
-    40.18
+    30.16,
+    -31.02,
+    28.3
    ],
    "comb": {
     "b": 0.355,
@@ -243427,9 +249242,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.0,
-    -11.1,
-    22.46
+    -11.24,
+    -36.77,
+    7.51
    ],
    "comb": {
     "b": 0.462,
@@ -243487,12 +249302,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.8,
-    -17.9,
-    -21.16
+    -38.32,
+    -13.68,
+    -31.9
    ],
    "comb": {
-    "b": 0.299,
+    "b": 0.313,
     "r": 0.0,
     "rg": [
      "data",
@@ -243546,9 +249361,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.23,
-    10.9,
-    -27.57
+    -17.75,
+    16.26,
+    -36.73
    ]
   },
   {
@@ -243597,9 +249412,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.45,
-    -4.71,
-    39.58
+    26.6,
+    -33.43,
+    15.62
    ],
    "comb": {
     "b": 0.233,
@@ -243657,9 +249472,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.69,
-    -22.01,
-    36.59
+    7.09,
+    -24.32,
+    39.65
    ]
   },
   {
@@ -243709,9 +249524,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.6,
-    8.28,
-    -25.63
+    -14.28,
+    12.25,
+    -37.94
    ],
    "comb": {
     "b": 0.348,
@@ -243768,9 +249583,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.9,
-    9.94,
-    -33.73
+    -21.68,
+    17.79,
+    -45.26
    ]
   },
   {
@@ -243820,9 +249635,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.6,
-    11.02,
-    -23.29
+    -20.1,
+    14.54,
+    -36.24
    ],
    "comb": {
     "b": 0.442,
@@ -243878,9 +249693,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.12,
-    -7.9,
-    45.03
+    37.51,
+    -13.79,
+    27.67
    ],
    "comb": {
     "b": 0.428,
@@ -243931,9 +249746,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.56,
-    -8.41,
-    49.32
+    37.63,
+    -15.49,
+    31.89
    ],
    "comb": {
     "b": 0.362,
@@ -243987,9 +249802,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.86,
-    -7.97,
-    49.28
+    37.49,
+    -14.34,
+    32.59
    ],
    "comb": {
     "b": 0.362,
@@ -244039,9 +249854,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.73,
-    -7.78,
-    50.79
+    39.8,
+    -15.01,
+    32.02
    ],
    "comb": {
     "b": 0.316,
@@ -244092,9 +249907,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.58,
-    -42.83,
-    10.2
+    -23.2,
+    -35.55,
+    23.68
    ],
    "comb": {
     "b": 0.454,
@@ -244149,9 +249964,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.67,
-    -44.27,
-    2.88
+    -25.34,
+    -37.86,
+    16.94
    ],
    "comb": {
     "b": 0.25,
@@ -244205,9 +250020,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.51,
-    5.33,
-    -26.5
+    -20.61,
+    10.36,
+    -42.78
    ]
   },
   {
@@ -244252,9 +250067,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.66,
-    6.59,
-    -25.99
+    -20.7,
+    11.66,
+    -42.4
    ]
   },
   {
@@ -244310,9 +250125,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.12,
-    -41.44,
-    -8.03
+    -35.98,
+    -26.53,
+    8.41
    ]
   },
   {
@@ -244361,9 +250176,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.53,
-    -40.73,
-    -5.39
+    -35.82,
+    -25.43,
+    11.79
    ],
    "comb": {
     "b": 0.339,
@@ -244429,9 +250244,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.2,
-    -44.85,
-    0.65
+    -30.98,
+    -35.25,
+    12.66
    ],
    "comb": {
     "b": 0.276,
@@ -244493,9 +250308,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.03,
-    -45.96,
-    -1.05
+    -32.63,
+    -32.69,
+    15.12
    ],
    "comb": {
     "b": 0.435,
@@ -244557,9 +250372,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.3,
-    -43.96,
-    -6.86
+    -37.21,
+    -29.73,
+    9.68
    ],
    "comb": {
     "b": 0.152,
@@ -244617,9 +250432,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.67,
-    -42.98,
-    -5.92
+    -35.03,
+    -29.42,
+    11.0
    ]
   },
   {
@@ -244669,9 +250484,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.42,
-    -44.36,
-    -2.87
+    -34.91,
+    -31.24,
+    12.95
    ],
    "comb": {
     "b": 0.494,
@@ -244740,9 +250555,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.47,
-    -48.71,
-    0.98
+    -39.67,
+    -33.97,
+    16.51
    ],
    "comb": {
     "b": 0.483,
@@ -244812,12 +250627,12 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -29.2,
-    -39.61,
-    -9.7
+    -43.4,
+    -27.64,
+    -5.06
    ],
    "comb": {
-    "b": 0.371,
+    "b": 0.384,
     "r": 0.0,
     "rg": [
      "data",
@@ -244872,9 +250687,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.36,
-    -23.59,
-    -4.43
+    -23.51,
+    -14.85,
+    0.31
    ]
   },
   {
@@ -244933,9 +250748,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.33,
-    -37.2,
-    17.64
+    -20.31,
+    -40.08,
+    13.96
    ],
    "comb": {
     "b": 0.569,
@@ -244994,9 +250809,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.59,
-    -45.26,
-    -10.7
+    -42.81,
+    -31.59,
+    -1.91
    ],
    "comb": {
     "b": 0.367,
@@ -245063,9 +250878,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -33.66,
-    -32.82,
-    -12.37
+    -44.75,
+    -22.47,
+    -2.79
    ],
    "comb": {
     "b": 0.51,
@@ -245128,9 +250943,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.92,
-    -35.64,
-    -23.95
+    -44.73,
+    -25.03,
+    -6.78
    ],
    "comb": {
     "b": 0.452,
@@ -245197,12 +251012,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.25,
-    -15.51,
-    -39.83
+    -26.04,
+    -20.78,
+    -39.54
    ],
    "comb": {
-    "b": 0.434,
+    "b": 0.444,
     "r": 0.0,
     "rg": [
      "data",
@@ -245266,9 +251081,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.58,
-    -20.31,
-    -25.17
+    -17.68,
+    -26.49,
+    -16.72
    ],
    "comb": {
     "b": 0.476,
@@ -245334,9 +251149,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.78,
-    -3.27,
-    -35.35
+    -14.58,
+    -11.4,
+    -32.7
    ],
    "comb": {
     "b": 0.494,
@@ -245407,9 +251222,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -15.26,
-    -11.37,
-    -32.4
+    -18.85,
+    -17.72,
+    -29.41
    ],
    "comb": {
     "b": 0.388,
@@ -245483,9 +251298,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.74,
-    -11.69,
-    -35.07
+    -11.32,
+    -19.74,
+    -31.88
    ]
   },
   {
@@ -245542,9 +251357,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.04,
-    -16.51,
-    -48.83
+    -7.83,
+    -27.14,
+    -45.13
    ],
    "comb": {
     "b": 0.276,
@@ -245610,9 +251425,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.95,
-    -30.38,
-    -33.49
+    -13.29,
+    -37.8,
+    -24.67
    ],
    "comb": {
     "b": 0.419,
@@ -245669,9 +251484,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.87,
-    -31.24,
-    18.36
+    -16.91,
+    -20.46,
+    28.81
    ]
   },
   {
@@ -245720,9 +251535,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.12,
-    -45.18,
-    23.39
+    -28.83,
+    -31.86,
+    38.7
    ],
    "comb": {
     "b": 0.276,
@@ -245780,9 +251595,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.31,
-    -31.59,
-    22.54
+    -5.44,
+    -24.24,
+    30.28
    ],
    "comb": {
     "b": 0.43,
@@ -245841,9 +251656,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.99,
-    -40.14,
-    7.62
+    -28.16,
+    -30.66,
+    21.93
    ],
    "comb": {
     "b": 0.497,
@@ -245902,9 +251717,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.98,
-    -38.57,
-    6.5
+    -28.88,
+    -28.58,
+    20.44
    ],
    "comb": {
     "b": 0.303,
@@ -245971,9 +251786,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.8,
-    -43.61,
-    17.2
+    -26.86,
+    -34.06,
+    30.87
    ],
    "comb": {
     "b": 0.369,
@@ -246041,9 +251856,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.13,
-    -33.74,
-    18.05
+    -16.82,
+    -33.57,
+    22.78
    ],
    "comb": {
     "b": 0.605,
@@ -246105,9 +251920,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.95,
-    -37.74,
-    12.05
+    -21.53,
+    -29.09,
+    24.87
    ],
    "comb": {
     "b": 0.268,
@@ -246165,9 +251980,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.95,
-    -29.0,
-    7.38
+    -24.66,
+    -18.46,
+    18.57
    ],
    "comb": {
     "b": 0.039,
@@ -246234,9 +252049,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.01,
-    -35.28,
-    10.33
+    -26.82,
+    -25.54,
+    23.61
    ],
    "comb": {
     "b": 0.394,
@@ -246303,9 +252118,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.84,
-    -36.94,
-    22.0
+    -17.19,
+    -27.95,
+    33.72
    ],
    "comb": {
     "b": 0.372,
@@ -246363,9 +252178,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.25,
-    -39.65,
-    27.7
+    -17.11,
+    -31.37,
+    39.47
    ],
    "comb": {
     "b": 0.39,
@@ -246424,9 +252239,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.62,
-    -48.78,
-    7.08
+    -32.52,
+    -37.38,
+    19.5
    ],
    "comb": {
     "b": 0.038,
@@ -246494,9 +252309,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.51,
-    -39.77,
-    14.45
+    -10.91,
+    -39.57,
+    15.63
    ],
    "comb": {
     "b": 0.577,
@@ -246568,9 +252383,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.7,
-    -50.71,
-    0.46
+    -36.7,
+    -42.11,
+    7.1
    ],
    "comb": {
     "b": 0.56,
@@ -246639,9 +252454,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.2,
-    -46.43,
-    22.74
+    -10.38,
+    -42.5,
+    30.34
    ],
    "comb": {
     "b": 0.591,
@@ -246702,9 +252517,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.59,
-    -45.17,
-    -5.33
+    -22.73,
+    -40.92,
+    4.71
    ],
    "comb": {
     "b": 0.499,
@@ -246773,9 +252588,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.97,
-    -40.97,
-    14.66
+    -17.85,
+    -35.89,
+    21.51
    ],
    "comb": {
     "b": 0.558,
@@ -246840,9 +252655,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.94,
-    -14.59,
-    41.09
+    17.08,
+    -39.11,
+    19.8
    ],
    "comb": {
     "b": 0.374,
@@ -246906,13 +252721,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.94,
-    -29.21,
-    38.74
+    22.93,
+    -39.8,
+    20.16
    ],
    "comb": {
     "b": 0.618,
-    "r": 1.22,
+    "r": 1.21,
     "rg": [
      "bibun-hoteishiki",
      "chikyu",
@@ -246980,12 +252795,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.77,
-    -19.82,
-    -17.15
+    -39.21,
+    -18.65,
+    -28.07
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.296,
     "r": 0.0,
     "rg": [
      "data",
@@ -247048,12 +252863,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.27,
-    -13.13,
-    -44.26
+    -24.65,
+    -19.45,
+    -43.0
    ],
    "comb": {
-    "b": 0.186,
+    "b": 0.208,
     "r": 0.0,
     "rg": [
      "data",
@@ -247125,9 +252940,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.14,
-    -23.43,
-    -42.78
+    -17.42,
+    -32.73,
+    -38.21
    ],
    "comb": {
     "b": 0.316,
@@ -247186,9 +253001,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.36,
-    3.56,
-    3.44
+    -27.64,
+    1.89,
+    14.14
    ]
   },
   {
@@ -247238,9 +253053,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.78,
-    -11.05,
-    25.5
+    5.78,
+    -15.78,
+    26.17
    ],
    "comb": {
     "b": 0.455,
@@ -247313,9 +253128,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.1,
-    23.75,
-    -20.61
+    -13.44,
+    29.93,
+    14.75
    ]
   },
   {
@@ -247379,9 +253194,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.11,
-    26.6,
-    -15.28
+    -7.86,
+    31.28,
+    11.83
    ]
   },
   {
@@ -247445,9 +253260,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.47,
-    24.61,
-    -22.42
+    -13.51,
+    31.37,
+    15.66
    ]
   },
   {
@@ -247514,9 +253329,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.43,
-    31.71,
-    -12.46
+    -14.31,
+    34.65,
+    2.52
    ],
    "comb": {
     "b": 0.496,
@@ -247590,9 +253405,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.7,
-    26.42,
-    -15.99
+    -15.16,
+    30.5,
+    4.51
    ]
   },
   {
@@ -247656,9 +253471,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.07,
-    25.87,
-    -17.23
+    -13.77,
+    31.29,
+    3.35
    ]
   },
   {
@@ -247722,9 +253537,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.15,
-    13.31,
-    34.98
+    41.05,
+    -5.45,
+    -8.86
    ]
   },
   {
@@ -247789,9 +253604,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    13.23,
-    13.67,
-    37.83
+    43.26,
+    -5.16,
+    -5.53
    ]
   },
   {
@@ -247857,9 +253672,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.1,
-    16.7,
-    35.85
+    43.48,
+    -0.98,
+    -13.33
    ],
    "comb": {
     "b": 0.294,
@@ -247934,9 +253749,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.05,
-    16.73,
-    36.37
+    43.8,
+    -1.16,
+    -12.22
    ],
    "comb": {
     "b": 0.294,
@@ -248009,9 +253824,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.1,
-    16.13,
-    38.34
+    44.61,
+    -1.6,
+    -8.75
    ]
   },
   {
@@ -248077,9 +253892,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.29,
-    13.09,
-    37.22
+    43.3,
+    -6.73,
+    -12.21
    ],
    "comb": {
     "b": 0.294,
@@ -248155,9 +253970,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    21.53,
-    15.66,
-    38.79
+    44.3,
+    -4.12,
+    -19.57
    ],
    "comb": {
     "b": 0.381,
@@ -248231,9 +254046,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.78,
-    19.06,
-    38.47
+    44.79,
+    -2.43,
+    -22.44
    ]
   },
   {
@@ -248297,9 +254112,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.5,
-    15.65,
-    38.3
+    45.41,
+    -5.26,
+    -20.64
    ]
   },
   {
@@ -248365,9 +254180,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.5,
-    17.87,
-    37.52
+    42.86,
+    -1.99,
+    -19.31
    ],
    "comb": {
     "b": 0.29,
@@ -248442,9 +254257,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    21.65,
-    15.78,
-    36.76
+    44.2,
+    -3.27,
+    -15.78
    ],
    "comb": {
     "b": 0.29,
@@ -248519,13 +254334,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.63,
-    28.66,
-    34.69
+    42.08,
+    18.35,
+    10.3
    ],
    "comb": {
     "b": 0.574,
-    "r": 1.54,
+    "r": 1.53,
     "rg": [
      "fukuso",
      "senkei-keisan",
@@ -248600,9 +254415,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.67,
-    19.1,
-    39.88
+    47.04,
+    0.94,
+    0.6
    ]
   },
   {
@@ -248668,9 +254483,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.97,
-    17.21,
-    40.65
+    47.02,
+    -0.5,
+    1.68
    ]
   },
   {
@@ -248739,9 +254554,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.27,
-    10.64,
-    45.08
+    46.94,
+    -11.91,
+    4.1
    ],
    "comb": {
     "b": 0.249,
@@ -248814,9 +254629,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.5,
-    9.34,
-    39.51
+    42.39,
+    -10.52,
+    -17.49
    ]
   },
   {
@@ -248880,9 +254695,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.07,
-    25.57,
-    23.74
+    -5.13,
+    19.42,
+    37.27
    ]
   },
   {
@@ -248947,9 +254762,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.81,
-    23.37,
-    30.49
+    3.32,
+    14.29,
+    41.39
    ]
   },
   {
@@ -249014,9 +254829,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.88,
-    21.64,
-    29.08
+    -2.28,
+    12.77,
+    41.96
    ],
    "comb": {
     "b": 0.351,
@@ -249091,9 +254906,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.36,
-    23.23,
-    27.45
+    -5.21,
+    13.88,
+    41.34
    ],
    "comb": {
     "b": 0.349,
@@ -249166,9 +254981,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.2,
-    23.92,
-    -9.95
+    11.96,
+    30.57,
+    -10.12
    ]
   },
   {
@@ -249232,9 +255047,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    21.89,
-    19.91,
-    -14.0
+    13.31,
+    28.39,
+    -17.64
    ]
   },
   {
@@ -249298,9 +255113,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.23,
-    18.78,
-    -11.47
+    16.22,
+    28.37,
+    -15.02
    ]
   },
   {
@@ -249364,9 +255179,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.77,
-    16.05,
-    -16.08
+    16.08,
+    25.99,
+    -21.86
    ]
   },
   {
@@ -249431,9 +255246,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.53,
-    31.54,
-    3.86
+    25.45,
+    33.79,
+    -1.85
    ],
    "comb": {
     "b": 0.396,
@@ -249509,9 +255324,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    30.39,
-    23.44,
-    27.22
+    45.0,
+    14.3,
+    -11.55
    ],
    "comb": {
     "b": 0.381,
@@ -249585,9 +255400,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.3,
-    30.71,
-    10.08
+    36.98,
+    33.29,
+    -6.3
    ]
   },
   {
@@ -249651,9 +255466,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.22,
-    29.56,
-    10.18
+    37.63,
+    32.27,
+    -7.59
    ]
   },
   {
@@ -249717,9 +255532,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.74,
-    27.15,
-    14.18
+    40.54,
+    28.71,
+    -6.94
    ]
   },
   {
@@ -249788,9 +255603,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.47,
-    27.3,
-    35.13
+    39.29,
+    20.51,
+    15.79
    ],
    "comb": {
     "b": 0.533,
@@ -249866,9 +255681,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    23.91,
-    17.42,
-    32.46
+    44.17,
+    9.4,
+    5.49
    ]
   },
   {
@@ -249933,9 +255748,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.7,
-    21.09,
-    33.68
+    39.26,
+    15.2,
+    17.22
    ],
    "comb": {
     "b": 0.316,
@@ -250008,9 +255823,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.35,
-    17.12,
-    21.31
+    42.05,
+    20.42,
+    5.33
    ]
   },
   {
@@ -250077,9 +255892,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.33,
-    9.28,
-    44.95
+    28.31,
+    -12.17,
+    -37.59
    ],
    "comb": {
     "b": 0.381,
@@ -250153,9 +255968,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.58,
-    -9.9,
-    9.73
+    -16.71,
+    -14.56,
+    -44.99
    ]
   },
   {
@@ -250219,9 +256034,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.7,
-    -3.69,
-    12.96
+    -25.21,
+    -10.15,
+    -42.15
    ]
   },
   {
@@ -250285,9 +256100,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.87,
-    -20.86,
-    -1.68
+    -39.71,
+    -24.17,
+    -18.84
    ]
   },
   {
@@ -250351,9 +256166,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.62,
-    -20.35,
-    -4.52
+    -42.3,
+    -18.58,
+    -23.21
    ]
   },
   {
@@ -250419,9 +256234,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.36,
-    -13.3,
-    -0.01
+    -36.94,
+    -14.0,
+    -33.35
    ],
    "comb": {
     "b": 0.278,
@@ -250494,9 +256309,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.67,
-    -17.01,
-    -3.85
+    -41.66,
+    -15.43,
+    -29.35
    ]
   },
   {
@@ -250560,9 +256375,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.18,
-    -18.38,
-    -3.73
+    -42.38,
+    -14.24,
+    -28.91
    ]
   },
   {
@@ -250626,9 +256441,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.3,
-    -17.75,
-    -5.04
+    -41.56,
+    -14.19,
+    -30.11
    ]
   },
   {
@@ -250694,9 +256509,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.82,
-    -17.86,
-    -5.82
+    -43.04,
+    -14.21,
+    -30.75
    ]
   },
   {
@@ -250760,9 +256575,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.72,
-    -16.57,
-    -7.14
+    -42.08,
+    -12.91,
+    -35.11
    ]
   },
   {
@@ -250826,9 +256641,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.9,
-    -16.01,
-    -5.07
+    -40.84,
+    -13.43,
+    -31.41
    ]
   },
   {
@@ -250895,9 +256710,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.45,
-    9.02,
-    28.3
+    -18.49,
+    -7.87,
+    42.54
    ],
    "comb": {
     "b": 0.382,
@@ -250971,9 +256786,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.67,
-    8.6,
-    25.39
+    -24.17,
+    -1.88,
+    42.13
    ]
   },
   {
@@ -251044,9 +256859,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -26.44,
-    12.85,
-    36.74
+    1.62,
+    -9.05,
+    47.73
    ],
    "comb": {
     "b": 0.324,
@@ -251120,9 +256935,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.69,
-    11.54,
-    16.05
+    -35.63,
+    4.23,
+    32.79
    ]
   },
   {
@@ -251186,9 +257001,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.9,
-    7.78,
-    19.36
+    -36.79,
+    -0.64,
+    34.08
    ]
   },
   {
@@ -251252,9 +257067,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.08,
-    5.08,
-    3.32
+    -35.35,
+    3.13,
+    16.58
    ]
   },
   {
@@ -251318,9 +257133,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.12,
-    3.97,
-    4.23
+    -35.22,
+    1.77,
+    17.06
    ]
   },
   {
@@ -251388,9 +257203,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.18,
-    19.1,
-    -3.37
+    -33.39,
+    16.83,
+    11.68
    ],
    "comb": {
     "b": 0.332,
@@ -251470,9 +257285,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.77,
-    19.91,
-    -2.51
+    -32.72,
+    17.58,
+    12.44
    ],
    "comb": {
     "b": 0.406,
@@ -251551,9 +257366,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.41,
-    20.28,
-    -3.7
+    -32.87,
+    18.09,
+    11.26
    ],
    "comb": {
     "b": 0.332,
@@ -251633,9 +257448,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.73,
-    21.26,
-    -3.37
+    -33.97,
+    18.94,
+    12.19
    ],
    "comb": {
     "b": 0.405,
@@ -251711,9 +257526,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.99,
-    10.44,
-    2.73
+    -34.59,
+    7.59,
+    16.74
    ]
   },
   {
@@ -251778,9 +257593,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.69,
-    12.42,
-    7.96
+    -35.64,
+    7.67,
+    24.49
    ],
    "comb": {
     "b": 0.311,
@@ -251857,9 +257672,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.58,
-    11.04,
-    4.93
+    -33.96,
+    7.08,
+    18.2
    ],
    "comb": {
     "b": 0.28,
@@ -251935,9 +257750,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.5,
-    5.91,
-    6.7
+    -33.83,
+    2.38,
+    19.61
    ]
   },
   {
@@ -252004,9 +257819,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.54,
-    6.64,
-    5.72
+    -34.34,
+    1.72,
+    18.76
    ]
   },
   {
@@ -252072,9 +257887,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.73,
-    9.6,
-    4.28
+    -36.26,
+    6.93,
+    17.28
    ]
   },
   {
@@ -252140,9 +257955,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.15,
-    7.41,
-    4.89
+    -35.96,
+    3.89,
+    18.79
    ]
   },
   {
@@ -252208,9 +258023,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.42,
-    6.29,
-    4.28
+    -36.55,
+    3.63,
+    17.66
    ]
   },
   {
@@ -252274,9 +258089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.38,
-    9.22,
-    1.75
+    -34.94,
+    8.42,
+    15.57
    ]
   },
   {
@@ -252341,9 +258156,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.87,
-    5.39,
-    4.84
+    -34.7,
+    2.9,
+    17.94
    ]
   },
   {
@@ -252407,9 +258222,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.12,
-    6.59,
-    2.89
+    -38.53,
+    5.02,
+    16.82
    ]
   },
   {
@@ -252478,9 +258293,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.47,
-    18.52,
-    -1.84
+    -34.91,
+    16.07,
+    13.57
    ],
    "comb": {
     "b": 0.408,
@@ -252559,9 +258374,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.97,
-    21.27,
-    -0.53
+    -31.29,
+    18.83,
+    14.17
    ],
    "comb": {
     "b": 0.35,
@@ -252637,9 +258452,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.43,
-    25.37,
-    -1.93
+    -27.06,
+    24.41,
+    14.35
    ]
   },
   {
@@ -252708,9 +258523,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.03,
-    20.78,
-    1.55
+    -36.93,
+    19.78,
+    6.17
    ],
    "comb": {
     "b": 0.498,
@@ -252785,9 +258600,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.91,
-    8.43,
-    8.72
+    -35.19,
+    6.23,
+    22.71
    ]
   },
   {
@@ -252854,9 +258669,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.24,
-    8.15,
-    10.36
+    -36.26,
+    2.88,
+    24.61
    ],
    "comb": {
     "b": 0.238,
@@ -252932,9 +258747,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.08,
-    10.96,
-    8.13
+    -36.95,
+    5.2,
+    23.17
    ],
    "comb": {
     "b": 0.238,
@@ -253009,9 +258824,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.52,
-    11.15,
-    4.15
+    -45.63,
+    3.12,
+    16.46
    ],
    "comb": {
     "b": 0.213,
@@ -253086,9 +258901,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.8,
-    9.88,
-    4.24
+    -45.16,
+    3.26,
+    17.68
    ],
    "comb": {
     "b": 0.213,
@@ -253161,9 +258976,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.06,
-    10.48,
-    1.27
+    -35.55,
+    7.58,
+    14.61
    ]
   },
   {
@@ -253227,9 +259042,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.19,
-    9.28,
-    4.04
+    -34.3,
+    4.81,
+    18.29
    ]
   },
   {
@@ -253298,9 +259113,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.89,
-    3.15,
-    4.12
+    -50.02,
+    -5.99,
+    11.61
    ],
    "comb": {
     "b": 0.345,
@@ -253377,9 +259192,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.56,
-    -4.76,
-    -6.09
+    -51.52,
+    -4.37,
+    -0.27
    ]
   },
   {
@@ -253444,9 +259259,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.45,
-    6.34,
-    -5.49
+    -51.18,
+    6.71,
+    2.9
    ],
    "comb": {
     "b": 0.399,
@@ -253520,9 +259335,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.98,
-    14.72,
-    2.33
+    -41.02,
+    12.3,
+    19.48
    ]
   },
   {
@@ -253587,9 +259402,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.72,
-    1.02,
-    -6.55
+    -51.4,
+    -0.46,
+    -5.55
    ],
    "comb": {
     "b": 0.316,
@@ -253662,9 +259477,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.55,
-    3.61,
-    -6.86
+    -51.59,
+    3.4,
+    0.16
    ]
   },
   {
@@ -253729,9 +259544,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.19,
-    5.75,
-    12.04
+    -34.11,
+    -0.4,
+    27.66
    ],
    "comb": {
     "b": 0.329,
@@ -253805,9 +259620,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.1,
-    4.62,
-    12.8
+    -32.74,
+    -0.09,
+    29.27
    ],
    "comb": {
     "b": 0.329,
@@ -253881,9 +259696,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.64,
-    4.98,
-    14.03
+    -33.51,
+    0.59,
+    28.38
    ],
    "comb": {
     "b": 0.329,
@@ -253957,9 +259772,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.74,
-    6.11,
-    13.27
+    -33.34,
+    -1.08,
+    28.56
    ],
    "comb": {
     "b": 0.329,
@@ -254034,9 +259849,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.07,
-    10.29,
-    19.65
+    -25.83,
+    1.24,
+    35.5
    ],
    "comb": {
     "b": 0.534,
@@ -254116,9 +259931,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.35,
-    6.88,
-    24.85
+    -26.49,
+    -6.25,
+    40.27
    ],
    "comb": {
     "b": 0.568,
@@ -254198,9 +260013,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.45,
-    10.49,
-    23.4
+    -27.39,
+    -0.69,
+    40.15
    ],
    "comb": {
     "b": 0.512,
@@ -254277,9 +260092,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.83,
-    3.7,
-    12.87
+    -35.3,
+    -0.65,
+    28.68
    ]
   },
   {
@@ -254349,9 +260164,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.62,
-    21.9,
-    5.84
+    -35.66,
+    16.64,
+    22.81
    ],
    "comb": {
     "b": 0.348,
@@ -254433,9 +260248,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.17,
-    22.96,
-    4.44
+    -35.5,
+    18.56,
+    21.55
    ],
    "comb": {
     "b": 0.348,
@@ -254517,9 +260332,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.62,
-    20.1,
-    5.73
+    -36.31,
+    15.23,
+    22.77
    ],
    "comb": {
     "b": 0.348,
@@ -254597,9 +260412,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.27,
-    4.77,
-    33.9
+    -2.01,
+    -19.88,
+    44.31
    ],
    "comb": {
     "b": 0.467,
@@ -254675,9 +260490,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.2,
-    3.65,
-    35.9
+    4.39,
+    -21.83,
+    43.21
    ],
    "comb": {
     "b": 0.467,
@@ -254753,9 +260568,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.3,
-    3.4,
-    34.04
+    -1.69,
+    -21.21,
+    43.7
    ],
    "comb": {
     "b": 0.467,
@@ -254833,9 +260648,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.68,
-    8.02,
-    6.54
+    -39.9,
+    2.57,
+    21.7
    ],
    "comb": {
     "b": 0.444,
@@ -254913,9 +260728,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.51,
-    8.56,
-    11.21
+    -41.12,
+    -0.3,
+    28.72
    ],
    "comb": {
     "b": 0.479,
@@ -254996,9 +260811,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -27.12,
-    -28.82,
-    25.44
+    -21.8,
+    -23.46,
+    36.56
    ],
    "comb": {
     "b": 0.581,
@@ -255074,9 +260889,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.35,
-    -34.73,
-    22.67
+    -23.5,
+    -27.85,
+    34.46
    ],
    "comb": {
     "b": 0.404,
@@ -255150,9 +260965,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.41,
-    -36.55,
-    19.3
+    -28.72,
+    -29.24,
+    31.51
    ]
   },
   {
@@ -255222,9 +261037,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.77,
-    -42.16,
-    18.35
+    -32.91,
+    -31.1,
+    33.47
    ]
   },
   {
@@ -255294,9 +261109,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.72,
-    -42.46,
-    19.29
+    -31.41,
+    -33.93,
+    32.14
    ]
   },
   {
@@ -255363,9 +261178,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.08,
-    -8.82,
-    12.15
+    -47.43,
+    -8.44,
+    26.08
    ],
    "comb": {
     "b": 0.4,
@@ -255442,9 +261257,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -52.14,
-    -4.27,
-    9.9
+    -48.93,
+    -6.05,
+    23.86
    ],
    "comb": {
     "b": 0.396,
@@ -255521,9 +261336,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.11,
-    -29.92,
-    15.81
+    -40.27,
+    -23.69,
+    28.59
    ],
    "comb": {
     "b": 0.551,
@@ -255600,9 +261415,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.52,
-    1.78,
-    6.83
+    -44.54,
+    -1.58,
+    19.39
    ],
    "comb": {
     "b": 0.422,
@@ -255680,9 +261495,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -53.8,
-    -0.95,
-    16.6
+    -46.71,
+    -3.33,
+    33.94
    ],
    "comb": {
     "b": 0.277,
@@ -255760,9 +261575,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.52,
-    -34.91,
-    17.26
+    -39.53,
+    -23.62,
+    32.4
    ]
   },
   {
@@ -255830,9 +261645,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.83,
-    -26.79,
-    19.0
+    -41.08,
+    -17.75,
+    34.17
    ]
   },
   {
@@ -255902,9 +261717,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.81,
-    -16.65,
-    33.37
+    -20.75,
+    -24.12,
+    42.69
    ],
    "comb": {
     "b": 0.596,
@@ -255986,9 +261801,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.87,
-    -14.17,
-    19.18
+    -39.71,
+    -11.0,
+    33.71
    ],
    "comb": {
     "b": 0.232,
@@ -256067,9 +261882,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -48.67,
-    -4.04,
-    16.97
+    -41.69,
+    -5.43,
+    32.66
    ],
    "comb": {
     "b": 0.439,
@@ -256153,9 +261968,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -12.71,
-    1.55,
-    45.27
+    24.94,
+    -11.57,
+    40.08
    ],
    "comb": {
     "b": 0.523,
@@ -256232,9 +262047,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.07,
-    -3.96,
-    46.87
+    35.22,
+    -18.21,
+    28.12
    ]
   },
   {
@@ -256299,9 +262114,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.61,
-    -1.32,
-    50.11
+    38.48,
+    -14.24,
+    31.46
    ],
    "comb": {
     "b": 0.279,
@@ -256377,9 +262192,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.06,
-    -0.0,
-    48.44
+    36.94,
+    -19.55,
+    27.73
    ],
    "comb": {
     "b": 0.206,
@@ -256455,9 +262270,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.09,
-    9.82,
-    49.14
+    45.27,
+    -4.04,
+    24.65
    ],
    "comb": {
     "b": 0.266,
@@ -256534,9 +262349,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.65,
-    7.74,
-    54.22
+    47.41,
+    -8.52,
+    29.16
    ],
    "comb": {
     "b": 0.318,
@@ -256610,9 +262425,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.06,
-    -5.97,
-    52.9
+    37.9,
+    -13.63,
+    37.13
    ],
    "comb": {
     "b": 0.286,
@@ -256688,9 +262503,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.35,
-    -1.19,
-    53.23
+    38.41,
+    -9.22,
+    37.95
    ],
    "comb": {
     "b": 0.212,
@@ -256763,9 +262578,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.52,
-    -9.5,
-    53.42
+    37.17,
+    -20.63,
+    36.92
    ]
   },
   {
@@ -256830,9 +262645,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.8,
-    -10.65,
-    56.55
+    36.65,
+    -19.72,
+    42.32
    ]
   },
   {
@@ -256897,9 +262712,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.13,
-    -7.1,
-    51.17
+    39.99,
+    -16.31,
+    31.13
    ],
    "comb": {
     "b": 0.255,
@@ -256974,9 +262789,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.41,
-    -7.63,
-    49.02
+    28.97,
+    -21.29,
+    37.16
    ]
   },
   {
@@ -257040,9 +262855,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.76,
-    -11.86,
-    58.13
+    40.75,
+    -19.33,
+    40.87
    ]
   },
   {
@@ -257116,9 +262931,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -13.7,
-    6.89,
-    49.37
+    27.16,
+    -7.09,
+    45.24
    ],
    "comb": {
     "b": 0.619,
@@ -257198,13 +263013,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.45,
-    5.6,
-    51.21
+    29.25,
+    -8.16,
+    45.59
    ],
    "comb": {
     "b": 0.463,
-    "r": 1.54,
+    "r": 1.53,
     "rg": [
      "bibun-hoteishiki",
      "denjiki",
@@ -257280,9 +263095,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.21,
-    -3.43,
-    50.35
+    30.41,
+    -16.12,
+    40.63
    ],
    "comb": {
     "b": 0.319,
@@ -257356,9 +263171,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.71,
-    2.16,
-    52.99
+    29.18,
+    -8.12,
+    47.47
    ]
   },
   {
@@ -257423,9 +263238,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.11,
-    -3.7,
-    46.66
+    28.5,
+    -20.01,
+    36.1
    ],
    "comb": {
     "b": 0.291,
@@ -257499,9 +263314,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.76,
-    -4.24,
-    46.97
+    29.63,
+    -19.4,
+    35.51
    ],
    "comb": {
     "b": 0.291,
@@ -257576,9 +263391,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.25,
-    -3.76,
-    48.95
+    30.68,
+    -16.06,
+    38.39
    ],
    "comb": {
     "b": 0.274,
@@ -257652,9 +263467,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.21,
-    5.39,
-    55.44
+    34.2,
+    -0.32,
+    46.63
    ]
   },
   {
@@ -257718,9 +263533,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.3,
-    -5.45,
-    49.67
+    33.26,
+    -13.43,
+    37.24
    ]
   },
   {
@@ -257784,9 +263599,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.8,
-    7.23,
-    51.16
+    38.95,
+    0.56,
+    36.29
    ]
   },
   {
@@ -257851,9 +263666,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.28,
-    18.9,
-    48.7
+    42.62,
+    13.19,
+    31.77
    ],
    "comb": {
     "b": 0.399,
@@ -257927,9 +263742,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.68,
-    6.22,
-    51.26
+    40.46,
+    -1.57,
+    34.57
    ]
   },
   {
@@ -257993,9 +263808,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.5,
-    5.81,
-    52.73
+    40.25,
+    0.79,
+    37.14
    ]
   },
   {
@@ -258060,9 +263875,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.37,
-    7.0,
-    52.78
+    38.89,
+    0.36,
+    38.57
    ],
    "comb": {
     "b": 0.288,
@@ -258139,13 +263954,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.03,
-    12.41,
-    51.3
+    50.65,
+    -3.43,
+    20.58
    ],
    "comb": {
     "b": 0.42,
-    "r": 0.79,
+    "r": 0.78,
     "rg": [
      "bibun-hoteishiki",
      "fukuso",
@@ -258218,9 +264033,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.38,
-    5.36,
-    51.4
+    38.83,
+    -1.03,
+    36.42
    ]
   },
   {
@@ -258285,9 +264100,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.91,
-    6.04,
-    52.82
+    41.11,
+    -0.26,
+    36.2
    ]
   },
   {
@@ -258354,9 +264169,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.42,
-    6.61,
-    51.22
+    36.25,
+    -1.96,
+    38.95
    ],
    "comb": {
     "b": 0.389,
@@ -258430,9 +264245,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.28,
-    5.73,
-    52.93
+    39.02,
+    -1.0,
+    38.43
    ],
    "comb": {
     "b": 0.236,
@@ -258505,9 +264320,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.73,
-    17.21,
-    50.06
+    32.86,
+    14.32,
+    41.42
    ]
   },
   {
@@ -258572,9 +264387,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.21,
-    -3.4,
-    53.09
+    36.81,
+    -10.33,
+    39.23
    ]
   },
   {
@@ -258641,9 +264456,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.33,
-    -0.29,
-    53.19
+    37.1,
+    -8.79,
+    39.33
    ]
   },
   {
@@ -258712,9 +264527,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.91,
-    -1.45,
-    54.72
+    38.94,
+    -10.78,
+    39.21
    ],
    "comb": {
     "b": 0.4,
@@ -258788,9 +264603,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.45,
-    -9.72,
-    49.18
+    35.43,
+    -19.67,
+    32.11
    ]
   },
   {
@@ -258855,9 +264670,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.21,
-    -6.99,
-    54.08
+    42.55,
+    -14.99,
+    33.69
    ],
    "comb": {
     "b": 0.253,
@@ -258933,9 +264748,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.0,
-    -2.61,
-    54.57
+    42.6,
+    -10.7,
+    35.22
    ],
    "comb": {
     "b": 0.283,
@@ -259008,9 +264823,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.52,
-    -5.74,
-    51.32
+    41.68,
+    -19.28,
+    26.94
    ]
   },
   {
@@ -259076,9 +264891,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.8,
-    -6.78,
-    55.69
+    45.02,
+    -17.59,
+    31.76
    ]
   },
   {
@@ -259143,9 +264958,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.27,
-    -3.75,
-    54.29
+    43.62,
+    -10.57,
+    34.0
    ],
    "comb": {
     "b": 0.358,
@@ -259220,9 +265035,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.41,
-    -3.56,
-    55.83
+    45.0,
+    -11.19,
+    34.56
    ],
    "comb": {
     "b": 0.329,
@@ -259297,9 +265112,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.78,
-    -7.05,
-    57.37
+    42.77,
+    -16.9,
+    37.51
    ],
    "comb": {
     "b": 0.427,
@@ -259374,9 +265189,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.75,
-    -4.24,
-    55.61
+    45.6,
+    -9.96,
+    34.15
    ],
    "comb": {
     "b": 0.36,
@@ -259450,9 +265265,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.25,
-    -11.35,
-    44.03
+    28.79,
+    -13.73,
+    34.59
    ],
    "comb": {
     "b": 0.326,
@@ -259532,9 +265347,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.88,
-    9.74,
-    53.9
+    41.04,
+    2.58,
+    38.46
    ]
   },
   {
@@ -259603,9 +265418,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.46,
-    8.75,
-    54.02
+    38.25,
+    0.59,
+    41.32
    ],
    "comb": {
     "b": 0.343,
@@ -259683,9 +265498,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.34,
-    8.12,
-    52.44
+    41.04,
+    -6.36,
+    35.72
    ],
    "comb": {
     "b": 0.504,
@@ -259763,9 +265578,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.14,
-    16.92,
-    50.31
+    40.28,
+    11.3,
+    35.36
    ],
    "comb": {
     "b": 0.298,
@@ -259838,9 +265653,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.28,
-    12.87,
-    53.19
+    37.19,
+    7.46,
+    41.61
    ]
   },
   {
@@ -259905,9 +265720,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.59,
-    12.25,
-    53.27
+    36.6,
+    6.22,
+    42.33
    ],
    "comb": {
     "b": 0.317,
@@ -259980,9 +265795,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.17,
-    -0.09,
-    46.18
+    23.21,
+    -8.44,
+    43.65
    ]
   },
   {
@@ -260050,9 +265865,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.45,
-    2.94,
-    46.61
+    28.98,
+    -5.22,
+    40.6
    ],
    "comb": {
     "b": 0.202,
@@ -260129,9 +265944,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.26,
-    4.32,
-    46.84
+    28.04,
+    -5.12,
+    41.27
    ],
    "comb": {
     "b": 0.202,
@@ -260208,9 +266023,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.02,
-    3.31,
-    46.98
+    28.78,
+    -6.29,
+    40.6
    ],
    "comb": {
     "b": 0.202,
@@ -260287,9 +266102,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.53,
-    2.35,
-    46.91
+    27.54,
+    -6.05,
+    41.48
    ],
    "comb": {
     "b": 0.202,
@@ -260366,9 +266181,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.32,
-    4.01,
-    46.57
+    28.03,
+    -6.98,
+    41.0
    ],
    "comb": {
     "b": 0.202,
@@ -260444,13 +266259,13 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.92,
-    -5.89,
-    32.3
+    -14.35,
+    -31.91,
+    38.06
    ],
    "comb": {
     "b": 0.532,
-    "r": 1.22,
+    "r": 1.21,
     "rg": [
      "bibun-hoteishiki",
      "suchi",
@@ -260523,9 +266338,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.94,
-    -0.74,
-    46.85
+    24.14,
+    -7.09,
+    43.39
    ]
   },
   {
@@ -260590,9 +266405,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.39,
-    -2.05,
-    36.48
+    18.7,
+    -37.76,
+    12.39
    ],
    "comb": {
     "b": 0.441,
@@ -260665,9 +266480,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.65,
-    -9.64,
-    43.4
+    23.01,
+    -44.24,
+    5.34
    ]
   },
   {
@@ -260731,9 +266546,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.39,
-    -9.23,
-    42.14
+    20.93,
+    -45.46,
+    3.26
    ]
   },
   {
@@ -260800,9 +266615,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.67,
-    -7.83,
-    43.29
+    24.29,
+    -43.49,
+    5.84
    ]
   },
   {
@@ -260868,9 +266683,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.1,
-    -9.18,
-    42.81
+    23.94,
+    -43.46,
+    7.34
    ]
   },
   {
@@ -260936,9 +266751,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.63,
-    3.43,
-    33.45
+    -5.13,
+    -27.47,
+    37.85
    ]
   },
   {
@@ -261004,9 +266819,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.83,
-    2.08,
-    34.28
+    -2.08,
+    -31.46,
+    34.92
    ]
   },
   {
@@ -261073,9 +266888,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.04,
-    -5.35,
-    44.4
+    28.74,
+    -36.3,
+    19.29
    ],
    "comb": {
     "b": 0.323,
@@ -261151,9 +266966,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.94,
-    -6.65,
-    43.82
+    27.66,
+    -36.54,
+    20.38
    ],
    "comb": {
     "b": 0.323,
@@ -261228,9 +267043,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.15,
-    -5.47,
-    40.61
+    25.74,
+    -40.9,
+    13.44
    ],
    "comb": {
     "b": 0.316,
@@ -261305,9 +267120,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.37,
-    -6.83,
-    40.25
+    24.63,
+    -41.65,
+    13.21
    ],
    "comb": {
     "b": 0.316,
@@ -261382,9 +267197,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.26,
-    -6.29,
-    41.05
+    24.83,
+    -41.04,
+    14.65
    ],
    "comb": {
     "b": 0.316,
@@ -261460,9 +267275,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.3,
-    -5.55,
-    43.81
+    27.77,
+    -35.75,
+    21.6
    ],
    "comb": {
     "b": 0.323,
@@ -261538,9 +267353,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.28,
-    -6.77,
-    43.17
+    26.41,
+    -36.48,
+    22.07
    ],
    "comb": {
     "b": 0.323,
@@ -261615,9 +267430,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.48,
-    -10.62,
-    39.35
+    21.53,
+    -42.67,
+    15.21
    ],
    "comb": {
     "b": 0.316,
@@ -261692,9 +267507,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.18,
-    -1.97,
-    43.7
+    29.62,
+    -31.96,
+    24.84
    ],
    "comb": {
     "b": 0.409,
@@ -261775,9 +267590,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -18.74,
-    1.48,
-    43.13
+    33.41,
+    -29.91,
+    18.75
    ],
    "comb": {
     "b": 0.402,
@@ -261853,9 +267668,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.1,
-    -3.15,
-    44.14
+    29.81,
+    -33.65,
+    22.25
    ],
    "comb": {
     "b": 0.446,
@@ -261931,9 +267746,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.83,
-    -3.83,
-    36.53
+    24.76,
+    -38.78,
+    9.82
    ]
   },
   {
@@ -261998,9 +267813,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.06,
-    0.14,
-    35.34
+    21.5,
+    -36.69,
+    23.54
    ],
    "comb": {
     "b": 0.352,
@@ -262073,9 +267888,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.81,
-    -4.41,
-    33.44
+    21.63,
+    -41.34,
+    13.63
    ]
   },
   {
@@ -262141,9 +267956,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.41,
-    -10.19,
-    41.36
+    22.6,
+    -43.42,
+    10.95
    ],
    "comb": {
     "b": 0.315,
@@ -262219,9 +268034,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.07,
-    -0.61,
-    28.97
+    -6.26,
+    -44.6,
+    18.28
    ],
    "comb": {
     "b": 0.251,
@@ -262297,9 +268112,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.81,
-    -0.82,
-    30.5
+    -3.45,
+    -44.72,
+    18.73
    ],
    "comb": {
     "b": 0.251,
@@ -262376,9 +268191,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.85,
-    -3.8,
-    28.85
+    -10.44,
+    -47.31,
+    18.05
    ],
    "comb": {
     "b": 0.426,
@@ -262455,9 +268270,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.48,
-    -2.96,
-    23.8
+    -13.66,
+    -40.24,
+    23.59
    ],
    "comb": {
     "b": 0.251,
@@ -262533,9 +268348,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.33,
-    -4.32,
-    23.85
+    -13.89,
+    -40.84,
+    22.4
    ],
    "comb": {
     "b": 0.251,
@@ -262611,9 +268426,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.96,
-    -3.73,
-    22.84
+    -12.66,
+    -40.93,
+    22.96
    ],
    "comb": {
     "b": 0.251,
@@ -262689,9 +268504,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.7,
-    -3.52,
-    25.01
+    -12.26,
+    -40.25,
+    24.34
    ],
    "comb": {
     "b": 0.251,
@@ -262774,9 +268589,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -20.29,
-    -5.2,
-    38.6
+    18.96,
+    -40.04,
+    10.3
    ],
    "comb": {
     "b": 0.37,
@@ -262851,9 +268666,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.63,
-    -8.07,
-    37.92
+    17.73,
+    -41.77,
+    3.18
    ]
   },
   {
@@ -262918,9 +268733,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.44,
-    -8.63,
-    38.42
+    16.46,
+    -42.27,
+    3.35
    ]
   },
   {
@@ -262985,9 +268800,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.31,
-    -9.48,
-    37.77
+    16.9,
+    -42.18,
+    2.03
    ]
   },
   {
@@ -263053,9 +268868,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.17,
-    -4.24,
-    38.18
+    5.39,
+    -42.64,
+    22.69
    ],
    "comb": {
     "b": 0.481,
@@ -263131,9 +268946,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.74,
-    -10.9,
-    38.99
+    16.17,
+    -44.18,
+    0.52
    ]
   },
   {
@@ -263197,9 +269012,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.32,
-    -10.27,
-    40.35
+    20.25,
+    -42.45,
+    1.3
    ]
   },
   {
@@ -263266,12 +269081,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.04,
-    -9.26,
-    39.98
+    12.29,
+    -48.61,
+    1.3
    ],
    "comb": {
-    "b": 0.47,
+    "b": 0.471,
     "r": 0.0,
     "rg": [
      "doboku",
@@ -263342,9 +269157,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.64,
-    -11.43,
-    43.78
+    21.15,
+    -46.6,
+    7.38
    ]
   },
   {
@@ -263409,9 +269224,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.16,
-    -14.53,
-    35.99
+    4.68,
+    -52.69,
+    -6.04
    ],
    "comb": {
     "b": 0.488,
@@ -263486,9 +269301,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.95,
-    -13.67,
-    44.44
+    16.41,
+    -52.25,
+    0.95
    ]
   },
   {
@@ -263552,9 +269367,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.77,
-    -16.51,
-    45.98
+    15.86,
+    -53.96,
+    -2.72
    ]
   },
   {
@@ -263619,9 +269434,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.38,
-    -12.82,
-    45.3
+    21.62,
+    -48.3,
+    5.88
    ],
    "comb": {
     "b": 0.451,
@@ -263697,9 +269512,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.29,
-    -5.96,
-    38.19
+    21.94,
+    -37.93,
+    2.95
    ]
   },
   {
@@ -263767,9 +269582,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.62,
-    -7.67,
-    42.07
+    23.22,
+    -42.6,
+    2.88
    ],
    "comb": {
     "b": 0.348,
@@ -263845,9 +269660,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.4,
-    -6.37,
-    37.6
+    20.93,
+    -38.53,
+    2.38
    ]
   },
   {
@@ -263914,9 +269729,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.41,
-    -7.36,
-    37.89
+    20.89,
+    -38.44,
+    3.85
    ]
   },
   {
@@ -263983,9 +269798,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.14,
-    -9.91,
-    43.9
+    21.13,
+    -47.15,
+    1.77
    ]
   },
   {
@@ -264052,9 +269867,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.99,
-    -10.26,
-    44.38
+    21.14,
+    -47.09,
+    2.94
    ]
   },
   {
@@ -264119,9 +269934,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.93,
-    -11.05,
-    43.38
+    21.68,
+    -45.01,
+    4.42
    ]
   },
   {
@@ -264185,9 +270000,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.73,
-    -14.63,
-    43.26
+    17.31,
+    -48.71,
+    -1.1
    ]
   },
   {
@@ -264252,9 +270067,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.81,
-    -13.54,
-    43.09
+    18.94,
+    -48.11,
+    0.41
    ]
   },
   {
@@ -264304,9 +270119,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.25,
-    35.6,
-    25.68
+    17.19,
+    28.22,
+    31.26
    ],
    "comb": {
     "b": 0.408,
@@ -264375,9 +270190,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -54.63,
-    -4.34,
-    -12.91
+    -34.4,
+    -4.42,
+    -46.27
    ],
    "comb": {
     "b": 0.35,
@@ -264445,9 +270260,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.65,
-    3.04,
-    -35.41
+    -25.38,
+    9.88,
+    -47.52
    ],
    "comb": {
     "b": 0.265,
@@ -264513,9 +270328,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.82,
-    -13.67,
-    -25.74
+    -29.16,
+    -11.84,
+    -41.02
    ],
    "comb": {
     "b": 0.173,
@@ -264583,9 +270398,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.93,
-    2.2,
-    -31.51
+    -19.52,
+    6.5,
+    -49.1
    ],
    "comb": {
     "b": 0.491,
@@ -264655,9 +270470,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.96,
-    -8.42,
-    18.22
+    -32.61,
+    -37.06,
+    15.35
    ],
    "comb": {
     "b": 0.653,
@@ -264725,9 +270540,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.24,
-    5.78,
-    45.56
+    44.2,
+    -20.22,
+    -0.29
    ],
    "comb": {
     "b": 0.252,
@@ -264793,9 +270608,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.92,
-    -1.34,
-    43.88
+    39.85,
+    -24.92,
+    -2.06
    ]
   },
   {
@@ -264853,9 +270668,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.95,
-    4.33,
-    54.52
+    41.79,
+    -1.55,
+    37.7
    ],
    "comb": {
     "b": 0.363,
@@ -264913,9 +270728,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.1,
-    -4.87,
-    54.29
+    26.35,
+    -16.9,
+    48.62
    ],
    "comb": {
     "b": 0.382,
@@ -264977,9 +270792,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.67,
-    -25.28,
-    -19.48
+    -37.45,
+    -22.3,
+    -30.57
    ]
   },
   {
@@ -265027,9 +270842,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.2,
-    -26.81,
-    -20.44
+    -33.7,
+    -23.62,
+    -33.78
    ]
   },
   {
@@ -265083,9 +270898,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.42,
-    -29.65,
-    -20.04
+    -37.08,
+    -26.88,
+    -30.06
    ]
   },
   {
@@ -265139,9 +270954,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.57,
-    -22.27,
-    -16.71
+    -38.31,
+    -21.03,
+    -30.42
    ],
    "comb": {
     "b": 0.286,
@@ -265207,9 +271022,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.71,
-    -9.27,
-    53.86
+    41.11,
+    -18.44,
+    33.77
    ],
    "comb": {
     "b": 0.261,
@@ -265276,9 +271091,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.34,
-    -9.47,
-    55.45
+    42.01,
+    -19.22,
+    34.78
    ],
    "comb": {
     "b": 0.41,
@@ -265345,9 +271160,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.34,
-    -4.72,
-    46.75
+    34.67,
+    -11.7,
+    31.99
    ],
    "comb": {
     "b": 0.366,
@@ -265410,9 +271225,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.45,
-    -11.61,
-    56.28
+    41.89,
+    -18.78,
+    37.62
    ],
    "comb": {
     "b": 0.312,
@@ -265475,9 +271290,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.8,
-    -5.06,
-    55.78
+    44.71,
+    -13.57,
+    34.08
    ],
    "comb": {
     "b": 0.308,
@@ -265536,9 +271351,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.24,
-    -19.16,
-    51.14
+    30.17,
+    -23.95,
+    41.07
    ],
    "comb": {
     "b": 0.544,
@@ -265601,9 +271416,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.34,
-    -6.23,
-    48.81
+    31.89,
+    -43.28,
+    10.49
    ],
    "comb": {
     "b": 0.452,
@@ -265670,9 +271485,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -10.32,
-    -9.04,
-    49.85
+    33.68,
+    -39.13,
+    13.01
    ],
    "comb": {
     "b": 0.495,
@@ -265736,9 +271551,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.9,
-    -16.24,
-    51.71
+    28.67,
+    -39.58,
+    27.96
    ],
    "comb": {
     "b": 0.444,
@@ -265809,9 +271624,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -25.62,
-    -5.23,
-    46.38
+    14.97,
+    -35.0,
+    39.39
    ],
    "comb": {
     "b": 0.628,
@@ -265876,9 +271691,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.75,
-    -5.07,
-    43.62
+    30.53,
+    -43.4,
+    18.83
    ],
    "comb": {
     "b": 0.494,
@@ -265941,9 +271756,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.95,
-    -25.82,
-    35.45
+    34.67,
+    -32.56,
+    15.93
    ],
    "comb": {
     "b": 0.335,
@@ -266006,9 +271821,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.07,
-    -19.66,
-    49.57
+    41.39,
+    -32.35,
+    24.18
    ],
    "comb": {
     "b": 0.407,
@@ -266071,9 +271886,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.4,
-    -14.4,
-    44.78
+    38.41,
+    -26.34,
+    22.44
    ],
    "comb": {
     "b": 0.397,
@@ -266140,9 +271955,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.64,
-    -14.5,
-    51.2
+    45.82,
+    -24.0,
+    29.1
    ],
    "comb": {
     "b": 0.274,
@@ -266202,9 +272017,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.1,
-    -16.02,
-    43.52
+    38.78,
+    -24.6,
+    23.74
    ],
    "comb": {
     "b": 0.599,
@@ -266270,9 +272085,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.67,
-    -26.09,
-    37.01
+    30.25,
+    -29.25,
+    27.3
    ],
    "comb": {
     "b": 0.594,
@@ -266337,9 +272152,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    28.77,
-    -15.53,
-    29.33
+    37.67,
+    -17.43,
+    18.61
    ],
    "comb": {
     "b": 0.15,
@@ -266401,9 +272216,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.05,
-    -19.14,
-    31.38
+    32.99,
+    -20.71,
+    23.48
    ],
    "comb": {
     "b": 0.393,
@@ -266467,9 +272282,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    13.17,
-    -24.14,
-    40.08
+    25.54,
+    -24.66,
+    35.43
    ],
    "comb": {
     "b": 0.464,
@@ -266534,9 +272349,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.79,
-    -21.41,
-    43.37
+    23.99,
+    -23.67,
+    37.14
    ],
    "comb": {
     "b": 0.515,
@@ -266603,9 +272418,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.82,
-    2.62,
-    -27.75
+    -23.19,
+    7.37,
+    -43.86
    ]
   },
   {
@@ -266654,9 +272469,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.24,
-    -4.24,
-    -28.37
+    -27.03,
+    -10.1,
+    -41.03
    ],
    "comb": {
     "b": 0.346,
@@ -266733,9 +272548,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    26.7,
-    -8.17,
-    47.13
+    37.87,
+    -1.79,
+    41.63
    ],
    "comb": {
     "b": 0.632,
@@ -266805,9 +272620,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.0,
-    -27.2,
-    43.87
+    18.99,
+    -27.53,
+    41.43
    ],
    "comb": {
     "b": 0.275,
@@ -266873,9 +272688,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.91,
-    -29.33,
-    38.75
+    0.56,
+    -21.77,
+    45.18
    ],
    "comb": {
     "b": 0.243,
@@ -266942,9 +272757,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -0.56,
-    -21.94,
-    48.51
+    15.09,
+    -23.17,
+    47.28
    ],
    "comb": {
     "b": 0.451,
@@ -267012,9 +272827,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.96,
-    -25.79,
-    46.57
+    9.26,
+    -21.93,
+    49.33
    ],
    "comb": {
     "b": 0.432,
@@ -267090,9 +272905,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.35,
-    -52.08,
-    -1.5
+    -42.81,
+    -35.19,
+    16.53
    ],
    "comb": {
     "b": 0.357,
@@ -267158,9 +272973,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.91,
-    -47.12,
-    15.02
+    -33.81,
+    -35.64,
+    30.51
    ]
   },
   {
@@ -267227,9 +273042,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.38,
-    -40.14,
-    19.43
+    -30.63,
+    -44.17,
+    21.35
    ],
    "comb": {
     "b": 0.654,
@@ -267307,9 +273122,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.96,
-    -50.01,
-    13.66
+    -28.94,
+    -41.27,
+    28.35
    ],
    "comb": {
     "b": 0.341,
@@ -267387,9 +273202,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.93,
-    -40.92,
-    -13.44
+    -27.46,
+    -40.09,
+    -1.19
    ],
    "comb": {
     "b": 0.516,
@@ -267467,9 +273282,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.57,
-    -28.56,
-    20.02
+    -23.53,
+    -36.43,
+    21.96
    ],
    "comb": {
     "b": 0.597,
@@ -267541,9 +273356,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.64,
-    -47.58,
-    25.59
+    -15.95,
+    -44.45,
+    35.95
    ],
    "comb": {
     "b": 0.534,
@@ -267611,9 +273426,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.04,
-    25.17,
-    48.61
+    36.24,
+    16.44,
+    39.84
    ],
    "comb": {
     "b": 0.542,
@@ -267680,9 +273495,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.53,
-    1.23,
-    56.27
+    42.31,
+    -10.48,
+    38.0
    ],
    "comb": {
     "b": 0.281,
@@ -267748,9 +273563,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -47.29,
-    5.87,
-    9.56
+    -45.68,
+    -0.56,
+    20.7
    ],
    "comb": {
     "b": 0.444,
@@ -267817,9 +273632,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.83,
-    8.51,
-    4.72
+    -40.43,
+    4.9,
+    20.26
    ],
    "comb": {
     "b": 0.374,
@@ -267886,9 +273701,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.71,
-    -12.36,
-    42.98
+    19.06,
+    -47.94,
+    3.4
    ],
    "comb": {
     "b": 0.403,
@@ -267955,9 +273770,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.05,
-    -14.17,
-    40.13
+    17.43,
+    -41.63,
+    13.3
    ],
    "comb": {
     "b": 0.615,
@@ -268026,9 +273841,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.91,
-    0.23,
-    53.1
+    43.32,
+    -9.32,
+    32.2
    ],
    "comb": {
     "b": 0.503,
@@ -268096,9 +273911,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.63,
-    -1.05,
-    38.52
+    6.24,
+    -40.89,
+    28.38
    ],
    "comb": {
     "b": 0.466,
@@ -268165,9 +273980,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.98,
-    18.9,
-    -2.95
+    -6.2,
+    14.73,
+    -45.9
    ],
    "comb": {
     "b": 0.492,
@@ -268234,9 +274049,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.81,
-    18.06,
-    40.58
+    47.04,
+    -1.07,
+    0.25
    ]
   },
   {
@@ -268293,9 +274108,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.38,
-    -11.46,
-    44.37
+    21.03,
+    -47.03,
+    4.34
    ]
   },
   {
@@ -268353,9 +274168,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.84,
-    -6.16,
-    39.19
+    22.98,
+    -38.88,
+    5.43
    ],
    "comb": {
     "b": 0.366,
@@ -268420,9 +274235,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.37,
-    -5.75,
-    49.67
+    29.76,
+    -47.79,
+    -0.88
    ]
   },
   {
@@ -268481,9 +274296,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.72,
-    20.62,
-    41.9
+    32.21,
+    9.53,
+    35.13
    ],
    "comb": {
     "b": 0.503,
@@ -268551,9 +274366,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.49,
-    -8.42,
-    44.04
+    24.02,
+    -45.47,
+    5.35
    ]
   },
   {
@@ -268616,9 +274431,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -20.1,
-    -7.98,
-    45.26
+    24.75,
+    -42.05,
+    17.1
    ],
    "comb": {
     "b": 0.579,
@@ -268685,9 +274500,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.01,
-    2.14,
-    28.92
+    -23.09,
+    -10.2,
+    43.34
    ],
    "comb": {
     "b": 0.458,
@@ -268745,9 +274560,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.75,
-    13.53,
-    -0.91
+    -36.41,
+    11.71,
+    14.09
    ]
   },
   {
@@ -268804,9 +274619,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.5,
-    -47.11,
-    -5.79
+    -41.55,
+    -30.96,
+    12.26
    ],
    "comb": {
     "b": 0.436,
@@ -268867,9 +274682,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.7,
-    -53.74,
-    -5.98
+    -43.36,
+    -37.26,
+    8.72
    ]
   },
   {
@@ -268922,9 +274737,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.78,
-    -54.89,
-    -11.88
+    -46.17,
+    -36.77,
+    6.23
    ],
    "comb": {
     "b": 0.236,
@@ -268990,9 +274805,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.93,
-    -55.33,
-    -10.77
+    -45.21,
+    -38.15,
+    4.84
    ],
    "comb": {
     "b": 0.126,
@@ -269067,9 +274882,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.03,
-    -50.36,
-    2.76
+    -43.05,
+    -33.98,
+    18.34
    ],
    "comb": {
     "b": 0.331,
@@ -269141,9 +274956,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -31.03,
-    -44.91,
-    -4.57
+    -46.22,
+    -31.84,
+    4.53
    ],
    "comb": {
     "b": 0.56,
@@ -269219,9 +275034,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.56,
-    -45.39,
-    -5.29
+    -37.08,
+    -31.8,
+    11.39
    ],
    "comb": {
     "b": 0.133,
@@ -269292,9 +275107,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -19.33,
-    -54.36,
-    -3.98
+    -42.82,
+    -38.61,
+    14.09
    ],
    "comb": {
     "b": 0.226,
@@ -269357,9 +275172,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.14,
-    -50.75,
-    -4.45
+    -44.38,
+    -31.58,
+    14.26
    ],
    "comb": {
     "b": 0.353,
@@ -269431,9 +275246,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -14.24,
-    -54.41,
-    -18.97
+    -51.33,
+    -32.69,
+    1.34
    ],
    "comb": {
     "b": 0.237,
@@ -269501,9 +275316,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.15,
-    -53.19,
-    -4.95
+    -45.01,
+    -37.77,
+    8.34
    ],
    "comb": {
     "b": 0.507,
@@ -269571,12 +275386,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.2,
-    -46.43,
-    -12.72
+    -46.78,
+    -33.04,
+    -8.06
    ],
    "comb": {
-    "b": 0.45,
+    "b": 0.458,
     "r": 0.0,
     "rg": [
      "byori",
@@ -269641,9 +275456,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.69,
-    -42.34,
-    -14.28
+    -44.09,
+    -32.72,
+    -12.48
    ],
    "comb": {
     "b": 0.456,
@@ -269708,9 +275523,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.05,
-    -54.83,
-    16.1
+    -28.85,
+    -46.89,
+    25.96
    ],
    "comb": {
     "b": 0.663,
@@ -269775,9 +275590,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.42,
-    -50.82,
-    -0.97
+    -39.47,
+    -39.6,
+    6.64
    ],
    "comb": {
     "b": 0.349,
@@ -269858,9 +275673,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -17.61,
-    -55.13,
-    -13.16
+    -48.71,
+    -35.08,
+    10.08
    ],
    "comb": {
     "b": 0.215,
@@ -269927,9 +275742,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.94,
-    -47.45,
-    -13.63
+    -45.76,
+    -28.46,
+    9.81
    ],
    "comb": {
     "b": 0.152,
@@ -270001,9 +275816,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -19.16,
-    -53.94,
-    -15.7
+    -49.98,
+    -33.39,
+    9.57
    ],
    "comb": {
     "b": 0.105,
@@ -270066,9 +275881,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.54,
-    -55.0,
-    -10.77
+    -47.58,
+    -35.38,
+    13.74
    ],
    "comb": {
     "b": 0.272,
@@ -270132,9 +275947,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.94,
-    -47.41,
-    -12.18
+    -45.85,
+    -27.78,
+    11.23
    ]
   },
   {
@@ -270188,9 +276003,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.01,
-    -48.04,
-    -8.72
+    -44.09,
+    -29.79,
+    1.71
    ],
    "comb": {
     "b": 0.596,
@@ -270267,9 +276082,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.43,
-    -22.32,
-    -32.51
+    -33.54,
+    -25.26,
+    -32.74
    ],
    "comb": {
     "b": 0.514,
@@ -270346,9 +276161,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.54,
-    -34.05,
-    -38.69
+    -22.64,
+    -40.14,
+    -32.36
    ],
    "comb": {
     "b": 0.497,
@@ -270417,9 +276232,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.38,
-    -27.13,
-    -37.52
+    -14.5,
+    -36.11,
+    -29.12
    ],
    "comb": {
     "b": 0.38,
@@ -270467,9 +276282,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.65,
-    0.97,
-    -2.11
+    -53.07,
+    -3.59,
+    2.36
    ],
    "comb": {
     "b": 0.361,
@@ -270520,9 +276335,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.84,
-    11.42,
-    53.54
+    37.92,
+    5.4,
+    41.27
    ]
   },
   {
@@ -270573,9 +276388,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.42,
-    -25.79,
-    35.52
+    2.9,
+    -19.41,
+    41.03
    ],
    "comb": {
     "b": 0.432,
@@ -270631,9 +276446,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.23,
-    -33.44,
-    36.46
+    14.01,
+    -29.48,
+    40.1
    ],
    "comb": {
     "b": 0.216,
@@ -270679,9 +276494,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.2,
-    -40.7,
-    20.3
+    -35.45,
+    -28.74,
+    35.52
    ]
   },
   {
@@ -270722,9 +276537,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -42.71,
-    -2.36,
-    -31.7
+    -25.67,
+    2.17,
+    -48.34
    ],
    "comb": {
     "b": 0.372,
@@ -270791,9 +276606,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.74,
-    -37.2,
-    6.14
+    -43.77,
+    -33.2,
+    12.36
    ],
    "comb": {
     "b": 0.435,
@@ -270860,9 +276675,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.38,
-    -35.85,
-    21.93
+    -17.47,
+    -40.19,
+    27.43
    ],
    "comb": {
     "b": 0.505,
@@ -270930,9 +276745,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.97,
-    -39.7,
-    31.68
+    -6.44,
+    -42.74,
+    33.65
    ],
    "comb": {
     "b": 0.398,
@@ -271000,9 +276815,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.95,
-    -44.9,
-    20.26
+    -27.92,
+    -34.21,
+    34.93
    ],
    "comb": {
     "b": 0.422,
@@ -271070,9 +276885,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.93,
-    -45.64,
-    19.79
+    -26.21,
+    -37.61,
+    32.7
    ],
    "comb": {
     "b": 0.382,
@@ -271140,9 +276955,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.52,
-    -48.59,
-    16.0
+    -31.11,
+    -36.99,
+    31.76
    ],
    "comb": {
     "b": 0.436,
@@ -271209,9 +277024,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.12,
-    -52.41,
-    12.78
+    -26.62,
+    -43.08,
+    27.93
    ],
    "comb": {
     "b": 0.294,
@@ -271277,9 +277092,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.82,
-    -46.38,
-    13.75
+    -35.61,
+    -33.86,
+    30.5
    ],
    "comb": {
     "b": 0.426,
@@ -271346,9 +277161,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.13,
-    -48.87,
-    14.83
+    -34.09,
+    -37.75,
+    30.59
    ],
    "comb": {
     "b": 0.23,
@@ -271415,9 +277230,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.11,
-    -40.92,
-    16.11
+    -28.46,
+    -30.43,
+    30.62
    ],
    "comb": {
     "b": 0.393,
@@ -271484,9 +277299,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.47,
-    -41.18,
-    18.82
+    -36.51,
+    -27.31,
+    35.57
    ],
    "comb": {
     "b": 0.552,
@@ -271554,9 +277369,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.63,
-    -42.98,
-    4.38
+    -26.44,
+    -36.94,
+    17.28
    ],
    "comb": {
     "b": 0.219,
@@ -271622,9 +277437,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.25,
-    -29.88,
-    -2.57
+    -41.0,
+    -20.86,
+    15.71
    ],
    "comb": {
     "b": 0.431,
@@ -271691,9 +277506,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.33,
-    -34.66,
-    -1.59
+    -44.1,
+    -26.5,
+    13.69
    ],
    "comb": {
     "b": 0.397,
@@ -271760,9 +277575,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.29,
-    -42.45,
-    -4.25
+    -33.8,
+    -35.36,
+    11.09
    ],
    "comb": {
     "b": 0.361,
@@ -271839,9 +277654,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.65,
-    -54.39,
-    0.26
+    -36.51,
+    -46.09,
+    8.07
    ],
    "comb": {
     "b": 0.617,
@@ -271919,9 +277734,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.11,
-    -53.93,
-    15.79
+    -32.96,
+    -43.14,
+    27.51
    ],
    "comb": {
     "b": 0.39,
@@ -271999,9 +277814,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.27,
-    -47.74,
-    23.45
+    -11.16,
+    -46.21,
+    27.22
    ],
    "comb": {
     "b": 0.516,
@@ -272070,9 +277885,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.66,
-    -57.53,
-    1.5
+    -28.74,
+    -50.41,
+    12.46
    ],
    "comb": {
     "b": 0.401,
@@ -272145,9 +277960,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -9.74,
-    -55.18,
-    5.51
+    -28.06,
+    -48.44,
+    14.52
    ],
    "comb": {
     "b": 0.453,
@@ -272223,9 +278038,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.21,
-    -55.23,
-    9.64
+    -27.02,
+    -46.09,
+    22.14
    ],
    "comb": {
     "b": 0.325,
@@ -272301,12 +278116,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -15.98,
-    -54.15,
-    12.52
+    -28.63,
+    -49.59,
+    15.62
    ],
    "comb": {
-    "b": 0.492,
+    "b": 0.493,
     "r": 0.0,
     "rg": [
      "biseibutsu",
@@ -272372,9 +278187,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.08,
-    -11.43,
-    46.11
+    24.76,
+    -43.06,
+    14.36
    ],
    "comb": {
     "b": 0.538,
@@ -272443,9 +278258,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.15,
-    -16.65,
-    46.21
+    20.43,
+    -47.61,
+    12.26
    ],
    "comb": {
     "b": 0.315,
@@ -272516,9 +278331,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.71,
-    -17.29,
-    46.76
+    21.62,
+    -46.84,
+    13.17
    ],
    "comb": {
     "b": 0.298,
@@ -272581,9 +278396,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.49,
-    -12.78,
-    47.87
+    22.24,
+    -49.51,
+    7.4
    ],
    "comb": {
     "b": 0.421,
@@ -272651,9 +278466,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -30.98,
-    -12.32,
-    43.46
+    6.38,
+    -55.63,
+    -5.94
    ],
    "comb": {
     "b": 0.388,
@@ -272725,9 +278540,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.74,
-    -21.53,
-    41.34
+    15.77,
+    -46.43,
+    24.41
    ],
    "comb": {
     "b": 0.407,
@@ -272792,9 +278607,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.6,
-    -10.4,
-    45.32
+    26.43,
+    -34.94,
+    30.26
    ],
    "comb": {
     "b": 0.584,
@@ -272864,9 +278679,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.89,
-    -18.82,
-    46.08
+    24.67,
+    -42.72,
+    23.81
    ],
    "comb": {
     "b": 0.429,
@@ -272931,9 +278746,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.55,
-    -6.9,
-    34.49
+    10.14,
+    -38.45,
+    30.56
    ],
    "comb": {
     "b": 0.592,
@@ -273011,9 +278826,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.16,
-    -4.2,
-    45.65
+    23.6,
+    -30.12,
+    32.43
    ],
    "comb": {
     "b": 0.55,
@@ -273080,9 +278895,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.19,
-    -26.85,
-    31.62
+    -6.56,
+    -48.07,
+    17.88
    ],
    "comb": {
     "b": 0.546,
@@ -273146,9 +278961,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.84,
-    -27.69,
-    43.89
+    5.59,
+    -52.06,
+    24.55
    ],
    "comb": {
     "b": 0.646,
@@ -273216,9 +279031,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -44.12,
-    -26.82,
-    12.98
+    -26.83,
+    -47.73,
+    -1.5
    ],
    "comb": {
     "b": 0.676,
@@ -273288,9 +279103,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.14,
-    -28.98,
-    35.36
+    -0.56,
+    -48.52,
+    21.91
    ],
    "comb": {
     "b": 0.492,
@@ -273359,9 +279174,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    13.76,
-    -27.23,
-    41.74
+    32.64,
+    -36.05,
+    21.66
    ],
    "comb": {
     "b": 0.507,
@@ -273426,9 +279241,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    15.66,
-    -33.99,
-    33.4
+    25.44,
+    -37.21,
+    25.32
    ],
    "comb": {
     "b": 0.463,
@@ -273496,9 +279311,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    12.68,
-    -33.01,
-    35.57
+    21.96,
+    -33.73,
+    32.45
    ],
    "comb": {
     "b": 0.303,
@@ -273565,9 +279380,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.65,
-    -26.3,
-    47.61
+    40.14,
+    -33.96,
+    27.53
    ],
    "comb": {
     "b": 0.478,
@@ -273632,9 +279447,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.26,
-    -19.57,
-    43.72
+    30.95,
+    -28.18,
+    27.64
    ],
    "comb": {
     "b": 0.488,
@@ -273702,9 +279517,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.63,
-    -23.71,
-    38.41
+    18.42,
+    -21.39,
+    37.64
    ],
    "comb": {
     "b": 0.408,
@@ -273771,9 +279586,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.38,
-    -26.66,
-    47.83
+    11.14,
+    -23.5,
+    49.94
    ],
    "comb": {
     "b": 0.321,
@@ -273840,12 +279655,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.79,
-    -30.93,
-    -21.62
+    -39.71,
+    -25.3,
+    -33.58
    ],
    "comb": {
-    "b": 0.38,
+    "b": 0.393,
     "r": 0.0,
     "rg": [
      "data",
@@ -273910,9 +279725,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.58,
-    -32.01,
-    -20.4
+    -39.88,
+    -27.67,
+    -31.44
    ],
    "comb": {
     "b": 0.287,
@@ -273979,12 +279794,12 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.8,
-    -18.79,
-    -20.03
+    -37.95,
+    -17.08,
+    -33.21
    ],
    "comb": {
-    "b": 0.279,
+    "b": 0.292,
     "r": 0.0,
     "rg": [
      "data",
@@ -274044,9 +279859,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.25,
-    -41.77,
-    19.64
+    -35.11,
+    -30.97,
+    33.94
    ],
    "comb": {
     "b": 0.452,
@@ -274115,9 +279930,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.71,
-    -42.1,
-    11.53
+    -28.38,
+    -38.25,
+    20.1
    ],
    "comb": {
     "b": 0.499,
@@ -274182,9 +279997,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.47,
-    -40.92,
-    11.39
+    -33.45,
+    -34.81,
+    22.45
    ],
    "comb": {
     "b": 0.49,
@@ -274252,9 +280067,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.91,
-    -57.46,
-    -2.72
+    -33.89,
+    -47.62,
+    10.32
    ],
    "comb": {
     "b": 0.175,
@@ -274323,9 +280138,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.64,
-    -54.68,
-    23.02
+    -13.14,
+    -51.64,
+    29.41
    ],
    "comb": {
     "b": 0.548,
@@ -274403,9 +280218,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    10.28,
-    44.22,
-    12.34
+    25.52,
+    39.66,
+    -11.76
    ],
    "comb": {
     "b": 0.483,
@@ -274484,9 +280299,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    35.37,
-    33.14,
-    3.64
+    29.29,
+    32.97,
+    -23.88
    ],
    "comb": {
     "b": 0.494,
@@ -274560,9 +280375,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    32.25,
-    37.18,
-    -9.65
+    6.41,
+    46.92,
+    -20.75
    ]
   },
   {
@@ -274626,9 +280441,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    32.52,
-    36.59,
-    -10.94
+    5.42,
+    47.44,
+    -19.83
    ]
   },
   {
@@ -274692,9 +280507,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    31.45,
-    37.55,
-    -10.8
+    6.82,
+    47.41,
+    -19.45
    ]
   },
   {
@@ -274762,9 +280577,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    34.66,
-    37.52,
-    -8.02
+    11.79,
+    48.88,
+    -17.51
    ],
    "comb": {
     "b": 0.289,
@@ -274845,9 +280660,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.19,
-    45.71,
-    12.16
+    24.5,
+    42.09,
+    -11.99
    ],
    "comb": {
     "b": 0.442,
@@ -274926,9 +280741,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.7,
-    36.4,
-    2.51
+    -28.74,
+    38.48,
+    7.48
    ],
    "comb": {
     "b": 0.608,
@@ -275006,9 +280821,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.34,
-    35.21,
-    -18.65
+    4.5,
+    37.94,
+    -21.65
    ]
   },
   {
@@ -275073,9 +280888,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.22,
-    11.65,
-    -5.77
+    -47.76,
+    4.14,
+    -8.0
    ]
   },
   {
@@ -275139,9 +280954,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.95,
-    18.52,
-    -9.36
+    -47.24,
+    14.84,
+    -8.0
    ]
   },
   {
@@ -275205,9 +281020,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -44.14,
-    16.4,
-    -12.04
+    -47.43,
+    11.16,
+    -11.87
    ]
   },
   {
@@ -275271,9 +281086,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -10.5,
-    23.67,
-    -20.02
+    -14.77,
+    29.24,
+    14.85
    ]
   },
   {
@@ -275337,9 +281152,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.66,
-    24.84,
-    -21.68
+    -14.78,
+    31.12,
+    14.99
    ]
   },
   {
@@ -275407,9 +281222,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.08,
-    43.77,
-    -24.41
+    -2.81,
+    49.11,
+    15.91
    ],
    "comb": {
     "b": 0.299,
@@ -275486,9 +281301,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.16,
-    27.62,
-    -21.9
+    -14.64,
+    34.04,
+    12.71
    ],
    "comb": {
     "b": 0.325,
@@ -275567,9 +281382,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.1,
-    20.98,
-    39.84
+    48.31,
+    -0.21,
+    -18.42
    ],
    "comb": {
     "b": 0.315,
@@ -275643,9 +281458,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    28.98,
-    17.35,
-    39.14
+    47.52,
+    -4.85,
+    -23.52
    ]
   },
   {
@@ -275709,9 +281524,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.26,
-    12.93,
-    43.79
+    45.96,
+    -10.37,
+    -24.8
    ]
   },
   {
@@ -275780,9 +281595,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.78,
-    20.21,
-    38.64
+    47.74,
+    -0.55,
+    -19.84
    ],
    "comb": {
     "b": 0.291,
@@ -275860,9 +281675,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    23.88,
-    26.15,
-    35.52
+    49.97,
+    13.06,
+    -2.26
    ],
    "comb": {
     "b": 0.328,
@@ -275935,9 +281750,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.8,
-    23.45,
-    42.07
+    52.79,
+    4.33,
+    -5.42
    ]
   },
   {
@@ -276002,9 +281817,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.06,
-    27.77,
-    38.72
+    51.39,
+    13.67,
+    -2.52
    ]
   },
   {
@@ -276074,9 +281889,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.64,
-    18.32,
-    40.83
+    48.9,
+    -2.66,
+    -16.58
    ],
    "comb": {
     "b": 0.376,
@@ -276151,9 +281966,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.81,
-    9.13,
-    42.03
+    46.27,
+    -13.35,
+    -18.81
    ]
   },
   {
@@ -276217,9 +282032,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    26.95,
-    5.4,
-    43.79
+    47.11,
+    -17.35,
+    -17.71
    ]
   },
   {
@@ -276284,9 +282099,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    23.0,
-    3.31,
-    46.18
+    46.92,
+    -20.94,
+    -13.94
    ]
   },
   {
@@ -276351,9 +282166,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.67,
-    10.03,
-    42.5
+    46.2,
+    -12.21,
+    -19.74
    ]
   },
   {
@@ -276422,9 +282237,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.85,
-    24.38,
-    37.59
+    45.49,
+    10.67,
+    5.5
    ],
    "comb": {
     "b": 0.533,
@@ -276499,9 +282314,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    20.87,
-    21.89,
-    36.04
+    46.2,
+    4.27,
+    -14.48
    ]
   },
   {
@@ -276565,9 +282380,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    19.9,
-    22.79,
-    36.03
+    46.57,
+    3.51,
+    -13.46
    ]
   },
   {
@@ -276631,9 +282446,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.72,
-    23.15,
-    34.08
+    46.18,
+    7.67,
+    -13.07
    ]
   },
   {
@@ -276697,9 +282512,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.23,
-    22.73,
-    37.86
+    44.99,
+    2.76,
+    -18.18
    ]
   },
   {
@@ -276768,9 +282583,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    23.24,
-    22.14,
-    38.54
+    48.18,
+    1.38,
+    -18.7
    ],
    "comb": {
     "b": 0.291,
@@ -276843,9 +282658,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    26.24,
-    24.24,
-    37.38
+    48.06,
+    3.27,
+    -22.68
    ]
   },
   {
@@ -276909,9 +282724,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.34,
-    24.36,
-    36.5
+    48.6,
+    2.54,
+    -21.6
    ]
   },
   {
@@ -276978,9 +282793,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    18.26,
-    22.32,
-    42.91
+    52.72,
+    1.62,
+    -7.26
    ],
    "comb": {
     "b": 0.294,
@@ -277053,9 +282868,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    23.68,
-    18.83,
-    -16.28
+    13.68,
+    27.94,
+    -21.07
    ]
   },
   {
@@ -277120,9 +282935,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.95,
-    14.97,
-    -16.99
+    17.61,
+    25.45,
+    -24.01
    ]
   },
   {
@@ -277188,9 +283003,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    31.67,
-    22.22,
-    -17.22
+    20.58,
+    32.0,
+    -21.95
    ]
   },
   {
@@ -277254,9 +283069,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    34.42,
-    18.28,
-    -20.24
+    21.13,
+    29.95,
+    -26.94
    ]
   },
   {
@@ -277320,9 +283135,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    35.24,
-    18.67,
-    -18.4
+    22.45,
+    29.71,
+    -26.13
    ]
   },
   {
@@ -277386,9 +283201,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    34.62,
-    21.93,
-    -19.73
+    20.04,
+    32.96,
+    -26.93
    ]
   },
   {
@@ -277453,9 +283268,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    33.85,
-    27.22,
-    -13.5
+    22.79,
+    36.99,
+    -18.04
    ],
    "comb": {
     "b": 0.385,
@@ -277528,9 +283343,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.21,
-    22.64,
-    -17.78
+    22.35,
+    33.41,
+    -27.33
    ]
   },
   {
@@ -277594,9 +283409,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.27,
-    22.31,
-    -15.86
+    24.83,
+    33.02,
+    -25.61
    ]
   },
   {
@@ -277660,9 +283475,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.81,
-    21.27,
-    -18.22
+    23.95,
+    31.96,
+    -27.7
    ]
   },
   {
@@ -277727,9 +283542,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    35.57,
-    23.57,
-    -10.41
+    25.98,
+    32.96,
+    -17.54
    ],
    "comb": {
     "b": 0.395,
@@ -277802,9 +283617,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    40.17,
-    10.9,
-    -18.33
+    28.57,
+    23.21,
+    -29.3
    ]
   },
   {
@@ -277868,9 +283683,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    40.8,
-    10.43,
-    -17.2
+    28.94,
+    24.02,
+    -28.27
    ]
   },
   {
@@ -277936,9 +283751,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    41.4,
-    10.94,
-    -19.49
+    29.11,
+    24.59,
+    -30.17
    ],
    "comb": {
     "b": 0.347,
@@ -278012,9 +283827,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    42.25,
-    6.96,
-    -19.49
+    30.01,
+    20.91,
+    -32.01
    ]
   },
   {
@@ -278078,9 +283893,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    44.27,
-    6.23,
-    -19.08
+    32.48,
+    19.08,
+    -33.12
    ]
   },
   {
@@ -278144,9 +283959,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    44.61,
-    4.95,
-    -18.65
+    31.73,
+    20.25,
+    -33.15
    ]
   },
   {
@@ -278211,9 +284026,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    48.37,
-    13.18,
-    -1.39
+    41.0,
+    21.93,
+    -22.6
    ]
   },
   {
@@ -278278,9 +284093,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    35.07,
-    16.69,
-    -26.56
+    18.66,
+    29.5,
+    -33.82
    ]
   },
   {
@@ -278344,9 +284159,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    33.61,
-    21.2,
-    -28.0
+    15.66,
+    34.04,
+    -33.34
    ]
   },
   {
@@ -278410,9 +284225,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    25.66,
-    16.26,
-    -12.18
+    18.74,
+    25.96,
+    -16.4
    ]
   },
   {
@@ -278478,9 +284293,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.04,
-    17.07,
-    -24.97
+    20.26,
+    29.74,
+    -32.68
    ]
   },
   {
@@ -278547,9 +284362,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.06,
-    20.96,
-    -20.97
+    29.74,
+    34.66,
+    -32.93
    ],
    "comb": {
     "b": 0.167,
@@ -278624,9 +284439,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    42.59,
-    23.65,
-    11.94
+    42.22,
+    29.33,
+    -5.51
    ]
   },
   {
@@ -278690,9 +284505,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.79,
-    18.67,
-    11.64
+    45.22,
+    27.8,
+    -4.09
    ]
   },
   {
@@ -278756,9 +284571,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.72,
-    17.54,
-    13.5
+    46.37,
+    25.72,
+    -4.76
    ]
   },
   {
@@ -278829,9 +284644,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.19,
-    38.79,
-    20.64
+    34.52,
+    34.8,
+    16.44
    ],
    "comb": {
     "b": 0.496,
@@ -278906,9 +284721,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    43.0,
-    23.37,
-    16.65
+    44.72,
+    28.71,
+    3.27
    ]
   },
   {
@@ -278972,9 +284787,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    43.54,
-    23.65,
-    14.76
+    44.26,
+    29.54,
+    1.88
    ]
   },
   {
@@ -279040,9 +284855,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    48.43,
-    18.39,
-    12.3
+    47.58,
+    26.53,
+    -5.68
    ],
    "comb": {
     "b": 0.296,
@@ -279115,9 +284930,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.71,
-    17.35,
-    15.11
+    49.9,
+    25.77,
+    -4.02
    ]
   },
   {
@@ -279186,9 +285001,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    42.81,
-    25.54,
-    -5.6
+    34.18,
+    33.58,
+    -19.42
    ],
    "comb": {
     "b": 0.29,
@@ -279261,9 +285076,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.54,
-    21.66,
-    -6.14
+    37.39,
+    31.79,
+    -20.64
    ]
   },
   {
@@ -279327,9 +285142,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.01,
-    22.39,
-    -7.42
+    36.29,
+    32.81,
+    -21.0
    ]
   },
   {
@@ -279393,9 +285208,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.1,
-    22.8,
-    -5.33
+    37.41,
+    32.59,
+    -19.3
    ]
   },
   {
@@ -279459,9 +285274,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    47.93,
-    21.88,
-    -7.67
+    37.98,
+    33.05,
+    -21.59
    ]
   },
   {
@@ -279525,9 +285340,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    48.05,
-    22.76,
-    -2.77
+    40.11,
+    33.17,
+    -17.07
    ]
   },
   {
@@ -279591,9 +285406,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.27,
-    23.93,
-    -0.3
+    42.4,
+    33.4,
+    -16.05
    ]
   },
   {
@@ -279657,9 +285472,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.77,
-    22.86,
-    0.63
+    43.41,
+    32.3,
+    -15.57
    ]
   },
   {
@@ -279724,9 +285539,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.26,
-    26.44,
-    -6.68
+    40.25,
+    37.98,
+    -16.78
    ]
   },
   {
@@ -279794,9 +285609,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.3,
-    34.35,
-    4.2
+    30.3,
+    41.19,
+    -7.67
    ],
    "comb": {
     "b": 0.282,
@@ -279869,9 +285684,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.33,
-    34.32,
-    5.08
+    30.57,
+    43.58,
+    -1.05
    ]
   },
   {
@@ -279935,9 +285750,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    40.7,
-    30.96,
-    7.62
+    34.18,
+    40.69,
+    -3.21
    ]
   },
   {
@@ -280001,9 +285816,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    40.52,
-    30.8,
-    9.08
+    33.19,
+    41.55,
+    -2.55
    ]
   },
   {
@@ -280067,9 +285882,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    39.84,
-    31.86,
-    8.43
+    33.23,
+    41.41,
+    -3.98
    ]
   },
   {
@@ -280139,9 +285954,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.39,
-    19.87,
-    -0.31
+    -38.31,
+    17.66,
+    12.22
    ],
    "comb": {
     "b": 0.458,
@@ -280225,9 +286040,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.45,
-    26.72,
-    5.07
+    -32.07,
+    24.75,
+    16.96
    ],
    "comb": {
     "b": 0.522,
@@ -280306,9 +286121,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.68,
-    6.75,
-    9.0
+    -43.12,
+    -2.91,
+    22.23
    ],
    "comb": {
     "b": 0.315,
@@ -280382,9 +286197,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -44.43,
-    11.2,
-    10.7
+    -42.32,
+    -0.15,
+    23.91
    ],
    "comb": {
     "b": 0.315,
@@ -280459,9 +286274,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.33,
-    8.55,
-    2.95
+    -48.75,
+    3.89,
+    16.79
    ],
    "comb": {
     "b": 0.357,
@@ -280536,9 +286351,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.5,
-    4.43,
-    6.75
+    -47.71,
+    -2.02,
+    19.82
    ],
    "comb": {
     "b": 0.357,
@@ -280613,9 +286428,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.66,
-    6.56,
-    2.62
+    -49.16,
+    2.24,
+    15.87
    ],
    "comb": {
     "b": 0.357,
@@ -280689,9 +286504,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.47,
-    11.36,
-    1.01
+    -36.83,
+    9.09,
+    14.91
    ]
   },
   {
@@ -280755,9 +286570,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.01,
-    9.43,
-    2.72
+    -46.96,
+    0.58,
+    12.52
    ]
   },
   {
@@ -280821,9 +286636,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.61,
-    6.31,
-    -1.3
+    -47.37,
+    -3.34,
+    10.36
    ]
   },
   {
@@ -280888,9 +286703,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.8,
-    17.91,
-    15.94
+    -28.21,
+    11.26,
+    33.86
    ]
   },
   {
@@ -280955,9 +286770,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -50.63,
-    9.61,
-    -4.19
+    -52.07,
+    9.14,
+    6.35
    ]
   },
   {
@@ -281028,9 +286843,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.29,
-    26.51,
-    9.8
+    -39.57,
+    21.44,
+    28.45
    ],
    "comb": {
     "b": 0.482,
@@ -281109,9 +286924,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.17,
-    6.11,
-    29.46
+    -14.49,
+    -14.12,
+    44.2
    ],
    "comb": {
     "b": 0.506,
@@ -281189,9 +287004,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.3,
-    7.71,
-    10.12
+    -41.98,
+    -2.45,
+    24.38
    ],
    "comb": {
     "b": 0.326,
@@ -281265,9 +287080,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -52.22,
-    3.95,
-    9.57
+    -44.38,
+    -20.36,
+    24.83
    ]
   },
   {
@@ -281334,9 +287149,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.12,
-    -38.15,
-    26.14
+    -18.74,
+    -33.64,
+    36.77
    ],
    "comb": {
     "b": 0.386,
@@ -281414,9 +287229,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.09,
-    -37.58,
-    31.92
+    -11.4,
+    -34.66,
+    40.86
    ],
    "comb": {
     "b": 0.575,
@@ -281494,9 +287309,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.58,
-    -43.29,
-    20.53
+    -31.39,
+    -33.11,
+    35.54
    ]
   },
   {
@@ -281562,9 +287377,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.25,
-    -4.79,
-    8.65
+    -33.15,
+    -0.95,
+    20.85
    ],
    "comb": {
     "b": 0.492,
@@ -281641,9 +287456,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.96,
-    1.66,
-    30.27
+    -25.1,
+    -3.4,
+    45.07
    ],
    "comb": {
     "b": 0.556,
@@ -281723,9 +287538,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.88,
-    -7.32,
-    57.16
+    44.66,
+    -16.64,
+    35.37
    ],
    "comb": {
     "b": 0.219,
@@ -281801,9 +287616,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.33,
-    14.34,
-    54.35
+    37.29,
+    7.75,
+    43.52
    ]
   },
   {
@@ -281874,9 +287689,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    6.8,
-    16.01,
-    53.55
+    43.77,
+    11.49,
+    36.01
    ],
    "comb": {
     "b": 0.398,
@@ -281949,9 +287764,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.57,
-    12.78,
-    54.55
+    36.02,
+    7.63,
+    44.6
    ]
   },
   {
@@ -282022,9 +287837,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    8.58,
-    16.07,
-    53.28
+    44.42,
+    12.38,
+    34.9
    ],
    "comb": {
     "b": 0.398,
@@ -282097,9 +287912,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.48,
-    12.87,
-    56.01
+    36.45,
+    7.67,
+    46.21
    ]
   },
   {
@@ -282164,9 +287979,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.0,
-    1.38,
-    46.16
+    29.29,
+    -11.04,
+    37.18
    ],
    "comb": {
     "b": 0.397,
@@ -282241,9 +288056,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.92,
-    4.22,
-    43.67
+    14.24,
+    -3.92,
+    47.93
    ],
    "comb": {
     "b": 0.319,
@@ -282324,9 +288139,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -12.67,
-    5.84,
-    46.56
+    28.1,
+    -9.59,
+    40.42
    ],
    "comb": {
     "b": 0.448,
@@ -282403,9 +288218,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.98,
-    0.82,
-    44.59
+    22.65,
+    -4.43,
+    42.78
    ]
   },
   {
@@ -282470,9 +288285,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.12,
-    1.89,
-    44.84
+    21.39,
+    -4.24,
+    43.44
    ]
   },
   {
@@ -282537,9 +288352,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.31,
-    1.01,
-    38.99
+    5.17,
+    -13.11,
+    46.52
    ],
    "comb": {
     "b": 0.405,
@@ -282614,9 +288429,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.31,
-    3.11,
-    44.61
+    27.88,
+    -13.1,
+    35.57
    ],
    "comb": {
     "b": 0.423,
@@ -282691,9 +288506,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.47,
-    3.96,
-    43.6
+    10.18,
+    -4.08,
+    50.52
    ],
    "comb": {
     "b": 0.358,
@@ -282766,9 +288581,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.1,
-    2.44,
-    47.44
+    23.0,
+    -3.4,
+    46.18
    ]
   },
   {
@@ -282832,9 +288647,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.35,
-    1.93,
-    47.02
+    21.91,
+    -4.17,
+    46.64
    ]
   },
   {
@@ -282899,9 +288714,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.66,
-    1.92,
-    48.55
+    23.15,
+    -3.48,
+    47.82
    ]
   },
   {
@@ -282966,9 +288781,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.16,
-    3.17,
-    48.67
+    22.55,
+    -2.32,
+    48.18
    ]
   },
   {
@@ -283032,9 +288847,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.29,
-    0.97,
-    47.43
+    23.06,
+    -4.9,
+    46.01
    ]
   },
   {
@@ -283098,9 +288913,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.97,
-    3.11,
-    50.02
+    23.17,
+    -1.97,
+    49.6
    ]
   },
   {
@@ -283165,9 +288980,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.39,
-    1.58,
-    47.66
+    30.72,
+    -11.48,
+    37.95
    ],
    "comb": {
     "b": 0.328,
@@ -283241,9 +289056,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.42,
-    0.54,
-    37.15
+    18.44,
+    -36.79,
+    19.38
    ],
    "comb": {
     "b": 0.444,
@@ -283317,9 +289132,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.95,
-    -10.59,
-    42.78
+    23.53,
+    -45.87,
+    3.92
    ]
   },
   {
@@ -283384,9 +289199,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.82,
-    -8.33,
-    43.35
+    22.52,
+    -46.46,
+    2.61
    ]
   },
   {
@@ -283451,9 +289266,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.61,
-    -9.32,
-    42.7
+    23.72,
+    -45.87,
+    2.6
    ]
   },
   {
@@ -283518,9 +289333,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.14,
-    -9.72,
-    43.42
+    22.36,
+    -46.45,
+    3.95
    ]
   },
   {
@@ -283587,9 +289402,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.09,
-    -7.61,
-    42.76
+    19.09,
+    -47.04,
+    9.78
    ]
   },
   {
@@ -283655,9 +289470,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.3,
-    0.93,
-    43.68
+    26.42,
+    -37.25,
+    20.74
    ],
    "comb": {
     "b": 0.252,
@@ -283734,9 +289549,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.29,
-    -3.41,
-    46.96
+    33.81,
+    -35.26,
+    16.92
    ],
    "comb": {
     "b": 0.478,
@@ -283815,9 +289630,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.1,
-    -2.73,
-    46.7
+    33.0,
+    -36.0,
+    16.97
    ],
    "comb": {
     "b": 0.478,
@@ -283896,9 +289711,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.42,
-    -4.41,
-    46.03
+    31.85,
+    -37.13,
+    16.73
    ],
    "comb": {
     "b": 0.478,
@@ -283974,9 +289789,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.97,
-    -5.78,
-    36.68
+    11.03,
+    -50.61,
+    12.32
    ],
    "comb": {
     "b": 0.407,
@@ -284053,9 +289868,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.48,
-    -3.17,
-    46.11
+    32.62,
+    -36.93,
+    15.66
    ],
    "comb": {
     "b": 0.478,
@@ -284134,9 +289949,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.98,
-    -3.78,
-    46.67
+    33.66,
+    -35.88,
+    15.91
    ],
    "comb": {
     "b": 0.478,
@@ -284218,9 +290033,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.25,
-    -4.92,
-    46.84
+    31.25,
+    -35.98,
+    20.05
    ],
    "comb": {
     "b": 0.485,
@@ -284295,9 +290110,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.71,
-    -14.19,
-    36.18
+    18.14,
+    -46.92,
+    11.92
    ]
   },
   {
@@ -284363,9 +290178,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.5,
-    -21.4,
-    41.85
+    18.46,
+    -41.26,
+    25.09
    ],
    "comb": {
     "b": 0.559,
@@ -284439,9 +290254,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.16,
-    -13.19,
-    37.02
+    18.59,
+    -46.41,
+    13.16
    ]
   },
   {
@@ -284505,9 +290320,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.23,
-    -9.25,
-    39.18
+    22.62,
+    -39.1,
+    21.79
    ]
   },
   {
@@ -284572,9 +290387,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.24,
-    -4.27,
-    34.23
+    23.06,
+    -41.5,
+    16.19
    ]
   },
   {
@@ -284643,9 +290458,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.98,
-    -1.61,
-    32.74
+    2.62,
+    -46.02,
+    26.65
    ],
    "comb": {
     "b": 0.423,
@@ -284719,9 +290534,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.75,
-    -2.98,
-    33.86
+    23.47,
+    -40.75,
+    17.45
    ]
   },
   {
@@ -284786,9 +290601,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.95,
-    5.09,
-    22.93
+    -9.23,
+    -25.44,
+    38.48
    ],
    "comb": {
     "b": 0.407,
@@ -284861,9 +290676,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.97,
-    -12.34,
-    37.12
+    17.08,
+    -41.0,
+    9.82
    ]
   },
   {
@@ -284929,9 +290744,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.87,
-    -8.37,
-    37.81
+    13.42,
+    -40.39,
+    20.05
    ],
    "comb": {
     "b": 0.427,
@@ -285006,9 +290821,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.58,
-    -2.55,
-    43.01
+    31.53,
+    -28.46,
+    20.23
    ],
    "comb": {
     "b": 0.303,
@@ -285082,9 +290897,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.62,
-    -14.17,
-    40.08
+    17.58,
+    -46.44,
+    14.39
    ]
   },
   {
@@ -285154,9 +290969,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -16.45,
-    -6.6,
-    41.89
+    26.15,
+    -30.24,
+    24.81
    ]
   },
   {
@@ -285228,9 +291043,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -20.52,
-    -6.68,
-    45.28
+    26.16,
+    -34.38,
+    28.4
    ],
    "comb": {
     "b": 0.393,
@@ -285306,9 +291121,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.75,
-    -2.57,
-    36.28
+    4.79,
+    -51.08,
+    14.24
    ]
   },
   {
@@ -285374,9 +291189,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.64,
-    -2.4,
-    35.37
+    5.45,
+    -50.71,
+    15.3
    ]
   },
   {
@@ -285442,9 +291257,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.46,
-    -1.37,
-    36.63
+    6.37,
+    -50.86,
+    14.39
    ]
   },
   {
@@ -285510,9 +291325,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.35,
-    -1.2,
-    35.72
+    5.71,
+    -51.23,
+    13.34
    ]
   },
   {
@@ -285583,9 +291398,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.51,
-    -0.01,
-    36.77
+    3.2,
+    -50.9,
+    19.99
    ],
    "comb": {
     "b": 0.127,
@@ -285661,9 +291476,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.79,
-    -3.26,
-    32.72
+    1.8,
+    -39.92,
+    30.31
    ],
    "comb": {
     "b": 0.251,
@@ -285738,9 +291553,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -40.69,
-    -7.2,
-    25.6
+    -3.58,
+    -44.71,
+    22.44
    ]
   },
   {
@@ -285811,9 +291626,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -29.8,
-    -5.44,
-    39.98
+    7.72,
+    -47.99,
+    17.63
    ],
    "comb": {
     "b": 0.479,
@@ -285887,9 +291702,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.65,
-    -11.75,
-    39.31
+    15.42,
+    -44.41,
+    1.82
    ]
   },
   {
@@ -285955,9 +291770,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.96,
-    -11.93,
-    44.76
+    20.36,
+    -49.14,
+    2.4
    ]
   },
   {
@@ -286023,9 +291838,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.76,
-    -11.73,
-    45.41
+    19.15,
+    -49.62,
+    2.42
    ]
   },
   {
@@ -286090,9 +291905,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -39.86,
-    -12.49,
-    24.85
+    -20.03,
+    -45.5,
+    -6.63
    ],
    "comb": {
     "b": 0.223,
@@ -286165,9 +291980,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.04,
-    -15.6,
-    37.01
+    0.68,
+    -51.37,
+    -5.8
    ]
   },
   {
@@ -286233,9 +292048,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.23,
-    -12.2,
-    43.77
+    18.38,
+    -48.27,
+    2.23
    ]
   },
   {
@@ -286301,9 +292116,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.69,
-    -13.25,
-    44.53
+    19.16,
+    -49.67,
+    0.71
    ],
    "comb": {
     "b": 0.392,
@@ -286381,9 +292196,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.89,
-    -10.98,
-    43.26
+    19.89,
+    -47.67,
+    2.18
    ],
    "comb": {
     "b": 0.475,
@@ -286464,9 +292279,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.24,
-    -5.52,
-    46.4
+    29.32,
+    -33.67,
+    26.06
    ],
    "comb": {
     "b": 0.531,
@@ -286542,9 +292357,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.57,
-    -0.48,
-    40.12
+    30.83,
+    -33.2,
+    17.59
    ],
    "comb": {
     "b": 0.342,
@@ -286618,9 +292433,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.03,
-    0.75,
-    39.83
+    30.18,
+    -34.16,
+    16.87
    ],
    "comb": {
     "b": 0.342,
@@ -286694,9 +292509,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.7,
-    -0.37,
-    39.41
+    29.78,
+    -33.86,
+    18.13
    ],
    "comb": {
     "b": 0.342,
@@ -286771,9 +292586,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.82,
-    -0.12,
-    39.14
+    31.34,
+    -35.97,
+    15.47
    ]
   },
   {
@@ -286839,9 +292654,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -29.82,
-    0.45,
-    38.38
+    30.3,
+    -36.92,
+    15.33
    ]
   },
   {
@@ -286910,9 +292725,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.9,
-    1.9,
-    42.28
+    32.35,
+    -31.89,
+    21.26
    ],
    "comb": {
     "b": 0.565,
@@ -286987,9 +292802,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -33.55,
-    0.59,
-    37.28
+    31.51,
+    -39.07,
+    12.41
    ]
   },
   {
@@ -287055,9 +292870,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.87,
-    1.19,
-    39.09
+    31.19,
+    -36.57,
+    14.34
    ]
   },
   {
@@ -287124,9 +292939,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.66,
-    -6.99,
-    33.36
+    25.24,
+    -42.37,
+    9.13
    ],
    "comb": {
     "b": 0.36,
@@ -287185,9 +293000,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.91,
-    42.85,
-    -2.92
+    -26.88,
+    38.78,
+    -21.12
    ],
    "comb": {
     "b": 0.377,
@@ -287253,9 +293068,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.69,
-    27.13,
-    -21.53
+    -16.27,
+    33.0,
+    13.43
    ],
    "comb": {
     "b": 0.332,
@@ -287313,9 +293128,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.4,
-    27.28,
-    -24.07
+    -15.31,
+    34.51,
+    15.36
    ]
   },
   {
@@ -287363,9 +293178,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.47,
-    10.54,
-    15.43
+    -35.07,
+    3.49,
+    31.16
    ]
   },
   {
@@ -287414,9 +293229,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -32.31,
-    18.98,
-    2.74
+    -32.67,
+    18.86,
+    15.43
    ],
    "comb": {
     "b": 0.288,
@@ -287490,9 +293305,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.56,
-    -0.62,
-    -26.19
+    -32.91,
+    4.81,
+    -49.15
    ],
    "comb": {
     "b": 0.266,
@@ -287558,9 +293373,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -45.48,
-    -18.86,
-    -15.78
+    -43.5,
+    -17.28,
+    -25.37
    ],
    "comb": {
     "b": 0.404,
@@ -287624,9 +293439,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.75,
-    -4.66,
-    57.62
+    44.35,
+    -15.28,
+    36.36
    ],
    "comb": {
     "b": 0.368,
@@ -287693,9 +293508,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    1.74,
-    -11.83,
-    55.02
+    40.47,
+    -19.69,
+    36.31
    ],
    "comb": {
     "b": 0.236,
@@ -287761,9 +293576,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.09,
-    -12.65,
-    54.78
+    41.12,
+    -20.41,
+    35.17
    ],
    "comb": {
     "b": 0.236,
@@ -287830,9 +293645,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.22,
-    -10.34,
-    58.35
+    44.55,
+    -19.13,
+    36.8
    ],
    "comb": {
     "b": 0.23,
@@ -287899,9 +293714,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.86,
-    -5.65,
-    51.16
+    31.68,
+    -15.21,
+    40.0
    ],
    "comb": {
     "b": 0.384,
@@ -287969,9 +293784,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.1,
-    -6.73,
-    58.54
+    47.06,
+    -14.37,
+    35.83
    ]
   },
   {
@@ -288024,9 +293839,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.79,
-    -1.3,
-    51.46
+    43.39,
+    -11.2,
+    28.74
    ],
    "comb": {
     "b": 0.278,
@@ -288088,9 +293903,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.91,
-    -4.62,
-    51.9
+    36.07,
+    -42.11,
+    9.77
    ],
    "comb": {
     "b": 0.383,
@@ -288151,9 +293966,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.7,
-    -7.07,
-    39.11
+    28.43,
+    -45.14,
+    18.02
    ]
   },
   {
@@ -288202,9 +294017,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.31,
-    -4.51,
-    46.68
+    21.45,
+    -51.74,
+    5.77
    ],
    "comb": {
     "b": 0.432,
@@ -288262,9 +294077,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.06,
-    -7.42,
-    55.85
+    39.15,
+    -43.45,
+    10.08
    ],
    "comb": {
     "b": 0.303,
@@ -288327,9 +294142,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.81,
-    -2.21,
-    50.9
+    39.38,
+    -27.28,
+    23.23
    ],
    "comb": {
     "b": 0.432,
@@ -288394,9 +294209,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.63,
-    -9.32,
-    41.74
+    24.73,
+    -50.5,
+    13.49
    ],
    "comb": {
     "b": 0.614,
@@ -288464,9 +294279,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.16,
-    -30.46,
-    45.27
+    4.16,
+    -47.31,
+    35.6
    ],
    "comb": {
     "b": 0.573,
@@ -288539,9 +294354,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -35.65,
-    -24.19,
-    36.25
+    -9.48,
+    -51.9,
+    23.69
    ],
    "comb": {
     "b": 0.585,
@@ -288609,9 +294424,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.35,
-    -17.36,
-    41.84
+    52.43,
+    -20.5,
+    23.15
    ],
    "comb": {
     "b": 0.452,
@@ -288679,9 +294494,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.24,
-    -39.85,
-    39.29
+    15.22,
+    -39.42,
+    39.48
    ],
    "comb": {
     "b": 0.575,
@@ -288751,9 +294566,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.58,
-    -13.26,
-    45.44
+    39.26,
+    -25.11,
+    22.39
    ],
    "comb": {
     "b": 0.486,
@@ -288820,9 +294635,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    30.08,
-    -31.83,
-    37.77
+    42.16,
+    -37.88,
+    17.61
    ],
    "comb": {
     "b": 0.335,
@@ -288890,9 +294705,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    21.87,
-    -9.77,
-    54.3
+    48.44,
+    -18.09,
+    32.1
    ],
    "comb": {
     "b": 0.378,
@@ -288959,9 +294774,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    26.57,
-    -21.51,
-    46.65
+    43.56,
+    -29.0,
+    28.01
    ],
    "comb": {
     "b": 0.279,
@@ -289029,9 +294844,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.75,
-    -16.03,
-    45.18
+    34.26,
+    -20.3,
+    32.97
    ],
    "comb": {
     "b": 0.513,
@@ -289100,9 +294915,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    12.9,
-    -12.13,
-    51.84
+    37.99,
+    -24.58,
+    33.5
    ],
    "comb": {
     "b": 0.309,
@@ -289184,9 +294999,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -13.91,
-    -21.56,
-    46.65
+    0.34,
+    -22.95,
+    49.73
    ],
    "comb": {
     "b": 0.456,
@@ -289262,9 +295077,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.15,
-    -42.38,
-    22.79
+    -16.88,
+    -34.45,
+    34.66
    ],
    "comb": {
     "b": 0.501,
@@ -289332,9 +295147,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.98,
-    -45.41,
-    29.73
+    -14.96,
+    -36.43,
+    42.34
    ],
    "comb": {
     "b": 0.409,
@@ -289410,9 +295225,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.39,
-    -51.17,
-    14.97
+    -32.29,
+    -38.39,
+    31.71
    ],
    "comb": {
     "b": 0.415,
@@ -289490,9 +295305,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.8,
-    -52.57,
-    3.85
+    -35.48,
+    -43.09,
+    20.18
    ],
    "comb": {
     "b": 0.502,
@@ -289560,9 +295375,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -50.16,
-    7.93,
-    -9.7
+    -52.43,
+    1.33,
+    9.18
    ]
   },
   {
@@ -289620,9 +295435,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -50.81,
-    8.53,
-    4.28
+    -50.8,
+    0.14,
+    15.93
    ],
    "comb": {
     "b": 0.308,
@@ -289690,9 +295505,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.31,
-    25.25,
-    10.05
+    47.0,
+    33.37,
+    -4.66
    ],
    "comb": {
     "b": 0.349,
@@ -289759,9 +295574,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -50.04,
-    12.91,
-    -1.49
+    -50.38,
+    7.65,
+    15.42
    ]
   },
   {
@@ -289819,9 +295634,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    52.27,
-    19.4,
-    7.83
+    48.64,
+    29.69,
+    -9.86
    ],
    "comb": {
     "b": 0.402,
@@ -289889,9 +295704,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.72,
-    18.07,
-    39.73
+    48.17,
+    -4.08,
+    -22.32
    ]
   },
   {
@@ -289949,9 +295764,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.74,
-    -1.93,
-    48.88
+    26.71,
+    -29.74,
+    35.16
    ],
    "comb": {
     "b": 0.539,
@@ -290019,9 +295834,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -41.92,
-    33.72,
-    10.29
+    -35.25,
+    38.08,
+    21.85
    ],
    "comb": {
     "b": 0.578,
@@ -290089,9 +295904,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.74,
-    6.42,
-    11.68
+    -40.14,
+    -5.94,
+    29.48
    ],
    "comb": {
     "b": 0.265,
@@ -290158,9 +295973,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.39,
-    29.57,
-    21.79
+    -30.29,
+    24.51,
+    36.28
    ],
    "comb": {
     "b": 0.492,
@@ -290226,9 +296041,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.54,
-    -6.5,
-    42.4
+    24.08,
+    -47.89,
+    11.3
    ]
   },
   {
@@ -290285,9 +296100,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    43.04,
-    30.94,
-    5.0
+    35.43,
+    41.43,
+    -5.32
    ],
    "comb": {
     "b": 0.216,
@@ -290353,9 +296168,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.9,
-    1.82,
-    51.59
+    42.71,
+    -8.09,
+    30.75
    ],
    "comb": {
     "b": 0.278,
@@ -290422,9 +296237,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    15.08,
-    21.99,
-    44.29
+    50.14,
+    -2.77,
+    -17.68
    ],
    "comb": {
     "b": 0.483,
@@ -290491,9 +296306,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -47.73,
-    -9.81,
-    11.87
+    -11.26,
+    -14.41,
+    -48.36
    ],
    "comb": {
     "b": 0.396,
@@ -290559,9 +296374,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.52,
-    22.74,
-    -5.62
+    40.22,
+    33.88,
+    -20.13
    ]
   },
   {
@@ -290618,9 +296433,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.14,
-    18.64,
-    41.89
+    49.1,
+    -1.82,
+    -10.08
    ],
    "comb": {
     "b": 0.23,
@@ -290692,9 +296507,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    23.26,
-    9.5,
-    46.94
+    49.46,
+    -15.87,
+    -17.4
    ],
    "comb": {
     "b": 0.4,
@@ -290762,9 +296577,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.36,
-    7.21,
-    45.1
+    50.01,
+    -15.36,
+    -16.24
    ],
    "comb": {
     "b": 0.295,
@@ -290830,9 +296645,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.58,
-    1.71,
-    55.08
+    31.53,
+    -5.22,
+    48.2
    ],
    "comb": {
     "b": 0.332,
@@ -290899,9 +296714,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.81,
-    1.11,
-    50.75
+    33.75,
+    -12.89,
+    39.1
    ],
    "comb": {
     "b": 0.51,
@@ -290969,9 +296784,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.55,
-    -14.33,
-    44.76
+    21.55,
+    -44.83,
+    18.99
    ],
    "comb": {
     "b": 0.259,
@@ -291039,9 +296854,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.18,
-    23.93,
-    23.68
+    -38.91,
+    31.03,
+    13.99
    ],
    "comb": {
     "b": 0.649,
@@ -291110,9 +296925,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.15,
-    10.87,
-    53.69
+    39.41,
+    5.61,
+    39.82
    ]
   },
   {
@@ -291170,9 +296985,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.11,
-    -4.07,
-    58.78
+    47.88,
+    -12.96,
+    35.28
    ],
    "comb": {
     "b": 0.23,
@@ -291239,9 +297054,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.15,
-    -11.85,
-    43.28
+    23.22,
+    -42.09,
+    7.22
    ],
    "comb": {
     "b": 0.296,
@@ -291308,9 +297123,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.79,
-    -6.8,
-    43.69
+    27.93,
+    -43.22,
+    13.65
    ]
   },
   {
@@ -291368,9 +297183,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.98,
-    -3.44,
-    51.73
+    23.34,
+    -23.73,
+    47.29
    ],
    "comb": {
     "b": 0.345,
@@ -291437,9 +297252,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.93,
-    -7.69,
-    55.06
+    37.25,
+    -22.86,
+    37.88
    ],
    "comb": {
     "b": 0.443,
@@ -291512,9 +297327,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -1.15,
-    10.26,
-    55.35
+    49.06,
+    -6.57,
+    29.9
    ],
    "comb": {
     "b": 0.392,
@@ -291580,9 +297395,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -7.23,
-    2.2,
-    49.58
+    33.42,
+    -9.08,
+    38.39
    ]
   },
   {
@@ -291640,9 +297455,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.0,
-    -1.33,
-    55.97
+    37.09,
+    -11.51,
+    42.86
    ],
    "comb": {
     "b": 0.389,
@@ -291710,9 +297525,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.59,
-    -1.94,
-    57.53
+    47.33,
+    -11.21,
+    34.01
    ],
    "comb": {
     "b": 0.405,
@@ -291781,9 +297596,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.69,
-    -2.96,
-    41.04
+    21.8,
+    -38.95,
+    26.1
    ],
    "comb": {
     "b": 0.473,
@@ -291852,9 +297667,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.04,
-    -14.18,
-    46.61
+    18.69,
+    -53.11,
+    -0.2
    ],
    "comb": {
     "b": 0.409,
@@ -291921,9 +297736,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.49,
-    49.34,
-    13.63
+    -10.85,
+    53.44,
+    14.03
    ],
    "comb": {
     "b": 0.617,
@@ -291990,9 +297805,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.03,
-    -7.74,
-    58.29
+    47.58,
+    -15.18,
+    34.8
    ]
   },
   {
@@ -292050,9 +297865,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -31.29,
-    -48.29,
-    -5.77
+    -51.22,
+    -26.2,
+    14.58
    ],
    "comb": {
     "b": 0.498,
@@ -292117,9 +297932,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.46,
-    -53.17,
-    -3.56
+    -45.92,
+    -34.45,
+    15.08
    ],
    "comb": {
     "b": 0.35,
@@ -292187,9 +298002,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.55,
-    -46.93,
-    -14.45
+    -51.36,
+    -29.62,
+    2.75
    ],
    "comb": {
     "b": 0.486,
@@ -292254,9 +298069,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.4,
-    -54.22,
-    -14.38
+    -50.51,
+    -32.33,
+    10.39
    ],
    "comb": {
     "b": 0.296,
@@ -292325,9 +298140,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.76,
-    -50.1,
-    2.63
+    -43.75,
+    -35.62,
+    18.43
    ],
    "comb": {
     "b": 0.37,
@@ -292395,9 +298210,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.24,
-    -54.02,
-    4.07
+    -41.17,
+    -38.37,
+    23.18
    ],
    "comb": {
     "b": 0.413,
@@ -292461,9 +298276,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.11,
-    -40.09,
-    -10.51
+    -50.01,
+    -28.3,
+    6.49
    ],
    "comb": {
     "b": 0.529,
@@ -292539,9 +298354,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.71,
-    -28.09,
-    -40.06
+    -18.24,
+    -35.2,
+    -35.53
    ],
    "comb": {
     "b": 0.261,
@@ -292617,9 +298432,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -25.09,
-    -23.65,
-    -38.53
+    -28.04,
+    -33.27,
+    -30.69
    ],
    "comb": {
     "b": 0.544,
@@ -292688,9 +298503,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.85,
-    -23.63,
-    -42.91
+    -25.31,
+    -36.23,
+    -32.36
    ],
    "comb": {
     "b": 0.334,
@@ -292757,9 +298572,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -37.15,
-    19.66,
-    5.12
+    -35.5,
+    18.38,
+    18.19
    ],
    "comb": {
     "b": 0.153,
@@ -292819,9 +298634,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.19,
-    34.3,
-    -3.58
+    -28.2,
+    33.83,
+    11.38
    ],
    "comb": {
     "b": 0.48,
@@ -292900,9 +298715,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.02,
-    12.42,
-    57.9
+    39.22,
+    6.79,
+    46.05
    ],
    "comb": {
     "b": 0.249,
@@ -292961,9 +298776,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.33,
-    4.79,
-    60.52
+    40.36,
+    -2.82,
+    47.48
    ],
    "comb": {
     "b": 0.311,
@@ -293023,9 +298838,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.68,
-    -6.4,
-    56.28
+    34.33,
+    -18.68,
+    44.66
    ],
    "comb": {
     "b": 0.179,
@@ -293077,9 +298892,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -1.92,
-    -9.77,
-    58.51
+    41.11,
+    -20.43,
+    39.96
    ],
    "comb": {
     "b": 0.236,
@@ -293134,9 +298949,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.17,
-    -19.23,
-    48.33
+    -7.78,
+    -16.31,
+    53.33
    ],
    "comb": {
     "b": 0.576,
@@ -293190,9 +299005,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.47,
-    -36.17,
-    44.77
+    -0.15,
+    -30.51,
+    52.67
    ],
    "comb": {
     "b": 0.654,
@@ -293246,9 +299061,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.5,
-    -50.89,
-    19.52
+    -30.12,
+    -39.02,
+    35.7
    ],
    "comb": {
     "b": 0.353,
@@ -293299,9 +299114,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -20.2,
-    -44.12,
-    2.85
+    -25.83,
+    -40.52,
+    14.37
    ]
   },
   {
@@ -293366,9 +299181,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.49,
-    -36.28,
-    19.29
+    -39.43,
+    -26.47,
+    33.0
    ],
    "comb": {
     "b": 0.378,
@@ -293442,9 +299257,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -23.51,
-    -47.2,
-    19.75
+    -28.72,
+    -35.52,
+    35.47
    ],
    "comb": {
     "b": 0.11,
@@ -293517,9 +299332,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.22,
-    -11.05,
-    46.23
+    24.73,
+    -50.55,
+    -1.99
    ],
    "comb": {
     "b": 0.492,
@@ -293591,9 +299406,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.05,
-    -4.14,
-    42.03
+    8.19,
+    -38.4,
+    33.63
    ],
    "comb": {
     "b": 0.64,
@@ -293667,9 +299482,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -36.18,
-    -36.2,
-    26.93
+    -28.6,
+    -40.73,
+    32.33
    ],
    "comb": {
     "b": 0.452,
@@ -293739,9 +299554,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -16.76,
-    -6.48,
-    51.75
+    34.69,
+    -43.69,
+    7.64
    ],
    "comb": {
     "b": 0.303,
@@ -293809,9 +299624,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -12.05,
-    -9.41,
-    54.19
+    35.38,
+    -41.33,
+    19.61
    ],
    "comb": {
     "b": 0.582,
@@ -293871,9 +299686,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -14.58,
-    -9.14,
-    48.75
+    29.55,
+    -37.93,
+    22.86
    ],
    "comb": {
     "b": 0.437,
@@ -293941,9 +299756,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.5,
-    -26.33,
-    46.78
+    11.76,
+    -54.75,
+    19.66
    ],
    "comb": {
     "b": 0.391,
@@ -294011,9 +299826,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.25,
-    -32.62,
-    44.95
+    20.79,
+    -28.9,
+    45.58
    ],
    "comb": {
     "b": 0.449,
@@ -294081,9 +299896,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    0.03,
-    -25.31,
-    50.29
+    14.29,
+    -26.32,
+    49.47
    ],
    "comb": {
     "b": 0.402,
@@ -294151,9 +299966,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.7,
-    -44.6,
-    23.06
+    -20.56,
+    -49.03,
+    26.38
    ],
    "comb": {
     "b": 0.328,
@@ -294230,9 +300045,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -43.08,
-    -30.54,
-    -19.55
+    -40.4,
+    -26.42,
+    -31.85
    ],
    "comb": {
     "b": 0.234,
@@ -294299,9 +300114,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -21.28,
-    -15.75,
-    -46.19
+    -26.37,
+    -28.98,
+    -38.28
    ],
    "comb": {
     "b": 0.34,
@@ -294369,9 +300184,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -52.0,
-    -10.19,
-    13.86
+    -47.57,
+    -7.35,
+    29.22
    ],
    "comb": {
     "b": 0.432,
@@ -294439,9 +300254,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -28.44,
-    -47.96,
-    15.34
+    -35.4,
+    -34.56,
+    32.79
    ],
    "comb": {
     "b": 0.237,
@@ -294508,9 +300323,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -24.2,
-    -44.66,
-    9.65
+    -30.1,
+    -37.15,
+    23.42
    ]
   },
   {
@@ -294568,9 +300383,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.23,
-    -47.98,
-    18.79
+    7.0,
+    -52.45,
+    -5.91
    ],
    "comb": {
     "b": 0.55,
@@ -294639,9 +300454,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    7.39,
-    -23.12,
-    45.65
+    29.0,
+    -34.25,
+    28.64
    ],
    "comb": {
     "b": 0.524,
@@ -294708,9 +300523,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.83,
-    -28.77,
-    30.23
+    35.96,
+    -31.52,
+    19.67
    ],
    "comb": {
     "b": 0.377,
@@ -294777,9 +300592,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    30.72,
-    -29.56,
-    36.78
+    41.71,
+    -33.95,
+    21.27
    ],
    "comb": {
     "b": 0.298,
@@ -294845,9 +300660,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -35.06,
-    -41.78,
-    19.23
+    -38.72,
+    -28.0,
+    35.2
    ],
    "comb": {
     "b": 0.264,
@@ -294923,9 +300738,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.68,
-    -58.94,
-    2.01
+    -34.33,
+    -47.1,
+    17.56
    ],
    "comb": {
     "b": 0.227,
@@ -294993,9 +300808,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.32,
-    -60.8,
-    1.51
+    -30.91,
+    -51.83,
+    15.78
    ],
    "comb": {
     "b": 0.15,
@@ -295070,9 +300885,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    3.71,
-    -62.16,
-    -3.6
+    -34.65,
+    -52.14,
+    12.75
    ],
    "comb": {
     "b": 0.278,
@@ -295150,9 +300965,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -4.2,
-    -60.39,
-    -6.34
+    -38.8,
+    -47.24,
+    12.44
    ],
    "comb": {
     "b": 0.177,
@@ -295228,9 +301043,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -6.32,
-    -59.01,
-    0.5
+    -35.39,
+    -47.54,
+    13.88
    ],
    "comb": {
     "b": 0.29,
@@ -295298,9 +301113,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    5.47,
-    -60.26,
-    6.63
+    -24.45,
+    -54.63,
+    17.58
    ],
    "comb": {
     "b": 0.399,
@@ -295377,9 +301192,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.23,
-    -60.7,
-    3.94
+    -27.37,
+    -54.31,
+    13.86
    ],
    "comb": {
     "b": 0.286,
@@ -295447,9 +301262,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -3.83,
-    -60.55,
-    4.92
+    -30.95,
+    -50.64,
+    19.21
    ],
    "comb": {
     "b": 0.347,
@@ -295540,9 +301355,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.56,
-    37.47,
-    -4.51
+    16.87,
+    50.49,
+    -12.92
    ],
    "comb": {
     "b": 0.301,
@@ -295628,9 +301443,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    35.53,
-    40.13,
-    -11.3
+    5.67,
+    53.39,
+    -16.98
    ]
   },
   {
@@ -295706,9 +301521,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.98,
-    39.0,
-    -32.44
+    -15.81,
+    46.02,
+    21.61
    ]
   },
   {
@@ -295784,9 +301599,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.85,
-    24.35,
-    44.45
+    58.64,
+    6.58,
+    -6.4
    ]
   },
   {
@@ -295864,9 +301679,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    29.78,
-    6.87,
-    43.6
+    49.87,
+    -14.11,
+    -17.72
    ],
    "comb": {
     "b": 0.292,
@@ -295951,9 +301766,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    52.04,
-    24.41,
-    -6.36
+    42.43,
+    36.4,
+    -19.95
    ]
   },
   {
@@ -296034,9 +301849,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    42.03,
-    23.42,
-    29.24
+    54.55,
+    18.91,
+    -3.33
    ],
    "comb": {
     "b": 0.44,
@@ -296126,9 +301941,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    43.13,
-    31.05,
-    3.22
+    33.49,
+    42.65,
+    -7.71
    ],
    "comb": {
     "b": 0.135,
@@ -296213,9 +302028,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    44.69,
-    29.85,
-    10.62
+    38.02,
+    41.49,
+    -1.78
    ]
   },
   {
@@ -296291,9 +302106,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    45.25,
-    29.47,
-    9.22
+    38.32,
+    41.13,
+    -3.28
    ]
   },
   {
@@ -296370,9 +302185,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    45.56,
-    31.18,
-    11.08
+    37.96,
+    43.61,
+    -1.17
    ]
   },
   {
@@ -296450,9 +302265,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    47.1,
-    29.01,
-    10.53
+    41.31,
+    40.34,
+    -3.17
    ],
    "comb": {
     "b": 0.272,
@@ -296519,9 +302334,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    29.28,
-    41.7,
-    15.44
+    30.97,
+    42.02,
+    -16.59
    ],
    "comb": {
     "b": 0.373,
@@ -296586,9 +302401,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    8.6,
-    49.3,
-    -3.41
+    16.31,
+    47.57,
+    -12.02
    ]
   },
   {
@@ -296645,9 +302460,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    9.06,
-    47.06,
-    14.8
+    33.51,
+    38.6,
+    -7.79
    ],
    "comb": {
     "b": 0.437,
@@ -296723,9 +302538,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.71,
-    42.52,
-    -6.13
+    14.15,
+    50.84,
+    -27.16
    ],
    "comb": {
     "b": 0.397,
@@ -296801,9 +302616,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    39.22,
-    36.35,
-    -17.62
+    10.92,
+    49.9,
+    -27.12
    ],
    "comb": {
     "b": 0.319,
@@ -296871,9 +302686,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    17.84,
-    46.44,
-    6.38
+    25.9,
+    42.38,
+    -14.37
    ],
    "comb": {
     "b": 0.571,
@@ -296949,9 +302764,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.48,
-    37.24,
-    11.53
+    30.9,
+    37.43,
+    -28.53
    ],
    "comb": {
     "b": 0.508,
@@ -297018,9 +302833,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    38.51,
-    41.61,
-    -11.38
+    6.08,
+    57.11,
+    -14.95
    ],
    "comb": {
     "b": 0.307,
@@ -297087,9 +302902,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -22.93,
-    46.32,
-    1.23
+    -20.18,
+    44.04,
+    -22.08
    ],
    "comb": {
     "b": 0.384,
@@ -297155,9 +302970,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.9,
-    45.01,
-    -36.2
+    -7.73,
+    56.77,
+    15.51
    ],
    "comb": {
     "b": 0.236,
@@ -297223,9 +303038,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    27.87,
-    16.58,
-    40.26
+    48.01,
+    -5.67,
+    -22.31
    ]
   },
   {
@@ -297282,9 +303097,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    22.98,
-    12.81,
-    44.51
+    52.31,
+    -9.91,
+    -0.37
    ],
    "comb": {
     "b": 0.354,
@@ -297343,9 +303158,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    11.98,
-    10.97,
-    44.16
+    47.17,
+    -11.72,
+    0.44
    ],
    "comb": {
     "b": 0.206,
@@ -297411,9 +303226,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    37.58,
-    17.22,
-    -25.56
+    21.79,
+    30.87,
+    -32.98
    ],
    "comb": {
     "b": 0.165,
@@ -297479,9 +303294,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    51.45,
-    16.41,
-    -9.18
+    39.56,
+    30.44,
+    -26.05
    ],
    "comb": {
     "b": 0.399,
@@ -297555,9 +303370,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    50.88,
-    24.26,
-    -18.57
+    36.3,
+    39.41,
+    -28.88
    ],
    "comb": {
     "b": 0.274,
@@ -297624,9 +303439,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    50.04,
-    22.39,
-    -12.84
+    36.99,
+    33.46,
+    -29.27
    ],
    "comb": {
     "b": 0.446,
@@ -297694,9 +303509,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    49.69,
-    19.21,
-    12.71
+    49.16,
+    26.04,
+    -8.7
    ],
    "comb": {
     "b": 0.305,
@@ -297763,9 +303578,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    45.16,
-    16.11,
-    23.13
+    50.41,
+    21.29,
+    2.48
    ],
    "comb": {
     "b": 0.555,
@@ -297824,9 +303639,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    51.19,
-    23.26,
-    -2.89
+    42.98,
+    33.98,
+    -18.5
    ]
   },
   {
@@ -297891,9 +303706,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    53.91,
-    24.21,
-    -5.53
+    44.2,
+    36.25,
+    -20.9
    ]
   },
   {
@@ -297950,9 +303765,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    50.5,
-    25.72,
-    -11.52
+    39.02,
+    38.56,
+    -22.65
    ],
    "comb": {
     "b": 0.276,
@@ -298029,9 +303844,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    47.99,
-    15.65,
-    24.95
+    54.8,
+    15.56,
+    -9.94
    ],
    "comb": {
     "b": 0.342,
@@ -298098,9 +303913,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    48.98,
-    27.76,
-    0.86
+    39.54,
+    40.39,
+    -12.23
    ],
    "comb": {
     "b": 0.321,
@@ -298168,9 +303983,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -46.39,
-    3.51,
-    18.75
+    -31.21,
+    -13.23,
+    -39.04
    ],
    "comb": {
     "b": 0.498,
@@ -298246,9 +304061,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -30.65,
-    -28.92,
-    29.95
+    -22.68,
+    -24.25,
+    41.62
    ],
    "comb": {
     "b": 0.426,
@@ -298324,9 +304139,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -13.38,
-    -51.55,
-    22.55
+    -19.23,
+    -41.86,
+    37.43
    ],
    "comb": {
     "b": 0.223,
@@ -298393,9 +304208,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.06,
-    32.26,
-    2.83
+    34.8,
+    45.21,
+    -9.46
    ],
    "comb": {
     "b": 0.356,
@@ -298463,9 +304278,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    48.34,
-    27.62,
-    8.39
+    41.26,
+    40.1,
+    -5.81
    ],
    "comb": {
     "b": 0.374,
@@ -298531,9 +304346,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    51.32,
-    18.87,
-    18.83
+    53.41,
+    25.62,
+    -3.64
    ]
   },
   {
@@ -298590,9 +304405,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.08,
-    45.15,
-    -2.19
+    10.34,
+    49.99,
+    -30.28
    ],
    "comb": {
     "b": 0.389,
@@ -298659,9 +304474,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    14.24,
-    3.64,
-    51.17
+    48.92,
+    -19.66,
+    -14.87
    ],
    "comb": {
     "b": 0.53,
@@ -298732,9 +304547,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    47.81,
-    16.68,
-    27.93
+    56.68,
+    16.61,
+    -5.8
    ],
    "comb": {
     "b": 0.313,
@@ -298800,9 +304615,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    4.52,
-    45.91,
-    -26.58
+    -3.09,
+    51.85,
+    17.39
    ],
    "comb": {
     "b": 0.374,
@@ -298870,9 +304685,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.24,
-    20.14,
-    11.37
+    44.19,
+    17.25,
+    -24.18
    ],
    "comb": {
     "b": 0.474,
@@ -298941,9 +304756,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -18.8,
-    47.72,
-    -6.52
+    -25.07,
+    46.92,
+    -2.18
    ],
    "comb": {
     "b": 0.397,
@@ -299009,9 +304824,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    52.05,
-    13.44,
-    21.32
+    52.26,
+    6.57,
+    -27.36
    ],
    "comb": {
     "b": 0.304,
@@ -299077,9 +304892,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    29.44,
-    17.7,
-    40.68
+    49.12,
+    -5.27,
+    -23.65
    ]
   },
   {
@@ -299137,9 +304952,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.66,
-    1.15,
-    22.36
+    -23.1,
+    -15.53,
+    -50.69
    ],
    "comb": {
     "b": 0.574,
@@ -299206,9 +305021,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -27.2,
-    32.12,
-    -4.61
+    -28.86,
+    33.08,
+    1.26
    ],
    "comb": {
     "b": 0.284,
@@ -299274,9 +305089,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    47.15,
-    30.5,
-    13.84
+    41.62,
+    42.31,
+    0.42
    ]
   },
   {
@@ -299333,9 +305148,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    36.41,
-    39.11,
-    -12.04
+    7.12,
+    53.38,
+    -16.44
    ],
    "comb": {
     "b": 0.307,
@@ -299401,9 +305216,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -51.53,
-    -18.04,
-    13.78
+    -29.15,
+    -21.04,
+    -45.3
    ],
    "comb": {
     "b": 0.443,
@@ -299469,9 +305284,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    46.72,
-    21.98,
-    22.45
+    52.4,
+    24.01,
+    -4.74
    ],
    "comb": {
     "b": 0.31,
@@ -299537,9 +305352,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    6.62,
-    19.06,
-    54.2
+    49.95,
+    10.62,
+    30.24
    ],
    "comb": {
     "b": 0.483,
@@ -299605,9 +305420,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    2.63,
-    -2.52,
-    60.76
+    50.33,
+    -14.34,
+    33.95
    ],
    "comb": {
     "b": 0.336,
@@ -299673,9 +305488,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -5.8,
-    10.97,
-    56.48
+    37.34,
+    4.3,
+    45.93
    ],
    "comb": {
     "b": 0.332,
@@ -299742,9 +305557,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.49,
-    21.0,
-    2.49
+    -38.68,
+    19.67,
+    13.63
    ],
    "comb": {
     "b": 0.245,
@@ -299810,9 +305625,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -9.8,
-    13.41,
-    55.39
+    30.64,
+    5.53,
+    50.53
    ],
    "comb": {
     "b": 0.422,
@@ -299878,9 +305693,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -34.51,
-    17.64,
-    5.67
+    -32.96,
+    16.88,
+    20.52
    ]
   },
   {
@@ -299938,9 +305753,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -17.38,
-    48.67,
-    -1.44
+    -20.6,
+    48.03,
+    10.17
    ],
    "comb": {
     "b": 0.407,
@@ -300009,9 +305824,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    24.7,
-    11.29,
-    45.79
+    51.07,
+    -12.54,
+    -15.34
    ],
    "comb": {
     "b": 0.445,
@@ -300078,9 +305893,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    44.32,
-    33.92,
-    7.48
+    32.73,
+    47.52,
+    -3.95
    ],
    "comb": {
     "b": 0.307,
@@ -300146,9 +305961,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -2.81,
-    -12.95,
-    59.41
+    41.55,
+    -21.1,
+    41.47
    ]
   },
   {
@@ -300205,9 +306020,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -49.02,
-    11.48,
-    17.33
+    -45.18,
+    7.59,
+    30.03
    ],
    "comb": {
     "b": 0.46,
@@ -300282,9 +306097,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -8.3,
-    10.11,
-    57.89
+    36.6,
+    2.95,
+    48.54
    ],
    "comb": {
     "b": 0.443,
@@ -300361,9 +306176,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -26.66,
-    -11.41,
-    50.03
+    24.48,
+    -53.73,
+    6.03
    ],
    "comb": {
     "b": 0.358,
@@ -300444,9 +306259,9 @@ window.ROADMAP = {
     ]
    },
    "p": [
-    -42.87,
-    -31.38,
-    22.85
+    -27.46,
+    -45.33,
+    26.7
    ],
    "comb": {
     "b": 0.539,
@@ -300515,9 +306330,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -19.79,
-    26.16,
-    -21.41
+    -23.63,
+    30.0,
+    18.29
    ],
    "comb": {
     "b": 0.339,
@@ -300585,9 +306400,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    16.74,
-    39.28,
-    -23.23
+    10.73,
+    48.98,
+    -1.2
    ],
    "comb": {
     "b": 0.486,
@@ -300656,9 +306471,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -38.69,
-    27.4,
-    -24.24
+    -42.02,
+    27.95,
+    21.3
    ],
    "comb": {
     "b": 0.396,
@@ -300725,9 +306540,9 @@ window.ROADMAP = {
     }
    ],
    "p": [
-    -11.11,
-    26.49,
-    -24.21
+    -16.7,
+    33.25,
+    16.63
    ]
   }
  ],

@@ -1,0 +1,773 @@
+# S-028 平均と代表値
+#
+# 書き方は N-001 の頭の注のとおり。段 3 なので、子に見せる文は学年に合う漢字で書く（N-014 にならい小 3 までの漢字。
+#   求・順・選・残・確 などはかなで書く）。言葉の名前（平均、中央値、最頻値、範囲、代表値）は漢字で書き、2 日目の見本で読みをそえる。
+# 前提は S-027（表とグラフ）、N-014（わり算とあまり）、N-020（小数）。たどると N-007（2 けたのたし算とひき算）、
+#   N-009（1000 までの数）、N-013（九九）、N-016（分数の意味）。
+#   かけ算とわり算の筆算（N-074、N-075）と小数のかけ算とわり算（N-077）は前提にないので、合計 ÷ 個数 は九九の範囲
+#   （わる数 1〜9、答え 9 まで）にする。大きい数の平均は、いちばん小さい数をもとにして、それより多い分だけをならす
+#   （仮の平均。3 日目のわけで、そうしてよいわけを書く）。
+#   わり切れないときは、N-020 の 4 日目のとおり、あまりを 0.1 のいくつ分とみて分ける（26 ÷ 4 = 6 あまり 2、2 は 0.1 の 20 こ分、
+#   4 で分けて 5 こ分なので 6.5）。データが偶数こ のときの中央値（5 と 6 のまん中で 5.5）も同じ考えで出す。
+#   長さ・重さ（G-046）、時刻と時間（N-059）、お金（N-060）は前提にないので、場面は点数、回数、こ数、さっ数にする。
+#   かさの L は N-020 で使っているので、小数のデータに使う。
+# 範囲（いちばん大きい数 − いちばん小さい数）は、代表値とならぶ「広がり」の入口として 2 日目の見本で名前を出す
+#   （13+ の論題「代表値と範囲」）。四分位数と箱ひげ図、度数分布は S-029。
+# check：平均は Fraction(合計, 個数)（わり切れなければ分数になって答えと合わないので、わり切れることも確かめられる）。
+#   小数の答えは (lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)(…) で小数の文字にする。
+#   中央値は sorted(データ) の真ん中。最頻値は max(set(d), key=d.count)。図の 🟦 は n('🟦') と fig.splitlines() で数える。
+# 日の並びは地図の既定（導入・練習・わけ・混ぜる・確認）。ねらいは次のとおりにした。
+#   1 日目 導入：平均（ならす、合計 ÷ 個数、合計 = 平均 × 個数、0 もデータに入れる）。
+#   2 日目 練習：中央値、最頻値、範囲（頭に見本）。データが偶数こ の中央値と、わり切れない平均は小数で。
+#   3 日目 わけ：合計 ÷ 個数 でよいわけ（ならしても合計はかわらない）、外れた数があるときは中央値がよいわけ、仮の平均でよいわけ。
+#   4 日目 混ぜる：S-027（棒グラフ、表）、N-014（あまり）、N-020（小数）と、1〜3 日目の型を混ぜる。
+#   5 日目 確認。
+
+id: S-028
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 4 人が貝をひろいました。多い人から少ない人へ貝を動かして、みんな同じ数にすると、1 人何こになるかな。
+        figure: "🐚🐚🐚🐚🐚\n🐚🐚🐚\n🐚🐚🐚🐚🐚🐚\n🐚🐚"
+        explain: 6 この人から 2 こを 2 この人へ、5 この人から 1 こを 3 この人へ動かすと、みんな 4 こになります。このように、でこぼこをならして同じ大きさにした数を平均（へいきん）といいます。動かしても全部の数（合計）は 16 このままなので、平均は 合計 ÷ 人数 で、16 ÷ 4 = 4 と計算できます。
+      - part: 思い出す
+        text: 42 ÷ 6 はいくつですか。
+        answer: 7
+        check: 42 // 6
+        hints:
+          - 6 のだんの九九で、答えが 42 になるのはどれかな。
+          - 6 × □ = 42 の □ をさがそう。
+          - 6 × 6 = 36 から、6 ずつふやしてみよう。
+        paths:
+          - [6 のだんで 42 になるのをさがす, 6 × 7 = 42, 42 ÷ 6 = 7]
+      - part: 思い出す
+        text: 4 人が読んだ本のさっ数を表にしました。4 人の合計は何さつですか。
+        svg: |
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="24.5" y="6" width="191" height="26" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="24.5" y="6" width="191" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="24.5" y1="32" x2="215.5" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="79.5" y1="6" x2="79.5" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="113.5" y1="6" x2="113.5" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="147.5" y1="6" x2="147.5" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="181.5" y1="6" x2="181.5" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="52" y="23.68" font-size="13" text-anchor="middle">人</text>
+            <text x="96.5" y="23.68" font-size="13" text-anchor="middle">A</text>
+            <text x="130.5" y="23.68" font-size="13" text-anchor="middle">B</text>
+            <text x="164.5" y="23.68" font-size="13" text-anchor="middle">C</text>
+            <text x="198.5" y="23.68" font-size="13" text-anchor="middle">D</text>
+            <text x="52" y="49.68" font-size="13" text-anchor="middle">さっ数</text>
+            <text x="96.5" y="49.68" font-size="13" text-anchor="middle">3</text>
+            <text x="130.5" y="49.68" font-size="13" text-anchor="middle">5</text>
+            <text x="164.5" y="49.68" font-size="13" text-anchor="middle">4</text>
+            <text x="198.5" y="49.68" font-size="13" text-anchor="middle">6</text>
+          </svg>
+        answer: 18
+        check: 3 + 5 + 4 + 6
+        hints:
+          - 表の数を 1 つずつ見よう。
+          - 3 と 5 で 8。つづけてたそう。
+          - 8 に 4 と 6 をたそう。
+        paths:
+          - [3 + 5 = 8, 8 + 4 = 12, 12 + 6 = 18]
+          - [4 + 6 = 10、3 + 5 = 8, 10 + 8 = 18]
+      - part: 今日
+        text: 4 れつにならんだブロックを、多いれつから少ないれつへ動かして、どのれつも同じ数にします。1 れつ何こになりますか。
+        figure: "🟦🟦🟦🟦🟦🟦🟦\n🟦🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦🟦🟦🟦"
+        answer: 6
+        check: Fraction(n('🟦'), len(fig.splitlines()))
+        hints:
+          - ブロックは全部で何こあるかな。
+          - 動かしても、全部の数はかわらないね。
+          - 全部の数を、4 れつに同じ数ずつ分けよう。
+        paths:
+          - [全部で 7 + 4 + 5 + 8 = 24 こ, 24 ÷ 4 = 6, 6 こ]
+          - [8 このれつから 2 こを 4 このれつへ、7 このれつから 1 こを 5 このれつへ, みんな 6 こ]
+      - part: 今日
+        text: 5 回の小テスト（10 点まんてん）の点数は、6 点、9 点、4 点、8 点、8 点でした。平均は何点ですか。
+        answer: 7
+        check: Fraction(sum([6, 9, 4, 8, 8]), 5)
+        hints:
+          - 5 回の点数の合計を出そう。
+          - 合計を回数でわろう。
+          - 合計 ÷ 5 は、5 のだんの九九でさがそう。
+        paths:
+          - [合計は 6 + 9 + 4 + 8 + 8 = 35, 35 ÷ 5 = 7, 7 点]
+        note: 7 点は 5 回のどれとも同じではない。平均は、データの中にない数になることもある。
+      - part: 今日
+        text: 6 人がひろったどんぐりの数の平均は 8 こでした。6 人がひろったどんぐりは、合わせて何こですか。
+        answer: 48
+        check: 8 * 6
+        hints:
+          - 平均は、ならしたときの 1 人分の数だね。
+          - ならすと、6 人がみんな 8 こずつ持っていることになるね。
+          - 8 こが 6 人分で、何こかな。
+        paths:
+          - [ならすと 1 人 8 こ, 8 × 6 = 48, 48 こ]
+        note: 平均 × 人数 = 合計。平均の式を、もとにもどす向きに使う。
+      - part: 挑戦
+        text: 月曜日から金曜日までの 5 日間に読んだ本のさっ数は、5 さつ、0 さつ、7 さつ、1 さつ、2 さつでした。1 日の平均は何さつですか。
+        answer: 3
+        check: Fraction(5 + 0 + 7 + 1 + 2, 5)
+        hints:
+          - 5 日間の合計は何さつかな。
+          - 0 さつの日も、日数に入れるかな。
+          - 合計を何日でわればよいかな。
+        paths:
+          - [合計は 15 さつ, 0 さつの日も入れて 5 日, 15 ÷ 5 = 3, 3 さつ]
+        note: 0 さつの日を数えずに 15 ÷ 4 としやすい。0 も 1 つのデータとして日数に入れる。
+    extra:
+      - part: 今日
+        text: 3 れつにならんだブロックを、どのれつも同じ数になるように動かします。1 れつ何こになりますか。
+        figure: "🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦🟦\n🟦🟦🟦🟦🟦🟦🟦"
+        answer: 6
+        check: Fraction(n('🟦'), len(fig.splitlines()))
+        hints:
+          - ブロックは全部で何こあるかな。
+          - 動かしても、全部の数はかわらないね。
+          - 全部の数を、3 れつに同じ数ずつ分けよう。
+        paths:
+          - [全部で 9 + 2 + 7 = 18 こ, 18 ÷ 3 = 6, 6 こ]
+      - part: 今日
+        text: 4 回のなわとびで、つづけてとんだ回数は 8 回、5 回、9 回、6 回でした。平均は何回ですか。
+        answer: 7
+        check: Fraction(8 + 5 + 9 + 6, 4)
+        hints:
+          - 4 回の合計を出そう。
+          - 合計を 4 でわろう。
+          - 4 のだんの九九でさがそう。
+        paths:
+          - [合計は 28 回, 28 ÷ 4 = 7, 7 回]
+      - part: 今日
+        text: 4 回のゲームの点数の平均は 9 点でした。4 回の点数の合計は何点ですか。
+        answer: 36
+        check: 9 * 4
+        hints:
+          - ならすと、4 回ともいくつになるかな。
+          - 9 点が 4 回分だね。
+          - 9 × 4 を計算しよう。
+        paths:
+          - [ならすと 4 回とも 9 点, 9 × 4 = 36, 36 点]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 7 人の小テスト（10 点まんてん）の点数は、8、5、9、6、8、3、7（点）でした。真ん中の点数と、いちばん多い点数を調べよう。
+        explain: 小さいじゅんにならべると 3、5、6、7、8、8、9 です。7 人の真ん中（4 番目）は 7 点です。このように、小さいじゅんにならべたときの真ん中の数を中央値（ちゅうおうち）といいます。データが 6 こ のように真ん中が 2 つあるときは、その 2 つの平均を中央値にします。いちばん多く出てくる数を最頻値（さいひんち）といい、ここでは 2 回出てくる 8 点です。平均、中央値、最頻値のように、データ全体を 1 つの数で表すものを代表値といいます。また、いちばん大きい数からいちばん小さい数をひいた 9 − 3 = 6 を範囲（はんい）といい、データの広がりを表します。
+      - part: 思い出す
+        text: 4 人がとったカードのまい数は、9 まい、3 まい、8 まい、4 まいでした。平均は何まいですか。
+        answer: 6
+        check: Fraction(9 + 3 + 8 + 4, 4)
+        hints:
+          - 4 人の合計を出そう。
+          - 合計を人数でわろう。
+          - 4 のだんの九九でさがそう。
+        paths:
+          - [合計は 24 まい, 24 ÷ 4 = 6, 6 まい]
+      - part: 思い出す
+        text: 4 回のゲームの点数の平均は 7 点でした。4 回の合計は何点ですか。
+        answer: 28
+        check: 7 * 4
+        hints:
+          - ならすと、4 回ともいくつになるかな。
+          - 7 点が 4 回分だね。
+          - 7 × 4 を計算しよう。
+        paths:
+          - [ならすと 4 回とも 7 点, 7 × 4 = 28, 28 点]
+      - part: 今日
+        text: 5 人が 1 分間にとんだなわとびの回数は、12、7、15、9、11（回）でした。中央値は何回ですか。
+        answer: 11
+        check: sorted([12, 7, 15, 9, 11])[2]
+        hints:
+          - 小さいじゅんにならべよう。
+          - 5 人の真ん中は、何番目かな。
+          - ならべた数の、真ん中の番目を読もう。
+        paths:
+          - [ならべると 7、9、11、12、15, 真ん中は 3 番目, 11 回]
+        note: ならべずに、書いてあるじゅんの真ん中（15）を答えやすい。先に小さいじゅんにならべる。
+      - part: 今日
+        text: 11 人が 1 週間に図書室へ行った回数を、点で表しました。最頻値は何回ですか。
+        svg: |
+          <svg viewBox="0 0 280 112" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="54.2857" cy="63" r="5" fill="currentColor"/>
+            <circle cx="88.5714" cy="63" r="5" fill="currentColor"/>
+            <circle cx="88.5714" cy="50" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="63" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="50" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="37" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="24" r="5" fill="currentColor"/>
+            <circle cx="157.143" cy="63" r="5" fill="currentColor"/>
+            <circle cx="191.429" cy="63" r="5" fill="currentColor"/>
+            <circle cx="191.429" cy="50" r="5" fill="currentColor"/>
+            <circle cx="260" cy="63" r="5" fill="currentColor"/>
+            <line x1="14" y1="72" x2="266" y2="72" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="20" y1="72" x2="20" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="20" y="90" font-size="11" text-anchor="middle">0</text>
+            <line x1="54.2857" y1="72" x2="54.2857" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="54.2857" y="90" font-size="11" text-anchor="middle">1</text>
+            <line x1="88.5714" y1="72" x2="88.5714" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="88.5714" y="90" font-size="11" text-anchor="middle">2</text>
+            <line x1="122.857" y1="72" x2="122.857" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="122.857" y="90" font-size="11" text-anchor="middle">3</text>
+            <line x1="157.143" y1="72" x2="157.143" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="157.143" y="90" font-size="11" text-anchor="middle">4</text>
+            <line x1="191.429" y1="72" x2="191.429" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="191.429" y="90" font-size="11" text-anchor="middle">5</text>
+            <line x1="225.714" y1="72" x2="225.714" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="225.714" y="90" font-size="11" text-anchor="middle">6</text>
+            <line x1="260" y1="72" x2="260" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="260" y="90" font-size="11" text-anchor="middle">7</text>
+            <text x="274" y="106" font-size="11" text-anchor="end">（回）</text>
+          </svg>
+        answer: 3
+        check: "(lambda d: max(set(d), key=d.count))([1, 2, 2, 3, 3, 3, 3, 4, 5, 5, 7])"
+        hints:
+          - 点がいちばん高くつみ上がっているのは、どの回数のところかな。
+          - 点の数を数えて、たしかめよう。
+          - 最頻値は、いちばん多く出てくる数だったね。
+        paths:
+          - [3 回のところに点が 4 こ, ほかのどこよりも多い, 最頻値は 3 回]
+        note: 点の数（4）を答えやすい。たずねているのは人数ではなく、回数のほう。
+      - part: 今日
+        text: 6 人の小テスト（10 点まんてん）の点数は、4、9、6、2、8、5（点）でした。中央値は何点ですか。
+        answer: 5.5
+        check: (lambda s:(s[2] + s[3]) / 2)(sorted([4, 9, 6, 2, 8, 5]))
+        hints:
+          - 小さいじゅんにならべよう。
+          - 6 人の真ん中には、数が 2 つあるね。
+          - その 2 つの平均を出そう。あまりは 0.1 のいくつ分と考えよう。
+        paths:
+          - [ならべると 2、4、5、6、8、9, 真ん中は 5 と 6, (5 + 6) ÷ 2 = 5.5, 5.5 点]
+          - [5 と 6 のちょうど真ん中, 5 と 6 の間の 1 を 2 つに分けて 0.5, 5.5 点]
+        note: 11 ÷ 2 = 5 あまり 1。あまりの 1 を 0.1 の 10 こ分とみて 2 で分けると 0.1 の 5 こ分なので 5.5（N-020 の考え）。
+      - part: 挑戦
+        text: 4 回のゲームの点数は、7 点、5 点、8 点、6 点でした。平均は何点ですか。
+        answer: 6.5
+        check: (lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(7 + 5 + 8 + 6, 4))
+        hints:
+          - 合計を回数でわろう。
+          - わり切れないときは、あまりを 0.1 のいくつ分と考えよう。
+          - あまりは 0.1 の何こ分かな。それを 4 で分けよう。
+        paths:
+          - [合計は 26 点, 26 ÷ 4 = 6 あまり 2, あまりの 2 は 0.1 の 20 こ分で 4 で分けると 5 こ分, 6.5 点]
+        note: 平均は、点数としては出ない 6.5 のような小数になることがある。
+    extra:
+      - part: 今日
+        text: 7 人がひろったくりの数は、14、9、20、11、16、8、13（こ）でした。中央値は何こですか。
+        answer: 13
+        check: sorted([14, 9, 20, 11, 16, 8, 13])[3]
+        hints:
+          - 小さいじゅんにならべよう。
+          - 7 人の真ん中は、何番目かな。
+          - ならべた数の、真ん中の番目を読もう。
+        paths:
+          - [ならべると 8、9、11、13、14、16、20, 真ん中は 4 番目, 13 こ]
+      - part: 今日
+        text: 小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。
+        svg: |
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="6" width="42" height="52" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="14" y="6" width="212" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="32" x2="226" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="56" y1="6" x2="56" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="90" y1="6" x2="90" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="124" y1="6" x2="124" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="158" y1="6" x2="158" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="192" y1="6" x2="192" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="35" y="23.68" font-size="13" text-anchor="middle">点数</text>
+            <text x="73" y="23.68" font-size="13" text-anchor="middle">6</text>
+            <text x="107" y="23.68" font-size="13" text-anchor="middle">7</text>
+            <text x="141" y="23.68" font-size="13" text-anchor="middle">8</text>
+            <text x="175" y="23.68" font-size="13" text-anchor="middle">9</text>
+            <text x="209" y="23.68" font-size="13" text-anchor="middle">10</text>
+            <text x="35" y="49.68" font-size="13" text-anchor="middle">人数</text>
+            <text x="73" y="49.68" font-size="13" text-anchor="middle">3</text>
+            <text x="107" y="49.68" font-size="13" text-anchor="middle">6</text>
+            <text x="141" y="49.68" font-size="13" text-anchor="middle">9</text>
+            <text x="175" y="49.68" font-size="13" text-anchor="middle">4</text>
+            <text x="209" y="49.68" font-size="13" text-anchor="middle">2</text>
+          </svg>
+        answer: 8
+        check: "(lambda d: max(d, key=d.get))({6: 3, 7: 6, 8: 9, 9: 4, 10: 2})"
+        hints:
+          - 人数がいちばん多いのは、どの点数かな。
+          - 表の下の行で、いちばん大きい数をさがそう。
+          - その上に書いてある点数を読もう。
+        paths:
+          - [いちばん多い人数は 9 人, その点数は 8 点, 最頻値は 8 点]
+        note: 人数の 9 を答えやすい。最頻値は点数のほう。
+      - part: 今日
+        text: 4 人の点数は、13、7、10、16（点）でした。中央値は何点ですか。
+        answer: 11.5
+        check: (lambda s:(s[1] + s[2]) / 2)(sorted([13, 7, 10, 16]))
+        hints:
+          - 小さいじゅんにならべよう。
+          - 4 人の真ん中には、数が 2 つあるね。
+          - その 2 つの平均を出そう。
+        paths:
+          - [ならべると 7、10、13、16, 真ん中は 10 と 13, (10 + 13) ÷ 2 = 11.5, 11.5 点]
+
+  - day: 3
+    items:
+      - part: 思い出す
+        text: 9 人がつくったつるの数を、点で表しました。中央値は何わですか。
+        svg: |
+          <svg viewBox="0 0 280 99" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="5" fill="currentColor"/>
+            <circle cx="80" cy="50" r="5" fill="currentColor"/>
+            <circle cx="80" cy="37" r="5" fill="currentColor"/>
+            <circle cx="80" cy="24" r="5" fill="currentColor"/>
+            <circle cx="110" cy="50" r="5" fill="currentColor"/>
+            <circle cx="170" cy="50" r="5" fill="currentColor"/>
+            <circle cx="170" cy="37" r="5" fill="currentColor"/>
+            <circle cx="200" cy="50" r="5" fill="currentColor"/>
+            <circle cx="230" cy="50" r="5" fill="currentColor"/>
+            <line x1="14" y1="59" x2="266" y2="59" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="20" y1="59" x2="20" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="20" y="77" font-size="11" text-anchor="middle">0</text>
+            <line x1="50" y1="59" x2="50" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="50" y="77" font-size="11" text-anchor="middle">1</text>
+            <line x1="80" y1="59" x2="80" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="80" y="77" font-size="11" text-anchor="middle">2</text>
+            <line x1="110" y1="59" x2="110" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="110" y="77" font-size="11" text-anchor="middle">3</text>
+            <line x1="140" y1="59" x2="140" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="140" y="77" font-size="11" text-anchor="middle">4</text>
+            <line x1="170" y1="59" x2="170" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="170" y="77" font-size="11" text-anchor="middle">5</text>
+            <line x1="200" y1="59" x2="200" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="200" y="77" font-size="11" text-anchor="middle">6</text>
+            <line x1="230" y1="59" x2="230" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="230" y="77" font-size="11" text-anchor="middle">7</text>
+            <line x1="260" y1="59" x2="260" y2="65" stroke="currentColor" stroke-width="1"/>
+            <text x="260" y="77" font-size="11" text-anchor="middle">8</text>
+            <text x="274" y="93" font-size="11" text-anchor="end">（わ）</text>
+          </svg>
+        answer: 3
+        check: sorted([1, 2, 2, 2, 3, 5, 5, 6, 7])[4]
+        hints:
+          - 点を左から 1 つずつ数えよう。
+          - 9 人の真ん中は、何番目かな。
+          - 左から数えて真ん中の点は、どの数のところにあるかな。
+        paths:
+          - [9 人の真ん中は 5 番目, 左から 1、2、2、2、3, 3 わ]
+        note: いちばん多い 2 わ（最頻値）と取りちがえやすい。
+      - part: 思い出す
+        text: 5 日間にシュートが入った数は、6 回、0 回、3 回、8 回、3 回でした。1 日の平均は何回ですか。
+        answer: 4
+        check: Fraction(6 + 0 + 3 + 8 + 3, 5)
+        hints:
+          - 5 日間の合計を出そう。
+          - 0 回の日も、日数に入れるかな。
+          - 合計を 5 でわろう。
+        paths:
+          - [合計は 20 回, 0 回の日も入れて 5 日, 20 ÷ 5 = 4, 4 回]
+      - part: わけ
+        text: 4 人がひろったくりの数は、7 こ、2 こ、5 こ、2 こでした。平均を「合計 ÷ 人数」で出してよいわけを、ならす考えを使って文に書きましょう。
+        explain: 例：「7 この人から 3 こ、5 この人から 1 こを、2 この 2 人に 2 こずつ動かすと、みんな 4 こになる。動かしても全部の数は 16 このままかわらない。だから、ならすことは、合計の 16 こを 4 人で同じ数ずつ分けることと同じで、16 ÷ 4 = 4 と計算できる。」と書ければよい。① ならしても合計はかわらない、② 同じ数ずつ分けることだからわり算になる、の 2 つが書けているかを見る。動かし方だけを書いて終わっていたら、なぜわり算になるのかを聞く。
+        hints:
+          - 4 人がみんな同じ数になるように、くりを動かしてみよう。
+          - 動かす前と後で、全部の数はかわったかな。
+          - 「同じ数ずつ分ける」ことは、何の計算だったかな。
+        paths:
+          - [動かしても合計 16 こはかわらない, ならすのは 16 こを 4 人で同じ数ずつ分けること, だから 16 ÷ 4 = 4]
+      - part: わけ
+        text: 5 人が 1 か月に読んだ本のさっ数は、2、3、3、4、28（さつ）でした。平均と中央値を出して、「ふつう何さつぐらい読んだか」を表すのにどちらがよいかを、わけといっしょに文に書きましょう。
+        explain: 例：「平均は 40 ÷ 5 = 8 さつ、中央値は 3 さつ。5 人のうち 4 人は 4 さつ以下で、平均の 8 さつより少ない。平均は 28 さつ読んだ 1 人に引っぱられて大きくなっている。中央値は、いちばん多い人が 28 さつでも 10 さつでも 3 さつのままかわらない。だから、ふつうの数を表すのは中央値のほうがよい。」と書ければよい。大きく外れた数があると平均が動くこと、中央値は動きにくいこと、の 2 点を見る。どちらがよいかは目的で決まり、「全部で何さつ読んだか」を考えるときは平均（合計）が要ることにもふれる。
+        hints:
+          - 合計と平均、中央値をそれぞれ出そう。
+          - 平均の 8 さつより多く読んだ人は、何人いるかな。
+          - いちばん多い人が 28 さつでなく 10 さつだったら、平均と中央値はどうかわるかな。
+        paths:
+          - [平均 8 さつ、中央値 3 さつ, 4 人は平均より少ない, 平均は 28 さつの 1 人に引っぱられる, ふつうの数は中央値のほうがよい]
+      - part: わけ
+        text: 4 回のなわとびの回数は、52、55、49、56（回）でした。49 回をもとにして、それより多い分だけをならすと、平均がわかります。このやり方でよいわけを文に書きましょう。
+        explain: 例：「52 は 49 と 3、55 は 49 と 6、49 は 49 と 0、56 は 49 と 7 に分けられる。49 の分はどれも同じなので、ならしても 49 のまま。多い分の 3、6、0、7 をならすと、合計 16 を 4 回で分けて 16 ÷ 4 = 4。だから平均は 49 + 4 = 53 回。」と書ければよい。どの数も「もとにする数と多い分」に分けられること、もとにする数の部分はならしてもかわらないこと、の 2 点を見る。合計 212 を 4 でわる（わり算の筆算は前の単元にない）より、計算が小さくてすむことにもふれる。
+        hints:
+          - 52 は、49 といくつに分けられるかな。
+          - 49 の部分は、ならしたらどうなるかな。
+          - 多い分だけをならして、49 にたそう。
+        paths:
+          - [どの数も 49 と多い分に分ける, 49 の部分はならしても 49, 多い分 3、6、0、7 をならすと 4, 平均は 53 回]
+      - part: 今日
+        text: 5 人がとんだなわとびの回数は、63、58、62、66、56（回）でした。いちばん少ない 56 回をもとにして、平均を出しましょう。平均は何回ですか。
+        answer: 61
+        check: Fraction(63 + 58 + 62 + 66 + 56, 5)
+        hints:
+          - それぞれ、56 回より何回多いかな。
+          - 多い分の合計を 5 人でならそう。
+          - ならした数を 56 にたそう。
+        paths:
+          - [多い分は 7、2、6、10、0, 合計 25 を 5 でわって 5, 56 + 5 = 61 回]
+      - part: 今日
+        text: 6 回のゲームの点数は、17、25、12、31、22、16（点）でした。範囲は何点ですか。
+        answer: 19
+        check: max([17, 25, 12, 31, 22, 16]) - min([17, 25, 12, 31, 22, 16])
+        hints:
+          - いちばん大きい点数は何点かな。
+          - いちばん小さい点数は何点かな。
+          - 大きいほうから小さいほうをひこう。
+        paths:
+          - [いちばん大きいのは 31 点, いちばん小さいのは 12 点, 31 − 12 = 19 点]
+        note: 最後の数から最初の数をひく（16 − 17）のではなく、いちばん大きい数といちばん小さい数を使う。
+    extra:
+      - part: 今日
+        text: 4 回のテストの点数は、86、81、84、89（点）でした。いちばん少ない 81 点をもとにして、平均を出しましょう。平均は何点ですか。
+        answer: 85
+        check: Fraction(86 + 81 + 84 + 89, 4)
+        hints:
+          - それぞれ、81 点より何点多いかな。
+          - 多い分の合計を 4 回でならそう。
+          - ならした数を 81 にたそう。
+        paths:
+          - [多い分は 5、0、3、8, 合計 16 を 4 でわって 4, 81 + 4 = 85 点]
+      - part: 今日
+        text: 5 人がひろった石の数は、15、9、23、11、18（こ）でした。範囲は何こですか。
+        answer: 14
+        check: max([15, 9, 23, 11, 18]) - min([15, 9, 23, 11, 18])
+        hints:
+          - いちばん大きい数は何こかな。
+          - いちばん小さい数は何こかな。
+          - 大きいほうから小さいほうをひこう。
+        paths:
+          - [いちばん大きいのは 23 こ, いちばん小さいのは 9 こ, 23 − 9 = 14 こ]
+      - part: 今日
+        text: 7 人の点数は、2、9、4、4、7、10、4（点）でした。平均、中央値、最頻値のうち、いちばん大きいのはどれですか。
+        choices: [平均, 中央値, 最頻値]
+        answer: 平均
+        check: "(lambda d: (lambda v: max(v, key=v.get))({'平均': Fraction(sum(d), len(d)), '中央値': sorted(d)[3], '最頻値': max(set(d), key=d.count)}))([2, 9, 4, 4, 7, 10, 4])"
+        hints:
+          - 平均は、合計を人数でわろう。
+          - 小さいじゅんにならべて、中央値を出そう。
+          - いちばん多く出てくる数が最頻値だね。3 つをくらべよう。
+        paths:
+          - [平均は 40 ÷ 7 で 5 より大きい, 中央値は 4、最頻値も 4, いちばん大きいのは平均]
+        note: 40 ÷ 7 はわり切れないが、5 あまり 5 なので 5 より大きいことだけ分かればよい。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 4 回のテストの点数は、47、53、45、47（点）でした。いちばん少ない 45 点をもとにして、平均を出しましょう。平均は何点ですか。
+        answer: 48
+        check: Fraction(47 + 53 + 45 + 47, 4)
+        hints:
+          - それぞれ、45 点より何点多いかな。
+          - 多い分の合計を 4 回でならそう。
+          - ならした数を 45 にたそう。
+        paths:
+          - [多い分は 2、8、0、2, 合計 12 を 4 でわって 3, 45 + 3 = 48 点]
+      - part: 思い出す
+        text: 5 人がひろったどんぐりの数は、8、15、11、6、13（こ）でした。範囲は何こですか。
+        answer: 9
+        check: max([8, 15, 11, 6, 13]) - min([8, 15, 11, 6, 13])
+        hints:
+          - いちばん大きい数は何こかな。
+          - いちばん小さい数は何こかな。
+          - 大きいほうから小さいほうをひこう。
+        paths:
+          - [いちばん大きいのは 15 こ, いちばん小さいのは 6 こ, 15 − 6 = 9 こ]
+      - part: 今日
+        text: 月曜日から金曜日まで、1 日におったつるの数をぼうグラフにしました。1 日の平均は何わですか。
+        svg: |
+          <svg viewBox="0 0 252 170" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="130.4" x2="244" y2="130.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="118.8" x2="244" y2="118.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="107.2" x2="244" y2="107.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="95.6" x2="244" y2="95.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="84" x2="244" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="72.4" x2="244" y2="72.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="60.8" x2="244" y2="60.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="49.2" x2="244" y2="49.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="37.6" x2="244" y2="37.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <line x1="40" y1="26" x2="244" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+            <text x="34" y="146" font-size="12" text-anchor="end">0</text>
+            <text x="34" y="88" font-size="12" text-anchor="end">5</text>
+            <text x="34" y="30" font-size="12" text-anchor="end">10</text>
+            <rect x="50" y="95.6" width="24" height="46.4" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="62" y="159" font-size="12" text-anchor="middle">月</text>
+            <rect x="90" y="37.6" width="24" height="104.4" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="102" y="159" font-size="12" text-anchor="middle">火</text>
+            <rect x="130" y="107.2" width="24" height="34.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="142" y="159" font-size="12" text-anchor="middle">水</text>
+            <rect x="170" y="49.2" width="24" height="92.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="182" y="159" font-size="12" text-anchor="middle">木</text>
+            <rect x="210" y="72.4" width="24" height="69.6" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+            <text x="222" y="159" font-size="12" text-anchor="middle">金</text>
+            <line x1="40" y1="18" x2="40" y2="142" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="142" x2="244" y2="142" stroke="currentColor" stroke-width="2"/>
+            <text x="36" y="14" font-size="12" text-anchor="end">（わ）</text>
+          </svg>
+        answer: 6
+        check: Fraction(4 + 9 + 3 + 8 + 6, 5)
+        hints:
+          - グラフから、1 日ずつの数を読もう。
+          - 5 日間の合計を出そう。
+          - 合計を 5 でわろう。
+        paths:
+          - [読むと 4、9、3、8、6, 合計は 30 わ, 30 ÷ 5 = 6, 6 わ]
+        note: グラフの読み取り（S-027）でまちがえると平均もずれる。5 の線から数えているかを見る。
+      - part: 今日
+        text: 3 本のびんに入っているお茶は、0.6 L、1.1 L、0.7 L です。ならすと 1 本何 L ですか。
+        answer: 0.8
+        check: (lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(6 + 11 + 7, 30))
+        hints:
+          - 3 本の合計は何 L かな。
+          - 0.1 L のいくつ分で考えよう。
+          - 0.1 L が何こ分になるかを出して、3 本で分けよう。
+        paths:
+          - [合計は 2.4 L, 0.1 L の 24 こ分, 3 本で分けると 8 こ分, 0.8 L]
+        note: 小数のわり算（N-077）は前提にないので、0.1 L のいくつ分（整数）にもどして分ける。
+      - part: 今日
+        text: 小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。
+        svg: |
+          <svg viewBox="0 0 256 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="6" width="42" height="52" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="5" y="6" width="246" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="5" y1="32" x2="251" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="47" y1="6" x2="47" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="81" y1="6" x2="81" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="115" y1="6" x2="115" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="149" y1="6" x2="149" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="183" y1="6" x2="183" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="217" y1="6" x2="217" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="26" y="23.68" font-size="13" text-anchor="middle">点数</text>
+            <text x="64" y="23.68" font-size="13" text-anchor="middle">5</text>
+            <text x="98" y="23.68" font-size="13" text-anchor="middle">6</text>
+            <text x="132" y="23.68" font-size="13" text-anchor="middle">7</text>
+            <text x="166" y="23.68" font-size="13" text-anchor="middle">8</text>
+            <text x="200" y="23.68" font-size="13" text-anchor="middle">9</text>
+            <text x="234" y="23.68" font-size="13" text-anchor="middle">10</text>
+            <text x="26" y="49.68" font-size="13" text-anchor="middle">人数</text>
+            <text x="64" y="49.68" font-size="13" text-anchor="middle">2</text>
+            <text x="98" y="49.68" font-size="13" text-anchor="middle">4</text>
+            <text x="132" y="49.68" font-size="13" text-anchor="middle">8</text>
+            <text x="166" y="49.68" font-size="13" text-anchor="middle">5</text>
+            <text x="200" y="49.68" font-size="13" text-anchor="middle">3</text>
+            <text x="234" y="49.68" font-size="13" text-anchor="middle">1</text>
+          </svg>
+        answer: 7
+        check: "(lambda d: max(d, key=d.get))({5: 2, 6: 4, 7: 8, 8: 5, 9: 3, 10: 1})"
+        hints:
+          - 人数がいちばん多いのは、どの点数かな。
+          - 表の下の行で、いちばん大きい数をさがそう。
+          - その上に書いてある点数を読もう。
+        paths:
+          - [いちばん多い人数は 8 人, その点数は 7 点, 最頻値は 7 点]
+        note: 人数の 8 を答えやすい。最頻値は点数のほう。
+      - part: 挑戦
+        text: 4 回のゲームの点数の平均は 6 点でした。5 回目に何点とれば、5 回の平均が 7 点になりますか。
+        answer: 11
+        check: 7 * 5 - 6 * 4
+        hints:
+          - 4 回の合計は何点かな。
+          - 5 回の平均が 7 点なら、5 回の合計は何点かな。
+          - 2 つの合計のちがいが、5 回目の点数だね。
+        paths:
+          - [4 回の合計は 6 × 4 = 24 点, 5 回の合計は 7 × 5 = 35 点, 35 − 24 = 11 点]
+        note: 平均の差 1 点をそのまま使って 7 点や 8 点と答えやすい。合計にもどして考える。
+    extra:
+      - part: 今日
+        text: 4 人が持っているカードは、9 まい、6 まい、8 まい、7 まいです。平均は何まいですか。
+        answer: 7.5
+        check: (lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(9 + 6 + 8 + 7, 4))
+        hints:
+          - 4 人の合計を出そう。
+          - 合計を 4 でわると、あまりが出るね。
+          - あまりを 0.1 のいくつ分と考えて、4 で分けよう。
+        paths:
+          - [合計は 30 まい, 30 ÷ 4 = 7 あまり 2, 2 は 0.1 の 20 こ分で 4 で分けると 5 こ分, 7.5 まい]
+        note: カードは半分にできないが、平均は 7.5 のような小数でよい。平均は、ならしたと考えたときの数。
+      - part: 今日
+        text: 8 人のゲームの点数は、5、6、6、7、7、7、8、40（点）でした。この 8 人の「ふつうの点数」を表すのに、いちばん合わないのはどれですか。
+        choices: [平均, 中央値, 最頻値]
+        answer: 平均
+        check: "(lambda d: [k for k, v in {'平均': Fraction(sum(d), len(d)), '中央値': Fraction(d[3] + d[4], 2), '最頻値': max(set(d), key=d.count)}.items() if sum(1 for x in d if x < v) >= 7][0])(sorted([5, 6, 6, 7, 7, 7, 8, 40]))"
+        hints:
+          - 平均、中央値、最頻値をそれぞれ出そう。
+          - 8 人のうち、その数より小さい人は何人いるかな。
+          - 40 点の 1 人に引っぱられているのはどれかな。
+        paths:
+          - [平均は 86 ÷ 8 で 10 より大きい, 中央値と最頻値は 7 点, 8 人のうち 7 人が平均より小さい, 合わないのは平均]
+      - part: 今日
+        text: 5 人がひろった貝の数の平均は 6 こでした。そこへ 12 こひろった人が 1 人入りました。6 人の平均は何こですか。
+        answer: 7
+        check: Fraction(6 * 5 + 12, 6)
+        hints:
+          - 5 人の合計は何こかな。
+          - 6 人の合計は何こかな。
+          - 6 人の合計を 6 でわろう。
+        paths:
+          - [5 人の合計は 30 こ, 6 人の合計は 42 こ, 42 ÷ 6 = 7, 7 こ]
+        note: 平均どうし（6 と 12）を平均して 9 としやすい。人数がちがうので合計にもどす。
+
+  - day: 5
+    items:
+      - part: 今日
+        text: 4 れつにならんだブロックを、どのれつも同じ数になるように動かします。1 れつ何こになりますか。
+        figure: "🟦🟦🟦🟦🟦🟦🟦🟦🟦\n🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦🟦🟦"
+        answer: 6
+        check: Fraction(n('🟦'), len(fig.splitlines()))
+        hints:
+          - ブロックは全部で何こあるかな。
+          - 動かしても、全部の数はかわらないね。
+          - 全部の数を、4 れつに同じ数ずつ分けよう。
+        paths:
+          - [全部で 9 + 3 + 5 + 7 = 24 こ, 24 ÷ 4 = 6, 6 こ]
+      - part: 今日
+        text: 5 回の小テスト（10 点まんてん）の点数は、8 点、4 点、9 点、7 点、2 点でした。平均は何点ですか。
+        answer: 6
+        check: Fraction(8 + 4 + 9 + 7 + 2, 5)
+        hints:
+          - 5 回の合計を出そう。
+          - 合計を回数でわろう。
+          - 5 のだんの九九でさがそう。
+        paths:
+          - [合計は 30 点, 30 ÷ 5 = 6, 6 点]
+      - part: 今日
+        text: 8 人がつくったつるの数の平均は 7 わでした。8 人がつくったつるは、合わせて何わですか。
+        answer: 56
+        check: 7 * 8
+        hints:
+          - ならすと、8 人がみんな何わずつになるかな。
+          - 7 わが 8 人分だね。
+          - 7 × 8 を計算しよう。
+        paths:
+          - [ならすと 1 人 7 わ, 7 × 8 = 56, 56 わ]
+      - part: 今日
+        text: 7 人がとんだなわとびの回数は、21、15、30、18、26、12、24（回）でした。中央値は何回ですか。
+        answer: 21
+        check: sorted([21, 15, 30, 18, 26, 12, 24])[3]
+        hints:
+          - 小さいじゅんにならべよう。
+          - 7 人の真ん中は、何番目かな。
+          - ならべた数の、真ん中の番目を読もう。
+        paths:
+          - [ならべると 12、15、18、21、24、26、30, 真ん中は 4 番目, 21 回]
+      - part: 今日
+        text: 6 人の点数は、3、8、5、10、6、1（点）でした。中央値は何点ですか。
+        answer: 5.5
+        check: (lambda s:(s[2] + s[3]) / 2)(sorted([3, 8, 5, 10, 6, 1]))
+        hints:
+          - 小さいじゅんにならべよう。
+          - 6 人の真ん中には、数が 2 つあるね。
+          - その 2 つの平均を出そう。
+        paths:
+          - [ならべると 1、3、5、6、8、10, 真ん中は 5 と 6, (5 + 6) ÷ 2 = 5.5, 5.5 点]
+      - part: 今日
+        text: 12 人が 1 週間に持ってきたペットボトルのふたの数を、点で表しました。最頻値は何こですか。
+        svg: |
+          <svg viewBox="0 0 280 112" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="54.2857" cy="63" r="5" fill="currentColor"/>
+            <circle cx="88.5714" cy="63" r="5" fill="currentColor"/>
+            <circle cx="88.5714" cy="50" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="63" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="50" r="5" fill="currentColor"/>
+            <circle cx="122.857" cy="37" r="5" fill="currentColor"/>
+            <circle cx="157.143" cy="63" r="5" fill="currentColor"/>
+            <circle cx="157.143" cy="50" r="5" fill="currentColor"/>
+            <circle cx="157.143" cy="37" r="5" fill="currentColor"/>
+            <circle cx="157.143" cy="24" r="5" fill="currentColor"/>
+            <circle cx="191.429" cy="63" r="5" fill="currentColor"/>
+            <circle cx="225.714" cy="63" r="5" fill="currentColor"/>
+            <line x1="14" y1="72" x2="266" y2="72" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="20" y1="72" x2="20" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="20" y="90" font-size="11" text-anchor="middle">3</text>
+            <line x1="54.2857" y1="72" x2="54.2857" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="54.2857" y="90" font-size="11" text-anchor="middle">4</text>
+            <line x1="88.5714" y1="72" x2="88.5714" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="88.5714" y="90" font-size="11" text-anchor="middle">5</text>
+            <line x1="122.857" y1="72" x2="122.857" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="122.857" y="90" font-size="11" text-anchor="middle">6</text>
+            <line x1="157.143" y1="72" x2="157.143" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="157.143" y="90" font-size="11" text-anchor="middle">7</text>
+            <line x1="191.429" y1="72" x2="191.429" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="191.429" y="90" font-size="11" text-anchor="middle">8</text>
+            <line x1="225.714" y1="72" x2="225.714" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="225.714" y="90" font-size="11" text-anchor="middle">9</text>
+            <line x1="260" y1="72" x2="260" y2="78" stroke="currentColor" stroke-width="1"/>
+            <text x="260" y="90" font-size="11" text-anchor="middle">10</text>
+            <text x="274" y="106" font-size="11" text-anchor="end">（こ）</text>
+          </svg>
+        answer: 7
+        check: "(lambda d: max(set(d), key=d.count))([4, 5, 5, 6, 6, 6, 7, 7, 7, 7, 8, 9])"
+        hints:
+          - 点がいちばん高くつみ上がっているのは、どこかな。
+          - 点の数を数えて、たしかめよう。
+          - 最頻値は、いちばん多く出てくる数だったね。
+        paths:
+          - [7 こ のところに点が 4 こ, ほかより多い, 最頻値は 7 こ]
+      - part: 今日
+        text: 5 回のゲームの点数は、42、35、50、38、47（点）でした。範囲は何点ですか。
+        answer: 15
+        check: max([42, 35, 50, 38, 47]) - min([42, 35, 50, 38, 47])
+        hints:
+          - いちばん大きい点数は何点かな。
+          - いちばん小さい点数は何点かな。
+          - 大きいほうから小さいほうをひこう。
+        paths:
+          - [いちばん大きいのは 50 点, いちばん小さいのは 35 点, 50 − 35 = 15 点]
+      - part: 今日
+        text: 4 回のテストの点数は、75、81、78、74（点）でした。いちばん少ない 74 点をもとにして、平均を出しましょう。平均は何点ですか。
+        answer: 77
+        check: Fraction(75 + 81 + 78 + 74, 4)
+        hints:
+          - それぞれ、74 点より何点多いかな。
+          - 多い分の合計を 4 回でならそう。
+          - ならした数を 74 にたそう。
+        paths:
+          - [多い分は 1、7、4、0, 合計 12 を 4 でわって 3, 74 + 3 = 77 点]
+    extra:
+      - part: 今日
+        text: 4 回のゲームの点数は、7 点、3 点、6 点、6 点でした。平均は何点ですか。
+        answer: 5.5
+        check: (lambda x:x.numerator if x.denominator == 1 else x.numerator / x.denominator)(Fraction(7 + 3 + 6 + 6, 4))
+        hints:
+          - 合計を回数でわろう。
+          - わり切れないときは、あまりを 0.1 のいくつ分と考えよう。
+          - あまりは 0.1 の何こ分かな。それを 4 で分けよう。
+        paths:
+          - [合計は 22 点, 22 ÷ 4 = 5 あまり 2, 2 は 0.1 の 20 こ分で 4 で分けると 5 こ分, 5.5 点]
+      - part: 今日
+        text: 6 日間に読んだ本のさっ数は、3 さつ、0 さつ、5 さつ、1 さつ、0 さつ、3 さつでした。1 日の平均は何さつですか。
+        answer: 2
+        check: Fraction(3 + 0 + 5 + 1 + 0 + 3, 6)
+        hints:
+          - 6 日間の合計を出そう。
+          - 0 さつの日も、日数に入れるかな。
+          - 合計を 6 でわろう。
+        paths:
+          - [合計は 12 さつ, 0 さつの日も入れて 6 日, 12 ÷ 6 = 2, 2 さつ]
+      - part: 今日
+        text: 小テスト（10 点まんてん）の点数と人数を表にしました。最頻値は何点ですか。
+        svg: |
+          <svg viewBox="0 0 240 64" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="6" width="42" height="52" fill="#f3c969" fill-opacity=".35"/>
+            <rect x="14" y="6" width="212" height="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="14" y1="32" x2="226" y2="32" stroke="currentColor" stroke-width="1"/>
+            <line x1="56" y1="6" x2="56" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="90" y1="6" x2="90" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="124" y1="6" x2="124" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="158" y1="6" x2="158" y2="58" stroke="currentColor" stroke-width="1"/>
+            <line x1="192" y1="6" x2="192" y2="58" stroke="currentColor" stroke-width="1"/>
+            <text x="35" y="23.68" font-size="13" text-anchor="middle">点数</text>
+            <text x="73" y="23.68" font-size="13" text-anchor="middle">4</text>
+            <text x="107" y="23.68" font-size="13" text-anchor="middle">5</text>
+            <text x="141" y="23.68" font-size="13" text-anchor="middle">6</text>
+            <text x="175" y="23.68" font-size="13" text-anchor="middle">7</text>
+            <text x="209" y="23.68" font-size="13" text-anchor="middle">8</text>
+            <text x="35" y="49.68" font-size="13" text-anchor="middle">人数</text>
+            <text x="73" y="49.68" font-size="13" text-anchor="middle">2</text>
+            <text x="107" y="49.68" font-size="13" text-anchor="middle">7</text>
+            <text x="141" y="49.68" font-size="13" text-anchor="middle">3</text>
+            <text x="175" y="49.68" font-size="13" text-anchor="middle">5</text>
+            <text x="209" y="49.68" font-size="13" text-anchor="middle">1</text>
+          </svg>
+        answer: 5
+        check: "(lambda d: max(d, key=d.get))({4: 2, 5: 7, 6: 3, 7: 5, 8: 1})"
+        hints:
+          - 人数がいちばん多いのは、どの点数かな。
+          - 表の下の行で、いちばん大きい数をさがそう。
+          - その上に書いてある点数を読もう。
+        paths:
+          - [いちばん多い人数は 7 人, その点数は 5 点, 最頻値は 5 点]
