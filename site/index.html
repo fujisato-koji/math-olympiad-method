@@ -18,6 +18,8 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="みちすじ">
 <!-- Google ドライブに記録を置くときの OAuth クライアント ID（D-049、公開してよい値）。空なら、ドライブの欄は出さない -->
+<!-- 家族と共有した記録を選ぶ Google のファイル選び（Picker）の API キー（D-052、公開してよい値。使える場所を公開ページに絞る） -->
+<meta name="google-api-key" content="">
 <meta name="google-client-id" content="318786454851-4tk1ab9apqofhpd1rqbg4e2uk63gsvof.apps.googleusercontent.com">
 </head>
 <body>
@@ -68,10 +70,20 @@
       <div class="row">
         <button type="button" class="pill solid" id="btn-drive-in">Google でログインして合わせる</button>
         <button type="button" class="pill" id="btn-drive-take">ドライブの記録で置き換える</button>
+        <button type="button" class="pill" id="btn-family-open" hidden>共有された記録を開く</button>
         <button type="button" class="pill" id="btn-drive-now" hidden>いま合わせる</button>
         <button type="button" class="pill" id="btn-drive-out" hidden>この端末では合わせない</button>
       </div>
-      <p class="muted fine">記録はご自分の Google ドライブにだけ置きます。<a href="privacy.html" target="_blank" rel="noopener">プライバシー</a></p>
+      <div class="family" id="drive-family" hidden>
+        <div class="k">家族と共有</div>
+        <p class="muted" id="family-status"></p>
+        <div class="row">
+          <input type="email" id="family-email" placeholder="相手のメール（Google）" autocomplete="off">
+          <button type="button" class="pill" id="btn-family-share">共有する</button>
+          <button type="button" class="pill" id="btn-family-leave" hidden>共有をやめる</button>
+        </div>
+      </div>
+      <p class="muted fine">記録は Google ドライブにだけ置き、こちらには送りません。<a href="privacy.html" target="_blank" rel="noopener">プライバシー</a></p>
     </div>
     <div class="row">
       <button type="button" class="pill" id="btn-export">この人の記録を書き出す</button>

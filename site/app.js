@@ -1799,6 +1799,8 @@
   // 合わせるときは、ドライブの記録と端末の記録を合わせて、進んだほうを残す。こちらのサーバは使わない（R-23）。
   // クライアント ID は index.html の meta に書く。空なら、この欄は出さない
   const CLIENT_ID = (document.querySelector('meta[name="google-client-id"]') || {}).content || '';
+  // 共有された記録を選ぶ Google のファイル選び（Picker）の鍵と、Google Cloud のプロジェクトの番号（クライアント ID の頭）
+  const API_KEY = (document.querySelector('meta[name="google-api-key"]') || {}).content || '', APP_ID = CLIENT_ID.split('-')[0];
   // 前のファイルでは人が混ざったので（D-051）、ファイルを新しくし、すべての端末で一度ログインし直してもらう
   const DRIVE_KEY = 'michisuji.drive.v2';
   const drive = Object.assign({ on: false, at: '', who: '' }, load(DRIVE_KEY, {}));
@@ -1859,12 +1861,15 @@
   function mergeStore(a, b) {
     const deleted = { ...(b.deleted || {}), ...(a.deleted || {}) }, profiles = {}, alias = {};
     const live = s => Object.entries(s.profiles || {}).filter(([k]) => !deleted[k]);
+    // 新しい端末で最初にできる空の「1 人目」は、相手に人がいれば足さない（D-052）
+    const blank = pr => pr.name === '1 人目' && !Object.keys((pr.rec && pr.rec.units) || {}).length && !Object.keys((pr.rec && pr.rec.items) || {}).length;
+    const LA0 = live(a), LB0 = live(b), LA = LB0.length ? LA0.filter(([, x]) => !blank(x)) : LA0, LB = LA.length ? LB0.filter(([, y]) => !blank(y)) : LB0;
     const restA = [], takenB = new Set();
-    live(a).forEach(([pa, x]) => {
+    LA.forEach(([pa, x]) => {
       const y = (b.profiles || {})[pa];
-      if (y) { profiles[pa] = mergeProfile(x, y); takenB.add(pa); } else restA.push([pa, x]);
+      if (y && LB.some(([pb]) => pb === pa)) { profiles[pa] = mergeProfile(x, y); takenB.add(pa); } else restA.push([pa, x]);
     });
-    const restB = live(b).filter(([pb]) => !takenB.has(pb));
+    const restB = LB.filter(([pb]) => !takenB.has(pb));
     restA.forEach(([pa, x]) => {
       const i = restB.findIndex(([, y]) => y.name === x.name);
       if (i < 0) { profiles[pa] = x; return; }
@@ -1887,12 +1892,78 @@
     }
     const st = $('#drive-status');
     if (st) st.textContent = !drive.on ? 'この端末だけに保存'
-      : [drive.who, drive.at && drive.at + ' に合わせ済み', driveState === 'need' && 'ログインが切れました', driveState === 'err' && '合わせられませんでした'].filter(Boolean).join('・');
-    const show = (id, on) => { const e = $(id); if (e) e.hidden = !on; };
+      : [drive.who, drive.at && drive.at + ' に合わせ済み', DriveSync.linked && '家族と共有中', driveState === 'need' && 'ログインが切れました', driveState === 'err' && '合わせられませんでした'].filter(Boolean).join('・');
+    const show = showEl;
     show('#btn-drive-in', !drive.on || driveState === 'need');
     show('#btn-drive-take', !drive.on);
     show('#btn-drive-now', drive.on && driveState !== 'need');
     show('#btn-drive-out', drive.on);
+    familyChip();
+  }
+  const showEl = (id, on) => { const e = $(id); if (e) e.hidden = !on; };
+  // ---- 家族と共有する（D-052） ----
+  // 共有する人のドライブに見えるファイル「みちすじの記録」を作って相手に編集の権限を付け、相手は Google のファイル選びで一度選ぶ。
+  // 以後は 2 人とも同じファイルを読み書きし、いつもの合わせ方で合わせる。こちらは預からない（R-23）
+  let family = { members: [], gone: false };
+  function familyChip() {
+    const l = window.DriveSync && DriveSync.linked;
+    showEl('#drive-family', drive.on);
+    showEl('#btn-family-open', !!API_KEY && !l);
+    showEl('#btn-family-leave', !!l || family.gone);
+    const st = $('#family-status');
+    if (!st) return;
+    const others = family.members.filter(m => m.emailAddress !== drive.who).map(m => m.emailAddress);
+    st.textContent = family.gone ? '共有の記録が開けません（持ち主が共有をやめたか、ファイルを消しました）'
+      : !l ? 'まだ共有していません' : (l.mine ? '共有している人：' : '共有の記録を使っています：') + (others.join('、') || '—');
+  }
+  async function refreshFamily() {
+    if (!window.DriveSync || !DriveSync.valid()) { familyChip(); return; }
+    try { await DriveSync.readLink(); family.members = await DriveSync.members(); } catch { /* 出せなくても使える */ }
+    familyChip();
+  }
+  // 共有する：まず自分のドライブと合わせ、合わせた記録で共有のファイルを作り（まだなら）、相手に編集の権限を付ける
+  async function familyShare() {
+    const inp = $('#family-email'), email = (inp.value || '').trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { alert('相手の Google アカウントのメールアドレスを入れてください'); return; }
+    await driveSync(true);
+    if (driveState !== 'ok' || driveBusy) return;
+    driveBusy = true;
+    try {
+      await DriveSync.share(email, store);
+      inp.value = ''; family.gone = false;
+      alert(`${email} と共有しました。相手に Google からお知らせが届きます。`);
+    } catch (err) { alert('共有できませんでした（' + err.message + '）'); }
+    finally { driveBusy = false; }
+    await refreshFamily(); driveChip();
+  }
+  // 共有された記録を開く：Google のファイル選びで「みちすじの記録」を選び、この端末の記録と合わせる
+  async function familyOpen() {
+    if (!API_KEY || !window.DriveSync || driveBusy) return;
+    let id = null;
+    driveBusy = true;
+    try {
+      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID);
+      if (!DriveSync.valid()) await DriveSync.signIn();
+      id = await DriveSync.pick(API_KEY, APP_ID);
+    } catch (err) { if (err.code !== 'popup_closed') alert('開けませんでした（' + err.message + '）'); }
+    finally { driveBusy = false; }
+    if (!id) return;
+    family.gone = false;
+    await driveSync(true);
+    await refreshFamily();
+  }
+  // 共有をやめる：自分のドライブの記録に戻る（共有のファイルはそのまま残る）
+  async function familyLeave() {
+    if (!window.DriveSync || driveBusy) return;
+    if (!confirm('共有をやめて、自分のドライブの記録に戻ります。共有の記録はそのまま残ります。')) return;
+    driveBusy = true;
+    try {
+      if (!DriveSync.valid()) await DriveSync.signIn();
+      await DriveSync.leave(); family = { members: [], gone: false };
+    } catch (err) { if (err.code !== 'popup_closed') alert('やめられませんでした（' + err.message + '）'); }
+    finally { driveBusy = false; }
+    await driveSync(true);
+    familyChip();
   }
   // 合わせる：ドライブから読み、端末の記録と合わせ、合わせたものを端末とドライブの両方に置く。
   // interactive は、ボタンを押したとき（ログインが切れていれば Google の確認の窓を開く）
@@ -1919,6 +1990,7 @@
       if (JSON.stringify(store) !== before) { syncWho(); if (parse().name !== 'day') render(); }
     } catch (err) {
       if (err.code === 'popup_closed') driveState = drive.on ? 'need' : 'off';
+      else if (err.code === 'gone') { family.gone = true; driveState = 'err'; }
       else {
         driveState = err.code === 'auth' ? 'need' : 'err';
         if (interactive && err.code !== 'auth') alert('Google ドライブと合わせられませんでした（' + err.message + '）');
@@ -1972,6 +2044,10 @@
     $('#btn-drive-in').addEventListener('click', go);
     $('#btn-drive-now').addEventListener('click', go);
     $('#btn-drive-take').addEventListener('click', driveTake);
+    $('#btn-family-share').addEventListener('click', familyShare);
+    $('#btn-family-open').addEventListener('click', familyOpen);
+    $('#btn-family-leave').addEventListener('click', familyLeave);
+    $('#btn-menu').addEventListener('click', refreshFamily);
     $('#btn-drive-out').addEventListener('click', () => {
       if (!confirm('この端末では Google ドライブと合わせるのをやめます。記録はこの端末に残り、ドライブの記録も消えません。')) return;
       DriveSync.signOut(); drive.on = false; drive.who = ''; save(DRIVE_KEY, drive); driveState = 'off'; driveChip();

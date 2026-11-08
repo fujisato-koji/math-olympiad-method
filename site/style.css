@@ -903,3 +903,7 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .sync-chip[data-s="wait"] .sd { background: var(--warn); }
 .sync-chip[data-s="need"] .sd, .sync-chip[data-s="err"] .sd { background: var(--bad); }
 @media (max-width: 520px) { .sync-chip { padding: 6px 9px; } .sync-chip .t { display: none; } }
+
+/* 家族と共有（D-052） */
+.drive-box .family { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
+.drive-box input[type="email"] { flex: 1 1 200px; min-width: 0; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-size: 14px; }
