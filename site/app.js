@@ -62,22 +62,65 @@
   const localDate = (d = new Date()) => d.toLocaleDateString('sv-SE');
   const addDays = n => { const d = new Date(); d.setDate(d.getDate() + n); return localDate(d); };
 
-  // ---- 記録（この端末のブラウザの中だけ） ----
+  // ---- 記録（この端末のブラウザの中だけ、D-044） ----
+  // 人ごとの記録を束ねる：{schema: 2, current, profiles: {pid: {name, created, rec}}}。
+  // rec.units は単元ごとの日のまとめ（日の印 key つき）、rec.items は問題ごとの記録（問題の記号 qid ごと）。
+  // 問題を直したり足したりしても、単元の記号の付け替え（renamed）、日の印、問題の記号で引き継ぐ
   function load(k, d) { try { const v = JSON.parse(localStorage.getItem(k)); return v ?? d; } catch { return d; } }
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 保存できない環境でも表示は続ける */ } }
-  let progress = load(KEY, null);
-  if (!progress || typeof progress.units !== 'object') progress = { units: {} };
-  // 記号の付け替え（N1-01 → N-001 など）の前に保存された記録を読み替える
+  const STORE_KEY = 'michisuji.store.v2';
+  const newProfile = (name, rec) => ({ name, created: new Date().toLocaleDateString('sv-SE'), rec: rec || { units: {}, items: {} } });
+  let store = load(STORE_KEY, null);
+  if (!store || store.schema !== 2 || !store.profiles || !Object.keys(store.profiles).length) {
+    // 前の形（1 人分の記録）は「1 人目」として引き継ぐ
+    const old = load(KEY, null);
+    store = { schema: 2, current: 'p1', profiles: { p1: newProfile('1 人目', old && typeof old.units === 'object' ? { units: old.units, items: {} } : null) } };
+  }
+  if (!store.profiles[store.current]) store.current = Object.keys(store.profiles)[0];
+  // 記録を、いまの地図と問題に合わせ直す
   function migrate(p) {
     const ren = R.renamed || {};
-    let moved = false;
-    Object.keys(p.units).forEach(k => {
-      if (ren[k] && !p.units[ren[k]]) { p.units[ren[k]] = p.units[k]; delete p.units[k]; moved = true; }
+    p.units = p.units || {}; p.items = p.items || {};
+    // 単元の記号の付け替え（N1-01 → N-001、B-047 → I-001 など）
+    Object.keys(p.units).forEach(k => { if (ren[k] && !p.units[ren[k]]) { p.units[ren[k]] = p.units[k]; delete p.units[k]; } });
+    Object.keys(p.items).forEach(q => {
+      const i = q.indexOf(':'), u = q.slice(0, i);
+      if (i > 0 && ren[u]) { const nq = ren[u] + q.slice(i); if (!p.items[nq]) p.items[nq] = p.items[q]; delete p.items[q]; }
     });
-    if (moved) save(KEY, p);
+    // 日の並びが変わったら、日の印（ねらい、なければ種類と何番目か）で記録の日を合わせ直す
+    Object.entries(p.units).forEach(([id, r]) => {
+      const u = UNITS[id];
+      if (!u || !r.days) return;
+      const move = {};
+      Object.entries(r.days).forEach(([n, v]) => {
+        const m = v && v.key ? u.days.findIndex(d => d.key === v.key) + 1 : +n;
+        if (m > 0) move[n] = m;
+      });
+      if (Object.entries(move).every(([n, m]) => +n === m) && Object.keys(move).length === Object.keys(r.days).length) return;
+      const to = n => move[n] || (+n <= u.days.length ? +n : 0), days = {}, extra = {};
+      Object.entries(r.days).forEach(([n, v]) => { if (move[n]) days[move[n]] = v; });
+      Object.entries(r.extra || {}).forEach(([n, v]) => { if (to(n)) extra[to(n)] = v; });
+      r.days = days; r.extra = extra;
+      r.skip = (r.skip || []).map(to).filter(Boolean);
+      if (r.pending) r.pending = to(r.pending) || null;
+    });
     return p;
   }
-  progress = migrate(progress);
+  Object.values(store.profiles).forEach(pr => migrate(pr.rec));
+  let progress = store.profiles[store.current].rec;
+  const persist = () => save(STORE_KEY, store);
+  persist();
+  // 問題ごとの記録：解いた回数、一度でできた回数、ヒント、間違い、とばした、わからない、最後にかかった秒
+  function noteItem(it, res) {
+    if (!it || !it.qid || !res) return;
+    const x = progress.items[it.qid] || (progress.items[it.qid] = { n: 0, ok: 0, h: 0, w: 0 });
+    x.n++; if (res.first) x.ok++;
+    x.h += res.hints || 0; x.w += Math.max(0, (res.tries || 1) - 1);
+    if (res.skipped) x.s = (x.s || 0) + 1;
+    if (res.dunno) x.d = (x.d || 0) + 1;
+    if (res.ms) x.t = Math.round(res.ms / 1000);
+    x.last = new Date().toLocaleDateString('sv-SE');
+  }
   // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
@@ -1052,6 +1095,7 @@
   }
   function drawItem() {
     const s = session, el = $('#play'), u = UNITS[s.id], d = u.days[s.n - 1];
+    if (!s.t0 && !s.solved) s.t0 = Date.now();
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
         <h2 style="margin:18px 0 8px">${esc(d.aim || R.kinds[d.kind])}</h2>
@@ -1109,7 +1153,8 @@
     s.tries++;
     if (isRight(it, val)) {
       s.solved = true;
-      s.results[s.idx] = { first: s.tries === 1 && s.hints === 0, hints: s.hints, tries: s.tries };
+      s.results[s.idx] = { first: s.tries === 1 && s.hints === 0, hints: s.hints, tries: s.tries, ms: Date.now() - (s.t0 || Date.now()) };
+      noteItem(it, s.results[s.idx]); persist();
       Music.good(s.idx);
       drawItem();
     } else {
@@ -1124,8 +1169,8 @@
   function advance(skipped) {
     const s = session, it = s.items[s.idx];
     if (it.part === '見本') s.results[s.idx] = null;
-    else if (skipped) s.results[s.idx] = { first: false, hints: s.hints, tries: s.tries, skipped: true };
-    Object.assign(s, { idx: s.idx + 1, entry: '', hints: 0, tries: 0, solved: false });
+    else if (skipped) { s.results[s.idx] = { first: false, hints: s.hints, tries: s.tries, skipped: true }; noteItem(it, s.results[s.idx]); persist(); }
+    Object.assign(s, { idx: s.idx + 1, entry: '', hints: 0, tries: 0, solved: false, t0: 0 });
     drawItem();
   }
   function drawFinish() {
@@ -1154,10 +1199,10 @@
         note = u.needs.length ? `前の単元（${u.needs.map(x => UNITS[x].title).join('、')}）をふりかえってみましょう。` : '少し日をおいて、またためしましょう。';
       } else { title = 'おさらい、できた！'; note = 'もう 1 日、おさらいをしましょう。'; }
     } else {
-      r.days[s.n] = { date: today, first: firsts, total: res.length, hints: res.reduce((a, x) => a + x.hints, 0) };
+      r.days[s.n] = { date: today, first: firsts, total: res.length, hints: res.reduce((a, x) => a + x.hints, 0), key: d.key };
       if (d.kind === '確認') {
         if (rate >= RULE.pass) {
-          r.done = today; r.pending = null; r.low = 0;
+          r.done = today; r.pending = null; r.low = 0; r.ver = u.ver;
           r.review = { step: 0, due: addDays(RULE.intervals[0]), fails: 0 };
           title = 'この駅を通過！'; note = 'あした、1 週後、1 か月後に、2 問ずつ確かめます。';
         } else { r.pending = s.n; title = 'あと すこし！'; note = '8 割で通過です。おさらいの日をはさんでから、もう一度ためしましょう。'; }
@@ -1172,7 +1217,7 @@
         }
       }
     }
-    save(KEY, progress);
+    persist();
     Music.melody(res);
     s.melody = res;
     // この駅で新しく届いた論題（済んだ単元の組み合わせでできるようになったこと）
@@ -1225,7 +1270,8 @@
     if (act === 'hint') { s.hints = Math.min(3, s.hints + 1); Music.hint(); drawItem(); }
     if (act === 'said') {
       s.solved = true; s.tries = 1;
-      s.results[s.idx] = { first: s.hints === 0, hints: s.hints, tries: 1 };
+      s.results[s.idx] = { first: s.hints === 0, hints: s.hints, tries: 1, ms: Date.now() - (s.t0 || Date.now()) };
+      noteItem(s.items[s.idx], s.results[s.idx]); persist();
       Music.good(s.idx); drawItem();
     }
     if (act === 'next') { Music.tap(); advance(false); }
@@ -1257,25 +1303,71 @@
   });
   const menu = $('#menu');
   $('#btn-menu').addEventListener('click', () => menu.showModal());
+  // だれの記録か（D-044）：人を切り替える、足す、呼び名を変える
+  const who = () => store.profiles[store.current];
+  function useProfile(pid) {
+    store.current = pid; progress = store.profiles[pid].rec; persist();
+    syncWho(); render();
+  }
+  function syncWho() {
+    const b = $('#btn-who');
+    if (b) { b.textContent = who().name; b.hidden = Object.keys(store.profiles).length < 2 && who().name === '1 人目'; }
+    const list = $('#who-list');
+    if (list) list.innerHTML = Object.entries(store.profiles).map(([pid, pr]) =>
+      `<button type="button" class="pill" data-who="${esc(pid)}" aria-pressed="${pid === store.current}">${esc(pr.name)}</button>`).join('');
+  }
+  $('#btn-who').addEventListener('click', () => { syncWho(); menu.showModal(); });
+  $('#btn-menu').addEventListener('click', syncWho);
+  $('#who-list').addEventListener('click', e => { const b = e.target.closest('[data-who]'); if (b && b.dataset.who !== store.current) useProfile(b.dataset.who); });
+  $('#btn-who-add').addEventListener('click', () => {
+    const name = (prompt('呼び名（この端末の中だけで使います）', '') || '').trim();
+    if (!name) return;
+    const pid = 'p' + Date.now().toString(36);
+    store.profiles[pid] = newProfile(name); useProfile(pid);
+  });
+  $('#btn-who-rename').addEventListener('click', () => {
+    const name = (prompt('新しい呼び名', who().name) || '').trim();
+    if (name) { who().name = name; persist(); syncWho(); }
+  });
+  // 書き出し：いまの人の記録だけ。形の版（schema）と、書き出したときの地図の単元の数を付ける
   $('#btn-export').addEventListener('click', () => {
-    const blob = new Blob([JSON.stringify(progress, null, 1)], { type: 'application/json' });
+    const body = { kind: 'michisuji-record', schema: 2, name: who().name, exported: localDate(), units: R.units.length, rec: progress };
+    const blob = new Blob([JSON.stringify(body, null, 1)], { type: 'application/json' });
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob); a.download = `michisuji-progress-${localDate()}.json`; a.click();
+    a.href = URL.createObjectURL(blob); a.download = `michisuji-${who().name.replace(/[\\/:*?"<>|\s]+/g, '_')}-${localDate()}.json`; a.click();
     setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   });
+  // 読み込み：人ごとの記録（版 2）、端末の記録全体、前の形（1 人分の units）のどれでも読む
   $('#file-import').addEventListener('change', async e => {
     const f = e.target.files[0];
     if (!f) return;
     try {
       const v = JSON.parse(await f.text());
-      if (!v || typeof v.units !== 'object') throw new Error('形が違う');
-      progress = migrate(v); save(KEY, progress); menu.close(); render();
+      const got = v && v.kind === 'michisuji-record' && v.rec ? [[v.name || '読み込んだ記録', v.rec]]
+        : v && v.schema === 2 && v.profiles ? Object.values(v.profiles).map(pr => [pr.name, pr.rec])
+        : v && typeof v.units === 'object' ? [['読み込んだ記録', { units: v.units, items: {} }]] : null;
+      if (!got) throw new Error('形が違う');
+      let last = null;
+      got.forEach(([name, rec]) => {
+        migrate(rec);
+        const same = Object.entries(store.profiles).find(([, pr]) => pr.name === name);
+        if (same && confirm(`「${name}」の記録を、読み込んだ記録で置き換えますか（キャンセルなら、別の人として足します）`)) { same[1].rec = rec; last = same[0]; return; }
+        const pid = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+        store.profiles[pid] = newProfile(same ? name + '（読み込み）' : name, rec); last = pid;
+      });
+      menu.close(); e.target.value = '';
+      useProfile(last);
     } catch (err) { alert('読み込めませんでした（' + err.message + '）'); }
   });
+  // 消す：いまの人の記録だけ。ほかに人がいれば、その人を消す（1 人だけなら記録を空にする）
   $('#btn-reset').addEventListener('click', () => {
-    if (!confirm('この端末の記録をすべて消します。よろしいですか。')) return;
-    progress = { units: {} }; save(KEY, progress); menu.close(); render();
+    const others = Object.keys(store.profiles).filter(pid => pid !== store.current);
+    if (!confirm(`「${who().name}」の記録を消します。よろしいですか。`)) return;
+    if (others.length) { delete store.profiles[store.current]; menu.close(); useProfile(others[0]); }
+    else { store.profiles[store.current] = newProfile(who().name); menu.close(); useProfile(store.current); }
   });
+  syncWho();
+
   window.addEventListener('hashchange', render);
   window.addEventListener('resize', () => { if (parse().name !== 'map') return; setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d') paint(); });
 

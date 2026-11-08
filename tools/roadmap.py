@@ -4,6 +4,7 @@
   python tools/roadmap.py check   確かめるだけ
   python tools/roadmap.py build   確かめてから site/data.js と docs/roadmap.md を作り直す
 """
+import hashlib
 import json
 import re
 import sys
@@ -102,6 +103,32 @@ def check_coverage(cov, units):
             if s not in cov.get("sources", {}):
                 errors.append(f"網羅表 {iid}: 出典 {s} が sources にない")
     return errors
+
+
+# 記録の引き継ぎ（D-044）：問題の記号は中身の指紋から作る（単元のファイルは書き換えない）。
+# 問題に id を書けば、それを記号にする（中身を直しても記録を引き継ぎたいとき）。
+QID_FIELDS = ("part", "text", "figure", "svg", "balance", "choices", "answer")
+
+
+def qid(unit_id, item):
+    if item.get("id"):
+        return f"{unit_id}:{item['id']}"
+    body = json.dumps({k: item.get(k) for k in QID_FIELDS if item.get(k) is not None}, ensure_ascii=False, sort_keys=True)
+    return f"{unit_id}:{hashlib.sha1(body.encode('utf-8')).hexdigest()[:10]}"
+
+
+def mark_ids(unit_id, days):
+    """各問題に qid、各日に key（日のねらい、なければ種類と何番目か）を付け、単元の版（問題の記号の指紋）を返す。"""
+    seen, kinds, all_ids = {}, {}, []
+    for d in days:
+        kinds[d["kind"]] = kinds.get(d["kind"], 0) + 1
+        d["key"] = d.get("aim") or f"{d['kind']}#{kinds[d['kind']]}"
+        for it in [*d.get("items", []), *d.get("extra", [])]:
+            q = qid(unit_id, it)
+            seen[q] = seen.get(q, 0) + 1
+            it["qid"] = q if seen[q] == 1 else f"{q}-{seen[q]}"  # 同じ問題が 2 度あれば番号を足す
+            all_ids.append(it["qid"])
+    return hashlib.sha1("|".join(all_ids).encode("utf-8")).hexdigest()[:10] if all_ids else ""
 
 
 def expand(unit):
@@ -375,8 +402,9 @@ def build(data, problems):
             days[d["day"] - 1]["items"] = d.get("items", [])
             if d.get("extra"):
                 days[d["day"] - 1]["extra"] = d["extra"]
+        ver = mark_ids(u["id"], days)
         out_units.append({"id": u["id"], "title": u["title"], "lane": m.group(1),
-                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
+                          "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days, **({"ver": ver} if ver else {}),
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),
