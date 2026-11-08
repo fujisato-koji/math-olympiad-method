@@ -44,16 +44,16 @@
     const a = b.tilt === 'left' ? 1 : b.tilt === 'right' ? -1 : 0, th = a * .17, cx = 130, cy = 62, L = 98;
     const ends = [[cx - L * Math.cos(th), cy + L * Math.sin(th)], [cx + L * Math.cos(th), cy - L * Math.sin(th)]];
     const pan = ([x, y], items) => {
-      const py = y + 36, ts = seg(items), per = 4, rows = Math.ceil(ts.length / per) || 1;
+      const py = y + 36, ts = seg(items), per = 3, rows = Math.ceil(ts.length / per) || 1;
       const goods = ts.map((tk, i) => {
         const r = Math.floor(i / per), k = i % per, n = Math.min(per, ts.length - r * per), big = [...tk].length <= 2;
-        return `<text x="${x + (k - (n - 1) / 2) * 23}" y="${py - 6 - r * 23}" font-size="${big ? 21 : 13}" text-anchor="middle">${esc(tk)}</text>`;
+        return `<text x="${x + (k - (n - 1) / 2) * 29}" y="${py - 6 - r * 29}" font-size="${big ? 28 : 15}" text-anchor="middle">${esc(tk)}</text>`;
       }).join('');
       return `<line x1="${x}" y1="${y}" x2="${x - 36}" y2="${py}"/><line x1="${x}" y1="${y}" x2="${x + 36}" y2="${py}"/>
         <path class="pan" d="M${x - 44},${py} Q${x},${py + 16} ${x + 44},${py} Z"/>${goods}`;
     };
     const label = `てんびん：ひだり ${b.left || ''}、みぎ ${b.right || ''}、${a > 0 ? 'ひだりが さがる' : a < 0 ? 'みぎが さがる' : 'つりあう'}`;
-    return `<svg class="balance" viewBox="0 0 260 168" role="img" aria-label="${esc(label)}">
+    return `<svg class="balance" viewBox="18 4 224 160" role="img" aria-label="${esc(label)}">
       <path class="base" d="M${cx - 44},160 h88 l-10,-8 h-68 Z"/><line x1="${cx}" y1="${cy}" x2="${cx}" y2="152"/>
       <line class="beam" x1="${ends[0][0]}" y1="${ends[0][1]}" x2="${ends[1][0]}" y2="${ends[1][1]}"/><circle cx="${cx}" cy="${cy}" r="4.5"/>
       ${pan(ends[0], b.left)}${pan(ends[1], b.right)}</svg>`;

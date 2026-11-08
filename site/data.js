@@ -82677,7 +82677,11 @@ window.ROADMAP = {
       {
        "part": "見本",
        "text": "てんびんに 🍎 と 🍋 を のせました。どちらが おもいかな。",
-       "figure": "　　　　🍋\n　　／　　\n🍎　▲　　",
+       "balance": {
+        "left": "🍎",
+        "right": "🍋",
+        "tilt": "left"
+       },
        "explain": "てんびんは、おもい ほうが したに さがります。🍎 の ほうが したに さがって いるので、🍎 の ほうが おもいです。🍋 は うえに あがって いるので、かるいです。"
       },
       {
@@ -82724,13 +82728,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "どちらが おもいですか。",
-       "figure": "🍊　　　　\n　　＼　　\n　　▲　🍇",
+       "balance": {
+        "left": "🍊",
+        "right": "🍇",
+        "tilt": "right"
+       },
        "choices": [
         "みかん",
         "ぶどう"
        ],
        "answer": "ぶどう",
-       "check": "'ぶどう' if '🍇' in fig.splitlines()[-1] else 'みかん'",
+       "check": "'ぶどう' if bal['tilt'] == 'right' else 'みかん'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "したに さがって いるのは どちらかな。",
@@ -82747,13 +82755,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "どちらが かるいですか。",
-       "figure": "　　　　🍓\n　　／　　\n🍌　▲　　",
+       "balance": {
+        "left": "🍌",
+        "right": "🍓",
+        "tilt": "left"
+       },
        "choices": [
         "バナナ",
         "いちご"
        ],
        "answer": "いちご",
-       "check": "'いちご' if '🍓' in fig.splitlines()[0] else 'バナナ'",
+       "check": "'いちご' if bal['tilt'] == 'left' else 'バナナ'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "うえに あがって いるのは どちらかな。",
@@ -82771,14 +82783,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "てんびんに 🍎 と 🍐 を のせたら、まっすぐに なって とまりました。どう いえますか。",
-       "figure": "🍎───🍐\n　　▲　　",
+       "balance": {
+        "left": "🍎",
+        "right": "🍐",
+        "tilt": "level"
+       },
        "choices": [
         "🍎 の ほうが おもい",
         "🍐 の ほうが おもい",
         "おなじ おもさ"
        ],
        "answer": "おなじ おもさ",
-       "check": "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'",
+       "check": "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'",
        "hints": [
         "どちらかが したに さがって いるかな。",
         "まっすぐに なって とまる ことを「つりあう」と いうよ。",
@@ -82796,13 +82812,17 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "てんびんに 🍓 3 こと 🍎 1 こを のせました。どちらが おもいですか。",
-       "figure": "🍓🍓🍓　　　　\n　　　　＼　　\n　　　　▲　🍎",
+       "balance": {
+        "left": "🍓🍓🍓",
+        "right": "🍎",
+        "tilt": "right"
+       },
        "choices": [
         "いちご 3 こ",
         "りんご 1 こ"
        ],
        "answer": "りんご 1 こ",
-       "check": "'りんご 1 こ' if '🍎' in fig.splitlines()[-1] else 'いちご 3 こ'",
+       "check": "'りんご 1 こ' if bal['tilt'] == 'right' else 'いちご 3 こ'",
        "hints": [
         "てんびんの かたむきを みよう。",
         "したに さがって いるのは どちらかな。",
@@ -82822,13 +82842,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 と 🟥 の はこを のせました。どちらが おもいですか。",
-       "figure": "🟦　　　　\n　　＼　　\n　　▲　🟥",
+       "balance": {
+        "left": "🟦",
+        "right": "🟥",
+        "tilt": "right"
+       },
        "choices": [
         "🟦",
         "🟥"
        ],
        "answer": "🟥",
-       "check": "'🟥' if '🟥' in fig.splitlines()[-1] else '🟦'",
+       "check": "'🟥' if bal['tilt'] == 'right' else '🟦'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "したに さがって いるのは どちらかな。",
@@ -82844,13 +82868,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "どちらが かるいですか。",
-       "figure": "🥕　　　　\n　　＼　　\n　　▲　🍑",
+       "balance": {
+        "left": "🥕",
+        "right": "🍑",
+        "tilt": "right"
+       },
        "choices": [
         "にんじん",
         "もも"
        ],
        "answer": "にんじん",
-       "check": "'にんじん' if '🥕' in fig.splitlines()[0] else 'もも'",
+       "check": "'にんじん' if bal['tilt'] == 'right' else 'もも'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "うえに あがって いるのは どちらかな。",
@@ -82866,13 +82894,17 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "てんびんに 🍒 4 こと 🍊 1 こを のせました。どちらが おもいですか。",
-       "figure": "🍒🍒🍒🍒　　　　\n　　　　　＼　　\n　　　　　▲　🍊",
+       "balance": {
+        "left": "🍒🍒🍒🍒",
+        "right": "🍊",
+        "tilt": "right"
+       },
        "choices": [
         "さくらんぼ 4 こ",
         "みかん 1 こ"
        ],
        "answer": "みかん 1 こ",
-       "check": "'みかん 1 こ' if '🍊' in fig.splitlines()[-1] else 'さくらんぼ 4 こ'",
+       "check": "'みかん 1 こ' if bal['tilt'] == 'right' else 'さくらんぼ 4 こ'",
        "hints": [
         "てんびんの かたむきを みよう。",
         "したに さがって いるのは どちらかな。",
@@ -82895,19 +82927,34 @@ window.ROADMAP = {
       {
        "part": "見本",
        "text": "🍎 と 🍋、🍋 と 🍓 を くらべました。おもい じゅんに ならべよう。",
-       "figure": "　　　　🍋　　　　　　🍓\n　　／　　　　　　／　　\n🍎　▲　　　　🍋　▲　　",
+       "balance": [
+        {
+         "left": "🍎",
+         "right": "🍋",
+         "tilt": "left"
+        },
+        {
+         "left": "🍋",
+         "right": "🍓",
+         "tilt": "left"
+        }
+       ],
        "explain": "ひだりの てんびんで、🍎 は 🍋 より おもい。みぎの てんびんで、🍋 は 🍓 より おもい。だから 🍎 が いちばん おもくて、🍓 が いちばん かるい。おもい じゅんに 🍎、🍋、🍓 です。"
       },
       {
        "part": "思い出す",
        "text": "どちらが おもいですか。",
-       "figure": "🍒　　　　\n　　＼　　\n　　▲　🍑",
+       "balance": {
+        "left": "🍒",
+        "right": "🍑",
+        "tilt": "right"
+       },
        "choices": [
         "さくらんぼ",
         "もも"
        ],
        "answer": "もも",
-       "check": "'もも' if '🍑' in fig.splitlines()[-1] else 'さくらんぼ'",
+       "check": "'もも' if bal['tilt'] == 'right' else 'さくらんぼ'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "したに さがって いるのは どちらかな。",
@@ -82923,13 +82970,17 @@ window.ROADMAP = {
       {
        "part": "思い出す",
        "text": "🟩 と 🟨 の はこを のせました。どちらが かるいですか。",
-       "figure": "　　　　🟨\n　　／　　\n🟩　▲　　",
+       "balance": {
+        "left": "🟩",
+        "right": "🟨",
+        "tilt": "left"
+       },
        "choices": [
         "🟩",
         "🟨"
        ],
        "answer": "🟨",
-       "check": "'🟨' if '🟨' in fig.splitlines()[0] else '🟩'",
+       "check": "'🟨' if bal['tilt'] == 'left' else '🟩'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "うえに あがって いるのは どちらかな。",
@@ -82945,14 +82996,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん おもい はこは どれですか。",
-       "figure": "🟥　　　　　　🟦　　　　\n　　＼　　　　　　＼　　\n　　▲　🟦　　　　▲　🟨",
+       "balance": [
+        {
+         "left": "🟥",
+         "right": "🟦",
+         "tilt": "right"
+        },
+        {
+         "left": "🟦",
+         "right": "🟨",
+         "tilt": "right"
+        }
+       ],
        "choices": [
         "🟥",
         "🟦",
         "🟨"
        ],
        "answer": "🟨",
-       "check": "[c for c in '🟥🟦🟨' if c not in fig.splitlines()[0]][0]",
+       "check": "[c for c in '🟥🟦🟨' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、おもいのは どちらかな。",
         "みぎの てんびんで、おもいのは どちらかな。",
@@ -82969,14 +83031,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん かるい はこは どれですか。",
-       "figure": "　　　　🟥　　　　　　🟩\n　　／　　　　　　／　　\n🟩　▲　　　　🟦　▲　　",
+       "balance": [
+        {
+         "left": "🟩",
+         "right": "🟥",
+         "tilt": "left"
+        },
+        {
+         "left": "🟦",
+         "right": "🟩",
+         "tilt": "left"
+        }
+       ],
        "choices": [
         "🟩",
         "🟥",
         "🟦"
        ],
        "answer": "🟥",
-       "check": "[c for c in '🟩🟥🟦' if c not in fig.splitlines()[-1]][0]",
+       "check": "[c for c in '🟩🟥🟦' if all(c not in b[b['tilt']] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、かるいのは どちらかな。",
         "みぎの てんびんで、かるいのは どちらかな。",
@@ -82994,14 +83067,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "おもい じゅんに ならべると、どれですか。",
-       "figure": "🟨　　　　　　🟦　　　　\n　　＼　　　　　　＼　　\n　　▲　🟥　　　　▲　🟨",
+       "balance": [
+        {
+         "left": "🟨",
+         "right": "🟥",
+         "tilt": "right"
+        },
+        {
+         "left": "🟦",
+         "right": "🟨",
+         "tilt": "right"
+        }
+       ],
        "choices": [
         "🟥、🟨、🟦",
         "🟦、🟨、🟥",
         "🟨、🟥、🟦"
        ],
        "answer": "🟥、🟨、🟦",
-       "check": "'、'.join(sorted('🟥🟨🟦', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))",
+       "check": "'、'.join(sorted('🟥🟨🟦', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))",
        "hints": [
         "まず いちばん おもい はこを さがそう。",
         "つぎに いちばん かるい はこを さがそう。",
@@ -83037,7 +83121,18 @@ window.ROADMAP = {
       {
        "part": "わけ",
        "text": "🍑 と 🍒 は、いっしょに のせて いません。それでも 🍑 の ほうが おもいと いえます。どうしてか、くちで いってみよう。",
-       "figure": "　　　　🍊　　　　　　🍒\n　　／　　　　　　／　　\n🍑　▲　　　　🍊　▲　　",
+       "balance": [
+        {
+         "left": "🍑",
+         "right": "🍊",
+         "tilt": "left"
+        },
+        {
+         "left": "🍊",
+         "right": "🍒",
+         "tilt": "left"
+        }
+       ],
        "explain": "「🍑 は 🍊 より おもい。🍊 は 🍒 より おもい。だから 🍑 は 🍒 より もっと おもい」や「🍒、🍊、🍑 の じゅんに だんだん おもく なって いるから」と いえれば よい。本当にてんびんにのせて確かめてもよい。",
        "hints": [
         "ひだりの てんびんで、🍑 と 🍊 の どちらが おもいかな。",
@@ -83057,14 +83152,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん おもい はこは どれですか。",
-       "figure": "🟦　　　　　　🟩　　　　\n　　＼　　　　　　＼　　\n　　▲　🟩　　　　▲　🟥",
+       "balance": [
+        {
+         "left": "🟦",
+         "right": "🟩",
+         "tilt": "right"
+        },
+        {
+         "left": "🟩",
+         "right": "🟥",
+         "tilt": "right"
+        }
+       ],
        "choices": [
         "🟦",
         "🟩",
         "🟥"
        ],
        "answer": "🟥",
-       "check": "[c for c in '🟦🟩🟥' if c not in fig.splitlines()[0]][0]",
+       "check": "[c for c in '🟦🟩🟥' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、おもいのは どちらかな。",
         "みぎの てんびんで、おもいのは どちらかな。",
@@ -83081,14 +83187,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん かるい はこは どれですか。",
-       "figure": "　　　　🟦　　　　　　🟨\n　　／　　　　　　／　　\n🟨　▲　　　　🟥　▲　　",
+       "balance": [
+        {
+         "left": "🟨",
+         "right": "🟦",
+         "tilt": "left"
+        },
+        {
+         "left": "🟥",
+         "right": "🟨",
+         "tilt": "left"
+        }
+       ],
        "choices": [
         "🟨",
         "🟦",
         "🟥"
        ],
        "answer": "🟦",
-       "check": "[c for c in '🟨🟦🟥' if c not in fig.splitlines()[-1]][0]",
+       "check": "[c for c in '🟨🟦🟥' if all(c not in b[b['tilt']] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、かるいのは どちらかな。",
         "みぎの てんびんで、かるいのは どちらかな。",
@@ -83105,14 +83222,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "おもい じゅんに ならべると、どれですか。",
-       "figure": "　　　　🟦　　　　　　🟨\n　　／　　　　　　／　　\n🟩　▲　　　　🟦　▲　　",
+       "balance": [
+        {
+         "left": "🟩",
+         "right": "🟦",
+         "tilt": "left"
+        },
+        {
+         "left": "🟦",
+         "right": "🟨",
+         "tilt": "left"
+        }
+       ],
        "choices": [
         "🟨、🟦、🟩",
         "🟩、🟦、🟨",
         "🟦、🟩、🟨"
        ],
        "answer": "🟩、🟦、🟨",
-       "check": "'、'.join(sorted('🟩🟦🟨', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))",
+       "check": "'、'.join(sorted('🟩🟦🟨', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))",
        "hints": [
         "まず いちばん おもい はこを さがそう。",
         "つぎに いちばん かるい はこを さがそう。",
@@ -83135,20 +83263,35 @@ window.ROADMAP = {
       {
        "part": "見本",
        "text": "🟥 1 こと 🟨 3 こが つりあって います。🟥 2 こと つりあうのは、🟨 なんこかな。",
-       "figure": "🟥───🟨🟨🟨\n　　▲　　　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟨🟨🟨",
+        "tilt": "level"
+       },
        "explain": "つりあって いるので、🟥 1 こと 🟨 3 こは おなじ おもさです。🟥 を 1 こずつ 🟨 3 こに とりかえます。🟥🟥 は 🟨🟨🟨 と 🟨🟨🟨 に なります。🟨 は 6 こです。"
       },
       {
        "part": "思い出す",
        "text": "いちばん おもい はこは どれですか。",
-       "figure": "🟨　　　　　　🟩　　　　\n　　＼　　　　　　＼　　\n　　▲　🟩　　　　▲　🟦",
+       "balance": [
+        {
+         "left": "🟨",
+         "right": "🟩",
+         "tilt": "right"
+        },
+        {
+         "left": "🟩",
+         "right": "🟦",
+         "tilt": "right"
+        }
+       ],
        "choices": [
         "🟨",
         "🟩",
         "🟦"
        ],
        "answer": "🟦",
-       "check": "[c for c in '🟨🟩🟦' if c not in fig.splitlines()[0]][0]",
+       "check": "[c for c in '🟨🟩🟦' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、おもいのは どちらかな。",
         "みぎの てんびんで、おもいのは どちらかな。",
@@ -83165,14 +83308,18 @@ window.ROADMAP = {
       {
        "part": "思い出す",
        "text": "🟦 と 🟩 の はこを のせました。どう いえますか。",
-       "figure": "🟦───🟩\n　　▲　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩",
+        "tilt": "level"
+       },
        "choices": [
         "🟦 の ほうが おもい",
         "🟩 の ほうが おもい",
         "おなじ おもさ"
        ],
        "answer": "おなじ おもさ",
-       "check": "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'",
+       "check": "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'",
        "hints": [
         "どちらかが したに さがって いるかな。",
         "まっすぐに なって いるね。",
@@ -83189,9 +83336,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 1 こと 🟨 2 こが つりあって います。🟥 2 こと つりあうのは、🟨 なんこですか。",
-       "figure": "🟥───🟨🟨\n　　▲　　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟨🟨",
+        "tilt": "level"
+       },
        "answer": 4,
-       "check": "n('🟨') + n('🟨')",
+       "check": "bal['right'].count('🟨') + bal['right'].count('🟨')",
        "hints": [
         "🟥 1 こは、🟨 なんこと おなじ おもさかな。",
         "🟥 を 1 こずつ 🟨 に とりかえて みよう。",
@@ -83208,9 +83359,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 1 こと 🟩 4 こが つりあって います。🟦 1 こと 🟩 1 こを あわせると、🟩 なんこと つりあいますか。",
-       "figure": "🟦───🟩🟩🟩🟩\n　　▲　　　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩🟩🟩🟩",
+        "tilt": "level"
+       },
        "answer": 5,
-       "check": "n('🟩') + 1",
+       "check": "bal['right'].count('🟩') + 1",
        "hints": [
         "🟦 1 こは、🟩 なんこと おなじ おもさかな。",
         "🟦 を 🟩 に とりかえて みよう。",
@@ -83227,14 +83382,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 1 こと 🟨 2 こが つりあって います。てんびんに 🟥 1 こと 🟨 3 こを のせると、どう なりますか。",
-       "figure": "🟥───🟨🟨\n　　▲　　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟨🟨",
+        "tilt": "level"
+       },
        "choices": [
         "🟥 の ほうが さがる",
         "🟨 の ほうが さがる",
         "つりあう"
        ],
        "answer": "🟨 の ほうが さがる",
-       "check": "'🟨 の ほうが さがる' if 3 > n('🟨') else 'ちがう'",
+       "check": "'🟨 の ほうが さがる' if 3 > bal['right'].count('🟨') else 'ちがう'",
        "hints": [
         "🟥 1 こは、🟨 なんこと おなじ おもさかな。",
         "🟥 を 🟨 に とりかえると、🟨 なんこと 🟨 3 この くらべに なるかな。",
@@ -83252,9 +83411,13 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "🟥 1 こと 🟨 1 こを のせた さらと、🟨 6 こを のせた さらが つりあって います。🟥 1 こは、🟨 なんこと おなじ おもさですか。",
-       "figure": "🟥🟨───🟨🟨🟨🟨🟨🟨\n　　　▲　　　　　　　",
+       "balance": {
+        "left": "🟥🟨",
+        "right": "🟨🟨🟨🟨🟨🟨",
+        "tilt": "level"
+       },
        "answer": 5,
-       "check": "fig.splitlines()[0].split('───')[1].count('🟨') - fig.splitlines()[0].split('───')[0].count('🟨')",
+       "check": "bal['right'].count('🟨') - bal['left'].count('🟨')",
        "hints": [
         "りょうほうの さらに 🟨 が のって いるね。",
         "りょうほうから 🟨 を 1 こずつ とっても、つりあった ままだよ。",
@@ -83272,7 +83435,11 @@ window.ROADMAP = {
       {
        "part": "わけ",
        "text": "🟦 1 こと 🟩 2 こが つりあう とき、🟦 2 こと 🟩 4 こも つりあいます。どうしてか、くちで いってみよう。",
-       "figure": "🟦───🟩🟩\n　　▲　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩🟩",
+        "tilt": "level"
+       },
        "explain": "「🟦 1 こは 🟩 2 こと おなじ おもさ。だから 🟦 を 1 こずつ 🟩 2 こに とりかえると、🟦 2 こは 🟩 4 こに なる」や「🟦 1 こと 🟩 2 この くみが 2 つ ある。だから つりあう」と いえれば よい。実物で 2 組を合わせてのせて見せてもよい。",
        "hints": [
         "🟦 1 こは、🟩 なんこと おなじ おもさかな。",
@@ -83297,9 +83464,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 1 こと 🟩 4 こが つりあって います。🟦 2 こと つりあうのは、🟩 なんこですか。",
-       "figure": "🟦───🟩🟩🟩🟩\n　　▲　　　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩🟩🟩🟩",
+        "tilt": "level"
+       },
        "answer": 8,
-       "check": "n('🟩') + n('🟩')",
+       "check": "bal['right'].count('🟩') + bal['right'].count('🟩')",
        "hints": [
         "🟦 1 こは、🟩 なんこと おなじ おもさかな。",
         "🟦 を 1 こずつ 🟩 に とりかえて みよう。",
@@ -83316,14 +83487,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 1 こと 🟨 3 こが つりあって います。てんびんに 🟥 1 こと 🟨 2 こを のせると、どう なりますか。",
-       "figure": "🟥───🟨🟨🟨\n　　▲　　　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟨🟨🟨",
+        "tilt": "level"
+       },
        "choices": [
         "🟥 の ほうが さがる",
         "🟨 の ほうが さがる",
         "つりあう"
        ],
        "answer": "🟥 の ほうが さがる",
-       "check": "'🟥 の ほうが さがる' if n('🟨') > 2 else 'ちがう'",
+       "check": "'🟥 の ほうが さがる' if bal['right'].count('🟨') > 2 else 'ちがう'",
        "hints": [
         "🟥 1 こは、🟨 なんこと おなじ おもさかな。",
         "🟥 を 🟨 に とりかえて くらべよう。",
@@ -83340,9 +83515,13 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "🟦 1 こと 🟩 1 こを のせた さらと、🟩 4 こを のせた さらが つりあって います。🟦 1 こは、🟩 なんこと おなじ おもさですか。",
-       "figure": "🟦🟩───🟩🟩🟩🟩\n　　　▲　　　　　",
+       "balance": {
+        "left": "🟦🟩",
+        "right": "🟩🟩🟩🟩",
+        "tilt": "level"
+       },
        "answer": 3,
-       "check": "fig.splitlines()[0].split('───')[1].count('🟩') - fig.splitlines()[0].split('───')[0].count('🟩')",
+       "check": "bal['right'].count('🟩') - bal['left'].count('🟩')",
        "hints": [
         "りょうほうの さらに 🟩 が のって いるね。",
         "りょうほうから 🟩 を 1 こずつ とっても、つりあった ままだよ。",
@@ -83408,13 +83587,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "てんびんに 🟨 2 こと 🟦 1 こを のせました。どちらが おもいですか。",
-       "figure": "🟨🟨　　　　\n　　　＼　　\n　　　▲　🟦",
+       "balance": {
+        "left": "🟨🟨",
+        "right": "🟦",
+        "tilt": "right"
+       },
        "choices": [
         "🟨 2 こ",
         "🟦 1 こ"
        ],
        "answer": "🟦 1 こ",
-       "check": "'🟦 1 こ' if '🟦' in fig.splitlines()[-1] else '🟨 2 こ'",
+       "check": "'🟦 1 こ' if bal['tilt'] == 'right' else '🟨 2 こ'",
        "hints": [
         "てんびんの かたむきを みよう。",
         "したに さがって いるのは どちらかな。",
@@ -83430,14 +83613,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "おもい じゅんに ならべると、どれですか。",
-       "figure": "　　　　🟥　　　　　　🟦\n　　／　　　　　　／　　\n🟦　▲　　　　🟩　▲　　",
+       "balance": [
+        {
+         "left": "🟦",
+         "right": "🟥",
+         "tilt": "left"
+        },
+        {
+         "left": "🟩",
+         "right": "🟦",
+         "tilt": "left"
+        }
+       ],
        "choices": [
         "🟥、🟦、🟩",
         "🟩、🟦、🟥",
         "🟦、🟩、🟥"
        ],
        "answer": "🟩、🟦、🟥",
-       "check": "'、'.join(sorted('🟩🟦🟥', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))",
+       "check": "'、'.join(sorted('🟩🟦🟥', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))",
        "hints": [
         "まず いちばん おもい はこを さがそう。",
         "つぎに いちばん かるい はこを さがそう。",
@@ -83454,9 +83648,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 1 こと 🟦 2 こが つりあって います。🟥 3 こと つりあうのは、🟦 なんこですか。",
-       "figure": "🟥───🟦🟦\n　　▲　　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟦🟦",
+        "tilt": "level"
+       },
        "answer": 6,
-       "check": "n('🟦') + n('🟦') + n('🟦')",
+       "check": "bal['right'].count('🟦') + bal['right'].count('🟦') + bal['right'].count('🟦')",
        "hints": [
         "🟥 1 こは、🟦 なんこと おなじ おもさかな。",
         "🟥 を 1 こずつ 🟦 に とりかえて みよう。",
@@ -83473,14 +83671,18 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟥 と 🟦 を のせたら、つりあいました。おもい はこは どれですか。",
-       "figure": "🟥───🟦\n　　▲　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟦",
+        "tilt": "level"
+       },
        "choices": [
         "🟥",
         "🟦",
         "🟨"
        ],
        "answer": "🟨",
-       "check": "[c for c in '🟥🟦🟨' if c not in fig][0]",
+       "check": "[c for c in '🟥🟦🟨' if c not in bal['left'] + bal['right']][0]",
        "hints": [
         "つりあった とき、2 つの おもさは どうかな。",
         "おもい はこが のって いたら、てんびんは どう なるかな。",
@@ -83498,7 +83700,11 @@ window.ROADMAP = {
       {
        "part": "わけ",
        "text": "🟩 🟥 🟦 の なかに、1 つだけ おもい はこが あります。🟩 と 🟥 が つりあったので、おもい はこは 🟦 だと わかります。どうしてか、くちで いってみよう。",
-       "figure": "🟩───🟥\n　　▲　　",
+       "balance": {
+        "left": "🟩",
+        "right": "🟥",
+        "tilt": "level"
+       },
        "explain": "「🟩 と 🟥 が つりあったから、どちらも おもい はこでは ない。だから のこりの 🟦 が おもい」や「おもい はこが のって いたら てんびんが かたむく はず。かたむかなかったから、のって いない 🟦」と いえれば よい。",
        "hints": [
         "🟩 と 🟥 は、おなじ おもさかな。",
@@ -83523,13 +83729,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "てんびんに 🟩 1 こと 🟨 3 こを のせました。どちらが かるいですか。",
-       "figure": "　　　　🟨🟨🟨\n　　／　　　　\n🟩　▲　　　　",
+       "balance": {
+        "left": "🟩",
+        "right": "🟨🟨🟨",
+        "tilt": "left"
+       },
        "choices": [
         "🟩 1 こ",
         "🟨 3 こ"
        ],
        "answer": "🟨 3 こ",
-       "check": "'🟨 3 こ' if '🟨' in fig.splitlines()[0] else '🟩 1 こ'",
+       "check": "'🟨 3 こ' if bal['tilt'] == 'left' else '🟩 1 こ'",
        "hints": [
         "てんびんの かたむきを みよう。",
         "うえに あがって いるのは どちらかな。",
@@ -83545,9 +83755,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 1 こと 🟥 4 こが つりあって います。🟦 1 こと 🟥 2 こを あわせると、🟥 なんこと つりあいますか。",
-       "figure": "🟦───🟥🟥🟥🟥\n　　▲　　　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟥🟥🟥🟥",
+        "tilt": "level"
+       },
        "answer": 6,
-       "check": "n('🟥') + 2",
+       "check": "bal['right'].count('🟥') + 2",
        "hints": [
         "🟦 1 こは、🟥 なんこと おなじ おもさかな。",
         "🟦 を 🟥 に とりかえて みよう。",
@@ -83564,14 +83778,18 @@ window.ROADMAP = {
       {
        "part": "挑戦",
        "text": "🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟦 と 🟨 を のせたら、🟨 が さがりました。おもい はこは どれですか。",
-       "figure": "🟦　　　　\n　　＼　　\n　　▲　🟨",
+       "balance": {
+        "left": "🟦",
+        "right": "🟨",
+        "tilt": "right"
+       },
        "choices": [
         "🟥",
         "🟦",
         "🟨"
        ],
        "answer": "🟨",
-       "check": "[c for c in '🟥🟦🟨' if c in fig.splitlines()[-1]][0]",
+       "check": "[c for c in '🟥🟦🟨' if c in bal[bal['tilt']]][0]",
        "hints": [
         "てんびんは かたむいたかな。",
         "さがった ほうは、おもいかな、かるいかな。",
@@ -83594,13 +83812,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "どちらが おもいですか。",
-       "figure": "🍋　　　　\n　　＼　　\n　　▲　🍑",
+       "balance": {
+        "left": "🍋",
+        "right": "🍑",
+        "tilt": "right"
+       },
        "choices": [
         "レモン",
         "もも"
        ],
        "answer": "もも",
-       "check": "'もも' if '🍑' in fig.splitlines()[-1] else 'レモン'",
+       "check": "'もも' if bal['tilt'] == 'right' else 'レモン'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "したに さがって いるのは どちらかな。",
@@ -83616,13 +83838,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 と 🟨 の はこを のせました。どちらが かるいですか。",
-       "figure": "　　　　🟨\n　　／　　\n🟦　▲　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟨",
+        "tilt": "left"
+       },
        "choices": [
         "🟦",
         "🟨"
        ],
        "answer": "🟨",
-       "check": "'🟨' if '🟨' in fig.splitlines()[0] else '🟦'",
+       "check": "'🟨' if bal['tilt'] == 'left' else '🟦'",
        "hints": [
         "てんびんは どちらに かたむいて いるかな。",
         "うえに あがって いるのは どちらかな。",
@@ -83638,14 +83864,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟩 と 🟥 の はこを のせました。どう いえますか。",
-       "figure": "🟩───🟥\n　　▲　　",
+       "balance": {
+        "left": "🟩",
+        "right": "🟥",
+        "tilt": "level"
+       },
        "choices": [
         "🟩 の ほうが おもい",
         "🟥 の ほうが おもい",
         "おなじ おもさ"
        ],
        "answer": "おなじ おもさ",
-       "check": "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'",
+       "check": "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'",
        "hints": [
         "どちらかが したに さがって いるかな。",
         "まっすぐに なって いるね。",
@@ -83662,13 +83892,17 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "てんびんに 🟨 4 こと 🟦 1 こを のせました。どちらが おもいですか。",
-       "figure": "🟨🟨🟨🟨　　　　\n　　　　　＼　　\n　　　　　▲　🟦",
+       "balance": {
+        "left": "🟨🟨🟨🟨",
+        "right": "🟦",
+        "tilt": "right"
+       },
        "choices": [
         "🟨 4 こ",
         "🟦 1 こ"
        ],
        "answer": "🟦 1 こ",
-       "check": "'🟦 1 こ' if '🟦' in fig.splitlines()[-1] else '🟨 4 こ'",
+       "check": "'🟦 1 こ' if bal['tilt'] == 'right' else '🟨 4 こ'",
        "hints": [
         "てんびんの かたむきを みよう。",
         "したに さがって いるのは どちらかな。",
@@ -83684,14 +83918,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん おもい はこは どれですか。",
-       "figure": "🟩　　　　　　🟨　　　　\n　　＼　　　　　　＼　　\n　　▲　🟥　　　　▲　🟩",
+       "balance": [
+        {
+         "left": "🟩",
+         "right": "🟥",
+         "tilt": "right"
+        },
+        {
+         "left": "🟨",
+         "right": "🟩",
+         "tilt": "right"
+        }
+       ],
        "choices": [
         "🟩",
         "🟥",
         "🟨"
        ],
        "answer": "🟥",
-       "check": "[c for c in '🟩🟥🟨' if c not in fig.splitlines()[0]][0]",
+       "check": "[c for c in '🟩🟥🟨' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、おもいのは どちらかな。",
         "みぎの てんびんで、おもいのは どちらかな。",
@@ -83708,9 +83953,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 1 こと 🟩 3 こが つりあって います。🟦 3 こと つりあうのは、🟩 なんこですか。",
-       "figure": "🟦───🟩🟩🟩\n　　▲　　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩🟩🟩",
+        "tilt": "level"
+       },
        "answer": 9,
-       "check": "n('🟩') + n('🟩') + n('🟩')",
+       "check": "bal['right'].count('🟩') + bal['right'].count('🟩') + bal['right'].count('🟩')",
        "hints": [
         "🟦 1 こは、🟩 なんこと おなじ おもさかな。",
         "🟦 を 1 こずつ 🟩 に とりかえて みよう。",
@@ -83727,9 +83976,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 1 こと 🟦 1 こを のせた さらと、🟦 4 こを のせた さらが つりあって います。🟥 1 こは、🟦 なんこと おなじ おもさですか。",
-       "figure": "🟥🟦───🟦🟦🟦🟦\n　　　▲　　　　　",
+       "balance": {
+        "left": "🟥🟦",
+        "right": "🟦🟦🟦🟦",
+        "tilt": "level"
+       },
        "answer": 3,
-       "check": "fig.splitlines()[0].split('───')[1].count('🟦') - fig.splitlines()[0].split('───')[0].count('🟦')",
+       "check": "bal['right'].count('🟦') - bal['left'].count('🟦')",
        "hints": [
         "りょうほうの さらに 🟦 が のって いるね。",
         "りょうほうから 🟦 を 1 こずつ とっても、つりあった ままだよ。",
@@ -83746,14 +83999,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟥 と 🟨 を のせたら、つりあいました。おもい はこは どれですか。",
-       "figure": "🟥───🟨\n　　▲　　",
+       "balance": {
+        "left": "🟥",
+        "right": "🟨",
+        "tilt": "level"
+       },
        "choices": [
         "🟥",
         "🟦",
         "🟨"
        ],
        "answer": "🟦",
-       "check": "[c for c in '🟥🟦🟨' if c not in fig][0]",
+       "check": "[c for c in '🟥🟦🟨' if c not in bal['left'] + bal['right']][0]",
        "hints": [
         "つりあった とき、2 つの おもさは どうかな。",
         "おもい はこが のって いたら、てんびんは どう なるかな。",
@@ -83772,14 +84029,25 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "いちばん かるい はこは どれですか。",
-       "figure": "　　　　🟦　　　　　　🟩\n　　／　　　　　　／　　\n🟥　▲　　　　🟦　▲　　",
+       "balance": [
+        {
+         "left": "🟥",
+         "right": "🟦",
+         "tilt": "left"
+        },
+        {
+         "left": "🟦",
+         "right": "🟩",
+         "tilt": "left"
+        }
+       ],
        "choices": [
         "🟥",
         "🟦",
         "🟩"
        ],
        "answer": "🟩",
-       "check": "[c for c in '🟥🟦🟩' if c not in fig.splitlines()[-1]][0]",
+       "check": "[c for c in '🟥🟦🟩' if all(c not in b[b['tilt']] for b in bal)][0]",
        "hints": [
         "ひだりの てんびんで、かるいのは どちらかな。",
         "みぎの てんびんで、かるいのは どちらかな。",
@@ -83796,9 +84064,13 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟨 1 こと 🟥 2 こが つりあって います。🟨 1 こと 🟥 3 こを あわせると、🟥 なんこと つりあいますか。",
-       "figure": "🟨───🟥🟥\n　　▲　　　",
+       "balance": {
+        "left": "🟨",
+        "right": "🟥🟥",
+        "tilt": "level"
+       },
        "answer": 5,
-       "check": "n('🟥') + 3",
+       "check": "bal['right'].count('🟥') + 3",
        "hints": [
         "🟨 1 こは、🟥 なんこと おなじ おもさかな。",
         "🟨 を 🟥 に とりかえて みよう。",
@@ -83815,14 +84087,18 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟦 1 こと 🟩 4 こが つりあって います。てんびんに 🟦 1 こと 🟩 5 こを のせると、どう なりますか。",
-       "figure": "🟦───🟩🟩🟩🟩\n　　▲　　　　　",
+       "balance": {
+        "left": "🟦",
+        "right": "🟩🟩🟩🟩",
+        "tilt": "level"
+       },
        "choices": [
         "🟦 の ほうが さがる",
         "🟩 の ほうが さがる",
         "つりあう"
        ],
        "answer": "🟩 の ほうが さがる",
-       "check": "'🟩 の ほうが さがる' if 5 > n('🟩') else 'ちがう'",
+       "check": "'🟩 の ほうが さがる' if 5 > bal['right'].count('🟩') else 'ちがう'",
        "hints": [
         "🟦 1 こは、🟩 なんこと おなじ おもさかな。",
         "🟦 を 🟩 に とりかえて くらべよう。",
@@ -164330,7 +164606,11 @@ window.ROADMAP = {
       {
        "part": "見本",
        "text": "てんびんの左に、重さ x g の箱 🟦 と 1 g のおもり ⚪ 2 こ、右に ⚪ 6 こをのせると、つり合いました。x を求めましょう。",
-       "figure": "🟦⚪⚪───⚪⚪⚪⚪⚪⚪\n　　　　▲　　　　　　　",
+       "balance": {
+        "left": "🟦⚪⚪",
+        "right": "⚪⚪⚪⚪⚪⚪",
+        "tilt": "level"
+       },
        "explain": "つり合っているので、左右の重さは等しく、x + 2 = 6 と書けます。このように、わからない数をふくむ等式を方程式といいます。両方の皿から ⚪ を 2 こずつ取っても、つり合いはくずれません。式では両辺から 2 をひいて x + 2 − 2 = 6 − 2、つまり x = 4 です。方程式を成り立たせる x の値を解といい、解を求めることを、方程式を解くといいます。x = 4 を代入すると 4 + 2 = 6 となり、成り立つことが確かめられます。"
       },
       {
@@ -164396,7 +164676,11 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "てんびんがつり合っています。🟦 は x g の箱、⚪ は 1 g のおもりです。x はいくつですか。",
-       "figure": "🟦⚪───⚪⚪⚪⚪⚪⚪⚪\n　　　▲　　　　　　　　",
+       "balance": {
+        "left": "🟦⚪",
+        "right": "⚪⚪⚪⚪⚪⚪⚪",
+        "tilt": "level"
+       },
        "answer": 6,
        "check": "7 - 1",
        "hints": [
@@ -164521,7 +164805,11 @@ window.ROADMAP = {
       {
        "part": "見本",
        "text": "てんびんの左に 🟦 を 3 こ、右に ⚪ を 9 このせると、つり合いました。🟦 1 こは何 g でしょう。",
-       "figure": "🟦🟦🟦───⚪⚪⚪⚪⚪⚪⚪⚪⚪\n　　　　▲　　　　　　　　　　",
+       "balance": {
+        "left": "🟦🟦🟦",
+        "right": "⚪⚪⚪⚪⚪⚪⚪⚪⚪",
+        "tilt": "level"
+       },
        "explain": "式では 3x = 9 です。両方の皿の重さを、それぞれ 3 等分しても、つり合いはくずれません。式では両辺を 3 でわって x = 3 です。等式の性質として、両辺に同じ数を足しても、ひいても、かけても、0 でない同じ数でわっても、等式は成り立ちます。たとえば x/2 = 5 なら両辺に 2 をかけて x = 10、−2x = 8 なら両辺を −2 でわって x = −4 です。0 でわることはできないので、「0 でない」がつきます。"
       },
       {
@@ -165389,7 +165677,11 @@ window.ROADMAP = {
       {
        "part": "わけ",
        "text": "てんびんの左に 🟦 2 こと ⚪ 1 こ、右に ⚪ 7 こをのせると、つり合います（⚪ は 1 g）。両方の皿から ⚪ を 1 こずつ取ってもつり合うわけと、そのあと 🟦 1 こが何 g とわかるかを、文で書きましょう。",
-       "figure": "🟦🟦⚪───⚪⚪⚪⚪⚪⚪⚪\n　　　　▲　　　　　　　　",
+       "balance": {
+        "left": "🟦🟦⚪",
+        "right": "⚪⚪⚪⚪⚪⚪⚪",
+        "tilt": "level"
+       },
        "explain": "例：「つり合っているのは、左右の重さが等しいから。両方の皿から同じ 1 g を取ると、左右はどちらも 1 g ずつ軽くなるので、重さは等しいままで、つり合う。すると 🟦 2 こと ⚪ 6 こがつり合う。両方を同じように 2 つに分けると、🟦 1 こと ⚪ 3 こがつり合うので、🟦 1 こは 3 g。」と書ければよい。式で 2x + 1 = 7、2x = 6、x = 3 と書き添えていれば、なおよい。「同じ重さを取るから等しいまま」が書けているかを見る（代表の例で書くわけ ②）。",
        "hints": [
         "てんびんがつり合うのは、左右の何が等しいときでしょう。",
@@ -165506,7 +165798,11 @@ window.ROADMAP = {
       {
        "part": "今日",
        "text": "🟥 は同じ重さの箱、⚪ は 1 g のおもりです。てんびんがつり合っています。🟥 1 こを x g として方程式をつくり、x を求めましょう。",
-       "figure": "🟥⚪⚪⚪⚪───🟥🟥🟥\n　　　　　　▲　　　　",
+       "balance": {
+        "left": "🟥⚪⚪⚪⚪",
+        "right": "🟥🟥🟥",
+        "tilt": "level"
+       },
        "answer": 2,
        "check": "Fraction(4, 3 - 1)",
        "hints": [

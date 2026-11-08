@@ -1,12 +1,11 @@
 # A-001 てんびんと重さくらべ
 #
 # 書き方は N-001 の頭の注のとおり。
-# てんびんの図：かるい ほう（あがった ほう）を いちばん うえの 行に、おもい ほう（さがった ほう）を いちばん したの 行に かく。
-#   ▲ は ささえ、／ と ＼ は かたむいた うで、─ は つりあって まっすぐな うで（つりあった てんびんは 2 行）。
-#   2 つの てんびんは よこに ならべる（行を そろえる）。
-# check：おもい ほうは fig.splitlines()[-1] に、かるい ほうは fig.splitlines()[0] に ある。
-#   いちばん おもいのは うえの 行に いちども ない もの、いちばん かるいのは したの 行に いちども ない もの。
-#   おもい じゅんは「うえの 行に ある かず − したの 行に ある かず」の 小さい じゅん。
+# てんびんの図は balance（D-042）：{left: ひだりの さらの 物, right: みぎの さらの 物, tilt: さがる ほう（left、right、level）}。
+#   2 つの てんびんは 並び（[{…}, {…}]）に して、よこに ならべる。かぞえる ための 絵（くり、あめ）は figure の まま。
+# check：bal は balance の 値（1 つなら 辞書、2 つなら 並び）。おもい ほう（さがった ほう）は bal[bal['tilt']]、かるい ほうは のこりの さら。
+#   いちばん おもいのは かるい ほうに いちども ない もの、いちばん かるいのは おもい ほうに いちども ない もの。
+#   おもい じゅんは「かるい ほうに ある かず − おもい ほうに ある かず」の 小さい じゅん。
 # 重さは じっさいと くいちがわない ものを えらぶ（くだもの）。じっさいの 重さが わからない ものは、いろの ちがう はこ（🟥🟦🟨🟩）に する。
 # 前提は N-001 だけなので、たし算の しきは つかわない。置きかえは「1 こずつ とりかえて かぞえる」で考え、数は 10 まで。
 # 地図の plan の 4 日目は「L-002 と混ぜる」だが、L-002 は前提（needs）にない。L-002 の道具（表に〇と×）は使わず、
@@ -19,7 +18,7 @@ days:
     items:
       - part: 見本
         text: てんびんに 🍎 と 🍋 を のせました。どちらが おもいかな。
-        figure: "　　　　🍋\n　　／　　\n🍎　▲　　"
+        balance: {left: "🍎", right: "🍋", tilt: left}
         explain: てんびんは、おもい ほうが したに さがります。🍎 の ほうが したに さがって いるので、🍎 の ほうが おもいです。🍋 は うえに あがって いるので、かるいです。
       - part: 思い出す
         text: くりは なんこ ありますか。
@@ -45,10 +44,10 @@ days:
           - [1 から かぞえる, 4 の あとに 6 が でて くる, 6]
       - part: 今日
         text: どちらが おもいですか。
-        figure: "🍊　　　　\n　　＼　　\n　　▲　🍇"
+        balance: {left: "🍊", right: "🍇", tilt: right}
         choices: [みかん, ぶどう]
         answer: ぶどう
-        check: "'ぶどう' if '🍇' in fig.splitlines()[-1] else 'みかん'"
+        check: "'ぶどう' if bal['tilt'] == 'right' else 'みかん'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - したに さがって いるのは どちらかな。
@@ -57,10 +56,10 @@ days:
           - [ぶどうの ほうが したに さがって いる, おもい ほうが さがる, ぶどう]
       - part: 今日
         text: どちらが かるいですか。
-        figure: "　　　　🍓\n　　／　　\n🍌　▲　　"
+        balance: {left: "🍌", right: "🍓", tilt: left}
         choices: [バナナ, いちご]
         answer: いちご
-        check: "'いちご' if '🍓' in fig.splitlines()[0] else 'バナナ'"
+        check: "'いちご' if bal['tilt'] == 'left' else 'バナナ'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - うえに あがって いるのは どちらかな。
@@ -70,10 +69,10 @@ days:
         note: 「かるい ほう」を きかれて いる。さがった ほうを えらびやすいので、もんだいを いっしょに よむ。
       - part: 今日
         text: てんびんに 🍎 と 🍐 を のせたら、まっすぐに なって とまりました。どう いえますか。
-        figure: "🍎───🍐\n　　▲　　"
+        balance: {left: "🍎", right: "🍐", tilt: level}
         choices: [🍎 の ほうが おもい, 🍐 の ほうが おもい, おなじ おもさ]
         answer: おなじ おもさ
-        check: "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'"
+        check: "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'"
         hints:
           - どちらかが したに さがって いるかな。
           - まっすぐに なって とまる ことを「つりあう」と いうよ。
@@ -83,10 +82,10 @@ days:
         note: つり合う＝同じ重さ。3 日目の置きかえで使う。
       - part: 挑戦
         text: てんびんに 🍓 3 こと 🍎 1 こを のせました。どちらが おもいですか。
-        figure: "🍓🍓🍓　　　　\n　　　　＼　　\n　　　　▲　🍎"
+        balance: {left: "🍓🍓🍓", right: "🍎", tilt: right}
         choices: [いちご 3 こ, りんご 1 こ]
         answer: りんご 1 こ
-        check: "'りんご 1 こ' if '🍎' in fig.splitlines()[-1] else 'いちご 3 こ'"
+        check: "'りんご 1 こ' if bal['tilt'] == 'right' else 'いちご 3 こ'"
         hints:
           - てんびんの かたむきを みよう。
           - したに さがって いるのは どちらかな。
@@ -97,10 +96,10 @@ days:
     extra:
       - part: 今日
         text: 🟦 と 🟥 の はこを のせました。どちらが おもいですか。
-        figure: "🟦　　　　\n　　＼　　\n　　▲　🟥"
+        balance: {left: "🟦", right: "🟥", tilt: right}
         choices: [🟦, 🟥]
         answer: 🟥
-        check: "'🟥' if '🟥' in fig.splitlines()[-1] else '🟦'"
+        check: "'🟥' if bal['tilt'] == 'right' else '🟦'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - したに さがって いるのは どちらかな。
@@ -109,10 +108,10 @@ days:
           - [🟥 の ほうが さがって いる, 🟥]
       - part: 今日
         text: どちらが かるいですか。
-        figure: "🥕　　　　\n　　＼　　\n　　▲　🍑"
+        balance: {left: "🥕", right: "🍑", tilt: right}
         choices: [にんじん, もも]
         answer: にんじん
-        check: "'にんじん' if '🥕' in fig.splitlines()[0] else 'もも'"
+        check: "'にんじん' if bal['tilt'] == 'right' else 'もも'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - うえに あがって いるのは どちらかな。
@@ -121,10 +120,10 @@ days:
           - [にんじんの ほうが あがって いる, にんじん]
       - part: 挑戦
         text: てんびんに 🍒 4 こと 🍊 1 こを のせました。どちらが おもいですか。
-        figure: "🍒🍒🍒🍒　　　　\n　　　　　＼　　\n　　　　　▲　🍊"
+        balance: {left: "🍒🍒🍒🍒", right: "🍊", tilt: right}
         choices: [さくらんぼ 4 こ, みかん 1 こ]
         answer: みかん 1 こ
-        check: "'みかん 1 こ' if '🍊' in fig.splitlines()[-1] else 'さくらんぼ 4 こ'"
+        check: "'みかん 1 こ' if bal['tilt'] == 'right' else 'さくらんぼ 4 こ'"
         hints:
           - てんびんの かたむきを みよう。
           - したに さがって いるのは どちらかな。
@@ -137,14 +136,14 @@ days:
     items:
       - part: 見本
         text: 🍎 と 🍋、🍋 と 🍓 を くらべました。おもい じゅんに ならべよう。
-        figure: "　　　　🍋　　　　　　🍓\n　　／　　　　　　／　　\n🍎　▲　　　　🍋　▲　　"
+        balance: [{left: "🍎", right: "🍋", tilt: left}, {left: "🍋", right: "🍓", tilt: left}]
         explain: ひだりの てんびんで、🍎 は 🍋 より おもい。みぎの てんびんで、🍋 は 🍓 より おもい。だから 🍎 が いちばん おもくて、🍓 が いちばん かるい。おもい じゅんに 🍎、🍋、🍓 です。
       - part: 思い出す
         text: どちらが おもいですか。
-        figure: "🍒　　　　\n　　＼　　\n　　▲　🍑"
+        balance: {left: "🍒", right: "🍑", tilt: right}
         choices: [さくらんぼ, もも]
         answer: もも
-        check: "'もも' if '🍑' in fig.splitlines()[-1] else 'さくらんぼ'"
+        check: "'もも' if bal['tilt'] == 'right' else 'さくらんぼ'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - したに さがって いるのは どちらかな。
@@ -153,10 +152,10 @@ days:
           - [ももの ほうが さがって いる, もも]
       - part: 思い出す
         text: 🟩 と 🟨 の はこを のせました。どちらが かるいですか。
-        figure: "　　　　🟨\n　　／　　\n🟩　▲　　"
+        balance: {left: "🟩", right: "🟨", tilt: left}
         choices: [🟩, 🟨]
         answer: 🟨
-        check: "'🟨' if '🟨' in fig.splitlines()[0] else '🟩'"
+        check: "'🟨' if bal['tilt'] == 'left' else '🟩'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - うえに あがって いるのは どちらかな。
@@ -165,10 +164,10 @@ days:
           - [🟨 の ほうが あがって いる, 🟨]
       - part: 今日
         text: いちばん おもい はこは どれですか。
-        figure: "🟥　　　　　　🟦　　　　\n　　＼　　　　　　＼　　\n　　▲　🟦　　　　▲　🟨"
+        balance: [{left: "🟥", right: "🟦", tilt: right}, {left: "🟦", right: "🟨", tilt: right}]
         choices: [🟥, 🟦, 🟨]
         answer: 🟨
-        check: "[c for c in '🟥🟦🟨' if c not in fig.splitlines()[0]][0]"
+        check: "[c for c in '🟥🟦🟨' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、おもいのは どちらかな。
           - みぎの てんびんで、おもいのは どちらかな。
@@ -177,10 +176,10 @@ days:
           - [🟥 より 🟦 が おもい, 🟦 より 🟨 が おもい, いちばん おもいのは 🟨]
       - part: 今日
         text: いちばん かるい はこは どれですか。
-        figure: "　　　　🟥　　　　　　🟩\n　　／　　　　　　／　　\n🟩　▲　　　　🟦　▲　　"
+        balance: [{left: "🟩", right: "🟥", tilt: left}, {left: "🟦", right: "🟩", tilt: left}]
         choices: [🟩, 🟥, 🟦]
         answer: 🟥
-        check: "[c for c in '🟩🟥🟦' if c not in fig.splitlines()[-1]][0]"
+        check: "[c for c in '🟩🟥🟦' if all(c not in b[b['tilt']] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、かるいのは どちらかな。
           - みぎの てんびんで、かるいのは どちらかな。
@@ -190,10 +189,10 @@ days:
         note: みぎの てんびんに いちばん おもい はこが ある。てんびんの ならぶ じゅんと、おもさの じゅんは ちがう。
       - part: 今日
         text: おもい じゅんに ならべると、どれですか。
-        figure: "🟨　　　　　　🟦　　　　\n　　＼　　　　　　＼　　\n　　▲　🟥　　　　▲　🟨"
+        balance: [{left: "🟨", right: "🟥", tilt: right}, {left: "🟦", right: "🟨", tilt: right}]
         choices: [🟥、🟨、🟦, 🟦、🟨、🟥, 🟨、🟥、🟦]
         answer: 🟥、🟨、🟦
-        check: "'、'.join(sorted('🟥🟨🟦', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))"
+        check: "'、'.join(sorted('🟥🟨🟦', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))"
         hints:
           - まず いちばん おもい はこを さがそう。
           - つぎに いちばん かるい はこを さがそう。
@@ -213,7 +212,7 @@ days:
         note: 1 回では、のせなかった箱との重さがわからない。並べ替えの手順（K-123）の入口。実物の箱で試してもよい。
       - part: わけ
         text: 🍑 と 🍒 は、いっしょに のせて いません。それでも 🍑 の ほうが おもいと いえます。どうしてか、くちで いってみよう。
-        figure: "　　　　🍊　　　　　　🍒\n　　／　　　　　　／　　\n🍑　▲　　　　🍊　▲　　"
+        balance: [{left: "🍑", right: "🍊", tilt: left}, {left: "🍊", right: "🍒", tilt: left}]
         explain: 「🍑 は 🍊 より おもい。🍊 は 🍒 より おもい。だから 🍑 は 🍒 より もっと おもい」や「🍒、🍊、🍑 の じゅんに だんだん おもく なって いるから」と いえれば よい。本当にてんびんにのせて確かめてもよい。
         hints:
           - ひだりの てんびんで、🍑 と 🍊 の どちらが おもいかな。
@@ -224,10 +223,10 @@ days:
     extra:
       - part: 今日
         text: いちばん おもい はこは どれですか。
-        figure: "🟦　　　　　　🟩　　　　\n　　＼　　　　　　＼　　\n　　▲　🟩　　　　▲　🟥"
+        balance: [{left: "🟦", right: "🟩", tilt: right}, {left: "🟩", right: "🟥", tilt: right}]
         choices: [🟦, 🟩, 🟥]
         answer: 🟥
-        check: "[c for c in '🟦🟩🟥' if c not in fig.splitlines()[0]][0]"
+        check: "[c for c in '🟦🟩🟥' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、おもいのは どちらかな。
           - みぎの てんびんで、おもいのは どちらかな。
@@ -236,10 +235,10 @@ days:
           - [🟦 より 🟩 が おもい, 🟩 より 🟥 が おもい, 🟥]
       - part: 今日
         text: いちばん かるい はこは どれですか。
-        figure: "　　　　🟦　　　　　　🟨\n　　／　　　　　　／　　\n🟨　▲　　　　🟥　▲　　"
+        balance: [{left: "🟨", right: "🟦", tilt: left}, {left: "🟥", right: "🟨", tilt: left}]
         choices: [🟨, 🟦, 🟥]
         answer: 🟦
-        check: "[c for c in '🟨🟦🟥' if c not in fig.splitlines()[-1]][0]"
+        check: "[c for c in '🟨🟦🟥' if all(c not in b[b['tilt']] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、かるいのは どちらかな。
           - みぎの てんびんで、かるいのは どちらかな。
@@ -248,10 +247,10 @@ days:
           - [🟨 より 🟦 が かるい, 🟥 より 🟨 が かるい, 🟦]
       - part: 今日
         text: おもい じゅんに ならべると、どれですか。
-        figure: "　　　　🟦　　　　　　🟨\n　　／　　　　　　／　　\n🟩　▲　　　　🟦　▲　　"
+        balance: [{left: "🟩", right: "🟦", tilt: left}, {left: "🟦", right: "🟨", tilt: left}]
         choices: [🟨、🟦、🟩, 🟩、🟦、🟨, 🟦、🟩、🟨]
         answer: 🟩、🟦、🟨
-        check: "'、'.join(sorted('🟩🟦🟨', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))"
+        check: "'、'.join(sorted('🟩🟦🟨', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))"
         hints:
           - まず いちばん おもい はこを さがそう。
           - つぎに いちばん かるい はこを さがそう。
@@ -263,14 +262,14 @@ days:
     items:
       - part: 見本
         text: 🟥 1 こと 🟨 3 こが つりあって います。🟥 2 こと つりあうのは、🟨 なんこかな。
-        figure: "🟥───🟨🟨🟨\n　　▲　　　　"
+        balance: {left: "🟥", right: "🟨🟨🟨", tilt: level}
         explain: つりあって いるので、🟥 1 こと 🟨 3 こは おなじ おもさです。🟥 を 1 こずつ 🟨 3 こに とりかえます。🟥🟥 は 🟨🟨🟨 と 🟨🟨🟨 に なります。🟨 は 6 こです。
       - part: 思い出す
         text: いちばん おもい はこは どれですか。
-        figure: "🟨　　　　　　🟩　　　　\n　　＼　　　　　　＼　　\n　　▲　🟩　　　　▲　🟦"
+        balance: [{left: "🟨", right: "🟩", tilt: right}, {left: "🟩", right: "🟦", tilt: right}]
         choices: [🟨, 🟩, 🟦]
         answer: 🟦
-        check: "[c for c in '🟨🟩🟦' if c not in fig.splitlines()[0]][0]"
+        check: "[c for c in '🟨🟩🟦' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、おもいのは どちらかな。
           - みぎの てんびんで、おもいのは どちらかな。
@@ -279,10 +278,10 @@ days:
           - [🟨 より 🟩 が おもい, 🟩 より 🟦 が おもい, 🟦]
       - part: 思い出す
         text: 🟦 と 🟩 の はこを のせました。どう いえますか。
-        figure: "🟦───🟩\n　　▲　　"
+        balance: {left: "🟦", right: "🟩", tilt: level}
         choices: [🟦 の ほうが おもい, 🟩 の ほうが おもい, おなじ おもさ]
         answer: おなじ おもさ
-        check: "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'"
+        check: "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'"
         hints:
           - どちらかが したに さがって いるかな。
           - まっすぐに なって いるね。
@@ -291,9 +290,9 @@ days:
           - [どちらも さがって いない, つりあって いる, おなじ おもさ]
       - part: 今日
         text: 🟥 1 こと 🟨 2 こが つりあって います。🟥 2 こと つりあうのは、🟨 なんこですか。
-        figure: "🟥───🟨🟨\n　　▲　　　"
+        balance: {left: "🟥", right: "🟨🟨", tilt: level}
         answer: 4
-        check: "n('🟨') + n('🟨')"
+        check: "bal['right'].count('🟨') + bal['right'].count('🟨')"
         hints:
           - 🟥 1 こは、🟨 なんこと おなじ おもさかな。
           - 🟥 を 1 こずつ 🟨 に とりかえて みよう。
@@ -302,9 +301,9 @@ days:
           - [🟥 1 こは 🟨 2 こ, 🟥 2 こを とりかえると 🟨🟨 と 🟨🟨, 4 こ]
       - part: 今日
         text: 🟦 1 こと 🟩 4 こが つりあって います。🟦 1 こと 🟩 1 こを あわせると、🟩 なんこと つりあいますか。
-        figure: "🟦───🟩🟩🟩🟩\n　　▲　　　　　"
+        balance: {left: "🟦", right: "🟩🟩🟩🟩", tilt: level}
         answer: 5
-        check: "n('🟩') + 1"
+        check: "bal['right'].count('🟩') + 1"
         hints:
           - 🟦 1 こは、🟩 なんこと おなじ おもさかな。
           - 🟦 を 🟩 に とりかえて みよう。
@@ -313,10 +312,10 @@ days:
           - [🟦 を 🟩 4 こに とりかえる, もとの 🟩 1 こと あわせる, 5 こ]
       - part: 今日
         text: 🟥 1 こと 🟨 2 こが つりあって います。てんびんに 🟥 1 こと 🟨 3 こを のせると、どう なりますか。
-        figure: "🟥───🟨🟨\n　　▲　　　"
+        balance: {left: "🟥", right: "🟨🟨", tilt: level}
         choices: [🟥 の ほうが さがる, 🟨 の ほうが さがる, つりあう]
         answer: 🟨 の ほうが さがる
-        check: "'🟨 の ほうが さがる' if 3 > n('🟨') else 'ちがう'"
+        check: "'🟨 の ほうが さがる' if 3 > bal['right'].count('🟨') else 'ちがう'"
         hints:
           - 🟥 1 こは、🟨 なんこと おなじ おもさかな。
           - 🟥 を 🟨 に とりかえると、🟨 なんこと 🟨 3 この くらべに なるかな。
@@ -326,9 +325,9 @@ days:
         note: 同じ種類どうしなら数の多いほうが重い。1 日目の挑戦（種類がちがうと数では決まらない）との違いを話してもよい。
       - part: 挑戦
         text: 🟥 1 こと 🟨 1 こを のせた さらと、🟨 6 こを のせた さらが つりあって います。🟥 1 こは、🟨 なんこと おなじ おもさですか。
-        figure: "🟥🟨───🟨🟨🟨🟨🟨🟨\n　　　▲　　　　　　　"
+        balance: {left: "🟥🟨", right: "🟨🟨🟨🟨🟨🟨", tilt: level}
         answer: 5
-        check: "fig.splitlines()[0].split('───')[1].count('🟨') - fig.splitlines()[0].split('───')[0].count('🟨')"
+        check: "bal['right'].count('🟨') - bal['left'].count('🟨')"
         hints:
           - りょうほうの さらに 🟨 が のって いるね。
           - りょうほうから 🟨 を 1 こずつ とっても、つりあった ままだよ。
@@ -338,7 +337,7 @@ days:
         note: 両方の皿から同じものを取ってもつり合いは変わらない。方程式を解くときのもとになる考え（A-011）。
       - part: わけ
         text: 🟦 1 こと 🟩 2 こが つりあう とき、🟦 2 こと 🟩 4 こも つりあいます。どうしてか、くちで いってみよう。
-        figure: "🟦───🟩🟩\n　　▲　　　"
+        balance: {left: "🟦", right: "🟩🟩", tilt: level}
         explain: 「🟦 1 こは 🟩 2 こと おなじ おもさ。だから 🟦 を 1 こずつ 🟩 2 こに とりかえると、🟦 2 こは 🟩 4 こに なる」や「🟦 1 こと 🟩 2 この くみが 2 つ ある。だから つりあう」と いえれば よい。実物で 2 組を合わせてのせて見せてもよい。
         hints:
           - 🟦 1 こは、🟩 なんこと おなじ おもさかな。
@@ -350,9 +349,9 @@ days:
     extra:
       - part: 今日
         text: 🟦 1 こと 🟩 4 こが つりあって います。🟦 2 こと つりあうのは、🟩 なんこですか。
-        figure: "🟦───🟩🟩🟩🟩\n　　▲　　　　　"
+        balance: {left: "🟦", right: "🟩🟩🟩🟩", tilt: level}
         answer: 8
-        check: "n('🟩') + n('🟩')"
+        check: "bal['right'].count('🟩') + bal['right'].count('🟩')"
         hints:
           - 🟦 1 こは、🟩 なんこと おなじ おもさかな。
           - 🟦 を 1 こずつ 🟩 に とりかえて みよう。
@@ -361,10 +360,10 @@ days:
           - [🟦 1 こは 🟩 4 こ, 🟦 2 こを とりかえる, 8 こ]
       - part: 今日
         text: 🟥 1 こと 🟨 3 こが つりあって います。てんびんに 🟥 1 こと 🟨 2 こを のせると、どう なりますか。
-        figure: "🟥───🟨🟨🟨\n　　▲　　　　"
+        balance: {left: "🟥", right: "🟨🟨🟨", tilt: level}
         choices: [🟥 の ほうが さがる, 🟨 の ほうが さがる, つりあう]
         answer: 🟥 の ほうが さがる
-        check: "'🟥 の ほうが さがる' if n('🟨') > 2 else 'ちがう'"
+        check: "'🟥 の ほうが さがる' if bal['right'].count('🟨') > 2 else 'ちがう'"
         hints:
           - 🟥 1 こは、🟨 なんこと おなじ おもさかな。
           - 🟥 を 🟨 に とりかえて くらべよう。
@@ -373,9 +372,9 @@ days:
           - [🟥 は 🟨 3 こと おなじ, 🟨 3 こと 🟨 2 こを くらべる, 🟥 の ほうが さがる]
       - part: 挑戦
         text: 🟦 1 こと 🟩 1 こを のせた さらと、🟩 4 こを のせた さらが つりあって います。🟦 1 こは、🟩 なんこと おなじ おもさですか。
-        figure: "🟦🟩───🟩🟩🟩🟩\n　　　▲　　　　　"
+        balance: {left: "🟦🟩", right: "🟩🟩🟩🟩", tilt: level}
         answer: 3
-        check: "fig.splitlines()[0].split('───')[1].count('🟩') - fig.splitlines()[0].split('───')[0].count('🟩')"
+        check: "bal['right'].count('🟩') - bal['left'].count('🟩')"
         hints:
           - りょうほうの さらに 🟩 が のって いるね。
           - りょうほうから 🟩 を 1 こずつ とっても、つりあった ままだよ。
@@ -409,10 +408,10 @@ days:
           - [3 の つぎから 8 まで かぞえる：4、5、6、7、8, 5 かい かぞえた, 5]
       - part: 今日
         text: てんびんに 🟨 2 こと 🟦 1 こを のせました。どちらが おもいですか。
-        figure: "🟨🟨　　　　\n　　　＼　　\n　　　▲　🟦"
+        balance: {left: "🟨🟨", right: "🟦", tilt: right}
         choices: [🟨 2 こ, 🟦 1 こ]
         answer: 🟦 1 こ
-        check: "'🟦 1 こ' if '🟦' in fig.splitlines()[-1] else '🟨 2 こ'"
+        check: "'🟦 1 こ' if bal['tilt'] == 'right' else '🟨 2 こ'"
         hints:
           - てんびんの かたむきを みよう。
           - したに さがって いるのは どちらかな。
@@ -421,10 +420,10 @@ days:
           - [🟦 の ほうが さがって いる, 🟦 1 こ]
       - part: 今日
         text: おもい じゅんに ならべると、どれですか。
-        figure: "　　　　🟥　　　　　　🟦\n　　／　　　　　　／　　\n🟦　▲　　　　🟩　▲　　"
+        balance: [{left: "🟦", right: "🟥", tilt: left}, {left: "🟩", right: "🟦", tilt: left}]
         choices: [🟥、🟦、🟩, 🟩、🟦、🟥, 🟦、🟩、🟥]
         answer: 🟩、🟦、🟥
-        check: "'、'.join(sorted('🟩🟦🟥', key=lambda c: fig.splitlines()[0].count(c) - fig.splitlines()[-1].count(c)))"
+        check: "'、'.join(sorted('🟩🟦🟥', key=lambda c: sum(b['left' if b['tilt'] == 'right' else 'right'].count(c) - b[b['tilt']].count(c) for b in bal)))"
         hints:
           - まず いちばん おもい はこを さがそう。
           - つぎに いちばん かるい はこを さがそう。
@@ -433,9 +432,9 @@ days:
           - [🟩 は 🟦 より おもい, 🟦 は 🟥 より おもい, 🟩、🟦、🟥]
       - part: 今日
         text: 🟥 1 こと 🟦 2 こが つりあって います。🟥 3 こと つりあうのは、🟦 なんこですか。
-        figure: "🟥───🟦🟦\n　　▲　　　"
+        balance: {left: "🟥", right: "🟦🟦", tilt: level}
         answer: 6
-        check: "n('🟦') + n('🟦') + n('🟦')"
+        check: "bal['right'].count('🟦') + bal['right'].count('🟦') + bal['right'].count('🟦')"
         hints:
           - 🟥 1 こは、🟦 なんこと おなじ おもさかな。
           - 🟥 を 1 こずつ 🟦 に とりかえて みよう。
@@ -444,10 +443,10 @@ days:
           - [🟥 1 こは 🟦 2 こ, 🟥 3 こを とりかえると 🟦🟦 が 3 くみ, 6 こ]
       - part: 挑戦
         text: 🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟥 と 🟦 を のせたら、つりあいました。おもい はこは どれですか。
-        figure: "🟥───🟦\n　　▲　　"
+        balance: {left: "🟥", right: "🟦", tilt: level}
         choices: [🟥, 🟦, 🟨]
         answer: 🟨
-        check: "[c for c in '🟥🟦🟨' if c not in fig][0]"
+        check: "[c for c in '🟥🟦🟨' if c not in bal['left'] + bal['right']][0]"
         hints:
           - つりあった とき、2 つの おもさは どうかな。
           - おもい はこが のって いたら、てんびんは どう なるかな。
@@ -457,7 +456,7 @@ days:
         note: L-002 の「ヒントから 1 つに決める」と同じ考え。てんびんが動かなかったことも手がかりになる。
       - part: わけ
         text: 🟩 🟥 🟦 の なかに、1 つだけ おもい はこが あります。🟩 と 🟥 が つりあったので、おもい はこは 🟦 だと わかります。どうしてか、くちで いってみよう。
-        figure: "🟩───🟥\n　　▲　　"
+        balance: {left: "🟩", right: "🟥", tilt: level}
         explain: 「🟩 と 🟥 が つりあったから、どちらも おもい はこでは ない。だから のこりの 🟦 が おもい」や「おもい はこが のって いたら てんびんが かたむく はず。かたむかなかったから、のって いない 🟦」と いえれば よい。
         hints:
           - 🟩 と 🟥 は、おなじ おもさかな。
@@ -469,10 +468,10 @@ days:
     extra:
       - part: 今日
         text: てんびんに 🟩 1 こと 🟨 3 こを のせました。どちらが かるいですか。
-        figure: "　　　　🟨🟨🟨\n　　／　　　　\n🟩　▲　　　　"
+        balance: {left: "🟩", right: "🟨🟨🟨", tilt: left}
         choices: [🟩 1 こ, 🟨 3 こ]
         answer: 🟨 3 こ
-        check: "'🟨 3 こ' if '🟨' in fig.splitlines()[0] else '🟩 1 こ'"
+        check: "'🟨 3 こ' if bal['tilt'] == 'left' else '🟩 1 こ'"
         hints:
           - てんびんの かたむきを みよう。
           - うえに あがって いるのは どちらかな。
@@ -481,9 +480,9 @@ days:
           - [🟨 の ほうが あがって いる, かるいのは 🟨 3 こ]
       - part: 今日
         text: 🟦 1 こと 🟥 4 こが つりあって います。🟦 1 こと 🟥 2 こを あわせると、🟥 なんこと つりあいますか。
-        figure: "🟦───🟥🟥🟥🟥\n　　▲　　　　　"
+        balance: {left: "🟦", right: "🟥🟥🟥🟥", tilt: level}
         answer: 6
-        check: "n('🟥') + 2"
+        check: "bal['right'].count('🟥') + 2"
         hints:
           - 🟦 1 こは、🟥 なんこと おなじ おもさかな。
           - 🟦 を 🟥 に とりかえて みよう。
@@ -492,10 +491,10 @@ days:
           - [🟦 を 🟥 4 こに とりかえる, もとの 🟥 2 こと あわせる, 6 こ]
       - part: 挑戦
         text: 🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟦 と 🟨 を のせたら、🟨 が さがりました。おもい はこは どれですか。
-        figure: "🟦　　　　\n　　＼　　\n　　▲　🟨"
+        balance: {left: "🟦", right: "🟨", tilt: right}
         choices: [🟥, 🟦, 🟨]
         answer: 🟨
-        check: "[c for c in '🟥🟦🟨' if c in fig.splitlines()[-1]][0]"
+        check: "[c for c in '🟥🟦🟨' if c in bal[bal['tilt']]][0]"
         hints:
           - てんびんは かたむいたかな。
           - さがった ほうは、おもいかな、かるいかな。
@@ -507,10 +506,10 @@ days:
     items:
       - part: 今日
         text: どちらが おもいですか。
-        figure: "🍋　　　　\n　　＼　　\n　　▲　🍑"
+        balance: {left: "🍋", right: "🍑", tilt: right}
         choices: [レモン, もも]
         answer: もも
-        check: "'もも' if '🍑' in fig.splitlines()[-1] else 'レモン'"
+        check: "'もも' if bal['tilt'] == 'right' else 'レモン'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - したに さがって いるのは どちらかな。
@@ -519,10 +518,10 @@ days:
           - [ももの ほうが さがって いる, もも]
       - part: 今日
         text: 🟦 と 🟨 の はこを のせました。どちらが かるいですか。
-        figure: "　　　　🟨\n　　／　　\n🟦　▲　　"
+        balance: {left: "🟦", right: "🟨", tilt: left}
         choices: [🟦, 🟨]
         answer: 🟨
-        check: "'🟨' if '🟨' in fig.splitlines()[0] else '🟦'"
+        check: "'🟨' if bal['tilt'] == 'left' else '🟦'"
         hints:
           - てんびんは どちらに かたむいて いるかな。
           - うえに あがって いるのは どちらかな。
@@ -531,10 +530,10 @@ days:
           - [🟨 の ほうが あがって いる, 🟨]
       - part: 今日
         text: 🟩 と 🟥 の はこを のせました。どう いえますか。
-        figure: "🟩───🟥\n　　▲　　"
+        balance: {left: "🟩", right: "🟥", tilt: level}
         choices: [🟩 の ほうが おもい, 🟥 の ほうが おもい, おなじ おもさ]
         answer: おなじ おもさ
-        check: "'おなじ おもさ' if len(fig.splitlines()) == 2 else 'ちがう'"
+        check: "'おなじ おもさ' if bal['tilt'] == 'level' else 'ちがう'"
         hints:
           - どちらかが したに さがって いるかな。
           - まっすぐに なって いるね。
@@ -543,10 +542,10 @@ days:
           - [どちらも さがって いない, つりあって いる, おなじ おもさ]
       - part: 今日
         text: てんびんに 🟨 4 こと 🟦 1 こを のせました。どちらが おもいですか。
-        figure: "🟨🟨🟨🟨　　　　\n　　　　　＼　　\n　　　　　▲　🟦"
+        balance: {left: "🟨🟨🟨🟨", right: "🟦", tilt: right}
         choices: [🟨 4 こ, 🟦 1 こ]
         answer: 🟦 1 こ
-        check: "'🟦 1 こ' if '🟦' in fig.splitlines()[-1] else '🟨 4 こ'"
+        check: "'🟦 1 こ' if bal['tilt'] == 'right' else '🟨 4 こ'"
         hints:
           - てんびんの かたむきを みよう。
           - したに さがって いるのは どちらかな。
@@ -555,10 +554,10 @@ days:
           - [🟦 の ほうが さがって いる, 🟦 1 こ]
       - part: 今日
         text: いちばん おもい はこは どれですか。
-        figure: "🟩　　　　　　🟨　　　　\n　　＼　　　　　　＼　　\n　　▲　🟥　　　　▲　🟩"
+        balance: [{left: "🟩", right: "🟥", tilt: right}, {left: "🟨", right: "🟩", tilt: right}]
         choices: [🟩, 🟥, 🟨]
         answer: 🟥
-        check: "[c for c in '🟩🟥🟨' if c not in fig.splitlines()[0]][0]"
+        check: "[c for c in '🟩🟥🟨' if all(c not in b['left' if b['tilt'] == 'right' else 'right'] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、おもいのは どちらかな。
           - みぎの てんびんで、おもいのは どちらかな。
@@ -567,9 +566,9 @@ days:
           - [🟩 より 🟥 が おもい, 🟨 より 🟩 が おもい, 🟥]
       - part: 今日
         text: 🟦 1 こと 🟩 3 こが つりあって います。🟦 3 こと つりあうのは、🟩 なんこですか。
-        figure: "🟦───🟩🟩🟩\n　　▲　　　　"
+        balance: {left: "🟦", right: "🟩🟩🟩", tilt: level}
         answer: 9
-        check: "n('🟩') + n('🟩') + n('🟩')"
+        check: "bal['right'].count('🟩') + bal['right'].count('🟩') + bal['right'].count('🟩')"
         hints:
           - 🟦 1 こは、🟩 なんこと おなじ おもさかな。
           - 🟦 を 1 こずつ 🟩 に とりかえて みよう。
@@ -578,9 +577,9 @@ days:
           - [🟦 1 こは 🟩 3 こ, 🟦 3 こを とりかえると 🟩🟩🟩 が 3 くみ, 9 こ]
       - part: 今日
         text: 🟥 1 こと 🟦 1 こを のせた さらと、🟦 4 こを のせた さらが つりあって います。🟥 1 こは、🟦 なんこと おなじ おもさですか。
-        figure: "🟥🟦───🟦🟦🟦🟦\n　　　▲　　　　　"
+        balance: {left: "🟥🟦", right: "🟦🟦🟦🟦", tilt: level}
         answer: 3
-        check: "fig.splitlines()[0].split('───')[1].count('🟦') - fig.splitlines()[0].split('───')[0].count('🟦')"
+        check: "bal['right'].count('🟦') - bal['left'].count('🟦')"
         hints:
           - りょうほうの さらに 🟦 が のって いるね。
           - りょうほうから 🟦 を 1 こずつ とっても、つりあった ままだよ。
@@ -589,10 +588,10 @@ days:
           - [りょうほうから 🟦 を 1 こ とる, 🟥 と 🟦 3 こが つりあう, 3 こ]
       - part: 今日
         text: 🟥 🟦 🟨 の なかに、1 つだけ おもい はこが あります。🟥 と 🟨 を のせたら、つりあいました。おもい はこは どれですか。
-        figure: "🟥───🟨\n　　▲　　"
+        balance: {left: "🟥", right: "🟨", tilt: level}
         choices: [🟥, 🟦, 🟨]
         answer: 🟦
-        check: "[c for c in '🟥🟦🟨' if c not in fig][0]"
+        check: "[c for c in '🟥🟦🟨' if c not in bal['left'] + bal['right']][0]"
         hints:
           - つりあった とき、2 つの おもさは どうかな。
           - おもい はこが のって いたら、てんびんは どう なるかな。
@@ -602,10 +601,10 @@ days:
     extra:
       - part: 今日
         text: いちばん かるい はこは どれですか。
-        figure: "　　　　🟦　　　　　　🟩\n　　／　　　　　　／　　\n🟥　▲　　　　🟦　▲　　"
+        balance: [{left: "🟥", right: "🟦", tilt: left}, {left: "🟦", right: "🟩", tilt: left}]
         choices: [🟥, 🟦, 🟩]
         answer: 🟩
-        check: "[c for c in '🟥🟦🟩' if c not in fig.splitlines()[-1]][0]"
+        check: "[c for c in '🟥🟦🟩' if all(c not in b[b['tilt']] for b in bal)][0]"
         hints:
           - ひだりの てんびんで、かるいのは どちらかな。
           - みぎの てんびんで、かるいのは どちらかな。
@@ -614,9 +613,9 @@ days:
           - [🟥 より 🟦 が かるい, 🟦 より 🟩 が かるい, 🟩]
       - part: 今日
         text: 🟨 1 こと 🟥 2 こが つりあって います。🟨 1 こと 🟥 3 こを あわせると、🟥 なんこと つりあいますか。
-        figure: "🟨───🟥🟥\n　　▲　　　"
+        balance: {left: "🟨", right: "🟥🟥", tilt: level}
         answer: 5
-        check: "n('🟥') + 3"
+        check: "bal['right'].count('🟥') + 3"
         hints:
           - 🟨 1 こは、🟥 なんこと おなじ おもさかな。
           - 🟨 を 🟥 に とりかえて みよう。
@@ -625,10 +624,10 @@ days:
           - [🟨 を 🟥 2 こに とりかえる, もとの 🟥 3 こと あわせる, 5 こ]
       - part: 今日
         text: 🟦 1 こと 🟩 4 こが つりあって います。てんびんに 🟦 1 こと 🟩 5 こを のせると、どう なりますか。
-        figure: "🟦───🟩🟩🟩🟩\n　　▲　　　　　"
+        balance: {left: "🟦", right: "🟩🟩🟩🟩", tilt: level}
         choices: [🟦 の ほうが さがる, 🟩 の ほうが さがる, つりあう]
         answer: 🟩 の ほうが さがる
-        check: "'🟩 の ほうが さがる' if 5 > n('🟩') else 'ちがう'"
+        check: "'🟩 の ほうが さがる' if 5 > bal['right'].count('🟩') else 'ちがう'"
         hints:
           - 🟦 1 こは、🟩 なんこと おなじ おもさかな。
           - 🟦 を 🟩 に とりかえて くらべよう。
