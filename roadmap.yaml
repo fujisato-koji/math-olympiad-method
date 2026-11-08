@@ -709,7 +709,7 @@ units:
   - {id: E-210, title: 水をきれいにする（にごった水をしばらく置いて沈める、砂と小石と炭の層でこす、こした水のきれいさを目盛りの見え方で比べる、こしただけでは飲めないわけ）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, E-171, G-046], days: 5}
   - {id: E-211, title: ごみを分けて資源にもどす（燃やすごみと資源ごみ、缶を磁石で分ける、紙・びん・ペットボトルが何に生まれ変わるか、1 週間の家のごみを量って表にし減らし方を考える）, stage: 3, level: 2, region: kankyo-kogaku, needs: [H-063, H-064, S-027], days: 5}
   - {id: N-073, title: 大きな数（万・億の位と位取り、10 倍と 10 分の 1）, stage: 3, level: 2, region: kazu, needs: [N-009, N-013], days: 5}
-  - {id: N-074, title: かけ算の筆算（何けた × 1 けた、何けた × 2 けた）, stage: 3, level: 2, region: keisan, needs: [N-013, N-015, N-009], days: 6}
+  - {id: N-074, title: かけ算の筆算（何けた × 1 けた、何けた × 2 けた）, stage: 3, level: 2, region: keisan, needs: [N-013, N-015, N-009, N-073], days: 6}
   - {id: N-075, title: わり算の筆算（わる数が 1 けた・2 けた、商の見当）, stage: 3, level: 2, region: keisan, needs: [N-014, N-074], days: 6}
   - {id: N-076, title: 計算の順序（かっこ、かけ算とわり算を先に）, stage: 3, level: 2, region: keisan, needs: [N-015, N-014], days: 4}
   - {id: N-077, title: 小数のかけ算とわり算, stage: 3, level: 2, region: keisan, needs: [N-020, N-074, N-075], days: 6}

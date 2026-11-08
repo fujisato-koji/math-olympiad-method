@@ -1,0 +1,1012 @@
+# N-074 かけ算の筆算（何けた × 1 けた、何けた × 2 けた）
+#
+# 書き方は N-001 の頭の注のとおり。段 3 なので、子に見せる文は小 4 までの漢字で書く（位・工夫 は漢字。確・個・比・並・枚・袋・鉛
+#   などはかなで書く）。分かち書きはしない。数の前後には空白を入れる。「×」は U+00D7、check では「*」。
+# 前提は N-013（九九、× 10 と × 0）、N-015（入れかえ・まとめ・分ける、× を先に計算する）、N-009（1000 までの数と位）。
+#   4 けたの数（千の位から上）は N-073 で、前提にないので、とちゅうの数も答えも 1000 まで。そのため「何けた × 2 けた」は
+#   2 けた × 2 けた（答えが 1000 まで）だけにし、3 けた × 2 けたは扱わない。3 けた × 1 けたも答えが 1000 までのもの。
+#   N-073 を前提に足したら、3 けた × 2 けたと、答えが 4 けた以上になる問題を足してよい。
+#   わり算（N-014）は前提にないので、答えのたしかめにわり算は使わない。お金（N-060）と長さ（G-046）も前提にないので、
+#   場面は、こ数、本数、人数、ページ数にした。
+# 筆算は、N-015 の「分ける」（24 × 3 = 20 × 3 + 4 × 3）を位ごとに書いたものとして教える。くり上げた数は図に書かず、
+#   見本の explain とヒントで「小さく書いておく」と言う。2 けた × 2 けたは、かける数を一の位と何十に分け、
+#   何十の分の答えを 1 つ左にずらして書く（0 をはぶく書き方）。
+# 何十 × 1 けた（60 × 4）は「10 が 6 × 4 = 24 こ」、× 何十（32 × 30）は N-015 のまとめで「32 × 3 の 10 こ分」として計算する
+#   （10 倍の言い方は N-073 なので使わない）。
+# 筆算の図は svg（D-040）。全角の「×」がなく、N-007 の全角の書き方では位がそろわないので、数字を 1 字ずつ同じはばの列に置いた。
+#   問題の図は式だけで、答えは書かない（見本とわけの図には、とちゅうと答えを書く）。check は式の計算で確かめる。
+# 決まった形の筆算の問題（「○ × ○ を筆算で計算しましょう。」）のヒントとみちすじは、位ごとの計算から作った（下書きの道具）。
+# 日の並び（既定）：1 日目 何十・何百 × 1 けた、2 けた × 1 けた、2 日目 3 けた × 1 けた（くり上がり 2 回、0 のある数、頭に見本）、
+#   3 日目 × 何十と 2 けた × 2 けた（頭に見本）、4 日目 わけ、5 日目 N-013・N-015・N-009 と混ぜる、6 日目 確認。
+
+id: N-074
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 24 × 3 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 115" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="144" y="101" font-size="22" text-anchor="middle">2</text>
+            <text x="120" y="101" font-size="22" text-anchor="middle">7</text>
+          </svg>
+        explain: 位をたてにそろえて書きます。まず一の位、4 × 3 = 12。一の位に 2 を書き、1 を十の位にくり上げます（小さく書いておくとわすれません）。次に十の位、2 × 3 = 6 に、くり上げた 1 をたして 7。答えは 72 です。24 を 20 と 4 に分けて、20 × 3 = 60 と 4 × 3 = 12 を合わせたのと同じ計算です。
+      - part: 思い出す
+        text: 8 × 7 はいくつですか。
+        answer: 56
+        check: "8 * 7"
+        hints:
+          - 8 のだんの九九を言ってみよう。
+          - 8 × 5 = 40 から、8 ずつふやそう。
+          - 8 × 6 の答えに 8 をたそう。
+        paths:
+          - [8 × 6 = 48, 48 + 8 = 56]
+      - part: 思い出す
+        text: 13 × 4 を、13 を 10 と 3 に分けて計算しましょう。
+        answer: 52
+        check: "10 * 4 + 3 * 4"
+        hints:
+          - 10 が 4 こ分はいくつかな。
+          - 3 が 4 こ分はいくつかな。
+          - 2 つの答えを合わせよう。
+        paths:
+          - [10 × 4 = 40, 3 × 4 = 12, 40 + 12 = 52]
+      - part: 今日
+        text: 🔟 は 10 です。60 × 4 はいくつですか。
+        figure: "🔟🔟🔟🔟🔟🔟\n🔟🔟🔟🔟🔟🔟\n🔟🔟🔟🔟🔟🔟\n🔟🔟🔟🔟🔟🔟"
+        answer: 240
+        check: "n('🔟') * 10"
+        hints:
+          - 60 は、10 が何こかな。
+          - 10 が 6 × 4 こになるね。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [60 は 10 が 6 こ, 10 が 6 × 4 = 24 こ, 240]
+        note: 九九の 24 で止めやすい。図の 🔟 が 24 こで 240 であることを確かめる。
+      - part: 今日
+        text: 32 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 96
+        check: "32 * 3"
+        hints:
+          - 一の位から順に計算しよう。
+          - 一の位は 2 × 3、十の位は 3 × 3 だね。
+          - それぞれの答えを、同じ位のところに書こう。
+        paths:
+          - [2 × 3 = 6, 3 × 3 = 9, 96]
+      - part: 今日
+        text: 27 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 81
+        check: "27 * 3"
+        hints:
+          - 一の位の 7 × 3 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [7 × 3 = 21 で 1 を書いて 2 をくり上げる, 2 × 3 + 2 = 8, 81]
+        note: くり上げた 2 をたしわすれて 61 としやすい。くり上げた数は小さく書いておかせる。
+      - part: 挑戦
+        text: 46 × 7 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 322
+        check: "46 * 7"
+        hints:
+          - 一の位の 6 × 7 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 一番上の位の答えが 2 けたになったら、そのまま左に書こう。
+        paths:
+          - [6 × 7 = 42 で 2 を書いて 4 をくり上げる, 4 × 7 + 4 = 32, 322]
+        note: 十の位の 4 × 7 + 4 = 32 で、答えが 3 けたになる。32 をそのまま百の位と十の位に書けばよいことを話す。
+    extra:
+      - part: 今日
+        text: 300 × 3 はいくつですか。
+        answer: 900
+        check: "300 * 3"
+        hints:
+          - 300 は、100 が何こかな。
+          - 100 が 3 × 3 こになるね。
+          - 100 が何こで、いくつかな。
+        paths:
+          - [300 は 100 が 3 こ, 100 が 3 × 3 = 9 こ, 900]
+      - part: 今日
+        text: 43 × 2 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 86
+        check: "43 * 2"
+        hints:
+          - 一の位から順に計算しよう。
+          - 一の位は 3 × 2、十の位は 4 × 2 だね。
+          - それぞれの答えを、同じ位のところに書こう。
+        paths:
+          - [3 × 2 = 6, 4 × 2 = 8, 86]
+      - part: 今日
+        text: 18 × 5 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 90
+        check: "18 * 5"
+        hints:
+          - 一の位の 8 × 5 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [8 × 5 = 40 で 0 を書いて 4 をくり上げる, 1 × 5 + 4 = 9, 90]
+        note: 一の位の 0 を書きわすれて 9 としやすい。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 137 × 4 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 115" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="101" font-size="22" text-anchor="middle">8</text>
+            <text x="132" y="101" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="101" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        explain: 3 けたの数でも、一の位から順に計算します。一の位 7 × 4 = 28、8 を書いて 2 をくり上げます。十の位 3 × 4 = 12 に 2 をたして 14、4 を書いて 1 をくり上げます。百の位 1 × 4 = 4 に 1 をたして 5。答えは 548 です。
+      - part: 思い出す
+        text: 35 × 2 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">5</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 70
+        check: "35 * 2"
+        hints:
+          - 一の位の 5 × 2 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [5 × 2 = 10 で 0 を書いて 1 をくり上げる, 3 × 2 + 1 = 7, 70]
+      - part: 思い出す
+        text: 80 × 6 はいくつですか。
+        answer: 480
+        check: "80 * 6"
+        hints:
+          - 80 は、10 が何こかな。
+          - 10 が 8 × 6 こになるね。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [80 は 10 が 8 こ, 10 が 8 × 6 = 48 こ, 480]
+      - part: 今日
+        text: 213 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 639
+        check: "213 * 3"
+        hints:
+          - 一の位から順に計算しよう。
+          - 一の位は 3 × 3、十の位は 1 × 3、百の位は 2 × 3 だね。
+          - それぞれの答えを、同じ位のところに書こう。
+        paths:
+          - [3 × 3 = 9, 1 × 3 = 3, 2 × 3 = 6, 639]
+      - part: 今日
+        text: 126 × 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 504
+        check: "126 * 4"
+        hints:
+          - 一の位の 6 × 4 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [6 × 4 = 24 で 4 を書いて 2 をくり上げる, 2 × 4 + 2 = 10 で 0 を書いて 1 をくり上げる, 1 × 4 + 1 = 5, 504]
+        note: 十の位が 2 × 4 + 2 = 10 になるところで、0 を書かずに 54 や 5104 としやすい。
+      - part: 今日
+        text: 208 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">8</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">0</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 624
+        check: "208 * 3"
+        hints:
+          - 一の位の 8 × 3 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 0 × 3 = 0 にも、くり上げた数をたそう。
+        paths:
+          - [8 × 3 = 24 で 4 を書いて 2 をくり上げる, 0 × 3 + 2 = 2, 2 × 3 = 6, 624]
+        note: 十の位の 0 × 3 = 0 に、くり上げた 2 をたしわすれて 604 としやすい。
+      - part: 挑戦
+        text: 1 箱に 125 本入ったえん筆が、8 箱あります。えん筆は全部で何本ですか。
+        answer: 1000
+        check: "125 * 8"
+        hints:
+          - 式は 125 × 8 だね。
+          - 一の位から順に計算しよう。くり上がりが続くよ。
+          - 百の位の 1 × 8 に、くり上げた数をたすといくつかな。
+        paths:
+          - [5 × 8 = 40 で 0 を書いて 4 をくり上げる, 2 × 8 + 4 = 20 で 0 を書いて 2 をくり上げる, 1 × 8 + 2 = 10, 1000]
+          - [125 × 8 = 125 × 2 × 4, 125 × 2 = 250, 250 × 4 = 1000]
+        note: 答えは 100 が 10 こで 1000。0 が 3 つ続くので、くり上げた数をたしわすれていないかを見る。
+    extra:
+      - part: 今日
+        text: 142 × 2 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 284
+        check: "142 * 2"
+        hints:
+          - 一の位から順に計算しよう。
+          - 一の位は 2 × 2、十の位は 4 × 2、百の位は 1 × 2 だね。
+          - それぞれの答えを、同じ位のところに書こう。
+        paths:
+          - [2 × 2 = 4, 4 × 2 = 8, 1 × 2 = 2, 284]
+      - part: 今日
+        text: 153 × 6 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">5</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 918
+        check: "153 * 6"
+        hints:
+          - 一の位の 3 × 6 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [3 × 6 = 18 で 8 を書いて 1 をくり上げる, 5 × 6 + 1 = 31 で 1 を書いて 3 をくり上げる, 1 × 6 + 3 = 9, 918]
+      - part: 今日
+        text: 79 × 8 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">9</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 632
+        check: "79 * 8"
+        hints:
+          - 一の位の 9 × 8 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 一番上の位の答えが 2 けたになったら、そのまま左に書こう。
+        paths:
+          - [9 × 8 = 72 で 2 を書いて 7 をくり上げる, 7 × 8 + 7 = 63, 632]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 23 × 41 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="132" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="101" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="101" font-size="22" text-anchor="middle">2</text>
+            <text x="132" y="131" font-size="22" text-anchor="middle">2</text>
+            <text x="108" y="131" font-size="22" text-anchor="middle">9</text>
+            <line x1="72" y1="140" x2="168" y2="140" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="166" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="166" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="166" font-size="22" text-anchor="middle">9</text>
+          </svg>
+        explain: かける数の 41 を、1 と 40 に分けて考えます。まず 23 × 1 = 23 を書きます。次に 23 × 4 = 92 を、1 つ左にずらして書きます。これは 23 × 40 = 920 の、一の位の 0 をはぶいた書き方です。さいごに 23 と 920 をたして 943。答えは 943 です。
+      - part: 思い出す
+        text: 214 × 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 856
+        check: "214 * 4"
+        hints:
+          - 一の位の 4 × 4 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [4 × 4 = 16 で 6 を書いて 1 をくり上げる, 1 × 4 + 1 = 5, 2 × 4 = 8, 856]
+      - part: 思い出す
+        text: 12 × 10 はいくつですか。
+        answer: 120
+        check: "12 * 10"
+        hints:
+          - かけ算は、入れかえても答えは同じだったね。
+          - 10 × 12 は、10 が何こかな。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [12 × 10 = 10 × 12, 10 が 12 こ, 120]
+      - part: 今日
+        text: 32 × 30 を計算しましょう。
+        answer: 960
+        check: "32 * 3 * 10"
+        hints:
+          - 30 は 3 × 10 だね。
+          - 先に 32 × 3 を計算しよう。
+          - その答えの 10 こ分を考えよう。
+        paths:
+          - [32 × 30 = 32 × 3 × 10, 32 × 3 = 96, 96 × 10 = 960]
+        note: 96 で止めやすい。「96 の 10 こ分は、10 が 96 こで 960」と言わせる。
+      - part: 今日
+        text: 21 × 34 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 714
+        check: "21 * 34"
+        hints:
+          - まず 21 × 4 を計算しよう。
+          - 次に 21 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [21 × 4 = 84, 21 × 3 = 63 を 1 つ左に書く（630）, 84 + 630 = 714]
+      - part: 今日
+        text: 26 × 37 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 962
+        check: "26 * 37"
+        hints:
+          - まず 26 × 7 を計算しよう。
+          - 次に 26 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [26 × 7 = 182, 26 × 3 = 78 を 1 つ左に書く（780）, 182 + 780 = 962]
+        note: 2 だん目の 78 を左にずらさずに書いて、182 + 78 = 260 としやすい。
+      - part: 挑戦
+        text: シールが 1 まいに 18 こずつついたシートが、54 まいあります。シールは全部で何こですか。
+        answer: 972
+        check: "18 * 54"
+        hints:
+          - 式は 18 × 54 だね。
+          - 18 × 4 と 18 × 5 を計算しよう。
+          - 18 × 5 の答えを 1 つ左にずらして、たし算しよう。
+        paths:
+          - [18 × 4 = 72, 18 × 5 = 90 を 1 つ左に書く（900）, 72 + 900 = 972]
+    extra:
+      - part: 今日
+        text: 41 × 20 を計算しましょう。
+        answer: 820
+        check: "41 * 2 * 10"
+        hints:
+          - 20 は 2 × 10 だね。
+          - 先に 41 × 2 を計算しよう。
+          - その答えの 10 こ分を考えよう。
+        paths:
+          - [41 × 20 = 41 × 2 × 10, 41 × 2 = 82, 82 × 10 = 820]
+      - part: 今日
+        text: 32 × 23 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 736
+        check: "32 * 23"
+        hints:
+          - まず 32 × 3 を計算しよう。
+          - 次に 32 × 2 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [32 × 3 = 96, 32 × 2 = 64 を 1 つ左に書く（640）, 96 + 640 = 736]
+      - part: 今日
+        text: 17 × 45 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 765
+        check: "17 * 45"
+        hints:
+          - まず 17 × 5 を計算しよう。
+          - 次に 17 × 4 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [17 × 5 = 85, 17 × 4 = 68 を 1 つ左に書く（680）, 85 + 680 = 765]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 143 × 6 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 858
+        check: "143 * 6"
+        hints:
+          - 一の位の 3 × 6 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [3 × 6 = 18 で 8 を書いて 1 をくり上げる, 4 × 6 + 1 = 25 で 5 を書いて 2 をくり上げる, 1 × 6 + 2 = 8, 858]
+      - part: 思い出す
+        text: 24 × 31 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 744
+        check: "24 * 31"
+        hints:
+          - まず 24 × 1 を計算しよう。
+          - 次に 24 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [24 × 1 = 24, 24 × 3 = 72 を 1 つ左に書く（720）, 24 + 720 = 744]
+      - part: 今日
+        text: 19 × 48 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">9</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 912
+        check: "19 * 48"
+        hints:
+          - まず 19 × 8 を計算しよう。
+          - 次に 19 × 4 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [19 × 8 = 152, 19 × 4 = 76 を 1 つ左に書く（760）, 152 + 760 = 912]
+      - part: 今日
+        text: 35 × 26 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">5</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 910
+        check: "35 * 26"
+        hints:
+          - まず 35 × 6 を計算しよう。
+          - 次に 35 × 2 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [35 × 6 = 210, 35 × 2 = 70 を 1 つ左に書く（700）, 210 + 700 = 910]
+      - part: わけ
+        text: 23 × 41 の筆算で、23 × 4 の答えの 92 を、1 つ左にずらして書くわけを、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="132" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="101" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="101" font-size="22" text-anchor="middle">2</text>
+            <text x="132" y="131" font-size="22" text-anchor="middle">2</text>
+            <text x="108" y="131" font-size="22" text-anchor="middle">9</text>
+            <line x1="72" y1="140" x2="168" y2="140" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="166" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="166" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="166" font-size="22" text-anchor="middle">9</text>
+          </svg>
+        explain: 例：「41 の 4 は十の位の数字なので、ほんとうは 40。23 × 40 は 23 × 4 = 92 の 10 こ分で 920。920 の一の位の 0 をはぶいて書くので、92 を 1 つ左にずらして、9 が百の位、2 が十の位にくるようにする。」と書ければよい。ずらさずに書くと 23 × 4 をたしたことになり、答えが小さくなりすぎる（23 + 92 = 115）ことに触れるとよい。
+        hints:
+          - 41 の 4 は、ほんとうはいくつを表しているかな。
+          - 23 × 40 は、23 × 4 の答えの何こ分かな。
+          - 「4 は十の位の数字だから」と書こう。
+        paths:
+          - [41 の 4 は 40, 23 × 40 = 920, 0 をはぶいて 1 つ左から書く, だからずらす]
+      - part: わけ
+        text: 24 × 3 の筆算は、一の位から計算します。どうして一の位から計算するのか、文で書きましょう。
+        explain: 例：「一の位の 4 × 3 = 12 のように、10 をこえると十の位に 1 がくり上がる。十の位から先に計算すると、2 × 3 = 6 と書いたあとで 1 がくり上がってきて、6 を 7 に書き直さなければならない。だから、くり上がりを先に出す一の位から計算する。」と書ければよい。十の位から計算して 62 と書いてしまう例を見せてもよい。
+        hints:
+          - 一の位の 4 × 3 は、10 をこえるかな。
+          - こえた分は、どの位へ行くかな。
+          - 「くり上がりは左の位へ行くから」と書こう。
+        paths:
+          - [4 × 3 = 12 で十の位に 1 がくり上がる, 十の位を先に書くと直すことになる, だから一の位から]
+      - part: わけ
+        text: 26 × 3 の筆算の答えの 78 は、20 × 3 と 6 × 3 を合わせた数と同じです。どうしてか、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 115" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="144" y="101" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="101" font-size="22" text-anchor="middle">7</text>
+          </svg>
+        explain: 例：「筆算の十の位の 2 × 3 = 6 は、ほんとうは 20 × 3 = 60。一の位の 6 × 3 = 18 の 1 は十の位にくり上がるので、10 を表す。十の位の 6 と 1 で 7、つまり 60 と 10 で 70。一の位の 8 と合わせて 78 になるので、20 × 3 = 60 と 6 × 3 = 18 を合わせた 78 と同じ。」と書ければよい。筆算は、N-015 の「分ける」を位ごとに書いたものだと話すとよい。
+        hints:
+          - 筆算の十の位の 2 × 3 は、ほんとうはいくつの計算かな。
+          - くり上げた 1 は、いくつを表しているかな。
+          - 「十の位の 2 は 20 だから」と書こう。
+        paths:
+          - [十の位の 2 × 3 は 20 × 3 = 60, くり上げた 1 は 10, 60 + 18 = 78 と同じ]
+    extra:
+      - part: 今日
+        text: 29 × 33 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">9</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 957
+        check: "29 * 33"
+        hints:
+          - まず 29 × 3 を計算しよう。
+          - 次に 29 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [29 × 3 = 87, 29 × 3 = 87 を 1 つ左に書く（870）, 87 + 870 = 957]
+      - part: 今日
+        text: 163 × 5 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 815
+        check: "163 * 5"
+        hints:
+          - 一の位の 3 × 5 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [3 × 5 = 15 で 5 を書いて 1 をくり上げる, 6 × 5 + 1 = 31 で 1 を書いて 3 をくり上げる, 1 × 5 + 3 = 8, 815]
+      - part: 今日
+        text: 16 × 58 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 928
+        check: "16 * 58"
+        hints:
+          - まず 16 × 8 を計算しよう。
+          - 次に 16 × 5 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [16 × 8 = 128, 16 × 5 = 80 を 1 つ左に書く（800）, 128 + 800 = 928]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 28 × 34 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 952
+        check: "28 * 34"
+        hints:
+          - まず 28 × 4 を計算しよう。
+          - 次に 28 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [28 × 4 = 112, 28 × 3 = 84 を 1 つ左に書く（840）, 112 + 840 = 952]
+      - part: 思い出す
+        text: 204 × 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">0</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 816
+        check: "204 * 4"
+        hints:
+          - 一の位の 4 × 4 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 0 × 4 = 0 にも、くり上げた数をたそう。
+        paths:
+          - [4 × 4 = 16 で 6 を書いて 1 をくり上げる, 0 × 4 + 1 = 1, 2 × 4 = 8, 816]
+      - part: 今日
+        text: 25 × 4 × 7 を、計算の順じょを工夫して計算しましょう。
+        answer: 700
+        check: "(25 * 4) * 7"
+        hints:
+          - 25 × 4 は、きりのよい数になるね。
+          - 先に 25 × 4 を計算しよう。
+          - その答えに 7 をかけよう。
+        paths:
+          - [25 × 4 = 100, 100 × 7 = 700]
+          - [4 × 7 = 28 を先に計算, 25 × 28 を筆算, 700]
+      - part: 今日
+        text: 8 × 67 を計算しましょう。
+        answer: 536
+        check: "67 * 8"
+        hints:
+          - かけ算は、入れかえても答えは同じだったね。
+          - 67 × 8 の筆算にしよう。
+          - 一の位の 7 × 8 から計算しよう。
+        paths:
+          - [8 × 67 = 67 × 8, 7 × 8 = 56 で 6 を書いて 5 をくり上げる, 6 × 8 + 5 = 53, 536]
+        note: 8 を上に書いて筆算しようとして、こまりやすい。入れかえて、けた数の多い数を上に書かせる。
+      - part: 今日
+        text: 1 ふくろに 36 こ入ったあめが、25 ふくろあります。あめは全部で何こですか。
+        answer: 900
+        check: "36 * 25"
+        hints:
+          - 式は 36 × 25 だね。
+          - 36 × 5 と 36 × 2 を計算しよう。
+          - 36 × 2 の答えを 1 つ左にずらして、たし算しよう。
+        paths:
+          - [36 × 5 = 180, 36 × 2 = 72 を 1 つ左に書く（720）, 180 + 720 = 900]
+          - [36 = 9 × 4, 9 × 4 × 25 = 9 × 100, 900]
+      - part: 挑戦
+        text: 下の筆算の □ に入る数字は何ですか。
+        svg: |
+          <svg viewBox="0 0 240 115" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">□</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="156" y="101" font-size="22" text-anchor="middle">1</text>
+            <text x="132" y="101" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="101" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 6
+        check: "[d for d in range(10) if (10 * d + 3) * 7 == 441][0]"
+        hints:
+          - 一の位の 3 × 7 を計算しよう。いくつくり上がるかな。
+          - 十の位では、□ × 7 にくり上げた数をたすと 44 になるね。
+          - □ × 7 がいくつになればよいかな。7 のだんで考えよう。
+        paths:
+          - [3 × 7 = 21 で 2 をくり上げる, □ × 7 + 2 = 44, □ × 7 = 42, 6]
+        note: くり上がりの 2 を忘れて、□ × 7 = 44 になる数をさがしてこまりやすい。
+    extra:
+      - part: 今日
+        text: 50 × 18 を計算しましょう。
+        answer: 900
+        check: "18 * 5 * 10"
+        hints:
+          - 入れかえて、18 × 50 にしよう。
+          - 50 は 5 × 10 だね。先に 18 × 5 を計算しよう。
+          - その答えの 10 こ分を考えよう。
+        paths:
+          - [50 × 18 = 18 × 50, 18 × 5 = 90, 90 × 10 = 900]
+      - part: 今日
+        text: 1 日に 45 ページずつ本を読みます。22 日間では、何ページ読めますか。
+        answer: 990
+        check: "45 * 22"
+        hints:
+          - 式は 45 × 22 だね。
+          - 45 × 2 を 2 回計算するよ。2 回目は 1 つ左にずらして書こう。
+          - 2 つの答えをたそう。
+        paths:
+          - [45 × 2 = 90, 45 × 2 = 90 を 1 つ左に書く（900）, 90 + 900 = 990]
+      - part: 挑戦
+        text: 24 × 39 は、24 × 40 より 24 小さい数です。24 × 39 はいくつですか。
+        answer: 936
+        check: "24 * 39"
+        hints:
+          - 24 × 40 は、24 × 4 の 10 こ分だね。
+          - 24 × 40 を計算しよう。
+          - その答えから 24 をひこう。
+        paths:
+          - [24 × 4 = 96, 24 × 40 = 960, 960 − 24 = 936]
+          - [24 × 39 を筆算, 24 × 9 = 216, 24 × 3 = 72 を 1 つ左に書く（720）, 216 + 720 = 936]
+        note: 24 × 39 は 24 が 39 こ分で、24 が 40 こ分より 24 が 1 こ少ない。わけを聞くとよい。
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 70 × 8 はいくつですか。
+        answer: 560
+        check: "70 * 8"
+        hints:
+          - 70 は、10 が何こかな。
+          - 10 が 7 × 8 こになるね。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [70 は 10 が 7 こ, 10 が 7 × 8 = 56 こ, 560]
+      - part: 今日
+        text: 38 × 2 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">8</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 76
+        check: "38 * 2"
+        hints:
+          - 一の位の 8 × 2 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [8 × 2 = 16 で 6 を書いて 1 をくり上げる, 3 × 2 + 1 = 7, 76]
+      - part: 今日
+        text: 57 × 6 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">5</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 342
+        check: "57 * 6"
+        hints:
+          - 一の位の 7 × 6 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 一番上の位の答えが 2 けたになったら、そのまま左に書こう。
+        paths:
+          - [7 × 6 = 42 で 2 を書いて 4 をくり上げる, 5 × 6 + 4 = 34, 342]
+      - part: 今日
+        text: 247 × 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 988
+        check: "247 * 4"
+        hints:
+          - 一の位の 7 × 4 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [7 × 4 = 28 で 8 を書いて 2 をくり上げる, 4 × 4 + 2 = 18 で 8 を書いて 1 をくり上げる, 2 × 4 + 1 = 9, 988]
+      - part: 今日
+        text: 305 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">5</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">0</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 915
+        check: "305 * 3"
+        hints:
+          - 一の位の 5 × 3 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 0 × 3 = 0 にも、くり上げた数をたそう。
+        paths:
+          - [5 × 3 = 15 で 5 を書いて 1 をくり上げる, 0 × 3 + 1 = 1, 3 × 3 = 9, 915]
+      - part: 今日
+        text: 43 × 20 を計算しましょう。
+        answer: 860
+        check: "43 * 2 * 10"
+        hints:
+          - 20 は 2 × 10 だね。
+          - 先に 43 × 2 を計算しよう。
+          - その答えの 10 こ分を考えよう。
+        paths:
+          - [43 × 20 = 43 × 2 × 10, 43 × 2 = 86, 86 × 10 = 860]
+      - part: 今日
+        text: 31 × 27 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">3</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 837
+        check: "31 * 27"
+        hints:
+          - まず 31 × 7 を計算しよう。
+          - 次に 31 × 2 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [31 × 7 = 217, 31 × 2 = 62 を 1 つ左に書く（620）, 217 + 620 = 837]
+      - part: 挑戦
+        text: 1 列に 28 人ずつ、33 列にならびます。全部で何人ですか。
+        answer: 924
+        check: "28 * 33"
+        hints:
+          - 式は 28 × 33 だね。
+          - 28 × 3 を 2 回計算するよ。2 回目は 1 つ左にずらして書こう。
+          - 2 つの答えをたそう。
+        paths:
+          - [28 × 3 = 84, 28 × 3 = 84 を 1 つ左に書く（840）, 84 + 840 = 924]
+    extra:
+      - part: 今日
+        text: 46 × 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">6</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">4</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 138
+        check: "46 * 3"
+        hints:
+          - 一の位の 6 × 3 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 一番上の位の答えが 2 けたになったら、そのまま左に書こう。
+        paths:
+          - [6 × 3 = 18 で 8 を書いて 1 をくり上げる, 4 × 3 + 1 = 13, 138]
+      - part: 今日
+        text: 118 × 7 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="156" y="36" font-size="22" text-anchor="middle">8</text>
+            <text x="132" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="108" y="36" font-size="22" text-anchor="middle">1</text>
+            <text x="156" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="84" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="72" y1="75" x2="168" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 826
+        check: "118 * 7"
+        hints:
+          - 一の位の 8 × 7 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - くり上げた数は、小さく書いておくとわすれないよ。
+        paths:
+          - [8 × 7 = 56 で 6 を書いて 5 をくり上げる, 1 × 7 + 5 = 12 で 2 を書いて 1 をくり上げる, 1 × 7 + 1 = 8, 826]
+      - part: 今日
+        text: 27 × 35 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 89" xmlns="http://www.w3.org/2000/svg">
+            <text x="144" y="36" font-size="22" text-anchor="middle">7</text>
+            <text x="120" y="36" font-size="22" text-anchor="middle">2</text>
+            <text x="144" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="120" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="96" y="66" font-size="22" text-anchor="middle">×</text>
+            <line x1="84" y1="75" x2="156" y2="75" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 945
+        check: "27 * 35"
+        hints:
+          - まず 27 × 5 を計算しよう。
+          - 次に 27 × 3 を計算して、1 つ左にずらして書こう。
+          - 2 つの答えを、位をそろえてたそう。
+        paths:
+          - [27 × 5 = 135, 27 × 3 = 81 を 1 つ左に書く（810）, 135 + 810 = 945]

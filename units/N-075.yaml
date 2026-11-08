@@ -1,0 +1,1065 @@
+# N-075 わり算の筆算（わる数が 1 けた・2 けた、商の見当）
+#
+# 書き方は N-001 の頭の注のとおり。段 3 なので、子に見せる文は小 4 までの漢字で書く（位・商・続 は漢字。確・仮・余・比・個・枚・班
+#   などはかなで書く。かりの商、あまり、たしかめ、まい、グループ）。分かち書きはしない。数の前後には空白を入れる。
+# 「÷」は U+00F7。check は「//」「%」と divmod で書く。あまりのある答えは「21 あまり 3」と書き、鍵盤で打てないので choices にする
+#   （N-014 と同じ）。check は (lambda q, r: f'{q} あまり {r}')(*divmod(わられる数, わる数))。
+# 前提は N-014（わり算とあまり）と N-074（かけ算の筆算）。数は 1000 まで（N-074 と同じ。4 けたの数は N-073 で、前提にない）。
+#   わられる数は 3 けたまで、商は 1〜3 けた。わる数が 2 けたのときの商は 1 けたと 2 けた。
+#   わる数 × 商 は N-074 の筆算（何けた × 1 けた、2 けた × 2 けた）で計算できる大きさにした。
+# 筆算は「たてる、かける、ひく、おろす」のくり返し。商の立たない上の位には何も書かず（256 ÷ 4 は十の位から）、
+#   とちゅうの位にわる数が入らないときは商に 0 を立てる（624 ÷ 3 = 208）。
+# 何十・何百 ÷ 1 けた（80 ÷ 4、600 ÷ 3）と何十 ÷ 何十（80 ÷ 20）は、10 や 100 のまとまりの数で九九のわり算にする。
+# 商の見当：わる数を近い何十とみて、わられる数は上の位の数で考える（89 ÷ 21 は 80 ÷ 20 とみて 8 ÷ 2 = 4）。見当で立てた商を
+#   「かりの商」と言い、わる数 × かりの商 がひけないほど大きければ 1 小さく、ひいた答えがわる数より小さくなければ 1 大きくする。
+#   概数（N-061）は前提にないので「がい数」「四捨五入」の語は使わず、「近い何十とみる」と言う。
+# 答えのたしかめは「わる数 × 商 + あまり = わられる数」（N-014 のわけ）を、N-074 の筆算で計算する。
+# 小数の商（N-077）と分数（N-016）は使わない。お金（N-060）と長さ（G-046）は前提にないので、場面は、こ数、人数、本数、まい数にした。
+# 筆算の図は svg（D-040）。わる数、かっこ、わられる数を同じはばの列に置く。問題の図はわられる数とわる数だけで、商は書かない
+#   （見本とわけの図には、商ととちゅうの計算を書く）。
+# 決まった形の筆算の問題（「○ ÷ ○ を筆算で…」）のヒントとみちすじは、位ごとの計算と商の見当から作った（下書きの道具）。
+# 日の並び（既定）：1 日目 何十・何百 ÷ 1 けた、2 けた ÷ 1 けた（商が 2 けた）、2 日目 3 けた ÷ 1 けた・あまり・0 を立てる（頭に見本）、
+#   3 日目 わる数が 2 けた（何十でわる、商の見当、かりの商を直す、頭に見本）、4 日目 わけ、5 日目 N-014・N-074 と混ぜる
+#   （たしかめの式、あまりの考え方、場面の問題）、6 日目 確認。
+
+id: N-075
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 72 ÷ 3 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+            <text x="128" y="30" font-size="22" text-anchor="middle">2</text>
+            <text x="152" y="30" font-size="22" text-anchor="middle">4</text>
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="96" font-size="22" text-anchor="middle">6</text>
+            <line x1="116" y1="105" x2="140" y2="105" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="152" y="131" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="131" font-size="22" text-anchor="middle">1</text>
+            <text x="152" y="161" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="161" font-size="22" text-anchor="middle">1</text>
+            <line x1="116" y1="170" x2="164" y2="170" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="152" y="196" font-size="22" text-anchor="middle">0</text>
+          </svg>
+        explain: 十の位から計算します。7 ÷ 3 は 2 あまり 1 なので、十の位に 2 を立てます（たてる）。3 × 2 = 6 を 7 の下に書いて（かける）、7 − 6 = 1（ひく）。一の位の 2 をおろして 12 にします（おろす）。12 ÷ 3 = 4 を一の位に立て、3 × 4 = 12、12 − 12 = 0。答えは 24 です。「たてる、かける、ひく、おろす」をくり返します。
+      - part: 思い出す
+        text: 45 ÷ 5 はいくつですか。
+        answer: 9
+        check: "45 // 5"
+        hints:
+          - わる数は 5 だね。
+          - 5 のだんの九九を言ってみよう。
+          - 答えが 45 になるのは、5 × いくつかな。
+        paths:
+          - [5 × 9 = 45, 9]
+      - part: 思い出す
+        text: 29 ÷ 6 の答えはどれですか。
+        choices: [4 あまり 5, 5 あまり 1, 3 あまり 11]
+        answer: 4 あまり 5
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(29, 6))"
+        hints:
+          - 6 のだんで、29 をこえない一番大きい答えをさがそう。
+          - その九九の答えを、29 からひこう。
+          - あまりは、わる数の 6 より小さいかな。
+        paths:
+          - [6 × 4 = 24, 29 − 24 = 5, 4 あまり 5]
+      - part: 今日
+        text: 🔟 は 10 です。80 ÷ 4 はいくつですか。
+        figure: 🔟🔟🔟🔟🔟🔟🔟🔟
+        answer: 20
+        check: "n('🔟') * 10 // 4"
+        hints:
+          - 80 は、10 が何こかな。
+          - 10 のまとまり 8 こを、4 つに同じ数ずつ分けよう。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [80 は 10 が 8 こ, 8 ÷ 4 = 2, 10 が 2 こで 20]
+        note: 九九の 2 で止めやすい。分けたのは 10 のまとまりなので 20。
+      - part: 今日
+        text: 96 ÷ 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 32
+        check: "96 // 3"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [9 ÷ 3 = 3 で、十の位に 3, あまりはないので、6 をおろす, 6 ÷ 3 = 2 で、一の位に 2, 32]
+      - part: 今日
+        text: 84 ÷ 6 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">6</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 14
+        check: "84 // 6"
+        hints:
+          - 十の位の 8 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [8 ÷ 6 = 1 あまり 2 で、十の位に 1, 4 をおろして 24, 24 ÷ 6 = 4 で、一の位に 4, 14]
+        note: 十の位のあまりの 2 と一の位の 4 で 24 にすることを忘れやすい。4 だけをおろしていないかを見る。
+      - part: 挑戦
+        text: 子ども 78 人が、同じ人数ずつ 3 つのチームに分かれます。1 つのチームは何人ですか。
+        answer: 26
+        check: "78 // 3"
+        hints:
+          - 式は 78 ÷ 3 だね。
+          - 十の位の 7 ÷ 3 から筆算しよう。
+          - あまりに、一の位の 8 をおろして続けよう。
+        paths:
+          - [78 ÷ 3 を筆算, 7 ÷ 3 = 2 あまり 1 で十の位に 2, 8 をおろして 18, 18 ÷ 3 = 6 で一の位に 6, 26 人]
+    extra:
+      - part: 今日
+        text: 600 ÷ 3 はいくつですか。
+        answer: 200
+        check: "600 // 3"
+        hints:
+          - 600 は、100 が何こかな。
+          - 100 のまとまり 6 こを、3 つに同じ数ずつ分けよう。
+          - 100 が何こで、いくつかな。
+        paths:
+          - [600 は 100 が 6 こ, 6 ÷ 3 = 2, 100 が 2 こで 200]
+      - part: 今日
+        text: 68 ÷ 2 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">2</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 34
+        check: "68 // 2"
+        hints:
+          - 十の位の 6 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [6 ÷ 2 = 3 で、十の位に 3, あまりはないので、8 をおろす, 8 ÷ 2 = 4 で、一の位に 4, 34]
+      - part: 今日
+        text: 91 ÷ 7 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">7</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">1</text>
+          </svg>
+        answer: 13
+        check: "91 // 7"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [9 ÷ 7 = 1 あまり 2 で、十の位に 1, 1 をおろして 21, 21 ÷ 7 = 3 で、一の位に 3, 13]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 538 ÷ 4 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 275" xmlns="http://www.w3.org/2000/svg">
+            <text x="116" y="30" font-size="22" text-anchor="middle">1</text>
+            <text x="140" y="30" font-size="22" text-anchor="middle">3</text>
+            <text x="164" y="30" font-size="22" text-anchor="middle">4</text>
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="116" y="96" font-size="22" text-anchor="middle">4</text>
+            <line x1="104" y1="105" x2="128" y2="105" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="140" y="131" font-size="22" text-anchor="middle">3</text>
+            <text x="116" y="131" font-size="22" text-anchor="middle">1</text>
+            <text x="140" y="161" font-size="22" text-anchor="middle">2</text>
+            <text x="116" y="161" font-size="22" text-anchor="middle">1</text>
+            <line x1="104" y1="170" x2="152" y2="170" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="164" y="196" font-size="22" text-anchor="middle">8</text>
+            <text x="140" y="196" font-size="22" text-anchor="middle">1</text>
+            <text x="164" y="226" font-size="22" text-anchor="middle">6</text>
+            <text x="140" y="226" font-size="22" text-anchor="middle">1</text>
+            <line x1="128" y1="235" x2="176" y2="235" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="164" y="261" font-size="22" text-anchor="middle">2</text>
+          </svg>
+        explain: 百の位から計算します。5 ÷ 4 = 1 あまり 1 で、百の位に 1。あまりの 1 に 3 をおろして 13、13 ÷ 4 = 3 あまり 1 で、十の位に 3。あまりの 1 に 8 をおろして 18、18 ÷ 4 = 4 あまり 2 で、一の位に 4。答えは 134 あまり 2 です。4 × 134 + 2 = 538 になるので、正しいとたしかめられます。
+      - part: 思い出す
+        text: 75 ÷ 5 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">5</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        answer: 15
+        check: "75 // 5"
+        hints:
+          - 十の位の 7 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [7 ÷ 5 = 1 あまり 2 で、十の位に 1, 5 をおろして 25, 25 ÷ 5 = 5 で、一の位に 5, 15]
+      - part: 思い出す
+        text: 92 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">2</text>
+          </svg>
+        answer: 23
+        check: "92 // 4"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [9 ÷ 4 = 2 あまり 1 で、十の位に 2, 2 をおろして 12, 12 ÷ 4 = 3 で、一の位に 3, 23]
+      - part: 今日
+        text: 87 ÷ 4 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">7</text>
+          </svg>
+        choices: [21 あまり 3, 20 あまり 7, 12 あまり 3]
+        answer: 21 あまり 3
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(87, 4))"
+        hints:
+          - 十の位の 8 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - さいごのあまりが、4 より小さいかを見よう。
+        paths:
+          - [8 ÷ 4 = 2 で、十の位に 2, あまりはないので、7 をおろす, 7 ÷ 4 = 1 あまり 3 で、一の位に 1, 21 あまり 3]
+        note: 十の位で 20 を立てたあと、あまりの 7 をそのままにしやすい。あまりがわる数より小さいかを見る。
+      - part: 今日
+        text: 756 ÷ 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 252
+        check: "756 // 3"
+        hints:
+          - 百の位の 7 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [7 ÷ 3 = 2 あまり 1 で、百の位に 2, 5 をおろして 15, 15 ÷ 3 = 5 で、十の位に 5, あまりはないので、6 をおろす, 6 ÷ 3 = 2 で、一の位に 2, 252]
+      - part: 今日
+        text: 256 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 64
+        check: "256 // 4"
+        hints:
+          - 2 に 4 は入らないね。上の 2 けたの 25 から考えよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [2 に 4 は入らないので、25 ÷ 4 から, 25 ÷ 4 = 6 あまり 1 で、十の位に 6, 6 をおろして 16, 16 ÷ 4 = 4 で、一の位に 4, 64]
+        note: 百の位に 0 を書いて 064 としたり、2 ÷ 4 で止まったりしやすい。百の位には商を立てず、25 から考える。
+      - part: 挑戦
+        text: 624 ÷ 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 208
+        check: "624 // 3"
+        hints:
+          - 百の位の 6 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - わる数が入らない位には、商に 0 を立てよう。
+        paths:
+          - [6 ÷ 3 = 2 で、百の位に 2, あまりはないので、2 をおろす, 2 に 3 は入らないので、十の位に 0 を立てる, 4 をおろして 24, 24 ÷ 3 = 8 で、一の位に 8, 208]
+        note: 十の位の 0 をぬかして 28 としやすい。商が 3 けたになるかを、百の位から見る。
+    extra:
+      - part: 今日
+        text: 95 ÷ 8 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">8</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        choices: [11 あまり 7, 10 あまり 15, 12 あまり 1]
+        answer: 11 あまり 7
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(95, 8))"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - さいごのあまりが、8 より小さいかを見よう。
+        paths:
+          - [9 ÷ 8 = 1 あまり 1 で、十の位に 1, 5 をおろして 15, 15 ÷ 8 = 1 あまり 7 で、一の位に 1, 11 あまり 7]
+      - part: 今日
+        text: 848 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 212
+        check: "848 // 4"
+        hints:
+          - 百の位の 8 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [8 ÷ 4 = 2 で、百の位に 2, あまりはないので、4 をおろす, 4 ÷ 4 = 1 で、十の位に 1, あまりはないので、8 をおろす, 8 ÷ 4 = 2 で、一の位に 2, 212]
+      - part: 今日
+        text: 392 ÷ 7 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">7</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">2</text>
+          </svg>
+        answer: 56
+        check: "392 // 7"
+        hints:
+          - 3 に 7 は入らないね。上の 2 けたの 39 から考えよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [3 に 7 は入らないので、39 ÷ 7 から, 39 ÷ 7 = 5 あまり 4 で、十の位に 5, 2 をおろして 42, 42 ÷ 7 = 6 で、一の位に 6, 56]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 89 ÷ 21 を筆算で計算しよう。
+        svg: |
+          <svg viewBox="0 0 240 145" xmlns="http://www.w3.org/2000/svg">
+            <text x="164" y="30" font-size="22" text-anchor="middle">4</text>
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">21</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="164" y="96" font-size="22" text-anchor="middle">4</text>
+            <text x="140" y="96" font-size="22" text-anchor="middle">8</text>
+            <line x1="128" y1="105" x2="176" y2="105" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="164" y="131" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        explain: 8 に 21 は入らないので、89 ÷ 21 を考え、商は一の位に立てます。わる数の 21 を近い何十の 20 とみて、89 は十の位の 8 を使って 80 ÷ 20、つまり 8 ÷ 2 = 4。これを「商の見当」といいます。かりの商 4 を立てて、21 × 4 = 84、89 − 84 = 5。5 は 21 より小さいので、答えは 4 あまり 5 です。21 × かりの商 がひけないほど大きいときは商を 1 小さく、ひいた答えが 21 より小さくならないときは 1 大きくします。
+      - part: 思い出す
+        text: 684 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 171
+        check: "684 // 4"
+        hints:
+          - 百の位の 6 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [6 ÷ 4 = 1 あまり 2 で、百の位に 1, 8 をおろして 28, 28 ÷ 4 = 7 で、十の位に 7, あまりはないので、4 をおろす, 4 ÷ 4 = 1 で、一の位に 1, 171]
+      - part: 思い出す
+        text: 34 × 6 を計算しましょう。
+        answer: 204
+        check: "34 * 6"
+        hints:
+          - 一の位の 4 × 6 から計算しよう。
+          - 10 をこえたら、くり上げた数を、次の位のかけ算の答えにたそう。
+          - 一番上の位の答えが 2 けたになったら、そのまま左に書こう。
+        paths:
+          - [4 × 6 = 24 で 4 を書いて 2 をくり上げる, 3 × 6 + 2 = 20, 204]
+      - part: 今日
+        text: 80 ÷ 20 はいくつですか。
+        answer: 4
+        check: "80 // 20"
+        hints:
+          - 80 と 20 は、それぞれ 10 が何こかな。
+          - 10 のまとまりで、8 ÷ 2 を考えよう。
+          - 20 が何こで 80 になるかな。
+        paths:
+          - [80 は 10 が 8 こ、20 は 10 が 2 こ, 8 ÷ 2 = 4, 4]
+          - [20 × 4 = 80, 4]
+        note: 40 と答えやすい。20 がいくつ分で 80 かを聞く。
+      - part: 今日
+        text: 84 ÷ 21 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">21</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 4
+        check: "84 // 21"
+        hints:
+          - わる数の 21 を、近い何十とみて、かりの商を立てよう。
+          - 21 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 21 より小さくなければ 1 大きくしよう。
+        paths:
+          - [8 に 21 は入らないので、84 ÷ 21 から, 84 ÷ 21 を 80 ÷ 20 とみて、かりの商は 4, 一の位に 4 を立てて、21 × 4 = 84、84 − 84 = 0, 4]
+      - part: 今日
+        text: 92 ÷ 24 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">24</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">2</text>
+          </svg>
+        choices: [4 あまり 4, 3 あまり 20, 3 あまり 2]
+        answer: 3 あまり 20
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(92, 24))"
+        hints:
+          - わる数の 24 を、近い何十とみて、かりの商を立てよう。
+          - 24 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 24 より小さくなければ 1 大きくしよう。
+        paths:
+          - [9 に 24 は入らないので、92 ÷ 24 から, 92 ÷ 24 を 90 ÷ 20 とみて、かりの商は 4, 24 × 4 = 96 で 92 より大きいので 3 にする, 一の位に 3 を立てて、24 × 3 = 72、92 − 72 = 20, 3 あまり 20]
+        note: 見当の 4 を立てると、24 × 4 = 96 が 92 からひけない。大きすぎるときは 1 小さくすることを話す。
+      - part: 挑戦
+        text: 828 ÷ 36 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">36</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 23
+        check: "828 // 36"
+        hints:
+          - わる数の 36 を、近い何十とみて、かりの商を立てよう。
+          - 36 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 36 より小さくなければ 1 大きくしよう。
+        paths:
+          - [8 に 36 は入らないので、82 ÷ 36 から, 82 ÷ 36 を 80 ÷ 40 とみて、かりの商は 2, 十の位に 2 を立てて、36 × 2 = 72、82 − 72 = 10, 8 をおろして 108, 108 ÷ 36 を 100 ÷ 40 とみて、かりの商は 2, 36 × 2 = 72、108 − 72 = 36 で 36 より小さくないので 3 にする, 一の位に 3 を立てて、36 × 3 = 108、108 − 108 = 0, 23]
+        note: 商が 2 けた。一の位では見当の 2 が小さすぎるので 3 に直す。ひいた答えがわる数より小さいかを毎回見る。
+    extra:
+      - part: 今日
+        text: 120 ÷ 40 はいくつですか。
+        answer: 3
+        check: "120 // 40"
+        hints:
+          - 120 と 40 は、それぞれ 10 が何こかな。
+          - 10 のまとまりで、12 ÷ 4 を考えよう。
+          - 40 が何こで 120 になるかな。
+        paths:
+          - [120 は 10 が 12 こ、40 は 10 が 4 こ, 12 ÷ 4 = 3, 3]
+      - part: 今日
+        text: 69 ÷ 23 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">23</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">9</text>
+          </svg>
+        answer: 3
+        check: "69 // 23"
+        hints:
+          - わる数の 23 を、近い何十とみて、かりの商を立てよう。
+          - 23 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 23 より小さくなければ 1 大きくしよう。
+        paths:
+          - [6 に 23 は入らないので、69 ÷ 23 から, 69 ÷ 23 を 60 ÷ 20 とみて、かりの商は 3, 一の位に 3 を立てて、23 × 3 = 69、69 − 69 = 0, 3]
+      - part: 今日
+        text: 95 ÷ 31 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">31</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        choices: [3 あまり 2, 2 あまり 33, 3 あまり 12]
+        answer: 3 あまり 2
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(95, 31))"
+        hints:
+          - わる数の 31 を、近い何十とみて、かりの商を立てよう。
+          - 31 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 31 より小さくなければ 1 大きくしよう。
+        paths:
+          - [9 に 31 は入らないので、95 ÷ 31 から, 95 ÷ 31 を 90 ÷ 30 とみて、かりの商は 3, 一の位に 3 を立てて、31 × 3 = 93、95 − 93 = 2, 3 あまり 2]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 76 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 19
+        check: "76 // 4"
+        hints:
+          - 十の位の 7 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [7 ÷ 4 = 1 あまり 3 で、十の位に 1, 6 をおろして 36, 36 ÷ 4 = 9 で、一の位に 9, 19]
+      - part: 思い出す
+        text: 88 ÷ 22 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">22</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 4
+        check: "88 // 22"
+        hints:
+          - わる数の 22 を、近い何十とみて、かりの商を立てよう。
+          - 22 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 22 より小さくなければ 1 大きくしよう。
+        paths:
+          - [8 に 22 は入らないので、88 ÷ 22 から, 88 ÷ 22 を 80 ÷ 20 とみて、かりの商は 4, 一の位に 4 を立てて、22 × 4 = 88、88 − 88 = 0, 4]
+      - part: 今日
+        text: 252 ÷ 36 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">36</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">2</text>
+          </svg>
+        answer: 7
+        check: "252 // 36"
+        hints:
+          - わる数の 36 を、近い何十とみて、かりの商を立てよう。
+          - 36 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 36 より小さくなければ 1 大きくしよう。
+        paths:
+          - [25 に 36 は入らないので、252 ÷ 36 から, 252 ÷ 36 を 250 ÷ 40 とみて、かりの商は 6, 36 × 6 = 216、252 − 216 = 36 で 36 より小さくないので 7 にする, 一の位に 7 を立てて、36 × 7 = 252、252 − 252 = 0, 7]
+      - part: 今日
+        text: 736 ÷ 32 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">32</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 23
+        check: "736 // 32"
+        hints:
+          - わる数の 32 を、近い何十とみて、かりの商を立てよう。
+          - 32 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 32 より小さくなければ 1 大きくしよう。
+        paths:
+          - [7 に 32 は入らないので、73 ÷ 32 から, 73 ÷ 32 を 70 ÷ 30 とみて、かりの商は 2, 十の位に 2 を立てて、32 × 2 = 64、73 − 64 = 9, 6 をおろして 96, 96 ÷ 32 を 90 ÷ 30 とみて、かりの商は 3, 一の位に 3 を立てて、32 × 3 = 96、96 − 96 = 0, 23]
+      - part: わけ
+        text: 72 ÷ 3 の筆算で、十の位であまった 1 に一の位の 2 をおろして、12 にします。12 にしてよいわけを、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+            <text x="128" y="30" font-size="22" text-anchor="middle">2</text>
+            <text x="152" y="30" font-size="22" text-anchor="middle">4</text>
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="96" font-size="22" text-anchor="middle">6</text>
+            <line x1="116" y1="105" x2="140" y2="105" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="152" y="131" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="131" font-size="22" text-anchor="middle">1</text>
+            <text x="152" y="161" font-size="22" text-anchor="middle">2</text>
+            <text x="128" y="161" font-size="22" text-anchor="middle">1</text>
+            <line x1="116" y1="170" x2="164" y2="170" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="152" y="196" font-size="22" text-anchor="middle">0</text>
+          </svg>
+        explain: 例：「十の位の 7 は 10 が 7 こ。3 つに分けると 1 つ分は 10 が 2 こで、10 が 1 こあまる。あまった 10 と一の位の 2 を合わせると 12。12 を 3 つに分けると 1 つ分は 4。だから 1 つ分は 20 と 4 で 24 になる。」と書ければよい。あまりの 1 が 10 を表すことが書けているかを見る。おはじきの 10 のたばを 1 つほどいて見せるとよい。
+        hints:
+          - 十の位の 7 は、10 が何こかな。
+          - 10 のまとまりを 3 つに分けると、10 はいくつあまるかな。
+          - 「あまった 1 は 10 のことだから」と書こう。
+        paths:
+          - [7 は 10 が 7 こ, 3 つに分けて 10 が 1 こあまる, あまった 10 と 2 で 12, だから 12 ÷ 3 を計算する]
+      - part: わけ
+        text: 92 ÷ 24 の筆算で、見当をつけて、かりの商を 4 にしました。4 ではまちがいだと分かるわけと、正しい商を、文で書きましょう。
+        explain: 例：「24 × 4 = 96 で、92 より大きいのでひけない。だから 4 は大きすぎる。1 小さい 3 にすると、24 × 3 = 72 で、92 − 72 = 20。20 は 24 より小さいので、もう 24 は入らない。だから商は 3 で、あまりは 20。」と書ければよい。ひいた答えがわる数より小さくないときは、商が小さすぎることにも触れる（N-014 の「あまりはわる数より小さい」と同じ）。
+        hints:
+          - 24 × 4 はいくつかな。92 からひけるかな。
+          - 1 小さい 3 にすると、ひいた答えはいくつかな。
+          - 「24 × 4 は 92 より大きいから」と書こう。
+        paths:
+          - [24 × 4 = 96 は 92 より大きい, 4 は大きすぎる, 24 × 3 = 72 で 92 − 72 = 20, 20 は 24 より小さいので 3 あまり 20]
+      - part: わけ
+        text: 624 ÷ 3 の筆算で、十の位の商に 0 を書きます。0 を書かなければならないわけを、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+            <text x="116" y="30" font-size="22" text-anchor="middle">2</text>
+            <text x="140" y="30" font-size="22" text-anchor="middle">0</text>
+            <text x="164" y="30" font-size="22" text-anchor="middle">8</text>
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="116" y="96" font-size="22" text-anchor="middle">6</text>
+            <line x1="104" y1="105" x2="128" y2="105" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="164" y="131" font-size="22" text-anchor="middle">4</text>
+            <text x="140" y="131" font-size="22" text-anchor="middle">2</text>
+            <text x="164" y="161" font-size="22" text-anchor="middle">4</text>
+            <text x="140" y="161" font-size="22" text-anchor="middle">2</text>
+            <line x1="128" y1="170" x2="176" y2="170" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="164" y="196" font-size="22" text-anchor="middle">0</text>
+          </svg>
+        explain: 例：「百の位の 6 を 3 つに分けて、百の位の商は 2。十の位の 2 は 10 が 2 こで、3 つに分けると 1 つ分に 10 は入らないので、十の位の商は 0。0 を書かないと、一の位の 8 が十の位にずれて 28 になり、200 と 8 の 208 とはちがう数になる。」と書ければよい。0 は空いた位のしるし（N-009）であることにつなげるとよい。たしかめ 3 × 208 = 624 を計算させてもよい。
+        hints:
+          - 十の位の 2 は、10 が何こかな。3 つに分けられるかな。
+          - 0 を書かないと、商の 2 と 8 はどの位になるかな。
+          - 「0 を書かないと、ちがう数になるから」と書こう。
+        paths:
+          - [十の位の 2 に 3 は入らない, 十の位の商は 0, 0 を書かないと 28 になる, だから 0 を書いて 208]
+    extra:
+      - part: 今日
+        text: 861 ÷ 41 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">41</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">1</text>
+          </svg>
+        answer: 21
+        check: "861 // 41"
+        hints:
+          - わる数の 41 を、近い何十とみて、かりの商を立てよう。
+          - 41 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 41 より小さくなければ 1 大きくしよう。
+        paths:
+          - [8 に 41 は入らないので、86 ÷ 41 から, 86 ÷ 41 を 80 ÷ 40 とみて、かりの商は 2, 十の位に 2 を立てて、41 × 2 = 82、86 − 82 = 4, 1 をおろして 41, 41 ÷ 41 を 40 ÷ 40 とみて、かりの商は 1, 一の位に 1 を立てて、41 × 1 = 41、41 − 41 = 0, 21]
+      - part: 今日
+        text: 185 ÷ 37 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">37</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        answer: 5
+        check: "185 // 37"
+        hints:
+          - わる数の 37 を、近い何十とみて、かりの商を立てよう。
+          - 37 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 37 より小さくなければ 1 大きくしよう。
+        paths:
+          - [18 に 37 は入らないので、185 ÷ 37 から, 185 ÷ 37 を 180 ÷ 40 とみて、かりの商は 4, 37 × 4 = 148、185 − 148 = 37 で 37 より小さくないので 5 にする, 一の位に 5 を立てて、37 × 5 = 185、185 − 185 = 0, 5]
+      - part: 今日
+        text: 98 ÷ 7 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">7</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 14
+        check: "98 // 7"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [9 ÷ 7 = 1 あまり 2 で、十の位に 1, 8 をおろして 28, 28 ÷ 7 = 4 で、一の位に 4, 14]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 84 ÷ 28 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">28</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 3
+        check: "84 // 28"
+        hints:
+          - わる数の 28 を、近い何十とみて、かりの商を立てよう。
+          - 28 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 28 より小さくなければ 1 大きくしよう。
+        paths:
+          - [8 に 28 は入らないので、84 ÷ 28 から, 84 ÷ 28 を 80 ÷ 30 とみて、かりの商は 2, 28 × 2 = 56、84 − 56 = 28 で 28 より小さくないので 3 にする, 一の位に 3 を立てて、28 × 3 = 84、84 − 84 = 0, 3]
+      - part: 思い出す
+        text: 516 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 129
+        check: "516 // 4"
+        hints:
+          - 百の位の 5 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [5 ÷ 4 = 1 あまり 1 で、百の位に 1, 1 をおろして 11, 11 ÷ 4 = 2 あまり 3 で、十の位に 2, 6 をおろして 36, 36 ÷ 4 = 9 で、一の位に 9, 129]
+      - part: 今日
+        text: ある数を 23 でわると、商が 14、あまりが 5 になりました。ある数はいくつですか。
+        answer: 327
+        check: "23 * 14 + 5"
+        hints:
+          - わり算のたしかめの式を思い出そう。
+          - わる数 × 商 に、あまりをたすと、わられる数になるね。
+          - 23 × 14 を筆算で計算しよう。
+        paths:
+          - [ある数 = 23 × 14 + 5, 23 × 14 = 322, 322 + 5 = 327]
+        note: 23 × 14 で止めて 322 としやすい。あまりをたすことを、たしかめの式で話す。
+      - part: 今日
+        text: 65 人が、1 台に 4 人ずつ乗れる車で出かけます。全員が乗るには、車は何台いりますか。
+        answer: 17
+        check: "(65 + 4 - 1) // 4"
+        hints:
+          - 65 ÷ 4 を筆算で計算しよう。
+          - 4 人ずつ乗った車のほかに、あまりの人がいるね。
+          - あまりの人も乗るには、どうすればよいかな。
+        paths:
+          - [65 ÷ 4 = 16 あまり 1, 16 台に 4 人ずつ乗る, あまりの 1 人に 1 台, 17 台]
+        note: 商の 16 をそのまま答えやすい。あまりの 1 人も乗るので、もう 1 台いる。
+      - part: 今日
+        text: 子ども 96 人を、8 人ずつのグループに分けます。グループはいくつできますか。
+        answer: 12
+        check: "96 // 8"
+        hints:
+          - 式は 96 ÷ 8 だね。
+          - 9 に 8 は入るかな。十の位から筆算しよう。
+          - あまりに、一の位の 6 をおろして続けよう。
+        paths:
+          - [96 ÷ 8 を筆算, 9 ÷ 8 = 1 あまり 1 で十の位に 1, 6 をおろして 16, 16 ÷ 8 = 2, 12 グループ]
+      - part: 挑戦
+        text: ある数を 18 でわると、商が 23 で、あまりがありました。ある数として考えられる一番大きい数はいくつですか。
+        answer: 431
+        check: "max([k for k in range(1000) if k // 18 == 23])"
+        hints:
+          - あまりは、わる数の 18 より小さいね。一番大きいあまりはいくつかな。
+          - わる数 × 商 + あまり で、わられる数がわかるね。
+          - 18 × 23 を筆算で計算しよう。
+        paths:
+          - [一番大きいあまりは 17, 18 × 23 = 414, 414 + 17 = 431]
+        note: あまりを 18 にして 432 としやすい。あまりがわる数と同じなら、もう 1 つ分われることを話す。
+    extra:
+      - part: 今日
+        text: ケーキが 87 こあります。1 箱に 6 こずつ入れます。何箱できて、何こあまりますか。
+        choices: [14 箱できて 3 こあまる, 13 箱できて 9 こあまる, 15 箱できて 3 こあまる]
+        answer: 14 箱できて 3 こあまる
+        check: "(lambda q, r: f'{q} 箱できて {r} こあまる')(*divmod(87, 6))"
+        hints:
+          - 式は 87 ÷ 6 だね。
+          - 十の位の 8 ÷ 6 から筆算しよう。
+          - さいごのあまりが 6 より小さいかを見よう。
+        paths:
+          - [87 ÷ 6 を筆算, 8 ÷ 6 = 1 あまり 2 で十の位に 1, 7 をおろして 27, 27 ÷ 6 = 4 あまり 3, 14 箱で 3 こあまる]
+      - part: 今日
+        text: 936 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">3</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 234
+        check: "936 // 4"
+        hints:
+          - 百の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [9 ÷ 4 = 2 あまり 1 で、百の位に 2, 3 をおろして 13, 13 ÷ 4 = 3 あまり 1 で、十の位に 3, 6 をおろして 16, 16 ÷ 4 = 4 で、一の位に 4, 234]
+      - part: 挑戦
+        text: えん筆 250 本を、28 人に同じ数ずつ配ります。1 人何本になって、何本あまりますか。
+        choices: [8 本で 26 本あまる, 9 本で 2 本あまる, 7 本で 54 本あまる]
+        answer: 8 本で 26 本あまる
+        check: "(lambda q, r: f'{q} 本で {r} 本あまる')(*divmod(250, 28))"
+        hints:
+          - 式は 250 ÷ 28 だね。25 に 28 は入らないので、商は一の位に立つよ。
+          - 28 を近い何十とみて、かりの商を立てよう。
+          - 28 × かりの商 が 250 をこえないか、ひいた答えが 28 より小さいかを見よう。
+        paths:
+          - [250 ÷ 28 を 250 ÷ 30 とみて、かりの商は 8, 28 × 8 = 224, 250 − 224 = 26, 1 人 8 本で 26 本あまる]
+        note: 28 × 9 = 252 で 250 をこえるので 9 本は配れない。
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 90 ÷ 3 はいくつですか。
+        answer: 30
+        check: "90 // 3"
+        hints:
+          - 90 は、10 が何こかな。
+          - 10 のまとまり 9 こを、3 つに同じ数ずつ分けよう。
+          - 10 が何こで、いくつかな。
+        paths:
+          - [90 は 10 が 9 こ, 9 ÷ 3 = 3, 10 が 3 こで 30]
+      - part: 今日
+        text: 78 ÷ 6 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">6</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 13
+        check: "78 // 6"
+        hints:
+          - 十の位の 7 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [7 ÷ 6 = 1 あまり 1 で、十の位に 1, 8 をおろして 18, 18 ÷ 6 = 3 で、一の位に 3, 13]
+      - part: 今日
+        text: 97 ÷ 4 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">7</text>
+          </svg>
+        choices: [24 あまり 1, 23 あまり 5, 25 あまり 1]
+        answer: 24 あまり 1
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(97, 4))"
+        hints:
+          - 十の位の 9 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - さいごのあまりが、4 より小さいかを見よう。
+        paths:
+          - [9 ÷ 4 = 2 あまり 1 で、十の位に 2, 7 をおろして 17, 17 ÷ 4 = 4 あまり 1 で、一の位に 4, 24 あまり 1]
+      - part: 今日
+        text: 864 ÷ 3 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">3</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">6</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        answer: 288
+        check: "864 // 3"
+        hints:
+          - 百の位の 8 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [8 ÷ 3 = 2 あまり 2 で、百の位に 2, 6 をおろして 26, 26 ÷ 3 = 8 あまり 2 で、十の位に 8, 4 をおろして 24, 24 ÷ 3 = 8 で、一の位に 8, 288]
+      - part: 今日
+        text: 816 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">8</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">1</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 204
+        check: "816 // 4"
+        hints:
+          - 百の位の 8 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - わる数が入らない位には、商に 0 を立てよう。
+        paths:
+          - [8 ÷ 4 = 2 で、百の位に 2, あまりはないので、1 をおろす, 1 に 4 は入らないので、十の位に 0 を立てる, 6 をおろして 16, 16 ÷ 4 = 4 で、一の位に 4, 204]
+      - part: 今日
+        text: 78 ÷ 26 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">26</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">8</text>
+          </svg>
+        answer: 3
+        check: "78 // 26"
+        hints:
+          - わる数の 26 を、近い何十とみて、かりの商を立てよう。
+          - 26 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 26 より小さくなければ 1 大きくしよう。
+        paths:
+          - [7 に 26 は入らないので、78 ÷ 26 から, 78 ÷ 26 を 70 ÷ 30 とみて、かりの商は 2, 26 × 2 = 52、78 − 52 = 26 で 26 より小さくないので 3 にする, 一の位に 3 を立てて、26 × 3 = 78、78 − 78 = 0, 3]
+      - part: 今日
+        text: 925 ÷ 37 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="190" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">37</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">2</text>
+            <text x="176" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        answer: 25
+        check: "925 // 37"
+        hints:
+          - わる数の 37 を、近い何十とみて、かりの商を立てよう。
+          - 37 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 37 より小さくなければ 1 大きくしよう。
+        paths:
+          - [9 に 37 は入らないので、92 ÷ 37 から, 92 ÷ 37 を 90 ÷ 40 とみて、かりの商は 2, 十の位に 2 を立てて、37 × 2 = 74、92 − 74 = 18, 5 をおろして 185, 185 ÷ 37 を 180 ÷ 40 とみて、かりの商は 4, 37 × 4 = 148、185 − 148 = 37 で 37 より小さくないので 5 にする, 一の位に 5 を立てて、37 × 5 = 185、185 − 185 = 0, 25]
+      - part: 挑戦
+        text: シール 300 まいを、1 人に 14 まいずつ配ります。何人に配れて、何まいあまりますか。
+        choices: [21 人に配れて 6 まいあまる, 20 人に配れて 20 まいあまる, 22 人に配れて 8 まいあまる]
+        answer: 21 人に配れて 6 まいあまる
+        check: "(lambda q, r: f'{q} 人に配れて {r} まいあまる')(*divmod(300, 14))"
+        hints:
+          - 式は 300 ÷ 14 だね。
+          - 30 ÷ 14 から、14 を近い何十とみて商の見当をつけよう。
+          - 2 回目は、あまりに一の位の 0 をおろして続けよう。
+        paths:
+          - [30 ÷ 14 = 2 あまり 2 で十の位に 2, 0 をおろして 20, 20 ÷ 14 = 1 あまり 6 で一の位に 1, 21 人で 6 まいあまる]
+        note: 一の位の 0 をおろしわすれて、2 あまり 2 としやすい。
+    extra:
+      - part: 今日
+        text: 56 ÷ 4 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="106" y1="38" x2="166" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M106 38 Q117 56 106 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="100" y="66" font-size="22" text-anchor="end">4</text>
+            <text x="128" y="66" font-size="22" text-anchor="middle">5</text>
+            <text x="152" y="66" font-size="22" text-anchor="middle">6</text>
+          </svg>
+        answer: 14
+        check: "56 // 4"
+        hints:
+          - 十の位の 5 から計算しよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [5 ÷ 4 = 1 あまり 1 で、十の位に 1, 6 をおろして 16, 16 ÷ 4 = 4 で、一の位に 4, 14]
+      - part: 今日
+        text: 475 ÷ 5 を筆算で計算しましょう。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="94" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M94 38 Q105 56 94 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="88" y="66" font-size="22" text-anchor="end">5</text>
+            <text x="116" y="66" font-size="22" text-anchor="middle">4</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">7</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">5</text>
+          </svg>
+        answer: 95
+        check: "475 // 5"
+        hints:
+          - 4 に 5 は入らないね。上の 2 けたの 47 から考えよう。
+          - たてる、かける、ひく、おろす の順に進めよう。
+          - ひいた答えに、次の位の数をおろして続けよう。
+        paths:
+          - [4 に 5 は入らないので、47 ÷ 5 から, 47 ÷ 5 = 9 あまり 2 で、十の位に 9, 5 をおろして 25, 25 ÷ 5 = 5 で、一の位に 5, 95]
+      - part: 今日
+        text: 94 ÷ 16 を筆算で計算すると、答えはどれですか。
+        svg: |
+          <svg viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg">
+            <line x1="118" y1="38" x2="178" y2="38" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M118 38 Q129 56 118 74" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="112" y="66" font-size="22" text-anchor="end">16</text>
+            <text x="140" y="66" font-size="22" text-anchor="middle">9</text>
+            <text x="164" y="66" font-size="22" text-anchor="middle">4</text>
+          </svg>
+        choices: [5 あまり 14, 6 あまり 4, 4 あまり 30]
+        answer: 5 あまり 14
+        check: "(lambda q, r: f'{q} あまり {r}')(*divmod(94, 16))"
+        hints:
+          - わる数の 16 を、近い何十とみて、かりの商を立てよう。
+          - 16 × かりの商 を計算して、ひけるかを見よう。
+          - 大きすぎたら商を 1 小さく、ひいた答えが 16 より小さくなければ 1 大きくしよう。
+        paths:
+          - [9 に 16 は入らないので、94 ÷ 16 から, 94 ÷ 16 を 90 ÷ 20 とみて、かりの商は 4, 16 × 4 = 64、94 − 64 = 30 で 16 より小さくないので 5 にする, 一の位に 5 を立てて、16 × 5 = 80、94 − 80 = 14, 5 あまり 14]

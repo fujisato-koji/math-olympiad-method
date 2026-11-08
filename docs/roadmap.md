@@ -24,75 +24,75 @@
 
 | 目標 | 単元 | 日数 |
 |---|---|---|
-| IMO | 177 | 1181 |
-| 東京大学大学院数理科学研究科（修士課程入試） | 130 | 1036 |
-| GRE Mathematics Subject Test（ETS） | 176 | 1327 |
-| UC Berkeley Preliminary Examination | 163 | 1284 |
-| 国際物理オリンピック（IPhO）Syllabus | 168 | 1125 |
-| 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 245 | 1879 |
-| GRE Physics Test（ETS） | 210 | 1581 |
-| University of Cambridge ほか（STEP 2・3） | 168 | 1086 |
+| IMO | 178 | 1186 |
+| 東京大学大学院数理科学研究科（修士課程入試） | 131 | 1041 |
+| GRE Mathematics Subject Test（ETS） | 177 | 1332 |
+| UC Berkeley Preliminary Examination | 164 | 1289 |
+| 国際物理オリンピック（IPhO）Syllabus | 169 | 1130 |
+| 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 246 | 1884 |
+| GRE Physics Test（ETS） | 211 | 1586 |
+| University of Cambridge ほか（STEP 2・3） | 169 | 1091 |
 | Indian Institutes of Technology（JEE Advanced、数学・物理・化学） | 236 | 1538 |
 | National Testing Agency（JEE Main、数学・物理・化学） | 222 | 1442 |
 | University of Oxford ほか（TMUA） | 110 | 665 |
-| 東京大学（理科の入学試験、数学と理科） | 139 | 896 |
-| 中国の普通高等学校招生全国統一考試（高考、数学と理科） | 122 | 769 |
-| 韓国の大学修学能力試験（修能、数学と科学探究） | 84 | 535 |
-| A level Mathematics（Pearson Edexcel） | 127 | 792 |
-| A level Further Mathematics（Pearson Edexcel） | 192 | 1319 |
-| IB Mathematics: Analysis and Approaches HL | 128 | 803 |
+| 東京大学（理科の入学試験、数学と理科） | 140 | 901 |
+| 中国の普通高等学校招生全国統一考試（高考、数学と理科） | 123 | 774 |
+| 韓国の大学修学能力試験（修能、数学と科学探究） | 85 | 540 |
+| A level Mathematics（Pearson Edexcel） | 128 | 797 |
+| A level Further Mathematics（Pearson Edexcel） | 193 | 1324 |
+| IB Mathematics: Analysis and Approaches HL | 129 | 808 |
 | SAT Math（College Board） | 89 | 535 |
-| AP Calculus BC | 93 | 588 |
-| AP Statistics | 98 | 618 |
+| AP Calculus BC | 94 | 593 |
+| AP Statistics | 99 | 623 |
 | ЕГЭ（数学 профильный уровень と、物理・化学・生物・情報） | 142 | 897 |
 | ISEB Common Entrance 11+（数学と理科） | 108 | 579 |
 | ISEB Common Entrance 13+（数学と理科） | 142 | 799 |
 | GCSE Mathematics Higher（Pearson Edexcel） | 110 | 675 |
 | PSLE（シンガポール、算数と理科） | 100 | 556 |
 | GCE O-Level Mathematics（シンガポール） | 97 | 593 |
-| GCE O-Level Additional Mathematics（シンガポール） | 81 | 498 |
+| GCE O-Level Additional Mathematics（シンガポール） | 82 | 503 |
 | AMC 8（MAA） | 103 | 619 |
 | Math Kangaroo | 104 | 642 |
 | Google DeepMind の Research Scientist | 299 | 2248 |
-| FE Mechanical（NCEES） | 271 | 1989 |
-| FE Electrical and Computer（NCEES） | 260 | 1994 |
+| FE Mechanical（NCEES） | 272 | 1994 |
+| FE Electrical and Computer（NCEES） | 261 | 1999 |
 | NASA の宇宙飛行士 | 358 | 2606 |
-| Google Quantum AI の研究者 | 273 | 2176 |
-| 理論物理学者（ノーベル物理学賞の研究に届く知識） | 349 | 3092 |
-| 数学者（フィールズ賞の研究に届く知識） | 388 | 3588 |
-| 素粒子物理でノーベル物理学賞を目指す博士 | 269 | 2198 |
-| 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne） | 249 | 1894 |
-| ミレニアム懸賞問題（クレイ数学研究所） | 367 | 3358 |
+| Google Quantum AI の研究者 | 274 | 2181 |
+| 理論物理学者（ノーベル物理学賞の研究に届く知識） | 350 | 3097 |
+| 数学者（フィールズ賞の研究に届く知識） | 389 | 3593 |
+| 素粒子物理でノーベル物理学賞を目指す博士 | 270 | 2203 |
+| 超伝導と新素材の物性物理の研究者（東京大学物性研究所、Argonne） | 250 | 1899 |
+| ミレニアム懸賞問題（クレイ数学研究所） | 368 | 3363 |
 | 理論計算機科学者（ACM チューリング賞） | 306 | 2306 |
-| NIST の耐量子暗号の暗号学者 | 227 | 1821 |
+| NIST の耐量子暗号の暗号学者 | 228 | 1826 |
 | タンパク質の構造予測で新薬を探す研究者 | 311 | 2329 |
-| ECMWF の気象・気候の研究者 | 236 | 1865 |
-| MLB のデータアナリスト | 164 | 1160 |
-| 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど） | 250 | 2176 |
-| エルデシュの懸賞問題 | 269 | 2307 |
-| ヒルベルトの 23 の問題 | 354 | 3193 |
-| スメイルの 18 の問題 | 326 | 2930 |
-| 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど） | 301 | 2742 |
-| ICM 2026 の部会に当たる 16 分野の研究の入口 | 509 | 4805 |
-| Society of Actuaries（SOA）の ASA の試験 | 167 | 1184 |
-| CFA Institute の CFA Program（Level I〜III） | 173 | 1212 |
-| ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学 | 178 | 1324 |
-| Jane Street のクオンツ研究者（Quantitative Researcher） | 144 | 1000 |
+| ECMWF の気象・気候の研究者 | 237 | 1870 |
+| MLB のデータアナリスト | 165 | 1165 |
+| 子どもでも主張が分かる未解決問題（コラッツ、ゴールドバッハなど） | 251 | 2181 |
+| エルデシュの懸賞問題 | 270 | 2312 |
+| ヒルベルトの 23 の問題 | 355 | 3198 |
+| スメイルの 18 の問題 | 327 | 2935 |
+| 近年に解決された大問題の証明を読む（フェルマー、ポアンカレ、ケプラーなど） | 302 | 2747 |
+| ICM 2026 の部会に当たる 16 分野の研究の入口 | 510 | 4810 |
+| Society of Actuaries（SOA）の ASA の試験 | 168 | 1189 |
+| CFA Institute の CFA Program（Level I〜III） | 174 | 1217 |
+| ノーベル経済学賞（スウェーデン国立銀行 アルフレッド・ノーベル記念経済学賞）の金融経済学 | 179 | 1329 |
+| Jane Street のクオンツ研究者（Quantitative Researcher） | 145 | 1005 |
 | 地球科学者（クラフォード賞の地球科学部門の研究に届く知識） | 358 | 2639 |
-| 天文学者（ショウ賞の天文学部門の研究に届く知識） | 191 | 1464 |
+| 天文学者（ショウ賞の天文学部門の研究に届く知識） | 192 | 1469 |
 | ナノサイエンスの研究者（カブリ賞のナノサイエンス部門の研究に届く知識） | 307 | 2301 |
-| 統計学者（国際統計学賞の研究に届く知識） | 132 | 949 |
+| 統計学者（国際統計学賞の研究に届く知識） | 133 | 954 |
 | 工学者（エリザベス女王工学賞の研究に届く知識） | 394 | 3152 |
-| Math Kangaroo（1・2 年生） | 43 | 237 |
+| Math Kangaroo（1・2 年生） | 44 | 242 |
 | Math Kangaroo（3・4 年生） | 39 | 213 |
 | Math Kangaroo（5・6 年生） | 54 | 310 |
 | Math Kangaroo（7・8 年生） | 78 | 463 |
-| Math Kangaroo（9・10 年生） | 93 | 582 |
-| Math Kangaroo（11・12 年生） | 113 | 730 |
-| European Girls' Mathematical Olympiad（EGMO） | 122 | 817 |
-| Asian Pacific Mathematics Olympiad（APMO） | 136 | 917 |
-| Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 211 | 1632 |
-| IMF（国際通貨基金）のエコノミスト（Economist Program） | 155 | 1079 |
+| Math Kangaroo（9・10 年生） | 94 | 587 |
+| Math Kangaroo（11・12 年生） | 114 | 735 |
+| European Girls' Mathematical Olympiad（EGMO） | 123 | 822 |
+| Asian Pacific Mathematics Olympiad（APMO） | 137 | 922 |
+| Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 212 | 1637 |
+| IMF（国際通貨基金）のエコノミスト（Economist Program） | 156 | 1084 |
 | 国際化学オリンピック（IChO） | 227 | 1590 |
 | 国際生物学オリンピック（IBO） | 260 | 1774 |
 | AP Chemistry（College Board） | 172 | 1134 |
@@ -108,21 +108,21 @@
 | mRNA ワクチンをつくる研究者（Moderna） | 263 | 1822 |
 | 野生動物の研究者（Max Planck Institute of Animal Behavior） | 258 | 1743 |
 | 脳の研究者（Allen Institute） | 233 | 1577 |
-| Bebras（International Challenge on Informatics and Computational Thinking） | 79 | 455 |
+| Bebras（International Challenge on Informatics and Computational Thinking） | 80 | 460 |
 | ICAS Science（2〜6 年生、Introductory〜Paper D） | 106 | 561 |
 | 国際ジュニア科学オリンピック（IJSO） | 247 | 1542 |
-| World Robot Olympiad（RoboMission） | 105 | 639 |
-| World Robot Olympiad（Future Engineers、自動運転車） | 103 | 644 |
-| ISLP International Statistical Literacy Poster Competition | 30 | 174 |
-| 国際情報オリンピック（IOI） | 128 | 864 |
-| 国際天文学・天体物理学オリンピック（IOAA） | 167 | 1075 |
+| World Robot Olympiad（RoboMission） | 106 | 644 |
+| World Robot Olympiad（Future Engineers、自動運転車） | 104 | 649 |
+| ISLP International Statistical Literacy Poster Competition | 31 | 179 |
+| 国際情報オリンピック（IOI） | 129 | 869 |
+| 国際天文学・天体物理学オリンピック（IOAA） | 168 | 1080 |
 | 国際地球科学オリンピック（IESO） | 221 | 1426 |
-| 国際経済オリンピック（IEO） | 145 | 975 |
+| 国際経済オリンピック（IEO） | 146 | 980 |
 | International Brain Bee（世界大会） | 221 | 1490 |
 | NCF-Envirothon（国際大会） | 199 | 1257 |
 | A level Physics（AQA 7408） | 137 | 856 |
-| AP Physics C（Mechanics と Electricity and Magnetism、College Board） | 112 | 714 |
-| AP Computer Science A（College Board） | 66 | 389 |
+| AP Physics C（Mechanics と Electricity and Magnetism、College Board） | 113 | 719 |
+| AP Computer Science A（College Board） | 67 | 394 |
 | AP Environmental Science（College Board） | 190 | 1126 |
 | IB Physics HL（国際バカロレア） | 155 | 984 |
 | IB Chemistry HL（国際バカロレア） | 167 | 1104 |
@@ -137,41 +137,41 @@
 | AP Psychology（College Board） | 258 | 1810 |
 | IB Diploma Programme Psychology（HL、2027 年からの試験） | 189 | 1244 |
 | 認知科学の研究者（ルメルハート賞の研究に届く知識） | 189 | 1244 |
-| 認知科学の研究者（Max Planck Institute for Biological Cybernetics） | 162 | 1079 |
-| 物理学の大きな未解決問題（統一理論、暗黒物質、物質と反物質など） | 221 | 1786 |
+| 認知科学の研究者（Max Planck Institute for Biological Cybernetics） | 163 | 1084 |
+| 物理学の大きな未解決問題（統一理論、暗黒物質、物質と反物質など） | 222 | 1791 |
 | 化学の大きな未解決問題（生命のキラリティ、人工光合成、周期表の果てなど） | 300 | 2261 |
 | 生物学の大きな未解決問題（生命の起源、真核細胞の誕生、再生など） | 288 | 2023 |
 | 医学の大きな未解決問題（HIV のワクチン、アルツハイマー病、がん、薬剤耐性菌など） | 243 | 1692 |
 | 地球科学の大きな未解決問題（地震の予知、プレートテクトニクスの始まり、気候感度など） | 361 | 2633 |
 | 天文学の大きな未解決問題（暗黒エネルギー、ハッブル定数の食い違い、地球外生命など） | 327 | 2379 |
-| 生態学の大きな未解決問題（種の多様性、共存、生態系の転換点など） | 219 | 1551 |
+| 生態学の大きな未解決問題（種の多様性、共存、生態系の転換点など） | 220 | 1556 |
 | 神経科学の大きな未解決問題（意識、記憶、眠り、脳の配線と働き） | 240 | 1653 |
-| 材料科学の大きな未解決問題（常温超伝導、ガラス、金属水素など） | 279 | 2124 |
-| 計算機科学の大きな未解決問題（P 対 NP、行列の積、量子計算など） | 226 | 1779 |
-| 統計学の大きな未解決問題（因果推論、再現性、過剰パラメータのモデルの汎化など） | 125 | 855 |
+| 材料科学の大きな未解決問題（常温超伝導、ガラス、金属水素など） | 280 | 2129 |
+| 計算機科学の大きな未解決問題（P 対 NP、行列の積、量子計算など） | 227 | 1784 |
+| 統計学の大きな未解決問題（因果推論、再現性、過剰パラメータのモデルの汎化など） | 126 | 860 |
 | 工学の大きな未解決問題（核融合の発電、炭素の回収、きれいな水など） | 376 | 2860 |
-| 経済学の大きな未解決問題（株式プレミアムの謎、国の豊かさの違い、生産性の鈍化など） | 138 | 937 |
+| 経済学の大きな未解決問題（株式プレミアムの謎、国の豊かさの違い、生産性の鈍化など） | 139 | 942 |
 | 子どもでも問いが分かる理科の未解決問題（宇宙はなぜ物質でできているのか、生命はどう始まったかなど） | 419 | 3199 |
 | 食料と農業の研究者（世界食糧賞の研究に届く知識） | 295 | 2062 |
 | CIMMYT の小麦・トウモロコシの育種の研究者（量的遺伝とゲノム選抜） | 232 | 1589 |
 | 国の獣医当局と WOAH・FAO の獣医官（動物の病気と食の安全を守る） | 218 | 1442 |
 | 北米の獣医師国家試験（NAVLE） | 302 | 2168 |
 | 大型実験の物理学者（CERN、LIGO、ITER） | 397 | 3199 |
-| 宇宙を観る天文学者（James Webb 宇宙望遠鏡、Event Horizon Telescope） | 289 | 2293 |
-| 動きと映像をつくる計算機科学者（Pixar、Waymo、Boston Dynamics） | 323 | 2760 |
+| 宇宙を観る天文学者（James Webb 宇宙望遠鏡、Event Horizon Telescope） | 290 | 2298 |
+| 動きと映像をつくる計算機科学者（Pixar、Waymo、Boston Dynamics） | 324 | 2765 |
 | 空と宇宙を進む乗り物のエンジニア（SpaceX、NASA JPL、F1 チーム） | 469 | 4147 |
 | FE Chemical（NCEES） | 327 | 2338 |
 | FE Environmental（NCEES） | 341 | 2453 |
 | 暮らしと社会を支えるエンジニア（超高層ビル、長大吊り橋、水処理、水素、医療の CT） | 397 | 3223 |
 | 次世代電池の化学者（Solid Power、SES AI、Argonne 国立研究所） | 315 | 2320 |
-| 半導体の製造工程の技術者（TSMC の工程の統合と工程モジュール） | 249 | 1826 |
+| 半導体の製造工程の技術者（TSMC の工程の統合と工程モジュール） | 250 | 1831 |
 | 脳とコンピュータをつなぐエンジニア（Neuralink） | 336 | 2513 |
-| Lean で数学を形式化する研究エンジニア（Lean FRO、Mathlib Initiative） | 207 | 1730 |
+| Lean で数学を形式化する研究エンジニア（Lean FRO、Mathlib Initiative） | 208 | 1735 |
 | 臨床試験の生物統計家（FDA、MSD、GSK） | 252 | 1749 |
 | 人と機械のやり取りを調べる研究者（Google の UX リサーチ、Apple の Human Factors） | 207 | 1386 |
 | 合成生物学とバイオインフォマティクスの研究者（EMBL、EMBL-EBI） | 223 | 1531 |
 | 地震と火山の研究者（米国地質調査所 USGS） | 270 | 1936 |
-| 生き物と生態系の絶滅の危険を評価する保全の研究者（IUCN のレッドリスト） | 232 | 1580 |
+| 生き物と生態系の絶滅の危険を評価する保全の研究者（IUCN のレッドリスト） | 233 | 1585 |
 
 目標には要らないが、段の物差しの大会のために置く単元：0。
 
@@ -360,9 +360,9 @@
 | B-083 呼吸のしくみの入口（細胞の呼吸の式、酸素を使う呼吸と使わない呼吸、酵母と乳酸菌の発酵、光合成との比べ） | 生物 | B-019、B-020、B-074 | 4 | — |
 | E-210 水をきれいにする（にごった水をしばらく置いて沈める、砂と小石と炭の層でこす、こした水のきれいさを目盛りの見え方で比べる、こしただけでは飲めないわけ） | 工学 | H-063、E-171、G-046 | 5 | — |
 | E-211 ごみを分けて資源にもどす（燃やすごみと資源ごみ、缶を磁石で分ける、紙・びん・ペットボトルが何に生まれ変わるか、1 週間の家のごみを量って表にし減らし方を考える） | 工学 | H-063、H-064、S-027 | 5 | — |
-| N-073 大きな数（万・億の位と位取り、10 倍と 10 分の 1） | 数 | N-009、N-013 | 5 | — |
-| N-074 かけ算の筆算（何けた × 1 けた、何けた × 2 けた） | 数 | N-013、N-015、N-009 | 6 | — |
-| N-075 わり算の筆算（わる数が 1 けた・2 けた、商の見当） | 数 | N-014、N-074 | 6 | — |
+| N-073 大きな数（万・億の位と位取り、10 倍と 10 分の 1） | 数 | N-009、N-013 | 5 | 5 日分、予備 15 問 |
+| N-074 かけ算の筆算（何けた × 1 けた、何けた × 2 けた） | 数 | N-013、N-015、N-009、N-073 | 6 | 6 日分、予備 18 問 |
+| N-075 わり算の筆算（わる数が 1 けた・2 けた、商の見当） | 数 | N-014、N-074 | 6 | 6 日分、予備 18 問 |
 | N-076 計算の順序（かっこ、かけ算とわり算を先に） | 数 | N-015、N-014 | 4 | — |
 | N-077 小数のかけ算とわり算 | 数 | N-020、N-074、N-075 | 6 | — |
 | N-078 分数のかけ算とわり算 | 数 | N-019、N-014 | 6 | — |
