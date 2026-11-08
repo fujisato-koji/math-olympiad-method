@@ -639,11 +639,11 @@ units:
   - {id: N-026, title: 分数の計算のくふう, stage: 3, level: 2, region: keisan, needs: [N-019, N-018], days: 6, measure: true}
   - {id: A-003, title: 図にして考える（線分図）, stage: 3, level: 2, region: houteishiki, needs: [A-002, N-013, N-014], days: 6}
   - {id: A-004, title: 等差数列とその和, stage: 3, level: 2, region: shiki, needs: [N-015, L-001, N-014, N-009], days: 6}
-  - {id: A-005, title: 比と割合, stage: 3, level: 2, region: kansu, needs: [N-019, N-020, N-018], days: 8}
-  - {id: A-006, title: 比例と反比例, stage: 3, level: 2, region: kansu, needs: [A-005], days: 6}
-  - {id: A-007, title: 速さ、仕事、濃度を比例で解く, stage: 3, level: 2, region: kansu, needs: [A-006, G-046, N-059], days: 8, measure: true}
-  - {id: A-008, title: 規則性と群数列, stage: 3, level: 2, region: shiki, needs: [A-004], days: 6}
-  - {id: A-009, title: 累乗と指数法則, stage: 3, level: 2, region: shiki, needs: [N-013], days: 5}
+  - {id: A-005, title: 比と割合, stage: 3, level: 2, region: kansu, needs: [N-019, N-020, N-018, N-077], days: 8}
+  - {id: A-006, title: 比例と反比例, stage: 3, level: 2, region: kansu, needs: [A-005, G-050], days: 6}
+  - {id: A-007, title: 速さ、仕事、濃度を比例で解く, stage: 3, level: 2, region: kansu, needs: [A-006, G-046, N-059, N-073], days: 8, measure: true}
+  - {id: A-008, title: 規則性と群数列, stage: 3, level: 2, region: shiki, needs: [A-004, N-019], days: 6}
+  - {id: A-009, title: 累乗と指数法則, stage: 3, level: 2, region: shiki, needs: [N-013, N-074], days: 5}
   - {id: C-005, title: 和の法則と積の法則, stage: 3, level: 2, region: kazoekata, needs: [C-003, N-013], days: 6}
   - {id: C-006, title: 並べ方（順列）, stage: 3, level: 2, region: kazoekata, needs: [C-005], days: 6}
   - {id: C-007, title: 選び方（組合せ）, stage: 3, level: 2, region: kazoekata, needs: [C-006, N-014], days: 6}
@@ -722,7 +722,7 @@ units:
   - {id: N-030, title: 素数の性質, stage: 4, level: 3, region: seisu, needs: [N-021, L-011, N-029], days: 6}
   - {id: N-031, title: 平方数の性質, stage: 4, level: 3, region: seisu, needs: [N-028, A-015], days: 5}
   - {id: A-010, title: 文字と式（□から文字へ）, stage: 4, level: 2, region: houteishiki, needs: [A-002, N-015, N-010, A-003, N-019, N-027, A-009], days: 8}
-  - {id: A-011, title: 1 次方程式（つり合いで解く）, stage: 4, level: 2, region: houteishiki, needs: [A-010, A-001, N-027], days: 8}
+  - {id: A-011, title: 1 次方程式（つり合いで解く）, stage: 4, level: 2, region: houteishiki, needs: [A-010, A-001, N-027, A-005, N-077], days: 8}
   - {id: A-012, title: 連立方程式, stage: 4, level: 2, region: houteishiki, needs: [A-011], days: 6}
   - {id: A-013, title: 不等式の性質と 1 次不等式, stage: 4, level: 2, region: houteishiki, needs: [A-011, N-027, N-011], days: 6}
   - {id: A-014, title: 文章題を方程式にする（和差、つるかめ、過不足、植木）, stage: 4, level: 2, region: houteishiki, needs: [A-012, A-003], days: 8, measure: true}
