@@ -808,3 +808,43 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   .dk-cand { grid-template-columns: 1fr; }
   .dk-btns { grid-column: 1; grid-row: auto; justify-content: flex-start; flex-wrap: nowrap; margin-top: 8px; }
 }
+
+/* あゆみ（D-046） */
+.ayumi { margin: 22px 0 8px; }
+.ay-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 12px; }
+.ay-head h2 { font-size: 15px; letter-spacing: .1em; color: var(--muted); font-weight: 500; margin: 0; }
+.ay-grid { display: grid; grid-template-columns: minmax(150px, 1fr) minmax(220px, 1.4fr) minmax(260px, 2fr); gap: 12px; }
+.ay-card { display: flex; flex-direction: column; gap: 6px; padding: 16px 18px; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow); text-decoration: none; color: inherit; min-width: 0; }
+.ay-card .k, .ay-units .k { font-size: 13px; color: var(--muted); letter-spacing: .08em; display: flex; align-items: center; gap: 8px; }
+.ay-big b { font-size: 40px; line-height: 1; }
+.ay-big .u { margin-left: 4px; color: var(--ink-2); }
+.ay-card .muted { font-size: 13px; }
+.streak { font-size: 12px; color: var(--warn); font-weight: 700; letter-spacing: 0; }
+.ay-bars { display: flex; align-items: flex-end; gap: 8px; height: 86px; }
+.ay-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; height: 100%; }
+.ay-bar { flex: 1; width: 100%; max-width: 26px; display: flex; align-items: flex-end; background: var(--surface-2); border-radius: 8px; overflow: hidden; }
+.ay-bar i { display: flex; align-items: flex-end; width: 100%; background: color-mix(in srgb, var(--ok) 35%, var(--surface)); }
+.ay-bar b { display: block; width: 100%; background: var(--ok); }
+.ay-col em { font-style: normal; font-size: 12px; color: var(--muted); }
+.ay-col.now em { color: var(--ink); font-weight: 700; }
+.ay-goal { flex-direction: row; align-items: center; gap: 16px; }
+.ay-goal:hover { border-color: var(--ink-2); }
+.ring.big { width: 76px; height: 76px; flex: none; display: grid; place-items: center; position: relative; -webkit-mask: none; mask: none; }
+.ring.big::before { content: ""; position: absolute; inset: 9px; border-radius: 50%; background: var(--surface); }
+.ring.big b { position: relative; font-size: 20px; }
+.ring.big small { font-size: 12px; font-weight: 500; }
+.ay-goal-t { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ay-goal-t .g { font-weight: 700; font-size: 18px; }
+.ay-units { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 14px; }
+.ay-unit { display: grid; gap: 5px; padding: 10px 14px; border-radius: 14px; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--c); text-decoration: none; color: inherit; min-width: 200px; }
+.ay-unit .t { font-weight: 700; font-size: 15px; }
+.ay-unit .muted { font-size: 12px; }
+.ay-days { display: flex; gap: 4px; }
+.ay-days i { width: 18px; height: 8px; border-radius: 4px; background: var(--line); }
+.ay-days i.on { background: var(--c); }
+.ay-days i.skip { background: color-mix(in srgb, var(--c) 35%, var(--surface)); }
+.ay-days i.nx { background: var(--surface); box-shadow: inset 0 0 0 2px var(--c); }
+.ay-parent { margin-top: 14px; }
+.ay-parent .row { margin-top: 6px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+@media (max-width: 860px) { .ay-grid { grid-template-columns: 1fr 1fr; } .ay-goal { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .ay-grid { grid-template-columns: 1fr; } .ay-unit { min-width: 0; flex: 1 1 100%; } }

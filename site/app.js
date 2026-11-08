@@ -124,6 +124,13 @@
     if (res.over) x.o = (x.o || 0) + 1;
     if (res.ms) x.t = Math.round(res.ms / 1000);
     x.last = new Date().toLocaleDateString('sv-SE');
+    // 日の記録（D-046）：解いた問題、一度にできた問題、かかった秒、終えた日の数。400 日分まで残す
+    const L = progress.log || (progress.log = {}), g = L[x.last] || (L[x.last] = { n: 0, ok: 0, sec: 0, days: 0 });
+    if (!res.skipped) g.n++;
+    if (res.first) g.ok++;
+    g.sec += Math.round((res.ms || 0) / 1000);
+    const ks = Object.keys(L);
+    if (ks.length > 400) ks.sort().slice(0, ks.length - 400).forEach(k => delete L[k]);
   }
   // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
@@ -312,10 +319,95 @@
     window.scrollTo(0, 0);
   }
 
+  // ---- あゆみ（D-046）：きょう、この 7 日、いまの駅、目標までの道のり。保護者の表示では、つまずきも ----
+  const WEEK = ['日', '月', '火', '水', '木', '金', '土'];
+  // 日の記録。D-046 より前の日は、単元の日のまとめの日付から数える
+  function dayLog(date) {
+    const L = (progress.log || {})[date];
+    if (L) return L;
+    const o = { n: 0, ok: 0, sec: 0, days: 0 };
+    Object.values(progress.units).forEach(r => Object.values(r.days || {}).forEach(v => {
+      if (v && v.date === date) { o.days++; o.n += v.total || 0; o.ok += v.first || 0; }
+    }));
+    return o;
+  }
+  const active = L => L.n > 0 || L.days > 0;
+  // 目標までの道のり：日の単位で数える（済んだ単元は全部の日、途中の単元はやった日ととばした日）
+  function pathDays(set) {
+    let all = 0, got = 0;
+    set.forEach(id => {
+      const u = UNITS[id], r = progress.units[id] || {}, n = u.days.length;
+      all += n;
+      got += r.done ? n : Math.min(n, new Set([...Object.keys(r.days || {}).map(Number), ...(r.skip || [])]).size);
+    });
+    return { all, got, pct: all ? Math.round(100 * got / all) : 0 };
+  }
+  function ayumiHtml() {
+    const today = localDate(), t = dayLog(today), name = store.profiles[store.current].name;
+    const week = Array.from({ length: 7 }, (_, i) => { const d = addDays(i - 6); return { d, L: dayLog(d) }; });
+    let streak = 0;
+    for (let i = active(t) ? 0 : 1; i < 400 && active(dayLog(addDays(-i))); i++) streak++;
+    const top = Math.max(5, ...week.map(w => w.L.n));
+    const bars = week.map(({ d, L }) => {
+      const dow = new Date(d + 'T00:00:00').getDay();
+      return `<span class="ay-col${d === today ? ' now' : ''}" title="${d}：${L.n} 問（一度に ${L.ok}）">
+        <span class="ay-bar"><i style="height:${Math.round(100 * L.n / top)}%"><b style="height:${L.n ? Math.round(100 * L.ok / L.n) : 0}%"></b></i></span>
+        <em>${WEEK[dow]}</em></span>`;
+    }).join('');
+    // 目標：選んでいる目標、なければ近い目標
+    const g = GOALS.find(x => x.id === prefs.goal) || ((nearGoals(1).list[0] || [])[0]);
+    let goal = '';
+    if (g) {
+      const set = GOAL_SETS[g.id], st = goalStats(g), f = forecast(id => set.has(id)), pd = pathDays(set);
+      goal = `<a class="ay-card ay-goal" href="#/goal/${g.id}">
+        <span class="ring big" style="--p:${pd.pct}"><b>${pd.pct}<small>%</small></b></span>
+        <span class="ay-goal-t"><span class="k">目標までの道のり</span><span class="g">${esc(g.name)}</span>
+          <span class="muted">日 ${pd.got} / ${pd.all}・駅 ${st.done} / ${st.units}・論題 ${st.got} / ${st.topics}・見込み 残り約 ${f.est} 日</span></span></a>`;
+    }
+    const doing = R.units.filter(u => ['doing', 'review'].includes(status(u.id))).sort(order).slice(0, 4).map(u => {
+      const r = progress.units[u.id] || {}, s = nextStep(u.id), got = new Set([...Object.keys(r.days || {}).map(Number), ...(r.skip || [])]).size;
+      return `<a class="ay-unit" href="${stepHref(u.id, s)}" style="${lc(u.lane)}"><span class="t">${esc(u.title)}</span>
+        <span class="ay-days">${u.days.map((_, i) => `<i class="${(r.days || {})[i + 1] ? 'on' : (r.skip || []).includes(i + 1) ? 'skip' : i + 1 === s.day ? 'nx' : ''}"></i>`).join('')}</span>
+        <span class="muted">${Math.min(got, u.days.length)} / ${u.days.length} 日${status(u.id) === 'review' ? '・復習' : s.type === 'extra' ? '・おさらい' : ''}</span></a>`;
+    }).join('');
+    const min = Math.round(t.sec / 60);
+    return `<section class="ayumi">
+      <div class="ay-head"><h2>あゆみ</h2><span class="muted">${esc(name)}</span></div>
+      <div class="ay-grid">
+        <div class="ay-card ay-today"><span class="k">きょう</span>
+          <span class="ay-big"><b>${t.n}</b><span class="u">問</span></span>
+          <span class="muted">${t.n ? `一度にできた ${t.ok} 問${min ? `・${min} 分` : ''}${t.days ? `・${t.days} 日分` : ''}` : 'まだ はじめていません'}</span></div>
+        <div class="ay-card ay-week"><span class="k">この 7 日${streak > 1 ? `<span class="streak">${streak} 日つづけて</span>` : ''}</span>
+          <span class="ay-bars">${bars}</span></div>
+        ${goal}
+      </div>
+      ${doing ? `<div class="ay-units"><span class="k">いまの駅</span>${doing}</div>` : ''}
+      ${prefs.parent ? stumbleHtml(week) : ''}
+    </section>`;
+  }
+  // 保護者の表示：この 2 週間のつまずき（わからない、目安をすぎた）と、この 7 日のまとめ
+  function stumbleHtml(week) {
+    const since = addDays(-13), its = Object.entries(progress.items || {}).filter(([, x]) => x.last >= since);
+    const by = key => {
+      const m = {};
+      its.forEach(([q, x]) => { if (x[key]) { const u = q.split(':')[0]; m[u] = (m[u] || 0) + x[key]; } });
+      return Object.entries(m).filter(([u]) => UNITS[u]).sort((a, b) => b[1] - a[1]).slice(0, 5);
+    };
+    const chips = xs => xs.map(([u, k]) => `<a class="from" href="#/unit/${u}" style="${lc(UNITS[u].lane)}">${esc(UNITS[u].title)} ×${k}</a>`).join('') || '<span class="muted">なし</span>';
+    const n = week.reduce((a, w) => a + w.L.n, 0), ok = week.reduce((a, w) => a + w.L.ok, 0), sec = week.reduce((a, w) => a + w.L.sec, 0);
+    const asks = (progress.asks || []).filter(a => UNITS[a.u]);
+    return `<div class="parent ay-parent">
+      <div><b>この 7 日</b> ${n} 問・一度にできた ${n ? Math.round(100 * ok / n) : 0}%${n && sec ? `・1 問あたり 約 ${Math.round(sec / n)} 秒` : ''}</div>
+      <div class="row"><b>「わからない」（2 週間）</b> ${chips(by('d'))}</div>
+      <div class="row"><b>目安をすぎた（2 週間）</b> ${chips(by('o'))}</div>
+      ${asks.length ? `<div class="row"><b>ふりかえり待ち</b> ${asks.map(a => `<a class="from" href="#/look/${a.u}/${a.day}" style="${lc(UNITS[a.u].lane)}">${esc(UNITS[a.u].title)}</a>`).join('')}</div>` : ''}
+    </div>`;
+  }
+
   // ---- 全体の地図 ----
   function viewMap() {
     const f = forecast(), opts = options(), kind = kindNow(), near = nearGoals(5);
-    return `
+    return `${ayumiHtml()}
     <section class="hero hero-rest">
       <div class="goal-pick levels" role="group" aria-label="考え方の水準"><span class="k">水準</span>${(R.levels || []).map(l => {
         const us = R.units.filter(u => u.level === l.id && inGoal(u.id));
@@ -1410,6 +1502,8 @@
         }
       }
     }
+    const lg = progress.log || (progress.log = {});
+    (lg[today] || (lg[today] = { n: 0, ok: 0, sec: 0, days: 0 })).days++;
     persist();
     Music.melody(res);
     s.melody = res;
