@@ -1,0 +1,645 @@
+# C-014 対応させて数える
+#
+# 書き方は N-001 の頭の注のとおり。段 4 なので、子に見せる文は普通の漢字まじりの文。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 数えにくいものを、1 つずつ組になる数えやすいものに言いかえる（勝ちぬき戦の試合 ↔ 負けたチーム、
+#          円の上の点を結ぶ線の交点 ↔ 4 点の選び方、直線の交点 ↔ 2 本の選び方、何人かを選ぶ選び方 ↔ ○× の並び）、
+#   2 日目 長方形 ↔ 縦線 2 本と横線 2 本、順番のある和 ↔ 仕切りを入れるか入れないか、1 個以上ずつ分ける ↔ ○ の間の仕切り、
+#   3 日目 わけ（なぜ試合の数と負けたチームの数が同じか、なぜ交点と 4 点の選び方が同じ数か、なぜ和の表し方が 2 × 2 × … か）、
+#   4 日目 C-013（同じものをふくむ並べ方、何回でも選べる選び方、輪）と C-007（組合せ）と混ぜる、5 日目 確認。
+# 前提は C-013 だけ（→ C-007、C-006、C-005）。C-013 と同じく、3 けたの数（N-009）が前提にないので答えも途中の数も 100 までにした
+#   （7 こから 3 こを選ぶ数のように、並べ方が 100 をこえるものは出さない）。累乗（A-009）も前提にないので 2 × 2 × 2 × 2 と書く。
+# 文字の式（A-010）が前提にないので、わけは言葉で一般に書く（C-013 の頭の注と同じ 3 点）。1 問目は代表の例で書く ②。
+# 道順を右と上の並びに対応させる数え方は、道順（C-004）が前提にないので出さない（C-015 で扱う）。
+# 円の上の点は、どの 3 本の線も 1 点で交わらないように、間をそろえずに置いた（正六角形にすると、まん中で 3 本が交わる）。
+# 図：格子と円の上の点は svg。勝ちぬき戦の図はかかず、文だけで出す（組み方によらないことを言うため）。
+# check：勝ちぬき戦は、毎回 2 チームずつ組にして試合をし、余った 1 チームは次へ進むとして、試合の数を足していく。
+#   線の交点は、2 本の線の両はしが円の上で交互に並ぶ組を数える。長方形は、左上と右下のマスの組を全部ためす。
+#   和の表し方と分け方は、itertools.product で数の並びを全部作って数える。
+
+id: C-014
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 8 チームが勝ちぬき戦（トーナメント）をします。引き分けはなく、負けたチームはそこで終わりです。優勝が決まるまでに、試合は全部で何回ありますか。
+        explain: 試合を 1 回すると、負けるチームがちょうど 1 つ出ます。負けたチームはもう試合をしないので、同じチームが 2 回負けることはありません。優勝したチーム以外の 7 チームは、どれもどこかで 1 回だけ負けます。だから「試合」と「負けたチーム」は 1 つずつ組になり、試合の数は負けたチームの数と同じ 7 回です。組み合わせ表をかいて 4 + 2 + 1 と数えなくても、組み方によらずに答えが出ます。数えにくいものを、1 つずつ組になる数えやすいものに言いかえて数えることを「対応させて数える」といいます。
+      - part: 思い出す
+        text: 赤玉 3 個と青玉 2 個を 1 列に並べます。並べ方は何通りですか。
+        answer: 10
+        check: "len(set(itertools.permutations('赤赤赤青青')))"
+        hints:
+          - 青玉を置く場所を選ぼう。
+          - 5 つの場所から 2 つを選ぶ数だね。
+          - 組合せの数え方を使おう。
+        paths:
+          - [5 つの場所から青玉の場所を 2 つ, 5 × 4 ÷ 2 = 10 通り]
+      - part: 思い出す
+        text: りんご、みかん、かきの 3 種類のくだものを、合わせて 4 個買います。買わない種類があってもかまいません。買い方は何通りですか。
+        answer: 15
+        check: "len(set(itertools.combinations_with_replacement('りみか', 4)))"
+        hints:
+          - 4 個を ○ で、種類の境目を ｜ で表そう。
+          - ○ 4 個と ｜ 2 本を並べると考えよう。
+          - 6 つの場所から ｜ の場所を選ぼう。
+        paths:
+          - [○ 4 個と ｜ 2 本, 6 つの場所から 2 つ, 6 × 5 ÷ 2 = 15 通り]
+      - part: 今日
+        text: 13 チームが勝ちぬき戦をします。引き分けはなく、不戦勝で次に進むチームもあります。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 12
+        check: "(lambda f: f(f, 13))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 試合を 1 回すると、負けるチームはいくつ出るかな。
+          - 優勝チームのほかは、どのチームも何回負けるかな。
+          - 試合の数と、負けたチームの数をくらべよう。
+        paths:
+          - [1 試合で 1 チームが負ける, 優勝以外の 12 チームが 1 回ずつ負ける, 試合は 12 回]
+          - [1 回戦 6 試合（1 チーム不戦勝）, 2 回戦 3 試合（1 チーム不戦勝）, 準決勝 2 試合、決勝 1 試合, 6 + 3 + 2 + 1 = 12 回]
+        note: 不戦勝があると組み合わせ表で数えにくい。負けたチームの数に言いかえると、組み方によらず 13 − 1 で決まる。
+      - part: 今日
+        text: 円の上に 6 つの点があります。どの 2 点も線で結ぶと、円の中に線の交わる点（交点）ができます。どの 3 本の線も 1 点では交わらないとき、交点は全部で何個ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120.0" cy="18.0" r="4" fill="currentColor"/>
+            <circle cx="80.2" cy="36.6" r="4" fill="currentColor"/>
+            <circle cx="72.9" cy="92.0" r="4" fill="currentColor"/>
+            <circle cx="102.2" cy="118.9" r="4" fill="currentColor"/>
+            <circle cx="159.8" cy="103.4" r="4" fill="currentColor"/>
+            <circle cx="167.1" cy="48.0" r="4" fill="currentColor"/>
+          </svg>
+        answer: 15
+        check: "sum(1 for (a, b), (c, d) in itertools.combinations(itertools.combinations(range(6), 2), 2) if a < c < b < d or c < a < d < b)"
+        hints:
+          - 交点が 1 つできるには、点がいくつ要るかな。4 つの点で考えよう。
+          - 円の上の 4 つの点を選ぶと、交わる線の組はいくつできるかな。
+          - 交点の数は、6 つの点から何個を選ぶ数と同じかな。
+        paths:
+          - [4 つの点を選ぶと、交わる線（四角形の対角線）が 1 組だけできる, 交点 1 つと 4 つの点の選び方が 1 つずつ組, 選ばない 2 点を決める 6 × 5 ÷ 2 = 15 個]
+        note: 線をかいて交点を数えると、数えもれが出やすい。4 つの点の選び方に言いかえると、かかずに数えられる。6 こから 4 こを選ぶ数は、選ばない 2 こを選ぶ数と同じ（C-007）。
+      - part: 今日
+        text: ア、イ、ウ、エの 4 人の中から、何人かを選んで買い物に行きます。だれも選ばない選び方も 1 通りと数えます。選び方は全部で何通りですか。
+        answer: 16
+        check: "sum(1 for k in range(5) for c in itertools.combinations('アイウエ', k))"
+        hints:
+          - ア、イ、ウ、エの 1 人ずつに、選ぶ ○ か選ばない × をつけると考えよう。
+          - 選び方 1 つと、○ と × の並び 1 つは組になるかな。
+          - ○ と × の並びは、何通りあるかな。
+        paths:
+          - [選び方を ア イ ウ エ の順の ○× の並びにする, 1 人ごとに 2 通り, 2 × 2 × 2 × 2 = 16 通り]
+          - [0 人 1、1 人 4、2 人 6、3 人 4、4 人 1, 1 + 4 + 6 + 4 + 1 = 16 通り]
+      - part: 挑戦
+        text: 平面に 5 本の直線があります。どの 2 本も平行でなく、どの 3 本も 1 点では交わりません。交点は全部で何個ですか。
+        answer: 10
+        check: "sum(range(5))"
+        hints:
+          - 交点 1 つは、何本の直線が交わってできるかな。
+          - どの 2 本の直線を選んでも、交点はいくつできるかな。
+          - 交点の数を、5 本から 2 本を選ぶ数に言いかえよう。
+        paths:
+          - [交点 1 つと直線 2 本の選び方が 1 つずつ組, 5 × 4 ÷ 2 = 10 個]
+          - [直線を 1 本ずつ引くと、交点は 0、1、2、3、4 個ずつふえる, 0 + 1 + 2 + 3 + 4 = 10 個]
+    extra:
+      - part: 今日
+        text: 20 チームが勝ちぬき戦をします。引き分けはありません。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 19
+        check: "(lambda f: f(f, 20))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けるチームは全部でいくつかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 19 チームが 1 回ずつ負ける, 19 回]
+      - part: 今日
+        text: ピザのトッピングが 5 種類あります。何種類のせてもよく、1 つものせないピザも 1 通りと数えます。のせ方は全部で何通りですか。
+        answer: 32
+        check: "sum(1 for k in range(6) for c in itertools.combinations(range(5), k))"
+        hints:
+          - トッピングごとに、のせる ○ とのせない × を決めよう。
+          - のせ方 1 つと ○× の並び 1 つが組になるね。
+          - 5 か所の ○× の並びは何通りかな。
+        paths:
+          - [1 種類ごとに 2 通り, 2 × 2 × 2 × 2 × 2 = 32 通り]
+      - part: 今日
+        text: 円の上に 5 つの点があります。どの 2 点も線で結びます。どの 3 本の線も 1 点では交わらないとき、円の中の交点は何個ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="115.5" cy="18.2" r="4" fill="currentColor"/>
+            <circle cx="69.8" cy="56.5" r="4" fill="currentColor"/>
+            <circle cx="86.6" cy="109.8" r="4" fill="currentColor"/>
+            <circle cx="146.0" cy="115.0" r="4" fill="currentColor"/>
+            <circle cx="168.9" cy="52.2" r="4" fill="currentColor"/>
+          </svg>
+        answer: 5
+        check: "sum(1 for (a, b), (c, d) in itertools.combinations(itertools.combinations(range(5), 2), 2) if a < c < b < d or c < a < d < b)"
+        hints:
+          - 交点 1 つは、何個の点の選び方と組になるかな。
+          - 5 つの点から 4 つを選ぶ数を考えよう。
+          - 選ばない 1 点を決めると考えよう。
+        paths:
+          - [交点と 4 点の選び方が組, 選ばない 1 点を決める, 5 個]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 縦線 4 本と横線 3 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="30" x2="60" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="100" y1="30" x2="100" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="140" y1="30" x2="140" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="30" x2="180" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="30" x2="180" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="110" x2="180" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        explain: 長方形を 1 つ選ぶと、その左の辺と右の辺になる縦線が 2 本、上の辺と下の辺になる横線が 2 本決まります。反対に、縦線 2 本と横線 2 本を選ぶと、長方形が 1 つだけ決まります。だから長方形の数は、縦線 2 本と横線 2 本の選び方の数と同じです。縦線は 4 × 3 ÷ 2 = 6 通り、横線は 3 × 2 ÷ 2 = 3 通りなので、積の法則で 6 × 3 = 18 個です。
+      - part: 思い出す
+        text: 10 チームが勝ちぬき戦をします。引き分けはありません。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 9
+        check: "(lambda f: f(f, 10))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 優勝以外のチームは、何回負けるかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 9 チームが 1 回ずつ負ける, 9 回]
+      - part: 思い出す
+        text: 平面に 4 本の直線があります。どの 2 本も平行でなく、どの 3 本も 1 点では交わりません。交点は全部で何個ですか。
+        answer: 6
+        check: "sum(range(4))"
+        hints:
+          - 交点 1 つは、何本の直線で決まるかな。
+          - 4 本から 2 本を選ぶ数に言いかえよう。
+          - 組合せの数え方を使おう。
+        paths:
+          - [交点と 2 本の選び方が組, 4 × 3 ÷ 2 = 6 個]
+      - part: 今日
+        text: 縦線 5 本と横線 2 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="50" x2="40" y2="90" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="50" x2="80" y2="90" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="50" x2="120" y2="90" stroke="currentColor" stroke-width="2"/>
+            <line x1="160" y1="50" x2="160" y2="90" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="50" x2="200" y2="90" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="50" x2="200" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="90" x2="200" y2="90" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 10
+        check: "sum(1 for a in range(4) for b in range(a, 4) for c in range(1) for d in range(c, 1))"
+        hints:
+          - 長方形 1 つは、縦線何本と横線何本で決まるかな。
+          - 横線は 2 本しかないね。選び方は何通りかな。
+          - 縦線 5 本から 2 本を選ぶ数を求めよう。
+        paths:
+          - [縦線 2 本の選び方 5 × 4 ÷ 2 = 10 通り, 横線 2 本の選び方 1 通り, 10 × 1 = 10 個]
+        note: 小さい長方形 4 個だけを数えやすい。2 つ、3 つ、4 つつながった長方形も数える。
+      - part: 今日
+        text: 5 を、1 以上の整数の和で表します。順番がちがうもの（1 + 4 と 4 + 1）は別の表し方とし、5 そのものも 1 通りと数えます。表し方は全部で何通りですか。
+        figure: "○｜○○○○　1 + 4\n○○○○｜○　4 + 1\n○｜○｜○○○　1 + 1 + 3\n○○○○○　5"
+        answer: 16
+        check: "sum(1 for k in range(1, 6) for c in itertools.product(range(1, 6), repeat=k) if sum(c) == 5)"
+        hints:
+          - 5 を ○ 5 個で表して、和の切れ目に ｜ を入れよう。
+          - ○ の間は何か所あるかな。
+          - それぞれの間に、｜ を入れるか入れないかの 2 通りだね。
+        paths:
+          - [○ 5 個の間は 4 か所, 1 か所ごとに ｜ を入れるか入れないかの 2 通り, 2 × 2 × 2 × 2 = 16 通り]
+      - part: 今日
+        text: 区別のない 8 個のあめを、ア、イ、ウの 3 人に分けます。どの人も少なくとも 1 個はもらいます。分け方は何通りですか。
+        answer: 21
+        check: "sum(1 for c in itertools.product(range(1, 9), repeat=3) if sum(c) == 8)"
+        hints:
+          - あめ 8 個を ○ で並べて、人の境目に ｜ を入れよう。
+          - どの人も 1 個以上なので、｜ は ○ の間にしか入れられないね。
+          - ○ の間の何か所から、｜ を入れる 2 か所を選ぶかな。
+        paths:
+          - [○ 8 個の間は 7 か所, そこから ｜ を入れる 2 か所を選ぶ, 7 × 6 ÷ 2 = 21 通り]
+      - part: 挑戦
+        text: 縦線 4 本と横線 4 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="66" y1="16" x2="66" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="102" y1="16" x2="102" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="138" y1="16" x2="138" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="174" y1="16" x2="174" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="66" y1="16" x2="174" y2="16" stroke="currentColor" stroke-width="2"/>
+            <line x1="66" y1="52" x2="174" y2="52" stroke="currentColor" stroke-width="2"/>
+            <line x1="66" y1="88" x2="174" y2="88" stroke="currentColor" stroke-width="2"/>
+            <line x1="66" y1="124" x2="174" y2="124" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 36
+        check: "sum(1 for a in range(3) for b in range(a, 3) for c in range(3) for d in range(c, 3))"
+        hints:
+          - 長方形 1 つは、縦線 2 本と横線 2 本で決まるね。
+          - 縦線の選び方と、横線の選び方は何通りかな。
+          - 積の法則を使おう。
+        paths:
+          - [縦線 4 × 3 ÷ 2 = 6 通り, 横線 6 通り, 6 × 6 = 36 個]
+        note: 大きさごとに数える（1 マス 9 個、横 2 マス 6 個…）と、数えもれが出やすい。線の選び方に言いかえると、1 回の積で済む。
+    extra:
+      - part: 今日
+        text: 縦線 3 本と横線 3 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="80" y1="30" x2="80" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="30" x2="120" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="160" y1="30" x2="160" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="30" x2="160" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="70" x2="160" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="110" x2="160" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 9
+        check: "sum(1 for a in range(2) for b in range(a, 2) for c in range(2) for d in range(c, 2))"
+        hints:
+          - 長方形 1 つは、縦線何本と横線何本で決まるかな。
+          - 3 本から 2 本の選び方は何通りかな。
+          - 積の法則を使おう。
+        paths:
+          - [縦線 3 通り, 横線 3 通り, 3 × 3 = 9 個]
+      - part: 今日
+        text: 4 を、1 以上の整数の和で表します。順番がちがうものは別の表し方とし、4 そのものも 1 通りと数えます。表し方は全部で何通りですか。
+        answer: 8
+        check: "sum(1 for k in range(1, 5) for c in itertools.product(range(1, 5), repeat=k) if sum(c) == 4)"
+        hints:
+          - 4 を ○ 4 個で表そう。
+          - ○ の間は何か所あるかな。
+          - それぞれに ｜ を入れるか入れないかを決めよう。
+        paths:
+          - [○ の間は 3 か所, 2 × 2 × 2 = 8 通り]
+      - part: 今日
+        text: 平面に 6 本の直線があります。どの 2 本も平行でなく、どの 3 本も 1 点では交わりません。交点は全部で何個ですか。
+        answer: 15
+        check: "sum(range(6))"
+        hints:
+          - 交点 1 つは、直線 2 本の選び方と組になるね。
+          - 6 本から 2 本を選ぶ数を求めよう。
+          - 組合せの数え方を使おう。
+        paths:
+          - [6 × 5 ÷ 2 = 15 個]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: 8 チームの勝ちぬき戦（引き分けなし）では、どんな組み合わせ表でも、試合は 7 回です。なぜかを、試合と負けたチームを組にして書きましょう。
+        explain: 例：「試合を 1 回すると、負けるチームがちょうど 1 つ出る。負けたチームはもう試合をしないので、2 回負けるチームはない。優勝チームは 1 回も負けず、ほかの 7 チームはどれも 1 回だけ負ける。だから、試合 1 つに負けたチーム 1 つが組になり、どの負けたチームにも、負けた試合が 1 つだけある。試合と負けたチームは 1 つずつ組になるので、試合の数は 7 回。」と書ければよい。① 何と何を組にするか、② どちらからも 1 つだけ決まること、③ 負けたチームが 7 つであること、が書けているかを見る。組み合わせ表を 1 つかいて 4 + 2 + 1 と数えただけなら、ほかの組み方でも同じかは言えないことを話す。
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けたチームは、何回負けるかな。
+          - 「試合と負けたチームが 1 つずつ組になるから」を使って書こう。
+        paths:
+          - [1 試合で負けるのは 1 チーム, 負けたチームは 1 回だけ負ける, 試合と負けたチームが 1 つずつ組, 負けたチームは 7 つなので 7 回]
+      - part: わけ
+        text: 円の上の点をどの 2 点も線で結ぶとき（どの 3 本の線も 1 点で交わらない）、円の中の交点の数は、点から 4 つを選ぶ選び方の数と同じです。なぜかを、筋道を立てて書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="111.0" y1="18.8" x2="71.1" y2="87.8" stroke="currentColor" stroke-width="2"/>
+            <line x1="71.1" y1="87.8" x2="129.0" y2="121.2" stroke="currentColor" stroke-width="2"/>
+            <line x1="129.0" y1="121.2" x2="171.2" y2="61.0" stroke="currentColor" stroke-width="2"/>
+            <line x1="171.2" y1="61.0" x2="111.0" y2="18.8" stroke="currentColor" stroke-width="2"/>
+            <line x1="111.0" y1="18.8" x2="129.0" y2="121.2" stroke="currentColor" stroke-width="2"/>
+            <line x1="71.1" y1="87.8" x2="171.2" y2="61.0" stroke="currentColor" stroke-width="2"/>
+            <circle cx="111.0" cy="18.8" r="4" fill="currentColor"/>
+            <circle cx="71.1" cy="87.8" r="4" fill="currentColor"/>
+            <circle cx="129.0" cy="121.2" r="4" fill="currentColor"/>
+            <circle cx="171.2" cy="61.0" r="4" fill="currentColor"/>
+            <text x="109" y="11" font-size="14" text-anchor="middle">ア</text>
+            <text x="59" y="97" font-size="14" text-anchor="middle">イ</text>
+            <text x="131" y="139" font-size="14" text-anchor="middle">ウ</text>
+            <text x="184" y="64" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        explain: 例：「交点を 1 つ選ぶとする。交点では 2 本の線が交わっていて、その 2 本の線の両はしの 4 つの点が決まる（どの 3 本も 1 点で交わらないので、交わる線はちょうど 2 本）。反対に、円の上の 4 つの点を選ぶと、それを順に結んだ四角形の 2 本の対角線が円の中で 1 回だけ交わり、交点が 1 つ決まる（四角形の辺どうしは円の中で交わらない）。交点と 4 つの点の選び方は 1 つずつ組になるので、数は同じ。」と書ければよい。① 交点から 4 点を決める、② 4 点から交点を決める、③ 両方向で 1 つだけ決まるので同じ数、の 3 点を見る。「どの 3 本も 1 点で交わらない」という条件がどこで要るかにふれられれば、なおよい。
+        hints:
+          - 交点を 1 つ選ぶと、その交点で交わる線の両はしは何個の点かな。
+          - 4 つの点を選ぶと、交わる線の組はいくつできるかな。
+          - 両方向から 1 つずつ決まることを書こう。
+        paths:
+          - [交点 → 交わる 2 本の線 → 両はしの 4 点, 4 点 → 四角形の対角線 → 交点 1 つ, 1 つずつ組になる, 同じ数]
+      - part: わけ
+        text: 5 を、順番を区別した 1 以上の整数の和で表す表し方は、2 × 2 × 2 × 2 = 16 通りです。なぜ 2 を 4 回かけるのかを、筋道を立てて書きましょう。
+        figure: "○｜○○｜○○　1 + 2 + 2\n○○○｜○○　3 + 2"
+        explain: 例：「5 を ○ 5 個の並びで表し、和の切れ目に ｜ を入れるとする。○ の間は 4 か所あり、どの表し方も、4 か所のそれぞれに ｜ を入れるか入れないかで 1 つだけ表せる。反対に、4 か所のそれぞれに ｜ を入れるか入れないかを決めると、｜ で区切られた ○ の個数を左から読んで、和の表し方が 1 つ決まる（区切られた所には ○ が 1 個以上ある）。表し方と、4 か所の入れる・入れないの決め方は 1 つずつ組になる。決め方は 1 か所ごとに 2 通りなので、積の法則で 2 × 2 × 2 × 2 = 16 通り。」と書ければよい。① ○ と ｜ で表すことを決める、② 両方向で 1 つずつ組になる、③ 積の法則で結ぶ、の 3 点を見る。｜ は ○ の間にしか入らないので、0 の項ができないことにもふれる。
+        hints:
+          - 5 を ○ で表すと、○ の間は何か所あるかな。
+          - 1 つの表し方は、それぞれの間に ｜ が入るか入らないかで決まるかな。
+          - 1 か所ごとの決め方の数と、積の法則を使って書こう。
+        paths:
+          - [○ 5 個の間は 4 か所, 表し方と入れる・入れないの決め方が 1 つずつ組, 1 か所 2 通り, 2 × 2 × 2 × 2 = 16]
+      - part: 今日
+        text: 縦線 5 本と横線 3 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="30" x2="40" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="80" y1="30" x2="80" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="30" x2="120" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="160" y1="30" x2="160" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="30" x2="200" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 30
+        check: "sum(1 for a in range(4) for b in range(a, 4) for c in range(2) for d in range(c, 2))"
+        hints:
+          - 長方形 1 つは、縦線 2 本と横線 2 本で決まるね。
+          - 縦線の選び方と横線の選び方を求めよう。
+          - 積の法則を使おう。
+        paths:
+          - [縦線 5 × 4 ÷ 2 = 10 通り, 横線 3 × 2 ÷ 2 = 3 通り, 10 × 3 = 30 個]
+      - part: 今日
+        text: 区別のない 9 個のあめを、ア、イ、ウの 3 人に分けます。どの人も少なくとも 1 個はもらいます。分け方は何通りですか。
+        answer: 28
+        check: "sum(1 for c in itertools.product(range(1, 10), repeat=3) if sum(c) == 9)"
+        hints:
+          - あめ 9 個を ○ で並べよう。
+          - ○ の間は何か所あるかな。
+          - そこから ｜ を入れる 2 か所を選ぼう。
+        paths:
+          - [○ の間 8 か所から 2 か所, 8 × 7 ÷ 2 = 28 通り]
+    extra:
+      - part: 今日
+        text: 16 チームが勝ちぬき戦をします。引き分けはありません。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 15
+        check: "(lambda f: f(f, 16))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けるチームは全部でいくつかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 15 チームが 1 回ずつ負ける, 15 回]
+          - [8 + 4 + 2 + 1 = 15 回]
+      - part: 今日
+        text: ア、イ、ウ、エ、オの 5 人の中から、何人かを選びます。だれも選ばない選び方も 1 通りと数えます。選び方は全部で何通りですか。
+        answer: 32
+        check: "sum(1 for k in range(6) for c in itertools.combinations('アイウエオ', k))"
+        hints:
+          - 1 人ずつに ○ か × をつけると考えよう。
+          - 選び方と ○× の並びは組になるね。
+          - ○× の並びは何通りかな。
+        paths:
+          - [1 人ごとに 2 通り, 2 × 2 × 2 × 2 × 2 = 32 通り]
+      - part: 今日
+        text: 6 を、1 以上の整数の和で表します。順番がちがうものは別の表し方とし、6 そのものも 1 通りと数えます。表し方は全部で何通りですか。
+        answer: 32
+        check: "sum(1 for k in range(1, 7) for c in itertools.product(range(1, 7), repeat=k) if sum(c) == 6)"
+        hints:
+          - 6 を ○ 6 個で表そう。
+          - ○ の間は何か所あるかな。
+          - それぞれに ｜ を入れるか入れないかを決めよう。
+        paths:
+          - [○ の間は 5 か所, 2 × 2 × 2 × 2 × 2 = 32 通り]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 赤玉 2 個と青玉 3 個を 1 列に並べます。並べ方は何通りですか。
+        answer: 10
+        check: "len(set(itertools.permutations('赤赤青青青')))"
+        hints:
+          - 赤玉を置く場所を選ぼう。
+          - 5 つの場所から 2 つを選ぶ数だね。
+          - 組合せの数え方を使おう。
+        paths:
+          - [5 × 4 ÷ 2 = 10 通り]
+      - part: 思い出す
+        text: 5 人が、丸いテーブルのまわりの 5 つの席にすわります。全員が同じ向きにずれたものは同じとします。すわり方は何通りですか。
+        answer: 24
+        check: "len(set(min(p[i:] + p[:i] for i in range(5)) for p in itertools.permutations(range(5))))"
+        hints:
+          - 1 人の席を決めよう。
+          - 残りの人を右回りに並べよう。
+          - 残りは何人かな。
+        paths:
+          - [1 人を決める, 4 × 3 × 2 × 1 = 24 通り]
+      - part: 今日
+        text: 1、2、3、4、5 の 5 枚のカードから 3 枚を選び、左から小さい順に並べます。並べ方は何通りですか。
+        answer: 10
+        check: "sum(1 for p in itertools.permutations('12345', 3) if p[0] < p[1] < p[2])"
+        hints:
+          - 3 枚を選ぶと、小さい順の並べ方はいくつに決まるかな。
+          - 並べ方と、3 枚の選び方は組になるね。
+          - 5 枚から 3 枚を選ぶ数を求めよう。
+        paths:
+          - [3 枚を選ぶと小さい順の並びは 1 つだけ, 並べ方と選び方が 1 つずつ組, 選ばない 2 枚を決める 5 × 4 ÷ 2 = 10 通り]
+        note: 5 × 4 × 3 = 60 と答えやすい。「小さい順」と決まっているので、選んだ 3 枚の並べ方は 1 通りしかない。
+      - part: 今日
+        text: 区別のない 6 個のボールを、ア、イ、ウの 3 つの箱に入れます。空の箱があってもかまいません。入れ方は何通りですか。
+        answer: 28
+        check: "sum(1 for c in itertools.product(range(7), repeat=3) if sum(c) == 6)"
+        hints:
+          - ボールを ○ で、箱の境目を ｜ で表そう。
+          - 空の箱があってもよいので、｜ はとなり合ってもいいね。
+          - ○ 6 個と ｜ 2 本を並べる場所はいくつかな。
+        paths:
+          - [○ 6 個と ｜ 2 本の並び, 8 つの場所から ｜ の場所を 2 つ選ぶ, 8 × 7 ÷ 2 = 28 通り]
+          - [先に 1 個ずつ借りて 9 個を 1 個以上ずつ分けると考える, ○ 9 個の間 8 か所から 2 か所, 28 通り]
+        note: 空の箱があってもよいときと、1 個以上ずつのときで、仕切りを入れる場所の数がちがう。
+      - part: 今日
+        text: 24 チームが勝ちぬき戦をします。引き分けはなく、不戦勝で次に進むチームもあります。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 23
+        check: "(lambda f: f(f, 24))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 不戦勝があっても、負けたチームの数は変わるかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 23 チームが 1 回ずつ負ける, 23 回]
+      - part: 挑戦
+        text: 円の上に 5 つの点があります。どの 2 点も線で結びます（どの 3 本の線も 1 点で交わりません）。円の中は、線でいくつの部分に分けられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="115.5" y1="18.2" x2="69.8" y2="56.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="115.5" y1="18.2" x2="86.6" y2="109.8" stroke="currentColor" stroke-width="2"/>
+            <line x1="115.5" y1="18.2" x2="146.0" y2="115.0" stroke="currentColor" stroke-width="2"/>
+            <line x1="115.5" y1="18.2" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2"/>
+            <line x1="69.8" y1="56.5" x2="86.6" y2="109.8" stroke="currentColor" stroke-width="2"/>
+            <line x1="69.8" y1="56.5" x2="146.0" y2="115.0" stroke="currentColor" stroke-width="2"/>
+            <line x1="69.8" y1="56.5" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2"/>
+            <line x1="86.6" y1="109.8" x2="146.0" y2="115.0" stroke="currentColor" stroke-width="2"/>
+            <line x1="86.6" y1="109.8" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2"/>
+            <line x1="146.0" y1="115.0" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2"/>
+            <circle cx="115.5" cy="18.2" r="4" fill="currentColor"/>
+            <circle cx="69.8" cy="56.5" r="4" fill="currentColor"/>
+            <circle cx="86.6" cy="109.8" r="4" fill="currentColor"/>
+            <circle cx="146.0" cy="115.0" r="4" fill="currentColor"/>
+            <circle cx="168.9" cy="52.2" r="4" fill="currentColor"/>
+          </svg>
+        answer: 16
+        check: "1 + len(set(itertools.combinations(range(5), 2))) + sum(1 for (a, b), (c, d) in itertools.combinations(itertools.combinations(range(5), 2), 2) if a < c < b < d or c < a < d < b)"
+        hints:
+          - 線を 1 本引くと、部分はいくつふえるかな。その線が、前の線と交わる回数で考えよう。
+          - 線が前の線と 2 回交わると、線は 3 つに区切られ、部分は 3 つふえるね。
+          - 「はじめの 1 + 線の本数 + 交点の数」になるわけを考えて、交点の数は 4 点の選び方で出そう。
+        paths:
+          - [線を引くと、部分は（交わる回数 + 1）ずつふえる, 全部で 1 + 線の本数 + 交点の数, 線は 10 本、交点は 5 個, 1 + 10 + 5 = 16]
+        note: 点が 1、2、3、4、5 個のとき部分は 1、2、4、8、16 で、2 倍ずつにみえる。6 個では 1 + 15 + 15 = 31 で 32 にならない。いくつかの例だけで決まりを決めてはいけない例として話すとよい。
+    extra:
+      - part: 今日
+        text: りんご、みかん、かきの 3 種類のくだものを、合わせて 5 個買います。買わない種類があってもかまいません。買い方は何通りですか。
+        answer: 21
+        check: "len(set(itertools.combinations_with_replacement('りみか', 5)))"
+        hints:
+          - 5 個を ○ で、種類の境目を ｜ で表そう。
+          - ○ と ｜ を並べる場所はいくつかな。
+          - ｜ の場所を選ぼう。
+        paths:
+          - [○ 5 個と ｜ 2 本, 7 つの場所から 2 つ, 7 × 6 ÷ 2 = 21 通り]
+      - part: 今日
+        text: 1 から 6 までの 6 枚のカードから 2 枚を選び、左から小さい順に並べます。並べ方は何通りですか。
+        answer: 15
+        check: "sum(1 for p in itertools.permutations('123456', 2) if p[0] < p[1])"
+        hints:
+          - 2 枚を選ぶと、小さい順の並びはいくつかな。
+          - 並べ方と選び方を組にしよう。
+          - 6 枚から 2 枚を選ぶ数を求めよう。
+        paths:
+          - [並べ方と選び方が組, 6 × 5 ÷ 2 = 15 通り]
+      - part: 今日
+        text: 32 チームが勝ちぬき戦をします。引き分けはありません。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 31
+        check: "(lambda f: f(f, 32))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けるチームは全部でいくつかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 31 チームが 1 回ずつ負ける, 31 回]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: 15 チームが勝ちぬき戦をします。引き分けはなく、不戦勝で次に進むチームもあります。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 14
+        check: "(lambda f: f(f, 15))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けるチームは全部でいくつかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 14 チームが 1 回ずつ負ける, 14 回]
+      - part: 今日
+        text: 平面に 6 本の直線があります。どの 2 本も平行でなく、どの 3 本も 1 点では交わりません。交点は全部で何個ですか。
+        answer: 15
+        check: "sum(range(6))"
+        hints:
+          - 交点 1 つは、何本の直線で決まるかな。
+          - 6 本から 2 本を選ぶ数に言いかえよう。
+          - 組合せの数え方を使おう。
+        paths:
+          - [交点と 2 本の選び方が組, 6 × 5 ÷ 2 = 15 個]
+      - part: 今日
+        text: 円の上に 5 つの点があります。どの 2 点も線で結びます。どの 3 本の線も 1 点では交わらないとき、円の中の交点は何個ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="52" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="115.5" cy="18.2" r="4" fill="currentColor"/>
+            <circle cx="69.8" cy="56.5" r="4" fill="currentColor"/>
+            <circle cx="86.6" cy="109.8" r="4" fill="currentColor"/>
+            <circle cx="146.0" cy="115.0" r="4" fill="currentColor"/>
+            <circle cx="168.9" cy="52.2" r="4" fill="currentColor"/>
+          </svg>
+        answer: 5
+        check: "sum(1 for (a, b), (c, d) in itertools.combinations(itertools.combinations(range(5), 2), 2) if a < c < b < d or c < a < d < b)"
+        hints:
+          - 交点 1 つは、何個の点の選び方と組になるかな。
+          - 5 つの点から 4 つを選ぶ数を考えよう。
+          - 選ばない点を決めると考えよう。
+        paths:
+          - [交点と 4 点の選び方が組, 選ばない 1 点を決める, 5 個]
+      - part: 今日
+        text: ア、イ、ウ、エ、オの 5 人の中から、何人かを選びます。だれも選ばない選び方も 1 通りと数えます。選び方は全部で何通りですか。
+        answer: 32
+        check: "sum(1 for k in range(6) for c in itertools.combinations('アイウエオ', k))"
+        hints:
+          - 1 人ずつに ○ か × をつけると考えよう。
+          - 選び方と ○× の並びは組になるね。
+          - ○× の並びは何通りかな。
+        paths:
+          - [1 人ごとに 2 通り, 2 × 2 × 2 × 2 × 2 = 32 通り]
+      - part: 今日
+        text: 縦線 5 本と横線 4 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="48" y1="16" x2="48" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="84" y1="16" x2="84" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="16" x2="120" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="156" y1="16" x2="156" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="192" y1="16" x2="192" y2="124" stroke="currentColor" stroke-width="2"/>
+            <line x1="48" y1="16" x2="192" y2="16" stroke="currentColor" stroke-width="2"/>
+            <line x1="48" y1="52" x2="192" y2="52" stroke="currentColor" stroke-width="2"/>
+            <line x1="48" y1="88" x2="192" y2="88" stroke="currentColor" stroke-width="2"/>
+            <line x1="48" y1="124" x2="192" y2="124" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        answer: 60
+        check: "sum(1 for a in range(4) for b in range(a, 4) for c in range(3) for d in range(c, 3))"
+        hints:
+          - 長方形 1 つは、縦線 2 本と横線 2 本で決まるね。
+          - 縦線の選び方と、横線の選び方を求めよう。
+          - 積の法則を使おう。
+        paths:
+          - [縦線 5 × 4 ÷ 2 = 10 通り, 横線 4 × 3 ÷ 2 = 6 通り, 10 × 6 = 60 個]
+      - part: 今日
+        text: 6 を、1 以上の整数の和で表します。順番がちがうものは別の表し方とし、6 そのものも 1 通りと数えます。表し方は全部で何通りですか。
+        answer: 32
+        check: "sum(1 for k in range(1, 7) for c in itertools.product(range(1, 7), repeat=k) if sum(c) == 6)"
+        hints:
+          - 6 を ○ 6 個で表そう。
+          - ○ の間は何か所あるかな。
+          - それぞれに ｜ を入れるか入れないかを決めよう。
+        paths:
+          - [○ の間は 5 か所, 2 × 2 × 2 × 2 × 2 = 32 通り]
+      - part: 今日
+        text: 区別のない 10 個のあめを、ア、イ、ウの 3 人に分けます。どの人も少なくとも 1 個はもらいます。分け方は何通りですか。
+        answer: 36
+        check: "sum(1 for c in itertools.product(range(1, 11), repeat=3) if sum(c) == 10)"
+        hints:
+          - あめを ○ で並べよう。
+          - ○ の間は何か所あるかな。
+          - そこから ｜ を入れる 2 か所を選ぼう。
+        paths:
+          - [○ の間 9 か所から 2 か所, 9 × 8 ÷ 2 = 36 通り]
+      - part: 今日
+        text: 1 から 7 までの 7 枚のカードから 2 枚を選び、左から小さい順に並べます。並べ方は何通りですか。
+        answer: 21
+        check: "sum(1 for p in itertools.permutations('1234567', 2) if p[0] < p[1])"
+        hints:
+          - 2 枚を選ぶと、小さい順の並びはいくつかな。
+          - 並べ方と選び方を組にしよう。
+          - 7 枚から 2 枚を選ぶ数を求めよう。
+        paths:
+          - [並べ方と選び方が組, 7 × 6 ÷ 2 = 21 通り]
+    extra:
+      - part: 今日
+        text: 縦線 3 本と横線 4 本でできた図があります。この中に、長方形（正方形もふくむ）はいくつありますか。
+        answer: 18
+        check: "sum(1 for a in range(2) for b in range(a, 2) for c in range(3) for d in range(c, 3))"
+        hints:
+          - 長方形 1 つは、縦線 2 本と横線 2 本で決まるね。
+          - 縦線の選び方と、横線の選び方を求めよう。
+          - 積の法則を使おう。
+        paths:
+          - [縦線 3 通り, 横線 6 通り, 3 × 6 = 18 個]
+      - part: 今日
+        text: 区別のない 6 個のボールを、ア、イ、ウ、エの 4 つの箱に入れます。どの箱にも少なくとも 1 個は入れます。入れ方は何通りですか。
+        answer: 10
+        check: "sum(1 for c in itertools.product(range(1, 7), repeat=4) if sum(c) == 6)"
+        hints:
+          - ボール 6 個を ○ で並べよう。
+          - ○ の間は何か所あって、｜ はいくつ入れるかな。
+          - ｜ を入れる 3 か所を選ぶ数は、入れない 2 か所を選ぶ数と同じだね。
+        paths:
+          - [○ の間 5 か所から ｜ を入れる 3 か所, 入れない 2 か所を選ぶ 5 × 4 ÷ 2 = 10 通り]
+      - part: 今日
+        text: 7 チームが勝ちぬき戦をします。引き分けはなく、不戦勝で次に進むチームもあります。優勝が決まるまでに、試合は全部で何回ありますか。
+        answer: 6
+        check: "(lambda f: f(f, 7))(lambda f, n: 0 if n == 1 else n // 2 + f(f, n - n // 2))"
+        hints:
+          - 1 試合で、負けるチームはいくつ出るかな。
+          - 負けるチームは全部でいくつかな。
+          - 試合と負けたチームを組にしよう。
+        paths:
+          - [優勝以外の 6 チームが 1 回ずつ負ける, 6 回]

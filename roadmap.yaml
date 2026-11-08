@@ -730,11 +730,11 @@ units:
   - {id: A-016, title: 平方根, stage: 4, level: 2, region: shiki, needs: [A-015, N-021, A-009, N-020], days: 5}
   - {id: A-017, title: 2 次方程式, stage: 4, level: 2, region: shiki, needs: [A-015, A-016], days: 6}
   - {id: A-018, title: Σ と和の変形, stage: 4, level: 2, region: shiki, needs: [A-004, A-010, A-015], days: 6}
-  - {id: C-013, title: 区別と重複のある数え方, stage: 4, level: 2, region: kazoekata, needs: [C-007], days: 6}
+  - {id: C-013, title: 区別と重複のある数え方, stage: 4, level: 2, region: kazoekata, needs: [C-007, A-010], days: 6}
   - {id: C-014, title: 対応させて数える, stage: 4, level: 2, region: kazoekata, needs: [C-013], days: 5}
   - {id: C-015, title: 二項係数とパスカルの三角形, stage: 4, level: 2, region: kazoekata, needs: [C-007, A-010, C-004], days: 6}
   - {id: C-016, title: 二項定理, stage: 4, level: 2, region: kazoekata, needs: [C-015, A-015, A-009], days: 5}
-  - {id: C-017, title: 盤面とタイル張り（塗り分けの論法）, stage: 4, level: 3, region: kazoekata, needs: [L-009, L-005], days: 6}
+  - {id: C-017, title: 盤面とタイル張り（塗り分けの論法）, stage: 4, level: 3, region: kazoekata, needs: [L-009, L-005, N-013, A-010], days: 6}
   - {id: G-016, title: 平行線と角、合同の証明, stage: 4, level: 3, region: shomei-zukei, needs: [G-009], days: 8}
   - {id: G-017, title: 三角形と四角形の性質, stage: 4, level: 3, region: shomei-zukei, needs: [G-016], days: 6}
   - {id: G-018, title: 円周角の定理, stage: 4, level: 3, region: shomei-zukei, needs: [G-017, G-010], days: 6}

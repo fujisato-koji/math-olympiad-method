@@ -1,0 +1,787 @@
+# C-015 二項係数とパスカルの三角形
+#
+# 書き方は N-001 の頭の注のとおり。段 4 なので、子に見せる文は普通の漢字まじりの文。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 記号 ₙCᵣ（n 個から r 個を選ぶ選び方の数、二項係数）と計算、ₙCᵣ = ₙCₙ₋ᵣ、ₙC₀ = 1、
+#   2 日目 道順（C-004）を「右と上の並び」にして ₙCᵣ で数える、⭐ を通る道、🌳 を通らない道（全体からひく）、
+#   3 日目 パスカルの三角形（上の 2 つの和）、段の数の和が 2 の累乗になること、ₙCᵣ = ₙ₋₁Cᵣ₋₁ + ₙ₋₁Cᵣ、
+#   4 日目 わけ（なぜ道順が ₙCᵣ か、なぜ ₙCᵣ = ₙCₙ₋ᵣ か、なぜ上の 2 つの和になるか）、
+#   5 日目 C-007（組合せ）・A-010（文字の式）・C-004（道順の書きこみ）と混ぜる、6 日目 確認。
+# 前提は C-007、A-010、C-004（→ A-009、N-074、N-009 など）。数は 1000 まで（1000 をこえる数の N-073 は前提にない）。
+#   段の数の和は 2⁹ = 512 まで。2 けた × 2 けたの筆算（N-074）までで計算できる数にした。
+# 記号は ₅C₂ のように下つきの数字で書く。ₙCᵣ = n × (n − 1) × … を r 個 ÷（r × (r − 1) × … × 1）と言葉で約束し、n! の記号は使わない
+#   （階乗の記号は N-024 で使うが、ここの前提にはない）。式の中では「/」を使わず「÷」と書く（画面が「/」を分数にするため）。
+# わけは段 4 の ③：explain に、①「〜とする」で文字を決める、② 選び方を分ける・組にする、③ 約束した事実（和の法則、積の法則、ₙCᵣ の意味）で結ぶ、の 3 点を書いた。
+#   1 問目（道順と ₙCᵣ）は代表の例で書く ②。
+# 二項定理（(a + b)ⁿ の展開の係数）は C-016 なので出さない。三角形の斜めの和（ホッケースティック）は挑戦だけ。
+# 道順の図は C-004 と同じ（🏠 から 🏁 へ右か上に 1 マスずつ、🌳 は通れない、⭐ は必ず通る）。パスカルの三角形は svg で書き、□ が求める数。
+# check：ₙCᵣ は itertools.combinations で選び方を作って数える。道順は C-004 と同じ式。三角形の □ は選び方の数、段の和は全部の部分の数を数える。
+
+id: C-015
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 5 個のものから 2 個を選ぶ選び方の数を、記号で ₅C₂ と書きます。₅C₂ を求めましょう。
+        explain: 5 個から 2 個を順番をつけて並べると 5 × 4 = 20 通りで、同じ 2 個の組を 2 × 1 = 2 回ずつ数えているので、₅C₂ = 5 × 4 ÷ (2 × 1) = 10 です（C-007）。一般に、n 個から r 個を選ぶ選び方の数を ₙCᵣ と書き、二項係数といいます。ₙCᵣ は、n から 1 ずつ小さくした数を r 個かけて、r × (r − 1) × … × 2 × 1 でわった数です。たとえば ₇C₃ = 7 × 6 × 5 ÷ (3 × 2 × 1) = 35。また、5 個から 3 個を選ぶことは、選ばない 2 個を選ぶことと同じなので ₅C₃ = ₅C₂ = 10 です。何も選ばない選び方は 1 通りなので、ₙC₀ = 1 と決めます。
+      - part: 思い出す
+        text: 7 人の中から、3 人の係を選びます。選び方は何通りですか。
+        answer: 35
+        check: "len(set(itertools.combinations(range(7), 3)))"
+        hints:
+          - 順番をつけて並べると何通りかな。
+          - 3 人の組 1 つを、並べ方の中で何回ずつ数えているかな。
+          - 並べ方の数を、その回数でわろう。
+        paths:
+          - [並べると 7 × 6 × 5 = 210 通り, 3 人の組は 3 × 2 × 1 = 6 回ずつ, 210 ÷ 6 = 35 通り]
+      - part: 思い出す
+        text: n = 6 のとき、n(n − 1) ÷ 2 の値はいくつですか。
+        answer: 15
+        check: "6 * (6 - 1) // 2"
+        hints:
+          - n に 6 を代入しよう。
+          - かっこの中を先に計算しよう。
+          - かけ算をしてから、2 でわろう。
+        paths:
+          - [6 × (6 − 1) ÷ 2, 6 × 5 ÷ 2, 15]
+      - part: 今日
+        text: ₈C₃ を求めましょう。
+        answer: 56
+        check: "len(set(itertools.combinations(range(8), 3)))"
+        hints:
+          - 8 から 1 ずつ小さくした数を、何個かけるかな。
+          - わる数は 3 × 2 × 1 だね。
+          - 約分してから計算すると楽になるよ。
+        paths:
+          - [8 × 7 × 6 ÷ (3 × 2 × 1), 336 ÷ 6, 56]
+          - [6 ÷ (3 × 2 × 1) = 1 と先に約分, 8 × 7 = 56]
+      - part: 今日
+        text: ₇C₅ を求めましょう。
+        answer: 21
+        check: "len(set(itertools.combinations(range(7), 5)))"
+        hints:
+          - 7 個から 5 個を選ぶことは、何個を選ばないことと同じかな。
+          - ₇C₅ は ₇C₂ と同じだね。
+          - ₇C₂ を計算しよう。
+        paths:
+          - [₇C₅ = ₇C₂, 7 × 6 ÷ (2 × 1), 21]
+        note: 7 × 6 × 5 × 4 × 3 ÷ (5 × 4 × 3 × 2 × 1) と計算してもよいが、選ばないほうを数えると早い。
+      - part: 今日
+        text: ₁₀C₈ を求めましょう。
+        answer: 45
+        check: "len(set(itertools.combinations(range(10), 8)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₁₀C₈ は ₁₀C₂ と同じだね。
+          - ₁₀C₂ を計算しよう。
+        paths:
+          - [₁₀C₈ = ₁₀C₂, 10 × 9 ÷ (2 × 1), 45]
+      - part: 挑戦
+        text: ₙC₂ = 28 になる n はいくつですか。
+        answer: 8
+        check: "[n for n in range(2, 30) if len(set(itertools.combinations(range(n), 2))) == 28][0]"
+        hints:
+          - ₙC₂ は n(n − 1) ÷ 2 だね。
+          - n(n − 1) はいくつになるかな。
+          - となり合う 2 つの整数の積が、その数になるものをさがそう。
+        paths:
+          - [n(n − 1) ÷ 2 = 28, n(n − 1) = 56, 8 × 7 = 56 なので n = 8]
+          - [₂C₂、₃C₂、₄C₂ … を 1、3、6、10、15、21、28 と順に出す, n = 8]
+    extra:
+      - part: 今日
+        text: ₆C₃ を求めましょう。
+        answer: 20
+        check: "len(set(itertools.combinations(range(6), 3)))"
+        hints:
+          - 6 から 1 ずつ小さくした数を 3 個かけよう。
+          - わる数は 3 × 2 × 1 だね。
+          - 約分してから計算しよう。
+        paths:
+          - [6 × 5 × 4 ÷ (3 × 2 × 1), 120 ÷ 6, 20]
+      - part: 今日
+        text: ₉C₇ を求めましょう。
+        answer: 36
+        check: "len(set(itertools.combinations(range(9), 7)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₉C₇ は ₉C₂ と同じだね。
+          - ₉C₂ を計算しよう。
+        paths:
+          - [₉C₇ = ₉C₂, 9 × 8 ÷ 2, 36]
+      - part: 今日
+        text: ₅C₀ + ₅C₅ はいくつですか。
+        answer: 2
+        check: "len(set(itertools.combinations(range(5), 0))) + len(set(itertools.combinations(range(5), 5)))"
+        hints:
+          - 5 個から 0 個を選ぶ選び方は何通りかな。
+          - 5 個から 5 個を選ぶ選び方は何通りかな。
+          - 選ばないほうを考えると、₅C₅ は ₅C₀ と同じだね。
+        paths:
+          - [何も選ばない選び方は 1 通りで ₅C₀ = 1, 全部選ぶのも 1 通りで ₅C₅ = 1, 1 + 1 = 2]
+        note: ₅C₀ = 0 としやすい。「何も選ばない」という 1 つの選び方がある、と決めておくと、ₙCᵣ = ₙCₙ₋ᵣ が r = 0 のときにも成り立つ。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 🏠 から 🏁 まで、となりのマスへ右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n🏠⬜⬜⬜"
+        explain: どの行き方も、右に 3 回、上に 2 回、合わせて 5 回進みます。行き方 1 つは「右右上右上」のような、右 3 つと上 2 つの並び 1 つで表せて、どの並びも行き方 1 つを表します。並びは、5 回のうち上に進む 2 回を選べば決まるので、₅C₂ = 10 通りです。C-004 のようにマスに数を書きこんでも 10 になります。右に a 回、上に b 回進む道順は、ₐ₊ᵦCᵦ 通りです。
+      - part: 思い出す
+        text: ₆C₄ を求めましょう。
+        answer: 15
+        check: "len(set(itertools.combinations(range(6), 4)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₆C₄ は ₆C₂ と同じだね。
+          - ₆C₂ を計算しよう。
+        paths:
+          - [₆C₄ = ₆C₂, 6 × 5 ÷ 2, 15]
+      - part: 思い出す
+        text: マスの数は、🏠 からそこまで行く行き方の数です（右か上に 1 マスずつ進む）。□ のマスまでの行き方は何通りですか。
+        figure: "１３□\n１２３\n🏠１１"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/⬜⬜⬜/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ のマスには、どのマスから来られるかな。
+          - 左のマスから来るか、下のマスから来るかだね。
+          - 2 つのマスの数をたそう。
+        paths:
+          - [左のマスは 3、下のマスは 3, 3 + 3 = 6 通り]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 35
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 全部で何回進んで、そのうち上は何回かな。
+          - 上に進む回の選び方を ₙCᵣ で表そう。
+        paths:
+          - [右 4 回、上 3 回で合わせて 7 回, 上に進む 3 回を選ぶ, ₇C₃ = 35 通り]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜⬜"
+        answer: 21
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぶと考えよう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 5 回、上 2 回, 7 回から上の 2 回を選ぶ, ₇C₂ = 21 通り]
+      - part: 今日
+        text: ⭐ のマスを必ず通って、🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n⬜⬜⭐⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 18
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までと、⭐ から 🏁 までに分けよう。
+          - それぞれ、右と上に何回ずつ進むかな。
+          - 2 つの行き方の数を、積の法則でかけよう。
+        paths:
+          - [🏠 から ⭐ は右 2 上 1 で ₃C₁ = 3, ⭐ から 🏁 は右 2 上 2 で ₄C₂ = 6, 3 × 6 = 18 通り]
+      - part: 挑戦
+        text: 🌳 のマスは通れません。🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n⬜⬜🌳⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 17
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🌳 がないときの行き方は何通りかな。
+          - 🌳 のマスを通る行き方は何通りかな。
+          - 全体から、🌳 を通る行き方をひこう。
+        paths:
+          - [🌳 がなければ ₇C₃ = 35 通り, 🌳 を通るのは 3 × 6 = 18 通り, 35 − 18 = 17 通り]
+          - [マスに行き方の数を書きこむ（🌳 のマスは 0）, 🏁 は 17]
+        note: 通れないマスは「全体 − 通る道」で数えられる。通る道は、⭐ を必ず通る道と同じ数え方。
+    extra:
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n🏠⬜⬜⬜"
+        answer: 20
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぼう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 3 上 3, ₆C₃ = 20 通り]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜⬜⬜🏁\n🏠⬜⬜⬜⬜⬜⬜"
+        answer: 7
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 上に進むのは何回かな。
+          - 7 回のうち、上に進む 1 回を選ぶね。
+          - ₇C₁ を計算しよう。
+        paths:
+          - [右 6 上 1, ₇C₁ = 7 通り]
+      - part: 今日
+        text: ⭐ のマスを必ず通って、🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜🏁\n⬜⭐⬜⬜\n🏠⬜⬜⬜"
+        answer: 6
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までと、⭐ から 🏁 までに分けよう。
+          - それぞれの行き方を ₙCᵣ で表そう。
+          - 積の法則でかけよう。
+        paths:
+          - [🏠 から ⭐ は ₂C₁ = 2, ⭐ から 🏁 は ₃C₁ = 3, 2 × 3 = 6 通り]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 図は、パスカルの三角形の上から 6 段（0 段目から 5 段目）です。どんな決まりで数が並んでいるか考えよう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="120" y="16" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="135" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="120" y="50" font-size="13" text-anchor="middle">2</text>
+            <text x="150" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="135" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="165" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="60" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="120" y="84" font-size="13" text-anchor="middle">6</text>
+            <text x="150" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="180" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="45" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="105" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="135" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="165" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="195" y="101" font-size="13" text-anchor="middle">1</text>
+          </svg>
+        explain: どの段も両はしは 1 で、ほかの数は、すぐ左上とすぐ右上の 2 つの数の和です（たとえば 4 段目の 6 は 3 + 3）。n 段目の左から r 番目（いちばん左を 0 番目とする）の数は ₙCᵣ です。たとえば 5 段目は ₅C₀、₅C₁、…、₅C₅ で、1、5、10、10、5、1。2 つの和になるのは、道順の書きこみ（C-004）で左と下の数をたすのと同じしくみです。三角形が左右対称なのは、ₙCᵣ = ₙCₙ₋ᵣ だからです。
+      - part: 思い出す
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 15
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぼう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 4 上 2, ₆C₂ = 15 通り]
+      - part: 思い出す
+        text: ₈C₂ を求めましょう。
+        answer: 28
+        check: "len(set(itertools.combinations(range(8), 2)))"
+        hints:
+          - 8 から 1 ずつ小さくした数を 2 個かけよう。
+          - わる数は 2 × 1 だね。
+          - 計算しよう。
+        paths:
+          - [8 × 7 ÷ 2, 28]
+      - part: 今日
+        text: パスカルの三角形の 6 段目です。□ に入る数はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="120" y="16" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="135" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="120" y="50" font-size="13" text-anchor="middle">2</text>
+            <text x="150" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="135" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="165" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="60" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="120" y="84" font-size="13" text-anchor="middle">6</text>
+            <text x="150" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="180" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="45" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="105" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="135" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="165" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="195" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="118" font-size="13" text-anchor="middle">□</text>
+          </svg>
+        answer: 15
+        check: "len(set(itertools.combinations(range(6), 2)))"
+        hints:
+          - □ のすぐ左上とすぐ右上の数は何かな。
+          - 2 つの数をたそう。
+          - 6 段目の左から 2 番目は ₆C₂ だね。
+        paths:
+          - [左上は 5、右上は 10, 5 + 10 = 15]
+          - [₆C₂ = 6 × 5 ÷ 2 = 15]
+      - part: 今日
+        text: パスカルの三角形の 7 段目の数（₇C₀ から ₇C₇ まで）を全部たすと、いくつになりますか。
+        answer: 128
+        check: "sum(len(set(itertools.combinations(range(7), r))) for r in range(8))"
+        hints:
+          - 0 段目、1 段目、2 段目、3 段目の和を出してみよう。
+          - 段が 1 つ下がると、和は何倍になっているかな。
+          - 7 段目の和を、2 の累乗で表そう。
+        paths:
+          - [段の和は 1、2、4、8、… と 2 倍ずつ, 7 段目は 2⁷, 128]
+          - [₇C₀ から ₇C₇ の和は、7 個から何個かを選ぶ選び方の全部, 1 個ごとに選ぶか選ばないかの 2 通り, 2⁷ = 128]
+        note: 下の段の数は、上の段のどの数も左下と右下に 1 回ずつたされてできるので、段の和は 2 倍になる。
+      - part: 今日
+        text: ₇C₃ = 35、₇C₄ = 35 です。₈C₄ はいくつですか。
+        answer: 70
+        check: "len(set(itertools.combinations(range(8), 4)))"
+        hints:
+          - パスカルの三角形で、₈C₄ はどの 2 つの数の下にあるかな。
+          - ₈C₄ のすぐ左上と右上は、7 段目の何番目と何番目かな。
+          - 2 つの数をたそう。
+        paths:
+          - [₈C₄ は ₇C₃ と ₇C₄ の下, 35 + 35 = 70]
+      - part: 挑戦
+        text: ₂C₂ + ₃C₂ + ₄C₂ + ₅C₂ + ₆C₂ + ₇C₂ + ₈C₂ + ₉C₂ はいくつですか。
+        answer: 120
+        check: "sum(len(set(itertools.combinations(range(n), 2))) for n in range(2, 10))"
+        hints:
+          - 1 つずつ計算してたしてもよいね。1、3、6、10、… だよ。
+          - パスカルの三角形で、この数たちは斜めに並んでいるね。
+          - ₂C₂ を ₃C₃ に置きかえて、₃C₃ + ₃C₂ から順にパスカルの決まりでまとめていこう。
+        paths:
+          - [1 + 3 + 6 + 10 + 15 + 21 + 28 + 36, 120]
+          - [₂C₂ = ₃C₃ と置きかえる, ₃C₃ + ₃C₂ = ₄C₃、₄C₃ + ₄C₂ = ₅C₃、…, 最後は ₁₀C₃ = 10 × 9 × 8 ÷ 6 = 120]
+        note: 斜めに並んだ数の和は、その列の終わりの右下の数になる（形からホッケースティックとよばれる）。
+    extra:
+      - part: 今日
+        text: パスカルの三角形の 7 段目です。□ に入る数はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="120" y="16" font-size="13" text-anchor="middle">1</text>
+            <text x="106" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="134" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="93" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="120" y="50" font-size="13" text-anchor="middle">2</text>
+            <text x="147" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="80" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="106" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="134" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="160" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="66" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="93" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="120" y="84" font-size="13" text-anchor="middle">6</text>
+            <text x="147" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="174" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="52" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="80" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="106" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="134" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="160" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="188" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="39" y="118" font-size="13" text-anchor="middle">1</text>
+            <text x="66" y="118" font-size="13" text-anchor="middle">6</text>
+            <text x="93" y="118" font-size="13" text-anchor="middle">15</text>
+            <text x="120" y="118" font-size="13" text-anchor="middle">20</text>
+            <text x="147" y="118" font-size="13" text-anchor="middle">15</text>
+            <text x="174" y="118" font-size="13" text-anchor="middle">6</text>
+            <text x="201" y="118" font-size="13" text-anchor="middle">1</text>
+            <text x="106" y="135" font-size="13" text-anchor="middle">□</text>
+          </svg>
+        answer: 35
+        check: "len(set(itertools.combinations(range(7), 3)))"
+        hints:
+          - □ のすぐ左上とすぐ右上の数は何かな。
+          - 2 つの数をたそう。
+          - ₇C₃ を計算してもいいよ。
+        paths:
+          - [左上は 15、右上は 20, 15 + 20 = 35]
+      - part: 今日
+        text: パスカルの三角形の 6 段目の数を全部たすと、いくつになりますか。
+        answer: 64
+        check: "sum(len(set(itertools.combinations(range(6), r))) for r in range(7))"
+        hints:
+          - 段の和は、1 段下がるごとに何倍になったかな。
+          - 0 段目の和は 1 だね。
+          - 2 の累乗で表そう。
+        paths:
+          - [段の和は 2 倍ずつ, 6 段目は 2⁶ = 64]
+          - [1 + 6 + 15 + 20 + 15 + 6 + 1 = 64]
+      - part: 今日
+        text: ₉C₄ = 126、₉C₅ = 126 です。₁₀C₅ はいくつですか。
+        answer: 252
+        check: "len(set(itertools.combinations(range(10), 5)))"
+        hints:
+          - パスカルの三角形で、₁₀C₅ はどの 2 つの数の下にあるかな。
+          - 9 段目の 4 番目と 5 番目だね。
+          - 2 つの数をたそう。
+        paths:
+          - [₁₀C₅ は ₉C₄ と ₉C₅ の下, 126 + 126 = 252]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 右に 3 回、上に 2 回進む道順は ₅C₂ = 10 通りです。なぜ ₅C₂ で数えられるのかを、行き方を例にして書きましょう。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n🏠⬜⬜⬜"
+        explain: 例：「どの行き方も、5 回進むうち、右が 3 回、上が 2 回。たとえば右、右、上、右、上 と進む行き方は、5 回のうち 3 回目と 5 回目が上。行き方 1 つから、上に進む回の組（3 回目と 5 回目）が 1 つ決まる。反対に、上に進む 2 回を選ぶと、残りは右なので、行き方が 1 つ決まる。行き方と、5 回から 2 回を選ぶ選び方は 1 つずつ組になるので、₅C₂ = 10 通り。」と書ければよい。「行き方 → 上の回」「上の回 → 行き方」の両方が書けているかを見る（C-014 の対応させて数える）。
+        hints:
+          - 行き方 1 つを、右と上の並びで書いてみよう。
+          - その並びから、上に進む回はどれとどれかな。
+          - 「行き方と選び方が 1 つずつ組になるから」を使って書こう。
+        paths:
+          - [行き方 → 右と上の並び → 上の 2 回が決まる, 上の 2 回を選ぶ → 行き方が決まる, 1 つずつ組, ₅C₂]
+      - part: わけ
+        text: どんな n と r（0 ≦ r ≦ n）でも、ₙCᵣ = ₙCₙ₋ᵣ が成り立ちます。そのわけを、筋道を立てて書きましょう。
+        explain: 例：「n 個のものから r 個を選ぶ選び方を 1 つとる。選んだ r 個が決まると、選ばなかった n − r 個も 1 つに決まる。反対に、選ばない n − r 個を決めると、残りの r 個が選ぶものとして 1 つに決まる。r 個の選び方と n − r 個の選び方は 1 つずつ組になるので、数は等しい。ₙCᵣ は n 個から r 個を選ぶ数、ₙCₙ₋ᵣ は n 個から n − r 個を選ぶ数なので、ₙCᵣ = ₙCₙ₋ᵣ。」と書ければよい。① n 個から r 個を選ぶ選び方をとると決める、② 選ぶものと選ばないものを組にする、③ ₙCᵣ の意味（選び方の数）で結ぶ、の 3 点を見る。₅C₂ = ₅C₃ = 10 を確かめただけで終わったら、例ではすべての n と r を示せないことを話す。
+        hints:
+          - r 個を選ぶと、選ばなかったものは何個かな。
+          - 選ばないものを先に決めても、選び方は 1 つに決まるかな。
+          - 「1 つずつ組になるので等しい」と、ₙCᵣ の意味で結ぼう。
+        paths:
+          - [n 個から r 個を選ぶ選び方をとる, 選ばない n − r 個が決まる, 逆も決まる, 1 つずつ組なので ₙCᵣ = ₙCₙ₋ᵣ]
+      - part: わけ
+        text: パスカルの三角形の数は、すぐ左上とすぐ右上の和です。つまり ₙCᵣ = ₙ₋₁Cᵣ₋₁ + ₙ₋₁Cᵣ（1 ≦ r ≦ n − 1）。これが成り立つわけを、n 個のうちの 1 個に目をつけて、筋道を立てて書きましょう。
+        explain: 例：「n 個のものの 1 つを A とする。n 個から r 個を選ぶ選び方を、A を選ぶものと A を選ばないものに分ける。A を選ぶときは、残りの n − 1 個から r − 1 個を選ぶので ₙ₋₁Cᵣ₋₁ 通り。A を選ばないときは、残りの n − 1 個から r 個を選ぶので ₙ₋₁Cᵣ 通り。どの選び方もどちらか一方だけに入るので、和の法則で ₙCᵣ = ₙ₋₁Cᵣ₋₁ + ₙ₋₁Cᵣ。」と書ければよい。① 1 つのものを A と決める、② A をふくむかどうかで重ならずに分ける、③ 和の法則で結ぶ、の 3 点を見る。₅C₂ = ₄C₁ + ₄C₂（10 = 4 + 6）のような例だけで終わったら、例ではすべての場合を示せないことを話す。
+        hints:
+          - n 個のうちの 1 個を A として、A を選ぶか選ばないかで分けよう。
+          - A を選ぶとき、残りから何個を選ぶかな。選ばないときはどうかな。
+          - 2 つの場合が重ならないことと、和の法則で結ぼう。
+        paths:
+          - [1 個を A とする, A を選ぶ ₙ₋₁Cᵣ₋₁ 通り, A を選ばない ₙ₋₁Cᵣ 通り, 重ならないので和の法則でたす]
+      - part: 今日
+        text: ₉C₇ を求めましょう。
+        answer: 36
+        check: "len(set(itertools.combinations(range(9), 7)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₉C₇ は ₉C₂ と同じだね。
+          - ₉C₂ を計算しよう。
+        paths:
+          - [₉C₇ = ₉C₂ = 9 × 8 ÷ 2 = 36]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 70
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぼう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 4 上 4, ₈C₄ = 8 × 7 × 6 × 5 ÷ (4 × 3 × 2 × 1) = 70 通り]
+    extra:
+      - part: 今日
+        text: パスカルの三角形の 6 段目です。□ に入る数はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="120" y="16" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="135" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="120" y="50" font-size="13" text-anchor="middle">2</text>
+            <text x="150" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="105" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="135" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="165" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="60" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="90" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="120" y="84" font-size="13" text-anchor="middle">6</text>
+            <text x="150" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="180" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="45" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="75" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="105" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="135" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="165" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="195" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="150" y="118" font-size="13" text-anchor="middle">□</text>
+          </svg>
+        answer: 15
+        check: "len(set(itertools.combinations(range(6), 4)))"
+        hints:
+          - □ のすぐ左上とすぐ右上の数は何かな。
+          - 2 つの数をたそう。
+          - 三角形が左右対称なことも使えるね。
+        paths:
+          - [左上は 10、右上は 5, 10 + 5 = 15]
+          - [₆C₄ = ₆C₂ = 15]
+      - part: 今日
+        text: ₄C₁ = 4、₄C₂ = 6 です。₅C₂ はいくつですか。
+        answer: 10
+        check: "len(set(itertools.combinations(range(5), 2)))"
+        hints:
+          - パスカルの決まりを使おう。
+          - ₅C₂ は、4 段目のどの 2 つの数の下にあるかな。
+          - 2 つの数をたそう。
+        paths:
+          - [₅C₂ = ₄C₁ + ₄C₂, 4 + 6 = 10]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜⬜"
+        answer: 56
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぼう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 5 上 3, ₈C₃ = 56 通り]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: n = 10 のとき、n(n − 1) ÷ 2 の値はいくつですか。
+        answer: 45
+        check: "10 * (10 - 1) // 2"
+        hints:
+          - n に 10 を代入しよう。
+          - かっこの中を先に計算しよう。
+          - かけ算をしてから、2 でわろう。
+        paths:
+          - [10 × 9 ÷ 2, 45]
+      - part: 思い出す
+        text: マスの数は、🏠 からそこまで行く行き方の数です（右か上に 1 マスずつ進む）。□ のマスまでの行き方は何通りですか。
+        figure: "１４□\n１３６\n１２３\n🏠１１"
+        answer: 10
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/⬜⬜⬜/⬜⬜⬜/🏠⬜⬜'.split('/')[::-1])"
+        hints:
+          - □ のマスには、どのマスから来られるかな。
+          - 左のマスと下のマスの数を見よう。
+          - 2 つをたそう。
+        paths:
+          - [左は 4、下は 6, 4 + 6 = 10 通り]
+          - [右 2 上 3 なので ₅C₂ = 10]
+      - part: 今日
+        text: n 人の中から 2 人を選ぶ選び方の数 ₙC₂ を表す式は、どれですか。
+        choices: [n(n − 1) ÷ 2, n(n − 1), n ÷ 2]
+        answer: n(n − 1) ÷ 2
+        check: "[c for c, f in (('n(n − 1) ÷ 2', lambda n: Fraction(n * (n - 1), 2)), ('n(n − 1)', lambda n: n * (n - 1)), ('n ÷ 2', lambda n: Fraction(n, 2))) if all(f(n) == len(set(itertools.combinations(range(n), 2))) for n in range(2, 10))][0]"
+        hints:
+          - n 人から 2 人を順番をつけて並べると、何通りかな。
+          - 同じ 2 人の組を何回ずつ数えているかな。
+          - n = 4 を入れて、₄C₂ = 6 になるかで確かめよう。
+        paths:
+          - [並べると n(n − 1) 通り, 2 回ずつ数えている, n(n − 1) ÷ 2]
+      - part: 今日
+        text: 10 人の中から 3 人を選びます。選び方は何通りですか。
+        answer: 120
+        check: "len(set(itertools.combinations(range(10), 3)))"
+        hints:
+          - ₁₀C₃ を求めればよいね。
+          - 10 から 1 ずつ小さくした数を 3 個かけて、3 × 2 × 1 でわろう。
+          - 約分してから計算すると楽だよ。
+        paths:
+          - [₁₀C₃ = 10 × 9 × 8 ÷ (3 × 2 × 1), 720 ÷ 6, 120 通り]
+      - part: 今日
+        text: 正八角形の対角線は、全部で何本ありますか。
+        answer: 20
+        check: "sum(1 for i, j in itertools.combinations(range(8), 2) if (j - i) % 8 not in (1, 7))"
+        hints:
+          - 8 つの頂点から 2 つを選んで結ぶと、線は何本かな。
+          - その中で、対角線でないものはどれかな。
+          - 辺の数をひこう。
+        paths:
+          - [₈C₂ = 28 本, そのうち辺が 8 本, 28 − 8 = 20 本]
+          - [1 つの頂点から 5 本ずつ出る, 8 × 5 = 40 は 1 本を両はしから 2 回数えている, 40 ÷ 2 = 20 本]
+      - part: 今日
+        text: 🌳 のマスは通れません。🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜🏁\n⬜🌳⬜⬜\n⬜⬜⬜⬜\n🏠⬜⬜⬜"
+        answer: 11
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🌳 がないときの行き方は何通りかな。
+          - 🌳 を通る行き方は、🌳 の前と後に分けて数えよう。
+          - 全体からひこう。
+        paths:
+          - [🌳 がなければ ₆C₃ = 20 通り, 🌳 を通るのは ₃C₁ × ₃C₁ = 3 × 3 = 9 通り, 20 − 9 = 11 通り]
+          - [マスに行き方の数を書きこむ（🌳 は 0）, 🏁 は 11]
+      - part: 挑戦
+        text: n 角形の対角線の本数を表す式は、どれですか。
+        choices: [n(n − 3) ÷ 2, n(n − 1) ÷ 2, n(n − 2) ÷ 2]
+        answer: n(n − 3) ÷ 2
+        check: "[c for c, f in (('n(n − 3) ÷ 2', lambda n: Fraction(n * (n - 3), 2)), ('n(n − 1) ÷ 2', lambda n: Fraction(n * (n - 1), 2)), ('n(n − 2) ÷ 2', lambda n: Fraction(n * (n - 2), 2))) if all(f(n) == sum(1 for i, j in itertools.combinations(range(n), 2) if (j - i) % n not in (1, n - 1)) for n in range(4, 12))][0]"
+        hints:
+          - 頂点から 2 つを選んで結ぶ線は ₙC₂ 本だね。そこから何をひくかな。
+          - 1 つの頂点からは、自分ととなりの 2 つを除いた頂点へ対角線が出るね。
+          - n = 4（四角形の対角線 2 本）や n = 5 を入れて確かめよう。
+        paths:
+          - [1 つの頂点から n − 3 本, n 個の頂点で n(n − 3) 本, 1 本を 2 回数えているので n(n − 3) ÷ 2]
+          - [ₙC₂ − n = n(n − 1) ÷ 2 − n, = n(n − 3) ÷ 2]
+        note: n(n − 1) ÷ 2 は辺もふくめた本数。式を選んだら、四角形（2 本）や五角形（5 本）を入れて確かめる習慣をつける。
+    extra:
+      - part: 今日
+        text: 12 チームが、どのチームとも 1 回ずつ試合をします。試合は全部で何回ですか。
+        answer: 66
+        check: "len(set(itertools.combinations(range(12), 2)))"
+        hints:
+          - 1 試合は、2 チームの選び方と同じだね。
+          - ₁₂C₂ を求めよう。
+          - n(n − 1) ÷ 2 に n = 12 を入れてもいいよ。
+        paths:
+          - [₁₂C₂ = 12 × 11 ÷ 2 = 66 回]
+      - part: 今日
+        text: ⭐ のマスを必ず通って、🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n⬜⭐⬜⬜⬜\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 30
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までと、⭐ から 🏁 までに分けよう。
+          - それぞれ、右と上に何回ずつ進むかな。
+          - 積の法則でかけよう。
+        paths:
+          - [🏠 から ⭐ は右 1 上 2 で ₃C₁ = 3, ⭐ から 🏁 は右 3 上 2 で ₅C₂ = 10, 3 × 10 = 30 通り]
+      - part: 今日
+        text: 正六角形の対角線は、全部で何本ありますか。
+        answer: 9
+        check: "sum(1 for i, j in itertools.combinations(range(6), 2) if (j - i) % 6 not in (1, 5))"
+        hints:
+          - 6 つの頂点から 2 つを選んで結ぶと、線は何本かな。
+          - その中に、辺は何本あるかな。
+          - 辺の数をひこう。
+        paths:
+          - [₆C₂ = 15 本, 辺 6 本, 15 − 6 = 9 本]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: ₇C₂ を求めましょう。
+        answer: 21
+        check: "len(set(itertools.combinations(range(7), 2)))"
+        hints:
+          - 7 から 1 ずつ小さくした数を 2 個かけよう。
+          - わる数は 2 × 1 だね。
+          - 計算しよう。
+        paths:
+          - [7 × 6 ÷ 2 = 21]
+      - part: 今日
+        text: ₈C₆ を求めましょう。
+        answer: 28
+        check: "len(set(itertools.combinations(range(8), 6)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₈C₆ は ₈C₂ と同じだね。
+          - ₈C₂ を計算しよう。
+        paths:
+          - [₈C₆ = ₈C₂ = 28]
+      - part: 今日
+        text: 🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜⬜\n⬜⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜⬜"
+        answer: 56
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 右に何回、上に何回進むかな。
+          - 上に進む回を選ぼう。
+          - ₙCᵣ で表して計算しよう。
+        paths:
+          - [右 5 上 3, ₈C₃ = 56 通り]
+      - part: 今日
+        text: ⭐ のマスを必ず通って、🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜⬜🏁\n⬜⬜⬜⭐⬜\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜"
+        answer: 20
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if any(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] == '⭐' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🏠 から ⭐ までと、⭐ から 🏁 までに分けよう。
+          - それぞれの行き方を ₙCᵣ で表そう。
+          - 積の法則でかけよう。
+        paths:
+          - [🏠 から ⭐ は右 3 上 2 で ₅C₂ = 10, ⭐ から 🏁 は右 1 上 1 で 2, 10 × 2 = 20 通り]
+      - part: 今日
+        text: パスカルの三角形の 7 段目です。□ に入る数はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <text x="120" y="16" font-size="13" text-anchor="middle">1</text>
+            <text x="106" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="134" y="33" font-size="13" text-anchor="middle">1</text>
+            <text x="93" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="120" y="50" font-size="13" text-anchor="middle">2</text>
+            <text x="147" y="50" font-size="13" text-anchor="middle">1</text>
+            <text x="80" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="106" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="134" y="67" font-size="13" text-anchor="middle">3</text>
+            <text x="160" y="67" font-size="13" text-anchor="middle">1</text>
+            <text x="66" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="93" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="120" y="84" font-size="13" text-anchor="middle">6</text>
+            <text x="147" y="84" font-size="13" text-anchor="middle">4</text>
+            <text x="174" y="84" font-size="13" text-anchor="middle">1</text>
+            <text x="52" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="80" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="106" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="134" y="101" font-size="13" text-anchor="middle">10</text>
+            <text x="160" y="101" font-size="13" text-anchor="middle">5</text>
+            <text x="188" y="101" font-size="13" text-anchor="middle">1</text>
+            <text x="39" y="118" font-size="13" text-anchor="middle">1</text>
+            <text x="66" y="118" font-size="13" text-anchor="middle">6</text>
+            <text x="93" y="118" font-size="13" text-anchor="middle">15</text>
+            <text x="120" y="118" font-size="13" text-anchor="middle">20</text>
+            <text x="147" y="118" font-size="13" text-anchor="middle">15</text>
+            <text x="174" y="118" font-size="13" text-anchor="middle">6</text>
+            <text x="201" y="118" font-size="13" text-anchor="middle">1</text>
+            <text x="80" y="135" font-size="13" text-anchor="middle">□</text>
+          </svg>
+        answer: 21
+        check: "len(set(itertools.combinations(range(7), 2)))"
+        hints:
+          - □ のすぐ左上とすぐ右上の数は何かな。
+          - 2 つの数をたそう。
+          - ₇C₂ を計算してもいいよ。
+        paths:
+          - [左上は 6、右上は 15, 6 + 15 = 21]
+      - part: 今日
+        text: パスカルの三角形の 9 段目の数（₉C₀ から ₉C₉ まで）を全部たすと、いくつになりますか。
+        answer: 512
+        check: "sum(len(set(itertools.combinations(range(9), r))) for r in range(10))"
+        hints:
+          - 段の和は、1 段下がるごとに何倍になったかな。
+          - 9 段目の和を 2 の累乗で表そう。
+          - 2⁹ を計算しよう。
+        paths:
+          - [段の和は 2 倍ずつ, 9 段目は 2⁹ = 512]
+      - part: 今日
+        text: ₆C₂ = 15、₆C₃ = 20 です。₇C₃ はいくつですか。
+        answer: 35
+        check: "len(set(itertools.combinations(range(7), 3)))"
+        hints:
+          - パスカルの決まりを使おう。
+          - ₇C₃ は、6 段目のどの 2 つの数の下にあるかな。
+          - 2 つの数をたそう。
+        paths:
+          - [₇C₃ = ₆C₂ + ₆C₃, 15 + 20 = 35]
+      - part: 今日
+        text: ₙC₂ = 45 になる n はいくつですか。
+        answer: 10
+        check: "[n for n in range(2, 40) if len(set(itertools.combinations(range(n), 2))) == 45][0]"
+        hints:
+          - ₙC₂ は n(n − 1) ÷ 2 だね。
+          - n(n − 1) はいくつになるかな。
+          - となり合う 2 つの整数の積をさがそう。
+        paths:
+          - [n(n − 1) = 90, 10 × 9 = 90 なので n = 10]
+    extra:
+      - part: 今日
+        text: ₁₀C₇ を求めましょう。
+        answer: 120
+        check: "len(set(itertools.combinations(range(10), 7)))"
+        hints:
+          - 選ばないほうは何個かな。
+          - ₁₀C₇ は ₁₀C₃ と同じだね。
+          - ₁₀C₃ を計算しよう。
+        paths:
+          - [₁₀C₇ = ₁₀C₃ = 10 × 9 × 8 ÷ 6 = 120]
+      - part: 今日
+        text: 🌳 のマスは通れません。🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。
+        figure: "⬜⬜⬜🏁\n⬜⬜⬜⬜\n⬜🌳⬜⬜\n🏠⬜⬜⬜"
+        answer: 8
+        check: "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])"
+        hints:
+          - 🌳 がないときの行き方は何通りかな。
+          - 🌳 を通る行き方を数えよう。
+          - 全体からひこう。
+        paths:
+          - [全体 ₆C₃ = 20, 🌳 を通るのは ₂C₁ × ₄C₂ = 2 × 6 = 12, 20 − 12 = 8 通り]
+      - part: 今日
+        text: 正七角形の対角線は、全部で何本ありますか。
+        answer: 14
+        check: "sum(1 for i, j in itertools.combinations(range(7), 2) if (j - i) % 7 not in (1, 6))"
+        hints:
+          - 7 つの頂点から 2 つを選んで結ぶ線は何本かな。
+          - 辺は何本かな。
+          - ひき算しよう。
+        paths:
+          - [₇C₂ = 21, 辺 7 本, 21 − 7 = 14 本]

@@ -1,0 +1,1239 @@
+# C-012 一筆書きとグラフ
+#
+# 書き方は N-001 の頭の注のとおり。段 3 なので、子に見せる文は学年に合う漢字で書く（L-005 と同じ）。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 点と線の図（グラフ）、点に集まる線の数、奇点（集まる線の数が奇数の点）、一筆書きできるか・どこから始めるか、
+#   2 日目 線を 1 本足してできるようにする、川と橋の地図を点と線にする、集まる線の数の合計、何回に分けてかくか、
+#   3 日目 わけ（なぜ途中の点は偶数か、なぜ奇点から始めるか、なぜ合計は偶数か）、
+#   4 日目 L-005（和の偶奇、交互に変わる、輪に交互に並べる）と混ぜる。あく手を点と線で考える。つながっていない図、5 日目 確認。
+# 前提は L-005 だけ（→ N-008、N-007）なので、数は 100 まで、たし算とひき算だけ。合計を半分にするのは「同じ数ずつ 2 つに分ける」と言う。
+# 一筆書きの決まり「つながっている図は、奇点が 0 こか 2 このときにかけて、それ以外はかけない」は見本で事実として教える。
+#   わけの日に示すのは「かけるなら奇点は 0 こか 2 こ」の向きだけ。0 こか 2 こなら必ずかけることの証明（オイラーの定理）は C-022 にまわす。
+#   「できる」と答える問題は、実際のかき方を paths に書いた。
+# 「グラフ」「次数」の言葉は C-022 で使うので、ここでは「点と線の図」「点に集まる線の数」と言い、言葉は奇点（きてん）だけを教える。
+# 点と線の図は svg で描き、点の名前を ア、イ、ウ… で書く。線どうしは点のほかでは交わらないように描いた。
+#   同じ 2 点を結ぶ 2 本目の線は弧で描く。川と橋の地図は、川を淡い青、島を淡い黄で塗り、橋を太い線で描く。
+# check：一筆書きは、残りの線から今の点につながる線を 1 本ずつ選んでたどる自分を呼ぶ lambda で、全部の線をなぞれるかを調べる。
+#   始めた点にもどるかは、最後の点が始めの点と同じかも調べる。何回に分けるかは、線を 2 組に分ける分け方を全部ためす。
+#   点に集まる線の数は、線の文字列の中にその点の字が何回出るかで数える。あく手は、5 人のあく手の組を全部（2 の 10 乗通り）ためす。
+
+id: C-012
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: この図を一筆書き（ひとふでがき）できるか考えよう。一筆書きは、紙からペンをはなさずに、どの線もちょうど 1 回ずつなぞってかくことです。同じ点は何回通ってもかまいません。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="65" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="65" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="175" y1="58" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="122" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="65" cy="58" r="4" fill="currentColor"/>
+            <circle cx="175" cy="58" r="4" fill="currentColor"/>
+            <circle cx="65" cy="122" r="4" fill="currentColor"/>
+            <circle cx="175" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="52" y="60" font-size="14" text-anchor="middle">イ</text>
+            <text x="188" y="60" font-size="14" text-anchor="middle">ウ</text>
+            <text x="56" y="136" font-size="14" text-anchor="middle">エ</text>
+            <text x="184" y="136" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        explain: 点に集まる線の数を書くと、ア 2、イ 3、ウ 3、エ 2、オ 2 です。集まる線の数が奇数の点を奇点（きてん）といいます。この図の奇点はイとウの 2 こです。つながっている図は、奇点が 0 こか 2 このときに一筆書きできて、それ以外のときはできません。奇点が 2 このときは、一方の奇点から始めて、もう一方の奇点で終わります。たとえば イ → ア → ウ → イ → エ → オ → ウ とかけます。
+      - part: 思い出す
+        text: 3 + 4 + 5 + 6 + 8 は偶数ですか、奇数ですか。計算しないで考えましょう。
+        choices: [偶数, 奇数]
+        answer: 偶数
+        check: "'偶数' if (3 + 4 + 5 + 6 + 8) % 2 == 0 else '奇数'"
+        hints:
+          - たす数の中に、奇数はいくつあるかな。
+          - 奇数の余りの 1 つずつを、2 つずつ組にしてみよう。
+          - 奇数の数が偶数こなら、和はどうなったかな。
+        paths:
+          - [奇数は 3 と 5 の 2 こ, 余りが 2 つで組になる, 偶数]
+      - part: 思い出す
+        text: 消えている電灯があります。スイッチを 1 回おすごとに、ついたり消えたりします。スイッチを 7 回おすと、電灯はどうなっていますか。
+        choices: [ついている, 消えている]
+        answer: ついている
+        check: "'ついている' if 7 % 2 == 1 else '消えている'"
+        hints:
+          - 1 回おすと、どうなるかな。
+          - 2 回おすと、はじめと同じになるね。
+          - 7 は偶数かな、奇数かな。
+        paths:
+          - [2 回ごとにはじめにもどる, 7 回は奇数, ついている]
+      - part: 今日
+        text: 図の点ウに集まる線は何本ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="35" y1="22" x2="35" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="35" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="35" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="205" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="205" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="205" y1="22" x2="205" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="35" cy="22" r="4" fill="currentColor"/>
+            <circle cx="35" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="205" cy="22" r="4" fill="currentColor"/>
+            <circle cx="205" cy="118" r="4" fill="currentColor"/>
+            <text x="24" y="21" font-size="14" text-anchor="middle">ア</text>
+            <text x="24" y="129" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="96" font-size="14" text-anchor="middle">ウ</text>
+            <text x="216" y="21" font-size="14" text-anchor="middle">エ</text>
+            <text x="216" y="129" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 4
+        check: "'アイ アウ イウ ウエ ウオ エオ'.count('ウ')"
+        hints:
+          - 点ウから出ている線を、指でなぞろう。
+          - 左がわと右がわに分けて数えよう。
+          - 数えた線にしるしをつけると、2 回数えずにすむよ。
+        paths:
+          - [左のア・イへ 2 本, 右のエ・オへ 2 本, 4 本]
+      - part: 今日
+        text: 図の奇点はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="22" x2="190" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="50" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="22" r="4" fill="currentColor"/>
+            <circle cx="190" cy="22" r="4" fill="currentColor"/>
+            <circle cx="50" cy="118" r="4" fill="currentColor"/>
+            <circle cx="190" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <text x="39" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="39" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="201" y="130" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="98" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 4
+        check: "sum(1 for v in 'アイウエオ' if 'アイ ウエ アウ イエ アオ イオ ウオ エオ'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 集まる線の数が奇数の点が、奇点だよ。
+          - まん中の点オも数えわすれないようにしよう。
+        paths:
+          - [ア・イ・ウ・エは 3 本ずつ, オは 4 本, 奇数はア・イ・ウ・エの 4 こ]
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="40" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="40" cy="70" r="4" fill="currentColor"/>
+            <circle cx="200" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="27" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="213" y="75" font-size="14" text-anchor="middle">ウ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ アウ イエ ウエ イウ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+          - 奇点が 0 こか 2 こなら、一筆書きできるよ。
+        paths:
+          - [イとウが 3 本で奇点, 奇点は 2 こ, できる（イ → ア → ウ → イ → エ → ウ）]
+      - part: 挑戦
+        text: この図を一筆書きします。ア、イ、ウのどの点から始めるとかけますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="28" x2="120" y2="28" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="28" x2="200" y2="28" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="112" x2="120" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="112" x2="200" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="28" x2="40" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="28" x2="120" y2="112" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="28" x2="200" y2="112" stroke="currentColor" stroke-width="2"/>
+            <circle cx="40" cy="28" r="4" fill="currentColor"/>
+            <circle cx="120" cy="28" r="4" fill="currentColor"/>
+            <circle cx="200" cy="28" r="4" fill="currentColor"/>
+            <circle cx="40" cy="112" r="4" fill="currentColor"/>
+            <circle cx="120" cy="112" r="4" fill="currentColor"/>
+            <circle cx="200" cy="112" r="4" fill="currentColor"/>
+            <text x="28" y="27" font-size="14" text-anchor="middle">ア</text>
+            <text x="120" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="212" y="27" font-size="14" text-anchor="middle">ウ</text>
+            <text x="28" y="123" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="130" font-size="14" text-anchor="middle">オ</text>
+            <text x="212" y="123" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "[v for v in 'アイウ' if (lambda f: f(f, v, 'アイ イウ エオ オカ アエ イオ ウカ'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はどれとどれかな。
+          - 奇点が 2 このときは、奇点から始めるんだったね。
+        paths:
+          - [奇点はイとオ, 奇点のイから始める, イ → ア → エ → オ → イ → ウ → カ → オ]
+        note: 角のアやウから始めて、とちゅうで行き止まりになりやすい。集まる線の数から始める点を決めると、ためさずにすむ。
+    extra:
+      - part: 今日
+        text: 図の点イに集まる線は何本ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="65" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="65" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="175" y1="58" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="122" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="65" cy="58" r="4" fill="currentColor"/>
+            <circle cx="175" cy="58" r="4" fill="currentColor"/>
+            <circle cx="65" cy="122" r="4" fill="currentColor"/>
+            <circle cx="175" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="52" y="60" font-size="14" text-anchor="middle">イ</text>
+            <text x="188" y="60" font-size="14" text-anchor="middle">ウ</text>
+            <text x="56" y="136" font-size="14" text-anchor="middle">エ</text>
+            <text x="184" y="136" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 3
+        check: "'アイ アウ イウ イエ ウオ エオ'.count('イ')"
+        hints:
+          - 点イから出ている線を、指でなぞろう。
+          - 上、横、下に分けて数えよう。
+          - 数えた線にしるしをつけよう。
+        paths:
+          - [アへ 1 本、ウへ 1 本、エへ 1 本, 3 本]
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="18" x2="120" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="180" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="122" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="122" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="18" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="60" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="18" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="70" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="18" r="4" fill="currentColor"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="180" cy="18" r="4" fill="currentColor"/>
+            <circle cx="60" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="180" cy="70" r="4" fill="currentColor"/>
+            <circle cx="60" cy="122" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <circle cx="180" cy="122" r="4" fill="currentColor"/>
+            <text x="50" y="14" font-size="14" text-anchor="middle">ア</text>
+            <text x="120" y="10" font-size="14" text-anchor="middle">イ</text>
+            <text x="190" y="14" font-size="14" text-anchor="middle">ウ</text>
+            <text x="47" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="133" y="63" font-size="14" text-anchor="middle">オ</text>
+            <text x="193" y="75" font-size="14" text-anchor="middle">カ</text>
+            <text x="50" y="136" font-size="14" text-anchor="middle">キ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">ク</text>
+            <text x="190" y="136" font-size="14" text-anchor="middle">ケ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ イウ エオ オカ キク クケ アエ エキ イオ オク ウカ カケ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 角の点、辺のまん中の点、まん中の点で分けて考えよう。
+          - 奇点はいくつあるかな。
+        paths:
+          - [角は 2 本、辺のまん中のイ・エ・カ・クは 3 本、オは 4 本, 奇点は 4 こ, できない]
+      - part: 挑戦
+        text: この図を一筆書きします。ア、イ、エのどの点から始めるとかけますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="75" y1="20" x2="30" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="20" x2="120" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="30" y1="118" x2="120" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="118" x2="210" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="75" cy="20" r="4" fill="currentColor"/>
+            <circle cx="30" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="118" r="4" fill="currentColor"/>
+            <circle cx="210" cy="70" r="4" fill="currentColor"/>
+            <text x="66" y="15" font-size="14" text-anchor="middle">ア</text>
+            <text x="19" y="129" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="136" font-size="14" text-anchor="middle">ウ</text>
+            <text x="223" y="75" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        choices: [ア, イ, エ]
+        answer: エ
+        check: "[v for v in 'アイエ' if (lambda f: f(f, v, 'アイ アウ イウ ウエ'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 線が 1 本だけの点も、奇点だよ。
+          - 奇点のどちらかから始めよう。
+        paths:
+          - [奇点はウ（3 本）とエ（1 本）, エから始める, エ → ウ → ア → イ → ウ]
+
+  - day: 2
+    items:
+      - part: 思い出す
+        text: 図の奇点はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="40" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="40" cy="70" r="4" fill="currentColor"/>
+            <circle cx="200" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="27" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="213" y="75" font-size="14" text-anchor="middle">ウ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        answer: 2
+        check: "sum(1 for v in 'アイウエ' if 'アイ アウ イエ ウエ イウ'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 横の線がある点に気をつけよう。
+          - 奇数の点を数えよう。
+        paths:
+          - [ア 2、イ 3、ウ 3、エ 2, 奇点はイとウの 2 こ]
+      - part: 思い出す
+        text: 5 + 8 + 3 + 6 + 7 は偶数ですか、奇数ですか。計算しないで考えましょう。
+        choices: [偶数, 奇数]
+        answer: 奇数
+        check: "'偶数' if (5 + 8 + 3 + 6 + 7) % 2 == 0 else '奇数'"
+        hints:
+          - たす数の中に、奇数はいくつあるかな。
+          - 奇数の余りを 2 つずつ組にしよう。
+          - 組にならない余りが残るかな。
+        paths:
+          - [奇数は 5、3、7 の 3 こ, 余りが 1 つ残る, 奇数]
+      - part: 今日
+        text: この図に線を 1 本かき足して、一筆書きできる図にします。どの 2 点を結ぶ線をかき足せばよいですか（曲がった線でもかまいません）。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="22" x2="190" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="50" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="22" r="4" fill="currentColor"/>
+            <circle cx="190" cy="22" r="4" fill="currentColor"/>
+            <circle cx="50" cy="118" r="4" fill="currentColor"/>
+            <circle cx="190" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <text x="39" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="39" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="201" y="130" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="98" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        choices: [アとオ, アとイ, オとエ]
+        answer: アとイ
+        check: "[c for c, e in (('アとオ', 'アオ'), ('アとイ', 'アイ'), ('オとエ', 'オエ')) if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ ウエ アウ イエ アオ イオ ウオ エオ'.split() + [e])][0]"
+        hints:
+          - 今の図の奇点はどれかな。
+          - 線を 1 本足すと、両はしの点の線の数が 1 本ずつふえるね。
+          - 奇点を 2 こにへらすには、どんな 2 点を結べばよいかな。
+        paths:
+          - [奇点はア・イ・ウ・エの 4 こ, 奇点どうしのアとイを結ぶと、アとイは 4 本で奇数でなくなる, 奇点はウとエの 2 こになり、かける]
+        note: オは 4 本で奇点ではない。オと結ぶと、オが 5 本で新しい奇点になってしまう。
+      - part: 今日
+        text: 川に 4 本の橋がかかっています。どの橋もちょうど 1 回ずつ渡って散歩します。川を渡れるのは橋だけです。北の岸と南の岸の、どちらから出発すればよいですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="42" width="240" height="56" fill="#7fb8e6" fill-opacity=".35"/>
+            <ellipse cx="80" cy="70" rx="42" ry="15" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="80" y="75" font-size="13" text-anchor="middle">島</text>
+            <text x="190" y="26" font-size="13" text-anchor="middle">北の岸</text>
+            <text x="190" y="128" font-size="13" text-anchor="middle">南の岸</text>
+            <line x1="60" y1="40" x2="60" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="100" y1="40" x2="100" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="80" y1="83" x2="80" y2="100" stroke="currentColor" stroke-width="5"/>
+            <line x1="180" y1="40" x2="180" y2="100" stroke="currentColor" stroke-width="5"/>
+          </svg>
+        choices: [北の岸, 南の岸]
+        answer: 北の岸
+        check: "[c for c, v in (('北の岸', '北'), ('南の岸', '南')) if (lambda f: f(f, v, '北島 北島 島南 北南'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 北の岸、島、南の岸を点に、橋を線にした図をかこう。
+          - それぞれの点に集まる線の数を数えよう。
+          - 奇点から出発するんだったね。
+        paths:
+          - [北の岸 3 本、島 3 本、南の岸 2 本, 奇点は北の岸と島, 北の岸から出発する]
+        note: 陸地を点に、橋を線にすると、一筆書きの問題になる。陸地の形や広さは関係がない。
+      - part: 今日
+        text: 図の、点に集まる線の数を全部たすと、いくつになりますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="35" y1="22" x2="35" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="35" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="35" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="205" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="205" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="205" y1="22" x2="205" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="35" cy="22" r="4" fill="currentColor"/>
+            <circle cx="35" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="205" cy="22" r="4" fill="currentColor"/>
+            <circle cx="205" cy="118" r="4" fill="currentColor"/>
+            <text x="24" y="21" font-size="14" text-anchor="middle">ア</text>
+            <text x="24" y="129" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="96" font-size="14" text-anchor="middle">ウ</text>
+            <text x="216" y="21" font-size="14" text-anchor="middle">エ</text>
+            <text x="216" y="129" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 12
+        check: "sum('アイ アウ イウ ウエ ウオ エオ'.count(v) for v in 'アイウエオ')"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 5 つの点の数をたそう。
+          - 線は全部で何本あるかも数えて、くらべてみよう。
+        paths:
+          - [ア 2、イ 2、ウ 4、エ 2、オ 2, 2 + 2 + 4 + 2 + 2 = 12]
+        note: 線は 6 本で、合計 12 はその 2 回分になっている。3 日目のわけにつながる。
+      - part: 挑戦
+        text: この図は一筆書きできません。ペンを紙からはなして、何回かに分けてかきます。どの線も 1 回ずつなぞるとき、少なくとも何回に分けてかけばよいですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="22" x2="190" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="50" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="22" r="4" fill="currentColor"/>
+            <circle cx="190" cy="22" r="4" fill="currentColor"/>
+            <circle cx="50" cy="118" r="4" fill="currentColor"/>
+            <circle cx="190" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <text x="39" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="39" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="201" y="130" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="98" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 2
+        check: "(lambda E: 1 if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), E) else (2 if any((lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), [E[i] for i in range(8) if m >> i & 1]) and (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), [E[i] for i in range(8) if not m >> i & 1]) for m in range(1, 255)) else 3))('アイ ウエ アウ イエ アオ イオ ウオ エオ'.split())"
+        hints:
+          - 奇点はいくつあるかな。
+          - 1 回のかき方で、始めと終わりになれる奇点はいくつかな。
+          - 奇点を 2 こずつ組にしよう。
+        paths:
+          - [奇点は 4 こ, 1 回で始めと終わりになる奇点は 2 こ, 4 こを 2 こずつで 2 回]
+          - [ア → イ → オ → ア → ウ → エ, イ → エ → オ → ウ の 2 回でかける]
+    extra:
+      - part: 今日
+        text: この図を一筆書きします。ア、イ、ウのどの点から始めるとかけますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="15" x2="200" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="58" x2="168" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="168" y1="125" x2="72" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="72" y1="125" x2="40" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="58" x2="120" y2="15" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="15" x2="168" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="15" x2="72" y2="125" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="15" r="4" fill="currentColor"/>
+            <circle cx="200" cy="58" r="4" fill="currentColor"/>
+            <circle cx="168" cy="125" r="4" fill="currentColor"/>
+            <circle cx="72" cy="125" r="4" fill="currentColor"/>
+            <circle cx="40" cy="58" r="4" fill="currentColor"/>
+            <text x="134" y="18" font-size="14" text-anchor="middle">ア</text>
+            <text x="213" y="61" font-size="14" text-anchor="middle">イ</text>
+            <text x="177" y="140" font-size="14" text-anchor="middle">ウ</text>
+            <text x="63" y="140" font-size="14" text-anchor="middle">エ</text>
+            <text x="27" y="61" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "[v for v in 'アイウ' if (lambda f: f(f, v, 'アイ イウ ウエ エオ オア アウ アエ'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はどれとどれかな。
+          - 奇点から始めよう。
+        paths:
+          - [ア 4、イ 2、ウ 3、エ 3、オ 2, 奇点はウとエ, ウから始める（ウ → イ → ア → ウ → エ → ア → オ → エ）]
+      - part: 今日
+        text: この図に線を 1 本かき足して、一筆書きできる図にします。どの 2 点を結ぶ線をかき足せばよいですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="18" x2="120" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="180" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="122" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="122" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="18" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="60" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="18" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="70" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="18" r="4" fill="currentColor"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="180" cy="18" r="4" fill="currentColor"/>
+            <circle cx="60" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="180" cy="70" r="4" fill="currentColor"/>
+            <circle cx="60" cy="122" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <circle cx="180" cy="122" r="4" fill="currentColor"/>
+            <text x="50" y="14" font-size="14" text-anchor="middle">ア</text>
+            <text x="120" y="10" font-size="14" text-anchor="middle">イ</text>
+            <text x="190" y="14" font-size="14" text-anchor="middle">ウ</text>
+            <text x="47" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="133" y="63" font-size="14" text-anchor="middle">オ</text>
+            <text x="193" y="75" font-size="14" text-anchor="middle">カ</text>
+            <text x="50" y="136" font-size="14" text-anchor="middle">キ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">ク</text>
+            <text x="190" y="136" font-size="14" text-anchor="middle">ケ</text>
+          </svg>
+        choices: [イとエ, アとオ, イとオ]
+        answer: イとエ
+        check: "[c for c, e in (('イとエ', 'イエ'), ('アとオ', 'アオ'), ('イとオ', 'イオ')) if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ イウ エオ オカ キク クケ アエ エキ イオ オク ウカ カケ'.split() + [e])][0]"
+        hints:
+          - 今の図の奇点はどれかな。
+          - 線を 1 本足すと、両はしの点の線の数が 1 本ずつふえるね。
+          - 奇点どうしを結ぶものをさがそう。
+        paths:
+          - [奇点はイ・エ・カ・ク, 奇点どうしのイとエを結ぶ, 奇点はカとクの 2 こになる]
+      - part: 今日
+        text: ある点と線の図で、点に集まる線の数は 3、3、4、2、2 でした。線は全部で何本ありますか。
+        answer: 7
+        check: "(3 + 3 + 4 + 2 + 2) // 2"
+        hints:
+          - 集まる線の数を全部たそう。
+          - 線 1 本は、両はしの 2 つの点で 1 回ずつ数えられるね。
+          - 合計を、同じ数ずつ 2 つに分けよう。
+        paths:
+          - [3 + 3 + 4 + 2 + 2 = 14, 線 1 本を 2 回数えている, 14 は 7 と 7 で 7 本]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: 一筆書きで、始めの点でも終わりの点でもない点（とちゅうで通るだけの点）は、集まる線の数が必ず偶数です。なぜかを、図の点アを例にして文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="65" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="65" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="175" y1="58" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="122" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="65" cy="58" r="4" fill="currentColor"/>
+            <circle cx="175" cy="58" r="4" fill="currentColor"/>
+            <circle cx="65" cy="122" r="4" fill="currentColor"/>
+            <circle cx="175" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="52" y="60" font-size="14" text-anchor="middle">イ</text>
+            <text x="188" y="60" font-size="14" text-anchor="middle">ウ</text>
+            <text x="56" y="136" font-size="14" text-anchor="middle">エ</text>
+            <text x="184" y="136" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        explain: 例：「とちゅうの点は、通るたびに、入ってくる線 1 本と出ていく線 1 本を使う。たとえば イ → ア → ウ とかくと、点アでは イア の線で入って アウ の線で出る。入る線と出る線は 2 本で 1 組になる。何回通っても、線は 1 組 2 本ずつ使うので、2 つずつ組にして余りが出ない。だから偶数。」と書ければよい。「入る線と出る線が組になる」ことと、2 つずつ組にして余りが出ないのが偶数（L-005）であることが書けているかを見る。
+        hints:
+          - 点アを 1 回通るとき、線を何本使うかな。
+          - 入る線と出る線を組にしてみよう。
+          - 「2 つずつ組にして余りが出ないから」を使って書こう。
+        paths:
+          - [とちゅうの点は通るたびに入る線と出る線を使う, 2 本で 1 組, 何回通っても余りが出ない, だから偶数]
+      - part: わけ
+        text: この図の奇点はイとウです。この図を一筆書きするとき、イかウから始めないといけません。なぜかを文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="65" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="175" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="58" x2="65" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="175" y1="58" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="65" y1="122" x2="175" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="65" cy="58" r="4" fill="currentColor"/>
+            <circle cx="175" cy="58" r="4" fill="currentColor"/>
+            <circle cx="65" cy="122" r="4" fill="currentColor"/>
+            <circle cx="175" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="52" y="60" font-size="14" text-anchor="middle">イ</text>
+            <text x="188" y="60" font-size="14" text-anchor="middle">ウ</text>
+            <text x="56" y="136" font-size="14" text-anchor="middle">エ</text>
+            <text x="184" y="136" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        explain: 例：「とちゅうで通るだけの点は、入る線と出る線が組になるので、集まる線の数は偶数になる。イは 3 本で奇数なので、とちゅうの点にはなれず、始めの点か終わりの点になる。ウも同じ。始めの点は最初に出る線 1 本が組にならず、終わりの点は最後に入る線 1 本が組にならない。だからイとウは始めと終わりの点で、イかウから始める。」と書ければよい。前のわけ（とちゅうの点は偶数）を使っているか、始めの点と終わりの点だけが組にならない線を持つことを書けているかを見る。
+        hints:
+          - とちゅうで通るだけの点は、集まる線の数がどうなるんだったかな。
+          - イは 3 本だね。とちゅうの点になれるかな。
+          - 始めの点と終わりの点は、どの線が組にならないかを書こう。
+        paths:
+          - [とちゅうの点は偶数, イとウは奇数なのでとちゅうの点になれない, 始めか終わりの点になる, だからイかウから始める]
+      - part: わけ
+        text: どんな点と線の図でも、点に集まる線の数を全部たすと偶数になります。なぜかを、図を例にして文で書きましょう。そのことから、奇点が 1 こや 3 この図がないわけも考えましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="40" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="40" cy="70" r="4" fill="currentColor"/>
+            <circle cx="200" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="27" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="213" y="75" font-size="14" text-anchor="middle">ウ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        explain: 例：「線 1 本には両はしに 2 つの点がある。点ごとに集まる線を数えると、どの線も両はしの点で 1 回ずつ、2 回数えられる。この図は線が 5 本で、合計は 2 + 3 + 3 + 2 = 10 で、5 本を 2 回たした数。だから合計は、線の本数を 2 回たした数になり、いつも偶数。和が偶数になるのは奇数が偶数こあるときなので、奇点はいつも偶数こある。奇点が 1 こや 3 この図はない。」と書ければよい。L-005 の「和の偶奇は奇数の数で決まる」を使って奇点の数に結びつけられていれば、なおよい。
+        hints:
+          - 線 1 本は、どの点で数えられるかな。
+          - 合計は、線の本数の何回分かな。
+          - 和が偶数になるのは、奇数がいくつあるときだったかな。
+        paths:
+          - [線 1 本は両はしの点で 2 回数える, 合計は線の本数の 2 回分で偶数, 和が偶数なら奇数は偶数こ, 奇点は偶数こ]
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="15" x2="200" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="58" x2="168" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="168" y1="125" x2="72" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="72" y1="125" x2="40" y2="58" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="58" x2="120" y2="15" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="15" x2="168" y2="125" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="15" x2="72" y2="125" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="15" r="4" fill="currentColor"/>
+            <circle cx="200" cy="58" r="4" fill="currentColor"/>
+            <circle cx="168" cy="125" r="4" fill="currentColor"/>
+            <circle cx="72" cy="125" r="4" fill="currentColor"/>
+            <circle cx="40" cy="58" r="4" fill="currentColor"/>
+            <text x="134" y="18" font-size="14" text-anchor="middle">ア</text>
+            <text x="213" y="61" font-size="14" text-anchor="middle">イ</text>
+            <text x="177" y="140" font-size="14" text-anchor="middle">ウ</text>
+            <text x="63" y="140" font-size="14" text-anchor="middle">エ</text>
+            <text x="27" y="61" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ イウ ウエ エオ オア アウ アエ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+          - できるなら、どの点から始めるかも考えよう。
+        paths:
+          - [奇点はウとエの 2 こ, できる, ウ → イ → ア → ウ → エ → ア → オ → エ]
+      - part: 今日
+        text: 点が 4 つだけの図で、点に集まる線の数が 3、2、2、2 になるようにかけますか。
+        choices: [かける, かけない]
+        answer: かけない
+        check: "'かける' if any(sorted((m[0] + m[1] + m[2], m[0] + m[3] + m[4], m[1] + m[3] + m[5], m[2] + m[4] + m[5])) == [2, 2, 2, 3] for m in itertools.product(range(4), repeat=6)) else 'かけない'"
+        hints:
+          - 集まる線の数を全部たすと、いくつかな。
+          - 合計は、いつも偶数になるんだったね。
+          - 奇点はいくつになるかな。
+        paths:
+          - [合計は 3 + 2 + 2 + 2 = 9 で奇数, 合計はいつも偶数のはず, かけない]
+        note: いろいろかいてみて「かけなかった」だけでは、まだためしていないかき方があるかもしれない。合計の偶奇を使うと、ためさずに言い切れる。
+    extra:
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="12" x2="75" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="12" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="75" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="50" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="12" r="4" fill="currentColor"/>
+            <circle cx="75" cy="50" r="4" fill="currentColor"/>
+            <circle cx="165" cy="50" r="4" fill="currentColor"/>
+            <circle cx="75" cy="100" r="4" fill="currentColor"/>
+            <circle cx="165" cy="100" r="4" fill="currentColor"/>
+            <circle cx="120" cy="132" r="4" fill="currentColor"/>
+            <text x="134" y="15" font-size="14" text-anchor="middle">ア</text>
+            <text x="63" y="50" font-size="14" text-anchor="middle">イ</text>
+            <text x="177" y="50" font-size="14" text-anchor="middle">ウ</text>
+            <text x="64" y="112" font-size="14" text-anchor="middle">エ</text>
+            <text x="176" y="112" font-size="14" text-anchor="middle">オ</text>
+            <text x="134" y="137" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ アウ イウ イエ ウオ エオ エカ オカ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+          - 奇点が 0 こか 2 こかを見よう。
+        paths:
+          - [イ・ウ・エ・オが 3 本で奇点, 奇点は 4 こ, できない]
+      - part: 今日
+        text: この図を一筆書きします。ア、イ、エのどの点から始めるとかけますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="45" y1="22" x2="195" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="195" y1="22" x2="195" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="195" y1="118" x2="45" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="45" y1="118" x2="45" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="45" y1="22" x2="195" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="45" cy="22" r="4" fill="currentColor"/>
+            <circle cx="195" cy="22" r="4" fill="currentColor"/>
+            <circle cx="195" cy="118" r="4" fill="currentColor"/>
+            <circle cx="45" cy="118" r="4" fill="currentColor"/>
+            <text x="34" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="206" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="206" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="34" y="130" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        choices: [ア, イ, エ]
+        answer: ア
+        check: "[v for v in 'アイエ' if (lambda f: f(f, v, 'アイ イウ ウエ エア アウ'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - ななめの線がある点に気をつけよう。
+          - 奇点から始めよう。
+        paths:
+          - [奇点はアとウ, アから始める, ア → イ → ウ → エ → ア → ウ]
+      - part: 今日
+        text: 図の奇点はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="22" x2="190" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="50" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="22" r="4" fill="currentColor"/>
+            <circle cx="190" cy="22" r="4" fill="currentColor"/>
+            <circle cx="50" cy="118" r="4" fill="currentColor"/>
+            <circle cx="190" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <text x="39" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="39" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="201" y="130" font-size="14" text-anchor="middle">エ</text>
+            <text x="133" y="63" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 2
+        check: "sum(1 for v in 'アイウエオ' if 'アイ ウエ アウ イエ アオ オエ'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - まん中の点オも数えよう。
+          - 奇数の点を数えよう。
+        paths:
+          - [ア 3、イ 2、ウ 2、エ 3、オ 2, 奇点はアとエの 2 こ]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 図の奇点はいくつありますか。同じ 2 点を結ぶ線が 2 本あるところもあります。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="30" x2="190" y2="30" stroke="currentColor" stroke-width="2"/>
+            <path d="M50 30 Q120 6 190 30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="190" y1="30" x2="190" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="110" x2="50" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="110" x2="50" y2="30" stroke="currentColor" stroke-width="2"/>
+            <path d="M50 110 Q26 70 50 30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="50" cy="30" r="4" fill="currentColor"/>
+            <circle cx="190" cy="30" r="4" fill="currentColor"/>
+            <circle cx="190" cy="110" r="4" fill="currentColor"/>
+            <circle cx="50" cy="110" r="4" fill="currentColor"/>
+            <text x="39" y="29" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="29" font-size="14" text-anchor="middle">イ</text>
+            <text x="201" y="121" font-size="14" text-anchor="middle">ウ</text>
+            <text x="39" y="121" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        answer: 2
+        check: "sum(1 for v in 'アイウエ' if 'アイ アイ イウ ウエ エア エア'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 曲がった線も 1 本と数えるよ。
+          - 奇数の点を数えよう。
+        paths:
+          - [ア 4、イ 3、ウ 2、エ 3, 奇点はイとエの 2 こ]
+      - part: 思い出す
+        text: 7 人が輪になって並びます。男子と女子が交互になるように並ぶことはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(all(p[i] != p[(i + 1) % 7] for i in range(7)) for p in itertools.product('男女', repeat=7)) else 'できない'"
+        hints:
+          - 交互に並ぶと、男子と女子の人数はどうなるかな。
+          - 男子と女子で 2 人ずつ組にしてみよう。
+          - 7 は偶数かな、奇数かな。
+        paths:
+          - [輪で交互なら男子と女子が同じ人数, 人数の合計は偶数になる, 7 は奇数なのでできない]
+      - part: 今日
+        text: 表が上になっているコインを、1 回ずつ裏返していきます。12 回裏返すと、上はどちらですか。
+        choices: [表, うら]
+        answer: 表
+        check: "'表' if 12 % 2 == 0 else 'うら'"
+        hints:
+          - 1 回裏返すと、どうなるかな。
+          - 2 回でもとにもどるね。
+          - 12 は偶数かな、奇数かな。
+        paths:
+          - [2 回ごとにもとにもどる, 12 は偶数, 表]
+      - part: 今日
+        text: 5 人がいます。どの人も、ほかのちょうど 3 人と 1 回ずつあく手をすることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "(lambda P: 'できる' if any(all(sum(1 for k in range(10) if m >> k & 1 and v in P[k]) == 3 for v in range(5)) for m in range(1024)) else 'できない')(sorted(itertools.combinations(range(5), 2)))"
+        hints:
+          - 人を点に、あく手を線にした図で考えよう。
+          - 点に集まる線の数を全部たすと、いくつになるかな。
+          - 合計はいつも偶数になるはずだね。
+        paths:
+          - [人を点、あく手を線にする, 合計は 3 + 3 + 3 + 3 + 3 = 15 で奇数, 合計は偶数のはずなのでできない]
+        note: あく手 1 回は 2 人で数えるので、全員のあく手の回数の合計は、あく手の回数の 2 回分になる。
+      - part: 今日
+        text: この図は、奇点が 1 つもありません。一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="20" x2="20" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="20" x2="100" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="20" y1="118" x2="100" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="20" x2="140" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="20" x2="220" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="140" y1="118" x2="220" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="20" r="4" fill="currentColor"/>
+            <circle cx="20" cy="118" r="4" fill="currentColor"/>
+            <circle cx="100" cy="118" r="4" fill="currentColor"/>
+            <circle cx="180" cy="20" r="4" fill="currentColor"/>
+            <circle cx="140" cy="118" r="4" fill="currentColor"/>
+            <circle cx="220" cy="118" r="4" fill="currentColor"/>
+            <text x="50" y="17" font-size="14" text-anchor="middle">ア</text>
+            <text x="8" y="129" font-size="14" text-anchor="middle">イ</text>
+            <text x="95" y="135" font-size="14" text-anchor="middle">ウ</text>
+            <text x="190" y="17" font-size="14" text-anchor="middle">エ</text>
+            <text x="145" y="135" font-size="14" text-anchor="middle">オ</text>
+            <text x="232" y="129" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ アウ イウ エオ エカ オカ'.split()) else 'できない'"
+        hints:
+          - 図は 1 つにつながっているかな。
+          - 左の三角形から右の三角形へ、ペンをはなさずに行けるかな。
+          - 決まりは「つながっている図」のときの決まりだったね。
+        paths:
+          - [2 つの三角形がはなれている, ペンをはなさずに両方はかけない, できない]
+        note: 奇点の数だけを見て「できる」と答えやすい。決まりは図がつながっているときのもの。
+      - part: 挑戦
+        text: ア、イ、ウ、エ、オの 5 人が、何人かとあく手をしました（同じ 2 人は 1 回まで）。あく手をした回数を聞くと、アは 1 回、イは 2 回、ウは 2 回、エは 3 回でした。オの回数として、ありえるのはどれですか。
+        choices: [1, 3, 4]
+        answer: 4
+        check: "(lambda P: [x for x in (1, 3, 4) if any(sorted(sum(1 for k in range(10) if m >> k & 1 and v in P[k]) for v in range(5)) == sorted([1, 2, 2, 3, x]) for m in range(1024))][0])(sorted(itertools.combinations(range(5), 2)))"
+        hints:
+          - 回数の合計は、偶数か奇数のどちらになるはずかな。
+          - 1 + 2 + 2 + 3 は偶数かな、奇数かな。
+          - 合計が偶数になる数を選んで、本当にできるかも図で確かめよう。
+        paths:
+          - [合計は偶数のはず, 1 + 2 + 2 + 3 = 8 なのでオは偶数, 4 なら オが全員とあく手し、エがイとウともあく手するとできる]
+        note: 偶奇で 1 と 3 は消せる。4 が本当にできることは、図をかいて確かめる。偶奇が合っても、できるとはかぎらない。
+    extra:
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="70" y1="22" x2="25" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="25" y1="70" x2="70" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="70" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="70" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="170" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="170" y1="22" x2="215" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="215" y1="70" x2="170" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="170" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="70" cy="22" r="4" fill="currentColor"/>
+            <circle cx="25" cy="70" r="4" fill="currentColor"/>
+            <circle cx="70" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="170" cy="22" r="4" fill="currentColor"/>
+            <circle cx="215" cy="70" r="4" fill="currentColor"/>
+            <circle cx="170" cy="118" r="4" fill="currentColor"/>
+            <text x="61" y="18" font-size="14" text-anchor="middle">ア</text>
+            <text x="12" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="61" y="132" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="94" font-size="14" text-anchor="middle">ウ</text>
+            <text x="179" y="18" font-size="14" text-anchor="middle">オ</text>
+            <text x="228" y="75" font-size="14" text-anchor="middle">カ</text>
+            <text x="179" y="132" font-size="14" text-anchor="middle">キ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ イエ エウ ウア ウオ オカ カキ キウ'.split()) else 'できない'"
+        hints:
+          - 図は 1 つにつながっているかな。
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+        paths:
+          - [つながっていて奇点は 0 こ, できる, ウ → ア → イ → エ → ウ → オ → カ → キ → ウ]
+      - part: 今日
+        text: 1、3、5、7、9 の 5 まいのカードから 4 まいを選んで、数の和を 25 にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(sum(c) == 25 for c in itertools.combinations((1, 3, 5, 7, 9), 4)) else 'できない'"
+        hints:
+          - カードの数は、全部偶数かな、奇数かな。
+          - 奇数を 4 こたすと、偶数かな、奇数かな。
+          - 25 は偶数かな、奇数かな。
+        paths:
+          - [奇数を 4 こたすと偶数, 25 は奇数, できない]
+      - part: 今日
+        text: 川に 5 本の橋がかかっています。どの橋もちょうど 1 回ずつ渡って散歩します。出発した所にもどってくることはできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="42" width="240" height="56" fill="#7fb8e6" fill-opacity=".35"/>
+            <ellipse cx="80" cy="70" rx="42" ry="15" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="80" y="75" font-size="13" text-anchor="middle">島</text>
+            <text x="190" y="26" font-size="13" text-anchor="middle">北の岸</text>
+            <text x="190" y="128" font-size="13" text-anchor="middle">南の岸</text>
+            <line x1="55" y1="40" x2="55" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="80" y1="40" x2="80" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="105" y1="40" x2="105" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="65" y1="83" x2="65" y2="100" stroke="currentColor" stroke-width="5"/>
+            <line x1="95" y1="83" x2="95" y2="100" stroke="currentColor" stroke-width="5"/>
+          </svg>
+        choices: [もどれる, もどれない]
+        answer: もどれない
+        check: "'もどれる' if (lambda f, E: any(f(f, s, s, E) for s in set(''.join(E))))(lambda f, s, v, R: v == s if len(R) == 0 else any(f(f, s, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), '北島 北島 北島 島南 島南'.split()) else 'もどれない'"
+        hints:
+          - 陸地を点に、橋を線にした図をかこう。
+          - それぞれの点に集まる線の数を数えよう。
+          - 出発した所にもどるとき、出発した点はとちゅうの点と同じように考えられるかな。
+        paths:
+          - [北の岸 3 本、島 5 本、南の岸 2 本, 奇点が 2 こある, 始めと終わりが奇点になるので、もどれない]
+        note: 始めの点にもどる一筆書きでは、始めの点も、出る線ともどる線が組になるので、全部の点が偶数でないといけない。
+
+  - day: 5
+    items:
+      - part: 今日
+        text: 図の点エに集まる線は何本ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="12" x2="75" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="12" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="75" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="50" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="12" r="4" fill="currentColor"/>
+            <circle cx="75" cy="50" r="4" fill="currentColor"/>
+            <circle cx="165" cy="50" r="4" fill="currentColor"/>
+            <circle cx="75" cy="100" r="4" fill="currentColor"/>
+            <circle cx="165" cy="100" r="4" fill="currentColor"/>
+            <circle cx="120" cy="132" r="4" fill="currentColor"/>
+            <text x="134" y="15" font-size="14" text-anchor="middle">ア</text>
+            <text x="63" y="50" font-size="14" text-anchor="middle">イ</text>
+            <text x="177" y="50" font-size="14" text-anchor="middle">ウ</text>
+            <text x="64" y="112" font-size="14" text-anchor="middle">エ</text>
+            <text x="176" y="112" font-size="14" text-anchor="middle">オ</text>
+            <text x="134" y="137" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        answer: 3
+        check: "'アイ アウ イウ イエ ウオ エオ エカ オカ'.count('エ')"
+        hints:
+          - 点エから出ている線を、指でなぞろう。
+          - 上、横、下に分けて数えよう。
+          - 数えた線にしるしをつけよう。
+        paths:
+          - [イへ 1 本、オへ 1 本、カへ 1 本, 3 本]
+      - part: 今日
+        text: 図の奇点はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="60" y1="18" x2="120" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="180" y2="18" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="122" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="122" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="18" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="60" y1="70" x2="60" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="18" x2="180" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="180" y1="70" x2="180" y2="122" stroke="currentColor" stroke-width="2"/>
+            <circle cx="60" cy="18" r="4" fill="currentColor"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="180" cy="18" r="4" fill="currentColor"/>
+            <circle cx="60" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="180" cy="70" r="4" fill="currentColor"/>
+            <circle cx="60" cy="122" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <circle cx="180" cy="122" r="4" fill="currentColor"/>
+            <text x="50" y="14" font-size="14" text-anchor="middle">ア</text>
+            <text x="120" y="10" font-size="14" text-anchor="middle">イ</text>
+            <text x="190" y="14" font-size="14" text-anchor="middle">ウ</text>
+            <text x="47" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="133" y="63" font-size="14" text-anchor="middle">オ</text>
+            <text x="193" y="75" font-size="14" text-anchor="middle">カ</text>
+            <text x="50" y="136" font-size="14" text-anchor="middle">キ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">ク</text>
+            <text x="190" y="136" font-size="14" text-anchor="middle">ケ</text>
+          </svg>
+        answer: 4
+        check: "sum(1 for v in 'アイウエオカキクケ' if 'アイ イウ エオ オカ キク クケ アエ エキ イオ オク ウカ カケ'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 角の点、辺のまん中の点、まん中の点で分けよう。
+          - 奇数の点を数えよう。
+        paths:
+          - [角は 2 本、イ・エ・カ・クは 3 本、オは 4 本, 奇点は 4 こ]
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="22" x2="190" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="118" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="50" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="22" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="22" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="190" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="50" cy="22" r="4" fill="currentColor"/>
+            <circle cx="190" cy="22" r="4" fill="currentColor"/>
+            <circle cx="50" cy="118" r="4" fill="currentColor"/>
+            <circle cx="190" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <text x="39" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="39" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="201" y="130" font-size="14" text-anchor="middle">エ</text>
+            <text x="133" y="63" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ ウエ アウ イエ アオ オエ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+          - できるなら、どの点から始めるかも考えよう。
+        paths:
+          - [奇点はアとエの 2 こ, できる, ア → イ → エ → ウ → ア → オ → エ]
+      - part: 今日
+        text: この図は一筆書きできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="12" x2="75" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="12" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="165" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="50" x2="75" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="50" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="165" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="75" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="100" x2="120" y2="132" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="12" r="4" fill="currentColor"/>
+            <circle cx="75" cy="50" r="4" fill="currentColor"/>
+            <circle cx="165" cy="50" r="4" fill="currentColor"/>
+            <circle cx="75" cy="100" r="4" fill="currentColor"/>
+            <circle cx="165" cy="100" r="4" fill="currentColor"/>
+            <circle cx="120" cy="132" r="4" fill="currentColor"/>
+            <text x="134" y="15" font-size="14" text-anchor="middle">ア</text>
+            <text x="63" y="50" font-size="14" text-anchor="middle">イ</text>
+            <text x="177" y="50" font-size="14" text-anchor="middle">ウ</text>
+            <text x="64" y="112" font-size="14" text-anchor="middle">エ</text>
+            <text x="176" y="112" font-size="14" text-anchor="middle">オ</text>
+            <text x="134" y="137" font-size="14" text-anchor="middle">カ</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f, E: any(f(f, v, E) for v in set(''.join(E))))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ アウ イウ イエ ウオ エオ エカ オカ'.split()) else 'できない'"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はいくつあるかな。
+          - 奇点が 0 こか 2 こかを見よう。
+        paths:
+          - [イ・ウ・エ・オが 3 本, 奇点は 4 こ, できない]
+      - part: 今日
+        text: この図を一筆書きします。イ、ウ、エのどの点から始めるとかけますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="45" y1="22" x2="195" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="195" y1="22" x2="195" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="195" y1="118" x2="45" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="45" y1="118" x2="45" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="45" y1="22" x2="195" y2="118" stroke="currentColor" stroke-width="2"/>
+            <circle cx="45" cy="22" r="4" fill="currentColor"/>
+            <circle cx="195" cy="22" r="4" fill="currentColor"/>
+            <circle cx="195" cy="118" r="4" fill="currentColor"/>
+            <circle cx="45" cy="118" r="4" fill="currentColor"/>
+            <text x="34" y="20" font-size="14" text-anchor="middle">ア</text>
+            <text x="206" y="20" font-size="14" text-anchor="middle">イ</text>
+            <text x="206" y="130" font-size="14" text-anchor="middle">ウ</text>
+            <text x="34" y="130" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        choices: [イ, ウ, エ]
+        answer: ウ
+        check: "[v for v in 'イウエ' if (lambda f: f(f, v, 'アイ イウ ウエ エア アウ'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - 奇点はどれとどれかな。
+          - 奇点から始めよう。
+        paths:
+          - [奇点はアとウ, ウから始める, ウ → イ → ア → ウ → エ → ア]
+      - part: 今日
+        text: 川に 4 本の橋がかかっています。どの橋もちょうど 1 回ずつ渡って散歩します。北の岸と島の、どちらから出発すればよいですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0" y="42" width="240" height="56" fill="#7fb8e6" fill-opacity=".35"/>
+            <ellipse cx="80" cy="70" rx="42" ry="15" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="80" y="75" font-size="13" text-anchor="middle">島</text>
+            <text x="190" y="26" font-size="13" text-anchor="middle">北の岸</text>
+            <text x="190" y="128" font-size="13" text-anchor="middle">南の岸</text>
+            <line x1="80" y1="40" x2="80" y2="57" stroke="currentColor" stroke-width="5"/>
+            <line x1="80" y1="83" x2="80" y2="100" stroke="currentColor" stroke-width="5"/>
+            <line x1="160" y1="40" x2="160" y2="100" stroke="currentColor" stroke-width="5"/>
+            <line x1="200" y1="40" x2="200" y2="100" stroke="currentColor" stroke-width="5"/>
+          </svg>
+        choices: [北の岸, 島]
+        answer: 北の岸
+        check: "[c for c, v in (('北の岸', '北'), ('島', '島')) if (lambda f: f(f, v, '北島 島南 北南 北南'.split()))(lambda f, v, R: len(R) == 0 or any(f(f, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]))][0]"
+        hints:
+          - 北の岸、島、南の岸を点に、橋を線にした図をかこう。
+          - それぞれの点に集まる線の数を数えよう。
+          - 奇点から出発しよう。
+        paths:
+          - [北の岸 3 本、島 2 本、南の岸 3 本, 奇点は北の岸と南の岸, 北の岸から出発する]
+      - part: 今日
+        text: この図に線を 1 本かき足して、出発した点にもどってくる一筆書きができる図にします。どの 2 点を結ぶ線をかき足せばよいですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="50" y1="30" x2="190" y2="30" stroke="currentColor" stroke-width="2"/>
+            <path d="M50 30 Q120 6 190 30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="190" y1="30" x2="190" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="190" y1="110" x2="50" y2="110" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="110" x2="50" y2="30" stroke="currentColor" stroke-width="2"/>
+            <path d="M50 110 Q26 70 50 30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="50" cy="30" r="4" fill="currentColor"/>
+            <circle cx="190" cy="30" r="4" fill="currentColor"/>
+            <circle cx="190" cy="110" r="4" fill="currentColor"/>
+            <circle cx="50" cy="110" r="4" fill="currentColor"/>
+            <text x="39" y="29" font-size="14" text-anchor="middle">ア</text>
+            <text x="201" y="29" font-size="14" text-anchor="middle">イ</text>
+            <text x="201" y="121" font-size="14" text-anchor="middle">ウ</text>
+            <text x="39" y="121" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        choices: [アとウ, イとエ, アとイ]
+        answer: イとエ
+        check: "[c for c, e in (('アとウ', 'アウ'), ('イとエ', 'イエ'), ('アとイ', 'アイ')) if (lambda f, E: any(f(f, s, s, E) for s in set(''.join(E))))(lambda f, s, v, R: v == s if len(R) == 0 else any(f(f, s, R[i].replace(v, '', 1), R[:i] + R[i + 1:]) for i in range(len(R)) if v in R[i]), 'アイ アイ イウ ウエ エア エア'.split() + [e])][0]"
+        hints:
+          - 今の図の奇点はどれかな。
+          - 出発した点にもどるには、奇点がいくつならよいかな。
+          - 奇点どうしを結ぼう。
+        paths:
+          - [奇点はイとエ, イとエを結ぶと奇点が 0 こ, どこから始めてももどってこられる]
+        note: アとイを結ぶと、奇点はアとエの 2 こになり、一筆書きはできるが、もどってはこられない。
+      - part: 今日
+        text: 5 人がいます。どの人も、ほかのちょうど 1 人とだけあく手をすることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "(lambda P: 'できる' if any(all(sum(1 for k in range(10) if m >> k & 1 and v in P[k]) == 1 for v in range(5)) for m in range(1024)) else 'できない')(sorted(itertools.combinations(range(5), 2)))"
+        hints:
+          - 人を点に、あく手を線にした図で考えよう。
+          - 全員のあく手の回数をたすと、いくつかな。
+          - 合計は偶数になるはずだね。
+        paths:
+          - [合計は 1 + 1 + 1 + 1 + 1 = 5 で奇数, 合計は偶数のはず, できない]
+          - [2 人ずつ組にすると 1 人余る, できない]
+    extra:
+      - part: 今日
+        text: 図の点イに集まる線は何本ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="120" y1="18" x2="40" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="18" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="200" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2"/>
+            <line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="120" cy="18" r="4" fill="currentColor"/>
+            <circle cx="40" cy="70" r="4" fill="currentColor"/>
+            <circle cx="200" cy="70" r="4" fill="currentColor"/>
+            <circle cx="120" cy="122" r="4" fill="currentColor"/>
+            <text x="120" y="10" font-size="14" text-anchor="middle">ア</text>
+            <text x="27" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="213" y="75" font-size="14" text-anchor="middle">ウ</text>
+            <text x="120" y="140" font-size="14" text-anchor="middle">エ</text>
+          </svg>
+        answer: 3
+        check: "'アイ アウ イエ ウエ イウ'.count('イ')"
+        hints:
+          - 点イから出ている線を、指でなぞろう。
+          - 横の線もわすれずに数えよう。
+          - 数えた線にしるしをつけよう。
+        paths:
+          - [アへ 1 本、エへ 1 本、ウへ 1 本, 3 本]
+      - part: 今日
+        text: 図の奇点はいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="70" y1="22" x2="25" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="25" y1="70" x2="70" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="70" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="70" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="120" y1="70" x2="170" y2="22" stroke="currentColor" stroke-width="2"/>
+            <line x1="170" y1="22" x2="215" y2="70" stroke="currentColor" stroke-width="2"/>
+            <line x1="215" y1="70" x2="170" y2="118" stroke="currentColor" stroke-width="2"/>
+            <line x1="170" y1="118" x2="120" y2="70" stroke="currentColor" stroke-width="2"/>
+            <circle cx="70" cy="22" r="4" fill="currentColor"/>
+            <circle cx="25" cy="70" r="4" fill="currentColor"/>
+            <circle cx="70" cy="118" r="4" fill="currentColor"/>
+            <circle cx="120" cy="70" r="4" fill="currentColor"/>
+            <circle cx="170" cy="22" r="4" fill="currentColor"/>
+            <circle cx="215" cy="70" r="4" fill="currentColor"/>
+            <circle cx="170" cy="118" r="4" fill="currentColor"/>
+            <text x="61" y="18" font-size="14" text-anchor="middle">ア</text>
+            <text x="12" y="75" font-size="14" text-anchor="middle">イ</text>
+            <text x="61" y="132" font-size="14" text-anchor="middle">エ</text>
+            <text x="120" y="94" font-size="14" text-anchor="middle">ウ</text>
+            <text x="179" y="18" font-size="14" text-anchor="middle">オ</text>
+            <text x="228" y="75" font-size="14" text-anchor="middle">カ</text>
+            <text x="179" y="132" font-size="14" text-anchor="middle">キ</text>
+          </svg>
+        answer: 0
+        check: "sum(1 for v in 'アイウエオカキ' if 'アイ イエ エウ ウア ウオ オカ カキ キウ'.count(v) % 2 == 1)"
+        hints:
+          - 点ごとに、集まる線の数を書こう。
+          - まん中の点ウに集まる線を、よく数えよう。
+          - 奇数の点がなければ、0 こだよ。
+        paths:
+          - [ウは 4 本、ほかは 2 本, 奇点は 0 こ]
+      - part: 今日
+        text: ある点と線の図で、点に集まる線の数は 4、3、3、2 でした。線は全部で何本ありますか。
+        answer: 6
+        check: "(4 + 3 + 3 + 2) // 2"
+        hints:
+          - 集まる線の数を全部たそう。
+          - 線 1 本は、何回数えられているかな。
+          - 合計を、同じ数ずつ 2 つに分けよう。
+        paths:
+          - [4 + 3 + 3 + 2 = 12, 線 1 本を 2 回数えている, 12 は 6 と 6 で 6 本]

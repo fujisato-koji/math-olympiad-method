@@ -1,0 +1,530 @@
+# C-016 二項定理
+#
+# 書き方は N-001 の頭の注のとおり。段 4 なので、子に見せる文は普通の漢字まじりの文。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 (a + b)ⁿ の展開は、n 個のかっこから a か b を 1 つずつ選んでかけたものの和。aⁿ⁻ʳbʳ の係数は ₙCᵣ（二項定理）。係数はパスカルの三角形の段、
+#   2 日目 (x + 2)ⁿ、(2x + 1)ⁿ、(x − 1)ⁿ の係数（ₙCᵣ に数の累乗をかける。負の数の累乗で符号が変わる）、係数の和（x = 1 を代入）、
+#   3 日目 わけ（なぜ a²b の係数が ₃C₁ か、なぜ aⁿ⁻ʳbʳ の係数が ₙCᵣ か、なぜ ₙC₀ + ₙC₁ + … + ₙCₙ = 2ⁿ か）、
+#   4 日目 A-015（展開と因数分解）・C-015（ₙCᵣ とパスカルの三角形）・A-009（指数法則）と混ぜる、5 日目 確認。
+# 前提は C-015、A-015、A-009（→ A-010、N-027 など）。数は 1000 まで（N-073 は前提にない）。11³ = 1331 のような 1000 をこえる数の計算には使わない。
+# 指数は上つきの数字で書く（x²、a³b）。0 乗と負の指数（A-009 の外）は使わないので、(x + 1/x)ⁿ の定数項のような問題は出さない。
+# 係数の答えは負の数もある（段 4 の鍵盤で「−」を打てる）。check では、負の数を「−」（U+2212）の形の文字にして答えと比べる。
+# わけは段 4 の ③：explain に、①「〜とする」で文字を決める、② 展開を「かっこから 1 つずつ選ぶ」と言いかえる・文字に数を入れる、③ ₙCᵣ の意味で結ぶ、の 3 点を書いた。
+#   1 問目は代表の例（(a + b)³）で書く ②。
+# 多項定理（(a + b + c)ⁿ）と、母関数としての使い方（C-026）、確率への使い方（二項分布、S-002）は後ろの単元なので出さない。
+# check：係数は、n 個のかっこのどれから x（または b）を選ぶかを itertools.product で全部作り、選んだ項の係数の積をたして出す。
+#   展開した式を選ぶ問題は、選択肢ごとの式（lambda）が元の式とどの数でも等しいかを、−3 から 3 までの数で確かめる。
+
+id: C-016
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: (a + b)³ を展開しましょう。
+        figure: "(a + b)(a + b)(a + b)\naaa\naab　aba　baa\nabb　bab　bba\nbbb"
+        explain: (a + b)³ = (a + b)(a + b)(a + b) を展開すると、3 つのかっこから a か b を 1 つずつ選んでかけた項が、2 × 2 × 2 = 8 個出てきて、それを全部たしたものになります。a²b になるのは、b を選ぶかっこを 3 つから 1 つ選ぶときで、₃C₁ = 3 個あります（図の aab、aba、baa）。同じように ab² は ₃C₂ = 3 個、a³ と b³ は 1 個ずつです。だから (a + b)³ = a³ + 3a²b + 3ab² + b³。係数 1、3、3、1 はパスカルの三角形の 3 段目です。一般に (a + b)ⁿ を展開したときの aⁿ⁻ʳbʳ の係数は ₙCᵣ です。これを二項定理といいます。
+      - part: 思い出す
+        text: (a + b)² を展開した式は、どれですか。
+        choices: [a² + 2ab + b², a² + b², a² + ab + b²]
+        answer: a² + 2ab + b²
+        check: "[c for c, f in (('a² + 2ab + b²', lambda a, b: a * a + 2 * a * b + b * b), ('a² + b²', lambda a, b: a * a + b * b), ('a² + ab + b²', lambda a, b: a * a + a * b + b * b)) if all(f(a, b) == (a + b) ** 2 for a in range(-3, 4) for b in range(-3, 4))][0]"
+        hints:
+          - (a + b)² は (a + b)(a + b) だね。
+          - 分配法則で、4 つの項をかけ出そう。
+          - ab と ba は同じ項だね。
+        paths:
+          - [(a + b)(a + b) = a² + ab + ba + b², ab + ba = 2ab, a² + 2ab + b²]
+        note: a² + b² と答えやすい。a = 1、b = 1 を入れると (1 + 1)² = 4 で、a² + b² = 2 なので合わないと確かめられる。
+      - part: 思い出す
+        text: ₅C₂ を求めましょう。
+        answer: 10
+        check: "len(set(itertools.combinations(range(5), 2)))"
+        hints:
+          - 5 から 1 ずつ小さくした数を 2 個かけよう。
+          - わる数は 2 × 1 だね。
+          - 計算しよう。
+        paths:
+          - [5 × 4 ÷ 2 = 10]
+      - part: 今日
+        text: (a + b)⁴ を展開したとき、a²b² の係数はいくつですか。
+        answer: 6
+        check: "sum(1 for p in itertools.product('ab', repeat=4) if p.count('b') == 2)"
+        hints:
+          - 4 つのかっこから、a か b を 1 つずつ選ぶと考えよう。
+          - a²b² になるのは、b を何個のかっこから選ぶときかな。
+          - b を選ぶかっこの選び方を ₙCᵣ で表そう。
+        paths:
+          - [b を選ぶかっこを 4 つから 2 つ選ぶ, ₄C₂ = 6]
+      - part: 今日
+        text: (a + b)⁵ を展開したとき、a⁴b の係数はいくつですか。
+        answer: 5
+        check: "sum(1 for p in itertools.product('ab', repeat=5) if p.count('b') == 1)"
+        hints:
+          - 5 つのかっこから a か b を 1 つずつ選ぶと考えよう。
+          - a⁴b になるのは、b を何個のかっこから選ぶときかな。
+          - ₙCᵣ で表そう。
+        paths:
+          - [b を選ぶかっこを 5 つから 1 つ, ₅C₁ = 5]
+      - part: 今日
+        text: (x + 1)⁶ を展開したとき、x² の係数はいくつですか。
+        answer: 15
+        check: "sum(1 for p in itertools.product((1, 0), repeat=6) if sum(p) == 2)"
+        hints:
+          - 6 つのかっこから、x か 1 を 1 つずつ選ぶと考えよう。
+          - x² になるのは、x を何個のかっこから選ぶときかな。
+          - 1 は何回かけても 1 だね。
+        paths:
+          - [x を選ぶかっこを 6 つから 2 つ, ₆C₂ = 15]
+      - part: 挑戦
+        text: (a + b)⁷ を展開したとき、a⁴b³ の係数はいくつですか。
+        answer: 35
+        check: "sum(1 for p in itertools.product('ab', repeat=7) if p.count('b') == 3)"
+        hints:
+          - b を選ぶかっこは何個かな。
+          - 7 つのかっこから、b を選ぶかっこを選ぶ数だね。
+          - ₇C₃ を計算しよう。
+        paths:
+          - [b を選ぶかっこを 7 つから 3 つ, ₇C₃ = 7 × 6 × 5 ÷ 6 = 35]
+        note: 指数の 4 を使って ₇C₄ としても、₇C₄ = ₇C₃ なので同じ答えになる。
+    extra:
+      - part: 今日
+        text: (a + b)³ を展開した式は、どれですか。
+        choices: [a³ + 3a²b + 3ab² + b³, a³ + b³, a³ + a²b + ab² + b³]
+        answer: a³ + 3a²b + 3ab² + b³
+        check: "[c for c, f in (('a³ + 3a²b + 3ab² + b³', lambda a, b: a ** 3 + 3 * a * a * b + 3 * a * b * b + b ** 3), ('a³ + b³', lambda a, b: a ** 3 + b ** 3), ('a³ + a²b + ab² + b³', lambda a, b: a ** 3 + a * a * b + a * b * b + b ** 3)) if all(f(a, b) == (a + b) ** 3 for a in range(-3, 4) for b in range(-3, 4))][0]"
+        hints:
+          - 係数はパスカルの三角形の 3 段目だね。
+          - a²b になるのは、b を選ぶかっこが 1 つのときだよ。
+          - a = 1、b = 1 を入れて確かめよう。
+        paths:
+          - [係数は 1、3、3、1, a³ + 3a²b + 3ab² + b³]
+      - part: 今日
+        text: (x + 1)⁵ を展開したとき、x³ の係数はいくつですか。
+        answer: 10
+        check: "sum(1 for p in itertools.product((1, 0), repeat=5) if sum(p) == 3)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 5 つから 3 つを選ぶ数だね。
+          - ₅C₃ = ₅C₂ を使おう。
+        paths:
+          - [₅C₃ = ₅C₂ = 10]
+      - part: 今日
+        text: (a + b)⁶ を展開したとき、a³b³ の係数はいくつですか。
+        answer: 20
+        check: "sum(1 for p in itertools.product('ab', repeat=6) if p.count('b') == 3)"
+        hints:
+          - b を選ぶかっこは何個かな。
+          - 6 つから 3 つを選ぶ数だね。
+          - ₆C₃ を計算しよう。
+        paths:
+          - [₆C₃ = 6 × 5 × 4 ÷ 6 = 20]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: (x + 2)⁴ を展開したとき、x² の係数を求めましょう。
+        explain: 4 つのかっこから、x か 2 を 1 つずつ選んでかけます。x² になるのは、x を 2 つのかっこから、2 を残りの 2 つのかっこから選ぶときで、選び方は ₄C₂ = 6 通りです。どの選び方でも、かけたものは x × x × 2 × 2 = 4x² です。だから x² の係数は 6 × 4 = 24 です。二項定理で b = 2 としたもので、x² の係数は ₄C₂ × 2² です。かっこの中の数の累乗をかけることをわすれないようにします。
+      - part: 思い出す
+        text: (a + b)⁴ を展開したとき、a³b の係数はいくつですか。
+        answer: 4
+        check: "sum(1 for p in itertools.product('ab', repeat=4) if p.count('b') == 1)"
+        hints:
+          - b を選ぶかっこは何個かな。
+          - 4 つから 1 つを選ぶ数だね。
+          - ₄C₁ を計算しよう。
+        paths:
+          - [₄C₁ = 4]
+      - part: 思い出す
+        text: (x − 3)² を展開した式は、どれですか。
+        choices: [x² − 6x + 9, x² − 9, x² + 6x − 9]
+        answer: x² − 6x + 9
+        check: "[c for c, f in (('x² − 6x + 9', lambda x: x * x - 6 * x + 9), ('x² − 9', lambda x: x * x - 9), ('x² + 6x − 9', lambda x: x * x + 6 * x - 9)) if all(f(x) == (x - 3) ** 2 for x in range(-5, 6))][0]"
+        hints:
+          - (a − b)² = a² − 2ab + b² を使おう。
+          - −3 を 2 回かけると、符号はどうなるかな。
+          - x = 0 を入れて確かめよう。
+        paths:
+          - [x² − 2 × x × 3 + 3², x² − 6x + 9]
+      - part: 今日
+        text: (x + 3)³ を展開したとき、x の係数はいくつですか。
+        answer: 27
+        check: "sum(math.prod(1 if t else 3 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 1)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 残りのかっこからは 3 を選ぶね。3 を何回かけるかな。
+          - 選び方の数と、3 の累乗をかけよう。
+        paths:
+          - [x を 1 つのかっこから選ぶ ₃C₁ = 3 通り, 残り 2 つから 3 を選ぶので 3² = 9, 3 × 9 = 27]
+      - part: 今日
+        text: (2x + 1)³ を展開したとき、x² の係数はいくつですか。
+        answer: 12
+        check: "sum(math.prod(2 if t else 1 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 2)"
+        hints:
+          - 2x を何個のかっこから選ぶかな。
+          - 2x を 2 回かけると、(2x)² = 4x² だね。
+          - 選び方の数と、2² をかけよう。
+        paths:
+          - [2x を 2 つのかっこから選ぶ ₃C₂ = 3 通り, (2x)² = 4x², 3 × 4 = 12]
+        note: 2 をわすれて 3 と答えやすい。かっこの中の x の係数も、選んだ回数だけかかる。
+      - part: 今日
+        text: (x − 1)⁵ を展開したとき、x² の係数はいくつですか。
+        answer: −10
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(sum(math.prod(1 if t else -1 for t in p) for p in itertools.product((1, 0), repeat=5) if sum(p) == 2))"
+        hints:
+          - x を 2 つのかっこから選ぶと、残りの何個のかっこから −1 を選ぶかな。
+          - −1 を 3 回かけると、いくつかな。
+          - 選び方の数と、(−1)³ をかけよう。
+        paths:
+          - [x を 2 つ選ぶ ₅C₂ = 10 通り, 残り 3 つから −1 で (−1)³ = −1, 10 × (−1) = −10]
+        note: 符号をわすれて 10 と答えやすい。−1 を奇数回かけると −1、偶数回かけると 1。
+      - part: 挑戦
+        text: (x + 2)⁵ を展開した式の係数（数だけの項もふくむ）を、全部たすといくつですか。
+        answer: 243
+        check: "sum(math.prod(1 if t else 2 for t in p) for p in itertools.product((1, 0), repeat=5))"
+        hints:
+          - 展開した式に x = 1 を入れると、どうなるかな。
+          - x = 1 のとき、どの項も係数だけになるね。
+          - 元の式に x = 1 を入れて計算しよう。
+        paths:
+          - [展開した式に x = 1 を入れると係数の和になる, 元の式に x = 1 を入れて (1 + 2)⁵, 3⁵ = 243]
+        note: 1 つずつ係数を出してたす（1 + 10 + 40 + 80 + 80 + 32）こともできるが、x = 1 を入れると一度で出る。
+    extra:
+      - part: 今日
+        text: (x + 2)³ を展開したとき、x² の係数はいくつですか。
+        answer: 6
+        check: "sum(math.prod(1 if t else 2 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 2)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 残りのかっこからは 2 を選ぶね。
+          - 選び方の数と 2 をかけよう。
+        paths:
+          - [₃C₂ = 3 通り, 2 を 1 回, 3 × 2 = 6]
+      - part: 今日
+        text: (x − 2)⁴ を展開したとき、x³ の係数はいくつですか。
+        answer: −8
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(sum(math.prod(1 if t else -2 for t in p) for p in itertools.product((1, 0), repeat=4) if sum(p) == 3))"
+        hints:
+          - x を 3 つのかっこから選ぶと、残りは何個かな。
+          - 残りのかっこからは −2 を選ぶね。
+          - 選び方の数と −2 をかけよう。
+        paths:
+          - [₄C₃ = 4 通り, −2 を 1 回, 4 × (−2) = −8]
+      - part: 今日
+        text: (x + 1)⁸ を展開したとき、x⁶ の係数はいくつですか。
+        answer: 28
+        check: "sum(1 for p in itertools.product((1, 0), repeat=8) if sum(p) == 6)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - ₈C₆ は ₈C₂ と同じだね。
+          - 計算しよう。
+        paths:
+          - [₈C₆ = ₈C₂ = 28]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: (a + b)³ を展開すると、a²b の係数は 3 です。なぜ 3 になるのかを、3 つのかっこから選ぶことを使って書きましょう。
+        figure: "(a + b)(a + b)(a + b)\naab　aba　baa"
+        explain: 例：「(a + b)(a + b)(a + b) を分配法則でかけ出すと、3 つのかっこから a か b を 1 つずつ選んでかけた項が全部出る。a²b になるのは、a を 2 つのかっこから、b を 1 つのかっこから選ぶとき。b を選ぶかっこが 1 番目、2 番目、3 番目のどれかで、baa、aba、aab の 3 通り。だから a²b が 3 個出て、係数は 3 = ₃C₁。」と書ければよい。「かけ出す = 1 つずつ選ぶ」ことと、「同じ項が何個出るか = 選び方の数」が書けているかを見る。
+        hints:
+          - かっこを全部かけ出すと、どんな項が出てくるかな。
+          - a²b になるのは、b をどのかっこから選ぶときかな。
+          - 「b を選ぶかっこの選び方が 3 通りだから」を使って書こう。
+        paths:
+          - [かけ出すと 1 つずつ選んだ項が全部出る, a²b は b を 1 つのかっこから選ぶとき, 選び方は 3 通り, 係数は 3]
+      - part: わけ
+        text: (a + b)ⁿ を展開したときの aⁿ⁻ʳbʳ の係数は ₙCᵣ です。そのわけを、筋道を立てて書きましょう。
+        explain: 例：「(a + b)ⁿ を、n 個のかっこ (a + b) の積とする。分配法則でかけ出すと、n 個のかっこから a か b を 1 つずつ選んでかけた項が、選び方の数だけ出て、それを全部たしたものになる。aⁿ⁻ʳbʳ になるのは、b を r 個のかっこから選び、残りの n − r 個のかっこから a を選ぶとき。b を選ぶ r 個のかっこの選び方は ₙCᵣ 通りで、どれも aⁿ⁻ʳbʳ になる。だから aⁿ⁻ʳbʳ は ₙCᵣ 個出て、係数は ₙCᵣ。」と書ければよい。① (a + b)ⁿ を n 個のかっこの積とする、② かけ出すことを「1 つずつ選ぶこと」に言いかえ、同じ項を集める、③ ₙCᵣ の意味（n 個から r 個を選ぶ数）で結ぶ、の 3 点を見る。(a + b)³ の例だけで終わったら、例ではすべての n を示せないことを話す。
+        hints:
+          - (a + b)ⁿ を n 個のかっこの積と考えよう。
+          - aⁿ⁻ʳbʳ になるのは、b を何個のかっこから選ぶときかな。
+          - その選び方の数を ₙCᵣ で表して、係数と結ぼう。
+        paths:
+          - [n 個のかっこの積とする, かけ出す = 1 つずつ選ぶ, aⁿ⁻ʳbʳ は b を r 個のかっこから選ぶとき, その選び方は ₙCᵣ 通りなので係数は ₙCᵣ]
+      - part: わけ
+        text: どんな n でも、ₙC₀ + ₙC₁ + ₙC₂ + … + ₙCₙ = 2ⁿ が成り立ちます。そのわけを、二項定理を使って書きましょう。
+        explain: 例：「二項定理より、(a + b)ⁿ = ₙC₀aⁿ + ₙC₁aⁿ⁻¹b + … + ₙCₙbⁿ は、a と b がどんな数でも成り立つ。a = 1、b = 1 とすると、1 は何回かけても 1 なので、右がわは ₙC₀ + ₙC₁ + … + ₙCₙ になる。左がわは (1 + 1)ⁿ = 2ⁿ。だから ₙC₀ + ₙC₁ + … + ₙCₙ = 2ⁿ。」と書ければよい。① 二項定理の式をとる、② a = 1、b = 1 を代入して両がわを計算する、③ 等式で結ぶ、の 3 点を見る。C-015 では「1 個ずつ選ぶか選ばないかで 2ⁿ」と数えたが、ここでは式に数を入れて示している。2 つの道で同じ結果が出ることにふれる。a = 1、b = −1 とすると ₙC₀ − ₙC₁ + ₙC₂ − … = 0 になることも話すとよい。
+        hints:
+          - 二項定理の式で、a と b にどんな数を入れると、右がわが ₙCᵣ の和だけになるかな。
+          - a = 1、b = 1 を入れると、左がわはいくつかな。
+          - 両がわを等号で結んで書こう。
+        paths:
+          - [二項定理の式, a = 1、b = 1 を代入, 右は ₙC₀ + … + ₙCₙ、左は 2ⁿ, よって等しい]
+      - part: 今日
+        text: (x + 1)⁷ を展開したとき、x⁵ の係数はいくつですか。
+        answer: 21
+        check: "sum(1 for p in itertools.product((1, 0), repeat=7) if sum(p) == 5)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - ₇C₅ は ₇C₂ と同じだね。
+          - 計算しよう。
+        paths:
+          - [₇C₅ = ₇C₂ = 21]
+      - part: 今日
+        text: ₆C₀ − ₆C₁ + ₆C₂ − ₆C₃ + ₆C₄ − ₆C₅ + ₆C₆ はいくつですか。
+        answer: 0
+        check: "sum((-1) ** r * len(set(itertools.combinations(range(6), r))) for r in range(7))"
+        hints:
+          - (a + b)⁶ の二項定理で、a と b にどんな数を入れると、この式になるかな。
+          - b = −1 にすると、b の奇数乗は −1 になるね。
+          - 左がわの (a + b)⁶ を計算しよう。
+        paths:
+          - [二項定理で a = 1、b = −1, (1 − 1)⁶ = 0⁶, 0]
+          - [1 − 6 + 15 − 20 + 15 − 6 + 1 = 0]
+    extra:
+      - part: 今日
+        text: ₅C₀ + ₅C₁ + ₅C₂ + ₅C₃ + ₅C₄ + ₅C₅ はいくつですか。
+        answer: 32
+        check: "sum(len(set(itertools.combinations(range(5), r))) for r in range(6))"
+        hints:
+          - 二項定理で a = 1、b = 1 を入れてみよう。
+          - (1 + 1)⁵ はいくつかな。
+          - 2⁵ を計算しよう。
+        paths:
+          - [(1 + 1)⁵ = 2⁵ = 32]
+          - [1 + 5 + 10 + 10 + 5 + 1 = 32]
+      - part: 今日
+        text: (a + b)⁵ を展開したとき、a²b³ の係数はいくつですか。
+        answer: 10
+        check: "sum(1 for p in itertools.product('ab', repeat=5) if p.count('b') == 3)"
+        hints:
+          - b を選ぶかっこは何個かな。
+          - 5 つから 3 つを選ぶ数だね。
+          - ₅C₃ = ₅C₂ を使おう。
+        paths:
+          - [₅C₃ = 10]
+      - part: 今日
+        text: (2x + 1)⁴ を展開したとき、x の係数はいくつですか。
+        answer: 8
+        check: "sum(math.prod(2 if t else 1 for t in p) for p in itertools.product((1, 0), repeat=4) if sum(p) == 1)"
+        hints:
+          - 2x を何個のかっこから選ぶかな。
+          - 2x を 1 回かけると、係数はいくつかな。
+          - 選び方の数とかけよう。
+        paths:
+          - [₄C₁ = 4 通り, 2x を 1 回で 2, 4 × 2 = 8]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 2³ × 2⁴ は 2 の何乗ですか。
+        answer: 7
+        check: "[k for k in range(20) if 2 ** 3 * 2 ** 4 == 2 ** k][0]"
+        hints:
+          - 2³ は 2 を 3 回、2⁴ は 2 を 4 回かけた数だね。
+          - 2 を全部で何回かけているかな。
+          - 指数をたそう。
+        paths:
+          - [2 を 3 + 4 = 7 回かける, 7]
+      - part: 思い出す
+        text: ₆C₃ を求めましょう。
+        answer: 20
+        check: "len(set(itertools.combinations(range(6), 3)))"
+        hints:
+          - 6 から 1 ずつ小さくした数を 3 個かけよう。
+          - わる数は 3 × 2 × 1 だね。
+          - 計算しよう。
+        paths:
+          - [6 × 5 × 4 ÷ 6 = 20]
+      - part: 今日
+        text: (a + b)⁴ を展開した式は、どれですか。
+        choices: [a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴, a⁴ + b⁴, a⁴ + 4a²b² + b⁴]
+        answer: a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴
+        check: "[c for c, f in (('a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴', lambda a, b: a ** 4 + 4 * a ** 3 * b + 6 * a * a * b * b + 4 * a * b ** 3 + b ** 4), ('a⁴ + b⁴', lambda a, b: a ** 4 + b ** 4), ('a⁴ + 4a²b² + b⁴', lambda a, b: a ** 4 + 4 * a * a * b * b + b ** 4)) if all(f(a, b) == (a + b) ** 4 for a in range(-3, 4) for b in range(-3, 4))][0]"
+        hints:
+          - 係数は、パスカルの三角形の何段目かな。
+          - 項は a⁴ から b⁴ まで、いくつあるかな。
+          - a = 1、b = 1 を入れて、2⁴ = 16 になるか確かめよう。
+        paths:
+          - [係数は 4 段目の 1、4、6、4、1, a⁴ + 4a³b + 6a²b² + 4ab³ + b⁴]
+      - part: 今日
+        text: x² − 6x + 9 を因数分解した式は、どれですか。
+        choices: [(x − 3)², (x + 3)², (x − 3)(x + 3)]
+        answer: (x − 3)²
+        check: "[c for c, f in (('(x − 3)²', lambda x: (x - 3) ** 2), ('(x + 3)²', lambda x: (x + 3) ** 2), ('(x − 3)(x + 3)', lambda x: (x - 3) * (x + 3))) if all(f(x) == x * x - 6 * x + 9 for x in range(-5, 6))][0]"
+        hints:
+          - 9 は何の 2 乗かな。
+          - 真ん中の −6x は、2 × x × □ の形にできるかな。
+          - (a − b)² = a² − 2ab + b² の形を思い出そう。
+        paths:
+          - [9 = 3², −6x = −2 × x × 3, (x − 3)²]
+      - part: 今日
+        text: (x + 1)⁴ − (x − 1)⁴ を計算したとき、x³ の係数はいくつですか。
+        answer: 8
+        check: "sum(math.prod(1 for t in p) - math.prod(1 if t else -1 for t in p) for p in itertools.product((1, 0), repeat=4) if sum(p) == 3)"
+        hints:
+          - (x + 1)⁴ の x³ の係数はいくつかな。
+          - (x − 1)⁴ の x³ の係数はいくつかな。−1 を何回かけるかな。
+          - 2 つの係数のひき算をしよう。
+        paths:
+          - [(x + 1)⁴ の x³ は ₄C₁ = 4, (x − 1)⁴ の x³ は 4 × (−1) = −4, 4 − (−4) = 8]
+        note: −4 をひくのは 4 をたすのと同じ。(x + 1)⁴ − (x − 1)⁴ では、x の奇数乗の項だけが 2 倍で残り、偶数乗の項は消える。
+      - part: 今日
+        text: 21² を、(20 + 1)² を展開して計算すると、いくつですか。
+        answer: 441
+        check: "(20 + 1) ** 2"
+        hints:
+          - (a + b)² = a² + 2ab + b² を使おう。
+          - a = 20、b = 1 とすると、それぞれの項はいくつかな。
+          - 3 つの項をたそう。
+        paths:
+          - [20² + 2 × 20 × 1 + 1², 400 + 40 + 1, 441]
+      - part: 挑戦
+        text: (x + a)⁵ を展開すると、x⁴ の係数が 15 になりました。a はいくつですか。
+        answer: 3
+        check: "[a for a in range(-10, 11) if sum(math.prod(1 if t else a for t in p) for p in itertools.product((1, 0), repeat=5) if sum(p) == 4) == 15][0]"
+        hints:
+          - x⁴ の係数を、a を使って表そう。
+          - x を 4 つのかっこから選ぶと、残りの 1 つから a を選ぶね。
+          - 係数の式が 15 になる a を求めよう。
+        paths:
+          - [x⁴ の係数は ₅C₄ × a = 5a, 5a = 15, a = 3]
+    extra:
+      - part: 今日
+        text: (x + 1)³ を展開した式は、どれですか。
+        choices: [x³ + 3x² + 3x + 1, x³ + 1, x³ + x² + x + 1]
+        answer: x³ + 3x² + 3x + 1
+        check: "[c for c, f in (('x³ + 3x² + 3x + 1', lambda x: x ** 3 + 3 * x * x + 3 * x + 1), ('x³ + 1', lambda x: x ** 3 + 1), ('x³ + x² + x + 1', lambda x: x ** 3 + x * x + x + 1)) if all(f(x) == (x + 1) ** 3 for x in range(-5, 6))][0]"
+        hints:
+          - 二項定理で a = x、b = 1 としよう。
+          - 係数はパスカルの三角形の 3 段目だね。
+          - x = 1 を入れて、2³ = 8 になるか確かめよう。
+        paths:
+          - [係数は 1、3、3、1, x³ + 3x² + 3x + 1]
+      - part: 今日
+        text: (x − 3)³ を展開したとき、数だけの項（定数項）はいくつですか。
+        answer: −27
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(sum(math.prod(1 if t else -3 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 0))"
+        hints:
+          - 定数項は、どのかっこからも x を選ばないときの項だね。
+          - −3 を 3 回かけるといくつかな。
+          - 符号に気をつけよう。
+        paths:
+          - [どのかっこからも −3 を選ぶ, (−3)³ = −27]
+          - [x = 0 を代入すると (0 − 3)³ = −27]
+      - part: 今日
+        text: 31² を、(30 + 1)² を展開して計算すると、いくつですか。
+        answer: 961
+        check: "(30 + 1) ** 2"
+        hints:
+          - (a + b)² = a² + 2ab + b² を使おう。
+          - a = 30、b = 1 とすると、それぞれの項はいくつかな。
+          - 3 つの項をたそう。
+        paths:
+          - [900 + 60 + 1 = 961]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: (a + b)⁶ を展開したとき、a⁴b² の係数はいくつですか。
+        answer: 15
+        check: "sum(1 for p in itertools.product('ab', repeat=6) if p.count('b') == 2)"
+        hints:
+          - b を選ぶかっこは何個かな。
+          - 6 つから 2 つを選ぶ数だね。
+          - ₆C₂ を計算しよう。
+        paths:
+          - [₆C₂ = 15]
+      - part: 今日
+        text: (x + 1)⁵ を展開したとき、x² の係数はいくつですか。
+        answer: 10
+        check: "sum(1 for p in itertools.product((1, 0), repeat=5) if sum(p) == 2)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 5 つから 2 つを選ぶ数だね。
+          - ₅C₂ を計算しよう。
+        paths:
+          - [₅C₂ = 10]
+      - part: 今日
+        text: (x + 2)³ を展開したとき、x の係数はいくつですか。
+        answer: 12
+        check: "sum(math.prod(1 if t else 2 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 1)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 残りのかっこから 2 を何回選ぶかな。
+          - 選び方の数と 2 の累乗をかけよう。
+        paths:
+          - [₃C₁ = 3 通り, 2² = 4, 3 × 4 = 12]
+      - part: 今日
+        text: (x − 1)⁴ を展開したとき、x³ の係数はいくつですか。
+        answer: −4
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(sum(math.prod(1 if t else -1 for t in p) for p in itertools.product((1, 0), repeat=4) if sum(p) == 3))"
+        hints:
+          - x を 3 つのかっこから選ぶと、残りは何個かな。
+          - 残りから −1 を選ぶね。
+          - 選び方の数と −1 をかけよう。
+        paths:
+          - [₄C₃ = 4 通り, −1 を 1 回, 4 × (−1) = −4]
+      - part: 今日
+        text: (2x + 1)⁴ を展開したとき、x³ の係数はいくつですか。
+        answer: 32
+        check: "sum(math.prod(2 if t else 1 for t in p) for p in itertools.product((1, 0), repeat=4) if sum(p) == 3)"
+        hints:
+          - 2x を何個のかっこから選ぶかな。
+          - (2x)³ の係数はいくつかな。
+          - 選び方の数とかけよう。
+        paths:
+          - [₄C₃ = 4 通り, (2x)³ = 8x³, 4 × 8 = 32]
+      - part: 今日
+        text: (x + 3)⁴ を展開した式の係数（数だけの項もふくむ）を、全部たすといくつですか。
+        answer: 256
+        check: "sum(math.prod(1 if t else 3 for t in p) for p in itertools.product((1, 0), repeat=4))"
+        hints:
+          - 展開した式に x = 1 を入れると、どうなるかな。
+          - 元の式に x = 1 を入れよう。
+          - 4⁴ を計算しよう。
+        paths:
+          - [x = 1 を入れる, (1 + 3)⁴ = 4⁴, 256]
+      - part: 今日
+        text: ₅C₀ + ₅C₁ + ₅C₂ + ₅C₃ + ₅C₄ + ₅C₅ はいくつですか。
+        answer: 32
+        check: "sum(len(set(itertools.combinations(range(5), r))) for r in range(6))"
+        hints:
+          - 二項定理で a = 1、b = 1 を入れてみよう。
+          - (1 + 1)⁵ はいくつかな。
+          - 2⁵ を計算しよう。
+        paths:
+          - [(1 + 1)⁵ = 32]
+      - part: 今日
+        text: (a + b)³ を展開した式は、どれですか。
+        choices: [a³ + 3a²b + 3ab² + b³, a³ + 3ab + b³, a³ + 2a²b + 2ab² + b³]
+        answer: a³ + 3a²b + 3ab² + b³
+        check: "[c for c, f in (('a³ + 3a²b + 3ab² + b³', lambda a, b: a ** 3 + 3 * a * a * b + 3 * a * b * b + b ** 3), ('a³ + 3ab + b³', lambda a, b: a ** 3 + 3 * a * b + b ** 3), ('a³ + 2a²b + 2ab² + b³', lambda a, b: a ** 3 + 2 * a * a * b + 2 * a * b * b + b ** 3)) if all(f(a, b) == (a + b) ** 3 for a in range(-3, 4) for b in range(-3, 4))][0]"
+        hints:
+          - 係数はパスカルの三角形の 3 段目だね。
+          - どの項も、a と b の指数の和は 3 になるね。
+          - a = 1、b = 1 を入れて確かめよう。
+        paths:
+          - [係数 1、3、3、1, 指数の和はどれも 3, a³ + 3a²b + 3ab² + b³]
+    extra:
+      - part: 今日
+        text: (x + 1)⁶ を展開したとき、x³ の係数はいくつですか。
+        answer: 20
+        check: "sum(1 for p in itertools.product((1, 0), repeat=6) if sum(p) == 3)"
+        hints:
+          - x を何個のかっこから選ぶかな。
+          - 6 つから 3 つを選ぶ数だね。
+          - ₆C₃ を計算しよう。
+        paths:
+          - [₆C₃ = 20]
+      - part: 今日
+        text: (x − 2)³ を展開したとき、数だけの項（定数項）はいくつですか。
+        answer: −8
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(sum(math.prod(1 if t else -2 for t in p) for p in itertools.product((1, 0), repeat=3) if sum(p) == 0))"
+        hints:
+          - 定数項は、x を 1 つも選ばないときの項だね。
+          - −2 を 3 回かけるといくつかな。
+          - 符号に気をつけよう。
+        paths:
+          - [(−2)³ = −8]
+      - part: 今日
+        text: ₇C₀ − ₇C₁ + ₇C₂ − ₇C₃ + ₇C₄ − ₇C₅ + ₇C₆ − ₇C₇ はいくつですか。
+        answer: 0
+        check: "sum((-1) ** r * len(set(itertools.combinations(range(7), r))) for r in range(8))"
+        hints:
+          - 二項定理で a = 1、b = −1 を入れてみよう。
+          - (1 − 1)⁷ はいくつかな。
+          - 7 段目は左右対称だね。符号はどうなるかな。
+        paths:
+          - [(1 − 1)⁷ = 0]
+          - [₇Cᵣ と ₇C₇₋ᵣ は等しく、符号が反対なので打ち消し合う, 0]

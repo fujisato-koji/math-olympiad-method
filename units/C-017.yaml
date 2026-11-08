@@ -1,0 +1,1591 @@
+# C-017 盤面とタイル張り（塗り分けの論法）
+#
+# 書き方は N-001 の頭の注のとおり。段 4 なので、子に見せる文は普通の漢字まじりの文。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 盤を市松にぬる。ドミノ（2 マスの板）1 枚は黒 1・白 1 をおおうので、黒と白の数がちがう盤はしきつめられない。
+#          数が同じなら、実際のしきつめ方を示して「できる」と言う、
+#   2 日目 コマを上下左右に 1 マス動かすと色が変わる（交互）。奇数回ではもとのマスにもどれない。部屋を 1 回ずつ通る道、ナイトの動き、
+#   3 日目 ほかのぬり方：斜めに 1、2、3 と数を書くと、1 × 3 の棒は 1、2、3 を 1 つずつおおう。切り取ってよいマスを決める、
+#   4 日目 わけ（なぜ黒と白の数で決まるか、なぜ奇数回でもどれないか、なぜ 1 × 3 の棒で決まるか）、
+#   5 日目 L-009（変わらないもの：合計、偶奇）・L-005（偶奇）と混ぜる。1 × 4 の棒と 4 つの数、6 日目 確認。
+# 前提は L-009 と L-005（→ N-008、N-007）だけなので、計算はたし算とひき算だけ（かけ算 N-013 は前提にない）。
+#   盤の大きさは「たて 4 マス、横 4 マス」と書き、マスの数が要るときは文に書く（8 × 8 の盤は「黒と白が 32 マスずつ」と書く）。
+#   文字の式（A-010）も前提にないので、わけは言葉で一般に書く。
+# 考え方の水準は 3 なので、わけはすべて ③（約束した事実から筋道を立てて書く）：explain に、① 約束（となり合うマスは色がちがう、
+#   棒はどこに置いても 1、2、3 を 1 つずつおおう）、② 1 枚ごとの事実から全体へ（何枚でも同じ数ずつ）、③ 盤の数とくらべて結論、の 3 点を書いた。
+#   いくつか置いてみて「できなかった」だけでは示したことにならない、と毎回ふれる。
+# 黒と白が同じ数でも、しきつめられるとはかぎらない（色の数は「できない」を示す道具）。「できる」はしきつめ方を paths に書いた。
+# 盤の図は svg。黒マスは濃い灰色、白マスは白で描く（画面が暗くても黒マス・白マスと呼べるように、色を決めて描いた）。左上を黒にする。
+#   切り取ったマスは描かない。数を書く盤は、数だけを書いて色はぬらない。部屋の図は絵文字（🐭 が出発、🧀 が終わり）。
+# 一筆書き（C-012）は前提にないので、点と線の図にはしない。
+# check：しきつめは、左上から最初の空いたマスに、棒を横か縦に置く置き方を全部ためす自分を呼ぶ lambda で、しきつめ方の数を数える。
+#   8 × 8 の盤は数え上げが大きすぎるので黒と白のマスの数で、7 × 7 の盤はマスの数の偶奇で確かめる（どちらも示したい論法そのもの）。
+#   コマの動きは、動ける先の集まりを回数だけ広げる。部屋の道は、1 回ずつ通る道をすべてたどって、終わりの部屋の集まりを出す。
+#   コインと石は、たどり着ける様子の集まりを、ふえなくなるまで広げる。黒板の数は、2 つの選び方を全部ためして最後の数の集まりを出す。
+
+id: C-017
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: たて 4 マス、横 4 マスの盤から、左上と右下の角の 2 マスを切り取りました。残りの 14 マスを、2 マスの長方形の板（ドミノ）7 枚でしきつめられるでしょうか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        explain: 盤を図のように黒と白の市松もようにぬります。ドミノはとなり合う 2 マスをおおい、となり合うマスは必ず色がちがうので、ドミノ 1 枚は黒 1 マスと白 1 マスをおおいます。7 枚では、黒 7 マスと白 7 マスをおおうことになります。ところが、切り取った 2 つの角はどちらも黒なので、残りは黒 6 マス、白 8 マスです。黒と白の数がちがうので、どう置いてもしきつめられません。置き方を全部ためさなくても、色を数えるだけで「できない」と言い切れます。
+      - part: 思い出す
+        text: たて 3 マス、横 5 マスの盤（15 マス）を、ドミノでしきつめられますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '...............', 5, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - ドミノ 1 枚は何マスをおおうかな。
+          - ドミノを何枚か使うと、おおうマスの数は偶数かな、奇数かな。
+          - 15 は偶数かな、奇数かな。
+        paths:
+          - [ドミノは 2 マスずつおおうので、おおうマスは偶数, 15 は奇数, できない]
+      - part: 思い出す
+        text: 7 枚のコインがあり、表が 4 枚、うらが 3 枚です。1 回に 2 枚を選んで同時に裏返します。何回かくり返して、7 枚とも表にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if 7 in (lambda f: f(f, {4}))(lambda f, S: (lambda T: S if T == S else f(f, T))(S | {h - 2 for h in S if h >= 2} | {h + 2 for h in S if 7 - h >= 2} | {h for h in S if h >= 1 and 7 - h >= 1})) else 'できない'"
+        hints:
+          - 2 枚の選び方を、表が何枚ふくまれるかで 3 つに分けよう。
+          - それぞれ、表の枚数はいくつ変わるかな。
+          - 表の枚数が偶数か奇数かは、変わるかな。
+        paths:
+          - [表の枚数は 2 へるか、2 ふえるか、変わらない, 偶数か奇数かは変わらない, 4 は偶数、7 は奇数, できない]
+      - part: 今日
+        text: たて 5 マス、横 5 マスの盤から、4 つの角を切り取りました。図のように市松もようにぬると、白マスは黒マスより何個多いですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="84" y="10" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="10" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="10" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="84" y="34" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="108" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="132" y="34" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="156" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="84" y="58" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="58" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="156" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="84" y="82" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="108" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="132" y="82" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="156" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="84" y="106" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="106" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="106" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        answer: 3
+        check: "(lambda g: sum(1 for r in range(5) for c in range(5) if g[r][c] == '.' and (r + c) % 2 == 1) - sum(1 for r in range(5) for c in range(5) if g[r][c] == '.' and (r + c) % 2 == 0))('#...#/...../...../...../#...#'.split('/'))"
+        hints:
+          - 1 行ずつ、黒マスと白マスの数を数えよう。
+          - 切り取った角のマスは、何色だったかな。
+          - 黒マスの合計と白マスの合計のちがいを出そう。
+        paths:
+          - [行ごとに黒は 1、2、3、2、1 で 9 マス, 白は 2、3、2、3、2 で 12 マス, 12 − 9 = 3]
+          - [切り取る前は黒 13、白 12, 黒い角を 4 つ切り取って黒 9, 12 − 9 = 3]
+      - part: 今日
+        text: たて 6 マス、横 6 マスの盤から、左上と右下の角の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="80" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="10" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="10" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="160" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="80" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="160" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="80" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="110" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="110" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '#..................................#', 6, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 市松もようにぬると、切り取った 2 マスは何色かな。
+          - ドミノ 1 枚は、黒と白を何マスずつおおうかな。
+          - 残りの黒マスと白マスの数をくらべよう。
+        paths:
+          - [切り取ったのは黒 2 マス, 残りは黒 16、白 18, ドミノは黒と白を同じ数ずつおおう, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、左上と右上の角の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '#..#............', 4, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 黒と白の数が同じなら、できるかもしれないね。
+          - 実際にしきつめ方を見つけよう。
+        paths:
+          - [切り取ったのは黒 1 と白 1 で、残りは 7 マスずつ, 1 行目のまん中 2 マスに横に 1 枚, 2〜4 行目は横に 2 枚ずつ並べて、しきつめられる]
+        note: 黒と白の数が同じでも、しきつめられない盤もある。「できる」は、しきつめ方を 1 つ見せて言う。
+      - part: 挑戦
+        text: たて 8 マス、横 8 マスのチェスの盤は、黒マスと白マスが 32 マスずつです。左上と右下の角の 2 マスを切り取ると、残りの 62 マスをドミノ 31 枚でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="75" y="10" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="10" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="10" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="10" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="10" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="10" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="25" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="25" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="25" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="25" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="25" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="25" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="25" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="25" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="40" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="40" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="40" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="40" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="40" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="40" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="55" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="55" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="55" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="55" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="55" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="55" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="55" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="55" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="70" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="70" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="70" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="70" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="70" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="70" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="85" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="85" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="85" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="85" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="85" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="85" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="85" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="85" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="100" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="100" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="100" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="100" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="100" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="100" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="115" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="115" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="115" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="115" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="115" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="115" width="15" height="15" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="115" width="15" height="15" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できない' if sum(1 for r in range(8) for c in range(8) if (r, c) not in ((0, 0), (7, 7)) and (r + c) % 2 == 0) != sum(1 for r in range(8) for c in range(8) if (r, c) not in ((0, 0), (7, 7)) and (r + c) % 2 == 1) else 'できる'"
+        hints:
+          - 左上と右下の角は、同じ色かな。
+          - 切り取ったあと、黒マスと白マスは何マスずつかな。
+          - ドミノ 31 枚がおおう黒と白の数とくらべよう。
+        paths:
+          - [左上と右下は同じ黒, 残りは黒 30、白 32, 31 枚は黒 31・白 31 をおおうはず, できない]
+        note: 置き方は何百万通りもあり、ためして言うことはできない。色を数えると 1 行で言い切れる。
+    extra:
+      - part: 今日
+        text: たて 3 マス、横 3 マスの盤（9 マス）を、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="75" y="25" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="25" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="25" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="55" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="55" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="55" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="85" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="85" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="85" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.........', 3, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - マスの数は偶数かな、奇数かな。
+          - ドミノでおおえるマスの数は、偶数かな、奇数かな。
+          - 黒と白の数でも考えてみよう。
+        paths:
+          - [9 は奇数, ドミノは偶数のマスしかおおえない, できない]
+          - [黒 5、白 4 で数がちがう, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、図の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.....#....#.....', 4, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 残りの黒マスと白マスは何マスずつかな。
+          - ドミノは黒と白を同じ数ずつおおうね。
+        paths:
+          - [切り取ったのは黒 2 マス, 残りは黒 6、白 8, できない]
+      - part: 挑戦
+        text: たて 4 マス、横 5 マスの盤から、左上と右下の角の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="75" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="45" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="45" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="45" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '#..................#', 5, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 横が 5 マスの盤では、右下の角は何色かな。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 左の列から順に、縦に置いたり横に置いたりしてみよう。
+        paths:
+          - [左上は黒、右下は白で、残りは 9 マスずつ, 1 行目の残り 4 マスに横に 2 枚, 4 行目の残り 4 マスに横に 2 枚, 2・3 行目は縦に 5 枚, しきつめられる]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 盤の上のコマを、上下左右のとなりのマスへ 1 マスずつ動かします。黒マスから出発して 5 回動かすと、コマは何色のマスにいますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        explain: 市松もようでは、となり合うマスは必ず色がちがいます。だからコマを 1 回動かすたびに、色が黒 → 白 → 黒 → … と交互に変わります（L-005 の交互に変わるもの）。偶数回動かすと出発したときと同じ色、奇数回動かすとちがう色のマスにいます。5 回は奇数なので白マスです。どんな道順で動かしても同じです。このことから、たとえば 5 回動かして出発したマスにもどることはできない、と言えます。
+      - part: 思い出す
+        text: たて 4 マス、横 4 マスの盤から、図の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.#.........#....', 4, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 残りの黒マスと白マスは何マスずつかな。
+          - ドミノは黒と白を同じ数ずつおおうね。
+        paths:
+          - [切り取ったのは白 2 マス, 残りは黒 8、白 6, できない]
+      - part: 思い出す
+        text: 9 人が輪になって並びます。男子と女子が交互になるように並ぶことはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(all(p[i] != p[(i + 1) % 9] for i in range(9)) for p in itertools.product('男女', repeat=9)) else 'できない'"
+        hints:
+          - 交互に並ぶと、男子と女子の人数はどうなるかな。
+          - 2 人ずつ組にしてみよう。
+          - 9 は偶数かな、奇数かな。
+        paths:
+          - [輪で交互なら男子と女子が同じ人数で、合計は偶数, 9 は奇数, できない]
+      - part: 今日
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。7 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 7))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 盤を市松もようにぬって考えよう。
+          - 1 回動かすと、コマのいるマスの色はどうなるかな。
+          - 7 回動かしたあとの色と、出発したマスの色をくらべよう。
+        paths:
+          - [1 回ごとに色が変わる, 7 回は奇数なので出発とちがう色, もどれない]
+      - part: 今日
+        text: たて 3 つ、横 3 つに並んだ 9 つの部屋があり、となり合う部屋（上下左右）はドアでつながっています。ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜\n⬜⬜🧀\n⬜⬜⬜"
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (1, 2) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 9 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 3 and 0 <= q[1] < 3 and q not in V])) else 'できない'"
+        hints:
+          - 部屋を市松もようにぬろう。🐭 の部屋を黒にしよう。
+          - 部屋を 1 つ動くごとに、色はどうなるかな。
+          - 9 つの部屋に入ると何回動くかな。最後の部屋の色を考えよう。
+        paths:
+          - [🐭 は黒の部屋, 9 部屋なら 8 回動くので、最後は黒の部屋, 🧀 は白の部屋, できない]
+        note: 何度かためして「できなかった」だけでは言い切れない。色で考えると、ためさずに言い切れる。
+      - part: 今日
+        text: たて 3 つ、横 3 つに並んだ 9 つの部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜\n⬜🧀⬜\n⬜⬜⬜"
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (1, 1) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 9 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 3 and 0 <= q[1] < 3 and q not in V])) else 'できない'"
+        hints:
+          - 🐭 と 🧀 の部屋の色をくらべよう。
+          - 色が合っていたら、道をさがそう。
+          - まわりの部屋をぐるりと回ってみよう。
+        paths:
+          - [どちらも黒の部屋で、8 回動くと黒にもどるので色は合う, 右へ 2 つ、下へ 2 つ、左へ 2 つ、上へ 1 つ、右へ 1 つ, できる]
+        note: 色が合っても、できるとはかぎらない。「できる」は道を 1 つ見せて言う。
+      - part: 挑戦
+        text: チェスのナイトは、縦に 2 マス・横に 1 マス、または縦に 1 マス・横に 2 マスはなれたマスへとびます。十分に大きい盤の上で、ナイトを 9 回とばして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 9))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 2), (2, 1), (-1, 2), (-2, 1), (1, -2), (2, -1), (-1, -2), (-2, -1))}, k - 1)) else 'できない'"
+        hints:
+          - ナイトが 1 回とぶと、マスの色はどうなるかな。図をかいて確かめよう。
+          - 縦に 2・横に 1 進むと、上下左右の 1 マス動きを何回したのと同じかな。
+          - 9 回とんだあとの色を考えよう。
+        paths:
+          - [1 回とぶのは 1 マス動きを 3 回したのと同じ位置, だから 1 回ごとに色が変わる, 9 回は奇数なので色がちがう, もどれない]
+    extra:
+      - part: 今日
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。6 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 6))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 6 回動かしたあとの色は、出発と同じかな。
+          - 色が同じなら、もどる道をさがそう。
+          - 右に行って左にもどる、をくり返すとどうなるかな。
+        paths:
+          - [6 回は偶数で色は同じ, 右・左を 3 回くり返す, もどれる]
+      - part: 今日
+        text: たて 3 つ、横 3 つに並んだ 9 つの部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜\n⬜⬜⬜\n⬜⬜🧀"
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (2, 2) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 9 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 3 and 0 <= q[1] < 3 and q not in V])) else 'できない'"
+        hints:
+          - 🐭 と 🧀 の部屋の色をくらべよう。
+          - 色が合っていたら、道をさがそう。
+          - 1 行ずつ、行ったり来たりしてみよう。
+        paths:
+          - [どちらも黒の部屋, 1 行目を右へ、2 行目を左へ、3 行目を右へ, できる]
+      - part: 今日
+        text: たて 4 つ、横 4 つに並んだ 16 の部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜🧀"
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (3, 3) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 16 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 4 and 0 <= q[1] < 4 and q not in V])) else 'できない'"
+        hints:
+          - 部屋を市松もようにぬろう。
+          - 16 の部屋に入ると、何回動くかな。
+          - 最後の部屋の色と、🧀 の部屋の色をくらべよう。
+        paths:
+          - [🐭 は黒, 15 回動くので最後は白, 🧀 は黒, できない]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: たて 4 マス、横 4 マスの盤から 1 マスを切り取り、残りの 15 マスを、3 マスが 1 列に並んだ棒（1 × 3 の棒）5 本でしきつめたいと思います。どのマスを切り取ればよいか考えよう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="60" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        explain: 図のように、マスに 1、2、3 を斜めにくり返して書きます。1 × 3 の棒は、横に置いても縦に置いても、1、2、3 を 1 マスずつおおいます。5 本では 1、2、3 を 5 マスずつおおいます。盤には 1 が 6 マス、2 と 3 が 5 マスずつあるので、切り取るのは 1 のマスでないといけません。反対向きの斜めに数を書いても同じことが言えるので、両方で 1 の多いほうのマスになる 4 つの角だけが候補です。角を切り取ると、実際にしきつめられます。黒と白の 2 色でなく、棒の長さに合わせて 3 つの数でぬり分けるのがこつです。
+      - part: 思い出す
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。5 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 5))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 1 回動かすと、マスの色はどうなるかな。
+          - 5 回は偶数かな、奇数かな。
+          - 出発したマスと同じ色かを考えよう。
+        paths:
+          - [1 回ごとに色が変わる, 5 回は奇数, もどれない]
+      - part: 思い出す
+        text: たて 4 マス、横 4 マスの盤から、左上の角のマスと、その右どなりのマスの 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '##..............', 4, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 1 行目の残り 2 マスから置いてみよう。
+        paths:
+          - [切り取ったのは黒 1 と白 1, 1 行目の残りに横に 1 枚, 2〜4 行目は横に 2 枚ずつ, できる]
+      - part: 今日
+        text: たて 5 マス、横 5 マスの盤に、図のように 1、2、3 を斜めにくり返して書きました。2 と書いたマスはいくつありますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="27" font-size="14" text-anchor="middle">1</text>
+            <rect x="84" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="27" font-size="14" text-anchor="middle">2</text>
+            <rect x="108" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="27" font-size="14" text-anchor="middle">3</text>
+            <rect x="132" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="27" font-size="14" text-anchor="middle">1</text>
+            <rect x="156" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="27" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="51" font-size="14" text-anchor="middle">2</text>
+            <rect x="84" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="51" font-size="14" text-anchor="middle">3</text>
+            <rect x="108" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="51" font-size="14" text-anchor="middle">1</text>
+            <rect x="132" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="51" font-size="14" text-anchor="middle">2</text>
+            <rect x="156" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="51" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="75" font-size="14" text-anchor="middle">3</text>
+            <rect x="84" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="75" font-size="14" text-anchor="middle">1</text>
+            <rect x="108" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="75" font-size="14" text-anchor="middle">2</text>
+            <rect x="132" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="75" font-size="14" text-anchor="middle">3</text>
+            <rect x="156" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="75" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="99" font-size="14" text-anchor="middle">1</text>
+            <rect x="84" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="99" font-size="14" text-anchor="middle">2</text>
+            <rect x="108" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="99" font-size="14" text-anchor="middle">3</text>
+            <rect x="132" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="99" font-size="14" text-anchor="middle">1</text>
+            <rect x="156" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="99" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="123" font-size="14" text-anchor="middle">2</text>
+            <rect x="84" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="123" font-size="14" text-anchor="middle">3</text>
+            <rect x="108" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="123" font-size="14" text-anchor="middle">1</text>
+            <rect x="132" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="123" font-size="14" text-anchor="middle">2</text>
+            <rect x="156" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="123" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        answer: 9
+        check: "sum(1 for r in range(5) for c in range(5) if (r + c) % 3 + 1 == 2)"
+        hints:
+          - 1 行ずつ、2 がいくつあるかを数えよう。
+          - 2 は斜めに並んでいるね。
+          - 行ごとの数をたそう。
+        paths:
+          - [行ごとに 2、2、1、2、2, 2 + 2 + 1 + 2 + 2 = 9]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、図のように 1 マスを切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.....#..........', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 残りのマスで、1、2、3 はそれぞれ何マスかな。
+          - 1 × 3 の棒 5 本は、1、2、3 を何マスずつおおうかな。
+          - 2 つをくらべよう。
+        paths:
+          - [切り取ったのは 3 のマス, 残りは 1 が 6、2 が 5、3 が 4, 5 本なら 5 マスずつのはず, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、左上の角を切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="60" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '#...............', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 残りのマスで、1、2、3 が同じ数になっているかを見よう。
+          - 数が同じなら、しきつめ方をさがそう。
+          - 1 行目の残り 3 マスに横に置いてみよう。
+        paths:
+          - [残りは 1、2、3 が 5 マスずつ, 1 行目の残りに横に 1 本, 左の列の残り 3 マスに縦に 1 本, 右下の 3 × 3 に横に 3 本, できる]
+      - part: 挑戦
+        text: たて 5 マス、横 5 マスの盤から 1 マスを切り取り、残りの 24 マスを 1 × 3 の棒 8 本でしきつめます。切り取るマスとしてありえるのは、何マスですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="27" font-size="14" text-anchor="middle">1</text>
+            <rect x="84" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="27" font-size="14" text-anchor="middle">2</text>
+            <rect x="108" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="27" font-size="14" text-anchor="middle">3</text>
+            <rect x="132" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="27" font-size="14" text-anchor="middle">1</text>
+            <rect x="156" y="10" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="27" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="51" font-size="14" text-anchor="middle">2</text>
+            <rect x="84" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="51" font-size="14" text-anchor="middle">3</text>
+            <rect x="108" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="51" font-size="14" text-anchor="middle">1</text>
+            <rect x="132" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="51" font-size="14" text-anchor="middle">2</text>
+            <rect x="156" y="34" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="51" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="75" font-size="14" text-anchor="middle">3</text>
+            <rect x="84" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="75" font-size="14" text-anchor="middle">1</text>
+            <rect x="108" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="75" font-size="14" text-anchor="middle">2</text>
+            <rect x="132" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="75" font-size="14" text-anchor="middle">3</text>
+            <rect x="156" y="58" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="75" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="99" font-size="14" text-anchor="middle">1</text>
+            <rect x="84" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="99" font-size="14" text-anchor="middle">2</text>
+            <rect x="108" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="99" font-size="14" text-anchor="middle">3</text>
+            <rect x="132" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="99" font-size="14" text-anchor="middle">1</text>
+            <rect x="156" y="82" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="99" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="72" y="123" font-size="14" text-anchor="middle">2</text>
+            <rect x="84" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="96" y="123" font-size="14" text-anchor="middle">3</text>
+            <rect x="108" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="120" y="123" font-size="14" text-anchor="middle">1</text>
+            <rect x="132" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="144" y="123" font-size="14" text-anchor="middle">2</text>
+            <rect x="156" y="106" width="24" height="24" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="168" y="123" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        answer: 1
+        check: "sum(1 for r in range(5) for c in range(5) if (lambda f: f(f, ''.join('#' if (i // 5, i % 5) == (r, c) else '.' for i in range(25)), 5, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) > 0)"
+        hints:
+          - 図の数で、1、2、3 はそれぞれ何マスかな。切り取ってよいのはどの数のマスかな。
+          - 反対向きの斜めに 1、2、3 を書いて、同じように考えよう。
+          - 両方の書き方で条件に合うマスをさがし、本当にしきつめられるか確かめよう。
+        paths:
+          - [図の書き方では 2 が 9 マスで多いので、2 のマスを切り取る, 反対向きの書き方でも多い数のマスを切り取る, 両方に合うのはまん中だけ, まん中を切り取ると風車の形にしきつめられるので 1 マス]
+        note: 色（数）の数え方は「できない」マスを消す道具。残ったまん中は、実際にしきつめて「できる」と確かめる。
+    extra:
+      - part: 今日
+        text: たて 3 マス、横 4 マスの盤を、1 × 3 の棒 4 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="25" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="45" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="25" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="45" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="25" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="45" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="25" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="45" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="55" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="75" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="55" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="75" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="55" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="75" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="55" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="75" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="85" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="105" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="85" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="105" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="85" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="105" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="85" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="105" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '............', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 1、2、3 はそれぞれ何マスかな。
+          - 数が同じなら、しきつめ方をさがそう。
+          - 縦に置いてみよう。
+        paths:
+          - [1、2、3 が 4 マスずつ, 縦に 4 本並べる, できる]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、図のように 1 マスを切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="60" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.#..............', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取ったのは、何の数のマスかな。
+          - 残りの 1、2、3 の数を数えよう。
+          - 5 本の棒がおおう数とくらべよう。
+        paths:
+          - [切り取ったのは 2 のマス, 残りは 1 が 6、2 が 4、3 が 5, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、右下の角を切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="60" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '...............#', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取ったのは、何の数のマスかな。
+          - 残りの 1、2、3 は同じ数かな。
+          - しきつめ方をさがそう。
+        paths:
+          - [切り取ったのは 1 のマスで、残りは 5 マスずつ, 左上の 3 × 3 に横に 3 本, 右の列の 3 マスに縦に 1 本, 下の行の 3 マスに横に 1 本, できる]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: たて 4 マス、横 4 マスの盤から、左上と右下の角を切り取ると、ドミノでしきつめられません。そのわけを、筋道を立てて書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        explain: 例：「盤を市松もようにぬると、となり合うマスは必ず色がちがう。ドミノ 1 枚はとなり合う 2 マスをおおうので、どこに置いても黒 1 マスと白 1 マスをおおう。だから、何枚置いても、おおわれた黒マスと白マスは同じ数になる。しきつめられたとすると、黒マスと白マスは同じ数のはず。ところが、切り取った角はどちらも黒なので、残りは黒 6 マス、白 8 マスで、数がちがう。だからしきつめられない。」と書ければよい。① となり合うマスは色がちがうという約束、② 1 枚ごとの事実から「何枚でも同じ数」へ、③ 盤の数とくらべて結論、の 3 点を見る。いくつか置いてみて「できなかった」と書いただけなら、ためしていない置き方があるかもしれないので、それでは示せないことを話す。
+        hints:
+          - ドミノ 1 枚は、黒と白を何マスずつおおうかな。なぜそう言えるかな。
+          - ドミノを何枚置いても、黒と白の数はどうなるかな。
+          - 盤の黒マスと白マスの数とくらべて書こう。
+        paths:
+          - [となり合うマスは色がちがう, 1 枚は黒 1・白 1, 何枚でも黒と白は同じ数, 盤は黒 6・白 8 なのでできない]
+      - part: わけ
+        text: 盤の上でコマを上下左右に 1 マスずつ動かすとき、奇数回動かして出発したマスにもどることはできません。そのわけを、筋道を立てて書きましょう。
+        explain: 例：「盤を市松もようにぬると、となり合うマスは色がちがう。コマを 1 回動かすと、となりのマスに行くので、いるマスの色が必ず変わる。黒から出発すると、1 回目で白、2 回目で黒、と交互になり、偶数回のあとは黒、奇数回のあとは白にいる。奇数回動かすと出発したマスとちがう色のマスにいるので、出発したマスにはいない。どんな道順でも同じ。」と書ければよい。① となり合うマスは色がちがうという約束、② 1 回ごとに色が変わるから「回数の偶奇で色が決まる」へ、③ 出発のマスの色とくらべて結論、の 3 点を見る。L-005 の「交互に変わるものは回数の偶奇で決まる」と同じ形の筋道であることにふれる。
+        hints:
+          - 1 回動かすと、いるマスの色はどうなるかな。
+          - 何回か動かしたあとの色は、回数とどう関係するかな。
+          - 奇数回のあとの色と、出発したマスの色をくらべて書こう。
+        paths:
+          - [1 回ごとに色が変わる, 偶数回は同じ色、奇数回はちがう色, 奇数回では出発とちがう色, もどれない]
+      - part: わけ
+        text: たて 4 マス、横 4 マスの盤から図のマスを切り取ると、1 × 3 の棒 5 本でしきつめられません。そのわけを、筋道を立てて書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        explain: 例：「マスに 1、2、3 を斜めにくり返して書く。横に並んだ 3 マスも、縦に並んだ 3 マスも、1、2、3 が 1 つずつになるので、1 × 3 の棒はどこに置いても 1、2、3 を 1 マスずつおおう。だから 5 本でしきつめると、1、2、3 は 5 マスずつおおわれるはず。ところが、切り取ったのは 3 のマスなので、残りは 1 が 6 マス、2 が 5 マス、3 が 4 マスで、そろっていない。だからしきつめられない。」と書ければよい。① 棒はどこに置いても 1、2、3 を 1 つずつおおうこと（横でも縦でも、を確かめているか）、② 5 本なら 5 マスずつ、③ 盤の数とくらべて結論、の 3 点を見る。黒と白の 2 色ではこの盤は示せない（棒は黒 2・白 1 も黒 1・白 2 もある）ことにふれられれば、なおよい。
+        hints:
+          - 1 × 3 の棒を横に置いたときと縦に置いたとき、おおう数はどうなるかな。
+          - 5 本でしきつめたら、1、2、3 は何マスずつおおわれるかな。
+          - 切り取ったあとの盤の 1、2、3 の数とくらべて書こう。
+        paths:
+          - [棒は横でも縦でも 1、2、3 を 1 つずつおおう, 5 本なら 5 マスずつ, 盤は 1 が 6・2 が 5・3 が 4, できない]
+      - part: 今日
+        text: たて 5 マス、横 5 マスの盤（25 マス）を、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="84" y="10" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="10" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="10" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="156" y="10" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="84" y="34" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="108" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="132" y="34" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="156" y="34" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="84" y="58" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="58" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="156" y="58" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="84" y="82" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="108" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="132" y="82" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="156" y="82" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="106" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="84" y="106" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="108" y="106" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="132" y="106" width="24" height="24" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="156" y="106" width="24" height="24" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.........................', 5, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - マスの数は偶数かな、奇数かな。
+          - 黒と白の数でも考えてみよう。
+          - ドミノでおおえるマスの数とくらべよう。
+        paths:
+          - [25 は奇数, ドミノは偶数のマスしかおおえない, できない]
+      - part: 今日
+        text: たて 3 マス、横 6 マスの盤から、図の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="25" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="25" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="25" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="25" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="180" y="25" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="30" y="55" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="55" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="55" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="55" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="55" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="55" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="30" y="85" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="85" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="85" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="85" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="180" y="85" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '#............#....', 6, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 左はしの列から置いてみよう。
+        paths:
+          - [切り取ったのは黒 1 と白 1, 左の列の残り 2 マスに縦に 1 枚, 1 行目と 2 行目の 2〜3 列目に縦に 2 枚、3 行目の 3〜4 列目に横に 1 枚, 右の 3 列は縦と横で埋まる, できる]
+    extra:
+      - part: 今日
+        text: たて 4 マス、横 6 マスの盤から、図の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="180" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="30" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="30" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="180" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="30" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '..#.................#...', 6, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 左の 2 列と右の 3 列に分けて考えよう。
+        paths:
+          - [切り取ったのは黒 1 と白 1, 左の 2 列は横に 4 枚, 3 列目の残り 2 マスに縦に 1 枚, 右の 3 列は縦と横で 6 枚, できる]
+      - part: 今日
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。11 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 11))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 1 回動かすと、マスの色はどうなるかな。
+          - 11 回は偶数かな、奇数かな。
+          - 出発したマスと同じ色かを考えよう。
+        paths:
+          - [11 回は奇数, 色がちがう, もどれない]
+      - part: 今日
+        text: たて 4 つ、横 4 つに並んだ 16 の部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n🧀⬜⬜⬜"
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (3, 0) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 16 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 4 and 0 <= q[1] < 4 and q not in V])) else 'できない'"
+        hints:
+          - 🐭 と 🧀 の部屋の色をくらべよう。
+          - 15 回動くと、最後は何色の部屋かな。
+          - 色が合っていたら、1 行ずつ行ったり来たりしてみよう。
+        paths:
+          - [🐭 は黒、🧀 は白で、15 回動くと白なので色は合う, 1 行目を右へ、2 行目を左へ、3 行目を右へ、4 行目を左へ, できる]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 黒板に 1、2、3、4、5、6 の 6 つの数が書いてあります。2 つの数を消して、その和を書くことを、数が 1 つになるまでくり返します。最後に残る数はいくつですか。
+        answer: 21
+        check: "(lambda S: min(S) if len(S) == 1 else 0)((lambda f: f(f, (1, 2, 3, 4, 5, 6)))(lambda f, T: {T[0]} if len(T) == 1 else set().union(*[f(f, T[:i] + T[i + 1:j] + T[j + 1:] + (T[i] + T[j],)) for i in range(len(T)) for j in range(i + 1, len(T))])))"
+        hints:
+          - 2 つの数を消して和を書くと、黒板の数の合計はどうなるかな。
+          - 合計は、何回くり返しても変わらないね。
+          - はじめの合計を出そう。
+        paths:
+          - [1 回ごとに合計は変わらない, はじめの合計は 1 + 2 + 3 + 4 + 5 + 6 = 21, 最後の数は 21]
+      - part: 思い出す
+        text: 1、3、5、7 の 4 枚のカードから 3 枚を選んで、数の和を 10 にできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if any(sum(c) == 10 for c in itertools.combinations((1, 3, 5, 7), 3)) else 'できない'"
+        hints:
+          - カードの数は、どれも偶数かな、奇数かな。
+          - 奇数を 3 つたすと、偶数かな、奇数かな。
+          - 10 は偶数かな、奇数かな。
+        paths:
+          - [奇数を 3 つたすと奇数, 10 は偶数, できない]
+      - part: 今日
+        text: たて 3 マス、横 3 マスの盤の 9 マスに、コインを 1 枚ずつ表にして置きます。1 回に、となり合う 2 マスのコインを同時に裏返します。何回かくり返して、9 枚とも うらにできますか。
+        figure: "🌕🌕🌕\n🌕🌕🌕\n🌕🌕🌕"
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda P: '000000000' in (lambda f: f(f, {'111111111'}))(lambda f, S: (lambda T: S if T == S else f(f, T))(S | {''.join(('0' if s[j] == '1' else '1') if j in pr else s[j] for j in range(9)) for s in S for pr in P})))(((0, 1), (1, 2), (3, 4), (4, 5), (6, 7), (7, 8), (0, 3), (3, 6), (1, 4), (4, 7), (2, 5), (5, 8))) else 'できない'"
+        hints:
+          - 1 回裏返すと、表のコインの枚数はいくつ変わるかな。場合に分けよう。
+          - 表の枚数が偶数か奇数かは、変わるかな。
+          - はじめの表の枚数と、全部うらのときの表の枚数をくらべよう。
+        paths:
+          - [表の枚数は 2 へるか、2 ふえるか、変わらない, 偶数か奇数かは変わらない, はじめは 9 で奇数、全部うらは 0 で偶数, できない]
+        note: 盤の上の問題でも、色でなく「変わらないもの」（L-009）で決まるものがある。何が変わらないかを先にさがす。
+      - part: 今日
+        text: 盤の黒マスに 5 個、白マスに 5 個、石が置いてあります。1 回に 2 個の石を選び、それぞれを上下左右のとなりのマスへ 1 マスずつ動かします。何回かくり返して、10 個の石を全部黒マスにのせられますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if 0 in (lambda f: f(f, {5}))(lambda f, S: (lambda T: S if T == S else f(f, T))(S | {w - 2 for w in S if w >= 2} | {w + 2 for w in S if 10 - w >= 2} | {w for w in S if w >= 1 and 10 - w >= 1})) else 'できない'"
+        hints:
+          - 石を 1 マス動かすと、その石ののっているマスの色はどうなるかな。
+          - 2 個動かすと、白マスの石の数はいくつ変わるかな。場合に分けよう。
+          - 白マスの石の数が偶数か奇数かを、はじめと終わりでくらべよう。
+        paths:
+          - [1 個動かすと色が変わる, 2 個動かすと白マスの石は 2 へるか、2 ふえるか、変わらない, 白マスの石の数の偶奇は変わらない, はじめは 5 で奇数、全部黒なら 0 で偶数, できない]
+      - part: 今日
+        text: 市松もようの盤に、ドミノを 5 枚、重ならないように置きました。ドミノがおおっている黒マスは、何マスですか。
+        answer: 5
+        check: "5 if all((r + c) % 2 != (r + c + 1) % 2 for r in range(8) for c in range(8)) else 0"
+        hints:
+          - ドミノ 1 枚は、黒マスを何マスおおうかな。
+          - となり合うマスの色を思い出そう。
+          - 5 枚ではどうなるかな。
+        paths:
+          - [1 枚は黒 1・白 1 をおおう, 5 枚で黒 5 マス]
+      - part: 挑戦
+        text: たて 6 マス、横 6 マスの盤を、1 × 4 の棒 9 本でしきつめられますか。図のように、マスに 1、2、3、4 を斜めにくり返して書いて考えましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="25" font-size="14" text-anchor="middle">1</text>
+            <rect x="80" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="25" font-size="14" text-anchor="middle">2</text>
+            <rect x="100" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="25" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="25" font-size="14" text-anchor="middle">4</text>
+            <rect x="140" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="25" font-size="14" text-anchor="middle">1</text>
+            <rect x="160" y="10" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="25" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="45" font-size="14" text-anchor="middle">2</text>
+            <rect x="80" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="45" font-size="14" text-anchor="middle">3</text>
+            <rect x="100" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="45" font-size="14" text-anchor="middle">4</text>
+            <rect x="120" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="45" font-size="14" text-anchor="middle">1</text>
+            <rect x="140" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="45" font-size="14" text-anchor="middle">2</text>
+            <rect x="160" y="30" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="45" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="65" font-size="14" text-anchor="middle">3</text>
+            <rect x="80" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="65" font-size="14" text-anchor="middle">4</text>
+            <rect x="100" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="65" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="65" font-size="14" text-anchor="middle">2</text>
+            <rect x="140" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="65" font-size="14" text-anchor="middle">3</text>
+            <rect x="160" y="50" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="65" font-size="14" text-anchor="middle">4</text>
+            <rect x="60" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="85" font-size="14" text-anchor="middle">4</text>
+            <rect x="80" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="85" font-size="14" text-anchor="middle">1</text>
+            <rect x="100" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="85" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="85" font-size="14" text-anchor="middle">3</text>
+            <rect x="140" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="85" font-size="14" text-anchor="middle">4</text>
+            <rect x="160" y="70" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="85" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="105" font-size="14" text-anchor="middle">1</text>
+            <rect x="80" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="105" font-size="14" text-anchor="middle">2</text>
+            <rect x="100" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="105" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="105" font-size="14" text-anchor="middle">4</text>
+            <rect x="140" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="105" font-size="14" text-anchor="middle">1</text>
+            <rect x="160" y="90" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="105" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="70" y="125" font-size="14" text-anchor="middle">2</text>
+            <rect x="80" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="90" y="125" font-size="14" text-anchor="middle">3</text>
+            <rect x="100" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="110" y="125" font-size="14" text-anchor="middle">4</text>
+            <rect x="120" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="130" y="125" font-size="14" text-anchor="middle">1</text>
+            <rect x="140" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="150" y="125" font-size="14" text-anchor="middle">2</text>
+            <rect x="160" y="110" width="20" height="20" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="170" y="125" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '....................................', 6, 4))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 1 × 4 の棒は、どこに置くと、1、2、3、4 を何マスずつおおうかな。
+          - 9 本でしきつめると、1、2、3、4 は何マスずつおおわれるはずかな。
+          - 盤の 1、2、3、4 をそれぞれ数えてくらべよう。
+        paths:
+          - [棒はどこに置いても 1、2、3、4 を 1 つずつおおう, 9 本なら 9 マスずつ, 盤は 1 が 9、2 が 10、3 が 9、4 が 8, できない]
+        note: マスの数 36 は 4 でわり切れ、黒と白も 18 ずつで同じなので、それだけでは「できない」とは言えない。棒の長さに合わせて 4 つの数で考える。
+    extra:
+      - part: 今日
+        text: 黒板に 1 から 8 までの 8 つの数が書いてあります。2 つの数を消して、その和を書くことを、数が 1 つになるまでくり返します。最後に残る数はいくつですか。
+        answer: 36
+        check: "1 + 2 + 3 + 4 + 5 + 6 + 7 + 8"
+        hints:
+          - 2 つの数を消して和を書くと、合計はどうなるかな。
+          - 合計は変わらないね。
+          - はじめの合計を出そう。
+        paths:
+          - [合計は変わらない, 1 + 2 + … + 8 = 36]
+      - part: 今日
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。4 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 4))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 4 回動かしたあとの色は、出発と同じかな。
+          - 色が同じなら、もどる道をさがそう。
+          - 小さな正方形を 1 周してみよう。
+        paths:
+          - [4 回は偶数で色は同じ, 右・上・左・下, もどれる]
+      - part: 今日
+        text: たて 7 マス、横 7 マスの盤（49 マス）を、ドミノでしきつめられますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できない' if sum(1 for r in range(7) for c in range(7)) % 2 == 1 else 'できる'"
+        hints:
+          - マスの数は偶数かな、奇数かな。
+          - ドミノでおおえるマスの数は、偶数かな、奇数かな。
+          - 2 つをくらべよう。
+        paths:
+          - [49 は奇数, ドミノは偶数のマスしかおおえない, できない]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: たて 6 マス、横 6 マスの盤から、左上と右下の角の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="80" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="10" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="10" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="10" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="30" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="160" y="30" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="80" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="50" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="50" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="70" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="160" y="70" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="80" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="100" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="140" y="90" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="160" y="90" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="80" y="110" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="100" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="110" width="20" height="20" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="140" y="110" width="20" height="20" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '#..................................#', 6, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 残りの黒マスと白マスの数をくらべよう。
+          - ドミノは黒と白を同じ数ずつおおうね。
+        paths:
+          - [切り取ったのは黒 2 マス, 黒 16・白 18, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、左上の角のマスと、その右どなりのマスの 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '##..............', 4, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 切り取った 2 マスの色を見よう。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 1 行目の残りから置いてみよう。
+        paths:
+          - [黒 1・白 1 を切り取って 7 マスずつ, 横に 1 枚と横に 2 枚ずつ 3 行, できる]
+      - part: 今日
+        text: たて 4 マス、横 6 マスの盤から、図の 4 マスを切り取りました。白マスは黒マスより何個多いですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="150" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="180" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="30" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="30" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="60" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="90" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="120" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="60" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="90" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="120" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="150" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="180" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        answer: 2
+        check: "(lambda g: sum(1 for r in range(4) for c in range(6) if g[r][c] == '.' and (r + c) % 2 == 1) - sum(1 for r in range(4) for c in range(6) if g[r][c] == '.' and (r + c) % 2 == 0))('#...../.#..../....#./#.....'.split('/'))"
+        hints:
+          - 切り取る前は、1 行に黒と白が何マスずつあるかな。
+          - 切り取った 4 マスは、それぞれ何色かな。
+          - 残りの黒と白のちがいを出そう。
+        paths:
+          - [切り取る前は 1 行に 3 マスずつで、黒も白も 3 + 3 + 3 + 3 = 12, 切り取ったのは黒 3 と白 1, 黒 9・白 11, 11 − 9 = 2]
+      - part: 今日
+        text: 十分に大きい盤の上で、コマを上下左右のとなりのマスへ 1 マスずつ動かします。9 回動かして、出発したマスにもどってくることはできますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (0, 0) in f(f, {(0, 0)}, 9))(lambda f, S, k: S if k == 0 else f(f, {(x + dx, y + dy) for x, y in S for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))}, k - 1)) else 'できない'"
+        hints:
+          - 1 回動かすと、マスの色はどうなるかな。
+          - 9 回は偶数かな、奇数かな。
+          - 出発したマスと同じ色かを考えよう。
+        paths:
+          - [9 回は奇数, 色がちがう, もどれない]
+      - part: 今日
+        text: たて 4 つ、横 4 つに並んだ 16 の部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n⬜⬜⬜🧀"
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: (3, 3) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 16 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 4 and 0 <= q[1] < 4 and q not in V])) else 'できない'"
+        hints:
+          - 部屋を市松もようにぬろう。
+          - 15 回動くと、最後は何色の部屋かな。
+          - 🧀 の部屋の色とくらべよう。
+        paths:
+          - [🐭 は黒、15 回で最後は白, 🧀 は黒, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、図のように 1 マスを切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="120" font-size="14" text-anchor="middle">1</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if (lambda f: f(f, '.....#..........', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 残りのマスで、1、2、3 はそれぞれ何マスかな。
+          - 5 本の棒は、1、2、3 を何マスずつおおうかな。
+          - 2 つをくらべよう。
+        paths:
+          - [残りは 1 が 6、2 が 5、3 が 4, 5 マスずつでないので, できない]
+      - part: 今日
+        text: たて 4 マス、横 4 マスの盤から、右下の角を切り取りました。残りの 15 マスを、1 × 3 の棒 5 本でしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="30" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="30" font-size="14" text-anchor="middle">3</text>
+            <rect x="150" y="10" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="30" font-size="14" text-anchor="middle">1</text>
+            <rect x="60" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="90" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="60" font-size="14" text-anchor="middle">3</text>
+            <rect x="120" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="60" font-size="14" text-anchor="middle">1</text>
+            <rect x="150" y="40" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="60" font-size="14" text-anchor="middle">2</text>
+            <rect x="60" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="90" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="90" font-size="14" text-anchor="middle">1</text>
+            <rect x="120" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="90" font-size="14" text-anchor="middle">2</text>
+            <rect x="150" y="70" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="165" y="90" font-size="14" text-anchor="middle">3</text>
+            <rect x="60" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="75" y="120" font-size="14" text-anchor="middle">1</text>
+            <rect x="90" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="105" y="120" font-size="14" text-anchor="middle">2</text>
+            <rect x="120" y="100" width="30" height="30" stroke="currentColor" fill="none" stroke-width="1.5"/>
+            <text x="135" y="120" font-size="14" text-anchor="middle">3</text>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '...............#', 4, 3))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 残りの 1、2、3 は同じ数かな。
+          - 数が同じなら、しきつめ方をさがそう。
+          - 左上の 3 × 3 から置いてみよう。
+        paths:
+          - [残りは 5 マスずつ, 左上の 3 × 3 に横に 3 本、右の列と下の行に 1 本ずつ, できる]
+      - part: 今日
+        text: 盤の黒マスに 5 個、白マスに 3 個、石が置いてあります。1 回に 2 個の石を選び、それぞれを上下左右のとなりのマスへ 1 マスずつ動かします。何回かくり返して、8 個の石を全部黒マスにのせられますか。
+        choices: [できる, できない]
+        answer: できない
+        check: "'できる' if 0 in (lambda f: f(f, {3}))(lambda f, S: (lambda T: S if T == S else f(f, T))(S | {w - 2 for w in S if w >= 2} | {w + 2 for w in S if 8 - w >= 2} | {w for w in S if w >= 1 and 8 - w >= 1})) else 'できない'"
+        hints:
+          - 2 個動かすと、白マスの石の数はいくつ変わるかな。
+          - 白マスの石の数の偶奇は変わるかな。
+          - はじめと全部黒のときをくらべよう。
+        paths:
+          - [白マスの石の数は 2 ずつしか変わらない, 偶奇は変わらない, 3 は奇数、0 は偶数, できない]
+    extra:
+      - part: 今日
+        text: たて 4 マス、横 5 マスの盤から、左上と右下の角の 2 マスを切り取りました。残りのマスを、ドミノでしきつめられますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="75" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="10" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="10" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="45" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="40" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="165" y="40" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="45" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="75" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="105" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="135" y="70" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="165" y="70" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="45" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="75" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+            <rect x="105" y="100" width="30" height="30" stroke="#555555" fill="#ffffff" stroke-width="1.5"/>
+            <rect x="135" y="100" width="30" height="30" stroke="#555555" fill="#555555" stroke-width="1.5"/>
+          </svg>
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: f(f, '#..................#', 5, 2))(lambda f, s, w, k: 1 if '.' not in s else (lambda i: (f(f, s[:i] + '#' * k + s[i + k:], w, k) if i % w <= w - k and s[i:i + k] == '.' * k else 0) + (f(f, ''.join('#' if j in range(i, i + k * w, w) else s[j] for j in range(len(s))), w, k) if i + (k - 1) * w < len(s) and all(s[i + t * w] == '.' for t in range(k)) else 0))(s.index('.'))) else 'できない'"
+        hints:
+          - 右下の角は何色かな。
+          - 黒と白の数が同じなら、しきつめ方をさがそう。
+          - 1 行目と 4 行目に横に置いてみよう。
+        paths:
+          - [黒 1・白 1 を切り取る, 1 行目と 4 行目に横に 2 枚ずつ、2・3 行目に縦に 5 枚, できる]
+      - part: 今日
+        text: たて 3 つ、横 3 つに並んだ 9 つの部屋で、ねずみが 🐭 の部屋から出発して、どの部屋にもちょうど 1 回ずつ入り、🧀 の部屋で終わることはできますか。
+        figure: "🐭⬜⬜\n⬜⬜⬜\n⬜⬜🧀"
+        choices: [できる, できない]
+        answer: できる
+        check: "'できる' if (lambda f: (2, 2) in f(f, (0, 0), ((0, 0),)))(lambda f, p, V: {p} if len(V) == 9 else set().union(*[f(f, q, V + (q,)) for q in ((p[0] + 1, p[1]), (p[0] - 1, p[1]), (p[0], p[1] + 1), (p[0], p[1] - 1)) if 0 <= q[0] < 3 and 0 <= q[1] < 3 and q not in V])) else 'できない'"
+        hints:
+          - 🐭 と 🧀 の部屋の色をくらべよう。
+          - 8 回動くと、最後は何色の部屋かな。
+          - 1 行ずつ行ったり来たりしてみよう。
+        paths:
+          - [どちらも黒で色は合う, 行ったり来たりの道, できる]
+      - part: 今日
+        text: 黒板に 1、2、3、4、5 の 5 つの数が書いてあります。2 つの数を消して、その和を書くことを、数が 1 つになるまでくり返します。最後に残る数はいくつですか。
+        answer: 15
+        check: "(lambda S: min(S) if len(S) == 1 else 0)((lambda f: f(f, (1, 2, 3, 4, 5)))(lambda f, T: {T[0]} if len(T) == 1 else set().union(*[f(f, T[:i] + T[i + 1:j] + T[j + 1:] + (T[i] + T[j],)) for i in range(len(T)) for j in range(i + 1, len(T))])))"
+        hints:
+          - 2 つの数を消して和を書くと、合計はどうなるかな。
+          - 合計は変わらないね。
+          - はじめの合計を出そう。
+        paths:
+          - [合計は変わらない, 1 + 2 + 3 + 4 + 5 = 15]
