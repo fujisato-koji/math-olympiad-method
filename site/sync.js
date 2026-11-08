@@ -13,11 +13,13 @@
   const FILE = 'michisuji-records.json', LINK = 'michisuji-link.json', SHARED_NAME = 'みちすじの記録.json';
   const API = 'https://www.googleapis.com/drive/v3', UP = 'https://www.googleapis.com/upload/drive/v3';
   const TOKEN_KEY = 'michisuji.gtoken';
-  let client = null, token = null, exp = 0, waiters = [];
+  // granted は、いまの鍵で許された権限（空白で区切る）。前の版の鍵には入っていない（D-053）
+  let client = null, token = null, exp = 0, granted = '', waiters = [];
+  const FILE_SCOPE = 'https://www.googleapis.com/auth/drive.file';
   let fileId = null, linkId, link;  // linkId と link は、読むまで undefined
   try {
     const t = JSON.parse(sessionStorage.getItem(TOKEN_KEY) || 'null');
-    if (t && t.exp > Date.now()) { token = t.token; exp = t.exp; }
+    if (t && t.exp > Date.now()) { token = t.token; exp = t.exp; granted = t.scope || ''; }
   } catch { /* 保存できない環境では、ログインのたびに聞く */ }
 
   function loadScript(src, ready) {
@@ -37,14 +39,17 @@
       client_id: clientId, scope: SCOPE,
       callback: r => {
         if (r.error) return settle('ng', new Error(r.error));
-        token = r.access_token; exp = Date.now() + (Number(r.expires_in || 3600) - 60) * 1000;
-        try { sessionStorage.setItem(TOKEN_KEY, JSON.stringify({ token, exp })); } catch { /* 同上 */ }
+        token = r.access_token; exp = Date.now() + (Number(r.expires_in || 3600) - 60) * 1000; granted = r.scope || '';
+        try { sessionStorage.setItem(TOKEN_KEY, JSON.stringify({ token, exp, scope: granted })); } catch { /* 同上 */ }
         settle('ok', token);
       },
       error_callback: e => settle('ng', Object.assign(new Error((e && e.type) || 'popup_failed'), { code: (e && e.type) || 'popup_failed' })),
     });
   }
   const valid = () => !!token && Date.now() < exp;
+  // 家族と共有するには、ファイルの権限（drive.file）の入った鍵が要る。なければ、押したその場でログインし直す
+  const hasFile = () => granted.split(' ').includes(FILE_SCOPE);
+  const needsConsent = () => !valid() || !hasFile();
   // ログイン：ボタンを押したときだけ呼ぶ（Google の確認の窓を開くので、押したその場で呼ぶ）
   function signIn() {
     return new Promise((ok, ng) => {
@@ -55,7 +60,7 @@
   }
   function signOut() {
     if (token && window.google && google.accounts && google.accounts.oauth2) google.accounts.oauth2.revoke(token, () => {});
-    token = null; exp = 0; fileId = null; linkId = undefined; link = undefined;
+    token = null; exp = 0; granted = ''; fileId = null; linkId = undefined; link = undefined;
     try { sessionStorage.removeItem(TOKEN_KEY); } catch { /* 同上 */ }
   }
   const authError = () => Object.assign(new Error('ログインが切れました'), { code: 'auth' });
@@ -63,7 +68,12 @@
     if (!valid()) throw authError();
     const r = await fetch(url, { ...opt, headers: { ...(opt.headers || {}), Authorization: 'Bearer ' + token } });
     if (r.status === 401) { token = null; exp = 0; throw authError(); }
-    if (!r.ok) throw Object.assign(new Error('ドライブが ' + r.status + ' を返しました'), { status: r.status });
+    if (!r.ok) {
+      // 断られた理由を出す。権限が足りないとき（前の版の鍵など）は code: 'scope'
+      const j = await r.json().catch(() => null), e0 = j && j.error, reason = (e0 && ((e0.errors && e0.errors[0] && e0.errors[0].reason) || e0.status)) || '';
+      const scope = r.status === 403 && /insufficientPermissions|insufficientScopes|ACCESS_TOKEN_SCOPE_INSUFFICIENT|PERMISSION_DENIED/i.test(reason + ' ' + ((e0 && e0.message) || ''));
+      throw Object.assign(new Error('ドライブが ' + r.status + ' を返しました' + (reason ? `：${reason}` : '')), { status: r.status, code: scope ? 'scope' : undefined });
+    }
     return r;
   }
   const multipart = (meta, body) => {
@@ -100,7 +110,7 @@
   async function pull() {
     const l = await readLink();
     if (l && l.fileId) {
-      try { return (await call(`${API}/files/${l.fileId}?alt=media`)).json(); } catch (e) { if (e.status === 404 || e.status === 403) e.code = 'gone'; throw e; }
+      try { return (await call(`${API}/files/${l.fileId}?alt=media`)).json(); } catch (e) { if (e.code !== 'scope' && (e.status === 404 || e.status === 403)) e.code = 'gone'; throw e; }
     }
     if (!fileId) fileId = await appFind(FILE);
     return fileId ? (await call(`${API}/files/${fileId}?alt=media`)).json() : null;
@@ -157,6 +167,6 @@
   async function who() {
     try { return (await (await call(`${API}/about?fields=user(emailAddress%2CdisplayName)`)).json()).user || null; } catch { return null; }
   }
-  window.DriveSync = { init, signIn, signOut, pull, push, who, valid, share, members, pick, leave, readLink,
+  window.DriveSync = { init, signIn, signOut, pull, push, who, valid, hasFile, needsConsent, share, members, pick, leave, readLink,
     get ready() { return !!client; }, get linked() { return link || null; } };
 })();

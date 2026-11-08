@@ -1925,6 +1925,7 @@
   async function familyShare() {
     const inp = $('#family-email'), email = (inp.value || '').trim();
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { alert('相手の Google アカウントのメールアドレスを入れてください'); return; }
+    if (!(await fileConsent())) return;
     await driveSync(true);
     if (driveState !== 'ok' || driveBusy) return;
     driveBusy = true;
@@ -1932,20 +1933,29 @@
       await DriveSync.share(email, store);
       inp.value = ''; family.gone = false;
       alert(`${email} と共有しました。相手に Google からお知らせが届きます。`);
-    } catch (err) { alert('共有できませんでした（' + err.message + '）'); }
+    } catch (err) { alert(err.code === 'scope' ? NO_FILE : '共有できませんでした（' + err.message + '）'); }
     finally { driveBusy = false; }
     await refreshFamily(); driveChip();
+  }
+  // ファイルの権限の入った鍵を用意する（押したその場で Google の窓を開く。iPhone でも開けるように、ほかを待たずに呼ぶ）
+  const NO_FILE = 'ファイルの権限が許可されていません。もう一度押し、Google の確認で、ドライブのファイルの項目を許可してください。';
+  async function fileConsent() {
+    if (!window.DriveSync || !DriveSync.ready) return false;
+    if (DriveSync.needsConsent()) {
+      try { await DriveSync.signIn(); } catch (err) { if (err.code !== 'popup_closed') alert('ログインできませんでした（' + err.message + '）'); return false; }
+    }
+    if (!DriveSync.hasFile()) { alert(NO_FILE); return false; }
+    return true;
   }
   // 共有された記録を開く：Google のファイル選びで「みちすじの記録」を選び、この端末の記録と合わせる
   async function familyOpen() {
     if (!API_KEY || !window.DriveSync || driveBusy) return;
     let id = null;
+    if (!(await fileConsent())) return;
     driveBusy = true;
     try {
-      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID);
-      if (!DriveSync.valid()) await DriveSync.signIn();
       id = await DriveSync.pick(API_KEY, APP_ID);
-    } catch (err) { if (err.code !== 'popup_closed') alert('開けませんでした（' + err.message + '）'); }
+    } catch (err) { if (err.code !== 'popup_closed') alert(err.code === 'scope' ? NO_FILE : '開けませんでした（' + err.message + '）'); }
     finally { driveBusy = false; }
     if (!id) return;
     family.gone = false;
@@ -1992,8 +2002,8 @@
       if (err.code === 'popup_closed') driveState = drive.on ? 'need' : 'off';
       else if (err.code === 'gone') { family.gone = true; driveState = 'err'; }
       else {
-        driveState = err.code === 'auth' ? 'need' : 'err';
-        if (interactive && err.code !== 'auth') alert('Google ドライブと合わせられませんでした（' + err.message + '）');
+        driveState = err.code === 'auth' || err.code === 'scope' ? 'need' : 'err';
+        if (interactive && err.code !== 'auth') alert(err.code === 'scope' ? NO_FILE : 'Google ドライブと合わせられませんでした（' + err.message + '）');
       }
     } finally {
       driveBusy = false; driveChip();
