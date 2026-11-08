@@ -4,7 +4,8 @@
 (() => {
   'use strict';
   const SCOPE = 'https://www.googleapis.com/auth/drive.appdata';
-  const FILE = 'michisuji-store.json';
+  // 前のファイル（michisuji-store.json）では人が混ざったので使わない（D-051）
+  const FILE = 'michisuji-records.json';
   const API = 'https://www.googleapis.com/drive/v3', UP = 'https://www.googleapis.com/upload/drive/v3';
   const TOKEN_KEY = 'michisuji.gtoken';
   let client = null, token = null, exp = 0, fileId = null, waiters = [];
