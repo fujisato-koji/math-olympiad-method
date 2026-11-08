@@ -16,25 +16,196 @@
   const $ = (s, el = document) => el.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const lc = id => `--c: var(--lane-${id})`;
-  // 問題の文の数式の見せ方（D-042）：1 文字の小文字（x、a、n）は斜体のセリフ体にして × と見分け、
-  // 3/4 や x/2 は分子と分母を上下に重ねる。数のすぐ後に空白をはさむ 1 文字（5 m、300 g）は単位とみて変えない。
-  // 書き方（3/4、3x）は変えないので、答え合わせ、check の式、鍵盤はそのまま
-  const FRAC = /(?<![\w.\/□])(\d+|[a-z]|□)\/(\d+|[a-z]|□)(?![\w.\/□])|[A-Za-z]+/g;
-  function fmt(s) {
-    s = String(s ?? '');
-    const v = x => /^[a-z]$/.test(x) ? `<i class="v">${x}</i>` : esc(x);
-    let out = '', last = 0, m;
-    FRAC.lastIndex = 0;
-    while ((m = FRAC.exec(s))) {
-      out += esc(s.slice(last, m.index));
-      if (m[1] !== undefined) out += `<span class="frac" role="math" aria-label="${esc(m[2])}ぶんの${esc(m[1])}"><span>${v(m[1])}</span><span>${v(m[2])}</span></span>`;
-      else {
-        const w = m[0], before = s.slice(Math.max(0, m.index - 2), m.index), after = s[m.index + w.length] || '';
-        out += w.length === 1 && /[a-z]/.test(w) && !/\d\s$/.test(before) && after !== '/' && !before.endsWith('/') ? `<i class="v">${w}</i>` : esc(w);
+  // 問題の文の数式の見せ方（D-042、D-060）。データの書き方は変えず、見せるときに組む（答え合わせ、check の式、鍵盤はそのまま）。
+  // - 1 文字の小文字（x、a、n）は斜体のセリフ体にして × と見分ける。数のすぐ後に空白をはさむ 1 文字（5 m、300 g）は単位とみて変えない
+  // - 分数（3/4、(x + 1)/3、(x² − 16)/(x − 4)、dy/dx）は分子と分母を上下に重ね、外側のかっこを外す
+  // - ベクトル（→a、→AB、2→a）は文字の上に矢印、根号（√5、√(x + 1)）は中身の上に横線
+  // - lim (x→1) は lim の下に x→1、∫(0→3) と [F(x)](0→3) は右に上と下の端、Σ k（k = 1〜n）は Σ の上と下に範囲
+  // - x^2、(1 − p)^(n − k) は右肩に、P_A は右下に
+  const TAIL = /^[²³¹⁰-₟′″']*/;  // 文字の後ろに付く肩と添字とプライム
+  const FN = /^(sin|cos|tan|log|ln)$/;
+  // 立体で書く名前（関数、極限）と単位。ほかの小文字の並び（ac、xy）は文字の積として斜体にする
+  const UPRIGHT = /^(sin|cos|tan|sec|csc|cot|log|ln|lim|exp|max|min|mod|gcd|lcm|km|cm|mm|kg|mg|mL|dL|kL|ha|min|sec)$/;
+  // 肩と添字の字（²、ₙ）は、まわりと同じ字体の上付きと下付きにする（字体によって ₙ や ⁿ がないため）
+  const SS = { '²': '2', '³': '3', '¹': '1', '⁰': '0', 'ⁱ': 'i', '⁴': '4', '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9', '⁺': '+', '⁻': '−', '⁼': '=', '⁽': '(', '⁾': ')', 'ⁿ': 'n',
+    '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '₊': '+', '₋': '−', '₌': '=', '₍': '(', '₎': ')',
+    'ₐ': 'a', 'ₑ': 'e', 'ₒ': 'o', 'ₓ': 'x', 'ₕ': 'h', 'ₖ': 'k', 'ₗ': 'l', 'ₘ': 'm', 'ₙ': 'n', 'ₚ': 'p', 'ₛ': 's', 'ₜ': 't' };
+  const isSub = ch => ch >= '₀' && ch <= '₟';
+  function tailHtml(t) {
+    let out = '';
+    for (const m of (t || '').matchAll(/[′″']+|[^′″']+/g)) {
+      const r = m[0];
+      if (/^[′″']/.test(r)) { out += `<span class="pr">${r.replace(/'/g, '′')}</span>`; continue; }
+      // 上付きと下付きの切れ目で分ける（aₙ₊₁、x²）
+      for (const q of r.matchAll(/[₀-₟]+|[^₀-₟]+/g)) {
+        const v = Array.from(q[0]).map(ch => SS[ch] || ch).join('');
+        out += isSub(q[0][0]) ? `<sub class="m">${letters(v)}</sub>` : `<sup class="m">${letters(v)}</sup>`;
       }
-      last = FRAC.lastIndex;
     }
-    return out + esc(s.slice(last));
+    return out;
+  }
+  const CJK = /[　-ヿ㐀-鿿＀-￯]/;
+  // 矢印の後ろがベクトルの名前か（大文字 1〜2 字、小文字 1 字、零ベクトルの 0）
+  const VEC = /^(?:[A-Z]{1,2}(?![A-Za-z])|[a-z](?![A-Za-z(])|0(?![\d.]))/;
+  const isVecAt = (s, i) => {
+    const m = VEC.exec(s.slice(i + 1)), p = s[i - 1] || '';
+    if (!m) return null;
+    if (m[0] === '0' && /[\w)]/.test(p)) return null;         // x→0、h→0 は極限の矢印
+    if (/[A-Z]/.test(p) && /[A-Z]/.test(m[0][0])) return null;  // A→B→C は道すじの矢印
+    return m[0];
+  };
+  // 閉じるかっこの位置（組にならなければ -1）
+  function closeAt(s, i) {
+    for (let d = 0, j = i; j < s.length; j++) { if (s[j] === '(') d++; else if (s[j] === ')' && !--d) return j; }
+    return -1;
+  }
+  const bounds = s => { const k = s.indexOf('→'); return k < 0 ? null : [s.slice(0, k), s.slice(k + 1)]; };
+  // 字句に分ける。k：g かっこの組、n 数、w ローマ字の並び、s 記号の字、t そのほかの字、と組み立ての字句
+  function lex(s) {
+    const out = [];
+    let i = 0, m;
+    const tail = j => TAIL.exec(s.slice(j))[0];
+    while (i < s.length) {
+      const c = s[i], rest = s.slice(i);
+      if (c === '(') {
+        const j = closeAt(s, i);
+        if (j > 0) { const t = tail(j + 1); out.push({ k: 'g', v: s.slice(i + 1, j), t }); i = j + 1 + t.length; continue; }
+      }
+      if ((c === '∫' || c === ']') && s[i + 1] === '(') {
+        const j = closeAt(s, i + 1), b = j > 0 && bounds(s.slice(i + 2, j));
+        if (b) { out.push({ k: c === '∫' ? 'int' : 't', v: c }, { k: 'bd', lo: b[0], hi: b[1] }); i = j + 1; continue; }
+      }
+      if (c === '∫') { out.push({ k: 'int', v: c }); i++; continue; }
+      if ((m = /^lim\s?\(/.exec(rest))) {
+        const j = closeAt(s, i + m[0].length - 1);
+        if (j > 0 && s.slice(i, j).includes('→')) { out.push({ k: 'lim', v: s.slice(i + m[0].length, j) }); i = j + 1; continue; }
+      }
+      if (c === 'Σ' && (m = /^Σ\s?([^（、。\n]{0,40}?)（([a-z]) = ([^〜）]{1,12})〜([^）]{1,12})）/.exec(rest))) {
+        out.push({ k: 'sum', x: m[2], lo: m[3], hi: m[4] }, { k: 't', v: ' ' }, ...lex(m[1]));
+        i += m[0].length; continue;
+      }
+      if (c === '√') {
+        if (s[i + 1] === '(') {
+          const j = closeAt(s, i + 1);
+          if (j > 0) { const t = tail(j + 1); out.push({ k: 'rt', v: s.slice(i + 2, j), t }); i = j + 1 + t.length; continue; }
+        }
+        if ((m = /^(?:\d+(?:\.\d+)?|[a-zA-Zπ])/.exec(s.slice(i + 1)))) {
+          const t = tail(i + 1 + m[0].length);
+          out.push({ k: 'rt', v: m[0] + t, t: '' }); i += 1 + m[0].length + t.length; continue;
+        }
+      }
+      if (c === '→') {
+        const v = isVecAt(s, i);
+        if (v) { const t = tail(i + 1 + v.length); out.push({ k: 'vec', v, t }); i += 1 + v.length + t.length; continue; }
+      }
+      if (c === '^') {
+        if (s[i + 1] === '(') { const j = closeAt(s, i + 1); if (j > 0) { out.push({ k: 'sup', v: s.slice(i + 2, j) }); i = j + 1; continue; } }
+        if ((m = /^(?:\d+|[a-z])/.exec(s.slice(i + 1)))) { out.push({ k: 'sup', v: m[0] }); i += 1 + m[0].length; continue; }
+      }
+      if (c === '_' && (m = /^[A-Za-z0-9]/.exec(s.slice(i + 1)))) { out.push({ k: 'sub', v: m[0] }); i += 2; continue; }
+      if ((m = /^\d+(?:\.\d+)?/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'n', v: m[0], t }); i += m[0].length + t.length; continue; }
+      if ((m = /^[A-Za-z]+/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'w', v: m[0], t }); i += m[0].length + t.length; continue; }
+      if (/[πθ□∞]/.test(c)) { const t = tail(i + 1); out.push({ k: 's', v: c, t }); i += 1 + t.length; continue; }
+      if (SS[c]) { const t = tail(i); out.push({ k: 's', v: '', t }); i += t.length; continue; }  // ₙCₖ の ₙ のように前に字のない添字
+      out.push({ k: 't', v: c }); i++;
+    }
+    return out;
+  }
+  // 1 文字の単位か（数と空白のすぐ後、または単位の後の /）
+  function unitAt(x, i) {
+    const w = x[i];
+    if (!w || w.k !== 'w') return false;
+    if (x[i - 1] && x[i - 1].v === ' ' && x[i - 2] && x[i - 2].k === 'n') return w.v.length <= 3;
+    return !!(x[i - 1] && x[i - 1].v === '/' && unitAt(x, i - 2));
+  }
+  // 分子や分母になれる字句か
+  const operand = (x, i) => {
+    const a = x[i];
+    if (!a) return false;
+    if (a.k === 'g') return !CJK.test(a.v);
+    if (a.k === 'w') return !unitAt(x, i) && (a.v.length === 1 || /^d[a-z]$/.test(a.v));
+    return ['n', 's', 'rt', 'vec', 'sup', 'sub'].includes(a.k);
+  };
+  // 分数を組む：/ の前と後ろの、すき間なく続く字句をまとめる。1/2/3 のように続くものは組まない
+  function fracs(x) {
+    for (let k = 1; k < x.length - 1; k++) {
+      if (x[k].k !== 't' || x[k].v !== '/' || !operand(x, k - 1) || !operand(x, k + 1)) continue;
+      let a = k - 1, b = k + 1;
+      while (a > 0 && (operand(x, a - 1) || (x[a].k === 'g' && x[a - 1].k === 'w' && x[a - 1].v.length === 1))) a--;
+      // 分母は 1 つの字句と、続く肩だけ（f(x) のような関数の形は、名前とかっこをまとめる）。1/2x は 1/2 と x とみる
+      if (x[b].k === 'w' && x[b + 1] && x[b + 1].k === 'g') b++;
+      while (x[b + 1] && x[b + 1].k === 'sup') b++;
+      // sin h/h のように、関数の名前と空白の後ろなら、名前も分子に入れる
+      if (a >= 2 && x[a - 1].v === ' ' && x[a - 2].k === 'w' && FN.test(x[a - 2].v)) a -= 2;
+      if ((x[a - 1] && x[a - 1].v === '/') || (x[b + 1] && x[b + 1].v === '/')) continue;
+      x.splice(a, b - a + 1, { k: 'frac', num: x.slice(a, k), den: x.slice(k + 1, b + 1) });
+      k = a;
+    }
+    return x;
+  }
+  const raw = x => x.map(a => a.k === 'g' ? `(${a.v})${a.t}` : a.k === 'frac' ? raw(a.num) + '/' + raw(a.den) : (a.v || '') + (a.t || '')).join('');
+  // 分子と分母は、かっこの組 1 つだけなら外側のかっこを外す
+  const part = x => x.length === 1 && x[0].k === 'g' && !x[0].t ? mx(x[0].v) : html(x);
+  const letters = v => Array.from(v).map(ch => /[a-z]/.test(ch) ? `<i class="v">${ch}</i>` : esc(ch)).join('');
+  function html(x, flat) {
+    return x.map((a, i) => {
+      const t = tailHtml(a.t);
+      switch (a.k) {
+        case 'g': return `(${mx(a.v, flat)})${t}`;
+        case 'w': return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
+        case 'n': case 's': return esc(a.v) + t;
+        case 'frac': return `<span class="frac" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
+        case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
+        case 'rt': return `<span class="sqrt"><span class="rt">√</span><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
+        case 'sup': return `<sup class="m">${mx(a.v, true)}</sup>`;
+        case 'sub': return `<sub class="m">${letters(a.v)}</sub>`;
+        case 'lim': return `<span class="lim"><span>lim</span><span class="lim-to">${mx(a.v, true)}</span></span>`;
+        case 'int': return `<span class="int">∫</span>`;
+        case 'bd': return `<span class="bd"><span>${mx(a.hi, true)}</span><span>${mx(a.lo, true)}</span></span>`;
+        case 'sum': return `<span class="sum"><span>${mx(a.hi, true)}</span><span class="sg">Σ</span><span>${letters(a.x)} = ${mx(a.lo, true)}</span></span>`;
+        default: return esc(a.v);
+      }
+    }).join('');
+  }
+  // flat は、肩や端の中（分数を重ねず、斜線のまま）
+  const mx = (s, flat) => { const x = lex(s); return html(flat ? x : fracs(x), flat); };
+  const fmt = s => mx(String(s ?? ''));
+  // 図の中のベクトル（→a）と根号（√3）を、描いたあとに文字の位置を測って組む（D-060）。測れない図はそのまま
+  function figMath(root) {
+    root.querySelectorAll('.fig-svg text').forEach(tx => {
+      const S = tx.textContent;
+      if (!/[→√]/.test(S) || typeof tx.getExtentOfChar !== 'function') return;
+      try { if (tx.getNumberOfChars() !== S.length) return; } catch { return; }
+      const del = [], marks = [];
+      for (let i = 0; i < S.length; i++) {
+        if (S[i] === '→') { const v = isVecAt(S, i); if (v) { del.push(i); marks.push({ k: 'vec', a: i + 1, b: i + 1 + v.length }); } }
+        else if (S[i] === '√') { const m = /^(?:\d+(?:\.\d+)?|[a-zA-Z])/.exec(S.slice(i + 1)); if (m) marks.push({ k: 'rt', a: i + 1, b: i + 1 + m[0].length }); }
+      }
+      if (!marks.length) return;
+      // 矢印の字を消す（後ろから）
+      const nodes = [], w = document.createTreeWalker(tx, NodeFilter.SHOW_TEXT);
+      for (let n, at = 0; (n = w.nextNode());) { nodes.push({ n, at }); at += n.data.length; }
+      del.slice().reverse().forEach(p => { const o = nodes.filter(z => z.at <= p).pop(); o.n.deleteData(p - o.at, 1); });
+      const shift = p => del.filter(d => d < p).length;
+      const fs = parseFloat(getComputedStyle(tx).fontSize) || 14, col = getComputedStyle(tx).fill || 'currentColor';
+      let d = '';
+      marks.forEach(mk => {
+        try {
+          const e1 = tx.getExtentOfChar(mk.a - shift(mk.a)), e2 = tx.getExtentOfChar(mk.b - 1 - shift(mk.b - 1));
+          const x0 = e1.x + fs * .04, x1 = e2.x + e2.width - fs * .02, y = Math.min(e1.y, e2.y) + fs * (mk.k === 'vec' ? .08 : .16), h = fs * .16;
+          // 根号の横線は、√ の字の右上から中身の右まで
+          const er = mk.k === 'rt' && tx.getExtentOfChar(mk.a - 1 - shift(mk.a - 1));
+          d += mk.k === 'vec' ? `M${x0} ${y}H${x1}M${x1 - h} ${y - h * .8}L${x1} ${y}L${x1 - h} ${y + h * .8}`
+            : `M${er.x + er.width * .82} ${er.y + fs * .2}H${x1 + fs * .04}`;
+        } catch { /* 測れない字は飛ばす */ }
+      });
+      if (!d) return;
+      const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      p.setAttribute('d', d); p.setAttribute('fill', 'none'); p.setAttribute('stroke', col);
+      p.setAttribute('stroke-width', (fs * .075).toFixed(2)); p.setAttribute('stroke-linecap', 'round'); p.setAttribute('stroke-linejoin', 'round');
+      if (tx.getAttribute('transform')) p.setAttribute('transform', tx.getAttribute('transform'));
+      tx.after(p);
+    });
   }
   // 天秤（D-042）：{left, right, tilt: left|right|level}。left と right は皿にのせる物（空白で区切れば語ごと、なければ 1 字ずつ）。
   // 並びにすると横に並べる。重い側の皿が下がる
@@ -1527,6 +1698,7 @@
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
+    figMath(el);
     tick();
   }
   function submit(val) {
