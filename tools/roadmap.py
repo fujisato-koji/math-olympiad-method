@@ -243,10 +243,12 @@ def check(data, problems):
                         errors.append(f"{where}: 答え {item['answer']} が選択肢にない")
                 else:
                     # 鍵盤で打てる形（D-039）：段 1〜2 は 3 けたまでの数字、段 3 から「.」「/」、段 4 から「−」、8 字まで
-                    st = units[uid][1]
-                    ok = r"\d{1,3}" if st <= 2 else r"\d+(\.\d+)?(/\d+)?" if st == 3 else r"−?\d+(\.\d+)?(/\d+)?"
+                    # 単元の keys（例：段 2 の負の数の単元に [−]）で鍵を足せる
+                    st, extra = units[uid][1], set(units[uid][2].get("keys") or [])
+                    sign = "−?" if st >= 4 or "−" in extra else ""
+                    ok = (sign + r"\d{1,3}") if st <= 2 else (sign + r"\d+(\.\d+)?(/\d+)?")
                     for a in [item["answer"], *(item.get("accept") or [])]:
-                        if not re.fullmatch(ok, str(a)) or len(str(a)) > (3 if st <= 2 else 8):
+                        if not re.fullmatch(ok, str(a)) or len(str(a)) > ((4 if sign else 3) if st <= 2 else 8):
                             errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
@@ -361,6 +363,7 @@ def build(data, problems):
                           "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
+                          **({"keys": u["keys"]} if u.get("keys") else {}),
                           "p": pos[u["id"]],
                           # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],

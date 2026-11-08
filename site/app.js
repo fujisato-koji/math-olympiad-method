@@ -127,8 +127,10 @@
     return { type: 'day', day: u.days.length };
   }
   // 答えの鍵盤（D-039）：段 1〜2 は数字だけ 3 けた、段 3 から「.」「/」、段 4 から「−」、8 字まで
-  const padKeys = id => { const st = UNITS[id].stage; return [...(st >= 4 ? ['−'] : []), ...(st >= 3 ? ['.', '/'] : [])]; };
-  const padMax = id => UNITS[id].stage >= 3 ? 8 : 3;
+  // 単元の keys（地図に書く）で鍵を足せる。段 2 の負の数の単元など
+  const padKeys = id => { const u = UNITS[id], st = u.stage, ks = [...(st >= 4 ? ['−'] : []), ...(st >= 3 ? ['.', '/'] : [])];
+    (u.keys || []).forEach(k => { if (!ks.includes(k)) ks.unshift(k); }); return ks; };
+  const padMax = id => UNITS[id].stage >= 3 ? 8 : (UNITS[id].keys || []).includes('−') ? 4 : 3;
   // 答え合わせ：マイナスの書き方をそろえ、空白を除いて比べる。accept は認める別の書き方
   const norm = v => String(v).replace(/[-‐－]/g, '−').replace(/\s+/g, '');
   const isRight = (it, v) => [it.answer, ...(it.accept || [])].some(a => norm(a) === norm(v));

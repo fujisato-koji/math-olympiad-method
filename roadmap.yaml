@@ -532,11 +532,12 @@ units:
     region: kazu
     needs: [N-003]
     plan:
-      - 導入: 0 の左にも数がある（温度、地下の階）
+      - 導入: 0 の左にも数がある（温度、地面や水面からの高さ）
       - 練習: 0 をこえてもどる
       - 練習: 0 より小さい数の大きさくらべ
       - 混ぜる: N-003 と混ぜる
       - 確認: 0 より小さい数
+    keys: [−]
   - id: N-005
     title: 20 までの数とくり上がり
     stage: 2
@@ -577,7 +578,7 @@ units:
       - 確認: 2 けたの計算
   - {id: N-008, title: 偶数と奇数, stage: 2, level: 2, region: seisu, needs: [N-007], days: 5}
   - {id: N-009, title: 大きな数と位, stage: 2, level: 2, region: kazu, needs: [N-007], days: 5}
-  - {id: N-010, title: 正負の数のたし算とひき算, stage: 2, level: 2, region: keisan, needs: [N-004, N-007], days: 6}
+  - {id: N-010, title: 正負の数のたし算とひき算, stage: 2, level: 2, region: keisan, needs: [N-004, N-007], days: 6, keys: [−]}
   - {id: N-011, title: 絶対値（数直線の上の距離）, stage: 2, level: 2, region: kazu, needs: [N-010], days: 5}
   - {id: N-012, title: 数のパズル（魔方陣、虫食い算）, stage: 2, level: 2, region: kazu, needs: [L-001, N-007], days: 6, measure: true}
   - {id: A-002, title: □を使った式, stage: 2, level: 2, region: houteishiki, needs: [N-007], days: 5}
