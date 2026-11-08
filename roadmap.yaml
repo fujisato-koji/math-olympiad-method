@@ -483,7 +483,7 @@ units:
     stage: 1
     level: 1
     region: suiri
-    needs: []
+    needs: [N-001]
     plan:
       - 導入: 形や色の並びのきまり
       - 練習: 数の並びのきまり（1 ずつ、2 ずつ）

@@ -1,0 +1,606 @@
+# L-001 きまりを見つける
+#
+# 書き方は N-001 の頭の注のとおり。
+# 地図では前提がない（needs: []）が、2 日目の数の並びは数を使うので、数は 10 まで（N-001 の範囲）にした。
+# たし算は使わない。「1 ずつ」「2 ずつ」は、かぞえる順に言う、ひとつとばしに言う、で考える。
+# 地図の plan にわけの日がないので、わけは 2・3・4 日目に 1 問ずつ置く。2・3 日目は新しいきまりが出るので、頭に見本を置く。
+# 並びの図は 1 字の絵文字を並べ、❓ は入るものをたずねる所。数の並びは「、」で区切り、□ は入る数をたずねる所。
+# check：❓ の並びは、見えている所と合う いちばん短い くり返しの長さ p を探し、❓ と同じ位置（p で割った余りが同じ）にあるものを答える。
+# 数の並びは、□ でない 2 つの数から 1 つ分の増え方を出し、ほかの数も合うことを確かめてから □ を出す。
+# 「ひとまとまり」「なんばんめ」は、図から いちばん短い くり返しの長さを出して数える。
+
+id: L-001
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: つぎに くるのは どれかな。
+        figure: 🔴🔵🔴🔵🔴❓
+        explain: あか、あお、あか、あお と こうたいに ならんで います。あかの つぎは あお です。だから ❓ は 🔵 です。
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🟡🟢🟡🟢🟡🟢❓
+        choices: [🟢, 🟡, 🔴]
+        answer: 🟡
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - きいろと みどりは、どう ならんで いるかな。
+          - ゆびで さしながら「きいろ、みどり、…」と いってみよう。
+          - さいごの みどりの つぎには、なにが くるかな。
+        paths:
+          - [きいろと みどりが こうたい, みどりの つぎは きいろ, 🟡]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🔺🟩🟡🔺🟩🟡🔺❓
+        choices: [🔺, 🟩, 🟡]
+        answer: 🟩
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - 🔺 の つぎには、いつも なにが くるかな。
+          - さいごは 🔺 で おわって いるね。
+        paths:
+          - [🔺🟩🟡 が くりかえす, 🔺 の つぎは 🟩, 🟩]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🍎🍌🍎❓🍎🍌🍎🍌
+        choices: [🍎, 🍌, 🍇]
+        answer: 🍌
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - ❓ の まえと うしろを みよう。
+          - りんごと バナナは、どう ならんで いるかな。
+          - ❓ の まえは りんご。りんごの つぎには、なにが くるかな。
+        paths:
+          - [りんごと バナナが こうたい, ❓ の まえは りんご, 🍌]
+          - [❓ の うしろは りんご, りんごの まえは バナナ, 🍌]
+        note: さいごに ❓ が ある もんだいに なれて いると、まんなかの ❓ で まよいやすい。まえから じゅんに ゆびで たどらせる。
+      - part: 挑戦
+        text: ひとつだけ、きまりに あって いない えが あります。ひだりから なんばんめですか。
+        figure: 🐶🐱🐶🐱🐱🐱🐶🐱
+        answer: 5
+        check: "(lambda w: w[0] if len(w) == 1 else 0)([j + 1 for j in range(len(fig)) if fig[j] != fig[j % 2]])"
+        hints:
+          - いぬと ねこは、どう ならぶ きまりかな。
+          - ひだりから「いぬ、ねこ、いぬ、ねこ…」と いいながら さそう。
+          - いった ものと ちがう えが でて きたら、そこで とまろう。
+        paths:
+          - [いぬと ねこが こうたいの きまり, ひだりから じゅんに たしかめる, いぬの はずの ところが ねこ, 5 ばんめ]
+        note: ねこが 3 つ つづいて いるので、まんなかの 6 ばんめと こたえやすい。まえから じゅんに たしかめると、さきに ずれるのは 5 ばんめ。
+    extra:
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🐰🐻🐰🐻🐰❓
+        choices: [🐰, 🐻]
+        answer: 🐻
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - うさぎと くまは、どう ならんで いるかな。
+          - ゆびで さしながら「うさぎ、くま、…」と いってみよう。
+          - さいごの うさぎの つぎには、なにが くるかな。
+        paths:
+          - [うさぎと くまが こうたい, うさぎの つぎは くま, 🐻]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🍓🍋🍇🍓❓🍇🍓🍋
+        choices: [🍓, 🍋, 🍇]
+        answer: 🍋
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - いちごの つぎには、いつも なにが くるかな。
+          - ❓ の まえは いちごだね。
+        paths:
+          - [🍓🍋🍇 が くりかえす, いちごの つぎは レモン, 🍋]
+      - part: 挑戦
+        text: ひとつだけ、きまりに あって いない ものが あります。ひだりから なんばんめですか。
+        figure: 🔴🟡🔵🔴🟡🔵🔴🔵🔵
+        answer: 8
+        check: "(lambda w: w[0] if len(w) == 1 else 0)([j + 1 for j in range(len(fig)) if fig[j] != fig[j % 3]])"
+        hints:
+          - はじめの 3 つは、あか、きいろ、あお だね。
+          - ひだりから「あか、きいろ、あお、…」と いいながら さそう。
+          - いった いろと ちがう ところで とまろう。
+        paths:
+          - [あか、きいろ、あおが くりかえす, ひだりから じゅんに たしかめる, きいろの はずの ところが あお, 8 ばんめ]
+        note: あおが 2 つ つづいて いるので、9 ばんめと こたえやすい。まえから じゅんに たしかめる。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: かずの ならびの きまりを みつけよう。
+        figure: 1、2、3、4、□
+        explain: 1、2、3、4 と、かぞえる じゅんに 1 ずつ ふえて います。4 の つぎに かぞえる かずは 5。だから □ は 5 です。
+      - part: 思い出す
+        text: ❓ に はいるのは どれですか。
+        figure: 🟢🔴🟢🔴🟢❓
+        choices: [🟢, 🔴]
+        answer: 🔴
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - みどりと あかは、どう ならんで いるかな。
+          - ゆびで さしながら「みどり、あか、…」と いってみよう。
+          - さいごの みどりの つぎには、なにが くるかな。
+        paths:
+          - [みどりと あかが こうたい, みどりの つぎは あか, 🔴]
+      - part: 思い出す
+        text: ❓ に はいるのは どれですか。
+        figure: 🔷🔺⚪🔷🔺⚪🔷❓
+        choices: [🔷, 🔺, ⚪]
+        answer: 🔺
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - 🔷 の つぎには、いつも なにが くるかな。
+          - さいごは 🔷 で おわって いるね。
+        paths:
+          - [🔷🔺⚪ が くりかえす, 🔷 の つぎは 🔺, 🔺]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 3、4、5、6、□
+        answer: 7
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 3 の つぎは 4、4 の つぎは…と よんでみよう。
+          - 6 の つぎに かぞえる かずは なにかな。
+        paths:
+          - [1 ずつ ふえて いる, 6 の つぎは 7, 7]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 2、4、6、□、10
+        answer: 8
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - 2 と 4 の あいだには、どの かずが ぬけて いるかな。
+          - 1、2、3、4… と かぞえながら、2 と 4 と 6 に しるしを つけてみよう。
+          - 6 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [ひとつ とばしに ならんで いる（2 ずつ）, 6 の つぎは 7 を とばす, 8]
+        note: 「2 ずつ」は、1、2、3… と かぞえて ひとつ とばしに しるしを つけると わかりやすい。
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 9、8、7、6、□
+        answer: 5
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 9 から ひとつずつ もどって いるね。
+          - 6 の ひとつ まえの かずは なにかな。
+        paths:
+          - [1 ずつ へって いる, 6 の つぎは 5, 5]
+        note: ふえる ならびに なれて いると、7 と こたえやすい。さいしょに「ふえて いるか、へって いるか」を みる。
+      - part: 挑戦
+        text: □ に はいる かずは いくつですか。
+        figure: 10、8、□、4、2
+        answer: 6
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 10 から 8 へは、どの かずを とばしたかな。
+          - 8 から おなじように ひとつ とばしで もどろう。
+        paths:
+          - [ひとつ とばしで へって いる（2 ずつ）, 8 の つぎは 7 を とばす, 6]
+          - [□ の うしろは 4, 4 の ひとつ とばし まえは 6, 6]
+      - part: わけ
+        text: 1、3、5、7 の つぎは 9 です。どうして そう いえるのか、くちで いってみよう。
+        figure: 1、3、5、7、□
+        explain: 「2 ずつ ふえて いるから、7 の つぎは 8 を とばして 9」「1、2、3、4… と かぞえて、ひとつ とばしに いって いるから、7 の つぎは 9」と いえれば よい。
+        hints:
+          - 1 と 3 の あいだには、どの かずが ぬけて いるかな。
+          - 3 と 5、5 と 7 の あいだも みてみよう。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [1、3、5、7 は ひとつ とばし, 7 の つぎは 8 を とばす, だから 9]
+    extra:
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 5、6、7、□、9
+        answer: 8
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - □ の まえは 7、うしろは 9 だね。
+          - 7 の つぎに かぞえる かずは なにかな。
+        paths:
+          - [1 ずつ ふえて いる, 7 の つぎは 8, 8]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 4、6、8、□
+        answer: 10
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - 4 と 6 の あいだには、どの かずが ぬけて いるかな。
+          - ひとつ とばしに ならんで いるね。
+          - 8 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [ひとつ とばしに ならんで いる（2 ずつ）, 8 の つぎは 9 を とばす, 10]
+      - part: 挑戦
+        text: まるが ふえて いきます。❓ の ところには、まるが なんこ ならびますか。
+        figure: "🔵\n🔵🔵🔵\n🔵🔵🔵🔵🔵\n❓"
+        answer: 7
+        check: "(lambda r: len(r[2]) + len(r[2]) - len(r[1]))(fig.splitlines())"
+        hints:
+          - 1 だんめ、2 だんめ、3 だんめの まるを かぞえよう。
+          - 1、3、5 と、どんな きまりで ふえて いるかな。
+          - 5 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [まるは 1、3、5 こ, ひとつ とばしに ふえて いる（2 ずつ）, 5 の つぎは 6 を とばして 7, 7 こ]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: おなじ ならびが くりかえす「ひとまとまり」を みつけよう。
+        figure: 🔴🔴🔵🔴🔴🔵🔴🔴🔵
+        explain: 🔴🔴🔵 の 3 つが ひとまとまりで、くりかえして います。まとまりごとに せんで くぎると「🔴🔴🔵｜🔴🔴🔵｜🔴🔴🔵」に なります。
+      - part: 思い出す
+        text: □ に はいる かずは いくつですか。
+        figure: 5、6、7、8、□
+        answer: 9
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 5 の つぎは 6、6 の つぎは…と よんでみよう。
+          - 8 の つぎに かぞえる かずは なにかな。
+        paths:
+          - [1 ずつ ふえて いる, 8 の つぎは 9, 9]
+      - part: 思い出す
+        text: ❓ に はいるのは どれですか。
+        figure: 🍇🍓🍇🍓❓🍓
+        choices: [🍇, 🍓]
+        answer: 🍇
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - ❓ の まえと うしろを みよう。
+          - ぶどうと いちごは、どう ならんで いるかな。
+          - ❓ の まえは いちご。いちごの つぎには、なにが くるかな。
+        paths:
+          - [ぶどうと いちごが こうたい, ❓ の まえは いちご, 🍇]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🔺🟦🟦🔺🟦🟦🔺❓
+        choices: [🔺, 🟦]
+        answer: 🟦
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - くりかえす ひとまとまりを さがそう。
+          - まとまりごとに、ゆびで くぎってみよう。
+          - さいごの まとまりは、🔺 の あと どう つづくかな。
+        paths:
+          - [🔺🟦🟦 が ひとまとまり, さいごの まとまりは 🔺 まで, つぎは 🟦]
+        note: こうたいの ならびに なれて いると、🔺 と こたえやすい。まとまりに くぎって みせる。
+      - part: 今日
+        text: いくつで ひとまとまりに なって いますか。
+        figure: 🍎🍌🍇🍋🍎🍌🍇🍋
+        answer: 4
+        check: "min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))"
+        hints:
+          - はじめの りんごが、つぎに でて くるのは どこかな。
+          - はじめから、つぎの りんごの まえまでを ゆびで かこもう。
+          - かこんだ なかの くだものを かぞえよう。
+        paths:
+          - [りんごが また でて くる ところを さがす, 🍎🍌🍇🍋 で ひとまとまり, 4 つ]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 1、2、3、1、2、3、□
+        answer: 1
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '□' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig.split('、'), fig.split('、').index('□'))"
+        hints:
+          - かずは ずっと ふえて いるかな。
+          - 3 の つぎには、なにが きて いるかな。
+          - まえの まとまりと おなじように つづけよう。
+        paths:
+          - [1、2、3 で ひとまとまり, 3 の つぎは また 1 から, 1]
+        note: 「1 ずつ ふえる」と おもって 4 と こたえやすい。3 の つぎで 1 に もどって いる ことを みせる。
+      - part: 挑戦
+        text: この ならびが このまま つづきます。ひだりから 10 ばんめは どれですか。
+        figure: 🔴🔵🔵🔴🔵🔵
+        choices: [🔴, 🔵]
+        answer: 🔴
+        check: "fig[(10 - 1) % min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))]"
+        hints:
+          - 🔴🔵🔵 が ひとまとまりだね。
+          - かみに つづきを かいて、10 こに なるまで ならべてみよう。
+          - ひだりから 1、2、3… と かぞえて、10 ばんめで とまろう。
+        paths:
+          - [🔴🔵🔵 を くりかえして かく, 10 こまで ならべる, 10 ばんめは 🔴]
+          - [🔴 は 1、4、7 ばんめ, ふたつ とばしで つぎは 10 ばんめ, 🔴]
+        note: えに ない ところを きかれて いる。つづきを かみに かいて よいと つたえる。
+      - part: わけ
+        text: この ならびの つぎは 🟢 です。どうして そう いえるのか、くちで いってみよう。
+        figure: 🟡🟢🟢🟡🟢🟢🟡🟢❓
+        explain: 「🟡🟢🟢 が くりかえして いて、さいごの まとまりは 🟡🟢 まで だから、つぎは 🟢」「🟡 の あとには いつも 🟢 が 2 つ つづくから」と いえれば よい。
+        hints:
+          - くりかえす ひとまとまりは どれかな。
+          - さいごの まとまりは、どこまで ならんで いるかな。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [🟡🟢🟢 が ひとまとまり, さいごの まとまりは 🟡🟢 まで, だから つぎは 🟢]
+    extra:
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🟡🟡🟣🟣🟡🟡🟣❓
+        choices: [🟡, 🟣]
+        answer: 🟣
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - くりかえす ひとまとまりを さがそう。
+          - まとまりごとに、ゆびで くぎってみよう。
+          - さいごの まとまりは、どこまで ならんで いるかな。
+        paths:
+          - [🟡🟡🟣🟣 が ひとまとまり, さいごの まとまりは 🟡🟡🟣 まで, つぎは 🟣]
+      - part: 今日
+        text: いくつで ひとまとまりに なって いますか。
+        figure: 🐶🐱🐰🐶🐱🐰🐶🐱🐰
+        answer: 3
+        check: "min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))"
+        hints:
+          - はじめの いぬが、つぎに でて くるのは どこかな。
+          - はじめから、つぎの いぬの まえまでを ゆびで かこもう。
+          - かこんだ なかの どうぶつを かぞえよう。
+        paths:
+          - [いぬが また でて くる ところを さがす, 🐶🐱🐰 で ひとまとまり, 3 つ]
+      - part: 挑戦
+        text: この ならびが このまま つづきます。ひだりから 8 ばんめは どれですか。
+        figure: 🍎🍌🍇🍎🍌🍇
+        choices: [🍎, 🍌, 🍇]
+        answer: 🍌
+        check: "fig[(8 - 1) % min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))]"
+        hints:
+          - 🍎🍌🍇 が ひとまとまりだね。
+          - かみに つづきを かいて、8 こに なるまで ならべてみよう。
+          - ひだりから かぞえて、8 ばんめで とまろう。
+        paths:
+          - [🍎🍌🍇 を くりかえして かく, 8 こまで ならべる, 8 ばんめは 🍌]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: □ に はいる かずは いくつですか。
+        figure: 2、4、6、8、□
+        answer: 10
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - 2 と 4 の あいだには、どの かずが ぬけて いるかな。
+          - ひとつ とばしに ならんで いるね。
+          - 8 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [ひとつ とばしに ならんで いる（2 ずつ）, 8 の つぎは 9 を とばす, 10]
+      - part: 思い出す
+        text: いくつで ひとまとまりに なって いますか。
+        figure: 🔵🟡🟡🔴🔵🟡🟡🔴
+        answer: 4
+        check: "min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))"
+        hints:
+          - はじめの 🔵 が、つぎに でて くるのは どこかな。
+          - はじめから、つぎの 🔵 の まえまでを ゆびで かこもう。
+          - かこんだ なかの まるを かぞえよう。
+        paths:
+          - [🔵 が また でて くる ところを さがす, 🔵🟡🟡🔴 で ひとまとまり, 4 つ]
+        note: きいろが 2 つ つづくので、そこで くぎって 2 や 3 と こたえやすい。はじめの 🔵 が また でる ところで くぎる。
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🔷⚪🔺🔷❓🔺🔷⚪
+        choices: [🔷, ⚪, 🔺]
+        answer: ⚪
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - 🔷 の つぎには、いつも なにが くるかな。
+          - ❓ の まえは 🔷 だね。
+        paths:
+          - [🔷⚪🔺 が くりかえす, 🔷 の つぎは ⚪, ⚪]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 10、9、□、7、6
+        answer: 8
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 10 から ひとつずつ もどって いるね。
+          - 9 の ひとつ まえの かずは なにかな。
+        paths:
+          - [1 ずつ へって いる, 9 の つぎは 8, 8]
+          - [□ の うしろは 7, 7 の ひとつ あとの かずは 8, 8]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 4、4、1、4、4、1、4、□
+        answer: 4
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '□' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig.split('、'), fig.split('、').index('□'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - まとまりごとに、ゆびで くぎってみよう。
+          - さいごの まとまりは、どこまで ならんで いるかな。
+        paths:
+          - [4、4、1 で ひとまとまり, さいごの まとまりは 4 まで, つぎも 4]
+        note: 1 が くると おもいやすい。まとまりの なかで、4 は 2 かい つづく ことを みせる。
+      - part: 挑戦
+        text: ひとつだけ、きまりに あって いない かずが あります。どれですか。
+        figure: 1、3、5、6、9
+        choices: [1, 3, 5, 6, 9]
+        answer: 6
+        check: "(lambda t: (lambda w: w[0] if len(w) == 1 else 0)([t[i] for i in range(len(t)) if Fraction(t[i]) != Fraction(t[0]) + i * (Fraction(t[1]) - Fraction(t[0]))]))(fig.split('、'))"
+        hints:
+          - 1 と 3 と 5 は、どんな きまりで ならんで いるかな。
+          - 1 から ひとつ とばしで、かぞえて いこう。
+          - かぞえた かずと ちがう ものを さがそう。
+        paths:
+          - [1、3、5 と ひとつ とばし, 5 の つぎは 7 の はず, 6 が ちがう]
+        note: 9 を まちがいと えらびやすい。6 が 7 なら 9 まで きまりに あう ことを たしかめる。
+      - part: わけ
+        text: この ならびの □ は、5 では なく 2 です。どうして そう いえるのか、くちで いってみよう。
+        figure: 2、3、4、2、3、4、□
+        explain: 「4 の つぎで 2 に もどって、2、3、4 を くりかえして いるから」「2、3、4 の まとまりが 2 かい つづいて いるから、つぎの まとまりも 2 から はじまる」と いえれば よい。
+        hints:
+          - 4 の つぎに、なにが きて いるかな。
+          - 2、3、4 は なんかい でて くるかな。
+          - 「だから」を つかって いってみよう。
+        paths:
+          - [4 の つぎで 2 に もどる, 2、3、4 が くりかえす, だから つぎは 2]
+    extra:
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🟢🟣🟢🟣❓🟣
+        choices: [🟢, 🟣]
+        answer: 🟢
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - ❓ の まえと うしろを みよう。
+          - みどりと むらさきは、どう ならんで いるかな。
+          - ❓ の まえは むらさき。むらさきの つぎには、なにが くるかな。
+        paths:
+          - [みどりと むらさきが こうたい, ❓ の まえは むらさき, 🟢]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 1、3、□、7、9
+        answer: 5
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - 1 と 3 の あいだには、どの かずが ぬけて いるかな。
+          - ひとつ とばしに ならんで いるね。
+          - 3 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [ひとつ とばしに ならんで いる（2 ずつ）, 3 の つぎは 4 を とばす, 5]
+      - part: 挑戦
+        text: ひとつだけ、きまりに あって いない かずが あります。どれですか。
+        figure: 2、4、6、7、10
+        choices: [2, 4, 6, 7, 10]
+        answer: 7
+        check: "(lambda t: (lambda w: w[0] if len(w) == 1 else 0)([t[i] for i in range(len(t)) if Fraction(t[i]) != Fraction(t[0]) + i * (Fraction(t[1]) - Fraction(t[0]))]))(fig.split('、'))"
+        hints:
+          - 2 と 4 と 6 は、どんな きまりで ならんで いるかな。
+          - 2 から ひとつ とばしで、かぞえて いこう。
+          - かぞえた かずと ちがう ものを さがそう。
+        paths:
+          - [2、4、6 と ひとつ とばし, 6 の つぎは 8 の はず, 7 が ちがう]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🟠🟣🟠🟣🟠❓
+        choices: [🟠, 🟣]
+        answer: 🟣
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - だいだいと むらさきは、どう ならんで いるかな。
+          - ゆびで さしながら「だいだい、むらさき、…」と いってみよう。
+          - さいごの だいだいの つぎには、なにが くるかな。
+        paths:
+          - [だいだいと むらさきが こうたい, だいだいの つぎは むらさき, 🟣]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🐶🐰🐻🐶❓🐻
+        choices: [🐶, 🐰, 🐻]
+        answer: 🐰
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - いぬの つぎには、なにが くるかな。
+          - ❓ の まえは いぬだね。
+        paths:
+          - [🐶🐰🐻 が くりかえす, いぬの つぎは うさぎ, 🐰]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 6、7、8、□、10
+        answer: 9
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - □ の まえは 8、うしろは 10 だね。
+          - 8 の つぎに かぞえる かずは なにかな。
+        paths:
+          - [1 ずつ ふえて いる, 8 の つぎは 9, 9]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 1、3、5、□
+        answer: 7
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - 1 と 3 の あいだには、どの かずが ぬけて いるかな。
+          - ひとつ とばしに ならんで いるね。
+          - 5 の あと、ひとつ とばした かずは なにかな。
+        paths:
+          - [ひとつ とばしに ならんで いる（2 ずつ）, 5 の つぎは 6 を とばす, 7]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 8、7、6、□
+        answer: 5
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 8 から ひとつずつ もどって いるね。
+          - 6 の ひとつ まえの かずは なにかな。
+        paths:
+          - [1 ずつ へって いる, 6 の つぎは 5, 5]
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🔵🔵🟡🔵🔵🟡🔵❓
+        choices: [🔵, 🟡]
+        answer: 🔵
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - くりかえす ひとまとまりを さがそう。
+          - まとまりごとに、ゆびで くぎってみよう。
+          - さいごの まとまりは、どこまで ならんで いるかな。
+        paths:
+          - [🔵🔵🟡 が ひとまとまり, さいごの まとまりは 🔵 まで, つぎも 🔵]
+      - part: 今日
+        text: いくつで ひとまとまりに なって いますか。
+        figure: 🍓🍋🍋🍓🍋🍋
+        answer: 3
+        check: "min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))"
+        hints:
+          - はじめの いちごが、つぎに でて くるのは どこかな。
+          - はじめから、つぎの いちごの まえまでを ゆびで かこもう。
+          - かこんだ なかの くだものを かぞえよう。
+        paths:
+          - [いちごが また でて くる ところを さがす, 🍓🍋🍋 で ひとまとまり, 3 つ]
+      - part: 今日
+        text: この ならびが このまま つづきます。ひだりから 9 ばんめは どれですか。
+        figure: 🟦🔺🟦🔺
+        choices: [🟦, 🔺]
+        answer: 🟦
+        check: "fig[(9 - 1) % min(p for p in range(1, len(fig) + 1) if all(fig[j] == fig[j % p] for j in range(len(fig))))]"
+        hints:
+          - 🟦🔺 が ひとまとまりだね。
+          - かみに つづきを かいて、9 こに なるまで ならべてみよう。
+          - ひだりから かぞえて、9 ばんめで とまろう。
+        paths:
+          - [🟦🔺 を くりかえして かく, 9 こまで ならべる, 9 ばんめは 🟦]
+          - [🟦 は 1、3、5… ばんめ, ひとつ とばしに かぞえると 9 も はいる, 🟦]
+    extra:
+      - part: 今日
+        text: ❓ に はいるのは どれですか。
+        figure: 🍎🍇🍌🍎🍇❓
+        choices: [🍎, 🍇, 🍌]
+        answer: 🍌
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '❓' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig, fig.index('❓'))"
+        hints:
+          - おなじ ならびが、また でて くる ところを さがそう。
+          - ぶどうの つぎには、なにが くるかな。
+          - さいごは ぶどうで おわって いるね。
+        paths:
+          - [🍎🍇🍌 が くりかえす, ぶどうの つぎは バナナ, 🍌]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 10、8、6、□
+        answer: 4
+        check: "(lambda t: (lambda k, v: (lambda d: v[0][1] + (k - v[0][0]) * d if all(y == v[0][1] + (i - v[0][0]) * d for i, y in v) else 'きまりがない')((v[1][1] - v[0][1]) / (v[1][0] - v[0][0])))(t.index('□'), [(i, Fraction(t[i])) for i in range(len(t)) if t[i] != '□']))(fig.split('、'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 10 から 8 へは、どの かずを とばしたかな。
+          - 6 から おなじように ひとつ とばしで もどろう。
+        paths:
+          - [ひとつ とばしで へって いる（2 ずつ）, 6 の つぎは 5 を とばす, 4]
+      - part: 今日
+        text: □ に はいる かずは いくつですか。
+        figure: 2、1、2、1、2、□
+        answer: 1
+        check: "(lambda s, k: [s[j] for p in range(1, len(s)) if all(s[a] == s[b] for a in range(len(s)) for b in range(len(s)) if a % p == b % p and '□' not in (s[a], s[b])) for j in range(len(s)) if j % p == k % p and j != k][0])(fig.split('、'), fig.split('、').index('□'))"
+        hints:
+          - かずは ふえて いるかな、へって いるかな。
+          - 2 の つぎには、なにが きて いるかな。
+          - まえと おなじように つづけよう。
+        paths:
+          - [2、1 が くりかえす, 2 の つぎは 1, 1]
