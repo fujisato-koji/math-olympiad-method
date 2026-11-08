@@ -1,0 +1,661 @@
+# G-009 角度
+#
+# 書き方は N-001 の頭の注のとおり。
+# 角の大きさは、2 つの辺の開きぐあい。直角を 90 に等しく分けた 1 つ分が 1 度（1°）。辺の長さには関係しない。
+# 図は svg（D-040）で、角は本当の大きさで描いた（三角形と四角形は、決めた角から頂点を計算した）。わからない角は あ、い。
+#   分度器の図は、右の 0 から左の 180 へ 1 つの目もりだけをかき、10° ごとの目もり、30° ごとの数字にした。
+#   本物の分度器には内と外の 2 つの目もりがあるので、どちらの 0 から読むかは、実物で一緒に確かめる。
+# 前提の数は N-009（1000 まで）。角は 5° きざみにし、3 けたのひき算は 180 − 35、360 − 120 − 125 のような形にした。
+#   わり算は N-014 の九九の範囲と、何十 ÷ 1 けた（180 ÷ 3 は 18 ÷ 3 = 6 の 10 こ分）まで。
+# 三角形の角の和 180° は、3 日目の見本で「3 つの角を切って集めると一直線」と見せ、4 日目のわけで文に書く（代表の例）。
+#   どんな三角形でも一直線になるわけ（平行線の錯角・同位角）は G-016 で扱うので、ここでは使わない。
+#   二等辺三角形の性質は G-017 で扱うので、「2 つの角が等しい三角形」と問題文で言うだけにした。外角の性質も名前は出さない。
+# 時計の針の角度は N-059（時刻）が前提にないので扱わない。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 角の大きさと度、分度器　2 日目 一直線・1 回転・三角定規の角の計算　3 日目 三角形と四角形の角の和
+#   4 日目 わけ（三角形 180°、四角形 360°、90° より大きい角は 2 つない）　5 日目 G-006（直角、長方形、正方形）・N-014 と混ぜる　6 日目 確認
+# check：角の計算の式。分度器は「数字の目もり + 10° の目もりの数」の式。角の大きさが辺の長さによらないことを選ぶ問題は約束ごとなので check を付けない。
+
+id: G-009
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 角の大きさを、数で表そう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="77.6" y1="122" x2="165.6" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="77.6" y1="122" x2="77.6" y2="34" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="77.6" cy="122" r="2.5" fill="currentColor"/><polyline points="88.6,122 88.6,111 77.6,111" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 角の大きさは、2 つの辺の開きぐあいです。直角を 90 に等しく分けた 1 つ分の大きさを 1 度といい、1° と書きます。直角は 90° です。角の大きさは分度器で測ります。分度器の中心を角の頂点に、0 の線を 1 つの辺に合わせて、もう 1 つの辺が通る目もりを読みます。辺を長くかいても、角の大きさは変わりません。
+      - part: 思い出す
+        text: 長方形には、直角のかどがいくつありますか。
+        choices: [2 つ, 3 つ, 4 つ]
+        answer: 4 つ
+        hints:
+          - 長方形のかどを、1 つずつ見よう。
+          - 長方形のかどは、どれも同じ形かな。
+          - 直角のかどを数えよう。
+        paths:
+          - [長方形のかどは 4 つ, どれも直角, 4 つ]
+      - part: 思い出す
+        text: 90 + 90 はいくつですか。
+        answer: 180
+        check: "90 + 90"
+        hints:
+          - 90 は 10 が 9 こだね。
+          - 10 が 9 こと 9 こで、10 が何こになるかな。
+          - 10 が 18 こは、いくつかな。
+        paths:
+          - [10 が 9 + 9 = 18 こ, 180]
+      - part: 今日
+        text: 一直線の角（あ）は、直角 2 つ分です。あは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="120" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 100 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.3" y="86.9" font-size="13" text-anchor="middle">あ</text><polyline points="129,112 129,103 120,103" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="120,103 111,103 111,112" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 180
+        check: "90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 直角 2 つ分だから、90° を 2 つ合わせよう。
+          - 90 + 90 を計算しよう。
+        paths:
+          - [直角は 90°, 90 + 90 = 180, 180°]
+        note: 一直線は角に見えにくい。辺が 2 本あり、開きぐあいがいちばん大きくなった形と話す。
+      - part: 今日
+        text: 分度器で角を測りました。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="228" y2="122" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="50.6" y2="39.3" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 130
+        check: "120 + 10"
+        hints:
+          - 1 つの辺は、0 の線に合っているね。
+          - もう 1 つの辺は、どの数字の近くを通っているかな。
+          - 120 から、10° の目もりがいくつ先かな。
+        paths:
+          - [0 の線から測る, 120 から 10° の目もり 1 つ先, 130°]
+        note: 数字の目もりの読み方と、10° の目もりを数える力を見る。
+      - part: 今日
+        text: 1 回転の角は、直角 4 つ分です。何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="62" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="128" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="129,70 129,61 120,61" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="120,61 111,61 111,70" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="111,70 111,79 120,79" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="120,79 129,79 129,70" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 360
+        check: "90 + 90 + 90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 直角 2 つ分の一直線は 180° だったね。
+          - 一直線 2 つ分と考えてもよいよ。
+        paths:
+          - [90 + 90 + 90 + 90 = 360, 360°]
+          - [一直線 180° が 2 つ, 180 + 180 = 360]
+      - part: 挑戦
+        text: 分度器で角を測りました。2 つの辺のどちらも、0 の線には合っていません。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="202.7" y2="52.6" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="18.5" y2="85.1" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 120
+        check: "160 - 40"
+        hints:
+          - 2 つの辺が通る目もりを、どちらも読もう。
+          - 右の辺は 40、左の辺は何度の目もりかな。
+          - 40 の目もりから 160 の目もりまで、何度開いているかな。
+        paths:
+          - [右の辺は 40、左の辺は 160, 160 − 40 = 120, 120°]
+        note: 左の辺の目もり（160）をそのまま答えやすい。0 から測っていないときは、2 つの目もりの差。
+    extra:
+      - part: 今日
+        text: 分度器で角を測りました。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="228" y2="122" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="156.9" y2="20.5" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 70
+        check: "60 + 10"
+        hints:
+          - 1 つの辺は、0 の線に合っているね。
+          - もう 1 つの辺は、どの数字の近くを通っているかな。
+          - 60 から、10° の目もりがいくつ先かな。
+        paths:
+          - [60 から 10° の目もり 1 つ先, 70°]
+      - part: 今日
+        text: 直角 3 つ分の角は何度ですか。
+        answer: 270
+        check: "90 + 90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 90° を 3 つ合わせよう。
+          - 一直線 180° と直角 90° を合わせると考えてもよいよ。
+        paths:
+          - [90 + 90 + 90 = 270, 270°]
+          - [180 + 90 = 270]
+      - part: 今日
+        text: あ と い では、どちらの角が大きいですか。
+        svg: '<svg viewBox="0 0 240 142" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="120" x2="90" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="120" x2="72.1" y2="81.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M56 120 A16 16 0 0 0 50.3 107.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="48" y="138.2" font-size="12" text-anchor="middle">あ</text><line x1="140" y1="120" x2="230" y2="120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140" y1="120" x2="197.9" y2="51.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M156 120 A16 16 0 0 0 150.3 107.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="148" y="138.2" font-size="12" text-anchor="middle">い</text></svg>'
+        choices: [あ, い, 同じ]
+        answer: 同じ
+        hints:
+          - 角の大きさは、辺の何で決まるかな。
+          - 2 つの角の、辺の開きぐあいをくらべよう。
+          - あを大きくうつして、いに重ねたらどうなるかな。
+        paths:
+          - [角の大きさは開きぐあい, 辺の長さは関係ない, 開きぐあいは同じ]
+        note: 辺が長い い を大きいと答えやすい。紙に写して重ねると確かめられる。
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 三角定規の角の大きさを知ろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="16,111.6 96,111.6 16,31.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,111.6 230.9,111.6 120,47.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polyline points="16,102.6 25,102.6 25,111.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M84.7 100.3 A16 16 0 0 0 80 111.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.3" y="104.7" font-size="13" text-anchor="middle">45°</text><path d="M16 47.6 A16 16 0 0 0 27.3 42.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="27.5" y="63.9" font-size="13" text-anchor="middle">45°</text><polyline points="120,102.6 129,102.6 129,111.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M217 103.6 A16 16 0 0 0 214.9 111.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="201.9" y="108.4" font-size="13" text-anchor="middle">30°</text><path d="M120 63.6 A16 16 0 0 0 133.9 55.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135" y="78.1" font-size="13" text-anchor="middle">60°</text></svg>'
+        explain: 1 組の三角定規の角は、90°・45°・45° と、90°・60°・30° です。2 まいの角を、頂点をそろえてならべると、いろいろな角がつくれます。たとえば 45° と 30° をならべると 45 + 30 = 75 で 75°、60° から 45° を取ると 60 − 45 = 15 で 15° です。
+      - part: 思い出す
+        text: 分度器で角を測りました。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="228" y2="122" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="83.1" y2="20.5" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 110
+        check: "90 + 20"
+        hints:
+          - 1 つの辺は、0 の線に合っているね。
+          - もう 1 つの辺は、どの数字の近くかな。
+          - 90 から、10° の目もりがいくつ先かな。
+        paths:
+          - [90 から 10° の目もり 2 つ先, 110°]
+      - part: 思い出す
+        text: 180 − 40 はいくつですか。
+        answer: 140
+        check: "180 - 40"
+        hints:
+          - 180 は 10 が 18 こ、40 は 10 が 4 こだね。
+          - 10 が 18 こから 4 こをとると、何こかな。
+          - 10 が 14 こはいくつかな。
+        paths:
+          - [10 が 18 − 4 = 14 こ, 140]
+      - part: 今日
+        text: 一直線に、1 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="195.4" y2="59.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 136.4 100.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="160.1" y="103.9" font-size="13" text-anchor="middle">35°</text><path d="M141.3 97.1 A26 26 0 0 0 94 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.4" y="76.5" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 145
+        check: "180 - 35"
+        hints:
+          - 一直線の角は何度だったかな。
+          - あと 35° を合わせると、一直線になるね。
+          - 180 から 35 をひこう。
+        paths:
+          - [あ + 35 = 180, 180 − 35 = 145, 145°]
+      - part: 今日
+        text: 三角定規の 45° の角と 60° の角を、頂点をそろえてならべました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="122" x2="155" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="122" x2="127.2" y2="54.8" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="122" x2="35.4" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M84 122 A24 24 0 0 0 77 105" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97" y="110.9" font-size="12" text-anchor="middle">45°</text><path d="M77 105 A24 24 0 0 0 53.8 98.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="70.4" y="87.6" font-size="12" text-anchor="middle">60°</text><path d="M118 122 A58 58 0 0 0 45 66" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="103.8" y="69.8" font-size="14" text-anchor="middle">あ</text><circle cx="60" cy="122" r="2.5" fill="currentColor"/></svg>'
+        answer: 105
+        check: "45 + 60"
+        hints:
+          - あは、2 つの角を合わせた角だね。
+          - 45 と 60 をたそう。
+          - 45 + 60 は、40 + 60 に 5 をたすと考えよう。
+        paths:
+          - [あ = 45 + 60, 105°]
+      - part: 今日
+        text: 1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="69.8" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="172.6" y2="94.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 56 A14 14 0 0 0 107.9 77" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="83.6" y="53.5" font-size="13" text-anchor="middle">120°</text><path d="M102.7 80 A20 20 0 0 0 138.1 78.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="121.8" y="116.5" font-size="13" text-anchor="middle">125°</text><path d="M143.6 81 A26 26 0 0 0 120 44" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="155.4" y="52" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 115
+        check: "360 - 120 - 125"
+        hints:
+          - 1 つの点のまわりを 1 回転すると、何度だったかな。
+          - 3 つの角を合わせると、1 回転だね。
+          - 360 から、わかっている 2 つの角をひこう。
+        paths:
+          - [120 + 125 = 245, 360 − 245 = 115, 115°]
+          - [360 − 120 = 240, 240 − 125 = 115]
+      - part: 挑戦
+        text: 2 本の直線が交わっています。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="25" y1="70" x2="215" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.1" y1="112.7" x2="170.9" y2="27.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 70 A18 18 0 0 0 133.8 58.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="151.9" y="62.9" font-size="13" text-anchor="middle">40°</text><path d="M102 70 A18 18 0 0 0 106.2 81.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.1" y="86.2" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 40
+        check: "180 - (180 - 40)"
+        hints:
+          - 40° の角ととなりの角を合わせると、一直線だね。
+          - となりの角は何度かな。
+          - そのとなりの角と、あを合わせても一直線になるよ。
+        paths:
+          - [40° のとなりの角は 180 − 40 = 140, あ は 180 − 140 = 40, 40°]
+        note: 向かい合う角が等しいことに、計算から気づかせる。名前（対頂角）と、そのわけを文で示すのは G-016。
+    extra:
+      - part: 今日
+        text: 三角定規の 60° の角に、45° の角を重ねました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="122" x2="155" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="122" x2="127.2" y2="54.8" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="122" x2="107.5" y2="39.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M84 122 A24 24 0 0 0 77 105" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97" y="110.9" font-size="12" text-anchor="middle">45°</text><path d="M77 105 A24 24 0 0 0 72 101.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="111.1" y="59.6" font-size="12" text-anchor="middle">あ</text><path d="M118 122 A58 58 0 0 0 89 71.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122.4" y="90.9" font-size="14" text-anchor="middle">60°</text><circle cx="60" cy="122" r="2.5" fill="currentColor"/></svg>'
+        answer: 15
+        check: "60 - 45"
+        hints:
+          - 60° の角の中に、45° の角が入っているね。
+          - のこりが あ だよ。
+          - 60 から 45 をひこう。
+        paths:
+          - [60 − 45 = 15, 15°]
+      - part: 今日
+        text: 一直線に、2 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="179.1" y2="41.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="67.2" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 132.9 96.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="158.1" y="98.8" font-size="13" text-anchor="middle">50°</text><path d="M136.7 92.1 A26 26 0 0 0 105.1 90.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="121.8" y="74.6" font-size="13" text-anchor="middle">あ</text><path d="M108.5 95.6 A20 20 0 0 0 100 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="82.7" y="97.2" font-size="13" text-anchor="middle">55°</text><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 75
+        check: "180 - 50 - 55"
+        hints:
+          - 3 つの角を合わせると、一直線だね。
+          - 一直線は何度だったかな。
+          - 180 から、わかっている 2 つの角をひこう。
+        paths:
+          - [50 + 55 = 105, 180 − 105 = 75, 75°]
+      - part: 今日
+        text: 1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="91" y2="120.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 56 A14 14 0 0 0 113 82.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79.4" y="63.7" font-size="13" text-anchor="middle">150°</text><path d="M110 87.3 A20 20 0 0 0 140 70" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141" y="110.9" font-size="13" text-anchor="middle">あ</text><polyline points="129,70 129,61 120,61" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 120
+        check: "360 - 90 - 150"
+        hints:
+          - 直角のしるしの角は何度かな。
+          - 3 つの角を合わせると 1 回転だね。
+          - 360 から、わかっている 2 つの角をひこう。
+        paths:
+          - [90 + 150 = 240, 360 − 240 = 120, 120°]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 三角形の 3 つの角（あ、い、う）を切りとって、頂点を 1 つの点に集めてならべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="12,100 108,100 42,40" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M26 100 A14 14 0 0 0 18.3 87.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="35.8" y="89.8" font-size="13" text-anchor="middle">あ</text><path d="M97.6 90.6 A14 14 0 0 0 94 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.9" y="94.5" font-size="13" text-anchor="middle">い</text><path d="M35.7 52.5 A14 14 0 0 0 52.4 49.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.1" y="72.1" font-size="13" text-anchor="middle">う</text><line x1="132" y1="100" x2="228" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180" y1="100" x2="160.7" y2="61.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M172.8 85.7 A16 16 0 0 0 164 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.5" y="88.4" font-size="12" text-anchor="middle">あ</text><line x1="180" y1="100" x2="223.2" y2="100" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M196 100 A16 16 0 0 0 191.8 89.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="208" y="93.4" font-size="12" text-anchor="middle">い</text><line x1="180" y1="100" x2="212" y2="70.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M191.8 89.2 A16 16 0 0 0 172.8 85.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="185.5" y="74.7" font-size="12" text-anchor="middle">う</text></svg>'
+        explain: 3 つの角をすき間なくならべると、右の図のように一直線になります。だから、三角形の 3 つの角の大きさの和は 180° です。四角形は、かどからかどへの線で 2 つの三角形に分けられるので、4 つの角の和は 180 + 180 = 360 で 360° です。
+      - part: 思い出す
+        text: 一直線に、1 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="81.1" y2="28.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 111.5 93.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="142.6" y="81.1" font-size="13" text-anchor="middle">115°</text><path d="M109 88.4 A26 26 0 0 0 94 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.6" y="94" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 65
+        check: "180 - 115"
+        hints:
+          - 2 つの角を合わせると、一直線だね。
+          - 一直線は何度だったかな。
+          - 180 から 115 をひこう。
+        paths:
+          - [180 − 115 = 65, 65°]
+      - part: 思い出す
+        text: 三角定規の 30° の角と 45° の角を、頂点をそろえてならべました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="122" x2="155" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="122" x2="142.3" y2="74.5" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="122" x2="84.6" y2="30.2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M84 122 A24 24 0 0 0 80.8 110" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.6" y="115.8" font-size="12" text-anchor="middle">30°</text><path d="M80.8 110 A24 24 0 0 0 66.2 98.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="84.4" y="94.5" font-size="12" text-anchor="middle">45°</text><path d="M118 122 A58 58 0 0 0 75 66" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.1" y="83.1" font-size="14" text-anchor="middle">あ</text><circle cx="60" cy="122" r="2.5" fill="currentColor"/></svg>'
+        answer: 75
+        check: "30 + 45"
+        hints:
+          - あは、2 つの角を合わせた角だね。
+          - 30 と 45 をたそう。
+          - 十の位と一の位に分けてたそう。
+        paths:
+          - [30 + 45 = 75, 75°]
+      - part: 今日
+        text: 三角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="57.4,122 182.6,122 95.3,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M73.4 122 A16 16 0 0 0 62.9 107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="82" y="109.3" font-size="13" text-anchor="middle">70°</text><path d="M172.3 109.7 A16 16 0 0 0 166.6 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="155.4" y="113.9" font-size="13" text-anchor="middle">50°</text><path d="M89.8 33 A16 16 0 0 0 105.6 30.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="100.5" y="52.1" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 60
+        check: "180 - 70 - 50"
+        hints:
+          - 三角形の 3 つの角の和は何度だったかな。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [70 + 50 = 120, 180 − 120 = 60, 60°]
+      - part: 今日
+        text: 直角三角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="45.7,122 194.3,122 45.7,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polyline points="45.7,113 54.7,113 54.7,122" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M181.2 112.8 A16 16 0 0 0 178.3 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165.7" y="117.5" font-size="13" text-anchor="middle">35°</text><path d="M45.7 34 A16 16 0 0 0 58.8 27.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.6" y="49.2" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 55
+        check: "180 - 90 - 35"
+        hints:
+          - 直角のしるしの角は何度かな。
+          - 3 つの角の和は 180° だね。
+          - 180 から 90 と 35 をひこう。
+        paths:
+          - [90 + 35 = 125, 180 − 125 = 55, 55°]
+          - [直角をのぞいた 2 つの角で 90°, 90 − 35 = 55]
+        note: 直角を数え忘れて 180 − 35 = 145 としやすい。
+      - part: 今日
+        text: 四角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="32,122 208,122 183.3,29.6 50.3,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M48 122 A16 16 0 0 0 34.8 106.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="55" y="107.3" font-size="13" text-anchor="middle">80°</text><path d="M203.9 106.5 A16 16 0 0 0 192 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="184.2" y="108.3" font-size="13" text-anchor="middle">75°</text><path d="M167.3 28.2 A16 16 0 0 0 187.4 45.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="164" y="57.2" font-size="13" text-anchor="middle">110°</text><path d="M47.6 33.8 A16 16 0 0 0 66.3 19.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.6" y="46.4" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 95
+        check: "360 - 80 - 75 - 110"
+        hints:
+          - 四角形の 4 つの角の和は何度だったかな。
+          - わかっている 3 つの角をたそう。
+          - 360 から、その和をひこう。
+        paths:
+          - [80 + 75 + 110 = 265, 360 − 265 = 95, 95°]
+      - part: 挑戦
+        text: 下の 2 つの角（い）は等しい大きさです。いは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="82.1,122 157.9,122 120,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M98.1 122 A16 16 0 0 0 87.6 107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.7" y="109.3" font-size="13" text-anchor="middle">い</text><path d="M152.4 107 A16 16 0 0 0 141.9 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="133.3" y="109.3" font-size="13" text-anchor="middle">い</text><path d="M114.5 33 A16 16 0 0 0 125.5 33" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="52.5" font-size="13" text-anchor="middle">40°</text></svg>'
+        answer: 70
+        check: "(180 - 40) // 2"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - 2 つの い を合わせると、何度かな。
+          - その角を、等しい 2 つに分けよう。
+        paths:
+          - [い 2 つで 180 − 40 = 140, 140 ÷ 2 = 70, 70°]
+        note: 140 ÷ 2 は、10 が 14 こを 2 つに分けて 10 が 7 こと考える。
+    extra:
+      - part: 今日
+        text: 3 つの角がみんな等しい三角形があります。1 つの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,122 180,122 120,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M76 122 A16 16 0 0 0 68 108.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="85.9" y="111.5" font-size="13" text-anchor="middle">あ</text><path d="M172 108.1 A16 16 0 0 0 164 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.1" y="111.5" font-size="13" text-anchor="middle">あ</text><path d="M112 31.9 A16 16 0 0 0 128 31.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="52.5" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - 3 つの角の和は何度だったかな。
+          - 180° を、等しい 3 つに分けよう。
+          - 18 ÷ 3 を考えて、10 こ分にしよう。
+        paths:
+          - [180 ÷ 3 = 60, 60°]
+      - part: 今日
+        text: 三角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="30,112 179.5,112 210,28" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M46 112 A16 16 0 0 0 44.5 105.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.3" y="110" font-size="13" text-anchor="middle">25°</text><path d="M184.9 96.9 A16 16 0 0 0 163.5 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="162.2" y="91.9" font-size="13" text-anchor="middle">110°</text><path d="M195.5 34.8 A16 16 0 0 0 204.5 43.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="189.7" y="54.7" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 45
+        check: "180 - 25 - 110"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [25 + 110 = 135, 180 − 135 = 45, 45°]
+      - part: 今日
+        text: 四角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="81,122 159,122 159,63 81,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polyline points="81,113 90,113 90,122" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="150,122 150,113 159,113" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M145.1 55 A16 16 0 0 0 159 79" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="133" y="82.6" font-size="13" text-anchor="middle">120°</text><path d="M81 34 A16 16 0 0 0 94.9 26" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="96" y="48.5" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 60
+        check: "360 - 90 - 90 - 120"
+        hints:
+          - 直角のしるしの角は何度かな。
+          - 4 つの角の和は 360° だね。
+          - 360 から、わかっている 3 つの角をひこう。
+        paths:
+          - [90 + 90 + 120 = 300, 360 − 300 = 60, 60°]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 三角形の 3 つの角の和が 180° になるのはなぜですか。図のように、3 つの角を切って集めた例を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="12,100 108,100 42,40" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M26 100 A14 14 0 0 0 18.3 87.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="35.8" y="89.8" font-size="13" text-anchor="middle">あ</text><path d="M97.6 90.6 A14 14 0 0 0 94 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.9" y="94.5" font-size="13" text-anchor="middle">い</text><path d="M35.7 52.5 A14 14 0 0 0 52.4 49.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="47.1" y="72.1" font-size="13" text-anchor="middle">う</text><line x1="132" y1="100" x2="228" y2="100" stroke="currentColor" stroke-width="2" fill="none"/><line x1="180" y1="100" x2="160.7" y2="61.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M172.8 85.7 A16 16 0 0 0 164 100" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.5" y="88.4" font-size="12" text-anchor="middle">あ</text><line x1="180" y1="100" x2="223.2" y2="100" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M196 100 A16 16 0 0 0 191.8 89.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="208" y="93.4" font-size="12" text-anchor="middle">い</text><line x1="180" y1="100" x2="212" y2="70.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M191.8 89.2 A16 16 0 0 0 172.8 85.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="185.5" y="74.7" font-size="12" text-anchor="middle">う</text></svg>'
+        explain: 例：「三角形の あ、い、う の 3 つの角を切りとり、頂点を 1 つの点に集めて、すき間も重なりもないようにならべる。すると、あ、う、い がならんで一直線になる。一直線の角は 180° だから、3 つの角の和は 180°。」と書ければよい。① すき間も重なりもなくならべる、② 一直線になる、③ 一直線は 180°、の 3 点を見る。紙で形のちがう三角形を 2〜3 こ作って試すとよい。「どんな三角形でもかならず一直線になるのはなぜか」は、平行線を使って G-016 で示す、と話しておく。
+        hints:
+          - 3 つの角を切って、頂点を 1 つに集めてみよう。
+          - ならべた 3 つの角は、どんな形になったかな。
+          - 「一直線は〜°だから」と書こう。
+        paths:
+          - [3 つの角を切りとる, すき間なくならべる, 一直線になる, 一直線は 180°]
+      - part: わけ
+        text: 四角形の 4 つの角の和が 360° になるのはなぜですか。図の四角形を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="32,122 208,122 183.3,29.6 50.3,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="32" y1="122" x2="183.3" y2="29.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 例：「かどからかどへ線（点線）を引くと、四角形は 2 つの三角形に分かれる。三角形の 3 つの角の和は 180° なので、2 つで 180 + 180 = 360°。2 つの三角形の角を合わせると、ちょうど四角形の 4 つの角になる。だから 360°。」と書ければよい。① 2 つの三角形に分ける、② 1 つの三角形は 180°、③ 三角形の角を合わせると四角形の角になる、の 3 点を見る。③ が抜けやすい（線を引いた所の角は、2 つの三角形の角に分かれているだけ）。
+        hints:
+          - かどからかどへの線で、四角形を分けよう。
+          - いくつの三角形に分かれたかな。
+          - 三角形の角を合わせると、四角形のどの角になるかな。
+        paths:
+          - [線で 2 つの三角形に分ける, 1 つは 180°, 180 + 180 = 360, 三角形の角を合わせると四角形の 4 つの角]
+      - part: わけ
+        text: 三角形には、90° より大きい角が 2 つあることはありません。なぜですか。例を使って、文で書きましょう。
+        explain: 例：「もし 100° と 100° の角が 2 つあると、それだけで 100 + 100 = 200° になり、3 つの角の和の 180° をこえてしまう。90° より大きい角が 2 つあれば、2 つで 180° より大きくなるので、そんな三角形はかけない。」と書ければよい。例の数（100° など）を 1 つ決めて計算し、「90° より大きい角 2 つなら、いつでも 180° をこえる」とまとめられているかを見る。G-006 の「直角が 2 つある三角形はない」と同じ考え方だと気づけばなお良い。
+        hints:
+          - 90° より大きい角を 2 つ、例えば 100° と 100° にしてみよう。
+          - その 2 つだけで、何度になるかな。
+          - 3 つの角の和は何度だったかな。くらべよう。
+        paths:
+          - [例 100° と 100°, 2 つで 200°, 180° をこえる, だからかけない]
+      - part: 今日
+        text: 五角形を、1 つの頂点から引いた線で三角形に分けました。五角形の 5 つの角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="96.5,106.2 143.5,106.2 158,61.5 120,33.8 82,61.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="96.5" y1="106.2" x2="158" y2="61.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="96.5" y1="106.2" x2="120" y2="33.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 540
+        check: "180 * 3"
+        hints:
+          - 三角形がいくつできたかな。
+          - 三角形 1 つの角の和は 180° だね。
+          - 三角形の数だけ 180 をたそう。
+        paths:
+          - [三角形が 3 つ, 180 + 180 + 180 = 540, 540°]
+        note: 5 つの頂点から 1 本ずつ線を引くと考えて、三角形の数を取りちがえやすい。1 つの頂点から引く。
+      - part: 今日
+        text: 下の 2 つの角（い）は等しい大きさです。いは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="30,107.8 210,107.8 120,32.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M46 107.8 A16 16 0 0 0 42.3 97.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="58.2" y="102" font-size="13" text-anchor="middle">い</text><path d="M197.7 97.5 A16 16 0 0 0 194 107.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="181.8" y="102" font-size="13" text-anchor="middle">い</text><path d="M107.7 42.5 A16 16 0 0 0 132.3 42.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="66.8" font-size="13" text-anchor="middle">100°</text></svg>'
+        answer: 40
+        check: "(180 - 100) // 2"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - 2 つの い を合わせると、何度かな。
+          - それを、等しい 2 つに分けよう。
+        paths:
+          - [い 2 つで 180 − 100 = 80, 80 ÷ 2 = 40, 40°]
+    extra:
+      - part: 今日
+        text: 六角形を、1 つの頂点から引いた線で三角形に分けました。六角形の 6 つの角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="100,104.6 140,104.6 160,70 140,35.4 100,35.4 80,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="100" y1="104.6" x2="160" y2="70" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="100" y1="104.6" x2="140" y2="35.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="100" y1="104.6" x2="100" y2="35.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 720
+        check: "180 * 4"
+        hints:
+          - 三角形がいくつできたかな。
+          - 三角形 1 つの角の和は 180° だね。
+          - 180 を、三角形の数だけたそう。
+        paths:
+          - [三角形が 4 つ, 180 + 180 = 360、360 + 360 = 720, 720°]
+      - part: 今日
+        text: 三角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="63.5,122 176.5,122 167.5,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M79.5 122 A16 16 0 0 0 74.8 110.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="91.2" y="115.1" font-size="13" text-anchor="middle">45°</text><path d="M175.2 106.1 A16 16 0 0 0 160.5 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154.4" y="106.3" font-size="13" text-anchor="middle">85°</text><path d="M156.1 29.3 A16 16 0 0 0 168.8 33.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157.2" y="50.7" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 50
+        check: "180 - 45 - 85"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [45 + 85 = 130, 180 − 130 = 50, 50°]
+      - part: 今日
+        text: 四角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60.7,122 176.2,122 185.3,18 54.7,53" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M76.7 122 A16 16 0 0 0 59.3 106.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81" y="104.4" font-size="13" text-anchor="middle">95°</text><path d="M177.6 106.1 A16 16 0 0 0 160.2 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="155.9" y="104.4" font-size="13" text-anchor="middle">95°</text><path d="M169.8 22.1 A16 16 0 0 0 183.9 33.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="166" y="45.5" font-size="13" text-anchor="middle">70°</text><path d="M56.1 68.9 A16 16 0 0 0 70.2 48.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="79.3" y="74.7" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 100
+        check: "360 - 95 - 95 - 70"
+        hints:
+          - 4 つの角の和は 360° だね。
+          - わかっている 3 つの角をたそう。
+          - 360 から、その和をひこう。
+        paths:
+          - [95 + 95 + 70 = 260, 360 − 260 = 100, 100°]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 正方形の 4 つの角は、どれも直角です。4 つの角の和は何度ですか。
+        answer: 360
+        check: "90 + 90 + 90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 90° を 4 つ合わせよう。
+          - 四角形の角の和とくらべてもよいよ。
+        paths:
+          - [90 + 90 + 90 + 90 = 360, 360°]
+      - part: 思い出す
+        text: 54 ÷ 6 はいくつですか。
+        answer: 9
+        check: "54 // 6"
+        hints:
+          - 6 × □ = 54 になる □ をさがそう。
+          - 6 のだんの九九を思い出そう。
+          - 6 のだんを、6 × 5 = 30 から順に言ってみよう。
+        paths:
+          - [6 × 9 = 54, 9]
+      - part: 今日
+        text: 円の中心のまわりを、6 つの等しい角に分けました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="58" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="69.8" y2="41" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="69.8" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="128" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="170.2" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="170.2" y2="41" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 54 A16 16 0 0 0 106.1 62" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105" y="48.6" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 60
+        check: "360 // 6"
+        hints:
+          - 中心のまわりを 1 回転すると、何度かな。
+          - 360° を、等しい 6 つに分けよう。
+          - 36 ÷ 6 を考えて、10 こ分にしよう。
+        paths:
+          - [360 ÷ 6 = 60, 60°]
+      - part: 今日
+        text: 長方形の紙に、かどからかどへ線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="42.9,124 197.1,124 197.1,16 42.9,16" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="42.9" y1="124" x2="197.1" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><path d="M64.9 124 A22 22 0 0 0 60.9 111.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81" y="116.5" font-size="13" text-anchor="middle">35°</text><path d="M182.4 26.3 A18 18 0 0 0 197.1 34" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="182.4" y="48.9" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 55
+        check: "180 - 90 - 35"
+        hints:
+          - 線の下にできた三角形を見よう。
+          - その三角形の右下のかどは、長方形のかどだから何度かな。
+          - 三角形の 3 つの角の和を使おう。
+        paths:
+          - [右下は直角, 180 − 90 − 35 = 55, 55°]
+      - part: 今日
+        text: 直角を、3 つの等しい角に分けました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="80" y1="118" x2="176" y2="118" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="118" x2="163.1" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="118" x2="128" y2="34.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="118" x2="80" y2="22" stroke="currentColor" stroke-width="2" fill="none"/><path d="M94 118 A14 14 0 0 0 92.1 111" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120.6" y="111.7" font-size="13" text-anchor="middle">あ</text><circle cx="80" cy="118" r="2.5" fill="currentColor"/></svg>'
+        answer: 30
+        check: "90 // 3"
+        hints:
+          - 直角は何度だったかな。
+          - 90° を、等しい 3 つに分けよう。
+          - 9 ÷ 3 を考えて、10 こ分にしよう。
+        paths:
+          - [90 ÷ 3 = 30, 30°]
+      - part: 挑戦
+        text: 45° の三角定規と 60° の三角定規を、下の辺をそろえて重ねました。ななめの辺が交わってできた、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="68,130 137.3,130 137.3,60.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="172,130 102.7,130 102.7,10" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M86 130 A18 18 0 0 0 80.8 117.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.5" y="121.5" font-size="13" text-anchor="middle">45°</text><path d="M163 114.4 A18 18 0 0 0 154 130" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="142.5" y="117.5" font-size="13" text-anchor="middle">60°</text><path d="M125.4 72.6 A12 12 0 0 0 139.9 74.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130.8" y="92.5" font-size="13" text-anchor="middle">あ</text><polyline points="130.3,130 130.3,123 137.3,123" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="109.7,130 109.7,123 102.7,123" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 75
+        check: "180 - 45 - 60"
+        hints:
+          - 2 本のななめの辺と、下の辺で囲まれた三角形をさがそう。
+          - その三角形の下の 2 つの角は何度かな。
+          - 三角形の 3 つの角の和を使おう。
+        paths:
+          - [ななめの辺と下の辺で三角形ができる, 下の角は 45° と 60°, 180 − 45 − 60 = 75, 75°]
+        note: 重なった図の中から、使う三角形を見つけるのがむずかしい。使う三角形を指でなぞらせる。
+    extra:
+      - part: 今日
+        text: 円の中心のまわりを、9 つの等しい角に分けました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="58" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="82.7" y2="25.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="62.9" y2="59.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="69.8" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="100.2" y2="124.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="139.8" y2="124.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="170.2" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="177.1" y2="59.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="157.3" y2="25.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 54 A16 16 0 0 0 109.7 57.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="109.7" y="46.4" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 40
+        check: "360 // 9"
+        hints:
+          - 1 回転は何度かな。
+          - 360° を、等しい 9 つに分けよう。
+          - 36 ÷ 9 を考えて、10 こ分にしよう。
+        paths:
+          - [360 ÷ 9 = 40, 40°]
+      - part: 今日
+        text: 正方形の紙に、かどからかどへ線を引きました。この線は、かどの直角を 2 つの等しい角に分けます。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="66,124 174,124 174,16 66,16" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="66" y1="124" x2="174" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><path d="M88 124 A22 22 0 0 0 81.6 108.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="103" y="113.2" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 45
+        check: "90 // 2"
+        hints:
+          - 正方形のかどは何度かな。
+          - その角を、等しい 2 つに分けるよ。
+          - 三角定規の角にも、同じ大きさの角があったね。
+        paths:
+          - [90 ÷ 2 = 45, 45°]
+      - part: 今日
+        text: 一直線の角を、3 つの等しい角に分けました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="166" y2="32.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="74" y2="32.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 130 94.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="156.4" y="95.5" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - 一直線の角は何度かな。
+          - 180° を、等しい 3 つに分けよう。
+          - 18 ÷ 3 を考えて、10 こ分にしよう。
+        paths:
+          - [180 ÷ 3 = 60, 60°]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 分度器で角を測りました。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="228" y2="122" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="189.4" y2="39.3" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 50
+        check: "30 + 20"
+        hints:
+          - 1 つの辺は、0 の線に合っているね。
+          - もう 1 つの辺は、どの数字の近くかな。
+          - 30 から、10° の目もりがいくつ先かな。
+        paths:
+          - [30 から 10° の目もり 2 つ先, 50°]
+      - part: 今日
+        text: 直角 3 つ分の角は何度ですか。
+        answer: 270
+        check: "90 + 90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 90° を 3 つ合わせよう。
+          - 180 + 90 と考えてもよいよ。
+        paths:
+          - [90 + 90 + 90 = 270, 270°]
+      - part: 今日
+        text: 一直線に、1 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="148.4" y2="24.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 126.2 93" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154" y="91.9" font-size="13" text-anchor="middle">72°</text><path d="M128 87.3 A26 26 0 0 0 94 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.3" y="82.6" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
+        answer: 108
+        check: "180 - 72"
+        hints:
+          - 2 つの角を合わせると、一直線だね。
+          - 一直線は何度だったかな。
+          - 180 から 72 をひこう。
+        paths:
+          - [180 − 72 = 108, 108°]
+      - part: 今日
+        text: 三角定規の 90° の角と 45° の角を、頂点をそろえてならべました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="122" x2="155" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="122" x2="60" y2="27" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="122" x2="-7.2" y2="54.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M84 122 A24 24 0 0 0 60 98" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.3" y="97.9" font-size="12" text-anchor="middle">90°</text><path d="M60 98 A24 24 0 0 0 43 105" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="44.7" y="89.2" font-size="12" text-anchor="middle">45°</text><path d="M118 122 A58 58 0 0 0 19 81" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="87.6" y="60.4" font-size="14" text-anchor="middle">あ</text><circle cx="60" cy="122" r="2.5" fill="currentColor"/></svg>'
+        answer: 135
+        check: "90 + 45"
+        hints:
+          - あは、2 つの角を合わせた角だね。
+          - 90 と 45 をたそう。
+          - 十の位と一の位に分けて考えよう。
+        paths:
+          - [90 + 45 = 135, 135°]
+      - part: 今日
+        text: 三角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="33.8,122 206.2,122 82.3,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M49.8 122 A16 16 0 0 0 40.5 107.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.1" y="110.4" font-size="13" text-anchor="middle">65°</text><path d="M194 111.7 A16 16 0 0 0 190.2 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="178" y="116.3" font-size="13" text-anchor="middle">40°</text><path d="M75.5 32.5 A16 16 0 0 0 94.5 28.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="88.8" y="51.8" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 75
+        check: "180 - 65 - 40"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [65 + 40 = 105, 180 − 105 = 75, 75°]
+      - part: 今日
+        text: 四角形の、あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="51.9,122 148.7,122 188.1,53.8 89.7,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M67.9 122 A16 16 0 0 0 57.4 107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="76.5" y="109.3" font-size="13" text-anchor="middle">70°</text><path d="M156.7 108.1 A16 16 0 0 0 132.7 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="133.7" y="100.6" font-size="13" text-anchor="middle">120°</text><path d="M173.1 48.3 A16 16 0 0 0 180.1 67.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.9" y="68.6" font-size="13" text-anchor="middle">80°</text><path d="M84.3 33 A16 16 0 0 0 104.8 23.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="102.4" y="49.7" font-size="13" text-anchor="middle">あ</text></svg>'
+        answer: 90
+        check: "360 - 70 - 120 - 80"
+        hints:
+          - 4 つの角の和は 360° だね。
+          - わかっている 3 つの角をたそう。
+          - 360 から、その和をひこう。
+        paths:
+          - [70 + 120 + 80 = 270, 360 − 270 = 90, 90°]
+      - part: 今日
+        text: 1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="120" y1="70" x2="120" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="82.7" y2="114.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="170.2" y2="99" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 56 A14 14 0 0 0 111 80.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="80.5" y="60.2" font-size="13" text-anchor="middle">140°</text><path d="M107.1 85.3 A20 20 0 0 0 137.3 80" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="127.3" y="115.9" font-size="13" text-anchor="middle">100°</text><path d="M142.5 83 A26 26 0 0 0 120 44" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="156.4" y="53.5" font-size="13" text-anchor="middle">あ</text><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 120
+        check: "360 - 140 - 100"
+        hints:
+          - 3 つの角を合わせると、1 回転だね。
+          - 1 回転は何度かな。
+          - 360 から、わかっている 2 つの角をひこう。
+        paths:
+          - [140 + 100 = 240, 360 − 240 = 120, 120°]
+      - part: 挑戦
+        text: 下の 2 つの角（い）は等しい大きさです。いは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="32.7,122 207.3,122 120,18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><path d="M48.7 122 A16 16 0 0 0 43 109.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.9" y="113.9" font-size="13" text-anchor="middle">い</text><path d="M197 109.7 A16 16 0 0 0 191.3 122" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="180.1" y="113.9" font-size="13" text-anchor="middle">い</text><path d="M109.7 30.3 A16 16 0 0 0 130.3 30.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="52.5" font-size="13" text-anchor="middle">80°</text></svg>'
+        answer: 50
+        check: "(180 - 80) // 2"
+        hints:
+          - 3 つの角の和は 180° だね。
+          - 2 つの い を合わせると何度かな。
+          - それを、等しい 2 つに分けよう。
+        paths:
+          - [い 2 つで 180 − 80 = 100, 100 ÷ 2 = 50, 50°]
+    extra:
+      - part: 今日
+        text: 分度器で角を測りました。2 つの辺のどちらも、0 の線には合っていません。角の大きさは何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M24 122 A96 96 0 0 1 216 122 Z" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="216" y1="122" x2="204" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="192" y="118.5" font-size="10" text-anchor="middle">0</text><line x1="214.5" y1="105.3" x2="207.6" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="210.2" y1="89.2" x2="203.6" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="203.1" y1="74" x2="192.7" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="182.4" y="89.5" font-size="10" text-anchor="middle">30</text><line x1="193.5" y1="60.3" x2="188.2" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="181.7" y1="48.5" x2="177.2" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="168" y1="38.9" x2="162" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="156" y="63.1" font-size="10" text-anchor="middle">60</text><line x1="152.8" y1="31.8" x2="150.4" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="136.7" y1="27.5" x2="135.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="120" y1="26" x2="120" y2="38" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="53.5" font-size="10" text-anchor="middle">90</text><line x1="103.3" y1="27.5" x2="104.5" y2="34.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="87.2" y1="31.8" x2="89.6" y2="38.4" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="72" y1="38.9" x2="78" y2="49.3" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="84" y="63.1" font-size="10" text-anchor="middle">120</text><line x1="58.3" y1="48.5" x2="62.8" y2="53.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="46.5" y1="60.3" x2="51.8" y2="64.8" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="36.9" y1="74" x2="47.3" y2="80" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="57.6" y="89.5" font-size="10" text-anchor="middle">150</text><line x1="29.8" y1="89.2" x2="36.4" y2="91.6" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="25.5" y1="105.3" x2="32.4" y2="106.5" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="24" y1="122" x2="36" y2="122" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="48" y="118.5" font-size="10" text-anchor="middle">180</text><line x1="215.6" y1="113.6" x2="211.6" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="212.7" y1="97.2" x2="208.9" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="207" y1="81.4" x2="203.4" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198.6" y1="66.9" x2="195.4" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="187.9" y1="54.1" x2="185.1" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175.1" y1="43.4" x2="172.8" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="160.6" y1="35" x2="158.9" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="144.8" y1="29.3" x2="143.8" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="128.4" y1="26.4" x2="128" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="111.6" y1="26.4" x2="112" y2="30.4" stroke="currentColor" stroke-width="1" fill="none"/><line x1="95.2" y1="29.3" x2="96.2" y2="33.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="79.4" y1="35" x2="81.1" y2="38.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="64.9" y1="43.4" x2="67.2" y2="46.6" stroke="currentColor" stroke-width="1" fill="none"/><line x1="52.1" y1="54.1" x2="54.9" y2="56.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="41.4" y1="66.9" x2="44.6" y2="69.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="33" y1="81.4" x2="36.6" y2="83.1" stroke="currentColor" stroke-width="1" fill="none"/><line x1="27.3" y1="97.2" x2="31.1" y2="98.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="24.4" y1="113.6" x2="28.4" y2="114" stroke="currentColor" stroke-width="1" fill="none"/><line x1="120" y1="122" x2="221.5" y2="85.1" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="120" y1="122" x2="101.2" y2="15.6" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="120" cy="122" r="3" fill="currentColor"/></svg>'
+        answer: 80
+        check: "100 - 20"
+        hints:
+          - 2 つの辺が通る目もりを、どちらも読もう。
+          - 右の辺は 20、左の辺は何度の目もりかな。
+          - 2 つの目もりの差を求めよう。
+        paths:
+          - [右の辺は 20、左の辺は 100, 100 − 20 = 80, 80°]
+      - part: 今日
+        text: 五角形を、1 つの頂点から引いた線で三角形に分けました。5 つの角の和は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="96.5,106.2 143.5,106.2 158,61.5 120,33.8 82,61.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="96.5" y1="106.2" x2="158" y2="61.5" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="96.5" y1="106.2" x2="120" y2="33.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 540
+        check: "180 * 3"
+        hints:
+          - 三角形がいくつできたかな。
+          - 三角形 1 つの角の和は 180° だね。
+          - 180 を、三角形の数だけたそう。
+        paths:
+          - [三角形が 3 つ, 180 + 180 + 180 = 540, 540°]
+      - part: 今日
+        text: 3 つの角がみんな等しい三角形があります。1 つの角は何度ですか。
+        answer: 60
+        check: "180 // 3"
+        hints:
+          - 3 つの角の和は何度だったかな。
+          - 180° を、等しい 3 つに分けよう。
+          - 18 ÷ 3 を考えて、10 こ分にしよう。
+        paths:
+          - [180 ÷ 3 = 60, 60°]

@@ -1,0 +1,651 @@
+# C-008 重なりを数える（ベン図）
+#
+# 書き方は N-001 の頭の注、文の漢字は C-006 の頭の注のとおり（小 3 までの漢字。好、選、求、最、以 などはかなで書く）。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 2 つの集まりの重なり（どちらか = A + B − 両方）とベン図の読み方、2 日目 全体からひく（どちらでもない）、両方の人数をもとめる、
+#   3 日目 わけ（なぜ重なりをひくか、たした数が全体より多いのはなぜか、和の法則ではなぜひかないか）、
+#   4 日目 C-005（重ならないときはたすだけ）・C-003（表）と混ぜる、5 日目 確認。
+# 前提は C-005 まで。数は 100 まで（3 けたの数 N-009 は前提にない）。九九（N-013）は「2 のだんの答え」のような集まりに使う。
+#   「2 のだんの答え」は 2 × 1 から 2 × 9 までの 9 こ（N-013 の九九の表の答え）とする。倍数（N-017）は前提にないので、その言葉は使わない。
+# 集まりは 2 つまで。3 つの集まりの重なり（包除原理、C-021）は出さない。「少なくともどちらか」は「どちらか」と書き、1 日目の見本と最初の問題で「両方もふくめる」とことわる。
+# ベン図は svg で 2 つの円を描き、それぞれの部分に人数を書く（答えの数は書かない）。全体があるときは外に四角を描く。
+#   表（C-003）は svg の 2 行 2 列のますで描き、○ は「している」、× は「していない」。
+# check は、集まりを set で作り（range をずらして重なりの人数を合わせる）、| と & で数える。図の人数を読むだけの問題は、図の数の式を書く。
+
+id: C-008
+days:
+  - day: 1
+    items:
+      - part: 思い出す
+        text: 赤い花が 6 本、白い花が 8 本あります。どれか 1 本だけをえらぶとき、えらび方は何通りですか。
+        answer: 14
+        check: "len(set(('赤', i) for i in range(6)) | set(('白', i) for i in range(8)))"
+        hints:
+          - えらぶのは何本かな。
+          - 赤い花と白い花は、重なるかな。
+          - どちらか 1 つのときは、たし算とかけ算のどちらかな。
+        paths:
+          - [1 本だけ, 赤か白のどちらか, 重ならない, 6 + 8 = 14 通り]
+      - part: 思い出す
+        text: パンが 3 しゅるい、飲み物が 4 しゅるいあります。パンと飲み物を 1 つずつえらぶ組み合わせは何通りですか。
+        answer: 12
+        check: "len(set(itertools.product(range(3), range(4))))"
+        hints:
+          - パン 1 つから、飲み物のえだは何本出るかな。
+          - どのパンからも、同じ数のえだが出るね。
+          - かけ算の式にしよう。
+        paths:
+          - [どのパンからもえだが 4 本, 4 本が 3 つ分, 4 × 3 = 12 通り]
+      - part: 見本
+        text: 犬がすきな人は 7 人、ねこがすきな人は 5 人、両方すきな人は 3 人です。犬かねこの、どちらかがすきな人（両方すきな人もふくめます）は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">犬</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">ねこ</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">4 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">3 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">2 人</text>
+          </svg>
+        explain: 7 + 5 = 12 とたすと、両方すきな 3 人を、犬のほうでもねこのほうでも数えてしまいます（2 回数えます）。だから 12 − 3 = 9 人です。図のように、2 つの円を重ねてかくと、重なりがよく見えます。この図を「ベン図」といいます。重なりが両方すきな人、左の円だけの所が犬だけすきな人（7 − 3 = 4 人）、右の円だけの所がねこだけすきな人（5 − 3 = 2 人）です。4 + 3 + 2 = 9 人と数えても同じです。
+      - part: 今日
+        text: えんぴつを持っている人は 9 人、ペンを持っている人は 6 人、両方持っている人は 4 人です。えんぴつかペンの、どちらかを持っている人（両方持っている人もふくめます）は何人ですか。
+        answer: 11
+        check: "len(set(range(9)) | set(range(5, 11)))"
+        hints:
+          - 9 + 6 とたすと、両方持っている人はどうなるかな。
+          - 両方持っている人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [9 + 6 = 15, 両方の 4 人を 2 回数えている, 15 − 4 = 11 人]
+          - [えんぴつだけ 9 − 4 = 5 人, ペンだけ 6 − 4 = 2 人, 5 + 4 + 2 = 11 人]
+        note: 9 + 6 = 15 と答えやすい。ベン図をかかせて、重なりを 2 回数えていることを見せる。
+      - part: 今日
+        text: ベン図は、サッカーをする人となわとびをする人の人数です。なわとびをする人は、全部で何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">サッカー</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">なわとび</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">5 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">2 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">6 人</text>
+          </svg>
+        answer: 8
+        check: "2 + 6"
+        hints:
+          - なわとびの円の中には、どこがあるかな。
+          - 重なりの 2 人も、なわとびをする人だね。
+          - なわとびの円の中の数をたそう。
+        paths:
+          - [なわとびだけ 6 人, 両方 2 人, 6 + 2 = 8 人]
+        note: 6 人と答えやすい。両方する人も、なわとびをする人に入る。
+      - part: 今日
+        text: 九九の 4 のだんの答え（4、8、12、…、36）と、6 のだんの答え（6、12、18、…、54）があります。両方に出てくる数は何こありますか。
+        answer: 3
+        check: "len(set(4 * i for i in range(1, 10)) & set(6 * i for i in range(1, 10)))"
+        hints:
+          - 4 のだんの答えを全部書こう。
+          - 6 のだんの答えも書いて、同じ数に〇をつけよう。
+          - 〇をつけた数を数えよう。
+        paths:
+          - [4 のだんは 4、8、12、16、20、24、28、32、36, 6 のだんは 6、12、18、24、30、36、42、48、54, 両方は 12、24、36 の 3 こ]
+      - part: 挑戦
+        text: 4 のだんの答えと 6 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。
+        answer: 15
+        check: "len(set(4 * i for i in range(1, 10)) | set(6 * i for i in range(1, 10)))"
+        hints:
+          - 4 のだんの答えは何こ、6 のだんの答えは何こかな。
+          - 両方に出てくる数は、何こだったかな。
+          - たしてから、2 回数えた数をひこう。
+        paths:
+          - [4 のだん 9 こ、6 のだん 9 こ, 9 + 9 = 18, 両方の 12、24、36 を 2 回数えている, 18 − 3 = 15 こ]
+        note: 9 + 9 = 18 と答えやすい。数の集まりでも、人の集まりと同じように重なりをひく。
+    extra:
+      - part: 今日
+        text: りんごがすきな人は 8 人、みかんがすきな人は 6 人、両方すきな人は 2 人です。どちらかがすきな人は何人ですか。
+        answer: 12
+        check: "len(set(range(8)) | set(range(6, 12)))"
+        hints:
+          - 8 + 6 とたすと、両方すきな人はどうなるかな。
+          - 両方すきな人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [8 + 6 = 14, 2 人を 2 回数えている, 14 − 2 = 12 人]
+      - part: 今日
+        text: ベン図は、本を読むのがすきな人（読書）と、絵をかくのがすきな人（絵）の人数です。絵をかくのがすきな人は、全部で何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">読書</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">絵</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">6 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">3 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">5 人</text>
+          </svg>
+        answer: 8
+        check: "3 + 5"
+        hints:
+          - 絵の円の中には、どこがあるかな。
+          - 重なりの人も、絵をかくのがすきな人だね。
+          - 絵の円の中の数をたそう。
+        paths:
+          - [絵だけ 5 人, 両方 3 人, 5 + 3 = 8 人]
+      - part: 挑戦
+        text: 2 のだんの答えと 5 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。
+        answer: 17
+        check: "len(set(2 * i for i in range(1, 10)) | set(5 * i for i in range(1, 10)))"
+        hints:
+          - 2 のだんの答えは何こ、5 のだんの答えは何こかな。
+          - 両方に出てくる数をさがそう。
+          - たしてから、2 回数えた数をひこう。
+        paths:
+          - [9 + 9 = 18, 両方に出るのは 10 の 1 こ, 18 − 1 = 17 こ]
+
+  - day: 2
+    items:
+      - part: 思い出す
+        text: えんぴつを持っている人は 10 人、ペンを持っている人は 7 人、両方持っている人は 4 人です。どちらかを持っている人は何人ですか。
+        answer: 13
+        check: "len(set(range(10)) | set(range(6, 13)))"
+        hints:
+          - 10 + 7 とたすと、両方持っている人はどうなるかな。
+          - 両方持っている人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [10 + 7 = 17, 4 人を 2 回数えている, 17 − 4 = 13 人]
+      - part: 思い出す
+        text: 3 のだんの答えと 4 のだんの答えの、両方に出てくる数は何こありますか。
+        answer: 2
+        check: "len(set(3 * i for i in range(1, 10)) & set(4 * i for i in range(1, 10)))"
+        hints:
+          - 3 のだんの答えを全部書こう。
+          - 4 のだんの答えも書いて、同じ数に〇をつけよう。
+          - 〇をつけた数を数えよう。
+        paths:
+          - [3 のだんは 3 から 27, 4 のだんは 4 から 36, 両方は 12 と 24 の 2 こ]
+      - part: 見本
+        text: 子ども会の 30 人に聞きました。犬をかっている人は 11 人、ねこをかっている人は 9 人、両方かっている人は 4 人です。どちらもかっていない人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="228" height="132" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">犬</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">ねこ</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">7 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">4 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">5 人</text>
+          </svg>
+        explain: まず、どちらかをかっている人は、11 + 9 − 4 = 16 人です（2 回数えた 4 人をひきます）。全体の 30 人から 16 人をひくと、どちらもかっていない人は 30 − 16 = 14 人です。ベン図では、外の四角が全体で、2 つの円の外にいるのが、どちらもかっていない人です。
+      - part: 今日
+        text: 28 人に聞きました。なわとびができる人は 16 人、こままわしができる人は 10 人、両方できる人は 5 人です。どちらもできない人は何人ですか。
+        answer: 7
+        check: "28 - len(set(range(16)) | set(range(11, 21)))"
+        hints:
+          - まず、どちらかができる人を数えよう。
+          - 両方できる人を、2 回数えないようにしよう。
+          - 全体からひこう。
+        paths:
+          - [16 + 10 = 26、26 − 5 = 21 人, 28 − 21 = 7 人]
+        note: 28 − 16 − 10 = 2 とひいてしまうと、両方できる人を 2 回ひいている。
+      - part: 今日
+        text: 25 人に聞きました。うどんがすきな人は 15 人、そばがすきな人は 13 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。
+        answer: 3
+        check: "len(set(range(15)) & set(range(12, 25)))"
+        hints:
+          - 15 + 13 は、全体の 25 人より何人多いかな。
+          - 多くなった分は、どんな人を数えたからかな。
+          - 2 回数えた人が、両方すきな人だね。
+        paths:
+          - [15 + 13 = 28, 全体の 25 人より 28 − 25 = 3 人多い, 2 回数えた 3 人が両方すき]
+        note: たした数が全体より多いのは、両方の人を 2 回数えているから。どちらもすきでない人がいないので、多い分がそのまま両方すきな人になる。
+      - part: 今日
+        text: ベン図は、ピアノを習っている人と水泳を習っている人の人数です。全体は 20 人です。どちらも習っていない人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="228" height="132" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">ピアノ</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">水泳</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">6 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">3 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">4 人</text>
+          </svg>
+        answer: 7
+        check: "20 - (6 + 3 + 4)"
+        hints:
+          - 円の中にいる人は、全部で何人かな。
+          - 円の外にいるのは、どんな人かな。
+          - 全体からひこう。
+        paths:
+          - [円の中は 6 + 3 + 4 = 13 人, 20 − 13 = 7 人]
+        note: 6 + 3 + 3 + 4 のように、重なりの 3 人を 2 回たしやすい。図の数は、それぞれの場所にいる人数なので 1 回ずつたす。
+      - part: 挑戦
+        text: 1 から 40 までの数のうち、2 のだんの答えにも、3 のだんの答えにもならない数は何こありますか。
+        answer: 25
+        check: "40 - len(set(2 * i for i in range(1, 10)) | set(3 * i for i in range(1, 10)))"
+        hints:
+          - 2 のだんの答えか 3 のだんの答えになる数は、何こかな。
+          - 2 回数えないように、両方に出てくる数をひこう。
+          - 1 から 40 までの 40 こからひこう。
+        paths:
+          - [2 のだん 9 こ、3 のだん 9 こ、両方 3 こ, どちらかになる数は 9 + 9 − 3 = 15 こ, 40 − 15 = 25 こ]
+    extra:
+      - part: 今日
+        text: 32 人に聞きました。竹馬に乗れる人は 20 人、一りん車に乗れる人は 11 人、両方乗れる人は 6 人です。どちらも乗れない人は何人ですか。
+        answer: 7
+        check: "32 - len(set(range(20)) | set(range(14, 25)))"
+        hints:
+          - まず、どちらかに乗れる人を数えよう。
+          - 両方乗れる人を、2 回数えないようにしよう。
+          - 全体からひこう。
+        paths:
+          - [20 + 11 = 31、31 − 6 = 25 人, 32 − 25 = 7 人]
+      - part: 今日
+        text: 20 人に聞きました。メロンがすきな人は 12 人、いちごがすきな人は 14 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。
+        answer: 6
+        check: "len(set(range(12)) & set(range(6, 20)))"
+        hints:
+          - 12 + 14 は、全体の 20 人より何人多いかな。
+          - 多くなった分は、どんな人を数えたからかな。
+          - 2 回数えた人が、両方すきな人だね。
+        paths:
+          - [12 + 14 = 26, 26 − 20 = 6, 2 回数えた 6 人が両方すき]
+      - part: 挑戦
+        text: 1 から 40 までの数のうち、4 のだんの答えか、5 のだんの答えになる数は何こありますか。
+        answer: 16
+        check: "len(set(4 * i for i in range(1, 10) if 4 * i <= 40) | set(5 * i for i in range(1, 10) if 5 * i <= 40))"
+        hints:
+          - 4 のだんの答えで、40 までの数は何こかな。
+          - 5 のだんの答えで、40 までの数は何こかな（45 は入らないね）。
+          - 両方に出てくる数を、2 回数えないようにしよう。
+        paths:
+          - [4 のだんは 4 から 36 の 9 こ, 5 のだんは 5 から 40 の 8 こ, 両方は 20 の 1 こ, 9 + 8 − 1 = 16 こ]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: 犬がすきな人 7 人、ねこがすきな人 5 人、両方すきな人 3 人のとき、どちらかがすきな人は 7 + 5 − 3 = 9 人です。なぜ 3 をひくのかを、ベン図を使って文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">犬</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">ねこ</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">4 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">3 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">2 人</text>
+          </svg>
+        explain: 例：「犬がすきな 7 人の中にも、ねこがすきな 5 人の中にも、両方すきな 3 人が入っている。7 + 5 とたすと、その 3 人を 2 回数えてしまう。1 回ずつにするために、2 回目の 3 人をひく。だから 7 + 5 − 3 = 9 人。ベン図で、犬だけ 4 人、両方 3 人、ねこだけ 2 人をたしても 9 人になる。」と書ければよい。「2 回数えている」ことが言えているかを見る。
+        hints:
+          - ベン図の重なりにいる 3 人は、犬の円とねこの円のどちらに入っているかな。
+          - 7 + 5 とたすと、重なりの 3 人は何回数えるかな。
+          - 「2 回数えているから」を使って書こう。
+        paths:
+          - [重なりの 3 人は両方の円に入っている, 7 + 5 では 3 人を 2 回数える, 1 回分をひく, だから 7 + 5 − 3 = 9 人]
+      - part: わけ
+        text: 24 人に聞くと、なわとびができる人が 16 人、こままわしができる人が 10 人でした。「合わせて 16 + 10 = 26 人」と考えるのは、どこがおかしいでしょう。両方できる人が、少なくとも何人いるかも考えて、文で書きましょう。
+        explain: 例：「全体は 24 人しかいないのに、26 人は多すぎる。両方できる人を、なわとびでもこままわしでも数えたので、2 回数えた人がいる。26 − 24 = 2 なので、少なくとも 2 人は 2 回数えられていて、両方できる人は少なくとも 2 人いる。」と書ければよい。24 人の全員がどちらかできるときに、両方できる人はちょうど 2 人になる。どちらもできない人がいれば、両方できる人はもっと多い。「少なくとも」が言えなくても、2 回数えた人がいることに気づけていればよい。
+        hints:
+          - 全体は何人かな。26 人とくらべよう。
+          - 多くなった分は、どんな人を数えたからかな。
+          - 26 − 24 を使って書こう。
+        paths:
+          - [26 人は全体の 24 人より多い, 両方できる人を 2 回数えている, 26 − 24 = 2, 両方できる人は少なくとも 2 人]
+      - part: わけ
+        text: 赤い花が 4 本、白い花が 5 本あって、どれか 1 本をえらぶときは 4 + 5 = 9 通りです（和（わ）の法則（ほうそく））。このとき何もひかなくてよいわけを、ベン図を使って文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="65" cy="80" r="45" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="175" cy="80" r="45" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="65" y="25" font-size="14" text-anchor="middle">赤い花</text>
+            <text x="175" y="25" font-size="14" text-anchor="middle">白い花</text>
+            <text x="65" y="85" font-size="15" text-anchor="middle">4 本</text>
+            <text x="175" y="85" font-size="15" text-anchor="middle">5 本</text>
+          </svg>
+        explain: 例：「赤い花でもあり白い花でもある花はない。ベン図にすると 2 つの円は重ならない。2 回数える花がないので、ひかなくてよい。」と書ければよい。C-005 の和の法則は、重なりが 0 人（0 本）のときの「たしてから重なりをひく」と同じことだと気づければなおよい。
+        hints:
+          - 赤い花でもあり、白い花でもある花はあるかな。
+          - ベン図にすると、2 つの円は重なるかな。
+          - 「重ならないから」を使って書こう。
+        paths:
+          - [赤でも白でもある花はない, 円は重ならない, 2 回数える花がない, だからひかない]
+      - part: 今日
+        text: けん玉ができる人は 13 人、こままわしができる人は 9 人、両方できる人は 5 人です。どちらかができる人は何人ですか。
+        answer: 17
+        check: "len(set(range(13)) | set(range(8, 17)))"
+        hints:
+          - 13 + 9 とたすと、両方できる人はどうなるかな。
+          - 両方できる人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [13 + 9 = 22, 5 人を 2 回数えている, 22 − 5 = 17 人]
+      - part: 今日
+        text: ベン図は、算数がすきな人と図工がすきな人の人数です。全体は 25 人です。どちらもすきでない人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4" width="228" height="132" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">算数</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">図工</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">7 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">6 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">4 人</text>
+          </svg>
+        answer: 8
+        check: "25 - (7 + 6 + 4)"
+        hints:
+          - 円の中にいる人は、全部で何人かな。
+          - 円の外にいるのは、どんな人かな。
+          - 全体からひこう。
+        paths:
+          - [円の中は 7 + 6 + 4 = 17 人, 25 − 17 = 8 人]
+    extra:
+      - part: 今日
+        text: トマトがすきな人は 11 人、なすがすきな人は 8 人、両方すきな人は 3 人です。どちらかがすきな人は何人ですか。
+        answer: 16
+        check: "len(set(range(11)) | set(range(8, 16)))"
+        hints:
+          - 11 + 8 とたすと、両方すきな人はどうなるかな。
+          - 両方すきな人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [11 + 8 = 19, 3 人を 2 回数えている, 19 − 3 = 16 人]
+      - part: 今日
+        text: 30 人に聞きました。自転車に乗れる人は 24 人、竹馬に乗れる人は 12 人、両方乗れる人は 9 人です。どちらも乗れない人は何人ですか。
+        answer: 3
+        check: "30 - len(set(range(24)) | set(range(15, 27)))"
+        hints:
+          - まず、どちらかに乗れる人を数えよう。
+          - 両方乗れる人を、2 回数えないようにしよう。
+          - 全体からひこう。
+        paths:
+          - [24 + 12 = 36、36 − 9 = 27 人, 30 − 27 = 3 人]
+      - part: 今日
+        text: 22 人に聞きました。夏がすきな人は 15 人、冬がすきな人は 10 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。
+        answer: 3
+        check: "len(set(range(15)) & set(range(12, 22)))"
+        hints:
+          - 15 + 10 は、全体の 22 人より何人多いかな。
+          - 多くなった分は、どんな人を数えたからかな。
+          - 2 回数えた人が、両方すきな人だね。
+        paths:
+          - [15 + 10 = 25, 25 − 22 = 3, 2 回数えた 3 人が両方すき]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: ノートが 5 しゅるい、えんぴつが 4 しゅるいあります。ノートとえんぴつを 1 つずつえらぶ組み合わせは何通りですか。
+        answer: 20
+        check: "len(set(itertools.product(range(5), range(4))))"
+        hints:
+          - ノート 1 さつから、えんぴつのえだは何本出るかな。
+          - どのノートからも、同じ数のえだが出るね。
+          - かけ算の式にしよう。
+        paths:
+          - [どのノートからもえだが 4 本, 4 本が 5 つ分, 4 × 5 = 20 通り]
+      - part: 思い出す
+        text: 犬がすきな人は 8 人、ねこがすきな人は 9 人、両方すきな人は 4 人です。どちらかがすきな人は何人ですか。
+        answer: 13
+        check: "len(set(range(8)) | set(range(4, 13)))"
+        hints:
+          - 8 + 9 とたすと、両方すきな人はどうなるかな。
+          - 両方すきな人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [8 + 9 = 17, 4 人を 2 回数えている, 17 − 4 = 13 人]
+      - part: 今日
+        text: サッカーがすきな人は 9 人、野球がすきな人は 7 人、両方すきな人は 2 人です。どちらかがすきな人の数をもとめる式はどれですか。
+        choices: [9 + 7, 9 + 7 − 2, 9 × 7]
+        answer: 9 + 7 − 2
+        check: "[c for c, v in (('9 + 7', 9 + 7), ('9 + 7 − 2', 9 + 7 - 2), ('9 × 7', 9 * 7)) if v == len(set(range(9)) | set(range(7, 14)))][0]"
+        hints:
+          - 両方すきな人は、9 人と 7 人のどちらにも入っているかな。
+          - 9 + 7 では、両方すきな人を何回数えるかな。
+          - 2 回数えた分をひく式はどれかな。
+        paths:
+          - [両方すきな 2 人は 9 人にも 7 人にも入る, 9 + 7 では 2 回数える, 9 + 7 − 2]
+      - part: 今日
+        text: 20 人に、犬とねこをかっているかを聞いて、表にしました。○ はかっている、× はかっていない、です。犬もねこもかっていない人（□）は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="220" height="120" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="100" y1="10" x2="100" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="10" x2="165" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="50" x2="230" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="90" x2="230" y2="90" stroke="currentColor" stroke-width="2"/>
+            <text x="132" y="35" font-size="13" text-anchor="middle">ねこ ○</text>
+            <text x="198" y="35" font-size="13" text-anchor="middle">ねこ ×</text>
+            <text x="55" y="75" font-size="13" text-anchor="middle">犬 ○</text>
+            <text x="55" y="115" font-size="13" text-anchor="middle">犬 ×</text>
+            <text x="132" y="75" font-size="15" text-anchor="middle">3 人</text>
+            <text x="198" y="75" font-size="15" text-anchor="middle">5 人</text>
+            <text x="132" y="115" font-size="15" text-anchor="middle">4 人</text>
+            <text x="198" y="115" font-size="15" text-anchor="middle">□</text>
+          </svg>
+        answer: 8
+        check: "20 - (3 + 5 + 4)"
+        hints:
+          - 表の 4 つのますの人数をたすと、全体の何人になるかな。
+          - わかっている 3 つのますの人数をたそう。
+          - 全体からひこう。
+        paths:
+          - [3 + 5 + 4 = 12 人, 20 − 12 = 8 人]
+        note: 表の「犬 ○ ねこ ○」のますがベン図の重なり、「犬 × ねこ ×」が 2 つの円の外にあたる。表とベン図は、同じことを別の形でかいている。
+      - part: 今日
+        text: 2 のだんの答えと 3 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。
+        answer: 15
+        check: "len(set(2 * i for i in range(1, 10)) | set(3 * i for i in range(1, 10)))"
+        hints:
+          - 2 のだんの答えと 3 のだんの答えは、それぞれ何こかな。
+          - 両方に出てくる数をさがそう。
+          - たしてから、2 回数えた数をひこう。
+        paths:
+          - [9 + 9 = 18, 両方に出るのは 6、12、18 の 3 こ, 18 − 3 = 15 こ]
+      - part: 挑戦
+        text: 1 から 35 までの数を、1 まいずつカードに書きました。3 という数字が入っているカードは何まいですか。33 のように 2 つ入っているカードも、1 まいと数えます。
+        answer: 9
+        check: "sum(1 for k in range(1, 36) if k % 10 == 3 or k // 10 == 3)"
+        hints:
+          - 一のくらいが 3 のカードを書き出そう。
+          - 十のくらいが 3 のカードも書き出そう。
+          - 両方に入っているカードを、2 回数えないようにしよう。
+        paths:
+          - [一のくらいが 3 は 3、13、23、33 の 4 まい, 十のくらいが 3 は 30 から 35 の 6 まい, 33 は両方に入る, 4 + 6 − 1 = 9 まい]
+        note: 4 + 6 = 10 と答えやすい。33 は「一のくらいが 3」にも「十のくらいが 3」にも入る重なり。
+    extra:
+      - part: 今日
+        text: 赤い花が 9 本、白い花が 7 本あります。どれか 1 本をえらぶとき、えらび方の数をもとめる式はどれですか。
+        choices: [9 + 7, 9 × 7, 9 − 7]
+        answer: 9 + 7
+        check: "[c for c, v in (('9 + 7', 9 + 7), ('9 × 7', 9 * 7), ('9 − 7', 9 - 7)) if v == len(set(('赤', i) for i in range(9)) | set(('白', i) for i in range(7)))][0]"
+        hints:
+          - 赤い花でもあり、白い花でもある花はあるかな。
+          - 重なりがないとき、ひく数はあるかな。
+          - どれか 1 本をえらぶときは、たし算とかけ算のどちらかな。
+        paths:
+          - [赤と白は重ならない, ひく数はない, 9 + 7]
+      - part: 今日
+        text: 25 人に、自転車と竹馬に乗れるかを聞いて、表にしました。○ は乗れる、× は乗れない、です。両方に乗れる人（□）は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="220" height="120" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="100" y1="10" x2="100" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="10" x2="165" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="50" x2="230" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="90" x2="230" y2="90" stroke="currentColor" stroke-width="2"/>
+            <text x="132" y="35" font-size="13" text-anchor="middle">竹馬 ○</text>
+            <text x="198" y="35" font-size="13" text-anchor="middle">竹馬 ×</text>
+            <text x="55" y="75" font-size="13" text-anchor="middle">自転車 ○</text>
+            <text x="55" y="115" font-size="13" text-anchor="middle">自転車 ×</text>
+            <text x="132" y="75" font-size="15" text-anchor="middle">□</text>
+            <text x="198" y="75" font-size="15" text-anchor="middle">8 人</text>
+            <text x="132" y="115" font-size="15" text-anchor="middle">2 人</text>
+            <text x="198" y="115" font-size="15" text-anchor="middle">6 人</text>
+          </svg>
+        answer: 9
+        check: "25 - (8 + 2 + 6)"
+        hints:
+          - 4 つのますの人数をたすと、全体の何人になるかな。
+          - わかっている 3 つのますの人数をたそう。
+          - 全体からひこう。
+        paths:
+          - [8 + 2 + 6 = 16 人, 25 − 16 = 9 人]
+      - part: 挑戦
+        text: 1 から 59 までの数を、1 まいずつカードに書きました。5 という数字が入っているカードは何まいですか。55 も 1 まいと数えます。
+        answer: 15
+        check: "sum(1 for k in range(1, 60) if k % 10 == 5 or k // 10 == 5)"
+        hints:
+          - 一のくらいが 5 のカードを書き出そう。
+          - 十のくらいが 5 のカードは何まいかな。
+          - 両方に入っているカードを、2 回数えないようにしよう。
+        paths:
+          - [一のくらいが 5 は 5、15、25、35、45、55 の 6 まい, 十のくらいが 5 は 50 から 59 の 10 まい, 55 は両方, 6 + 10 − 1 = 15 まい]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: かるたができる人は 10 人、すごろくができる人は 8 人、両方できる人は 3 人です。どちらかができる人は何人ですか。
+        answer: 15
+        check: "len(set(range(10)) | set(range(7, 15)))"
+        hints:
+          - 10 + 8 とたすと、両方できる人はどうなるかな。
+          - 両方できる人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [10 + 8 = 18, 3 人を 2 回数えている, 18 − 3 = 15 人]
+      - part: 今日
+        text: 26 人に聞きました。おにごっこがすきな人は 12 人、かくれんぼがすきな人は 10 人、両方すきな人は 4 人です。どちらもすきでない人は何人ですか。
+        answer: 8
+        check: "26 - len(set(range(12)) | set(range(8, 18)))"
+        hints:
+          - まず、どちらかがすきな人を数えよう。
+          - 両方すきな人を、2 回数えないようにしよう。
+          - 全体からひこう。
+        paths:
+          - [12 + 10 = 22、22 − 4 = 18 人, 26 − 18 = 8 人]
+      - part: 今日
+        text: 22 人に聞きました。プールがすきな人は 14 人、海がすきな人は 11 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。
+        answer: 3
+        check: "len(set(range(14)) & set(range(11, 22)))"
+        hints:
+          - 14 + 11 は、全体の 22 人より何人多いかな。
+          - 多くなった分は、どんな人を数えたからかな。
+          - 2 回数えた人が、両方すきな人だね。
+        paths:
+          - [14 + 11 = 25, 25 − 22 = 3, 2 回数えた 3 人が両方すき]
+      - part: 今日
+        text: ベン図は、歌がすきな人とダンスがすきな人の人数です。どちらかがすきな人は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="95" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <circle cx="145" cy="80" r="50" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="2"/>
+            <text x="62" y="22" font-size="14" text-anchor="middle">歌</text>
+            <text x="178" y="22" font-size="14" text-anchor="middle">ダンス</text>
+            <text x="68" y="85" font-size="15" text-anchor="middle">5 人</text>
+            <text x="120" y="85" font-size="15" text-anchor="middle">3 人</text>
+            <text x="172" y="85" font-size="15" text-anchor="middle">6 人</text>
+          </svg>
+        answer: 14
+        check: "5 + 3 + 6"
+        hints:
+          - 2 つの円の中にいる人を、全部数えよう。
+          - 図の数は、それぞれの場所にいる人数だね。
+          - 3 つの場所の人数をたそう。
+        paths:
+          - [歌だけ 5 人、両方 3 人、ダンスだけ 6 人, 5 + 3 + 6 = 14 人]
+        note: 図の数は場所ごとの人数なので、重なりをひかずに 1 回ずつたす。人数が「歌がすきな人 8 人」のように円ごとに書かれているときとのちがいに気をつける。
+      - part: 今日
+        text: 3 のだんの答えと 4 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。
+        answer: 16
+        check: "len(set(3 * i for i in range(1, 10)) | set(4 * i for i in range(1, 10)))"
+        hints:
+          - 3 のだんの答えと 4 のだんの答えは、それぞれ何こかな。
+          - 両方に出てくる数をさがそう。
+          - たしてから、2 回数えた数をひこう。
+        paths:
+          - [9 + 9 = 18, 両方に出るのは 12 と 24 の 2 こ, 18 − 2 = 16 こ]
+      - part: 今日
+        text: えんぴつを持っている人は 8 人、ペンを持っている人は 6 人、両方持っている人は 3 人です。どちらかを持っている人の数をもとめる式はどれですか。
+        choices: [8 + 6, 8 + 6 − 3, 8 × 6]
+        answer: 8 + 6 − 3
+        check: "[c for c, v in (('8 + 6', 8 + 6), ('8 + 6 − 3', 8 + 6 - 3), ('8 × 6', 8 * 6)) if v == len(set(range(8)) | set(range(5, 11)))][0]"
+        hints:
+          - 両方持っている人は、8 人と 6 人のどちらにも入っているかな。
+          - 8 + 6 では、両方持っている人を何回数えるかな。
+          - 2 回数えた分をひく式はどれかな。
+        paths:
+          - [両方の 3 人を 2 回数えている, 8 + 6 − 3]
+      - part: 今日
+        text: 18 人に、なわとびと鉄ぼうができるかを聞いて、表にしました。○ はできる、× はできない、です。どちらもできない人（□）は何人ですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="10" width="220" height="120" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="100" y1="10" x2="100" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="165" y1="10" x2="165" y2="130" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="50" x2="230" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="10" y1="90" x2="230" y2="90" stroke="currentColor" stroke-width="2"/>
+            <text x="132" y="35" font-size="13" text-anchor="middle">鉄ぼう ○</text>
+            <text x="198" y="35" font-size="13" text-anchor="middle">鉄ぼう ×</text>
+            <text x="55" y="75" font-size="13" text-anchor="middle">なわとび ○</text>
+            <text x="55" y="115" font-size="13" text-anchor="middle">なわとび ×</text>
+            <text x="132" y="75" font-size="15" text-anchor="middle">6 人</text>
+            <text x="198" y="75" font-size="15" text-anchor="middle">4 人</text>
+            <text x="132" y="115" font-size="15" text-anchor="middle">3 人</text>
+            <text x="198" y="115" font-size="15" text-anchor="middle">□</text>
+          </svg>
+        answer: 5
+        check: "18 - (6 + 4 + 3)"
+        hints:
+          - 4 つのますの人数をたすと、全体の何人になるかな。
+          - わかっている 3 つのますの人数をたそう。
+          - 全体からひこう。
+        paths:
+          - [6 + 4 + 3 = 13 人, 18 − 13 = 5 人]
+      - part: 今日
+        text: 1 から 30 までの数を、1 まいずつカードに書きました。2 という数字が入っているカードは何まいですか。22 も 1 まいと数えます。
+        answer: 12
+        check: "sum(1 for k in range(1, 31) if k % 10 == 2 or k // 10 == 2)"
+        hints:
+          - 一のくらいが 2 のカードを書き出そう。
+          - 十のくらいが 2 のカードは何まいかな。
+          - 両方に入っているカードを、2 回数えないようにしよう。
+        paths:
+          - [一のくらいが 2 は 2、12、22 の 3 まい, 十のくらいが 2 は 20 から 29 の 10 まい, 22 は両方, 3 + 10 − 1 = 12 まい]
+    extra:
+      - part: 今日
+        text: ピアノを習っている人は 7 人、水泳を習っている人は 9 人、両方習っている人は 2 人です。どちらかを習っている人は何人ですか。
+        answer: 14
+        check: "len(set(range(7)) | set(range(5, 14)))"
+        hints:
+          - 7 + 9 とたすと、両方習っている人はどうなるかな。
+          - 両方習っている人は、何回数えているかな。
+          - 2 回数えた人数をひこう。
+        paths:
+          - [7 + 9 = 16, 2 人を 2 回数えている, 16 − 2 = 14 人]
+      - part: 今日
+        text: 30 人に聞きました。犬をかっている人は 13 人、ねこをかっている人は 10 人、両方かっている人は 5 人です。どちらもかっていない人は何人ですか。
+        answer: 12
+        check: "30 - len(set(range(13)) | set(range(8, 18)))"
+        hints:
+          - まず、どちらかをかっている人を数えよう。
+          - 両方かっている人を、2 回数えないようにしよう。
+          - 全体からひこう。
+        paths:
+          - [13 + 10 = 23、23 − 5 = 18 人, 30 − 18 = 12 人]
+      - part: 今日
+        text: 3 のだんの答えと 6 のだんの答えの、両方に出てくる数は何こありますか。
+        answer: 4
+        check: "len(set(3 * i for i in range(1, 10)) & set(6 * i for i in range(1, 10)))"
+        hints:
+          - 3 のだんの答えを全部書こう。
+          - 6 のだんの答えも書いて、同じ数に〇をつけよう。
+          - 〇をつけた数を数えよう。
+        paths:
+          - [3 のだんは 3 から 27, 6 のだんは 6 から 54, 両方は 6、12、18、24 の 4 こ]

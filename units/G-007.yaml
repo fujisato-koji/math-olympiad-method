@@ -1,0 +1,718 @@
+# G-007 立方体と展開図
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：りっぽうたい（さいころの かたち）、めん、へん、ちょうてん、てんかいず、むかいあう、となりあう。
+#   ましかくは「4 つの へんが みんな おなじ ながさの しかく」（G-006 は前提にないので、せいほうけいの言葉は使わない）。
+# 見取り図は svg（D-040）。てんせんは うしろに かくれて 見えない辺。展開図はマスの図で、🟦 などの色のマスが面、⬜ は何もない所。
+#   むかいあう面を問う図は、6 つの面を 🟥🟦🟨🟩🟪🟧 で塗り分けた。辺や数を書き込む図だけ svg にした。
+# 前提は G-003（→ N-001）だけでたし算がないので、数は 1 つずつ数える。立方体の辺は 12 本なので、12 までは数えて答える
+#   （「4 本ずつ 3 組」のように組で数えるのはよい）。さいころの目は「1 と 6、2 と 5、3 と 4 が むかいあう」と文で示し、たして 7 は使わない。
+# 直方体の展開図と、面の数え上げ（表面積）は G-011 で扱うので、ここでは立方体だけにした。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 面・辺・頂点　2 日目 展開図になるか　3 日目 組み立てたとき むかいあう面・重なる辺　4 日目 わけ
+#   5 日目 G-003（積み木と立体）と混ぜる　6 日目 確認
+# check：面・辺・頂点の数は、頂点を (0, 0, 0)〜(1, 1, 1) の 8 つの点とみて数える式（itertools.product）。
+#   展開図は、立方体を図のマスの上で転がして、どのマスにどの面がつくかを調べる式（6 つの面がみな違えば展開図）。
+#   2 だん 2 れつにかたまった 4 まいがあれば、展開図ではない（1 つの頂点に面が 4 つ集まる）。
+#   むかいあう面は、転がした向きで「マスについた面の反対の面」がつくマスを探す。重なる辺は、辺の両がわの 2 つの面の組が同じ辺。
+
+id: G-007
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: さいころの かたちを「りっぽうたい」と いいます。めん、へん、ちょうてんを しろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,45 135,45 135,120 60,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60" y1="45" x2="94" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135" y1="45" x2="169" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135" y1="120" x2="169" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="19" x2="169" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="169" y1="19" x2="169" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="94" x2="94" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="94" y1="94" x2="169" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="60" y1="120" x2="94" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><text x="116" y="74.9" font-size="14" text-anchor="middle">めん</text><line x1="169" y1="56.5" x2="185" y2="56.5" stroke="currentColor" stroke-width="1" fill="none"/><text x="203" y="61" font-size="13" text-anchor="middle">へん</text><circle cx="60" cy="45" r="3.5" fill="currentColor"/><line x1="60" y1="45" x2="40" y2="28" stroke="currentColor" stroke-width="1" fill="none"/><text x="38" y="22.6" font-size="13" text-anchor="middle">ちょうてん</text></svg>'
+        explain: たいらな ところを めん、めんと めんの さかいの まっすぐな せんを へん、かどの とがった ところを ちょうてん と いいます。りっぽうたいの めんは 6 つで、どれも おなじ おおきさの ましかく（4 つの へんが みんな おなじ ながさの しかく）です。てんせんは、うしろに かくれて みえない へん です。
+      - part: 思い出す
+        text: たてても、よこに ねかせても、ころがらないのは どれですか。
+        choices: [⚽, 🥫, 🎲]
+        answer: 🎲
+        hints:
+          - ころがるのは、まるい ところが ある かたち だよ。
+          - 🥫 は よこに ねかせると どうなるかな。
+          - たいらな ところ だけで できて いるのは どれかな。
+        paths:
+          - [⚽ は どの むきにも ころがる, 🥫 は ねかせると ころがる, 🎲 は たいらな ところ だけ]
+      - part: 思い出す
+        text: よこから みた つみきです。⬜ は なにも ない ところ です。つみきは いくつ ありますか。
+        figure: "⬜⬜🟫\n⬜🟫🟫\n🟫🟫🟫"
+        answer: 6
+        check: "n('🟫')"
+        hints:
+          - いちばん したの だんから かぞえよう。
+          - したの だんを かぞえたら、つぎの だんに つづけよう。
+          - ⬜ は かぞえないよ。
+        paths:
+          - [したの だん 3 こ, まんなかの だん つづけて 4、5, いちばん うえ 6, 6 こ]
+      - part: 今日
+        text: りっぽうたいの ちょうてんは いくつ ありますか。うしろに かくれた ちょうてんも かぞえよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 8
+        check: "sum(1 for v in itertools.product((0, 1), repeat=3))"
+        hints:
+          - まえの ましかくの かどを かぞえよう。
+          - うしろの ましかくの かども あるね。てんせんが あつまる ところも わすれずに。
+          - まえを かぞえたら、うしろに つづけて かぞえよう。
+        paths:
+          - [まえの ましかくの かど 4 つ, うしろの ましかくの かどを つづけて 5、6、7、8, 8 こ]
+        note: うしろに隠れた頂点（てんせんが集まる所）を数え忘れて 7 と答えやすい。
+      - part: 今日
+        text: りっぽうたいの へんは なんぼん ありますか。てんせんの へんも かぞえよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 12
+        check: "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)"
+        hints:
+          - うえの めんの まわりの へんから かぞえよう。
+          - つぎに、したの めんの まわりの へんを つづけて かぞえよう。
+          - さいごに、うえと したを つなぐ たての へんを つづけて かぞえよう。
+        paths:
+          - [うえの めんの まわり 4 ほん, したの めんの まわりを つづけて 8 ほんまで, たての へんを つづけて 12 ほんまで, 12 ほん]
+        note: 同じ辺を 2 回数えたり、てんせんの辺を落としたりしやすい。上・下・たての 3 組に分けて数えるとよい。
+      - part: 今日
+        text: くろい てんの ちょうてんには、めんが いくつ あつまって いますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><circle cx="145" cy="45" r="3.5" fill="currentColor"/></svg>'
+        answer: 3
+        check: "sum(1 for i in range(3) for s in (0, 1) if (1, 1, 0)[i] == s)"
+        hints:
+          - くろい てんに さわって いる めんを さがそう。
+          - まえの めんは さわって いるかな。
+          - うえの めんと、みぎの めんは どうかな。
+        paths:
+          - [まえの めん, うえの めん, みぎの めん, 3 つ]
+      - part: 挑戦
+        text: りっぽうたいの つみきを 2 こ、めんを ぴったり あわせて くっつけました。そとがわに でて いる めんは、ゆかに ついた めんも いれて いくつ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="40,50 160,50 160,110 40,110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="50" x2="68" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="160" y1="50" x2="188" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="160" y1="110" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="28" x2="188" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="188" y1="28" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100" y1="50" x2="100" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100" y1="50" x2="128" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="128" y1="28" x2="128" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="68" y1="88" x2="68" y2="28" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="68" y1="88" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="40" y1="110" x2="68" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 10
+        check: "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2"
+        hints:
+          - 1 この りっぽうたいの めんは いくつ だったかな。
+          - くっついて かくれた めんは、どこに あるかな。
+          - うえ、した、まえ、うしろ、ひだり、みぎ と むきごとに かぞえよう。
+        paths:
+          - [うえ 2 つ、した 2 つ, まえ 2 つ、うしろ 2 つ, ひだり 1 つ、みぎ 1 つ, ぜんぶ かぞえて 10]
+          - [2 こ ぶんの めんは 6 つと 6 つ, くっついた 2 つが かくれる, のこりを かぞえて 10]
+        note: くっついて見えなくなった 2 つの面まで数えて 12 と答えやすい。
+    extra:
+      - part: 今日
+        text: りっぽうたいの 1 つの めんには、へんが なんぼん ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 4
+        check: "sum(1 for a in itertools.product((0, 1), repeat=2) for b in itertools.product((0, 1), repeat=2) if a < b and abs(a[0] - b[0]) + abs(a[1] - b[1]) == 1)"
+        hints:
+          - いろの ついた めんを みよう。
+          - その めんの まわりを ゆびで なぞろう。
+          - かどから かどまでが 1 ぽんの へん だよ。
+        paths:
+          - [うえ、みぎ、した、ひだり, 4 ほん]
+      - part: 今日
+        text: いろの ついた めんと となりあう（へんで くっついて いる）めんは いくつ ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 4
+        check: "sum(1 for i in range(3) for s in (0, 1) if i != 2)"
+        hints:
+          - いろの ついた めんの へんを、1 ぽんずつ ゆびで なぞろう。
+          - 1 ぽんの へんの むこうに、めんが 1 つ あるよ。
+          - うしろの めんは、くっついて いるかな。
+        paths:
+          - [うえ、した、ひだり、みぎの めんが くっつく, うしろの めんは はなれて いる, 4 つ]
+        note: 6 − 1 の 5 と答えやすい。うしろの面は辺でくっついていない。
+      - part: 挑戦
+        text: りっぽうたいの 1 ぽんの へんには、めんが いくつ くっついて いますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 2
+        check: "sum(1 for i in range(3) for s in (0, 1) if i != 0 and (0, 0, 0)[i] == s)"
+        hints:
+          - まえの めんの うえの へんを みよう。
+          - その へんを はさんで いる めんを さがそう。
+          - まえの めんと、もう 1 つは どれかな。
+        paths:
+          - [まえの めん, うえの めん, 2 つ]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: りっぽうたいを へんに そって きりひらいて、たいらに した ずを「てんかいず」と いいます。⬜ は なにも ない ところ です。
+        figure: "⬜🟦⬜\n🟦🟦🟦\n⬜🟦⬜\n⬜🟦⬜"
+        explain: 🟦 の ましかくが 6 まい、へんで つながって います。まんなかの まわりの 4 まいを おって たてて、いちばん したの 1 まいで ふたを すると、りっぽうたいに もどります。6 まいが みんな ちがう めんに なれば、てんかいず です。
+      - part: 思い出す
+        text: りっぽうたいの めんは いくつ ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 6
+        check: "sum(1 for i in range(3) for s in (0, 1))"
+        hints:
+          - まえ、うしろ、うえ、した、ひだり、みぎ を じゅんに さがそう。
+          - うしろと したと ひだりは、かくれて いるよ。
+          - じゅんに かぞえよう。
+        paths:
+          - [みえる めん 3 つ, かくれた めんを つづけて 4、5、6, 6 つ]
+      - part: 思い出す
+        text: くろい てんの ちょうてんに あつまって いる へんは、なんぼん ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><circle cx="70" cy="45" r="3.5" fill="currentColor"/></svg>'
+        answer: 3
+        check: "sum(1 for b in itertools.product((0, 1), repeat=3) if sum(b) == 1)"
+        hints:
+          - くろい てんから でて いる せんを さがそう。
+          - よこ、した、おくへ のびる せんが あるね。
+          - じゅんに かぞえよう。
+        paths:
+          - [よこへ 1 ぽん, したへ 1 ぽん, おくへ 1 ぽん, 3 ぼん]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦⬜⬜⬜\n🟦🟦🟦🟦\n⬜⬜🟦⬜"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - よこに ならんだ 4 まいを、ぐるっと まるめて みよう。
+          - うえと したに 1 まいずつ ある ましかくは、どこに なるかな。
+          - ふたと そこに なれば、りっぽうたいに なるよ。
+        paths:
+          - [よこの 4 まいで まわりを かこむ, うえの 1 まいが ふた, したの 1 まいが そこ, なる]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦⬜🟦⬜\n🟦🟦🟦🟦"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - よこに ならんだ 4 まいを、ぐるっと まるめて みよう。
+          - うえに ある 2 まいは、どちらも どこに なるかな。
+          - そこに なる ましかくは あるかな。
+        paths:
+          - [よこの 4 まいで まわりを かこむ, うえの 2 まいは どちらも ふたに なって かさなる, そこが ない, ならない]
+        note: ましかくが 6 まいあるので「なる」と答えやすい。6 まいでも重なると立方体にならない。
+      - part: 今日
+        text: 🟦 に、あと 1 まい ましかくを つけて てんかいずに します。🔴 🟡 🟢 の どこに つけると よいですか。⬜ は なにも ない ところ です。
+        figure: "⬜🔴🟦⬜⬜\n🟦🟦🟦🟦🟡\n⬜🟢⬜⬜⬜"
+        choices: [🔴, 🟡, 🟢]
+        answer: 🟢
+        check: "[m for m in '🔴🟡🟢' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines()) + (lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == m))(fig.splitlines()))][0]"
+        hints:
+          - よこの 4 まいで まわりを かこむと、うえの 🟦 は ふたに なるね。
+          - まだ ない めんは どこかな。
+          - 🔴 は ふたと かさならないかな。🟡 は 5 まいめで まわりを まわるよ。
+        paths:
+          - [よこの 4 まいが まわり, うえの 🟦 が ふた, のこりは そこ, そこに なるのは したの 🟢]
+        note: 🔴 を選ぶと、ふたが 2 まいになって重なる。
+      - part: 挑戦
+        text: ましかくが 1 れつに 5 まい ならんで いる てんかいずは ありますか。
+        figure: "🟦🟦🟦🟦🟦"
+        choices: [ある, ない]
+        answer: ない
+        check: "'ある' if any((lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)(sorted((0, c) for c in range(5)) + [q]) for q in [(r, c) for r in (-1, 1) for c in range(5)] + [(0, -1), (0, 5)]) else 'ない'"
+        hints:
+          - 5 まいを、はしから じゅんに おって まるめて みよう。
+          - 4 まい おると、ぐるっと 1 しゅう するね。
+          - 5 まいめは どこに くるかな。
+        paths:
+          - [4 まいで まわりを 1 しゅう する, 5 まいめは 1 まいめに かさなる, どこに 6 まいめを つけても だめ, ない]
+    extra:
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦🟦⬜⬜\n⬜🟦🟦⬜\n⬜⬜🟦🟦"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - かいだんの かたち だね。
+          - まんなかの 2 まいを そこと よこに して、ほかを おって みよう。
+          - かさなる めんが なければ、りっぽうたいに なるよ。
+        paths:
+          - [かいだんを じゅんに おる, 6 まいが みんな ちがう めんに なる, なる]
+        note: 見なれない形なので「ならない」と答えやすい。紙で作って確かめるとよい。
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦🟦🟦\n🟦🟦🟦"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 4 まいが かたまって いる ところは ないかな。
+          - その 4 まいの まんなかの てんを みよう。
+          - りっぽうたいの ちょうてんに あつまる めんは いくつ だったかな。
+        paths:
+          - [2 だん 2 れつの 4 まいが ある, まんなかで おれない, ならない]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦🟦🟦⬜⬜\n⬜⬜🟦🟦🟦"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - うえの 3 まいと、したの 3 まいに わけて みよう。
+          - まんなかで つながった 2 まいを そこと よこに しよう。
+          - かさなる めんが なければ、りっぽうたいに なるよ。
+        paths:
+          - [3 まいずつ おる, 6 まいが みんな ちがう めんに なる, なる]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: くみたてた とき、むかいあう めんを しらべよう。⬜ は なにも ない ところ です。
+        figure: "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜"
+        explain: 🟦 を そこに して くみたてると、🟥 🟨 🟩 🟪 が まわりに たち、🟧 が ふたに なります。🟦 と 🟧、🟨 と 🟩、🟥 と 🟪 が むかいあいます。まっすぐ ならんだ ところでは、1 まい とばした となりどうしが むかいあいます。
+      - part: 思い出す
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "⬜🟦⬜⬜\n🟦🟦🟦🟦\n⬜🟦⬜⬜"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - よこに ならんだ 4 まいを まるめて みよう。
+          - うえと したの 1 まいずつは、どこに なるかな。
+          - かさなる めんが なければ、りっぽうたいに なるよ。
+        paths:
+          - [よこの 4 まいが まわり, うえが ふた、したが そこ, なる]
+      - part: 思い出す
+        text: りっぽうたいの へんは なんぼん ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 12
+        check: "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)"
+        hints:
+          - うえの めんの まわりから かぞえよう。
+          - したの めんの まわりを つづけて かぞえよう。
+          - たての へんも わすれずに。
+        paths:
+          - [うえ 4 ほん, した 4 ほん, たて 4 ほん, 4 ほんずつ 3 くみで 12 ほん]
+      - part: 今日
+        text: くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜"
+        choices: [🟦, 🟩, 🟧]
+        answer: 🟧
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこの 4 まいを まわりに すると、🟥 は ふたに なるね。
+          - ふたと むかいあうのは、どこかな。
+          - したに ついて いる 1 まいは、どこに なるかな。
+        paths:
+          - [よこの 4 まいが まわり, 🟥 は ふた, 🟧 は そこ, ふたと そこが むかいあう]
+        note: 🟥 のすぐ下の 🟨 や、近くの 🟦 を選びやすい。となりあう面は、むかいあわない。
+      - part: 今日
+        text: くみたてた とき、🟨 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟨🟦⬜⬜\n⬜🟥🟩⬜\n⬜⬜🟪🟧"
+        choices: [🟩, 🟪, 🟧]
+        answer: 🟩
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟨' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - 🟥 を そこに して、くみたてて みよう。
+          - 🟨 と 🟦 は、🟥 の まわりの どこに たつかな。
+          - 🟨、🟦、🟩 を じゅんに たどると、1 まい とばした となりは どれかな。
+        paths:
+          - [🟨 🟦 🟩 と じゅんに つながる, 1 まい とばした 🟨 と 🟩 が むかいあう, 🟩]
+        note: かいだんの形でも、ならんだ 3 まいの両はしは むかいあう。
+      - part: 今日
+        text: くみたてた とき、🟥 と 🟦 は となりあいますか、むかいあいますか。⬜ は なにも ない ところ です。
+        figure: "⬜🟥⬜⬜\n🟨🟩🟪🟧\n⬜⬜🟦⬜"
+        choices: [となりあう, むかいあう]
+        answer: むかいあう
+        check: "(lambda g: (lambda cs: (lambda d: 'むかいあう' if any(g[p[0]][p[1]] == '🟥' and g[q[0]][q[1]] == '🟦' and d[q][0] == d[p][1] for p in d for q in d) else 'となりあう')((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこの 4 まいで まわりを かこもう。
+          - 🟥 は ふたと そこの どちらに なるかな。
+          - 🟦 は どちらに なるかな。
+        paths:
+          - [よこの 4 まいが まわり, 🟥 は ふた、🟦 は そこ, むかいあう]
+        note: ずの上で離れて見えるので、どちらとも決めにくい。上と下に出た 2 まいは、ふたと そこになる。
+      - part: 挑戦
+        text: くみたてた とき、★ の へんと くっつく へんは、あ、い、う の どれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="90" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="90" y="25" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="60" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="120" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="150" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="120" y="85" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="90" y1="25" x2="120" y2="25" stroke="currentColor" stroke-width="4.5" fill="none"/><text x="105" y="20.6" font-size="13" text-anchor="middle">★</text><text x="75" y="50.5" font-size="13" text-anchor="middle">あ</text><text x="165" y="50.5" font-size="13" text-anchor="middle">い</text><text x="135" y="128.6" font-size="13" text-anchor="middle">う</text></svg>'
+        choices: [あ, い, う]
+        answer: い
+        check: "(lambda d: [s for s, p, k in (('あ', (1, 0), 2), ('い', (1, 3), 2), ('う', (2, 2), 3)) if {d[p][0], d[p][k]} == {d[(0, 1)][0], d[(0, 1)][2]}][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((1, 1), (0, 1), (1, 0), (1, 2), (1, 3), (2, 2))))"
+        hints:
+          - よこの 4 まいで まわりを かこむと、★ の ある ましかくは ふたに なるね。
+          - ふたの 4 つの へんは、まわりの 4 まいの うえの へんと くっつくよ。
+          - ★ は ふたの いちばん とおい へん。まわりの 4 まいの うち、いちばん とおくの 1 まいを みよう。
+        paths:
+          - [★ の ましかくは ふた, ふたの へんは まわりの 4 まいの うえの へんと くっつく, ★ は つけねの むかいの へん, ぐるっと まわって くる いちばん みぎの い]
+        note: ずの上で近い「あ」を選びやすい。紙に写して切り、組み立てて確かめるとよい（はさみは おとなと いっしょに）。
+    extra:
+      - part: 今日
+        text: くみたてた とき、🟪 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜"
+        choices: [🟥, 🟦, 🟧]
+        answer: 🟥
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟪' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - たてに ならんだ 4 まいを みよう。
+          - 1 まい とばした となりどうしが むかいあうよ。
+          - 🟪 から 1 まい とばすと、どの いろかな。
+        paths:
+          - [たてに 🟥 🟦 🟪 🟧, 🟪 から 1 まい とばした うえは 🟥, 🟥]
+      - part: 今日
+        text: くみたてた とき、🟦 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜"
+        choices: [🟥, 🟪, 🟧]
+        answer: 🟪
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟦' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこに ならんだ 4 まいを みよう。
+          - 1 まい とばした となりどうしが むかいあうよ。
+          - 🟦 から みぎへ 1 まい とばすと、どの いろかな。
+        paths:
+          - [よこに 🟨 🟦 🟩 🟪, 🟦 から 1 まい とばすと 🟪, 🟪]
+      - part: 今日
+        text: くみたてた とき、🟥 と 🟨 は となりあいますか、むかいあいますか。⬜ は なにも ない ところ です。
+        figure: "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧"
+        choices: [となりあう, むかいあう]
+        answer: となりあう
+        check: "(lambda g: (lambda cs: (lambda d: 'むかいあう' if any(g[p[0]][p[1]] == '🟥' and g[q[0]][q[1]] == '🟨' and d[q][0] == d[p][1] for p in d for q in d) else 'となりあう')((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - むかいあう めんは、くみたてると くっつかないね。
+          - 🟥 と むかいあうのは、🟥 🟦 🟩 と ならんだ 1 まい とばした となり だよ。
+          - 🟨 は その めん かな。
+        paths:
+          - [🟥 🟦 🟩 の 1 まい とばしで 🟥 と 🟩 が むかいあう, 🟨 は ちがう, となりあう]
+        note: ずの上で辺がくっついていない面どうしでも、組み立てると となりあうことがある。
+
+  - day: 4
+    items:
+      - part: わけ
+        text: ましかくが 2 だん 2 れつに かたまった ところが ある ずは、てんかいずに なりません。どうしてか、くちで いってみよう。
+        figure: "🟦🟦⬜\n🟦🟦🟦\n⬜🟦⬜"
+        explain: 「4 まいの まんなかの てんに めんが 4 つ あつまる。りっぽうたいの ちょうてんには めんが 3 つしか あつまらない から」と言えればよい。「4 まいで てんの まわりが ぜんぶ うまって いて、たいらな まま おりまげられない から」でもよい。1 日目の「1 つの頂点に面は 3 つ」とつなげられればなお良い。紙で 4 まいの形を作り、折ろうとしても平らなままで立ち上がらないことを一緒に確かめる。
+        hints:
+          - 4 まいが かたまった まんなかの てんを みよう。
+          - りっぽうたいの 1 つの ちょうてんに、めんは いくつ あつまって いたかな。
+          - 「〜だから おれない」と いってみよう。
+        paths:
+          - [まんなかの てんに めんが 4 つ, りっぽうたいの ちょうてんには 3 つ, だから くみたてられない]
+      - part: わけ
+        text: ましかくが 1 れつに 5 まい ならぶと、てんかいずに なりません。どうしてか、くちで いってみよう。
+        figure: "🟦🟦🟦🟦🟦\n⬜⬜🟦⬜⬜"
+        explain: 「4 まいで まわりを ぐるっと 1 しゅう すると もとの めんに もどる から、5 まいめは 1 まいめに かさなる」と言えればよい。「りっぽうたいの まわりを まく めんは 4 まい だから、5 まいめの ばしょが ない」でもよい。細長い紙を 5 つに折って箱のまわりに巻き、5 まいめが重なることを見せるとよい。
+        hints:
+          - はしから じゅんに、めんを おって まるめて みよう。
+          - 4 まい おると、どこに もどって くるかな。
+          - 「〜だから かさなる」と いってみよう。
+        paths:
+          - [4 まいで 1 しゅう, 5 まいめは 1 まいめと おなじ ところ, だから かさなる]
+      - part: わけ
+        text: りっぽうたいの へんは 12 ほん です。1 ぽんずつ かぞえなくても わかる わけを、くちで いってみよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        explain: 「うえの めんに 4 ほん、したの めんに 4 ほん、うえと したを つなぐ たての へんが 4 ほん。4 ほんの くみが 3 つ だから 12 ほん」と言えればよい。「まえの めんに 4 ほん、うしろの めんに 4 ほん、まえと うしろを つなぐ へんが 4 ほん」でもよい。どの辺も 3 つの組のどれか 1 つにだけ入ることに気づけば、数え落としも 2 回数えもない、という点まで話せるとなお良い。
+        hints:
+          - うえの めんの まわりの へんは なんぼん かな。
+          - したの めんの まわりは どうかな。
+          - のこりの へんは、どこと どこを つないで いるかな。
+        paths:
+          - [うえ 4 ほん, した 4 ほん, たて 4 ほん, 4 ほんずつ 3 くみ]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "⬜🟦⬜⬜\n🟦🟦🟦⬜\n⬜⬜🟦🟦"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 2 だん 2 れつに かたまった 4 まいは あるかな。
+          - 1 れつに 5 まい ならんで いるかな。
+          - まんなかの だんの 3 まいを まわりに して、おって みよう。
+        paths:
+          - [かたまった 4 まいも 5 まいの れつも ない, おると 6 まいが みんな ちがう めん, なる]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦⬜⬜\n🟦🟦⬜\n🟦🟦⬜\n⬜🟦⬜"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 2 だん 2 れつに かたまった 4 まいは あるかな。
+          - その 4 まいの まんなかの てんを みよう。
+          - まんなかの てんに、めんは いくつ あつまって いるかな。
+        paths:
+          - [まんなかの 2 だんに かたまった 4 まいが ある, おれない, ならない]
+      - part: 今日
+        text: くみたてた とき、🟩 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "⬜🟥⬜⬜\n🟨🟦🟩🟪\n⬜⬜⬜🟧"
+        choices: [🟨, 🟥, 🟧]
+        answer: 🟨
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟩' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこに ならんだ 4 まいを みよう。
+          - 1 まい とばした となりどうしが むかいあうよ。
+          - 🟩 から ひだりへ 1 まい とばすと、どの いろかな。
+        paths:
+          - [よこに 🟨 🟦 🟩 🟪, 🟩 から ひだりへ 1 まい とばすと 🟨, 🟨]
+    extra:
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦🟦🟦🟦🟦🟦"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 1 れつに なんまい ならんで いるかな。
+          - 4 まいで まわりを 1 しゅう するね。
+          - 5 まいめと 6 まいめは どこに くるかな。
+        paths:
+          - [4 まいで 1 しゅう, 5 まいめから かさなる, ならない]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦⬜⬜⬜\n🟦🟦🟦⬜\n⬜⬜🟦🟦"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 2 だん 2 れつに かたまった 4 まいは あるかな。
+          - まんなかの だんの 3 まいを まわりに して、おって みよう。
+          - かさなる めんが なければ、りっぽうたいに なるよ。
+        paths:
+          - [かたまった 4 まいは ない, おると 6 まいが みんな ちがう めん, なる]
+      - part: 今日
+        text: くみたてた とき、🟧 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧"
+        choices: [🟥, 🟨, 🟩]
+        answer: 🟨
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟧' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - 🟧 から つながる ましかくを じゅんに たどろう。
+          - 🟧 🟪 🟩 と ならぶ ところは、まっすぐ では ないね。🟩 を そこに して、おって みよう。
+          - 1 まい とばした となりどうしが むかいあう ところを さがそう。
+        paths:
+          - [🟨 🟩 🟪 と ならぶ, 🟨 を そこに すると 🟧 は ふた, 🟨]
+        note: かいだんの形は、目だけで決めにくい。紙で作って確かめるとよい。
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: ❓ は ぬのが かかって みえない ところ です。つみきは ういて いません。つみきは ぜんぶで いくつ ありますか。
+        figure: "⬜🟫⬜\n🟫❓🟫\n❓❓🟫"
+        answer: 7
+        check: "(lambda g: sum(len(g) - min([r for r in range(len(g)) if g[r][c] != '⬜'] + [len(g)]) for c in range(len(g[0]))))(fig.splitlines())"
+        hints:
+          - たての ならびごとに かぞえよう。
+          - つみきは ういて いないから、みえる つみきの したにも つみきが あるよ。
+          - ひだりの ならびから じゅんに たそう。
+        paths:
+          - [ひだりの ならび 2 こ, まんなかの ならび 3 こ, みぎの ならび 2 こ, つづけて かぞえて 7 こ]
+      - part: 思い出す
+        text: たいらな ところを かみに あてて まわりを なぞると、ましかくが かけるのは どれですか。
+        choices: [🥫, 🎲, ⚽]
+        answer: 🎲
+        hints:
+          - なぞった かたちは、たいらな ところの かたち だよ。
+          - 🥫 の たいらな ところは どんな かたちかな。
+          - ⚽ には たいらな ところが あるかな。
+        paths:
+          - [🥫 は まる, ⚽ は たいらな ところが ない, 🎲 は ましかく]
+      - part: 今日
+        text: りっぽうたいの つみきを 2 こ、たてに つみました。ゆかに ついて いる めんを のぞくと、そとがわに でて いる めんは いくつ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="85,32 137,32 137,136 85,136" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85" y1="32" x2="111" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="32" x2="163" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="136" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="12" x2="163" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="163" y1="12" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85" y1="84" x2="137" y2="84" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="84" x2="163" y2="64" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="64" x2="163" y2="64" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="85" y1="84" x2="111" y2="64" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="111" y1="116" x2="111" y2="12" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="111" y1="116" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="85" y1="136" x2="111" y2="116" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 9
+        check: "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2 - 1"
+        hints:
+          - うえから、まえから、ひだりから、みぎから、うしろから みえる めんを かぞえよう。
+          - あわさった 2 つの めんは、そとに でて いないね。
+          - ゆかに ついた めんは かぞえないよ。
+        paths:
+          - [うえ 1 つ, まえ 2 つ、うしろ 2 つ, ひだり 2 つ、みぎ 2 つ, ぜんぶ かぞえて 9]
+        note: 重なった 2 つの面や、ゆかの面まで数えやすい。むきごとに数えるとよい。
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "⬜⬜🟦\n🟦🟦🟦\n🟦⬜⬜\n🟦⬜⬜"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - よこの 3 まいの まんなかを そこに して、おって みよう。
+          - ひだりの たての 3 まいは、どこに たつかな。
+          - いちばん したの 1 まいは、どの めんと かさなるかな。
+        paths:
+          - [よこの まんなかが そこ、りょうはしが ひだりと みぎ, ひだりの たての 2 まいが まえと みぎに まわる, みぎの めんと かさなる, ならない]
+        note: 2 だん 2 れつの 4 まいも 5 まいの列もないので「なる」と答えやすい。4 日目の決まりに当てはまらなくても、重なることがある。紙で作って確かめるとよい（はさみは おとなと いっしょに）。
+      - part: 今日
+        text: くみたてた とき、🟦 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥🟦🟨⬜⬜\n⬜⬜🟩🟪🟧"
+        choices: [🟩, 🟪, 🟧]
+        answer: 🟪
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟦' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - 🟩 を そこに して、おって みよう。
+          - 🟨 と 🟪 は、🟩 の まわりの どこに たつかな。
+          - 🟦 は 🟨 の よこに つながって いるね。どこに たつかな。
+        paths:
+          - [🟩 を そこに すると 🟨 は うしろ、🟪 は みぎに たつ, 🟦 は 🟨 の よこから ひだりに たつ, ひだりと みぎで 🟦 と 🟪 が むかいあう]
+        note: まっすぐ並んでいなくても、むかいあう面はある。紙で作って確かめるとよい。
+      - part: 挑戦
+        text: さいころは、1 と 6、2 と 5、3 と 4 が むかいあいます。この てんかいずで、あ に はいる かずは いくつ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="25" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="90" y="25" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="90" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="120" y="55" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="120" y="85" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><rect x="150" y="85" width="30" height="30" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><text x="75" y="45.2" font-size="15" text-anchor="middle">1</text><text x="105" y="45.2" font-size="15" text-anchor="middle">2</text><text x="105" y="75.2" font-size="15" text-anchor="middle">あ</text><text x="135" y="75.2" font-size="15" text-anchor="middle">6</text><text x="135" y="105.2" font-size="15" text-anchor="middle">5</text><text x="165" y="105.2" font-size="15" text-anchor="middle">3</text></svg>'
+        answer: 4
+        check: "(lambda d, m: 7 - [m[q] for p in d for q in d if p == (1, 1) and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3))), {(0, 0): 1, (0, 1): 2, (1, 2): 6, (2, 2): 5, (2, 3): 3, (1, 1): 0})"
+        hints:
+          - まず、あ と むかいあう めんを さがそう。
+          - 1 まい とばした となりどうしが むかいあう ところを みよう。
+          - あ と むかいあう めんの かずと、くみに なる かずは なにかな。
+        paths:
+          - [あ と むかいあうのは 3 の めん, 3 と くみに なるのは 4, 4]
+          - [1 と 6、2 と 5 は もう ある, のこりは 3 と 4, 3 が ある から あ は 4]
+        note: 2 本目の道（のこった組から決める）でも答えが出る。どの面とむかいあうかを確かめると、さいころの形の練習になる。
+    extra:
+      - part: 今日
+        text: ❓ は みえない ところ です。つみきは ういて いません。つみきは ぜんぶで いくつ ありますか。
+        figure: "🟫⬜⬜\n❓🟫⬜\n❓❓🟫"
+        answer: 6
+        check: "(lambda g: sum(len(g) - min([r for r in range(len(g)) if g[r][c] != '⬜'] + [len(g)]) for c in range(len(g[0]))))(fig.splitlines())"
+        hints:
+          - たての ならびごとに かぞえよう。
+          - みえる つみきの したにも つみきが あるよ。
+          - ひだりから じゅんに かぞえよう。
+        paths:
+          - [ひだりの ならび 3 こ, まんなか 2 こ, みぎ 1 こ, つづけて かぞえて 6 こ]
+      - part: 今日
+        text: りっぽうたいの つみきを 2 こ、よこに くっつけました。ゆかに ついて いる めんを のぞくと、そとがわに でて いる めんは いくつ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="40,50 160,50 160,110 40,110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="40" y1="50" x2="68" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="160" y1="50" x2="188" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="160" y1="110" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="28" x2="188" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="188" y1="28" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100" y1="50" x2="100" y2="110" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100" y1="50" x2="128" y2="28" stroke="currentColor" stroke-width="2" fill="none"/><line x1="128" y1="28" x2="128" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="68" y1="88" x2="68" y2="28" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="68" y1="88" x2="188" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="40" y1="110" x2="68" y2="88" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 8
+        check: "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2 - 2"
+        hints:
+          - ゆかに ついて いる めんは いくつ かな。
+          - あわさった めんは そとに でて いないね。
+          - うえ、まえ、うしろ、ひだり、みぎ と じゅんに かぞえよう。
+        paths:
+          - [うえ 2 つ, まえ 2 つ、うしろ 2 つ, ひだり 1 つ、みぎ 1 つ, ぜんぶ かぞえて 8]
+        note: よこに並べると、ゆかについた面は 2 つになる。たてに積んだときとくらべるとよい。
+      - part: 今日
+        text: くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥🟦🟨⬜⬜\n⬜⬜🟩🟪🟧"
+        choices: [🟨, 🟩, 🟧]
+        answer: 🟨
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - 🟥 🟦 🟨 は 1 れつに ならんで いるね。
+          - まっすぐ ならんだ ところでは、1 まい とばした となりどうしが むかいあうよ。
+          - 🟥 から 1 まい とばすと、どの いろかな。
+        paths:
+          - [🟥 🟦 🟨 が まっすぐ ならぶ, 1 まい とばした 🟨, 🟨]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: りっぽうたいの ちょうてんは いくつ ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 8
+        check: "sum(1 for v in itertools.product((0, 1), repeat=3))"
+        hints:
+          - まえの ましかくの かどを かぞえよう。
+          - うしろの ましかくの かども かぞえよう。
+          - まえに つづけて うしろを かぞえよう。
+        paths:
+          - [まえ 4 つ, うしろを つづけて 8 まで, 8 こ]
+      - part: 今日
+        text: りっぽうたいの へんは なんぼん ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 12
+        check: "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)"
+        hints:
+          - うえの めんの へんから かぞえよう。
+          - したの めんの へんを つづけよう。
+          - たての へんも わすれずに。
+        paths:
+          - [うえ 4 ほん, した 4 ほん, たて 4 ほん, 12 ほん]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "⬜⬜🟦⬜\n🟦🟦🟦🟦\n🟦⬜⬜⬜"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - よこに ならんだ 4 まいを まわりに しよう。
+          - うえと したの 1 まいずつは どこに なるかな。
+          - かさなる めんが ないか しらべよう。
+        paths:
+          - [よこの 4 まいが まわり, うえが ふた、したが そこ, なる]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "⬜🟦🟦\n🟦🟦⬜\n🟦🟦⬜"
+        choices: [なる, ならない]
+        answer: ならない
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - 2 だん 2 れつに かたまった 4 まいは あるかな。
+          - その まんなかの てんを みよう。
+          - りっぽうたいの ちょうてんに あつまる めんは いくつ だったかな。
+        paths:
+          - [したの 2 だんに かたまった 4 まい, おれない, ならない]
+      - part: 今日
+        text: 🟦 に、あと 1 まい ましかくを つけて てんかいずに します。🔴 🟡 🟢 の どこに つけると よいですか。⬜ は なにも ない ところ です。
+        figure: "🔴🟦⬜\n🟦🟦⬜\n⬜🟦🟢\n🟡🟦⬜"
+        choices: [🔴, 🟡, 🟢]
+        answer: 🟢
+        check: "[m for m in '🔴🟡🟢' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines()) + (lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == m))(fig.splitlines()))][0]"
+        hints:
+          - 2 だん 2 れつに かたまる ところに つけると だめ だよ。
+          - たての 4 まいで まわりを かこむと、ひだりの 🟦 は ふたに なるね。
+          - まだ ない めんは どこかな。🟡 は ふたと かさならないかな。
+        paths:
+          - [🔴 は 4 まいが かたまる, たての 4 まいが まわりで ひだりの 🟦 が ふた, 🟡 も ふたに なって かさなる, そこに なるのは 🟢]
+      - part: 今日
+        text: くみたてた とき、🟩 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜"
+        choices: [🟥, 🟨, 🟧]
+        answer: 🟨
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟩' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこに ならんだ 3 まいを みよう。
+          - 1 まい とばした となりどうしが むかいあうよ。
+          - 🟩 から ひだりへ 1 まい とばすと、どの いろかな。
+        paths:
+          - [よこに 🟨 🟦 🟩, 1 まい とばした 🟨, 🟨]
+      - part: 今日
+        text: くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧"
+        choices: [🟨, 🟩, 🟧]
+        answer: 🟩
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - 🟥 から つながる ましかくを じゅんに たどろう。
+          - 🟥 🟦 は よこ、🟦 🟨 は たてに つながるね。
+          - 🟨 を そこに して、おって みよう。🟥 と 🟩 は どこに たつかな。
+        paths:
+          - [🟨 を そこに する, 🟥 と 🟩 は はんたいがわに たつ, 🟩]
+        note: 目で決めにくいときは、紙で作って確かめてよい。
+      - part: 挑戦
+        text: りっぽうたいの つみきを 2 こ、めんを ぴったり あわせて くっつけました。そとがわに でて いる めんは、ゆかに ついた めんも いれて いくつ ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="85,32 137,32 137,136 85,136" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85" y1="32" x2="111" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="32" x2="163" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="136" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="12" x2="163" y2="12" stroke="currentColor" stroke-width="2" fill="none"/><line x1="163" y1="12" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="85" y1="84" x2="137" y2="84" stroke="currentColor" stroke-width="2" fill="none"/><line x1="137" y1="84" x2="163" y2="64" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="64" x2="163" y2="64" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="85" y1="84" x2="111" y2="64" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="111" y1="116" x2="111" y2="12" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="111" y1="116" x2="163" y2="116" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="85" y1="136" x2="111" y2="116" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 10
+        check: "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2"
+        hints:
+          - 1 この めんは いくつ だったかな。
+          - あわさって かくれた めんは いくつ かな。
+          - むきごとに かぞえよう。
+        paths:
+          - [うえ 1、した 1, まえ 2、うしろ 2, ひだり 2、みぎ 2, ぜんぶ かぞえて 10]
+    extra:
+      - part: 今日
+        text: りっぽうたいの めんは いくつ ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="70,45 145,45 145,120 70,120" stroke="currentColor" stroke-width="2" fill="none"/><line x1="70" y1="45" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="45" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="145" y1="120" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="19" x2="179" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="179" y1="19" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104" y1="94" x2="104" y2="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="104" y1="94" x2="179" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><line x1="70" y1="120" x2="104" y2="94" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/></svg>'
+        answer: 6
+        check: "sum(1 for i in range(3) for s in (0, 1))"
+        hints:
+          - みえる めんを かぞえよう。
+          - かくれて いる めんも あるよ。
+          - まえ、うしろ、うえ、した、ひだり、みぎ。
+        paths:
+          - [みえる 3 つ, かくれた 3 つを つづけて, 6 つ]
+      - part: 今日
+        text: この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。
+        figure: "🟦🟦⬜\n⬜🟦⬜\n⬜🟦🟦\n⬜🟦⬜"
+        choices: [なる, ならない]
+        answer: なる
+        check: "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'"
+        hints:
+          - たてに ならんだ 4 まいを まわりに しよう。
+          - よこに でた 2 まいは、どこに なるかな。
+          - ふたと そこに なれば、りっぽうたいに なるよ。
+        paths:
+          - [たての 4 まいが まわり, ひだりと みぎに でた 2 まいが ふたと そこ, なる]
+      - part: 今日
+        text: くみたてた とき、🟨 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。
+        figure: "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜"
+        choices: [🟦, 🟩, 🟪]
+        answer: 🟩
+        check: "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟨' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())"
+        hints:
+          - よこに ならんだ 4 まいを みよう。
+          - 1 まい とばした となりどうしが むかいあうよ。
+          - 🟨 から みぎへ 1 まい とばすと、どの いろかな。
+        paths:
+          - [よこに 🟨 🟦 🟩 🟪, 1 まい とばした 🟩, 🟩]

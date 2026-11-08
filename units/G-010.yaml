@@ -1,0 +1,641 @@
+# G-010 円とおうぎ形
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：円の中心、半径、直径（半径の 2 つ分）、円周、円周率（約 3.14）、おうぎ形、中心角、弧。
+# 円周率は、かける計算を最後までのこして「（□ × 円周率）cm」の形で答える。□ に入る数を打つ（中学の π と同じ考え。D-014）。
+#   小数のかけ算は前提（N-020）にないので、3.14 を使って数で答える問題は、3.14 を 2〜4 回たす形（3.14 × 3 = 3.14 + 3.14 + 3.14）だけにした。
+#   答えの小数は、check では 100 倍した整数で計算して「9.42」の形にした（小数の計算の誤差をさけるため）。
+# おうぎ形は「円の何分の 1（何分の何）か」で考える。中心角 ÷ 360 を分数にして約分する（N-019）。
+#   面積や弧は、円の面積や円周を、その分数の分母の数に分けて分子の数だけ集める（N-016 の「分ける」）。
+# 図は svg（D-040）。長さの比はおおよそ合わせた。
+# 球、円柱の体積と表面積は G-011、図形の回転と点の動きは G-015、円周角は G-018 で扱う。
+# 地図に plan がないので既定の並び（導入・練習・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 円の中心・半径・直径、円周と円周率　2 日目 円の面積　3 日目 おうぎ形（中心角、弧、面積）
+#   4 日目 わけ（円周率は 3 より大きく 4 より小さい、円の面積の式）　5 日目 G-008（面積）・G-009（角）・N-019（分数）・N-020（小数）と混ぜる　6 日目 確認
+# check：□ の数を出す式。3.14 を使う問題は 314 を何回たすかの式。分数の答えは str(Fraction(…))。
+
+id: G-010
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 円の部分の名前を知ろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="64" y1="70" x2="176" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="148" y2="21.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="136" y="88.2" font-size="12" text-anchor="middle">中心</text><text x="126.4" y="44.1" font-size="12" text-anchor="middle">半径</text><text x="92" y="65.2" font-size="12" text-anchor="middle">直径</text><line x1="162.9" y1="106" x2="210" y2="128" stroke="currentColor" stroke-width="1" fill="none"/><text x="214" y="136.2" font-size="12" text-anchor="start">円周</text></svg>'
+        explain: 円のまん中の点を中心、中心から円のまわりまでひいた直線を半径、中心を通って円のまわりからまわりまでひいた直線を直径といいます。直径は半径の 2 つ分です。円のまわりを円周といいます。円周は、どんな大きさの円でも直径のおよそ 3.14 倍で、この数を円周率といいます。円周 = 直径 × 円周率。この単元では、計算は「（□ × 円周率）cm」の形でとめて、□ の数を答えます。
+      - part: 思い出す
+        text: 1 回転の角は何度ですか。
+        answer: 360
+        check: "90 + 90 + 90 + 90"
+        hints:
+          - 直角は何度だったかな。
+          - 1 回転は、直角いくつ分かな。
+          - 90 を 4 つ合わせよう。
+        paths:
+          - [直角 4 つ分, 90 + 90 + 90 + 90 = 360, 360°]
+      - part: 思い出す
+        text: 3.14 + 3.14 はいくつですか。
+        answer: 6.28
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314)"
+        hints:
+          - 小数点の位置をそろえて、たてにならべよう。
+          - 小さい位から順にたそう。
+          - 答えにも、小数点をわすれずにうとう。
+        paths:
+          - [0.04 + 0.04 = 0.08, 0.1 + 0.1 = 0.2, 3 + 3 = 6, 6.28]
+      - part: 今日
+        text: 半径が 4 cm の円の、直径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="44.5" font-size="13" text-anchor="middle">4 cm</text></svg>'
+        answer: 8
+        check: "4 * 2"
+        hints:
+          - 直径は、半径のいくつ分だったかな。
+          - 直径は、中心を通って、まわりからまわりまでの長さだね。
+          - 4 cm を 2 つ分にしよう。
+        paths:
+          - [直径は半径の 2 つ分, 4 × 2 = 8, 8 cm]
+      - part: 今日
+        text: 箱の中に、同じ大きさの円が 3 つ、ぴったりならんでいます。箱の横の長さは 24 cm です。円の半径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="42" y="30" width="156" height="52" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="68" cy="56" r="26" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="56" r="26" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="172" cy="56" r="26" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="42" y1="96" x2="198" y2="96" stroke="currentColor" stroke-width="1" fill="none"/><line x1="42" y1="90" x2="42" y2="102" stroke="currentColor" stroke-width="1" fill="none"/><line x1="198" y1="90" x2="198" y2="102" stroke="currentColor" stroke-width="1" fill="none"/><text x="120" y="114.5" font-size="13" text-anchor="middle">24 cm</text></svg>'
+        answer: 4
+        check: "24 // 3 // 2"
+        hints:
+          - 箱の横の長さは、円の直径いくつ分かな。
+          - 24 cm を 3 つに分けると、直径がわかるね。
+          - 半径は、直径の半分だよ。
+        paths:
+          - [直径 3 つ分が 24 cm, 24 ÷ 3 = 8 で直径 8 cm, 半径は 8 ÷ 2 = 4, 4 cm]
+        note: 24 ÷ 3 = 8 を半径と答えやすい。図の横に、直径を 3 つ書き入れさせるとよい。
+      - part: 今日
+        text: 半径が 5 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="44.5" font-size="13" text-anchor="middle">5 cm</text></svg>'
+        answer: 10
+        check: "5 * 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - まず、直径を求めよう。
+          - 直径は、半径の 2 つ分だよ。
+        paths:
+          - [直径は 5 × 2 = 10, 円周は 10 × 円周率, □ は 10]
+        note: 半径の 5 をそのまま入れやすい。円周の式は直径から。
+      - part: 挑戦
+        text: 円周が（12 × 円周率）cm の円があります。この円の半径は何 cm ですか。
+        answer: 6
+        check: "12 // 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 円周の式から、直径は何 cm かわかるかな。
+          - 半径は、直径の半分だよ。
+        paths:
+          - [直径 × 円周率 = 12 × 円周率, 直径は 12 cm, 半径は 12 ÷ 2 = 6, 6 cm]
+    extra:
+      - part: 今日
+        text: 直径が 16 cm の円の、半径は何 cm ですか。
+        answer: 8
+        check: "16 // 2"
+        hints:
+          - 直径は、半径の 2 つ分だね。
+          - 半径は、直径を同じ 2 つに分けた長さだよ。
+          - 16 を 2 つに分けよう。
+        paths:
+          - [16 ÷ 2 = 8, 8 cm]
+      - part: 今日
+        text: 直径が 2 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。
+        answer: 6.28
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314)"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 2 × 3.14 は、3.14 を 2 回たした数だよ。
+          - 3.14 + 3.14 を計算しよう。
+        paths:
+          - [2 × 3.14 = 3.14 + 3.14, 6.28, 約 6.28 cm]
+      - part: 今日
+        text: 半径 3 cm の円が 2 つ、横にぴったりならんで、箱に入っています。箱の横の長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="68" y="30" width="104" height="52" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="94" cy="56" r="26" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="146" cy="56" r="26" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="68" y1="96" x2="172" y2="96" stroke="currentColor" stroke-width="1" fill="none"/><line x1="68" y1="90" x2="68" y2="102" stroke="currentColor" stroke-width="1" fill="none"/><line x1="172" y1="90" x2="172" y2="102" stroke="currentColor" stroke-width="1" fill="none"/><text x="120" y="114.5" font-size="13" text-anchor="middle">□ cm</text></svg>'
+        answer: 12
+        check: "3 * 2 * 2"
+        hints:
+          - 円 1 つの直径は何 cm かな。
+          - 箱の横の長さは、直径いくつ分かな。
+          - 直径を 2 つたそう。
+        paths:
+          - [直径は 3 × 2 = 6, 6 + 6 = 12, 12 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 円の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="44.5" font-size="13" text-anchor="middle">3 cm</text></svg>'
+        explain: 円の面積 = 半径 × 半径 × 円周率 で求められます（わけは 4 日目）。半径 3 cm の円の面積は 3 × 3 × 円周率 = （9 × 円周率）cm² です。円周率を 3.14 とすると、約 28.26 cm² になります。
+      - part: 思い出す
+        text: 半径が 7 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 14
+        check: "7 * 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - まず、直径を求めよう。
+          - 直径は、半径の 2 つ分だよ。
+        paths:
+          - [直径は 7 × 2 = 14, 円周 = 14 × 円周率, □ は 14]
+      - part: 思い出す
+        text: 1 辺が 6 cm の正方形の面積は何 cm² ですか。
+        answer: 36
+        check: "6 * 6"
+        hints:
+          - 正方形の面積は、1 辺 × 1 辺 だね。
+          - 6 × 6 を計算しよう。
+          - 単位は cm² だよ。
+        paths:
+          - [6 × 6 = 36, 36 cm²]
+      - part: 今日
+        text: 半径が 6 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><text x="137.4" y="44.5" font-size="13" text-anchor="middle">6 cm</text></svg>'
+        answer: 36
+        check: "6 * 6"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 半径 × 半径 を先に計算しよう。
+          - 6 × 6 はいくつかな。
+        paths:
+          - [6 × 6 × 円周率, 36 × 円周率, □ は 36]
+        note: 円周（12 × 円周率）と取りちがえやすい。面積は半径 × 半径。
+      - part: 今日
+        text: 直径が 10 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="64" y1="70" x2="176" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><text x="120" y="64.5" font-size="13" text-anchor="middle">10 cm</text></svg>'
+        answer: 25
+        check: "(10 // 2) * (10 // 2)"
+        hints:
+          - 面積の式には、直径ではなく半径を使うよ。
+          - 半径は何 cm かな。
+          - 半径 × 半径 を計算しよう。
+        paths:
+          - [半径は 10 ÷ 2 = 5, 5 × 5 = 25, □ は 25]
+        note: 直径のまま 10 × 10 = 100 としやすい。
+      - part: 今日
+        text: 半径 5 cm の円から、同じ中心で半径 3 cm の円を切りとりました。のこりの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M64 70 A56 56 0 1 0 176 70 A56 56 0 1 0 64 70 Z M86.4 70 A33.6 33.6 0 1 0 153.6 70 A33.6 33.6 0 1 0 86.4 70 Z" fill-rule="evenodd" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="165.9" y2="37.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="179" y="32.9" font-size="12" text-anchor="middle">5 cm</text><line x1="120" y1="70" x2="88.4" y2="81.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="104.9" y="65.2" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        answer: 16
+        check: "5 * 5 - 3 * 3"
+        hints:
+          - 大きい円の面積から、小さい円の面積をひこう。
+          - どちらも「□ × 円周率」の形にしよう。
+          - □ どうしをひけばよいよ。
+        paths:
+          - [大きい円は 25 × 円周率, 小さい円は 9 × 円周率, 25 − 9 = 16, □ は 16]
+        note: 半径をひいて 5 − 3 = 2、2 × 2 = 4 としやすい。面積どうしをひく。
+      - part: 挑戦
+        text: 直径 4 cm の円を、直径で半分に切りました（半円）。半円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 104 L200 104 A80 80 0 0 0 40 104 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="104" r="2.5" fill="currentColor"/><text x="120" y="122.5" font-size="13" text-anchor="middle">4 cm</text></svg>'
+        answer: 2
+        check: "2 * 2 // 2"
+        hints:
+          - もとの円の半径は何 cm かな。
+          - もとの円の面積を「□ × 円周率」で表そう。
+          - 半円は、その半分だね。
+        paths:
+          - [半径 2 cm, 円は 4 × 円周率, 半分で 2 × 円周率, □ は 2]
+    extra:
+      - part: 今日
+        text: 半径が 1 cm の円の面積は、約何 cm² ですか。円周率は 3.14 とします。
+        answer: 3.14
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(1 * 1 * 314)"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 1 × 1 はいくつかな。
+          - その数に 3.14 をかけよう。
+        paths:
+          - [1 × 1 × 3.14 = 3.14, 約 3.14 cm²]
+      - part: 今日
+        text: 半径が 7 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 49
+        check: "7 * 7"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 7 × 7 を計算しよう。
+          - その数が □ だよ。
+        paths:
+          - [7 × 7 = 49, □ は 49]
+      - part: 今日
+        text: 半径が 2 cm の円の面積は、約何 cm² ですか。円周率は 3.14 とします。
+        answer: 12.56
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)"
+        hints:
+          - まず、半径 × 半径 を計算しよう。
+          - 4 × 3.14 は、3.14 を 4 回たした数だね。
+          - 3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。
+        paths:
+          - [2 × 2 = 4, 3.14 を 4 回たす, 6.28 + 6.28 = 12.56, 約 12.56 cm²]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 円を 2 本の半径で切りとった形を、おうぎ形といいます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="97.7" cy="92.3" r="2.5" fill="currentColor"/><path d="M113.7 92.3 A16 16 0 0 0 97.7 76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.9" y="75.3" font-size="12" text-anchor="middle">90°</text><text x="132.7" y="106.5" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        explain: 2 本の半径の間の角を中心角、まるい線の部分を弧（こ）といいます。中心角 90° のおうぎ形は、360 ÷ 90 = 4 で、円を 4 つに等しく分けた 1 つ（4 分の 1）です。半径 4 cm なら、面積は 4 × 4 × 円周率 ÷ 4 = （4 × 円周率）cm²、弧の長さは 8 × 円周率 ÷ 4 = （2 × 円周率）cm です。
+      - part: 思い出す
+        text: 半径が 5 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 25
+        check: "5 * 5"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 5 × 5 を計算しよう。
+          - その数が □ だよ。
+        paths:
+          - [5 × 5 = 25, □ は 25]
+      - part: 思い出す
+        text: 1/3 + 1/6 はいくつですか。分数で答えましょう。
+        answer: 1/2
+        check: "Fraction(1, 3) + Fraction(1, 6)"
+        hints:
+          - 分母をそろえよう（通分）。
+          - 1/3 は、6 分のいくつかな。
+          - たしたあと、約分できるかな。
+        paths:
+          - [1/3 = 2/6, 2/6 + 1/6 = 3/6, 約分して 1/2]
+      - part: 今日
+        text: 半径 6 cm、中心角 40° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M90.4 80.8 L160.4 80.8 A70 70 0 0 0 144 35.8 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="90.4" cy="80.8" r="2.5" fill="currentColor"/><path d="M106.4 80.8 A16 16 0 0 0 102.7 70.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.6" y="74.7" font-size="12" text-anchor="middle">40°</text><text x="125.4" y="95" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 4
+        check: "6 * 6 // (360 // 40)"
+        hints:
+          - 中心角 40° は、円の何分の 1 かな。360 ÷ 40 を考えよう。
+          - 円の面積は「□ × 円周率」でいくつかな。
+          - 円の面積の □ を、等しく分けよう。
+        paths:
+          - [360 ÷ 40 = 9 で円の 9 分の 1, 円は 36 × 円周率, 36 ÷ 9 = 4, □ は 4]
+      - part: 今日
+        text: 半径 6 cm、中心角 60° のおうぎ形の、弧の長さは（□ × 円周率）cm です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M92.7 85.8 L162.7 85.8 A70 70 0 0 0 127.7 25.1 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="92.7" cy="85.8" r="2.5" fill="currentColor"/><path d="M108.7 85.8 A16 16 0 0 0 100.7 71.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.7" y="75" font-size="12" text-anchor="middle">60°</text><text x="127.7" y="100" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 2
+        check: "6 * 2 // (360 // 60)"
+        hints:
+          - 弧は、円周の一部だね。
+          - 円周は（直径 × 円周率）。直径は何 cm かな。
+          - 中心角 60° は円の 6 分の 1 だから、円周の □ を 6 つに分けよう。
+        paths:
+          - [円周は 12 × 円周率, 6 分の 1 で 12 ÷ 6 = 2, □ は 2]
+        note: 面積の式（半径 × 半径）を使ってしまいやすい。弧は長さなので、円周から。
+      - part: 今日
+        text: 円の 3 分の 1 のおうぎ形の、中心角は何度ですか。
+        answer: 120
+        check: "360 // 3"
+        hints:
+          - 円の中心のまわりの角は、ぜんぶで何度かな。
+          - その角を、3 つに等しく分けよう。
+          - 36 ÷ 3 を考えて、10 こ分にしよう。
+        paths:
+          - [中心のまわりは 360°, 360 ÷ 3 = 120, 120°]
+      - part: 挑戦
+        text: 半径 6 cm、中心角 60° のおうぎ形の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M92.7 85.8 L162.7 85.8 A70 70 0 0 0 127.7 25.1 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="92.7" cy="85.8" r="2.5" fill="currentColor"/><path d="M108.7 85.8 A16 16 0 0 0 100.7 71.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.7" y="75" font-size="12" text-anchor="middle">60°</text><text x="127.7" y="100" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 18.28
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 600 + 600)"
+        hints:
+          - おうぎ形のまわりは、弧と、半径 2 本でできているね。
+          - 弧の長さは（2 × 円周率）cm だったね。3.14 を使うと何 cm かな。
+          - 弧の長さに、半径 2 本分をたそう。
+        paths:
+          - [弧は 2 × 3.14 = 6.28, 半径 2 本で 6 + 6 = 12, 6.28 + 12 = 18.28, 約 18.28 cm]
+        note: 半径 2 本をたし忘れて 6.28 と答えやすい。まわりを指でなぞらせる。
+    extra:
+      - part: 今日
+        text: 半径 4 cm、中心角 135° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M107.9 99.1 L177.9 99.1 A70 70 0 0 0 58.4 49.6 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="107.9" cy="99.1" r="2.5" fill="currentColor"/><path d="M123.9 99.1 A16 16 0 0 0 96.6 87.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.4" y="75.6" font-size="12" text-anchor="middle">135°</text><text x="142.9" y="113.3" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 6
+        check: "4 * 4 * 135 // 360"
+        hints:
+          - 中心角 135° は、円の何分の何かな。135/360 を約分しよう。
+          - 円の面積は（16 × 円周率）cm² だね。
+          - 16 を 8 つに分けて、そのいくつ分かを考えよう。
+        paths:
+          - [135/360 = 3/8, 円は 16 × 円周率, 16 ÷ 8 = 2、2 × 3 = 6, □ は 6]
+      - part: 今日
+        text: 半径 3 cm、中心角 40° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M90.4 80.8 L160.4 80.8 A70 70 0 0 0 144 35.8 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="90.4" cy="80.8" r="2.5" fill="currentColor"/><path d="M106.4 80.8 A16 16 0 0 0 102.7 70.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.6" y="74.7" font-size="12" text-anchor="middle">40°</text><text x="125.4" y="95" font-size="12" text-anchor="middle">3 cm</text></svg>'
+        answer: 1
+        check: "3 * 3 // (360 // 40)"
+        hints:
+          - 中心角 40° は、円の何分の 1 かな。
+          - 円の面積は（9 × 円周率）cm² だね。
+          - 9 を、等しく分けよう。
+        paths:
+          - [360 ÷ 40 = 9 で円の 9 分の 1, 9 ÷ 9 = 1, □ は 1]
+      - part: 今日
+        text: 中心角 45° のおうぎ形は、円の何分の 1 ですか。分数で答えましょう。
+        answer: 1/8
+        check: "Fraction(45, 360)"
+        hints:
+          - 円の中心のまわりは 360° だね。
+          - 45/360 を約分しよう。
+          - 45 を何こ集めると 360 になるかな。
+        paths:
+          - [45/360 を約分, 1/8]
+          - [45 + 45 = 90 で直角、直角 4 つで 360, 45 が 8 こで 360, 1/8]
+
+  - day: 4
+    items:
+      - part: わけ
+        text: 円の中に、6 つの辺がどれも半径と同じ長さの六角形が、図のようにぴったり入ります。このことを使って、円周が直径の 3 倍より長いわけを、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="176,70 148,21.5 92,21.5 64,70 92,118.5 148,118.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><line x1="120" y1="70" x2="176" y2="70" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="70" x2="148" y2="21.5" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="70" x2="92" y2="21.5" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="70" x2="64" y2="70" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="70" x2="92" y2="118.5" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><line x1="120" y1="70" x2="148" y2="118.5" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><text x="150.1" y="56.5" font-size="11" text-anchor="middle">半径</text></svg>'
+        explain: 例：「六角形の 1 辺は半径と同じ長さなので、六角形のまわりは半径 6 つ分。半径 2 つ分が直径だから、六角形のまわりは直径の 3 つ分。円周は、六角形の頂点と頂点の間を、まっすぐではなく外にふくらんで通るので、六角形のまわりより長い。だから円周は直径の 3 倍より長く、円周率は 3 より大きい。」と書ければよい。① 六角形のまわり = 直径 × 3、② 2 点の間はまっすぐがいちばん短いので円周のほうが長い、の 2 点を見る。② を「図を見ると長い」で終えていたら、「まっすぐな道とまがった道ではどちらが近い？」と聞く。
+        hints:
+          - 六角形のまわりの長さは、半径いくつ分かな。
+          - 半径 2 つ分は、何という長さだったかな。
+          - 頂点と頂点の間で、円の弧と六角形の辺はどちらが長いかな。
+        paths:
+          - [六角形のまわりは半径 6 つ分, それは直径 3 つ分, 円周は六角形のまわりより長い, だから直径の 3 倍より長い]
+      - part: わけ
+        text: 円のまわりに、ぴったり正方形をかきました。このことを使って、円周が直径の 4 倍より短いわけを、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="64" y="14" width="112" height="112" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><line x1="64" y1="70" x2="176" y2="70" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><text x="120" y="65.8" font-size="11" text-anchor="middle">直径</text></svg>'
+        explain: 例：「正方形の 1 辺は円の直径と同じ長さなので、正方形のまわりは直径の 4 つ分。円は正方形の内がわにあって、かどを近道して通るので、円周は正方形のまわりより短い。だから円周は直径の 4 倍より短く、円周率は 4 より小さい。」と書ければよい。1 問目とあわせて「円周率は 3 と 4 の間」とまとめられればなお良い。家にある缶やコップのまわりを糸で測り、直径の何倍かを確かめる（約 3.1 倍になる）。
+        hints:
+          - 正方形の 1 辺は、円のどの長さと同じかな。
+          - 正方形のまわりは、直径いくつ分かな。
+          - 円は正方形のかどを通るかな、近道するかな。
+        paths:
+          - [正方形の 1 辺は直径, まわりは直径 4 つ分, 円周はかどを近道して短い, だから直径の 4 倍より短い]
+      - part: わけ
+        text: 円の面積が「半径 × 半径 × 円周率」で求められるわけを、図のように円を細かく切ってならべかえた例を使って、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="70" r="34" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="40" y1="70" x2="74" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="71.4" y2="57" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="64" y2="46" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="53" y2="38.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="40" y2="36" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="27" y2="38.6" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="16" y2="46" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="8.6" y2="57" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="6" y2="70" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="8.6" y2="83" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="16" y2="94" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="27" y2="101.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="40" y2="104" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="53" y2="101.4" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="64" y2="94" stroke="currentColor" stroke-width="0.8" fill="none"/><line x1="40" y1="70" x2="71.4" y2="83" stroke="currentColor" stroke-width="0.8" fill="none"/><polygon points="112,92 118.7,58.7 125.4,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="118.7,58.7 125.4,92 132,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="125.4,92 132,58.7 138.7,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="132,58.7 138.7,92 145.4,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="138.7,92 145.4,58.7 152.1,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="145.4,58.7 152.1,92 158.7,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="152.1,92 158.7,58.7 165.4,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="158.7,58.7 165.4,92 172.1,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="165.4,92 172.1,58.7 178.8,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="172.1,58.7 178.8,92 185.4,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="178.8,92 185.4,58.7 192.1,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="185.4,58.7 192.1,92 198.8,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="192.1,92 198.8,58.7 205.5,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="198.8,58.7 205.5,92 212.1,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="205.5,92 212.1,58.7 218.8,92" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><polygon points="212.1,58.7 218.8,92 225.5,58.7" stroke="currentColor" stroke-width="0.8" fill="#f3c969" fill-opacity=".35"/><text x="168.7" y="109.8" font-size="11" text-anchor="middle">円周の半分</text><text x="106" y="79.2" font-size="11" text-anchor="end">半径</text></svg>'
+        explain: 例：「円を中心から細かいおうぎ形に切り、上向きと下向きをたがいちがいにならべると、長方形に近い形になる。細かく切るほど長方形に近づく。この長方形のたては半径、横は円周の半分。円周の半分は 直径 × 円周率 ÷ 2 = 半径 × 円周率。だから面積は 半径 × 半径 × 円周率。」と書ければよい。① ならべかえると長方形に近い、② たてが半径、③ 横が円周の半分（= 半径 × 円周率）、の 3 点を見る。③ が書けないときは、上の弧と下の弧に円周が半分ずつ分かれていることを図で確かめる。
+        hints:
+          - ならべかえた形は、何という形に近いかな。
+          - その形のたては、円のどの長さかな。
+          - 横は、円周のどれだけかな。上と下に、弧が半分ずつならんでいるね。
+        paths:
+          - [ならべかえると長方形に近い, たては半径, 横は円周の半分で半径 × 円周率, たて × 横 = 半径 × 半径 × 円周率]
+      - part: 今日
+        text: 半径 8 cm の円の 4 分の 1 のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="97.7" cy="92.3" r="2.5" fill="currentColor"/><path d="M113.7 92.3 A16 16 0 0 0 97.7 76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.9" y="75.3" font-size="12" text-anchor="middle">90°</text><text x="132.7" y="106.5" font-size="12" text-anchor="middle">8 cm</text></svg>'
+        answer: 16
+        check: "8 * 8 // 4"
+        hints:
+          - 円の面積は「□ × 円周率」でいくつかな。
+          - 8 × 8 を計算しよう。
+          - それを 4 つに分けよう。
+        paths:
+          - [円は 64 × 円周率, 64 ÷ 4 = 16, □ は 16]
+      - part: 今日
+        text: 直径 6 cm の半円の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 104 L200 104 A80 80 0 0 0 40 104 Z" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="104" r="2.5" fill="currentColor"/><text x="120" y="122.5" font-size="13" text-anchor="middle">6 cm</text></svg>'
+        answer: 15.42
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 600)"
+        hints:
+          - 半円のまわりは、弧と直径でできているね。
+          - 弧は、円周の半分。円周は 6 × 3.14 だよ。
+          - 6 × 3.14 の半分は 3 × 3.14。それに直径をたそう。
+        paths:
+          - [弧は 6 × 3.14 ÷ 2 = 3 × 3.14, 3.14 + 3.14 + 3.14 = 9.42, 9.42 + 6 = 15.42, 約 15.42 cm]
+        note: 直径の 6 cm をたし忘れやすい。
+    extra:
+      - part: 今日
+        text: 半径が 9 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 81
+        check: "9 * 9"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 9 × 9 を計算しよう。
+          - その数が □ だよ。
+        paths:
+          - [9 × 9 = 81, □ は 81]
+      - part: 今日
+        text: 半径 2 cm、中心角 90° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="97.7" cy="92.3" r="2.5" fill="currentColor"/><path d="M113.7 92.3 A16 16 0 0 0 97.7 76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.9" y="75.3" font-size="12" text-anchor="middle">90°</text><text x="132.7" y="106.5" font-size="12" text-anchor="middle">2 cm</text></svg>'
+        answer: 1
+        check: "2 * 2 // 4"
+        hints:
+          - 中心角 90° は、円の何分の 1 かな。
+          - 円の面積は（4 × 円周率）cm² だね。
+          - 4 を 4 つに分けよう。
+        paths:
+          - [円の 4 分の 1, 4 ÷ 4 = 1, □ は 1]
+      - part: 今日
+        text: 直径が 3 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。
+        answer: 9.42
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 3 × 3.14 は、3.14 を 3 回たした数だよ。
+          - 小数点の位置をそろえてたそう。
+        paths:
+          - [3.14 + 3.14 + 3.14 = 9.42, 約 9.42 cm]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 底辺 8 cm、高さ 5 cm の三角形の面積は何 cm² ですか。
+        answer: 20
+        check: "8 * 5 // 2"
+        hints:
+          - 三角形の面積は、底辺 × 高さ ÷ 2 だね。
+          - 先に 8 を 2 でわってもよいよ。
+          - 4 × 5 を計算しよう。
+        paths:
+          - [8 ÷ 2 = 4, 4 × 5 = 20, 20 cm²]
+      - part: 思い出す
+        text: 三角形の 2 つの角が 50° と 60° です。のこりの角は何度ですか。
+        answer: 70
+        check: "180 - 50 - 60"
+        hints:
+          - 三角形の 3 つの角の和は何度だったかな。
+          - わかっている 2 つの角をたそう。
+          - 180 から、その和をひこう。
+        paths:
+          - [50 + 60 = 110, 180 − 110 = 70, 70°]
+      - part: 今日
+        text: 1 辺 4 cm の正方形の中に、半径 4 cm の円の 4 分の 1 をかきました。色のついた部分の面積は約何 cm² ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M76 118 L172 118 L172 22 L76 22 Z M76 118 L172 118 A96 96 0 0 0 76 22 Z" fill-rule="evenodd" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="124" y="134.6" font-size="13" text-anchor="middle">4 cm</text></svg>'
+        answer: 3.44
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(1600 - (314 + 314 + 314 + 314))"
+        hints:
+          - 色のついた部分は、正方形から何をとった形かな。
+          - おうぎ形の面積は（4 × 円周率）cm² だね。3.14 を使うと何 cm² かな。
+          - 正方形の面積から、おうぎ形の面積をひこう。
+        paths:
+          - [正方形は 4 × 4 = 16, おうぎ形は 4 × 3.14 = 12.56, 16 − 12.56 = 3.44, 約 3.44 cm²]
+        note: 16 − 12.56 の小数のひき算で、位をそろえずにまちがえやすい。16 を 16.00 と書くとよい。
+      - part: 今日
+        text: 円を 4 つのおうぎ形に分けました。あの中心角は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="56" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="70" x2="120" y2="14" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 58 A12 12 0 0 0 108.2 72.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="98.6" y="56.2" font-size="12" text-anchor="middle">100°</text><line x1="120" y1="70" x2="64.9" y2="79.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M108.2 72.1 A12 12 0 0 0 120 82" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="102" y="95.6" font-size="12" text-anchor="middle">80°</text><line x1="120" y1="70" x2="120" y2="126" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 82 A12 12 0 0 0 130.4 64" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.2" y="88.2" font-size="12" text-anchor="middle">120°</text><line x1="120" y1="70" x2="168.5" y2="42" stroke="currentColor" stroke-width="2" fill="none"/><path d="M130.4 64 A12 12 0 0 0 120 58" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="134" y="50" font-size="12" text-anchor="middle">あ</text><circle cx="120" cy="70" r="2.5" fill="currentColor"/></svg>'
+        answer: 60
+        check: "360 - 100 - 80 - 120"
+        hints:
+          - 中心のまわりの角は、ぜんぶで何度かな。
+          - わかっている 3 つの角をたそう。
+          - 360 から、その和をひこう。
+        paths:
+          - [100 + 80 + 120 = 300, 360 − 300 = 60, 60°]
+      - part: 今日
+        text: 同じ半径の、中心角 90° のおうぎ形と中心角 60° のおうぎ形を合わせると、円の何分の何になりますか。分数で答えましょう。
+        answer: 5/12
+        check: "Fraction(90, 360) + Fraction(60, 360)"
+        hints:
+          - 90° は円の何分の 1、60° は何分の 1 かな。
+          - 1/4 と 1/6 を通分しよう。
+          - 分母を 12 にそろえてたそう。
+        paths:
+          - [90° は 1/4、60° は 1/6, 3/12 + 2/12 = 5/12]
+          - [90 + 60 = 150, 150/360 を約分して 5/12]
+      - part: 挑戦
+        text: 1 辺 2 cm の正方形の中に、向かい合う 2 つのかどを中心にして、半径 2 cm の円の 4 分の 1 を 2 つかきました。色のついた部分の面積は約何 cm² ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><rect x="76" y="22" width="96" height="96" stroke="currentColor" stroke-width="2" fill="none"/><path d="M172 118 A96 96 0 0 0 76 22 A96 96 0 0 0 172 118 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="124" y="134.6" font-size="13" text-anchor="middle">2 cm</text></svg>'
+        answer: 2.28
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')((314 - 200) + (314 - 200))"
+        hints:
+          - 正方形を、かどからかどへの線で 2 つの三角形に分けてみよう。
+          - 色のついた部分の半分は、おうぎ形から三角形をとった形だね。
+          - おうぎ形は（1 × 円周率）cm²、三角形は 2 × 2 ÷ 2 = 2 cm² だよ。
+        paths:
+          - [おうぎ形 1 つは 2 × 2 × 3.14 ÷ 4 = 3.14, 三角形は 2, 半分は 3.14 − 2 = 1.14, 2 つで 2.28]
+          - [おうぎ形 2 つで 6.28, 重なった部分を 2 回数えている, 6.28 − 正方形 4 = 2.28]
+        note: 2 本目の道（おうぎ形 2 つの和から正方形をひくと、重なりがのこる）は、C-008 の重なりの考えにつながる。
+    extra:
+      - part: 今日
+        text: 直径 6 cm の半円の面積は、（□ × 円周率）cm² です。□ に入る数を、分数か小数で答えましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 104 L200 104 A80 80 0 0 0 40 104 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="104" r="2.5" fill="currentColor"/><text x="120" y="122.5" font-size="13" text-anchor="middle">6 cm</text></svg>'
+        answer: 9/2
+        accept: [4.5]
+        check: "Fraction(3 * 3, 2)"
+        hints:
+          - もとの円の半径は何 cm かな。
+          - もとの円の面積は（9 × 円周率）cm² だね。
+          - 9 の半分は、分数や小数でどう書けるかな。
+        paths:
+          - [半径 3 cm, 円は 9 × 円周率, 半分で 9/2, □ は 9/2（4.5）]
+      - part: 今日
+        text: 円の中心のまわりを、9 つの等しいおうぎ形に分けました。1 つのおうぎ形の中心角は何度ですか。
+        answer: 40
+        check: "360 // 9"
+        hints:
+          - 中心のまわりの角は 360° だね。
+          - 360 を 9 つに分けよう。
+          - 36 ÷ 9 を考えて、10 こ分にしよう。
+        paths:
+          - [360 ÷ 9 = 40, 40°]
+      - part: 今日
+        text: 直径が 4 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。
+        answer: 12.56
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 4 × 3.14 は、3.14 を 4 回たした数だよ。
+          - 3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。
+        paths:
+          - [6.28 + 6.28 = 12.56, 約 12.56 cm]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 直径が 14 cm の円の、半径は何 cm ですか。
+        answer: 7
+        check: "14 // 2"
+        hints:
+          - 直径は、半径の 2 つ分だね。
+          - 半径は、直径の半分だよ。
+          - 14 を 2 つに分けよう。
+        paths:
+          - [14 ÷ 2 = 7, 7 cm]
+      - part: 今日
+        text: 半径が 8 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。
+        answer: 16
+        check: "8 * 2"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - まず直径を求めよう。
+          - 直径は半径の 2 つ分だよ。
+        paths:
+          - [直径 8 × 2 = 16, □ は 16]
+      - part: 今日
+        text: 直径が 3 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。
+        answer: 9.42
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)"
+        hints:
+          - 円周 = 直径 × 円周率 だね。
+          - 3.14 を 3 回たそう。
+          - 小数点の位置をそろえよう。
+        paths:
+          - [3.14 + 3.14 + 3.14 = 9.42, 約 9.42 cm]
+      - part: 今日
+        text: 半径が 8 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 64
+        check: "8 * 8"
+        hints:
+          - 円の面積 = 半径 × 半径 × 円周率 だね。
+          - 8 × 8 を計算しよう。
+          - その数が □ だよ。
+        paths:
+          - [8 × 8 = 64, □ は 64]
+      - part: 今日
+        text: 直径が 6 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        answer: 9
+        check: "(6 // 2) * (6 // 2)"
+        hints:
+          - 面積の式には半径を使うよ。
+          - 半径は何 cm かな。
+          - 半径 × 半径 を計算しよう。
+        paths:
+          - [半径 3 cm, 3 × 3 = 9, □ は 9]
+      - part: 今日
+        text: 半径 6 cm、中心角 120° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M104.2 97.3 L174.2 97.3 A70 70 0 0 0 69.3 36.7 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="104.2" cy="97.3" r="2.5" fill="currentColor"/><path d="M120.2 97.3 A16 16 0 0 0 96.2 83.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.2" y="75.5" font-size="12" text-anchor="middle">120°</text><text x="139.2" y="111.5" font-size="12" text-anchor="middle">6 cm</text></svg>'
+        answer: 12
+        check: "6 * 6 // (360 // 120)"
+        hints:
+          - 中心角 120° は、円の何分の 1 かな。
+          - 円の面積は（36 × 円周率）cm² だね。
+          - 36 を 3 つに分けよう。
+        paths:
+          - [円の 3 分の 1, 36 ÷ 3 = 12, □ は 12]
+      - part: 今日
+        text: 円の 6 分の 1 のおうぎ形の、中心角は何度ですか。
+        answer: 60
+        check: "360 // 6"
+        hints:
+          - 中心のまわりの角は 360° だね。
+          - 360 を 6 つに分けよう。
+          - 36 ÷ 6 を考えて、10 こ分にしよう。
+        paths:
+          - [360 ÷ 6 = 60, 60°]
+      - part: 挑戦
+        text: 半径 4 cm、中心角 90° のおうぎ形の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="97.7" cy="92.3" r="2.5" fill="currentColor"/><path d="M113.7 92.3 A16 16 0 0 0 97.7 76.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="118.9" y="75.3" font-size="12" text-anchor="middle">90°</text><text x="132.7" y="106.5" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 14.28
+        check: "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 400 + 400)"
+        hints:
+          - まわりは、弧と半径 2 本でできているね。
+          - 弧は、円周 8 × 3.14 の 4 分の 1 で、2 × 3.14 だよ。
+          - 弧の長さに、半径 2 本分をたそう。
+        paths:
+          - [弧は 2 × 3.14 = 6.28, 半径 2 本で 8, 6.28 + 8 = 14.28, 約 14.28 cm]
+    extra:
+      - part: 今日
+        text: 半径 6 cm の円から、同じ中心で半径 4 cm の円を切りとりました。のこりの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M64 70 A56 56 0 1 0 176 70 A56 56 0 1 0 64 70 Z M82.7 70 A37.3 37.3 0 1 0 157.3 70 A37.3 37.3 0 1 0 82.7 70 Z" fill-rule="evenodd" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3" fill="currentColor"/><line x1="120" y1="70" x2="165.9" y2="37.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="179" y="32.9" font-size="12" text-anchor="middle">6 cm</text><line x1="120" y1="70" x2="84.9" y2="82.8" stroke="currentColor" stroke-width="2" fill="none"/><text x="103.2" y="65.2" font-size="12" text-anchor="middle">4 cm</text></svg>'
+        answer: 20
+        check: "6 * 6 - 4 * 4"
+        hints:
+          - 大きい円の面積から、小さい円の面積をひこう。
+          - どちらも「□ × 円周率」の形にしよう。
+          - □ どうしをひこう。
+        paths:
+          - [36 − 16 = 20, □ は 20]
+      - part: 今日
+        text: 円の 4 分の 1 のおうぎ形の、中心角は何度ですか。
+        answer: 90
+        check: "360 // 4"
+        hints:
+          - 中心のまわりの角は 360° だね。
+          - 360 を 4 つに分けよう。
+          - 直角いくつ分かを考えてもよいよ。
+        paths:
+          - [360 ÷ 4 = 90, 90°]
+      - part: 今日
+        text: 直径 12 cm の半円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M120 104 L200 104 A80 80 0 0 0 40 104 Z" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="104" r="2.5" fill="currentColor"/><text x="120" y="122.5" font-size="13" text-anchor="middle">12 cm</text></svg>'
+        answer: 18
+        check: "6 * 6 // 2"
+        hints:
+          - もとの円の半径は何 cm かな。
+          - もとの円の面積を「□ × 円周率」で表そう。
+          - 半円はその半分だね。
+        paths:
+          - [半径 6 cm, 36 × 円周率, 半分で 18, □ は 18]

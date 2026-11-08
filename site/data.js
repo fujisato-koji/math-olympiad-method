@@ -1120,6 +1120,7 @@ window.ROADMAP = {
     "G-043",
     "G-044",
     "G-045",
+    "G-046",
     "G-050",
     "L-001",
     "L-002",
@@ -2205,6 +2206,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "L-001",
@@ -2832,7 +2834,6 @@ window.ROADMAP = {
     "E-174",
     "F-034",
     "G-041",
-    "G-046",
     "H-001",
     "H-002",
     "H-003",
@@ -3114,6 +3115,7 @@ window.ROADMAP = {
     "G-026",
     "G-027",
     "G-041",
+    "G-046",
     "G-047",
     "G-050",
     "K-001",
@@ -3504,6 +3506,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "L-001",
@@ -8358,6 +8361,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-050",
     "K-160",
     "L-001",
@@ -8749,6 +8753,7 @@ window.ROADMAP = {
     "G-035",
     "G-036",
     "G-041",
+    "G-046",
     "G-047",
     "G-049",
     "G-050",
@@ -10070,7 +10075,6 @@ window.ROADMAP = {
     "D-032",
     "D-044",
     "E-174",
-    "G-046",
     "H-001",
     "H-002",
     "H-003",
@@ -10322,6 +10326,7 @@ window.ROADMAP = {
     "G-026",
     "G-027",
     "G-041",
+    "G-046",
     "G-047",
     "G-049",
     "G-050",
@@ -11553,7 +11558,6 @@ window.ROADMAP = {
     "D-044",
     "D-071",
     "E-174",
-    "G-046",
     "H-001",
     "H-002",
     "H-003",
@@ -11777,6 +11781,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-050",
     "L-001",
     "L-002",
@@ -13098,7 +13103,6 @@ window.ROADMAP = {
     "G-014",
     "G-021",
     "G-041",
-    "G-046",
     "G-047",
     "G-049",
     "H-001",
@@ -14500,6 +14504,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-049",
     "G-050",
@@ -15053,6 +15058,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-160",
@@ -15402,6 +15408,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "L-001",
@@ -20358,6 +20365,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-050",
     "L-001",
     "L-002",
@@ -29432,6 +29440,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-001",
@@ -29923,6 +29932,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-009",
@@ -31620,6 +31630,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-048",
     "G-050",
@@ -33800,6 +33811,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-009",
@@ -34345,6 +34357,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-010",
@@ -34740,6 +34753,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-009",
@@ -35020,6 +35034,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-010",
@@ -36663,6 +36678,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-012",
@@ -37729,6 +37745,7 @@ window.ROADMAP = {
     "G-006",
     "G-007",
     "G-008",
+    "G-046",
     "G-051",
     "L-001",
     "L-002",
@@ -38454,6 +38471,7 @@ window.ROADMAP = {
     "G-020",
     "G-021",
     "G-023",
+    "G-046",
     "G-050",
     "G-051",
     "L-001",
@@ -38855,6 +38873,7 @@ window.ROADMAP = {
     "G-031",
     "G-032",
     "G-035",
+    "G-046",
     "G-050",
     "G-051",
     "L-001",
@@ -39403,6 +39422,7 @@ window.ROADMAP = {
     "G-031",
     "G-032",
     "G-033",
+    "G-046",
     "G-050",
     "L-001",
     "L-002",
@@ -39860,6 +39880,7 @@ window.ROADMAP = {
     "G-042",
     "G-043",
     "G-044",
+    "G-046",
     "G-050",
     "L-001",
     "L-002",
@@ -40417,6 +40438,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-009",
@@ -41337,6 +41359,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-010",
@@ -49307,6 +49330,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-015",
+    "G-046",
     "G-050",
     "K-012",
     "K-014",
@@ -51069,6 +51093,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-050",
     "K-012",
     "K-013",
@@ -52212,6 +52237,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-010",
@@ -53904,6 +53930,7 @@ window.ROADMAP = {
     "G-009",
     "G-010",
     "G-015",
+    "G-046",
     "G-050",
     "K-012",
     "K-013",
@@ -64193,6 +64220,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-009",
@@ -64878,6 +64906,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-010",
@@ -75230,6 +75259,7 @@ window.ROADMAP = {
     "G-025",
     "G-026",
     "G-027",
+    "G-046",
     "G-047",
     "G-050",
     "K-012",
@@ -77652,10 +77682,10 @@ window.ROADMAP = {
    "C-036",
    "K-119",
    "B-144",
-   "B-034",
    "P-188",
-   "W-029",
    "B-075",
+   "B-034",
+   "W-029",
    "B-036",
    "B-136",
    "B-066",
@@ -77666,14 +77696,14 @@ window.ROADMAP = {
    "B-042",
    "V-008",
    "B-092",
-   "E-174",
    "E-169",
+   "E-174",
    "E-220",
    "E-231",
    "B-020",
    "B-006",
-   "B-073",
    "B-052",
+   "B-073",
    "E-191",
    "K-166",
    "V-005",
@@ -77690,9 +77720,9 @@ window.ROADMAP = {
    "N-067",
    "I-037",
    "K-076",
-   "F-021",
    "H-045",
    "E-137",
+   "F-021",
    "V-006",
    "I-024",
    "E-044",
@@ -77705,18 +77735,17 @@ window.ROADMAP = {
    "H-049",
    "B-156",
    "B-011",
+   "E-210",
    "E-223",
    "W-110",
    "W-070",
    "V-031",
    "B-021",
-   "E-210",
    "E-225",
    "H-042",
    "P-175",
    "Q-016",
    "P-230",
-   "W-073",
    "E-003",
    "P-232",
    "B-171",
@@ -77724,13 +77753,14 @@ window.ROADMAP = {
    "P-153",
    "D-082",
    "E-182",
-   "P-186",
    "P-008",
+   "P-186",
    "K-153",
    "P-061",
    "S-033",
    "E-229",
    "K-117",
+   "K-124",
    "H-037",
    "P-014",
    "K-060",
@@ -77783,21 +77813,21 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "keisan",
+    "b": "programming",
+    "o": 1,
+    "e": 3.3,
+    "ex": [
+     "K-125"
+    ]
+   },
+   {
     "a": "senkei-keisan",
     "b": "tokei",
     "o": 1,
     "e": 3.3,
     "ex": [
      "E-222"
-    ]
-   },
-   {
-    "a": "keisan",
-    "b": "programming",
-    "o": 1,
-    "e": 3.2,
-    "ex": [
-     "K-125"
     ]
    },
    {
@@ -77829,6 +77859,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "keisan",
+    "b": "rikigaku",
+    "o": 1,
+    "e": 2.9,
+    "ex": [
+     "E-174"
+    ]
+   },
+   {
     "a": "rikigaku",
     "b": "shiki",
     "o": 1,
@@ -77844,15 +77883,6 @@ window.ROADMAP = {
     "e": 2.9,
     "ex": [
      "D-034"
-    ]
-   },
-   {
-    "a": "keisan",
-    "b": "rikigaku",
-    "o": 1,
-    "e": 2.8,
-    "ex": [
-     "E-174"
     ]
    },
    {
@@ -77929,6 +77959,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "kazu",
+    "b": "programming",
+    "o": 1,
+    "e": 2.3,
+    "ex": [
+     "K-124"
+    ]
+   },
+   {
     "a": "gunkantai",
     "b": "programming",
     "o": 1,
@@ -77991,6 +78030,15 @@ window.ROADMAP = {
     "ex": [
      "W-101"
     ]
+   },
+   {
+    "a": "kazu",
+    "b": "rikigaku",
+    "o": 1,
+    "e": 2.0,
+    "ex": [
+     "P-188"
+    ]
    }
   ],
   "probPairs": [
@@ -78012,7 +78060,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1984-5"
     ],
-    "d": 0.95
+    "d": 0.96
    },
    {
     "a": "hakaru",
@@ -78022,7 +78070,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1997-1"
     ],
-    "d": 0.9
+    "d": 0.75
    },
    {
     "a": "seisu",
@@ -78074,7 +78122,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2018-4"
     ],
-    "d": 0.98
+    "d": 0.87
    },
    {
     "a": "haichi",
@@ -78099,7 +78147,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2012-1"
     ],
-    "d": 0.47
+    "d": 0.43
    },
    {
     "a": "hakaru",
@@ -78111,7 +78159,7 @@ window.ROADMAP = {
      "CL-KHWARIZMI-1",
      "CL-SANGAKU-3CIRCLES"
     ],
-    "d": 0.61
+    "d": 0.59
    },
    {
     "a": "hakaru",
@@ -78121,7 +78169,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.65
+    "d": 0.63
    },
    {
     "a": "kansu",
@@ -78168,7 +78216,7 @@ window.ROADMAP = {
      "IMO-1976-1",
      "IMO-1981-1"
     ],
-    "d": 0.8
+    "d": 0.81
    },
    {
     "a": "ronpo",
@@ -78308,7 +78356,7 @@ window.ROADMAP = {
      "USAMO-2002-5",
      "USAMO-2026-2"
     ],
-    "d": 0.59
+    "d": 0.64
    },
    {
     "a": "graph",
@@ -78884,18 +78932,6 @@ window.ROADMAP = {
     "d": 0.7
    },
    {
-    "a": "kazu",
-    "b": "ronpo",
-    "via": [
-     "suiri",
-     "seisu",
-     "keisan",
-     "kazoekata"
-    ],
-    "s": 2.88,
-    "d": 0.7
-   },
-   {
     "a": "kakuritsu-daigaku",
     "b": "rikigaku",
     "via": [
@@ -79052,6 +79088,18 @@ window.ROADMAP = {
     "d": 0.91
    },
    {
+    "a": "kazu",
+    "b": "ronpo",
+    "via": [
+     "suiri",
+     "seisu",
+     "keisan",
+     "kazoekata"
+    ],
+    "s": 2.88,
+    "d": 0.66
+   },
+   {
     "a": "bisekibun-nyumon",
     "b": "doboku",
     "via": [
@@ -79081,7 +79129,7 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "seisu",
     "e": 53.7,
-    "d": 0.96
+    "d": 0.97
    },
    {
     "a": "haichi",
@@ -79093,7 +79141,7 @@ window.ROADMAP = {
     "a": "seisu",
     "b": "shomei-zukei",
     "e": 39.9,
-    "d": 0.96
+    "d": 0.97
    },
    {
     "a": "hakaru",
@@ -79105,19 +79153,19 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "seisu",
     "e": 39.7,
-    "d": 0.74
-   },
-   {
-    "a": "kazoekata",
-    "b": "zahyo",
-    "e": 15.9,
-    "d": 0.9
+    "d": 0.64
    },
    {
     "a": "graph",
     "b": "shomei-zukei",
     "e": 14.6,
     "d": 0.98
+   },
+   {
+    "a": "kazoekata",
+    "b": "zahyo",
+    "e": 15.9,
+    "d": 0.89
    },
    {
     "a": "katachi",
@@ -79147,13 +79195,13 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "keisan",
     "e": 3.5,
-    "d": 0.76
+    "d": 0.75
    },
    {
     "a": "haichi",
     "b": "kazu",
     "e": 2.6,
-    "d": 0.94
+    "d": 0.9
    },
    {
     "a": "haichi",
@@ -79165,19 +79213,19 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.85
+    "d": 0.82
    },
    {
     "a": "keisan",
     "b": "shomei-zukei",
     "e": 2.6,
-    "d": 0.76
+    "d": 0.75
    },
    {
     "a": "kakuritsu",
     "b": "seisu",
     "e": 2.2,
-    "d": 0.87
+    "d": 0.88
    },
    {
     "a": "seisuron",
@@ -79189,7 +79237,7 @@ window.ROADMAP = {
     "a": "futoshiki",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.53
+    "d": 0.57
    }
   ],
   "problems": 1322
@@ -83797,7 +83845,7 @@ window.ROADMAP = {
     -0.13
    ],
    "comb": {
-    "b": 0.308,
+    "b": 0.324,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -89367,7 +89415,7 @@ window.ROADMAP = {
     2.22
    ],
    "comb": {
-    "b": 0.439,
+    "b": 0.412,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -101893,7 +101941,7 @@ window.ROADMAP = {
     -0.98
    ],
    "comb": {
-    "b": 0.332,
+    "b": 0.276,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -104182,7 +104230,7 @@ window.ROADMAP = {
     -3.0
    ],
    "comb": {
-    "b": 0.152,
+    "b": 0.18,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -105190,7 +105238,7 @@ window.ROADMAP = {
     -0.7
    ],
    "comb": {
-    "b": 0.289,
+    "b": 0.292,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -107093,7 +107141,7 @@ window.ROADMAP = {
     -2.77
    ],
    "comb": {
-    "b": 0.35,
+    "b": 0.27,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -108104,7 +108152,7 @@ window.ROADMAP = {
     7.0
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.257,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -109215,39 +109263,1345 @@ window.ROADMAP = {
    "level": 2,
    "region": "katachi",
    "needs": [
-    "G-003"
+    "G-003",
+    "N-005"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "さいころの かたちを「りっぽうたい」と いいます。めん、へん、ちょうてんを しろう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60,45 135,45 135,120 60,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"45\" x2=\"94\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135\" y1=\"45\" x2=\"169\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135\" y1=\"120\" x2=\"169\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"19\" x2=\"169\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"169\" y1=\"19\" x2=\"169\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"94\" y1=\"94\" x2=\"94\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"94\" y1=\"94\" x2=\"169\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"120\" x2=\"94\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"116\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">めん</text><line x1=\"169\" y1=\"56.5\" x2=\"185\" y2=\"56.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"203\" y=\"61\" font-size=\"13\" text-anchor=\"middle\">へん</text><circle cx=\"60\" cy=\"45\" r=\"3.5\" fill=\"currentColor\"/><line x1=\"60\" y1=\"45\" x2=\"40\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"38\" y=\"22.6\" font-size=\"13\" text-anchor=\"middle\">ちょうてん</text></svg>",
+       "explain": "たいらな ところを めん、めんと めんの さかいの まっすぐな せんを へん、かどの とがった ところを ちょうてん と いいます。りっぽうたいの めんは 6 つで、どれも おなじ おおきさの ましかく（4 つの へんが みんな おなじ ながさの しかく）です。てんせんは、うしろに かくれて みえない へん です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "たてても、よこに ねかせても、ころがらないのは どれですか。",
+       "choices": [
+        "⚽",
+        "🥫",
+        "🎲"
+       ],
+       "answer": "🎲",
+       "hints": [
+        "ころがるのは、まるい ところが ある かたち だよ。",
+        "🥫 は よこに ねかせると どうなるかな。",
+        "たいらな ところ だけで できて いるのは どれかな。"
+       ],
+       "paths": [
+        [
+         "⚽ は どの むきにも ころがる",
+         "🥫 は ねかせると ころがる",
+         "🎲 は たいらな ところ だけ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "よこから みた つみきです。⬜ は なにも ない ところ です。つみきは いくつ ありますか。",
+       "figure": "⬜⬜🟫\n⬜🟫🟫\n🟫🟫🟫",
+       "answer": 6,
+       "check": "n('🟫')",
+       "hints": [
+        "いちばん したの だんから かぞえよう。",
+        "したの だんを かぞえたら、つぎの だんに つづけよう。",
+        "⬜ は かぞえないよ。"
+       ],
+       "paths": [
+        [
+         "したの だん 3 こ",
+         "まんなかの だん つづけて 4、5",
+         "いちばん うえ 6",
+         "6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "りっぽうたいの ちょうてんは いくつ ありますか。うしろに かくれた ちょうてんも かぞえよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 8,
+       "check": "sum(1 for v in itertools.product((0, 1), repeat=3))",
+       "hints": [
+        "まえの ましかくの かどを かぞえよう。",
+        "うしろの ましかくの かども あるね。てんせんが あつまる ところも わすれずに。",
+        "まえを かぞえたら、うしろに つづけて かぞえよう。"
+       ],
+       "paths": [
+        [
+         "まえの ましかくの かど 4 つ",
+         "うしろの ましかくの かどを つづけて 5、6、7、8",
+         "8 こ"
+        ]
+       ],
+       "note": "うしろに隠れた頂点（てんせんが集まる所）を数え忘れて 7 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "りっぽうたいの へんは なんぼん ありますか。てんせんの へんも かぞえよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 12,
+       "check": "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)",
+       "hints": [
+        "うえの めんの まわりの へんから かぞえよう。",
+        "つぎに、したの めんの まわりの へんを つづけて かぞえよう。",
+        "さいごに、うえと したを つなぐ たての へんを つづけて かぞえよう。"
+       ],
+       "paths": [
+        [
+         "うえの めんの まわり 4 ほん",
+         "したの めんの まわりを つづけて 8 ほんまで",
+         "たての へんを つづけて 12 ほんまで",
+         "12 ほん"
+        ]
+       ],
+       "note": "同じ辺を 2 回数えたり、てんせんの辺を落としたりしやすい。上・下・たての 3 組に分けて数えるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "くろい てんの ちょうてんには、めんが いくつ あつまって いますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"145\" cy=\"45\" r=\"3.5\" fill=\"currentColor\"/></svg>",
+       "answer": 3,
+       "check": "sum(1 for i in range(3) for s in (0, 1) if (1, 1, 0)[i] == s)",
+       "hints": [
+        "くろい てんに さわって いる めんを さがそう。",
+        "まえの めんは さわって いるかな。",
+        "うえの めんと、みぎの めんは どうかな。"
+       ],
+       "paths": [
+        [
+         "まえの めん",
+         "うえの めん",
+         "みぎの めん",
+         "3 つ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "りっぽうたいの つみきを 2 こ、めんを ぴったり あわせて くっつけました。そとがわに でて いる めんは、ゆかに ついた めんも いれて いくつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,50 160,50 160,110 40,110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"50\" x2=\"68\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160\" y1=\"50\" x2=\"188\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160\" y1=\"110\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"28\" x2=\"188\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"188\" y1=\"28\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"50\" x2=\"100\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"50\" x2=\"128\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"128\" y1=\"28\" x2=\"128\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"68\" y1=\"88\" x2=\"68\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"68\" y1=\"88\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"40\" y1=\"110\" x2=\"68\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 10,
+       "check": "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2",
+       "hints": [
+        "1 この りっぽうたいの めんは いくつ だったかな。",
+        "くっついて かくれた めんは、どこに あるかな。",
+        "うえ、した、まえ、うしろ、ひだり、みぎ と むきごとに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "うえ 2 つ、した 2 つ",
+         "まえ 2 つ、うしろ 2 つ",
+         "ひだり 1 つ、みぎ 1 つ",
+         "ぜんぶ かぞえて 10"
+        ],
+        [
+         "2 こ ぶんの めんは 6 つと 6 つ",
+         "くっついた 2 つが かくれる",
+         "のこりを かぞえて 10"
+        ]
+       ],
+       "note": "くっついて見えなくなった 2 つの面まで数えて 12 と答えやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "りっぽうたいの 1 つの めんには、へんが なんぼん ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 4,
+       "check": "sum(1 for a in itertools.product((0, 1), repeat=2) for b in itertools.product((0, 1), repeat=2) if a < b and abs(a[0] - b[0]) + abs(a[1] - b[1]) == 1)",
+       "hints": [
+        "いろの ついた めんを みよう。",
+        "その めんの まわりを ゆびで なぞろう。",
+        "かどから かどまでが 1 ぽんの へん だよ。"
+       ],
+       "paths": [
+        [
+         "うえ、みぎ、した、ひだり",
+         "4 ほん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "いろの ついた めんと となりあう（へんで くっついて いる）めんは いくつ ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 4,
+       "check": "sum(1 for i in range(3) for s in (0, 1) if i != 2)",
+       "hints": [
+        "いろの ついた めんの へんを、1 ぽんずつ ゆびで なぞろう。",
+        "1 ぽんの へんの むこうに、めんが 1 つ あるよ。",
+        "うしろの めんは、くっついて いるかな。"
+       ],
+       "paths": [
+        [
+         "うえ、した、ひだり、みぎの めんが くっつく",
+         "うしろの めんは はなれて いる",
+         "4 つ"
+        ]
+       ],
+       "note": "6 − 1 の 5 と答えやすい。うしろの面は辺でくっついていない。"
+      },
+      {
+       "part": "挑戦",
+       "text": "りっぽうたいの 1 ぽんの へんには、めんが いくつ くっついて いますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 2,
+       "check": "sum(1 for i in range(3) for s in (0, 1) if i != 0 and (0, 0, 0)[i] == s)",
+       "hints": [
+        "まえの めんの うえの へんを みよう。",
+        "その へんを はさんで いる めんを さがそう。",
+        "まえの めんと、もう 1 つは どれかな。"
+       ],
+       "paths": [
+        [
+         "まえの めん",
+         "うえの めん",
+         "2 つ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "りっぽうたいを へんに そって きりひらいて、たいらに した ずを「てんかいず」と いいます。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟦⬜\n🟦🟦🟦\n⬜🟦⬜\n⬜🟦⬜",
+       "explain": "🟦 の ましかくが 6 まい、へんで つながって います。まんなかの まわりの 4 まいを おって たてて、いちばん したの 1 まいで ふたを すると、りっぽうたいに もどります。6 まいが みんな ちがう めんに なれば、てんかいず です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "りっぽうたいの めんは いくつ ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 6,
+       "check": "sum(1 for i in range(3) for s in (0, 1))",
+       "hints": [
+        "まえ、うしろ、うえ、した、ひだり、みぎ を じゅんに さがそう。",
+        "うしろと したと ひだりは、かくれて いるよ。",
+        "じゅんに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "みえる めん 3 つ",
+         "かくれた めんを つづけて 4、5、6",
+         "6 つ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "くろい てんの ちょうてんに あつまって いる へんは、なんぼん ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"70\" cy=\"45\" r=\"3.5\" fill=\"currentColor\"/></svg>",
+       "answer": 3,
+       "check": "sum(1 for b in itertools.product((0, 1), repeat=3) if sum(b) == 1)",
+       "hints": [
+        "くろい てんから でて いる せんを さがそう。",
+        "よこ、した、おくへ のびる せんが あるね。",
+        "じゅんに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "よこへ 1 ぽん",
+         "したへ 1 ぽん",
+         "おくへ 1 ぽん",
+         "3 ぼん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦⬜⬜⬜\n🟦🟦🟦🟦\n⬜⬜🟦⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "よこに ならんだ 4 まいを、ぐるっと まるめて みよう。",
+        "うえと したに 1 まいずつ ある ましかくは、どこに なるかな。",
+        "ふたと そこに なれば、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいで まわりを かこむ",
+         "うえの 1 まいが ふた",
+         "したの 1 まいが そこ",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦⬜🟦⬜\n🟦🟦🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "よこに ならんだ 4 まいを、ぐるっと まるめて みよう。",
+        "うえに ある 2 まいは、どちらも どこに なるかな。",
+        "そこに なる ましかくは あるかな。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいで まわりを かこむ",
+         "うえの 2 まいは どちらも ふたに なって かさなる",
+         "そこが ない",
+         "ならない"
+        ]
+       ],
+       "note": "ましかくが 6 まいあるので「なる」と答えやすい。6 まいでも重なると立方体にならない。"
+      },
+      {
+       "part": "今日",
+       "text": "🟦 に、あと 1 まい ましかくを つけて てんかいずに します。🔴 🟡 🟢 の どこに つけると よいですか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🔴🟦⬜⬜\n🟦🟦🟦🟦🟡\n⬜🟢⬜⬜⬜",
+       "choices": [
+        "🔴",
+        "🟡",
+        "🟢"
+       ],
+       "answer": "🟢",
+       "check": "[m for m in '🔴🟡🟢' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines()) + (lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == m))(fig.splitlines()))][0]",
+       "hints": [
+        "よこの 4 まいで まわりを かこむと、うえの 🟦 は ふたに なるね。",
+        "まだ ない めんは どこかな。",
+        "🔴 は ふたと かさならないかな。🟡 は 5 まいめで まわりを まわるよ。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいが まわり",
+         "うえの 🟦 が ふた",
+         "のこりは そこ",
+         "そこに なるのは したの 🟢"
+        ]
+       ],
+       "note": "🔴 を選ぶと、ふたが 2 まいになって重なる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "ましかくが 1 れつに 5 まい ならんで いる てんかいずは ありますか。",
+       "figure": "🟦🟦🟦🟦🟦",
+       "choices": [
+        "ある",
+        "ない"
+       ],
+       "answer": "ない",
+       "check": "'ある' if any((lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)(sorted((0, c) for c in range(5)) + [q]) for q in [(r, c) for r in (-1, 1) for c in range(5)] + [(0, -1), (0, 5)]) else 'ない'",
+       "hints": [
+        "5 まいを、はしから じゅんに おって まるめて みよう。",
+        "4 まい おると、ぐるっと 1 しゅう するね。",
+        "5 まいめは どこに くるかな。"
+       ],
+       "paths": [
+        [
+         "4 まいで まわりを 1 しゅう する",
+         "5 まいめは 1 まいめに かさなる",
+         "どこに 6 まいめを つけても だめ",
+         "ない"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦⬜⬜\n⬜🟦🟦⬜\n⬜⬜🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "かいだんの かたち だね。",
+        "まんなかの 2 まいを そこと よこに して、ほかを おって みよう。",
+        "かさなる めんが なければ、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "かいだんを じゅんに おる",
+         "6 まいが みんな ちがう めんに なる",
+         "なる"
+        ]
+       ],
+       "note": "見なれない形なので「ならない」と答えやすい。紙で作って確かめるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦🟦\n🟦🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "4 まいが かたまって いる ところは ないかな。",
+        "その 4 まいの まんなかの てんを みよう。",
+        "りっぽうたいの ちょうてんに あつまる めんは いくつ だったかな。"
+       ],
+       "paths": [
+        [
+         "2 だん 2 れつの 4 まいが ある",
+         "まんなかで おれない",
+         "ならない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦🟦⬜⬜\n⬜⬜🟦🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "うえの 3 まいと、したの 3 まいに わけて みよう。",
+        "まんなかで つながった 2 まいを そこと よこに しよう。",
+        "かさなる めんが なければ、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "3 まいずつ おる",
+         "6 まいが みんな ちがう めんに なる",
+         "なる"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "くみたてた とき、むかいあう めんを しらべよう。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜",
+       "explain": "🟦 を そこに して くみたてると、🟥 🟨 🟩 🟪 が まわりに たち、🟧 が ふたに なります。🟦 と 🟧、🟨 と 🟩、🟥 と 🟪 が むかいあいます。まっすぐ ならんだ ところでは、1 まい とばした となりどうしが むかいあいます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟦⬜⬜\n🟦🟦🟦🟦\n⬜🟦⬜⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "よこに ならんだ 4 まいを まるめて みよう。",
+        "うえと したの 1 まいずつは、どこに なるかな。",
+        "かさなる めんが なければ、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいが まわり",
+         "うえが ふた、したが そこ",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "りっぽうたいの へんは なんぼん ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 12,
+       "check": "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)",
+       "hints": [
+        "うえの めんの まわりから かぞえよう。",
+        "したの めんの まわりを つづけて かぞえよう。",
+        "たての へんも わすれずに。"
+       ],
+       "paths": [
+        [
+         "うえ 4 ほん",
+         "した 4 ほん",
+         "たて 4 ほん",
+         "4 ほんずつ 3 くみで 12 ほん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜",
+       "choices": [
+        "🟦",
+        "🟩",
+        "🟧"
+       ],
+       "answer": "🟧",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこの 4 まいを まわりに すると、🟥 は ふたに なるね。",
+        "ふたと むかいあうのは、どこかな。",
+        "したに ついて いる 1 まいは、どこに なるかな。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいが まわり",
+         "🟥 は ふた",
+         "🟧 は そこ",
+         "ふたと そこが むかいあう"
+        ]
+       ],
+       "note": "🟥 のすぐ下の 🟨 や、近くの 🟦 を選びやすい。となりあう面は、むかいあわない。"
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟨 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟨🟦⬜⬜\n⬜🟥🟩⬜\n⬜⬜🟪🟧",
+       "choices": [
+        "🟩",
+        "🟪",
+        "🟧"
+       ],
+       "answer": "🟩",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟨' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "🟥 を そこに して、くみたてて みよう。",
+        "🟨 と 🟦 は、🟥 の まわりの どこに たつかな。",
+        "🟨、🟦、🟩 を じゅんに たどると、1 まい とばした となりは どれかな。"
+       ],
+       "paths": [
+        [
+         "🟨 🟦 🟩 と じゅんに つながる",
+         "1 まい とばした 🟨 と 🟩 が むかいあう",
+         "🟩"
+        ]
+       ],
+       "note": "かいだんの形でも、ならんだ 3 まいの両はしは むかいあう。"
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟥 と 🟦 は となりあいますか、むかいあいますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟥⬜⬜\n🟨🟩🟪🟧\n⬜⬜🟦⬜",
+       "choices": [
+        "となりあう",
+        "むかいあう"
+       ],
+       "answer": "むかいあう",
+       "check": "(lambda g: (lambda cs: (lambda d: 'むかいあう' if any(g[p[0]][p[1]] == '🟥' and g[q[0]][q[1]] == '🟦' and d[q][0] == d[p][1] for p in d for q in d) else 'となりあう')((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこの 4 まいで まわりを かこもう。",
+        "🟥 は ふたと そこの どちらに なるかな。",
+        "🟦 は どちらに なるかな。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいが まわり",
+         "🟥 は ふた、🟦 は そこ",
+         "むかいあう"
+        ]
+       ],
+       "note": "ずの上で離れて見えるので、どちらとも決めにくい。上と下に出た 2 まいは、ふたと そこになる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "くみたてた とき、★ の へんと くっつく へんは、あ、い、う の どれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"90\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"90\" y=\"25\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"60\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"120\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"150\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"120\" y=\"85\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"90\" y1=\"25\" x2=\"120\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"4.5\" fill=\"none\"/><text x=\"105\" y=\"20.6\" font-size=\"13\" text-anchor=\"middle\">★</text><text x=\"75\" y=\"50.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><text x=\"165\" y=\"50.5\" font-size=\"13\" text-anchor=\"middle\">い</text><text x=\"135\" y=\"128.6\" font-size=\"13\" text-anchor=\"middle\">う</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "う"
+       ],
+       "answer": "い",
+       "check": "(lambda d: [s for s, p, k in (('あ', (1, 0), 2), ('い', (1, 3), 2), ('う', (2, 2), 3)) if {d[p][0], d[p][k]} == {d[(0, 1)][0], d[(0, 1)][2]}][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((1, 1), (0, 1), (1, 0), (1, 2), (1, 3), (2, 2))))",
+       "hints": [
+        "よこの 4 まいで まわりを かこむと、★ の ある ましかくは ふたに なるね。",
+        "ふたの 4 つの へんは、まわりの 4 まいの うえの へんと くっつくよ。",
+        "★ は ふたの いちばん とおい へん。まわりの 4 まいの うち、いちばん とおくの 1 まいを みよう。"
+       ],
+       "paths": [
+        [
+         "★ の ましかくは ふた",
+         "ふたの へんは まわりの 4 まいの うえの へんと くっつく",
+         "★ は つけねの むかいの へん",
+         "ぐるっと まわって くる いちばん みぎの い"
+        ]
+       ],
+       "note": "ずの上で近い「あ」を選びやすい。紙に写して切り、組み立てて確かめるとよい（はさみは おとなと いっしょに）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟪 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜",
+       "choices": [
+        "🟥",
+        "🟦",
+        "🟧"
+       ],
+       "answer": "🟥",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟪' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "たてに ならんだ 4 まいを みよう。",
+        "1 まい とばした となりどうしが むかいあうよ。",
+        "🟪 から 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "たてに 🟥 🟦 🟪 🟧",
+         "🟪 から 1 まい とばした うえは 🟥",
+         "🟥"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟦 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜",
+       "choices": [
+        "🟥",
+        "🟪",
+        "🟧"
+       ],
+       "answer": "🟪",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟦' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこに ならんだ 4 まいを みよう。",
+        "1 まい とばした となりどうしが むかいあうよ。",
+        "🟦 から みぎへ 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "よこに 🟨 🟦 🟩 🟪",
+         "🟦 から 1 まい とばすと 🟪",
+         "🟪"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟥 と 🟨 は となりあいますか、むかいあいますか。⬜ は なにも ない ところ です。",
+       "figure": "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧",
+       "choices": [
+        "となりあう",
+        "むかいあう"
+       ],
+       "answer": "となりあう",
+       "check": "(lambda g: (lambda cs: (lambda d: 'むかいあう' if any(g[p[0]][p[1]] == '🟥' and g[q[0]][q[1]] == '🟨' and d[q][0] == d[p][1] for p in d for q in d) else 'となりあう')((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "むかいあう めんは、くみたてると くっつかないね。",
+        "🟥 と むかいあうのは、🟥 🟦 🟩 と ならんだ 1 まい とばした となり だよ。",
+        "🟨 は その めん かな。"
+       ],
+       "paths": [
+        [
+         "🟥 🟦 🟩 の 1 まい とばしで 🟥 と 🟩 が むかいあう",
+         "🟨 は ちがう",
+         "となりあう"
+        ]
+       ],
+       "note": "ずの上で辺がくっついていない面どうしでも、組み立てると となりあうことがある。"
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "ましかくが 2 だん 2 れつに かたまった ところが ある ずは、てんかいずに なりません。どうしてか、くちで いってみよう。",
+       "figure": "🟦🟦⬜\n🟦🟦🟦\n⬜🟦⬜",
+       "explain": "「4 まいの まんなかの てんに めんが 4 つ あつまる。りっぽうたいの ちょうてんには めんが 3 つしか あつまらない から」と言えればよい。「4 まいで てんの まわりが ぜんぶ うまって いて、たいらな まま おりまげられない から」でもよい。1 日目の「1 つの頂点に面は 3 つ」とつなげられればなお良い。紙で 4 まいの形を作り、折ろうとしても平らなままで立ち上がらないことを一緒に確かめる。",
+       "hints": [
+        "4 まいが かたまった まんなかの てんを みよう。",
+        "りっぽうたいの 1 つの ちょうてんに、めんは いくつ あつまって いたかな。",
+        "「〜だから おれない」と いってみよう。"
+       ],
+       "paths": [
+        [
+         "まんなかの てんに めんが 4 つ",
+         "りっぽうたいの ちょうてんには 3 つ",
+         "だから くみたてられない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "ましかくが 1 れつに 5 まい ならぶと、てんかいずに なりません。どうしてか、くちで いってみよう。",
+       "figure": "🟦🟦🟦🟦🟦\n⬜⬜🟦⬜⬜",
+       "explain": "「4 まいで まわりを ぐるっと 1 しゅう すると もとの めんに もどる から、5 まいめは 1 まいめに かさなる」と言えればよい。「りっぽうたいの まわりを まく めんは 4 まい だから、5 まいめの ばしょが ない」でもよい。細長い紙を 5 つに折って箱のまわりに巻き、5 まいめが重なることを見せるとよい。",
+       "hints": [
+        "はしから じゅんに、めんを おって まるめて みよう。",
+        "4 まい おると、どこに もどって くるかな。",
+        "「〜だから かさなる」と いってみよう。"
+       ],
+       "paths": [
+        [
+         "4 まいで 1 しゅう",
+         "5 まいめは 1 まいめと おなじ ところ",
+         "だから かさなる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "りっぽうたいの へんは 12 ほん です。1 ぽんずつ かぞえなくても わかる わけを、くちで いってみよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "「うえの めんに 4 ほん、したの めんに 4 ほん、うえと したを つなぐ たての へんが 4 ほん。4 ほんの くみが 3 つ だから 12 ほん」と言えればよい。「まえの めんに 4 ほん、うしろの めんに 4 ほん、まえと うしろを つなぐ へんが 4 ほん」でもよい。どの辺も 3 つの組のどれか 1 つにだけ入ることに気づけば、数え落としも 2 回数えもない、という点まで話せるとなお良い。",
+       "hints": [
+        "うえの めんの まわりの へんは なんぼん かな。",
+        "したの めんの まわりは どうかな。",
+        "のこりの へんは、どこと どこを つないで いるかな。"
+       ],
+       "paths": [
+        [
+         "うえ 4 ほん",
+         "した 4 ほん",
+         "たて 4 ほん",
+         "4 ほんずつ 3 くみ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟦⬜⬜\n🟦🟦🟦⬜\n⬜⬜🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "2 だん 2 れつに かたまった 4 まいは あるかな。",
+        "1 れつに 5 まい ならんで いるかな。",
+        "まんなかの だんの 3 まいを まわりに して、おって みよう。"
+       ],
+       "paths": [
+        [
+         "かたまった 4 まいも 5 まいの れつも ない",
+         "おると 6 まいが みんな ちがう めん",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦⬜⬜\n🟦🟦⬜\n🟦🟦⬜\n⬜🟦⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "2 だん 2 れつに かたまった 4 まいは あるかな。",
+        "その 4 まいの まんなかの てんを みよう。",
+        "まんなかの てんに、めんは いくつ あつまって いるかな。"
+       ],
+       "paths": [
+        [
+         "まんなかの 2 だんに かたまった 4 まいが ある",
+         "おれない",
+         "ならない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟩 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟥⬜⬜\n🟨🟦🟩🟪\n⬜⬜⬜🟧",
+       "choices": [
+        "🟨",
+        "🟥",
+        "🟧"
+       ],
+       "answer": "🟨",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟩' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこに ならんだ 4 まいを みよう。",
+        "1 まい とばした となりどうしが むかいあうよ。",
+        "🟩 から ひだりへ 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "よこに 🟨 🟦 🟩 🟪",
+         "🟩 から ひだりへ 1 まい とばすと 🟨",
+         "🟨"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦🟦🟦🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "1 れつに なんまい ならんで いるかな。",
+        "4 まいで まわりを 1 しゅう するね。",
+        "5 まいめと 6 まいめは どこに くるかな。"
+       ],
+       "paths": [
+        [
+         "4 まいで 1 しゅう",
+         "5 まいめから かさなる",
+         "ならない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦⬜⬜⬜\n🟦🟦🟦⬜\n⬜⬜🟦🟦",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "2 だん 2 れつに かたまった 4 まいは あるかな。",
+        "まんなかの だんの 3 まいを まわりに して、おって みよう。",
+        "かさなる めんが なければ、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "かたまった 4 まいは ない",
+         "おると 6 まいが みんな ちがう めん",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟧 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧",
+       "choices": [
+        "🟥",
+        "🟨",
+        "🟩"
+       ],
+       "answer": "🟨",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟧' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "🟧 から つながる ましかくを じゅんに たどろう。",
+        "🟧 🟪 🟩 と ならぶ ところは、まっすぐ では ないね。🟩 を そこに して、おって みよう。",
+        "1 まい とばした となりどうしが むかいあう ところを さがそう。"
+       ],
+       "paths": [
+        [
+         "🟨 🟩 🟪 と ならぶ",
+         "🟨 を そこに すると 🟧 は ふた",
+         "🟨"
+        ]
+       ],
+       "note": "かいだんの形は、目だけで決めにくい。紙で作って確かめるとよい。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "❓ は ぬのが かかって みえない ところ です。つみきは ういて いません。つみきは ぜんぶで いくつ ありますか。",
+       "figure": "⬜🟫⬜\n🟫❓🟫\n❓❓🟫",
+       "answer": 7,
+       "check": "(lambda g: sum(len(g) - min([r for r in range(len(g)) if g[r][c] != '⬜'] + [len(g)]) for c in range(len(g[0]))))(fig.splitlines())",
+       "hints": [
+        "たての ならびごとに かぞえよう。",
+        "つみきは ういて いないから、みえる つみきの したにも つみきが あるよ。",
+        "ひだりの ならびから じゅんに たそう。"
+       ],
+       "paths": [
+        [
+         "ひだりの ならび 2 こ",
+         "まんなかの ならび 3 こ",
+         "みぎの ならび 2 こ",
+         "つづけて かぞえて 7 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "たいらな ところを かみに あてて まわりを なぞると、ましかくが かけるのは どれですか。",
+       "choices": [
+        "🥫",
+        "🎲",
+        "⚽"
+       ],
+       "answer": "🎲",
+       "hints": [
+        "なぞった かたちは、たいらな ところの かたち だよ。",
+        "🥫 の たいらな ところは どんな かたちかな。",
+        "⚽ には たいらな ところが あるかな。"
+       ],
+       "paths": [
+        [
+         "🥫 は まる",
+         "⚽ は たいらな ところが ない",
+         "🎲 は ましかく"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "りっぽうたいの つみきを 2 こ、たてに つみました。ゆかに ついて いる めんを のぞくと、そとがわに でて いる めんは いくつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"85,32 137,32 137,136 85,136\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85\" y1=\"32\" x2=\"111\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"32\" x2=\"163\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"136\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"12\" x2=\"163\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163\" y1=\"12\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85\" y1=\"84\" x2=\"137\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"84\" x2=\"163\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"64\" x2=\"163\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85\" y1=\"84\" x2=\"111\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"111\" y1=\"116\" x2=\"111\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"111\" y1=\"116\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85\" y1=\"136\" x2=\"111\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 9,
+       "check": "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2 - 1",
+       "hints": [
+        "うえから、まえから、ひだりから、みぎから、うしろから みえる めんを かぞえよう。",
+        "あわさった 2 つの めんは、そとに でて いないね。",
+        "ゆかに ついた めんは かぞえないよ。"
+       ],
+       "paths": [
+        [
+         "うえ 1 つ",
+         "まえ 2 つ、うしろ 2 つ",
+         "ひだり 2 つ、みぎ 2 つ",
+         "ぜんぶ かぞえて 9"
+        ]
+       ],
+       "note": "重なった 2 つの面や、ゆかの面まで数えやすい。むきごとに数えるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜⬜🟦\n🟦🟦🟦\n🟦⬜⬜\n🟦⬜⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "よこの 3 まいの まんなかを そこに して、おって みよう。",
+        "ひだりの たての 3 まいは、どこに たつかな。",
+        "いちばん したの 1 まいは、どの めんと かさなるかな。"
+       ],
+       "paths": [
+        [
+         "よこの まんなかが そこ、りょうはしが ひだりと みぎ",
+         "ひだりの たての 2 まいが まえと みぎに まわる",
+         "みぎの めんと かさなる",
+         "ならない"
+        ]
+       ],
+       "note": "2 だん 2 れつの 4 まいも 5 まいの列もないので「なる」と答えやすい。4 日目の決まりに当てはまらなくても、重なることがある。紙で作って確かめるとよい（はさみは おとなと いっしょに）。"
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟦 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥🟦🟨⬜⬜\n⬜⬜🟩🟪🟧",
+       "choices": [
+        "🟩",
+        "🟪",
+        "🟧"
+       ],
+       "answer": "🟪",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟦' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "🟩 を そこに して、おって みよう。",
+        "🟨 と 🟪 は、🟩 の まわりの どこに たつかな。",
+        "🟦 は 🟨 の よこに つながって いるね。どこに たつかな。"
+       ],
+       "paths": [
+        [
+         "🟩 を そこに すると 🟨 は うしろ、🟪 は みぎに たつ",
+         "🟦 は 🟨 の よこから ひだりに たつ",
+         "ひだりと みぎで 🟦 と 🟪 が むかいあう"
+        ]
+       ],
+       "note": "まっすぐ並んでいなくても、むかいあう面はある。紙で作って確かめるとよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "さいころは、1 と 6、2 と 5、3 と 4 が むかいあいます。この てんかいずで、あ に はいる かずは いくつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"60\" y=\"25\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"90\" y=\"25\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"90\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"120\" y=\"55\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"120\" y=\"85\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"150\" y=\"85\" width=\"30\" height=\"30\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"75\" y=\"45.2\" font-size=\"15\" text-anchor=\"middle\">1</text><text x=\"105\" y=\"45.2\" font-size=\"15\" text-anchor=\"middle\">2</text><text x=\"105\" y=\"75.2\" font-size=\"15\" text-anchor=\"middle\">あ</text><text x=\"135\" y=\"75.2\" font-size=\"15\" text-anchor=\"middle\">6</text><text x=\"135\" y=\"105.2\" font-size=\"15\" text-anchor=\"middle\">5</text><text x=\"165\" y=\"105.2\" font-size=\"15\" text-anchor=\"middle\">3</text></svg>",
+       "answer": 4,
+       "check": "(lambda d, m: 7 - [m[q] for p in d for q in d if p == (1, 1) and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(((0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 3))), {(0, 0): 1, (0, 1): 2, (1, 2): 6, (2, 2): 5, (2, 3): 3, (1, 1): 0})",
+       "hints": [
+        "まず、あ と むかいあう めんを さがそう。",
+        "1 まい とばした となりどうしが むかいあう ところを みよう。",
+        "あ と むかいあう めんの かずと、くみに なる かずは なにかな。"
+       ],
+       "paths": [
+        [
+         "あ と むかいあうのは 3 の めん",
+         "3 と くみに なるのは 4",
+         4
+        ],
+        [
+         "1 と 6、2 と 5 は もう ある",
+         "のこりは 3 と 4",
+         "3 が ある から あ は 4"
+        ]
+       ],
+       "note": "2 本目の道（のこった組から決める）でも答えが出る。どの面とむかいあうかを確かめると、さいころの形の練習になる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "❓ は みえない ところ です。つみきは ういて いません。つみきは ぜんぶで いくつ ありますか。",
+       "figure": "🟫⬜⬜\n❓🟫⬜\n❓❓🟫",
+       "answer": 6,
+       "check": "(lambda g: sum(len(g) - min([r for r in range(len(g)) if g[r][c] != '⬜'] + [len(g)]) for c in range(len(g[0]))))(fig.splitlines())",
+       "hints": [
+        "たての ならびごとに かぞえよう。",
+        "みえる つみきの したにも つみきが あるよ。",
+        "ひだりから じゅんに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "ひだりの ならび 3 こ",
+         "まんなか 2 こ",
+         "みぎ 1 こ",
+         "つづけて かぞえて 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "りっぽうたいの つみきを 2 こ、よこに くっつけました。ゆかに ついて いる めんを のぞくと、そとがわに でて いる めんは いくつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,50 160,50 160,110 40,110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"50\" x2=\"68\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160\" y1=\"50\" x2=\"188\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"160\" y1=\"110\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"68\" y1=\"28\" x2=\"188\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"188\" y1=\"28\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"50\" x2=\"100\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"100\" y1=\"50\" x2=\"128\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"128\" y1=\"28\" x2=\"128\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"68\" y1=\"88\" x2=\"68\" y2=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"68\" y1=\"88\" x2=\"188\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"40\" y1=\"110\" x2=\"68\" y2=\"88\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 8,
+       "check": "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2 - 2",
+       "hints": [
+        "ゆかに ついて いる めんは いくつ かな。",
+        "あわさった めんは そとに でて いないね。",
+        "うえ、まえ、うしろ、ひだり、みぎ と じゅんに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "うえ 2 つ",
+         "まえ 2 つ、うしろ 2 つ",
+         "ひだり 1 つ、みぎ 1 つ",
+         "ぜんぶ かぞえて 8"
+        ]
+       ],
+       "note": "よこに並べると、ゆかについた面は 2 つになる。たてに積んだときとくらべるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥🟦🟨⬜⬜\n⬜⬜🟩🟪🟧",
+       "choices": [
+        "🟨",
+        "🟩",
+        "🟧"
+       ],
+       "answer": "🟨",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "🟥 🟦 🟨 は 1 れつに ならんで いるね。",
+        "まっすぐ ならんだ ところでは、1 まい とばした となりどうしが むかいあうよ。",
+        "🟥 から 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "🟥 🟦 🟨 が まっすぐ ならぶ",
+         "1 まい とばした 🟨",
+         "🟨"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "りっぽうたいの ちょうてんは いくつ ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 8,
+       "check": "sum(1 for v in itertools.product((0, 1), repeat=3))",
+       "hints": [
+        "まえの ましかくの かどを かぞえよう。",
+        "うしろの ましかくの かども かぞえよう。",
+        "まえに つづけて うしろを かぞえよう。"
+       ],
+       "paths": [
+        [
+         "まえ 4 つ",
+         "うしろを つづけて 8 まで",
+         "8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "りっぽうたいの へんは なんぼん ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 12,
+       "check": "sum(1 for a in itertools.product((0, 1), repeat=3) for b in itertools.product((0, 1), repeat=3) if a < b and sum(abs(a[i] - b[i]) for i in range(3)) == 1)",
+       "hints": [
+        "うえの めんの へんから かぞえよう。",
+        "したの めんの へんを つづけよう。",
+        "たての へんも わすれずに。"
+       ],
+       "paths": [
+        [
+         "うえ 4 ほん",
+         "した 4 ほん",
+         "たて 4 ほん",
+         "12 ほん"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜⬜🟦⬜\n🟦🟦🟦🟦\n🟦⬜⬜⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "よこに ならんだ 4 まいを まわりに しよう。",
+        "うえと したの 1 まいずつは どこに なるかな。",
+        "かさなる めんが ないか しらべよう。"
+       ],
+       "paths": [
+        [
+         "よこの 4 まいが まわり",
+         "うえが ふた、したが そこ",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟦🟦\n🟦🟦⬜\n🟦🟦⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "ならない",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "2 だん 2 れつに かたまった 4 まいは あるかな。",
+        "その まんなかの てんを みよう。",
+        "りっぽうたいの ちょうてんに あつまる めんは いくつ だったかな。"
+       ],
+       "paths": [
+        [
+         "したの 2 だんに かたまった 4 まい",
+         "おれない",
+         "ならない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🟦 に、あと 1 まい ましかくを つけて てんかいずに します。🔴 🟡 🟢 の どこに つけると よいですか。⬜ は なにも ない ところ です。",
+       "figure": "🔴🟦⬜\n🟦🟦⬜\n⬜🟦🟢\n🟡🟦⬜",
+       "choices": [
+        "🔴",
+        "🟡",
+        "🟢"
+       ],
+       "answer": "🟢",
+       "check": "[m for m in '🔴🟡🟢' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines()) + (lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] == m))(fig.splitlines()))][0]",
+       "hints": [
+        "2 だん 2 れつに かたまる ところに つけると だめ だよ。",
+        "たての 4 まいで まわりを かこむと、ひだりの 🟦 は ふたに なるね。",
+        "まだ ない めんは どこかな。🟡 は ふたと かさならないかな。"
+       ],
+       "paths": [
+        [
+         "🔴 は 4 まいが かたまる",
+         "たての 4 まいが まわりで ひだりの 🟦 が ふた",
+         "🟡 も ふたに なって かさなる",
+         "そこに なるのは 🟢"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟩 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "⬜🟥⬜\n🟨🟦🟩\n⬜🟪⬜\n⬜🟧⬜",
+       "choices": [
+        "🟥",
+        "🟨",
+        "🟧"
+       ],
+       "answer": "🟨",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟩' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこに ならんだ 3 まいを みよう。",
+        "1 まい とばした となりどうしが むかいあうよ。",
+        "🟩 から ひだりへ 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "よこに 🟨 🟦 🟩",
+         "1 まい とばした 🟨",
+         "🟨"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟥 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧",
+       "choices": [
+        "🟨",
+        "🟩",
+        "🟧"
+       ],
+       "answer": "🟩",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟥' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "🟥 から つながる ましかくを じゅんに たどろう。",
+        "🟥 🟦 は よこ、🟦 🟨 は たてに つながるね。",
+        "🟨 を そこに して、おって みよう。🟥 と 🟩 は どこに たつかな。"
+       ],
+       "paths": [
+        [
+         "🟨 を そこに する",
+         "🟥 と 🟩 は はんたいがわに たつ",
+         "🟩"
+        ]
+       ],
+       "note": "目で決めにくいときは、紙で作って確かめてよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "りっぽうたいの つみきを 2 こ、めんを ぴったり あわせて くっつけました。そとがわに でて いる めんは、ゆかに ついた めんも いれて いくつ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"85,32 137,32 137,136 85,136\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85\" y1=\"32\" x2=\"111\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"32\" x2=\"163\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"136\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"12\" x2=\"163\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"163\" y1=\"12\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"85\" y1=\"84\" x2=\"137\" y2=\"84\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137\" y1=\"84\" x2=\"163\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"111\" y1=\"64\" x2=\"163\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85\" y1=\"84\" x2=\"111\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"111\" y1=\"116\" x2=\"111\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"111\" y1=\"116\" x2=\"163\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"85\" y1=\"136\" x2=\"111\" y2=\"116\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 10,
+       "check": "sum(1 for k in range(2) for i in range(3) for s in (0, 1)) - 2",
+       "hints": [
+        "1 この めんは いくつ だったかな。",
+        "あわさって かくれた めんは いくつ かな。",
+        "むきごとに かぞえよう。"
+       ],
+       "paths": [
+        [
+         "うえ 1、した 1",
+         "まえ 2、うしろ 2",
+         "ひだり 2、みぎ 2",
+         "ぜんぶ かぞえて 10"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "りっぽうたいの めんは いくつ ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"70,45 145,45 145,120 70,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"70\" y1=\"45\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"45\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"145\" y1=\"120\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"19\" x2=\"179\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"19\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"104\" y1=\"94\" x2=\"104\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"104\" y1=\"94\" x2=\"179\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"70\" y1=\"120\" x2=\"104\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 6,
+       "check": "sum(1 for i in range(3) for s in (0, 1))",
+       "hints": [
+        "みえる めんを かぞえよう。",
+        "かくれて いる めんも あるよ。",
+        "まえ、うしろ、うえ、した、ひだり、みぎ。"
+       ],
+       "paths": [
+        [
+         "みえる 3 つ",
+         "かくれた 3 つを つづけて",
+         "6 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この ずを おって くみたてると、りっぽうたいに なりますか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦⬜\n⬜🟦⬜\n⬜🟦🟦\n⬜🟦⬜",
+       "choices": [
+        "なる",
+        "ならない"
+       ],
+       "answer": "なる",
+       "check": "'なる' if (lambda cs: len(cs) == 6 and not any((r, c + 1) in cs and (r + 1, c) in cs and (r + 1, c + 1) in cs for r, c in cs) and len(set(o[0] for o in (lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs).values())) == 6)((lambda g: sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] in '🟦'))(fig.splitlines())) else 'ならない'",
+       "hints": [
+        "たてに ならんだ 4 まいを まわりに しよう。",
+        "よこに でた 2 まいは、どこに なるかな。",
+        "ふたと そこに なれば、りっぽうたいに なるよ。"
+       ],
+       "paths": [
+        [
+         "たての 4 まいが まわり",
+         "ひだりと みぎに でた 2 まいが ふたと そこ",
+         "なる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "くみたてた とき、🟨 と むかいあう めんは なにいろ ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟥⬜⬜⬜\n🟨🟦🟩🟪\n⬜⬜🟧⬜",
+       "choices": [
+        "🟦",
+        "🟩",
+        "🟪"
+       ],
+       "answer": "🟩",
+       "check": "(lambda g: (lambda cs: (lambda d: [g[q[0]][q[1]] for p in d for q in d if g[p[0]][p[1]] == '🟨' and d[q][0] == d[p][1]][0])((lambda cs: (lambda R: R(R, cs[0], (0, 1, 2, 3, 4, 5), ()))(lambda R, p, o, pa: {p: o, **{k: v for d, q in ((4, (p[0], p[1] + 1)), (5, (p[0], p[1] - 1)), (2, (p[0] - 1, p[1])), (3, (p[0] + 1, p[1]))) if q in cs and q not in pa for k, v in R(R, q, {4: (o[4], o[5], o[2], o[3], o[1], o[0]), 5: (o[5], o[4], o[2], o[3], o[0], o[1]), 2: (o[2], o[3], o[1], o[0], o[4], o[5]), 3: (o[3], o[2], o[0], o[1], o[4], o[5])}[d], pa + (p,)).items()}}))(cs)))(sorted((r, c) for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "よこに ならんだ 4 まいを みよう。",
+        "1 まい とばした となりどうしが むかいあうよ。",
+        "🟨 から みぎへ 1 まい とばすと、どの いろかな。"
+       ],
+       "paths": [
+        [
+         "よこに 🟨 🟦 🟩 🟪",
+         "1 まい とばした 🟩",
+         "🟩"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     1.52,
     7.5,
     3.58
-   ]
+   ],
+   "comb": {
+    "b": 0.415,
+    "r": 0.0,
+    "rg": [
+     "katachi",
+     "kazu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "L-003",
@@ -112831,7 +114185,7 @@ window.ROADMAP = {
     2.15
    ],
    "comb": {
-    "b": 0.338,
+    "b": 0.28,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -113682,7 +115036,7 @@ window.ROADMAP = {
     -3.7
    ],
    "comb": {
-    "b": 0.339,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -113700,28 +115054,998 @@ window.ROADMAP = {
    "region": "hakaru",
    "needs": [
     "G-005",
-    "N-007"
+    "N-007",
+    "N-009"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "ものさしで テープの ながさを はかろう。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"107.5\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "explain": "ものさしの すうじの めもり 1 つぶんの ながさを 1 cm（1 センチメートル）と いいます。1 cm を 10 に わけた 1 つぶんが 1 mm（1 ミリメートル）で、1 cm = 10 mm です。テープは 4 の めもりから 3 mm すすんだ ところまで なので、4 cm 3 mm です。10 mm の まとまりが 4 つと 3 mm で、43 mm とも いえます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "🟦 の テープは、🟥 の テープより なんマス ながい ですか。⬜ は なにも ない ところ です。",
+       "figure": "🟦🟦🟦🟦🟦🟦🟦\n🟥🟥🟥🟥⬜⬜⬜",
+       "answer": 3,
+       "check": "n('🟦') - n('🟥')",
+       "hints": [
+        "はしは そろって いるね。",
+        "🟥 の さきから、🟦 は なんマス でて いるかな。",
+        "7 − 4 で もとめても よいよ。"
+       ],
+       "paths": [
+        [
+         "🟦 は 7 マス、🟥 は 4 マス",
+         "7 − 4 = 3",
+         "3 マス"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "46 + 38 は いくつ ですか。",
+       "answer": 84,
+       "check": "46 + 38",
+       "hints": [
+        "いちの くらいから たそう。",
+        "6 + 8 は 10 より おおきいね。じゅうの くらいに 1 くりあげよう。",
+        "じゅうの くらいは 4 + 3 に、くりあげた 1 を たそう。"
+       ],
+       "paths": [
+        [
+         "6 + 8 = 14",
+         "40 + 30 + 10 = 80",
+         "80 + 4 = 84"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープの ながさは なん cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"175\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 7,
+       "check": "70 // 10",
+       "hints": [
+        "テープの ひだりの はしは、0 の めもりに そろって いるね。",
+        "みぎの はしは、どの すうじの めもりかな。",
+        "すうじの めもり 1 つぶんが 1 cm だよ。"
+       ],
+       "paths": [
+        [
+         "ひだりの はしは 0",
+         "みぎの はしは 7 の めもり",
+         "7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "テープの ながさは なん mm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"140\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 56,
+       "check": "5 * 10 + 6",
+       "hints": [
+        "まず、なん cm と なん mm かを よもう。",
+        "5 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "1 cm は 10 mm。10 mm の まとまりが いくつと、なん mm かな。"
+       ],
+       "paths": [
+        [
+         "5 cm と 6 mm",
+         "10 mm の まとまりが 5 つで 50 mm",
+         "50 + 6 = 56",
+         "56 mm"
+        ]
+       ],
+       "note": "「5 cm 6 mm」と読めても、mm だけで表すときに 506 や 11 と書きやすい。10 mm のまとまりで考える。"
+      },
+      {
+       "part": "今日",
+       "text": "3 cm 8 mm は なん mm ですか。",
+       "answer": 38,
+       "check": "3 * 10 + 8",
+       "hints": [
+        "1 cm は なん mm だったかな。",
+        "3 cm は、10 mm の まとまりが いくつ かな。",
+        "まとまりの ぶんと 8 mm を あわせよう。"
+       ],
+       "paths": [
+        [
+         "1 cm = 10 mm",
+         "3 cm は 10 mm が 3 つで 30 mm",
+         "30 + 8 = 38",
+         "38 mm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 m（1 メートル）は 100 cm です。1 m の テープから 35 cm きりとると、のこりは なん cm ですか。",
+       "answer": 65,
+       "check": "100 - 35",
+       "hints": [
+        "1 m を cm で いうと、なん cm かな。",
+        "のこりは、ぜんぶから きりとった ぶんを ひいた ながさ だね。",
+        "100 − 35 は、100 を 90 と 10 に わけると けいさん しやすいよ。"
+       ],
+       "paths": [
+        [
+         "1 m = 100 cm",
+         "100 − 35 = 65",
+         "65 cm"
+        ],
+        [
+         "35 に いくつ たすと 100 か かんがえる",
+         "35 + 5 = 40、40 + 60 = 100",
+         "5 + 60 = 65"
+        ]
+       ],
+       "note": "m と cm をそろえずに 1 − 35 と考えて手が止まりやすい。まず 1 m を 100 cm に直す。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "テープの ながさは なん mm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"72.5\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 29,
+       "check": "2 * 10 + 9",
+       "hints": [
+        "なん cm と なん mm かを よもう。",
+        "2 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "10 mm の まとまりが 2 つと、のこりの mm を あわせよう。"
+       ],
+       "paths": [
+        [
+         "2 cm と 9 mm",
+         "20 + 9 = 29",
+         "29 mm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "64 mm と おなじ ながさは どれ ですか。",
+       "choices": [
+        "6 cm 4 mm",
+        "64 cm",
+        "60 cm 4 mm"
+       ],
+       "answer": "6 cm 4 mm",
+       "check": "f'{64 // 10} cm {64 % 10} mm'",
+       "hints": [
+        "10 mm で 1 cm だね。",
+        "64 mm には、10 mm の まとまりが いくつ あるかな。",
+        "まとまりが cm、のこりが mm だよ。"
+       ],
+       "paths": [
+        [
+         "64 mm は 10 mm が 6 つと 4 mm",
+         "6 cm 4 mm"
+        ]
+       ],
+       "note": "mm と cm を取りちがえて 64 cm を選びやすい。64 cm は ものさしより長い。"
+      },
+      {
+       "part": "今日",
+       "text": "2 cm 6 mm と 3 cm では、どちらが ながい ですか。",
+       "choices": [
+        "2 cm 6 mm",
+        "3 cm"
+       ],
+       "answer": "3 cm",
+       "check": "'3 cm' if 3 * 10 > 2 * 10 + 6 else '2 cm 6 mm'",
+       "hints": [
+        "どちらも mm に なおして くらべよう。",
+        "2 cm 6 mm は なん mm かな。",
+        "3 cm は なん mm かな。"
+       ],
+       "paths": [
+        [
+         "2 cm 6 mm = 26 mm",
+         "3 cm = 30 mm",
+         "30 の ほうが おおきい",
+         "3 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "みずの かさを はかろう。",
+       "svg": "<svg viewBox=\"0 0 240 148\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"97\" y=\"53\" width=\"46\" height=\"77\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"97,14 97,130 143,130 143,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135\" y1=\"31\" x2=\"143\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"42\" x2=\"143\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"53\" x2=\"143\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"64\" x2=\"143\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"129\" y1=\"75\" x2=\"143\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"86\" x2=\"143\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"97\" x2=\"143\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"108\" x2=\"143\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"119\" x2=\"143\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"125\" y1=\"20\" x2=\"143\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text></svg>",
+       "explain": "みずなどの かさは、1 L（1 リットル）の ますで はかります。1 L を 10 に わけた 1 つぶんが 1 dL（1 デシリットル）で、1 L = 10 dL です。この ますの みずは めもり 7 つぶんで 7 dL です。もっと すくない かさには mL（ミリリットル）を つかい、1 dL = 100 mL です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "5 cm 2 mm は なん mm ですか。",
+       "answer": 52,
+       "check": "5 * 10 + 2",
+       "hints": [
+        "1 cm は なん mm だったかな。",
+        "5 cm は、10 mm の まとまりが いくつ かな。",
+        "まとまりの ぶんと 2 mm を あわせよう。"
+       ],
+       "paths": [
+        [
+         "5 cm = 50 mm",
+         "50 + 2 = 52",
+         "52 mm"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "73 − 28 は いくつ ですか。",
+       "answer": 45,
+       "check": "73 - 28",
+       "hints": [
+        "いちの くらいから ひこう。",
+        "3 から 8 は ひけないね。じゅうの くらいから 1 かりよう。",
+        "じゅうの くらいは、かした あとの かずから 2 を ひこう。"
+       ],
+       "paths": [
+        [
+         "13 − 8 = 5",
+         "60 − 20 = 40",
+         45
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "みずは ぜんぶで なん dL ですか。",
+       "svg": "<svg viewBox=\"0 0 240 148\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"61\" y=\"20\" width=\"46\" height=\"110\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"61,14 61,130 107,130 107,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99\" y1=\"31\" x2=\"107\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"42\" x2=\"107\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"53\" x2=\"107\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"64\" x2=\"107\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"93\" y1=\"75\" x2=\"107\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"86\" x2=\"107\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"97\" x2=\"107\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"108\" x2=\"107\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"119\" x2=\"107\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"89\" y1=\"20\" x2=\"107\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text><rect x=\"133\" y=\"86\" width=\"46\" height=\"44\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"133,14 133,130 179,130 179,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171\" y1=\"31\" x2=\"179\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"42\" x2=\"179\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"53\" x2=\"179\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"64\" x2=\"179\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"165\" y1=\"75\" x2=\"179\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"86\" x2=\"179\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"97\" x2=\"179\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"108\" x2=\"179\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"119\" x2=\"179\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"161\" y1=\"20\" x2=\"179\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text></svg>",
+       "answer": 14,
+       "check": "10 + 4",
+       "hints": [
+        "ひだりの ますは いっぱい。1 L は なん dL かな。",
+        "みぎの ますは、めもり いくつぶん かな。",
+        "2 つを あわせよう。"
+       ],
+       "paths": [
+        [
+         "ひだりは 1 L で 10 dL",
+         "みぎは 4 dL",
+         "10 + 4 = 14",
+         "14 dL"
+        ]
+       ],
+       "note": "1 L 4 dL と読めたら、それを dL だけで言い直す練習。1 L を 1 dL と数えて 5 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "50 mL の みずを、2 かい いれました。みずは なん dL に なりましたか。1 dL は 100 mL です。",
+       "answer": 1,
+       "check": "(50 + 50) // 100",
+       "hints": [
+        "まず、ぜんぶで なん mL かを もとめよう。",
+        "50 + 50 は いくつ かな。",
+        "100 mL は なん dL かな。"
+       ],
+       "paths": [
+        [
+         "50 + 50 = 100",
+         "100 mL = 1 dL",
+         "1 dL"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "おもさの たんいは g（グラム）です。はかりの はりは なん g を さして いますか。ちいさい めもり 1 つは 2 g です。",
+       "svg": "<svg viewBox=\"0 0 240 152\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"76\" r=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"16.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"125.8\" y1=\"30.4\" x2=\"126.4\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"31.4\" x2=\"132.7\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"33.2\" x2=\"138.8\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.2\" y1=\"35.7\" x2=\"144.6\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"38.8\" x2=\"152.9\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">10</text><line x1=\"151.5\" y1=\"42.5\" x2=\"154.9\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"46.7\" x2=\"159.3\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"51.4\" x2=\"163.1\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"161.6\" y1=\"56.4\" x2=\"166.1\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"61.8\" x2=\"173.3\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">20</text><line x1=\"165.2\" y1=\"67.4\" x2=\"170.1\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"73.1\" x2=\"170.9\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"78.9\" x2=\"170.9\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.2\" y1=\"84.6\" x2=\"170.1\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"90.2\" x2=\"173.3\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"161.6\" y1=\"95.6\" x2=\"166.1\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"100.6\" x2=\"163.1\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"105.3\" x2=\"159.3\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"151.5\" y1=\"109.5\" x2=\"154.9\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"113.2\" x2=\"152.9\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">40</text><line x1=\"142.2\" y1=\"116.3\" x2=\"144.6\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"118.8\" x2=\"138.8\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"120.6\" x2=\"132.7\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125.8\" y1=\"121.6\" x2=\"126.4\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"142.5\" font-size=\"10\" text-anchor=\"middle\">50</text><line x1=\"114.2\" y1=\"121.6\" x2=\"113.6\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"120.6\" x2=\"107.3\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"118.8\" x2=\"101.2\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"97.8\" y1=\"116.3\" x2=\"95.4\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"113.2\" x2=\"87.1\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"88.5\" y1=\"109.5\" x2=\"85.1\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"105.3\" x2=\"80.7\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"100.6\" x2=\"76.9\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"78.4\" y1=\"95.6\" x2=\"73.9\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"90.2\" x2=\"66.7\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">70</text><line x1=\"74.8\" y1=\"84.6\" x2=\"69.9\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"78.9\" x2=\"69.1\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"73.1\" x2=\"69.1\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.8\" y1=\"67.4\" x2=\"69.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"61.8\" x2=\"66.7\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">80</text><line x1=\"78.4\" y1=\"56.4\" x2=\"73.9\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"51.4\" x2=\"76.9\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"46.7\" x2=\"80.7\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"88.5\" y1=\"42.5\" x2=\"85.1\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"38.8\" x2=\"87.1\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"97.8\" y1=\"35.7\" x2=\"95.4\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"33.2\" x2=\"101.2\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"31.4\" x2=\"107.3\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"114.2\" y1=\"30.4\" x2=\"113.6\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"76\" x2=\"161.6\" y2=\"110.4\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"76\" r=\"4\" fill=\"currentColor\"/><text x=\"120\" y=\"55.9\" font-size=\"11\" text-anchor=\"middle\">g</text></svg>",
+       "answer": 36,
+       "check": "30 + 2 * 3",
+       "hints": [
+        "はりは、どの すうじと どの すうじの あいだ かな。",
+        "30 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "ちいさい めもり 1 つは 2 g。2、4、6 と かぞえよう。"
+       ],
+       "paths": [
+        [
+         "30 の めもりから ちいさい めもり 3 つ",
+         "2、4、6 で 6 g",
+         "30 + 6 = 36",
+         "36 g"
+        ]
+       ],
+       "note": "小さい目もり 1 つを 1 g と数えて 33 と答えやすい。1 目もりがいくつかを先に確かめる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 L 3 dL の みずと、7 dL の みずを あわせると、なん L に なりますか。",
+       "answer": 2,
+       "check": "(10 + 3 + 7) // 10",
+       "hints": [
+        "まず、どちらも dL に そろえよう。",
+        "1 L 3 dL は なん dL かな。",
+        "あわせた dL を、10 dL ずつの まとまりに しよう。"
+       ],
+       "paths": [
+        [
+         "1 L 3 dL = 13 dL",
+         "13 + 7 = 20",
+         "10 dL で 1 L だから 20 dL = 2 L"
+        ],
+        [
+         "3 dL と 7 dL で 10 dL = 1 L",
+         "1 L と 1 L で 2 L"
+        ]
+       ],
+       "note": "1 + 3 + 7 と単位をそろえずにたして 11 と答えやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "みずは ぜんぶで なん dL ですか。",
+       "svg": "<svg viewBox=\"0 0 240 148\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"25\" y=\"20\" width=\"46\" height=\"110\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"25,14 25,130 71,130 71,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63\" y1=\"31\" x2=\"71\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"42\" x2=\"71\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"53\" x2=\"71\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"64\" x2=\"71\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"57\" y1=\"75\" x2=\"71\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"86\" x2=\"71\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"97\" x2=\"71\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"108\" x2=\"71\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"63\" y1=\"119\" x2=\"71\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"53\" y1=\"20\" x2=\"71\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text><rect x=\"97\" y=\"20\" width=\"46\" height=\"110\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"97,14 97,130 143,130 143,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"135\" y1=\"31\" x2=\"143\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"42\" x2=\"143\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"53\" x2=\"143\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"64\" x2=\"143\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"129\" y1=\"75\" x2=\"143\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"86\" x2=\"143\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"97\" x2=\"143\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"108\" x2=\"143\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"135\" y1=\"119\" x2=\"143\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"125\" y1=\"20\" x2=\"143\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text><rect x=\"169\" y=\"97\" width=\"46\" height=\"33\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"169,14 169,130 215,130 215,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"207\" y1=\"31\" x2=\"215\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"42\" x2=\"215\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"53\" x2=\"215\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"64\" x2=\"215\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"201\" y1=\"75\" x2=\"215\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"86\" x2=\"215\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"97\" x2=\"215\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"108\" x2=\"215\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"207\" y1=\"119\" x2=\"215\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"197\" y1=\"20\" x2=\"215\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text></svg>",
+       "answer": 23,
+       "check": "10 + 10 + 3",
+       "hints": [
+        "いっぱいの ますは いくつ かな。",
+        "いっぱいの ます 1 つは 10 dL だよ。",
+        "のこりの ますの めもりも あわせよう。"
+       ],
+       "paths": [
+        [
+         "10 dL が 2 つで 20 dL",
+         "みぎは 3 dL",
+         "20 + 3 = 23",
+         "23 dL"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "はかりの はりは なん g を さして いますか。ちいさい めもり 1 つは 2 g です。",
+       "svg": "<svg viewBox=\"0 0 240 152\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"76\" r=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"16.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"125.8\" y1=\"30.4\" x2=\"126.4\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"31.4\" x2=\"132.7\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"33.2\" x2=\"138.8\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.2\" y1=\"35.7\" x2=\"144.6\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"38.8\" x2=\"152.9\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">10</text><line x1=\"151.5\" y1=\"42.5\" x2=\"154.9\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"46.7\" x2=\"159.3\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"51.4\" x2=\"163.1\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"161.6\" y1=\"56.4\" x2=\"166.1\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"61.8\" x2=\"173.3\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">20</text><line x1=\"165.2\" y1=\"67.4\" x2=\"170.1\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"73.1\" x2=\"170.9\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"78.9\" x2=\"170.9\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.2\" y1=\"84.6\" x2=\"170.1\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"90.2\" x2=\"173.3\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"161.6\" y1=\"95.6\" x2=\"166.1\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"100.6\" x2=\"163.1\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"105.3\" x2=\"159.3\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"151.5\" y1=\"109.5\" x2=\"154.9\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"113.2\" x2=\"152.9\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">40</text><line x1=\"142.2\" y1=\"116.3\" x2=\"144.6\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"118.8\" x2=\"138.8\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"120.6\" x2=\"132.7\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125.8\" y1=\"121.6\" x2=\"126.4\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"142.5\" font-size=\"10\" text-anchor=\"middle\">50</text><line x1=\"114.2\" y1=\"121.6\" x2=\"113.6\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"120.6\" x2=\"107.3\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"118.8\" x2=\"101.2\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"97.8\" y1=\"116.3\" x2=\"95.4\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"113.2\" x2=\"87.1\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"88.5\" y1=\"109.5\" x2=\"85.1\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"105.3\" x2=\"80.7\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"100.6\" x2=\"76.9\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"78.4\" y1=\"95.6\" x2=\"73.9\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"90.2\" x2=\"66.7\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">70</text><line x1=\"74.8\" y1=\"84.6\" x2=\"69.9\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"78.9\" x2=\"69.1\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"73.1\" x2=\"69.1\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.8\" y1=\"67.4\" x2=\"69.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"61.8\" x2=\"66.7\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">80</text><line x1=\"78.4\" y1=\"56.4\" x2=\"73.9\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"51.4\" x2=\"76.9\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"46.7\" x2=\"80.7\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"88.5\" y1=\"42.5\" x2=\"85.1\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"38.8\" x2=\"87.1\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"97.8\" y1=\"35.7\" x2=\"95.4\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"33.2\" x2=\"101.2\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"31.4\" x2=\"107.3\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"114.2\" y1=\"30.4\" x2=\"113.6\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"76\" x2=\"94\" y2=\"123.3\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"76\" r=\"4\" fill=\"currentColor\"/><text x=\"120\" y=\"55.9\" font-size=\"11\" text-anchor=\"middle\">g</text></svg>",
+       "answer": 58,
+       "check": "50 + 2 * 4",
+       "hints": [
+        "はりは、どの すうじの つぎ かな。",
+        "50 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "2、4、6、8 と かぞえよう。"
+       ],
+       "paths": [
+        [
+         "50 の めもりから ちいさい めもり 4 つ",
+         "8 g",
+         "50 + 8 = 58",
+         "58 g"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "kg（キログラム）は、g より ずっと おもい ものに つかう たんい です。ランドセルの おもさに あう たんいは どちら ですか。",
+       "choices": [
+        "g",
+        "kg"
+       ],
+       "answer": "kg",
+       "hints": [
+        "ランドセルは、えんぴつより ずっと おもいね。",
+        "おもい ものに つかう たんいは どちら だったかな。",
+        "えんぴつや けしゴムなら g を つかうよ。"
+       ],
+       "paths": [
+        [
+         "ランドセルは おもい",
+         "おもい ものは kg"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "3 cm と 25 mm では、3 cm の ほうが ながい です。かずは 25 の ほうが おおきいのに、どうしてか、くちで いってみよう。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"150\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><rect x=\"20\" y=\"6\" width=\"125\" height=\"14\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "explain": "「3 cm は 30 mm だから、30 mm と 25 mm で 3 cm の ほうが ながい」と言えればよい。「cm と mm では 1 つぶんの ながさが ちがう から、おなじ たんいに そろえないと かずで くらべられない」でもよい。G-005 の「1 つ分が長いと数は少なくなる」とつなげられればなお良い。",
+       "hints": [
+        "cm と mm では、1 つぶんの ながさは おなじ かな。",
+        "3 cm を mm に なおすと、なん mm かな。",
+        "「〜だから ながい」と いってみよう。"
+       ],
+       "paths": [
+        [
+         "1 cm は 10 mm",
+         "3 cm は 30 mm",
+         "30 mm と 25 mm を くらべる",
+         "だから 3 cm が ながい"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "おなじ つくえの よこを、おとなの てと こどもの てで はかると、かずが ちがいました。cm で はかると、だれが はかっても おなじ かずに なります。どうしてか、くちで いってみよう。",
+       "figure": "✋ おとな 4 つぶん\n✋ こども 6 つぶん",
+       "explain": "「て の おおきさは ひとに よって ちがう けど、1 cm は だれの ものさしでも おなじ ながさ だから」と言えればよい。「みんなで おなじ 1 つぶんを つかう と きめた から」でもよい。単位とは、みんなで決めた同じ 1 つ分であることが要点。だから離れた所にいる人にも長さを数で伝えられる。",
+       "hints": [
+        "おとなの てと こどもの て、1 つぶんの おおきさは おなじ かな。",
+        "ものさしの 1 cm は、だれの ものさしでも おなじ かな。",
+        "「〜だから おなじ かずに なる」と いってみよう。"
+       ],
+       "paths": [
+        [
+         "て の おおきさは ひとで ちがう",
+         "1 cm は みんな おなじ",
+         "だから おなじ かずに なる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "はしが かけて、0 の めもりが ない ものさしでも、2 の めもりから 7 の めもりまでの ながさは 5 cm です。どうしてか、くちで いってみよう。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">9</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"45\" y=\"24\" width=\"125\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "explain": "「2 から 7 までに、1 cm の めもりが 5 つ ある から」と言えればよい。「0 から 5 まで はかった ときと、めもりの かずが おなじ だから」でもよい。長さは「どこから どこまでに 1 cm がいくつあるか」で決まり、はじめが 0 である必要はない。7 − 2 = 5 と式で言えればなお良い。",
+       "hints": [
+        "2 の めもりから 7 の めもりまで、ゆびで 1 cm ずつ たどろう。",
+        "1 cm の めもりは いくつ あったかな。",
+        "「〜だから 5 cm」と いってみよう。"
+       ],
+       "paths": [
+        [
+         "2 から 3、3 から 4… と 1 cm ずつ",
+         "1 cm が 5 つ",
+         "だから 5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ものさしの はしが かけて います。テープの ながさは なん mm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">9</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">10</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">11</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"45\" y=\"24\" width=\"130\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 52,
+       "check": "(9 - 4) * 10 + 2",
+       "hints": [
+        "テープの ひだりの はしは、どの めもり かな。",
+        "みぎの はしは、どの めもりから なん mm すすんで いるかな。",
+        "ひだりから みぎまでに、1 cm が いくつと なん mm あるかな。"
+       ],
+       "paths": [
+        [
+         "ひだりは 4、みぎは 9 から 2 mm",
+         "4 から 9 までで 5 cm",
+         "5 cm 2 mm = 52 mm"
+        ]
+       ],
+       "note": "右はしの目もり（9 cm 2 mm）をそのまま読んで 92 と答えやすい。左はしが 0 でないことに気づかせる。"
+      },
+      {
+       "part": "今日",
+       "text": "4 cm 5 mm と 47 mm では、どちらが ながい ですか。",
+       "choices": [
+        "4 cm 5 mm",
+        "47 mm"
+       ],
+       "answer": "47 mm",
+       "check": "'47 mm' if 47 > 4 * 10 + 5 else '4 cm 5 mm'",
+       "hints": [
+        "おなじ たんいに そろえよう。",
+        "4 cm 5 mm は なん mm かな。",
+        "そろえた かずで くらべよう。"
+       ],
+       "paths": [
+        [
+         "4 cm 5 mm = 45 mm",
+         "45 mm と 47 mm",
+         "47 mm が ながい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 L と 9 dL では、どちらが おおい ですか。",
+       "choices": [
+        "1 L",
+        "9 dL"
+       ],
+       "answer": "1 L",
+       "check": "'1 L' if 10 > 9 else '9 dL'",
+       "hints": [
+        "おなじ たんいに そろえよう。",
+        "1 L は なん dL かな。",
+        "そろえた かずで くらべよう。"
+       ],
+       "paths": [
+        [
+         "1 L = 10 dL",
+         "10 dL と 9 dL",
+         "1 L が おおい"
+        ]
+       ],
+       "note": "9 のほうが大きい数なので 9 dL を選びやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ものさしの はしが かけて います。テープの ながさは なん cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">9</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">10</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"95\" y=\"24\" width=\"75\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 3,
+       "check": "8 - 5",
+       "hints": [
+        "テープの ひだりの はしは、どの めもり かな。",
+        "みぎの はしは、どの めもり かな。",
+        "そのあいだに、1 cm が いくつ あるかな。"
+       ],
+       "paths": [
+        [
+         "ひだりは 5、みぎは 8",
+         "5 から 8 までに 1 cm が 3 つ",
+         "3 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "60 mm と 6 cm を くらべると、どう なりますか。",
+       "choices": [
+        "60 mm が ながい",
+        "6 cm が ながい",
+        "おなじ ながさ"
+       ],
+       "answer": "おなじ ながさ",
+       "check": "'おなじ ながさ' if 6 * 10 == 60 else ('60 mm が ながい' if 60 > 6 * 10 else '6 cm が ながい')",
+       "hints": [
+        "おなじ たんいに そろえよう。",
+        "6 cm は なん mm かな。",
+        "そろえた かずで くらべよう。"
+       ],
+       "paths": [
+        [
+         "6 cm = 60 mm",
+         "60 mm と 60 mm",
+         "おなじ ながさ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "あかい えんぴつは 9 cm 3 mm、あおい えんぴつは 95 mm です。ながいのは どちら ですか。",
+       "choices": [
+        "あかい えんぴつ",
+        "あおい えんぴつ"
+       ],
+       "answer": "あおい えんぴつ",
+       "check": "'あおい えんぴつ' if 95 > 9 * 10 + 3 else 'あかい えんぴつ'",
+       "hints": [
+        "おなじ たんいに そろえよう。",
+        "9 cm 3 mm は なん mm かな。",
+        "93 と 95 を くらべよう。"
+       ],
+       "paths": [
+        [
+         "9 cm 3 mm = 93 mm",
+         "93 mm と 95 mm",
+         "あおい えんぴつ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "まわりの ながさは なんマス ですか。",
+       "figure": "🟦🟦🟦🟦\n🟦🟦🟦🟦",
+       "answer": 12,
+       "check": "(lambda g: sum(1 for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜' for dr, dc in ((0, 1), (1, 0), (0, -1), (-1, 0)) if not (0 <= r + dr < len(g) and 0 <= c + dc < len(g[r + dr]) and g[r + dr][c + dc] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "うえ、みぎ、した、ひだりの じゅんに へんを かぞえよう。",
+        "なかの せんは かぞえないよ。",
+        "4 つの ながさを たそう。"
+       ],
+       "paths": [
+        [
+         "うえ 4、みぎ 2、した 4、ひだり 2",
+         "4 + 2 + 4 + 2 = 12",
+         "12 マス"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "64 − 27 は いくつ ですか。",
+       "answer": 37,
+       "check": "64 - 27",
+       "hints": [
+        "いちの くらいから ひこう。",
+        "4 から 7 は ひけないね。じゅうの くらいから 1 かりよう。",
+        "じゅうの くらいは、かした あとの かずから 2 を ひこう。"
+       ],
+       "paths": [
+        [
+         "14 − 7 = 7",
+         "50 − 20 = 30",
+         37
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてが 12 cm、よこが 25 cm の しかくが あります。むかいあう へんは おなじ ながさ です。まわりの ながさは なん cm ですか。",
+       "answer": 74,
+       "check": "12 + 25 + 12 + 25",
+       "hints": [
+        "まわりには、へんが 4 つ あるね。",
+        "たてと よこが 2 つずつ あるよ。",
+        "12 + 25 を さきに もとめて、それを 2 かい たそう。"
+       ],
+       "paths": [
+        [
+         "12 + 25 = 37",
+         "37 + 37 = 74",
+         "74 cm"
+        ]
+       ],
+       "note": "たてとよこを 1 つずつだけたして 37 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "4 つの へんが みんな 2 cm 5 mm の しかくが あります。まわりの ながさは なん mm ですか。",
+       "answer": 100,
+       "check": "25 + 25 + 25 + 25",
+       "hints": [
+        "2 cm 5 mm を、まず mm に なおそう。",
+        "へんは 4 つ あるね。",
+        "25 + 25 を 2 かい つくって たそう。"
+       ],
+       "paths": [
+        [
+         "2 cm 5 mm = 25 mm",
+         "25 + 25 = 50",
+         "50 + 50 = 100",
+         "100 mm"
+        ]
+       ],
+       "note": "100 mm は 10 cm。cm に直すと長さの見当がつけやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "コップに みずが 45 mL、べつの コップに 38 mL あります。あわせると なん mL ですか。",
+       "answer": 83,
+       "check": "45 + 38",
+       "hints": [
+        "たんいは どちらも mL だね。",
+        "いちの くらいから たそう。",
+        "5 + 8 は 10 より おおきいね。くりあげよう。"
+       ],
+       "paths": [
+        [
+         "5 + 8 = 13",
+         "40 + 30 + 10 = 80",
+         "83 mL"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "まわりの ながさが 1 m の しかくが あります。4 つの へんは みんな おなじ ながさ です。1 つの へんは なん cm ですか。",
+       "answer": 25,
+       "check": "[k for k in range(1, 100) if k + k + k + k == 100][0]",
+       "hints": [
+        "1 m は なん cm かな。",
+        "おなじ かずを 4 かい たして 100 に なる かずを さがそう。",
+        "2 かい たして 50 に なる かずは いくつ かな。"
+       ],
+       "paths": [
+        [
+         "1 m = 100 cm",
+         "4 つで 100 なら 2 つで 50",
+         "25 + 25 = 50",
+         "25 cm"
+        ],
+        [
+         "20 なら 20 + 20 + 20 + 20 = 80 で たりない",
+         "25 なら 100",
+         "25 cm"
+        ]
+       ],
+       "note": "1 m のまま考えて答えが出せなくなりやすい。100 cm に直してから考える。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "36 cm の テープと 49 cm の テープを、かさねないで つなぎます。なん cm に なりますか。",
+       "answer": 85,
+       "check": "36 + 49",
+       "hints": [
+        "つなぐと、ながさは あわせた ながさ だね。",
+        "いちの くらいから たそう。",
+        "6 + 9 は 10 より おおきいね。くりあげよう。"
+       ],
+       "paths": [
+        [
+         "6 + 9 = 15",
+         "30 + 40 + 10 = 80",
+         "85 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 m の ひもで、たてが 20 cm、よこが 25 cm の しかくの まわりを かこみました。むかいあう へんは おなじ ながさ です。ひもは なん cm あまりますか。",
+       "answer": 10,
+       "check": "100 - (20 + 25 + 20 + 25)",
+       "hints": [
+        "まず、しかくの まわりの ながさを もとめよう。",
+        "1 m は なん cm かな。",
+        "ひもの ながさから、まわりの ながさを ひこう。"
+       ],
+       "paths": [
+        [
+         "20 + 25 = 45",
+         "45 + 45 = 90",
+         "100 − 90 = 10",
+         "10 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "おもさが 48 g の はこに、26 g の おかしを いれました。ぜんぶで なん g ですか。",
+       "answer": 74,
+       "check": "48 + 26",
+       "hints": [
+        "たんいは どちらも g だね。",
+        "いちの くらいから たそう。",
+        "8 + 6 は 10 より おおきいね。くりあげよう。"
+       ],
+       "paths": [
+        [
+         "8 + 6 = 14",
+         "40 + 20 + 10 = 70",
+         "74 g"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "テープの ながさは なん mm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">0</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"20\" y=\"24\" width=\"167.5\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 67,
+       "check": "6 * 10 + 7",
+       "hints": [
+        "なん cm と なん mm かを よもう。",
+        "6 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "10 mm の まとまりが 6 つと、のこりの mm を あわせよう。"
+       ],
+       "paths": [
+        [
+         "6 cm と 7 mm",
+         "60 + 7 = 67",
+         "67 mm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 cm 9 mm は なん mm ですか。",
+       "answer": 49,
+       "check": "4 * 10 + 9",
+       "hints": [
+        "1 cm は なん mm だったかな。",
+        "4 cm は、10 mm の まとまりが いくつ かな。",
+        "まとまりの ぶんと 9 mm を あわせよう。"
+       ],
+       "paths": [
+        [
+         "4 cm = 40 mm",
+         "40 + 9 = 49",
+         "49 mm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "73 mm と おなじ ながさは どれ ですか。",
+       "choices": [
+        "7 cm 3 mm",
+        "73 cm",
+        "70 cm 3 mm"
+       ],
+       "answer": "7 cm 3 mm",
+       "check": "f'{73 // 10} cm {73 % 10} mm'",
+       "hints": [
+        "10 mm で 1 cm だね。",
+        "73 mm には、10 mm の まとまりが いくつ あるかな。",
+        "まとまりが cm、のこりが mm だよ。"
+       ],
+       "paths": [
+        [
+         "73 mm は 10 mm が 7 つと 3 mm",
+         "7 cm 3 mm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 m の テープから 48 cm きりとりました。のこりは なん cm ですか。",
+       "answer": 52,
+       "check": "100 - 48",
+       "hints": [
+        "1 m は なん cm かな。",
+        "ぜんぶから、きりとった ぶんを ひこう。",
+        "48 に いくつ たすと 100 に なるか かんがえても よいよ。"
+       ],
+       "paths": [
+        [
+         "1 m = 100 cm",
+         "100 − 48 = 52",
+         "52 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "みずは ぜんぶで なん dL ですか。",
+       "svg": "<svg viewBox=\"0 0 240 148\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"61\" y=\"20\" width=\"46\" height=\"110\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"61,14 61,130 107,130 107,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"99\" y1=\"31\" x2=\"107\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"42\" x2=\"107\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"53\" x2=\"107\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"64\" x2=\"107\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"93\" y1=\"75\" x2=\"107\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"86\" x2=\"107\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"97\" x2=\"107\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"108\" x2=\"107\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"99\" y1=\"119\" x2=\"107\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"89\" y1=\"20\" x2=\"107\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text><rect x=\"133\" y=\"64\" width=\"46\" height=\"66\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"133,14 133,130 179,130 179,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171\" y1=\"31\" x2=\"179\" y2=\"31\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"42\" x2=\"179\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"53\" x2=\"179\" y2=\"53\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"64\" x2=\"179\" y2=\"64\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"165\" y1=\"75\" x2=\"179\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"86\" x2=\"179\" y2=\"86\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"97\" x2=\"179\" y2=\"97\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"108\" x2=\"179\" y2=\"108\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"171\" y1=\"119\" x2=\"179\" y2=\"119\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"161\" y1=\"20\" x2=\"179\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"145.5\" font-size=\"10\" text-anchor=\"middle\">1 L ます</text></svg>",
+       "answer": 16,
+       "check": "10 + 6",
+       "hints": [
+        "いっぱいの ますは 1 L。1 L は なん dL かな。",
+        "みぎの ますは、めもり いくつぶん かな。",
+        "2 つを あわせよう。"
+       ],
+       "paths": [
+        [
+         "1 L = 10 dL",
+         "みぎは 6 dL",
+         "10 + 6 = 16",
+         "16 dL"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "はかりの はりは なん g を さして いますか。ちいさい めもり 1 つは 2 g です。",
+       "svg": "<svg viewBox=\"0 0 240 152\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"76\" r=\"72\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"16.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"125.8\" y1=\"30.4\" x2=\"126.4\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"31.4\" x2=\"132.7\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"33.2\" x2=\"138.8\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.2\" y1=\"35.7\" x2=\"144.6\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"38.8\" x2=\"152.9\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">10</text><line x1=\"151.5\" y1=\"42.5\" x2=\"154.9\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"46.7\" x2=\"159.3\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"51.4\" x2=\"163.1\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"161.6\" y1=\"56.4\" x2=\"166.1\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"61.8\" x2=\"173.3\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">20</text><line x1=\"165.2\" y1=\"67.4\" x2=\"170.1\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"73.1\" x2=\"170.9\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.9\" y1=\"78.9\" x2=\"170.9\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165.2\" y1=\"84.6\" x2=\"170.1\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"163.7\" y1=\"90.2\" x2=\"173.3\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"179.9\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"161.6\" y1=\"95.6\" x2=\"166.1\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"158.8\" y1=\"100.6\" x2=\"163.1\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155.4\" y1=\"105.3\" x2=\"159.3\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"151.5\" y1=\"109.5\" x2=\"154.9\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"147\" y1=\"113.2\" x2=\"152.9\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">40</text><line x1=\"142.2\" y1=\"116.3\" x2=\"144.6\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"136.9\" y1=\"118.8\" x2=\"138.8\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"131.4\" y1=\"120.6\" x2=\"132.7\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125.8\" y1=\"121.6\" x2=\"126.4\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"132\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"142.5\" font-size=\"10\" text-anchor=\"middle\">50</text><line x1=\"114.2\" y1=\"121.6\" x2=\"113.6\" y2=\"126.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"120.6\" x2=\"107.3\" y2=\"125.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"118.8\" x2=\"101.2\" y2=\"123.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"97.8\" y1=\"116.3\" x2=\"95.4\" y2=\"120.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"113.2\" x2=\"87.1\" y2=\"121.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"130.5\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"88.5\" y1=\"109.5\" x2=\"85.1\" y2=\"113.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"105.3\" x2=\"80.7\" y2=\"108.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"100.6\" x2=\"76.9\" y2=\"103.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"78.4\" y1=\"95.6\" x2=\"73.9\" y2=\"97.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"90.2\" x2=\"66.7\" y2=\"93.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"99\" font-size=\"10\" text-anchor=\"middle\">70</text><line x1=\"74.8\" y1=\"84.6\" x2=\"69.9\" y2=\"85.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"78.9\" x2=\"69.1\" y2=\"79.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.1\" y1=\"73.1\" x2=\"69.1\" y2=\"72.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"74.8\" y1=\"67.4\" x2=\"69.9\" y2=\"66.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"76.3\" y1=\"61.8\" x2=\"66.7\" y2=\"58.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"60.1\" y=\"60\" font-size=\"10\" text-anchor=\"middle\">80</text><line x1=\"78.4\" y1=\"56.4\" x2=\"73.9\" y2=\"54.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"81.2\" y1=\"51.4\" x2=\"76.9\" y2=\"48.7\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"84.6\" y1=\"46.7\" x2=\"80.7\" y2=\"43.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"88.5\" y1=\"42.5\" x2=\"85.1\" y2=\"38.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"93\" y1=\"38.8\" x2=\"87.1\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83\" y=\"28.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"97.8\" y1=\"35.7\" x2=\"95.4\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"103.1\" y1=\"33.2\" x2=\"101.2\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"108.6\" y1=\"31.4\" x2=\"107.3\" y2=\"26.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"114.2\" y1=\"30.4\" x2=\"113.6\" y2=\"25.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"76\" x2=\"66.1\" y2=\"79.4\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"76\" r=\"4\" fill=\"currentColor\"/><text x=\"120\" y=\"55.9\" font-size=\"11\" text-anchor=\"middle\">g</text></svg>",
+       "answer": 74,
+       "check": "70 + 2 * 2",
+       "hints": [
+        "はりは、どの すうじの つぎ かな。",
+        "70 の めもりから、ちいさい めもりが いくつ すすんで いるかな。",
+        "ちいさい めもり 1 つは 2 g だよ。"
+       ],
+       "paths": [
+        [
+         "70 の めもりから ちいさい めもり 2 つ",
+         "4 g",
+         "74 g"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 cm 8 mm と 6 cm では、どちらが ながい ですか。",
+       "choices": [
+        "5 cm 8 mm",
+        "6 cm"
+       ],
+       "answer": "6 cm",
+       "check": "'6 cm' if 6 * 10 > 5 * 10 + 8 else '5 cm 8 mm'",
+       "hints": [
+        "どちらも mm に なおそう。",
+        "5 cm 8 mm は なん mm かな。",
+        "6 cm は なん mm かな。"
+       ],
+       "paths": [
+        [
+         "5 cm 8 mm = 58 mm",
+         "6 cm = 60 mm",
+         "6 cm が ながい"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "たてが 18 cm、よこが 27 cm の しかくが あります。むかいあう へんは おなじ ながさ です。まわりの ながさは なん cm ですか。",
+       "answer": 90,
+       "check": "18 + 27 + 18 + 27",
+       "hints": [
+        "たてと よこが 2 つずつ あるね。",
+        "18 + 27 を さきに もとめよう。",
+        "それを 2 かい たそう。"
+       ],
+       "paths": [
+        [
+         "18 + 27 = 45",
+         "45 + 45 = 90",
+         "90 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ものさしの はしが かけて います。テープの ながさは なん mm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 92\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"12\" y=\"46\" width=\"216\" height=\"40\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"20\" y1=\"46\" x2=\"20\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"20\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">1</text><line x1=\"22.5\" y1=\"46\" x2=\"22.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"25\" y1=\"46\" x2=\"25\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.5\" y1=\"46\" x2=\"27.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"30\" y1=\"46\" x2=\"30\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"32.5\" y1=\"46\" x2=\"32.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"35\" y1=\"46\" x2=\"35\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"37.5\" y1=\"46\" x2=\"37.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"40\" y1=\"46\" x2=\"40\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42.5\" y1=\"46\" x2=\"42.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45\" y1=\"46\" x2=\"45\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"45\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">2</text><line x1=\"47.5\" y1=\"46\" x2=\"47.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50\" y1=\"46\" x2=\"50\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.5\" y1=\"46\" x2=\"52.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"55\" y1=\"46\" x2=\"55\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"57.5\" y1=\"46\" x2=\"57.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"60\" y1=\"46\" x2=\"60\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"62.5\" y1=\"46\" x2=\"62.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"65\" y1=\"46\" x2=\"65\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"67.5\" y1=\"46\" x2=\"67.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70\" y1=\"46\" x2=\"70\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">3</text><line x1=\"72.5\" y1=\"46\" x2=\"72.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"75\" y1=\"46\" x2=\"75\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"77.5\" y1=\"46\" x2=\"77.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"80\" y1=\"46\" x2=\"80\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"82.5\" y1=\"46\" x2=\"82.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"85\" y1=\"46\" x2=\"85\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"87.5\" y1=\"46\" x2=\"87.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"90\" y1=\"46\" x2=\"90\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"92.5\" y1=\"46\" x2=\"92.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95\" y1=\"46\" x2=\"95\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">4</text><line x1=\"97.5\" y1=\"46\" x2=\"97.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"100\" y1=\"46\" x2=\"100\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"102.5\" y1=\"46\" x2=\"102.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"105\" y1=\"46\" x2=\"105\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"107.5\" y1=\"46\" x2=\"107.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"110\" y1=\"46\" x2=\"110\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"112.5\" y1=\"46\" x2=\"112.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"115\" y1=\"46\" x2=\"115\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"117.5\" y1=\"46\" x2=\"117.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"46\" x2=\"120\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">5</text><line x1=\"122.5\" y1=\"46\" x2=\"122.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"125\" y1=\"46\" x2=\"125\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"127.5\" y1=\"46\" x2=\"127.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"130\" y1=\"46\" x2=\"130\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"132.5\" y1=\"46\" x2=\"132.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"135\" y1=\"46\" x2=\"135\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"137.5\" y1=\"46\" x2=\"137.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"140\" y1=\"46\" x2=\"140\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"142.5\" y1=\"46\" x2=\"142.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"145\" y1=\"46\" x2=\"145\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">6</text><line x1=\"147.5\" y1=\"46\" x2=\"147.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"150\" y1=\"46\" x2=\"150\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"152.5\" y1=\"46\" x2=\"152.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"155\" y1=\"46\" x2=\"155\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"157.5\" y1=\"46\" x2=\"157.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160\" y1=\"46\" x2=\"160\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"162.5\" y1=\"46\" x2=\"162.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"165\" y1=\"46\" x2=\"165\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"167.5\" y1=\"46\" x2=\"167.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"170\" y1=\"46\" x2=\"170\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"170\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">7</text><line x1=\"172.5\" y1=\"46\" x2=\"172.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175\" y1=\"46\" x2=\"175\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"177.5\" y1=\"46\" x2=\"177.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"180\" y1=\"46\" x2=\"180\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"182.5\" y1=\"46\" x2=\"182.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"185\" y1=\"46\" x2=\"185\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.5\" y1=\"46\" x2=\"187.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"190\" y1=\"46\" x2=\"190\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"192.5\" y1=\"46\" x2=\"192.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"195\" y1=\"46\" x2=\"195\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"195\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">8</text><line x1=\"197.5\" y1=\"46\" x2=\"197.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"200\" y1=\"46\" x2=\"200\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"202.5\" y1=\"46\" x2=\"202.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"205\" y1=\"46\" x2=\"205\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207.5\" y1=\"46\" x2=\"207.5\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"210\" y1=\"46\" x2=\"210\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.5\" y1=\"46\" x2=\"212.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"215\" y1=\"46\" x2=\"215\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"217.5\" y1=\"46\" x2=\"217.5\" y2=\"51\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"220\" y1=\"46\" x2=\"220\" y2=\"59\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"220\" y=\"73.8\" font-size=\"11\" text-anchor=\"middle\">9</text><text x=\"222\" y=\"84.2\" font-size=\"9\" text-anchor=\"end\">cm</text><rect x=\"45\" y=\"24\" width=\"92.5\" height=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 37,
+       "check": "(5 - 2) * 10 + 7",
+       "hints": [
+        "テープの ひだりの はしは、どの めもり かな。",
+        "みぎの はしは、どの めもりから なん mm すすんで いるかな。",
+        "ひだりから みぎまでに、1 cm が いくつと なん mm あるかな。"
+       ],
+       "paths": [
+        [
+         "ひだりは 2、みぎは 5 から 7 mm",
+         "2 から 5 までで 3 cm",
+         "3 cm 7 mm = 37 mm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 L 5 dL は なん dL ですか。",
+       "answer": 15,
+       "check": "10 + 5",
+       "hints": [
+        "1 L は なん dL だったかな。",
+        "1 L の ぶんと 5 dL を あわせよう。",
+        "10 + 5 で もとめよう。"
+       ],
+       "paths": [
+        [
+         "1 L = 10 dL",
+         "10 + 5 = 15",
+         "15 dL"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "かさを あらわす たんいは どれ ですか。",
+       "choices": [
+        "cm",
+        "dL",
+        "g"
+       ],
+       "answer": "dL",
+       "hints": [
+        "cm は なにを はかる たんい だったかな。",
+        "g は なにを はかる たんい だったかな。",
+        "みずを ますで はかった ときの たんいを おもいだそう。"
+       ],
+       "paths": [
+        [
+         "cm は ながさ",
+         "g は おもさ",
+         "dL は かさ"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -113730,10 +116054,11 @@ window.ROADMAP = {
     11.39
    ],
    "comb": {
-    "b": 0.415,
+    "b": 0.386,
     "r": 0.0,
     "rg": [
      "hakaru",
+     "kazu",
      "keisan"
     ],
     "pr": []
@@ -114068,13 +116393,16 @@ window.ROADMAP = {
     1.17
    ],
    "comb": {
-    "b": 0.435,
-    "r": 0.0,
+    "b": 0.427,
+    "r": 1.19,
     "rg": [
      "kazu",
      "programming"
     ],
-    "pr": []
+    "pr": [
+     "kazu",
+     "programming"
+    ]
    }
   },
   {
@@ -114185,7 +116513,7 @@ window.ROADMAP = {
     11.46
    ],
    "comb": {
-    "b": 0.373,
+    "b": 0.37,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -114229,7 +116557,7 @@ window.ROADMAP = {
     8.96
    ],
    "comb": {
-    "b": 0.401,
+    "b": 0.406,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -114350,7 +116678,7 @@ window.ROADMAP = {
     17.24
    ],
    "comb": {
-    "b": 0.237,
+    "b": 0.215,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -114509,7 +116837,7 @@ window.ROADMAP = {
     9.16
    ],
    "comb": {
-    "b": 0.58,
+    "b": 0.579,
     "r": 0.0,
     "rg": [
      "data",
@@ -114593,7 +116921,7 @@ window.ROADMAP = {
     3.67
    ],
    "comb": {
-    "b": 0.598,
+    "b": 0.602,
     "r": 0.0,
     "rg": [
      "data",
@@ -123664,7 +125992,7 @@ window.ROADMAP = {
     -1.04
    ],
    "comb": {
-    "b": 0.316,
+    "b": 0.275,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -124683,7 +127011,7 @@ window.ROADMAP = {
     -1.55
    ],
    "comb": {
-    "b": 0.298,
+    "b": 0.239,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -124701,32 +127029,1234 @@ window.ROADMAP = {
    "region": "seisu",
    "needs": [
     "N-017",
-    "A-009"
+    "A-009",
+    "N-009"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 10 までの数のうち、素数をぜんぶ見つけましょう。",
+       "explain": "約数が 1 とその数自身の 2 こだけの数を、素数といいます。2 の約数は 1、2。3 は 1、3。4 は 1、2、4 で 3 こあるので素数ではありません。同じように調べると、1 から 10 までの素数は 2、3、5、7 です。1 は約数が 1 の 1 こだけなので、素数に入れません。4、6、8、9、10 は、2 つの数のかけ算（2 × 2、2 × 3、2 × 4、3 × 3、2 × 5）に分けられるので、素数ではありません。"
+      },
+      {
+       "part": "思い出す",
+       "text": "26 の約数は、ぜんぶで何こありますか。",
+       "answer": 4,
+       "check": "len([d for d in range(1, 27) if 26 % d == 0])",
+       "hints": [
+        "かけて 26 になる 2 つの数の組をさがそう。",
+        "1 × 26 から始めて、1 の次は 2、その次は 3…とためそう。",
+        "2 × □ = 26 の □ は、□ + □ = 26 で考えよう。"
+       ],
+       "paths": [
+        [
+         "1 × 26、2 × 13",
+         "3、4、5 ではわり切れない",
+         "約数は 1、2、13、26",
+         "4 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "3⁴ はいくつですか。",
+       "answer": 81,
+       "check": "3 ** 4",
+       "hints": [
+        "3⁴ は、3 を何回かけた数かな。",
+        "3 × 3 = 9 から始めよう。",
+        "3 × 3 を 2 回かけると考えてもよいよ。"
+       ],
+       "paths": [
+        [
+         "3⁴ = 3 × 3 × 3 × 3",
+         "3² × 3² = 9 × 9",
+         81
+        ],
+        [
+         "3 × 3 × 3 = 27",
+         "27 + 27 + 27 = 81"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        9,
+        13,
+        15,
+        21
+       ],
+       "answer": 13,
+       "check": "[c for c in (9, 13, 15, 21) if len([d for d in range(1, c + 1) if c % d == 0]) == 2][0]",
+       "hints": [
+        "素数は、約数が 1 とその数自身の 2 こだけの数だね。",
+        "1 とその数のほかに、わり切れる数があるかを調べよう。",
+        "九九の答えになっている数は、2 つの数のかけ算に分けられるよ。"
+       ],
+       "paths": [
+        [
+         "9 = 3 × 3、15 = 3 × 5、21 = 3 × 7",
+         "13 は 1 × 13 にしか分けられない",
+         13
+        ]
+       ],
+       "note": "21 は 3 の段の九九（3 × 7）にあることに気づかないと、素数とまちがえやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "11 から 30 までの数のうち、素数は何こありますか。",
+       "answer": 6,
+       "check": "len([p for p in range(11, 31) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "一の位が 0、2、4、6、8 の数は 2 でわり切れるので、素数ではないね。",
+        "一の位が 5 の数は、5 でわり切れるよ。",
+        "のこった数が、3 や 7 でわり切れるかを調べよう。"
+       ],
+       "paths": [
+        [
+         "2 の倍数と 5 の倍数をのぞくと 11、13、17、19、21、23、27、29",
+         "21 = 3 × 7 と 27 = 3 × 9 をのぞく",
+         "6 こ"
+        ]
+       ],
+       "note": "21 と 27 をのこしてしまいやすい。一の位が 1、3、7、9 でも素数とはかぎらない。"
+      },
+      {
+       "part": "今日",
+       "text": "次のうち、素数ではないものはどれですか。",
+       "choices": [
+        31,
+        37,
+        39,
+        41
+       ],
+       "answer": 39,
+       "check": "[c for c in (31, 37, 39, 41) if any(c % d == 0 for d in range(2, c))][0]",
+       "hints": [
+        "1 とその数のほかに、わり切れる数があれば、素数ではないよ。",
+        "2、3、5、7 で、それぞれわってみよう。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "39 = 30 + 9",
+         "30 も 9 も 3 の倍数なので 39 も 3 の倍数",
+         "39 = 3 × 13 で素数ではない"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 つの素数をたして 20 にします。何組できますか。3 + 17 と 17 + 3 は同じ組とします。",
+       "answer": 2,
+       "check": "len([p for p in range(2, 11) if all(p % d for d in range(2, p)) and all((20 - p) % d for d in range(2, 20 - p))])",
+       "hints": [
+        "20 までの素数を、ぜんぶならべよう。",
+        "小さいほうの素数を、2、3、5、7 と順にためそう。",
+        "20 からひいてのこった数も、素数かどうかを調べよう。"
+       ],
+       "paths": [
+        [
+         "20 までの素数は 2、3、5、7、11、13、17、19",
+         "2 + 18、3 + 17、5 + 15、7 + 13 をためす",
+         "18 と 15 は素数ではない",
+         "3 + 17 と 7 + 13 の 2 組"
+        ]
+       ],
+       "note": "4 より大きい 2 の倍数は、どれも 2 つの素数の和で書けるだろうと考えられているが、まだ証明されていない（ゴールドバッハの予想）。小学生にも意味がわかる未解決の問題として話してよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        25,
+        33,
+        43,
+        49
+       ],
+       "answer": 43,
+       "check": "[c for c in (25, 33, 43, 49) if all(c % d for d in range(2, c))][0]",
+       "hints": [
+        "素数は、約数が 1 とその数自身の 2 こだけの数だね。",
+        "25 と 49 は、九九の答えになっていないかな。",
+        "33 は、3 でわり切れるかな。"
+       ],
+       "paths": [
+        [
+         "25 = 5 × 5、49 = 7 × 7、33 = 3 × 11",
+         43
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 から 40 までの数のうち、素数は何こありますか。",
+       "answer": 2,
+       "check": "len([p for p in range(30, 41) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "2 の倍数と 5 の倍数を、先にのぞこう。",
+        "のこった 31、33、37、39 を調べよう。",
+        "3 でわり切れるかは、30 とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "のこるのは 31、33、37、39",
+         "33 と 39 は 3 の倍数",
+         "31 と 37 の 2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "素数のうち、40 にいちばん近いものはいくつですか。",
+       "answer": 41,
+       "check": "min((p for p in range(2, 100) if all(p % d for d in range(2, p))), key=lambda p: abs(p - 40))",
+       "hints": [
+        "40 のすぐ前と、すぐ後の数を調べよう。",
+        "40 より 1 小さい数と 1 大きい数は、それぞれ素数かな。",
+        "素数でなければ、もう 1 つはなれた数を調べよう。"
+       ],
+       "paths": [
+        [
+         "39 = 3 × 13 で素数ではない",
+         "41 は素数",
+         "40 とのちがいは 1",
+         41
+        ]
+       ],
+       "note": "39 は九九に出てこないので、素数とまちがえやすい。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 30 までの数の表から、素数をさがしましょう。",
+       "figure": " 1  2  3  4  5  6\n 7  8  9 10 11 12\n13 14 15 16 17 18\n19 20 21 22 23 24\n25 26 27 28 29 30",
+       "explain": "まず、素数ではない 1 を消します。次に、2 をのこして 2 の倍数を消し、3 をのこして 3 の倍数を消し、5 をのこして 5 の倍数を消します。のこった 2、3、5、7、11、13、17、19、23、29 の 10 こが、30 までの素数です。このさがし方を「エラトステネスのふるい」といいます。7 の倍数で 30 までのもの（14、21、28）は、2 や 3 の倍数として、もう消えています。表の 1 列は 6 こなので、2 の倍数と 3 の倍数は たての列にならびます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "次のうち、素数ではないものはどれですか。",
+       "choices": [
+        5,
+        11,
+        15,
+        19
+       ],
+       "answer": 15,
+       "check": "[c for c in (5, 11, 15, 19) if any(c % d == 0 for d in range(2, c))][0]",
+       "hints": [
+        "1 とその数のほかに、わり切れる数があるものをさがそう。",
+        "一の位が 5 の数は、5 でわり切れるね。",
+        "5 そのものは、約数が 1 と 5 だけだよ。"
+       ],
+       "paths": [
+        [
+         "15 = 3 × 5",
+         15
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "20 から 30 までの数のうち、素数は何こありますか。",
+       "answer": 2,
+       "check": "len([p for p in range(20, 31) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "2 の倍数と 5 の倍数をのぞこう。",
+        "のこった 21、23、27、29 を調べよう。",
+        "21 と 27 は、3 の段の九九にあるかな。"
+       ],
+       "paths": [
+        [
+         "のこるのは 21、23、27、29",
+         "21 と 27 は 3 の倍数",
+         "23 と 29 の 2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        39,
+        41,
+        45,
+        49
+       ],
+       "answer": 41,
+       "check": "[c for c in (39, 41, 45, 49) if all(c % d for d in range(2, c))][0]",
+       "hints": [
+        "一の位を見て、2 と 5 でわり切れるかを調べよう。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。",
+        "7 でわり切れるかも調べよう。"
+       ],
+       "paths": [
+        [
+         "45 は一の位が 5 で 5 の倍数",
+         "39 = 30 + 9 で 3 の倍数",
+         "49 = 7 × 7",
+         41
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "40 から 50 までの数のうち、素数は何こありますか。",
+       "answer": 3,
+       "check": "len([p for p in range(40, 51) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "2 の倍数と 5 の倍数をのぞこう。",
+        "のこった数が、3 でわり切れるかを調べよう。",
+        "最後に、7 でわり切れるかも調べよう。"
+       ],
+       "paths": [
+        [
+         "のこるのは 41、43、47、49",
+         "3 の倍数はない",
+         "49 = 7 × 7 をのぞいて 41、43、47",
+         "3 こ"
+        ]
+       ],
+       "note": "49 をのこしやすい。2、3、5 だけでなく 7 でも調べる。"
+      },
+      {
+       "part": "今日",
+       "text": "91 は素数ではありません。91 をわり切る数のうち、1 のほかでいちばん小さいものはいくつですか。",
+       "answer": 7,
+       "check": "min(d for d in range(2, 92) if 91 % d == 0)",
+       "hints": [
+        "2、3、5 の順に、わり切れるかを調べよう。",
+        "3 でわり切れるかは、91 を 90 と 1 に分けて見よう。",
+        "2、3、5 でわり切れなければ、次の素数でためそう。何十とのこりに分けると考えやすいよ。"
+       ],
+       "paths": [
+        [
+         "91 は 2 の倍数でも 5 の倍数でもない",
+         "91 = 90 + 1 で 3 でわると 1 あまる",
+         "91 = 70 + 21 で 7 の倍数",
+         7
+        ]
+       ],
+       "note": "91 は九九に出てこないので、素数と思いやすい（91 = 7 × 13）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 50 までの数のうち、素数は何こありますか。",
+       "answer": 15,
+       "check": "len([p for p in range(2, 51) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "見本の表のように、1 から 50 までをならべて考えよう。",
+        "2、3、5 の倍数を消して、のこった数を調べよう。",
+        "7 の倍数で、まだ消えていない数はないかな。"
+       ],
+       "paths": [
+        [
+         "30 までの素数は 10 こ",
+         "31 から 50 までは 31、37、41、43、47 の 5 こ",
+         "10 + 5 = 15 こ"
+        ]
+       ],
+       "note": "49 = 7 × 7 は 2、3、5 の倍数ではないので、7 の倍数まで消さないとのこってしまう。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        51,
+        53,
+        55,
+        57
+       ],
+       "answer": 53,
+       "check": "[c for c in (51, 53, 55, 57) if all(c % d for d in range(2, c))][0]",
+       "hints": [
+        "一の位が 5 の数は、5 でわり切れるね。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。",
+        "51 は 30 と 21、57 は 30 と 27 に分けられるよ。"
+       ],
+       "paths": [
+        [
+         "55 は 5 の倍数",
+         "51 = 3 × 17、57 = 3 × 19",
+         53
+        ]
+       ],
+       "note": "51 と 57 は 3 の倍数だが、九九に出てこないので素数とまちがえやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "60 から 70 までの数のうち、素数は何こありますか。",
+       "answer": 2,
+       "check": "len([p for p in range(60, 71) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "2 の倍数と 5 の倍数をのぞこう。",
+        "のこった 61、63、67、69 を調べよう。",
+        "3 でわり切れるかは、60 とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "のこるのは 61、63、67、69",
+         "63 と 69 は 3 の倍数",
+         "61 と 67 の 2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "77 には、1 と 77 のほかに約数が 2 こあります。そのうち大きいほうはいくつですか。",
+       "answer": 11,
+       "check": "max(d for d in range(2, 77) if 77 % d == 0)",
+       "hints": [
+        "2、3、5 でわり切れるかを調べよう。",
+        "77 を 70 と 7 に分けてみよう。",
+        "7 × □ = 77 の □ は、7 を何回たすと 77 になるかで考えよう。"
+       ],
+       "paths": [
+        [
+         "77 = 70 + 7 で 7 の倍数",
+         "7 × 11 = 77",
+         "大きいほうは 11"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "60 を、素数だけのかけ算で表しましょう。",
+       "explain": "60 を九九で 2 つの数のかけ算に分けると 60 = 6 × 10 です。6 = 2 × 3、10 = 2 × 5 なので、60 = 2 × 3 × 2 × 5。どれも素数になったら、小さい順にならべて 2 × 2 × 3 × 5。同じ 2 が 2 こあるので、2² × 3 × 5 と書きます。このように、素数だけのかけ算で表すことを素因数分解といい、2、3、5 を 60 の素因数といいます。はじめに 60 = 4 × 15 と分けても、4 = 2 × 2、15 = 3 × 5 で、同じ 2² × 3 × 5 になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "次のうち、素数ではないものはどれですか。",
+       "choices": [
+        43,
+        47,
+        51,
+        53
+       ],
+       "answer": 51,
+       "check": "[c for c in (43, 47, 51, 53) if any(c % d == 0 for d in range(2, c))][0]",
+       "hints": [
+        "2、3、5、7 でわり切れるかを調べよう。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。",
+        "30 は 3 の倍数だね。のこりはどうかな。"
+       ],
+       "paths": [
+        [
+         "51 = 30 + 21",
+         "30 も 21 も 3 の倍数",
+         "51 = 3 × 17 で素数ではない"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "2⁵ はいくつですか。",
+       "answer": 32,
+       "check": "2 ** 5",
+       "hints": [
+        "2⁵ は、2 を何回かけた数かな。",
+        "2、4、8…と、2 をかけていこう。",
+        "かける回数を、まちがえないように数えよう。"
+       ],
+       "paths": [
+        [
+         "2 × 2 = 4、4 × 2 = 8、8 × 2 = 16、16 × 2 = 32",
+         32
+        ]
+       ],
+       "note": "2 × 5 = 10 と答えやすい。2⁵ は 2 を 5 回かける。"
+      },
+      {
+       "part": "今日",
+       "text": "36 を素因数分解したものはどれですか。",
+       "choices": [
+        "2² × 9",
+        "2² × 3²",
+        "4 × 3²",
+        "2 × 3 × 6"
+       ],
+       "answer": "2² × 3²",
+       "check": "[s for s, f in (('2² × 9', (2, 2, 9)), ('2² × 3²', (2, 2, 3, 3)), ('4 × 3²', (4, 3, 3)), ('2 × 3 × 6', (2, 3, 6))) if math.prod(f) == 36 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "9、4、6 は素数かな。",
+        "36 = 6 × 6 から分けていこう。"
+       ],
+       "paths": [
+        [
+         "36 = 6 × 6",
+         "6 = 2 × 3 なので 2 × 3 × 2 × 3",
+         "小さい順にまとめて 2² × 3²"
+        ]
+       ],
+       "note": "どの選択肢もかけると 36 になる。素数でない数（9、4、6）がまじっていれば、素因数分解ではない。"
+      },
+      {
+       "part": "今日",
+       "text": "78 を素因数分解したとき、いちばん大きい素因数はいくつですか。",
+       "answer": 13,
+       "check": "max(p for p in range(2, 79) if 78 % p == 0 and all(p % d for d in range(2, p)))",
+       "hints": [
+        "一の位を見ると、まず 2 でわれるね。",
+        "78 = 2 × □ の □ は、□ + □ = 78 で考えよう。",
+        "のこった数を、また素数のかけ算に分けよう。"
+       ],
+       "paths": [
+        [
+         "78 = 2 × 39",
+         "39 = 3 × 13",
+         "78 = 2 × 3 × 13",
+         13
+        ]
+       ],
+       "note": "39 で止めて 39 と答えやすい。39 は素数ではない。"
+      },
+      {
+       "part": "今日",
+       "text": "2³ × 3² はいくつですか。",
+       "answer": 72,
+       "check": "2 ** 3 * 3 ** 2",
+       "hints": [
+        "2³ と 3² を、それぞれ計算しよう。",
+        "2³ は 2 × 2 × 2、3² は 3 × 3 だね。",
+        "2 つの答えをかけよう。"
+       ],
+       "paths": [
+        [
+         "2³ = 8",
+         "3² = 9",
+         "8 × 9 = 72"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "素因数が 2 と 3 だけ（どちらも入っている）の 2 けたの数のうち、いちばん大きいものはいくつですか。",
+       "answer": 96,
+       "check": "max(2 ** a * 3 ** b for a in range(1, 7) for b in range(1, 5) if 2 ** a * 3 ** b < 100)",
+       "hints": [
+        "2 と 3 だけをかけてできる数を考えよう。",
+        "3 を 1 こだけ使うとき、2 はいくつまでかけられるかな。",
+        "3 を 2 こ、3 こ使うときもためして、くらべよう。"
+       ],
+       "paths": [
+        [
+         "3 を 1 こ：3 × 2⁵ = 32 + 32 + 32 = 96",
+         "3 を 2 こ：9 × 2³ = 72",
+         "3 を 3 こ：27 × 2 = 54",
+         "いちばん大きいのは 96"
+        ]
+       ],
+       "note": "2⁶ × 3 は 100 をこえる。3 の数をかえて、それぞれでいちばん大きいものをくらべる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "45 を素因数分解したものはどれですか。",
+       "choices": [
+        "3² × 5",
+        "9 × 5",
+        "3 × 15"
+       ],
+       "answer": "3² × 5",
+       "check": "[s for s, f in (('3² × 5', (3, 3, 5)), ('9 × 5', (9, 5)), ('3 × 15', (3, 15))) if math.prod(f) == 45 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "9 と 15 は素数かな。",
+        "45 = 5 × 9 から分けていこう。"
+       ],
+       "paths": [
+        [
+         "45 = 5 × 9",
+         "9 = 3 × 3",
+         "3² × 5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2² × 3 × 7 はいくつですか。",
+       "answer": 84,
+       "check": "2 ** 2 * 3 * 7",
+       "hints": [
+        "2² はいくつかな。",
+        "2² と 7 を先にかけよう。",
+        "その答えを 3 回たすと、3 をかけたことになるよ。"
+       ],
+       "paths": [
+        [
+         "2² = 4",
+         "4 × 7 = 28",
+         "28 + 28 + 28 = 84"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "素因数分解すると 2 だけのかけ算になる 2 けたの数は、何こありますか。",
+       "answer": 3,
+       "check": "len([2 ** a for a in range(1, 8) if 10 <= 2 ** a < 100])",
+       "hints": [
+        "2 だけをかけてできる数を、2、4、8…と順にならべよう。",
+        "2 けたになるのはどこからかな。",
+        "100 をこえたらやめよう。"
+       ],
+       "paths": [
+        [
+         "2、4、8、16、32、64、128",
+         "2 けたは 16、32、64",
+         "3 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "40 を素因数分解したものはどれですか。",
+       "choices": [
+        "2³ × 5",
+        "4 × 10",
+        "2² × 10"
+       ],
+       "answer": "2³ × 5",
+       "check": "[s for s, f in (('2³ × 5', (2, 2, 2, 5)), ('4 × 10', (4, 10)), ('2² × 10', (2, 2, 10))) if math.prod(f) == 40 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "4 と 10 は素数かな。",
+        "40 = 4 × 10 から、さらに分けていこう。"
+       ],
+       "paths": [
+        [
+         "40 = 4 × 10",
+         "4 = 2 × 2、10 = 2 × 5",
+         "2³ × 5"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        69,
+        71,
+        75
+       ],
+       "answer": 71,
+       "check": "[c for c in (69, 71, 75) if all(c % d for d in range(2, c))][0]",
+       "hints": [
+        "一の位が 5 の数は、5 でわり切れるね。",
+        "3 でわり切れるかは、60 とのこりに分けて見よう。",
+        "7 でわり切れるかも調べよう。"
+       ],
+       "paths": [
+        [
+         "75 は 5 の倍数",
+         "69 = 60 + 9 で 3 の倍数",
+         "71 は 2、3、5、7 でわり切れない",
+         71
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "90 を素因数分解すると、3 は何こかけられていますか。",
+       "answer": 2,
+       "check": "len([k for k in range(1, 5) if 90 % 3 ** k == 0])",
+       "hints": [
+        "90 を九九で 2 つの数に分けよう。",
+        "90 = 9 × 10 と分けられるね。",
+        "9 と 10 を、それぞれ素数のかけ算に分けよう。"
+       ],
+       "paths": [
+        [
+         "90 = 9 × 10",
+         "9 = 3 × 3、10 = 2 × 5",
+         "90 = 2 × 3² × 5",
+         "2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "2 × 3 × 5 + 1 = 31 は、2 でも 3 でも 5 でもわり切れません。そのわけを文に書きましょう。",
+       "explain": "例：「2 × 3 × 5 = 30 は、2 の倍数でも、3 の倍数でも、5 の倍数でもある。31 は 30 より 1 大きいので、2 でわっても、3 でわっても、5 でわっても 1 あまる。だから 31 は 2、3、5 のどれでもわり切れない。」と書ければよい。31 を 2、3、5 で 1 つずつわって確かめただけでは、「かけた数に 1 をたすと、かけた素数ではわり切れない」というわけにならないことを話す。",
+       "hints": [
+        "2 × 3 × 5 は、2 の倍数かな。3 の倍数、5 の倍数ではどうかな。",
+        "31 は、2 × 3 × 5 よりいくつ大きいかな。",
+        "「30 は〜の倍数。31 は 30 より〜なので、〜でわると〜あまる。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "30 は 2、3、5 の倍数",
+         "31 は 30 より 1 大きい",
+         "2、3、5 のどれでわっても 1 あまる",
+         "だからわり切れない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "5 × 7 + 1 = 36 = 2² × 3² です。知っている素数が 5 と 7 だけだとしても、5 × 7 + 1 を素因数分解すれば、新しい素数が見つかります。そのわけを文に書きましょう。",
+       "explain": "例：「5 × 7 = 35 は 5 の倍数でも 7 の倍数でもあるので、36 は 5 でわっても 7 でわっても 1 あまる。だから 36 の素因数（2 と 3）は、5 でも 7 でもない。36 は 1 より大きいので、素因数分解すると素数が少なくとも 1 つは出てくる。それは 5 と 7 のほかの、新しい素数になる。」と書ければよい。どんな素数を集めても、ぜんぶかけて 1 をたした数を素因数分解すれば、集めた素数にない素数が出てくるので、素数はいくらでもある（これがこの単元の主張）。ここでは代表の例で書ければ十分で、どんな素数の集まりでも言えることを筋道立てて書くのは N-030。「5 × 7 + 1 そのものが素数になる」とはかぎらない（36 は素数ではない）ことにも気づかせる。",
+       "hints": [
+        "36 を 5 でわると、あまりはいくつかな。7 でわるとどうかな。",
+        "36 の素因数は何かな。それは 5 や 7 かな。",
+        "「35 は〜の倍数なので、36 は〜でわると〜あまる。だから 36 の素因数は〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "35 は 5 の倍数でも 7 の倍数でもある",
+         "36 は 5 でも 7 でもわると 1 あまる",
+         "36 の素因数 2 と 3 は 5 でも 7 でもない",
+         "だから新しい素数が見つかる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 から 50 までの数から、1 と、2・3・5・7 をのこしてその倍数を消すと、のこりはぜんぶ素数です。11 の倍数を消さなくてよいわけを文に書きましょう。",
+       "explain": "例：「50 までの 11 の倍数は 22、33、44。22 = 11 × 2 は 2 の倍数、33 = 11 × 3 は 3 の倍数、44 = 11 × 4 は 2 の倍数なので、どれも 2 や 3 の倍数として、もう消えている。11 × 5 = 55 は 50 をこえる。だから 11 の倍数を消さなくても同じになる。」と書ければよい。13 や 17 の倍数も同じわけで消さなくてよい。7 の倍数の 49 = 7 × 7 は 2、3、5 の倍数ではないので、7 までは消さないといけない（2 日目の挑戦）。100 までなら 7 まで、つまり かけて 100 をこえない「同じ数どうしのかけ算」の数（7 × 7 = 49、11 × 11 は 100 をこえる）まで調べればよい、と話してよい。",
+       "hints": [
+        "50 までの 11 の倍数を、ぜんぶ書き出そう。",
+        "22、33、44 は、11 × 何かな。それは 2 や 3 の倍数かな。",
+        "「11 の倍数は〜。〜は 2 の倍数、〜は 3 の倍数なので〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "50 までの 11 の倍数は 22、33、44",
+         "22 と 44 は 2 の倍数、33 は 3 の倍数",
+         "もう消えている",
+         "だから 11 の倍数は消さなくてよい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 × 7 + 1 を素因数分解したとき、素因数をぜんぶたすといくつになりますか。",
+       "answer": 13,
+       "check": "sum(p for p in range(2, 23) if (3 * 7 + 1) % p == 0 and all(p % d for d in range(2, p)))",
+       "hints": [
+        "まず、3 × 7 + 1 を計算しよう。",
+        "その数を、素数のかけ算に分けよう。",
+        "出てきた素因数は、3 や 7 になっているかな。"
+       ],
+       "paths": [
+        [
+         "3 × 7 + 1 = 22",
+         "22 = 2 × 11",
+         "2 + 11 = 13"
+        ]
+       ],
+       "note": "22 の素因数 2 と 11 は、3 でも 7 でもない。わけの問題と同じことを、計算で確かめている。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 × 3 × 7 + 1 を 7 でわると、あまりはいくつですか。",
+       "answer": 1,
+       "check": "(2 * 3 * 7 + 1) % 7",
+       "hints": [
+        "2 × 3 × 7 は、7 の倍数かな。",
+        "2 × 3 × 7 + 1 は、その 7 の倍数よりいくつ大きいかな。",
+        "わり算をしなくても、あまりがわかるよ。"
+       ],
+       "paths": [
+        [
+         "2 × 3 × 7 は 7 の倍数",
+         "それより 1 大きい",
+         "あまりは 1"
+        ],
+        [
+         "2 × 3 × 7 + 1 = 43",
+         "43 ÷ 7 = 6 あまり 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 × 7 + 1 を素因数分解したものはどれですか。",
+       "choices": [
+        "2² × 3²",
+        "6²",
+        "4 × 9"
+       ],
+       "answer": "2² × 3²",
+       "check": "[s for s, f in (('2² × 3²', (2, 2, 3, 3)), ('6²', (6, 6)), ('4 × 9', (4, 9))) if math.prod(f) == 5 * 7 + 1 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "まず、5 × 7 + 1 を計算しよう。",
+        "6 や 4 や 9 は素数かな。",
+        "素数だけのかけ算になっているものをえらぼう。"
+       ],
+       "paths": [
+        [
+         "5 × 7 + 1 = 36",
+         "36 = 2 × 2 × 3 × 3",
+         "2² × 3²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 × 3 × 5 + 1 = 31 の次に、2 × 3 × 5 × 7 + 1 を考えます。この数は、2、3、5、7 のうちいくつの数でわり切れますか。",
+       "answer": 0,
+       "check": "len([p for p in (2, 3, 5, 7) if (2 * 3 * 5 * 7 + 1) % p == 0])",
+       "hints": [
+        "2 × 3 × 5 × 7 は、2、3、5、7 のどれの倍数かな。",
+        "2 × 3 × 5 × 7 + 1 は、その数より 1 大きいね。",
+        "大きな数を計算しなくても、あまりがわかるよ。"
+       ],
+       "paths": [
+        [
+         "2 × 3 × 5 × 7 は 2、3、5、7 のどれの倍数でもある",
+         "1 大きいので、どれでわっても 1 あまる",
+         "0 こ"
+        ]
+       ],
+       "note": "2 × 3 × 5 × 7 + 1 = 211 は 100 をこえるので計算させない。わけの日の考えを、計算しないで使えるかを見る。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "70 を素因数分解したものはどれですか。",
+       "choices": [
+        "2 × 5 × 7",
+        "7 × 10",
+        "2 × 35"
+       ],
+       "answer": "2 × 5 × 7",
+       "check": "[s for s, f in (('2 × 5 × 7', (2, 5, 7)), ('7 × 10', (7, 10)), ('2 × 35', (2, 35))) if math.prod(f) == 70 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "10 と 35 は素数かな。",
+        "70 = 7 × 10 から、さらに分けていこう。"
+       ],
+       "paths": [
+        [
+         "70 = 7 × 10",
+         "10 = 2 × 5",
+         "2 × 5 × 7"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 から 40 までの数のうち、素数は何こありますか。",
+       "answer": 12,
+       "check": "len([p for p in range(2, 41) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "30 までの素数は何こだったかな。",
+        "31 から 40 までの数から、2 と 5 の倍数をのぞこう。",
+        "のこった数が 3 や 7 でわり切れるかを調べよう。"
+       ],
+       "paths": [
+        [
+         "30 までは 10 こ",
+         "31 から 40 までは 31 と 37",
+         "10 + 2 = 12 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "48 の約数のうち、素数であるものをぜんぶたすと、いくつになりますか。",
+       "answer": 5,
+       "check": "sum(p for p in range(2, 49) if 48 % p == 0 and all(p % d for d in range(2, p)))",
+       "hints": [
+        "48 の約数のうち、素数のものは、48 の素因数だね。",
+        "48 を素因数分解してみよう。",
+        "同じ素数が何こあっても、1 回だけたそう。"
+       ],
+       "paths": [
+        [
+         "48 = 6 × 8 = 2⁴ × 3",
+         "素数の約数は 2 と 3",
+         "2 + 3 = 5"
+        ],
+        [
+         "48 の約数は 1、2、3、4、6、8、12、16、24、48",
+         "素数は 2 と 3",
+         5
+        ]
+       ],
+       "note": "2 を 4 回たして 2 + 2 + 2 + 2 + 3 = 11 としやすい。約数としての 2 は 1 つ。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 100 までの数のうち、3 の倍数で、しかも素数であるものは何こありますか。",
+       "answer": 1,
+       "check": "len([m for m in range(3, 101, 3) if all(m % d for d in range(2, m))])",
+       "hints": [
+        "3 の倍数は、3 × 1、3 × 2、3 × 3…だね。",
+        "3 × 2 や 3 × 3 は、約数が何こあるかな。",
+        "3 × 1 だけは、ほかとちがうよ。"
+       ],
+       "paths": [
+        [
+         "3 × 2 から先の 3 の倍数は、1 と自身のほかに 3 でわり切れる",
+         "素数ではない",
+         "3 だけで 1 こ"
+        ]
+       ],
+       "note": "0 こと答えやすい。3 そのものは 3 の倍数で、しかも素数。"
+      },
+      {
+       "part": "今日",
+       "text": "4³ を素因数分解すると、2 だけのかけ算になります。2 は何こかけられていますか。",
+       "answer": 6,
+       "check": "len([k for k in range(1, 10) if 4 ** 3 % 2 ** k == 0])",
+       "hints": [
+        "4 を素因数分解すると、2 × 2 だね。",
+        "4³ は、4 を 3 回かけた数だよ。",
+        "4 × 4 × 4 の 4 を、それぞれ 2 × 2 にしよう。"
+       ],
+       "paths": [
+        [
+         "4 = 2²、4³ = 4 × 4 × 4",
+         "2 × 2 × 2 × 2 × 2 × 2",
+         "2⁶ で 6 こ"
+        ],
+        [
+         "4³ = 64",
+         "64 = 2 × 2 × 2 × 2 × 2 × 2",
+         "6 こ"
+        ]
+       ],
+       "note": "4³ の右上の 3 や、4 の 2 から 2 + 3 = 5 と答えやすい。2 の数は 2 こずつ 3 回で 6 こ（A-009 の指数法則）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "2 つの素数をかけると 2 けたの数になり、2 つの素数の差は 4 です。かけてできる数のうち、いちばん大きいものはいくつですか。",
+       "answer": 77,
+       "check": "max(p * (p + 4) for p in range(2, 50) if all(p % d for d in range(2, p)) and all((p + 4) % d for d in range(2, p + 4)) and p * (p + 4) < 100)",
+       "hints": [
+        "差が 4 の素数の組を、小さいほうからさがそう。",
+        "3 と 7、7 と 11、そのあとはどうかな。",
+        "かけて 100 をこえたら、そこでやめよう。"
+       ],
+       "paths": [
+        [
+         "差が 4 の素数の組は 3 と 7、7 と 11、13 と 17…",
+         "3 × 7 = 21、7 × 11 = 77",
+         "13 × 17 は 100 をこえる",
+         77
+        ]
+       ],
+       "note": "13 × 17 は計算しなくても 10 × 10 = 100 より大きいとわかる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "50 の約数のうち、素数であるものは何こありますか。",
+       "answer": 2,
+       "check": "len([p for p in range(2, 51) if 50 % p == 0 and all(p % d for d in range(2, p))])",
+       "hints": [
+        "50 を素因数分解してみよう。",
+        "50 = 2 × 25 と分けられるね。",
+        "出てきた素数を、同じものは 1 回だけ数えよう。"
+       ],
+       "paths": [
+        [
+         "50 = 2 × 5²",
+         "素数の約数は 2 と 5",
+         "2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3³ × 2 はいくつですか。",
+       "answer": 54,
+       "check": "3 ** 3 * 2",
+       "hints": [
+        "3³ はいくつかな。",
+        "3³ は 3 × 3 × 3 だね。",
+        "その答えを 2 回たそう。"
+       ],
+       "paths": [
+        [
+         "3³ = 27",
+         "27 + 27 = 54"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "素数を 3 つかけて 2 けたの数をつくります。同じ素数を何回使ってもかまいません。できる数のうち、いちばん大きいものはいくつですか。",
+       "answer": 99,
+       "check": "max(a * b * c for a in range(2, 50) for b in range(2, 50) for c in range(2, 50) if a * b * c < 100 and all(a % d for d in range(2, a)) and all(b % d for d in range(2, b)) and all(c % d for d in range(2, c)))",
+       "hints": [
+        "2 けたで大きい数から順に、素因数分解してみよう。",
+        "素数がちょうど 3 こかけられているかを調べよう。",
+        "同じ素数が 2 こ入っていても、3 こと数えるよ。"
+       ],
+       "paths": [
+        [
+         "99 = 9 × 11 = 3 × 3 × 11",
+         "素数が 3 こ",
+         99
+        ]
+       ],
+       "note": "98 = 2 × 7 × 7 も素数 3 この積。大きいほうから調べると早い。"
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "次のうち、素数はどれですか。",
+       "choices": [
+        33,
+        37,
+        39,
+        45
+       ],
+       "answer": 37,
+       "check": "[c for c in (33, 37, 39, 45) if all(c % d for d in range(2, c))][0]",
+       "hints": [
+        "2、3、5、7 でわり切れるかを調べよう。",
+        "3 でわり切れるかは、30 とのこりに分けて見よう。",
+        "わり切れる数がないものが素数だよ。"
+       ],
+       "paths": [
+        [
+         "33 = 3 × 11、39 = 3 × 13、45 = 5 × 9",
+         37
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "50 から 60 までの数のうち、素数は何こありますか。",
+       "answer": 2,
+       "check": "len([p for p in range(50, 61) if all(p % d for d in range(2, p))])",
+       "hints": [
+        "2 の倍数と 5 の倍数をのぞこう。",
+        "のこった 51、53、57、59 を調べよう。",
+        "3 でわり切れるかは、30 とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "のこるのは 51、53、57、59",
+         "51 と 57 は 3 の倍数",
+         "53 と 59 の 2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "87 をわり切る数のうち、1 のほかでいちばん小さいものはいくつですか。",
+       "answer": 3,
+       "check": "min(d for d in range(2, 88) if 87 % d == 0)",
+       "hints": [
+        "2 でわり切れるかを、一の位で見よう。",
+        "次は 3 でためそう。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "87 は 2 の倍数ではない",
+         "87 = 60 + 27 で 3 の倍数",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "56 を素因数分解したものはどれですか。",
+       "choices": [
+        "2³ × 7",
+        "7 × 8",
+        "2² × 14"
+       ],
+       "answer": "2³ × 7",
+       "check": "[s for s, f in (('2³ × 7', (2, 2, 2, 7)), ('7 × 8', (7, 8)), ('2² × 14', (2, 2, 14))) if math.prod(f) == 56 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "8 と 14 は素数かな。",
+        "56 = 7 × 8 から、さらに分けていこう。"
+       ],
+       "paths": [
+        [
+         "56 = 7 × 8",
+         "8 = 2 × 2 × 2",
+         "2³ × 7"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 × 3² × 5 はいくつですか。",
+       "answer": 90,
+       "check": "2 * 3 ** 2 * 5",
+       "hints": [
+        "3² はいくつかな。",
+        "2 × 5 を先に計算すると楽だよ。",
+        "2 つの答えをかけよう。"
+       ],
+       "paths": [
+        [
+         "3² = 9",
+         "2 × 5 = 10",
+         "9 × 10 = 90"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "66 を素因数分解したとき、いちばん大きい素因数はいくつですか。",
+       "answer": 11,
+       "check": "max(p for p in range(2, 67) if 66 % p == 0 and all(p % d for d in range(2, p)))",
+       "hints": [
+        "66 は、どんな九九の答えに近いかな。6 でわれるかな。",
+        "66 = 6 × □ の □ は、6 を何回たすと 66 になるかで考えよう。",
+        "出てきた数を、素数のかけ算に分けよう。"
+       ],
+       "paths": [
+        [
+         "66 = 6 × 11",
+         "6 = 2 × 3",
+         "66 = 2 × 3 × 11",
+         11
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 × 5 × 7 + 1 を 5 でわると、あまりはいくつですか。",
+       "answer": 1,
+       "check": "(2 * 5 * 7 + 1) % 5",
+       "hints": [
+        "2 × 5 × 7 は、5 の倍数かな。",
+        "2 × 5 × 7 + 1 は、その数よりいくつ大きいかな。",
+        "わり算をしなくても、あまりがわかるよ。"
+       ],
+       "paths": [
+        [
+         "2 × 5 × 7 は 5 の倍数",
+         "それより 1 大きい",
+         "あまりは 1"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 つの素数をたして 30 にします。何組できますか。7 + 23 と 23 + 7 は同じ組とします。",
+       "answer": 3,
+       "check": "len([p for p in range(2, 16) if all(p % d for d in range(2, p)) and all((30 - p) % d for d in range(2, 30 - p))])",
+       "hints": [
+        "30 までの素数を、ぜんぶならべよう。",
+        "小さいほうの素数を、2 から順にためそう。",
+        "30 からひいてのこった数も、素数かどうかを調べよう。"
+       ],
+       "paths": [
+        [
+         "小さいほうは 2、3、5、7、11、13",
+         "30 からひくと 28、27、25、23、19、17",
+         "素数は 23、19、17 で 3 組"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "次のうち、素数ではないものはどれですか。",
+       "choices": [
+        59,
+        61,
+        63,
+        67
+       ],
+       "answer": 63,
+       "check": "[c for c in (59, 61, 63, 67) if any(c % d == 0 for d in range(2, c))][0]",
+       "hints": [
+        "1 とその数のほかに、わり切れる数があるものをさがそう。",
+        "九九の答えになっている数はないかな。",
+        "3 でわり切れるかは、何十とのこりに分けて見よう。"
+       ],
+       "paths": [
+        [
+         "63 = 7 × 9",
+         63
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2² × 3 × 5 を素因数分解の形でなく、ふつうの数で書くと、いくつですか。",
+       "answer": 60,
+       "check": "2 ** 2 * 3 * 5",
+       "hints": [
+        "2² はいくつかな。",
+        "2² × 5 を先に計算すると楽だよ。",
+        "その答えに 3 をかけよう。"
+       ],
+       "paths": [
+        [
+         "2² = 4",
+         "4 × 5 = 20",
+         "20 × 3 = 60"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ちがう素数を 3 つかけて、2 けたの数をつくります（同じ素数は 2 回使いません）。何こできますか。",
+       "answer": 5,
+       "check": "len([a * b * c for a, b, c in itertools.combinations([p for p in range(2, 50) if all(p % d for d in range(2, p))], 3) if a * b * c < 100])",
+       "hints": [
+        "いちばん小さいのは 2 × 3 × 5 だね。",
+        "2 × 3 に、5 のほかの素数をかけてみよう。",
+        "2 × 5 や 3 × 5 にも、ちがう素数をかけてみよう。100 をこえたらやめよう。"
+       ],
+       "paths": [
+        [
+         "2 × 3 に 5、7、11、13 をかけて 30、42、66、78",
+         "2 × 5 × 7 = 70",
+         "2 × 5 × 11 と 3 × 5 × 7 は 100 をこえる",
+         "5 こ"
+        ]
+       ],
+       "note": "2 × 3 × 17 は 100 をこえる。2 × 3 を先にきめ、かける素数を大きくしていくと、もれなく数えられる。"
+      }
+     ]
     }
    ],
    "p": [
@@ -124735,9 +128265,10 @@ window.ROADMAP = {
     -4.52
    ],
    "comb": {
-    "b": 0.144,
+    "b": 0.255,
     "r": 0.0,
     "rg": [
+     "kazu",
      "seisu",
      "shiki"
     ],
@@ -124752,39 +128283,1278 @@ window.ROADMAP = {
    "level": 2,
    "region": "seisu",
    "needs": [
-    "N-017"
+    "N-017",
+    "N-009",
+    "N-015"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "🔴🔵🟡 の 3 つを、この順にくり返してならべます。20 番目は何色ですか。",
+       "figure": "🔴🔵🟡🔴🔵🟡🔴🔵🟡…",
+       "explain": "🔴🔵🟡 の 3 こで 1 まとまりです。20 ÷ 3 = 6 あまり 2 なので、20 番目は、6 まとまり（18 番目まで）のあとの 2 番目です。まとまりの 2 番目は 🔵 なので、20 番目は 🔵 です。あまりが 0 のとき（18 番目や 21 番目）は、まとまりの最後の 🟡 になります。くり返しの何番目かは、わり算のあまりでわかります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "47 ÷ 6 のあまりはいくつですか。",
+       "answer": 5,
+       "check": "47 % 6",
+       "hints": [
+        "6 の段の九九で、47 をこえない いちばん大きい答えはどれかな。",
+        "47 から、その数をひこう。",
+        "あまりは、わる数の 6 より小さくなるよ。"
+       ],
+       "paths": [
+        [
+         "6 × 7 = 42 で 47 をこえない",
+         "47 − 42 = 5",
+         5
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "次のうち、4 でわると 1 あまる数はどれですか。",
+       "choices": [
+        27,
+        33,
+        38
+       ],
+       "answer": 33,
+       "check": "[c for c in (27, 33, 38) if c % 4 == 1][0]",
+       "hints": [
+        "4 でわると 1 あまる数は、4 の倍数に 1 をたした数だね。",
+        "27、33、38 のすぐ前の 4 の倍数は、それぞれいくつかな。",
+        "4 の倍数より 1 大きいものをえらぼう。"
+       ],
+       "paths": [
+        [
+         "27 = 24 + 3、33 = 32 + 1、38 = 36 + 2",
+         33
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🍎🍊🍋🍇 の 4 つを、この順にくり返してならべます。30 番目のくだものはどれですか。",
+       "figure": "🍎🍊🍋🍇🍎🍊🍋🍇…",
+       "choices": [
+        "🍎",
+        "🍊",
+        "🍋",
+        "🍇"
+       ],
+       "answer": "🍊",
+       "check": "'🍎🍊🍋🍇'[(30 - 1) % 4]",
+       "hints": [
+        "いくつで 1 まとまりかな。",
+        "30 ÷ 4 のあまりを求めよう。",
+        "あまりの数だけ、まとまりの最初から数えよう。"
+       ],
+       "paths": [
+        [
+         "4 こで 1 まとまり",
+         "30 ÷ 4 = 7 あまり 2",
+         "まとまりの 2 番目は 🍊"
+        ]
+       ],
+       "note": "商の 7 を見て 7 番目（または 3 番目の 🍋）と答えやすい。見るのはあまり。"
+      },
+      {
+       "part": "今日",
+       "text": "今日は月曜日です。20 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "日曜日",
+       "check": "'月火水木金土日'[20 % 7] + '曜日'",
+       "hints": [
+        "7 日ごとに、同じ曜日にもどるね。",
+        "20 ÷ 7 のあまりを求めよう。",
+        "月曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "20 ÷ 7 = 2 あまり 6",
+         "14 日後は月曜日",
+         "そこから 6 日進んで日曜日"
+        ]
+       ],
+       "note": "今日を 1 日目と数えて 1 日ずれやすい。今日は 0 日後。"
+      },
+      {
+       "part": "今日",
+       "text": "5 でわると 2 あまる数を小さい順にならべると、2、7、12、…となります。10 番目の数はいくつですか。",
+       "answer": 47,
+       "check": "[x for x in range(100) if x % 5 == 2][9]",
+       "hints": [
+        "となりの数は、いくつずつ大きくなっているかな。",
+        "10 番目は、2 に 5 を何回たした数かな。",
+        "1 番目は、まだ 1 回もたしていないね。"
+       ],
+       "paths": [
+        [
+         "5 ずつ大きくなる",
+         "10 番目は 2 に 5 を 9 回たした数",
+         "2 + 45 = 47"
+        ]
+       ],
+       "note": "5 を 10 回たして 52 としやすい。あまりが同じ数は、わる数ずつはなれている。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 50 までの数を、それぞれ 4 でわります。あまりをぜんぶたすと、いくつになりますか。",
+       "answer": 75,
+       "check": "sum(x % 4 for x in range(1, 51))",
+       "hints": [
+        "1、2、3、4 を 4 でわったあまりは、それぞれいくつかな。",
+        "あまりは、同じ並びをくり返すね。1 まとまりのあまりの和はいくつかな。",
+        "50 までに、まとまりがいくつと、何こがのこるかな。"
+       ],
+       "paths": [
+        [
+         "あまりは 1、2、3、0 のくり返しで、1 まとまりの和は 6",
+         "48 までに 12 まとまりで 6 が 12 こ（60 + 12 = 72）",
+         "49 と 50 のあまり 1 と 2 をたして 75"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "🔺⬛🔺⬛⬛ の 5 つを、この順にくり返してならべます。23 番目はどちらですか。",
+       "figure": "🔺⬛🔺⬛⬛🔺⬛🔺⬛⬛…",
+       "choices": [
+        "🔺",
+        "⬛"
+       ],
+       "answer": "🔺",
+       "check": "'🔺⬛🔺⬛⬛'[(23 - 1) % 5]",
+       "hints": [
+        "いくつで 1 まとまりかな。",
+        "23 ÷ 5 のあまりを求めよう。",
+        "まとまりの最初から、あまりの数だけ数えよう。"
+       ],
+       "paths": [
+        [
+         "5 こで 1 まとまり",
+         "23 ÷ 5 = 4 あまり 3",
+         "まとまりの 3 番目は 🔺"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "今日は木曜日です。30 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "土曜日",
+       "check": "'木金土日月火水'[30 % 7] + '曜日'",
+       "hints": [
+        "7 日ごとに、同じ曜日にもどるね。",
+        "30 ÷ 7 のあまりを求めよう。",
+        "木曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "30 ÷ 7 = 4 あまり 2",
+         "28 日後は木曜日",
+         "2 日進んで土曜日"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "6 でわると 5 あまる 2 けたの数は、何こありますか。",
+       "answer": 15,
+       "check": "len([x for x in range(10, 100) if x % 6 == 5])",
+       "hints": [
+        "いちばん小さいものを見つけよう。6 + 5 はいくつかな。",
+        "そこから 6 ずつ大きくなるね。",
+        "100 をこえない いちばん大きいものはいくつかな。"
+       ],
+       "paths": [
+        [
+         "いちばん小さいのは 11、いちばん大きいのは 95",
+         "11 から 6 ずつ 11、17、23、29、35、41、47、53、59、65、71、77、83、89、95",
+         "15 こ"
+        ]
+       ],
+       "note": "5 は 1 けたなので入らない。6 × 0 + 5 = 5 をのぞくことに気をつける。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "26 を 7 でわるとあまりは 5、19 を 7 でわるとあまりは 5 です。26 + 19 を 7 でわったあまりを、あまりだけを使って求めましょう。",
+       "explain": "26 は 7 のまとまり 3 つとのこり 5、19 は 7 のまとまり 2 つとのこり 5 です。合わせると、7 のまとまり 5 つと、のこり 5 + 5 = 10 です。7 のまとまりは 7 でわり切れるので、あまりはのこりの 10 で決まります。10 ÷ 7 = 1 あまり 3 なので、答えは 3 です。26 + 19 = 45、45 ÷ 7 = 6 あまり 3 で、同じになります。和のあまりは、あまりどうしをたして、わる数より大きければもう一度わります。2 倍は同じ数を 2 回たすことなので、あまりも 2 倍してからわります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "今日は火曜日です。10 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "金曜日",
+       "check": "'火水木金土日月'[10 % 7] + '曜日'",
+       "hints": [
+        "7 日ごとに、同じ曜日にもどるね。",
+        "10 ÷ 7 のあまりを求めよう。",
+        "火曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "10 ÷ 7 = 1 あまり 3",
+         "7 日後は火曜日",
+         "3 日進んで金曜日"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "3 でわると 1 あまる数を小さい順にならべると、1、4、7、…となります。8 番目の数はいくつですか。",
+       "answer": 22,
+       "check": "[x for x in range(100) if x % 3 == 1][7]",
+       "hints": [
+        "となりの数は、いくつずつ大きくなっているかな。",
+        "8 番目は、1 に 3 を何回たした数かな。",
+        "1 番目は、まだ 1 回もたしていないね。"
+       ],
+       "paths": [
+        [
+         "3 ずつ大きくなる",
+         "8 番目は 1 に 3 を 7 回たした数",
+         "1 + 21 = 22"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "赤い玉の数を 6 でわると 4 あまり、白い玉の数を 6 でわると 5 あまります。赤と白を合わせた数を 6 でわると、あまりはいくつですか。",
+       "answer": 3,
+       "check": "sum({(r + w) % 6 for r in range(4, 60, 6) for w in range(5, 60, 6)})",
+       "hints": [
+        "赤い玉を 6 こずつのまとまりにすると、のこりは 4 こだね。",
+        "白い玉ののこり 5 こと合わせよう。",
+        "のこりを合わせた数を、もう一度 6 でわろう。"
+       ],
+       "paths": [
+        [
+         "のこりを合わせて 4 + 5 = 9",
+         "9 ÷ 6 = 1 あまり 3",
+         3
+        ]
+       ],
+       "note": "4 + 5 = 9 をそのまま答えにしやすい。あまりは、わる数の 6 より小さい。"
+      },
+      {
+       "part": "今日",
+       "text": "8 でわると 5 あまる数に、10 をたしました。その数を 8 でわると、あまりはいくつですか。",
+       "answer": 7,
+       "check": "sum({(x + 10) % 8 for x in range(5, 100, 8)})",
+       "hints": [
+        "10 を 8 でわると、あまりはいくつかな。",
+        "あまりどうしをたそう。",
+        "たした数が 8 より小さければ、それがあまりだよ。"
+       ],
+       "paths": [
+        [
+         "10 ÷ 8 = 1 あまり 2",
+         "5 + 2 = 7",
+         "7 は 8 より小さいので 7"
+        ],
+        [
+         "8 でわると 5 あまる数の 13 で ためす",
+         "13 + 10 = 23",
+         "23 ÷ 8 = 2 あまり 7"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "7 でわると 5 あまる数を 2 倍しました。その数を 7 でわると、あまりはいくつですか。",
+       "answer": 3,
+       "check": "sum({(2 * x) % 7 for x in range(5, 100, 7)})",
+       "hints": [
+        "2 倍は、同じ数を 2 回たすことだね。",
+        "あまりも 2 回たそう。",
+        "たした数を、もう一度 7 でわろう。"
+       ],
+       "paths": [
+        [
+         "2 倍は 2 回たすこと",
+         "あまりは 5 + 5 = 10",
+         "10 ÷ 7 = 1 あまり 3",
+         3
+        ]
+       ],
+       "note": "あまりを 2 倍した 10 をそのまま答えたり、5 のままにしたりしやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "今日は水曜日です。100 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "金曜日",
+       "check": "'水木金土日月火'[100 % 7] + '曜日'",
+       "hints": [
+        "100 を 70 とのこりに分けてみよう。",
+        "70 日後は何曜日かな。",
+        "のこりの 30 日を 7 でわったあまりを考えよう。"
+       ],
+       "paths": [
+        [
+         "100 = 70 + 30",
+         "70 は 7 でわり切れる",
+         "30 ÷ 7 = 4 あまり 2",
+         "水曜日から 2 日進んで金曜日"
+        ]
+       ],
+       "note": "100 ÷ 7 は九九でできないが、和のあまりを使うと、70 と 30 に分けて求められる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "5 でわると 3 あまる数と、5 でわると 4 あまる数をたしました。その和を 5 でわると、あまりはいくつですか。",
+       "answer": 2,
+       "check": "sum({(a + b) % 5 for a in range(3, 60, 5) for b in range(4, 60, 5)})",
+       "hints": [
+        "あまりどうしをたそう。",
+        "たした数は、5 より大きいかな。",
+        "5 以上なら、もう一度 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "3 + 4 = 7",
+         "7 ÷ 5 = 1 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9 でわると 7 あまる数から、3 をひきました。その数を 9 でわると、あまりはいくつですか。",
+       "answer": 4,
+       "check": "sum({(x - 3) % 9 for x in range(7, 100, 9)})",
+       "hints": [
+        "9 のまとまりは、そのままのこるね。",
+        "のこりの 7 から 3 をひこう。",
+        "ひいた数が 9 より小さいか、0 より小さくないかを見よう。"
+       ],
+       "paths": [
+        [
+         "のこり 7 から 3 をひく",
+         "7 − 3 = 4",
+         4
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "7 でわると 3 あまる数を 4 倍しました。その数を 7 でわると、あまりはいくつですか。",
+       "answer": 5,
+       "check": "sum({(4 * x) % 7 for x in range(3, 100, 7)})",
+       "hints": [
+        "4 倍は、同じ数を 4 回たすことだね。",
+        "あまりも 4 回たそう。",
+        "たした数を、もう一度 7 でわろう。"
+       ],
+       "paths": [
+        [
+         "あまりを 4 回たして 3 + 3 + 3 + 3 = 12",
+         "12 ÷ 7 = 1 あまり 5",
+         5
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "54 は 9 の倍数ですか。また、58 を 9 でわると、あまりはいくつですか。",
+       "explain": "位の数をたすと 5 + 4 = 9 で、9 の倍数です。位の数の和が 9 の倍数なら、もとの数も 9 の倍数です（54 = 9 × 6）。58 は 5 + 8 = 13、13 ÷ 9 = 1 あまり 4 なので、58 を 9 でわったあまりも 4 です（9 × 6 = 54、58 − 54 = 4）。9 でわったあまりは、位の数の和を 9 でわったあまりと同じです。3 でも同じで、位の数の和が 3 の倍数なら、もとの数も 3 の倍数です。10 を 9 でわると 1 あまることが、このきまりのもとになっています（わけは 4 日目）。"
+      },
+      {
+       "part": "思い出す",
+       "text": "5 でわると 4 あまる数を 3 倍しました。その数を 5 でわると、あまりはいくつですか。",
+       "answer": 2,
+       "check": "sum({(3 * x) % 5 for x in range(4, 100, 5)})",
+       "hints": [
+        "3 倍は、同じ数を 3 回たすことだね。",
+        "あまりも 3 回たそう。",
+        "たした数を、もう一度 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "4 + 4 + 4 = 12",
+         "12 ÷ 5 = 2 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "今日は土曜日です。50 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "日曜日",
+       "check": "'土日月火水木金'[50 % 7] + '曜日'",
+       "hints": [
+        "50 を 7 でわったあまりを求めよう。",
+        "7 × 7 はいくつかな。",
+        "土曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "7 × 7 = 49",
+         "50 ÷ 7 = 7 あまり 1",
+         "土曜日から 1 日進んで日曜日"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "次のうち、3 の倍数はどれですか。",
+       "choices": [
+        74,
+        85,
+        87
+       ],
+       "answer": 87,
+       "check": "[c for c in (74, 85, 87) if c % 3 == 0][0]",
+       "hints": [
+        "位の数をたしてみよう。",
+        "和が 3 の倍数になるのはどれかな。",
+        "7 + 4、8 + 5、8 + 7 をくらべよう。"
+       ],
+       "paths": [
+        [
+         "7 + 4 = 11、8 + 5 = 13、8 + 7 = 15",
+         "15 は 3 の倍数",
+         87
+        ]
+       ],
+       "note": "87 は九九に出てこないので、3 の倍数と気づきにくい（87 = 3 × 29）。"
+      },
+      {
+       "part": "今日",
+       "text": "2 けたの数「4□」が 9 の倍数になるとき、□ に入る数字はいくつですか。",
+       "answer": 5,
+       "check": "[d for d in range(10) if (40 + d) % 9 == 0][0]",
+       "hints": [
+        "位の数の和が 9 の倍数になればよいね。",
+        "4 + □ が 9 になる □ をさがそう。",
+        "4 + □ が 18 になることはあるかな。"
+       ],
+       "paths": [
+        [
+         "4 + □ が 9 の倍数",
+         "4 + 5 = 9",
+         "4 + 14 は 1 つの数字にならない",
+         5
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "77 を 9 でわったあまりを、位の数の和を使って求めましょう。",
+       "answer": 5,
+       "check": "77 % 9",
+       "hints": [
+        "7 + 7 はいくつかな。",
+        "その和を 9 でわろう。",
+        "9 × 8 = 72 を使って確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "7 + 7 = 14",
+         "14 ÷ 9 = 1 あまり 5",
+         5
+        ],
+        [
+         "9 × 8 = 72",
+         "77 − 72 = 5"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1、2、4、5 から ちがう数字を 2 つえらんで、2 けたの数をつくります。3 の倍数は何こできますか。",
+       "answer": 8,
+       "check": "len([10 * a + b for a in (1, 2, 4, 5) for b in (1, 2, 4, 5) if a != b and (10 * a + b) % 3 == 0])",
+       "hints": [
+        "位の数の和が 3 の倍数になる、2 つの数字の組をさがそう。",
+        "1 と 2、1 と 4、…と、組を順にためそう。",
+        "数字の組 1 つから、2 けたの数が 2 こできるよ。"
+       ],
+       "paths": [
+        [
+         "和が 3 の倍数になる組は 1 と 2、1 と 5、2 と 4、4 と 5",
+         "12、21、15、51、24、42、45、54",
+         "8 こ"
+        ]
+       ],
+       "note": "組を 4 つ見つけて 4 こと答えやすい。十の位と一の位を入れかえた数も 3 の倍数になる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "次のうち、9 の倍数はどれですか。",
+       "choices": [
+        63,
+        67,
+        76
+       ],
+       "answer": 63,
+       "check": "[c for c in (63, 67, 76) if c % 9 == 0][0]",
+       "hints": [
+        "位の数をたしてみよう。",
+        "和が 9 の倍数になるのはどれかな。",
+        "6 + 3、6 + 7、7 + 6 をくらべよう。"
+       ],
+       "paths": [
+        [
+         "6 + 3 = 9",
+         63
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "86 を 3 でわったあまりを、位の数の和を使って求めましょう。",
+       "answer": 2,
+       "check": "86 % 3",
+       "hints": [
+        "8 + 6 はいくつかな。",
+        "その和を 3 でわろう。",
+        "あまりは 3 より小さくなるよ。"
+       ],
+       "paths": [
+        [
+         "8 + 6 = 14",
+         "14 ÷ 3 = 4 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "十の位と一の位が同じ数字の 2 けたの数（11、22、…）のうち、3 の倍数は何こありますか。",
+       "answer": 3,
+       "check": "len([11 * d for d in range(1, 10) if (11 * d) % 3 == 0])",
+       "hints": [
+        "位の数の和は、同じ数字を 2 回たした数だね。",
+        "和が 3 の倍数になるのは、数字がいくつのときかな。",
+        "1 から 9 までの数字を、順にためそう。"
+       ],
+       "paths": [
+        [
+         "33 は 3 + 3 = 6、66 は 6 + 6 = 12、99 は 9 + 9 = 18",
+         "3 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "次のうち、3 の倍数ではないものはどれですか。",
+       "choices": [
+        51,
+        57,
+        62
+       ],
+       "answer": 62,
+       "check": "[c for c in (51, 57, 62) if c % 3 != 0][0]",
+       "hints": [
+        "位の数をたしてみよう。",
+        "和が 3 の倍数にならないのはどれかな。",
+        "5 + 1、5 + 7、6 + 2 をくらべよう。"
+       ],
+       "paths": [
+        [
+         "5 + 1 = 6、5 + 7 = 12、6 + 2 = 8",
+         "8 は 3 の倍数ではない",
+         62
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "9 でわると 5 あまる数と、9 でわると 6 あまる数をたしました。その和を 9 でわると、あまりはいくつですか。",
+       "answer": 2,
+       "check": "sum({(a + b) % 9 for a in range(5, 90, 9) for b in range(6, 90, 9)})",
+       "hints": [
+        "あまりどうしをたそう。",
+        "たした数は、9 より大きいかな。",
+        "9 以上なら、もう一度 9 でわろう。"
+       ],
+       "paths": [
+        [
+         "5 + 6 = 11",
+         "11 ÷ 9 = 1 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "今日は金曜日です。40 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "水曜日",
+       "check": "'金土日月火水木'[40 % 7] + '曜日'",
+       "hints": [
+        "40 を 7 でわったあまりを求めよう。",
+        "7 × 5 はいくつかな。",
+        "金曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "40 ÷ 7 = 5 あまり 5",
+         "金曜日から 5 日進んで水曜日"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "23 を 5 でわるとあまりは 3、18 を 5 でわるとあまりは 3 です。23 + 18 を 5 でわったあまりが、3 + 3 = 6 を 5 でわったあまりと同じになるわけを、文に書きましょう。",
+       "explain": "例：「23 は 5 のまとまり 4 つとのこり 3、18 は 5 のまとまり 3 つとのこり 3。合わせると 5 のまとまり 7 つと、のこり 3 + 3 = 6。5 のまとまりは 5 でわり切れるので、あまりはのこりの 6 だけで決まる。6 は 5 のまとまり 1 つと 1 なので、23 + 18 を 5 でわったあまりは 1。」と書ければよい。まとまりとのこりの図（〇を 5 こずつ囲む）で説明してもよい。41 ÷ 5 = 8 あまり 1 を計算して同じだと確かめただけでは、同じになるわけにはならないことを話す。この例で書ければ十分で、どんな数でも成り立つことを文字で書くのは段 4 から。",
+       "hints": [
+        "23 を、5 のまとまりとのこりに分けよう。",
+        "18 も同じように分けて、まとまりどうし、のこりどうしを合わせよう。",
+        "「23 は〜。18 は〜。合わせると〜。5 のまとまりは〜なので、〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "23 は 5 のまとまり 4 つとのこり 3",
+         "18 は 5 のまとまり 3 つとのこり 3",
+         "まとまりはわり切れるので のこりの 6 で決まる",
+         "6 を 5 でわると 1 あまる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "72 は 9 の倍数です。位の数の和 7 + 2 = 9 を見るだけで、72 が 9 の倍数だとわかるわけを、文に書きましょう。",
+       "explain": "例：「72 は 10 が 7 こと 2。10 は 9 と 1 なので、10 が 7 こは、9 が 7 こと 1 が 7 こ。9 が 7 こは 9 でわり切れるので、72 を 9 でわったあまりは、のこりの 7 と 2 をたした 7 + 2 = 9 で決まる。9 は 9 でわり切れるので、72 も 9 の倍数。」と書ければよい。十の位の数がいくつでも、10 が何こかは「9 が何こか」と「1 が何こか」に分けられるので、どの 2 けたの数でも位の数の和で見分けられる。9 が 3 の倍数なので、3 の倍数も同じように見分けられる。「72 = 9 × 8 だから」だけでは、72 が 9 の倍数であるわけにはなるが、位の数の和でよいわけにはならない。",
+       "hints": [
+        "72 を、10 が何ことのこりに分けよう。",
+        "10 は、9 といくつかな。",
+        "「10 が 7 こは、9 が〜と 1 が〜。9 が〜はわり切れるので、〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "72 は 10 が 7 こと 2",
+         "10 = 9 + 1 なので 9 が 7 こと 1 が 7 こ",
+         "9 が 7 こはわり切れる",
+         "のこりは 7 + 2 = 9 で 9 の倍数"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "🔴🔵🟡 をこの順にくり返してならべると、3 番目、6 番目、9 番目、…はどれも 🟡 です。25 番目の色が、25 ÷ 3 のあまりでわかるわけを、文に書きましょう。",
+       "figure": "🔴🔵🟡🔴🔵🟡🔴🔵🟡…",
+       "explain": "例：「🔴🔵🟡 の 3 こで 1 まとまりで、どのまとまりも 🔴🔵🟡 の順になっている。3 の倍数の番目は、いつもまとまりの最後の 🟡。25 ÷ 3 = 8 あまり 1 なので、25 番目は 8 まとまり（24 番目まで）のあとの 1 番目。まとまりの 1 番目は 🔴 なので、25 番目は 🔴。」と書ければよい。「24 番目は 3 の倍数なので 🟡、その次なので 🔴」と書いてもよい。商の 8 は、まとまりの数で、色を決めるのにはいらないことに気づかせる。",
+       "hints": [
+        "いくつで 1 まとまりかな。どのまとまりも同じ順かな。",
+        "25 番目までに、まとまりはいくつあって、何こがのこるかな。",
+        "「3 こで 1 まとまり。25 ÷ 3 = 〜なので、25 番目は〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "3 こで 1 まとまりで、どれも同じ順",
+         "25 ÷ 3 = 8 あまり 1",
+         "25 番目は 8 まとまりのあとの 1 番目",
+         "だから 🔴"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 でわると 2 あまる数を 3 倍しました。その数を 5 でわると、あまりはいくつですか。",
+       "answer": 1,
+       "check": "sum({(3 * x) % 5 for x in range(2, 100, 5)})",
+       "hints": [
+        "3 倍は、同じ数を 3 回たすことだね。",
+        "あまりも 3 回たそう。",
+        "たした数を、もう一度 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "2 + 2 + 2 = 6",
+         "6 ÷ 5 = 1 あまり 1",
+         1
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "次のうち、9 でわると 2 あまる数はどれですか。",
+       "choices": [
+        38,
+        45,
+        52
+       ],
+       "answer": 38,
+       "check": "[c for c in (38, 45, 52) if c % 9 == 2][0]",
+       "hints": [
+        "位の数の和を 9 でわったあまりを、それぞれ求めよう。",
+        "3 + 8、4 + 5、5 + 2 はいくつかな。",
+        "和を 9 でわって、あまりが 2 になるものをえらぼう。"
+       ],
+       "paths": [
+        [
+         "3 + 8 = 11 で 9 でわると 2 あまる",
+         "4 + 5 = 9 であまり 0",
+         "5 + 2 = 7 であまり 7",
+         38
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "今日は日曜日です。60 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "木曜日",
+       "check": "'日月火水木金土'[60 % 7] + '曜日'",
+       "hints": [
+        "60 を 7 でわったあまりを求めよう。",
+        "7 × 8 はいくつかな。",
+        "日曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "7 × 8 = 56",
+         "60 ÷ 7 = 8 あまり 4",
+         "日曜日から 4 日進んで木曜日"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 けたの数で、9 でわると 8 あまる数のうち、いちばん大きいものはいくつですか。",
+       "answer": 98,
+       "check": "max(x for x in range(10, 100) if x % 9 == 8)",
+       "hints": [
+        "9 でわったあまりは、位の数の和でわかるね。",
+        "99 は、9 でわるといくつあまるかな。",
+        "99 から 1 ずつ小さくして、ためしてみよう。"
+       ],
+       "paths": [
+        [
+         "99 は 9 + 9 = 18 で 9 の倍数",
+         "98 は 9 + 8 = 17 で 9 でわると 8 あまる",
+         98
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "2 けたの数「□4」が 3 の倍数になるとき、□ に入る数字は何通りありますか。",
+       "answer": 3,
+       "check": "len([d for d in range(1, 10) if (10 * d + 4) % 3 == 0])",
+       "hints": [
+        "位の数の和が 3 の倍数になればよいね。",
+        "□ + 4 が 6、9、12 になる □ をさがそう。",
+        "□ は 1 から 9 までの数字だよ。"
+       ],
+       "paths": [
+        [
+         "□ + 4 が 3 の倍数",
+         "□ は 2、5、8",
+         "24、54、84 で 3 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "7 でわると 6 あまる数を 2 倍しました。その数を 7 でわると、あまりはいくつですか。",
+       "answer": 5,
+       "check": "sum({(2 * x) % 7 for x in range(6, 100, 7)})",
+       "hints": [
+        "2 倍は、同じ数を 2 回たすことだね。",
+        "あまりも 2 回たそう。",
+        "たした数を、もう一度 7 でわろう。"
+       ],
+       "paths": [
+        [
+         "6 + 6 = 12",
+         "12 ÷ 7 = 1 あまり 5",
+         5
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 60 までの数のうち、5 でわると 3 あまる数は何こありますか。",
+       "answer": 12,
+       "check": "len([x for x in range(1, 61) if x % 5 == 3])",
+       "hints": [
+        "5 でわると 3 あまる数は、5 の倍数に 3 をたした数だね。",
+        "3、8、13、…と 5 ずつならぶよ。",
+        "1 から 10 までに何こあるかを見て、10 ずつ区切って考えよう。"
+       ],
+       "paths": [
+        [
+         "1 から 10 までに 3 と 8 の 2 こ",
+         "10 ずつの区切りが 6 こ",
+         "2 × 6 = 12 こ"
+        ],
+        [
+         "3、8、13、…、58 と 5 ずつならべる",
+         "数えて 12 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "50 をわると 2 あまる数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 51) if 50 % d == 2])",
+       "hints": [
+        "50 から 2 をひいた数は、わる数でわり切れるね。",
+        "わる数は、48 の約数になっているよ。",
+        "あまりの 2 は、わる数より小さくなければいけないよ。"
+       ],
+       "paths": [
+        [
+         "わる数は 48 の約数",
+         "1、2、3、4、6、8、12、16、24、48",
+         "あまり 2 より大きい 3、4、6、8、12、16、24、48 の 8 こ"
+        ]
+       ],
+       "note": "1 と 2 も 48 の約数だが、1 や 2 でわるとあまりは 2 にならない。あまりはわる数より小さい（N-014）。"
+      },
+      {
+       "part": "今日",
+       "text": "あめが 38 こあり、7 人で同じ数ずつ分けると、あまりが出ます。あめを 9 こふやして分けなおすと、あまりはいくつになりますか。",
+       "answer": 5,
+       "check": "(38 + 9) % 7",
+       "hints": [
+        "はじめのあまりはいくつかな。",
+        "ふやした 9 こを 7 でわると、あまりはいくつかな。",
+        "あまりどうしをたそう。"
+       ],
+       "paths": [
+        [
+         "38 ÷ 7 = 5 あまり 3",
+         "9 ÷ 7 = 1 あまり 2",
+         "3 + 2 = 5"
+        ],
+        [
+         "38 + 9 = 47",
+         "47 ÷ 7 = 6 あまり 5"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "3 でわると 2 あまり、5 でわると 4 あまる数のうち、いちばん小さいものはいくつですか。",
+       "answer": 14,
+       "check": "min(x for x in range(1, 100) if x % 3 == 2 and x % 5 == 4)",
+       "hints": [
+        "5 でわると 4 あまる数を、小さい順にならべよう。",
+        "その中から、3 でわると 2 あまるものをさがそう。",
+        "4、9、…と 1 つずつためそう。"
+       ],
+       "paths": [
+        [
+         "5 でわると 4 あまる数は 4、9、14、…",
+         "4 と 9 は 3 でわると 1 と 0 あまる",
+         "14 は 3 でわると 2 あまる",
+         14
+        ]
+       ],
+       "note": "どちらも 1 たすとわり切れる（15 は 3 でも 5 でもわり切れる）ことに気づいたら、ほめてよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 50 までの数のうち、6 でわると 1 あまる数は何こありますか。",
+       "answer": 9,
+       "check": "len([x for x in range(1, 51) if x % 6 == 1])",
+       "hints": [
+        "6 でわると 1 あまる数は、6 の倍数に 1 をたした数だね。",
+        "1 も入るよ（6 × 0 + 1）。",
+        "50 をこえない いちばん大きいものをさがそう。"
+       ],
+       "paths": [
+        [
+         "1、7、13、19、25、31、37、43、49",
+         "9 こ"
+        ]
+       ],
+       "note": "1 を数え忘れて 8 こと答えやすい。1 ÷ 6 = 0 あまり 1。"
+      },
+      {
+       "part": "今日",
+       "text": "40 をわると 4 あまる数は、ぜんぶで何こありますか。",
+       "answer": 5,
+       "check": "len([d for d in range(1, 41) if 40 % d == 4])",
+       "hints": [
+        "40 から 4 をひいた数は、わる数でわり切れるね。",
+        "わる数は、36 の約数になっているよ。",
+        "あまりの 4 は、わる数より小さくなければいけないよ。"
+       ],
+       "paths": [
+        [
+         "わる数は 36 の約数",
+         "1、2、3、4、6、9、12、18、36",
+         "4 より大きい 6、9、12、18、36 の 5 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "4 でわると 3 あまり、6 でわると 5 あまる 2 けたの数のうち、いちばん小さいものはいくつですか。",
+       "answer": 11,
+       "check": "min(x for x in range(10, 100) if x % 4 == 3 and x % 6 == 5)",
+       "hints": [
+        "6 でわると 5 あまる数を、小さい順にならべよう。",
+        "2 けたのものから、4 でわると 3 あまるかを調べよう。",
+        "どちらも 1 たすとわり切れる数になっているね。"
+       ],
+       "paths": [
+        [
+         "6 でわると 5 あまる 2 けたの数は 11、17、…",
+         "11 は 4 でわると 3 あまる",
+         11
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "🟢🟣🟢🟢🟣 の 5 つを、この順にくり返してならべます。33 番目はどちらですか。",
+       "figure": "🟢🟣🟢🟢🟣🟢🟣🟢🟢🟣…",
+       "choices": [
+        "🟢",
+        "🟣"
+       ],
+       "answer": "🟢",
+       "check": "'🟢🟣🟢🟢🟣'[(33 - 1) % 5]",
+       "hints": [
+        "いくつで 1 まとまりかな。",
+        "33 ÷ 5 のあまりを求めよう。",
+        "まとまりの最初から、あまりの数だけ数えよう。"
+       ],
+       "paths": [
+        [
+         "5 こで 1 まとまり",
+         "33 ÷ 5 = 6 あまり 3",
+         "まとまりの 3 番目は 🟢"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "今日は日曜日です。45 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "水曜日",
+       "check": "'日月火水木金土'[45 % 7] + '曜日'",
+       "hints": [
+        "45 を 7 でわったあまりを求めよう。",
+        "7 × 6 はいくつかな。",
+        "日曜日から、あまりの日数だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "45 ÷ 7 = 6 あまり 3",
+         "日曜日から 3 日進んで水曜日"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 でわると 5 あまる数と、6 でわると 3 あまる数をたしました。その和を 6 でわると、あまりはいくつですか。",
+       "answer": 2,
+       "check": "sum({(a + b) % 6 for a in range(5, 60, 6) for b in range(3, 60, 6)})",
+       "hints": [
+        "あまりどうしをたそう。",
+        "たした数は、6 より大きいかな。",
+        "6 以上なら、もう一度 6 でわろう。"
+       ],
+       "paths": [
+        [
+         "5 + 3 = 8",
+         "8 ÷ 6 = 1 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 でわると 3 あまる数を 3 倍しました。その数を 8 でわると、あまりはいくつですか。",
+       "answer": 1,
+       "check": "sum({(3 * x) % 8 for x in range(3, 100, 8)})",
+       "hints": [
+        "3 倍は、同じ数を 3 回たすことだね。",
+        "あまりも 3 回たそう。",
+        "たした数を、もう一度 8 でわろう。"
+       ],
+       "paths": [
+        [
+         "3 + 3 + 3 = 9",
+         "9 ÷ 8 = 1 あまり 1",
+         1
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "次のうち、3 の倍数はどれですか。",
+       "choices": [
+        58,
+        64,
+        75
+       ],
+       "answer": 75,
+       "check": "[c for c in (58, 64, 75) if c % 3 == 0][0]",
+       "hints": [
+        "位の数をたしてみよう。",
+        "和が 3 の倍数になるのはどれかな。",
+        "5 + 8、6 + 4、7 + 5 をくらべよう。"
+       ],
+       "paths": [
+        [
+         "5 + 8 = 13、6 + 4 = 10、7 + 5 = 12",
+         "12 は 3 の倍数",
+         75
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "85 を 9 でわったあまりを、位の数の和を使って求めましょう。",
+       "answer": 4,
+       "check": "85 % 9",
+       "hints": [
+        "8 + 5 はいくつかな。",
+        "その和を 9 でわろう。",
+        "9 × 9 = 81 を使って確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "8 + 5 = 13",
+         "13 ÷ 9 = 1 あまり 4",
+         4
+        ],
+        [
+         "9 × 9 = 81",
+         "85 − 81 = 4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "60 をわると 4 あまる数は、ぜんぶで何こありますか。",
+       "answer": 5,
+       "check": "len([d for d in range(1, 61) if 60 % d == 4])",
+       "hints": [
+        "60 から 4 をひいた数は、わる数でわり切れるね。",
+        "わる数は、56 の約数になっているよ。",
+        "あまりの 4 は、わる数より小さくなければいけないよ。"
+       ],
+       "paths": [
+        [
+         "わる数は 56 の約数",
+         "1、2、4、7、8、14、28、56",
+         "4 より大きい 7、8、14、28、56 の 5 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "3 でわると 1 あまり、4 でわると 1 あまる 2 けたの数のうち、いちばん小さいものはいくつですか。",
+       "answer": 13,
+       "check": "min(x for x in range(10, 100) if x % 3 == 1 and x % 4 == 1)",
+       "hints": [
+        "4 でわると 1 あまる 2 けたの数を、小さい順にならべよう。",
+        "その中から、3 でわると 1 あまるものをさがそう。",
+        "どちらも 1 ひくとわり切れる数になっているね。"
+       ],
+       "paths": [
+        [
+         "4 でわると 1 あまる 2 けたの数は 13、17、21、…",
+         "13 は 3 でわると 1 あまる",
+         13
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "今日は月曜日です。75 日後は何曜日ですか。",
+       "choices": [
+        "月曜日",
+        "火曜日",
+        "水曜日",
+        "木曜日",
+        "金曜日",
+        "土曜日",
+        "日曜日"
+       ],
+       "answer": "土曜日",
+       "check": "'月火水木金土日'[75 % 7] + '曜日'",
+       "hints": [
+        "75 を 70 とのこりに分けてみよう。",
+        "70 日後は何曜日かな。",
+        "のこりの 5 日だけ進めよう。"
+       ],
+       "paths": [
+        [
+         "75 = 70 + 5",
+         "70 日後は月曜日",
+         "5 日進んで土曜日"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 けたの数「7□」が 9 の倍数になるとき、□ に入る数字はいくつですか。",
+       "answer": 2,
+       "check": "[d for d in range(10) if (70 + d) % 9 == 0][0]",
+       "hints": [
+        "位の数の和が 9 の倍数になればよいね。",
+        "7 + □ が 9 になる □ をさがそう。",
+        "7 + □ が 18 になることはあるかな。"
+       ],
+       "paths": [
+        [
+         "7 + 2 = 9",
+         72,
+         2
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 30 までの数を、それぞれ 7 でわります。あまりをぜんぶたすと、いくつになりますか。",
+       "answer": 87,
+       "check": "sum(x % 7 for x in range(1, 31))",
+       "hints": [
+        "1 から 7 までを 7 でわったあまりは、1、2、3、4、5、6、0 だね。",
+        "1 まとまりのあまりの和はいくつかな。",
+        "30 までに、まとまりがいくつと、何こがのこるかな。"
+       ],
+       "paths": [
+        [
+         "1 まとまりのあまりの和は 21",
+         "28 までに 4 まとまりで 21 × 4 = 84",
+         "29 と 30 のあまり 1 と 2 をたして 87"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     3.55,
     17.31,
     -7.86
-   ]
+   ],
+   "comb": {
+    "b": 0.351,
+    "r": 0.0,
+    "rg": [
+     "kazu",
+     "keisan",
+     "seisu"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "N-023",
@@ -124795,28 +129565,960 @@ window.ROADMAP = {
    "region": "seisu",
    "needs": [
     "N-014",
-    "N-022"
+    "N-022",
+    "N-009",
+    "N-020"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "［17 ÷ 5］ はいくつですか。",
+       "explain": "［ ］ は、中のわり算の商（あまりを考えない答え）を表すしるしで、ガウス記号といいます。17 ÷ 5 = 3 あまり 2 なので、［17 ÷ 5］ = 3 です。あまりの 2 はすてます。わり切れるときは、［20 ÷ 5］ = 4 のように、わり算の答えそのものです。"
+      },
+      {
+       "part": "思い出す",
+       "text": "38 ÷ 6 の答えはどれですか。",
+       "choices": [
+        "5 あまり 8",
+        "6 あまり 2",
+        "6 あまり 4"
+       ],
+       "answer": "6 あまり 2",
+       "check": "(lambda q, r: f'{q} あまり {r}')(*divmod(38, 6))",
+       "hints": [
+        "6 の段の九九で、38 をこえない いちばん大きい答えはどれかな。",
+        "38 から、その数をひこう。",
+        "あまりは、わる数の 6 より小さくなるよ。"
+       ],
+       "paths": [
+        [
+         "6 × 6 = 36 で 38 をこえない",
+         "38 − 36 = 2",
+         "6 あまり 2"
+        ]
+       ],
+       "note": "5 あまり 8 は、あまりがわる数より大きいのでまちがい。"
+      },
+      {
+       "part": "思い出す",
+       "text": "5 でわると 3 あまる数に、4 をたしました。その数を 5 でわると、あまりはいくつですか。",
+       "answer": 2,
+       "check": "sum({(x + 4) % 5 for x in range(3, 100, 5)})",
+       "hints": [
+        "あまりどうしをたそう。",
+        "3 + 4 はいくつかな。",
+        "5 以上なら、もう一度 5 でわろう。"
+       ],
+       "paths": [
+        [
+         "3 + 4 = 7",
+         "7 ÷ 5 = 1 あまり 2",
+         2
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［29 ÷ 4］ はいくつですか。",
+       "answer": 7,
+       "check": "29 // 4",
+       "hints": [
+        "29 ÷ 4 のわり算をしよう。",
+        "4 の段の九九で、29 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "4 × 7 = 28 で 29 をこえない",
+         "29 ÷ 4 = 7 あまり 1",
+         7
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［48 ÷ 6］ はいくつですか。",
+       "answer": 8,
+       "check": "48 // 6",
+       "hints": [
+        "48 ÷ 6 のわり算をしよう。",
+        "6 の段の九九で、答えが 48 になるのはどれかな。",
+        "わり切れるときは、わり算の答えそのものだよ。"
+       ],
+       "paths": [
+        [
+         "6 × 8 = 48",
+         "わり切れる",
+         8
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［□ ÷ 5］ = 6 となる □ のうち、いちばん大きい数はいくつですか。",
+       "answer": 34,
+       "check": "max(x for x in range(100) if x // 5 == 6)",
+       "hints": [
+        "［30 ÷ 5］ はいくつかな。",
+        "□ を 30 から 1 ずつ大きくしてみよう。",
+        "商が 7 にかわるのは、□ がいくつのときかな。"
+       ],
+       "paths": [
+        [
+         "5 × 6 = 30、5 × 7 = 35",
+         "□ は 30 から 34 まで",
+         34
+        ]
+       ],
+       "note": "35 と答えやすい。［35 ÷ 5］ = 7 になる。あまりは 4 までしかない。"
+      },
+      {
+       "part": "挑戦",
+       "text": "［□ ÷ 6］ = 4 となる □ のうち、いちばん小さいものと、いちばん大きいものをたすと、いくつですか。",
+       "answer": 53,
+       "check": "min(x for x in range(100) if x // 6 == 4) + max(x for x in range(100) if x // 6 == 4)",
+       "hints": [
+        "いちばん小さいのは、6 でわり切れるときだね。",
+        "いちばん大きいのは、あまりがいちばん大きいときだね。",
+        "あまりは、いくつまで大きくなれるかな。"
+       ],
+       "paths": [
+        [
+         "いちばん小さいのは 6 × 4 = 24",
+         "いちばん大きいのは 24 + 5 = 29",
+         "24 + 29 = 53"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "［50 ÷ 8］ はいくつですか。",
+       "answer": 6,
+       "check": "50 // 8",
+       "hints": [
+        "50 ÷ 8 のわり算をしよう。",
+        "8 の段の九九で、50 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "8 × 6 = 48",
+         "50 ÷ 8 = 6 あまり 2",
+         6
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［27 ÷ 9］ はいくつですか。",
+       "answer": 3,
+       "check": "27 // 9",
+       "hints": [
+        "27 ÷ 9 のわり算をしよう。",
+        "9 の段の九九で、答えが 27 になるのはどれかな。",
+        "わり切れるときは、わり算の答えそのものだよ。"
+       ],
+       "paths": [
+        [
+         "9 × 3 = 27",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "［□ ÷ 3］ = 8 となる □ を、ぜんぶたすといくつですか。",
+       "answer": 75,
+       "check": "sum(x for x in range(100) if x // 3 == 8)",
+       "hints": [
+        "いちばん小さい □ は、3 × 8 だね。",
+        "あまりは 0、1、2 のどれかだよ。",
+        "あてはまる □ をぜんぶ書き出してたそう。"
+       ],
+       "paths": [
+        [
+         "□ は 24、25、26",
+         "24 + 25 + 26 = 75"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 60 までの数のうち、8 の倍数は何こありますか。ガウス記号を使って求めましょう。",
+       "explain": "8 の倍数は 8 × 1、8 × 2、8 × 3、…です。60 をこえないのは 8 × 7 = 56 までなので 7 こです。これは 60 ÷ 8 = 7 あまり 4 の商で、［60 ÷ 8］ = 7 と書けます。1 から □ までの 8 の倍数の数は ［□ ÷ 8］ です。20 から 60 までなら、1 から 60 までの 7 こから、1 から 19 までの ［19 ÷ 8］ = 2 こ（8 と 16）をひいて 5 こです。20 をひくのではなく、20 の 1 つ前の 19 までをひきます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "［43 ÷ 5］ はいくつですか。",
+       "answer": 8,
+       "check": "43 // 5",
+       "hints": [
+        "43 ÷ 5 のわり算をしよう。",
+        "5 の段の九九で、43 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "5 × 8 = 40",
+         "43 ÷ 5 = 8 あまり 3",
+         8
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "［□ ÷ 4］ = 7 となる □ のうち、いちばん小さい数はいくつですか。",
+       "answer": 28,
+       "check": "min(x for x in range(100) if x // 4 == 7)",
+       "hints": [
+        "いちばん小さいのは、4 でわり切れるときだね。",
+        "4 × 7 はいくつかな。",
+        "［27 ÷ 4］ はいくつになるかも見てみよう。"
+       ],
+       "paths": [
+        [
+         "4 × 7 = 28",
+         "［27 ÷ 4］ = 6",
+         28
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 75 までの数のうち、9 の倍数は何こありますか。",
+       "answer": 8,
+       "check": "len([m for m in range(1, 76) if m % 9 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［75 ÷ 9］ だね。",
+        "9 の段の九九で、75 をこえない いちばん大きい答えはどれかな。",
+        "商が、9 の倍数の数だよ。"
+       ],
+       "paths": [
+        [
+         "［75 ÷ 9］",
+         "9 × 8 = 72 で 75 ÷ 9 = 8 あまり 3",
+         "8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "21 から 60 までの数のうち、7 の倍数は何こありますか。",
+       "answer": 6,
+       "check": "len([m for m in range(21, 61) if m % 7 == 0])",
+       "hints": [
+        "1 から 60 までの 7 の倍数は ［60 ÷ 7］ こだね。",
+        "ひくのは、1 から 20 までの 7 の倍数の数だよ。",
+        "［20 ÷ 7］ を求めて、ひき算しよう。"
+       ],
+       "paths": [
+        [
+         "［60 ÷ 7］ = 8",
+         "［20 ÷ 7］ = 2",
+         "8 − 2 = 6 こ"
+        ],
+        [
+         "21、28、35、42、49、56 と書き出す",
+         "6 こ"
+        ]
+       ],
+       "note": "［21 ÷ 7］ = 3 をひいて 5 こと答えやすい。21 は数える中に入るので、1 つ前の 20 までをひく。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 100 までの数のうち、6 の倍数は何こありますか。",
+       "answer": 16,
+       "check": "len([m for m in range(1, 101) if m % 6 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［100 ÷ 6］ だね。",
+        "100 を、60 とのこりに分けよう。",
+        "60 には 6 が 10 こ。のこりの 40 には 6 が何こあるかな。"
+       ],
+       "paths": [
+        [
+         "100 = 60 + 40",
+         "60 ÷ 6 = 10、40 ÷ 6 = 6 あまり 4",
+         "10 + 6 = 16 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 70 までの数のうち、5 の倍数だが 10 の倍数ではない数は何こありますか。",
+       "answer": 7,
+       "check": "len([m for m in range(1, 71) if m % 5 == 0 and m % 10 != 0])",
+       "hints": [
+        "1 から 70 までの 5 の倍数は ［70 ÷ 5］ こだね。",
+        "10 の倍数は、どれも 5 の倍数でもあるよ。",
+        "5 の倍数の数から、10 の倍数の数をひこう。"
+       ],
+       "paths": [
+        [
+         "［70 ÷ 5］ = 14（50 と 20 に分けて 10 + 4）",
+         "［70 ÷ 10］ = 7",
+         "14 − 7 = 7 こ"
+        ],
+        [
+         "5、15、25、35、45、55、65",
+         "7 こ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 90 までの数のうち、7 の倍数は何こありますか。",
+       "answer": 12,
+       "check": "len([m for m in range(1, 91) if m % 7 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［90 ÷ 7］ だね。",
+        "90 を、70 とのこりに分けよう。",
+        "70 には 7 が 10 こ。のこりの 20 には 7 が何こあるかな。"
+       ],
+       "paths": [
+        [
+         "90 = 70 + 20",
+         "70 ÷ 7 = 10、20 ÷ 7 = 2 あまり 6",
+         "10 + 2 = 12 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "31 から 80 までの数のうち、4 の倍数は何こありますか。",
+       "answer": 13,
+       "check": "len([m for m in range(31, 81) if m % 4 == 0])",
+       "hints": [
+        "1 から 80 までの 4 の倍数は ［80 ÷ 4］ こだね。",
+        "ひくのは、1 から 30 までの 4 の倍数の数だよ。",
+        "［30 ÷ 4］ を求めて、ひき算しよう。"
+       ],
+       "paths": [
+        [
+         "［80 ÷ 4］ = 20",
+         "［30 ÷ 4］ = 7",
+         "20 − 7 = 13 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 100 までの数のうち、3 の倍数だが 9 の倍数ではない数は何こありますか。",
+       "answer": 22,
+       "check": "len([m for m in range(1, 101) if m % 3 == 0 and m % 9 != 0])",
+       "hints": [
+        "9 の倍数は、どれも 3 の倍数でもあるね。",
+        "［100 ÷ 3］ と ［100 ÷ 9］ を求めよう。",
+        "100 を 90 とのこりに分けると、わり算がしやすいよ。"
+       ],
+       "paths": [
+        [
+         "［100 ÷ 3］ = 30 + 3 = 33",
+         "［100 ÷ 9］ = 10 + 1 = 11",
+         "33 − 11 = 22 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1 から 50 までの数のうち、6 の倍数は何こありますか。",
+       "answer": 8,
+       "check": "len([m for m in range(1, 51) if m % 6 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［50 ÷ 6］ だね。",
+        "6 の段の九九で、50 をこえない いちばん大きい答えはどれかな。",
+        "商が、6 の倍数の数だよ。"
+       ],
+       "paths": [
+        [
+         "6 × 8 = 48",
+         "［50 ÷ 6］ = 8",
+         "8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "［62 ÷ 9］ はいくつですか。",
+       "answer": 6,
+       "check": "62 // 9",
+       "hints": [
+        "62 ÷ 9 のわり算をしよう。",
+        "9 の段の九九で、62 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "9 × 6 = 54、9 × 7 = 63",
+         "62 ÷ 9 = 6 あまり 8",
+         6
+        ]
+       ],
+       "note": "9 × 7 = 63 は 62 をこえる。あまりが 8 と大きいので、7 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "11 から 50 までの数のうち、3 の倍数は何こありますか。",
+       "answer": 13,
+       "check": "len([m for m in range(11, 51) if m % 3 == 0])",
+       "hints": [
+        "1 から 50 までの 3 の倍数は ［50 ÷ 3］ こだね。",
+        "ひくのは、1 から 10 までの 3 の倍数の数だよ。",
+        "50 を 30 とのこりに分けると、わり算がしやすいよ。"
+       ],
+       "paths": [
+        [
+         "［50 ÷ 3］ = 10 + 6 = 16",
+         "［10 ÷ 3］ = 3",
+         "16 − 3 = 13 こ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 から 45 までの数のうち、7 の倍数の数は ［45 ÷ 7］ = 6 こです。商が倍数の数になるわけを、文に書きましょう。",
+       "explain": "例：「7 の倍数は 7 × 1、7 × 2、7 × 3、…と 7 ずつ大きくなる。45 ÷ 7 = 6 あまり 3 なので、7 × 6 = 42 は 45 をこえず、7 × 7 = 49 は 45 をこえる。だから 45 までの 7 の倍数は 7 × 1 から 7 × 6 までの 6 こで、商の 6 と同じになる。あまりの 3 は、42 の後の 43、44、45 の分で、7 の倍数にはならない。」と書ければよい。「7、14、21、28、35、42 の 6 こ」と書き出しただけでは、商と同じになるわけにはならないので、「7 × 6 まで」と「7 × 7 は 45 をこえる」の 2 つが書けているかを見る。",
+       "hints": [
+        "7 の倍数を、7 × 1、7 × 2、…とならべよう。",
+        "45 をこえない いちばん大きい 7 の倍数は、7 × 何かな。",
+        "「7 × 6 は〜、7 × 7 は〜。だから 45 までの 7 の倍数は〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "7 の倍数は 7 × 1、7 × 2、…",
+         "7 × 6 = 42 は 45 以下、7 × 7 = 49 は 45 をこえる",
+         "だから 7 × 1 から 7 × 6 までの 6 こ",
+         "商の 6 と同じ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "［10 ÷ 4］ = 2、［11 ÷ 4］ = 2、［12 ÷ 4］ = 3 です。□ を 1 ずつ大きくすると、［□ ÷ 4］ は、□ が 4 の倍数のところで 1 ふえ、ほかのところではかわりません。そのわけを文に書きましょう。",
+       "explain": "例：「［□ ÷ 4］ は、1 から □ までにある 4 の倍数の数。□ を 1 大きくすると、数える数が 1 こふえる。ふえた数が 4 の倍数なら、4 の倍数の数が 1 こふえるので、［□ ÷ 4］ も 1 ふえる。4 の倍数でなければ、4 の倍数の数はかわらない。12 は 4 の倍数なので ［12 ÷ 4］ は ［11 ÷ 4］ より 1 大きく、11 は 4 の倍数ではないので ［11 ÷ 4］ は ［10 ÷ 4］ と同じ。」と書ければよい。あまりを使って「11 ÷ 4 はあまり 3。1 ふえるとあまりが 4 になって、4 のまとまりが 1 つふえる」と書いてもよい（N-022 のくり返し）。",
+       "hints": [
+        "［□ ÷ 4］ は、1 から □ までの何の数だったかな。",
+        "□ を 11 から 12 にすると、新しく数えに入る数は何かな。それは 4 の倍数かな。",
+        "「12 は〜なので、4 の倍数の数が〜。11 は〜なので〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "［□ ÷ 4］ は 1 から □ までの 4 の倍数の数",
+         "□ を 1 大きくすると数える数が 1 こふえる",
+         "ふえた数が 4 の倍数なら 1 ふえる",
+         "そうでなければかわらない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "1 から 50 までの 3 の倍数は ［50 ÷ 3］ = 16 こです。そのうち 6 の倍数は、3 の倍数を小さい順にならべた 2 番目、4 番目、6 番目、…です。［50 ÷ 6］ が ［16 ÷ 2］ と同じになるわけを、文に書きましょう。",
+       "explain": "例：「3 の倍数は 3 × 1、3 × 2、3 × 3、…。そのうち 6 の倍数は 6 = 3 × 2、12 = 3 × 4、18 = 3 × 6、…のように、3 にかける数が 2 の倍数になっているもの。50 までの 3 の倍数は 3 × 1 から 3 × 16 までの 16 こなので、6 の倍数の数は、1 から 16 までにある 2 の倍数の数で ［16 ÷ 2］ = 8 こ。これは 50 までの 6 の倍数の数なので、［50 ÷ 6］ = 8 と同じ。」と書ければよい。わり算を 2 回くり返しても、まとめて 3 × 2 = 6 でわっても、同じになる。この考えは、階乗の素因数の個数を数える N-024 と、ルジャンドルの公式（N-034）で使う。2 つの例（6、12）で「3 にかける数が 2 の倍数」と書けていれば十分。",
+       "hints": [
+        "6、12、18 を、3 × □ の形で書いてみよう。",
+        "3 にかける数が、どんな数のときに 6 の倍数になるかな。",
+        "「50 までの 3 の倍数は 3 × 1 から 3 × 16。そのうち 6 の倍数は〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "6 = 3 × 2、12 = 3 × 4、18 = 3 × 6",
+         "3 にかける数が 2 の倍数なら 6 の倍数",
+         "3 にかける数は 1 から 16 まで",
+         "その中の 2 の倍数は ［16 ÷ 2］ = 8 こ",
+         "［50 ÷ 6］ = 8 と同じ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［［45 ÷ 3］ ÷ 2］ はいくつですか。内がわの ［ ］ から計算しましょう。",
+       "answer": 7,
+       "check": "(45 // 3) // 2",
+       "hints": [
+        "まず、［45 ÷ 3］ を求めよう。45 を 30 とのこりに分けるとよいよ。",
+        "その答えを 2 でわった商を求めよう。",
+        "［45 ÷ 6］ と同じになるか、確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "［45 ÷ 3］ = 10 + 5 = 15",
+         "［15 ÷ 2］ = 7",
+         7
+        ],
+        [
+         "わけの問題と同じで ［45 ÷ 6］ と同じ",
+         "6 × 7 = 42",
+         7
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "1 から 70 までの数のうち、6 の倍数は何こありますか。",
+       "answer": 11,
+       "check": "len([m for m in range(1, 71) if m % 6 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［70 ÷ 6］ だね。",
+        "70 を、60 とのこりに分けよう。",
+        "60 には 6 が 10 こ。のこりの 10 には 6 が何こあるかな。"
+       ],
+       "paths": [
+        [
+         "70 = 60 + 10",
+         "10 + 1 = 11",
+         "［70 ÷ 6］ = 11 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［［60 ÷ 2］ ÷ 5］ はいくつですか。",
+       "answer": 6,
+       "check": "(60 // 2) // 5",
+       "hints": [
+        "まず、［60 ÷ 2］ を求めよう。□ + □ = 60 で考えよう。",
+        "その答えを 5 でわった商を求めよう。",
+        "［60 ÷ 10］ と同じになるか、確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "［60 ÷ 2］ = 30",
+         "［30 ÷ 5］ = 6",
+         6
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "□ を 1 から 30 まで 1 ずつ大きくしていくとき、［□ ÷ 7］ の値が 1 ふえるのは何回ありますか。",
+       "answer": 4,
+       "check": "len([x for x in range(2, 31) if x // 7 > (x - 1) // 7])",
+       "hints": [
+        "［□ ÷ 7］ は、□ がどんな数のところで 1 ふえたかな。",
+        "1 から 30 までに、7 の倍数はいくつあるかな。",
+        "1 のときの値は 0 だよ。そこから 30 までに何回ふえるかな。"
+       ],
+       "paths": [
+        [
+         "7 の倍数のところで 1 ふえる",
+         "30 までの 7 の倍数は 7、14、21、28",
+         "4 回"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1 から 80 までの数のうち、6 の倍数は何こありますか。",
+       "answer": 13,
+       "check": "len([m for m in range(1, 81) if m % 6 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［80 ÷ 6］ だね。",
+        "80 を、60 とのこりに分けよう。",
+        "60 には 6 が 10 こ。のこりの 20 には 6 が何こあるかな。"
+       ],
+       "paths": [
+        [
+         "80 = 60 + 20",
+         "10 + 3 = 13",
+         "13 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "［［70 ÷ 2］ ÷ 5］ はいくつですか。",
+       "answer": 7,
+       "check": "(70 // 2) // 5",
+       "hints": [
+        "まず、［70 ÷ 2］ を求めよう。□ + □ = 70 で考えよう。",
+        "その答えを 5 でわった商を求めよう。",
+        "［70 ÷ 10］ と同じになるか、確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "［70 ÷ 2］ = 35",
+         "［35 ÷ 5］ = 7",
+         7
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "47 − 6 × ［47 ÷ 6］ はいくつですか。",
+       "answer": 5,
+       "check": "47 - 6 * (47 // 6)",
+       "hints": [
+        "まず、［47 ÷ 6］ を求めよう。",
+        "6 にその数をかけて、47 からひこう。",
+        "答えは、47 ÷ 6 の何になっているかな。"
+       ],
+       "paths": [
+        [
+         "［47 ÷ 6］ = 7",
+         "6 × 7 = 42",
+         "47 − 42 = 5"
+        ]
+       ],
+       "note": "答えは 47 ÷ 6 のあまり。わられる数 − わる数 × 商 = あまり（N-014 の確かめの式）とつなげる。"
+      },
+      {
+       "part": "今日",
+       "text": "1 日が月曜日で、31 日まである月があります。この月に、日曜日は何回ありますか。",
+       "answer": 4,
+       "check": "len([d for d in range(1, 32) if '月火水木金土日'[(d - 1) % 7] == '日'])",
+       "hints": [
+        "1 日が月曜日なら、はじめての日曜日は何日かな。",
+        "日曜日は、何日ごとにくるかな。",
+        "日曜日の日にちは、7 の倍数になっているね。ガウス記号で数えよう。"
+       ],
+       "paths": [
+        [
+         "日曜日は 7 日、14 日、…と 7 の倍数の日",
+         "［31 ÷ 7］ = 4",
+         "4 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［23 ÷ 5］ + ［19 ÷ 5］ と ［42 ÷ 5］ のちがいは、いくつですか。",
+       "answer": 1,
+       "check": "42 // 5 - (23 // 5 + 19 // 5)",
+       "hints": [
+        "3 つのガウス記号を、それぞれ求めよう。",
+        "23 と 19 を 5 でわったあまりは、いくつかな。",
+        "あまりどうしをたすと、5 以上になるかな。"
+       ],
+       "paths": [
+        [
+         "［23 ÷ 5］ + ［19 ÷ 5］ = 4 + 3 = 7",
+         "［42 ÷ 5］ = 8",
+         "8 − 7 = 1"
+        ]
+       ],
+       "note": "23 + 19 = 42。あまり 3 と 4 を合わせると 7 で、5 のまとまりがもう 1 つできるので、［42 ÷ 5］ のほうが 1 大きい（N-022 の和のあまり）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 日が金曜日で、31 日まである月があります。この月に、日曜日は何回ありますか。",
+       "answer": 5,
+       "check": "len([d for d in range(1, 32) if '金土日月火水木'[(d - 1) % 7] == '日'])",
+       "hints": [
+        "はじめての日曜日は何日かな。",
+        "そこから 7 日ごとに日曜日がくるね。",
+        "31 日をこえない日曜日を、ぜんぶ数えよう。"
+       ],
+       "paths": [
+        [
+         "はじめての日曜日は 3 日",
+         "3、10、17、24、31 日",
+         "5 回"
+        ],
+        [
+         "日曜日の日にちに 4 をたすと 7 の倍数（3 + 4 = 7）",
+         "31 + 4 = 35 までの 7 の倍数は ［35 ÷ 7］ = 5 こ",
+         "5 回"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "53 − 8 × ［53 ÷ 8］ はいくつですか。",
+       "answer": 5,
+       "check": "53 - 8 * (53 // 8)",
+       "hints": [
+        "まず、［53 ÷ 8］ を求めよう。",
+        "8 にその数をかけて、53 からひこう。",
+        "答えは、53 ÷ 8 の何になっているかな。"
+       ],
+       "paths": [
+        [
+         "［53 ÷ 8］ = 6",
+         "8 × 6 = 48",
+         "53 − 48 = 5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 日が火曜日で、30 日まである月があります。この月に、火曜日は何回ありますか。",
+       "answer": 5,
+       "check": "len([d for d in range(1, 31) if '火水木金土日月'[(d - 1) % 7] == '火'])",
+       "hints": [
+        "火曜日は、1 日から 7 日ごとにくるね。",
+        "1、8、15、…と書き出そう。",
+        "30 日をこえないところまで数えよう。"
+       ],
+       "paths": [
+        [
+         "1、8、15、22、29 日",
+         "5 回"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "［□ ÷ 3］ + ［□ ÷ 5］ = 10 となる □ のうち、いちばん小さいものはいくつですか。",
+       "answer": 20,
+       "check": "min(x for x in range(1, 100) if x // 3 + x // 5 == 10)",
+       "hints": [
+        "□ を大きくすると、［□ ÷ 3］ + ［□ ÷ 5］ はふえるか、かわらないかのどちらかだね。",
+        "□ = 15 のときは、いくつになるかな。",
+        "そこから 1 ずつ大きくしてためそう。"
+       ],
+       "paths": [
+        [
+         "□ = 15 で 5 + 3 = 8",
+         "18 で 6 + 3 = 9",
+         "19 で 6 + 3 = 9",
+         "20 で 6 + 4 = 10",
+         20
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "［38 ÷ 7］ はいくつですか。",
+       "answer": 5,
+       "check": "38 // 7",
+       "hints": [
+        "38 ÷ 7 のわり算をしよう。",
+        "7 の段の九九で、38 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "7 × 5 = 35",
+         "38 ÷ 7 = 5 あまり 3",
+         5
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［□ ÷ 9］ = 4 となる □ のうち、いちばん大きい数はいくつですか。",
+       "answer": 44,
+       "check": "max(x for x in range(100) if x // 9 == 4)",
+       "hints": [
+        "［36 ÷ 9］ はいくつかな。",
+        "あまりは、いくつまで大きくなれるかな。",
+        "商が 5 にかわるのは、□ がいくつのときかな。"
+       ],
+       "paths": [
+        [
+         "9 × 4 = 36、9 × 5 = 45",
+         "□ は 36 から 44 まで",
+         44
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 85 までの数のうち、8 の倍数は何こありますか。",
+       "answer": 10,
+       "check": "len([m for m in range(1, 86) if m % 8 == 0])",
+       "hints": [
+        "ガウス記号で書くと、［85 ÷ 8］ だね。",
+        "85 を、80 とのこりに分けよう。",
+        "80 には 8 が何こあるかな。"
+       ],
+       "paths": [
+        [
+         "85 = 80 + 5",
+         "80 ÷ 8 = 10、のこり 5 には 8 がない",
+         "10 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "25 から 90 までの数のうち、6 の倍数は何こありますか。",
+       "answer": 11,
+       "check": "len([m for m in range(25, 91) if m % 6 == 0])",
+       "hints": [
+        "1 から 90 までの 6 の倍数は ［90 ÷ 6］ こだね。",
+        "ひくのは、1 から 24 までの 6 の倍数の数だよ。",
+        "90 は 60 と 30 に分けると、わり算がしやすいよ。"
+       ],
+       "paths": [
+        [
+         "［90 ÷ 6］ = 10 + 5 = 15",
+         "［24 ÷ 6］ = 4",
+         "15 − 4 = 11 こ"
+        ]
+       ],
+       "note": "［25 ÷ 6］ をひいても 4 で同じだが、24 が 6 の倍数なので、［24 ÷ 6］ をひくのが正しい形。"
+      },
+      {
+       "part": "今日",
+       "text": "1 から 90 までの数のうち、4 の倍数だが 8 の倍数ではない数は何こありますか。",
+       "answer": 11,
+       "check": "len([m for m in range(1, 91) if m % 4 == 0 and m % 8 != 0])",
+       "hints": [
+        "8 の倍数は、どれも 4 の倍数でもあるね。",
+        "［90 ÷ 4］ と ［90 ÷ 8］ を求めよう。90 を 80 とのこりに分けるとよいよ。",
+        "4 の倍数の数から、8 の倍数の数をひこう。"
+       ],
+       "paths": [
+        [
+         "［90 ÷ 4］ = 20 + 2 = 22",
+         "［90 ÷ 8］ = 10 + 1 = 11",
+         "22 − 11 = 11 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "［［75 ÷ 2］ ÷ 4］ はいくつですか。",
+       "answer": 9,
+       "check": "(75 // 2) // 4",
+       "hints": [
+        "まず、［75 ÷ 2］ を求めよう。75 を 70 と 5 に分けるとよいよ。",
+        "その答えを 4 でわった商を求めよう。",
+        "［75 ÷ 8］ と同じになるか、確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "［75 ÷ 2］ = 35 + 2 = 37",
+         "［37 ÷ 4］ = 9",
+         9
+        ],
+        [
+         "［75 ÷ 8］ と同じ",
+         "8 × 9 = 72",
+         9
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "62 − 7 × ［62 ÷ 7］ はいくつですか。",
+       "answer": 6,
+       "check": "62 - 7 * (62 // 7)",
+       "hints": [
+        "まず、［62 ÷ 7］ を求めよう。",
+        "7 にその数をかけて、62 からひこう。",
+        "答えは、62 ÷ 7 の何になっているかな。"
+       ],
+       "paths": [
+        [
+         "［62 ÷ 7］ = 8",
+         "7 × 8 = 56",
+         "62 − 56 = 6"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 100 までの数のうち、7 でわったときの商とあまりが同じになる数は何こありますか。",
+       "answer": 6,
+       "check": "len([x for x in range(1, 101) if x // 7 == x % 7])",
+       "hints": [
+        "商もあまりも 1 の数は、7 × 1 + 1 だね。",
+        "商とあまりが 2、3、…のときも考えよう。",
+        "あまりは、いくつまで大きくなれるかな。"
+       ],
+       "paths": [
+        [
+         "7 × 1 + 1 = 8、7 × 2 + 2 = 16、…",
+         "あまりは 6 までなので 7 × 6 + 6 = 48 まで",
+         "8、16、24、32、40、48 の 6 こ"
+        ]
+       ],
+       "note": "7 × 7 + 7 = 56 はあまりが 7 になれないので入らない（56 ÷ 7 = 8 あまり 0）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "［57 ÷ 8］ はいくつですか。",
+       "answer": 7,
+       "check": "57 // 8",
+       "hints": [
+        "57 ÷ 8 のわり算をしよう。",
+        "8 の段の九九で、57 をこえない いちばん大きい答えはどれかな。",
+        "［ ］ は、あまりをすてた商だよ。"
+       ],
+       "paths": [
+        [
+         "8 × 7 = 56",
+         "57 ÷ 8 = 7 あまり 1",
+         7
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "41 から 100 までの数のうち、9 の倍数は何こありますか。",
+       "answer": 7,
+       "check": "len([m for m in range(41, 101) if m % 9 == 0])",
+       "hints": [
+        "1 から 100 までの 9 の倍数は ［100 ÷ 9］ こだね。",
+        "ひくのは、1 から 40 までの 9 の倍数の数だよ。",
+        "100 は 90 と 10 に分けると、わり算がしやすいよ。"
+       ],
+       "paths": [
+        [
+         "［100 ÷ 9］ = 10 + 1 = 11",
+         "［40 ÷ 9］ = 4",
+         "11 − 4 = 7 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 50 までの数のうち、5 でわったときの商とあまりが同じになる数をぜんぶたすと、いくつですか。",
+       "answer": 60,
+       "check": "sum(x for x in range(1, 51) if x // 5 == x % 5)",
+       "hints": [
+        "商もあまりも 1 の数は、5 × 1 + 1 だね。",
+        "あまりは、いくつまで大きくなれるかな。",
+        "あてはまる数をぜんぶ書き出してたそう。"
+       ],
+       "paths": [
+        [
+         "6、12、18、24",
+         "6 + 12 + 18 + 24 = 60"
+        ]
+       ],
+       "note": "5 × 5 + 5 = 30 はあまりが 5 になれないので入らない。"
+      }
+     ]
     }
    ],
    "p": [
@@ -124825,9 +130527,10 @@ window.ROADMAP = {
     -5.95
    ],
    "comb": {
-    "b": 0.311,
+    "b": 0.341,
     "r": 0.0,
     "rg": [
+     "kazu",
      "keisan",
      "seisu"
     ],
@@ -124844,28 +130547,962 @@ window.ROADMAP = {
    "needs": [
     "N-021",
     "C-005",
-    "A-009"
+    "A-009",
+    "N-009"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "12 = 2² × 3 です。12 の約数は、ぜんぶで何こありますか。",
+       "figure": "　｜１　２　４\n１｜１　２　４\n３｜３　６　１２",
+       "explain": "12 の約数は、2 のほうから 1、2、4（2 を 0 こ、1 こ、2 こ使う）のどれか 1 つと、3 のほうから 1、3（3 を 0 こ、1 こ使う）のどれか 1 つをえらんでかけた数です。表にすると、1 行に 3 こ、それが 2 行あるので、ますは 3 × 2 = 6 こ。12 の約数は 1、2、3、4、6、12 の 6 こです。3 は 2² の右上の 2 に 1 をたした数、2 は 3 の右上の 1（3 = 3¹）に 1 をたした数です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "50 を素因数分解したものはどれですか。",
+       "choices": [
+        "2 × 5²",
+        "5 × 10",
+        "2 × 25"
+       ],
+       "answer": "2 × 5²",
+       "check": "[s for s, f in (('2 × 5²', (2, 5, 5)), ('5 × 10', (5, 10)), ('2 × 25', (2, 25))) if math.prod(f) == 50 and all(all(p % d for d in range(2, p)) for p in f)][0]",
+       "hints": [
+        "素因数分解は、素数だけのかけ算だね。",
+        "10 と 25 は素数かな。",
+        "50 = 5 × 10 から、さらに分けていこう。"
+       ],
+       "paths": [
+        [
+         "50 = 5 × 10",
+         "10 = 2 × 5",
+         "2 × 5²"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "パンが 3 しゅるい、のみものが 5 しゅるいあります。パンとのみものを 1 つずつえらぶ組み合わせは、何通りですか。",
+       "answer": 15,
+       "check": "len(set(itertools.product(range(3), range(5))))",
+       "hints": [
+        "どのパンをえらんでも、のみもののえらび方は同じ数だね。",
+        "じゅけい図をかくと、1 つのパンから えだが何本出るかな。",
+        "積の法則を使おう。"
+       ],
+       "paths": [
+        [
+         "どのパンからも のみものが 5 通り",
+         "5 × 3 = 15 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "75 = 3 × 5² です。75 の約数は、ぜんぶで何こありますか。",
+       "answer": 6,
+       "check": "len([d for d in range(1, 76) if 75 % d == 0])",
+       "hints": [
+        "3 のほうから 1、3 の 2 通り、5 のほうからは何通りかな。",
+        "表にすると、1 行に何こ、何行になるかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "3 のほうは 1、3 の 2 通り",
+         "5 のほうは 1、5、25 の 3 通り",
+         "3 × 2 = 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "48 = 2⁴ × 3 です。48 の約数は、ぜんぶで何こありますか。",
+       "answer": 10,
+       "check": "len([d for d in range(1, 49) if 48 % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 4 こまで使えるね。何通りかな。",
+        "3 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 のほうは 1、2、4、8、16 の 5 通り",
+         "3 のほうは 1、3 の 2 通り",
+         "5 × 2 = 10 こ"
+        ]
+       ],
+       "note": "2⁴ の 4 をそのまま使って 4 × 2 = 8 としやすい。2 を 0 こ使う（1 をえらぶ）場合を入れる。"
+      },
+      {
+       "part": "今日",
+       "text": "30 = 2 × 3 × 5 です。30 の約数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 31) if 30 % d == 0])",
+       "hints": [
+        "素数が 3 つあるね。2 のほうは 1、2 の 2 通り。",
+        "3 のほう、5 のほうは、それぞれ何通りかな。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2 は 1、2 の 2 通り、3 は 1、3 の 2 通り、5 は 1、5 の 2 通り",
+         "2 × 2 × 2 = 8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "約数がちょうど 9 こある数のうち、いちばん小さいものはいくつですか。",
+       "answer": 36,
+       "check": "min(x for x in range(1, 101) if len([d for d in range(1, x + 1) if x % d == 0]) == 9)",
+       "hints": [
+        "9 を、かけ算で表してみよう。",
+        "9 = 3 × 3 なら、2 つの素数をそれぞれ何こずつ使えばよいかな。",
+        "小さい素数を使ったほうが、小さい数になるよ。"
+       ],
+       "paths": [
+        [
+         "9 = 3 × 3",
+         "2 つの素数を 2 こずつ使う",
+         "2² × 3² = 4 × 9 = 36",
+         "1 つの素数を 8 こ使う 2⁸ は 100 より大きい",
+         36
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "40 = 2³ × 5 です。40 の約数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 41) if 40 % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 3 こまで使えるね。",
+        "5 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 のほうは 1、2、4、8 の 4 通り",
+         "5 のほうは 1、5 の 2 通り",
+         "4 × 2 = 8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "81 = 3⁴ です。81 の約数は、ぜんぶで何こありますか。",
+       "answer": 5,
+       "check": "len([d for d in range(1, 82) if 81 % d == 0])",
+       "hints": [
+        "3 を 0 こから 4 こまで使えるね。",
+        "3 を 0 こ使うと、どんな数になるかな。",
+        "使い方が何通りあるかを数えよう。"
+       ],
+       "paths": [
+        [
+         "1、3、9、27、81",
+         "5 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "約数がちょうど 6 こある 2 けたの数のうち、いちばん大きいものはいくつですか。",
+       "answer": 99,
+       "check": "max(x for x in range(10, 100) if len([d for d in range(1, x + 1) if x % d == 0]) == 6)",
+       "hints": [
+        "6 = 3 × 2 なので、2 つの素数の片方を 2 こ、もう片方を 1 こ使う形があるね。",
+        "2 けたでいちばん大きい数から順に、素因数分解してためそう。",
+        "約数の数が 6 こになるかを、表で確かめよう。"
+       ],
+       "paths": [
+        [
+         "99 = 9 × 11 = 3² × 11",
+         "3 のほうは 3 通り、11 のほうは 2 通り",
+         "3 × 2 = 6 こ",
+         99
+        ]
+       ],
+       "note": "1 つの素数を 5 こ使う形（2⁵ = 32）もあるが、2 けたでいちばん大きいのは 99。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "12 = 2² × 3 の約数を、ぜんぶたすといくつですか。",
+       "figure": "　｜１　２　４\n１｜１　２　４\n３｜３　６　１２",
+       "explain": "表の 1 行目は 1、2、4 で、和は 7 です。2 行目は 3、6、12 で、どの数も 1 行目の数の 3 倍なので、和も 7 の 3 倍で 21 です。ぜんぶの和は 7 + 21 = 28。7 が 1 こと 7 が 3 こで、7 が 4 こ分なので 7 × 4 = 28 とも書けます。7 は 1 + 2 + 4、4 は 1 + 3 です。約数の和は、素数ごとの和をかけて求められます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "20 = 2² × 5 です。20 の約数は、ぜんぶで何こありますか。",
+       "answer": 6,
+       "check": "len([d for d in range(1, 21) if 20 % d == 0])",
+       "hints": [
+        "2 のほうは、何通りかな。",
+        "5 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 のほうは 1、2、4 の 3 通り",
+         "5 のほうは 1、5 の 2 通り",
+         "3 × 2 = 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "70 = 2 × 5 × 7 です。70 の約数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 71) if 70 % d == 0])",
+       "hints": [
+        "素数が 3 つあるね。",
+        "どの素数も、使うか使わないかの 2 通りだね。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2、5、7 のどれも 2 通り",
+         "2 × 2 × 2 = 8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "18 = 2 × 3² です。18 の約数を、ぜんぶたすといくつですか。",
+       "answer": 39,
+       "check": "sum(d for d in range(1, 19) if 18 % d == 0)",
+       "hints": [
+        "3 のほうの 1、3、9 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目は 1、3、9 で和は 13",
+         "2 行目は 2、6、18 で 13 の 2 倍",
+         "13 が 3 こ分で 13 + 13 + 13 = 39"
+        ],
+        [
+         "1、2、3、6、9、18 をぜんぶたす",
+         39
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "27 = 3³ です。27 の約数を、ぜんぶたすといくつですか。",
+       "answer": 40,
+       "check": "sum(d for d in range(1, 28) if 27 % d == 0)",
+       "hints": [
+        "素数は 3 だけだね。3 を 0 こから 3 こまで使えるよ。",
+        "約数をぜんぶ書き出そう。",
+        "書き出した数をたそう。"
+       ],
+       "paths": [
+        [
+         "約数は 1、3、9、27",
+         "1 + 3 + 9 + 27 = 40"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 = 2² × 5 です。20 の約数を、ぜんぶたすといくつですか。",
+       "answer": 42,
+       "check": "sum(d for d in range(1, 21) if 20 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目は 1、2、4 で和は 7",
+         "2 行目は 5、10、20 で 7 の 5 倍",
+         "7 が 6 こ分で 7 × 6 = 42"
+        ]
+       ],
+       "note": "2 行目の和 35 だけを答えにしやすい。1 行目の 7 も足す。"
+      },
+      {
+       "part": "挑戦",
+       "text": "30 = 2 × 3 × 5 です。30 の約数を、ぜんぶたすといくつですか。",
+       "answer": 72,
+       "check": "sum(d for d in range(1, 31) if 30 % d == 0)",
+       "hints": [
+        "まず 2 × 3 = 6 の約数の和を、表で求めよう。",
+        "30 の約数は、6 の約数と、その 5 倍の数だね。",
+        "6 の約数の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "6 の約数 1、2、3、6 の和は 12",
+         "5 倍の 5、10、15、30 の和は 12 の 5 倍",
+         "12 が 6 こ分で 12 × 6 = 72"
+        ],
+        [
+         "1 + 2 = 3、1 + 3 = 4、1 + 5 = 6",
+         "3 × 4 × 6 = 72"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "32 = 2⁵ です。32 の約数を、ぜんぶたすといくつですか。",
+       "answer": 63,
+       "check": "sum(d for d in range(1, 33) if 32 % d == 0)",
+       "hints": [
+        "2 を 0 こから 5 こまで使えるね。",
+        "約数をぜんぶ書き出そう。",
+        "書き出した数をたそう。"
+       ],
+       "paths": [
+        [
+         "約数は 1、2、4、8、16、32",
+         "たすと 63"
+        ]
+       ],
+       "note": "63 は 64 − 1。2 の累乗の約数の和は、次の 2 の累乗より 1 小さいことに気づいたら、話してよい。"
+      },
+      {
+       "part": "今日",
+       "text": "14 = 2 × 7 です。14 の約数を、ぜんぶたすといくつですか。",
+       "answer": 24,
+       "check": "sum(d for d in range(1, 15) if 14 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2 を 1 行目にしよう。",
+        "2 行目は、1 行目の数の 7 倍だね。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目は 1、2 で和は 3",
+         "2 行目は 7、14 で 3 の 7 倍",
+         "3 が 8 こ分で 3 × 8 = 24"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "36 = 2² × 3² です。36 の約数を、ぜんぶたすといくつですか。",
+       "answer": 91,
+       "check": "sum(d for d in range(1, 37) if 36 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4 を 1 行目にしよう。3 のほうは 1、3、9 の 3 行になるね。",
+        "2 行目は 1 行目の 3 倍、3 行目は 1 行目の 9 倍だね。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 1 + 2 + 4 = 7",
+         "7 が 1 + 3 + 9 = 13 こ分",
+         "7 × 13 = 91"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "60 = 2² × 3 × 5 です。60 の約数は、ぜんぶで何こありますか。",
+       "answer": 12,
+       "check": "len([d for d in range(1, 61) if 60 % d == 0])",
+       "hints": [
+        "2 のほうは何通りかな。",
+        "3 のほう、5 のほうは、それぞれ何通りかな。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2 は 3 通り、3 は 2 通り、5 は 2 通り",
+         "3 × 2 × 2 = 12 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "24 = 2³ × 3 です。24 の約数を、ぜんぶたすといくつですか。",
+       "answer": 60,
+       "check": "sum(d for d in range(1, 25) if 24 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4、8 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 1 + 2 + 4 + 8 = 15",
+         "2 行目は 15 の 3 倍",
+         "15 が 4 こ分で 60"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "18 = 2 × 3² の約数が 3 × 2 = 6 こになるわけを、表を使って文に書きましょう。",
+       "figure": "　｜１　３　９\n１｜１　３　９\n２｜２　６　１８",
+       "explain": "例：「18 の約数は、2 のほうから 1 か 2、3 のほうから 1、3、9 のどれかをえらんでかけた数。表にすると 1 行に 3 こで 2 行なので、ますは 3 × 2 = 6 こ。どのますの数も、18 の素因数の一部をかけた数なので 18 をわり切る。反対に、18 の約数を素因数分解すると、2 は 1 こまで、3 は 2 こまでしか使われていないので、どれも表のどこかに出てくる。だから約数の数は、ますの数と同じ 6 こ。」と書ければよい。「表のますの数を数えた」だけで終わったら、「どのますも約数」と「どの約数も表にある」の 2 つを一言ずつたしてもらう。同じ数が 2 つのますに出ないことは、素因数分解が 1 通りであること（N-021 の主張）によるので、ここでは書けなくてよい。",
+       "hints": [
+        "表の 1 つのますには、どんな数が入っているかな。それは 18 をわり切るかな。",
+        "18 の約数（1、2、3、6、9、18）は、どれも表のどこかにあるかな。",
+        "「表は 1 行に〜こで〜行。どのますも〜。どの約数も〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "表は 1 行に 3 こで 2 行なので 6 ます",
+         "どのますの数も 18 をわり切る",
+         "どの約数も表のどこかにある",
+         "だから約数は 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "18 = 2 × 3² の約数の和は、1 + 3 + 9 = 13 と 1 + 2 = 3 をかけて 13 × 3 = 39 です。かけ算で求められるわけを、表を使って文に書きましょう。",
+       "figure": "　｜１　３　９\n１｜１　３　９\n２｜２　６　１８",
+       "explain": "例：「表の 1 行目は 1、3、9 で、和は 13。2 行目は 2、6、18 で、どの数も 1 行目の数の 2 倍なので、和も 13 の 2 倍。ぜんぶの和は、13 が 1 こと 13 が 2 こで、13 が 3 こ分。3 は 1 + 2 なので、和は 13 × 3 = 39。」と書ければよい。ますの数をぜんぶたして 39 になると確かめただけでは、かけ算でよいわけにはならないことを話す。「行の数が 1 行目の何倍か」が書けているかを見る。",
+       "hints": [
+        "2 行目の数は、1 行目の数の何倍かな。",
+        "2 行目の和は、1 行目の和の何倍かな。",
+        "「1 行目の和は〜。2 行目は〜なので、和は〜。だから、ぜんぶで〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 13",
+         "2 行目はどれも 1 行目の 2 倍なので和も 13 の 2 倍",
+         "13 が 1 + 2 = 3 こ分",
+         "13 × 3 = 39"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "50 = 2 × 5² です。50 の約数は、ぜんぶで何こありますか。",
+       "answer": 6,
+       "check": "len([d for d in range(1, 51) if 50 % d == 0])",
+       "hints": [
+        "5 のほうの 1、5、25 を 1 行目にしよう。",
+        "2 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "5 のほうは 3 通り",
+         "2 のほうは 2 通り",
+         "3 × 2 = 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "50 = 2 × 5² です。50 の約数を、ぜんぶたすといくつですか。",
+       "answer": 93,
+       "check": "sum(d for d in range(1, 51) if 50 % d == 0)",
+       "hints": [
+        "5 のほうの 1、5、25 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目は 1、5、25 で和は 31",
+         "2 行目は 31 の 2 倍",
+         "31 が 3 こ分で 31 + 31 + 31 = 93"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "63 = 3² × 7 です。63 の約数は、ぜんぶで何こありますか。",
+       "answer": 6,
+       "check": "len([d for d in range(1, 64) if 63 % d == 0])",
+       "hints": [
+        "3 のほうは、何通りかな。",
+        "7 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "3 のほうは 1、3、9 の 3 通り",
+         "7 のほうは 2 通り",
+         "3 × 2 = 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2² × 7 = 28 の約数を、ぜんぶたすといくつですか。",
+       "answer": 56,
+       "check": "sum(d for d in range(1, 29) if 28 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の 7 倍だね。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 7",
+         "7 が 1 + 7 = 8 こ分",
+         "7 × 8 = 56"
+        ]
+       ],
+       "note": "28 は、自分をのぞいた約数の和が 28 になる完全数（N-017 の予備）。56 = 28 × 2 になることとつなげてよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 50 までの数のうち、約数の数が 2 でわり切れない数は何こありますか。",
+       "answer": 7,
+       "check": "len([x for x in range(1, 51) if len([d for d in range(1, x + 1) if x % d == 0]) % 2 == 1])",
+       "hints": [
+        "16 = 4 × 4 の約数の数は、2 でわり切れたかな（N-017）。",
+        "約数の数が 2 でわり切れない数は、同じ数どうしをかけた数（1 × 1、2 × 2、…）だね。",
+        "50 をこえない、同じ数どうしをかけた数をならべよう。"
+       ],
+       "paths": [
+        [
+         "1、4、9、16、25、36、49",
+         "7 こ"
+        ]
+       ],
+       "note": "1 も約数が 1 こなので入る。素因数分解すると、どの素数も 2 こ、4 こ…と 2 でわり切れる数だけ使われている。"
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "1 から 10 までの数をぜんぶかけた数を 10! と書き、「10 の階乗」と読みます。10! を素因数分解すると、2 は何こかけられていますか。",
+       "explain": "1 から 10 までのうち、2 の倍数（2、4、6、8、10）は、2 を 1 こずつもっています。10 ÷ 2 = 5 で 5 こ。そのうち 4 の倍数（4、8）は、2 をもう 1 こもっています。4 の倍数は、2 の倍数を小さい順にならべた 2 番目、4 番目なので、5 ÷ 2 = 2 あまり 1 で 2 こ。さらに 8 の倍数（8）は、2 をもう 1 こもっています。2 ÷ 2 = 1 で 1 こ。合わせて 5 + 2 + 1 = 8 こです。商をまた 2 でわることをくり返し、商をぜんぶたします。"
+      },
+      {
+       "part": "思い出す",
+       "text": "24 = 2³ × 3 です。24 の約数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 25) if 24 % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 3 こまで使えるね。",
+        "3 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 のほうは 4 通り",
+         "3 のほうは 2 通り",
+         "4 × 2 = 8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "45 = 3² × 5 です。45 の約数を、ぜんぶたすといくつですか。",
+       "answer": 78,
+       "check": "sum(d for d in range(1, 46) if 45 % d == 0)",
+       "hints": [
+        "3 のほうの 1、3、9 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 13",
+         "13 が 1 + 5 = 6 こ分",
+         "13 × 6 = 78"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "12! を素因数分解すると、2 は何こかけられていますか。",
+       "answer": 10,
+       "check": "sum(len([k for k in range(1, 8) if m % 2 ** k == 0]) for m in range(1, 13))",
+       "hints": [
+        "1 から 12 までの 2 の倍数は何こかな。12 ÷ 2 で求めよう。",
+        "その商を、また 2 でわろう。",
+        "商が 0 になるまでくり返して、商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "12 ÷ 2 = 6",
+         "6 ÷ 2 = 3",
+         "3 ÷ 2 = 1 あまり 1",
+         "6 + 3 + 1 = 10"
+        ],
+        [
+         "2 は 1 こ、4 は 2 こ、6 は 1 こ、8 は 3 こ、10 は 1 こ、12 は 2 こ",
+         "たして 10"
+        ]
+       ],
+       "note": "2 の倍数の数 6 だけを答えやすい。4 の倍数や 8 の倍数は、2 を 2 こ以上もっている。"
+      },
+      {
+       "part": "今日",
+       "text": "15! を素因数分解すると、3 は何こかけられていますか。",
+       "answer": 6,
+       "check": "sum(len([k for k in range(1, 5) if m % 3 ** k == 0]) for m in range(1, 16))",
+       "hints": [
+        "1 から 15 までの 3 の倍数は何こかな。15 ÷ 3 で求めよう。",
+        "その商を、また 3 でわろう。",
+        "商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "15 ÷ 3 = 5",
+         "5 ÷ 3 = 1 あまり 2",
+         "5 + 1 = 6"
+        ],
+        [
+         "3、6、12、15 は 1 こずつ、9 は 2 こ",
+         "たして 6"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "16! の 2 の数は、16 ÷ 2 = 8、8 ÷ 2 = 4、4 ÷ 2 = 2、2 ÷ 2 = 1 の商をたした 8 + 4 + 2 + 1 = 15 こです。商をたすと 2 の数になるわけを、文に書きましょう。",
+       "explain": "例：「1 から 16 までの 2 の倍数は 8 こで、どれも 2 を 1 こはもっている。2 の倍数を小さい順にならべると、2 番目、4 番目、…が 4 の倍数で 8 ÷ 2 = 4 こ。4 の倍数は 2 をもう 1 こもっている。同じように、8 の倍数は 4 ÷ 2 = 2 こ、16 の倍数は 1 こで、それぞれ 2 をもう 1 こずつもっている。たとえば 8 は、2 の倍数、4 の倍数、8 の倍数として 3 回数えられ、8 = 2³ の 2 の数と同じになる。だから、商をたした 8 + 4 + 2 + 1 = 15 が 2 の数になる。」と書ければよい。1 つの数（8 や 12）が何回数えられるかを確かめて書けていれば十分。数え方そのもの（ルジャンドルの公式）を文字で書くのは N-034。",
+       "hints": [
+        "1 から 16 までの 2 の倍数、4 の倍数、8 の倍数、16 の倍数は、それぞれ何こかな。",
+        "8 は、どの倍数として数えられているかな。8 は 2 を何こもっているかな。",
+        "「8 は〜として〜回数えられる。8 = 2³ なので〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "2 の倍数 8 こ、4 の倍数 4 こ、8 の倍数 2 こ、16 の倍数 1 こ",
+         "8 は 2・4・8 の倍数として 3 回数えられる",
+         "8 = 2³ で 2 の数と同じ",
+         "だから商の和が 2 の数"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5! = 2³ × 3 × 5 です。5! の約数は、ぜんぶで何こありますか。",
+       "answer": 16,
+       "check": "len([d for d in range(1, 121) if math.factorial(5) % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 3 こまで使えるね。",
+        "3 のほう、5 のほうは、それぞれ何通りかな。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2 は 4 通り、3 は 2 通り、5 は 2 通り",
+         "4 × 2 × 2 = 16 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 25 までの数をぜんぶかけた 25! は、一の位から 0 がいくつ続きますか。",
+       "answer": 6,
+       "check": "max(k for k in range(0, 12) if math.factorial(25) % 10 ** k == 0)",
+       "hints": [
+        "10 をかけるごとに、一の位に 0 が 1 つふえるね。",
+        "10 = 2 × 5 なので、2 と 5 の組がいくつできるかを考えよう。",
+        "2 と 5 では、どちらの数が少ないかな。"
+       ],
+       "paths": [
+        [
+         "25 ÷ 5 = 5、5 ÷ 5 = 1",
+         "5 は 5 + 1 = 6 こ",
+         "2 はもっと多い",
+         "0 は 6 こ"
+        ]
+       ],
+       "note": "25 = 5 × 5 が 5 を 2 こもつことを忘れて 5 こと答えやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "20! を素因数分解すると、5 は何こかけられていますか。",
+       "answer": 4,
+       "check": "sum(len([k for k in range(1, 3) if m % 5 ** k == 0]) for m in range(1, 21))",
+       "hints": [
+        "1 から 20 までの 5 の倍数は何こかな。",
+        "その商を、また 5 でわろう。",
+        "商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "20 ÷ 5 = 4",
+         "4 ÷ 5 = 0 あまり 4",
+         4
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9! を素因数分解すると、3 は何こかけられていますか。",
+       "answer": 4,
+       "check": "sum(len([k for k in range(1, 4) if m % 3 ** k == 0]) for m in range(1, 10))",
+       "hints": [
+        "1 から 9 までの 3 の倍数は何こかな。",
+        "その商を、また 3 でわろう。",
+        "商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "9 ÷ 3 = 3",
+         "3 ÷ 3 = 1",
+         "3 + 1 = 4"
+        ],
+        [
+         "3 と 6 は 1 こずつ、9 は 2 こ",
+         4
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "4! = 2³ × 3 です。4! の約数を、ぜんぶたすといくつですか。",
+       "answer": 60,
+       "check": "sum(d for d in range(1, 25) if math.factorial(4) % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4、8 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の何倍かな。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 15",
+         "15 が 1 + 3 = 4 こ分",
+         "15 × 4 = 60"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "28 = 2² × 7 です。28 の約数は、ぜんぶで何こありますか。",
+       "answer": 6,
+       "check": "len([d for d in range(1, 29) if 28 % d == 0])",
+       "hints": [
+        "2 のほうは、何通りかな。",
+        "7 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 は 3 通り、7 は 2 通り",
+         "3 × 2 = 6 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "42 = 2 × 3 × 7 です。42 の約数は、ぜんぶで何こありますか。",
+       "answer": 8,
+       "check": "len([d for d in range(1, 43) if 42 % d == 0])",
+       "hints": [
+        "素数が 3 つあるね。",
+        "どの素数も、使うか使わないかの 2 通りだね。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2、3、7 のどれも 2 通り",
+         "2 × 2 × 2 = 8 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "80 = 2⁴ × 5 です。80 の約数は、ぜんぶで何こありますか。",
+       "answer": 10,
+       "check": "len([d for d in range(1, 81) if 80 % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 4 こまで使えるね。",
+        "5 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 は 5 通り、5 は 2 通り",
+         "5 × 2 = 10 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "44 = 2² × 11 です。44 の約数を、ぜんぶたすといくつですか。",
+       "answer": 84,
+       "check": "sum(d for d in range(1, 45) if 44 % d == 0)",
+       "hints": [
+        "2 のほうの 1、2、4 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の 11 倍だね。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 7",
+         "7 が 1 + 11 = 12 こ分",
+         "7 × 12 = 70 + 14 = 84"
+        ],
+        [
+         "1、2、4、11、22、44 をたす",
+         84
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "14! を素因数分解すると、2 は何こかけられていますか。",
+       "answer": 11,
+       "check": "sum(len([k for k in range(1, 8) if m % 2 ** k == 0]) for m in range(1, 15))",
+       "hints": [
+        "14 ÷ 2 で、2 の倍数の数を求めよう。",
+        "その商を、また 2 でわろう。",
+        "商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "14 ÷ 2 = 7",
+         "7 ÷ 2 = 3 あまり 1",
+         "3 ÷ 2 = 1 あまり 1",
+         "7 + 3 + 1 = 11"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "18! を素因数分解すると、3 は何こかけられていますか。",
+       "answer": 8,
+       "check": "sum(len([k for k in range(1, 5) if m % 3 ** k == 0]) for m in range(1, 19))",
+       "hints": [
+        "18 ÷ 3 で、3 の倍数の数を求めよう。",
+        "その商を、また 3 でわろう。",
+        "商をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "18 ÷ 3 = 6",
+         "6 ÷ 3 = 2",
+         "6 + 2 = 8"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6! = 2⁴ × 3² × 5 です。6! の約数は、ぜんぶで何こありますか。",
+       "answer": 30,
+       "check": "len([d for d in range(1, 721) if math.factorial(6) % d == 0])",
+       "hints": [
+        "2 のほう、3 のほう、5 のほうは、それぞれ何通りかな。",
+        "2 は 0 こから 4 こまで、3 は 0 こから 2 こまで使えるね。",
+        "積の法則で、3 つの数をかけよう。"
+       ],
+       "paths": [
+        [
+         "2 は 5 通り、3 は 3 通り、5 は 2 通り",
+         "5 × 3 × 2 = 30 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 30 までの数をぜんぶかけた 30! は、一の位から 0 がいくつ続きますか。",
+       "answer": 7,
+       "check": "max(k for k in range(0, 12) if math.factorial(30) % 10 ** k == 0)",
+       "hints": [
+        "0 の数は、2 と 5 の組の数で決まるね。",
+        "5 の数を、わり算のくり返しで数えよう。",
+        "25 は、5 を何こもっているかな。"
+       ],
+       "paths": [
+        [
+         "30 ÷ 5 = 6、6 ÷ 5 = 1 あまり 1",
+         "5 は 6 + 1 = 7 こ",
+         "2 はもっと多い",
+         "0 は 7 こ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "15 = 3 × 5 です。15 の約数を、ぜんぶたすといくつですか。",
+       "answer": 24,
+       "check": "sum(d for d in range(1, 16) if 15 % d == 0)",
+       "hints": [
+        "3 のほうの 1、3 を 1 行目にして、和を求めよう。",
+        "2 行目は、1 行目の数の 5 倍だね。",
+        "1 行目の和が何こ分になるかを考えよう。"
+       ],
+       "paths": [
+        [
+         "1 行目の和は 4",
+         "4 が 1 + 5 = 6 こ分",
+         "4 × 6 = 24"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "96 = 2⁵ × 3 です。96 の約数は、ぜんぶで何こありますか。",
+       "answer": 12,
+       "check": "len([d for d in range(1, 97) if 96 % d == 0])",
+       "hints": [
+        "2 のほうは、2 を 0 こから 5 こまで使えるね。",
+        "3 のほうは、何通りかな。",
+        "ますの数を、かけ算で求めよう。"
+       ],
+       "paths": [
+        [
+         "2 は 6 通り、3 は 2 通り",
+         "6 × 2 = 12 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 20 までの数をぜんぶかけた 20! は、一の位から 0 がいくつ続きますか。",
+       "answer": 4,
+       "check": "max(k for k in range(0, 12) if math.factorial(20) % 10 ** k == 0)",
+       "hints": [
+        "0 の数は、2 と 5 の組の数で決まるね。",
+        "1 から 20 までの 5 の倍数は何こかな。",
+        "2 の数は、5 の数より多いかな。"
+       ],
+       "paths": [
+        [
+         "20 ÷ 5 = 4",
+         "25 の倍数はない",
+         "0 は 4 こ"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -124874,10 +131511,11 @@ window.ROADMAP = {
     -5.27
    ],
    "comb": {
-    "b": 0.294,
+    "b": 0.321,
     "r": 0.0,
     "rg": [
      "kazoekata",
+     "kazu",
      "seisu",
      "shiki"
     ],
@@ -124899,23 +131537,981 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "2 進法の 1101 は、ふだんの書き方（10 進法）でいくつですか。",
+       "figure": "位の大きさ　８　４　２　１\n数字　　　　１　１　０　１",
+       "explain": "ふだんの数は、10 こ集まると次の位に上がります。これを 10 進法といいます。位は右から 1、10、100（10、10²）です。2 進法では、2 こ集まると次の位に上がり、位は右から 1、2、4、8（2、2²、2³）です。2 進法の 1101 は、8 が 1 こ、4 が 1 こ、2 が 0 こ、1 が 1 こなので、8 + 4 + 1 = 13 です。2 進法では、0 と 1 の 2 つの数字だけを使います。"
+      },
+      {
+       "part": "思い出す",
+       "text": "百の位が 4、十の位が 0、一の位が 6 の数は、いくつですか。",
+       "answer": 406,
+       "check": "4 * 100 + 0 * 10 + 6",
+       "hints": [
+        "百の位、十の位、一の位の順に数字をならべよう。",
+        "十の位が 0 のときは、0 を書くよ。",
+        "100 が 4 こと、1 が 6 こだね。"
+       ],
+       "paths": [
+        [
+         "100 が 4 こで 400",
+         "10 が 0 こ",
+         "1 が 6 こで 406"
+        ]
+       ],
+       "note": "0 をとばして 46 と書きやすい（N-009）。"
+      },
+      {
+       "part": "思い出す",
+       "text": "2⁴ はいくつですか。",
+       "answer": 16,
+       "check": "2 ** 4",
+       "hints": [
+        "2⁴ は、2 を何回かけた数かな。",
+        "2、4、8…と、2 をかけていこう。",
+        "かける回数を、まちがえないように数えよう。"
+       ],
+       "paths": [
+        [
+         "2 × 2 = 4、4 × 2 = 8、8 × 2 = 16",
+         16
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法の 110 は、10 進法でいくつですか。",
+       "answer": 6,
+       "check": "sum((110 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4 だね。",
+        "それぞれの位に、数字がいくつあるかな。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "4 が 1 こ、2 が 1 こ、1 が 0 こ",
+         "4 + 2 = 6"
+        ]
+       ],
+       "note": "10 進法の 110（百十）と読みやすい。どの書き方の数かを、はじめにたしかめる。"
+      },
+      {
+       "part": "今日",
+       "text": "2 進法の 10101 は、10 進法でいくつですか。",
+       "answer": 21,
+       "check": "sum((10101 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4、8、16 だね。",
+        "1 が書いてある位はどこかな。",
+        "1 が書いてある位の大きさだけをたそう。"
+       ],
+       "paths": [
+        [
+         "16 の位、4 の位、1 の位が 1",
+         "16 + 4 + 1 = 21"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 進法では、3 こ集まると次の位に上がります。3 進法の 212 は、10 進法でいくつですか。",
+       "answer": 23,
+       "check": "sum((212 // 10 ** i) % 10 * 3 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、右から 1、3、□ だね。",
+        "3 の次の位は、3 × 3 だよ。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "位は 9、3、1",
+         "9 が 2 こで 18、3 が 1 こで 3、1 が 2 こで 2",
+         "18 + 3 + 2 = 23"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "5 進法では、5 こ集まると次の位に上がります。5 進法の 234 は、10 進法でいくつですか。",
+       "answer": 69,
+       "check": "sum((234 // 10 ** i) % 10 * 5 ** i for i in range(8))",
+       "hints": [
+        "5 進法の位は、右から 1、5、□ だね。",
+        "5 の次の位は、5 × 5 だよ。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "位は 25、5、1",
+         "25 が 2 こで 50、5 が 3 こで 15、1 が 4 こで 4",
+         "50 + 15 + 4 = 69"
+        ]
+       ],
+       "note": "3 番目の位を 10 とまちがえやすい。5 進法の位は 1、5、25、125。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 進法の 1001 は、10 進法でいくつですか。",
+       "answer": 9,
+       "check": "sum((1001 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4、8 だね。",
+        "1 が書いてある位はどこかな。",
+        "1 が書いてある位の大きさだけをたそう。"
+       ],
+       "paths": [
+        [
+         "8 の位と 1 の位が 1",
+         "8 + 1 = 9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法の 11111 は、10 進法でいくつですか。",
+       "answer": 31,
+       "check": "sum((11111 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4、8、16 だね。",
+        "どの位も数字は 1 だね。",
+        "位の大きさを、ぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "16 + 8 + 4 + 2 + 1 = 31"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "次のうち、3 進法の数として正しく書けていないものはどれですか。",
+       "choices": [
+        1021,
+        2201,
+        1301
+       ],
+       "answer": 1301,
+       "check": "[c for c in (1021, 2201, 1301) if any((c // 10 ** i) % 10 >= 3 for i in range(4))][0]",
+       "hints": [
+        "3 進法では、3 こ集まると次の位に上がるね。",
+        "1 つの位に、3 こ以上のこることはあるかな。",
+        "3 進法で使える数字は、どれとどれかな。"
+       ],
+       "paths": [
+        [
+         "3 進法の数字は 0、1、2",
+         "1301 には 3 がある",
+         1301
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "19 を 2 進法で書きましょう。",
+       "explain": "2 進法の位は 1、2、4、8、16、32、…です。19 をこえない いちばん大きい位は 16 なので、16 の位は 1。19 − 16 = 3。8 と 4 は 3 より大きいので、8 の位と 4 の位は 0。2 は 3 からひけるので 2 の位は 1、3 − 2 = 1。のこった 1 で 1 の位は 1。19 は 2 進法で 10011 です。わり算をくり返す方法もあります。19 ÷ 2 = 9 あまり 1、9 ÷ 2 = 4 あまり 1、4 ÷ 2 = 2 あまり 0、2 ÷ 2 = 1 あまり 0、1 ÷ 2 = 0 あまり 1。あまりを下から読むと 10011 です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "2 進法の 1110 は、10 進法でいくつですか。",
+       "answer": 14,
+       "check": "sum((1110 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4、8 だね。",
+        "1 が書いてある位はどこかな。",
+        "1 が書いてある位の大きさだけをたそう。"
+       ],
+       "paths": [
+        [
+         "8 + 4 + 2 = 14"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "3 進法の 120 は、10 進法でいくつですか。",
+       "answer": 15,
+       "check": "sum((120 // 10 ** i) % 10 * 3 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、右から 1、3、9 だね。",
+        "それぞれの位に、数字がいくつあるかな。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "9 が 1 こ、3 が 2 こ、1 が 0 こ",
+         "9 + 6 = 15"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "22 を 2 進法で書きましょう。",
+       "answer": 10110,
+       "check": "sum((22 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "22 をこえない いちばん大きい 2 進法の位は、いくつかな。",
+        "その位をひいて、のこりをつぎの位とくらべよう。",
+        "ひけた位は 1、ひけなかった位は 0 だよ。"
+       ],
+       "paths": [
+        [
+         "16 の位は 1 でのこり 6",
+         "8 の位は 0、4 の位は 1 でのこり 2",
+         "2 の位は 1、1 の位は 0",
+         10110
+        ]
+       ],
+       "note": "ひけなかった位の 0 を書き落として 111 としやすい。位の数をそろえて書く。"
+      },
+      {
+       "part": "今日",
+       "text": "17 を 3 進法で書きましょう。",
+       "answer": 122,
+       "check": "sum((17 // 3 ** i) % 3 * 10 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、1、3、9、27 だね。",
+        "17 の中に、9 は何こあるかな。",
+        "のこりの中に、3 は何こあるかな。"
+       ],
+       "paths": [
+        [
+         "9 が 1 こでのこり 8",
+         "3 が 2 こでのこり 2",
+         "1 が 2 こ",
+         122
+        ],
+        [
+         "17 ÷ 3 = 5 あまり 2、5 ÷ 3 = 1 あまり 2、1 ÷ 3 = 0 あまり 1",
+         "下から読んで 122"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "38 を 5 進法で書きましょう。",
+       "answer": 123,
+       "check": "sum((38 // 5 ** i) % 5 * 10 ** i for i in range(8))",
+       "hints": [
+        "5 進法の位は、1、5、25、125 だね。",
+        "38 の中に、25 は何こあるかな。",
+        "のこりの中に、5 は何こあるかな。"
+       ],
+       "paths": [
+        [
+         "25 が 1 こでのこり 13",
+         "5 が 2 こでのこり 3",
+         "1 が 3 こ",
+         123
+        ],
+        [
+         "38 ÷ 5 = 7 あまり 3、7 ÷ 5 = 1 あまり 2、1 ÷ 5 = 0 あまり 1",
+         "下から読んで 123"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "100 を 2 進法で書きましょう。",
+       "answer": 1100100,
+       "check": "sum((100 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位を、1、2、4、8、16、32、64 と書き出そう。",
+        "100 からひける、いちばん大きい位はどれかな。",
+        "ひいたのこりで、次の位をためしていこう。"
+       ],
+       "paths": [
+        [
+         "64 の位は 1 でのこり 36",
+         "32 の位は 1 でのこり 4",
+         "16 と 8 の位は 0、4 の位は 1 でのこり 0",
+         "2 と 1 の位は 0",
+         1100100
+        ]
+       ],
+       "note": "7 けたになる。0 の位を書き落とさないよう、位の大きさを上に書いてから数字を入れるとよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "11 を 2 進法で書きましょう。",
+       "answer": 1011,
+       "check": "sum((11 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "11 をこえない いちばん大きい 2 進法の位は、いくつかな。",
+        "その位をひいて、のこりをつぎの位とくらべよう。",
+        "ひけた位は 1、ひけなかった位は 0 だよ。"
+       ],
+       "paths": [
+        [
+         "8 の位は 1 でのこり 3",
+         "4 の位は 0",
+         "2 の位は 1、1 の位は 1",
+         1011
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 を 3 進法で書きましょう。",
+       "answer": 202,
+       "check": "sum((20 // 3 ** i) % 3 * 10 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、1、3、9、27 だね。",
+        "20 の中に、9 は何こあるかな。",
+        "のこりの中に、3 は何こあるかな。"
+       ],
+       "paths": [
+        [
+         "9 が 2 こでのこり 2",
+         "3 が 0 こ",
+         "1 が 2 こ",
+         202
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 進法で書くと 5 けたになる数は、何こありますか。",
+       "answer": 16,
+       "check": "len([x for x in range(1, 100) if 16 <= x < 32])",
+       "hints": [
+        "2 進法の 5 けたで、いちばん小さい数は 10000 だね。",
+        "いちばん大きい数は 11111 だね。",
+        "それぞれを 10 進法になおして、数をかぞえよう。"
+       ],
+       "paths": [
+        [
+         "10000 は 16、11111 は 31",
+         "16 から 31 まで",
+         "31 − 16 + 1 = 16 こ"
+        ]
+       ],
+       "note": "31 − 16 = 15 としやすい。はしの 2 つをどちらも数える。"
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "27 を 2 進法で書きましょう。",
+       "answer": 11011,
+       "check": "sum((27 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "27 をこえない いちばん大きい 2 進法の位は、いくつかな。",
+        "その位をひいて、のこりをつぎの位とくらべよう。",
+        "ひけた位は 1、ひけなかった位は 0 だよ。"
+       ],
+       "paths": [
+        [
+         "16 の位は 1 でのこり 11",
+         "8 の位は 1 でのこり 3",
+         "4 の位は 0、2 の位は 1、1 の位は 1",
+         11011
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "5 進法の 304 は、10 進法でいくつですか。",
+       "answer": 79,
+       "check": "sum((304 // 10 ** i) % 10 * 5 ** i for i in range(8))",
+       "hints": [
+        "5 進法の位は、右から 1、5、25 だね。",
+        "それぞれの位に、数字がいくつあるかな。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "25 が 3 こで 75、5 が 0 こ、1 が 4 こで 4",
+         "75 + 4 = 79"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 を 3 進法で書きましょう。",
+       "answer": 1010,
+       "check": "sum((30 // 3 ** i) % 3 * 10 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、1、3、9、27 だね。",
+        "30 の中に、27 は何こあるかな。",
+        "のこりの中に、9 や 3 は何こあるかな。"
+       ],
+       "paths": [
+        [
+         "27 が 1 こでのこり 3",
+         "9 が 0 こ",
+         "3 が 1 こでのこり 0",
+         "1 が 0 こ",
+         1010
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "5 進法では、0、1、2、3、4 の 5 つの数字だけを使い、5 という数字は使いません。そのわけを文に書きましょう。",
+       "explain": "例：「5 進法では、5 こ集まると次の位に 1 つ上がる。だから、どの位も のこるのは 0 こから 4 こまでで、5 こになったら上の位の 1 になる。たとえば 1 の位に 5 こ集まったら、5 の位の 1 と 1 の位の 0 で、10 と書く。だから 5 という数字はいらない。」と書ければよい。10 進法でも、1 つの位に 10 という数字はなく、9 の次は 10 と書く（N-009 のくり上がり）のと同じしくみだと気づければなおよい。",
+       "hints": [
+        "5 進法では、いくつ集まると次の位に上がるかな。",
+        "1 の位に 5 こ集まったら、どう書きなおすかな。",
+        "「5 進法では〜こ集まると〜。だから、どの位も〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "5 こ集まると次の位に上がる",
+         "どの位も 4 こまでしかのこらない",
+         "5 こは上の位の 1 になる",
+         "だから 5 という数字はいらない"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "11 ÷ 2 = 5 あまり 1、5 ÷ 2 = 2 あまり 1、2 ÷ 2 = 1 あまり 0、1 ÷ 2 = 0 あまり 1 です。あまりを下から読んだ 1011 が、11 の 2 進法になるわけを、文に書きましょう。",
+       "explain": "例：「11 ÷ 2 = 5 あまり 1 は、11 が 2 のまとまり 5 こと、のこり 1 こということ。まとまりにならなかった 1 こが 1 の位。次に、2 のまとまり 5 こを 2 つずつまとめると、4 のまとまり 2 こと、2 のまとまり 1 こがのこる。これが 2 の位の 1。4 のまとまり 2 こを 2 つずつまとめると、8 のまとまり 1 こで、4 のまとまりはのこらない。これが 4 の位の 0 と、8 の位の 1。だから 11 は 8 + 2 + 1 で、2 進法で 1011。はじめのあまりがいちばん下の位なので、下から読む。」と書ければよい。はじめのあまりが 1 の位、次のあまりが 2 の位、…になることが書けていれば十分。",
+       "hints": [
+        "11 ÷ 2 = 5 あまり 1 は、11 が 2 のまとまり何こと、のこり何こということかな。",
+        "2 のまとまり 5 こを、また 2 つずつまとめると、何のまとまりになるかな。",
+        "「はじめのあまり 1 は〜の位。次のあまりは〜の位。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "11 は 2 のまとまり 5 こと 1 こ",
+         "1 こが 1 の位",
+         "2 のまとまり 5 こは 4 のまとまり 2 こと 2 のまとまり 1 こ",
+         "あまりは順に 1 の位、2 の位、4 の位、8 の位",
+         "だから下から読む"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "2 進法の 101 は 5 で、右に 0 をつけた 1010 は 10 です。2 進法で右に 0 をつけると、数が 2 倍になるわけを文に書きましょう。",
+       "explain": "例：「右に 0 をつけると、どの数字も 1 つ上の位に動く。2 進法では、1 つ上の位の大きさは 2 倍（1 → 2、2 → 4、4 → 8）なので、101 の 4 と 1 は、1010 では 8 と 2 になる。どの位も 2 倍になるので、ぜんぶで 2 倍になる。」と書ければよい。10 進法で右に 0 をつけると 10 倍になる（N-013 の × 10）のと同じしくみ。3 進法なら 3 倍になる。",
+       "hints": [
+        "101 と 1010 で、1 はそれぞれどの位にあるかな。",
+        "2 進法で、1 つ上の位の大きさは何倍かな。",
+        "「右に 0 をつけると〜。位の大きさは〜。だから〜。」と書いてみよう。"
+       ],
+       "paths": [
+        [
+         "右に 0 をつけると数字が 1 つ上の位に動く",
+         "1 つ上の位は 2 倍の大きさ",
+         "4 と 1 が 8 と 2 になる",
+         "だから 2 倍"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法の 1011 の右に 0 を 2 つつけた 101100 は、10 進法でいくつですか。",
+       "answer": 44,
+       "check": "sum((101100 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の 1011 は、10 進法でいくつかな。",
+        "右に 0 を 1 つつけると、何倍になるかな。",
+        "0 を 2 つつけると、何倍になるかな。"
+       ],
+       "paths": [
+        [
+         "1011 は 11",
+         "0 を 2 つで 2 倍の 2 倍",
+         "11 × 4 = 44"
+        ],
+        [
+         "32 + 8 + 4 = 44"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 進法の 1000 は、10 進法でいくつですか。",
+       "answer": 27,
+       "check": "sum((1000 // 10 ** i) % 10 * 3 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、右から 1、3、9、□ だね。",
+        "4 番目の位は、3 を何回かけた数かな。",
+        "その位に 1 があるだけだね。"
+       ],
+       "paths": [
+        [
+         "位は 27、9、3、1",
+         "27 が 1 こ",
+         27
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法の 110 の右に 0 を 1 つつけた 1100 は、10 進法でいくつですか。",
+       "answer": 12,
+       "check": "sum((1100 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の 110 は、10 進法でいくつかな。",
+        "右に 0 を 1 つつけると、何倍になるかな。",
+        "位の大きさで計算して、確かめよう。"
+       ],
+       "paths": [
+        [
+         "110 は 6",
+         "2 倍して 12"
+        ],
+        [
+         "8 + 4 = 12"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 進法で、1 が 7 こならんだ 1111111 に 1 をたすと、2 進法でどう書けますか。",
+       "answer": 10000000,
+       "check": "sum(((sum((1111111 // 10 ** i) % 10 * 2 ** i for i in range(8)) + 1) // 2 ** i) % 2 * 10 ** i for i in range(9))",
+       "hints": [
+        "2 進法で 1 + 1 は、くり上がって 10 になるね。",
+        "1 の位から、くり上がりがつぎつぎに続くよ。",
+        "10 進法の 999 + 1 = 1000 と同じしくみだよ。"
+       ],
+       "paths": [
+        [
+         "1 の位から順にくり上がる",
+         "どの位も 0 になり、いちばん上に 1",
+         10000000
+        ],
+        [
+         "1111111 は 127",
+         "127 + 1 = 128 = 2⁷",
+         10000000
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "45 を 2 進法で書きましょう。",
+       "answer": 101101,
+       "check": "sum((45 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "45 をこえない いちばん大きい 2 進法の位は、いくつかな。",
+        "その位をひいて、のこりをつぎの位とくらべよう。",
+        "ひけた位は 1、ひけなかった位は 0 だよ。"
+       ],
+       "paths": [
+        [
+         "32 の位は 1 でのこり 13",
+         "16 の位は 0",
+         "8 の位は 1 でのこり 5",
+         "4 の位は 1 でのこり 1",
+         "2 の位は 0、1 の位は 1",
+         101101
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "2 進法の 100000 は、10 進法でいくつですか。",
+       "answer": 32,
+       "check": "sum((100000 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位を、右から書き出そう。",
+        "6 番目の位は、2 を何回かけた数かな。",
+        "その位に 1 があるだけだね。"
+       ],
+       "paths": [
+        [
+         "6 番目の位は 2⁵",
+         "2⁵ = 32"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法で、1 が 6 こならんだ 111111 は、10 進法でいくつですか。",
+       "answer": 63,
+       "check": "sum((111111 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "位の大きさ 1、2、4、8、16、32 を、ぜんぶたそう。",
+        "111111 に 1 をたすと、2 進法でどうなるかな。",
+        "1000000 は、10 進法でいくつかな。"
+       ],
+       "paths": [
+        [
+         "1 + 2 + 4 + 8 + 16 + 32 = 63"
+        ],
+        [
+         "111111 + 1 = 1000000 で 2⁶ = 64",
+         "64 − 1 = 63"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法で 1011 + 110 を計算し、答えを 2 進法で書きましょう。",
+       "figure": "　１０１１\n＋　１１０\n－－－－－",
+       "answer": 10001,
+       "check": "(lambda x: sum((x // 2 ** i) % 2 * 10 ** i for i in range(8)))(sum((1011 // 10 ** i) % 10 * 2 ** i for i in range(8)) + sum((110 // 10 ** i) % 10 * 2 ** i for i in range(8)))",
+       "hints": [
+        "1 の位から、位ごとにたそう。",
+        "2 進法では、2 になったら次の位に 1 くり上がるよ。",
+        "10 進法になおしてたしてから、2 進法にもどしてもよいよ。"
+       ],
+       "paths": [
+        [
+         "1 の位は 1 + 0 = 1",
+         "2 の位は 1 + 1 = 2 で 0、くり上がり 1",
+         "4 の位は 0 + 1 + 1 = 2 で 0、くり上がり 1",
+         "8 の位は 1 + 1 = 2 で 0、くり上がり 1",
+         10001
+        ],
+        [
+         "1011 は 11、110 は 6",
+         "11 + 6 = 17",
+         "17 は 2 進法で 10001"
+        ]
+       ],
+       "note": "10 進法のように 1 + 1 = 2 と書いて 1121 としやすい。2 進法には 2 という数字がない。"
+      },
+      {
+       "part": "今日",
+       "text": "73 を 5 進法で書いたとき、いちばん右の数字（1 の位）はいくつですか。",
+       "answer": 3,
+       "check": "sum((73 // 5 ** i) % 5 * 10 ** i for i in range(8)) % 10",
+       "hints": [
+        "5 進法の 1 の位は、5 のまとまりにならなかった数だね。",
+        "73 を 5 でわったあまりを考えよう。",
+        "73 を、5 でわり切れる何十と のこりに分けよう。"
+       ],
+       "paths": [
+        [
+         "1 の位は 73 ÷ 5 のあまり",
+         "70 は 5 でわり切れる",
+         "あまりは 3"
+        ],
+        [
+         "73 = 25 × 2 + 5 × 4 + 3",
+         "5 進法で 243",
+         3
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1、2、4、8、16、32 と書いたカードが 1 まいずつあります。何まいかえらんで、書いてある数の和を 27 にします。カードを何まい使いますか。",
+       "answer": 4,
+       "check": "sum((27 // 2 ** i) % 2 for i in range(8))",
+       "hints": [
+        "27 を 2 進法で書いてみよう。",
+        "2 進法の 1 の数字は、そのカードを使うということだね。",
+        "1 の数字がいくつあるかを数えよう。"
+       ],
+       "paths": [
+        [
+         "27 は 2 進法で 11011",
+         "16 + 8 + 2 + 1 = 27",
+         "1 が 4 こで 4 まい"
+        ]
+       ],
+       "note": "どのカードも 1 まいずつなので、2 進法の書き方が 1 通りであることと、使うカードの組が 1 通りであることが同じになる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 進法の 1000000 は、10 進法でいくつですか。",
+       "answer": 64,
+       "check": "sum((1000000 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位を、右から書き出そう。",
+        "7 番目の位は、2 を何回かけた数かな。",
+        "その位に 1 があるだけだね。"
+       ],
+       "paths": [
+        [
+         "7 番目の位は 2⁶",
+         "2⁶ = 64"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法で 111 + 1 を計算し、答えを 2 進法で書きましょう。",
+       "answer": 1000,
+       "check": "(lambda x: sum((x // 2 ** i) % 2 * 10 ** i for i in range(8)))(sum((111 // 10 ** i) % 10 * 2 ** i for i in range(8)) + 1)",
+       "hints": [
+        "1 の位は 1 + 1 で、くり上がるね。",
+        "くり上がりが、次の位でもおきるよ。",
+        "10 進法になおして確かめてもよいよ。"
+       ],
+       "paths": [
+        [
+         "1 の位から 3 回くり上がる",
+         1000
+        ],
+        [
+         "111 は 7",
+         "7 + 1 = 8 = 2³",
+         1000
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1、3、9、27 と書いたカードが 2 まいずつあります。何まいかえらんで、書いてある数の和を 50 にします。カードを何まい使いますか。",
+       "answer": 6,
+       "check": "sum((50 // 3 ** i) % 3 for i in range(6))",
+       "hints": [
+        "50 を 3 進法で書いてみよう。",
+        "3 進法の数字が、そのカードを何まい使うかを表すね。",
+        "数字をぜんぶたそう。"
+       ],
+       "paths": [
+        [
+         "27 が 1 まいでのこり 23",
+         "9 が 2 まいでのこり 5",
+         "3 が 1 まいでのこり 2",
+         "1 が 2 まい",
+         "1 + 2 + 1 + 2 = 6 まい"
+        ]
+       ],
+       "note": "50 は 3 進法で 1212。カードが 2 まいずつなので、3 進法の数字（0、1、2）と同じになる。"
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "2 進法の 11010 は、10 進法でいくつですか。",
+       "answer": 26,
+       "check": "sum((11010 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位は、右から 1、2、4、8、16 だね。",
+        "1 が書いてある位はどこかな。",
+        "1 が書いてある位の大きさだけをたそう。"
+       ],
+       "paths": [
+        [
+         "16 + 8 + 2 = 26"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 進法の 201 は、10 進法でいくつですか。",
+       "answer": 19,
+       "check": "sum((201 // 10 ** i) % 10 * 3 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、右から 1、3、9 だね。",
+        "それぞれの位に、数字がいくつあるかな。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "9 が 2 こで 18、3 が 0 こ、1 が 1 こ",
+         "18 + 1 = 19"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 進法の 412 は、10 進法でいくつですか。",
+       "answer": 107,
+       "check": "sum((412 // 10 ** i) % 10 * 5 ** i for i in range(8))",
+       "hints": [
+        "5 進法の位は、右から 1、5、25 だね。",
+        "25 が 4 こはいくつかな。",
+        "位の大きさに数字をかけて、たそう。"
+       ],
+       "paths": [
+        [
+         "25 が 4 こで 100、5 が 1 こで 5、1 が 2 こで 2",
+         107
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "25 を 2 進法で書きましょう。",
+       "answer": 11001,
+       "check": "sum((25 // 2 ** i) % 2 * 10 ** i for i in range(8))",
+       "hints": [
+        "25 をこえない いちばん大きい 2 進法の位は、いくつかな。",
+        "その位をひいて、のこりをつぎの位とくらべよう。",
+        "ひけた位は 1、ひけなかった位は 0 だよ。"
+       ],
+       "paths": [
+        [
+         "16 の位は 1 でのこり 9",
+         "8 の位は 1 でのこり 1",
+         "4 と 2 の位は 0、1 の位は 1",
+         11001
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "40 を 3 進法で書きましょう。",
+       "answer": 1111,
+       "check": "sum((40 // 3 ** i) % 3 * 10 ** i for i in range(8))",
+       "hints": [
+        "3 進法の位は、1、3、9、27 だね。",
+        "40 の中に、27 は何こあるかな。",
+        "のこりで、9、3、1 を順にためそう。"
+       ],
+       "paths": [
+        [
+         "27 が 1 こでのこり 13",
+         "9 が 1 こでのこり 4",
+         "3 が 1 こでのこり 1",
+         "1 が 1 こ",
+         1111
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "2 進法で 1101 + 111 を計算し、答えを 2 進法で書きましょう。",
+       "figure": "　１１０１\n＋　１１１\n－－－－－",
+       "answer": 10100,
+       "check": "(lambda x: sum((x // 2 ** i) % 2 * 10 ** i for i in range(8)))(sum((1101 // 10 ** i) % 10 * 2 ** i for i in range(8)) + sum((111 // 10 ** i) % 10 * 2 ** i for i in range(8)))",
+       "hints": [
+        "1 の位から、位ごとにたそう。",
+        "2 になったら 0 を書いて、次の位に 1 くり上げよう。",
+        "1 + 1 + 1 = 3 のときは、1 を書いて 1 くり上がるよ。"
+       ],
+       "paths": [
+        [
+         "1 の位 1 + 1 = 2 で 0 くり上がり 1",
+         "2 の位 0 + 1 + 1 = 2 で 0 くり上がり 1",
+         "4 の位 1 + 1 + 1 = 3 で 1 くり上がり 1",
+         "8 の位 1 + 1 = 2 で 0 くり上がり 1",
+         10100
+        ],
+        [
+         "1101 は 13、111 は 7",
+         "13 + 7 = 20",
+         "20 は 2 進法で 10100"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "100 を 3 進法で書いたとき、いちばん右の数字（1 の位）はいくつですか。",
+       "answer": 1,
+       "check": "sum((100 // 3 ** i) % 3 * 10 ** i for i in range(8)) % 10",
+       "hints": [
+        "3 進法の 1 の位は、3 のまとまりにならなかった数だね。",
+        "100 を 3 でわったあまりを考えよう。",
+        "100 を、3 でわり切れる数と のこりに分けよう。"
+       ],
+       "paths": [
+        [
+         "1 の位は 100 ÷ 3 のあまり",
+         "99 は 3 でわり切れる",
+         "あまりは 1"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 進法で書くと 1 がちょうど 2 こになる数のうち、50 より小さいものは何こありますか。",
+       "answer": 15,
+       "check": "len([x for x in range(1, 50) if sum((x // 2 ** i) % 2 for i in range(7)) == 2])",
+       "hints": [
+        "1 が 2 こということは、2 進法の位の大きさを 2 つたした数だね。",
+        "大きいほうの位を 2、4、8、16、32 と決めて、小さいほうの位をえらぼう。",
+        "50 をこえないか、確かめよう。"
+       ],
+       "paths": [
+        [
+         "大きいほうが 2 なら 1 通り、4 なら 2 通り、8 なら 3 通り、16 なら 4 通り、32 なら 5 通り",
+         "32 + 16 = 48 も 50 より小さい",
+         "1 + 2 + 3 + 4 + 5 = 15 こ"
+        ]
+       ],
+       "note": "64 は 50 をこえるので、大きいほうの位は 32 まで。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "2 進法の 100001 は、10 進法でいくつですか。",
+       "answer": 33,
+       "check": "sum((100001 // 10 ** i) % 10 * 2 ** i for i in range(8))",
+       "hints": [
+        "2 進法の位を、右から書き出そう。",
+        "1 が書いてある位はどこかな。",
+        "1 が書いてある位の大きさだけをたそう。"
+       ],
+       "paths": [
+        [
+         "32 の位と 1 の位が 1",
+         "32 + 1 = 33"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 を 5 進法で書きましょう。",
+       "answer": 110,
+       "check": "sum((30 // 5 ** i) % 5 * 10 ** i for i in range(8))",
+       "hints": [
+        "5 進法の位は、1、5、25 だね。",
+        "30 の中に、25 は何こあるかな。",
+        "のこりの中に、5 は何こあるかな。"
+       ],
+       "paths": [
+        [
+         "25 が 1 こでのこり 5",
+         "5 が 1 こでのこり 0",
+         "1 が 0 こ",
+         110
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1、2、4、8、16、32、64 と書いたカードが 1 まいずつあります。何まいかえらんで、書いてある数の和を 100 にします。カードを何まい使いますか。",
+       "answer": 3,
+       "check": "sum((100 // 2 ** i) % 2 for i in range(8))",
+       "hints": [
+        "100 を 2 進法で書いてみよう。",
+        "2 進法の 1 の数字は、そのカードを使うということだね。",
+        "1 の数字がいくつあるかを数えよう。"
+       ],
+       "paths": [
+        [
+         "100 は 2 進法で 1100100",
+         "64 + 32 + 4 = 100",
+         "3 まい"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "measure": true,
@@ -124925,7 +132521,7 @@ window.ROADMAP = {
     -2.69
    ],
    "comb": {
-    "b": 0.38,
+    "b": 0.334,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -124979,7 +132575,7 @@ window.ROADMAP = {
     -3.93
    ],
    "comb": {
-    "b": 0.316,
+    "b": 0.275,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -126183,7 +133779,7 @@ window.ROADMAP = {
     -0.66
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -127373,7 +134969,7 @@ window.ROADMAP = {
     -1.7
    ],
    "comb": {
-    "b": 0.325,
+    "b": 0.316,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -128949,7 +136545,7 @@ window.ROADMAP = {
     3.24
    ],
    "comb": {
-    "b": 0.238,
+    "b": 0.21,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -131781,7 +139377,7 @@ window.ROADMAP = {
     8.16
    ],
    "comb": {
-    "b": 0.312,
+    "b": 0.302,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -133011,7 +140607,7 @@ window.ROADMAP = {
     0.73
    ],
    "comb": {
-    "b": 0.31,
+    "b": 0.279,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -135172,7 +142768,7 @@ window.ROADMAP = {
     -3.88
    ],
    "comb": {
-    "b": 0.298,
+    "b": 0.312,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -135189,39 +142785,1148 @@ window.ROADMAP = {
    "level": 2,
    "region": "kazoekata",
    "needs": [
-    "C-005"
+    "C-005",
+    "N-015"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1、2、3、4 のカードが 2 組あります。1 組目から十のくらいのカードを、2 組目から一のくらいのカードを 1 まいずつ出して、2 けたの数をつくります。何こつくれますか。",
+       "answer": 16,
+       "check": "len(set(10 * a + b for a in range(1, 5) for b in range(1, 5)))",
+       "hints": [
+        "十のくらいのカードは何通りかな。",
+        "十のくらいがどれでも、一のくらいのカードは何通りかな。",
+        "「〜通りずつが〜つ分」をかけ算の式にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 4 通り",
+         "どれにも一のくらい 4 通り",
+         "4 × 4 = 16 こ"
+        ]
+       ],
+       "note": "カードが 2 組あるので、十のくらいと同じ数字を一のくらいにも使える（11 や 22 もできる）。今日はカードが 1 組だけのときとくらべる。"
+      },
+      {
+       "part": "思い出す",
+       "text": "9 × 8 はいくつですか。",
+       "answer": 72,
+       "check": "9 * 8",
+       "hints": [
+        "9 のだんの九九を思い出そう。",
+        "9 × 7 = 63 だね。",
+        "9 × 8 は、9 × 7 より 9 大きいよ。"
+       ],
+       "paths": [
+        [
+         "9 のだんの九九",
+         "くはち 72"
+        ],
+        [
+         "9 × 7 = 63",
+         "63 + 9 = 72"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "1、2、3、4 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "figure": "１ ─ ２３４\n２ ─ １３４\n３ ─ １２４\n４ ─ １２３",
+       "explain": "十のくらいのカードは 4 通りです。十のくらいに出したカードは一のくらいには使えないので、一のくらいはのこりの 3 まいから 1 まいで、3 通りです。じゅけい図にすると、どの十のくらいからも、えだが 3 本ずつ出ます。だから 4 × 3 = 12 こです。いくつかをえらんで 1 列にならべたものを「順列（じゅんれつ）」といいます。1 つならべるごとに、使えるものが 1 つずつへるので、かける数も 1 ずつ小さくなります。"
+      },
+      {
+       "part": "今日",
+       "text": "5 人の中から、リレーで 1 番目に走る人と 2 番目に走る人を決めます。決め方は何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.permutations(range(5), 2)))",
+       "hints": [
+        "1 番目に走る人は、何通りあるかな。",
+        "1 番目に決まった人は、2 番目にも走れるかな。",
+        "「1 番目の通り × 2 番目の通り」の式にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目は 5 通り",
+         "2 番目はのこりの 4 通り",
+         "5 × 4 = 20 通り"
+        ]
+       ],
+       "note": "5 × 5 = 25 としやすい。1 番目に決まった人は 2 番目には走れないので、2 番目は 1 人へる。"
+      },
+      {
+       "part": "今日",
+       "text": "6 しゅるいのくだものが 1 こずつあります。2 しゅるいをえらんで、左のお皿と右のお皿に 1 こずつのせます。のせ方は何通りですか。",
+       "answer": 30,
+       "check": "len(set(itertools.permutations(range(6), 2)))",
+       "hints": [
+        "左のお皿にのせるくだものは、何通りかな。",
+        "左にのせたくだものは、右のお皿にものせられるかな。",
+        "左の通りと右の通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "左は 6 通り",
+         "右はのこりの 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ],
+       "note": "左と右を入れかえると別ののせ方になる（りんごが左でみかんが右のときと、その反対はちがう）。"
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 人がかけっこをします。1 着、2 着、3 着の決まり方は何通りですか。同じ着の人はいません。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations(range(4), 3)))",
+       "hints": [
+        "1 着は何通りかな。",
+        "1 着が決まると 2 着は何通り、2 着まで決まると 3 着は何通りかな。",
+        "1 つずつへる数を、じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "1 着 4 通り",
+         "2 着 3 通り",
+         "3 着 2 通り",
+         "4 × 3 = 12、12 × 2 = 12 + 12 = 24 通り"
+        ]
+       ],
+       "note": "12 × 2 は九九にないので、12 が 2 つ分と考えて 12 + 12 で出す。4 + 3 + 2 = 9 とたしてしまうことがあるので、じゅけい図のえだが「どこからも同じ数ずつ」出ることを思い出させる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 9 までの数字のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 72,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(1, 10), 2)))",
+       "hints": [
+        "十のくらいのカードは何通りかな。",
+        "十のくらいに使ったカードのほかに、のこっているカードは何まいかな。",
+        "十のくらいの通りと一のくらいの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 9 通り",
+         "一のくらいはのこりの 8 通り",
+         "9 × 8 = 72 こ"
+        ]
+       ],
+       "note": "カードが 1 まいずつなので、11 や 22 のように同じ数字がならぶ数はつくれない。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "7 人の中から、リーダーと記ろく係を 1 人ずつ決めます。1 人が 2 つの係をすることはありません。決め方は何通りですか。",
+       "answer": 42,
+       "check": "len(set(itertools.permutations(range(7), 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "リーダーに決まった人は、記ろく係にもなれるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 7 通り",
+         "記ろく係はのこりの 6 通り",
+         "7 × 6 = 42 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 色のクレヨンがあります。2 色をえらんで、上の線と下の線を 1 本ずつかきます。上と下はちがう色にします。かき方は何通りですか。",
+       "answer": 56,
+       "check": "len(set(itertools.permutations(range(8), 2)))",
+       "hints": [
+        "上の線の色は何通りかな。",
+        "下の線には、上と同じ色を使えるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "上 8 通り",
+         "下はのこりの 7 通り",
+         "8 × 7 = 56 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エ、オの 5 文字から 3 文字をえらんで 1 列にならべ、あいことばをつくります。同じ文字は 1 回しか使いません。あいことばは何通りできますか。",
+       "answer": 60,
+       "check": "len(set(itertools.permutations('アイウエオ', 3)))",
+       "hints": [
+        "1 文字目、2 文字目、3 文字目は、それぞれ何通りかな。",
+        "2 文字目までで何通りになるかな。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "1 文字目 5 通り",
+         "2 文字目 4 通り",
+         "3 文字目 3 通り",
+         "5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 30,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(1, 7), 2)))",
+       "hints": [
+        "十のくらいのカードは何通りかな。",
+        "一のくらいには、十のくらいに使ったカードは使えないね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 6 通り",
+         "一のくらいはのこりの 5 通り",
+         "6 × 5 = 30 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ぼうしが 2 こ、シャツが 3 まい、くつが 3 足あります。ぼうし、シャツ、くつを 1 つずつえらぶ組み合わせは何通りですか。",
+       "answer": 18,
+       "check": "len(set(itertools.product(range(2), range(3), range(3))))",
+       "hints": [
+        "まず、ぼうしとシャツの組み合わせを数えよう。",
+        "その組み合わせのどれにも、くつが何通りつくかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ぼうしとシャツ 3 × 2 = 6 通り",
+         "どれにもくつ 3 通り",
+         "6 × 3 = 18 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウの 3 人が 1 列にならびます。ならび方は何通りですか。",
+       "figure": "ア ┬ イ ─ ウ\n　 └ ウ ─ イ\nイ ┬ ア ─ ウ\n　 └ ウ ─ ア\nウ ┬ ア ─ イ\n　 └ イ ─ ア",
+       "explain": "左から 1 番目は 3 通り、2 番目はのこりの 2 通り、3 番目はのこった 1 人だけなので 1 通りです。じゅけい図では、3 番目のえだは 1 本ずつになります。3 × 2 × 1 = 6 通りです。全部をならべるときは、ならべるものの数から 1 ずつ小さくして、1 までかけます。"
+      },
+      {
+       "part": "今日",
+       "text": "絵本が 4 さつあります。4 さつ全部を本だなに 1 列にならべます。ならべ方は何通りですか。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations(range(4))))",
+       "hints": [
+        "左から 1 番目におく本は、何通りかな。",
+        "1 さつおくごとに、のこりの本は 1 さつずつへるね。",
+        "さいごの本までじゅんにかけよう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12",
+         "12 × 2 = 12 + 12 = 24",
+         "24 × 1 = 24 通り"
+        ]
+       ],
+       "note": "4 + 3 + 2 + 1 = 10 とたしてしまうことがある。どの 1 番目からも 2 番目のえだが同じ数ずつ出るので、たすのではなくかける。"
+      },
+      {
+       "part": "今日",
+       "text": "8 人の中から、リーダーとふくリーダーを 1 人ずつ決めます。1 人が両方になることはありません。決め方は何通りですか。",
+       "answer": 56,
+       "check": "len(set(itertools.permutations(range(8), 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "リーダーに決まった人は、ふくリーダーにもなれるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 8 通り",
+         "ふくリーダーはのこりの 7 通り",
+         "8 × 7 = 56 通り"
+        ]
+       ],
+       "note": "リーダーとふくリーダーのように係に名前があるときは、だれがどの係かで別の決め方になる。順番をつけてならべるのと同じ。"
+      },
+      {
+       "part": "今日",
+       "text": "5 人の中から、ボールを投げる係、受ける係、数える係を 1 人ずつ決めます。1 人がする係は 1 つだけです。決め方は何通りですか。",
+       "answer": 60,
+       "check": "len(set(itertools.permutations(range(5), 3)))",
+       "hints": [
+        "投げる係、受ける係、数える係のじゅんに決めよう。",
+        "1 つ決めるごとに、のこりの人は 1 人ずつへるね。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "投げる係 5 通り",
+         "受ける係 4 通り",
+         "数える係 3 通り",
+         "5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウの 3 文字を使って、1 文字、2 文字、3 文字のあいことばをつくります。1 つのあいことばの中で、同じ文字は 1 回しか使いません。あいことばは全部で何通りですか。",
+       "answer": 15,
+       "check": "sum(len(set(itertools.permutations('アイウ', k))) for k in range(1, 4))",
+       "hints": [
+        "文字の数で分けて考えよう。",
+        "2 文字のあいことばと 3 文字のあいことばは、それぞれ何通りかな。",
+        "分けたものは重ならないね。さいごにどうするかな。"
+       ],
+       "paths": [
+        [
+         "1 文字 3 通り",
+         "2 文字 3 × 2 = 6 通り",
+         "3 文字 3 × 2 × 1 = 6 通り",
+         "3 + 6 + 6 = 15 通り"
+        ]
+       ],
+       "note": "文字の数で分けると重ならないので、和の法則（C-005）でたせる。分けた中は順列。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "🐶🐱🐰 の 3 びきが 1 列にならんで、写真をとります。ならび方は何通りですか。",
+       "answer": 6,
+       "check": "len(set(itertools.permutations('🐶🐱🐰')))",
+       "hints": [
+        "左から 1 番目は何通りかな。",
+        "2 番目、3 番目は何通りかな。",
+        "1 までじゅんにかけよう。"
+       ],
+       "paths": [
+        [
+         "3 × 2 × 1 = 6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人の中から、リーダーとふくリーダーを 1 人ずつ決めます。1 人が両方になることはありません。決め方は何通りですか。",
+       "answer": 30,
+       "check": "len(set(itertools.permutations(range(6), 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "ふくリーダーは、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 6 通り",
+         "ふくリーダー 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エの 4 文字を使って、1 文字か 2 文字のあいことばをつくります。1 つのあいことばの中で、同じ文字は 1 回しか使いません。あいことばは全部で何通りですか。",
+       "answer": 16,
+       "check": "sum(len(set(itertools.permutations('アイウエ', k))) for k in range(1, 3))",
+       "hints": [
+        "1 文字のあいことばと 2 文字のあいことばに分けよう。",
+        "2 文字のあいことばは、何通りかな。",
+        "分けたものは重ならないね。"
+       ],
+       "paths": [
+        [
+         "1 文字 4 通り",
+         "2 文字 4 × 3 = 12 通り",
+         "4 + 12 = 16 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "5 人の中から、1 番目に発表する人と 2 番目に発表する人を決めます。決め方は何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.permutations(range(5), 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 5 通り",
+         "2 番目 4 通り",
+         "5 × 4 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。ならび方は何通りですか。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations('アイウエ')))",
+       "hints": [
+        "左から 1 番目は何通りかな。",
+        "1 人ならぶごとに、のこりの人は 1 人ずつへるね。",
+        "1 までじゅんにかけよう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12",
+         "12 × 2 = 12 + 12 = 24",
+         "24 × 1 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "0、1、2、3 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "figure": "１ ─ ０２３\n２ ─ ０１３\n３ ─ ０１２",
+       "explain": "十のくらいに 0 はおけません（02 は 2 けたの数ではありません）。だから十のくらいは 1、2、3 の 3 通りです。一のくらいは、十のくらいに使ったカードのほかの 3 まいで、0 も使えるので 3 通りです。3 × 3 = 9 こです。おき方にきまりのある場所があるときは、その場所から先に決めます。"
+      },
+      {
+       "part": "今日",
+       "text": "0、1、2、3、4 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 16,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(5), 2) if a != 0))",
+       "hints": [
+        "十のくらいにおけるカードは、何まいかな。",
+        "一のくらいには 0 もおけるね。のこりのカードは何まいかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 1、2、3、4 の 4 通り",
+         "一のくらいは 0 をふくむのこりの 4 通り",
+         "4 × 4 = 16 こ"
+        ],
+        [
+         "0 も十のくらいにおけるとすると 5 × 4 = 20",
+         "十のくらいが 0 の 4 こ（01、02、03、04）をのぞく",
+         "20 − 4 = 16 こ"
+        ]
+       ],
+       "note": "5 × 4 = 20 としやすい。十のくらいに 0 がくるものは 2 けたの数ではない。"
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。アさんがいちばん左になるならび方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for p in itertools.permutations('アイウエ') if p[0] == 'ア')",
+       "hints": [
+        "いちばん左は、もう決まっているね。何通りかな。",
+        "のこりの 3 か所に、何人をならべるかな。",
+        "3 人を全部ならべる数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "いちばん左はアさんの 1 通り",
+         "のこりの 3 人を 3 × 2 × 1 = 6 通り",
+         "6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4、5 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。一のくらいが 2 か 4 になる数は何こつくれますか。",
+       "answer": 8,
+       "check": "sum(1 for a, b in itertools.permutations(range(1, 6), 2) if b in (2, 4))",
+       "hints": [
+        "きまりがあるのは、十のくらいと一のくらいのどちらかな。",
+        "きまりのある一のくらいを先に決めよう。何通りかな。",
+        "十のくらいは、のこりの何まいから決めるかな。"
+       ],
+       "paths": [
+        [
+         "一のくらいは 2 か 4 の 2 通り",
+         "十のくらいはのこりの 4 通り",
+         "2 × 4 = 8 こ"
+        ]
+       ],
+       "note": "十のくらいから決めると、十のくらいが 2 や 4 のときだけ一のくらいの通りがかわってしまう。きまりのある場所から決めると、かけ算で数えられる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "0、1、2、3 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。一のくらいが 0 か 2 になる数は何こつくれますか。",
+       "answer": 5,
+       "check": "sum(1 for a, b in itertools.permutations(range(4), 2) if a != 0 and b in (0, 2))",
+       "hints": [
+        "一のくらいが 0 のときと、2 のときに分けよう。",
+        "一のくらいが 0 のとき、十のくらいは何通りかな。",
+        "一のくらいが 2 のとき、十のくらいに 0 はおけないね。"
+       ],
+       "paths": [
+        [
+         "一のくらいが 0 のとき、十のくらいは 1、2、3 の 3 通り",
+         "一のくらいが 2 のとき、十のくらいは 1 か 3 の 2 通り",
+         "3 + 2 = 5 こ"
+        ]
+       ],
+       "note": "10、20、30、12、32 の 5 こ。2 つの場合で十のくらいの通りがちがうので、かけ算にできず、分けてたす（C-005 の和の法則）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "0、1、2、3、4、5 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 25,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(6), 2) if a != 0))",
+       "hints": [
+        "十のくらいにおけるカードは、何まいかな。",
+        "一のくらいには 0 もおけるね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 5 通り",
+         "一のくらいはのこりの 5 通り",
+         "5 × 5 = 25 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 人が 1 列にならびます。アさんとイさんが両はしになるならび方は何通りですか。",
+       "answer": 12,
+       "check": "sum(1 for p in itertools.permutations('アイウエオ') if set((p[0], p[4])) == set('アイ'))",
+       "hints": [
+        "両はしにアさんとイさんがならぶならび方は、何通りかな。",
+        "まん中の 3 か所には、だれがならぶかな。",
+        "両はしの通りとまん中の通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "両はしは「左がア・右がイ」か「左がイ・右がア」の 2 通り",
+         "まん中はウ、エ、オで 3 × 2 × 1 = 6 通り",
+         "2 × 6 = 12 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。30 より大きい数は何こつくれますか。",
+       "answer": 20,
+       "check": "sum(1 for a, b in itertools.permutations(range(1, 7), 2) if 10 * a + b > 30)",
+       "hints": [
+        "30 より大きくなるのは、十のくらいがいくつのときかな。",
+        "十のくらいを先に決めよう。何通りかな。",
+        "一のくらいは、のこりの何まいから決めるかな。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 3、4、5、6 の 4 通り",
+         "一のくらいはのこりの 5 通り",
+         "4 × 5 = 20 こ"
+        ]
+       ],
+       "note": "十のくらいが 3 なら、いちばん小さいのは 31 で、30 より大きい。十のくらいが 2 なら、いちばん大きいのは 26 で、30 より小さい。"
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "5 人の中から、リレーで 1 番目と 2 番目に走る人を決めると、5 × 4 = 20 通りです。5 × 5 ではなく 5 × 4 になるわけを、じゅけい図を使って文で書きましょう。",
+       "explain": "例：「1 番目に走る人は、5 人のだれかで 5 通り。1 番目に決まった人は 2 番目には走れないので、2 番目はのこりの 4 人から決める。じゅけい図にすると、どの 1 番目からも 2 番目のえだが 4 本ずつ出る。だから 5 × 4 = 20 通り。」と書ければよい。「1 番目の人はもう使えない」ことと、「1 番目がだれでも、2 番目のえだは同じ 4 本」の 2 つが書けているかを見る。2 つ目が、かけ算（積の法則、C-005）を使ってよいわけになる。",
+       "hints": [
+        "じゅけい図をかいてみよう。1 番目をアさんにすると、2 番目のえだは何本かな。",
+        "1 番目がイさんやウさんでも、2 番目のえだの数は同じかな。",
+        "「1 番目の人は 2 番目には走れないから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "1 番目は 5 通り",
+         "1 番目の人は 2 番目に走れない",
+         "どの 1 番目からもえだが 4 本",
+         "だから 5 × 4 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "0、1、2、3 のカードで 2 けたの数をつくるとき、十のくらいから先に決めると、3 × 3 = 9 こと数えられます。一のくらいから先に決めると、かけ算ではうまく数えられません。なぜかを文で書きましょう。",
+       "explain": "例：「一のくらいから決めると、一のくらいが 0 のときは、十のくらいは 1、2、3 の 3 通り。一のくらいが 1 のときは、十のくらいに 0 と 1 がおけないので、2 と 3 の 2 通り。一のくらいによって十のくらいのえだの数がそろわないので、かけ算にできない。十のくらいから決めると、十のくらいは 3 通りで、どの場合も一のくらいはのこりの 3 通りとそろうので、3 × 3 = 9 こと数えられる。」と書ければよい。C-005 のわけ（枝の数がそろわないとかけ算は使えない）とつながっていることに気づかせる。一のくらいから決めても、3 + 2 + 2 + 2 = 9 と分けてたせば数えられる。",
+       "hints": [
+        "一のくらいが 0 のとき、十のくらいにおけるカードは何まいかな。",
+        "一のくらいが 1 のときはどうかな。えだの数はそろっているかな。",
+        "「そろわないから」「そろうから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "一のくらいが 0 なら十のくらいは 3 通り",
+         "一のくらいが 1 なら 2 通り",
+         "えだの数がそろわないのでかけ算にできない",
+         "十のくらいから決めると、どれも 3 通りでそろう"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "ア、イ、ウの 3 人から 2 人をえらんでならべるならべ方（3 × 2 = 6 通り）と、3 人全部を 1 列にならべるならべ方（3 × 2 × 1 = 6 通り）は、同じ数です。なぜ同じになるのかを文で書きましょう。",
+       "figure": "アイ → アイウ\nアウ → アウイ\nイア → イアウ\nイウ → イウア\nウア → ウアイ\nウイ → ウイア",
+       "explain": "例：「2 人をならべると、のこりは 1 人だけ。その 1 人は 3 番目にならぶしかないので、2 人のならべ方 1 つから、3 人のならべ方がちょうど 1 つ決まる。たとえば『アイ』からは『アイウ』だけができる。だから 2 つの数は同じになる。」と書ければよい。式で「× 1 だから変わらない」と書くだけでもよいが、なぜ 3 番目が 1 通りなのか（のこりが 1 人だけだから）を言えているかを見る。",
+       "hints": [
+        "2 人をならべたあと、のこっている人は何人かな。",
+        "のこった人は、どこにならぶしかないかな。",
+        "「アイ」からは、3 人のならびがいくつできるかな。"
+       ],
+       "paths": [
+        [
+         "2 人をならべると、のこりは 1 人",
+         "その 1 人の場所は 1 通りに決まる",
+         "2 人のならびと 3 人のならびが 1 つずつ組になる",
+         "だから同じ数"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人の中から、1 番目に発表する人と 2 番目に発表する人を決めます。決め方は何通りですか。",
+       "answer": 30,
+       "check": "len(set(itertools.permutations(range(6), 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 6 通り",
+         "2 番目 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。40 より大きい数は何こつくれますか。",
+       "answer": 15,
+       "check": "sum(1 for a, b in itertools.permutations(range(1, 7), 2) if 10 * a + b > 40)",
+       "hints": [
+        "40 より大きくなるのは、十のくらいがいくつのときかな。",
+        "きまりのある十のくらいを先に決めよう。",
+        "一のくらいは、のこりの何まいから決めるかな。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 4、5、6 の 3 通り",
+         "一のくらいはのこりの 5 通り",
+         "3 × 5 = 15 こ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "8 人の中から、リレーで 1 番目と 2 番目に走る人を決めます。決め方は何通りですか。",
+       "answer": 56,
+       "check": "len(set(itertools.permutations(range(8), 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 8 通り",
+         "2 番目 7 通り",
+         "8 × 7 = 56 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "0、5、6、7 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 9,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations((0, 5, 6, 7), 2) if a != 0))",
+       "hints": [
+        "十のくらいにおけるカードは、何まいかな。",
+        "一のくらいには 0 もおけるね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 5、6、7 の 3 通り",
+         "一のくらいはのこりの 3 通り",
+         "3 × 3 = 9 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。アさんがいちばん右にならないならび方は何通りですか。",
+       "answer": 18,
+       "check": "sum(1 for p in itertools.permutations('アイウエ') if p[3] != 'ア')",
+       "hints": [
+        "全部のならび方は何通りかな。",
+        "アさんがいちばん右になるならび方は何通りかな。",
+        "全部から、アさんがいちばん右になるならび方をのぞこう。"
+       ],
+       "paths": [
+        [
+         "全部で 24 通り",
+         "アさんがいちばん右は 3 × 2 × 1 = 6 通り",
+         "24 − 6 = 18 通り"
+        ],
+        [
+         "いちばん右はアさんのほかの 3 通り",
+         "のこりの 3 人を 3 × 2 × 1 = 6 通り",
+         "6 × 3 = 18 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エ、オの 5 人の中から、リーダーと記ろく係を 1 人ずつ決めます。1 人が 2 つの係をすることはありません。決め方は何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.permutations('アイウエオ', 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "記ろく係は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 5 通り",
+         "記ろく係 4 通り",
+         "5 × 4 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "0、1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 36,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(7), 2) if a != 0))",
+       "hints": [
+        "十のくらいに 0 はおけないね。",
+        "一のくらいには 0 もおけるね。のこりのカードは何まいかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 6 通り",
+         "一のくらい 6 通り",
+         "6 × 6 = 36 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4、5 のカードが何まいでもあります。2 まいをならべて 2 けたの数をつくります。同じ数字を 2 回使ってもかまいません。何こつくれますか。",
+       "answer": 25,
+       "check": "len(set(10 * a + b for a, b in itertools.product(range(1, 6), repeat=2)))",
+       "hints": [
+        "十のくらいは何通りかな。",
+        "十のくらいに使った数字を、一のくらいにも使えるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 5 通り",
+         "一のくらいも同じ数字をふくめて 5 通り",
+         "5 × 5 = 25 こ"
+        ]
+       ],
+       "note": "カードが 1 まいずつのとき（5 × 4 = 20）とのちがいを言わせる。同じものを何度でも使えるときは、かける数がへらない（C-005 の合図と同じ）。"
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべてつくる 2 けたの数が何こあるかをもとめる式はどれですか。",
+       "choices": [
+        "6 × 6",
+        "6 × 5",
+        "6 + 5"
+       ],
+       "answer": "6 × 5",
+       "check": "[c for c, v in (('6 × 6', 6 * 6), ('6 × 5', 6 * 5), ('6 + 5', 6 + 5)) if v == len(set(itertools.permutations(range(1, 7), 2)))][0]",
+       "hints": [
+        "カードは 1 まいずつだね。",
+        "十のくらいに使ったカードは、一のくらいにも使えるかな。",
+        "どの十のくらいからも、えだは何本出るかな。"
+       ],
+       "paths": [
+        [
+         "十のくらい 6 通り",
+         "一のくらいはのこりの 5 通り",
+         "6 × 5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 人が 1 列にならびます。じゅけい図をかいて、アさんがまん中にならないならび方を数えましょう。",
+       "answer": 4,
+       "check": "sum(1 for p in itertools.permutations('アイウ') if p[1] != 'ア')",
+       "hints": [
+        "3 人のならび方のじゅけい図を、全部かこう。",
+        "まん中がアさんになるならびに × をつけよう。",
+        "× のついていないならびを数えよう。"
+       ],
+       "paths": [
+        [
+         "全部で 3 × 2 × 1 = 6 通り",
+         "まん中がアさんは イアウ と ウアイ の 2 通り",
+         "6 − 2 = 4 通り"
+        ],
+        [
+         "アイウ、アウイ、イウア、ウイア",
+         "4 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。アさんとイさんがとなりどうしになるならび方は何通りですか。",
+       "answer": 12,
+       "check": "sum(1 for p in itertools.permutations('アイウエ') if abs(p.index('ア') - p.index('イ')) == 1)",
+       "hints": [
+        "アさんとイさんを、1 つのまとまりと考えよう。",
+        "まとまりとウさん、エさんの 3 つのならべ方は何通りかな。",
+        "まとまりの中のならび方（アイとイア）も考えよう。"
+       ],
+       "paths": [
+        [
+         "アイを 1 つのまとまりにする",
+         "まとまり・ウ・エの 3 つを 3 × 2 × 1 = 6 通り",
+         "まとまりの中がアイかイアの 2 通り",
+         "6 × 2 = 12 通り"
+        ],
+        [
+         "となり合う 2 つの場所は 1 番目と 2 番目、2 番目と 3 番目、3 番目と 4 番目の 3 通り",
+         "そこにアとイを 2 通り",
+         "のこりの 2 か所にウとエを 2 通り",
+         "3 × 2 = 6、6 × 2 = 12 通り"
+        ]
+       ],
+       "note": "まとまりの中のならび方（アイかイアか）をわすれて 6 と答えやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 しゅるいのアイスが、どれもたくさんあります。2 つをえらんで、コーンの下と上に重ねます。同じしゅるいを 2 つ重ねてもかまいません。重ね方は何通りですか。",
+       "answer": 16,
+       "check": "len(set(itertools.product(range(4), repeat=2)))",
+       "hints": [
+        "下のアイスは何通りかな。",
+        "上には、下と同じしゅるいものせられるね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "下 4 通り",
+         "上も 4 通り",
+         "4 × 4 = 16 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4 のカードが何まいでもあります。2 まいをならべて 2 けたの数をつくります。同じ数字を 2 回使ってもかまいません。何こつくれるかをもとめる式はどれですか。",
+       "choices": [
+        "4 × 4",
+        "4 × 3",
+        "4 + 4"
+       ],
+       "answer": "4 × 4",
+       "check": "[c for c, v in (('4 × 4', 4 * 4), ('4 × 3', 4 * 3), ('4 + 4', 4 + 4)) if v == len(set(itertools.product(range(1, 5), repeat=2)))][0]",
+       "hints": [
+        "カードは何まいでもあるね。",
+        "十のくらいに使った数字を、一のくらいにも使えるかな。",
+        "どの十のくらいからも、えだは何本出るかな。"
+       ],
+       "paths": [
+        [
+         "十のくらい 4 通り",
+         "一のくらいも 4 通り",
+         "4 × 4"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "十のくらいの数字と一のくらいの数字がちがう 2 けたの数は、全部で何こありますか。",
+       "answer": 81,
+       "check": "sum(1 for k in range(10, 100) if k // 10 != k % 10)",
+       "hints": [
+        "十のくらいに使える数字は、何通りかな（0 は使えないね）。",
+        "一のくらいには 0 も使えるけれど、十のくらいと同じ数字は使えないね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 1 から 9 の 9 通り",
+         "一のくらいは 0 から 9 のうち十のくらいとちがう 9 通り",
+         "9 × 9 = 81 こ"
+        ],
+        [
+         "2 けたの数は 10 から 99 までの 90 こ",
+         "同じ数字がならぶ 11、22、…、99 の 9 こをのぞく",
+         "90 − 9 = 81 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "9 人の中から、1 番目に発表する人と 2 番目に発表する人を決めます。決め方は何通りですか。",
+       "answer": 72,
+       "check": "len(set(itertools.permutations(range(9), 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 9 通り",
+         "2 番目 8 通り",
+         "9 × 8 = 72 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 まいのカードを、全部 1 列にならべます。ならべ方は何通りですか。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations('アイウエ')))",
+       "hints": [
+        "左から 1 番目は何通りかな。",
+        "1 まいならべるごとに、のこりは 1 まいずつへるね。",
+        "1 までじゅんにかけよう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12",
+         "12 × 2 = 12 + 12 = 24",
+         "24 × 1 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人がかけっこをします。1 着、2 着、3 着の決まり方は何通りですか。同じ着の人はいません。",
+       "answer": 60,
+       "check": "len(set(itertools.permutations(range(5), 3)))",
+       "hints": [
+        "1 着、2 着、3 着は、それぞれ何通りかな。",
+        "2 着まで決めると何通りかな。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "1 着 5 通り",
+         "2 着 4 通り",
+         "3 着 3 通り",
+         "5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "0、1、2、3、4、5 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 25,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(6), 2) if a != 0))",
+       "hints": [
+        "十のくらいにおけるカードは、何まいかな。",
+        "一のくらいには 0 もおけるね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 5 通り",
+         "一のくらい 5 通り",
+         "5 × 5 = 25 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。エさんがいちばん左になるならび方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for p in itertools.permutations('アイウエ') if p[0] == 'エ')",
+       "hints": [
+        "いちばん左は、もう決まっているね。",
+        "のこりの 3 か所に、何人をならべるかな。",
+        "3 人を全部ならべる数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "いちばん左はエさんの 1 通り",
+         "のこりの 3 人を 3 × 2 × 1 = 6 通り",
+         "6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1、2、3、4、5、6 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。一のくらいが 1 か 3 か 5 になる数は何こつくれますか。",
+       "answer": 15,
+       "check": "sum(1 for a, b in itertools.permutations(range(1, 7), 2) if b in (1, 3, 5))",
+       "hints": [
+        "きまりのある場所から先に決めよう。",
+        "一のくらいは何通りかな。",
+        "十のくらいは、のこりの何まいから決めるかな。"
+       ],
+       "paths": [
+        [
+         "一のくらいは 1、3、5 の 3 通り",
+         "十のくらいはのこりの 5 通り",
+         "3 × 5 = 15 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 しゅるいのシールが、どれもたくさんあります。左のポケットと右のポケットに 1 まいずつ入れます。同じしゅるいのシールを入れてもかまいません。入れ方が何通りあるかをもとめる式はどれですか。",
+       "choices": [
+        "5 × 5",
+        "5 × 4",
+        "5 + 5"
+       ],
+       "answer": "5 × 5",
+       "check": "[c for c, v in (('5 × 5', 5 * 5), ('5 × 4', 5 * 4), ('5 + 5', 5 + 5)) if v == len(set(itertools.product(range(5), repeat=2)))][0]",
+       "hints": [
+        "同じしゅるいのシールを両方のポケットに入れてもいいかな。",
+        "左に入れたしゅるいを、右にも使えるね。",
+        "どの左からも、えだは何本出るかな。"
+       ],
+       "paths": [
+        [
+         "左 5 通り",
+         "右も 5 通り",
+         "5 × 5"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 人が 1 列にならびます。イさんとウさんがとなりどうしになるならび方は何通りですか。",
+       "answer": 12,
+       "check": "sum(1 for p in itertools.permutations('アイウエ') if abs(p.index('イ') - p.index('ウ')) == 1)",
+       "hints": [
+        "イさんとウさんを、1 つのまとまりと考えよう。",
+        "まとまりとアさん、エさんの 3 つのならべ方は何通りかな。",
+        "まとまりの中のならび方も考えよう。"
+       ],
+       "paths": [
+        [
+         "イウを 1 つのまとまりにする",
+         "3 つを 3 × 2 × 1 = 6 通り",
+         "まとまりの中が 2 通り",
+         "6 × 2 = 12 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "5 人の中から、リーダーとふくリーダーを 1 人ずつ決めます。1 人が両方になることはありません。決め方は何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.permutations(range(5), 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "ふくリーダーは、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 5 通り",
+         "ふくリーダー 4 通り",
+         "5 × 4 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "0、1、2 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 4,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(3), 2) if a != 0))",
+       "hints": [
+        "十のくらいにおけるカードは、何まいかな。",
+        "一のくらいには 0 もおけるね。",
+        "書き出してたしかめてもいいよ。"
+       ],
+       "paths": [
+        [
+         "十のくらいは 1、2 の 2 通り",
+         "一のくらいはのこりの 2 通り",
+         "2 × 2 = 4 こ"
+        ],
+        [
+         "10、12、20、21",
+         "4 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 人が 1 列にならびます。アさんがいちばん左、オさんがいちばん右になるならび方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for p in itertools.permutations('アイウエオ') if p[0] == 'ア' and p[4] == 'オ')",
+       "hints": [
+        "両はしは、もう決まっているね。",
+        "まん中の 3 か所には、だれがならぶかな。",
+        "のこりの人を全部ならべる数を数えよう。"
+       ],
+       "paths": [
+        [
+         "両はしは決まっている",
+         "まん中はイ、ウ、エで 3 × 2 × 1 = 6 通り",
+         "6 通り"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     -9.35,
     14.02,
     -5.06
-   ]
+   ],
+   "comb": {
+    "b": 0.311,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-007",
@@ -135232,32 +143937,1135 @@ window.ROADMAP = {
    "region": "kazoekata",
    "needs": [
     "C-006",
-    "N-014"
+    "N-014",
+    "N-015",
+    "N-075"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "5 人の中から、リーダーとふくリーダーを 1 人ずつ決めます。1 人が両方になることはありません。決め方は何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.permutations(range(5), 2)))",
+       "hints": [
+        "リーダーは何通りかな。",
+        "ふくリーダーは、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "リーダー 5 通り",
+         "ふくリーダー 4 通り",
+         "5 × 4 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "14 ÷ 2 はいくつですか。",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "14 こを、2 人で同じ数ずつ分けると考えよう。",
+        "2 のだんの九九を思い出そう。",
+        "2 × □ = 14 になる □ をさがそう。"
+       ],
+       "paths": [
+        [
+         "2 × 7 = 14",
+         "だから 14 ÷ 2 = 7"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウ、エの 4 人の中から、そうじ当番を 2 人えらびます。えらび方は何通りですか。",
+       "figure": "アイ　イア\nアウ　ウア\nアエ　エア\nイウ　ウイ\nイエ　エイ\nウエ　エウ",
+       "explain": "もし 1 番目、2 番目とじゅん番をつけてならべると、4 × 3 = 12 通りです。でも当番にはじゅん番がないので、「アイ」と「イア」は同じえらび方です。12 通りのならべ方の中では、どのえらび方も 2 回ずつ出てきます（図の左と右）。だから 12 ÷ 2 = 6 通りです。じゅん番をつけずにえらんだものを「組み合わせ」といいます。ならべ方の数を、同じえらび方が出てくる回数でわると、組み合わせの数になります。"
+      },
+      {
+       "part": "今日",
+       "text": "5 人の中から、代表を 2 人えらびます。えらび方は何通りですか。",
+       "answer": 10,
+       "check": "len(set(itertools.combinations(range(5), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "「アイ」と「イア」は、同じえらび方かな。",
+        "同じえらび方を何回ずつ数えているかを考えて、わり算にしよう。"
+       ],
+       "paths": [
+        [
+         "じゅん番をつけてならべると 5 × 4 = 20 通り",
+         "どのえらび方も 2 回ずつ数えている",
+         "20 ÷ 2 = 10 通り（2 × 10 = 20）"
+        ],
+        [
+         "アさんと組む人 4 通り",
+         "イさんと組む人はアさんをのぞいて 3 通り",
+         "ウさんは 2 通り、エさんは 1 通り",
+         "4 + 3 + 2 + 1 = 10 通り"
+        ]
+       ],
+       "note": "20 と答えやすい。代表にはじゅん番がないことをたしかめる。2 本目の道は、同じ組を 2 回数えないように、前の人と組んだ組を数えない書き方。"
+      },
+      {
+       "part": "今日",
+       "text": "6 しゅるいのくだものから 2 しゅるいをえらんで、ミックスジュースをつくります。えらび方は何通りですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "「りんごとみかん」と「みかんとりんご」は、同じジュースだね。",
+        "30 を、同じ数ずつ 2 つに分けると 1 つ分はいくつかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 6 × 5 = 30 通り",
+         "2 回ずつ数えている",
+         "30 ÷ 2 = 15 通り（15 + 15 = 30）"
+        ],
+        [
+         "5 + 4 + 3 + 2 + 1 = 15 通り"
+        ]
+       ],
+       "note": "30 ÷ 2 は答えが九九をこえるわり算（N-014 の外）。30 を 2 つに同じ数ずつ分けると考え、15 + 15 = 30 でたしかめる。"
+      },
+      {
+       "part": "今日",
+       "text": "7 色のビー玉が 1 こずつあります。2 こをもらうとき、もらい方は何通りですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じもらい方を、何回ずつ数えているかな。",
+        "42 を同じ数ずつ 2 つに分けよう。十のまとまりとばらに分けて考えてもいいよ。"
+       ],
+       "paths": [
+        [
+         "ならべると 7 × 6 = 42 通り",
+         "2 回ずつ数えている",
+         "42 ÷ 2 = 21 通り（21 + 21 = 42）"
+        ],
+        [
+         "6 + 5 + 4 + 3 + 2 + 1 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "8 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 2)))",
+       "hints": [
+        "1 回のしあいは、2 チームをえらぶことと同じだよ。",
+        "「ア 対 イ」と「イ 対 ア」は、同じしあいだね。",
+        "ならべ方の数を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "しあい 1 回は 2 チームのえらび方",
+         "ならべると 8 × 7 = 56",
+         "同じしあいを 2 回ずつ数えている",
+         "56 ÷ 2 = 28 回（28 + 28 = 56）"
+        ],
+        [
+         "7 + 6 + 5 + 4 + 3 + 2 + 1 = 28 回"
+        ]
+       ],
+       "note": "1 チームは 7 回ずつしあいをするので 8 × 7 = 56 としやすい。56 回では、どのしあいも両方のチームの側から 2 回数えている。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "6 人の中から、日直を 2 人えらびます。えらび方は何通りですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "日直にじゅん番はあるかな。",
+        "同じえらび方を何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 6 × 5 = 30 通り",
+         "2 回ずつ",
+         "30 ÷ 2 = 15 通り"
+        ],
+        [
+         "5 + 4 + 3 + 2 + 1 = 15 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9 しゅるいのシールが 1 まいずつあります。2 まいをえらんでもらいます。えらび方は何通りですか。",
+       "answer": 36,
+       "check": "len(set(itertools.combinations(range(9), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "72 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 9 × 8 = 72 通り",
+         "2 回ずつ",
+         "72 ÷ 2 = 36 通り（36 + 36 = 72）"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "10 人がいます。どの 2 人も 1 回ずつあく手をします。あく手は全部で何回ですか。",
+       "answer": 45,
+       "check": "len(set(itertools.combinations(range(10), 2)))",
+       "hints": [
+        "1 回のあく手は、2 人をえらぶことと同じだよ。",
+        "ならべると、10 × 9 は 10 が 9 こで何かな。",
+        "同じあく手を何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 10 × 9 = 90",
+         "2 回ずつ数えている",
+         "90 ÷ 2 = 45 回（45 + 45 = 90）"
+        ],
+        [
+         "9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 + 1 = 45 回"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "5 しゅるいのおかしから、2 しゅるいをえらびます。えらび方は何通りですか。",
+       "answer": 10,
+       "check": "len(set(itertools.combinations(range(5), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "わり算にしよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 5 × 4 = 20 通り",
+         "2 回ずつ",
+         "20 ÷ 2 = 10 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エの 4 人の中から、1 番目、2 番目、3 番目に歌う人を決めます。決め方は何通りですか。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations('アイウエ', 3)))",
+       "hints": [
+        "1 番目、2 番目、3 番目は、それぞれ何通りかな。",
+        "1 人決めるごとに、のこりの人は 1 人ずつへるね。",
+        "12 × 2 は、12 を 2 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12",
+         "12 × 2 = 12 + 12 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウ、エの 4 人の中から、3 人をえらびます。えらび方は何通りですか。",
+       "explain": "じゅん番をつけてならべると 4 × 3 × 2 = 24 通りです。3 人の組 1 つ、たとえばア、イ、ウは、ならべ方の中に アイウ、アウイ、イアウ、イウア、ウアイ、ウイア の 6 回出てきます。3 人のならべ方は 3 × 2 × 1 = 6 通りだからです。だから 24 ÷ 6 = 4 通りです。また、3 人をえらぶことは、えらばない 1 人を決めることと同じなので、4 通りと数えることもできます。"
+      },
+      {
+       "part": "今日",
+       "text": "5 人の中から、3 人をえらびます。えらび方は何通りですか。",
+       "answer": 10,
+       "check": "len(set(itertools.combinations(range(5), 3)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "3 人の組 1 つは、ならべ方の中に何回出てくるかな。",
+        "ならべ方の数を、その回数でわろう。"
+       ],
+       "paths": [
+        [
+         "ならべると 5 × 4 × 3 = 60 通り",
+         "3 人の組は 3 × 2 × 1 = 6 回ずつ出てくる",
+         "60 ÷ 6 = 10 通り（6 × 10 = 60）"
+        ],
+        [
+         "えらばない 2 人を決める",
+         "5 × 4 = 20、20 ÷ 2 = 10 通り"
+        ]
+       ],
+       "note": "60 ÷ 3 = 20 と、3 でわりやすい。3 人のならべ方は 3 通りではなく 6 通り。"
+      },
+      {
+       "part": "今日",
+       "text": "6 人の中から、5 人をえらんでチームをつくります。えらび方は何通りですか。",
+       "answer": 6,
+       "check": "len(set(itertools.combinations(range(6), 5)))",
+       "hints": [
+        "5 人をえらぶと、えらばれない人は何人かな。",
+        "えらばれない 1 人を決めると、チームは決まるかな。",
+        "えらばれない 1 人の決め方を数えよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 1 人を決める",
+         "6 通り"
+        ]
+       ],
+       "note": "ならべ方から数えると 100 をこえる大きな数になる。えらばないほうを数えると楽になる。"
+      },
+      {
+       "part": "今日",
+       "text": "7 人の中から、5 人をえらびます。えらび方は何通りですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 5)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 2 人を決めると、えらぶ 5 人は決まるね。",
+        "7 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 2 人を決める",
+         "ならべると 7 × 6 = 42",
+         "42 ÷ 2 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エ、オの 5 人の中から、3 人をえらびます。アさんがかならず入るえらび方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for c in itertools.combinations('アイウエオ', 3) if 'ア' in c)",
+       "hints": [
+        "アさんは入ると決まっているね。のこりは何人えらぶかな。",
+        "のこりの 2 人は、アさんのほかの何人からえらぶかな。",
+        "4 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "アさんは決まり",
+         "のこりの 2 人をイ、ウ、エ、オの 4 人からえらぶ",
+         "4 × 3 = 12、12 ÷ 2 = 6 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "4 しゅるいの花から 3 しゅるいをえらんで、花たばをつくります。えらび方は何通りですか。",
+       "answer": 4,
+       "check": "len(set(itertools.combinations(range(4), 3)))",
+       "hints": [
+        "3 しゅるいをえらぶと、えらばない花は何しゅるいかな。",
+        "えらばない 1 しゅるいを決めると、花たばは決まるね。",
+        "えらばない花の決め方を数えよう。"
+       ],
+       "paths": [
+        [
+         "えらばない 1 しゅるいを決める",
+         "4 通り"
+        ],
+        [
+         "ならべると 4 × 3 × 2 = 24 通り",
+         "6 回ずつ",
+         "24 ÷ 6 = 4 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 人の中から、7 人をえらびます。えらび方は何通りですか。",
+       "answer": 8,
+       "check": "len(set(itertools.combinations(range(8), 7)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 1 人を決めると、7 人は決まるね。",
+        "えらばれない人の決め方を数えよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 1 人を決める",
+         "8 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "6 人の中から、4 人をえらびます。えらび方は何通りですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 4)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 2 人を決めると、4 人は決まるね。",
+        "6 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 2 人を決める",
+         "ならべると 6 × 5 = 30",
+         "30 ÷ 2 = 15 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "8 人の中から、6 人をえらびます。えらび方は何通りですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 6)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 2 人を決めると、6 人は決まるね。",
+        "8 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 2 人を決める",
+         "ならべると 8 × 7 = 56",
+         "56 ÷ 2 = 28 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "9 人の中から、2 人をえらびます。えらび方は何通りですか。",
+       "answer": 36,
+       "check": "len(set(itertools.combinations(range(9), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "72 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 9 × 8 = 72 通り",
+         "2 回ずつ",
+         "72 ÷ 2 = 36 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウ、エの 4 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "figure": "ア 対 イ　ア 対 ウ　ア 対 エ\nイ 対 ウ　イ 対 エ\nウ 対 エ",
+       "explain": "しあいを 1 回するのは、4 チームから 2 チームをえらぶことと同じです。「ア 対 イ」と「イ 対 ア」は同じしあいなので、組み合わせになります。ならべると 4 × 3 = 12、同じしあいを 2 回ずつ数えているので 12 ÷ 2 = 6 回です。数えるものを「何をえらぶことか」に言いかえると、組み合わせで数えられます。"
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 6 つの点があります。どの 2 つの点も直線でむすびます。直線は全部で何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"48\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"161.6\" cy=\"46\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"161.6\" cy=\"94\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"120\" cy=\"118\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"78.4\" cy=\"94\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"78.4\" cy=\"46\" r=\"4\" fill=\"currentColor\"/>\n  <text x=\"120\" y=\"14\" font-size=\"14\" text-anchor=\"middle\">ア</text>\n  <text x=\"176\" y=\"44\" font-size=\"14\" text-anchor=\"middle\">イ</text>\n  <text x=\"176\" y=\"104\" font-size=\"14\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"136\" font-size=\"14\" text-anchor=\"middle\">エ</text>\n  <text x=\"64\" y=\"104\" font-size=\"14\" text-anchor=\"middle\">オ</text>\n  <text x=\"64\" y=\"44\" font-size=\"14\" text-anchor=\"middle\">カ</text>\n</svg>\n",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "直線 1 本は、点をいくつえらぶことと同じかな。",
+        "点アと点イをむすぶ線と、点イと点アをむすぶ線は同じだね。",
+        "6 つの点から 2 つをえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "直線 1 本は 2 つの点のえらび方",
+         "ならべると 6 × 5 = 30",
+         "30 ÷ 2 = 15 本"
+        ],
+        [
+         "1 つの点から直線が 5 本ずつ出る",
+         "5 × 6 = 30 は 1 本を両はしから 2 回数えている",
+         "30 ÷ 2 = 15 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 5 つの点があります。3 つの点をえらんでむすぶと、三角形が 1 つできます。三角形は全部で何こできますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"48\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"165.7\" cy=\"55.2\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"148.2\" cy=\"108.8\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"91.8\" cy=\"108.8\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"74.3\" cy=\"55.2\" r=\"4\" fill=\"currentColor\"/>\n  <text x=\"120\" y=\"14\" font-size=\"14\" text-anchor=\"middle\">ア</text>\n  <text x=\"181\" y=\"56\" font-size=\"14\" text-anchor=\"middle\">イ</text>\n  <text x=\"158\" y=\"129\" font-size=\"14\" text-anchor=\"middle\">ウ</text>\n  <text x=\"82\" y=\"129\" font-size=\"14\" text-anchor=\"middle\">エ</text>\n  <text x=\"59\" y=\"56\" font-size=\"14\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 10,
+       "check": "len(set(itertools.combinations(range(5), 3)))",
+       "hints": [
+        "三角形 1 つは、点をいくつえらぶことと同じかな。",
+        "3 つの点のえらび方を数えよう。",
+        "えらばない点を考えてもいいよ。"
+       ],
+       "paths": [
+        [
+         "三角形 1 つは 3 つの点のえらび方",
+         "ならべると 5 × 4 × 3 = 60",
+         "60 ÷ 6 = 10 こ"
+        ],
+        [
+         "えらばない 2 つの点を決める",
+         "5 × 4 = 20、20 ÷ 2 = 10 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "しゅるいのちがう赤い花が 4 本、しゅるいのちがう白い花が 5 本あります。赤い花から 2 本、白い花から 1 本をえらんで、花たばをつくります。えらび方は何通りですか。",
+       "answer": 30,
+       "check": "len(set(itertools.product(itertools.combinations(range(4), 2), range(5))))",
+       "hints": [
+        "赤い花の 2 本のえらび方は、何通りかな。",
+        "白い花の 1 本のえらび方は、何通りかな。",
+        "赤も白も両方えらぶね。かけ算かな、たし算かな。"
+       ],
+       "paths": [
+        [
+         "赤 4 × 3 = 12、12 ÷ 2 = 6 通り",
+         "白 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ],
+       "note": "6 + 5 = 11 とたしやすい。赤と白の「両方」をえらぶので、かける（C-005）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "円の上に 8 つの点があり、その 1 つが点アです。3 つの点をむすんで三角形をつくります。点アをふくむ三角形は何こできますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"48\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"153.9\" cy=\"36.1\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"168\" cy=\"70\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"153.9\" cy=\"103.9\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"120\" cy=\"118\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"86.1\" cy=\"103.9\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"72\" cy=\"70\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"86.1\" cy=\"36.1\" r=\"4\" fill=\"currentColor\"/>\n  <text x=\"120\" y=\"14\" font-size=\"14\" text-anchor=\"middle\">ア</text>\n</svg>\n",
+       "answer": 21,
+       "check": "sum(1 for c in itertools.combinations(range(8), 3) if 0 in c)",
+       "hints": [
+        "点アは使うと決まっているね。のこりの点は、いくつえらぶかな。",
+        "のこりの 2 つの点は、何この中からえらぶかな。",
+        "7 こから 2 こをえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "点アは決まり",
+         "のこりの 7 つの点から 2 つをえらぶ",
+         "7 × 6 = 42、42 ÷ 2 = 21 こ"
+        ]
+       ],
+       "note": "8 つの点から 3 つをえらぶ三角形は、ならべ方が 100 をこえるので、この単元では数えない。点アを決めると、のこりは 2 つをえらぶだけになる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "7 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "1 回のしあいは、何をえらぶことと同じかな。",
+        "ならべると何通りかな。",
+        "同じしあいを何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 7 × 6 = 42",
+         "2 回ずつ",
+         "42 ÷ 2 = 21 回"
+        ],
+        [
+         "6 + 5 + 4 + 3 + 2 + 1 = 21 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 6 つの点があります。4 つの点をえらんでむすぶと、四角形が 1 つできます。四角形は全部で何こできますか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 4)))",
+       "hints": [
+        "四角形 1 つは、点をいくつえらぶことかな。",
+        "えらばない点は、いくつかな。",
+        "えらばない 2 つの点の決め方を数えよう。"
+       ],
+       "paths": [
+        [
+         "えらばない 2 つの点を決める",
+         "6 × 5 = 30、30 ÷ 2 = 15 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "赤組が 4 人、白組が 4 人います。赤組から 2 人、白組から 2 人をえらんで、リレーのチームをつくります。えらび方は何通りですか。",
+       "answer": 36,
+       "check": "len(set(itertools.product(itertools.combinations(range(4), 2), itertools.combinations(range(4), 2))))",
+       "hints": [
+        "赤組の 2 人のえらび方は、何通りかな。",
+        "白組の 2 人のえらび方は、何通りかな。",
+        "赤組も白組も両方えらぶね。"
+       ],
+       "paths": [
+        [
+         "赤組 4 × 3 = 12、12 ÷ 2 = 6 通り",
+         "白組も 6 通り",
+         "6 × 6 = 36 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "4 人の中から 2 人をえらぶと、ならべ方 4 × 3 = 12 を 2 でわって 6 通りです。なぜ 2 でわるのかを、書き出しを使って文で書きましょう。",
+       "figure": "アイ　イア\nアウ　ウア\nアエ　エア\nイウ　ウイ\nイエ　エイ\nウエ　エウ",
+       "explain": "例：「4 × 3 = 12 は、1 番目と 2 番目のようにじゅん番をつけてならべた数。ならべ方では、アイとイアのように、同じ 2 人が 2 回ずつ出てくる。えらぶときはじゅん番を考えないので、2 回を 1 回にまとめる。どの組も同じ 2 回ずつなので、12 ÷ 2 = 6 通り。」と書ければよい。「どの組も 2 回ずつ」と、回数がそろっていることが書けているかを見る。そろっているから、わり算で 1 回分にできる。",
+       "hints": [
+        "4 × 3 = 12 は、何を数えた数かな。",
+        "書き出しの左と右は、同じえらび方かな。",
+        "「どの組も 2 回ずつ数えているから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12 はならべ方",
+         "どのえらび方も 2 回ずつ出てくる",
+         "2 回を 1 回にまとめる",
+         "だから 12 ÷ 2 = 6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "4 人の中から 3 人をえらぶときは、ならべ方 4 × 3 × 2 = 24 を、2 ではなく 6 でわります。なぜ 6 でわるのかを文で書きましょう。",
+       "explain": "例：「3 人の組、たとえばア、イ、ウは、ならべ方の中に アイウ、アウイ、イアウ、イウア、ウアイ、ウイア の 6 回出てくる。3 人のならべ方は 3 × 2 × 1 = 6 通りだから。どの組も 6 回ずつ数えているので、24 ÷ 6 = 4 通り。」と書ければよい。2 人をえらぶとき 2 でわるのは 2 人のならべ方が 2 通りだからで、「えらぶ人数のならべ方の数でわる」と気づければなおよい。",
+       "hints": [
+        "ア、イ、ウの 3 人の組は、ならべ方の中に何回出てくるかな。",
+        "3 人のならべ方は何通りかな。",
+        "「〜回ずつ数えているから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "アイウの組はならべ方の中に 6 回出てくる",
+         "3 人のならべ方は 3 × 2 × 1 = 6 通り",
+         "どの組も 6 回ずつ",
+         "だから 24 ÷ 6 = 4 通り"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "5 人の中から 3 人をえらぶ数と、5 人の中から 2 人をえらぶ数は、どちらも 10 通りです。なぜ同じになるのかを文で書きましょう。",
+       "figure": "アイウ ↔ エオ\nアイエ ↔ ウオ\nアイオ ↔ ウエ\nアウエ ↔ イオ\nアウオ ↔ イエ\nアエオ ↔ イウ\nイウエ ↔ アオ\nイウオ ↔ アエ\nイエオ ↔ アウ\nウエオ ↔ アイ",
+       "explain": "例：「3 人をえらぶと、えらばれない 2 人が決まる。反対に、えらばれない 2 人を決めると、えらぶ 3 人も決まる。3 人のえらび方 1 つと 2 人のえらび方 1 つが組になるので、数は同じ。たとえば、アイウをえらぶことと、エオをのこすことは同じ。」と書ければよい。C-006 のわけ（2 人をならべるとのこりの 1 人の場所が決まる）と同じ考え方で、1 つずつ組になることを言えているかを見る。",
+       "hints": [
+        "アイウをえらぶと、えらばれないのはだれかな。",
+        "えらばれない 2 人を決めると、えらぶ 3 人は決まるかな。",
+        "「〜を決めると〜も決まる」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "3 人をえらぶと、のこりの 2 人が決まる",
+         "2 人を決めると、えらぶ 3 人が決まる",
+         "1 つずつ組になる",
+         "だから同じ数"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 しゅるいのおかしから、2 しゅるいをえらびます。えらび方は何通りですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "56 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 8 × 7 = 56 通り",
+         "2 回ずつ",
+         "56 ÷ 2 = 28 通り"
+        ],
+        [
+         "7 + 6 + 5 + 4 + 3 + 2 + 1 = 28 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "answer": 10,
+       "check": "len(set(itertools.combinations(range(5), 2)))",
+       "hints": [
+        "1 回のしあいは、何をえらぶことと同じかな。",
+        "ならべると何通りかな。",
+        "同じしあいを何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 5 × 4 = 20",
+         "2 回ずつ",
+         "20 ÷ 2 = 10 回"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "9 人の中から、2 人をえらびます。えらび方は何通りですか。",
+       "answer": 36,
+       "check": "len(set(itertools.combinations(range(9), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "72 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 9 × 8 = 72 通り",
+         "2 回ずつ",
+         "72 ÷ 2 = 36 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人の中から、4 人をえらびます。えらび方は何通りですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 4)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 2 人を決めると、4 人は決まるね。",
+        "6 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 2 人を決める",
+         "ならべると 6 × 5 = 30",
+         "30 ÷ 2 = 15 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 7 つの点があります。どの 2 つの点も直線でむすびます。直線は全部で何本ですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "直線 1 本は、点をいくつえらぶことかな。",
+        "ならべると何通りかな。",
+        "同じ直線を何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 7 × 6 = 42",
+         "2 回ずつ",
+         "42 ÷ 2 = 21 本"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "6 人の中から、1 番目に走る人と 2 番目に走る人を決めます。決め方は何通りですか。",
+       "answer": 30,
+       "check": "len(set(itertools.permutations(range(6), 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 6 通り",
+         "2 番目 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "23 ÷ 4 = 5 あまり □ です。□ に入る数はいくつですか。",
+       "answer": 3,
+       "check": "divmod(23, 4)[1]",
+       "hints": [
+        "4 × 5 はいくつかな。",
+        "23 から 4 × 5 の答えをひくと、いくつのこるかな。",
+        "あまりは 4 より小さいかな。"
+       ],
+       "paths": [
+        [
+         "4 × 5 = 20",
+         "23 − 20 = 3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ならべ方の数 6 × 5 = 30 を 2 でわって数えるのは、どれですか。",
+       "choices": [
+        "6 人から、リーダーとふくリーダーを 1 人ずつ決める",
+        "6 人から、そうじ当番を 2 人えらぶ",
+        "6 しゅるいのカードが何まいでもあり、2 まいを 1 列にならべる"
+       ],
+       "answer": "6 人から、そうじ当番を 2 人えらぶ",
+       "check": "[c for c, v in (('6 人から、リーダーとふくリーダーを 1 人ずつ決める', len(set(itertools.permutations(range(6), 2)))), ('6 人から、そうじ当番を 2 人えらぶ', len(set(itertools.combinations(range(6), 2)))), ('6 しゅるいのカードが何まいでもあり、2 まいを 1 列にならべる', len(set(itertools.product(range(6), repeat=2))))) if v == 30 // 2][0]",
+       "hints": [
+        "じゅん番があるのは、どれかな。",
+        "同じものを 2 回使えるのは、どれかな。",
+        "じゅん番がなく、同じ人を 2 回えらばないのはどれかな。"
+       ],
+       "paths": [
+        [
+         "リーダーとふくリーダーはじゅん番がある（6 × 5）",
+         "カードは同じしゅるいを 2 回使える（6 × 6）",
+         "当番はじゅん番がない（30 ÷ 2）"
+        ]
+       ],
+       "note": "「係に名前があるか」「同じものを何度も使えるか」で、ならべ方、組み合わせ、C-005 の合図のどれかを見分ける。"
+      },
+      {
+       "part": "今日",
+       "text": "7 人の中から、1 番目に発表する人と 2 番目に発表する人を決めます。決め方は何通りですか。",
+       "answer": 42,
+       "check": "len(set(itertools.permutations(range(7), 2)))",
+       "hints": [
+        "1 番目と 2 番目のように、じゅん番はあるかな。",
+        "1 番目は何通り、2 番目は何通りかな。",
+        "2 でわってよいかな。"
+       ],
+       "paths": [
+        [
+         "じゅん番がある",
+         "1 番目 7 通り",
+         "2 番目 6 通り",
+         "7 × 6 = 42 通り"
+        ]
+       ],
+       "note": "「2 人をえらぶ」と思って 2 でわってしまうことがある。1 番目と 2 番目は入れかえると別の決め方になるので、わらない。"
+      },
+      {
+       "part": "今日",
+       "text": "7 人の中から、発表する人を 2 人えらびます。発表のじゅん番は、あとでくじで決めます。今、2 人のえらび方は何通りですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "今は、じゅん番を決めるかな。",
+        "「アとイ」と「イとア」は、同じえらび方かな。",
+        "ならべ方の数を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "今はじゅん番がない",
+         "ならべると 7 × 6 = 42",
+         "42 ÷ 2 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "6 チームが、どのチームとも 1 回ずつしあいをします。1 日に 2 しあいずつすると、全部のしあいが終わるのは何日目ですか。",
+       "answer": 8,
+       "check": "(len(set(itertools.combinations(range(6), 2))) + 1) // 2",
+       "hints": [
+        "まず、しあいは全部で何回かな。",
+        "しあいの数を 2 でわろう。",
+        "あまったしあいをする日も、1 日いるね。"
+       ],
+       "paths": [
+        [
+         "しあいは 6 × 5 = 30、30 ÷ 2 = 15 回",
+         "15 ÷ 2 = 7 あまり 1",
+         "あまりの 1 しあいの日もあるので 8 日目"
+        ]
+       ],
+       "note": "7 日目と答えやすい。あまりの 1 しあいをする日が 1 日いる（N-014 のあまりの考え方）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "8 人の中から、2 人をえらびます。えらび方は何通りですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "56 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 8 × 7 = 56 通り",
+         "2 回ずつ",
+         "56 ÷ 2 = 28 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "5 人の中から 3 人をえらびます。ならべ方の数 5 × 4 × 3 = 60 を、いくつでわると、えらび方の数になりますか。",
+       "answer": 6,
+       "check": "60 // len(set(itertools.combinations(range(5), 3)))",
+       "hints": [
+        "3 人の組 1 つは、ならべ方の中に何回出てくるかな。",
+        "3 人のならべ方は何通りかな。",
+        "3 × 2 × 1 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "3 人のならべ方は 3 × 2 × 1 = 6 通り",
+         "どの組も 6 回ずつ",
+         "6 でわる"
+        ]
+       ],
+       "note": "3 でわると答えやすい。3 人のならべ方は 3 通りではなく 6 通り。"
+      },
+      {
+       "part": "挑戦",
+       "text": "7 チームが、どのチームとも 1 回ずつしあいをします。1 日に 4 しあいずつすると、全部のしあいが終わるのは何日目ですか。",
+       "answer": 6,
+       "check": "(len(set(itertools.combinations(range(7), 2))) + 3) // 4",
+       "hints": [
+        "まず、しあいは全部で何回かな。",
+        "しあいの数を 4 でわろう。",
+        "あまったしあいをする日も、1 日いるね。"
+       ],
+       "paths": [
+        [
+         "しあいは 7 × 6 = 42、42 ÷ 2 = 21 回",
+         "21 ÷ 4 = 5 あまり 1",
+         "あまりの 1 しあいの日もあるので 6 日目"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "7 人の中から、2 人をえらびます。えらび方は何通りですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "42 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 7 × 6 = 42 通り",
+         "2 回ずつ",
+         "42 ÷ 2 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "9 しゅるいのシールが 1 まいずつあります。2 まいをえらんでもらいます。えらび方は何通りですか。",
+       "answer": 36,
+       "check": "len(set(itertools.combinations(range(9), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "72 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 9 × 8 = 72 通り",
+         "2 回ずつ",
+         "72 ÷ 2 = 36 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 まいのカードから、3 まいをえらびます。えらび方は何通りですか。",
+       "answer": 10,
+       "check": "len(set(itertools.combinations('アイウエオ', 3)))",
+       "hints": [
+        "じゅん番をつけてならべると、何通りかな。",
+        "3 まいの組 1 つは、ならべ方の中に何回出てくるかな。",
+        "えらばない 2 まいを考えてもいいよ。"
+       ],
+       "paths": [
+        [
+         "ならべると 5 × 4 × 3 = 60 通り",
+         "6 回ずつ",
+         "60 ÷ 6 = 10 通り"
+        ],
+        [
+         "えらばない 2 まいを決める",
+         "5 × 4 = 20、20 ÷ 2 = 10 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "6 人の中から、5 人をえらびます。えらび方は何通りですか。",
+       "answer": 6,
+       "check": "len(set(itertools.combinations(range(6), 5)))",
+       "hints": [
+        "えらばれない人は何人かな。",
+        "えらばれない 1 人を決めると、5 人は決まるね。",
+        "えらばれない人の決め方を数えよう。"
+       ],
+       "paths": [
+        [
+         "えらばれない 1 人を決める",
+         "6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "8 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 2)))",
+       "hints": [
+        "1 回のしあいは、何をえらぶことと同じかな。",
+        "ならべると何通りかな。",
+        "同じしあいを何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 8 × 7 = 56",
+         "2 回ずつ",
+         "56 ÷ 2 = 28 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の上に 6 つの点があります。どの 2 つの点も直線でむすびます。直線は全部で何本ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"48\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"22\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"161.6\" cy=\"46\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"161.6\" cy=\"94\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"120\" cy=\"118\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"78.4\" cy=\"94\" r=\"4\" fill=\"currentColor\"/>\n  <circle cx=\"78.4\" cy=\"46\" r=\"4\" fill=\"currentColor\"/>\n</svg>\n",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "直線 1 本は、点をいくつえらぶことかな。",
+        "ならべると何通りかな。",
+        "同じ直線を何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "直線 1 本は 2 つの点のえらび方",
+         "ならべると 6 × 5 = 30",
+         "30 ÷ 2 = 15 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ならべ方の数 5 × 4 = 20 を 2 でわって数えるのは、どれですか。",
+       "choices": [
+        "5 人から、1 番目と 2 番目に走る人を決める",
+        "5 人から、日直を 2 人えらぶ",
+        "5 しゅるいのシールがたくさんあり、左と右のポケットに 1 まいずつ入れる"
+       ],
+       "answer": "5 人から、日直を 2 人えらぶ",
+       "check": "[c for c, v in (('5 人から、1 番目と 2 番目に走る人を決める', len(set(itertools.permutations(range(5), 2)))), ('5 人から、日直を 2 人えらぶ', len(set(itertools.combinations(range(5), 2)))), ('5 しゅるいのシールがたくさんあり、左と右のポケットに 1 まいずつ入れる', len(set(itertools.product(range(5), repeat=2))))) if v == 20 // 2][0]",
+       "hints": [
+        "じゅん番があるのは、どれかな。",
+        "同じものを 2 回使えるのは、どれかな。",
+        "じゅん番がなく、同じ人を 2 回えらばないのはどれかな。"
+       ],
+       "paths": [
+        [
+         "走る人はじゅん番がある（5 × 4）",
+         "シールは同じしゅるいを 2 回使える（5 × 5）",
+         "日直はじゅん番がない（20 ÷ 2）"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "赤組が 3 人、白組が 4 人います。赤組から 2 人、白組から 2 人をえらんで、チームをつくります。えらび方は何通りですか。",
+       "answer": 18,
+       "check": "len(set(itertools.product(itertools.combinations(range(3), 2), itertools.combinations(range(4), 2))))",
+       "hints": [
+        "赤組の 2 人のえらび方は、何通りかな。",
+        "白組の 2 人のえらび方は、何通りかな。",
+        "両方えらぶね。かけ算かな、たし算かな。"
+       ],
+       "paths": [
+        [
+         "赤組 3 × 2 = 6、6 ÷ 2 = 3 通り",
+         "白組 4 × 3 = 12、12 ÷ 2 = 6 通り",
+         "3 × 6 = 18 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "10 人の中から、2 人をえらびます。えらび方は何通りですか。",
+       "answer": 45,
+       "check": "len(set(itertools.combinations(range(10), 2)))",
+       "hints": [
+        "じゅん番をつけてならべると、10 × 9 は何かな。",
+        "同じえらび方を何回ずつ数えているかな。",
+        "90 を同じ数ずつ 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "ならべると 10 × 9 = 90 通り",
+         "2 回ずつ",
+         "90 ÷ 2 = 45 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 人の中から、3 人をえらびます。アさんがかならず入るえらび方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for c in itertools.combinations('アイウエオ', 3) if 'ア' in c)",
+       "hints": [
+        "アさんは入ると決まっているね。",
+        "のこりの 2 人は、何人の中からえらぶかな。",
+        "4 人から 2 人をえらぶ数をもとめよう。"
+       ],
+       "paths": [
+        [
+         "アさんは決まり",
+         "4 人から 2 人",
+         "4 × 3 = 12、12 ÷ 2 = 6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "4 チームが、どのチームとも 1 回ずつしあいをします。しあいは全部で何回ですか。",
+       "answer": 6,
+       "check": "len(set(itertools.combinations(range(4), 2)))",
+       "hints": [
+        "1 回のしあいは、何をえらぶことと同じかな。",
+        "ならべると何通りかな。",
+        "同じしあいを何回ずつ数えているかな。"
+       ],
+       "paths": [
+        [
+         "ならべると 4 × 3 = 12",
+         "2 回ずつ",
+         "12 ÷ 2 = 6 回"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135266,7 +145074,7 @@ window.ROADMAP = {
     -5.08
    ],
    "comb": {
-    "b": 0.293,
+    "b": 0.249,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -135288,23 +145096,916 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "赤い花が 6 本、白い花が 8 本あります。どれか 1 本だけをえらぶとき、えらび方は何通りですか。",
+       "answer": 14,
+       "check": "len(set(('赤', i) for i in range(6)) | set(('白', i) for i in range(8)))",
+       "hints": [
+        "えらぶのは何本かな。",
+        "赤い花と白い花は、重なるかな。",
+        "どちらか 1 つのときは、たし算とかけ算のどちらかな。"
+       ],
+       "paths": [
+        [
+         "1 本だけ",
+         "赤か白のどちらか",
+         "重ならない",
+         "6 + 8 = 14 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "パンが 3 しゅるい、飲み物が 4 しゅるいあります。パンと飲み物を 1 つずつえらぶ組み合わせは何通りですか。",
+       "answer": 12,
+       "check": "len(set(itertools.product(range(3), range(4))))",
+       "hints": [
+        "パン 1 つから、飲み物のえだは何本出るかな。",
+        "どのパンからも、同じ数のえだが出るね。",
+        "かけ算の式にしよう。"
+       ],
+       "paths": [
+        [
+         "どのパンからもえだが 4 本",
+         "4 本が 3 つ分",
+         "4 × 3 = 12 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "犬がすきな人は 7 人、ねこがすきな人は 5 人、両方すきな人は 3 人です。犬かねこの、どちらかがすきな人（両方すきな人もふくめます）は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">犬</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">2 人</text>\n</svg>\n",
+       "explain": "7 + 5 = 12 とたすと、両方すきな 3 人を、犬のほうでもねこのほうでも数えてしまいます（2 回数えます）。だから 12 − 3 = 9 人です。図のように、2 つの円を重ねてかくと、重なりがよく見えます。この図を「ベン図」といいます。重なりが両方すきな人、左の円だけの所が犬だけすきな人（7 − 3 = 4 人）、右の円だけの所がねこだけすきな人（5 − 3 = 2 人）です。4 + 3 + 2 = 9 人と数えても同じです。"
+      },
+      {
+       "part": "今日",
+       "text": "えんぴつを持っている人は 9 人、ペンを持っている人は 6 人、両方持っている人は 4 人です。えんぴつかペンの、どちらかを持っている人（両方持っている人もふくめます）は何人ですか。",
+       "answer": 11,
+       "check": "len(set(range(9)) | set(range(5, 11)))",
+       "hints": [
+        "9 + 6 とたすと、両方持っている人はどうなるかな。",
+        "両方持っている人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "9 + 6 = 15",
+         "両方の 4 人を 2 回数えている",
+         "15 − 4 = 11 人"
+        ],
+        [
+         "えんぴつだけ 9 − 4 = 5 人",
+         "ペンだけ 6 − 4 = 2 人",
+         "5 + 4 + 2 = 11 人"
+        ]
+       ],
+       "note": "9 + 6 = 15 と答えやすい。ベン図をかかせて、重なりを 2 回数えていることを見せる。"
+      },
+      {
+       "part": "今日",
+       "text": "ベン図は、サッカーをする人となわとびをする人の人数です。なわとびをする人は、全部で何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">サッカー</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">なわとび</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">5 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">2 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n</svg>\n",
+       "answer": 8,
+       "check": "2 + 6",
+       "hints": [
+        "なわとびの円の中には、どこがあるかな。",
+        "重なりの 2 人も、なわとびをする人だね。",
+        "なわとびの円の中の数をたそう。"
+       ],
+       "paths": [
+        [
+         "なわとびだけ 6 人",
+         "両方 2 人",
+         "6 + 2 = 8 人"
+        ]
+       ],
+       "note": "6 人と答えやすい。両方する人も、なわとびをする人に入る。"
+      },
+      {
+       "part": "今日",
+       "text": "九九の 4 のだんの答え（4、8、12、…、36）と、6 のだんの答え（6、12、18、…、54）があります。両方に出てくる数は何こありますか。",
+       "answer": 3,
+       "check": "len(set(4 * i for i in range(1, 10)) & set(6 * i for i in range(1, 10)))",
+       "hints": [
+        "4 のだんの答えを全部書こう。",
+        "6 のだんの答えも書いて、同じ数に〇をつけよう。",
+        "〇をつけた数を数えよう。"
+       ],
+       "paths": [
+        [
+         "4 のだんは 4、8、12、16、20、24、28、32、36",
+         "6 のだんは 6、12、18、24、30、36、42、48、54",
+         "両方は 12、24、36 の 3 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "4 のだんの答えと 6 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。",
+       "answer": 15,
+       "check": "len(set(4 * i for i in range(1, 10)) | set(6 * i for i in range(1, 10)))",
+       "hints": [
+        "4 のだんの答えは何こ、6 のだんの答えは何こかな。",
+        "両方に出てくる数は、何こだったかな。",
+        "たしてから、2 回数えた数をひこう。"
+       ],
+       "paths": [
+        [
+         "4 のだん 9 こ、6 のだん 9 こ",
+         "9 + 9 = 18",
+         "両方の 12、24、36 を 2 回数えている",
+         "18 − 3 = 15 こ"
+        ]
+       ],
+       "note": "9 + 9 = 18 と答えやすい。数の集まりでも、人の集まりと同じように重なりをひく。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "りんごがすきな人は 8 人、みかんがすきな人は 6 人、両方すきな人は 2 人です。どちらかがすきな人は何人ですか。",
+       "answer": 12,
+       "check": "len(set(range(8)) | set(range(6, 12)))",
+       "hints": [
+        "8 + 6 とたすと、両方すきな人はどうなるかな。",
+        "両方すきな人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "8 + 6 = 14",
+         "2 人を 2 回数えている",
+         "14 − 2 = 12 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ベン図は、本を読むのがすきな人（読書）と、絵をかくのがすきな人（絵）の人数です。絵をかくのがすきな人は、全部で何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">読書</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">絵</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">5 人</text>\n</svg>\n",
+       "answer": 8,
+       "check": "3 + 5",
+       "hints": [
+        "絵の円の中には、どこがあるかな。",
+        "重なりの人も、絵をかくのがすきな人だね。",
+        "絵の円の中の数をたそう。"
+       ],
+       "paths": [
+        [
+         "絵だけ 5 人",
+         "両方 3 人",
+         "5 + 3 = 8 人"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 のだんの答えと 5 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。",
+       "answer": 17,
+       "check": "len(set(2 * i for i in range(1, 10)) | set(5 * i for i in range(1, 10)))",
+       "hints": [
+        "2 のだんの答えは何こ、5 のだんの答えは何こかな。",
+        "両方に出てくる数をさがそう。",
+        "たしてから、2 回数えた数をひこう。"
+       ],
+       "paths": [
+        [
+         "9 + 9 = 18",
+         "両方に出るのは 10 の 1 こ",
+         "18 − 1 = 17 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "えんぴつを持っている人は 10 人、ペンを持っている人は 7 人、両方持っている人は 4 人です。どちらかを持っている人は何人ですか。",
+       "answer": 13,
+       "check": "len(set(range(10)) | set(range(6, 13)))",
+       "hints": [
+        "10 + 7 とたすと、両方持っている人はどうなるかな。",
+        "両方持っている人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "10 + 7 = 17",
+         "4 人を 2 回数えている",
+         "17 − 4 = 13 人"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "3 のだんの答えと 4 のだんの答えの、両方に出てくる数は何こありますか。",
+       "answer": 2,
+       "check": "len(set(3 * i for i in range(1, 10)) & set(4 * i for i in range(1, 10)))",
+       "hints": [
+        "3 のだんの答えを全部書こう。",
+        "4 のだんの答えも書いて、同じ数に〇をつけよう。",
+        "〇をつけた数を数えよう。"
+       ],
+       "paths": [
+        [
+         "3 のだんは 3 から 27",
+         "4 のだんは 4 から 36",
+         "両方は 12 と 24 の 2 こ"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "子ども会の 30 人に聞きました。犬をかっている人は 11 人、ねこをかっている人は 9 人、両方かっている人は 4 人です。どちらもかっていない人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"6\" y=\"4\" width=\"228\" height=\"132\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">犬</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">7 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">5 人</text>\n</svg>\n",
+       "explain": "まず、どちらかをかっている人は、11 + 9 − 4 = 16 人です（2 回数えた 4 人をひきます）。全体の 30 人から 16 人をひくと、どちらもかっていない人は 30 − 16 = 14 人です。ベン図では、外の四角が全体で、2 つの円の外にいるのが、どちらもかっていない人です。"
+      },
+      {
+       "part": "今日",
+       "text": "28 人に聞きました。なわとびができる人は 16 人、こままわしができる人は 10 人、両方できる人は 5 人です。どちらもできない人は何人ですか。",
+       "answer": 7,
+       "check": "28 - len(set(range(16)) | set(range(11, 21)))",
+       "hints": [
+        "まず、どちらかができる人を数えよう。",
+        "両方できる人を、2 回数えないようにしよう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "16 + 10 = 26、26 − 5 = 21 人",
+         "28 − 21 = 7 人"
+        ]
+       ],
+       "note": "28 − 16 − 10 = 2 とひいてしまうと、両方できる人を 2 回ひいている。"
+      },
+      {
+       "part": "今日",
+       "text": "25 人に聞きました。うどんがすきな人は 15 人、そばがすきな人は 13 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。",
+       "answer": 3,
+       "check": "len(set(range(15)) & set(range(12, 25)))",
+       "hints": [
+        "15 + 13 は、全体の 25 人より何人多いかな。",
+        "多くなった分は、どんな人を数えたからかな。",
+        "2 回数えた人が、両方すきな人だね。"
+       ],
+       "paths": [
+        [
+         "15 + 13 = 28",
+         "全体の 25 人より 28 − 25 = 3 人多い",
+         "2 回数えた 3 人が両方すき"
+        ]
+       ],
+       "note": "たした数が全体より多いのは、両方の人を 2 回数えているから。どちらもすきでない人がいないので、多い分がそのまま両方すきな人になる。"
+      },
+      {
+       "part": "今日",
+       "text": "ベン図は、ピアノを習っている人と水泳を習っている人の人数です。全体は 20 人です。どちらも習っていない人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"6\" y=\"4\" width=\"228\" height=\"132\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">ピアノ</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">水泳</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n</svg>\n",
+       "answer": 7,
+       "check": "20 - (6 + 3 + 4)",
+       "hints": [
+        "円の中にいる人は、全部で何人かな。",
+        "円の外にいるのは、どんな人かな。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "円の中は 6 + 3 + 4 = 13 人",
+         "20 − 13 = 7 人"
+        ]
+       ],
+       "note": "6 + 3 + 3 + 4 のように、重なりの 3 人を 2 回たしやすい。図の数は、それぞれの場所にいる人数なので 1 回ずつたす。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 40 までの数のうち、2 のだんの答えにも、3 のだんの答えにもならない数は何こありますか。",
+       "answer": 25,
+       "check": "40 - len(set(2 * i for i in range(1, 10)) | set(3 * i for i in range(1, 10)))",
+       "hints": [
+        "2 のだんの答えか 3 のだんの答えになる数は、何こかな。",
+        "2 回数えないように、両方に出てくる数をひこう。",
+        "1 から 40 までの 40 こからひこう。"
+       ],
+       "paths": [
+        [
+         "2 のだん 9 こ、3 のだん 9 こ、両方 3 こ",
+         "どちらかになる数は 9 + 9 − 3 = 15 こ",
+         "40 − 15 = 25 こ"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "32 人に聞きました。竹馬に乗れる人は 20 人、一りん車に乗れる人は 11 人、両方乗れる人は 6 人です。どちらも乗れない人は何人ですか。",
+       "answer": 7,
+       "check": "32 - len(set(range(20)) | set(range(14, 25)))",
+       "hints": [
+        "まず、どちらかに乗れる人を数えよう。",
+        "両方乗れる人を、2 回数えないようにしよう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "20 + 11 = 31、31 − 6 = 25 人",
+         "32 − 25 = 7 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 人に聞きました。メロンがすきな人は 12 人、いちごがすきな人は 14 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。",
+       "answer": 6,
+       "check": "len(set(range(12)) & set(range(6, 20)))",
+       "hints": [
+        "12 + 14 は、全体の 20 人より何人多いかな。",
+        "多くなった分は、どんな人を数えたからかな。",
+        "2 回数えた人が、両方すきな人だね。"
+       ],
+       "paths": [
+        [
+         "12 + 14 = 26",
+         "26 − 20 = 6",
+         "2 回数えた 6 人が両方すき"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 40 までの数のうち、4 のだんの答えか、5 のだんの答えになる数は何こありますか。",
+       "answer": 16,
+       "check": "len(set(4 * i for i in range(1, 10) if 4 * i <= 40) | set(5 * i for i in range(1, 10) if 5 * i <= 40))",
+       "hints": [
+        "4 のだんの答えで、40 までの数は何こかな。",
+        "5 のだんの答えで、40 までの数は何こかな（45 は入らないね）。",
+        "両方に出てくる数を、2 回数えないようにしよう。"
+       ],
+       "paths": [
+        [
+         "4 のだんは 4 から 36 の 9 こ",
+         "5 のだんは 5 から 40 の 8 こ",
+         "両方は 20 の 1 こ",
+         "9 + 8 − 1 = 16 こ"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "犬がすきな人 7 人、ねこがすきな人 5 人、両方すきな人 3 人のとき、どちらかがすきな人は 7 + 5 − 3 = 9 人です。なぜ 3 をひくのかを、ベン図を使って文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">犬</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">ねこ</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">2 人</text>\n</svg>\n",
+       "explain": "例：「犬がすきな 7 人の中にも、ねこがすきな 5 人の中にも、両方すきな 3 人が入っている。7 + 5 とたすと、その 3 人を 2 回数えてしまう。1 回ずつにするために、2 回目の 3 人をひく。だから 7 + 5 − 3 = 9 人。ベン図で、犬だけ 4 人、両方 3 人、ねこだけ 2 人をたしても 9 人になる。」と書ければよい。「2 回数えている」ことが言えているかを見る。",
+       "hints": [
+        "ベン図の重なりにいる 3 人は、犬の円とねこの円のどちらに入っているかな。",
+        "7 + 5 とたすと、重なりの 3 人は何回数えるかな。",
+        "「2 回数えているから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "重なりの 3 人は両方の円に入っている",
+         "7 + 5 では 3 人を 2 回数える",
+         "1 回分をひく",
+         "だから 7 + 5 − 3 = 9 人"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "24 人に聞くと、なわとびができる人が 16 人、こままわしができる人が 10 人でした。「合わせて 16 + 10 = 26 人」と考えるのは、どこがおかしいでしょう。両方できる人が、少なくとも何人いるかも考えて、文で書きましょう。",
+       "explain": "例：「全体は 24 人しかいないのに、26 人は多すぎる。両方できる人を、なわとびでもこままわしでも数えたので、2 回数えた人がいる。26 − 24 = 2 なので、少なくとも 2 人は 2 回数えられていて、両方できる人は少なくとも 2 人いる。」と書ければよい。24 人の全員がどちらかできるときに、両方できる人はちょうど 2 人になる。どちらもできない人がいれば、両方できる人はもっと多い。「少なくとも」が言えなくても、2 回数えた人がいることに気づけていればよい。",
+       "hints": [
+        "全体は何人かな。26 人とくらべよう。",
+        "多くなった分は、どんな人を数えたからかな。",
+        "26 − 24 を使って書こう。"
+       ],
+       "paths": [
+        [
+         "26 人は全体の 24 人より多い",
+         "両方できる人を 2 回数えている",
+         "26 − 24 = 2",
+         "両方できる人は少なくとも 2 人"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "赤い花が 4 本、白い花が 5 本あって、どれか 1 本をえらぶときは 4 + 5 = 9 通りです（和（わ）の法則（ほうそく））。このとき何もひかなくてよいわけを、ベン図を使って文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"65\" cy=\"80\" r=\"45\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"175\" cy=\"80\" r=\"45\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"65\" y=\"25\" font-size=\"14\" text-anchor=\"middle\">赤い花</text>\n  <text x=\"175\" y=\"25\" font-size=\"14\" text-anchor=\"middle\">白い花</text>\n  <text x=\"65\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 本</text>\n  <text x=\"175\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">5 本</text>\n</svg>\n",
+       "explain": "例：「赤い花でもあり白い花でもある花はない。ベン図にすると 2 つの円は重ならない。2 回数える花がないので、ひかなくてよい。」と書ければよい。C-005 の和の法則は、重なりが 0 人（0 本）のときの「たしてから重なりをひく」と同じことだと気づければなおよい。",
+       "hints": [
+        "赤い花でもあり、白い花でもある花はあるかな。",
+        "ベン図にすると、2 つの円は重なるかな。",
+        "「重ならないから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "赤でも白でもある花はない",
+         "円は重ならない",
+         "2 回数える花がない",
+         "だからひかない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "けん玉ができる人は 13 人、こままわしができる人は 9 人、両方できる人は 5 人です。どちらかができる人は何人ですか。",
+       "answer": 17,
+       "check": "len(set(range(13)) | set(range(8, 17)))",
+       "hints": [
+        "13 + 9 とたすと、両方できる人はどうなるかな。",
+        "両方できる人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "13 + 9 = 22",
+         "5 人を 2 回数えている",
+         "22 − 5 = 17 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ベン図は、算数がすきな人と図工がすきな人の人数です。全体は 25 人です。どちらもすきでない人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"6\" y=\"4\" width=\"228\" height=\"132\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">算数</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">図工</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">7 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n</svg>\n",
+       "answer": 8,
+       "check": "25 - (7 + 6 + 4)",
+       "hints": [
+        "円の中にいる人は、全部で何人かな。",
+        "円の外にいるのは、どんな人かな。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "円の中は 7 + 6 + 4 = 17 人",
+         "25 − 17 = 8 人"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "トマトがすきな人は 11 人、なすがすきな人は 8 人、両方すきな人は 3 人です。どちらかがすきな人は何人ですか。",
+       "answer": 16,
+       "check": "len(set(range(11)) | set(range(8, 16)))",
+       "hints": [
+        "11 + 8 とたすと、両方すきな人はどうなるかな。",
+        "両方すきな人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "11 + 8 = 19",
+         "3 人を 2 回数えている",
+         "19 − 3 = 16 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 人に聞きました。自転車に乗れる人は 24 人、竹馬に乗れる人は 12 人、両方乗れる人は 9 人です。どちらも乗れない人は何人ですか。",
+       "answer": 3,
+       "check": "30 - len(set(range(24)) | set(range(15, 27)))",
+       "hints": [
+        "まず、どちらかに乗れる人を数えよう。",
+        "両方乗れる人を、2 回数えないようにしよう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "24 + 12 = 36、36 − 9 = 27 人",
+         "30 − 27 = 3 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "22 人に聞きました。夏がすきな人は 15 人、冬がすきな人は 10 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。",
+       "answer": 3,
+       "check": "len(set(range(15)) & set(range(12, 22)))",
+       "hints": [
+        "15 + 10 は、全体の 22 人より何人多いかな。",
+        "多くなった分は、どんな人を数えたからかな。",
+        "2 回数えた人が、両方すきな人だね。"
+       ],
+       "paths": [
+        [
+         "15 + 10 = 25",
+         "25 − 22 = 3",
+         "2 回数えた 3 人が両方すき"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ノートが 5 しゅるい、えんぴつが 4 しゅるいあります。ノートとえんぴつを 1 つずつえらぶ組み合わせは何通りですか。",
+       "answer": 20,
+       "check": "len(set(itertools.product(range(5), range(4))))",
+       "hints": [
+        "ノート 1 さつから、えんぴつのえだは何本出るかな。",
+        "どのノートからも、同じ数のえだが出るね。",
+        "かけ算の式にしよう。"
+       ],
+       "paths": [
+        [
+         "どのノートからもえだが 4 本",
+         "4 本が 5 つ分",
+         "4 × 5 = 20 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "犬がすきな人は 8 人、ねこがすきな人は 9 人、両方すきな人は 4 人です。どちらかがすきな人は何人ですか。",
+       "answer": 13,
+       "check": "len(set(range(8)) | set(range(4, 13)))",
+       "hints": [
+        "8 + 9 とたすと、両方すきな人はどうなるかな。",
+        "両方すきな人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "8 + 9 = 17",
+         "4 人を 2 回数えている",
+         "17 − 4 = 13 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "サッカーがすきな人は 9 人、野球がすきな人は 7 人、両方すきな人は 2 人です。どちらかがすきな人の数をもとめる式はどれですか。",
+       "choices": [
+        "9 + 7",
+        "9 + 7 − 2",
+        "9 × 7"
+       ],
+       "answer": "9 + 7 − 2",
+       "check": "[c for c, v in (('9 + 7', 9 + 7), ('9 + 7 − 2', 9 + 7 - 2), ('9 × 7', 9 * 7)) if v == len(set(range(9)) | set(range(7, 14)))][0]",
+       "hints": [
+        "両方すきな人は、9 人と 7 人のどちらにも入っているかな。",
+        "9 + 7 では、両方すきな人を何回数えるかな。",
+        "2 回数えた分をひく式はどれかな。"
+       ],
+       "paths": [
+        [
+         "両方すきな 2 人は 9 人にも 7 人にも入る",
+         "9 + 7 では 2 回数える",
+         "9 + 7 − 2"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "20 人に、犬とねこをかっているかを聞いて、表にしました。○ はかっている、× はかっていない、です。犬もねこもかっていない人（□）は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"10\" y=\"10\" width=\"220\" height=\"120\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"10\" x2=\"100\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"165\" y1=\"10\" x2=\"165\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"50\" x2=\"230\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"90\" x2=\"230\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"132\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">ねこ ○</text>\n  <text x=\"198\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">ねこ ×</text>\n  <text x=\"55\" y=\"75\" font-size=\"13\" text-anchor=\"middle\">犬 ○</text>\n  <text x=\"55\" y=\"115\" font-size=\"13\" text-anchor=\"middle\">犬 ×</text>\n  <text x=\"132\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"198\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">5 人</text>\n  <text x=\"132\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n  <text x=\"198\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">□</text>\n</svg>\n",
+       "answer": 8,
+       "check": "20 - (3 + 5 + 4)",
+       "hints": [
+        "表の 4 つのますの人数をたすと、全体の何人になるかな。",
+        "わかっている 3 つのますの人数をたそう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "3 + 5 + 4 = 12 人",
+         "20 − 12 = 8 人"
+        ]
+       ],
+       "note": "表の「犬 ○ ねこ ○」のますがベン図の重なり、「犬 × ねこ ×」が 2 つの円の外にあたる。表とベン図は、同じことを別の形でかいている。"
+      },
+      {
+       "part": "今日",
+       "text": "2 のだんの答えと 3 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。",
+       "answer": 15,
+       "check": "len(set(2 * i for i in range(1, 10)) | set(3 * i for i in range(1, 10)))",
+       "hints": [
+        "2 のだんの答えと 3 のだんの答えは、それぞれ何こかな。",
+        "両方に出てくる数をさがそう。",
+        "たしてから、2 回数えた数をひこう。"
+       ],
+       "paths": [
+        [
+         "9 + 9 = 18",
+         "両方に出るのは 6、12、18 の 3 こ",
+         "18 − 3 = 15 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 35 までの数を、1 まいずつカードに書きました。3 という数字が入っているカードは何まいですか。33 のように 2 つ入っているカードも、1 まいと数えます。",
+       "answer": 9,
+       "check": "sum(1 for k in range(1, 36) if k % 10 == 3 or k // 10 == 3)",
+       "hints": [
+        "一のくらいが 3 のカードを書き出そう。",
+        "十のくらいが 3 のカードも書き出そう。",
+        "両方に入っているカードを、2 回数えないようにしよう。"
+       ],
+       "paths": [
+        [
+         "一のくらいが 3 は 3、13、23、33 の 4 まい",
+         "十のくらいが 3 は 30 から 35 の 6 まい",
+         "33 は両方に入る",
+         "4 + 6 − 1 = 9 まい"
+        ]
+       ],
+       "note": "4 + 6 = 10 と答えやすい。33 は「一のくらいが 3」にも「十のくらいが 3」にも入る重なり。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "赤い花が 9 本、白い花が 7 本あります。どれか 1 本をえらぶとき、えらび方の数をもとめる式はどれですか。",
+       "choices": [
+        "9 + 7",
+        "9 × 7",
+        "9 − 7"
+       ],
+       "answer": "9 + 7",
+       "check": "[c for c, v in (('9 + 7', 9 + 7), ('9 × 7', 9 * 7), ('9 − 7', 9 - 7)) if v == len(set(('赤', i) for i in range(9)) | set(('白', i) for i in range(7)))][0]",
+       "hints": [
+        "赤い花でもあり、白い花でもある花はあるかな。",
+        "重なりがないとき、ひく数はあるかな。",
+        "どれか 1 本をえらぶときは、たし算とかけ算のどちらかな。"
+       ],
+       "paths": [
+        [
+         "赤と白は重ならない",
+         "ひく数はない",
+         "9 + 7"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "25 人に、自転車と竹馬に乗れるかを聞いて、表にしました。○ は乗れる、× は乗れない、です。両方に乗れる人（□）は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"10\" y=\"10\" width=\"220\" height=\"120\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"10\" x2=\"100\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"165\" y1=\"10\" x2=\"165\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"50\" x2=\"230\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"90\" x2=\"230\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"132\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">竹馬 ○</text>\n  <text x=\"198\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">竹馬 ×</text>\n  <text x=\"55\" y=\"75\" font-size=\"13\" text-anchor=\"middle\">自転車 ○</text>\n  <text x=\"55\" y=\"115\" font-size=\"13\" text-anchor=\"middle\">自転車 ×</text>\n  <text x=\"132\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">□</text>\n  <text x=\"198\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">8 人</text>\n  <text x=\"132\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">2 人</text>\n  <text x=\"198\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n</svg>\n",
+       "answer": 9,
+       "check": "25 - (8 + 2 + 6)",
+       "hints": [
+        "4 つのますの人数をたすと、全体の何人になるかな。",
+        "わかっている 3 つのますの人数をたそう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "8 + 2 + 6 = 16 人",
+         "25 − 16 = 9 人"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 から 59 までの数を、1 まいずつカードに書きました。5 という数字が入っているカードは何まいですか。55 も 1 まいと数えます。",
+       "answer": 15,
+       "check": "sum(1 for k in range(1, 60) if k % 10 == 5 or k // 10 == 5)",
+       "hints": [
+        "一のくらいが 5 のカードを書き出そう。",
+        "十のくらいが 5 のカードは何まいかな。",
+        "両方に入っているカードを、2 回数えないようにしよう。"
+       ],
+       "paths": [
+        [
+         "一のくらいが 5 は 5、15、25、35、45、55 の 6 まい",
+         "十のくらいが 5 は 50 から 59 の 10 まい",
+         "55 は両方",
+         "6 + 10 − 1 = 15 まい"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "かるたができる人は 10 人、すごろくができる人は 8 人、両方できる人は 3 人です。どちらかができる人は何人ですか。",
+       "answer": 15,
+       "check": "len(set(range(10)) | set(range(7, 15)))",
+       "hints": [
+        "10 + 8 とたすと、両方できる人はどうなるかな。",
+        "両方できる人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "10 + 8 = 18",
+         "3 人を 2 回数えている",
+         "18 − 3 = 15 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "26 人に聞きました。おにごっこがすきな人は 12 人、かくれんぼがすきな人は 10 人、両方すきな人は 4 人です。どちらもすきでない人は何人ですか。",
+       "answer": 8,
+       "check": "26 - len(set(range(12)) | set(range(8, 18)))",
+       "hints": [
+        "まず、どちらかがすきな人を数えよう。",
+        "両方すきな人を、2 回数えないようにしよう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "12 + 10 = 22、22 − 4 = 18 人",
+         "26 − 18 = 8 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "22 人に聞きました。プールがすきな人は 14 人、海がすきな人は 11 人です。どちらもすきでない人はいません。両方すきな人は何人ですか。",
+       "answer": 3,
+       "check": "len(set(range(14)) & set(range(11, 22)))",
+       "hints": [
+        "14 + 11 は、全体の 22 人より何人多いかな。",
+        "多くなった分は、どんな人を数えたからかな。",
+        "2 回数えた人が、両方すきな人だね。"
+       ],
+       "paths": [
+        [
+         "14 + 11 = 25",
+         "25 − 22 = 3",
+         "2 回数えた 3 人が両方すき"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ベン図は、歌がすきな人とダンスがすきな人の人数です。どちらかがすきな人は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"95\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <circle cx=\"145\" cy=\"80\" r=\"50\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <text x=\"62\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">歌</text>\n  <text x=\"178\" y=\"22\" font-size=\"14\" text-anchor=\"middle\">ダンス</text>\n  <text x=\"68\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">5 人</text>\n  <text x=\"120\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"172\" y=\"85\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n</svg>\n",
+       "answer": 14,
+       "check": "5 + 3 + 6",
+       "hints": [
+        "2 つの円の中にいる人を、全部数えよう。",
+        "図の数は、それぞれの場所にいる人数だね。",
+        "3 つの場所の人数をたそう。"
+       ],
+       "paths": [
+        [
+         "歌だけ 5 人、両方 3 人、ダンスだけ 6 人",
+         "5 + 3 + 6 = 14 人"
+        ]
+       ],
+       "note": "図の数は場所ごとの人数なので、重なりをひかずに 1 回ずつたす。人数が「歌がすきな人 8 人」のように円ごとに書かれているときとのちがいに気をつける。"
+      },
+      {
+       "part": "今日",
+       "text": "3 のだんの答えと 4 のだんの答えの、どちらかに出てくる数は何こありますか。同じ数は 1 こと数えます。",
+       "answer": 16,
+       "check": "len(set(3 * i for i in range(1, 10)) | set(4 * i for i in range(1, 10)))",
+       "hints": [
+        "3 のだんの答えと 4 のだんの答えは、それぞれ何こかな。",
+        "両方に出てくる数をさがそう。",
+        "たしてから、2 回数えた数をひこう。"
+       ],
+       "paths": [
+        [
+         "9 + 9 = 18",
+         "両方に出るのは 12 と 24 の 2 こ",
+         "18 − 2 = 16 こ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "えんぴつを持っている人は 8 人、ペンを持っている人は 6 人、両方持っている人は 3 人です。どちらかを持っている人の数をもとめる式はどれですか。",
+       "choices": [
+        "8 + 6",
+        "8 + 6 − 3",
+        "8 × 6"
+       ],
+       "answer": "8 + 6 − 3",
+       "check": "[c for c, v in (('8 + 6', 8 + 6), ('8 + 6 − 3', 8 + 6 - 3), ('8 × 6', 8 * 6)) if v == len(set(range(8)) | set(range(5, 11)))][0]",
+       "hints": [
+        "両方持っている人は、8 人と 6 人のどちらにも入っているかな。",
+        "8 + 6 では、両方持っている人を何回数えるかな。",
+        "2 回数えた分をひく式はどれかな。"
+       ],
+       "paths": [
+        [
+         "両方の 3 人を 2 回数えている",
+         "8 + 6 − 3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "18 人に、なわとびと鉄ぼうができるかを聞いて、表にしました。○ はできる、× はできない、です。どちらもできない人（□）は何人ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"10\" y=\"10\" width=\"220\" height=\"120\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"100\" y1=\"10\" x2=\"100\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"165\" y1=\"10\" x2=\"165\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"50\" x2=\"230\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"90\" x2=\"230\" y2=\"90\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"132\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">鉄ぼう ○</text>\n  <text x=\"198\" y=\"35\" font-size=\"13\" text-anchor=\"middle\">鉄ぼう ×</text>\n  <text x=\"55\" y=\"75\" font-size=\"13\" text-anchor=\"middle\">なわとび ○</text>\n  <text x=\"55\" y=\"115\" font-size=\"13\" text-anchor=\"middle\">なわとび ×</text>\n  <text x=\"132\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">6 人</text>\n  <text x=\"198\" y=\"75\" font-size=\"15\" text-anchor=\"middle\">4 人</text>\n  <text x=\"132\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">3 人</text>\n  <text x=\"198\" y=\"115\" font-size=\"15\" text-anchor=\"middle\">□</text>\n</svg>\n",
+       "answer": 5,
+       "check": "18 - (6 + 4 + 3)",
+       "hints": [
+        "4 つのますの人数をたすと、全体の何人になるかな。",
+        "わかっている 3 つのますの人数をたそう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "6 + 4 + 3 = 13 人",
+         "18 − 13 = 5 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 から 30 までの数を、1 まいずつカードに書きました。2 という数字が入っているカードは何まいですか。22 も 1 まいと数えます。",
+       "answer": 12,
+       "check": "sum(1 for k in range(1, 31) if k % 10 == 2 or k // 10 == 2)",
+       "hints": [
+        "一のくらいが 2 のカードを書き出そう。",
+        "十のくらいが 2 のカードは何まいかな。",
+        "両方に入っているカードを、2 回数えないようにしよう。"
+       ],
+       "paths": [
+        [
+         "一のくらいが 2 は 2、12、22 の 3 まい",
+         "十のくらいが 2 は 20 から 29 の 10 まい",
+         "22 は両方",
+         "3 + 10 − 1 = 12 まい"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ピアノを習っている人は 7 人、水泳を習っている人は 9 人、両方習っている人は 2 人です。どちらかを習っている人は何人ですか。",
+       "answer": 14,
+       "check": "len(set(range(7)) | set(range(5, 14)))",
+       "hints": [
+        "7 + 9 とたすと、両方習っている人はどうなるかな。",
+        "両方習っている人は、何回数えているかな。",
+        "2 回数えた人数をひこう。"
+       ],
+       "paths": [
+        [
+         "7 + 9 = 16",
+         "2 人を 2 回数えている",
+         "16 − 2 = 14 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "30 人に聞きました。犬をかっている人は 13 人、ねこをかっている人は 10 人、両方かっている人は 5 人です。どちらもかっていない人は何人ですか。",
+       "answer": 12,
+       "check": "30 - len(set(range(13)) | set(range(8, 18)))",
+       "hints": [
+        "まず、どちらかをかっている人を数えよう。",
+        "両方かっている人を、2 回数えないようにしよう。",
+        "全体からひこう。"
+       ],
+       "paths": [
+        [
+         "13 + 10 = 23、23 − 5 = 18 人",
+         "30 − 18 = 12 人"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 のだんの答えと 6 のだんの答えの、両方に出てくる数は何こありますか。",
+       "answer": 4,
+       "check": "len(set(3 * i for i in range(1, 10)) & set(6 * i for i in range(1, 10)))",
+       "hints": [
+        "3 のだんの答えを全部書こう。",
+        "6 のだんの答えも書いて、同じ数に〇をつけよう。",
+        "〇をつけた数を数えよう。"
+       ],
+       "paths": [
+        [
+         "3 のだんは 3 から 27",
+         "6 のだんは 6 から 54",
+         "両方は 6、12、18、24 の 4 こ"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135327,27 +146028,1087 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "マスの数は、そこまで行く行き方の数です。右か上に 1 マスずつ進みます。□ のマスまでの行き方は何通りですか。",
+       "figure": "１３□\n１２３\n🏠１１",
+       "answer": 6,
+       "check": "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))('⬜⬜🏁/⬜⬜⬜/🏠⬜⬜'.split('/')[::-1])",
+       "hints": [
+        "□ の左のマスの数を見よう。",
+        "□ の下のマスの数を見よう。",
+        "2 つの数をたそう。"
+       ],
+       "paths": [
+        [
+         "左は 3",
+         "下は 3",
+         "3 + 3 = 6 通り"
+        ]
+       ],
+       "note": "C-004 の書きこみは、前のマスの結果をたして次のマスを出す考え方。今日はこれを階だんなどに広げる。"
+      },
+      {
+       "part": "思い出す",
+       "text": "○ と × を 3 こならべて、合図をつくります。合図は何通りつくれますか。",
+       "answer": 8,
+       "check": "len(set(itertools.product('○×', repeat=3)))",
+       "hints": [
+        "1 つ目は ○ か × の 2 通りだね。",
+        "2 つ目まででは何通りかな。",
+        "1 こふえるごとに、何倍になるかな。"
+       ],
+       "paths": [
+        [
+         "1 つ目 2 通り",
+         "2 つ目まで 2 × 2 = 4 通り",
+         "3 つ目まで 4 × 2 = 8 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。4 だん目まで上る上り方は何通りですか。",
+       "figure": "だん　１　２　３　４\n通り　１　２　３　５",
+       "explain": "1 だん目までは「1」の 1 通り、2 だん目までは「1 と 1」「2」の 2 通りです。3 だん目に着くさいごの一歩は、2 だん目からの 1 だんか、1 だん目からの 2 だんです。だから 3 だん目までは、2 だん目までの 2 通りと 1 だん目までの 1 通りをたして 3 通りです。4 だん目までは、3 だん目までの 3 通りと 2 だん目までの 2 通りをたして 5 通りです。前の 2 つの数をたすと、次の数が出ます。"
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。5 だん目まで上る上り方は何通りですか。",
+       "figure": "だん　１　２　３　４　５\n通り　１　２　３　５　□",
+       "answer": 8,
+       "check": "sum(1 for k in range(6) for c in itertools.product((1, 2), repeat=k) if sum(c) == 5)",
+       "hints": [
+        "5 だん目に着くさいごの一歩は、何だん目からかな。",
+        "4 だん目からの 1 だんと、3 だん目からの 2 だんがあるね。",
+        "4 だん目までと 3 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "4 だん目まで 5 通り",
+         "3 だん目まで 3 通り",
+         "5 + 3 = 8 通り"
+        ]
+       ],
+       "note": "全部書き出しても 8 通りになるが、だんがふえると書き出すのはたいへん。表で前の 2 つをたすほうが速く、まちがいも少ない。"
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。6 だん目まで上る上り方は何通りですか。表をつづけて考えましょう。",
+       "answer": 13,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "5 だん目までは何通りだったかな。",
+        "6 だん目の前は、5 だん目か 4 だん目だね。",
+        "5 だん目までと 4 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8 とつづく",
+         "8 + 5 = 13 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。8 だん目まで上る上り方は何通りですか。",
+       "answer": 34,
+       "check": "sum(1 for k in range(9) for c in itertools.product((1, 2), repeat=k) if sum(c) == 8)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "7 だん目までの数と 6 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21",
+         "21 + 13 = 34 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。3 だん目は工事中で、ふむことができません。6 だん目まで上る上り方は何通りですか。",
+       "answer": 4,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6 and all(sum(c[:i]) != 3 for i in range(1, k + 1)))",
+       "hints": [
+        "3 だん目までの上り方は、何通りと書けばいいかな。",
+        "ふめないだんには 0 と書こう。",
+        "そのあとも、前の 2 つのだんの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1 だん目 1、2 だん目 2、3 だん目 0",
+         "4 だん目 0 + 2 = 2",
+         "5 だん目 2 + 0 = 2",
+         "6 だん目 2 + 2 = 4 通り"
+        ]
+       ],
+       "note": "C-004 の 🌳 のマスに 0 を書いたのと同じ。3 だん目に 3 と書いてしまうと、そのあとが全部ずれる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。9 だん目まで上る上り方は何通りですか。",
+       "answer": 55,
+       "check": "sum(1 for k in range(10) for c in itertools.product((1, 2), repeat=k) if sum(c) == 9)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "8 だん目までと 7 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21、34",
+         "34 + 21 = 55 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。4 だん目は工事中で、ふむことができません。6 だん目まで上る上り方は何通りですか。",
+       "answer": 3,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6 and all(sum(c[:i]) != 4 for i in range(1, k + 1)))",
+       "hints": [
+        "ふめないだんには 0 と書こう。",
+        "5 だん目は、4 だん目からは来られないね。",
+        "前の 2 つのだんの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、0",
+         "5 だん目 0 + 3 = 3",
+         "6 だん目 3 + 0 = 3 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。10 だん目まで上る上り方は何通りですか。",
+       "answer": 89,
+       "check": "sum(1 for k in range(11) for c in itertools.product((1, 2), repeat=k) if sum(c) == 10)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "9 だん目までと 8 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21、34、55",
+         "55 + 34 = 89 通り"
+        ]
+       ],
+       "note": "1、2、3、5、8、13…とつづく数は、ひまわりの種のならびや松ぼっくりのうろこの数にも出てくる。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。7 だん目まで上る上り方は何通りですか。",
+       "answer": 21,
+       "check": "sum(1 for k in range(8) for c in itertools.product((1, 2), repeat=k) if sum(c) == 7)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "6 だん目までと 5 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13",
+         "13 + 8 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "○ と × を 4 こならべて、合図をつくります。合図は何通りつくれますか。",
+       "answer": 16,
+       "check": "len(set(itertools.product('○×', repeat=4)))",
+       "hints": [
+        "1 つ目は ○ か × の 2 通りだね。",
+        "1 こふえるごとに、何倍になるかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "2 × 2 = 4",
+         "4 × 2 = 8",
+         "8 × 2 = 16 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "たて 2 マス、よこ 1 マスのタイルがたくさんあります。これを、たて 2 マス、よこ 4 マスの長方形に、すきまなくしきつめます。しきつめ方は何通りですか。図はしきつめ方の 1 つです。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"30\" width=\"40\" height=\"80\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"80\" y=\"30\" width=\"80\" height=\"40\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"80\" y=\"70\" width=\"80\" height=\"40\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"160\" y=\"30\" width=\"40\" height=\"80\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n</svg>\n",
+       "explain": "左はしのしき方は、タイルをたてに 1 まいおくか、よこにして 2 まい重ねておくかのどちらかです。たてにおくと、のこりはよこ 3 マスの長方形、よこに 2 まいおくと、のこりはよこ 2 マスの長方形です。よこ 1 マスは 1 通り、よこ 2 マスは 2 通り、よこ 3 マスは 2 + 1 = 3 通り、よこ 4 マスは 3 + 2 = 5 通りです。1 だんか 2 だんずつ上る階だんと同じ数になります。たてのタイルが 1 だん、よこ 2 まいが 2 だんにあたるからです。"
+      },
+      {
+       "part": "今日",
+       "text": "たて 2 マス、よこ 1 マスのタイルで、たて 2 マス、よこ 5 マスの長方形をすきまなくしきつめます。しきつめ方は何通りですか。",
+       "answer": 8,
+       "check": "sum(1 for k in range(6) for c in itertools.product((1, 2), repeat=k) if sum(c) == 5)",
+       "hints": [
+        "左はしにたてに 1 まいおくと、のこりはよこ何マスかな。",
+        "よこにして 2 まいおくと、のこりはよこ何マスかな。",
+        "よこ 4 マスとよこ 3 マスのしきつめ方の数をたそう。"
+       ],
+       "paths": [
+        [
+         "よこ 4 マスは 5 通り",
+         "よこ 3 マスは 3 通り",
+         "5 + 3 = 8 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "○ と × を 5 こならべます。ただし、○ はとなり合わないようにします（○○ とならぶのはだめ）。ならべ方は何通りですか。表は、ならべるこ数が 3 こまでのときです。",
+       "figure": "こ数　１　２　３\n通り　２　３　５",
+       "answer": 13,
+       "check": "sum(1 for s in itertools.product('○×', repeat=5) if all(not (s[i] == '○' and s[i + 1] == '○') for i in range(4)))",
+       "hints": [
+        "いちばん右が × のときは、その前はどんなならびでもいいね。",
+        "いちばん右が ○ のときは、そのとなりは × に決まるね。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1 こ 2、2 こ 3、3 こ 5",
+         "4 こ 5 + 3 = 8",
+         "5 こ 8 + 5 = 13 通り"
+        ]
+       ],
+       "note": "いちばん右が × か ○ かで分けると、重ならずにもれなく分けられる。右が × なら前の 4 こは何でもよく（8 通り）、右が ○ なら「×○」で、その前の 3 こは何でもよい（5 通り）。"
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だん、2 だん、3 だんのどれかずつ上ります。6 だん目まで上る上り方は何通りですか。表は 3 だん目までです。",
+       "figure": "だん　１　２　３\n通り　１　２　４",
+       "answer": 24,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2, 3), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "6 だん目に着くさいごの一歩は、何だん目からかな。",
+        "5 だん目、4 だん目、3 だん目からの 3 つがあるね。",
+        "前の 3 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、4",
+         "4 だん目 4 + 2 + 1 = 7",
+         "5 だん目 7 + 4 + 2 = 13",
+         "6 だん目 13 + 7 + 4 = 24 通り"
+        ]
+       ],
+       "note": "前の 2 つではなく 3 つをたすことに気づかせる。さいごの一歩が何通りあるかで、たす数がきまる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "階だんを、1 回に 1 だんか 3 だんずつ上ります（2 だんは上れません）。7 だん目まで上る上り方は何通りですか。",
+       "answer": 9,
+       "check": "sum(1 for k in range(8) for c in itertools.product((1, 3), repeat=k) if sum(c) == 7)",
+       "hints": [
+        "7 だん目に着くさいごの一歩は、何だん目からかな。",
+        "6 だん目からの 1 だんと、4 だん目からの 3 だんだね。",
+        "1 だん目からじゅんに表をつくろう。"
+       ],
+       "paths": [
+        [
+         "1 だん目から 1、1、2、3、4、6",
+         "7 だん目 6 + 3 = 9 通り"
+        ]
+       ],
+       "note": "2 だん目までは 1 だんずつしか上れないので 1 通り。3 だん目は「1、1、1」と「3」の 2 通り。そのあとは「1 つ前」と「3 つ前」をたす。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "たて 2 マス、よこ 1 マスのタイルで、たて 2 マス、よこ 6 マスの長方形をすきまなくしきつめます。しきつめ方は何通りですか。",
+       "answer": 13,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "左はしにたてに 1 まいおくときと、よこに 2 まいおくときに分けよう。",
+        "のこりの長方形のしきつめ方は、前に出した数を使えるね。",
+        "よこ 5 マスとよこ 4 マスの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8",
+         "8 + 5 = 13 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "○ と × を 6 こならべます。ただし、○ はとなり合わないようにします。ならべ方は何通りですか。",
+       "answer": 21,
+       "check": "sum(1 for s in itertools.product('○×', repeat=6) if all(not (s[i] == '○' and s[i + 1] == '○') for i in range(5)))",
+       "hints": [
+        "1 こ 2 通り、2 こ 3 通り、3 こ 5 通りだね。",
+        "いちばん右が × か ○ かで分けよう。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "2、3、5、8、13",
+         "13 + 8 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だん、2 だん、3 だんのどれかずつ上ります。5 だん目まで上る上り方は何通りですか。",
+       "answer": 13,
+       "check": "sum(1 for k in range(6) for c in itertools.product((1, 2, 3), repeat=k) if sum(c) == 5)",
+       "hints": [
+        "1 だん目 1 通り、2 だん目 2 通り、3 だん目 4 通りだね。",
+        "さいごの一歩は 1 だん、2 だん、3 だんの 3 つがあるね。",
+        "前の 3 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、4",
+         "4 だん目 7",
+         "5 だん目 7 + 4 + 2 = 13 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "たて 2 マス、よこ 1 マスのタイルで、たて 2 マス、よこ 6 マスの長方形をすきまなくしきつめます。しきつめ方は何通りですか。",
+       "answer": 13,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "左はしにたてに 1 まいおくときと、よこに 2 まいおくときに分けよう。",
+        "よこ 1 マスから、じゅんに表をつくろう。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8",
+         "8 + 5 = 13 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "○ と × を 4 こならべて、合図をつくります。○ がとなり合ってもかまいません。合図は何通りつくれますか。",
+       "answer": 16,
+       "check": "len(set(itertools.product('○×', repeat=4)))",
+       "hints": [
+        "1 つ目は ○ か × の 2 通りだね。",
+        "1 こふえるごとに、何倍になるかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "2 × 2 = 4",
+         "4 × 2 = 8",
+         "8 × 2 = 16 通り"
+        ]
+       ],
+       "note": "C-005 の合図。1 こふえるごとに 2 倍になる。今日は「前の数を 2 倍する」きまりも出てくる。"
+      },
+      {
+       "part": "見本",
+       "text": "部屋に人が 1 人ずつ入ってきます。入ってきた人は、もう部屋にいる人全員と 1 回ずつあく手をします。5 人目が入ってあく手を終えたとき、あく手は全部で何回ですか。",
+       "figure": "人数　１　２　３　４\n回数　０　１　３　６",
+       "explain": "1 人目のときは、あく手は 0 回です。2 人目は 1 人とあく手するので 0 + 1 = 1 回。3 人目は前からいる 2 人とあく手するので 1 + 2 = 3 回。4 人目は 3 人とするので 3 + 3 = 6 回。5 人目は 4 人とするので 6 + 4 = 10 回です。新しく入る人は、前からいる人数だけあく手するので、前の回数にその人数をたします。"
+      },
+      {
+       "part": "今日",
+       "text": "同じように、部屋に人が 1 人ずつ入ってきて、もういる人全員と 1 回ずつあく手をします。8 人目があく手を終えたとき、あく手は全部で何回ですか。",
+       "answer": 28,
+       "check": "len(set(itertools.combinations(range(8), 2)))",
+       "hints": [
+        "5 人目までで 10 回だったね。",
+        "6 人目は、何人とあく手するかな。",
+        "1 人入るごとに、前からいる人数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "5 人目まで 10 回",
+         "6 人目で 10 + 5 = 15",
+         "7 人目で 15 + 6 = 21",
+         "8 人目で 21 + 7 = 28 回"
+        ]
+       ],
+       "note": "8 人目のあく手 7 回だけを答えたり、7 をたしわすれたりしやすい。表を 1 人ずつのばすとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "紙を半分におります。おった紙を、また半分におることをくり返します。5 回おると、紙は何まい重なっていますか。",
+       "answer": 32,
+       "check": "pow(2, 5)",
+       "hints": [
+        "1 回おると、紙は何まい重なるかな。",
+        "1 回おるごとに、重なりは何倍になるかな。",
+        "前の数を 2 倍していこう。"
+       ],
+       "paths": [
+        [
+         "1 回 2 まい",
+         "2 回 4 まい、3 回 8 まい",
+         "4 回 16 まい",
+         "5 回 16 + 16 = 32 まい"
+        ]
+       ],
+       "note": "16 × 2 は九九にないので、16 + 16 とたす。2 × 5 = 10 と、回数をかけてしまいやすい。実さいに紙を 3 回ほどおって、重なりを数えさせるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "紙に直線をひいて、いくつかの部分に分けます。どの 2 本の直線も紙の中で交わり、3 本が 1 つの点で交わることはないようにひきます。直線が 1 本なら 2 こ、2 本なら 4 こ、3 本なら 7 こに分かれます（図は 3 本のとき）。4 本なら何こに分かれますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"10\" y=\"10\" width=\"220\" height=\"120\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"40\" x2=\"230\" y2=\"110\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"10\" y1=\"110\" x2=\"230\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"40\" y1=\"10\" x2=\"120\" y2=\"130\" stroke=\"currentColor\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 11,
+       "check": "1 + sum(range(1, 5))",
+       "hints": [
+        "直線が 1 本ふえると、部分はいくつずつふえているかな。",
+        "2 本目で 2 こ、3 本目で 3 こふえているね。",
+        "4 本目では、いくつふえるかな。"
+       ],
+       "paths": [
+        [
+         "2、4、7 は 2 ふえて 3 ふえている",
+         "4 本目は 4 ふえる",
+         "7 + 4 = 11 こ"
+        ]
+       ],
+       "note": "4 本目の直線は前の 3 本と 3 回交わり、4 つの部分を通る。通った部分がそれぞれ 2 つに分かれるので 4 ふえる。この日はふえ方のきまりに気づければよい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "「ハノイのとう」というパズルです。3 本のぼうと、大きさのちがう円ばんがあります。はじめ、円ばんは全部左のぼうに、大きいものが下になるように重なっています。1 回に 1 まいずつ、いちばん上の円ばんをほかのぼうへ動かします。小さい円ばんの上に大きい円ばんをのせてはいけません。全部を右のぼうへ動かすのに、円ばんが 1 まいなら 1 回、2 まいなら 3 回、3 まいなら 7 回でできます。4 まいなら何回でできますか（図は 4 まいのとき）。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"10\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"190\" y1=\"40\" x2=\"190\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"15\" y=\"106\" width=\"70\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"22\" y=\"92\" width=\"56\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"29\" y=\"78\" width=\"42\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"36\" y=\"64\" width=\"28\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 15,
+       "check": "(lambda f: f(f, 4))(lambda f, k: 0 if k == 0 else f(f, k - 1) + 1 + f(f, k - 1))",
+       "hints": [
+        "いちばん大きい円ばんを動かす前に、上の 3 まいをどこにどけておけばいいかな。",
+        "上の 3 まいを動かすのは、何回でできたかな。",
+        "「3 まいを動かす、大きい円ばんを動かす、3 まいを上にのせる」の回数をたそう。"
+       ],
+       "paths": [
+        [
+         "上の 3 まいをまん中のぼうへ 7 回",
+         "いちばん大きい円ばんを右へ 1 回",
+         "3 まいを右へ 7 回",
+         "7 + 1 + 7 = 15 回"
+        ],
+        [
+         "1、3、7 は、前の数を 2 回たして 1 をたしている",
+         "7 + 7 + 1 = 15 回"
+        ]
+       ],
+       "note": "15 回より少なくできないこと（いちばん少ない回数であること）までは言えなくてよい。10 円玉などを大きさのちがう円ばんにして、じっさいに動かしてみるとよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "部屋に人が 1 人ずつ入ってきて、もういる人全員と 1 回ずつあく手をします。6 人目があく手を終えたとき、あく手は全部で何回ですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "人数が 1、2、3…のときのあく手の回数を表にしよう。",
+        "新しく入る人は、前からいる人数だけあく手するね。",
+        "前の回数に、前からいた人数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "0、1、3、6、10",
+         "6 人目は 5 人とあく手",
+         "10 + 5 = 15 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "紙に直線をひいて、いくつかの部分に分けます。どの 2 本の直線も紙の中で交わり、3 本が 1 つの点で交わることはないようにひきます。1 本で 2 こ、2 本で 4 こ、3 本で 7 こ、4 本で 11 こに分かれます。5 本なら何こに分かれますか。",
+       "answer": 16,
+       "check": "1 + sum(range(1, 6))",
+       "hints": [
+        "直線が 1 本ふえると、部分はいくつずつふえているかな。",
+        "5 本目では、いくつふえるかな。",
+        "11 にその数をたそう。"
+       ],
+       "paths": [
+        [
+         "2、3、4 とふえている",
+         "5 本目は 5 ふえる",
+         "11 + 5 = 16 こ"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "「ハノイのとう」で、円ばんが 4 まいなら 15 回で全部を右のぼうへ動かせます。円ばんが 5 まいなら、何回でできますか。",
+       "answer": 31,
+       "check": "(lambda f: f(f, 5))(lambda f, k: 0 if k == 0 else f(f, k - 1) + 1 + f(f, k - 1))",
+       "hints": [
+        "いちばん大きい円ばんを動かす前に、上の 4 まいをどけよう。",
+        "上の 4 まいを動かすのは、何回でできたかな。",
+        "4 まいを動かす、大きい円ばんを動かす、4 まいを上にのせる、の回数をたそう。"
+       ],
+       "paths": [
+        [
+         "4 まいをどける 15 回",
+         "大きい円ばん 1 回",
+         "4 まいをのせる 15 回",
+         "15 + 1 + 15 = 31 回"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "1 回に 1 だんか 2 だんずつ上るとき、5 だん目までの上り方は、4 だん目までの 5 通りと 3 だん目までの 3 通りをたして 8 通りです。なぜたしてよいのかを、文で書きましょう。",
+       "explain": "例：「5 だん目に着くさいごの一歩は、1 だんか 2 だん。さいごが 1 だんなら、その前は 4 だん目にいて、そこまでの上り方は 5 通り。さいごが 2 だんなら、その前は 3 だん目にいて、3 通り。どの上り方も、さいごの一歩でこのどちらかに入り、両方に入ることはない（重ならない）。だから和の法則で 5 + 3 = 8 通り。」と書ければよい。「さいごの一歩で分ける」ことと、「もれも重なりもない」ことの 2 つが書けているかを見る。",
+       "hints": [
+        "5 だん目に着くさいごの一歩は、何だんかな。",
+        "さいごが 1 だんのとき、その前は何だん目にいるかな。2 だんのときはどうかな。",
+        "「さいごの一歩で分けると重ならないから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "さいごの一歩は 1 だんか 2 だん",
+         "1 だんなら 4 だん目から来るので 5 通り",
+         "2 だんなら 3 だん目から来るので 3 通り",
+         "重ならないので 5 + 3 = 8 通り"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "部屋に 4 人いて、あく手は 6 回すんでいます。5 人目が入ってきて、全員と 1 回ずつあく手をすると、あく手はちょうど 4 回ふえます。なぜ 4 回なのかを、文で書きましょう。",
+       "explain": "例：「5 人目は、前からいる 4 人と 1 回ずつあく手するので 4 回。前からいる 4 人どうしのあく手は、もう 6 回で数えてあるので、新しくふえるのは 5 人目のあく手だけ。だから 6 + 4 = 10 回になる。」と書ければよい。「前からいる人どうしは、もうすんでいる」ことが書けているかを見る。",
+       "hints": [
+        "5 人目は、だれとあく手するかな。",
+        "前からいる 4 人どうしのあく手は、もうすんでいるかな。",
+        "「新しくふえるのは〜だけだから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "5 人目は前からいる 4 人とあく手する",
+         "4 人どうしはもうすんでいる",
+         "ふえるのは 4 回だけ",
+         "6 + 4 = 10 回"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "ハノイのとうで円ばんが 4 まいのとき、7 + 1 + 7 = 15 回で全部を右のぼうへ動かせます。なぜこの式になるのかを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"10\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"50\" y1=\"40\" x2=\"50\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"40\" x2=\"120\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"190\" y1=\"40\" x2=\"190\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"15\" y=\"106\" width=\"70\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"22\" y=\"92\" width=\"56\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"29\" y=\"78\" width=\"42\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n  <rect x=\"36\" y=\"64\" width=\"28\" height=\"14\" stroke=\"currentColor\" fill=\"#f3c969\" fill-opacity=\".35\" stroke-width=\"2\"/>\n</svg>\n",
+       "explain": "例：「いちばん大きい円ばんを右のぼうへ動かすには、その上の 3 まいを全部、まん中のぼうにどけておかなければならない。3 まいを動かすのは 7 回でできる。大きい円ばんを右へ 1 回。そのあと、まん中の 3 まいを大きい円ばんの上へ動かすのに、また 7 回。だから 7 + 1 + 7 = 15 回。」と書ければよい。前の結果（3 まいで 7 回）を 2 回使っていることに気づかせる。15 回より少なくできないことまでは求めない。",
+       "hints": [
+        "いちばん大きい円ばんを動かすとき、上の 3 まいはどこにあればいいかな。",
+        "3 まいを動かすのは、何回でできたかな。",
+        "「3 まいをどける、大きいのを動かす、3 まいをのせる」のじゅんに書こう。"
+       ],
+       "paths": [
+        [
+         "上の 3 まいをまん中のぼうへ 7 回",
+         "大きい円ばんを右へ 1 回",
+         "3 まいを右へ 7 回",
+         "7 + 1 + 7 = 15 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。9 だん目まで上る上り方は何通りですか。",
+       "answer": 55,
+       "check": "sum(1 for k in range(10) for c in itertools.product((1, 2), repeat=k) if sum(c) == 9)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "8 だん目までと 7 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21、34",
+         "34 + 21 = 55 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "部屋に人が 1 人ずつ入ってきて、もういる人全員と 1 回ずつあく手をします。7 人目があく手を終えたとき、あく手は全部で何回ですか。",
+       "answer": 21,
+       "check": "len(set(itertools.combinations(range(7), 2)))",
+       "hints": [
+        "人数とあく手の回数を表にしよう。",
+        "7 人目は、何人とあく手するかな。",
+        "前の回数に、前からいた人数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "0、1、3、6、10、15",
+         "7 人目は 6 人とあく手",
+         "15 + 6 = 21 回"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "たて 2 マス、よこ 1 マスのタイルで、たて 2 マス、よこ 8 マスの長方形をすきまなくしきつめます。しきつめ方は何通りですか。",
+       "answer": 34,
+       "check": "sum(1 for k in range(9) for c in itertools.product((1, 2), repeat=k) if sum(c) == 8)",
+       "hints": [
+        "よこ 1 マスから、じゅんに表をつくろう。",
+        "左はしにたてに 1 まいか、よこに 2 まいかで分けるね。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21",
+         "21 + 13 = 34 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "紙を半分におることをくり返します。4 回おると、紙は何まい重なっていますか。",
+       "answer": 16,
+       "check": "pow(2, 4)",
+       "hints": [
+        "1 回おると、何まい重なるかな。",
+        "1 回おるごとに、何倍になるかな。",
+        "前の数を 2 倍していこう。"
+       ],
+       "paths": [
+        [
+         "2、4、8",
+         "8 × 2 = 16 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "○ と × を 4 こならべます。ただし、○ はとなり合わないようにします。ならべ方は何通りですか。",
+       "answer": 8,
+       "check": "sum(1 for s in itertools.product('○×', repeat=4) if all(not (s[i] == '○' and s[i + 1] == '○') for i in range(3)))",
+       "hints": [
+        "1 こ 2 通り、2 こ 3 通りだね。",
+        "いちばん右が × か ○ かで分けよう。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "2、3、5",
+         "5 + 3 = 8 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。6 だん目まで上る上り方は何通りですか。",
+       "answer": 13,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "5 だん目までと 4 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8",
+         "8 + 5 = 13 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "A 町から B 町まで道が 3 本、B 町から C 町まで道が 4 本あります。B 町を通って、A 町から C 町まで行く行き方は何通りですか。",
+       "answer": 12,
+       "check": "len(set(itertools.product(range(3), range(4))))",
+       "hints": [
+        "A 町から B 町までの道 1 本ごとに、B 町から C 町までの道は何本あるかな。",
+        "どの道を通っても、そのあとの道の数は同じだね。",
+        "かけ算の式にしよう。"
+       ],
+       "paths": [
+        [
+         "A から B の道 1 本ごとに、そのあとが 4 本",
+         "4 本が 3 つ分",
+         "4 × 3 = 12 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🏠 から 🏁 まで、右か上に 1 マスずつ進みます。マスに行き方の数を書きこんで、行き方を数えましょう。",
+       "figure": "⬜⬜⬜🏁\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n🏠⬜⬜⬜",
+       "answer": 20,
+       "check": "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])",
+       "hints": [
+        "🏠 の右にならぶマスと、上にならぶマスは何通りかな。",
+        "ほかのマスは、左と下の数をたそう。",
+        "下の行からじゅんに書きこもう。"
+       ],
+       "paths": [
+        [
+         "いちばん下の行 1、1、1",
+         "2 行目 1、2、3、4",
+         "3 行目 1、3、6、10",
+         "いちばん上 1、4、10、20",
+         "20 通り"
+        ]
+       ],
+       "note": "C-004 の書きこみも、前のマスの結果をたして次を出す。階だんの表と同じ考え方で、マスがふえても全部なぞらずに数えられる。"
+      },
+      {
+       "part": "今日",
+       "text": "🌳 のマスは通れません。🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。",
+       "figure": "⬜⬜⬜🏁\n⬜🌳⬜⬜\n⬜⬜⬜⬜\n🏠⬜⬜⬜",
+       "answer": 11,
+       "check": "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])",
+       "hints": [
+        "マスに行き方の数を書きこもう。🌳 は 0 だよ。",
+        "いちばん下の行からじゅんに書きこもう。",
+        "どのマスも、左と下の数をたそう。"
+       ],
+       "paths": [
+        [
+         "いちばん下 1、1、1",
+         "2 行目 1、2、3、4",
+         "3 行目 1、0、3、7",
+         "いちばん上 1、1、4、11",
+         "11 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんが 2 つあります。1 つ目の階だん（5 だん）を上ってから、おどり場を通って、2 つ目の階だん（3 だん）を上ります。どちらも 1 回に 1 だんか 2 だんずつ上ります。上り方は全部で何通りですか。",
+       "answer": 24,
+       "check": "sum(1 for k in range(6) for c in itertools.product((1, 2), repeat=k) if sum(c) == 5) * sum(1 for k in range(4) for c in itertools.product((1, 2), repeat=k) if sum(c) == 3)",
+       "hints": [
+        "1 つ目の階だんの上り方は、何通りかな。",
+        "2 つ目の階だんの上り方は、何通りかな。",
+        "1 つ目のどの上り方にも、2 つ目の上り方が同じ数ずつつくね。"
+       ],
+       "paths": [
+        [
+         "1 つ目 8 通り",
+         "2 つ目 3 通り",
+         "8 × 3 = 24 通り"
+        ]
+       ],
+       "note": "8 + 3 = 11 とたしやすい。両方を上るので積の法則（C-005）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。7 だん目まで上るとき、4 だん目はふまないようにします。上り方は何通りですか。",
+       "answer": 6,
+       "check": "sum(1 for k in range(8) for c in itertools.product((1, 2), repeat=k) if sum(c) == 7 and all(sum(c[:i]) != 4 for i in range(1, k + 1)))",
+       "hints": [
+        "4 だん目に 0 を書いて、表をつくろう。",
+        "5 だん目は、4 だん目からは来られないね。",
+        "全部の上り方から、4 だん目をふむ上り方をひいてもいいよ。"
+       ],
+       "paths": [
+        [
+         "1、2、3、0、3、3",
+         "7 だん目 3 + 3 = 6 通り"
+        ],
+        [
+         "全部で 21 通り",
+         "4 だん目をふむのは、4 だん目まで 5 通りとそこから先 3 通りで 5 × 3 = 15 通り",
+         "21 − 15 = 6 通り"
+        ]
+       ],
+       "note": "2 本目の道は C-004 の「必ず通るマス」と同じ考え方（ふむ上り方は、前半と後半の積）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "🏠 から 🏁 まで、右か上に 1 マスずつ進みます。マスに行き方の数を書きこんで、行き方を数えましょう。",
+       "figure": "⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜",
+       "answer": 15,
+       "check": "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])",
+       "hints": [
+        "🏠 の右にならぶマスと、上にならぶマスは何通りかな。",
+        "ほかのマスは、左と下の数をたそう。",
+        "下の行からじゅんに書きこもう。"
+       ],
+       "paths": [
+        [
+         "いちばん下 1、1、1、1",
+         "まん中 1、2、3、4、5",
+         "いちばん上 1、3、6、10、15",
+         "15 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんが 2 つあります。1 つ目の階だん（4 だん）を上ってから、2 つ目の階だん（4 だん）を上ります。どちらも 1 回に 1 だんか 2 だんずつ上ります。上り方は全部で何通りですか。",
+       "answer": 25,
+       "check": "sum(1 for k in range(5) for c in itertools.product((1, 2), repeat=k) if sum(c) == 4) * sum(1 for k in range(5) for c in itertools.product((1, 2), repeat=k) if sum(c) == 4)",
+       "hints": [
+        "4 だんの階だんの上り方は、何通りかな。",
+        "1 つ目のどの上り方にも、2 つ目の上り方が同じ数ずつつくね。",
+        "かけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 つ目 5 通り",
+         "2 つ目 5 通り",
+         "5 × 5 = 25 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。8 だん目まで上るとき、5 だん目はふまないようにします。上り方は何通りですか。",
+       "answer": 10,
+       "check": "sum(1 for k in range(9) for c in itertools.product((1, 2), repeat=k) if sum(c) == 8 and all(sum(c[:i]) != 5 for i in range(1, k + 1)))",
+       "hints": [
+        "5 だん目に 0 を書いて、表をつくろう。",
+        "6 だん目は、5 だん目からは来られないね。",
+        "前の 2 つのだんの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、0、5、5",
+         "8 だん目 5 + 5 = 10 通り"
+        ],
+        [
+         "全部で 34 通り",
+         "5 だん目をふむのは 8 × 3 = 24 通り",
+         "34 − 24 = 10 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。7 だん目まで上る上り方は何通りですか。",
+       "answer": 21,
+       "check": "sum(1 for k in range(8) for c in itertools.product((1, 2), repeat=k) if sum(c) == 7)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "6 だん目までと 5 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13",
+         "13 + 8 = 21 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たて 2 マス、よこ 1 マスのタイルで、たて 2 マス、よこ 6 マスの長方形をすきまなくしきつめます。しきつめ方は何通りですか。",
+       "answer": 13,
+       "check": "sum(1 for k in range(7) for c in itertools.product((1, 2), repeat=k) if sum(c) == 6)",
+       "hints": [
+        "左はしにたてに 1 まいおくときと、よこに 2 まいおくときに分けよう。",
+        "よこ 1 マスから、じゅんに表をつくろう。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8",
+         "8 + 5 = 13 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "○ と × を 4 こならべます。ただし、○ はとなり合わないようにします。ならべ方は何通りですか。",
+       "answer": 8,
+       "check": "sum(1 for s in itertools.product('○×', repeat=4) if all(not (s[i] == '○' and s[i + 1] == '○') for i in range(3)))",
+       "hints": [
+        "1 こ 2 通り、2 こ 3 通りだね。",
+        "いちばん右が × か ○ かで分けよう。",
+        "前の 2 つの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "2、3、5",
+         "5 + 3 = 8 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だん、2 だん、3 だんのどれかずつ上ります。4 だん目まで上る上り方は何通りですか。",
+       "answer": 7,
+       "check": "sum(1 for k in range(5) for c in itertools.product((1, 2, 3), repeat=k) if sum(c) == 4)",
+       "hints": [
+        "1 だん目 1 通り、2 だん目 2 通り、3 だん目 4 通りだね。",
+        "さいごの一歩は 1 だん、2 だん、3 だんの 3 つがあるね。",
+        "前の 3 つの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、4",
+         "4 + 2 + 1 = 7 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "部屋に人が 1 人ずつ入ってきて、もういる人全員と 1 回ずつあく手をします。6 人目があく手を終えたとき、あく手は全部で何回ですか。",
+       "answer": 15,
+       "check": "len(set(itertools.combinations(range(6), 2)))",
+       "hints": [
+        "人数とあく手の回数を表にしよう。",
+        "新しく入る人は、前からいる人数だけあく手するね。",
+        "前の回数に、前からいた人数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "0、1、3、6、10",
+         "10 + 5 = 15 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "紙を半分におることをくり返します。4 回おると、紙は何まい重なっていますか。",
+       "answer": 16,
+       "check": "pow(2, 4)",
+       "hints": [
+        "1 回おると、何まい重なるかな。",
+        "1 回おるごとに、何倍になるかな。",
+        "前の数を 2 倍していこう。"
+       ],
+       "paths": [
+        [
+         "2、4、8",
+         "8 × 2 = 16 まい"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。",
+       "figure": "⬜⬜⬜🏁\n⬜⬜⬜⬜\n🏠⬜⬜⬜",
+       "answer": 10,
+       "check": "(lambda g: sum(1 for c in itertools.combinations(range(len(g[0]) + len(g) - 2), len(g) - 1) if all(g[sum(1 for i in c if i < k)][k - sum(1 for i in c if i < k)] != '🌳' for k in range(len(g[0]) + len(g) - 1))))(fig.splitlines()[::-1])",
+       "hints": [
+        "マスに行き方の数を書きこもう。",
+        "どのマスも、左と下の数をたそう。",
+        "下の行からじゅんに書きこもう。"
+       ],
+       "paths": [
+        [
+         "いちばん下 1、1、1",
+         "まん中 1、2、3、4",
+         "いちばん上 1、3、6、10",
+         "10 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。2 だん目は工事中で、ふむことができません。7 だん目まで上る上り方は何通りですか。",
+       "answer": 5,
+       "check": "sum(1 for k in range(8) for c in itertools.product((1, 2), repeat=k) if sum(c) == 7 and all(sum(c[:i]) != 2 for i in range(1, k + 1)))",
+       "hints": [
+        "ふめないだんには 0 と書こう。",
+        "3 だん目は、2 だん目からは来られないね。",
+        "前の 2 つのだんの数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "1、0、1、1、2、3",
+         "7 だん目 3 + 2 = 5 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "階だんを、1 回に 1 だんか 2 だんずつ上ります。8 だん目まで上る上り方は何通りですか。",
+       "answer": 34,
+       "check": "sum(1 for k in range(9) for c in itertools.product((1, 2), repeat=k) if sum(c) == 8)",
+       "hints": [
+        "表をかいて、1 だん目からじゅんに数を書こう。",
+        "どのだんも、前の 2 つのだんの数をたすよ。",
+        "7 だん目までと 6 だん目までの数をたそう。"
+       ],
+       "paths": [
+        [
+         "1、2、3、5、8、13、21",
+         "21 + 13 = 34 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "部屋に人が 1 人ずつ入ってきて、もういる人全員と 1 回ずつあく手をします。9 人目があく手を終えたとき、あく手は全部で何回ですか。",
+       "answer": 36,
+       "check": "len(set(itertools.combinations(range(9), 2)))",
+       "hints": [
+        "人数とあく手の回数を表にしよう。",
+        "新しく入る人は、前からいる人数だけあく手するね。",
+        "前の回数に、前からいた人数をたしていこう。"
+       ],
+       "paths": [
+        [
+         "0、1、3、6、10、15、21、28",
+         "28 + 8 = 36 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "「ハノイのとう」で、円ばんが 3 まいなら 7 回で全部を右のぼうへ動かせます。円ばんが 4 まいなら、何回でできますか。",
+       "answer": 15,
+       "check": "(lambda f: f(f, 4))(lambda f, k: 0 if k == 0 else f(f, k - 1) + 1 + f(f, k - 1))",
+       "hints": [
+        "いちばん大きい円ばんを動かす前に、上の 3 まいをどけよう。",
+        "上の 3 まいを動かすのは 7 回だね。",
+        "どける、大きいのを動かす、のせる、の回数をたそう。"
+       ],
+       "paths": [
+        [
+         "3 まいをどける 7 回",
+         "大きい円ばん 1 回",
+         "3 まいをのせる 7 回",
+         "7 + 1 + 7 = 15 回"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135364,35 +147125,992 @@ window.ROADMAP = {
    "level": 2,
    "region": "kazoekata",
    "needs": [
-    "C-006"
+    "C-006",
+    "N-015"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エの 4 人の中から、1 番目に走る人と 2 番目に走る人を決めます。決め方は何通りですか。",
+       "answer": 12,
+       "check": "len(set(itertools.permutations('アイウエ', 2)))",
+       "hints": [
+        "1 番目は何通りかな。",
+        "2 番目は、のこりの何人から決めるかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "1 番目 4 通り",
+         "2 番目 3 通り",
+         "4 × 3 = 12 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "○、△、× のしるしを 3 こならべて、合図をつくります。同じしるしを何回使ってもかまいません。合図は何通りつくれますか。",
+       "answer": 27,
+       "check": "len(set(itertools.product('○△×', repeat=3)))",
+       "hints": [
+        "1 つ目のしるしは何通りかな。",
+        "2 つ目、3 つ目にも、同じしるしを使えるね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "1 つ目 3 通り",
+         "2 つ目まで 3 × 3 = 9 通り",
+         "3 つ目まで 9 × 3 = 27 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウの 3 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "explain": "アからじゅんにぬります。アは 3 色のどれでもよいので 3 通りです。イはアととなり合うので、アの色をのぞいた 2 通りです。ウはイととなり合いますが、アとはとなり合わないので、イの色だけをのぞいた 2 通りです（アと同じ色でもかまいません）。3 × 2 = 6、6 × 2 = 12 通りです。どのぬり方でも、のぞく色の数が同じなので、積（せき）の法則（ほうそく）が使えます。"
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))",
+       "hints": [
+        "アは何通りかな。",
+        "イ、ウ、エは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ、ウ、エは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 12 + 12 = 24 通り"
+        ]
+       ],
+       "note": "3 × 2 × 1 × 1 のように、使った色を全部のぞいてしまいやすい。となり合わない部分の色は使ってよい。"
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 つの部分を、赤、青、黄、緑の 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 36,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=3) if c[0] != c[1] and c[1] != c[2])",
+       "hints": [
+        "アは何通りかな。",
+        "イはアの色を使えないね。ウはどの色を使えないかな。",
+        "12 × 3 は、12 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウ 3 通り",
+         "4 × 3 = 12、12 × 3 = 12 + 12 + 12 = 36 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてに 3 本のしまがあるはたを、5 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"135\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"140\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 80,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])",
+       "hints": [
+        "左のしまは何通りかな。",
+        "まん中のしまと右のしまは、それぞれ何色を使えないかな。",
+        "20 × 4 は、20 を 4 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "左 5 通り",
+         "まん中 4 通り",
+         "右 4 通り",
+         "5 × 4 = 20、20 × 4 = 20 + 20 + 20 + 20 = 80 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エの 4 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。3 色を全部使うぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 18,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)) and len(set(c)) == 3)",
+       "hints": [
+        "3 色を全部使わなくてもよいときは、何通りだったかな。",
+        "2 色だけでぬれるのは、どんなぬり方かな。",
+        "全部から、2 色だけのぬり方をのぞこう。"
+       ],
+       "paths": [
+        [
+         "全部で 24 通り",
+         "2 色だけなのは「赤青赤青」のようにかわりばんこにぬるとき",
+         "2 色の組は赤と青・赤と黄・青と黄の 3 つで、どちらの色から始めるかで 2 通りずつ、3 × 2 = 6 通り",
+         "24 − 6 = 18 通り"
+        ]
+       ],
+       "note": "2 色だけのぬり方を 3 通りと数えやすい。「赤青赤青」と「青赤青赤」は別のぬり方。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 つの部分を、3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"60\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"100\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"140\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"180\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"40\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"160\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n  <text x=\"200\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[i + 1] for i in range(4)))",
+       "hints": [
+        "アは何通りかな。",
+        "イからオは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イからオは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 24 + 24 = 48 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "となり合う 2 つの部分ア、イを、7 色でぬります。アとイはちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"60\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"90\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"150\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n</svg>\n",
+       "answer": 42,
+       "check": "sum(1 for c in itertools.product(range(7), repeat=2) if c[0] != c[1])",
+       "hints": [
+        "アは何通りかな。",
+        "イはアの色を使えないね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "ア 7 通り",
+         "イ 6 通り",
+         "7 × 6 = 42 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ア、イ、ウ、エの 4 つの部分を、赤と青の 2 色だけでぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 2,
+       "check": "sum(1 for c in itertools.product(range(2), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))",
+       "hints": [
+        "アをぬると、イの色は決まるかな。",
+        "イが決まると、ウの色は決まるかな。",
+        "アの色の決め方だけ数えればいいね。"
+       ],
+       "paths": [
+        [
+         "ア 2 通り",
+         "イ、ウ、エは 1 通りずつに決まる",
+         "2 × 1 × 1 × 1 = 2 通り"
+        ],
+        [
+         "赤青赤青と青赤青赤",
+         "2 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウの 3 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 12,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=3) if c[0] != c[1] and c[1] != c[2])",
+       "hints": [
+        "アは何通りかな。",
+        "イとウは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ 2 通り",
+         "ウ 2 通り",
+         "3 × 2 = 6、6 × 2 = 12 通り"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エの 4 人がかけっこをします。1 着、2 着、3 着の決まり方は何通りですか。",
+       "answer": 24,
+       "check": "len(set(itertools.permutations('アイウエ', 3)))",
+       "hints": [
+        "1 着、2 着、3 着は、それぞれ何通りかな。",
+        "1 人決まるごとに、のこりは 1 人ずつへるね。",
+        "12 × 2 は、12 を 2 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12",
+         "12 × 2 = 12 + 12 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "見本",
+       "text": "ア、イ、ウの 3 つの部分を、赤、青、黄、緑の 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"15\" width=\"160\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"160\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "explain": "この図では、どの 2 つの部分もとなり合っています。だから 3 つとも全部ちがう色になります。アは 4 通り、イはアとちがう 3 通り、ウはアともイともちがう 2 通りです。4 × 3 = 12、12 × 2 = 24 通りです。4 色から 3 色をえらんでならべる順列（じゅんれつ、C-006 のならべ方）と同じ数え方です。"
+      },
+      {
+       "part": "今日",
+       "text": "見本と同じ形の図のア、イ、ウを、5 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"15\" width=\"160\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"160\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 60,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)",
+       "hints": [
+        "どの 2 つの部分も、となり合っているかな。",
+        "アは 5 通り。イとウは何通りかな。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "どれもとなり合うので全部ちがう色",
+         "ア 5 通り、イ 4 通り、ウ 3 通り",
+         "5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "上のアは、下のイ、ウ、エのどれともとなり合っています。ア、イ、ウ、エを 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 6,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))",
+       "hints": [
+        "いちばん多くの部分ととなり合っているのはどこかな。そこから先にぬろう。",
+        "アをぬったあと、イは何色を使えるかな。",
+        "ウはアともイともとなり合うね。エはどうかな。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ 2 通り",
+         "ウはアともイともちがう 1 通り",
+         "エはアともウともちがう 1 通り",
+         "3 × 2 × 1 × 1 = 6 通り"
+        ]
+       ],
+       "note": "エはアとウの色を使えないので、イと同じ色になる。イとエはとなり合わないので同じ色でよい。"
+      },
+      {
+       "part": "今日",
+       "text": "まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"95\" y=\"45\" width=\"50\" height=\"50\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"10\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"95\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"45\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"145\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"33\" font-size=\"14\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"14\" text-anchor=\"middle\">ウ</text>\n  <text x=\"70\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">エ</text>\n  <text x=\"170\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))",
+       "hints": [
+        "まん中のアから先にぬろう。何通りかな。",
+        "イ、ウ、エ、オは、どの色を使えないかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ、ウ、エ、オはアの色だけ使えないので 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 24 + 24 = 48 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"52.3\" x2=\"162.4\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"52.3\" x2=\"77.6\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"87.7\" x2=\"77.6\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"87.7\" x2=\"162.4\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"33\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"162\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"78\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 18,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))",
+       "hints": [
+        "アとイをぬると、それぞれ何通りかな。",
+        "ウの色が、アと同じときと、アとちがうときに分けよう。",
+        "それぞれの場合で、エが何通りになるかを数えよう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り・イ 2 通りで 6 通り",
+         "ウがアと同じ色なら、エはアの色だけ使えないので 2 通り",
+         "ウがアともイともちがう色なら、エはアの色もウの色も使えないので 1 通り",
+         "1 つにつき 2 + 1 = 3 通り",
+         "6 × 3 = 18 通り"
+        ]
+       ],
+       "note": "ぐるりとつながる形では、さいごのエが、ウとアの両方ととなり合う。ウとアが同じ色かどうかでエの通りがかわるので、かけ算だけでは数えられず、場合に分けてたす（C-005 の和の法則）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"98.35\" y1=\"82.5\" x2=\"68.04\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"141.65\" y1=\"82.5\" x2=\"171.96\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"84\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"156\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)",
+       "hints": [
+        "どの 2 つもとなり合うと、同じ色の部分があってもいいかな。",
+        "ア、イ、ウ、エは、それぞれ何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "全部ちがう色",
+         "4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))",
+       "hints": [
+        "アから先にぬろう。",
+        "イはアの色が使えないね。ウとエは何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウ 2 通り",
+         "エ 2 通り",
+         "4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ドーナツの形を 4 つに分け、まん中の円もぬります。まん中のアは、まわりのイ、ウ、エ、オのどれともとなり合っています。まわりでとなり合うのは、イとウ、ウとエ、エとオ、オとイです。3 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"52.3\" x2=\"162.4\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"52.3\" x2=\"77.6\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"87.7\" x2=\"77.6\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"87.7\" x2=\"162.4\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"33\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"162\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n  <text x=\"78\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 6,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (2, 3), (3, 4), (4, 1))))",
+       "hints": [
+        "まん中のアから先にぬろう。",
+        "まわりの 4 つは、のこりの何色でぬるかな。",
+        "2 色でぐるりとぬるには、かわりばんこにするしかないね。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "まわりはのこりの 2 色をかわりばんこに",
+         "イの色で 2 通り",
+         "3 × 2 = 6 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "ア、イ、ウを 3 色でぬるとき、3 × 2 × 2 = 12 通りです。ウが 1 通りではなく 2 通りになるわけを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "explain": "例：「ウがとなり合うのはイだけで、アとはとなり合わない。だからウに使えないのはイの色 1 つだけで、3 − 1 = 2 通り。アと同じ色をぬってもよい。」と書ければよい。3 × 2 × 1 と考えた子には、全部ちがう色にしなければならないのは、どの 2 つもとなり合うとき（2 日目の見本の図）だけだと話す。",
+       "hints": [
+        "ウは、どの部分ととなり合っているかな。",
+        "ウにアと同じ色をぬってもいいかな。",
+        "「ウに使えない色は〜だけだから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "ウがとなり合うのはイだけ",
+         "使えないのはイの色だけ",
+         "3 − 1 = 2 通り"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "この図を 3 色でぬるとき、アから先にぬると 3 × 2 × 1 × 1 = 6 通りと数えられます。イ、ウ、エ、アのじゅんにぬると、かけ算ではうまく数えられません。なぜかを文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "explain": "例：「イ、ウ、エのじゅんにぬると、イ 3 通り、ウ 2 通り、エ 2 通り。さいごのアは、イとエが同じ色なら 1 通り、ちがう色なら 0 通り（ぬれる色がのこらない）。アのぬり方が、前のぬり方によってちがうので、かけ算にできない。アから先にぬると、イ、ウ、エのどれも、使えない色の数がいつも同じになるので、かけ算で数えられる。」と書ければよい。多くの部分ととなり合う所から先にぬるとよい、とまとめる。イ、ウ、エのじゅんでも、場合に分ければ 3 × 2 × 1 = 6 と数えられることをたしかめてもよい。",
+       "hints": [
+        "イ、ウ、エのじゅんにぬって、さいごにアをぬってみよう。",
+        "イとエが同じ色のとき、アは何通りかな。ちがう色のときはどうかな。",
+        "「アのぬり方がそろわないから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "イ、ウ、エのあとにアをぬると",
+         "イとエが同じなら 1 通り、ちがうなら 0 通り",
+         "そろわないのでかけ算にできない",
+         "アから先にぬるとそろう"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "この図のア、イ、ウ、エは、どの 2 つもとなり合っています。3 色ではぬれないわけを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"98.35\" y1=\"82.5\" x2=\"68.04\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"141.65\" y1=\"82.5\" x2=\"171.96\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"84\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"156\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "explain": "例：「どの 2 つもとなり合うので、4 つとも全部ちがう色にしなければならない。でも色は 3 つしかないので、3 つをぬると、4 つ目にぬれる色がのこらない。式にすると 3 × 2 × 1 × 0 = 0 通り。」と書ければよい。4 色あれば 4 × 3 × 2 × 1 = 24 通りでぬれる。地図の国をぬり分けるとき、どんな地図でも 4 色あればとなり合う国をちがう色にできることが知られている（四色定理）。1976 年に計算機を使って証明された、有名な問題である。",
+       "hints": [
+        "どの 2 つもとなり合うと、同じ色の部分があってもいいかな。",
+        "3 つの部分をぬったあと、4 つ目に使える色はのこっているかな。",
+        "「色がたりないから」を使って書こう。"
+       ],
+       "paths": [
+        [
+         "4 つとも全部ちがう色がいる",
+         "色は 3 つしかない",
+         "4 つ目にぬれる色がのこらない",
+         "だからぬれない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "よこに 2 本のしまがあるはたを、6 色の中からえらんでぬります。2 本のしまはちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"135\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"15\" width=\"150\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"50\" width=\"150\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 30,
+       "check": "sum(1 for c in itertools.product(range(6), repeat=2) if c[0] != c[1])",
+       "hints": [
+        "上のしまは何通りかな。",
+        "下のしまは、上の色を使えないね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "上 6 通り",
+         "下 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))",
+       "hints": [
+        "いちばん多くとなり合うアから先にぬろう。",
+        "イ、ウ、エは、それぞれどの色を使えないかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウ 2 通り",
+         "エ 2 通り",
+         "4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 つの部分を 5 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 80,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])",
+       "hints": [
+        "アは何通りかな。",
+        "イとウは、それぞれ左どなりの色だけ使えないね。",
+        "20 × 4 は、20 を 4 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "ア 5 通り",
+         "イ 4 通り",
+         "ウ 4 通り",
+         "5 × 4 = 20、20 × 4 = 80 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"98.35\" y1=\"82.5\" x2=\"68.04\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"141.65\" y1=\"82.5\" x2=\"171.96\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"84\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"156\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)",
+       "hints": [
+        "どの 2 つもとなり合うので、全部ちがう色だね。",
+        "ア、イ、ウ、エは、それぞれ何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"95\" y=\"45\" width=\"50\" height=\"50\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"10\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"95\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"45\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"145\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"33\" font-size=\"14\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"14\" text-anchor=\"middle\">ウ</text>\n  <text x=\"70\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">エ</text>\n  <text x=\"170\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))",
+       "hints": [
+        "まん中のアから先にぬろう。",
+        "イ、ウ、エ、オは、アの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "ほかは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "0、1、2、3 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。",
+       "answer": 9,
+       "check": "len(set(10 * a + b for a, b in itertools.permutations(range(4), 2) if a != 0))",
+       "hints": [
+        "十のくらいに 0 はおけないね。",
+        "一のくらいには 0 もおけるね。のこりのカードは何まいかな。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "十のくらい 3 通り",
+         "一のくらい 3 通り",
+         "3 × 3 = 9 こ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))",
+       "hints": [
+        "アは何通りかな。",
+        "イ、ウ、エは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "ほかは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 つの部分を 4 色でぬります。こんどは、3 つとも全部ちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=3) if len(set(c)) == 3)",
+       "hints": [
+        "全部ちがう色にするのは、4 色から 3 色をえらんでならべるのと同じかな。",
+        "ア、イ、ウは、それぞれ何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウはアともイともちがう 2 通り",
+         "4 × 3 = 12、12 × 2 = 24 通り"
+        ]
+       ],
+       "note": "となり合う所だけちがえばよいとき（4 × 3 × 3 = 36 通り）とのちがいを言わせる。全部ちがう色にするのは C-006 の順列と同じ。"
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 つの部分を 4 色でぬります。となり合う部分だけちがう色にします（アとウは同じ色でもかまいません）。ぬり方が何通りあるかをもとめる式はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "choices": [
+        "4 × 3 × 2",
+        "4 × 3 × 3",
+        "4 × 4 × 4"
+       ],
+       "answer": "4 × 3 × 3",
+       "check": "[c for c, v in (('4 × 3 × 2', 4 * 3 * 2), ('4 × 3 × 3', 4 * 3 * 3), ('4 × 4 × 4', 4 * 4 * 4)) if v == sum(1 for p in itertools.product(range(4), repeat=3) if p[0] != p[1] and p[1] != p[2])][0]",
+       "hints": [
+        "アは何通りかな。",
+        "イはアの色を使えないね。ウはどの色を使えないかな。",
+        "ウはアと同じ色でもいいね。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウはイの色だけ使えないので 3 通り",
+         "4 × 3 × 3"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてに 3 本のしまがあるはたを、4 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。そのあと、はたのまん中に ★ をつけるか、つけないかを決めます。はたは何通りできますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"135\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"140\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 72,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=3) if c[0] != c[1] and c[1] != c[2]) * 2",
+       "hints": [
+        "しまのぬり方は、何通りかな。",
+        "そのどれにも、★ をつけるかつけないかの 2 通りがあるね。",
+        "36 × 2 は、36 を 2 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "しま 4 × 3 = 12、12 × 3 = 36 通り",
+         "★ 2 通り",
+         "36 × 2 = 36 + 36 = 72 通り"
+        ]
+       ],
+       "note": "36 + 2 = 38 とたしやすい。しまのぬり方 1 つずつに ★ の 2 通りがつくので、積の法則（C-005）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。こんどは 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"52.3\" x2=\"162.4\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"52.3\" x2=\"77.6\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"87.7\" x2=\"77.6\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"87.7\" x2=\"162.4\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"33\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"162\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"78\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 84,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))",
+       "hints": [
+        "アは 4 通り、イは 3 通りだね。",
+        "ウがアと同じ色のときと、アとちがう色のときに分けよう。",
+        "それぞれの場合で、エが何通りになるかを数えて、さいごにたそう。"
+       ],
+       "paths": [
+        [
+         "ウがアと同じ色のとき、ウは 1 通りでエは 3 通り",
+         "4 × 3 = 12、12 × 1 = 12、12 × 3 = 36 通り",
+         "ウがアともイともちがう色のとき、ウは 2 通りでエは 2 通り",
+         "12 × 2 = 24、24 × 2 = 48 通り",
+         "36 + 48 = 84 通り"
+        ]
+       ],
+       "note": "2 日目の挑戦（3 色で 18 通り）と同じ分け方。ウがアと同じなら、エはアの色 1 つだけ使えないので 3 通り。ちがうなら、アとウの 2 色が使えないので 2 通り。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ア、イ、ウの 3 つの部分を 5 色でぬります。3 つとも全部ちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"40\" width=\"60\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"60\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"180\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 60,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)",
+       "hints": [
+        "全部ちがう色にするのは、5 色から 3 色をえらんでならべるのと同じだね。",
+        "ア、イ、ウは、それぞれ何通りかな。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "ア 5 通り",
+         "イ 4 通り",
+         "ウ 3 通り",
+         "5 × 4 = 20、20 × 3 = 60 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のア、イ、ウは、どの 2 つもとなり合っています。5 色でぬります。となり合う部分はちがう色にします。ぬり方が何通りあるかをもとめる式はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"15\" width=\"160\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"160\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "choices": [
+        "5 × 4 × 3",
+        "5 × 4 × 4",
+        "5 × 5 × 5"
+       ],
+       "answer": "5 × 4 × 3",
+       "check": "[c for c, v in (('5 × 4 × 3', 5 * 4 * 3), ('5 × 4 × 4', 5 * 4 * 4), ('5 × 5 × 5', 5 * 5 * 5)) if v == sum(1 for p in itertools.product(range(5), repeat=3) if len(set(p)) == 3)][0]",
+       "hints": [
+        "どの 2 つもとなり合うと、全部ちがう色になるね。",
+        "ウは、アの色もイの色も使えないね。",
+        "ウは何通りかな。"
+       ],
+       "paths": [
+        [
+         "どれもとなり合う",
+         "全部ちがう色",
+         "5 × 4 × 3"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "ドーナツの形を 4 つに分け、まん中の円もぬります。まん中のアは、まわりのイ、ウ、エ、オのどれともとなり合っています。まわりでとなり合うのは、イとウ、ウとエ、エとオ、オとイです。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"52.3\" x2=\"162.4\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"52.3\" x2=\"77.6\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"87.7\" x2=\"77.6\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"87.7\" x2=\"162.4\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"33\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"162\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n  <text x=\"78\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 72,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=5) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (2, 3), (3, 4), (4, 1))))",
+       "hints": [
+        "まん中のアから先にぬろう。何通りかな。",
+        "まわりの 4 つは、のこりの 3 色でぬるね。あなのあるドーナツの形と同じだね。",
+        "18 × 4 は、18 を 4 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "まわりはのこりの 3 色で、あなのあるドーナツと同じ 18 通り",
+         "18 × 4 = 18 + 18 + 18 + 18 = 72 通り"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "たてに 3 本のしまがあるはたを、5 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"135\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"140\" y=\"15\" width=\"50\" height=\"70\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 80,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])",
+       "hints": [
+        "左のしまは何通りかな。",
+        "まん中と右のしまは、それぞれ何色を使えないかな。",
+        "20 × 4 は、20 を 4 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "左 5 通り",
+         "まん中 4 通り",
+         "右 4 通り",
+         "5 × 4 = 20、20 × 4 = 80 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))",
+       "hints": [
+        "アは何通りかな。",
+        "イ、ウ、エは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "ほかは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "図のア、イ、ウは、どの 2 つもとなり合っています。5 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"40\" y=\"15\" width=\"160\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"70\" width=\"80\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"160\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n</svg>\n",
+       "answer": 60,
+       "check": "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)",
+       "hints": [
+        "どの 2 つもとなり合うと、全部ちがう色だね。",
+        "ア、イ、ウは、それぞれ何通りかな。",
+        "20 × 3 は、20 を 3 回たした数だよ。"
+       ],
+       "paths": [
+        [
+         "ア 5 通り",
+         "イ 4 通り",
+         "ウ 3 通り",
+         "5 × 4 = 20、20 × 3 = 60 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "上のアは、下のイ、ウ、エのどれともとなり合っています。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 6,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))",
+       "hints": [
+        "いちばん多くとなり合うアから先にぬろう。",
+        "イをぬったあと、ウは何色を使えるかな。",
+        "エは、アともウともとなり合うね。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ 2 通り",
+         "ウ 1 通り",
+         "エ 1 通り",
+         "3 × 2 × 1 × 1 = 6 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"95\" y=\"45\" width=\"50\" height=\"50\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"10\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"105\" y=\"95\" width=\"30\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"45\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"145\" y=\"55\" width=\"50\" height=\"30\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"120\" y=\"33\" font-size=\"14\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"14\" text-anchor=\"middle\">ウ</text>\n  <text x=\"70\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">エ</text>\n  <text x=\"170\" y=\"75\" font-size=\"14\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))",
+       "hints": [
+        "まん中のアから先にぬろう。",
+        "イ、ウ、エ、オは、アの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "ほかは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方が何通りあるかをもとめる式はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"70\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"120\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"170\" y=\"40\" width=\"50\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"45\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"95\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"145\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"195\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "choices": [
+        "3 × 2 × 2 × 2",
+        "3 × 2 × 1 × 1",
+        "3 × 3 × 3 × 3"
+       ],
+       "answer": "3 × 2 × 2 × 2",
+       "check": "[c for c, v in (('3 × 2 × 2 × 2', 3 * 2 * 2 * 2), ('3 × 2 × 1 × 1', 3 * 2 * 1 * 1), ('3 × 3 × 3 × 3', 3 * 3 * 3 * 3)) if v == sum(1 for p in itertools.product(range(3), repeat=4) if all(p[i] != p[i + 1] for i in range(3)))][0]",
+       "hints": [
+        "アは何通りかな。",
+        "ウはアととなり合っているかな。",
+        "イ、ウ、エは、それぞれ何色を使えないかな。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "イ、ウ、エは左どなりの色だけ使えない",
+         "3 × 2 × 2 × 2"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "よこに 2 本のしまがあるはたを、6 色の中からえらんでぬります。2 本のしまはちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <line x1=\"40\" y1=\"10\" x2=\"40\" y2=\"135\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"15\" width=\"150\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"40\" y=\"50\" width=\"150\" height=\"35\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n</svg>\n",
+       "answer": 30,
+       "check": "sum(1 for c in itertools.product(range(6), repeat=2) if c[0] != c[1])",
+       "hints": [
+        "上のしまは何通りかな。",
+        "下のしまは、上の色を使えないね。",
+        "2 つの通りをかけ算にしよう。"
+       ],
+       "paths": [
+        [
+         "上 6 通り",
+         "下 5 通り",
+         "6 × 5 = 30 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"52.3\" x2=\"162.4\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"52.3\" x2=\"77.6\" y2=\"27.6\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"102.3\" y1=\"87.7\" x2=\"77.6\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"137.7\" y1=\"87.7\" x2=\"162.4\" y2=\"112.4\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"33\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"162\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"78\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 18,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))",
+       "hints": [
+        "アとイをぬると、それぞれ何通りかな。",
+        "ウの色が、アと同じときと、アとちがうときに分けよう。",
+        "それぞれの場合で、エが何通りになるかを数えよう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り・イ 2 通りで 6 通り",
+         "ウがアと同じならエは 2 通り、ちがうならエは 1 通り",
+         "1 つにつき 2 + 1 = 3 通り",
+         "6 × 3 = 18 通り"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "ア、イ、ウ、エ、オの 5 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"20\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"60\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"100\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"140\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"180\" y=\"40\" width=\"40\" height=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"40\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"80\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"160\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n  <text x=\"200\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">オ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[i + 1] for i in range(4)))",
+       "hints": [
+        "アは何通りかな。",
+        "イからオは、それぞれ左どなりの色だけ使えないね。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 3 通り",
+         "ほかは 2 通りずつ",
+         "3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <circle cx=\"120\" cy=\"70\" r=\"60\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <circle cx=\"120\" cy=\"70\" r=\"25\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <line x1=\"120\" y1=\"45\" x2=\"120\" y2=\"10\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"98.35\" y1=\"82.5\" x2=\"68.04\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <line x1=\"141.65\" y1=\"82.5\" x2=\"171.96\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"76\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"84\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"156\" y=\"54\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"120\" y=\"118\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 24,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)",
+       "hints": [
+        "どの 2 つもとなり合うので、全部ちがう色だね。",
+        "ア、イ、ウ、エは、それぞれ何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"30\" y=\"15\" width=\"180\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"30\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"90\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <rect x=\"150\" y=\"70\" width=\"60\" height=\"55\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"2\"/>\n  <text x=\"120\" y=\"48\" font-size=\"16\" text-anchor=\"middle\">ア</text>\n  <text x=\"60\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">イ</text>\n  <text x=\"120\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">ウ</text>\n  <text x=\"180\" y=\"103\" font-size=\"16\" text-anchor=\"middle\">エ</text>\n</svg>\n",
+       "answer": 48,
+       "check": "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))",
+       "hints": [
+        "アから先にぬろう。",
+        "イ、ウ、エは、それぞれ何通りかな。",
+        "じゅんにかけていこう。"
+       ],
+       "paths": [
+        [
+         "ア 4 通り",
+         "イ 3 通り",
+         "ウ 2 通り",
+         "エ 2 通り",
+         "4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
     -12.23,
     13.85,
     -5.7
-   ]
+   ],
+   "comb": {
+    "b": 0.31,
+    "r": 0.0,
+    "rg": [
+     "kazoekata",
+     "keisan"
+    ],
+    "pr": []
+   }
   },
   {
    "id": "C-011",
@@ -135437,7 +148155,7 @@ window.ROADMAP = {
     -5.9
    ],
    "comb": {
-    "b": 0.382,
+    "b": 0.353,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -135495,40 +148213,1580 @@ window.ROADMAP = {
     "G-006",
     "N-013",
     "G-005",
-    "N-014"
+    "N-014",
+    "G-046"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "広さのことを面積といいます。🟦 1 つは、1 辺が 1 cm の正方形です。この形の面積を考えよう。",
+       "figure": "🟦🟦🟦🟦\n🟦🟦🟦🟦\n🟦🟦🟦🟦",
+       "explain": "1 辺が 1 cm の正方形の面積を 1 cm²（1 平方センチメートル）といいます。面積は、1 cm² の正方形の いくつ分かで表します。この形は 🟦 が 12 こ分なので、面積は 12 cm² です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "まわりの長さは何マスですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦\n🟦⬜⬜\n🟦⬜⬜",
+       "answer": 12,
+       "check": "(lambda g: sum(1 for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜' for dr, dc in ((0, 1), (1, 0), (0, -1), (-1, 0)) if not (0 <= r + dr < len(g) and 0 <= c + dc < len(g[r + dr]) and g[r + dr][c + dc] != '⬜')))(fig.splitlines())",
+       "hints": [
+        "形のふちを、指で 1 しゅうなぞろう。",
+        "内がわの線は数えないよ。",
+        "かどで曲がるところで、数えわすれがないようにしよう。"
+       ],
+       "paths": [
+        [
+         "上 3、右 1、内がわの横 2、内がわのたて 2、下 1、左 3",
+         "3 + 1 + 2 + 2 + 1 + 3 = 12",
+         "12 マス"
+        ],
+        [
+         "へこみを外へ出すと 3 マスと 3 マスの正方形",
+         "3 + 3 + 3 + 3 = 12"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "7 × 6 はいくつですか。",
+       "answer": 42,
+       "check": "7 * 6",
+       "hints": [
+        "7 のだんの九九を思い出そう。",
+        "7 × 5 = 35 だね。",
+        "35 に 7 をたそう。"
+       ],
+       "paths": [
+        [
+         "しちろく",
+         42
+        ],
+        [
+         "7 × 5 = 35",
+         "35 + 7 = 42"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦🟦\n🟦🟦⬜⬜\n🟦🟦⬜⬜",
+       "answer": 8,
+       "check": "n('🟦')",
+       "hints": [
+        "🟦 を 1 つずつ数えよう。",
+        "上のだんから順に数えよう。",
+        "⬜ は数えないよ。"
+       ],
+       "paths": [
+        [
+         "上のだん 4 こ",
+         "2 だんめ 2 こ",
+         "3 だんめ 2 こ",
+         "4 + 2 + 2 = 8",
+         "8 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🟦 の形と 🟥 の形では、どちらの面積が広いですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦🟦⬜🟥🟥🟥\n🟦🟦🟦🟦⬜🟥🟥🟥\n⬜⬜⬜⬜⬜🟥🟥🟥",
+       "choices": [
+        "🟦",
+        "🟥",
+        "同じ"
+       ],
+       "answer": "🟥",
+       "check": "'🟦' if n('🟦') > n('🟥') else ('🟥' if n('🟥') > n('🟦') else '同じ')",
+       "hints": [
+        "形の長さだけでは、広さは決まらないね。",
+        "それぞれ、1 cm² の正方形が何こ分かを数えよう。",
+        "数が多いほうが広いよ。"
+       ],
+       "paths": [
+        [
+         "🟦 は 4 + 4 = 8 こ",
+         "🟥 は 3 + 3 + 3 = 9 こ",
+         "🟥 が広い"
+        ]
+       ],
+       "note": "🟦 のほうが横に長いので 🟦 を選びやすい。広さは 1 cm² のいくつ分で比べる。"
+      },
+      {
+       "part": "今日",
+       "text": "点線の 1 目は 1 cm です。三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"72\" y1=\"118\" x2=\"72\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"96\" y1=\"118\" x2=\"96\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"144\" y1=\"118\" x2=\"144\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"168\" y1=\"118\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"118\" x2=\"168\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"94\" x2=\"168\" y2=\"94\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"70\" x2=\"168\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"46\" x2=\"168\" y2=\"46\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"22\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"72,118 168,118 72,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 8,
+       "check": "(3 + 2 + 1) + 4 // 2",
+       "hints": [
+        "ぜんぶ入っているマスを数えよう。",
+        "ななめの線で半分に切られたマスは、いくつあるかな。",
+        "半分のマス 2 つで、1 cm² になるよ。"
+       ],
+       "paths": [
+        [
+         "ぜんぶ入るマス 3 + 2 + 1 = 6",
+         "半分のマスが 4 つで 2 cm²",
+         "6 + 2 = 8",
+         "8 cm²"
+        ],
+        [
+         "4 × 4 の正方形を半分にした形",
+         "16 の半分で 8 cm²"
+        ]
+       ],
+       "note": "半分のマスを 1 つと数えて 10 と答えやすい。"
+      },
+      {
+       "part": "挑戦",
+       "text": "1 cm² の正方形を 12 こ、すき間なくならべて長方形をつくります。たてと横の並べ方は何通りありますか。たてと横を入れかえたものは同じとします。",
+       "answer": 3,
+       "check": "sum(1 for a in range(1, 13) for b in range(a, 13) if a * b == 12)",
+       "hints": [
+        "1 だんに 12 こ並べると、1 つできるね。",
+        "2 だんにすると、1 だんに何こずつかな。",
+        "□ × △ = 12 になる九九をさがそう。"
+       ],
+       "paths": [
+        [
+         "1 だん 12 こ",
+         "2 だん 6 こ",
+         "3 だん 4 こ",
+         "4 だん 3 こは 3 だん 4 こと同じ",
+         "3 通り"
+        ]
+       ],
+       "note": "4 だん 3 こ、6 だん 2 こまで数えて 6 通りと答えやすい。たてと横を入れかえたものは同じとした。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。",
+       "figure": "🟦🟦⬜⬜\n🟦🟦🟦🟦\n🟦🟦🟦🟦",
+       "answer": 10,
+       "check": "n('🟦')",
+       "hints": [
+        "🟦 を 1 つずつ数えよう。",
+        "上のだんから順に数えよう。",
+        "⬜ は数えないよ。"
+       ],
+       "paths": [
+        [
+         "2 + 4 + 4 = 10",
+         "10 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線の 1 目は 1 cm です。家の形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"152\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"86\" x2=\"152\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"54\" x2=\"152\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"22\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"88,118 152,118 152,54 120,22 88,54\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 5,
+       "check": "2 * 2 + 2 // 2",
+       "hints": [
+        "下の正方形の部分は何 cm² かな。",
+        "やねの部分には、半分のマスがいくつあるかな。",
+        "半分のマス 2 つで 1 cm² だよ。"
+       ],
+       "paths": [
+        [
+         "下の正方形は 4 cm²",
+         "やねは半分のマス 2 つで 1 cm²",
+         "4 + 1 = 5",
+         "5 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🟦 の形と 🟥 の形では、どちらの面積が広いですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦⬜🟥🟥\n🟦🟦🟦⬜🟥🟥\n🟦🟦⬜⬜🟥🟥",
+       "choices": [
+        "🟦",
+        "🟥",
+        "同じ"
+       ],
+       "answer": "🟦",
+       "check": "'🟦' if n('🟦') > n('🟥') else ('🟥' if n('🟥') > n('🟦') else '同じ')",
+       "hints": [
+        "それぞれ、1 cm² の正方形が何こ分かを数えよう。",
+        "🟦 は 3、3、2 と並んでいるね。",
+        "数が多いほうが広いよ。"
+       ],
+       "paths": [
+        [
+         "🟦 は 3 + 3 + 2 = 8 こ",
+         "🟥 は 2 + 2 + 2 = 6 こ",
+         "🟦 が広い"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "長方形の面積を、計算で求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"70\" y1=\"100\" x2=\"70\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"90\" y1=\"100\" x2=\"90\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"110\" y1=\"100\" x2=\"110\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"130\" y1=\"100\" x2=\"130\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"150\" y1=\"100\" x2=\"150\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"100\" x2=\"170\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"100\" x2=\"170\" y2=\"100\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"80\" x2=\"170\" y2=\"80\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"60\" x2=\"170\" y2=\"60\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"40\" x2=\"170\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"70,100 170,100 170,40 70,40\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"116.5\" font-size=\"13\" text-anchor=\"middle\">よこ 5 cm</text><text x=\"64\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">たて 3 cm</text></svg>",
+       "explain": "1 cm² の正方形が、横に 5 こ並んだ列が、たてに 3 列あります。だから 5 × 3 = 15 で 15 こ分、面積は 15 cm² です。長方形の面積 = たて × よこ、正方形の面積 = 1 辺 × 1 辺 で求められます（3 × 5 = 15）。"
+      },
+      {
+       "part": "思い出す",
+       "text": "🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦⬜⬜⬜",
+       "answer": 12,
+       "check": "n('🟦')",
+       "hints": [
+        "上のだんから順に数えよう。",
+        "1 だんめと 2 だんめは同じ数だね。",
+        "⬜ は数えないよ。"
+       ],
+       "paths": [
+        [
+         "5 + 5 + 2 = 12",
+         "12 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "56 ÷ 8 はいくつですか。",
+       "answer": 7,
+       "check": "56 // 8",
+       "hints": [
+        "8 × □ = 56 になる □ をさがそう。",
+        "8 のだんの九九を思い出そう。",
+        "8 のだんを、8 × 5 = 40 から順に言ってみよう。"
+       ],
+       "paths": [
+        [
+         "8 × 7 = 56",
+         7
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長方形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"65.1,118 174.9,118 174.9,22 65.1,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"59.1\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">7 cm</text></svg>",
+       "answer": 56,
+       "check": "7 * 8",
+       "hints": [
+        "1 cm² の正方形が、横に何こ並ぶかな。",
+        "その列が、たてに何列できるかな。",
+        "たて × よこ で求めよう。"
+       ],
+       "paths": [
+        [
+         "たて 7 cm、よこ 8 cm",
+         "7 × 8 = 56",
+         "56 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺が 9 cm の正方形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72,118 168,118 168,22 72,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"66\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">9 cm</text></svg>",
+       "answer": 81,
+       "check": "9 * 9",
+       "hints": [
+        "正方形は、たても横も同じ長さだね。",
+        "1 辺 × 1 辺 で求めよう。",
+        "9 のだんの九九を思い出そう。"
+       ],
+       "paths": [
+        [
+         "9 × 9 = 81",
+         "81 cm²"
+        ]
+       ],
+       "note": "まわりの長さ（9 + 9 + 9 + 9 = 36）と取りちがえやすい。面積は広さ、まわりは長さ。"
+      },
+      {
+       "part": "今日",
+       "text": "面積が 42 cm² の長方形があります。たては 6 cm です。横は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"64,118 176,118 176,22 64,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">□ cm</text><text x=\"58\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 7,
+       "check": "42 // 6",
+       "hints": [
+        "たて × よこ = 面積 だったね。",
+        "6 × □ = 42 になる □ をさがそう。",
+        "42 ÷ 6 で求めてもよいよ。"
+       ],
+       "paths": [
+        [
+         "6 × □ = 42",
+         "42 ÷ 6 = 7",
+         "7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "まわりの長さが 28 cm の正方形があります。この正方形の面積は何 cm² ですか。",
+       "answer": 49,
+       "check": "(28 // 4) * (28 // 4)",
+       "hints": [
+        "正方形の 4 つの辺は、みんな同じ長さだね。",
+        "1 辺の長さは、28 を 4 つに分けた長さだよ。",
+        "1 辺がわかったら、1 辺 × 1 辺 で面積を求めよう。"
+       ],
+       "paths": [
+        [
+         "28 ÷ 4 = 7",
+         "1 辺は 7 cm",
+         "7 × 7 = 49",
+         "49 cm²"
+        ]
+       ],
+       "note": "28 を面積とまちがえたり、28 ÷ 4 の 7 で止まったりしやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "たてが 4 m、横が 9 m のへやの、ゆかの面積は何 m² ですか。1 辺が 1 m の正方形の面積を 1 m² といいます。",
+       "answer": 36,
+       "check": "4 * 9",
+       "hints": [
+        "長さの単位が m なので、面積の単位は m² だよ。",
+        "長方形の面積は、たて × よこ だね。",
+        "4 × 9 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "4 × 9 = 36",
+         "36 m²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 64 cm² の正方形の、1 辺の長さは何 cm ですか。",
+       "answer": 8,
+       "check": "[k for k in range(1, 10) if k * k == 64][0]",
+       "hints": [
+        "1 辺 × 1 辺 = 64 だね。",
+        "同じ数を 2 回かけて 64 になる九九をさがそう。",
+        "5 × 5、6 × 6、7 × 7… と、同じ数のかけ算を順に言ってみよう。"
+       ],
+       "paths": [
+        [
+         "□ × □ = 64",
+         "8 × 8 = 64",
+         "8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてが 3 cm、横が 6 cm の長方形の面積は何 cm² ですか。",
+       "answer": 18,
+       "check": "3 * 6",
+       "hints": [
+        "長方形の面積は、たて × よこ だね。",
+        "3 × 6 を計算しよう。",
+        "単位は cm² だよ。"
+       ],
+       "paths": [
+        [
+         "3 × 6 = 18",
+         "18 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "長方形を組み合わせた形の面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"56,118 184,118 184,86 136,86 136,22 56,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"50\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">6 cm</text><text x=\"96\" y=\"16.6\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"190\" y=\"106.5\" font-size=\"13\" text-anchor=\"start\">2 cm</text></svg>",
+       "explain": "線をひいて 2 つの長方形に分けます。左は たて 6 cm、横 5 cm で 30 cm²、右下は たて 2 cm、横 3 cm（8 − 5）で 6 cm²。合わせて 36 cm² です。大きな長方形 6 × 8 = 48 cm² から、ない所 4 × 3 = 12 cm² をひいても 36 cm² になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "たてが 6 cm、横が 9 cm の長方形の面積は何 cm² ですか。",
+       "answer": 54,
+       "check": "6 * 9",
+       "hints": [
+        "長方形の面積は、たて × よこ だね。",
+        "6 のだんの九九を思い出そう。",
+        "単位は cm² だよ。"
+       ],
+       "paths": [
+        [
+         "6 × 9 = 54",
+         "54 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "72 − 35 はいくつですか。",
+       "answer": 37,
+       "check": "72 - 35",
+       "hints": [
+        "一の位から計算しよう。",
+        "2 から 5 はひけないね。十の位から 1 かりよう。",
+        "十の位は、かしたあとの数から 3 をひこう。"
+       ],
+       "paths": [
+        [
+         "12 − 5 = 7",
+         "60 − 30 = 30",
+         37
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この形の面積は何 cm² ですか。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"52.8,118 187.2,118 187.2,60.4 129.6,60.4 129.6,22 52.8,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">7 cm</text><text x=\"46.8\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text><text x=\"91.2\" y=\"16.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"193.2\" y=\"93.8\" font-size=\"13\" text-anchor=\"start\">3 cm</text></svg>",
+       "answer": 29,
+       "check": "7 * 5 - (7 - 4) * (5 - 3)",
+       "hints": [
+        "線を 1 本ひいて、2 つの長方形に分けよう。",
+        "分けた長方形の、たてと横の長さを図から求めよう。",
+        "大きな長方形から、ない所をひいてもよいよ。"
+       ],
+       "paths": [
+        [
+         "左は 5 × 4 = 20",
+         "右下は 3 × 3 = 9",
+         "20 + 9 = 29",
+         "29 cm²"
+        ],
+        [
+         "大きな長方形 5 × 7 = 35",
+         "ない所は 2 × 3 = 6",
+         "35 − 6 = 29"
+        ]
+       ],
+       "note": "図に書いていない辺（7 − 4 = 3、5 − 3 = 2）を求めずに、書いてある数だけかけてしまいやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "この形の面積は何 cm² ですか。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,102.9 194,102.9 194,37.1 144.7,37.1 144.7,70 95.3,70 95.3,37.1 46,37.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"119.4\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"40\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">4 cm</text><text x=\"70.7\" y=\"31.7\" font-size=\"13\" text-anchor=\"middle\">3 cm</text><text x=\"169.3\" y=\"31.7\" font-size=\"13\" text-anchor=\"middle\">3 cm</text><text x=\"149.7\" y=\"58.1\" font-size=\"13\" text-anchor=\"start\">2 cm</text></svg>",
+       "answer": 30,
+       "check": "9 * 4 - (9 - 3 - 3) * 2",
+       "hints": [
+        "大きな長方形から、へこんだ所をひくと考えよう。",
+        "へこんだ所の横の長さは、9 cm から左右の 3 cm をひいた長さだね。",
+        "へこんだ所のたては 2 cm だよ。"
+       ],
+       "paths": [
+        [
+         "大きな長方形 4 × 9 = 36",
+         "へこみの横 9 − 3 − 3 = 3",
+         "へこみは 3 × 2 = 6",
+         "36 − 6 = 30"
+        ],
+        [
+         "左右の 4 × 3 = 12 が 2 つ",
+         "まん中の下 2 × 3 = 6",
+         "12 + 12 + 6 = 30"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 6 cm の正方形と 1 辺 4 cm の正方形を、下をそろえてくっつけました。この形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,114.4 194,114.4 194,55.2 134.8,55.2 134.8,25.6 46,25.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"40\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">6 cm</text><text x=\"200\" y=\"89.4\" font-size=\"13\" text-anchor=\"start\">4 cm</text></svg>",
+       "answer": 52,
+       "check": "6 * 6 + 4 * 4",
+       "hints": [
+        "2 つの正方形に分けて考えよう。",
+        "それぞれの正方形の面積は、1 辺 × 1 辺 だね。",
+        "2 つの面積をたそう。"
+       ],
+       "paths": [
+        [
+         "6 × 6 = 36",
+         "4 × 4 = 16",
+         "36 + 16 = 52",
+         "52 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "たて 8 m、横 9 m の長方形の花だんに、はば 1 m の道が十字に通っています。花をうえる所（道でない所）の面積は何 m² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"66,118 114,118 114,82 66,82\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"66,70 114,70 114,22 66,22\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"126,118 174,118 174,82 126,82\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"126,70 174,70 174,22 126,22\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"66,118 174,118 174,22 66,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"114\" y1=\"118\" x2=\"114\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"126\" y1=\"118\" x2=\"126\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"114\" y1=\"70\" x2=\"114\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"126\" y1=\"70\" x2=\"126\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"82\" x2=\"114\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"126\" y1=\"82\" x2=\"174\" y2=\"82\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"66\" y1=\"70\" x2=\"114\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"126\" y1=\"70\" x2=\"174\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">9 m</text><text x=\"60\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">8 m</text><text x=\"120\" y=\"17.6\" font-size=\"13\" text-anchor=\"middle\">1 m</text><text x=\"179\" y=\"80.5\" font-size=\"13\" text-anchor=\"start\">1 m</text></svg>",
+       "answer": 56,
+       "check": "(9 - 1) * (8 - 1)",
+       "hints": [
+        "4 つの長方形を 1 つずつ求めるのは大変だね。",
+        "道を、花だんのはしへ動かしてみよう。花をうえる所の広さは変わらないよ。",
+        "道をはしへよせると、のこりはたて何 m、横何 m の長方形かな。"
+       ],
+       "paths": [
+        [
+         "道をはしへよせる",
+         "のこりは たて 7 m、横 8 m",
+         "7 × 8 = 56",
+         "56 m²"
+        ],
+        [
+         "ぜんたい 8 × 9 = 72",
+         "道は 8 + 9 − 1 = 16",
+         "72 − 16 = 56"
+        ]
+       ],
+       "note": "2 本目の道で、道の重なった 1 m² を 2 回ひいて 55 と答えやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "この形の面積は何 cm² ですか。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,107 194,107 194,70 101.5,70 101.5,33 46,33\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"123.5\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"40\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">4 cm</text><text x=\"73.8\" y=\"27.6\" font-size=\"13\" text-anchor=\"middle\">3 cm</text><text x=\"200\" y=\"93\" font-size=\"13\" text-anchor=\"start\">2 cm</text></svg>",
+       "answer": 22,
+       "check": "8 * 4 - (8 - 3) * (4 - 2)",
+       "hints": [
+        "2 つの長方形に分けよう。",
+        "図に書いていない辺の長さは、ひき算で求めよう。",
+        "大きな長方形から、ない所をひいてもよいよ。"
+       ],
+       "paths": [
+        [
+         "左は 4 × 3 = 12",
+         "右下は 2 × 5 = 10",
+         "12 + 10 = 22",
+         "22 cm²"
+        ],
+        [
+         "大きな長方形 4 × 8 = 32",
+         "ない所 2 × 5 = 10",
+         "32 − 10 = 22"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 9 cm の正方形のまん中から、1 辺 4 cm の正方形をくりぬきました。のこりの面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M72 118 L168 118 L168 22 L72 22 Z M98.7 91.3 L141.3 91.3 L141.3 48.7 L98.7 48.7 Z\" fill-rule=\"evenodd\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"120\" y=\"63.2\" font-size=\"13\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 65,
+       "check": "9 * 9 - 4 * 4",
+       "hints": [
+        "大きな正方形の面積を求めよう。",
+        "くりぬいた正方形の面積を求めよう。",
+        "大きいほうから、くりぬいた分をひこう。"
+       ],
+       "paths": [
+        [
+         "9 × 9 = 81",
+         "4 × 4 = 16",
+         "81 − 16 = 65",
+         "65 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "かいだんの形の面積は何 cm² ですか。どのだんも、たても横も 2 cm です。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72,118 168,118 168,86 136,86 136,54 104,54 104,22 72,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"66\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 24,
+       "check": "6 * 2 + 4 * 2 + 2 * 2",
+       "hints": [
+        "横に切って、3 つの長方形に分けよう。",
+        "下のだんは、たて 2 cm、横 6 cm だね。",
+        "3 つの面積をたそう。"
+       ],
+       "paths": [
+        [
+         "下 2 × 6 = 12",
+         "まん中 2 × 4 = 8",
+         "上 2 × 2 = 4",
+         "12 + 8 + 4 = 24"
+        ],
+        [
+         "1 辺 2 cm の正方形が 6 こ",
+         "4 × 6 = 24"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "向かい合う 2 組の辺が、どちらも平行な四角形を平行四辺形といいます。面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,107 157,107 194,33 83,33\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"83\" y1=\"33\" x2=\"83\" y2=\"107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"83,99 75,99 75,107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.5\" y=\"123.5\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"87\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">4 cm</text></svg>",
+       "explain": "1 つの辺を底辺、底辺と向かい合う辺の間に、底辺に直角にひいた線（点線）の長さを高さといいます。点線で左の三角形を切りとり、右へ動かすと、たて 4 cm、横 6 cm の長方形になります。だから 平行四辺形の面積 = 底辺 × 高さ で、6 × 4 = 24 cm² です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "この形の面積は何 cm² ですか。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"62.4,118 177.6,118 177.6,60.4 139.2,60.4 139.2,22 62.4,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"56.4\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text><text x=\"100.8\" y=\"16.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"183.6\" y=\"93.8\" font-size=\"13\" text-anchor=\"start\">3 cm</text></svg>",
+       "answer": 26,
+       "check": "6 * 5 - (6 - 4) * (5 - 3)",
+       "hints": [
+        "2 つの長方形に分けよう。",
+        "図に書いていない辺は、ひき算で求めよう。",
+        "大きな長方形から、ない所をひいてもよいよ。"
+       ],
+       "paths": [
+        [
+         "左は 5 × 4 = 20",
+         "右下は 3 × 2 = 6",
+         "20 + 6 = 26"
+        ],
+        [
+         "5 × 6 = 30",
+         "ない所 2 × 2 = 4",
+         "30 − 4 = 26"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "42 ÷ 7 はいくつですか。",
+       "answer": 6,
+       "check": "42 // 7",
+       "hints": [
+        "7 × □ = 42 になる □ をさがそう。",
+        "7 のだんの九九を思い出そう。",
+        "7 のだんを、7 × 5 = 35 から順に言ってみよう。"
+       ],
+       "paths": [
+        [
+         "7 × 6 = 42",
+         6
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,96.9 153.6,96.9 194,43.1 86.4,43.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"86.4\" y1=\"43.1\" x2=\"86.4\" y2=\"96.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"86.4,88.9 78.4,88.9 78.4,96.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.8\" y=\"113.5\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"90.4\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">4 cm</text><text x=\"54.2\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 32,
+       "check": "8 * 4",
+       "hints": [
+        "底辺はどこかな。",
+        "高さは、底辺に直角な点線の長さだよ。",
+        "ななめの辺の 5 cm は使うかな。"
+       ],
+       "paths": [
+        [
+         "底辺 8 cm、高さ 4 cm",
+         "8 × 4 = 32",
+         "32 cm²"
+        ]
+       ],
+       "note": "ななめの辺（5 cm）を使って 8 × 5 = 40 としやすい。高さは底辺に直角な長さ。"
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,90.2 140.2,90.2 194,49.8 99.8,49.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"99.8\" y1=\"49.8\" x2=\"99.8\" y2=\"90.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"99.8,82.2 91.8,82.2 91.8,90.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"93.1\" y=\"106.7\" font-size=\"13\" text-anchor=\"middle\">7 cm</text><text x=\"103.8\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">3 cm</text><text x=\"60.9\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 21,
+       "check": "7 * 3",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは点線の長さだね。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "底辺 7 cm、高さ 3 cm",
+         "7 × 3 = 21",
+         "21 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 54 cm² の平行四辺形があります。底辺は 9 cm です。高さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,110.4 167.1,110.4 194,29.6 72.9,29.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"72.9\" y1=\"29.6\" x2=\"72.9\" y2=\"110.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"72.9,102.4 64.9,102.4 64.9,110.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.5\" y=\"126.9\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"76.9\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">□ cm</text></svg>",
+       "answer": 6,
+       "check": "54 // 9",
+       "hints": [
+        "底辺 × 高さ = 面積 だったね。",
+        "9 × □ = 54 になる □ をさがそう。",
+        "54 ÷ 9 で求めてもよいよ。"
+       ],
+       "paths": [
+        [
+         "9 × □ = 54",
+         "54 ÷ 9 = 6",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "平行な 2 本の直線の間に、底辺が 5 cm の平行四辺形 あ、い、う があります。面積がいちばん広いのはどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"10\" y1=\"88.3\" x2=\"230\" y2=\"88.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"10\" y1=\"51.7\" x2=\"230\" y2=\"51.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><polygon points=\"19.2,88.3 65,88.3 74.2,51.7 28.3,51.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"46.7\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">あ</text><polygon points=\"83.3,88.3 129.2,88.3 147.5,51.7 101.7,51.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"115.4\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">い</text><polygon points=\"175,88.3 220.8,88.3 202.5,51.7 156.7,51.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"188.7\" y=\"74.9\" font-size=\"14\" text-anchor=\"middle\">う</text><text x=\"42.1\" y=\"104.9\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"106.2\" y=\"104.9\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"197.9\" y=\"104.9\" font-size=\"13\" text-anchor=\"middle\">5 cm</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "う",
+        "どれも同じ"
+       ],
+       "answer": "どれも同じ",
+       "check": "(lambda S: 'どれも同じ' if S([(0, 0), (5, 0), (6, 4), (1, 4)]) == S([(7, 0), (12, 0), (14, 4), (9, 4)]) == S([(17, 0), (22, 0), (20, 4), (15, 4)]) else 'あ')(lambda P: abs(sum(P[i][0] * P[(i + 1) % 4][1] - P[(i + 1) % 4][0] * P[i][1] for i in range(4))))",
+       "hints": [
+        "平行四辺形の面積は、底辺 × 高さ だね。",
+        "3 つとも、底辺は同じ 5 cm だよ。",
+        "高さは、平行な 2 本の直線の間の長さだね。3 つの高さはどうかな。"
+       ],
+       "paths": [
+        [
+         "底辺はどれも 5 cm",
+         "高さはどれも 2 本の直線の間の長さで同じ",
+         "面積はどれも同じ"
+        ]
+       ],
+       "note": "かたむきが大きい う が広く見えたり、細く見えて せまく見えたりしやすい。底辺と高さが同じなら面積は同じ（G-012 の等積変形の入口）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72,118 140.6,118 168,22 99.4,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"99.4\" y1=\"22\" x2=\"99.4\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"99.4,110 91.4,110 91.4,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.3\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"103.4\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">7 cm</text></svg>",
+       "answer": 35,
+       "check": "5 * 7",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは点線の長さだね。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "底辺 5 cm、高さ 7 cm",
+         "5 × 7 = 35",
+         "35 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 48 cm² の平行四辺形があります。底辺は 8 cm です。高さは何 cm ですか。",
+       "answer": 6,
+       "check": "48 // 8",
+       "hints": [
+        "底辺 × 高さ = 面積 だね。",
+        "8 × □ = 48 になる □ をさがそう。",
+        "8 のだんの九九を思い出そう。"
+       ],
+       "paths": [
+        [
+         "8 × □ = 48",
+         "48 ÷ 8 = 6",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "平行四辺形の面積は何 cm² ですか。高さの点線は、平行四辺形の外にあります。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,114.4 105.2,114.4 194,25.6 134.8,25.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"194\" y1=\"25.6\" x2=\"194\" y2=\"114.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"105.2\" y1=\"114.4\" x2=\"194\" y2=\"114.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"194,106.4 186,106.4 186,114.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"75.6\" y=\"131\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"198\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 24,
+       "check": "4 * 6",
+       "hints": [
+        "底辺は 4 cm の辺だね。",
+        "高さは、底辺をのばした線と、向かい合う辺の間の、直角な長さだよ。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "底辺 4 cm、高さ 6 cm",
+         "4 × 6 = 24",
+         "24 cm²"
+        ]
+       ],
+       "note": "高さが形の外にあると、高さがないと思いやすい。底辺をのばした線から測る。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形の面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"48,118 192,118 96,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"96\" y1=\"22\" x2=\"96\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"96,110 88,110 88,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"100\" y=\"93.8\" font-size=\"13\" text-anchor=\"start\">4 cm</text></svg>",
+       "explain": "1 つの辺を底辺、向かい合う頂点から底辺に直角にひいた線（点線）の長さを高さといいます。同じ三角形を 2 つ合わせると、底辺 6 cm、高さ 4 cm の平行四辺形になります。三角形はその半分なので、三角形の面積 = 底辺 × 高さ ÷ 2 で、6 × 4 ÷ 2 = 12 cm² です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,96.9 167.1,96.9 194,43.1 72.9,43.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"72.9\" y1=\"43.1\" x2=\"72.9\" y2=\"96.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"72.9,88.9 64.9,88.9 64.9,96.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.5\" y=\"113.5\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"76.9\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">4 cm</text></svg>",
+       "answer": 36,
+       "check": "9 * 4",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは点線の長さだね。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "9 × 4 = 36",
+         "36 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "面積が 63 cm² の長方形があります。たては 7 cm です。横は何 cm ですか。",
+       "answer": 9,
+       "check": "63 // 7",
+       "hints": [
+        "たて × よこ = 面積 だね。",
+        "7 × □ = 63 になる □ をさがそう。",
+        "7 のだんの九九を思い出そう。"
+       ],
+       "paths": [
+        [
+         "7 × □ = 63",
+         "63 ÷ 7 = 9",
+         "9 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,116.2 194,116.2 46,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"46\" y1=\"23.8\" x2=\"46\" y2=\"116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"46,108.2 54,108.2 54,116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"132.8\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"50\" y=\"93\" font-size=\"13\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 20,
+       "check": "8 * 5 // 2",
+       "hints": [
+        "直角をはさむ 2 つの辺を、底辺と高さにできるよ。",
+        "底辺 × 高さ ÷ 2 で求めよう。",
+        "先に 8 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "8 × 5 = 40",
+         "40 ÷ 2 = 20",
+         "20 cm²"
+        ],
+        [
+         "8 ÷ 2 = 4",
+         "4 × 5 = 20"
+        ]
+       ],
+       "note": "「÷ 2」をわすれて 40 と答えやすい。長方形の半分になっていることを図で確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"48,118 192,118 96,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"96\" y1=\"22\" x2=\"96\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"96,110 88,110 88,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"100\" y=\"93.8\" font-size=\"13\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 27,
+       "check": "9 * 6 // 2",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは、頂点から底辺に直角な点線の長さだね。",
+        "6 を先に 2 でわると、九九で計算できるよ。"
+       ],
+       "paths": [
+        [
+         "6 ÷ 2 = 3",
+         "9 × 3 = 27",
+         "27 cm²"
+        ],
+        [
+         "9 × 6 = 54",
+         "54 ÷ 2 = 27"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。高さの点線は、三角形の外にあります。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72,118 126.9,118 168,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"168\" y1=\"22\" x2=\"168\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"126.9\" y1=\"118\" x2=\"168\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"168,110 160,110 160,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.4\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"172\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">7 cm</text></svg>",
+       "answer": 14,
+       "check": "4 * 7 // 2",
+       "hints": [
+        "底辺は 4 cm の辺だね。",
+        "高さは、頂点から、底辺をのばした線までの直角な長さだよ。",
+        "底辺 × 高さ ÷ 2 で求めよう。"
+       ],
+       "paths": [
+        [
+         "4 ÷ 2 = 2",
+         "2 × 7 = 14",
+         "14 cm²"
+        ],
+        [
+         "4 × 7 = 28",
+         "28 ÷ 2 = 14"
+        ]
+       ],
+       "note": "高さが外にあると、底辺をのばした分（点線の横）まで底辺に入れやすい。底辺は三角形の辺だけ。"
+      },
+      {
+       "part": "挑戦",
+       "text": "向かい合う 1 組の辺が平行な四角形を台形といいます。点線で 2 つの三角形に分けて、台形の面積を求めよう。何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"56,118 184,118 152,22 88,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"56\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88\" y1=\"22\" x2=\"88\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"88,110 80,110 80,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"120\" y=\"16.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"92\" y=\"100.1\" font-size=\"13\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 36,
+       "check": "8 * 6 // 2 + 4 * 6 // 2",
+       "hints": [
+        "点線で分けると、三角形が 2 つできるね。",
+        "下の三角形は、底辺 8 cm だよ。高さは何 cm かな。",
+        "上の三角形は、上の辺 4 cm を底辺とみると、高さはやはり 6 cm だよ。"
+       ],
+       "paths": [
+        [
+         "下の三角形 8 × 6 ÷ 2 = 24",
+         "上の三角形 4 × 6 ÷ 2 = 12",
+         "24 + 12 = 36",
+         "36 cm²"
+        ]
+       ],
+       "note": "上の三角形の高さが同じ 6 cm になることに気づきにくい。上の辺と下の辺は平行なので、間のはばはどこでも同じ。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"64,118 176,118 144,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"144\" y1=\"22\" x2=\"144\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"144,110 136,110 136,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">7 cm</text><text x=\"140\" y=\"93.8\" font-size=\"13\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 21,
+       "check": "7 * 6 // 2",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "底辺 × 高さ ÷ 2 で求めよう。",
+        "先に 6 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "6 ÷ 2 = 3",
+         "7 × 3 = 21",
+         "21 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 15 cm² の三角形があります。高さは 5 cm です。底辺は何 cm ですか。",
+       "answer": 6,
+       "check": "[b for b in range(1, 20) if b * 5 == 15 + 15][0]",
+       "hints": [
+        "底辺 × 高さ ÷ 2 = 15 だね。",
+        "÷ 2 する前は、15 の 2 倍で 30 だよ。",
+        "□ × 5 = 30 になる □ をさがそう。"
+       ],
+       "paths": [
+        [
+         "底辺 × 5 は 15 + 15 = 30",
+         "□ × 5 = 30",
+         "6 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,107 194,107 144.7,33\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"144.7\" y1=\"33\" x2=\"144.7\" y2=\"107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"144.7,99 136.7,99 136.7,107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"123.5\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"140.7\" y=\"89.3\" font-size=\"13\" text-anchor=\"end\">3 cm</text></svg>",
+       "answer": 9,
+       "check": "6 * 3 // 2",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "底辺 × 高さ ÷ 2 で求めよう。",
+        "先に 6 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "6 ÷ 2 = 3",
+         "3 × 3 = 9",
+         "9 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "長方形の面積が「たて × よこ」で求められるのはなぜですか。たて 3 cm、横 4 cm の長方形を例にして、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"184\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"86\" x2=\"184\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"54\" x2=\"184\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"22\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"56,118 184,118 184,22 56,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text><text x=\"50\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">3 cm</text></svg>",
+       "explain": "例：「1 cm² の正方形が、横に 4 こ並んだ列ができる。その列が、たてに 3 列できる。だから正方形は 4 × 3 = 12 こで、面積は 12 cm²。横の長さが 1 列のこ数、たての長さが列の数になるから、たて × よこ で求められる。」と書ければよい。① 1 列のこ数が横の長さと同じ、② 列の数がたての長さと同じ、の 2 点が書けているかを見る。数えて 12 になることだけで終わったら、「横が 5 cm になったら 1 列は何こ？」と聞いて、長さとこ数の結びつきを言わせる。",
+       "hints": [
+        "1 cm² の正方形は、横に何こ並ぶかな。",
+        "その列は、たてに何列あるかな。",
+        "「横の長さが〜、たての長さが〜だから」と書こう。"
+       ],
+       "paths": [
+        [
+         "横に 4 こ並ぶ列",
+         "たてに 3 列",
+         "4 × 3 = 12 こ",
+         "長さが こ数と列の数になる"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "平行四辺形の面積が「底辺 × 高さ」で求められるのはなぜですか。底辺 5 cm、高さ 3 cm の平行四辺形を例にして、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,107 169.3,107 194,33 70.7,33\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"70.7\" y1=\"33\" x2=\"70.7\" y2=\"107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"70.7,99 62.7,99 62.7,107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.7\" y=\"123.5\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"74.7\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">3 cm</text></svg>",
+       "explain": "例：「高さの点線で左の三角形を切りとり、右がわへ動かしてつける。すると、たて 3 cm、横 5 cm の長方形になる。切って動かしただけなので面積は変わらない。長方形の面積は 3 × 5 = 15 cm² なので、平行四辺形も 15 cm²。底辺が長方形の横に、高さが長方形のたてになるから、底辺 × 高さ になる。」と書ければよい。① 切って動かすと長方形になる、② 面積は変わらない、③ 底辺と高さが長方形の横とたてになる、の 3 点を見る。ななめの辺ではなく高さを使うわけ（③）が書けていればなお良い。",
+       "hints": [
+        "点線で切って、三角形を動かしてみよう。",
+        "動かすと、どんな形になるかな。面積は変わるかな。",
+        "できた形の、たてと横は、平行四辺形のどこの長さかな。"
+       ],
+       "paths": [
+        [
+         "三角形を切って右へ動かす",
+         "たて 3 cm 横 5 cm の長方形",
+         "面積は変わらない",
+         "底辺 × 高さ"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形の面積が「底辺 × 高さ ÷ 2」で求められるのはなぜですか。図の三角形（底辺 5 cm、高さ 3 cm）を例にして、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,101.7 151.7,101.7 88.3,38.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"151.7,101.7 194,38.3 88.3,38.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"88.3\" y1=\"38.3\" x2=\"88.3\" y2=\"101.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"98.9\" y=\"118.3\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"92.3\" y=\"87.2\" font-size=\"13\" text-anchor=\"start\">3 cm</text></svg>",
+       "explain": "例：「同じ三角形をもう 1 つ用意して、回して点線のように合わせると、底辺 5 cm、高さ 3 cm の平行四辺形になる。平行四辺形の面積は 5 × 3 = 15 cm²。三角形はその半分なので 15 ÷ 2 で、底辺 × 高さ ÷ 2 になる。」と書ければよい。① 2 つ合わせると平行四辺形、② 三角形はその半分、の 2 点を見る。15 ÷ 2 の計算（7.5）は小数なので求めなくてよい。長方形の半分になる直角三角形の場合だけで書いたら、「直角がない三角形でも言える？」と聞く。",
+       "hints": [
+        "同じ三角形を 2 つ合わせると、どんな形になるかな。",
+        "その形の面積は、どう求めたかな。",
+        "「三角形は、その〜だから」と書こう。"
+       ],
+       "paths": [
+        [
+         "同じ三角形を 2 つ合わせる",
+         "底辺 5 cm 高さ 3 cm の平行四辺形",
+         "三角形はその半分",
+         "底辺 × 高さ ÷ 2"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,99.6 149.6,99.6 194,40.4 90.4,40.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"90.4\" y1=\"40.4\" x2=\"90.4\" y2=\"99.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"90.4,91.6 82.4,91.6 82.4,99.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97.8\" y=\"116.1\" font-size=\"13\" text-anchor=\"middle\">7 cm</text><text x=\"94.4\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">4 cm</text><text x=\"56.2\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 28,
+       "check": "7 * 4",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "ななめの辺は使わないよ。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "底辺 7 cm、高さ 4 cm",
+         "7 × 4 = 28",
+         "28 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,97.8 194,97.8 120,42.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"42.2\" x2=\"120\" y2=\"97.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,89.8 112,89.8 112,97.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"114.3\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"124\" y=\"85.6\" font-size=\"13\" text-anchor=\"start\">3 cm</text><text x=\"75\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">5 cm</text><text x=\"165\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 12,
+       "check": "8 * 3 // 2",
+       "hints": [
+        "底辺と高さはどれかな。",
+        "5 cm の辺は使うかな。",
+        "先に 8 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "底辺 8 cm、高さ 3 cm",
+         "8 ÷ 2 = 4",
+         "4 × 3 = 12",
+         "12 cm²"
+        ]
+       ],
+       "note": "5 cm の辺を使って 8 × 5 ÷ 2 = 20 としやすい。底辺に直角な長さが高さ。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "面積が 45 cm² の長方形があります。横は 9 cm です。たては何 cm ですか。",
+       "answer": 5,
+       "check": "45 // 9",
+       "hints": [
+        "たて × よこ = 面積 だね。",
+        "□ × 9 = 45 になる □ をさがそう。",
+        "9 のだんの九九を思い出そう。"
+       ],
+       "paths": [
+        [
+         "□ × 9 = 45",
+         "45 ÷ 9 = 5",
+         "5 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"65.1,118 174.9,118 133.7,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"133.7\" y1=\"22\" x2=\"133.7\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"133.7,110 125.7,110 125.7,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"129.7\" y=\"93.8\" font-size=\"13\" text-anchor=\"end\">7 cm</text></svg>",
+       "answer": 28,
+       "check": "8 * 7 // 2",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "底辺 × 高さ ÷ 2 で求めよう。",
+        "先に 8 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "8 ÷ 2 = 4",
+         "4 × 7 = 28",
+         "28 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,116.2 157,116.2 194,23.8 83,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"83\" y1=\"23.8\" x2=\"83\" y2=\"116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"83,108.2 75,108.2 75,116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.5\" y=\"132.8\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"87\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 30,
+       "check": "6 * 5",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは点線の長さだね。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "6 × 5 = 30",
+         "30 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "たてが 7 cm、横が 9 cm の長方形の、まわりの長さは何 cm ですか。",
+       "answer": 32,
+       "check": "7 + 9 + 7 + 9",
+       "hints": [
+        "まわりの長さは、4 つの辺の長さをたした長さだね。",
+        "たてと横が 2 つずつあるよ。",
+        "7 + 9 を先に求めよう。"
+       ],
+       "paths": [
+        [
+         "7 + 9 = 16",
+         "16 + 16 = 32",
+         "32 cm"
+        ]
+       ],
+       "note": "面積の 7 × 9 = 63 と取りちがえやすい。"
+      },
+      {
+       "part": "思い出す",
+       "text": "長方形を、かどからかどへの線で 2 つに分けます。どんな三角形が 2 つできますか。",
+       "choices": [
+        "直角三角形",
+        "正方形",
+        "長方形"
+       ],
+       "answer": "直角三角形",
+       "hints": [
+        "長方形のかどは、みんな直角だね。",
+        "分けたあと、それぞれの形の辺はいくつかな。",
+        "直角のかどがのこっているかな。"
+       ],
+       "paths": [
+        [
+         "辺が 3 つで三角形",
+         "長方形の直角が 1 つずつのこる",
+         "直角三角形"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "まわりの長さが 20 cm の長方形をつくります。たても横も cm の整数です。面積がいちばん広くなるのは、たてが何 cm のときですか。",
+       "answer": 5,
+       "check": "max(range(1, 10), key=lambda a: a * (10 - a))",
+       "hints": [
+        "たて + 横 は、まわりの長さの半分だね。",
+        "たてが 1、2、3… のとき、横と面積を表にしよう。",
+        "面積がいちばん大きいのはどこかな。"
+       ],
+       "paths": [
+        [
+         "たて + 横 = 10",
+         "1 × 9 = 9、2 × 8 = 16、3 × 7 = 21、4 × 6 = 24、5 × 5 = 25",
+         "たて 5 cm"
+        ]
+       ],
+       "note": "まわりが同じなら面積も同じと思いやすい。表にすると、正方形に近いほど広いことが見える。"
+      },
+      {
+       "part": "今日",
+       "text": "面積が 36 cm² の正方形の、まわりの長さは何 cm ですか。",
+       "answer": 24,
+       "check": "[k for k in range(1, 10) if k * k == 36][0] * 4",
+       "hints": [
+        "まず、1 辺の長さを求めよう。",
+        "同じ数を 2 回かけて 36 になる九九は何かな。",
+        "1 辺がわかったら、4 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "6 × 6 = 36 で 1 辺 6 cm",
+         "6 + 6 + 6 + 6 = 24",
+         "24 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たて 6 cm、横 8 cm の長方形を、かどからかどへの線で 2 つの三角形に分けました。三角形 1 つの面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"56,118 184,118 184,22 56,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"56,118 184,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"50\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 24,
+       "check": "6 * 8 // 2",
+       "hints": [
+        "2 つの三角形は、同じ大きさかな。",
+        "長方形の面積を求めよう。",
+        "三角形 1 つは、長方形の半分だね。"
+       ],
+       "paths": [
+        [
+         "長方形は 6 × 8 = 48",
+         "半分で 24",
+         "24 cm²"
+        ],
+        [
+         "底辺 8 cm、高さ 6 cm の直角三角形",
+         "8 ÷ 2 × 6 = 24"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "点線の 1 目は 1 cm です。方眼の上に、ななめの正方形をかきました。この正方形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"72\" y1=\"118\" x2=\"72\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"96\" y1=\"118\" x2=\"96\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"144\" y1=\"118\" x2=\"144\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"168\" y1=\"118\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"118\" x2=\"168\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"94\" x2=\"168\" y2=\"94\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"70\" x2=\"168\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"46\" x2=\"168\" y2=\"46\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"22\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"96,118 168,94 144,22 72,46\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 10,
+       "check": "(lambda P: abs(sum(P[i][0] * P[(i + 1) % 4][1] - P[(i + 1) % 4][0] * P[i][1] for i in range(4))) // 2)([(1, 0), (4, 1), (3, 4), (0, 3)])",
+       "hints": [
+        "マスを数えるのはむずかしいね。まわりの大きな正方形を考えよう。",
+        "大きな正方形から、すみの 4 つの直角三角形をひこう。",
+        "すみの三角形 2 つを合わせると、たて 1 cm、横 3 cm の長方形になるよ。"
+       ],
+       "paths": [
+        [
+         "大きな正方形 4 × 4 = 16",
+         "すみの三角形 2 つで 1 × 3 = 3",
+         "4 つで 6",
+         "16 − 6 = 10",
+         "10 cm²"
+        ]
+       ],
+       "note": "辺の長さが整数でない正方形でも、ひき算で面積が求められる（G-019 の三平方の定理につながる）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "面積が 54 cm² の長方形があります。たては 6 cm です。まわりの長さは何 cm ですか。",
+       "answer": 30,
+       "check": "6 + 54 // 6 + 6 + 54 // 6",
+       "hints": [
+        "まず、横の長さを求めよう。",
+        "6 × □ = 54 になる □ は何かな。",
+        "たてと横がわかったら、4 つの辺をたそう。"
+       ],
+       "paths": [
+        [
+         "54 ÷ 6 = 9 で横 9 cm",
+         "6 + 9 = 15",
+         "15 + 15 = 30",
+         "30 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "🟦 4 まいを 1 列にならべた形と、2 だん 2 列にならべた形があります。まわりの長さが長いのはどちらですか。",
+       "figure": "🟦🟦🟦🟦⬜🟥🟥\n⬜⬜⬜⬜⬜🟥🟥",
+       "choices": [
+        "🟦",
+        "🟥",
+        "同じ"
+       ],
+       "answer": "🟦",
+       "check": "'🟦' if 4 + 1 + 4 + 1 > 2 + 2 + 2 + 2 else ('🟥' if 4 + 1 + 4 + 1 < 2 + 2 + 2 + 2 else '同じ')",
+       "hints": [
+        "面積は、どちらも 4 cm² で同じだね。",
+        "それぞれ、たてと横は何 cm かな。",
+        "まわりの長さを求めてくらべよう。"
+       ],
+       "paths": [
+        [
+         "🟦 は 4 + 1 + 4 + 1 = 10",
+         "🟥 は 2 + 2 + 2 + 2 = 8",
+         "🟦 が長い"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 8 cm の正方形を、かどからかどへの線で 2 つに分けました。三角形 1 つの面積は何 cm² ですか。",
+       "answer": 32,
+       "check": "8 * 8 // 2",
+       "hints": [
+        "正方形の面積を求めよう。",
+        "2 つの三角形は同じ大きさだね。",
+        "三角形 1 つは、正方形の半分だよ。"
+       ],
+       "paths": [
+        [
+         "8 × 8 = 64",
+         "半分で 32",
+         "32 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。",
+       "figure": "🟦🟦🟦\n🟦🟦🟦\n🟦🟦🟦\n🟦⬜⬜",
+       "answer": 10,
+       "check": "n('🟦')",
+       "hints": [
+        "🟦 を数えよう。",
+        "上の 3 だんは、同じ数ずつ並んでいるね。",
+        "⬜ は数えないよ。"
+       ],
+       "paths": [
+        [
+         "3 × 3 = 9",
+         "9 + 1 = 10",
+         "10 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてが 6 cm、横が 8 cm の長方形の面積は何 cm² ですか。",
+       "answer": 48,
+       "check": "6 * 8",
+       "hints": [
+        "長方形の面積は、たて × よこ だね。",
+        "6 × 8 を計算しよう。",
+        "単位は cm² だよ。"
+       ],
+       "paths": [
+        [
+         "6 × 8 = 48",
+         "48 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 49 cm² の正方形の、1 辺の長さは何 cm ですか。",
+       "answer": 7,
+       "check": "[k for k in range(1, 10) if k * k == 49][0]",
+       "hints": [
+        "1 辺 × 1 辺 = 49 だね。",
+        "同じ数を 2 回かけて 49 になる九九をさがそう。",
+        "5 × 5、6 × 6… と、同じ数のかけ算を順に言ってみよう。"
+       ],
+       "paths": [
+        [
+         "7 × 7 = 49",
+         "7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "この形の面積は何 cm² ですか。かどはみんな直角です。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"58.3,118 181.7,118 181.7,76.9 126.9,76.9 126.9,22 58.3,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"52.3\" y=\"74.5\" font-size=\"13\" text-anchor=\"end\">7 cm</text><text x=\"92.6\" y=\"16.6\" font-size=\"13\" text-anchor=\"middle\">5 cm</text><text x=\"187.7\" y=\"102\" font-size=\"13\" text-anchor=\"start\">3 cm</text></svg>",
+       "answer": 47,
+       "check": "9 * 7 - (9 - 5) * (7 - 3)",
+       "hints": [
+        "2 つの長方形に分けるか、大きな長方形からひこう。",
+        "図に書いていない辺は、ひき算で求めよう。",
+        "分けた面積をたそう。"
+       ],
+       "paths": [
+        [
+         "左は 7 × 5 = 35",
+         "右下は 3 × 4 = 12",
+         "35 + 12 = 47",
+         "47 cm²"
+        ],
+        [
+         "大きな長方形 7 × 9 = 63",
+         "ない所 4 × 4 = 16",
+         "63 − 16 = 47"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "平行四辺形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,100.8 157,100.8 194,39.2 83,39.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"83\" y1=\"39.2\" x2=\"83\" y2=\"100.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"83,92.8 75,92.8 75,100.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.5\" y=\"117.4\" font-size=\"13\" text-anchor=\"middle\">9 cm</text><text x=\"87\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 45,
+       "check": "9 * 5",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "高さは点線の長さだね。",
+        "底辺 × 高さ で求めよう。"
+       ],
+       "paths": [
+        [
+         "9 × 5 = 45",
+         "45 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"77.3,118 162.7,118 98.7,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"98.7\" y1=\"22\" x2=\"98.7\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"98.7,110 90.7,110 90.7,118\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">8 cm</text><text x=\"102.7\" y=\"93.8\" font-size=\"13\" text-anchor=\"start\">9 cm</text></svg>",
+       "answer": 36,
+       "check": "8 * 9 // 2",
+       "hints": [
+        "底辺と高さをさがそう。",
+        "底辺 × 高さ ÷ 2 で求めよう。",
+        "先に 8 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "8 ÷ 2 = 4",
+         "4 × 9 = 36",
+         "36 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の面積は何 cm² ですか。高さの点線は、三角形の外にあります。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"46,116.2 157,116.2 194,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"194\" y1=\"23.8\" x2=\"194\" y2=\"116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"157\" y1=\"116.2\" x2=\"194\" y2=\"116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"194,108.2 186,108.2 186,116.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"101.5\" y=\"132.8\" font-size=\"13\" text-anchor=\"middle\">6 cm</text><text x=\"198\" y=\"74.5\" font-size=\"13\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 15,
+       "check": "6 * 5 // 2",
+       "hints": [
+        "底辺は 6 cm の辺だね。",
+        "高さは、底辺をのばした線までの直角な長さだよ。",
+        "先に 6 を 2 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "6 ÷ 2 = 3",
+         "3 × 5 = 15",
+         "15 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "面積が 24 cm² の三角形があります。底辺は 8 cm です。高さは何 cm ですか。",
+       "answer": 6,
+       "check": "[h for h in range(1, 20) if 8 * h == 24 + 24][0]",
+       "hints": [
+        "底辺 × 高さ ÷ 2 = 24 だね。",
+        "÷ 2 する前は、24 の 2 倍だよ。",
+        "8 × □ = 48 になる □ をさがそう。"
+       ],
+       "paths": [
+        [
+         "8 × 高さ は 24 + 24 = 48",
+         "8 × □ = 48",
+         "6 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "点線の 1 目は 1 cm です。家の形の面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"72\" y1=\"118\" x2=\"72\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"96\" y1=\"118\" x2=\"96\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"144\" y1=\"118\" x2=\"144\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"168\" y1=\"118\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"118\" x2=\"168\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"94\" x2=\"168\" y2=\"94\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"70\" x2=\"168\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"46\" x2=\"168\" y2=\"46\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"72\" y1=\"22\" x2=\"168\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"72,118 168,118 168,70 120,22 72,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 12,
+       "check": "4 * 2 + 4 * 2 // 2",
+       "hints": [
+        "下の長方形と、上のやねに分けよう。",
+        "やねは、底辺 4 cm、高さ 2 cm の三角形だね。",
+        "マスを数えるなら、半分のマス 2 つで 1 cm² だよ。"
+       ],
+       "paths": [
+        [
+         "下の長方形 2 × 4 = 8",
+         "やね 4 × 2 ÷ 2 = 4",
+         "8 + 4 = 12",
+         "12 cm²"
+        ],
+        [
+         "ぜんぶ入るマス 10",
+         "半分のマス 4 つで 2",
+         "10 + 2 = 12"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たてが 7 m、横が 8 m の長方形の土地の面積は何 m² ですか。",
+       "answer": 56,
+       "check": "7 * 8",
+       "hints": [
+        "長方形の面積は、たて × よこ だね。",
+        "長さの単位が m なので、面積は m² だよ。",
+        "7 × 8 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "7 × 8 = 56",
+         "56 m²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "面積が 63 cm² の平行四辺形があります。底辺は 9 cm です。高さは何 cm ですか。",
+       "answer": 7,
+       "check": "63 // 9",
+       "hints": [
+        "底辺 × 高さ = 面積 だね。",
+        "9 × □ = 63 になる □ をさがそう。",
+        "9 のだんの九九を思い出そう。"
+       ],
+       "paths": [
+        [
+         "9 × □ = 63",
+         "63 ÷ 9 = 7",
+         "7 cm"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135537,7 +149795,7 @@ window.ROADMAP = {
     7.73
    ],
    "comb": {
-    "b": 0.416,
+    "b": 0.374,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135561,27 +149819,1115 @@ window.ROADMAP = {
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "角の大きさを、数で表そう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"77.6\" y1=\"122\" x2=\"165.6\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"77.6\" y1=\"122\" x2=\"77.6\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"77.6\" cy=\"122\" r=\"2.5\" fill=\"currentColor\"/><polyline points=\"88.6,122 88.6,111 77.6,111\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "explain": "角の大きさは、2 つの辺の開きぐあいです。直角を 90 に等しく分けた 1 つ分の大きさを 1 度といい、1° と書きます。直角は 90° です。角の大きさは分度器で測ります。分度器の中心を角の頂点に、0 の線を 1 つの辺に合わせて、もう 1 つの辺が通る目もりを読みます。辺を長くかいても、角の大きさは変わりません。"
+      },
+      {
+       "part": "思い出す",
+       "text": "長方形には、直角のかどがいくつありますか。",
+       "choices": [
+        "2 つ",
+        "3 つ",
+        "4 つ"
+       ],
+       "answer": "4 つ",
+       "hints": [
+        "長方形のかどを、1 つずつ見よう。",
+        "長方形のかどは、どれも同じ形かな。",
+        "直角のかどを数えよう。"
+       ],
+       "paths": [
+        [
+         "長方形のかどは 4 つ",
+         "どれも直角",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "90 + 90 はいくつですか。",
+       "answer": 180,
+       "check": "90 + 90",
+       "hints": [
+        "90 は 10 が 9 こだね。",
+        "10 が 9 こと 9 こで、10 が何こになるかな。",
+        "10 が 18 こは、いくつかな。"
+       ],
+       "paths": [
+        [
+         "10 が 9 + 9 = 18 こ",
+         180
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "一直線の角（あ）は、直角 2 つ分です。あは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 100 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"90.3\" y=\"86.9\" font-size=\"13\" text-anchor=\"middle\">あ</text><polyline points=\"129,112 129,103 120,103\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"120,103 111,103 111,112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 180,
+       "check": "90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "直角 2 つ分だから、90° を 2 つ合わせよう。",
+        "90 + 90 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "直角は 90°",
+         "90 + 90 = 180",
+         "180°"
+        ]
+       ],
+       "note": "一直線は角に見えにくい。辺が 2 本あり、開きぐあいがいちばん大きくなった形と話す。"
+      },
+      {
+       "part": "今日",
+       "text": "分度器で角を測りました。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"228\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"50.6\" y2=\"39.3\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 130,
+       "check": "120 + 10",
+       "hints": [
+        "1 つの辺は、0 の線に合っているね。",
+        "もう 1 つの辺は、どの数字の近くを通っているかな。",
+        "120 から、10° の目もりがいくつ先かな。"
+       ],
+       "paths": [
+        [
+         "0 の線から測る",
+         "120 から 10° の目もり 1 つ先",
+         "130°"
+        ]
+       ],
+       "note": "数字の目もりの読み方と、10° の目もりを数える力を見る。"
+      },
+      {
+       "part": "今日",
+       "text": "1 回転の角は、直角 4 つ分です。何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"62\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"129,70 129,61 120,61\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"120,61 111,61 111,70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"111,70 111,79 120,79\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"120,79 129,79 129,70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 360,
+       "check": "90 + 90 + 90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "直角 2 つ分の一直線は 180° だったね。",
+        "一直線 2 つ分と考えてもよいよ。"
+       ],
+       "paths": [
+        [
+         "90 + 90 + 90 + 90 = 360",
+         "360°"
+        ],
+        [
+         "一直線 180° が 2 つ",
+         "180 + 180 = 360"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "分度器で角を測りました。2 つの辺のどちらも、0 の線には合っていません。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"202.7\" y2=\"52.6\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"18.5\" y2=\"85.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 120,
+       "check": "160 - 40",
+       "hints": [
+        "2 つの辺が通る目もりを、どちらも読もう。",
+        "右の辺は 40、左の辺は何度の目もりかな。",
+        "40 の目もりから 160 の目もりまで、何度開いているかな。"
+       ],
+       "paths": [
+        [
+         "右の辺は 40、左の辺は 160",
+         "160 − 40 = 120",
+         "120°"
+        ]
+       ],
+       "note": "左の辺の目もり（160）をそのまま答えやすい。0 から測っていないときは、2 つの目もりの差。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "分度器で角を測りました。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"228\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"156.9\" y2=\"20.5\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 70,
+       "check": "60 + 10",
+       "hints": [
+        "1 つの辺は、0 の線に合っているね。",
+        "もう 1 つの辺は、どの数字の近くを通っているかな。",
+        "60 から、10° の目もりがいくつ先かな。"
+       ],
+       "paths": [
+        [
+         "60 から 10° の目もり 1 つ先",
+         "70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角 3 つ分の角は何度ですか。",
+       "answer": 270,
+       "check": "90 + 90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "90° を 3 つ合わせよう。",
+        "一直線 180° と直角 90° を合わせると考えてもよいよ。"
+       ],
+       "paths": [
+        [
+         "90 + 90 + 90 = 270",
+         "270°"
+        ],
+        [
+         "180 + 90 = 270"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "あ と い では、どちらの角が大きいですか。",
+       "svg": "<svg viewBox=\"0 0 240 142\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"120\" x2=\"90\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"40\" y1=\"120\" x2=\"72.1\" y2=\"81.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M56 120 A16 16 0 0 0 50.3 107.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"48\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">あ</text><line x1=\"140\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140\" y1=\"120\" x2=\"197.9\" y2=\"51.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M156 120 A16 16 0 0 0 150.3 107.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"148\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">い</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "同じ"
+       ],
+       "answer": "同じ",
+       "hints": [
+        "角の大きさは、辺の何で決まるかな。",
+        "2 つの角の、辺の開きぐあいをくらべよう。",
+        "あを大きくうつして、いに重ねたらどうなるかな。"
+       ],
+       "paths": [
+        [
+         "角の大きさは開きぐあい",
+         "辺の長さは関係ない",
+         "開きぐあいは同じ"
+        ]
+       ],
+       "note": "辺が長い い を大きいと答えやすい。紙に写して重ねると確かめられる。"
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角定規の角の大きさを知ろう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"16,111.6 96,111.6 16,31.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,111.6 230.9,111.6 120,47.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"16,102.6 25,102.6 25,111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M84.7 100.3 A16 16 0 0 0 80 111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.3\" y=\"104.7\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M16 47.6 A16 16 0 0 0 27.3 42.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"27.5\" y=\"63.9\" font-size=\"13\" text-anchor=\"middle\">45°</text><polyline points=\"120,102.6 129,102.6 129,111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M217 103.6 A16 16 0 0 0 214.9 111.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"201.9\" y=\"108.4\" font-size=\"13\" text-anchor=\"middle\">30°</text><path d=\"M120 63.6 A16 16 0 0 0 133.9 55.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135\" y=\"78.1\" font-size=\"13\" text-anchor=\"middle\">60°</text></svg>",
+       "explain": "1 組の三角定規の角は、90°・45°・45° と、90°・60°・30° です。2 まいの角を、頂点をそろえてならべると、いろいろな角がつくれます。たとえば 45° と 30° をならべると 45 + 30 = 75 で 75°、60° から 45° を取ると 60 − 45 = 15 で 15° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "分度器で角を測りました。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"228\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"83.1\" y2=\"20.5\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 110,
+       "check": "90 + 20",
+       "hints": [
+        "1 つの辺は、0 の線に合っているね。",
+        "もう 1 つの辺は、どの数字の近くかな。",
+        "90 から、10° の目もりがいくつ先かな。"
+       ],
+       "paths": [
+        [
+         "90 から 10° の目もり 2 つ先",
+         "110°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "180 − 40 はいくつですか。",
+       "answer": 140,
+       "check": "180 - 40",
+       "hints": [
+        "180 は 10 が 18 こ、40 は 10 が 4 こだね。",
+        "10 が 18 こから 4 こをとると、何こかな。",
+        "10 が 14 こはいくつかな。"
+       ],
+       "paths": [
+        [
+         "10 が 18 − 4 = 14 こ",
+         140
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "一直線に、1 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"195.4\" y2=\"59.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 136.4 100.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160.1\" y=\"103.9\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M141.3 97.1 A26 26 0 0 0 94 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"107.4\" y=\"76.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 145,
+       "check": "180 - 35",
+       "hints": [
+        "一直線の角は何度だったかな。",
+        "あと 35° を合わせると、一直線になるね。",
+        "180 から 35 をひこう。"
+       ],
+       "paths": [
+        [
+         "あ + 35 = 180",
+         "180 − 35 = 145",
+         "145°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角定規の 45° の角と 60° の角を、頂点をそろえてならべました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"122\" x2=\"155\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"122\" x2=\"127.2\" y2=\"54.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"122\" x2=\"35.4\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M84 122 A24 24 0 0 0 77 105\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97\" y=\"110.9\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M77 105 A24 24 0 0 0 53.8 98.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"70.4\" y=\"87.6\" font-size=\"12\" text-anchor=\"middle\">60°</text><path d=\"M118 122 A58 58 0 0 0 45 66\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103.8\" y=\"69.8\" font-size=\"14\" text-anchor=\"middle\">あ</text><circle cx=\"60\" cy=\"122\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 105,
+       "check": "45 + 60",
+       "hints": [
+        "あは、2 つの角を合わせた角だね。",
+        "45 と 60 をたそう。",
+        "45 + 60 は、40 + 60 に 5 をたすと考えよう。"
+       ],
+       "paths": [
+        [
+         "あ = 45 + 60",
+         "105°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"69.8\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"172.6\" y2=\"94.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 56 A14 14 0 0 0 107.9 77\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"83.6\" y=\"53.5\" font-size=\"13\" text-anchor=\"middle\">120°</text><path d=\"M102.7 80 A20 20 0 0 0 138.1 78.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.8\" y=\"116.5\" font-size=\"13\" text-anchor=\"middle\">125°</text><path d=\"M143.6 81 A26 26 0 0 0 120 44\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.4\" y=\"52\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 115,
+       "check": "360 - 120 - 125",
+       "hints": [
+        "1 つの点のまわりを 1 回転すると、何度だったかな。",
+        "3 つの角を合わせると、1 回転だね。",
+        "360 から、わかっている 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "120 + 125 = 245",
+         "360 − 245 = 115",
+         "115°"
+        ],
+        [
+         "360 − 120 = 240",
+         "240 − 125 = 115"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "2 本の直線が交わっています。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"25\" y1=\"70\" x2=\"215\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"69.1\" y1=\"112.7\" x2=\"170.9\" y2=\"27.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M138 70 A18 18 0 0 0 133.8 58.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"151.9\" y=\"62.9\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M102 70 A18 18 0 0 0 106.2 81.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.1\" y=\"86.2\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 40,
+       "check": "180 - (180 - 40)",
+       "hints": [
+        "40° の角ととなりの角を合わせると、一直線だね。",
+        "となりの角は何度かな。",
+        "そのとなりの角と、あを合わせても一直線になるよ。"
+       ],
+       "paths": [
+        [
+         "40° のとなりの角は 180 − 40 = 140",
+         "あ は 180 − 140 = 40",
+         "40°"
+        ]
+       ],
+       "note": "向かい合う角が等しいことに、計算から気づかせる。名前（対頂角）と、そのわけを文で示すのは G-016。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "三角定規の 60° の角に、45° の角を重ねました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"122\" x2=\"155\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"122\" x2=\"127.2\" y2=\"54.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"122\" x2=\"107.5\" y2=\"39.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M84 122 A24 24 0 0 0 77 105\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"97\" y=\"110.9\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M77 105 A24 24 0 0 0 72 101.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"111.1\" y=\"59.6\" font-size=\"12\" text-anchor=\"middle\">あ</text><path d=\"M118 122 A58 58 0 0 0 89 71.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.4\" y=\"90.9\" font-size=\"14\" text-anchor=\"middle\">60°</text><circle cx=\"60\" cy=\"122\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 15,
+       "check": "60 - 45",
+       "hints": [
+        "60° の角の中に、45° の角が入っているね。",
+        "のこりが あ だよ。",
+        "60 から 45 をひこう。"
+       ],
+       "paths": [
+        [
+         "60 − 45 = 15",
+         "15°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "一直線に、2 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"179.1\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"67.2\" y2=\"36.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 132.9 96.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.1\" y=\"98.8\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M136.7 92.1 A26 26 0 0 0 105.1 90.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"121.8\" y=\"74.6\" font-size=\"13\" text-anchor=\"middle\">あ</text><path d=\"M108.5 95.6 A20 20 0 0 0 100 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"82.7\" y=\"97.2\" font-size=\"13\" text-anchor=\"middle\">55°</text><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 75,
+       "check": "180 - 50 - 55",
+       "hints": [
+        "3 つの角を合わせると、一直線だね。",
+        "一直線は何度だったかな。",
+        "180 から、わかっている 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "50 + 55 = 105",
+         "180 − 105 = 75",
+         "75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"91\" y2=\"120.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 56 A14 14 0 0 0 113 82.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.4\" y=\"63.7\" font-size=\"13\" text-anchor=\"middle\">150°</text><path d=\"M110 87.3 A20 20 0 0 0 140 70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141\" y=\"110.9\" font-size=\"13\" text-anchor=\"middle\">あ</text><polyline points=\"129,70 129,61 120,61\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 120,
+       "check": "360 - 90 - 150",
+       "hints": [
+        "直角のしるしの角は何度かな。",
+        "3 つの角を合わせると 1 回転だね。",
+        "360 から、わかっている 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "90 + 150 = 240",
+         "360 − 240 = 120",
+         "120°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "三角形の 3 つの角（あ、い、う）を切りとって、頂点を 1 つの点に集めてならべよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"12,100 108,100 42,40\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M26 100 A14 14 0 0 0 18.3 87.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"35.8\" y=\"89.8\" font-size=\"13\" text-anchor=\"middle\">あ</text><path d=\"M97.6 90.6 A14 14 0 0 0 94 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.9\" y=\"94.5\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M35.7 52.5 A14 14 0 0 0 52.4 49.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.1\" y=\"72.1\" font-size=\"13\" text-anchor=\"middle\">う</text><line x1=\"132\" y1=\"100\" x2=\"228\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180\" y1=\"100\" x2=\"160.7\" y2=\"61.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M172.8 85.7 A16 16 0 0 0 164 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.5\" y=\"88.4\" font-size=\"12\" text-anchor=\"middle\">あ</text><line x1=\"180\" y1=\"100\" x2=\"223.2\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M196 100 A16 16 0 0 0 191.8 89.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"208\" y=\"93.4\" font-size=\"12\" text-anchor=\"middle\">い</text><line x1=\"180\" y1=\"100\" x2=\"212\" y2=\"70.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M191.8 89.2 A16 16 0 0 0 172.8 85.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"185.5\" y=\"74.7\" font-size=\"12\" text-anchor=\"middle\">う</text></svg>",
+       "explain": "3 つの角をすき間なくならべると、右の図のように一直線になります。だから、三角形の 3 つの角の大きさの和は 180° です。四角形は、かどからかどへの線で 2 つの三角形に分けられるので、4 つの角の和は 180 + 180 = 360 で 360° です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "一直線に、1 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"81.1\" y2=\"28.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 111.5 93.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.6\" y=\"81.1\" font-size=\"13\" text-anchor=\"middle\">115°</text><path d=\"M109 88.4 A26 26 0 0 0 94 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"84.6\" y=\"94\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 65,
+       "check": "180 - 115",
+       "hints": [
+        "2 つの角を合わせると、一直線だね。",
+        "一直線は何度だったかな。",
+        "180 から 115 をひこう。"
+       ],
+       "paths": [
+        [
+         "180 − 115 = 65",
+         "65°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角定規の 30° の角と 45° の角を、頂点をそろえてならべました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"122\" x2=\"155\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"122\" x2=\"142.3\" y2=\"74.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"122\" x2=\"84.6\" y2=\"30.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M84 122 A24 24 0 0 0 80.8 110\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.6\" y=\"115.8\" font-size=\"12\" text-anchor=\"middle\">30°</text><path d=\"M80.8 110 A24 24 0 0 0 66.2 98.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"84.4\" y=\"94.5\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M118 122 A58 58 0 0 0 75 66\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"117.1\" y=\"83.1\" font-size=\"14\" text-anchor=\"middle\">あ</text><circle cx=\"60\" cy=\"122\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 75,
+       "check": "30 + 45",
+       "hints": [
+        "あは、2 つの角を合わせた角だね。",
+        "30 と 45 をたそう。",
+        "十の位と一の位に分けてたそう。"
+       ],
+       "paths": [
+        [
+         "30 + 45 = 75",
+         "75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"57.4,122 182.6,122 95.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M73.4 122 A16 16 0 0 0 62.9 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"82\" y=\"109.3\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M172.3 109.7 A16 16 0 0 0 166.6 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.4\" y=\"113.9\" font-size=\"13\" text-anchor=\"middle\">50°</text><path d=\"M89.8 33 A16 16 0 0 0 105.6 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"100.5\" y=\"52.1\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 60,
+       "check": "180 - 70 - 50",
+       "hints": [
+        "三角形の 3 つの角の和は何度だったかな。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "70 + 50 = 120",
+         "180 − 120 = 60",
+         "60°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角三角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"45.7,122 194.3,122 45.7,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"45.7,113 54.7,113 54.7,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M181.2 112.8 A16 16 0 0 0 178.3 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"165.7\" y=\"117.5\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M45.7 34 A16 16 0 0 0 58.8 27.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"59.6\" y=\"49.2\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 55,
+       "check": "180 - 90 - 35",
+       "hints": [
+        "直角のしるしの角は何度かな。",
+        "3 つの角の和は 180° だね。",
+        "180 から 90 と 35 をひこう。"
+       ],
+       "paths": [
+        [
+         "90 + 35 = 125",
+         "180 − 125 = 55",
+         "55°"
+        ],
+        [
+         "直角をのぞいた 2 つの角で 90°",
+         "90 − 35 = 55"
+        ]
+       ],
+       "note": "直角を数え忘れて 180 − 35 = 145 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "四角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"32,122 208,122 183.3,29.6 50.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M48 122 A16 16 0 0 0 34.8 106.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"55\" y=\"107.3\" font-size=\"13\" text-anchor=\"middle\">80°</text><path d=\"M203.9 106.5 A16 16 0 0 0 192 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"184.2\" y=\"108.3\" font-size=\"13\" text-anchor=\"middle\">75°</text><path d=\"M167.3 28.2 A16 16 0 0 0 187.4 45.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"164\" y=\"57.2\" font-size=\"13\" text-anchor=\"middle\">110°</text><path d=\"M47.6 33.8 A16 16 0 0 0 66.3 19.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"68.6\" y=\"46.4\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 95,
+       "check": "360 - 80 - 75 - 110",
+       "hints": [
+        "四角形の 4 つの角の和は何度だったかな。",
+        "わかっている 3 つの角をたそう。",
+        "360 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "80 + 75 + 110 = 265",
+         "360 − 265 = 95",
+         "95°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "下の 2 つの角（い）は等しい大きさです。いは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"82.1,122 157.9,122 120,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M98.1 122 A16 16 0 0 0 87.6 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.7\" y=\"109.3\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M152.4 107 A16 16 0 0 0 141.9 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.3\" y=\"109.3\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M114.5 33 A16 16 0 0 0 125.5 33\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"52.5\" font-size=\"13\" text-anchor=\"middle\">40°</text></svg>",
+       "answer": 70,
+       "check": "(180 - 40) // 2",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "2 つの い を合わせると、何度かな。",
+        "その角を、等しい 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "い 2 つで 180 − 40 = 140",
+         "140 ÷ 2 = 70",
+         "70°"
+        ]
+       ],
+       "note": "140 ÷ 2 は、10 が 14 こを 2 つに分けて 10 が 7 こと考える。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 つの角がみんな等しい三角形があります。1 つの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60,122 180,122 120,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M76 122 A16 16 0 0 0 68 108.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"85.9\" y=\"111.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><path d=\"M172 108.1 A16 16 0 0 0 164 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.1\" y=\"111.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><path d=\"M112 31.9 A16 16 0 0 0 128 31.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"52.5\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "3 つの角の和は何度だったかな。",
+        "180° を、等しい 3 つに分けよう。",
+        "18 ÷ 3 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "180 ÷ 3 = 60",
+         "60°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"30,112 179.5,112 210,28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M46 112 A16 16 0 0 0 44.5 105.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"59.3\" y=\"110\" font-size=\"13\" text-anchor=\"middle\">25°</text><path d=\"M184.9 96.9 A16 16 0 0 0 163.5 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"162.2\" y=\"91.9\" font-size=\"13\" text-anchor=\"middle\">110°</text><path d=\"M195.5 34.8 A16 16 0 0 0 204.5 43.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"189.7\" y=\"54.7\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 45,
+       "check": "180 - 25 - 110",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "25 + 110 = 135",
+         "180 − 135 = 45",
+         "45°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"81,122 159,122 159,63 81,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"81,113 90,113 90,122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"150,122 150,113 159,113\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M145.1 55 A16 16 0 0 0 159 79\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133\" y=\"82.6\" font-size=\"13\" text-anchor=\"middle\">120°</text><path d=\"M81 34 A16 16 0 0 0 94.9 26\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"96\" y=\"48.5\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 60,
+       "check": "360 - 90 - 90 - 120",
+       "hints": [
+        "直角のしるしの角は何度かな。",
+        "4 つの角の和は 360° だね。",
+        "360 から、わかっている 3 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "90 + 90 + 120 = 300",
+         "360 − 300 = 60",
+         "60°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "三角形の 3 つの角の和が 180° になるのはなぜですか。図のように、3 つの角を切って集めた例を使って、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"12,100 108,100 42,40\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M26 100 A14 14 0 0 0 18.3 87.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"35.8\" y=\"89.8\" font-size=\"13\" text-anchor=\"middle\">あ</text><path d=\"M97.6 90.6 A14 14 0 0 0 94 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.9\" y=\"94.5\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M35.7 52.5 A14 14 0 0 0 52.4 49.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"47.1\" y=\"72.1\" font-size=\"13\" text-anchor=\"middle\">う</text><line x1=\"132\" y1=\"100\" x2=\"228\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"180\" y1=\"100\" x2=\"160.7\" y2=\"61.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M172.8 85.7 A16 16 0 0 0 164 100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.5\" y=\"88.4\" font-size=\"12\" text-anchor=\"middle\">あ</text><line x1=\"180\" y1=\"100\" x2=\"223.2\" y2=\"100\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M196 100 A16 16 0 0 0 191.8 89.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"208\" y=\"93.4\" font-size=\"12\" text-anchor=\"middle\">い</text><line x1=\"180\" y1=\"100\" x2=\"212\" y2=\"70.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M191.8 89.2 A16 16 0 0 0 172.8 85.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"185.5\" y=\"74.7\" font-size=\"12\" text-anchor=\"middle\">う</text></svg>",
+       "explain": "例：「三角形の あ、い、う の 3 つの角を切りとり、頂点を 1 つの点に集めて、すき間も重なりもないようにならべる。すると、あ、う、い がならんで一直線になる。一直線の角は 180° だから、3 つの角の和は 180°。」と書ければよい。① すき間も重なりもなくならべる、② 一直線になる、③ 一直線は 180°、の 3 点を見る。紙で形のちがう三角形を 2〜3 こ作って試すとよい。「どんな三角形でもかならず一直線になるのはなぜか」は、平行線を使って G-016 で示す、と話しておく。",
+       "hints": [
+        "3 つの角を切って、頂点を 1 つに集めてみよう。",
+        "ならべた 3 つの角は、どんな形になったかな。",
+        "「一直線は〜°だから」と書こう。"
+       ],
+       "paths": [
+        [
+         "3 つの角を切りとる",
+         "すき間なくならべる",
+         "一直線になる",
+         "一直線は 180°"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "四角形の 4 つの角の和が 360° になるのはなぜですか。図の四角形を例にして、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"32,122 208,122 183.3,29.6 50.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"32\" y1=\"122\" x2=\"183.3\" y2=\"29.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "explain": "例：「かどからかどへ線（点線）を引くと、四角形は 2 つの三角形に分かれる。三角形の 3 つの角の和は 180° なので、2 つで 180 + 180 = 360°。2 つの三角形の角を合わせると、ちょうど四角形の 4 つの角になる。だから 360°。」と書ければよい。① 2 つの三角形に分ける、② 1 つの三角形は 180°、③ 三角形の角を合わせると四角形の角になる、の 3 点を見る。③ が抜けやすい（線を引いた所の角は、2 つの三角形の角に分かれているだけ）。",
+       "hints": [
+        "かどからかどへの線で、四角形を分けよう。",
+        "いくつの三角形に分かれたかな。",
+        "三角形の角を合わせると、四角形のどの角になるかな。"
+       ],
+       "paths": [
+        [
+         "線で 2 つの三角形に分ける",
+         "1 つは 180°",
+         "180 + 180 = 360",
+         "三角形の角を合わせると四角形の 4 つの角"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "三角形には、90° より大きい角が 2 つあることはありません。なぜですか。例を使って、文で書きましょう。",
+       "explain": "例：「もし 100° と 100° の角が 2 つあると、それだけで 100 + 100 = 200° になり、3 つの角の和の 180° をこえてしまう。90° より大きい角が 2 つあれば、2 つで 180° より大きくなるので、そんな三角形はかけない。」と書ければよい。例の数（100° など）を 1 つ決めて計算し、「90° より大きい角 2 つなら、いつでも 180° をこえる」とまとめられているかを見る。G-006 の「直角が 2 つある三角形はない」と同じ考え方だと気づけばなお良い。",
+       "hints": [
+        "90° より大きい角を 2 つ、例えば 100° と 100° にしてみよう。",
+        "その 2 つだけで、何度になるかな。",
+        "3 つの角の和は何度だったかな。くらべよう。"
+       ],
+       "paths": [
+        [
+         "例 100° と 100°",
+         "2 つで 200°",
+         "180° をこえる",
+         "だからかけない"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "五角形を、1 つの頂点から引いた線で三角形に分けました。五角形の 5 つの角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"96.5,106.2 143.5,106.2 158,61.5 120,33.8 82,61.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"96.5\" y1=\"106.2\" x2=\"158\" y2=\"61.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"96.5\" y1=\"106.2\" x2=\"120\" y2=\"33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 540,
+       "check": "180 * 3",
+       "hints": [
+        "三角形がいくつできたかな。",
+        "三角形 1 つの角の和は 180° だね。",
+        "三角形の数だけ 180 をたそう。"
+       ],
+       "paths": [
+        [
+         "三角形が 3 つ",
+         "180 + 180 + 180 = 540",
+         "540°"
+        ]
+       ],
+       "note": "5 つの頂点から 1 本ずつ線を引くと考えて、三角形の数を取りちがえやすい。1 つの頂点から引く。"
+      },
+      {
+       "part": "今日",
+       "text": "下の 2 つの角（い）は等しい大きさです。いは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"30,107.8 210,107.8 120,32.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M46 107.8 A16 16 0 0 0 42.3 97.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"58.2\" y=\"102\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M197.7 97.5 A16 16 0 0 0 194 107.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"181.8\" y=\"102\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M107.7 42.5 A16 16 0 0 0 132.3 42.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"66.8\" font-size=\"13\" text-anchor=\"middle\">100°</text></svg>",
+       "answer": 40,
+       "check": "(180 - 100) // 2",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "2 つの い を合わせると、何度かな。",
+        "それを、等しい 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "い 2 つで 180 − 100 = 80",
+         "80 ÷ 2 = 40",
+         "40°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "六角形を、1 つの頂点から引いた線で三角形に分けました。六角形の 6 つの角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"100,104.6 140,104.6 160,70 140,35.4 100,35.4 80,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"100\" y1=\"104.6\" x2=\"160\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"100\" y1=\"104.6\" x2=\"140\" y2=\"35.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"100\" y1=\"104.6\" x2=\"100\" y2=\"35.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 720,
+       "check": "180 * 4",
+       "hints": [
+        "三角形がいくつできたかな。",
+        "三角形 1 つの角の和は 180° だね。",
+        "180 を、三角形の数だけたそう。"
+       ],
+       "paths": [
+        [
+         "三角形が 4 つ",
+         "180 + 180 = 360、360 + 360 = 720",
+         "720°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"63.5,122 176.5,122 167.5,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M79.5 122 A16 16 0 0 0 74.8 110.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.2\" y=\"115.1\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M175.2 106.1 A16 16 0 0 0 160.5 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.4\" y=\"106.3\" font-size=\"13\" text-anchor=\"middle\">85°</text><path d=\"M156.1 29.3 A16 16 0 0 0 168.8 33.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"157.2\" y=\"50.7\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 50,
+       "check": "180 - 45 - 85",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "45 + 85 = 130",
+         "180 − 130 = 50",
+         "50°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"60.7,122 176.2,122 185.3,18 54.7,53\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M76.7 122 A16 16 0 0 0 59.3 106.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81\" y=\"104.4\" font-size=\"13\" text-anchor=\"middle\">95°</text><path d=\"M177.6 106.1 A16 16 0 0 0 160.2 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"155.9\" y=\"104.4\" font-size=\"13\" text-anchor=\"middle\">95°</text><path d=\"M169.8 22.1 A16 16 0 0 0 183.9 33.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"166\" y=\"45.5\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M56.1 68.9 A16 16 0 0 0 70.2 48.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"79.3\" y=\"74.7\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 100,
+       "check": "360 - 95 - 95 - 70",
+       "hints": [
+        "4 つの角の和は 360° だね。",
+        "わかっている 3 つの角をたそう。",
+        "360 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "95 + 95 + 70 = 260",
+         "360 − 260 = 100",
+         "100°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "正方形の 4 つの角は、どれも直角です。4 つの角の和は何度ですか。",
+       "answer": 360,
+       "check": "90 + 90 + 90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "90° を 4 つ合わせよう。",
+        "四角形の角の和とくらべてもよいよ。"
+       ],
+       "paths": [
+        [
+         "90 + 90 + 90 + 90 = 360",
+         "360°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "54 ÷ 6 はいくつですか。",
+       "answer": 9,
+       "check": "54 // 6",
+       "hints": [
+        "6 × □ = 54 になる □ をさがそう。",
+        "6 のだんの九九を思い出そう。",
+        "6 のだんを、6 × 5 = 30 から順に言ってみよう。"
+       ],
+       "paths": [
+        [
+         "6 × 9 = 54",
+         9
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の中心のまわりを、6 つの等しい角に分けました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"69.8\" y2=\"41\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"69.8\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"170.2\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"170.2\" y2=\"41\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 54 A16 16 0 0 0 106.1 62\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"105\" y=\"48.6\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 60,
+       "check": "360 // 6",
+       "hints": [
+        "中心のまわりを 1 回転すると、何度かな。",
+        "360° を、等しい 6 つに分けよう。",
+        "36 ÷ 6 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 6 = 60",
+         "60°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "長方形の紙に、かどからかどへ線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"42.9,124 197.1,124 197.1,16 42.9,16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42.9\" y1=\"124\" x2=\"197.1\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M64.9 124 A22 22 0 0 0 60.9 111.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81\" y=\"116.5\" font-size=\"13\" text-anchor=\"middle\">35°</text><path d=\"M182.4 26.3 A18 18 0 0 0 197.1 34\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"182.4\" y=\"48.9\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 55,
+       "check": "180 - 90 - 35",
+       "hints": [
+        "線の下にできた三角形を見よう。",
+        "その三角形の右下のかどは、長方形のかどだから何度かな。",
+        "三角形の 3 つの角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "右下は直角",
+         "180 − 90 − 35 = 55",
+         "55°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角を、3 つの等しい角に分けました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"80\" y1=\"118\" x2=\"176\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80\" y1=\"118\" x2=\"163.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80\" y1=\"118\" x2=\"128\" y2=\"34.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"80\" y1=\"118\" x2=\"80\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M94 118 A14 14 0 0 0 92.1 111\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120.6\" y=\"111.7\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"80\" cy=\"118\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 30,
+       "check": "90 // 3",
+       "hints": [
+        "直角は何度だったかな。",
+        "90° を、等しい 3 つに分けよう。",
+        "9 ÷ 3 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "90 ÷ 3 = 30",
+         "30°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "45° の三角定規と 60° の三角定規を、下の辺をそろえて重ねました。ななめの辺が交わってできた、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68,130 137.3,130 137.3,60.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"172,130 102.7,130 102.7,10\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M86 130 A18 18 0 0 0 80.8 117.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"99.5\" y=\"121.5\" font-size=\"13\" text-anchor=\"middle\">45°</text><path d=\"M163 114.4 A18 18 0 0 0 154 130\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"142.5\" y=\"117.5\" font-size=\"13\" text-anchor=\"middle\">60°</text><path d=\"M125.4 72.6 A12 12 0 0 0 139.9 74.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.8\" y=\"92.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><polyline points=\"130.3,130 130.3,123 137.3,123\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"109.7,130 109.7,123 102.7,123\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/></svg>",
+       "answer": 75,
+       "check": "180 - 45 - 60",
+       "hints": [
+        "2 本のななめの辺と、下の辺で囲まれた三角形をさがそう。",
+        "その三角形の下の 2 つの角は何度かな。",
+        "三角形の 3 つの角の和を使おう。"
+       ],
+       "paths": [
+        [
+         "ななめの辺と下の辺で三角形ができる",
+         "下の角は 45° と 60°",
+         "180 − 45 − 60 = 75",
+         "75°"
+        ]
+       ],
+       "note": "重なった図の中から、使う三角形を見つけるのがむずかしい。使う三角形を指でなぞらせる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円の中心のまわりを、9 つの等しい角に分けました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"82.7\" y2=\"25.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"62.9\" y2=\"59.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"69.8\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"100.2\" y2=\"124.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"139.8\" y2=\"124.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"170.2\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"177.1\" y2=\"59.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"157.3\" y2=\"25.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 54 A16 16 0 0 0 109.7 57.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"109.7\" y=\"46.4\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 40,
+       "check": "360 // 9",
+       "hints": [
+        "1 回転は何度かな。",
+        "360° を、等しい 9 つに分けよう。",
+        "36 ÷ 9 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 9 = 40",
+         "40°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正方形の紙に、かどからかどへ線を引きました。この線は、かどの直角を 2 つの等しい角に分けます。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"66,124 174,124 174,16 66,16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"66\" y1=\"124\" x2=\"174\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M88 124 A22 22 0 0 0 81.6 108.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"103\" y=\"113.2\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 45,
+       "check": "90 // 2",
+       "hints": [
+        "正方形のかどは何度かな。",
+        "その角を、等しい 2 つに分けるよ。",
+        "三角定規の角にも、同じ大きさの角があったね。"
+       ],
+       "paths": [
+        [
+         "90 ÷ 2 = 45",
+         "45°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "一直線の角を、3 つの等しい角に分けました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"166\" y2=\"32.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"74\" y2=\"32.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 130 94.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"156.4\" y=\"95.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "一直線の角は何度かな。",
+        "180° を、等しい 3 つに分けよう。",
+        "18 ÷ 3 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "180 ÷ 3 = 60",
+         "60°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "分度器で角を測りました。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"228\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"189.4\" y2=\"39.3\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 50,
+       "check": "30 + 20",
+       "hints": [
+        "1 つの辺は、0 の線に合っているね。",
+        "もう 1 つの辺は、どの数字の近くかな。",
+        "30 から、10° の目もりがいくつ先かな。"
+       ],
+       "paths": [
+        [
+         "30 から 10° の目もり 2 つ先",
+         "50°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直角 3 つ分の角は何度ですか。",
+       "answer": 270,
+       "check": "90 + 90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "90° を 3 つ合わせよう。",
+        "180 + 90 と考えてもよいよ。"
+       ],
+       "paths": [
+        [
+         "90 + 90 + 90 = 270",
+         "270°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "一直線に、1 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"112\" x2=\"220\" y2=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"112\" x2=\"148.4\" y2=\"24.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M140 112 A20 20 0 0 0 126.2 93\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154\" y=\"91.9\" font-size=\"13\" text-anchor=\"middle\">72°</text><path d=\"M128 87.3 A26 26 0 0 0 94 112\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"95.3\" y=\"82.6\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"112\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 108,
+       "check": "180 - 72",
+       "hints": [
+        "2 つの角を合わせると、一直線だね。",
+        "一直線は何度だったかな。",
+        "180 から 72 をひこう。"
+       ],
+       "paths": [
+        [
+         "180 − 72 = 108",
+         "108°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角定規の 90° の角と 45° の角を、頂点をそろえてならべました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"122\" x2=\"155\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"60\" y1=\"122\" x2=\"60\" y2=\"27\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"60\" y1=\"122\" x2=\"-7.2\" y2=\"54.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M84 122 A24 24 0 0 0 60 98\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.3\" y=\"97.9\" font-size=\"12\" text-anchor=\"middle\">90°</text><path d=\"M60 98 A24 24 0 0 0 43 105\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"44.7\" y=\"89.2\" font-size=\"12\" text-anchor=\"middle\">45°</text><path d=\"M118 122 A58 58 0 0 0 19 81\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"87.6\" y=\"60.4\" font-size=\"14\" text-anchor=\"middle\">あ</text><circle cx=\"60\" cy=\"122\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 135,
+       "check": "90 + 45",
+       "hints": [
+        "あは、2 つの角を合わせた角だね。",
+        "90 と 45 をたそう。",
+        "十の位と一の位に分けて考えよう。"
+       ],
+       "paths": [
+        [
+         "90 + 45 = 135",
+         "135°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "三角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"33.8,122 206.2,122 82.3,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M49.8 122 A16 16 0 0 0 40.5 107.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"59.1\" y=\"110.4\" font-size=\"13\" text-anchor=\"middle\">65°</text><path d=\"M194 111.7 A16 16 0 0 0 190.2 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"178\" y=\"116.3\" font-size=\"13\" text-anchor=\"middle\">40°</text><path d=\"M75.5 32.5 A16 16 0 0 0 94.5 28.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"88.8\" y=\"51.8\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 75,
+       "check": "180 - 65 - 40",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "65 + 40 = 105",
+         "180 − 105 = 75",
+         "75°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "四角形の、あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"51.9,122 148.7,122 188.1,53.8 89.7,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M67.9 122 A16 16 0 0 0 57.4 107\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"76.5\" y=\"109.3\" font-size=\"13\" text-anchor=\"middle\">70°</text><path d=\"M156.7 108.1 A16 16 0 0 0 132.7 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.7\" y=\"100.6\" font-size=\"13\" text-anchor=\"middle\">120°</text><path d=\"M173.1 48.3 A16 16 0 0 0 180.1 67.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159.9\" y=\"68.6\" font-size=\"13\" text-anchor=\"middle\">80°</text><path d=\"M84.3 33 A16 16 0 0 0 104.8 23.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.4\" y=\"49.7\" font-size=\"13\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 90,
+       "check": "360 - 70 - 120 - 80",
+       "hints": [
+        "4 つの角の和は 360° だね。",
+        "わかっている 3 つの角をたそう。",
+        "360 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "70 + 120 + 80 = 270",
+         "360 − 270 = 90",
+         "90°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 つの点のまわりに、3 本の線を引きました。あの角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"82.7\" y2=\"114.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"170.2\" y2=\"99\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 56 A14 14 0 0 0 111 80.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"80.5\" y=\"60.2\" font-size=\"13\" text-anchor=\"middle\">140°</text><path d=\"M107.1 85.3 A20 20 0 0 0 137.3 80\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"127.3\" y=\"115.9\" font-size=\"13\" text-anchor=\"middle\">100°</text><path d=\"M142.5 83 A26 26 0 0 0 120 44\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"156.4\" y=\"53.5\" font-size=\"13\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 120,
+       "check": "360 - 140 - 100",
+       "hints": [
+        "3 つの角を合わせると、1 回転だね。",
+        "1 回転は何度かな。",
+        "360 から、わかっている 2 つの角をひこう。"
+       ],
+       "paths": [
+        [
+         "140 + 100 = 240",
+         "360 − 240 = 120",
+         "120°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "下の 2 つの角（い）は等しい大きさです。いは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"32.7,122 207.3,122 120,18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><path d=\"M48.7 122 A16 16 0 0 0 43 109.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"59.9\" y=\"113.9\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M197 109.7 A16 16 0 0 0 191.3 122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"180.1\" y=\"113.9\" font-size=\"13\" text-anchor=\"middle\">い</text><path d=\"M109.7 30.3 A16 16 0 0 0 130.3 30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"52.5\" font-size=\"13\" text-anchor=\"middle\">80°</text></svg>",
+       "answer": 50,
+       "check": "(180 - 80) // 2",
+       "hints": [
+        "3 つの角の和は 180° だね。",
+        "2 つの い を合わせると何度かな。",
+        "それを、等しい 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "い 2 つで 180 − 80 = 100",
+         "100 ÷ 2 = 50",
+         "50°"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "分度器で角を測りました。2 つの辺のどちらも、0 の線には合っていません。角の大きさは何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M24 122 A96 96 0 0 1 216 122 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"216\" y1=\"122\" x2=\"204\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"192\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">0</text><line x1=\"214.5\" y1=\"105.3\" x2=\"207.6\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"210.2\" y1=\"89.2\" x2=\"203.6\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"203.1\" y1=\"74\" x2=\"192.7\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"182.4\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">30</text><line x1=\"193.5\" y1=\"60.3\" x2=\"188.2\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"181.7\" y1=\"48.5\" x2=\"177.2\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"168\" y1=\"38.9\" x2=\"162\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"156\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">60</text><line x1=\"152.8\" y1=\"31.8\" x2=\"150.4\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"136.7\" y1=\"27.5\" x2=\"135.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"120\" y1=\"26\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"120\" y=\"53.5\" font-size=\"10\" text-anchor=\"middle\">90</text><line x1=\"103.3\" y1=\"27.5\" x2=\"104.5\" y2=\"34.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"87.2\" y1=\"31.8\" x2=\"89.6\" y2=\"38.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"72\" y1=\"38.9\" x2=\"78\" y2=\"49.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"84\" y=\"63.1\" font-size=\"10\" text-anchor=\"middle\">120</text><line x1=\"58.3\" y1=\"48.5\" x2=\"62.8\" y2=\"53.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"46.5\" y1=\"60.3\" x2=\"51.8\" y2=\"64.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"36.9\" y1=\"74\" x2=\"47.3\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"57.6\" y=\"89.5\" font-size=\"10\" text-anchor=\"middle\">150</text><line x1=\"29.8\" y1=\"89.2\" x2=\"36.4\" y2=\"91.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"25.5\" y1=\"105.3\" x2=\"32.4\" y2=\"106.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><line x1=\"24\" y1=\"122\" x2=\"36\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\"/><text x=\"48\" y=\"118.5\" font-size=\"10\" text-anchor=\"middle\">180</text><line x1=\"215.6\" y1=\"113.6\" x2=\"211.6\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"212.7\" y1=\"97.2\" x2=\"208.9\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"207\" y1=\"81.4\" x2=\"203.4\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198.6\" y1=\"66.9\" x2=\"195.4\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"187.9\" y1=\"54.1\" x2=\"185.1\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"175.1\" y1=\"43.4\" x2=\"172.8\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"160.6\" y1=\"35\" x2=\"158.9\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"144.8\" y1=\"29.3\" x2=\"143.8\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"128.4\" y1=\"26.4\" x2=\"128\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"111.6\" y1=\"26.4\" x2=\"112\" y2=\"30.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"95.2\" y1=\"29.3\" x2=\"96.2\" y2=\"33.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"79.4\" y1=\"35\" x2=\"81.1\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"64.9\" y1=\"43.4\" x2=\"67.2\" y2=\"46.6\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"52.1\" y1=\"54.1\" x2=\"54.9\" y2=\"56.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"41.4\" y1=\"66.9\" x2=\"44.6\" y2=\"69.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"33\" y1=\"81.4\" x2=\"36.6\" y2=\"83.1\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"27.3\" y1=\"97.2\" x2=\"31.1\" y2=\"98.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"24.4\" y1=\"113.6\" x2=\"28.4\" y2=\"114\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"221.5\" y2=\"85.1\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><line x1=\"120\" y1=\"122\" x2=\"101.2\" y2=\"15.6\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><circle cx=\"120\" cy=\"122\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 80,
+       "check": "100 - 20",
+       "hints": [
+        "2 つの辺が通る目もりを、どちらも読もう。",
+        "右の辺は 20、左の辺は何度の目もりかな。",
+        "2 つの目もりの差を求めよう。"
+       ],
+       "paths": [
+        [
+         "右の辺は 20、左の辺は 100",
+         "100 − 20 = 80",
+         "80°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "五角形を、1 つの頂点から引いた線で三角形に分けました。5 つの角の和は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"96.5,106.2 143.5,106.2 158,61.5 120,33.8 82,61.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"96.5\" y1=\"106.2\" x2=\"158\" y2=\"61.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"96.5\" y1=\"106.2\" x2=\"120\" y2=\"33.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/></svg>",
+       "answer": 540,
+       "check": "180 * 3",
+       "hints": [
+        "三角形がいくつできたかな。",
+        "三角形 1 つの角の和は 180° だね。",
+        "180 を、三角形の数だけたそう。"
+       ],
+       "paths": [
+        [
+         "三角形が 3 つ",
+         "180 + 180 + 180 = 540",
+         "540°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの角がみんな等しい三角形があります。1 つの角は何度ですか。",
+       "answer": 60,
+       "check": "180 // 3",
+       "hints": [
+        "3 つの角の和は何度だったかな。",
+        "180° を、等しい 3 つに分けよう。",
+        "18 ÷ 3 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "180 ÷ 3 = 60",
+         "60°"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135590,7 +150936,7 @@ window.ROADMAP = {
     6.39
    ],
    "comb": {
-    "b": 0.41,
+    "b": 0.383,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135611,32 +150957,1116 @@ window.ROADMAP = {
     "G-008",
     "N-020",
     "G-009",
-    "N-019"
+    "N-019",
+    "N-077"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円の部分の名前を知ろう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"64\" y1=\"70\" x2=\"176\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"148\" y2=\"21.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"136\" y=\"88.2\" font-size=\"12\" text-anchor=\"middle\">中心</text><text x=\"126.4\" y=\"44.1\" font-size=\"12\" text-anchor=\"middle\">半径</text><text x=\"92\" y=\"65.2\" font-size=\"12\" text-anchor=\"middle\">直径</text><line x1=\"162.9\" y1=\"106\" x2=\"210\" y2=\"128\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"214\" y=\"136.2\" font-size=\"12\" text-anchor=\"start\">円周</text></svg>",
+       "explain": "円のまん中の点を中心、中心から円のまわりまでひいた直線を半径、中心を通って円のまわりからまわりまでひいた直線を直径といいます。直径は半径の 2 つ分です。円のまわりを円周といいます。円周は、どんな大きさの円でも直径のおよそ 3.14 倍で、この数を円周率といいます。円周 = 直径 × 円周率。この単元では、計算は「（□ × 円周率）cm」の形でとめて、□ の数を答えます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "1 回転の角は何度ですか。",
+       "answer": 360,
+       "check": "90 + 90 + 90 + 90",
+       "hints": [
+        "直角は何度だったかな。",
+        "1 回転は、直角いくつ分かな。",
+        "90 を 4 つ合わせよう。"
+       ],
+       "paths": [
+        [
+         "直角 4 つ分",
+         "90 + 90 + 90 + 90 = 360",
+         "360°"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "3.14 + 3.14 はいくつですか。",
+       "answer": 6.28,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314)",
+       "hints": [
+        "小数点の位置をそろえて、たてにならべよう。",
+        "小さい位から順にたそう。",
+        "答えにも、小数点をわすれずにうとう。"
+       ],
+       "paths": [
+        [
+         "0.04 + 0.04 = 0.08",
+         "0.1 + 0.1 = 0.2",
+         "3 + 3 = 6",
+         6.28
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 4 cm の円の、直径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"168.5\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"137.4\" y=\"44.5\" font-size=\"13\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 8,
+       "check": "4 * 2",
+       "hints": [
+        "直径は、半径のいくつ分だったかな。",
+        "直径は、中心を通って、まわりからまわりまでの長さだね。",
+        "4 cm を 2 つ分にしよう。"
+       ],
+       "paths": [
+        [
+         "直径は半径の 2 つ分",
+         "4 × 2 = 8",
+         "8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "箱の中に、同じ大きさの円が 3 つ、ぴったりならんでいます。箱の横の長さは 24 cm です。円の半径は何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"42\" y=\"30\" width=\"156\" height=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"68\" cy=\"56\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"56\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"172\" cy=\"56\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"42\" y1=\"96\" x2=\"198\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"42\" y1=\"90\" x2=\"42\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"198\" y1=\"90\" x2=\"198\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"120\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">24 cm</text></svg>",
+       "answer": 4,
+       "check": "24 // 3 // 2",
+       "hints": [
+        "箱の横の長さは、円の直径いくつ分かな。",
+        "24 cm を 3 つに分けると、直径がわかるね。",
+        "半径は、直径の半分だよ。"
+       ],
+       "paths": [
+        [
+         "直径 3 つ分が 24 cm",
+         "24 ÷ 3 = 8 で直径 8 cm",
+         "半径は 8 ÷ 2 = 4",
+         "4 cm"
+        ]
+       ],
+       "note": "24 ÷ 3 = 8 を半径と答えやすい。図の横に、直径を 3 つ書き入れさせるとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "半径が 5 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"168.5\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"137.4\" y=\"44.5\" font-size=\"13\" text-anchor=\"middle\">5 cm</text></svg>",
+       "answer": 10,
+       "check": "5 * 2",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "まず、直径を求めよう。",
+        "直径は、半径の 2 つ分だよ。"
+       ],
+       "paths": [
+        [
+         "直径は 5 × 2 = 10",
+         "円周は 10 × 円周率",
+         "□ は 10"
+        ]
+       ],
+       "note": "半径の 5 をそのまま入れやすい。円周の式は直径から。"
+      },
+      {
+       "part": "挑戦",
+       "text": "円周が（12 × 円周率）cm の円があります。この円の半径は何 cm ですか。",
+       "answer": 6,
+       "check": "12 // 2",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "円周の式から、直径は何 cm かわかるかな。",
+        "半径は、直径の半分だよ。"
+       ],
+       "paths": [
+        [
+         "直径 × 円周率 = 12 × 円周率",
+         "直径は 12 cm",
+         "半径は 12 ÷ 2 = 6",
+         "6 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "直径が 16 cm の円の、半径は何 cm ですか。",
+       "answer": 8,
+       "check": "16 // 2",
+       "hints": [
+        "直径は、半径の 2 つ分だね。",
+        "半径は、直径を同じ 2 つに分けた長さだよ。",
+        "16 を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "16 ÷ 2 = 8",
+         "8 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径が 2 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。",
+       "answer": 6.28,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314)",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "2 × 3.14 は、3.14 を 2 回たした数だよ。",
+        "3.14 + 3.14 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "2 × 3.14 = 3.14 + 3.14",
+         6.28,
+         "約 6.28 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 3 cm の円が 2 つ、横にぴったりならんで、箱に入っています。箱の横の長さは何 cm ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"68\" y=\"30\" width=\"104\" height=\"52\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"94\" cy=\"56\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"146\" cy=\"56\" r=\"26\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"68\" y1=\"96\" x2=\"172\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"68\" y1=\"90\" x2=\"68\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"172\" y1=\"90\" x2=\"172\" y2=\"102\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"120\" y=\"114.5\" font-size=\"13\" text-anchor=\"middle\">□ cm</text></svg>",
+       "answer": 12,
+       "check": "3 * 2 * 2",
+       "hints": [
+        "円 1 つの直径は何 cm かな。",
+        "箱の横の長さは、直径いくつ分かな。",
+        "直径を 2 つたそう。"
+       ],
+       "paths": [
+        [
+         "直径は 3 × 2 = 6",
+         "6 + 6 = 12",
+         "12 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円の面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"168.5\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"137.4\" y=\"44.5\" font-size=\"13\" text-anchor=\"middle\">3 cm</text></svg>",
+       "explain": "円の面積 = 半径 × 半径 × 円周率 で求められます（わけは 4 日目）。半径 3 cm の円の面積は 3 × 3 × 円周率 = （9 × 円周率）cm² です。円周率を 3.14 とすると、約 28.26 cm² になります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "半径が 7 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。",
+       "answer": 14,
+       "check": "7 * 2",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "まず、直径を求めよう。",
+        "直径は、半径の 2 つ分だよ。"
+       ],
+       "paths": [
+        [
+         "直径は 7 × 2 = 14",
+         "円周 = 14 × 円周率",
+         "□ は 14"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1 辺が 6 cm の正方形の面積は何 cm² ですか。",
+       "answer": 36,
+       "check": "6 * 6",
+       "hints": [
+        "正方形の面積は、1 辺 × 1 辺 だね。",
+        "6 × 6 を計算しよう。",
+        "単位は cm² だよ。"
+       ],
+       "paths": [
+        [
+         "6 × 6 = 36",
+         "36 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 6 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"168.5\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"137.4\" y=\"44.5\" font-size=\"13\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 36,
+       "check": "6 * 6",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "半径 × 半径 を先に計算しよう。",
+        "6 × 6 はいくつかな。"
+       ],
+       "paths": [
+        [
+         "6 × 6 × 円周率",
+         "36 × 円周率",
+         "□ は 36"
+        ]
+       ],
+       "note": "円周（12 × 円周率）と取りちがえやすい。面積は半径 × 半径。"
+      },
+      {
+       "part": "今日",
+       "text": "直径が 10 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"64\" y1=\"70\" x2=\"176\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"120\" y=\"64.5\" font-size=\"13\" text-anchor=\"middle\">10 cm</text></svg>",
+       "answer": 25,
+       "check": "(10 // 2) * (10 // 2)",
+       "hints": [
+        "面積の式には、直径ではなく半径を使うよ。",
+        "半径は何 cm かな。",
+        "半径 × 半径 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "半径は 10 ÷ 2 = 5",
+         "5 × 5 = 25",
+         "□ は 25"
+        ]
+       ],
+       "note": "直径のまま 10 × 10 = 100 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 5 cm の円から、同じ中心で半径 3 cm の円を切りとりました。のこりの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M64 70 A56 56 0 1 0 176 70 A56 56 0 1 0 64 70 Z M86.4 70 A33.6 33.6 0 1 0 153.6 70 A33.6 33.6 0 1 0 86.4 70 Z\" fill-rule=\"evenodd\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"37.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"179\" y=\"32.9\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><line x1=\"120\" y1=\"70\" x2=\"88.4\" y2=\"81.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"104.9\" y=\"65.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "answer": 16,
+       "check": "5 * 5 - 3 * 3",
+       "hints": [
+        "大きい円の面積から、小さい円の面積をひこう。",
+        "どちらも「□ × 円周率」の形にしよう。",
+        "□ どうしをひけばよいよ。"
+       ],
+       "paths": [
+        [
+         "大きい円は 25 × 円周率",
+         "小さい円は 9 × 円周率",
+         "25 − 9 = 16",
+         "□ は 16"
+        ]
+       ],
+       "note": "半径をひいて 5 − 3 = 2、2 × 2 = 4 としやすい。面積どうしをひく。"
+      },
+      {
+       "part": "挑戦",
+       "text": "直径 4 cm の円を、直径で半分に切りました（半円）。半円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 104 L200 104 A80 80 0 0 0 40 104 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"104\" r=\"2.5\" fill=\"currentColor\"/><text x=\"120\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 2,
+       "check": "2 * 2 // 2",
+       "hints": [
+        "もとの円の半径は何 cm かな。",
+        "もとの円の面積を「□ × 円周率」で表そう。",
+        "半円は、その半分だね。"
+       ],
+       "paths": [
+        [
+         "半径 2 cm",
+         "円は 4 × 円周率",
+         "半分で 2 × 円周率",
+         "□ は 2"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径が 1 cm の円の面積は、約何 cm² ですか。円周率は 3.14 とします。",
+       "answer": 3.14,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(1 * 1 * 314)",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "1 × 1 はいくつかな。",
+        "その数に 3.14 をかけよう。"
+       ],
+       "paths": [
+        [
+         "1 × 1 × 3.14 = 3.14",
+         "約 3.14 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 7 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "answer": 49,
+       "check": "7 * 7",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "7 × 7 を計算しよう。",
+        "その数が □ だよ。"
+       ],
+       "paths": [
+        [
+         "7 × 7 = 49",
+         "□ は 49"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 2 cm の円の面積は、約何 cm² ですか。円周率は 3.14 とします。",
+       "answer": 12.56,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)",
+       "hints": [
+        "まず、半径 × 半径 を計算しよう。",
+        "4 × 3.14 は、3.14 を 4 回たした数だね。",
+        "3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。"
+       ],
+       "paths": [
+        [
+         "2 × 2 = 4",
+         "3.14 を 4 回たす",
+         "6.28 + 6.28 = 12.56",
+         "約 12.56 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円を 2 本の半径で切りとった形を、おうぎ形といいます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"97.7\" cy=\"92.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M113.7 92.3 A16 16 0 0 0 97.7 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.9\" y=\"75.3\" font-size=\"12\" text-anchor=\"middle\">90°</text><text x=\"132.7\" y=\"106.5\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "explain": "2 本の半径の間の角を中心角、まるい線の部分を弧（こ）といいます。中心角 90° のおうぎ形は、360 ÷ 90 = 4 で、円を 4 つに等しく分けた 1 つ（4 分の 1）です。半径 4 cm なら、面積は 4 × 4 × 円周率 ÷ 4 = （4 × 円周率）cm²、弧の長さは 8 × 円周率 ÷ 4 = （2 × 円周率）cm です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "半径が 5 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "answer": 25,
+       "check": "5 * 5",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "5 × 5 を計算しよう。",
+        "その数が □ だよ。"
+       ],
+       "paths": [
+        [
+         "5 × 5 = 25",
+         "□ は 25"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "1/3 + 1/6 はいくつですか。分数で答えましょう。",
+       "answer": "1/2",
+       "check": "Fraction(1, 3) + Fraction(1, 6)",
+       "hints": [
+        "分母をそろえよう（通分）。",
+        "1/3 は、6 分のいくつかな。",
+        "たしたあと、約分できるかな。"
+       ],
+       "paths": [
+        [
+         "1/3 = 2/6",
+         "2/6 + 1/6 = 3/6",
+         "約分して 1/2"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm、中心角 40° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M90.4 80.8 L160.4 80.8 A70 70 0 0 0 144 35.8 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"90.4\" cy=\"80.8\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M106.4 80.8 A16 16 0 0 0 102.7 70.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.6\" y=\"74.7\" font-size=\"12\" text-anchor=\"middle\">40°</text><text x=\"125.4\" y=\"95\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 4,
+       "check": "6 * 6 // (360 // 40)",
+       "hints": [
+        "中心角 40° は、円の何分の 1 かな。360 ÷ 40 を考えよう。",
+        "円の面積は「□ × 円周率」でいくつかな。",
+        "円の面積の □ を、等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 40 = 9 で円の 9 分の 1",
+         "円は 36 × 円周率",
+         "36 ÷ 9 = 4",
+         "□ は 4"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm、中心角 60° のおうぎ形の、弧の長さは（□ × 円周率）cm です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M92.7 85.8 L162.7 85.8 A70 70 0 0 0 127.7 25.1 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"92.7\" cy=\"85.8\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M108.7 85.8 A16 16 0 0 0 100.7 71.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.7\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">60°</text><text x=\"127.7\" y=\"100\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 2,
+       "check": "6 * 2 // (360 // 60)",
+       "hints": [
+        "弧は、円周の一部だね。",
+        "円周は（直径 × 円周率）。直径は何 cm かな。",
+        "中心角 60° は円の 6 分の 1 だから、円周の □ を 6 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "円周は 12 × 円周率",
+         "6 分の 1 で 12 ÷ 6 = 2",
+         "□ は 2"
+        ]
+       ],
+       "note": "面積の式（半径 × 半径）を使ってしまいやすい。弧は長さなので、円周から。"
+      },
+      {
+       "part": "今日",
+       "text": "円の 3 分の 1 のおうぎ形の、中心角は何度ですか。",
+       "answer": 120,
+       "check": "360 // 3",
+       "hints": [
+        "円の中心のまわりの角は、ぜんぶで何度かな。",
+        "その角を、3 つに等しく分けよう。",
+        "36 ÷ 3 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "中心のまわりは 360°",
+         "360 ÷ 3 = 120",
+         "120°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "半径 6 cm、中心角 60° のおうぎ形の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M92.7 85.8 L162.7 85.8 A70 70 0 0 0 127.7 25.1 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"92.7\" cy=\"85.8\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M108.7 85.8 A16 16 0 0 0 100.7 71.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.7\" y=\"75\" font-size=\"12\" text-anchor=\"middle\">60°</text><text x=\"127.7\" y=\"100\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 18.28,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 600 + 600)",
+       "hints": [
+        "おうぎ形のまわりは、弧と、半径 2 本でできているね。",
+        "弧の長さは（2 × 円周率）cm だったね。3.14 を使うと何 cm かな。",
+        "弧の長さに、半径 2 本分をたそう。"
+       ],
+       "paths": [
+        [
+         "弧は 2 × 3.14 = 6.28",
+         "半径 2 本で 6 + 6 = 12",
+         "6.28 + 12 = 18.28",
+         "約 18.28 cm"
+        ]
+       ],
+       "note": "半径 2 本をたし忘れて 6.28 と答えやすい。まわりを指でなぞらせる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径 4 cm、中心角 135° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M107.9 99.1 L177.9 99.1 A70 70 0 0 0 58.4 49.6 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"107.9\" cy=\"99.1\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M123.9 99.1 A16 16 0 0 0 96.6 87.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.4\" y=\"75.6\" font-size=\"12\" text-anchor=\"middle\">135°</text><text x=\"142.9\" y=\"113.3\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 6,
+       "check": "4 * 4 * 135 // 360",
+       "hints": [
+        "中心角 135° は、円の何分の何かな。135/360 を約分しよう。",
+        "円の面積は（16 × 円周率）cm² だね。",
+        "16 を 8 つに分けて、そのいくつ分かを考えよう。"
+       ],
+       "paths": [
+        [
+         "135/360 = 3/8",
+         "円は 16 × 円周率",
+         "16 ÷ 8 = 2、2 × 3 = 6",
+         "□ は 6"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 3 cm、中心角 40° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M90.4 80.8 L160.4 80.8 A70 70 0 0 0 144 35.8 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"90.4\" cy=\"80.8\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M106.4 80.8 A16 16 0 0 0 102.7 70.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.6\" y=\"74.7\" font-size=\"12\" text-anchor=\"middle\">40°</text><text x=\"125.4\" y=\"95\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "answer": 1,
+       "check": "3 * 3 // (360 // 40)",
+       "hints": [
+        "中心角 40° は、円の何分の 1 かな。",
+        "円の面積は（9 × 円周率）cm² だね。",
+        "9 を、等しく分けよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 40 = 9 で円の 9 分の 1",
+         "9 ÷ 9 = 1",
+         "□ は 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "中心角 45° のおうぎ形は、円の何分の 1 ですか。分数で答えましょう。",
+       "answer": "1/8",
+       "check": "Fraction(45, 360)",
+       "hints": [
+        "円の中心のまわりは 360° だね。",
+        "45/360 を約分しよう。",
+        "45 を何こ集めると 360 になるかな。"
+       ],
+       "paths": [
+        [
+         "45/360 を約分",
+         "1/8"
+        ],
+        [
+         "45 + 45 = 90 で直角、直角 4 つで 360",
+         "45 が 8 こで 360",
+         "1/8"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "円の中に、6 つの辺がどれも半径と同じ長さの六角形が、図のようにぴったり入ります。このことを使って、円周が直径の 3 倍より長いわけを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"176,70 148,21.5 92,21.5 64,70 92,118.5 148,118.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"176\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"148\" y2=\"21.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"92\" y2=\"21.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"64\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"92\" y2=\"118.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"70\" x2=\"148\" y2=\"118.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"150.1\" y=\"56.5\" font-size=\"11\" text-anchor=\"middle\">半径</text></svg>",
+       "explain": "例：「六角形の 1 辺は半径と同じ長さなので、六角形のまわりは半径 6 つ分。半径 2 つ分が直径だから、六角形のまわりは直径の 3 つ分。円周は、六角形の頂点と頂点の間を、まっすぐではなく外にふくらんで通るので、六角形のまわりより長い。だから円周は直径の 3 倍より長く、円周率は 3 より大きい。」と書ければよい。① 六角形のまわり = 直径 × 3、② 2 点の間はまっすぐがいちばん短いので円周のほうが長い、の 2 点を見る。② を「図を見ると長い」で終えていたら、「まっすぐな道とまがった道ではどちらが近い？」と聞く。",
+       "hints": [
+        "六角形のまわりの長さは、半径いくつ分かな。",
+        "半径 2 つ分は、何という長さだったかな。",
+        "頂点と頂点の間で、円の弧と六角形の辺はどちらが長いかな。"
+       ],
+       "paths": [
+        [
+         "六角形のまわりは半径 6 つ分",
+         "それは直径 3 つ分",
+         "円周は六角形のまわりより長い",
+         "だから直径の 3 倍より長い"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "円のまわりに、ぴったり正方形をかきました。このことを使って、円周が直径の 4 倍より短いわけを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"64\" y=\"14\" width=\"112\" height=\"112\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"64\" y1=\"70\" x2=\"176\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"120\" y=\"65.8\" font-size=\"11\" text-anchor=\"middle\">直径</text></svg>",
+       "explain": "例：「正方形の 1 辺は円の直径と同じ長さなので、正方形のまわりは直径の 4 つ分。円は正方形の内がわにあって、かどを近道して通るので、円周は正方形のまわりより短い。だから円周は直径の 4 倍より短く、円周率は 4 より小さい。」と書ければよい。1 問目とあわせて「円周率は 3 と 4 の間」とまとめられればなお良い。家にある缶やコップのまわりを糸で測り、直径の何倍かを確かめる（約 3.1 倍になる）。",
+       "hints": [
+        "正方形の 1 辺は、円のどの長さと同じかな。",
+        "正方形のまわりは、直径いくつ分かな。",
+        "円は正方形のかどを通るかな、近道するかな。"
+       ],
+       "paths": [
+        [
+         "正方形の 1 辺は直径",
+         "まわりは直径 4 つ分",
+         "円周はかどを近道して短い",
+         "だから直径の 4 倍より短い"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "円の面積が「半径 × 半径 × 円周率」で求められるわけを、図のように円を細かく切ってならべかえた例を使って、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"40\" cy=\"70\" r=\"34\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"40\" y1=\"70\" x2=\"74\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"71.4\" y2=\"57\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"64\" y2=\"46\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"53\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"40\" y2=\"36\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"27\" y2=\"38.6\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"16\" y2=\"46\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"8.6\" y2=\"57\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"6\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"8.6\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"16\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"27\" y2=\"101.4\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"40\" y2=\"104\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"53\" y2=\"101.4\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"64\" y2=\"94\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"40\" y1=\"70\" x2=\"71.4\" y2=\"83\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><polygon points=\"112,92 118.7,58.7 125.4,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"118.7,58.7 125.4,92 132,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"125.4,92 132,58.7 138.7,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"132,58.7 138.7,92 145.4,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"138.7,92 145.4,58.7 152.1,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"145.4,58.7 152.1,92 158.7,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"152.1,92 158.7,58.7 165.4,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"158.7,58.7 165.4,92 172.1,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"165.4,92 172.1,58.7 178.8,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"172.1,58.7 178.8,92 185.4,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"178.8,92 185.4,58.7 192.1,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"185.4,58.7 192.1,92 198.8,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"192.1,92 198.8,58.7 205.5,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"198.8,58.7 205.5,92 212.1,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"205.5,92 212.1,58.7 218.8,92\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"212.1,58.7 218.8,92 225.5,58.7\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"168.7\" y=\"109.8\" font-size=\"11\" text-anchor=\"middle\">円周の半分</text><text x=\"106\" y=\"79.2\" font-size=\"11\" text-anchor=\"end\">半径</text></svg>",
+       "explain": "例：「円を中心から細かいおうぎ形に切り、上向きと下向きをたがいちがいにならべると、長方形に近い形になる。細かく切るほど長方形に近づく。この長方形のたては半径、横は円周の半分。円周の半分は 直径 × 円周率 ÷ 2 = 半径 × 円周率。だから面積は 半径 × 半径 × 円周率。」と書ければよい。① ならべかえると長方形に近い、② たてが半径、③ 横が円周の半分（= 半径 × 円周率）、の 3 点を見る。③ が書けないときは、上の弧と下の弧に円周が半分ずつ分かれていることを図で確かめる。",
+       "hints": [
+        "ならべかえた形は、何という形に近いかな。",
+        "その形のたては、円のどの長さかな。",
+        "横は、円周のどれだけかな。上と下に、弧が半分ずつならんでいるね。"
+       ],
+       "paths": [
+        [
+         "ならべかえると長方形に近い",
+         "たては半径",
+         "横は円周の半分で半径 × 円周率",
+         "たて × 横 = 半径 × 半径 × 円周率"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 8 cm の円の 4 分の 1 のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"97.7\" cy=\"92.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M113.7 92.3 A16 16 0 0 0 97.7 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.9\" y=\"75.3\" font-size=\"12\" text-anchor=\"middle\">90°</text><text x=\"132.7\" y=\"106.5\" font-size=\"12\" text-anchor=\"middle\">8 cm</text></svg>",
+       "answer": 16,
+       "check": "8 * 8 // 4",
+       "hints": [
+        "円の面積は「□ × 円周率」でいくつかな。",
+        "8 × 8 を計算しよう。",
+        "それを 4 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "円は 64 × 円周率",
+         "64 ÷ 4 = 16",
+         "□ は 16"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径 6 cm の半円の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 104 L200 104 A80 80 0 0 0 40 104 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"104\" r=\"2.5\" fill=\"currentColor\"/><text x=\"120\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 15.42,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 600)",
+       "hints": [
+        "半円のまわりは、弧と直径でできているね。",
+        "弧は、円周の半分。円周は 6 × 3.14 だよ。",
+        "6 × 3.14 の半分は 3 × 3.14。それに直径をたそう。"
+       ],
+       "paths": [
+        [
+         "弧は 6 × 3.14 ÷ 2 = 3 × 3.14",
+         "3.14 + 3.14 + 3.14 = 9.42",
+         "9.42 + 6 = 15.42",
+         "約 15.42 cm"
+        ]
+       ],
+       "note": "直径の 6 cm をたし忘れやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径が 9 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "answer": 81,
+       "check": "9 * 9",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "9 × 9 を計算しよう。",
+        "その数が □ だよ。"
+       ],
+       "paths": [
+        [
+         "9 × 9 = 81",
+         "□ は 81"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 2 cm、中心角 90° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"97.7\" cy=\"92.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M113.7 92.3 A16 16 0 0 0 97.7 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.9\" y=\"75.3\" font-size=\"12\" text-anchor=\"middle\">90°</text><text x=\"132.7\" y=\"106.5\" font-size=\"12\" text-anchor=\"middle\">2 cm</text></svg>",
+       "answer": 1,
+       "check": "2 * 2 // 4",
+       "hints": [
+        "中心角 90° は、円の何分の 1 かな。",
+        "円の面積は（4 × 円周率）cm² だね。",
+        "4 を 4 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "円の 4 分の 1",
+         "4 ÷ 4 = 1",
+         "□ は 1"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径が 3 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。",
+       "answer": 9.42,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "3 × 3.14 は、3.14 を 3 回たした数だよ。",
+        "小数点の位置をそろえてたそう。"
+       ],
+       "paths": [
+        [
+         "3.14 + 3.14 + 3.14 = 9.42",
+         "約 9.42 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "底辺 8 cm、高さ 5 cm の三角形の面積は何 cm² ですか。",
+       "answer": 20,
+       "check": "8 * 5 // 2",
+       "hints": [
+        "三角形の面積は、底辺 × 高さ ÷ 2 だね。",
+        "先に 8 を 2 でわってもよいよ。",
+        "4 × 5 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "8 ÷ 2 = 4",
+         "4 × 5 = 20",
+         "20 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "三角形の 2 つの角が 50° と 60° です。のこりの角は何度ですか。",
+       "answer": 70,
+       "check": "180 - 50 - 60",
+       "hints": [
+        "三角形の 3 つの角の和は何度だったかな。",
+        "わかっている 2 つの角をたそう。",
+        "180 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "50 + 60 = 110",
+         "180 − 110 = 70",
+         "70°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 4 cm の正方形の中に、半径 4 cm の円の 4 分の 1 をかきました。色のついた部分の面積は約何 cm² ですか。円周率は 3.14 とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M76 118 L172 118 L172 22 L76 22 Z M76 118 L172 118 A96 96 0 0 0 76 22 Z\" fill-rule=\"evenodd\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"124\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 3.44,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(1600 - (314 + 314 + 314 + 314))",
+       "hints": [
+        "色のついた部分は、正方形から何をとった形かな。",
+        "おうぎ形の面積は（4 × 円周率）cm² だね。3.14 を使うと何 cm² かな。",
+        "正方形の面積から、おうぎ形の面積をひこう。"
+       ],
+       "paths": [
+        [
+         "正方形は 4 × 4 = 16",
+         "おうぎ形は 4 × 3.14 = 12.56",
+         "16 − 12.56 = 3.44",
+         "約 3.44 cm²"
+        ]
+       ],
+       "note": "16 − 12.56 の小数のひき算で、位をそろえずにまちがえやすい。16 を 16.00 と書くとよい。"
+      },
+      {
+       "part": "今日",
+       "text": "円を 4 つのおうぎ形に分けました。あの中心角は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 58 A12 12 0 0 0 108.2 72.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"98.6\" y=\"56.2\" font-size=\"12\" text-anchor=\"middle\">100°</text><line x1=\"120\" y1=\"70\" x2=\"64.9\" y2=\"79.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M108.2 72.1 A12 12 0 0 0 120 82\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102\" y=\"95.6\" font-size=\"12\" text-anchor=\"middle\">80°</text><line x1=\"120\" y1=\"70\" x2=\"120\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M120 82 A12 12 0 0 0 130.4 64\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"144.2\" y=\"88.2\" font-size=\"12\" text-anchor=\"middle\">120°</text><line x1=\"120\" y1=\"70\" x2=\"168.5\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M130.4 64 A12 12 0 0 0 120 58\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"134\" y=\"50\" font-size=\"12\" text-anchor=\"middle\">あ</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/></svg>",
+       "answer": 60,
+       "check": "360 - 100 - 80 - 120",
+       "hints": [
+        "中心のまわりの角は、ぜんぶで何度かな。",
+        "わかっている 3 つの角をたそう。",
+        "360 から、その和をひこう。"
+       ],
+       "paths": [
+        [
+         "100 + 80 + 120 = 300",
+         "360 − 300 = 60",
+         "60°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "同じ半径の、中心角 90° のおうぎ形と中心角 60° のおうぎ形を合わせると、円の何分の何になりますか。分数で答えましょう。",
+       "answer": "5/12",
+       "check": "Fraction(90, 360) + Fraction(60, 360)",
+       "hints": [
+        "90° は円の何分の 1、60° は何分の 1 かな。",
+        "1/4 と 1/6 を通分しよう。",
+        "分母を 12 にそろえてたそう。"
+       ],
+       "paths": [
+        [
+         "90° は 1/4、60° は 1/6",
+         "3/12 + 2/12 = 5/12"
+        ],
+        [
+         "90 + 60 = 150",
+         "150/360 を約分して 5/12"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "1 辺 2 cm の正方形の中に、向かい合う 2 つのかどを中心にして、半径 2 cm の円の 4 分の 1 を 2 つかきました。色のついた部分の面積は約何 cm² ですか。円周率は 3.14 とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"76\" y=\"22\" width=\"96\" height=\"96\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M172 118 A96 96 0 0 0 76 22 A96 96 0 0 0 172 118 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"124\" y=\"134.6\" font-size=\"13\" text-anchor=\"middle\">2 cm</text></svg>",
+       "answer": 2.28,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')((314 - 200) + (314 - 200))",
+       "hints": [
+        "正方形を、かどからかどへの線で 2 つの三角形に分けてみよう。",
+        "色のついた部分の半分は、おうぎ形から三角形をとった形だね。",
+        "おうぎ形は（1 × 円周率）cm²、三角形は 2 × 2 ÷ 2 = 2 cm² だよ。"
+       ],
+       "paths": [
+        [
+         "おうぎ形 1 つは 2 × 2 × 3.14 ÷ 4 = 3.14",
+         "三角形は 2",
+         "半分は 3.14 − 2 = 1.14",
+         "2 つで 2.28"
+        ],
+        [
+         "おうぎ形 2 つで 6.28",
+         "重なった部分を 2 回数えている",
+         "6.28 − 正方形 4 = 2.28"
+        ]
+       ],
+       "note": "2 本目の道（おうぎ形 2 つの和から正方形をひくと、重なりがのこる）は、C-008 の重なりの考えにつながる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "直径 6 cm の半円の面積は、（□ × 円周率）cm² です。□ に入る数を、分数か小数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 104 L200 104 A80 80 0 0 0 40 104 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"104\" r=\"2.5\" fill=\"currentColor\"/><text x=\"120\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": "9/2",
+       "accept": [
+        4.5
+       ],
+       "check": "Fraction(3 * 3, 2)",
+       "hints": [
+        "もとの円の半径は何 cm かな。",
+        "もとの円の面積は（9 × 円周率）cm² だね。",
+        "9 の半分は、分数や小数でどう書けるかな。"
+       ],
+       "paths": [
+        [
+         "半径 3 cm",
+         "円は 9 × 円周率",
+         "半分で 9/2",
+         "□ は 9/2（4.5）"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の中心のまわりを、9 つの等しいおうぎ形に分けました。1 つのおうぎ形の中心角は何度ですか。",
+       "answer": 40,
+       "check": "360 // 9",
+       "hints": [
+        "中心のまわりの角は 360° だね。",
+        "360 を 9 つに分けよう。",
+        "36 ÷ 9 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 9 = 40",
+         "40°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径が 4 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。",
+       "answer": 12.56,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314 + 314)",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "4 × 3.14 は、3.14 を 4 回たした数だよ。",
+        "3.14 + 3.14 = 6.28 を 2 つたしてもよいよ。"
+       ],
+       "paths": [
+        [
+         "6.28 + 6.28 = 12.56",
+         "約 12.56 cm"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "直径が 14 cm の円の、半径は何 cm ですか。",
+       "answer": 7,
+       "check": "14 // 2",
+       "hints": [
+        "直径は、半径の 2 つ分だね。",
+        "半径は、直径の半分だよ。",
+        "14 を 2 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "14 ÷ 2 = 7",
+         "7 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 8 cm の円の円周は、（□ × 円周率）cm です。□ に入る数はいくつですか。",
+       "answer": 16,
+       "check": "8 * 2",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "まず直径を求めよう。",
+        "直径は半径の 2 つ分だよ。"
+       ],
+       "paths": [
+        [
+         "直径 8 × 2 = 16",
+         "□ は 16"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径が 3 cm の円の円周は、約何 cm ですか。円周率は 3.14 とします。",
+       "answer": 9.42,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 314)",
+       "hints": [
+        "円周 = 直径 × 円周率 だね。",
+        "3.14 を 3 回たそう。",
+        "小数点の位置をそろえよう。"
+       ],
+       "paths": [
+        [
+         "3.14 + 3.14 + 3.14 = 9.42",
+         "約 9.42 cm"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径が 8 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "answer": 64,
+       "check": "8 * 8",
+       "hints": [
+        "円の面積 = 半径 × 半径 × 円周率 だね。",
+        "8 × 8 を計算しよう。",
+        "その数が □ だよ。"
+       ],
+       "paths": [
+        [
+         "8 × 8 = 64",
+         "□ は 64"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径が 6 cm の円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "answer": 9,
+       "check": "(6 // 2) * (6 // 2)",
+       "hints": [
+        "面積の式には半径を使うよ。",
+        "半径は何 cm かな。",
+        "半径 × 半径 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "半径 3 cm",
+         "3 × 3 = 9",
+         "□ は 9"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm、中心角 120° のおうぎ形の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M104.2 97.3 L174.2 97.3 A70 70 0 0 0 69.3 36.7 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"104.2\" cy=\"97.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M120.2 97.3 A16 16 0 0 0 96.2 83.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"119.2\" y=\"75.5\" font-size=\"12\" text-anchor=\"middle\">120°</text><text x=\"139.2\" y=\"111.5\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 12,
+       "check": "6 * 6 // (360 // 120)",
+       "hints": [
+        "中心角 120° は、円の何分の 1 かな。",
+        "円の面積は（36 × 円周率）cm² だね。",
+        "36 を 3 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "円の 3 分の 1",
+         "36 ÷ 3 = 12",
+         "□ は 12"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の 6 分の 1 のおうぎ形の、中心角は何度ですか。",
+       "answer": 60,
+       "check": "360 // 6",
+       "hints": [
+        "中心のまわりの角は 360° だね。",
+        "360 を 6 つに分けよう。",
+        "36 ÷ 6 を考えて、10 こ分にしよう。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 6 = 60",
+         "60°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "半径 4 cm、中心角 90° のおうぎ形の、まわりの長さは約何 cm ですか。円周率は 3.14 とします。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M97.7 92.3 L167.7 92.3 A70 70 0 0 0 97.7 22.3 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"97.7\" cy=\"92.3\" r=\"2.5\" fill=\"currentColor\"/><path d=\"M113.7 92.3 A16 16 0 0 0 97.7 76.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"118.9\" y=\"75.3\" font-size=\"12\" text-anchor=\"middle\">90°</text><text x=\"132.7\" y=\"106.5\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 14.28,
+       "check": "(lambda c: f'{c // 100}.{c % 100:02d}')(314 + 314 + 400 + 400)",
+       "hints": [
+        "まわりは、弧と半径 2 本でできているね。",
+        "弧は、円周 8 × 3.14 の 4 分の 1 で、2 × 3.14 だよ。",
+        "弧の長さに、半径 2 本分をたそう。"
+       ],
+       "paths": [
+        [
+         "弧は 2 × 3.14 = 6.28",
+         "半径 2 本で 8",
+         "6.28 + 8 = 14.28",
+         "約 14.28 cm"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径 6 cm の円から、同じ中心で半径 4 cm の円を切りとりました。のこりの面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M64 70 A56 56 0 1 0 176 70 A56 56 0 1 0 64 70 Z M82.7 70 A37.3 37.3 0 1 0 157.3 70 A37.3 37.3 0 1 0 82.7 70 Z\" fill-rule=\"evenodd\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"165.9\" y2=\"37.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"179\" y=\"32.9\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><line x1=\"120\" y1=\"70\" x2=\"84.9\" y2=\"82.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><text x=\"103.2\" y=\"65.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 20,
+       "check": "6 * 6 - 4 * 4",
+       "hints": [
+        "大きい円の面積から、小さい円の面積をひこう。",
+        "どちらも「□ × 円周率」の形にしよう。",
+        "□ どうしをひこう。"
+       ],
+       "paths": [
+        [
+         "36 − 16 = 20",
+         "□ は 20"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円の 4 分の 1 のおうぎ形の、中心角は何度ですか。",
+       "answer": 90,
+       "check": "360 // 4",
+       "hints": [
+        "中心のまわりの角は 360° だね。",
+        "360 を 4 つに分けよう。",
+        "直角いくつ分かを考えてもよいよ。"
+       ],
+       "paths": [
+        [
+         "360 ÷ 4 = 90",
+         "90°"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直径 12 cm の半円の面積は、（□ × 円周率）cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 104 L200 104 A80 80 0 0 0 40 104 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"104\" r=\"2.5\" fill=\"currentColor\"/><text x=\"120\" y=\"122.5\" font-size=\"13\" text-anchor=\"middle\">12 cm</text></svg>",
+       "answer": 18,
+       "check": "6 * 6 // 2",
+       "hints": [
+        "もとの円の半径は何 cm かな。",
+        "もとの円の面積を「□ × 円周率」で表そう。",
+        "半円はその半分だね。"
+       ],
+       "paths": [
+        [
+         "半径 6 cm",
+         "36 × 円周率",
+         "半分で 18",
+         "□ は 18"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -135645,7 +152075,7 @@ window.ROADMAP = {
     8.23
    ],
    "comb": {
-    "b": 0.424,
+    "b": 0.4,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135698,7 +152128,7 @@ window.ROADMAP = {
     12.44
    ],
    "comb": {
-    "b": 0.315,
+    "b": 0.311,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135758,7 +152188,7 @@ window.ROADMAP = {
     11.69
    ],
    "comb": {
-    "b": 0.323,
+    "b": 0.313,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135818,7 +152248,7 @@ window.ROADMAP = {
     15.75
    ],
    "comb": {
-    "b": 0.323,
+    "b": 0.313,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -135912,7 +152342,7 @@ window.ROADMAP = {
     10.96
    ],
    "comb": {
-    "b": 0.337,
+    "b": 0.332,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -138185,7 +154615,7 @@ window.ROADMAP = {
     -4.4
    ],
    "comb": {
-    "b": 0.292,
+    "b": 0.306,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -140012,7 +156442,7 @@ window.ROADMAP = {
     -5.69
    ],
    "comb": {
-    "b": 0.251,
+    "b": 0.261,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -143535,7 +159965,7 @@ window.ROADMAP = {
     -6.28
    ],
    "comb": {
-    "b": 0.15,
+    "b": 0.177,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -143583,7 +160013,7 @@ window.ROADMAP = {
     -2.14
    ],
    "comb": {
-    "b": 0.339,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -143632,7 +160062,7 @@ window.ROADMAP = {
     -4.42
    ],
    "comb": {
-    "b": 0.395,
+    "b": 0.401,
     "r": 0.0,
     "rg": [
      "data",
@@ -144231,7 +160661,7 @@ window.ROADMAP = {
     11.04
    ],
    "comb": {
-    "b": 0.465,
+    "b": 0.467,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -144283,7 +160713,7 @@ window.ROADMAP = {
     8.7
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.259,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -144379,8 +160809,8 @@ window.ROADMAP = {
     0.76
    ],
    "comb": {
-    "b": 0.321,
-    "r": 1.66,
+    "b": 0.302,
+    "r": 1.74,
     "rg": [
      "keisan",
      "programming"
@@ -144468,7 +160898,7 @@ window.ROADMAP = {
     1.75
    ],
    "comb": {
-    "b": 0.308,
+    "b": 0.268,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -144570,7 +161000,7 @@ window.ROADMAP = {
     20.26
    ],
    "comb": {
-    "b": 0.527,
+    "b": 0.523,
     "r": 1.04,
     "rg": [
      "hakaru",
@@ -144623,14 +161053,17 @@ window.ROADMAP = {
     17.96
    ],
    "comb": {
-    "b": 0.6,
-    "r": 0.0,
+    "b": 0.604,
+    "r": 1.0,
     "rg": [
      "data",
      "kazu",
      "rikigaku"
     ],
-    "pr": []
+    "pr": [
+     "kazu",
+     "rikigaku"
+    ]
    }
   },
   {
@@ -144727,8 +161160,8 @@ window.ROADMAP = {
     14.09
    ],
    "comb": {
-    "b": 0.587,
-    "r": 1.47,
+    "b": 0.584,
+    "r": 1.55,
     "rg": [
      "hakaru",
      "keisan",
@@ -144965,7 +161398,7 @@ window.ROADMAP = {
     15.93
    ],
    "comb": {
-    "b": 0.408,
+    "b": 0.403,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -145056,7 +161489,7 @@ window.ROADMAP = {
     -2.34
    ],
    "comb": {
-    "b": 0.189,
+    "b": 0.158,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -145104,7 +161537,7 @@ window.ROADMAP = {
     -1.18
    ],
    "comb": {
-    "b": 0.297,
+    "b": 0.31,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -145152,7 +161585,7 @@ window.ROADMAP = {
     -2.58
    ],
    "comb": {
-    "b": 0.083,
+    "b": 0.106,
     "r": 0.0,
     "rg": [
      "graph",
@@ -145520,7 +161953,7 @@ window.ROADMAP = {
     15.15
    ],
    "comb": {
-    "b": 0.546,
+    "b": 0.55,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -145618,7 +162051,7 @@ window.ROADMAP = {
     -1.49
    ],
    "comb": {
-    "b": 0.339,
+    "b": 0.282,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -145671,7 +162104,7 @@ window.ROADMAP = {
     -1.49
    ],
    "comb": {
-    "b": 0.3,
+    "b": 0.245,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -145941,7 +162374,7 @@ window.ROADMAP = {
     -8.54
    ],
    "comb": {
-    "b": 0.34,
+    "b": 0.337,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -146002,7 +162435,7 @@ window.ROADMAP = {
     -5.25
    ],
    "comb": {
-    "b": 0.143,
+    "b": 0.112,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -146055,7 +162488,7 @@ window.ROADMAP = {
     -8.44
    ],
    "comb": {
-    "b": 0.218,
+    "b": 0.232,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -147865,7 +164298,7 @@ window.ROADMAP = {
     -2.14
    ],
    "comb": {
-    "b": 0.314,
+    "b": 0.309,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -149447,7 +165880,7 @@ window.ROADMAP = {
     -1.5
    ],
    "comb": {
-    "b": 0.333,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -149543,7 +165976,7 @@ window.ROADMAP = {
     -3.3
    ],
    "comb": {
-    "b": 0.317,
+    "b": 0.296,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -149649,7 +166082,7 @@ window.ROADMAP = {
     0.04
    ],
    "comb": {
-    "b": 0.342,
+    "b": 0.329,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -149928,7 +166361,7 @@ window.ROADMAP = {
     -6.14
    ],
    "comb": {
-    "b": 0.214,
+    "b": 0.149,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -149977,7 +166410,7 @@ window.ROADMAP = {
     -4.37
    ],
    "comb": {
-    "b": 0.314,
+    "b": 0.271,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -150164,7 +166597,7 @@ window.ROADMAP = {
     11.68
    ],
    "comb": {
-    "b": 0.257,
+    "b": 0.27,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -150218,7 +166651,7 @@ window.ROADMAP = {
     11.84
    ],
    "comb": {
-    "b": 0.43,
+    "b": 0.434,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -150283,7 +166716,7 @@ window.ROADMAP = {
     13.61
    ],
    "comb": {
-    "b": 0.256,
+    "b": 0.269,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -150335,7 +166768,7 @@ window.ROADMAP = {
     21.02
    ],
    "comb": {
-    "b": 0.18,
+    "b": 0.196,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -151955,7 +168388,7 @@ window.ROADMAP = {
     -2.48
    ],
    "comb": {
-    "b": 0.247,
+    "b": 0.224,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -152054,7 +168487,7 @@ window.ROADMAP = {
     21.25
    ],
    "comb": {
-    "b": 0.54,
+    "b": 0.519,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -152360,7 +168793,7 @@ window.ROADMAP = {
     -0.65
    ],
    "comb": {
-    "b": 0.367,
+    "b": 0.336,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -152547,7 +168980,7 @@ window.ROADMAP = {
     -8.83
    ],
    "comb": {
-    "b": 0.33,
+    "b": 0.305,
     "r": 0.0,
     "rg": [
      "kansu",
@@ -152702,7 +169135,7 @@ window.ROADMAP = {
     21.87
    ],
    "comb": {
-    "b": 0.193,
+    "b": 0.204,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -155106,7 +171539,7 @@ window.ROADMAP = {
     5.37
    ],
    "comb": {
-    "b": 0.311,
+    "b": 0.28,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -155642,7 +172075,7 @@ window.ROADMAP = {
     30.57
    ],
    "comb": {
-    "b": 0.531,
+    "b": 0.536,
     "r": 0.0,
     "rg": [
      "genshi-ketsugo",
@@ -155696,7 +172129,7 @@ window.ROADMAP = {
     27.05
    ],
    "comb": {
-    "b": 0.511,
+    "b": 0.514,
     "r": 0.0,
     "rg": [
      "genshi-ketsugo",
@@ -157600,7 +174033,7 @@ window.ROADMAP = {
     20.07
    ],
    "comb": {
-    "b": 0.331,
+    "b": 0.339,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -157652,7 +174085,7 @@ window.ROADMAP = {
     31.0
    ],
    "comb": {
-    "b": 0.433,
+    "b": 0.436,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -157704,7 +174137,7 @@ window.ROADMAP = {
     -8.47
    ],
    "comb": {
-    "b": 0.395,
+    "b": 0.4,
     "r": 0.0,
     "rg": [
      "kakuritsu",
@@ -158006,7 +174439,7 @@ window.ROADMAP = {
     18.71
    ],
    "comb": {
-    "b": 0.468,
+    "b": 0.47,
     "r": 0.0,
     "rg": [
      "chiso",
@@ -158870,7 +175303,7 @@ window.ROADMAP = {
     -0.72
    ],
    "comb": {
-    "b": 0.145,
+    "b": 0.146,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -158922,7 +175355,7 @@ window.ROADMAP = {
     -2.23
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.298,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -159371,7 +175804,7 @@ window.ROADMAP = {
     -2.73
    ],
    "comb": {
-    "b": 0.14,
+    "b": 0.11,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -159425,7 +175858,7 @@ window.ROADMAP = {
     -2.36
    ],
    "comb": {
-    "b": 0.315,
+    "b": 0.325,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -159479,7 +175912,7 @@ window.ROADMAP = {
     -6.06
    ],
    "comb": {
-    "b": 0.167,
+    "b": 0.139,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -159541,7 +175974,7 @@ window.ROADMAP = {
     -2.88
    ],
    "comb": {
-    "b": 0.31,
+    "b": 0.32,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -159594,7 +176027,7 @@ window.ROADMAP = {
     -0.76
    ],
    "comb": {
-    "b": 0.322,
+    "b": 0.34,
     "r": 0.0,
     "rg": [
      "seisu",
@@ -159740,7 +176173,7 @@ window.ROADMAP = {
     -2.24
    ],
    "comb": {
-    "b": 0.41,
+    "b": 0.404,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -159978,7 +176411,7 @@ window.ROADMAP = {
     -3.38
    ],
    "comb": {
-    "b": 0.356,
+    "b": 0.35,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -161014,7 +177447,7 @@ window.ROADMAP = {
     16.78
    ],
    "comb": {
-    "b": 0.233,
+    "b": 0.246,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161066,7 +177499,7 @@ window.ROADMAP = {
     16.55
    ],
    "comb": {
-    "b": 0.255,
+    "b": 0.268,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161182,7 +177615,7 @@ window.ROADMAP = {
     17.66
    ],
    "comb": {
-    "b": 0.343,
+    "b": 0.354,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -161293,7 +177726,7 @@ window.ROADMAP = {
     19.5
    ],
    "comb": {
-    "b": 0.256,
+    "b": 0.27,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -161464,7 +177897,7 @@ window.ROADMAP = {
     -14.35
    ],
    "comb": {
-    "b": 0.28,
+    "b": 0.297,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -161517,7 +177950,7 @@ window.ROADMAP = {
     -18.63
    ],
    "comb": {
-    "b": 0.433,
+    "b": 0.394,
     "r": 0.0,
     "rg": [
      "ronpo",
@@ -161706,7 +178139,7 @@ window.ROADMAP = {
     18.49
    ],
    "comb": {
-    "b": 0.225,
+    "b": 0.237,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -162599,7 +179032,7 @@ window.ROADMAP = {
     -5.43
    ],
    "comb": {
-    "b": 0.391,
+    "b": 0.397,
     "r": 0.0,
     "rg": [
      "kakuritsu",
@@ -162659,7 +179092,7 @@ window.ROADMAP = {
     -6.98
    ],
    "comb": {
-    "b": 0.451,
+    "b": 0.453,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
@@ -164665,7 +181098,7 @@ window.ROADMAP = {
     -20.86
    ],
    "comb": {
-    "b": 0.566,
+    "b": 0.561,
     "r": 0.0,
     "rg": [
      "kakuritsu-daigaku",
@@ -165498,7 +181931,7 @@ window.ROADMAP = {
     29.02
    ],
    "comb": {
-    "b": 0.461,
+    "b": 0.463,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -166387,7 +182820,7 @@ window.ROADMAP = {
     27.03
    ],
    "comb": {
-    "b": 0.331,
+    "b": 0.339,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -167935,7 +184368,7 @@ window.ROADMAP = {
     -3.44
    ],
    "comb": {
-    "b": 0.252,
+    "b": 0.217,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -167996,7 +184429,7 @@ window.ROADMAP = {
     -14.48
    ],
    "comb": {
-    "b": 0.389,
+    "b": 0.398,
     "r": 0.0,
     "rg": [
      "kakuritsu",
@@ -168049,7 +184482,7 @@ window.ROADMAP = {
     -2.63
    ],
    "comb": {
-    "b": 0.342,
+    "b": 0.296,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -168395,7 +184828,7 @@ window.ROADMAP = {
     18.53
    ],
    "comb": {
-    "b": 0.327,
+    "b": 0.338,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -171133,7 +187566,7 @@ window.ROADMAP = {
     1.69
    ],
    "comb": {
-    "b": 0.402,
+    "b": 0.407,
     "r": 0.0,
     "rg": [
      "graph",
@@ -171208,7 +187641,7 @@ window.ROADMAP = {
     0.28
    ],
    "comb": {
-    "b": 0.402,
+    "b": 0.407,
     "r": 0.0,
     "rg": [
      "graph",
@@ -171280,7 +187713,7 @@ window.ROADMAP = {
     -3.52
    ],
    "comb": {
-    "b": 0.111,
+    "b": 0.124,
     "r": 0.0,
     "rg": [
      "graph",
@@ -171354,7 +187787,7 @@ window.ROADMAP = {
     0.49
    ],
    "comb": {
-    "b": 0.402,
+    "b": 0.407,
     "r": 0.0,
     "rg": [
      "graph",
@@ -187612,7 +204045,7 @@ window.ROADMAP = {
     -2.73
    ],
    "comb": {
-    "b": 0.322,
+    "b": 0.33,
     "r": 0.0,
     "rg": [
      "graph",
@@ -187694,7 +204127,7 @@ window.ROADMAP = {
     -3.99
    ],
    "comb": {
-    "b": 0.4,
+    "b": 0.405,
     "r": 0.0,
     "rg": [
      "graph",
@@ -187775,7 +204208,7 @@ window.ROADMAP = {
     -3.26
    ],
    "comb": {
-    "b": 0.322,
+    "b": 0.33,
     "r": 0.0,
     "rg": [
      "graph",
@@ -187857,7 +204290,7 @@ window.ROADMAP = {
     -3.51
    ],
    "comb": {
-    "b": 0.398,
+    "b": 0.404,
     "r": 0.0,
     "rg": [
      "graph",
@@ -188081,7 +204514,7 @@ window.ROADMAP = {
     4.42
    ],
    "comb": {
-    "b": 0.275,
+    "b": 0.278,
     "r": 0.0,
     "rg": [
      "programming",
@@ -188702,7 +205135,7 @@ window.ROADMAP = {
     -2.22
    ],
    "comb": {
-    "b": 0.402,
+    "b": 0.407,
     "r": 0.0,
     "rg": [
      "graph",
@@ -188783,7 +205216,7 @@ window.ROADMAP = {
     -0.96
    ],
    "comb": {
-    "b": 0.341,
+    "b": 0.348,
     "r": 0.0,
     "rg": [
      "graph",
@@ -190573,7 +207006,7 @@ window.ROADMAP = {
     4.87
    ],
    "comb": {
-    "b": 0.335,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "graph",
@@ -190657,7 +207090,7 @@ window.ROADMAP = {
     3.57
    ],
    "comb": {
-    "b": 0.335,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "graph",
@@ -190741,7 +207174,7 @@ window.ROADMAP = {
     4.83
    ],
    "comb": {
-    "b": 0.335,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "graph",
@@ -200528,7 +216961,7 @@ window.ROADMAP = {
     24.86
    ],
    "comb": {
-    "b": 0.402,
+    "b": 0.404,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -216363,7 +232796,7 @@ window.ROADMAP = {
     -0.81
    ],
    "comb": {
-    "b": 0.45,
+    "b": 0.455,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -216449,7 +232882,7 @@ window.ROADMAP = {
     4.41
    ],
    "comb": {
-    "b": 0.519,
+    "b": 0.523,
     "r": 0.0,
     "rg": [
      "anzen",
@@ -217252,7 +233685,7 @@ window.ROADMAP = {
     8.49
    ],
    "comb": {
-    "b": 0.472,
+    "b": 0.478,
     "r": 0.0,
     "rg": [
      "graph",

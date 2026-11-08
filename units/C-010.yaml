@@ -1,0 +1,969 @@
+# C-010 塗り分け
+#
+# 書き方は N-001 の頭の注、文の漢字は C-006 の頭の注のとおり（小 3 までの漢字。塗、選、順、最、残、求、旗、印 などはかなで書く）。
+# 地図に日ごとのねらいがないので、既定の並び（導入・練習・わけ・混ぜる・確認）に次のねらいを当てた：
+#   1 日目 1 列にならんだ部分をぬる（となりだけちがう色）、2 日目 どれもとなり合う部分（順列と同じ）、まん中がほかの全部ととなり合う部分
+#   （多くとなり合う所から先にぬる）、ドーナツの形（輪）は挑戦だけ、3 日目 わけ（なぜ 1 つへるだけか、なぜ先にぬる所を選ぶか、なぜ 3 色ではぬれないか）、
+#   4 日目 C-006（全部ちがう色＝順列）・C-005（積の法則）と混ぜる、5 日目 確認。
+# 前提は C-006 まで。数は 100 まで。2 けた × 1 けたは C-006 と同じく、たし算で出す（12 × 3 = 12 + 12 + 12）。
+# 輪のようにぐるりとつながる部分は、はしの 2 つの色が同じかちがうかで分けて数える（場合分け。挑戦と確認の 1 問だけ）。
+# 部分の図は svg で描き、部分の名前を ア、イ、ウ… で書く。どの図も、点だけで接する所ができないように描いた（となり合うのは線で接する所だけ）。
+#   ドーナツの形は、まん中の円をあなにした図（ぬらない）と、まん中の円もぬる図の 2 つ。
+# 「同じ色を何回使ってもかまいません」を毎回書く（となり合わない部分は同じ色でよい）。
+# check は、部分ごとの色を itertools.product で全部作り、となり合う部分の組の色がちがうものを数える。
+
+id: C-010
+days:
+  - day: 1
+    items:
+      - part: 思い出す
+        text: ア、イ、ウ、エの 4 人の中から、1 番目に走る人と 2 番目に走る人を決めます。決め方は何通りですか。
+        answer: 12
+        check: "len(set(itertools.permutations('アイウエ', 2)))"
+        hints:
+          - 1 番目は何通りかな。
+          - 2 番目は、のこりの何人から決めるかな。
+          - 2 つの通りをかけ算にしよう。
+        paths:
+          - [1 番目 4 通り, 2 番目 3 通り, 4 × 3 = 12 通り]
+      - part: 思い出す
+        text: ○、△、× のしるしを 3 こならべて、合図をつくります。同じしるしを何回使ってもかまいません。合図は何通りつくれますか。
+        answer: 27
+        check: "len(set(itertools.product('○△×', repeat=3)))"
+        hints:
+          - 1 つ目のしるしは何通りかな。
+          - 2 つ目、3 つ目にも、同じしるしを使えるね。
+          - じゅんにかけていこう。
+        paths:
+          - [1 つ目 3 通り, 2 つ目まで 3 × 3 = 9 通り, 3 つ目まで 9 × 3 = 27 通り]
+      - part: 見本
+        text: ア、イ、ウの 3 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        explain: アからじゅんにぬります。アは 3 色のどれでもよいので 3 通りです。イはアととなり合うので、アの色をのぞいた 2 通りです。ウはイととなり合いますが、アとはとなり合わないので、イの色だけをのぞいた 2 通りです（アと同じ色でもかまいません）。3 × 2 = 6、6 × 2 = 12 通りです。どのぬり方でも、のぞく色の数が同じなので、積（せき）の法則（ほうそく）が使えます。
+      - part: 今日
+        text: ア、イ、ウ、エの 4 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))"
+        hints:
+          - アは何通りかな。
+          - イ、ウ、エは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, イ、ウ、エは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 12 + 12 = 24 通り]
+        note: 3 × 2 × 1 × 1 のように、使った色を全部のぞいてしまいやすい。となり合わない部分の色は使ってよい。
+      - part: 今日
+        text: ア、イ、ウの 3 つの部分を、赤、青、黄、緑の 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 36
+        check: "sum(1 for c in itertools.product(range(4), repeat=3) if c[0] != c[1] and c[1] != c[2])"
+        hints:
+          - アは何通りかな。
+          - イはアの色を使えないね。ウはどの色を使えないかな。
+          - 12 × 3 は、12 を 3 回たした数だよ。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウ 3 通り, 4 × 3 = 12、12 × 3 = 12 + 12 + 12 = 36 通り]
+      - part: 今日
+        text: たてに 3 本のしまがあるはたを、5 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="135" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="140" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 80
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])"
+        hints:
+          - 左のしまは何通りかな。
+          - まん中のしまと右のしまは、それぞれ何色を使えないかな。
+          - 20 × 4 は、20 を 4 回たした数だよ。
+        paths:
+          - [左 5 通り, まん中 4 通り, 右 4 通り, 5 × 4 = 20、20 × 4 = 20 + 20 + 20 + 20 = 80 通り]
+      - part: 挑戦
+        text: ア、イ、ウ、エの 4 つの部分を、赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。3 色を全部使うぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 18
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)) and len(set(c)) == 3)"
+        hints:
+          - 3 色を全部使わなくてもよいときは、何通りだったかな。
+          - 2 色だけでぬれるのは、どんなぬり方かな。
+          - 全部から、2 色だけのぬり方をのぞこう。
+        paths:
+          - [全部で 24 通り, 2 色だけなのは「赤青赤青」のようにかわりばんこにぬるとき, 2 色の組は赤と青・赤と黄・青と黄の 3 つで、どちらの色から始めるかで 2 通りずつ、3 × 2 = 6 通り, 24 − 6 = 18 通り]
+        note: 2 色だけのぬり方を 3 通りと数えやすい。「赤青赤青」と「青赤青赤」は別のぬり方。
+    extra:
+      - part: 今日
+        text: ア、イ、ウ、エ、オの 5 つの部分を、3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="60" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="100" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="140" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="180" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="160" y="76" font-size="16" text-anchor="middle">エ</text>
+            <text x="200" y="76" font-size="16" text-anchor="middle">オ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[i + 1] for i in range(4)))"
+        hints:
+          - アは何通りかな。
+          - イからオは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, イからオは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 24 + 24 = 48 通り]
+      - part: 今日
+        text: となり合う 2 つの部分ア、イを、7 色でぬります。アとイはちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="60" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="90" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="150" y="76" font-size="16" text-anchor="middle">イ</text>
+          </svg>
+        answer: 42
+        check: "sum(1 for c in itertools.product(range(7), repeat=2) if c[0] != c[1])"
+        hints:
+          - アは何通りかな。
+          - イはアの色を使えないね。
+          - 2 つの通りをかけ算にしよう。
+        paths:
+          - [ア 7 通り, イ 6 通り, 7 × 6 = 42 通り]
+      - part: 挑戦
+        text: ア、イ、ウ、エの 4 つの部分を、赤と青の 2 色だけでぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 2
+        check: "sum(1 for c in itertools.product(range(2), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))"
+        hints:
+          - アをぬると、イの色は決まるかな。
+          - イが決まると、ウの色は決まるかな。
+          - アの色の決め方だけ数えればいいね。
+        paths:
+          - [ア 2 通り, イ、ウ、エは 1 通りずつに決まる, 2 × 1 × 1 × 1 = 2 通り]
+          - [赤青赤青と青赤青赤, 2 通り]
+
+  - day: 2
+    items:
+      - part: 思い出す
+        text: ア、イ、ウの 3 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 12
+        check: "sum(1 for c in itertools.product(range(3), repeat=3) if c[0] != c[1] and c[1] != c[2])"
+        hints:
+          - アは何通りかな。
+          - イとウは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, イ 2 通り, ウ 2 通り, 3 × 2 = 6、6 × 2 = 12 通り]
+      - part: 思い出す
+        text: ア、イ、ウ、エの 4 人がかけっこをします。1 着、2 着、3 着の決まり方は何通りですか。
+        answer: 24
+        check: "len(set(itertools.permutations('アイウエ', 3)))"
+        hints:
+          - 1 着、2 着、3 着は、それぞれ何通りかな。
+          - 1 人決まるごとに、のこりは 1 人ずつへるね。
+          - 12 × 2 は、12 を 2 回たした数だよ。
+        paths:
+          - [4 × 3 = 12, 12 × 2 = 12 + 12 = 24 通り]
+      - part: 見本
+        text: ア、イ、ウの 3 つの部分を、赤、青、黄、緑の 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="15" width="160" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="160" y="103" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        explain: この図では、どの 2 つの部分もとなり合っています。だから 3 つとも全部ちがう色になります。アは 4 通り、イはアとちがう 3 通り、ウはアともイともちがう 2 通りです。4 × 3 = 12、12 × 2 = 24 通りです。4 色から 3 色をえらんでならべる順列（じゅんれつ、C-006 のならべ方）と同じ数え方です。
+      - part: 今日
+        text: 見本と同じ形の図のア、イ、ウを、5 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="15" width="160" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="160" y="103" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 60
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)"
+        hints:
+          - どの 2 つの部分も、となり合っているかな。
+          - アは 5 通り。イとウは何通りかな。
+          - 20 × 3 は、20 を 3 回たした数だよ。
+        paths:
+          - [どれもとなり合うので全部ちがう色, ア 5 通り、イ 4 通り、ウ 3 通り, 5 × 4 = 20、20 × 3 = 20 + 20 + 20 = 60 通り]
+      - part: 今日
+        text: 上のアは、下のイ、ウ、エのどれともとなり合っています。ア、イ、ウ、エを 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 6
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))"
+        hints:
+          - いちばん多くの部分ととなり合っているのはどこかな。そこから先にぬろう。
+          - アをぬったあと、イは何色を使えるかな。
+          - ウはアともイともとなり合うね。エはどうかな。
+        paths:
+          - [ア 3 通り, イ 2 通り, ウはアともイともちがう 1 通り, エはアともウともちがう 1 通り, 3 × 2 × 1 × 1 = 6 通り]
+        note: エはアとウの色を使えないので、イと同じ色になる。イとエはとなり合わないので同じ色でよい。
+      - part: 今日
+        text: まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="95" y="45" width="50" height="50" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="10" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="95" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="45" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="145" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="33" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="14" text-anchor="middle">ウ</text>
+            <text x="70" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="170" y="75" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))"
+        hints:
+          - まん中のアから先にぬろう。何通りかな。
+          - イ、ウ、エ、オは、どの色を使えないかな。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, イ、ウ、エ、オはアの色だけ使えないので 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 24 + 24 = 48 通り]
+      - part: 挑戦
+        text: ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="137.7" y1="52.3" x2="162.4" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="52.3" x2="77.6" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="87.7" x2="77.6" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <line x1="137.7" y1="87.7" x2="162.4" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="33" font-size="16" text-anchor="middle">ア</text>
+            <text x="162" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">ウ</text>
+            <text x="78" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 18
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))"
+        hints:
+          - アとイをぬると、それぞれ何通りかな。
+          - ウの色が、アと同じときと、アとちがうときに分けよう。
+          - それぞれの場合で、エが何通りになるかを数えよう。
+        paths:
+          - [ア 3 通り・イ 2 通りで 6 通り, ウがアと同じ色なら、エはアの色だけ使えないので 2 通り, ウがアともイともちがう色なら、エはアの色もウの色も使えないので 1 通り, 1 つにつき 2 + 1 = 3 通り, 6 × 3 = 18 通り]
+        note: ぐるりとつながる形では、さいごのエが、ウとアの両方ととなり合う。ウとアが同じ色かどうかでエの通りがかわるので、かけ算だけでは数えられず、場合に分けてたす（C-005 の和の法則）。
+    extra:
+      - part: 今日
+        text: まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="45" x2="120" y2="10" stroke="currentColor" stroke-width="2"/>
+            <line x1="98.35" y1="82.5" x2="68.04" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="141.65" y1="82.5" x2="171.96" y2="100" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="84" y="54" font-size="16" text-anchor="middle">イ</text>
+            <text x="156" y="54" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)"
+        hints:
+          - どの 2 つもとなり合うと、同じ色の部分があってもいいかな。
+          - ア、イ、ウ、エは、それぞれ何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [全部ちがう色, 4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り]
+      - part: 今日
+        text: 上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))"
+        hints:
+          - アから先にぬろう。
+          - イはアの色が使えないね。ウとエは何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウ 2 通り, エ 2 通り, 4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+      - part: 挑戦
+        text: ドーナツの形を 4 つに分け、まん中の円もぬります。まん中のアは、まわりのイ、ウ、エ、オのどれともとなり合っています。まわりでとなり合うのは、イとウ、ウとエ、エとオ、オとイです。3 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="137.7" y1="52.3" x2="162.4" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="52.3" x2="77.6" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="87.7" x2="77.6" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <line x1="137.7" y1="87.7" x2="162.4" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="33" font-size="16" text-anchor="middle">イ</text>
+            <text x="162" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+            <text x="78" y="76" font-size="16" text-anchor="middle">オ</text>
+          </svg>
+        answer: 6
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (2, 3), (3, 4), (4, 1))))"
+        hints:
+          - まん中のアから先にぬろう。
+          - まわりの 4 つは、のこりの何色でぬるかな。
+          - 2 色でぐるりとぬるには、かわりばんこにするしかないね。
+        paths:
+          - [ア 3 通り, まわりはのこりの 2 色をかわりばんこに, イの色で 2 通り, 3 × 2 = 6 通り]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: ア、イ、ウを 3 色でぬるとき、3 × 2 × 2 = 12 通りです。ウが 1 通りではなく 2 通りになるわけを、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        explain: 例：「ウがとなり合うのはイだけで、アとはとなり合わない。だからウに使えないのはイの色 1 つだけで、3 − 1 = 2 通り。アと同じ色をぬってもよい。」と書ければよい。3 × 2 × 1 と考えた子には、全部ちがう色にしなければならないのは、どの 2 つもとなり合うとき（2 日目の見本の図）だけだと話す。
+        hints:
+          - ウは、どの部分ととなり合っているかな。
+          - ウにアと同じ色をぬってもいいかな。
+          - 「ウに使えない色は〜だけだから」を使って書こう。
+        paths:
+          - [ウがとなり合うのはイだけ, 使えないのはイの色だけ, 3 − 1 = 2 通り]
+      - part: わけ
+        text: この図を 3 色でぬるとき、アから先にぬると 3 × 2 × 1 × 1 = 6 通りと数えられます。イ、ウ、エ、アのじゅんにぬると、かけ算ではうまく数えられません。なぜかを文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        explain: 例：「イ、ウ、エのじゅんにぬると、イ 3 通り、ウ 2 通り、エ 2 通り。さいごのアは、イとエが同じ色なら 1 通り、ちがう色なら 0 通り（ぬれる色がのこらない）。アのぬり方が、前のぬり方によってちがうので、かけ算にできない。アから先にぬると、イ、ウ、エのどれも、使えない色の数がいつも同じになるので、かけ算で数えられる。」と書ければよい。多くの部分ととなり合う所から先にぬるとよい、とまとめる。イ、ウ、エのじゅんでも、場合に分ければ 3 × 2 × 1 = 6 と数えられることをたしかめてもよい。
+        hints:
+          - イ、ウ、エのじゅんにぬって、さいごにアをぬってみよう。
+          - イとエが同じ色のとき、アは何通りかな。ちがう色のときはどうかな。
+          - 「アのぬり方がそろわないから」を使って書こう。
+        paths:
+          - [イ、ウ、エのあとにアをぬると, イとエが同じなら 1 通り、ちがうなら 0 通り, そろわないのでかけ算にできない, アから先にぬるとそろう]
+      - part: わけ
+        text: この図のア、イ、ウ、エは、どの 2 つもとなり合っています。3 色ではぬれないわけを、文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="45" x2="120" y2="10" stroke="currentColor" stroke-width="2"/>
+            <line x1="98.35" y1="82.5" x2="68.04" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="141.65" y1="82.5" x2="171.96" y2="100" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="84" y="54" font-size="16" text-anchor="middle">イ</text>
+            <text x="156" y="54" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        explain: 例：「どの 2 つもとなり合うので、4 つとも全部ちがう色にしなければならない。でも色は 3 つしかないので、3 つをぬると、4 つ目にぬれる色がのこらない。式にすると 3 × 2 × 1 × 0 = 0 通り。」と書ければよい。4 色あれば 4 × 3 × 2 × 1 = 24 通りでぬれる。地図の国をぬり分けるとき、どんな地図でも 4 色あればとなり合う国をちがう色にできることが知られている（四色定理）。1976 年に計算機を使って証明された、有名な問題である。
+        hints:
+          - どの 2 つもとなり合うと、同じ色の部分があってもいいかな。
+          - 3 つの部分をぬったあと、4 つ目に使える色はのこっているかな。
+          - 「色がたりないから」を使って書こう。
+        paths:
+          - [4 つとも全部ちがう色がいる, 色は 3 つしかない, 4 つ目にぬれる色がのこらない, だからぬれない]
+      - part: 今日
+        text: よこに 2 本のしまがあるはたを、6 色の中からえらんでぬります。2 本のしまはちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="135" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="15" width="150" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="50" width="150" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 30
+        check: "sum(1 for c in itertools.product(range(6), repeat=2) if c[0] != c[1])"
+        hints:
+          - 上のしまは何通りかな。
+          - 下のしまは、上の色を使えないね。
+          - 2 つの通りをかけ算にしよう。
+        paths:
+          - [上 6 通り, 下 5 通り, 6 × 5 = 30 通り]
+      - part: 今日
+        text: 上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))"
+        hints:
+          - いちばん多くとなり合うアから先にぬろう。
+          - イ、ウ、エは、それぞれどの色を使えないかな。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウ 2 通り, エ 2 通り, 4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+    extra:
+      - part: 今日
+        text: ア、イ、ウの 3 つの部分を 5 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 80
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])"
+        hints:
+          - アは何通りかな。
+          - イとウは、それぞれ左どなりの色だけ使えないね。
+          - 20 × 4 は、20 を 4 回たした数だよ。
+        paths:
+          - [ア 5 通り, イ 4 通り, ウ 4 通り, 5 × 4 = 20、20 × 4 = 80 通り]
+      - part: 今日
+        text: まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="45" x2="120" y2="10" stroke="currentColor" stroke-width="2"/>
+            <line x1="98.35" y1="82.5" x2="68.04" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="141.65" y1="82.5" x2="171.96" y2="100" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="84" y="54" font-size="16" text-anchor="middle">イ</text>
+            <text x="156" y="54" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)"
+        hints:
+          - どの 2 つもとなり合うので、全部ちがう色だね。
+          - ア、イ、ウ、エは、それぞれ何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り]
+      - part: 今日
+        text: まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="95" y="45" width="50" height="50" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="10" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="95" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="45" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="145" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="33" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="14" text-anchor="middle">ウ</text>
+            <text x="70" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="170" y="75" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))"
+        hints:
+          - まん中のアから先にぬろう。
+          - イ、ウ、エ、オは、アの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 0、1、2、3 のカードが 1 まいずつあります。2 まいをならべて 2 けたの数をつくります。何こつくれますか。
+        answer: 9
+        check: "len(set(10 * a + b for a, b in itertools.permutations(range(4), 2) if a != 0))"
+        hints:
+          - 十のくらいに 0 はおけないね。
+          - 一のくらいには 0 もおけるね。のこりのカードは何まいかな。
+          - 2 つの通りをかけ算にしよう。
+        paths:
+          - [十のくらい 3 通り, 一のくらい 3 通り, 3 × 3 = 9 こ]
+      - part: 思い出す
+        text: ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))"
+        hints:
+          - アは何通りかな。
+          - イ、ウ、エは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24 通り]
+      - part: 今日
+        text: ア、イ、ウの 3 つの部分を 4 色でぬります。こんどは、3 つとも全部ちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(4), repeat=3) if len(set(c)) == 3)"
+        hints:
+          - 全部ちがう色にするのは、4 色から 3 色をえらんでならべるのと同じかな。
+          - ア、イ、ウは、それぞれ何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウはアともイともちがう 2 通り, 4 × 3 = 12、12 × 2 = 24 通り]
+        note: となり合う所だけちがえばよいとき（4 × 3 × 3 = 36 通り）とのちがいを言わせる。全部ちがう色にするのは C-006 の順列と同じ。
+      - part: 今日
+        text: ア、イ、ウの 3 つの部分を 4 色でぬります。となり合う部分だけちがう色にします（アとウは同じ色でもかまいません）。ぬり方が何通りあるかをもとめる式はどれですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        choices: [4 × 3 × 2, 4 × 3 × 3, 4 × 4 × 4]
+        answer: 4 × 3 × 3
+        check: "[c for c, v in (('4 × 3 × 2', 4 * 3 * 2), ('4 × 3 × 3', 4 * 3 * 3), ('4 × 4 × 4', 4 * 4 * 4)) if v == sum(1 for p in itertools.product(range(4), repeat=3) if p[0] != p[1] and p[1] != p[2])][0]"
+        hints:
+          - アは何通りかな。
+          - イはアの色を使えないね。ウはどの色を使えないかな。
+          - ウはアと同じ色でもいいね。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウはイの色だけ使えないので 3 通り, 4 × 3 × 3]
+      - part: 今日
+        text: たてに 3 本のしまがあるはたを、4 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。そのあと、はたのまん中に ★ をつけるか、つけないかを決めます。はたは何通りできますか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="135" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="140" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 72
+        check: "sum(1 for c in itertools.product(range(4), repeat=3) if c[0] != c[1] and c[1] != c[2]) * 2"
+        hints:
+          - しまのぬり方は、何通りかな。
+          - そのどれにも、★ をつけるかつけないかの 2 通りがあるね。
+          - 36 × 2 は、36 を 2 回たした数だよ。
+        paths:
+          - [しま 4 × 3 = 12、12 × 3 = 36 通り, ★ 2 通り, 36 × 2 = 36 + 36 = 72 通り]
+        note: 36 + 2 = 38 とたしやすい。しまのぬり方 1 つずつに ★ の 2 通りがつくので、積の法則（C-005）。
+      - part: 挑戦
+        text: ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。こんどは 4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="137.7" y1="52.3" x2="162.4" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="52.3" x2="77.6" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="87.7" x2="77.6" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <line x1="137.7" y1="87.7" x2="162.4" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="33" font-size="16" text-anchor="middle">ア</text>
+            <text x="162" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">ウ</text>
+            <text x="78" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 84
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))"
+        hints:
+          - アは 4 通り、イは 3 通りだね。
+          - ウがアと同じ色のときと、アとちがう色のときに分けよう。
+          - それぞれの場合で、エが何通りになるかを数えて、さいごにたそう。
+        paths:
+          - [ウがアと同じ色のとき、ウは 1 通りでエは 3 通り, 4 × 3 = 12、12 × 1 = 12、12 × 3 = 36 通り, ウがアともイともちがう色のとき、ウは 2 通りでエは 2 通り, 12 × 2 = 24、24 × 2 = 48 通り, 36 + 48 = 84 通り]
+        note: 2 日目の挑戦（3 色で 18 通り）と同じ分け方。ウがアと同じなら、エはアの色 1 つだけ使えないので 3 通り。ちがうなら、アとウの 2 色が使えないので 2 通り。
+    extra:
+      - part: 今日
+        text: ア、イ、ウの 3 つの部分を 5 色でぬります。3 つとも全部ちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="40" width="60" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="60" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="180" y="76" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 60
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)"
+        hints:
+          - 全部ちがう色にするのは、5 色から 3 色をえらんでならべるのと同じだね。
+          - ア、イ、ウは、それぞれ何通りかな。
+          - 20 × 3 は、20 を 3 回たした数だよ。
+        paths:
+          - [ア 5 通り, イ 4 通り, ウ 3 通り, 5 × 4 = 20、20 × 3 = 60 通り]
+      - part: 今日
+        text: 図のア、イ、ウは、どの 2 つもとなり合っています。5 色でぬります。となり合う部分はちがう色にします。ぬり方が何通りあるかをもとめる式はどれですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="15" width="160" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="160" y="103" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        choices: [5 × 4 × 3, 5 × 4 × 4, 5 × 5 × 5]
+        answer: 5 × 4 × 3
+        check: "[c for c, v in (('5 × 4 × 3', 5 * 4 * 3), ('5 × 4 × 4', 5 * 4 * 4), ('5 × 5 × 5', 5 * 5 * 5)) if v == sum(1 for p in itertools.product(range(5), repeat=3) if len(set(p)) == 3)][0]"
+        hints:
+          - どの 2 つもとなり合うと、全部ちがう色になるね。
+          - ウは、アの色もイの色も使えないね。
+          - ウは何通りかな。
+        paths:
+          - [どれもとなり合う, 全部ちがう色, 5 × 4 × 3]
+      - part: 挑戦
+        text: ドーナツの形を 4 つに分け、まん中の円もぬります。まん中のアは、まわりのイ、ウ、エ、オのどれともとなり合っています。まわりでとなり合うのは、イとウ、ウとエ、エとオ、オとイです。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="137.7" y1="52.3" x2="162.4" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="52.3" x2="77.6" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="87.7" x2="77.6" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <line x1="137.7" y1="87.7" x2="162.4" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="33" font-size="16" text-anchor="middle">イ</text>
+            <text x="162" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+            <text x="78" y="76" font-size="16" text-anchor="middle">オ</text>
+          </svg>
+        answer: 72
+        check: "sum(1 for c in itertools.product(range(4), repeat=5) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (2, 3), (3, 4), (4, 1))))"
+        hints:
+          - まん中のアから先にぬろう。何通りかな。
+          - まわりの 4 つは、のこりの 3 色でぬるね。あなのあるドーナツの形と同じだね。
+          - 18 × 4 は、18 を 4 回たした数だよ。
+        paths:
+          - [ア 4 通り, まわりはのこりの 3 色で、あなのあるドーナツと同じ 18 通り, 18 × 4 = 18 + 18 + 18 + 18 = 72 通り]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: たてに 3 本のしまがあるはたを、5 色の中からえらんでぬります。となり合うしまはちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="135" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="140" y="15" width="50" height="70" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 80
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if c[0] != c[1] and c[1] != c[2])"
+        hints:
+          - 左のしまは何通りかな。
+          - まん中と右のしまは、それぞれ何色を使えないかな。
+          - 20 × 4 は、20 を 4 回たした数だよ。
+        paths:
+          - [左 5 通り, まん中 4 通り, 右 4 通り, 5 × 4 = 20、20 × 4 = 80 通り]
+      - part: 今日
+        text: ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[i + 1] for i in range(3)))"
+        hints:
+          - アは何通りかな。
+          - イ、ウ、エは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24 通り]
+      - part: 今日
+        text: 図のア、イ、ウは、どの 2 つもとなり合っています。5 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="40" y="15" width="160" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="70" width="80" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="160" y="103" font-size="16" text-anchor="middle">ウ</text>
+          </svg>
+        answer: 60
+        check: "sum(1 for c in itertools.product(range(5), repeat=3) if len(set(c)) == 3)"
+        hints:
+          - どの 2 つもとなり合うと、全部ちがう色だね。
+          - ア、イ、ウは、それぞれ何通りかな。
+          - 20 × 3 は、20 を 3 回たした数だよ。
+        paths:
+          - [ア 5 通り, イ 4 通り, ウ 3 通り, 5 × 4 = 20、20 × 3 = 60 通り]
+      - part: 今日
+        text: 上のアは、下のイ、ウ、エのどれともとなり合っています。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 6
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))"
+        hints:
+          - いちばん多くとなり合うアから先にぬろう。
+          - イをぬったあと、ウは何色を使えるかな。
+          - エは、アともウともとなり合うね。
+        paths:
+          - [ア 3 通り, イ 2 通り, ウ 1 通り, エ 1 通り, 3 × 2 × 1 × 1 = 6 通り]
+      - part: 今日
+        text: まん中のアは、イ、ウ、エ、オのどれともとなり合っています。イ、ウ、エ、オどうしは、となり合っていません。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="95" y="45" width="50" height="50" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="10" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="105" y="95" width="30" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="45" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="145" y="55" width="50" height="30" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="120" y="33" font-size="14" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="14" text-anchor="middle">ウ</text>
+            <text x="70" y="75" font-size="14" text-anchor="middle">エ</text>
+            <text x="170" y="75" font-size="14" text-anchor="middle">オ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[0] != c[i] for i in range(1, 5)))"
+        hints:
+          - まん中のアから先にぬろう。
+          - イ、ウ、エ、オは、アの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+      - part: 今日
+        text: ア、イ、ウ、エの 4 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方が何通りあるかをもとめる式はどれですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="70" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="120" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="170" y="40" width="50" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="45" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="95" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="145" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="195" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        choices: [3 × 2 × 2 × 2, 3 × 2 × 1 × 1, 3 × 3 × 3 × 3]
+        answer: 3 × 2 × 2 × 2
+        check: "[c for c, v in (('3 × 2 × 2 × 2', 3 * 2 * 2 * 2), ('3 × 2 × 1 × 1', 3 * 2 * 1 * 1), ('3 × 3 × 3 × 3', 3 * 3 * 3 * 3)) if v == sum(1 for p in itertools.product(range(3), repeat=4) if all(p[i] != p[i + 1] for i in range(3)))][0]"
+        hints:
+          - アは何通りかな。
+          - ウはアととなり合っているかな。
+          - イ、ウ、エは、それぞれ何色を使えないかな。
+        paths:
+          - [ア 3 通り, イ、ウ、エは左どなりの色だけ使えない, 3 × 2 × 2 × 2]
+      - part: 今日
+        text: よこに 2 本のしまがあるはたを、6 色の中からえらんでぬります。2 本のしまはちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <line x1="40" y1="10" x2="40" y2="135" stroke="currentColor" stroke-width="2"/>
+            <rect x="40" y="15" width="150" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="40" y="50" width="150" height="35" stroke="currentColor" fill="none" stroke-width="2"/>
+          </svg>
+        answer: 30
+        check: "sum(1 for c in itertools.product(range(6), repeat=2) if c[0] != c[1])"
+        hints:
+          - 上のしまは何通りかな。
+          - 下のしまは、上の色を使えないね。
+          - 2 つの通りをかけ算にしよう。
+        paths:
+          - [上 6 通り, 下 5 通り, 6 × 5 = 30 通り]
+      - part: 今日
+        text: ドーナツの形を 4 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとアです。3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="137.7" y1="52.3" x2="162.4" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="52.3" x2="77.6" y2="27.6" stroke="currentColor" stroke-width="2"/>
+            <line x1="102.3" y1="87.7" x2="77.6" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <line x1="137.7" y1="87.7" x2="162.4" y2="112.4" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="33" font-size="16" text-anchor="middle">ア</text>
+            <text x="162" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">ウ</text>
+            <text x="78" y="76" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 18
+        check: "sum(1 for c in itertools.product(range(3), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (1, 2), (2, 3), (3, 0))))"
+        hints:
+          - アとイをぬると、それぞれ何通りかな。
+          - ウの色が、アと同じときと、アとちがうときに分けよう。
+          - それぞれの場合で、エが何通りになるかを数えよう。
+        paths:
+          - [ア 3 通り・イ 2 通りで 6 通り, ウがアと同じならエは 2 通り、ちがうならエは 1 通り, 1 つにつき 2 + 1 = 3 通り, 6 × 3 = 18 通り]
+    extra:
+      - part: 今日
+        text: ア、イ、ウ、エ、オの 5 つの部分を 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="60" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="100" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="140" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="180" y="40" width="40" height="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="40" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="80" y="76" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ウ</text>
+            <text x="160" y="76" font-size="16" text-anchor="middle">エ</text>
+            <text x="200" y="76" font-size="16" text-anchor="middle">オ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(3), repeat=5) if all(c[i] != c[i + 1] for i in range(4)))"
+        hints:
+          - アは何通りかな。
+          - イからオは、それぞれ左どなりの色だけ使えないね。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 3 通り, ほかは 2 通りずつ, 3 × 2 = 6、6 × 2 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+      - part: 今日
+        text: まん中のアと、まわりのイ、ウ、エは、どの 2 つもとなり合っています。4 色でぬります。となり合う部分はちがう色にします。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="120" cy="70" r="60" stroke="currentColor" fill="none" stroke-width="2"/>
+            <circle cx="120" cy="70" r="25" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="120" y1="45" x2="120" y2="10" stroke="currentColor" stroke-width="2"/>
+            <line x1="98.35" y1="82.5" x2="68.04" y2="100" stroke="currentColor" stroke-width="2"/>
+            <line x1="141.65" y1="82.5" x2="171.96" y2="100" stroke="currentColor" stroke-width="2"/>
+            <text x="120" y="76" font-size="16" text-anchor="middle">ア</text>
+            <text x="84" y="54" font-size="16" text-anchor="middle">イ</text>
+            <text x="156" y="54" font-size="16" text-anchor="middle">ウ</text>
+            <text x="120" y="118" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 24
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if len(set(c)) == 4)"
+        hints:
+          - どの 2 つもとなり合うので、全部ちがう色だね。
+          - ア、イ、ウ、エは、それぞれ何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [4 × 3 = 12、12 × 2 = 24、24 × 1 = 24 通り]
+      - part: 今日
+        text: 上のアは、下のイ、ウ、エのどれともとなり合っています。4 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+        svg: |
+          <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="15" width="180" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="30" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="90" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <rect x="150" y="70" width="60" height="55" stroke="currentColor" fill="none" stroke-width="2"/>
+            <text x="120" y="48" font-size="16" text-anchor="middle">ア</text>
+            <text x="60" y="103" font-size="16" text-anchor="middle">イ</text>
+            <text x="120" y="103" font-size="16" text-anchor="middle">ウ</text>
+            <text x="180" y="103" font-size="16" text-anchor="middle">エ</text>
+          </svg>
+        answer: 48
+        check: "sum(1 for c in itertools.product(range(4), repeat=4) if all(c[i] != c[j] for i, j in ((0, 1), (0, 2), (0, 3), (1, 2), (2, 3))))"
+        hints:
+          - アから先にぬろう。
+          - イ、ウ、エは、それぞれ何通りかな。
+          - じゅんにかけていこう。
+        paths:
+          - [ア 4 通り, イ 3 通り, ウ 2 通り, エ 2 通り, 4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り]

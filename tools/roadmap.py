@@ -112,12 +112,12 @@ def expand(unit):
 
 
 def run_check(item, fig):
-    """問題の check 式を評価する。fig は図の文字列、n(c) は図の中の c の数。"""
+    """問題の check 式を評価する。fig は図の文字列、n(c) は図の中の c の数。bal は天秤（balance、D-042）。"""
     # 総当たりで確かめられるように、計算の部品（math、itertools、fractions）も使える
     import fractions
     import itertools
     import math
-    env = {"__builtins__": {}, "fig": fig, "n": lambda c: fig.count(c), "min": min, "max": max, "len": len,
+    env = {"__builtins__": {}, "fig": fig, "bal": item.get("balance"), "n": lambda c: fig.count(c), "min": min, "max": max, "len": len,
            "sorted": sorted, "sum": sum, "range": range, "abs": abs, "all": all, "any": any, "set": set,
            "divmod": divmod, "pow": pow, "math": math, "itertools": itertools, "Fraction": fractions.Fraction}
     return eval(item["check"], env)
@@ -255,6 +255,12 @@ def check(data, problems):
                             errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
+                if "balance" in item:
+                    # 天秤（D-042）：{left, right, tilt: left|right|level}、または その並び
+                    bs = item["balance"] if isinstance(item["balance"], list) else [item["balance"]]
+                    for b in bs:
+                        if not isinstance(b, dict) or b.get("tilt") not in ("left", "right", "level") or not ({"left", "right"} <= set(b)):
+                            errors.append(f"{where}: balance は {{left, right, tilt: left|right|level}} にする")
                 if "svg" in item:
                     # SVG の図（D-040）：<svg> で始まり viewBox がある。script、on…= の属性、外への参照は使わない
                     s = str(item["svg"])

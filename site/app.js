@@ -16,6 +16,49 @@
   const $ = (s, el = document) => el.querySelector(s);
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   const lc = id => `--c: var(--lane-${id})`;
+  // 問題の文の数式の見せ方（D-042）：1 文字の小文字（x、a、n）は斜体のセリフ体にして × と見分け、
+  // 3/4 や x/2 は分子と分母を上下に重ねる。数のすぐ後に空白をはさむ 1 文字（5 m、300 g）は単位とみて変えない。
+  // 書き方（3/4、3x）は変えないので、答え合わせ、check の式、鍵盤はそのまま
+  const FRAC = /(?<![\w.\/□])(\d+|[a-z]|□)\/(\d+|[a-z]|□)(?![\w.\/□])|[A-Za-z]+/g;
+  function fmt(s) {
+    s = String(s ?? '');
+    const v = x => /^[a-z]$/.test(x) ? `<i class="v">${x}</i>` : esc(x);
+    let out = '', last = 0, m;
+    FRAC.lastIndex = 0;
+    while ((m = FRAC.exec(s))) {
+      out += esc(s.slice(last, m.index));
+      if (m[1] !== undefined) out += `<span class="frac" role="math" aria-label="${esc(m[2])}ぶんの${esc(m[1])}"><span>${v(m[1])}</span><span>${v(m[2])}</span></span>`;
+      else {
+        const w = m[0], before = s.slice(Math.max(0, m.index - 2), m.index), after = s[m.index + w.length] || '';
+        out += w.length === 1 && /[a-z]/.test(w) && !/\d\s$/.test(before) && after !== '/' && !before.endsWith('/') ? `<i class="v">${w}</i>` : esc(w);
+      }
+      last = FRAC.lastIndex;
+    }
+    return out + esc(s.slice(last));
+  }
+  // 天秤（D-042）：{left, right, tilt: left|right|level}。left と right は皿にのせる物（空白で区切れば語ごと、なければ 1 字ずつ）。
+  // 並びにすると横に並べる。重い側の皿が下がる
+  const seg = s => { s = String(s ?? ''); if (/\s/.test(s.trim())) return s.trim().split(/\s+/);
+    return window.Intl && Intl.Segmenter ? [...new Intl.Segmenter('ja', { granularity: 'grapheme' }).segment(s)].map(x => x.segment) : Array.from(s); };
+  function balanceSvg(b) {
+    const a = b.tilt === 'left' ? 1 : b.tilt === 'right' ? -1 : 0, th = a * .17, cx = 130, cy = 62, L = 98;
+    const ends = [[cx - L * Math.cos(th), cy + L * Math.sin(th)], [cx + L * Math.cos(th), cy - L * Math.sin(th)]];
+    const pan = ([x, y], items) => {
+      const py = y + 36, ts = seg(items), per = 4, rows = Math.ceil(ts.length / per) || 1;
+      const goods = ts.map((tk, i) => {
+        const r = Math.floor(i / per), k = i % per, n = Math.min(per, ts.length - r * per), big = [...tk].length <= 2;
+        return `<text x="${x + (k - (n - 1) / 2) * 23}" y="${py - 6 - r * 23}" font-size="${big ? 21 : 13}" text-anchor="middle">${esc(tk)}</text>`;
+      }).join('');
+      return `<line x1="${x}" y1="${y}" x2="${x - 36}" y2="${py}"/><line x1="${x}" y1="${y}" x2="${x + 36}" y2="${py}"/>
+        <path class="pan" d="M${x - 44},${py} Q${x},${py + 16} ${x + 44},${py} Z"/>${goods}`;
+    };
+    const label = `てんびん：ひだり ${b.left || ''}、みぎ ${b.right || ''}、${a > 0 ? 'ひだりが さがる' : a < 0 ? 'みぎが さがる' : 'つりあう'}`;
+    return `<svg class="balance" viewBox="0 0 260 168" role="img" aria-label="${esc(label)}">
+      <path class="base" d="M${cx - 44},160 h88 l-10,-8 h-68 Z"/><line x1="${cx}" y1="${cy}" x2="${cx}" y2="152"/>
+      <line class="beam" x1="${ends[0][0]}" y1="${ends[0][1]}" x2="${ends[1][0]}" y2="${ends[1][1]}"/><circle cx="${cx}" cy="${cy}" r="4.5"/>
+      ${pan(ends[0], b.left)}${pan(ends[1], b.right)}</svg>`;
+  }
+  const balanceHtml = b => `<div class="fig fig-svg balances">${(Array.isArray(b) ? b : [b]).map(balanceSvg).join('')}</div>`;
   const localDate = (d = new Date()) => d.toLocaleDateString('sv-SE');
   const addDays = n => { const d = new Date(); d.setDate(d.getDate() + n); return localDate(d); };
 
@@ -993,18 +1036,18 @@
         <div class="path">${p.map((x, j) => {
           const t = i * .7 + j * .28;
           return (j ? `<span class="link" style="animation-delay:${t - .1}s"></span>` : '') +
-            `<span class="stn" style="animation-delay:${t}s">${esc(x)}</span>`;
+            `<span class="stn" style="animation-delay:${t}s">${fmt(x)}</span>`;
         }).join('')}</div></div>`).join('')}</div>`;
   }
   function parentHtml(it) {
     if (!prefs.parent) return '';
     if (it.part === '見本') return '';
-    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${esc(it.explain)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(esc).join(' → ')}`).join('')}
+    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${fmt(it.explain)}
+      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmt).join(' → ')}`).join('')}
       <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
-    return `<div class="parent"><b>こたえ</b> ${esc(it.answer)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(esc).join(' → ')}`).join('')}
-      ${it.note ? `<br><b>見どころ</b> ${esc(it.note)}` : ''}
+    return `<div class="parent"><b>こたえ</b> ${fmt(it.answer)}
+      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmt).join(' → ')}`).join('')}
+      ${it.note ? `<br><b>見どころ</b> ${fmt(it.note)}` : ''}
       <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
   }
   function drawItem() {
@@ -1022,11 +1065,12 @@
     const longest = it.figure ? Math.max(...String(it.figure).split('\n').map(l => Array.from(l).length)) : 0;
     // 図：文字の図（figure）と、線や形の図（svg、D-040）。svg は地図の問題ファイルに書いたものだけを出す（道具が確かめる）
     const fig = (it.figure ? `<div class="fig" style="--n:${longest}" aria-label="え">${esc(it.figure)}</div>` : '')
-      + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '');
+      + (it.svg ? `<div class="fig fig-svg" role="img" aria-label="ず">${it.svg}</div>` : '')
+      + (it.balance ? balanceHtml(it.balance) : '');
     let body;
     if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${esc(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
       const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
         : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
         : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
@@ -1038,24 +1082,24 @@
       body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
     } else if (it.part === '見本') {
-      body = `${fig}<p class="explain">${esc(it.explain)}</p>
+      body = `${fig}<p class="explain">${fmt(it.explain)}</p>
         <div class="actions"><button class="pill solid" data-act="next" type="button">わかった</button></div>`;
     } else if (s.solved) {
-      body = `${fig}<div class="feedback">できた！ こたえは <b>${esc(it.answer)}</b></div>${pathsHtml(it)}
+      body = `${fig}<div class="feedback">できた！ こたえは <b>${fmt(it.answer)}</b></div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
     } else {
       const input = it.choices
-        ? `<div class="choices">${it.choices.map(c => `<button class="choice" data-choice="${esc(c)}" type="button">${esc(c)}</button>`).join('')}</div>`
-        : `<div class="answer-box"><div class="display" id="display">${esc(s.entry) || '？'}</div>
+        ? `<div class="choices">${it.choices.map(c => `<button class="choice" data-choice="${esc(c)}" type="button">${fmt(c)}</button>`).join('')}</div>`
+        : `<div class="answer-box"><div class="display" id="display">${fmt(s.entry) || '？'}</div>
             <div class="pad${padKeys(s.id).length ? ' wide' : ''}">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ...padKeys(s.id)].map(k => `<button data-key="${k}" type="button">${k}</button>`).join('')}
               <button data-key="del" type="button" aria-label="ひとつ けす">←</button>
               <button class="ok" data-key="ok" type="button">こたえる</button></div></div>`;
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${esc(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
       body = `${fig}${input}<div class="feedback" id="fb"></div><div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card">
-      <span class="part">${esc(it.part)}</span><p class="q">${esc(it.text)}</p>${body}${parentHtml(it)}</article>`;
+      <span class="part">${esc(it.part)}</span><p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
   }
   function submit(val) {
     const s = session, it = s.items[s.idx];
@@ -1172,7 +1216,7 @@
       Music.tap();
       s.entry = k === 'del' ? s.entry.slice(0, -1) : (s.entry + k).slice(0, padMax(s.id));
       const disp = $('#display');
-      if (disp) disp.textContent = s.entry || '？';
+      if (disp) disp.innerHTML = fmt(s.entry) || '？';
       return;
     }
     const act = t.dataset.act;
@@ -1196,7 +1240,7 @@
     else if (e.key === 'Enter') { return submit(session.entry); }
     else return;
     const disp = $('#display');
-    if (disp) disp.textContent = session.entry || '？';
+    if (disp) disp.innerHTML = fmt(session.entry) || '？';
   });
   document.addEventListener('pointerdown', () => Music.unlock());
   document.addEventListener('click', e => { if (e.target.closest('a[href^="#"], .icon')) Music.tap(); });

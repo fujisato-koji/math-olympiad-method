@@ -586,12 +586,12 @@ units:
   - {id: C-004, title: 道順を数える, stage: 2, level: 2, region: kazoekata, needs: [C-003, N-005], days: 5}
   - {id: G-005, title: 長さとまわりの長さ, stage: 2, level: 2, region: hakaru, needs: [G-002, N-007], days: 5}
   - {id: G-006, title: 直角と平行、三角形と四角形, stage: 2, level: 2, region: hakaru, needs: [G-002], days: 5}
-  - {id: G-007, title: 立方体と展開図, stage: 2, level: 2, region: katachi, needs: [G-003], days: 6}
+  - {id: G-007, title: 立方体と展開図, stage: 2, level: 2, region: katachi, needs: [G-003, N-005], days: 6}
   - {id: L-003, title: 本当とうその推理, stage: 2, level: 2, region: suiri, needs: [L-002], days: 5}
   - {id: L-004, title: 取り合いゲーム, stage: 2, level: 2, region: suiri, needs: [N-003], days: 6}
   - {id: N-059, title: 時刻と時間, stage: 2, level: 2, region: kazu, needs: [N-006, N-007], days: 5}
   - {id: N-060, title: お金の計算, stage: 2, level: 2, region: keisan, needs: [N-007, N-009], days: 4}
-  - {id: G-046, title: 長さ・重さ・かさの単位と測定, stage: 2, level: 2, region: hakaru, needs: [G-005, N-007], days: 5}
+  - {id: G-046, title: 長さ・重さ・かさの単位と測定, stage: 2, level: 2, region: hakaru, needs: [G-005, N-007, N-009], days: 5}
   - {id: S-027, title: 表とグラフ（読み方と整理）, stage: 2, level: 2, region: data, needs: [N-006], days: 5}
   - {id: F-001, title: 収入・支出と残高（こづかい帳）, stage: 2, level: 2, region: risoku, needs: [N-060], days: 4}
   - {id: W-001, title: 石と砂と土の観察（粒の大きさ・色・かたさで分ける）, stage: 2, level: 1, region: ganseki, needs: [], days: 5}
@@ -631,10 +631,10 @@ units:
   - {id: N-018, title: 公約数と公倍数, stage: 3, level: 2, region: seisu, needs: [N-017], days: 6}
   - {id: N-019, title: 分数の計算（約分と通分）, stage: 3, level: 2, region: keisan, needs: [N-016, N-018], days: 8}
   - {id: N-020, title: 小数, stage: 3, level: 2, region: keisan, needs: [N-009, N-014, N-016], days: 5}
-  - {id: N-021, title: 素数と素因数分解、素数はいくらでもある（主張）, stage: 3, level: 2, region: seisu, needs: [N-017, A-009], days: 6}
-  - {id: N-022, title: あまりの性質, stage: 3, level: 2, region: seisu, needs: [N-017], days: 6}
-  - {id: N-023, title: 床関数（ガウス記号、整数の部分）, stage: 3, level: 2, region: seisu, needs: [N-014, N-022], days: 5}
-  - {id: N-024, title: 約数の個数と和、階乗の素因数の個数（割り算のくり返し）, stage: 3, level: 2, region: seisu, needs: [N-021, C-005, A-009], days: 5}
+  - {id: N-021, title: 素数と素因数分解、素数はいくらでもある（主張）, stage: 3, level: 2, region: seisu, needs: [N-017, A-009, N-009], days: 6}
+  - {id: N-022, title: あまりの性質, stage: 3, level: 2, region: seisu, needs: [N-017, N-009, N-015], days: 6}
+  - {id: N-023, title: 床関数（ガウス記号、整数の部分）, stage: 3, level: 2, region: seisu, needs: [N-014, N-022, N-009, N-020], days: 5}
+  - {id: N-024, title: 約数の個数と和、階乗の素因数の個数（割り算のくり返し）, stage: 3, level: 2, region: seisu, needs: [N-021, C-005, A-009, N-009], days: 5}
   - {id: N-025, title: n 進法, stage: 3, level: 2, region: seisu, needs: [N-009, N-014, A-009], days: 5, measure: true}
   - {id: N-026, title: 分数の計算のくふう, stage: 3, level: 2, region: keisan, needs: [N-019, N-018], days: 6, measure: true}
   - {id: A-003, title: 図にして考える（線分図）, stage: 3, level: 2, region: houteishiki, needs: [A-002, N-013, N-014], days: 6}
@@ -645,16 +645,16 @@ units:
   - {id: A-008, title: 規則性と群数列, stage: 3, level: 2, region: shiki, needs: [A-004, N-019], days: 6}
   - {id: A-009, title: 累乗と指数法則, stage: 3, level: 2, region: shiki, needs: [N-013, N-074], days: 5}
   - {id: C-005, title: 和の法則と積の法則, stage: 3, level: 2, region: kazoekata, needs: [C-003, N-013], days: 6}
-  - {id: C-006, title: 並べ方（順列）, stage: 3, level: 2, region: kazoekata, needs: [C-005], days: 6}
-  - {id: C-007, title: 選び方（組合せ）, stage: 3, level: 2, region: kazoekata, needs: [C-006, N-014], days: 6}
+  - {id: C-006, title: 並べ方（順列）, stage: 3, level: 2, region: kazoekata, needs: [C-005, N-015], days: 6}
+  - {id: C-007, title: 選び方（組合せ）, stage: 3, level: 2, region: kazoekata, needs: [C-006, N-014, N-015, N-075], days: 6}
   - {id: C-008, title: 重なりを数える（ベン図）, stage: 3, level: 2, region: kazoekata, needs: [C-005], days: 5}
   - {id: C-009, title: 前の結果から数える（漸化式の入口）, stage: 3, level: 2, region: kazoekata, needs: [C-005, C-004], days: 6}
-  - {id: C-010, title: 塗り分け, stage: 3, level: 2, region: kazoekata, needs: [C-006], days: 5}
+  - {id: C-010, title: 塗り分け, stage: 3, level: 2, region: kazoekata, needs: [C-006, N-015], days: 5}
   - {id: C-011, title: 確率の入口（場合の数の比）, stage: 3, level: 2, region: kakuritsu, needs: [C-007, A-005], days: 6}
   - {id: C-012, title: 一筆書きとグラフ, stage: 3, level: 2, region: graph, needs: [L-005], days: 5}
-  - {id: G-008, title: 面積, stage: 3, level: 2, region: hakaru, needs: [G-006, N-013, G-005, N-014], days: 8}
+  - {id: G-008, title: 面積, stage: 3, level: 2, region: hakaru, needs: [G-006, N-013, G-005, N-014, G-046], days: 8}
   - {id: G-009, title: 角度, stage: 3, level: 2, region: hakaru, needs: [G-006, N-009, N-014], days: 6}
-  - {id: G-010, title: 円とおうぎ形, stage: 3, level: 2, region: hakaru, needs: [G-008, N-020, G-009, N-019], days: 6}
+  - {id: G-010, title: 円とおうぎ形, stage: 3, level: 2, region: hakaru, needs: [G-008, N-020, G-009, N-019, N-077], days: 6}
   - {id: G-011, title: 体積と表面積, stage: 3, level: 2, region: hakaru, needs: [G-007, G-008, G-010], days: 6}
   - {id: G-012, title: 等積変形と面積比, stage: 3, level: 2, region: hakaru, needs: [G-008, A-005], days: 8}
   - {id: G-013, title: 拡大と縮小（相似の入口）, stage: 3, level: 2, region: hakaru, needs: [G-008, A-005], days: 8}

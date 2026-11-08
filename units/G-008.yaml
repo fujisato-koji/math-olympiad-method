@@ -1,0 +1,881 @@
+# G-008 面積
+#
+# 書き方は N-001 の頭の注のとおり。
+# 面積は「1 辺が 1 cm の正方形（1 cm²）の いくつ分」。マス目の図の 🟦 1 つを 1 cm² とする（G-005 のマスに長さの単位を付けた形）。
+# 長さの単位 cm・m は名前として使う（G-046 は前提にないので、mm・cm・m の換算や、m² と cm² の換算は扱わない）。m² は m で測る広さにだけ使う。
+# 図は svg（D-040）。図の長さの文字が正しく、図そのものは長さの比をおおよそ合わせた。高さは点線、直角のしるしを付けた。
+#   半分のマスがある図は、点線の方眼（1 目 1 cm）の上に形を塗った。
+# 前提の計算は N-013（九九）と N-014（九九の範囲のわり算）、たし算・ひき算は N-007（100 まで）。面積の答えは 100 まで。
+#   三角形の「÷ 2」は、底辺か高さの一方を偶数にして、先に 2 でわる道（6 ÷ 2 × 5）でも九九で計算できるようにした。
+#   三角形から底辺や高さを求める問題は、面積を 2 回たして 2 倍にする（15 + 15 = 30）。
+# 平行四辺形・三角形の高さは「底辺に直角な線の長さ」。垂直という言葉は使わない。台形は挑戦で、2 つの三角形に分けて求めるだけにした（公式は使わない）。
+# 円の面積は G-010、等積変形と面積比は G-012 で扱う。
+# 地図に plan がないので既定の並び（導入・練習 4 日・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 面積と cm²（数える）　2 日目 長方形と正方形　3 日目 組み合わせた形（分ける、ひく）　4 日目 平行四辺形
+#   5 日目 三角形　6 日目 わけ（長方形、平行四辺形、三角形の公式）　7 日目 G-005（まわりの長さ）・G-006（形）・N-014 と混ぜる　8 日目 確認
+# check：マス目の図は n('🟦')、半分のマスは「全部入るマス + 半分のマスの数 ÷ 2」、svg の図は面積の式。方眼の上の斜めの形は、頂点の座標から面積を出す式（座標の公式）。
+
+id: G-008
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 広さのことを面積といいます。🟦 1 つは、1 辺が 1 cm の正方形です。この形の面積を考えよう。
+        figure: "🟦🟦🟦🟦\n🟦🟦🟦🟦\n🟦🟦🟦🟦"
+        explain: 1 辺が 1 cm の正方形の面積を 1 cm²（1 平方センチメートル）といいます。面積は、1 cm² の正方形の いくつ分かで表します。この形は 🟦 が 12 こ分なので、面積は 12 cm² です。
+      - part: 思い出す
+        text: まわりの長さは何マスですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦\n🟦⬜⬜\n🟦⬜⬜"
+        answer: 12
+        check: "(lambda g: sum(1 for r in range(len(g)) for c in range(len(g[r])) if g[r][c] != '⬜' for dr, dc in ((0, 1), (1, 0), (0, -1), (-1, 0)) if not (0 <= r + dr < len(g) and 0 <= c + dc < len(g[r + dr]) and g[r + dr][c + dc] != '⬜')))(fig.splitlines())"
+        hints:
+          - 形のふちを、指で 1 しゅうなぞろう。
+          - 内がわの線は数えないよ。
+          - かどで曲がるところで、数えわすれがないようにしよう。
+        paths:
+          - [上 3、右 1、内がわの横 2、内がわのたて 2、下 1、左 3, 3 + 1 + 2 + 2 + 1 + 3 = 12, 12 マス]
+          - [へこみを外へ出すと 3 マスと 3 マスの正方形, 3 + 3 + 3 + 3 = 12]
+      - part: 思い出す
+        text: 7 × 6 はいくつですか。
+        answer: 42
+        check: "7 * 6"
+        hints:
+          - 7 のだんの九九を思い出そう。
+          - 7 × 5 = 35 だね。
+          - 35 に 7 をたそう。
+        paths:
+          - [しちろく, 42]
+          - [7 × 5 = 35, 35 + 7 = 42]
+      - part: 今日
+        text: 🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦🟦\n🟦🟦⬜⬜\n🟦🟦⬜⬜"
+        answer: 8
+        check: "n('🟦')"
+        hints:
+          - 🟦 を 1 つずつ数えよう。
+          - 上のだんから順に数えよう。
+          - ⬜ は数えないよ。
+        paths:
+          - [上のだん 4 こ, 2 だんめ 2 こ, 3 だんめ 2 こ, 4 + 2 + 2 = 8, 8 cm²]
+      - part: 今日
+        text: 🟦 の形と 🟥 の形では、どちらの面積が広いですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦🟦⬜🟥🟥🟥\n🟦🟦🟦🟦⬜🟥🟥🟥\n⬜⬜⬜⬜⬜🟥🟥🟥"
+        choices: [🟦, 🟥, 同じ]
+        answer: 🟥
+        check: "'🟦' if n('🟦') > n('🟥') else ('🟥' if n('🟥') > n('🟦') else '同じ')"
+        hints:
+          - 形の長さだけでは、広さは決まらないね。
+          - それぞれ、1 cm² の正方形が何こ分かを数えよう。
+          - 数が多いほうが広いよ。
+        paths:
+          - [🟦 は 4 + 4 = 8 こ, 🟥 は 3 + 3 + 3 = 9 こ, 🟥 が広い]
+        note: 🟦 のほうが横に長いので 🟦 を選びやすい。広さは 1 cm² のいくつ分で比べる。
+      - part: 今日
+        text: 点線の 1 目は 1 cm です。三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="72" y1="118" x2="72" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96" y1="118" x2="96" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144" y1="118" x2="144" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="168" y1="118" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="118" x2="168" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="94" x2="168" y2="94" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="70" x2="168" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="46" x2="168" y2="46" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="22" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="72,118 168,118 72,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 8
+        check: "(3 + 2 + 1) + 4 // 2"
+        hints:
+          - ぜんぶ入っているマスを数えよう。
+          - ななめの線で半分に切られたマスは、いくつあるかな。
+          - 半分のマス 2 つで、1 cm² になるよ。
+        paths:
+          - [ぜんぶ入るマス 3 + 2 + 1 = 6, 半分のマスが 4 つで 2 cm², 6 + 2 = 8, 8 cm²]
+          - [4 × 4 の正方形を半分にした形, 16 の半分で 8 cm²]
+        note: 半分のマスを 1 つと数えて 10 と答えやすい。
+      - part: 挑戦
+        text: 1 cm² の正方形を 12 こ、すき間なくならべて長方形をつくります。たてと横の並べ方は何通りありますか。たてと横を入れかえたものは同じとします。
+        answer: 3
+        check: "sum(1 for a in range(1, 13) for b in range(a, 13) if a * b == 12)"
+        hints:
+          - 1 だんに 12 こ並べると、1 つできるね。
+          - 2 だんにすると、1 だんに何こずつかな。
+          - □ × △ = 12 になる九九をさがそう。
+        paths:
+          - [1 だん 12 こ, 2 だん 6 こ, 3 だん 4 こ, 4 だん 3 こは 3 だん 4 こと同じ, 3 通り]
+        note: 4 だん 3 こ、6 だん 2 こまで数えて 6 通りと答えやすい。たてと横を入れかえたものは同じとした。
+    extra:
+      - part: 今日
+        text: 🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。
+        figure: "🟦🟦⬜⬜\n🟦🟦🟦🟦\n🟦🟦🟦🟦"
+        answer: 10
+        check: "n('🟦')"
+        hints:
+          - 🟦 を 1 つずつ数えよう。
+          - 上のだんから順に数えよう。
+          - ⬜ は数えないよ。
+        paths:
+          - [2 + 4 + 4 = 10, 10 cm²]
+      - part: 今日
+        text: 点線の 1 目は 1 cm です。家の形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="152" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="86" x2="152" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="54" x2="152" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="22" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="88,118 152,118 152,54 120,22 88,54" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 5
+        check: "2 * 2 + 2 // 2"
+        hints:
+          - 下の正方形の部分は何 cm² かな。
+          - やねの部分には、半分のマスがいくつあるかな。
+          - 半分のマス 2 つで 1 cm² だよ。
+        paths:
+          - [下の正方形は 4 cm², やねは半分のマス 2 つで 1 cm², 4 + 1 = 5, 5 cm²]
+      - part: 今日
+        text: 🟦 の形と 🟥 の形では、どちらの面積が広いですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦⬜🟥🟥\n🟦🟦🟦⬜🟥🟥\n🟦🟦⬜⬜🟥🟥"
+        choices: [🟦, 🟥, 同じ]
+        answer: 🟦
+        check: "'🟦' if n('🟦') > n('🟥') else ('🟥' if n('🟥') > n('🟦') else '同じ')"
+        hints:
+          - それぞれ、1 cm² の正方形が何こ分かを数えよう。
+          - 🟦 は 3、3、2 と並んでいるね。
+          - 数が多いほうが広いよ。
+        paths:
+          - [🟦 は 3 + 3 + 2 = 8 こ, 🟥 は 2 + 2 + 2 = 6 こ, 🟦 が広い]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 長方形の面積を、計算で求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="100" x2="70" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="90" y1="100" x2="90" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="110" y1="100" x2="110" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="130" y1="100" x2="130" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="150" y1="100" x2="150" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="100" x2="170" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="100" x2="170" y2="100" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="80" x2="170" y2="80" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="60" x2="170" y2="60" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="40" x2="170" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="70,100 170,100 170,40 70,40" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="116.5" font-size="13" text-anchor="middle">よこ 5 cm</text><text x="64" y="74.5" font-size="13" text-anchor="end">たて 3 cm</text></svg>'
+        explain: 1 cm² の正方形が、横に 5 こ並んだ列が、たてに 3 列あります。だから 5 × 3 = 15 で 15 こ分、面積は 15 cm² です。長方形の面積 = たて × よこ、正方形の面積 = 1 辺 × 1 辺 で求められます（3 × 5 = 15）。
+      - part: 思い出す
+        text: 🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦🟦🟦\n🟦🟦🟦🟦🟦\n🟦🟦⬜⬜⬜"
+        answer: 12
+        check: "n('🟦')"
+        hints:
+          - 上のだんから順に数えよう。
+          - 1 だんめと 2 だんめは同じ数だね。
+          - ⬜ は数えないよ。
+        paths:
+          - [5 + 5 + 2 = 12, 12 cm²]
+      - part: 思い出す
+        text: 56 ÷ 8 はいくつですか。
+        answer: 7
+        check: "56 // 8"
+        hints:
+          - 8 × □ = 56 になる □ をさがそう。
+          - 8 のだんの九九を思い出そう。
+          - 8 のだんを、8 × 5 = 40 から順に言ってみよう。
+        paths:
+          - [8 × 7 = 56, 7]
+      - part: 今日
+        text: 長方形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="65.1,118 174.9,118 174.9,22 65.1,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="59.1" y="74.5" font-size="13" text-anchor="end">7 cm</text></svg>'
+        answer: 56
+        check: "7 * 8"
+        hints:
+          - 1 cm² の正方形が、横に何こ並ぶかな。
+          - その列が、たてに何列できるかな。
+          - たて × よこ で求めよう。
+        paths:
+          - [たて 7 cm、よこ 8 cm, 7 × 8 = 56, 56 cm²]
+      - part: 今日
+        text: 1 辺が 9 cm の正方形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72,118 168,118 168,22 72,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">9 cm</text><text x="66" y="74.5" font-size="13" text-anchor="end">9 cm</text></svg>'
+        answer: 81
+        check: "9 * 9"
+        hints:
+          - 正方形は、たても横も同じ長さだね。
+          - 1 辺 × 1 辺 で求めよう。
+          - 9 のだんの九九を思い出そう。
+        paths:
+          - [9 × 9 = 81, 81 cm²]
+        note: まわりの長さ（9 + 9 + 9 + 9 = 36）と取りちがえやすい。面積は広さ、まわりは長さ。
+      - part: 今日
+        text: 面積が 42 cm² の長方形があります。たては 6 cm です。横は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="64,118 176,118 176,22 64,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">□ cm</text><text x="58" y="74.5" font-size="13" text-anchor="end">6 cm</text></svg>'
+        answer: 7
+        check: "42 // 6"
+        hints:
+          - たて × よこ = 面積 だったね。
+          - 6 × □ = 42 になる □ をさがそう。
+          - 42 ÷ 6 で求めてもよいよ。
+        paths:
+          - [6 × □ = 42, 42 ÷ 6 = 7, 7 cm]
+      - part: 挑戦
+        text: まわりの長さが 28 cm の正方形があります。この正方形の面積は何 cm² ですか。
+        answer: 49
+        check: "(28 // 4) * (28 // 4)"
+        hints:
+          - 正方形の 4 つの辺は、みんな同じ長さだね。
+          - 1 辺の長さは、28 を 4 つに分けた長さだよ。
+          - 1 辺がわかったら、1 辺 × 1 辺 で面積を求めよう。
+        paths:
+          - [28 ÷ 4 = 7, 1 辺は 7 cm, 7 × 7 = 49, 49 cm²]
+        note: 28 を面積とまちがえたり、28 ÷ 4 の 7 で止まったりしやすい。
+    extra:
+      - part: 今日
+        text: たてが 4 m、横が 9 m のへやの、ゆかの面積は何 m² ですか。1 辺が 1 m の正方形の面積を 1 m² といいます。
+        answer: 36
+        check: "4 * 9"
+        hints:
+          - 長さの単位が m なので、面積の単位は m² だよ。
+          - 長方形の面積は、たて × よこ だね。
+          - 4 × 9 を計算しよう。
+        paths:
+          - [4 × 9 = 36, 36 m²]
+      - part: 今日
+        text: 面積が 64 cm² の正方形の、1 辺の長さは何 cm ですか。
+        answer: 8
+        check: "[k for k in range(1, 10) if k * k == 64][0]"
+        hints:
+          - 1 辺 × 1 辺 = 64 だね。
+          - 同じ数を 2 回かけて 64 になる九九をさがそう。
+          - 5 × 5、6 × 6、7 × 7… と、同じ数のかけ算を順に言ってみよう。
+        paths:
+          - [□ × □ = 64, 8 × 8 = 64, 8 cm]
+      - part: 今日
+        text: たてが 3 cm、横が 6 cm の長方形の面積は何 cm² ですか。
+        answer: 18
+        check: "3 * 6"
+        hints:
+          - 長方形の面積は、たて × よこ だね。
+          - 3 × 6 を計算しよう。
+          - 単位は cm² だよ。
+        paths:
+          - [3 × 6 = 18, 18 cm²]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 長方形を組み合わせた形の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="56,118 184,118 184,86 136,86 136,22 56,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="50" y="74.5" font-size="13" text-anchor="end">6 cm</text><text x="96" y="16.6" font-size="13" text-anchor="middle">5 cm</text><text x="190" y="106.5" font-size="13" text-anchor="start">2 cm</text></svg>'
+        explain: 線をひいて 2 つの長方形に分けます。左は たて 6 cm、横 5 cm で 30 cm²、右下は たて 2 cm、横 3 cm（8 − 5）で 6 cm²。合わせて 36 cm² です。大きな長方形 6 × 8 = 48 cm² から、ない所 4 × 3 = 12 cm² をひいても 36 cm² になります。
+      - part: 思い出す
+        text: たてが 6 cm、横が 9 cm の長方形の面積は何 cm² ですか。
+        answer: 54
+        check: "6 * 9"
+        hints:
+          - 長方形の面積は、たて × よこ だね。
+          - 6 のだんの九九を思い出そう。
+          - 単位は cm² だよ。
+        paths:
+          - [6 × 9 = 54, 54 cm²]
+      - part: 思い出す
+        text: 72 − 35 はいくつですか。
+        answer: 37
+        check: "72 - 35"
+        hints:
+          - 一の位から計算しよう。
+          - 2 から 5 はひけないね。十の位から 1 かりよう。
+          - 十の位は、かしたあとの数から 3 をひこう。
+        paths:
+          - [12 − 5 = 7, 60 − 30 = 30, 37]
+      - part: 今日
+        text: この形の面積は何 cm² ですか。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="52.8,118 187.2,118 187.2,60.4 129.6,60.4 129.6,22 52.8,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">7 cm</text><text x="46.8" y="74.5" font-size="13" text-anchor="end">5 cm</text><text x="91.2" y="16.6" font-size="13" text-anchor="middle">4 cm</text><text x="193.2" y="93.8" font-size="13" text-anchor="start">3 cm</text></svg>'
+        answer: 29
+        check: "7 * 5 - (7 - 4) * (5 - 3)"
+        hints:
+          - 線を 1 本ひいて、2 つの長方形に分けよう。
+          - 分けた長方形の、たてと横の長さを図から求めよう。
+          - 大きな長方形から、ない所をひいてもよいよ。
+        paths:
+          - [左は 5 × 4 = 20, 右下は 3 × 3 = 9, 20 + 9 = 29, 29 cm²]
+          - [大きな長方形 5 × 7 = 35, ない所は 2 × 3 = 6, 35 − 6 = 29]
+        note: 図に書いていない辺（7 − 4 = 3、5 − 3 = 2）を求めずに、書いてある数だけかけてしまいやすい。
+      - part: 今日
+        text: この形の面積は何 cm² ですか。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,102.9 194,102.9 194,37.1 144.7,37.1 144.7,70 95.3,70 95.3,37.1 46,37.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="119.4" font-size="13" text-anchor="middle">9 cm</text><text x="40" y="74.5" font-size="13" text-anchor="end">4 cm</text><text x="70.7" y="31.7" font-size="13" text-anchor="middle">3 cm</text><text x="169.3" y="31.7" font-size="13" text-anchor="middle">3 cm</text><text x="149.7" y="58.1" font-size="13" text-anchor="start">2 cm</text></svg>'
+        answer: 30
+        check: "9 * 4 - (9 - 3 - 3) * 2"
+        hints:
+          - 大きな長方形から、へこんだ所をひくと考えよう。
+          - へこんだ所の横の長さは、9 cm から左右の 3 cm をひいた長さだね。
+          - へこんだ所のたては 2 cm だよ。
+        paths:
+          - [大きな長方形 4 × 9 = 36, へこみの横 9 − 3 − 3 = 3, へこみは 3 × 2 = 6, 36 − 6 = 30]
+          - [左右の 4 × 3 = 12 が 2 つ, まん中の下 2 × 3 = 6, 12 + 12 + 6 = 30]
+      - part: 今日
+        text: 1 辺 6 cm の正方形と 1 辺 4 cm の正方形を、下をそろえてくっつけました。この形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,114.4 194,114.4 194,55.2 134.8,55.2 134.8,25.6 46,25.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="40" y="74.5" font-size="13" text-anchor="end">6 cm</text><text x="200" y="89.4" font-size="13" text-anchor="start">4 cm</text></svg>'
+        answer: 52
+        check: "6 * 6 + 4 * 4"
+        hints:
+          - 2 つの正方形に分けて考えよう。
+          - それぞれの正方形の面積は、1 辺 × 1 辺 だね。
+          - 2 つの面積をたそう。
+        paths:
+          - [6 × 6 = 36, 4 × 4 = 16, 36 + 16 = 52, 52 cm²]
+      - part: 挑戦
+        text: たて 8 m、横 9 m の長方形の花だんに、はば 1 m の道が十字に通っています。花をうえる所（道でない所）の面積は何 m² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="66,118 114,118 114,82 66,82" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="66,70 114,70 114,22 66,22" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="126,118 174,118 174,82 126,82" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="126,70 174,70 174,22 126,22" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="66,118 174,118 174,22 66,22" stroke="currentColor" stroke-width="2" fill="none"/><line x1="114" y1="118" x2="114" y2="82" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="126" y1="118" x2="126" y2="82" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="114" y1="70" x2="114" y2="22" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="126" y1="70" x2="126" y2="22" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="82" x2="114" y2="82" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="126" y1="82" x2="174" y2="82" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="66" y1="70" x2="114" y2="70" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="126" y1="70" x2="174" y2="70" stroke="currentColor" stroke-width="1.2" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">9 m</text><text x="60" y="74.5" font-size="13" text-anchor="end">8 m</text><text x="120" y="17.6" font-size="13" text-anchor="middle">1 m</text><text x="179" y="80.5" font-size="13" text-anchor="start">1 m</text></svg>'
+        answer: 56
+        check: "(9 - 1) * (8 - 1)"
+        hints:
+          - 4 つの長方形を 1 つずつ求めるのは大変だね。
+          - 道を、花だんのはしへ動かしてみよう。花をうえる所の広さは変わらないよ。
+          - 道をはしへよせると、のこりはたて何 m、横何 m の長方形かな。
+        paths:
+          - [道をはしへよせる, のこりは たて 7 m、横 8 m, 7 × 8 = 56, 56 m²]
+          - [ぜんたい 8 × 9 = 72, 道は 8 + 9 − 1 = 16, 72 − 16 = 56]
+        note: 2 本目の道で、道の重なった 1 m² を 2 回ひいて 55 と答えやすい。
+    extra:
+      - part: 今日
+        text: この形の面積は何 cm² ですか。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,107 194,107 194,70 101.5,70 101.5,33 46,33" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="123.5" font-size="13" text-anchor="middle">8 cm</text><text x="40" y="74.5" font-size="13" text-anchor="end">4 cm</text><text x="73.8" y="27.6" font-size="13" text-anchor="middle">3 cm</text><text x="200" y="93" font-size="13" text-anchor="start">2 cm</text></svg>'
+        answer: 22
+        check: "8 * 4 - (8 - 3) * (4 - 2)"
+        hints:
+          - 2 つの長方形に分けよう。
+          - 図に書いていない辺の長さは、ひき算で求めよう。
+          - 大きな長方形から、ない所をひいてもよいよ。
+        paths:
+          - [左は 4 × 3 = 12, 右下は 2 × 5 = 10, 12 + 10 = 22, 22 cm²]
+          - [大きな長方形 4 × 8 = 32, ない所 2 × 5 = 10, 32 − 10 = 22]
+      - part: 今日
+        text: 1 辺 9 cm の正方形のまん中から、1 辺 4 cm の正方形をくりぬきました。のこりの面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M72 118 L168 118 L168 22 L72 22 Z M98.7 91.3 L141.3 91.3 L141.3 48.7 L98.7 48.7 Z" fill-rule="evenodd" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">9 cm</text><text x="120" y="63.2" font-size="13" text-anchor="middle">4 cm</text></svg>'
+        answer: 65
+        check: "9 * 9 - 4 * 4"
+        hints:
+          - 大きな正方形の面積を求めよう。
+          - くりぬいた正方形の面積を求めよう。
+          - 大きいほうから、くりぬいた分をひこう。
+        paths:
+          - [9 × 9 = 81, 4 × 4 = 16, 81 − 16 = 65, 65 cm²]
+      - part: 今日
+        text: かいだんの形の面積は何 cm² ですか。どのだんも、たても横も 2 cm です。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72,118 168,118 168,86 136,86 136,54 104,54 104,22 72,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">6 cm</text><text x="66" y="74.5" font-size="13" text-anchor="end">6 cm</text></svg>'
+        answer: 24
+        check: "6 * 2 + 4 * 2 + 2 * 2"
+        hints:
+          - 横に切って、3 つの長方形に分けよう。
+          - 下のだんは、たて 2 cm、横 6 cm だね。
+          - 3 つの面積をたそう。
+        paths:
+          - [下 2 × 6 = 12, まん中 2 × 4 = 8, 上 2 × 2 = 4, 12 + 8 + 4 = 24]
+          - [1 辺 2 cm の正方形が 6 こ, 4 × 6 = 24]
+
+  - day: 4
+    items:
+      - part: 見本
+        text: 向かい合う 2 組の辺が、どちらも平行な四角形を平行四辺形といいます。面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,107 157,107 194,33 83,33" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="83" y1="33" x2="83" y2="107" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="83,99 75,99 75,107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.5" y="123.5" font-size="13" text-anchor="middle">6 cm</text><text x="87" y="74.5" font-size="13" text-anchor="start">4 cm</text></svg>'
+        explain: 1 つの辺を底辺、底辺と向かい合う辺の間に、底辺に直角にひいた線（点線）の長さを高さといいます。点線で左の三角形を切りとり、右へ動かすと、たて 4 cm、横 6 cm の長方形になります。だから 平行四辺形の面積 = 底辺 × 高さ で、6 × 4 = 24 cm² です。
+      - part: 思い出す
+        text: この形の面積は何 cm² ですか。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="62.4,118 177.6,118 177.6,60.4 139.2,60.4 139.2,22 62.4,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">6 cm</text><text x="56.4" y="74.5" font-size="13" text-anchor="end">5 cm</text><text x="100.8" y="16.6" font-size="13" text-anchor="middle">4 cm</text><text x="183.6" y="93.8" font-size="13" text-anchor="start">3 cm</text></svg>'
+        answer: 26
+        check: "6 * 5 - (6 - 4) * (5 - 3)"
+        hints:
+          - 2 つの長方形に分けよう。
+          - 図に書いていない辺は、ひき算で求めよう。
+          - 大きな長方形から、ない所をひいてもよいよ。
+        paths:
+          - [左は 5 × 4 = 20, 右下は 3 × 2 = 6, 20 + 6 = 26]
+          - [5 × 6 = 30, ない所 2 × 2 = 4, 30 − 4 = 26]
+      - part: 思い出す
+        text: 42 ÷ 7 はいくつですか。
+        answer: 6
+        check: "42 // 7"
+        hints:
+          - 7 × □ = 42 になる □ をさがそう。
+          - 7 のだんの九九を思い出そう。
+          - 7 のだんを、7 × 5 = 35 から順に言ってみよう。
+        paths:
+          - [7 × 6 = 42, 6]
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,96.9 153.6,96.9 194,43.1 86.4,43.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="86.4" y1="43.1" x2="86.4" y2="96.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="86.4,88.9 78.4,88.9 78.4,96.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.8" y="113.5" font-size="13" text-anchor="middle">8 cm</text><text x="90.4" y="74.5" font-size="13" text-anchor="start">4 cm</text><text x="54.2" y="74.5" font-size="13" text-anchor="end">5 cm</text></svg>'
+        answer: 32
+        check: "8 * 4"
+        hints:
+          - 底辺はどこかな。
+          - 高さは、底辺に直角な点線の長さだよ。
+          - ななめの辺の 5 cm は使うかな。
+        paths:
+          - [底辺 8 cm、高さ 4 cm, 8 × 4 = 32, 32 cm²]
+        note: ななめの辺（5 cm）を使って 8 × 5 = 40 としやすい。高さは底辺に直角な長さ。
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,90.2 140.2,90.2 194,49.8 99.8,49.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="99.8" y1="49.8" x2="99.8" y2="90.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="99.8,82.2 91.8,82.2 91.8,90.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="93.1" y="106.7" font-size="13" text-anchor="middle">7 cm</text><text x="103.8" y="74.5" font-size="13" text-anchor="start">3 cm</text><text x="60.9" y="74.5" font-size="13" text-anchor="end">5 cm</text></svg>'
+        answer: 21
+        check: "7 * 3"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは点線の長さだね。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [底辺 7 cm、高さ 3 cm, 7 × 3 = 21, 21 cm²]
+      - part: 今日
+        text: 面積が 54 cm² の平行四辺形があります。底辺は 9 cm です。高さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,110.4 167.1,110.4 194,29.6 72.9,29.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="72.9" y1="29.6" x2="72.9" y2="110.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="72.9,102.4 64.9,102.4 64.9,110.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.5" y="126.9" font-size="13" text-anchor="middle">9 cm</text><text x="76.9" y="74.5" font-size="13" text-anchor="start">□ cm</text></svg>'
+        answer: 6
+        check: "54 // 9"
+        hints:
+          - 底辺 × 高さ = 面積 だったね。
+          - 9 × □ = 54 になる □ をさがそう。
+          - 54 ÷ 9 で求めてもよいよ。
+        paths:
+          - [9 × □ = 54, 54 ÷ 9 = 6, 6 cm]
+      - part: 挑戦
+        text: 平行な 2 本の直線の間に、底辺が 5 cm の平行四辺形 あ、い、う があります。面積がいちばん広いのはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="88.3" x2="230" y2="88.3" stroke="currentColor" stroke-width="1.2" fill="none"/><line x1="10" y1="51.7" x2="230" y2="51.7" stroke="currentColor" stroke-width="1.2" fill="none"/><polygon points="19.2,88.3 65,88.3 74.2,51.7 28.3,51.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="46.7" y="74.9" font-size="14" text-anchor="middle">あ</text><polygon points="83.3,88.3 129.2,88.3 147.5,51.7 101.7,51.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="115.4" y="74.9" font-size="14" text-anchor="middle">い</text><polygon points="175,88.3 220.8,88.3 202.5,51.7 156.7,51.7" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="188.7" y="74.9" font-size="14" text-anchor="middle">う</text><text x="42.1" y="104.9" font-size="13" text-anchor="middle">5 cm</text><text x="106.2" y="104.9" font-size="13" text-anchor="middle">5 cm</text><text x="197.9" y="104.9" font-size="13" text-anchor="middle">5 cm</text></svg>'
+        choices: [あ, い, う, どれも同じ]
+        answer: どれも同じ
+        check: "(lambda S: 'どれも同じ' if S([(0, 0), (5, 0), (6, 4), (1, 4)]) == S([(7, 0), (12, 0), (14, 4), (9, 4)]) == S([(17, 0), (22, 0), (20, 4), (15, 4)]) else 'あ')(lambda P: abs(sum(P[i][0] * P[(i + 1) % 4][1] - P[(i + 1) % 4][0] * P[i][1] for i in range(4))))"
+        hints:
+          - 平行四辺形の面積は、底辺 × 高さ だね。
+          - 3 つとも、底辺は同じ 5 cm だよ。
+          - 高さは、平行な 2 本の直線の間の長さだね。3 つの高さはどうかな。
+        paths:
+          - [底辺はどれも 5 cm, 高さはどれも 2 本の直線の間の長さで同じ, 面積はどれも同じ]
+        note: かたむきが大きい う が広く見えたり、細く見えて せまく見えたりしやすい。底辺と高さが同じなら面積は同じ（G-012 の等積変形の入口）。
+    extra:
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72,118 140.6,118 168,22 99.4,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="99.4" y1="22" x2="99.4" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="99.4,110 91.4,110 91.4,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.3" y="134.6" font-size="13" text-anchor="middle">5 cm</text><text x="103.4" y="74.5" font-size="13" text-anchor="start">7 cm</text></svg>'
+        answer: 35
+        check: "5 * 7"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは点線の長さだね。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [底辺 5 cm、高さ 7 cm, 5 × 7 = 35, 35 cm²]
+      - part: 今日
+        text: 面積が 48 cm² の平行四辺形があります。底辺は 8 cm です。高さは何 cm ですか。
+        answer: 6
+        check: "48 // 8"
+        hints:
+          - 底辺 × 高さ = 面積 だね。
+          - 8 × □ = 48 になる □ をさがそう。
+          - 8 のだんの九九を思い出そう。
+        paths:
+          - [8 × □ = 48, 48 ÷ 8 = 6, 6 cm]
+      - part: 挑戦
+        text: 平行四辺形の面積は何 cm² ですか。高さの点線は、平行四辺形の外にあります。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,114.4 105.2,114.4 194,25.6 134.8,25.6" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="194" y1="25.6" x2="194" y2="114.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="105.2" y1="114.4" x2="194" y2="114.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="194,106.4 186,106.4 186,114.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="75.6" y="131" font-size="13" text-anchor="middle">4 cm</text><text x="198" y="74.5" font-size="13" text-anchor="start">6 cm</text></svg>'
+        answer: 24
+        check: "4 * 6"
+        hints:
+          - 底辺は 4 cm の辺だね。
+          - 高さは、底辺をのばした線と、向かい合う辺の間の、直角な長さだよ。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [底辺 4 cm、高さ 6 cm, 4 × 6 = 24, 24 cm²]
+        note: 高さが形の外にあると、高さがないと思いやすい。底辺をのばした線から測る。
+
+  - day: 5
+    items:
+      - part: 見本
+        text: 三角形の面積を求めよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="48,118 192,118 96,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="96" y1="22" x2="96" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="96,110 88,110 88,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">6 cm</text><text x="100" y="93.8" font-size="13" text-anchor="start">4 cm</text></svg>'
+        explain: 1 つの辺を底辺、向かい合う頂点から底辺に直角にひいた線（点線）の長さを高さといいます。同じ三角形を 2 つ合わせると、底辺 6 cm、高さ 4 cm の平行四辺形になります。三角形はその半分なので、三角形の面積 = 底辺 × 高さ ÷ 2 で、6 × 4 ÷ 2 = 12 cm² です。
+      - part: 思い出す
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,96.9 167.1,96.9 194,43.1 72.9,43.1" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="72.9" y1="43.1" x2="72.9" y2="96.9" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="72.9,88.9 64.9,88.9 64.9,96.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.5" y="113.5" font-size="13" text-anchor="middle">9 cm</text><text x="76.9" y="74.5" font-size="13" text-anchor="start">4 cm</text></svg>'
+        answer: 36
+        check: "9 * 4"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは点線の長さだね。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [9 × 4 = 36, 36 cm²]
+      - part: 思い出す
+        text: 面積が 63 cm² の長方形があります。たては 7 cm です。横は何 cm ですか。
+        answer: 9
+        check: "63 // 7"
+        hints:
+          - たて × よこ = 面積 だね。
+          - 7 × □ = 63 になる □ をさがそう。
+          - 7 のだんの九九を思い出そう。
+        paths:
+          - [7 × □ = 63, 63 ÷ 7 = 9, 9 cm]
+      - part: 今日
+        text: 直角三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,116.2 194,116.2 46,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="46" y1="23.8" x2="46" y2="116.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="46,108.2 54,108.2 54,116.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="132.8" font-size="13" text-anchor="middle">8 cm</text><text x="50" y="93" font-size="13" text-anchor="start">5 cm</text></svg>'
+        answer: 20
+        check: "8 * 5 // 2"
+        hints:
+          - 直角をはさむ 2 つの辺を、底辺と高さにできるよ。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 先に 8 を 2 でわってもよいよ。
+        paths:
+          - [8 × 5 = 40, 40 ÷ 2 = 20, 20 cm²]
+          - [8 ÷ 2 = 4, 4 × 5 = 20]
+        note: 「÷ 2」をわすれて 40 と答えやすい。長方形の半分になっていることを図で確かめる。
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="48,118 192,118 96,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="96" y1="22" x2="96" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="96,110 88,110 88,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">9 cm</text><text x="100" y="93.8" font-size="13" text-anchor="start">6 cm</text></svg>'
+        answer: 27
+        check: "9 * 6 // 2"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは、頂点から底辺に直角な点線の長さだね。
+          - 6 を先に 2 でわると、九九で計算できるよ。
+        paths:
+          - [6 ÷ 2 = 3, 9 × 3 = 27, 27 cm²]
+          - [9 × 6 = 54, 54 ÷ 2 = 27]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。高さの点線は、三角形の外にあります。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="72,118 126.9,118 168,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="168" y1="22" x2="168" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="126.9" y1="118" x2="168" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="168,110 160,110 160,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="99.4" y="134.6" font-size="13" text-anchor="middle">4 cm</text><text x="172" y="74.5" font-size="13" text-anchor="start">7 cm</text></svg>'
+        answer: 14
+        check: "4 * 7 // 2"
+        hints:
+          - 底辺は 4 cm の辺だね。
+          - 高さは、頂点から、底辺をのばした線までの直角な長さだよ。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+        paths:
+          - [4 ÷ 2 = 2, 2 × 7 = 14, 14 cm²]
+          - [4 × 7 = 28, 28 ÷ 2 = 14]
+        note: 高さが外にあると、底辺をのばした分（点線の横）まで底辺に入れやすい。底辺は三角形の辺だけ。
+      - part: 挑戦
+        text: 向かい合う 1 組の辺が平行な四角形を台形といいます。点線で 2 つの三角形に分けて、台形の面積を求めよう。何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="56,118 184,118 152,22 88,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="56" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="88" y1="22" x2="88" y2="118" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><polyline points="88,110 80,110 80,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="120" y="16.6" font-size="13" text-anchor="middle">4 cm</text><text x="92" y="100.1" font-size="13" text-anchor="start">6 cm</text></svg>'
+        answer: 36
+        check: "8 * 6 // 2 + 4 * 6 // 2"
+        hints:
+          - 点線で分けると、三角形が 2 つできるね。
+          - 下の三角形は、底辺 8 cm だよ。高さは何 cm かな。
+          - 上の三角形は、上の辺 4 cm を底辺とみると、高さはやはり 6 cm だよ。
+        paths:
+          - [下の三角形 8 × 6 ÷ 2 = 24, 上の三角形 4 × 6 ÷ 2 = 12, 24 + 12 = 36, 36 cm²]
+        note: 上の三角形の高さが同じ 6 cm になることに気づきにくい。上の辺と下の辺は平行なので、間のはばはどこでも同じ。
+    extra:
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="64,118 176,118 144,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="144" y1="22" x2="144" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="144,110 136,110 136,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">7 cm</text><text x="140" y="93.8" font-size="13" text-anchor="end">6 cm</text></svg>'
+        answer: 21
+        check: "7 * 6 // 2"
+        hints:
+          - 底辺と高さをさがそう。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 先に 6 を 2 でわってもよいよ。
+        paths:
+          - [6 ÷ 2 = 3, 7 × 3 = 21, 21 cm²]
+      - part: 今日
+        text: 面積が 15 cm² の三角形があります。高さは 5 cm です。底辺は何 cm ですか。
+        answer: 6
+        check: "[b for b in range(1, 20) if b * 5 == 15 + 15][0]"
+        hints:
+          - 底辺 × 高さ ÷ 2 = 15 だね。
+          - ÷ 2 する前は、15 の 2 倍で 30 だよ。
+          - □ × 5 = 30 になる □ をさがそう。
+        paths:
+          - [底辺 × 5 は 15 + 15 = 30, □ × 5 = 30, 6 cm]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,107 194,107 144.7,33" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="144.7" y1="33" x2="144.7" y2="107" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="144.7,99 136.7,99 136.7,107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="123.5" font-size="13" text-anchor="middle">6 cm</text><text x="140.7" y="89.3" font-size="13" text-anchor="end">3 cm</text></svg>'
+        answer: 9
+        check: "6 * 3 // 2"
+        hints:
+          - 底辺と高さをさがそう。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 先に 6 を 2 でわってもよいよ。
+        paths:
+          - [6 ÷ 2 = 3, 3 × 3 = 9, 9 cm²]
+
+  - day: 6
+    items:
+      - part: わけ
+        text: 長方形の面積が「たて × よこ」で求められるのはなぜですか。たて 3 cm、横 4 cm の長方形を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="184" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="86" x2="184" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="54" x2="184" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="22" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="56,118 184,118 184,22 56,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">4 cm</text><text x="50" y="74.5" font-size="13" text-anchor="end">3 cm</text></svg>'
+        explain: 例：「1 cm² の正方形が、横に 4 こ並んだ列ができる。その列が、たてに 3 列できる。だから正方形は 4 × 3 = 12 こで、面積は 12 cm²。横の長さが 1 列のこ数、たての長さが列の数になるから、たて × よこ で求められる。」と書ければよい。① 1 列のこ数が横の長さと同じ、② 列の数がたての長さと同じ、の 2 点が書けているかを見る。数えて 12 になることだけで終わったら、「横が 5 cm になったら 1 列は何こ？」と聞いて、長さとこ数の結びつきを言わせる。
+        hints:
+          - 1 cm² の正方形は、横に何こ並ぶかな。
+          - その列は、たてに何列あるかな。
+          - 「横の長さが〜、たての長さが〜だから」と書こう。
+        paths:
+          - [横に 4 こ並ぶ列, たてに 3 列, 4 × 3 = 12 こ, 長さが こ数と列の数になる]
+      - part: わけ
+        text: 平行四辺形の面積が「底辺 × 高さ」で求められるのはなぜですか。底辺 5 cm、高さ 3 cm の平行四辺形を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,107 169.3,107 194,33 70.7,33" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="70.7" y1="33" x2="70.7" y2="107" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="70.7,99 62.7,99 62.7,107" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="107.7" y="123.5" font-size="13" text-anchor="middle">5 cm</text><text x="74.7" y="74.5" font-size="13" text-anchor="start">3 cm</text></svg>'
+        explain: 例：「高さの点線で左の三角形を切りとり、右がわへ動かしてつける。すると、たて 3 cm、横 5 cm の長方形になる。切って動かしただけなので面積は変わらない。長方形の面積は 3 × 5 = 15 cm² なので、平行四辺形も 15 cm²。底辺が長方形の横に、高さが長方形のたてになるから、底辺 × 高さ になる。」と書ければよい。① 切って動かすと長方形になる、② 面積は変わらない、③ 底辺と高さが長方形の横とたてになる、の 3 点を見る。ななめの辺ではなく高さを使うわけ（③）が書けていればなお良い。
+        hints:
+          - 点線で切って、三角形を動かしてみよう。
+          - 動かすと、どんな形になるかな。面積は変わるかな。
+          - できた形の、たてと横は、平行四辺形のどこの長さかな。
+        paths:
+          - [三角形を切って右へ動かす, たて 3 cm 横 5 cm の長方形, 面積は変わらない, 底辺 × 高さ]
+      - part: わけ
+        text: 三角形の面積が「底辺 × 高さ ÷ 2」で求められるのはなぜですか。図の三角形（底辺 5 cm、高さ 3 cm）を例にして、文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,101.7 151.7,101.7 88.3,38.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="151.7,101.7 194,38.3 88.3,38.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="88.3" y1="38.3" x2="88.3" y2="101.7" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="5 4"/><text x="98.9" y="118.3" font-size="13" text-anchor="middle">5 cm</text><text x="92.3" y="87.2" font-size="13" text-anchor="start">3 cm</text></svg>'
+        explain: 例：「同じ三角形をもう 1 つ用意して、回して点線のように合わせると、底辺 5 cm、高さ 3 cm の平行四辺形になる。平行四辺形の面積は 5 × 3 = 15 cm²。三角形はその半分なので 15 ÷ 2 で、底辺 × 高さ ÷ 2 になる。」と書ければよい。① 2 つ合わせると平行四辺形、② 三角形はその半分、の 2 点を見る。15 ÷ 2 の計算（7.5）は小数なので求めなくてよい。長方形の半分になる直角三角形の場合だけで書いたら、「直角がない三角形でも言える？」と聞く。
+        hints:
+          - 同じ三角形を 2 つ合わせると、どんな形になるかな。
+          - その形の面積は、どう求めたかな。
+          - 「三角形は、その〜だから」と書こう。
+        paths:
+          - [同じ三角形を 2 つ合わせる, 底辺 5 cm 高さ 3 cm の平行四辺形, 三角形はその半分, 底辺 × 高さ ÷ 2]
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,99.6 149.6,99.6 194,40.4 90.4,40.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="90.4" y1="40.4" x2="90.4" y2="99.6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="90.4,91.6 82.4,91.6 82.4,99.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="97.8" y="116.1" font-size="13" text-anchor="middle">7 cm</text><text x="94.4" y="74.5" font-size="13" text-anchor="start">4 cm</text><text x="56.2" y="74.5" font-size="13" text-anchor="end">5 cm</text></svg>'
+        answer: 28
+        check: "7 * 4"
+        hints:
+          - 底辺と高さをさがそう。
+          - ななめの辺は使わないよ。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [底辺 7 cm、高さ 4 cm, 7 × 4 = 28, 28 cm²]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,97.8 194,97.8 120,42.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="42.2" x2="120" y2="97.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,89.8 112,89.8 112,97.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="114.3" font-size="13" text-anchor="middle">8 cm</text><text x="124" y="85.6" font-size="13" text-anchor="start">3 cm</text><text x="75" y="74.5" font-size="13" text-anchor="end">5 cm</text><text x="165" y="74.5" font-size="13" text-anchor="start">5 cm</text></svg>'
+        answer: 12
+        check: "8 * 3 // 2"
+        hints:
+          - 底辺と高さはどれかな。
+          - 5 cm の辺は使うかな。
+          - 先に 8 を 2 でわってもよいよ。
+        paths:
+          - [底辺 8 cm、高さ 3 cm, 8 ÷ 2 = 4, 4 × 3 = 12, 12 cm²]
+        note: 5 cm の辺を使って 8 × 5 ÷ 2 = 20 としやすい。底辺に直角な長さが高さ。
+    extra:
+      - part: 今日
+        text: 面積が 45 cm² の長方形があります。横は 9 cm です。たては何 cm ですか。
+        answer: 5
+        check: "45 // 9"
+        hints:
+          - たて × よこ = 面積 だね。
+          - □ × 9 = 45 になる □ をさがそう。
+          - 9 のだんの九九を思い出そう。
+        paths:
+          - [□ × 9 = 45, 45 ÷ 9 = 5, 5 cm]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="65.1,118 174.9,118 133.7,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="133.7" y1="22" x2="133.7" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="133.7,110 125.7,110 125.7,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="129.7" y="93.8" font-size="13" text-anchor="end">7 cm</text></svg>'
+        answer: 28
+        check: "8 * 7 // 2"
+        hints:
+          - 底辺と高さをさがそう。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 先に 8 を 2 でわってもよいよ。
+        paths:
+          - [8 ÷ 2 = 4, 4 × 7 = 28, 28 cm²]
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,116.2 157,116.2 194,23.8 83,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="83" y1="23.8" x2="83" y2="116.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="83,108.2 75,108.2 75,116.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.5" y="132.8" font-size="13" text-anchor="middle">6 cm</text><text x="87" y="74.5" font-size="13" text-anchor="start">5 cm</text></svg>'
+        answer: 30
+        check: "6 * 5"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは点線の長さだね。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [6 × 5 = 30, 30 cm²]
+
+  - day: 7
+    items:
+      - part: 思い出す
+        text: たてが 7 cm、横が 9 cm の長方形の、まわりの長さは何 cm ですか。
+        answer: 32
+        check: "7 + 9 + 7 + 9"
+        hints:
+          - まわりの長さは、4 つの辺の長さをたした長さだね。
+          - たてと横が 2 つずつあるよ。
+          - 7 + 9 を先に求めよう。
+        paths:
+          - [7 + 9 = 16, 16 + 16 = 32, 32 cm]
+        note: 面積の 7 × 9 = 63 と取りちがえやすい。
+      - part: 思い出す
+        text: 長方形を、かどからかどへの線で 2 つに分けます。どんな三角形が 2 つできますか。
+        choices: [直角三角形, 正方形, 長方形]
+        answer: 直角三角形
+        hints:
+          - 長方形のかどは、みんな直角だね。
+          - 分けたあと、それぞれの形の辺はいくつかな。
+          - 直角のかどがのこっているかな。
+        paths:
+          - [辺が 3 つで三角形, 長方形の直角が 1 つずつのこる, 直角三角形]
+      - part: 今日
+        text: まわりの長さが 20 cm の長方形をつくります。たても横も cm の整数です。面積がいちばん広くなるのは、たてが何 cm のときですか。
+        answer: 5
+        check: "max(range(1, 10), key=lambda a: a * (10 - a))"
+        hints:
+          - たて + 横 は、まわりの長さの半分だね。
+          - たてが 1、2、3… のとき、横と面積を表にしよう。
+          - 面積がいちばん大きいのはどこかな。
+        paths:
+          - [たて + 横 = 10, 1 × 9 = 9、2 × 8 = 16、3 × 7 = 21、4 × 6 = 24、5 × 5 = 25, たて 5 cm]
+        note: まわりが同じなら面積も同じと思いやすい。表にすると、正方形に近いほど広いことが見える。
+      - part: 今日
+        text: 面積が 36 cm² の正方形の、まわりの長さは何 cm ですか。
+        answer: 24
+        check: "[k for k in range(1, 10) if k * k == 36][0] * 4"
+        hints:
+          - まず、1 辺の長さを求めよう。
+          - 同じ数を 2 回かけて 36 になる九九は何かな。
+          - 1 辺がわかったら、4 つの辺をたそう。
+        paths:
+          - [6 × 6 = 36 で 1 辺 6 cm, 6 + 6 + 6 + 6 = 24, 24 cm]
+      - part: 今日
+        text: たて 6 cm、横 8 cm の長方形を、かどからかどへの線で 2 つの三角形に分けました。三角形 1 つの面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="56,118 184,118 184,22 56,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="56,118 184,22" stroke="currentColor" stroke-width="2" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="50" y="74.5" font-size="13" text-anchor="end">6 cm</text></svg>'
+        answer: 24
+        check: "6 * 8 // 2"
+        hints:
+          - 2 つの三角形は、同じ大きさかな。
+          - 長方形の面積を求めよう。
+          - 三角形 1 つは、長方形の半分だね。
+        paths:
+          - [長方形は 6 × 8 = 48, 半分で 24, 24 cm²]
+          - [底辺 8 cm、高さ 6 cm の直角三角形, 8 ÷ 2 × 6 = 24]
+      - part: 挑戦
+        text: 点線の 1 目は 1 cm です。方眼の上に、ななめの正方形をかきました。この正方形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="72" y1="118" x2="72" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96" y1="118" x2="96" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144" y1="118" x2="144" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="168" y1="118" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="118" x2="168" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="94" x2="168" y2="94" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="70" x2="168" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="46" x2="168" y2="46" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="22" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="96,118 168,94 144,22 72,46" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 10
+        check: "(lambda P: abs(sum(P[i][0] * P[(i + 1) % 4][1] - P[(i + 1) % 4][0] * P[i][1] for i in range(4))) // 2)([(1, 0), (4, 1), (3, 4), (0, 3)])"
+        hints:
+          - マスを数えるのはむずかしいね。まわりの大きな正方形を考えよう。
+          - 大きな正方形から、すみの 4 つの直角三角形をひこう。
+          - すみの三角形 2 つを合わせると、たて 1 cm、横 3 cm の長方形になるよ。
+        paths:
+          - [大きな正方形 4 × 4 = 16, すみの三角形 2 つで 1 × 3 = 3, 4 つで 6, 16 − 6 = 10, 10 cm²]
+        note: 辺の長さが整数でない正方形でも、ひき算で面積が求められる（G-019 の三平方の定理につながる）。
+    extra:
+      - part: 今日
+        text: 面積が 54 cm² の長方形があります。たては 6 cm です。まわりの長さは何 cm ですか。
+        answer: 30
+        check: "6 + 54 // 6 + 6 + 54 // 6"
+        hints:
+          - まず、横の長さを求めよう。
+          - 6 × □ = 54 になる □ は何かな。
+          - たてと横がわかったら、4 つの辺をたそう。
+        paths:
+          - [54 ÷ 6 = 9 で横 9 cm, 6 + 9 = 15, 15 + 15 = 30, 30 cm]
+      - part: 今日
+        text: 🟦 4 まいを 1 列にならべた形と、2 だん 2 列にならべた形があります。まわりの長さが長いのはどちらですか。
+        figure: "🟦🟦🟦🟦⬜🟥🟥\n⬜⬜⬜⬜⬜🟥🟥"
+        choices: [🟦, 🟥, 同じ]
+        answer: 🟦
+        check: "'🟦' if 4 + 1 + 4 + 1 > 2 + 2 + 2 + 2 else ('🟥' if 4 + 1 + 4 + 1 < 2 + 2 + 2 + 2 else '同じ')"
+        hints:
+          - 面積は、どちらも 4 cm² で同じだね。
+          - それぞれ、たてと横は何 cm かな。
+          - まわりの長さを求めてくらべよう。
+        paths:
+          - [🟦 は 4 + 1 + 4 + 1 = 10, 🟥 は 2 + 2 + 2 + 2 = 8, 🟦 が長い]
+      - part: 今日
+        text: 1 辺 8 cm の正方形を、かどからかどへの線で 2 つに分けました。三角形 1 つの面積は何 cm² ですか。
+        answer: 32
+        check: "8 * 8 // 2"
+        hints:
+          - 正方形の面積を求めよう。
+          - 2 つの三角形は同じ大きさだね。
+          - 三角形 1 つは、正方形の半分だよ。
+        paths:
+          - [8 × 8 = 64, 半分で 32, 32 cm²]
+
+  - day: 8
+    items:
+      - part: 今日
+        text: 🟦 1 つは 1 cm² です。この形の面積は何 cm² ですか。⬜ は何もない所です。
+        figure: "🟦🟦🟦\n🟦🟦🟦\n🟦🟦🟦\n🟦⬜⬜"
+        answer: 10
+        check: "n('🟦')"
+        hints:
+          - 🟦 を数えよう。
+          - 上の 3 だんは、同じ数ずつ並んでいるね。
+          - ⬜ は数えないよ。
+        paths:
+          - [3 × 3 = 9, 9 + 1 = 10, 10 cm²]
+      - part: 今日
+        text: たてが 6 cm、横が 8 cm の長方形の面積は何 cm² ですか。
+        answer: 48
+        check: "6 * 8"
+        hints:
+          - 長方形の面積は、たて × よこ だね。
+          - 6 × 8 を計算しよう。
+          - 単位は cm² だよ。
+        paths:
+          - [6 × 8 = 48, 48 cm²]
+      - part: 今日
+        text: 面積が 49 cm² の正方形の、1 辺の長さは何 cm ですか。
+        answer: 7
+        check: "[k for k in range(1, 10) if k * k == 49][0]"
+        hints:
+          - 1 辺 × 1 辺 = 49 だね。
+          - 同じ数を 2 回かけて 49 になる九九をさがそう。
+          - 5 × 5、6 × 6… と、同じ数のかけ算を順に言ってみよう。
+        paths:
+          - [7 × 7 = 49, 7 cm]
+      - part: 今日
+        text: この形の面積は何 cm² ですか。かどはみんな直角です。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="58.3,118 181.7,118 181.7,76.9 126.9,76.9 126.9,22 58.3,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="120" y="134.6" font-size="13" text-anchor="middle">9 cm</text><text x="52.3" y="74.5" font-size="13" text-anchor="end">7 cm</text><text x="92.6" y="16.6" font-size="13" text-anchor="middle">5 cm</text><text x="187.7" y="102" font-size="13" text-anchor="start">3 cm</text></svg>'
+        answer: 47
+        check: "9 * 7 - (9 - 5) * (7 - 3)"
+        hints:
+          - 2 つの長方形に分けるか、大きな長方形からひこう。
+          - 図に書いていない辺は、ひき算で求めよう。
+          - 分けた面積をたそう。
+        paths:
+          - [左は 7 × 5 = 35, 右下は 3 × 4 = 12, 35 + 12 = 47, 47 cm²]
+          - [大きな長方形 7 × 9 = 63, ない所 4 × 4 = 16, 63 − 16 = 47]
+      - part: 今日
+        text: 平行四辺形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,100.8 157,100.8 194,39.2 83,39.2" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="83" y1="39.2" x2="83" y2="100.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="83,92.8 75,92.8 75,100.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.5" y="117.4" font-size="13" text-anchor="middle">9 cm</text><text x="87" y="74.5" font-size="13" text-anchor="start">5 cm</text></svg>'
+        answer: 45
+        check: "9 * 5"
+        hints:
+          - 底辺と高さをさがそう。
+          - 高さは点線の長さだね。
+          - 底辺 × 高さ で求めよう。
+        paths:
+          - [9 × 5 = 45, 45 cm²]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="77.3,118 162.7,118 98.7,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="98.7" y1="22" x2="98.7" y2="118" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="98.7,110 90.7,110 90.7,118" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="134.6" font-size="13" text-anchor="middle">8 cm</text><text x="102.7" y="93.8" font-size="13" text-anchor="start">9 cm</text></svg>'
+        answer: 36
+        check: "8 * 9 // 2"
+        hints:
+          - 底辺と高さをさがそう。
+          - 底辺 × 高さ ÷ 2 で求めよう。
+          - 先に 8 を 2 でわってもよいよ。
+        paths:
+          - [8 ÷ 2 = 4, 4 × 9 = 36, 36 cm²]
+      - part: 今日
+        text: 三角形の面積は何 cm² ですか。高さの点線は、三角形の外にあります。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="46,116.2 157,116.2 194,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="194" y1="23.8" x2="194" y2="116.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="157" y1="116.2" x2="194" y2="116.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="194,108.2 186,108.2 186,116.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.5" y="132.8" font-size="13" text-anchor="middle">6 cm</text><text x="198" y="74.5" font-size="13" text-anchor="start">5 cm</text></svg>'
+        answer: 15
+        check: "6 * 5 // 2"
+        hints:
+          - 底辺は 6 cm の辺だね。
+          - 高さは、底辺をのばした線までの直角な長さだよ。
+          - 先に 6 を 2 でわってもよいよ。
+        paths:
+          - [6 ÷ 2 = 3, 3 × 5 = 15, 15 cm²]
+      - part: 挑戦
+        text: 面積が 24 cm² の三角形があります。底辺は 8 cm です。高さは何 cm ですか。
+        answer: 6
+        check: "[h for h in range(1, 20) if 8 * h == 24 + 24][0]"
+        hints:
+          - 底辺 × 高さ ÷ 2 = 24 だね。
+          - ÷ 2 する前は、24 の 2 倍だよ。
+          - 8 × □ = 48 になる □ をさがそう。
+        paths:
+          - [8 × 高さ は 24 + 24 = 48, 8 × □ = 48, 6 cm]
+    extra:
+      - part: 今日
+        text: 点線の 1 目は 1 cm です。家の形の面積は何 cm² ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="72" y1="118" x2="72" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="96" y1="118" x2="96" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="144" y1="118" x2="144" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="168" y1="118" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="118" x2="168" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="94" x2="168" y2="94" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="70" x2="168" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="46" x2="168" y2="46" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="72" y1="22" x2="168" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="72,118 168,118 168,70 120,22 72,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 12
+        check: "4 * 2 + 4 * 2 // 2"
+        hints:
+          - 下の長方形と、上のやねに分けよう。
+          - やねは、底辺 4 cm、高さ 2 cm の三角形だね。
+          - マスを数えるなら、半分のマス 2 つで 1 cm² だよ。
+        paths:
+          - [下の長方形 2 × 4 = 8, やね 4 × 2 ÷ 2 = 4, 8 + 4 = 12, 12 cm²]
+          - [ぜんぶ入るマス 10, 半分のマス 4 つで 2, 10 + 2 = 12]
+      - part: 今日
+        text: たてが 7 m、横が 8 m の長方形の土地の面積は何 m² ですか。
+        answer: 56
+        check: "7 * 8"
+        hints:
+          - 長方形の面積は、たて × よこ だね。
+          - 長さの単位が m なので、面積は m² だよ。
+          - 7 × 8 を計算しよう。
+        paths:
+          - [7 × 8 = 56, 56 m²]
+      - part: 今日
+        text: 面積が 63 cm² の平行四辺形があります。底辺は 9 cm です。高さは何 cm ですか。
+        answer: 7
+        check: "63 // 9"
+        hints:
+          - 底辺 × 高さ = 面積 だね。
+          - 9 × □ = 63 になる □ をさがそう。
+          - 9 のだんの九九を思い出そう。
+        paths:
+          - [9 × □ = 63, 63 ÷ 9 = 7, 7 cm]
