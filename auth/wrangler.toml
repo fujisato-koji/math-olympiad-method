@@ -1,0 +1,10 @@
+# ログインを保つ小さなサーバ（D-058）。手順は docs/google-drive.md の「ログインを保つ」
+name = "michisuji-auth"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# 公開してよい値。クライアント シークレットはここに書かず、Cloudflare の secret（GOOGLE_CLIENT_SECRET）に入れる
+[vars]
+GOOGLE_CLIENT_ID = "318786454851-4tk1ab9apqofhpd1rqbg4e2uk63gsvof.apps.googleusercontent.com"
+ALLOWED_ORIGINS = "https://fujisato-koji.github.io"

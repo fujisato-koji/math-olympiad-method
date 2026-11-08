@@ -17,3 +17,5 @@ jobs:
         run: |
           python tools/roadmap.py build
           git diff --exit-code site/data.js site/problems.js docs/roadmap.md docs/coverage.md || (git status --short; exit 1)
+      - name: ログインを保つサーバを確かめる
+        run: node auth/test.mjs

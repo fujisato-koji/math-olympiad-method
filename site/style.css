@@ -899,7 +899,7 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .sync-chip[hidden] { display: none; }
 .sync-chip .sd { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); flex: none; }
 .sync-chip[data-s="ok"] .sd { background: var(--ok); }
-.sync-chip[data-s="wait"] .sd { background: var(--warn); }
+.sync-chip[data-s="wait"] .sd, .sync-chip[data-s="offline"] .sd { background: var(--warn); }
 .sync-chip[data-s="need"] .sd, .sync-chip[data-s="err"] .sd { background: var(--bad); }
 @media (max-width: 520px) { .sync-chip { padding: 6px 9px; } .sync-chip .t { display: none; } }
 

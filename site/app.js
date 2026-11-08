@@ -1805,10 +1805,12 @@
   const CLIENT_ID = (document.querySelector('meta[name="google-client-id"]') || {}).content || '';
   // 共有された記録を選ぶ Google のファイル選び（Picker）の鍵と、Google Cloud のプロジェクトの番号（クライアント ID の頭）
   const API_KEY = (document.querySelector('meta[name="google-api-key"]') || {}).content || '', APP_ID = CLIENT_ID.split('-')[0];
+  // ログインを保つサーバ（D-058）。空なら、ログインは約 1 時間で切れる
+  const AUTH_URL = (document.querySelector('meta[name="michisuji-auth"]') || {}).content || '';
   // 前のファイルでは人が混ざったので（D-051）、ファイルを新しくし、すべての端末で一度ログインし直してもらう
   const DRIVE_KEY = 'michisuji.drive.v2';
   const drive = Object.assign({ on: false, at: '', who: '' }, load(DRIVE_KEY, {}));
-  let driveTimer = 0, driveBusy = false, driveAgain = false, driveState = drive.on ? 'wait' : 'off';  // off、ok、wait、need、err
+  let driveTimer = 0, driveBusy = false, driveAgain = false, driveState = drive.on ? 'wait' : 'off';  // off、ok、wait、offline、need、err
   const lastDay = r => Object.values((r && r.days) || {}).reduce((a, v) => v && v.date > a ? v.date : a, '');
   const newer = (p, q) => ((p && p.date) || '') >= ((q && q.date) || '') ? p : q;
   function keys2(a, b, f) {
@@ -1893,13 +1895,14 @@
       b.dataset.s = driveState;
       // 言葉は保存にそろえる（D-057、施主「ドライブという言い方がわかりにくい」）
       const t = b.querySelector('.t');
-      if (t) t.textContent = { ok: '保存済み', wait: '保存中', need: 'つなぐ', err: 'つなぐ' }[driveState] || '保存';
-      b.title = { ok: '保存済み（どの端末でも開けます）', wait: '保存の途中です', need: 'つながりが切れました。押すとつなぎ直して保存します',
-        err: '保存できませんでした。押すともう一度保存します' }[driveState] || '';
+      if (t) t.textContent = { ok: '保存済み', wait: '保存中', offline: '保存待ち', need: 'つなぐ', err: 'つなぐ' }[driveState] || '保存';
+      b.title = { ok: '保存済み（どの端末でも開けます）', wait: '保存の途中です', offline: 'つながったら保存します',
+        need: 'つながりが切れました。押すとつなぎ直して保存します', err: '保存できませんでした。押すともう一度保存します' }[driveState] || '';
     }
     const st = $('#drive-status');
     if (st) st.textContent = !drive.on ? 'この端末だけに保存'
-      : [drive.who, drive.at && drive.at + ' に保存', DriveSync.linked && '家族と共有中', driveState === 'need' && 'つなぎ直してください', driveState === 'err' && '保存できませんでした'].filter(Boolean).join('・');
+      : [drive.who, drive.at && drive.at + ' に保存', DriveSync.linked && '家族と共有中', driveState === 'offline' && 'つながったら保存します',
+        driveState === 'need' && 'つなぎ直してください', driveState === 'err' && '保存できませんでした'].filter(Boolean).join('・');
     const show = showEl;
     show('#btn-drive-in', !drive.on || driveState === 'need');
     show('#btn-drive-take', !drive.on);
@@ -1924,7 +1927,7 @@
       : !l ? 'まだ共有していません' : (l.mine ? '共有している人：' : '共有の記録を使っています：') + (others.join('、') || '—');
   }
   async function refreshFamily() {
-    if (!window.DriveSync || !DriveSync.valid()) { familyChip(); return; }
+    if (!window.DriveSync || !DriveSync.usable()) { familyChip(); return; }
     try { await DriveSync.readLink(); family.members = await DriveSync.members(); } catch { /* 出せなくても使える */ }
     familyChip();
   }
@@ -1999,7 +2002,7 @@
     if (!confirm('共有をやめて、自分だけの記録に戻ります。共有の記録はそのまま残ります。')) return;
     driveBusy = true;
     try {
-      if (!DriveSync.valid()) await DriveSync.signIn();
+      if (!DriveSync.usable()) await DriveSync.signIn();
       await DriveSync.leave(); family = { members: [], gone: false };
     } catch (err) { if (err.code !== 'popup_closed') alert('やめられませんでした（' + err.message + '）'); }
     finally { driveBusy = false; }
@@ -2016,8 +2019,8 @@
     if (driveBusy) { driveAgain = true; return; }
     driveBusy = true;
     try {
-      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID);
-      if (!DriveSync.valid()) {
+      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID, AUTH_URL);
+      if (!DriveSync.usable()) {
         if (!interactive) { driveState = 'need'; return; }
         await DriveSync.signIn();
       }
@@ -2036,6 +2039,8 @@
       if (JSON.stringify(store) !== before) { syncWho(); if (parse().name !== 'day') render(); }
     } catch (err) {
       if (err.code === 'popup_closed') driveState = drive.on ? 'need' : 'off';
+      // 電波がないときは、つながったら合わせる（下の online）。押したときだけ知らせる
+      else if (err.code === 'offline') { driveState = drive.on ? 'offline' : 'off'; if (interactive) alert('つながっていません。つながったら保存します。'); }
       else if (err.code === 'gone') { family.gone = true; driveState = 'err'; }
       else {
         driveState = err.code === 'auth' || err.code === 'scope' ? 'need' : 'err';
@@ -2052,8 +2057,8 @@
     if (!CLIENT_ID || !window.DriveSync || driveBusy) return;
     driveBusy = true;
     try {
-      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID);
-      if (!DriveSync.valid()) await DriveSync.signIn();
+      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID, AUTH_URL);
+      if (!DriveSync.usable()) await DriveSync.signIn();
       const remote = await DriveSync.pull();
       if (!remote || remote.schema !== 2 || !remote.profiles || !Object.keys(remote.profiles).length) {
         alert('保存してある記録がまだありません。先に、記録のある端末で「Google でつなぐ」を押してください。');
@@ -2084,7 +2089,8 @@
     const box = $('#drive-box');
     if (box) box.hidden = false;
     // Google のログインを先に読み込んでおく（押したその場で確認の窓を開けるように）
-    if (window.DriveSync) DriveSync.init(CLIENT_ID).then(() => { if (drive.on) driveSync(false); }).catch(() => { if (drive.on) { driveState = 'err'; driveChip(); } });
+    if (window.DriveSync) DriveSync.init(CLIENT_ID, AUTH_URL).then(() => { if (drive.on) driveSync(false); })
+      .catch(() => { if (drive.on) { driveState = navigator.onLine === false ? 'offline' : 'err'; driveChip(); } });
     const go = () => driveSync(true);
     $('#btn-sync').addEventListener('click', go);
     $('#btn-drive-in').addEventListener('click', go);
@@ -2101,9 +2107,11 @@
     document.addEventListener('visibilitychange', () => { if (document.hidden && driveState === 'wait') { clearTimeout(driveTimer); driveSync(false); } });
     // 開いているあいだは 1 分ごとに、ほかのアプリやタブから戻ったときはすぐに、ドライブを読みにいく（D-056、施主「1 分とか」）。
     // 送る前の変更があるとき（wait）は、そちらの送りに任せる
-    const drivePoll = () => { if (drive.on && !document.hidden && window.DriveSync && DriveSync.valid() && !driveBusy && driveState !== 'wait') driveSync(false); };
+    const drivePoll = () => { if (drive.on && !document.hidden && window.DriveSync && DriveSync.usable() && !driveBusy && driveState !== 'wait') driveSync(false); };
     setInterval(drivePoll, 60000);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) drivePoll(); });
+    // 電波が戻ったら、すぐに合わせる（D-058、施主「オンラインに戻ったら勝手につなぐぐらいでいい」）
+    window.addEventListener('online', () => { if (drive.on && !driveBusy) { clearTimeout(driveTimer); driveSync(false); } });
     onPersist = driveDirty;
   }
   driveChip();
