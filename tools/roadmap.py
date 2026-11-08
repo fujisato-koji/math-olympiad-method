@@ -238,6 +238,16 @@ def check(data, problems):
                     continue
                 if "answer" not in item:
                     errors.append(f"{where}: answer がない")
+                elif item.get("choices"):
+                    if str(item["answer"]) not in [str(c) for c in item["choices"]]:
+                        errors.append(f"{where}: 答え {item['answer']} が選択肢にない")
+                else:
+                    # 鍵盤で打てる形（D-039）：段 1〜2 は 3 けたまでの数字、段 3 から「.」「/」、段 4 から「−」、8 字まで
+                    st = units[uid][1]
+                    ok = r"\d{1,3}" if st <= 2 else r"\d+(\.\d+)?(/\d+)?" if st == 3 else r"−?\d+(\.\d+)?(/\d+)?"
+                    for a in [item["answer"], *(item.get("accept") or [])]:
+                        if not re.fullmatch(ok, str(a)) or len(str(a)) > (3 if st <= 2 else 8):
+                            errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
                 if "check" in item:

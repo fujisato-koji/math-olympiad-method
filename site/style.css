@@ -737,3 +737,6 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 /* 2D で鎖を光らせているときは、ほかの線をほとんど消す */
 .cosmos .map.focus .edges path:not(.hl) { stroke-opacity: .02; }
 .cosmos[data-view="2d"] .cosmos-head { right: 0; background: linear-gradient(rgba(5, 6, 15, .92), rgba(5, 6, 15, 0)); padding-bottom: 18px; }
+
+/* 段 3 からの鍵盤（「.」「/」「−」を足した分だけ列を増やす、D-039） */
+.pad.wide { grid-template-columns: repeat(4, 1fr); }

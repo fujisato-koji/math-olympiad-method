@@ -126,6 +126,12 @@
     for (let i = 1; i <= u.days.length; i++) if (!days[i] && !skip.includes(i)) return { type: 'day', day: i };
     return { type: 'day', day: u.days.length };
   }
+  // 答えの鍵盤（D-039）：段 1〜2 は数字だけ 3 けた、段 3 から「.」「/」、段 4 から「−」、8 字まで
+  const padKeys = id => { const st = UNITS[id].stage; return [...(st >= 4 ? ['−'] : []), ...(st >= 3 ? ['.', '/'] : [])]; };
+  const padMax = id => UNITS[id].stage >= 3 ? 8 : 3;
+  // 答え合わせ：マイナスの書き方をそろえ、空白を除いて比べる。accept は認める別の書き方
+  const norm = v => String(v).replace(/[-‐－]/g, '−').replace(/\s+/g, '');
+  const isRight = (it, v) => [it.answer, ...(it.accept || [])].some(a => norm(a) === norm(v));
   const stepHref = (id, s) => `#/${s.type === 'extra' ? 'extra' : 'day'}/${id}/${s.day}`;
   // 前提の浅い順、同じ深さなら流れの順
   const order = (a, b) => DEPTH[a.id] - DEPTH[b.id] || LANE_ORDER.indexOf(a.lane) - LANE_ORDER.indexOf(b.lane) || a.id.localeCompare(b.id);
@@ -1017,10 +1023,13 @@
     if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
       const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${esc(h)}</div>`).join('');
-      body = `${fig}<p class="explain">くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。</p>
+      const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
+        : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
+        : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
+      body = `${fig}<p class="explain">${ask[0]}</p>
         <div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}
-          <button class="pill solid" data-act="said" type="button">いえた</button></div>`;
+          <button class="pill solid" data-act="said" type="button">${ask[1]}</button></div>`;
     } else if (it.part === 'わけ') {
       body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
@@ -1034,7 +1043,7 @@
       const input = it.choices
         ? `<div class="choices">${it.choices.map(c => `<button class="choice" data-choice="${esc(c)}" type="button">${esc(c)}</button>`).join('')}</div>`
         : `<div class="answer-box"><div class="display" id="display">${esc(s.entry) || '？'}</div>
-            <div class="pad">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map(k => `<button data-key="${k}" type="button">${k}</button>`).join('')}
+            <div class="pad${padKeys(s.id).length ? ' wide' : ''}">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ...padKeys(s.id)].map(k => `<button data-key="${k}" type="button">${k}</button>`).join('')}
               <button data-key="del" type="button" aria-label="ひとつ けす">←</button>
               <button class="ok" data-key="ok" type="button">こたえる</button></div></div>`;
       const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${esc(h)}</div>`).join('');
@@ -1048,7 +1057,7 @@
     const s = session, it = s.items[s.idx];
     if (s.solved || val === '') return;
     s.tries++;
-    if (String(val) === String(it.answer)) {
+    if (isRight(it, val)) {
       s.solved = true;
       s.results[s.idx] = { first: s.tries === 1 && s.hints === 0, hints: s.hints, tries: s.tries };
       Music.good(s.idx);
@@ -1157,7 +1166,7 @@
       const k = t.dataset.key;
       if (k === 'ok') return submit(s.entry);
       Music.tap();
-      s.entry = k === 'del' ? s.entry.slice(0, -1) : (s.entry + k).slice(0, 3);
+      s.entry = k === 'del' ? s.entry.slice(0, -1) : (s.entry + k).slice(0, padMax(s.id));
       const disp = $('#display');
       if (disp) disp.textContent = s.entry || '？';
       return;
@@ -1177,7 +1186,8 @@
     if (!session || session.solved || $('#menu').open) return;
     const it = session.items[session.idx];
     if (!it || it.part === '見本' || it.choices) return;
-    if (/^\d$/.test(e.key)) { session.entry = (session.entry + e.key).slice(0, 3); }
+    const k = e.key === '-' ? '−' : e.key;
+    if (/^\d$/.test(k) || padKeys(session.id).includes(k)) { session.entry = (session.entry + k).slice(0, padMax(session.id)); }
     else if (e.key === 'Backspace') { session.entry = session.entry.slice(0, -1); }
     else if (e.key === 'Enter') { return submit(session.entry); }
     else return;
