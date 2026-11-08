@@ -1,0 +1,595 @@
+# G-054 円の接線と接弦定理（接線と半径、接線の長さ、接線と弦のつくる角）
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことばと述べ方は G-023 の 11 日目にそろえた：円と 1 点だけで交わる直線を接線、その点を接点という。
+#   「円 O の点 A での接線を ST とします」「円の外の点 P から接線 PA、PB をひきます」「円に接線 PA（A は接点）をひきました」。
+#   接弦定理：接線と弦のつくる角は、その角の内側にある弧に対する円周角に等しい。
+#   円の外の点からひいた 2 本の接線の長さは等しい（点から接点までの長さを接線の長さという）。
+# 約束した事実は G-016（平行線と角、合同条件、三角形の内角の和と外角）、G-009（四角形の 4 つの角の和は 360°）、
+#   G-017（二等辺三角形の底角、直角三角形の合同条件、長方形と正方形、平行四辺形の対辺）、
+#   G-018（円周角は同じ弧に対する中心角の半分、同じ弧に対する円周角は等しい、半円の弧に対する円周角は 90°）、
+#   G-010（半径はみな等しい、弧の長さは円周の「中心角 ÷ 360」）。
+# ここで示すもの（3 日目のわけ）：
+#   ① 接線は接点を通る半径に垂直。O から接線への垂線の足 H が A と別の点だとすると、H について A と対称な点 A′ も
+#     合同から円の上にあり、1 点だけで交わることに反する（合同だけで示す。G-023 の見本は線対称で約束している）。
+#   ② 円の外の点からの 2 本の接線の長さは等しい（直角三角形の合同。PO が ∠APB を 2 等分することも出る）。
+#   ③ 接弦定理。A を通る直径 AD をひき、∠TAB が直角・鋭角・鈍角の 3 つの場合に分ける。
+#     使うのは ①、半円の弧に対する円周角、同じ弧に対する円周角だけ（鈍角の場合も、内接四角形を使わずに ∠ACB を ∠ACD と ∠DCB に分ける）。
+#   1・2 日目は見本で知らせて使い、見本に「わけは 3 日目」と書いた。
+# ① は「〜だとすると約束と食いちがう」という背理法の形だが、背理法（L-011）は前提にないので、名前は出さずに
+#   「H が A と別の点だとすると」と書き、explain で、のちに背理法として学ぶことに触れるだけにした。
+#   逆（半径の端で半径に垂直な直線は接線）は、わけ 1 の explain で触れるだけにした。
+# 前提にない道具は使わない：相似（G-020）、三平方の定理（G-019）、平方根（A-016）、方べきの定理（G-030）、
+#   内接四角形の性質（G-023）、1 次方程式（A-011）。接線の長さは、三平方を使わずに、等しい接線の長さのたしひきで求める
+#   （AB + BC − CA が BD の 2 つ分になる、など）。直角三角形の 3 辺は、問題で直角と 3 辺の長さを与える。
+#   文字は A-010 の範囲で、わけの日に角の名前（∠a）として使うだけにした。
+#   円に接する四角形の「向かい合う辺の和が等しい」は、接線の長さから導く問題（4 日目）として扱う。
+#   三角形の内接円・内心の名前は G-028 で扱うので、「3 つの辺に円が接しています」とだけ言う。
+# 図は svg（D-040）。円の上の点は、角の大きさから円の上の角度を決めて置き、接線は実際に半径に垂直にした（角は本当の大きさ）。
+#   円に接する三角形と四角形は、頂点からの接線の長さが問題の数になるように作図した。求める角は図に x と書いた。
+#   わけ 1 の図だけは、「H が A と別の点だとしたとき」のようす（直線が円と 2 点で交わってしまう）をかいた。
+# 地図に plan がないので既定の並び（導入・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 接線と半径（垂直）、2 本の接線（∠APB + ∠AOB = 180°、接線の長さは等しく △PAB は二等辺三角形）
+#   2 日目 接弦定理（頭の見本で知らせる。等しい円周角を選ぶ、2 段で求める、中心角から、反対側の角）
+#   3 日目 わけ（接線は半径に垂直、接線の長さ、接弦定理の 3 つの場合）と、3 辺に接する円の接線の長さ
+#   4 日目 G-017（二等辺三角形、平行四辺形）・G-018（円周角）・G-010（弧の長さ）と 1〜3 日目を混ぜる
+#     （4 辺に接する円、直径と接線、3 本目の接線）　5 日目 確認
+# check：角と長さの計算の式（わる数があれば Fraction）。等しい角を選ぶ問題は約束ごとなので check を付けない。
+#   ひもの長さを選ぶ問題は、接線の長さと弧の長さを計算し、その組に当たる選択肢を引く式。
+# この単元の ①〜③ は、G-030（方べきの定理）、G-023（11・12 日目）、G-028（内接円）で約束した事実として使われる。
+# D-026：4 日目の挑戦の「ひもを円に巻く長さ」は、ベルトと滑車の長さや、円い障害物をよけて進むロボットや車の
+#   最短の道（接線と弧でできる）を求める計算と同じ形。接線が接点で半径に垂直なことは、のちの微分（接線の傾き）の入口にもなる。
+
+id: G-054
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 円 O の外の点 P から、円に 2 本の接線 PA、PB をひきました（A、B は接点）。∠APB = 50° のとき、∠AOB は何度になるかを調べよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="84.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="103.1,30.1 110.3,33.5 113.7,26.3" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="103.1,109.9 110.3,106.5 113.7,113.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M191.2 62.4 A18 18 0 0 0 191.2 77.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="176.5" y="74.2" font-size="12" text-anchor="middle">50°</text><circle cx="84.5" cy="70" r="2.6" fill="currentColor"/><text x="73.5" y="74.9" font-size="14" text-anchor="middle">O</text><text x="218.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="111.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="111.1" y="132" font-size="14" text-anchor="middle">B</text><line x1="159.1" y1="41.9" x2="154.9" y2="51" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="154.9" y1="89" x2="159.1" y2="98.1" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        explain: 円と 1 点だけで交わる直線を接線、その点を接点といいます。円の接線は、接点を通る半径に垂直です。だから ∠OAP = ∠OBP = 90° です。四角形 OAPB の 4 つの角の和は 360° なので、∠AOB = 360° − 90° − 90° − 50° = 130° です。∠AOB と ∠APB をたすと 180° になります。また、円の外の点からひいた 2 本の接線の長さは等しく、PA = PB です（図の同じしるし）。だから △PAB は二等辺三角形です。この 2 つの性質のわけは、3 日目に示します。
+      - part: 思い出す
+        text: 円 O の円周の上に 3 点 A、B、C があり、∠AOB = 124° です。∠x（∠ACB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="74.1" y2="94.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="165.9" y2="94.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="74.1" y2="94.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="165.9" y2="94.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M107.6 76.6 A14 14 0 0 0 132.4 76.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="101.2" font-size="12" text-anchor="middle">124°</text><path d="M103.1 35 A18 18 0 0 0 121.6 33.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.7" y="53.9" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="133.2" y="70.1" font-size="14" text-anchor="middle">O</text><text x="64.4" y="104.5" font-size="14" text-anchor="middle">A</text><text x="175.6" y="104.5" font-size="14" text-anchor="middle">B</text><text x="102" y="17.4" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 62
+        check: "124 // 2"
+        hints:
+          - ∠ACB と ∠AOB は、どちらも弧 AB に対する角だね。
+          - 円周角は、同じ弧に対する中心角の何分の 1 かな。
+          - 124° をその分だけに分けよう。
+        paths:
+          - [∠ACB は弧 AB に対する円周角, 中心角 124° の半分, 124 ÷ 2 = 62, 62°]
+      - part: 思い出す
+        text: 円 O の円周の上に 2 点 A、B があり、∠AOB = 80° です。∠x（∠OAB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="85" x2="76.9" y2="136.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="85" x2="163.1" y2="136.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76.9" y1="136.3" x2="163.1" y2="136.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M112.3 94.2 A12 12 0 0 0 127.7 94.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="114.2" font-size="12" text-anchor="middle">80°</text><path d="M94.9 136.3 A18 18 0 0 0 88.5 122.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105" y="127.4" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="85" r="2.6" fill="currentColor"/><text x="120" y="78.9" font-size="14" text-anchor="middle">O</text><text x="69.9" y="149.7" font-size="14" text-anchor="middle">A</text><text x="170.1" y="149.7" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 50
+        check: "(180 - 80) // 2"
+        hints:
+          - OA と OB は、円の何かな。
+          - △OAB は何という三角形かな。底角はどうなるかな。
+          - 180° から 80° をひいて、2 つに分けよう。
+        paths:
+          - [OA = OB（半径）で △OAB は二等辺三角形, ∠OAB = ∠OBA, (180 − 80) ÷ 2 = 50, 50°]
+      - part: 今日
+        text: 円 O の外の点 P から、円に接線 PA（A は接点）をひきました。∠AOP = 58° のとき、∠x（∠APO）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="104.4" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.4" y1="70" x2="104.4" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="104.4" y1="70" x2="187.6" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="187.6" y1="18" x2="104.4" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="104.4,26 112.4,26 112.4,18" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M116.3 62.6 A14 14 0 0 0 104.4 56" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.5" y="50.6" font-size="12" text-anchor="middle">58°</text><path d="M165.6 18 A22 22 0 0 0 169 29.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="154" y="31.8" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="104.4" cy="70" r="2.6" fill="currentColor"/><text x="99.1" y="84.5" font-size="14" text-anchor="middle">O</text><text x="112.2" y="15.1" font-size="14" text-anchor="middle">A</text><text x="198.2" y="19.9" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 32
+        check: "180 - 90 - 58"
+        hints:
+          - 接線と、接点を通る半径は、どんな角で交わるかな。
+          - ∠OAP は何度かな。
+          - △OAP の 3 つの角の和を使おう。
+        paths:
+          - [∠OAP = 90°（接線は接点を通る半径に垂直）, 180 − 90 − 58 = 32, 32°]
+        note: 図の直角のしるしを見落としやすい。接点で半径と接線が垂直になることを、まず図に書きこませる。
+      - part: 今日
+        text: 円 O の外の点 P から接線 PA、PB をひきます。∠APB = 46° のとき、∠x（∠AOB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="79.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="212.5" y1="70" x2="99.8" y2="22.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="212.5" y1="70" x2="99.8" y2="117.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79.5" y1="70" x2="99.8" y2="22.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="79.5" y1="70" x2="99.8" y2="117.9" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="96.7,29.5 104,32.6 107.1,25.3" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="96.7,110.5 104,107.4 107.1,114.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M196 63 A18 18 0 0 0 196 77" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="181.5" y="74.2" font-size="12" text-anchor="middle">46°</text><path d="M84.9 82.9 A14 14 0 0 0 84.9 57.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="106.5" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="79.5" cy="70" r="2.6" fill="currentColor"/><text x="68.5" y="74.9" font-size="14" text-anchor="middle">O</text><text x="223.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="104.1" y="16.9" font-size="14" text-anchor="middle">A</text><text x="104.1" y="132.9" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 134
+        check: "360 - 90 - 90 - 46"
+        hints:
+          - ∠OAP と ∠OBP は何度かな。
+          - 四角形 OAPB の 4 つの角の和は何度かな。
+          - 360° から、わかっている 3 つの角をひこう。
+        paths:
+          - [∠OAP = ∠OBP = 90°, 360 − 90 − 90 − 46 = 134, 134°]
+          - [∠AOB + ∠APB = 180°, 180 − 46 = 134, 134°]
+        note: ∠AOB = 46 × 2 のように、円周角と中心角の関係と取りちがえやすい。P は円の外の点で、∠APB は円周角ではないことを確かめる。
+      - part: 今日
+        text: 円の外の点 P から接線 PA、PB をひきます。∠APB = 64° のとき、∠x（∠PAB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="96.9" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="195.1" y1="70" x2="124.5" y2="25.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="195.1" y1="70" x2="124.5" y2="114.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="124.5" y1="25.9" x2="124.5" y2="114.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M179.8 60.5 A18 18 0 0 0 179.8 79.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="164.1" y="74.2" font-size="12" text-anchor="middle">64°</text><path d="M124.5 47.9 A22 22 0 0 0 143.1 37.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141.5" y="60.7" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="206.1" y="74.9" font-size="14" text-anchor="middle">P</text><text x="130.3" y="21.5" font-size="14" text-anchor="middle">A</text><text x="130.3" y="128.3" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 58
+        check: "(180 - 64) // 2"
+        hints:
+          - PA と PB の長さはどうなっているかな。
+          - △PAB は何という三角形かな。
+          - 180° から 64° をひいて、2 つの底角に分けよう。
+        paths:
+          - [PA = PB（接線の長さは等しい）, △PAB は二等辺三角形, (180 − 64) ÷ 2 = 58, 58°]
+      - part: 挑戦
+        text: 円 O の外の点 P から接線 PA、PB をひきます。∠OAB = 34° のとき、∠x（∠APB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="99.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="192.5" y1="70" x2="128.6" y2="26.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="192.5" y1="70" x2="128.6" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="128.6" y1="26.9" x2="128.6" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.5" y1="70" x2="128.6" y2="26.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.5" y1="70" x2="128.6" y2="113.1" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="124.1,33.5 130.7,38 135.2,31.4" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="124.1,106.5 130.7,102 135.2,108.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M177.6 59.9 A18 18 0 0 0 177.6 80.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="161.5" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><path d="M114 48.4 A26 26 0 0 0 128.6 52.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.2" y="68.4" font-size="12" text-anchor="middle">34°</text><circle cx="99.5" cy="70" r="2.6" fill="currentColor"/><text x="88.5" y="74.9" font-size="14" text-anchor="middle">O</text><text x="203.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="134.7" y="22.7" font-size="14" text-anchor="middle">A</text><text x="134.7" y="127.1" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 68
+        check: "180 - 2 * (90 - 34)"
+        hints:
+          - ∠OAP は何度かな。そこから ∠PAB を求めよう。
+          - △PAB は二等辺三角形だね。∠PBA は何度かな。
+          - ∠PAB と ∠PBA をたして、180° からひこう。
+        paths:
+          - [∠PAB = 90 − 34 = 56, ∠PBA = 56（PA = PB）, ∠APB = 180 − 56 − 56 = 68, 68°]
+          - [OA = OB で ∠AOB = 180 − 34 − 34 = 112, ∠APB = 180 − 112 = 68, 68°]
+        note: 答えは ∠OAB の 2 倍になっている。∠OAB を ∠a とすると ∠APB = 180° − 2 × (90° − ∠a) = 2 × ∠a で、いつもそうなることを話すと、わけの日の準備になる。
+    extra:
+      - part: 今日
+        text: 円 O の外の点 P から接線 PA、PB をひきます。∠AOB = 108° のとき、∠APB は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="101.8" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.2" y1="70" x2="132.3" y2="27.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.2" y1="70" x2="132.3" y2="112.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.8" y1="70" x2="132.3" y2="27.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="101.8" y1="70" x2="132.3" y2="112.1" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="127.6,34.4 134.1,39.1 138.8,32.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="127.6,105.6 134.1,100.9 138.8,107.4" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M175.7 59.4 A18 18 0 0 0 175.7 80.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="159.2" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><path d="M110 81.3 A14 14 0 0 0 110 58.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="128.8" y="74.2" font-size="12" text-anchor="middle">108°</text><circle cx="101.8" cy="70" r="2.6" fill="currentColor"/><text x="90.8" y="74.9" font-size="14" text-anchor="middle">O</text><text x="201.2" y="74.9" font-size="14" text-anchor="middle">P</text><text x="138.8" y="23.9" font-size="14" text-anchor="middle">A</text><text x="138.8" y="125.9" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 72
+        check: "360 - 90 - 90 - 108"
+        hints:
+          - ∠OAP と ∠OBP は何度かな。
+          - 四角形 OAPB の 4 つの角の和を使おう。
+          - 360° から、わかっている 3 つの角をひこう。
+        paths:
+          - [∠OAP = ∠OBP = 90°, 360 − 90 − 90 − 108 = 72, 72°]
+      - part: 今日
+        text: 円 O の外の点 P から、円に接線 PA（A は接点）をひきました。∠APO = 27° のとき、∠AOP は何度ですか。
+        answer: 63
+        check: "180 - 90 - 27"
+        hints:
+          - 接線と、接点を通る半径は、どんな角で交わるかな。
+          - △OAP の 3 つの角のうち、2 つがわかるね。
+          - 180° から 2 つの角をひこう。
+        paths:
+          - [∠OAP = 90°, 180 − 90 − 27 = 63, 63°]
+      - part: 挑戦
+        text: 円の外の点 P から接線 PA、PB をひきます。∠APB = 60°、AB = 8 cm のとき、PA と PB の長さの和は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="94" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198" y1="70" x2="120" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="198" y1="70" x2="120" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="25" x2="120" y2="115" stroke="currentColor" stroke-width="2" fill="none"/><path d="M182.4 61 A18 18 0 0 0 182.4 79" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167" y="74.2" font-size="12" text-anchor="middle">60°</text><text x="209" y="74.9" font-size="14" text-anchor="middle">P</text><text x="125.5" y="20.3" font-size="14" text-anchor="middle">A</text><text x="125.5" y="129.5" font-size="14" text-anchor="middle">B</text><text x="111.4" y="74.2" font-size="12" text-anchor="middle">8</text></svg>'
+        answer: 16
+        check: "2 * 8"
+        hints:
+          - PA = PB なので、∠PAB と ∠PBA は等しいね。
+          - ∠PAB は何度かな。△PAB はどんな三角形かな。
+          - 正三角形なら、3 つの辺の長さは等しいね。
+        paths:
+          - [PA = PB で ∠PAB = ∠PBA = (180 − 60) ÷ 2 = 60, △PAB は正三角形, PA = PB = AB = 8, 8 + 8 = 16, 16 cm]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 円の点 A での接線を ST とし、弦 AB をひきます。円の上の点 C について、∠TAB と ∠ACB をくらべよう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="52.4" y1="122" x2="187.6" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="159.8" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.8" y1="61" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.8" y1="61" x2="159.8" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M136 122 A16 16 0 0 0 126.8 107.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.5" y="110.6" font-size="12" text-anchor="middle">65°</text><path d="M80.4 74.8 A18 18 0 0 0 86.2 56.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="168.3" y="34.4" font-size="14" text-anchor="middle">B</text><text x="58" y="64" font-size="14" text-anchor="middle">C</text><text x="198.6" y="126.9" font-size="14" text-anchor="middle">T</text><text x="41.4" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
+        explain: 接線 ST と弦 AB のつくる角 ∠TAB の内側には、C をふくまない弧 AB があります。∠TAB は、この弧 AB に対する円周角 ∠ACB と等しくなります。これを接弦定理といいます（わけは 3 日目）。図では ∠TAB = 65° なので ∠ACB = 65° です。反対側の角 ∠SAB = 180° − 65° = 115° の内側には、C をふくむ大きいほうの弧 AB があります。だから、小さいほうの弧 AB の上の点 D について ∠ADB = 115° です。等しい円周角を探すときは、接線と弦のつくる角の内側にある弧を指でなぞり、その弧の外の点から、弧の両はしを見る角を選びます。
+      - part: 思い出す
+        text: 円 O の外の点 P から接線 PA、PB をひきます。∠AOB = 142° のとき、∠x（∠APB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="68.1" cy="70" r="50.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="222" y1="70" x2="84.4" y2="22.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="222" y1="70" x2="84.4" y2="117.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.1" y1="70" x2="84.4" y2="22.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.1" y1="70" x2="84.4" y2="117.4" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="81.8,30.2 89.4,32.8 92,25.2" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="81.8,109.8 89.4,107.2 92,114.8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M72 81.3 A12 12 0 0 0 72 58.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="93.1" y="74.2" font-size="12" text-anchor="middle">142°</text><path d="M203.1 63.5 A20 20 0 0 0 203.1 76.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="189" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="68.1" cy="70" r="2.6" fill="currentColor"/><text x="57.1" y="74.9" font-size="14" text-anchor="middle">O</text><text x="227.5" y="84.4" font-size="14" text-anchor="middle">P</text><text x="88" y="17.1" font-size="14" text-anchor="middle">A</text><text x="88" y="132.7" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 38
+        check: "360 - 90 - 90 - 142"
+        hints:
+          - ∠OAP と ∠OBP は何度かな。
+          - 四角形 OAPB の 4 つの角の和は 360° だね。
+          - 360° から、わかっている 3 つの角をひこう。
+        paths:
+          - [∠OAP = ∠OBP = 90°, 360 − 90 − 90 − 142 = 38, 38°]
+          - [∠AOB + ∠APB = 180°, 180 − 142 = 38, 38°]
+      - part: 思い出す
+        text: AB は円 O の直径で、C は円の上の点です。∠ABC = 58° のとき、∠x（∠BAC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="172" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68" y1="70" x2="142.8" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="172" y1="70" x2="142.8" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M162.5 54.7 A18 18 0 0 0 154 70" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="144.9" y="59.2" font-size="12" text-anchor="middle">58°</text><path d="M90 70 A22 22 0 0 0 86.7 58.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="101.6" y="64.6" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="120" y="85.9" font-size="14" text-anchor="middle">O</text><text x="57" y="74.9" font-size="14" text-anchor="middle">A</text><text x="183" y="74.9" font-size="14" text-anchor="middle">B</text><text x="147.6" y="18.3" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 32
+        check: "180 - 90 - 58"
+        hints:
+          - ∠ACB は何度かな。
+          - 半円の弧に対する円周角だね。
+          - △ABC の 3 つの角の和を使おう。
+        paths:
+          - [∠ACB = 90°（半円の弧に対する円周角）, 180 − 90 − 58 = 32, 32°]
+      - part: 今日
+        text: 3 点 A、B、C は円の上にあり、点 A での接線を ST とします。図のしるしの角 ∠TAB と等しい角はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.8" y1="122" x2="177.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="168.9" y2="52.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="168.9" y1="52.2" x2="80.2" y2="36.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80.2" y1="36.6" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 122 A18 18 0 0 0 130.3 107.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="179.2" y="53.4" font-size="14" text-anchor="middle">B</text><text x="71.7" y="34.4" font-size="14" text-anchor="middle">C</text><text x="188.2" y="126.9" font-size="14" text-anchor="middle">T</text><text x="51.8" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
+        choices: [∠ACB, ∠ABC, ∠BAC, ∠SAC]
+        answer: ∠ACB
+        hints:
+          - ∠TAB の内側にある弧はどれかな。
+          - その弧の両はしは A と B だね。
+          - 弧 AB の外にある点から、A と B を見る角を選ぼう。
+        paths:
+          - [∠TAB の内側の弧は弧 AB, 弧 AB に対する円周角は ∠ACB, 接弦定理で ∠TAB = ∠ACB]
+        note: ∠ABC を選ぶ誤りが多い。B は弦 AB の端なので、弧 AB に対する円周角の頂点にはならない。∠SAC と等しいのが ∠ABC であることも合わせて確かめる。
+      - part: 今日
+        text: 3 点 A、B、C は円の上にあり、点 A での接線を ST とします。∠SAC = 64°、∠ACB = 56° のとき、∠x（∠BAC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="152" x2="193.7" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="182.1" y2="59.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.1" y1="59.9" x2="67.2" y2="43.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="67.2" y1="43.8" x2="120" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><path d="M110.4 132.2 A22 22 0 0 0 98 152" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M75.1 59.9 A18 18 0 0 0 85 46.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="92.3" y="66.2" font-size="12" text-anchor="middle">56°</text><path d="M136.8 127.1 A30 30 0 0 0 106.8 125" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="123" y="113.3" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="112.2" y="164.7" font-size="14" text-anchor="middle">A</text><text x="192.3" y="60.7" font-size="14" text-anchor="middle">B</text><text x="58.5" y="41.9" font-size="14" text-anchor="middle">C</text><text x="204.7" y="156.9" font-size="14" text-anchor="middle">T</text><text x="35.3" y="156.9" font-size="14" text-anchor="middle">S</text><text x="91.6" y="138.4" font-size="12" text-anchor="middle">64°</text></svg>'
+        answer: 60
+        check: "180 - 64 - 56"
+        hints:
+          - ∠SAC の内側にある弧はどれかな。
+          - 接弦定理で、∠SAC と等しい円周角はどれかな。
+          - △ABC の 3 つの角の和を使おう。
+        paths:
+          - [∠ABC = ∠SAC = 64°（接弦定理）, 180 − 64 − 56 = 60, 60°]
+          - [∠TAB = ∠ACB = 56°（接弦定理）, ∠SAC、∠BAC、∠TAB で一直線, 180 − 64 − 56 = 60, 60°]
+        note: 2 本目のみちすじでは、∠SAC、∠BAC、∠TAB が直線 ST の上に並び、あわせて 180° になることを使う。どちらの道でも同じ答えになることを確かめさせるとよい。
+      - part: 今日
+        text: 円 O の点 A での接線を ST とします。∠AOB = 112° のとき、∠x（∠TAB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="62" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.8" y1="142" x2="188.2" y2="142" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="142" x2="177.5" y2="56.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="80" x2="120" y2="142" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="80" x2="177.5" y2="56.8" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 88 A8 8 0 0 0 127.4 77" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="137.4" y="95.9" font-size="12" text-anchor="middle">112°</text><path d="M138 142 A18 18 0 0 0 130.1 127.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147.4" y="131.6" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="80" r="2.6" fill="currentColor"/><text x="110.9" y="78.7" font-size="14" text-anchor="middle">O</text><text x="112.2" y="154.7" font-size="14" text-anchor="middle">A</text><text x="187.7" y="57.6" font-size="14" text-anchor="middle">B</text><text x="199.2" y="146.9" font-size="14" text-anchor="middle">T</text><text x="40.8" y="146.9" font-size="14" text-anchor="middle">S</text></svg>'
+        answer: 56
+        check: "112 // 2"
+        hints:
+          - 弧 AB に対する円周角は何度かな。
+          - 円周角は、中心角 112° の半分だね。
+          - 接弦定理で、∠TAB はその円周角に等しいよ。
+        paths:
+          - [弧 AB に対する円周角は 112 ÷ 2 = 56, 接弦定理で ∠TAB = 56, 56°]
+          - [OA = OB で ∠OAB = (180 − 112) ÷ 2 = 34, ∠OAT = 90°, ∠TAB = 90 − 34 = 56, 56°]
+      - part: 挑戦
+        text: 円の点 A での接線を ST とし、弦 AB をひきます。∠TAB = 70° です。∠TAB の内側にある弧 AB の上の点 D について、∠x（∠ADB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="152" x2="193.7" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="163.1" y2="33.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178" y1="118.5" x2="120" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="178" y1="118.5" x2="163.1" y2="33.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M134 152 A14 14 0 0 0 124.8 138.8" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M176.3 108.7 A10 10 0 0 0 169.4 123.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157.2" y="113" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="112.2" y="164.7" font-size="14" text-anchor="middle">A</text><text x="170.1" y="30.1" font-size="14" text-anchor="middle">B</text><text x="187.5" y="128.9" font-size="14" text-anchor="middle">D</text><text x="204.7" y="156.9" font-size="14" text-anchor="middle">T</text><text x="35.3" y="156.9" font-size="14" text-anchor="middle">S</text><text x="139.4" y="133.1" font-size="12" text-anchor="middle">70°</text></svg>'
+        answer: 110
+        check: "180 - 70"
+        hints:
+          - D は ∠TAB の内側の弧の上にあるので、∠ADB は ∠TAB と等しい円周角にはならないよ。
+          - 反対側の角 ∠SAB の内側にある弧はどれかな。
+          - ∠SAB を求めて、接弦定理を使おう。
+        paths:
+          - [∠SAB = 180 − 70 = 110, ∠SAB の内側の弧は D をふくまない大きいほうの弧 AB, 接弦定理で ∠ADB = ∠SAB = 110, 110°]
+        note: 70° と答える誤りが多い。どちらの角の内側にどちらの弧があるかを、弧を指でなぞって確かめさせる。
+    extra:
+      - part: 今日
+        text: 3 点 A、B、C は円の上にあり、点 A での接線を ST とします。∠TAB = 47°、∠ABC = 75° のとき、∠x（∠BAC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.8" y1="122" x2="177.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="171.9" y2="66.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="171.9" y1="66.4" x2="94" y2="25" stroke="currentColor" stroke-width="2" fill="none"/><line x1="94" y1="25" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M142 122 A22 22 0 0 0 135 105.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.1" y="112.2" font-size="12" text-anchor="middle">47°</text><path d="M156 57.9 A18 18 0 0 0 159.6 79.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="141.3" y="75.7" font-size="12" text-anchor="middle">75°</text><path d="M136.4 104.4 A24 24 0 0 0 113.8 98.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="129" y="90.3" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="182.8" y="70.5" font-size="14" text-anchor="middle">B</text><text x="88.5" y="20.3" font-size="14" text-anchor="middle">C</text><text x="188.2" y="126.9" font-size="14" text-anchor="middle">T</text><text x="51.8" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
+        answer: 58
+        check: "180 - 47 - 75"
+        hints:
+          - 接弦定理で、∠TAB と等しい円周角はどれかな。
+          - △ABC の 2 つの角がわかるね。
+          - 180° から 2 つの角をひこう。
+        paths:
+          - [∠ACB = ∠TAB = 47°（接弦定理）, 180 − 47 − 75 = 58, 58°]
+          - [∠SAC = ∠ABC = 75°（接弦定理）, 一直線で 180 − 75 − 47 = 58, 58°]
+      - part: 今日
+        text: 円 O の点 A での接線を ST とします。∠OBA = 29° のとき、∠x（∠TAB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.8" y1="122" x2="177.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="164.1" y2="42.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="164.1" y2="42.4" stroke="currentColor" stroke-width="2" fill="none"/><path d="M143.7 55.2 A24 24 0 0 0 152.5 63.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="138.6" y="73.5" font-size="12" text-anchor="middle">29°</text><path d="M138 122 A18 18 0 0 0 128.7 106.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.7" y="110.5" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="110.4" y="69.6" font-size="14" text-anchor="middle">O</text><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="173.4" y="41.5" font-size="14" text-anchor="middle">B</text><text x="188.2" y="126.9" font-size="14" text-anchor="middle">T</text><text x="51.8" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
+        answer: 61
+        check: "90 - 29"
+        hints:
+          - OA = OB なので、∠OAB は何度かな。
+          - 接線と半径 OA のつくる角 ∠OAT は何度かな。
+          - ∠OAT から ∠OAB をひこう。
+        paths:
+          - [∠OAB = ∠OBA = 29°, ∠OAT = 90°, 90 − 29 = 61, 61°]
+      - part: 挑戦
+        text: 円の外の点 P から、円に接線 PA（A は接点）と、円と 2 点 B、C で交わる直線 PBC をひきます（P に近いほうが B）。∠APB = 34°、∠ACB = 38° のとき、∠x（∠BAC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="100.3" cy="77.7" r="44.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184" y1="18" x2="92.6" y2="34.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="184" y1="18" x2="80.9" y2="117.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.6" y1="34.1" x2="140.8" y2="59.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="92.6" y1="34.1" x2="80.9" y2="117.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M162.3 21.8 A22 22 0 0 0 168.1 33.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.8" y="38.1" font-size="12" text-anchor="middle">34°</text><path d="M93.9 105 A18 18 0 0 0 83.4 99.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95" y="94.1" font-size="12" text-anchor="middle">38°</text><path d="M90.4 49.9 A16 16 0 0 0 106.8 41.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="105.8" y="64.1" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="90.7" y="28.2" font-size="14" text-anchor="middle">A</text><text x="151.6" y="66.7" font-size="14" text-anchor="middle">B</text><text x="76.1" y="132.3" font-size="14" text-anchor="middle">C</text><text x="193.8" y="17.9" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 70
+        check: "180 - (34 + 38) - 38"
+        hints:
+          - 接線 PA と弦 AB のつくる角 ∠PAB と等しい円周角はどれかな。
+          - ∠ABC は △PAB の外角だね。
+          - △ABC の 3 つの角の和を使おう。
+        paths:
+          - [∠PAB = ∠ACB = 38°（接弦定理）, ∠ABC = 34 + 38 = 72（外角）, ∠BAC = 180 − 72 − 38 = 70, 70°]
+          - [∠PAB = 38°, △PAC で ∠PAC = 180 − 34 − 38 = 108, ∠BAC = 108 − 38 = 70, 70°]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: 直線 ℓ が、円 O に点 A で接しています（ℓ と円は A だけで交わります）。OA ⊥ ℓ であることを証明しましょう。O から ℓ に垂線 OH をひき、H が A と別の点だとするとどうなるかを考えます。図は、H が A と別の点だとしたときのようすです。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="57" stroke="currentColor" stroke-width="2" fill="none"/><line x1="53.1" y1="122.3" x2="186.9" y2="122.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="75" x2="88.1" y2="122.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="75" x2="151.9" y2="122.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="75" x2="120" y2="122.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="120,114.3 112,114.3 112,122.3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="75" r="2.6" fill="currentColor"/><text x="120" y="68.9" font-size="14" text-anchor="middle">O</text><text x="81.8" y="136.2" font-size="14" text-anchor="middle">A</text><text x="158.2" y="136.2" font-size="14" text-anchor="middle">A′</text><text x="120" y="141.2" font-size="14" text-anchor="middle">H</text><line x1="104.1" y1="117.3" x2="104.1" y2="127.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="135.9" y1="127.3" x2="135.9" y2="117.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="190.9" y="115.2" font-size="14" text-anchor="middle">ℓ</text></svg>'
+        explain: 例：「O から ℓ に垂線 OH をひく。H が A と別の点だとする。ℓ の上で、H について A と反対側に HA′ = HA となる点 A′ をとる。△OHA と △OHA′ で、OH は共通、HA = HA′、∠OHA = ∠OHA′ = 90°。2 組の辺とその間の角がそれぞれ等しいので △OHA ≡ △OHA′。よって OA′ = OA となり、A′ も円の上にある。すると ℓ は円と A、A′ の 2 点で交わり、ℓ が A だけで交わることに反する。したがって H は A と同じ点で、OA ⊥ ℓ。」と書ければよい。① 垂線の足 H と、H について A と対称な点 A′ を「とる」と決める、② 合同を示して OA′ = OA（A′ も円の上）を導く、③ 接線の約束（円と 1 点だけで交わる）と食いちがうことで結ぶ、の 3 点を見る。「〜だとすると約束と食いちがう。だから〜ではない」という進め方は、のちに背理法（L-011）として学ぶ。分度器で 1 つの図を測って 90° だった、という例だけでは、どの円のどの接線でもいえるとは示せないことを話す。逆に、半径 OA に A で垂直な直線は接線になることにも触れる（ほかの点 P でも円と交わるとすると、△OAP は OA = OP の二等辺三角形で ∠OPA = ∠OAP = 90° となり、2 つの角だけで 180° になってしまう）。
+        hints:
+          - H が A と別の点なら、ℓ の上で H について A と反対側に、HA と同じ長さの点 A′ がとれるね。
+          - △OHA と △OHA′ をくらべよう。等しい辺と角はどれかな。
+          - OA′ = OA なら、A′ はどこにある点かな。ℓ が A だけで交わることと合うかな。
+        paths:
+          - [垂線 OH をひき H は A と別の点とする, HA′ = HA となる A′ をとる, △OHA ≡ △OHA′ で OA′ = OA, A′ も円の上で 2 点で交わり接線の約束に反する, H は A と同じ点で OA ⊥ ℓ]
+      - part: わけ
+        text: 円 O の外の点 P から接線 PA、PB（A、B は接点）をひきます。PA = PB であることを証明しましょう。O と A、B、P を結んで考えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="84.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="207.5" y2="70" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="103.1,30.1 110.3,33.5 113.7,26.3" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="103.1,109.9 110.3,106.5 113.7,113.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="84.5" cy="70" r="2.6" fill="currentColor"/><text x="73.5" y="74.9" font-size="14" text-anchor="middle">O</text><text x="218.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="111.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="111.1" y="132" font-size="14" text-anchor="middle">B</text></svg>'
+        explain: 例：「△OAP と △OBP で、接線は接点を通る半径に垂直なので ∠OAP = ∠OBP = 90°（わけ 1）。OA = OB（円の半径）、OP は共通の斜辺。直角三角形の斜辺と他の 1 辺がそれぞれ等しいので △OAP ≡ △OBP。合同な図形の対応する辺は等しいので PA = PB。」と書ければよい。① 補助線 OA、OB、OP をひき、2 つの直角三角形 △OAP、△OBP を決める、② 等しい角と辺を、根拠（わけ 1、半径、共通）とともに並べる、③ 直角三角形の合同条件で合同を言い、対応する辺で結ぶ、の 3 点を見る。合同からは ∠APO = ∠BPO（PO は ∠APB を 2 等分する）と ∠AOP = ∠BOP も出る。4 日目の挑戦でこれを使う。ものさしで 1 つの図を測っただけでは、どの点 P でもいえるとは示せないことを話す。
+        hints:
+          - ∠OAP と ∠OBP は何度かな。わけ 1 を使おう。
+          - △OAP と △OBP で、等しい辺はどれとどれかな。
+          - 直角三角形の合同条件のどれが使えるかな。
+        paths:
+          - [∠OAP = ∠OBP = 90°（わけ 1）, OA = OB（半径）で OP は共通, 斜辺と他の 1 辺で △OAP ≡ △OBP, PA = PB]
+      - part: わけ
+        text: 円 O の点 A での接線の上に点 T をとり、弦 AB をひきます。∠TAB の内側にない弧の上の点 C について、∠TAB = ∠ACB であることを証明しましょう。A を通る直径 AD をひき、∠TAB が直角のとき、鋭角のとき、鈍角のときに分けて考えます。
+        svg: '<svg viewBox="0 0 240 152" xmlns="http://www.w3.org/2000/svg"><g><circle cx="56.7" cy="67" r="43.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="107" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="99.8" y2="59.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="18.9" y1="45.1" x2="56.7" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="18.9" y1="45.1" x2="99.8" y2="59.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="99.8" y1="59.4" x2="56.7" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="56.7" y2="23.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M72.7 110.7 A16 16 0 0 0 67 98.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="66.6" cy="106.1" r="1.9" fill="currentColor"/><path d="M26.9 59 A16 16 0 0 0 34.6 47.9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="27.8" cy="51.4" r="1.9" fill="currentColor"/><circle cx="56.7" cy="67" r="2.6" fill="currentColor"/><text x="44.7" y="71.2" font-size="12" text-anchor="middle">O</text><text x="56.7" y="126.9" font-size="12" text-anchor="middle">A</text><text x="108.6" y="62" font-size="12" text-anchor="middle">B</text><text x="12.9" y="38.9" font-size="12" text-anchor="middle">C</text><text x="62.7" y="17.1" font-size="12" text-anchor="middle">D</text><text x="107" y="126.9" font-size="12" text-anchor="middle">T</text></g><g transform="translate(120 0)"><circle cx="56.7" cy="67" r="43.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="107" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="18.9" y2="45.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="19.6" y1="90.2" x2="56.7" y2="110.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="19.6" y1="90.2" x2="18.9" y2="45.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="19.6" y1="90.2" x2="56.7" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56.7" y1="110.7" x2="56.7" y2="23.3" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M68.7 110.7 A12 12 0 0 0 50.7 100.3" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="60.8" cy="103.7" r="2" stroke="currentColor" stroke-width="1.2" fill="none"/><path d="M30.1 96 A12 12 0 0 0 19.4 78.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="26.6" cy="86" r="2" stroke="currentColor" stroke-width="1.2" fill="none"/><circle cx="56.7" cy="67" r="2.6" fill="currentColor"/><text x="68.7" y="71.2" font-size="12" text-anchor="middle">O</text><text x="56.7" y="126.9" font-size="12" text-anchor="middle">A</text><text x="12.9" y="38.9" font-size="12" text-anchor="middle">B</text><text x="14" y="105" font-size="12" text-anchor="middle">C</text><text x="62.7" y="17.1" font-size="12" text-anchor="middle">D</text><text x="107" y="126.9" font-size="12" text-anchor="middle">T</text></g><text x="60" y="148" font-size="12" text-anchor="middle">鋭角のとき</text><text x="180" y="148" font-size="12" text-anchor="middle">鈍角のとき</text></svg>'
+        explain: 例：「接線は接点を通る半径に垂直なので ∠TAD = 90°（わけ 1）。AD は直径なので、半円の弧に対する円周角で ∠ABD = ∠ACD = 90°。（ア）∠TAB が直角のとき、B は D と同じ点で AB は直径なので、∠ACB = 90° = ∠TAB。（イ）鋭角のとき、∠BAD = ∠a とする。∠TAB = 90° − ∠a。△ABD で ∠ADB = 180° − 90° − ∠a = 90° − ∠a。C と D は弧 AB の同じ側にあるので、弧 AB に対する円周角で ∠ACB = ∠ADB。よって ∠ACB = 90° − ∠a = ∠TAB。（ウ）鈍角のとき、D は ∠TAB の内側の弧の上にある。∠DAB = ∠a とすると ∠TAB = 90° + ∠a。CD をひくと ∠ACD = 90°、弧 DB に対する円周角で ∠DCB = ∠DAB = ∠a。よって ∠ACB = ∠ACD + ∠DCB = 90° + ∠a = ∠TAB。3 つのどの場合も ∠TAB = ∠ACB。」と書ければよい。① 直径 AD をひき、∠BAD を ∠a と決める、② ∠TAB と ∠ACB を 90° と ∠a の式で表す、③ 接線と半径（わけ 1）、半円の弧に対する円周角、同じ弧に対する円周角という約束した事実で結ぶ、の 3 点を見る。鋭角の場合だけ書けたら、鈍角では D の位置が変わって同じ式にならないので、場合分けが要ることを話す。3 つの場合をすべて示して、はじめて定理が証明できたことになる。中心 O と二等辺三角形 OAB を使って「∠TAB = 90° − ∠OAB = ∠AOB ÷ 2」と示す道もある。
+        hints:
+          - 接線 AT と直径 AD のつくる角 ∠TAD は何度かな。
+          - 鋭角のときは ∠BAD = ∠a として、∠TAB と ∠ADB を ∠a で表そう。
+          - 鈍角のときは CD をひいて、∠ACB を ∠ACD と ∠DCB に分けよう。
+        paths:
+          - [∠TAD = 90°（わけ 1）, 直角のとき AB は直径で ∠ACB = 90°, 鋭角のとき ∠TAB = 90° − ∠a = ∠ADB = ∠ACB, 鈍角のとき ∠TAB = 90° + ∠a = ∠ACD + ∠DCB = ∠ACB]
+      - part: 今日
+        text: △ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AB = 10 cm、BC = 12 cm、CA = 8 cm のとき、BD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="134.8" cy="84.8" r="39.2" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="142.2,26 31.1,124 208.9,124" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="134.8" cy="124" r="2.6" fill="currentColor"/><circle cx="167.2" cy="62.7" r="2.6" fill="currentColor"/><circle cx="108.9" cy="55.4" r="2.6" fill="currentColor"/><text x="143.6" y="20" font-size="14" text-anchor="middle">A</text><text x="101.6" y="52" font-size="14" text-anchor="middle">F</text><text x="20.8" y="132.8" font-size="14" text-anchor="middle">B</text><text x="134.8" y="139.9" font-size="14" text-anchor="middle">D</text><text x="218.6" y="134" font-size="14" text-anchor="middle">C</text><text x="176.3" y="61.5" font-size="14" text-anchor="middle">E</text><text x="78.6" y="70.1" font-size="12" text-anchor="middle">10</text><text x="105.8" y="140.4" font-size="12" text-anchor="middle">12</text><text x="182.7" y="74.4" font-size="12" text-anchor="middle">8</text></svg>'
+        answer: 7
+        check: "Fraction(10 + 12 - 8, 2)"
+        hints:
+          - 1 つの頂点からひいた 2 本の接線の長さは等しいね（わけ 2）。BD と等しい長さはどれかな。
+          - AB + BC − CA を、頂点から接点までの長さで表してみよう。
+          - AF と AE、CD と CE が消えて、BD がいくつ分残るかな。
+        paths:
+          - [BD = BF、CD = CE、AE = AF, AB + BC − CA = BF + BD = BD の 2 つ分, 10 + 12 − 8 = 14, BD = 14 ÷ 2 = 7, 7 cm]
+        note: 頂点から接点までの長さが 3 種類しかないことに気づくのが鍵。3 つの長さに名前をつけて、辺に書きこませるとよい。
+      - part: 今日
+        text: 円 O の点 A での接線を ST とし、A を通る直径を AD とします。∠DAB = 36° のとき、小さいほうの弧 AB の上の点 C について、∠x（∠ACB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="152" x2="193.7" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="56.3" y2="64.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="124.4" x2="120" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="65.8" y1="124.4" x2="56.3" y2="64.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="120" y2="18" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><path d="M120 126 A26 26 0 0 0 104.7 131" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M76.5 129.8 A12 12 0 0 0 63.9 112.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86" y="113.9" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="85" r="2.6" fill="currentColor"/><text x="131" y="89.9" font-size="14" text-anchor="middle">O</text><text x="112.2" y="164.7" font-size="14" text-anchor="middle">A</text><text x="45.8" y="65.8" font-size="14" text-anchor="middle">B</text><text x="56.9" y="135.7" font-size="14" text-anchor="middle">C</text><text x="127.8" y="15.1" font-size="14" text-anchor="middle">D</text><text x="204.7" y="156.9" font-size="14" text-anchor="middle">T</text><text x="35.3" y="156.9" font-size="14" text-anchor="middle">S</text><text x="108.6" y="116.3" font-size="12" text-anchor="middle">36°</text></svg>'
+        answer: 126
+        check: "90 + 36"
+        hints:
+          - ∠TAB の内側に D があるね。∠TAB は鈍角だよ。
+          - ∠TAB を、∠TAD と ∠DAB に分けて求めよう。
+          - わけ 3 の鈍角の場合を使おう。
+        paths:
+          - [∠TAD = 90°, ∠TAB = 90 + 36 = 126, 接弦定理で ∠ACB = ∠TAB = 126, 126°]
+          - [∠ACD = 90°（半円の弧）, ∠DCB = ∠DAB = 36°（弧 DB）, ∠ACB = 90 + 36 = 126, 126°]
+    extra:
+      - part: 今日
+        text: △ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AB = 9 cm、BC = 11 cm、CA = 8 cm のとき、AF は何 cm ですか。
+        answer: 3
+        check: "Fraction(9 + 8 - 11, 2)"
+        hints:
+          - AF と等しい長さはどれかな。
+          - AB + CA − BC を、頂点から接点までの長さで表してみよう。
+          - AF がいくつ分残るかな。
+        paths:
+          - [AF = AE、BF = BD、CD = CE, AB + CA − BC = AF + AE = AF の 2 つ分, 9 + 8 − 11 = 6, AF = 3, 3 cm]
+      - part: 今日
+        text: 円 O の点 A での接線を ST とし、弦 AB をひきます。∠TAB = 41° のとき、∠TAB の内側の弧 AB に対する中心角 ∠AOB は何度ですか。
+        answer: 82
+        check: "41 * 2"
+        hints:
+          - 接弦定理で、弧 AB に対する円周角は何度かな。
+          - 中心角は、同じ弧に対する円周角の何倍かな。
+          - 円周角を、その倍にしよう。
+        paths:
+          - [弧 AB に対する円周角 = ∠TAB = 41°, ∠AOB = 41 × 2 = 82, 82°]
+          - [∠OAT = 90° で ∠OAB = 90 − 41 = 49, OA = OB で ∠AOB = 180 − 49 − 49 = 82, 82°]
+      - part: 挑戦
+        text: ∠C = 90° の直角三角形 ABC の 3 つの辺に、円が接しています。AB = 13 cm、BC = 12 cm、CA = 5 cm のとき、円の半径は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="188" cy="78.5" r="34" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="222,27.5 18,112.5 222,112.5" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="222,104.5 214,104.5 214,112.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="188" cy="112.5" r="2.6" fill="currentColor"/><circle cx="222" cy="78.5" r="2.6" fill="currentColor"/><circle cx="174.9" cy="47.1" r="2.6" fill="currentColor"/><text x="228.1" y="23.2" font-size="14" text-anchor="middle">A</text><text x="11.9" y="126.6" font-size="14" text-anchor="middle">B</text><text x="227.5" y="126.9" font-size="14" text-anchor="middle">C</text><text x="115.3" y="62.9" font-size="12" text-anchor="middle">13</text><text x="120" y="128.9" font-size="12" text-anchor="middle">12</text><text x="230.6" y="74.2" font-size="12" text-anchor="middle">5</text></svg>'
+        answer: 2
+        check: "Fraction(12 + 5 - 13, 2)"
+        hints:
+          - 円の中心を O、辺 BC、CA との接点を D、E として、四角形 OECD を考えよう。
+          - 四角形 OECD の 4 つの角は何度かな。CD と半径の長さはどうなるかな。
+          - C からの接線の長さ CD を、3 つの辺の長さで表そう。
+        paths:
+          - [∠ODC = ∠OEC = 90°（接線は半径に垂直）と ∠C = 90° で 4 つの角が直角, OD = OE なので四角形 OECD は正方形で CD = 半径, CD = (BC + CA − AB) ÷ 2 = (12 + 5 − 13) ÷ 2 = 2, 2 cm]
+        note: 直角のかどにできる四角形が正方形になることに気づけるかがポイント。三平方の定理は使わない（3 辺の長さは問題で与えている）。
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: AB = AC の二等辺三角形 ABC で、∠A = 36° です。∠x（∠ABC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 86.2,122 153.8,122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M113.2 38.9 A22 22 0 0 0 126.8 38.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="57.2" font-size="12" text-anchor="middle">36°</text><path d="M104.2 122 A18 18 0 0 0 91.8 104.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="111.3" y="108" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="110.5" y="17.4" font-size="14" text-anchor="middle">A</text><text x="77.3" y="133.4" font-size="14" text-anchor="middle">B</text><text x="162.7" y="133.4" font-size="14" text-anchor="middle">C</text><line x1="98.3" y1="68.5" x2="107.9" y2="71.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="132.1" y1="71.5" x2="141.7" y2="68.5" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+        answer: 72
+        check: "(180 - 36) // 2"
+        hints:
+          - 二等辺三角形の底角はどうなっているかな。
+          - 2 つの底角を合わせると何度かな。
+          - それを 2 つに分けよう。
+        paths:
+          - [∠ABC = ∠ACB（底角）, (180 − 36) ÷ 2 = 72, 72°]
+      - part: 思い出す
+        text: 円 O の円周の上に 3 点 A、B、C があります。∠OBC = 22° のとき、∠x（∠BAC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="71.8" y2="89.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="70" x2="168.2" y2="89.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="71.8" y1="89.5" x2="168.2" y2="89.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="71.8" y2="89.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="111" y1="18.8" x2="168.2" y2="89.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M97.8 89.5 A26 26 0 0 0 95.9 79.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="110.1" y="86.2" font-size="12" text-anchor="middle">22°</text><path d="M105.2 29.3 A12 12 0 0 0 118.5 28.1" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="113.1" y="47.9" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="70" r="2.6" fill="currentColor"/><text x="127.8" y="67.1" font-size="14" text-anchor="middle">O</text><text x="102" y="17.4" font-size="14" text-anchor="middle">A</text><text x="61.6" y="98.5" font-size="14" text-anchor="middle">B</text><text x="178.4" y="98.5" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 68
+        check: "(180 - 2 * 22) // 2"
+        hints:
+          - OB = OC なので、∠OCB は何度かな。
+          - ∠BOC を求めよう。
+          - ∠BAC は、弧 BC に対する円周角だね。
+        paths:
+          - [∠OCB = 22°（OB = OC）, ∠BOC = 180 − 22 − 22 = 136, ∠BAC = 136 ÷ 2 = 68, 68°]
+      - part: 今日
+        text: 四角形 ABCD の 4 つの辺に、円が接しています。AB = 7 cm、BC = 9 cm、CD = 8 cm のとき、DA は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="113.2" cy="72.1" r="49.9" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="67.1,26.9 58.6,122 181.4,122 148.4,18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="63.5" cy="67.7" r="2.6" fill="currentColor"/><circle cx="113.2" cy="122" r="2.6" fill="currentColor"/><circle cx="160.8" cy="57" r="2.6" fill="currentColor"/><circle cx="107.7" cy="22.5" r="2.6" fill="currentColor"/><text x="59.2" y="24.1" font-size="14" text-anchor="middle">A</text><text x="50.5" y="134.3" font-size="14" text-anchor="middle">B</text><text x="190.2" y="133.4" font-size="14" text-anchor="middle">C</text><text x="158.2" y="17.9" font-size="14" text-anchor="middle">D</text><text x="54.3" y="77.9" font-size="12" text-anchor="middle">7</text><text x="120" y="134.8" font-size="12" text-anchor="middle">9</text><text x="173.1" y="71.6" font-size="12" text-anchor="middle">8</text><text x="100.3" y="18.8" font-size="12" text-anchor="middle">?</text></svg>'
+        answer: 6
+        check: "7 + 8 - 9"
+        hints:
+          - 1 つの頂点からひいた 2 本の接線の長さは等しいね。
+          - 4 つの辺を、頂点から接点までの長さで分けてみよう。
+          - AB + CD と BC + DA をくらべよう。
+        paths:
+          - [頂点から接点までの長さは 4 種類, AB + CD と BC + DA はどちらもその 4 つの和, AB + CD = BC + DA, 7 + 8 = 9 + DA で DA = 6, 6 cm]
+        note: 円に接する四角形では、向かい合う辺の和が等しい。覚えるのでなく、接線の長さを辺に書きこんで、毎回たしかめられるようにする。
+      - part: 今日
+        text: 円の外の点 P から接線 PA、PB をひきます。∠APB = 52° のとき、大きいほうの弧 AB の上の点 C について、∠x（∠ACB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="86.7" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="205.3" y1="70" x2="109.5" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="205.3" y1="70" x2="109.5" y2="116.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.5" y1="23.3" x2="109.5" y2="116.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="34.7" y1="70" x2="109.5" y2="23.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="34.7" y1="70" x2="109.5" y2="116.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M189.1 62.1 A18 18 0 0 0 189.1 77.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="174.3" y="74.2" font-size="12" text-anchor="middle">52°</text><path d="M50 79.5 A18 18 0 0 0 50 60.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="65.7" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="216.3" y="74.9" font-size="14" text-anchor="middle">P</text><text x="114.3" y="18.3" font-size="14" text-anchor="middle">A</text><text x="114.3" y="131.5" font-size="14" text-anchor="middle">B</text><text x="23.7" y="74.9" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 64
+        check: "(180 - 52) // 2"
+        hints:
+          - PA = PB なので、∠PAB は何度かな。
+          - 接線 PA と弦 AB のつくる角 ∠PAB の内側にある弧はどれかな。
+          - 接弦定理で、∠PAB と等しい円周角を選ぼう。
+        paths:
+          - [PA = PB で ∠PAB = (180 − 52) ÷ 2 = 64, 接弦定理で ∠ACB = ∠PAB = 64, 64°]
+          - [中心 O をとると ∠AOB = 180 − 52 = 128, ∠ACB = 128 ÷ 2 = 64, 64°]
+      - part: 今日
+        text: AB は円 O の直径です。円の上の点 C について、直線 AC と、点 B での接線の交点を D とします。∠ADB = 52° のとき、∠x（∠CBD）は何度ですか。
+        svg: '<svg viewBox="0 0 240 180" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="105.8" r="56.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.8" y1="105.8" x2="176.2" y2="105.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.8" y1="105.8" x2="176.2" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="176.2" y1="125.5" x2="176.2" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="176.2" y1="105.8" x2="133.6" y2="51.3" stroke="currentColor" stroke-width="2" fill="none"/><path d="M165.2 26.6 A14 14 0 0 0 176.2 32" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="164.4" y="46.5" font-size="12" text-anchor="middle">52°</text><path d="M176.2 91.8 A14 14 0 0 0 167.6 94.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="167.4" y="84.5" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="105.8" r="2.6" fill="currentColor"/><text x="120" y="99.7" font-size="14" text-anchor="middle">O</text><text x="52.8" y="110.7" font-size="14" text-anchor="middle">A</text><text x="187.2" y="110.7" font-size="14" text-anchor="middle">B</text><text x="185.3" y="16.7" font-size="14" text-anchor="middle">D</text><text x="131.3" y="45.4" font-size="14" text-anchor="middle">C</text></svg>'
+        answer: 38
+        check: "180 - 90 - 52"
+        hints:
+          - 直径 AB と、B での接線は、どんな角で交わるかな。
+          - △ABD で ∠BAD を求めよう。
+          - 接弦定理で、∠CBD と等しい円周角はどれかな。
+        paths:
+          - [∠ABD = 90°（接線は半径に垂直）, ∠BAD = 180 − 90 − 52 = 38, 接弦定理で ∠CBD = ∠BAC = 38, 38°]
+          - [∠ACB = 90°（半円の弧）なので ∠BCD = 90°, △BCD で 180 − 90 − 52 = 38, 38°]
+      - part: 挑戦
+        text: 円 O の外の点 P から接線 PA、PB をひくと、∠APB = 90° でした。円の半径は 4 cm です。P から A までまっすぐ、A から大きいほうの弧 AB にそって B まで、B から P までまっすぐ、ひもを張ります。ひもの長さはどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="109.2" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.8" y1="70" x2="146" y2="33.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="182.8" y1="70" x2="146" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.2" y1="70" x2="146" y2="33.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="109.2" y1="70" x2="146" y2="106.8" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="140.3,38.9 146,44.5 151.7,38.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="140.3,101.1 146,95.5 151.7,101.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="177.1,64.3 171.5,70 177.1,75.7" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="109.2" cy="70" r="2.6" fill="currentColor"/><text x="98.2" y="74.9" font-size="14" text-anchor="middle">O</text><text x="193.8" y="74.9" font-size="14" text-anchor="middle">P</text><text x="153.8" y="30.4" font-size="14" text-anchor="middle">A</text><text x="153.8" y="119.4" font-size="14" text-anchor="middle">B</text><text x="121.5" y="49.7" font-size="12" text-anchor="middle">4</text></svg>'
+        choices: [（8 + 6 × 円周率）cm, （8 + 2 × 円周率）cm, （4 + 6 × 円周率）cm, （8 + 8 × 円周率）cm]
+        answer: （8 + 6 × 円周率）cm
+        check: "{(8, 6): '（8 + 6 × 円周率）cm', (8, 2): '（8 + 2 × 円周率）cm', (4, 6): '（4 + 6 × 円周率）cm', (8, 8): '（8 + 8 × 円周率）cm'}[(4 + 4, 2 * 4 * 270 // 360)]"
+        hints:
+          - 四角形 OAPB の 4 つの角は、それぞれ何度かな。
+          - 4 つの角が直角で OA = OB なので、PA と PB は何 cm かな。
+          - 大きいほうの弧 AB の中心角は何度かな。弧の長さは、円周の「中心角 ÷ 360」だね。
+        paths:
+          - [∠OAP = ∠OBP = ∠APB = 90° で ∠AOB = 90°, 四角形 OAPB は正方形で PA = PB = 4, 大きいほうの弧の中心角は 360 − 90 = 270°, 弧の長さは 8 × 円周率 × 270/360 = 6 × 円周率, ひもは （8 + 6 × 円周率）cm]
+        note: 小さいほうの弧（中心角 90°）で計算して （8 + 2 × 円周率）cm を選ぶ誤りが多い。ベルトと滑車の長さや、円い障害物をよけて進むロボットの最短の道も、接線と弧をつないで同じように求める（D-026）。
+    extra:
+      - part: 今日
+        text: 平行四辺形 ABCD の 4 つの辺に、円が接しています。AB = 6 cm のとき、平行四辺形 ABCD のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="83.2,18 46.5,122 156.8,122 193.5,18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="71" cy="52.7" r="2.6" fill="currentColor"/><circle cx="120" cy="122" r="2.6" fill="currentColor"/><circle cx="169" cy="87.3" r="2.6" fill="currentColor"/><circle cx="120" cy="18" r="2.6" fill="currentColor"/><text x="73.2" y="18.3" font-size="14" text-anchor="middle">A</text><text x="37.5" y="133.3" font-size="14" text-anchor="middle">B</text><text x="165.2" y="133.9" font-size="14" text-anchor="middle">C</text><text x="203.9" y="19.1" font-size="14" text-anchor="middle">D</text><text x="56.7" y="71.3" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 24
+        check: "2 * (6 + 6)"
+        hints:
+          - 円が 4 つの辺に接する四角形では、向かい合う辺の和はどうなっていたかな。
+          - 平行四辺形の向かい合う辺は等しいね。CD は何 cm かな。
+          - AB + CD = BC + DA から、BC + DA を求めよう。
+        paths:
+          - [CD = AB = 6（平行四辺形の対辺）, BC + DA = AB + CD = 12, まわりは 12 + 12 = 24, 24 cm]
+        note: BC = DA なので BC = DA = 6 cm にもなり、この平行四辺形はひし形だとわかる。
+      - part: 挑戦
+        text: 円の外の点 P から接線 PA、PB をひき、PA = 10 cm です。小さいほうの弧 AB の上の点 E での接線が、PA、PB と Q、R で交わります。△PQR のまわりの長さは何 cm ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="84.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="128.4" y1="33.1" x2="146" y2="98.7" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="134.7" cy="56.5" r="2.6" fill="currentColor"/><text x="218.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="111.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="111.1" y="132" font-size="14" text-anchor="middle">B</text><text x="145.3" y="58.6" font-size="14" text-anchor="middle">E</text><text x="133.1" y="28.1" font-size="14" text-anchor="middle">Q</text><text x="150.6" y="113.6" font-size="14" text-anchor="middle">R</text><text x="162.1" y="39.6" font-size="12" text-anchor="middle">10</text></svg>'
+        answer: 20
+        check: "10 + 10"
+        hints:
+          - Q から円にひいた 2 本の接線はどれとどれかな。
+          - QE = QA、RE = RB だね。PB は何 cm かな。
+          - △PQR のまわりの長さを、PQ + QA と PR + RB に組みかえよう。
+        paths:
+          - [QE = QA、RE = RB, PQ + QR + RP = PQ + QA + RB + RP, PA + PB = 10 + 10 = 20, 20 cm]
+        note: E の位置をどこにかえても、まわりの長さは変わらない。
+      - part: 挑戦
+        text: 円 O の外の点 P から接線 PA、PB をひき、小さいほうの弧 AB の上の点 E での接線が、PA、PB と Q、R で交わります。∠APB = 50° のとき、∠x（∠QOR）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="84.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="22.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="207.5" y1="70" x2="106.5" y2="117.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="128.4" y1="33.1" x2="146" y2="98.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="128.4" y2="33.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="84.5" y1="70" x2="146" y2="98.7" stroke="currentColor" stroke-width="2" fill="none"/><path d="M191.2 62.4 A18 18 0 0 0 191.2 77.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="176.5" y="74.2" font-size="12" text-anchor="middle">50°</text><path d="M95.4 75.1 A12 12 0 0 0 93.7 62.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="109.3" y="70.9" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="84.5" cy="70" r="2.6" fill="currentColor"/><text x="73.6" y="76.3" font-size="14" text-anchor="middle">O</text><text x="218.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="111.1" y="17.8" font-size="14" text-anchor="middle">A</text><text x="111.1" y="132" font-size="14" text-anchor="middle">B</text><text x="145.3" y="58.6" font-size="14" text-anchor="middle">E</text><text x="133.1" y="28.1" font-size="14" text-anchor="middle">Q</text><text x="150.6" y="113.6" font-size="14" text-anchor="middle">R</text></svg>'
+        answer: 65
+        check: "(180 - 50) // 2"
+        hints:
+          - ∠AOB は何度かな。
+          - Q からの 2 本の接線 QA、QE について、わけ 2 の合同から、∠AOQ と ∠EOQ はどうなるかな。
+          - ∠QOR は ∠EOQ と ∠EOR を合わせた角だね。∠AOB の何分の 1 かな。
+        paths:
+          - [∠AOB = 180 − 50 = 130, ∠AOQ = ∠EOQ、∠BOR = ∠EOR（わけ 2 の合同）, ∠QOR = ∠EOQ + ∠EOR = 130 ÷ 2 = 65, 65°]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: 円 O の外の点 P から、円に接線 PA（A は接点）をひきました。∠APO = 36° のとき、∠x（∠AOP）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="107.4" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.4" y1="85" x2="107.4" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="107.4" y1="85" x2="199.6" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="199.6" y1="18" x2="107.4" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="107.4,26 115.4,26 115.4,18" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M118.7 76.8 A14 14 0 0 0 107.4 71" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="119.6" y="65.1" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><path d="M185.6 18 A14 14 0 0 0 188.3 26.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="173.9" y="30.5" font-size="12" text-anchor="middle">36°</text><circle cx="107.4" cy="85" r="2.6" fill="currentColor"/><text x="102.4" y="99.7" font-size="14" text-anchor="middle">O</text><text x="115.2" y="15.1" font-size="14" text-anchor="middle">A</text><text x="210.1" y="19.5" font-size="14" text-anchor="middle">P</text></svg>'
+        answer: 54
+        check: "180 - 90 - 36"
+        hints:
+          - 接線と、接点を通る半径は、どんな角で交わるかな。
+          - △OAP の 3 つの角のうち、2 つがわかるね。
+          - 180° から 2 つの角をひこう。
+        paths:
+          - [∠OAP = 90°, 180 − 90 − 36 = 54, 54°]
+      - part: 今日
+        text: 円 O の外の点 P から接線 PA、PB をひきます。∠AOB = 118° のとき、∠x（∠APB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="95.5" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196.5" y1="70" x2="122.3" y2="25.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="196.5" y1="70" x2="122.3" y2="114.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95.5" y1="70" x2="122.3" y2="25.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="95.5" y1="70" x2="122.3" y2="114.6" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="118.2,32.3 125,36.4 129.2,29.5" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="118.2,107.7 125,103.6 129.2,110.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M181.1 60.7 A18 18 0 0 0 181.1 79.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="165.5" y="74.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><path d="M101.7 80.3 A12 12 0 0 0 101.7 59.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120.5" y="74.2" font-size="12" text-anchor="middle">118°</text><circle cx="95.5" cy="70" r="2.6" fill="currentColor"/><text x="84.5" y="74.9" font-size="14" text-anchor="middle">O</text><text x="207.5" y="74.9" font-size="14" text-anchor="middle">P</text><text x="128" y="20.9" font-size="14" text-anchor="middle">A</text><text x="128" y="128.9" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 62
+        check: "360 - 90 - 90 - 118"
+        hints:
+          - ∠OAP と ∠OBP は何度かな。
+          - 四角形 OAPB の 4 つの角の和を使おう。
+          - 360° から、わかっている 3 つの角をひこう。
+        paths:
+          - [∠OAP = ∠OBP = 90°, 360 − 90 − 90 − 118 = 62, 62°]
+      - part: 今日
+        text: 円の外の点 P から接線 PA、PB をひきます。∠APB = 74° のとき、∠x（∠PBA）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="97.8" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="209.2" y1="85" x2="138.2" y2="31.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="209.2" y1="85" x2="138.2" y2="138.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="138.2" y1="31.5" x2="138.2" y2="138.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M201.2 79 A10 10 0 0 0 201.2 91" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="186.2" y="89.2" font-size="12" text-anchor="middle">74°</text><path d="M155.7 125.3 A22 22 0 0 0 138.2 116.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="153.8" y="111.4" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="220.2" y="89.9" font-size="14" text-anchor="middle">P</text><text x="144.8" y="27.6" font-size="14" text-anchor="middle">A</text><text x="144.8" y="152.2" font-size="14" text-anchor="middle">B</text></svg>'
+        answer: 53
+        check: "(180 - 74) // 2"
+        hints:
+          - PA と PB の長さはどうなっているかな。
+          - △PAB は何という三角形かな。
+          - 180° から 74° をひいて、2 つの底角に分けよう。
+        paths:
+          - [PA = PB で △PAB は二等辺三角形, (180 − 74) ÷ 2 = 53, 53°]
+      - part: 今日
+        text: 3 点 A、B、C は円の上にあり、点 A での接線を ST とします。∠TAB = 58°、∠BAC = 70° のとき、∠x（∠ABC）は何度ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="70" r="52" stroke="currentColor" stroke-width="2" fill="none"/><line x1="62.8" y1="122" x2="177.2" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="122" x2="166.7" y2="47.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="166.7" y1="47.2" x2="69.5" y2="57.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="69.5" y1="57.4" x2="120" y2="122" stroke="currentColor" stroke-width="2" fill="none"/><path d="M138 122 A18 18 0 0 0 129.5 106.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147.1" y="111.2" font-size="12" text-anchor="middle">58°</text><path d="M135.9 96.6 A30 30 0 0 0 101.5 98.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.7" y="83.3" font-size="12" text-anchor="middle">70°</text><path d="M148.8 49.1 A18 18 0 0 0 157.2 62.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="140.4" y="67.8" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="112.2" y="134.7" font-size="14" text-anchor="middle">A</text><text x="176.6" y="47.3" font-size="14" text-anchor="middle">B</text><text x="58.9" y="59.7" font-size="14" text-anchor="middle">C</text><text x="188.2" y="126.9" font-size="14" text-anchor="middle">T</text><text x="51.8" y="126.9" font-size="14" text-anchor="middle">S</text></svg>'
+        answer: 52
+        check: "180 - 58 - 70"
+        hints:
+          - 接弦定理で、∠TAB と等しい円周角はどれかな。
+          - △ABC の 2 つの角がわかるね。
+          - 180° から 2 つの角をひこう。
+        paths:
+          - [∠ACB = ∠TAB = 58°（接弦定理）, 180 − 58 − 70 = 52, 52°]
+          - [∠SAC = 180 − 58 − 70 = 52（一直線）, 接弦定理で ∠ABC = ∠SAC = 52, 52°]
+      - part: 今日
+        text: 円 O の点 A での接線を ST とします。∠AOB = 96° のとき、∠x（∠TAB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="62" stroke="currentColor" stroke-width="2" fill="none"/><line x1="51.8" y1="142" x2="188.2" y2="142" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="142" x2="181.7" y2="73.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="80" x2="120" y2="142" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="80" x2="181.7" y2="73.5" stroke="currentColor" stroke-width="2" fill="none"/><path d="M120 88 A8 8 0 0 0 128 79.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135.6" y="98.3" font-size="12" text-anchor="middle">96°</text><path d="M138 142 A18 18 0 0 0 132 128.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="148.3" y="133.6" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="80" r="2.6" fill="currentColor"/><text x="111.8" y="77.5" font-size="14" text-anchor="middle">O</text><text x="112.2" y="154.7" font-size="14" text-anchor="middle">A</text><text x="192.6" y="77.3" font-size="14" text-anchor="middle">B</text><text x="199.2" y="146.9" font-size="14" text-anchor="middle">T</text><text x="40.8" y="146.9" font-size="14" text-anchor="middle">S</text></svg>'
+        answer: 48
+        check: "96 // 2"
+        hints:
+          - 弧 AB に対する円周角は何度かな。
+          - 円周角は、中心角の半分だね。
+          - 接弦定理で、∠TAB はその円周角に等しいよ。
+        paths:
+          - [弧 AB に対する円周角は 96 ÷ 2 = 48, 接弦定理で ∠TAB = 48, 48°]
+          - [∠OAB = (180 − 96) ÷ 2 = 42, ∠TAB = 90 − 42 = 48, 48°]
+      - part: 今日
+        text: 円の点 A での接線を ST とし、弦 AB をひきます。∠TAB = 63° です。∠TAB の内側にある弧 AB の上の点 D について、∠x（∠ADB）は何度ですか。
+        svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="67" stroke="currentColor" stroke-width="2" fill="none"/><line x1="46.3" y1="152" x2="193.7" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="152" x2="174.2" y2="45.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="171.3" y1="128.1" x2="120" y2="152" stroke="currentColor" stroke-width="2" fill="none"/><line x1="171.3" y1="128.1" x2="174.2" y2="45.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M134 152 A14 14 0 0 0 126.4 139.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M171.7 118.1 A10 10 0 0 0 162.3 132.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="152.1" y="119.6" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="112.2" y="164.7" font-size="14" text-anchor="middle">A</text><text x="183.1" y="44.1" font-size="14" text-anchor="middle">B</text><text x="179.8" y="140" font-size="14" text-anchor="middle">D</text><text x="204.7" y="156.9" font-size="14" text-anchor="middle">T</text><text x="35.3" y="156.9" font-size="14" text-anchor="middle">S</text><text x="141.7" y="135.3" font-size="12" text-anchor="middle">63°</text></svg>'
+        answer: 117
+        check: "180 - 63"
+        hints:
+          - D は ∠TAB の内側の弧の上にあるね。
+          - 反対側の角 ∠SAB の内側にある弧はどれかな。
+          - ∠SAB を求めて、接弦定理を使おう。
+        paths:
+          - [∠SAB = 180 − 63 = 117, ∠SAB の内側の弧は D をふくまない弧 AB, ∠ADB = ∠SAB = 117, 117°]
+      - part: 今日
+        text: △ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AB = 11 cm、BC = 9 cm、CA = 6 cm のとき、AF は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="159" cy="90.1" r="33.9" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="195.4,26 44.6,124 191.7,124" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="159" cy="124" r="2.6" fill="currentColor"/><circle cx="192.9" cy="91.3" r="2.6" fill="currentColor"/><circle cx="140.6" cy="61.6" r="2.6" fill="currentColor"/><text x="200.8" y="21.3" font-size="14" text-anchor="middle">A</text><text x="134.6" y="57.3" font-size="14" text-anchor="middle">F</text><text x="34.1" y="132" font-size="14" text-anchor="middle">B</text><text x="159" y="139.9" font-size="14" text-anchor="middle">D</text><text x="199.4" y="136.8" font-size="14" text-anchor="middle">C</text><text x="203.9" y="96.6" font-size="14" text-anchor="middle">E</text><text x="113.4" y="69" font-size="12" text-anchor="middle">11</text><text x="118.2" y="136.8" font-size="12" text-anchor="middle">9</text><text x="202.1" y="79.5" font-size="12" text-anchor="middle">6</text></svg>'
+        answer: 4
+        check: "Fraction(11 + 6 - 9, 2)"
+        hints:
+          - 1 つの頂点からひいた 2 本の接線の長さは等しいね。
+          - AB + CA − BC を、頂点から接点までの長さで表してみよう。
+          - AF がいくつ分残るかな。
+        paths:
+          - [AF = AE、BF = BD、CD = CE, AB + CA − BC = AF の 2 つ分, 11 + 6 − 9 = 8, AF = 4, 4 cm]
+      - part: 今日
+        text: 四角形 ABCD の 4 つの辺に、円が接しています。AB = 5 cm、BC = 8 cm、DA = 7 cm のとき、CD は何 cm ですか。
+        svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="112" cy="95.7" r="46.3" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="62.1,76.9 72.4,142 177.9,142 133.2,18" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="66.2" cy="102.9" r="2.6" fill="currentColor"/><circle cx="112" cy="142" r="2.6" fill="currentColor"/><circle cx="155.5" cy="80" r="2.6" fill="currentColor"/><circle cx="82.4" cy="60.1" r="2.6" fill="currentColor"/><text x="51.8" y="77.9" font-size="14" text-anchor="middle">A</text><text x="63.4" y="153.1" font-size="14" text-anchor="middle">B</text><text x="186.9" y="153.2" font-size="14" text-anchor="middle">C</text><text x="142.7" y="17.4" font-size="14" text-anchor="middle">D</text><text x="58.8" y="115" font-size="12" text-anchor="middle">5</text><text x="125.1" y="154.8" font-size="12" text-anchor="middle">8</text><text x="166.4" y="80.3" font-size="12" text-anchor="middle">?</text><text x="92.1" y="45" font-size="12" text-anchor="middle">7</text></svg>'
+        answer: 10
+        check: "8 + 7 - 5"
+        hints:
+          - 1 つの頂点からひいた 2 本の接線の長さは等しいね。
+          - 向かい合う辺の和 AB + CD と BC + DA をくらべよう。
+          - 5 + CD が、8 + 7 と等しくなるよ。
+        paths:
+          - [AB + CD = BC + DA, 5 + CD = 8 + 7 = 15, CD = 10, 10 cm]
+    extra:
+      - part: 今日
+        text: 円の外の点 P から接線 PA、PB をひきます。∠APB = 48° のとき、大きいほうの弧 AB の上の点 C について、∠ACB は何度ですか。
+        answer: 66
+        check: "(180 - 48) // 2"
+        hints:
+          - PA = PB なので、∠PAB は何度かな。
+          - ∠PAB の内側にある弧はどれかな。
+          - 接弦定理で、∠PAB と等しい円周角を選ぼう。
+        paths:
+          - [∠PAB = (180 − 48) ÷ 2 = 66, 接弦定理で ∠ACB = ∠PAB = 66, 66°]
+      - part: 今日
+        text: △ABC の 3 つの辺に、円が D（辺 BC の上）、E（辺 CA の上）、F（辺 AB の上）で接しています。AF = 3 cm、BD = 4 cm、CE = 6 cm のとき、BC は何 cm ですか。
+        answer: 10
+        check: "4 + 6"
+        hints:
+          - BC は、BD と DC を合わせた長さだね。
+          - DC と等しい長さはどれかな。
+          - C からひいた 2 本の接線は CD と CE だね。
+        paths:
+          - [CD = CE = 6, BC = BD + DC = 4 + 6 = 10, 10 cm]
+        note: AF = 3 cm は使わない。問われている辺の両はしの頂点だけを見ればよい。
+      - part: 今日
+        text: 円 O の点 A での接線を ST とし、弦 AB をひきます。∠TAB = 35° のとき、∠TAB の内側の弧 AB に対する中心角 ∠AOB は何度ですか。
+        answer: 70
+        check: "2 * 35"
+        hints:
+          - 接弦定理で、弧 AB に対する円周角は何度かな。
+          - 中心角は、同じ弧に対する円周角の何倍かな。
+          - 円周角を、その倍にしよう。
+        paths:
+          - [弧 AB に対する円周角 = 35°, ∠AOB = 35 × 2 = 70, 70°]
