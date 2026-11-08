@@ -10,6 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<!-- ホーム画面に置けるアプリ（PWA、D-049） -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0d1220">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="みちすじ">
+<!-- Google ドライブに記録を置くときの OAuth クライアント ID（D-049、公開してよい値）。空なら、ドライブの欄は出さない -->
+<meta name="google-client-id" content="">
 </head>
 <body>
 <header class="bar">
@@ -24,6 +33,7 @@
   </a>
   <nav class="crumbs" id="crumbs" aria-label="いまの場所"></nav>
   <div class="tools">
+    <button id="btn-sync" class="pill sync-chip" type="button" hidden><span class="sd"></span><span class="t">ドライブ</span></button>
     <button id="btn-who" class="pill who-chip" type="button" title="だれの記録か（押すと切り替え）"></button>
     <button id="btn-today" class="pill solid" type="button">今日の課題</button>
     <button id="btn-music" class="icon" type="button" aria-label="音楽" title="音楽">
@@ -44,7 +54,7 @@
 <dialog id="menu" class="sheet">
   <form method="dialog">
     <h2>記録</h2>
-    <p class="muted">進み具合は、人ごとに、この端末のブラウザの中にだけ保存しています。別の端末へ移すときや、非公開の記録に残すときは書き出してください。問題が新しくなっても、済んだ単元と日の記録は引き継ぎます。</p>
+    <p class="muted">進み具合は、人ごとに、この端末のブラウザの中に保存しています。別の端末へ移すときや、非公開の記録に残すときは書き出してください。問題が新しくなっても、済んだ単元と日の記録は引き継ぎます。</p>
     <div class="who-box">
       <div class="k">だれの記録</div>
       <div class="row who-list" id="who-list"></div>
@@ -52,6 +62,16 @@
         <button type="button" class="pill" id="btn-who-add">人を足す</button>
         <button type="button" class="pill" id="btn-who-rename">呼び名を変える</button>
       </div>
+    </div>
+    <div class="drive-box" id="drive-box" hidden>
+      <div class="k">Google ドライブ</div>
+      <p class="muted" id="drive-status"></p>
+      <div class="row">
+        <button type="button" class="pill solid" id="btn-drive-in">Google でログインして合わせる</button>
+        <button type="button" class="pill" id="btn-drive-now" hidden>いま合わせる</button>
+        <button type="button" class="pill" id="btn-drive-out" hidden>この端末では合わせない</button>
+      </div>
+      <p class="muted fine">ログインすると、どの端末からも同じ記録を開けます。記録は、ログインした人の Google ドライブの、このページ専用の隠しフォルダにだけ置き、こちらのサーバには送りません。<a href="privacy.html" target="_blank" rel="noopener">プライバシー</a></p>
     </div>
     <div class="row">
       <button type="button" class="pill" id="btn-export">この人の記録を書き出す</button>
@@ -67,6 +87,7 @@
 <script src="data.js"></script>
 <script src="problems.js"></script>
 <script src="music.js"></script>
+<script src="sync.js"></script>
 <script src="app.js"></script>
 <script type="module" src="space.js"></script>
 </body>

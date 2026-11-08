@@ -70,6 +70,8 @@
   function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* 保存できない環境でも表示は続ける */ } }
   const STORE_KEY = 'michisuji.store.v2';
   const newProfile = (name, rec) => ({ name, created: new Date().toLocaleDateString('sv-SE'), rec: rec || { units: {}, items: {} } });
+  // 人の記号は端末をまたいでも重ならないように、時刻と乱数から作る
+  const newPid = () => 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
   let store = load(STORE_KEY, null);
   if (!store || store.schema !== 2 || !store.profiles || !Object.keys(store.profiles).length) {
     // 前の形（1 人分の記録）は「1 人目」として引き継ぐ
@@ -111,7 +113,9 @@
   }
   Object.values(store.profiles).forEach(pr => migrate(pr.rec));
   let progress = store.profiles[store.current].rec;
-  const persist = () => save(STORE_KEY, store);
+  // 保存のたびに呼ぶもの（Google ドライブへ送る、D-049）。ドライブを使わないときは何もしない
+  let onPersist = null;
+  const persist = () => { save(STORE_KEY, store); if (onPersist) onPersist(); };
   persist();
   // 問題ごとの記録：解いた回数、一度でできた回数、ヒント、間違い、とばした、わからない、目安をすぎた、最後にかかった秒
   function noteItem(it, res) {
@@ -1440,7 +1444,7 @@
   function addAsk(s, id, day) {
     const a = progress.asks || (progress.asks = []), it = s.items[s.idx];
     if (a.some(x => x.u === id)) return;
-    a.push({ u: id, day, key: UNITS[id].days[day - 1].key, from: s.id, qid: it && it.qid, why: s.dk && s.dk.why, date: localDate() });
+    a.push({ u: id, day, key: UNITS[id].days[day - 1].key, from: s.id, qid: it && it.qid, why: s.dk && s.dk.why, date: localDate(), t: Date.now() });
     if (a.length > 30) a.splice(0, a.length - 30);
     persist();
   }
@@ -1560,7 +1564,8 @@
     if (s.type === 'look') {
       // ふりかえり：判定はしない。今日の課題から外し、もとの問題があればもどる
       const W = words(s.id);
-      progress.asks = (progress.asks || []).filter(a => a.u !== s.id); persist();
+      progress.asks = (progress.asks || []).filter(a => a.u !== s.id);
+      (progress.askDone || (progress.askDone = {}))[s.id] = Date.now(); persist();
       Music.melody(s.results.filter(Boolean));
       el.innerHTML = `<article class="card finish"><span class="part">ふりかえり</span><h1>${W.done}</h1>
         <p class="score">${esc(u.title)}</p>
@@ -1716,6 +1721,7 @@
   $('#btn-menu').addEventListener('click', () => menu.showModal());
   // だれの記録か（D-044）：人を切り替える、足す、呼び名を変える
   const who = () => store.profiles[store.current];
+  const tomb = pid => { (store.deleted || (store.deleted = {}))[pid] = localDate(); };
   function useProfile(pid) {
     store.current = pid; progress = store.profiles[pid].rec; persist();
     syncWho(); render();
@@ -1733,12 +1739,12 @@
   $('#btn-who-add').addEventListener('click', () => {
     const name = (prompt('呼び名（この端末の中だけで使います）', '') || '').trim();
     if (!name) return;
-    const pid = 'p' + Date.now().toString(36);
+    const pid = newPid();
     store.profiles[pid] = newProfile(name); useProfile(pid);
   });
   $('#btn-who-rename').addEventListener('click', () => {
     const name = (prompt('新しい呼び名', who().name) || '').trim();
-    if (name) { who().name = name; persist(); syncWho(); }
+    if (name) { who().name = name; who().named = Date.now(); persist(); syncWho(); }
   });
   // 書き出し：いまの人の記録だけ。形の版（schema）と、書き出したときの地図の単元の数を付ける
   $('#btn-export').addEventListener('click', () => {
@@ -1762,8 +1768,12 @@
       got.forEach(([name, rec]) => {
         migrate(rec);
         const same = Object.entries(store.profiles).find(([, pr]) => pr.name === name);
-        if (same && confirm(`「${name}」の記録を、読み込んだ記録で置き換えますか（キャンセルなら、別の人として足します）`)) { same[1].rec = rec; last = same[0]; return; }
-        const pid = 'p' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5);
+        if (same && confirm(`「${name}」の記録を、読み込んだ記録で置き換えますか（キャンセルなら、別の人として足します）`)) {
+          // 置き換えは、前の記号を消した印にして新しい記号で入れる（ドライブの前の記録と混ざらないように）
+          tomb(same[0]); delete store.profiles[same[0]];
+          const pid = newPid(); store.profiles[pid] = newProfile(name, rec); last = pid; return;
+        }
+        const pid = newPid();
         store.profiles[pid] = newProfile(same ? name + '（読み込み）' : name, rec); last = pid;
       });
       menu.close(); e.target.value = '';
@@ -1774,9 +1784,158 @@
   $('#btn-reset').addEventListener('click', () => {
     const others = Object.keys(store.profiles).filter(pid => pid !== store.current);
     if (!confirm(`「${who().name}」の記録を消します。よろしいですか。`)) return;
-    if (others.length) { delete store.profiles[store.current]; menu.close(); useProfile(others[0]); }
-    else { store.profiles[store.current] = newProfile(who().name); menu.close(); useProfile(store.current); }
+    // 消した人の記号を残し、ドライブと合わせても戻らないようにする。1 人だけなら、同じ呼び名で新しい記号の人にする
+    const name = who().name;
+    tomb(store.current); delete store.profiles[store.current]; menu.close();
+    if (others.length) useProfile(others[0]);
+    else { const pid = newPid(); store.profiles[pid] = newProfile(name); useProfile(pid); }
   });
+  // ---- Google ドライブと合わせる（D-049） ----
+  // ログインした人の Google ドライブの、このページ専用の隠しフォルダに、端末の記録全体（人ごとの記録の束）を置く。
+  // 合わせるときは、ドライブの記録と端末の記録を合わせて、進んだほうを残す。こちらのサーバは使わない（R-23）。
+  // クライアント ID は index.html の meta に書く。空なら、この欄は出さない
+  const CLIENT_ID = (document.querySelector('meta[name="google-client-id"]') || {}).content || '';
+  const DRIVE_KEY = 'michisuji.drive.v1';
+  const drive = Object.assign({ on: false, at: '', who: '' }, load(DRIVE_KEY, {}));
+  let driveTimer = 0, driveBusy = false, driveAgain = false, driveState = drive.on ? 'wait' : 'off';  // off、ok、wait、need、err
+  const lastDay = r => Object.values((r && r.days) || {}).reduce((a, v) => v && v.date > a ? v.date : a, '');
+  const newer = (p, q) => ((p && p.date) || '') >= ((q && q.date) || '') ? p : q;
+  function keys2(a, b, f) {
+    const o = {};
+    new Set([...Object.keys(a || {}), ...Object.keys(b || {})]).forEach(k => { const v = f((a || {})[k], (b || {})[k]); if (v !== undefined) o[k] = v; });
+    return o;
+  }
+  // 確かめの進み：段の進んだほう。同じ段なら、復習に戻ったほう、次の日付の遅いほう
+  function mergeReview(p, q) {
+    if (!p || !q) return p || q;
+    const sc = v => (v.complete ? 100 : 0) + (v.step || 0) * 2 + (v.lapsed ? 1 : 0);
+    return sc(p) !== sc(q) ? (sc(p) > sc(q) ? p : q) : ((p.due || '') >= (q.due || '') ? p : q);
+  }
+  // 単元：日は両方を合わせ（同じ日は新しいほう）、とばした日も合わせ、済は早いほうの日付。ほかは最近やったほうの記録
+  function mergeUnit(p, q) {
+    if (!p || !q) return p || q;
+    const o = { ...(lastDay(p) >= lastDay(q) ? p : q) };
+    o.days = keys2(p.days, q.days, (a, b) => !a || !b ? a || b : newer(a, b));
+    o.extra = keys2(p.extra, q.extra, (a, b) => Math.max(a || 0, b || 0));
+    o.skip = [...new Set([...(p.skip || []), ...(q.skip || [])])];
+    o.done = p.done && q.done ? (p.done <= q.done ? p.done : q.done) : p.done || q.done;
+    if (o.done) { o.pending = null; o.ver = p.done && (!q.done || p.done <= q.done) ? p.ver : q.ver; }
+    const rv = mergeReview(p.review, q.review);
+    if (rv) o.review = rv;
+    return o;
+  }
+  // 問題：数は大きいほう（同じ記録から伸びたものなので足さない）、ほかは最後に解いたほう
+  const ITEM_MAX = ['n', 'ok', 'h', 'w', 's', 'd', 'o', 'star'];
+  function mergeItem(p, q) {
+    if (!p || !q) return p || q;
+    const o = { ...((p.last || '') >= (q.last || '') ? p : q) };
+    ITEM_MAX.forEach(k => { const v = Math.max(p[k] || 0, q[k] || 0); if (v) o[k] = v; });
+    return o;
+  }
+  function mergeRec(x, y) {
+    x = x || {}; y = y || {};
+    const askDone = keys2(x.askDone, y.askDone, (a, b) => Math.max(a || 0, b || 0));
+    const asks = [];
+    [...(x.asks || []), ...(y.asks || [])].forEach(a => {
+      if (!asks.some(b => b.u === a.u) && !(askDone[a.u] >= (a.t || 0) && a.t)) asks.push(a);
+    });
+    return { ...y, ...x,
+      units: keys2(x.units, y.units, mergeUnit),
+      items: keys2(x.items, y.items, mergeItem),
+      log: keys2(x.log, y.log, (p, q) => !p || !q ? p || q : { n: Math.max(p.n, q.n), ok: Math.max(p.ok, q.ok), sec: Math.max(p.sec, q.sec), days: Math.max(p.days, q.days) }),
+      asks, askDone };
+  }
+  // 端末の記録全体：人は記号（pid）で合わせる。消した人の記号（deleted）は、どちらで消しても戻さない。呼び名は後で付けたほう
+  function mergeStore(a, b) {
+    const deleted = { ...(b.deleted || {}), ...(a.deleted || {}) }, profiles = {};
+    new Set([...Object.keys(a.profiles || {}), ...Object.keys(b.profiles || {})]).forEach(pid => {
+      if (deleted[pid]) return;
+      const x = (a.profiles || {})[pid], y = (b.profiles || {})[pid];
+      profiles[pid] = !x || !y ? x || y : {
+        name: (y.named || 0) > (x.named || 0) ? y.name : x.name, named: Math.max(x.named || 0, y.named || 0),
+        created: (x.created || '') <= (y.created || '') ? x.created : y.created, rec: mergeRec(x.rec, y.rec) };
+    });
+    if (!Object.keys(profiles).length) profiles[newPid()] = newProfile('1 人目');
+    Object.values(profiles).forEach(pr => migrate(pr.rec));
+    return { schema: 2, current: profiles[a.current] ? a.current : Object.keys(profiles)[0], profiles, deleted };
+  }
+  function driveChip() {
+    const b = $('#btn-sync');
+    if (b) {
+      b.hidden = !CLIENT_ID || !drive.on;
+      b.dataset.s = driveState;
+      b.title = { ok: 'Google ドライブと合わせ済み', wait: 'Google ドライブへ送る前', need: 'Google のログインが切れました。押すとログインして合わせます',
+        err: 'Google ドライブと合わせられませんでした。押すともう一度合わせます' }[driveState] || '';
+    }
+    const st = $('#drive-status');
+    if (st) st.textContent = !drive.on ? 'ログインしていません。記録はこの端末の中だけにあります。'
+      : `${drive.who ? drive.who + ' の ' : ''}Google ドライブと合わせています${drive.at ? `（最後に合わせたのは ${drive.at}）` : ''}。`
+        + (driveState === 'need' ? 'ログインが切れたので、ログインし直すと合わせます。' : driveState === 'err' ? '前回は合わせられませんでした。' : '');
+    const show = (id, on) => { const e = $(id); if (e) e.hidden = !on; };
+    show('#btn-drive-in', !drive.on || driveState === 'need');
+    show('#btn-drive-now', drive.on && driveState !== 'need');
+    show('#btn-drive-out', drive.on);
+  }
+  // 合わせる：ドライブから読み、端末の記録と合わせ、合わせたものを端末とドライブの両方に置く。
+  // interactive は、ボタンを押したとき（ログインが切れていれば Google の確認の窓を開く）
+  async function driveSync(interactive) {
+    if (!CLIENT_ID || !window.DriveSync) return;
+    if (driveBusy) { driveAgain = true; return; }
+    driveBusy = true;
+    try {
+      if (!DriveSync.ready) await DriveSync.init(CLIENT_ID);
+      if (!DriveSync.valid()) {
+        if (!interactive) { driveState = 'need'; return; }
+        await DriveSync.signIn();
+      }
+      const remote = await DriveSync.pull(), before = JSON.stringify(store);
+      if (remote && remote.schema === 2 && remote.profiles) {
+        store = mergeStore(store, remote);
+        progress = store.profiles[store.current].rec;
+        save(STORE_KEY, store);
+      }
+      await DriveSync.push(store);
+      if (!drive.who) { const u = await DriveSync.who(); if (u) drive.who = u.emailAddress || u.displayName || ''; }
+      drive.on = true; drive.at = new Date().toLocaleString('sv-SE').slice(0, 16); save(DRIVE_KEY, drive);
+      driveState = 'ok';
+      if (JSON.stringify(store) !== before) { syncWho(); if (parse().name !== 'day') render(); }
+    } catch (err) {
+      if (err.code === 'popup_closed') driveState = drive.on ? 'need' : 'off';
+      else {
+        driveState = err.code === 'auth' ? 'need' : 'err';
+        if (interactive && err.code !== 'auth') alert('Google ドライブと合わせられませんでした（' + err.message + '）');
+      }
+    } finally {
+      driveBusy = false; driveChip();
+      if (driveAgain) { driveAgain = false; driveDirty(); }
+    }
+  }
+  // 記録を保存するたびに、少し待ってからドライブへ送る（続けて解いている間は、まとめて 1 回）
+  function driveDirty() {
+    if (!CLIENT_ID || !drive.on) return;
+    if (driveState !== 'need') driveState = 'wait';
+    clearTimeout(driveTimer);
+    driveTimer = setTimeout(() => driveSync(false), 4000);
+    driveChip();
+  }
+  if (CLIENT_ID) {
+    const box = $('#drive-box');
+    if (box) box.hidden = false;
+    // Google のログインを先に読み込んでおく（押したその場で確認の窓を開けるように）
+    if (window.DriveSync) DriveSync.init(CLIENT_ID).then(() => { if (drive.on) driveSync(false); }).catch(() => { if (drive.on) { driveState = 'err'; driveChip(); } });
+    const go = () => driveSync(true);
+    $('#btn-sync').addEventListener('click', go);
+    $('#btn-drive-in').addEventListener('click', go);
+    $('#btn-drive-now').addEventListener('click', go);
+    $('#btn-drive-out').addEventListener('click', () => {
+      if (!confirm('この端末では Google ドライブと合わせるのをやめます。記録はこの端末に残り、ドライブの記録も消えません。')) return;
+      DriveSync.signOut(); drive.on = false; drive.who = ''; save(DRIVE_KEY, drive); driveState = 'off'; driveChip();
+    });
+    document.addEventListener('visibilitychange', () => { if (document.hidden && driveState === 'wait') { clearTimeout(driveTimer); driveSync(false); } });
+    onPersist = driveDirty;
+  }
+  driveChip();
+
   syncWho();
 
   window.addEventListener('hashchange', render);
@@ -1785,4 +1944,8 @@
   Music.init(prefs.music);
   sync();
   render();
+  // ホーム画面に置けるアプリ（PWA、D-049）：電波がなくても開けるように、開いたファイルをとっておく
+  if ('serviceWorker' in navigator && (location.protocol === 'https:' || ['127.0.0.1', 'localhost'].includes(location.hostname))) {
+    navigator.serviceWorker.register('sw.js').catch(() => { /* とっておけなくても画面は使える */ });
+  }
 })();
