@@ -1,4 +1,4 @@
-/* みちすじ：全体の地図 → 考え方の水準のページ・組み合わせの層 → 単元の日 → 今日の問題を 1 問ずつ */
+/* みちすじ：知の宇宙と全体の地図 → 考え方の水準のページ・組み合わせの層 → 単元の日 → 今日の問題を 1 問ずつ */
 (() => {
   'use strict';
   const R = window.ROADMAP;
@@ -203,6 +203,7 @@
       : r.name === 'day' ? viewDay(r.id, r.day, r.type)
       : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : viewMap();
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
+    if (r.name === 'map') mountCosmos(); else if (cosmos) cosmos.pause();
     $('#crumbs').innerHTML = crumbs(r);
     document.title = (r.name === 'map' ? '' : $('#crumbs .here').textContent + ' — ') + 'みちすじ';
     if (r.name === 'map') { requestAnimationFrame(drawMap); document.fonts && document.fonts.ready.then(drawMap); }
@@ -213,23 +214,12 @@
   // ---- 全体の地図 ----
   function viewMap() {
     const f = forecast(), opts = options(), kind = kindNow(), near = nearGoals(5);
-    return `
-    <section class="hero">
-      <div class="eyebrow">ものを数えるところから、研究の最前線まで</div>
-      <h1>たくさんの道から、ひとすじを。</h1>
-      <p>${R.units.length} の駅。前提が済んだ駅なら、どこからでも始められ、流れごとに進み方が違ってかまいません。駅には、考え方の水準（1〜5）を付けています。</p>
+    return `${cosmosHtml()}
+    <section class="hero hero-rest">
       <div class="goal-pick levels" role="group" aria-label="考え方の水準"><span class="k">水準</span>${(R.levels || []).map(l => {
         const us = R.units.filter(u => u.level === l.id && inGoal(u.id));
         return `<a class="pill" href="#/level/${l.id}">${l.id} ${esc(l.name)}<span class="n">${us.filter(u => isDone(u.id)).length} / ${us.length}</span></a>`;
       }).join('')}</div>
-      <div class="goal-pick" role="group" aria-label="目標の種類">
-        <span class="k">目標</span>
-        ${KINDS.map(k => `<button class="pill kind" type="button" data-goalkind="${esc(k)}" aria-pressed="${kind === k}">${esc(k)}<span class="n">${goalsOf(k).length}</span></button>`).join('')}
-        <button class="pill" type="button" data-goal="all" aria-pressed="${prefs.goal === 'all'}">すべての駅</button>
-      </div>
-      <div class="goal-pick sub" role="group" aria-label="${esc(kind)}の目標">
-        ${goalsOf(kind).map(g => `<button class="pill" type="button" data-goal="${g.id}" aria-pressed="${prefs.goal === g.id}">${esc(g.name)}</button>`).join('')}
-      </div>
       <div class="reach"><span class="k">近い目標</span>${near.list.map(([g, st]) =>
         `<a class="reach-item" href="#/goal/${g.id}"><span class="ring" style="--p:${st.pct}"></span>${esc(g.name)} ${st.pct}%<span class="muted">（論題 ${st.got} / ${st.topics}）</span></a>`).join('')}
         <span class="reach-item">届いた目標 ${near.reached} / ${GOALS.length}</span>
@@ -251,7 +241,8 @@
       </div>
     </section>
     <section class="overview">
-      <h2 class="section-title">全体の関係図</h2>
+      <h2 class="section-title">平面の関係図</h2>
+      <p class="muted">知の宇宙を、横に理解の深さ、縦に領域で並べ直した図です。目標は上の「目標を星座で見る」で選べます。</p>
       <div class="legend">${['done', 'doing', 'ready', 'later'].map(s =>
         `<span><span class="dot ${s}" style="${lc('N')}"></span>${STATUS_NAME[s]}</span>`).join('')}
         ${prefs.goal !== 'all' && CHOICE_SETS[prefs.goal].size ? `<span><span class="dot later choice" style="${lc('N')}"></span>選択の論題だけ</span>` : ''}
@@ -388,6 +379,229 @@
     info.innerHTML = `<span class="dot ${status(id)}" style="${lc(u.lane)}"></span><b>${esc(u.title)}</b>
       <span class="muted">${u.id}・${esc(LANES[u.lane].name)}・水準 ${u.level}${inChoice(id) ? '・選択の論題' : ''}・${STATUS_NAME[status(id)]}・前提 ${up.size} 駅・この先 ${down.size} 駅</span>
       <a class="pill solid" href="#/unit/${id}">駅をひらく</a><button class="pill" type="button" data-act="unfocus">もどす</button>`;
+  }
+
+  // ---- 知の宇宙（D-037） ----
+  // 描くのは space.js。ここでは、何を光らせるか（前提の鎖、目標の星座、組み合わせ、ひらめき、探す）を決める
+  let cosmos = null, cosSel = null, hits = [], hintAt = Math.floor(Math.random() * 997);
+  const combine = { on: false, from: null };
+  const cssLane = l => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--lane-' + l).trim() || '#9fb4ff';
+  function cosmosHtml() {
+    const g = GOALS.find(x => x.id === prefs.goal);
+    return `
+    <section class="cosmos" id="cosmos">
+      <div class="cosmos-gl" id="cosmos-gl"></div>
+      <div class="cosmos-head">
+        <div class="cosmos-title">
+          <div class="eyebrow">知の宇宙</div>
+          <h1>たくさんの道から、ひとすじを。</h1>
+          <p>${R.units.length} の星。中心は数える・観る駅、外へ行くほど研究の最前線、方角は分野です。星を押すと、そこへ続く道が光ります。</p>
+        </div>
+        <input class="cosmos-q" id="cosmos-q" type="search" placeholder="星をさがす（光合成、フーリエ、確率…）" autocomplete="off" aria-label="星をさがす">
+      </div>
+      <div class="cosmos-dock">
+        <button class="cpill glow" type="button" data-cos="inspire">✦ ひらめき</button>
+        <button class="cpill" type="button" data-cos="combine" aria-pressed="${combine.on}">組み合わせる</button>
+        <button class="cpill" type="button" data-cos="goals">${g ? '星座：' + esc(g.name) : '目標を星座で見る'}</button>
+        ${g ? '<button class="cpill" type="button" data-goal="all" aria-label="星座をやめる">×</button>' : ''}
+        <button class="cpill" type="button" data-cos="home">全体</button>
+      </div>
+      <div class="cosmos-tip" id="cosmos-tip" hidden></div>
+      <div class="cosmos-card" id="cosmos-card" hidden></div>
+      <div class="cosmos-hover" id="cosmos-hover" hidden></div>
+    </section>`;
+  }
+  function mountCosmos() {
+    const host = $('#cosmos-gl');
+    if (!host || !window.Space) return;
+    if (!cosmos) {
+      try {
+        cosmos = Space.mount({ units: R.units, lanes: R.lanes, laneColor: cssLane, bridges: BRIDGES,
+          onPick: cosPick, onHover: cosHover, onTouch: () => { const c = $('#cosmos'); if (c) c.classList.add('touched'); },
+          onLane: l => { Music.tap(); cosmos.flyLane(l); tip(`<b>${esc(LANES[l].name)}</b>　${esc(LANES[l].note)}`); } });
+      } catch (err) {
+        // WebGL が使えない端末では、平面の関係図だけで使う
+        $('#cosmos').classList.add('nogl');
+        tip('この端末では 3D を描けませんでした。下の平面の関係図を使ってください。', 0);
+        return;
+      }
+    }
+    cosmos.attach(host);
+    cosmos.setStates(status);
+    cosAlpha();
+    if (cosSel && !combine.on) showStar(cosSel);
+  }
+  window.addEventListener('space-ready', () => { if (parse().name === 'map') mountCosmos(); });
+  // 目標を選んでいるときは、目標の星だけを星座のように残し、ほかは沈める
+  function cosAlpha(match) {
+    if (!cosmos) return;
+    const g = !match && GOALS.find(x => x.id === prefs.goal);
+    cosmos.setAlpha(id => match ? (match.has(id) ? 1 : .08) : !g ? 1 : inGoal(id) ? 1 : inChoice(id) ? .35 : .05, g ? 3.2 : 1);
+    // 星座の目印：目標の論題を受け持つ星に輪を付ける（星を選んでいないときだけ）
+    if (g && !cosSel) cosmos.mark([...new Set(g.items.filter(i => !i.choice).flatMap(i => i.units || []))]);
+  }
+  function tip(html, ms = 6000) {
+    const t = $('#cosmos-tip');
+    if (!t) return;
+    t.innerHTML = html || ''; t.hidden = !html;
+    clearTimeout(tip.t);
+    if (html && ms) tip.t = setTimeout(() => { t.hidden = true; }, ms);
+  }
+  function card(html) { const c = $('#cosmos-card'); if (c) { c.innerHTML = html || ''; c.hidden = !html; } }
+  function cosHover(id, x, y) {
+    const h = $('#cosmos-hover'), box = $('#cosmos');
+    if (!h || !box) return;
+    if (!id) { h.hidden = true; box.style.cursor = ''; return; }
+    const r = box.getBoundingClientRect(), u = UNITS[id];
+    h.innerHTML = `<span class="cc-dot" style="${lc(u.lane)}"></span>${esc(u.title.replace(/（.*$/, ''))}`;
+    h.style.transform = `translate(${x - r.left + 14}px, ${y - r.top - 10}px)`;
+    h.hidden = false; box.style.cursor = 'pointer';
+  }
+  function cosPick(id) {
+    if (!id) {
+      if (!combine.on) { cosSel = null; card(''); cosmos.clearGlow(); }
+      return;
+    }
+    Music.tap();
+    if (combine.on) {
+      if (!combine.from) { combine.from = id; cosSel = id; showStar(id); tip('もう 1 つの星を押すと、2 つを組み合わせます', 0); return; }
+      if (combine.from !== id) {
+        const a = combine.from;
+        combine.on = false; combine.from = null; syncCombine(); tip('');
+        showCombine(a, id);
+        return;
+      }
+    }
+    cosSel = id; showStar(id);
+  }
+  const short = u => esc(u.title.replace(/（.*$/, ''));
+  const star = id => `<a class="cc-star" href="#/unit/${id}" style="${lc(UNITS[id].lane)}"><span class="cc-dot"></span>${short(UNITS[id])}</a>`;
+  // 星を押す：中心からその星までの前提の鎖を光らせ、光を前提からその星へ流す。すぐ先の星へも糸を引く
+  function showStar(id) {
+    const up = closure(id, 'up'), set = new Set([id, ...up]), edges = [];
+    set.forEach(x => UNITS[x].needs.forEach(n => set.has(n) && edges.push([n, x, -DEPTH[n] * .15])));
+    (NEXT[id] || []).forEach(x => edges.push([id, x, 0]));
+    cosmos.glowEdges(edges);
+    cosmos.mark([id]);
+    const u = UNITS[id], down = closure(id, 'down');
+    card(`
+      <div class="cc-eyebrow"><span class="cc-dot" style="${lc(u.lane)}"></span>${esc(LANES[u.lane].name)}・水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</div>
+      <div class="cc-title">${esc(u.title)}</div>
+      <div class="cc-meta">${STATUS_NAME[status(id)]}・${up.size} の星を通って届く・この先 ${down.size} の星へ開ける</div>
+      ${u.comb ? `<div class="cc-meta">組み合わせ ${u.comb.rg.map(r => esc(REGION_NAME[r] || r)).join(' × ')}${BRIDGES.has(id) ? '　<b class="cc-bridge">橋の星</b>' : ''}</div>` : ''}
+      <div class="cc-actions">
+        <a class="cpill solid" href="#/unit/${id}">駅をひらく</a>
+        <button class="cpill" type="button" data-cos="combine-from" data-id="${id}">これと組み合わせる</button>
+        <button class="cpill" type="button" data-cos="close" aria-label="とじる">×</button>
+      </div>`);
+  }
+  // 領域どうしの遠さ（combination.py と同じ数え方：前提で互いをどう使うかの似ていなさ）
+  let RD = null;
+  function regionDist(a, b) {
+    if (a === b) return 0;
+    if (!RD) {
+      RD = {};
+      const add = (x, y) => { (RD[x] = RD[x] || {})[y] = (RD[x][y] || 0) + 1; };
+      R.units.forEach(u => u.needs.forEach(n => { const x = u.region, y = UNITS[n].region; if (x && y && x !== y) { add(x, y); add(y, x); } }));
+    }
+    const va = RD[a] || {}, vb = RD[b] || {}, keys = new Set([...Object.keys(va), ...Object.keys(vb), a, b]);
+    let dot = 0, na = 0, nb = 0;
+    keys.forEach(k => { const x = (va[k] || 0) + (k === a ? 1 : 0), y = (vb[k] || 0) + (k === b ? 1 : 0); dot += x * y; na += x * x; nb += y * y; });
+    return 1 - dot / Math.sqrt(na * nb || 1);
+  }
+  // 2 つを組み合わせる：両方から届く星（出会う星）を探し、なければ同じ領域の組から生まれた星、それもなければ「まだない組」
+  function showCombine(a, b, hint) {
+    const A = UNITS[a], B = UNITS[b], da = closure(a, 'down'), db = closure(b, 'down');
+    const both = new Set([...da].filter(x => db.has(x)));
+    const meet = [...both].filter(x => ![...UNITS[x].needs].some(y => both.has(y))).sort((x, y) => DEPTH[x] - DEPTH[y]).slice(0, 3);
+    const ra = A.region, rb = B.region, d = regionDist(ra, rb);
+    const born = ra === rb ? [] : R.units.filter(u => u.comb && u.comb.rg.includes(ra) && u.comb.rg.includes(rb)).map(u => u.id).slice(0, 3);
+    const far = d >= .8 ? '遠い組み合わせ' : d >= .5 ? 'ほどよく離れた組み合わせ' : '近い組み合わせ';
+    const rn = r => esc(REGION_NAME[r] || r);
+    let verdict;
+    if (ra === rb) verdict = 'どちらも同じ領域の星です。ちがう領域の星を選ぶと、組み合わせの面白さが見えます。';
+    else if (meet.length) verdict = hint ? `${rn(ra)} と ${rn(rb)} を直接組み合わせた星はまだありませんが、道をたどると ${meet.map(star).join('')} で出会います。` : `2 つの道は ${meet.map(star).join('')} で出会います。`;
+    else if (born.length) verdict = `この 2 つの星から続く道はまだ出会いませんが、${rn(ra)} と ${rn(rb)} の組み合わせから ${born.map(star).join('')} が生まれています。`;
+    else verdict = `${rn(ra)} と ${rn(rb)} を組み合わせた星は、まだこの宇宙にありません。${hint ? `${hint.via.map(rn).join('、')} を通してつながっているのに、直接は結ばれていない組です。` : ''}新しい問いの種かもしれません。`;
+    const [x, y] = [ra, rb].sort(), prob = (LAYER.probPairs || []).find(r => r.a === x && r.b === y), none = (LAYER.probUnseen || []).find(r => r.a === x && r.b === y);
+    cosSel = null;
+    cosmos.arc(a, b, meet);
+    cosmos.focus([a, b, ...meet], 26);
+    card(`
+      <div class="cc-eyebrow">${hint ? '✦ ひらめき' : '組み合わせ'}・${far}（遠さ ${d.toFixed(2)}）</div>
+      <div class="cc-pair">${star(a)}<span class="cc-x">×</span>${star(b)}</div>
+      <div class="cc-meta">${rn(ra)} × ${rn(rb)}</div>
+      <p class="cc-verdict">${verdict}</p>
+      ${prob ? `<div class="cc-meta">古今東西の問題では、期待 ${prob.e} 問に対して ${prob.o} 問だけ。</div>` : none ? `<div class="cc-meta">古今東西の問題では、期待 ${none.e} 問なのに、まだ 1 問もありません。</div>` : ''}
+      <div class="cc-actions">
+        <button class="cpill glow" type="button" data-cos="inspire">✦ ${hint ? 'つぎのひらめき' : 'ひらめき'}</button>
+        <a class="cpill" href="#/comb">組み合わせの層</a>
+        <button class="cpill" type="button" data-cos="close" aria-label="とじる">×</button>
+      </div>`);
+  }
+  // ひらめき：前提のつながりで近いのに、まだ直接組み合わせた星がない領域の組（combination.py の hints）。
+  // 各領域から、その先に多くの星を開く星を 1 つずつ選んで結ぶ
+  const downSize = {};
+  const reach = id => downSize[id] ?? (downSize[id] = closure(id, 'down').size);
+  function inspire() {
+    const hs = LAYER.hints || [];
+    if (!hs.length || !cosmos) return;
+    const h = hs[hintAt++ % hs.length];
+    const rep = r => {
+      const us = R.units.filter(u => u.region === r), mid = us.filter(u => (u.level || 3) <= 4);
+      return (mid.length ? mid : us).sort((p, q) => reach(q.id) - reach(p.id) || p.level - q.level)[0];
+    };
+    const ua = rep(h.a), ub = rep(h.b);
+    if (ua && ub) showCombine(ua.id, ub.id, h);
+  }
+  function syncCombine() { const b = $('[data-cos=combine]'); if (b) b.setAttribute('aria-pressed', combine.on); }
+  function cosAction(act, id) {
+    Music.tap();
+    if (act === 'inspire') { combine.on = false; combine.from = null; syncCombine(); return inspire(); }
+    if (act === 'goals') return openGoals();
+    if (act === 'home' || act === 'close') {
+      card(''); cosSel = null; combine.on = false; combine.from = null; syncCombine(); tip('');
+      if (cosmos) { cosmos.clearGlow(); if (act === 'home') cosmos.home(); }
+      return;
+    }
+    if (act === 'combine' || act === 'combine-from') {
+      combine.on = act === 'combine-from' ? true : !combine.on;
+      combine.from = combine.on ? (id || cosSel || null) : null;
+      syncCombine();
+      tip(combine.on ? (combine.from ? 'もう 1 つの星を押すと、2 つを組み合わせます' : '組み合わせる 1 つ目の星を押してください') : '', 0);
+    }
+  }
+  // 目標を星座で見る：種類を選び、目標を選ぶ。選ぶと、その目標に要る星だけが光る
+  function openGoals() {
+    let d = $('#goal-sheet');
+    if (!d) { d = document.createElement('dialog'); d.id = 'goal-sheet'; d.className = 'sheet goal-sheet'; document.body.appendChild(d); }
+    let kind = kindNow();
+    const draw = () => {
+      d.innerHTML = `
+        <h2>目標を星座で見る</h2>
+        <p class="muted">目標を選ぶと、その目標に要る星だけが星座のように残ります。</p>
+        <div class="goal-pick">${KINDS.map(k => `<button class="pill kind" type="button" data-sheetkind="${esc(k)}" aria-pressed="${k === kind}">${esc(k)}<span class="n">${goalsOf(k).length}</span></button>`).join('')}</div>
+        <div class="sheet-goals">${goalsOf(kind).map(g => `<button class="sheet-goal" type="button" data-sheetgoal="${g.id}" aria-pressed="${prefs.goal === g.id}">
+          <span class="eyebrow">${g.field ? esc(g.field) + '・' : g.fields ? esc(g.fields.join('・')) + '・' : ''}${esc(g.level)}</span>
+          <b>${esc(g.name)}</b><span class="muted">${esc(g.note)}</span></button>`).join('')}</div>
+        <div class="row"><button class="pill" type="button" data-sheetgoal="all">すべての星</button><button class="pill solid" type="button" data-sheetclose>とじる</button></div>`;
+    };
+    d.onclick = e => {
+      const k = e.target.closest('[data-sheetkind]');
+      if (k) { kind = k.dataset.sheetkind; Music.tap(); draw(); return; }
+      const g = e.target.closest('[data-sheetgoal]');
+      if (g) {
+        prefs.goal = g.dataset.sheetgoal; selected = null; cosSel = null;
+        if (GOAL_SETS[prefs.goal]) prefs.goalKind = GOALS.find(x => x.id === prefs.goal).kind;
+        save(PREF, prefs); Music.tap(); d.close();
+        if (cosmos) cosmos.clearGlow();
+        if (location.hash.replace(/^#\/?/, '') !== '') location.hash = '#/'; else render();
+        if (cosmos) GOAL_SETS[prefs.goal] ? cosmos.focus([...GOAL_SETS[prefs.goal]], 30) : cosmos.home();
+        return;
+      }
+      if (e.target.closest('[data-sheetclose]') || e.target === d) d.close();
+    };
+    draw(); d.showModal();
   }
 
   // ---- 組み合わせの層（D-031、D-035） ----
@@ -779,6 +993,8 @@
     }
     if (e.target.closest('[data-act=unfocus]')) { selected = null; drawMap(); $('#map').classList.remove('focus');
       $('#map-info').className = 'map-info muted'; $('#map-info').textContent = '駅を押すと、その駅の前提の鎖と、その先に開ける駅が浮かび上がります。もう一度押すと駅に入ります。'; return; }
+    const cs = e.target.closest('[data-cos]');
+    if (cs) { cosAction(cs.dataset.cos, cs.dataset.id); return; }
     const mc = e.target.closest('[data-mapcomb]');
     if (mc) { prefs.mapComb = mc.dataset.mapcomb === '1'; save(PREF, prefs); Music.tap(); render(); return; }
     const mg = e.target.closest('[data-mapgroup]');
@@ -862,7 +1078,22 @@
     progress = { units: {} }; save(KEY, progress); menu.close(); render();
   });
   window.addEventListener('hashchange', render);
-  window.addEventListener('resize', () => { if (parse().name === 'map') drawMap(); });
+  window.addEventListener('resize', () => { if (parse().name === 'map') { drawMap(); if (cosmos) cosmos.resize(); } });
+  // 星をさがす：題に言葉を含む星だけを光らせる。Enter で 1 つ目へ飛ぶ
+  $('#view').addEventListener('input', e => {
+    if (e.target.id !== 'cosmos-q') return;
+    const q = e.target.value.trim().toLowerCase();
+    hits = q ? R.units.filter(u => (u.title + ' ' + u.id).toLowerCase().includes(q)).map(u => u.id) : [];
+    cosAlpha(q ? new Set(hits) : null);
+    tip(q ? (hits.length ? `${hits.length} の星が光っています。Enter で 1 つ目へ` : '見つかりません') : '', 0);
+  });
+  $('#view').addEventListener('keydown', e => {
+    if (e.target.id !== 'cosmos-q' || e.key !== 'Enter' || !hits.length || !cosmos) return;
+    const id = hits[0];
+    e.target.value = ''; hits = []; cosAlpha(); tip('');
+    cosPick(id);
+    if (!$('.cc-pair')) cosmos.focus([id], 20);
+  });
 
   Music.init(prefs.music);
   sync();

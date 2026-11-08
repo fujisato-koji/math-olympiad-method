@@ -116,5 +116,27 @@ def layer(units, catalog, comb, top=30):
         r["d"] = round(dist.get((r["a"], r["b"]), 1.0), 2)
     prare = sorted([r for r in prows if r["o"] > 0 and r["e"] / r["o"] >= 2], key=lambda r: -r["e"] / r["o"])
     unseen = sorted([r for r in prows if r["o"] == 0], key=lambda r: -(r["e"] * r["d"]))
-    return {"cut": round(cut, 3), "bridges": bridges, "unitPairs": upairs[:top], "probPairs": prare[:top],
+    # ひらめきの種（D-037）：前提のつながりで共通の隣の領域を多く持つのに、まだ直接組み合わせた単元がない組
+    # （リンク予測の Adamic–Adar。隣の多い領域を通るつながりほど軽く数える）
+    nb = defaultdict(set)
+    for u in units:
+        for n in u.get("needs", []):
+            a, b = region.get(u["id"]), region.get(n)
+            if a and b and a != b:
+                nb[a].add(b)
+                nb[b].add(a)
+    done = {tuple(sorted(p)) for _, rs in ug for p in combinations(rs, 2)} | {tuple(sorted((a, b))) for a in nb for b in nb[a]}
+    lane_of = {u.get("region"): u["id"][0] for u in units}
+    hints = []
+    for a, b in combinations(sorted(nb), 2):
+        if (a, b) in done or lane_of.get(a) == lane_of.get(b):
+            continue
+        via = nb[a] & nb[b]
+        if len(via) < 2:
+            continue
+        score = sum(1 / math.log(1 + len(nb[w])) for w in via)
+        hints.append({"a": a, "b": b, "via": sorted(via, key=lambda w: len(nb[w]))[:4], "s": round(score, 2),
+                      "d": round(dist.get((a, b), 1.0), 2)})
+    hints.sort(key=lambda h: -h["s"] * h["d"])
+    return {"cut": round(cut, 3), "bridges": bridges, "unitPairs": upairs[:top], "probPairs": prare[:top], "hints": hints[:60],
             "probUnseen": [{k: r[k] for k in ("a", "b", "e", "d")} for r in unseen[:top]], "problems": len(pg)}

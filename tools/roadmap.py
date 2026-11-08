@@ -13,6 +13,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).parent))
 import combination  # noqa: E402  組み合わせの指標（D-031）
+import space  # noqa: E402  知の宇宙の位置（D-037）
 
 ROOT = Path(__file__).resolve().parent.parent
 ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
@@ -333,6 +334,11 @@ def build(data, problems):
     lanes = {l["id"]: l for l in data["lanes"]}
     out_units = []
     comb = combination.measure(data["units"])
+    # 知の宇宙の位置（D-037）：tools/space.py が作った配置を読む。新しい単元は前提の近くに置き、作り直すよう促す
+    lay = ROOT / "tools" / "space-layout.json"
+    pos, added = space.place_missing(data["units"], json.loads(lay.read_text(encoding="utf-8")) if lay.exists() else {})
+    if added:
+        print(f"警告: 知の宇宙の配置にない単元 {len(added)}（仮に前提の近くに置いた。python tools/space.py で作り直す）：" + "、".join(added[:10]))
     for u in data["units"]:
         m = ID_RE.match(u["id"])
         days = expand(u)
@@ -345,6 +351,7 @@ def build(data, problems):
                           "stage": u["stage"], **({"level": u["level"]} if u.get("level") else {}), "region": u.get("region"), "needs": u.get("needs", []), "days": days,
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
+                          "p": pos[u["id"]],
                           # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],
                                        "rg": comb[u["id"]]["regions"], "pr": comb[u["id"]]["pair"]}}
