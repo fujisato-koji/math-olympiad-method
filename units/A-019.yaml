@@ -980,3 +980,95 @@ days:
           - 大きいほうを答えます。
         paths:
           - [x = 1 で y = 7、x = 4 で y = 1, いちばん大きい値は 7]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-012]
+    text: 2 つの直線 y = x + 3 と y = −2x + 12 の交点を P とします。この 2 つの直線と x 軸で囲まれた三角形の面積を 2 等分する直線のうち、点 P を通るものの傾きはいくつですか。
+    svg: |
+      <svg viewBox="0 0 250 195" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+          <line x1="10" y1="20" x2="10" y2="180"/>
+          <line x1="30" y1="20" x2="30" y2="180"/>
+          <line x1="50" y1="20" x2="50" y2="180"/>
+          <line x1="70" y1="20" x2="70" y2="180"/>
+          <line x1="90" y1="20" x2="90" y2="180"/>
+          <line x1="110" y1="20" x2="110" y2="180"/>
+          <line x1="130" y1="20" x2="130" y2="180"/>
+          <line x1="150" y1="20" x2="150" y2="180"/>
+          <line x1="170" y1="20" x2="170" y2="180"/>
+          <line x1="190" y1="20" x2="190" y2="180"/>
+          <line x1="210" y1="20" x2="210" y2="180"/>
+          <line x1="230" y1="20" x2="230" y2="180"/>
+          <line x1="10" y1="180" x2="230" y2="180"/>
+          <line x1="10" y1="160" x2="230" y2="160"/>
+          <line x1="10" y1="140" x2="230" y2="140"/>
+          <line x1="10" y1="120" x2="230" y2="120"/>
+          <line x1="10" y1="100" x2="230" y2="100"/>
+          <line x1="10" y1="80" x2="230" y2="80"/>
+          <line x1="10" y1="60" x2="230" y2="60"/>
+          <line x1="10" y1="40" x2="230" y2="40"/>
+          <line x1="10" y1="20" x2="230" y2="20"/>
+        </g>
+        <polygon points="30,160 210,160 150,40" fill="#f3c969" fill-opacity=".35" stroke="none"/>
+        <line x1="2" y1="160" x2="244" y2="160" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="90" y1="192" x2="90" y2="6" stroke="currentColor" fill="none" stroke-width="2"/>
+        <path d="M244 160 L236 156 L236 164 Z" fill="currentColor"/>
+        <path d="M90 6 L86 14 L94 14 Z" fill="currentColor"/>
+        <text x="238" y="152" font-size="14" font-style="italic">x</text>
+        <text x="96" y="14" font-size="14" font-style="italic">y</text>
+        <text x="86" y="173" font-size="11" text-anchor="end">O</text>
+        <line x1="10" y1="180" x2="170" y2="20" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="140" y1="20" x2="220" y2="180" stroke="currentColor" fill="none" stroke-width="2"/>
+        <circle cx="150" cy="40" r="3" fill="currentColor"/>
+        <text x="150" y="29" font-size="14" text-anchor="middle">P</text>
+      </svg>
+    answer: 4
+    check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((lambda px: (0 - (px + 3)) / ((Fraction(-3) + Fraction(12, 2)) / 2 - px))(Fraction(12 - 3, 1 + 2)))"
+    hints:
+      - 三角形の 3 つの頂点の座標を求めよう。x 軸との交点 2 つと、P だね。
+      - P を通って面積を 2 等分する直線は、P と向かい合う辺（x 軸の上の辺）をどのように分けるかな。
+      - x 軸の上の辺の中点と P を通る直線の傾きを求めよう。
+    paths:
+      - ["x 軸との交点は (−3, 0) と (6, 0)、P は (3, 6)", 高さが同じなので 底辺を 2 等分すれば面積も 2 等分される, "底辺の中点は (3/2, 0)", 傾きは (6 − 0) ÷ (3 − 3/2) = 4]
+    note: 1 次関数の交点を求め、等積変形と面積比（G-012）の「高さが同じなら面積は底辺に比例する」を使って中点に結びつける。三角形の面積（27）を求めてから式を立てる遠回りもできるが、中点に気づけば面積の値は要らない。
+  - part: 離
+    kinds: [数]
+    text: 2 点 (−3/2, 4)、(5/2, −2) を通る直線と、直線 y = x の交点の x 座標はいくつですか。
+    answer: 7/10
+    accept: [0.7]
+    check: "(lambda m: (lambda b: b / (1 - m))(4 - m * Fraction(-3, 2)))(Fraction(-2 - 4) / (Fraction(5, 2) - Fraction(-3, 2)))"
+    hints:
+      - 2 点を通る直線の傾きは、(y の増える量) ÷ (x の増える量) だね。
+      - 傾きがわかったら、1 点の座標を代入して切片を求めよう。
+      - 交点は、2 つの式の y を等しいとおいた方程式で求めよう。
+    paths:
+      - [傾きは (−2 − 4) ÷ (5/2 − (−3/2)) = −6 ÷ 4 = −3/2, 4 = (−3/2) × (−3/2) + b で b = 7/4, −(3/2)x + 7/4 = x, (5/2)x = 7/4 で x = 7/10]
+    note: 分数の座標で、傾き → 切片 → 交点と 3 段の計算が続く。(−3/2) × (−3/2) の符号と、5/2 − (−3/2) = 4 のひき算で間ちがえやすい。方程式は両辺に 4 をかけて分母をはらってから解くとよい。
+  - part: 離
+    kinds: [読み取り, 手数]
+    text: 図の長方形 ABCD で、AB = 6 cm、BC = 10 cm です。点 P は B を出発し、辺の上を B → C → D → A の順に毎秒 1 cm の速さで動き、A で止まります。三角形 ABP の面積が 24 cm² になるときは 2 回あります。2 回目は、P が B を出発してから何秒後ですか。
+    svg: |
+      <svg viewBox="0 0 260 175" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="30,20 30,140 110,140" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1"/>
+        <rect x="30" y="20" width="200" height="120" stroke="currentColor" fill="none" stroke-width="2"/>
+        <circle cx="110" cy="140" r="3" fill="currentColor"/>
+        <text x="18" y="25" font-size="14" text-anchor="middle">A</text>
+        <text x="18" y="150" font-size="14" text-anchor="middle">B</text>
+        <text x="242" y="150" font-size="14" text-anchor="middle">C</text>
+        <text x="242" y="25" font-size="14" text-anchor="middle">D</text>
+        <text x="110" y="160" font-size="14" text-anchor="middle">P</text>
+        <text x="36" y="84" font-size="12">6 cm</text>
+        <text x="180" y="160" font-size="12" text-anchor="middle">10 cm</text>
+      </svg>
+    answer: 18
+    check: "[t for t in range(1, 27) if (3 * t if t <= 10 else (30 if t <= 16 else 3 * (26 - t))) == 24][1]"
+    hints:
+      - P が BC の上、CD の上、DA の上にあるときに分けて考えよう。
+      - P が DA の上にあるとき、三角形 ABP の底辺を AB とすると、高さは何 cm かな。x 秒後の式で表そう。
+      - P が CD の上にあるとき、面積は変わるかな。
+    paths:
+      - [x 秒後の面積を y cm² とする, BC の上（0〜10 秒）は y = 3x で 24 になるのは 8 秒後, CD の上（10〜16 秒）は高さ 10 cm のままで y = 30, DA の上（16〜26 秒）は高さ 26 − x で y = 3(26 − x), 3(26 − x) = 24 より 18 秒後]
+    note: 動く点がつくる面積を、P のいる辺ごとに 1 次関数の式で表してつなぐ。CD の上で面積が一定になることと、DA の上で高さが「A までの残りの道のり」になることを読み取る。1 回目の 8 秒後で止まらないように、グラフをかかせるとよい。

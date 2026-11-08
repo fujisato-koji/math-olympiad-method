@@ -789,3 +789,52 @@ days:
         paths:
           - [x と y の和はいつも 5, 5 − (−1) = 6]
           - [x が 1 へると y は 1 ふえる, 5 + 1 = 6]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-008]
+    text: 座標平面の上に、3 つの点 A(−3, 2)、B(4, −1)、C(1, 5) があります。1 目もりを 1 cm とすると、三角形 ABC の面積は何 cm² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="126" x2="40" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="54" y1="126" x2="54" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="68" y1="126" x2="68" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="82" y1="126" x2="82" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="96" y1="126" x2="96" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="110" y1="126" x2="110" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="124" y1="126" x2="124" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138" y1="126" x2="138" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="152" y1="126" x2="152" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="166" y1="126" x2="166" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="126" x2="166" y2="126" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="112" x2="166" y2="112" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="98" x2="166" y2="98" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="84" x2="166" y2="84" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="70" x2="166" y2="70" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="56" x2="166" y2="56" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="42" x2="166" y2="42" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="28" x2="166" y2="28" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="40" y1="14" x2="166" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="34" y1="98" x2="174" y2="98" stroke="currentColor" stroke-width="1.5"/><polyline points="169,94 174,98 169,102" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="96" y1="132" x2="96" y2="6" stroke="currentColor" stroke-width="1.5"/><polyline points="92,11 96,6 100,11" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="176" y="110" font-size="11" text-anchor="middle">x</text><text x="104" y="10" font-size="11" text-anchor="middle">y</text><text x="90" y="109" font-size="9" text-anchor="middle">O</text><text x="40" y="109" font-size="8" text-anchor="middle">−4</text><text x="68" y="109" font-size="8" text-anchor="middle">−2</text><text x="124" y="109" font-size="8" text-anchor="middle">2</text><text x="152" y="109" font-size="8" text-anchor="middle">4</text><text x="89" y="129" font-size="8" text-anchor="middle">−2</text><text x="89" y="73" font-size="8" text-anchor="middle">2</text><text x="89" y="45" font-size="8" text-anchor="middle">4</text><text x="89" y="17" font-size="8" text-anchor="middle">6</text><polygon points="54,70 152,112 110,28" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="54" cy="70" r="2.5" fill="currentColor"/><text x="46" y="66" font-size="11" text-anchor="middle">A</text><circle cx="152" cy="112" r="2.5" fill="currentColor"/><text x="160" y="116" font-size="11" text-anchor="middle">B</text><circle cx="110" cy="28" r="2.5" fill="currentColor"/><text x="114" y="22" font-size="11" text-anchor="middle">C</text></svg>
+    answer: 16.5
+    accept: [33/2]
+    check: "abs((4 - (-3)) * (5 - 2) - (1 - (-3)) * (-1 - 2)) / 2"
+    hints:
+      - 3 つの点をかこむ、辺が軸に平行な長方形をかこう。
+      - 長方形から、まわりの 3 つの直角三角形をのぞこう。
+      - 長方形と直角三角形の、たてと横の長さを、座標のひき算で求めよう。
+    paths:
+      - [かこむ長方形は 横 4 − (−3) = 7・たて 5 − (−1) = 6 で 42 cm², まわりの直角三角形は 10.5 cm²・9 cm²・6 cm², 42 − (10.5 + 9 + 6) = 16.5, 16.5 cm²]
+    note: 辺が軸に平行でない三角形は、かこむ長方形からまわりをのぞく（G-008 の方眼のななめの正方形と同じ考え）。座標がマイナスの所の長さを、数直線の上の 2 点の間（N-010 のひき算）として求めるのが要点。
+  - part: 離
+    kinds: [道筋]
+    text: 点 P に、① 原点 O のまわりに時計の針と反対の向きに 90° 回す、② x 軸について対称な点に移す、③ 右へ 2、下へ 3 動かす、の 3 つの動きをこの順に行うと、点 (3, −1) に移りました。もとの点 P の座標を選びましょう。
+    choices:
+      - (−2, −1)
+      - (2, 1)
+      - (1, −2)
+      - (−3, 6)
+    answer: (−2, −1)
+    check: "(lambda x, y: f'({x}, {y})'.replace('-', '−'))(*(lambda x, y: (y, -x))(*(lambda x, y: (x, -y))(3 - 2, -1 + 3)))"
+    hints:
+      - 終わりの点から、動きを逆の順に、逆の向きにもどしていこう。
+      - ③ をもどすには、左へ 2、上へ 3 動かすよ。
+      - ① をもどすには、時計の針と同じ向きに 90° 回すよ。
+    paths:
+      - ["③ をもどして (1, 2)", "② をもどして (1, −2)", "① をもどして（時計の針と同じ向きに 90°） (−2, −1)", "(−2, −1)"]
+    note: 逆にたどる問題。もどす順番（③→②→①）と、回す向きを逆にすること（時計の針と同じ向き）の 2 つが要点。答えが出たら、P に ①②③ を順に行って (3, −1) になるか確かめるとよい。選択肢の (2, 1) は回す向きを逆にしなかったとき、(1, −2) は ① をもどし忘れたとき。
+  - part: 離
+    kinds: [総動員, 読み取り]
+    uses: [N-011]
+    text: x 座標と y 座標がどちらも整数の点（格子の点）のうち、x 軸からのきょりと y 軸からのきょりの和が 3 になる点は、いくつありますか。たとえば点 (−1, 2) は、y 軸から 1、x 軸から 2 はなれているので、和は 3 です。
+    answer: 12
+    check: "sum(1 for x in range(-3, 4) for y in range(-3, 4) if abs(x) + abs(y) == 3)"
+    hints:
+      - x 軸からのきょりは y 座標の絶対値、y 軸からのきょりは x 座標の絶対値だよ。
+      - まず、第 1 象限と軸の上で、あてはまる点を書き出そう。
+      - 4 つの象限で同じように数えよう。軸の上の点を 2 回数えないように気をつけよう。
+    paths:
+      - ["第 1 象限は (1, 2) と (2, 1) の 2 こ", 4 つの象限で 2 × 4 = 8 こ, "軸の上は (3, 0)・(−3, 0)・(0, 3)・(0, −3) の 4 こ", 8 + 4 = 12 こ]
+    note: 数直線の上のきょり（絶対値、N-011）を、座標平面の 2 つの向きに使う。第 1 象限だけ数えて 2、または 4 つの象限だけで 8 と答えやすい。点を方眼に打つと、ななめの正方形の形にならぶ。

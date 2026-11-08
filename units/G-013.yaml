@@ -844,3 +844,50 @@ days:
           - 8 cm² の 4 倍を求めよう。
         paths:
           - [面積は 4 倍, 8 × 4 = 32, 32 cm²]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 長さ 1 m のまっすぐな棒を地面に立てると、かげの長さは 0.8 m でした。同じ時刻に、木のかげは、地面に 3.6 m のび、その先のかべに高さ 1.5 m までうつりました。かべは地面からまっすぐに立っていて、木と向かい合っています。木の高さは何 m ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="10" y1="120" x2="230" y2="120" stroke="currentColor" stroke-width="1.5"/><line x1="24" y1="120" x2="24" y2="104" stroke="currentColor" stroke-width="3"/><text x="24" y="100" font-size="9" text-anchor="middle">1 m</text><text x="31" y="132" font-size="9" text-anchor="middle">0.8 m</text><line x1="24" y1="104" x2="36.8" y2="120" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><line x1="84" y1="120" x2="84" y2="24" stroke="currentColor" stroke-width="3"/><text x="74" y="72" font-size="12" text-anchor="middle">木</text><polygon points="141.6,120 141.6,50 149.6,50 149.6,120" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="84" y1="24" x2="141.6" y2="96" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><line x1="84" y1="124" x2="141.6" y2="124" stroke="currentColor" stroke-width="4"/><text x="112.8" y="136" font-size="10" text-anchor="middle">3.6 m</text><line x1="137.6" y1="120" x2="137.6" y2="96" stroke="currentColor" stroke-width="4"/><text x="153.6" y="112" font-size="10" text-anchor="start">1.5 m</text><text x="171.6" y="70" font-size="11" text-anchor="middle">かべ</text></svg>
+    answer: 6
+    check: "Fraction(36, 10) / Fraction(8, 10) + Fraction(15, 10)"
+    hints:
+      - かべにうつったかげの先から、木に向かって地面と平行な線をひいてみよう。
+      - その線より上の木の部分が、地面の 3.6 m のかげを作っているよ。
+      - 棒は高さ 1 m でかげ 0.8 m。かげが 3.6 m なら、高さは何 m かな。
+    paths:
+      - [木の上の部分の高さは 3.6 ÷ 0.8 = 4.5 m, 下の部分はかべのかげと同じ 1.5 m, 4.5 + 1.5 = 6, 6 m]
+      - [かべがなければ 1.5 m の高さの部分のかげは 1.5 × 0.8 = 1.2 m, かげは全部で 3.6 + 1.2 = 4.8 m, 4.8 ÷ 0.8 = 6, 6 m]
+    note: かべのかげの長さを地面のかげにそのまま足して (3.6 + 1.5) ÷ 0.8 としやすい。かべにうつった部分は、地面にうつったときの長さ（1.2 m）に直してから足す（2 本目）か、木を上下に分けて考える（1 本目）。どちらも棒のかげの縮図（4 日目）を使う。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [N-073]
+    text: 縮尺 1/5000 の地図で、たて 2 cm、横 3.2 cm の長方形の公園があります。実際の公園の面積は何 m² ですか。
+    answer: 16000
+    check: "(2 * 5000 // 100) * (Fraction(32, 10) * 5000 / 100)"
+    hints:
+      - まず、実際のたてと横の長さを cm で求めよう。
+      - cm を m に直そう。100 cm が 1 m だよ。
+      - 長方形の面積を求めよう。
+    paths:
+      - [たては 2 × 5000 = 10000 cm = 100 m, 横は 3.2 × 5000 = 16000 cm = 160 m, 100 × 160 = 16000, 16000 m²]
+    note: 大きな数（万の位、N-073）と、cm を m に直す換算（G-046）が重なる。地図の上の面積 6.4 cm² に 5000 をかけて 32000 としやすい（面積は 5000 × 5000 倍になる、5 日目）。長さを先に実際の長さに直すのが安全。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-012]
+    text: 三角形 ABC の辺 AB の上に点 D、辺 AC の上に点 E があり、DE と BC は平行です（三角形 ADE は三角形 ABC の縮図）。AD:DB = 2:3 で、三角形 ABC の面積は 50 cm² です。三角形 DEC（色のついた部分）の面積は何 cm² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="78,58 150,58 210,124" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="110,14 30,124 210,124" stroke="currentColor" stroke-width="2" fill="none"/><line x1="78" y1="58" x2="150" y2="58" stroke="currentColor" stroke-width="1.5"/><line x1="78" y1="58" x2="210" y2="124" stroke="currentColor" stroke-width="1.5"/><text x="110" y="12" font-size="12" text-anchor="middle">A</text><text x="22" y="128" font-size="12" text-anchor="middle">B</text><text x="218" y="128" font-size="12" text-anchor="middle">C</text><text x="70" y="60" font-size="12" text-anchor="middle">D</text><text x="158" y="60" font-size="12" text-anchor="middle">E</text></svg>
+    answer: 12
+    check: "50 * Fraction(2, 5) - 50 * Fraction(2, 5) ** 2"
+    hints:
+      - 三角形 ADE は三角形 ABC の何分の 1 の縮図かな。面積は何分の何になるかな。
+      - 三角形 ADC を考えよう。三角形 ABC と高さが同じで、底辺の比は AD:AB だね。
+      - 三角形 DEC は、三角形 ADC から三角形 ADE をのぞいた部分だよ。
+    paths:
+      - [AD:AB = 2:5 なので ADE は ABC の 2/5 × 2/5 = 4/25 で 8 cm², ADC は 底辺の比 2:5 で 20 cm², DEC は 20 − 8 = 12, 12 cm²]
+      - [ADE は 8 cm², AE:EC = AD:DB = 2:3, DEC と ADE は高さが同じで底辺の比が 3:2 なので 8 ÷ 2 × 3 = 12, 12 cm²]
+    note: 縮図の面積（5 日目）と、高さが同じ三角形の面積の比（G-012）を合わせる。四角形 DBCE の面積（42 cm²）を答えにしやすい。

@@ -1301,3 +1301,48 @@ days:
           - 90° から 48° をひこう。
         paths:
           - [∠BAH = 90° − 48°, 42°]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: ∠C = 90° の直角三角形 ABC で、BC = 9 cm、CA = 12 cm、AB = 15 cm です。この三角形の内心を I、重心を G とします。GI は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="198.7,134 41.3,16 41.3,134" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="48.3,134 48.3,127 41.3,127" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="80.7" cy="94.7" r="2.6" fill="currentColor"/><circle cx="93.8" cy="94.7" r="2.6" fill="currentColor"/><text x="73" y="96.9" font-size="13" text-anchor="middle">I</text><text x="101.5" y="94.6" font-size="13" text-anchor="middle">G</text><text x="120" y="149.2" font-size="12" text-anchor="middle">12 cm</text><text x="21.3" y="79.2" font-size="12" text-anchor="middle">9 cm</text><text x="128.4" y="68" font-size="12" text-anchor="middle">15 cm</text><text x="208.2" y="141.8" font-size="14" text-anchor="middle">A</text><text x="41.3" y="10.9" font-size="14" text-anchor="middle">B</text><text x="32.4" y="143.4" font-size="14" text-anchor="middle">C</text></svg>'
+    answer: 1
+    check: "(lambda r: 12 // 3 - r if 9 // 3 == r else None)((9 + 12 - 15) // 2)"
+    hints:
+      - 内心 I は、3 つの辺から等しい距離（内接円の半径）にあるね。直角三角形の内接円の半径を求めよう。
+      - 重心 G は中線を 2:1 に分ける点だよ。G から辺 CA までの距離と、辺 BC までの距離を、相似で求めよう。
+      - I と G の、辺 CA からの距離どうし、辺 BC からの距離どうしをくらべよう。
+    paths:
+      - [内接円の半径 = (9 + 12 − 15) ÷ 2 = 3 で、I は CA からも BC からも 3, B から CA までの距離は 9、G はその 1/3 で 3, A から BC までの距離は 12、G はその 1/3 で 4, I と G はどちらも CA から 3 なので、GI は CA に平行, GI = 4 − 3 = 1 cm]
+      - [C から CA の向きに何 cm、CB の向きに何 cm で点の位置を表す, I は（3、3）, 中線 BM の M は（6、0）で、G は M から B へ 1/3 進んだ（4、3）, GI = 4 − 3 = 1 cm]
+    note: 内心と重心という別々の点を、辺からの距離という同じ物差しで並べるのが道筋の要点。重心から辺までの距離が、向かいの頂点からの距離の 1/3 になることを相似（G-020）で出す。GI が CA に平行だと気づけば、ひき算 1 回で終わる。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-019]
+    text: AB = AC = 10 cm、BC = 12 cm の二等辺三角形 ABC の外心を O、内心を I とします。OI は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="120,16 31.5,134 208.5,134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="73" y1="72.9" x2="78.5" y2="77.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="161.4" y1="77.1" x2="167.1" y2="72.9" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="108.2" r="2.6" fill="currentColor"/><circle cx="120" cy="89.8" r="2.6" fill="currentColor"/><text x="129" y="112.7" font-size="13" text-anchor="middle">O</text><text x="127.7" y="92" font-size="13" text-anchor="middle">I</text><text x="59.8" y="67.2" font-size="12" text-anchor="middle">10 cm</text><text x="120" y="149.2" font-size="12" text-anchor="middle">12 cm</text><text x="120" y="10.9" font-size="14" text-anchor="middle">A</text><text x="22.2" y="142.6" font-size="14" text-anchor="middle">B</text><text x="217.8" y="142.6" font-size="14" text-anchor="middle">C</text></svg>'
+    answer: 5/4
+    accept: [1.25]
+    check: "(lambda h: Fraction(h * 12 // 2, (10 + 10 + 12) // 2) - (h - Fraction(10 * 10, 2 * h)))(math.isqrt(10 * 10 - 6 * 6))"
+    hints:
+      - A から BC にひいた垂線 AM の上に、O も I もあるね。AM の長さを三平方の定理で求めよう。
+      - 内接円の半径は、面積 = 半径 × 3 辺の和 ÷ 2 から出せるよ。
+      - 外接円の半径を R とすると OM = 8 − R だね。△OBM で三平方の定理を使おう。
+    paths:
+      - [二等辺三角形なので、O と I は A から BC への垂線 AM の上, AM = √(10² − 6²) = 8、面積 = 12 × 8 ÷ 2 = 48, 内接円の半径 = 48 × 2 ÷ 32 = 3 で IM = 3, 外接円の半径を R とすると (8 − R)² + 6² = R² で R = 25/4, OM = 8 − 25/4 = 7/4, OI = 3 − 7/4 = 5/4 cm]
+    note: 外心と内心を二等辺三角形の対称の軸の上に並べ、三平方の定理（G-019）と方程式で外接円の半径を出す。O と I のどちらが底辺に近いかを確かめないと、たし算とひき算を取りちがえる。頂角が鋭角なので、外心は三角形の中にある。答えは小数 1.25 でもよい。
+  - part: 離
+    kinds: [数]
+    text: △ABC で AB = 7.3 cm、BC = 8.4 cm、CA = 9.5 cm です。∠A の内側にある傍心 J を中心とする傍接円が、辺 AB を B の先へのばした直線と点 P で接しています。AP は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="33.4,142 97.8,142 77.5,70.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="97.8" y1="142" x2="171.1" y2="142" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="77.5" y1="70.7" x2="103.1" y2="29.4" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="144.6" cy="80" r="62" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="144.6" cy="80" r="2.6" fill="currentColor"/><circle cx="144.6" cy="142" r="2.2" fill="currentColor"/><text x="153" y="81.2" font-size="13" text-anchor="middle">J</text><text x="23.8" y="149.8" font-size="14" text-anchor="middle">A</text><text x="97.8" y="157.9" font-size="14" text-anchor="middle">B</text><text x="68.2" y="71.8" font-size="14" text-anchor="middle">C</text><text x="147.8" y="157.4" font-size="14" text-anchor="middle">P</text></svg>'
+    answer: 12.6
+    check: "(73 + 84 + 95) / 2 / 10"
+    hints:
+      - 傍接円は、辺 BC と、辺 AB、AC をのばした直線の 3 本に接しているね。AC の延長の上の接点を Q、BC の上の接点を T としよう。
+      - 円の外の点からひいた 2 本の接線の長さは等しい。A、B、C のそれぞれについて考えよう。
+      - AP + AQ を、AB、BC、CA を使って表そう。
+    paths:
+      - [AC の延長の上の接点を Q、BC の上の接点を T とする, 接線の長さで AP = AQ、BP = BT、CQ = CT, AP + AQ = AB + BT + AC + CT = AB + BC + CA = 25.2, AP = 25.2 ÷ 2 = 12.6 cm]
+    note: 傍接円の接線の長さ（G-054）を 3 組使い、AP が 3 辺の和の半分になることを見ぬく。小数の 3 辺から計算する。内接円の接線の長さ（4 日目）とまぎれて、AB + BC − CA のような式にしやすい。

@@ -582,3 +582,49 @@ days:
           - 対応する辺は平行になるよ。
         paths:
           - [A に対応するのは D、B に対応するのは E, 辺 AB に対応するのは 辺 DE, 平行]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 6 つの辺の長さがみな等しく、6 つの角の大きさもみな等しい六角形（正六角形）に、1 つおきの頂点を結んで三角形をかき入れました。この図形の対称の軸は何本ありますか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,10 66.3,41 66.3,103 120,134 173.7,103 173.7,41" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,10 66.3,103 173.7,103" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/></svg>
+    answer: 3
+    check: "(lambda E: sum(1 for j in range(6) if {(min((j - a) % 6, (j - b) % 6), max((j - a) % 6, (j - b) % 6)) for a, b in E} == E))({(0, 1), (1, 2), (2, 3), (3, 4), (4, 5), (0, 5), (0, 2), (2, 4), (0, 4)})"
+    hints:
+      - 正六角形だけなら、対称の軸は何本あるかな。
+      - そのうち、かき入れた三角形も重なる軸はどれかな。
+      - 軸で折ったとき、三角形の頂点が三角形の頂点に重なるか、1 本ずつ確かめよう。
+    paths:
+      - [正六角形だけなら軸は 6 本, 向かい合う辺のまん中を通る 3 本の軸では 三角形の頂点が三角形でない頂点に移る, 向かい合う頂点を通る 3 本だけが残る, 3 本]
+    note: 正六角形の 6 本の軸のうち、向かい合う辺のまん中を通る 3 本は、三角形を三角形でない頂点の上へ移すので軸にならない。形をかき足すと、対称の軸が減ることがある。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-008]
+    text: 方眼の 1 目は 1 cm です。2 つの長方形を組み合わせた形（色のついた部分）を、1 本の直線で切ります。その直線が、下の長方形も上の長方形も、それぞれ面積の等しい 2 つの部分に分けるようにすると、直線が形の下の辺と交わる点は、左はしから何 cm の所ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="64,124 176,124 176,68 120,68 120,12 64,12" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="78" y1="124" x2="78" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="110" x2="176" y2="110" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="92" y1="124" x2="92" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="96" x2="176" y2="96" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="106" y1="124" x2="106" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="82" x2="176" y2="82" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="124" x2="120" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="68" x2="176" y2="68" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="134" y1="124" x2="134" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="54" x2="176" y2="54" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="148" y1="124" x2="148" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="40" x2="176" y2="40" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="162" y1="124" x2="162" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="64" y1="26" x2="176" y2="26" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="64,124 176,124 176,68 120,68 120,12 64,12" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+    answer: 5
+    check: "(lambda x1, y1, x2, y2: x1 - y1 * Fraction(x2 - x1, y2 - y1))(4, 2, 2, 6)"
+    hints:
+      - 長方形は点対称な形だね。対称の中心を通る直線で切ると、どうなるかな。
+      - 2 つの長方形の、それぞれの対称の中心（対角線の交わる点）はどこかな。
+      - 2 つの中心を通る直線を方眼の上にかいて、下の辺と交わる点を読もう。
+    paths:
+      - [長方形は対称の中心を通るどの直線でも 面積の等しい 2 つに分かれる, 下の長方形の中心は 左から 4・下から 2 の点, 上の長方形の中心は 左から 2・下から 6 の点, 2 つの中心を通る直線は 下の辺と左から 5 cm の所で交わる]
+    note: 点対称な形は、対称の中心を通るどの直線でも合同な 2 つに分かれる（3 日目のわけ）。これを面積の 2 等分（G-008）に使う。2 つの中心を通る直線は、左へ 2 進むと上へ 4 上がるので、下の長方形の中心から右へ 1 進むと下の辺に着く。全体の面積も 2 等分される。
+  - part: 離
+    kinds: [手数]
+    text: 3 × 3 のマス目のうち 5 マスをぬって、まん中の点 O を対称の中心とする点対称な形にします。そのうち、線対称ではないぬり方は何通りありますか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="75" y1="25" x2="75" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="25" x2="165" y2="25" stroke="currentColor" stroke-width="1.5"/><line x1="105" y1="25" x2="105" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="55" x2="165" y2="55" stroke="currentColor" stroke-width="1.5"/><line x1="135" y1="25" x2="135" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="85" x2="165" y2="85" stroke="currentColor" stroke-width="1.5"/><line x1="165" y1="25" x2="165" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="115" x2="165" y2="115" stroke="currentColor" stroke-width="1.5"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><text x="128" y="66" font-size="11" text-anchor="middle">O</text></svg>
+    answer: 4
+    check: "sum(1 for S in itertools.combinations(range(9), 5) if all(8 - i in S for i in S) and not any(all(f(i) in S for i in S) for f in (lambda i: i // 3 * 3 + 2 - i % 3, lambda i: (2 - i // 3) * 3 + i % 3, lambda i: i % 3 * 3 + i // 3, lambda i: (2 - i % 3) * 3 + 2 - i // 3)))"
+    hints:
+      - O について向かい合う 2 マスを 1 組にすると、5 マスでは 1 マスあまるね。あまるマスはどこにあるかな。
+      - 向かい合う 2 マスの組は何組あるかな。そこからどの 2 組を選ぶかな。
+      - 選び方を全部書き出して、線対称になるものをのぞこう。
+    paths:
+      - [まん中のマスは必ずぬる, 向かい合う 2 マスの組 4 組から 2 組を選んで 6 通り, そのうち 4 すみ と 辺のまん中 4 マス の 2 通りは線対称, 6 − 2 = 4 通り]
+    note: 点対称なぬり方は、O について向かい合うマスの組で考えると整理できる（5 マスなら、組にならないまん中のマスが必ず入る）。選んだ 2 組が「すみ」どうし、または「辺のまん中」どうしのときは線対称にもなる。6 通りを書き出して確かめればよい。

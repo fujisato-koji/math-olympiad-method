@@ -870,3 +870,56 @@ days:
         paths:
           - [6a − 4 − 2a + 9, 6a − 2a = 4a, −4 + 9 = 5, 4a + 5]
         note: −(2a − 9) を −2a − 9 として 4a − 13 を選びやすい。
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 3 けたの整数から、百の位と一の位の数字を入れかえた数をつくり、大きいほうから小さいほうをひきます。ただし、百の位と一の位の数字は 0 ではなく、たがいにちがうとします。このひき算の答えは、いつもある整数でわり切れます。そのような整数のうち、いちばん大きいものはいくつですか。
+    answer: 99
+    check: "max(m for m in range(1, 1000) if all(abs((100 * a + 10 * b + c) - (100 * c + 10 * b + a)) % m == 0 for a in range(1, 10) for b in range(10) for c in range(1, 10) if a != c))"
+    hints:
+      - 百の位を a、十の位を b、一の位を c として、もとの数を式で表そう。
+      - 入れかえた数も式で表して、ひき算をしよう。b はどうなるかな。
+      - 答えは □ × (a − c) の形になるね。a − c がいちばん小さいときを考えよう。
+    paths:
+      - [もとの数は 100a + 10b + c、入れかえた数は 100c + 10b + a, a が大きいとして 差は 99a − 99c = 99(a − c), いつも 99 でわり切れる, a − c = 1 のとき差は 99 なので 99 より大きい数ではわり切れない, 99]
+    note: 文字で表して差を計算すると 99(a − c) になる。ここで止まらず、「いちばん大きい」と言うには、差がちょうど 99 になる例（a − c = 1、たとえば 211 − 112）があることを確かめる必要がある。9 や 11 と答える子は、99 = 9 × 11 に気づいていない。
+  - part: 離
+    kinds: [総動員]
+    uses: [G-008]
+    text: たて a m、横 b m の長方形の土地に、図のように、たてと横に幅 2 m の道を 1 本ずつ通しました。道をのぞいた土地の面積を表す式は、どれですか。
+    svg: |
+      <svg viewBox="0 0 260 170" xmlns="http://www.w3.org/2000/svg">
+        <rect x="115" y="20" width="16" height="120" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1"/>
+        <rect x="40" y="72" width="180" height="16" fill="#f3c969" fill-opacity=".35" stroke="currentColor" stroke-width="1"/>
+        <rect x="40" y="20" width="180" height="120" stroke="currentColor" fill="none" stroke-width="2"/>
+        <text x="32" y="60" font-size="14" text-anchor="end"><tspan font-style="italic">a</tspan> m</text>
+        <text x="80" y="14" font-size="14" text-anchor="middle"><tspan font-style="italic">b</tspan> m</text>
+        <text x="123" y="158" font-size="14" text-anchor="middle">2 m</text>
+        <text x="226" y="85" font-size="14">2 m</text>
+      </svg>
+    choices: [ab − 2a − 2b + 4, ab − 2a − 2b, ab − 4]
+    answer: ab − 2a − 2b + 4
+    check: "[c for c, f in {'ab − 2a − 2b + 4': lambda a, b: a * b - 2 * a - 2 * b + 4, 'ab − 2a − 2b': lambda a, b: a * b - 2 * a - 2 * b, 'ab − 4': lambda a, b: a * b - 4}.items() if all(f(a, b) == (a - 2) * (b - 2) for a in range(3, 9) for b in range(3, 9))][0]"
+    hints:
+      - 道の面積を、たての道と横の道に分けて考えよう。
+      - たての道は 2 × a、横の道は 2 × b。でも、2 本の道が重なっているところがあるね。
+      - 重なったところを 2 回ひいていないかな。
+    paths:
+      - [全体は ab, 道は 2a と 2b だが 重なった 2 × 2 = 4 を 2 回ひいている, ab − 2a − 2b + 4]
+      - [道を土地のはしに寄せても 残りの面積は変わらない, 残りは たて a − 2、横 b − 2 の長方形, a = 10、b = 6 なら 8 × 4 = 32 で ab − 2a − 2b + 4 と合う]
+    note: 面積（G-008）を文字で表す。2 本の道が交わるところ（2 m × 2 m）を 2 回ひいてしまい、ab − 2a − 2b を選ぶ間ちがいが多い。2 本目のように道をはしに寄せて考え、数を入れて確かめる道もある（かっこの展開は A-015 なので、ここでは数で確かめる）。
+  - part: 離
+    kinds: [数]
+    text: a = −2/3、b = 3/4 のとき、6a²b − 4ab² の値はいくつですか。
+    answer: 7/2
+    accept: [3.5]
+    check: "(lambda a, b: 6 * a * a * b - 4 * a * b * b)(Fraction(-2, 3), Fraction(3, 4))"
+    hints:
+      - a² = a × a、b² = b × b だね。a² の符号はどうなるかな。
+      - 6a²b と 4ab² を、それぞれ先に計算しよう。
+      - 最後は「ひく 負の数」になるよ。ひき算の符号に気をつけよう。
+    paths:
+      - [a² = 4/9 なので 6a²b = 6 × 4/9 × 3/4 = 2, b² = 9/16 なので 4ab² = 4 × (−2/3) × 9/16 = −3/2, 2 − (−3/2) = 7/2]
+    note: 負の分数を 2 乗するところ（a² は正）と、最後の「2 − (−3/2)」の符号で間ちがえやすい。分数のかけ算は約分しながら進めると数が小さくなる。

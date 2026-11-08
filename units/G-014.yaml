@@ -675,3 +675,50 @@ days:
           - 6 × 6 を先に計算しよう。
         paths:
           - [高さは 6 − 4 = 2, 36 × 2 = 72, 72 cm³]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 立方体を、辺 BC、CD、DH、HE、EF、FB のまん中の点を通る平面で切ると、切り口は正六角形になり、同じ形の 2 つの立体に分かれます。そのうちの 1 つの立体の辺の数は何本ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="156,28 136,12 96,52 76,108 96,124 136,84" stroke="currentColor" stroke-width="1" fill="#f3c969" fill-opacity=".35"/><line x1="56" y1="44" x2="136" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="136" y1="44" x2="136" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="136" y1="124" x2="56" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="124" x2="56" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="44" x2="96" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="96" y1="12" x2="176" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="12" x2="136" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="12" x2="176" y2="92" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="92" x2="136" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="124" x2="96" y2="92" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="96" y1="92" x2="176" y2="92" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="96" y1="92" x2="96" y2="12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="156" cy="28" r="2.5" fill="currentColor"/><circle cx="136" cy="12" r="2.5" fill="currentColor"/><circle cx="96" cy="52" r="2.5" fill="currentColor"/><circle cx="76" cy="108" r="2.5" fill="currentColor"/><circle cx="96" cy="124" r="2.5" fill="currentColor"/><circle cx="136" cy="84" r="2.5" fill="currentColor"/><text x="48" y="42" font-size="11" text-anchor="middle">A</text><text x="138" y="56" font-size="11" text-anchor="middle">B</text><text x="184" y="10" font-size="11" text-anchor="middle">C</text><text x="90" y="8" font-size="11" text-anchor="middle">D</text><text x="48" y="134" font-size="11" text-anchor="middle">E</text><text x="142" y="136" font-size="11" text-anchor="middle">F</text><text x="185" y="96" font-size="11" text-anchor="middle">G</text><text x="87" y="94" font-size="11" text-anchor="middle">H</text></svg>
+    answer: 15
+    check: "6 + 6 + 3"
+    hints:
+      - 切り口の正六角形の辺は、2 つの立体のどちらの辺にもなるよ。
+      - もとの立方体の辺のうち、切られた 6 本は、半分ずつ両方の立体に残るね。
+      - 切られなかった辺は何本で、2 つの立体に何本ずつ分かれるかな。
+    paths:
+      - [切り口の辺 6 本, 切られた辺の半分が 6 本, 切られなかった 6 本の辺は A に集まる 3 本と G に集まる 3 本に分かれる, 6 + 6 + 3 = 15 本]
+    note: 切られなかった辺は 12 − 6 = 6 本で、2 つの立体に 3 本ずつ分かれる。もとの辺の数 12 に切り口の 6 を足して 18 と答えやすい。頂点は 4 + 6 = 10、面は 6 + 1 = 7 で、3 つの数をそろえて確かめられる。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-010]
+    text: 底面の半径が 3 cm の円柱を、底面とななめに交わる平面で切りました。残った立体の高さは、いちばん高い所で 10 cm、いちばん低い所で 6 cm です。この立体の体積は（□ × 円周率）cm³ です。□ に入る数を答えましょう。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M70 120 A50 12 0 0 0 170 120" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M70 120 A50 12 0 0 1 170 120" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 3"/><line x1="70" y1="120" x2="70" y2="66" stroke="currentColor" stroke-width="1.5"/><line x1="170" y1="120" x2="170" y2="30" stroke="currentColor" stroke-width="1.5"/><ellipse cx="120" cy="48" rx="53.1" ry="12" transform="rotate(-19.8 120 48)" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="120" x2="170" y2="120" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><circle cx="120" cy="120" r="2" fill="currentColor"/><text x="145" y="116" font-size="9" text-anchor="middle">3 cm</text><text x="176" y="79" font-size="10" text-anchor="start">10 cm</text><text x="64" y="97" font-size="10" text-anchor="end">6 cm</text></svg>
+    answer: 72
+    check: "3 * 3 * Fraction(10 + 6, 2)"
+    hints:
+      - 同じ立体をもう 1 つ用意して、さかさまにして切り口どうしを合わせてみよう。
+      - 合わせると、どんな立体になるかな。高さは何 cm かな。
+      - その立体の体積の半分が、求める体積だよ。
+    paths:
+      - [同じ立体 2 つをさかさまに合わせると 高さ 10 + 6 = 16 cm の円柱, その体積は 3 × 3 × 円周率 × 16 = 144 × 円周率, 半分で 72 × 円周率, 72]
+    note: ななめに切った立体の体積は、同じ立体 2 つを組み合わせて円柱にすると求められる（高さ 8 cm の円柱と同じ）。円柱の体積（G-011）と円の面積（G-010）を使う。切り口の形（だ円）は扱わない。
+  - part: 離
+    kinds: [手数]
+    text: 1 辺 1 cm の立方体を 64 こ積んで、1 辺 4 cm の立方体を作りました。この大きな立方体を、6 つの辺のまん中の点を通る平面（切り口は正六角形）で切ります。切られる小さい立方体は何こですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="156,28 136,12 96,52 76,108 96,124 136,84" stroke="currentColor" stroke-width="1" fill="#f3c969" fill-opacity=".35"/><line x1="76" y1="44" x2="76" y2="124" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="56" y1="64" x2="136" y2="64" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="66" y1="36" x2="146" y2="36" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="76" y1="44" x2="116" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="146" y1="36" x2="146" y2="116" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="136" y1="64" x2="176" y2="32" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="96" y1="44" x2="96" y2="124" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="56" y1="84" x2="136" y2="84" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="76" y1="28" x2="156" y2="28" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="96" y1="44" x2="136" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156" y1="28" x2="156" y2="108" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="136" y1="84" x2="176" y2="52" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="116" y1="44" x2="116" y2="124" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="56" y1="104" x2="136" y2="104" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="86" y1="20" x2="166" y2="20" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="116" y1="44" x2="156" y2="12" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="166" y1="20" x2="166" y2="100" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="136" y1="104" x2="176" y2="72" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="56" y1="44" x2="136" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="136" y1="44" x2="136" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="136" y1="124" x2="56" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="124" x2="56" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="44" x2="96" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="96" y1="12" x2="176" y2="12" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="12" x2="136" y2="44" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="12" x2="176" y2="92" stroke="currentColor" stroke-width="1.5"/><line x1="176" y1="92" x2="136" y2="124" stroke="currentColor" stroke-width="1.5"/><line x1="56" y1="124" x2="96" y2="92" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="96" y1="92" x2="176" y2="92" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><line x1="96" y1="92" x2="96" y2="12" stroke="currentColor" stroke-width="1.2" stroke-dasharray="4 3"/><circle cx="156" cy="28" r="2.5" fill="currentColor"/><circle cx="136" cy="12" r="2.5" fill="currentColor"/><circle cx="96" cy="52" r="2.5" fill="currentColor"/><circle cx="76" cy="108" r="2.5" fill="currentColor"/><circle cx="96" cy="124" r="2.5" fill="currentColor"/><circle cx="136" cy="84" r="2.5" fill="currentColor"/></svg>
+    answer: 24
+    check: "sum(1 for i in range(4) for j in range(4) for k in range(4) if i + j + k < 6 < i + j + k + 3)"
+    time: 900
+    hints:
+      - 1 だんずつ（高さ 1 cm ずつ）に分けて、上から見た図で考えよう。
+      - それぞれのだんの、上の面と下の面で、切り口の線はどこを通るかな。
+      - 2 本の線の間を通る小さい立方体を、だんごとに数えよう。
+    paths:
+      - [いちばん上のだん 5 こ, 2 だんめ 7 こ, 3 だんめ 7 こ, いちばん下のだん 5 こ, 5 + 7 + 7 + 5 = 24 こ]
+    note: 立体のまま数えるのは難しいので、1 だんずつ上から見た図にして、そのだんの上の面と下の面の切り口の線（2 本の平行な線）の間を通るマスを数える（切って重ねる見方）。3 日目の挑戦（3 cm の立方体）を広げた問題。線が小さい立方体の頂点だけを通る所は切られないので注意する。

@@ -568,3 +568,47 @@ days:
           - 側面積に、底面積 16π cm² をたそう。
         paths:
           - [側面積 20π, 底面積 16π, 20π + 16π = 36π, □ は 36]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-019]
+    text: 半径 10 cm、中心角 216° のおうぎ形を丸めて円錐の側面をつくり、底面の円をつけました。この円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M205.7 134 A90.1 90.1 0 1 0 34.3 134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="106.1" x2="205.7" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="106.1" x2="34.3" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><path d="M131.1 109.8 A11.7 11.7 0 1 0 108.9 109.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="81.5" font-size="12" text-anchor="middle">216°</text><circle cx="120" cy="106.1" r="2" fill="currentColor"/><text x="166" y="114.8" font-size="12" text-anchor="middle">10 cm</text></svg>'
+    answer: 96
+    check: "(lambda r: r * r * math.isqrt(10 * 10 - r * r) // 3)(10 * 216 // 360)"
+    hints:
+      - おうぎ形の弧の長さが、底面の円周になるね。底面の半径を求めよう。
+      - おうぎ形の半径 10 cm は、円錐の母線になるよ。
+      - 高さ、底面の半径、母線で直角三角形ができるね。三平方の定理で高さを求めよう。
+    paths:
+      - [弧の長さ = 2 × π × 10 × 216/360 = 12π, 底面の半径 = 12π ÷ 2π = 6, 母線 10、半径 6 なので高さ = √(100 − 36) = 8, 体積 = π × 6 × 6 × 8 ÷ 3 = 96π, "96"]
+      - [底面の半径 = 母線 × 中心角 ÷ 360 = 10 × 216 ÷ 360 = 6, 6・8・10 の直角三角形で高さは 8, π × 36 × 8 ÷ 3 = 96π, "96"]
+    note: 展開図（おうぎ形）から底面の半径を出し、三平方の定理（G-019）で高さを出してから体積の式を使う 3 段の問題。この単元では高さと母線を両方与えていたので、高さを自分で出すところが離。おうぎ形の半径 10 cm を高さとまちがえやすい。
+  - part: 離
+    kinds: [道筋]
+    text: 1 辺が 6 cm の立方体 ABCD-EFGH の 4 つの頂点 A、C、F、H を結ぶと、6 つの辺がどれも面の対角線になる三角錐 A-CFH ができます。この三角錐の体積は何 cm³ ですか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><line x1="44.4" y1="46.8" x2="151.7" y2="46.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="151.7" y1="46.8" x2="195.6" y2="16" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="195.6" y1="16" x2="88.3" y2="16" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="88.3" y1="16" x2="44.4" y2="46.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="44.4" y1="154" x2="151.7" y2="154" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="151.7" y1="154" x2="195.6" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="195.6" y1="123.2" x2="88.3" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="88.3" y1="123.2" x2="44.4" y2="154" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44.4" y1="46.8" x2="44.4" y2="154" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="151.7" y1="46.8" x2="151.7" y2="154" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="195.6" y1="16" x2="195.6" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="88.3" y1="16" x2="88.3" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="44.4" y1="46.8" x2="195.6" y2="16" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="44.4" y1="46.8" x2="151.7" y2="154" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="195.6" y1="16" x2="151.7" y2="154" stroke="currentColor" stroke-width="2.5" fill="none"/><line x1="44.4" y1="46.8" x2="88.3" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="195.6" y1="16" x2="88.3" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="151.7" y1="154" x2="88.3" y2="123.2" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><text x="34.6" y="49.7" font-size="14" text-anchor="middle">A</text><text x="160.6" y="56.1" font-size="14" text-anchor="middle">B</text><text x="204.5" y="16.4" font-size="14" text-anchor="middle">C</text><text x="83.9" y="12" font-size="14" text-anchor="middle">D</text><text x="35.5" y="163.4" font-size="14" text-anchor="middle">E</text><text x="160.6" y="163.4" font-size="14" text-anchor="middle">F</text><text x="205.6" y="128.1" font-size="14" text-anchor="middle">G</text><text x="79.4" y="123.7" font-size="14" text-anchor="middle">H</text><text x="98" y="169.2" font-size="12" text-anchor="middle">6 cm</text></svg>'
+    answer: 72
+    check: "6 ** 3 - 4 * (6 * 6 // 2 * 6 // 3)"
+    hints:
+      - 三角錐 A-CFH の底面積と高さを直接求めるのはむずかしいね。立方体から、まわりの部分を取りのぞくことを考えよう。
+      - 立方体から三角錐 A-CFH を取りのぞくと、のこりは頂点 B、D、E、G のところの 4 つの三角錐になるよ。
+      - 頂点 B のところの三角錐 B-ACF は、底面が直角二等辺三角形 ABC、高さが BF だね。
+    paths:
+      - [立方体の体積 = 6 × 6 × 6 = 216, 頂点 B、D、E、G のところに三角錐が 4 つ, 1 つの三角錐 = 6 × 6 ÷ 2 × 6 ÷ 3 = 36, 216 − 36 × 4 = 72 cm³]
+    note: 求める立体を直接でなく、立方体からまわりの 4 つの三角錐をひいて求める道筋（6 つの辺が等しい正四面体）。三角錐の底面と高さを、立方体の面と辺に取りかえて見るのが要点。角の三角錐を 8 つと数えやすい。答えは立方体のちょうど 1/3。
+  - part: 離
+    kinds: [数]
+    text: 半径 2 cm の鉄の球が 27 個あります。これをすべてとかして、1 つの大きな球をつくります。大きな球の表面積は、もとの 27 個の球の表面積の合計の何分のいくつですか。
+    answer: 1/3
+    check: "(lambda R: Fraction(4 * R * R, 27 * 4 * 2 * 2))([R for R in range(1, 50) if R ** 3 == 27 * 2 ** 3][0])"
+    hints:
+      - とかしても、鉄の体積は変わらないね。大きな球の体積は、もとの 1 個の何倍かな。
+      - 球の体積は 4/3 × π × 半径³。半径を 3 回かけた数が 27 個分になるのは、半径がいくつのときかな。
+      - 表面積は 4 × π × 半径²。大きな球の表面積と、27 個の合計をくらべよう。
+    paths:
+      - [体積は変わらないので、大きな球の体積は 27 個分, 半径³ = 2 × 2 × 2 × 27 = 216 = 6 × 6 × 6 で半径 6 cm, 大きな球の表面積 = 4 × π × 36 = 144π, 27 個の合計 = 27 × 4 × π × 4 = 432π, 144π ÷ 432π = 1/3]
+      - [半径は 3 倍なので、1 個の表面積は 3 × 3 = 9 倍, 27 個の合計は 1 個の 27 倍, 9 ÷ 27 = 1/3]
+    note: とかしても変わらない体積に目をつけて半径を出し（216 が 6 の 3 乗だと気づく、A-009 の累乗）、表面積の式でくらべる。2 本目の「半径が 3 倍なら表面積は 9 倍、体積は 27 倍」は、のちの相似な立体（G-021）につながる見方。表面積も 27 倍のままと思いこみやすい。

@@ -967,3 +967,74 @@ days:
           - じゅんにかけていこう。
         paths:
           - [ア 4 通り, イ 3 通り, ウ 2 通り, エ 2 通り, 4 × 3 = 12、12 × 2 = 24、24 × 2 = 48 通り]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: ドーナツの形を 5 つに分けました。まん中の円はあなで、ぬりません。となり合うのは、アとイ、イとウ、ウとエ、エとオ、オとアです。赤、青、黄の 3 色でぬります。となり合う部分はちがう色にします。同じ色を何回使ってもかまいません。ぬり方は何通りですか。
+    svg: |
+      <svg viewBox="0 0 240 144" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="120" cy="72" r="58" stroke="currentColor" fill="none" stroke-width="2"/>
+        <circle cx="120" cy="72" r="24" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="134.1" y1="52.6" x2="154.1" y2="25.1" stroke="currentColor" stroke-width="2"/>
+        <line x1="142.8" y1="79.4" x2="175.2" y2="89.9" stroke="currentColor" stroke-width="2"/>
+        <line x1="120" y1="96" x2="120" y2="130" stroke="currentColor" stroke-width="2"/>
+        <line x1="97.2" y1="79.4" x2="64.8" y2="89.9" stroke="currentColor" stroke-width="2"/>
+        <line x1="105.9" y1="52.6" x2="85.9" y2="25.1" stroke="currentColor" stroke-width="2"/>
+        <text x="120" y="36" font-size="14" text-anchor="middle">ア</text>
+        <text x="159" y="64.3" font-size="14" text-anchor="middle">イ</text>
+        <text x="144.1" y="110.2" font-size="14" text-anchor="middle">ウ</text>
+        <text x="95.9" y="110.2" font-size="14" text-anchor="middle">エ</text>
+        <text x="81" y="64.3" font-size="14" text-anchor="middle">オ</text>
+      </svg>
+    answer: 30
+    check: "sum(1 for p in itertools.product(range(3), repeat=5) if all(p[i] != p[(i + 1) % 5] for i in range(5)))"
+    hints:
+      - アからじゅんにぬっていくと、さいごのオでこまるね。オにぬれる色の数は、何で決まるかな。
+      - アとエが同じ色のときと、ちがう色のときに分けよう。
+      - アからエまでを 1 列とみて、アとエが同じ色になるぬり方が何通りあるか数えよう。
+    paths:
+      - [アからエまでを 1 列とみると 3 × 2 × 2 × 2 = 24 通り, そのうちアとエが同じ色になるのは、ウがアともイともちがう色の 1 通りに決まるので 3 × 2 × 1 = 6 通り, アとエが同じ色ならオは 2 色からえらべて 6 × 2 = 12 通り, アとエがちがう色の 18 通りでは、オは 1 色だけで 18 通り, 12 + 18 = 30 通り]
+    note: 輪のぬり分け（4 つの輪は 2 日目と 4 日目の挑戦）を 5 つにふやす。5 つの輪では、はしの 2 つ（アとエ）が同じ色かどうかを数えるところで、もう一度ウの色を考える必要がある。3 × 2 × 2 × 2 × 1 = 24 や 3 × 2 × 2 × 2 × 2 = 48 のように 1 つの式にしてしまいやすい。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-007]
+    text: 立方体の 6 つの面を、赤、青、黄、緑の 4 色でぬります。となり合う面（へんでつながっている面）はちがう色にします。同じ色を何回使ってもかまいません。立方体は台の上においたまま動かさないので、回すと同じになるぬり方も、ちがうぬり方として数えます。ぬり方は何通りですか。
+    svg: |
+      <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg">
+        <line x1="70" y1="50" x2="150" y2="50" stroke="currentColor" stroke-width="2"/>
+        <line x1="150" y1="50" x2="150" y2="130" stroke="currentColor" stroke-width="2"/>
+        <line x1="150" y1="130" x2="70" y2="130" stroke="currentColor" stroke-width="2"/>
+        <line x1="70" y1="130" x2="70" y2="50" stroke="currentColor" stroke-width="2"/>
+        <line x1="70" y1="50" x2="106" y2="20" stroke="currentColor" stroke-width="2"/>
+        <line x1="150" y1="50" x2="186" y2="20" stroke="currentColor" stroke-width="2"/>
+        <line x1="150" y1="130" x2="186" y2="100" stroke="currentColor" stroke-width="2"/>
+        <line x1="106" y1="20" x2="186" y2="20" stroke="currentColor" stroke-width="2"/>
+        <line x1="186" y1="20" x2="186" y2="100" stroke="currentColor" stroke-width="2"/>
+        <line x1="70" y1="130" x2="106" y2="100" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+        <line x1="106" y1="100" x2="106" y2="20" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+        <line x1="106" y1="100" x2="186" y2="100" stroke="currentColor" stroke-width="2" stroke-dasharray="5 4"/>
+      </svg>
+    answer: 96
+    check: "sum(1 for p in itertools.product(range(4), repeat=6) if all(p[i] != p[j] for i in range(6) for j in range(i + 1, 6) if i // 2 != j // 2))"
+    time: 900
+    hints:
+      - 1 つの面ととなり合わない面は、どの面かな。
+      - 向かい合う 2 つの面を 1 組とすると、上下・前後・左右の 3 組あるね。組がちがう面どうしは、いつもとなり合うよ。
+      - どの組も 1 色でぬるときと、1 組だけ 2 色でぬるときに分けよう。2 組を 2 色でぬることはできるかな。
+    paths:
+      - [向かい合う面の組は上下、前後、左右の 3 組, ちがう組の面はとなり合うので、組ごとに使う色は、ほかの組の色と全部ちがう, どの組も 1 色なら 4 × 3 × 2 = 24 通り, 1 組だけ 2 色なら 4 色全部を使い、2 色にする組のえらび方 3 通りに、色の決め方 4 × 3 × 2 × 1 = 24 通りずつで 24 + 24 + 24 = 72 通り, 2 組を 2 色にすると 5 色いるのでできない, 24 + 72 = 96 通り]
+    note: 立方体の面のとなり合い方（G-007）を「向かい合う 3 組」と読みかえると、ぬり分けの数え方が使える。向かい合う面は同じ色でもちがう色でもよいことに気づくのが要点。どの組も 1 色の 24 通りだけで終えやすい。
+  - part: 離
+    kinds: [読み取り]
+    text: 花だんが 6 つあり、北がわに西からア、イ、ウ、南がわに西からエ、オ、カとならんでいます。アとエ、イとオ、ウとカは南北にとなり合い、アとイ、イとウ、エとオ、オとカは東西にとなり合っています。それぞれの花だんに、赤、白、黄のどれか 1 色の花を植えます。となり合う花だんはちがう色にします。イには白い花を植えます。また、3 色とも少なくとも 1 つの花だんに植えます。植え方は何通りですか。
+    answer: 16
+    check: "sum(1 for p in itertools.product('赤白黄', repeat=6) if all(p[a] != p[b] for a, b in ((0, 1), (1, 2), (3, 4), (4, 5), (0, 3), (1, 4), (2, 5))) and p[1] == '白' and len(set(p)) == 3)"
+    hints:
+      - 文を読んで、6 つの花だんのならび方と、となり合い方の図をかこう。
+      - イが白なので、イととなり合うア、ウ、オの色は赤か黄だね。エとカはどうかな。
+      - 3 色を使わないぬり方もいったん数えてから、あとでのぞこう。
+    paths:
+      - [イが白なので、ア、ウ、オは赤か黄,オが赤のとき、アが赤ならエは白か黄の 2 通り、アが黄ならエは白の 1 通りで、アとエの組は 3 通り, ウとカの組も 3 通りで、オが赤のときは 3 × 3 = 9 通り, オが黄のときも 9 通りで、合わせて 18 通り, 赤と白だけ、黄と白だけの植え方が 1 通りずつあるのでのぞいて 16 通り]
+    note: 長い文から、花だんのならび方ととなり合い方を図にする。イが白と決まっているので、まわりのア、ウ、オは赤か黄。2 色だけで植える植え方（白と赤だけ、白と黄だけ）をのぞくのを忘れて 18 にしやすい。

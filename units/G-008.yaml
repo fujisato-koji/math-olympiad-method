@@ -880,3 +880,50 @@ days:
           - 9 のだんの九九を思い出そう。
         paths:
           - [9 × □ = 63, 63 ÷ 9 = 7, 7 cm]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 長方形 ABCD の中に点 P があり、P と 4 つの頂点を結びました。辺 AD は 12 cm、辺 AB は 8 cm です。三角形 PAD の面積は 19 cm² です。三角形 PBC（色のついた部分）の面積は何 cm² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="110.7,60 56,118 200,118" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="56,22 200,22 200,118 56,118" stroke="currentColor" stroke-width="2" fill="none"/><line x1="110.7" y1="60" x2="56" y2="22" stroke="currentColor" stroke-width="1.5"/><line x1="110.7" y1="60" x2="56" y2="118" stroke="currentColor" stroke-width="1.5"/><line x1="110.7" y1="60" x2="200" y2="118" stroke="currentColor" stroke-width="1.5"/><line x1="110.7" y1="60" x2="200" y2="22" stroke="currentColor" stroke-width="1.5"/><circle cx="110.7" cy="60" r="2.5" fill="currentColor"/><text x="49" y="19" font-size="12" text-anchor="middle">A</text><text x="207" y="19" font-size="12" text-anchor="middle">D</text><text x="49" y="130" font-size="12" text-anchor="middle">B</text><text x="207" y="130" font-size="12" text-anchor="middle">C</text><text x="112.7" y="53" font-size="12" text-anchor="middle">P</text><text x="128" y="16" font-size="11" text-anchor="middle">12 cm</text><text x="30" y="74" font-size="11" text-anchor="middle">8 cm</text></svg>
+    answer: 29
+    check: "12 * 8 // 2 - 19"
+    hints:
+      - 三角形 PAD と三角形 PBC の底辺は、どちらも 12 cm だね。
+      - 2 つの三角形の高さを合わせると、何 cm になるかな。
+      - 2 つの三角形の面積の和は、長方形の面積のどれだけ分かな。
+    paths:
+      - [PAD と PBC の高さの和は AB と同じ 8 cm, 面積の和は 12 ÷ 2 × 8 = 48 cm², 48 − 19 = 29, 29 cm²]
+      - [P を通り AD に平行な線で長方形を上下 2 つに分ける, PAD は上の長方形の半分・PBC は下の長方形の半分, 和は長方形の半分の 48 cm², 29 cm²]
+    note: P の位置（それぞれの高さ）が分からなくても、2 つの高さの和は長方形のたての長さで変わらない（変わらない量に目を付ける）。高さを 1 つずつ求めようとすると行きづまる。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [N-077]
+    text: たて 12.5 m、横 18 m の長方形の畑に、図のように 2 本の道があります（色のついた所）。横の道のはばは 2 m です。ななめの道は平行四辺形で、横に測ったはばは 1.5 m です。道でない所の面積は何 m² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="50,65.5 212,65.5 212,83.5 50,83.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="95,16 108.5,16 144.5,128.5 131,128.5" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="50" y1="65.5" x2="212" y2="65.5" stroke="currentColor" stroke-width="1"/><line x1="50" y1="83.5" x2="212" y2="83.5" stroke="currentColor" stroke-width="1"/><line x1="95" y1="16" x2="131" y2="128.5" stroke="currentColor" stroke-width="1"/><line x1="108.5" y1="16" x2="144.5" y2="128.5" stroke="currentColor" stroke-width="1"/><polygon points="50,16 212,16 212,128.5 50,128.5" stroke="currentColor" stroke-width="2" fill="none"/><text x="131" y="138.5" font-size="11" text-anchor="middle">18 m</text><text x="25" y="76.2" font-size="11" text-anchor="middle">12.5 m</text><text x="216" y="78.5" font-size="11" text-anchor="start">2 m</text><text x="101.8" y="12" font-size="10" text-anchor="middle">1.5 m</text></svg>
+    answer: 173.25
+    check: "(lambda c: f'{c // 100}.{c % 100:02d}')((180 - 15) * (125 - 20))"
+    hints:
+      - 道を畑のはしへよせることを考えよう。ななめの道も、横に測ったはばは 1.5 m のままだよ。
+      - よせたあとの、道でない所の長方形のたてと横は何 m かな。
+      - 小数のかけ算は、位をそろえて筆算しよう。
+    paths:
+      - [ななめの道を右のはしへ・横の道を下のはしへよせる, 残りは 横 18 − 1.5 = 16.5 m・たて 12.5 − 2 = 10.5 m, 16.5 × 10.5 = 173.25, 173.25 m²]
+      - [畑は 18 × 12.5 = 225 m², 道は ななめ 1.5 × 12.5 = 18.75 と 横 2 × 18 = 36 で 重なり 1.5 × 2 = 3 をひく, 道は 18.75 + 36 − 3 = 51.75 m², 225 − 51.75 = 173.25]
+    note: 十字の道の挑戦で使った「道をはしへよせる」が、ななめの道（平行四辺形）でもそのまま使えるかが要点。小数のかけ算（N-077）は 16.5 × 10.5 のように桁が多い。2 本目の道では、道の重なり（3 m²）をひき忘れやすい。
+  - part: 離
+    kinds: [総動員, 読み取り]
+    uses: [G-046]
+    text: たて 2 m 10 cm、横 2 m 70 cm の長方形の部屋のゆかに、1 辺 30 cm の正方形のタイルを、すき間なくしきつめます。ただし、部屋のすみの、たて 60 cm、横 90 cm の長方形の所には、たなを置くのでタイルをしきません。タイルは何まいいりますか。
+    answer: 57
+    check: "(210 // 30) * (270 // 30) - (60 // 30) * (90 // 30)"
+    hints:
+      - 長さの単位を cm にそろえよう。1 m は 100 cm だね。
+      - たてと横に、タイルがそれぞれ何まいずつならぶかを考えよう。
+      - たなの所に入るはずのタイルの数も、同じように考えよう。
+    paths:
+      - [たて 210 cm に 7 まい・横 270 cm に 9 まい, ゆか全体で 7 × 9 = 63 まい, たなの所は 2 × 3 = 6 まい, 63 − 6 = 57 まい]
+    note: 面積（cm²）でわろうとすると、数が大きくなりすぎる。1 辺にならぶまい数で考えるのが近道。m と cm がまじっているので、単位をそろえる（G-046）のを忘れやすい。210 ÷ 30 は 21 ÷ 3 と同じ。

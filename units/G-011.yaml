@@ -662,3 +662,47 @@ days:
           - 9 × 3 を計算しよう。
         paths:
           - [底面積は 9 × 円周率, 9 × 3 = 27, □ は 27]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 1 辺 1 cm の立方体を積んで、図のような階段の形の立体を作りました。段は左から 1 段、2 段、3 段、4 段で、おくゆきはどこも 3 cm です。この立体の表面積は何 cm² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="60,103 82,103 112,79 90,79" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="70" y1="95" x2="92" y2="95" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="80" y1="87" x2="102" y2="87" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="82,81 104,81 134,57 112,57" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="92" y1="73" x2="114" y2="73" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="102" y1="65" x2="124" y2="65" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="104,59 126,59 156,35 134,35" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="114" y1="51" x2="136" y2="51" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="124" y1="43" x2="146" y2="43" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="126,37 148,37 178,13 156,13" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/><line x1="136" y1="29" x2="158" y2="29" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="146" y1="21" x2="168" y2="21" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="148,125 148,37 178,13 178,101" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="158" y1="29" x2="158" y2="117" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="168" y1="21" x2="168" y2="109" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="148" y1="103" x2="178" y2="79" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="148" y1="81" x2="178" y2="57" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="148" y1="59" x2="178" y2="35" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="60,125 148,125 148,37 126,37 126,59 104,59 104,81 82,81 82,103 60,103" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="82" y1="125" x2="82" y2="103" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="104" y1="125" x2="104" y2="81" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="126" y1="125" x2="126" y2="59" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="82" y1="103" x2="148" y2="103" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="104" y1="81" x2="148" y2="81" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="126" y1="59" x2="148" y2="59" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/></svg>
+    answer: 68
+    check: "2 * ((1 + 2 + 3 + 4) + 4 * 3 + 4 * 3)"
+    hints:
+      - 前・後ろ・上・下・左・右の 6 つの方向から見た図を考えよう。
+      - 上から見ると、段の上の面は全部で何 cm² 見えるかな。
+      - 前と後ろ、上と下、左と右は、同じ面積に見えるね。
+    paths:
+      - [前から見ると 1 + 2 + 3 + 4 = 10 cm², 上から見ると 4 × 3 = 12 cm²・横から見ると 4 × 3 = 12 cm², 表面積は (10 + 12 + 12) × 2 = 68 cm², 68 cm²]
+    note: 段の面を 1 つずつ数えるともれやすい。6 方向から見た図の面積の和として数えるのが道筋（この形のようにへこみのない立体なら、見えた面積の和が表面積になる）。左から見ると段の縦の面が、上から見ると段の上の面が、どちらも合わせて 12 cm² に見える。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [N-077]
+    text: 内のりが たて 25 cm、横 32 cm の直方体の水そうに、水が入っています。石を 1 つ水の中にしずめると、水の深さが 8.5 cm から 10.75 cm になりました。石の体積は何 cm³ ですか。石は全部水にしずみ、水はあふれません。
+    answer: 1800
+    check: "25 * 32 * (Fraction(1075, 100) - Fraction(85, 10))"
+    hints:
+      - ふえた水の深さは何 cm かな。
+      - 石の体積は、ふえて見える分の水の体積と同じだよ。
+      - 底面積 × ふえた深さ で求めよう。
+    paths:
+      - [ふえた深さは 10.75 − 8.5 = 2.25 cm, 底面積は 25 × 32 = 800 cm², 800 × 2.25 = 1800, 1800 cm³]
+    note: 小数のひき算で位をそろえる（10.75 − 8.50）のと、800 × 2.25 の小数のかけ算（N-077）が要点。8.5 cm と 10.75 cm の水の体積をそれぞれ出してからひいてもよいが、計算が重くなる。
+  - part: 離
+    kinds: [読み取り, 手数]
+    text: 直方体の展開図です。図の長さから、この直方体の体積を求めましょう。
+    svg: |
+      <svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="46,12 95,12 95,40 46,40" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="46,40 95,40 95,96 46,96" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="95,40 123,40 123,96 95,96" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="123,40 172,40 172,96 123,96" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="172,40 200,40 200,96 172,96" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="46,96 95,96 95,124 46,124" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="46" y1="136" x2="200" y2="136" stroke="currentColor" stroke-width="1"/><line x1="46" y1="132" x2="46" y2="140" stroke="currentColor" stroke-width="1"/><line x1="200" y1="132" x2="200" y2="140" stroke="currentColor" stroke-width="1"/><text x="123" y="152" font-size="11" text-anchor="middle">22 cm</text><line x1="34" y1="12" x2="34" y2="124" stroke="currentColor" stroke-width="1"/><line x1="30" y1="12" x2="38" y2="12" stroke="currentColor" stroke-width="1"/><line x1="30" y1="124" x2="38" y2="124" stroke="currentColor" stroke-width="1"/><text x="16" y="72" font-size="10" text-anchor="middle">16 cm</text><text x="206" y="72" font-size="10" text-anchor="start">8 cm</text></svg>
+    answer: 224
+    check: "(lambda b: (22 // 2 - b) * b * 8)((16 - 8) // 2)"
+    hints:
+      - 上と下についている面のたての長さは、直方体のどの辺と同じかな。
+      - 16 cm から 8 cm をひくと、どの辺の 2 つ分が残るかな。
+      - 横の 22 cm には、どの辺が 2 つずつ並んでいるかな。
+    paths:
+      - [16 − 8 = 8 は短い辺 2 つ分なので 短い辺は 4 cm, 22 は長い辺 2 つと短い辺 2 つなので 長い辺 + 短い辺 = 11 で 長い辺は 7 cm, 体積は 7 × 4 × 8 = 224, 224 cm³]
+    note: 展開図のどの辺が、組み立てたときに同じ辺になるか（G-007）を読み取って、3 つの辺の長さを決める。図にない長さ（4 cm と 7 cm）を、合わせた長さから逆に出すのがこつ。

@@ -1757,3 +1757,48 @@ days:
           - ∠BDC は同じ弧に対する円周角だよ。
         paths:
           - [B、C、D は A を中心とする円の上, ∠BDC = 70° ÷ 2, 35°]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [手数]
+    text: △ABC で ∠A = 62°、∠B = 54° です（3 つの角はどれも鋭角）。A から BC、B から CA、C から AB に、それぞれ垂線 AD、BE、CF をひきます。∠x（∠DFE）は何度ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="135.3,16 42.3,144 197.7,144" stroke="currentColor" stroke-width="2" fill="none"/><line x1="135.3" y1="16" x2="135.3" y2="144" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="42.3" y1="144" x2="167.8" y2="82.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="197.7" y1="144" x2="96" y2="70.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="135.3,144 167.8,82.8 96,70.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="141.3,144 141.3,138 135.3,138" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="165.2,77.4 159.8,80 162.5,85.4" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="92.5,74.9 97.3,78.5 100.8,73.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M141.4 28.6 A14 14 0 0 1 127.1 27.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="146.2" y="46" font-size="12" text-anchor="middle">62°</text><path d="M51.7 131.1 A16 16 0 0 1 58.3 144" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="68.1" y="135" font-size="12" text-anchor="middle">54°</text><path d="M111.7 72.9 A16 16 0 0 1 103.5 84.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="117.8" y="90.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="135.3" y="10.9" font-size="14" text-anchor="middle">A</text><text x="33" y="152.6" font-size="14" text-anchor="middle">B</text><text x="207" y="152.6" font-size="14" text-anchor="middle">C</text><text x="135.3" y="159.9" font-size="14" text-anchor="middle">D</text><text x="176.4" y="82.5" font-size="14" text-anchor="middle">E</text><text x="87" y="70.5" font-size="14" text-anchor="middle">F</text></svg>'
+    answer: 52
+    check: "(90 - (180 - 62 - 54)) + (90 - (180 - 62 - 54))"
+    hints:
+      - 直角が 2 つ並ぶところを探そう。∠BEC = ∠BFC = 90° なので、B、C、E、F は同じ円の上にあるね。
+      - A、C、D、F も同じ円の上にあるよ（∠ADC = ∠AFC = 90°）。∠DFC と等しい角はどれかな。
+      - ∠DFE = ∠DFC + ∠CFE。それぞれを同じ弧に対する円周角に移して、∠C を使って表そう。
+    paths:
+      - [∠C = 180 − 62 − 54 = 64°, ∠ADC = ∠AFC = 90° で A、C、D、F は同じ円の上, ∠DFC = ∠DAC = 90 − 64 = 26°, ∠BEC = ∠BFC = 90° で B、C、E、F は同じ円の上, ∠CFE = ∠CBE = 90 − 64 = 26°, ∠x = 26 + 26 = 52°]
+      - [B、C、E、F が同じ円の上なので、外角で ∠AFE = ∠ACB = 64°, A、C、D、F が同じ円の上なので、外角で ∠BFD = ∠ACB = 64°, ∠x = 180 − 64 − 64 = 52°]
+    note: 2 つの直角から隠れた円を 2 つ見つけて角を移す（9 日目の 2 本の垂線を 3 本にした形）。∠C を先に出しておき、2 つの円の両方で使う手数の問題。答えは 180° − 2 × ∠C になり、与えられた ∠A、∠B から直接は見えない。
+  - part: 離
+    kinds: [道筋]
+    text: 正方形 ABCD の対角線の交点を O とします。辺 AB について正方形と反対側に、∠AEB = 90° となる点 E をとると、∠EAB = 32° でした。直線 EO と辺 AB の交点を F とするとき、∠x（∠EFB）は何度ですか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><polygon points="72.4,111.2 167.6,111.2 167.6,16 72.4,16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="72.4" y1="111.2" x2="167.6" y2="16" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="167.6" y1="111.2" x2="72.4" y2="16" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="72.4,111.2 140.9,154 167.6,111.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="140.9" y1="154" x2="120" y2="63.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="135.8,150.8 139,145.7 144,148.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M90.4 111.2 A18 18 0 0 1 87.7 120.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="102.2" y="124" font-size="12" text-anchor="middle">32°</text><path d="M141 111.2 A10 10 0 0 1 133.2 121" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="145.9" y="127.2" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><circle cx="120" cy="63.6" r="2.6" fill="currentColor"/><text x="120" y="57.5" font-size="14" text-anchor="middle">O</text><text x="62.8" y="113.2" font-size="14" text-anchor="middle">A</text><text x="177.2" y="113.2" font-size="14" text-anchor="middle">B</text><text x="176.6" y="16.4" font-size="14" text-anchor="middle">C</text><text x="63.4" y="16.4" font-size="14" text-anchor="middle">D</text><text x="140.9" y="169.9" font-size="14" text-anchor="middle">E</text><text x="123.2" y="109.9" font-size="14" text-anchor="middle">F</text></svg>'
+    answer: 77
+    check: "180 - 45 - (90 - 32)"
+    hints:
+      - ∠AEB = 90° と ∠AOB = 90° に目をつけよう。4 点 A、E、B、O について何がいえるかな。
+      - A、E、B、O は同じ円の上にあるね。∠OEB と等しい円周角はどれかな。
+      - ∠OEB = ∠OAB だね。△EFB の 3 つの角を考えよう。
+    paths:
+      - [正方形の対角線は垂直に交わるので ∠AOB = 90°, ∠AEB = ∠AOB = 90° で、A、E、B、O は AB を直径とする円の上, 弧 OB に対する円周角で ∠OEB = ∠OAB = 45°, ∠EBA = 90 − 32 = 58°, △EFB で ∠x = 180 − 45 − 58 = 77°]
+      - [∠AEB + ∠AOB = 180° なので、四角形 AEBO は円に内接する, ∠AEO = ∠ABO = 45°, △AEF で ∠AFE = 180 − 45 − 32 = 103°, ∠x = 180 − 103 = 77°]
+    note: 正方形の対角線の直角と ∠AEB の直角から、図にかかれていない円を見つけるのが道筋の要点（EO はいつも ∠AEB を 2 等分する）。円が見えないと ∠OEB が出せずに止まる。32° は ∠EBA を出すのに使うだけで、45° は E の位置によらない。
+  - part: 離
+    kinds: [総動員]
+    uses: [G-020]
+    text: 円に内接する四角形 ABCD で、AB = AD = 6 cm です。対角線 AC と BD の交点を E とすると、AE = 4 cm でした。AC は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="59" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,16 176.6,58.5 166.3,111.6 63.4,58.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="16" x2="166.3" y2="111.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="176.6" y1="58.5" x2="63.4" y2="58.5" stroke="currentColor" stroke-width="2" fill="none"/><line x1="146.2" y1="40" x2="150.4" y2="34.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="89.6" y1="34.4" x2="93.8" y2="40" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="10.9" font-size="14" text-anchor="middle">A</text><text x="186.2" y="60.5" font-size="14" text-anchor="middle">B</text><text x="171.4" y="125.1" font-size="14" text-anchor="middle">C</text><text x="53.8" y="60.5" font-size="14" text-anchor="middle">D</text><text x="134.4" y="73.7" font-size="14" text-anchor="middle">E</text></svg>'
+    answer: 9
+    check: "Fraction(6 * 6, 4)"
+    hints:
+      - AB = AD なので、△ABD は二等辺三角形だね。∠ABD と等しい角を探そう。
+      - ∠ADB と ∠ACB は、同じ弧 AB に対する円周角だよ。
+      - △ABE と △ACB には、共通な角と等しい角があるね。相似比を使おう。
+    paths:
+      - [AB = AD で ∠ABD = ∠ADB, 弧 AB に対する円周角で ∠ADB = ∠ACB, ∠ABE = ∠ACB、∠BAE = ∠CAB（共通）, △ABE ∽ △ACB で AB:AC = AE:AB, AC = 6 × 6 ÷ 4 = 9 cm]
+    note: 円周角（G-018）で等しい角を移し、相似（G-020）で長さを出す。この単元は角だけを追ってきたので、角の追跡が長さの問題に変わるところが離。対応する辺（AB と AC、AE と AB）を取りちがえやすい。のちの方べきの定理（G-030）で AE × AC = AB × AB と言いなおせる。

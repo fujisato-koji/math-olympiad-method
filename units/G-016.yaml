@@ -925,3 +925,48 @@ days:
           - 図の 2 つは重ねられるかな。
         paths:
           - [∠B は等しい 2 辺の間の角ではない, 合同とはいえない]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [手数]
+    text: 直線 ℓ と m は平行です（ℓ ∥ m）。ℓ の上の点 A から m の上の点 B まで、図のように折れ線 APQRB をかきました。∠x（∠QRB）は何度ですか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><line x1="23.4" y1="16" x2="216.6" y2="16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="23.4" y1="154" x2="216.6" y2="154" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="190.4,20 196.4,16 190.4,12" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="190.4,158 196.4,154 190.4,150" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="14.4" y="20.9" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">ℓ</text><text x="14.4" y="158.9" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">m</text><polyline points="85.5,16 155.9,51.9 117.8,85 157.2,112.6 124.9,154" stroke="currentColor" stroke-width="2" fill="none"/><path d="M103.5 16 A18 18 0 0 1 101.5 24.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="122.5" y="29.1" font-size="12" text-anchor="middle">27°</text><path d="M146.9 59.8 A12 12 0 0 1 145.2 46.4" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130.1" y="59.2" font-size="12" text-anchor="middle">68°</text><path d="M126.9 77.1 A12 12 0 0 1 127.6 91.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="143.8" y="87.8" font-size="12" text-anchor="middle">76°</text><path d="M149.8 122.1 A12 12 0 0 1 147.4 105.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="135.5" y="120.1" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><path d="M134.7 141.4 A16 16 0 0 1 140.9 154" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="151.9" y="145" font-size="12" text-anchor="middle">52°</text><text x="85.5" y="10.9" font-size="14" text-anchor="middle">A</text><text x="165.9" y="56.8" font-size="14" text-anchor="middle">P</text><text x="107.8" y="89.9" font-size="14" text-anchor="middle">Q</text><text x="167.2" y="117.5" font-size="14" text-anchor="middle">R</text><text x="124.9" y="169.9" font-size="14" text-anchor="middle">B</text></svg>'
+    answer: 87
+    check: "(76 - (68 - 27)) + 52"
+    hints:
+      - 折れ曲がった点 P、Q、R のそれぞれを通って、ℓ に平行な直線をひいてみよう。
+      - 平行な直線で角を 2 つに分けると、錯角で上や下の角に移せるね。P の角は 27° と何度に分かれるかな。
+      - 上から順に、分けた角を 1 つずつ書きこもう。R の角の下の部分は、B の角と錯角だよ。
+    paths:
+      - [P、Q、R を通って ℓ に平行な直線をひく, P の 68° は 27° と 41° に分かれる, Q の 76° は 41° と 35° に分かれる, R の角は 35° と 52° で 87°, 87°]
+      - [右に開いた角の和と、左に開いた角の和は等しい, 27 + 76 + 52 = 155, ∠x = 155 − 68 = 87, 87°]
+    note: 補助線を 3 本ひき、途中の角を書きこんで覚えておく手数の問題。補助線が 1 本の挑戦（2 日目）より折れが多い。2 本目の「右に開いた角の和 = 左に開いた角の和」は 1 本目をくり返すと出てくるきまりで、わけを言えるなら使ってよい。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [N-024]
+    text: 正三角形の 1 つの内角は 60°、正方形は 90° のように、正多角形の 1 つの内角の大きさは決まっています。1 つの内角の大きさが整数（度）になる正多角形は、全部で何種類ありますか。
+    answer: 22
+    check: "len([n for n in range(3, 361) if 360 % n == 0])"
+    hints:
+      - 正多角形の 1 つの外角は、360° を頂点の数でわった大きさだね。
+      - 内角 = 180° − 外角。内角が整数になるのは、外角が整数になるときだよ。
+      - 360 の約数のうち、3 以上のものを数えよう。360 を素因数分解すると速いよ。
+    paths:
+      - [内角が整数になるのは、外角 360 ÷（頂点の数）が整数のとき, 頂点の数は 360 の約数で 3 以上, 360 = 2³ × 3² × 5 で約数は 4 × 3 × 2 = 24 こ, 1 と 2 をのぞいて 22, 22 種類]
+      - [360 の約数を、かけて 360 になる組で書き出す, 1 × 360 から 18 × 20 まで 12 組で 24 こ, 1 と 2 をのぞいて 22 種類]
+    note: 正多角形の角（この単元）と約数の個数（N-024）を合わせる。内角のままでは考えにくく、外角に言いかえると約数の問題になるのが要点。頂点の数 1 と 2 は多角形にならないので除く（ここでつまずきやすい）。いちばん頂点の多いものは正 360 角形（内角 179°）。
+  - part: 離
+    kinds: [道筋]
+    text: △ABC で ∠A = 68° です。辺 BC を C の先へのばした直線の上に点 E をとります。∠B の二等分線と、外角 ∠ACE の二等分線の交点を D とします。∠B と ∠C の大きさはわかりません。∠x（∠BDC）は何度ですか。
+    svg: '<svg viewBox="0 0 240 146" xmlns="http://www.w3.org/2000/svg"><polygon points="45.3,49.3 16,129.9 134.9,129.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="134.9" y1="129.9" x2="224" y2="129.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="16" y1="129.9" x2="178.5" y2="16.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="134.9" y1="129.9" x2="178.5" y2="16.1" stroke="currentColor" stroke-width="2" fill="none"/><path d="M55.7 58.7 A14 14 0 0 1 40.5 62.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="51.9" y="79.7" font-size="12" text-anchor="middle">68°</text><path d="M24.2 107.4 A24 24 0 0 1 35.7 116.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="28.2" y1="114" x2="33" y2="107.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M35.7 116.1 A24 24 0 0 1 40 129.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="35.1" y1="123.9" x2="42.7" y2="121.5" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M123 119.2 A16 16 0 0 1 140.6 115" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="130.4" y1="118.7" x2="127.5" y2="111.3" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="133.7" y1="118" x2="133" y2="110" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M140.6 115 A16 16 0 0 1 150.9 129.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="143.7" y1="121.8" x2="149.6" y2="116.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="145.6" y1="124.6" x2="152.8" y2="121" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M170.7 36.6 A22 22 0 0 1 160.5 28.7" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="157.6" y="47.1" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="42.5" y="44.6" font-size="14" text-anchor="middle">A</text><text x="6.7" y="138.5" font-size="14" text-anchor="middle">B</text><text x="134.9" y="145.8" font-size="14" text-anchor="middle">C</text><text x="224" y="145.8" font-size="14" text-anchor="middle">E</text><text x="182.3" y="11.7" font-size="14" text-anchor="middle">D</text></svg>'
+    answer: 34
+    check: "(68 + 2 * 35) // 2 - 35"
+    hints:
+      - ∠B を 2 等分した 1 つ分を ∠b のように文字でおいてみよう。∠ACE は △ABC の外角だね。
+      - ∠ACE = ∠A + ∠B だから、その半分の ∠DCE は何と何の和になるかな。
+      - ∠DCE は △DBC の外角でもあるよ。2 つの見方をくらべよう。
+    paths:
+      - [∠ABD = ∠DBC = ∠b とする, △ABC の外角で ∠ACE = 68° + 2∠b, 半分にして ∠DCE = 34° + ∠b, △DBC の外角で ∠DCE = ∠b + ∠x, ∠x = 34°]
+      - [たとえば ∠B = 70° とすると ∠ACB = 42°, ∠DBC = 35°、∠DCB = 42 + 69 = 111°, ∠x = 180 − 35 − 111 = 34°]
+    note: ∠B と ∠C がわからないのに答えが決まる、変わらない量に気づけるかが要点。外角の定理を 2 回使い、文字 ∠b をおいて消す（A-010 の文字）。2 本目のように例の数で求めてもよいが、例ではすべての場合を示せないことを話す。答えはいつも ∠A の半分になる。

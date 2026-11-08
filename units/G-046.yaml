@@ -550,3 +550,49 @@ days:
           - みずを ますで はかった ときの たんいを おもいだそう。
         paths:
           - [cm は ながさ, g は おもさ, dL は かさ]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [数, 手数]
+    text: 80 cm の テープから、27 cm 4 mm と 18 cm 9 mm を きりとりました。のこりの テープは なん mm ですか。
+    answer: 337
+    check: "80 * 10 - (27 * 10 + 4) - (18 * 10 + 9)"
+    hints:
+      - cm と mm を べつべつに けいさん しよう。mm が たりない ときは、1 cm を 10 mm に くずそう。
+      - きりとった 2 ほんを、さきに あわせても よいよ。
+      - さいごに「なん cm なん mm」を「なん mm」に なおそう。1 cm は 10 mm だよ。
+    paths:
+      - [きりとった ながさは 27 cm 4 mm と 18 cm 9 mm で 46 cm 3 mm, 80 cm − 46 cm 3 mm = 33 cm 7 mm, 33 cm 7 mm = 337 mm, 337]
+      - [80 cm = 800 mm, 27 cm 4 mm = 274 mm・18 cm 9 mm = 189 mm, 800 − 274 − 189 = 337, 337]
+    note: 単位が 2 つまじった長さのくり上がりとくり下がり（4 mm + 9 mm、mm が足りないときに 1 cm を 10 mm にくずす）が要点。最後に mm にそろえるのを忘れて 33 や 37 と答えやすい。2 本目は 3 けたのひき算（N-009）。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [A-001]
+    text: てんびんが 2 つとも つりあって います。🍊 は みんな おなじ おもさ です。50g と 20g は おもりの おもさ です。🍎 と 🍊 を 1 こずつ はかりに のせると、なん g に なりますか。
+    balance: [{left: "🍎", right: "🍊🍊", tilt: level}, {left: "🍊", right: "50g 20g", tilt: level}]
+    answer: 210
+    check: "(lambda o: 2 * o + o)(50 + 20)"
+    hints:
+      - みぎの てんびんから、🍊 1 この おもさが わかるよ。
+      - ひだりの てんびんで、🍎 は 🍊 なんこ ぶんの おもさかな。
+      - 🍎 と 🍊 を あわせると、🍊 なんこ ぶんかな。
+    paths:
+      - [🍊 は 50 + 20 = 70 g, 🍎 は 🍊 2 こ ぶんで 70 + 70 = 140 g, 140 + 70 = 210, 210 g]
+      - [🍎 と 🍊 で 🍊 3 こ ぶん, 70 + 70 + 70 = 210, 210 g]
+    note: てんびん（A-001）のつり合いで重さを置きかえ、g の計算（G-046）につなぐ。🍎 だけの重さ 140 g を答えにしやすい。3 けたのたし算は N-009 の範囲。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [C-002]
+    text: めもりが きえて、しるしが 4 つ だけ のこった ものさしが あります。しるしは 0 cm、1 cm、4 cm、9 cm の ところに あります。2 つの しるしの あいだを つかって、1 かいで はかります。1 cm から 9 cm までの ながさの うち、はかれない ながさは いくつ ありますか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="20,52 220,52 220,82 20,82" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="20" y1="52" x2="20" y2="70" stroke="currentColor" stroke-width="2.5"/><text x="20" y="100" font-size="13" text-anchor="middle">0</text><line x1="42.2" y1="52" x2="42.2" y2="70" stroke="currentColor" stroke-width="2.5"/><text x="42.2" y="100" font-size="13" text-anchor="middle">1</text><line x1="108.9" y1="52" x2="108.9" y2="70" stroke="currentColor" stroke-width="2.5"/><text x="108.9" y="100" font-size="13" text-anchor="middle">4</text><line x1="220" y1="52" x2="220" y2="70" stroke="currentColor" stroke-width="2.5"/><text x="220" y="100" font-size="13" text-anchor="middle">9</text><text x="120" y="124" font-size="11" text-anchor="middle">（cm）</text></svg>
+    answer: 3
+    check: "sum(1 for L in range(1, 10) if L not in {b - a for a in (0, 1, 4, 9) for b in (0, 1, 4, 9) if b > a})"
+    hints:
+      - かけた ものさしと おなじで、2 つの しるしの かずの ちがいが ながさに なるよ。
+      - 4 つの しるしから 2 つを えらぶ えらびかたを、もれなく かきだそう。
+      - はかれる ながさに ○ を つけて、のこった ながさを かぞえよう。
+    paths:
+      - [えらびかたは 0 と 1・0 と 4・0 と 9・1 と 4・1 と 9・4 と 9 の 6 とおり, はかれるのは 1・4・9・3・8・5 cm, はかれないのは 2・6・7 cm, 3 つ]
+    note: 欠けたものさしの考え（2 つの目もりの差が長さ）を、選び方の書き出し（C-002）と合わせる。しるしの組を「0 と」「1 と」「4 と」の順に書くと、もれと重なりがない。

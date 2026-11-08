@@ -662,3 +662,47 @@ days:
           - 60 を 2 つに分けよう。
         paths:
           - [∠A = 60, 60 ÷ 2 = 30]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [手数]
+    text: AB = AC の二等辺三角形 ABC があります。辺 AC の上に点 P、R を、辺 AB の上に点 Q を図のようにとると、AP = PQ = QR = RB = BC になりました。∠A は何度ですか。
+    svg: '<svg viewBox="0 0 240 108" xmlns="http://www.w3.org/2000/svg"><polygon points="18,54 222,18 222,90" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="88.8,66.5 151.2,30.5 197.4,85.6 222,18" stroke="currentColor" stroke-width="2" fill="none"/><line x1="52.8" y1="63.7" x2="54" y2="56.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="121.8" y1="51.5" x2="118.2" y2="45.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="171.6" y1="60.3" x2="177" y2="55.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="213" y1="53" x2="206.4" y2="50.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="218.5" y1="54" x2="225.5" y2="54" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="8" y="58.9" font-size="14" text-anchor="middle">A</text><text x="230.6" y="17.8" font-size="14" text-anchor="middle">B</text><text x="230.6" y="100" font-size="14" text-anchor="middle">C</text><text x="151.2" y="25.4" font-size="14" text-anchor="middle">Q</text><text x="88.8" y="82.4" font-size="14" text-anchor="middle">P</text><text x="197.4" y="101.5" font-size="14" text-anchor="middle">R</text></svg>'
+    answer: 20
+    check: "[a for a in range(1, 90) if a + 4 * a + 4 * a == 180][0]"
+    hints:
+      - ∠A を ∠a とおいて、A に近い二等辺三角形から順に、角を ∠a で書きこもう。
+      - △APQ は PA = PQ の二等辺三角形だね。外角を使うと、次の二等辺三角形の底角は ∠a の何倍かな。
+      - ∠ABC と ∠ACB を ∠a で表して、△ABC の内角の和を使おう。
+    paths:
+      - [∠A = ∠a とする, △APQ で ∠PQA = ∠a、外角で ∠QPR = 2∠a, △PQR で ∠QRP = 2∠a、外角で ∠RQB = 3∠a, △QRB で ∠QBR = 3∠a、外角で ∠BRC = 4∠a, △RBC で ∠BCR = 4∠a、AB = AC で ∠ABC = 4∠a, ∠a + 4∠a + 4∠a = 180° で ∠a = 20°]
+    note: 二等辺三角形が 5 つ続き、外角で底角が ∠a、2∠a、3∠a、4∠a と増えていくのを書きこんで覚えておく手数の問題（挑戦の 36° の三角形は 2 段だった）。最後に AB = AC から ∠ABC も 4∠a になることを使い忘れやすい。∠a は文字の式（A-010）で、9 つ分が 180° と読めばよい。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [L-007]
+    text: AB = AC の二等辺三角形 ABC の辺 BC の上に点 D をとり（D は B とも C ともちがう点）、A と D を結ぶと、△ABD と △ADC がどちらも二等辺三角形になりました。∠BAC の大きさとして考えられるものをすべてたすと、何度ですか。
+    answer: 198
+    check: "sum(set(180 - 2 * b for b in range(1, 90) for a in range(1, 180 - 2 * b) if len({b, a, 180 - b - a}) < 3 and len({b, 180 - 2 * b - a, b + a}) < 3))"
+    hints:
+      - ∠B = ∠C = ∠b、∠BAD = ∠a とおいて、2 つの三角形の 3 つの角をそれぞれ書こう。
+      - △ABD のどの 2 つの角が等しいか、△ADC のどの 2 つの角が等しいかで、場合を分けよう。
+      - ∠ADC = ∠b + ∠a は、∠C = ∠b と等しくなれないね。残りの組み合わせを 1 つずつ調べよう。
+    paths:
+      - [∠B = ∠C = ∠b、∠BAD = ∠a とする, △ABD の角は ∠b、∠a、180° − ∠b − ∠a, △ADC の角は ∠b、180° − 2∠b − ∠a、∠b + ∠a, △ADC で等しい 2 角は 2 通り、△ABD は 3 通りで、6 通りを調べる, 成り立つのは ∠b = 45° と ∠b = 36° のときだけ, ∠BAC は 90° か 108°, 90 + 108 = 198]
+      - [D がまん中のとき DA = DB = DC なら ∠BAC = 90°, DA = DB、CA = CD のとき ∠ADC = 2∠b = ∠CAD, ∠BAC = 3∠b で 5∠b = 180°、∠b = 36°, ∠BAC = 108°, 90 + 108 = 198]
+    note: 二等辺三角形の性質（この単元）を、場合分け（L-007）で漏れなく調べる。等しい 2 角の選び方で 3 × 2 = 6 通りに分け、角が 0° や 180° になる場合を消す。90° だけ見つけて止まりやすい。2 本目は形を見つける道で、ほかにないことまでは言えない。D が C に近い場合は 108° の左右を入れかえた形なので、大きさとしては 1 回だけ数える。
+  - part: 離
+    kinds: [数]
+    text: 平行四辺形 ABCD で、AB = 7.8 cm、AD = 12.5 cm です。∠A の二等分線と辺 BC の交点を E、∠D の二等分線と辺 BC の交点を F とします。EF は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 141" xmlns="http://www.w3.org/2000/svg"><polygon points="57.8,24.1 24,116.9 182.2,116.9 216,24.1" stroke="currentColor" stroke-width="2" fill="none"/><line x1="57.8" y1="24.1" x2="122.7" y2="116.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="216" y1="24.1" x2="83.5" y2="116.9" stroke="currentColor" stroke-width="2" fill="none"/><path d="M66.9 37.2 A16 16 0 0 1 52.3 39.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="59.3" y1="36" x2="60.4" y2="43.9" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M73.8 24.1 A16 16 0 0 1 66.9 37.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="68.4" y1="29.7" x2="75.5" y2="33.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M194.7 39 A26 26 0 0 1 190 24.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="195.7" y1="32.5" x2="188.3" y2="35.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="194.5" y1="28.9" x2="186.7" y2="30.6" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M207.1 48.5 A26 26 0 0 1 194.7 39" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="204.2" y1="42.7" x2="199.9" y2="49.4" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="201.1" y1="40.3" x2="195.7" y2="46.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="22.1" y="67.9" font-size="12" text-anchor="middle">7.8 cm</text><text x="136.9" y="19.3" font-size="12" text-anchor="middle">12.5 cm</text><text x="53.3" y="20.1" font-size="14" text-anchor="middle">A</text><text x="15.1" y="126.3" font-size="14" text-anchor="middle">B</text><text x="191.2" y="126.3" font-size="14" text-anchor="middle">C</text><text x="224.9" y="24.5" font-size="14" text-anchor="middle">D</text><text x="122.7" y="132.8" font-size="14" text-anchor="middle">E</text><text x="83.5" y="132.8" font-size="14" text-anchor="middle">F</text></svg>'
+    answer: 3.1
+    check: "(78 + 78 - 125) / 10"
+    hints:
+      - AD ∥ BC だから、∠DAE と ∠AEB は錯角で等しいね。
+      - ∠BAE = ∠DAE なので、△ABE はどんな三角形かな。BE の長さがわかるよ。
+      - 同じように CF もわかるね。BE と CF をたすと BC より長いので、その重なりが EF だよ。
+    paths:
+      - [錯角で ∠AEB = ∠DAE = ∠BAE, △ABE は BA = BE の二等辺三角形で BE = 7.8, 同じように CF = CD = 7.8, BC = AD = 12.5, EF = 7.8 + 7.8 − 12.5 = 3.1, 3.1 cm]
+      - [BE = 7.8 なので EC = 12.5 − 7.8 = 4.7, CF = 7.8 なので EF = CF − EC = 7.8 − 4.7 = 3.1, 3.1 cm]
+    note: 平行線の錯角（G-016）と二等辺三角形（この単元）で長さを移し、小数で計算する。B に近いのが F、C に近いのが E という並びを図で確かめるところでつまずきやすい。BE + CF が BC より長いので、2 本の二等分線は辺 BC より上で交わる。

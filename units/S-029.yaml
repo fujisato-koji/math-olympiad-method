@@ -1394,3 +1394,70 @@ days:
           - その階級の真ん中の値を求めましょう。
         paths:
           - [いちばん高い柱は 30 点以上 40 点未満, 階級値は (30 + 40) ÷ 2 = 35 点]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員]
+    uses: [A-011]
+    text: 7 人の記録（回）は、12、15、18、20、23、27、x でした。x は 27 より大きい数です。7 人の平均値は、中央値より 3 回大きくなりました。x はいくつですか。
+    answer: 46
+    check: "(lambda d: [x for x in range(28, 300) if Fraction(sum(d) + x, 7) == sorted(d + [x])[3] + 3][0])([12, 15, 18, 20, 23, 27])"
+    hints:
+      - x が 27 より大きいとき、中央値はいくつですか。
+      - 平均値がわかれば、7 人の記録の合計がわかります。
+      - 合計から、わかっている 6 人の記録の合計をひきましょう。x を使った方程式にしてもかまいません。
+    paths:
+      - [x がいちばん大きいので、中央値は小さい方から 4 番目の 20 回, 平均値は 20 + 3 = 23 回なので、合計は 23 × 7 = 161 回, 6 人の合計は 115 回なので、x = 161 − 115 = 46]
+      - [(115 + x) ÷ 7 = 23 という方程式を立てる, 115 + x = 161, x = 46]
+    note: 中央値と平均値（S-028）を、1 次方程式（A-011）で結ぶ。x が大きくなっても中央値は変わらず、平均値だけが変わることに気づくのが要点。中央値を 7 つの数のまん中の大きさ（(12 + x) ÷ 2 など）と取りちがえやすい。
+  - part: 離
+    kinds: [道筋]
+    text: 11 人の点数を箱ひげ図に表すと、最小値 30 点、第 1 四分位数 45 点、中央値 60 点、第 3 四分位数 70 点、最大値 90 点でした。点数はすべて整数です。11 人の点数の合計として考えられる、いちばん大きい値は何点ですか。
+    answer: 690
+    check: "(lambda s: sum(s) if (s[0], s[2], s[5], s[8], s[10]) == (30, 45, 60, 70, 90) and all(s[i] <= s[i + 1] for i in range(10)) else 0)((30, 45, 45, 60, 60, 60, 70, 70, 70, 90, 90))"
+    hints:
+      - 11 人を小さい順に並べると、中央値は何番目ですか。第 1 四分位数と第 3 四分位数は何番目ですか。
+      - 決まっていない人の点数は、どこまで大きくできますか。すぐ上の決まった値はこえられません。
+      - 1 人ずつ、できるだけ大きい点数を入れて合計しましょう。
+    paths:
+      - [小さい順に 1〜11 番目とすると、1 番目 30 点、3 番目 45 点、6 番目 60 点、9 番目 70 点、11 番目 90 点, 2 番目は 45 点まで、4・5 番目は 60 点まで、7・8 番目は 70 点まで、10 番目は 90 点まで大きくできる, 30 + 45 + 45 + 60 + 60 + 60 + 70 + 70 + 70 + 90 + 90 = 690 点]
+    note: 箱ひげ図の 5 つの値が何番目のデータかを決め（11 こなので中央値の 6 番目をのぞいて前半 5 こと後半 5 こ）、決まっていないデータの動ける範囲を考える。四分位数を何番目かで取りちがえやすい。合計がいちばん大きいのは、決まっていない値を、すぐ上の決まった値にそろえるとき。
+  - part: 離
+    kinds: [数]
+    text: ある組の人の、1 分間の上体起こしの回数を度数分布表にまとめました。表には相対度数だけが書いてあります。この表から求める平均値は何回ですか。それぞれの人の回数は、その階級の階級値とみなします。
+    svg: |
+      <svg viewBox="0 0 216 170" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="200" height="154" stroke="currentColor" fill="none" stroke-width="1.5"/>
+        <line x1="8" y1="30" x2="208" y2="30" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="52" x2="208" y2="52" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="74" x2="208" y2="74" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="96" x2="208" y2="96" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="118" x2="208" y2="118" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="140" x2="208" y2="140" stroke="currentColor" stroke-width="1"/>
+        <line x1="128" y1="8" x2="128" y2="162" stroke="currentColor" stroke-width="1"/>
+        <text x="68" y="23.7" font-size="13" text-anchor="middle">階級（回）</text>
+        <text x="168" y="23.7" font-size="13" text-anchor="middle">相対度数</text>
+        <text x="68" y="45.7" font-size="13" text-anchor="middle">10 以上 15 未満</text>
+        <text x="168" y="45.7" font-size="13" text-anchor="middle">0.08</text>
+        <text x="68" y="67.7" font-size="13" text-anchor="middle">15 以上 20 未満</text>
+        <text x="168" y="67.7" font-size="13" text-anchor="middle">0.20</text>
+        <text x="68" y="89.7" font-size="13" text-anchor="middle">20 以上 25 未満</text>
+        <text x="168" y="89.7" font-size="13" text-anchor="middle">0.36</text>
+        <text x="68" y="111.7" font-size="13" text-anchor="middle">25 以上 30 未満</text>
+        <text x="168" y="111.7" font-size="13" text-anchor="middle">0.24</text>
+        <text x="68" y="133.7" font-size="13" text-anchor="middle">30 以上 35 未満</text>
+        <text x="168" y="133.7" font-size="13" text-anchor="middle">0.12</text>
+        <text x="68" y="155.7" font-size="13" text-anchor="middle">合計</text>
+        <text x="168" y="155.7" font-size="13" text-anchor="middle">1.00</text>
+      </svg>
+    answer: 23.1
+    check: "(lambda x: x.numerator if x.denominator == 1 else x.numerator / x.denominator)(sum(Fraction(2 * a + 5, 2) * Fraction(r, 100) for a, r in ((10, 8), (15, 20), (20, 36), (25, 24), (30, 12))))"
+    hints:
+      - 階級値は、階級のまん中の値です。
+      - 人数がわからなくても、たとえば 100 人と考えれば、それぞれの階級の人数が出せます。
+      - 階級値 × 相対度数 を全部たしても、平均値が出せます。
+    paths:
+      - [階級値は 12.5、17.5、22.5、27.5、32.5 回, 階級値 × 相対度数は 1、3.5、8.1、6.6、3.9, 合計して 23.1 回]
+      - [100 人と考えると、人数は 8、20、36、24、12 人, 階級値 × 人数の合計は 100 + 350 + 810 + 660 + 390 = 2310 回, 2310 ÷ 100 = 23.1 回]
+    note: 相対度数だけでも、全体の人数を決めずに平均値が出せる（何人と考えても割合は同じ）。12.5 × 0.08 のような小数どうしのかけ算が 5 つ続くので、計算をまちがえやすい。人数がないと出せないと止まりやすい。

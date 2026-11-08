@@ -969,3 +969,49 @@ days:
           - PT × PT がその積になるよ。
         paths:
           - [18 cm と 32 cm, PT × PT = 576, PT = 24, 24 cm]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [数, 道筋]
+    text: 1 辺が 6.4 cm の正方形 ABCD があります。頂点 A と B を通り、辺 CD に接する円の半径は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="68.8,118.4 171.2,118.4 171.2,16 68.8,16" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.5" y="119.6" font-size="14" text-anchor="middle">A</text><text x="180.5" y="119.6" font-size="14" text-anchor="middle">B</text><text x="180.1" y="16.4" font-size="14" text-anchor="middle">C</text><text x="59.9" y="16.4" font-size="14" text-anchor="middle">D</text><text x="195.2" y="71.4" font-size="12" text-anchor="middle">6.4 cm</text></svg>'
+    answer: 4
+    check: "(64 + Fraction(32 * 32, 64)) / 2 / 10"
+    hints:
+      - 円と辺 CD の接点を M としよう。接線 CD と、接点を通る半径はどんな関係かな。
+      - M を通る直径は CD に垂直なので、AB のまん中の点 N を通るね。弦 AB とこの直径は N で交わるよ。
+      - 方べきの定理で NA × NB = NM × NK（K は直径のもう一方のはし）。NM は正方形の 1 辺だよ。
+    paths:
+      - [接点を M とすると、M を通る直径 MK は CD に垂直, 対称なので M は CD のまん中で、直径は AB のまん中の点 N を通る, 方べきの定理で NA × NB = NM × NK, 3.2 × 3.2 = 6.4 × NK で NK = 1.6, 直径 = 6.4 + 1.6 = 8 で、半径は 4 cm]
+      - [中心 O は MN の上にあり、OM = r なので ON = 6.4 − r, △OAN で (6.4 − r)² + 3.2² = r², 40.96 − 12.8r + 10.24 = 0 で r = 4 cm]
+    note: 接線と半径の垂直（G-054）から直径の位置を決め、方べきの定理で 1 回の計算にする。数は小数だが、6.4 = 2 × 3.2 に気づくと NK = 3.2 × 3.2 ÷ 6.4 = 1.6 がすぐ出る。2 本目は三平方の定理で方程式を立てる道。
+  - part: 離
+    kinds: [道筋]
+    text: 半径 13 cm の円 O の中に、OP = 12 cm となる点 P があります。P を通る弦のうち、長さが整数（cm）になるものは何本ありますか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="75" r="59" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="75" x2="174.5" y2="75" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="178.5" y1="67.4" x2="146.4" y2="127.8" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="75" r="2.6" fill="currentColor"/><circle cx="174.5" cy="75" r="2.6" fill="currentColor"/><text x="120" y="69.9" font-size="14" text-anchor="middle">O</text><text x="170.4" y="69.7" font-size="14" text-anchor="middle">P</text><text x="144.5" y="90.2" font-size="12" text-anchor="middle">12 cm</text></svg>'
+    answer: 32
+    check: "(lambda lo, hi: sum(1 if k in (lo, hi) else 2 for k in range(lo, hi + 1)))(2 * math.isqrt((13 - 12) * (13 + 12)), 2 * 13)"
+    hints:
+      - P を通る弦でいちばん長いのは直径だね。いちばん短いのはどれかな。
+      - いちばん短い弦は OP に垂直な弦で、P がそのまん中の点だよ。方べきの定理で長さを求めよう。
+      - P を通る直線を回すと、弦の長さはいちばん短いものからいちばん長いものまで変わり、また短くなるね。同じ長さの弦が何本ずつあるか考えよう。
+    paths:
+      - [いちばん長い弦は直径で 26, いちばん短い弦は OP に垂直で、P がまん中の点, 方べきの定理で PA × PB = (13 − 12) × (13 + 12) = 25、PA = PB = 5 で長さ 10, 11 から 25 までの長さは、OP について対称な 2 本ずつで 15 × 2 = 30 本, 10 と 26 は 1 本ずつ, 30 + 2 = 32 本]
+    note: 方べきの定理で、いちばん短い弦を出すところまではこの単元。そのあと、直線を回すと長さが切れ目なく変わること、同じ長さの弦が OP について対称に 2 本ずつあることを見ぬくのが道筋の要点。いちばん短い弦といちばん長い弦まで 2 本ずつ数えてしまいやすい。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-042]
+    text: △ABC で AB = 6 cm、BC = 5 cm、CA = 4 cm です。∠A の二等分線が辺 BC と交わる点を D、△ABC の外接円ともう一度交わる点を E とします。AD の長さは何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="162.3,32 67.1,116 172.9,116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="162.3" y1="32" x2="120" y2="144" stroke="currentColor" stroke-width="2" fill="none"/><path d="M155.3 50.7 A20 20 0 0 1 147.3 45.2" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="153.2" y1="45.2" x2="148.7" y2="51.7" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M164.8 51.8 A20 20 0 0 1 155.3 50.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="160.4" y1="47.9" x2="159.5" y2="55.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="162.3" y="26.9" font-size="14" text-anchor="middle">A</text><text x="57.1" y="119.9" font-size="14" text-anchor="middle">B</text><text x="182.5" y="118" font-size="14" text-anchor="middle">C</text><text x="138.9" y="126.4" font-size="14" text-anchor="middle">D</text><text x="120" y="159.9" font-size="14" text-anchor="middle">E</text></svg>'
+    choices: [3√2, 2√3, 2√5, 4]
+    answer: 3√2
+    check: "[c for c, v in {'3√2': 3 * math.sqrt(2), '2√3': 2 * math.sqrt(3), '2√5': 2 * math.sqrt(5), '4': 4}.items() if math.isclose(v * v, 6 * 4 - Fraction(5 * 6, 10) * Fraction(5 * 4, 10))][0]"
+    hints:
+      - まず、角の二等分線の定理で BD と DC を求めよう。
+      - △ABD と △AEC は相似だよ（∠BAD = ∠EAC、∠ABD と ∠AEC は同じ弧 AC に対する円周角）。AD × AE を求めよう。
+      - 方べきの定理で AD × DE = BD × DC。AE = AD + DE を使って、AD × AD を出そう。
+    paths:
+      - [角の二等分線の定理で BD:DC = 6:4 = 3:2、BD = 3、DC = 2, △ABD ∽ △AEC で AB:AE = AD:AC、AD × AE = 6 × 4 = 24, 方べきの定理で AD × DE = 3 × 2 = 6, AD × AE = AD × AD + AD × DE なので AD × AD = 24 − 6 = 18, AD = 3√2 cm]
+    note: 角の二等分線の定理（G-042）、相似、方べきの定理の 3 つを順につなぐ総動員の問題。AD × AE と AD × DE の 2 つの積を出し、その差から AD × AD を求める発想が要点で、2 次方程式を立てなくてすむ。AD × AD = AB × AC − BD × DC は、のちのスチュワートの定理の特別な場合。
+    time: 900

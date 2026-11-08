@@ -979,3 +979,66 @@ days:
           - 消えずに残るのは、どれとどれでしょう。
         paths:
           - [20² − 3², 400 − 9 = 391]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋, 数]
+    text: 1/3 + 1/15 + 1/35 + 1/63 + … + 1/399 の値はいくつですか。分母は 1 × 3、3 × 5、5 × 7、… のように、となり合う奇数の積です。
+    answer: 10/21
+    check: "sum(Fraction(1, (2 * k - 1) * (2 * k + 1)) for k in range(1, 11))"
+    hints:
+      - 1/3 と、1/1 − 1/3 をくらべてみよう。何倍になっているかな。
+      - 1/((2k − 1)(2k + 1)) を、2 つの分数の差を使って表そう。
+      - 差の形にして足すと、となり合う項が消し合うよ。399 は何と何の積かな。
+    paths:
+      - [1/((2k − 1)(2k + 1)) = (1/2) × (1/(2k − 1) − 1/(2k + 1)), 399 = 19 × 21 なので k = 1〜10, 和は (1/2) × (1 − 1/21) = (1/2) × 20/21 = 10/21]
+    note: 差の形にして消し合う和（3 日目の 1/(k(k + 1)) の和）を、分母の 2 つの数の差が 2 の場合に広げる。1/1 − 1/3 = 2/3 なので 1/2 倍が要ることに気づかないと 20/21 と答えてしまう。399 = 19 × 21 を見つけるのも一手間。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [C-005]
+    text: 図は、たて 6 マス、横 10 マスの方眼です。この中に、方眼の線でできる正方形は、大きさのちがうものもふくめて全部で何こありますか。
+    svg: |
+      <svg viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
+        <line x1="10" y1="10" x2="10" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="30" y1="10" x2="30" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="50" y1="10" x2="50" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="70" y1="10" x2="70" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="90" y1="10" x2="90" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="110" y1="10" x2="110" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="130" y1="10" x2="130" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="150" y1="10" x2="150" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="170" y1="10" x2="170" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="190" y1="10" x2="190" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="210" y1="10" x2="210" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="10" x2="210" y2="10" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="30" x2="210" y2="30" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="50" x2="210" y2="50" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="70" x2="210" y2="70" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="90" x2="210" y2="90" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="110" x2="210" y2="110" stroke="currentColor" fill="none" stroke-width="2"/>
+        <line x1="10" y1="130" x2="210" y2="130" stroke="currentColor" fill="none" stroke-width="2"/>
+      </svg>
+    answer: 175
+    check: "sum((7 - k) * (11 - k) for k in range(1, 7))"
+    hints:
+      - 1 辺が 1 マス、2 マス、… の正方形に分けて数えよう。いちばん大きい正方形は 1 辺何マスかな。
+      - 1 辺 k マスの正方形は、たてに何か所、横に何か所おけるかな。積の法則を使おう。
+      - 和を Σ の式に書き、Σ k² と Σ k を使って計算しよう。
+    paths:
+      - [1 辺 k マスの正方形は たて 7 − k か所、横 11 − k か所で (7 − k)(11 − k) こ, k = 1〜6 で 60 + 45 + 32 + 21 + 12 + 5, 175 こ]
+      - [j = 7 − k とおくと j(j + 4) の j = 1〜6 の和, Σ j² + 4Σ j = 91 + 4 × 21 = 175 こ]
+    note: 正方形の大きさで場合を分け（和の法則）、それぞれの置き場所をたてと横の積（積の法則、C-005）で数える。1 辺 1 マスの 60 こだけを数えたり、1 辺 7 マス以上も数えたりしやすい。Σ の式に直すと、6 つの積を足すかわりに公式で計算できる。
+  - part: 離
+    kinds: [数]
+    text: 1² + 3² + 5² + … + 39² の値はいくつですか。
+    answer: 10660
+    check: "sum((2 * k - 1) ** 2 for k in range(1, 21))"
+    hints:
+      - 39 は何番目の奇数かな。k 番目の奇数を k の式で表そう。
+      - (2k − 1)² を展開して、Σ を 3 つに分けよう。
+      - Σ k² と Σ k の公式に、n = 20 を入れよう。
+    paths:
+      - [39 は 20 番目の奇数, (2k − 1)² = 4k² − 4k + 1 なので 和は 4Σ k² − 4Σ k + 20, 4 × 2870 − 4 × 210 + 20 = 11480 − 840 + 20 = 10660]
+      - [1² から 40² までの和から 偶数の 2 乗の和をひく, 偶数の 2 乗の和は 4 × (1² + 2² + … + 20²) = 11480, 22140 − 11480 = 10660]
+    note: 数が大きく、公式に入れる n（20、40 ではない）と、展開した 3 つの和の計算で間ちがえやすい。2 本目は「全部 − 偶数」の言いかえ。Σ k²（k = 1〜40）= 22140 の計算も 5 けたになる。

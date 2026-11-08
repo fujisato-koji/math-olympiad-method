@@ -2393,3 +2393,107 @@ days:
         paths:
           - [算数 40%、国語 30%, 40 + 30 = 70, 70% の目もり]
           - [算数と国語で 21 人, 21 ÷ 30 = 0.7, 70% の目もり]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [S-028]
+    text: ある町で、4 月から 9 月まで、毎月 1 日に気温をはかって、折れ線グラフに表しました。縦の軸の波線（≈）は、0 度から 10 度までを省いたしるしです。4 月から 9 月の 6 回の気温の平均は、4 月から 6 月の 3 回の気温の平均より何度高いですか。
+    svg: |
+      <svg viewBox="0 0 240 194" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="142" x2="200" y2="142" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="130.4" x2="200" y2="130.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="118.8" x2="200" y2="118.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="107.2" x2="200" y2="107.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="95.6" x2="200" y2="95.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="84" x2="200" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="72.4" x2="200" y2="72.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="60.8" x2="200" y2="60.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="49.2" x2="200" y2="49.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="37.6" x2="200" y2="37.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="26" x2="200" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <text x="34" y="146" font-size="11" text-anchor="end">10</text>
+        <text x="34" y="88" font-size="11" text-anchor="end">20</text>
+        <text x="34" y="30" font-size="11" text-anchor="end">30</text>
+        <text x="53" y="176" font-size="11" text-anchor="middle">4</text>
+        <text x="79" y="176" font-size="11" text-anchor="middle">5</text>
+        <text x="105" y="176" font-size="11" text-anchor="middle">6</text>
+        <text x="131" y="176" font-size="11" text-anchor="middle">7</text>
+        <text x="157" y="176" font-size="11" text-anchor="middle">8</text>
+        <text x="183" y="176" font-size="11" text-anchor="middle">9</text>
+        <text x="34" y="164" font-size="11" text-anchor="end">0</text>
+        <line x1="40" y1="18" x2="40" y2="145" stroke="currentColor" stroke-width="2"/>
+        <path d="M34 147 q3 -4 6 0 t6 0 M34 152 q3 -4 6 0 t6 0" stroke="currentColor" fill="none" stroke-width="1.5"/>
+        <line x1="40" y1="154" x2="40" y2="160" stroke="currentColor" stroke-width="2"/>
+        <line x1="40" y1="160" x2="200" y2="160" stroke="currentColor" stroke-width="2"/>
+        <polyline points="53,130.4 79,107.2 105,84 131,49.2 157,26 183,72.4" stroke="currentColor" fill="none" stroke-width="2"/>
+        <circle cx="53" cy="130.4" r="3" fill="currentColor"/>
+        <circle cx="79" cy="107.2" r="3" fill="currentColor"/>
+        <circle cx="105" cy="84" r="3" fill="currentColor"/>
+        <circle cx="131" cy="49.2" r="3" fill="currentColor"/>
+        <circle cx="157" cy="26" r="3" fill="currentColor"/>
+        <circle cx="183" cy="72.4" r="3" fill="currentColor"/>
+        <text x="36" y="12" font-size="11" text-anchor="end">（度）</text>
+        <text x="214" y="176" font-size="11" text-anchor="end">（月）</text>
+      </svg>
+    answer: 5
+    check: "(lambda t: Fraction(sum(t), 6) - Fraction(sum(t[:3]), 3))([12, 16, 20, 26, 30, 22])"
+    hints:
+      - 1 目もりは何度かな。6 回の気温を読みとろう。
+      - 6 回の気温の合計と、はじめの 3 回の気温の合計を出そう。
+      - それぞれの平均を出して、差を求めよう。
+    paths:
+      - [1 目もりは 2 度で、気温は 12、16、20、26、30、22 度, 6 回の合計は 126 度で、平均は 126 ÷ 6 = 21 度, はじめの 3 回の合計は 48 度で、平均は 48 ÷ 3 = 16 度, 差は 21 − 16 = 5 度]
+    note: 折れ線グラフ（1 目もり 2 度、波線で省いた軸）を読み、平均（S-028）を 2 回出して比べる。1 目もりを 1 度と読んだり、波線のすぐ上を 0 度と読んだりしやすい。
+  - part: 離
+    kinds: [道筋]
+    text: 1 組は 30 人、2 組は 20 人です。犬をかっている人の割合は、1 組が 40%、2 組が 25% です。1 組と 2 組を合わせた 50 人では、犬をかっている人の割合は何 % ですか。
+    answer: 34
+    check: "(Fraction(30 * 40, 100) + Fraction(20 * 25, 100)) * 100 / 50"
+    hints:
+      - 40% と 25% をたして 2 でわってよいかな。2 つの組の人数はちがうね。
+      - それぞれの組で、犬をかっている人は何人かな。
+      - 合わせた 50 人をもとにする量にして、百分率を求めよう。
+    paths:
+      - [1 組でかっている人は 30 × 0.4 = 12 人, 2 組では 20 × 0.25 = 5 人, 合わせて 17 人, 17 ÷ 50 = 0.34 で 34%]
+    note: 全体の量がちがう割合は、そのままでは合わせられない（3 日目のわけ）ことを計算で使う。40% と 25% の平均の 32.5% と答えやすい。人数にもどしてから合わせるのが要点。
+  - part: 離
+    kinds: [数]
+    text: 図書室で 1 か月にかし出した本は 1240 さつでした。その内わけを帯グラフに表すと、物語 45%、図かん 22.5%、科学の本 17.5%、その他 15% でした。物語は、図かんと科学の本を合わせたよりも何さつ多いですか。
+    svg: |
+      <svg viewBox="0 0 240 70" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="16" width="220" height="30" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+        <text x="59.5" y="35" font-size="10" text-anchor="middle">物語</text>
+        <line x1="109" y1="16" x2="109" y2="46" stroke="currentColor" stroke-width="1.5"/>
+        <text x="133.8" y="35" font-size="10" text-anchor="middle">図かん</text>
+        <line x1="158.5" y1="16" x2="158.5" y2="46" stroke="currentColor" stroke-width="1.5"/>
+        <text x="177.8" y="35" font-size="10" text-anchor="middle">科学</text>
+        <line x1="197" y1="16" x2="197" y2="46" stroke="currentColor" stroke-width="1.5"/>
+        <text x="213.5" y="35" font-size="10" text-anchor="middle">その他</text>
+        <line x1="10" y1="46" x2="10" y2="53" stroke="currentColor" stroke-width="1"/>
+        <line x1="32" y1="46" x2="32" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="54" y1="46" x2="54" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="76" y1="46" x2="76" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="98" y1="46" x2="98" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="120" y1="46" x2="120" y2="53" stroke="currentColor" stroke-width="1"/>
+        <line x1="142" y1="46" x2="142" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="164" y1="46" x2="164" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="186" y1="46" x2="186" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="208" y1="46" x2="208" y2="50" stroke="currentColor" stroke-width="1"/>
+        <line x1="230" y1="46" x2="230" y2="53" stroke="currentColor" stroke-width="1"/>
+        <text x="10" y="64" font-size="11" text-anchor="middle">0</text>
+        <text x="120" y="64" font-size="11" text-anchor="middle">50</text>
+        <text x="230" y="64" font-size="11" text-anchor="middle">100</text>
+        <text x="234" y="12" font-size="11" text-anchor="end">（%）</text>
+      </svg>
+    answer: 62
+    check: "Fraction(1240 * (450 - 225 - 175), 1000)"
+    hints:
+      - それぞれの本のさっ数を出してもよいけれど、もっと短い道もあるよ。
+      - 図かんと科学の本を合わせると、全体の何 % かな。
+      - 物語との割合の差が、1240 さつの何 % 分かを考えよう。
+    paths:
+      - [図かんと科学の本を合わせて 22.5 + 17.5 = 40%, 物語との差は 45 − 40 = 5%, 1240 × 0.05 = 62 さつ]
+      - [物語は 1240 × 0.45 = 558 さつ, 図かんは 1240 × 0.225 = 279 さつ、科学の本は 1240 × 0.175 = 217 さつ, 279 + 217 = 496 さつ, 558 − 496 = 62 さつ]
+    note: 22.5% のような小数の百分率と 4 けたの全体で、割合から量を出す。1 つずつ量にすると計算が多く、1240 × 0.225 のような小数のかけ算でまちがえやすい。割合のまま差を出してから量にすると短くなる。

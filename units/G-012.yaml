@@ -863,3 +863,51 @@ days:
           - 三角形 ABC を 5 つ分とみよう。
         paths:
           - [ABC は 25, 25 ÷ 5 × 2 = 10, 10 cm²]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [手数]
+    text: 四角形 ABCD は、AD と BC が平行な台形で、AD:BC = 3:5 です。対角線 AC と BD が点 O で交わっています。台形の面積が 128 cm² のとき、三角形 AOB（色のついた部分）の面積は何 cm² ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="80,24 111.5,58.5 64,116" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="80,24 140,24 164,116 64,116" stroke="currentColor" stroke-width="2" fill="none"/><line x1="80" y1="24" x2="164" y2="116" stroke="currentColor" stroke-width="1.5"/><line x1="64" y1="116" x2="140" y2="24" stroke="currentColor" stroke-width="1.5"/><text x="74" y="19" font-size="12" text-anchor="middle">A</text><text x="146" y="19" font-size="12" text-anchor="middle">D</text><text x="56" y="128" font-size="12" text-anchor="middle">B</text><text x="172" y="128" font-size="12" text-anchor="middle">C</text><text x="123.5" y="62.5" font-size="12" text-anchor="middle">O</text></svg>
+    answer: 30
+    check: "128 * Fraction(3 * 5, 3 * 3 + 3 * 5 + 3 * 5 + 5 * 5)"
+    hints:
+      - AO:OC と DO:OB は、どちらも AD:BC と同じ 3:5 だよ。
+      - 三角形 AOD の面積を 9 とすると、三角形 AOB、COD、BOC はいくつになるかな。
+      - 4 つの三角形の合計が、128 cm² にあたるよ。
+    paths:
+      - [AOD を 9 とすると AOB は 9 ÷ 3 × 5 = 15・COD も 15, BOC は 15 ÷ 3 × 5 = 25, 合計 9 + 15 + 15 + 25 = 64 が 128 cm² なので 1 にあたるのは 2 cm², AOB は 15 × 2 = 30 cm²]
+    note: 台形の対角線が 3:5 に分けられること（5 日目）と、高さが同じ三角形の面積の比（3 日目）を 2 回使い、最後に比の 1 にあたる量を出す（A-005）。4 つの三角形を比の数で表して書き残すとよい。
+  - part: 離
+    kinds: [道筋]
+    text: 方眼の 1 目は 1 cm です。長方形の土地が、折れ線 A→B→C で左右 2 つに分けられています。左の土地（色のついた部分）の面積を変えずに、境界を A を通る 1 本の直線にします。その直線が下の辺と交わる点を P とすると、P は左はしから何 cm の所ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="42,14 94,14 133,66 107,118 42,118" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><line x1="55" y1="118" x2="55" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="68" y1="118" x2="68" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="81" y1="118" x2="81" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="94" y1="118" x2="94" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="107" y1="118" x2="107" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="118" x2="120" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="133" y1="118" x2="133" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="146" y1="118" x2="146" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="159" y1="118" x2="159" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="172" y1="118" x2="172" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="185" y1="118" x2="185" y2="14" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="105" x2="198" y2="105" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="92" x2="198" y2="92" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="79" x2="198" y2="79" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="66" x2="198" y2="66" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="53" x2="198" y2="53" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="40" x2="198" y2="40" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="42" y1="27" x2="198" y2="27" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><polygon points="42,118 198,118 198,14 42,14" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="94,14 133,66 107,118" stroke="currentColor" stroke-width="2.5" fill="none"/><text x="94" y="11" font-size="12" text-anchor="middle">A</text><text x="141" y="70" font-size="12" text-anchor="middle">B</text><text x="107" y="131" font-size="12" text-anchor="middle">C</text></svg>
+    answer: 7.5
+    accept: [15/2]
+    check: "7 + (5 - 4) * 4 / 8"
+    hints:
+      - 三角形 ABC を考えよう。B を、AC に平行な直線の上で動かしても、三角形 ABC の面積は変わらないね。
+      - B を通り AC に平行な直線が、下の辺と交わる所をさがそう。
+      - 左の土地の面積を方眼で求めて、台形の面積から考えてもよいよ。
+    paths:
+      - [B を通り AC に平行な直線をひく, AC は右へ 1 進むと下へ 8 下がるので B から下へ 4 下がると右へ 0.5 進む, P は 7 + 0.5 = 7.5 cm の所, 7.5]
+      - [左の土地の面積は 46 cm², A と P を結ぶと左の土地は 上の辺 4 cm・高さ 8 cm の台形, (4 + □) × 8 ÷ 2 = 46 から □ = 7.5, 7.5]
+    note: 折れ線の境界をまっすぐにする（2 日目）を、点の位置を求める形にした。等積変形で B を AC に平行に動かすと、計算は少しですむ。左の土地の面積を数えて台形から求めてもよい（2 本目。46 cm² は、たて 8 cm・横 4 cm の長方形と、残りの三角形に分けて出す）。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-010]
+    text: 円 O の半径は 6 cm で、AB は直径です。円周の上の 2 点 C、D を結んだ直線 CD は AB と平行で、角 COD は 120° です。三角形 ACD と、直線 CD と弧 CD でかこまれた部分を合わせた図形（色のついた部分）の面積は、（□ × 円周率）cm² です。□ に入る数を答えましょう。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><path d="M64 76 L168.5 48 A56 56 0 0 0 71.5 48 Z" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="76" r="56" stroke="currentColor" stroke-width="2" fill="none"/><line x1="64" y1="76" x2="176" y2="76" stroke="currentColor" stroke-width="1.5"/><line x1="168.5" y1="48" x2="71.5" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="64" y1="76" x2="168.5" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="64" y1="76" x2="71.5" y2="48" stroke="currentColor" stroke-width="1.5"/><line x1="120" y1="76" x2="168.5" y2="48" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><line x1="120" y1="76" x2="71.5" y2="48" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><circle cx="120" cy="76" r="2.5" fill="currentColor"/><text x="56" y="80" font-size="12" text-anchor="middle">A</text><text x="184" y="80" font-size="12" text-anchor="middle">B</text><text x="175.5" y="44" font-size="12" text-anchor="middle">C</text><text x="64.5" y="44" font-size="12" text-anchor="middle">D</text><text x="120" y="90" font-size="12" text-anchor="middle">O</text><text x="120" y="62" font-size="9" text-anchor="middle">120°</text></svg>
+    answer: 12
+    check: "6 * 6 * Fraction(120, 360)"
+    hints:
+      - AB と CD は平行だね。三角形 ACD と面積が同じになる三角形はないかな。
+      - 頂点 A を、AB の上を O まで動かしてみよう。
+      - 三角形 OCD と、直線 CD と弧 CD でかこまれた部分を合わせると、どんな形になるかな。
+    paths:
+      - [CD と AB が平行なので 三角形 ACD と三角形 OCD は面積が同じ, 色の部分は おうぎ形 OCD と同じ面積, おうぎ形は 6 × 6 × 円周率 × 120/360 = 12 × 円周率, 12]
+    note: 等積変形（底辺 CD が同じで、頂点 A と O が CD に平行な直線 AB の上）で、三角形をおうぎ形の一部に置きかえる。三角形 ACD の面積を直接求めようとすると、高さが分からず行きづまる（三平方の定理は G-019）。

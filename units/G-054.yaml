@@ -593,3 +593,49 @@ days:
           - 円周角を、その倍にしよう。
         paths:
           - [弧 AB に対する円周角 = 35°, ∠AOB = 35 × 2 = 70, 70°]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 大きい円の内側に小さい円があり、2 つの円は点 T で接しています（T での接線は 2 つの円に共通）。大きい円の弦 AB が、小さい円に点 P で接しています。∠TAB = 28°、∠TBA = 46° のとき、∠x（∠TPA）は何度ですか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="69" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="39.9" r="23.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="120,16 51,87.4 177.2,46.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="16" x2="127.4" y2="62.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M66.3 71.6 A22 22 0 0 1 72 80.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.6" y="72.5" font-size="12" text-anchor="middle">28°</text><path d="M162 51.4 A16 16 0 0 1 163.1 38.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147.3" y="48" font-size="12" text-anchor="middle">46°</text><path d="M116 66.3 A12 12 0 0 1 125.5 50.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.6" y="55.3" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="120" y="10.9" font-size="14" text-anchor="middle">T</text><text x="41" y="92.3" font-size="14" text-anchor="middle">A</text><text x="187" y="49.4" font-size="14" text-anchor="middle">B</text><text x="130.5" y="78" font-size="14" text-anchor="middle">P</text></svg>'
+    answer: 99
+    check: "180 - 28 - (180 - 28 - 46) // 2"
+    hints:
+      - T での共通な接線が直線 AB と交わる点を Q としよう。Q から小さい円にひいた 2 本の接線 QT と QP の長さはどうなるかな。
+      - QT = QP なので ∠QTP = ∠QPT。大きい円で、接線 QT と弦 TB のつくる角 ∠QTB と等しい角はどれかな。
+      - ∠QPT は △TAP の外角だね。∠QTP = ∠QTB + ∠BTP とくらべて、∠ATP と ∠BTP の関係を出そう。
+    paths:
+      - [T での接線と直線 AB の交点を Q とする（Q は B の先）, 小さい円の接線の長さで QT = QP、∠QTP = ∠QPT, 大きい円の接弦定理で ∠QTB = ∠TAB = 28°, ∠QPT = 28° + ∠ATP（△TAP の外角）、∠QTP = 28° + ∠BTP, ∠ATP = ∠BTP = (180 − 28 − 46) ÷ 2 = 53°, ∠x = 180 − 28 − 53 = 99°]
+    note: 接線の長さが等しいこと（小さい円）と接弦定理（大きい円）を、共通な接線の上の点 Q でつなぐ道筋の問題。補助の点 Q を自分で置くのが難しい。わかることは「TP が ∠ATB を 2 等分する」で、2 つの円が接する図でよく使われる性質。
+    time: 900
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-019]
+    text: 半径 9 cm と半径 3 cm の 2 つの円板が、中心の間を 12 cm はなして置いてあります。2 つの円板のまわりに、たるまないようにベルトを 1 周かけます（ベルトは、2 本の共通な接線の部分と、2 つの弧の部分からなります）。ベルトの長さはどれですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><circle cx="101.7" cy="75" r="55" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="175" cy="75" r="18.3" stroke="currentColor" stroke-width="1.5" fill="none"/><path d="M129.2 27.4 A55 55 0 1 0 129.2 122.6" stroke="currentColor" stroke-width="3" fill="none"/><path d="M184.2 90.9 A18.3 18.3 0 0 0 184.2 59.1" stroke="currentColor" stroke-width="3" fill="none"/><line x1="129.2" y1="27.4" x2="184.2" y2="59.1" stroke="currentColor" stroke-width="3" fill="none"/><line x1="129.2" y1="122.6" x2="184.2" y2="90.9" stroke="currentColor" stroke-width="3" fill="none"/><circle cx="101.7" cy="75" r="2.6" fill="currentColor"/><circle cx="175" cy="75" r="2.6" fill="currentColor"/><line x1="101.7" y1="75" x2="175" y2="75" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="5 4"/><text x="78.9" y="97.1" font-size="12" text-anchor="middle">9 cm</text><line x1="101.7" y1="75" x2="50" y2="93.8" stroke="currentColor" stroke-width="1" fill="none"/><line x1="175" y1="75" x2="192.2" y2="81.3" stroke="currentColor" stroke-width="1" fill="none"/><text x="207.1" y="91.4" font-size="12" text-anchor="middle">3 cm</text><text x="132.5" y="89.2" font-size="12" text-anchor="middle">12 cm</text></svg>'
+    choices: [（12√3 + 14 × 円周率）cm, （12√3 + 12 × 円周率）cm, （6√3 + 14 × 円周率）cm, （24 + 14 × 円周率）cm]
+    answer: （12√3 + 14 × 円周率）cm
+    check: "(lambda d, R, r: {(12, 14): '（12√3 + 14 × 円周率）cm', (12, 12): '（12√3 + 12 × 円周率）cm', (6, 14): '（6√3 + 14 × 円周率）cm'}[(2 * math.isqrt((d * d - (R - r) ** 2) // 3), 2 * R * (360 - 2 * 60) // 360 + 2 * r * (2 * 60) // 360)] if 2 * (R - r) == d else None)(12, 9, 3)"
+    hints:
+      - 2 つの中心を O、O′、大きい円とベルトの接点を A、小さい円との接点を B としよう。OA と O′B は、どちらも AB に垂直だね。
+      - O′ から OA に垂線 O′H をひくと、△OO′H は直角三角形。OH = 9 − 3 = 6、OO′ = 12 だよ。
+      - △OO′H は 30°・60°・90° の三角形。∠AOO′ がわかると、ベルトが 2 つの円に巻きつく弧の中心角がわかるね。
+    paths:
+      - [OA ⊥ AB、O′B ⊥ AB, O′ から OA に垂線 O′H をひくと OH = 6、OO′ = 12, △OO′H は 30°・60°・90° の三角形で ∠HOO′ = 60°、O′H = 6√3, 接線の部分は AB = O′H = 6√3 が 2 本で 12√3, 大きい円の弧は中心角 360 − 120 = 240° で 2 × 9 × 円周率 × 240/360 = 12 × 円周率, 小さい円の弧は中心角 120° で 2 × 3 × 円周率 × 120/360 = 2 × 円周率, （12√3 + 14 × 円周率）cm]
+    note: 接線と半径の垂直（この単元）、三平方の定理と特別な直角三角形（G-019）、弧の長さ（G-010）を合わせる総動員の問題。4 日目の挑戦（1 つの円）を、大きさのちがう 2 つの円にした形。ベルトが大きい円の半分より多く（240°）巻きつくことに気づくのが難しい。ベルトと滑車、円い障害物をよけて進むロボットの最短の道と同じ計算。
+    time: 900
+  - part: 離
+    kinds: [数]
+    text: 六角形 ABCDEF の 6 つの辺に、円が接しています。AB = 4.75 cm、BC = 4.5 cm、CD = 5 cm、DE = 4.35 cm、EF = 3.1 cm のとき、FA は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="119" cy="83.7" r="56.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="78.1,135.4 150.5,144 183,82.9 145.2,16 81.7,36.9 57,77.7" stroke="currentColor" stroke-width="2" fill="none"/><text x="71.8" y="148.2" font-size="14" text-anchor="middle">A</text><text x="155.2" y="157.8" font-size="14" text-anchor="middle">B</text><text x="193" y="87.7" font-size="14" text-anchor="middle">C</text><text x="148.8" y="11.6" font-size="14" text-anchor="middle">D</text><text x="75.5" y="34" font-size="14" text-anchor="middle">E</text><text x="47.1" y="81.6" font-size="14" text-anchor="middle">F</text></svg>'
+    answer: 4
+    check: "(475 + 500 + 310 - 450 - 435) // 100"
+    hints:
+      - 円の外の点からひいた 2 本の接線の長さは等しいね。各頂点から接点までの長さを考えよう。
+      - 頂点 A から接点までの長さを a、B からを b、… とすると、AB = a + b、BC = b + c、… だよ。
+      - 1 つおきの辺の和 AB + CD + EF と、BC + DE + FA をくらべてみよう。
+    paths:
+      - [各頂点から接点までの長さを a、b、c、d、e、f とする, AB + CD + EF = a + b + c + d + e + f, BC + DE + FA = b + c + d + e + f + a, だから AB + CD + EF = BC + DE + FA, 4.75 + 5 + 3.1 = 12.85、4.5 + 4.35 = 8.85, FA = 12.85 − 8.85 = 4 cm]
+    note: 4 日目の「4 つの辺に接する円では、向かい合う辺の和が等しい」を六角形に広げ、1 つおきの辺の和が等しいことを自分で見つける。小数のたし算とひき算が続くので、たす組とひく組を分けて書くとまちがえにくい。答えが整数 4 になるのは、計算が合っているかの目印になる。

@@ -640,3 +640,47 @@ days:
           - 2 つの積を足そう。
         paths:
           - [AC × AC = 16 + 16 = 32]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 正方形 ABCD の外接円の、弧 AB（C、D をふくまないほう）の上に点 P があります。PA = 7 cm、PC = 17 cm のとき、PB の長さは何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="74.7,34.7 165.3,34.7 165.3,125.3 74.7,125.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="119.7" y1="16" x2="74.7" y2="34.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="119.7" y1="16" x2="165.3" y2="34.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="119.7" y1="16" x2="165.3" y2="125.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="66.2" y="34.5" font-size="14" text-anchor="middle">A</text><text x="173.8" y="34.5" font-size="14" text-anchor="middle">B</text><text x="173.8" y="135.3" font-size="14" text-anchor="middle">C</text><text x="66.2" y="135.3" font-size="14" text-anchor="middle">D</text><text x="119.7" y="10.9" font-size="14" text-anchor="middle">P</text></svg>'
+    choices: [5√2, 5√3, 6√2, 10]
+    answer: 5√2
+    check: "[c for c, v in {'5√2': 5 * math.sqrt(2), '5√3': 5 * math.sqrt(3), '6√2': 6 * math.sqrt(2), '10': 10}.items() if math.isclose(v * math.sqrt(2), 17 - 7)][0]"
+    hints:
+      - 正方形の 1 辺を a とすると、対角線は a の何倍かな。正方形 ABCD にもトレミーの定理が使えるよ。
+      - 4 点 A、P、B、C は円の上にあるね。四角形 APBC にトレミーの定理を使おう。
+      - 四角形 APBC の対角線は AB と PC。向かい合う辺の組は AP と BC、PB と CA だよ。
+    paths:
+      - [正方形の 1 辺を a とすると、正方形 ABCD のトレミーの定理で AC × AC = a × a + a × a、AC = a × √2, 四角形 APBC でトレミーの定理 AB × PC = AP × BC + PB × CA, a × 17 = 7 × a + PB × a√2, 両辺を a でわって PB × √2 = 10, PB = 10/√2 = 5√2 cm]
+    note: どの 4 点の四角形にトレミーの定理を使うかを選ぶのが道筋の要点（APBC を選ぶと、正方形の 1 辺 a がすべての項にかかって消える）。正方形の大きさがわからないまま答えが出る。対角線と辺の組を取りちがえやすい。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [G-019]
+    text: 円に内接する四角形 ABCD で、対角線 AC は円の直径で、AC = 65 cm です。AB = 16 cm、AD = 25 cm のとき、対角線 BD は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="56,80 63.8,49.5 184,80 74.9,125.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="56" y1="80" x2="184" y2="80" stroke="currentColor" stroke-width="2" fill="none"/><line x1="63.8" y1="49.5" x2="74.9" y2="125.4" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="80" r="2.6" fill="currentColor"/><text x="123.2" y="95.4" font-size="14" text-anchor="middle">O</text><text x="46" y="84.9" font-size="14" text-anchor="middle">A</text><text x="60.9" y="44.8" font-size="14" text-anchor="middle">B</text><text x="194" y="84.9" font-size="14" text-anchor="middle">C</text><text x="72.1" y="139.9" font-size="14" text-anchor="middle">D</text></svg>'
+    answer: 39
+    check: "Fraction(16 * math.isqrt(65 ** 2 - 25 ** 2) + 25 * math.isqrt(65 ** 2 - 16 ** 2), 65)"
+    hints:
+      - AC は直径なので、∠ABC と ∠ADC は何度かな。
+      - 三平方の定理で BC と CD を求めよう。65 × 65 = 4225 だよ。
+      - 4 つの辺と AC がそろったら、トレミーの定理で BD を求めよう。
+    paths:
+      - [AC は直径なので ∠ABC = ∠ADC = 90°, BC = √(4225 − 256) = √3969 = 63, CD = √(4225 − 625) = √3600 = 60, トレミーの定理で AC × BD = AB × CD + AD × BC, 65 × BD = 16 × 60 + 25 × 63 = 2535, BD = 39 cm]
+    note: 直径に対する円周角（G-018）と三平方の定理（G-019）で残りの 2 辺を出してから、トレミーの定理を使う。√3969 のような大きな数の平方根を、一の位が 9 になる数（63 か 67）から見当をつけるところが数の難しさ。
+  - part: 離
+    kinds: [手数]
+    text: 円に内接する等脚台形 ABCD で、AD ∥ BC、AD = 5 cm、BC = 16 cm、AB = CD = 8 cm です。対角線 AC と BD の交点を P とします。AP は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="100.6,19 58,64 182,64 139.4,19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="100.6" y1="19" x2="182" y2="64" stroke="currentColor" stroke-width="2" fill="none"/><line x1="58" y1="64" x2="139.4" y2="19" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76.8" y1="39.1" x2="81.9" y2="43.9" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="158.1" y1="43.9" x2="163.2" y2="39.1" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="117,23 123,19 117,15" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="117,68 123,64 117,60" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="95.5" y="15.3" font-size="14" text-anchor="middle">A</text><text x="48.5" y="71.8" font-size="14" text-anchor="middle">B</text><text x="191.5" y="71.8" font-size="14" text-anchor="middle">C</text><text x="144.5" y="15.3" font-size="14" text-anchor="middle">D</text><text x="120" y="46.6" font-size="14" text-anchor="middle">P</text></svg>'
+    answer: 20/7
+    check: "Fraction(math.isqrt(8 * 8 + 5 * 16) * 5, 5 + 16)"
+    hints:
+      - 等脚台形の 2 本の対角線の長さは等しいね。トレミーの定理で対角線の長さを求めよう。
+      - AC × BD = AC × AC = AB × CD + AD × BC だよ。
+      - AD ∥ BC なので、△PAD と △PCB は相似だね。AP:PC はいくつかな。
+    paths:
+      - [等脚台形なので AC = BD, トレミーの定理で AC × AC = 8 × 8 + 5 × 16 = 144, AC = 12, AD ∥ BC で △PAD ∽ △PCB、AP:PC = 5:16, AP = 12 × 5/21 = 20/7 cm]
+    note: トレミーの定理で対角線を出し（2 本が等しいので AC × AC になる）、相似（G-020）で比に分ける 2 段の手数の問題。AP:PC = AD:BC の対応と、12 を 5 + 16 = 21 に分けるところでつまずきやすい。

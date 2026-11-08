@@ -1353,3 +1353,99 @@ days:
           - 17 は、4 と いくつかな。
         paths:
           - [□ は 1くみの かって いない, 1くみは あわせて 17 にん, 17 − 4 = 13]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [読み取り]
+    text: 🐶 ぐみ、🐱 ぐみ、🐰 ぐみ、🐻 ぐみが あつめた どんぐりの かずを ぼうグラフに しましたが、くみの なまえが きえて、ア、イ、ウ、エ に なって しまいました。わかって いるのは つぎの 3 つです。🐱 ぐみは 🐰 ぐみより 4 こ おおい。🐶 ぐみと 🐻 ぐみの ちがいは 14 こ。🐶 ぐみは 🐻 ぐみより すくない。🐶 ぐみと 🐰 ぐみを あわせると なんこ ですか。
+    svg: |
+      <svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg">
+        <line x1="40" y1="130.4" x2="204" y2="130.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="118.8" x2="204" y2="118.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="107.2" x2="204" y2="107.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="95.6" x2="204" y2="95.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="84" x2="204" y2="84" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="72.4" x2="204" y2="72.4" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="60.8" x2="204" y2="60.8" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="49.2" x2="204" y2="49.2" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="37.6" x2="204" y2="37.6" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <line x1="40" y1="26" x2="204" y2="26" stroke="currentColor" stroke-width="0.8" stroke-opacity=".35"/>
+        <text x="34" y="146" font-size="12" text-anchor="end">0</text>
+        <text x="34" y="88" font-size="12" text-anchor="end">10</text>
+        <text x="34" y="30" font-size="12" text-anchor="end">20</text>
+        <rect x="50" y="72.4" width="24" height="69.6" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+        <text x="62" y="159" font-size="12" text-anchor="middle">ア</text>
+        <rect x="90" y="26" width="24" height="116" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+        <text x="102" y="159" font-size="12" text-anchor="middle">イ</text>
+        <rect x="130" y="107.2" width="24" height="34.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+        <text x="142" y="159" font-size="12" text-anchor="middle">ウ</text>
+        <rect x="170" y="49.2" width="24" height="92.8" stroke="currentColor" fill="#f3c969" fill-opacity=".35" stroke-width="1.5"/>
+        <text x="182" y="159" font-size="12" text-anchor="middle">エ</text>
+        <line x1="40" y1="18" x2="40" y2="142" stroke="currentColor" stroke-width="2"/>
+        <line x1="40" y1="142" x2="204" y2="142" stroke="currentColor" stroke-width="2"/>
+        <text x="36" y="14" font-size="12" text-anchor="end">（こ）</text>
+      </svg>
+    answer: 18
+    check: "(lambda s: min(s) if len(s) == 1 else 'きまらない')({p[0] + p[2] for p in itertools.permutations((12, 20, 6, 16)) if p[1] - p[2] == 4 and abs(p[0] - p[3]) == 14 and p[0] < p[3]})"
+    hints:
+      - 1 めもりは いくつかな。ア、イ、ウ、エ の かずを よもう。
+      - ちがいが 14 こに なる 2 つの ぼうを さがそう。
+      - のこりの 2 つの ぼうで、4 こ おおい ほうが 🐱 ぐみだね。
+    paths:
+      - [1 めもりは 2 こで、ア 12、イ 20、ウ 6、エ 16, ちがいが 14 こ なのは イと ウだけなので、🐶 ぐみと 🐻 ぐみは イか ウ, 🐶 ぐみの ほうが すくないので 🐶 ぐみは ウの 6 こ, のこりの アと エは 4 こ ちがいで、すくない アが 🐰 ぐみの 12 こ, 6 と 12 で 18 こ]
+    note: 1 めもりが 2 の棒グラフを読み、3 つの手がかりを組み合わせて名前を決める。「4 こ多い」に合う組はアとエ、エとイの 2 つあり、それだけでは決まらない。14 こちがいの組（イとウ）から決めるのが近道。
+  - part: 離
+    kinds: [道筋]
+    text: あかぐみと しろぐみの ひとに、すきな くだものを 1 つずつ きいて、ひょうに しました。かずが かいて いない ますは、まだ わからない ところです。□ に はいる かずは いくつ ですか。
+    svg: |
+      <svg viewBox="0 0 264 120" xmlns="http://www.w3.org/2000/svg">
+        <rect x="8" y="8" width="248" height="104" stroke="currentColor" fill="none" stroke-width="1.5"/>
+        <line x1="8" y1="34" x2="256" y2="34" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="60" x2="256" y2="60" stroke="currentColor" stroke-width="1"/>
+        <line x1="8" y1="86" x2="256" y2="86" stroke="currentColor" stroke-width="1"/>
+        <line x1="66" y1="8" x2="66" y2="112" stroke="currentColor" stroke-width="1"/>
+        <line x1="110" y1="8" x2="110" y2="112" stroke="currentColor" stroke-width="1"/>
+        <line x1="154" y1="8" x2="154" y2="112" stroke="currentColor" stroke-width="1"/>
+        <line x1="198" y1="8" x2="198" y2="112" stroke="currentColor" stroke-width="1"/>
+        <text x="88" y="25.3" font-size="12" text-anchor="middle">りんご</text>
+        <text x="132" y="25.3" font-size="12" text-anchor="middle">バナナ</text>
+        <text x="176" y="25.3" font-size="12" text-anchor="middle">ぶどう</text>
+        <text x="227" y="25.3" font-size="12" text-anchor="middle">ごうけい</text>
+        <text x="37" y="51.3" font-size="12" text-anchor="middle">あかぐみ</text>
+        <text x="88" y="51.3" font-size="12" text-anchor="middle">□</text>
+        <text x="132" y="51.3" font-size="12" text-anchor="middle">3</text>
+        <text x="227" y="51.3" font-size="12" text-anchor="middle">10</text>
+        <text x="37" y="77.3" font-size="12" text-anchor="middle">しろぐみ</text>
+        <text x="88" y="77.3" font-size="12" text-anchor="middle">1</text>
+        <text x="227" y="77.3" font-size="12" text-anchor="middle">9</text>
+        <text x="37" y="103.3" font-size="12" text-anchor="middle">ごうけい</text>
+        <text x="132" y="103.3" font-size="12" text-anchor="middle">7</text>
+        <text x="176" y="103.3" font-size="12" text-anchor="middle">6</text>
+        <text x="227" y="103.3" font-size="12" text-anchor="middle">19</text>
+      </svg>
+    answer: 5
+    check: "19 - 7 - 6 - 1"
+    hints:
+      - かずが わかる ますから じゅんに うめよう。どの ますから うめられるかな。
+      - りんごの ごうけいが わかれば、□ が わかるね。
+      - いちばん したの ならびを みよう。ぜんぶの ごうけいの 19 から、バナナと ぶどうの ごうけいを ひいてみよう。
+    paths:
+      - [りんごの ごうけいは 19 − 7 − 6 = 6, □ は 6 − 1 = 5]
+      - [しろぐみの バナナは 7 − 3 = 4, しろぐみの ぶどうは 9 − 1 − 4 = 4, あかぐみの ぶどうは 6 − 4 = 2, □ は 10 − 3 − 2 = 5]
+    note: 2 つのことをまとめた表の空いたますを、合計の行と列から順に埋める。しろぐみから埋める遠回りでも解けるが、いちばん下の合計の行からりんごの合計を出すと 2 回の計算ですむ。どのますなら埋められるかを探すのが要点。
+  - part: 離
+    kinds: [総動員, 数]
+    uses: [N-007]
+    text: 🐶、🐱、🐰 が もらった あめの かずを えに しました。📦 は あめが 10 こ はいった はこ、🍬 は ばらの あめ です。3 びきの あめは、あわせて なんこ ですか。
+    figure: "🐶📦📦📦🍬🍬🍬🍬\n🐱🍬🍬📦🍬🍬🍬📦🍬🍬\n🐰📦🍬🍬🍬🍬🍬🍬🍬🍬"
+    answer: 79
+    check: "n('📦') * 10 + n('🍬')"
+    hints:
+      - 1 ぴきずつ、📦 と 🍬 を わけて かぞえよう。🐱 は ならびが ばらばらだよ。
+      - 3 びきの 📦 を ぜんぶ あわせると いくつかな。🍬 も ぜんぶ あわせよう。
+      - 10 の まとまりと ばらを あわせて、かずに しよう。
+    paths:
+      - [📦 は 3 と 2 と 1 で 6 はこ、あめは 60 こ, 🍬 は 4 + 7 + 8 = 19 こ, 60 と 19 で 79 こ]
+      - [🐶 は 34 こ、🐱 は 27 こ、🐰 は 18 こ, 34 + 27 = 61, 61 + 18 = 79 こ]
+    note: 10 のまとまり（N-006）で読み、2 けたのたし算（N-007）で合わせる。🐱 の行は 📦 と 🍬 が混ざっているので、種類ごとに分けて数えさせる。📦 を 1 こと数えたり、ばらの 19 こを 10 と 9 に分け直し忘れたりしやすい。

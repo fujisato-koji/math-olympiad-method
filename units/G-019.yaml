@@ -693,3 +693,49 @@ days:
           - 2 乗してその数になる正の数を求めましょう。
         paths:
           - [144 + 256 = 400, 対角線 = 20 cm]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [A-011]
+    text: 3 つの辺が AB = 17 cm、BC = 28 cm、CA = 25 cm の三角形 ABC があります。この三角形の面積は何 cm² ですか。
+    svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="76.8,16 19.2,124 220.8,124" stroke="currentColor" stroke-width="2" fill="none"/><text x="26.8" y="62.9" font-size="12" text-anchor="middle">17 cm</text><text x="158.4" y="61.4" font-size="12" text-anchor="middle">25 cm</text><text x="120" y="138.2" font-size="12" text-anchor="middle">28 cm</text><text x="76.8" y="10.9" font-size="14" text-anchor="middle">A</text><text x="9.6" y="131.8" font-size="14" text-anchor="middle">B</text><text x="230.4" y="131.8" font-size="14" text-anchor="middle">C</text></svg>'
+    answer: 210
+    check: "[28 * h // 2 for x in range(1, 28) for h in range(1, 30) if x * x + h * h == 17 * 17 and (28 - x) ** 2 + h * h == 25 * 25][0]"
+    hints:
+      - A から辺 BC に垂線 AH をひこう。直角三角形が 2 つできるね。
+      - BH を x cm とすると、AH × AH を 2 通りの式で表せるよ。
+      - 17² − x² = 25² − (28 − x)² を解こう。x² は両方から消えるよ。
+    paths:
+      - [A から BC に垂線 AH をひき、BH = x とする, △ABH で AH² = 17² − x², △ACH で AH² = 25² − (28 − x)², 289 − x² = 625 − 784 + 56x − x² で 56x = 448、x = 8, AH² = 289 − 64 = 225 で AH = 15, 面積 = 28 × 15 ÷ 2 = 210, 210 cm²]
+    note: 3 辺だけから高さを出すには、三平方の定理を 2 回使い、1 次方程式（A-011）で垂線の足の位置を決める。2 乗の項が両辺で消えると気づけば 1 次方程式になる。単元の中では方程式を立てる問題を扱わなかったので、ここが離。8・15・17 と 15・20・25 の 2 つの直角三角形をつないだ形。
+  - part: 離
+    kinds: [道筋]
+    text: 長方形 ABCD の紙で、AB = 9 cm、BC = 12 cm です。頂点 C が頂点 A に重なるように折ると、折り目 EF ができました（E は辺 AD の上、F は辺 BC の上）。折り目 EF の長さは何 cm ですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="41.3,16 41.3,134 198.7,134 198.7,16" stroke="currentColor" stroke-width="2" fill="none"/><line x1="164.2" y1="16" x2="75.8" y2="134" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="8 3 2 3"/><text x="23.3" y="79.2" font-size="12" text-anchor="middle">9 cm</text><text x="120" y="148.2" font-size="12" text-anchor="middle">12 cm</text><text x="32.4" y="16.4" font-size="14" text-anchor="middle">A</text><text x="32.4" y="143.4" font-size="14" text-anchor="middle">B</text><text x="207.6" y="143.4" font-size="14" text-anchor="middle">C</text><text x="207.6" y="16.4" font-size="14" text-anchor="middle">D</text><text x="164.2" y="10.9" font-size="14" text-anchor="middle">E</text><text x="75.8" y="149.9" font-size="14" text-anchor="middle">F</text></svg>'
+    answer: 45/4
+    accept: [11.25]
+    check: "Fraction(15, 2) * Fraction(9, 12) * 2"
+    hints:
+      - C が A に重なるので、折り目 EF は線分 AC とどんな関係にあるかな。
+      - AC の長さを三平方の定理で求めよう。EF は AC のまん中の点 M を通るよ。
+      - △MFC と △BAC は相似だね（どちらにも直角があり、∠C が共通）。
+    paths:
+      - [AC = 15（9・12・15 の直角三角形）, 折り目 EF は AC の垂直二等分線で、AC のまん中の点 M を通る, △MFC ∽ △BAC で MF:MC = AB:BC = 9:12, MF = 7.5 × 9 ÷ 12 = 45/8, ME = MF なので EF = 45/4 cm]
+      - [AF = FC = x とすると BF = 12 − x, △ABF で 9² + (12 − x)² = x² から x = 75/8, AFCE はひし形で、面積は FC × AB = 75/8 × 9 = 675/8, ひし形の面積 = AC × EF ÷ 2 から EF = 675/8 × 2 ÷ 15 = 45/4 cm]
+    note: 折り目が AC の垂直二等分線になると見ぬくのが道筋の要点。そこから相似（G-020）で長さを移すか、折り返しで等しくなる長さを方程式にする（2 本目）。単元の中では折り返しを扱わなかった。答えは小数 11.25 でもよい。
+  - part: 離
+    kinds: [数, 読み取り]
+    text: 長さ 6.5 m のはしごが、地面に垂直なかべに立てかけてあり、はしごの下のはしは、かべから 2.5 m はなれています。はしごの上のはしが、かべにそって 0.8 m 下にずれると、下のはしは、はじめの位置から何 m 動きますか。
+    svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><line x1="86" y1="140" x2="86" y2="30" stroke="currentColor" stroke-width="2" fill="none"/><line x1="76.3" y1="140" x2="163.7" y2="140" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86" y1="133.5" x2="80.4" y2="139.2" stroke="currentColor" stroke-width="1" fill="none"/><line x1="86" y1="117.4" x2="80.4" y2="123" stroke="currentColor" stroke-width="1" fill="none"/><line x1="86" y1="101.2" x2="80.4" y2="106.8" stroke="currentColor" stroke-width="1" fill="none"/><line x1="86" y1="85" x2="80.4" y2="90.7" stroke="currentColor" stroke-width="1" fill="none"/><line x1="86" y1="68.8" x2="80.4" y2="74.5" stroke="currentColor" stroke-width="1" fill="none"/><line x1="82" y1="42.9" x2="86" y2="42.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="82" y1="55.9" x2="86" y2="55.9" stroke="currentColor" stroke-width="1" fill="none"/><line x1="126.5" y1="140" x2="86" y2="42.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="149.1" y1="140" x2="86" y2="55.9" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="5 4"/><text x="146.7" y="107" font-size="12" text-anchor="middle">6.5 m</text><text x="106.2" y="156.2" font-size="12" text-anchor="middle">2.5 m</text><text x="62" y="53.6" font-size="12" text-anchor="middle">0.8 m</text><polyline points="94,140 94,132 86,132" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>'
+    answer: 1.4
+    check: "(math.isqrt(650 ** 2 - (math.isqrt(650 ** 2 - 250 ** 2) - 80) ** 2) - 250) / 100"
+    hints:
+      - はしご、かべ、地面で直角三角形ができるね。はじめの上のはしの高さを求めよう。
+      - ずれたあとの高さは、はじめの高さより 0.8 m 低いよ。
+      - ずれたあとの、下のはしとかべの距離を求めて、2.5 m とくらべよう。10 倍して考えると計算しやすいよ。
+    paths:
+      - [はじめの高さ = √(6.5² − 2.5²) = √(42.25 − 6.25) = √36 = 6, ずれたあとの高さ = 6 − 0.8 = 5.2, かべまでの距離 = √(42.25 − 27.04) = √15.21 = 3.9, 3.9 − 2.5 = 1.4, 1.4 m]
+      - [長さを 10 倍して 65 と 25 で考える, 25・60・65 は 5・12・13 の 5 倍で、高さは 60, 52 と 65 は 4 と 5 の 13 倍なので、残りの辺は 3 の 13 倍で 39, 39 − 25 = 14 を 10 でわって 1.4 m]
+    note: 三平方の定理を 2 回使い、小数の 2 乗と平方根（15.21 = 3.9 × 3.9）を計算する。10 倍して 5・12・13 と 3・4・5 の形を見つけると速い。上が 0.8 m 下がっても、下が 0.8 m 動くわけではないことに気づかせたい。

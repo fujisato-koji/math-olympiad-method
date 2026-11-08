@@ -1005,3 +1005,49 @@ days:
           - 面積の比を、そのまま相似比にしないようにしましょう。
         paths:
           - [4 × 4 = 16、7 × 7 = 49, "相似比は 4:7"]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 平らな地面に垂直に、高さ 4.2 m の柱 AB と高さ 2.8 m の柱 CD が立っています（B と D は地面の上の点）。A と D、C と B をそれぞれロープで結ぶと、2 本のロープは点 P で交わりました。柱と柱の間の距離はわかりません。P は地面から何 m の高さにありますか。
+    svg: '<svg viewBox="0 0 240 128" xmlns="http://www.w3.org/2000/svg"><line x1="18" y1="109.6" x2="222" y2="109.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="44" y1="109.6" x2="44" y2="18.4" stroke="currentColor" stroke-width="3" fill="none"/><line x1="196" y1="109.6" x2="196" y2="48.8" stroke="currentColor" stroke-width="3" fill="none"/><line x1="44" y1="18.4" x2="196" y2="109.6" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="196" y1="48.8" x2="44" y2="109.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="26" y="68.2" font-size="12" text-anchor="middle">4.2 m</text><text x="214" y="83.4" font-size="12" text-anchor="middle">2.8 m</text><text x="44" y="13.3" font-size="14" text-anchor="middle">A</text><text x="44" y="125.5" font-size="14" text-anchor="middle">B</text><text x="196" y="43.7" font-size="14" text-anchor="middle">C</text><text x="196" y="125.5" font-size="14" text-anchor="middle">D</text><text x="135.2" y="67" font-size="14" text-anchor="middle">P</text></svg>'
+    answer: 1.68
+    accept: [42/25]
+    check: "4200 * 2800 // (4200 + 2800) / 1000"
+    hints:
+      - P から地面に垂線 PH をひこう。AB、PH、CD はどれも地面に垂直なので平行だね。
+      - AB ∥ CD なので、△PAB と △PDC は相似だよ。AP:PD はいくつかな。
+      - △DAB の中で、PH は AB に平行だね。PH は AB の何倍かな。
+    paths:
+      - [AB ∥ CD で △PAB ∽ △PDC、AP:PD = 4.2:2.8 = 3:2, PH ∥ AB なので △DPH ∽ △DAB, DP:DA = 2:5 で PH = 4.2 × 2/5 = 1.68, 1.68 m]
+      - [△BPH ∽ △BCD で PH は CD の BH/BD 倍, △DPH ∽ △DAB で PH は AB の DH/DB 倍, BH/BD + DH/DB = 1 なので PH/2.8 + PH/4.2 = 1, PH × 5/8.4 = 1 で PH = 1.68 m]
+    note: 柱の間の距離が与えられないのに高さが決まる（変わらない量）ことに気づくのが道筋の要点。ちょうちょ形の相似で、P が AD を 3:2 に分けることを先に出す。2 本目は「何倍」をたすと 1 になる見方で、文字 PH をおく（A-010）。答えは 2 つの高さの積 ÷ 和 になる。
+  - part: 離
+    kinds: [総動員, 手数]
+    uses: [G-012]
+    text: △ABC の面積は 120 cm² です。辺 BC の上に BD:DC = 3:2 となる点 D を、辺 CA のまん中の点 E をとり、AD と BE の交点を P とします。四角形 PDCE の面積は何 cm² ですか。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="117.9,89.8 136.9,134 204.3,134 145.3,75" stroke="currentColor" stroke-width="1" fill="#f3c969" fill-opacity=".35"/><polygon points="86.3,16 35.7,134 204.3,134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="86.3" y1="16" x2="136.9" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="35.7" y1="134" x2="145.3" y2="75" stroke="currentColor" stroke-width="2" fill="none"/><line x1="177.3" y1="102" x2="172.3" y2="107" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="118.3" y1="43" x2="113.3" y2="48" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="86.3" y="10.9" font-size="14" text-anchor="middle">A</text><text x="26.4" y="142.6" font-size="14" text-anchor="middle">B</text><text x="213.6" y="142.6" font-size="14" text-anchor="middle">C</text><text x="136.9" y="149.9" font-size="14" text-anchor="middle">D</text><text x="154.6" y="76.2" font-size="14" text-anchor="middle">E</text><text x="115.5" y="82.9" font-size="14" text-anchor="middle">P</text></svg>'
+    answer: 33
+    check: "120 // 2 - Fraction(120, 2) * Fraction(3, 5) * Fraction(3, 4)"
+    hints:
+      - まず BP:PE を求めよう。E を通って AD に平行な直線をひき、BC との交点を H としてみよう。
+      - E は CA のまん中なので、H は DC のまん中だね。BD:DH はいくつかな。
+      - △BCE の面積から、△BDE、△BDP の順に、高さが同じ三角形の面積の比で求めよう。
+    paths:
+      - [E を通り AD に平行な直線と BC の交点を H とする, CE = EA なので CH = HD、BD:DH = 3:1, PD ∥ EH なので BP:PE = BD:DH = 3:1, △BCE = 120 ÷ 2 = 60, △BDE = 60 × 3/5 = 36、△BDP = 36 × 3/4 = 27, 四角形 PDCE = 60 − 27 = 33 cm²]
+      - [D を通り BE に平行な直線と CA の交点を G とすると CG:GE = 2:3, AE = EC なので AP:PD = AE:EG = 5:3, △ADC = 120 × 2/5 = 48, △APE = 48 × 1/2 × 5/8 = 15, 四角形 PDCE = 48 − 15 = 33 cm²]
+    note: 補助の平行線で三角形と比の定理（この単元）を使って線分の比を出し、面積の比（G-012）で求める。比を出す補助線の向き（AD に平行か BE に平行か）を選ぶところが難しい。途中の比 3:1 と三角形の面積を覚えておく手数の問題。
+  - part: 離
+    kinds: [読み取り, 数]
+    text: 目の高さが 150 cm の人が、平らな地面に置いた小さな鏡を見ると、ビルの屋上のふちがうつって見えました。人の足もとから鏡までは 2.4 m、鏡からビルの根もとまでは 18 m です。光は鏡ではね返るとき、入ってくる光と出ていく光が地面と同じ大きさの角をつくります。ビルの高さは何 m ですか。
+    svg: '<svg viewBox="0 0 240 145" xmlns="http://www.w3.org/2000/svg"><line x1="30" y1="114.7" x2="210" y2="114.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="37.5" y1="114.7" x2="37.5" y2="103.4" stroke="currentColor" stroke-width="3" fill="none"/><polygon points="190.5,114.7 190.5,30.3 210,30.3 210,114.7" stroke="currentColor" stroke-width="2" fill="none"/><line x1="190.5" y1="30.3" x2="55.5" y2="114.7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="55.5" y1="114.7" x2="37.5" y2="103.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="51.8" y1="114.7" x2="59.2" y2="114.7" stroke="currentColor" stroke-width="4" fill="none"/><text x="37.5" y="95.6" font-size="12" text-anchor="middle">150 cm</text><text x="46.5" y="130.9" font-size="12" text-anchor="middle">2.4 m</text><text x="123" y="130.9" font-size="12" text-anchor="middle">18 m</text><text x="55.5" y="105.9" font-size="12" text-anchor="middle">鏡</text></svg>'
+    answer: 11.25
+    check: "150 * 1800 // 240 / 100"
+    hints:
+      - 目・鏡・足もと と、屋上のふち・鏡・ビルの根もと で、直角三角形が 2 つできるね。
+      - 鏡のところの 2 つの角が等しいので、2 つの直角三角形は相似だよ。
+      - 単位を m にそろえよう。ビルの高さは、目の高さの何倍かな。
+    paths:
+      - [目の高さ 150 cm = 1.5 m, 鏡で角が等しく、どちらにも直角があるので、2 つの三角形は相似, 相似比は 2.4:18 = 2:15, ビルの高さ = 1.5 × 18 ÷ 2.4 = 11.25, 11.25 m]
+    note: 長めの場面から、反射の角が等しいことと直角を読み取り、相似（この単元）を見つける。cm と m の単位をそろえ、小数の比を計算するところでつまずきやすい。測りにくい高さを相似で測る、測量の考え方。

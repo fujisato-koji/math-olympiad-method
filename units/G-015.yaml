@@ -641,3 +641,49 @@ days:
           - 直径は半径の 2 つ分だね。
         paths:
           - [円周は 10 × 円周率, □ は 10]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 半径 3 cm の円 あ のまわりを、半径 1 cm の円 い が、はなれずにすべらないように転がって 1 周し、元の位置にもどりました。円 い は、その間に何回転しましたか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="74" r="54" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="172" cy="74" r="18" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="100" cy="74" r="2" fill="currentColor"/><line x1="100" y1="74" x2="154" y2="74" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><text x="127" y="68" font-size="9" text-anchor="middle">3 cm</text><circle cx="172" cy="74" r="2" fill="currentColor"/><line x1="172" y1="74" x2="190" y2="74" stroke="currentColor" stroke-width="1" stroke-dasharray="4 3"/><text x="181" y="68" font-size="8" text-anchor="middle">1 cm</text><text x="100" y="100" font-size="13" text-anchor="middle">あ</text><text x="172" y="104" font-size="13" text-anchor="middle">い</text></svg>
+    answer: 4
+    check: "Fraction(2 * (3 + 1), 2 * 1)"
+    hints:
+      - 円 い の中心は、どんな線をえがくかな。その線の半径は何 cm かな。
+      - 円 い が 1 回転すると、中心は円 い の円周と同じ長さだけ進むよ。
+      - 中心がえがく線の長さは、円 い の円周の何倍かな。
+    paths:
+      - [中心がえがく線は 半径 3 + 1 = 4 cm の円, その長さは 8 × 円周率 cm, 円 い の円周は 2 × 円周率 cm, 8 ÷ 2 = 4 回転]
+    note: 円 あ の円周（6 × 円周率）を円 い の円周（2 × 円周率）でわって 3 回転と答えやすい。転がる円の回転の数は、中心が進む長さで決まる（5 日目の円の中心がえがく線）。同じ大きさの硬貨 2 枚で、1 枚をもう 1 枚のまわりに転がすと 2 回転することを確かめるとよい。
+  - part: 離
+    kinds: [数, 手数]
+    text: たて 3 cm、横 4 cm の長方形 ABCD を、頂点 B を中心にして、時計の針と反対の向きに 90° 回しました（点線が回したあと）。対角線 BD の長さは 5 cm です。長方形が通ったあとの部分の面積は約何 cm² ですか。円周率は 3.14 とします。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,58 120,112 192,112 192,58" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polygon points="66,112 120,112 120,40 66,40" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/><path d="M192 58 A90 90 0 0 0 66 40" stroke="currentColor" stroke-width="1" fill="none" stroke-dasharray="4 3"/><line x1="120" y1="112" x2="192" y2="58" stroke="currentColor" stroke-width="1"/><circle cx="120" cy="112" r="2.5" fill="currentColor"/><text x="113" y="70" font-size="12" text-anchor="middle">A</text><text x="122" y="125" font-size="12" text-anchor="middle">B</text><text x="199" y="116" font-size="12" text-anchor="middle">C</text><text x="200" y="56" font-size="12" text-anchor="middle">D</text></svg>
+    answer: 31.625
+    check: "(lambda c: f'{c // 1000}.{c % 1000:03d}')(5 * 5 * 314 * 10 // 4 + 12000)"
+    hints:
+      - 長方形の中で、いちばん遠くまで動く点はどれかな。その点はどんな線をえがくかな。
+      - 回す前の長方形と、回したあとの長方形を、それぞれ対角線で 2 つの三角形に分けてみよう。
+      - 通ったあとは、おうぎ形 1 つと三角形 2 つに分けられるよ。
+    paths:
+      - [D は半径 5 cm の円の 4 分の 1 をえがく, 通ったあとは おうぎ形（半径 5 cm・90°）と 回す前の三角形 BCD と 回したあとの同じ形の三角形, 5 × 5 × 3.14 ÷ 4 = 19.625・三角形は 6 cm² ずつ, 19.625 + 6 + 6 = 31.625 cm²]
+    note: 長方形 2 つ分とおうぎ形を足して、重なりを数えまちがえやすい。いちばん遠い点 D がえがく弧で外がわが決まり、残りは回す前の三角形 BCD と回したあとの三角形（どちらも長方形の半分）になる。25 × 3.14 ÷ 4 の小数の計算も手間がかかる。
+  - part: 離
+    kinds: [総動員, 道筋]
+    uses: [G-012]
+    text: 四角形 ABCD は、AD と BC が平行な台形で、AD = 6 cm、BC = 14 cm、高さ AB = 6 cm、辺 CD = 10 cm です。点 P が A を出発して、1 秒に 1 cm ずつ、辺 AD、辺 DC の上を C まで進みます。三角形 PBC の面積が 21 cm² になるのは、出発してから何秒後ですか。
+    svg: |
+      <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="40,48 112,48 208,120 40,120" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><polyline points="40,112 48,112 48,120" stroke="currentColor" stroke-width="1" fill="none"/><text x="32" y="52" font-size="12" text-anchor="middle">A</text><text x="116" y="43" font-size="12" text-anchor="middle">D</text><text x="32" y="126" font-size="12" text-anchor="middle">B</text><text x="216" y="126" font-size="12" text-anchor="middle">C</text><text x="76" y="42" font-size="10" text-anchor="middle">6 cm</text><text x="124" y="134" font-size="10" text-anchor="middle">14 cm</text><text x="172" y="80" font-size="10" text-anchor="middle">10 cm</text><text x="32" y="88" font-size="10" text-anchor="end">6 cm</text></svg>
+    answer: 11
+    check: "6 + 10 - 10 * Fraction(21, 14 * 6 // 2)"
+    hints:
+      - P が辺 AD の上にあるとき、三角形 PBC の面積はどうなるかな。
+      - P が辺 DC の上にあるとき、三角形 PBC と三角形 DBC は、どこを底辺とみると高さが同じになるかな。
+      - 21 cm² は、三角形 DBC の面積の何分の 1 かな。
+    paths:
+      - [AD の上では 底辺 BC・高さ 6 cm で いつも 42 cm², DC の上では 三角形 PBC と DBC の面積の比は PC:DC, 21 は 42 の半分なので PC = 5 cm・DP = 5 cm, 6 + 5 = 11 秒後]
+    note: AD の上では面積が変わらない（等積変形、G-012）ことと、DC の上では面積が PC の長さに比例すること（高さが同じ三角形の面積の比）を合わせる。DC の上で高さを直接求めようとすると、ななめの辺で行きづまる。

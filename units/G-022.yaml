@@ -581,3 +581,47 @@ days:
           - 図にすると、垂線の作図と正三角形の作図を組み合わせることになるね。
         paths:
           - [60° → 30° → 15°, 90° − 15°, 75°]
+
+# 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
+ri:
+  - part: 離
+    kinds: [道筋]
+    text: 3 本の直線 ℓ、m、n が、図のように三角形をつくるように交わっています。3 本の直線のどれからも等しい距離にある点は、全部でいくつありますか。点は平面のどこにあってもよいとします。
+    svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><line x1="36.6" y1="112.9" x2="203.4" y2="112.9" stroke="currentColor" stroke-width="2" fill="none"/><text x="212.4" y="117.8" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">ℓ</text><line x1="187.8" y1="131.4" x2="82.6" y2="18.6" stroke="currentColor" stroke-width="2" fill="none"/><text x="76.4" y="17" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">m</text><line x1="108.2" y1="16" x2="61" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><text x="57.7" y="147.3" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">n</text></svg>'
+    answer: 4
+    check: "(lambda L: len({(lambda a1, b1, c1, a2, b2, c2: (lambda D: ((b1 * c2 - b2 * c1) / D, (a2 * c1 - a1 * c2) / D))(a1 * b2 - a2 * b1))(L[0][0] - s * L[1][0], L[0][1] - s * L[1][1], L[0][2] - s * L[1][2], L[0][0] - t * L[2][0], L[0][1] - t * L[2][1], L[0][2] - t * L[2][2]) for s in (1, -1) for t in (1, -1)}))([(Fraction(0), Fraction(1), Fraction(0)), (Fraction(1), Fraction(0), Fraction(0)), (Fraction(3, 5), Fraction(4, 5), Fraction(-12, 5))])"
+    hints:
+      - まず、2 本の直線 ℓ と m から等しい距離にある点が、どんな線の上にあるかを考えよう。ℓ と m は 4 つの角をつくるよ。
+      - ℓ と m から等しい距離の点は、角の二等分線の上にある。二等分線は何本あるかな。m と n についても同じだね。
+      - ℓ と m の二等分線と、m と n の二等分線が交わる点を数えよう。
+    paths:
+      - [ℓ と m から等しい距離の点は、ℓ と m がつくる角の二等分線 2 本の上, m と n から等しい距離の点も、二等分線 2 本の上, 2 本と 2 本の交点は 4 つ, その 4 点は ℓ と n からも等しい距離にある, 4 つ]
+    note: 角の 2 辺から等しい距離の点の集まり（この単元）を、半直線でなく直線について考えると、二等分線が 2 本（たがいに垂直）になるのが要点。三角形の中の 1 点だけを答えやすい。外の 3 点は、のちの傍心（G-028）になる。
+  - part: 離
+    kinds: [総動員, 読み取り]
+    uses: [G-019]
+    text: 丸い皿が割れて、ふちの一部（円の弧）が残っています。弧の両はしを A、B とすると、AB = 30 cm でした。線分 AB の垂直二等分線を作図し、弧との交点を M、AB との交点を N とすると、MN = 9 cm でした。もとの皿の円の半径は何 cm ですか。
+    svg: '<svg viewBox="0 0 240 121" xmlns="http://www.w3.org/2000/svg"><path d="M222 79.2 A115.6 115.6 0 0 0 18 79.2" stroke="currentColor" stroke-width="3" fill="none"/><line x1="18" y1="79.2" x2="222" y2="79.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="127,79.2 127,72.2 120,72.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="8.2" y="86.1" font-size="14" text-anchor="middle">A</text><text x="231.8" y="86.1" font-size="14" text-anchor="middle">B</text><text x="123.7" y="13.6" font-size="14" text-anchor="middle">M</text><text x="127.4" y="92.3" font-size="14" text-anchor="middle">N</text><text x="79.2" y="94.4" font-size="12" text-anchor="middle">30 cm</text><text x="104" y="52.8" font-size="12" text-anchor="middle">9 cm</text></svg>'
+    answer: 17
+    check: "[r for r in range(1, 100) if (r - 9) ** 2 + 15 * 15 == r * r][0]"
+    hints:
+      - 円の中心は、線分 AB の垂直二等分線の上にあるね。どうしてかな。
+      - 半径を r cm とすると、中心 O から N までの長さは r − 9 だね。
+      - △OAN は直角三角形だよ。三平方の定理で式を立てよう。
+    paths:
+      - [円の中心 O は A と B から等しい距離なので、AB の垂直二等分線 MN をのばした直線の上にある, 半径を r とすると ON = r − 9、AN = 15, △OAN で (r − 9)² + 15² = r², r² − 18r + 81 + 225 = r² で 18r = 306, r = 17 cm]
+    note: 作図の考え（中心は弦の垂直二等分線の上）を、三平方の定理（G-019）と方程式で長さの計算につなぐ。中心から N までを r − 9 とおくところと、2 乗が消えて 1 次方程式になるところがつまずきどころ。土器のかけらから器の口の大きさを出すのと同じ計算。
+  - part: 離
+    kinds: [手数]
+    text: 次の順に作図しました。① 直線 ℓ の上の点 O を通る垂線 OY をひく（X は ℓ の上の点で ∠XOY = 90°）。② OX の上に点 A をとり、OA を 1 辺とする正三角形 OAB を ∠XOY の内側にかく。③ ∠BOY の二等分線 OC をひく。④ ∠XOC の二等分線 OD をひく。∠DOY は何度ですか。
+    svg: '<svg viewBox="0 0 240 110" xmlns="http://www.w3.org/2000/svg"><line x1="35.4" y1="92" x2="204.6" y2="92" stroke="currentColor" stroke-width="2" fill="none"/><line x1="98.9" y1="92" x2="98.9" y2="18" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="106.9,92 106.9,84 98.9,84" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="98.9" cy="92" r="2.6" fill="currentColor"/><text x="91.8" y="104" font-size="14" text-anchor="middle">O</text><text x="196.1" y="107.9" font-size="14" text-anchor="middle">X</text><text x="108.9" y="22.9" font-size="14" text-anchor="middle">Y</text><text x="26.4" y="96.9" font-size="14" text-anchor="middle" font-style="italic" font-family="serif">ℓ</text></svg>'
+    answer: 52.5
+    check: "90 - (60 + (90 - 60) / 2) / 2"
+    hints:
+      - ① から ④ まで、O のまわりの角を順に図にかきこもう。
+      - ∠XOB は 60° だね。∠BOY と ∠XOC は何度かな。
+      - ∠XOD は ∠XOC の半分だよ。∠DOY は 90° からひいて求めよう。
+    paths:
+      - [∠XOB = 60°（正三角形）, ∠BOY = 90 − 60 = 30°, ∠BOC = 15° で ∠XOC = 75°, ∠XOD = 75 ÷ 2 = 37.5°, ∠DOY = 90 − 37.5 = 52.5°]
+      - [∠DOY = ∠DOC + ∠COY, ∠COY = 15°、∠DOC = 75 ÷ 2 = 37.5°, 15 + 37.5 = 52.5°]
+    note: 作図の手順の文を読んで、角をかきこみながら途中の角を覚えておく手数の問題。∠XOD と ∠DOY を取りちがえやすい。52.5° は 105°（60° と 45° の和）の半分で、2 日目の「つくれる角」の続きになっている。
