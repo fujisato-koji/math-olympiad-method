@@ -728,7 +728,7 @@ units:
   - {id: A-014, title: 文章題を方程式にする（和差、つるかめ、過不足、植木）, stage: 4, level: 2, region: houteishiki, needs: [A-012, A-003], days: 8, measure: true}
   - {id: A-015, title: 展開と因数分解, stage: 4, level: 2, region: shiki, needs: [A-010, N-027, A-009], days: 6}
   - {id: A-016, title: 平方根, stage: 4, level: 2, region: shiki, needs: [A-015, N-021, A-009, N-020], days: 5}
-  - {id: A-017, title: 2 次方程式, stage: 4, level: 2, region: shiki, needs: [A-015, A-016], days: 6}
+  - {id: A-017, title: 2 次方程式, stage: 4, level: 2, region: shiki, needs: [A-015, A-016, A-011], days: 6}
   - {id: A-018, title: Σ と和の変形, stage: 4, level: 2, region: shiki, needs: [A-004, A-010, A-015], days: 6}
   - {id: C-013, title: 区別と重複のある数え方, stage: 4, level: 2, region: kazoekata, needs: [C-007, A-010], days: 6}
   - {id: C-014, title: 対応させて数える, stage: 4, level: 2, region: kazoekata, needs: [C-013], days: 5}
@@ -779,7 +779,7 @@ units:
   - {id: I-010, title: くすりと体（飲んだ薬が血にのって運ばれる、決まった量と回数を守るわけ、効き目と副作用、抗菌薬はウイルスに効かない）, stage: 4, level: 2, region: kusuri-doku, needs: [B-020, B-074], days: 5}
 
   # ---- 段 5 関係 ----
-  - {id: A-019, title: 1 次関数とグラフ, stage: 5, level: 3, region: kansu, needs: [A-006, A-011], days: 6}
+  - {id: A-019, title: 1 次関数とグラフ, stage: 5, level: 3, region: kansu, needs: [A-006, A-011, A-012], days: 6}
   - {id: A-020, title: 2 次関数と平方完成, stage: 5, level: 3, region: kansu, needs: [A-017, A-019], days: 6}
   - {id: A-021, title: 複素数の計算, stage: 5, level: 2, region: shiki, needs: [A-017], days: 5}
   - {id: A-022, title: 数列（等比数列を含む）と漸化式, stage: 5, level: 3, region: shiki, needs: [A-008, L-012, A-009, A-010, C-009], days: 8}

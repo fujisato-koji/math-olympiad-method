@@ -42,7 +42,7 @@
 | A level Further Mathematics（Pearson Edexcel） | 193 | 1324 |
 | IB Mathematics: Analysis and Approaches HL | 129 | 808 |
 | SAT Math（College Board） | 89 | 535 |
-| AP Calculus BC | 94 | 593 |
+| AP Calculus BC | 95 | 599 |
 | AP Statistics | 99 | 623 |
 | ЕГЭ（数学 профильный уровень と、物理・化学・生物・情報） | 142 | 897 |
 | ISEB Common Entrance 11+（数学と理科） | 108 | 579 |
@@ -108,7 +108,7 @@
 | mRNA ワクチンをつくる研究者（Moderna） | 263 | 1822 |
 | 野生動物の研究者（Max Planck Institute of Animal Behavior） | 258 | 1743 |
 | 脳の研究者（Allen Institute） | 233 | 1577 |
-| Bebras（International Challenge on Informatics and Computational Thinking） | 80 | 460 |
+| Bebras（International Challenge on Informatics and Computational Thinking） | 81 | 466 |
 | ICAS Science（2〜6 年生、Introductory〜Paper D） | 106 | 561 |
 | 国際ジュニア科学オリンピック（IJSO） | 247 | 1542 |
 | World Robot Olympiad（RoboMission） | 106 | 644 |
@@ -122,7 +122,7 @@
 | NCF-Envirothon（国際大会） | 199 | 1257 |
 | A level Physics（AQA 7408） | 137 | 856 |
 | AP Physics C（Mechanics と Electricity and Magnetism、College Board） | 113 | 719 |
-| AP Computer Science A（College Board） | 67 | 394 |
+| AP Computer Science A（College Board） | 68 | 400 |
 | AP Environmental Science（College Board） | 190 | 1126 |
 | IB Physics HL（国際バカロレア） | 155 | 984 |
 | IB Chemistry HL（国際バカロレア） | 167 | 1104 |
@@ -383,8 +383,8 @@
 | A-014 文章題を方程式にする（和差、つるかめ、過不足、植木） | 式 | A-012、A-003 | 8 | 8 日分、予備 24 問 |
 | A-015 展開と因数分解 | 式 | A-010、N-027、A-009 | 6 | 6 日分、予備 18 問 |
 | A-016 平方根 | 式 | A-015、N-021、A-009、N-020 | 5 | 5 日分、予備 15 問 |
-| A-017 2 次方程式 | 式 | A-015、A-016 | 6 | — |
-| A-018 Σ と和の変形 | 式 | A-004、A-010、A-015 | 6 | — |
+| A-017 2 次方程式 | 式 | A-015、A-016、A-011 | 6 | 6 日分、予備 18 問 |
+| A-018 Σ と和の変形 | 式 | A-004、A-010、A-015 | 6 | 6 日分、予備 18 問 |
 | C-013 区別と重複のある数え方 | 数える | C-007、A-010 | 6 | 6 日分、予備 18 問 |
 | C-014 対応させて数える | 数える | C-013 | 5 | 5 日分、予備 15 問 |
 | C-015 二項係数とパスカルの三角形 | 数える | C-007、A-010、C-004 | 6 | 6 日分、予備 18 問 |
@@ -439,7 +439,7 @@
 
 | 単元 | 流れ | 前提 | 日数 | 問題 |
 |---|---|---|---|---|
-| A-019 1 次関数とグラフ | 式 | A-006、A-011 | 6 | — |
+| A-019 1 次関数とグラフ | 式 | A-006、A-011、A-012 | 6 | 6 日分、予備 18 問 |
 | A-020 2 次関数と平方完成 | 式 | A-017、A-019 | 6 | — |
 | A-021 複素数の計算 | 式 | A-017 | 5 | — |
 | A-022 数列（等比数列を含む）と漸化式 | 式 | A-008、L-012、A-009、A-010、C-009 | 8 | — |

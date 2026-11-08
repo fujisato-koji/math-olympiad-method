@@ -1,0 +1,981 @@
+# A-018 Σ と和の変形
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-011、A-015 に合わせる（負の数は「−」U+2212、分数は約分した形）。
+# 地図に plan がないので、既定の並び（導入、練習、練習、わけ、混ぜる、確認）で作った。
+#   1 日目：Σ の記号の意味（k に下の数から上の数までを順に入れて足す）、Σ の式の値、和を Σ で表す、下の数が 1 でない和。
+#   2 日目：Σ k = n(n + 1)/2、Σ の性質（和に分ける、定数倍を外に出す、同じ数を n 回足すと n 倍）、途中から始まる和（1 からの和の差）。
+#   3 日目：Σ k² = n(n + 1)(2n + 1)/6 と Σ k³ = (n(n + 1)/2)²、差の形にして消し合う和（2 乗の差、1/(k(k + 1)) の和）。
+#   4 日目：わけ。5 日目：A-004、A-010、A-015 と混ぜる（等差数列の和、展開してから分ける、文字の置きかえ）。6 日目：確認。
+# 前提は A-004（等差数列とその和）、A-010（文字と式）、A-015（展開と因数分解）。
+# Σ の上と下の数は画面の文では書けないので、問題の Σ の式は svg の図に描き（Σ の上に終わりの値、下に k = 始めの値）、文では「図の和」と呼ぶ。
+#   見本、ヒント、paths、note では「Σ k²（k = 1〜10）」と 1 行で書く（1 日目の見本で、この書き方を教える）。
+#   和を Σ で表す問題は、図にア、イ、ウの 3 つの Σ の式を並べ、choices はア、イ、ウにする。
+# 1/(k(k + 1)) の和は、文では 1/2 + 1/6 + 1/12 + … のように数で書く（画面が分数を上下に重ねるのは 1/6 のような形だけなので）。
+# 等比数列の和（A-022）、数学的帰納法（L の流れ）は扱わない。Σ k² と Σ k³ の公式は 3 日目に使い方を学び、Σ k² のわけは
+#   3 日目の挑戦で (k + 1)³ − k³ の差の和から数の場合を求める。4 日目のわけは Σ k、差の和による Σ (2k − 1) = n²、点の図の 3 問。
+# 答えは数を打つ。式を選ぶ問題の check は、選択肢ごとの式（lambda n）に n = 1〜8 を入れ、和をそのまま足した値とどの n でも等しいものを
+#   選び出す（n = 1 だけでは選択肢が見分けられないので、2 以上も入れる）。値の check は sum(… for k in range(…)) でそのまま足し、
+#   分数は Fraction で足す。ア、イ、ウを選ぶ check は、選択肢ごとの項の並びが問題の和の項の並びと同じものを選び出す。
+# Σ と和の変形は、数列の極限と級数（D-002）、母関数（C-026）、古典的な不等式（A-027）、統計の平均と分散の計算の道具になる（D-026）。
+
+id: A-018
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 図の式は、どんな和を表しているでしょう。値も求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">5</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        explain: Σ（シグマ）は「足し合わせる」ことを表す記号です。図の式は、k に下の 1 から上の 5 まで、1、2、3、4、5 を順に入れた 2k − 1 の値を、全部足すことを表します。k = 1 で 1、k = 2 で 3、k = 3 で 5、k = 4 で 7、k = 5 で 9 なので、1 + 3 + 5 + 7 + 9 = 25 です。文の中では、この和を Σ (2k − 1)（k = 1〜5）とも書きます。k は i や j のような別の文字にかえても、同じ和を表します。下の数は 1 でなくてもよく、Σ k（k = 3〜6）は 3 + 4 + 5 + 6 です。足す項の数は、上の数 − 下の数 + 1 です。反対に、2 + 4 + 6 + … + 20 は、k 番目の数が 2k なので、Σ 2k（k = 1〜10）と表せます。
+      - part: 思い出す
+        text: 1 + 2 + 3 + … + 20 の和はいくつですか。
+        answer: 210
+        check: "sum(range(1, 21))"
+        hints:
+          - はしから 2 つずつ組にして足しましょう（A-004）。
+          - 1 + 20、2 + 19、… は、どれも同じ数になります。
+          - 組はいくつできるでしょう。
+        paths:
+          - [1 + 20 = 21 が 10 組, 21 × 10 = 210]
+      - part: 思い出す
+        text: n = 6 のとき、n(n + 1)/2 の値はいくつですか。
+        answer: 21
+        check: "6 * (6 + 1) // 2"
+        hints:
+          - n に 6 を入れましょう。
+          - かっこの中を先に計算します。
+          - 6 × 7 を 2 でわりましょう。
+        paths:
+          - [6 × 7 ÷ 2, 21]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">4</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        answer: 30
+        check: "sum(k * k for k in range(1, 5))"
+        hints:
+          - k に 1、2、3、4 を順に入れましょう。
+          - 1²、2²、3²、4² を、それぞれ計算しましょう。
+          - 4 つの数を足しましょう。
+        paths:
+          - [1 + 4 + 9 + 16, 30]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">6</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(3<tspan font-style="italic">k</tspan> + 1)</text>
+          </svg>
+        answer: 69
+        check: "sum(3 * k + 1 for k in range(1, 7))"
+        hints:
+          - k に 1 から 6 までを入れた 3k + 1 を書き出しましょう。
+          - 4、7、10、… と、3 ずつふえる数です。
+          - はしから組にして足すと、楽になります。
+        paths:
+          - [4 + 7 + 10 + 13 + 16 + 19, 4 + 19 = 23 が 3 組, 69]
+      - part: 今日
+        text: 3 + 6 + 9 + … + 30 を Σ を使って表したものは、図のア、イ、ウのどれですか。
+        svg: |
+          <svg viewBox="0 0 300 108" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="104" font-size="15" text-anchor="middle">ア</text>
+            <text x="36" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="36" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="36" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="54" y="50" font-size="17">3<tspan font-style="italic">k</tspan></text>
+            <text x="150" y="104" font-size="15" text-anchor="middle">イ</text>
+            <text x="136" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="136" y="16" font-size="14" text-anchor="middle">30</text>
+            <text x="136" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="154" y="50" font-size="17">3<tspan font-style="italic">k</tspan></text>
+            <text x="250" y="104" font-size="15" text-anchor="middle">ウ</text>
+            <text x="220" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="220" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="220" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="238" y="50" font-size="17">(<tspan font-style="italic">k</tspan> + 3)</text>
+          </svg>
+        choices: [ア, イ, ウ]
+        answer: ア
+        check: "[c for c, (m, f) in {'ア': (10, lambda k: 3 * k), 'イ': (30, lambda k: 3 * k), 'ウ': (10, lambda k: k + 3)}.items() if [f(k) for k in range(1, m + 1)] == sorted(range(3, 31, 3))][0]"
+        hints:
+          - k 番目の数を、k の式で表しましょう。
+          - 3 × 1、3 × 2、3 × 3、… と並んでいます。
+          - 30 は何番目の数でしょう。
+        paths:
+          - [k 番目は 3k, 30 = 3 × 10 で 10 番目まで, ア]
+        note: 最後の数 30 を上に書いてイとしやすい。上に書くのは k の終わりの値。
+      - part: 挑戦
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">9</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 4</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 1)</text>
+          </svg>
+        answer: 84
+        check: "sum(2 * k + 1 for k in range(4, 10))"
+        hints:
+          - k は 1 からではなく、4 から始まります。
+          - 足す項は、9 − 4 + 1 こあります。
+          - 書き出した数を、はしから組にして足しましょう。
+        paths:
+          - [9 + 11 + 13 + 15 + 17 + 19, 9 + 19 = 28 が 3 組, 84]
+        note: k = 1 から足して 99 としやすい。下の数を確かめさせる。
+    extra:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">4</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>³</text>
+          </svg>
+        answer: 100
+        check: "sum(k ** 3 for k in range(1, 5))"
+        hints:
+          - k に 1、2、3、4 を順に入れましょう。
+          - k³ は k × k × k です。
+          - 4 つの数を足しましょう。
+        paths:
+          - [1 + 8 + 27 + 64, 100]
+      - part: 今日
+        text: 1 + 4 + 9 + 16 + … + 100 を Σ を使って表したものは、図のア、イ、ウのどれですか。
+        svg: |
+          <svg viewBox="0 0 300 108" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="104" font-size="15" text-anchor="middle">ア</text>
+            <text x="42" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="42" y="16" font-size="14" text-anchor="middle">100</text>
+            <text x="42" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="60" y="50" font-size="17"><tspan font-style="italic">k</tspan></text>
+            <text x="150" y="104" font-size="15" text-anchor="middle">イ</text>
+            <text x="136" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="136" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="136" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="154" y="50" font-size="17"><tspan font-style="italic">k</tspan>²</text>
+            <text x="250" y="104" font-size="15" text-anchor="middle">ウ</text>
+            <text x="236" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="236" y="16" font-size="14" text-anchor="middle">100</text>
+            <text x="236" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="254" y="50" font-size="17"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        choices: [ア, イ, ウ]
+        answer: イ
+        check: "[c for c, (m, f) in {'ア': (100, lambda k: k), 'イ': (10, lambda k: k * k), 'ウ': (100, lambda k: k * k)}.items() if [f(k) for k in range(1, m + 1)] == [k * k for k in range(1, 11)]][0]"
+        hints:
+          - 1、4、9、16 は、それぞれ何の 2 乗でしょう。
+          - k 番目の数を、k の式で表しましょう。
+          - 100 は何番目の数でしょう。
+        paths:
+          - [k 番目は k², 100 = 10² で 10 番目まで, イ]
+      - part: 挑戦
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="76" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="76" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="76" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="97" y="50" font-size="24">(−1)<tspan dy="-10" font-size="15" font-style="italic">k</tspan><tspan dy="10"> </tspan><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 5
+        check: "sum((-1) ** k * k for k in range(1, 11))"
+        hints:
+          - (−1) を k 回かけた数は、k が偶数なら 1、奇数なら −1 です。
+          - 書き出すと −1 + 2 − 3 + 4 − … です。
+          - となりどうし 2 つずつ組にしましょう。
+        paths:
+          - [−1 + 2 − 3 + 4 − … + 10, (−1 + 2) のような組が 5 組で、どれも 1, 5]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 図の和を、Σ の性質と、1 から n までの和の公式を使って求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">20</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(3<tspan font-style="italic">k</tspan> + 2)</text>
+          </svg>
+        explain: 1 から n までの和は、Σ k（k = 1〜n）= n(n + 1)/2 です（A-004 のはしから組にする和を、文字で書いたもの。わけは 4 日目）。足す順を入れかえたりまとめたりしても和は変わらないので（N-015）、Σ (3k + 2) は、3k の和と 2 の和に分けられます。3k の和は、分配法則（A-010）で 3 × (1 + 2 + … + 20) です。2 の和は、2 を 20 回足すので 2 × 20 です。だから Σ (3k + 2)（k = 1〜20）= 3 × 210 + 2 × 20 = 630 + 40 = 670 です。まとめると、Σ (ak + b)（k = 1〜n）= a × n(n + 1)/2 + bn です。途中から始まる和は、1 からの和の差で求めます。Σ k（k = 11〜20）= Σ k（k = 1〜20）− Σ k（k = 1〜10）= 210 − 55 = 155 です。
+      - part: 思い出す
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">5</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(4<tspan font-style="italic">k</tspan> − 3)</text>
+          </svg>
+        answer: 45
+        check: "sum(4 * k - 3 for k in range(1, 6))"
+        hints:
+          - k に 1 から 5 までを入れた 4k − 3 を書き出しましょう。
+          - 1 から始まり、4 ずつふえる数です。
+          - 5 つの数を足しましょう。
+        paths:
+          - [1 + 5 + 9 + 13 + 17, 45]
+      - part: 思い出す
+        text: 等差数列 5、8、11、14、… の 10 番目の数はいくつですか。
+        answer: 32
+        check: "5 + 3 * (10 - 1)"
+        hints:
+          - となりの数との差は、いくつでしょう。
+          - 10 番目は、5 に差を何回足した数でしょう。
+          - 1 番目から 10 番目までに、差を足す回数は 10 − 1 回です。
+        paths:
+          - [差は 3, 5 + 3 × 9, 32]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">30</text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 465
+        check: "sum(range(1, 31))"
+        hints:
+          - Σ k（k = 1〜n）= n(n + 1)/2 の公式を使いましょう。
+          - n = 30 です。
+          - 30 × 31 を 2 でわりましょう。
+        paths:
+          - [30 × 31 ÷ 2, 465]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 5)</text>
+          </svg>
+        answer: 160
+        check: "sum(2 * k + 5 for k in range(1, 11))"
+        hints:
+          - 2k の和と、5 の和に分けましょう。
+          - 2k の和は、2 × Σ k です。
+          - 5 の和は、5 を何回足したものでしょう。
+        paths:
+          - [2 × 55 + 5 × 10, 110 + 50, 160]
+      - part: 今日
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(4<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        choices: [2n² + n, 2n² + 2n − 1, 4n² − n]
+        answer: 2n² + n
+        check: "[c for c, f in {'2n² + n': lambda n: 2 * n * n + n, '2n² + 2n − 1': lambda n: 2 * n * n + 2 * n - 1, '4n² − n': lambda n: 4 * n * n - n}.items() if all(f(n) == sum(4 * k - 1 for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - 4k の和と、−1 の和に分けましょう。
+          - 4 × n(n + 1)/2 を計算しましょう。
+          - −1 を n 回足すと、いくつでしょう。
+        paths:
+          - [4 × n(n + 1)/2 − n, 2n² + 2n − n, 2n² + n]
+        note: −1 の和を −1 としやすい。−1 を n 回足すので −n。n = 1、2 を入れて、和を書き出した値と比べさせる。
+      - part: 挑戦
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">30</text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 11</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 410
+        check: "sum(range(11, 31))"
+        hints:
+          - 1 から 30 までの和から、いらない部分をひきましょう。
+          - ひくのは、1 から 10 までの和です。
+          - Σ k の公式を 2 回使いましょう。
+        paths:
+          - [Σ k（k = 1〜30）− Σ k（k = 1〜10）, 465 − 55, 410]
+        note: 1 から 11 までの和をひいて 399 としやすい。k = 11 は足す項に入る。
+    extra:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">12</text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="131" y="50" font-size="24">5</text>
+          </svg>
+        answer: 60
+        check: "sum(5 for k in range(1, 13))"
+        hints:
+          - 足す式に k がありません。k がいくつでも、足す数は同じです。
+          - k = 1 から 12 まで、何回足すでしょう。
+          - 同じ数を何回も足すのは、かけ算で表せます。
+        paths:
+          - [5 を 12 回足す, 5 × 12 = 60]
+        note: 5 と答えやすい。式に k がなくても、k の数だけ足す。
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">15</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        answer: 225
+        check: "sum(2 * k - 1 for k in range(1, 16))"
+        hints:
+          - 2k の和と、−1 の和に分けましょう。
+          - Σ k（k = 1〜15）を公式で求めましょう。
+          - −1 を 15 回足すと、いくつでしょう。
+        paths:
+          - [2 × 120 − 15, 225]
+      - part: 挑戦
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(6<tspan font-style="italic">k</tspan> + 2)</text>
+          </svg>
+        choices: [3n² + 5n, 3n² + 3n + 2, 6n² + 2n]
+        answer: 3n² + 5n
+        check: "[c for c, f in {'3n² + 5n': lambda n: 3 * n * n + 5 * n, '3n² + 3n + 2': lambda n: 3 * n * n + 3 * n + 2, '6n² + 2n': lambda n: 6 * n * n + 2 * n}.items() if all(f(n) == sum(6 * k + 2 for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - 6k の和と、2 の和に分けましょう。
+          - 6 × n(n + 1)/2 を計算しましょう。
+          - 2 を n 回足すと、いくつでしょう。
+        paths:
+          - [6 × n(n + 1)/2 + 2n, 3n² + 3n + 2n, 3n² + 5n]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 2 乗の和と 3 乗の和の公式を使ってみましょう。また、差の形にして消し合う足し方を見てみましょう。
+        explain: 1 から n までの 2 乗の和と 3 乗の和には、次の公式があります。Σ k²（k = 1〜n）= n(n + 1)(2n + 1)/6、Σ k³（k = 1〜n）= (n(n + 1)/2)²。たとえば Σ k²（k = 1〜10）= 10 × 11 × 21 ÷ 6 = 385、Σ k³（k = 1〜4）= (4 × 5 ÷ 2)² = 10² = 100 です（1 + 8 + 27 + 64 = 100 で確かめられます）。Σ k² の公式のわけは、今日の挑戦と 4 日目で考えます。また、足す数のどれもが「次の数 − 今の数」の形になっているときは、となりどうしが消し合って、「最後の数 − 最初の数」だけが残ります。(2² − 1²) + (3² − 2²) + … + (11² − 10²) は、2²、3²、…、10² が足す形とひく形で 1 回ずつ出て消えるので、11² − 1² = 120 です。分数でも同じで、1/2 = 1 − 1/2、1/6 = 1/2 − 1/3、1/12 = 1/3 − 1/4、… なので、1/2 + 1/6 + 1/12 + … + 1/90 = 1 − 1/10 = 9/10 です。
+      - part: 思い出す
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="79" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="79" y="16" font-size="14" text-anchor="middle">20</text>
+            <text x="79" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="100" y="50" font-size="24">(<tspan font-style="italic">k</tspan> + 4)</text>
+          </svg>
+        answer: 290
+        check: "sum(k + 4 for k in range(1, 21))"
+        hints:
+          - k の和と、4 の和に分けましょう。
+          - Σ k（k = 1〜20）を公式で求めましょう。
+          - 4 を 20 回足すと、いくつでしょう。
+        paths:
+          - [210 + 4 × 20, 290]
+      - part: 思い出す
+        text: n(n + 1)(2n + 1) を展開すると、どれになりますか。
+        choices: [2n³ + 3n² + n, 2n³ + n, 2n³ + 3n² + 1]
+        answer: 2n³ + 3n² + n
+        check: "[c for c, f in {'2n³ + 3n² + n': lambda n: 2 * n ** 3 + 3 * n ** 2 + n, '2n³ + n': lambda n: 2 * n ** 3 + n, '2n³ + 3n² + 1': lambda n: 2 * n ** 3 + 3 * n ** 2 + 1}.items() if all(f(n) == n * (n + 1) * (2 * n + 1) for n in range(-5, 6))][0]"
+        hints:
+          - はじめに n(n + 1) を展開しましょう。
+          - (n² + n)(2n + 1) を、分配法則で展開しましょう。
+          - 同類項をまとめましょう。
+        paths:
+          - [n(n + 1) = n² + n, (n² + n)(2n + 1) = 2n³ + n² + 2n² + n, 2n³ + 3n² + n]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">12</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        answer: 650
+        check: "sum(k * k for k in range(1, 13))"
+        hints:
+          - 2 乗の和の公式で、n = 12 です。
+          - 12 × 13 × 25 を 6 でわりましょう。
+          - 先に 12 を 6 でわると、計算が楽です。
+        paths:
+          - [12 × 13 × 25 ÷ 6, 2 × 13 × 25, 650]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">6</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>³</text>
+          </svg>
+        answer: 441
+        check: "sum(k ** 3 for k in range(1, 7))"
+        hints:
+          - 3 乗の和の公式で、n = 6 です。
+          - 先に 6 × 7 ÷ 2 を計算しましょう。
+          - その数を 2 乗しましょう。
+        paths:
+          - [6 × 7 ÷ 2 = 21, 21² = 441]
+      - part: 今日
+        text: (3² − 2²) + (4² − 3²) + (5² − 4²) + … + (15² − 14²) の値はいくつですか。
+        answer: 221
+        check: "sum((k + 1) ** 2 - k ** 2 for k in range(2, 15))"
+        hints:
+          - となりあうかっこの中で、消し合うものをさがしましょう。
+          - 3²、4²、…、14² は、足す形とひく形で 1 回ずつ出てきます。
+          - 消えずに残るのは、どれとどれでしょう。
+        paths:
+          - [3² から 14² までが消し合う, 15² − 2², 225 − 4 = 221]
+      - part: 挑戦
+        text: (k + 1)³ − k³ = 3k² + 3k + 1 です。この式の両辺を k = 1 から 9 まで足すことで、Σ k²（k = 1〜9）を求めましょう。
+        answer: 285
+        check: "sum(k * k for k in range(1, 10))"
+        hints:
+          - 左辺を k = 1 から 9 まで足すと、消し合って 10³ − 1³ が残ります。
+          - 右辺の和は、3 × Σ k² + 3 × Σ k + 9 です。
+          - Σ k（k = 1〜9）= 45 を入れて、Σ k² についての方程式を解きましょう。
+        paths:
+          - [左辺の和は 10³ − 1³ = 999, 右辺の和は 3S + 3 × 45 + 9, 3S = 999 − 135 − 9 = 855, S = 285]
+        note: 公式 9 × 10 × 19 ÷ 6 = 285 でも答えは出るが、ねらいは公式のわけ。同じ筋道を一般の n で行うと、2 乗の和の公式が出る。
+    extra:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">8</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        answer: 204
+        check: "sum(k * k for k in range(1, 9))"
+        hints:
+          - 2 乗の和の公式で、n = 8 です。
+          - 8 × 9 × 17 を 6 でわりましょう。
+          - 1 + 4 + 9 + … と書き出して確かめてもよいです。
+        paths:
+          - [8 × 9 × 17 ÷ 6, 204]
+      - part: 今日
+        text: 1/2 + 1/6 + 1/12 + 1/20 + 1/30 + 1/42 + 1/56 の値を、分数で答えましょう。
+        answer: 7/8
+        check: "sum(Fraction(1, k * (k + 1)) for k in range(1, 8))"
+        hints:
+          - 1/6 = 1/2 − 1/3、1/12 = 1/3 − 1/4 のように、2 つの分数の差に分けましょう。
+          - 1/2 は 1 − 1/2 と見ます。
+          - となりどうしで消し合うと、何が残るでしょう。
+        paths:
+          - [(1 − 1/2) + (1/2 − 1/3) + … + (1/7 − 1/8), 1 − 1/8, 7/8]
+      - part: 挑戦
+        text: 1/6 + 1/12 + 1/20 + … + 1/132 の値を、分数で答えましょう。
+        answer: 5/12
+        check: "sum(Fraction(1, k * (k + 1)) for k in range(2, 12))"
+        hints:
+          - 1/6、1/12、1/20 の分母は、2 × 3、3 × 4、4 × 5 です。
+          - 132 は、どんな続いた 2 つの数の積でしょう。
+          - 差に分けて、消し合ったあとに残る 2 つの分数を計算しましょう。
+        paths:
+          - [1/6 = 1/2 − 1/3 から 1/132 = 1/11 − 1/12 まで, 1/2 − 1/12, 5/12]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">15</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        answer: 1240
+        check: "sum(k * k for k in range(1, 16))"
+        hints:
+          - 2 乗の和の公式で、n = 15 です。
+          - 15 × 16 × 31 を 6 でわりましょう。
+          - 15 × 16 を先に 6 でわると、計算が楽です。
+        paths:
+          - [15 × 16 × 31 ÷ 6, 40 × 31, 1240]
+      - part: 思い出す
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">25</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 1)</text>
+          </svg>
+        answer: 675
+        check: "sum(2 * k + 1 for k in range(1, 26))"
+        hints:
+          - 2k の和と、1 の和に分けましょう。
+          - Σ k（k = 1〜25）を公式で求めましょう。
+          - 1 を 25 回足すと、いくつでしょう。
+        paths:
+          - [2 × 325 + 25, 675]
+      - part: 今日
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(<tspan font-style="italic">k</tspan>² + <tspan font-style="italic">k</tspan>)</text>
+          </svg>
+        choices: [n(n + 1)(n + 2)/3, n(n + 1)(2n + 1)/3, n²(n + 1)/2]
+        answer: n(n + 1)(n + 2)/3
+        check: "[c for c, f in {'n(n + 1)(n + 2)/3': lambda n: Fraction(n * (n + 1) * (n + 2), 3), 'n(n + 1)(2n + 1)/3': lambda n: Fraction(n * (n + 1) * (2 * n + 1), 3), 'n²(n + 1)/2': lambda n: Fraction(n * n * (n + 1), 2)}.items() if all(f(n) == sum(k * k + k for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - k² の和と、k の和に分けましょう。
+          - 2 つの公式の和を、n(n + 1) でくくりましょう。
+          - かっこの中を通分して、まとめましょう。
+        paths:
+          - [n(n + 1)(2n + 1)/6 + n(n + 1)/2, n(n + 1)/6 × (2n + 1 + 3), n(n + 1)(2n + 4)/6, n(n + 1)(n + 2)/3]
+      - part: 今日
+        text: 図の和が 120 になるのは、n がいくつのときですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 15
+        check: "[n for n in range(1, 100) if sum(range(1, n + 1)) == 120][0]"
+        hints:
+          - 公式で、n(n + 1)/2 = 120 になる n をさがします。
+          - n(n + 1) = 240 です。
+          - 続いた 2 つの数で、積が 240 になるものをさがしましょう。
+        paths:
+          - [n(n + 1) = 240, 15 × 16 = 240, n = 15]
+      - part: わけ
+        text: Σ k（k = 1〜n）= n(n + 1)/2 となるわけを、筋道を立てて書きましょう。
+        explain: 例：「n を自然数とし、S = 1 + 2 + 3 + … + n とする。足す順を逆にしても和は変わらないので（交換法則）、S = n + (n − 1) + (n − 2) + … + 1。2 つの式の両辺を足し、上下に並んだ項どうしを組にすると、1 + n、2 + (n − 1)、3 + (n − 2)、… のどの組も n + 1 になり、組は n 個ある。よって 2S = n(n + 1)、両辺を 2 でわって S = n(n + 1)/2 である。」と書ければよい。①「〜とする」で n と S を決める、② 逆の順に並べて足し、式を変形する、③ 約束した事実（交換法則と結合法則、等式の性質）で結ぶ、の 3 つがそろっているかを見る。n = 10 で 55 になると確かめただけで終わっていたら、例ではすべての n を示せないことを話す。A-004 のはしから組にする方法は、n が奇数のときにまん中の数が 1 つ残るので場合分けが要るが、この方法では場合分けが要らないことにも触れる。
+        hints:
+          - 「S = 1 + 2 + … + n とする」から書き始めましょう。
+          - 同じ和を、逆の順に並べた式も書きましょう。
+          - 上下に並んだ 2 つの項を足すと、いつもいくつになるでしょう。組はいくつあるでしょう。
+        paths:
+          - [S = 1 + 2 + … + n とする, S = n + … + 2 + 1 とも書ける, 上下の組はどれも n + 1 で n 組, 2S = n(n + 1)]
+      - part: わけ
+        text: どんな自然数 n でも、Σ (2k − 1)（k = 1〜n）= n² となるわけを、k² − (k − 1)² = 2k − 1 を使って、筋道を立てて書きましょう。
+        explain: 例：「k を自然数とする。乗法公式で (k − 1)² = k² − 2k + 1 なので、k² − (k − 1)² = k² − k² + 2k − 1 = 2k − 1 である。よって、和の各項を差の形に書くと、Σ (2k − 1)（k = 1〜n）= (1² − 0²) + (2² − 1²) + (3² − 2²) + … + (n² − (n − 1)²)。1²、2²、…、(n − 1)² は、足す形とひく形で 1 回ずつ出てくるので消し合い（入れかえとまとめ）、残るのは n² − 0² = n² である。」と書ければよい。①「〜とする」で k、n を決める、② 展開して各項を差の形に変形する、③ 約束した事実（乗法公式、足し算の入れかえとまとめ）で結ぶ、の 3 つがそろっているかを見る。前の問題の Σ k の公式を約束した事実として使い、Σ (2k − 1) = 2 × n(n + 1)/2 − n = n² と書いてもよい。1 + 3 + 5 = 9 = 3² のような例だけで終わっていたら、例ではすべての n を示せないことを話す。
+        hints:
+          - k² − (k − 1)² を展開して、2k − 1 になることを確かめましょう。
+          - 和を、(1² − 0²) + (2² − 1²) + … の形に書き並べましょう。
+          - となりあうかっこの中で、消し合うものはどれでしょう。
+        paths:
+          - [k² − (k − 1)² = 2k − 1, 和は (1² − 0²) + (2² − 1²) + … + (n² − (n − 1)²), 間が消し合い n² − 0², n²]
+          - [Σ (2k − 1) = 2 × n(n + 1)/2 − n, n² + n − n, n²]
+      - part: わけ
+        text: 図のように点を正方形に並べ、左上のかどから L の形に分けます。1 + 3 + 5 + 7 + 9 = 5² となるわけを、図を使って文で書きましょう。
+        svg: |
+          <svg viewBox="0 0 240 148" xmlns="http://www.w3.org/2000/svg">
+            <rect x="55" y="9" width="130" height="130" stroke="currentColor" fill="none" stroke-width="2"/>
+            <g fill="currentColor">
+              <circle cx="68" cy="22" r="6"/><circle cx="94" cy="22" r="6"/><circle cx="120" cy="22" r="6"/><circle cx="146" cy="22" r="6"/><circle cx="172" cy="22" r="6"/>
+              <circle cx="68" cy="48" r="6"/><circle cx="94" cy="48" r="6"/><circle cx="120" cy="48" r="6"/><circle cx="146" cy="48" r="6"/><circle cx="172" cy="48" r="6"/>
+              <circle cx="68" cy="74" r="6"/><circle cx="94" cy="74" r="6"/><circle cx="120" cy="74" r="6"/><circle cx="146" cy="74" r="6"/><circle cx="172" cy="74" r="6"/>
+              <circle cx="68" cy="100" r="6"/><circle cx="94" cy="100" r="6"/><circle cx="120" cy="100" r="6"/><circle cx="146" cy="100" r="6"/><circle cx="172" cy="100" r="6"/>
+              <circle cx="68" cy="126" r="6"/><circle cx="94" cy="126" r="6"/><circle cx="120" cy="126" r="6"/><circle cx="146" cy="126" r="6"/><circle cx="172" cy="126" r="6"/>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="2">
+              <polyline points="81,9 81,35 55,35"/>
+              <polyline points="107,9 107,61 55,61"/>
+              <polyline points="133,9 133,87 55,87"/>
+              <polyline points="159,9 159,113 55,113"/>
+            </g>
+          </svg>
+        explain: 例：「図の 5 × 5 の正方形の点を、左上のかどから L の形に分けると、点の数は 1、3、5、7、9 になる。どの L も、前の L より、たてと横に 1 つずつのびるので 2 つ多い。全部の L を合わせると正方形の点全部なので 5 × 5 = 25 こ。だから 1 + 3 + 5 + 7 + 9 = 5² である。」と書ければよい。「L を全部合わせると正方形になる」と「L が 2 つずつふえる」が書けているかを見る（代表の例で書くわけ ②）。6 番目の L（11 こ）を足すと 6 × 6 の正方形になることにふれ、前の問題の Σ (2k − 1) = n² とつなげる。
+        hints:
+          - 図の点を、左上のかどから L の形に数えましょう。
+          - L の点の数は、1、3、5、… とどうふえていくでしょう。
+          - 全部の点の数を、正方形のたてと横から求めましょう。
+        paths:
+          - [L の点は 1、3、5、7、9, 合わせると 5 × 5 の正方形, 1 + 3 + 5 + 7 + 9 = 25 = 5²]
+    extra:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">9</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>³</text>
+          </svg>
+        answer: 2025
+        check: "sum(k ** 3 for k in range(1, 10))"
+        hints:
+          - 3 乗の和の公式で、n = 9 です。
+          - 先に 9 × 10 ÷ 2 を計算しましょう。
+          - その数を 2 乗しましょう。
+        paths:
+          - [9 × 10 ÷ 2 = 45, 45² = 2025]
+      - part: 今日
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 3)</text>
+          </svg>
+        choices: [n² + 4n, n² + n + 3, 2n² + 3n]
+        answer: n² + 4n
+        check: "[c for c, f in {'n² + 4n': lambda n: n * n + 4 * n, 'n² + n + 3': lambda n: n * n + n + 3, '2n² + 3n': lambda n: 2 * n * n + 3 * n}.items() if all(f(n) == sum(2 * k + 3 for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - 2k の和と、3 の和に分けましょう。
+          - 2 × n(n + 1)/2 を計算しましょう。
+          - 3 を n 回足すと、いくつでしょう。
+        paths:
+          - [n(n + 1) + 3n, n² + n + 3n, n² + 4n]
+      - part: 挑戦
+        text: 図の和が 400 になるのは、n がいくつのときですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        answer: 20
+        check: "[n for n in range(1, 100) if sum(2 * k - 1 for k in range(1, n + 1)) == 400][0]"
+        hints:
+          - わけの問題で示した、図の和を n で表す式を使いましょう。
+          - その式が 400 になる n をさがします。
+          - 2 乗して 400 になる自然数をさがしましょう。
+        paths:
+          - [Σ (2k − 1)（k = 1〜n）= n², n² = 400, n = 20]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 等差数列 4、7、10、13、… で、100 は何番目の数ですか。
+        answer: 33
+        check: "(100 - 4) // 3 + 1"
+        hints:
+          - となりの数との差は、いくつでしょう。
+          - 4 から 100 まで、差を何回足したでしょう。
+          - 足した回数に 1 を足すと、何番目かがわかります。
+        paths:
+          - [(100 − 4) ÷ 3 = 32 回, 32 + 1 = 33 番目]
+      - part: 思い出す
+        text: n² + 3n + 2 を因数分解すると、どれになりますか。
+        choices: [(n + 1)(n + 2), (n − 1)(n + 3), (n + 1)(n + 3)]
+        answer: (n + 1)(n + 2)
+        check: "[c for c, f in {'(n + 1)(n + 2)': lambda n: (n + 1) * (n + 2), '(n − 1)(n + 3)': lambda n: (n - 1) * (n + 3), '(n + 1)(n + 3)': lambda n: (n + 1) * (n + 3)}.items() if all(f(n) == n * n + 3 * n + 2 for n in range(-5, 6))][0]"
+        hints:
+          - 積が 2、和が 3 になる 2 つの数をさがしましょう。
+          - (n + a)(n + b) の形にします。
+          - 展開して、元の式にもどるか確かめましょう。
+        paths:
+          - [積が 2 で和が 3 の 2 数は 1 と 2, (n + 1)(n + 2)]
+      - part: 今日
+        text: 等差数列 4、7、10、13、… の k 番目の数は 3k + 1 です。この数列の 1 番目から 30 番目までの和はいくつですか。
+        answer: 1425
+        check: "sum(3 * k + 1 for k in range(1, 31))"
+        hints:
+          - 和を Σ (3k + 1)（k = 1〜30）と表しましょう。
+          - 3k の和と、1 の和に分けましょう。
+          - Σ k（k = 1〜30）を公式で求めましょう。
+        paths:
+          - [3 × 465 + 30, 1395 + 30, 1425]
+          - [30 番目は 91, はしから組にして (4 + 91) × 15, 1425]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="42" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="42" y="16" font-size="14" text-anchor="middle">10</text>
+            <text x="42" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="63" y="50" font-size="24">(<tspan font-style="italic">k</tspan> + 1)(<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        answer: 375
+        check: "sum((k + 1) * (k - 1) for k in range(1, 11))"
+        hints:
+          - (k + 1)(k − 1) を展開しましょう。
+          - k² の和と、−1 の和に分けましょう。
+          - Σ k²（k = 1〜10）を公式で求めましょう。
+        paths:
+          - [(k + 1)(k − 1) = k² − 1, 385 − 10, 375]
+      - part: 今日
+        text: 図の和を m の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">2<tspan font-style="italic">m</tspan></text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        choices: [2m² + m, m² + m, 4m² + 2m]
+        answer: 2m² + m
+        check: "[c for c, f in {'2m² + m': lambda m: 2 * m * m + m, 'm² + m': lambda m: m * m + m, '4m² + 2m': lambda m: 4 * m * m + 2 * m}.items() if all(f(m) == sum(range(1, 2 * m + 1)) for m in range(1, 9))][0]"
+        hints:
+          - 1 から n までの和の公式の n に、2m を入れましょう。
+          - 2m(2m + 1)/2 を約分しましょう。
+          - 分配法則で、かっこを外しましょう。
+        paths:
+          - [2m(2m + 1)/2, m(2m + 1), 2m² + m]
+        note: m = 1 なら 1 + 2 = 3、m = 2 なら 1 + 2 + 3 + 4 = 10 と、選んだ式の値を比べて確かめさせる。
+      - part: 挑戦
+        text: 1 × 2 + 2 × 3 + 3 × 4 + … + 10 × 11 の値はいくつですか。
+        answer: 440
+        check: "sum(k * (k + 1) for k in range(1, 11))"
+        hints:
+          - k 番目の項を、k の式で表しましょう。
+          - k(k + 1) を展開すると、k² + k です。
+          - k² の和と k の和を、それぞれ公式で求めましょう。
+        paths:
+          - [Σ k(k + 1)（k = 1〜10）, 385 + 55, 440]
+          - [4 日目の n(n + 1)(n + 2)/3 に n = 10, 10 × 11 × 12 ÷ 3, 440]
+    extra:
+      - part: 今日
+        text: 等差数列 2、7、12、17、… の 1 番目から 12 番目までの和はいくつですか。
+        answer: 354
+        check: "sum(2 + 5 * (k - 1) for k in range(1, 13))"
+        hints:
+          - k 番目の数を、k の式で表しましょう。
+          - 5k − 3 の和を、5k の和と −3 の和に分けましょう。
+          - Σ k（k = 1〜12）を公式で求めましょう。
+        paths:
+          - [k 番目は 5k − 3, 5 × 78 − 3 × 12, 390 − 36 = 354]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">8</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(<tspan font-style="italic">k</tspan> + 2)²</text>
+          </svg>
+        answer: 380
+        check: "sum((k + 2) ** 2 for k in range(1, 9))"
+        hints:
+          - (k + 2)² を展開しましょう。
+          - k² の和、4k の和、4 の和に分けましょう。
+          - Σ k² と Σ k（k = 1〜8）を、公式で求めましょう。
+        paths:
+          - [k² + 4k + 4, 204 + 4 × 36 + 4 × 8, 204 + 144 + 32 = 380]
+          - [3² + 4² + … + 10², Σ k²（k = 1〜10）から 1² と 2² をひく, 385 − 5 = 380]
+      - part: 挑戦
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="42" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="42" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="42" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="63" y="50" font-size="24">(<tspan font-style="italic">k</tspan> + 1)(<tspan font-style="italic">k</tspan> − 1)</text>
+          </svg>
+        choices: [n(n + 1)(2n + 1)/6 − n, n(n + 1)(2n + 1)/6 − 1, n(n − 1)(2n − 1)/6]
+        answer: n(n + 1)(2n + 1)/6 − n
+        check: "[c for c, f in {'n(n + 1)(2n + 1)/6 − n': lambda n: Fraction(n * (n + 1) * (2 * n + 1), 6) - n, 'n(n + 1)(2n + 1)/6 − 1': lambda n: Fraction(n * (n + 1) * (2 * n + 1), 6) - 1, 'n(n − 1)(2n − 1)/6': lambda n: Fraction(n * (n - 1) * (2 * n - 1), 6)}.items() if all(f(n) == sum((k + 1) * (k - 1) for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - (k + 1)(k − 1) を展開しましょう。
+          - −1 を n 回足すと、いくつでしょう。
+          - n = 2 を入れて、選んだ式が 0 + 3 になるか確かめましょう。
+        paths:
+          - [Σ (k² − 1), Σ k² − n, n(n + 1)(2n + 1)/6 − n]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">5</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(5<tspan font-style="italic">k</tspan> − 2)</text>
+          </svg>
+        answer: 65
+        check: "sum(5 * k - 2 for k in range(1, 6))"
+        hints:
+          - k に 1 から 5 までを入れた 5k − 2 を書き出しましょう。
+          - 3 から始まり、5 ずつふえる数です。
+          - 5 つの数を足しましょう。
+        paths:
+          - [3 + 8 + 13 + 18 + 23, 65]
+      - part: 今日
+        text: 2 + 4 + 6 + … + 40 を Σ を使って表したものは、図のア、イ、ウのどれですか。
+        svg: |
+          <svg viewBox="0 0 300 108" xmlns="http://www.w3.org/2000/svg">
+            <text x="50" y="104" font-size="15" text-anchor="middle">ア</text>
+            <text x="20" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="20" y="16" font-size="14" text-anchor="middle">20</text>
+            <text x="20" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="38" y="50" font-size="17">(<tspan font-style="italic">k</tspan> + 2)</text>
+            <text x="150" y="104" font-size="15" text-anchor="middle">イ</text>
+            <text x="136" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="136" y="16" font-size="14" text-anchor="middle">40</text>
+            <text x="136" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="154" y="50" font-size="17">2<tspan font-style="italic">k</tspan></text>
+            <text x="250" y="104" font-size="15" text-anchor="middle">ウ</text>
+            <text x="236" y="56" font-size="34" text-anchor="middle">Σ</text>
+            <text x="236" y="16" font-size="14" text-anchor="middle">20</text>
+            <text x="236" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="254" y="50" font-size="17">2<tspan font-style="italic">k</tspan></text>
+          </svg>
+        choices: [ア, イ, ウ]
+        answer: ウ
+        check: "[c for c, (m, f) in {'ア': (20, lambda k: k + 2), 'イ': (40, lambda k: 2 * k), 'ウ': (20, lambda k: 2 * k)}.items() if [f(k) for k in range(1, m + 1)] == sorted(range(2, 41, 2))][0]"
+        hints:
+          - k 番目の数を、k の式で表しましょう。
+          - 40 は何番目の数でしょう。
+          - 上の数は、k の終わりの値です。
+        paths:
+          - [k 番目は 2k, 40 = 2 × 20 で 20 番目まで, ウ]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">40</text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 820
+        check: "sum(range(1, 41))"
+        hints:
+          - 1 から n までの和の公式を使いましょう。
+          - n = 40 です。
+          - 40 × 41 を 2 でわりましょう。
+        paths:
+          - [40 × 41 ÷ 2, 820]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">20</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(3<tspan font-style="italic">k</tspan> − 2)</text>
+          </svg>
+        answer: 590
+        check: "sum(3 * k - 2 for k in range(1, 21))"
+        hints:
+          - 3k の和と、−2 の和に分けましょう。
+          - Σ k（k = 1〜20）を公式で求めましょう。
+          - −2 を 20 回足すと、いくつでしょう。
+        paths:
+          - [3 × 210 − 2 × 20, 630 − 40, 590]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="110" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="110" y="16" font-size="14" text-anchor="middle">40</text>
+            <text x="110" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 21</text>
+            <text x="131" y="50" font-size="24"><tspan font-style="italic">k</tspan></text>
+          </svg>
+        answer: 610
+        check: "sum(range(21, 41))"
+        hints:
+          - 1 から 40 までの和から、いらない部分をひきましょう。
+          - ひくのは、1 から 20 までの和です。
+          - 1 から n までの和の公式を 2 回使いましょう。
+        paths:
+          - [820 − 210, 610]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">11</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>²</text>
+          </svg>
+        answer: 506
+        check: "sum(k * k for k in range(1, 12))"
+        hints:
+          - 2 乗の和の公式で、n = 11 です。
+          - 11 × 12 × 23 を 6 でわりましょう。
+          - 12 を先に 6 でわると、計算が楽です。
+        paths:
+          - [11 × 12 × 23 ÷ 6, 11 × 2 × 23, 506]
+      - part: 今日
+        text: 図の和を n の式で表すと、どれになりますか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle"><tspan font-style="italic">n</tspan></text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 1)</text>
+          </svg>
+        choices: [n² + 2n, n² + n + 1, 2n² + n]
+        answer: n² + 2n
+        check: "[c for c, f in {'n² + 2n': lambda n: n * n + 2 * n, 'n² + n + 1': lambda n: n * n + n + 1, '2n² + n': lambda n: 2 * n * n + n}.items() if all(f(n) == sum(2 * k + 1 for k in range(1, n + 1)) for n in range(1, 9))][0]"
+        hints:
+          - 2k の和と、1 の和に分けましょう。
+          - 2 × n(n + 1)/2 を計算しましょう。
+          - 1 を n 回足すと、いくつでしょう。
+        paths:
+          - [n(n + 1) + n, n² + 2n]
+      - part: 今日
+        text: 1/2 + 1/6 + 1/12 + … + 1/110 の値を、分数で答えましょう。
+        answer: 10/11
+        check: "sum(Fraction(1, k * (k + 1)) for k in range(1, 11))"
+        hints:
+          - どの分数も、1/2 − 1/3 のような 2 つの分数の差に分けられます。
+          - 110 は、どんな続いた 2 つの数の積でしょう。
+          - 消し合ったあとに残る 2 つの数を計算しましょう。
+        paths:
+          - [1/110 = 1/10 − 1/11, (1 − 1/2) + (1/2 − 1/3) + … + (1/10 − 1/11), 1 − 1/11 = 10/11]
+    extra:
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="102" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="102" y="16" font-size="14" text-anchor="middle">5</text>
+            <text x="102" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="123" y="50" font-size="24"><tspan font-style="italic">k</tspan>³</text>
+          </svg>
+        answer: 225
+        check: "sum(k ** 3 for k in range(1, 6))"
+        hints:
+          - 3 乗の和の公式で、n = 5 です。
+          - 先に 5 × 6 ÷ 2 を計算しましょう。
+          - その数を 2 乗しましょう。
+        paths:
+          - [5 × 6 ÷ 2 = 15, 15² = 225]
+      - part: 今日
+        text: 図の和の値はいくつですか。
+        svg: |
+          <svg viewBox="0 0 240 86" xmlns="http://www.w3.org/2000/svg">
+            <text x="72" y="56" font-size="42" text-anchor="middle">Σ</text>
+            <text x="72" y="16" font-size="14" text-anchor="middle">12</text>
+            <text x="72" y="78" font-size="13" text-anchor="middle"><tspan font-style="italic">k</tspan> = 1</text>
+            <text x="93" y="50" font-size="24">(2<tspan font-style="italic">k</tspan> + 1)</text>
+          </svg>
+        answer: 168
+        check: "sum(2 * k + 1 for k in range(1, 13))"
+        hints:
+          - 2k の和と、1 の和に分けましょう。
+          - Σ k（k = 1〜12）を公式で求めましょう。
+          - 1 を 12 回足すと、いくつでしょう。
+        paths:
+          - [2 × 78 + 12, 168]
+      - part: 今日
+        text: (4² − 3²) + (5² − 4²) + … + (20² − 19²) の値はいくつですか。
+        answer: 391
+        check: "sum((k + 1) ** 2 - k ** 2 for k in range(3, 20))"
+        hints:
+          - となりあうかっこの中で、消し合うものをさがしましょう。
+          - 4²、5²、…、19² は、足す形とひく形で 1 回ずつ出てきます。
+          - 消えずに残るのは、どれとどれでしょう。
+        paths:
+          - [20² − 3², 400 − 9 = 391]

@@ -1,0 +1,981 @@
+# A-019 1 次関数とグラフ
+#
+# 書き方は N-001 の頭の注のとおり。答えの形と check は A-011 に合わせる（負の数は「−」U+2212、分数は約分した形）。
+# 段 5 の単元（中身は中学 2 年）なので、1 日の組は 思い出す 2・今日 2・挑戦 1（stages の day）、わけの深さは ③（水準 3）。
+#   わけの日は 思い出す 2・今日 1・わけ 3、確認の日は 7 問にした。
+# 地図に plan がないので、既定の並び（導入、練習、練習、わけ、混ぜる、確認）で作った。
+#   1 日目：関数（x を決めると y がただ 1 つ決まる）、比例 y = ax と 1 次関数 y = ax + b、表と式、変化の割合。
+#   2 日目：グラフ（y = ax は原点を通る直線、y = ax + b はそれを y 軸の向きに b だけ平行に動かした直線）、傾きと切片、
+#     グラフから式を読む、点が直線の上にあるか。
+#   3 日目：式を求める（傾きと 1 点、2 点）、2 つの直線の交点（y を等しいとおいた 1 次方程式で解く）、x の変域から y の変域。
+#   4 日目：わけ（3 問とも ③：変化の割合はいつも a、a が正なら増える、傾きが等しい 2 直線は交わらない）。
+#   5 日目：A-006、A-011 と混ぜる（反比例とくらべる、水そう・ばね・本・料金の 1 次関数）。6 日目：確認。
+# 前提は A-006（比例と反比例）、A-011（1 次方程式）。座標平面（G-050）は A-006 の前提として済んでいるものとし、負の座標も使う。
+#   連立方程式（A-012）は前提にないので、2 元 1 次方程式 ax + by = c のグラフと連立方程式の解は扱わず、
+#   交点は y = … の 2 つの式の右辺を等しいとおいて 1 次方程式で求める。反比例のグラフ（双曲線）は描かず、表と式でくらべるだけにした。
+#   不等式（A-013）も前提にないので、変域は −1 ≦ x ≦ 4 の書き方を読むだけにし、不等式の性質は使わない。
+# グラフは svg で描く（方眼の 1 めもり、x と y は −5〜5 が基本、原点 O、軸に矢印）。直線は方眼の交わる点を通るようにし、
+#   問題の答え（式や値）は図に書かない。料金の比べ方の図は、目盛りの数を書かずにグラフのようすだけを見せる。
+# 表は figure に全角の数字と全角の「－」で書く（A-006 の書き方。列の幅をそろえるため）。表の数と答えの数が重ならないようにした。
+# 傾きが分数の式は「y = −(1/2)x + 1」と書く（「1/2x」は画面で分数に重ならないので、かっこでくくる）。
+# 答えは数を打つ。式・点・変域を選ぶ問題は choices。式を選ぶ check は、選択肢ごとの式（lambda x）が、図の直線の通る格子点や
+#   問題の点をすべて満たすものを選び出す。1 次関数かどうかの check は x が 1 増えるごとの y の増える量が 1 つにそろうか、
+#   反比例かどうかは x × y が 1 つにそろうかで調べる。値の check は Fraction で計算し、負の数は「−」の形にそろえる。
+# 1 次関数は、2 次関数（A-020）、座標と直線の式（G-026）、散布図と回帰（S-030）、需要と供給（F-008）、
+#   投資の損益分岐（F-007）、比例制御（E-180）の入口になる（D-026）。
+
+id: A-019
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 水そうに 4 L の水が入っています。そこへ 1 分あたり 3 L ずつ水を入れます。x 分後の水の量を y L として、x と y の関係を調べてみましょう。
+        figure: "x｜　０｜　１｜　２｜　３｜　４\ny｜　４｜　７｜１０｜１３｜１６"
+        explain: x の値を 1 つ決めると、y の値がただ 1 つ決まるとき、「y は x の関数である」といいます。表から、y は 4 に 3 の x 倍を足した数なので、y = 3x + 4 と表せます。このように、y が x の 1 次式 y = ax + b（a、b は数で、a は 0 でない）で表されるとき、「y は x の 1 次関数である」といいます。比例 y = ax（A-006 の決まった数が a）は、b = 0 の 1 次関数です。x の増える量に対する y の増える量の割合を、変化の割合といいます。変化の割合 ＝ (y の増える量) ÷ (x の増える量) です。x が 1 から 4 まで 3 増えると、y は 7 から 16 まで 9 増えるので、変化の割合は 9 ÷ 3 = 3 です。1 次関数 y = ax + b の変化の割合は、どこで調べてもいつも a になります（わけは 4 日目）。反比例 y = 12/x や y = x² は、1 次関数ではありません。
+      - part: 思い出す
+        text: y が x に比例し、x = 4 のとき y = 12 です。x = 7 のとき、y はいくつですか。
+        answer: 21
+        check: "Fraction(12, 4) * 7"
+        hints:
+          - 比例では、y ÷ x がいつも同じ数になります（A-006）。
+          - x = 4 のとき、y ÷ x はいくつでしょう。
+          - その数に 7 をかけましょう。
+        paths:
+          - [y ÷ x = 12 ÷ 4 = 3, y = 3x, 3 × 7 = 21]
+      - part: 思い出す
+        text: 方程式 6x − 7 = 2x + 13 を解きましょう。x はいくつですか。
+        answer: 5
+        check: "Fraction(13 + 7, 6 - 2)"
+        hints:
+          - x の項を左辺に、数の項を右辺に移項しましょう。
+          - 移項すると、符号が変わります。
+          - 両辺を x の係数でわりましょう。
+        paths:
+          - [6x − 2x = 13 + 7, 4x = 20, x = 5]
+      - part: 今日
+        text: 1 次関数 y = −2x + 5 で、x = 4 のときの y の値はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(-2 * 4 + 5)"
+        hints:
+          - x に 4 を代入しましょう。
+          - −2 × 4 を先に計算します。
+          - 負の数と正の数のたし算に気をつけましょう。
+        paths:
+          - [y = −2 × 4 + 5, −8 + 5, −3]
+      - part: 今日
+        text: 次のうち、y が x の 1 次関数であるものはどれですか。
+        choices: [y = 3 − 4x, y = 6/x, y = x²]
+        answer: y = 3 − 4x
+        check: "[c for c, f in {'y = 3 − 4x': lambda x: 3 - 4 * x, 'y = 6/x': lambda x: Fraction(6, x), 'y = x²': lambda x: x * x}.items() if len(set(f(x + 1) - f(x) for x in range(1, 8))) == 1][0]"
+        hints:
+          - 1 次関数は、y = ax + b の形に表せる関数です。
+          - それぞれの式で、x が 1 増えるごとに y がいくつ増えるかを調べてもよいです。
+          - y = 6/x は反比例（A-006）です。
+        paths:
+          - [y = 3 − 4x = −4x + 3, a = −4、b = 3 の 1 次関数]
+        note: 項の順が y = ax + b とちがうと、1 次関数と気づきにくい。y = x² は 2 次の式で、x が 1 増えるごとの y の増える量がそろわない。
+      - part: 挑戦
+        text: 1 次関数 y = ax + 3 で、x の値が 2 から 6 まで増えると、y の値は 10 減ります。a はいくつですか。
+        answer: −5/2
+        accept: [−2.5]
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-10, 6 - 2))"
+        hints:
+          - 変化の割合は、(y の増える量) ÷ (x の増える量) です。
+          - y が 10 減るのは、y の増える量が −10 ということです。
+          - 1 次関数の変化の割合は、a に等しくなります。
+        paths:
+          - [x の増える量は 4, y の増える量は −10, a = −10 ÷ 4 = −5/2]
+        note: 減る量を正の数のまま 10 ÷ 4 = 5/2 としやすい。
+    extra:
+      - part: 今日
+        text: 1 次関数 y = 4x − 9 で、x = −2 のときの y の値はいくつですか。
+        answer: −17
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(4 * (-2) - 9)"
+        hints:
+          - x に −2 を代入しましょう。
+          - 4 × (−2) を先に計算します。
+          - 負の数から正の数をひくときに気をつけましょう。
+        paths:
+          - [y = 4 × (−2) − 9, −8 − 9, −17]
+      - part: 今日
+        text: 下の表は、ある 1 次関数の x と y の値です。変化の割合はいくつですか。
+        figure: "x｜－１｜　１｜　３｜　５\ny｜　５｜　１｜－３｜－７"
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-7 - 5, 5 - (-1)))"
+        hints:
+          - x がいくつ増えると、y がいくつ増えるかを表から読みましょう。
+          - y が減っているときは、増える量は負の数です。
+          - (y の増える量) ÷ (x の増える量) を計算しましょう。
+        paths:
+          - [x が 2 増えると y は 4 減る, −4 ÷ 2 = −2]
+      - part: 挑戦
+        text: 1 次関数 y = −3x + 4 で、x の値が −1 から 3 まで増えるとき、y の増える量はいくつですか。
+        answer: −12
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((-3 * 3 + 4) - (-3 * (-1) + 4))"
+        hints:
+          - x = −1 と x = 3 のときの y を、それぞれ求めましょう。
+          - y の増える量は、あとの y − 前の y です。
+          - 変化の割合 × (x の増える量) でも求められます。
+        paths:
+          - [x = −1 で y = 7、x = 3 で y = −5, −5 − 7 = −12]
+          - [変化の割合は −3, x の増える量は 4, −3 × 4 = −12]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: y = 2x と y = 2x + 3 のグラフをくらべてみましょう。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="120.0" x2="260.0" y2="120.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="150.0" y1="228.0" x2="150.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 120.0 L252.0 116.0 L252.0 124.0 Z" fill="currentColor"/>
+            <path d="M150.0 10.0 L146.0 18.0 L154.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="125.0" font-size="14" font-style="italic">x</text>
+            <text x="156.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="146.0" y="133.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="133.0" font-size="10" text-anchor="middle">−5</text>
+            <text x="70.0" y="133.0" font-size="10" text-anchor="middle">−4</text>
+            <text x="90.0" y="133.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="110.0" y="133.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="130.0" y="133.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="170.0" y="133.0" font-size="10" text-anchor="middle">1</text>
+            <text x="190.0" y="133.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="133.0" font-size="10" text-anchor="middle">3</text>
+            <text x="230.0" y="133.0" font-size="10" text-anchor="middle">4</text>
+            <text x="250.0" y="133.0" font-size="10" text-anchor="middle">5</text>
+            <text x="146.0" y="223.0" font-size="10" text-anchor="end">−5</text>
+            <text x="146.0" y="203.0" font-size="10" text-anchor="end">−4</text>
+            <text x="146.0" y="183.0" font-size="10" text-anchor="end">−3</text>
+            <text x="146.0" y="163.0" font-size="10" text-anchor="end">−2</text>
+            <text x="146.0" y="143.0" font-size="10" text-anchor="end">−1</text>
+            <text x="146.0" y="103.0" font-size="10" text-anchor="end">1</text>
+            <text x="146.0" y="83.0" font-size="10" text-anchor="end">2</text>
+            <text x="146.0" y="63.0" font-size="10" text-anchor="end">3</text>
+            <text x="146.0" y="43.0" font-size="10" text-anchor="end">4</text>
+            <text x="146.0" y="23.0" font-size="10" text-anchor="end">5</text>
+            <line x1="100.0" y1="220.0" x2="200.0" y2="20.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <line x1="70.0" y1="220.0" x2="170.0" y2="20.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="60.0" r="4" fill="currentColor"/>
+            <text x="188.0" y="72.0" font-size="13"><tspan font-style="italic">y</tspan> = 2<tspan font-style="italic">x</tspan></text>
+            <text x="56.0" y="48.0" font-size="13"><tspan font-style="italic">y</tspan> = 2<tspan font-style="italic">x</tspan> + 3</text>
+          </svg>
+        explain: y = ax のグラフは、原点 O を通る直線です（比例のグラフ）。y = 2x + 3 の y の値は、同じ x の y = 2x の値より、いつも 3 大きいので、そのグラフは、y = 2x のグラフを y 軸の向きに 3 だけ平行に動かした直線になります。1 次関数 y = ax + b のグラフは直線で、b は x = 0 のときの y の値、つまり直線が y 軸と交わる点の y 座標です。これを切片といいます。a は傾きといい、右へ 1 進むと上へ a 進むことを表します（a が負の数なら下へ進みます）。傾きは、変化の割合と同じです。y = 2x + 3 のグラフは、点 (0, 3) を通り、右へ 1 進むと上へ 2 進みます。グラフを描くときは、切片の点と、そこから傾きのとおりに進んだ点の 2 点を、まっすぐ結びます。a が正の数なら右上がり、負の数なら右下がりの直線です。
+      - part: 思い出す
+        text: 1 次関数 y = 5x − 2 で、x の値が 1 から 3 まで増えるとき、y の増える量はいくつですか。
+        answer: 10
+        check: "(5 * 3 - 2) - (5 * 1 - 2)"
+        hints:
+          - x = 1 と x = 3 のときの y を、それぞれ求めましょう。
+          - あとの y から前の y をひきましょう。
+          - 変化の割合 × (x の増える量) でも求められます。
+        paths:
+          - [x = 1 で y = 3、x = 3 で y = 13, 13 − 3 = 10]
+      - part: 思い出す
+        text: 方程式 −3x + 4 = 10 を解きましょう。x はいくつですか。
+        answer: −2
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(10 - 4, -3))"
+        hints:
+          - 4 を右辺に移項しましょう。
+          - 移項すると、符号が変わります。
+          - 両辺を −3 でわりましょう。
+        paths:
+          - [−3x = 10 − 4, −3x = 6, x = −2]
+      - part: 今日
+        text: 図の直線の式は、どれですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="120.0" x2="260.0" y2="120.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="150.0" y1="228.0" x2="150.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 120.0 L252.0 116.0 L252.0 124.0 Z" fill="currentColor"/>
+            <path d="M150.0 10.0 L146.0 18.0 L154.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="125.0" font-size="14" font-style="italic">x</text>
+            <text x="156.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="146.0" y="133.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="133.0" font-size="10" text-anchor="middle">−5</text>
+            <text x="70.0" y="133.0" font-size="10" text-anchor="middle">−4</text>
+            <text x="90.0" y="133.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="110.0" y="133.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="130.0" y="133.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="170.0" y="133.0" font-size="10" text-anchor="middle">1</text>
+            <text x="190.0" y="133.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="133.0" font-size="10" text-anchor="middle">3</text>
+            <text x="230.0" y="133.0" font-size="10" text-anchor="middle">4</text>
+            <text x="250.0" y="133.0" font-size="10" text-anchor="middle">5</text>
+            <text x="146.0" y="223.0" font-size="10" text-anchor="end">−5</text>
+            <text x="146.0" y="203.0" font-size="10" text-anchor="end">−4</text>
+            <text x="146.0" y="183.0" font-size="10" text-anchor="end">−3</text>
+            <text x="146.0" y="163.0" font-size="10" text-anchor="end">−2</text>
+            <text x="146.0" y="143.0" font-size="10" text-anchor="end">−1</text>
+            <text x="146.0" y="103.0" font-size="10" text-anchor="end">1</text>
+            <text x="146.0" y="83.0" font-size="10" text-anchor="end">2</text>
+            <text x="146.0" y="63.0" font-size="10" text-anchor="end">3</text>
+            <text x="146.0" y="43.0" font-size="10" text-anchor="end">4</text>
+            <text x="146.0" y="23.0" font-size="10" text-anchor="end">5</text>
+            <line x1="110.0" y1="220.0" x2="210.0" y2="20.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="140.0" r="4" fill="currentColor"/>
+            <circle cx="190.0" cy="60.0" r="4" fill="currentColor"/>
+          </svg>
+        choices: [y = 2x − 1, y = −2x − 1, y = 2x + 1]
+        answer: y = 2x − 1
+        check: "[c for c, f in {'y = 2x − 1': lambda x: 2 * x - 1, 'y = −2x − 1': lambda x: -2 * x - 1, 'y = 2x + 1': lambda x: 2 * x + 1}.items() if all(f(x) == y for x, y in ((0, -1), (2, 3)))][0]"
+        hints:
+          - 直線が y 軸と交わる点の y 座標を読みましょう。
+          - 右へ 1 進むと、上へいくつ進むでしょう。
+          - 傾きと切片を、y = ax + b に入れましょう。
+        paths:
+          - [切片は −1, 右へ 1 で上へ 2 なので傾きは 2, y = 2x − 1]
+      - part: 今日
+        text: 図の直線の傾きはいくつですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="120.0" x2="260.0" y2="120.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="150.0" y1="228.0" x2="150.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 120.0 L252.0 116.0 L252.0 124.0 Z" fill="currentColor"/>
+            <path d="M150.0 10.0 L146.0 18.0 L154.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="125.0" font-size="14" font-style="italic">x</text>
+            <text x="156.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="146.0" y="133.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="133.0" font-size="10" text-anchor="middle">−5</text>
+            <text x="70.0" y="133.0" font-size="10" text-anchor="middle">−4</text>
+            <text x="90.0" y="133.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="110.0" y="133.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="130.0" y="133.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="170.0" y="133.0" font-size="10" text-anchor="middle">1</text>
+            <text x="190.0" y="133.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="133.0" font-size="10" text-anchor="middle">3</text>
+            <text x="230.0" y="133.0" font-size="10" text-anchor="middle">4</text>
+            <text x="250.0" y="133.0" font-size="10" text-anchor="middle">5</text>
+            <text x="146.0" y="223.0" font-size="10" text-anchor="end">−5</text>
+            <text x="146.0" y="203.0" font-size="10" text-anchor="end">−4</text>
+            <text x="146.0" y="183.0" font-size="10" text-anchor="end">−3</text>
+            <text x="146.0" y="163.0" font-size="10" text-anchor="end">−2</text>
+            <text x="146.0" y="143.0" font-size="10" text-anchor="end">−1</text>
+            <text x="146.0" y="103.0" font-size="10" text-anchor="end">1</text>
+            <text x="146.0" y="83.0" font-size="10" text-anchor="end">2</text>
+            <text x="146.0" y="63.0" font-size="10" text-anchor="end">3</text>
+            <text x="146.0" y="43.0" font-size="10" text-anchor="end">4</text>
+            <text x="146.0" y="23.0" font-size="10" text-anchor="end">5</text>
+            <line x1="60.0" y1="20.0" x2="250.0" y2="146.7" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="80.0" r="4" fill="currentColor"/>
+            <circle cx="210.0" cy="120.0" r="4" fill="currentColor"/>
+          </svg>
+        answer: −2/3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(0 - 2, 3 - 0))"
+        hints:
+          - 直線が通る、方眼の線の交わる点を 2 つ見つけましょう。
+          - y 軸の上の点から右へ 3 進むと、上下にいくつ進むでしょう。
+          - 傾きは、(y の増える量) ÷ (x の増える量) です。
+        paths:
+          - ["(0, 2) から (3, 0) へ", 右へ 3 で下へ 2, 傾きは −2/3]
+        note: 下へ進むときは、y の増える量が負の数。−3/2 と分母と分子を逆にしやすい。
+      - part: 挑戦
+        text: y = 3x のグラフを、y 軸の向きに −5 だけ平行に動かした直線が、点 (k, 7) を通ります。k はいくつですか。
+        answer: 4
+        check: "[k for k in range(-30, 31) if 3 * k - 5 == 7][0]"
+        hints:
+          - y 軸の向きに −5 動かすと、同じ x の y の値はどうなるでしょう。
+          - 動かした直線の式を、y = ax + b の形で書きましょう。
+          - x = k、y = 7 を代入して、k の方程式を解きましょう。
+        paths:
+          - [動かした直線は y = 3x − 5, 7 = 3k − 5, 3k = 12, k = 4]
+    extra:
+      - part: 今日
+        text: 図の直線の式は、どれですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="120.0" x2="260.0" y2="120.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="150.0" y1="228.0" x2="150.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 120.0 L252.0 116.0 L252.0 124.0 Z" fill="currentColor"/>
+            <path d="M150.0 10.0 L146.0 18.0 L154.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="125.0" font-size="14" font-style="italic">x</text>
+            <text x="156.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="146.0" y="133.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="133.0" font-size="10" text-anchor="middle">−5</text>
+            <text x="70.0" y="133.0" font-size="10" text-anchor="middle">−4</text>
+            <text x="90.0" y="133.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="110.0" y="133.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="130.0" y="133.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="170.0" y="133.0" font-size="10" text-anchor="middle">1</text>
+            <text x="190.0" y="133.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="133.0" font-size="10" text-anchor="middle">3</text>
+            <text x="230.0" y="133.0" font-size="10" text-anchor="middle">4</text>
+            <text x="250.0" y="133.0" font-size="10" text-anchor="middle">5</text>
+            <text x="146.0" y="223.0" font-size="10" text-anchor="end">−5</text>
+            <text x="146.0" y="203.0" font-size="10" text-anchor="end">−4</text>
+            <text x="146.0" y="183.0" font-size="10" text-anchor="end">−3</text>
+            <text x="146.0" y="163.0" font-size="10" text-anchor="end">−2</text>
+            <text x="146.0" y="143.0" font-size="10" text-anchor="end">−1</text>
+            <text x="146.0" y="103.0" font-size="10" text-anchor="end">1</text>
+            <text x="146.0" y="83.0" font-size="10" text-anchor="end">2</text>
+            <text x="146.0" y="63.0" font-size="10" text-anchor="end">3</text>
+            <text x="146.0" y="43.0" font-size="10" text-anchor="end">4</text>
+            <text x="146.0" y="23.0" font-size="10" text-anchor="end">5</text>
+            <line x1="110.0" y1="20.0" x2="250.0" y2="160.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="60.0" r="4" fill="currentColor"/>
+            <circle cx="210.0" cy="120.0" r="4" fill="currentColor"/>
+          </svg>
+        choices: [y = −x + 3, y = x + 3, y = −x − 3]
+        answer: y = −x + 3
+        check: "[c for c, f in {'y = −x + 3': lambda x: -x + 3, 'y = x + 3': lambda x: x + 3, 'y = −x − 3': lambda x: -x - 3}.items() if all(f(x) == y for x, y in ((0, 3), (3, 0)))][0]"
+        hints:
+          - 直線が y 軸と交わる点の y 座標を読みましょう。
+          - 右へ 1 進むと、上下にいくつ進むでしょう。
+          - 右下がりの直線の傾きは、負の数です。
+        paths:
+          - [切片は 3, 右へ 1 で下へ 1 なので傾きは −1, y = −x + 3]
+      - part: 今日
+        text: 次の点のうち、直線 y = −2x + 3 の上にあるものはどれですか。
+        choices:
+          - (2, −1)
+          - (−1, 1)
+          - (1, −1)
+        answer: (2, −1)
+        check: "[c for c, (x, y) in {'(2, −1)': (2, -1), '(−1, 1)': (-1, 1), '(1, −1)': (1, -1)}.items() if y == -2 * x + 3][0]"
+        hints:
+          - 点の x 座標を、式に代入しましょう。
+          - 計算した y が点の y 座標と同じなら、点は直線の上にあります。
+          - 負の数を代入するときは、かっこをつけましょう。
+        paths:
+          - ["x = 2 を代入すると y = −4 + 3 = −1", y 座標と同じなので直線の上にある]
+      - part: 挑戦
+        text: 直線 y = (1/2)x + b が点 (−4, 1) を通るとき、b はいくつですか。
+        answer: 3
+        check: "Fraction(1) - Fraction(1, 2) * (-4)"
+        hints:
+          - x = −4、y = 1 を代入しましょう。
+          - (1/2) × (−4) を計算しましょう。
+          - できた方程式を、b について解きましょう。
+        paths:
+          - [1 = (1/2) × (−4) + b, 1 = −2 + b, b = 3]
+
+  - day: 3
+    items:
+      - part: 見本
+        text: 傾きが 2 で点 (3, 1) を通る直線と、2 点 (2, 5)、(6, 1) を通る直線の式を求めてみましょう。2 つの直線の交点も求めてみましょう。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="180.0" x2="260.0" y2="180.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="90.0" y1="228.0" x2="90.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 180.0 L252.0 176.0 L252.0 184.0 Z" fill="currentColor"/>
+            <path d="M90.0 10.0 L86.0 18.0 L94.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="185.0" font-size="14" font-style="italic">x</text>
+            <text x="96.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="86.0" y="193.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="193.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="70.0" y="193.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="110.0" y="193.0" font-size="10" text-anchor="middle">1</text>
+            <text x="130.0" y="193.0" font-size="10" text-anchor="middle">2</text>
+            <text x="150.0" y="193.0" font-size="10" text-anchor="middle">3</text>
+            <text x="170.0" y="193.0" font-size="10" text-anchor="middle">4</text>
+            <text x="190.0" y="193.0" font-size="10" text-anchor="middle">5</text>
+            <text x="210.0" y="193.0" font-size="10" text-anchor="middle">6</text>
+            <text x="230.0" y="193.0" font-size="10" text-anchor="middle">7</text>
+            <text x="250.0" y="193.0" font-size="10" text-anchor="middle">8</text>
+            <text x="86.0" y="223.0" font-size="10" text-anchor="end">−2</text>
+            <text x="86.0" y="203.0" font-size="10" text-anchor="end">−1</text>
+            <text x="86.0" y="163.0" font-size="10" text-anchor="end">1</text>
+            <text x="86.0" y="143.0" font-size="10" text-anchor="end">2</text>
+            <text x="86.0" y="123.0" font-size="10" text-anchor="end">3</text>
+            <text x="86.0" y="103.0" font-size="10" text-anchor="end">4</text>
+            <text x="86.0" y="83.0" font-size="10" text-anchor="end">5</text>
+            <text x="86.0" y="63.0" font-size="10" text-anchor="end">6</text>
+            <text x="86.0" y="43.0" font-size="10" text-anchor="end">7</text>
+            <text x="86.0" y="23.0" font-size="10" text-anchor="end">8</text>
+            <line x1="120.0" y1="220.0" x2="220.0" y2="20.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <line x1="70.0" y1="20.0" x2="250.0" y2="200.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="160.0" r="4" fill="currentColor"/>
+            <circle cx="130.0" cy="80.0" r="4" fill="currentColor"/>
+            <circle cx="210.0" cy="160.0" r="4" fill="currentColor"/>
+          </svg>
+        explain: 傾きが 2 なので、式を y = 2x + b とおきます。点 (3, 1) を通るので、x = 3、y = 1 を代入すると 1 = 6 + b、b = −5 で、y = 2x − 5 です。2 点 (2, 5)、(6, 1) を通る直線は、まず傾きを求めます。x が 2 から 6 まで 4 増えると、y は 5 から 1 まで 4 減るので、傾きは −4 ÷ 4 = −1 です。y = −x + b に (2, 5) を代入して 5 = −2 + b、b = 7 なので、y = −x + 7 です。もう 1 つの点 (6, 1) を代入して、1 = −6 + 7 と確かめます。2 つの直線の交点は、どちらの式も成り立つ点なので、y が等しいとおいて 2x − 5 = −x + 7 を解きます（A-011）。3x = 12、x = 4 で、y = 2 × 4 − 5 = 3 なので、交点は (4, 3) です。また、x のとる値の範囲を x の変域といいます。y = −x + 7 で x の変域が 2 ≦ x ≦ 6 のとき、x = 2 で y = 5、x = 6 で y = 1 なので、y の変域は 1 ≦ y ≦ 5 です。右下がりの直線では、x が大きいほうで y が小さくなることに気をつけます。
+      - part: 思い出す
+        text: 直線 y = (1/3)x + 2 の上で、x 座標が 6 の点の y 座標はいくつですか。
+        answer: 4
+        check: "Fraction(1, 3) * 6 + 2"
+        hints:
+          - x = 6 を式に代入しましょう。
+          - (1/3) × 6 を計算しましょう。
+          - 切片を足しましょう。
+        paths:
+          - [y = (1/3) × 6 + 2, 2 + 2, 4]
+      - part: 思い出す
+        text: 方程式 4x + 9 = −x − 6 を解きましょう。x はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-6 - 9, 4 + 1))"
+        hints:
+          - x の項を左辺に、数の項を右辺に移項しましょう。
+          - 移項すると、符号が変わります。
+          - 両辺を x の係数でわりましょう。
+        paths:
+          - [4x + x = −6 − 9, 5x = −15, x = −3]
+      - part: 今日
+        text: 2 点 (−1, 7)、(2, −2) を通る直線の式は、どれですか。
+        choices: [y = −3x + 4, y = −3x + 10, y = 3x + 10]
+        answer: y = −3x + 4
+        check: "[c for c, f in {'y = −3x + 4': lambda x: -3 * x + 4, 'y = −3x + 10': lambda x: -3 * x + 10, 'y = 3x + 10': lambda x: 3 * x + 10}.items() if all(f(x) == y for x, y in ((-1, 7), (2, -2)))][0]"
+        hints:
+          - まず、2 点から傾きを求めましょう。
+          - x が 3 増えると、y はいくつ増えるでしょう。
+          - 傾きを入れた式に、どちらかの点を代入して、切片を求めましょう。
+        paths:
+          - [傾きは (−2 − 7) ÷ (2 − (−1)) = −3, 7 = −3 × (−1) + b, b = 4, y = −3x + 4]
+      - part: 今日
+        text: 直線 y = 2x − 1 と直線 y = −x + 8 の交点の x 座標はいくつですか。
+        answer: 3
+        check: "Fraction(8 + 1, 2 + 1)"
+        hints:
+          - 交点では、両方の式の y の値が等しくなります。
+          - 2x − 1 = −x + 8 を解きましょう。
+          - 移項して、x の項と数の項をまとめましょう。
+        paths:
+          - [2x − 1 = −x + 8, 3x = 9, x = 3]
+        note: 交点の y 座標は、x = 3 を代入して 5。交点は (3, 5) になる。
+      - part: 挑戦
+        text: 1 次関数 y = ax + 1（a は負の数）で、x の変域が −2 ≦ x ≦ 3 のとき、y の変域は −8 ≦ y ≦ b です。b はいくつですか。
+        answer: 7
+        check: "[-2 * a + 1 for a in range(-20, 0) if 3 * a + 1 == -8][0]"
+        hints:
+          - a が負の数なので、グラフは右下がりです。
+          - y がいちばん小さくなるのは、x がいくつのときでしょう。
+          - そこから a を求め、x = −2 のときの y を計算しましょう。
+        paths:
+          - [右下がりなので x = 3 で y = −8, 3a + 1 = −8 で a = −3, x = −2 で y = 6 + 1, b = 7]
+        note: x = −2 で y = −8 としやすい。右下がりでは、x が大きいほうで y が小さい。
+    extra:
+      - part: 今日
+        text: 傾きが −2 で、点 (3, −1) を通る直線の切片はいくつですか。
+        answer: 5
+        check: "(-1) - (-2) * 3"
+        hints:
+          - 式を y = −2x + b とおきましょう。
+          - x = 3、y = −1 を代入しましょう。
+          - できた方程式を、b について解きましょう。
+        paths:
+          - [−1 = −2 × 3 + b, −1 = −6 + b, b = 5]
+      - part: 今日
+        text: 1 次関数 y = −2x + 3 で、x の変域が −1 ≦ x ≦ 4 のとき、y の変域はどれですか。
+        choices: [−5 ≦ y ≦ 5, −1 ≦ y ≦ 4, 3 ≦ y ≦ 5]
+        answer: −5 ≦ y ≦ 5
+        check: "[c for c, (lo, hi) in {'−5 ≦ y ≦ 5': (-5, 5), '−1 ≦ y ≦ 4': (-1, 4), '3 ≦ y ≦ 5': (3, 5)}.items() if (lo, hi) == (min(-2 * x + 3 for x in (-1, 4)), max(-2 * x + 3 for x in (-1, 4)))][0]"
+        hints:
+          - x の変域の両はし、x = −1 と x = 4 のときの y を求めましょう。
+          - 右下がりの直線では、x が大きいほうで y が小さくなります。
+          - 小さいほうの y を左に書きましょう。
+        paths:
+          - [x = −1 で y = 5, x = 4 で y = −5, −5 ≦ y ≦ 5]
+        note: x の変域の数をそのまま −1 ≦ y ≦ 4 としやすい。
+      - part: 挑戦
+        text: 3 つの直線 y = x + 2、y = −2x + 8、y = ax − 2 が 1 つの点で交わるとき、a はいくつですか。
+        answer: 3
+        check: "[a for a in range(-20, 21) for x in range(-20, 21) if x + 2 == -2 * x + 8 and a * x - 2 == x + 2][0]"
+        hints:
+          - まず、y = x + 2 と y = −2x + 8 の交点を求めましょう。
+          - 残りの直線も、その交点を通ります。
+          - 交点の座標を、y = ax − 2 に代入しましょう。
+        paths:
+          - [x + 2 = −2x + 8 で x = 2, 交点の y 座標は 4, 4 = 2a − 2, a = 3]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: 2 点 (1, −2)、(4, 7) を通る直線の傾きはいくつですか。
+        answer: 3
+        check: "Fraction(7 - (-2), 4 - 1)"
+        hints:
+          - x の増える量と、y の増える量を求めましょう。
+          - y の増える量は 7 − (−2) です。
+          - 傾きは、(y の増える量) ÷ (x の増える量) です。
+        paths:
+          - [x は 3 増える, y は 9 増える, 9 ÷ 3 = 3]
+      - part: 思い出す
+        text: y が x に反比例し、x = 3 のとき y = 8 です。x = 6 のとき、y はいくつですか。
+        answer: 4
+        check: "Fraction(3 * 8, 6)"
+        hints:
+          - 反比例では、x × y がいつも同じ数になります（A-006）。
+          - x = 3、y = 8 のとき、x × y はいくつでしょう。
+          - x = 6 のとき、6 × y がその数になる y をさがしましょう。
+        paths:
+          - [x × y = 24, 6 × y = 24, y = 4]
+      - part: 今日
+        text: 直線 y = 3x − 7 と直線 y = −2x + 13 の交点の y 座標はいくつですか。
+        answer: 5
+        check: "[3 * x - 7 for x in range(-20, 21) if 3 * x - 7 == -2 * x + 13][0]"
+        hints:
+          - 交点では、両方の式の y の値が等しくなります。
+          - 3x − 7 = −2x + 13 を解いて、x を求めましょう。
+          - 求めた x を、どちらかの式に代入しましょう。
+        paths:
+          - [3x − 7 = −2x + 13, 5x = 20 で x = 4, y = 12 − 7 = 5]
+      - part: わけ
+        text: 1 次関数 y = ax + b では、x がどの値からどの値まで増えても、変化の割合はいつも a になります。このわけを、筋道を立てて書きましょう。
+        explain: 例：「x が p から q まで増えるとする（p < q）。x = p のとき y = ap + b、x = q のとき y = aq + b である。x の増える量は q − p、y の増える量は (aq + b) − (ap + b) = aq − ap = a(q − p)（分配法則）。q − p は 0 でないのでわってよく、変化の割合は a(q − p) ÷ (q − p) = a である。p と q はどんな値でもよいので、変化の割合はいつも a である。」と書ければよい。①「〜とする」で p、q を決める、② y の増える量を計算して式を変形する（b が消える、a でくくる）、③ 約束した事実（変化の割合の意味、分配法則、0 でない数でわる）で結ぶ、の 3 つがそろっているかを見る。x = 1 から 3 のような例で確かめただけで終わっていたら、例ではすべての場合を示せないことを話す。反比例 y = 6/x では、x が 1 から 2 で −3、2 から 3 で −1 と、変化の割合が一定でないことと比べる。
+        hints:
+          - 「x が p から q まで増えるとする」から書き始めましょう。
+          - x = p、x = q のときの y を、それぞれ式で書きましょう。
+          - y の増える量を計算すると、b はどうなるでしょう。
+        paths:
+          - [x が p から q まで増えるとする, y の増える量は (aq + b) − (ap + b) = a(q − p), 変化の割合は a(q − p) ÷ (q − p) = a]
+      - part: わけ
+        text: 1 次関数 y = ax + b で a が正の数のとき、x が増えると y も必ず増えます（グラフは右上がり）。このわけを、筋道を立てて書きましょう。
+        explain: 例：「a は正の数とし、x の 2 つの値を p、q（p < q）とする。それぞれの y の値の差は (aq + b) − (ap + b) = a(q − p)。p < q なので q − p は正の数で、a も正の数である。正の数どうしの積は正の数なので（N-027）、a(q − p) は正の数、つまり aq + b は ap + b より大きい。よって、x が p から q へ増えると、y も増える。」と書ければよい。①「〜とする」で a、p、q を決める、② y の値の差を式で変形する、③ 約束した事実（正の数どうしの積は正、差が正なら大きい）で結ぶ、の 3 つがそろっているかを見る。a が負の数なら、同じ筋道で a(q − p) が負の数になり、x が増えると y は減る（右下がり）ことにも触れる。前の問題（変化の割合はいつも a）を約束した事実として使い、「y の増える量 ＝ a × (x の増える量) で、どちらの数も正なので正」と書いてもよい。
+        hints:
+          - 「a は正の数とし、x の 2 つの値を p < q とする」から書き始めましょう。
+          - x = q のときの y から、x = p のときの y をひいた差を、式で表しましょう。
+          - 差が正の数になるわけを、正の数どうしのかけ算の符号で説明しましょう。
+        paths:
+          - [a は正、p < q とする, 差は (aq + b) − (ap + b) = a(q − p), q − p も a も正なので積は正, x が増えると y も増える]
+      - part: わけ
+        text: 2 つの直線 y = 2x + 1 と y = 2x − 3 は交わりません。このわけを、筋道を立てて書きましょう。
+        explain: 例：「x をどんな数でもよいとする。その x での 2 つの直線の y の値の差は、(2x + 1) − (2x − 3) = 2x + 1 − 2x + 3 = 4 である。差はどの x でも 4 で、0 にならないので、同じ x で 2 つの y の値が等しくなることはない。2 つの直線の交点は、同じ x で y の値が等しくなる点なので、2 つの直線に交点はない。」と書ければよい。①「〜とする」で x を決める、② y の値の差を計算する（かっこを外すときの符号、同類項をまとめる）、③ 約束した事実（交点の意味）で結ぶ、の 3 つがそろっているかを見る。交点を求めようとして 2x + 1 = 2x − 3 を解くと 1 = −3 となり、解がないこと（A-011）と同じだと話す。傾きが等しく切片がちがう 2 つの直線（y = ax + b と y = ax + c で、b と c がちがう）は、同じ筋道でいつも交わらず、平行であることにも触れる。いくつかの x で y を比べただけで終わっていたら、例ではすべての x を示せないことを話す。
+        hints:
+          - 交点は、同じ x で y の値が等しくなる点です。
+          - 同じ x での 2 つの y の値の差を、式で計算しましょう。
+          - その差が 0 になることがあるかを考えましょう。
+        paths:
+          - [x をどんな数でもよいとする, 差は (2x + 1) − (2x − 3) = 4, 差はいつも 4 で 0 にならない, 交点はない]
+    extra:
+      - part: 今日
+        text: 2 点 (−2, 5)、(2, −3) を通る直線の切片はいくつですか。
+        answer: 1
+        check: "Fraction(5) - Fraction(-3 - 5, 2 + 2) * (-2)"
+        hints:
+          - まず、2 点から傾きを求めましょう。
+          - 傾きを入れた式に、どちらかの点を代入しましょう。
+          - 切片は、x = 0 のときの y の値です。
+        paths:
+          - [傾きは −8 ÷ 4 = −2, 5 = −2 × (−2) + b, b = 1]
+      - part: 今日
+        text: 直線 y = −x + 7 と直線 y = (1/2)x + 1 の交点の x 座標はいくつですか。
+        answer: 4
+        check: "[x for x in [Fraction(k, 2) for k in range(-40, 41)] if -x + 7 == Fraction(1, 2) * x + 1][0]"
+        hints:
+          - 交点では、両方の式の y の値が等しくなります。
+          - −x + 7 = (1/2)x + 1 を解きましょう。
+          - 両辺に分母と同じ数をかけて、分母をはらいましょう。
+        paths:
+          - [−x + 7 = (1/2)x + 1, −2x + 14 = x + 2, 3x = 12, x = 4]
+      - part: 挑戦
+        text: 点 (2, 3) を通り、直線 y = −3x + 1 と交わらない直線の切片はいくつですか。
+        answer: 9
+        check: "3 - (-3) * 2"
+        hints:
+          - 交わらない 2 つの直線は、傾きが等しくなります（わけの問題）。
+          - 式を y = −3x + b とおきましょう。
+          - x = 2、y = 3 を代入しましょう。
+        paths:
+          - [y = −3x + b, 3 = −6 + b, b = 9]
+
+  - day: 5
+    items:
+      - part: 思い出す
+        text: 次のうち、y が x に反比例するものはどれですか。
+        choices: [y = 18/x, y = 18x, y = x + 18]
+        answer: y = 18/x
+        check: "[c for c, f in {'y = 18/x': lambda x: Fraction(18, x), 'y = 18x': lambda x: 18 * x, 'y = x + 18': lambda x: x + 18}.items() if len(set(x * f(x) for x in range(1, 8))) == 1][0]"
+        hints:
+          - 反比例では、x × y がいつも同じ数になります。
+          - x に 1、2、3 を入れて、x × y を調べましょう。
+          - y = 18x は比例です。
+        paths:
+          - [y = 18/x なら x × y = 18 でいつも同じ, 反比例]
+      - part: 思い出す
+        text: 傾きが 4 で、点 (−1, 2) を通る直線の切片はいくつですか。
+        answer: 6
+        check: "2 - 4 * (-1)"
+        hints:
+          - 式を y = 4x + b とおきましょう。
+          - x = −1、y = 2 を代入しましょう。
+          - できた方程式を、b について解きましょう。
+        paths:
+          - [2 = 4 × (−1) + b, 2 = −4 + b, b = 6]
+      - part: 今日
+        text: 水そうに 48 L の水が入っています。栓をぬくと、1 分あたり 4 L ずつ水が出ていきます。x 分後の水の量を y L とします。水の量が 20 L になるのは、何分後ですか。
+        answer: 7
+        check: "Fraction(48 - 20, 4)"
+        hints:
+          - x 分で出ていく水の量は、4x L です。
+          - y を x の式で表しましょう。
+          - y = 20 として、x の方程式を解きましょう。
+        paths:
+          - [y = −4x + 48, −4x + 48 = 20, 4x = 28, x = 7]
+      - part: 今日
+        text: ばねに x g のおもりをつるすと、ばねの長さは y cm になり、y は x の 1 次関数です。x = 20 のとき y = 14、x = 50 のとき y = 20 でした。おもりをつるさないときの、ばねの長さは何 cm ですか。
+        answer: 10
+        check: "Fraction(14) - Fraction(20 - 14, 50 - 20) * 20"
+        hints:
+          - おもりをつるさないときは、x = 0 です。
+          - まず、変化の割合（1 g あたりののび）を求めましょう。
+          - x が 20 から 0 まで変わると、y はいくつ変わるでしょう。
+        paths:
+          - [変化の割合は 6 ÷ 30 = 1/5, y = (1/5)x + b に x = 20、y = 14 を代入, 14 = 4 + b, b = 10]
+        note: 求める長さは 1 次関数の切片にあたる。のびは x に比例するが、ばねの長さは比例しない（x = 0 で 0 にならない）ことに触れる。
+      - part: 挑戦
+        text: 自転車を借りる料金は、A 店では基本料金 600 円と 1 時間ごとに 150 円、B 店では基本料金 1200 円と 1 時間ごとに 50 円です。図は、借りる時間と料金のグラフのようすです。何時間より長く借りると、B 店のほうが安くなりますか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="203.3" x2="250.0" y2="203.3"/>
+              <line x1="50.0" y1="186.7" x2="250.0" y2="186.7"/>
+              <line x1="50.0" y1="170.0" x2="250.0" y2="170.0"/>
+              <line x1="50.0" y1="153.3" x2="250.0" y2="153.3"/>
+              <line x1="50.0" y1="136.7" x2="250.0" y2="136.7"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="103.3" x2="250.0" y2="103.3"/>
+              <line x1="50.0" y1="86.7" x2="250.0" y2="86.7"/>
+              <line x1="50.0" y1="70.0" x2="250.0" y2="70.0"/>
+              <line x1="50.0" y1="53.3" x2="250.0" y2="53.3"/>
+              <line x1="50.0" y1="36.7" x2="250.0" y2="36.7"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="220.0" x2="260.0" y2="220.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="50.0" y1="228.0" x2="50.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 220.0 L252.0 216.0 L252.0 224.0 Z" fill="currentColor"/>
+            <path d="M50.0 10.0 L46.0 18.0 L54.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="224.0" font-size="11">時間</text>
+            <text x="56.0" y="14.0" font-size="11">料金</text>
+            <text x="46.0" y="233.0" font-size="11" text-anchor="end">O</text>
+            <line x1="50.0" y1="170.0" x2="250.0" y2="45.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <line x1="50.0" y1="120.0" x2="250.0" y2="78.3" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <text x="196.0" y="53.3" font-size="13">A 店</text>
+            <text x="214.0" y="107.5" font-size="13">B 店</text>
+          </svg>
+        answer: 6
+        check: "[x for x in range(0, 50) if 600 + 150 * x == 1200 + 50 * x][0]"
+        hints:
+          - 借りる時間を x 時間、料金を y 円として、2 つの店の式をつくりましょう。
+          - 2 つのグラフの交点では、料金が同じです。
+          - 交点の x 座標を、1 次方程式で求めましょう。
+        paths:
+          - [A 店は y = 150x + 600、B 店は y = 50x + 1200, 150x + 600 = 50x + 1200, 100x = 600 で x = 6, 6 時間より長いと B 店が安い]
+        note: 交点より右では、傾きの小さい B 店のグラフが下にある。ちょうど 6 時間なら、どちらも 1500 円で同じ。
+    extra:
+      - part: 今日
+        text: 反比例 y = 24/x で、x の値が 2 から 4 まで増えるとき、変化の割合はいくつですか。
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(Fraction(24, 4) - Fraction(24, 2), 4 - 2))"
+        hints:
+          - x = 2 と x = 4 のときの y を、それぞれ求めましょう。
+          - (y の増える量) ÷ (x の増える量) を計算しましょう。
+          - y が減っているので、変化の割合は負の数です。
+        paths:
+          - [x = 2 で y = 12、x = 4 で y = 6, (6 − 12) ÷ 2 = −3]
+        note: 反比例では、x の範囲を変えると変化の割合も変わる（x が 4 から 6 なら −1）。1 次関数ではいつも同じになる。
+      - part: 今日
+        text: 120 ページの本を、1 日に 8 ページずつ読みます。x 日読んだときの残りのページ数を y ページとすると、y を x の式で表したものはどれですか。
+        choices: [y = −8x + 120, y = 8x + 120, y = −120x + 8]
+        answer: y = −8x + 120
+        check: "[c for c, f in {'y = −8x + 120': lambda x: -8 * x + 120, 'y = 8x + 120': lambda x: 8 * x + 120, 'y = −120x + 8': lambda x: -120 * x + 8}.items() if all(f(x) == 120 - sum(8 for d in range(x)) for x in range(0, 16))][0]"
+        hints:
+          - 1 日読むごとに、残りのページ数はどう変わるでしょう。
+          - x 日で読んだページ数は、8x ページです。
+          - x = 0 のとき、残りは何ページでしょう。
+        paths:
+          - [x 日で 8x ページ読む, 残りは 120 − 8x, y = −8x + 120]
+      - part: 挑戦
+        text: 2 点 (−2, 7)、(4, −5) を通る直線を表す 1 次関数で、x の変域が 0 ≦ x ≦ 3 のとき、y のいちばん小さい値はいくつですか。
+        answer: −3
+        check: "(lambda a, b: (lambda v: f'−{-v}' if v < 0 else f'{v}')(min(a * x + b for x in (0, 3))))(Fraction(-5 - 7, 4 + 2), Fraction(7) - Fraction(-5 - 7, 4 + 2) * (-2))"
+        hints:
+          - まず、2 点を通る直線の式を求めましょう。
+          - 傾きが負なら、x が大きいほうで y が小さくなります。
+          - x の変域の両はしのうち、y が小さくなるほうで計算しましょう。
+        paths:
+          - [傾きは −12 ÷ 6 = −2, 切片は 3, y = −2x + 3, x = 3 で y = −3]
+
+  - day: 6
+    items:
+      - part: 今日
+        text: 1 次関数 y = 3x − 8 で、x = −2 のときの y の値はいくつですか。
+        answer: −14
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(3 * (-2) - 8)"
+        hints:
+          - x に −2 を代入しましょう。
+          - 3 × (−2) を先に計算します。
+          - 負の数から正の数をひくときに気をつけましょう。
+        paths:
+          - [3 × (−2) − 8, −6 − 8, −14]
+      - part: 今日
+        text: 下の表は、ある 1 次関数の x と y の値です。変化の割合はいくつですか。
+        figure: "x｜－１｜　０｜　２｜　４\ny｜　７｜　４｜－２｜－８"
+        answer: −3
+        check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction(-8 - 7, 4 - (-1)))"
+        hints:
+          - 表の 2 つの列を選んで、x と y の増える量をくらべましょう。
+          - x の増え方が 1 ずつでない列もあります。
+          - (y の増える量) ÷ (x の増える量) を計算しましょう。
+        paths:
+          - [x が 0 から 2 まで 2 増えると y は 6 減る, −6 ÷ 2 = −3]
+      - part: 今日
+        text: 図の直線の式は、どれですか。
+        svg: |
+          <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg">
+            <g stroke="currentColor" stroke-opacity=".18" stroke-width="1" fill="none">
+              <line x1="50.0" y1="220.0" x2="50.0" y2="20.0"/>
+              <line x1="70.0" y1="220.0" x2="70.0" y2="20.0"/>
+              <line x1="90.0" y1="220.0" x2="90.0" y2="20.0"/>
+              <line x1="110.0" y1="220.0" x2="110.0" y2="20.0"/>
+              <line x1="130.0" y1="220.0" x2="130.0" y2="20.0"/>
+              <line x1="150.0" y1="220.0" x2="150.0" y2="20.0"/>
+              <line x1="170.0" y1="220.0" x2="170.0" y2="20.0"/>
+              <line x1="190.0" y1="220.0" x2="190.0" y2="20.0"/>
+              <line x1="210.0" y1="220.0" x2="210.0" y2="20.0"/>
+              <line x1="230.0" y1="220.0" x2="230.0" y2="20.0"/>
+              <line x1="250.0" y1="220.0" x2="250.0" y2="20.0"/>
+              <line x1="50.0" y1="220.0" x2="250.0" y2="220.0"/>
+              <line x1="50.0" y1="200.0" x2="250.0" y2="200.0"/>
+              <line x1="50.0" y1="180.0" x2="250.0" y2="180.0"/>
+              <line x1="50.0" y1="160.0" x2="250.0" y2="160.0"/>
+              <line x1="50.0" y1="140.0" x2="250.0" y2="140.0"/>
+              <line x1="50.0" y1="120.0" x2="250.0" y2="120.0"/>
+              <line x1="50.0" y1="100.0" x2="250.0" y2="100.0"/>
+              <line x1="50.0" y1="80.0" x2="250.0" y2="80.0"/>
+              <line x1="50.0" y1="60.0" x2="250.0" y2="60.0"/>
+              <line x1="50.0" y1="40.0" x2="250.0" y2="40.0"/>
+              <line x1="50.0" y1="20.0" x2="250.0" y2="20.0"/>
+            </g>
+            <line x1="42.0" y1="120.0" x2="260.0" y2="120.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <line x1="150.0" y1="228.0" x2="150.0" y2="10.0" stroke="currentColor" fill="none" stroke-width="2"/>
+            <path d="M260.0 120.0 L252.0 116.0 L252.0 124.0 Z" fill="currentColor"/>
+            <path d="M150.0 10.0 L146.0 18.0 L154.0 18.0 Z" fill="currentColor"/>
+            <text x="264.0" y="125.0" font-size="14" font-style="italic">x</text>
+            <text x="156.0" y="12.0" font-size="14" font-style="italic">y</text>
+            <text x="146.0" y="133.0" font-size="11" text-anchor="end">O</text>
+            <text x="50.0" y="133.0" font-size="10" text-anchor="middle">−5</text>
+            <text x="70.0" y="133.0" font-size="10" text-anchor="middle">−4</text>
+            <text x="90.0" y="133.0" font-size="10" text-anchor="middle">−3</text>
+            <text x="110.0" y="133.0" font-size="10" text-anchor="middle">−2</text>
+            <text x="130.0" y="133.0" font-size="10" text-anchor="middle">−1</text>
+            <text x="170.0" y="133.0" font-size="10" text-anchor="middle">1</text>
+            <text x="190.0" y="133.0" font-size="10" text-anchor="middle">2</text>
+            <text x="210.0" y="133.0" font-size="10" text-anchor="middle">3</text>
+            <text x="230.0" y="133.0" font-size="10" text-anchor="middle">4</text>
+            <text x="250.0" y="133.0" font-size="10" text-anchor="middle">5</text>
+            <text x="146.0" y="223.0" font-size="10" text-anchor="end">−5</text>
+            <text x="146.0" y="203.0" font-size="10" text-anchor="end">−4</text>
+            <text x="146.0" y="183.0" font-size="10" text-anchor="end">−3</text>
+            <text x="146.0" y="163.0" font-size="10" text-anchor="end">−2</text>
+            <text x="146.0" y="143.0" font-size="10" text-anchor="end">−1</text>
+            <text x="146.0" y="103.0" font-size="10" text-anchor="end">1</text>
+            <text x="146.0" y="83.0" font-size="10" text-anchor="end">2</text>
+            <text x="146.0" y="63.0" font-size="10" text-anchor="end">3</text>
+            <text x="146.0" y="43.0" font-size="10" text-anchor="end">4</text>
+            <text x="146.0" y="23.0" font-size="10" text-anchor="end">5</text>
+            <line x1="50.0" y1="50.0" x2="250.0" y2="150.0" stroke="currentColor" fill="none" stroke-width="2.5"/>
+            <circle cx="150.0" cy="100.0" r="4" fill="currentColor"/>
+            <circle cx="190.0" cy="120.0" r="4" fill="currentColor"/>
+          </svg>
+        choices: [y = −(1/2)x + 1, y = −2x + 1, y = (1/2)x + 1]
+        answer: y = −(1/2)x + 1
+        check: "[c for c, f in {'y = −(1/2)x + 1': lambda x: Fraction(-x, 2) + 1, 'y = −2x + 1': lambda x: -2 * x + 1, 'y = (1/2)x + 1': lambda x: Fraction(x, 2) + 1}.items() if all(f(x) == y for x, y in ((0, 1), (2, 0)))][0]"
+        hints:
+          - 直線が y 軸と交わる点の y 座標を読みましょう。
+          - 右へ 2 進むと、上下にいくつ進むでしょう。
+          - 傾きは、(y の増える量) ÷ (x の増える量) です。
+        paths:
+          - [切片は 1, 右へ 2 で下へ 1 なので傾きは −1/2, y = −(1/2)x + 1]
+      - part: 今日
+        text: 2 点 (−3, −1)、(1, 7) を通る直線の式は、どれですか。
+        choices: [y = 2x + 5, y = 2x − 5, y = −2x + 5]
+        answer: y = 2x + 5
+        check: "[c for c, f in {'y = 2x + 5': lambda x: 2 * x + 5, 'y = 2x − 5': lambda x: 2 * x - 5, 'y = −2x + 5': lambda x: -2 * x + 5}.items() if all(f(x) == y for x, y in ((-3, -1), (1, 7)))][0]"
+        hints:
+          - まず、2 点から傾きを求めましょう。
+          - x が 4 増えると、y はいくつ増えるでしょう。
+          - 傾きを入れた式に、どちらかの点を代入して、切片を求めましょう。
+        paths:
+          - [傾きは 8 ÷ 4 = 2, 7 = 2 × 1 + b, b = 5, y = 2x + 5]
+      - part: 今日
+        text: 1 次関数 y = −3x + 2 で、x の変域が −1 ≦ x ≦ 2 のとき、y の変域はどれですか。
+        choices: [−4 ≦ y ≦ 5, −1 ≦ y ≦ 8, 2 ≦ y ≦ 5]
+        answer: −4 ≦ y ≦ 5
+        check: "[c for c, (lo, hi) in {'−4 ≦ y ≦ 5': (-4, 5), '−1 ≦ y ≦ 8': (-1, 8), '2 ≦ y ≦ 5': (2, 5)}.items() if (lo, hi) == (min(-3 * x + 2 for x in (-1, 2)), max(-3 * x + 2 for x in (-1, 2)))][0]"
+        hints:
+          - x の変域の両はしのときの y を求めましょう。
+          - 右下がりの直線では、x が大きいほうで y が小さくなります。
+          - 小さいほうの y を左に書きましょう。
+        paths:
+          - [x = −1 で y = 5, x = 2 で y = −4, −4 ≦ y ≦ 5]
+      - part: 今日
+        text: 直線 y = 4x − 5 と直線 y = −x + 10 の交点の y 座標はいくつですか。
+        answer: 7
+        check: "[4 * x - 5 for x in range(-20, 21) if 4 * x - 5 == -x + 10][0]"
+        hints:
+          - 交点では、両方の式の y の値が等しくなります。
+          - 4x − 5 = −x + 10 を解いて、x を求めましょう。
+          - 求めた x を、どちらかの式に代入しましょう。
+        paths:
+          - [4x − 5 = −x + 10, 5x = 15 で x = 3, y = 12 − 5 = 7]
+      - part: 今日
+        text: 兄は今 3000 円持っていて、毎月 500 円ずつ貯金します。弟は今 600 円持っていて、毎月 800 円ずつ貯金します。2 人の貯金が等しくなるのは、何か月後ですか。
+        answer: 8
+        check: "[x for x in range(0, 100) if 3000 + 500 * x == 600 + 800 * x][0]"
+        hints:
+          - x か月後の貯金を y 円として、2 人の式をつくりましょう。
+          - 2 人のグラフの交点では、貯金が等しくなります。
+          - 2 つの式の右辺を等しいとおいて、1 次方程式を解きましょう。
+        paths:
+          - [兄は y = 500x + 3000、弟は y = 800x + 600, 500x + 3000 = 800x + 600, 300x = 2400, x = 8]
+    extra:
+      - part: 今日
+        text: 1 次関数 y = −(1/3)x + 4 で、x = 6 のときの y の値はいくつですか。
+        answer: 2
+        check: "Fraction(-6, 3) + 4"
+        hints:
+          - x に 6 を代入しましょう。
+          - −(1/3) × 6 を計算しましょう。
+          - 切片を足しましょう。
+        paths:
+          - [−(1/3) × 6 + 4, −2 + 4, 2]
+      - part: 今日
+        text: 傾きが −3 で、点 (2, −1) を通る直線の切片はいくつですか。
+        answer: 5
+        check: "(-1) - (-3) * 2"
+        hints:
+          - 式を y = −3x + b とおきましょう。
+          - x = 2、y = −1 を代入しましょう。
+          - できた方程式を、b について解きましょう。
+        paths:
+          - [−1 = −3 × 2 + b, −1 = −6 + b, b = 5]
+      - part: 今日
+        text: 1 次関数 y = −2x + 9 で、x の変域が 1 ≦ x ≦ 4 のとき、y のいちばん大きい値はいくつですか。
+        answer: 7
+        check: "max(-2 * x + 9 for x in (1, 4))"
+        hints:
+          - 傾きが負なので、x が小さいほうで y が大きくなります。
+          - x の変域の両はしのときの y を求めましょう。
+          - 大きいほうを答えます。
+        paths:
+          - [x = 1 で y = 7、x = 4 で y = 1, いちばん大きい値は 7]
