@@ -78182,6 +78182,7 @@ window.ROADMAP = {
    "E-191",
    "K-166",
    "V-005",
+   "E-174",
    "H-092",
    "B-013",
    "W-036",
@@ -78192,7 +78193,6 @@ window.ROADMAP = {
    "W-062",
    "E-180",
    "E-168",
-   "E-174",
    "W-023",
    "N-067",
    "I-037",
@@ -78202,10 +78202,10 @@ window.ROADMAP = {
    "V-006",
    "I-024",
    "E-044",
+   "B-073",
    "F-021",
    "Q-004",
    "V-016",
-   "B-073",
    "B-045",
    "K-111",
    "B-055",
@@ -78221,10 +78221,10 @@ window.ROADMAP = {
    "H-042",
    "E-225",
    "E-210",
+   "H-018",
    "P-175",
    "Q-016",
    "P-230",
-   "H-018",
    "E-003",
    "D-035",
    "P-232",
@@ -78310,6 +78310,15 @@ window.ROADMAP = {
     ]
    },
    {
+    "a": "keisan",
+    "b": "rikigaku",
+    "o": 1,
+    "e": 3.2,
+    "ex": [
+     "E-174"
+    ]
+   },
+   {
     "a": "bibun-hoteishiki",
     "b": "programming",
     "o": 2,
@@ -78317,15 +78326,6 @@ window.ROADMAP = {
     "ex": [
      "K-115",
      "B-066"
-    ]
-   },
-   {
-    "a": "keisan",
-    "b": "rikigaku",
-    "o": 1,
-    "e": 3.1,
-    "ex": [
-     "E-174"
     ]
    },
    {
@@ -78601,7 +78601,7 @@ window.ROADMAP = {
     "ex": [
      "APMO-2018-4"
     ],
-    "d": 0.87
+    "d": 0.88
    },
    {
     "a": "haichi",
@@ -78648,7 +78648,7 @@ window.ROADMAP = {
     "ex": [
      "IMO-1967-2"
     ],
-    "d": 0.54
+    "d": 0.55
    },
    {
     "a": "kansu",
@@ -78695,7 +78695,7 @@ window.ROADMAP = {
      "IMO-1976-1",
      "IMO-1981-1"
     ],
-    "d": 0.81
+    "d": 0.82
    },
    {
     "a": "ronpo",
@@ -78848,7 +78848,7 @@ window.ROADMAP = {
      "IMO-1995-3",
      "IMO-2006-6"
     ],
-    "d": 0.97
+    "d": 0.98
    },
    {
     "a": "katachi",
@@ -79459,6 +79459,18 @@ window.ROADMAP = {
     "d": 0.94
    },
    {
+    "a": "hakaru",
+    "b": "seitai",
+    "via": [
+     "chiri-joho",
+     "bisekibun-nyumon",
+     "iden-shinka",
+     "data"
+    ],
+    "s": 2.12,
+    "d": 0.93
+   },
+   {
     "a": "hanno",
     "b": "netsu",
     "via": [
@@ -79481,18 +79493,6 @@ window.ROADMAP = {
     ],
     "s": 2.25,
     "d": 0.87
-   },
-   {
-    "a": "hakaru",
-    "b": "seitai",
-    "via": [
-     "chiri-joho",
-     "bisekibun-nyumon",
-     "iden-shinka",
-     "data"
-    ],
-    "s": 2.12,
-    "d": 0.92
    },
    {
     "a": "bisekibun-nyumon",
@@ -79674,7 +79674,7 @@ window.ROADMAP = {
     "a": "haichi",
     "b": "keisan",
     "e": 3.5,
-    "d": 0.75
+    "d": 0.74
    },
    {
     "a": "haichi",
@@ -79692,7 +79692,7 @@ window.ROADMAP = {
     "a": "hakaru",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.77
+    "d": 0.78
    },
    {
     "a": "kakuritsu",
@@ -79701,22 +79701,22 @@ window.ROADMAP = {
     "d": 0.89
    },
    {
-    "a": "keisan",
-    "b": "shomei-zukei",
-    "e": 2.6,
-    "d": 0.67
-   },
-   {
     "a": "seisuron",
     "b": "suiri",
     "e": 2.2,
     "d": 0.79
    },
    {
+    "a": "keisan",
+    "b": "shomei-zukei",
+    "e": 2.6,
+    "d": 0.66
+   },
+   {
     "a": "futoshiki",
     "b": "keisan",
     "e": 2.6,
-    "d": 0.57
+    "d": 0.58
    }
   ],
   "problems": 1322
@@ -102699,7 +102699,7 @@ window.ROADMAP = {
     -3.29
    ],
    "comb": {
-    "b": 0.277,
+    "b": 0.278,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -104988,7 +104988,7 @@ window.ROADMAP = {
     -2.71
    ],
    "comb": {
-    "b": 0.189,
+    "b": 0.193,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -105996,7 +105996,7 @@ window.ROADMAP = {
     1.7
    ],
    "comb": {
-    "b": 0.272,
+    "b": 0.273,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -108910,7 +108910,7 @@ window.ROADMAP = {
     7.05
    ],
    "comb": {
-    "b": 0.255,
+    "b": 0.243,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -115794,7 +115794,7 @@ window.ROADMAP = {
     -5.31
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -117981,7 +117981,7 @@ window.ROADMAP = {
     17.11
    ],
    "comb": {
-    "b": 0.351,
+    "b": 0.355,
     "r": 0.0,
     "rg": [
      "busshitsu",
@@ -118322,7 +118322,7 @@ window.ROADMAP = {
     3.3
    ],
    "comb": {
-    "b": 0.414,
+    "b": 0.422,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -118443,7 +118443,7 @@ window.ROADMAP = {
     16.96
    ],
    "comb": {
-    "b": 0.175,
+    "b": 0.173,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -118602,7 +118602,7 @@ window.ROADMAP = {
     12.07
    ],
    "comb": {
-    "b": 0.557,
+    "b": 0.558,
     "r": 0.0,
     "rg": [
      "data",
@@ -125072,7 +125072,7 @@ window.ROADMAP = {
     -2.29
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -127767,7 +127767,7 @@ window.ROADMAP = {
     -4.37
    ],
    "comb": {
-    "b": 0.281,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -131321,7 +131321,7 @@ window.ROADMAP = {
     -2.53
    ],
    "comb": {
-    "b": 0.348,
+    "b": 0.35,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -132302,7 +132302,7 @@ window.ROADMAP = {
     -3.34
    ],
    "comb": {
-    "b": 0.341,
+    "b": 0.343,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -134296,7 +134296,7 @@ window.ROADMAP = {
     0.4
    ],
    "comb": {
-    "b": 0.333,
+    "b": 0.335,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -135550,7 +135550,7 @@ window.ROADMAP = {
     -6.84
    ],
    "comb": {
-    "b": 0.259,
+    "b": 0.262,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -136754,7 +136754,7 @@ window.ROADMAP = {
     0.94
    ],
    "comb": {
-    "b": 0.264,
+    "b": 0.265,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -137944,7 +137944,7 @@ window.ROADMAP = {
     1.31
    ],
    "comb": {
-    "b": 0.321,
+    "b": 0.324,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -139521,7 +139521,7 @@ window.ROADMAP = {
     0.88
    ],
    "comb": {
-    "b": 0.186,
+    "b": 0.189,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -142353,7 +142353,7 @@ window.ROADMAP = {
     7.73
    ],
    "comb": {
-    "b": 0.261,
+    "b": 0.259,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -143583,7 +143583,7 @@ window.ROADMAP = {
     3.29
    ],
    "comb": {
-    "b": 0.282,
+    "b": 0.285,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -145744,7 +145744,7 @@ window.ROADMAP = {
     -3.13
    ],
    "comb": {
-    "b": 0.303,
+    "b": 0.305,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -146895,7 +146895,7 @@ window.ROADMAP = {
     -4.51
    ],
    "comb": {
-    "b": 0.302,
+    "b": 0.305,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -148050,7 +148050,7 @@ window.ROADMAP = {
     -5.13
    ],
    "comb": {
-    "b": 0.246,
+    "b": 0.249,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -151079,7 +151079,7 @@ window.ROADMAP = {
     -5.12
    ],
    "comb": {
-    "b": 0.301,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -154893,7 +154893,7 @@ window.ROADMAP = {
     8.08
    ],
    "comb": {
-    "b": 0.351,
+    "b": 0.358,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -156034,7 +156034,7 @@ window.ROADMAP = {
     6.78
    ],
    "comb": {
-    "b": 0.357,
+    "b": 0.358,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -157174,7 +157174,7 @@ window.ROADMAP = {
     6.1
    ],
    "comb": {
-    "b": 0.347,
+    "b": 0.353,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -158381,7 +158381,7 @@ window.ROADMAP = {
     10.75
    ],
    "comb": {
-    "b": 0.414,
+    "b": 0.423,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -159966,7 +159966,7 @@ window.ROADMAP = {
     13.85
    ],
    "comb": {
-    "b": 0.27,
+    "b": 0.274,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -161496,7 +161496,7 @@ window.ROADMAP = {
     15.66
    ],
    "comb": {
-    "b": 0.186,
+    "b": 0.19,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -163972,7 +163972,7 @@ window.ROADMAP = {
     12.2
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.373,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -166245,7 +166245,7 @@ window.ROADMAP = {
     0.6
    ],
    "comb": {
-    "b": 0.297,
+    "b": 0.3,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -168072,7 +168072,7 @@ window.ROADMAP = {
     -0.0
    ],
    "comb": {
-    "b": 0.252,
+    "b": 0.254,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -171595,7 +171595,7 @@ window.ROADMAP = {
     1.44
    ],
    "comb": {
-    "b": 0.186,
+    "b": 0.19,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -172559,7 +172559,7 @@ window.ROADMAP = {
     -4.01
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -173570,7 +173570,7 @@ window.ROADMAP = {
     -5.23
    ],
    "comb": {
-    "b": 0.408,
+    "b": 0.41,
     "r": 0.0,
     "rg": [
      "data",
@@ -174171,7 +174171,7 @@ window.ROADMAP = {
     19.97
    ],
    "comb": {
-    "b": 0.471,
+    "b": 0.473,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -174223,7 +174223,7 @@ window.ROADMAP = {
     10.4
    ],
    "comb": {
-    "b": 0.256,
+    "b": 0.245,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -174319,8 +174319,8 @@ window.ROADMAP = {
     6.18
    ],
    "comb": {
-    "b": 0.308,
-    "r": 1.83,
+    "b": 0.309,
+    "r": 1.86,
     "rg": [
      "keisan",
      "programming"
@@ -174408,7 +174408,7 @@ window.ROADMAP = {
     5.81
    ],
    "comb": {
-    "b": 0.273,
+    "b": 0.277,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -174510,7 +174510,7 @@ window.ROADMAP = {
     20.85
    ],
    "comb": {
-    "b": 0.507,
+    "b": 0.51,
     "r": 1.07,
     "rg": [
      "hakaru",
@@ -174670,8 +174670,8 @@ window.ROADMAP = {
     15.25
    ],
    "comb": {
-    "b": 0.572,
-    "r": 1.64,
+    "b": 0.576,
+    "r": 1.67,
     "rg": [
      "hakaru",
      "keisan",
@@ -174908,7 +174908,7 @@ window.ROADMAP = {
     9.45
    ],
    "comb": {
-    "b": 0.407,
+    "b": 0.405,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -175047,7 +175047,7 @@ window.ROADMAP = {
     1.76
    ],
    "comb": {
-    "b": 0.301,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "kazoekata",
@@ -176532,7 +176532,7 @@ window.ROADMAP = {
     -2.99
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -177736,7 +177736,7 @@ window.ROADMAP = {
     -3.66
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.284,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -182112,28 +182112,1053 @@ window.ROADMAP = {
    "region": "katachi",
    "needs": [
     "G-004",
-    "G-006"
+    "G-006",
+    "G-009",
+    "G-015"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "線対称な形を知ろう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"80\" y1=\"120\" x2=\"80\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"140\" y1=\"120\" x2=\"140\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"160\" y1=\"120\" x2=\"160\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"120\" x2=\"160\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"80\" x2=\"160\" y2=\"80\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"60\" x2=\"160\" y2=\"60\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"40\" x2=\"160\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"20\" x2=\"160\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"120,20 160,60 160,120 80,120 80,60\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><text x=\"130\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"169.3\" y=\"60.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"166.7\" y=\"131.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"73.3\" y=\"131.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"70.7\" y=\"60.5\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "explain": "1 本の直線を折り目にして折ったとき、両側がぴったり重なる形を線対称な形といい、その直線を対称の軸といいます。この形は点線で折ると重なります。折って重なる点を対応する点といい、点 B と点 E、点 C と点 D が対応します。点 A は軸の上にあるので、折っても動きません。重なる辺（辺 AB と辺 AE など）を対応する辺、重なる角を対応する角といいます。対応する辺の長さは等しく、対応する角の大きさも等しくなります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "たての線で半分に折ったとき、ぴったり重なる並びはどれですか。",
+       "choices": [
+        "🟦🟥🟦",
+        "🟦🟦🟥",
+        "🟥🟥🟦"
+       ],
+       "answer": "🟦🟥🟦",
+       "check": "[c for c in ('🟦🟥🟦', '🟦🟦🟥', '🟥🟥🟦') if c == c[::-1]][0]",
+       "hints": [
+        "まん中で折ると、左はしと右はしが重なるね。",
+        "左はしと右はしの色をくらべよう。",
+        "左から読んでも右から読んでも同じ並びをさがそう。"
+       ],
+       "paths": [
+        [
+         "左はしと右はしが同じ色",
+         "🟦🟥🟦"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "長方形には、直角の角がいくつありますか。",
+       "answer": 4,
+       "check": "(lambda V: len([i for i in range(4) if (V[i - 1][0] - V[i][0]) * (V[(i + 1) % 4][0] - V[i][0]) + (V[i - 1][1] - V[i][1]) * (V[(i + 1) % 4][1] - V[i][1]) == 0]))(((0, 0), (5, 0), (5, 3), (0, 3)))",
+       "hints": [
+        "長方形のかどを 1 つずつ見よう。",
+        "長方形は、4 つの角がどれも同じ形の角だったね。",
+        "直角の角を指でさしながら数えよう。"
+       ],
+       "paths": [
+        [
+         "4 つのかどがみな直角",
+         "4 つ"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸とする線対称な形です。点 B に対応する点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"45,70 95,20 195,20 195,120 95,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"32.5\" y1=\"70\" x2=\"207.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><text x=\"39\" y=\"64.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"89.9\" y=\"15.6\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"203.1\" y=\"18.4\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"203.1\" y=\"130\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"89.9\" y=\"132.8\" font-size=\"12\" text-anchor=\"middle\">E</text></svg>",
+       "choices": [
+        "A",
+        "C",
+        "D",
+        "E"
+       ],
+       "answer": "E",
+       "check": "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (2, 4)), ('C', (6, 4)), ('D', (6, 0)), ('E', (2, 0))), lambda p: (p[0], 2 * 2 - p[1]))",
+       "hints": [
+        "点線で折ると、上の部分と下の部分が重なるね。",
+        "点 B は、点線から上に何マスの所にあるかな。",
+        "点線から下に同じだけはなれた点をさがそう。"
+       ],
+       "paths": [
+        [
+         "横の点線で折る",
+         "B は軸から上に 2 マス",
+         "下に 2 マスの点 E と重なる"
+        ]
+       ],
+       "note": "軸がたてだと思いこみ、左右で重なる点（C）を選びやすい。どこで折るかを指でなぞらせる。"
+      },
+      {
+       "part": "今日",
+       "text": "長方形の対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,118 216,118 216,22 24,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 2,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((0, 0), (6, 0), (6, 3), (0, 3)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "たてのまん中の線で折ると、重なるかな。",
+        "横のまん中の線で折ると、重なるかな。",
+        "かどとかどを結ぶななめの線で折ると、重なるかな。紙で長方形を作ってためそう。"
+       ],
+       "paths": [
+        [
+         "たてのまん中の線で重なる",
+         "横のまん中の線で重なる",
+         "ななめの線では重ならない",
+         "2 本"
+        ]
+       ],
+       "note": "対角線でも重なると考えて 4 本と答えやすい。紙の長方形を対角線で折ってみると、はみ出すことがわかる。"
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸とする線対称な形にします。あと何マスぬればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"16\" y1=\"122\" x2=\"16\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"42\" y1=\"122\" x2=\"42\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"68\" y1=\"122\" x2=\"68\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"94\" y1=\"122\" x2=\"94\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"146\" y1=\"122\" x2=\"146\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"172\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"198\" y1=\"122\" x2=\"198\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"224\" y1=\"122\" x2=\"224\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"122\" x2=\"224\" y2=\"122\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"96\" x2=\"224\" y2=\"96\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"70\" x2=\"224\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"44\" x2=\"224\" y2=\"44\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"18\" x2=\"224\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"94,122 120,122 120,96 94,96\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"68,122 94,122 94,96 68,96\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"94,96 120,96 120,70 94,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"42,96 68,96 68,70 42,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"94,70 120,70 120,44 94,44\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,122 146,122 146,96 120,96\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,96 146,96 146,70 120,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"132.4\" x2=\"120\" y2=\"7.6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/></svg>",
+       "answer": 3,
+       "check": "(lambda S, R: len(set(R(c) for c in S) - S))({(1, 1), (2, 0), (3, 0), (3, 1), (3, 2), (4, 0), (4, 1)}, lambda c: (2 * 4 - c[0] - 1, c[1]))",
+       "hints": [
+        "左がわのぬったマスを、点線で折って右がわにうつそう。",
+        "右がわにもうぬってあるマスは、ぬらなくてよいね。",
+        "点線から同じ数だけはなれたマスに、印をつけながら数えよう。"
+       ],
+       "paths": [
+        [
+         "左の 5 マスを右にうつす",
+         "2 マスはもうぬってある",
+         "あと 3 マス"
+        ]
+       ],
+       "note": "左のマスの数（5）をそのまま答えやすい。もうぬってあるマスを数えないように、1 マスずつ確かめる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "ななめの点線を対称の軸として、線対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"85.2\" y1=\"128\" x2=\"85.2\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"108.4\" y1=\"128\" x2=\"108.4\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"131.6\" y1=\"128\" x2=\"131.6\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"154.8\" y1=\"128\" x2=\"154.8\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"104.8\" x2=\"178\" y2=\"104.8\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"81.6\" x2=\"178\" y2=\"81.6\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"58.4\" x2=\"178\" y2=\"58.4\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"35.2\" x2=\"178\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"62,128 85.2,128 85.2,104.8 62,104.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"85.2,128 108.4,128 108.4,104.8 85.2,104.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"108.4,128 131.6,128 131.6,104.8 108.4,104.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"85.2,104.8 108.4,104.8 108.4,81.6 85.2,81.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"131.6,104.8 154.8,104.8 154.8,81.6 131.6,81.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"55\" y1=\"135\" x2=\"185\" y2=\"5\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/></svg>",
+       "answer": 8,
+       "check": "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 0), (1, 0), (1, 1), (2, 0), (3, 1)}, lambda c: (c[1], c[0]))",
+       "hints": [
+        "ななめの点線で折ると、右下のマスは左上に重なるね。",
+        "点線がまん中を通るマスは、折ると自分自身と重なるよ。",
+        "点線の上にないマスだけ、うつした先にもう 1 マスふえるね。"
+       ],
+       "paths": [
+        [
+         "点線の上のマスは 2 つ",
+         "ほかの 3 マスをうつすと 3 マスふえる",
+         "5 + 3 = 8 マス"
+        ]
+       ],
+       "note": "5 マスをすべて 2 倍して 10 とまちがえやすい。点線が通るマスは折っても動かない。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "正方形の対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"170\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"95\" x2=\"170\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"70\" x2=\"170\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"45\" x2=\"170\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"20\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"70,120 170,120 170,20 70,20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 4,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((0, 0), (4, 0), (4, 4), (0, 4)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "たてと横のまん中の線で折ってみよう。",
+        "かどとかどを結ぶななめの線で折ると、重なるかな。",
+        "重なる折り目を 1 本ずつ数えよう。"
+       ],
+       "paths": [
+        [
+         "たて 1 本・横 1 本",
+         "ななめ 2 本",
+         "4 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸とする線対称な形です。点 C に対応する点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"80\" y1=\"120\" x2=\"80\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"140\" y1=\"120\" x2=\"140\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"160\" y1=\"120\" x2=\"160\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"120\" x2=\"160\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"100\" x2=\"160\" y2=\"100\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"80\" x2=\"160\" y2=\"80\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"60\" x2=\"160\" y2=\"60\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"40\" x2=\"160\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"20\" x2=\"160\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"120,20 160,40 160,100 140,120 100,120 80,100 80,40\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><text x=\"130\" y=\"20.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"167.3\" y=\"37.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"168.7\" y=\"109.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"144.2\" y=\"133.3\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"95.8\" y=\"133.3\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"71.3\" y=\"109.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"72.7\" y=\"37.4\" font-size=\"12\" text-anchor=\"middle\">G</text></svg>",
+       "choices": [
+        "D",
+        "E",
+        "F",
+        "G"
+       ],
+       "answer": "F",
+       "check": "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'C'][0])][0])((('A', (2, 5)), ('B', (4, 4)), ('C', (4, 1)), ('D', (3, 0)), ('E', (1, 0)), ('F', (0, 1)), ('G', (0, 4))), lambda p: (2 * 2 - p[0], p[1]))",
+       "hints": [
+        "点線で折ると、右がわと左がわが重なるね。",
+        "点 C は、点線から右に何マス、下から何マスの所にあるかな。",
+        "点線から左に同じだけはなれ、高さも同じ点をさがそう。"
+       ],
+       "paths": [
+        [
+         "C は軸から右に 2 マス・下から 1 マス",
+         "左に 2 マス・下から 1 マスの点",
+         "F"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸とする線対称な形にします。あと何マスぬればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"47.5\" y1=\"128\" x2=\"47.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"76.5\" y1=\"128\" x2=\"76.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"105.5\" y1=\"128\" x2=\"105.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"134.5\" y1=\"128\" x2=\"134.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"163.5\" y1=\"128\" x2=\"163.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"192.5\" y1=\"128\" x2=\"192.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"128\" x2=\"192.5\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"99\" x2=\"192.5\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"70\" x2=\"192.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"41\" x2=\"192.5\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"12\" x2=\"192.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"47.5,70 76.5,70 76.5,41 47.5,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"76.5,70 105.5,70 105.5,41 76.5,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"76.5,41 105.5,41 105.5,12 76.5,12\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"134.5,70 163.5,70 163.5,41 134.5,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"163.5,41 192.5,41 192.5,12 163.5,12\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"76.5,99 105.5,99 105.5,70 76.5,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"35.9\" y1=\"70\" x2=\"204.1\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/></svg>",
+       "answer": 4,
+       "check": "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 2), (1, 1), (1, 2), (1, 3), (3, 2), (4, 3)}, lambda c: (c[0], 2 * 2 - c[1] - 1))",
+       "hints": [
+        "上がわのぬったマスを、点線で折って下がわにうつそう。",
+        "下がわにもうぬってあるマスは、ぬらなくてよいね。",
+        "点線から同じ数だけはなれたマスに、印をつけながら数えよう。"
+       ],
+       "paths": [
+        [
+         "上の 5 マスを下にうつす",
+         "1 マスはもうぬってある",
+         "あと 4 マス"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "点対称な形を知ろう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"102\" x2=\"24\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"102\" x2=\"56\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"102\" x2=\"88\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"102\" x2=\"120\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"102\" x2=\"152\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"102\" x2=\"184\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"102\" x2=\"216\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"102\" x2=\"216\" y2=\"102\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"70\" x2=\"216\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"38\" x2=\"216\" y2=\"38\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,102 152,102 216,38 88,38\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"24\" y1=\"102\" x2=\"216\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"152\" y1=\"102\" x2=\"88\" y2=\"38\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"14.5\" y=\"109.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"159.1\" y=\"113.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"225.5\" y=\"39\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"80.9\" y=\"35.1\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "1 つの点を中心にして半回転（はんぶん回す）させたとき、もとの形にぴったり重なる形を点対称な形といい、その点を対称の中心といいます。この形は、点 O を中心に半回転すると、点 A が点 C に、点 B が点 D に重なります。重なる点を対応する点、重なる辺を対応する辺、重なる角を対応する角といいます。対応する点を結ぶ直線（点線）は対称の中心 O を通り、O から対応する 2 つの点までの長さは等しくなります。"
+      },
+      {
+       "part": "思い出す",
+       "text": "この形の対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100.7\" y1=\"128\" x2=\"100.7\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"139.3\" y1=\"128\" x2=\"139.3\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"89.3\" x2=\"178\" y2=\"89.3\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"50.7\" x2=\"178\" y2=\"50.7\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"100.7,128 139.3,128 139.3,89.3 100.7,89.3\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"62,89.3 100.7,89.3 100.7,50.7 62,50.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"100.7,89.3 139.3,89.3 139.3,50.7 100.7,50.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"139.3,89.3 178,89.3 178,50.7 139.3,50.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"100.7,50.7 139.3,50.7 139.3,12 100.7,12\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 4,
+       "check": "(lambda S, N: len([g for g in ((lambda x, y: (-x, y)), (lambda x, y: (x, -y)), (lambda x, y: (y, x)), (lambda x, y: (-y, -x))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))",
+       "hints": [
+        "たてのまん中の線と、横のまん中の線で折ってみよう。",
+        "ななめの線で折っても重なるかな。",
+        "重なる折り目を 1 本ずつ数えよう。"
+       ],
+       "paths": [
+        [
+         "たて 1 本・横 1 本",
+         "ななめ 2 本",
+         "4 本"
+        ]
+       ],
+       "note": "たてと横の 2 本だけで止めやすい。ななめに折っても重なることを、紙を切りぬいて確かめるとよい。"
+      },
+      {
+       "part": "思い出す",
+       "text": "この並びを、はんぶん回す（さかさまにする）と、どの並びになりますか。",
+       "figure": "🔺🟦🟦",
+       "choices": [
+        "🟦🟦🔻",
+        "🔻🟦🟦",
+        "🟦🟦🔺"
+       ],
+       "answer": "🟦🟦🔻",
+       "check": "''.join({'🔺': '🔻', '🔻': '🔺'}.get(c, c) for c in fig[::-1])",
+       "hints": [
+        "はんぶん回すと、左はしにあったものは右はしに行くね。",
+        "上と下も入れかわるよ。🔺 はどうなるかな。",
+        "並びの順と、🔺 の向きの両方を確かめよう。"
+       ],
+       "paths": [
+        [
+         "左と右が入れかわる",
+         "🔺 は 🔻 になる",
+         "🟦🟦🔻"
+        ]
+       ],
+       "note": "並びを逆にするだけ（鏡）の 🟦🟦🔺 を選びやすい。はんぶん回すと上下も逆になる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形です。点 B に対応する点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"45,70 70,120 145,120 195,70 170,20 95,20\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"35\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"62.9\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"149.5\" y=\"133.1\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"205\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"177.1\" y=\"17.1\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"90.5\" y=\"15.3\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "C",
+        "D",
+        "E",
+        "F"
+       ],
+       "answer": "E",
+       "check": "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (1, 0)), ('C', (4, 0)), ('D', (6, 2)), ('E', (5, 4)), ('F', (2, 4))), lambda p: (2 * 3 - p[0], 2 * 2 - p[1]))",
+       "hints": [
+        "点 O を中心に半回転すると、点 B はどこへ行くかな。",
+        "点 B から点 O まで、横に何マス、たてに何マスかな。",
+        "O から反対の向きに、同じだけ進んだ点をさがそう。"
+       ],
+       "paths": [
+        [
+         "B から O へ右に 2・上に 2",
+         "O からさらに右に 2・上に 2",
+         "点 E"
+        ]
+       ],
+       "note": "となりの点（C や F）を選びやすい。対応する点を結ぶ直線は O を通ることを使う。"
+      },
+      {
+       "part": "今日",
+       "text": "点対称な形はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 96\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"7\" y1=\"58.2\" x2=\"7\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"18.5\" y1=\"58.2\" x2=\"18.5\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"30\" y1=\"58.2\" x2=\"30\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"41.5\" y1=\"58.2\" x2=\"41.5\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"53\" y1=\"58.2\" x2=\"53\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"58.2\" x2=\"53\" y2=\"58.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"46.8\" x2=\"53\" y2=\"46.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"35.2\" x2=\"53\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"23.8\" x2=\"53\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"7,58.2 53,58.2 30,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"30\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">あ</text><line x1=\"67\" y1=\"52.5\" x2=\"67\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"78.5\" y1=\"52.5\" x2=\"78.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"90\" y1=\"52.5\" x2=\"90\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"101.5\" y1=\"52.5\" x2=\"101.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"113\" y1=\"52.5\" x2=\"113\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"52.5\" x2=\"113\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"41\" x2=\"113\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"29.5\" x2=\"113\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"67,52.5 101.5,52.5 113,29.5 78.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"90\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">い</text><line x1=\"127\" y1=\"52.5\" x2=\"127\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"138.5\" y1=\"52.5\" x2=\"138.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"150\" y1=\"52.5\" x2=\"150\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"161.5\" y1=\"52.5\" x2=\"161.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"173\" y1=\"52.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"52.5\" x2=\"173\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"41\" x2=\"173\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"29.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"127,52.5 173,52.5 161.5,29.5 138.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"150\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">う</text><line x1=\"187\" y1=\"64\" x2=\"187\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"198.5\" y1=\"64\" x2=\"198.5\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"210\" y1=\"64\" x2=\"210\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"221.5\" y1=\"64\" x2=\"221.5\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"233\" y1=\"64\" x2=\"233\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"64\" x2=\"233\" y2=\"64\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"52.5\" x2=\"233\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"41\" x2=\"233\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"29.5\" x2=\"233\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"18\" x2=\"233\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"210,64 233,29.5 210,18 187,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"210\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">え</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "う",
+        "え"
+       ],
+       "answer": "い",
+       "check": "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (4, 0), (2, 3))), ('い', ((0, 0), (3, 0), (4, 2), (1, 2))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((2, 0), (4, 3), (2, 4), (0, 3)))) if P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "形のまん中の点を中心に、半回転させたところを思いうかべよう。",
+        "半回転すると、上の辺は下に、左のかどは右に行くね。",
+        "本を回すように、紙を半回転させてためそう。"
+       ],
+       "paths": [
+        [
+         "い は半回転すると、上の辺と下の辺が入れかわって重なる",
+         "ほかは向きが逆になって重ならない",
+         "い"
+        ]
+       ],
+       "note": "線対称な形（あ、う、え）を選びやすい。点対称は「折る」でなく「半回転」で重なるかを見る。"
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形にします。あと何マスぬればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"33\" y1=\"128\" x2=\"33\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"91\" y1=\"128\" x2=\"91\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"149\" y1=\"128\" x2=\"149\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"207\" y1=\"128\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"128\" x2=\"207\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"99\" x2=\"207\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"70\" x2=\"207\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"41\" x2=\"207\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"12\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"62,128 91,128 91,99 62,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,128 120,128 120,99 91,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,99 120,99 120,70 91,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"62,70 91,70 91,41 62,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,70 149,70 149,41 120,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"33,99 62,99 62,70 33,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 4,
+       "check": "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 1), (1, 0), (1, 2), (2, 0), (2, 1), (3, 2)}, lambda c: (2 * 3 - c[0] - 1, 2 * 2 - c[1] - 1))",
+       "hints": [
+        "ぬったマスを 1 つずつ、O を中心に半回転させよう。",
+        "O から見て反対の向きに、同じだけはなれたマスがうつった先だよ。",
+        "うつした先がもうぬってあるマスは、数えないよ。"
+       ],
+       "paths": [
+        [
+         "6 マスを半回転させる",
+         "2 マスはうつした先がもうぬってある",
+         "あと 4 マス"
+        ]
+       ],
+       "note": "線対称のように、たての線で折ってうつしやすい。半回転では、上下も左右も反対になる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "この形を、まん中の点 O を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"91\" y1=\"128\" x2=\"91\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"149\" y1=\"128\" x2=\"149\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"99\" x2=\"178\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"41\" x2=\"178\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"91,99 120,99 120,70 91,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,99 149,99 149,70 120,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,70 120,70 120,41 91,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,70 149,70 149,41 120,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,128 149,128 149,99 120,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"149,70 178,70 178,41 149,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,41 120,41 120,12 91,12\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"62,99 91,99 91,70 62,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 4,
+       "check": "(lambda S, N: len([g for g in ((lambda x, y: (x, y)), (lambda x, y: (-y - 1, x)), (lambda x, y: (-x - 1, -y - 1)), (lambda x, y: (y, -x - 1))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 1), (1, 1), (1, 2), (1, 3), (2, 0), (2, 1), (2, 2), (3, 2)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))",
+       "hints": [
+        "出っぱっているマス（羽根）は、いくつあるかな。",
+        "少し回すと、1 つの羽根がとなりの羽根の場所に来るね。",
+        "羽根が次の羽根の場所に来るたびに重なるよ。1 回転でそれが何回あるかな。"
+       ],
+       "paths": [
+        [
+         "羽根は 4 つ",
+         "羽根がとなりの場所に来るたびに重なる",
+         "1 回転で 4 回"
+        ]
+       ],
+       "note": "半回転だけを考えて 2 回、または 1 回転のもどりを数えずに 3 回と答えやすい。紙を切りぬいて回すとよい。この形は回すと重なるが、どの線で折っても重ならない（線対称ではない）。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "線でかいた 4 つの文字のうち、点対称な文字はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"15\" y1=\"80\" x2=\"30\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"30\" y1=\"20\" x2=\"45\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"22.5\" y1=\"50\" x2=\"37.5\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"80\" x2=\"75\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"20\" x2=\"105\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"50\" x2=\"97.5\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"80\" x2=\"105\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"135\" y1=\"80\" x2=\"135\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"135\" y1=\"20\" x2=\"165\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"165\" y1=\"80\" x2=\"165\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"195\" y1=\"20\" x2=\"225\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"210\" y1=\"20\" x2=\"210\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/></svg>",
+       "choices": [
+        "A",
+        "E",
+        "N",
+        "T"
+       ],
+       "answer": "N",
+       "check": "(lambda E, T: [ch for ch, sg in (('A', [((0, 0), (1, 4)), ((1, 4), (2, 0)), ((0.5, 2), (1.5, 2))]), ('E', [((0, 0), (0, 4)), ((0, 4), (2, 4)), ((0, 2), (1.5, 2)), ((0, 0), (2, 0))]), ('N', [((0, 0), (0, 4)), ((0, 4), (2, 0)), ((2, 0), (2, 4))]), ('T', [((0, 4), (2, 4)), ((1, 4), (1, 0))])) if E([(T(p), T(q)) for p, q in sg]) == E(sg)][0])(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), lambda p: (2 - p[0], 4 - p[1]))",
+       "hints": [
+        "文字のまん中の点を中心に、半回転させたところを思いうかべよう。",
+        "半回転すると、左上のはしは右下に行くね。",
+        "紙に書いて、さかさまにして見てみよう。"
+       ],
+       "paths": [
+        [
+         "N をさかさまにすると N",
+         "ほかはさかさまにすると形が変わる",
+         "N"
+        ]
+       ],
+       "note": "線対称な文字（A、E、T）を選びやすい。A と T はたての線で、E は横の線で折ると重なる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形です。辺 BC に対応する辺はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"70,120 170,120 195,70 170,20 70,20 45,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"62.9\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"177.1\" y=\"131.3\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"205\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"177.1\" y=\"17.1\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"62.9\" y=\"17.1\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"35\" y=\"74.2\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "辺 DE",
+        "辺 EF",
+        "辺 FA"
+       ],
+       "answer": "辺 EF",
+       "check": "(lambda P, R: [s for s in ('辺 DE', '辺 EF', '辺 FA') if set((P[s[2]], P[s[3]])) == set((R(P['B']), R(P['C'])))][0])({'A': (1, 0), 'B': (5, 0), 'C': (6, 2), 'D': (5, 4), 'E': (1, 4), 'F': (0, 2)}, lambda p: (6 - p[0], 4 - p[1]))",
+       "hints": [
+        "点 B と点 C に対応する点を、それぞれさがそう。",
+        "点 B を O を中心に半回転させると、どの点に重なるかな。",
+        "対応する 2 つの点を結んだ辺が答えだよ。"
+       ],
+       "paths": [
+        [
+         "B に対応するのは E",
+         "C に対応するのは F",
+         "辺 EF"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"91\" y1=\"128\" x2=\"91\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"149\" y1=\"128\" x2=\"149\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"99\" x2=\"178\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"41\" x2=\"178\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"62,128 91,128 91,99 62,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,128 120,128 120,99 91,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,99 120,99 120,70 91,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"62,70 91,70 91,41 62,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 8,
+       "check": "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 0), (0, 2), (1, 0), (1, 1)}, lambda c: (2 * 2 - c[0] - 1, 2 * 2 - c[1] - 1))",
+       "hints": [
+        "ぬったマスを 1 つずつ、O を中心に半回転させよう。",
+        "O から見て反対の向きに、同じだけはなれたマスがうつった先だよ。",
+        "もとのマスと、うつした先のマスを合わせて数えよう。"
+       ],
+       "paths": [
+        [
+         "4 マスをうつすと 4 マスふえる",
+         "4 + 4 = 8 マス"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "点線を対称の軸とする線対称な形で、点 P と点 Q は対応する点です。P と Q を結ぶ直線は、対称の軸と点 M で直角に交わり、MP と MQ の長さは等しくなります。なぜそうなるのか、この形を例にして文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"120\" x2=\"60\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"120\" x2=\"80\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100\" y1=\"120\" x2=\"100\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"140\" y1=\"120\" x2=\"140\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"160\" y1=\"120\" x2=\"160\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"180\" y1=\"120\" x2=\"180\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"120\" x2=\"180\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"100\" x2=\"180\" y2=\"100\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"80\" x2=\"180\" y2=\"80\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"60\" x2=\"180\" y2=\"60\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"40\" x2=\"180\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"20\" x2=\"180\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"120,120 160,80 180,40 120,20 60,40 80,80\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"160\" y1=\"80\" x2=\"80\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><circle cx=\"160\" cy=\"80\" r=\"2.8\" fill=\"currentColor\"/><circle cx=\"80\" cy=\"80\" r=\"2.8\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"80\" r=\"2.8\" fill=\"currentColor\"/><text x=\"170\" y=\"78.2\" font-size=\"12\" text-anchor=\"middle\">P</text><text x=\"70\" y=\"78.2\" font-size=\"12\" text-anchor=\"middle\">Q</text><text x=\"129\" y=\"93.2\" font-size=\"12\" text-anchor=\"middle\">M</text></svg>",
+       "explain": "例：「軸で折ると、点 P は点 Q に重なる。点 M は軸の上にあるので、折っても動かない。だから MP は MQ にぴったり重なり、MP と MQ の長さは等しい。また、M のところで、PQ と軸がつくる 2 つの角（P の側と Q の側）も折ると重なるので、大きさが等しい。この 2 つの角を合わせると一直線になるので、どちらも直角である。」と書ければよい。① 折ると P が Q に重なる、② M は軸の上で動かないので MP と MQ が重なる、③ 2 つの角が重なって等しく、合わせて一直線だから直角、の 3 点を見る。③ は、紙を 2 回折って直角を作ったこと（G-006）と同じ考えである。この形の P と Q だけでなく、どの対応する点でも同じように言えることを話す。",
+       "hints": [
+        "点線で折ると、点 P はどこに重なるかな。点 M は動くかな。",
+        "MP と MQ は、折るとどうなるかな。",
+        "M のところの 2 つの角は、折ると重なるね。2 つを合わせると、どんな線になるかな。"
+       ],
+       "paths": [
+        [
+         "折ると P は Q に重なる",
+         "M は軸の上で動かない",
+         "MP と MQ が重なるので長さが等しい",
+         "M の 2 つの角は等しく合わせて一直線",
+         "どちらも直角"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "点 O を対称の中心とする点対称な形で、点 A と点 D は対応する点です。A と D を結ぶ直線は点 O を通り、OA と OD の長さは等しくなります。なぜそうなるのか、この形を例にして文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,118 120,118 184,86 216,22 120,22 56,54\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"15.1\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"120\" y=\"132.2\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"193.7\" y=\"92.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"224.9\" y=\"21.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"120\" y=\"16.2\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"46.3\" y=\"55.8\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "explain": "例：「O を中心に半回転させると、点 A は点 D に重なる。半回転させるとき、O と A を結んだ線 OA は、O のまわりを回って OD に重なる。だから OA と OD の長さは等しい。また、半回転させると、O から見た向きがちょうど反対になるので、OA と OD は O をはさんで一直線にならぶ。だから A と D を結ぶ直線は O を通る。」と書ければよい。① 半回転で A が D に重なる、② 線 OA が回って OD に重なるので長さが等しい、③ 半回転では向きがちょうど反対になるので一直線、の 3 点を見る。OA を棒にして、O をおさえて回してみると、わかりやすい。",
+       "hints": [
+        "O を中心に半回転させると、点 A はどこに重なるかな。",
+        "O と A を結んだ線は、半回転させるとどの線に重なるかな。",
+        "半回転すると、O から見た向きはどうなるかな。"
+       ],
+       "paths": [
+        [
+         "半回転で A は D に重なる",
+         "OA は回って OD に重なるので長さが等しい",
+         "向きがちょうど反対になるので一直線",
+         "AD は O を通る"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "長方形 ABCD には、たてと横の 2 本の対称の軸があり、2 本は点 O で直角に交わります。長方形は、O を対称の中心とする点対称な形でもあります。なぜそうなるのか、長方形を例にして文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,22 216,22 216,118 24,118\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"130.8\" x2=\"120\" y2=\"9.2\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><line x1=\"11.2\" y1=\"70\" x2=\"228.8\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"15.1\" y=\"21.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"224.9\" y=\"21.7\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"224.9\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"15.1\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\">D</text></svg>",
+       "explain": "例：「長方形をたての軸で裏返すと、A は B に、D は C に重なり、形はもとの長方形に重なる。次に横の軸で裏返すと、B は C に、C は B に重なり、形はまたもとに重なる。2 回裏返すと、紙は表にもどり、A は C の位置に、B は D の位置に来る。これは O を中心に半回転させたのと同じなので、長方形は半回転させても重なり、点対称である。」と書ければよい。① たての軸で裏返すと重なる、② 横の軸で裏返すと重なる、③ 2 回裏返すことは O を中心に半回転させることと同じ、の 3 点を見る。紙の長方形の角に A〜D を書き、実際に 2 回裏返すと ③ がわかる。正方形も同じ理由で点対称である。",
+       "hints": [
+        "たての軸で裏返すと、点 A はどこへ行くかな。",
+        "そのあと横の軸で裏返すと、さっき A があった点はどこへ行くかな。",
+        "2 回裏返したあとの形は、O を中心にどう動かした形と同じかな。"
+       ],
+       "paths": [
+        [
+         "たての軸で A → B",
+         "横の軸で B → C",
+         "2 回で A → C、B → D",
+         "半回転と同じ",
+         "点対称"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "たての点線を対称の軸とする線対称な形の点 P があります。P に対応する点を Q とします。P と Q の間は何マス分ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"16\" y1=\"122\" x2=\"16\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"42\" y1=\"122\" x2=\"42\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"68\" y1=\"122\" x2=\"68\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"94\" y1=\"122\" x2=\"94\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"146\" y1=\"122\" x2=\"146\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"172\" y1=\"122\" x2=\"172\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"198\" y1=\"122\" x2=\"198\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"224\" y1=\"122\" x2=\"224\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"122\" x2=\"224\" y2=\"122\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"96\" x2=\"224\" y2=\"96\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"70\" x2=\"224\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"44\" x2=\"224\" y2=\"44\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"16\" y1=\"18\" x2=\"224\" y2=\"18\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"132.4\" x2=\"120\" y2=\"7.6\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><circle cx=\"42\" cy=\"70\" r=\"2.8\" fill=\"currentColor\"/><text x=\"42\" y=\"63.2\" font-size=\"12\" text-anchor=\"middle\">P</text></svg>",
+       "answer": 6,
+       "check": "2 * (4 - 1)",
+       "hints": [
+        "P は、軸から何マスはなれているかな。",
+        "Q は、軸の反対がわに、同じだけはなれているね。",
+        "P から軸までと、軸から Q までを合わせよう。"
+       ],
+       "paths": [
+        [
+         "P から軸まで 3 マス",
+         "軸から Q まで 3 マス",
+         "3 + 3 = 6 マス"
+        ]
+       ],
+       "note": "軸までの 3 マスを答えやすい。P と Q は軸から同じ長さだけはなれている。"
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形の点 A があります。A に対応する点を C とします。A から C まで、横に何マス分はなれていますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"33\" y1=\"128\" x2=\"33\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"91\" y1=\"128\" x2=\"91\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"149\" y1=\"128\" x2=\"149\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"207\" y1=\"128\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"128\" x2=\"207\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"99\" x2=\"207\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"70\" x2=\"207\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"41\" x2=\"207\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"12\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><circle cx=\"178\" cy=\"41\" r=\"2.8\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"187\" y=\"38.2\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "answer": 4,
+       "check": "2 * (5 - 3)",
+       "hints": [
+        "A から O まで、横に何マスかな。",
+        "C は、O から見て A と反対の向きに、同じだけはなれているね。",
+        "A から O までと、O から C までを合わせよう。"
+       ],
+       "paths": [
+        [
+         "A から O まで横に 2 マス",
+         "O から C まで横に 2 マス",
+         "2 + 2 = 4 マス"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "線対称な形で、対応する 2 つの点を結ぶ直線と、対称の軸は、どのように交わりますか。",
+       "choices": [
+        "直角に交わる",
+        "ななめに交わる",
+        "平行で交わらない"
+       ],
+       "answer": "直角に交わる",
+       "hints": [
+        "線対称な形を、軸で折ったところを思いうかべよう。",
+        "対応する点を結ぶ線は、折ると自分自身に重なるね。",
+        "紙を 2 回折ってできる角を思い出そう。"
+       ],
+       "paths": [
+        [
+         "折ると線が自分自身に重なる",
+         "軸の両がわの角が等しく合わせて一直線",
+         "直角に交わる"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点対称な形で、対応する 2 つの点を結ぶ直線は、どこを通りますか。",
+       "choices": [
+        "対称の中心",
+        "形の頂点",
+        "決まっていない"
+       ],
+       "answer": "対称の中心",
+       "hints": [
+        "点対称な形を、対称の中心で半回転させたところを思いうかべよう。",
+        "半回転すると、中心から見た向きはどうなるかな。",
+        "2 日目の見本の点線を思い出そう。"
+       ],
+       "paths": [
+        [
+         "半回転で向きが反対になる",
+         "2 つの点は中心をはさんで一直線",
+         "対称の中心を通る"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線でかいたブロック文字 H の対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 120 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"80\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"80\" x2=\"75\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"45\" y1=\"50\" x2=\"75\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/></svg>",
+       "answer": 2,
+       "check": "(lambda E, sg: len([T for T in ((lambda p: (2 - p[0], p[1])), (lambda p: (p[0], 4 - p[1]))) if E([(T(p), T(q)) for p, q in sg]) == E(sg)]))(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), [((0, 0), (0, 4)), ((2, 0), (2, 4)), ((0, 2), (2, 2))])",
+       "hints": [
+        "たてのまん中の線で折ると、重なるかな。",
+        "横のまん中の線で折ると、重なるかな。",
+        "重なる折り目を数えよう。"
+       ],
+       "paths": [
+        [
+         "たての線で重なる",
+         "横の線で重なる",
+         "2 本"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "｜ を鏡とします。鏡にうつった並びはどれですか。",
+       "figure": "🐻🐼🐨｜",
+       "choices": [
+        "🐨🐼🐻",
+        "🐻🐼🐨",
+        "🐼🐨🐻"
+       ],
+       "answer": "🐨🐼🐻",
+       "check": "fig.split('｜')[0][::-1]",
+       "hints": [
+        "鏡にいちばん近いのはどれかな。",
+        "鏡の中では、鏡に近いものから順にならぶね。",
+        "並びの順が逆になるよ。"
+       ],
+       "paths": [
+        [
+         "鏡に近い 🐨 が鏡の中でも近い",
+         "順が逆になる",
+         "🐨🐼🐻"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "この四角形で、平行な辺の組は何組ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,118 216,118 152,22 56,22\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 1,
+       "check": "(lambda V: len([i for i in range(2) if (V[i + 1][0] - V[i][0]) * (V[(i + 3) % 4][1] - V[i + 2][1]) - (V[i + 1][1] - V[i][1]) * (V[(i + 3) % 4][0] - V[i + 2][0]) == 0]))(((0, 0), (6, 0), (4, 3), (1, 3)))",
+       "hints": [
+        "平行な 2 本の直線は、どこまでのばしても交わらないね。",
+        "上の辺と下の辺はどうかな。",
+        "左の辺と右の辺をのばすと、交わるかな。"
+       ],
+       "paths": [
+        [
+         "上と下の辺は平行",
+         "左と右の辺はのばすと交わる",
+         "1 組"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線対称でもあり、点対称でもある形はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 96\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"7\" y1=\"58.2\" x2=\"7\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"18.5\" y1=\"58.2\" x2=\"18.5\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"30\" y1=\"58.2\" x2=\"30\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"41.5\" y1=\"58.2\" x2=\"41.5\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"53\" y1=\"58.2\" x2=\"53\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"58.2\" x2=\"53\" y2=\"58.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"46.8\" x2=\"53\" y2=\"46.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"35.2\" x2=\"53\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"23.8\" x2=\"53\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"7,58.2 53,58.2 7,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"30\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">あ</text><line x1=\"67\" y1=\"52.5\" x2=\"67\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"78.5\" y1=\"52.5\" x2=\"78.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"90\" y1=\"52.5\" x2=\"90\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"101.5\" y1=\"52.5\" x2=\"101.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"113\" y1=\"52.5\" x2=\"113\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"52.5\" x2=\"113\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"41\" x2=\"113\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"67\" y1=\"29.5\" x2=\"113\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"67,52.5 113,52.5 113,29.5 67,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"90\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">い</text><line x1=\"127\" y1=\"52.5\" x2=\"127\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"138.5\" y1=\"52.5\" x2=\"138.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"150\" y1=\"52.5\" x2=\"150\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"161.5\" y1=\"52.5\" x2=\"161.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"173\" y1=\"52.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"52.5\" x2=\"173\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"41\" x2=\"173\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"29.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"127,52.5 173,52.5 161.5,29.5 138.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"150\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">う</text><line x1=\"187\" y1=\"52.5\" x2=\"187\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"198.5\" y1=\"52.5\" x2=\"198.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"210\" y1=\"52.5\" x2=\"210\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"221.5\" y1=\"52.5\" x2=\"221.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"233\" y1=\"52.5\" x2=\"233\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"52.5\" x2=\"233\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"41\" x2=\"233\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"29.5\" x2=\"233\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"187,52.5 221.5,52.5 233,29.5 198.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"210\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">え</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "う",
+        "え"
+       ],
+       "answer": "い",
+       "check": "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (4, 0), (0, 3))), ('い', ((0, 0), (4, 0), (4, 2), (0, 2))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((0, 0), (3, 0), (4, 2), (1, 2)))) if L(V, D) and P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "まず、折って重なる形（線対称）をさがそう。",
+        "次に、半回転させて重なる形（点対称）をさがそう。",
+        "両方に入っている形が答えだよ。"
+       ],
+       "paths": [
+        [
+         "線対称は い と う",
+         "点対称は い と え",
+         "両方は い"
+        ]
+       ],
+       "note": "う は線対称だが点対称ではなく、え は点対称だが線対称ではない。1 つずつ分けて確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形です。辺 AB と平行な辺はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"45,95 95,120 170,95 195,45 145,20 70,45\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"35.5\" y=\"102.4\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"90.5\" y=\"133.1\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"178.9\" y=\"103.7\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.5\" y=\"46\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"149.5\" y=\"15.3\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"61.1\" y=\"44.7\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "辺 CD",
+        "辺 DE",
+        "辺 EF"
+       ],
+       "answer": "辺 DE",
+       "check": "(lambda P: [s for s in ('辺 CD', '辺 DE', '辺 EF') if (P['B'][0] - P['A'][0]) * (P[s[3]][1] - P[s[2]][1]) - (P['B'][1] - P['A'][1]) * (P[s[3]][0] - P[s[2]][0]) == 0][0])({'A': (0, 1), 'B': (2, 0), 'C': (5, 1), 'D': (6, 3), 'E': (4, 4), 'F': (1, 3)})",
+       "hints": [
+        "辺 AB に対応する辺をさがそう。点 A と点 B は、半回転でどこへ行くかな。",
+        "半回転すると、辺の向きはちょうど反対になるね。",
+        "方眼のマスを数えて、AB と同じかたむきの辺か確かめよう。"
+       ],
+       "paths": [
+        [
+         "A に対応するのは D、B に対応するのは E",
+         "辺 AB に対応するのは 辺 DE",
+         "半回転で向きが反対なので平行"
+        ]
+       ],
+       "note": "点対称な形では、対応する辺は平行で、長さも等しい。マスの数（横に 2、たてに 1）でかたむきを確かめる。"
+      },
+      {
+       "part": "今日",
+       "text": "6 つの辺の長さがみな等しく、6 つの角の大きさもみな等しい六角形（正六角形）の、対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 71.5,46 71.5,102 120,130 168.5,102 168.5,46\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 6,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 6), math.sin(2 * math.pi * j / 6)) for j in range(6)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "向かい合う頂点を結ぶ線で折ると、重なるかな。",
+        "向かい合う辺のまん中を結ぶ線で折ると、重なるかな。",
+        "2 種類の折り目を、それぞれ何本あるか数えよう。"
+       ],
+       "paths": [
+        [
+         "頂点と頂点を結ぶ線が 3 本",
+         "辺のまん中どうしを結ぶ線が 3 本",
+         "3 + 3 = 6 本"
+        ]
+       ],
+       "note": "頂点を結ぶ 3 本だけで止めやすい。辺のまん中を結ぶ線でも重なる。"
+      },
+      {
+       "part": "挑戦",
+       "text": "方眼の中の、ぬっていないマスを 1 つだけぬって、線対称な形にします。ぬるマスの場所は何通りありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"47.5\" y1=\"128\" x2=\"47.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"76.5\" y1=\"128\" x2=\"76.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"105.5\" y1=\"128\" x2=\"105.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"134.5\" y1=\"128\" x2=\"134.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"163.5\" y1=\"128\" x2=\"163.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"192.5\" y1=\"128\" x2=\"192.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"128\" x2=\"192.5\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"99\" x2=\"192.5\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"70\" x2=\"192.5\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"41\" x2=\"192.5\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"47.5\" y1=\"12\" x2=\"192.5\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"76.5,99 105.5,99 105.5,70 76.5,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"105.5,99 134.5,99 134.5,70 105.5,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"134.5,99 163.5,99 163.5,70 134.5,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"134.5,70 163.5,70 163.5,41 134.5,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 3,
+       "check": "(lambda S, N: len([c for c in set((x, y) for x in range(0, 4 + 1) for y in range(0, 3 + 1)) - S if any(N(set(g(x, y) for x, y in S | {c})) == N(S | {c}) for g in ((lambda x, y: (-x, y)), (lambda x, y: (x, -y)), (lambda x, y: (y, x)), (lambda x, y: (-y, -x))))]))({(1, 1), (2, 1), (3, 1), (3, 2)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))",
+       "hints": [
+        "たての線で折って重なる形になるのは、どこをぬったときかな。",
+        "横の線で折って重なる形になるのは、どこをぬったときかな。",
+        "ななめの線で折って重なる形も考えよう。"
+       ],
+       "paths": [
+        [
+         "左はしの上をぬると たてに折って重なる",
+         "右はしの下をぬると 横に折って重なる",
+         "右はしのさらに上をぬると ななめに折って重なる",
+         "3 通り"
+        ]
+       ],
+       "note": "たてと横の線だけを考えて 2 通りと答えやすい。ななめの軸もある。1 マスずつ紙に写してためすとよい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "3 つの辺の長さがみな等しく、3 つの角の大きさもみな等しい三角形（正三角形）を、まん中の点を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 71.5,102 168.5,102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"74\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 3,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(i + k) % len(V)], V[(j + k) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 3), math.sin(2 * math.pi * j / 3)) for j in range(3)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "頂点が、となりの頂点の場所に来るたびに重なるね。",
+        "頂点はいくつあるかな。",
+        "1 回転で、1 つの頂点はすべての頂点の場所を 1 回ずつ通るよ。"
+       ],
+       "paths": [
+        [
+         "頂点は 3 つ",
+         "頂点がとなりの場所に来るたびに重なる",
+         "1 回転で 3 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "｜ を鏡とします。鏡にうつった並びはどれですか。",
+       "figure": "🐶🐱🐰🐸｜",
+       "choices": [
+        "🐸🐰🐱🐶",
+        "🐶🐱🐰🐸",
+        "🐰🐸🐶🐱"
+       ],
+       "answer": "🐸🐰🐱🐶",
+       "check": "fig.split('｜')[0][::-1]",
+       "hints": [
+        "鏡にいちばん近いのはどれかな。",
+        "鏡の中では、鏡に近いものから順にならぶね。",
+        "並びの順が逆になるよ。"
+       ],
+       "paths": [
+        [
+         "鏡に近い 🐸 が鏡の中でも近い",
+         "順が逆になる",
+         "🐸🐰🐱🐶"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線対称だが、点対称ではない形はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 96\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"7\" y1=\"52.5\" x2=\"7\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"18.5\" y1=\"52.5\" x2=\"18.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"30\" y1=\"52.5\" x2=\"30\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"41.5\" y1=\"52.5\" x2=\"41.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"53\" y1=\"52.5\" x2=\"53\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"52.5\" x2=\"53\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"41\" x2=\"53\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"7\" y1=\"29.5\" x2=\"53\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"7,52.5 41.5,52.5 53,29.5 18.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"30\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">あ</text><line x1=\"72.8\" y1=\"58.2\" x2=\"72.8\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"84.2\" y1=\"58.2\" x2=\"84.2\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"95.8\" y1=\"58.2\" x2=\"95.8\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"107.2\" y1=\"58.2\" x2=\"107.2\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"72.8\" y1=\"58.2\" x2=\"107.2\" y2=\"58.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"72.8\" y1=\"46.8\" x2=\"107.2\" y2=\"46.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"72.8\" y1=\"35.2\" x2=\"107.2\" y2=\"35.2\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"72.8\" y1=\"23.8\" x2=\"107.2\" y2=\"23.8\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"72.8,58.2 107.2,58.2 107.2,23.8 72.8,23.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"90\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">い</text><line x1=\"127\" y1=\"52.5\" x2=\"127\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"138.5\" y1=\"52.5\" x2=\"138.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"150\" y1=\"52.5\" x2=\"150\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"161.5\" y1=\"52.5\" x2=\"161.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"173\" y1=\"52.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"52.5\" x2=\"173\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"41\" x2=\"173\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"127\" y1=\"29.5\" x2=\"173\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"127,52.5 173,52.5 161.5,29.5 138.5,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"150\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">う</text><line x1=\"187\" y1=\"52.5\" x2=\"187\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"198.5\" y1=\"52.5\" x2=\"198.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"210\" y1=\"52.5\" x2=\"210\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"221.5\" y1=\"52.5\" x2=\"221.5\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"233\" y1=\"52.5\" x2=\"233\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"52.5\" x2=\"233\" y2=\"52.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"41\" x2=\"233\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><line x1=\"187\" y1=\"29.5\" x2=\"233\" y2=\"29.5\" stroke=\"currentColor\" stroke-width=\".5\" stroke-dasharray=\"2 2\"/><polygon points=\"187,52.5 233,52.5 187,29.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"210\" y=\"91.9\" font-size=\"14\" text-anchor=\"middle\">え</text></svg>",
+       "choices": [
+        "あ",
+        "い",
+        "う",
+        "え"
+       ],
+       "answer": "う",
+       "check": "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (3, 0), (4, 2), (1, 2))), ('い', ((0, 0), (3, 0), (3, 3), (0, 3))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((0, 0), (4, 0), (0, 2)))) if L(V, D) and not P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "まず、折って重なる形（線対称）をさがそう。",
+        "その中で、半回転させても重なる形をのぞこう。",
+        "残った形が答えだよ。"
+       ],
+       "paths": [
+        [
+         "線対称は い と う",
+         "い は点対称でもある",
+         "う"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "この形の対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"120,120 195,70 120,20 45,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 2,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((3, 0), (6, 2), (3, 4), (0, 2)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "たての線と横の線で折ってみよう。",
+        "かどとかどを結ぶ線のうち、どれで折ると重なるかな。",
+        "重なる折り目を数えよう。"
+       ],
+       "paths": [
+        [
+         "たてのまん中で重なる",
+         "横のまん中で重なる",
+         "2 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸とする線対称な形です。点 B に対応する点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"45\" y1=\"120\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"70\" y1=\"120\" x2=\"70\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"95\" y1=\"120\" x2=\"95\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"120\" x2=\"120\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"145\" y1=\"120\" x2=\"145\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"170\" y1=\"120\" x2=\"170\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"195\" y1=\"120\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"120\" x2=\"195\" y2=\"120\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"95\" x2=\"195\" y2=\"95\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"70\" x2=\"195\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"45\" x2=\"195\" y2=\"45\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"45\" y1=\"20\" x2=\"195\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"45,70 120,20 120,45 195,45 195,95 120,95 120,120\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"35\" y1=\"70\" x2=\"205\" y2=\"70\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/><text x=\"39\" y=\"64.2\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"117.9\" y=\"14.4\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"128\" y=\"41.2\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"204.3\" y=\"45.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"204.3\" y=\"102.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"128\" y=\"108.2\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"117.9\" y=\"134\" font-size=\"12\" text-anchor=\"middle\">G</text></svg>",
+       "choices": [
+        "D",
+        "E",
+        "F",
+        "G"
+       ],
+       "answer": "G",
+       "check": "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (3, 4)), ('C', (3, 3)), ('D', (6, 3)), ('E', (6, 1)), ('F', (3, 1)), ('G', (3, 0))), lambda p: (p[0], 2 * 2 - p[1]))",
+       "hints": [
+        "点線で折ると、上と下が重なるね。",
+        "点 B は、点線から上に何マスの所にあるかな。",
+        "点線から下に同じだけはなれた点をさがそう。"
+       ],
+       "paths": [
+        [
+         "B は軸から上に 2 マス",
+         "下に 2 マスの点",
+         "G"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形です。点 C に対応する点はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,118 152,118 216,86 216,22 88,22 24,54\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"15.1\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"157.5\" y=\"130.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"225.9\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"224.9\" y=\"21.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"82.5\" y=\"17.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"14.1\" y=\"56.6\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "D",
+        "E",
+        "F",
+        "A"
+       ],
+       "answer": "F",
+       "check": "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'C'][0])][0])((('A', (0, 0)), ('B', (4, 0)), ('C', (6, 1)), ('D', (6, 3)), ('E', (2, 3)), ('F', (0, 2))), lambda p: (2 * 3 - p[0], 2 * 1.5 - p[1]))",
+       "hints": [
+        "点 O を中心に半回転すると、点 C はどこへ行くかな。",
+        "対応する点を結ぶ直線は、O を通るね。",
+        "C から O へ進んだのと同じだけ、O からさらに進んだ点をさがそう。"
+       ],
+       "paths": [
+        [
+         "C と O を結ぶ直線をのばす",
+         "O から同じだけ進むと F",
+         "F"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "線でかいた 4 つの文字のうち、点対称な文字はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 100\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"15\" y1=\"20\" x2=\"45\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"30\" y1=\"20\" x2=\"30\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"80\" x2=\"75\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"105\" y1=\"20\" x2=\"75\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"75\" y1=\"50\" x2=\"105\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"135\" y1=\"80\" x2=\"135\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"165\" y1=\"80\" x2=\"165\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"135\" y1=\"50\" x2=\"165\" y2=\"50\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"195\" y1=\"20\" x2=\"210\" y2=\"80\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/><line x1=\"210\" y1=\"80\" x2=\"225\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"5\" fill=\"none\"/></svg>",
+       "choices": [
+        "T",
+        "K",
+        "H",
+        "V"
+       ],
+       "answer": "H",
+       "check": "(lambda E, T: [ch for ch, sg in (('T', [((0, 4), (2, 4)), ((1, 4), (1, 0))]), ('K', [((0, 0), (0, 4)), ((2, 4), (0, 2)), ((0, 2), (2, 0))]), ('H', [((0, 0), (0, 4)), ((2, 0), (2, 4)), ((0, 2), (2, 2))]), ('V', [((0, 4), (1, 0)), ((1, 0), (2, 4))])) if E([(T(p), T(q)) for p, q in sg]) == E(sg)][0])(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), lambda p: (2 - p[0], 4 - p[1]))",
+       "hints": [
+        "文字のまん中の点を中心に、半回転させたところを思いうかべよう。",
+        "半回転すると、上と下、左と右が入れかわるね。",
+        "紙に書いて、さかさまにして見てみよう。"
+       ],
+       "paths": [
+        [
+         "H をさかさまにすると H",
+         "ほかはさかさまにすると形が変わる",
+         "H"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点線を対称の軸として、線対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"33\" y1=\"128\" x2=\"33\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"91\" y1=\"128\" x2=\"91\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"149\" y1=\"128\" x2=\"149\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"207\" y1=\"128\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"128\" x2=\"207\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"99\" x2=\"207\" y2=\"99\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"70\" x2=\"207\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"41\" x2=\"207\" y2=\"41\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"33\" y1=\"12\" x2=\"207\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"62,128 91,128 91,99 62,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,128 120,128 120,99 91,99\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,99 120,99 120,70 91,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"33,70 62,70 62,41 33,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,99 149,99 149,70 120,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"91,70 120,70 120,41 91,41\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"139.6\" x2=\"120\" y2=\"0.4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-dasharray=\"7 4\"/></svg>",
+       "answer": 10,
+       "check": "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 2), (1, 0), (2, 0), (2, 1), (2, 2), (3, 1)}, lambda c: (2 * 3 - c[0] - 1, c[1]))",
+       "hints": [
+        "左がわのぬったマスを、点線で折って右がわにうつそう。",
+        "右がわにもうぬってあるマスは、ふえないね。",
+        "左がわと右がわのマスを合わせて数えよう。"
+       ],
+       "paths": [
+        [
+         "左の 5 マスを右にうつす",
+         "右の 1 マスはもうぬってある",
+         "左 5 + 右 5 = 10 マス"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形にします。あと何マスぬればよいですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"110\" x2=\"40\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"80\" y1=\"110\" x2=\"80\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"110\" x2=\"120\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"160\" y1=\"110\" x2=\"160\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"200\" y1=\"110\" x2=\"200\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"40\" y1=\"110\" x2=\"200\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"40\" y1=\"70\" x2=\"200\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"40\" y1=\"30\" x2=\"200\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"40,110 80,110 80,70 40,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"80,110 120,110 120,70 80,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"80,70 120,70 120,30 80,30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"120,110 160,110 160,70 120,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 2,
+       "check": "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 0), (1, 0), (1, 1), (2, 0)}, lambda c: (2 * 2 - c[0] - 1, 2 * 1 - c[1] - 1))",
+       "hints": [
+        "ぬったマスを 1 つずつ、O を中心に半回転させよう。",
+        "うつした先がもうぬってあるマスは、数えないよ。",
+        "新しくぬるマスに印をつけて数えよう。"
+       ],
+       "paths": [
+        [
+         "4 マスを半回転させる",
+         "2 マスはもうぬってある",
+         "あと 2 マス"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形の点 A があります。A に対応する点を C とします。A から C まで、たてに何マス分はなれていますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"62\" y1=\"128\" x2=\"62\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"81.3\" y1=\"128\" x2=\"81.3\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100.7\" y1=\"128\" x2=\"100.7\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"128\" x2=\"120\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"139.3\" y1=\"128\" x2=\"139.3\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"158.7\" y1=\"128\" x2=\"158.7\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"178\" y1=\"128\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"128\" x2=\"178\" y2=\"128\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"108.7\" x2=\"178\" y2=\"108.7\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"89.3\" x2=\"178\" y2=\"89.3\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"70\" x2=\"178\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"50.7\" x2=\"178\" y2=\"50.7\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"31.3\" x2=\"178\" y2=\"31.3\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"62\" y1=\"12\" x2=\"178\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><circle cx=\"100.7\" cy=\"12\" r=\"2.8\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"91.7\" y=\"12.2\" font-size=\"12\" text-anchor=\"middle\">A</text></svg>",
+       "answer": 6,
+       "check": "2 * (6 - 3)",
+       "hints": [
+        "A から O まで、たてに何マスかな。",
+        "C は、O から見て A と反対の向きに、同じだけはなれているね。",
+        "A から O までと、O から C までを合わせよう。"
+       ],
+       "paths": [
+        [
+         "A から O までたてに 3 マス",
+         "O から C までたてに 3 マス",
+         "3 + 3 = 6 マス"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "8 つの辺の長さがみな等しく、8 つの角の大きさもみな等しい八角形（正八角形）を、まん中の点を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"98.6,22.3 68.3,52.6 68.3,95.4 98.6,125.7 141.4,125.7 171.7,95.4 171.7,52.6 141.4,22.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"74\" r=\"3\" fill=\"currentColor\"/></svg>",
+       "answer": 8,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(i + k) % len(V)], V[(j + k) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 8), math.sin(2 * math.pi * j / 8)) for j in range(8)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "頂点が、となりの頂点の場所に来るたびに重なるね。",
+        "頂点はいくつあるかな。",
+        "1 回転で、1 つの頂点はすべての頂点の場所を 1 回ずつ通るよ。"
+       ],
+       "paths": [
+        [
+         "頂点は 8 つ",
+         "頂点がとなりの場所に来るたびに重なる",
+         "1 回転で 8 回"
+        ]
+       ],
+       "note": "正多角形は、頂点の数だけ重なる。正八角形は半回転でも重なるので点対称でもある。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "この形を、まん中の点 O を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"60\" y1=\"110\" x2=\"60\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"100\" y1=\"110\" x2=\"100\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"140\" y1=\"110\" x2=\"140\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"180\" y1=\"110\" x2=\"180\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"110\" x2=\"180\" y2=\"110\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"70\" x2=\"180\" y2=\"70\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"60\" y1=\"30\" x2=\"180\" y2=\"30\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"60,110 100,110 100,70 60,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"100,110 140,110 140,70 100,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"100,70 140,70 140,30 100,30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"140,70 180,70 180,30 140,30\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "answer": 2,
+       "check": "(lambda S, N: len([g for g in ((lambda x, y: (x, y)), (lambda x, y: (-y - 1, x)), (lambda x, y: (-x - 1, -y - 1)), (lambda x, y: (y, -x - 1))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 0), (1, 0), (1, 1), (2, 1)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))",
+       "hints": [
+        "半回転させると、重なるかな。",
+        "少しだけ回した（たてと横が入れかわる）ときは、重なるかな。",
+        "1 回転する間に重なる回数を数えよう。"
+       ],
+       "paths": [
+        [
+         "半回転で重なる",
+         "たてと横が入れかわると重ならない",
+         "半回転と 1 回転の 2 回"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "3 つの辺の長さがみな等しく、3 つの角の大きさもみな等しい三角形（正三角形）の、対称の軸は何本ありますか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,18 71.5,102 168.5,102\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/></svg>",
+       "answer": 3,
+       "check": "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 3), math.sin(2 * math.pi * j / 3)) for j in range(3)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)",
+       "hints": [
+        "頂点と、向かい合う辺のまん中を結ぶ線で折ってみよう。",
+        "そのような線は、頂点ごとに 1 本ずつあるね。",
+        "頂点の数を数えよう。"
+       ],
+       "paths": [
+        [
+         "頂点と向かい合う辺のまん中を結ぶ線",
+         "頂点ごとに 1 本",
+         "3 本"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "点 O を対称の中心とする点対称な形です。辺 AB と平行な辺はどれですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"24\" y1=\"118\" x2=\"24\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"56\" y1=\"118\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"88\" y1=\"118\" x2=\"88\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"152\" y1=\"118\" x2=\"152\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"184\" y1=\"118\" x2=\"184\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"216\" y1=\"118\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"118\" x2=\"216\" y2=\"118\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"86\" x2=\"216\" y2=\"86\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"54\" x2=\"216\" y2=\"54\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><line x1=\"24\" y1=\"22\" x2=\"216\" y2=\"22\" stroke=\"currentColor\" stroke-width=\".6\" stroke-dasharray=\"2 2\"/><polygon points=\"24,118 152,118 216,86 216,22 88,22 24,54\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"70\" r=\"3.2\" fill=\"currentColor\"/><text x=\"128\" y=\"83.2\" font-size=\"12\" text-anchor=\"middle\">O</text><text x=\"15.1\" y=\"126.7\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"157.5\" y=\"130.5\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"225.9\" y=\"91.8\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"224.9\" y=\"21.7\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"82.5\" y=\"17.9\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"14.1\" y=\"56.6\" font-size=\"12\" text-anchor=\"middle\">F</text></svg>",
+       "choices": [
+        "辺 BC",
+        "辺 DE",
+        "辺 EF"
+       ],
+       "answer": "辺 DE",
+       "check": "(lambda P: [s for s in ('辺 BC', '辺 DE', '辺 EF') if (P['B'][0] - P['A'][0]) * (P[s[3]][1] - P[s[2]][1]) - (P['B'][1] - P['A'][1]) * (P[s[3]][0] - P[s[2]][0]) == 0][0])({'A': (0, 0), 'B': (4, 0), 'C': (6, 1), 'D': (6, 3), 'E': (2, 3), 'F': (0, 2)})",
+       "hints": [
+        "辺 AB に対応する辺をさがそう。",
+        "点 A と点 B は、半回転でどの点に重なるかな。",
+        "対応する辺は平行になるよ。"
+       ],
+       "paths": [
+        [
+         "A に対応するのは D、B に対応するのは E",
+         "辺 AB に対応するのは 辺 DE",
+         "平行"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -182142,7 +183167,7 @@ window.ROADMAP = {
     6.15
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.373,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -186526,7 +187551,7 @@ window.ROADMAP = {
     -5.03
    ],
    "comb": {
-    "b": 0.298,
+    "b": 0.3,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -190601,7 +191626,7 @@ window.ROADMAP = {
     -0.74
    ],
    "comb": {
-    "b": 0.303,
+    "b": 0.305,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -192207,7 +193232,7 @@ window.ROADMAP = {
     1.35
    ],
    "comb": {
-    "b": 0.342,
+    "b": 0.344,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -194758,7 +195783,7 @@ window.ROADMAP = {
     -0.33
    ],
    "comb": {
-    "b": 0.287,
+    "b": 0.288,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -197607,7 +198632,7 @@ window.ROADMAP = {
     2.96
    ],
    "comb": {
-    "b": 0.316,
+    "b": 0.318,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -198696,7 +199721,7 @@ window.ROADMAP = {
     3.36
    ],
    "comb": {
-    "b": 0.288,
+    "b": 0.29,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -206717,7 +207742,7 @@ window.ROADMAP = {
     -1.79
    ],
    "comb": {
-    "b": 0.373,
+    "b": 0.374,
     "r": 0.0,
     "rg": [
      "houteishiki",
@@ -206862,7 +207887,7 @@ window.ROADMAP = {
     12.2
    ],
    "comb": {
-    "b": 0.293,
+    "b": 0.304,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -208140,7 +209165,7 @@ window.ROADMAP = {
     14.3
    ],
    "comb": {
-    "b": 0.451,
+    "b": 0.455,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -209973,7 +210998,7 @@ window.ROADMAP = {
     14.12
    ],
    "comb": {
-    "b": 0.4,
+    "b": 0.405,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -211177,7 +212202,7 @@ window.ROADMAP = {
     22.82
    ],
    "comb": {
-    "b": 0.198,
+    "b": 0.196,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -224605,7 +225630,7 @@ window.ROADMAP = {
     -5.53
    ],
    "comb": {
-    "b": 0.262,
+    "b": 0.263,
     "r": 0.0,
     "rg": [
      "kazu",
@@ -224825,28 +225850,1006 @@ window.ROADMAP = {
    "needs": [
     "G-011",
     "G-010",
-    "A-010"
+    "A-010",
+    "N-078"
    ],
    "days": [
     {
      "kind": "導入",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "角錐と円錐の体積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 280 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"8,119.9 98,119.9 72.8,30.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"98,119.9 137.6,90.2 72.8,30.1\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"137.6\" y1=\"90.2\" x2=\"47.6\" y2=\"90.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"98\" y1=\"119.9\" x2=\"137.6\" y2=\"90.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"8\" y1=\"119.9\" x2=\"98\" y2=\"119.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"8\" y1=\"119.9\" x2=\"47.6\" y2=\"90.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"98\" y1=\"119.9\" x2=\"72.8\" y2=\"30.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"8\" y1=\"119.9\" x2=\"72.8\" y2=\"30.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"137.6\" y1=\"90.2\" x2=\"72.8\" y2=\"30.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"47.6\" y1=\"90.2\" x2=\"72.8\" y2=\"30.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"72.8\" y1=\"30.1\" x2=\"72.8\" y2=\"105.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"72.8,98.1 79.8,98.1 79.8,105.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"72.8\" cy=\"105.1\" r=\"2.5\" fill=\"currentColor\"/><text x=\"53\" y=\"137.1\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"77.8\" y=\"92.8\" font-size=\"12\" text-anchor=\"start\">5 cm</text><polygon points=\"212.8,39.8 169.1,96.3 168.1,98.2 167.8,100 168.3,101.9 169.5,103.7 171.4,105.5 174.1,107.1 177.4,108.7 181.2,110.1 185.7,111.3 190.5,112.3 195.8,113.1 201.3,113.7 207,114.1 212.8,114.2 218.6,114.1 224.3,113.7 229.8,113.1 235.1,112.3 239.9,111.3 244.4,110.1 248.2,108.7 251.5,107.1 254.2,105.5 256.1,103.7 257.3,101.9 257.8,100 257.5,98.2 256.5,96.3\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"256.5,96.3 257.5,98.2 257.8,100 257.3,101.9 256.1,103.7 254.2,105.5 251.5,107.1 248.2,108.7 244.4,110.1 239.9,111.3 235.1,112.3 229.8,113.1 224.3,113.7 218.6,114.1 212.8,114.2 207,114.1 201.3,113.7 195.8,113.1 190.5,112.3 185.7,111.3 181.2,110.1 177.4,108.7 174.1,107.1 171.4,105.5 169.5,103.7 168.3,101.9 167.8,100 168.1,98.2 169.1,96.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"169.1,96.3 170.3,95 171.9,93.8 173.9,92.6 176.2,91.4 178.9,90.3 181.8,89.4 185.1,88.5 188.5,87.7 192.2,87 196.1,86.4 200.2,86 204.3,85.7 208.5,85.5 212.8,85.4 217.1,85.5 221.3,85.7 225.4,86 229.5,86.4 233.4,87 237.1,87.7 240.5,88.5 243.8,89.4 246.7,90.3 249.4,91.4 251.7,92.6 253.7,93.8 255.3,95 256.5,96.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"212.8\" y1=\"39.8\" x2=\"169.1\" y2=\"96.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"212.8\" y1=\"39.8\" x2=\"256.5\" y2=\"96.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"212.8\" cy=\"99.8\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"212.8\" y1=\"39.8\" x2=\"212.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"212.8,92.8 219.8,92.8 219.8,99.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"212.8\" y1=\"99.8\" x2=\"257.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"235.3\" y=\"128.4\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><line x1=\"155.8\" y1=\"39.8\" x2=\"155.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"151.8\" y1=\"39.8\" x2=\"159.8\" y2=\"39.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"151.8\" y1=\"99.8\" x2=\"159.8\" y2=\"99.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"150.8\" y=\"74\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "explain": "底面が多角形で、まわりが三角形の面でかこまれ、とがった頂点がある立体を角錐（底面が四角形なら四角錐、三角形なら三角錐）といいます。底面が円で頂点がある立体を円錐といい、角錐と円錐をまとめて錐体といいます。頂点から底面にまっすぐ下ろした線（底面と直角に交わる）の長さが高さです。底面が正方形で、頂点が底面の中心の真上にある四角錐を正四角錐といいます。錐体の体積は、底面積と高さが同じ柱体（角柱、円柱）の体積の 3 分の 1 で、錐体の体積 = 底面積 × 高さ ÷ 3、文字で V = Sh/3（S は底面積、h は高さ）です（わけは 3 日目）。左の正四角錐は、底面積が 6 × 6 = 36 cm² なので、36 × 5 ÷ 3 = 60 cm³。円周率は文字 π（パイ）で表し、半径 r の円の面積は πr²、円周は 2πr と書きます（9 × π は 9π）。右の円錐は、底面積が 9π cm² なので、9π × 4 ÷ 3 = 12π cm³ です。答えは π を残して 12π cm³ のように書きます。"
+      },
+      {
+       "part": "見本",
+       "text": "球の体積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"176,70 175.6,71.9 174.6,73.7 172.9,75.5 170.5,77.3 167.4,78.9 163.8,80.5 159.6,81.9 154.9,83.1 149.8,84.2 144.3,85.1 138.5,85.9 132.5,86.4 126.3,86.7 120,86.8 113.7,86.7 107.5,86.4 101.5,85.9 95.7,85.1 90.2,84.2 85.1,83.1 80.4,81.9 76.2,80.5 72.6,78.9 69.5,77.3 67.1,75.5 65.4,73.7 64.4,71.9 64,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"64,70 64.4,68.1 65.4,66.3 67.1,64.5 69.5,62.7 72.6,61.1 76.2,59.5 80.4,58.1 85.1,56.9 90.2,55.8 95.7,54.9 101.5,54.1 107.5,53.6 113.7,53.3 120,53.2 126.3,53.3 132.5,53.6 138.5,54.1 144.3,54.9 149.8,55.8 154.9,56.9 159.6,58.1 163.8,59.5 167.4,61.1 170.5,62.7 172.9,64.5 174.6,66.3 175.6,68.1 176,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"162.9\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.4\" y=\"47.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "explain": "どの方向から見ても円に見える、ボールのような立体を球といいます。球の中心から表面までの長さが半径です。半径 r の球の体積は V = 4πr³/3（4 × π × r × r × r ÷ 3）です。この式は、ここでは約束した事実として使います（わけは後の積分の単元で示します）。半径 3 cm の球なら、r³ = 3 × 3 × 3 = 27 なので、4π × 27 ÷ 3 = 108π ÷ 3 = 36π cm³ です。"
+      },
+      {
+       "part": "思い出す",
+       "text": "底面積が 14 cm²、高さが 5 cm の角柱の体積は何 cm³ ですか。",
+       "answer": 70,
+       "check": "14 * 5",
+       "hints": [
+        "角柱の体積は、底面積 × 高さ だったね。",
+        "底面積はもうわかっているよ。",
+        "14 × 5 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "14 × 5 = 70",
+         "70 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 2 cm、高さが 6 cm の円柱の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M93.6 30.7 L93.6 109.8 A26.4 8.4 0 0 0 146.4 109.8 L146.4 30.7 A26.4 8.4 0 0 1 93.6 30.7 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><ellipse cx=\"120\" cy=\"30.7\" rx=\"26.4\" ry=\"8.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"93.6\" y1=\"30.7\" x2=\"93.6\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"146.4\" y1=\"30.7\" x2=\"146.4\" y2=\"109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.6 109.8 A26.4 8.4 0 0 0 146.4 109.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M93.6 109.8 A26.4 8.4 0 0 1 146.4 109.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"30.7\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"30.7\" x2=\"146.4\" y2=\"30.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150.4\" y=\"20.4\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"152.4\" y=\"74.4\" font-size=\"12\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 24,
+       "check": "2 * 2 * 6",
+       "hints": [
+        "円柱の体積も、底面積 × 高さ だね。",
+        "底面積は π × 2 × 2 = 4π cm² だよ。",
+        "4π × 6 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "底面積 4π cm²",
+         "4π × 6 = 24π",
+         "□ は 24"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐の体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"63.8,122 141.9,122 120,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"141.9,122 176.2,96.2 120,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"176.2\" y1=\"96.2\" x2=\"98.1\" y2=\"96.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"141.9\" y1=\"122\" x2=\"176.2\" y2=\"96.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63.8\" y1=\"122\" x2=\"141.9\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63.8\" y1=\"122\" x2=\"98.1\" y2=\"96.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"141.9\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"63.8\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"176.2\" y1=\"96.2\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.1\" y1=\"96.2\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,102.1 127,102.1 127,109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"109.1\" r=\"2.5\" fill=\"currentColor\"/><text x=\"102.9\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"125\" y=\"93.2\" font-size=\"12\" text-anchor=\"start\">7 cm</text></svg>",
+       "answer": 84,
+       "check": "6 * 6 * 7 // 3",
+       "hints": [
+        "底面は 1 辺 6 cm の正方形だよ。底面積はいくつかな。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だね。",
+        "36 × 7 を 3 でわろう。36 を先に 3 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "底面積 6 × 6 = 36",
+         "36 × 7 = 252",
+         "252 ÷ 3 = 84",
+         "84 cm³"
+        ],
+        [
+         "36 ÷ 3 = 12",
+         "12 × 7 = 84"
+        ]
+       ],
+       "note": "÷ 3 をわすれて、角柱の体積の 252 と答えやすい。錐体は柱体の 3 分の 1。"
+      },
+      {
+       "part": "今日",
+       "text": "円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,19 88.3,113.7 88.1,114.9 88.4,116.1 89.1,117.3 90.3,118.5 91.9,119.6 93.9,120.7 96.3,121.6 99,122.5 102,123.2 105.3,123.8 108.8,124.3 112.4,124.7 116.2,124.9 120,125 123.8,124.9 127.6,124.7 131.2,124.3 134.7,123.8 138,123.2 141,122.5 143.7,121.6 146.1,120.7 148.1,119.6 149.7,118.5 150.9,117.3 151.6,116.1 151.9,114.9 151.7,113.7\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"151.7,113.7 151.9,114.9 151.6,116.1 150.9,117.3 149.7,118.5 148.1,119.6 146.1,120.7 143.7,121.6 141,122.5 138,123.2 134.7,123.8 131.2,124.3 127.6,124.7 123.8,124.9 120,125 116.2,124.9 112.4,124.7 108.8,124.3 105.3,123.8 102,123.2 99,122.5 96.3,121.6 93.9,120.7 91.9,119.6 90.3,118.5 89.1,117.3 88.4,116.1 88.1,114.9 88.3,113.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"88.3,113.7 88.8,112.6 89.7,111.6 90.9,110.6 92.4,109.7 94.2,108.8 96.3,107.9 98.7,107.2 101.3,106.5 104.1,105.9 107,105.4 110.1,105.1 113.4,104.8 116.7,104.6 120,104.6 123.3,104.6 126.6,104.8 129.9,105.1 133,105.4 135.9,105.9 138.7,106.5 141.3,107.2 143.7,107.9 145.8,108.8 147.6,109.7 149.1,110.6 150.3,111.6 151.2,112.6 151.7,113.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"19\" x2=\"88.3\" y2=\"113.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"19\" x2=\"151.7\" y2=\"113.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"114.8\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"19\" x2=\"120\" y2=\"114.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,107.8 127,107.8 127,114.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"114.8\" x2=\"151.9\" y2=\"114.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"136\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">2 cm</text><line x1=\"76.1\" y1=\"19\" x2=\"76.1\" y2=\"114.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"72.1\" y1=\"19\" x2=\"80.1\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"72.1\" y1=\"114.8\" x2=\"80.1\" y2=\"114.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"71.1\" y=\"71.1\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 8,
+       "check": "2 * 2 * 6 // 3",
+       "hints": [
+        "底面積は π × 2 × 2 = 4π cm² だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "4π × 6 を 3 でわろう。"
+       ],
+       "paths": [
+        [
+         "底面積 4π",
+         "4π × 6 = 24π",
+         "24π ÷ 3 = 8π",
+         "□ は 8"
+        ]
+       ],
+       "note": "思い出すの円柱（24π cm³）と、底面と高さが同じ。円錐はその 3 分の 1 になる。÷ 3 をわすれて 24 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm の球の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"176,70 175.6,71.9 174.6,73.7 172.9,75.5 170.5,77.3 167.4,78.9 163.8,80.5 159.6,81.9 154.9,83.1 149.8,84.2 144.3,85.1 138.5,85.9 132.5,86.4 126.3,86.7 120,86.8 113.7,86.7 107.5,86.4 101.5,85.9 95.7,85.1 90.2,84.2 85.1,83.1 80.4,81.9 76.2,80.5 72.6,78.9 69.5,77.3 67.1,75.5 65.4,73.7 64.4,71.9 64,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"64,70 64.4,68.1 65.4,66.3 67.1,64.5 69.5,62.7 72.6,61.1 76.2,59.5 80.4,58.1 85.1,56.9 90.2,55.8 95.7,54.9 101.5,54.1 107.5,53.6 113.7,53.3 120,53.2 126.3,53.3 132.5,53.6 138.5,54.1 144.3,54.9 149.8,55.8 154.9,56.9 159.6,58.1 163.8,59.5 167.4,61.1 170.5,62.7 172.9,64.5 174.6,66.3 175.6,68.1 176,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"162.9\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.4\" y=\"47.2\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 288,
+       "check": "4 * 6 ** 3 // 3",
+       "hints": [
+        "球の体積は V = 4πr³/3 だね。",
+        "r³ は 6 × 6 × 6 だよ。",
+        "4 × 216 ÷ 3 を計算しよう。216 を先に 3 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "6³ = 216",
+         "4 × 216 = 864",
+         "864 ÷ 3 = 288",
+         "288π cm³"
+        ],
+        [
+         "216 ÷ 3 = 72",
+         "72 × 4 = 288"
+        ]
+       ],
+       "note": "r³ のかわりに r²（36）を使って 48 と答えやすい。体積は長さを 3 回かける（単位も cm³）。"
+      },
+      {
+       "part": "挑戦",
+       "text": "半径 3 cm の球と、底面の半径が 3 cm の円錐の体積が等しいとき、円錐の高さは何 cm ですか。",
+       "answer": 12,
+       "check": "[h for h in range(1, 50) if Fraction(3 * 3 * h, 3) == Fraction(4 * 3 ** 3, 3)][0]",
+       "hints": [
+        "球の体積は、見本で求めた 36π cm³ だね。",
+        "円錐の体積は 9π × 高さ ÷ 3 で、これは 3π × 高さ と同じだよ。",
+        "3π × □ = 36π となる □ をさがそう。"
+       ],
+       "paths": [
+        [
+         "球は 36π cm³",
+         "円錐は 9π × □ ÷ 3 = 3π × □",
+         "3π × □ = 36π",
+         "□ = 12",
+         "12 cm"
+        ]
+       ],
+       "note": "円錐の高さが、球の直径（6 cm）のちょうど 2 倍になる。体積の式を「等しい」とおいて □ を求める。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,19 67.6,104.6 66.8,106.8 66.7,108.9 67.6,111.1 69.2,113.1 71.7,115.1 74.9,117 78.8,118.8 83.4,120.3 88.6,121.7 94.2,122.9 100.3,123.8 106.7,124.5 113.3,124.9 120,125 126.7,124.9 133.3,124.5 139.7,123.8 145.8,122.9 151.4,121.7 156.6,120.3 161.2,118.8 165.1,117 168.3,115.1 170.8,113.1 172.4,111.1 173.3,108.9 173.2,106.8 172.4,104.6\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"172.4,104.6 173.2,106.8 173.3,108.9 172.4,111.1 170.8,113.1 168.3,115.1 165.1,117 161.2,118.8 156.6,120.3 151.4,121.7 145.8,122.9 139.7,123.8 133.3,124.5 126.7,124.9 120,125 113.3,124.9 106.7,124.5 100.3,123.8 94.2,122.9 88.6,121.7 83.4,120.3 78.8,118.8 74.9,117 71.7,115.1 69.2,113.1 67.6,111.1 66.7,108.9 66.8,106.8 67.6,104.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"67.6,104.6 68.9,103 70.7,101.4 72.9,99.9 75.6,98.5 78.7,97.1 82.2,95.9 86.1,94.7 90.3,93.7 94.8,92.9 99.5,92.2 104.5,91.6 109.6,91.2 114.8,90.9 120,90.9 125.2,90.9 130.4,91.2 135.5,91.6 140.5,92.2 145.2,92.9 149.7,93.7 153.9,94.7 157.8,95.9 161.3,97.1 164.4,98.5 167.1,99.9 169.3,101.4 171.1,103 172.4,104.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"19\" x2=\"67.6\" y2=\"104.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"19\" x2=\"172.4\" y2=\"104.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"107.9\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"19\" x2=\"120\" y2=\"107.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,100.9 127,100.9 127,107.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"107.9\" x2=\"173.4\" y2=\"107.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.7\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><line x1=\"54.6\" y1=\"19\" x2=\"54.6\" y2=\"107.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50.6\" y1=\"19\" x2=\"58.6\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"50.6\" y1=\"107.9\" x2=\"58.6\" y2=\"107.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"49.6\" y=\"67.7\" font-size=\"12\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 15,
+       "check": "3 * 3 * 5 // 3",
+       "hints": [
+        "底面積は π × 3 × 3 = 9π cm² だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "9π × 5 を 3 でわろう。"
+       ],
+       "paths": [
+        [
+         "底面積 9π",
+         "9π × 5 = 45π",
+         "45π ÷ 3 = 15π",
+         "□ は 15"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直方体の 1 つの角を切り取ってできた三角錐です。直角に交わる 3 つの辺の長さは図のとおりです。体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"134.2,122 51,122 134.2,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"134.2,122 189,80.7 134.2,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"134.2\" y1=\"122\" x2=\"51\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51\" y1=\"122\" x2=\"189\" y2=\"80.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"134.2\" y1=\"122\" x2=\"189\" y2=\"80.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"51\" y1=\"122\" x2=\"134.2\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"134.2\" y1=\"122\" x2=\"134.2\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"189\" y1=\"80.7\" x2=\"134.2\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"127.2,122 127.2,115 134.2,115\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"139.8,117.8 139.8,110.8 134.2,115\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"92.6\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"169.6\" y=\"113.5\" font-size=\"12\" text-anchor=\"start\">6 cm</text><text x=\"128.2\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">5 cm</text></svg>",
+       "answer": 20,
+       "check": "4 * 6 // 2 * 5 // 3",
+       "hints": [
+        "下の面（直角をはさむ 2 辺が 4 cm と 6 cm の直角三角形）を底面とみよう。",
+        "底面積は 4 × 6 ÷ 2 だね。高さは、たての 5 cm の辺だよ。",
+        "底面積 × 高さ ÷ 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "底面積 4 × 6 ÷ 2 = 12",
+         "12 × 5 = 60",
+         "60 ÷ 3 = 20",
+         "20 cm³"
+        ]
+       ],
+       "note": "三角形の「÷ 2」と錐体の「÷ 3」の両方が要る。どちらかをわすれて 40 や 60 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 9 cm の球の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "answer": 972,
+       "check": "4 * 9 ** 3 // 3",
+       "hints": [
+        "球の体積は V = 4πr³/3 だね。",
+        "9³ = 9 × 9 × 9 = 729 だよ。",
+        "729 を先に 3 でわってから 4 をかけよう。"
+       ],
+       "paths": [
+        [
+         "9³ = 729",
+         "729 ÷ 3 = 243",
+         "243 × 4 = 972",
+         "972π cm³"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "練習",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "見本",
+       "text": "円錐の展開図を見て、表面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 10 L47.2 52 A84 84 0 0 0 192.8 52 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"122\" r=\"28\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"10\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"122\" r=\"2.2\" fill=\"currentColor\"/><line x1=\"120\" y1=\"122\" x2=\"148\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"134\" y=\"119.2\" font-size=\"12\" text-anchor=\"middle\">2 cm</text><text x=\"77.1\" y=\"23.9\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "explain": "錐体の表面積も、展開図のすべての面の面積の和です（G-011）。正四角錐なら、底面の正方形と、側面の 4 つの合同な三角形です。円錐の頂点と、底面の円のまわりの点を結ぶ線を母線といいます。円錐の展開図は、側面がおうぎ形、底面が円です。おうぎ形の半径は母線の長さ 6 cm で、弧の長さは底面の円周 2π × 2 = 4π cm と同じです。半径 6 cm の円の円周は 12π cm なので、このおうぎ形は円の 4π ÷ 12π = 1/3 にあたり、中心角は 360 ÷ 3 = 120° です。側面積は、半径 6 cm の円の面積 36π cm² の 1/3 で 12π cm²。底面積は 4π cm²。表面積 = 側面積 + 底面積 = 16π cm² です。"
+      },
+      {
+       "part": "見本",
+       "text": "球の表面積を求めよう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"176,70 175.6,71.9 174.6,73.7 172.9,75.5 170.5,77.3 167.4,78.9 163.8,80.5 159.6,81.9 154.9,83.1 149.8,84.2 144.3,85.1 138.5,85.9 132.5,86.4 126.3,86.7 120,86.8 113.7,86.7 107.5,86.4 101.5,85.9 95.7,85.1 90.2,84.2 85.1,83.1 80.4,81.9 76.2,80.5 72.6,78.9 69.5,77.3 67.1,75.5 65.4,73.7 64.4,71.9 64,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"64,70 64.4,68.1 65.4,66.3 67.1,64.5 69.5,62.7 72.6,61.1 76.2,59.5 80.4,58.1 85.1,56.9 90.2,55.8 95.7,54.9 101.5,54.1 107.5,53.6 113.7,53.3 120,53.2 126.3,53.3 132.5,53.6 138.5,54.1 144.3,54.9 149.8,55.8 154.9,56.9 159.6,58.1 163.8,59.5 167.4,61.1 170.5,62.7 172.9,64.5 174.6,66.3 175.6,68.1 176,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"162.9\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.4\" y=\"47.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text></svg>",
+       "explain": "球の表面全体の面積を、球の表面積といいます。半径 r の球の表面積は S = 4πr² で、同じ半径の円の面積 πr² の 4 つ分です（わけは 3 日目）。半径 5 cm の球なら、4π × 5 × 5 = 100π cm² です。体積の式 4πr³/3 と取りちがえないように、面積は長さを 2 回かける（cm²）、体積は 3 回かける（cm³）と覚えます。"
+      },
+      {
+       "part": "思い出す",
+       "text": "半径 4 cm、中心角 90° のおうぎ形の弧の長さは □π cm です。□ に入る数はいくつですか。",
+       "answer": 2,
+       "check": "2 * 4 // 4",
+       "hints": [
+        "中心角 90° のおうぎ形は、円の何分の 1 かな。",
+        "半径 4 cm の円の円周は 2π × 4 = 8π cm だね。",
+        "8π を 4 つに分けよう。"
+       ],
+       "paths": [
+        [
+         "90° は円の 1/4",
+         "円周 8π",
+         "8π ÷ 4 = 2π",
+         "□ は 2"
+        ]
+       ]
+      },
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 3 cm、高さが 7 cm の円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "answer": 21,
+       "check": "3 * 3 * 7 // 3",
+       "hints": [
+        "底面積は 9π cm² だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "9 を先に 3 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "9π × 7 = 63π",
+         "63π ÷ 3 = 21π",
+         "□ は 21"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐の展開図です。側面の三角形の高さ（点線）は 5 cm です。表面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"94.9,100.1 145.1,100.1 145.1,49.9 94.9,49.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"94.9,49.9 145.1,49.9 120,8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"145.1,49.9 145.1,100.1 187,75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"145.1,100.1 94.9,100.1 120,142\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"94.9,100.1 94.9,49.9 53,75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text dy=\"-6\" x=\"120\" y=\"104.3\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><line x1=\"145.1\" y1=\"75\" x2=\"187\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"162.7\" y=\"69.8\" font-size=\"11\" text-anchor=\"middle\">5 cm</text></svg>",
+       "answer": 96,
+       "check": "6 * 6 + 4 * (6 * 5 // 2)",
+       "hints": [
+        "底面の正方形の面積は 6 × 6 だね。",
+        "側面の三角形 1 つは、底辺 6 cm、高さ 5 cm だよ。",
+        "三角形は 4 つあるよ。底面とたそう。"
+       ],
+       "paths": [
+        [
+         "底面 6 × 6 = 36",
+         "三角形 1 つ 6 × 5 ÷ 2 = 15",
+         "4 つで 60",
+         "36 + 60 = 96",
+         "96 cm²"
+        ]
+       ],
+       "note": "三角形を 1 つだけたして 51、底面をわすれて 60 と答えやすい。展開図の面を 1 つずつ数える。"
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 3 cm、母線の長さが 5 cm の円錐の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,22.4 61.8,97.8 60.4,100.2 60,102.7 60.6,105.2 62.3,107.6 64.9,110 68.4,112.2 72.8,114.2 77.9,116.1 83.8,117.7 90.3,119.1 97.3,120.2 104.6,121 112.3,121.4 120,121.6 127.7,121.4 135.4,121 142.7,120.2 149.7,119.1 156.2,117.7 162.1,116.1 167.2,114.2 171.6,112.2 175.1,110 177.7,107.6 179.4,105.2 180,102.7 179.6,100.2 178.2,97.8\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"178.2,97.8 179.6,100.2 180,102.7 179.4,105.2 177.7,107.6 175.1,110 171.6,112.2 167.2,114.2 162.1,116.1 156.2,117.7 149.7,119.1 142.7,120.2 135.4,121 127.7,121.4 120,121.6 112.3,121.4 104.6,121 97.3,120.2 90.3,119.1 83.8,117.7 77.9,116.1 72.8,114.2 68.4,112.2 64.9,110 62.3,107.6 60.6,105.2 60,102.7 60.4,100.2 61.8,97.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"61.8,97.8 63.4,96 65.5,94.4 68.1,92.7 71.2,91.2 74.8,89.8 78.7,88.5 83,87.3 87.7,86.2 92.6,85.3 97.8,84.6 103.1,84 108.7,83.5 114.3,83.3 120,83.2 125.7,83.3 131.3,83.5 136.9,84 142.2,84.6 147.4,85.3 152.3,86.2 157,87.3 161.3,88.5 165.2,89.8 168.8,91.2 171.9,92.7 174.5,94.4 176.6,96 178.2,97.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"22.4\" x2=\"61.8\" y2=\"97.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"22.4\" x2=\"178.2\" y2=\"97.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"102.4\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"102.4\" x2=\"180\" y2=\"102.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"150\" y=\"135.8\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"156.1\" y=\"60.3\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 24,
+       "check": "Fraction(3, 5) * 5 * 5 + 3 * 3",
+       "hints": [
+        "側面のおうぎ形の弧は、底面の円周 6π cm と同じだね。半径 5 cm の円の円周は 10π cm だよ。",
+        "おうぎ形は、半径 5 cm の円の何分の何かな。円の面積 25π cm² のその分が側面積だよ。",
+        "側面積に、底面積 9π cm² をたそう。"
+       ],
+       "paths": [
+        [
+         "弧 6π、円周 10π で円の 3/5",
+         "側面積 25π ÷ 5 × 3 = 15π",
+         "底面積 9π",
+         "15π + 9π = 24π",
+         "□ は 24"
+        ]
+       ],
+       "note": "底面積をたしわすれて 15 と答えやすい。側面積の求め方は 3 日目に式（πrl）にする。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 4 cm の球の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"56\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"176,70 175.6,71.9 174.6,73.7 172.9,75.5 170.5,77.3 167.4,78.9 163.8,80.5 159.6,81.9 154.9,83.1 149.8,84.2 144.3,85.1 138.5,85.9 132.5,86.4 126.3,86.7 120,86.8 113.7,86.7 107.5,86.4 101.5,85.9 95.7,85.1 90.2,84.2 85.1,83.1 80.4,81.9 76.2,80.5 72.6,78.9 69.5,77.3 67.1,75.5 65.4,73.7 64.4,71.9 64,70\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"64,70 64.4,68.1 65.4,66.3 67.1,64.5 69.5,62.7 72.6,61.1 76.2,59.5 80.4,58.1 85.1,56.9 90.2,55.8 95.7,54.9 101.5,54.1 107.5,53.6 113.7,53.3 120,53.2 126.3,53.3 132.5,53.6 138.5,54.1 144.3,54.9 149.8,55.8 154.9,56.9 159.6,58.1 163.8,59.5 167.4,61.1 170.5,62.7 172.9,64.5 174.6,66.3 175.6,68.1 176,70\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"70\" x2=\"162.9\" y2=\"34\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"133.4\" y=\"47.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text></svg>",
+       "answer": 64,
+       "check": "4 * 4 * 4",
+       "hints": [
+        "球の表面積は S = 4πr² だね。",
+        "r² は 4 × 4 だよ。",
+        "4 × 16 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "r² = 16",
+         "4π × 16 = 64π",
+         "□ は 64"
+        ]
+       ],
+       "note": "体積の式を使って 4 × 64 ÷ 3 としやすい。表面積は r²、体積は r³。"
+      },
+      {
+       "part": "挑戦",
+       "text": "底面の半径が 4 cm、母線の長さが 10 cm の円錐があります。展開図で、側面のおうぎ形の中心角 あ は何度ですか。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 10 L46 34 A77.8 77.8 0 0 0 194 34 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"118.9\" r=\"31.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"10\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"118.9\" r=\"2.2\" fill=\"currentColor\"/><line x1=\"120\" y1=\"118.9\" x2=\"151.1\" y2=\"118.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.6\" y=\"116.1\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><text x=\"79\" y=\"13.9\" font-size=\"12\" text-anchor=\"middle\">10 cm</text><path d=\"M106.7 14.3 A14 14 0 0 0 133.3 14.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"120\" y=\"40.2\" font-size=\"12\" text-anchor=\"middle\">あ</text></svg>",
+       "answer": 144,
+       "check": "360 * 4 // 10",
+       "hints": [
+        "おうぎ形の弧の長さは、底面の円周 8π cm と同じだね。",
+        "半径 10 cm の円の円周は 20π cm。おうぎ形は円の何分の何かな。",
+        "360° のうち、その分が中心角だよ。"
+       ],
+       "paths": [
+        [
+         "弧 8π、円周 20π",
+         "8 ÷ 20 = 2/5",
+         "360 ÷ 5 × 2 = 144",
+         "144°"
+        ]
+       ],
+       "note": "中心角 = 360 × 半径 ÷ 母線 になる。半径と母線を逆にして 900 のような 360 をこえる数を出したら、どちらが大きいかを確かめる。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径 3 cm の半球の表面積は □π cm² です。平らな面（円）もふくめます。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"42,98.5 42.5,89.8 44,81.2 46.4,72.8 49.7,64.7 54,57 59,49.9 64.8,43.4 71.4,37.5 78.5,32.5 86.2,28.2 94.2,24.9 102.6,22.5 111.3,21 120,20.5 128.7,21 137.4,22.5 145.8,24.9 153.8,28.2 161.5,32.5 168.6,37.5 175.2,43.4 181,49.9 186,57 190.3,64.7 193.6,72.8 196,81.2 197.5,89.8 198,98.5 198,98.5 197.5,101.3 196,104.1 193.6,106.8 190.3,109.3 186,111.8 181,114.1 175.2,116.2 168.6,118 161.5,119.7 153.8,121 145.8,122.1 137.4,122.9 128.7,123.3 120,123.5 111.3,123.3 102.6,122.9 94.2,122.1 86.2,121 78.5,119.7 71.4,118 64.8,116.2 59,114.1 54,111.8 49.7,109.3 46.4,106.8 44,104.1 42.5,101.3 42,98.5\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"42,98.5 42.5,89.8 44,81.2 46.4,72.8 49.7,64.7 54,57 59,49.9 64.8,43.4 71.4,37.5 78.5,32.5 86.2,28.2 94.2,24.9 102.6,22.5 111.3,21 120,20.5 128.7,21 137.4,22.5 145.8,24.9 153.8,28.2 161.5,32.5 168.6,37.5 175.2,43.4 181,49.9 186,57 190.3,64.7 193.6,72.8 196,81.2 197.5,89.8 198,98.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"198,98.5 197.5,101.3 196,104.1 193.6,106.8 190.3,109.3 186,111.8 181,114.1 175.2,116.2 168.6,118 161.5,119.7 153.8,121 145.8,122.1 137.4,122.9 128.7,123.3 120,123.5 111.3,123.3 102.6,122.9 94.2,122.1 86.2,121 78.5,119.7 71.4,118 64.8,116.2 59,114.1 54,111.8 49.7,109.3 46.4,106.8 44,104.1 42.5,101.3 42,98.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"42,98.5 42.5,95.7 44,93 46.4,90.3 49.7,87.7 54,85.2 59,83 64.8,80.9 71.4,79 78.5,77.4 86.2,76 94.2,75 102.6,74.2 111.3,73.7 120,73.6 128.7,73.7 137.4,74.2 145.8,75 153.8,76 161.5,77.4 168.6,79 175.2,80.9 181,83 186,85.2 190.3,87.7 193.6,90.3 196,93 197.5,95.7 198,98.5\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"98.5\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"98.5\" x2=\"198\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"159\" y=\"137.7\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "answer": 27,
+       "check": "4 * 3 * 3 // 2 + 3 * 3",
+       "hints": [
+        "まるい面は、半径 3 cm の球の表面積の半分だね。",
+        "球の表面積は 4π × 9 = 36π cm² だよ。",
+        "まるい面に、平らな面（半径 3 cm の円）をたそう。"
+       ],
+       "paths": [
+        [
+         "まるい面 36π ÷ 2 = 18π",
+         "平らな面 9π",
+         "18π + 9π = 27π",
+         "□ は 27"
+        ]
+       ],
+       "note": "平らな面をわすれて 18 と答えやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 2 cm、母線の長さが 7 cm の円錐の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "answer": 18,
+       "check": "Fraction(2, 7) * 7 * 7 + 2 * 2",
+       "hints": [
+        "側面のおうぎ形の弧は 4π cm、半径 7 cm の円の円周は 14π cm だね。",
+        "おうぎ形は円の何分の何かな。円の面積 49π cm² のその分が側面積だよ。",
+        "側面積に、底面積 4π cm² をたそう。"
+       ],
+       "paths": [
+        [
+         "円の 2/7",
+         "側面積 49π ÷ 7 × 2 = 14π",
+         "14π + 4π = 18π",
+         "□ は 18"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐の側面の三角形の高さ（点線）は 5 cm です。表面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"44,98.5 149.6,98.5 120,41.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"149.6,98.5 196,63.6 120,41.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"90.4,63.6 44,98.5 120,41.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"196\" y1=\"63.6\" x2=\"90.4\" y2=\"63.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"149.6\" y1=\"98.5\" x2=\"196\" y2=\"63.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"98.5\" x2=\"149.6\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"98.5\" x2=\"90.4\" y2=\"63.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"149.6\" y1=\"98.5\" x2=\"120\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"98.5\" x2=\"120\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"196\" y1=\"63.6\" x2=\"120\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"90.4\" y1=\"63.6\" x2=\"120\" y2=\"41.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"41.5\" x2=\"96.8\" y2=\"98.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"96.8\" y=\"115.7\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"114.4\" y=\"83.2\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 144,
+       "check": "8 * 8 + 4 * (8 * 5 // 2)",
+       "hints": [
+        "展開図を思いうかべよう。底面の正方形と、側面の三角形が 4 つだね。",
+        "三角形 1 つは、底辺 8 cm、高さ 5 cm だよ。",
+        "底面 8 × 8 と、三角形 4 つ分をたそう。"
+       ],
+       "paths": [
+        [
+         "底面 64",
+         "三角形 1 つ 8 × 5 ÷ 2 = 20",
+         "4 つで 80",
+         "64 + 80 = 144",
+         "144 cm²"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "わけ",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "わけ",
+       "text": "1 辺 6 cm の立方体 ABCD-EFGH を、頂点 G を共通の頂点とする 3 つの四角錐 G-ABCD、G-ABFE、G-AEHD に分けました。3 つの四角錐は合同（形も大きさも同じ）です。この例で、四角錐 G-ABCD の体積が「底面積 × 高さ ÷ 3」になっていることを、文で書きましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"56.7,45.6 144.7,45.6 183.3,16.4 95.3,16.4\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"56.7,133.6 144.7,133.6 144.7,45.6 56.7,45.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"144.7,133.6 183.3,104.4 183.3,16.4 144.7,45.6\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"183.3\" y1=\"104.4\" x2=\"95.3\" y2=\"104.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"144.7\" y1=\"133.6\" x2=\"183.3\" y2=\"104.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"56.7\" y1=\"133.6\" x2=\"144.7\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"56.7\" y1=\"133.6\" x2=\"95.3\" y2=\"104.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"56.7\" y1=\"45.6\" x2=\"144.7\" y2=\"45.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"144.7\" y1=\"45.6\" x2=\"183.3\" y2=\"16.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"183.3\" y1=\"16.4\" x2=\"95.3\" y2=\"16.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"56.7\" y1=\"45.6\" x2=\"95.3\" y2=\"16.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"144.7\" y1=\"133.6\" x2=\"144.7\" y2=\"45.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"56.7\" y1=\"133.6\" x2=\"56.7\" y2=\"45.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"183.3\" y1=\"104.4\" x2=\"183.3\" y2=\"16.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"95.3\" y1=\"104.4\" x2=\"95.3\" y2=\"16.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"183.3\" y1=\"16.4\" x2=\"56.7\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"183.3\" y1=\"16.4\" x2=\"144.7\" y2=\"133.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"183.3\" y1=\"16.4\" x2=\"95.3\" y2=\"104.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"183.3\" y1=\"16.4\" x2=\"56.7\" y2=\"45.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"48.7\" y=\"145.8\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"150.7\" y=\"147.8\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"192.3\" y=\"112.6\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"89.3\" y=\"102.6\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"47.7\" y=\"51.8\" font-size=\"12\" text-anchor=\"middle\">E</text><text x=\"137.7\" y=\"42.8\" font-size=\"12\" text-anchor=\"middle\">F</text><text x=\"191.3\" y=\"14.6\" font-size=\"12\" text-anchor=\"middle\">G</text><text x=\"91.3\" y=\"12.6\" font-size=\"12\" text-anchor=\"middle\">H</text></svg>",
+       "explain": "例：「立方体の体積は 6 × 6 × 6 = 216 cm³。3 つの四角錐はすき間なく立方体をうめ、合同なので体積が等しい。だから 1 つ分は 216 ÷ 3 = 72 cm³。四角錐 G-ABCD の底面は正方形 ABCD で底面積 36 cm²、高さは底面と直角に交わる辺 GC の 6 cm なので、底面積 × 高さ ÷ 3 = 36 × 6 ÷ 3 = 72 cm³ となり、1 つ分の体積と一致する。」と書ければよい。① 3 つが合同で立方体をうめるので体積を 3 等分できる、② 四角錐の底面積と高さを図から読む（高さは辺 GC）、③ 2 つの値が等しいことで結ぶ、の 3 点を見る。1 辺を a とすると a³ ÷ 3 = a² × a ÷ 3 となり、1 辺がどんな長さでも同じことがいえる。ただし、これは「高さが底面の 1 辺と同じで、頂点が底面の角の真上にある四角錐」という 1 つの形の例で、例ではすべての錐体を示せないことを話す。どんな錐体でも柱体の 3 分の 1 になることは、「底面積と高さが同じ錐体は体積も同じ」という事実（積分の単元 D-081 で示す）と合わせて使う。",
+       "hints": [
+        "立方体の体積はいくつかな。3 つの四角錐の体積が等しいのはなぜかな。",
+        "四角錐 G-ABCD の底面と、高さになる辺を図でさがそう。",
+        "「立方体の 3 分の 1」と「底面積 × 高さ ÷ 3」の 2 つの求め方を比べて書こう。"
+       ],
+       "paths": [
+        [
+         "立方体は 216 cm³",
+         "合同な 3 つで 216 ÷ 3 = 72",
+         "底面積 36・高さ GC 6",
+         "36 × 6 ÷ 3 = 72",
+         "2 つが一致する"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "底面の半径が r、母線の長さが l の円錐の側面積は πrl になります。そのわけを、展開図のおうぎ形を使って、文字の式で説明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M120 27.2 L66.9 10 A55.8 55.8 0 1 0 173.1 10 Z\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"116.5\" r=\"33.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><circle cx=\"120\" cy=\"27.2\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"120\" cy=\"116.5\" r=\"2.2\" fill=\"currentColor\"/><line x1=\"120\" y1=\"116.5\" x2=\"153.5\" y2=\"116.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"136.7\" y=\"113.7\" font-size=\"12\" text-anchor=\"middle\">r</text><text x=\"97.5\" y=\"10.5\" font-size=\"12\" text-anchor=\"middle\">l</text></svg>",
+       "explain": "例：「側面の展開図は、半径 l のおうぎ形とする。おうぎ形の弧の長さは、底面の円周と同じで 2πr。半径 l の円の円周は 2πl なので、おうぎ形の弧は円周の 2πr ÷ 2πl = r/l にあたる。おうぎ形の面積も、弧と同じく円の面積 πl² の r/l にあたる。よって側面積は π × l × l ÷ l × r = πlr = πrl。」と書ければよい。①「半径 l、弧の長さ 2πr のおうぎ形とする」と文字で決める、② 円全体に対する割合 r/l を出して式を変形する、③「おうぎ形の弧の長さと面積は、円の同じ割合（中心角の割合）になる」という G-010 の事実で結ぶ、の 3 点を見る。r = 3、l = 5 なら 15π になることを例で確かめてもよいが、例だけではすべての円錐を示せないことを話す。",
+       "hints": [
+        "おうぎ形の半径と弧の長さを、r と l で表そう。",
+        "弧の長さは、半径 l の円の円周 2πl の何分のいくつかな。",
+        "面積も同じ割合になることを使って、πl² から側面積を出そう。"
+       ],
+       "paths": [
+        [
+         "半径 l、弧 2πr のおうぎ形とする",
+         "弧は円周 2πl の r/l",
+         "面積も πl² の r/l",
+         "π × l × l ÷ l × r = πrl"
+        ]
+       ]
+      },
+      {
+       "part": "わけ",
+       "text": "半径 r の球の体積は 4πr³/3 です。球の表面を細かく分け、その小さな面を底面とし、球の中心 O を頂点とする細い錐体を考えると、球はこの錐体の集まりとみなせます。このことから、球の表面積が 4πr² になるわけを説明しましょう。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"70\" r=\"58\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"176\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"161\" y2=\"29\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"135\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"105\" y2=\"14\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"79\" y2=\"29\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"64\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"64\" y2=\"85\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"79\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"105\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"135\" y2=\"126\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"161\" y2=\"111\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><line x1=\"120\" y1=\"70\" x2=\"176\" y2=\"85\" stroke=\"currentColor\" stroke-width=\"0.8\" fill=\"none\"/><polygon points=\"120,70 161,29 158.8,26.9 156.5,24.9 154.1,23.1 151.6,21.4 149,19.8 146.3,18.3 143.6,17 140.8,15.9 137.9,14.8 135,14\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"70\" x2=\"149\" y2=\"19.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"140.1\" y=\"49.8\" font-size=\"13\" text-anchor=\"middle\">r</text><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><text x=\"112\" y=\"86.2\" font-size=\"12\" text-anchor=\"middle\">O</text></svg>",
+       "explain": "例：「細い錐体の底面積を、それぞれ a、b、c、… とする。どの錐体も高さは球の半径 r とみなせるので、体積の和は a × r ÷ 3 + b × r ÷ 3 + c × r ÷ 3 + … = (a + b + c + …) × r ÷ 3。a + b + c + … は球の表面積 S なので、体積の和は S × r ÷ 3。これが球の体積 4πr³/3 = 4πr² × r ÷ 3 と等しいので、S = 4πr²。」と書ければよい。① 錐体の底面積を文字で置き、高さを r とする、② 分配法則でまとめて S × r ÷ 3 にする、③ 約束した球の体積の式と等しいとおき、4πr³ を 4πr² × r と見比べる、の 3 点を見る。小さな面は少し丸いので「みなせる」であり、細かく分けるほど正しくなる（きちんと示すには極限を使う）ことにふれる。",
+       "hints": [
+        "細い錐体 1 つの体積を、底面積と高さ r で表そう。",
+        "全部の錐体の体積をたすと、底面積の和は何になるかな。",
+        "4πr³ を 4πr² × r と見て、S × r と比べよう。"
+       ],
+       "paths": [
+        [
+         "底面積を a、b、c… とする",
+         "体積の和は (a + b + c + …) × r ÷ 3",
+         "= S × r ÷ 3",
+         "4πr² × r ÷ 3 と等しい",
+         "S = 4πr²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面積と高さがそれぞれ等しい円柱と円錐があります。円柱の体積が 45π cm³ のとき、円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "answer": 15,
+       "check": "45 // 3",
+       "hints": [
+        "錐体の体積は、底面積と高さが同じ柱体の体積の何分のいくつだったかな。",
+        "円柱の体積を、その分だけにしよう。",
+        "45 ÷ 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "錐体は柱体の 3 分の 1",
+         "45π ÷ 3 = 15π",
+         "□ は 15"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 6 cm、母線の長さが 10 cm の円錐の側面積は □π cm² です。πrl の式を使って求めましょう。□ に入る数はいくつですか。",
+       "answer": 60,
+       "check": "6 * 10",
+       "hints": [
+        "側面積は πrl だね。",
+        "r に 6、l に 10 を入れよう。",
+        "6 × 10 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "π × 6 × 10 = 60π",
+         "□ は 60"
+        ],
+        [
+         "弧 12π、円周 20π で円の 3/5",
+         "100π ÷ 5 × 3 = 60π"
+        ]
+       ]
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "半径 3 cm の球が、ちょうど入る円柱（底面の半径 3 cm、高さ 6 cm）があります。円柱の体積は、球の体積の何倍ですか。分数で答えましょう。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"68.3\" y1=\"17\" x2=\"68.3\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"171.7\" y1=\"17\" x2=\"171.7\" y2=\"120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"171.7,120.4 171.4,122.3 170.4,124.1 168.8,125.9 166.6,127.6 163.8,129.3 160.4,130.8 156.6,132.2 152.2,133.4 147.5,134.5 142.4,135.4 137.1,136.1 131.5,136.6 125.8,136.9 120,137 114.2,136.9 108.5,136.6 102.9,136.1 97.6,135.4 92.5,134.5 87.8,133.4 83.4,132.2 79.6,130.8 76.2,129.3 73.4,127.6 71.2,125.9 69.6,124.1 68.6,122.3 68.3,120.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68.3,120.4 68.6,118.6 69.6,116.8 71.2,115 73.4,113.3 76.2,111.6 79.6,110.1 83.4,108.7 87.8,107.5 92.5,106.4 97.6,105.5 102.9,104.8 108.5,104.3 114.2,104 120,103.9 125.8,104 131.5,104.3 137.1,104.8 142.4,105.5 147.5,106.4 152.2,107.5 156.6,108.7 160.4,110.1 163.8,111.6 166.6,113.3 168.8,115 170.4,116.8 171.4,118.6 171.7,120.4\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"171.7,17 171.4,18.9 170.4,20.7 168.8,22.5 166.6,24.2 163.8,25.8 160.4,27.3 156.6,28.7 152.2,29.9 147.5,31 142.4,31.9 137.1,32.6 131.5,33.1 125.8,33.4 120,33.6 114.2,33.4 108.5,33.1 102.9,32.6 97.6,31.9 92.5,31 87.8,29.9 83.4,28.7 79.6,27.3 76.2,25.8 73.4,24.2 71.2,22.5 69.6,20.7 68.6,18.9 68.3,17\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68.3,17 68.6,15.1 69.6,13.3 71.2,11.5 73.4,9.8 76.2,8.2 79.6,6.7 83.4,5.3 87.8,4.1 92.5,3 97.6,2.1 102.9,1.4 108.5,0.9 114.2,0.6 120,0.4 125.8,0.6 131.5,0.9 137.1,1.4 142.4,2.1 147.5,3 152.2,4.1 156.6,5.3 160.4,6.7 163.8,8.2 166.6,9.8 168.8,11.5 170.4,13.3 171.4,15.1 171.7,17\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"68.7\" r=\"51.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"171.7,68.7 171.4,70.5 170.4,72.2 168.8,73.8 166.6,75.5 163.8,77 160.4,78.4 156.6,79.7 152.2,80.9 147.5,81.9 142.4,82.7 137.1,83.4 131.5,83.9 125.8,84.1 120,84.2 114.2,84.1 108.5,83.9 102.9,83.4 97.6,82.7 92.5,81.9 87.8,80.9 83.4,79.7 79.6,78.4 76.2,77 73.4,75.5 71.2,73.8 69.6,72.2 68.6,70.5 68.3,68.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"68.3,68.7 68.6,67 69.6,65.3 71.2,63.6 73.4,62 76.2,60.5 79.6,59 83.4,57.8 87.8,56.6 92.5,55.6 97.6,54.7 102.9,54.1 108.5,53.6 114.2,53.3 120,53.2 125.8,53.3 131.5,53.6 137.1,54.1 142.4,54.7 147.5,55.6 152.2,56.6 156.6,57.8 160.4,59 163.8,60.5 166.6,62 168.8,63.6 170.4,65.3 171.4,67 171.7,68.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"68.7\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"68.7\" x2=\"159.6\" y2=\"35.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"131.8\" y=\"47.3\" font-size=\"12\" text-anchor=\"middle\">3 cm</text></svg>",
+       "answer": "3/2",
+       "check": "Fraction(3 * 3 * 6, 4 * 3 ** 3 // 3)",
+       "hints": [
+        "円柱の体積は 9π × 6 だね。",
+        "球の体積は、1 日目の見本の 36π cm³ だよ。",
+        "円柱の体積 ÷ 球の体積 を約分しよう。"
+       ],
+       "paths": [
+        [
+         "円柱 54π",
+         "球 36π",
+         "54π ÷ 36π = 54/36 = 3/2",
+         "3/2 倍"
+        ]
+       ],
+       "note": "逆にわって 2/3 としやすい。「円柱の体積は、球の体積の何倍」は 円柱 ÷ 球。アルキメデスが見つけた関係で、同じ円柱に入る円錐も合わせると、円柱・球・円錐の体積の比は 3:2:1 になる。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm の球の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "answer": 144,
+       "check": "4 * 6 * 6",
+       "hints": [
+        "球の表面積は S = 4πr² だね。",
+        "r² は 6 × 6 だよ。",
+        "4 × 36 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "r² = 36",
+         "4π × 36 = 144π",
+         "□ は 144"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "1 辺 3 cm の立方体を、わけの 1 問目と同じように、合同な 3 つの四角錐に分けます。四角錐 1 つの体積は何 cm³ ですか。",
+       "answer": 9,
+       "check": "3 ** 3 // 3",
+       "hints": [
+        "立方体の体積はいくつかな。",
+        "合同な 3 つに分けると、1 つ分はどうなるかな。",
+        "底面積 × 高さ ÷ 3 でも確かめよう。"
+       ],
+       "paths": [
+        [
+         "立方体 27 cm³",
+         "27 ÷ 3 = 9",
+         "9 cm³"
+        ],
+        [
+         "底面積 9・高さ 3",
+         "9 × 3 ÷ 3 = 9"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "混ぜる",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "思い出す",
+       "text": "底面の半径が 2 cm、高さが 5 cm の円柱の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M89.4 32.7 L89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1 L150.6 32.7 A30.6 9.8 0 0 1 89.4 32.7 Z\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><ellipse cx=\"120\" cy=\"32.7\" rx=\"30.6\" ry=\"9.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"89.4\" y1=\"32.7\" x2=\"89.4\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"150.6\" y1=\"32.7\" x2=\"150.6\" y2=\"109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.4 109.1 A30.6 9.8 0 0 0 150.6 109.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M89.4 109.1 A30.6 9.8 0 0 1 150.6 109.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"32.7\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"32.7\" x2=\"150.6\" y2=\"32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"154.6\" y=\"21.1\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"156.6\" y=\"75.1\" font-size=\"12\" text-anchor=\"start\">5 cm</text></svg>",
+       "answer": 28,
+       "check": "2 * 2 * 2 + 2 * 2 * 5",
+       "hints": [
+        "円柱の表面積は、底面 2 つと側面の面積の和だね。",
+        "底面 1 つは 4π cm²、側面は たて 5 cm、横は円周 4π cm の長方形だよ。",
+        "底面 2 つと側面をたそう。"
+       ],
+       "paths": [
+        [
+         "底面 2 つで 8π",
+         "側面 5 × 4π = 20π",
+         "8π + 20π = 28π",
+         "□ は 28"
+        ]
+       ],
+       "note": "底面を 1 つしか入れないと 24 になる。"
+      },
+      {
+       "part": "思い出す",
+       "text": "円錐の体積の式 V = πr²h/3 で、r = 3、h = 10 のとき、V は □π です。□ に入る数はいくつですか。",
+       "answer": 30,
+       "check": "3 * 3 * 10 // 3",
+       "hints": [
+        "r に 3、h に 10 を代入しよう。",
+        "r² は 3 × 3 = 9 だよ。",
+        "9 × 10 ÷ 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "r² = 9",
+         "9 × 10 = 90",
+         "90 ÷ 3 = 30",
+         "□ は 30"
+        ]
+       ],
+       "note": "r² を 3 × 2 = 6 としやすい（A-009 の累乗）。"
+      },
+      {
+       "part": "今日",
+       "text": "円柱の上に、同じ底面の円錐をのせた立体です。体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"88.1,60.6 88.1,113.8 88.3,114.9 88.9,116.1 89.9,117.2 91.2,118.2 93,119.2 95,120.2 97.4,121 100.1,121.8 103,122.4 106.1,123 109.5,123.4 112.9,123.7 116.4,123.9 120,124 123.6,123.9 127.1,123.7 130.5,123.4 133.9,123 137,122.4 139.9,121.8 142.6,121 145,120.2 147,119.2 148.8,118.2 150.1,117.2 151.1,116.1 151.7,114.9 151.9,113.8 151.9,60.6 151.9,60.6 151.7,61.7 151.1,62.8 150.1,63.9 148.8,65 147,66 145,66.9 142.6,67.8 139.9,68.6 137,69.2 133.9,69.8 130.5,70.2 127.1,70.5 123.6,70.7 120,70.8 116.4,70.7 112.9,70.5 109.5,70.2 106.1,69.8 103,69.2 100.1,68.6 97.4,67.8 95,66.9 93,66 91.2,65 89.9,63.9 88.9,62.8 88.3,61.7 88.1,60.6\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"88.1\" y1=\"60.6\" x2=\"88.1\" y2=\"113.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"151.9\" y1=\"60.6\" x2=\"151.9\" y2=\"113.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"151.9,113.8 151.7,114.9 151.1,116.1 150.1,117.2 148.8,118.2 147,119.2 145,120.2 142.6,121 139.9,121.8 137,122.4 133.9,123 130.5,123.4 127.1,123.7 123.6,123.9 120,124 116.4,123.9 112.9,123.7 109.5,123.4 106.1,123 103,122.4 100.1,121.8 97.4,121 95,120.2 93,119.2 91.2,118.2 89.9,117.2 88.9,116.1 88.3,114.9 88.1,113.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"88.1,113.8 88.3,112.6 88.9,111.5 89.9,110.4 91.2,109.4 93,108.3 95,107.4 97.4,106.6 100.1,105.8 103,105.1 106.1,104.6 109.5,104.1 112.9,103.8 116.4,103.6 120,103.6 123.6,103.6 127.1,103.8 130.5,104.1 133.9,104.6 137,105.1 139.9,105.8 142.6,106.6 145,107.4 147,108.3 148.8,109.4 150.1,110.4 151.1,111.5 151.7,112.6 151.9,113.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"151.9,60.6 151.7,61.7 151.1,62.8 150.1,63.9 148.8,65 147,66 145,66.9 142.6,67.8 139.9,68.6 137,69.2 133.9,69.8 130.5,70.2 127.1,70.5 123.6,70.7 120,70.8 116.4,70.7 112.9,70.5 109.5,70.2 106.1,69.8 103,69.2 100.1,68.6 97.4,67.8 95,66.9 93,66 91.2,65 89.9,63.9 88.9,62.8 88.3,61.7 88.1,60.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"88.1,60.6 88.3,59.4 88.9,58.3 89.9,57.2 91.2,56.1 93,55.1 95,54.2 97.4,53.3 100.1,52.6 103,51.9 106.1,51.4 109.5,50.9 112.9,50.6 116.4,50.4 120,50.4 123.6,50.4 127.1,50.6 130.5,50.9 133.9,51.4 137,51.9 139.9,52.6 142.6,53.3 145,54.2 147,55.1 148.8,56.1 150.1,57.2 151.1,58.3 151.7,59.4 151.9,60.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><polygon points=\"120,18 89,58.1 88.3,59.4 88.1,60.7 88.4,62.1 89.3,63.4 90.7,64.6 92.5,65.8 94.9,66.9 97.6,67.9 100.7,68.7 104.2,69.4 107.9,70 111.8,70.4 115.9,70.7 120,70.8 124.1,70.7 128.2,70.4 132.1,70 135.8,69.4 139.3,68.7 142.4,67.9 145.1,66.9 147.5,65.8 149.3,64.6 150.7,63.4 151.6,62.1 151.9,60.7 151.7,59.4 151,58.1\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"120\" y1=\"18\" x2=\"89\" y2=\"58.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"18\" x2=\"151\" y2=\"58.1\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"113.8\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"113.8\" x2=\"151.9\" y2=\"113.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"136\" y=\"138.2\" font-size=\"12\" text-anchor=\"middle\">3 cm</text><text x=\"157.9\" y=\"91.4\" font-size=\"12\" text-anchor=\"start\">5 cm</text><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"60.6\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"147.6\" y=\"47.7\" font-size=\"12\" text-anchor=\"start\">4 cm</text></svg>",
+       "answer": 57,
+       "check": "3 * 3 * 5 + 3 * 3 * 4 // 3",
+       "hints": [
+        "円柱と円錐に分けて考えよう。底面積はどちらも 9π cm² だね。",
+        "円柱は 底面積 × 高さ、円錐は 底面積 × 高さ ÷ 3 だよ。",
+        "2 つの体積をたそう。"
+       ],
+       "paths": [
+        [
+         "円柱 9π × 5 = 45π",
+         "円錐 9π × 4 ÷ 3 = 12π",
+         "45π + 12π = 57π",
+         "□ は 57"
+        ]
+       ],
+       "note": "高さを合わせて 9π × 9 = 81π としやすい。形ごとに式がちがう。"
+      },
+      {
+       "part": "今日",
+       "text": "頂点を下にした円錐の上に、同じ半径の半球をのせた立体です。体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"86.2,47.8 86.4,44 87,40.3 88.1,36.6 89.5,33.1 91.4,29.8 93.6,26.7 96.1,23.9 98.9,21.4 102,19.2 105.3,17.3 108.8,15.9 112.5,14.8 116.2,14.2 120,14 123.8,14.2 127.5,14.8 131.2,15.9 134.7,17.3 138,19.2 141.1,21.4 143.9,23.9 146.4,26.7 148.6,29.8 150.5,33.1 151.9,36.6 153,40.3 153.6,44 153.8,47.8 153.6,49.1 120,138 86.4,49.1\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"86.2,47.8 86.4,44 87,40.3 88.1,36.6 89.5,33.1 91.4,29.8 93.6,26.7 96.1,23.9 98.9,21.4 102,19.2 105.3,17.3 108.8,15.9 112.5,14.8 116.2,14.2 120,14 123.8,14.2 127.5,14.8 131.2,15.9 134.7,17.3 138,19.2 141.1,21.4 143.9,23.9 146.4,26.7 148.6,29.8 150.5,33.1 151.9,36.6 153,40.3 153.6,44 153.8,47.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"153.8,47.8 153.6,49 153,50.2 151.9,51.4 150.5,52.5 148.6,53.6 146.4,54.6 143.9,55.5 141.1,56.3 138,57 134.7,57.6 131.2,58 127.5,58.4 123.8,58.6 120,58.6 116.2,58.6 112.5,58.4 108.8,58 105.3,57.6 102,57 98.9,56.3 96.1,55.5 93.6,54.6 91.4,53.6 89.5,52.5 88.1,51.4 87,50.2 86.4,49 86.2,47.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"86.2,47.8 86.4,46.6 87,45.4 88.1,44.2 89.5,43.1 91.4,42.1 93.6,41.1 96.1,40.2 98.9,39.4 102,38.7 105.3,38.1 108.8,37.6 112.5,37.3 116.2,37.1 120,37 123.8,37.1 127.5,37.3 131.2,37.6 134.7,38.1 138,38.7 141.1,39.4 143.9,40.2 146.4,41.1 148.6,42.1 150.5,43.1 151.9,44.2 153,45.4 153.6,46.6 153.8,47.8\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"153.6\" y1=\"49.1\" x2=\"120\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"86.4\" y1=\"49.1\" x2=\"120\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"47.8\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"47.8\" x2=\"120\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"47.8\" x2=\"153.8\" y2=\"47.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"158.8\" y=\"52\" font-size=\"12\" text-anchor=\"start\">3 cm</text><line x1=\"74.2\" y1=\"47.8\" x2=\"74.2\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70.2\" y1=\"47.8\" x2=\"78.2\" y2=\"47.8\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"70.2\" y1=\"138\" x2=\"78.2\" y2=\"138\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"69.2\" y=\"97.1\" font-size=\"12\" text-anchor=\"end\">8 cm</text></svg>",
+       "answer": 42,
+       "check": "3 * 3 * 8 // 3 + 4 * 3 ** 3 // 3 // 2",
+       "hints": [
+        "円錐と半球に分けて考えよう。",
+        "円錐は 9π × 8 ÷ 3、半球は半径 3 cm の球の体積の半分だね。",
+        "2 つの体積をたそう。"
+       ],
+       "paths": [
+        [
+         "円錐 9π × 8 ÷ 3 = 24π",
+         "球 36π の半分で 18π",
+         "24π + 18π = 42π",
+         "□ は 42"
+        ]
+       ],
+       "note": "半球を球のまま（36π）たして 60 としやすい。"
+      },
+      {
+       "part": "今日",
+       "text": "半径 r の半球の体積を表す式はどれですか。",
+       "choices": [
+        "2πr³/3",
+        "4πr³/3",
+        "2πr²"
+       ],
+       "answer": "2πr³/3",
+       "check": "[c for c, g in (('2πr³/3', lambda r: Fraction(2 * r ** 3, 3)), ('4πr³/3', lambda r: Fraction(4 * r ** 3, 3)), ('2πr²', lambda r: Fraction(2 * r * r))) if all(g(r) == Fraction(4 * r ** 3, 3) / 2 for r in range(1, 10))][0]",
+       "hints": [
+        "半球は、球を半分にした立体だね。",
+        "球の体積 4πr³/3 を 2 でわろう。",
+        "r = 3 を入れて、球の体積の半分（18π）になる式を確かめよう。"
+       ],
+       "paths": [
+        [
+         "球は 4πr³/3",
+         "その半分",
+         "4πr³/3 ÷ 2 = 2πr³/3"
+        ]
+       ],
+       "note": "2πr² は半球のまるい面の面積（球の表面積の半分）。体積は r³、面積は r²。"
+      },
+      {
+       "part": "挑戦",
+       "text": "底面の半径が 6 cm、高さが 8 cm の円錐から、上の部分の、底面の半径が 3 cm、高さが 4 cm の円錐を切り取った立体です。体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"86.5,68.2 59,104.9 59.3,106.8 60.4,108.8 62.1,110.7 64.4,112.5 67.4,114.2 71,115.8 75.1,117.3 79.7,118.6 84.7,119.8 90.1,120.7 95.8,121.5 101.8,122 107.8,122.4 114,122.5 120.2,122.4 126.2,122 132.2,121.5 137.9,120.7 143.3,119.8 148.3,118.6 152.9,117.3 157,115.8 160.6,114.2 163.6,112.5 165.9,110.7 167.6,108.8 168.7,106.8 169,104.9 141.5,68.2 141.5,68.2 141.3,67.2 140.8,66.2 140,65.3 138.8,64.4 137.3,63.5 135.5,62.7 133.4,62 131.1,61.3 128.6,60.7 125.9,60.3 123.1,59.9 120.1,59.6 117.1,59.5 114,59.4 110.9,59.5 107.9,59.6 104.9,59.9 102.1,60.3 99.4,60.7 96.9,61.3 94.6,62 92.5,62.7 90.7,63.5 89.2,64.4 88,65.3 87.2,66.2 86.7,67.2 86.5,68.2\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"86.5\" y1=\"68.2\" x2=\"59\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"141.5\" y1=\"68.2\" x2=\"169\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"169,104.9 168.7,106.8 167.6,108.8 165.9,110.7 163.6,112.5 160.6,114.2 157,115.8 152.9,117.3 148.3,118.6 143.3,119.8 137.9,120.7 132.2,121.5 126.2,122 120.2,122.4 114,122.5 107.8,122.4 101.8,122 95.8,121.5 90.1,120.7 84.7,119.8 79.7,118.6 75.1,117.3 71,115.8 67.4,114.2 64.4,112.5 62.1,110.7 60.4,108.8 59.3,106.8 59,104.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"59,104.9 59.3,102.9 60.4,101 62.1,99.1 64.4,97.2 67.4,95.5 71,93.9 75.1,92.4 79.7,91.1 84.7,90 90.1,89 95.8,88.3 101.8,87.7 107.8,87.4 114,87.3 120.2,87.4 126.2,87.7 132.2,88.3 137.9,89 143.3,90 148.3,91.1 152.9,92.4 157,93.9 160.6,95.5 163.6,97.2 165.9,99.1 167.6,101 168.7,102.9 169,104.9\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><ellipse cx=\"114\" cy=\"68.2\" rx=\"27.5\" ry=\"8.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"114\" y1=\"31.5\" x2=\"86.5\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"114\" y1=\"31.5\" x2=\"141.5\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"114\" y1=\"31.5\" x2=\"114\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"114\" cy=\"104.9\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"114\" cy=\"68.2\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"114\" y1=\"104.9\" x2=\"169\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"141.5\" y=\"136.7\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><line x1=\"114\" y1=\"68.2\" x2=\"141.5\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149.5\" y=\"68.4\" font-size=\"12\" text-anchor=\"start\">3 cm</text><line x1=\"183\" y1=\"31.5\" x2=\"183\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"179\" y1=\"31.5\" x2=\"187\" y2=\"31.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"179\" y1=\"104.9\" x2=\"187\" y2=\"104.9\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"189\" y=\"72.4\" font-size=\"12\" text-anchor=\"start\">8 cm</text><line x1=\"51\" y1=\"31.5\" x2=\"51\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"47\" y1=\"31.5\" x2=\"55\" y2=\"31.5\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"47\" y1=\"68.2\" x2=\"55\" y2=\"68.2\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"46\" y=\"54.1\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "answer": 84,
+       "check": "6 * 6 * 8 // 3 - 3 * 3 * 4 // 3",
+       "hints": [
+        "大きい円錐の体積を求めよう。",
+        "切り取った小さい円錐の体積を求めよう。",
+        "大きい円錐から小さい円錐をひこう。"
+       ],
+       "paths": [
+        [
+         "大きい円錐 36π × 8 ÷ 3 = 96π",
+         "小さい円錐 9π × 4 ÷ 3 = 12π",
+         "96π − 12π = 84π",
+         "□ は 84"
+        ]
+       ],
+       "note": "高さも半径も半分の円錐は、体積が 8 分の 1（12π は 96π の 1/8）になる。半分と考えて 48 としやすい。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "円柱から、上の面を底面とし、下の面の中心を頂点とする円錐をくりぬいた立体です。体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"97.2,17 97.2,119.7 97.3,120.5 97.8,121.3 98.5,122.1 99.4,122.9 100.7,123.6 102.2,124.3 103.9,124.9 105.8,125.4 107.9,125.9 110.1,126.3 112.5,126.6 114.9,126.8 117.4,127 120,127 122.6,127 125.1,126.8 127.5,126.6 129.9,126.3 132.1,125.9 134.2,125.4 136.1,124.9 137.8,124.3 139.3,123.6 140.6,122.9 141.5,122.1 142.2,121.3 142.7,120.5 142.8,119.7 142.8,17 142.8,17 142.7,16.2 142.2,15.4 141.5,14.6 140.6,13.8 139.3,13.1 137.8,12.4 136.1,11.8 134.2,11.3 132.1,10.8 129.9,10.4 127.5,10.1 125.1,9.9 122.6,9.7 120,9.7 117.4,9.7 114.9,9.9 112.5,10.1 110.1,10.4 107.9,10.8 105.8,11.3 103.9,11.8 102.2,12.4 100.7,13.1 99.4,13.8 98.5,14.6 97.8,15.4 97.3,16.2 97.2,17\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"97.2\" y1=\"17\" x2=\"97.2\" y2=\"119.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"142.8\" y1=\"17\" x2=\"142.8\" y2=\"119.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"142.8,119.7 142.7,120.5 142.2,121.3 141.5,122.1 140.6,122.9 139.3,123.6 137.8,124.3 136.1,124.9 134.2,125.4 132.1,125.9 129.9,126.3 127.5,126.6 125.1,126.8 122.6,127 120,127 117.4,127 114.9,126.8 112.5,126.6 110.1,126.3 107.9,125.9 105.8,125.4 103.9,124.9 102.2,124.3 100.7,123.6 99.4,122.9 98.5,122.1 97.8,121.3 97.3,120.5 97.2,119.7\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"97.2,119.7 97.3,118.9 97.8,118.1 98.5,117.3 99.4,116.5 100.7,115.8 102.2,115.1 103.9,114.5 105.8,114 107.9,113.5 110.1,113.1 112.5,112.8 114.9,112.6 117.4,112.4 120,112.4 122.6,112.4 125.1,112.6 127.5,112.8 129.9,113.1 132.1,113.5 134.2,114 136.1,114.5 137.8,115.1 139.3,115.8 140.6,116.5 141.5,117.3 142.2,118.1 142.7,118.9 142.8,119.7\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"142.8,17 142.7,17.8 142.2,18.6 141.5,19.4 140.6,20.2 139.3,20.9 137.8,21.6 136.1,22.2 134.2,22.7 132.1,23.2 129.9,23.6 127.5,23.9 125.1,24.1 122.6,24.3 120,24.3 117.4,24.3 114.9,24.1 112.5,23.9 110.1,23.6 107.9,23.2 105.8,22.7 103.9,22.2 102.2,21.6 100.7,20.9 99.4,20.2 98.5,19.4 97.8,18.6 97.3,17.8 97.2,17\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"97.2,17 97.3,16.2 97.8,15.4 98.5,14.6 99.4,13.8 100.7,13.1 102.2,12.4 103.9,11.8 105.8,11.3 107.9,10.8 110.1,10.4 112.5,10.1 114.9,9.9 117.4,9.7 120,9.7 122.6,9.7 125.1,9.9 127.5,10.1 129.9,10.4 132.1,10.8 134.2,11.3 136.1,11.8 137.8,12.4 139.3,13.1 140.6,13.8 141.5,14.6 142.2,15.4 142.7,16.2 142.8,17\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"97.2\" y1=\"17\" x2=\"120\" y2=\"119.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"142.8\" y1=\"17\" x2=\"120\" y2=\"119.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"17\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"17\" x2=\"142.8\" y2=\"17\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"146.8\" y=\"9.9\" font-size=\"12\" text-anchor=\"start\">2 cm</text><text x=\"148.8\" y=\"72.5\" font-size=\"12\" text-anchor=\"start\">9 cm</text></svg>",
+       "answer": 24,
+       "check": "2 * 2 * 9 - 2 * 2 * 9 // 3",
+       "hints": [
+        "円柱の体積は 4π × 9 だね。",
+        "くりぬいた円錐は、円柱と底面積も高さも同じだよ。",
+        "円柱から円錐をひこう。"
+       ],
+       "paths": [
+        [
+         "円柱 36π",
+         "円錐 12π",
+         "36π − 12π = 24π",
+         "□ は 24"
+        ],
+        [
+         "円柱の 3 分の 2 が残る",
+         "36π ÷ 3 × 2 = 24π"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "直方体の 1 つの角を切り取ってできた三角錐です。体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"168.6,111.5 44,111.5 168.6,28.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"168.6,111.5 196,90.9 168.6,28.5\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"168.6\" y1=\"111.5\" x2=\"44\" y2=\"111.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"111.5\" x2=\"196\" y2=\"90.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"168.6\" y1=\"111.5\" x2=\"196\" y2=\"90.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"44\" y1=\"111.5\" x2=\"168.6\" y2=\"28.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"168.6\" y1=\"111.5\" x2=\"168.6\" y2=\"28.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"196\" y1=\"90.9\" x2=\"168.6\" y2=\"28.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"161.6,111.5 161.6,104.5 168.6,104.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"174.2,107.3 174.2,100.3 168.6,104.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"106.3\" y=\"128.7\" font-size=\"12\" text-anchor=\"middle\">6 cm</text><text x=\"190.3\" y=\"113.4\" font-size=\"12\" text-anchor=\"start\">3 cm</text><text x=\"162.6\" y=\"74.2\" font-size=\"12\" text-anchor=\"end\">4 cm</text></svg>",
+       "answer": 12,
+       "check": "6 * 3 // 2 * 4 // 3",
+       "hints": [
+        "下の面（直角三角形）を底面とみよう。",
+        "底面積は 6 × 3 ÷ 2 だね。高さは、たての 4 cm の辺だよ。",
+        "底面積 × 高さ ÷ 3 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "底面積 9",
+         "9 × 4 = 36",
+         "36 ÷ 3 = 12",
+         "12 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 8 cm、母線の長さが 10 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。",
+       "answer": 288,
+       "check": "360 * 8 // 10",
+       "hints": [
+        "おうぎ形の弧の長さは、底面の円周 16π cm だね。",
+        "半径 10 cm の円の円周は 20π cm。おうぎ形は円の何分の何かな。",
+        "360° のうち、その分が中心角だよ。"
+       ],
+       "paths": [
+        [
+         "弧 16π、円周 20π",
+         "16 ÷ 20 = 4/5",
+         "360 ÷ 5 × 4 = 288",
+         "288°"
+        ]
+       ]
+      }
+     ]
     },
     {
      "kind": "確認",
-     "aim": ""
+     "aim": "",
+     "items": [
+      {
+       "part": "今日",
+       "text": "正四角錐の体積は何 cm³ ですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"65.2,122 141.4,122 120,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"141.4,122 174.8,96.8 120,18\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"174.8\" y1=\"96.8\" x2=\"98.6\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"141.4\" y1=\"122\" x2=\"174.8\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.2\" y1=\"122\" x2=\"141.4\" y2=\"122\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.2\" y1=\"122\" x2=\"98.6\" y2=\"96.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"141.4\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"65.2\" y1=\"122\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"174.8\" y1=\"96.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"98.6\" y1=\"96.8\" x2=\"120\" y2=\"18\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"18\" x2=\"120\" y2=\"109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,102.4 127,102.4 127,109.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"120\" cy=\"109.4\" r=\"2.5\" fill=\"currentColor\"/><text x=\"103.3\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"125\" y=\"93.5\" font-size=\"12\" text-anchor=\"start\">6 cm</text></svg>",
+       "answer": 50,
+       "check": "5 * 5 * 6 // 3",
+       "hints": [
+        "底面積は 5 × 5 だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "6 を先に 3 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "底面積 25",
+         "25 × 6 = 150",
+         "150 ÷ 3 = 50",
+         "50 cm³"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,19 63.1,102.4 62,104.7 61.8,107.1 62.6,109.5 64.3,111.8 66.9,114 70.4,116.1 74.6,118.1 79.7,119.8 85.3,121.3 91.6,122.6 98.3,123.7 105.3,124.4 112.6,124.8 120,125 127.4,124.8 134.7,124.4 141.7,123.7 148.4,122.6 154.7,121.3 160.3,119.8 165.4,118.1 169.6,116.1 173.1,114 175.7,111.8 177.4,109.5 178.2,107.1 178,104.7 176.9,102.4\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"176.9,102.4 178,104.7 178.2,107.1 177.4,109.5 175.7,111.8 173.1,114 169.6,116.1 165.4,118.1 160.3,119.8 154.7,121.3 148.4,122.6 141.7,123.7 134.7,124.4 127.4,124.8 120,125 112.6,124.8 105.3,124.4 98.3,123.7 91.6,122.6 85.3,121.3 79.7,119.8 74.6,118.1 70.4,116.1 66.9,114 64.3,111.8 62.6,109.5 61.8,107.1 62,104.7 63.1,102.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"63.1,102.4 64.6,100.6 66.6,99 69,97.3 72,95.8 75.4,94.4 79.3,93 83.5,91.8 88,90.8 92.9,89.9 98,89.1 103.3,88.5 108.8,88.1 114.4,87.8 120,87.7 125.6,87.8 131.2,88.1 136.7,88.5 142,89.1 147.1,89.9 152,90.8 156.5,91.8 160.7,93 164.6,94.4 168,95.8 171,97.3 173.4,99 175.4,100.6 176.9,102.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"19\" x2=\"63.1\" y2=\"102.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"19\" x2=\"176.9\" y2=\"102.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"106.4\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"19\" x2=\"120\" y2=\"106.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><polyline points=\"120,99.4 127,99.4 127,106.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"120\" y1=\"106.4\" x2=\"178.2\" y2=\"106.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"149.1\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">4 cm</text><line x1=\"49.8\" y1=\"19\" x2=\"49.8\" y2=\"106.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45.8\" y1=\"19\" x2=\"53.8\" y2=\"19\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><line x1=\"45.8\" y1=\"106.4\" x2=\"53.8\" y2=\"106.4\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"none\"/><text x=\"44.8\" y=\"66.9\" font-size=\"12\" text-anchor=\"end\">6 cm</text></svg>",
+       "answer": 32,
+       "check": "4 * 4 * 6 // 3",
+       "hints": [
+        "底面積は π × 4 × 4 = 16π cm² だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "16π × 6 を 3 でわろう。"
+       ],
+       "paths": [
+        [
+         "底面積 16π",
+         "16π × 6 ÷ 3 = 32π",
+         "□ は 32"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 1 cm の球の体積は □π cm³ です。□ に入る数を分数で答えましょう。",
+       "answer": "4/3",
+       "check": "Fraction(4 * 1 ** 3, 3)",
+       "hints": [
+        "球の体積は V = 4πr³/3 だね。",
+        "r³ は 1 × 1 × 1 = 1 だよ。",
+        "4 ÷ 3 を分数で書こう。"
+       ],
+       "paths": [
+        [
+         "r³ = 1",
+         "4π × 1 ÷ 3 = 4π/3",
+         "□ は 4/3"
+        ]
+       ],
+       "note": "4 ÷ 3 が割り切れないので止まりやすい。分数で書けばよい。"
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 5 cm、母線の長さが 13 cm の円錐の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"120,19 81.4,110.9 81,112.4 81.3,113.9 82.1,115.4 83.4,116.8 85.3,118.2 87.8,119.5 90.7,120.7 94,121.8 97.7,122.8 101.8,123.6 106.1,124.2 110.6,124.6 115.3,124.9 120,125 124.7,124.9 129.4,124.6 133.9,124.2 138.2,123.6 142.3,122.8 146,121.8 149.3,120.7 152.2,119.5 154.7,118.2 156.6,116.8 157.9,115.4 158.7,113.9 159,112.4 158.6,110.9\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"158.6,110.9 159,112.4 158.7,113.9 157.9,115.4 156.6,116.8 154.7,118.2 152.2,119.5 149.3,120.7 146,121.8 142.3,122.8 138.2,123.6 133.9,124.2 129.4,124.6 124.7,124.9 120,125 115.3,124.9 110.6,124.6 106.1,124.2 101.8,123.6 97.7,122.8 94,121.8 90.7,120.7 87.8,119.5 85.3,118.2 83.4,116.8 82.1,115.4 81.3,113.9 81,112.4 81.4,110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"81.4,110.9 82.1,109.6 83.2,108.4 84.8,107.2 86.7,106.1 88.9,105 91.5,104 94.3,103.1 97.5,102.4 100.9,101.7 104.4,101.1 108.2,100.6 112.1,100.3 116,100.1 120,100.1 124,100.1 127.9,100.3 131.8,100.6 135.6,101.1 139.1,101.7 142.5,102.4 145.7,103.1 148.5,104 151.1,105 153.3,106.1 155.2,107.2 156.8,108.4 157.9,109.6 158.6,110.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\" stroke-dasharray=\"5 4\"/><line x1=\"120\" y1=\"19\" x2=\"81.4\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"19\" x2=\"158.6\" y2=\"110.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"112.5\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"112.5\" x2=\"159\" y2=\"112.5\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"139.5\" y=\"139.2\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"146.3\" y=\"65.1\" font-size=\"12\" text-anchor=\"start\">13 cm</text></svg>",
+       "answer": 90,
+       "check": "Fraction(5, 13) * 13 * 13 + 5 * 5",
+       "hints": [
+        "側面積は πrl で求められるね。",
+        "側面積は π × 5 × 13 だよ。",
+        "側面積に、底面積 25π cm² をたそう。"
+       ],
+       "paths": [
+        [
+         "側面積 π × 5 × 13 = 65π",
+         "底面積 25π",
+         "65π + 25π = 90π",
+         "□ は 90"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 7 cm の球の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "answer": 196,
+       "check": "4 * 7 * 7",
+       "hints": [
+        "球の表面積は S = 4πr² だね。",
+        "r² は 7 × 7 = 49 だよ。",
+        "4 × 49 を計算しよう。"
+       ],
+       "paths": [
+        [
+         "r² = 49",
+         "4π × 49 = 196π",
+         "□ は 196"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "正四角錐の展開図です。側面の三角形の高さ（点線）は 13 cm です。表面積は何 cm² ですか。",
+       "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"101.4,93.6 138.6,93.6 138.6,56.4 101.4,56.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"101.4,56.4 138.6,56.4 120,8\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"138.6,56.4 138.6,93.6 187,75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"138.6,93.6 101.4,93.6 120,142\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"101.4,93.6 101.4,56.4 53,75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text dy=\"-6\" x=\"120\" y=\"97.8\" font-size=\"12\" text-anchor=\"middle\">10 cm</text><line x1=\"138.6\" y1=\"75\" x2=\"187\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"1.3\" fill=\"none\" stroke-dasharray=\"5 4\"/><text x=\"158.9\" y=\"69.8\" font-size=\"11\" text-anchor=\"middle\">13 cm</text></svg>",
+       "answer": 360,
+       "check": "10 * 10 + 4 * (10 * 13 // 2)",
+       "hints": [
+        "底面の正方形の面積は 10 × 10 だね。",
+        "側面の三角形 1 つは、底辺 10 cm、高さ 13 cm だよ。",
+        "三角形 4 つと底面をたそう。"
+       ],
+       "paths": [
+        [
+         "底面 100",
+         "三角形 1 つ 65",
+         "4 つで 260",
+         "100 + 260 = 360",
+         "360 cm²"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 6 cm、母線の長さが 8 cm の円錐の展開図で、側面のおうぎ形の中心角は何度ですか。",
+       "answer": 270,
+       "check": "360 * 6 // 8",
+       "hints": [
+        "おうぎ形の弧の長さは、底面の円周 12π cm だね。",
+        "半径 8 cm の円の円周は 16π cm。おうぎ形は円の何分の何かな。",
+        "360° のうち、その分が中心角だよ。"
+       ],
+       "paths": [
+        [
+         "弧 12π、円周 16π",
+         "12 ÷ 16 = 3/4",
+         "360 ÷ 4 × 3 = 270",
+         "270°"
+        ]
+       ]
+      },
+      {
+       "part": "挑戦",
+       "text": "表面積が 324π cm² の球の半径は何 cm ですか。",
+       "answer": 9,
+       "check": "[r for r in range(1, 30) if 4 * r * r == 324][0]",
+       "hints": [
+        "4πr² = 324π になる r をさがそう。",
+        "r² = 324 ÷ 4 だね。",
+        "2 回かけて 81 になる数はいくつかな。"
+       ],
+       "paths": [
+        [
+         "4 × r² = 324",
+         "r² = 81",
+         "9 × 9 = 81",
+         "9 cm"
+        ]
+       ],
+       "note": "324 ÷ 4 = 81 で止めやすい。81 は r² で、r は 2 回かけて 81 になる数。"
+      }
+     ],
+     "extra": [
+      {
+       "part": "今日",
+       "text": "底面の半径が 6 cm、高さが 5 cm の円錐の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "answer": 60,
+       "check": "6 * 6 * 5 // 3",
+       "hints": [
+        "底面積は π × 6 × 6 = 36π cm² だね。",
+        "錐体の体積は、底面積 × 高さ ÷ 3 だよ。",
+        "36 を先に 3 でわってもよいよ。"
+       ],
+       "paths": [
+        [
+         "36π × 5 = 180π",
+         "180π ÷ 3 = 60π",
+         "□ は 60"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "半径 6 cm の半球の体積は □π cm³ です。□ に入る数はいくつですか。",
+       "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,99.2 40.5,90.2 42,81.4 44.5,72.8 47.9,64.5 52.3,56.6 57.5,49.3 63.4,42.6 70.1,36.7 77.4,31.5 85.3,27.1 93.6,23.7 102.2,21.2 111,19.7 120,19.2 129,19.7 137.8,21.2 146.4,23.7 154.7,27.1 162.6,31.5 169.9,36.7 176.6,42.6 182.5,49.3 187.7,56.6 192.1,64.5 195.5,72.8 198,81.4 199.5,90.2 200,99.2 200,99.2 199.5,102.1 198,104.9 195.5,107.7 192.1,110.3 187.7,112.8 182.5,115.2 176.6,117.3 169.9,119.2 162.6,120.9 154.7,122.3 146.4,123.4 137.8,124.2 129,124.6 120,124.8 111,124.6 102.2,124.2 93.6,123.4 85.3,122.3 77.4,120.9 70.1,119.2 63.4,117.3 57.5,115.2 52.3,112.8 47.9,110.3 44.5,107.7 42,104.9 40.5,102.1 40,99.2\" stroke=\"none\" fill=\"#f3c969\" fill-opacity=\".35\"/><polyline points=\"40,99.2 40.5,90.2 42,81.4 44.5,72.8 47.9,64.5 52.3,56.6 57.5,49.3 63.4,42.6 70.1,36.7 77.4,31.5 85.3,27.1 93.6,23.7 102.2,21.2 111,19.7 120,19.2 129,19.7 137.8,21.2 146.4,23.7 154.7,27.1 162.6,31.5 169.9,36.7 176.6,42.6 182.5,49.3 187.7,56.6 192.1,64.5 195.5,72.8 198,81.4 199.5,90.2 200,99.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"200,99.2 199.5,102.1 198,104.9 195.5,107.7 192.1,110.3 187.7,112.8 182.5,115.2 176.6,117.3 169.9,119.2 162.6,120.9 154.7,122.3 146.4,123.4 137.8,124.2 129,124.6 120,124.8 111,124.6 102.2,124.2 93.6,123.4 85.3,122.3 77.4,120.9 70.1,119.2 63.4,117.3 57.5,115.2 52.3,112.8 47.9,110.3 44.5,107.7 42,104.9 40.5,102.1 40,99.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"40,99.2 40.5,96.3 42,93.5 44.5,90.7 47.9,88.1 52.3,85.6 57.5,83.2 63.4,81.1 70.1,79.2 77.4,77.5 85.3,76.1 93.6,75 102.2,74.2 111,73.8 120,73.6 129,73.8 137.8,74.2 146.4,75 154.7,76.1 162.6,77.5 169.9,79.2 176.6,81.1 182.5,83.2 187.7,85.6 192.1,88.1 195.5,90.7 198,93.5 199.5,96.3 200,99.2\" stroke=\"currentColor\" stroke-width=\"1.2\" fill=\"none\" stroke-dasharray=\"5 4\"/><circle cx=\"120\" cy=\"99.2\" r=\"2.5\" fill=\"currentColor\"/><line x1=\"120\" y1=\"99.2\" x2=\"200\" y2=\"99.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"160\" y=\"139\" font-size=\"12\" text-anchor=\"middle\">6 cm</text></svg>",
+       "answer": 144,
+       "check": "4 * 6 ** 3 // 3 // 2",
+       "hints": [
+        "半球は、球の体積の半分だね。",
+        "半径 6 cm の球の体積は 4π × 216 ÷ 3 だよ。",
+        "その半分を求めよう。"
+       ],
+       "paths": [
+        [
+         "球 288π",
+         "288π ÷ 2 = 144π",
+         "□ は 144"
+        ]
+       ]
+      },
+      {
+       "part": "今日",
+       "text": "底面の半径が 4 cm、母線の長さが 5 cm の円錐の表面積は □π cm² です。□ に入る数はいくつですか。",
+       "answer": 36,
+       "check": "Fraction(4, 5) * 5 * 5 + 4 * 4",
+       "hints": [
+        "側面積は πrl で求められるね。",
+        "側面積は π × 4 × 5 だよ。",
+        "側面積に、底面積 16π cm² をたそう。"
+       ],
+       "paths": [
+        [
+         "側面積 20π",
+         "底面積 16π",
+         "20π + 16π = 36π",
+         "□ は 36"
+        ]
+       ]
+      }
+     ]
     }
    ],
    "p": [
@@ -224855,11 +226858,12 @@ window.ROADMAP = {
     11.68
    ],
    "comb": {
-    "b": 0.142,
+    "b": 0.352,
     "r": 0.0,
     "rg": [
      "hakaru",
-     "houteishiki"
+     "houteishiki",
+     "keisan"
     ],
     "pr": []
    }
@@ -226443,7 +228447,7 @@ window.ROADMAP = {
     21.84
    ],
    "comb": {
-    "b": 0.221,
+    "b": 0.228,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -228847,7 +230851,7 @@ window.ROADMAP = {
     6.19
    ],
    "comb": {
-    "b": 0.283,
+    "b": 0.286,
     "r": 0.0,
     "rg": [
      "keisan",
@@ -229383,7 +231387,7 @@ window.ROADMAP = {
     34.03
    ],
    "comb": {
-    "b": 0.541,
+    "b": 0.545,
     "r": 0.0,
     "rg": [
      "genshi-ketsugo",
@@ -229437,7 +231441,7 @@ window.ROADMAP = {
     33.3
    ],
    "comb": {
-    "b": 0.52,
+    "b": 0.525,
     "r": 0.0,
     "rg": [
      "genshi-ketsugo",
@@ -231341,7 +233345,7 @@ window.ROADMAP = {
     24.42
    ],
    "comb": {
-    "b": 0.343,
+    "b": 0.346,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -231393,7 +233397,7 @@ window.ROADMAP = {
     4.09
    ],
    "comb": {
-    "b": 0.446,
+    "b": 0.448,
     "r": 0.0,
     "rg": [
      "bisekibun-nyumon",
@@ -231747,7 +233751,7 @@ window.ROADMAP = {
     16.44
    ],
    "comb": {
-    "b": 0.473,
+    "b": 0.475,
     "r": 0.0,
     "rg": [
      "chiso",
@@ -234755,7 +236759,7 @@ window.ROADMAP = {
     17.38
    ],
    "comb": {
-    "b": 0.266,
+    "b": 0.276,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -234807,7 +236811,7 @@ window.ROADMAP = {
     17.63
    ],
    "comb": {
-    "b": 0.291,
+    "b": 0.302,
     "r": 0.0,
     "rg": [
      "hakaru",
@@ -234923,7 +236927,7 @@ window.ROADMAP = {
     18.51
    ],
    "comb": {
-    "b": 0.374,
+    "b": 0.385,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -235034,7 +237038,7 @@ window.ROADMAP = {
     19.57
    ],
    "comb": {
-    "b": 0.295,
+    "b": 0.306,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -235447,7 +237451,7 @@ window.ROADMAP = {
     19.12
    ],
    "comb": {
-    "b": 0.259,
+    "b": 0.269,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -239239,7 +241243,7 @@ window.ROADMAP = {
     32.34
    ],
    "comb": {
-    "b": 0.466,
+    "b": 0.469,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -240128,7 +242132,7 @@ window.ROADMAP = {
     21.47
    ],
    "comb": {
-    "b": 0.343,
+    "b": 0.346,
     "r": 0.0,
     "rg": [
      "katachi",
@@ -242136,7 +244140,7 @@ window.ROADMAP = {
     22.97
    ],
    "comb": {
-    "b": 0.359,
+    "b": 0.368,
     "r": 0.0,
     "rg": [
      "haichi",
@@ -274269,7 +276273,7 @@ window.ROADMAP = {
     31.26
    ],
    "comb": {
-    "b": 0.408,
+    "b": 0.412,
     "r": 0.0,
     "rg": [
      "katachi",

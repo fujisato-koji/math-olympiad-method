@@ -1,0 +1,583 @@
+# G-053 線対称と点対称（対称の軸と中心、対称な図形の性質）
+#
+# 書き方は N-001 の頭の注のとおり。
+# ことば：線対称、対称の軸、点対称、対称の中心、対応する点・辺・角、半回転。11+ と 13+ の回転対称（1 回転する間に何回重なるか）も入れた。
+# 前提は G-004（折る・映す・回す）と G-006（直角と平行、三角形と四角形）だけで、数の単元は N-001（10 までの数）まで。
+#   答えの数は 10 までにし、数えて出す（マスの数、軸の本数、重なる回数）。長さは方眼の目の数（何マス分）で言う。
+# 角の大きさ（度）は G-009 で前提にないので、点対称は「半回転（はんぶん回す）させて重なる」で言い、180° は使わない。
+#   1/4 回転などの回す角は G-015 の約束なので、回転対称は「1 回転する間に、もとの形と何回重なるか」を数えるだけにした。
+# 形の名前は G-006 の長方形・正方形・直角三角形だけを使う。平行四辺形・台形・ひし形などは名前を使わず、図に あ〜え の名前をつけて問う。
+#   正三角形・正六角形・正八角形は「辺の長さがみな等しく、角の大きさもみな等しい」と問題文で言う。
+# 座標の上の対称（x 軸・y 軸について対称）は G-050、回転移動は G-015 で扱う。
+# 図は svg（D-040）。方眼の上の形で、対称の軸は太い点線、対称の中心は点 O。答えの点や、完成させたあとの形は図にかかない。
+#   文字の形は、書体で形が変わらないように、線で描いたブロック文字にした。
+# 地図に plan がないので既定の並び（導入・練習・わけ・混ぜる・確認）。各日のねらいは次のように決めた。
+#   1 日目 線対称（対称の軸、対応する点・辺・角、軸の本数、形を完成させる）　2 日目 点対称（対称の中心、対応する点、完成させる）と回転対称
+#   3 日目 わけ（対応する点と軸は直角に交わり軸で 2 等分される、対応する点を結ぶ線は中心を通り中心で 2 等分される、軸が 2 本直角なら点対称）
+#   4 日目 G-004（鏡、半回転）・G-006（平行、長方形と正方形）と混ぜる　5 日目 確認
+# check：多角形は頂点の座標を書き、頂点の並びを裏返す対応（線対称）やずらす対応（回転）で、どの 2 頂点の間の長さも変わらないものを数える式。
+#   マスの形はマスの左下の点の集まりを、軸で折る・中心で半回転させる式。文字の形は線の集まりを折る・回す式。
+#   性質の言葉を選ぶ問題（直角に交わる など）は約束ごとなので check を付けない。
+
+id: G-053
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: 線対称な形を知ろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="80" y1="120" x2="80" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="120" x2="100" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="120" x2="140" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="120" x2="160" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="120" x2="160" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="100" x2="160" y2="100" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="80" x2="160" y2="80" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="60" x2="160" y2="60" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="40" x2="160" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="20" x2="160" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="120,20 160,60 160,120 80,120 80,60" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><text x="130" y="20.2" font-size="12" text-anchor="middle">A</text><text x="169.3" y="60.5" font-size="12" text-anchor="middle">B</text><text x="166.7" y="131.6" font-size="12" text-anchor="middle">C</text><text x="73.3" y="131.6" font-size="12" text-anchor="middle">D</text><text x="70.7" y="60.5" font-size="12" text-anchor="middle">E</text></svg>'
+        explain: 1 本の直線を折り目にして折ったとき、両側がぴったり重なる形を線対称な形といい、その直線を対称の軸といいます。この形は点線で折ると重なります。折って重なる点を対応する点といい、点 B と点 E、点 C と点 D が対応します。点 A は軸の上にあるので、折っても動きません。重なる辺（辺 AB と辺 AE など）を対応する辺、重なる角を対応する角といいます。対応する辺の長さは等しく、対応する角の大きさも等しくなります。
+      - part: 思い出す
+        text: たての線で半分に折ったとき、ぴったり重なる並びはどれですか。
+        choices: [🟦🟥🟦, 🟦🟦🟥, 🟥🟥🟦]
+        answer: 🟦🟥🟦
+        check: "[c for c in ('🟦🟥🟦', '🟦🟦🟥', '🟥🟥🟦') if c == c[::-1]][0]"
+        hints:
+          - まん中で折ると、左はしと右はしが重なるね。
+          - 左はしと右はしの色をくらべよう。
+          - 左から読んでも右から読んでも同じ並びをさがそう。
+        paths:
+          - [左はしと右はしが同じ色, 🟦🟥🟦]
+      - part: 思い出す
+        text: 長方形には、直角の角がいくつありますか。
+        answer: 4
+        check: "(lambda V: len([i for i in range(4) if (V[i - 1][0] - V[i][0]) * (V[(i + 1) % 4][0] - V[i][0]) + (V[i - 1][1] - V[i][1]) * (V[(i + 1) % 4][1] - V[i][1]) == 0]))(((0, 0), (5, 0), (5, 3), (0, 3)))"
+        hints:
+          - 長方形のかどを 1 つずつ見よう。
+          - 長方形は、4 つの角がどれも同じ形の角だったね。
+          - 直角の角を指でさしながら数えよう。
+        paths:
+          - [4 つのかどがみな直角, 4 つ]
+      - part: 今日
+        text: 点線を対称の軸とする線対称な形です。点 B に対応する点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="45,70 95,20 195,20 195,120 95,120" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="32.5" y1="70" x2="207.5" y2="70" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><text x="39" y="64.2" font-size="12" text-anchor="middle">A</text><text x="89.9" y="15.6" font-size="12" text-anchor="middle">B</text><text x="203.1" y="18.4" font-size="12" text-anchor="middle">C</text><text x="203.1" y="130" font-size="12" text-anchor="middle">D</text><text x="89.9" y="132.8" font-size="12" text-anchor="middle">E</text></svg>'
+        choices: [A, C, D, E]
+        answer: E
+        check: "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (2, 4)), ('C', (6, 4)), ('D', (6, 0)), ('E', (2, 0))), lambda p: (p[0], 2 * 2 - p[1]))"
+        hints:
+          - 点線で折ると、上の部分と下の部分が重なるね。
+          - 点 B は、点線から上に何マスの所にあるかな。
+          - 点線から下に同じだけはなれた点をさがそう。
+        paths:
+          - [横の点線で折る, B は軸から上に 2 マス, 下に 2 マスの点 E と重なる]
+        note: 軸がたてだと思いこみ、左右で重なる点（C）を選びやすい。どこで折るかを指でなぞらせる。
+      - part: 今日
+        text: 長方形の対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,118 216,118 216,22 24,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 2
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((0, 0), (6, 0), (6, 3), (0, 3)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - たてのまん中の線で折ると、重なるかな。
+          - 横のまん中の線で折ると、重なるかな。
+          - かどとかどを結ぶななめの線で折ると、重なるかな。紙で長方形を作ってためそう。
+        paths:
+          - [たてのまん中の線で重なる, 横のまん中の線で重なる, ななめの線では重ならない, 2 本]
+        note: 対角線でも重なると考えて 4 本と答えやすい。紙の長方形を対角線で折ってみると、はみ出すことがわかる。
+      - part: 今日
+        text: 点線を対称の軸とする線対称な形にします。あと何マスぬればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="122" x2="16" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="42" y1="122" x2="42" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="68" y1="122" x2="68" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="94" y1="122" x2="94" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="146" y1="122" x2="146" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="172" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="198" y1="122" x2="198" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="224" y1="122" x2="224" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="122" x2="224" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="96" x2="224" y2="96" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="70" x2="224" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="44" x2="224" y2="44" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="18" x2="224" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="94,122 120,122 120,96 94,96" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="68,122 94,122 94,96 68,96" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="94,96 120,96 120,70 94,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="42,96 68,96 68,70 42,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="94,70 120,70 120,44 94,44" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,122 146,122 146,96 120,96" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,96 146,96 146,70 120,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="132.4" x2="120" y2="7.6" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/></svg>'
+        answer: 3
+        check: "(lambda S, R: len(set(R(c) for c in S) - S))({(1, 1), (2, 0), (3, 0), (3, 1), (3, 2), (4, 0), (4, 1)}, lambda c: (2 * 4 - c[0] - 1, c[1]))"
+        hints:
+          - 左がわのぬったマスを、点線で折って右がわにうつそう。
+          - 右がわにもうぬってあるマスは、ぬらなくてよいね。
+          - 点線から同じ数だけはなれたマスに、印をつけながら数えよう。
+        paths:
+          - [左の 5 マスを右にうつす, 2 マスはもうぬってある, あと 3 マス]
+        note: 左のマスの数（5）をそのまま答えやすい。もうぬってあるマスを数えないように、1 マスずつ確かめる。
+      - part: 挑戦
+        text: ななめの点線を対称の軸として、線対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="85.2" y1="128" x2="85.2" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="108.4" y1="128" x2="108.4" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="131.6" y1="128" x2="131.6" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="154.8" y1="128" x2="154.8" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="104.8" x2="178" y2="104.8" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="81.6" x2="178" y2="81.6" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="58.4" x2="178" y2="58.4" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="35.2" x2="178" y2="35.2" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="62,128 85.2,128 85.2,104.8 62,104.8" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="85.2,128 108.4,128 108.4,104.8 85.2,104.8" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="108.4,128 131.6,128 131.6,104.8 108.4,104.8" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="85.2,104.8 108.4,104.8 108.4,81.6 85.2,81.6" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="131.6,104.8 154.8,104.8 154.8,81.6 131.6,81.6" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><line x1="55" y1="135" x2="185" y2="5" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/></svg>'
+        answer: 8
+        check: "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 0), (1, 0), (1, 1), (2, 0), (3, 1)}, lambda c: (c[1], c[0]))"
+        hints:
+          - ななめの点線で折ると、右下のマスは左上に重なるね。
+          - 点線がまん中を通るマスは、折ると自分自身と重なるよ。
+          - 点線の上にないマスだけ、うつした先にもう 1 マスふえるね。
+        paths:
+          - [点線の上のマスは 2 つ, ほかの 3 マスをうつすと 3 マスふえる, 5 + 3 = 8 マス]
+        note: 5 マスをすべて 2 倍して 10 とまちがえやすい。点線が通るマスは折っても動かない。
+    extra:
+      - part: 今日
+        text: 正方形の対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="170" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="95" x2="170" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="70" x2="170" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="45" x2="170" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="20" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="70,120 170,120 170,20 70,20" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 4
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((0, 0), (4, 0), (4, 4), (0, 4)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - たてと横のまん中の線で折ってみよう。
+          - かどとかどを結ぶななめの線で折ると、重なるかな。
+          - 重なる折り目を 1 本ずつ数えよう。
+        paths:
+          - [たて 1 本・横 1 本, ななめ 2 本, 4 本]
+      - part: 今日
+        text: 点線を対称の軸とする線対称な形です。点 C に対応する点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="80" y1="120" x2="80" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="120" x2="100" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="120" x2="140" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="120" x2="160" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="120" x2="160" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="100" x2="160" y2="100" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="80" x2="160" y2="80" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="60" x2="160" y2="60" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="40" x2="160" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="20" x2="160" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="120,20 160,40 160,100 140,120 100,120 80,100 80,40" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><text x="130" y="20.2" font-size="12" text-anchor="middle">A</text><text x="167.3" y="37.4" font-size="12" text-anchor="middle">B</text><text x="168.7" y="109.2" font-size="12" text-anchor="middle">C</text><text x="144.2" y="133.3" font-size="12" text-anchor="middle">D</text><text x="95.8" y="133.3" font-size="12" text-anchor="middle">E</text><text x="71.3" y="109.2" font-size="12" text-anchor="middle">F</text><text x="72.7" y="37.4" font-size="12" text-anchor="middle">G</text></svg>'
+        choices: [D, E, F, G]
+        answer: F
+        check: "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'C'][0])][0])((('A', (2, 5)), ('B', (4, 4)), ('C', (4, 1)), ('D', (3, 0)), ('E', (1, 0)), ('F', (0, 1)), ('G', (0, 4))), lambda p: (2 * 2 - p[0], p[1]))"
+        hints:
+          - 点線で折ると、右がわと左がわが重なるね。
+          - 点 C は、点線から右に何マス、下から何マスの所にあるかな。
+          - 点線から左に同じだけはなれ、高さも同じ点をさがそう。
+        paths:
+          - [C は軸から右に 2 マス・下から 1 マス, 左に 2 マス・下から 1 マスの点, F]
+      - part: 今日
+        text: 点線を対称の軸とする線対称な形にします。あと何マスぬればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="47.5" y1="128" x2="47.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="76.5" y1="128" x2="76.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="105.5" y1="128" x2="105.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="134.5" y1="128" x2="134.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="163.5" y1="128" x2="163.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192.5" y1="128" x2="192.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="128" x2="192.5" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="99" x2="192.5" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="70" x2="192.5" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="41" x2="192.5" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="12" x2="192.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="47.5,70 76.5,70 76.5,41 47.5,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="76.5,70 105.5,70 105.5,41 76.5,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="76.5,41 105.5,41 105.5,12 76.5,12" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="134.5,70 163.5,70 163.5,41 134.5,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="163.5,41 192.5,41 192.5,12 163.5,12" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="76.5,99 105.5,99 105.5,70 76.5,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><line x1="35.9" y1="70" x2="204.1" y2="70" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/></svg>'
+        answer: 4
+        check: "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 2), (1, 1), (1, 2), (1, 3), (3, 2), (4, 3)}, lambda c: (c[0], 2 * 2 - c[1] - 1))"
+        hints:
+          - 上がわのぬったマスを、点線で折って下がわにうつそう。
+          - 下がわにもうぬってあるマスは、ぬらなくてよいね。
+          - 点線から同じ数だけはなれたマスに、印をつけながら数えよう。
+        paths:
+          - [上の 5 マスを下にうつす, 1 マスはもうぬってある, あと 4 マス]
+
+  - day: 2
+    items:
+      - part: 見本
+        text: 点対称な形を知ろう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="102" x2="24" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="102" x2="56" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="102" x2="88" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="102" x2="120" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="102" x2="152" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="102" x2="184" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="102" x2="216" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="102" x2="216" y2="102" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="70" x2="216" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="38" x2="216" y2="38" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,102 152,102 216,38 88,38" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="24" y1="102" x2="216" y2="38" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="5 4"/><line x1="152" y1="102" x2="88" y2="38" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="14.5" y="109.4" font-size="12" text-anchor="middle">A</text><text x="159.1" y="113.3" font-size="12" text-anchor="middle">B</text><text x="225.5" y="39" font-size="12" text-anchor="middle">C</text><text x="80.9" y="35.1" font-size="12" text-anchor="middle">D</text></svg>'
+        explain: 1 つの点を中心にして半回転（はんぶん回す）させたとき、もとの形にぴったり重なる形を点対称な形といい、その点を対称の中心といいます。この形は、点 O を中心に半回転すると、点 A が点 C に、点 B が点 D に重なります。重なる点を対応する点、重なる辺を対応する辺、重なる角を対応する角といいます。対応する点を結ぶ直線（点線）は対称の中心 O を通り、O から対応する 2 つの点までの長さは等しくなります。
+      - part: 思い出す
+        text: この形の対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100.7" y1="128" x2="100.7" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="139.3" y1="128" x2="139.3" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="89.3" x2="178" y2="89.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="50.7" x2="178" y2="50.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="100.7,128 139.3,128 139.3,89.3 100.7,89.3" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="62,89.3 100.7,89.3 100.7,50.7 62,50.7" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="100.7,89.3 139.3,89.3 139.3,50.7 100.7,50.7" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="139.3,89.3 178,89.3 178,50.7 139.3,50.7" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="100.7,50.7 139.3,50.7 139.3,12 100.7,12" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 4
+        check: "(lambda S, N: len([g for g in ((lambda x, y: (-x, y)), (lambda x, y: (x, -y)), (lambda x, y: (y, x)), (lambda x, y: (-y, -x))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 1), (1, 0), (1, 1), (1, 2), (2, 1)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))"
+        hints:
+          - たてのまん中の線と、横のまん中の線で折ってみよう。
+          - ななめの線で折っても重なるかな。
+          - 重なる折り目を 1 本ずつ数えよう。
+        paths:
+          - [たて 1 本・横 1 本, ななめ 2 本, 4 本]
+        note: たてと横の 2 本だけで止めやすい。ななめに折っても重なることを、紙を切りぬいて確かめるとよい。
+      - part: 思い出す
+        text: この並びを、はんぶん回す（さかさまにする）と、どの並びになりますか。
+        figure: 🔺🟦🟦
+        choices: [🟦🟦🔻, 🔻🟦🟦, 🟦🟦🔺]
+        answer: 🟦🟦🔻
+        check: "''.join({'🔺': '🔻', '🔻': '🔺'}.get(c, c) for c in fig[::-1])"
+        hints:
+          - はんぶん回すと、左はしにあったものは右はしに行くね。
+          - 上と下も入れかわるよ。🔺 はどうなるかな。
+          - 並びの順と、🔺 の向きの両方を確かめよう。
+        paths:
+          - [左と右が入れかわる, 🔺 は 🔻 になる, 🟦🟦🔻]
+        note: 並びを逆にするだけ（鏡）の 🟦🟦🔺 を選びやすい。はんぶん回すと上下も逆になる。
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形です。点 B に対応する点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="45,70 70,120 145,120 195,70 170,20 95,20" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="35" y="74.2" font-size="12" text-anchor="middle">A</text><text x="62.9" y="131.3" font-size="12" text-anchor="middle">B</text><text x="149.5" y="133.1" font-size="12" text-anchor="middle">C</text><text x="205" y="74.2" font-size="12" text-anchor="middle">D</text><text x="177.1" y="17.1" font-size="12" text-anchor="middle">E</text><text x="90.5" y="15.3" font-size="12" text-anchor="middle">F</text></svg>'
+        choices: [C, D, E, F]
+        answer: E
+        check: "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (1, 0)), ('C', (4, 0)), ('D', (6, 2)), ('E', (5, 4)), ('F', (2, 4))), lambda p: (2 * 3 - p[0], 2 * 2 - p[1]))"
+        hints:
+          - 点 O を中心に半回転すると、点 B はどこへ行くかな。
+          - 点 B から点 O まで、横に何マス、たてに何マスかな。
+          - O から反対の向きに、同じだけ進んだ点をさがそう。
+        paths:
+          - [B から O へ右に 2・上に 2, O からさらに右に 2・上に 2, 点 E]
+        note: となりの点（C や F）を選びやすい。対応する点を結ぶ直線は O を通ることを使う。
+      - part: 今日
+        text: 点対称な形はどれですか。
+        svg: '<svg viewBox="0 0 240 96" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="58.2" x2="7" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="18.5" y1="58.2" x2="18.5" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="30" y1="58.2" x2="30" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="41.5" y1="58.2" x2="41.5" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="53" y1="58.2" x2="53" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="58.2" x2="53" y2="58.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="46.8" x2="53" y2="46.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="35.2" x2="53" y2="35.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="23.8" x2="53" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="7,58.2 53,58.2 30,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="30" y="91.9" font-size="14" text-anchor="middle">あ</text><line x1="67" y1="52.5" x2="67" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="78.5" y1="52.5" x2="78.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="90" y1="52.5" x2="90" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="101.5" y1="52.5" x2="101.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="113" y1="52.5" x2="113" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="52.5" x2="113" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="41" x2="113" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="29.5" x2="113" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="67,52.5 101.5,52.5 113,29.5 78.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="90" y="91.9" font-size="14" text-anchor="middle">い</text><line x1="127" y1="52.5" x2="127" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="138.5" y1="52.5" x2="138.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="150" y1="52.5" x2="150" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="161.5" y1="52.5" x2="161.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="173" y1="52.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="52.5" x2="173" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="41" x2="173" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="29.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="127,52.5 173,52.5 161.5,29.5 138.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="150" y="91.9" font-size="14" text-anchor="middle">う</text><line x1="187" y1="64" x2="187" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="198.5" y1="64" x2="198.5" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="210" y1="64" x2="210" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="221.5" y1="64" x2="221.5" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="233" y1="64" x2="233" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="64" x2="233" y2="64" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="52.5" x2="233" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="41" x2="233" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="29.5" x2="233" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="18" x2="233" y2="18" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="210,64 233,29.5 210,18 187,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="210" y="91.9" font-size="14" text-anchor="middle">え</text></svg>'
+        choices: [あ, い, う, え]
+        answer: い
+        check: "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (4, 0), (2, 3))), ('い', ((0, 0), (3, 0), (4, 2), (1, 2))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((2, 0), (4, 3), (2, 4), (0, 3)))) if P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - 形のまん中の点を中心に、半回転させたところを思いうかべよう。
+          - 半回転すると、上の辺は下に、左のかどは右に行くね。
+          - 本を回すように、紙を半回転させてためそう。
+        paths:
+          - [い は半回転すると、上の辺と下の辺が入れかわって重なる, ほかは向きが逆になって重ならない, い]
+        note: 線対称な形（あ、う、え）を選びやすい。点対称は「折る」でなく「半回転」で重なるかを見る。
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形にします。あと何マスぬればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="33" y1="128" x2="33" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="91" y1="128" x2="91" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="149" y1="128" x2="149" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="207" y1="128" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="128" x2="207" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="99" x2="207" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="70" x2="207" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="41" x2="207" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="12" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="62,128 91,128 91,99 62,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,128 120,128 120,99 91,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,99 120,99 120,70 91,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="62,70 91,70 91,41 62,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,70 149,70 149,41 120,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="33,99 62,99 62,70 33,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 4
+        check: "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 1), (1, 0), (1, 2), (2, 0), (2, 1), (3, 2)}, lambda c: (2 * 3 - c[0] - 1, 2 * 2 - c[1] - 1))"
+        hints:
+          - ぬったマスを 1 つずつ、O を中心に半回転させよう。
+          - O から見て反対の向きに、同じだけはなれたマスがうつった先だよ。
+          - うつした先がもうぬってあるマスは、数えないよ。
+        paths:
+          - [6 マスを半回転させる, 2 マスはうつした先がもうぬってある, あと 4 マス]
+        note: 線対称のように、たての線で折ってうつしやすい。半回転では、上下も左右も反対になる。
+      - part: 挑戦
+        text: この形を、まん中の点 O を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="91" y1="128" x2="91" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="149" y1="128" x2="149" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="99" x2="178" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="41" x2="178" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="91,99 120,99 120,70 91,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,99 149,99 149,70 120,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,70 120,70 120,41 91,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,70 149,70 149,41 120,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,128 149,128 149,99 120,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="149,70 178,70 178,41 149,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,41 120,41 120,12 91,12" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="62,99 91,99 91,70 62,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 4
+        check: "(lambda S, N: len([g for g in ((lambda x, y: (x, y)), (lambda x, y: (-y - 1, x)), (lambda x, y: (-x - 1, -y - 1)), (lambda x, y: (y, -x - 1))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 1), (1, 1), (1, 2), (1, 3), (2, 0), (2, 1), (2, 2), (3, 2)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))"
+        hints:
+          - 出っぱっているマス（羽根）は、いくつあるかな。
+          - 少し回すと、1 つの羽根がとなりの羽根の場所に来るね。
+          - 羽根が次の羽根の場所に来るたびに重なるよ。1 回転でそれが何回あるかな。
+        paths:
+          - [羽根は 4 つ, 羽根がとなりの場所に来るたびに重なる, 1 回転で 4 回]
+        note: 半回転だけを考えて 2 回、または 1 回転のもどりを数えずに 3 回と答えやすい。紙を切りぬいて回すとよい。この形は回すと重なるが、どの線で折っても重ならない（線対称ではない）。
+    extra:
+      - part: 今日
+        text: 線でかいた 4 つの文字のうち、点対称な文字はどれですか。
+        svg: '<svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="80" x2="30" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="30" y1="20" x2="45" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="22.5" y1="50" x2="37.5" y2="50" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="80" x2="75" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="20" x2="105" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="50" x2="97.5" y2="50" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="80" x2="105" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="135" y1="80" x2="135" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="135" y1="20" x2="165" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="165" y1="80" x2="165" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="195" y1="20" x2="225" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="210" y1="20" x2="210" y2="80" stroke="currentColor" stroke-width="5" fill="none"/></svg>'
+        choices: [A, E, N, T]
+        answer: N
+        check: "(lambda E, T: [ch for ch, sg in (('A', [((0, 0), (1, 4)), ((1, 4), (2, 0)), ((0.5, 2), (1.5, 2))]), ('E', [((0, 0), (0, 4)), ((0, 4), (2, 4)), ((0, 2), (1.5, 2)), ((0, 0), (2, 0))]), ('N', [((0, 0), (0, 4)), ((0, 4), (2, 0)), ((2, 0), (2, 4))]), ('T', [((0, 4), (2, 4)), ((1, 4), (1, 0))])) if E([(T(p), T(q)) for p, q in sg]) == E(sg)][0])(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), lambda p: (2 - p[0], 4 - p[1]))"
+        hints:
+          - 文字のまん中の点を中心に、半回転させたところを思いうかべよう。
+          - 半回転すると、左上のはしは右下に行くね。
+          - 紙に書いて、さかさまにして見てみよう。
+        paths:
+          - [N をさかさまにすると N, ほかはさかさまにすると形が変わる, N]
+        note: 線対称な文字（A、E、T）を選びやすい。A と T はたての線で、E は横の線で折ると重なる。
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形です。辺 BC に対応する辺はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="70,120 170,120 195,70 170,20 70,20 45,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="62.9" y="131.3" font-size="12" text-anchor="middle">A</text><text x="177.1" y="131.3" font-size="12" text-anchor="middle">B</text><text x="205" y="74.2" font-size="12" text-anchor="middle">C</text><text x="177.1" y="17.1" font-size="12" text-anchor="middle">D</text><text x="62.9" y="17.1" font-size="12" text-anchor="middle">E</text><text x="35" y="74.2" font-size="12" text-anchor="middle">F</text></svg>'
+        choices: [辺 DE, 辺 EF, 辺 FA]
+        answer: 辺 EF
+        check: "(lambda P, R: [s for s in ('辺 DE', '辺 EF', '辺 FA') if set((P[s[2]], P[s[3]])) == set((R(P['B']), R(P['C'])))][0])({'A': (1, 0), 'B': (5, 0), 'C': (6, 2), 'D': (5, 4), 'E': (1, 4), 'F': (0, 2)}, lambda p: (6 - p[0], 4 - p[1]))"
+        hints:
+          - 点 B と点 C に対応する点を、それぞれさがそう。
+          - 点 B を O を中心に半回転させると、どの点に重なるかな。
+          - 対応する 2 つの点を結んだ辺が答えだよ。
+        paths:
+          - [B に対応するのは E, C に対応するのは F, 辺 EF]
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="91" y1="128" x2="91" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="149" y1="128" x2="149" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="99" x2="178" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="41" x2="178" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="62,128 91,128 91,99 62,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,128 120,128 120,99 91,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,99 120,99 120,70 91,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="62,70 91,70 91,41 62,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 8
+        check: "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 0), (0, 2), (1, 0), (1, 1)}, lambda c: (2 * 2 - c[0] - 1, 2 * 2 - c[1] - 1))"
+        hints:
+          - ぬったマスを 1 つずつ、O を中心に半回転させよう。
+          - O から見て反対の向きに、同じだけはなれたマスがうつった先だよ。
+          - もとのマスと、うつした先のマスを合わせて数えよう。
+        paths:
+          - [4 マスをうつすと 4 マスふえる, 4 + 4 = 8 マス]
+
+  - day: 3
+    items:
+      - part: わけ
+        text: 点線を対称の軸とする線対称な形で、点 P と点 Q は対応する点です。P と Q を結ぶ直線は、対称の軸と点 M で直角に交わり、MP と MQ の長さは等しくなります。なぜそうなるのか、この形を例にして文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="120" x2="60" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="120" x2="80" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="120" x2="100" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="120" x2="140" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="120" x2="160" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="120" x2="180" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="120" x2="180" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="100" x2="180" y2="100" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="80" x2="180" y2="80" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="60" x2="180" y2="60" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="40" x2="180" y2="40" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="20" x2="180" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="120,120 160,80 180,40 120,20 60,40 80,80" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="160" y1="80" x2="80" y2="80" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><circle cx="160" cy="80" r="2.8" fill="currentColor"/><circle cx="80" cy="80" r="2.8" fill="currentColor"/><circle cx="120" cy="80" r="2.8" fill="currentColor"/><text x="170" y="78.2" font-size="12" text-anchor="middle">P</text><text x="70" y="78.2" font-size="12" text-anchor="middle">Q</text><text x="129" y="93.2" font-size="12" text-anchor="middle">M</text></svg>'
+        explain: 例：「軸で折ると、点 P は点 Q に重なる。点 M は軸の上にあるので、折っても動かない。だから MP は MQ にぴったり重なり、MP と MQ の長さは等しい。また、M のところで、PQ と軸がつくる 2 つの角（P の側と Q の側）も折ると重なるので、大きさが等しい。この 2 つの角を合わせると一直線になるので、どちらも直角である。」と書ければよい。① 折ると P が Q に重なる、② M は軸の上で動かないので MP と MQ が重なる、③ 2 つの角が重なって等しく、合わせて一直線だから直角、の 3 点を見る。③ は、紙を 2 回折って直角を作ったこと（G-006）と同じ考えである。この形の P と Q だけでなく、どの対応する点でも同じように言えることを話す。
+        hints:
+          - 点線で折ると、点 P はどこに重なるかな。点 M は動くかな。
+          - MP と MQ は、折るとどうなるかな。
+          - M のところの 2 つの角は、折ると重なるね。2 つを合わせると、どんな線になるかな。
+        paths:
+          - [折ると P は Q に重なる, M は軸の上で動かない, MP と MQ が重なるので長さが等しい, M の 2 つの角は等しく合わせて一直線, どちらも直角]
+      - part: わけ
+        text: 点 O を対称の中心とする点対称な形で、点 A と点 D は対応する点です。A と D を結ぶ直線は点 O を通り、OA と OD の長さは等しくなります。なぜそうなるのか、この形を例にして文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,118 120,118 184,86 216,22 120,22 56,54" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="24" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width="1.3" fill="none" stroke-dasharray="5 4"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="15.1" y="126.7" font-size="12" text-anchor="middle">A</text><text x="120" y="132.2" font-size="12" text-anchor="middle">B</text><text x="193.7" y="92.6" font-size="12" text-anchor="middle">C</text><text x="224.9" y="21.7" font-size="12" text-anchor="middle">D</text><text x="120" y="16.2" font-size="12" text-anchor="middle">E</text><text x="46.3" y="55.8" font-size="12" text-anchor="middle">F</text></svg>'
+        explain: 例：「O を中心に半回転させると、点 A は点 D に重なる。半回転させるとき、O と A を結んだ線 OA は、O のまわりを回って OD に重なる。だから OA と OD の長さは等しい。また、半回転させると、O から見た向きがちょうど反対になるので、OA と OD は O をはさんで一直線にならぶ。だから A と D を結ぶ直線は O を通る。」と書ければよい。① 半回転で A が D に重なる、② 線 OA が回って OD に重なるので長さが等しい、③ 半回転では向きがちょうど反対になるので一直線、の 3 点を見る。OA を棒にして、O をおさえて回してみると、わかりやすい。
+        hints:
+          - O を中心に半回転させると、点 A はどこに重なるかな。
+          - O と A を結んだ線は、半回転させるとどの線に重なるかな。
+          - 半回転すると、O から見た向きはどうなるかな。
+        paths:
+          - [半回転で A は D に重なる, OA は回って OD に重なるので長さが等しい, 向きがちょうど反対になるので一直線, AD は O を通る]
+      - part: わけ
+        text: 長方形 ABCD には、たてと横の 2 本の対称の軸があり、2 本は点 O で直角に交わります。長方形は、O を対称の中心とする点対称な形でもあります。なぜそうなるのか、長方形を例にして文で書きましょう。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,22 216,22 216,118 24,118" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="130.8" x2="120" y2="9.2" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><line x1="11.2" y1="70" x2="228.8" y2="70" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="15.1" y="21.7" font-size="12" text-anchor="middle">A</text><text x="224.9" y="21.7" font-size="12" text-anchor="middle">B</text><text x="224.9" y="126.7" font-size="12" text-anchor="middle">C</text><text x="15.1" y="126.7" font-size="12" text-anchor="middle">D</text></svg>'
+        explain: 例：「長方形をたての軸で裏返すと、A は B に、D は C に重なり、形はもとの長方形に重なる。次に横の軸で裏返すと、B は C に、C は B に重なり、形はまたもとに重なる。2 回裏返すと、紙は表にもどり、A は C の位置に、B は D の位置に来る。これは O を中心に半回転させたのと同じなので、長方形は半回転させても重なり、点対称である。」と書ければよい。① たての軸で裏返すと重なる、② 横の軸で裏返すと重なる、③ 2 回裏返すことは O を中心に半回転させることと同じ、の 3 点を見る。紙の長方形の角に A〜D を書き、実際に 2 回裏返すと ③ がわかる。正方形も同じ理由で点対称である。
+        hints:
+          - たての軸で裏返すと、点 A はどこへ行くかな。
+          - そのあと横の軸で裏返すと、さっき A があった点はどこへ行くかな。
+          - 2 回裏返したあとの形は、O を中心にどう動かした形と同じかな。
+        paths:
+          - [たての軸で A → B, 横の軸で B → C, 2 回で A → C、B → D, 半回転と同じ, 点対称]
+      - part: 今日
+        text: たての点線を対称の軸とする線対称な形の点 P があります。P に対応する点を Q とします。P と Q の間は何マス分ですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="16" y1="122" x2="16" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="42" y1="122" x2="42" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="68" y1="122" x2="68" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="94" y1="122" x2="94" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="122" x2="120" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="146" y1="122" x2="146" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="172" y1="122" x2="172" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="198" y1="122" x2="198" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="224" y1="122" x2="224" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="122" x2="224" y2="122" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="96" x2="224" y2="96" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="70" x2="224" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="44" x2="224" y2="44" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="16" y1="18" x2="224" y2="18" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="132.4" x2="120" y2="7.6" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><circle cx="42" cy="70" r="2.8" fill="currentColor"/><text x="42" y="63.2" font-size="12" text-anchor="middle">P</text></svg>'
+        answer: 6
+        check: "2 * (4 - 1)"
+        hints:
+          - P は、軸から何マスはなれているかな。
+          - Q は、軸の反対がわに、同じだけはなれているね。
+          - P から軸までと、軸から Q までを合わせよう。
+        paths:
+          - [P から軸まで 3 マス, 軸から Q まで 3 マス, 3 + 3 = 6 マス]
+        note: 軸までの 3 マスを答えやすい。P と Q は軸から同じ長さだけはなれている。
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形の点 A があります。A に対応する点を C とします。A から C まで、横に何マス分はなれていますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="33" y1="128" x2="33" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="91" y1="128" x2="91" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="149" y1="128" x2="149" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="207" y1="128" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="128" x2="207" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="99" x2="207" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="70" x2="207" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="41" x2="207" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="12" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><circle cx="178" cy="41" r="2.8" fill="currentColor"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="187" y="38.2" font-size="12" text-anchor="middle">A</text></svg>'
+        answer: 4
+        check: "2 * (5 - 3)"
+        hints:
+          - A から O まで、横に何マスかな。
+          - C は、O から見て A と反対の向きに、同じだけはなれているね。
+          - A から O までと、O から C までを合わせよう。
+        paths:
+          - [A から O まで横に 2 マス, O から C まで横に 2 マス, 2 + 2 = 4 マス]
+    extra:
+      - part: 今日
+        text: 線対称な形で、対応する 2 つの点を結ぶ直線と、対称の軸は、どのように交わりますか。
+        choices: [直角に交わる, ななめに交わる, 平行で交わらない]
+        answer: 直角に交わる
+        hints:
+          - 線対称な形を、軸で折ったところを思いうかべよう。
+          - 対応する点を結ぶ線は、折ると自分自身に重なるね。
+          - 紙を 2 回折ってできる角を思い出そう。
+        paths:
+          - [折ると線が自分自身に重なる, 軸の両がわの角が等しく合わせて一直線, 直角に交わる]
+      - part: 今日
+        text: 点対称な形で、対応する 2 つの点を結ぶ直線は、どこを通りますか。
+        choices: [対称の中心, 形の頂点, 決まっていない]
+        answer: 対称の中心
+        hints:
+          - 点対称な形を、対称の中心で半回転させたところを思いうかべよう。
+          - 半回転すると、中心から見た向きはどうなるかな。
+          - 2 日目の見本の点線を思い出そう。
+        paths:
+          - [半回転で向きが反対になる, 2 つの点は中心をはさんで一直線, 対称の中心を通る]
+      - part: 今日
+        text: 線でかいたブロック文字 H の対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="80" x2="45" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="80" x2="75" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="45" y1="50" x2="75" y2="50" stroke="currentColor" stroke-width="5" fill="none"/></svg>'
+        answer: 2
+        check: "(lambda E, sg: len([T for T in ((lambda p: (2 - p[0], p[1])), (lambda p: (p[0], 4 - p[1]))) if E([(T(p), T(q)) for p, q in sg]) == E(sg)]))(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), [((0, 0), (0, 4)), ((2, 0), (2, 4)), ((0, 2), (2, 2))])"
+        hints:
+          - たてのまん中の線で折ると、重なるかな。
+          - 横のまん中の線で折ると、重なるかな。
+          - 重なる折り目を数えよう。
+        paths:
+          - [たての線で重なる, 横の線で重なる, 2 本]
+
+  - day: 4
+    items:
+      - part: 思い出す
+        text: ｜ を鏡とします。鏡にうつった並びはどれですか。
+        figure: 🐻🐼🐨｜
+        choices: [🐨🐼🐻, 🐻🐼🐨, 🐼🐨🐻]
+        answer: 🐨🐼🐻
+        check: "fig.split('｜')[0][::-1]"
+        hints:
+          - 鏡にいちばん近いのはどれかな。
+          - 鏡の中では、鏡に近いものから順にならぶね。
+          - 並びの順が逆になるよ。
+        paths:
+          - [鏡に近い 🐨 が鏡の中でも近い, 順が逆になる, 🐨🐼🐻]
+      - part: 思い出す
+        text: この四角形で、平行な辺の組は何組ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,118 216,118 152,22 56,22" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 1
+        check: "(lambda V: len([i for i in range(2) if (V[i + 1][0] - V[i][0]) * (V[(i + 3) % 4][1] - V[i + 2][1]) - (V[i + 1][1] - V[i][1]) * (V[(i + 3) % 4][0] - V[i + 2][0]) == 0]))(((0, 0), (6, 0), (4, 3), (1, 3)))"
+        hints:
+          - 平行な 2 本の直線は、どこまでのばしても交わらないね。
+          - 上の辺と下の辺はどうかな。
+          - 左の辺と右の辺をのばすと、交わるかな。
+        paths:
+          - [上と下の辺は平行, 左と右の辺はのばすと交わる, 1 組]
+      - part: 今日
+        text: 線対称でもあり、点対称でもある形はどれですか。
+        svg: '<svg viewBox="0 0 240 96" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="58.2" x2="7" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="18.5" y1="58.2" x2="18.5" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="30" y1="58.2" x2="30" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="41.5" y1="58.2" x2="41.5" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="53" y1="58.2" x2="53" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="58.2" x2="53" y2="58.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="46.8" x2="53" y2="46.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="35.2" x2="53" y2="35.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="23.8" x2="53" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="7,58.2 53,58.2 7,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="30" y="91.9" font-size="14" text-anchor="middle">あ</text><line x1="67" y1="52.5" x2="67" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="78.5" y1="52.5" x2="78.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="90" y1="52.5" x2="90" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="101.5" y1="52.5" x2="101.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="113" y1="52.5" x2="113" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="52.5" x2="113" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="41" x2="113" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="67" y1="29.5" x2="113" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="67,52.5 113,52.5 113,29.5 67,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="90" y="91.9" font-size="14" text-anchor="middle">い</text><line x1="127" y1="52.5" x2="127" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="138.5" y1="52.5" x2="138.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="150" y1="52.5" x2="150" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="161.5" y1="52.5" x2="161.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="173" y1="52.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="52.5" x2="173" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="41" x2="173" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="29.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="127,52.5 173,52.5 161.5,29.5 138.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="150" y="91.9" font-size="14" text-anchor="middle">う</text><line x1="187" y1="52.5" x2="187" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="198.5" y1="52.5" x2="198.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="210" y1="52.5" x2="210" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="221.5" y1="52.5" x2="221.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="233" y1="52.5" x2="233" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="52.5" x2="233" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="41" x2="233" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="29.5" x2="233" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="187,52.5 221.5,52.5 233,29.5 198.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="210" y="91.9" font-size="14" text-anchor="middle">え</text></svg>'
+        choices: [あ, い, う, え]
+        answer: い
+        check: "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (4, 0), (0, 3))), ('い', ((0, 0), (4, 0), (4, 2), (0, 2))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((0, 0), (3, 0), (4, 2), (1, 2)))) if L(V, D) and P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - まず、折って重なる形（線対称）をさがそう。
+          - 次に、半回転させて重なる形（点対称）をさがそう。
+          - 両方に入っている形が答えだよ。
+        paths:
+          - [線対称は い と う, 点対称は い と え, 両方は い]
+        note: う は線対称だが点対称ではなく、え は点対称だが線対称ではない。1 つずつ分けて確かめる。
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形です。辺 AB と平行な辺はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="45,95 95,120 170,95 195,45 145,20 70,45" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="35.5" y="102.4" font-size="12" text-anchor="middle">A</text><text x="90.5" y="133.1" font-size="12" text-anchor="middle">B</text><text x="178.9" y="103.7" font-size="12" text-anchor="middle">C</text><text x="204.5" y="46" font-size="12" text-anchor="middle">D</text><text x="149.5" y="15.3" font-size="12" text-anchor="middle">E</text><text x="61.1" y="44.7" font-size="12" text-anchor="middle">F</text></svg>'
+        choices: [辺 CD, 辺 DE, 辺 EF]
+        answer: 辺 DE
+        check: "(lambda P: [s for s in ('辺 CD', '辺 DE', '辺 EF') if (P['B'][0] - P['A'][0]) * (P[s[3]][1] - P[s[2]][1]) - (P['B'][1] - P['A'][1]) * (P[s[3]][0] - P[s[2]][0]) == 0][0])({'A': (0, 1), 'B': (2, 0), 'C': (5, 1), 'D': (6, 3), 'E': (4, 4), 'F': (1, 3)})"
+        hints:
+          - 辺 AB に対応する辺をさがそう。点 A と点 B は、半回転でどこへ行くかな。
+          - 半回転すると、辺の向きはちょうど反対になるね。
+          - 方眼のマスを数えて、AB と同じかたむきの辺か確かめよう。
+        paths:
+          - [A に対応するのは D、B に対応するのは E, 辺 AB に対応するのは 辺 DE, 半回転で向きが反対なので平行]
+        note: 点対称な形では、対応する辺は平行で、長さも等しい。マスの数（横に 2、たてに 1）でかたむきを確かめる。
+      - part: 今日
+        text: 6 つの辺の長さがみな等しく、6 つの角の大きさもみな等しい六角形（正六角形）の、対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 71.5,46 71.5,102 120,130 168.5,102 168.5,46" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 6
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 6), math.sin(2 * math.pi * j / 6)) for j in range(6)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - 向かい合う頂点を結ぶ線で折ると、重なるかな。
+          - 向かい合う辺のまん中を結ぶ線で折ると、重なるかな。
+          - 2 種類の折り目を、それぞれ何本あるか数えよう。
+        paths:
+          - [頂点と頂点を結ぶ線が 3 本, 辺のまん中どうしを結ぶ線が 3 本, 3 + 3 = 6 本]
+        note: 頂点を結ぶ 3 本だけで止めやすい。辺のまん中を結ぶ線でも重なる。
+      - part: 挑戦
+        text: 方眼の中の、ぬっていないマスを 1 つだけぬって、線対称な形にします。ぬるマスの場所は何通りありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="47.5" y1="128" x2="47.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="76.5" y1="128" x2="76.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="105.5" y1="128" x2="105.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="134.5" y1="128" x2="134.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="163.5" y1="128" x2="163.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="192.5" y1="128" x2="192.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="128" x2="192.5" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="99" x2="192.5" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="70" x2="192.5" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="41" x2="192.5" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="47.5" y1="12" x2="192.5" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="76.5,99 105.5,99 105.5,70 76.5,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="105.5,99 134.5,99 134.5,70 105.5,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="134.5,99 163.5,99 163.5,70 134.5,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="134.5,70 163.5,70 163.5,41 134.5,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 3
+        check: "(lambda S, N: len([c for c in set((x, y) for x in range(0, 4 + 1) for y in range(0, 3 + 1)) - S if any(N(set(g(x, y) for x, y in S | {c})) == N(S | {c}) for g in ((lambda x, y: (-x, y)), (lambda x, y: (x, -y)), (lambda x, y: (y, x)), (lambda x, y: (-y, -x))))]))({(1, 1), (2, 1), (3, 1), (3, 2)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))"
+        hints:
+          - たての線で折って重なる形になるのは、どこをぬったときかな。
+          - 横の線で折って重なる形になるのは、どこをぬったときかな。
+          - ななめの線で折って重なる形も考えよう。
+        paths:
+          - [左はしの上をぬると たてに折って重なる, 右はしの下をぬると 横に折って重なる, 右はしのさらに上をぬると ななめに折って重なる, 3 通り]
+        note: たてと横の線だけを考えて 2 通りと答えやすい。ななめの軸もある。1 マスずつ紙に写してためすとよい。
+    extra:
+      - part: 今日
+        text: 3 つの辺の長さがみな等しく、3 つの角の大きさもみな等しい三角形（正三角形）を、まん中の点を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 71.5,102 168.5,102" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="74" r="3" fill="currentColor"/></svg>'
+        answer: 3
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(i + k) % len(V)], V[(j + k) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 3), math.sin(2 * math.pi * j / 3)) for j in range(3)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - 頂点が、となりの頂点の場所に来るたびに重なるね。
+          - 頂点はいくつあるかな。
+          - 1 回転で、1 つの頂点はすべての頂点の場所を 1 回ずつ通るよ。
+        paths:
+          - [頂点は 3 つ, 頂点がとなりの場所に来るたびに重なる, 1 回転で 3 回]
+      - part: 今日
+        text: ｜ を鏡とします。鏡にうつった並びはどれですか。
+        figure: 🐶🐱🐰🐸｜
+        choices: [🐸🐰🐱🐶, 🐶🐱🐰🐸, 🐰🐸🐶🐱]
+        answer: 🐸🐰🐱🐶
+        check: "fig.split('｜')[0][::-1]"
+        hints:
+          - 鏡にいちばん近いのはどれかな。
+          - 鏡の中では、鏡に近いものから順にならぶね。
+          - 並びの順が逆になるよ。
+        paths:
+          - [鏡に近い 🐸 が鏡の中でも近い, 順が逆になる, 🐸🐰🐱🐶]
+      - part: 今日
+        text: 線対称だが、点対称ではない形はどれですか。
+        svg: '<svg viewBox="0 0 240 96" xmlns="http://www.w3.org/2000/svg"><line x1="7" y1="52.5" x2="7" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="18.5" y1="52.5" x2="18.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="30" y1="52.5" x2="30" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="41.5" y1="52.5" x2="41.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="53" y1="52.5" x2="53" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="52.5" x2="53" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="41" x2="53" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="7" y1="29.5" x2="53" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="7,52.5 41.5,52.5 53,29.5 18.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="30" y="91.9" font-size="14" text-anchor="middle">あ</text><line x1="72.8" y1="58.2" x2="72.8" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="84.2" y1="58.2" x2="84.2" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="95.8" y1="58.2" x2="95.8" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="107.2" y1="58.2" x2="107.2" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="72.8" y1="58.2" x2="107.2" y2="58.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="72.8" y1="46.8" x2="107.2" y2="46.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="72.8" y1="35.2" x2="107.2" y2="35.2" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="72.8" y1="23.8" x2="107.2" y2="23.8" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="72.8,58.2 107.2,58.2 107.2,23.8 72.8,23.8" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="90" y="91.9" font-size="14" text-anchor="middle">い</text><line x1="127" y1="52.5" x2="127" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="138.5" y1="52.5" x2="138.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="150" y1="52.5" x2="150" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="161.5" y1="52.5" x2="161.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="173" y1="52.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="52.5" x2="173" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="41" x2="173" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="127" y1="29.5" x2="173" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="127,52.5 173,52.5 161.5,29.5 138.5,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="150" y="91.9" font-size="14" text-anchor="middle">う</text><line x1="187" y1="52.5" x2="187" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="198.5" y1="52.5" x2="198.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="210" y1="52.5" x2="210" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="221.5" y1="52.5" x2="221.5" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="233" y1="52.5" x2="233" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="52.5" x2="233" y2="52.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="41" x2="233" y2="41" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><line x1="187" y1="29.5" x2="233" y2="29.5" stroke="currentColor" stroke-width=".5" stroke-dasharray="2 2"/><polygon points="187,52.5 233,52.5 187,29.5" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="210" y="91.9" font-size="14" text-anchor="middle">え</text></svg>'
+        choices: [あ, い, う, え]
+        answer: う
+        check: "(lambda P, L, D: [n for n, V in (('あ', ((0, 0), (3, 0), (4, 2), (1, 2))), ('い', ((0, 0), (3, 0), (3, 3), (0, 3))), ('う', ((0, 0), (4, 0), (3, 2), (1, 2))), ('え', ((0, 0), (4, 0), (0, 2)))) if L(V, D) and not P(V, D)][0])((lambda V, D: len(V) % 2 == 0 and all(abs(D(V[i], V[j]) - D(V[(i + len(V) // 2) % len(V)], V[(j + len(V) // 2) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))), (lambda V, D: any(all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V))) for k in range(len(V)))), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - まず、折って重なる形（線対称）をさがそう。
+          - その中で、半回転させても重なる形をのぞこう。
+          - 残った形が答えだよ。
+        paths:
+          - [線対称は い と う, い は点対称でもある, う]
+
+  - day: 5
+    items:
+      - part: 今日
+        text: この形の対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="120,120 195,70 120,20 45,70" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 2
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))(((3, 0), (6, 2), (3, 4), (0, 2)), lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - たての線と横の線で折ってみよう。
+          - かどとかどを結ぶ線のうち、どれで折ると重なるかな。
+          - 重なる折り目を数えよう。
+        paths:
+          - [たてのまん中で重なる, 横のまん中で重なる, 2 本]
+      - part: 今日
+        text: 点線を対称の軸とする線対称な形です。点 B に対応する点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="45" y1="120" x2="45" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="70" y1="120" x2="70" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="95" y1="120" x2="95" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="120" x2="120" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="145" y1="120" x2="145" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="170" y1="120" x2="170" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="195" y1="120" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="120" x2="195" y2="120" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="95" x2="195" y2="95" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="70" x2="195" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="45" x2="195" y2="45" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="45" y1="20" x2="195" y2="20" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="45,70 120,20 120,45 195,45 195,95 120,95 120,120" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><line x1="35" y1="70" x2="205" y2="70" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/><text x="39" y="64.2" font-size="12" text-anchor="middle">A</text><text x="117.9" y="14.4" font-size="12" text-anchor="middle">B</text><text x="128" y="41.2" font-size="12" text-anchor="middle">C</text><text x="204.3" y="45.6" font-size="12" text-anchor="middle">D</text><text x="204.3" y="102.8" font-size="12" text-anchor="middle">E</text><text x="128" y="108.2" font-size="12" text-anchor="middle">F</text><text x="117.9" y="134" font-size="12" text-anchor="middle">G</text></svg>'
+        choices: [D, E, F, G]
+        answer: G
+        check: "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'B'][0])][0])((('A', (0, 2)), ('B', (3, 4)), ('C', (3, 3)), ('D', (6, 3)), ('E', (6, 1)), ('F', (3, 1)), ('G', (3, 0))), lambda p: (p[0], 2 * 2 - p[1]))"
+        hints:
+          - 点線で折ると、上と下が重なるね。
+          - 点 B は、点線から上に何マスの所にあるかな。
+          - 点線から下に同じだけはなれた点をさがそう。
+        paths:
+          - [B は軸から上に 2 マス, 下に 2 マスの点, G]
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形です。点 C に対応する点はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,118 152,118 216,86 216,22 88,22 24,54" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="15.1" y="126.7" font-size="12" text-anchor="middle">A</text><text x="157.5" y="130.5" font-size="12" text-anchor="middle">B</text><text x="225.9" y="91.8" font-size="12" text-anchor="middle">C</text><text x="224.9" y="21.7" font-size="12" text-anchor="middle">D</text><text x="82.5" y="17.9" font-size="12" text-anchor="middle">E</text><text x="14.1" y="56.6" font-size="12" text-anchor="middle">F</text></svg>'
+        choices: [D, E, F, A]
+        answer: F
+        check: "(lambda Q, R: [n for n, q in Q if q == R([v for k, v in Q if k == 'C'][0])][0])((('A', (0, 0)), ('B', (4, 0)), ('C', (6, 1)), ('D', (6, 3)), ('E', (2, 3)), ('F', (0, 2))), lambda p: (2 * 3 - p[0], 2 * 1.5 - p[1]))"
+        hints:
+          - 点 O を中心に半回転すると、点 C はどこへ行くかな。
+          - 対応する点を結ぶ直線は、O を通るね。
+          - C から O へ進んだのと同じだけ、O からさらに進んだ点をさがそう。
+        paths:
+          - [C と O を結ぶ直線をのばす, O から同じだけ進むと F, F]
+      - part: 今日
+        text: 線でかいた 4 つの文字のうち、点対称な文字はどれですか。
+        svg: '<svg viewBox="0 0 240 100" xmlns="http://www.w3.org/2000/svg"><line x1="15" y1="20" x2="45" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="30" y1="20" x2="30" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="80" x2="75" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="105" y1="20" x2="75" y2="50" stroke="currentColor" stroke-width="5" fill="none"/><line x1="75" y1="50" x2="105" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="135" y1="80" x2="135" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="165" y1="80" x2="165" y2="20" stroke="currentColor" stroke-width="5" fill="none"/><line x1="135" y1="50" x2="165" y2="50" stroke="currentColor" stroke-width="5" fill="none"/><line x1="195" y1="20" x2="210" y2="80" stroke="currentColor" stroke-width="5" fill="none"/><line x1="210" y1="80" x2="225" y2="20" stroke="currentColor" stroke-width="5" fill="none"/></svg>'
+        choices: [T, K, H, V]
+        answer: H
+        check: "(lambda E, T: [ch for ch, sg in (('T', [((0, 4), (2, 4)), ((1, 4), (1, 0))]), ('K', [((0, 0), (0, 4)), ((2, 4), (0, 2)), ((0, 2), (2, 0))]), ('H', [((0, 0), (0, 4)), ((2, 0), (2, 4)), ((0, 2), (2, 2))]), ('V', [((0, 4), (1, 0)), ((1, 0), (2, 4))])) if E([(T(p), T(q)) for p, q in sg]) == E(sg)][0])(lambda segs: set((p, q) if p <= q else (q, p) for p, q in segs), lambda p: (2 - p[0], 4 - p[1]))"
+        hints:
+          - 文字のまん中の点を中心に、半回転させたところを思いうかべよう。
+          - 半回転すると、上と下、左と右が入れかわるね。
+          - 紙に書いて、さかさまにして見てみよう。
+        paths:
+          - [H をさかさまにすると H, ほかはさかさまにすると形が変わる, H]
+      - part: 今日
+        text: 点線を対称の軸として、線対称な形を完成させます。完成した形のぬったマスは、全部で何マスですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="33" y1="128" x2="33" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="91" y1="128" x2="91" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="149" y1="128" x2="149" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="207" y1="128" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="128" x2="207" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="99" x2="207" y2="99" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="70" x2="207" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="41" x2="207" y2="41" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="33" y1="12" x2="207" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="62,128 91,128 91,99 62,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,128 120,128 120,99 91,99" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,99 120,99 120,70 91,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="33,70 62,70 62,41 33,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,99 149,99 149,70 120,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="91,70 120,70 120,41 91,41" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><line x1="120" y1="139.6" x2="120" y2="0.4" stroke="currentColor" stroke-width="2" stroke-dasharray="7 4"/></svg>'
+        answer: 10
+        check: "(lambda S, R: len(S | set(R(c) for c in S)))({(0, 2), (1, 0), (2, 0), (2, 1), (2, 2), (3, 1)}, lambda c: (2 * 3 - c[0] - 1, c[1]))"
+        hints:
+          - 左がわのぬったマスを、点線で折って右がわにうつそう。
+          - 右がわにもうぬってあるマスは、ふえないね。
+          - 左がわと右がわのマスを合わせて数えよう。
+        paths:
+          - [左の 5 マスを右にうつす, 右の 1 マスはもうぬってある, 左 5 + 右 5 = 10 マス]
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形にします。あと何マスぬればよいですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="40" y1="110" x2="40" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="80" y1="110" x2="80" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="110" x2="120" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="160" y1="110" x2="160" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="200" y1="110" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="110" x2="200" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="70" x2="200" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="40" y1="30" x2="200" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="40,110 80,110 80,70 40,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="80,110 120,110 120,70 80,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="80,70 120,70 120,30 80,30" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="120,110 160,110 160,70 120,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 2
+        check: "(lambda S, R: len(set(R(c) for c in S) - S))({(0, 0), (1, 0), (1, 1), (2, 0)}, lambda c: (2 * 2 - c[0] - 1, 2 * 1 - c[1] - 1))"
+        hints:
+          - ぬったマスを 1 つずつ、O を中心に半回転させよう。
+          - うつした先がもうぬってあるマスは、数えないよ。
+          - 新しくぬるマスに印をつけて数えよう。
+        paths:
+          - [4 マスを半回転させる, 2 マスはもうぬってある, あと 2 マス]
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形の点 A があります。A に対応する点を C とします。A から C まで、たてに何マス分はなれていますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="62" y1="128" x2="62" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="81.3" y1="128" x2="81.3" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100.7" y1="128" x2="100.7" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="128" x2="120" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="139.3" y1="128" x2="139.3" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="158.7" y1="128" x2="158.7" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="178" y1="128" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="128" x2="178" y2="128" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="108.7" x2="178" y2="108.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="89.3" x2="178" y2="89.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="70" x2="178" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="50.7" x2="178" y2="50.7" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="31.3" x2="178" y2="31.3" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="62" y1="12" x2="178" y2="12" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><circle cx="100.7" cy="12" r="2.8" fill="currentColor"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="91.7" y="12.2" font-size="12" text-anchor="middle">A</text></svg>'
+        answer: 6
+        check: "2 * (6 - 3)"
+        hints:
+          - A から O まで、たてに何マスかな。
+          - C は、O から見て A と反対の向きに、同じだけはなれているね。
+          - A から O までと、O から C までを合わせよう。
+        paths:
+          - [A から O までたてに 3 マス, O から C までたてに 3 マス, 3 + 3 = 6 マス]
+      - part: 挑戦
+        text: 8 つの辺の長さがみな等しく、8 つの角の大きさもみな等しい八角形（正八角形）を、まん中の点を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="98.6,22.3 68.3,52.6 68.3,95.4 98.6,125.7 141.4,125.7 171.7,95.4 171.7,52.6 141.4,22.3" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="74" r="3" fill="currentColor"/></svg>'
+        answer: 8
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(i + k) % len(V)], V[(j + k) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 8), math.sin(2 * math.pi * j / 8)) for j in range(8)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - 頂点が、となりの頂点の場所に来るたびに重なるね。
+          - 頂点はいくつあるかな。
+          - 1 回転で、1 つの頂点はすべての頂点の場所を 1 回ずつ通るよ。
+        paths:
+          - [頂点は 8 つ, 頂点がとなりの場所に来るたびに重なる, 1 回転で 8 回]
+        note: 正多角形は、頂点の数だけ重なる。正八角形は半回転でも重なるので点対称でもある。
+    extra:
+      - part: 今日
+        text: この形を、まん中の点 O を中心に回します。1 回転する間に、もとの形とぴったり重なるのは何回ですか。1 回転してもとの位置にもどったときも、1 回と数えます。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="110" x2="60" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="100" y1="110" x2="100" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="140" y1="110" x2="140" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="180" y1="110" x2="180" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="110" x2="180" y2="110" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="70" x2="180" y2="70" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="60" y1="30" x2="180" y2="30" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="60,110 100,110 100,70 60,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="100,110 140,110 140,70 100,70" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="100,70 140,70 140,30 100,30" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><polygon points="140,70 180,70 180,30 140,30" stroke="currentColor" stroke-width="1.2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text></svg>'
+        answer: 2
+        check: "(lambda S, N: len([g for g in ((lambda x, y: (x, y)), (lambda x, y: (-y - 1, x)), (lambda x, y: (-x - 1, -y - 1)), (lambda x, y: (y, -x - 1))) if N(set(g(x, y) for x, y in S)) == N(S)]))({(0, 0), (1, 0), (1, 1), (2, 1)}, lambda T: set((x - min(p[0] for p in T), y - min(p[1] for p in T)) for x, y in T))"
+        hints:
+          - 半回転させると、重なるかな。
+          - 少しだけ回した（たてと横が入れかわる）ときは、重なるかな。
+          - 1 回転する間に重なる回数を数えよう。
+        paths:
+          - [半回転で重なる, たてと横が入れかわると重ならない, 半回転と 1 回転の 2 回]
+      - part: 今日
+        text: 3 つの辺の長さがみな等しく、3 つの角の大きさもみな等しい三角形（正三角形）の、対称の軸は何本ありますか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,18 71.5,102 168.5,102" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/></svg>'
+        answer: 3
+        check: "(lambda V, D: len([k for k in range(len(V)) if all(abs(D(V[i], V[j]) - D(V[(k - i) % len(V)], V[(k - j) % len(V)])) < 1e-9 for i in range(len(V)) for j in range(len(V)))]))([(math.cos(2 * math.pi * j / 3), math.sin(2 * math.pi * j / 3)) for j in range(3)], lambda p, q: (p[0] - q[0]) ** 2 + (p[1] - q[1]) ** 2)"
+        hints:
+          - 頂点と、向かい合う辺のまん中を結ぶ線で折ってみよう。
+          - そのような線は、頂点ごとに 1 本ずつあるね。
+          - 頂点の数を数えよう。
+        paths:
+          - [頂点と向かい合う辺のまん中を結ぶ線, 頂点ごとに 1 本, 3 本]
+      - part: 今日
+        text: 点 O を対称の中心とする点対称な形です。辺 AB と平行な辺はどれですか。
+        svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="24" y1="118" x2="24" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="56" y1="118" x2="56" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="88" y1="118" x2="88" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="120" y1="118" x2="120" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="152" y1="118" x2="152" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="184" y1="118" x2="184" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="216" y1="118" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="118" x2="216" y2="118" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="86" x2="216" y2="86" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="54" x2="216" y2="54" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><line x1="24" y1="22" x2="216" y2="22" stroke="currentColor" stroke-width=".6" stroke-dasharray="2 2"/><polygon points="24,118 152,118 216,86 216,22 88,22 24,54" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><circle cx="120" cy="70" r="3.2" fill="currentColor"/><text x="128" y="83.2" font-size="12" text-anchor="middle">O</text><text x="15.1" y="126.7" font-size="12" text-anchor="middle">A</text><text x="157.5" y="130.5" font-size="12" text-anchor="middle">B</text><text x="225.9" y="91.8" font-size="12" text-anchor="middle">C</text><text x="224.9" y="21.7" font-size="12" text-anchor="middle">D</text><text x="82.5" y="17.9" font-size="12" text-anchor="middle">E</text><text x="14.1" y="56.6" font-size="12" text-anchor="middle">F</text></svg>'
+        choices: [辺 BC, 辺 DE, 辺 EF]
+        answer: 辺 DE
+        check: "(lambda P: [s for s in ('辺 BC', '辺 DE', '辺 EF') if (P['B'][0] - P['A'][0]) * (P[s[3]][1] - P[s[2]][1]) - (P['B'][1] - P['A'][1]) * (P[s[3]][0] - P[s[2]][0]) == 0][0])({'A': (0, 0), 'B': (4, 0), 'C': (6, 1), 'D': (6, 3), 'E': (2, 3), 'F': (0, 2)})"
+        hints:
+          - 辺 AB に対応する辺をさがそう。
+          - 点 A と点 B は、半回転でどの点に重なるかな。
+          - 対応する辺は平行になるよ。
+        paths:
+          - [A に対応するのは D、B に対応するのは E, 辺 AB に対応するのは 辺 DE, 平行]
