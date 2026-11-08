@@ -575,7 +575,6 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   box-shadow: 0 30px 80px -30px rgba(10, 16, 50, .6), inset 0 0 0 1px rgba(150, 170, 255, .08);
   isolation: isolate;
 }
-@media (max-width: 720px) { .cosmos { height: 72vh; min-height: 460px; border-radius: 22px; margin: 0 -6px 8px; } }
 .cosmos-gl { position: absolute; inset: 0; }
 .cosmos-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
 .cosmos-canvas:active { cursor: grabbing; }
@@ -607,16 +606,6 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   .cosmos-title p { display: none; }
   .cosmos-q { width: 100%; }
 }
-.cosmos-dock { position: absolute; left: 20px; bottom: 18px; right: 20px; display: flex; flex-wrap: wrap; gap: 8px; pointer-events: none; }
-.cpill {
-  pointer-events: auto; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; cursor: pointer;
-  font: 500 14px/1.2 var(--font); color: var(--star-ink); text-decoration: none; background: var(--glass); border: 1px solid var(--glass-line);
-  backdrop-filter: blur(10px); transition: background .2s, border-color .2s, transform .15s;
-}
-.cpill:hover { background: rgba(40, 52, 110, .75); border-color: rgba(170, 190, 255, .5); }
-.cpill:active { transform: scale(.97); }
-.cpill[aria-pressed="true"], .cpill.solid { background: #eef1ff; color: #0d1330; border-color: #eef1ff; }
-.cpill.glow { border-color: rgba(255, 214, 140, .55); color: #ffe2a8; box-shadow: 0 0 18px -4px rgba(255, 200, 120, .55); }
 .cosmos-tip {
   position: absolute; left: 50%; bottom: 70px; transform: translateX(-50%); max-width: calc(100% - 40px); padding: 8px 16px; border-radius: 999px;
   background: var(--glass); border: 1px solid var(--glass-line); backdrop-filter: blur(10px); font-size: 13px; color: var(--star-ink); text-align: center;
@@ -630,9 +619,6 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 @media (max-width: 720px) {
   .cosmos-card { left: 12px; right: 12px; width: auto; bottom: 62px; max-height: 50%; }
   .cosmos-tip { bottom: 62px; }
-  .cosmos-dock { left: 12px; right: 0; bottom: 12px; flex-wrap: nowrap; overflow-x: auto; padding-right: 12px; pointer-events: auto; scrollbar-width: none; }
-  .cosmos-dock::-webkit-scrollbar { display: none; }
-  .cpill { flex: none; }
 }
 .cc-eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: .08em; color: var(--star-muted); }
 .cc-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--c); box-shadow: 0 0 10px var(--c); flex: none; }
@@ -668,3 +654,86 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .sheet-goal .muted { font-size: 12px; line-height: 1.5; }
 .sheet-goal[aria-pressed="true"] { border-color: var(--solid); box-shadow: 0 0 0 2px var(--solid) inset; }
 @media (prefers-reduced-motion: reduce) { .cosmos-card { animation: none; } }
+
+/* ---- 探索の画面（D-038）：ページの外枠いっぱい、3D と 2D、左の浮いたメニュー ---- */
+.explore { position: relative; }
+.explore .cosmos { height: calc(100dvh - var(--bar-h, 64px)); min-height: 460px; margin: 0; border-radius: 0; box-shadow: none; }
+.explore:fullscreen .cosmos { height: 100vh; }
+.cosmos[data-view="2d"] .cosmos-gl, .cosmos[data-view="3d"] .flat { display: none; }
+.flat { position: absolute; inset: 0; overflow: auto; padding: 96px 28px 96px 220px; overscroll-behavior: contain; }
+.flat .map { width: 100%; }
+/* 2D の関係図を夜空の色で描く */
+.cosmos .map { --ink: #e8ecff; --ink-2: #c9d0f0; --surface: #0d1330; --line: rgba(160, 180, 255, .22); --muted: #8f99c4; --solid: #ffe2a8; --glow: rgba(140, 170, 255, .45); }
+.cosmos .map .region rect { fill: color-mix(in srgb, var(--c) 12%, transparent); stroke: color-mix(in srgb, var(--c) 35%, transparent); }
+.cosmos .map .edges path { stroke: #c9d4ff; stroke-opacity: .08; }
+.cosmos .map.focus .edges path.hl { stroke: #ffe2a8; stroke-opacity: .85; }
+.map circle.dim { opacity: .1; }
+.map circle.meet { stroke: #ffe2a8; stroke-width: 5; }
+.map circle.mark { stroke-width: 5; filter: drop-shadow(0 0 5px var(--c)); }
+.map .pair-arc { fill: none; stroke: #ffe2a8; stroke-width: 2.5; stroke-dasharray: 7 7; animation: arcflow 1.1s linear infinite; }
+@keyframes arcflow { to { stroke-dashoffset: -28; } }
+/* 左の浮いたメニュー */
+.xbar {
+  position: absolute; left: 14px; top: 50%; transform: translateY(-50%); z-index: 3; display: flex; flex-direction: column; gap: 4px;
+  width: 188px; padding: 8px; border-radius: 22px; background: rgba(12, 16, 36, .66); border: 1px solid var(--glass-line); backdrop-filter: blur(12px);
+  box-shadow: 0 18px 40px -18px rgba(0, 0, 0, .7);
+}
+.xb {
+  display: flex; align-items: center; gap: 10px; min-width: 0; padding: 8px 10px; border-radius: 14px; border: 0; background: none; cursor: pointer;
+  color: var(--star-ink); font: 500 13px/1.2 var(--font); text-decoration: none; text-align: left; transition: background .2s;
+}
+.xb svg { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.xb span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.xb:hover { background: rgba(255, 255, 255, .08); }
+.xb[aria-pressed="true"] { background: rgba(238, 241, 255, .16); color: #fff; }
+.xb.glow { color: #ffe2a8; }
+.xseg { display: flex; gap: 2px; padding: 3px; margin: 2px 0; border-radius: 12px; background: rgba(255, 255, 255, .06); }
+.xseg button { flex: 1; padding: 7px 6px; border: 0; border-radius: 9px; background: none; cursor: pointer; color: var(--star-muted); font: 700 12px/1 var(--font); }
+.xseg button[aria-pressed="true"] { background: #eef1ff; color: #0d1330; }
+.xpop {
+  position: absolute; left: 214px; top: 50%; transform: translateY(-50%); z-index: 4; display: grid; gap: 2px; width: 200px; max-height: 70%; overflow: auto;
+  padding: 10px; border-radius: 18px; background: rgba(12, 16, 36, .86); border: 1px solid var(--glass-line); backdrop-filter: blur(14px);
+}
+.xpop-title { font-size: 12px; letter-spacing: .1em; color: var(--star-muted); padding: 2px 8px 6px; }
+.xpop button { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border: 0; border-radius: 10px; background: none; cursor: pointer; color: var(--star-ink); font: 500 13px/1.2 var(--font); text-align: left; }
+.xpop button:hover { background: rgba(255, 255, 255, .08); }
+.xpop button[aria-pressed="true"] { background: rgba(238, 241, 255, .16); }
+.explore .cosmos-head { left: 220px; padding: 18px 20px 0; }
+.explore .cosmos-title p { font-size: 13px; }
+.explore .cosmos-title h1 { display: none; }
+.xdown {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); z-index: 2; padding: 6px 14px; border-radius: 999px; cursor: pointer;
+  color: var(--star-muted); font: 500 12px/1.2 var(--font); background: rgba(12, 16, 36, .5); border: 1px solid var(--glass-line);
+}
+.xdown:hover { color: #fff; }
+.explore .cosmos-card { top: 76px; bottom: auto; right: 18px; max-height: calc(100% - 150px); }
+.explore .cosmos-tip { bottom: 54px; }
+/* スマートフォン：メニューは絵だけの細い列にする */
+@media (max-width: 720px) {
+  .xbar { left: 8px; width: auto; padding: 6px; gap: 2px; }
+  .xb { padding: 8px; }
+  .xb span { display: none; }
+  .xseg { flex-direction: column; }
+  .xseg button { padding: 7px 4px; font-size: 11px; }
+  .xpop { left: 64px; width: 190px; }
+  .flat { padding: 120px 12px 80px 64px; }
+  .explore .cosmos-head { left: 56px; padding: 12px 12px 0; }
+  .explore .cosmos-title p { display: none; }
+  .explore .cosmos-card { top: auto; bottom: 52px; left: 60px; right: 10px; max-height: 46%; }
+}
+
+/* 宇宙の中のボタン */
+.cpill {
+  pointer-events: auto; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; cursor: pointer;
+  font: 500 14px/1.2 var(--font); color: var(--star-ink); text-decoration: none; background: var(--glass); border: 1px solid var(--glass-line);
+  backdrop-filter: blur(10px); transition: background .2s, border-color .2s, transform .15s;
+}
+.cpill:hover { background: rgba(40, 52, 110, .75); border-color: rgba(170, 190, 255, .5); }
+.cpill:active { transform: scale(.97); }
+.cpill[aria-pressed="true"], .cpill.solid { background: #eef1ff; color: #0d1330; border-color: #eef1ff; }
+.cpill.glow { border-color: rgba(255, 214, 140, .55); color: #ffe2a8; box-shadow: 0 0 18px -4px rgba(255, 200, 120, .55); }
+/* 隠したものは、display の指定があっても出さない */
+.cosmos [hidden] { display: none !important; }
+/* 2D で鎖を光らせているときは、ほかの線をほとんど消す */
+.cosmos .map.focus .edges path:not(.hl) { stroke-opacity: .02; }
+.cosmos[data-view="2d"] .cosmos-head { right: 0; background: linear-gradient(rgba(5, 6, 15, .92), rgba(5, 6, 15, 0)); padding-bottom: 18px; }

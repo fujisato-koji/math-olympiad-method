@@ -118,16 +118,6 @@ export function mount(api) {
     g.setAttribute('position', new THREE.BufferAttribute(p, 3));
     scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0x9fb4ff, size: 1.2, sizeAttenuation: false, transparent: true, opacity: .55, depthWrite: false })));
   }
-  // ---- 中心の光（数える・観る） ----
-  {
-    const c = document.createElement('canvas'); c.width = c.height = 128;
-    const x = c.getContext('2d'), gr = x.createRadialGradient(64, 64, 0, 64, 64, 64);
-    gr.addColorStop(0, 'rgba(255,240,210,.9)'); gr.addColorStop(.25, 'rgba(255,200,150,.25)'); gr.addColorStop(1, 'rgba(255,200,150,0)');
-    x.fillStyle = gr; x.fillRect(0, 0, 128, 128);
-    const sp = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
-    sp.scale.set(16, 16, 1);
-    scene.add(sp);
-  }
   // ---- 深さの軌道（考え方が深くなる方向の目印） ----
   [12, 28, 46].forEach((r, k) => {
     const pts = [];
@@ -328,13 +318,16 @@ export function mount(api) {
     sg.attributes.state.needsUpdate = true;
   }
   // 見せる濃さ：1 は見える、低いほど沈む。目標の外の星と糸は沈める
-  // boost：目標の星座では、目標の星どうしの糸を濃くする
+  // boost：目標の星座では、目標の星どうしの糸を濃くする。
+  // lens（橋の見方）：橋の星を残してほかを沈め、領域をまたぐ糸を濃く、同じ領域の糸を薄くする
+  let lens = false;
   function setAlpha(fn, boost = 1) {
-    units.forEach((u, i) => { alpha[i] = fn(u.id); });
+    units.forEach((u, i) => { const a = fn(u.id); alpha[i] = lens && !api.bridges.has(u.id) ? a * .45 : a; });
     sg.attributes.alpha.needsUpdate = true;
     pairs.forEach(([a, b], k) => {
       const v = Math.min(alpha[a], alpha[b]), len = P[a].distanceTo(P[b]);
-      ea[k * 2] = ea[k * 2 + 1] = (.012 + .05 * v * v * boost) / (1 + len / 14);
+      const f = lens ? (units[a].region !== units[b].region ? 3 : .2) : 1;
+      ea[k * 2] = ea[k * 2 + 1] = (.012 + .05 * v * v * boost) * f / (1 + len / 14);
     });
     eg.attributes.alpha.needsUpdate = true;
   }
@@ -393,6 +386,7 @@ export function mount(api) {
     pause() { running = false; },
     resize,
     setStates, setAlpha,
+    setLens(on) { lens = !!on; },
     // 前提の鎖：[[前提, 単元], ...] を、前提から単元へ光が流れる曲線で描く。depth は光の出発のずれ
     glowEdges(list, tint) {
       setGlow(list.map(([a, b, off]) => ({ a: P[index.get(a)], b: P[index.get(b)], c: tint ? new THREE.Color(tint) : new THREE.Color().fromArray(col, index.get(b) * 3), w: .9, bulge: .08, off: off || 0 })));
