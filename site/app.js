@@ -156,7 +156,8 @@
         case 'n': case 's': return esc(a.v) + t;
         case 'frac': return `<span class="frac" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
         case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
-        case 'rt': return `<span class="sqrt"><span class="rt">√</span><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
+        // 根号は √ の字を使わず線で描く（字体によって √ と横線が離れるため）。中身の高さに合わせて伸びる
+        case 'rt': return `<span class="sqrt" role="math" aria-label="ルート ${esc(a.v)}"><svg class="rt" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M.4 12.2 2.6 10.8 5.4 19.6 10 0"/></svg><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
         case 'sup': return `<sup class="m">${mx(a.v, true)}</sup>`;
         case 'sub': return `<sub class="m">${letters(a.v)}</sub>`;
         case 'lim': return `<span class="lim"><span>lim</span><span class="lim-to">${mx(a.v, true)}</span></span>`;
@@ -188,15 +189,34 @@
       del.slice().reverse().forEach(p => { const o = nodes.filter(z => z.at <= p).pop(); o.n.deleteData(p - o.at, 1); });
       const shift = p => del.filter(d => d < p).length;
       const fs = parseFloat(getComputedStyle(tx).fontSize) || 14, col = getComputedStyle(tx).fill || 'currentColor';
+      // 基準線：y の値（dominant-baseline が中央なら少し下）。測れなければ字の箱の下のほう
+      const db = tx.getAttribute('dominant-baseline') || '', y0 = parseFloat(tx.getAttribute('y'));
+      const base = e => !isNaN(y0) && !tx.querySelector('[dy],[y]') ? y0 + (/middle|central/.test(db) ? fs * .34 : /hanging|before/.test(db) ? fs * .8 : 0) : e.y + e.height * .8;
+      // √ の字は見えなくする（幅はそのまま）
+      const hide = q => {
+        const w2 = document.createTreeWalker(tx, NodeFilter.SHOW_TEXT);
+        for (let n, at = 0; (n = w2.nextNode()); at += n.data.length) {
+          if (q >= at + n.data.length) continue;
+          const r = n.splitText(q - at); r.splitText(1);
+          const ts = document.createElementNS('http://www.w3.org/2000/svg', 'tspan');
+          ts.setAttribute('fill-opacity', '0'); ts.setAttribute('stroke-opacity', '0');
+          r.replaceWith(ts); ts.appendChild(r); return;
+        }
+      };
       let d = '';
       marks.forEach(mk => {
         try {
           const e1 = tx.getExtentOfChar(mk.a - shift(mk.a)), e2 = tx.getExtentOfChar(mk.b - 1 - shift(mk.b - 1));
-          const x0 = e1.x + fs * .04, x1 = e2.x + e2.width - fs * .02, y = Math.min(e1.y, e2.y) + fs * (mk.k === 'vec' ? .08 : .16), h = fs * .16;
-          // 根号の横線は、√ の字の右上から中身の右まで
-          const er = mk.k === 'rt' && tx.getExtentOfChar(mk.a - 1 - shift(mk.a - 1));
-          d += mk.k === 'vec' ? `M${x0} ${y}H${x1}M${x1 - h} ${y - h * .8}L${x1} ${y}L${x1 - h} ${y + h * .8}`
-            : `M${er.x + er.width * .82} ${er.y + fs * .2}H${x1 + fs * .04}`;
+          const x0 = e1.x + fs * .04, x1 = e2.x + e2.width - fs * .02, h = fs * .16, b = base(e1);
+          if (mk.k === 'vec') {
+            const y = b - fs * (/[A-Z]/.test(S[mk.a]) ? 1 : .9);  // b や d の上の端より上
+            d += `M${x0} ${y}H${x1}M${x1 - h} ${y - h * .8}L${x1} ${y}L${x1 - h} ${y + h * .8}`;
+          } else {
+            // 根号：√ の字の幅に、かぎと斜めの線を描き、中身の上の横線へつなぐ
+            const q = mk.a - 1 - shift(mk.a - 1), er = tx.getExtentOfChar(q), w = er.width, top = b - fs * .84;
+            d += `M${er.x + w * .06} ${b - fs * .36}L${er.x + w * .26} ${b - fs * .44}L${er.x + w * .52} ${b + fs * .06}L${er.x + w * .94} ${top}H${x1 + fs * .04}`;
+            hide(q);
+          }
         } catch { /* 測れない字は飛ばす */ }
       });
       if (!d) return;
@@ -504,14 +524,15 @@
   }
 
   let session = null;
+  const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
+    : r.name === 'unit' ? viewUnit(r.id)
+    : r.name === 'day' ? viewDay(r.id, r.day, r.type)
+    : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
   function render() {
     const r = parse(), view = $('#view');
     if (r.name !== 'day') session = null;
     Music.scene(r.name === 'day' ? 'play' : 'map');
-    view.innerHTML = r.name === 'level' ? viewLevel(r.level)
-      : r.name === 'unit' ? viewUnit(r.id)
-      : r.name === 'day' ? viewDay(r.id, r.day, r.type)
-      : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
+    view.innerHTML = viewHtml(r);
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     const ex = $('#explore');
     if (r.name === 'map') { ex.hidden = false; ex.innerHTML = exploreHtml(); mountExplore(); }
@@ -521,6 +542,16 @@
     if (r.name === 'day') drawItem();
     if (r.name === 'join') { const b = $('#btn-join'); if (b) b.addEventListener('click', () => joinOpen(r.file)); }
     window.scrollTo(0, 0);
+  }
+  // ほかの端末や家族の変更が入ったときの描き直し（D-061、施主「1 分に一回更新されるせいで 2D の地図を見ていると急に画面が引き戻される」）。
+  // 見ている場所（2D の地図のスクロール、3D の視点、ページの位置）は動かさず、中身だけを塗り直す。問題を解いている途中と共有のリンクの画面は描き直さない
+  function refresh() {
+    const r = parse();
+    if (r.name === 'day' || r.name === 'join') return;
+    const y = window.scrollY;
+    $('#view').innerHTML = viewHtml(r);
+    if (r.name === 'map') paint();
+    window.scrollTo(0, y);
   }
 
   // ---- あゆみ（D-046）：きょう、この 7 日、いまの単元、目標までの道のり。保護者の表示では、つまずきも ----
@@ -2217,7 +2248,8 @@
         if (!interactive) { driveState = 'need'; return; }
         await DriveSync.signIn();
       }
-      const remote = await DriveSync.pull(), before = JSON.stringify(store);
+      // 変わったかどうかは、並び順をそろえて比べる（合わせると並び順だけが変わることがあり、そのたびに描き直さないように）
+      const remote = await DriveSync.pull(), before = canon(store);
       if (remote && remote.schema === 2 && remote.profiles) {
         store = mergeStore(store, remote);
         progress = store.profiles[store.current].rec;
@@ -2229,7 +2261,7 @@
       if (!drive.who) { const u = await DriveSync.who(); if (u) drive.who = u.emailAddress || u.displayName || ''; }
       drive.on = true; drive.at = new Date().toLocaleString('sv-SE').slice(0, 16); save(DRIVE_KEY, drive);
       driveState = 'ok';
-      if (JSON.stringify(store) !== before) { syncWho(); if (parse().name !== 'day') render(); }
+      if (canon(store) !== before) { syncWho(); refresh(); }
     } catch (err) {
       if (err.code === 'popup_closed') driveState = drive.on ? 'need' : 'off';
       // 電波がないときは、つながったら合わせる（下の online）。押したときだけ知らせる

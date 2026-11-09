@@ -753,7 +753,9 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 
 /* 数式の見せ方（D-042）：文字は斜体のセリフ体（× と見分ける）、分数は上下に重ねる */
 .v { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", "Noto Serif", serif; font-style: italic; font-size: 1.12em; padding: 0 .04em; }
-.frac { display: inline-flex; flex-direction: column; align-items: center; vertical-align: middle; line-height: 1.05; margin: 0 .12em; font-size: .86em; }
+.frac { display: inline-flex; flex-direction: column; align-items: stretch; text-align: center; vertical-align: middle; line-height: 1.05; margin: 0 .12em; font-size: .86em; }
+/* 横線は分子と分母の広いほうの幅（D-061）。入れ子（連分数）は小さくしすぎない */
+.frac .frac { font-size: .94em; }
 .frac > span { padding: 0 .18em; }
 .frac > span:first-child { border-bottom: .08em solid currentColor; }
 .display .frac { font-size: .7em; }
@@ -762,9 +764,12 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
 .vec::before { content: ""; position: absolute; left: .08em; right: .1em; top: .14em; border-top: .075em solid currentColor; }
 .vec::after { content: ""; position: absolute; right: .1em; top: .14em; width: .22em; height: .22em; border-top: .075em solid currentColor; border-right: .075em solid currentColor;
   transform: translateY(-50%) rotate(45deg); }
-.sqrt { white-space: nowrap; }
-.sqrt .rt { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; display: inline-block; transform: scale(1.05, 1.2); transform-origin: 50% 85%; margin-right: -.06em; }
-.sqrt .rad { display: inline-block; line-height: 1.08; border-top: .075em solid currentColor; padding: 0 .08em 0 .06em; }
+/* 根号は線で描いた √ と、中身の上の横線をつなげる（D-061）。√ の右上の端が横線の真ん中に来る */
+.sqrt { position: relative; display: inline-block; padding-left: .6em; line-height: 1.15; white-space: nowrap; }
+.sqrt .rt { position: absolute; left: .02em; top: .0375em; width: .6em; height: calc(100% - .06em); overflow: visible;
+  fill: none; stroke: currentColor; stroke-width: .075em; stroke-linejoin: round; stroke-linecap: round; }
+.sqrt .rt path { vector-effect: non-scaling-stroke; }
+.sqrt .rad { display: inline-block; line-height: 1.15; border-top: .075em solid currentColor; padding: .1em .08em 0 .04em; }
 .pr { font-family: "Cambria Math", "STIX Two Math", "Times New Roman", serif; margin: 0 .02em 0 -.04em; }
 .lim { display: inline-flex; flex-direction: column; align-items: center; line-height: 1.1; margin: 0 .2em 0 .05em; }
 .lim-to { font-size: .68em; white-space: nowrap; }
