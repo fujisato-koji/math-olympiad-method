@@ -25,7 +25,7 @@
   const TAIL = /^[²³¹⁰-₟′″']*/;  // 文字の後ろに付く肩と添字とプライム
   const FN = /^(sin|cos|tan|log|ln)$/;
   // 立体で書く名前（関数、極限）と単位。ほかの小文字の並び（ac、xy）は文字の積として斜体にする
-  const UPRIGHT = /^(sin|cos|tan|sec|csc|cot|log|ln|lim|exp|max|min|mod|gcd|lcm|km|cm|mm|kg|mg|mL|dL|kL|ha|min|sec)$/;
+  const UPRIGHT = /^(sin|cos|tan|sec|csc|cot|log|ln|lim|exp|max|min|mod|gcd|lcm|det|ker|im|rank|dim|km|cm|mm|kg|mg|mL|dL|kL|ha|min|sec)$/;
   // 肩と添字の字（²、ₙ）は、まわりと同じ字体の上付きと下付きにする（字体によって ₙ や ⁿ がないため）
   const SS = { '²': '2', '³': '3', '¹': '1', '⁰': '0', 'ⁱ': 'i', '⁴': '4', '⁵': '5', '⁶': '6', '⁷': '7', '⁸': '8', '⁹': '9', '⁺': '+', '⁻': '−', '⁼': '=', '⁽': '(', '⁾': ')', 'ⁿ': 'n',
     '₀': '0', '₁': '1', '₂': '2', '₃': '3', '₄': '4', '₅': '5', '₆': '6', '₇': '7', '₈': '8', '₉': '9', '₊': '+', '₋': '−', '₌': '=', '₍': '(', '₎': ')',
