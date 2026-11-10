@@ -311,6 +311,31 @@ def check(data, problems):
         days = doc.get("days", [])
         if [d.get("day") for d in days] != list(range(1, len(days) + 1)):
             errors.append(f"{uid}: 日は 1 から順に並べる")
+        # 後ろの日に置いた概念を、前の日の問題で先取りしない（D-077）
+        title = units[uid][2].get("title", "")
+        first_plan = {}
+        for di, entry in enumerate(plan, start=1):
+            for kind, aim in entry.items():
+                if kind not in ("導入", "練習"):
+                    continue
+                for term in re.split(r"[、・（）()]", str(aim)):
+                    term = term.strip()
+                    if len(term) >= 3 and term not in title:
+                        first_plan.setdefault(term, di)
+        seen_intro = ""
+        for d in days:
+            di = d.get("day")
+            seen_intro += "\n" + "\n".join(
+                x for it in d.get("items", []) if it.get("part") == "見本"
+                for k in ("text", "explain", "note", "hints") for x in strings(it.get(k))
+            )
+            for it in d.get("items", []):
+                if it.get("part") == "見本":
+                    continue
+                used = "\n".join(x for k in ("text", "choices", "answer", "hints", "paths") for x in strings(it.get(k)))
+                for term, fd in first_plan.items():
+                    if fd > di and term in used and term not in seen_intro:
+                        errors.append(f"{uid} {di} 日目: 「{term}」は {fd} 日目の内容なので、前の日の問題で使わない")
         if len(days) > len(plan):
             errors.append(f"{uid}: 地図の日数より多い")
         # 腕だめし（離、D-047）は ri に置く。日の問題と同じ決まりで確かめる
