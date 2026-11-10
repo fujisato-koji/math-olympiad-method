@@ -13,14 +13,54 @@ days:
     items:
       - part: 見本
         text: |-
-          行列式 det A は、2×2 では det (a b；c d) = ad − bc。3×3 は余因子展開で求めます。
-          行列式は、行を入れかえると符号が変わり、1 つの行を k 倍すると k 倍になり、行の定数倍を別の行にたしても変わりません。
+          2×2 の行列 A = (a b；c d) は、平面を平行四辺形に移す変換です。
+          面積は |ad − bc| 倍になり、向きは ad − bc の符号で決まります。この ad − bc を A の行列式といい、det A と書きます。
+          3×3 の行列式は、空間の体積の倍率です。計算は、1 行目で余因子展開して、2×2 の行列式 3 つに分けて求めます。
           例：det (1 2；3 4) = 1×4 − 2×3 = −2。
         explain: |-
-          【定義】2×2 の行列式は ad − bc。det (1 2；3 4) = 4 − 6 = −2。
-          3×3 は、1 行目で余因子展開して 2×2 の行列式 3 つに分けます。
-          行列式は「面積や体積の倍率」を表し、0 ならつぶれている、負なら向きが反転している、と読めます。
-        note: 行列式は、行列が空間をどれだけ拡大・縮小するかの倍率。2×2 は面積、3×3 は体積の倍率。
+          【定義】行列式 det A は、A が面積（3×3 なら体積）を何倍にするかを表す数です。
+          ・2×2 の A = (a b；c d) は、(1,0) を (a,c)、(0,1) を (b,d) に移します。
+          ・だから、単位正方形は、列ベクトル (a,c) と (b,d) が作る平行四辺形に移ります。
+          ・この平行四辺形の面積は |ad − bc| です。これが行列式の正体です。
+          【例】A = (1 2；3 4) は、(1,0) を (1,3)、(0,1) を (2,4) に移します。平行四辺形の頂点は (0,0)、(1,3)、(3,7)、(2,4) で、面積は |1×4 − 2×3| = 2 です。
+          【符号】ad − bc が正なら向きはそのまま、負なら反転、0 なら 2 つの列ベクトルが平行で、面積 0（逆行列なし）。
+          【3×3】3 つの列ベクトルが作る平行六面体の体積の倍率です。計算は 1 行目で余因子展開します。
+          ・1 行目の各成分に、その行と列を除いた 2×2 の行列式（小行列式）をかけます。
+          ・符号は + − + で足します。
+          ｜項｜使う小行列式｜符号｜
+          ｜a(ei − fh)｜(e f；h i)｜+｜
+          ｜b(di − fg)｜(d f；g i)｜−｜
+          ｜c(dh − eg)｜(d e；g h)｜+｜
+          【まとめ】行列式は「面積・体積の倍率」。2×2 は ad−bc、3×3 は余因子展開。
+        note: 行列式は面積・体積の倍率。2×2 は ad−bc、3×3 は余因子展開（+ − +）。0 ならつぶれ、負なら向き反転。
+        svg: |-
+          <svg viewBox="0 0 360 210" role="img" aria-label="行列式と面積の図">
+            <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
+              <line x1="30" y1="170" x2="170" y2="170"/><line x1="60" y1="190" x2="60" y2="40"/>
+            </g>
+            <rect x="60" y="135" width="35" height="35" fill="currentColor" opacity=".12"/>
+            <rect x="60" y="135" width="35" height="35" fill="none" stroke="currentColor" stroke-width="2"/>
+            <g font-size="11" fill="currentColor">
+              <text x="20" y="18">A を通す前</text>
+              <text x="65" y="125">面積 1</text>
+              <text x="172" y="174">x</text><text x="52" y="44">y</text>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
+              <line x1="200" y1="170" x2="350" y2="170"/><line x1="210" y1="190" x2="210" y2="40"/>
+            </g>
+            <polygon points="210,170 280,135 315,65 245,100" fill="currentColor" opacity=".12"/>
+            <polygon points="210,170 280,135 315,65 245,100" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="210" y1="170" x2="280" y2="135" stroke="currentColor" stroke-width="1.4"/>
+            <line x1="210" y1="170" x2="245" y2="100" stroke="currentColor" stroke-width="1.4"/>
+            <g font-size="11" fill="currentColor">
+              <text x="200" y="18">A を通した後</text>
+              <text x="285" y="50">面積 3</text>
+              <text x="288" y="150">(2, 1)</text>
+              <text x="225" y="95">(1, 2)</text>
+              <text x="352" y="174">x</text><text x="202" y="44">y</text>
+              <text x="210" y="200">例：A = (2 1；1 2)</text>
+            </g>
+          </svg>
       - part: 思い出す
         text: (2 1；1 3) の行列式はいくつですか。
         choices: [3, 4, 5, 6]
