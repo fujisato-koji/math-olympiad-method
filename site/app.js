@@ -113,11 +113,14 @@
     }
     return out;
   }
-  // 1 文字の単位か（数と空白のすぐ後、または単位の後の /）
+  // 1 文字の単位か（数と空白のすぐ後、単位の後の /、「単位は W」の W）
+  const UNIT_SYMS = /^(N|J|W|V|A|C|K|T|Pa|Hz|mol|Ω|S|F|H|Wb|℃)$/;
   function unitAt(x, i) {
     const w = x[i];
     if (!w || w.k !== 'w') return false;
     if (x[i - 1] && x[i - 1].v === ' ' && x[i - 2] && x[i - 2].k === 'n') return w.v.length <= 3;
+    const before = x.slice(Math.max(0, i - 4), i).map(a => a.v || '').join('');
+    if (UNIT_SYMS.test(w.v) && /(単位は|単位)\s*$/.test(before)) return true;
     return !!(x[i - 1] && x[i - 1].v === '/' && unitAt(x, i - 2));
   }
   // 分子や分母になれる字句か
@@ -167,7 +170,10 @@
           // 分数や偏微分を包むかっこは、中身の高さに合わせた曲線で描く
           return `<span class="pgroup"><svg class="par left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M7 .5 C3 4.5, 3 15.5, 7 19.5"/></svg><span class="pcontent">${inner}</span><svg class="par right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 .5 C7 4.5, 7 15.5, 3 19.5"/></svg></span>${t}`;
         }
-        case 'w': return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
+        case 'w':
+          // 1 文字の大文字は変数として斜体（W = 仕事、E = エネルギー）。単位（10 W、単位は W）は立体のまま
+          if (/^[A-Z]$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v)) return `<i class="v">${esc(a.v)}</i>${t}`;
+          return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
         case 'n': case 's': return esc(a.v) + t;
         case 'gr': return `<i class="v">${esc(a.v)}</i>${t}`;
         case 'frac': {
