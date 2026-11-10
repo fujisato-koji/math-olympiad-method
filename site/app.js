@@ -165,12 +165,16 @@
           const inner = mx(a.v, flat);
           if (flat || !tallGroup(a.v)) return `(${inner})${t}`;
           // 分数や偏微分を包むかっこは、中身の高さに合わせた曲線で描く
-          return `<span class="pgroup"><svg class="par left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M8.5 .5 C2.5 4, 2.5 16, 8.5 19.5"/></svg><span class="pcontent">${inner}</span><svg class="par right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1.5 .5 C7.5 4, 7.5 16, 1.5 19.5"/></svg></span>${t}`;
+          return `<span class="pgroup"><svg class="par left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M7 .5 C3 4.5, 3 15.5, 7 19.5"/></svg><span class="pcontent">${inner}</span><svg class="par right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 .5 C7 4.5, 7 15.5, 3 19.5"/></svg></span>${t}`;
         }
         case 'w': return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
         case 'n': case 's': return esc(a.v) + t;
         case 'gr': return `<i class="v">${esc(a.v)}</i>${t}`;
-        case 'frac': return `<span class="frac" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
+        case 'frac': {
+          // 分子に下付きの字があるときは、分数の線とぶつからないよう分子の下を広げる
+          const sub = a.num.some(t => t.k === 'sub' || (t.t && /[₀-₟]/.test(t.t)) || (t.k === 'g' && /[_₀-₉]/.test(t.v)));
+          return `<span class="frac${sub ? ' frac-sub' : ''}" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
+        }
         case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
         // 根号は √ の字を使わず線で描く（字体によって √ と横線が離れるため）。中身の高さに合わせて伸びる
         case 'rt': return `<span class="sqrt" role="math" aria-label="ルート ${esc(a.v)}"><svg class="rt" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M.4 12.2 2.6 10.8 5.4 19.6 10 0"/></svg><span class="rad">${mx(a.v, flat)}</span></span>${t}`;
@@ -203,10 +207,10 @@
     const cells = rows.map(r => (r.includes('、') ? r.split('、') : r.split(/\s+/)).map(x => x.trim()).filter(Boolean));
     if (cells.some(r => !r.length) || new Set(cells.map(r => r.length)).size !== 1) return '';
     return `<span class="mat" role="math" aria-label="${esc(inner)}">` +
-      `<svg class="mpar left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M8.5 .5 C2.5 4, 2.5 16, 8.5 19.5"/></svg>` +
+      `<svg class="par left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M7 .5 C3 4.5, 3 15.5, 7 19.5"/></svg>` +
       `<span class="mgrid">${cells.map(r =>
       `<span class="mrow">${r.map(c => `<span class="mcell">${glossHtml(mx(c))}</span>`).join('')}</span>`).join('')}</span>` +
-      `<svg class="mpar right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1.5 .5 C7.5 4, 7.5 16, 1.5 19.5"/></svg></span>`;
+      `<svg class="par right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3 .5 C7 4.5, 7 15.5, 3 19.5"/></svg></span>`;
   }
   function markMat(s) {
     const mats = [];
