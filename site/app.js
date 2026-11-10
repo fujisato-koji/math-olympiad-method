@@ -171,6 +171,128 @@
   // flat は、肩や端の中（分数を重ねず、斜線のまま）
   const mx = (s, flat) => { const x = lex(s); return html(flat ? x : fracs(x), flat); };
   const fmt = s => mx(String(s ?? ''));
+  // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
+  const fmtLinks = s => mx(String(s ?? '')).replace(/\b([A-Z])-(\d{3})\b/g, m => UNITS[m] ? `<a class="ulink" href="#/unit/${m}" target="_blank" rel="noopener">${m}</a>` : m);
+  // マウスオーバーで用語を説明する（2026-11-10 施主）。数学で自明でも初見で分からない語・記号・過去の単元の語に付ける
+  const GLOSS = {
+    'Q \\ {0}': { t: '0 を除いた有理数全体。かけ算の群で使います。', u: 'A-024' },
+    '部分集合': { t: 'A のどの要素も B の要素であるとき、A は B の部分集合。', u: 'A-024' },
+    '部分群': { t: '群 G の部分集合で、G と同じ演算で群になるもの。' },
+    '準同型': { t: 'f(a·b) = f(a)·f(b) を満たす、群の間の写像。' },
+    '巡回群': { t: '1 つの要素の累乗で全体が書ける群。' },
+    '生成元': { t: '群のすべての要素を累乗で作れる要素。' },
+    '単位元': { t: 'e·a = a·e = a となる要素 e。' },
+    '結合法則': { t: '(a·b)·c = a·(b·c) が成り立つこと。' },
+    '数直線': { t: '数を一直線に並べたもの。右へ進むと増える。', u: 'N-002' },
+    '正負の数': { t: '0 より小さい負の数と、0 より大きい正の数。', u: 'N-027' },
+    '対称移動': { t: '回転や裏返しで、図形をもとの図形に重ねる移動。', u: 'G-015' },
+    '写像': { t: '集合の各要素に、行き先の要素を 1 つ対応させるもの。', u: 'A-024' },
+    '全単射': { t: '単射で全射な写像。', u: 'A-024' },
+    '単射': { t: 'f(a) = f(b) ならば a = b となる写像。', u: 'A-024' },
+    '全射': { t: '行き先のどの要素にも写ってくる要素がある写像。', u: 'A-024' },
+    '同型': { t: '全単射で準同型な写像があること。' },
+    '位数': { t: 'g^n = e となる最小の正の整数 n。' },
+    '有理数': { t: '分数で書ける数。', u: 'N-016' },
+    '整数': { t: '…, −2, −1, 0, 1, 2, … の数。', u: 'N-027' },
+    '倍数': { t: 'a = bk となる整数 k があるとき、a は b の倍数。', u: 'N-017' },
+    '約数': { t: 'b = ak となる整数 k があるとき、a は b の約数。', u: 'N-017' },
+    '余り': { t: 'わり切れずに残る数。', u: 'N-014' },
+    '分数': { t: 'a/b の形で書ける数。', u: 'N-016' },
+    '逆数': { t: 'かけると 1 になる数。a/b の逆数は b/a。', u: 'N-078' },
+    '逆元': { t: 'a·b = b·a = e となる要素 b。' },
+    '鏡映': { t: '鏡に映したように裏返す移動。', u: 'G-015' },
+    '群': { t: '集合と演算の組で、閉じている・結合法則・単位元・逆元を満たすもの。' },
+    'Z': { t: '整数全体の集合 {…, −2, −1, 0, 1, 2, …}。', u: 'A-024' },
+    'Q': { t: '有理数全体の集合。分数で書ける数。', u: 'A-024' },
+    '2Z': { t: '2 の倍数全体 {…, −4, −2, 0, 2, 4, …}。' },
+    '3Z': { t: '3 の倍数全体。' },
+    '4Z': { t: '4 の倍数全体。' },
+    '5Z': { t: '5 の倍数全体。' },
+    '6Z': { t: '6 の倍数全体。' },
+    '7Z': { t: '7 の倍数全体。' },
+    '像': { t: '準同型 f の行き先の値全体。im f = {f(g) | g ∈ G}。' },
+    '核': { t: '準同型 f で、単位元に写る要素全体。ker f = {g | f(g) = e_H}。' },
+    '閉じている': { t: 'G の要素どうしの演算の結果が、また G に入ること。' }
+  };
+  const glossTerms = Object.keys(GLOSS).sort((a, b) => b.length - a.length);
+  const glossRe = new RegExp(glossTerms.map(term => {
+    const e = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return /^[A-Za-z0-9]/.test(term) ? `(?<![A-Za-z0-9])${e}(?![A-Za-z0-9])` : e;
+  }).join('|'), 'g');
+  let glossTip = null;
+  function applyGloss(root) {
+    const skip = 'a,button,input,textarea,select,svg,script,style,.gloss,.frac,.sqrt,.vec,.lim,.sum,.bd,.int,.pad,.display,.choices,.fig,i,sup,sub';
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        const p = node.parentElement;
+        if (!p || p.closest(skip)) return NodeFilter.FILTER_REJECT;
+        return node.nodeValue && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    for (const node of nodes) {
+      const text = node.nodeValue;
+      if (!glossRe.test(text)) continue;
+      glossRe.lastIndex = 0;
+      const frag = document.createDocumentFragment();
+      let last = 0, m;
+      while ((m = glossRe.exec(text))) {
+        if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const span = document.createElement('span');
+        span.className = 'gloss';
+        span.tabIndex = 0;
+        span.dataset.g = m[0];
+        span.textContent = m[0];
+        frag.appendChild(span);
+        last = m.index + m[0].length;
+      }
+      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    }
+  }
+  function glossTipEl() {
+    if (!glossTip) {
+      glossTip = document.createElement('div');
+      glossTip.id = 'gloss-tip';
+      document.body.appendChild(glossTip);
+    }
+    return glossTip;
+  }
+  function showGloss(g) {
+    const item = GLOSS[g.dataset.g];
+    if (!item) return;
+    const tip = glossTipEl();
+    const u = item.u && UNITS[item.u] ? `<span class="u">${esc(item.u)} ${esc(UNITS[item.u].title)}</span>` : '';
+    tip.innerHTML = `<div>${esc(item.t)}</div>${u}`;
+    tip.classList.add('on');
+    const r = g.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    const left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), window.innerWidth - w - 8);
+    let top = r.top - h - 8;
+    if (top < 8) top = r.bottom + 8;
+    tip.style.left = `${left}px`;
+    tip.style.top = `${top}px`;
+  }
+  function hideGloss() {
+    if (glossTip) glossTip.classList.remove('on');
+  }
+  document.addEventListener('mouseover', e => {
+    const g = e.target.closest && e.target.closest('.gloss');
+    if (g) showGloss(g);
+  });
+  document.addEventListener('mouseout', e => {
+    const g = e.target.closest && e.target.closest('.gloss');
+    if (g) hideGloss();
+  });
+  document.addEventListener('focusin', e => {
+    const g = e.target.closest && e.target.closest('.gloss');
+    if (g) showGloss(g);
+  });
+  document.addEventListener('focusout', e => {
+    const g = e.target.closest && e.target.closest('.gloss');
+    if (g) hideGloss();
+  });
+  window.addEventListener('scroll', hideGloss, true);
   // 図の中のベクトル（→a）と根号（√3）を、描いたあとに文字の位置を測って組む（D-060）。測れない図はそのまま
   function figMath(root) {
     root.querySelectorAll('.fig-svg text').forEach(tx => {
@@ -1363,23 +1485,20 @@
     ? `<div class="kinds">${it.kinds.map(k => `<span class="kind">${esc(kindName(k, small))}</span>`).join('')}</div>` : '';
   const riStar = it => (progress.items[it.qid] || {}).star || 0;
   const riStars = u => (u.ri || []).reduce((a, it) => a + riStar(it), 0);
-  const riOpen = u => isDone(u.id) ? (u.ri || []).filter(it => (it.uses || []).every(isDone)) : [];
+  // 施主（2026-11-10）：腕だめしは単元が済になる前でも見られるようにする。済や uses で錠をかけない
+  const riOpen = u => (u.ri || []);
   // 星の少ない問題から 3 問
   const riPick = u => riOpen(u).map((it, i) => [it, i]).sort((a, b) => riStar(a[0]) - riStar(b[0]) || a[1] - b[1]).slice(0, 3).map(x => x[0]);
   const starsHtml = n => `<span class="stars" aria-label="星 ${n}">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
   function riHtml(id) {
     const u = UNITS[id], its = u.ri || [];
     if (!its.length) return '';
-    const done = isDone(id), open = riOpen(u).length;
-    const cards = its.map((it, i) => {
-      const lock = !done || (it.uses || []).some(x => !isDone(x));
-      return `<div class="ri-card${lock ? ' lock' : ''}"><span class="ri-n">問 ${i + 1}${lock ? '・🔒' : ''}</span>${starsHtml(riStar(it))}
+    const cards = its.map((it, i) => `<div class="ri-card"><span class="ri-n">問 ${i + 1}</span>${starsHtml(riStar(it))}
         ${kindsHtml(it, false)}
-        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`;
-    }).join('');
+        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`).join('');
     return `<section class="ri"><h2 class="section-title" title="型を離れた問題。済の判定には入れない。★ 解けた　★★ ヒントなし　★★★ 一度に目安の時間の内">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
       <div class="ri-list">${cards}</div>
-      ${open ? `<div class="actions"><a class="pill solid" href="#/ri/${id}">腕だめしをする</a></div>` : ''}</section>`;
+      <div class="actions"><a class="pill solid" href="#/ri/${id}">腕だめしをする</a></div></section>`;
   }
 
   // ---- 目標：単元を組み合わせた結果として届く場所 ----
@@ -1491,18 +1610,18 @@
         <div class="path">${p.map((x, j) => {
           const t = i * .7 + j * .28;
           return (j ? `<span class="link" style="animation-delay:${t - .1}s"></span>` : '') +
-            `<span class="stn" style="animation-delay:${t}s">${fmt(x)}</span>`;
+            `<span class="stn" style="animation-delay:${t}s">${fmtLinks(x)}</span>`;
         }).join('')}</div></div>`).join('')}</div>`;
   }
   function parentHtml(it) {
     if (!prefs.parent) return '';
     if (it.part === '見本') return '';
-    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${fmt(it.explain)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmt).join(' → ')}`).join('')}
+    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${fmtLinks(it.explain)}
+      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmtLinks).join(' → ')}`).join('')}
       <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
     return `<div class="parent"><b>こたえ</b> ${fmt(it.answer)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmt).join(' → ')}`).join('')}
-      ${it.note ? `<br><b>見どころ</b> ${fmt(it.note)}` : ''}
+      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmtLinks).join(' → ')}`).join('')}
+      ${it.note ? `<br><b>見どころ</b> ${fmtLinks(it.note)}` : ''}
       <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
   }
   // ---- 目安の時間（D-045） ----
@@ -1631,7 +1750,7 @@
     const head = k.why === 'mean' ? `<p class="dk-note">${W.read}</p>`
       : k.why === 'start' && path.length ? `<p class="dk-note"><b>${W.first}</b>　${fmt(path[0])}</p>`
       : k.why === 'mid' ? `<p class="dk-note"><b>${W.stuck}</b>　${fmt(path[k.i])}</p>` : '';
-    const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${fmt(it.hints[k.hint])}</div></div>` : '';
+    const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${fmtLinks(it.hints[k.hint])}</div></div>` : '';
     const asks = progress.asks || [];
     return `<div class="dk">${head}${hint}<h3 class="dk-h">${W.offer}</h3><div class="dk-cands">${k.cands.map(c => {
       const cu = UNITS[c.id], put = asks.some(a => a.u === c.id);
@@ -1679,7 +1798,7 @@
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
         <h2 style="margin:18px 0 8px">${esc(s.type === 'ri' ? '腕だめし（離）' : d.aim || R.kinds[d.kind])}</h2>
-        <p>${s.type === 'ri' ? (u.ri ? 'この単元が済になると、腕だめしが開きます。' : 'この単元の腕だめしは、まだ作っていません。') : 'この日の問題は、まだ作っていません。'}</p>
+        <p>${s.type === 'ri' ? 'この単元の腕だめしは、まだ作っていません。' : 'この日の問題は、まだ作っていません。'}</p>
         <div class="actions"><a class="pill" href="#/unit/${s.id}">単元へもどる</a></div></div>`;
       return;
     }
@@ -1699,7 +1818,7 @@
       body = `${fig}${dunnoHtml(s, it)}`;
     } else if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmtLinks(h)}</div>`).join('');
       const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
         : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
         : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
@@ -1711,7 +1830,7 @@
       body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
     } else if (it.part === '見本') {
-      body = `${fig}<p class="explain">${fmt(it.explain)}</p>
+      body = `${fig}<p class="explain">${fmtLinks(it.explain)}</p>
         <div class="actions">${dk}<button class="pill solid" data-act="next" type="button">わかった</button></div>`;
     } else if (s.solved) {
       body = `${fig}<div class="feedback">できた！ こたえは <b>${fmt(it.answer)}</b></div>${pathsHtml(it)}
@@ -1723,13 +1842,14 @@
             <div class="pad${padKeys(s.id).length ? ' wide' : ''}">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ...padKeys(s.id)].map(k => `<button data-key="${k}" type="button">${k}</button>`).join('')}
               <button data-key="del" type="button" aria-label="ひとつ けす">←</button>
               <button class="ok" data-key="ok" type="button">こたえる</button></div></div>`;
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmt(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmtLinks(h)}</div>`).join('');
       body = `${fig}${input}<div class="feedback" id="fb"></div><div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
     figMath(el);
+    applyGloss(el);
     tick();
   }
   function submit(val) {
