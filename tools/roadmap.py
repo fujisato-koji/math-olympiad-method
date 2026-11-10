@@ -279,6 +279,9 @@ def check(data, problems):
             # 積分区間は ∫(a→b) と書く。∫a^b は画面で上下の端に組めない
             for m in re.finditer(r"∫([^\s(]{1,12})\^([^\s,，。]{1,12})", s):
                 errors.append(f"units/{uid}.yaml: 積分区間は ∫(a→b) と書く（{m.group(0)}）")
+            # 平方根は √(...) と書く。√⟨...⟩ は画面で全体にかからない
+            if re.search(r"√(?=[⟨|∑∫∂])", s):
+                errors.append(f"units/{uid}.yaml: 平方根は √(...) と書いて中身全体にかける")
             # 上付き・下付きは画面が組める ^(...) / _(...) の形にする
             if "^{" in s or "_{" in s:
                 errors.append("units/" + uid + ".yaml: 上付き・下付きは ^{...} / _{...} ではなく ^(...) / _(...) と書く")

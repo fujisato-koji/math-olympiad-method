@@ -89,7 +89,7 @@
           const j = closeAt(s, i + 1);
           if (j > 0) { const t = tail(j + 1); out.push({ k: 'rt', v: s.slice(i + 2, j), t }); i = j + 1 + t.length; continue; }
         }
-        if ((m = /^(?:\d+(?:\.\d+)?|[a-zA-Zπ])/.exec(s.slice(i + 1)))) {
+        if ((m = /^(?:\d+(?:\.\d+)?|[a-zA-Zα-ω])/.exec(s.slice(i + 1)))) {
           const t = tail(i + 1 + m[0].length);
           out.push({ k: 'rt', v: m[0] + t, t: '' }); i += 1 + m[0].length + t.length; continue;
         }
@@ -106,7 +106,8 @@
       if (c === '_' && (m = /^[A-Za-z0-9]/.exec(s.slice(i + 1)))) { out.push({ k: 'sub', v: m[0] }); i += 2; continue; }
       if ((m = /^\d+(?:\.\d+)?/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'n', v: m[0], t }); i += m[0].length + t.length; continue; }
       if ((m = /^[A-Za-z]+/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'w', v: m[0], t }); i += m[0].length + t.length; continue; }
-      if (/[πθ□∞∂]/.test(c)) { const t = tail(i + 1); out.push({ k: 's', v: c, t }); i += 1 + t.length; continue; }
+      if (/[α-ω]/.test(c) && c !== 'π') { const t = tail(i + 1); out.push({ k: 'gr', v: c, t }); i += 1 + t.length; continue; }
+      if (/[π□∞∂]/.test(c)) { const t = tail(i + 1); out.push({ k: 's', v: c, t }); i += 1 + t.length; continue; }
       if (SS[c]) { const t = tail(i); out.push({ k: 's', v: '', t }); i += t.length; continue; }  // ₙCₖ の ₙ のように前に字のない添字
       out.push({ k: 't', v: c }); i++;
     }
@@ -125,7 +126,7 @@
     if (!a) return false;
     if (a.k === 'g') return !CJK.test(a.v);
     if (a.k === 'w') return !unitAt(x, i) && (a.v.length === 1 || /^d[a-z]$/.test(a.v));
-    return ['n', 's', 'rt', 'vec', 'sup', 'sub'].includes(a.k);
+    return ['n', 's', 'rt', 'vec', 'sup', 'sub', 'gr'].includes(a.k);
   };
   // 分数を組む：/ の前と後ろの、すき間なく続く字句をまとめる。1/2/3 のように続くものは組まない
   function fracs(x) {
@@ -150,14 +151,25 @@
   const raw = x => x.map(a => a.k === 'g' ? `(${a.v})${a.t}` : a.k === 'frac' ? raw(a.num) + '/' + raw(a.den) : (a.v || '') + (a.t || '')).join('');
   // 分子と分母は、かっこの組 1 つだけなら外側のかっこを外す
   const part = x => x.length === 1 && x[0].k === 'g' && !x[0].t ? mx(x[0].v) : html(x);
-  const letters = v => Array.from(v).map(ch => /[a-z]/.test(ch) ? `<i class="v">${ch}</i>` : esc(ch)).join('');
+  const letters = v => Array.from(v).map(ch => (/[a-zα-ω]/.test(ch) && ch !== 'π') ? `<i class="v">${ch}</i>` : esc(ch)).join('');
+  // 分数・根号・積分・極限・行列を含むかっこは、中身の高さに合わせて伸ばす
+  const tallGroup = v => {
+    if (v.includes(MAT0) || v.includes(MAT1)) return true;
+    return fracs(lex(v)).some(a => ['frac', 'rt', 'int', 'sum', 'lim', 'bd'].includes(a.k) || (a.k === 'g' && tallGroup(a.v)));
+  };
   function html(x, flat) {
     return x.map((a, i) => {
       const t = tailHtml(a.t);
       switch (a.k) {
-        case 'g': return `(${mx(a.v, flat)})${t}`;
+        case 'g': {
+          const inner = mx(a.v, flat);
+          if (flat || !tallGroup(a.v)) return `(${inner})${t}`;
+          // 分数や偏微分を包むかっこは、中身の高さに合わせた曲線で描く
+          return `<span class="pgroup"><svg class="par left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M8.5 .5 C2.5 4, 2.5 16, 8.5 19.5"/></svg><span class="pcontent">${inner}</span><svg class="par right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1.5 .5 C7.5 4, 7.5 16, 1.5 19.5"/></svg></span>${t}`;
+        }
         case 'w': return (/^[a-z]{1,3}$/.test(a.v) && !unitAt(x, i) && !UPRIGHT.test(a.v) && !/^d[a-z]$/.test(a.v) ? letters(a.v) : esc(a.v)) + t;
         case 'n': case 's': return esc(a.v) + t;
+        case 'gr': return `<i class="v">${esc(a.v)}</i>${t}`;
         case 'frac': return `<span class="frac" role="math" aria-label="${esc(raw(a.den))}ぶんの${esc(raw(a.num))}"><span>${part(a.num)}</span><span>${part(a.den)}</span></span>`;
         case 'vec': return `<span class="vec">${letters(a.v)}${t}</span>`;
         // 根号は √ の字を使わず線で描く（字体によって √ と横線が離れるため）。中身の高さに合わせて伸びる
@@ -190,8 +202,11 @@
     if (rows.length < 2) return '';
     const cells = rows.map(r => (r.includes('、') ? r.split('、') : r.split(/\s+/)).map(x => x.trim()).filter(Boolean));
     if (cells.some(r => !r.length) || new Set(cells.map(r => r.length)).size !== 1) return '';
-    return `<span class="mat" role="math" aria-label="${esc(inner)}">${cells.map(r =>
-      `<span class="mrow">${r.map(c => `<span class="mcell">${glossHtml(mx(c))}</span>`).join('')}</span>`).join('')}</span>`;
+    return `<span class="mat" role="math" aria-label="${esc(inner)}">` +
+      `<svg class="mpar left" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M8.5 .5 C2.5 4, 2.5 16, 8.5 19.5"/></svg>` +
+      `<span class="mgrid">${cells.map(r =>
+      `<span class="mrow">${r.map(c => `<span class="mcell">${glossHtml(mx(c))}</span>`).join('')}</span>`).join('')}</span>` +
+      `<svg class="mpar right" viewBox="0 0 10 20" preserveAspectRatio="none" aria-hidden="true"><path d="M1.5 .5 C7.5 4, 7.5 16, 1.5 19.5"/></svg></span>`;
   }
   function markMat(s) {
     const mats = [];
