@@ -263,8 +263,10 @@
     return h
       .replace(KIND_BRACKET, (m, k) => kindSpan(k) + ' ')
       .replace(KIND_NAMED, (m, name, k) => {
+        // 名前全体が用語集にあるときだけ、名前全体にホバー説明を付ける。
+        // 用語集にない名前は、普通の文としてそのまま出す（「定理」だけのラベルにしない）。
         const full = name + 'の' + k;
-        return `${name}の${kindSpan(GLOSS[full] ? full : k, k)}`;
+        return GLOSS[full] ? `<span class="gloss" tabindex="0" data-g="${esc(full)}">${esc(full)}</span>` : `${name}の${k}`;
       });
   }
   const fmtExplain = s => {
@@ -1848,7 +1850,11 @@
       const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
         : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
         : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
-      body = `${fig}<p class="explain">${ask[0]}</p>
+      const first = (it.paths || [])[0] || [];
+      const order = first.length > 1
+        ? `<div class="what"><div class="t">${st <= 2 ? 'はなす じゅんばん' : '説明する順序'}</div><ol>${first.map(p => `<li>${fmtLinks(p)}</li>`).join('')}</ol></div>`
+        : '';
+      body = `${fig}<div class="explain">${ask[0]}</div>${order}
         <div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}
           ${dk}<button class="pill solid" data-act="said" type="button">${ask[1]}</button></div>`;
