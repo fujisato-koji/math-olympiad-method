@@ -335,6 +335,22 @@ def check(data, problems):
                             errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
+                # ヒントに答えそのものを書かない（R-14）。「5 になります。」のような文を止める
+                ans_n = str(item.get("answer", "")).replace("−", "-").replace(" ", "").replace("　", "").replace("、", ",").rstrip("。")
+                if ans_n:
+                    for hint in item.get("hints") or []:
+                        if not isinstance(hint, str):
+                            continue
+                        h_n = hint.replace("−", "-").replace(" ", "").replace("　", "").replace("、", ",").rstrip("。")
+                        unit = r"(?:[a-zA-Z/Ω・^0-9]+|倍|個|通り|こ|まい|人|秒|分|時間|m|cm|mm|km|g|kg|V|A|W|J|N|Hz|eV|℃|°|π)?"
+                        m = re.match(r"^(.*?)(です|になります|でした|となります|になる)$", h_n)
+                        pure = bool(m and m.group(1).startswith(ans_n)
+                                    and (m.group(1)[len(ans_n):] == ""
+                                         or re.fullmatch(unit, m.group(1)[len(ans_n):])))
+                        eq = re.search(r"=" + re.escape(ans_n) + unit + r"(です|になります|でした|となります|になる)$", h_n)
+                        said = ("答えは" + ans_n) in h_n or (ans_n + "が答え") in h_n
+                        if pure or eq or said:
+                            errors.append(f"{where}: ヒントが答えをそのまま書いている（{hint}）")
                 if "balance" in item:
                     # 天秤（D-042）：{left, right, tilt: left|right|level}、または その並び
                     bs = item["balance"] if isinstance(item["balance"], list) else [item["balance"]]

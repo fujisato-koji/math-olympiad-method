@@ -177,9 +177,32 @@
   const GS = '\uE000', GE = '\uE001';
   const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] ? GS + t + GE : m);
   const glossHtml = h => h.replace(/\uE000([^\uE001]*)\uE001/g, (m, t) => `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`);
-  const fmt = s => glossHtml(mx(markGloss(s)));
+  // 行列：(a b；c d) の書き方を、行と列に組む（D-064）。；が行の切れ目、空白か「、」が列の切れ目。
+  // 成分が式のときは「、」で区切る（M-002 の約束）。組めない形は、そのまま文字で残す。
+  const MAT0 = String.fromCharCode(0xE002), MAT1 = String.fromCharCode(0xE003);
+  const matPlace = new RegExp(MAT0 + '(\\d+)' + MAT1, 'g');
+  function matHtml(inner) {
+    const rows = inner.split('；').map(r => r.trim()).filter(Boolean);
+    if (rows.length < 2) return '';
+    const cells = rows.map(r => (r.includes('、') ? r.split('、') : r.split(/\s+/)).map(x => x.trim()).filter(Boolean));
+    if (cells.some(r => !r.length) || new Set(cells.map(r => r.length)).size !== 1) return '';
+    return `<span class="mat" role="math" aria-label="${esc(inner)}">${cells.map(r =>
+      `<span class="mrow">${r.map(c => `<span class="mcell">${glossHtml(mx(c))}</span>`).join('')}</span>`).join('')}</span>`;
+  }
+  function markMat(s) {
+    const mats = [];
+    const text = String(s ?? '').replace(/\(([^()]*；[^()]*)\)/g, (m, inner) => {
+      const h = matHtml(inner);
+      if (!h) return m;
+      mats.push(h);
+      return MAT0 + (mats.length - 1) + MAT1;
+    });
+    return { text, mats };
+  }
+  const putMat = (h, mats) => h.replace(matPlace, (m, i) => mats[Number(i)] ?? m);
+  const fmt = s => { const m = markMat(markGloss(s)); return putMat(glossHtml(mx(m.text)), m.mats); };
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
-  const fmtLinks = s => glossHtml(mx(markGloss(s)).replace(/\b([A-Z])-(\d{3})\b/g, m => UNITS[m] ? `<a class="ulink" href="#/unit/${m}" target="_blank" rel="noopener">${m}</a>` : m));
+  const fmtLinks = s => { const m = markMat(markGloss(s)); return putMat(glossHtml(mx(m.text).replace(/\b([A-Z])-(\d{3})\b/g, x => UNITS[x] ? `<a class="ulink" href="#/unit/${x}" target="_blank" rel="noopener">${x}</a>` : x)), m.mats); };
   let glossTip = null;
   function glossTipEl() {
     if (!glossTip) {

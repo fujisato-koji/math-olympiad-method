@@ -823,18 +823,18 @@ units:
   - {id: P-023, title: 光の反射・屈折とレンズ（全反射、凸レンズと像、フェルマーの原理とスネルの法則、光学機器と分解能、測光）, stage: 5, level: 3, region: hado, needs: [P-021, G-025, P-179], days: 8}
   - {id: P-029, title: 電流と回路（回路と電流・電圧、オームの法則、抵抗と抵抗率、電力と電力量、キルヒホッフの法則、電池と計器）, stage: 5, level: 2, region: denjiki, needs: [A-012, P-183], days: 8, plan: [{導入: 電流・電圧・抵抗とオームの法則}, {練習: 直列と並列}, {練習: 抵抗率と電力}, {練習: キルヒホッフの法則}, {練習: 電池と計器}, {わけ: オームの法則と合成抵抗}, {混ぜる: 回路の総合}, {確認: 8 日分の確認}]}
   - {id: P-030, title: "電荷と電場・電位（静電気、クーロンの法則、電場と電位、静電エネルギー、コンデンサーと電気容量、誘電体と電気容量）", stage: 5, level: 3, region: denjiki, needs: [P-029, D-006], days: 8, plan: [{導入: 電荷とクーロンの法則}, {練習: 電場と電気力線}, {練習: 電位と電位差}, {練習: 静電エネルギーと等電位面}, {練習: コンデンサーと誘電体}, {わけ: 電場と電位}, {混ぜる: 電場・電位・コンデンサー}, {確認: 8 日分の確認}]}
-  - {id: P-031, title: ガウスの法則と導体（電気力線、対称な電荷分布、導体の境界条件と接地、解の一意性、鏡像法）, stage: 5, level: 3, region: denjiki, needs: [P-030], days: 8}
+  - {id: P-031, title: ガウスの法則と導体（電気力線、対称な電荷分布、導体の境界条件と接地、解の一意性、鏡像法）, stage: 5, level: 3, region: denjiki, needs: [P-030], days: 8, plan: [{導入: 電気力線と電束}, {練習: ガウスの法則}, {練習: 球・円柱・平面の電場}, {練習: 導体の性質と接地}, {練習: 鏡像法と一意性}, {わけ: ガウスの法則と導体}, {混ぜる: 電場・電位・導体}, {確認: 8 日分の確認}]}
   - {id: P-032, title: "電流と磁場（電流のつくる磁場、ビオ＝サバールの法則、アンペールの法則、ローレンツ力、磁場中の荷電粒子のらせん運動とドリフト、磁気双極子、磁性体と磁化（常磁性、キュリーの法則））", stage: 5, level: 3, region: denjiki, needs: [G-027, P-183], days: 8}
-  - {id: P-033, title: 電磁誘導と交流（ファラデー＝レンツの法則、自己・相互インダクタンス、RL・RC 回路の時定数、交流回路と複素インピーダンス、共振、渦電流）, stage: 5, level: 3, region: denjiki, needs: [A-021], days: 8}
+  - {id: P-033, title: 電磁誘導と交流（ファラデー＝レンツの法則、自己・相互インダクタンス、RL・RC 回路の時定数、交流回路と複素インピーダンス、共振、渦電流）, stage: 5, level: 3, region: denjiki, needs: [A-021], days: 8, plan: [{導入: 磁束とファラデーの法則}, {練習: レンツの法則}, {練習: 自己誘導と相互誘導}, {練習: RL・RC 回路の時定数}, {練習: 交流と複素インピーダンス}, {わけ: ファラデーの法則とインダクタンス}, {混ぜる: 誘導・交流回路}, {確認: 8 日分の確認}]}
   - {id: P-042, title: 熱と温度・状態変化（熱運動、熱容量と比熱、熱の移動（伝導・対流・放射）、潜熱と相変化、融点と沸点、飽和蒸気圧と湿度）, stage: 5, level: 2, region: netsu, needs: [H-003, P-189], days: 8}
   - {id: P-043, title: 気体分子運動論と理想気体（分子の運動と圧力、状態方程式、内部エネルギー、自由度とエネルギー等分配、二乗平均速度、ボルツマン因子）, stage: 5, level: 3, region: netsu, needs: [P-042, P-004], days: 8}
   - {id: P-044, title: 熱力学第一法則と気体の状態変化（熱と仕事、内部エネルギー、定積・定圧熱容量、等温・断熱・定圧・定積変化）, stage: 5, level: 3, region: netsu, needs: [P-042, P-004], days: 8}
   - {id: P-045, title: 熱力学第二法則とエントロピー（トムソンとクラウジウスの原理、可逆と不可逆、カルノー・サイクルと熱効率、熱力学的温度、クラウジウスの不等式）, stage: 5, level: 3, region: netsu, needs: [P-044], days: 8}
   - {id: P-058, title: 相対論的力学（ミンコフスキー計量と不変間隔、固有時、4 元速度と 4 元運動量、質量とエネルギーの等価性、衝突と崩壊、光子のエネルギーと運動量、相対論的ドップラー効果）, stage: 6, level: 3, region: soutai, needs: [P-006, P-057], days: 8}
   - {id: P-069, title: 量子論の始まり（…、粒子性と波動性、不確定性関係による見積もり）, stage: 5, level: 3, region: ryoshi, needs: [P-021, P-030, P-004], days: 8, plan: [{導入: 光の粒子性と光電効果}, {練習: 光子のエネルギー}, {練習: コンプトン散乱と運動量}, {練習: 物質波}, {練習: 原子の線スペクトルとボーア模型}, {わけ: 光子と物質波}, {混ぜる: 光電効果・物質波・ボーア模型}, {確認: 8 日分の確認}]}
-  - {id: P-088, title: 原子の構造とスペクトル（…、パウリの原理と電子配置）, stage: 5, level: 3, region: genshi, needs: [P-069], days: 8}
+  - {id: P-088, title: 原子の構造とスペクトル（…、パウリの原理と電子配置）, stage: 5, level: 3, region: genshi, needs: [P-069], days: 8, plan: [{導入: 原子の構造と電子}, {練習: 水素のスペクトル系列}, {練習: ボーア模型の半径とエネルギー}, {練習: 量子数と軌道}, {練習: パウリの原理と電子配置}, {わけ: ボーア模型とスペクトル}, {混ぜる: 原子・スペクトル・電子配置}, {確認: 8 日分の確認}]}
   - {id: P-104, title: 原子核と放射線（原子核の構成と同位体、α・β・γ 崩壊、半減期と指数関数的な減衰、核反応、質量欠損、核分裂と核融合、中性子捕獲）, stage: 5, level: 3, region: soryushi, needs: [D-001], days: 8, plan: [{導入: 原子核の構成と同位体}, {練習: α・β・γ 崩壊}, {練習: 半減期と指数関数的減衰}, {練習: 核反応と質量欠損}, {練習: 核分裂・核融合・中性子捕獲}, {わけ: 半減期の式と保存則}, {混ぜる: 崩壊と核反応}, {確認: 8 日分の確認}]}
-  - {id: P-105, title: 素粒子の存在（電子、電子ニュートリノ、陽子、中性子、光子の電荷とスピン、陽子と中性子は複合粒子）, stage: 5, level: 3, region: soryushi, needs: [P-104, P-069], days: 8}
+  - {id: P-105, title: 素粒子の存在（電子、電子ニュートリノ、陽子、中性子、光子の電荷とスピン、陽子と中性子は複合粒子）, stage: 5, level: 3, region: soryushi, needs: [P-104, P-069], days: 8, plan: [{導入: 素粒子とは何か}, {練習: 電子・ニュートリノ・光子}, {練習: 陽子と中性子の複合構造}, {練習: 電荷とスピン}, {練習: 反粒子と保存則}, {わけ: 素粒子の分類と保存則}, {混ぜる: 粒子反応}, {確認: 8 日分の確認}]}
   - {id: P-117, title: 測定と誤差の解析（物理量と単位、有効数字、系統誤差と偶然誤差、誤差の伝播、線形化と直線の当てはめ、グラフと誤差棒）, stage: 5, level: 3, region: jikken, needs: [C-020, D-004], days: 8}
   - {id: A-037, title: 分数式と部分分数分解, stage: 5, level: 2, region: shiki, needs: [A-015, N-019], days: 6}
   - {id: A-038, title: 分数関数と無理関数, stage: 5, level: 3, region: kansu, needs: [A-020, A-037], days: 6}
@@ -962,8 +962,8 @@ units:
   - {id: L-018, title: 構成と評価, stage: 6, level: 3, region: ronpo, needs: [L-015, L-014, L-033], days: 16}
   - {id: L-019, title: 調整と貪欲法, stage: 6, level: 3, region: ronpo, needs: [L-016, L-014], days: 6}
   - {id: G-045, title: 等角共役と類似中線, stage: 6, level: 3, region: haichi, needs: [G-028, G-023, G-029], days: 8}
-  - {id: D-008, title: 1 変数関数の微分（平均値の定理、テイラーの定理）, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8}
-  - {id: D-009, title: リーマン積分と微積分の基本定理、広義積分, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8}
+  - {id: D-008, title: 1 変数関数の微分（平均値の定理、テイラーの定理）, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8, plan: [{導入: 平均値の定理}, {練習: ロルの定理}, {練習: 平均値の定理の応用}, {練習: テイラーの定理}, {練習: テイラー展開と近似}, {わけ: 平均値の定理とテイラーの定理}, {混ぜる: 微分の定理と近似}, {確認: 8 日分の確認}]}
+  - {id: D-009, title: リーマン積分と微積分の基本定理、広義積分, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8, plan: [{導入: リーマン和と定積分}, {練習: 定積分の性質}, {練習: 微積分の基本定理}, {練習: 置換積分と部分積分}, {練習: 広義積分}, {わけ: 微積分の基本定理}, {混ぜる: 積分の計算と応用}, {確認: 8 日分の確認}]}
   - {id: D-011, title: 初等関数（指数・対数・三角・双曲・逆三角関数）, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8}
   - {id: D-014, title: 多変数関数の微分（全微分、連鎖律、ヤコビ行列、極値と条件付き極値、ラグランジュの未定乗数法の計算）, stage: 6, level: 3, region: bisekibun, needs: [D-008, M-003], days: 8}
   - {id: D-017, title: 重積分（累次積分、変数変換、ガンマ関数とベータ関数）, stage: 6, level: 3, region: bisekibun, needs: [D-009, D-014, G-047], days: 8}
@@ -974,8 +974,8 @@ units:
   - {id: D-046, title: 連立 1 階線形系と平衡点の相図, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-044, M-007], days: 8}
   - {id: M-003, title: 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-002], days: 8, plan: [{導入: 行列の演算と連立一次方程式}, {練習: 掃き出し法}, {練習: 階数と解の存在}, {練習: 逆行列}, {練習: 3 次の行列式}, {わけ: 行基本変形と逆行列の性質}, {混ぜる: 連立方程式・逆行列・行列式}, {確認: 8 日分の確認}]}
   - {id: M-004, title: 行列式, stage: 6, level: 3, region: senkei-keisan, needs: [M-003], days: 8, plan: [{導入: 行列式の定義と性質}, {練習: 行列式の性質}, {練習: 余因子展開}, {練習: 積の行列式と逆行列}, {練習: クラメルの公式と面積・体積}, {わけ: 行列式の性質}, {混ぜる: 行列式・逆行列・連立方程式}, {確認: 8 日分の確認}]}
-  - {id: M-006, title: 内積空間（グラム–シュミット、直交行列とユニタリ行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8}
-  - {id: M-007, title: 固有値と対角化, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8}
+  - {id: M-006, title: 内積空間（グラム–シュミット、直交行列とユニタリ行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 内積とノルム}, {練習: 直交と正規直交基底}, {練習: グラム–シュミット}, {練習: 直交行列}, {練習: ユニタリ行列}, {わけ: 内積の性質とグラム–シュミット}, {混ぜる: 内積・直交・ユニタリ}, {確認: 8 日分の確認}]}
+  - {id: M-007, title: 固有値と対角化, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 固有値と固有ベクトル}, {練習: 特性多項式}, {練習: 対角化}, {練習: 対称行列の対角化}, {練習: 行列のべき乗と応用}, {わけ: 固有値と対角化}, {混ぜる: 固有値・対角化・応用}, {確認: 8 日分の確認}]}
   - {id: M-010, title: 双線形形式と二次形式, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8}
   - {id: M-012, title: 直交座標のテンソル, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8}
   - {id: S-001, title: 確率空間と条件付き確率, stage: 6, level: 3, region: kakuritsu-daigaku, needs: [C-011, C-021], days: 8}
@@ -1343,7 +1343,7 @@ units:
   - {id: D-038, title: 複素領域の 2 階線形常微分方程式（フックス型、超幾何関数）, stage: 8, level: 3, region: fukuso, needs: [D-030, D-031, D-032], days: 12}
   - {id: D-039, title: 漸近解析（ラプラス法、停留位相法、最急降下法、WKB）, stage: 8, level: 3, region: fukuso, needs: [D-036, D-037, D-038, D-048, D-049, D-050], days: 12}
   - {id: D-047, title: 解の存在と一意性（ピカールの逐次近似）, stage: 8, level: 4, region: bibun-hoteishiki, needs: [D-016], days: 12}
-  - {id: M-005, title: ベクトル空間と線形写像, stage: 8, level: 4, region: senkei-chusho, needs: [M-004], days: 12}
+  - {id: M-005, title: ベクトル空間と線形写像, stage: 8, level: 4, region: senkei-chusho, needs: [M-004], days: 12, plan: [{導入: ベクトル空間の定義}, {練習: 部分空間}, {練習: 1 次独立と基底}, {練習: 次元}, {練習: 線形写像}, {練習: 核と像}, {練習: 次元定理}, {練習: 表現行列}, {練習: 基底の変換}, {わけ: 次元定理と表現行列}, {混ぜる: ベクトル空間・線形写像}, {確認: 12 日分の確認}]}
   - {id: M-008, title: ジョルダン標準形, stage: 8, level: 3, region: senkei-chusho, needs: [M-006, M-007], days: 12}
   - {id: M-009, title: 双対空間と双対写像, stage: 8, level: 4, region: senkei-chusho, needs: [M-007, M-005], days: 12}
   - {id: M-011, title: 多重線形代数（テンソル積、外積）, stage: 8, level: 4, region: senkei-chusho, needs: [M-005, M-006, M-007], days: 12}
@@ -1351,7 +1351,7 @@ units:
   - {id: R-002, title: 剰余類とラグランジュの定理, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12}
   - {id: R-003, title: 群作用, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12, plan: [{導入: 群作用の定義と例}, {練習: 軌道と安定化群}, {練習: 軌道分解}, {練習: 軌道・安定化群の定理}, {練習: 共役作用と共役類}, {練習: 中心化群と類等式}, {練習: バーンサイドの補題}, {練習: 図形の対称群の作用}, {練習: 部分群への制限}, {わけ: 軌道・安定化群の定理とバーンサイドの補題}, {混ぜる: 群作用を合わせる}, {確認: 12 日分の確認}]}
   - {id: R-005, title: 置換の符号と交代群, stage: 8, level: 4, region: gunkantai, needs: [R-003], days: 12}
-  - {id: R-006, title: 行列群、結晶群と空間群（ビーベルバッハの定理）, stage: 8, level: 4, region: gunkantai, needs: [R-001, M-004], days: 12}
+  - {id: R-006, title: 行列群、結晶群と空間群（ビーベルバッハの定理）, stage: 8, level: 4, region: gunkantai, needs: [R-001, M-004], days: 12, plan: [{導入: 行列群}, {練習: 直交群と特殊直交群}, {練習: ユニタリ群と特殊ユニタリ群}, {練習: ローレンツ群}, {練習: 結晶群と点群}, {練習: 空間群}, {練習: ビーベルバッハの定理}, {練習: 表現と指標の入口}, {練習: 群の作用と対称性}, {わけ: 行列群と結晶群}, {混ぜる: 行列群・結晶群}, {確認: 12 日分の確認}]}
   - {id: T-001, title: 位相空間, stage: 8, level: 4, region: iso, needs: [D-012, D-013, D-015, D-047], days: 12}
   - {id: T-002, title: 連結性と弧状連結性, stage: 8, level: 4, region: iso, needs: [T-001], days: 12}
   - {id: T-003, title: コンパクト性, stage: 8, level: 4, region: iso, needs: [T-001], days: 12}

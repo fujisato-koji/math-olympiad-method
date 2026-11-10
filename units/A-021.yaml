@@ -239,7 +239,7 @@ days:
         answer: −1
         check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')(Fraction([1, 1j, -1, -1j][6 % 4].real))"
         hints:
-          - i² = −1 です。
+          - 計算の最後の一歩まで、自分で書いてみましょう。
           - i⁶ = (i²)³ と書けます（A-009）。
           - (−1)³ を計算しましょう。
         paths:

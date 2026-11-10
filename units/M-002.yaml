@@ -1161,7 +1161,7 @@ days:
         check: "[k for k in range(-10, 11) if math.isclose(math.sin(math.radians(60)) * (0) + math.cos(math.radians(60)) * (2), k, abs_tol=1e-9)][0]"
         hints:
           - (0, 1) は (−sin θ, cos θ) に移ります。
-          - cos 60° = 1/2 です。
+          - 計算の最後の一歩まで、自分で書いてみましょう。
           - y′ = 2 cos 60° です。
         paths:
           - [y′ = 2 × 1/2, "1"]
