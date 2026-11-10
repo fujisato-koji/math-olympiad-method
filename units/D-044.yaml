@@ -1,0 +1,438 @@
+# D-044 1 階常微分方程式
+#
+# 段 6・水準 3・8 日。前提は D-006（微分係数と導関数）。
+# 微分方程式、変数分離、1 階線形、初期条件、応用を扱う。
+# 答えは子の画面に出さない（保護者の表示だけ）。ヒントは答えを書かず、手順だけを示す。
+
+id: D-044
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: |-
+          微分方程式は、関数とその導関数の関係を表す式です。
+          y' = 2x は「微分すると 2x になる関数」を求める式。解は y = x² + C。
+          C は任意定数で、解は 1 つではなく、家族（一般解）になります。
+          y' = y の解は y = C e^x です。
+        explain: |-
+          微分方程式を解くとは、その式を満たす関数を見つけることです。
+          y'=2x なら、積分して y=x²+C。C はどんな定数でもよい。
+          y'=y なら、微分しても形が変わらない関数、e^x の定数倍が解です。
+        note: 微分方程式の解は関数。任意定数 C がつく。y'=2x → x²+C、y'=y → Ce^x。
+      - part: 今日
+        text: y' = 2x の一般解はどれですか。
+        choices: ["y = x² + C", "y = 2x + C", "y = x²", "y = Cx²"]
+        answer: "y = x² + C"
+        check: "'y = x² + C'"
+        hints:
+          - 両辺を x で積分します。
+          - 2x の積分を考えます。
+          - 任意定数 C を忘れずに。
+        paths:
+          - [両辺を積分, 2x の積分, x² + C]
+      - part: 今日
+        text: y' = y の一般解はどれですか。
+        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^{−x}"]
+        answer: "y = C e^x"
+        check: "'y = C e^x'"
+        hints:
+          - 微分しても形が変わらない関数を考えます。
+          - e^x は微分しても e^x です。
+          - 定数倍も解になります。
+        paths:
+          - [微分しても形が変わらない, e^x, 定数倍, C e^x]
+      - part: 挑戦
+        text: y = x² + C を微分すると、何になりますか。
+        choices: ["2x", "x²", "2x + C", "C"]
+        answer: "2x"
+        check: "'2x'"
+        hints:
+          - x² の微分を考えます。
+          - C は定数なので、微分すると 0 です。
+          - 残る項を書きます。
+        paths:
+          - [x² の微分, C は 0, 2x]
+    extra: []
+
+  - day: 2
+    items:
+      - part: 見本
+        text: |-
+          変数分離：y' = g(x) h(y) の形なら、dy/h(y) = g(x) dx と分けて積分します。
+          例：y' = xy なら、dy/y = x dx。両辺を積分して log|y| = x²/2 + C。
+          y = C e^{x²/2} が一般解です。
+          両辺に y と x が分かれて入るように変形するのがコツです。
+        explain: |-
+          変数分離は、y の項を左辺、x の項を右辺に集める方法です。
+          積分したあと、log を外して y の形に直します。
+          任意定数は、e^C を新しい C にまとめて書きます。
+        note: y'=g(x)h(y) → dy/h(y)=g(x)dx。両辺を積分。
+      - part: 今日
+        text: y' = xy の一般解はどれですか。
+        choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
+        answer: "y = C e^{x²/2}"
+        check: "'y = C e^{x²/2}'"
+        hints:
+          - dy/y = x dx と分けます。
+          - 両辺を積分します。
+          - log を外します。
+        paths:
+          - [dy/y = x dx, 積分, log y=x²/2+C, y=C e^(x²/2)]
+      - part: 今日
+        text: y' = y² の一般解はどれですか。
+        choices: ["y = −1/(x + C)", "y = 1/(x + C)", "y = C e^x", "y = x + C"]
+        answer: "y = −1/(x + C)"
+        check: "'y = −1/(x + C)'"
+        hints:
+          - dy/y² = dx と分けます。
+          - y⁻² の積分を考えます。
+          - 積分定数を整理します。
+        paths:
+          - [dy/y² = dx, y⁻² の積分, −1/y = x + C, y = −1/(x+C)]
+      - part: 挑戦
+        text: y' = 2xy の一般解はどれですか。
+        choices: ["y = C e^{x²}", "y = C e^{2x}", "y = C e^{x²/2}", "y = x² + C"]
+        answer: "y = C e^{x²}"
+        check: "'y = C e^{x²}'"
+        hints:
+          - dy/y = 2x dx と分けます。
+          - 両辺を積分します。
+          - log を外します。
+        paths:
+          - [dy/y = 2x dx, 積分, log y=x²+C, y=C e^(x²)]
+    extra: []
+
+  - day: 3
+    items:
+      - part: 見本
+        text: |-
+          1 階線形微分方程式：y' + P(x) y = Q(x)。
+          積分因子 e^{∫P dx} を両辺にかけると、左辺が (e^{∫P dx} y)' になります。
+          例：y' + y = 0 は、積分因子 e^x をかけると (e^x y)' = 0。y = C e^{−x}。
+          y' + 2y = 4 は、定数解 y=2 と 同次解 C e^{−2x} の和。
+        explain: |-
+          線形の式は、積分因子を使うと「積の微分」の形にできます。
+          左辺を (e^{∫P dx} y)' にまとめ、両辺を積分します。
+          定数解（特解）と、右辺 0 の解（同次解）の和が一般解です。
+        note: y'+P y=Q。積分因子 e^{∫P dx} をかける。一般解は特解＋同次解。
+      - part: 今日
+        text: y' + y = 0 の一般解はどれですか。
+        choices: ["y = C e^{−x}", "y = C e^x", "y = C x", "y = x + C"]
+        answer: "y = C e^{−x}"
+        check: "'y = C e^{−x}'"
+        hints:
+          - 積分因子 e^x をかけます。
+          - 左辺を (e^x y)' にまとめます。
+          - 両辺を積分します。
+        paths:
+          - [e^x をかける, (e^x y)'=0, e^x y=C, y=C e^(−x)]
+      - part: 今日
+        text: y' + 2y = 4 の一般解はどれですか。
+        choices: ["y = 2 + C e^{−2x}", "y = 2 + C e^{2x}", "y = 4 + C e^{−x}", "y = C e^{−2x}"]
+        answer: "y = 2 + C e^{−2x}"
+        check: "'y = 2 + C e^{−2x}'"
+        hints:
+          - 定数解を探します。
+          - 右辺 0 の同次解を求めます。
+          - 2 つを足します。
+        paths:
+          - [定数解 y=2, 同次解 C e^(−2x), 和]
+      - part: 挑戦
+        text: y' + y = x の一般解はどれですか。
+        choices: ["y = x − 1 + C e^{−x}", "y = x + C e^{−x}", "y = x + 1 + C e^{−x}", "y = C e^{−x}"]
+        answer: "y = x − 1 + C e^{−x}"
+        check: "'y = x − 1 + C e^{−x}'"
+        hints:
+          - 1 次式の特解を y=ax+b とおきます。
+          - 代入して a と b を決めます。
+          - 同次解を足します。
+        paths:
+          - [y=ax+b, 代入, a=1、b=−1, 同次解 C e^(−x), 和]
+    extra: []
+
+  - day: 4
+    items:
+      - part: 見本
+        text: |-
+          初期条件：y(x₀) = y₀ を与えると、任意定数 C が決まり、解が 1 つに定まります。
+          例：y' = 2x、y(0)=3。一般解 y=x²+C に x=0、y=3 を入れると C=3。y=x²+3。
+          1 階の微分方程式は、初期条件 1 つで解が決まります。
+        explain: |-
+          初期条件は「ある点での関数の値」です。
+          一般解に代入して C を求めます。
+          微分方程式と初期条件を合わせて、初期値問題といいます。
+        note: 初期条件で C が決まる。1 階なら条件は 1 つ。
+      - part: 今日
+        text: y' = 2x、y(0)=3 の解はどれですか。
+        choices: ["y = x² + 3", "y = x²", "y = 2x + 3", "y = x² + C"]
+        answer: "y = x² + 3"
+        check: "'y = x² + 3'"
+        hints:
+          - 一般解を求めます。
+          - x=0、y=3 を代入します。
+          - C を決めます。
+        paths:
+          - [一般解 x²+C, x=0、y=3, C=3, x²+3]
+      - part: 今日
+        text: y' = y、y(0)=2 の解はどれですか。
+        choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+        answer: "y = 2 e^x"
+        check: "'y = 2 e^x'"
+        hints:
+          - 一般解の形を、変数分離から おもいだそう。
+          - x=0、y=2 を代入します。
+          - C を決めます。
+        paths:
+          - [一般解 C e^x, x=0、y=2, C=2, 2 e^x]
+      - part: 挑戦
+        text: y' + y = 0、y(0)=1 の解はどれですか。
+        choices: ["y = e^{−x}", "y = e^x", "y = 1 + e^{−x}", "y = x + 1"]
+        answer: "y = e^{−x}"
+        check: "'y = e^{−x}'"
+        hints:
+          - 同次解の形を、積分因子から おもいだそう。
+          - x=0、y=1 を代入します。
+          - C を決めます。
+        paths:
+          - [一般解 C e^(−x), x=0、y=1, C=1, e^(−x)]
+    extra: []
+
+  - day: 5
+    items:
+      - part: 見本
+        text: |-
+          応用：y' = k y は、指数関数的な 増加・減少を表します。
+          解は y = y₀ e^{k t}。k>0 なら増加、k<0 なら減少。
+          半減期 T は、y(T) = y₀/2 となる時間。e^{kT} = 1/2 から T = log 2 / |k|。
+          冷却や RC 回路も、似た形の微分方程式で表されます。
+        explain: |-
+          y'=ky は「変化の速さが、今の量に比例する」という式です。
+          人口増加、放射線の減衰、冷却など、多くの現象に出てきます。
+          k の符号で増えるか減るかが決まります。
+        note: y'=ky → y=y₀ e^{kt}。半減期 T=log2/|k|。
+      - part: 今日
+        text: y' = k y、y(0)=y₀ の解はどれですか。
+        choices: ["y = y₀ e^{kt}", "y = y₀ + kt", "y = y₀ e^{−kt}", "y = k e^{y₀ t}"]
+        answer: "y = y₀ e^{kt}"
+        check: "'y = y₀ e^{kt}'"
+        hints:
+          - 変数分離で解きます。
+          - 初期条件を入れます。
+          - 指数関数の形になります。
+        paths:
+          - [dy/y=k dt, 積分, y=C e^(kt), y(0)=y₀, y₀ e^(kt)]
+      - part: 今日
+        text: 半減期 T の式はどれですか。k<0 とします。
+        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^{|k|}"]
+        answer: "T = log 2 / |k|"
+        check: "'T = log 2 / |k|'"
+        hints:
+          - y(T)=y₀/2 とおきます。
+          - e^{kT}=1/2 を解きます。
+          - log を使って T を表します。
+        paths:
+          - [y(T)=y₀/2, e^(kT)=1/2, T=log2/abs(k)]
+      - part: 挑戦
+        text: k=0.1 のとき、y'=ky の解は時間とともにどうなりますか。
+        choices: [増加する, 減少する, 一定, 振動する]
+        answer: 増加する
+        check: "'増加する'"
+        hints:
+          - k の符号を見ます。
+          - k>0 のときの e^{kt} の動きを考えます。
+          - 増加します。
+        paths:
+          - [k>0, e^(kt) は増える, 増加]
+    extra: []
+
+  - day: 6
+    items:
+      - part: わけ
+        text: y' = 2x の一般解が y = x² + C になるわけを説明しましょう。
+        explain: 「y' = 2x の両辺を x で積分すると、y = x² + C。積分定数 C は、微分すると 0 になるので、どんな値でも式を満たす。だから一般解は y=x²+C。」と書ければよい。① 両辺を積分、② 積分定数、③ 微分して確かめる。子どもには、C を変えて確かめさせます。
+        hints:
+          - 両辺を x で積分します。
+          - 積分すると定数がつきます。
+          - 微分して元の式に戻るか確かめます。
+        paths:
+          - [両辺を積分, 積分定数 C, 微分して確かめる]
+      - part: わけ
+        text: 変数分離で y' = xy が解けるわけを説明しましょう。
+        explain: 「y'=xy を dy/dx=xy と書き、両辺を y でわって dx をかけます。dy/y = x dx。左辺は y だけ、右辺は x だけになり、それぞれ積分できます。積分して log|y|=x²/2+C、指数をとって y=C e^{x²/2}。」と書ければよい。① y と x を分ける、② 両辺を積分、③ 指数をとる。子どもには、微分して確かめさせます。
+        hints:
+          - y の項と x の項を分けます。
+          - 両辺を積分します。
+          - log を外して y の形にします。
+        paths:
+          - [dy/y=x dx, 積分, log y=x²/2+C, y=C e^(x²/2)]
+      - part: わけ
+        text: 初期条件があると解が 1 つに決まるわけを説明しましょう。
+        explain: 「一般解には任意定数 C が 1 つあります。初期条件 y(x₀)=y₀ を代入すると、C についての方程式が 1 つでき、C が決まります。1 階の微分方程式は C が 1 つなので、条件 1 つで解が 1 つに定まります。」と書ければよい。① 任意定数 1 つ、② 条件を代入、③ C が決まる。子どもには、y'=2x の例で確かめさせます。
+        hints:
+          - 一般解には任意定数がいくつありますか。
+          - 初期条件を代入します。
+          - C が決まります。
+        paths:
+          - [任意定数 1 つ, 初期条件を代入, C が決まる]
+
+  - day: 7
+    items:
+      - part: 今日
+        text: y' = 2x の一般解はどれですか。
+        choices: ["y = x² + C", "y = 2x + C", "y = x²", "y = Cx²"]
+        answer: "y = x² + C"
+        check: "'y = x² + C'"
+        hints:
+          - 両辺を積分します。
+          - 2x の積分を考えます。
+          - 定数 C をつけます。
+        paths:
+          - [積分, x²+C]
+      - part: 今日
+        text: y' = xy の一般解はどれですか。
+        choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
+        answer: "y = C e^{x²/2}"
+        check: "'y = C e^{x²/2}'"
+        hints:
+          - 変数分離をします。
+          - 両辺を積分します。
+          - log を外します。
+        paths:
+          - [dy/y=x dx, 積分, y=C e^(x²/2)]
+      - part: 今日
+        text: y' + y = 0 の一般解はどれですか。
+        choices: ["y = C e^{−x}", "y = C e^x", "y = C x", "y = x + C"]
+        answer: "y = C e^{−x}"
+        check: "'y = C e^{−x}'"
+        hints:
+          - 積分因子 e^x をかけます。
+          - (e^x y)'=0 にします。
+          - 積分します。
+        paths:
+          - [e^x をかける, (e^x y)'=0, y=C e^(−x)]
+      - part: 挑戦
+        text: y' = 2x、y(0)=3 の解はどれですか。
+        choices: ["y = x² + 3", "y = x²", "y = 2x + 3", "y = x² + C"]
+        answer: "y = x² + 3"
+        check: "'y = x² + 3'"
+        hints:
+          - 一般解を求めます。
+          - 初期条件を代入します。
+          - C を決めます。
+        paths:
+          - [x²+C, x=0、y=3, C=3, x²+3]
+    extra: []
+
+  - day: 8
+    items:
+      - part: 今日
+        text: y' = y の一般解はどれですか。
+        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^{−x}"]
+        answer: "y = C e^x"
+        check: "'y = C e^x'"
+        hints:
+          - 微分しても形が変わらない関数を考えます。
+          - 微分しても形が変わらない関数を 考えよう。
+          - 任意定数をつけた形を 書こう。
+        paths:
+          - [e^x, 定数倍, C e^x]
+      - part: 今日
+        text: y' = y² の一般解はどれですか。
+        choices: ["y = −1/(x + C)", "y = 1/(x + C)", "y = C e^x", "y = x + C"]
+        answer: "y = −1/(x + C)"
+        check: "'y = −1/(x + C)'"
+        hints:
+          - dy/y² = dx と分けます。
+          - 積分します。
+          - y の形に直します。
+        paths:
+          - [dy/y²=dx, 積分, y=−1/(x+C)]
+      - part: 今日
+        text: y' + 2y = 4 の一般解はどれですか。
+        choices: ["y = 2 + C e^{−2x}", "y = 2 + C e^{2x}", "y = 4 + C e^{−x}", "y = C e^{−2x}"]
+        answer: "y = 2 + C e^{−2x}"
+        check: "'y = 2 + C e^{−2x}'"
+        hints:
+          - 定数解を探します。
+          - 同次解を求めます。
+          - 2 つを足します。
+        paths:
+          - [定数解 2, 同次解 C e^(−2x), 和]
+      - part: 今日
+        text: y' = y、y(0)=2 の解はどれですか。
+        choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+        answer: "y = 2 e^x"
+        check: "'y = 2 e^x'"
+        hints:
+          - 一般解の形を、変数分離から おもいだそう。
+          - 初期条件を代入します。
+          - C を決めます。
+        paths:
+          - [C e^x, y(0)=2, C=2, 2 e^x]
+      - part: 今日
+        text: y' = k y、y(0)=y₀ の解はどれですか。
+        choices: ["y = y₀ e^{kt}", "y = y₀ + kt", "y = y₀ e^{−kt}", "y = k e^{y₀ t}"]
+        answer: "y = y₀ e^{kt}"
+        check: "'y = y₀ e^{kt}'"
+        hints:
+          - 変数分離で解きます。
+          - 初期条件を入れます。
+          - 指数関数になります。
+        paths:
+          - [dy/y=k dt, y=C e^(kt), y(0)=y₀, y₀ e^(kt)]
+      - part: 今日
+        text: 半減期 T の式はどれですか。k<0 とします。
+        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^{|k|}"]
+        answer: "T = log 2 / |k|"
+        check: "'T = log 2 / |k|'"
+        hints:
+          - y(T)=y₀/2 とおきます。
+          - e^{kT}=1/2 を解きます。
+          - log を使います。
+        paths:
+          - [y(T)=y₀/2, e^(kT)=1/2, T=log2/abs(k)]
+    extra: []
+
+ri:
+  - part: 離
+    kinds: [数]
+    uses: [D-006]
+    text: y' = 2x の一般解はどれですか。
+    choices: ["y = x² + C", "y = 2x + C", "y = x²", "y = Cx²"]
+    answer: "y = x² + C"
+    check: "'y = x² + C'"
+    hints:
+      - 両辺を積分します。
+      - 2x の積分を考えます。
+      - 定数 C をつけます。
+    paths:
+      - [積分, x²+C]
+    note: 微分方程式の解は関数。積分すると任意定数 C がつく。
+  - part: 離
+    kinds: [道筋]
+    uses: [D-006]
+    text: y' = xy の一般解はどれですか。
+    choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
+    answer: "y = C e^{x²/2}"
+    check: "'y = C e^{x²/2}'"
+    hints:
+      - 変数分離をします。
+      - 両辺を積分します。
+      - log を外します。
+    paths:
+      - [dy/y=x dx, 積分, y=C e^(x²/2)]
+    note: 変数分離は y と x を別々の辺に分けて積分する。
+  - part: 離
+    kinds: [数]
+    uses: [D-006]
+    text: y' = y、y(0)=2 の解はどれですか。
+    choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+    answer: "y = 2 e^x"
+    check: "'y = 2 e^x'"
+    hints:
+      - 一般解の形を、変数分離から おもいだそう。
+      - 初期条件を代入します。
+      - C を決めます。
+    paths:
+      - [C e^x, y(0)=2, C=2, 2 e^x]
+    note: 初期条件を代入すると任意定数が決まり、解が1つになる。

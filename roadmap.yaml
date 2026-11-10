@@ -502,7 +502,7 @@ units:
       - 練習: 順番の推理（だれが前か、後ろか）
       - 混ぜる: L-001 と混ぜる
       - 確認: 推理パズル
-  - {id: H-001, title: 身のまわりの物の性質（見た目、重さ、手ざわり、水にとけるか、磁石と電気）, stage: 1, level: 1, region: busshitsu, needs: [], days: 5}
+  - {id: H-001, title: 身のまわりの物の性質（見た目、重さ、手ざわり、水にとけるか、磁石と電気）, stage: 1, level: 1, region: busshitsu, needs: [], days: 5, plan: [{導入: 見た目・重さ・手ざわり}, {練習: 水にとけるか}, {練習: 磁石と電気}, {わけ: 物の性質の見分け方}, {確認: 5 日分の確認}]}
   - {id: H-002, title: 水と氷と水蒸気（あたためる、ひやす、すがたが変わる）, stage: 1, level: 1, region: busshitsu, needs: [H-001], days: 4}
   - {id: B-015, title: 生き物の観察（からだのつくり、動く・育つ・食べる、虫めがね）, stage: 1, level: 1, region: ikimono, needs: [], days: 5}
   - {id: B-016, title: 植物の育ち方（たねと芽生え、根・茎・葉、花と実）, stage: 1, level: 1, region: shokubutsu, needs: [B-015], days: 5}
@@ -511,11 +511,11 @@ units:
   - {id: K-123, title: 手で並べ替える（てんびんで 2 つずつ比べて重い順に並べる、背の順に並ぶ、並べる手順を言う）, stage: 1, level: 1, region: programming, needs: [K-122, A-001], days: 4}
   - {id: P-178, title: 光と影（光はまっすぐ進む、影は光の反対側にできる、日なたと日かげ）, stage: 1, level: 1, region: hado, needs: [], days: 4}
   - {id: P-180, title: 音（ふるえて音が出る、ふるえが伝わる、大きい音と小さい音・高い音と低い音、糸電話）, stage: 1, level: 1, region: hado, needs: [], days: 4}
-  - {id: P-181, title: 磁石の極（N 極と S 極、引き合う・しりぞけ合う、はなれていても働く力、方位磁針、鉄が磁石になる）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 5}
-  - {id: P-182, title: 電気の通り道（乾電池と豆電球・LED、ひとまわりの輪になると明かりがつく、スイッチ）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 4}
-  - {id: P-184, title: シーソーとやじろべえ（重さと置く位置でかたむきが変わる、つり合う置き方を探す、重心で支えて立てる）, stage: 1, level: 1, region: rikigaku, needs: [A-001], days: 4}
-  - {id: P-185, title: 押す力・引く力とゴム（力で形と動きが変わる、ゴムを長くのばすほど遠くへ走る、風で動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4}
-  - {id: P-187, title: 転がる・すべる・ぶつかる（坂の高さと速さ、重い球と軽い球、ぶつけて物を動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4}
+  - {id: P-181, title: 磁石の極（N 極と S 極、引き合う・しりぞけ合う、はなれていても働く力、方位磁針、鉄が磁石になる）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 5, plan: [{導入: 磁石の極}, {練習: 引き合う・しりぞけ合う}, {練習: はなれていても働く力}, {わけ: 磁石の力}, {確認: 5 日分の確認}]}
+  - {id: P-182, title: 電気の通り道（乾電池と豆電球・LED、ひとまわりの輪になると明かりがつく、スイッチ）, stage: 1, level: 1, region: denjiki, needs: [H-001], days: 4, plan: [{導入: 乾電池と豆電球}, {練習: ひとまわりの輪}, {わけ: 明かりがつくわけ}, {確認: 4 日分の確認}]}
+  - {id: P-184, title: シーソーとやじろべえ（重さと置く位置でかたむきが変わる、つり合う置き方を探す、重心で支えて立てる）, stage: 1, level: 1, region: rikigaku, needs: [A-001], days: 4, plan: [{導入: 重さと置く位置}, {練習: つり合う置き方}, {わけ: てこのつり合い}, {確認: 4 日分の確認}]}
+  - {id: P-185, title: 押す力・引く力とゴム（力で形と動きが変わる、ゴムを長くのばすほど遠くへ走る、風で動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4, plan: [{導入: 力で形と動きが変わる}, {練習: ゴムののびと遠くへ走る}, {わけ: ゴムの力}, {確認: 4 日分の確認}]}
+  - {id: P-187, title: 転がる・すべる・ぶつかる（坂の高さと速さ、重い球と軽い球、ぶつけて物を動かす）, stage: 1, level: 1, region: rikigaku, needs: [], days: 4, plan: [{導入: 坂の高さと速さ}, {練習: 重い球と軽い球}, {わけ: ぶつかって動く}, {確認: 4 日分の確認}]}
   - {id: E-171, title: つくって試す（紙の塔やゴムで走る車をつくる、試してうまくいかない所を見つけて直す）, stage: 1, level: 1, region: sekkei, needs: [G-003], days: 5}
   - {id: H-060, title: 固体・液体・気体（形とかさ、空気も場所をとる、とじこめた空気は押し縮められ水は縮まない、ろうやバターがとける）, stage: 1, level: 1, region: busshitsu, needs: [H-002], days: 5}
   - {id: H-061, title: 色が変わる（紫キャベツの色水、すっぱい物と石けん水で色が変わる）, stage: 1, level: 1, region: busshitsu, needs: [H-001], days: 4}
@@ -965,19 +965,19 @@ units:
   - {id: D-008, title: 1 変数関数の微分（平均値の定理、テイラーの定理）, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8, plan: [{導入: 平均値の定理}, {練習: ロルの定理}, {練習: 平均値の定理の応用}, {練習: テイラーの定理}, {練習: テイラー展開と近似}, {わけ: 平均値の定理とテイラーの定理}, {混ぜる: 微分の定理と近似}, {確認: 8 日分の確認}]}
   - {id: D-009, title: リーマン積分と微積分の基本定理、広義積分, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8, plan: [{導入: リーマン和と定積分}, {練習: 定積分の性質}, {練習: 微積分の基本定理}, {練習: 置換積分と部分積分}, {練習: 広義積分}, {わけ: 微積分の基本定理}, {混ぜる: 積分の計算と応用}, {確認: 8 日分の確認}]}
   - {id: D-011, title: 初等関数（指数・対数・三角・双曲・逆三角関数）, stage: 6, level: 3, region: bisekibun, needs: [D-006], days: 8}
-  - {id: D-014, title: 多変数関数の微分（全微分、連鎖律、ヤコビ行列、極値と条件付き極値、ラグランジュの未定乗数法の計算）, stage: 6, level: 3, region: bisekibun, needs: [D-008, M-003], days: 8}
+  - {id: D-014, title: 多変数関数の微分（全微分、連鎖律、ヤコビ行列、極値と条件付き極値、ラグランジュの未定乗数法の計算）, stage: 6, level: 3, region: bisekibun, needs: [D-008, M-003], days: 8, plan: [{導入: 偏微分と全微分}, {練習: 連鎖律}, {練習: ヤコビ行列}, {練習: 極値}, {練習: ラグランジュ乗数}, {わけ: 全微分と極値}, {混ぜる: 多変数の微分}, {確認: 8 日分の確認}]}
   - {id: D-017, title: 重積分（累次積分、変数変換、ガンマ関数とベータ関数）, stage: 6, level: 3, region: bisekibun, needs: [D-009, D-014, G-047], days: 8}
   - {id: D-018, title: ベクトル解析（線積分と面積分、ガウス・グリーン・ストークスの定理）, stage: 6, level: 3, region: bisekibun, needs: [D-017, D-071], days: 8}
   - {id: D-022, title: フーリエ級数, stage: 6, level: 3, region: bisekibun, needs: [D-045, D-046], days: 8}
-  - {id: D-044, title: 1 階常微分方程式, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-006], days: 8}
+  - {id: D-044, title: 1 階常微分方程式, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-006], days: 8, plan: [{導入: 微分方程式とは}, {練習: 変数分離}, {練習: 1 階線形}, {練習: 初期条件}, {練習: 応用}, {わけ: 解の求め方}, {混ぜる: 微分方程式}, {確認: 8 日分の確認}]}
   - {id: D-045, title: 高階線形常微分方程式, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-044], days: 8}
   - {id: D-046, title: 連立 1 階線形系と平衡点の相図, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-044, M-007], days: 8}
   - {id: M-003, title: 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-002], days: 8, plan: [{導入: 行列の演算と連立一次方程式}, {練習: 掃き出し法}, {練習: 階数と解の存在}, {練習: 逆行列}, {練習: 3 次の行列式}, {わけ: 行基本変形と逆行列の性質}, {混ぜる: 連立方程式・逆行列・行列式}, {確認: 8 日分の確認}]}
   - {id: M-004, title: 行列式, stage: 6, level: 3, region: senkei-keisan, needs: [M-003], days: 8, plan: [{導入: 行列式の定義と性質}, {練習: 行列式の性質}, {練習: 余因子展開}, {練習: 積の行列式と逆行列}, {練習: クラメルの公式と面積・体積}, {わけ: 行列式の性質}, {混ぜる: 行列式・逆行列・連立方程式}, {確認: 8 日分の確認}]}
   - {id: M-006, title: 内積空間（グラム–シュミット、直交行列とユニタリ行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 内積とノルム}, {練習: 直交と正規直交基底}, {練習: グラム–シュミット}, {練習: 直交行列}, {練習: ユニタリ行列}, {わけ: 内積の性質とグラム–シュミット}, {混ぜる: 内積・直交・ユニタリ}, {確認: 8 日分の確認}]}
   - {id: M-007, title: 固有値と対角化, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8, plan: [{導入: 固有値と固有ベクトル}, {練習: 特性多項式}, {練習: 対角化}, {練習: 対称行列の対角化}, {練習: 行列のべき乗と応用}, {わけ: 固有値と対角化}, {混ぜる: 固有値・対角化・応用}, {確認: 8 日分の確認}]}
-  - {id: M-010, title: 双線形形式と二次形式, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8}
-  - {id: M-012, title: 直交座標のテンソル, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8}
+  - {id: M-010, title: 双線形形式と二次形式, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8, plan: [{導入: 双線形形式}, {練習: 二次形式}, {練習: 対称行列と二次形式}, {練習: 正定値}, {練習: 標準形}, {わけ: 二次形式の対角化}, {混ぜる: 双線形・二次形式}, {確認: 8 日分の確認}]}
+  - {id: M-012, title: 直交座標のテンソル, stage: 6, level: 3, region: senkei-keisan, needs: [M-007], days: 8, plan: [{導入: テンソルとは}, {練習: 添字と変換}, {練習: 直交変換}, {練習: 対称・反対称テンソル}, {練習: 応用}, {わけ: テンソルの変換}, {混ぜる: テンソル}, {確認: 8 日分の確認}]}
   - {id: S-001, title: 確率空間と条件付き確率, stage: 6, level: 3, region: kakuritsu-daigaku, needs: [C-011, C-021], days: 8}
   - {id: S-002, title: 離散確率変数と母関数, stage: 6, level: 3, region: kakuritsu-daigaku, needs: [S-001, C-016], days: 8}
   - {id: S-003, title: 連続確率変数と同時分布, stage: 6, level: 3, region: kakuritsu-daigaku, needs: [S-001, D-017], days: 8}
@@ -998,8 +998,8 @@ units:
   - {id: P-123, title: 大気の熱力学と安定度（放射の法則、熱力学第一法則、断熱減率と浮力、熱力学図）, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-124, title: 空気塊に働く力と釣り合い（静水圧・地衡風・傾度風）、大気中の水分, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
   - {id: P-125, title: 温度風と温度移流、発散・渦度・鉛直運動、前線形成と低気圧発生, stage: 6, level: 3, region: chikyu, needs: [D-006], days: 8}
-  - {id: G-047, title: 極座標と極方程式, stage: 6, level: 3, region: zahyo, needs: [G-025, G-026], days: 6}
-  - {id: D-071, title: 媒介変数表示と曲線（速度と道のり）, stage: 6, level: 3, region: bisekibun, needs: [D-005, G-025, G-027], days: 8}
+  - {id: G-047, title: 極座標と極方程式, stage: 6, level: 3, region: zahyo, needs: [G-025, G-026], days: 6, plan: [{導入: 極座標}, {練習: 極方程式}, {練習: 円と螺旋}, {練習: 直交座標との変換}, {わけ: 極座標}, {確認: 6 日分の確認}]}
+  - {id: D-071, title: 媒介変数表示と曲線（速度と道のり）, stage: 6, level: 3, region: bisekibun, needs: [D-005, G-025, G-027], days: 8, plan: [{導入: 媒介変数表示}, {練習: 速度と道のり}, {練習: 曲線の長さ}, {練習: サイクロイド}, {練習: 極座標と曲線}, {わけ: 速度と道のり}, {混ぜる: 曲線}, {確認: 8 日分の確認}]}
   - {id: M-013, title: 外積とスカラー三重積, stage: 6, level: 3, region: senkei-keisan, needs: [G-027, M-004], days: 6}
   - {id: F-009, title: 金利の期間構造とデュレーション（スポットレート、フォワードレート、イミュニゼーション）, stage: 6, level: 3, region: risoku, needs: [F-006, D-005], days: 8}
   - {id: F-010, title: 財務会計と財務分析（財務諸表、資産・負債・純資産の会計、会計基準）, stage: 6, level: 2, region: kaikei, needs: [F-004, F-003], days: 10}

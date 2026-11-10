@@ -1,0 +1,440 @@
+# D-014 多変数関数の微分
+#
+# 段 6・水準 3・8 日。前提は D-008（1 変数関数の微分）と M-003（行列の演算）。
+# 偏微分と全微分、連鎖律、ヤコビ行列、極値、ラグランジュ乗数を扱う。
+# 答えは子の画面に出さない（保護者の表示だけ）。ヒントは答えを書かず、手順だけを示す。
+
+id: D-014
+days:
+  - day: 1
+    items:
+      - part: 見本
+        text: |-
+          2 変数関数 f(x, y) の偏微分は、一方の変数を定数とみて微分します。
+          ∂f/∂x は y を定数とみて x で微分、∂f/∂y は x を定数とみて y で微分。
+          全微分は df = (∂f/∂x) dx + (∂f/∂y) dy です。
+          例：f = x²y + 3y なら、f_x = 2xy、f_y = x² + 3。
+        explain: |-
+          偏微分は「1 つの方向だけの変化率」です。
+          x²y を x で微分すると 2xy（y は定数）。3y は x では定数なので 0。
+          y で微分すると、x²y は x²、3y は 3。
+          全微分は、x と y の小さな変化を合わせた f の変化です。
+        note: 偏微分は一方を定数とみる。df = f_x dx + f_y dy。
+      - part: 今日
+        text: f(x, y) = x²y + 3y の ∂f/∂x はどれですか。
+        choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
+        answer: "2xy"
+        check: "'2xy'"
+        hints:
+          - y を定数とみて、x で微分します。
+          - x²y の x の微分を考えます。
+          - 3y は x では定数です。
+        paths:
+          - [y を定数, x²y を x で微分, 3y は 0, 2xy]
+      - part: 今日
+        text: f(x, y) = x²y + 3y の ∂f/∂y はどれですか。
+        choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
+        answer: "x² + 3"
+        check: "'x² + 3'"
+        hints:
+          - x を定数とみて、y で微分します。
+          - x²y の y の微分を考えます。
+          - 3y の y の微分も考えます。
+        paths:
+          - [x を定数, x²y を y で微分, 3y を y で微分, x² + 3]
+      - part: 挑戦
+        text: f(x, y) = x² + y² の全微分はどれですか。
+        choices: ["2x dx + 2y dy", "2x dx − 2y dy", "x dx + y dy", "2x + 2y"]
+        answer: "2x dx + 2y dy"
+        check: "'2x dx + 2y dy'"
+        hints:
+          - f_x と f_y を求めます。
+          - df = f_x dx + f_y dy に入れます。
+          - 各項を足します。
+        paths:
+          - [f_x=2x, f_y=2y, df=f_x dx+f_y dy, 2x dx + 2y dy]
+    extra: []
+
+  - day: 2
+    items:
+      - part: 見本
+        text: |-
+          連鎖律：z = f(x, y)、x = x(t)、y = y(t) のとき、
+          dz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)。
+          f の変化を、x と y の変化に分けて足します。
+          例：f = x² + y²、x = t、y = t² なら、dz/dt = 2x·1 + 2y·2t = 2t + 4t³。
+        explain: |-
+          t が動くと、x と y が動き、f が動きます。
+          x の変化による f の変化と、y の変化による f の変化を足します。
+          それぞれ、f の偏微分 × 内側の微分です。
+        note: dz/dt = f_x x'(t) + f_y y'(t)。内側の微分をかける。
+      - part: 今日
+        text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+        choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
+        answer: "2t + 4t³"
+        check: "'2t + 4t³'"
+        hints:
+          - f_x と f_y を求めます。
+          - x' と y' を求めます。
+          - f_x x' + f_y y' を計算します。
+        paths:
+          - [f_x=2x、f_y=2y, x'=1、y'=2t, 2t + 4t³]
+      - part: 今日
+        text: f = xy、x = t²、y = t のとき、dz/dt はどれですか。
+        choices: ["3t²", "2t²", "t²", "2t"]
+        answer: "3t²"
+        check: "'3t²'"
+        hints:
+          - f_x = y、f_y = x です。
+          - x' = 2t、y' = 1 です。
+          - f_x x' + f_y y' を計算します。
+        paths:
+          - [f_x=y、f_y=x, x'=2t、y'=1, 3t²]
+      - part: 挑戦
+        text: f = x²y、x = t、y = t² のとき、dz/dt はどれですか。
+        choices: ["4t³", "2t³", "3t²", "2t"]
+        answer: "4t³"
+        check: "'4t³'"
+        hints:
+          - f_x と f_y を求めます。
+          - x' と y' を求めます。
+          - 連鎖律の式に入れます。
+        paths:
+          - [f_x=2xy、f_y=x², x'=1、y'=2t, 4t³]
+    extra: []
+
+  - day: 3
+    items:
+      - part: 見本
+        text: |-
+          ヤコビ行列：F(x, y) = (f(x, y), g(x, y)) のとき、
+          J = (f_x f_y；g_x g_y)。
+          1 行目は f の偏微分、2 行目は g の偏微分です。
+          ヤコビ行列式 det J は、変換の面積の倍率を表します。
+        explain: |-
+          ヤコビ行列は、多変数の写像を 1 次近似した行列です。
+          F の各成分を、x と y で偏微分して並べます。
+          det J が 0 でないとき、その点の近くで F は 1 対 1 に近い動きをします。
+        note: ヤコビ行列は偏微分を並べた行列。det J は面積の倍率。
+      - part: 今日
+        text: F(x, y) = (x² + y, xy) のヤコビ行列はどれですか。
+        choices: ["(2x 1；y x)", "(2x y；1 x)", "(x 1；y 2x)", "(2x 1；x y)"]
+        answer: "(2x 1；y x)"
+        check: "'(2x 1；y x)'"
+        hints:
+          - f = x² + y、g = xy とおきます。
+          - f_x、f_y、g_x、g_y を求めます。
+          - 2 行に並べます。
+        paths:
+          - [f_x=2x、f_y=1, g_x=y、g_y=x, (2x 1；y x)]
+      - part: 今日
+        text: F(x, y) = (x² + y, xy) のヤコビ行列式はどれですか。
+        choices: ["2x² − y", "2x² + y", "2xy − 1", "x² − y"]
+        answer: "2x² − y"
+        check: "'2x² − y'"
+        hints:
+          - ヤコビ行列の行列式を計算します。
+          - 2x×x − 1×y です。
+          - 項を整理します。
+        paths:
+          - [det(2x 1；y x), 2x·x − 1·y, 2x² − y]
+      - part: 挑戦
+        text: F(x, y) = (x² + y, xy) の点 (1, 2) でのヤコビ行列式はいくつですか。
+        choices: [−2, 0, 2, 4]
+        answer: 0
+        check: "2 * 1 ** 2 - 2"
+        hints:
+          - ヤコビ行列式の式に x=1、y=2 を入れます。
+          - 2×1² − 2 を計算します。
+          - 行列式の 式に 代入した 結果を たしかめよう。
+        paths:
+          - [2x²−y, x=1、y=2, 0]
+    extra: []
+
+  - day: 4
+    items:
+      - part: 見本
+        text: |-
+          2 変数関数の極値：f_x = 0、f_y = 0 となる点が候補です。
+          ヘッセ行列 H = (f_xx f_xy；f_xy f_yy) の行列式 D = f_xx f_yy − f_xy² で判定します。
+          D > 0 かつ f_xx > 0 なら極小、D > 0 かつ f_xx < 0 なら極大。
+          D < 0 なら鞍点（極値ではない）。
+        explain: |-
+          極値の候補は、坂が平らになる点です。
+          ヘッセ行列は、その点の曲がり方を表します。
+          D > 0 なら谷か山、D < 0 なら馬の鞍のような形です。
+        note: f_x=f_y=0 が候補。D=f_xx f_yy−f_xy² で判定。
+      - part: 今日
+        text: f(x, y) = x² + y² の極値の候補はどれですか。
+        choices: ["(0, 0)", "(1, 1)", "(1, 0)", "(0, 1)"]
+        answer: "(0, 0)"
+        check: "'(0, 0)'"
+        hints:
+          - f_x と f_y を求めます。
+          - それぞれ 0 とおきます。
+          - 連立方程式を解きます。
+        paths:
+          - [f_x=2x、f_y=2y, 2x=0、2y=0, (0,0)]
+      - part: 今日
+        text: f(x, y) = x² + y² の (0, 0) は極小ですか、極大ですか、鞍点ですか。
+        choices: [極小, 極大, 鞍点, 極値でない]
+        answer: 極小
+        check: "'極小'"
+        hints:
+          - ヘッセ行列を求めます。
+          - f_xx=2、f_yy=2、f_xy=0 です。
+          - D>0 で f_xx>0 のときを考えます。
+        paths:
+          - [H=(2 0；0 2), D=4>0, f_xx=2>0, 極小]
+      - part: 挑戦
+        text: f(x, y) = x² − y² の (0, 0) は極小ですか、極大ですか、鞍点ですか。
+        choices: [極小, 極大, 鞍点, 極値でない]
+        answer: 鞍点
+        check: "'鞍点'"
+        hints:
+          - ヘッセ行列を求めます。
+          - f_xx=2、f_yy=−2、f_xy=0 です。
+          - D の符号を考えます。
+        paths:
+          - [H=(2 0；0 −2), D=−4<0, 鞍点]
+    extra: []
+
+  - day: 5
+    items:
+      - part: 見本
+        text: |-
+          ラグランジュ乗数：条件 g(x, y) = 0 のもとで f(x, y) の極値を求めます。
+          ∇f = λ ∇g と g = 0 を連立して解きます。
+          ∇f = (f_x, f_y)、∇g = (g_x, g_y)。
+          λ をラグランジュ乗数といいます。
+        explain: |-
+          条件の曲線に沿って動くとき、f の勾配が g の勾配と平行になる点が極値の候補です。
+          f_x = λ g_x、f_y = λ g_y、g = 0 の 3 式を解きます。
+          例：x²+y² を x+y=2 のもとで最小にすると、対称性から x=y の点が候補になります。
+        note: ∇f=λ∇g と g=0 を連立。λ はラグランジュ乗数。
+      - part: 今日
+        text: x² + y² を x + y = 2 のもとで最小にする点はどれですか。
+        choices: ["(1, 1)", "(2, 0)", "(0, 2)", "(2, 2)"]
+        answer: "(1, 1)"
+        check: "'(1, 1)'"
+        hints:
+          - f_x=2x、f_y=2y、g_x=1、g_y=1 です。
+          - 2x=λ、2y=λ から x=y がわかります。
+          - x+y=2 に入れます。
+        paths:
+          - [2x=λ、2y=λ, x=y, x+y=2, (1,1)]
+      - part: 今日
+        text: xy を x + y = 4 のもとで最大にする点はどれですか。
+        choices: ["(2, 2)", "(4, 0)", "(0, 4)", "(1, 3)"]
+        answer: "(2, 2)"
+        check: "'(2, 2)'"
+        hints:
+          - f_x=y、f_y=x、g_x=1、g_y=1 です。
+          - y=λ、x=λ から x=y がわかります。
+          - x+y=4 に入れます。
+        paths:
+          - [y=λ、x=λ, x=y, x+y=4, (2,2)]
+      - part: 挑戦
+        text: x² + y² を x + y = 2 のもとで最小にするときの λ はいくつですか。
+        choices: [1, 2, 4, 0]
+        answer: 2
+        check: "2"
+        hints:
+          - 候補の点で 2x=λ です。
+          - 候補の x を式に入れます。
+          - λ を求めます。
+        paths:
+          - [2x=λ, 候補の x, λ]
+    extra: []
+
+  - day: 6
+    items:
+      - part: わけ
+        text: 全微分が df = f_x dx + f_y dy になるわけを説明しましょう。
+        explain: 「x が dx だけ、y が dy だけ変わるとき、f の変化は、x の変化による分と y の変化による分の和に近づく。x の分は f_x dx、y の分は f_y dy。だから df = f_x dx + f_y dy。」と書ければよい。① x の変化、② y の変化、③ 足し合わせる。子どもには、具体的な f で確かめさせます。
+        hints:
+          - x だけ変えたときの f の変化を考えます。
+          - y だけ変えたときの f の変化を考えます。
+          - 2 つを足します。
+        paths:
+          - [x の変化 f_x dx, y の変化 f_y dy, 足す, df]
+      - part: わけ
+        text: 連鎖律 dz/dt = f_x x' + f_y y' が成り立つわけを説明しましょう。
+        explain: 「t が少し動くと、x は x' dt、y は y' dt だけ動く。そのとき f は f_x(x' dt) + f_y(y' dt) だけ動く。dt でわると、dz/dt = f_x x' + f_y y'。」と書ければよい。① x と y の変化、② f の変化、③ dt でわる。子どもには、具体例で確かめさせます。
+        hints:
+          - t の変化で x と y がどれだけ動くか を考えます。
+          - そのとき f がどれだけ動くか を考えます。
+          - dt でわります。
+        paths:
+          - [x' dt、y' dt, f の変化, dt でわる, 連鎖律]
+      - part: わけ
+        text: ラグランジュ乗数で ∇f = λ∇g を解くと、条件つき極値が見つかるわけを説明しましょう。
+        explain: 「条件 g=0 の曲線に沿って動くとき、f が増える方向と g が増える方向が平行でなければ、曲線に沿って f をさらに動かせる。極値では、f の勾配が g の勾配と平行になる。だから ∇f = λ∇g。」と書ければよい。① 曲線に沿って動く、② 勾配が平行、③ λ。子どもには、円と直線の例で確かめさせます。
+        hints:
+          - 条件の曲線に沿って動くことを考えます。
+          - 極値では、f の勾配と g の勾配が平行になります。
+          - 平行を式にすると ∇f=λ∇g です。
+        paths:
+          - [曲線に沿う, 勾配が平行, ∇f=λ∇g]
+
+  - day: 7
+    items:
+      - part: 今日
+        text: f(x, y) = x²y + 3y の ∂f/∂x はどれですか。
+        choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
+        answer: "2xy"
+        check: "'2xy'"
+        hints:
+          - y を定数とみて x で微分します。
+          - x²y の微分を考えます。
+          - 3y は x では定数です。
+        paths:
+          - [y を定数, 2xy]
+      - part: 今日
+        text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+        choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
+        answer: "2t + 4t³"
+        check: "'2t + 4t³'"
+        hints:
+          - f_x、f_y、x'、y' を求めます。
+          - 連鎖律に入れます。
+          - 項を整理します。
+        paths:
+          - [f_x、f_y、x'、y', 連鎖律, 2t + 4t³]
+      - part: 今日
+        text: F(x, y) = (x² + y, xy) のヤコビ行列はどれですか。
+        choices: ["(2x 1；y x)", "(2x y；1 x)", "(x 1；y 2x)", "(2x 1；x y)"]
+        answer: "(2x 1；y x)"
+        check: "'(2x 1；y x)'"
+        hints:
+          - f と g の偏微分を求めます。
+          - 2 行に並べます。
+          - 行列を選びます。
+        paths:
+          - [f_x=2x、f_y=1, g_x=y、g_y=x, (2x 1；y x)]
+      - part: 挑戦
+        text: x² + y² を x + y = 2 のもとで最小にする点はどれですか。
+        choices: ["(1, 1)", "(2, 0)", "(0, 2)", "(2, 2)"]
+        answer: "(1, 1)"
+        check: "'(1, 1)'"
+        hints:
+          - ラグランジュ乗数を使います。
+          - x=y がわかります。
+          - 条件に入れます。
+        paths:
+          - [2x=λ、2y=λ, x=y, x+y=2, (1,1)]
+    extra: []
+
+  - day: 8
+    items:
+      - part: 今日
+        text: f(x, y) = x²y + 3y の ∂f/∂y はどれですか。
+        choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
+        answer: "x² + 3"
+        check: "'x² + 3'"
+        hints:
+          - x を定数とみて y で微分します。
+          - x²y と 3y の微分を考えます。
+          - 項を足します。
+        paths:
+          - [x を定数, x² + 3]
+      - part: 今日
+        text: f = xy、x = t²、y = t のとき、dz/dt はどれですか。
+        choices: ["3t²", "2t²", "t²", "2t"]
+        answer: "3t²"
+        check: "'3t²'"
+        hints:
+          - f_x=y、f_y=x です。
+          - x'=2t、y'=1 です。
+          - 連鎖律に入れます。
+        paths:
+          - [f_x=y、f_y=x, x'=2t、y'=1, 3t²]
+      - part: 今日
+        text: f(x, y) = x² + y² の (0, 0) は極小ですか、極大ですか、鞍点ですか。
+        choices: [極小, 極大, 鞍点, 極値でない]
+        answer: 極小
+        check: "'極小'"
+        hints:
+          - ヘッセ行列を求めます。
+          - D と f_xx の符号を見ます。
+          - 判定します。
+        paths:
+          - [H=(2 0；0 2), D>0, f_xx>0, 極小]
+      - part: 今日
+        text: f(x, y) = x² − y² の (0, 0) は極小ですか、極大ですか、鞍点ですか。
+        choices: [極小, 極大, 鞍点, 極値でない]
+        answer: 鞍点
+        check: "'鞍点'"
+        hints:
+          - ヘッセ行列を求めます。
+          - D の符号を見ます。
+          - 判定します。
+        paths:
+          - [H=(2 0；0 −2), D<0, 鞍点]
+      - part: 今日
+        text: xy を x + y = 4 のもとで最大にする点はどれですか。
+        choices: ["(2, 2)", "(4, 0)", "(0, 4)", "(1, 3)"]
+        answer: "(2, 2)"
+        check: "'(2, 2)'"
+        hints:
+          - ラグランジュ乗数を使います。
+          - x=y がわかります。
+          - 条件に入れます。
+        paths:
+          - [y=λ、x=λ, x=y, x+y=4, (2,2)]
+      - part: 今日
+        text: F(x, y) = (x² + y, xy) のヤコビ行列式はどれですか。
+        choices: ["2x² − y", "2x² + y", "2xy − 1", "x² − y"]
+        answer: "2x² − y"
+        check: "'2x² − y'"
+        hints:
+          - ヤコビ行列を求めます。
+          - 行列式を計算します。
+          - 項を整理します。
+        paths:
+          - [ヤコビ行列, 行列式, 2x² − y]
+    extra: []
+
+ri:
+  - part: 離
+    kinds: [数]
+    uses: [D-008, M-003]
+    text: f(x, y) = x²y + 3y の ∂f/∂x はどれですか。
+    choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
+    answer: "2xy"
+    check: "'2xy'"
+    hints:
+      - y を定数とみて x で微分します。
+      - x²y の微分を考えます。
+      - 3y は x では定数です。
+    paths:
+      - [y を定数, 2xy]
+    note: 偏微分は一方の変数を定数とみる。f_x は y を定数にする。
+  - part: 離
+    kinds: [道筋]
+    uses: [D-008, M-003]
+    text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+    choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
+    answer: "2t + 4t³"
+    check: "'2t + 4t³'"
+    hints:
+      - f_x、f_y、x'、y' を求めます。
+      - 連鎖律に入れます。
+      - 項を整理します。
+    paths:
+      - [f_x、f_y、x'、y', 連鎖律, 2t + 4t³]
+    note: 連鎖律 dz/dt = f_x x' + f_y y'。
+  - part: 離
+    kinds: [数]
+    uses: [D-008, M-003]
+    text: x² + y² を x + y = 2 のもとで最小にする点はどれですか。
+    choices: ["(1, 1)", "(2, 0)", "(0, 2)", "(2, 2)"]
+    answer: "(1, 1)"
+    check: "'(1, 1)'"
+    hints:
+      - ラグランジュ乗数を使います。
+      - x=y がわかります。
+      - 条件に入れます。
+    paths:
+      - [2x=λ、2y=λ, x=y, x+y=2, (1,1)]
+    note: ラグランジュ乗数は ∇f=λ∇g と g=0 を連立する。
