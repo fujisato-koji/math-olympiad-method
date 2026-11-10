@@ -12,7 +12,7 @@ days:
         text: |-
           リーマン和：区間 [a, b] を n 個に分け、各小区間で f(x) の値を 1 つ選び、幅をかけて足します。
           Σ f(xᵢ) Δx。
-          n を大きくして、どの選び方でも同じ値に近づくとき、その値を定積分 ∫a^b f(x) dx といいます。
+          n を大きくして、どの選び方でも同じ値に近づくとき、その値を定積分 ∫(a→b) f(x) dx といいます。
           定積分は、グラフと x 軸の間の符号付きの面積です。
         explain: |-
           区間を細かく分けるほど、リーマン和は面積に近づきます。
@@ -60,17 +60,17 @@ days:
         text: |-
           定積分の性質：
           ・線形性：∫(αf + βg) = α∫f + β∫g。
-          ・区間の分解：∫a^b f = ∫a^c f + ∫c^b f。
-          ・向き：∫a^b f = −∫b^a f。
-          ・同じ端：∫a^a f = 0。
-          ・面積との関係：f ≧ 0 なら ∫a^b f は面積。
+          ・区間の分解：∫(a→b) f = ∫(a→c) f + ∫(c→b) f。
+          ・向き：∫(a→b) f = −∫(b→a) f。
+          ・同じ端：∫(a→a) f = 0。
+          ・面積との関係：f ≧ 0 なら ∫(a→b) f は面積。
         explain: |-
           積分は和の極限なので、和の性質がそのまま使えます。
           区間を分けて足せます。向きを逆にすると符号が変わります。
           同じ所から同じ所までの積分は 0 です。
         note: 線形性、区間の分解、向き、同じ端は 0。
       - part: 今日
-        text: ∫a^b (2f + 3g) dx はどれですか。
+        text: ∫(a→b) (2f + 3g) dx はどれですか。
         choices: ["2∫f + 3∫g", "5∫f", "2∫f − 3∫g", "∫f × ∫g"]
         answer: "2∫f + 3∫g"
         check: "'2∫f + 3∫g'"
@@ -81,7 +81,7 @@ days:
         paths:
           - [線形性, 定数を外へ, 和に分ける]
       - part: 今日
-        text: ∫a^b f dx と ∫b^a f dx の関係はどれですか。
+        text: ∫(a→b) f dx と ∫(b→a) f dx の関係はどれですか。
         choices: ["等しい", "符号が反対", "2 倍", "0"]
         answer: "符号が反対"
         check: "'符号が反対'"
@@ -92,10 +92,10 @@ days:
         paths:
           - [向きを逆, Δx の符号, 符号が反対]
       - part: 挑戦
-        text: ∫0^2 f dx を区間を分けて書くとどれですか。
-        choices: ["∫0^1 f + ∫1^2 f", "∫0^1 f − ∫1^2 f", "∫1^2 f − ∫0^1 f", "2∫0^1 f"]
-        answer: "∫0^1 f + ∫1^2 f"
-        check: "'∫0^1 f + ∫1^2 f'"
+        text: ∫(0→2) f dx を区間を分けて書くとどれですか。
+        choices: ["∫(0→1) f + ∫(1→2) f", "∫(0→1) f − ∫(1→2) f", "∫(1→2) f − ∫(0→1) f", "2∫(0→1) f"]
+        answer: "∫(0→1) f + ∫(1→2) f"
+        check: "'∫(0→1) f + ∫(1→2) f'"
         hints:
           - 区間 [0,2] を [0,1] と [1,2] に分けます。
           - 面積を足します。
@@ -109,17 +109,17 @@ days:
       - part: 見本
         text: |-
           微積分の基本定理：
-          ① F(x) = ∫a^x f(t) dt とおくと、F'(x) = f(x)。
-          ② f の原始関数 F を使うと、∫a^b f(x) dx = F(b) − F(a)。
+          ① F(x) = ∫(a→x) f(t) dt とおくと、F'(x) = f(x)。
+          ② f の原始関数 F を使うと、∫(a→b) f(x) dx = F(b) − F(a)。
           微分と積分は、互いに逆の操作です。
           F は、微分すると f になる関数です。
         explain: |-
           基本定理は「面積の変化率は、もとの関数の値」という定理です。
           x を少し動かすと、面積は f(x) の高さの分だけ増えます。
           原始関数が分かれば、端の値の差で定積分が計算できます。
-        note: F'=f。∫a^b f = F(b)−F(a)。微分と積分は逆。
+        note: F'=f。∫(a→b) f = F(b)−F(a)。微分と積分は逆。
       - part: 今日
-        text: ∫0^1 x dx はいくつですか。
+        text: ∫(0→1) x dx はいくつですか。
         choices: ["1/4", "1/2", "1", "2"]
         answer: "1/2"
         check: "Fraction(1, 2)"
@@ -130,7 +130,7 @@ days:
         paths:
           - [原始関数, 端の値の差, 三角形の面積]
       - part: 今日
-        text: ∫0^2 x² dx はいくつですか。
+        text: ∫(0→2) x² dx はいくつですか。
         choices: ["4/3", "8/3", "4", "8"]
         answer: "8/3"
         check: "Fraction(8, 3)"
@@ -141,7 +141,7 @@ days:
         paths:
           - [原始関数 x³/3, 端の値の差, 分数]
       - part: 挑戦
-        text: d/dx ∫0^x f(t) dt はどれですか。
+        text: d/dx ∫(0→x) f(t) dt はどれですか。
         choices: ["f(x)", "F(x)", "f'(x)", "0"]
         answer: "f(x)"
         check: "'f(x)'"
@@ -164,10 +164,10 @@ days:
         explain: |-
           置換積分は、内側の関数とその微分がそろっているときに使います。
           部分積分は、多項式 × 指数関数、多項式 × 三角関数などで使います。
-          例：∫0^1 2x(x²+1) dx は u=x²+1 とおくと、du=2x dx、端は 1 から 2。
+          例：∫(0→1) 2x(x²+1) dx は u=x²+1 とおくと、du=2x dx、端は 1 から 2。
         note: 置換積分は u=g(x)、部分積分は ∫uv' = uv − ∫u'v。
       - part: 今日
-        text: ∫0^1 2x(x²+1) dx はいくつですか。
+        text: ∫(0→1) 2x(x²+1) dx はいくつですか。
         choices: ["1", "3/2", "2", "5/2"]
         answer: "3/2"
         check: "Fraction(3, 2)"
@@ -178,7 +178,7 @@ days:
         paths:
           - [u=x²+1, du=2x dx, 端を変える, 積分]
       - part: 今日
-        text: ∫0^1 x e^x dx はいくつですか。
+        text: ∫(0→1) x e^x dx はいくつですか。
         choices: [1, "e", "e−1", "e+1"]
         answer: 1
         check: "1"
@@ -206,8 +206,8 @@ days:
       - part: 見本
         text: |-
           広義積分：積分区間が無限に続く、または端点で関数が無限大になるときの積分です。
-          極限で定義します。∫a^∞ f(x) dx = lim(b→∞) ∫a^b f(x) dx。
-          例：∫1^∞ 1/x² dx は 1 に収束。∫1^∞ 1/x dx は発散。
+          極限で定義します。∫(a→∞) f(x) dx = lim(b→∞) ∫(a→b) f(x) dx。
+          例：∫(1→∞) 1/x² dx は 1 に収束。∫(1→∞) 1/x dx は発散。
           端点で無限大のときも、lim(ε→0) で定義します。
         explain: |-
           広義積分は「限界まで積分して、その極限をとる」ものです。
@@ -215,7 +215,7 @@ days:
           0 の近くで 1/√x は無限大ですが、積分は有限です。
         note: 広義積分は極限で定義。1/x² は収束、1/x は発散。
       - part: 今日
-        text: ∫1^∞ 1/x² dx はいくつですか。
+        text: ∫(1→∞) 1/x² dx はいくつですか。
         choices: [0, 1, 2, "発散"]
         answer: 1
         check: "1"
@@ -226,7 +226,7 @@ days:
         paths:
           - [原始関数 −1/x, b まで, 極限]
       - part: 今日
-        text: ∫1^∞ 1/x dx はどうなりますか。
+        text: ∫(1→∞) 1/x dx はどうなりますか。
         choices: ["0 に収束", "1 に収束", "2 に収束", "発散"]
         answer: "発散"
         check: "'発散'"
@@ -237,7 +237,7 @@ days:
         paths:
           - [原始関数 log x, log b, b→∞]
       - part: 挑戦
-        text: ∫0^1 1/√x dx はいくつですか。
+        text: ∫(0→1) 1/√x dx はいくつですか。
         choices: [1, 2, 4, "発散"]
         answer: 2
         check: "2"
@@ -282,7 +282,7 @@ days:
   - day: 7
     items:
       - part: 今日
-        text: ∫0^1 x dx はいくつですか。
+        text: ∫(0→1) x dx はいくつですか。
         choices: ["1/4", "1/2", "1", "2"]
         answer: "1/2"
         check: "Fraction(1, 2)"
@@ -293,7 +293,7 @@ days:
         paths:
           - [原始関数, 端の差, 三角形]
       - part: 今日
-        text: ∫0^2 x² dx はいくつですか。
+        text: ∫(0→2) x² dx はいくつですか。
         choices: ["4/3", "8/3", "4", "8"]
         answer: "8/3"
         check: "Fraction(8, 3)"
@@ -304,7 +304,7 @@ days:
         paths:
           - [x³/3, 端の差, 分数]
       - part: 今日
-        text: ∫0^1 2x(x²+1) dx はいくつですか。
+        text: ∫(0→1) 2x(x²+1) dx はいくつですか。
         choices: ["1", "3/2", "2", "5/2"]
         answer: "3/2"
         check: "Fraction(3, 2)"
@@ -315,7 +315,7 @@ days:
         paths:
           - [u=x²+1, du=2x dx, 端を変える]
       - part: 挑戦
-        text: ∫1^∞ 1/x² dx はいくつですか。
+        text: ∫(1→∞) 1/x² dx はいくつですか。
         choices: [0, 1, 2, "発散"]
         answer: 1
         check: "1"
@@ -330,7 +330,7 @@ days:
   - day: 8
     items:
       - part: 今日
-        text: ∫0^1 x dx はいくつですか。
+        text: ∫(0→1) x dx はいくつですか。
         choices: ["1/4", "1/2", "1", "2"]
         answer: "1/2"
         check: "Fraction(1, 2)"
@@ -341,7 +341,7 @@ days:
         paths:
           - [原始関数, 端の差]
       - part: 今日
-        text: ∫0^2 x² dx はいくつですか。
+        text: ∫(0→2) x² dx はいくつですか。
         choices: ["4/3", "8/3", "4", "8"]
         answer: "8/3"
         check: "Fraction(8, 3)"
@@ -352,7 +352,7 @@ days:
         paths:
           - [x³/3, 端の差]
       - part: 今日
-        text: ∫a^b f dx と ∫b^a f dx の関係はどれですか。
+        text: ∫(a→b) f dx と ∫(b→a) f dx の関係はどれですか。
         choices: ["等しい", "符号が反対", "2 倍", "0"]
         answer: "符号が反対"
         check: "'符号が反対'"
@@ -363,7 +363,7 @@ days:
         paths:
           - [向きを逆, 幅の符号, 反対]
       - part: 今日
-        text: d/dx ∫0^x f(t) dt はどれですか。
+        text: d/dx ∫(0→x) f(t) dt はどれですか。
         choices: ["f(x)", "F(x)", "f'(x)", "0"]
         answer: "f(x)"
         check: "'f(x)'"
@@ -374,7 +374,7 @@ days:
         paths:
           - [基本定理, 面積の変化率, f(x)]
       - part: 今日
-        text: ∫1^∞ 1/x dx はどうなりますか。
+        text: ∫(1→∞) 1/x dx はどうなりますか。
         choices: ["0 に収束", "1 に収束", "2 に収束", "発散"]
         answer: "発散"
         check: "'発散'"
@@ -401,7 +401,7 @@ ri:
   - part: 離
     kinds: [数]
     uses: [D-006]
-    text: ∫0^1 x dx はいくつですか。
+    text: ∫(0→1) x dx はいくつですか。
     choices: ["1/4", "1/2", "1", "2"]
     answer: "1/2"
     check: "Fraction(1, 2)"
@@ -411,11 +411,11 @@ ri:
       - 三角形の面積でも確かめられます。
     paths:
       - [原始関数, 端の差]
-    note: 微積分の基本定理。∫a^b f = F(b)−F(a)。
+    note: 微積分の基本定理。∫(a→b) f = F(b)−F(a)。
   - part: 離
     kinds: [道筋]
     uses: [D-006]
-    text: ∫0^2 x² dx はいくつですか。
+    text: ∫(0→2) x² dx はいくつですか。
     choices: ["4/3", "8/3", "4", "8"]
     answer: "8/3"
     check: "Fraction(8, 3)"
@@ -429,7 +429,7 @@ ri:
   - part: 離
     kinds: [数]
     uses: [D-006]
-    text: ∫1^∞ 1/x² dx はいくつですか。
+    text: ∫(1→∞) 1/x² dx はいくつですか。
     choices: [0, 1, 2, "発散"]
     answer: 1
     check: "1"

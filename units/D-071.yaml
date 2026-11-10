@@ -108,7 +108,7 @@ days:
       - part: 見本
         text: |-
           曲線の長さ：媒介変数表示 x(t)、y(t)（a ≦ t ≦ b）の長さは
-          L = ∫a^b √(x'² + y'²) dt。
+          L = ∫(a→b) √(x'² + y'²) dt。
           円 x=a cos t、y=a sin t（0 ≦ t < 2π）の長さは 2πa。
           直線 x=3t、y=4t（0 ≦ t ≦ 2）の速さは 5 なので、長さは 10。
         explain: |-
