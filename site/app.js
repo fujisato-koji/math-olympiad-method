@@ -474,6 +474,8 @@
   const inChoice = id => prefs.goal !== 'all' && CHOICE_SETS[prefs.goal].has(id);
   // 論題に届いた＝その論題を受け持つ単元がすべて済
   const isDone = id => !!(progress.units[id] && progress.units[id].done);
+  // その単元に問題が入っているか（2D の関係図で、まだ問題のない単元を薄くする）
+  const hasProblems = u => (u.days || []).some(d => (d.items || []).length);
   const topicDone = it => !!(it.units && it.units.length && it.units.every(isDone));
   function goalStats(g) {
     // 選んで解く論題の組（choices）は、組ごとに選ぶ数だけを数える（道のりには入らない）
@@ -1296,7 +1298,7 @@
       ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
-      return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+      return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}${hasProblems(u) ? '' : ' noq'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g><g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g></svg>';
     host.innerHTML = svg;
     POS2D = pos;
@@ -1343,7 +1345,7 @@
     };
     const names = { later: 'まだ', ready: '次にできる', doing: '途中', done: '済', ri: '腕だめしまで' };
     return `<div class="xlegend" aria-label="星の状態">${Object.keys(names).map(k =>
-      `<span><svg class="i3" viewBox="0 0 24 24" aria-hidden="true">${ic[k]}</svg><svg class="i2" viewBox="0 0 24 24" aria-hidden="true">${ic2[k]}</svg>${names[k]}</span>`).join('')}</div>`;
+      `<span><svg class="i3" viewBox="0 0 24 24" aria-hidden="true">${ic[k]}</svg><svg class="i2" viewBox="0 0 24 24" aria-hidden="true">${ic2[k]}</svg>${names[k]}</span>`).join('')}<span class="only2d">薄い丸：問題がまだ入っていない単元</span></div>`;
   }
 
   // ---- 組み合わせの層（D-031、D-035） ----
