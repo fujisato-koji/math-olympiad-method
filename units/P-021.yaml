@@ -16,9 +16,17 @@ days:
           波の速さ v は、1 周期でちょうど 1 波長進むので、v = λ/T = fλ です。
           横波は振動の向きが進む向きに垂直、縦波は平行です。
         explain: |-
-          λ は長さ、T は時間、f は 1 秒あたりの回数。f = 1/T、v = λ/T = fλ。
-          例：f = 2 Hz、λ = 3 m なら v = 2 × 3 = 6 m/s。T = 1/2 = 0.5 s。
-          横波：光、弦の波。縦波：音（空気の疎密）。
+          【定義】・λ は波長（山から次の山までの長さ）。
+          ・T は周期（1 回の振動にかかる時間）。
+          ・f は振動数（1 秒あたりの振動の回数）。f = 1/T。
+          ・速さは v = λ/T = fλ。
+          ｜量｜記号｜意味｜
+          ｜波長｜λ｜山から次の山までの長さ｜
+          ｜周期｜T｜1 回の振動にかかる時間｜
+          ｜振動数｜f｜1 秒あたりの振動の回数｜
+          ｜速さ｜v｜1 秒に進む距離。v = fλ｜
+          ・例：f = 2 Hz、λ = 3 m なら、v = 6 m/s、T = 0.5 s。
+          ・横波：光、弦の波。縦波：音（空気の疎密）。
         note: v = fλ は、振動数と波長と速さの関係。単位は f が Hz、λ が m、v が m/s。
       - part: 思い出す
         text: sin 30° はいくつですか。
@@ -109,6 +117,15 @@ days:
           例：A = 2、T = 4、λ = 8 なら、ω = 2π/4 = π/2、k = 2π/8 = π/4。
           t = 0、x = 0 で y = 0。t = 1、x = 0 で y = 2 sin(π/2) = 2。
         note: y = A sin(ωt − kx)。ω は時間の角、k は空間の角。v = ω/k = fλ。
+        svg: |-
+          <svg viewBox="0 0 360 120" role="img" aria-label="正弦波のグラフ">
+            <line x1="20" y1="60" x2="340" y2="60" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <line x1="20" y1="15" x2="20" y2="105" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <path d="M20 60 C 60 10, 100 10, 140 60 S 220 110, 260 60 S 320 10, 340 40" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <text x="328" y="78" font-size="12" fill="currentColor">x</text>
+            <text x="7" y="22" font-size="12" fill="currentColor">y</text>
+            <text x="24" y="56" font-size="11" fill="currentColor">0</text>
+          </svg>
       - part: 思い出す
         text: sin 90° はいくつですか。
         choices: [0, "1/2", "√2/2", 1]

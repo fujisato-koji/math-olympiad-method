@@ -441,6 +441,10 @@ h1, h2, h3 { line-height: 1.3; margin: 0; font-weight: 700; letter-spacing: .02e
   text-align: center; margin: 18px 0 10px; padding: 18px; border-radius: 20px; background: var(--surface-2);
 }
 .explain { font-size: 20px; line-height: 1.8; margin: 14px 0 0; padding: 16px 18px; border-left: 6px solid var(--c); background: var(--surface-2); border-radius: 0 16px 16px 0; white-space: pre-wrap; }
+.explain table.tbl { border-collapse: collapse; margin: .5em 0 .7em; font-size: .9em; line-height: 1.5; white-space: normal; }
+.explain table.tbl th, .explain table.tbl td { border: 1px solid var(--line); padding: .35em .6em; text-align: left; vertical-align: top; }
+.explain table.tbl th { background: color-mix(in srgb, var(--c) 10%, var(--surface)); font-weight: 600; }
+.kind { display: inline-block; font-size: .66em; line-height: 1.5; padding: 0 .5em; margin: 0 .18em; border: 1px solid color-mix(in srgb, currentColor 35%, transparent); border-radius: 999px; background: color-mix(in srgb, currentColor 7%, transparent); font-weight: 600; letter-spacing: .04em; vertical-align: .15em; }
 .choices { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 22px 0 6px; }
 .choice {
   min-width: 120px; padding: 14px 22px; border-radius: 20px; font-size: 24px; font-weight: 700;

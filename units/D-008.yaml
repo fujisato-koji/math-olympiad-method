@@ -19,6 +19,20 @@ days:
           例：f(x)=x²、[0,2]。平均の傾きは (4−0)/2=2。f'(x)=2x なので、2c=2 となる c は 1。
           走る速さの平均が時速 10 km なら、どこかで時速 10 km になった瞬間があります。
         note: f'(c) = (f(b)−f(a))/(b−a)。平均の傾きと同じ接線の傾きがある。
+        svg: |-
+          <svg viewBox="0 0 360 180" role="img" aria-label="平均値の定理のグラフ">
+            <line x1="30" y1="150" x2="340" y2="150" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <line x1="30" y1="20" x2="30" y2="150" stroke="currentColor" stroke-width="1" opacity=".45"/>
+            <path d="M40 140 C 100 55, 220 40, 320 95" fill="none" stroke="currentColor" stroke-width="2.5"/>
+            <line x1="40" y1="140" x2="320" y2="95" stroke="currentColor" stroke-width="1.5" stroke-dasharray="5 4" opacity=".6"/>
+            <line x1="110" y1="105" x2="230" y2="78" stroke="currentColor" stroke-width="2"/>
+            <circle cx="40" cy="140" r="3.5" fill="currentColor"/>
+            <circle cx="320" cy="95" r="3.5" fill="currentColor"/>
+            <circle cx="170" cy="91" r="3.5" fill="currentColor"/>
+            <text x="32" y="166" font-size="12" fill="currentColor">a</text>
+            <text x="316" y="114" font-size="12" fill="currentColor">b</text>
+            <text x="166" y="112" font-size="12" fill="currentColor">c</text>
+          </svg>
       - part: 今日
         text: f(x) = x² の [0, 2] における平均の傾きはどれですか。
         choices: [1, 2, 4, 8]

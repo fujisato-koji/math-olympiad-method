@@ -201,9 +201,57 @@
     return { text, mats };
   }
   const putMat = (h, mats) => h.replace(matPlace, (m, i) => mats[Number(i)] ?? m);
-  const fmt = s => { const m = markMat(markGloss(s)); return putMat(glossHtml(mx(m.text)), m.mats); };
+  const fmt = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text)), m.mats)); };
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
-  const fmtLinks = s => { const m = markMat(markGloss(s)); return putMat(glossHtml(mx(m.text).replace(/\b([A-Z])-(\d{3})\b/g, x => UNITS[x] ? `<a class="ulink" href="#/unit/${x}" target="_blank" rel="noopener">${x}</a>` : x)), m.mats); };
+  const fmtLinks = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text).replace(/\b([A-Z])-(\d{3})\b/g, x => UNITS[x] ? `<a class="ulink" href="#/unit/${x}" target="_blank" rel="noopener">${x}</a>` : x)), m.mats)); };
+  // 見本の説明は、長い文を文ごとに改行し、｜で囲んだ表を組む（D-067）。
+  // 例：｜量｜記号｜意味｜ の行を続けると、見出しつきの表になる。
+  const TB0 = String.fromCharCode(0xE004), TB1 = String.fromCharCode(0xE005);
+  const tbPlace = new RegExp(TB0 + '(\\d+)' + TB1, 'g');
+  function markTable(s) {
+    const tables = [];
+    const lines = String(s ?? '').split('\n');
+    const out = [];
+    for (let i = 0; i < lines.length; i++) {
+      if (/^｜.*｜/.test(lines[i].trim())) {
+        const block = [];
+        while (i < lines.length && /^｜.*｜/.test(lines[i].trim())) block.push(lines[i++].trim());
+        i--;
+        const rows = block.map(line => line.replace(/^｜|｜$/g, '').split('｜').map(x => x.trim()));
+        if (rows.length >= 2 && rows.every(r => r.length === rows[0].length)) {
+          const cell = c => glossHtml(mx(markGloss(c)));
+          const html = `<table class="tbl"><thead><tr>${rows[0].map(c => `<th>${cell(c)}</th>`).join('')}</tr></thead><tbody>${rows.slice(1).map(r => `<tr>${r.map(c => `<td>${cell(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+          tables.push(html);
+          out.push(TB0 + (tables.length - 1) + TB1);
+          continue;
+        }
+      }
+      out.push(lines[i]);
+    }
+    return { text: out.join('\n'), tables };
+  }
+  const putTable = (h, tables) => h.replace(tbPlace, (m, i) => tables[Number(i)] ?? m);
+  // 説明文の「素性」：定義・定理・法則・公理・公式・原理・性質・約束・予想・モデル・近似・方法・現象・仮説（D-067）
+  const KIND_NAMES = ['定義', '定理', '法則', '公理', '公式', '原理', '性質', '約束', '予想', 'モデル', '近似', '方法', '現象', '仮説'];
+  const KIND_ALT = KIND_NAMES.join('|');
+  const KIND_BRACKET = new RegExp('【(' + KIND_ALT + ')】', 'g');
+  const KIND_NAMED = new RegExp('([一-龯\u30A0-\u30FFA-Za-z0-9・ー]+)の(' + KIND_ALT + ')', 'g');
+  const kindSpan = (key, label = key) => `<span class="kind gloss" tabindex="0" data-g="${esc(key)}">${esc(label)}</span>`;
+  function kindify(h) {
+    return h
+      .replace(KIND_BRACKET, (m, k) => kindSpan(k) + ' ')
+      .replace(KIND_NAMED, (m, name, k) => {
+        const full = name + 'の' + k;
+        return `${name}の${kindSpan(GLOSS[full] ? full : k, k)}`;
+      });
+  }
+  const fmtExplain = s => {
+    const t = markTable(s);
+    const text = t.text.split('\n').map(line =>
+      line.length > 72 && !line.startsWith(TB0) ? line.replace(/。(?!$)/g, '。\n') : line
+    ).join('\n');
+    return putTable(fmtLinks(text), t.tables);
+  };
   let glossTip = null;
   function glossTipEl() {
     if (!glossTip) {
@@ -217,7 +265,7 @@
     const item = GLOSS[g.dataset.g];
     if (!item) return;
     const tip = glossTipEl();
-    const u = item.unit && UNITS[item.unit] ? `<span class="u">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</span>` : '';
+    const u = item.unit && UNITS[item.unit] ? `<a class="u" href="#/unit/${item.unit}" target="_blank" rel="noopener">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</a>` : '';
     tip.innerHTML = `<div>${esc(item.text)}</div>${u}`;
     tip.classList.add('on');
     const r = g.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
@@ -1786,7 +1834,7 @@
       body = `${fig}<div class="feedback">よく いえたね！</div>${pathsHtml(it)}
         <div class="actions"><button class="pill solid" data-act="next" type="button">つぎへ</button></div>`;
     } else if (it.part === '見本') {
-      body = `${fig}<p class="explain">${fmtLinks(it.explain)}</p>
+      body = `${fig}<div class="explain">${fmtExplain(it.explain)}</div>
         <div class="actions">${dk}<button class="pill solid" data-act="next" type="button">わかった</button></div>`;
     } else if (s.solved) {
       body = `${fig}<div class="feedback">できた！ こたえは <b>${fmt(it.answer)}</b></div>${pathsHtml(it)}
