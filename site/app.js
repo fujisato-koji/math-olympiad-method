@@ -220,6 +220,12 @@
     '群': { post: 'れ|島|集|生|像' },
     '像': { pre: '画|映|虚|実|残|肖|鏡' }
   };
+  // 用語を、その意味で使う流れに限定する（日本語は単語の切れ目がないので、分野をまたぐと誤る）
+  const GLOSS_SCOPE = {
+    '核': ['R'], '群': ['R'], '像': ['R'], '部分群': ['R'], '準同型': ['R'], '同型': ['R'],
+    '巡回群': ['R'], '生成元': ['R'], '単位元': ['R'], '逆元': ['R'], '結合法則': ['R'], '閉じている': ['R'],
+    '位数': ['R'], '写像': ['A', 'R'], '単射': ['A', 'R'], '全射': ['A', 'R'], '全単射': ['A', 'R'], '部分集合': ['A', 'R']
+  };
   const glossTerms = Object.keys(GLOSS).sort((a, b) => b.length - a.length);
   const glossRe = new RegExp(glossTerms.map(term => {
     const e = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -228,7 +234,7 @@
     return `${ex.pre ? `(?<!${ex.pre})` : ''}${e}${ex.post ? `(?!${ex.post})` : ''}`;
   }).join('|'), 'g');
   let glossTip = null;
-  function applyGloss(root) {
+  function applyGloss(root, unit) {
     const skip = 'a,button,input,textarea,select,svg,script,style,.gloss,.frac,.sqrt,.vec,.lim,.sum,.bd,.int,.pad,.display,.choices,.fig,i,sup,sub';
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode(node) {
@@ -247,6 +253,12 @@
       let last = 0, m;
       while ((m = glossRe.exec(text))) {
         if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const scope = GLOSS_SCOPE[m[0]];
+        if (scope && unit && !scope.includes(unit.lane) && !scope.includes(unit.id)) {
+          frag.appendChild(document.createTextNode(m[0]));
+          last = m.index + m[0].length;
+          continue;
+        }
         const span = document.createElement('span');
         span.className = 'gloss';
         span.tabIndex = 0;
@@ -1859,7 +1871,7 @@
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
     figMath(el);
-    applyGloss(el);
+    applyGloss(el, u);
     tick();
   }
   function submit(val) {
