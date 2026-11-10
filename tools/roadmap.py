@@ -65,6 +65,9 @@ def load():
             data["catalog"].append(it)
     ren = ROOT / "renamed.yaml"
     data["renamed"] = yaml.safe_load(ren.read_text(encoding="utf-8")) if ren.exists() else {}
+    # 用語の説明（D-063）。原稿の《用語》を確かめるための唯一の情報源
+    gfile = ROOT / "glossary.yaml"
+    data["glossary"] = yaml.safe_load(gfile.read_text(encoding="utf-8")) if gfile.exists() else []
     return data, problems
 
 
@@ -241,11 +244,38 @@ def check(data, problems):
 
     for uid in units:
         visit(uid, [])
+    # 用語の説明（D-063）：原稿で《用語》と囲んだ所だけに説明が付く。ここにない語は誤り
+    gloss = {}
+    for g in data.get("glossary", []):
+        term, text = g.get("term"), g.get("text")
+        if not term or not text:
+            errors.append(f"glossary.yaml: term と text の両方が要る（{g}）")
+            continue
+        if term in gloss:
+            errors.append(f"glossary.yaml: 用語 {term} が重なっている")
+        if g.get("unit") and g["unit"] not in units:
+            errors.append(f"glossary.yaml: {term} の単元 {g['unit']} が地図にない")
+        gloss[term] = g
+
+    def strings(x):
+        if isinstance(x, str):
+            yield x
+        elif isinstance(x, dict):
+            for v in x.values():
+                yield from strings(v)
+        elif isinstance(x, list):
+            for v in x:
+                yield from strings(v)
+
     # 問題
     for uid, doc in problems.items():
         if uid not in units:
             errors.append(f"units/{uid}.yaml: 地図にない単元")
             continue
+        for s in strings(doc):
+            for m in re.finditer(r"《([^》\n]+)》", s):
+                if m.group(1) not in gloss:
+                    errors.append(f"units/{uid}.yaml: 用語《{m.group(1)}》が glossary.yaml にない")
         plan = expand(units[uid][2])
         days = doc.get("days", [])
         if [d.get("day") for d in days] != list(range(1, len(days) + 1)):
@@ -447,6 +477,7 @@ def build(data, problems):
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
     payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
+               "glossary": data.get("glossary", []),
                "goals": goals, "levels": THINKING_LEVELS,
                "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}
     js = "// tools/roadmap.py build が roadmap.yaml と units/ から作る。手で直さない。\n"

@@ -564,7 +564,7 @@ days:
 ri:
   - part: 離
     kinds: [道筋]
-    text: 2¹⁰ × 5⁸ を計算すると、何けたの整数になりますか。
+    text: 2¹⁰ × 5⁸ を計算すると、何けたの《整数》になりますか。
     answer: 9
     check: "len([d for d in range(1, 30) if 10 ** (d - 1) <= 2 ** 10 * 5 ** 8])"
     hints:

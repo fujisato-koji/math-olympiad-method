@@ -37,7 +37,7 @@ days:
         paths:
           - [OA = OB（半径）, △OAB は二等辺三角形, ∠x = (180 − 100) ÷ 2 = 40]
       - part: 思い出す
-        text: 半径 6 cm の円で、中心角 60° のおうぎ形の弧の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        text: 半径 6 cm の円で、中心角 60° のおうぎ形の弧の長さは、円周の何分の 1 ですか。《分数》で答えましょう。
         answer: 1/6
         check: "Fraction(60, 360)"
         hints:
@@ -273,7 +273,7 @@ days:
         paths:
           - [弧 AB = 弧 CD, 等しい弧に対する円周角は等しい, 27°]
       - part: 今日
-        text: ∠APB = 30° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        text: ∠APB = 30° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。《分数》で答えましょう。
         svg: '<svg viewBox="0 0 240 200" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="100" r="68.9" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="85.6" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="31.1" x2="154.4" y2="159.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M114.8 50.5 A20 20 0 0 0 125.2 50.5" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="67.7" font-size="13" text-anchor="middle">30°</text><text x="80.1" y="173.7" font-size="13" text-anchor="middle">A</text><text x="159.9" y="173.7" font-size="13" text-anchor="middle">B</text><text x="120" y="24.7" font-size="13" text-anchor="middle">P</text></svg>'
         answer: 1/6
         check: "Fraction(30 * 2, 360)"
@@ -581,7 +581,7 @@ days:
         paths:
           - [∠APB = 90°, 180 − 90 − 26 = 64]
       - part: 今日
-        text: ∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。分数で答えましょう。
+        text: ∠APB = 45° のとき、弧 AB（P をふくまない方）の長さは、円周の何分の 1 ですか。《分数》で答えましょう。
         answer: 1/4
         check: "Fraction(45 * 2, 360)"
         hints:

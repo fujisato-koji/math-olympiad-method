@@ -233,7 +233,7 @@ days:
         answer: 8
         check: "[y for x in range(-20, 21) for y in range(-20, 21) if Fraction(x, 3) - Fraction(y, 4) == 1 and 2 * x + y == 26][0]"
         hints:
-          - ① の両辺に、分母の 3 と 4 の公倍数をかけましょう。
+          - ① の両辺に、分母の 3 と 4 の公《倍数》をかけましょう。
           - 4x − 3y = 12 と ② で、y の係数をそろえましょう。
           - x を求めたら、② に代入して y を求めましょう。
         paths:

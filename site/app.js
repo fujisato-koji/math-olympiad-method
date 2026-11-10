@@ -170,107 +170,17 @@
   }
   // flat は、肩や端の中（分数を重ねず、斜線のまま）
   const mx = (s, flat) => { const x = lex(s); return html(flat ? x : fracs(x), flat); };
-  const fmt = s => mx(String(s ?? ''));
+  // 用語の説明は、原稿で《用語》と囲んだ所にだけ付ける（D-063）。日本語は語の切れ目がなく、
+  // 字面を走査すると「原子核」の「核」と「準同型の核」を区別できない。どの意味で使ったかは原稿側で決める。
+  // 用語集は glossary.yaml が唯一の情報源。ここにない語を《》で囲むと、roadmap.py check が誤りとして報告する。
+  const GLOSS = Object.fromEntries((R.glossary || []).map(g => [g.term, g]));
+  const GS = '\uE000', GE = '\uE001';
+  const markGloss = s => String(s ?? '').replace(/《([^》\n]+)》/g, (m, t) => GLOSS[t] ? GS + t + GE : m);
+  const glossHtml = h => h.replace(/\uE000([^\uE001]*)\uE001/g, (m, t) => `<span class="gloss" tabindex="0" data-g="${esc(t)}">${esc(t)}</span>`);
+  const fmt = s => glossHtml(mx(markGloss(s)));
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
-  const fmtLinks = s => mx(String(s ?? '')).replace(/\b([A-Z])-(\d{3})\b/g, m => UNITS[m] ? `<a class="ulink" href="#/unit/${m}" target="_blank" rel="noopener">${m}</a>` : m);
-  // マウスオーバーで用語を説明する（2026-11-10 施主）。数学で自明でも初見で分からない語・記号・過去の単元の語に付ける
-  const GLOSS = {
-    'Q \\ {0}': { t: '0 を除いた有理数全体。かけ算の群で使います。', u: 'A-024' },
-    '部分集合': { t: 'A のどの要素も B の要素であるとき、A は B の部分集合。', u: 'A-024' },
-    '部分群': { t: '群 G の部分集合で、G と同じ演算で群になるもの。' },
-    '準同型': { t: 'f(a·b) = f(a)·f(b) を満たす、群の間の写像。' },
-    '巡回群': { t: '1 つの要素の累乗で全体が書ける群。' },
-    '生成元': { t: '群のすべての要素を累乗で作れる要素。' },
-    '単位元': { t: 'e·a = a·e = a となる要素 e。' },
-    '結合法則': { t: '(a·b)·c = a·(b·c) が成り立つこと。' },
-    '数直線': { t: '数を一直線に並べたもの。右へ進むと増える。', u: 'N-002' },
-    '正負の数': { t: '0 より小さい負の数と、0 より大きい正の数。', u: 'N-027' },
-    '対称移動': { t: '回転や裏返しで、図形をもとの図形に重ねる移動。', u: 'G-015' },
-    '写像': { t: '集合の各要素に、行き先の要素を 1 つ対応させるもの。', u: 'A-024' },
-    '全単射': { t: '単射で全射な写像。', u: 'A-024' },
-    '単射': { t: 'f(a) = f(b) ならば a = b となる写像。', u: 'A-024' },
-    '全射': { t: '行き先のどの要素にも写ってくる要素がある写像。', u: 'A-024' },
-    '同型': { t: '全単射で準同型な写像があること。' },
-    '位数': { t: 'g^n = e となる最小の正の整数 n。' },
-    '有理数': { t: '分数で書ける数。', u: 'N-016' },
-    '整数': { t: '…, −2, −1, 0, 1, 2, … の数。', u: 'N-027' },
-    '倍数': { t: 'a = bk となる整数 k があるとき、a は b の倍数。', u: 'N-017' },
-    '約数': { t: 'b = ak となる整数 k があるとき、a は b の約数。', u: 'N-017' },
-    '余り': { t: 'わり切れずに残る数。', u: 'N-014' },
-    '分数': { t: 'a/b の形で書ける数。', u: 'N-016' },
-    '逆数': { t: 'かけると 1 になる数。a/b の逆数は b/a。', u: 'N-078' },
-    '逆元': { t: 'a·b = b·a = e となる要素 b。' },
-    '鏡映': { t: '鏡に映したように裏返す移動。', u: 'G-015' },
-    '群': { t: '集合と演算の組で、閉じている・結合法則・単位元・逆元を満たすもの。' },
-    'Z': { t: '整数全体の集合 {…, −2, −1, 0, 1, 2, …}。', u: 'A-024' },
-    'Q': { t: '有理数全体の集合。分数で書ける数。', u: 'A-024' },
-    '2Z': { t: '2 の倍数全体 {…, −4, −2, 0, 2, 4, …}。' },
-    '3Z': { t: '3 の倍数全体。' },
-    '4Z': { t: '4 の倍数全体。' },
-    '5Z': { t: '5 の倍数全体。' },
-    '6Z': { t: '6 の倍数全体。' },
-    '7Z': { t: '7 の倍数全体。' },
-    '像': { t: '準同型 f の行き先の値全体。im f = {f(g) | g ∈ G}。' },
-    '核': { t: '準同型 f で、単位元に写る要素全体。ker f = {g | f(g) = e_H}。' },
-    '閉じている': { t: 'G の要素どうしの演算の結果が、また G に入ること。' }
-  };
-  // 同じ字を含む別の言葉（原子核の「核」、群れの「群」、画像の「像」）に説明を付けないための除く条件
-  const GLOSS_EXCLUDE = {
-    '核': { pre: '原子|細胞|娘|中|結', post: '[一-龯]' },
-    '群': { post: 'れ|島|集|生|像' },
-    '像': { pre: '画|映|虚|実|残|肖|鏡' }
-  };
-  // 用語を、その意味で使う流れに限定する（日本語は単語の切れ目がないので、分野をまたぐと誤る）
-  const GLOSS_SCOPE = {
-    '核': ['R'], '群': ['R'], '像': ['R'], '部分群': ['R'], '準同型': ['R'], '同型': ['R'],
-    '巡回群': ['R'], '生成元': ['R'], '単位元': ['R'], '逆元': ['R'], '結合法則': ['R'], '閉じている': ['R'],
-    '位数': ['R'], '写像': ['A', 'R'], '単射': ['A', 'R'], '全射': ['A', 'R'], '全単射': ['A', 'R'], '部分集合': ['A', 'R']
-  };
-  const glossTerms = Object.keys(GLOSS).sort((a, b) => b.length - a.length);
-  const glossRe = new RegExp(glossTerms.map(term => {
-    const e = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    if (/^[A-Za-z0-9]/.test(term)) return `(?<![A-Za-z0-9])${e}(?![A-Za-z0-9])`;
-    const ex = GLOSS_EXCLUDE[term] || {};
-    return `${ex.pre ? `(?<!${ex.pre})` : ''}${e}${ex.post ? `(?!${ex.post})` : ''}`;
-  }).join('|'), 'g');
+  const fmtLinks = s => glossHtml(mx(markGloss(s)).replace(/\b([A-Z])-(\d{3})\b/g, m => UNITS[m] ? `<a class="ulink" href="#/unit/${m}" target="_blank" rel="noopener">${m}</a>` : m));
   let glossTip = null;
-  function applyGloss(root, unit) {
-    const skip = 'a,button,input,textarea,select,svg,script,style,.gloss,.frac,.sqrt,.vec,.lim,.sum,.bd,.int,.pad,.display,.choices,.fig,i,sup,sub';
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode(node) {
-        const p = node.parentElement;
-        if (!p || p.closest(skip)) return NodeFilter.FILTER_REJECT;
-        return node.nodeValue && node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
-      }
-    });
-    const nodes = [];
-    while (walker.nextNode()) nodes.push(walker.currentNode);
-    for (const node of nodes) {
-      const text = node.nodeValue;
-      if (!glossRe.test(text)) continue;
-      glossRe.lastIndex = 0;
-      const frag = document.createDocumentFragment();
-      let last = 0, m;
-      while ((m = glossRe.exec(text))) {
-        if (m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
-        const scope = GLOSS_SCOPE[m[0]];
-        if (scope && unit && !scope.includes(unit.lane) && !scope.includes(unit.id)) {
-          frag.appendChild(document.createTextNode(m[0]));
-          last = m.index + m[0].length;
-          continue;
-        }
-        const span = document.createElement('span');
-        span.className = 'gloss';
-        span.tabIndex = 0;
-        span.dataset.g = m[0];
-        span.textContent = m[0];
-        frag.appendChild(span);
-        last = m.index + m[0].length;
-      }
-      if (last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
-      node.parentNode.replaceChild(frag, node);
-    }
-  }
   function glossTipEl() {
     if (!glossTip) {
       glossTip = document.createElement('div');
@@ -283,8 +193,8 @@
     const item = GLOSS[g.dataset.g];
     if (!item) return;
     const tip = glossTipEl();
-    const u = item.u && UNITS[item.u] ? `<span class="u">${esc(item.u)} ${esc(UNITS[item.u].title)}</span>` : '';
-    tip.innerHTML = `<div>${esc(item.t)}</div>${u}`;
+    const u = item.unit && UNITS[item.unit] ? `<span class="u">${esc(item.unit)} ${esc(UNITS[item.unit].title)}</span>` : '';
+    tip.innerHTML = `<div>${esc(item.text)}</div>${u}`;
     tip.classList.add('on');
     const r = g.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
     const left = Math.min(Math.max(8, r.left + r.width / 2 - w / 2), window.innerWidth - w - 8);
@@ -1871,7 +1781,6 @@
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
       <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
     figMath(el);
-    applyGloss(el, u);
     tick();
   }
   function submit(val) {

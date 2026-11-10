@@ -25,7 +25,7 @@ days:
       - part: 見本
         text: 点の位置を、2 つの数の組で表そう。
         svg: '<svg viewBox="0 0 240 204" xmlns="http://www.w3.org/2000/svg"><line x1="28.9" y1="174.6" x2="28.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="47.1" y1="174.6" x2="47.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="65.4" y1="174.6" x2="65.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="83.6" y1="174.6" x2="83.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="101.8" y1="174.6" x2="101.8" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="120" y1="174.6" x2="120" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="138.2" y1="174.6" x2="138.2" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="156.4" y1="174.6" x2="156.4" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="174.6" y1="174.6" x2="174.6" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="192.9" y1="174.6" x2="192.9" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="211.1" y1="174.6" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="174.6" x2="211.1" y2="174.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="156.4" x2="211.1" y2="156.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="138.2" x2="211.1" y2="138.2" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="120" x2="211.1" y2="120" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="101.8" x2="211.1" y2="101.8" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="83.6" x2="211.1" y2="83.6" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="65.4" x2="211.1" y2="65.4" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="47.1" x2="211.1" y2="47.1" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="28.9" y1="28.9" x2="211.1" y2="28.9" stroke="currentColor" stroke-width=".5" stroke-opacity=".5"/><line x1="19.8" y1="101.8" x2="221.1" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="215.1,97.8 221.1,101.8 215.1,105.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="218.1" y="97" font-size="12" text-anchor="middle">x</text><line x1="120" y1="183.8" x2="120" y2="18.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="116,24.9 120,18.9 124,24.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="130" y="27.1" font-size="12" text-anchor="middle">y</text><text x="113" y="115.3" font-size="10" text-anchor="middle">O</text><text x="28.9" y="114.9" font-size="9" text-anchor="middle">−5</text><text x="47.1" y="114.9" font-size="9" text-anchor="middle">−4</text><text x="65.4" y="114.9" font-size="9" text-anchor="middle">−3</text><text x="83.6" y="114.9" font-size="9" text-anchor="middle">−2</text><text x="101.8" y="114.9" font-size="9" text-anchor="middle">−1</text><text x="138.2" y="114.9" font-size="9" text-anchor="middle">1</text><text x="156.4" y="114.9" font-size="9" text-anchor="middle">2</text><text x="174.6" y="114.9" font-size="9" text-anchor="middle">3</text><text x="192.9" y="114.9" font-size="9" text-anchor="middle">4</text><text x="211.1" y="114.9" font-size="9" text-anchor="middle">5</text><text x="112" y="177.8" font-size="9" text-anchor="middle">−4</text><text x="112" y="159.6" font-size="9" text-anchor="middle">−3</text><text x="112" y="141.4" font-size="9" text-anchor="middle">−2</text><text x="112" y="123.2" font-size="9" text-anchor="middle">−1</text><text x="112" y="86.7" font-size="9" text-anchor="middle">1</text><text x="112" y="68.5" font-size="9" text-anchor="middle">2</text><text x="112" y="50.3" font-size="9" text-anchor="middle">3</text><text x="112" y="32.1" font-size="9" text-anchor="middle">4</text><circle cx="174.6" cy="65.4" r="3.2" fill="currentColor"/><text x="181.7" y="62.5" font-size="12" text-anchor="middle">A</text><circle cx="47.1" cy="120" r="3.2" fill="currentColor"/><text x="40.1" y="131.3" font-size="12" text-anchor="middle">B</text><line x1="120" y1="101.8" x2="174.6" y2="101.8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><line x1="174.6" y1="101.8" x2="174.6" y2="65.4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/></svg>'
-        explain: 横の数直線を x 軸、たての数直線を y 軸といい、2 つの軸が交わる点を原点 O といいます。点 A は、O から右へ 3、上へ 2 進んだ所にあるので、A の位置を (3, 2) と書きます。3 を A の x 座標、2 を A の y 座標といい、x 座標を先に書きます。左と下へ進むときは、マイナスの数を使います。点 B は O から左へ 4、下へ 1 進んだ所なので (−4, −1) です。O は (0, 0) です。方眼の線が交わる所の点を、格子の点といいます。また、2 つの軸で平面は 4 つに分かれ、右上を第 1 象限（しょうげん）、左上を第 2 象限、左下を第 3 象限、右下を第 4 象限といいます。
+        explain: 横の《数直線》を x 軸、たての数直線を y 軸といい、2 つの軸が交わる点を原点 O といいます。点 A は、O から右へ 3、上へ 2 進んだ所にあるので、A の位置を (3, 2) と書きます。3 を A の x 座標、2 を A の y 座標といい、x 座標を先に書きます。左と下へ進むときは、マイナスの数を使います。点 B は O から左へ 4、下へ 1 進んだ所なので (−4, −1) です。O は (0, 0) です。方眼の線が交わる所の点を、格子の点といいます。また、2 つの軸で平面は 4 つに分かれ、右上を第 1 象限（しょうげん）、左上を第 2 象限、左下を第 3 象限、右下を第 4 象限といいます。
       - part: 思い出す
         text: (−3) + 7 はいくつですか。
         answer: 4
@@ -180,7 +180,7 @@ days:
         answer: −2
         check: "(lambda v: f'−{-v}' if v < 0 else f'{v}')((-5) + 3)"
         hints:
-          - 数直線の −5 から始めよう。
+          - 《数直線》の −5 から始めよう。
           - 3 をたすので、右へ 3 進もう。
           - 0 まで行くかな。
         paths:
@@ -478,7 +478,7 @@ days:
         paths:
           - [横は 3 − (−2) = 5 cm, たては 1 − (−2) = 3 cm, 5 × 3 = 15]
           - [方眼のマスを数える, 15]
-        note: 横を 3 − 2 = 1 としやすい。マイナスの数をひくときは、数直線のちがいで確かめる。
+        note: 横を 3 − 2 = 1 としやすい。マイナスの数をひくときは、《数直線》のちがいで確かめる。
     extra:
       - part: 今日
         text: 2 点 (0, −3)、(0, 4) の間は、何目もりですか。
@@ -525,7 +525,7 @@ days:
         check: "(-4) - (-6)"
         hints:
           - ひき算は「ちがい」と考えよう。
-          - 数直線で、−6 から −4 まで、右へいくつ進むかな。
+          - 《数直線》で、−6 から −4 まで、右へいくつ進むかな。
           - −6 と −4 のどちらが右にあるかな。
         paths:
           - [−6 から −4 まで右へ 2, 2]
@@ -807,7 +807,7 @@ ri:
       - 長方形と直角三角形の、たてと横の長さを、座標のひき算で求めよう。
     paths:
       - [かこむ長方形は 横 4 − (−3) = 7・たて 5 − (−1) = 6 で 42 cm², まわりの直角三角形は 10.5 cm²・9 cm²・6 cm², 42 − (10.5 + 9 + 6) = 16.5, 16.5 cm²]
-    note: 辺が軸に平行でない三角形は、かこむ長方形からまわりをのぞく（G-008 の方眼のななめの正方形と同じ考え）。座標がマイナスの所の長さを、数直線の上の 2 点の間（N-010 のひき算）として求めるのが要点。
+    note: 辺が軸に平行でない三角形は、かこむ長方形からまわりをのぞく（G-008 の方眼のななめの正方形と同じ考え）。座標がマイナスの所の長さを、《数直線》の上の 2 点の間（N-010 のひき算）として求めるのが要点。
   - part: 離
     kinds: [道筋]
     text: 点 P に、① 原点 O のまわりに時計の針と反対の向きに 90° 回す、② x 軸について対称な点に移す、③ 右へ 2、下へ 3 動かす、の 3 つの動きをこの順に行うと、点 (3, −1) に移りました。もとの点 P の座標を選びましょう。
@@ -828,7 +828,7 @@ ri:
   - part: 離
     kinds: [総動員, 読み取り]
     uses: [N-011]
-    text: x 座標と y 座標がどちらも整数の点（格子の点）のうち、x 軸からのきょりと y 軸からのきょりの和が 3 になる点は、いくつありますか。たとえば点 (−1, 2) は、y 軸から 1、x 軸から 2 はなれているので、和は 3 です。
+    text: x 座標と y 座標がどちらも《整数》の点（格子の点）のうち、x 軸からのきょりと y 軸からのきょりの和が 3 になる点は、いくつありますか。たとえば点 (−1, 2) は、y 軸から 1、x 軸から 2 はなれているので、和は 3 です。
     answer: 12
     check: "sum(1 for x in range(-3, 4) for y in range(-3, 4) if abs(x) + abs(y) == 3)"
     hints:
