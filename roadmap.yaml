@@ -1347,7 +1347,7 @@ units:
   - {id: M-008, title: ジョルダン標準形, stage: 8, level: 3, region: senkei-chusho, needs: [M-006, M-007], days: 12}
   - {id: M-009, title: 双対空間と双対写像, stage: 8, level: 4, region: senkei-chusho, needs: [M-007, M-005], days: 12}
   - {id: M-011, title: 多重線形代数（テンソル積、外積）, stage: 8, level: 4, region: senkei-chusho, needs: [M-005, M-006, M-007], days: 12}
-  - {id: R-001, title: 群の定義と例、部分群と準同型, stage: 8, level: 4, region: gunkantai, needs: [A-024], days: 12}
+  - {id: R-001, title: 群の定義と例、部分群と準同型, stage: 8, level: 4, region: gunkantai, needs: [A-024], days: 12, plan: [{導入: 群の定義と例}, {練習: 部分群の定義と例}, {練習: 部分群の判定}, {練習: 準同型の定義と例}, {練習: 準同型の像と核}, {練習: 単射と核}, {練習: 同型}, {練習: 核と像は部分群}, {練習: 巡回群と生成元}, {わけ: 準同型の基本性質と核が部分群であること}, {混ぜる: 群・部分群・準同型を合わせる}, {確認: 12 日分の確認}]}
   - {id: R-002, title: 剰余類とラグランジュの定理, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12}
   - {id: R-003, title: 群作用, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12}
   - {id: R-005, title: 置換の符号と交代群, stage: 8, level: 4, region: gunkantai, needs: [R-003], days: 12}
