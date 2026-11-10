@@ -316,7 +316,7 @@ days:
           - y だけ変えたときの f の変化を考えます。
           - 2 つを足します。
         paths:
-          - [x の変化 f_x dx, y の変化 f_y dy, 足す, df]
+          - [x の変化 f_x dx, y の変化 f_y dy, 2 つの変化を足す, df = f_x dx + f_y dy]
       - part: わけ
         text: 連鎖律 dz/dt = f_x x' + f_y y' が成り立つわけを説明しましょう。
         explain: 「t が少し動くと、x は x' dt、y は y' dt だけ動く。そのとき f は f_x(x' dt) + f_y(y' dt) だけ動く。dt でわると、dz/dt = f_x x' + f_y y'。」と書ければよい。① x と y の変化、② f の変化、③ dt でわる。子どもには、具体例で確かめさせます。
@@ -359,7 +359,7 @@ days:
           - 連鎖律に入れます。
           - 項を整理します。
         paths:
-          - [f_x、f_y、x'、y', 連鎖律, 2t + 4t³]
+          - [f_x、f_y、x'、y', 連鎖律に入れる, 2t + 4t³]
       - part: 今日
         text: F(x, y) = (x² + y, xy) のヤコビ行列はどれですか。
         choices: ["(2x 1；y x)", "(2x y；1 x)", "(x 1；y 2x)", "(2x 1；x y)"]
@@ -481,7 +481,7 @@ ri:
       - 連鎖律に入れます。
       - 項を整理します。
     paths:
-      - [f_x、f_y、x'、y', 連鎖律, 2t + 4t³]
+      - [f_x、f_y、x'、y', 連鎖律に入れる, 2t + 4t³]
     note: 連鎖律 dz/dt = f_x x' + f_y y'。
   - part: 離
     kinds: [数]
