@@ -214,10 +214,18 @@
     '核': { t: '準同型 f で、単位元に写る要素全体。ker f = {g | f(g) = e_H}。' },
     '閉じている': { t: 'G の要素どうしの演算の結果が、また G に入ること。' }
   };
+  // 同じ字を含む別の言葉（原子核の「核」、群れの「群」、画像の「像」）に説明を付けないための除く条件
+  const GLOSS_EXCLUDE = {
+    '核': { pre: '原子|細胞|娘|中|結', post: '[一-龯]' },
+    '群': { post: 'れ|島|集|生|像' },
+    '像': { pre: '画|映|虚|実|残|肖|鏡' }
+  };
   const glossTerms = Object.keys(GLOSS).sort((a, b) => b.length - a.length);
   const glossRe = new RegExp(glossTerms.map(term => {
     const e = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    return /^[A-Za-z0-9]/.test(term) ? `(?<![A-Za-z0-9])${e}(?![A-Za-z0-9])` : e;
+    if (/^[A-Za-z0-9]/.test(term)) return `(?<![A-Za-z0-9])${e}(?![A-Za-z0-9])`;
+    const ex = GLOSS_EXCLUDE[term] || {};
+    return `${ex.pre ? `(?<!${ex.pre})` : ''}${e}${ex.post ? `(?!${ex.post})` : ''}`;
   }).join('|'), 'g');
   let glossTip = null;
   function applyGloss(root) {
