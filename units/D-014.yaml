@@ -62,14 +62,14 @@ days:
           連鎖律：z = f(x, y)、x = x(t)、y = y(t) のとき、
           dz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)。
           f の変化を、x と y の変化に分けて足します。
-          例：f = x² + y²、x = t、y = t² なら、dz/dt = 2x·1 + 2y·2t = 2t + 4t³。
+          例：z = f(x, y) = x² + y²、x = t、y = t² なら、dz/dt = 2x·1 + 2y·2t = 2t + 4t³。
         explain: |-
           t が動くと、x と y が動き、f が動きます。
           x の変化による f の変化と、y の変化による f の変化を足します。
           それぞれ、f の偏微分 × 内側の微分です。
         note: dz/dt = f_x x'(t) + f_y y'(t)。内側の微分をかける。
       - part: 今日
-        text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+        text: z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
         choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
         answer: "2t + 4t³"
         check: "'2t + 4t³'"
@@ -80,7 +80,7 @@ days:
         paths:
           - [f_x=2x、f_y=2y, x'=1、y'=2t, 2t + 4t³]
       - part: 今日
-        text: f = xy、x = t²、y = t のとき、dz/dt はどれですか。
+        text: z = f(x, y) = xy、x = t²、y = t のとき、dz/dt はどれですか。
         choices: ["3t²", "2t²", "t²", "2t"]
         answer: "3t²"
         check: "'3t²'"
@@ -91,7 +91,7 @@ days:
         paths:
           - [f_x=y、f_y=x, x'=2t、y'=1, 3t²]
       - part: 挑戦
-        text: f = x²y、x = t、y = t² のとき、dz/dt はどれですか。
+        text: z = f(x, y) = x²y、x = t、y = t² のとき、dz/dt はどれですか。
         choices: ["4t³", "2t³", "3t²", "2t"]
         answer: "4t³"
         check: "'4t³'"
@@ -291,7 +291,7 @@ days:
         paths:
           - [y を定数, 2xy]
       - part: 今日
-        text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+        text: z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
         choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
         answer: "2t + 4t³"
         check: "'2t + 4t³'"
@@ -339,7 +339,7 @@ days:
         paths:
           - [x を定数, x² + 3]
       - part: 今日
-        text: f = xy、x = t²、y = t のとき、dz/dt はどれですか。
+        text: z = f(x, y) = xy、x = t²、y = t のとき、dz/dt はどれですか。
         choices: ["3t²", "2t²", "t²", "2t"]
         answer: "3t²"
         check: "'3t²'"
@@ -413,7 +413,7 @@ ri:
   - part: 離
     kinds: [道筋]
     uses: [D-008, M-003]
-    text: f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
+    text: z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。
     choices: ["2t + 4t³", "2t + 2t²", "4t³", "2t"]
     answer: "2t + 4t³"
     check: "'2t + 4t³'"

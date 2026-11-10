@@ -338871,14 +338871,14 @@ window.ROADMAP = {
      "items": [
       {
        "part": "見本",
-       "text": "連鎖律：z = f(x, y)、x = x(t)、y = y(t) のとき、\ndz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)。\nf の変化を、x と y の変化に分けて足します。\n例：f = x² + y²、x = t、y = t² なら、dz/dt = 2x·1 + 2y·2t = 2t + 4t³。",
+       "text": "連鎖律：z = f(x, y)、x = x(t)、y = y(t) のとき、\ndz/dt = (∂f/∂x)(dx/dt) + (∂f/∂y)(dy/dt)。\nf の変化を、x と y の変化に分けて足します。\n例：z = f(x, y) = x² + y²、x = t、y = t² なら、dz/dt = 2x·1 + 2y·2t = 2t + 4t³。",
        "explain": "t が動くと、x と y が動き、f が動きます。\nx の変化による f の変化と、y の変化による f の変化を足します。\nそれぞれ、f の偏微分 × 内側の微分です。",
        "note": "dz/dt = f_x x'(t) + f_y y'(t)。内側の微分をかける。",
-       "qid": "D-014:2eeba22334"
+       "qid": "D-014:3f520b162b"
       },
       {
        "part": "今日",
-       "text": "f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
+       "text": "z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
        "choices": [
         "2t + 4t³",
         "2t + 2t²",
@@ -338899,11 +338899,11 @@ window.ROADMAP = {
          "2t + 4t³"
         ]
        ],
-       "qid": "D-014:02a13a4476"
+       "qid": "D-014:becc4f0b3d"
       },
       {
        "part": "今日",
-       "text": "f = xy、x = t²、y = t のとき、dz/dt はどれですか。",
+       "text": "z = f(x, y) = xy、x = t²、y = t のとき、dz/dt はどれですか。",
        "choices": [
         "3t²",
         "2t²",
@@ -338924,11 +338924,11 @@ window.ROADMAP = {
          "3t²"
         ]
        ],
-       "qid": "D-014:daf7491538"
+       "qid": "D-014:55020e15d0"
       },
       {
        "part": "挑戦",
-       "text": "f = x²y、x = t、y = t² のとき、dz/dt はどれですか。",
+       "text": "z = f(x, y) = x²y、x = t、y = t² のとき、dz/dt はどれですか。",
        "choices": [
         "4t³",
         "2t³",
@@ -338949,7 +338949,7 @@ window.ROADMAP = {
          "4t³"
         ]
        ],
-       "qid": "D-014:bbd0dc0633"
+       "qid": "D-014:7f2bf21f78"
       }
      ],
      "key": "連鎖律"
@@ -339320,7 +339320,7 @@ window.ROADMAP = {
       },
       {
        "part": "今日",
-       "text": "f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
+       "text": "z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
        "choices": [
         "2t + 4t³",
         "2t + 2t²",
@@ -339341,7 +339341,7 @@ window.ROADMAP = {
          "2t + 4t³"
         ]
        ],
-       "qid": "D-014:02a13a4476-2"
+       "qid": "D-014:becc4f0b3d-2"
       },
       {
        "part": "今日",
@@ -339428,7 +339428,7 @@ window.ROADMAP = {
       },
       {
        "part": "今日",
-       "text": "f = xy、x = t²、y = t のとき、dz/dt はどれですか。",
+       "text": "z = f(x, y) = xy、x = t²、y = t のとき、dz/dt はどれですか。",
        "choices": [
         "3t²",
         "2t²",
@@ -339449,7 +339449,7 @@ window.ROADMAP = {
          "3t²"
         ]
        ],
-       "qid": "D-014:daf7491538-2"
+       "qid": "D-014:55020e15d0-2"
       },
       {
        "part": "今日",
@@ -339558,7 +339558,7 @@ window.ROADMAP = {
      "key": "8 日分の確認"
     }
    ],
-   "ver": "8c810ae1ee",
+   "ver": "0f9891eb95",
    "ri": [
     {
      "part": "離",
@@ -339601,7 +339601,7 @@ window.ROADMAP = {
       "D-008",
       "M-003"
      ],
-     "text": "f = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
+     "text": "z = f(x, y) = x² + y²、x = t、y = t² のとき、dz/dt はどれですか。",
      "choices": [
       "2t + 4t³",
       "2t + 2t²",
@@ -339623,7 +339623,7 @@ window.ROADMAP = {
       ]
      ],
      "note": "連鎖律 dz/dt = f_x x' + f_y y'。",
-     "qid": "D-014:9f8d63222c"
+     "qid": "D-014:be1a0ebc3d"
     },
     {
      "part": "離",

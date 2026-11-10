@@ -18,7 +18,7 @@
   const lc = id => `--c: var(--lane-${id})`;
   // 問題の文の数式の見せ方（D-042、D-060）。データの書き方は変えず、見せるときに組む（答え合わせ、check の式、鍵盤はそのまま）。
   // - 1 文字の小文字（x、a、n）は斜体のセリフ体にして × と見分ける。数のすぐ後に空白をはさむ 1 文字（5 m、300 g）は単位とみて変えない
-  // - 分数（3/4、(x + 1)/3、(x² − 16)/(x − 4)、dy/dx）は分子と分母を上下に重ね、外側のかっこを外す
+  // - 分数（3/4、(x + 1)/3、(x² − 16)/(x − 4)、dy/dx、∂f/∂x）は分子と分母を上下に重ね、外側のかっこを外す
   // - ベクトル（→a、→AB、2→a）は文字の上に矢印、根号（√5、√(x + 1)）は中身の上に横線
   // - lim (x→1) は lim の下に x→1、∫(0→3) と [F(x)](0→3) は右に上と下の端、Σ k（k = 1〜n）は Σ の上と下に範囲
   // - x^2、(1 − p)^(n − k) は右肩に、P_A は右下に
@@ -106,7 +106,7 @@
       if (c === '_' && (m = /^[A-Za-z0-9]/.exec(s.slice(i + 1)))) { out.push({ k: 'sub', v: m[0] }); i += 2; continue; }
       if ((m = /^\d+(?:\.\d+)?/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'n', v: m[0], t }); i += m[0].length + t.length; continue; }
       if ((m = /^[A-Za-z]+/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'w', v: m[0], t }); i += m[0].length + t.length; continue; }
-      if (/[πθ□∞]/.test(c)) { const t = tail(i + 1); out.push({ k: 's', v: c, t }); i += 1 + t.length; continue; }
+      if (/[πθ□∞∂]/.test(c)) { const t = tail(i + 1); out.push({ k: 's', v: c, t }); i += 1 + t.length; continue; }
       if (SS[c]) { const t = tail(i); out.push({ k: 's', v: '', t }); i += t.length; continue; }  // ₙCₖ の ₙ のように前に字のない添字
       out.push({ k: 't', v: c }); i++;
     }
@@ -133,7 +133,10 @@
       if (x[k].k !== 't' || x[k].v !== '/' || !operand(x, k - 1) || !operand(x, k + 1)) continue;
       let a = k - 1, b = k + 1;
       while (a > 0 && (operand(x, a - 1) || (x[a].k === 'g' && x[a - 1].k === 'w' && x[a - 1].v.length === 1))) a--;
-      // 分母は 1 つの字句と、続く肩だけ（f(x) のような関数の形は、名前とかっこをまとめる）。1/2x は 1/2 と x とみる
+      // 分母は 1 つの字句と、続く肩だけ（f(x) のような関数の形は、名前とかっこをまとめる）。1/2x は 1/2 と x とみる。
+      // ∂f/∂x の分母は、∂ と変数名をまとめる（∂x を 1 つのかたまりにする）。∂²f/∂x∂y もまとめる
+      if (x[b].k === 's' && x[b].v === '∂' && x[b + 1] && x[b + 1].k === 'w') b++;
+      while (x[b + 1] && x[b + 1].k === 's' && x[b + 1].v === '∂' && x[b + 2] && x[b + 2].k === 'w') b += 2;
       if (x[b].k === 'w' && x[b + 1] && x[b + 1].k === 'g') b++;
       while (x[b + 1] && x[b + 1].k === 'sup') b++;
       // sin h/h のように、関数の名前と空白の後ろなら、名前も分子に入れる
