@@ -1349,7 +1349,7 @@ units:
   - {id: M-011, title: 多重線形代数（テンソル積、外積）, stage: 8, level: 4, region: senkei-chusho, needs: [M-005, M-006, M-007], days: 12}
   - {id: R-001, title: 群の定義と例、部分群と準同型, stage: 8, level: 4, region: gunkantai, needs: [A-024], days: 12, plan: [{導入: 群の定義と例}, {練習: 部分群の定義と例}, {練習: 部分群の判定}, {練習: 準同型の定義と例}, {練習: 準同型の像と核}, {練習: 単射と核}, {練習: 同型}, {練習: 核と像は部分群}, {練習: 巡回群と生成元}, {わけ: 準同型の基本性質と核が部分群であること}, {混ぜる: 群・部分群・準同型を合わせる}, {確認: 12 日分の確認}]}
   - {id: R-002, title: 剰余類とラグランジュの定理, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12}
-  - {id: R-003, title: 群作用, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12}
+  - {id: R-003, title: 群作用, stage: 8, level: 4, region: gunkantai, needs: [R-001], days: 12, plan: [{導入: 群作用の定義と例}, {練習: 軌道と安定化群}, {練習: 軌道分解}, {練習: 軌道・安定化群の定理}, {練習: 共役作用と共役類}, {練習: 中心化群と類等式}, {練習: バーンサイドの補題}, {練習: 図形の対称群の作用}, {練習: 部分群への制限}, {わけ: 軌道・安定化群の定理とバーンサイドの補題}, {混ぜる: 群作用を合わせる}, {確認: 12 日分の確認}]}
   - {id: R-005, title: 置換の符号と交代群, stage: 8, level: 4, region: gunkantai, needs: [R-003], days: 12}
   - {id: R-006, title: 行列群、結晶群と空間群（ビーベルバッハの定理）, stage: 8, level: 4, region: gunkantai, needs: [R-001, M-004], days: 12}
   - {id: T-001, title: 位相空間, stage: 8, level: 4, region: iso, needs: [D-012, D-013, D-015, D-047], days: 12}
