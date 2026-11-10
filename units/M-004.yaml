@@ -31,10 +31,15 @@ days:
           ｜a(ei − fh)｜(e f；h i)｜+｜
           ｜b(di − fg)｜(d f；g i)｜−｜
           ｜c(dh − eg)｜(d e；g h)｜+｜
+          例：det (1 2 3；0 1 4；5 6 0) を、1 行目で余因子展開します。
+          ① a=1：1 行目と 1 列目を消すと (1 4；6 0)。det = 1×0 − 4×6 = −24。1×(−24) = −24。
+          ② b=2：1 行目と 2 列目を消すと (0 4；5 0)。det = 0×0 − 4×5 = −20。−2×(−20) = +40。
+          ③ c=3：1 行目と 3 列目を消すと (0 1；5 6)。det = 0×6 − 1×5 = −5。3×(−5) = −15。
+          合計：−24 + 40 − 15 = 1。
           【まとめ】行列式は「面積・体積の倍率」。2×2 は ad−bc、3×3 は余因子展開。
         note: 行列式は面積・体積の倍率。2×2 は ad−bc、3×3 は余因子展開（+ − +）。0 ならつぶれ、負なら向き反転。
         svg: |-
-          <svg viewBox="0 0 360 210" role="img" aria-label="行列式と面積の図">
+          <svg viewBox="0 0 360 380" role="img" aria-label="行列式と面積・余因子展開の図">
             <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
               <line x1="30" y1="170" x2="170" y2="170"/><line x1="60" y1="190" x2="60" y2="40"/>
             </g>
@@ -59,6 +64,36 @@ days:
               <text x="225" y="95">(1, 2)</text>
               <text x="352" y="174">x</text><text x="202" y="44">y</text>
               <text x="210" y="200">例：A = (2 1；1 2)</text>
+            </g>
+            <line x1="20" y1="225" x2="340" y2="225" stroke="currentColor" stroke-width="1" opacity=".3"/>
+            <text x="20" y="245" font-size="11" fill="currentColor">余因子展開：1 行目の成分ごとに、行と列を消して 2×2 の行列式を作る</text>
+            <g stroke="currentColor" fill="none" stroke-width="1">
+              <rect x="20" y="265" width="48" height="48"/>
+              <line x1="36" y1="265" x2="36" y2="313"/><line x1="52" y1="265" x2="52" y2="313"/>
+              <line x1="20" y1="281" x2="68" y2="281"/><line x1="20" y1="297" x2="68" y2="297"/>
+              <rect x="140" y="265" width="48" height="48"/>
+              <line x1="156" y1="265" x2="156" y2="313"/><line x1="172" y1="265" x2="172" y2="313"/>
+              <line x1="140" y1="281" x2="188" y2="281"/><line x1="140" y1="297" x2="188" y2="297"/>
+              <rect x="260" y="265" width="48" height="48"/>
+              <line x1="276" y1="265" x2="276" y2="313"/><line x1="292" y1="265" x2="292" y2="313"/>
+              <line x1="260" y1="281" x2="308" y2="281"/><line x1="260" y1="297" x2="308" y2="297"/>
+            </g>
+            <g fill="currentColor" opacity=".12">
+              <rect x="20" y="265" width="48" height="16"/><rect x="20" y="265" width="16" height="48"/>
+              <rect x="140" y="265" width="48" height="16"/><rect x="156" y="265" width="16" height="48"/>
+              <rect x="260" y="265" width="48" height="16"/><rect x="292" y="265" width="16" height="48"/>
+            </g>
+            <g font-size="10" fill="currentColor" text-anchor="middle">
+              <text x="44" y="258">a の項（+）</text>
+              <text x="164" y="258">b の項（−）</text>
+              <text x="284" y="258">c の項（+）</text>
+              <text x="44" y="328">1行目と1列目</text>
+              <text x="164" y="328">1行目と2列目</text>
+              <text x="284" y="328">1行目と3列目</text>
+              <text x="44" y="342">(1 4；6 0) の det</text>
+              <text x="164" y="342">(0 4；5 0) の det</text>
+              <text x="284" y="342">(0 1；5 6) の det</text>
+              <text x="180" y="368">それぞれの 2×2 の det に、a、−b、c をかけて足す</text>
             </g>
           </svg>
       - part: 思い出す
