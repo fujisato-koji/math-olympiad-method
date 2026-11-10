@@ -282,6 +282,28 @@ def check(data, problems):
             # 上付き・下付きは画面が組める ^(...) / _(...) の形にする
             if "^{" in s or "_{" in s:
                 errors.append("units/" + uid + ".yaml: 上付き・下付きは ^{...} / _{...} ではなく ^(...) / _(...) と書く")
+        # 初見の用語を問題でいきなり使わない（D-068）。その単元で導入する用語は、
+        # 見本で説明するか《用語》で囲む。見本より前の裸の使用は誤り。
+        own_terms = [t for t, g in gloss.items() if g.get("unit") == uid]
+        title = units[uid][2].get("title", "")
+        introduced = set()
+        for d in doc.get("days", []):
+            for it in d.get("items", []):
+                if it.get("part") == "見本":
+                    s = "\n".join(x for k in ("text", "explain", "note", "hints") for x in strings(it.get(k)))
+                    introduced |= {t for t in own_terms if t in s}
+            for i, it in enumerate(d.get("items", []), 1):
+                if it.get("part") == "見本":
+                    continue
+                s = "\n".join(x for k in ("text", "note", "choices", "hints") for x in strings(it.get(k)))
+                marked = {m.group(1) for m in re.finditer(r"《([^》\n]+)》", s)}
+                for t in own_terms:
+                    if t not in s or t in introduced or t in title or t in marked:
+                        continue
+                    # 長い用語の一部として出ているだけなら、その長い用語で判断する
+                    if any(t != u and t in u and u in s for u in own_terms):
+                        continue
+                    errors.append(f"{uid} {d.get('day')} 日目 {i} 問目: 用語 {t} を、見本で説明するか《{t}》と囲む")
         plan = expand(units[uid][2])
         days = doc.get("days", [])
         if [d.get("day") for d in days] != list(range(1, len(days) + 1)):
