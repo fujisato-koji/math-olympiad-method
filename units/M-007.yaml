@@ -197,10 +197,45 @@ days:
           対角化できるのは、2×2 なら 1 次独立な固有ベクトルが 2 本あるときです。
           対角化すると、A^n = P D^n P⁻¹ でべき乗が簡単に計算できます。
         explain: |-
-          A = (2 1；1 2) の固有値は 3 と 1。固有ベクトルは (1；1) と (1；−1)。
+          対角化とは、座標系を固有ベクトルの向きに取り直すことです。
+          もとの座標 x を P⁻¹ で固有ベクトルの座標 y に移すと、A は対角行列 D になり、各方向を固有値倍するだけになります。
+          計算が終わったら P でもとの座標に戻します。だから A = P D P⁻¹ です。
+          対角行列のべき乗は対角成分をべき乗するだけなので、A^n が簡単に求まります。
+          例：A = (2 1；1 2) の固有値は 3 と 1。固有ベクトルは (1；1) と (1；−1)。
           P = (1 1；1 −1)、D = (3 0；0 1) とすると、A = P D P⁻¹。
-          D^n は対角成分を n 乗するだけです。
         note: A = P D P⁻¹。P は固有ベクトル、D は固有値。A^n = P D^n P⁻¹。
+        svg: |-
+          <svg viewBox="0 0 340 180" role="img" aria-label="対角化の図">
+            <g fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="20" y="35" width="110" height="36" rx="6"/>
+              <rect x="210" y="35" width="110" height="36" rx="6"/>
+              <rect x="20" y="115" width="110" height="36" rx="6"/>
+              <rect x="210" y="115" width="110" height="36" rx="6"/>
+            </g>
+            <g font-size="12" fill="currentColor" text-anchor="middle">
+              <text x="75" y="58">x（もとの座標）</text>
+              <text x="265" y="58">A x</text>
+              <text x="75" y="138">y（固有ベクトル）</text>
+              <text x="265" y="138">D y</text>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="1.6">
+              <line x1="130" y1="53" x2="210" y2="53"/>
+              <line x1="130" y1="133" x2="210" y2="133"/>
+              <line x1="75" y1="71" x2="75" y2="115"/>
+              <line x1="265" y1="115" x2="265" y2="71"/>
+            </g>
+            <path d="M210 53 L202 49 L202 57 Z" fill="currentColor"/>
+            <path d="M210 133 L202 129 L202 137 Z" fill="currentColor"/>
+            <path d="M75 115 L71 107 L79 107 Z" fill="currentColor"/>
+            <path d="M265 71 L261 79 L269 79 Z" fill="currentColor"/>
+            <g font-size="11" fill="currentColor">
+              <text x="165" y="46">A</text>
+              <text x="155" y="126">D（対角）</text>
+              <text x="48" y="96">P⁻¹</text>
+              <text x="274" y="96">P</text>
+              <text x="20" y="172">固有ベクトルの座標に移すと、A は対角行列 D になる</text>
+            </g>
+          </svg>
       - part: 思い出す
         text: 対角行列 D = (3 0；0 1) の D² はどれですか。
         choices: ["(3 0；0 1)", "(6 0；0 1)", "(9 0；0 1)", "(9 0；0 2)"]

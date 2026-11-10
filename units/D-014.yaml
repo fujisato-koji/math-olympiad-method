@@ -10,16 +10,74 @@ days:
     items:
       - part: 見本
         text: |-
-          2 変数関数 f(x, y) の偏微分は、一方の変数を定数とみて微分します。
-          ∂f/∂x は y を定数とみて x で微分、∂f/∂y は x を定数とみて y で微分。
-          全微分は df = (∂f/∂x) dx + (∂f/∂y) dy です。
+          f(x, y) を、地図の上の点 (x, y) の高さだと考えます。
+          y を固定して x だけ動かしたときの坂の傾きが ∂f/∂x、x を固定して y だけ動かしたときの傾きが ∂f/∂y です。
+          x を dx、y を dy だけ動かしたときの高さの変化の 1 次近似が、全微分 df = (∂f/∂x) dx + (∂f/∂y) dy です。
           例：f = x²y + 3y なら、f_x = 2xy、f_y = x² + 3。
         explain: |-
-          【定義】偏微分は「1 つの方向だけの変化率」です。
-          x²y を x で微分すると 2xy（y は定数）。3y は x では定数なので 0。
-          y で微分すると、x²y は x²、3y は 3。
-          全微分は、x と y の小さな変化を合わせた f の変化です。
-        note: 偏微分は一方を定数とみる。df = f_x dx + f_y dy。
+          【定義】偏微分とは、ほかの変数を固定して、1 つの方向だけに動いたときの f の変化率です。
+          地図でいえば、∂f/∂x は「南北の位置 y を変えずに東西に歩いたときの坂の傾き」、∂f/∂y は「東西の位置 x を変えずに南北に歩いたときの坂の傾き」です。
+          【定義】全微分とは、x と y を同時に少しだけ動かしたときの f の変化を、1 次式で近似したものです。
+          df = f_x dx + f_y dy の第 1 項は x の変化の寄与、第 2 項は y の変化の寄与です。
+          ｜記号｜意味｜
+          ｜∂f/∂x｜y を固定して x だけ動かしたときの変化率｜
+          ｜∂f/∂y｜x を固定して y だけ動かしたときの変化率｜
+          ｜df｜x と y を少し動かしたときの f の変化の 1 次近似｜
+          例：f = x²y + 3y、点 (2, 1) を考えます。f(2,1) = 7。
+          x だけ 0.1 増やすと f(2.1,1) = 7.41。変化は 0.41 で、f_x dx = 4 × 0.1 = 0.4 に近い。
+          y だけ 0.1 増やすと f(2,1.1) = 7.7。変化は 0.7 で、f_y dy = 7 × 0.1 = 0.7。
+          両方 0.1 ずつ増やすと f(2.1,1.1) = 8.151。変化は 1.151 で、df = 0.4 + 0.7 = 1.1 に近い。
+        note: 偏微分は一方を固定した坂の傾き。全微分は 2 方向の変化を足した 1 次近似。
+        svg: |-
+          <svg viewBox="0 0 380 220" role="img" aria-label="偏微分と全微分の図">
+            <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
+              <line x1="25" y1="145" x2="170" y2="145"/><line x1="38" y1="25" x2="38" y2="200"/>
+              <ellipse cx="105" cy="118" rx="16" ry="16"/>
+              <ellipse cx="105" cy="118" rx="30" ry="30"/>
+              <ellipse cx="105" cy="118" rx="44" ry="44"/>
+              <ellipse cx="105" cy="118" rx="58" ry="58"/>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="1.1" stroke-dasharray="4 3" opacity=".7">
+              <line x1="38" y1="102" x2="165" y2="102"/><line x1="124" y1="25" x2="124" y2="190"/>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="2">
+              <line x1="124" y1="102" x2="159" y2="102"/><line x1="124" y1="102" x2="124" y2="63"/>
+            </g>
+            <path d="M160 102 L152 98 L152 106 Z" fill="currentColor"/>
+            <path d="M124 62 L120 70 L128 70 Z" fill="currentColor"/>
+            <circle cx="124" cy="102" r="3.5" fill="currentColor"/>
+            <g font-size="11" fill="currentColor">
+              <text x="20" y="15">地図（等高線）</text>
+              <text x="171" y="149">x</text><text x="31" y="28">y</text>
+              <text x="116" y="96">P</text>
+              <text x="128" y="94">y を固定</text>
+              <text x="128" y="74">x を固定</text>
+              <text x="80" y="208">等高線</text>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
+              <line x1="205" y1="95" x2="365" y2="95"/><line x1="215" y1="20" x2="215" y2="95"/>
+            </g>
+            <path d="M215.0 77.5 L219.5 77.4 L224.0 77.3 L228.5 77.0 L233.0 76.6 L237.5 76.0 L242.0 75.4 L246.5 74.6 L251.0 73.8 L255.5 72.8 L260.0 71.7 L264.5 70.4 L269.0 69.1 L273.5 67.6 L278.0 66.1 L282.5 64.4 L287.0 62.6 L291.5 60.6 L296.0 58.6 L300.5 56.4 L305.0 54.2 L309.5 51.8 L314.0 49.3 L318.5 46.6 L323.0 43.9 L327.5 41.0 L332.0 38.1 L336.5 35.0 L341.0 31.8 L345.5 28.4 L350.0 25.0" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="278.0" y1="66.1" x2="332.0" y2="38.1" stroke="currentColor" stroke-width="1.6" stroke-dasharray="4 3"/>
+            <circle cx="305.0" cy="54.2" r="3.2" fill="currentColor"/>
+            <g font-size="11" fill="currentColor">
+              <text x="200" y="15">y を固定した断面</text>
+              <text x="366" y="99">x</text><text x="207" y="32">f</text>
+              <text x="220" y="42">y = 1</text>
+              <text x="290" y="75">傾き ∂f/∂x = 4</text>
+            </g>
+            <g stroke="currentColor" fill="none" stroke-width="1.2" opacity=".55">
+              <line x1="205" y1="195" x2="365" y2="195"/><line x1="215" y1="128" x2="215" y2="195"/>
+            </g>
+            <line x1="215" y1="195" x2="345" y2="139" stroke="currentColor" stroke-width="2"/>
+            <circle cx="280" cy="167" r="3.2" fill="currentColor"/>
+            <g font-size="11" fill="currentColor">
+              <text x="200" y="118">x を固定した断面</text>
+              <text x="366" y="199">y</text><text x="207" y="132">f</text>
+              <text x="220" y="145">x = 2</text>
+              <text x="285" y="158">傾き ∂f/∂y = 7</text>
+            </g>
+          </svg>
       - part: 今日
         text: f(x, y) = x²y + 3y の ∂f/∂x はどれですか。
         choices: ["2xy", "x² + 3", "2x + 3", "x²y"]
