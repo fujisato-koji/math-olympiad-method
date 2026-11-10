@@ -811,7 +811,7 @@ units:
   - {id: P-001, title: 運動の表し方（速さと向き、変位・速度・加速度、等加速度直線運動）, stage: 5, level: 3, region: rikigaku, needs: [G-027, D-004, P-187], days: 8}
   - {id: P-002, title: 力とつり合い（…、フックの法則、応力・ひずみ・ヤング率）, stage: 5, level: 3, region: rikigaku, needs: [G-027, P-186], days: 8}
   - {id: P-003, title: 運動の法則（ニュートンの 3 法則、運動方程式、落下運動）, stage: 5, level: 3, region: rikigaku, needs: [P-002], days: 8}
-  - {id: P-004, title: 仕事とエネルギー（仕事と仕事率、運動エネルギーと位置エネルギー、力学的エネルギー保存、保存力とポテンシャル）, stage: 5, level: 3, region: rikigaku, needs: [D-006], days: 8}
+  - {id: P-004, title: 仕事とエネルギー（仕事と仕事率、運動エネルギーと位置エネルギー、力学的エネルギー保存、保存力とポテンシャル）, stage: 5, level: 3, region: rikigaku, needs: [D-006], days: 8, plan: [{導入: 仕事と仕事率}, {練習: 運動エネルギーと仕事}, {練習: 位置エネルギーと力学的エネルギー保存}, {練習: ばねと摩擦力}, {練習: 保存力とポテンシャル}, {わけ: 仕事とエネルギーの関係}, {混ぜる: 斜面・ばね・振り子}, {確認: 8 日分の確認}]}
   - {id: P-005, title: 平面内の運動と剛体のつり合い（曲線運動の速度と加速度、放物運動、力のモーメント、重心）, stage: 5, level: 3, region: rikigaku, needs: [P-001, P-003, D-006, E-174], days: 8}
   - {id: P-006, title: 運動量と衝突（運動量と力積、運動量保存、衝突と力学的エネルギー、重心運動と相対運動、二体問題、可変質量とロケット方程式）, stage: 5, level: 3, region: rikigaku, needs: [P-003, P-004], days: 8}
   - {id: P-007, title: 円運動と単振動（向心加速度、振り子、単振動の表し方）, stage: 5, level: 3, region: rikigaku, needs: [P-003, G-025, P-188], days: 8}
@@ -833,7 +833,7 @@ units:
   - {id: P-058, title: 相対論的力学（ミンコフスキー計量と不変間隔、固有時、4 元速度と 4 元運動量、質量とエネルギーの等価性、衝突と崩壊、光子のエネルギーと運動量、相対論的ドップラー効果）, stage: 6, level: 3, region: soutai, needs: [P-006, P-057], days: 8}
   - {id: P-069, title: 量子論の始まり（…、粒子性と波動性、不確定性関係による見積もり）, stage: 5, level: 3, region: ryoshi, needs: [P-021, P-030, P-004], days: 8}
   - {id: P-088, title: 原子の構造とスペクトル（…、パウリの原理と電子配置）, stage: 5, level: 3, region: genshi, needs: [P-069], days: 8}
-  - {id: P-104, title: 原子核と放射線（原子核の構成と同位体、α・β・γ 崩壊、半減期と指数関数的な減衰、核反応、質量欠損、核分裂と核融合、中性子捕獲）, stage: 5, level: 3, region: soryushi, needs: [D-001], days: 8}
+  - {id: P-104, title: 原子核と放射線（原子核の構成と同位体、α・β・γ 崩壊、半減期と指数関数的な減衰、核反応、質量欠損、核分裂と核融合、中性子捕獲）, stage: 5, level: 3, region: soryushi, needs: [D-001], days: 8, plan: [{導入: 原子核の構成と同位体}, {練習: α・β・γ 崩壊}, {練習: 半減期と指数関数的減衰}, {練習: 核反応と質量欠損}, {練習: 核分裂・核融合・中性子捕獲}, {わけ: 半減期の式と保存則}, {混ぜる: 崩壊と核反応}, {確認: 8 日分の確認}]}
   - {id: P-105, title: 素粒子の存在（電子、電子ニュートリノ、陽子、中性子、光子の電荷とスピン、陽子と中性子は複合粒子）, stage: 5, level: 3, region: soryushi, needs: [P-104, P-069], days: 8}
   - {id: P-117, title: 測定と誤差の解析（物理量と単位、有効数字、系統誤差と偶然誤差、誤差の伝播、線形化と直線の当てはめ、グラフと誤差棒）, stage: 5, level: 3, region: jikken, needs: [C-020, D-004], days: 8}
   - {id: A-037, title: 分数式と部分分数分解, stage: 5, level: 2, region: shiki, needs: [A-015, N-019], days: 6}
@@ -972,7 +972,7 @@ units:
   - {id: D-044, title: 1 階常微分方程式, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-006], days: 8}
   - {id: D-045, title: 高階線形常微分方程式, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-044], days: 8}
   - {id: D-046, title: 連立 1 階線形系と平衡点の相図, stage: 6, level: 3, region: bibun-hoteishiki, needs: [D-044, M-007], days: 8}
-  - {id: M-003, title: 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-002], days: 8}
+  - {id: M-003, title: 行列の演算と連立一次方程式（掃き出し法、階数、逆行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-002], days: 8, plan: [{導入: 行列の演算と連立一次方程式}, {練習: 掃き出し法}, {練習: 階数と解の存在}, {練習: 逆行列}, {練習: 3 次の行列式}, {わけ: 行基本変形と逆行列の性質}, {混ぜる: 連立方程式・逆行列・行列式}, {確認: 8 日分の確認}]}
   - {id: M-004, title: 行列式, stage: 6, level: 3, region: senkei-keisan, needs: [M-003], days: 8}
   - {id: M-006, title: 内積空間（グラム–シュミット、直交行列とユニタリ行列）, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8}
   - {id: M-007, title: 固有値と対角化, stage: 6, level: 3, region: senkei-keisan, needs: [M-004], days: 8}
