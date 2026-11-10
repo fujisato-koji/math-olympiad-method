@@ -32,7 +32,7 @@ days:
           - [両辺を積分, 2x の積分, x² + C]
       - part: 今日
         text: y' = y の一般解はどれですか。
-        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^{−x}"]
+        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^(−x)"]
         answer: "y = C e^x"
         check: "'y = C e^x'"
         hints:
@@ -60,7 +60,7 @@ days:
         text: |-
           変数分離：y' = g(x) h(y) の形なら、dy/h(y) = g(x) dx と分けて積分します。
           例：y' = xy なら、dy/y = x dx。両辺を積分して log|y| = x²/2 + C。
-          y = C e^{x²/2} が一般解です。
+          y = C e^(x²/2) が一般解です。
           両辺に y と x が分かれて入るように変形するのがコツです。
         explain: |-
           変数分離は、y の項を左辺、x の項を右辺に集める方法です。
@@ -69,9 +69,9 @@ days:
         note: y'=g(x)h(y) → dy/h(y)=g(x)dx。両辺を積分。
       - part: 今日
         text: y' = xy の一般解はどれですか。
-        choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
-        answer: "y = C e^{x²/2}"
-        check: "'y = C e^{x²/2}'"
+        choices: ["y = C e^(x²/2)", "y = C e^(2x)", "y = x² + C", "y = C x"]
+        answer: "y = C e^(x²/2)"
+        check: "'y = C e^(x²/2)'"
         hints:
           - dy/y = x dx と分けます。
           - 両辺を積分します。
@@ -91,9 +91,9 @@ days:
           - [dy/y² = dx, y⁻² の積分, −1/y = x + C, y = −1/(x+C)]
       - part: 挑戦
         text: y' = 2xy の一般解はどれですか。
-        choices: ["y = C e^{x²}", "y = C e^{2x}", "y = C e^{x²/2}", "y = x² + C"]
-        answer: "y = C e^{x²}"
-        check: "'y = C e^{x²}'"
+        choices: ["y = C e^(x²)", "y = C e^(2x)", "y = C e^(x²/2)", "y = x² + C"]
+        answer: "y = C e^(x²)"
+        check: "'y = C e^(x²)'"
         hints:
           - dy/y = 2x dx と分けます。
           - 両辺を積分します。
@@ -107,19 +107,19 @@ days:
       - part: 見本
         text: |-
           1 階線形微分方程式：y' + P(x) y = Q(x)。
-          積分因子 e^{∫P dx} を両辺にかけると、左辺が (e^{∫P dx} y)' になります。
-          例：y' + y = 0 は、積分因子 e^x をかけると (e^x y)' = 0。y = C e^{−x}。
-          y' + 2y = 4 は、定数解 y=2 と 同次解 C e^{−2x} の和。
+          積分因子 e^(∫P dx) を両辺にかけると、左辺が (e^(∫P dx) y)' になります。
+          例：y' + y = 0 は、積分因子 e^x をかけると (e^x y)' = 0。y = C e^(−x)。
+          y' + 2y = 4 は、定数解 y=2 と 同次解 C e^(−2x) の和。
         explain: |-
           線形の式は、積分因子を使うと「積の微分」の形にできます。
-          左辺を (e^{∫P dx} y)' にまとめ、両辺を積分します。
+          左辺を (e^(∫P dx) y)' にまとめ、両辺を積分します。
           定数解（特解）と、右辺 0 の解（同次解）の和が一般解です。
-        note: y'+P y=Q。積分因子 e^{∫P dx} をかける。一般解は特解＋同次解。
+        note: y'+P y=Q。積分因子 e^(∫P dx) をかける。一般解は特解＋同次解。
       - part: 今日
         text: y' + y = 0 の一般解はどれですか。
-        choices: ["y = C e^{−x}", "y = C e^x", "y = C x", "y = x + C"]
-        answer: "y = C e^{−x}"
-        check: "'y = C e^{−x}'"
+        choices: ["y = C e^(−x)", "y = C e^x", "y = C x", "y = x + C"]
+        answer: "y = C e^(−x)"
+        check: "'y = C e^(−x)'"
         hints:
           - 積分因子 e^x をかけます。
           - 左辺を (e^x y)' にまとめます。
@@ -128,9 +128,9 @@ days:
           - [e^x をかける, (e^x y)'=0, e^x y=C, y=C e^(−x)]
       - part: 今日
         text: y' + 2y = 4 の一般解はどれですか。
-        choices: ["y = 2 + C e^{−2x}", "y = 2 + C e^{2x}", "y = 4 + C e^{−x}", "y = C e^{−2x}"]
-        answer: "y = 2 + C e^{−2x}"
-        check: "'y = 2 + C e^{−2x}'"
+        choices: ["y = 2 + C e^(−2x)", "y = 2 + C e^(2x)", "y = 4 + C e^(−x)", "y = C e^(−2x)"]
+        answer: "y = 2 + C e^(−2x)"
+        check: "'y = 2 + C e^(−2x)'"
         hints:
           - 定数解を探します。
           - 右辺 0 の同次解を求めます。
@@ -139,9 +139,9 @@ days:
           - [定数解 y=2, 同次解 C e^(−2x), 和]
       - part: 挑戦
         text: y' + y = x の一般解はどれですか。
-        choices: ["y = x − 1 + C e^{−x}", "y = x + C e^{−x}", "y = x + 1 + C e^{−x}", "y = C e^{−x}"]
-        answer: "y = x − 1 + C e^{−x}"
-        check: "'y = x − 1 + C e^{−x}'"
+        choices: ["y = x − 1 + C e^(−x)", "y = x + C e^(−x)", "y = x + 1 + C e^(−x)", "y = C e^(−x)"]
+        answer: "y = x − 1 + C e^(−x)"
+        check: "'y = x − 1 + C e^(−x)'"
         hints:
           - 1 次式の特解を y=ax+b とおきます。
           - 代入して a と b を決めます。
@@ -175,7 +175,7 @@ days:
           - [一般解 x²+C, x=0、y=3, C=3, x²+3]
       - part: 今日
         text: y' = y、y(0)=2 の解はどれですか。
-        choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+        choices: ["y = 2 e^x", "y = e^(2x)", "y = 2 + e^x", "y = 2x"]
         answer: "y = 2 e^x"
         check: "'y = 2 e^x'"
         hints:
@@ -186,9 +186,9 @@ days:
           - [一般解 C e^x, x=0、y=2, C=2, 2 e^x]
       - part: 挑戦
         text: y' + y = 0、y(0)=1 の解はどれですか。
-        choices: ["y = e^{−x}", "y = e^x", "y = 1 + e^{−x}", "y = x + 1"]
-        answer: "y = e^{−x}"
-        check: "'y = e^{−x}'"
+        choices: ["y = e^(−x)", "y = e^x", "y = 1 + e^(−x)", "y = x + 1"]
+        answer: "y = e^(−x)"
+        check: "'y = e^(−x)'"
         hints:
           - 同次解の形を、積分因子から おもいだそう。
           - x=0、y=1 を代入します。
@@ -202,19 +202,19 @@ days:
       - part: 見本
         text: |-
           応用：y' = k y は、指数関数的な 増加・減少を表します。
-          解は y = y₀ e^{k t}。k>0 なら増加、k<0 なら減少。
-          半減期 T は、y(T) = y₀/2 となる時間。e^{kT} = 1/2 から T = log 2 / |k|。
+          解は y = y₀ e^(k t)。k>0 なら増加、k<0 なら減少。
+          半減期 T は、y(T) = y₀/2 となる時間。e^(kT) = 1/2 から T = log 2 / |k|。
           冷却や RC 回路も、似た形の微分方程式で表されます。
         explain: |-
           y'=ky は「変化の速さが、今の量に比例する」という式です。
           人口増加、放射線の減衰、冷却など、多くの現象に出てきます。
           k の符号で増えるか減るかが決まります。
-        note: y'=ky → y=y₀ e^{kt}。半減期 T=log2/|k|。
+        note: y'=ky → y=y₀ e^(kt)。半減期 T=log2/|k|。
       - part: 今日
         text: y' = k y、y(0)=y₀ の解はどれですか。
-        choices: ["y = y₀ e^{kt}", "y = y₀ + kt", "y = y₀ e^{−kt}", "y = k e^{y₀ t}"]
-        answer: "y = y₀ e^{kt}"
-        check: "'y = y₀ e^{kt}'"
+        choices: ["y = y₀ e^(kt)", "y = y₀ + kt", "y = y₀ e^(−kt)", "y = k e^(y₀ t)"]
+        answer: "y = y₀ e^(kt)"
+        check: "'y = y₀ e^(kt)'"
         hints:
           - 変数分離で解きます。
           - 初期条件を入れます。
@@ -223,12 +223,12 @@ days:
           - [dy/y=k dt, 積分, y=C e^(kt), y(0)=y₀, y₀ e^(kt)]
       - part: 今日
         text: 半減期 T の式はどれですか。k<0 とします。
-        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^{|k|}"]
+        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^(|k|)"]
         answer: "T = log 2 / |k|"
         check: "'T = log 2 / |k|'"
         hints:
           - y(T)=y₀/2 とおきます。
-          - e^{kT}=1/2 を解きます。
+          - e^(kT)=1/2 を解きます。
           - log を使って T を表します。
         paths:
           - [y(T)=y₀/2, e^(kT)=1/2, T=log2/abs(k)]
@@ -239,7 +239,7 @@ days:
         check: "'増加する'"
         hints:
           - k の符号を見ます。
-          - k>0 のときの e^{kt} の動きを考えます。
+          - k>0 のときの e^(kt) の動きを考えます。
           - 増加します。
         paths:
           - [k>0, e^(kt) は増える, 増加]
@@ -258,7 +258,7 @@ days:
           - [両辺を積分, 積分定数 C, 微分して確かめる]
       - part: わけ
         text: 変数分離で y' = xy が解けるわけを説明しましょう。
-        explain: 「y'=xy を dy/dx=xy と書き、両辺を y でわって dx をかけます。dy/y = x dx。左辺は y だけ、右辺は x だけになり、それぞれ積分できます。積分して log|y|=x²/2+C、指数をとって y=C e^{x²/2}。」と書ければよい。① y と x を分ける、② 両辺を積分、③ 指数をとる。子どもには、微分して確かめさせます。
+        explain: 「y'=xy を dy/dx=xy と書き、両辺を y でわって dx をかけます。dy/y = x dx。左辺は y だけ、右辺は x だけになり、それぞれ積分できます。積分して log|y|=x²/2+C、指数をとって y=C e^(x²/2)。」と書ければよい。① y と x を分ける、② 両辺を積分、③ 指数をとる。子どもには、微分して確かめさせます。
         hints:
           - y の項と x の項を分けます。
           - 両辺を積分します。
@@ -290,9 +290,9 @@ days:
           - [積分, x²+C]
       - part: 今日
         text: y' = xy の一般解はどれですか。
-        choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
-        answer: "y = C e^{x²/2}"
-        check: "'y = C e^{x²/2}'"
+        choices: ["y = C e^(x²/2)", "y = C e^(2x)", "y = x² + C", "y = C x"]
+        answer: "y = C e^(x²/2)"
+        check: "'y = C e^(x²/2)'"
         hints:
           - 変数分離をします。
           - 両辺を積分します。
@@ -301,9 +301,9 @@ days:
           - [dy/y=x dx, 積分, y=C e^(x²/2)]
       - part: 今日
         text: y' + y = 0 の一般解はどれですか。
-        choices: ["y = C e^{−x}", "y = C e^x", "y = C x", "y = x + C"]
-        answer: "y = C e^{−x}"
-        check: "'y = C e^{−x}'"
+        choices: ["y = C e^(−x)", "y = C e^x", "y = C x", "y = x + C"]
+        answer: "y = C e^(−x)"
+        check: "'y = C e^(−x)'"
         hints:
           - 積分因子 e^x をかけます。
           - (e^x y)'=0 にします。
@@ -327,7 +327,7 @@ days:
     items:
       - part: 今日
         text: y' = y の一般解はどれですか。
-        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^{−x}"]
+        choices: ["y = C e^x", "y = C x", "y = x + C", "y = C e^(−x)"]
         answer: "y = C e^x"
         check: "'y = C e^x'"
         hints:
@@ -349,9 +349,9 @@ days:
           - [dy/y²=dx, 積分, y=−1/(x+C)]
       - part: 今日
         text: y' + 2y = 4 の一般解はどれですか。
-        choices: ["y = 2 + C e^{−2x}", "y = 2 + C e^{2x}", "y = 4 + C e^{−x}", "y = C e^{−2x}"]
-        answer: "y = 2 + C e^{−2x}"
-        check: "'y = 2 + C e^{−2x}'"
+        choices: ["y = 2 + C e^(−2x)", "y = 2 + C e^(2x)", "y = 4 + C e^(−x)", "y = C e^(−2x)"]
+        answer: "y = 2 + C e^(−2x)"
+        check: "'y = 2 + C e^(−2x)'"
         hints:
           - 定数解を探します。
           - 同次解を求めます。
@@ -360,7 +360,7 @@ days:
           - [定数解 2, 同次解 C e^(−2x), 和]
       - part: 今日
         text: y' = y、y(0)=2 の解はどれですか。
-        choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+        choices: ["y = 2 e^x", "y = e^(2x)", "y = 2 + e^x", "y = 2x"]
         answer: "y = 2 e^x"
         check: "'y = 2 e^x'"
         hints:
@@ -371,9 +371,9 @@ days:
           - [C e^x, y(0)=2, C=2, 2 e^x]
       - part: 今日
         text: y' = k y、y(0)=y₀ の解はどれですか。
-        choices: ["y = y₀ e^{kt}", "y = y₀ + kt", "y = y₀ e^{−kt}", "y = k e^{y₀ t}"]
-        answer: "y = y₀ e^{kt}"
-        check: "'y = y₀ e^{kt}'"
+        choices: ["y = y₀ e^(kt)", "y = y₀ + kt", "y = y₀ e^(−kt)", "y = k e^(y₀ t)"]
+        answer: "y = y₀ e^(kt)"
+        check: "'y = y₀ e^(kt)'"
         hints:
           - 変数分離で解きます。
           - 初期条件を入れます。
@@ -382,12 +382,12 @@ days:
           - [dy/y=k dt, y=C e^(kt), y(0)=y₀, y₀ e^(kt)]
       - part: 今日
         text: 半減期 T の式はどれですか。k<0 とします。
-        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^{|k|}"]
+        choices: ["T = log 2 / |k|", "T = |k| / log 2", "T = 2|k|", "T = e^(|k|)"]
         answer: "T = log 2 / |k|"
         check: "'T = log 2 / |k|'"
         hints:
           - y(T)=y₀/2 とおきます。
-          - e^{kT}=1/2 を解きます。
+          - e^(kT)=1/2 を解きます。
           - log を使います。
         paths:
           - [y(T)=y₀/2, e^(kT)=1/2, T=log2/abs(k)]
@@ -412,9 +412,9 @@ ri:
     kinds: [道筋]
     uses: [D-006]
     text: y' = xy の一般解はどれですか。
-    choices: ["y = C e^{x²/2}", "y = C e^{2x}", "y = x² + C", "y = C x"]
-    answer: "y = C e^{x²/2}"
-    check: "'y = C e^{x²/2}'"
+    choices: ["y = C e^(x²/2)", "y = C e^(2x)", "y = x² + C", "y = C x"]
+    answer: "y = C e^(x²/2)"
+    check: "'y = C e^(x²/2)'"
     hints:
       - 変数分離をします。
       - 両辺を積分します。
@@ -426,7 +426,7 @@ ri:
     kinds: [数]
     uses: [D-006]
     text: y' = y、y(0)=2 の解はどれですか。
-    choices: ["y = 2 e^x", "y = e^{2x}", "y = 2 + e^x", "y = 2x"]
+    choices: ["y = 2 e^x", "y = e^(2x)", "y = 2 + e^x", "y = 2x"]
     answer: "y = 2 e^x"
     check: "'y = 2 e^x'"
     hints:

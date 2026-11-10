@@ -102,6 +102,7 @@
         if (s[i + 1] === '(') { const j = closeAt(s, i + 1); if (j > 0) { out.push({ k: 'sup', v: s.slice(i + 2, j) }); i = j + 1; continue; } }
         if ((m = /^(?:\d+|[a-z])/.exec(s.slice(i + 1)))) { out.push({ k: 'sup', v: m[0] }); i += 1 + m[0].length; continue; }
       }
+      if (c === '_' && s[i + 1] === '(') { const j = closeAt(s, i + 1); if (j > 0) { out.push({ k: 'sub', v: s.slice(i + 2, j) }); i = j + 1; continue; } }
       if (c === '_' && (m = /^[A-Za-z0-9]/.exec(s.slice(i + 1)))) { out.push({ k: 'sub', v: m[0] }); i += 2; continue; }
       if ((m = /^\d+(?:\.\d+)?/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'n', v: m[0], t }); i += m[0].length + t.length; continue; }
       if ((m = /^[A-Za-z]+/.exec(rest))) { const t = tail(i + m[0].length); out.push({ k: 'w', v: m[0], t }); i += m[0].length + t.length; continue; }
