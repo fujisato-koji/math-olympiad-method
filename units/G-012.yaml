@@ -911,3 +911,19 @@ ri:
     paths:
       - [CD と AB が平行なので 三角形 ACD と三角形 OCD は面積が同じ, 色の部分は おうぎ形 OCD と同じ面積, おうぎ形は 6 × 6 × 円周率 × 120/360 = 12 × 円周率, 12]
     note: 等積変形（底辺 CD が同じで、頂点 A と O が CD に平行な直線 AB の上）で、三角形をおうぎ形の一部に置きかえる。三角形 ACD の面積を直接求めようとすると、高さが分からず行きづまる（三平方の定理は G-019）。
+
+  - part: 離
+    kinds: [最難関]
+    level: 10
+    uses: [G-008]
+    text: 三角形 ABC の辺 BC を BD：DC = 1：2 に分ける点 D と、辺 AC を AE：EC = 1：3 に分ける点 E をとります。線分 AD と BE の交点を F とするとき、三角形 ABF の面積は三角形 ABC の面積の何倍ですか。
+    choices: ["1/6", "1/5", "1/4", "1/3"]
+    answer: "1/6"
+    check: "(lambda f: f'{f.numerator}/{f.denominator}')(Fraction(1, 3) * Fraction(1, 2))"
+    hints:
+      - 三角形 ABD は、三角形 ABC の面積の 1/3。
+      - F は AD を 1：1 に分ける。
+      - 三角形 ABF は、三角形 ABD の面積の 1/2。
+    paths:
+      - [BD：DC = 1：2 から △ABD = △ABC/3, F は AD の中点なので △ABF = △ABD/2, △ABF = △ABC/6]
+    note: 面積比は、同じ高さの三角形の底辺の比。F が AD の中点になることは、質量点か面積比で確かめる。
