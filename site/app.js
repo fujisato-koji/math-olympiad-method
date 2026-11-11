@@ -685,7 +685,7 @@
     : r.name === 'unit' ? viewUnit(r.id)
     : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
     : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file)
-    : X.view === '2d' ? '' : viewMap();  // 2D は関係図だけ（D-080、施主「2D モードは 2D の樹形図画面だけにしてあゆみ以下のページは削除」）
+    : '';  // 地図は 3D と 2D の画面だけ（D-080、施主「あゆみ以下のページは削除」「3D もはずしてください」）
   function render() {
     const r = parse(), view = $('#view');
     if (r.name !== 'day') session = null;
@@ -897,7 +897,6 @@
           <button type="button" data-x="view" data-v="3d" aria-pressed="${X.view === '3d'}">3D</button>
           <button type="button" data-x="view" data-v="2d" aria-pressed="${X.view === '2d'}">2D</button>
         </div>
-        ${X.view === '3d' ? b('data-cos="inspire"', 'spark', 'ひらめき', undefined, 'glow') + b('data-cos="combine"', 'link', '組み合わせる', combine.on) : ''}
         ${b('data-cos="goals"', 'stars', g ? '星座：' + g.name : '目標の星座', !!g)}
         ${b('data-x="fields"', 'fields', '分野：' + grp[1], grp[0] !== 'all')}
         ${b('data-cos="home"', 'home', '全体')}
@@ -1095,7 +1094,6 @@
       ${u.comb ? `<div class="cc-meta">組み合わせ ${u.comb.rg.map(r => esc(REGION_NAME[r] || r)).join(' × ')}${BRIDGES.has(id) ? '　<b class="cc-bridge">橋の星</b>' : ''}</div>` : ''}
       <div class="cc-actions">
         <a class="cpill solid" href="#/unit/${id}">単元をひらく</a>
-        <button class="cpill" type="button" data-cos="combine-from" data-id="${id}">これと組み合わせる</button>
         <button class="cpill" type="button" data-cos="close" aria-label="とじる">×</button>
       </div>`);
   }
