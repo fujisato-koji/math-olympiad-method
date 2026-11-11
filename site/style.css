@@ -930,6 +930,13 @@ sup.m, sub.m { font-size: .72em; line-height: 0; }
 .ri-card .kinds { margin-top: 0; }
 .ri-card.lock { opacity: .55; }
 .ri-n { font-size: 12px; color: var(--muted); }
+.ri-groupby { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.ri-group { margin-top: 22px; }
+.ri-group-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.ri-group-head h3 { margin: 0; font-size: 17px; }
+.ri-group-head .muted { font-size: 12px; }
+.ri-group-head .pill { font-size: 13px; padding: 6px 12px; }
+.ri-note { margin-top: 8px; font-size: 12px; }
 .ri-got { display: flex; justify-content: center; gap: 18px; margin: 18px 0 6px; flex-wrap: wrap; }
 .ri-got .stars { font-size: 30px; }
 

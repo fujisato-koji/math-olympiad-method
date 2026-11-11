@@ -493,9 +493,10 @@
   // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
-  const prefs = Object.assign({ music: true, parent: false, goal: 'all' }, load(PREF, {}));
+  const prefs = Object.assign({ music: true, parent: false, goal: 'all', riGroup: 'order' }, load(PREF, {}));
   // 探索の画面の見方は前提のつながりだけにした（D-050）。前に「橋」を選んでいても前提で開く
   prefs.mapComb = false;
+  if (!['order', 'kinds', 'uses'].includes(prefs.riGroup)) prefs.riGroup = 'order';
   // 目標：網羅表が指す単元とその前提。'all' はすべての単元（大会のための単元も含む）
   const GOALS = R.goals || [];
   const GOAL_SETS = Object.fromEntries(GOALS.map(g => [g.id, new Set(g.units)]));
@@ -658,7 +659,7 @@
       return { name: 'day', type: p[0], id: p[1], day: n };
     }
     if (p[0] === 'review' && UNITS[p[1]]) return { name: 'day', type: 'review', id: p[1], day: UNITS[p[1]].days.length };
-    if (p[0] === 'ri' && UNITS[p[1]]) return { name: 'day', type: 'ri', id: p[1], day: UNITS[p[1]].days.length };
+    if (p[0] === 'ri' && UNITS[p[1]]) return { name: 'day', type: 'ri', id: p[1], day: UNITS[p[1]].days.length, group: p[2] || 'order' };
     if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
@@ -682,7 +683,7 @@
   let session = null;
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
     : r.name === 'unit' ? viewUnit(r.id)
-    : r.name === 'day' ? viewDay(r.id, r.day, r.type)
+    : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group)
     : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
   function render() {
     const r = parse(), view = $('#view');
@@ -1521,18 +1522,76 @@
   const riStars = u => (u.ri || []).reduce((a, it) => a + riStar(it), 0);
   // 施主（2026-11-10）：腕だめしは単元が済になる前でも見られるようにする。済や uses で錠をかけない
   const riOpen = u => (u.ri || []);
-  // 星の少ない問題から 3 問
+  // 星の少ない問題から 3 問（今日の課題・おすすめ用）
   const riPick = u => riOpen(u).map((it, i) => [it, i]).sort((a, b) => riStar(a[0]) - riStar(b[0]) || a[1] - b[1]).slice(0, 3).map(x => x[0]);
   const starsHtml = n => `<span class="stars" aria-label="星 ${n}">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
+  // 腕だめしの並べ方：難しさの種類、使う知識、やさしい順
+  const RI_KINDS = ['数', '読み取り', '道筋', '手数', '総動員'];
+  const riScore = it => (it.kinds || []).length * 10 + (it.uses || []).length * 3 + (typeof it.level === 'number' ? it.level : 0);
+  const riSorted = u => (u.ri || []).map((it, i) => [it, i])
+    .sort((a, b) => riScore(a[0]) - riScore(b[0]) || a[1] - b[1]).map(x => x[0]);
+  function riGroupItems(u, key) {
+    if (!key || key === 'order' || key === 'all') return riSorted(u);
+    if (key.startsWith('k-')) {
+      const k = key.slice(2);
+      return riSorted(u).filter(it => k === 'その他' ? !(it.kinds || []).length : (it.kinds || []).includes(k));
+    }
+    if (key.startsWith('u-')) {
+      const x = key.slice(2);
+      return riSorted(u).filter(it => x ? (it.uses || []).includes(x) : !(it.uses || []).length);
+    }
+    return riSorted(u);
+  }
+  function riGroups(u, mode) {
+    const its = riSorted(u);
+    if (mode === 'kinds') {
+      return RI_KINDS.map(k => ({ key: `k-${k}`, label: kindName(k, false), items: its.filter(it => (it.kinds || []).includes(k)) }))
+        .concat([{ key: 'k-その他', label: 'その他', items: its.filter(it => !(it.kinds || []).length) }])
+        .filter(g => g.items.length);
+    }
+    if (mode === 'uses') {
+      const map = new Map();
+      its.forEach(it => {
+        const us = (it.uses || []).filter(x => UNITS[x]);
+        if (!us.length) {
+          if (!map.has('u-')) map.set('u-', { key: 'u-', label: 'この単元だけ', items: [] });
+          map.get('u-').items.push(it);
+        } else us.forEach(x => {
+          const key = `u-${x}`;
+          if (!map.has(key)) map.set(key, { key, label: `${x} ${UNITS[x].title}`, items: [], unit: x });
+          map.get(key).items.push(it);
+        });
+      });
+      return [...map.values()].sort((a, b) => {
+        if (!a.unit) return -1;
+        if (!b.unit) return 1;
+        return (UNITS[a.unit].stage - UNITS[b.unit].stage) || a.unit.localeCompare(b.unit);
+      });
+    }
+    return [{ key: 'order', label: 'やさしい順', items: its }];
+  }
   function riHtml(id) {
     const u = UNITS[id], its = u.ri || [];
     if (!its.length) return '';
-    const cards = its.map((it, i) => `<div class="ri-card"><span class="ri-n">問 ${i + 1}</span>${starsHtml(riStar(it))}
+    const mode = prefs.riGroup;
+    const groups = riGroups(u, mode);
+    const card = (it, i) => `<div class="ri-card"><span class="ri-n">問 ${i + 1}</span>${starsHtml(riStar(it))}
         ${kindsHtml(it, false)}
-        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>`).join('')}</div>` : ''}</div>`).join('');
+        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => UNITS[x] ? `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>` : esc(x)).join(' ')}</div>` : ''}</div>`;
+    const toggle = `<div class="ri-groupby">${[['order', '順番'], ['kinds', '難しさの種類'], ['uses', '使う知識']].map(([k, l]) =>
+      `<button class="pill${mode === k ? ' solid' : ''}" data-rigroup="${k}" type="button">${l}</button>`).join('')}</div>`;
+    const body = groups.map(g => {
+      const stars = g.items.reduce((a, it) => a + riStar(it), 0);
+      return `<section class="ri-group"><div class="ri-group-head"><div><h3>${esc(g.label)}</h3>
+        <span class="muted">${g.items.length} 問・★ ${stars} / ${g.items.length * 3}</span></div>
+        <a class="pill" href="#/ri/${id}/${encodeURIComponent(g.key)}">この組を解く</a></div>
+        <div class="ri-list">${g.items.map(card).join('')}</div></section>`;
+    }).join('');
     return `<section class="ri"><h2 class="section-title" title="型を離れた問題。済の判定には入れない。★ 解けた　★★ ヒントなし　★★★ 一度に目安の時間の内">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
-      <div class="ri-list">${cards}</div>
-      <div class="actions"><a class="pill solid" href="#/ri/${id}">腕だめしをする</a></div></section>`;
+      ${toggle}
+      ${mode === 'uses' ? '<p class="muted ri-note">同じ問題が、使う単元がいくつかあると、いくつかの組に出ます。</p>' : mode === 'kinds' ? '<p class="muted ri-note">同じ問題が、いくつかの種類に出ることがあります。</p>' : ''}
+      ${body}
+      <div class="actions"><a class="pill solid" href="#/ri/${id}/order">順番にすべて解く</a></div></section>`;
   }
 
   // ---- 目標：単元を組み合わせた結果として届く場所 ----
@@ -1602,15 +1661,23 @@
   }
 
   // ---- 今日の問題 ----
-  function viewDay(id, n, type = 'day') {
+  function viewDay(id, n, type = 'day', group = 'order') {
     const u = UNITS[id], d = u.days[n - 1];
     let items = d.items || [];
     // おさらいの日は予備の問題、なければその日の問題をもう一度
     if (type === 'extra') items = d.extra && d.extra.length ? d.extra : items.filter(x => x.part !== '見本');
     if (type === 'review') items = pickReview(u);
     if (type === 'look') items = lookItems(id, n);
-    if (type === 'ri') items = riPick(u);
-    session = { id, n, type, items, idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false };
+    let groupLabel = '';
+    if (type === 'ri') {
+      items = riGroupItems(u, group);
+      const k = group && group.startsWith('k-') ? group.slice(2) : '';
+      const x = group && group.startsWith('u-') ? group.slice(2) : '';
+      groupLabel = !group || group === 'order' || group === 'all' ? '順番'
+        : k ? (k === 'その他' ? 'その他' : kindName(k, false))
+        : x && UNITS[x] ? UNITS[x].title : x ? '' : 'この単元だけ';
+    }
+    session = { id, n, type, group, groupLabel, items, idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false };
     return `<section class="play" id="play" style="${lc(u.lane)}"></section>`;
   }
   // 確かめの 2 問は、単元のすべての問題から日付で決まる順に選ぶ（同じ日に開き直しても同じ問題）
@@ -1831,7 +1898,7 @@
     if (!s.run && !s.solved && s.idx < s.items.length) { s.run = true; s.el = 0; s.paused = false; s.t0 = document.hidden ? 0 : Date.now(); }
     if (!s.items.length) {
       el.innerHTML = `<div class="card empty"><span class="part">${esc(d.kind)}</span>
-        <h2 style="margin:18px 0 8px">${esc(s.type === 'ri' ? '腕だめし（離）' : d.aim || R.kinds[d.kind])}</h2>
+        <h2 style="margin:18px 0 8px">${esc(s.type === 'ri' ? '腕だめし（離）' + (s.groupLabel ? '・' + s.groupLabel : '') : d.aim || R.kinds[d.kind])}</h2>
         <p>${s.type === 'ri' ? 'この単元の腕だめしは、まだ作っていません。' : 'この日の問題は、まだ作っていません。'}</p>
         <div class="actions"><a class="pill" href="#/unit/${s.id}">単元へもどる</a></div></div>`;
       return;
@@ -1921,10 +1988,11 @@
       // 腕だめし：判定はしない。星を見せる
       const res = s.results.filter(Boolean), got = res.map(x => x.skipped ? 0 : x.first ? 3 : !x.hints && !x.dunno ? 2 : 1);
       Music.melody(res); s.melody = res;
+      const groupStars = s.items.reduce((a, it) => a + riStar(it), 0);
       el.innerHTML = `<article class="card finish"><span class="part">腕だめし${tierHtml({ part: '離' })}</span>
         <h1>${got.length && got.every(x => x === 3) ? 'みごと！' : 'よく いどんだね！'}</h1>
         <div class="ri-got">${got.map(starsHtml).join('')}</div>
-        <p class="muted">${esc(u.title)}の腕だめし ★ ${riStars(u)} / ${u.ri.length * 3}</p>
+        <p class="muted">${esc(u.title)}の腕だめし${s.groupLabel ? '（' + esc(s.groupLabel) + '）' : ''} ★ ${groupStars} / ${s.items.length * 3}</p>
         <div class="actions"><button class="pill" data-act="replay" type="button">もう一度きく</button>
           <a class="pill" href="#/unit/${s.id}">単元へ</a><a class="pill solid" href="#/">地図へ</a></div></article>`;
       return;
@@ -2014,6 +2082,8 @@
   $('#view').addEventListener('click', e => {
     const gk = e.target.closest('[data-goalkind]');
     if (gk) { prefs.goalKind = gk.dataset.goalkind; save(PREF, prefs); Music.tap(); render(); return; }
+    const rg = e.target.closest('[data-rigroup]');
+    if (rg) { prefs.riGroup = rg.dataset.rigroup; save(PREF, prefs); Music.tap(); render(); return; }
     const g = e.target.closest('[data-goal]');
     if (g) {
       prefs.goal = g.dataset.goal; X.sel = null; X.pair = null; CARD = '';  // 目標が変わると星の選択は外す（前の目標の鎖を残さない）
