@@ -38,6 +38,59 @@ def balanced_delims(text: str) -> bool:
                 return False
     return not stack
 
+
+def kanji_warnings(units, problems, glossary):
+    """段の学年より上の漢字が残る単元を警告する（D-110）。誤りにはしない。"""
+    kpath = ROOT / "tools" / "kanji-grades.json"
+    if not kpath.exists():
+        return
+    grades = json.loads(kpath.read_text(encoding="utf-8"))
+    allowed_by_stage = {}
+    cum = set()
+    for g in range(1, 7):
+        cum |= set(grades.get(str(g), []))
+        allowed_by_stage[g] = set(cum)
+    term_chars = set()
+    for t in glossary or []:
+        term_chars |= {ch for ch in str(t.get("term", "")) if is_kanji(ch)}
+    bad_units = []
+    for uid, (_, stage, _u) in units.items():
+        if not isinstance(stage, int) or stage > 6:
+            continue
+        head_chars = set()
+        upath = ROOT / "units" / f"{uid}.yaml"
+        if upath.exists():
+            for no, line in enumerate(upath.read_text(encoding="utf-8").splitlines()):
+                # 頭注の 1 行目は題（「必勝法」など）なので除き、2 行目からをことばの説明とみなす
+                if no and line.startswith("#"):
+                    head_chars |= {ch for ch in line if is_kanji(ch)}
+        ok = allowed_by_stage[stage] | term_chars | head_chars
+        bad = set()
+
+        def walk(x, key=None):
+            if isinstance(x, str):
+                if key in ("check", "svg", "figure", "part", "kinds", "uses", "type", "like"):
+                    return
+                bad.update(ch for ch in x if is_kanji(ch) and ch not in ok)
+            elif isinstance(x, dict):
+                for k, v in x.items():
+                    walk(v, k)
+            elif isinstance(x, list):
+                for v in x:
+                    walk(v, None)
+
+        walk(problems.get(uid, {}))
+        if bad:
+            bad_units.append((uid, sorted(bad)))
+    if bad_units:
+        sample = "、".join(f"{uid}（{'・'.join(chs[:3])}）" for uid, chs in bad_units[:8])
+        more = "…" if len(bad_units) > 8 else ""
+        print(f"警告: 段の学年より上の漢字が残る単元が {len(bad_units)} 個：{sample}{more}")
+
+
+def is_kanji(ch):
+    return "一" <= ch <= "鿿" or "㐀" <= ch <= "䶿"
+
 GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の頂点", "第一線の仕事", "未解決問題")  # 目標の種類。画面ではこの順にまとめる（2.12）
 # 研究の頂点と第一線の仕事の分野。どちらも分野ごとに 1〜2（研究の頂点はその分野の国際的な最高の賞、2.12、D-032）
 GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "農学と獣医学", "心理学", "経済学")
@@ -507,6 +560,7 @@ def check(data, problems):
                 one_path += 1
     if one_path:
         print(f"警告: paths が 1 本だけの挑戦・わけ・腕だめしが {one_path} 問")
+    kanji_warnings(units, problems, data.get("glossary", []))
     return errors
 
 
