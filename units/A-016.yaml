@@ -637,3 +637,18 @@ ri:
     paths:
       - [対角線 d = 2√6, 面積は d²/2, d² = 24, 24 ÷ 2 = 12]
     note: 正方形はひし形でもあるので、面積は「対角線 × 対角線 ÷ 2」で求められる。
+
+  - part: 離
+    kinds: [読み取り]
+    uses: [G-008]
+    text: 面積が 72 cm² の正方形の 1 辺の長さはどれですか。
+    choices: ["6√2 cm", "6 cm", "8√2 cm", "12√2 cm"]
+    answer: "6√2 cm"
+    check: "[ch for ch, f in {'6√2 cm': lambda: 6 * math.sqrt(2), '6 cm': lambda: 6, '8√2 cm': lambda: 8 * math.sqrt(2), '12√2 cm': lambda: 12 * math.sqrt(2)}.items() if math.isclose(f() ** 2, 72, abs_tol=1e-9)][0]"
+    hints:
+      - 正方形の面積は、1 辺 × 1 辺。
+      - 1 辺を x cm とすると、x² = 72。
+      - √72 を a√b の形に直そう。
+    paths:
+      - [1 辺を x とする, x² = 72, x = √72, √72 = 6√2]
+    note: 長さは正なので、負の平方根は使わない。√72 は 36 × 2 とみて 6√2。
