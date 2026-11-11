@@ -1114,9 +1114,14 @@
       return;
     }
     Music.tap();
-    // 3D も 2D も、星を押すと札を出さずに単元のページを開く（D-080、D-108 施主「このメニューいらない」）。
-    // 地図にもどったとき分かるよう、選んだ星は覚えておく
-    if (!combine.on) { X.sel = id; X.pair = null; card(''); location.hash = '#/unit/' + id; return; }
+    // 3D も 2D も札は出さない（D-080、D-108 施主「このメニューいらない」）。1 回目で選び（金の輪と名前、鎖が光る）、
+    // 選んでいる星をもう一度押すと単元のページを開く。ダブルクリックも 2 回の押しなので開く（施主「2 回目クリックもしくはダブルクリック」）
+    if (!combine.on) {
+      if (X.sel === id && !X.pair) { location.hash = '#/unit/' + id; return; }
+      X.sel = id; X.pair = null; card(''); paint();
+      tip(`<b>${short(UNITS[id])}</b>　もう一度押すと、単元のページを開きます`);
+      return;
+    }
     if (combine.on) {
       if (!combine.from) { combine.from = id; X.sel = id; X.pair = null; starCard(id); paint(); tip('もう 1 つの星を押すと、2 つを組み合わせます', 0); return; }
       if (combine.from !== id) {
