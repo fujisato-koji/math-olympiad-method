@@ -923,3 +923,32 @@ ri:
     paths:
       - [a² = 4/9 なので 6a²b = 6 × 4/9 × 3/4 = 2, b² = 9/16 なので 4ab² = 4 × (−2/3) × 9/16 = −3/2, 2 − (−3/2) = 7/2]
     note: 負の《分数》を 2 乗するところ（a² は正）と、最後の「2 − (−3/2)」の符号で間ちがえやすい。分数のかけ算は約分しながら進めると数が小さくなる。
+
+  - part: 離
+    kinds: [総動員]
+    uses: [N-025]
+    text: 百の位が a、十の位が b、一の位が c である 3 桁の整数と、百の位と一の位を入れかえた整数の差は、どれですか。
+    choices: ["99(a − c)", "99(c − a)", "9(a − c)", "101(a − c)"]
+    answer: "99(a − c)"
+    check: "[ch for ch, f in {'99(a − c)': lambda a, b, c: 99 * (a - c), '99(c − a)': lambda a, b, c: 99 * (c - a), '9(a − c)': lambda a, b, c: 9 * (a - c), '101(a − c)': lambda a, b, c: 101 * (a - c)}.items() if all(f(a, b, c) == (100 * a + 10 * b + c) - (100 * c + 10 * b + a) for a in range(1, 10) for b in range(0, 10) for c in range(1, 10))][0]"
+    hints:
+      - 3 桁の整数は 100a + 10b + c と表せる。
+      - 百の位と一の位を入れかえた整数は 100c + 10b + a。
+      - 2 つの式をひくと、十の位の b が消える。
+    paths:
+      - [もとの数を 100a + 10b + c とする, 入れかえた数は 100c + 10b + a, 差をとる, 99a − 99c = 99(a − c)]
+    note: 位を入れかえても十の位 b は変わらないので、差では b が消える。99 の倍数になる。
+  - part: 離
+    kinds: [総動員]
+    uses: [A-007]
+    text: 行きは時速 a km、帰りは時速 b km で、同じ道を往復します。往復の平均の速さは時速何 km ですか。
+    choices: ["2ab/(a + b)", "(a + b)/2", "ab/(a + b)", "2(a + b)/ab"]
+    answer: "2ab/(a + b)"
+    check: "[ch for ch, f in {'2ab/(a + b)': lambda a, b: Fraction(2 * a * b, a + b), '(a + b)/2': lambda a, b: Fraction(a + b, 2), 'ab/(a + b)': lambda a, b: Fraction(a * b, a + b), '2(a + b)/ab': lambda a, b: Fraction(2 * (a + b), a * b)}.items() if all(f(a, b) == Fraction(2, Fraction(1, a) + Fraction(1, b)) for a in range(1, 10) for b in range(1, 10))][0]"
+    hints:
+      - 片道の道のりを 1 としよう。
+      - 往復の道のりは 2、時間は 1/a + 1/b。
+      - 平均の速さは、往復の道のり ÷ 往復の時間。
+    paths:
+      - [片道を 1 とする, 往復は 2, 時間は 1/a + 1/b, 2 ÷ (1/a + 1/b) = 2ab/(a + b)]
+    note: 往復の平均の速さは、2 つの速さの平均 (a+b)/2 ではない。道のりと時間で求める。
