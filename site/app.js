@@ -1510,14 +1510,14 @@
   const TIER = { 見本: '守', 思い出す: '守', 今日: '守', わけ: '守', 挑戦: '破', 離: '離' };
   const TIER_NOTE = { 守: '守：型をなぞる', 破: '破：型を崩して使う', 離: '離：型を離れる' };
   const KIND_NAME = { 総動員: ['いろいろ つかう', 'いくつもの単元を合わせる'], 数: ['かずが ややこしい', '数がややこしい'],
-    道筋: ['みちが みえにくい', '道筋が見えにくい'], 手数: ['てかずが おおい', '手数が多い'], 読み取り: ['よみとりが いる', '条件を読み取る'] };
+    道筋: ['みちが みえにくい', '道筋が見えにくい'], 手数: ['てかずが おおい', '手数が多い'], 読み取り: ['よみとりが いる', '条件を読み取る'], 最難関: ['さいなんかん', '最難関'] };
   const kindName = (k, small) => (KIND_NAME[k] || [k, k])[small ? 0 : 1];
   const tierHtml = it => {
     const t = TIER[it.part];
     return t ? `<i class="tier t-${{ 守: 'shu', 破: 'ha', 離: 'ri' }[t]}" title="${TIER_NOTE[t]}">${t}</i>` : '';
   };
   const kindsHtml = (it, small) => (it.kinds || []).length
-    ? `<div class="kinds">${it.kinds.map(k => `<span class="kind">${esc(kindName(k, small))}</span>`).join('')}</div>` : '';
+    ? `<div class="kinds">${it.kinds.map(k => `<span class="kind${k === '最難関' ? ' hard' : ''}">${esc(kindName(k, small))}</span>`).join('')}</div>` : '';
   const riStar = it => (progress.items[it.qid] || {}).star || 0;
   const riStars = u => (u.ri || []).reduce((a, it) => a + riStar(it), 0);
   // 施主（2026-11-10）：腕だめしは単元が済になる前でも見られるようにする。済や uses で錠をかけない
@@ -1526,7 +1526,7 @@
   const riPick = u => riOpen(u).map((it, i) => [it, i]).sort((a, b) => riStar(a[0]) - riStar(b[0]) || a[1] - b[1]).slice(0, 3).map(x => x[0]);
   const starsHtml = n => `<span class="stars" aria-label="星 ${n}">${'★'.repeat(n)}${'☆'.repeat(3 - n)}</span>`;
   // 腕だめしの並べ方：難しさの種類、使う知識、やさしい順
-  const RI_KINDS = ['数', '読み取り', '道筋', '手数', '総動員'];
+  const RI_KINDS = ['数', '読み取り', '道筋', '手数', '総動員', '最難関'];
   const riScore = it => (it.kinds || []).length * 10 + (it.uses || []).length * 3 + (typeof it.level === 'number' ? it.level : 0);
   const riSorted = u => (u.ri || []).map((it, i) => [it, i])
     .sort((a, b) => riScore(a[0]) - riScore(b[0]) || a[1] - b[1]).map(x => x[0]);
