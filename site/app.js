@@ -1239,7 +1239,8 @@
       // 3D をもう一度押すと、全体が見える向きにもどる（「全体」にあった役目）
       if (X.view === v) { if (v === '3d' && cosmos) cosmos.home(); return; }
       X.view = v; prefs.xview = v; save(PREF, prefs);
-      if (v === '2d') { combine.on = false; combine.from = null; X.sel = null; X.pair = null; card(''); tip(''); }
+      // 選んだ星は 3D と 2D のあいだで引き継ぎ、移った先でその星を真ん中に出す（D-109、施主「3D で単元を選択したあと 2D」）
+      if (v === '2d') { combine.on = false; combine.from = null; X.pair = null; card(''); tip(''); }
       syncBar();
       { const el = $('#view'); if (el) el.innerHTML = viewHtml(parse()); }
       if (v === '3d') mountCosmos(true); else { if (cosmos) cosmos.pause(); paint(true); }
