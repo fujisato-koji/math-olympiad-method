@@ -667,19 +667,30 @@
     if (p[0] === 'join' && p[1]) return { name: 'join', file: p[1] };
     return { name: 'map' };
   }
+  // 道しるべ：全体の地図 › 単元 › 日。水準は外す（D-107、施主「水準のリンクはいらない、代わりに単元のリンク」）。
+  // 単元から「全体の地図」を押すと、2D の地図でその単元を選んだところを開く（data-mapsel）
   function crumbs(r) {
-    const parts = [['#/', '全体の地図']];
+    const parts = [['#/', '全体の地図', r.id || '']];
     if (r.name === 'goal') parts.push(['', '目標：' + GOALS.find(g => g.id === r.goal).name]);
     if (r.name === 'comb') parts.push(['', '組み合わせの層']);
     if (r.name === 'join') parts.push(['', '共有の記録']);
-    const lv = r.name === 'level' ? r.level : r.id ? UNITS[r.id].level : null;
-    if (THINK[lv]) parts.push([`#/level/${lv}`, `水準 ${lv} ${THINK[lv].name}`]);
+    if (r.name === 'level' && THINK[r.level]) parts.push(['', `水準 ${r.level} ${THINK[r.level].name}`]);
     if (r.id) parts.push([`#/unit/${r.id}`, UNITS[r.id].title]);
     if (r.name === 'day') parts.push(['', r.type === 'review' ? '確かめ' : r.type === 'look' ? 'ふりかえり' : r.type === 'ri' ? '腕だめし' : r.type === 'extra' ? `${r.day} 日目のおさらい` : `${r.day} 日目`]);
-    return parts.map(([href, t], i) => i === parts.length - 1
+    return parts.map(([href, t, sel], i) => i === parts.length - 1
       ? `<span class="here">${esc(t)}</span>`
-      : `<a href="${href}">${esc(t)}</a><span class="sep">›</span>`).join('');
+      : `<a href="${href}"${sel ? ` data-mapsel="${esc(sel)}" title="2D の地図で、この単元を選んで見る"` : ''}>${esc(t)}</a><span class="sep">›</span>`).join('');
   }
+  // 単元から地図へ：2D にして、その単元を選び、見える範囲に入れて真ん中へ送る。絞り込みで隠れるなら絞り込みを外す
+  $('#crumbs').addEventListener('click', e => {
+    const a = e.target.closest('a[data-mapsel]');
+    if (!a || !UNITS[a.dataset.mapsel]) return;
+    const id = a.dataset.mapsel;
+    X.view = '2d'; prefs.xview = '2d'; X.sel = id; X.pair = null; X.hits = null; X.arrive = true;
+    if (!inGoal(id) && !inChoice(id)) prefs.goal = 'all';
+    if (!inGroup(id)) prefs.mapGroup = MAP_GROUPS[0][0];
+    save(PREF, prefs);
+  });
 
   let session = null;
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
@@ -939,7 +950,13 @@
   function mountExplore() {
     setBarH();
     if (X.view === '3d') mountCosmos();
-    else { if (cosmos) cosmos.pause(); requestAnimationFrame(() => paint()); document.fonts && document.fonts.ready.then(() => X.view === '2d' && paint()); }
+    else {
+      if (cosmos) cosmos.pause();
+      // 単元の道しるべから来たときは、選んだ単元を真ん中へ送る（D-107）
+      const arrive = X.arrive; X.arrive = false;
+      requestAnimationFrame(() => { paint(); if (arrive) scroll2D(true); });
+      document.fonts && document.fonts.ready.then(() => { if (X.view !== '2d') return; paint(); if (arrive) scroll2D(true); });
+    }
   }
   function mountCosmos(fly) {
     const host = $('#cosmos-gl');
@@ -1038,6 +1055,21 @@
     // 組み合わせた 2 つの星を、金色の弧で結ぶ
     const svg = host.querySelector('svg'), old = host.querySelector('.pair-arc');
     if (old) old.remove();
+    // 選んだ単元に、脈打つ金の輪と名前の札を付ける（D-107、どの単元を選んでいたかが分かるように）
+    const oldSel = host.querySelector('.sel-mark');
+    if (oldSel) oldSel.remove();
+    if (svg && X.sel && !X.pair && POS2D[X.sel]) {
+      const [x, y] = POS2D[X.sel], NS = 'http://www.w3.org/2000/svg', el = (t, a) => { const e = document.createElementNS(NS, t); Object.entries(a).forEach(([k, v]) => e.setAttribute(k, v)); return e; };
+      const g = el('g', { class: 'sel-mark', 'pointer-events': 'none' });
+      g.appendChild(el('circle', { class: 'sel-ring', cx: x, cy: y, r: 15 }));
+      g.appendChild(el('circle', { class: 'sel-ring2', cx: x, cy: y, r: 15 }));
+      const name = UNITS[X.sel].title.replace(/（.*$/, ''), t = el('text', { class: 'sel-name', x, y: y - 30, 'text-anchor': 'middle' });
+      t.textContent = name.length > 22 ? name.slice(0, 21) + '…' : name;
+      const bg = el('rect', { class: 'sel-tag', rx: 11, ry: 11 });
+      g.appendChild(bg); g.appendChild(t); svg.appendChild(g);
+      const b = t.getBBox();
+      Object.entries({ x: b.x - 11, y: b.y - 5, width: b.width + 22, height: b.height + 10 }).forEach(([k, v]) => bg.setAttribute(k, v));
+    }
     if (svg && X.pair && POS2D[X.pair.a] && POS2D[X.pair.b]) {
       const [x1, y1] = POS2D[X.pair.a], [x2, y2] = POS2D[X.pair.b], mx = (x1 + x2) / 2, my = Math.min(y1, y2) - 60 - Math.abs(x2 - x1) * .15;
       const p = document.createElementNS('http://www.w3.org/2000/svg', 'path');
@@ -1046,15 +1078,16 @@
     }
   }
   // 2D：いま光っている星が真ん中に来るように送る
-  function scroll2D() {
+  function scroll2D(now) {
     const flat = $('#flat');
     if (!flat) return;
     const ids = X.pair ? [X.pair.a, X.pair.b, ...X.pair.meet] : X.sel ? [X.sel] : X.hits ? [...X.hits].slice(0, 1) : [];
     const ps = ids.map(i => POS2D[i]).filter(Boolean);
-    if (!ps.length) { flat.scrollTo({ left: 0, top: 0, behavior: 'smooth' }); return; }
+    const behavior = now ? 'auto' : 'smooth';
+    if (!ps.length) { flat.scrollTo({ left: 0, top: 0, behavior }); return; }
     const x = ps.reduce((s, p) => s + p[0], 0) / ps.length, y = ps.reduce((s, p) => s + p[1], 0) / ps.length;
     const m = $('#map'), ox = m.offsetLeft, oy = m.offsetTop;
-    flat.scrollTo({ left: ox + x - flat.clientWidth / 2, top: oy + y - flat.clientHeight / 2, behavior: 'smooth' });
+    flat.scrollTo({ left: ox + x - flat.clientWidth / 2, top: oy + y - flat.clientHeight / 2, behavior });
   }
 
   function tip(html, ms = 6000) {
