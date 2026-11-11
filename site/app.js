@@ -691,6 +691,7 @@
     if (r.name !== 'day') session = null;
     Music.scene(r.name === 'day' ? 'play' : 'map');
     view.innerHTML = viewHtml(r);
+    view.hidden = r.name === 'map';  // 地図の下は空（D-080）。空の余白でページが縦にはみ出さないようにする
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     const ex = $('#explore');
     if (r.name === 'map') { ex.hidden = false; ex.innerHTML = exploreHtml(); mountExplore(); }
@@ -1622,6 +1623,8 @@
     const must = g.items.filter(i => !i.choice), fields = [...new Set(must.map(i => i.field))];
     const row = it => {
       if (it.none) return `<div class="topic none"><span class="mark"></span><span class="t">${esc(it.topic)}</span><span class="us muted">入れない：${esc(it.none)}</span></div>`;
+      // すべての単元に通る軸（証明の書き方など）が受け持つ論題。受け持つ単元を持たない
+      if (it.axis) return `<div class="topic none"><span class="mark"></span><span class="t">${esc(it.topic)}</span><span class="us muted">すべての単元（${esc(it.axis)}の軸）</span></div>`;
       const ok = topicDone(it);
       return `<div class="topic${ok ? ' ok' : ''}"><span class="mark">${ok ? '✓' : ''}</span><span class="t">${esc(it.topic)}</span>
         <span class="us">${it.units.map(u => `<a class="from" href="#/unit/${u}" style="${lc(UNITS[u].lane)}">${isDone(u) ? '✓ ' : ''}${u} ${esc(UNITS[u].title)}</a>`).join('')}</span></div>`;
