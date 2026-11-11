@@ -684,7 +684,8 @@
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
     : r.name === 'unit' ? viewUnit(r.id)
     : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
-    : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
+    : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file)
+    : X.view === '2d' ? '' : viewMap();  // 2D は関係図だけ（D-080、施主「2D モードは 2D の樹形図画面だけにしてあゆみ以下のページは削除」）
   function render() {
     const r = parse(), view = $('#view');
     if (r.name !== 'day') session = null;
@@ -896,10 +897,8 @@
           <button type="button" data-x="view" data-v="3d" aria-pressed="${X.view === '3d'}">3D</button>
           <button type="button" data-x="view" data-v="2d" aria-pressed="${X.view === '2d'}">2D</button>
         </div>
-        ${b('data-cos="inspire"', 'spark', 'ひらめき', undefined, 'glow')}
-        ${b('data-cos="combine"', 'link', '組み合わせる', combine.on)}
+        ${X.view === '3d' ? b('data-cos="inspire"', 'spark', 'ひらめき', undefined, 'glow') + b('data-cos="combine"', 'link', '組み合わせる', combine.on) : ''}
         ${b('data-cos="goals"', 'stars', g ? '星座：' + g.name : '目標の星座', !!g)}
-        ${g ? b('data-goal="all"', 'close', '星座をやめる') : ''}
         ${b('data-x="fields"', 'fields', '分野：' + grp[1], grp[0] !== 'all')}
         ${b('data-cos="home"', 'home', '全体')}
         <a class="xb" href="#/comb" title="組み合わせの層">${ICON.layer}<span>組み合わせの層</span></a>
@@ -912,16 +911,13 @@
       <div class="cosmos-gl" id="cosmos-gl"></div>
       <div class="flat" id="flat"><div id="map" class="map${prefs.mapComb ? ' comb' : ''}"></div></div>
       <div class="cosmos-head">
-        <div class="cosmos-title"><div class="eyebrow">知の宇宙</div></div>
         <input class="cosmos-q" id="cosmos-q" type="search" placeholder="星をさがす（光合成、フーリエ、確率…）" autocomplete="off" aria-label="星をさがす">
       </div>
       ${barHtml()}
-      ${legendHtml()}
       <div class="xpop" id="xpop" hidden></div>
       <div class="cosmos-tip" id="cosmos-tip" hidden></div>
       <div class="cosmos-card" id="cosmos-card"${CARD ? '' : ' hidden'}>${CARD}</div>
       <div class="cosmos-hover" id="cosmos-hover" hidden></div>
-      <button class="xdown" type="button" data-x="down">つぎのみちすじ ▾</button>
     </div>`;
   }
   function syncBar() {
@@ -1076,6 +1072,7 @@
       return;
     }
     Music.tap();
+    if (X.view === '2d') { location.hash = '#/unit/' + id; return; }  // 2D は吹き出しを出さない（D-080）
     if (combine.on) {
       if (!combine.from) { combine.from = id; X.sel = id; X.pair = null; starCard(id); paint(); tip('もう 1 つの星を押すと、2 つを組み合わせます', 0); return; }
       if (combine.from !== id) {
@@ -1165,6 +1162,11 @@
     if (act === 'inspire') { combine.on = false; combine.from = null; syncBar(); return inspire(); }
     if (act === 'goals') return openGoals();
     if (act === 'home' || act === 'close') {
+      // 全体：星座と分野の絞り込みも外す（D-080、施主「星座をなくすボタンは全体を見ると同じ」）
+      if (act === 'home' && (prefs.goal !== 'all' || group() !== MAP_GROUPS[0])) {
+        prefs.goal = 'all'; prefs.mapGroup = MAP_GROUPS[0][0]; save(PREF, prefs);
+        const v = $('#view'); if (v) v.innerHTML = viewHtml(parse());
+      }
       card(''); X.sel = null; X.pair = null; combine.on = false; combine.from = null; syncBar(); tip('');
       paint();
       if (act === 'home') { if (X.view === '3d' && cosmos) cosmos.home(); else { const f = $('#flat'); if (f) f.scrollTo({ left: 0, top: 0, behavior: 'smooth' }); } }
@@ -1181,7 +1183,10 @@
     Music.tap();
     if (act === 'view') {
       if (X.view === v) return;
-      X.view = v; prefs.xview = v; save(PREF, prefs); syncBar();
+      X.view = v; prefs.xview = v; save(PREF, prefs);
+      if (v === '2d') { combine.on = false; combine.from = null; X.sel = null; X.pair = null; card(''); tip(''); }
+      syncBar();
+      { const el = $('#view'); if (el) el.innerHTML = viewHtml(parse()); }
       if (v === '3d') mountCosmos(true); else { if (cosmos) cosmos.pause(); paint(true); }
       return;
     }
@@ -1316,7 +1321,7 @@
     }).filter(Boolean);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
     svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
-      <text x="${m.x}" y="${i % 2 ? TOP - 10 : TOP - 26}" text-anchor="middle">水準 ${m.s.id} ${esc(m.s.name)}</text></g>`).join('');
+      </g>`).join('');
     svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
       <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
       <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
