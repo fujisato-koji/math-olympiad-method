@@ -1008,7 +1008,7 @@
         if (fly) cosmos.focus([X.pair.a, X.pair.b, ...X.pair.meet], 26);
       } else if (X.sel) {
         cosmos.glowEdges(starEdges(X.sel)); cosmos.mark([X.sel]);
-        if (fly) cosmos.focus([X.sel], 20);
+        if (fly) orbitSel(X.sel);
       } else {
         cosmos.clearGlow();
         if (g) cosmos.mark(goalMarks(g));
@@ -1107,6 +1107,9 @@
     h.style.transform = `translate(${x - r.left + 14}px, ${y - r.top - 10}px)`;
     h.hidden = false; box.style.cursor = 'pointer';
   }
+  // 3D の回転の中心（D-112）：何も選んでいないときは原点（前提の深さの中心）。星を選ぶと、中心とその星の中点へ移し、
+  // 回しても選んだ星と中心が画面に残る距離にする（cosmos.orbit）。古い space.js が残っている間は前の寄り方にする
+  const orbitSel = id => cosmos && (cosmos.orbit ? cosmos.orbit(id) : cosmos.focus([id], 20));
   // 星を選ぶ（3D でも 2D でも同じ）
   function pick(id) {
     if (!id) {
@@ -1120,6 +1123,9 @@
       if (X.sel === id && !X.pair) { location.hash = '#/unit/' + id; return; }
       X.sel = id; X.pair = null; card(''); paint();
       tip(`<b>${short(UNITS[id])}</b>　もう一度押すと、単元のページを開きます`);
+      // ダブルクリックの 2 回目が同じ星に当たるよう、少し待ってから回転の中心を移す
+      clearTimeout(pick.t);
+      if (X.view === '3d') pick.t = setTimeout(() => { if (X.sel === id && X.view === '3d' && parse().name === 'map' && cosmos) orbitSel(id); }, 450);
       return;
     }
     if (combine.on) {

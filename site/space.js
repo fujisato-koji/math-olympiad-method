@@ -457,6 +457,13 @@ export function mount(api) {
       if (l) flyTo(l.at.clone().multiplyScalar(.75), 48);
     },
     home() { flyTo(new THREE.Vector3(), 100); },
+    // 選んだ星のまわりを回す（D-112）：回転の中心を、中心（原点）とその星の中点に移し、どの向きに回しても両方が画面に収まる距離にする
+    orbit(id) {
+      if (!index.has(id)) return;
+      const p = P[index.get(id)], c = p.clone().multiplyScalar(.5), d = Math.max(p.length() / 2, 4);
+      const half = Math.atan(Math.tan(THREE.MathUtils.degToRad(camera.fov / 2)) * Math.min(1, camera.aspect));
+      flyTo(c, THREE.MathUtils.clamp(d / Math.tan(half) * 1.15, 18, 150));
+    },
     project(id) {
       if (!index.has(id)) return null;
       v.copy(P[index.get(id)]).project(camera);
