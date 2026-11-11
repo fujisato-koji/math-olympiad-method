@@ -21,6 +21,23 @@ ID_RE = re.compile(r"^([A-Z])-(\d{3})$")
 PARTS = ("見本", "思い出す", "今日", "挑戦", "わけ", "離")
 # 難しさの種類（D-047）：挑戦と離の問題に付ける。総動員は合わせる駅（uses）を書く
 RI_KINDS = ("総動員", "数", "道筋", "手数", "読み取り", "最難関")
+
+
+def balanced_delims(text: str) -> bool:
+    """()、[]、（）の対応を見る。区間の [a, b) と (a, b] は正しい書き方として通す。"""
+    stack = []
+    pairs = {")": "(", "]": "[", "）": "（"}
+    for ch in str(text):
+        if ch in "([（":
+            stack.append(ch)
+        elif ch in ")]）":
+            if not stack:
+                return False
+            op = stack.pop()
+            if pairs[ch] != op and (op, ch) not in (("[", ")"), ("(", "]")):
+                return False
+    return not stack
+
 GOAL_KINDS = ("大会", "検定", "修了試験", "入試", "資格", "研究の頂点", "第一線の仕事", "未解決問題")  # 目標の種類。画面ではこの順にまとめる（2.12）
 # 研究の頂点と第一線の仕事の分野。どちらも分野ごとに 1〜2（研究の頂点はその分野の国際的な最高の賞、2.12、D-032）
 GOAL_FIELDS = ("数学", "物理", "化学", "生物", "医学", "地球科学", "天文学", "生態学", "神経科学", "材料", "計算機科学", "統計学", "工学", "農学と獣医学", "心理学", "経済学")
@@ -428,6 +445,10 @@ def check(data, problems):
                         continue
                     if str(got) != str(item.get("answer")):
                         errors.append(f"{where}: 答え {item.get('answer')} と check の値 {got} が違う")
+                for pi, path in enumerate(item.get("paths") or [], 1):
+                    for si, step in enumerate(path, 1):
+                        if not balanced_delims(step):
+                            errors.append(f"{where}: paths の {pi} 本目 {si} 段目のかっこが合わない（{step}）")
         if not any(it.get("part") == "わけ" for d in days for it in d.get("items", [])):
             errors.append(f"{uid}: わけを示す問題（part: わけ）が 1 つもない（D-016）")
     seen_p = set()
@@ -474,6 +495,18 @@ def check(data, problems):
             us = [u for u in item.get("units") or [] if u in units]
             if us and max(units[u][1] for u in us) <= 3:
                 print(f"警告: [{gid}] {item.get('id')} 「{item.get('topic', '')[:30]}」が段 3 以下の単元だけを指す（取り違えの疑い）")
+    # 2 本目の道筋がまだない問題を一覧にする（第 2 期の手がかり。いまは警告だけ）
+    one_path = 0
+    for uid, doc in problems.items():
+        for d in doc.get("days", []):
+            for it in d.get("items", []):
+                if it.get("part") in ("挑戦", "わけ") and len(it.get("paths") or []) < 2:
+                    one_path += 1
+        for it in doc.get("ri") or []:
+            if len(it.get("paths") or []) < 2:
+                one_path += 1
+    if one_path:
+        print(f"警告: paths が 1 本だけの挑戦・わけ・腕だめしが {one_path} 問")
     return errors
 
 
