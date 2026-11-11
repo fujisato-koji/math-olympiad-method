@@ -1,0 +1,109 @@
+# 灘中学校・灘高等学校の過去問の記録。問題文と解答は著作権があるので収録しない。
+# gist と key は自分の言葉の骨格。問題は url の資料で読む（D-020）。
+- id: ND-J-2024-1-5
+  source: 灘中学校 2024 年度入試 算数 1 日目 第 5 問
+  year: 2024
+  number: 1 日目 5
+  field: N
+  gist: 0、2、2、4 のカードを全部並べて 4 桁の整数をつくり、11 の倍数になるものを数える。0、2、2、4、6 から 4 枚を選ぶ場合も同じように数える。
+  units: [N-017, C-006]
+  missing: []
+  key: 11 の倍数は、各位を交互に足し引きした差が 0 か 11 の倍数になる。先頭に 0 を置けないことと、2 が重なることを場合分けで処理する。
+  basis: self
+  confidence: 中
+  url: https://www.sansuu.net/ndkakomon/ndq/nd2415q.htm
+- id: ND-H-2024-1-1
+  source: 灘高等学校 2024 年度入試 数学 大問 1(1)
+  year: 2024
+  number: 1(1)
+  field: N
+  gist: √15 + √10 の整数部分と小数部分を求め、その値を b として b² − 2√15 b + 14√10 の値を計算する。
+  units: [A-016, N-023]
+  missing: []
+  key: 整数部分を n とすると小数部分は元の数 − n。b に代入して整理すると、√ の項が打ち消える。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-1-2
+  source: 灘高等学校 2024 年度入試 数学 大問 1(2)
+  year: 2024
+  number: 1(2)
+  field: A
+  gist: 2 次方程式がただ 1 つの実数解をもつための係数の条件を求める。
+  units: [A-017]
+  missing: []
+  key: 実数解が 1 つなのは判別式 b² − 4ac が 0 のとき。係数を代入して方程式を解く。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-1-3
+  source: 灘高等学校 2024 年度入試 数学 大問 1(3)
+  year: 2024
+  number: 1(3)
+  field: G
+  gist: AC = 5、BC = 12 の直角三角形を折り、AD = BF となる折り目の位置を求める。
+  units: [G-019, G-020, G-017]
+  missing: []
+  key: 折り返しで移る長さと角が等しいことを使い、相似か三平方の定理で方程式を立てる。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-1-4
+  source: 灘高等学校 2024 年度入試 数学 大問 1(4)
+  year: 2024
+  number: 1(4)
+  field: C
+  gist: 3 × 3 のマスに黒石を 5 個置き、縦・横・斜めに 3 個並ぶ場合の数を数える。
+  units: [C-007, C-002]
+  missing: []
+  key: 3 個並ぶ線を場合分けし、同じ配置を二重に数えないように引く。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-2
+  source: 灘高等学校 2024 年度入試 数学 大問 2
+  year: 2024
+  number: 2
+  field: A
+  gist: 売買の文章題で、複数の数量と割合の条件を整理し、代金や利益を求める。
+  units: [A-014, A-011, A-012]
+  missing: []
+  key: 未知数を 1 つに減らし、割合の条件を代金の式に翻訳して方程式にする。
+  basis: self
+  confidence: 低
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-5
+  source: 灘高等学校 2024 年度入試 数学 大問 5
+  year: 2024
+  number: 5
+  field: G
+  gist: 立方体や正四面体を切り取った立体について、切断面の形と体積を求める。
+  units: [G-021, G-014, G-019]
+  missing: []
+  key: 切断面の辺がどの面の上にあるかを決め、相似と三平方の定理で長さを出して体積を計算する。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2024-6
+  source: 灘高等学校 2024 年度入試 数学 大問 6
+  year: 2024
+  number: 6
+  field: G
+  gist: 内接円、円周角、中点連結定理、合同を使って、図形の性質を証明する。
+  units: [G-018, G-016, G-028]
+  missing: []
+  key: 円周角で角を移し、中点連結で平行と長さの比を作り、合同条件に結びつける。
+  basis: self
+  confidence: 中
+  url: https://www.k-wam.jp/blogs/2024/03/post129193/
+- id: ND-H-2026-1
+  source: 灘高等学校 2026 年度入試 数学
+  year: 2026
+  field: G
+  gist: 1 辺の長さが 1 の正八面体とその外接球について、球の半径、球と直線の交点までの長さを求める。
+  units: [G-021, G-019, G-030]
+  missing: []
+  key: 対称面で切断して平面の問題にし、直径に対する円周角が 90° になることと相似・方べきの定理を使う。
+  basis: self
+  confidence: 中
+  url: https://hokkaimath.jp/blog-entry-508.html

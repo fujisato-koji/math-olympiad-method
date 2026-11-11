@@ -1,0 +1,112 @@
+# 算数オリンピック・ジュニア算数オリンピック・キッズ BEE・広中杯の過去問の記録。
+# 問題文と解答は著作権があるので収録しない。gist と key は自分の言葉の骨格。問題は url の資料で読む（D-020）。
+- id: SO-1992-1
+  source: 算数オリンピック 1992 年
+  year: 1992
+  field: N
+  gist: 魚を何匹か買うときの代金とおつりの条件から、買える匹数を求める。
+  units: [N-017, N-018, A-014]
+  missing: []
+  key: 代金を 13 の倍数で表し、余りの条件から候補を絞って、成り立たない匹数を除く。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2023-1
+  source: 算数オリンピック 2023 年
+  year: 2023
+  field: N
+  gist: 重なりのあるいくつかのグループの平均から、全体の平均を求める。
+  units: [S-028, C-008]
+  missing: []
+  key: 重なった人数を二重に数えないように合計を補正し、グループごとの条件を全部確かめる。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2024-1
+  source: 算数オリンピック 2024 年
+  year: 2024
+  field: N
+  gist: 3 × 3 のマスに数を並べ、たて・よこ・ななめの和が素数になる配置を求める。
+  units: [N-021, C-007, L-007]
+  missing: []
+  key: 偶奇で 2 の位置を決め、最大の素数で和の上限を作り、場合分けして全部確かめる。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SOJ-2024-1
+  source: ジュニア算数オリンピック 2024 年
+  year: 2024
+  field: G
+  gist: 正方形を回転させて作った台形の面積を、回転でできる合同な図形から求める。
+  units: [G-008, G-013, G-015]
+  missing: []
+  key: 回転で移った辺と角を対応させ、台形の上底と下底の和、高さを復元する。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2025-1
+  source: 算数オリンピック 2025 年
+  year: 2025
+  field: G
+  gist: 長方形を階段状に切り、並べかえて正方形にする方法を考える。
+  units: [G-008, G-015]
+  missing: []
+  key: 階段の段数と寸法を追い、面積を変えずに辺を対応させて正方形に組み直す。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SOJ-2025-1
+  source: ジュニア算数オリンピック 2025 年
+  year: 2025
+  field: G
+  gist: 三色に塗り分けた図形で、残りの部分の周の長さから、2 つの青い部分の周の長さの合計を求める。
+  units: [G-008, G-012]
+  missing: []
+  key: 共有する辺を二重に数えないように整理し、先に黒い部分の周の長さを出す。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2026-1
+  source: 算数オリンピック 2026 年
+  year: 2026
+  field: N
+  gist: 6 × 6 のマスに 1 から 6 の数を 1 つずつ入れ、実線・点線と最大公約数の手がかりから配置を決める。
+  units: [N-017, N-018, L-008]
+  missing: []
+  key: 線の関係を「割り切れる・割り切れない」の条件に翻訳し、最大公約数で候補を絞る。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2024-2
+  source: 広中杯 2024 年
+  year: 2024
+  field: C
+  gist: 20 桁の数のうち、隣り合う 2 桁の数がすべて 7 の倍数になるものを数える。
+  units: [N-017, C-009]
+  missing: []
+  key: 隣り合う 2 桁を状態とみなし、次に付け加えられる 3 桁のブロックの数を漸化式で数える。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SOJ-2024-2
+  source: ジュニア広中杯 2024 年
+  year: 2024
+  field: C
+  gist: 取れる石の数の上限が手番ごとに変わる石取りゲームで、勝つための戦略を考える。
+  units: [L-004, L-017]
+  missing: []
+  key: 相手の手と合わせて一定の量ずつ減らすように動き、最後まで石が足りることを確かめる。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
+- id: SO-2025-2
+  source: キッズ BEE 2025 年
+  year: 2025
+  field: C
+  gist: 5 人の算数と国語の順位についての手がかりから、それぞれの順位を決める。
+  units: [L-002, L-008]
+  missing: []
+  key: 国語の順位を先に固定し、残った条件で算数の順位を絞り込む。
+  basis: self
+  confidence: 中
+  url: https://sukyojuku.com/sansu-olympiad/
