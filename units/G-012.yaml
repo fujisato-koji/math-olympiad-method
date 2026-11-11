@@ -6,6 +6,7 @@
 # ことば：等積変形（面積を変えずに形を変える）、平行（G-006）、底辺と高さ（G-008）、比 a:b と比を簡単にする（A-005）、台形、対角線。
 #   「平行な 2 本の直線のはばはどこでも同じ」は G-006 と G-008（台形の挑戦）で見たことを使う。
 # 相似を使う面積比（形が同じ三角形の辺の比、ちょうちょ形の相似）は G-013 と G-020 で扱うので、ここでは使わない。
+#   ただし腕だめしの最難関（平行線を 2 段に引く台形の問題）だけは例外で、uses に G-013 を挙げて相似比と面積比を使う（G-013 は段 3 なので段はこえない）。
 #   台形の対角線の交わる点が対角線を AD:BC に分けること（5 日目と 8 日目の挑戦）も、面積の比だけで導く。
 # 前提の計算は A-005 まで（N-074 のかけ算の筆算と N-075 のわり算の筆算を含む）。面積は 100 まで、比は簡単にした形。
 #   比の答えは選ぶ問題にし、YAML では引用符で囲む。check は Fraction で約分してから '%d:%d' % (分子, 分母) で比の文字を作る（A-005 と同じ）。
@@ -926,3 +927,33 @@ ri:
     paths:
       - ["BD：DC = 1：2 から、△ABD = △ABC/3、△ADC = 2△ABC/3", "AE：EC = 1：3 から、△ABE = △ABC/4", "AF/AD = r とすると、△ABF = r△ABD = r△ABC/3", "△AEF = △ABE − △ABF = △ABC(1/4 − r/3)", "また △AEF = (AE/AC)△AFC = (1/4)(r△ADC) = r△ABC/6", "1/4 − r/3 = r/6 を解くと r = 1/2。F は AD の中点", "よって △ABF = △ABD/2 = △ABC/6"]
     note: 面積比は、同じ高さの三角形の底辺の比。F が AD の中点になる理由は、面積比の式を連立して r = 1/2 を出す段に示した。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-013
+    - G-008
+    - A-005
+    text: 面積が 245 cm² の三角形 ABC があります。辺 AB の上に AD：DB = 2：3 となる点 D、辺 AC の上に AE：EC = 2：3 となる点 E をとります。線分 BE と線分 CD が交わる点を P とします。P を通って BC に平行な直線をひき、辺 AB、辺 AC と交わる点を、それぞれ F、G とします。台形 FGCB（色のついた部分）の面積は何 cm² ですか。
+    svg: <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="57.9,72.1 160.7,72.1 210.0,115.0 30.0,115.0" stroke="currentColor" stroke-width="0" fill="#f3c969" fill-opacity=".35"/><polygon points="95.0,15.0 30.0,115.0 210.0,115.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="30.0" y1="115.0" x2="141.0" y2="55.0" stroke="currentColor" stroke-width="1.5"/><line x1="210.0" y1="115.0" x2="69.0" y2="55.0" stroke="currentColor" stroke-width="1.5"/><line x1="57.9" y1="72.1" x2="160.7" y2="72.1" stroke="currentColor" stroke-width="1.5"/><text x="95.0" y="9.0" font-size="12" text-anchor="middle">A</text><text x="22.0" y="127.0" font-size="12" text-anchor="middle">B</text><text x="218.0" y="127.0" font-size="12" text-anchor="middle">C</text><text x="60.0" y="53.0" font-size="12" text-anchor="middle">D</text><text x="150.0" y="53.0" font-size="12" text-anchor="middle">E</text><text x="118.3" y="66.1" font-size="12" text-anchor="middle">P</text><text x="48.9" y="76.1" font-size="12" text-anchor="middle">F</text><text x="169.7" y="76.1" font-size="12" text-anchor="middle">G</text></svg>
+    answer: 165
+    check: '(lambda cr, lerp: (lambda A, B, C: (lambda D, E: (lambda P: (lambda F, G: Fraction(245) * abs(cr(F, G) + cr(G, C) + cr(C, B) + cr(B, F)) / abs(cr(A, B) + cr(B, C) + cr(C, A)))(lerp(A, B, (A[1] - P[1]) / (A[1] - B[1])), lerp(A, C, (A[1] - P[1]) / (A[1] - C[1]))))(lerp(B, E, cr((C[0] - B[0], C[1] - B[1]), (D[0] - C[0], D[1] - C[1])) / cr((E[0] - B[0], E[1] - B[1]), (D[0] - C[0], D[1] - C[1])))))(lerp(A, B, Fraction(2, 5)), lerp(A, C, Fraction(2, 5))))((Fraction(2), Fraction(7)), (Fraction(0), Fraction(0)), (Fraction(7), Fraction(0))))(lambda u, v: u[0] * v[1] - u[1] * v[0], lambda p, q, t: (p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t))'
+    hints:
+    - BP：PE を知りたいね。DE を引くと、何が見えるかな。
+    - BP：PE が分かれば、P が BC からどれだけの高さにあるかが分かるよ。BP：PE は、三角形の面積の比で考えてもよいよ。
+    - 台形 FGCB は、三角形 ABC から三角形 AFG を引いた形だね。FG が BC に平行なので、三角形 AFG と三角形 ABC は形が同じだよ。FG は BC の何倍かな。
+    paths:
+    - - 三角形 ADE は、三角形 ABC を A を中心に 5 分の 2 にちぢめた形（AD：AB = AE：AC = 2：5）なので、DE と BC は平行で、DE：BC = 2：5
+      - DE と BC が平行なので、三角形 PDE と三角形 PCB は形が同じ（相似）で、相似比は DE：BC = 2：5。だから DP：PC = EP：PB = 2：5 で、DP：DC = EP：EB = 2：7
+      - FP と BC は平行。三角形 DFP と三角形 DBC は形が同じなので FP：BC = DP：DC = 2：7
+      - PG と BC も平行。三角形 EPG と三角形 EBC は形が同じなので PG：BC = EP：EB = 2：7
+      - FG = FP + PG は BC の 2/7 + 2/7 = 4/7。FG と BC が平行なので、三角形 AFG と三角形 ABC は形が同じで、相似比は 4：7、面積の比は 16：49
+      - 三角形 AFG = 245 × 16 ÷ 49 = 80 cm²。台形 FGCB = 245 − 80 = 165 cm²
+    - - 三角形 ABC を 25 とすると、BD：BA = 3：5 から三角形 BDC は 15、AD：AB = 2：5 から三角形 ADC は 10、EC：AC = 3：5 から三角形 DEC は 10 × 3/5 = 6。DC を共通の底辺とみると、B と E の高さの比が BP：PE なので、BP：PE = 15：6 = 5：2
+      - 三角形 PBC と三角形 EBC は、頂点 C が同じで底辺が BP と BE（BP：BE = 5：7）。三角形 EBC = 245 × 3/5 = 147 cm² なので、三角形 PBC = 147 × 5/7 = 105 cm²
+      - 三角形 PBC と三角形 ABC は底辺 BC が同じで、面積の比は 105：245 = 3：7。だから P の BC からの高さは、A の高さの 3/7
+      - FG は P を通って BC に平行なので、A から FG までの高さは A の高さの 4/7。三角形 AFG と三角形 ABC は形が同じで、相似比 4：7、面積の比 16：49
+      - 三角形 AFG = 245 × 16 ÷ 49 = 80 cm²。台形 FGCB = 245 − 80 = 165 cm²
+    note: 工夫は 3 段：①三角形の中に DE（BC に平行）を入れて、相似の三角形 PDE と PCB から P の位置（DP：DC = 2：7）を決める、②P を通る平行線 FG が BC の 4/7 になるので、三角形 AFG が ABC と 4：7 の相似、③台形そのものを求めずに、全体 245 から三角形 AFG の 80 を引く。2 本目は相似を P の位置の決定に使わず、三角形 BDC と DEC の面積の比から BP：PE を出し、三角形 PBC の面積から P の高さ（A の高さの 3/7）を出す。最後の 4：7 と 80 は同じ。check は、A = (2, 7)、B = (0, 0)、C = (7, 0)（面積 24.5）の座標で D、E、2 直線 BE と CD の交点 P、P を通る横線と AB、AC の交点 F、G を出し、台形 FGCB の面積を、三角形 ABC が 245 になるようにそろえて求める（165）。似た既出は「台形の対角線の交点を通る平行線（調和平均）」で、そちらは台形の中の平行線の長さ。この問題は三角形の中に DE を入れて 2 段にし、交点 P の高さを出してから補う三角形を引く点が違う。
