@@ -45,6 +45,17 @@ days:
         paths:
           - [10 が 9 + 9 = 18 こ, 180]
       - part: 今日
+        text: "45° の角と 45° の角をあわせると、何度になりますか。"
+        answer: 90
+        check: "45 + 45"
+        hints:
+          - "45 と 45 をたそう。"
+          - "90 になるね。"
+          - "直角と同じ大きさ。"
+        paths:
+          - ["45 + 45", "90"]
+        note: "角をあわせる足場。45° が 2 つで直角 90° になる。"
+      - part: 今日
         text: 一直線の角（あ）は、直角 2 つ分です。あは何度ですか。
         svg: '<svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="20" y1="112" x2="220" y2="112" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="112" x2="120" y2="20" stroke="currentColor" stroke-width="2" fill="none"/><path d="M140 112 A20 20 0 0 0 100 112" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="90.3" y="86.9" font-size="13" text-anchor="middle">あ</text><polyline points="129,112 129,103 120,103" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="120,103 111,103 111,112" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="120" cy="112" r="2.5" fill="currentColor"/></svg>'
         answer: 180
