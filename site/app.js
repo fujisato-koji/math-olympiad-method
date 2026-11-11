@@ -659,7 +659,7 @@
       return { name: 'day', type: p[0], id: p[1], day: n };
     }
     if (p[0] === 'review' && UNITS[p[1]]) return { name: 'day', type: 'review', id: p[1], day: UNITS[p[1]].days.length };
-    if (p[0] === 'ri' && UNITS[p[1]]) return { name: 'day', type: 'ri', id: p[1], day: UNITS[p[1]].days.length, group: p[2] || 'order' };
+    if (p[0] === 'ri' && UNITS[p[1]]) return { name: 'day', type: 'ri', id: p[1], day: UNITS[p[1]].days.length, group: p[2] || 'order', start: Math.max(0, (parseInt(p[3], 10) || 1) - 1) };
     if (p[0] === 'look' && UNITS[p[1]]) return { name: 'day', type: 'look', id: p[1], day: Math.min(Math.max(1, parseInt(p[2], 10) || 1), UNITS[p[1]].days.length) };
     if (p[0] === 'goal' && GOAL_SETS[p[1]]) return { name: 'goal', goal: p[1] };
     if (p[0] === 'comb') return { name: 'comb' };
@@ -683,7 +683,7 @@
   let session = null;
   const viewHtml = r => r.name === 'level' ? viewLevel(r.level)
     : r.name === 'unit' ? viewUnit(r.id)
-    : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group)
+    : r.name === 'day' ? viewDay(r.id, r.day, r.type, r.group, r.start)
     : r.name === 'goal' ? viewGoal(r.goal) : r.name === 'comb' ? viewComb() : r.name === 'join' ? viewJoin(r.file) : viewMap();
   function render() {
     const r = parse(), view = $('#view');
@@ -1575,17 +1575,16 @@
     if (!its.length) return '';
     const mode = prefs.riGroup;
     const groups = riGroups(u, mode);
-    const card = (it, i) => `<div class="ri-card"><span class="ri-n">問 ${i + 1}</span>${starsHtml(riStar(it))}
+    const card = (it, i, key) => `<a class="ri-card" href="#/ri/${id}/${encodeURIComponent(key)}/${i + 1}"><span class="ri-n">問 ${i + 1}</span>${starsHtml(riStar(it))}
         ${kindsHtml(it, false)}
-        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => UNITS[x] ? `<a class="from" href="#/unit/${x}" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</a>` : esc(x)).join(' ')}</div>` : ''}</div>`;
+        ${(it.uses || []).length ? `<div class="row">合わせる単元 ${it.uses.map(x => UNITS[x] ? `<span class="from" style="${lc(UNITS[x].lane)}">${isDone(x) ? '✓ ' : ''}${esc(UNITS[x].title)}</span>` : esc(x)).join(' ')}</div>` : ''}</a>`;
     const toggle = `<div class="ri-groupby">${[['order', '順番'], ['kinds', '難しさの種類'], ['uses', '使う知識']].map(([k, l]) =>
       `<button class="pill${mode === k ? ' solid' : ''}" data-rigroup="${k}" type="button">${l}</button>`).join('')}</div>`;
     const body = groups.map(g => {
       const stars = g.items.reduce((a, it) => a + riStar(it), 0);
       return `<section class="ri-group"><div class="ri-group-head"><div><h3>${esc(g.label)}</h3>
-        <span class="muted">${g.items.length} 問・★ ${stars} / ${g.items.length * 3}</span></div>
-        <a class="pill" href="#/ri/${id}/${encodeURIComponent(g.key)}">この組を解く</a></div>
-        <div class="ri-list">${g.items.map(card).join('')}</div></section>`;
+        <span class="muted">${g.items.length} 問・★ ${stars} / ${g.items.length * 3}</span></div></div>
+        <div class="ri-list">${g.items.map((it, i) => card(it, i, g.key)).join('')}</div></section>`;
     }).join('');
     return `<section class="ri"><h2 class="section-title" title="型を離れた問題。済の判定には入れない。★ 解けた　★★ ヒントなし　★★★ 一度に目安の時間の内">腕だめし（離）　★ ${riStars(u)} / ${its.length * 3}</h2>
       ${toggle}
@@ -1661,7 +1660,7 @@
   }
 
   // ---- 今日の問題 ----
-  function viewDay(id, n, type = 'day', group = 'order') {
+  function viewDay(id, n, type = 'day', group = 'order', start = 0) {
     const u = UNITS[id], d = u.days[n - 1];
     let items = d.items || [];
     // おさらいの日は予備の問題、なければその日の問題をもう一度
@@ -1677,7 +1676,8 @@
         : k ? (k === 'その他' ? 'その他' : kindName(k, false))
         : x && UNITS[x] ? UNITS[x].title : x ? '' : 'この単元だけ';
     }
-    session = { id, n, type, group, groupLabel, items, idx: 0, results: [], entry: '', hints: 0, tries: 0, solved: false };
+    const at = Math.max(0, Math.min(items.length ? items.length - 1 : 0, start));
+    session = { id, n, type, group, groupLabel, items, start: at, idx: at, results: [], entry: '', hints: 0, tries: 0, solved: false };
     return `<section class="play" id="play" style="${lc(u.lane)}"></section>`;
   }
   // 確かめの 2 問は、単元のすべての問題から日付で決まる順に選ぶ（同じ日に開き直しても同じ問題）
@@ -1988,11 +1988,11 @@
       // 腕だめし：判定はしない。星を見せる
       const res = s.results.filter(Boolean), got = res.map(x => x.skipped ? 0 : x.first ? 3 : !x.hints && !x.dunno ? 2 : 1);
       Music.melody(res); s.melody = res;
-      const groupStars = s.items.reduce((a, it) => a + riStar(it), 0);
+      const rest = s.items.slice(s.start || 0), groupStars = rest.reduce((a, it) => a + riStar(it), 0);
       el.innerHTML = `<article class="card finish"><span class="part">腕だめし${tierHtml({ part: '離' })}</span>
         <h1>${got.length && got.every(x => x === 3) ? 'みごと！' : 'よく いどんだね！'}</h1>
         <div class="ri-got">${got.map(starsHtml).join('')}</div>
-        <p class="muted">${esc(u.title)}の腕だめし${s.groupLabel ? '（' + esc(s.groupLabel) + '）' : ''} ★ ${groupStars} / ${s.items.length * 3}</p>
+        <p class="muted">${esc(u.title)}の腕だめし${s.groupLabel ? '（' + esc(s.groupLabel) + '）' : ''} ★ ${groupStars} / ${rest.length * 3}</p>
         <div class="actions"><button class="pill" data-act="replay" type="button">もう一度きく</button>
           <a class="pill" href="#/unit/${s.id}">単元へ</a><a class="pill solid" href="#/">地図へ</a></div></article>`;
       return;
