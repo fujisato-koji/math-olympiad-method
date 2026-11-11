@@ -1305,7 +1305,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [道筋]
+    kinds: [道筋, 読み取り]
     text: ∠C = 90° の直角三角形 ABC で、BC = 9 cm、CA = 12 cm、AB = 15 cm です。この三角形の内心を I、重心を G とします。GI は何 cm ですか。
     svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="198.7,134 41.3,16 41.3,134" stroke="currentColor" stroke-width="2" fill="none"/><polyline points="48.3,134 48.3,127 41.3,127" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="80.7" cy="94.7" r="2.6" fill="currentColor"/><circle cx="93.8" cy="94.7" r="2.6" fill="currentColor"/><text x="73" y="96.9" font-size="13" text-anchor="middle">I</text><text x="101.5" y="94.6" font-size="13" text-anchor="middle">G</text><text x="120" y="149.2" font-size="12" text-anchor="middle">12 cm</text><text x="21.3" y="79.2" font-size="12" text-anchor="middle">9 cm</text><text x="128.4" y="68" font-size="12" text-anchor="middle">15 cm</text><text x="208.2" y="141.8" font-size="14" text-anchor="middle">A</text><text x="41.3" y="10.9" font-size="14" text-anchor="middle">B</text><text x="32.4" y="143.4" font-size="14" text-anchor="middle">C</text></svg>'
     answer: 1

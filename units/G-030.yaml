@@ -973,7 +973,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [数, 道筋]
+    kinds: [数, 道筋, 読み取り]
     text: 1 辺が 6.4 cm の正方形 ABCD があります。頂点 A と B を通り、辺 CD に接する円の半径は何 cm ですか。
     svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><polygon points="68.8,118.4 171.2,118.4 171.2,16 68.8,16" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="59.5" y="119.6" font-size="14" text-anchor="middle">A</text><text x="180.5" y="119.6" font-size="14" text-anchor="middle">B</text><text x="180.1" y="16.4" font-size="14" text-anchor="middle">C</text><text x="59.9" y="16.4" font-size="14" text-anchor="middle">D</text><text x="195.2" y="71.4" font-size="12" text-anchor="middle">6.4 cm</text></svg>'
     answer: 4

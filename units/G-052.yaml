@@ -572,7 +572,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [総動員, 手数]
+    kinds: [総動員, 手数, 読み取り]
     uses: [G-019]
     text: 半径 10 cm、中心角 216° のおうぎ形を丸めて円錐の側面をつくり、底面の円をつけました。この円錐の体積は □π cm³ です。□ にあてはまる数はいくつですか。
     svg: '<svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><path d="M205.7 134 A90.1 90.1 0 1 0 34.3 134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="106.1" x2="205.7" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="106.1" x2="34.3" y2="134" stroke="currentColor" stroke-width="2" fill="none"/><path d="M131.1 109.8 A11.7 11.7 0 1 0 108.9 109.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="120" y="81.5" font-size="12" text-anchor="middle">216°</text><circle cx="120" cy="106.1" r="2" fill="currentColor"/><text x="166" y="114.8" font-size="12" text-anchor="middle">10 cm</text></svg>'

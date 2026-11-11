@@ -87098,7 +87098,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "読み取り"
      ],
      "uses": [
       "L-001"
@@ -87126,6 +87127,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "手数"
      ],
      "text": "おなじ いろの まる 2 つで 1 くみに します。くみは ぜんぶで いくつ できますか。",
@@ -88419,6 +88421,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "手数"
      ],
      "text": "🍎🍌🍇🍓🍑 の 5 つから 3 つ えらびます。でも、🍎 と 🍌 は いっしょに えらびません。えらびかたは なんとおり ありますか。",
@@ -89685,6 +89688,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "手数"
      ],
      "uses": [
@@ -90882,6 +90886,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "しかくの かみに、まっすぐな せんを 3 ぼん ひきます。かみが いちばん おおく わかれるように ひくと、いくつに わかれますか。",
@@ -92121,6 +92126,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "よこから みた つみきの ずです。つみきを 1 こずつ ほかの ならびへ うごかして、3 つの ならびを みんな おなじ たかさに します。つみきは ふやしたり へらしたり しません。うごかす つみきは、いちばん すくなくて なんこ ですか。",
@@ -93464,7 +93470,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "この ならびを、かがみに うつして から、はんぶん まわします。どう なりますか。",
      "figure": "🔺🟦🟡🔻",
@@ -93524,6 +93531,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "道筋"
      ],
      "uses": [
@@ -94732,6 +94740,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "□ に はいる かずは いくつ？",
@@ -94785,7 +94794,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "うえの ならびと したの ならびが、このまま みぎへ つづきます。🔴 の したに 🐶 が いるのは、いま 1 ばんめ です。つぎに 🔴 の したに 🐶 が くるのは、ひだりから なんばんめですか。",
      "figure": "🔴🔵🔴🔵🔴\n🐶🐱🐰🐶🐱",
@@ -96138,6 +96148,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "手数"
      ],
      "uses": [
@@ -115087,7 +115098,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "🏠 から 🏁 まで、みぎか うえに 1 マスずつ すすみます。すすむ むきが かわる ことを「まがる」と いいます。ちょうど 3 かい まがる いきかたは なんとおり ありますか。",
      "figure": "⬜⬜⬜🏁\n⬜⬜⬜⬜\n⬜⬜⬜⬜\n🏠⬜⬜⬜",
@@ -116207,6 +116219,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "マスめに そった かたちです。うえの へんの まんなかを、ながしかくの かたちに きりとって あります。きりとった ところの よこの ながさは わかりません。この かたちの まわりの ながさは なんマス ですか。",
@@ -117453,6 +117466,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "せいほうけいに、かどから かどへ ななめの せんを 2 ほん ひきました。ちょっかくさんかくけいは ぜんぶで いくつ ありますか。",
@@ -118945,6 +118959,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "手数"
      ],
      "text": "さいころは、1 と 6、2 と 5、3 と 4 が むかいあいます。うえが 1、まえ（じぶんの がわ）が 2、みぎが 3 の さいころを、みぎへ 1 かい、おくへ 1 かい、また みぎへ 1 かい ころがします。さいごに うえに なる かずは いくつ ですか。",
@@ -118999,7 +119014,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "この てんかいずを くみたてて、りっぽうたいに します。🟥 の めんと むかいあう めんは どれですか。",
      "figure": "🟥🟦⬜⬜\n⬜🟨🟩⬜\n⬜⬜🟪🟧",
@@ -120379,7 +120395,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "N-008"
@@ -120407,7 +120424,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "いぬ、ねこ、うさぎが ⚽ 🎈 📕 を 1 つずつ もって います。いぬ「ぼくは ⚽ を もって いる」、ねこ「ぼくは ⚽ を もって いない」、うさぎ「ぼくは 🎈 を もって いない」。ほんとうを いって いるのは 1 ぴき だけ です。いぬが もって いるのは どれですか。",
      "figure": "🐶🐱🐰\n⚽🎈📕",
@@ -121745,7 +121763,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "こんどは、さいごの 1 こを とった ほうが まけ です。1 かいに 1 こか 2 こ とります。あめが 8 こ あって、あなたが さき です。かつには、さいしょに なんこ とれば よいですか。",
      "figure": "🍬🍬🍬🍬🍬🍬🍬🍬",
@@ -125178,7 +125197,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "A-001"
@@ -159491,7 +159511,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "数"
+      "数",
+      "手数"
      ],
      "uses": [
       "N-009"
@@ -160803,7 +160824,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "数"
+      "数",
+      "手数"
      ],
      "text": "男子 7 人、女子 6 人の中から、男子 2 人と女子 3 人をえらんで、5 人の係をつくります。えらび方は何通りですか。",
      "answer": 420,
@@ -163218,7 +163240,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "階だんを、1 回に 1 だん、2 だん、3 だんのどれかずつ上ります。5 だん目は工事中で、ふむことができません。9 だん目まで上る上り方は何通りですか。",
      "answer": 58,
@@ -164313,6 +164336,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "手数"
      ],
      "uses": [
@@ -165589,7 +165613,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "手数"
      ],
      "uses": [
       "N-021"
@@ -165645,7 +165670,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "数"
+      "数",
+      "読み取り"
      ],
      "uses": [
       "C-008"
@@ -166797,6 +166823,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "ア、イ、ウ、エ、オの 5 人が、何人かとあく手をしました（同じ 2 人は 1 回まで）。あく手をした回数を聞くと、アは 1 回、イは 2 回、ウは 3 回、エは 4 回でした。あく手は全部で何回ありましたか。",
@@ -166851,6 +166878,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "手数",
       "読み取り"
      ],
      "text": "川の中に、東の島と西の島があります。橋は、北の岸と西の島の間に 1 本、北の岸と東の島の間に 4 本、南の岸と西の島の間に 4 本、南の岸と東の島の間に 1 本かかっています。島と島の間に橋はありません。全部の橋を 1 回ずつわたって、出発した所にもどってくるさんぽをしたいと思います。そのためには、橋を少なくとも何本かけたせばよいですか。新しい橋は、どこからどこにかけてもかまいません。",
@@ -168558,7 +168586,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "手数"
      ],
      "text": "長方形 ABCD の中に点 P があり、P と 4 つの頂点を結びました。辺 AD は 12 cm、辺 AB は 8 cm です。三角形 PAD の面積は 19 cm² です。三角形 PBC（色のついた部分）の面積は何 cm² ですか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"110.7,60 56,118 200,118\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><polygon points=\"56,22 200,22 200,118 56,118\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"110.7\" y1=\"60\" x2=\"56\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"110.7\" y1=\"60\" x2=\"56\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"110.7\" y1=\"60\" x2=\"200\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"110.7\" y1=\"60\" x2=\"200\" y2=\"22\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"110.7\" cy=\"60\" r=\"2.5\" fill=\"currentColor\"/><text x=\"49\" y=\"19\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"207\" y=\"19\" font-size=\"12\" text-anchor=\"middle\">D</text><text x=\"49\" y=\"130\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"207\" y=\"130\" font-size=\"12\" text-anchor=\"middle\">C</text><text x=\"112.7\" y=\"53\" font-size=\"12\" text-anchor=\"middle\">P</text><text x=\"128\" y=\"16\" font-size=\"11\" text-anchor=\"middle\">12 cm</text><text x=\"30\" y=\"74\" font-size=\"11\" text-anchor=\"middle\">8 cm</text></svg>\n",
@@ -169888,6 +169917,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "道筋"
      ],
      "uses": [
@@ -169945,7 +169975,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "六角形の 6 つの角のうち、5 つの角の大きさが分かっています。残りの角 あ は何度ですか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"40,128 104.9,128 124.4,86 102.9,39.8 54.7,12 20,53.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"#f3c969\" fill-opacity=\".35\"/><text x=\"49\" y=\"118.1\" font-size=\"12\" text-anchor=\"middle\">あ</text><text x=\"97\" y=\"118.1\" font-size=\"10\" text-anchor=\"middle\">115°</text><text x=\"111.5\" y=\"87\" font-size=\"10\" text-anchor=\"middle\">130°</text><text x=\"95.5\" y=\"52.8\" font-size=\"10\" text-anchor=\"middle\">145°</text><text x=\"59.9\" y=\"32.3\" font-size=\"10\" text-anchor=\"middle\">100°</text><text x=\"34.2\" y=\"62.9\" font-size=\"10\" text-anchor=\"middle\">125°</text></svg>\n",
@@ -171182,7 +171213,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "手数"
      ],
      "text": "陸上競技場のトラックは、2 つの半円と長方形を合わせた形です。内がわの線の 1 周は 400 m です。はば 1.25 m のレーンの外がわの線を 1 周すると、内がわの線を 1 周するより何 m 長いですか。（□ × 円周率）m の □ に入る数を答えましょう。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M70 42 L170 42 A28 28 0 0 1 170 98 L70 98 A28 28 0 0 1 70 42 Z M70 30 L170 30 A40 40 0 0 1 170 110 L70 110 A40 40 0 0 1 70 30 Z\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\" fill-rule=\"evenodd\"/><line x1=\"120\" y1=\"30\" x2=\"120\" y2=\"42\" stroke=\"currentColor\" stroke-width=\"1\"/><text x=\"120\" y=\"24\" font-size=\"10\" text-anchor=\"middle\">はば 1.25 m</text><text x=\"120\" y=\"74\" font-size=\"10\" text-anchor=\"middle\">内がわの線の 1 周は 400 m</text></svg>\n",
@@ -174294,6 +174326,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "手数"
      ],
      "text": "四角形 ABCD は、AD と BC が平行な台形で、AD:BC = 3:5 です。対角線 AC と BD が点 O で交わっています。台形の面積が 128 cm² のとき、三角形 AOB（色のついた部分）の面積は何 cm² ですか。",
@@ -174319,7 +174352,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "方眼の 1 目は 1 cm です。長方形の土地が、折れ線 A→B→C で左右 2 つに分けられています。左の土地（色のついた部分）の面積を変えずに、境界を A を通る 1 本の直線にします。その直線が下の辺と交わる点を P とすると、P は左はしから何 cm の所ですか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"42,14 94,14 133,66 107,118 42,118\" stroke=\"currentColor\" stroke-width=\"0\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"55\" y1=\"118\" x2=\"55\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"68\" y1=\"118\" x2=\"68\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"81\" y1=\"118\" x2=\"81\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"94\" y1=\"118\" x2=\"94\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"107\" y1=\"118\" x2=\"107\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"120\" y1=\"118\" x2=\"120\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"133\" y1=\"118\" x2=\"133\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"146\" y1=\"118\" x2=\"146\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"159\" y1=\"118\" x2=\"159\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"172\" y1=\"118\" x2=\"172\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"185\" y1=\"118\" x2=\"185\" y2=\"14\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"105\" x2=\"198\" y2=\"105\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"92\" x2=\"198\" y2=\"92\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"79\" x2=\"198\" y2=\"79\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"66\" x2=\"198\" y2=\"66\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"53\" x2=\"198\" y2=\"53\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"40\" x2=\"198\" y2=\"40\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"42\" y1=\"27\" x2=\"198\" y2=\"27\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><polygon points=\"42,118 198,118 198,14 42,14\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"94,14 133,66 107,118\" stroke=\"currentColor\" stroke-width=\"2.5\" fill=\"none\"/><text x=\"94\" y=\"11\" font-size=\"12\" text-anchor=\"middle\">A</text><text x=\"141\" y=\"70\" font-size=\"12\" text-anchor=\"middle\">B</text><text x=\"107\" y=\"131\" font-size=\"12\" text-anchor=\"middle\">C</text></svg>\n",
@@ -176034,7 +176068,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "長さ 1 m のまっすぐな棒を地面に立てると、かげの長さは 0.8 m でした。同じ時刻に、木のかげは、地面に 3.6 m のび、その先のかべに高さ 1.5 m までうつりました。かべは地面からまっすぐに立っていて、木と向かい合っています。木の高さは何 m ですか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"10\" y1=\"120\" x2=\"230\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"24\" y1=\"120\" x2=\"24\" y2=\"104\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"24\" y=\"100\" font-size=\"9\" text-anchor=\"middle\">1 m</text><text x=\"31\" y=\"132\" font-size=\"9\" text-anchor=\"middle\">0.8 m</text><line x1=\"24\" y1=\"104\" x2=\"36.8\" y2=\"120\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"84\" y1=\"120\" x2=\"84\" y2=\"24\" stroke=\"currentColor\" stroke-width=\"3\"/><text x=\"74\" y=\"72\" font-size=\"12\" text-anchor=\"middle\">木</text><polygon points=\"141.6,120 141.6,50 149.6,50 149.6,120\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"84\" y1=\"24\" x2=\"141.6\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1\" stroke-dasharray=\"4 3\"/><line x1=\"84\" y1=\"124\" x2=\"141.6\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"4\"/><text x=\"112.8\" y=\"136\" font-size=\"10\" text-anchor=\"middle\">3.6 m</text><line x1=\"137.6\" y1=\"120\" x2=\"137.6\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"4\"/><text x=\"153.6\" y=\"112\" font-size=\"10\" text-anchor=\"start\">1.5 m</text><text x=\"171.6\" y=\"70\" font-size=\"11\" text-anchor=\"middle\">かべ</text></svg>\n",
@@ -177513,6 +177548,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "立方体を、辺 BC、CD、DH、HE、EF、FB のまん中の点を通る平面で切ると、切り口は正六角形になり、同じ形の 2 つの立体に分かれます。そのうちの 1 つの立体の辺の数は何本ですか。",
@@ -177567,7 +177603,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "1 辺 1 cm の立方体を 64 こ積んで、1 辺 4 cm の立方体を作りました。この大きな立方体を、6 つの辺のまん中の点を通る平面（切り口は正六角形）で切ります。切られる小さい立方体は何こですか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"156,28 136,12 96,52 76,108 96,124 136,84\" stroke=\"currentColor\" stroke-width=\"1\" fill=\"#f3c969\" fill-opacity=\".35\"/><line x1=\"76\" y1=\"44\" x2=\"76\" y2=\"124\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"56\" y1=\"64\" x2=\"136\" y2=\"64\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"66\" y1=\"36\" x2=\"146\" y2=\"36\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"76\" y1=\"44\" x2=\"116\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"146\" y1=\"36\" x2=\"146\" y2=\"116\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"136\" y1=\"64\" x2=\"176\" y2=\"32\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"96\" y1=\"44\" x2=\"96\" y2=\"124\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"56\" y1=\"84\" x2=\"136\" y2=\"84\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"76\" y1=\"28\" x2=\"156\" y2=\"28\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"96\" y1=\"44\" x2=\"136\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"156\" y1=\"28\" x2=\"156\" y2=\"108\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"136\" y1=\"84\" x2=\"176\" y2=\"52\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"116\" y1=\"44\" x2=\"116\" y2=\"124\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"56\" y1=\"104\" x2=\"136\" y2=\"104\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"86\" y1=\"20\" x2=\"166\" y2=\"20\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"116\" y1=\"44\" x2=\"156\" y2=\"12\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"166\" y1=\"20\" x2=\"166\" y2=\"100\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"136\" y1=\"104\" x2=\"176\" y2=\"72\" stroke=\"currentColor\" stroke-width=\".5\" stroke-opacity=\".5\"/><line x1=\"56\" y1=\"44\" x2=\"136\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"136\" y1=\"44\" x2=\"136\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"136\" y1=\"124\" x2=\"56\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"124\" x2=\"56\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"44\" x2=\"96\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"96\" y1=\"12\" x2=\"176\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"176\" y1=\"12\" x2=\"136\" y2=\"44\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"176\" y1=\"12\" x2=\"176\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"176\" y1=\"92\" x2=\"136\" y2=\"124\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"56\" y1=\"124\" x2=\"96\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><line x1=\"96\" y1=\"92\" x2=\"176\" y2=\"92\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><line x1=\"96\" y1=\"92\" x2=\"96\" y2=\"12\" stroke=\"currentColor\" stroke-width=\"1.2\" stroke-dasharray=\"4 3\"/><circle cx=\"156\" cy=\"28\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"136\" cy=\"12\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"96\" cy=\"52\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"76\" cy=\"108\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"96\" cy=\"124\" r=\"2.5\" fill=\"currentColor\"/><circle cx=\"136\" cy=\"84\" r=\"2.5\" fill=\"currentColor\"/></svg>\n",
@@ -178871,7 +178908,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "uses": [
       "G-012"
@@ -180160,7 +180198,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "手数"
      ],
      "text": "《数直線》の 30 にカエルがいます。1 回目は 1、2 回目は 2、3 回目は 3、…、7 回目は 7 だけ、右か左にとびます（右か左かは毎回えらべます）。7 回とんで、30 にもどってくることはできますか。",
      "figure": "26─27─28─29─🐸─31─32─33─34",
@@ -180217,7 +180256,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "数"
+      "数",
+      "読み取り"
      ],
      "text": "37 + 58 + 61 + □ + 94 + 23 + 76 + 45 の答えを奇数にしたいと思います。□ に 1 から 20 までの《整数》を 1 つ入れるとき、入れられる数は何通りありますか。",
      "answer": 10,
@@ -181397,6 +181437,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "手数"
      ],
      "uses": [
@@ -183406,7 +183447,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "N-013"
@@ -183439,7 +183481,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "たて 2 だん、横 4 れつのマスがあります。マスをつなげた、たて横がまっすぐな四角いまとまり（1 マスだけのものもふくむ）は、全部でいくつありますか。",
      "figure": "⬜⬜⬜⬜\n⬜⬜⬜⬜",
@@ -184819,7 +184862,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "犬、ねこ、うさぎ、くまが、赤・青・黄・緑のぼうしを 1 つずつかぶり、🍎 🍌 🍇 🍑 を 1 つずつ食べました。赤いぼうしのどうぶつは 🍌 を食べました。黄色いぼうしのどうぶつは 🍑 を食べました。🍎 を食べたのは緑のぼうしのどうぶつです。うさぎは 🍌 を食べました。犬は 🍇 も 🍎 も食べていません。ねこは青いぼうしではありません。くまのぼうしは何色ですか。",
      "choices": [
@@ -184851,6 +184895,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "道筋"
      ],
      "uses": [
@@ -186129,6 +186174,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "黒板に 1 から 12 までの《整数》が 1 つずつ書いてあります。2 つの数を消して、その 2 つを足した数から 1 を引いた数を書きます。数が 1 つになるまでくり返すと、最後の数はいくつですか。",
@@ -186193,7 +186239,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "コップが 8 こ、全部上向きに並んでいます。1 回に、ちょうど 3 このコップを選んで、それぞれひっくり返します（上向きは下向きに、下向きは上向きになります）。全部を下向きにするには、少なくとも何回かかりますか。",
      "figure": "🥛🥛🥛🥛🥛🥛🥛🥛",
@@ -187409,7 +187456,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "N-013"
@@ -187437,7 +187485,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "1 回に 1 こか 3 こか 4 こを取り、最後の 1 こを取ったほうが勝ちのゲームです。あめが 20 こあり、あなたが先です。勝つには、最初に何こ取ればよいですか。",
      "answer": 4,
@@ -191863,6 +191912,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "手数"
      ],
      "uses": [
@@ -193206,6 +193256,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "紙テープを半分に折るのを 3 回くり返し、重なったまま、折り目からはなれた所を、テープのはばの向きに 1 回まっすぐ切ります（はさみは おとなといっしょに）。広げると、テープは何本に分かれていますか。",
@@ -203266,6 +203317,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "6 つの辺の長さがみな等しく、6 つの角の大きさもみな等しい六角形（正六角形）に、1 つおきの頂点を結んで三角形をかき入れました。この図形の対称の軸は何本ありますか。",
@@ -203320,7 +203372,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "3 × 3 のマス目のうち 5 マスをぬって、まん中の点 O を対称の中心とする点対称な形にします。そのうち、線対称ではないぬり方は何通りありますか。",
      "svg": "<svg viewBox=\"0 0 240 140\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"75\" y1=\"25\" x2=\"75\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"75\" y1=\"25\" x2=\"165\" y2=\"25\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"105\" y1=\"25\" x2=\"105\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"75\" y1=\"55\" x2=\"165\" y2=\"55\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"135\" y1=\"25\" x2=\"135\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"75\" y1=\"85\" x2=\"165\" y2=\"85\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"165\" y1=\"25\" x2=\"165\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"75\" y1=\"115\" x2=\"165\" y2=\"115\" stroke=\"currentColor\" stroke-width=\"1.5\"/><circle cx=\"120\" cy=\"70\" r=\"2.5\" fill=\"currentColor\"/><text x=\"128\" y=\"66\" font-size=\"11\" text-anchor=\"middle\">O</text></svg>\n",
@@ -204589,7 +204642,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "S-028"
@@ -232152,7 +232206,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "N-025"
@@ -233498,7 +233553,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "⭐ のマスを必ず通ります。🌳 のマスは通れません。🏠 から 🏁 まで、右か上に 1 マスずつ進みます。行き方は何通りですか。",
      "figure": "⬜⬜⬜⬜⬜⬜🏁\n⬜⬜⬜⬜⬜🌳⬜\n⬜🌳⬜⭐⬜⬜⬜\n⬜⬜⬜⬜⬜⬜⬜\n🏠⬜⬜⬜⬜⬜⬜",
@@ -234571,7 +234627,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "(1 + 2x)⁷ を展開した式で、係数がいちばん大きい項の係数はいくつですか。",
      "answer": 672,
@@ -236028,7 +236085,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "C-009"
@@ -237721,7 +237779,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "直線 ℓ と m は平行です（ℓ ∥ m）。ℓ の上の点 A から m の上の点 B まで、図のように折れ線 APQRB をかきました。∠x（∠QRB）は何度ですか。",
      "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"23.4\" y1=\"16\" x2=\"216.6\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"23.4\" y1=\"154\" x2=\"216.6\" y2=\"154\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"190.4,20 196.4,16 190.4,12\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"190.4,158 196.4,154 190.4,150\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"14.4\" y=\"20.9\" font-size=\"14\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">ℓ</text><text x=\"14.4\" y=\"158.9\" font-size=\"14\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">m</text><polyline points=\"85.5,16 155.9,51.9 117.8,85 157.2,112.6 124.9,154\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M103.5 16 A18 18 0 0 1 101.5 24.2\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"122.5\" y=\"29.1\" font-size=\"12\" text-anchor=\"middle\">27°</text><path d=\"M146.9 59.8 A12 12 0 0 1 145.2 46.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"130.1\" y=\"59.2\" font-size=\"12\" text-anchor=\"middle\">68°</text><path d=\"M126.9 77.1 A12 12 0 0 1 127.6 91.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"143.8\" y=\"87.8\" font-size=\"12\" text-anchor=\"middle\">76°</text><path d=\"M149.8 122.1 A12 12 0 0 1 147.4 105.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"135.5\" y=\"120.1\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><path d=\"M134.7 141.4 A16 16 0 0 1 140.9 154\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"151.9\" y=\"145\" font-size=\"12\" text-anchor=\"middle\">52°</text><text x=\"85.5\" y=\"10.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"165.9\" y=\"56.8\" font-size=\"14\" text-anchor=\"middle\">P</text><text x=\"107.8\" y=\"89.9\" font-size=\"14\" text-anchor=\"middle\">Q</text><text x=\"167.2\" y=\"117.5\" font-size=\"14\" text-anchor=\"middle\">R</text><text x=\"124.9\" y=\"169.9\" font-size=\"14\" text-anchor=\"middle\">B</text></svg>",
@@ -239037,7 +239096,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "uses": [
       "L-007"
@@ -240288,7 +240348,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "手数"
      ],
      "text": "AB は円 O の直径です。C と D は直径 AB の同じ側の円の上にあり、弦 CD の長さは円の半径と等しくなっています。C と D の場所は、このほかにはわかりません。AC と BD の交点を E とするとき、∠x（∠AEB）は何度ですか。",
      "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"75\" r=\"59\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61\" y1=\"75\" x2=\"179\" y2=\"75\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"61\" y1=\"75\" x2=\"120\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"179\" y1=\"75\" x2=\"68.9\" y2=\"45.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"16\" x2=\"68.9\" y2=\"45.5\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"75\" r=\"2.6\" fill=\"currentColor\"/><path d=\"M95.6 52.7 A10 10 0 0 1 78.9 57.1\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"91.1\" y=\"73.6\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"52\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"188\" y=\"79.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"122.6\" y=\"12.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"62.5\" y=\"44\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"85.9\" y=\"44\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"120\" y=\"90.9\" font-size=\"14\" text-anchor=\"middle\">O</text></svg>",
@@ -240319,7 +240380,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "読み取り"
      ],
      "uses": [
       "C-007"
@@ -245230,7 +245292,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "G-020"
@@ -246406,6 +246469,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "数",
       "読み取り"
      ],
      "uses": [
@@ -249765,6 +249829,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "手数"
      ],
      "text": "△ABC で ∠A = 62°、∠B = 54° です（3 つの角はどれも鋭角）。A から BC、B から CA、C から AB に、それぞれ垂線 AD、BE、CF をひきます。∠x（∠DFE）は何度ですか。",
@@ -249797,7 +249862,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "正方形 ABCD の対角線の交点を O とします。辺 AB について正方形と反対側に、∠AEB = 90° となる点 E をとると、∠EAB = 32° でした。直線 EO と辺 AB の交点を F とするとき、∠x（∠EFB）は何度ですか。",
      "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"72.4,111.2 167.6,111.2 167.6,16 72.4,16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"72.4\" y1=\"111.2\" x2=\"167.6\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"167.6\" y1=\"111.2\" x2=\"72.4\" y2=\"16\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"72.4,111.2 140.9,154 167.6,111.2\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"140.9\" y1=\"154\" x2=\"120\" y2=\"63.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polyline points=\"135.8,150.8 139,145.7 144,148.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M90.4 111.2 A18 18 0 0 1 87.7 120.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"102.2\" y=\"124\" font-size=\"12\" text-anchor=\"middle\">32°</text><path d=\"M141 111.2 A10 10 0 0 1 133.2 121\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"145.9\" y=\"127.2\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><circle cx=\"120\" cy=\"63.6\" r=\"2.6\" fill=\"currentColor\"/><text x=\"120\" y=\"57.5\" font-size=\"14\" text-anchor=\"middle\">O</text><text x=\"62.8\" y=\"113.2\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"177.2\" y=\"113.2\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"176.6\" y=\"16.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"63.4\" y=\"16.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"140.9\" y=\"169.9\" font-size=\"14\" text-anchor=\"middle\">E</text><text x=\"123.2\" y=\"109.9\" font-size=\"14\" text-anchor=\"middle\">F</text></svg>",
@@ -251588,7 +251654,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "uses": [
       "G-009"
@@ -251617,7 +251684,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "数"
+      "数",
+      "手数"
      ],
      "text": "異なる 9 個の正の《整数》があり、その和は 2026 です。9 個のうちいちばん大きい数は、少なくともいくつですか。",
      "answer": 230,
@@ -254202,7 +254270,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "C-009"
@@ -255543,7 +255612,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "N-021"
@@ -255577,7 +255647,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "text": "次の 5 つの命題のうち、もとの命題とその逆がどちらも真であるものは、いくつありますか（x は実数、n は整数とします）。①「x > 2 ならば x² > 4」　②「x² = 2x ならば x = 2」　③「n が奇数ならば n² は奇数」　④「2x + 1 > 9 ならば x > 4」　⑤「|x| < 1 ならば x² < 1」",
      "answer": 3,
@@ -257856,6 +257927,7 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
+      "手数",
       "読み取り"
      ],
      "uses": [
@@ -259167,7 +259239,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "数"
      ],
      "uses": [
       "G-019"
@@ -259195,7 +259268,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "△ABC で ∠A = 120°、AB = 8 cm、AC = 5 cm です。∠A の二等分線と辺 BC の交点を D とします。AD は何 cm ですか。",
      "svg": "<svg viewBox=\"0 0 240 88\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"151.4,16.1 16,71.9 224,71.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"151.4\" y1=\"16.1\" x2=\"144\" y2=\"71.9\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M149.6 29.9 A14 14 0 0 1 138.5 21.4\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"145.3\" y1=\"24\" x2=\"140.5\" y2=\"30.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><path d=\"M162.5 24.6 A14 14 0 0 1 149.6 29.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"155.3\" y1=\"25.3\" x2=\"158.3\" y2=\"32.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"134.2\" y=\"44.8\" font-size=\"12\" text-anchor=\"middle\">120°</text><text x=\"79.1\" y=\"37.1\" font-size=\"12\" text-anchor=\"middle\">8 cm</text><text x=\"195\" y=\"38.7\" font-size=\"12\" text-anchor=\"middle\">5 cm</text><text x=\"146.3\" y=\"-4.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"6.7\" y=\"80.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"233.3\" y=\"80.5\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"144\" y=\"87.8\" font-size=\"14\" text-anchor=\"middle\">D</text></svg>",
@@ -260462,7 +260536,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "正方形 ABCD の外接円の、弧 AB（C、D をふくまないほう）の上に点 P があります。PA = 7 cm、PC = 17 cm のとき、PB の長さは何 cm ですか。",
      "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"80\" r=\"64\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polygon points=\"74.7,34.7 165.3,34.7 165.3,125.3 74.7,125.3\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"119.7\" y1=\"16\" x2=\"74.7\" y2=\"34.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"119.7\" y1=\"16\" x2=\"165.3\" y2=\"34.7\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><line x1=\"119.7\" y1=\"16\" x2=\"165.3\" y2=\"125.3\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"66.2\" y=\"34.5\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"173.8\" y=\"34.5\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"173.8\" y=\"135.3\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"66.2\" y=\"135.3\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"119.7\" y=\"10.9\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
@@ -261688,6 +261763,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "あるチームが 16 試合を行い、10 勝 6 敗でした（引き分けはありません）。続いて行った 4 試合を 1 つの区間とみて、区間ごとの勝ち数を調べます（区間は 1〜4 試合目、2〜5 試合目、…、13〜16 試合目の 13 通り）。勝ち負けがどんな順でも、必ず現れる勝ち数をすべて選んだものはどれですか。",
@@ -261722,7 +261798,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "道筋"
+      "道筋",
+      "手数"
      ],
      "uses": [
       "C-004"
@@ -263496,6 +263573,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "数",
       "道筋"
      ],
      "text": "1 から 20 までの《整数》から、いくつかを選びます。選んだどの 2 つも、一方がもう一方の《倍数》にならないようにします。いちばん多くて何個選べますか。",
@@ -263552,6 +263630,7 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
+      "手数",
       "読み取り"
      ],
      "text": "7 チームが総当たり戦をします。どの 2 チームも 1 回ずつ試合をし、引き分けはありません。全試合が終わったとき、4 勝以上したチームは次の大会に進めます。次の大会に進めるチームは、多くていくつですか。",
@@ -264845,7 +264924,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "総動員"
+      "総動員",
+      "手数"
      ],
      "uses": [
       "A-011"
@@ -264899,7 +264979,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "数"
+      "数",
+      "読み取り"
      ],
      "text": "ある組の人の、1 分間の上体起こしの回数を度数分布表にまとめました。表には相対度数だけが書いてあります。この表から求める平均値は何回ですか。それぞれの人の回数は、その階級の階級値とみなします。",
      "svg": "<svg viewBox=\"0 0 216 170\" xmlns=\"http://www.w3.org/2000/svg\">\n  <rect x=\"8\" y=\"8\" width=\"200\" height=\"154\" stroke=\"currentColor\" fill=\"none\" stroke-width=\"1.5\"/>\n  <line x1=\"8\" y1=\"30\" x2=\"208\" y2=\"30\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"8\" y1=\"52\" x2=\"208\" y2=\"52\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"8\" y1=\"74\" x2=\"208\" y2=\"74\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"8\" y1=\"96\" x2=\"208\" y2=\"96\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"8\" y1=\"118\" x2=\"208\" y2=\"118\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"8\" y1=\"140\" x2=\"208\" y2=\"140\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <line x1=\"128\" y1=\"8\" x2=\"128\" y2=\"162\" stroke=\"currentColor\" stroke-width=\"1\"/>\n  <text x=\"68\" y=\"23.7\" font-size=\"13\" text-anchor=\"middle\">階級（回）</text>\n  <text x=\"168\" y=\"23.7\" font-size=\"13\" text-anchor=\"middle\">相対度数</text>\n  <text x=\"68\" y=\"45.7\" font-size=\"13\" text-anchor=\"middle\">10 以上 15 未満</text>\n  <text x=\"168\" y=\"45.7\" font-size=\"13\" text-anchor=\"middle\">0.08</text>\n  <text x=\"68\" y=\"67.7\" font-size=\"13\" text-anchor=\"middle\">15 以上 20 未満</text>\n  <text x=\"168\" y=\"67.7\" font-size=\"13\" text-anchor=\"middle\">0.20</text>\n  <text x=\"68\" y=\"89.7\" font-size=\"13\" text-anchor=\"middle\">20 以上 25 未満</text>\n  <text x=\"168\" y=\"89.7\" font-size=\"13\" text-anchor=\"middle\">0.36</text>\n  <text x=\"68\" y=\"111.7\" font-size=\"13\" text-anchor=\"middle\">25 以上 30 未満</text>\n  <text x=\"168\" y=\"111.7\" font-size=\"13\" text-anchor=\"middle\">0.24</text>\n  <text x=\"68\" y=\"133.7\" font-size=\"13\" text-anchor=\"middle\">30 以上 35 未満</text>\n  <text x=\"168\" y=\"133.7\" font-size=\"13\" text-anchor=\"middle\">0.12</text>\n  <text x=\"68\" y=\"155.7\" font-size=\"13\" text-anchor=\"middle\">合計</text>\n  <text x=\"168\" y=\"155.7\" font-size=\"13\" text-anchor=\"middle\">1.00</text>\n</svg>\n",
@@ -268499,7 +268580,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "総動員",
-      "手数"
+      "手数",
+      "読み取り"
      ],
      "uses": [
       "G-019"
@@ -269716,7 +269798,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "大きい円の内側に小さい円があり、2 つの円は点 T で接しています（T での接線は 2 つの円に共通）。大きい円の弦 AB が、小さい円に点 P で接しています。∠TAB = 28°、∠TBA = 46° のとき、∠x（∠TPA）は何度ですか。",
      "svg": "<svg viewBox=\"0 0 240 170\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"120\" cy=\"85\" r=\"69\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"39.9\" r=\"23.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><polygon points=\"120,16 51,87.4 177.2,46.4\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><line x1=\"120\" y1=\"16\" x2=\"127.4\" y2=\"62.6\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><path d=\"M66.3 71.6 A22 22 0 0 1 72 80.6\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"81.6\" y=\"72.5\" font-size=\"12\" text-anchor=\"middle\">28°</text><path d=\"M162 51.4 A16 16 0 0 1 163.1 38.9\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"147.3\" y=\"48\" font-size=\"12\" text-anchor=\"middle\">46°</text><path d=\"M116 66.3 A12 12 0 0 1 125.5 50.8\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"108.6\" y=\"55.3\" font-size=\"12\" text-anchor=\"middle\" font-style=\"italic\" font-family=\"serif\">x</text><text x=\"120\" y=\"10.9\" font-size=\"14\" text-anchor=\"middle\">T</text><text x=\"41\" y=\"92.3\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"187\" y=\"49.4\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"130.5\" y=\"78\" font-size=\"14\" text-anchor=\"middle\">P</text></svg>",
@@ -338842,7 +338925,8 @@ window.ROADMAP = {
     {
      "part": "離",
      "kinds": [
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "∠C = 90° の直角三角形 ABC で、BC = 9 cm、CA = 12 cm、AB = 15 cm です。この三角形の内心を I、重心を G とします。GI は何 cm ですか。",
      "svg": "<svg viewBox=\"0 0 240 150\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"198.7,134 41.3,16 41.3,134\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><polyline points=\"48.3,134 48.3,127 41.3,127\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><circle cx=\"80.7\" cy=\"94.7\" r=\"2.6\" fill=\"currentColor\"/><circle cx=\"93.8\" cy=\"94.7\" r=\"2.6\" fill=\"currentColor\"/><text x=\"73\" y=\"96.9\" font-size=\"13\" text-anchor=\"middle\">I</text><text x=\"101.5\" y=\"94.6\" font-size=\"13\" text-anchor=\"middle\">G</text><text x=\"120\" y=\"149.2\" font-size=\"12\" text-anchor=\"middle\">12 cm</text><text x=\"21.3\" y=\"79.2\" font-size=\"12\" text-anchor=\"middle\">9 cm</text><text x=\"128.4\" y=\"68\" font-size=\"12\" text-anchor=\"middle\">15 cm</text><text x=\"208.2\" y=\"141.8\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"41.3\" y=\"10.9\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"32.4\" y=\"143.4\" font-size=\"14\" text-anchor=\"middle\">C</text></svg>",
@@ -340885,7 +340969,8 @@ window.ROADMAP = {
      "part": "離",
      "kinds": [
       "数",
-      "道筋"
+      "道筋",
+      "読み取り"
      ],
      "text": "1 辺が 6.4 cm の正方形 ABCD があります。頂点 A と B を通り、辺 CD に接する円の半径は何 cm ですか。",
      "svg": "<svg viewBox=\"0 0 240 160\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"68.8,118.4 171.2,118.4 171.2,16 68.8,16\" stroke=\"currentColor\" stroke-width=\"2\" fill=\"none\"/><circle cx=\"120\" cy=\"80\" r=\"64\" stroke=\"currentColor\" stroke-width=\"1.5\" fill=\"none\"/><text x=\"59.5\" y=\"119.6\" font-size=\"14\" text-anchor=\"middle\">A</text><text x=\"180.5\" y=\"119.6\" font-size=\"14\" text-anchor=\"middle\">B</text><text x=\"180.1\" y=\"16.4\" font-size=\"14\" text-anchor=\"middle\">C</text><text x=\"59.9\" y=\"16.4\" font-size=\"14\" text-anchor=\"middle\">D</text><text x=\"195.2\" y=\"71.4\" font-size=\"12\" text-anchor=\"middle\">6.4 cm</text></svg>",

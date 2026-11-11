@@ -597,7 +597,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [道筋]
+    kinds: [道筋, 読み取り]
     text: 大きい円の内側に小さい円があり、2 つの円は点 T で接しています（T での接線は 2 つの円に共通）。大きい円の弦 AB が、小さい円に点 P で接しています。∠TAB = 28°、∠TBA = 46° のとき、∠x（∠TPA）は何度ですか。
     svg: '<svg viewBox="0 0 240 170" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="85" r="69" stroke="currentColor" stroke-width="2" fill="none"/><circle cx="120" cy="39.9" r="23.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="120,16 51,87.4 177.2,46.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="16" x2="127.4" y2="62.6" stroke="currentColor" stroke-width="2" fill="none"/><path d="M66.3 71.6 A22 22 0 0 1 72 80.6" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="81.6" y="72.5" font-size="12" text-anchor="middle">28°</text><path d="M162 51.4 A16 16 0 0 1 163.1 38.9" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="147.3" y="48" font-size="12" text-anchor="middle">46°</text><path d="M116 66.3 A12 12 0 0 1 125.5 50.8" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="108.6" y="55.3" font-size="12" text-anchor="middle" font-style="italic" font-family="serif">x</text><text x="120" y="10.9" font-size="14" text-anchor="middle">T</text><text x="41" y="92.3" font-size="14" text-anchor="middle">A</text><text x="187" y="49.4" font-size="14" text-anchor="middle">B</text><text x="130.5" y="78" font-size="14" text-anchor="middle">P</text></svg>'
     answer: 99

@@ -598,7 +598,7 @@ ri:
       - [ℓ と m から等しい距離の点は、ℓ と m がつくる角の二等分線 2 本の上, m と n から等しい距離の点も、二等分線 2 本の上, 2 本と 2 本の交点は 4 つ, その 4 点は ℓ と n からも等しい距離にある, 4 つ]
     note: 角の 2 辺から等しい距離の点の集まり（この単元）を、半直線でなく直線について考えると、二等分線が 2 本（たがいに垂直）になるのが要点。三角形の中の 1 点だけを答えやすい。外の 3 点は、のちの傍心（G-028）になる。
   - part: 離
-    kinds: [総動員, 読み取り]
+    kinds: [総動員, 数, 読み取り]
     uses: [G-019]
     text: 丸い皿が割れて、ふちの一部（円の弧）が残っています。弧の両はしを A、B とすると、AB = 30 cm でした。線分 AB の垂直二等分線を作図し、弧との交点を M、AB との交点を N とすると、MN = 9 cm でした。もとの皿の円の半径は何 cm ですか。
     svg: '<svg viewBox="0 0 240 121" xmlns="http://www.w3.org/2000/svg"><path d="M222 79.2 A115.6 115.6 0 0 0 18 79.2" stroke="currentColor" stroke-width="3" fill="none"/><line x1="18" y1="79.2" x2="222" y2="79.2" stroke="currentColor" stroke-width="2" fill="none"/><line x1="120" y1="18" x2="120" y2="103" stroke="currentColor" stroke-width="1.5" fill="none" stroke-dasharray="5 4"/><polyline points="127,79.2 127,72.2 120,72.2" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="8.2" y="86.1" font-size="14" text-anchor="middle">A</text><text x="231.8" y="86.1" font-size="14" text-anchor="middle">B</text><text x="123.7" y="13.6" font-size="14" text-anchor="middle">M</text><text x="127.4" y="92.3" font-size="14" text-anchor="middle">N</text><text x="79.2" y="94.4" font-size="12" text-anchor="middle">30 cm</text><text x="104" y="52.8" font-size="12" text-anchor="middle">9 cm</text></svg>'

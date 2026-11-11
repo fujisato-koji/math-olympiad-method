@@ -1150,7 +1150,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [道筋]
+    kinds: [数, 道筋]
     text: 1 から 20 までの《整数》から、いくつかを選びます。選んだどの 2 つも、一方がもう一方の《倍数》にならないようにします。いちばん多くて何個選べますか。
     answer: 10
     check: "(lambda e, c: e if len(c) == e and all(b % a != 0 for a, b in itertools.combinations(c, 2)) else 0)(len(set(n // (n & -n) for n in range(1, 21))), range(11, 21))"
@@ -1175,7 +1175,7 @@ ri:
       - [評価 1 以外の数を いちばん小さい素因数で組に分ける, 同じ組の 2 つはその素数が公約数なので各組 1 個まで, 30 以下の素数は 10 こで組は 10, 1 をふくめて 11 個以下, 構成 1 と 10 この素数, 11 個]
     note: 素数（N-021）と公約数（N-018）を合わせ、「いちばん小さい素因数」で区画を作る評価。1 を入れ忘れて 10 と答えやすい。素数のかわりに 4 や 9 のような数を選んでも個数はふえないことも、区画で説明できる。
   - part: 離
-    kinds: [読み取り]
+    kinds: [手数, 読み取り]
     text: 7 チームが総当たり戦をします。どの 2 チームも 1 回ずつ試合をし、引き分けはありません。全試合が終わったとき、4 勝以上したチームは次の大会に進めます。次の大会に進めるチームは、多くていくつですか。
     answer: 5
     check: "(lambda e, B: e if all(B(a, b) != B(b, a) for a in range(7) for b in range(7) if a != b) and len([t for t in range(7) if len([b for b in range(7) if b != t and B(t, b)]) >= 4]) == e else 0)(max(k for k in range(8) if 4 * k <= 21 and 4 * k <= k * (k - 1) // 2 + k * (7 - k)), lambda a, b: (a < 5 and b >= 5) or (a < 5 and b < 5 and (b - a) % 5 in (1, 2)) or (a == 5 and b == 6))"

@@ -586,7 +586,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [道筋]
+    kinds: [数, 道筋]
     text: 6 つの辺の長さがみな等しく、6 つの角の大きさもみな等しい六角形（正六角形）に、1 つおきの頂点を結んで三角形をかき入れました。この図形の対称の軸は何本ありますか。
     svg: |
       <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="120,10 66.3,41 66.3,103 120,134 173.7,103 173.7,41" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="120,10 66.3,103 173.7,103" stroke="currentColor" stroke-width="1.5" fill="#f3c969" fill-opacity=".35"/></svg>
@@ -615,7 +615,7 @@ ri:
       - [長方形は対称の中心を通るどの直線でも 面積の等しい 2 つに分かれる, 下の長方形の中心は 左から 4・下から 2 の点, 上の長方形の中心は 左から 2・下から 6 の点, 2 つの中心を通る直線は 下の辺と左から 5 cm の所で交わる]
     note: 点対称な形は、対称の中心を通るどの直線でも合同な 2 つに分かれる（3 日目のわけ）。これを面積の 2 等分（G-008）に使う。2 つの中心を通る直線は、左へ 2 進むと上へ 4 上がるので、下の長方形の中心から右へ 1 進むと下の辺に着く。全体の面積も 2 等分される。
   - part: 離
-    kinds: [手数]
+    kinds: [手数, 読み取り]
     text: 3 × 3 のマス目のうち 5 マスをぬって、まん中の点 O を対称の中心とする点対称な形にします。そのうち、線対称ではないぬり方は何通りありますか。
     svg: |
       <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><line x1="75" y1="25" x2="75" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="25" x2="165" y2="25" stroke="currentColor" stroke-width="1.5"/><line x1="105" y1="25" x2="105" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="55" x2="165" y2="55" stroke="currentColor" stroke-width="1.5"/><line x1="135" y1="25" x2="135" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="85" x2="165" y2="85" stroke="currentColor" stroke-width="1.5"/><line x1="165" y1="25" x2="165" y2="115" stroke="currentColor" stroke-width="1.5"/><line x1="75" y1="115" x2="165" y2="115" stroke="currentColor" stroke-width="1.5"/><circle cx="120" cy="70" r="2.5" fill="currentColor"/><text x="128" y="66" font-size="11" text-anchor="middle">O</text></svg>

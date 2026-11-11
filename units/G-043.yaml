@@ -644,7 +644,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [道筋]
+    kinds: [道筋, 読み取り]
     text: 正方形 ABCD の外接円の、弧 AB（C、D をふくまないほう）の上に点 P があります。PA = 7 cm、PC = 17 cm のとき、PB の長さは何 cm ですか。
     svg: '<svg viewBox="0 0 240 160" xmlns="http://www.w3.org/2000/svg"><circle cx="120" cy="80" r="64" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="74.7,34.7 165.3,34.7 165.3,125.3 74.7,125.3" stroke="currentColor" stroke-width="2" fill="none"/><line x1="119.7" y1="16" x2="74.7" y2="34.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="119.7" y1="16" x2="165.3" y2="34.7" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="119.7" y1="16" x2="165.3" y2="125.3" stroke="currentColor" stroke-width="1.5" fill="none"/><text x="66.2" y="34.5" font-size="14" text-anchor="middle">A</text><text x="173.8" y="34.5" font-size="14" text-anchor="middle">B</text><text x="173.8" y="135.3" font-size="14" text-anchor="middle">C</text><text x="66.2" y="135.3" font-size="14" text-anchor="middle">D</text><text x="119.7" y="10.9" font-size="14" text-anchor="middle">P</text></svg>'
     choices: [5√2, 5√3, 6√2, 10]

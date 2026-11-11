@@ -663,7 +663,7 @@ days:
 # 腕だめし（離、D-047）：型を離れた問題。単元が済になってから開き、済の判定には入れない。
 ri:
   - part: 離
-    kinds: [総動員, 道筋]
+    kinds: [総動員, 数, 道筋]
     uses: [N-059]
     text: 時計が 3 時 40 分をさしています。長いはりと短いはりの間の角のうち、小さいほうの角は何度ですか。短いはりは、1 時間で数字 1 つ分進み、とちゅうも少しずつ進みます。
     svg: |
@@ -693,7 +693,7 @@ ri:
       - [角 BFE は 180 − 90 − 35 = 55°, 折ったので角 GFE も 55°, 一直線なので あ は 180 − 55 − 55 = 70°, 70°]
     note: 折ると重なる部分の角は等しい（G-004 の折る）ことを、三角形の角の和と一直線の 180° に合わせる。角 BFE を出さずに 35° を 2 倍してしまいやすい。
   - part: 離
-    kinds: [手数]
+    kinds: [手数, 読み取り]
     text: 六角形の 6 つの角のうち、5 つの角の大きさが分かっています。残りの角 あ は何度ですか。
     svg: |
       <svg viewBox="0 0 240 140" xmlns="http://www.w3.org/2000/svg"><polygon points="40,128 104.9,128 124.4,86 102.9,39.8 54.7,12 20,53.4" stroke="currentColor" stroke-width="2" fill="#f3c969" fill-opacity=".35"/><text x="49" y="118.1" font-size="12" text-anchor="middle">あ</text><text x="97" y="118.1" font-size="10" text-anchor="middle">115°</text><text x="111.5" y="87" font-size="10" text-anchor="middle">130°</text><text x="95.5" y="52.8" font-size="10" text-anchor="middle">145°</text><text x="59.9" y="32.3" font-size="10" text-anchor="middle">100°</text><text x="34.2" y="62.9" font-size="10" text-anchor="middle">125°</text></svg>
