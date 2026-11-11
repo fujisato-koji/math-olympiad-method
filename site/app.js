@@ -493,7 +493,8 @@
   // わけの深さ（D-016）。考え方の水準と同じ軸（D-028）
   const REASON = ['', '例で見せて口で言う', '代表の例で文に書く', '約束した定義と事実から筋道を立てて書く', '公理から体系として書く', '定義を選び直す'];
   const circled = n => '①②③④⑤'[n - 1] || '';
-  const prefs = Object.assign({ music: true, parent: false, goal: 'all', riGroup: 'order' }, load(PREF, {}));
+  const prefs = Object.assign({ music: true, goal: 'all', riGroup: 'order' }, load(PREF, {}));
+  delete prefs.parent;  // 保護者の表示は外した（D-106）
   // 探索の画面の見方は前提のつながりだけにした（D-050）。前に「橋」を選んでいても前提で開く
   prefs.mapComb = false;
   if (!['order', 'kinds', 'uses'].includes(prefs.riGroup)) prefs.riGroup = 'order';
@@ -692,6 +693,7 @@
     Music.scene(r.name === 'day' ? 'play' : 'map');
     view.innerHTML = viewHtml(r);
     view.hidden = r.name === 'map';  // 地図の下は空（D-080）。空の余白でページが縦にはみ出さないようにする
+    document.body.dataset.page = r.name;  // 地図ではヘッダーの帯をやめ、夜空の上に浮かせる（D-106）
     view.classList.remove('enter'); void view.offsetWidth; view.classList.add('enter');
     const ex = $('#explore');
     if (r.name === 'map') { ex.hidden = false; ex.innerHTML = exploreHtml(); mountExplore(); }
@@ -777,7 +779,6 @@
         ${goal}
       </div>
       ${doing ? `<div class="ay-units"><span class="k">いまの単元</span>${doing}</div>` : ''}
-      ${prefs.parent ? stumbleHtml(week) : ''}
     </section>`;
   }
   // 保護者の表示：この 2 週間のつまずき（わからない、目安をすぎた）と、この 7 日のまとめ
@@ -889,21 +890,29 @@
     full: svgi('<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>'),
     close: svgi('<path d="M6 6l12 12M18 6L6 18"/>'),
   };
+  // 地図の操作は下の浮いた帯にまとめる（D-106）。3D と 2D、目標の星座、分野、全画面。
+  // 「全体」と「組み合わせの層」は外し、絞り込んでいるあいだは帯の上に札を出し、× で外す
   function barHtml() {
     const g = GOALS.find(x => x.id === prefs.goal), grp = group();
-    const b = (attr, icon, label, pressed, cls = '') => `<button class="xb ${cls}" type="button" ${attr}${pressed === undefined ? '' : ` aria-pressed="${pressed}"`} title="${esc(label)}">${ICON[icon]}<span>${esc(label)}</span></button>`;
+    const b = (attr, icon, label, pressed) => `<button class="xb" type="button" ${attr}${pressed === undefined ? '' : ` aria-pressed="${pressed}"`} title="${esc(label)}">${ICON[icon]}<span>${esc(label)}</span></button>`;
+    const chips = [
+      g ? `<span class="xchip">${ICON.stars}<span class="t">${esc(g.name)}</span><button type="button" data-x="unset" data-v="goal" aria-label="星座を外す">${ICON.close}</button></span>` : '',
+      grp[0] !== 'all' ? `<span class="xchip">${ICON.fields}<span class="t">${esc(grp[1])}</span><button type="button" data-x="unset" data-v="field" aria-label="分野の絞り込みを外す">${ICON.close}</button></span>` : '',
+    ].join('');
     return `
-      <nav class="xbar" aria-label="見方">
-        <div class="xseg" role="group" aria-label="表示">
-          <button type="button" data-x="view" data-v="3d" aria-pressed="${X.view === '3d'}">3D</button>
-          <button type="button" data-x="view" data-v="2d" aria-pressed="${X.view === '2d'}">2D</button>
-        </div>
-        ${b('data-cos="goals"', 'stars', g ? '星座：' + g.name : '目標の星座', !!g)}
-        ${b('data-x="fields"', 'fields', '分野：' + grp[1], grp[0] !== 'all')}
-        ${b('data-cos="home"', 'home', '全体')}
-        <a class="xb" href="#/comb" title="組み合わせの層">${ICON.layer}<span>組み合わせの層</span></a>
-        ${b('data-x="full"', 'full', '全画面')}
-      </nav>`;
+      <div class="xdock">
+        ${chips ? `<div class="xchips">${chips}</div>` : ''}
+        <nav class="xbar" aria-label="見方">
+          <div class="xseg" role="group" aria-label="表示">
+            <button type="button" data-x="view" data-v="3d" aria-pressed="${X.view === '3d'}" title="3D（もう一度押すと、全体が見える向きにもどる）">3D</button>
+            <button type="button" data-x="view" data-v="2d" aria-pressed="${X.view === '2d'}" title="2D の樹形図">2D</button>
+          </div>
+          <span class="xsep" aria-hidden="true"></span>
+          ${b('data-cos="goals"', 'stars', '星座', !!g)}
+          ${b('data-x="fields"', 'fields', '分野', grp[0] !== 'all')}
+          ${b('data-x="full"', 'full', '全画面')}
+        </nav>
+      </div>`;
   }
   function exploreHtml() {
     return `
@@ -921,7 +930,7 @@
     </div>`;
   }
   function syncBar() {
-    const nav = $('.xbar');
+    const nav = $('.xdock');
     if (nav) nav.outerHTML = barHtml();
     const c = $('#cosmos'); if (c) c.dataset.view = X.view;
     const m = $('#map'); if (m) m.classList.toggle('comb', !!prefs.mapComb);
@@ -1180,8 +1189,15 @@
   }
   function xAction(act, v) {
     Music.tap();
+    if (act === 'unset') {
+      // 札の ×：星座か分野の絞り込みを外す（「全体」の代わり、D-106）
+      if (v === 'goal') { setGoal('all'); return; }
+      prefs.mapGroup = MAP_GROUPS[0][0]; save(PREF, prefs); $('#xpop').hidden = true; syncBar(); paint(true);
+      return;
+    }
     if (act === 'view') {
-      if (X.view === v) return;
+      // 3D をもう一度押すと、全体が見える向きにもどる（「全体」にあった役目）
+      if (X.view === v) { if (v === '3d' && cosmos) cosmos.home(); return; }
       X.view = v; prefs.xview = v; save(PREF, prefs);
       if (v === '2d') { combine.on = false; combine.from = null; X.sel = null; X.pair = null; card(''); tip(''); }
       syncBar();
@@ -1478,11 +1494,14 @@
     const opens = R.units.filter(v => v.needs.includes(id));
     const v = r.review;
     const reviewNote = !v ? '' : v.complete ? '定着しました' : v.lapsed ? '「復習」に戻りました。確認の日をもう一度' : `次の確かめは ${v.due}`;
+    // 確かめの日が来たら、ここから始める（今日の課題のボタンを外したので、入口を単元のページに置く、D-106）
+    const reviewDue = v && !v.complete && !v.lapsed && v.due <= localDate();
     return `
     <section class="unit-head" style="${lc(u.lane)}">
       <div class="eyebrow">${esc(LANES[u.lane].name)}の流れ・<a href="#/level/${u.level}">水準 ${u.level} ${esc((THINK[u.level] || {}).name || '')}</a>・${u.id}</div>
       <h1>${esc(u.title)}</h1>
       <div class="row"><span class="dot ${stateOf(id)}" style="${lc(u.lane)}"></span>${STATUS_NAME[stateOf(id)]}${r.done ? `（${r.done}）` : ''}${reviewNote ? `・${reviewNote}` : ''}</div>
+      ${reviewDue ? `<div class="row"><a class="pill solid" href="#/review/${id}">確かめ（${RULE.reviewItems} 問） →</a></div>` : ''}
       <div class="row">${u.needs.length ? `前提 ${u.needs.map(chip).join('')}` : '前提なし'}</div>
       ${u.alt ? `<div class="row">代わりの前提 ${Object.entries(u.alt).map(([n, bs]) => `<span class="muted">${n} の代わりに</span>${bs.map(chip).join('')}`).join('')}</div>` : ''}
       ${opens.length ? `<div class="row">この先 ${opens.map(v => chip(v.id)).join('')}</div>` : ''}
@@ -1612,7 +1631,6 @@
         <div class="prob-head"><b>${esc(p.src)}${p.y ? ' ' + esc(p.y) : ''}${p.no ? ' 第 ' + esc(p.no) + ' 問' : ''}</b>
           ${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">出典</a>` : ''}</div>
         <div class="prob-body">${esc(p.pd && p.text ? p.text : p.g || '')}</div>
-        ${prefs.parent && p.k ? `<div class="parent"><b>鍵の一手</b> ${esc(p.k)}</div>` : ''}
         <div class="row">組み合わせ ${(p.u || []).filter(u => UNITS[u]).map(u => `<a class="from" href="#/unit/${u}" style="${lc(UNITS[u].lane)}">${u === id ? '★ ' : ''}${isDone(u) ? '✓ ' : ''}${esc(UNITS[u].title)}</a>`).join('')}</div>
       </article>`).join('')}</div>
       ${ps.length > shown.length ? `<p class="muted">ほか ${ps.length - shown.length} 問</p>` : ''}</section>`;
@@ -1720,17 +1738,6 @@
             `<span class="stn" style="animation-delay:${t}s">${fmtLinks(x)}</span>`;
         }).join('')}</div></div>`).join('')}</div>`;
   }
-  function parentHtml(it) {
-    if (!prefs.parent) return '';
-    if (it.part === '見本') return '';
-    if (it.part === 'わけ') return `<div class="parent"><b>手本</b> ${fmtLinks(it.explain)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmtLinks).join(' → ')}`).join('')}
-      <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
-    return `<div class="parent"><b>こたえ</b> ${fmt(it.answer)}
-      ${(it.paths || []).map((p, i) => `<br>${i ? '別の道' : '道筋'}：${p.map(fmtLinks).join(' → ')}`).join('')}
-      ${it.note ? `<br><b>見どころ</b> ${fmtLinks(it.note)}` : ''}
-      <div class="actions" style="justify-content:flex-start;margin-top:10px"><button class="pill" data-act="skip" type="button">この問題をとばす</button></div></div>`;
-  }
   // ---- 目安の時間（D-045） ----
   // 段の 1 日の分（stages の minutes）の 8 割を、問題の種類の重みで割り振る（30 秒きざみ）。問題に time（秒）を書けば、それにする。
   // 目安をすぎても解き続けられる。ただし、そうしてできた問題は「一度にできた」に数えない（確認の 8 割、おさらい、練習をとばす判定）
@@ -1745,7 +1752,6 @@
   // かかった時間：画面が隠れている間は数えない。解けたとき、「わからない」を押したときに止める
   const spent = s => (s.el || 0) + (s.t0 ? Date.now() - s.t0 : 0);
   const freeze = s => { s.el = spent(s); s.t0 = 0; s.paused = true; };
-  const fmtSec = x => x >= 60 ? `${Math.floor(x / 60)} 分${x % 60 ? ` ${x % 60} 秒` : ''}` : `${x} 秒`;
   // 目安をすぎたほかは一度にできた問題（点の色を変える）
   const slow = r => r.over && !r.hints && (r.tries || 1) <= 1 && !r.dunno && !r.skipped;
   function outcome(s, it, more) {
@@ -1759,8 +1765,7 @@
     const lim = +c.dataset.lim, t = spent(s) / 1000, over = t > lim, small = UNITS[s.id].stage <= 2, arc = c.querySelector('.arc');
     if (arc) arc.setAttribute('stroke-dasharray', `${Math.min(100, t / lim * 100).toFixed(1)} 100`);
     c.classList.toggle('over', over);
-    c.querySelector('.clock-t').textContent = (over ? (small ? 'めやすを すぎたよ' : '目安をすぎました') : (small ? 'めやす' : '目安'))
-      + (prefs.parent ? ` ${fmtSec(lim)}` : '');
+    c.querySelector('.clock-t').textContent = over ? (small ? 'めやすを すぎたよ' : '目安をすぎました') : (small ? 'めやす' : '目安');
   }
   setInterval(tick, 500);
   document.addEventListener('visibilitychange', () => {
@@ -1776,12 +1781,12 @@
     small: { ask: 'どこが わからない？', mean: 'もんだいの いみ', start: 'なにから するか', mid: 'とちゅうから',
       here: 'ここまでは わかる？', yes: 'わかる', no: 'ここが わからない', allok: 'ぜんぶ わかるね。こたえまで あと すこし。もう いちど やってみよう。',
       read: 'おうちの ひとに、もんだいを ゆっくり よんで もらおう。', first: 'さいしょは ここから かんがえるよ', stuck: 'ここで とまったね',
-      offer: 'ふりかえる ところ', now: 'いま ふりかえる', later: 'あとで', added: 'きょうの かだいに いれたよ',
+      offer: 'ふりかえる ところ', now: 'いま ふりかえる',
       back: 'もんだいに もどる', skip: 'この もんだいは とばす', self: 'この べんきょうの みほん', need: 'まえの べんきょう', done: 'ふりかえり、できた！', ret: 'もとの もんだいに もどる' },
     big: { ask: 'どこが分からない？', mean: '問題の意味', start: '何から始めるか', mid: '途中から',
       here: 'ここまでは分かる？', yes: '分かる', no: 'ここが分からない', allok: 'どの段も分かるなら、あとは答えまで。もう一度やってみよう。',
       read: '問題の文を、区切りながらゆっくり読み直そう。分からない言葉は、おうちの人に聞こう。', first: '最初はここから考える', stuck: 'ここで止まった',
-      offer: 'ふりかえる単元', now: '今ふりかえる', later: 'あとで', added: '今日の課題に入れた',
+      offer: 'ふりかえる単元', now: '今ふりかえる',
       back: '問題にもどる', skip: 'この問題はとばす', self: 'この単元の見本', need: '前の単元', done: 'ふりかえり、できた！', ret: 'もとの問題にもどる' },
   };
   const words = id => WORDS[UNITS[id].stage <= 2 ? 'small' : 'big'];
@@ -1858,13 +1863,11 @@
       : k.why === 'start' && path.length ? `<p class="dk-note"><b>${W.first}</b>　${fmt(path[0])}</p>`
       : k.why === 'mid' ? `<p class="dk-note"><b>${W.stuck}</b>　${fmt(path[k.i])}</p>` : '';
     const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${fmtLinks(it.hints[k.hint])}</div></div>` : '';
-    const asks = progress.asks || [];
     return `<div class="dk">${head}${hint}<h3 class="dk-h">${W.offer}</h3><div class="dk-cands">${k.cands.map(c => {
-      const cu = UNITS[c.id], put = asks.some(a => a.u === c.id);
+      const cu = UNITS[c.id];
       return `<div class="dk-cand" style="${lc(cu.lane)}"><span class="mode">${c.self ? W.self : W.need}・${STATUS_NAME[status(c.id)]}</span>
         <span class="t">${esc(cu.title)}</span><span class="dk-btns">
-        <button class="pill solid" data-act="look-now" data-u="${esc(c.id)}" data-day="${c.day}" type="button">${W.now}</button>
-        <button class="pill" data-act="look-later" data-u="${esc(c.id)}" data-day="${c.day}" type="button" title="今日の課題に入れる"${put ? ' disabled' : ''}>${put ? W.added : W.later}</button></span></div>`;
+        <button class="pill solid" data-act="look-now" data-u="${esc(c.id)}" data-day="${c.day}" type="button">${W.now}</button></span></div>`;
     }).join('')}</div>
       <div class="actions"><button class="pill" data-act="dk-close" type="button">${W.back}</button>
         ${it.part === '見本' ? '' : `<button class="pill" data-act="skip" type="button">${W.skip}</button>`}</div></div>`;
@@ -1875,14 +1878,6 @@
     let show = its.filter(x => x.part === '見本');
     if (!show.length) show = (u.days[0].items || []).filter(x => x.part === '見本').slice(0, 1);
     return [...show.slice(0, 2), ...its.filter(x => x.part === '思い出す' || x.part === '今日')].slice(0, 4);
-  }
-  // 今日の課題に入れる（同じ単元は 1 つだけ、30 件まで）
-  function addAsk(s, id, day) {
-    const a = progress.asks || (progress.asks = []), it = s.items[s.idx];
-    if (a.some(x => x.u === id)) return;
-    a.push({ u: id, day, key: UNITS[id].days[day - 1].key, from: s.id, qid: it && it.qid, why: s.dk && s.dk.why, date: localDate(), t: Date.now() });
-    if (a.length > 30) a.splice(0, a.length - 30);
-    persist();
   }
   // 今ふりかえる：解いている日を残したまま、ふりかえりの問題を出し、済んだらもとの問題にもどる
   function startLook(id, day, back) {
@@ -1958,7 +1953,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}</article>`;
     figMath(el);
     tick();
   }
@@ -2004,7 +1999,7 @@
       return;
     }
     if (s.type === 'look') {
-      // ふりかえり：判定はしない。今日の課題から外し、もとの問題があればもどる
+      // ふりかえり：判定はしない。前の版で「あとで」に入れた分を外し、もとの問題があればもどる
       const W = words(s.id);
       progress.asks = (progress.asks || []).filter(a => a.u !== s.id);
       (progress.askDone || (progress.askDone = {}))[s.id] = Date.now(); persist();
@@ -2134,8 +2129,7 @@
     if (act === 'dk-yes') { s.dk.i++; if (s.dk.i >= ((it.paths || [])[0] || []).length - 1) s.dk = { step: 'allok' }; Music.tap(); drawItem(); }
     if (act === 'dk-no') { dkOffer(s, it, 'mid', s.dk.i); Music.hint(); drawItem(); }
     if (act === 'dk-close') { s.dk = null; Music.tap(); drawItem(); }
-    if (act === 'look-later') { addAsk(s, t.dataset.u, +t.dataset.day); Music.tap(); drawItem(); }
-    if (act === 'look-now') { addAsk(s, t.dataset.u, +t.dataset.day); startLook(t.dataset.u, +t.dataset.day, s); }
+    if (act === 'look-now') { startLook(t.dataset.u, +t.dataset.day, s); }
     if (act === 'back') endLook();
   });
   document.addEventListener('keydown', e => {
@@ -2153,14 +2147,10 @@
   document.addEventListener('pointerdown', () => Music.unlock());
   document.addEventListener('click', e => { if (e.target.closest('a[href^="#"], .icon')) Music.tap(); });
 
-  const btnMusic = $('#btn-music'), btnParent = $('#btn-parent');
-  const sync = () => { btnMusic.setAttribute('aria-pressed', prefs.music); btnParent.setAttribute('aria-pressed', prefs.parent); };
+  // 保護者の表示と今日の課題のボタンは外した（D-106）
+  const btnMusic = $('#btn-music');
+  const sync = () => { btnMusic.setAttribute('aria-pressed', prefs.music); };
   btnMusic.addEventListener('click', () => { prefs.music = !prefs.music; Music.set(prefs.music); save(PREF, prefs); sync(); });
-  btnParent.addEventListener('click', () => { prefs.parent = !prefs.parent; save(PREF, prefs); sync(); if (session) drawItem(); });
-  $('#btn-today').addEventListener('click', () => {
-    const o = options()[0];
-    location.hash = o ? o.href : '#/';
-  });
   const menu = $('#menu');
   $('#btn-menu').addEventListener('click', () => menu.showModal());
   // だれの記録か（D-044）：人を切り替える、足す、呼び名を変える
