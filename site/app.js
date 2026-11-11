@@ -1114,7 +1114,9 @@
       return;
     }
     Music.tap();
-    if (X.view === '2d') { location.hash = '#/unit/' + id; return; }  // 2D は吹き出しを出さない（D-080）
+    // 3D も 2D も、星を押すと札を出さずに単元のページを開く（D-080、D-108 施主「このメニューいらない」）。
+    // 地図にもどったとき分かるよう、選んだ星は覚えておく
+    if (!combine.on) { X.sel = id; X.pair = null; card(''); location.hash = '#/unit/' + id; return; }
     if (combine.on) {
       if (!combine.from) { combine.from = id; X.sel = id; X.pair = null; starCard(id); paint(); tip('もう 1 つの星を押すと、2 つを組み合わせます', 0); return; }
       if (combine.from !== id) {
@@ -1323,8 +1325,8 @@
     if (e.target.id !== 'cosmos-q' || e.key !== 'Enter' || !hits.length) return;
     const id = hits[0];
     e.target.value = ''; hits = []; X.hits = null; tip('');
-    pick(id);
-    if (!X.pair) paint(true);
+    // Enter はその星へ飛んで鎖を光らせるだけ。開くのは星を押したとき（D-108）
+    X.sel = id; X.pair = null; card(''); paint(true);
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
