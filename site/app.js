@@ -1952,7 +1952,7 @@
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
     el.innerHTML = steps() + `<article class="card" id="card" data-qid="${esc(it.qid || '')}">
-      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
+      <span class="part">${esc(it.part === '離' ? '腕だめし' : it.part)}${tierHtml(it)}</span>${s.type === 'ri' && s.groupLabel ? `<span class="ri-scope">${esc(s.groupLabel)}</span>` : ''}${kindsHtml(it, u.stage <= 2)}<p class="q">${fmt(it.text)}</p>${body}${parentHtml(it)}</article>`;
     figMath(el);
     tick();
   }
