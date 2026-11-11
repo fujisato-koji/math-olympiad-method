@@ -788,12 +788,11 @@ ri:
     note: 3 乗の和は、和の 3 乗から 3xy(x+y) をひく。展開公式を逆に使う。
 
   - part: 離
-    kinds: [最難関]
-    level: 10
+    kinds: [総動員]
     uses: [N-017]
     text: n を正の整数とします。n² + 11 が平方数になるような n はいくつですか。
     answer: 5
-    check: "[n for n in range(1, 1000) if math.isqrt(n * n + 11) ** 2 == n * n + 11][0]"
+    check: "sum(n for n in range(1, 1000) if math.isqrt(n * n + 11) ** 2 == n * n + 11)"
     hints:
       - n² + 11 = m² とおこう。
       - m² − n² = 11 を、(m − n)(m + n) に因数分解しよう。
