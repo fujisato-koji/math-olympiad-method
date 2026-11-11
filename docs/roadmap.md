@@ -30,7 +30,7 @@
 | UC Berkeley Preliminary Examination | 167 | 1307 |
 | 国際物理オリンピック（IPhO）Syllabus | 172 | 1148 |
 | 東京大学大学院理学系研究科物理学専攻（修士課程入試） | 249 | 1902 |
-| GRE Physics Test（ETS） | 214 | 1604 |
+| GRE Physics Test（ETS） | 215 | 1609 |
 | University of Cambridge ほか（STEP 2・3） | 172 | 1109 |
 | Indian Institutes of Technology（JEE Advanced、数学・物理・化学） | 241 | 1566 |
 | National Testing Agency（JEE Main、数学・物理・化学） | 227 | 1470 |
@@ -46,10 +46,10 @@
 | AP Statistics | 103 | 646 |
 | ЕГЭ（数学 профильный уровень と、物理・化学・生物・情報） | 147 | 925 |
 | ISEB Common Entrance 11+（数学と理科） | 113 | 610 |
-| ISEB Common Entrance 13+（数学と理科） | 144 | 809 |
+| ISEB Common Entrance 13+（数学と理科） | 145 | 814 |
 | GCSE Mathematics Higher（Pearson Edexcel） | 114 | 695 |
 | PSLE（シンガポール、算数と理科） | 101 | 561 |
-| GCE O-Level Mathematics（シンガポール） | 101 | 613 |
+| GCE O-Level Mathematics（シンガポール） | 102 | 618 |
 | GCE O-Level Additional Mathematics（シンガポール） | 86 | 526 |
 | AMC 8（MAA） | 106 | 634 |
 | Math Kangaroo | 107 | 657 |
@@ -93,11 +93,11 @@
 | Asian Pacific Mathematics Olympiad（APMO） | 141 | 942 |
 | Institute and Faculty of Actuaries（IFoA）の Associate の試験（CS1〜CP3） | 216 | 1660 |
 | IMF（国際通貨基金）のエコノミスト（Economist Program） | 160 | 1107 |
-| 国際化学オリンピック（IChO） | 230 | 1608 |
+| 国際化学オリンピック（IChO） | 231 | 1613 |
 | 国際生物学オリンピック（IBO） | 263 | 1792 |
-| AP Chemistry（College Board） | 175 | 1152 |
+| AP Chemistry（College Board） | 176 | 1157 |
 | AP Biology（College Board） | 207 | 1351 |
-| A level Chemistry（AQA 7405） | 159 | 1020 |
+| A level Chemistry（AQA 7405） | 160 | 1025 |
 | A level Biology（AQA 7402） | 216 | 1405 |
 | 化学者（ノーベル化学賞の研究に届く知識） | 287 | 2093 |
 | 生命科学の研究者（ブレークスルー賞・生命科学の研究に届く知識） | 325 | 2395 |
@@ -113,23 +113,23 @@
 | 国際ジュニア科学オリンピック（IJSO） | 250 | 1560 |
 | World Robot Olympiad（RoboMission） | 109 | 662 |
 | World Robot Olympiad（Future Engineers、自動運転車） | 107 | 667 |
-| ISLP International Statistical Literacy Poster Competition | 41 | 230 |
+| ISLP International Statistical Literacy Poster Competition | 42 | 235 |
 | 国際情報オリンピック（IOI） | 132 | 887 |
 | 国際天文学・天体物理学オリンピック（IOAA） | 171 | 1098 |
 | 国際地球科学オリンピック（IESO） | 224 | 1444 |
 | 国際経済オリンピック（IEO） | 150 | 1003 |
 | International Brain Bee（世界大会） | 224 | 1508 |
 | NCF-Envirothon（国際大会） | 202 | 1275 |
-| A level Physics（AQA 7408） | 140 | 874 |
-| AP Physics C（Mechanics と Electricity and Magnetism、College Board） | 116 | 737 |
+| A level Physics（AQA 7408） | 141 | 879 |
+| AP Physics C（Mechanics と Electricity and Magnetism、College Board） | 117 | 742 |
 | AP Computer Science A（College Board） | 70 | 410 |
 | AP Environmental Science（College Board） | 193 | 1144 |
-| IB Physics HL（国際バカロレア） | 158 | 1002 |
+| IB Physics HL（国際バカロレア） | 159 | 1007 |
 | IB Chemistry HL（国際バカロレア） | 170 | 1122 |
 | IB Biology HL（国際バカロレア） | 234 | 1508 |
 | GCSE Combined Science: Trilogy Higher（AQA 8464） | 207 | 1271 |
 | GCE O-Level Physics・Chemistry・Biology（シンガポール） | 210 | 1286 |
-| A level Geology（WJEC Eduqas） | 207 | 1342 |
+| A level Geology（WJEC Eduqas） | 208 | 1347 |
 | GCSE Astronomy（Pearson Edexcel 1AS0） | 116 | 702 |
 | 医学の基礎の国際試験（NBME の IFOM 基礎医学試験） | 316 | 2315 |
 | 医学の臨床の国際試験（NBME の IFOM 臨床医学試験） | 294 | 2115 |
@@ -298,7 +298,7 @@
 | A-009 累乗と指数法則 | 式 | N-013、N-074 | 5 | 5 日分、予備 15 問 |
 | C-005 和の法則と積の法則 | 数える | C-003、N-013 | 6 | 6 日分、予備 18 問 |
 | C-006 並べ方（順列） | 数える | C-005、N-015 | 6 | 6 日分、予備 18 問 |
-| C-007 選び方（組合せ） | 数える | C-006、N-014、N-015、N-075 | 6 | 6 日分、予備 18 問 |
+| C-007 選び方（組合せ） | 数える | C-004、C-006、N-014、N-015、N-075 | 6 | 6 日分、予備 18 問 |
 | C-008 重なりを数える（ベン図） | 数える | C-005 | 5 | 5 日分、予備 15 問 |
 | C-009 前の結果から数える（漸化式の入口） | 数える | C-005、C-004 | 6 | 6 日分、予備 18 問 |
 | C-010 塗り分け | 数える | C-006、N-015 | 5 | 5 日分、予備 15 問 |
