@@ -1059,17 +1059,10 @@
       const side = hl && X.sel && !X.pair ? (b === X.sel || (inUp && inUp.has(b)) ? 'up' : 'down') : '';
       p.classList.toggle('up', side === 'up');
       p.classList.toggle('down', side === 'down');
+      // 選んだ単元にじかにつながる線は太く明るく、遠い線は細く淡く（線が多い所でも、すぐの出入りが読める）
+      p.classList.toggle('near', !!side && (a === X.sel || b === X.sel));
+      p.classList.toggle('into', !!side && b === X.sel);
     });
-    // 出入りの見方（2D で単元を選んだときだけ）。地図は .flat の中でスクロールするので、見方は外の枠に置く
-    const frame = host.closest('.cosmos') || host.parentElement;
-    const oldLeg = frame.querySelector(':scope > .flow-legend');
-    if (oldLeg) oldLeg.remove();
-    if (X.sel && !X.pair) {
-      const leg = document.createElement('div');
-      leg.className = 'flow-legend';
-      leg.innerHTML = '<span class="up"><i></i>前提（この単元へ入る）</span><span class="down"><i></i>この単元を使う先（出ていく）</span>';
-      frame.appendChild(leg);
-    }
     // 組み合わせた 2 つの星を、金色の弧で結ぶ
     const svg = host.querySelector('svg'), old = host.querySelector('.pair-arc');
     if (old) old.remove();
@@ -1400,6 +1393,10 @@
       return ds.length ? { s, x: X0 + (ds[Math.floor(ds.length / 2)] - minD) * XS } : null;
     }).filter(Boolean);
     let svg = `<svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="全体の関係図">`;
+    // 選んだ単元の線の向き：線の先（入っていく単元の手前）に小さな矢じり。前提へ入る線と、先へ出ていく線で色を分ける（D-116）
+    // 選んだ単元へ入る線（into）は、金の輪（半径 15）の外で矢じりが止まるように手前に引く
+    const ARR = { 'up': [22, 6], 'down': [22, 6], 'up-near': [19, 8], 'down-near': [19, 8], 'up-into': [29, 11] };
+    svg += '<defs>' + Object.entries(ARR).map(([k, [rx, w]]) => `<marker id="arr-${k}" class="arr ${k.split('-')[0]}" viewBox="0 0 10 10" refX="${rx}" refY="5" markerWidth="${w}" markerHeight="${w}" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L10,5 L0,9 z"/></marker>`).join('') + '</defs>';
     svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
       </g>`).join('');
     svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
