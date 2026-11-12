@@ -23,7 +23,7 @@ items:
     parent: "10010583"
     name: "Printed circuit boards"
     ja: "プリント基板"
-    gap: "要る単元の案「プリント基板の設計と実装（層構成と配線、信号の完全性、電源の分配、熱、基板の試験）」（前提 E-067、E-205）。入口は E-183（配線図と電源）"
+    units: [K-192]
     sources: [Y01]
   - id: "10010588"
     parent: "10010583"
@@ -41,7 +41,7 @@ items:
     parent: "10010583"
     name: "Very large scale integration design"
     ja: "超大規模集積回路（VLSI）の設計"
-    gap: "要る単元の案「VLSI の物理設計（配置配線、タイミング解析、電力と熱、設計の再利用）」（前提 K-030、E-230）。入口は K-030（HDL による設計）、E-233（設計ルールとレイアウト）"
+    units: [K-194, K-193]
     sources: [Y01]
   - id: "10010662"
     parent: "10010583"
@@ -53,19 +53,19 @@ items:
     parent: "10010583"
     name: "Electronic design automation"
     ja: "電子設計自動化（EDA）"
-    gap: "要る単元の案「電子設計自動化のアルゴリズムと道具（論理合成、配置配線、設計ルール検査、シミュレーション）」（前提 K-030、K-028）。入口は K-030"
+    units: [K-193, K-194]
     sources: [Y01]
   - id: "10010717"
     parent: "10010583"
     name: "Hardware validation"
     ja: "ハードウェアの検証"
-    gap: "要る単元の案「ハードウェアの検証（機能検証、形式検証とモデル検査、等価性検査、タイミング解析）」（前提 K-030、L-040）。入口は L-040（SAT と SMT）"
+    units: [K-195]
     sources: [Y01]
   - id: "10010737"
     parent: "10010583"
     name: "Hardware test"
     ja: "ハードウェアの試験"
-    gap: "要る単元の案「ハードウェアの試験（テストパターン生成、故障シミュレーション、テスト容易化設計、スキャン）」（前提 K-030、K-035）。入口は E-233（電気特性の検査と歩留まり）"
+    units: [K-196]
     sources: [Y01]
   - id: "10010750"
     parent: "10010583"
@@ -90,13 +90,13 @@ items:
     parent: "10010520"
     name: "Embedded and cyber-physical systems"
     ja: "組込みとサイバーフィジカルシステム"
-    units: [K-085, E-183, E-047]
+    units: [K-085, E-183, E-047, K-197]
     sources: [Y01]
   - id: "10010570"
     parent: "10010520"
     name: "Real-time systems"
     ja: "リアルタイムシステム"
-    gap: "要る単元の案「リアルタイムシステム（周期タスクのスケジューリング（RM と EDF）、最悪実行時間、優先度逆転、時間制約の検証）」（前提 K-037、K-018）"
+    units: [K-197]
     sources: [Y01]
   - id: "10010575"
     parent: "10010520"
@@ -121,7 +121,7 @@ items:
     parent: "10003033"
     name: "Network components"
     ja: "ネットワークの構成要素"
-    gap: "要る単元の案「ネットワーク機器（ルータとスイッチの内部、アダプタ、無線アクセスポイント、プログラマブルなネットワーク）」（前提 K-038、E-205）。入口は K-038"
+    units: [K-198]
     sources: [Y01]
   - id: "10003068"
     parent: "10003033"
@@ -170,7 +170,7 @@ items:
     parent: "10011007"
     name: "Software creation and management"
     ja: "ソフトウェアの作成と管理"
-    gap: "要る単元の案「ソフトウェア工学（要求分析、設計、開発工程の管理、テストと検証、保守、共同開発）」（前提 K-013、K-017）。入口は K-013（テストとデバッグ）、K-017（仕様とテスト）、E-199（システムズエンジニアリング）"
+    units: [K-199]
     sources: [Y01]
   - {id: "10003752", name: "Theory of computation", ja: "計算理論", group: true}
   - id: "10003753"
@@ -219,7 +219,7 @@ items:
     parent: "10003752"
     name: "Semantics and reasoning"
     ja: "意味論と推論"
-    gap: "要る単元の案「プログラムの意味論と検証（操作的意味論と表示的意味論、ホーア論理、抽象解釈、型システムの健全性）」（前提 K-019、L-030）。入口は K-019（契約と不変条件）、L-030（ラムダ計算）"
+    units: [K-200]
     sources: [Y01]
   - {id: "10002950", name: "Mathematics of computing", ja: "計算の数学", group: true}
   - id: "10003624"
@@ -238,7 +238,7 @@ items:
     parent: "10002950"
     name: "Mathematical software"
     ja: "数学ソフトウェア"
-    gap: "要る単元の案「数学ソフトウェア（数値ライブラリ BLAS と LAPACK、疎行列ソルバ、浮動小数点の実装と性能の測り方）」（前提 K-003、K-007）。入口は K-190（科学計算の再現性）、K-163（数値解の検証）、K-142（浮動小数点）"
+    units: [K-201]
     sources: [Y01]
   - id: "10003712"
     parent: "10002950"
@@ -269,7 +269,7 @@ items:
     parent: "10002951"
     name: "Information storage systems"
     ja: "情報の保管システム"
-    gap: "要る単元の案「記憶装置とストレージ（ディスクとフラッシュ、RAID、複製、分散ストレージ、キー・バリューストア）」（前提 K-032、K-037）。入口は K-037（ファイルシステム）、K-032（メモリ階層）"
+    units: [K-202]
     sources: [Y01]
   - id: "10003227"
     parent: "10002951"
@@ -281,13 +281,13 @@ items:
     parent: "10002951"
     name: "World Wide Web"
     ja: "World Wide Web"
-    gap: "要る単元の案「Web の仕組み（HTTP、ブラウザ、Web サービス、リンク解析）」（前提 K-038、K-144）。入口は K-144（DNS と TCP/IP）"
+    units: [K-203, K-204]
     sources: [Y01]
   - id: "10003317"
     parent: "10002951"
     name: "Information retrieval"
     ja: "情報検索"
-    gap: "要る単元の案「情報検索（索引、tf-idf と確率的検索モデル、順位づけ、評価指標、リンク解析）」（前提 K-023、S-001）。入口は K-161（検索拡張）のみ"
+    units: [K-204]
     sources: [Y01]
   - {id: "10002978", name: "Security and privacy", ja: "セキュリティとプライバシー", group: true}
   - id: "10002979"
@@ -300,7 +300,7 @@ items:
     parent: "10002978"
     name: "Formal methods and theory of security"
     ja: "セキュリティの形式手法と理論"
-    gap: "要る単元の案「セキュリティの形式手法（攻撃者のモデル、プロトコルの記号的検証、情報流の制御、ゲームによる安全性証明）」（前提 L-023、K-042）。入口は K-044、K-042"
+    units: [K-205]
     sources: [Y01]
   - id: "10002991"
     parent: "10002978"
@@ -312,13 +312,13 @@ items:
     parent: "10002978"
     name: "Intrusion/anomaly detection and malware mitigation"
     ja: "侵入・異常の検知とマルウェア対策"
-    gap: "要る単元の案「侵入検知とマルウェア対策（シグネチャと異常検知、マルウェアの解析、フィッシング）」（前提 K-043、K-034）。入口は K-043（ファジング）"
+    units: [K-206]
     sources: [Y01]
   - id: "10003001"
     parent: "10002978"
     name: "Security in hardware"
     ja: "ハードウェアのセキュリティ"
-    gap: "要る単元の案「ハードウェアのセキュリティ（改ざん対策、物理的複製困難関数 PUF、ハードウェアトロイ、サイドチャネルの対策）」（前提 K-043、E-230）。入口は K-043（サイドチャネル攻撃）"
+    units: [K-207]
     sources: [Y01]
   - id: "10003006"
     parent: "10002978"
@@ -336,13 +336,13 @@ items:
     parent: "10002978"
     name: "Database and storage security"
     ja: "データベースと記憶のセキュリティ"
-    gap: "要る単元の案「データの匿名化とプライバシー保護（k 匿名性、差分プライバシー、暗号化データの検索、監査）」（前提 K-044、S-001）。入口は K-044（準同型暗号）、K-146"
+    units: [K-208]
     sources: [Y01]
   - id: "10003022"
     parent: "10002978"
     name: "Software and application security"
     ja: "ソフトウェアとアプリケーションのセキュリティ"
-    gap: "要る単元の案「ソフトウェアの脆弱性と対策（メモリ破壊、入力の検証、Web アプリの攻撃、リバースエンジニアリング）」（前提 K-029、K-043）。入口は K-043（ファジング）"
+    units: [K-209]
     sources: [Y01]
   - id: "10003029"
     parent: "10002978"
@@ -367,13 +367,13 @@ items:
     parent: "10003120"
     name: "Collaborative and social computing"
     ja: "協調と社会的コンピューティング"
-    gap: "要る単元の案「協調と社会的コンピューティング（グループ作業の実験、ネットワークの構造と情報の拡散、クラウドソーシングの品質管理、集合知）」（前提 Q-011、C-022）。優先度は低い"
+    units: [K-210]
     sources: [Y01]
   - id: "10003138"
     parent: "10003120"
     name: "Ubiquitous and mobile computing"
     ja: "ユビキタス・モバイルコンピューティング"
-    gap: "要る単元の案「ユビキタスとモバイルの計算（センサーによる状況認識と位置推定、端末の省電力、無線の接続、ウェアラブル）」（前提 E-088、E-183）。入口は E-088、E-225"
+    units: [K-211]
     sources: [Y01]
   - id: "10003145"
     parent: "10003120"
@@ -385,14 +385,14 @@ items:
     parent: "10003120"
     name: "Accessibility"
     ja: "アクセシビリティ"
-    gap: "要る単元の案「アクセシビリティ（障害の種類と利用の障壁、支援技術、評価の方法と基準）」（前提 Q-021）。入口は Q-021（多様な使う人の一項目のみ）"
+    units: [K-212]
     sources: [Y01]
   - {id: "10010147", name: "Computing methodologies", ja: "計算の方法論", group: true}
   - id: "10010148"
     parent: "10010147"
     name: "Symbolic and algebraic manipulation"
     ja: "記号・代数的処理"
-    gap: "要る単元の案「計算機代数（多項式の算術、グレブナー基底、終結式、因数分解、数式処理系）」（前提 R-010、A-036）。入口は K-168（数値代数幾何）、K-153（群のアルゴリズム）"
+    units: [K-213]
     sources: [Y01]
   - id: "10010169"
     parent: "10010147"
@@ -428,7 +428,7 @@ items:
     parent: "10010147"
     name: "Distributed computing methodologies"
     ja: "分散計算の方法論"
-    gap: "要る単元の案「分散アルゴリズムと分散システム（合意、リーダー選出、論理時計、複製と整合性、MapReduce）」（前提 K-018、K-035）。入口は K-035（耐故障と協調）、K-165（学習の並列化）"
+    units: [K-214, K-215]
     sources: [Y01]
   - id: "10011777"
     parent: "10010147"

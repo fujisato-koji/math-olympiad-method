@@ -28,12 +28,12 @@ items:
   - id: "06"
     name: "Order, lattices, ordered algebraic structures"
     ja: "順序・束・順序代数"
-    gap: "要る単元の案「順序と束（束とブール代数、分配束と完備束、不動点定理、順序群）」（前提 L-022、A-024、R-001）。入口は L-022（半順序集合）と K-030（回路のブール代数）だけで束の理論がない"
+    units: [R-034]
     sources: [Y01]
   - id: "08"
     name: "General algebraic systems"
     ja: "一般代数系"
-    gap: "要る単元の案「普遍代数と半群（代数系と準同型、ヴァラエティとバーコフの定理、半群とモノイド）」（前提 R-001、R-008）。入口は R-001（群の定義）だけで一般の代数系がない"
+    units: [R-035]
     sources: [Y01]
   - id: "11"
     name: "Number theory"
@@ -63,7 +63,7 @@ items:
   - id: "16"
     name: "Associative rings and algebras"
     ja: "結合環と結合多元環"
-    gap: "要る単元の案「非可換環論（半単純環とウェダーバーンの定理、ジャコブソン根基とアルティン環、中心的単純環とブラウアー群）」（前提 R-008、R-011、R-016）。入口は R-008（環）、R-011（加群）、R-016（群環の表現）で、非可換環の構造論がない"
+    units: [R-036]
     sources: [Y01]
   - id: "17"
     name: "Nonassociative rings and algebras"
@@ -78,7 +78,7 @@ items:
   - id: "19"
     name: "K-theory"
     ja: "K 理論"
-    gap: "要る単元の案「K 理論の入口（射影加群の K_0 と K_1、ベクトル束の K(X) とボット周期性、代数的 K 理論の入口）」（前提 T-026、R-011、R-027）。入口は T-026（ベクトル束）と R-011（加群）だけで、K 群そのものがない"
+    units: [T-059]
     sources: [Y01]
   - id: "20"
     name: "Group theory and generalizations"
@@ -113,7 +113,7 @@ items:
   - id: "32"
     name: "Several complex variables and analytic spaces"
     ja: "多変数複素関数と解析空間"
-    gap: "要る単元の案「多変数複素解析（ハルトークスの現象、正則領域と擬凸性、岡の原理、解析空間）」（前提 D-043、T-029、T-037）。入口は D-043 の「入口」だけで中心がない"
+    units: [D-092, D-043]
     sources: [Y01]
   - id: "33"
     name: "Special functions"

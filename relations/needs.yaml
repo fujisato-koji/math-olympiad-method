@@ -3945,3 +3945,81 @@ lines:
   L-024>L-043: {type: 土台, strength: 3, why: 述語論理の証明体系が対象}
   L-021>L-043: {type: 道具, strength: 3, why: 順序数がε₀と順序数解析の物差し}
   L-034>L-043: {type: 土台, strength: 3, why: 不完全性と算術の無矛盾性が動機}
+  # 地図を広げる：計算機と数学（ext-cs、2026-11-12、D-119）。主会話が単元の中身から付けた
+  E-205>K-192: {type: 土台, strength: 3, why: 伝送線路と整合が信号の完全性の土台}
+  E-067>K-192: {type: 土台, strength: 2, why: 回路網の素子と電源の扱いを基板に移す}
+  K-030>K-193: {type: 土台, strength: 3, why: ブール代数と状態機械が合成の対象}
+  K-022>K-193: {type: 道具, strength: 2, why: 探索とデータ構造で論理の最小化を回す}
+  K-193>K-194: {type: 土台, strength: 3, why: 合成した回路のネットリストが配置配線の入力}
+  K-026>K-194: {type: 道具, strength: 2, why: グラフの最短経路とフローで配線する}
+  E-158>K-194: {type: 土台, strength: 2, why: MOSFET の動作から遅延と電力のモデルを作る}
+  K-193>K-195: {type: 土台, strength: 3, why: 合成した回路と BDD が検査の対象と道具}
+  K-030>K-196: {type: 土台, strength: 3, why: 組合せ回路と順序回路が試験の対象}
+  K-022>K-196: {type: 道具, strength: 2, why: 探索の算法でテストパターンを生成する}
+  K-037>K-197: {type: 土台, strength: 3, why: OS のスケジューリングと割り込みに時間の制約を加える}
+  K-018>K-197: {type: 道具, strength: 2, why: 並行の競合と排他を時間の制約の下で扱う}
+  K-038>K-198: {type: 土台, strength: 3, why: 経路制御とパケット交換を機器の中で実現する}
+  K-017>K-199: {type: 土台, strength: 3, why: 仕様とテストと抽象データ型を開発の工程全体へ広げる}
+  L-030>K-200: {type: 土台, strength: 3, why: ラムダ計算が意味論の基本の言語}
+  K-019>K-200: {type: 深める, strength: 2, why: 契約と不変条件をホーア論理として形式にする}
+  K-039>K-200: {type: 道具, strength: 2, why: 構文と型システムを意味論の対象にする}
+  K-003>K-201: {type: 土台, strength: 3, why: LU と QR の直接法を実装の層に分ける}
+  K-007>K-201: {type: 土台, strength: 2, why: 反復法と疎行列を実装する}
+  K-032>K-201: {type: 道具, strength: 2, why: メモリ階層に合わせてブロック化する}
+  K-037>K-202: {type: 土台, strength: 3, why: ファイルシステムの下の記憶装置と配置を扱う}
+  K-032>K-202: {type: 土台, strength: 2, why: メモリ階層のいちばん下として記憶装置を見る}
+  K-038>K-203: {type: 土台, strength: 3, why: TCP と名前解決の上に HTTP を載せる}
+  K-023>K-204: {type: 道具, strength: 3, why: ハッシュと整列で索引を作る}
+  S-005>K-204: {type: 道具, strength: 2, why: マルコフ連鎖の定常分布で PageRank を求める}
+  K-042>K-205: {type: 土台, strength: 3, why: 暗号の部品と安全性の定義を証明の対象にする}
+  L-023>K-205: {type: 道具, strength: 2, why: 論理で性質を書き検証する}
+  K-043>K-206: {type: 土台, strength: 3, why: システムの安全の仕組みと攻撃が検知の対象}
+  K-034>K-206: {type: 土台, strength: 2, why: ネットワークの通信を監視の対象にする}
+  K-043>K-207: {type: 土台, strength: 3, why: サイドチャネルと隔離の考えをハードウェアへ広げる}
+  K-030>K-207: {type: 土台, strength: 2, why: 論理回路を攻撃と対策の対象にする}
+  K-042>K-207: {type: 道具, strength: 2, why: 暗号の実装を守る対象にする}
+  K-169>K-208: {type: 土台, strength: 2, why: 関係データベースの問い合わせを保護の対象にする}
+  K-042>K-208: {type: 道具, strength: 2, why: 暗号で検索と保管を守る}
+  S-003>K-208: {type: 道具, strength: 2, why: 連続分布でラプラス機構の誤差を見積もる}
+  K-029>K-209: {type: 土台, strength: 3, why: C のメモリとアセンブリが攻撃の舞台}
+  K-043>K-209: {type: 土台, strength: 2, why: 隔離とファジングの上に対策を置く}
+  K-203>K-209: {type: 土台, strength: 2, why: Web のしくみが Web アプリへの攻撃の前提}
+  Q-021>K-210: {type: 土台, strength: 3, why: 人と機械のやり取りの研究の方法を集団へ広げる}
+  Q-011>K-210: {type: 土台, strength: 2, why: 同調と協力と集団の知見を土台にする}
+  K-047>K-211: {type: 道具, strength: 2, why: 学習でセンサーから行動を認識する}
+  K-038>K-211: {type: 道具, strength: 2, why: 端末をネットワークにつなぐ}
+  E-183>K-211: {type: 土台, strength: 2, why: マイコンとセンサーと電池の見積もり}
+  Q-021>K-212: {type: 深める, strength: 3, why: 使いやすさの評価と多様な使う人を障害の側から深める}
+  K-203>K-212: {type: 道具, strength: 2, why: HTML と DOM の構造を支援技術が読む}
+  R-010>K-213: {type: 土台, strength: 3, why: 多項式環のイデアルを計算で扱う}
+  R-012>K-213: {type: 土台, strength: 2, why: 有限体の上で因数分解する}
+  K-028>K-213: {type: 道具, strength: 2, why: 算法の計算量を見積もる}
+  K-018>K-214: {type: 土台, strength: 3, why: メッセージ渡しの並行性を分散のモデルにする}
+  K-022>K-214: {type: 道具, strength: 2, why: 算法の解析をメッセージの数と時間に使う}
+  K-214>K-215: {type: 応用, strength: 3, why: 合意の算法を複製の実装に使う}
+  K-035>K-215: {type: 一般化, strength: 2, why: 原子性と回復を複数の計算機へ広げる}
+  K-038>K-215: {type: 道具, strength: 2, why: ネットワークの遅延と分断を前提にする}
+  L-022>R-034: {type: 土台, strength: 3, why: 半順序集合の上に束を定義する}
+  R-001>R-034: {type: 土台, strength: 2, why: 群の定義の上に束順序群を置く}
+  R-034>R-035: {type: 土台, strength: 2, why: 合同関係の束と部分代数の束を使う}
+  R-008>R-035: {type: 一般化, strength: 3, why: 群と環の剰余と同型定理を一般の代数系へ広げる}
+  R-011>R-036: {type: 土台, strength: 3, why: 加群の言葉で環の構造を調べる}
+  R-016>R-036: {type: 土台, strength: 2, why: 群環の表現が半単純環の例}
+  R-013>R-036: {type: 道具, strength: 2, why: ガロア拡大で中心的単純環を作る}
+  T-026>T-059: {type: 土台, strength: 3, why: ベクトル束の同型類から K(X) を作る}
+  T-027>T-059: {type: 道具, strength: 2, why: CW 複体とホモトピーでボット周期性を述べる}
+  R-027>T-059: {type: 道具, strength: 2, why: 完全系列と射影加群で K₀ と K₁ を作る}
+  T-023>T-060: {type: 応用, strength: 3, why: 単体ホモロジーの計算をフィルトレーションへ広げる}
+  D-043>D-092: {type: 深める, strength: 3, why: 多変数の正則関数の入口を本論へ進める}
+  T-037>D-092: {type: 道具, strength: 2, why: 層コホモロジーで定理 A・B を述べる}
+  D-065>D-092: {type: 道具, strength: 2, why: ヒルベルト空間の方法で ∂̄ 方程式を解く}
+  S-010>S-056: {type: 土台, strength: 3, why: 空間ポアソン過程が確率幾何の基本の模型}
+  S-014>S-056: {type: 道具, strength: 2, why: ポアソンランダム測度で点過程を扱う}
+  G-048>S-056: {type: 土台, strength: 2, why: ボロノイ分割を確率の模型にする}
+  S-018>S-057: {type: 応用, strength: 3, why: 点推定と区間推定を有限母集団の抽出に当てはめる}
+  S-020>S-057: {type: 道具, strength: 2, why: 回帰で回帰推定量を作る}
+  S-023>S-058: {type: 一般化, strength: 3, why: 多変量の主成分を関数へ広げる}
+  S-038>S-058: {type: 道具, strength: 2, why: 平滑化で観測から関数を作る}
+  D-066>S-058: {type: 道具, strength: 2, why: コンパクト作用素のスペクトル分解でカルーネン–レーヴェ展開}
+  S-021>S-059: {type: 道具, strength: 2, why: 尤度と漸近理論で分布の母数を推定する}
+  T-016>S-059: {type: 土台, strength: 3, why: リーマン計量と測地線で平均と主成分を定義する}

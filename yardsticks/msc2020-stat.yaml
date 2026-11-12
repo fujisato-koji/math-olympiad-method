@@ -28,7 +28,7 @@ items:
     parent: "60"
     name: "Geometric probability and stochastic geometry"
     ja: "幾何的確率と確率幾何"
-    gap: "要る単元の案「確率幾何と幾何的確率（ビュフォンの針とクロフトンの公式、ランダム集合とブーリアンモデル、ポアソン–ボロノイ分割、ランダム幾何グラフ）」（前提 S-010、S-014、G-048）。入口は S-010（空間ポアソン過程）だけ"
+    units: [S-056]
     sources: [Y01]
   - id: "60Exx"
     parent: "60"
@@ -95,7 +95,7 @@ items:
     parent: "62"
     name: "Statistical sampling theory and related topics"
     ja: "標本抽出論とその周辺"
-    gap: "要る単元の案「標本調査の理論（単純無作為・層化・集落・系統抽出、比推定と回帰推定、ホルビッツ–トンプソン推定量、無回答の重みづけ）」（前提 S-031、S-018、S-003）。入口は S-031（高校水準の標本調査）だけ。欠測は S-036、因果推論は S-042 が受け持つ"
+    units: [S-057]
     sources: [Y01]
   - id: "62Exx"
     parent: "62"
@@ -167,5 +167,5 @@ items:
     parent: "62"
     name: "Statistics on algebraic and topological structures"
     ja: "代数的・位相的構造上の統計"
-    gap: "要る単元の案「関数データ・位相的データ・多様体上の統計（関数主成分、パーシステントホモロジー、方向統計と多様体上の平均、距離空間上の統計）」（前提 S-023、T-023、D-087）。入口は T-023（ホモロジーの計算）と D-087（ワッサースタイン距離）だけ"
+    units: [S-058, T-060, S-059]
     sources: [Y01]
