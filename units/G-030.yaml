@@ -23,6 +23,7 @@
 # check：長さは積と商の式（Fraction）、PT は math.isqrt。同じ円の上にあるかを選ぶ問題は、積をくらべる式。
 #   和と積から求める問題は、1 から順に試す式。地平線は math.sqrt で近い選択肢を選ぶ式。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした A-017、G-054 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
+# ただし腕だめしの最難関（AB = BC の円に内接する四角形の対角線 AC）だけは例外で、uses に G-015、G-023、G-043 を挙げて、点を中心にした回転（G-015）、円に内接する四角形の向かい合う角の和（G-023）、トレミーの定理（G-043）を使う。
 
 id: G-030
 days:
@@ -1015,3 +1016,68 @@ ri:
       - [角の二等分線の定理で BD:DC = 6:4 = 3:2、BD = 3、DC = 2, △ABD ∽ △AEC で AB:AE = AD:AC、AD × AE = 6 × 4 = 24, 方べきの定理で AD × DE = 3 × 2 = 6, AD × AE = AD × AD + AD × DE なので AD × AD = 24 − 6 = 18, AD = 3√2 cm]
     note: 角の二等分線の定理（G-042）、相似、方べきの定理の 3 つを順につなぐ総動員の問題。AD × AE と AD × DE の 2 つの積を出し、その差から AD × AD を求める発想が要点で、2 次方程式を立てなくてすむ。AD × AD = AB × AC − BD × DC は、のちのスチュワートの定理の特別な場合。
     time: 900
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-018
+    - G-019
+    - G-020
+    - G-054
+    - A-011
+    text: 三角形 ABC は AB = 10 cm、AC = 17 cm、BC = 21 cm です。点 A から辺 BC に垂線 AD をひきます。さらに、点 D から辺 AB、AC に垂線 DE、DF をひきます（E は AB の上、F は AC の上）。直線 EF と直線 BC の交わる点を G とします。DG の長さは何 cm ですか。
+    svg: <svg viewBox="0 0 220 104" xmlns="http://www.w3.org/2000/svg"><polygon points="68.0,16.0 14.0,88.0 203.0,88.0" stroke="currentColor" stroke-width="2" fill="none"/><line x1="68.0" y1="16.0" x2="68.0" y2="88.0" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="68.0" y1="88.0" x2="33.4" y2="62.1" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="68.0" y1="88.0" x2="97.9" y2="31.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polyline points="68.0,83.0 63.0,83.0 63.0,88.0" stroke="currentColor" stroke-width="1" fill="none"/><polyline points="68.0,83.0 73.0,83.0 73.0,88.0" stroke="currentColor" stroke-width="1" fill="none"/><polyline points="36.4,58.1 40.4,61.1 37.4,65.1" stroke="currentColor" stroke-width="1" fill="none"/><polyline points="93.5,29.6 91.1,34.0 95.5,36.4" stroke="currentColor" stroke-width="1" fill="none"/><circle cx="33.4" cy="62.1" r="2.2" fill="currentColor"/><circle cx="97.9" cy="31.9" r="2.2" fill="currentColor"/><text x="68.0" y="10.0" font-size="12" text-anchor="middle">A</text><text x="6.0" y="100.0" font-size="12" text-anchor="middle">B</text><text x="211.0" y="100.0" font-size="12" text-anchor="middle">C</text><text x="68.0" y="102.0" font-size="12" text-anchor="middle">D</text><text x="24.4" y="65.1" font-size="12" text-anchor="middle">E</text><text x="107.9" y="28.9" font-size="12" text-anchor="middle">F</text></svg>
+    answer: 10
+    check: '(lambda p, q, r: (lambda Ax: (lambda sq: (lambda Ay: (lambda t, u: (lambda E, F: abs(E[0] - E[1] * (F[0] - E[0]) / (F[1] - E[1]) - Ax))((t * Ax, t * Ay), (r + u * (Ax - r), u * Ay)))(Ax * Ax / (p * p), (Ax - r) * (Ax - r) / (q * q)))(Fraction(math.isqrt(sq.numerator), math.isqrt(sq.denominator))))(p * p - Ax * Ax))(Fraction(p * p - q * q + r * r, 2 * r)))(10, 17, 21)'
+    hints:
+    - 三角形 ABD と三角形 ACD は直角三角形だね。まず BD、DC、AD の長さを出そう。
+    - 90° がいくつもあるね。直角をはさんで、同じ形の三角形はできないかな。
+    - G を通る直線の上で、G からの長さがならぶ所を見つけて、式にしてみよう。
+    paths:
+    - - 三平方の定理で BD、DC、AD を出す。BD = x cm とすると DC = (21 − x) cm。直角三角形 ABD と ACD の AD² を 2 通りに書くと 10² − x² = 17² − (21 − x)²。100 − x² = 289 − 441 + 42x − x² から 42x = 252、x = 6。BD = 6 cm、DC = 21 − 6 = 15 cm、AD² = 100 − 36 = 64 なので AD = 8 cm
+      - '△AED と △ADB で、∠A は共通、∠AED = ∠ADB = 90° なので相似（2 組の角が等しい）。AE : AD = AD : AB から AE × AB = AD²。同じように △AFD ∽ △ADC から AF × AC = AD²。だから AE × AB = AF × AC（= 64）。E は AB の上、F は AC の上なので、E と B は A から同じ向き、F と C も A から同じ向き。方べきの定理の逆から、B、C、F、E は 1 つの円の上にある（これを円ア）'
+      - ∠AED = ∠AFD = 90° なので、E と F は AD を直径とする円の上にある（円周角の定理の逆。これを円イ）。AD ⊥ BC で、AD は円イの直径なので、直線 BC は D で円イに接する（半径のはしで半径に垂直な直線は接線。G-054）
+      - G は直線 BC の上の点で D とはちがう（D は円イの上にあり、直線 EF が円イと交わるのは E、F だけ）。接線の上の D 以外の点は円イの外にあるので、接線と割線の方べきの定理で GD² = GE × GF で、E と F は G から同じ向きにある。すると G は線分 EF の外にあり、円ア（直線 EF との交点は E、F だけ）の外にもある。円アについて方べきの定理で GE × GF = GB × GC で、B と C も G から同じ向き。だから GD² = GB × GC で、G は線分 BC の上にはない
+      - DG = x cm とする。G が C がわ（C の先）にあるとすると GC = x − 15、GB = x + 6 で x² = (x + 6)(x − 15) = x² − 9x − 90。9x = −90 となり x がマイナスで合わない。G が B がわ（B の先）にあるとすると GB = x − 6、GC = x + 15 で x² = (x − 6)(x + 15) = x² + 9x − 90。9x = 90、x = 10。DG = 10 cm（G は BC を B の先にのばした所で、B から 4 cm）
+    - - 三平方の定理で BD、DC、AD を出す。BD = x cm とすると DC = (21 − x) cm。AD² を 2 通りに書くと 10² − x² = 17² − (21 − x)²。100 − x² = 289 − 441 + 42x − x² から 42x = 252、x = 6。BD = 6 cm、DC = 15 cm、AD² = 100 − 36 = 64 なので AD = 8 cm
+      - '△BED と △BDA で、∠B は共通、∠BED = ∠BDA = 90° なので相似。DE : AD = BD : AB から DE = 8 × 6 ÷ 10 = 24/5 cm。同じように △CFD ∽ △CDA（∠C は共通、∠CFD = ∠CDA = 90°）から DF : AD = CD : CA で DF = 8 × 15 ÷ 17 = 120/17 cm'
+      - 'E、F から BC に垂線 EP、FQ をひく。E は AD について B と同じがわ、F は C と同じがわにあるので、P は D から B の向き、Q は D から C の向きの所にできる。△DPE は P が直角で、∠PDE = ∠EDB = 90° − ∠B。△ADB も D が直角で、∠DAB = 90° − ∠B。よって △DPE ∽ △ADB（D、P、E が A、D、B の順に重なる）で、相似比は DE : AB = 24/5 : 10 = 12 : 25。DP = AD × 12/25 = 96/25 cm、EP = BD × 12/25 = 72/25 cm。同じように △DQF ∽ △ADC で、相似比は DF : AC = 120/17 : 17 = 120 : 289。DQ = 8 × 120/289 = 960/289 cm、FQ = DC × 120/289 = 1800/289 cm'
+      - 'EP と FQ はどちらも BC に垂直なので平行。直線 EF が BC と交わる点 G で △GPE ∽ △GQF となり、GP : GQ = EP : FQ = 72/25 : 1800/289 = 289 : 625。E も F も三角形の辺の上にあるので、BC から見て同じがわ（A のがわ）にある。だから直線 EF は線分 PQ の外で BC と交わる。EP のほうが短いので、G は P のがわにあり、G、P、Q の順にならぶ。P は D から B の向きなので、G は D から B の向きにあり、DG = x cm とすると GP = x − 96/25、GQ = x + 960/289'
+      - '(x − 96/25) : (x + 960/289) = 289 : 625 から 625 × (x − 96/25) = 289 × (x + 960/289)。625x − 2400 = 289x + 960。336x = 3360、x = 10。DG = 10 cm'
+    note: '考えどころは 3 つ：①∠AED = ∠AFD = 90° から E と F は AD を直径とする円の上にあり、直角三角形の高さの関係 AE × AB = AD² = AF × AC から B、C、F、E も 1 つの円の上にある（かくれた 2 つの円）、②AD ⊥ BC なので、BC は AD を直径とする円に D で接する、③G からの方べきで GD² = GE × GF = GB × GC にし、G が線分 BC の外にあることから、C がわと B がわを調べて 1 次方程式で DG を出す。答えは AD の長さによらず、BD、DC だけで DG = BD × DC ÷ (DC − BD) = 6 × 15 ÷ 9 = 10 と決まる。2 本目は円も接線も使わず、E、F から BC への垂線の足 P、Q を相似で出し（D からのきょりと高さ）、平行な EP、FQ から GP : GQ = EP : FQ とおいて DG の 1 次方程式にする（1 本目はかくれた円と方べき、2 本目は相似と比）。check は辺の長さから A の位置（x と y の数）を出し、D から AB、AC への垂線の足 E、F を Fraction で求め、直線 EF が BC（x 軸）と交わる点 G を出して DG を返す（2 本の道に出てくる 6、15、289 : 625 は使わない）。3 本目の道として、この先の単元のメネラウスの定理を知っていれば、AE：EB = 16：9、CF：FA = 225：64 から BG：GC = 4：25 と出て、BG = 4、DG = 6 + 4 = 10。答えの 10 が AB と同じなのは、たまたま。既出・出典：「B、C、F、E が 1 つの円の上にある」は知られた性質。DG = BD × DC ÷ (DC − BD) となる形を問う大会の同じ問いは見つけていない。わな：G を C がわに置く、EF と BC が交わらないと思う。図は辺の長さのとおりにかき、EF、G、円はかかない（G を図に入れると、位置が見えてしまうため）。'
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-015
+    - G-016
+    - G-017
+    - G-018
+    - G-019
+    - G-020
+    - G-023
+    - G-043
+    text: 円に内接する四角形 ABCD があり、AB = BC = 5 cm、CD = 4 cm、DA = 6 cm です。対角線 AC の長さは何 cm ですか。図は長さのとおりにかいてあるとはかぎりません。答えは分数で書きましょう。
+    svg: <svg viewBox="0 0 220 226" xmlns="http://www.w3.org/2000/svg"><circle cx="110.0" cy="116.0" r="92.9" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="17.1,114.1 110.0,23.1 202.9,114.1 146.4,201.4" stroke="currentColor" stroke-width="2" fill="none"/><line x1="60.8" y1="65.8" x2="66.4" y2="71.5" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="159.2" y1="65.8" x2="153.6" y2="71.5" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="17.1" cy="114.1" r="2.2" fill="currentColor"/><circle cx="110.0" cy="23.1" r="2.2" fill="currentColor"/><circle cx="202.9" cy="114.1" r="2.2" fill="currentColor"/><circle cx="146.4" cy="201.4" r="2.2" fill="currentColor"/><text x="7.1" y="118.1" font-size="12" text-anchor="middle">A</text><text x="110.0" y="16.1" font-size="12" text-anchor="middle">B</text><text x="212.9" y="118.1" font-size="12" text-anchor="middle">C</text><text x="155.4" y="215.4" font-size="12" text-anchor="middle">D</text></svg>
+    answer: 50/7
+    check: '(lambda a, b, c, d: (lambda s: (lambda r: r if r * r == s else -1)(Fraction(math.isqrt(s.numerator), math.isqrt(s.denominator))))(Fraction((a * a + b * b) * c * d + (c * c + d * d) * a * b, c * d + a * b)))(5, 5, 4, 6)'
+    hints:
+    - AB = BC であることを、ほかのことばで言いかえてみよう。
+    - 2 本の対角線について、辺の長さで書ける関係はなかったかな。
+    - AB = BC を使って、三角形を 1 つ、別の場所へうつしてみよう。
+    paths:
+    - - AB に対する円周角で ∠ADB = ∠ACB、BC に対する円周角で ∠BDC = ∠BAC。△BAC は AB = BC の二等辺三角形なので ∠ACB = ∠BAC。よって ∠ADB = ∠BDC で、DB は ∠ADC を 2 等分する（四角形はへこんでいないので、DB は ∠ADC の内がわを通る）
+      - 半直線 DA の上に DC′ = DC = 4 cm となる点 C′ をとる（DA = 6 cm なので C′ は D と A の間）。△DBC と △DBC′ で、DB は共通、DC = DC′、∠BDC = ∠BDC′ なので合同（2 組の辺とその間の角）。よって BC′ = BC = 5 cm
+      - BA = BC′ = 5 cm なので、B を中心とする半径 5 cm の円は A と C′ を通る。D から出る直線 DA はこの円と C′ と A で交わり、C′ も A も D から同じ向きにあるので、D はこの円の外にある。DB > 5 cm
+      - D と円の中心 B を通る直線は、この円と、D から DB − 5 と DB + 5 の所で交わる。方べきの定理から DC′ × DA = (DB − 5) × (DB + 5)。4 × 6 = DB × DB − 25、DB × DB = 49。2 回かけて 49 になる数は 7 なので DB = 7 cm
+      - トレミーの定理（円に内接する四角形 ABCD で AC × BD = AB × CD + BC × DA）から AC × 7 = 5 × 4 + 5 × 6 = 50。AC = 50/7 cm
+    - - △BCD を B のまわりに回して、C が A に重なるようにする（回す角は ∠CBA）。D がうつる点を D′ とする。回しても長さと角は変わらないので、AD′ = CD = 4 cm、BD′ = BD、∠BAD′ = ∠BCD
+      - 四角形 ABCD は円に内接するので、向かい合う角の和は ∠BAD + ∠BCD = 180°。∠BAD′ = ∠BCD なので ∠BAD + ∠BAD′ = 180°
+      - 回す向きに気をつける。C が A に重なる向きに回すと、直線 BC は直線 BA に重なる。このとき A 自身は直線 BA から C と反対がわへ出ていくので、直線 BC について A と同じがわの点は、回すと直線 BA について C と反対がわの点にうつる。D は直線 BC について A と同じがわにあるので、D′ は直線 AB について C と反対がわにある。一方、D は直線 AB について C と同じがわ（四角形 ABCD はへこんでいない）。だから D と D′ は直線 AB の反対がわにあり、∠BAD + ∠BAD′ = 180° から D、A、D′ は一直線。DD′ = DA + AD′ = 6 + 4 = 10 cm
+      - △BDD′ は BD = BD′ の二等辺三角形。DD′ のまん中を N とすると BN ⊥ DD′ で、DN = 10 ÷ 2 = 5 cm。DA = 6 cm なので N は D と A の間にあり、AN = 6 − 5 = 1 cm。直角三角形 ABN で BN² = 5² − 1² = 24、直角三角形 DBN で BD² = BN² + DN² = 24 + 25 = 49。2 回かけて 49 になる数は 7 なので BD = 7 cm
+      - '△BDD′ と △BCA で、BD : BC = 7 : 5、BD′ : BA = 7 : 5、∠DBD′ = ∠CBA（どちらも回した角）。2 組の辺の比とその間の角が等しいので △BDD′ ∽ △BCA。DD′ : CA = 7 : 5 から AC = 10 × 5 ÷ 7 = 50/7 cm'
+    note: 考えどころは 3 つ：①AB = BC から、BD が ∠ADC を 2 等分する（等しい辺に対する円周角が等しい）、または B のまわりに C を A へ回せる、②新しい点（C′ または D′）をつくって BD² = AB² + DA × DC = 25 + 24 = 49、BD = 7 を出す（1 本目は DC′ = DC の点 C′ と、B を中心とする半径 5 の円への方べき、2 本目は D、A、D′ を一直線にならべる）、③BD から AC を出す（トレミーの定理、または相似）。2 本目は回転、二等辺三角形の三平方の定理、相似で長さを出し、方べきもトレミーも使わない（1 本目は円周角、方べき、トレミーの円の定理、2 本目は回転と相似）。check は、三角形 ABC と ADC の 3 辺から ∠B と ∠D のコサイン（cos）を出し、円に内接するので ∠B + ∠D = 180°、cos B + cos D = 0 とおいて AC × AC を Fraction で求め、分子と分母の平方根（math.isqrt）を取って返す（50/7）。さらに、円の半径を二分法で求めて 4 点を円に置き、AC = 7.142857…、BD = 7 になることも確かめた。3 本目の道として、この先の単元の余弦定理（G-024）を知っていれば、∠B + ∠D = 180° から 2 つの三角形の式をならべて AC × AC を直接出せる（check と同じ式）。2 本とも BD を先に出し、BD² = AB² + DA × DC を別の考えで示す（1 本目は方べき、2 本目は回転と三平方の定理）。この式を知っていれば 2〜3 行で終わるが、この単元の道具だけでとく子には、AB = BC の使い方（円周角か回転）、新しい点、BD から AC の 3 つの考えどころが残る。BD を通らない道として、直線 AB と DC をのばした交わる点 Q で △QAD ∽ △QCB（相似比 6：5）から QA = 300/11、QD = 294/11 などを出し、△QAC ∽ △QDB で AC：BD = 50：49、トレミーの定理で AC × BD = 50 とする道もある。同じ単元の DG の問題とは、方べきを使う所が重なる。既出・出典：「AB = BC の内接四角形で BD² = AB² + AD × CD」は知られた式。大会の同じ問いは見つけていない。わな：BD = 7 を AC と答える、AC を直径とみて √50 と答える（図は長さのとおりにかいたので、∠B は約 91° で直角に見える）。図に対角線と円の中心はかかない（AC が直径に近く見え、答えにつながるため）。
