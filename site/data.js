@@ -261,829 +261,994 @@ window.ROADMAP = {
  ],
  "regions": [
   {
-   "id": "kazu",
-   "name": "数のはじまり",
-   "lane": "N"
-  },
-  {
-   "id": "keisan",
-   "name": "計算",
-   "lane": "N"
-  },
-  {
-   "id": "seisu",
-   "name": "整数の性質",
-   "lane": "N"
-  },
-  {
-   "id": "seisuron",
-   "name": "整数論",
-   "lane": "N"
-  },
-  {
-   "id": "houteishiki",
-   "name": "方程式",
-   "lane": "A"
-  },
-  {
-   "id": "kansu",
-   "name": "比と関数",
-   "lane": "A"
-  },
-  {
-   "id": "shiki",
-   "name": "式と多項式",
-   "lane": "A"
-  },
-  {
-   "id": "futoshiki",
-   "name": "不等式と関数方程式",
-   "lane": "A"
-  },
-  {
-   "id": "kazoekata",
-   "name": "数え方",
-   "lane": "C"
-  },
-  {
-   "id": "kakuritsu",
-   "name": "確率",
-   "lane": "C"
-  },
-  {
-   "id": "graph",
-   "name": "グラフと盤面",
-   "lane": "C"
-  },
-  {
-   "id": "katachi",
-   "name": "かたち",
-   "lane": "G"
-  },
-  {
-   "id": "hakaru",
-   "name": "はかる",
-   "lane": "G"
-  },
-  {
-   "id": "shomei-zukei",
-   "name": "図形の証明",
-   "lane": "G"
-  },
-  {
-   "id": "zahyo",
-   "name": "三角法と座標",
-   "lane": "G"
-  },
-  {
-   "id": "haichi",
-   "name": "円と配置",
-   "lane": "G"
-  },
-  {
-   "id": "suiri",
-   "name": "推理",
-   "lane": "L"
-  },
-  {
-   "id": "ronpo",
-   "name": "論法",
-   "lane": "L"
-  },
-  {
-   "id": "bisekibun-nyumon",
-   "name": "微積分の入口",
-   "lane": "D"
-  },
-  {
-   "id": "bisekibun",
-   "name": "微積分",
-   "lane": "D"
-  },
-  {
-   "id": "jitsukaiseki",
-   "name": "実解析と測度",
-   "lane": "D"
-  },
-  {
-   "id": "fukuso",
-   "name": "複素解析",
-   "lane": "D"
-  },
-  {
-   "id": "bibun-hoteishiki",
-   "name": "微分方程式と力学系",
-   "lane": "D"
-  },
-  {
-   "id": "kansu-kaiseki",
-   "name": "関数解析",
-   "lane": "D"
-  },
-  {
-   "id": "senkei-keisan",
-   "name": "行列と線形の計算",
-   "lane": "M"
-  },
-  {
-   "id": "senkei-chusho",
-   "name": "線形代数（抽象）",
-   "lane": "M"
-  },
-  {
-   "id": "gunkantai",
-   "name": "群・環・体",
-   "lane": "R"
-  },
-  {
-   "id": "hyogen",
-   "name": "表現とリー理論",
-   "lane": "R"
-  },
-  {
-   "id": "kakan-homology",
-   "name": "可換環とホモロジー代数",
-   "lane": "R"
-  },
-  {
-   "id": "kenron",
-   "name": "圏論",
-   "lane": "R"
-  },
-  {
-   "id": "fuhen-daisu",
-   "name": "普遍代数",
-   "lane": "R"
-  },
-  {
-   "id": "iso",
-   "name": "位相",
-   "lane": "T"
-  },
-  {
-   "id": "tayotai",
-   "name": "多様体と微分幾何",
-   "lane": "T"
-  },
-  {
-   "id": "daisuteki-iso",
-   "name": "代数的位相",
-   "lane": "T"
-  },
-  {
-   "id": "daisu-kika",
-   "name": "代数幾何",
-   "lane": "T"
-  },
-  {
-   "id": "kakuritsu-daigaku",
-   "name": "確率（大学）",
-   "lane": "S"
-  },
-  {
-   "id": "tokei",
-   "name": "統計",
-   "lane": "S"
-  },
-  {
-   "id": "kakuritsu-katei",
-   "name": "確率過程",
-   "lane": "S"
-  },
-  {
-   "id": "daisuteki-seisuron",
-   "name": "代数的整数論",
-   "lane": "N"
-  },
-  {
-   "id": "kaisekiteki-seisuron",
-   "name": "解析的整数論",
-   "lane": "N"
-  },
-  {
-   "id": "kumiawase-daigaku",
-   "name": "組合せ論とグラフ（大学）",
-   "lane": "C"
-  },
-  {
-   "id": "fugo",
-   "name": "符号と情報",
-   "lane": "C"
-  },
-  {
-   "id": "suri-ronri",
-   "name": "数理論理と集合論",
-   "lane": "L"
-  },
-  {
-   "id": "keisan-kanousei",
-   "name": "計算可能性",
-   "lane": "L"
-  },
-  {
-   "id": "suchi",
-   "name": "数値計算と最適化",
-   "lane": "K"
-  },
-  {
-   "id": "rikigaku",
-   "name": "力学",
-   "lane": "P"
-  },
-  {
-   "id": "kaiseki-rikigaku",
-   "name": "解析力学",
-   "lane": "P"
-  },
-  {
-   "id": "hado",
-   "name": "波と光",
-   "lane": "P"
-  },
-  {
-   "id": "denjiki",
-   "name": "電磁気",
-   "lane": "P"
-  },
-  {
-   "id": "netsu",
-   "name": "熱と統計",
-   "lane": "P"
-  },
-  {
-   "id": "ryoshi",
-   "name": "量子",
-   "lane": "P"
-  },
-  {
-   "id": "soutai",
-   "name": "相対論と宇宙",
-   "lane": "P"
-  },
-  {
-   "id": "bussei",
-   "name": "物性",
-   "lane": "P"
-  },
-  {
-   "id": "soryushi",
-   "name": "素粒子と場",
-   "lane": "P"
-  },
-  {
-   "id": "genshi",
-   "name": "原子・分子・光の物理",
-   "lane": "P"
-  },
-  {
-   "id": "jikken",
-   "name": "物理の計測と計算の方法",
-   "lane": "P"
-  },
-  {
-   "id": "fukuzatsukei",
-   "name": "複雑系",
-   "lane": "P"
-  },
-  {
-   "id": "soft-matter",
-   "name": "ソフトマター",
-   "lane": "P"
-  },
-  {
-   "id": "ryutai-butsuri",
-   "name": "流体物理",
-   "lane": "P"
-  },
-  {
-   "id": "uchu-kukan",
-   "name": "宇宙空間物理",
-   "lane": "P"
-  },
-  {
-   "id": "ryutai",
-   "name": "流体",
-   "lane": "E"
-  },
-  {
-   "id": "netsu-suishin",
-   "name": "熱と推進",
-   "lane": "E"
-  },
-  {
-   "id": "kozo-zairyo",
-   "name": "構造と材料",
-   "lane": "E"
-  },
-  {
-   "id": "seigyo",
-   "name": "制御",
-   "lane": "E"
-  },
-  {
-   "id": "kido",
-   "name": "軌道と宇宙機",
-   "lane": "E"
-  },
-  {
-   "id": "kairo-shingo",
-   "name": "回路と信号",
-   "lane": "E"
-  },
-  {
-   "id": "tsushin",
-   "name": "通信",
-   "lane": "E"
-  },
-  {
-   "id": "doboku",
-   "name": "土木と建築",
-   "lane": "E"
-  },
-  {
-   "id": "onkyo",
-   "name": "音響",
-   "lane": "E"
-  },
-  {
-   "id": "programming",
-   "name": "プログラミングとアルゴリズム",
-   "lane": "K"
-  },
-  {
-   "id": "keisan-riron",
-   "name": "計算理論",
-   "lane": "K"
-  },
-  {
-   "id": "kikai-gakushu",
-   "name": "機械学習とデータ",
-   "lane": "K"
-  },
-  {
-   "id": "graphics",
-   "name": "コンピュータグラフィックス",
-   "lane": "K"
-  },
-  {
-   "id": "vision",
-   "name": "コンピュータビジョン",
-   "lane": "K"
-  },
-  {
-   "id": "robotics",
-   "name": "ロボティクス",
-   "lane": "K"
-  },
-  {
-   "id": "anzen",
-   "name": "暗号と安全",
-   "lane": "K"
-  },
-  {
-   "id": "seibutsu-keisan",
-   "name": "計算生物",
-   "lane": "K"
-  },
-  {
-   "id": "hardware",
-   "name": "ハードウェアの設計",
-   "lane": "K"
-  },
-  {
-   "id": "keisanki-system",
-   "name": "計算機システム",
-   "lane": "K"
-  },
-  {
-   "id": "hci",
-   "name": "ヒューマンコンピュータインタラクション",
-   "lane": "K"
-  },
-  {
-   "id": "chikyu",
-   "name": "気象と気候",
-   "lane": "P"
-  },
-  {
-   "id": "data",
-   "name": "データの活用",
-   "lane": "S"
-  },
-  {
-   "id": "bunshi-saibo",
-   "name": "分子と細胞の生物学",
-   "lane": "B"
-  },
-  {
-   "id": "seibutsu-butsuri",
-   "name": "生物物理",
-   "lane": "B"
-  },
-  {
-   "id": "hokei",
-   "name": "保型形式とガロア表現",
-   "lane": "N"
-  },
-  {
-   "id": "risan-kika",
-   "name": "離散幾何",
-   "lane": "G"
-  },
-  {
-   "id": "risoku",
-   "name": "お金と利息",
-   "lane": "F"
-  },
-  {
-   "id": "kaikei",
-   "name": "会計と企業金融",
-   "lane": "F"
-  },
-  {
-   "id": "keizai",
-   "name": "経済学",
-   "lane": "F"
-  },
-  {
-   "id": "seimei-nenkin",
-   "name": "生命保険と年金の数理",
-   "lane": "F"
-  },
-  {
-   "id": "songai",
-   "name": "損害保険とリスク理論",
-   "lane": "F"
-  },
-  {
-   "id": "toshi",
-   "name": "投資と派生商品",
-   "lane": "F"
-  },
-  {
-   "id": "keiryo-risk",
-   "name": "計量とリスク管理",
-   "lane": "F"
-  },
-  {
-   "id": "shokugyo-seido",
-   "name": "金融の実務",
-   "lane": "F"
-  },
-  {
-   "id": "ouyou-keizai",
-   "name": "応用経済学",
-   "lane": "F"
-  },
-  {
-   "id": "keiei-kogaku",
-   "name": "経営工学",
-   "lane": "E"
-  },
-  {
-   "id": "ganseki",
-   "name": "鉱物と岩石",
-   "lane": "W"
-  },
-  {
-   "id": "chiso",
-   "name": "地層と地球の歴史",
-   "lane": "W"
-  },
-  {
-   "id": "chiri-joho",
-   "name": "地理情報科学",
-   "lane": "W"
-  },
-  {
-   "id": "chikyu-naibu",
-   "name": "地球の内部と変動",
-   "lane": "W"
-  },
-  {
-   "id": "jishin-kazan",
-   "name": "地震と火山",
-   "lane": "W"
-  },
-  {
-   "id": "chikyu-kagaku",
-   "name": "地球化学",
-   "lane": "W"
-  },
-  {
-   "id": "chikyu-system",
-   "name": "地球システム科学",
-   "lane": "W"
-  },
-  {
-   "id": "tenmon",
-   "name": "天文と天体物理",
-   "lane": "P"
-  },
-  {
-   "id": "zairyo-device",
-   "name": "材料とデバイス",
-   "lane": "E"
-  },
-  {
-   "id": "energy",
-   "name": "エネルギーの変換",
-   "lane": "E"
-  },
-  {
-   "id": "seitai-kogaku",
-   "name": "生体工学",
-   "lane": "E"
-  },
-  {
-   "id": "busshitsu",
-   "name": "物質と変化",
-   "lane": "H"
-  },
-  {
-   "id": "genshi-ketsugo",
-   "name": "原子と結合",
-   "lane": "H"
-  },
-  {
-   "id": "hanno",
-   "name": "化学反応と平衡",
-   "lane": "H"
-  },
-  {
-   "id": "muki",
-   "name": "無機化学",
-   "lane": "H"
-  },
-  {
-   "id": "kankyo-kagaku",
-   "name": "環境化学",
-   "lane": "H"
-  },
-  {
-   "id": "yuki",
-   "name": "有機化学",
-   "lane": "H"
-  },
-  {
-   "id": "bunseki",
-   "name": "分析と実験",
-   "lane": "H"
-  },
-  {
-   "id": "butsuri-kagaku",
-   "name": "物理化学",
-   "lane": "H"
-  },
-  {
-   "id": "zairyo",
-   "name": "材料と高分子",
-   "lane": "H"
-  },
-  {
-   "id": "soyaku",
-   "name": "創薬の化学",
-   "lane": "H"
-  },
-  {
-   "id": "ikimono",
-   "name": "生き物のつくりとくらし",
-   "lane": "B"
-  },
-  {
-   "id": "shokubutsu",
-   "name": "植物のはたらき",
-   "lane": "B"
-  },
-  {
-   "id": "karada",
-   "name": "からだのはたらき",
-   "lane": "B"
-  },
-  {
-   "id": "iden-shinka",
-   "name": "遺伝と進化",
-   "lane": "B"
-  },
-  {
-   "id": "seitai",
-   "name": "生態",
-   "lane": "B"
-  },
-  {
-   "id": "hassei",
-   "name": "発生と再生",
-   "lane": "B"
-  },
-  {
-   "id": "iyaku",
-   "name": "微生物",
-   "lane": "B"
-  },
-  {
-   "id": "shinkei",
-   "name": "神経科学",
-   "lane": "B"
-  },
-  {
-   "id": "sora",
-   "name": "空と星",
-   "lane": "W"
-  },
-  {
-   "id": "tenki",
-   "name": "天気と水のめぐり",
-   "lane": "W"
+   "id": "kikai",
+   "name": "機械のしくみ",
+   "lane": "E",
+   "f": "F16"
   },
   {
    "id": "sekkei",
    "name": "設計とものづくり",
-   "lane": "E"
-  },
-  {
-   "id": "kikai",
-   "name": "機械のしくみ",
-   "lane": "E"
-  },
-  {
-   "id": "jintai",
-   "name": "人体の構造と機能",
-   "lane": "I"
-  },
-  {
-   "id": "byori",
-   "name": "病気のしくみ",
-   "lane": "I"
-  },
-  {
-   "id": "kusuri-doku",
-   "name": "薬と毒",
-   "lane": "I"
-  },
-  {
-   "id": "kansen-meneki",
-   "name": "感染と免疫",
-   "lane": "I"
-  },
-  {
-   "id": "ekigaku",
-   "name": "疫学と公衆衛生",
-   "lane": "I"
-  },
-  {
-   "id": "rinsho",
-   "name": "臨床医学",
-   "lane": "I"
-  },
-  {
-   "id": "eiyo",
-   "name": "栄養",
-   "lane": "I"
-  },
-  {
-   "id": "iryo-saizensen",
-   "name": "医療の最前線",
-   "lane": "I"
-  },
-  {
-   "id": "shinri-ninchi",
-   "name": "知覚と認知",
-   "lane": "Q"
-  },
-  {
-   "id": "shinri-gakushu",
-   "name": "計算論的認知科学",
-   "lane": "Q"
-  },
-  {
-   "id": "shinri-hattatsu",
-   "name": "発達心理学",
-   "lane": "Q"
-  },
-  {
-   "id": "shinri-shakai",
-   "name": "社会心理学",
-   "lane": "Q"
-  },
-  {
-   "id": "shinri-rinsho",
-   "name": "臨床心理学と健康心理学",
-   "lane": "Q"
-  },
-  {
-   "id": "shinri-hoho",
-   "name": "心理学の方法と測定",
-   "lane": "Q"
-  },
-  {
-   "id": "kyoiku-shinri",
-   "name": "教育心理学",
-   "lane": "Q"
-  },
-  {
-   "id": "dobutsu-keito",
-   "name": "動物の多様性と系統",
-   "lane": "B"
-  },
-  {
-   "id": "hikaku-seiri",
-   "name": "比較の生理",
-   "lane": "B"
-  },
-  {
-   "id": "biseibutsu",
-   "name": "微生物",
-   "lane": "B"
-  },
-  {
-   "id": "umi-mizu",
-   "name": "海と陸水の生き物",
-   "lane": "B"
-  },
-  {
-   "id": "kodo",
-   "name": "行動と認知",
-   "lane": "B"
-  },
-  {
-   "id": "sakumotsu",
-   "name": "作物と育種",
-   "lane": "V"
-  },
-  {
-   "id": "nouchi",
-   "name": "農業生態学",
-   "lane": "V"
-  },
-  {
-   "id": "kachiku-yoshoku",
-   "name": "家畜と養殖",
-   "lane": "V"
-  },
-  {
-   "id": "juui-shoku",
-   "name": "獣医学",
-   "lane": "V"
-  },
-  {
-   "id": "shokuhin",
-   "name": "食品科学",
-   "lane": "V"
-  },
-  {
-   "id": "kagaku-kogaku",
-   "name": "化学工学",
-   "lane": "E"
-  },
-  {
-   "id": "kankyo-kogaku",
-   "name": "環境工学",
-   "lane": "E"
-  },
-  {
-   "id": "sangyo-bio",
-   "name": "産業バイオ",
-   "lane": "E"
-  },
-  {
-   "id": "shigen",
-   "name": "資源工学",
-   "lane": "E"
-  },
-  {
-   "id": "mizu-kori",
-   "name": "水と氷",
-   "lane": "W"
+   "lane": "E",
+   "f": "F16"
   },
   {
    "id": "wakusei",
    "name": "惑星科学",
-   "lane": "W"
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "chikyu-kagaku",
+   "name": "地球化学",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "chikyu-system",
+   "name": "地球システム科学",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "mizu-kori",
+   "name": "水と氷",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "chiso",
+   "name": "地層と地球の歴史",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "ganseki",
+   "name": "鉱物と岩石",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "shigen",
+   "name": "資源工学",
+   "lane": "E",
+   "f": "F05"
+  },
+  {
+   "id": "chikyu-naibu",
+   "name": "地球の内部と変動",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "jishin-kazan",
+   "name": "地震と火山",
+   "lane": "W",
+   "f": "F05"
+  },
+  {
+   "id": "chikyu",
+   "name": "気象と気候",
+   "lane": "P",
+   "f": "F05"
+  },
+  {
+   "id": "tenki",
+   "name": "天気と水のめぐり",
+   "lane": "W",
+   "f": "F07"
+  },
+  {
+   "id": "kankyo-kogaku",
+   "name": "環境工学",
+   "lane": "E",
+   "f": "F07"
+  },
+  {
+   "id": "kagaku-kogaku",
+   "name": "化学工学",
+   "lane": "E",
+   "f": "F07"
+  },
+  {
+   "id": "busshitsu",
+   "name": "物質と変化",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "genshi-ketsugo",
+   "name": "原子と結合",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "hanno",
+   "name": "化学反応と平衡",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "muki",
+   "name": "無機化学",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "bunseki",
+   "name": "分析と実験",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "yuki",
+   "name": "有機化学",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "butsuri-kagaku",
+   "name": "物理化学",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "zairyo",
+   "name": "材料と高分子",
+   "lane": "H",
+   "f": "F07"
+  },
+  {
+   "id": "ryutai-butsuri",
+   "name": "流体物理",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "soft-matter",
+   "name": "ソフトマター",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "zairyo-device",
+   "name": "材料とデバイス",
+   "lane": "E",
+   "f": "F04"
+  },
+  {
+   "id": "netsu",
+   "name": "熱と統計",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "bussei",
+   "name": "物性",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "genshi",
+   "name": "原子・分子・光の物理",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "ryoshi",
+   "name": "量子",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "soryushi",
+   "name": "素粒子と場",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "jikken",
+   "name": "物理の計測と計算の方法",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "denjiki",
+   "name": "電磁気",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "soutai",
+   "name": "相対論と宇宙",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "tenmon",
+   "name": "天文と天体物理",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "hado",
+   "name": "波と光",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "uchu-kukan",
+   "name": "宇宙空間物理",
+   "lane": "P",
+   "f": "F04"
+  },
+  {
+   "id": "sora",
+   "name": "空と星",
+   "lane": "W",
+   "f": "F04"
+  },
+  {
+   "id": "onkyo",
+   "name": "音響",
+   "lane": "E",
+   "f": "F14"
+  },
+  {
+   "id": "netsu-suishin",
+   "name": "熱と推進",
+   "lane": "E",
+   "f": "F14"
+  },
+  {
+   "id": "rikigaku",
+   "name": "力学",
+   "lane": "P",
+   "f": "F14"
+  },
+  {
+   "id": "kaiseki-rikigaku",
+   "name": "解析力学",
+   "lane": "P",
+   "f": "F14"
+  },
+  {
+   "id": "kido",
+   "name": "軌道と宇宙機",
+   "lane": "E",
+   "f": "F14"
+  },
+  {
+   "id": "ryutai",
+   "name": "流体",
+   "lane": "E",
+   "f": "F08"
+  },
+  {
+   "id": "doboku",
+   "name": "土木と建築",
+   "lane": "E",
+   "f": "F08"
+  },
+  {
+   "id": "kozo-zairyo",
+   "name": "構造と材料",
+   "lane": "E",
+   "f": "F08"
+  },
+  {
+   "id": "suchi",
+   "name": "数値計算と最適化",
+   "lane": "K",
+   "f": "F08"
+  },
+  {
+   "id": "energy",
+   "name": "エネルギーの変換",
+   "lane": "E",
+   "f": "F11"
+  },
+  {
+   "id": "seigyo",
+   "name": "制御",
+   "lane": "E",
+   "f": "F11"
+  },
+  {
+   "id": "kairo-shingo",
+   "name": "回路と信号",
+   "lane": "E",
+   "f": "F11"
+  },
+  {
+   "id": "tsushin",
+   "name": "通信",
+   "lane": "E",
+   "f": "F11"
+  },
+  {
+   "id": "risan-kika",
+   "name": "離散幾何",
+   "lane": "G",
+   "f": "F01"
+  },
+  {
+   "id": "senkei-chusho",
+   "name": "線形代数（抽象）",
+   "lane": "M",
+   "f": "F01"
+  },
+  {
+   "id": "senkei-keisan",
+   "name": "行列と線形の計算",
+   "lane": "M",
+   "f": "F01"
+  },
+  {
+   "id": "kansu-kaiseki",
+   "name": "関数解析",
+   "lane": "D",
+   "f": "F01"
+  },
+  {
+   "id": "jitsukaiseki",
+   "name": "実解析と測度",
+   "lane": "D",
+   "f": "F01"
+  },
+  {
+   "id": "bibun-hoteishiki",
+   "name": "微分方程式と力学系",
+   "lane": "D",
+   "f": "F01"
+  },
+  {
+   "id": "bisekibun",
+   "name": "微積分",
+   "lane": "D",
+   "f": "F01"
+  },
+  {
+   "id": "fukuso",
+   "name": "複素解析",
+   "lane": "D",
+   "f": "F01"
+  },
+  {
+   "id": "kaisekiteki-seisuron",
+   "name": "解析的整数論",
+   "lane": "N",
+   "f": "F01"
+  },
+  {
+   "id": "tayotai",
+   "name": "多様体と微分幾何",
+   "lane": "T",
+   "f": "F01"
+  },
+  {
+   "id": "iso",
+   "name": "位相",
+   "lane": "T",
+   "f": "F01"
+  },
+  {
+   "id": "hyogen",
+   "name": "表現とリー理論",
+   "lane": "R",
+   "f": "F01"
+  },
+  {
+   "id": "hokei",
+   "name": "保型形式とガロア表現",
+   "lane": "N",
+   "f": "F01"
+  },
+  {
+   "id": "daisuteki-iso",
+   "name": "代数的位相",
+   "lane": "T",
+   "f": "F01"
+  },
+  {
+   "id": "kenron",
+   "name": "圏論",
+   "lane": "R",
+   "f": "F01"
+  },
+  {
+   "id": "kakan-homology",
+   "name": "可換環とホモロジー代数",
+   "lane": "R",
+   "f": "F01"
+  },
+  {
+   "id": "gunkantai",
+   "name": "群・環・体",
+   "lane": "R",
+   "f": "F01"
+  },
+  {
+   "id": "daisuteki-seisuron",
+   "name": "代数的整数論",
+   "lane": "N",
+   "f": "F01"
+  },
+  {
+   "id": "daisu-kika",
+   "name": "代数幾何",
+   "lane": "T",
+   "f": "F01"
+  },
+  {
+   "id": "fuhen-daisu",
+   "name": "普遍代数",
+   "lane": "R",
+   "f": "F01"
+  },
+  {
+   "id": "graph",
+   "name": "グラフと盤面",
+   "lane": "C",
+   "f": "F01"
+  },
+  {
+   "id": "bisekibun-nyumon",
+   "name": "微積分の入口",
+   "lane": "D",
+   "f": "F03"
+  },
+  {
+   "id": "zahyo",
+   "name": "三角法と座標",
+   "lane": "G",
+   "f": "F03"
+  },
+  {
+   "id": "haichi",
+   "name": "円と配置",
+   "lane": "G",
+   "f": "F03"
+  },
+  {
+   "id": "shomei-zukei",
+   "name": "図形の証明",
+   "lane": "G",
+   "f": "F03"
+  },
+  {
+   "id": "katachi",
+   "name": "かたち",
+   "lane": "G",
+   "f": "F03"
+  },
+  {
+   "id": "hakaru",
+   "name": "はかる",
+   "lane": "G",
+   "f": "F03"
+  },
+  {
+   "id": "futoshiki",
+   "name": "不等式と関数方程式",
+   "lane": "A",
+   "f": "F03"
+  },
+  {
+   "id": "kansu",
+   "name": "比と関数",
+   "lane": "A",
+   "f": "F03"
+  },
+  {
+   "id": "data",
+   "name": "データの活用",
+   "lane": "S",
+   "f": "F03"
+  },
+  {
+   "id": "kazu",
+   "name": "数のはじまり",
+   "lane": "N",
+   "f": "F03"
+  },
+  {
+   "id": "keisan",
+   "name": "計算",
+   "lane": "N",
+   "f": "F03"
+  },
+  {
+   "id": "houteishiki",
+   "name": "方程式",
+   "lane": "A",
+   "f": "F03"
+  },
+  {
+   "id": "shiki",
+   "name": "式と多項式",
+   "lane": "A",
+   "f": "F03"
+  },
+  {
+   "id": "seisu",
+   "name": "整数の性質",
+   "lane": "N",
+   "f": "F03"
+  },
+  {
+   "id": "kazoekata",
+   "name": "数え方",
+   "lane": "C",
+   "f": "F03"
+  },
+  {
+   "id": "ronpo",
+   "name": "論法",
+   "lane": "L",
+   "f": "F03"
+  },
+  {
+   "id": "seisuron",
+   "name": "整数論",
+   "lane": "N",
+   "f": "F03"
+  },
+  {
+   "id": "suiri",
+   "name": "推理",
+   "lane": "L",
+   "f": "F03"
+  },
+  {
+   "id": "kakuritsu",
+   "name": "確率",
+   "lane": "C",
+   "f": "F03"
+  },
+  {
+   "id": "fugo",
+   "name": "符号と情報",
+   "lane": "C",
+   "f": "F06"
+  },
+  {
+   "id": "keisan-kanousei",
+   "name": "計算可能性",
+   "lane": "L",
+   "f": "F06"
+  },
+  {
+   "id": "suri-ronri",
+   "name": "数理論理と集合論",
+   "lane": "L",
+   "f": "F06"
+  },
+  {
+   "id": "hardware",
+   "name": "ハードウェアの設計",
+   "lane": "K",
+   "f": "F06"
+  },
+  {
+   "id": "keisan-riron",
+   "name": "計算理論",
+   "lane": "K",
+   "f": "F06"
+  },
+  {
+   "id": "programming",
+   "name": "プログラミングとアルゴリズム",
+   "lane": "K",
+   "f": "F06"
+  },
+  {
+   "id": "keisanki-system",
+   "name": "計算機システム",
+   "lane": "K",
+   "f": "F06"
+  },
+  {
+   "id": "anzen",
+   "name": "暗号と安全",
+   "lane": "K",
+   "f": "F06"
+  },
+  {
+   "id": "kumiawase-daigaku",
+   "name": "組合せ論とグラフ（大学）",
+   "lane": "C",
+   "f": "F06"
+  },
+  {
+   "id": "fukuzatsukei",
+   "name": "複雑系",
+   "lane": "P",
+   "f": "F06"
+  },
+  {
+   "id": "graphics",
+   "name": "コンピュータグラフィックス",
+   "lane": "K",
+   "f": "F13"
+  },
+  {
+   "id": "robotics",
+   "name": "ロボティクス",
+   "lane": "K",
+   "f": "F13"
+  },
+  {
+   "id": "kikai-gakushu",
+   "name": "機械学習とデータ",
+   "lane": "K",
+   "f": "F13"
+  },
+  {
+   "id": "vision",
+   "name": "コンピュータビジョン",
+   "lane": "K",
+   "f": "F13"
+  },
+  {
+   "id": "keiei-kogaku",
+   "name": "経営工学",
+   "lane": "E",
+   "f": "F10"
+  },
+  {
+   "id": "kakuritsu-daigaku",
+   "name": "確率（大学）",
+   "lane": "S",
+   "f": "F10"
+  },
+  {
+   "id": "tokei",
+   "name": "統計",
+   "lane": "S",
+   "f": "F10"
   },
   {
    "id": "shakai-hoho",
    "name": "社会科学の方法",
-   "lane": "Y"
-  },
-  {
-   "id": "shakaigaku",
-   "name": "社会学",
-   "lane": "Y"
-  },
-  {
-   "id": "seijigaku",
-   "name": "政治学",
-   "lane": "Y"
-  },
-  {
-   "id": "media",
-   "name": "メディア・コミュニケーション",
-   "lane": "Y"
+   "lane": "Y",
+   "f": "F10"
   },
   {
    "id": "kyoiku",
    "name": "教育学",
-   "lane": "Y"
+   "lane": "Y",
+   "f": "F10"
+  },
+  {
+   "id": "kakuritsu-katei",
+   "name": "確率過程",
+   "lane": "S",
+   "f": "F15"
+  },
+  {
+   "id": "songai",
+   "name": "損害保険とリスク理論",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "shokugyo-seido",
+   "name": "金融の実務",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "seimei-nenkin",
+   "name": "生命保険と年金の数理",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "kaikei",
+   "name": "会計と企業金融",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "risoku",
+   "name": "お金と利息",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "toshi",
+   "name": "投資と派生商品",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "keiryo-risk",
+   "name": "計量とリスク管理",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "ouyou-keizai",
+   "name": "応用経済学",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "keizai",
+   "name": "経済学",
+   "lane": "F",
+   "f": "F09"
+  },
+  {
+   "id": "seijigaku",
+   "name": "政治学",
+   "lane": "Y",
+   "f": "F09"
+  },
+  {
+   "id": "shakaigaku",
+   "name": "社会学",
+   "lane": "Y",
+   "f": "F09"
+  },
+  {
+   "id": "chiri-joho",
+   "name": "地理情報科学",
+   "lane": "W",
+   "f": "F02"
+  },
+  {
+   "id": "kankyo-kagaku",
+   "name": "環境化学",
+   "lane": "H",
+   "f": "F02"
+  },
+  {
+   "id": "shokuhin",
+   "name": "食品科学",
+   "lane": "V",
+   "f": "F02"
+  },
+  {
+   "id": "kodo",
+   "name": "行動と認知",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "umi-mizu",
+   "name": "海と陸水の生き物",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "seitai",
+   "name": "生態",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "nouchi",
+   "name": "農業生態学",
+   "lane": "V",
+   "f": "F02"
+  },
+  {
+   "id": "dobutsu-keito",
+   "name": "動物の多様性と系統",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "ikimono",
+   "name": "生き物のつくりとくらし",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "kachiku-yoshoku",
+   "name": "家畜と養殖",
+   "lane": "V",
+   "f": "F02"
+  },
+  {
+   "id": "sakumotsu",
+   "name": "作物と育種",
+   "lane": "V",
+   "f": "F02"
+  },
+  {
+   "id": "shokubutsu",
+   "name": "植物のはたらき",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "iden-shinka",
+   "name": "遺伝と進化",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "biseibutsu",
+   "name": "微生物",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "iyaku",
+   "name": "微生物",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "sangyo-bio",
+   "name": "産業バイオ",
+   "lane": "E",
+   "f": "F02"
+  },
+  {
+   "id": "seibutsu-keisan",
+   "name": "計算生物",
+   "lane": "K",
+   "f": "F02"
+  },
+  {
+   "id": "bunshi-saibo",
+   "name": "分子と細胞の生物学",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "hassei",
+   "name": "発生と再生",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "seibutsu-butsuri",
+   "name": "生物物理",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "soyaku",
+   "name": "創薬の化学",
+   "lane": "H",
+   "f": "F02"
+  },
+  {
+   "id": "iryo-saizensen",
+   "name": "医療の最前線",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "kansen-meneki",
+   "name": "感染と免疫",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "ekigaku",
+   "name": "疫学と公衆衛生",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "hikaku-seiri",
+   "name": "比較の生理",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "karada",
+   "name": "からだのはたらき",
+   "lane": "B",
+   "f": "F02"
+  },
+  {
+   "id": "kusuri-doku",
+   "name": "薬と毒",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "juui-shoku",
+   "name": "獣医学",
+   "lane": "V",
+   "f": "F02"
+  },
+  {
+   "id": "byori",
+   "name": "病気のしくみ",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "rinsho",
+   "name": "臨床医学",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "jintai",
+   "name": "人体の構造と機能",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "eiyo",
+   "name": "栄養",
+   "lane": "I",
+   "f": "F02"
+  },
+  {
+   "id": "shinri-hattatsu",
+   "name": "発達心理学",
+   "lane": "Q",
+   "f": "F02"
+  },
+  {
+   "id": "seitai-kogaku",
+   "name": "生体工学",
+   "lane": "E",
+   "f": "F12"
+  },
+  {
+   "id": "shinkei",
+   "name": "神経科学",
+   "lane": "B",
+   "f": "F12"
+  },
+  {
+   "id": "kyoiku-shinri",
+   "name": "教育心理学",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "shinri-ninchi",
+   "name": "知覚と認知",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "shinri-gakushu",
+   "name": "計算論的認知科学",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "shinri-rinsho",
+   "name": "臨床心理学と健康心理学",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "shinri-hoho",
+   "name": "心理学の方法と測定",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "shinri-shakai",
+   "name": "社会心理学",
+   "lane": "Q",
+   "f": "F12"
+  },
+  {
+   "id": "hci",
+   "name": "ヒューマンコンピュータインタラクション",
+   "lane": "K",
+   "f": "F12"
+  },
+  {
+   "id": "media",
+   "name": "メディア・コミュニケーション",
+   "lane": "Y",
+   "f": "F12"
   }
  ],
  "kinds": {
@@ -1093,6 +1258,708 @@ window.ROADMAP = {
   "混ぜる": "前の日や前の単元の型と混ぜて解く（交互練習）",
   "確認": "8 割できたら単元を済にする"
  },
+ "fields": [
+  {
+   "id": "F01",
+   "name": "純粋数学",
+   "en": "Pure Mathematics",
+   "about": "大学学部後半から研究の最前線までの純粋数学の本体。解析、代数、幾何、位相、数論、論理、確率論が前提の線で密に結びついた大きな塊。",
+   "subs": [
+    {
+     "id": "F01-01",
+     "name": "数論"
+    },
+    {
+     "id": "F01-02",
+     "name": "関数解析"
+    },
+    {
+     "id": "F01-03",
+     "name": "微分幾何学"
+    },
+    {
+     "id": "F01-04",
+     "name": "力学系"
+    },
+    {
+     "id": "F01-05",
+     "name": "代数的位相幾何"
+    },
+    {
+     "id": "F01-06",
+     "name": "偏微分方程式"
+    },
+    {
+     "id": "F01-07",
+     "name": "線形代数"
+    },
+    {
+     "id": "F01-08",
+     "name": "代数幾何学"
+    },
+    {
+     "id": "F01-09",
+     "name": "複素解析"
+    },
+    {
+     "id": "F01-10",
+     "name": "微分積分学"
+    },
+    {
+     "id": "F01-11",
+     "name": "多項式"
+    },
+    {
+     "id": "F01-12",
+     "name": "組合せ幾何"
+    },
+    {
+     "id": "F01-13",
+     "name": "抽象代数学"
+    }
+   ]
+  },
+  {
+   "id": "F02",
+   "name": "生命科学",
+   "en": "Life Sciences",
+   "about": "分子・細胞から個体、生態系までの生物学を中心に、人体の生理と病気を扱う医学、家畜・作物を扱う農学と獣医学、計算生物学を含む広い分野。小学校の生き物観察から研究の最前線までを通して学ぶ。",
+   "subs": [
+    {
+     "id": "F02-01",
+     "name": "微生物学"
+    },
+    {
+     "id": "F02-02",
+     "name": "獣医学"
+    },
+    {
+     "id": "F02-03",
+     "name": "内分泌代謝学"
+    },
+    {
+     "id": "F02-04",
+     "name": "一般生物学"
+    },
+    {
+     "id": "F02-05",
+     "name": "発生生物学"
+    },
+    {
+     "id": "F02-06",
+     "name": "動物行動学"
+    },
+    {
+     "id": "F02-07",
+     "name": "農学"
+    },
+    {
+     "id": "F02-08",
+     "name": "解剖学"
+    },
+    {
+     "id": "F02-09",
+     "name": "感覚生理学"
+    },
+    {
+     "id": "F02-10",
+     "name": "診断学"
+    },
+    {
+     "id": "F02-11",
+     "name": "遺伝学"
+    },
+    {
+     "id": "F02-12",
+     "name": "陸水学"
+    },
+    {
+     "id": "F02-13",
+     "name": "生態学"
+    },
+    {
+     "id": "F02-14",
+     "name": "計算生物学"
+    },
+    {
+     "id": "F02-15",
+     "name": "生理学"
+    },
+    {
+     "id": "F02-16",
+     "name": "環境科学"
+    },
+    {
+     "id": "F02-17",
+     "name": "基礎医学"
+    },
+    {
+     "id": "F02-18",
+     "name": "動物学"
+    }
+   ]
+  },
+  {
+   "id": "F03",
+   "name": "数学",
+   "en": "Mathematics",
+   "about": "小学校の算数から高校数学、数学オリンピック級の初等的な問題解決までを含む、数・式・図形・数え上げ・整数・論法の広い塊。",
+   "subs": [
+    {
+     "id": "F03-01",
+     "name": "算数"
+    },
+    {
+     "id": "F03-02",
+     "name": "数量関係（算数から高校まで）"
+    },
+    {
+     "id": "F03-03",
+     "name": "情報（小学校から高校まで）"
+    },
+    {
+     "id": "F03-04",
+     "name": "整数論"
+    },
+    {
+     "id": "F03-05",
+     "name": "幾何学"
+    },
+    {
+     "id": "F03-06",
+     "name": "数学的推論"
+    },
+    {
+     "id": "F03-07",
+     "name": "組合せゲーム理論"
+    },
+    {
+     "id": "F03-08",
+     "name": "初等解析学"
+    },
+    {
+     "id": "F03-09",
+     "name": "組合せ論"
+    },
+    {
+     "id": "F03-10",
+     "name": "不等式"
+    },
+    {
+     "id": "F03-11",
+     "name": "関数方程式"
+    }
+   ]
+  },
+  {
+   "id": "F04",
+   "name": "現代物理学",
+   "en": "Modern Physics",
+   "about": "熱力学・統計力学から量子力学、物性、場の理論、相対論、宇宙物理までの、大学上級から最前線の物理学の中核。",
+   "subs": [
+    {
+     "id": "F04-01",
+     "name": "プラズマ物理学"
+    },
+    {
+     "id": "F04-02",
+     "name": "ハミルトン力学"
+    },
+    {
+     "id": "F04-03",
+     "name": "物性物理学"
+    },
+    {
+     "id": "F04-04",
+     "name": "場の量子論"
+    },
+    {
+     "id": "F04-05",
+     "name": "電磁気学"
+    },
+    {
+     "id": "F04-06",
+     "name": "統計物理学"
+    },
+    {
+     "id": "F04-07",
+     "name": "宇宙物理学"
+    },
+    {
+     "id": "F04-08",
+     "name": "量子力学"
+    },
+    {
+     "id": "F04-09",
+     "name": "量子情報科学"
+    },
+    {
+     "id": "F04-10",
+     "name": "観測天文学"
+    },
+    {
+     "id": "F04-11",
+     "name": "天文学（小学校から大学初年級まで）"
+    }
+   ]
+  },
+  {
+   "id": "F05",
+   "name": "地球科学",
+   "en": "Earth Science",
+   "about": "固体地球（岩石・鉱物・地震・火山・内部構造）、大気・海洋・気候、年代と地球化学、氷と水までを含む、地球を対象とする分野。小学校の観察から大学院の力学・数値モデルまで段をまたいで集まっている。",
+   "subs": [
+    {
+     "id": "F05-01",
+     "name": "気候システム科学"
+    },
+    {
+     "id": "F05-02",
+     "name": "大気海洋力学"
+    },
+    {
+     "id": "F05-03",
+     "name": "数値予報"
+    },
+    {
+     "id": "F05-04",
+     "name": "地質学"
+    },
+    {
+     "id": "F05-05",
+     "name": "固体地球物理学"
+    },
+    {
+     "id": "F05-06",
+     "name": "資源工学"
+    },
+    {
+     "id": "F05-07",
+     "name": "地球史"
+    },
+    {
+     "id": "F05-08",
+     "name": "大気海洋科学"
+    }
+   ]
+  },
+  {
+   "id": "F06",
+   "name": "計算機科学",
+   "en": "Computer Science",
+   "about": "プログラミング、アルゴリズム、計算機システム、ネットワーク、暗号、論理と計算の理論、グラフ理論とネットワーク科学など、小学校のプログラミングから大学院の理論までの単元が集まる。",
+   "subs": [
+    {
+     "id": "F06-01",
+     "name": "計算機システム"
+    },
+    {
+     "id": "F06-02",
+     "name": "グラフ理論"
+    },
+    {
+     "id": "F06-03",
+     "name": "プログラミング入門"
+    },
+    {
+     "id": "F06-04",
+     "name": "アルゴリズム"
+    },
+    {
+     "id": "F06-05",
+     "name": "アルゴリズム入門"
+    },
+    {
+     "id": "F06-06",
+     "name": "暗号理論"
+    },
+    {
+     "id": "F06-07",
+     "name": "数理論理学"
+    },
+    {
+     "id": "F06-08",
+     "name": "型理論"
+    },
+    {
+     "id": "F06-09",
+     "name": "計算機ネットワーク"
+    },
+    {
+     "id": "F06-10",
+     "name": "情報科学入門"
+    },
+    {
+     "id": "F06-11",
+     "name": "プログラミング言語"
+    },
+    {
+     "id": "F06-12",
+     "name": "理論計算機科学"
+    },
+    {
+     "id": "F06-13",
+     "name": "ロボット工学入門（センサーと回路）"
+    }
+   ]
+  },
+  {
+   "id": "F07",
+   "name": "化学",
+   "en": "Chemistry",
+   "about": "物質の性質・構造・変化を扱う分野。小学校の物の性質や状態変化から、高校の一般化学、大学の有機化学・物理化学、材料化学、化学工学までが連なる。",
+   "subs": [
+    {
+     "id": "F07-01",
+     "name": "水循環"
+    },
+    {
+     "id": "F07-02",
+     "name": "物質の状態と熱"
+    },
+    {
+     "id": "F07-03",
+     "name": "化学工学"
+    },
+    {
+     "id": "F07-04",
+     "name": "環境工学"
+    },
+    {
+     "id": "F07-05",
+     "name": "化学基礎（小学校から高校まで）"
+    },
+    {
+     "id": "F07-06",
+     "name": "物理化学"
+    },
+    {
+     "id": "F07-07",
+     "name": "有機化学"
+    },
+    {
+     "id": "F07-08",
+     "name": "材料化学"
+    }
+   ]
+  },
+  {
+   "id": "F08",
+   "name": "構造工学",
+   "en": "Structural Engineering",
+   "about": "構造力学・材料力学・有限要素法を土台に、耐震・耐風・鋼・コンクリート・橋の設計、信頼性と維持管理まで、構造物の解析と設計を扱う分野。大学の土木・建築・機械の構造系の科目に当たる。",
+   "subs": [
+    {
+     "id": "F08-01",
+     "name": "数値解析"
+    },
+    {
+     "id": "F08-02",
+     "name": "流体力学"
+    },
+    {
+     "id": "F08-03",
+     "name": "構造力学"
+    },
+    {
+     "id": "F08-04",
+     "name": "水文学"
+    },
+    {
+     "id": "F08-05",
+     "name": "伝熱工学"
+    },
+    {
+     "id": "F08-06",
+     "name": "計算力学"
+    },
+    {
+     "id": "F08-07",
+     "name": "耐震工学"
+    },
+    {
+     "id": "F08-08",
+     "name": "空気力学"
+    },
+    {
+     "id": "F08-09",
+     "name": "風工学"
+    },
+    {
+     "id": "F08-10",
+     "name": "構造信頼性工学"
+    },
+    {
+     "id": "F08-11",
+     "name": "橋梁工学"
+    },
+    {
+     "id": "F08-12",
+     "name": "コンクリート工学"
+    },
+    {
+     "id": "F08-13",
+     "name": "鋼構造"
+    }
+   ]
+  },
+  {
+   "id": "F09",
+   "name": "経済学",
+   "en": "Economics",
+   "about": "お金と利息の計算から、投資・派生商品の価格づけ、保険と年金の数理、会計、ミクロ・マクロ経済学、計量経済学までを扱う塊。小学生のこづかい帳から大学院の資産価格論まで段が通っている。",
+   "subs": [
+    {
+     "id": "F09-01",
+     "name": "管理会計"
+    },
+    {
+     "id": "F09-02",
+     "name": "個人ファイナンス"
+    },
+    {
+     "id": "F09-03",
+     "name": "金融経済学"
+    },
+    {
+     "id": "F09-04",
+     "name": "金融数学"
+    },
+    {
+     "id": "F09-05",
+     "name": "生命保険数理"
+    },
+    {
+     "id": "F09-06",
+     "name": "マクロ経済学"
+    },
+    {
+     "id": "F09-07",
+     "name": "デリバティブ価格理論"
+    },
+    {
+     "id": "F09-08",
+     "name": "損害保険数理"
+    },
+    {
+     "id": "F09-09",
+     "name": "経営学"
+    },
+    {
+     "id": "F09-10",
+     "name": "ミクロ経済学"
+    }
+   ]
+  },
+  {
+   "id": "F10",
+   "name": "統計学",
+   "en": "Statistics",
+   "about": "確率論、数理統計、ベイズ推論、因果推論、社会統計、生物統計、地震リスク解析などが集まる。",
+   "subs": [
+    {
+     "id": "F10-01",
+     "name": "地震リスク解析"
+    },
+    {
+     "id": "F10-02",
+     "name": "生物統計学"
+    },
+    {
+     "id": "F10-03",
+     "name": "数理統計学"
+    },
+    {
+     "id": "F10-04",
+     "name": "統計的決定理論"
+    },
+    {
+     "id": "F10-05",
+     "name": "初等確率論"
+    },
+    {
+     "id": "F10-06",
+     "name": "因果推論"
+    },
+    {
+     "id": "F10-07",
+     "name": "生存モデル"
+    },
+    {
+     "id": "F10-08",
+     "name": "社会統計学"
+    }
+   ]
+  },
+  {
+   "id": "F11",
+   "name": "電気電子工学",
+   "en": "Electrical and Electronic Engineering",
+   "about": "電磁気、回路、半導体素子、信号処理、通信、制御、電力変換までを含む電気電子系の塊。フーリエ解析やラプラス変換などの数学の道具も、この分野の道具として入っている。小学校の電気・力の入口やものづくりの入門も周辺にある。",
+   "subs": [
+    {
+     "id": "F11-01",
+     "name": "ディジタル信号処理"
+    },
+    {
+     "id": "F11-02",
+     "name": "通信工学"
+    },
+    {
+     "id": "F11-03",
+     "name": "電力工学"
+    },
+    {
+     "id": "F11-04",
+     "name": "統計的信号処理"
+    },
+    {
+     "id": "F11-05",
+     "name": "積分変換"
+    },
+    {
+     "id": "F11-06",
+     "name": "電子工学"
+    },
+    {
+     "id": "F11-07",
+     "name": "制御工学"
+    },
+    {
+     "id": "F11-08",
+     "name": "無線通信"
+    },
+    {
+     "id": "F11-09",
+     "name": "医用工学"
+    }
+   ]
+  },
+  {
+   "id": "F12",
+   "name": "心理学",
+   "en": "Psychology",
+   "about": "人の知覚・注意・記憶・学習・判断・発達・社会・感情を、実験と計算モデルで調べる分野。研究方法と再現性、測定、臨床・健康、人と機械の関わりを含み、縁で脳の神経科学と神経インターフェースにつながる。",
+   "subs": [
+    {
+     "id": "F12-01",
+     "name": "認知心理学"
+    },
+    {
+     "id": "F12-02",
+     "name": "神経工学"
+    },
+    {
+     "id": "F12-03",
+     "name": "行動経済学"
+    },
+    {
+     "id": "F12-04",
+     "name": "認知神経科学"
+    },
+    {
+     "id": "F12-05",
+     "name": "臨床心理学"
+    },
+    {
+     "id": "F12-06",
+     "name": "計算論的認知科学"
+    },
+    {
+     "id": "F12-07",
+     "name": "応用心理学"
+    }
+   ]
+  },
+  {
+   "id": "F13",
+   "name": "人工知能",
+   "en": "Artificial Intelligence",
+   "about": "機械学習、強化学習、ロボティクスが中心で、コンピュータグラフィックスと映像の解析、スポーツ解析が混じる。",
+   "subs": [
+    {
+     "id": "F13-01",
+     "name": "ロボット工学"
+    },
+    {
+     "id": "F13-02",
+     "name": "強化学習"
+    },
+    {
+     "id": "F13-03",
+     "name": "スポーツ解析"
+    },
+    {
+     "id": "F13-04",
+     "name": "機械学習"
+    },
+    {
+     "id": "F13-05",
+     "name": "コンピュータグラフィックス"
+    }
+   ]
+  },
+  {
+   "id": "F14",
+   "name": "航空宇宙工学",
+   "en": "Aerospace Engineering",
+   "about": "古典力学を土台に、流体力学・熱工学・空気力学、ロケットや電気推進、軌道・姿勢・制御まで、航空機と宇宙機を成り立たせる力学と工学の塊。",
+   "subs": [
+    {
+     "id": "F14-01",
+     "name": "音響工学"
+    },
+    {
+     "id": "F14-02",
+     "name": "理論音響学"
+    },
+    {
+     "id": "F14-03",
+     "name": "古典力学"
+    },
+    {
+     "id": "F14-04",
+     "name": "宇宙工学"
+    },
+    {
+     "id": "F14-05",
+     "name": "軌道力学"
+    },
+    {
+     "id": "F14-06",
+     "name": "ロボット工学入門（移動と視覚）"
+    },
+    {
+     "id": "F14-07",
+     "name": "小さな塊"
+    }
+   ]
+  },
+  {
+   "id": "F15",
+   "name": "確率論",
+   "en": "Probability Theory",
+   "about": "測度論的確率論、確率過程、伊藤解析、確率微分方程式、確率幾何、格子模型の確率論と、その金融への応用が集まる。",
+   "subs": [
+    {
+     "id": "F15-01",
+     "name": "確率過程論"
+    }
+   ]
+  },
+  {
+   "id": "F16",
+   "name": "理科（小学校の力と電気）",
+   "en": "Elementary Science (Forces and Electricity)",
+   "about": "磁石・電気・てこ・ばね・滑車・転がりなど、小学校の理科の力と電気の観察と工作、およびものづくりの手順が集まる。",
+   "subs": [
+    {
+     "id": "F16-01",
+     "name": "理科（小学校の力と電気）"
+    }
+   ]
+  }
+ ],
  "glossary": [
   {
    "term": "Q \\ {0}",
@@ -81837,10 +82704,12 @@ window.ROADMAP = {
      "qid": "N-001:d9357c0af0"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    0.26,
-    1.95,
-    0.36
+    16.84,
+    -42.74,
+    37.15
    ]
   },
   {
@@ -83064,10 +83933,12 @@ window.ROADMAP = {
      "qid": "N-002:83b77cf664"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.25,
-    4.21,
-    0.28
+    17.7,
+    -43.93,
+    37.23
    ]
   },
   {
@@ -84338,10 +85209,12 @@ window.ROADMAP = {
      "qid": "N-003:83c87ef232"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.85,
-    6.2,
-    0.28
+    17.17,
+    -47.39,
+    40.59
    ]
   },
   {
@@ -86028,10 +86901,12 @@ window.ROADMAP = {
      "qid": "A-001:68627654cb"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    0.01,
-    7.82,
-    3.21
+    10.75,
+    -37.58,
+    35.67
    ],
    "comb": {
     "b": 0.325,
@@ -87315,10 +88190,12 @@ window.ROADMAP = {
      "qid": "C-001:6c93de2fba"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -2.15,
-    3.78,
-    -0.68
+    22.49,
+    -43.45,
+    32.63
    ]
   },
   {
@@ -88598,10 +89475,12 @@ window.ROADMAP = {
      "qid": "C-002:0b354c958d"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -4.11,
-    4.76,
-    -1.54
+    24.43,
+    -43.3,
+    30.85
    ]
   },
   {
@@ -89869,10 +90748,12 @@ window.ROADMAP = {
      "qid": "G-001:8f15af8517"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.87,
-    3.17,
-    2.42
+    14.84,
+    -37.1,
+    35.58
    ]
   },
   {
@@ -91117,10 +91998,12 @@ window.ROADMAP = {
      "qid": "G-002:ce4cfa4784"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.58,
-    3.37,
-    4.22
+    14.97,
+    -38.62,
+    35.0
    ]
   },
   {
@@ -92363,10 +93246,12 @@ window.ROADMAP = {
      "qid": "G-003:5d5d8407fa"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    3.1,
-    4.59,
-    3.36
+    14.84,
+    -31.63,
+    34.67
    ],
    "comb": {
     "b": 0.422,
@@ -93720,10 +94605,12 @@ window.ROADMAP = {
      "qid": "G-004:c414ab38fb"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    4.51,
-    4.74,
-    5.35
+    17.99,
+    -31.39,
+    35.96
    ]
   },
   {
@@ -94987,10 +95874,12 @@ window.ROADMAP = {
      "qid": "L-001:09529438d4"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -0.68,
-    4.32,
-    0.51
+    26.09,
+    -44.69,
+    35.09
    ]
   },
   {
@@ -96381,10 +97270,12 @@ window.ROADMAP = {
      "qid": "L-002:903908c6d6"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -1.88,
-    6.15,
-    0.79
+    31.75,
+    -46.57,
+    35.22
    ]
   },
   {
@@ -96953,10 +97844,12 @@ window.ROADMAP = {
      "qid": "H-001:164649a498"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    0.17,
-    -0.3,
-    1.97
+    -34.78,
+    -8.05,
+    32.31
    ]
   },
   {
@@ -96991,10 +97884,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    1.13,
-    -0.42,
-    4.23
+    -35.28,
+    -12.83,
+    34.45
    ]
   },
   {
@@ -97032,10 +97927,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -1.18,
-    -0.85,
-    1.38
+    -39.19,
+    -27.56,
+    18.26
    ]
   },
   {
@@ -97075,10 +97972,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -2.77,
-    -2.98,
-    1.67
+    -44.31,
+    -35.01,
+    18.21
    ]
   },
   {
@@ -97118,10 +98017,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -2.09,
-    -2.62,
-    2.85
+    -38.24,
+    -38.63,
+    15.54
    ]
   },
   {
@@ -97156,10 +98057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-03",
    "p": [
-    -3.35,
-    2.61,
-    1.16
+    37.47,
+    -64.51,
+    11.69
    ]
   },
   {
@@ -97195,10 +98098,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-05",
    "p": [
-    -7.99,
-    5.81,
-    3.12
+    31.94,
+    -56.96,
+    2.86
    ],
    "comb": {
     "b": 0.39,
@@ -97243,10 +98148,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    1.6,
-    -1.2,
-    0.04
+    -36.7,
+    -3.66,
+    50.66
    ]
   },
   {
@@ -97279,10 +98186,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    1.99,
-    0.24,
-    -0.01
+    -23.3,
+    -5.97,
+    0.14
    ]
   },
   {
@@ -97854,10 +98763,12 @@ window.ROADMAP = {
      "qid": "P-181:0c25e2e847"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    2.47,
-    -1.24,
-    3.42
+    -15.12,
+    -0.92,
+    37.32
    ]
   },
   {
@@ -98345,10 +99256,12 @@ window.ROADMAP = {
      "qid": "P-182:cf1dc7e9cc"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    2.49,
-    0.14,
-    3.62
+    -13.6,
+    -7.18,
+    38.63
    ]
   },
   {
@@ -98834,10 +99747,12 @@ window.ROADMAP = {
      "qid": "P-184:3be729da4a"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    7.6,
-    3.52,
-    6.09
+    5.26,
+    -33.75,
+    36.42
    ]
   },
   {
@@ -99322,10 +100237,12 @@ window.ROADMAP = {
      "qid": "P-185:2f45230ced"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    1.31,
-    0.98,
-    1.15
+    -15.8,
+    -4.87,
+    47.96
    ]
   },
   {
@@ -99805,10 +100722,12 @@ window.ROADMAP = {
      "qid": "P-187:bb85c44dc7"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    1.51,
-    -0.39,
-    1.26
+    -16.47,
+    -5.66,
+    50.67
    ]
   },
   {
@@ -99848,10 +100767,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    8.27,
-    -0.83,
-    1.55
+    -5.71,
+    -34.11,
+    25.11
    ]
   },
   {
@@ -99891,10 +100812,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    0.86,
-    -0.84,
-    6.37
+    -32.64,
+    -8.71,
+    35.19
    ]
   },
   {
@@ -99929,10 +100852,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    -0.31,
-    -0.78,
-    4.32
+    -38.32,
+    -5.29,
+    29.82
    ]
   },
   {
@@ -99965,10 +100890,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -0.95,
-    -1.75,
-    0.21
+    -37.61,
+    -33.73,
+    7.47
    ]
   },
   {
@@ -100008,10 +100935,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    2.84,
-    -3.21,
-    0.99
+    -33.17,
+    -4.55,
+    44.47
    ]
   },
   {
@@ -100046,10 +100975,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -3.17,
-    -3.04,
-    -0.28
+    -41.75,
+    -34.06,
+    5.01
    ]
   },
   {
@@ -100084,10 +101015,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -1.12,
-    -3.71,
-    -2.08
+    -33.16,
+    -33.48,
+    -1.75
    ]
   },
   {
@@ -101487,10 +102420,12 @@ window.ROADMAP = {
    "keys": [
     "−"
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.4,
-    7.68,
-    0.97
+    14.93,
+    -41.34,
+    35.94
    ]
   },
   {
@@ -102916,10 +103851,12 @@ window.ROADMAP = {
      "qid": "N-005:4d2fd42bbd"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.97,
-    8.19,
-    0.62
+    17.31,
+    -46.89,
+    39.74
    ]
   },
   {
@@ -104106,10 +105043,12 @@ window.ROADMAP = {
      "qid": "N-006:b169334e4f"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    0.99,
-    9.9,
-    2.87
+    11.75,
+    -42.11,
+    33.76
    ]
   },
   {
@@ -105608,10 +106547,12 @@ window.ROADMAP = {
      "qid": "N-007:ba421ccb4a"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    0.65,
-    12.05,
-    1.9
+    19.75,
+    -42.04,
+    31.63
    ]
   },
   {
@@ -106909,10 +107850,12 @@ window.ROADMAP = {
      "qid": "N-008:9b6adf1b76"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    0.55,
-    13.73,
-    2.86
+    31.61,
+    -36.03,
+    25.35
    ]
   },
   {
@@ -108066,10 +109009,12 @@ window.ROADMAP = {
      "qid": "N-009:6513f32614"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    2.78,
-    13.52,
-    2.57
+    20.55,
+    -41.45,
+    31.91
    ]
   },
   {
@@ -109462,10 +110407,12 @@ window.ROADMAP = {
    "keys": [
     "−"
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    3.13,
-    13.63,
-    1.15
+    20.37,
+    -34.58,
+    32.7
    ],
    "comb": {
     "b": 0.278,
@@ -110685,10 +111632,12 @@ window.ROADMAP = {
    "keys": [
     "−"
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    4.55,
-    15.14,
-    0.79
+    22.31,
+    -29.14,
+    28.97
    ]
   },
   {
@@ -112055,10 +113004,12 @@ window.ROADMAP = {
     }
    ],
    "measure": true,
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    1.86,
-    13.91,
-    0.4
+    26.23,
+    -44.57,
+    34.49
    ],
    "comb": {
     "b": 0.194,
@@ -113245,10 +114196,12 @@ window.ROADMAP = {
      "qid": "A-002:8a3c9f7936"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    0.41,
-    13.33,
-    4.38
+    17.33,
+    -40.27,
+    34.83
    ],
    "comb": {
     "b": 0.273,
@@ -114354,10 +115307,12 @@ window.ROADMAP = {
      "qid": "C-003:0f4af725e2"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -5.69,
-    6.03,
-    -1.64
+    20.88,
+    -41.48,
+    25.26
    ]
   },
   {
@@ -115438,10 +116393,12 @@ window.ROADMAP = {
      "qid": "C-004:b79ce23640"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -5.78,
-    8.35,
-    -2.02
+    27.59,
+    -40.03,
+    26.76
    ],
    "comb": {
     "b": 0.251,
@@ -116602,10 +117559,12 @@ window.ROADMAP = {
      "qid": "G-005:7cd89b607c"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    5.72,
-    8.98,
-    9.15
+    15.96,
+    -35.6,
+    32.55
    ],
    "comb": {
     "b": 0.242,
@@ -117855,10 +118814,12 @@ window.ROADMAP = {
      "qid": "G-006:d25918fcdd"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    3.84,
-    3.99,
-    6.38
+    19.27,
+    -34.23,
+    37.66
    ]
   },
   {
@@ -119350,10 +120311,12 @@ window.ROADMAP = {
      "qid": "G-007:82fcf95b5a"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    4.63,
-    7.61,
-    5.28
+    16.76,
+    -31.18,
+    34.28
    ],
    "comb": {
     "b": 0.425,
@@ -120765,10 +121728,12 @@ window.ROADMAP = {
      "qid": "L-003:f60f74a373"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -3.15,
-    7.81,
-    0.72
+    33.31,
+    -46.38,
+    33.39
    ]
   },
   {
@@ -122155,10 +123120,12 @@ window.ROADMAP = {
      "qid": "L-004:de5e47d401"
     }
    ],
+   "f": "F03",
+   "s": "F03-07",
    "p": [
-    -1.42,
-    8.31,
-    0.55
+    15.58,
+    -53.35,
+    39.79
    ]
   },
   {
@@ -123406,10 +124373,12 @@ window.ROADMAP = {
      "qid": "N-059:9b8108566a"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    3.63,
-    12.8,
-    4.48
+    -6.02,
+    -32.84,
+    27.31
    ],
    "comb": {
     "b": 0.283,
@@ -124398,10 +125367,12 @@ window.ROADMAP = {
      "qid": "N-060:7ccd3499a7"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    2.56,
-    15.6,
-    -0.71
+    6.5,
+    -40.51,
+    30.8
    ],
    "comb": {
     "b": 0.284,
@@ -125579,10 +126550,12 @@ window.ROADMAP = {
      "qid": "G-046:a933753e89"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    5.63,
-    10.3,
-    10.62
+    -3.34,
+    -29.45,
+    30.13
    ],
    "comb": {
     "b": 0.366,
@@ -126779,10 +127752,12 @@ window.ROADMAP = {
      "qid": "S-027:b5d3b0744d"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -8.2,
-    -7.87,
-    4.47
+    -16.62,
+    -35.15,
+    18.79
    ]
   },
   {
@@ -126817,10 +127792,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-02",
    "p": [
-    2.59,
-    10.12,
-    -14.16
+    20.76,
+    -94.15,
+    12.12
    ]
   },
   {
@@ -126858,10 +127835,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    0.53,
-    -1.57,
-    1.13
+    -42.05,
+    22.0,
+    25.08
    ]
   },
   {
@@ -126908,10 +127887,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    3.47,
-    -0.53,
-    17.24
+    -31.79,
+    -3.68,
+    30.1
    ],
    "comb": {
     "b": 0.352,
@@ -126960,10 +127941,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    -0.6,
-    -5.44,
-    18.55
+    -37.7,
+    -7.4,
+    24.35
    ]
   },
   {
@@ -127004,10 +127987,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    1.03,
-    -3.8,
-    18.93
+    -37.0,
+    -3.63,
+    26.15
    ]
   },
   {
@@ -127048,10 +128033,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -3.97,
-    -3.55,
-    3.69
+    -38.56,
+    -31.15,
+    14.97
    ],
    "comb": {
     "b": 0.25,
@@ -127106,10 +128093,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-03",
    "p": [
-    -9.56,
-    6.37,
-    4.15
+    36.39,
+    -62.09,
+    11.77
    ],
    "comb": {
     "b": 0.434,
@@ -127156,10 +128145,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-03",
    "p": [
-    -9.1,
-    6.01,
-    5.51
+    27.49,
+    -40.46,
+    13.26
    ]
   },
   {
@@ -127194,10 +128185,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    4.02,
-    -1.36,
-    1.16
+    -37.12,
+    -3.22,
+    50.76
    ]
   },
   {
@@ -127239,10 +128232,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    8.12,
-    2.9,
-    8.66
+    -29.41,
+    -11.32,
+    33.14
    ],
    "comb": {
     "b": 0.372,
@@ -127287,10 +128282,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    9.8,
-    -3.07,
-    1.37
+    -6.67,
+    -31.47,
+    26.06
    ],
    "comb": {
     "b": 0.422,
@@ -127340,10 +128337,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    0.29,
-    -1.65,
-    8.28
+    -39.12,
+    -7.06,
+    29.74
    ]
   },
   {
@@ -127378,10 +128377,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    0.77,
-    -1.75,
-    3.96
+    -38.47,
+    -9.7,
+    30.49
    ]
   },
   {
@@ -127422,10 +128423,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    3.03,
-    4.92,
-    16.62
+    -26.74,
+    -12.34,
+    34.86
    ],
    "comb": {
     "b": 0.181,
@@ -127469,10 +128472,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    0.4,
-    -2.23,
-    6.07
+    -39.6,
+    -7.51,
+    29.78
    ]
   },
   {
@@ -127517,10 +128522,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -3.04,
-    -3.21,
-    4.73
+    -44.26,
+    -37.31,
+    18.89
    ]
   },
   {
@@ -127555,10 +128562,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -2.78,
-    -4.37,
-    3.89
+    -41.55,
+    -36.02,
+    17.97
    ]
   },
   {
@@ -127600,10 +128609,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -10.05,
-    -5.93,
-    13.17
+    -32.59,
+    -34.32,
+    13.3
    ],
    "comb": {
     "b": 0.568,
@@ -127653,10 +128664,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -3.33,
-    -1.86,
-    2.19
+    -42.36,
+    -35.27,
+    11.33
    ]
   },
   {
@@ -127693,10 +128706,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -8.97,
-    -10.04,
-    8.33
+    -27.75,
+    -35.27,
+    15.27
    ],
    "comb": {
     "b": 0.577,
@@ -127741,10 +128756,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    3.82,
-    -4.9,
-    1.83
+    -31.86,
+    -12.26,
+    32.65
    ]
   },
   {
@@ -127785,10 +128802,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-01",
    "p": [
-    3.98,
-    -6.42,
-    11.83
+    -42.82,
+    -4.5,
+    36.84
    ],
    "comb": {
     "b": 0.441,
@@ -127832,10 +128851,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-01",
    "p": [
-    2.39,
-    -2.79,
-    5.34
+    -46.53,
+    3.09,
+    37.58
    ]
   },
   {
@@ -127875,10 +128896,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -5.1,
-    -11.35,
-    -6.51
+    -21.57,
+    -40.52,
+    4.93
    ]
   },
   {
@@ -127918,10 +128941,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -2.63,
-    -1.23,
-    3.31
+    -40.18,
+    -27.09,
+    19.7
    ]
   },
   {
@@ -127966,10 +128991,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -2.25,
-    -5.69,
-    2.13
+    -51.51,
+    -35.72,
+    21.41
    ]
   },
   {
@@ -128009,10 +129036,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -2.37,
-    -5.99,
-    0.72
+    -39.93,
+    -42.09,
+    9.83
    ]
   },
   {
@@ -128048,10 +129077,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    2.29,
-    -4.89,
-    6.5
+    -34.73,
+    -11.86,
+    37.08
    ],
    "comb": {
     "b": 0.348,
@@ -129772,10 +130803,12 @@ window.ROADMAP = {
      "qid": "N-013:36a0bf3a60"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.59,
-    13.83,
-    1.78
+    23.72,
+    -39.52,
+    32.34
    ]
   },
   {
@@ -131156,10 +132189,12 @@ window.ROADMAP = {
      "qid": "N-014:47e7661038"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    0.85,
-    15.63,
-    2.38
+    25.17,
+    -36.33,
+    28.59
    ]
   },
   {
@@ -132303,10 +133338,12 @@ window.ROADMAP = {
      "qid": "N-015:0022e8410b"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    0.55,
-    15.82,
-    0.21
+    26.03,
+    -42.09,
+    35.79
    ]
   },
   {
@@ -133647,10 +134684,12 @@ window.ROADMAP = {
      "qid": "N-016:5a6a60efcb"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    2.89,
-    17.36,
-    0.17
+    17.28,
+    -38.35,
+    35.5
    ]
   },
   {
@@ -135122,10 +136161,12 @@ window.ROADMAP = {
      "qid": "N-017:480a419cb9"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    3.55,
-    16.91,
-    3.3
+    29.45,
+    -35.18,
+    28.12
    ],
    "comb": {
     "b": 0.284,
@@ -136417,10 +137458,12 @@ window.ROADMAP = {
      "qid": "N-018:e0a83bdf9d"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    4.22,
-    18.55,
-    3.49
+    27.59,
+    -34.69,
+    29.86
    ]
   },
   {
@@ -138189,10 +139232,12 @@ window.ROADMAP = {
      "qid": "N-019:a201e91ed9"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    4.3,
-    20.49,
-    2.28
+    19.53,
+    -35.93,
+    33.63
    ],
    "comb": {
     "b": 0.284,
@@ -139348,10 +140393,12 @@ window.ROADMAP = {
      "qid": "N-020:1842f1286f"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.03,
-    18.99,
-    2.07
+    15.64,
+    -37.98,
+    31.38
    ],
    "comb": {
     "b": 0.239,
@@ -140795,10 +141842,12 @@ window.ROADMAP = {
      "qid": "N-021:a3b9e27c84"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    4.19,
-    20.18,
-    4.35
+    32.3,
+    -34.08,
+    26.37
    ],
    "comb": {
     "b": 0.245,
@@ -142283,10 +143332,12 @@ window.ROADMAP = {
      "qid": "N-022:18c54601eb"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    1.87,
-    19.03,
-    2.87
+    35.68,
+    -38.74,
+    29.71
    ],
    "comb": {
     "b": 0.35,
@@ -143406,10 +144457,12 @@ window.ROADMAP = {
      "qid": "N-023:35578fd2ea"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    3.37,
-    20.54,
-    3.2
+    39.92,
+    -30.76,
+    24.79
    ],
    "comb": {
     "b": 0.343,
@@ -144617,10 +145670,12 @@ window.ROADMAP = {
      "qid": "N-024:7d34903d39"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    2.02,
-    22.46,
-    3.18
+    37.03,
+    -33.18,
+    25.69
    ],
    "comb": {
     "b": 0.302,
@@ -145780,10 +146835,12 @@ window.ROADMAP = {
     }
    ],
    "measure": true,
+   "f": "F03",
+   "s": "F03-03",
    "p": [
-    -2.41,
-    20.31,
-    5.03
+    18.6,
+    -37.58,
+    10.33
    ],
    "comb": {
     "b": 0.336,
@@ -147192,10 +148249,12 @@ window.ROADMAP = {
     }
    ],
    "measure": true,
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.74,
-    22.46,
-    0.37
+    26.81,
+    -42.26,
+    36.84
    ],
    "comb": {
     "b": 0.262,
@@ -148595,10 +149654,12 @@ window.ROADMAP = {
      "qid": "A-003:2b9d585f2f"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    0.83,
-    16.84,
-    5.02
+    18.69,
+    -39.1,
+    33.86
    ],
    "comb": {
     "b": 0.264,
@@ -150006,10 +151067,12 @@ window.ROADMAP = {
      "qid": "A-004:8466c2cc2e"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    1.23,
-    17.16,
-    3.69
+    26.17,
+    -34.88,
+    26.13
    ],
    "comb": {
     "b": 0.324,
@@ -151815,10 +152878,12 @@ window.ROADMAP = {
      "qid": "A-005:92e75f0c29"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -0.61,
-    22.16,
-    10.35
+    -1.87,
+    -29.96,
+    22.63
    ],
    "comb": {
     "b": 0.189,
@@ -153301,10 +154366,12 @@ window.ROADMAP = {
      "qid": "A-006:dfc827b127"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    3.21,
-    23.43,
-    17.57
+    0.87,
+    -23.96,
+    24.64
    ],
    "comb": {
     "b": 0.362,
@@ -155146,10 +156213,12 @@ window.ROADMAP = {
     }
    ],
    "measure": true,
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    5.91,
-    24.15,
-    18.69
+    1.08,
+    -25.75,
+    29.29
    ],
    "comb": {
     "b": 0.269,
@@ -156565,10 +157634,12 @@ window.ROADMAP = {
      "qid": "A-008:600d841234"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    3.76,
-    21.59,
-    6.19
+    23.51,
+    -36.97,
+    27.92
    ],
    "comb": {
     "b": 0.285,
@@ -157782,10 +158853,12 @@ window.ROADMAP = {
      "qid": "A-009:f235cbfe48"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    1.69,
-    18.7,
-    4.63
+    27.51,
+    -32.47,
+    24.55
    ]
   },
   {
@@ -159109,10 +160182,12 @@ window.ROADMAP = {
      "qid": "C-005:9177a06858"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -7.99,
-    13.38,
-    -2.78
+    29.89,
+    -37.67,
+    24.9
    ],
    "comb": {
     "b": 0.306,
@@ -160471,10 +161546,12 @@ window.ROADMAP = {
      "qid": "C-006:d4b1b0a525"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -7.59,
-    15.5,
-    -3.42
+    32.11,
+    -36.71,
+    24.63
    ],
    "comb": {
     "b": 0.305,
@@ -161921,10 +162998,12 @@ window.ROADMAP = {
      "qid": "C-007:b6f8b11af8"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -7.19,
-    19.62,
-    -2.68
+    30.02,
+    -35.23,
+    21.85
    ],
    "comb": {
     "b": 0.302,
@@ -163035,10 +164114,12 @@ window.ROADMAP = {
      "qid": "C-008:51d27c2480"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -12.19,
-    11.87,
-    -4.5
+    24.89,
+    -34.72,
+    17.39
    ]
   },
   {
@@ -164381,10 +165462,12 @@ window.ROADMAP = {
      "qid": "C-009:8e831c38ab"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -10.31,
-    13.71,
-    -3.92
+    26.74,
+    -35.81,
+    23.7
    ]
   },
   {
@@ -165558,10 +166641,12 @@ window.ROADMAP = {
      "qid": "C-010:0b541ad354"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -9.11,
-    16.52,
-    -4.24
+    28.89,
+    -36.73,
+    24.67
    ],
    "comb": {
     "b": 0.304,
@@ -166905,10 +167990,12 @@ window.ROADMAP = {
      "qid": "C-011:113de1bcab"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -18.97,
-    16.83,
-    -6.34
+    5.59,
+    -31.46,
+    9.38
    ],
    "comb": {
     "b": 0.324,
@@ -168151,10 +169238,12 @@ window.ROADMAP = {
      "qid": "C-012:3764f1310c"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -14.15,
-    10.32,
-    -1.73
+    27.97,
+    -35.76,
+    18.24
    ]
   },
   {
@@ -169966,10 +171055,12 @@ window.ROADMAP = {
      "qid": "G-008:334972af5a"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    6.36,
-    12.12,
-    11.06
+    16.4,
+    -28.73,
+    33.73
    ],
    "comb": {
     "b": 0.351,
@@ -171288,10 +172379,12 @@ window.ROADMAP = {
      "qid": "G-009:a4d12fc65b"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    6.62,
-    12.87,
-    10.0
+    18.99,
+    -30.31,
+    38.86
    ],
    "comb": {
     "b": 0.365,
@@ -172586,10 +173679,12 @@ window.ROADMAP = {
      "qid": "G-010:2c93610919"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    8.65,
-    19.77,
-    11.53
+    18.14,
+    -26.6,
+    33.61
    ],
    "comb": {
     "b": 0.343,
@@ -173949,10 +175044,12 @@ window.ROADMAP = {
      "qid": "G-011:63734bdfbb"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    11.29,
-    18.07,
-    15.15
+    13.61,
+    -21.63,
+    28.63
    ],
    "comb": {
     "b": 0.418,
@@ -175789,10 +176886,12 @@ window.ROADMAP = {
      "qid": "G-012:406802cbac"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    9.55,
-    16.02,
-    18.32
+    17.09,
+    -23.47,
+    36.87
    ],
    "comb": {
     "b": 0.276,
@@ -177514,10 +178613,12 @@ window.ROADMAP = {
      "qid": "G-013:d0a8ecc79c"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    9.42,
-    13.75,
-    20.14
+    3.89,
+    -21.86,
+    32.27
    ],
    "comb": {
     "b": 0.194,
@@ -178982,10 +180083,12 @@ window.ROADMAP = {
      "qid": "G-014:7900643862"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    13.74,
-    15.12,
-    18.86
+    13.07,
+    -22.34,
+    30.52
    ]
   },
   {
@@ -180288,10 +181391,12 @@ window.ROADMAP = {
      "qid": "G-015:b93e83f738"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    12.4,
-    15.97,
-    16.58
+    20.94,
+    -25.59,
+    33.81
    ],
    "comb": {
     "b": 0.373,
@@ -181696,10 +182801,12 @@ window.ROADMAP = {
      "qid": "L-005:ddaa030ffa"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -7.32,
-    14.03,
-    0.42
+    34.17,
+    -38.85,
+    26.61
    ]
   },
   {
@@ -182949,10 +184056,12 @@ window.ROADMAP = {
      "qid": "L-006:27764a55de"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -6.26,
-    12.57,
-    -0.08
+    40.25,
+    -38.13,
+    23.67
    ],
    "comb": {
     "b": 0.3,
@@ -185011,10 +186120,12 @@ window.ROADMAP = {
      "qid": "L-007:6384ca8484"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -8.38,
-    15.45,
-    -0.71
+    35.76,
+    -46.18,
+    29.0
    ],
    "comb": {
     "b": 0.254,
@@ -186502,10 +187613,12 @@ window.ROADMAP = {
      "qid": "L-008:4081e9038d"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -4.12,
-    9.47,
-    0.77
+    33.83,
+    -43.71,
+    30.25
    ]
   },
   {
@@ -187957,10 +189070,12 @@ window.ROADMAP = {
      "qid": "L-009:f8e0ebe709"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -9.49,
-    14.82,
-    0.11
+    36.5,
+    -47.58,
+    37.01
    ]
   },
   {
@@ -189266,10 +190381,12 @@ window.ROADMAP = {
      "qid": "L-010:32700caba2"
     }
    ],
+   "f": "F03",
+   "s": "F03-07",
    "p": [
-    -3.4,
-    13.56,
-    1.29
+    16.9,
+    -53.74,
+    39.84
    ],
    "comb": {
     "b": 0.19,
@@ -190370,10 +191487,12 @@ window.ROADMAP = {
      "qid": "N-061:4aa2c1c946"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    2.77,
-    15.56,
-    0.83
+    13.86,
+    -38.24,
+    29.88
    ],
    "comb": {
     "b": 0.284,
@@ -191525,10 +192644,12 @@ window.ROADMAP = {
      "qid": "S-028:f031f39dd7"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -3.5,
-    22.4,
-    2.09
+    -5.31,
+    -35.31,
+    12.6
    ],
    "comb": {
     "b": 0.403,
@@ -191581,10 +192702,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    2.57,
-    20.03,
-    -16.6
+    14.08,
+    -45.38,
+    0.01
    ],
    "comb": {
     "b": 0.422,
@@ -191635,10 +192758,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    2.69,
-    -5.9,
-    5.42
+    -42.65,
+    20.94,
+    24.9
    ],
    "comb": {
     "b": 0.372,
@@ -191687,10 +192812,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    3.4,
-    -7.53,
-    6.24
+    -39.62,
+    20.76,
+    23.71
    ]
   },
   {
@@ -191730,10 +192857,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    1.52,
-    -3.53,
-    2.14
+    -38.77,
+    24.78,
+    21.07
    ]
   },
   {
@@ -191787,10 +192916,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    -0.29,
-    -8.32,
-    31.66
+    -34.69,
+    -6.35,
+    21.3
    ],
    "comb": {
     "b": 0.396,
@@ -191842,10 +192973,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    2.64,
-    5.0,
-    25.52
+    -27.81,
+    -8.08,
+    32.63
    ],
    "comb": {
     "b": 0.293,
@@ -191901,10 +193034,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    0.77,
-    -4.07,
-    20.65
+    -36.55,
+    -5.9,
+    25.71
    ]
   },
   {
@@ -191951,10 +193086,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    4.97,
-    3.0,
-    30.56
+    -29.67,
+    -7.13,
+    24.17
    ],
    "comb": {
     "b": 0.311,
@@ -192010,10 +193147,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -12.46,
-    -11.45,
-    12.54
+    -43.7,
+    -30.54,
+    15.92
    ],
    "comb": {
     "b": 0.416,
@@ -192074,10 +193213,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -10.91,
-    -13.97,
-    11.38
+    -42.91,
+    -34.14,
+    8.99
    ],
    "comb": {
     "b": 0.585,
@@ -192135,10 +193276,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -17.31,
-    -9.35,
-    17.21
+    -39.21,
+    -24.06,
+    19.02
    ],
    "comb": {
     "b": 0.548,
@@ -192195,10 +193338,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -14.6,
-    -12.77,
-    19.92
+    -39.31,
+    -24.62,
+    5.57
    ],
    "comb": {
     "b": 0.475,
@@ -193741,10 +194886,12 @@ window.ROADMAP = {
    "keys": [
     "−"
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    9.46,
-    20.61,
-    16.09
+    14.07,
+    -31.45,
+    33.38
    ],
    "comb": {
     "b": 0.243,
@@ -195070,10 +196217,12 @@ window.ROADMAP = {
      "qid": "G-051:7380a4ed31"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    5.45,
-    5.5,
-    6.88
+    17.83,
+    -32.56,
+    36.62
    ]
   },
   {
@@ -195120,10 +196269,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-05",
    "p": [
-    -14.04,
-    9.33,
-    5.04
+    30.45,
+    -52.92,
+    0.16
    ],
    "comb": {
     "b": 0.317,
@@ -195175,10 +196326,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -13.03,
-    3.96,
-    3.41
+    37.48,
+    -50.0,
+    28.65
    ]
   },
   {
@@ -195219,10 +196372,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -8.35,
-    13.56,
-    7.48
+    39.02,
+    -15.4,
+    3.44
    ],
    "comb": {
     "b": 0.277,
@@ -195278,10 +196433,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    8.19,
-    -3.15,
-    10.96
+    -12.22,
+    -6.75,
+    36.04
    ],
    "comb": {
     "b": 0.373,
@@ -195332,10 +196489,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    20.36,
-    11.9,
-    20.28
+    -5.71,
+    -13.06,
+    31.56
    ],
    "comb": {
     "b": 0.513,
@@ -195390,10 +196549,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    17.38,
-    10.49,
-    13.66
+    -29.23,
+    -33.12,
+    20.21
    ],
    "comb": {
     "b": 0.575,
@@ -195453,10 +196614,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    19.99,
-    -16.38,
-    3.91
+    -7.96,
+    -30.3,
+    25.06
    ],
    "comb": {
     "b": 0.59,
@@ -195508,10 +196671,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    14.3,
-    2.45,
-    9.96
+    -0.58,
+    -26.45,
+    33.23
    ],
    "comb": {
     "b": 0.575,
@@ -195564,10 +196729,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    15.23,
-    -9.74,
-    6.86
+    -2.99,
+    -25.27,
+    32.91
    ]
   },
   {
@@ -195614,10 +196781,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-13",
    "p": [
-    12.9,
-    -4.9,
-    7.75
+    17.26,
+    -34.92,
+    -3.08
    ],
    "comb": {
     "b": 0.623,
@@ -195676,10 +196845,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -9.6,
-    -8.33,
-    5.97
+    -34.64,
+    -34.3,
+    20.46
    ],
    "comb": {
     "b": 0.473,
@@ -195729,10 +196900,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    5.26,
-    -5.96,
-    2.86
+    -31.41,
+    -2.82,
+    42.07
    ]
   },
   {
@@ -195773,10 +196946,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    19.03,
-    -13.32,
-    15.28
+    -27.78,
+    -6.77,
+    34.5
    ],
    "comb": {
     "b": 0.413,
@@ -195831,10 +197006,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-01",
    "p": [
-    6.51,
-    -7.26,
-    12.47
+    -45.07,
+    1.73,
+    35.77
    ]
   },
   {
@@ -195875,10 +197052,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-03",
    "p": [
-    -17.73,
-    14.09,
-    2.41
+    27.21,
+    -40.82,
+    15.37
    ],
    "comb": {
     "b": 0.151,
@@ -195928,10 +197107,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    -10.58,
-    9.16,
-    1.14
+    20.67,
+    -44.24,
+    30.09
    ],
    "comb": {
     "b": 0.305,
@@ -195981,10 +197162,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -17.01,
-    9.21,
-    -0.1
+    28.79,
+    -39.74,
+    22.5
    ],
    "comb": {
     "b": 0.12,
@@ -196034,10 +197217,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -10.28,
-    -8.99,
-    3.24
+    -39.8,
+    -35.73,
+    10.75
    ],
    "comb": {
     "b": 0.444,
@@ -196086,10 +197271,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -18.28,
-    -12.62,
-    5.02
+    -46.67,
+    -36.52,
+    6.78
    ]
   },
   {
@@ -196129,10 +197316,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -7.23,
-    -6.64,
-    -22.41
+    -13.24,
+    -39.39,
+    3.61
    ]
   },
   {
@@ -196173,10 +197362,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -8.75,
-    -9.62,
-    5.29
+    -29.48,
+    -39.65,
+    14.49
    ],
    "comb": {
     "b": 0.438,
@@ -196226,10 +197417,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-04",
    "p": [
-    -4.51,
-    -6.7,
-    2.48
+    -55.92,
+    -40.7,
+    31.6
    ],
    "comb": {
     "b": 0.341,
@@ -196285,10 +197478,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    24.86,
-    3.47,
-    21.01
+    -5.83,
+    -15.65,
+    34.42
    ],
    "comb": {
     "b": 0.262,
@@ -196334,10 +197529,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -14.37,
-    -12.5,
-    12.48
+    -43.61,
+    -34.98,
+    12.64
    ],
    "comb": {
     "b": 0.342,
@@ -196389,10 +197586,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-04",
    "p": [
-    14.79,
-    -2.9,
-    9.07
+    -56.12,
+    -41.58,
+    38.6
    ],
    "comb": {
     "b": 0.547,
@@ -196444,10 +197643,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-04",
    "p": [
-    7.32,
-    -9.96,
-    14.87
+    -56.66,
+    -40.59,
+    38.35
    ],
    "comb": {
     "b": 0.313,
@@ -197600,10 +198801,12 @@ window.ROADMAP = {
      "qid": "N-073:7e013c61d2"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.76,
-    15.22,
-    2.14
+    19.29,
+    -41.64,
+    33.93
    ],
    "comb": {
     "b": 0.284,
@@ -198961,10 +200164,12 @@ window.ROADMAP = {
      "qid": "N-074:5f86b03545"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.18,
-    17.2,
-    1.9
+    23.61,
+    -40.88,
+    32.49
    ],
    "comb": {
     "b": 0.284,
@@ -200434,10 +201639,12 @@ window.ROADMAP = {
      "qid": "N-075:b3aeb075df"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.81,
-    19.24,
-    0.66
+    22.69,
+    -40.54,
+    31.19
    ]
   },
   {
@@ -201338,10 +202545,12 @@ window.ROADMAP = {
      "qid": "N-076:e70eddd1b8"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    1.79,
-    17.47,
-    1.17
+    23.66,
+    -41.01,
+    34.79
    ]
   },
   {
@@ -202650,10 +203859,12 @@ window.ROADMAP = {
      "qid": "N-077:a145602d08"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    2.82,
-    20.79,
-    1.83
+    16.85,
+    -38.28,
+    31.33
    ]
   },
   {
@@ -203933,10 +205144,12 @@ window.ROADMAP = {
      "qid": "N-078:915012e63c"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    3.61,
-    22.25,
-    3.23
+    18.02,
+    -36.16,
+    33.92
    ]
   },
   {
@@ -205174,10 +206387,12 @@ window.ROADMAP = {
      "qid": "G-053:ae1a891038"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    13.08,
-    16.28,
-    18.36
+    17.02,
+    -32.25,
+    34.84
    ],
    "comb": {
     "b": 0.374,
@@ -206501,10 +207716,12 @@ window.ROADMAP = {
      "qid": "S-055:3d2cf55d66"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -23.8,
-    0.55,
-    -10.81
+    -1.61,
+    -34.5,
+    24.34
    ],
    "comb": {
     "b": 0.39,
@@ -207657,10 +208874,12 @@ window.ROADMAP = {
      "qid": "N-027:c18359f7b9"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    2.96,
-    24.19,
-    2.08
+    22.12,
+    -34.39,
+    32.1
    ]
   },
   {
@@ -209728,10 +210947,12 @@ window.ROADMAP = {
      "qid": "N-028:e2962c5964"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    1.51,
-    27.52,
-    3.71
+    39.98,
+    -37.01,
+    27.36
    ],
    "comb": {
     "b": 0.336,
@@ -211486,10 +212707,12 @@ window.ROADMAP = {
      "qid": "N-029:946e7a0ea8"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    5.84,
-    28.57,
-    4.17
+    39.47,
+    -29.16,
+    25.16
    ],
    "comb": {
     "b": 0.301,
@@ -212923,10 +214146,12 @@ window.ROADMAP = {
      "qid": "N-030:46f7d7144d"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    2.93,
-    33.85,
-    5.07
+    36.18,
+    -26.1,
+    22.05
    ],
    "comb": {
     "b": 0.232,
@@ -214187,10 +215412,12 @@ window.ROADMAP = {
      "qid": "N-031:a099f54eab"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    5.35,
-    28.42,
-    5.62
+    39.92,
+    -31.14,
+    28.65
    ],
    "comb": {
     "b": 0.119,
@@ -216229,10 +217456,12 @@ window.ROADMAP = {
      "qid": "A-010:bece8484d6"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    0.35,
-    25.61,
-    5.25
+    21.92,
+    -33.21,
+    25.23
    ],
    "comb": {
     "b": 0.305,
@@ -218791,10 +220020,12 @@ window.ROADMAP = {
      "qid": "A-011:8e9a91499e"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    3.37,
-    26.36,
-    8.2
+    15.53,
+    -30.38,
+    28.32
    ],
    "comb": {
     "b": 0.343,
@@ -221120,10 +222351,12 @@ window.ROADMAP = {
      "qid": "A-012:7a2c01979d"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    4.38,
-    25.82,
-    13.49
+    10.78,
+    -21.76,
+    23.06
    ]
   },
   {
@@ -222625,10 +223858,12 @@ window.ROADMAP = {
      "qid": "A-013:5620c3194a"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    1.57,
-    28.68,
-    6.57
+    29.2,
+    -29.31,
+    27.48
    ],
    "comb": {
     "b": 0.289,
@@ -225258,10 +226493,12 @@ window.ROADMAP = {
     }
    ],
    "measure": true,
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    2.0,
-    28.75,
-    11.69
+    14.53,
+    -32.44,
+    31.19
    ]
   },
   {
@@ -226908,10 +228145,12 @@ window.ROADMAP = {
      "qid": "A-015:dc0ea472a4"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    1.9,
-    26.66,
-    7.66
+    28.17,
+    -27.53,
+    26.86
    ],
    "comb": {
     "b": 0.317,
@@ -228234,10 +229473,12 @@ window.ROADMAP = {
      "qid": "A-016:d79a7b8bf0"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    5.34,
-    27.3,
-    9.7
+    28.95,
+    -28.63,
+    29.91
    ],
    "comb": {
     "b": 0.292,
@@ -230720,10 +231961,12 @@ window.ROADMAP = {
      "qid": "A-017:eebc5237bb"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    6.38,
-    27.2,
-    13.66
+    21.18,
+    -20.3,
+    26.79
    ],
    "comb": {
     "b": 0.122,
@@ -232164,10 +233407,12 @@ window.ROADMAP = {
      "qid": "A-018:80beefc096"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    3.77,
-    28.02,
-    8.28
+    28.36,
+    -29.12,
+    23.27
    ],
    "comb": {
     "b": 0.112,
@@ -233503,10 +234748,12 @@ window.ROADMAP = {
      "qid": "C-013:82118743aa"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -13.31,
-    24.02,
-    -4.38
+    30.83,
+    -38.07,
+    22.52
    ],
    "comb": {
     "b": 0.176,
@@ -234602,10 +235849,12 @@ window.ROADMAP = {
      "qid": "C-014:a6223dce15"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -18.77,
-    21.39,
-    -7.64
+    29.5,
+    -37.87,
+    21.57
    ]
   },
   {
@@ -235899,10 +237148,12 @@ window.ROADMAP = {
      "qid": "C-015:ccf021b230"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -14.61,
-    22.97,
-    -5.67
+    32.15,
+    -30.07,
+    18.22
    ],
    "comb": {
     "b": 0.144,
@@ -236985,10 +238236,12 @@ window.ROADMAP = {
      "qid": "C-016:a1b9edb55c"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -11.47,
-    26.93,
-    -3.33
+    31.99,
+    -25.16,
+    19.06
    ],
    "comb": {
     "b": 0.242,
@@ -238549,10 +239802,12 @@ window.ROADMAP = {
      "qid": "C-017:6bf47f2644"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -11.18,
-    25.44,
-    -1.01
+    26.7,
+    -38.34,
+    31.47
    ],
    "comb": {
     "b": 0.374,
@@ -240324,10 +241579,12 @@ window.ROADMAP = {
      "qid": "G-016:e4da0e08d1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    11.3,
-    21.91,
-    12.86
+    22.46,
+    -27.29,
+    42.5
    ],
    "comb": {
     "b": 0.382,
@@ -241656,10 +242913,12 @@ window.ROADMAP = {
      "qid": "G-017:6338e117e2"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    14.67,
-    18.63,
-    17.48
+    24.27,
+    -26.67,
+    42.49
    ],
    "comb": {
     "b": 0.303,
@@ -242948,10 +244207,12 @@ window.ROADMAP = {
      "qid": "G-018:78bbcd1f33"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    16.75,
-    17.91,
-    19.13
+    24.47,
+    -24.84,
+    44.69
    ],
    "comb": {
     "b": 0.303,
@@ -244556,10 +245817,12 @@ window.ROADMAP = {
      "qid": "G-019:8855acd83a"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    14.68,
-    22.07,
-    19.21
+    21.37,
+    -20.93,
+    34.98
    ],
    "comb": {
     "b": 0.431,
@@ -246588,10 +247851,12 @@ window.ROADMAP = {
      "qid": "G-020:eb94e69f31"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    13.51,
-    19.37,
-    17.61
+    20.85,
+    -22.34,
+    41.62
    ],
    "comb": {
     "b": 0.395,
@@ -248041,10 +249306,12 @@ window.ROADMAP = {
      "qid": "G-021:9e6d03819f"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    17.27,
-    13.02,
-    26.69
+    8.12,
+    -11.22,
+    23.73
    ],
    "comb": {
     "b": 0.198,
@@ -249211,10 +250478,12 @@ window.ROADMAP = {
      "qid": "G-022:86769d1b45"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    19.09,
-    16.14,
-    18.5
+    22.91,
+    -24.41,
+    43.1
    ],
    "comb": {
     "b": 0.303,
@@ -252645,10 +253914,12 @@ window.ROADMAP = {
      "qid": "G-023:e5ff53479a"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    17.23,
-    13.46,
-    24.36
+    24.06,
+    -24.33,
+    45.6
    ]
   },
   {
@@ -254495,10 +255766,12 @@ window.ROADMAP = {
      "qid": "L-011:5dedb988d3"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -22.13,
-    23.35,
-    6.03
+    35.3,
+    -34.48,
+    17.46
    ],
    "comb": {
     "b": 0.325,
@@ -257225,10 +258498,12 @@ window.ROADMAP = {
      "qid": "L-012:d85e6e62d2"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -16.84,
-    25.09,
-    7.36
+    35.1,
+    -23.41,
+    5.73
    ],
    "comb": {
     "b": 0.136,
@@ -258576,10 +259851,12 @@ window.ROADMAP = {
      "qid": "L-013:1833436929"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -12.02,
-    28.56,
-    2.68
+    33.52,
+    -31.54,
+    14.05
    ],
    "comb": {
     "b": 0.218,
@@ -260900,10 +262177,12 @@ window.ROADMAP = {
      "qid": "L-014:f03e33fb7f"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -19.21,
-    28.42,
-    1.89
+    39.86,
+    -34.85,
+    23.01
    ]
   },
   {
@@ -262285,10 +263564,12 @@ window.ROADMAP = {
      "qid": "G-042:928c034122"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    17.87,
-    16.94,
-    19.0
+    27.36,
+    -25.16,
+    51.21
    ]
   },
   {
@@ -263627,10 +264908,12 @@ window.ROADMAP = {
      "qid": "G-043:c28be03376"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    16.65,
-    21.31,
-    18.44
+    27.76,
+    -25.45,
+    52.2
    ],
    "comb": {
     "b": 0.353,
@@ -264860,10 +266143,12 @@ window.ROADMAP = {
      "qid": "L-032:9eba6d04ad"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -22.15,
-    26.18,
-    2.04
+    34.94,
+    -38.22,
+    20.72
    ]
   },
   {
@@ -266771,10 +268056,12 @@ window.ROADMAP = {
      "qid": "L-033:db56382b6f"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    -19.85,
-    28.03,
-    0.59
+    40.54,
+    -35.45,
+    21.11
    ]
   },
   {
@@ -268124,10 +269411,12 @@ window.ROADMAP = {
      "qid": "S-029:15aa861836"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -17.83,
-    13.4,
-    -13.64
+    -5.88,
+    -32.76,
+    -2.51
    ],
    "comb": {
     "b": 0.331,
@@ -268177,10 +269466,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    3.27,
-    17.14,
-    -21.65
+    17.38,
+    -47.66,
+    -6.24
    ],
    "comb": {
     "b": 0.343,
@@ -268235,10 +269526,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-09",
    "p": [
-    6.05,
-    14.33,
-    -25.02
+    22.9,
+    -101.46,
+    -36.3
    ],
    "comb": {
     "b": 0.35,
@@ -268292,10 +269585,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    16.4,
-    -16.49,
-    23.04
+    -32.91,
+    20.2,
+    20.76
    ]
   },
   {
@@ -268341,10 +269636,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    14.6,
-    -20.36,
-    23.51
+    -33.6,
+    23.32,
+    19.2
    ],
    "comb": {
     "b": 0.193,
@@ -268398,10 +269695,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    2.61,
-    -4.53,
-    3.83
+    -39.88,
+    26.5,
+    21.58
    ]
   },
   {
@@ -268442,10 +269741,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    4.8,
-    -8.31,
-    7.56
+    -41.31,
+    21.36,
+    18.81
    ],
    "comb": {
     "b": 0.356,
@@ -268499,10 +269800,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    3.46,
-    -8.89,
-    7.63
+    -35.62,
+    16.94,
+    21.34
    ]
   },
   {
@@ -268548,10 +269851,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    6.23,
-    2.35,
-    32.05
+    -33.42,
+    -2.3,
+    21.94
    ],
    "comb": {
     "b": 0.451,
@@ -268606,10 +269911,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    1.09,
-    -0.51,
-    22.74
+    -28.63,
+    7.22,
+    18.07
    ],
    "comb": {
     "b": 0.432,
@@ -268663,10 +269970,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    1.24,
-    -7.35,
-    23.3
+    -30.91,
+    9.96,
+    17.69
    ]
   },
   {
@@ -268707,10 +270016,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    -0.38,
-    -8.69,
-    24.65
+    -35.56,
+    1.26,
+    17.48
    ],
    "comb": {
     "b": 0.323,
@@ -268769,10 +270080,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    3.31,
-    -9.32,
-    25.99
+    -31.69,
+    7.84,
+    15.81
    ]
   },
   {
@@ -268824,10 +270137,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    5.28,
-    2.88,
-    33.83
+    -31.38,
+    -0.05,
+    18.87
    ],
    "comb": {
     "b": 0.474,
@@ -268883,10 +270198,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    10.41,
-    -1.3,
-    34.41
+    -32.04,
+    1.32,
+    16.29
    ],
    "comb": {
     "b": 0.452,
@@ -268941,10 +270258,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    4.25,
-    -9.35,
-    32.79
+    -39.03,
+    2.08,
+    14.94
    ],
    "comb": {
     "b": 0.311,
@@ -268999,10 +270318,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -17.88,
-    -15.18,
-    17.82
+    -41.13,
+    -31.52,
+    4.29
    ],
    "comb": {
     "b": 0.351,
@@ -269059,10 +270380,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -25.18,
-    -3.85,
-    17.85
+    -30.53,
+    -33.55,
+    7.02
    ],
    "comb": {
     "b": 0.652,
@@ -269122,10 +270445,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -15.86,
-    -16.45,
-    18.59
+    -42.53,
+    -28.21,
+    9.24
    ],
    "comb": {
     "b": 0.354,
@@ -269180,10 +270505,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -18.9,
-    -15.38,
-    16.55
+    -45.67,
+    -28.47,
+    9.04
    ],
    "comb": {
     "b": 0.43,
@@ -269239,10 +270566,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -18.95,
-    -16.07,
-    21.31
+    -41.7,
+    -15.31,
+    11.96
    ],
    "comb": {
     "b": 0.22,
@@ -270387,10 +271716,12 @@ window.ROADMAP = {
      "qid": "N-070:761103a4b2"
     }
    ],
+   "f": "F03",
+   "s": "F03-01",
    "p": [
-    4.06,
-    22.34,
-    1.77
+    13.7,
+    -34.6,
+    27.64
    ],
    "comb": {
     "b": 0.264,
@@ -270437,10 +271768,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    6.25,
-    -15.67,
-    19.97
+    -39.95,
+    19.53,
+    23.65
    ],
    "comb": {
     "b": 0.547,
@@ -270497,10 +271830,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    26.85,
-    -9.0,
-    22.18
+    -22.73,
+    8.44,
+    28.33
    ],
    "comb": {
     "b": 0.527,
@@ -270556,10 +271891,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -21.65,
-    -13.25,
-    6.26
+    -44.96,
+    -34.74,
+    8.96
    ],
    "comb": {
     "b": 0.458,
@@ -270609,10 +271946,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -16.44,
-    -13.59,
-    7.98
+    -43.87,
+    -34.96,
+    9.02
    ],
    "comb": {
     "b": 0.313,
@@ -271786,10 +273125,12 @@ window.ROADMAP = {
      "qid": "G-052:ce53fd013f"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    9.3,
-    21.72,
-    14.67
+    15.76,
+    -23.81,
+    30.52
    ],
    "comb": {
     "b": 0.352,
@@ -273048,10 +274389,12 @@ window.ROADMAP = {
      "qid": "G-054:a2433e4173"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    19.04,
-    17.75,
-    19.85
+    25.78,
+    -25.34,
+    47.98
    ]
   },
   {
@@ -274278,10 +275621,12 @@ window.ROADMAP = {
      "qid": "A-019:bad17d16fb"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    2.94,
-    28.21,
-    12.76
+    12.67,
+    -26.82,
+    17.79
    ],
    "comb": {
     "b": 0.186,
@@ -275567,10 +276912,12 @@ window.ROADMAP = {
      "qid": "A-020:36418137bc"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    4.48,
-    27.23,
-    17.6
+    15.01,
+    -19.55,
+    23.53
    ],
    "comb": {
     "b": 0.216,
@@ -276742,10 +278089,12 @@ window.ROADMAP = {
      "qid": "A-021:eb71542b9f"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    13.32,
-    24.89,
-    16.57
+    17.26,
+    -4.39,
+    18.65
    ]
   },
   {
@@ -278389,10 +279738,12 @@ window.ROADMAP = {
      "qid": "A-022:751a186159"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -2.22,
-    32.29,
-    4.87
+    20.96,
+    -32.15,
+    16.34
    ],
    "comb": {
     "b": 0.318,
@@ -279658,10 +281009,12 @@ window.ROADMAP = {
      "qid": "A-023:513b86a7a1"
     }
    ],
+   "f": "F03",
+   "s": "F03-11",
    "p": [
-    -0.74,
-    28.21,
-    16.58
+    55.05,
+    -63.73,
+    44.81
    ]
   },
   {
@@ -280802,10 +282155,12 @@ window.ROADMAP = {
      "qid": "A-024:9fadcc98cb"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -6.37,
-    30.41,
-    10.29
+    41.19,
+    -25.34,
+    15.75
    ],
    "comb": {
     "b": 0.402,
@@ -282072,10 +283427,12 @@ window.ROADMAP = {
      "qid": "C-018:8172002e07"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -19.44,
-    20.37,
-    -8.65
+    29.7,
+    -30.31,
+    20.92
    ]
   },
   {
@@ -283248,10 +284605,12 @@ window.ROADMAP = {
      "qid": "C-019:6520dd6cf6"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -20.08,
-    27.33,
-    -5.53
+    32.21,
+    -36.42,
+    22.1
    ],
    "comb": {
     "b": 0.28,
@@ -284464,10 +285823,12 @@ window.ROADMAP = {
      "qid": "C-020:52176c835d"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -21.27,
-    12.14,
-    -13.16
+    12.51,
+    -27.16,
+    -0.4
    ]
   },
   {
@@ -286226,10 +287587,12 @@ window.ROADMAP = {
      "qid": "G-024:e3f97aa1a2"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    15.52,
-    20.27,
-    22.99
+    21.68,
+    -16.01,
+    34.54
    ]
   },
   {
@@ -287889,10 +289252,12 @@ window.ROADMAP = {
      "qid": "G-025:87032325b0"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    22.96,
-    15.03,
-    23.26
+    10.46,
+    -2.96,
+    20.81
    ],
    "comb": {
     "b": 0.216,
@@ -289646,10 +291011,12 @@ window.ROADMAP = {
      "qid": "G-026:64c1ce1cbf"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    16.06,
-    19.05,
-    23.65
+    16.31,
+    -10.81,
+    28.94
    ],
    "comb": {
     "b": 0.333,
@@ -290951,10 +292318,12 @@ window.ROADMAP = {
      "qid": "G-027:ebd1b6bbb7"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    17.24,
-    15.81,
-    27.32
+    10.12,
+    -3.83,
+    24.37
    ]
   },
   {
@@ -292013,10 +293382,12 @@ window.ROADMAP = {
      "qid": "G-044:327ed3ffed"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    19.41,
-    13.4,
-    22.7
+    28.2,
+    -23.97,
+    51.42
    ]
   },
   {
@@ -293621,10 +294992,12 @@ window.ROADMAP = {
      "qid": "D-001:e095a17975"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    24.34,
-    9.64,
-    22.25
+    -7.28,
+    -12.63,
+    15.14
    ]
   },
   {
@@ -295256,10 +296629,12 @@ window.ROADMAP = {
      "qid": "D-002:f6ae1cddcc"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    25.66,
-    24.85,
-    4.18
+    21.14,
+    -20.58,
+    15.98
    ],
    "comb": {
     "b": 0.365,
@@ -296865,10 +298240,12 @@ window.ROADMAP = {
      "qid": "D-003:32506e8c4e"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    31.46,
-    17.09,
-    3.43
+    12.62,
+    -11.19,
+    16.31
    ]
   },
   {
@@ -298480,10 +299857,12 @@ window.ROADMAP = {
      "qid": "D-004:e000167007"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    36.44,
-    7.29,
-    5.52
+    4.83,
+    -4.26,
+    13.76
    ]
   },
   {
@@ -300103,10 +301482,12 @@ window.ROADMAP = {
      "qid": "D-005:dc276f4acc"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    37.84,
-    9.67,
-    2.98
+    13.09,
+    -11.59,
+    10.29
    ],
    "comb": {
     "b": 0.283,
@@ -301768,10 +303149,12 @@ window.ROADMAP = {
      "qid": "D-006:2344427631"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    39.72,
-    1.38,
-    9.07
+    2.34,
+    4.27,
+    11.27
    ],
    "comb": {
     "b": 0.424,
@@ -303324,10 +304707,12 @@ window.ROADMAP = {
      "qid": "M-001:04410f2331"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    1.08,
-    24.06,
-    28.84
+    22.9,
+    0.03,
+    13.1
    ],
    "comb": {
     "b": 0.352,
@@ -304855,10 +306240,12 @@ window.ROADMAP = {
      "qid": "M-002:a23158bc04"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    4.83,
-    22.04,
-    32.02
+    23.85,
+    2.72,
+    11.72
    ],
    "comb": {
     "b": 0.434,
@@ -304923,10 +306310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -25.1,
-    1.8,
-    11.83
+    7.07,
+    -16.87,
+    -15.22
    ],
    "comb": {
     "b": 0.386,
@@ -304993,10 +306382,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -27.81,
-    -1.53,
-    9.6
+    14.45,
+    -14.87,
+    -18.61
    ]
   },
   {
@@ -305053,10 +306444,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-05",
    "p": [
-    -32.74,
-    1.64,
-    14.79
+    15.35,
+    -21.15,
+    -12.53
    ],
    "comb": {
     "b": 0.426,
@@ -305125,10 +306518,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    32.99,
-    1.91,
-    21.03
+    0.31,
+    5.66,
+    15.25
    ],
    "comb": {
     "b": 0.44,
@@ -305194,10 +306589,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    29.38,
-    3.49,
-    23.16
+    -10.34,
+    12.97,
+    18.18
    ],
    "comb": {
     "b": 0.385,
@@ -305261,10 +306658,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    32.66,
-    -3.92,
-    21.27
+    -7.77,
+    18.83,
+    14.2
    ]
   },
   {
@@ -307028,10 +308427,12 @@ window.ROADMAP = {
      "qid": "P-004:9d0a7b2df2"
     }
    ],
+   "f": "F14",
+   "s": "F14-07",
    "p": [
-    36.54,
-    -10.62,
-    18.57
+    -15.46,
+    20.09,
+    9.35
    ]
   },
   {
@@ -307089,10 +308490,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    36.36,
-    -2.6,
-    21.55
+    -4.08,
+    14.08,
+    13.57
    ],
    "comb": {
     "b": 0.471,
@@ -307158,10 +308561,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    37.34,
-    -6.93,
-    22.05
+    -6.37,
+    21.64,
+    11.81
    ]
   },
   {
@@ -307218,10 +308623,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    33.58,
-    4.21,
-    22.72
+    -6.39,
+    14.45,
+    7.94
    ],
    "comb": {
     "b": 0.315,
@@ -307286,10 +308693,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    37.62,
-    -9.28,
-    23.83
+    -4.3,
+    20.93,
+    9.26
    ]
   },
   {
@@ -307345,10 +308754,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    36.91,
-    -4.21,
-    20.33
+    -9.24,
+    20.48,
+    7.58
    ],
    "comb": {
     "b": 0.314,
@@ -307412,10 +308823,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    32.69,
-    -12.69,
-    17.46
+    -23.55,
+    30.65,
+    9.23
    ]
   },
   {
@@ -308972,10 +310385,12 @@ window.ROADMAP = {
      "qid": "P-021:53e39ca734"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    32.71,
-    -1.11,
-    18.46
+    -12.63,
+    9.12,
+    7.46
    ]
   },
   {
@@ -309032,10 +310447,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    35.37,
-    -4.76,
-    16.15
+    -22.76,
+    -5.69,
+    0.1
    ],
    "comb": {
     "b": 0.27,
@@ -309101,10 +310518,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    33.66,
-    -2.14,
-    19.92
+    -19.66,
+    5.25,
+    4.57
    ],
    "comb": {
     "b": 0.27,
@@ -310701,10 +312120,12 @@ window.ROADMAP = {
      "qid": "P-029:4e4be32f89"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    22.73,
-    0.22,
-    21.22
+    -11.41,
+    6.85,
+    9.47
    ],
    "comb": {
     "b": 0.475,
@@ -312337,10 +313758,12 @@ window.ROADMAP = {
      "qid": "P-030:40d0bcb54f"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    34.23,
-    -4.47,
-    24.52
+    -11.34,
+    20.1,
+    7.22
    ],
    "comb": {
     "b": 0.378,
@@ -313907,10 +315330,12 @@ window.ROADMAP = {
      "qid": "P-031:02ee7b6987"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    35.33,
-    -5.22,
-    25.57
+    -9.51,
+    28.71,
+    6.74
    ]
   },
   {
@@ -313966,10 +315391,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    26.97,
-    -2.97,
-    25.99
+    -9.34,
+    12.69,
+    16.16
    ],
    "comb": {
     "b": 0.365,
@@ -315447,10 +316874,12 @@ window.ROADMAP = {
      "qid": "P-033:0e4d91ac63"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    27.18,
-    1.21,
-    20.97
+    -8.13,
+    14.5,
+    5.63
    ]
   },
   {
@@ -315506,10 +316935,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    13.32,
-    -4.44,
-    13.3
+    -24.6,
+    16.73,
+    15.76
    ],
    "comb": {
     "b": 0.458,
@@ -315574,10 +317005,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    35.5,
-    -14.34,
-    21.52
+    -19.59,
+    22.51,
+    12.86
    ],
    "comb": {
     "b": 0.394,
@@ -315642,10 +317075,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    34.96,
-    -13.66,
-    22.81
+    -17.0,
+    25.91,
+    10.06
    ],
    "comb": {
     "b": 0.394,
@@ -315709,10 +317144,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    36.79,
-    -15.26,
-    21.98
+    -10.83,
+    28.26,
+    6.65
    ]
   },
   {
@@ -315768,10 +317205,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    40.12,
-    -9.44,
-    31.22
+    5.33,
+    33.6,
+    6.57
    ],
    "comb": {
     "b": 0.363,
@@ -317352,10 +318791,12 @@ window.ROADMAP = {
      "qid": "P-069:0505dc4823"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    38.19,
-    -4.86,
-    21.13
+    -16.41,
+    16.78,
+    11.21
    ],
    "comb": {
     "b": 0.408,
@@ -318821,10 +320262,12 @@ window.ROADMAP = {
      "qid": "P-088:8100677246"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    32.99,
-    -14.11,
-    27.96
+    -18.96,
+    14.57,
+    11.58
    ]
   },
   {
@@ -320588,10 +322031,12 @@ window.ROADMAP = {
      "qid": "P-104:6c84228cda"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    27.34,
-    -7.58,
-    22.11
+    -20.96,
+    11.65,
+    7.21
    ]
   },
   {
@@ -322042,10 +323487,12 @@ window.ROADMAP = {
      "qid": "P-105:6a68242a45"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    37.68,
-    -1.86,
-    25.41
+    -18.21,
+    16.68,
+    12.55
    ],
    "comb": {
     "b": 0.414,
@@ -322110,10 +323557,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    38.07,
-    8.45,
-    3.71
+    -0.04,
+    -4.53,
+    2.72
    ],
    "comb": {
     "b": 0.462,
@@ -323420,10 +324869,12 @@ window.ROADMAP = {
      "qid": "A-037:fed8125d00"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    10.64,
-    25.64,
-    9.85
+    17.92,
+    -19.77,
+    23.68
    ],
    "comb": {
     "b": 0.286,
@@ -324773,10 +326224,12 @@ window.ROADMAP = {
      "qid": "A-038:98e77352ce"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    6.79,
-    29.1,
-    16.95
+    16.37,
+    -19.84,
+    23.29
    ],
    "comb": {
     "b": 0.216,
@@ -325993,10 +327446,12 @@ window.ROADMAP = {
      "qid": "S-030:984b751b30"
     }
    ],
+   "f": "F03",
+   "s": "F03-02",
    "p": [
-    -23.6,
-    11.25,
-    -19.7
+    -7.74,
+    -25.4,
+    2.95
    ],
    "comb": {
     "b": 0.334,
@@ -327167,10 +328622,12 @@ window.ROADMAP = {
      "qid": "S-031:d5b417a8d7"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -21.32,
-    -3.19,
-    -17.57
+    -14.47,
+    -33.73,
+    -10.56
    ],
    "comb": {
     "b": 0.398,
@@ -327237,10 +328694,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    11.19,
-    21.43,
-    -28.76
+    14.97,
+    -46.59,
+    -8.6
    ],
    "comb": {
     "b": 0.512,
@@ -327295,10 +328754,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    5.96,
-    9.84,
-    -37.44
+    22.88,
+    -57.37,
+    -19.44
    ]
   },
   {
@@ -327344,10 +328805,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    13.25,
-    13.86,
-    -34.16
+    2.3,
+    -42.6,
+    -18.64
    ],
    "comb": {
     "b": 0.332,
@@ -327402,10 +328865,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    1.8,
-    26.29,
-    -19.42
+    9.59,
+    -38.79,
+    -7.26
    ],
    "comb": {
     "b": 0.206,
@@ -327467,10 +328932,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    38.86,
-    -13.14,
-    23.04
+    -14.87,
+    23.19,
+    17.17
    ],
    "comb": {
     "b": 0.514,
@@ -327528,10 +328995,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    23.03,
-    -15.54,
-    25.3
+    -34.02,
+    18.75,
+    21.19
    ],
    "comb": {
     "b": 0.607,
@@ -327593,10 +329062,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    8.72,
-    -2.16,
-    36.49
+    -28.47,
+    4.49,
+    16.38
    ],
    "comb": {
     "b": 0.545,
@@ -327653,10 +329124,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    6.81,
-    -5.99,
-    34.81
+    -27.45,
+    10.43,
+    13.58
    ],
    "comb": {
     "b": 0.527,
@@ -327711,10 +329184,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    5.68,
-    -10.63,
-    35.59
+    -31.89,
+    4.68,
+    14.31
    ]
   },
   {
@@ -327765,10 +329240,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    4.42,
-    -14.75,
-    36.02
+    -38.94,
+    -3.71,
+    11.65
    ],
    "comb": {
     "b": 0.282,
@@ -327822,10 +329299,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    12.87,
-    -16.52,
-    31.2
+    -36.42,
+    12.48,
+    7.02
    ]
   },
   {
@@ -327877,10 +329356,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    15.36,
-    -6.58,
-    35.43
+    -27.97,
+    1.93,
+    10.0
    ],
    "comb": {
     "b": 0.407,
@@ -327941,10 +329422,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    9.75,
-    -9.15,
-    38.5
+    -35.2,
+    3.76,
+    11.27
    ],
    "comb": {
     "b": 0.382,
@@ -328005,10 +329488,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    9.7,
-    -7.45,
-    35.53
+    -36.87,
+    0.21,
+    14.95
    ],
    "comb": {
     "b": 0.502,
@@ -328074,10 +329559,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    3.74,
-    -16.73,
-    38.72
+    -43.45,
+    -1.95,
+    9.3
    ]
   },
   {
@@ -328123,10 +329610,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    11.73,
-    -8.75,
-    32.86
+    -37.28,
+    7.05,
+    10.34
    ],
    "comb": {
     "b": 0.449,
@@ -328192,10 +329681,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    2.2,
-    -10.05,
-    37.8
+    -37.89,
+    5.59,
+    16.07
    ],
    "comb": {
     "b": 0.281,
@@ -328256,10 +329747,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    1.82,
-    -9.87,
-    42.75
+    -37.96,
+    6.78,
+    14.04
    ],
    "comb": {
     "b": 0.328,
@@ -328316,10 +329809,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    4.19,
-    -10.15,
-    44.14
+    -40.27,
+    6.77,
+    12.41
    ],
    "comb": {
     "b": 0.232,
@@ -328379,10 +329874,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    -3.24,
-    -11.09,
-    34.06
+    -34.42,
+    -2.81,
+    13.38
    ],
    "comb": {
     "b": 0.281,
@@ -328436,10 +329933,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    3.2,
-    -6.68,
-    28.51
+    -38.41,
+    3.26,
+    12.88
    ]
   },
   {
@@ -328495,10 +329994,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    5.21,
-    -6.09,
-    35.07
+    -39.97,
+    3.98,
+    11.66
    ],
    "comb": {
     "b": 0.295,
@@ -328558,10 +330059,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    5.99,
-    -5.82,
-    38.27
+    -39.24,
+    3.33,
+    11.67
    ],
    "comb": {
     "b": 0.296,
@@ -328617,10 +330120,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    8.13,
-    -0.98,
-    39.93
+    -35.21,
+    10.17,
+    5.44
    ],
    "comb": {
     "b": 0.396,
@@ -328680,10 +330185,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -12.27,
-    -15.93,
-    23.73
+    -43.11,
+    -7.71,
+    7.75
    ],
    "comb": {
     "b": 0.447,
@@ -328737,10 +330244,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -18.04,
-    -17.96,
-    20.58
+    -46.41,
+    -16.21,
+    3.24
    ]
   },
   {
@@ -328798,10 +330307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -14.9,
-    -22.59,
-    28.32
+    -49.65,
+    -16.26,
+    6.18
    ],
    "comb": {
     "b": 0.511,
@@ -328857,10 +330368,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -17.08,
-    -25.82,
-    26.52
+    -46.16,
+    -13.79,
+    -0.72
    ],
    "comb": {
     "b": 0.42,
@@ -328925,10 +330438,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -22.51,
-    -14.13,
-    19.11
+    -40.98,
+    -21.52,
+    1.25
    ]
   },
   {
@@ -328979,10 +330494,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -20.34,
-    -16.57,
-    22.19
+    -49.09,
+    -27.0,
+    -0.65
    ],
    "comb": {
     "b": 0.46,
@@ -329048,10 +330565,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -12.29,
-    -33.95,
-    25.01
+    -40.52,
+    -19.38,
+    -3.24
    ],
    "comb": {
     "b": 0.601,
@@ -329114,10 +330633,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -23.92,
-    -35.38,
-    15.65
+    -50.92,
+    -33.32,
+    -6.19
    ]
   },
   {
@@ -329171,10 +330692,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -22.05,
-    -27.93,
-    22.96
+    -49.06,
+    -26.46,
+    3.35
    ],
    "comb": {
     "b": 0.571,
@@ -329237,10 +330760,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -28.73,
-    -33.01,
-    17.28
+    -46.68,
+    -32.22,
+    0.31
    ],
    "comb": {
     "b": 0.446,
@@ -329302,10 +330827,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -23.17,
-    -25.59,
-    24.52
+    -50.75,
+    -27.2,
+    7.68
    ],
    "comb": {
     "b": 0.399,
@@ -329360,10 +330887,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -20.52,
-    -23.93,
-    13.67
+    -35.75,
+    -39.58,
+    3.33
    ],
    "comb": {
     "b": 0.321,
@@ -329424,10 +330953,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -22.79,
-    -11.15,
-    25.49
+    -34.86,
+    -14.18,
+    11.07
    ],
    "comb": {
     "b": 0.58,
@@ -329488,10 +331019,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -19.24,
-    -26.18,
-    24.62
+    -42.11,
+    -5.51,
+    12.41
    ],
    "comb": {
     "b": 0.367,
@@ -329552,10 +331085,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -24.52,
-    -13.0,
-    20.25
+    -41.25,
+    -28.09,
+    2.25
    ],
    "comb": {
     "b": 0.591,
@@ -329620,10 +331155,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -27.1,
-    -22.56,
-    23.45
+    -45.45,
+    -25.61,
+    2.62
    ],
    "comb": {
     "b": 0.409,
@@ -329679,10 +331216,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-07",
    "p": [
-    8.51,
-    37.27,
-    18.19
+    9.89,
+    -13.34,
+    2.7
    ],
    "comb": {
     "b": 0.382,
@@ -330865,10 +332404,12 @@ window.ROADMAP = {
      "qid": "S-041:6650cc0ebd"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -24.68,
-    -1.3,
-    -23.86
+    -6.28,
+    -29.21,
+    -5.3
    ],
    "comb": {
     "b": 0.354,
@@ -332088,10 +333629,12 @@ window.ROADMAP = {
      "qid": "G-049:14c227cd80"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    15.95,
-    17.88,
-    28.94
+    11.08,
+    -6.52,
+    25.05
    ],
    "comb": {
     "b": 0.346,
@@ -333371,10 +334914,12 @@ window.ROADMAP = {
      "qid": "D-081:3ac23f244a"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    39.79,
-    12.93,
-    6.49
+    13.44,
+    -5.96,
+    19.36
    ],
    "comb": {
     "b": 0.452,
@@ -334510,10 +336055,12 @@ window.ROADMAP = {
      "qid": "C-043:936f55c1fd"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -20.84,
-    15.51,
-    -9.93
+    7.65,
+    -33.12,
+    11.06
    ],
    "comb": {
     "b": 0.404,
@@ -334562,10 +336109,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    0.92,
-    -13.9,
-    1.71
+    -8.02,
+    -38.58,
+    14.13
    ]
   },
   {
@@ -334611,10 +336160,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    4.67,
-    -31.19,
-    28.25
+    -47.61,
+    5.62,
+    18.32
    ],
    "comb": {
     "b": 0.4,
@@ -334669,10 +336220,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    9.96,
-    -34.04,
-    25.91
+    -48.62,
+    12.28,
+    20.62
    ],
    "comb": {
     "b": 0.209,
@@ -334734,10 +336287,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    7.41,
-    -27.67,
-    31.18
+    -45.59,
+    11.94,
+    15.61
    ],
    "comb": {
     "b": 0.577,
@@ -334794,10 +336349,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-06",
    "p": [
-    5.46,
-    -9.69,
-    8.56
+    -22.88,
+    1.35,
+    -0.24
    ],
    "comb": {
     "b": 0.356,
@@ -334847,10 +336404,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    7.45,
-    -16.11,
-    21.41
+    -24.24,
+    -1.51,
+    17.14
    ],
    "comb": {
     "b": 0.477,
@@ -334915,10 +336474,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -29.69,
-    1.53,
-    9.15
+    14.27,
+    -16.54,
+    -19.58
    ]
   },
   {
@@ -334948,10 +336509,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -28.2,
-    2.92,
-    8.0
+    8.61,
+    -19.34,
+    -17.33
    ]
   },
   {
@@ -334996,10 +336559,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    38.85,
-    1.56,
-    26.5
+    -23.24,
+    12.34,
+    14.69
    ]
   },
   {
@@ -335045,10 +336610,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    26.77,
-    -7.26,
-    27.66
+    -37.94,
+    12.36,
+    17.23
    ],
    "comb": {
     "b": 0.33,
@@ -335104,10 +336671,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    41.4,
-    -14.6,
-    20.86
+    -17.92,
+    19.04,
+    18.53
    ],
    "comb": {
     "b": 0.403,
@@ -335165,10 +336734,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-06",
    "p": [
-    34.84,
-    -10.35,
-    24.65
+    -13.3,
+    0.03,
+    0.48
    ],
    "comb": {
     "b": 0.495,
@@ -335226,10 +336797,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    27.83,
-    -9.83,
-    28.11
+    -42.7,
+    19.4,
+    20.7
    ],
    "comb": {
     "b": 0.456,
@@ -335274,10 +336847,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    35.16,
-    -3.61,
-    16.88
+    -11.89,
+    12.21,
+    7.85
    ]
   },
   {
@@ -335320,10 +336895,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    4.73,
-    -10.74,
-    34.0
+    -41.95,
+    5.9,
+    17.28
    ],
    "comb": {
     "b": 0.282,
@@ -335373,10 +336950,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    5.55,
-    -18.63,
-    30.26
+    -42.0,
+    1.85,
+    10.19
    ],
    "comb": {
     "b": 0.281,
@@ -335420,10 +336999,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    -26.44,
-    -19.84,
-    17.87
+    -33.56,
+    0.5,
+    -6.81
    ]
   },
   {
@@ -335469,10 +337050,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-06",
    "p": [
-    -17.95,
-    -29.64,
-    24.34
+    -25.16,
+    -6.66,
+    0.69
    ],
    "comb": {
     "b": 0.386,
@@ -335528,10 +337111,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -21.6,
-    -28.26,
-    25.75
+    -40.26,
+    -6.51,
+    6.89
    ],
    "comb": {
     "b": 0.589,
@@ -335582,10 +337167,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -14.29,
-    -28.55,
-    27.81
+    -40.01,
+    -1.37,
+    12.68
    ],
    "comb": {
     "b": 0.394,
@@ -335636,10 +337223,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -19.53,
-    -24.3,
-    28.66
+    -45.79,
+    0.68,
+    17.43
    ],
    "comb": {
     "b": 0.538,
@@ -335696,10 +337285,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    29.7,
-    -19.14,
-    20.33
+    -18.21,
+    21.7,
+    22.31
    ],
    "comb": {
     "b": 0.248,
@@ -335755,10 +337346,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -24.06,
-    -8.44,
-    5.76
+    -28.5,
+    -32.4,
+    -3.43
    ],
    "comb": {
     "b": 0.431,
@@ -335809,10 +337402,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-03",
    "p": [
-    -13.14,
-    17.53,
-    6.22
+    29.01,
+    -34.26,
+    8.97
    ],
    "comb": {
     "b": 0.143,
@@ -335867,10 +337462,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -20.08,
-    23.66,
-    10.41
+    31.44,
+    -25.44,
+    1.2
    ],
    "comb": {
     "b": 0.294,
@@ -335919,10 +337516,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-03",
    "p": [
-    -18.89,
-    11.36,
-    5.71
+    7.91,
+    -37.5,
+    4.8
    ]
   },
   {
@@ -335958,10 +337557,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -27.62,
-    10.23,
-    0.64
+    -6.8,
+    -28.99,
+    -12.41
    ],
    "comb": {
     "b": 0.443,
@@ -336009,10 +337610,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -27.73,
-    5.94,
-    7.96
+    -2.06,
+    -34.26,
+    -0.61
    ]
   },
   {
@@ -336053,10 +337656,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    34.57,
-    -4.8,
-    21.06
+    -20.3,
+    24.15,
+    14.25
    ]
   },
   {
@@ -336102,10 +337707,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    39.75,
-    -10.6,
-    22.84
+    -14.19,
+    9.38,
+    11.28
    ],
    "comb": {
     "b": 0.393,
@@ -336155,10 +337762,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    33.67,
-    -1.98,
-    22.89
+    -11.52,
+    12.55,
+    7.11
    ],
    "comb": {
     "b": 0.291,
@@ -336208,10 +337817,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    4.87,
-    -5.72,
-    36.82
+    -41.84,
+    1.0,
+    14.42
    ],
    "comb": {
     "b": 0.359,
@@ -336278,10 +337889,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-05",
    "p": [
-    7.5,
-    -14.58,
-    44.1
+    -29.51,
+    9.02,
+    16.42
    ],
    "comb": {
     "b": 0.353,
@@ -336371,10 +337984,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    6.16,
-    28.79,
-    1.14
+    46.87,
+    -29.28,
+    22.88
    ],
    "comb": {
     "b": 0.11,
@@ -336431,10 +338046,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    7.5,
-    35.17,
-    1.01
+    51.93,
+    -16.9,
+    17.22
    ],
    "comb": {
     "b": 0.329,
@@ -336491,10 +338108,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    4.11,
-    35.71,
-    -1.35
+    39.51,
+    -28.5,
+    23.62
    ],
    "comb": {
     "b": 0.133,
@@ -336561,10 +338180,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    7.44,
-    30.14,
-    1.92
+    42.91,
+    -28.3,
+    25.94
    ],
    "comb": {
     "b": 0.324,
@@ -336620,10 +338241,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    5.94,
-    30.53,
-    -0.27
+    57.69,
+    -17.99,
+    16.67
    ],
    "comb": {
     "b": 0.348,
@@ -336687,10 +338310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    10.4,
-    36.07,
-    -1.64
+    57.54,
+    -11.11,
+    14.78
    ]
   },
   {
@@ -336735,10 +338360,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    13.48,
-    34.93,
-    -3.13
+    60.6,
+    -1.38,
+    12.29
    ]
   },
   {
@@ -336786,10 +338413,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    5.65,
-    37.15,
-    -0.31
+    40.28,
+    -25.89,
+    22.6
    ],
    "comb": {
     "b": 0.397,
@@ -336841,10 +338470,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    5.1,
-    38.83,
-    -0.82
+    49.88,
+    -18.06,
+    19.42
    ],
    "comb": {
     "b": 0.426,
@@ -336900,10 +338531,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    10.15,
-    31.11,
-    0.85
+    49.94,
+    -17.48,
+    20.12
    ],
    "comb": {
     "b": 0.333,
@@ -336959,10 +338592,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    4.67,
-    35.63,
-    1.68
+    42.06,
+    -26.63,
+    26.27
    ],
    "comb": {
     "b": 0.429,
@@ -337054,10 +338689,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    8.13,
-    31.69,
-    1.15
+    46.1,
+    -27.6,
+    21.28
    ],
    "comb": {
     "b": 0.36,
@@ -337123,10 +338760,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    12.4,
-    36.98,
-    -3.62
+    60.11,
+    -18.1,
+    17.42
    ]
   },
   {
@@ -337182,10 +338821,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-11",
    "p": [
-    11.21,
-    35.86,
-    0.34
+    61.37,
+    -7.83,
+    23.28
    ],
    "comb": {
     "b": 0.331,
@@ -337234,10 +338875,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    10.63,
-    34.31,
-    -1.85
+    44.97,
+    -0.89,
+    11.67
    ]
   },
   {
@@ -337284,10 +338927,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    0.74,
-    30.76,
-    11.17
+    34.29,
+    -29.54,
+    28.58
    ],
    "comb": {
     "b": 0.124,
@@ -338996,10 +340641,12 @@ window.ROADMAP = {
      "qid": "A-026:9707e02409"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    6.52,
-    29.88,
-    11.66
+    37.95,
+    -19.08,
+    25.14
    ]
   },
   {
@@ -339065,10 +340712,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    0.12,
-    31.92,
-    12.7
+    36.59,
+    -28.16,
+    28.01
    ],
    "comb": {
     "b": 0.38,
@@ -339125,10 +340774,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    -3.74,
-    32.36,
-    10.9
+    33.02,
+    -29.74,
+    25.29
    ],
    "comb": {
     "b": 0.461,
@@ -339239,10 +340890,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-11",
    "p": [
-    -4.83,
-    31.4,
-    13.08
+    59.54,
+    -67.97,
+    47.93
    ]
   },
   {
@@ -339298,10 +340951,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-11",
    "p": [
-    6.26,
-    32.49,
-    9.26
+    58.07,
+    -6.76,
+    21.25
    ],
    "comb": {
     "b": 0.334,
@@ -339355,10 +341010,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    6.83,
-    30.72,
-    13.77
+    39.81,
+    -22.5,
+    28.05
    ]
   },
   {
@@ -339424,10 +341081,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    -0.76,
-    33.39,
-    13.36
+    39.8,
+    -24.1,
+    28.74
    ],
    "comb": {
     "b": 0.379,
@@ -339493,10 +341152,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-10",
    "p": [
-    -2.33,
-    33.96,
-    11.62
+    35.08,
+    -30.58,
+    27.81
    ],
    "comb": {
     "b": 0.302,
@@ -339551,10 +341212,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -24.51,
-    16.31,
-    0.97
+    31.33,
+    -30.66,
+    13.73
    ]
   },
   {
@@ -339610,10 +341273,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -27.13,
-    18.06,
-    3.04
+    39.97,
+    -21.87,
+    -1.01
    ],
    "comb": {
     "b": 0.104,
@@ -339679,10 +341344,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    -17.88,
-    31.05,
-    3.18
+    58.65,
+    -6.81,
+    16.85
    ],
    "comb": {
     "b": 0.39,
@@ -339746,10 +341413,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -28.86,
-    18.49,
-    -2.36
+    43.08,
+    -24.09,
+    -1.35
    ]
   },
   {
@@ -339805,10 +341474,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -26.83,
-    26.13,
-    -3.06
+    40.19,
+    -33.25,
+    12.49
    ]
   },
   {
@@ -342375,10 +344046,12 @@ window.ROADMAP = {
      "qid": "G-028:397652575c"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    19.18,
-    14.46,
-    24.56
+    24.11,
+    -24.36,
+    47.67
    ],
    "comb": {
     "b": 0.193,
@@ -342433,10 +344106,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    16.01,
-    13.99,
-    22.7
+    23.03,
+    -20.65,
+    43.0
    ],
    "comb": {
     "b": 0.302,
@@ -344510,10 +346185,12 @@ window.ROADMAP = {
      "qid": "G-030:a20a3d547e"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    17.63,
-    19.77,
-    21.87
+    28.03,
+    -23.23,
+    50.45
    ],
    "comb": {
     "b": 0.246,
@@ -344579,10 +346256,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    19.99,
-    14.31,
-    26.26
+    21.24,
+    -22.98,
+    36.64
    ],
    "comb": {
     "b": 0.388,
@@ -344647,10 +346326,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    21.31,
-    12.49,
-    26.15
+    29.32,
+    -21.98,
+    51.59
    ]
   },
   {
@@ -344706,10 +346387,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    20.76,
-    11.39,
-    27.08
+    24.85,
+    -25.17,
+    50.28
    ],
    "comb": {
     "b": 0.25,
@@ -344764,10 +346447,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    15.99,
-    20.43,
-    24.92
+    54.85,
+    -10.28,
+    21.58
    ],
    "comb": {
     "b": 0.324,
@@ -344837,10 +346522,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -18.72,
-    28.81,
-    -0.05
+    42.03,
+    -34.89,
+    19.54
    ]
   },
   {
@@ -344901,10 +346588,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -9.34,
-    18.86,
-    0.82
+    38.08,
+    -48.17,
+    37.01
    ],
    "comb": {
     "b": 0.294,
@@ -344960,10 +346649,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-07",
    "p": [
-    -14.39,
-    31.04,
-    3.13
+    18.87,
+    -54.31,
+    39.92
    ],
    "comb": {
     "b": 0.38,
@@ -345070,10 +346761,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-06",
    "p": [
-    -21.79,
-    28.61,
-    -0.88
+    39.45,
+    -33.26,
+    13.66
    ]
   },
   {
@@ -345119,10 +346812,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -20.62,
-    29.47,
-    0.28
+    40.12,
+    -28.64,
+    3.53
    ]
   },
   {
@@ -345179,10 +346874,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    20.08,
-    12.79,
-    26.96
+    24.29,
+    -23.09,
+    47.19
    ],
    "comb": {
     "b": 0.219,
@@ -346074,10 +347771,12 @@ window.ROADMAP = {
      "qid": "D-008:73899e523c"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    42.33,
-    0.9,
-    0.79
+    23.75,
+    -4.48,
+    9.69
    ]
   },
   {
@@ -346958,10 +348657,12 @@ window.ROADMAP = {
      "qid": "D-009:903635b481"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    41.9,
-    1.79,
-    5.85
+    17.68,
+    1.83,
+    9.42
    ]
   },
   {
@@ -347016,10 +348717,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    42.23,
-    2.7,
-    -1.57
+    25.02,
+    -0.86,
+    11.34
    ]
   },
   {
@@ -347917,10 +349620,12 @@ window.ROADMAP = {
      "qid": "D-014:2afe33031b"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    43.78,
-    2.67,
-    2.21
+    20.58,
+    6.93,
+    -2.64
    ],
    "comb": {
     "b": 0.316,
@@ -347986,10 +349691,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    44.52,
-    0.67,
-    9.32
+    27.95,
+    9.77,
+    3.75
    ],
    "comb": {
     "b": 0.396,
@@ -348054,10 +349761,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    42.7,
-    -5.71,
-    18.92
+    20.21,
+    20.25,
+    -0.59
    ]
   },
   {
@@ -348113,10 +349822,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    45.19,
-    -9.48,
-    9.05
+    25.55,
+    18.4,
+    -7.43
    ]
   },
   {
@@ -349015,10 +350726,12 @@ window.ROADMAP = {
      "qid": "D-044:45857dd0c9"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    28.13,
-    -30.22,
-    9.43
+    -3.0,
+    -1.43,
+    -3.44
    ]
   },
   {
@@ -349073,10 +350786,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    36.03,
-    -23.77,
-    8.09
+    -7.3,
+    15.74,
+    -10.53
    ]
   },
   {
@@ -349132,10 +350847,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    33.95,
-    -23.34,
-    19.28
+    7.33,
+    3.69,
+    -6.8
    ],
    "comb": {
     "b": 0.329,
@@ -350945,10 +352662,12 @@ window.ROADMAP = {
      "qid": "M-003:d5f1718e7d"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    5.67,
-    12.24,
-    38.47
+    20.36,
+    8.22,
+    3.67
    ]
   },
   {
@@ -352465,10 +354184,12 @@ window.ROADMAP = {
      "qid": "M-004:2d934f5bce"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -3.97,
-    20.37,
-    36.91
+    28.91,
+    9.25,
+    2.5
    ]
   },
   {
@@ -353898,10 +355619,12 @@ window.ROADMAP = {
      "qid": "M-006:95225cda5d"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -0.73,
-    24.28,
-    36.59
+    34.55,
+    16.13,
+    -1.8
    ]
   },
   {
@@ -355340,10 +357063,12 @@ window.ROADMAP = {
      "qid": "M-007:1bac24ba3d"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -23.14,
-    7.61,
-    36.54
+    11.13,
+    8.1,
+    -11.97
    ]
   },
   {
@@ -356215,10 +357940,12 @@ window.ROADMAP = {
      "qid": "M-010:1a2bcde169"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    -6.28,
-    33.94,
-    29.63
+    54.62,
+    7.76,
+    -1.83
    ]
   },
   {
@@ -357091,10 +358818,12 @@ window.ROADMAP = {
      "qid": "M-012:51d5fe8b00"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -3.87,
-    12.21,
-    43.65
+    5.97,
+    31.54,
+    -1.23
    ]
   },
   {
@@ -357150,10 +358879,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -25.46,
-    0.83,
-    -17.84
+    3.96,
+    -18.72,
+    -8.96
    ],
    "comb": {
     "b": 0.401,
@@ -357218,10 +358949,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -23.67,
-    3.36,
-    -22.36
+    12.53,
+    -16.36,
+    -6.87
    ],
    "comb": {
     "b": 0.452,
@@ -357286,10 +359019,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -35.07,
-    -28.02,
-    -14.11
+    3.59,
+    -11.16,
+    -18.45
    ],
    "comb": {
     "b": 0.375,
@@ -357353,10 +359088,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -22.21,
-    -8.14,
-    -22.63
+    1.43,
+    -10.79,
+    -12.19
    ]
   },
   {
@@ -357413,10 +359150,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -35.36,
-    -12.71,
-    -30.84
+    23.37,
+    -2.42,
+    -18.69
    ]
   },
   {
@@ -357475,10 +359214,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -33.32,
-    -19.34,
-    -29.64
+    -5.84,
+    -14.54,
+    -15.38
    ],
    "comb": {
     "b": 0.36,
@@ -357542,10 +359283,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -36.55,
-    -25.49,
-    -23.01
+    -10.85,
+    -23.54,
+    -19.14
    ]
   },
   {
@@ -357601,10 +359344,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -35.13,
-    -17.86,
-    -31.02
+    -6.96,
+    -27.1,
+    -18.6
    ],
    "comb": {
     "b": 0.315,
@@ -357670,10 +359415,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    40.31,
-    1.75,
-    21.01
+    -4.23,
+    15.52,
+    2.66
    ],
    "comb": {
     "b": 0.535,
@@ -357741,10 +359488,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    35.61,
-    -5.98,
-    15.18
+    -10.21,
+    16.09,
+    4.36
    ]
   },
   {
@@ -357800,10 +359549,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    38.09,
-    -12.35,
-    24.7
+    -10.56,
+    14.75,
+    -11.51
    ],
    "comb": {
     "b": 0.363,
@@ -357873,10 +359624,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    39.54,
-    -16.11,
-    23.23
+    -5.69,
+    27.58,
+    0.85
    ],
    "comb": {
     "b": 0.216,
@@ -357941,10 +359694,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    33.82,
-    -19.08,
-    26.56
+    -10.88,
+    24.77,
+    2.76
    ],
    "comb": {
     "b": 0.412,
@@ -358009,10 +359764,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    6.29,
-    -47.78,
-    -6.29
+    5.28,
+    -5.48,
+    -7.7
    ]
   },
   {
@@ -358068,10 +359825,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    39.2,
-    -11.57,
-    29.07
+    2.6,
+    31.26,
+    7.38
    ],
    "comb": {
     "b": 0.301,
@@ -358136,10 +359895,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    39.08,
-    -14.46,
-    33.14
+    1.11,
+    37.63,
+    7.86
    ]
   },
   {
@@ -358201,10 +359962,12 @@ window.ROADMAP = {
      "P-123"
     ]
    },
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    30.71,
-    -14.94,
-    30.05
+    -40.42,
+    34.95,
+    18.04
    ],
    "comb": {
     "b": 0.518,
@@ -358269,10 +360032,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    34.35,
-    -5.9,
-    24.04
+    -48.64,
+    27.86,
+    18.02
    ]
   },
   {
@@ -358327,10 +360092,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    33.65,
-    -3.33,
-    25.48
+    -48.97,
+    30.77,
+    20.89
    ]
   },
   {
@@ -358385,10 +360152,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    34.04,
-    -2.15,
-    25.09
+    -55.08,
+    38.72,
+    23.83
    ]
   },
   {
@@ -359078,10 +360847,12 @@ window.ROADMAP = {
      "qid": "G-047:e074a1c672"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    21.49,
-    16.62,
-    25.96
+    15.26,
+    1.09,
+    20.24
    ]
   },
   {
@@ -359965,10 +361736,12 @@ window.ROADMAP = {
      "qid": "D-071:f15cbf0395"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    37.71,
-    9.44,
-    12.25
+    16.54,
+    0.4,
+    17.59
    ],
    "comb": {
     "b": 0.264,
@@ -360023,10 +361796,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    -0.42,
-    19.03,
-    39.58
+    14.25,
+    -3.1,
+    19.77
    ],
    "comb": {
     "b": 0.447,
@@ -360091,10 +361866,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    9.72,
-    8.4,
-    -38.69
+    22.82,
+    -51.33,
+    -20.38
    ],
    "comb": {
     "b": 0.408,
@@ -360169,10 +361946,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-09",
    "p": [
-    4.29,
-    5.66,
-    -30.28
+    21.72,
+    -96.58,
+    -36.85
    ],
    "comb": {
     "b": 0.256,
@@ -360237,10 +362016,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    3.47,
-    11.28,
-    -37.35
+    21.76,
+    -60.06,
+    -19.94
    ],
    "comb": {
     "b": 0.257,
@@ -360315,10 +362096,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    5.71,
-    12.64,
-    -43.32
+    6.99,
+    -38.97,
+    -17.68
    ],
    "comb": {
     "b": 0.438,
@@ -360393,10 +362176,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    0.18,
-    11.35,
-    -37.49
+    10.62,
+    -51.93,
+    -20.22
    ],
    "comb": {
     "b": 0.443,
@@ -360461,10 +362246,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-07",
    "p": [
-    -19.48,
-    -5.77,
-    -44.16
+    -2.09,
+    -17.73,
+    -13.45
    ]
   },
   {
@@ -360531,10 +362318,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    -3.37,
-    11.92,
-    -48.6
+    20.83,
+    -53.3,
+    -31.92
    ],
    "comb": {
     "b": 0.521,
@@ -360600,10 +362389,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    16.23,
-    -3.63,
-    -48.95
+    21.87,
+    -55.42,
+    -36.77
    ],
    "comb": {
     "b": 0.467,
@@ -360679,10 +362470,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -19.6,
-    -12.53,
-    -42.68
+    6.89,
+    -32.2,
+    -27.05
    ]
   },
   {
@@ -360749,10 +362542,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -9.91,
-    -5.73,
-    -50.42
+    15.23,
+    -51.42,
+    -41.89
    ],
    "comb": {
     "b": 0.495,
@@ -360818,10 +362613,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -16.04,
-    -15.37,
-    -46.69
+    14.12,
+    -51.09,
+    -42.27
    ],
    "comb": {
     "b": 0.347,
@@ -360898,10 +362695,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -6.28,
-    25.89,
-    -40.66
+    21.96,
+    -45.6,
+    -19.83
    ],
    "comb": {
     "b": 0.63,
@@ -360979,10 +362778,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-07",
    "p": [
-    -11.55,
-    12.74,
-    -38.7
+    33.55,
+    -33.32,
+    -32.73
    ],
    "comb": {
     "b": 0.557,
@@ -361047,10 +362848,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    3.98,
-    -18.49,
-    -4.06
+    9.87,
+    -26.79,
+    3.32
    ]
   },
   {
@@ -361113,10 +362916,12 @@ window.ROADMAP = {
      "S-041"
     ]
    },
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    24.51,
-    -41.12,
-    -14.97
+    9.11,
+    -26.16,
+    2.72
    ],
    "comb": {
     "b": 0.649,
@@ -361192,10 +362997,12 @@ window.ROADMAP = {
      "S-041"
     ]
    },
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -14.48,
-    -42.19,
-    -26.14
+    -19.61,
+    -6.63,
+    -10.34
    ]
   },
   {
@@ -361250,10 +363057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-09",
    "p": [
-    -0.11,
-    -3.11,
-    -32.59
+    20.6,
+    -96.99,
+    -39.87
    ]
   },
   {
@@ -361309,10 +363118,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-02",
    "p": [
-    1.58,
-    6.03,
-    -38.67
+    21.83,
+    -98.5,
+    11.76
    ],
    "comb": {
     "b": 0.257,
@@ -361377,10 +363188,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-01",
    "p": [
-    8.69,
-    4.09,
-    -39.61
+    10.04,
+    -44.01,
+    -15.29
    ]
   },
   {
@@ -361435,10 +363248,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-09",
    "p": [
-    5.22,
-    -0.02,
-    -32.32
+    17.75,
+    -89.23,
+    -36.46
    ]
   },
   {
@@ -361495,10 +363310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    19.97,
-    -18.8,
-    27.97
+    -26.23,
+    31.02,
+    15.04
    ],
    "comb": {
     "b": 0.53,
@@ -361570,10 +363387,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    17.46,
-    -19.54,
-    37.18
+    -30.11,
+    24.63,
+    17.04
    ],
    "comb": {
     "b": 0.422,
@@ -361639,10 +363458,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    12.89,
-    -19.78,
-    29.24
+    -35.73,
+    28.06,
+    18.48
    ],
    "comb": {
     "b": 0.408,
@@ -361708,10 +363529,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    15.82,
-    -26.59,
-    26.54
+    -33.26,
+    15.95,
+    18.76
    ],
    "comb": {
     "b": 0.422,
@@ -361788,10 +363611,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    16.42,
-    -19.92,
-    33.56
+    -34.83,
+    17.11,
+    6.84
    ]
   },
   {
@@ -361858,10 +363683,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    16.62,
-    -21.3,
-    34.62
+    -32.35,
+    10.32,
+    6.93
    ],
    "comb": {
     "b": 0.391,
@@ -361929,10 +363756,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    7.75,
-    -2.3,
-    35.05
+    -37.66,
+    3.42,
+    12.39
    ],
    "comb": {
     "b": 0.472,
@@ -362008,10 +363837,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    9.47,
-    -5.31,
-    39.29
+    -39.59,
+    6.83,
+    11.1
    ],
    "comb": {
     "b": 0.254,
@@ -362085,10 +363916,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    6.34,
-    -6.34,
-    41.38
+    -41.15,
+    4.39,
+    10.72
    ]
   },
   {
@@ -362154,10 +363987,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    8.33,
-    -13.38,
-    44.33
+    -33.04,
+    4.79,
+    11.36
    ],
    "comb": {
     "b": 0.472,
@@ -362223,10 +364058,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    -12.05,
-    -9.66,
-    37.72
+    -32.83,
+    -4.92,
+    11.21
    ],
    "comb": {
     "b": 0.561,
@@ -362293,10 +364130,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    4.5,
-    -20.95,
-    38.34
+    -45.52,
+    6.32,
+    14.63
    ],
    "comb": {
     "b": 0.237,
@@ -362372,10 +364211,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    0.39,
-    -10.47,
-    42.65
+    -40.83,
+    0.79,
+    9.0
    ],
    "comb": {
     "b": 0.387,
@@ -362439,10 +364280,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -21.83,
-    -19.38,
-    18.12
+    -48.73,
+    -31.87,
+    -3.21
    ]
   },
   {
@@ -362504,10 +364347,12 @@ window.ROADMAP = {
      "S-041"
     ]
    },
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -38.77,
-    -26.69,
-    21.39
+    -39.58,
+    -34.5,
+    -0.87
    ],
    "comb": {
     "b": 0.558,
@@ -362583,10 +364428,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -19.73,
-    -22.28,
-    20.2
+    -49.29,
+    -33.26,
+    -1.35
    ]
   },
   {
@@ -362655,10 +364502,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -26.34,
-    -31.92,
-    22.38
+    -44.98,
+    -27.5,
+    -3.51
    ],
    "comb": {
     "b": 0.511,
@@ -362736,10 +364585,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -26.09,
-    -37.72,
-    16.09
+    -41.34,
+    -22.81,
+    -4.9
    ],
    "comb": {
     "b": 0.498,
@@ -362806,10 +364657,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -23.4,
-    -29.65,
-    25.34
+    -30.19,
+    -16.26,
+    5.08
    ],
    "comb": {
     "b": 0.556,
@@ -362876,10 +364729,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    43.37,
-    6.81,
-    1.12
+    22.49,
+    -12.13,
+    12.93
    ],
    "comb": {
     "b": 0.28,
@@ -362944,10 +364799,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    32.07,
-    -4.71,
-    15.59
+    -39.79,
+    40.59,
+    -6.73
    ],
    "comb": {
     "b": 0.346,
@@ -363011,10 +364868,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-09",
    "p": [
-    13.74,
-    -20.2,
-    -24.16
+    21.17,
+    -99.75,
+    -41.12
    ]
   },
   {
@@ -363069,10 +364928,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -27.53,
-    0.6,
-    10.47
+    -0.71,
+    -20.15,
+    -5.94
    ]
   },
   {
@@ -363124,10 +364985,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-10",
    "p": [
-    40.56,
-    -9.63,
-    24.99
+    -15.18,
+    25.12,
+    38.73
    ],
    "comb": {
     "b": 0.407,
@@ -363195,10 +365058,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    42.38,
-    -15.17,
-    22.12
+    -15.4,
+    22.32,
+    18.02
    ],
    "comb": {
     "b": 0.414,
@@ -363254,10 +365119,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-10",
    "p": [
-    36.32,
-    -10.57,
-    15.18
+    -14.84,
+    25.16,
+    33.6
    ]
   },
   {
@@ -363309,10 +365176,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-13",
    "p": [
-    20.81,
-    0.05,
-    25.27
+    15.75,
+    -29.79,
+    -8.04
    ],
    "comb": {
     "b": 0.581,
@@ -363372,10 +365241,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-06",
    "p": [
-    41.87,
-    -11.78,
-    17.94
+    -0.64,
+    19.4,
+    52.24
    ],
    "comb": {
     "b": 0.337,
@@ -363431,10 +365302,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-06",
    "p": [
-    29.56,
-    -7.17,
-    27.13
+    -0.54,
+    17.97,
+    53.38
    ],
    "comb": {
     "b": 0.536,
@@ -363488,10 +365361,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-13",
    "p": [
-    35.24,
-    -12.43,
-    11.74
+    13.71,
+    -23.95,
+    -13.65
    ]
   },
   {
@@ -363543,10 +365418,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-16",
    "p": [
-    -14.25,
-    -32.47,
-    28.49
+    -47.33,
+    3.18,
+    15.81
    ],
    "comb": {
     "b": 0.536,
@@ -363608,10 +365485,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -27.23,
-    -23.58,
-    22.26
+    -41.17,
+    -21.18,
+    9.77
    ],
    "comb": {
     "b": 0.342,
@@ -363666,10 +365545,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    0.13,
-    7.13,
-    -46.51
+    4.88,
+    -53.29,
+    -26.31
    ]
   },
   {
@@ -363710,10 +365591,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-08",
    "p": [
-    -10.33,
-    11.51,
-    -44.44
+    -6.25,
+    -38.22,
+    -12.21
    ],
    "comb": {
     "b": 0.447,
@@ -363763,10 +365646,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -0.67,
-    12.87,
-    -38.67
+    13.12,
+    -50.46,
+    -9.15
    ],
    "comb": {
     "b": 0.443,
@@ -363828,10 +365713,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    20.08,
-    -27.28,
-    32.66
+    -45.48,
+    23.57,
+    19.54
    ],
    "comb": {
     "b": 0.525,
@@ -363889,10 +365776,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    21.95,
-    -32.29,
-    26.25
+    -37.81,
+    22.79,
+    17.69
    ],
    "comb": {
     "b": 0.319,
@@ -363958,10 +365847,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -30.71,
-    -27.36,
-    15.4
+    -48.73,
+    -22.29,
+    -11.57
    ],
    "comb": {
     "b": 0.343,
@@ -364026,10 +365917,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -24.7,
-    -15.44,
-    -4.37
+    -34.22,
+    -40.46,
+    -15.52
    ],
    "comb": {
     "b": 0.259,
@@ -364105,10 +365998,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -12.93,
-    -28.4,
-    -17.89
+    -27.46,
+    -31.03,
+    -11.54
    ],
    "comb": {
     "b": 0.569,
@@ -364195,10 +366090,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -13.08,
-    -20.39,
-    -26.58
+    -24.47,
+    -40.78,
+    -7.05
    ],
    "comb": {
     "b": 0.359,
@@ -364263,10 +366160,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -18.56,
-    -20.66,
-    25.31
+    -54.24,
+    -33.11,
+    5.4
    ],
    "comb": {
     "b": 0.254,
@@ -364332,10 +366231,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -22.54,
-    -27.14,
-    26.16
+    -56.74,
+    -29.66,
+    5.62
    ],
    "comb": {
     "b": 0.595,
@@ -364395,10 +366296,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -25.34,
-    -30.94,
-    27.63
+    -50.77,
+    -31.06,
+    -0.06
    ],
    "comb": {
     "b": 0.442,
@@ -364443,10 +366346,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -22.29,
-    -18.84,
-    21.03
+    -51.24,
+    -28.34,
+    -2.63
    ]
   },
   {
@@ -364512,10 +366417,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-08",
    "p": [
-    -27.09,
-    -2.64,
-    -24.4
+    -10.76,
+    -40.84,
+    -16.17
    ],
    "comb": {
     "b": 0.366,
@@ -364579,10 +366486,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-08",
    "p": [
-    -28.72,
-    -2.8,
-    -25.87
+    -8.67,
+    -39.82,
+    -14.92
    ]
   },
   {
@@ -365917,10 +367826,12 @@ window.ROADMAP = {
      "qid": "A-034:f59e52341f"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    11.64,
-    31.21,
-    17.39
+    25.04,
+    -6.51,
+    23.84
    ],
    "comb": {
     "b": 0.45,
@@ -365985,10 +367896,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-11",
    "p": [
-    -5.79,
-    33.08,
-    12.89
+    62.02,
+    -70.92,
+    50.12
    ]
   },
   {
@@ -366054,10 +367967,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-11",
    "p": [
-    9.78,
-    34.58,
-    15.58
+    49.61,
+    -2.11,
+    14.93
    ]
   },
   {
@@ -366115,10 +368030,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -10.63,
-    32.67,
-    0.2
+    44.67,
+    -17.32,
+    16.23
    ],
    "comb": {
     "b": 0.194,
@@ -366184,10 +368101,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-09",
    "p": [
-    -26.87,
-    22.84,
-    -12.96
+    28.5,
+    -26.06,
+    5.8
    ],
    "comb": {
     "b": 0.398,
@@ -366243,10 +368162,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    -17.07,
-    31.66,
-    -0.51
+    72.7,
+    12.13,
+    5.43
    ],
    "comb": {
     "b": 0.263,
@@ -366311,10 +368232,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    16.96,
-    19.06,
-    27.58
+    18.79,
+    -12.84,
+    33.94
    ]
   },
   {
@@ -366370,10 +368293,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    14.4,
-    24.66,
-    26.81
+    23.79,
+    -8.87,
+    28.77
    ],
    "comb": {
     "b": 0.377,
@@ -366449,10 +368374,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    20.56,
-    14.27,
-    28.03
+    34.03,
+    -1.34,
+    24.23
    ],
    "comb": {
     "b": 0.229,
@@ -366516,10 +368443,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-05",
    "p": [
-    22.78,
-    9.74,
-    28.25
+    30.05,
+    -22.23,
+    53.2
    ]
   },
   {
@@ -366567,10 +368496,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    19.9,
-    19.02,
-    27.87
+    27.36,
+    -13.13,
+    28.74
    ],
    "comb": {
     "b": 0.403,
@@ -366637,10 +368568,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    15.98,
-    21.0,
-    28.95
+    19.69,
+    -16.8,
+    37.59
    ],
    "comb": {
     "b": 0.336,
@@ -367901,10 +369834,12 @@ window.ROADMAP = {
      "qid": "G-041:75b49087fa"
     }
    ],
+   "f": "F03",
+   "s": "F03-08",
    "p": [
-    14.81,
-    20.12,
-    25.88
+    19.3,
+    -9.64,
+    25.29
    ],
    "comb": {
     "b": 0.375,
@@ -367979,10 +369914,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    12.1,
-    35.47,
-    -2.65
+    67.28,
+    4.7,
+    4.73
    ]
   },
   {
@@ -368049,10 +369986,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    11.83,
-    35.65,
-    -1.06
+    64.33,
+    10.56,
+    10.2
    ]
   },
   {
@@ -368118,10 +370057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F03",
+   "s": "F03-04",
    "p": [
-    13.1,
-    35.18,
-    -1.73
+    49.34,
+    -22.67,
+    16.02
    ]
   },
   {
@@ -368186,10 +370127,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -25.31,
-    21.93,
-    -7.68
+    38.12,
+    -9.01,
+    -7.39
    ]
   },
   {
@@ -368254,10 +370197,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -24.94,
-    21.58,
-    -9.62
+    50.43,
+    -9.9,
+    0.73
    ]
   },
   {
@@ -368322,10 +370267,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -23.84,
-    22.41,
-    -10.48
+    52.48,
+    -4.45,
+    -3.55
    ]
   },
   {
@@ -368391,10 +370338,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -35.94,
-    27.88,
-    0.22
+    47.96,
+    -6.34,
+    -4.87
    ],
    "comb": {
     "b": 0.401,
@@ -368468,10 +370417,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -21.68,
-    26.39,
-    -11.28
+    56.61,
+    -15.34,
+    0.84
    ]
   },
   {
@@ -368538,10 +370489,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -28.9,
-    19.35,
-    -18.03
+    40.44,
+    -8.42,
+    0.18
    ],
    "comb": {
     "b": 0.494,
@@ -368616,10 +370569,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -23.84,
-    22.95,
-    -14.11
+    51.23,
+    -2.24,
+    1.6
    ]
   },
   {
@@ -368684,10 +370639,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    -9.55,
-    31.76,
-    8.96
+    58.34,
+    -3.58,
+    1.11
    ]
   },
   {
@@ -368764,10 +370721,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    42.25,
-    10.48,
-    5.84
+    34.97,
+    15.66,
+    8.28
    ],
    "comb": {
     "b": 0.393,
@@ -368854,10 +370813,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    44.23,
-    9.54,
-    4.66
+    43.64,
+    21.35,
+    4.33
    ]
   },
   {
@@ -368932,10 +370893,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    44.09,
-    10.62,
-    3.54
+    42.69,
+    19.96,
+    5.42
    ]
   },
   {
@@ -369010,10 +370973,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    44.99,
-    1.22,
-    6.62
+    31.45,
+    24.2,
+    4.12
    ]
   },
   {
@@ -369088,10 +371053,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    44.46,
-    9.61,
-    -0.51
+    43.42,
+    17.0,
+    3.58
    ]
   },
   {
@@ -369168,10 +371135,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-05",
    "p": [
-    46.26,
-    4.41,
-    7.34
+    8.53,
+    23.75,
+    -11.61
    ],
    "comb": {
     "b": 0.538,
@@ -369261,10 +371230,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    46.29,
-    7.55,
-    3.71
+    37.41,
+    17.1,
+    4.89
    ]
   },
   {
@@ -369330,10 +371301,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    43.23,
-    -16.82,
-    7.89
+    19.29,
+    26.04,
+    1.87
    ]
   },
   {
@@ -369399,10 +371372,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    38.24,
-    -23.27,
-    14.49
+    7.65,
+    24.0,
+    -5.74
    ]
   },
   {
@@ -369468,10 +371443,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    44.24,
-    -14.73,
-    6.28
+    16.54,
+    35.67,
+    -4.32
    ]
   },
   {
@@ -369536,10 +371513,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    47.97,
-    -7.67,
-    -1.5
+    29.93,
+    35.3,
+    -8.18
    ]
   },
   {
@@ -369605,10 +371584,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    44.38,
-    -9.52,
-    -3.0
+    21.59,
+    24.86,
+    -10.23
    ],
    "comb": {
     "b": 0.171,
@@ -369682,10 +371663,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    37.62,
-    -25.04,
-    13.11
+    11.76,
+    6.58,
+    -11.29
    ]
   },
   {
@@ -369750,10 +371733,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    44.75,
-    -18.89,
-    -1.82
+    31.49,
+    11.13,
+    -8.61
    ]
   },
   {
@@ -369818,10 +371803,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    44.83,
-    -17.58,
-    6.64
+    31.19,
+    15.28,
+    -11.81
    ]
   },
   {
@@ -369886,10 +371873,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    30.12,
-    34.01,
-    2.33
+    59.8,
+    33.86,
+    -2.21
    ]
   },
   {
@@ -369954,10 +371943,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    39.79,
-    16.87,
-    -14.19
+    60.05,
+    33.39,
+    -2.51
    ]
   },
   {
@@ -370023,10 +372014,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -29.69,
-    -24.98,
-    -34.17
+    -1.7,
+    -22.25,
+    -21.58
    ]
   },
   {
@@ -370092,10 +372085,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -31.37,
-    -24.42,
-    -33.05
+    -10.0,
+    -22.37,
+    -26.05
    ]
   },
   {
@@ -370161,10 +372156,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -30.18,
-    -21.17,
-    -36.25
+    1.55,
+    -21.63,
+    -19.66
    ]
   },
   {
@@ -370230,10 +372227,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -34.31,
-    -20.55,
-    -32.77
+    0.55,
+    -18.39,
+    -25.09
    ]
   },
   {
@@ -370301,10 +372300,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -45.92,
-    -12.3,
-    -20.32
+    14.03,
+    -12.07,
+    -20.43
    ],
    "comb": {
     "b": 0.433,
@@ -370378,10 +372379,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -35.58,
-    -18.89,
-    -34.82
+    9.28,
+    -11.3,
+    -24.46
    ]
   },
   {
@@ -370446,10 +372449,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -16.17,
-    1.6,
-    40.8
+    1.55,
+    15.09,
+    -5.83
    ]
   },
   {
@@ -370515,10 +372520,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -21.77,
-    -4.69,
-    39.66
+    2.37,
+    18.34,
+    -10.7
    ],
    "comb": {
     "b": 0.308,
@@ -370593,10 +372600,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -13.22,
-    2.59,
-    43.45
+    1.9,
+    19.07,
+    -12.38
    ],
    "comb": {
     "b": 0.36,
@@ -370671,10 +372680,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    -12.28,
-    24.11,
-    36.57
+    26.22,
+    5.19,
+    -10.76
    ],
    "comb": {
     "b": 0.317,
@@ -370748,10 +372759,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -33.18,
-    13.38,
-    22.65
+    25.23,
+    -4.48,
+    -13.35
    ]
   },
   {
@@ -370816,10 +372829,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -43.24,
-    5.5,
-    5.4
+    13.41,
+    -13.8,
+    -16.12
    ]
   },
   {
@@ -370886,10 +372901,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -34.8,
-    -5.39,
-    13.11
+    -9.16,
+    -24.42,
+    -14.46
    ]
   },
   {
@@ -370956,10 +372973,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -35.24,
-    2.44,
-    12.8
+    16.47,
+    -7.87,
+    -23.93
    ]
   },
   {
@@ -371030,10 +373049,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -33.63,
-    12.9,
-    10.69
+    34.86,
+    -15.92,
+    -22.16
    ],
    "comb": {
     "b": 0.416,
@@ -371115,10 +373136,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -33.9,
-    13.31,
-    9.24
+    42.52,
+    -14.42,
+    -17.88
    ],
    "comb": {
     "b": 0.416,
@@ -371197,10 +373220,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -28.72,
-    18.09,
-    5.29
+    30.95,
+    -20.03,
+    -11.38
    ],
    "comb": {
     "b": 0.127,
@@ -371281,10 +373306,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -34.51,
-    11.79,
-    9.03
+    21.3,
+    -15.2,
+    -17.94
    ],
    "comb": {
     "b": 0.416,
@@ -371362,10 +373389,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -35.28,
-    3.7,
-    12.39
+    22.86,
+    -16.69,
+    -32.11
    ]
   },
   {
@@ -371431,10 +373460,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-10",
    "p": [
-    -27.99,
-    9.17,
-    -0.32
+    -6.07,
+    -29.16,
+    -12.27
    ],
    "comb": {
     "b": 0.443,
@@ -371512,10 +373543,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -30.0,
-    9.68,
-    -8.8
+    -2.38,
+    -34.98,
+    -44.93
    ],
    "comb": {
     "b": 0.338,
@@ -371590,10 +373623,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -38.95,
-    -25.46,
-    25.87
+    -46.13,
+    -32.64,
+    -5.8
    ],
    "comb": {
     "b": 0.369,
@@ -371670,10 +373705,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -42.17,
-    -27.11,
-    22.08
+    -43.58,
+    -37.67,
+    -5.18
    ],
    "comb": {
     "b": 0.495,
@@ -371752,10 +373789,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    5.54,
-    -27.78,
-    39.5
+    -27.77,
+    12.36,
+    2.25
    ],
    "comb": {
     "b": 0.689,
@@ -371838,10 +373877,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    -0.5,
-    -40.5,
-    29.58
+    -32.17,
+    10.91,
+    -11.11
    ],
    "comb": {
     "b": 0.642,
@@ -371923,10 +373964,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -1.91,
-    -40.01,
-    24.68
+    -45.39,
+    -3.73,
+    -5.05
    ],
    "comb": {
     "b": 0.686,
@@ -372008,10 +374051,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -34.69,
-    2.97,
-    14.13
+    -19.45,
+    -21.64,
+    -7.05
    ],
    "comb": {
     "b": 0.24,
@@ -372089,10 +374134,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -33.89,
-    -0.48,
-    16.22
+    -25.61,
+    -24.32,
+    -5.39
    ],
    "comb": {
     "b": 0.296,
@@ -372172,10 +374219,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -37.17,
-    -9.65,
-    29.8
+    -16.2,
+    -12.34,
+    -4.13
    ],
    "comb": {
     "b": 0.615,
@@ -372257,10 +374306,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    34.94,
-    -8.07,
-    25.35
+    -10.26,
+    23.75,
+    13.28
    ],
    "comb": {
     "b": 0.363,
@@ -372335,10 +374386,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    37.72,
-    -3.72,
-    25.15
+    -8.74,
+    27.5,
+    9.89
    ],
    "comb": {
     "b": 0.385,
@@ -372416,10 +374469,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    41.88,
-    -12.78,
-    21.1
+    -13.71,
+    45.32,
+    8.58
    ],
    "comb": {
     "b": 0.352,
@@ -372501,10 +374556,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    40.16,
-    -7.27,
-    26.4
+    7.24,
+    29.21,
+    -0.69
    ],
    "comb": {
     "b": 0.262,
@@ -372580,10 +374637,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    35.42,
-    -10.75,
-    29.04
+    3.11,
+    25.81,
+    -4.16
    ]
   },
   {
@@ -372648,10 +374707,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-02",
    "p": [
-    43.82,
-    -6.17,
-    23.61
+    19.58,
+    35.43,
+    0.09
    ]
   },
   {
@@ -372716,10 +374777,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-02",
    "p": [
-    43.55,
-    -10.11,
-    25.97
+    11.69,
+    37.89,
+    0.75
    ]
   },
   {
@@ -372791,10 +374854,12 @@ window.ROADMAP = {
      "E-073"
     ]
    },
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    44.49,
-    -9.49,
-    17.12
+    6.8,
+    20.46,
+    -4.04
    ],
    "comb": {
     "b": 0.334,
@@ -372869,10 +374934,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    46.69,
-    -10.03,
-    19.82
+    -0.83,
+    25.34,
+    -4.89
    ]
   },
   {
@@ -372938,10 +375005,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    43.07,
-    -11.55,
-    22.96
+    -1.65,
+    32.81,
+    -0.29
    ],
    "comb": {
     "b": 0.298,
@@ -373017,10 +375086,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    38.75,
-    -3.51,
-    36.34
+    9.47,
+    37.32,
+    4.17
    ],
    "comb": {
     "b": 0.367,
@@ -373094,10 +375165,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    42.1,
-    -3.86,
-    34.83
+    3.66,
+    36.28,
+    -2.52
    ]
   },
   {
@@ -373164,10 +375237,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    46.99,
-    -12.32,
-    25.31
+    3.89,
+    38.18,
+    0.37
    ],
    "comb": {
     "b": 0.275,
@@ -373242,10 +375317,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    45.02,
-    -13.82,
-    24.83
+    2.68,
+    36.75,
+    5.23
    ],
    "comb": {
     "b": 0.3,
@@ -373321,10 +375398,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    42.9,
-    -14.16,
-    25.13
+    -3.04,
+    34.11,
+    4.55
    ],
    "comb": {
     "b": 0.509,
@@ -373401,10 +375480,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    43.3,
-    -5.51,
-    24.71
+    4.24,
+    33.35,
+    6.14
    ],
    "comb": {
     "b": 0.362,
@@ -373479,10 +375560,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    44.9,
-    -7.33,
-    21.12
+    -3.96,
+    31.92,
+    5.88
    ]
   },
   {
@@ -373550,10 +375633,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    43.63,
-    0.38,
-    27.74
+    16.53,
+    38.39,
+    6.22
    ],
    "comb": {
     "b": 0.501,
@@ -373631,10 +375716,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    39.76,
-    1.65,
-    33.0
+    18.02,
+    36.41,
+    5.24
    ],
    "comb": {
     "b": 0.428,
@@ -373708,10 +375795,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    46.45,
-    -2.96,
-    22.5
+    8.72,
+    44.29,
+    8.64
    ]
   },
   {
@@ -373779,10 +375868,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    46.35,
-    -8.57,
-    21.24
+    5.97,
+    39.45,
+    7.54
    ],
    "comb": {
     "b": 0.431,
@@ -373859,10 +375950,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    45.43,
-    3.41,
-    27.55
+    21.94,
+    42.03,
+    6.39
    ]
   },
   {
@@ -373928,10 +376021,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    47.53,
-    -13.08,
-    20.11
+    -1.55,
+    36.13,
+    2.36
    ]
   },
   {
@@ -373998,10 +376093,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    36.86,
-    -4.48,
-    16.82
+    -6.89,
+    12.67,
+    -0.95
    ],
    "comb": {
     "b": 0.329,
@@ -374077,10 +376174,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    3.17,
-    -2.21,
-    46.89
+    2.25,
+    19.94,
+    -14.1
    ],
    "comb": {
     "b": 0.374,
@@ -374156,10 +376255,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    33.45,
-    -14.99,
-    31.92
+    -48.46,
+    32.87,
+    16.25
    ],
    "comb": {
     "b": 0.27,
@@ -374235,10 +376336,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    34.12,
-    -4.05,
-    27.35
+    -64.8,
+    46.97,
+    25.38
    ]
   },
   {
@@ -374305,10 +376408,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    33.61,
-    -5.01,
-    27.82
+    -63.31,
+    45.71,
+    25.31
    ]
   },
   {
@@ -374375,10 +376480,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    33.53,
-    -3.7,
-    28.12
+    -58.08,
+    44.1,
+    24.97
    ]
   },
   {
@@ -374445,10 +376552,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    32.76,
-    -4.86,
-    28.84
+    -61.21,
+    45.23,
+    25.08
    ]
   },
   {
@@ -374515,10 +376624,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    32.5,
-    -3.65,
-    29.31
+    -53.57,
+    35.15,
+    21.71
    ]
   },
   {
@@ -374583,10 +376694,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    28.2,
-    -8.34,
-    34.7
+    -47.37,
+    36.3,
+    19.75
    ]
   },
   {
@@ -374651,10 +376764,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    32.07,
-    -7.2,
-    33.67
+    -7.9,
+    10.04,
+    -30.09
    ]
   },
   {
@@ -374719,10 +376834,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    31.22,
-    -9.74,
-    33.83
+    -18.25,
+    12.04,
+    -32.81
    ]
   },
   {
@@ -374787,10 +376904,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    32.23,
-    -8.64,
-    33.17
+    -9.71,
+    -4.78,
+    -37.26
    ]
   },
   {
@@ -374857,10 +376976,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    37.36,
-    -4.4,
-    22.66
+    -51.52,
+    38.7,
+    16.67
    ],
    "comb": {
     "b": 0.265,
@@ -374936,10 +377057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    38.85,
-    -23.61,
-    -1.54
+    -35.39,
+    41.11,
+    -9.62
    ],
    "comb": {
     "b": 0.333,
@@ -375016,10 +377139,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    37.09,
-    -26.07,
-    3.71
+    -38.16,
+    33.04,
+    -6.9
    ],
    "comb": {
     "b": 0.333,
@@ -375097,10 +377222,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    39.67,
-    -28.04,
-    1.55
+    -39.9,
+    40.39,
+    -9.13
    ],
    "comb": {
     "b": 0.546,
@@ -375180,10 +377307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    32.85,
-    -26.22,
-    -5.13
+    -39.68,
+    48.65,
+    -12.49
    ],
    "comb": {
     "b": 0.44,
@@ -375257,10 +377386,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    34.54,
-    -23.89,
-    -5.42
+    -40.23,
+    51.33,
+    -13.83
    ]
   },
   {
@@ -375325,10 +377456,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    35.35,
-    -22.68,
-    -5.41
+    -40.55,
+    47.17,
+    -11.59
    ]
   },
   {
@@ -375393,10 +377526,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    34.83,
-    -23.16,
-    -6.6
+    -42.32,
+    45.66,
+    -10.24
    ]
   },
   {
@@ -375462,10 +377597,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    40.47,
-    -26.78,
-    2.7
+    -14.08,
+    39.95,
+    -7.85
    ],
    "comb": {
     "b": 0.171,
@@ -375540,10 +377677,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    40.3,
-    -26.88,
-    3.95
+    -17.49,
+    51.92,
+    -11.11
    ],
    "comb": {
     "b": 0.171,
@@ -375618,10 +377757,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    32.97,
-    -29.2,
-    11.38
+    -23.84,
+    29.09,
+    -0.51
    ],
    "comb": {
     "b": 0.335,
@@ -375696,10 +377837,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-05",
    "p": [
-    31.75,
-    -29.78,
-    13.2
+    -29.1,
+    37.75,
+    -2.72
    ],
    "comb": {
     "b": 0.335,
@@ -375773,10 +377916,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    42.95,
-    -25.9,
-    0.76
+    -2.28,
+    14.74,
+    -17.16
    ]
   },
   {
@@ -375841,10 +377986,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    39.91,
-    -30.38,
-    -0.06
+    -2.83,
+    10.4,
+    -15.59
    ]
   },
   {
@@ -375909,10 +378056,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    40.29,
-    -29.74,
-    2.87
+    -7.77,
+    21.19,
+    -18.84
    ]
   },
   {
@@ -375977,10 +378126,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    37.61,
-    -25.07,
-    -5.11
+    -3.62,
+    27.63,
+    -28.38
    ]
   },
   {
@@ -376045,10 +378196,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    36.77,
-    -26.23,
-    -5.38
+    -3.57,
+    28.19,
+    -26.74
    ]
   },
   {
@@ -376113,10 +378266,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    37.16,
-    -25.92,
-    -4.01
+    -2.7,
+    25.88,
+    -28.56
    ]
   },
   {
@@ -376183,10 +378338,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    -9.89,
-    -35.19,
-    8.71
+    7.82,
+    16.5,
+    -17.47
    ]
   },
   {
@@ -376253,10 +378410,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    -11.44,
-    -34.96,
-    7.66
+    0.16,
+    17.78,
+    -22.49
    ]
   },
   {
@@ -376323,10 +378482,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    -12.88,
-    -34.41,
-    7.89
+    11.29,
+    7.0,
+    -19.39
    ]
   },
   {
@@ -376392,10 +378553,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-10",
    "p": [
-    19.32,
-    -36.41,
-    -22.68
+    -47.53,
+    54.4,
+    -30.19
    ],
    "comb": {
     "b": 0.374,
@@ -376470,10 +378633,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-01",
    "p": [
-    11.45,
-    -42.12,
-    -21.39
+    -45.52,
+    36.07,
+    -45.55
    ],
    "comb": {
     "b": 0.46,
@@ -376538,10 +378703,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -11.95,
-    7.77,
-    -49.7
+    21.09,
+    -51.43,
+    -24.05
    ],
    "comb": {
     "b": 0.352,
@@ -376618,10 +378785,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    5.95,
-    7.77,
-    -52.33
+    18.18,
+    -58.26,
+    -21.09
    ],
    "comb": {
     "b": 0.333,
@@ -376697,10 +378866,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -19.61,
-    5.4,
-    -42.43
+    12.14,
+    -31.46,
+    -20.64
    ],
    "comb": {
     "b": 0.585,
@@ -376782,10 +378953,12 @@ window.ROADMAP = {
      "D-014"
     ]
    },
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -6.03,
-    -1.4,
-    -43.48
+    11.4,
+    -35.29,
+    -19.08
    ],
    "comb": {
     "b": 0.549,
@@ -376854,10 +379027,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -7.7,
-    5.17,
-    -47.71
+    14.12,
+    -50.34,
+    -24.07
    ]
   },
   {
@@ -376922,10 +379097,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    11.55,
-    2.51,
-    -51.91
+    22.62,
+    -52.58,
+    -39.11
    ]
   },
   {
@@ -376991,10 +379168,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-07",
    "p": [
-    -0.47,
-    -2.55,
-    -53.18
+    2.9,
+    -15.99,
+    -13.76
    ],
    "comb": {
     "b": 0.275,
@@ -377068,10 +379247,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    6.09,
-    6.83,
-    -50.88
+    24.75,
+    -63.07,
+    -40.96
    ]
   },
   {
@@ -377138,10 +379319,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    11.13,
-    4.96,
-    -51.83
+    25.46,
+    -65.56,
+    -42.75
    ],
    "comb": {
     "b": 0.25,
@@ -377206,10 +379389,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -14.92,
-    -17.51,
-    -48.01
+    -3.29,
+    -25.6,
+    -26.53
    ],
    "comb": {
     "b": 0.353,
@@ -377274,10 +379459,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -6.55,
-    -1.74,
-    -49.7
+    13.42,
+    -47.67,
+    -39.17
    ],
    "comb": {
     "b": 0.17,
@@ -377352,10 +379539,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -12.03,
-    -13.84,
-    -49.98
+    11.82,
+    -46.49,
+    -25.51
    ]
   },
   {
@@ -377422,10 +379611,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -14.68,
-    0.54,
-    -51.17
+    8.84,
+    -55.18,
+    -24.8
    ],
    "comb": {
     "b": 0.443,
@@ -377492,10 +379683,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    -2.12,
-    -0.74,
-    -32.66
+    26.11,
+    -67.5,
+    -44.56
    ]
   },
   {
@@ -377553,10 +379746,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-05",
    "p": [
-    -1.0,
-    -1.89,
-    -54.73
+    25.72,
+    -66.84,
+    -44.48
    ],
    "comb": {
     "b": 0.326,
@@ -377621,10 +379816,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    -0.21,
-    9.68,
-    -39.59
+    22.75,
+    -62.67,
+    -20.71
    ]
   },
   {
@@ -377690,10 +379887,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-07",
    "p": [
-    5.18,
-    8.32,
-    -53.89
+    24.43,
+    -43.67,
+    -36.6
    ],
    "comb": {
     "b": 0.241,
@@ -377759,10 +379958,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-03",
    "p": [
-    -13.39,
-    1.66,
-    -48.31
+    -2.89,
+    -51.98,
+    -21.12
    ],
    "comb": {
     "b": 0.589,
@@ -377828,10 +380029,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    47.38,
-    4.2,
-    10.0
+    18.02,
+    21.02,
+    -7.37
    ],
    "comb": {
     "b": 0.231,
@@ -377896,10 +380099,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    43.32,
-    -13.8,
-    -1.39
+    11.04,
+    21.1,
+    -7.18
    ],
    "comb": {
     "b": 0.172,
@@ -377963,10 +380168,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    46.54,
-    -10.44,
-    9.35
+    13.83,
+    26.26,
+    -0.59
    ]
   },
   {
@@ -378022,10 +380229,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    7.93,
-    5.69,
-    46.02
+    14.13,
+    17.74,
+    -8.21
    ],
    "comb": {
     "b": 0.324,
@@ -378090,10 +380299,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -13.12,
-    18.06,
-    39.64
+    12.02,
+    10.87,
+    -10.72
    ]
   },
   {
@@ -378149,10 +380360,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -11.12,
-    -23.45,
-    -42.92
+    -3.73,
+    -22.38,
+    -19.75
    ],
    "comb": {
     "b": 0.451,
@@ -378220,10 +380433,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -31.43,
-    -21.61,
-    -37.15
+    -3.22,
+    -22.89,
+    -24.41
    ]
   },
   {
@@ -378278,10 +380493,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -30.78,
-    -22.74,
-    -34.77
+    -3.97,
+    -22.0,
+    -22.91
    ]
   },
   {
@@ -378338,10 +380555,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    29.76,
-    -22.42,
-    31.21
+    -20.07,
+    29.2,
+    9.48
    ],
    "comb": {
     "b": 0.479,
@@ -378413,10 +380632,12 @@ window.ROADMAP = {
      "P-046"
     ]
    },
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    18.83,
-    -26.63,
-    29.41
+    -39.34,
+    27.84,
+    16.86
    ],
    "comb": {
     "b": 0.356,
@@ -378482,10 +380703,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    18.06,
-    -21.97,
-    33.47
+    -40.51,
+    30.14,
+    22.73
    ],
    "comb": {
     "b": 0.503,
@@ -378552,10 +380775,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    23.69,
-    -32.7,
-    29.75
+    -39.95,
+    25.24,
+    19.88
    ],
    "comb": {
     "b": 0.527,
@@ -378621,10 +380846,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    19.56,
-    -27.33,
-    30.65
+    -39.49,
+    26.57,
+    17.78
    ],
    "comb": {
     "b": 0.436,
@@ -378689,10 +380916,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    24.64,
-    -30.92,
-    25.51
+    -37.97,
+    31.37,
+    9.38
    ],
    "comb": {
     "b": 0.465,
@@ -378764,10 +380993,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    30.72,
-    -30.74,
-    21.77
+    -29.06,
+    31.15,
+    7.43
    ],
    "comb": {
     "b": 0.667,
@@ -378840,10 +381071,12 @@ window.ROADMAP = {
      "E-039"
     ]
    },
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    26.92,
-    -25.22,
-    31.65
+    -31.11,
+    31.32,
+    12.88
    ],
    "comb": {
     "b": 0.507,
@@ -378913,10 +381146,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    20.17,
-    -31.81,
-    35.42
+    -41.01,
+    23.76,
+    21.91
    ],
    "comb": {
     "b": 0.572,
@@ -378983,10 +381218,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    32.49,
-    -20.12,
-    32.49
+    -35.18,
+    30.99,
+    14.42
    ],
    "comb": {
     "b": 0.342,
@@ -379061,10 +381298,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -3.54,
-    3.62,
-    -45.2
+    9.87,
+    -57.63,
+    -26.32
    ]
   },
   {
@@ -379120,10 +381359,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -0.87,
-    8.03,
-    -46.35
+    8.37,
+    -56.64,
+    -26.36
    ]
   },
   {
@@ -379179,10 +381420,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    1.38,
-    9.78,
-    -39.55
+    11.02,
+    -50.0,
+    -22.8
    ],
    "comb": {
     "b": 0.447,
@@ -379248,10 +381491,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -2.04,
-    6.33,
-    -46.58
+    13.41,
+    -49.89,
+    -25.79
    ]
   },
   {
@@ -379320,10 +381565,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -24.82,
-    -16.29,
-    -46.03
+    -8.12,
+    -23.08,
+    -21.06
    ],
    "comb": {
     "b": 0.308,
@@ -379410,10 +381657,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    21.1,
-    -10.35,
-    47.77
+    -15.83,
+    19.34,
+    9.52
    ],
    "comb": {
     "b": 0.562,
@@ -379488,10 +381737,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    -1.23,
-    -9.87,
-    44.39
+    -37.78,
+    9.88,
+    11.34
    ]
   },
   {
@@ -379568,10 +381819,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    0.29,
-    -12.12,
-    47.07
+    -40.77,
+    0.74,
+    7.2
    ],
    "comb": {
     "b": 0.285,
@@ -379646,10 +381899,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    15.98,
-    -21.53,
-    36.74
+    -39.36,
+    11.64,
+    2.61
    ]
   },
   {
@@ -379716,10 +381971,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    16.23,
-    -13.84,
-    50.45
+    -34.06,
+    15.47,
+    0.43
    ],
    "comb": {
     "b": 0.57,
@@ -379791,10 +382048,12 @@ window.ROADMAP = {
      "S-041"
     ]
    },
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -39.86,
-    -31.62,
-    -9.19
+    -34.29,
+    -32.55,
+    -13.38
    ],
    "comb": {
     "b": 0.492,
@@ -379871,10 +382130,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -27.05,
-    -37.1,
-    10.27
+    -58.93,
+    -35.28,
+    -4.98
    ],
    "comb": {
     "b": 0.396,
@@ -379960,10 +382221,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    -15.57,
-    -36.87,
-    24.74
+    -35.88,
+    -20.95,
+    -7.52
    ],
    "comb": {
     "b": 0.578,
@@ -380042,10 +382305,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -26.82,
-    -30.59,
-    23.63
+    -30.36,
+    -16.34,
+    7.17
    ]
   },
   {
@@ -380112,10 +382377,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -20.42,
-    -35.53,
-    28.92
+    -28.13,
+    -15.05,
+    3.69
    ],
    "comb": {
     "b": 0.36,
@@ -380191,10 +382458,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -30.47,
-    -16.77,
-    9.18
+    -26.6,
+    -36.04,
+    -2.4
    ],
    "comb": {
     "b": 0.502,
@@ -380272,10 +382541,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -36.59,
-    -29.98,
-    30.55
+    -44.8,
+    -27.16,
+    4.43
    ],
    "comb": {
     "b": 0.45,
@@ -380351,10 +382622,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -30.48,
-    -31.12,
-    21.57
+    -29.55,
+    -14.38,
+    6.12
    ]
   },
   {
@@ -380421,10 +382694,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -44.62,
-    -26.05,
-    1.89
+    -23.82,
+    -23.42,
+    -1.34
    ],
    "comb": {
     "b": 0.48,
@@ -380499,10 +382774,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-04",
    "p": [
-    -24.17,
-    -38.36,
-    17.52
+    -32.74,
+    -35.43,
+    -8.85
    ]
   },
   {
@@ -380558,10 +382835,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    40.43,
-    -30.77,
-    9.56
+    -6.83,
+    21.96,
+    -15.94
    ],
    "comb": {
     "b": 0.358,
@@ -380625,10 +382904,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    31.94,
-    -33.35,
-    -8.99
+    -36.16,
+    28.59,
+    -5.31
    ]
   },
   {
@@ -380685,10 +382966,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    29.48,
-    -31.06,
-    19.48
+    -26.96,
+    24.01,
+    2.67
    ],
    "comb": {
     "b": 0.402,
@@ -380753,10 +383036,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-03",
    "p": [
-    45.03,
-    -22.17,
-    12.39
+    -19.57,
+    20.88,
+    -9.76
    ],
    "comb": {
     "b": 0.365,
@@ -380821,10 +383106,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F16",
+   "s": "F16-01",
    "p": [
-    -1.47,
-    -39.03,
-    -2.92
+    -9.29,
+    -38.16,
+    2.26
    ],
    "comb": {
     "b": 0.462,
@@ -380889,10 +383176,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -33.39,
-    -13.92,
-    -36.94
+    -7.15,
+    -39.32,
+    -23.09
    ],
    "comb": {
     "b": 0.316,
@@ -380956,10 +383245,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-07",
    "p": [
-    -6.33,
-    10.69,
-    -42.13
+    28.37,
+    -42.0,
+    -34.53
    ]
   },
   {
@@ -381015,10 +383306,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-04",
    "p": [
-    37.66,
-    -25.06,
-    4.77
+    -52.77,
+    41.43,
+    5.9
    ],
    "comb": {
     "b": 0.248,
@@ -381083,10 +383376,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    14.56,
-    -27.57,
-    35.24
+    -3.93,
+    17.78,
+    12.38
    ]
   },
   {
@@ -381143,10 +383438,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    -2.07,
-    6.67,
-    -41.76
+    25.98,
+    -56.22,
+    -21.48
    ],
    "comb": {
     "b": 0.35,
@@ -381210,10 +383507,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -6.79,
-    9.82,
-    -51.89
+    23.02,
+    -52.54,
+    -23.52
    ]
   },
   {
@@ -381270,10 +383569,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-04",
    "p": [
-    -8.75,
-    9.57,
-    -41.96
+    26.04,
+    -54.75,
+    -21.56
    ],
    "comb": {
     "b": 0.444,
@@ -381335,10 +383636,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    39.73,
-    -17.88,
-    21.55
+    -15.06,
+    33.32,
+    19.68
    ],
    "comb": {
     "b": 0.423,
@@ -381394,10 +383697,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    43.35,
-    -17.87,
-    21.77
+    -13.13,
+    23.92,
+    17.32
    ],
    "comb": {
     "b": 0.35,
@@ -381457,10 +383762,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    44.02,
-    -17.68,
-    20.56
+    -18.46,
+    17.97,
+    19.19
    ],
    "comb": {
     "b": 0.35,
@@ -381515,10 +383822,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-11",
    "p": [
-    46.5,
-    -17.92,
-    18.75
+    -19.04,
+    16.52,
+    18.77
    ],
    "comb": {
     "b": 0.315,
@@ -381574,10 +383883,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -24.11,
-    -36.83,
-    24.05
+    -38.84,
+    -26.71,
+    -1.04
    ],
    "comb": {
     "b": 0.42,
@@ -381638,10 +383949,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -26.76,
-    -38.68,
-    17.4
+    -38.37,
+    -35.13,
+    -10.54
    ],
    "comb": {
     "b": 0.282,
@@ -381701,10 +384014,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -6.38,
-    6.17,
-    -47.79
+    15.22,
+    -35.66,
+    -22.67
    ]
   },
   {
@@ -381755,10 +384070,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -6.11,
-    4.85,
-    -47.98
+    3.35,
+    -37.61,
+    -21.94
    ]
   },
   {
@@ -381823,10 +384140,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -33.51,
-    -30.22,
-    5.74
+    -57.51,
+    -22.39,
+    -13.85
    ]
   },
   {
@@ -381882,10 +384201,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -34.54,
-    -28.0,
-    9.58
+    -46.9,
+    -40.21,
+    -7.94
    ],
    "comb": {
     "b": 0.332,
@@ -381960,10 +384281,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -27.52,
-    -38.85,
-    9.78
+    -58.13,
+    -31.16,
+    -8.42
    ],
    "comb": {
     "b": 0.284,
@@ -382033,10 +384356,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -31.05,
-    -34.69,
-    13.97
+    -62.54,
+    -34.24,
+    -3.75
    ],
    "comb": {
     "b": 0.406,
@@ -382106,10 +384431,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -34.98,
-    -32.94,
-    7.35
+    -68.53,
+    -38.94,
+    -4.1
    ],
    "comb": {
     "b": 0.139,
@@ -382174,10 +384501,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -33.36,
-    -31.8,
-    9.46
+    -74.73,
+    -43.76,
+    -3.31
    ]
   },
   {
@@ -382234,10 +384563,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -33.1,
-    -33.76,
-    11.25
+    -42.82,
+    -43.25,
+    -14.37
    ],
    "comb": {
     "b": 0.494,
@@ -382315,10 +384646,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -38.59,
-    -36.01,
-    14.64
+    -46.29,
+    -28.66,
+    -7.64
    ],
    "comb": {
     "b": 0.486,
@@ -382396,10 +384729,12 @@ window.ROADMAP = {
      "S-041"
     ]
    },
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -40.39,
-    -31.48,
-    -7.14
+    -27.4,
+    -30.54,
+    -12.93
    ],
    "comb": {
     "b": 0.398,
@@ -382464,10 +384799,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -21.52,
-    -17.52,
-    1.73
+    -26.28,
+    -37.52,
+    -12.49
    ]
   },
   {
@@ -382535,10 +384872,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -16.32,
-    -42.75,
-    16.38
+    -12.28,
+    -15.65,
+    -9.52
    ],
    "comb": {
     "b": 0.563,
@@ -382604,10 +384943,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-10",
    "p": [
-    -39.3,
-    -35.44,
-    -5.81
+    -42.7,
+    -36.43,
+    -15.53
    ],
    "comb": {
     "b": 0.378,
@@ -382681,10 +385022,12 @@ window.ROADMAP = {
      "C-043"
     ]
    },
+   "f": "F02",
+   "s": "F02-10",
    "p": [
-    -42.02,
-    -25.7,
-    -9.45
+    -30.96,
+    -34.88,
+    -14.56
    ],
    "comb": {
     "b": 0.512,
@@ -382755,10 +385098,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-10",
    "p": [
-    -41.62,
-    -28.81,
-    -10.53
+    -47.55,
+    -37.83,
+    -17.87
    ],
    "comb": {
     "b": 0.471,
@@ -382834,10 +385179,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -23.84,
-    -23.48,
-    -39.41
+    -17.67,
+    -39.17,
+    -16.81
    ],
    "comb": {
     "b": 0.48,
@@ -382913,10 +385260,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-05",
    "p": [
-    -15.18,
-    -29.35,
-    -14.22
+    -25.82,
+    -41.83,
+    -14.68
    ],
    "comb": {
     "b": 0.477,
@@ -382991,10 +385340,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -14.24,
-    -15.07,
-    -31.34
+    -24.76,
+    -38.6,
+    -11.77
    ],
    "comb": {
     "b": 0.494,
@@ -383074,10 +385425,12 @@ window.ROADMAP = {
      "C-043"
     ]
    },
+   "f": "F12",
+   "s": "F12-03",
    "p": [
-    -16.7,
-    -20.02,
-    -29.24
+    -11.17,
+    -46.37,
+    -17.84
    ],
    "comb": {
     "b": 0.411,
@@ -383162,10 +385515,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -11.61,
-    -23.24,
-    -29.32
+    -29.69,
+    -45.5,
+    -16.12
    ]
   },
   {
@@ -383231,10 +385586,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -8.31,
-    -31.46,
-    -42.14
+    -19.11,
+    -43.95,
+    -19.36
    ],
    "comb": {
     "b": 0.271,
@@ -383309,10 +385666,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-05",
    "p": [
-    -12.3,
-    -40.14,
-    -21.23
+    -26.52,
+    -45.84,
+    -17.63
    ],
    "comb": {
     "b": 0.422,
@@ -383376,10 +385735,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-18",
    "p": [
-    -18.55,
-    -19.77,
-    28.27
+    -76.05,
+    -39.35,
+    1.35
    ]
   },
   {
@@ -383435,10 +385796,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -30.51,
-    -31.03,
-    38.08
+    -50.78,
+    -29.37,
+    6.66
    ],
    "comb": {
     "b": 0.276,
@@ -383503,10 +385866,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-18",
    "p": [
-    -11.03,
-    -23.76,
-    29.12
+    -67.5,
+    -40.52,
+    -0.31
    ],
    "comb": {
     "b": 0.431,
@@ -383572,10 +385937,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -28.48,
-    -30.66,
-    21.5
+    -60.21,
+    -34.07,
+    -5.74
    ],
    "comb": {
     "b": 0.499,
@@ -383641,10 +386008,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-18",
    "p": [
-    -29.29,
-    -28.08,
-    20.56
+    -75.27,
+    -38.76,
+    -0.35
    ],
    "comb": {
     "b": 0.313,
@@ -383720,10 +386089,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -28.2,
-    -33.84,
-    29.9
+    -50.13,
+    -34.43,
+    -5.74
    ],
    "comb": {
     "b": 0.369,
@@ -383800,10 +386171,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -15.86,
-    -34.17,
-    22.58
+    -41.77,
+    -28.83,
+    -3.34
    ],
    "comb": {
     "b": 0.606,
@@ -383872,10 +386245,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -22.39,
-    -28.85,
-    24.4
+    -49.59,
+    -33.38,
+    1.15
    ],
    "comb": {
     "b": 0.268,
@@ -383940,10 +386315,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -25.07,
-    -18.12,
-    18.36
+    -46.32,
+    -31.08,
+    6.68
    ],
    "comb": {
     "b": 0.039,
@@ -384019,10 +386396,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -27.95,
-    -24.98,
-    22.88
+    -51.77,
+    -32.51,
+    0.84
    ],
    "comb": {
     "b": 0.394,
@@ -384098,10 +386477,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -20.57,
-    -26.45,
-    35.21
+    -49.61,
+    -14.78,
+    9.09
    ],
    "comb": {
     "b": 0.374,
@@ -384166,10 +386547,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-12",
    "p": [
-    -21.39,
-    -29.94,
-    38.48
+    -86.79,
+    -29.72,
+    18.47
    ],
    "comb": {
     "b": 0.391,
@@ -384235,10 +386618,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -30.64,
-    -37.91,
-    21.42
+    -46.3,
+    -32.86,
+    4.61
    ],
    "comb": {
     "b": 0.038,
@@ -384315,10 +386700,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -7.55,
-    -39.06,
-    18.6
+    -54.08,
+    -26.28,
+    14.0
    ],
    "comb": {
     "b": 0.578,
@@ -384399,10 +386786,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -34.12,
-    -44.21,
-    7.16
+    -45.54,
+    -32.5,
+    2.74
    ],
    "comb": {
     "b": 0.561,
@@ -384480,10 +386869,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -11.47,
-    -40.23,
-    32.93
+    -56.95,
+    -21.81,
+    13.9
    ],
    "comb": {
     "b": 0.592,
@@ -384551,10 +386942,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -19.6,
-    -42.13,
-    7.38
+    -39.64,
+    -41.7,
+    6.8
    ],
    "comb": {
     "b": 0.503,
@@ -384632,10 +387025,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -16.05,
-    -34.89,
-    24.37
+    -48.37,
+    -22.24,
+    5.71
    ],
    "comb": {
     "b": 0.559,
@@ -384708,10 +387103,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    30.39,
-    -33.12,
-    13.89
+    -32.94,
+    13.09,
+    0.19
    ],
    "comb": {
     "b": 0.373,
@@ -384786,10 +387183,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    8.48,
-    -6.25,
-    43.28
+    -41.53,
+    5.99,
+    11.28
    ]
   },
   {
@@ -384856,10 +387255,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    5.59,
-    -11.2,
-    47.63
+    -39.59,
+    2.99,
+    10.4
    ],
    "comb": {
     "b": 0.297,
@@ -384935,10 +387336,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    12.93,
-    -10.43,
-    43.02
+    -33.82,
+    20.44,
+    5.87
    ],
    "comb": {
     "b": 0.431,
@@ -385015,10 +387418,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    13.34,
-    -18.82,
-    41.73
+    -40.65,
+    11.68,
+    8.51
    ],
    "comb": {
     "b": 0.237,
@@ -385088,10 +387493,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    14.37,
-    -30.99,
-    35.48
+    -37.34,
+    -12.57,
+    -3.87
    ],
    "comb": {
     "b": 0.417,
@@ -385161,10 +387568,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    15.83,
-    -33.27,
-    32.68
+    -34.73,
+    -14.39,
+    -5.11
    ],
    "comb": {
     "b": 0.417,
@@ -385218,10 +387627,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    -16.3,
-    -38.59,
-    25.9
+    -37.42,
+    -21.75,
+    -8.5
    ]
   },
   {
@@ -385272,10 +387683,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -34.49,
-    -30.92,
-    11.35
+    -48.87,
+    -10.35,
+    -8.88
    ]
   },
   {
@@ -385326,10 +387739,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -29.34,
-    -33.69,
-    16.67
+    -53.34,
+    -27.78,
+    -11.07
    ],
    "comb": {
     "b": 0.284,
@@ -385399,10 +387814,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -14.29,
-    -34.59,
-    34.36
+    -41.67,
+    -13.24,
+    4.08
    ],
    "comb": {
     "b": 0.415,
@@ -385473,10 +387890,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -28.34,
-    -37.08,
-    20.08
+    -65.04,
+    -32.53,
+    -2.22
    ],
    "comb": {
     "b": 0.384,
@@ -385548,10 +387967,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-04",
    "p": [
-    14.47,
-    -43.61,
-    20.1
+    -57.18,
+    37.21,
+    8.12
    ],
    "comb": {
     "b": 0.62,
@@ -385632,10 +388053,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -34.22,
-    -18.71,
-    -33.94
+    -9.22,
+    -32.46,
+    -18.88
    ],
    "comb": {
     "b": 0.297,
@@ -385710,10 +388133,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -23.94,
-    -22.48,
-    -41.91
+    -12.69,
+    -37.87,
+    -21.48
    ],
    "comb": {
     "b": 0.256,
@@ -385799,10 +388224,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -15.98,
-    -35.54,
-    -36.27
+    -9.4,
+    -34.39,
+    -20.2
    ],
    "comb": {
     "b": 0.343,
@@ -385868,10 +388295,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -29.89,
-    2.65,
-    8.19
+    -12.03,
+    -29.82,
+    -4.92
    ]
   },
   {
@@ -385937,10 +388366,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -36.29,
-    -19.72,
-    -32.16
+    -6.58,
+    -19.1,
+    -17.82
    ]
   },
   {
@@ -385997,10 +388428,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -7.45,
-    -17.54,
-    24.58
+    -16.87,
+    -17.83,
+    1.66
    ],
    "comb": {
     "b": 0.458,
@@ -386076,10 +388509,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    -48.67,
-    -12.68,
-    7.22
+    -24.32,
+    -11.58,
+    -14.59
    ],
    "comb": {
     "b": 0.555,
@@ -386155,10 +388590,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -14.85,
-    -19.27,
-    -31.47
+    -27.96,
+    -45.65,
+    -12.69
    ]
   },
   {
@@ -386224,10 +388661,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -14.1,
-    -22.66,
-    -32.4
+    -28.47,
+    -46.26,
+    -13.36
    ],
    "comb": {
     "b": 0.091,
@@ -386302,10 +388741,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -7.72,
-    10.01,
-    -47.6
+    1.91,
+    -46.47,
+    -26.13
    ]
   },
   {
@@ -386371,10 +388812,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    2.59,
-    11.05,
-    -47.92
+    8.08,
+    -48.04,
+    -21.84
    ]
   },
   {
@@ -386420,10 +388863,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -19.9,
-    -4.06,
-    -49.93
+    2.24,
+    -51.91,
+    -26.51
    ],
    "comb": {
     "b": 0.447,
@@ -386478,10 +388923,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -0.39,
-    7.94,
-    -48.61
+    6.64,
+    -56.78,
+    -27.36
    ]
   },
   {
@@ -386527,10 +388974,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -2.7,
-    8.36,
-    -50.04
+    9.77,
+    -48.98,
+    -23.43
    ]
   },
   {
@@ -386576,10 +389025,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -20.65,
-    -28.68,
-    -32.02
+    -3.51,
+    -30.75,
+    -12.24
    ],
    "comb": {
     "b": 0.43,
@@ -386645,10 +389096,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -24.49,
-    -42.53,
-    -13.15
+    -28.18,
+    -38.25,
+    -9.17
    ],
    "comb": {
     "b": 0.313,
@@ -386732,10 +389185,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -13.48,
-    31.86,
-    9.84
+    70.62,
+    -10.95,
+    -4.63
    ]
   },
   {
@@ -386810,10 +389265,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -8.12,
-    32.25,
-    8.63
+    69.79,
+    -0.92,
+    -1.95
    ]
   },
   {
@@ -386888,10 +389345,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -13.67,
-    33.64,
-    9.65
+    74.55,
+    -9.75,
+    -4.96
    ]
   },
   {
@@ -386969,10 +389428,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -9.3,
-    36.28,
-    2.97
+    57.43,
+    -9.85,
+    -1.27
    ],
    "comb": {
     "b": 0.481,
@@ -387057,10 +389518,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -13.02,
-    31.68,
-    2.69
+    65.65,
+    -22.85,
+    3.08
    ]
   },
   {
@@ -387135,10 +389598,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -11.26,
-    32.4,
-    1.92
+    63.77,
+    -21.07,
+    2.35
    ]
   },
   {
@@ -387213,10 +389678,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    41.44,
-    4.25,
-    -7.58
+    36.34,
+    3.68,
+    4.51
    ]
   },
   {
@@ -387292,10 +389759,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    43.65,
-    4.35,
-    -2.18
+    35.7,
+    1.6,
+    6.7
    ]
   },
   {
@@ -387372,10 +389841,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    43.05,
-    10.74,
-    -10.03
+    43.5,
+    4.97,
+    5.87
    ],
    "comb": {
     "b": 0.294,
@@ -387461,10 +389932,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    43.06,
-    9.88,
-    -10.82
+    47.75,
+    7.47,
+    5.8
    ],
    "comb": {
     "b": 0.294,
@@ -387548,10 +390021,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    43.5,
-    10.76,
-    -7.8
+    31.74,
+    5.34,
+    -1.62
    ]
   },
   {
@@ -387628,10 +390103,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    44.38,
-    3.6,
-    -9.29
+    23.37,
+    0.55,
+    -1.78
    ],
    "comb": {
     "b": 0.294,
@@ -387718,10 +390195,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    44.8,
-    8.32,
-    -16.92
+    46.16,
+    18.28,
+    -6.36
    ],
    "comb": {
     "b": 0.386,
@@ -387806,10 +390285,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    45.54,
-    10.67,
-    -18.12
+    46.01,
+    16.92,
+    -8.08
    ]
   },
   {
@@ -387884,10 +390365,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    46.83,
-    7.04,
-    -16.52
+    43.84,
+    23.63,
+    -6.79
    ]
   },
   {
@@ -387964,10 +390447,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    43.33,
-    9.62,
-    -15.6
+    53.29,
+    9.6,
+    -9.02
    ],
    "comb": {
     "b": 0.29,
@@ -388053,10 +390538,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    44.49,
-    8.36,
-    -12.82
+    53.26,
+    13.88,
+    0.19
    ],
    "comb": {
     "b": 0.29,
@@ -388142,10 +390629,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    38.55,
-    23.59,
-    13.06
+    45.55,
+    16.54,
+    6.06
    ],
    "comb": {
     "b": 0.575,
@@ -388235,10 +390724,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    46.09,
-    8.93,
-    3.16
+    48.6,
+    21.41,
+    3.42
    ]
   },
   {
@@ -388315,10 +390806,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    46.5,
-    6.52,
-    2.97
+    36.48,
+    25.82,
+    3.87
    ]
   },
   {
@@ -388398,10 +390891,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    48.26,
-    -2.44,
-    5.28
+    35.68,
+    17.35,
+    4.6
    ],
    "comb": {
     "b": 0.245,
@@ -388485,10 +390980,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    44.58,
-    0.65,
-    -15.04
+    13.8,
+    2.96,
+    -5.23
    ]
   },
   {
@@ -389729,10 +392226,12 @@ window.ROADMAP = {
      "qid": "M-005:8615b085a5"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -16.47,
-    23.81,
-    33.02
+    45.99,
+    7.68,
+    -0.98
    ]
   },
   {
@@ -389808,10 +392307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    -7.08,
-    23.82,
-    38.1
+    44.97,
+    13.0,
+    -4.17
    ]
   },
   {
@@ -389887,10 +392388,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -14.35,
-    20.27,
-    38.11
+    47.0,
+    10.49,
+    -1.87
    ],
    "comb": {
     "b": 0.351,
@@ -389976,10 +392479,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -15.78,
-    19.94,
-    37.71
+    52.33,
+    7.44,
+    0.45
    ],
    "comb": {
     "b": 0.35,
@@ -392603,10 +395108,12 @@ window.ROADMAP = {
      "qid": "R-001:96dd275790"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -0.43,
-    33.5,
-    -7.61
+    55.42,
+    12.27,
+    3.61
    ]
   },
   {
@@ -392681,10 +395188,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -1.56,
-    32.81,
-    -14.65
+    61.57,
+    15.39,
+    1.77
    ]
   },
   {
@@ -395231,10 +397740,12 @@ window.ROADMAP = {
      "qid": "R-003:a000c5ef96"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -1.28,
-    33.87,
-    -12.03
+    49.62,
+    6.55,
+    2.27
    ]
   },
   {
@@ -395309,10 +397820,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -1.3,
-    32.59,
-    -18.65
+    62.1,
+    14.4,
+    0.67
    ]
   },
   {
@@ -396556,10 +399069,12 @@ window.ROADMAP = {
      "qid": "R-006:8291f4595b"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    8.65,
-    43.06,
-    0.52
+    51.61,
+    19.82,
+    2.18
    ],
    "comb": {
     "b": 0.401,
@@ -396646,10 +399161,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    40.13,
-    22.26,
-    -16.01
+    63.9,
+    15.67,
+    -3.08
    ],
    "comb": {
     "b": 0.386,
@@ -396734,10 +399251,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    29.69,
-    37.06,
-    -16.13
+    65.81,
+    14.37,
+    -2.11
    ]
   },
   {
@@ -396812,10 +399331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    29.84,
-    36.36,
-    -17.41
+    66.23,
+    18.01,
+    -2.55
    ]
   },
   {
@@ -396890,10 +399411,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    32.84,
-    33.16,
-    -18.39
+    66.48,
+    16.3,
+    -3.08
    ]
   },
   {
@@ -396973,10 +399496,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    31.05,
-    34.12,
-    9.22
+    64.22,
+    9.11,
+    -1.86
    ],
    "comb": {
     "b": 0.533,
@@ -397063,10 +399588,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    42.74,
-    14.59,
-    -5.39
+    56.69,
+    31.05,
+    -2.36
    ]
   },
   {
@@ -397142,10 +399669,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    38.18,
-    24.51,
-    3.28
+    55.13,
+    31.44,
+    -1.11
    ],
    "comb": {
     "b": 0.317,
@@ -397229,10 +399758,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    38.09,
-    24.57,
-    -12.59
+    34.61,
+    17.56,
+    14.69
    ]
   },
   {
@@ -397310,10 +399841,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    31.35,
-    2.94,
-    -37.03
+    36.83,
+    14.28,
+    -10.92
    ],
    "comb": {
     "b": 0.386,
@@ -397398,10 +399931,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -11.63,
-    -6.69,
-    -48.33
+    38.82,
+    10.48,
+    -15.65
    ]
   },
   {
@@ -397476,10 +400011,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -18.89,
-    0.84,
-    -46.46
+    38.81,
+    8.05,
+    -14.4
    ]
   },
   {
@@ -397554,10 +400091,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-07",
    "p": [
-    -34.61,
-    -25.31,
-    -26.02
+    3.69,
+    -5.57,
+    -14.93
    ]
   },
   {
@@ -397632,10 +400171,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -38.28,
-    -18.59,
-    -29.36
+    49.79,
+    10.38,
+    -27.6
    ]
   },
   {
@@ -397712,10 +400253,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -31.85,
-    -10.22,
-    -39.42
+    42.04,
+    5.81,
+    -23.13
    ],
    "comb": {
     "b": 0.248,
@@ -397799,10 +400342,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -38.07,
-    -13.33,
-    -34.75
+    50.19,
+    9.12,
+    -31.48
    ]
   },
   {
@@ -397877,10 +400422,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -37.16,
-    -13.01,
-    -35.84
+    41.73,
+    9.01,
+    -19.72
    ]
   },
   {
@@ -397955,10 +400502,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -38.03,
-    -11.98,
-    -35.28
+    51.51,
+    10.72,
+    -28.79
    ]
   },
   {
@@ -398035,10 +400584,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -38.29,
-    -13.04,
-    -36.93
+    51.21,
+    6.03,
+    -36.51
    ]
   },
   {
@@ -398113,10 +400664,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -35.78,
-    -12.3,
-    -41.7
+    50.1,
+    7.07,
+    -35.52
    ]
   },
   {
@@ -398191,10 +400744,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-07",
    "p": [
-    -35.66,
-    -12.01,
-    -37.66
+    40.64,
+    -20.63,
+    -35.0
    ]
   },
   {
@@ -398272,10 +400827,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -22.65,
-    -0.86,
-    43.0
+    -0.31,
+    23.16,
+    -15.01
    ],
    "comb": {
     "b": 0.389,
@@ -398360,10 +400917,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -27.11,
-    0.44,
-    42.2
+    -5.03,
+    14.75,
+    -15.09
    ]
   },
   {
@@ -398445,10 +401004,12 @@ window.ROADMAP = {
      "E-073"
     ]
    },
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -0.45,
-    9.32,
-    49.28
+    3.08,
+    21.89,
+    -13.87
    ],
    "comb": {
     "b": 0.334,
@@ -398533,10 +401094,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -41.29,
-    8.68,
-    27.12
+    0.4,
+    20.68,
+    -15.19
    ]
   },
   {
@@ -398611,10 +401174,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -43.45,
-    4.02,
-    27.72
+    -3.46,
+    24.39,
+    -13.85
    ]
   },
   {
@@ -398689,10 +401254,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    -37.93,
-    3.1,
-    9.28
+    47.6,
+    -3.41,
+    -20.3
    ]
   },
   {
@@ -398767,10 +401334,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -37.88,
-    4.5,
-    8.91
+    27.81,
+    -12.12,
+    -36.76
    ]
   },
   {
@@ -398849,10 +401418,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -33.72,
-    18.68,
-    6.98
+    32.76,
+    -16.9,
+    -12.61
    ],
    "comb": {
     "b": 0.333,
@@ -398943,10 +401514,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -33.54,
-    19.35,
-    5.9
+    36.27,
+    -18.84,
+    -7.42
    ],
    "comb": {
     "b": 0.413,
@@ -399036,10 +401609,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -33.01,
-    19.91,
-    6.96
+    38.28,
+    -25.36,
+    -0.85
    ],
    "comb": {
     "b": 0.333,
@@ -399130,10 +401705,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -34.56,
-    20.53,
-    6.76
+    37.39,
+    -8.63,
+    -4.51
    ],
    "comb": {
     "b": 0.411,
@@ -399220,10 +401797,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -36.76,
-    9.33,
-    9.78
+    25.4,
+    -8.81,
+    -29.41
    ]
   },
   {
@@ -399299,10 +401878,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -40.8,
-    10.64,
-    17.06
+    54.93,
+    -7.51,
+    -6.97
    ],
    "comb": {
     "b": 0.317,
@@ -399390,10 +401971,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -36.0,
-    8.37,
-    12.98
+    25.26,
+    -12.63,
+    -18.18
    ],
    "comb": {
     "b": 0.286,
@@ -399480,10 +402063,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -37.03,
-    2.65,
-    12.48
+    25.0,
+    -11.93,
+    -34.8
    ]
   },
   {
@@ -399561,10 +402146,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -37.21,
-    3.56,
-    11.72
+    20.69,
+    -6.35,
+    -33.62
    ]
   },
   {
@@ -399641,10 +402228,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -38.5,
-    8.46,
-    10.38
+    27.35,
+    -12.56,
+    -35.28
    ]
   },
   {
@@ -399721,10 +402310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -38.96,
-    4.42,
-    11.15
+    29.71,
+    -22.16,
+    -37.67
    ]
   },
   {
@@ -399801,10 +402392,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    -38.95,
-    5.6,
-    10.62
+    17.13,
+    -3.25,
+    -33.31
    ]
   },
   {
@@ -399879,10 +402472,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -37.09,
-    9.43,
-    8.35
+    28.88,
+    -12.21,
+    -33.8
    ]
   },
   {
@@ -399958,10 +402553,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -37.55,
-    4.11,
-    10.36
+    27.43,
+    -12.3,
+    -38.19
    ]
   },
   {
@@ -400036,10 +402633,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -40.94,
-    6.51,
-    8.64
+    25.61,
+    -21.82,
+    -36.05
    ]
   },
   {
@@ -400119,10 +402718,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -35.82,
-    17.86,
-    7.72
+    40.35,
+    -15.06,
+    -24.74
    ],
    "comb": {
     "b": 0.416,
@@ -400212,10 +402813,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -32.01,
-    20.6,
-    9.24
+    54.93,
+    -16.57,
+    0.07
    ],
    "comb": {
     "b": 0.353,
@@ -400302,10 +402905,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -28.15,
-    25.61,
-    9.28
+    51.89,
+    -6.46,
+    -2.4
    ]
   },
   {
@@ -400385,10 +402990,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -35.86,
-    22.4,
-    2.24
+    39.7,
+    -14.87,
+    -5.82
    ],
    "comb": {
     "b": 0.606,
@@ -400475,10 +403082,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -38.67,
-    7.71,
-    15.43
+    34.51,
+    -18.66,
+    -29.05
    ],
    "comb": {
     "b": 0.454,
@@ -400565,10 +403174,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -41.31,
-    5.49,
-    18.22
+    -3.27,
+    -5.25,
+    -21.61
    ],
    "comb": {
     "b": 0.242,
@@ -400655,10 +403266,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -41.87,
-    7.53,
-    16.1
+    6.54,
+    -15.72,
+    -26.81
    ],
    "comb": {
     "b": 0.242,
@@ -400744,10 +403357,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -48.12,
-    4.14,
-    5.46
+    12.91,
+    -9.62,
+    -29.57
    ],
    "comb": {
     "b": 0.227,
@@ -400833,10 +403448,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -48.29,
-    3.28,
-    4.47
+    10.12,
+    -10.35,
+    -29.26
    ],
    "comb": {
     "b": 0.227,
@@ -400920,10 +403537,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -37.42,
-    9.29,
-    6.92
+    6.06,
+    -3.49,
+    -31.32
    ]
   },
   {
@@ -400998,10 +403617,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    -36.55,
-    7.57,
-    11.87
+    7.38,
+    -2.43,
+    -33.65
    ]
   },
   {
@@ -401081,10 +403702,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -51.33,
-    -6.1,
-    -1.17
+    -6.36,
+    -22.34,
+    -15.2
    ],
    "comb": {
     "b": 0.36,
@@ -401172,10 +403795,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -50.49,
-    -3.72,
-    -10.47
+    -5.34,
+    -27.01,
+    -16.11
    ]
   },
   {
@@ -401251,10 +403876,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -50.52,
-    8.07,
-    -7.49
+    -5.09,
+    -34.75,
+    -47.5
    ],
    "comb": {
     "b": 0.398,
@@ -401339,10 +403966,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -44.49,
-    15.32,
-    12.18
+    -9.3,
+    -21.4,
+    -40.37
    ]
   },
   {
@@ -401418,10 +404047,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -48.86,
-    -0.1,
-    -16.9
+    -3.95,
+    -33.88,
+    -48.51
    ],
    "comb": {
     "b": 0.307,
@@ -401505,10 +404136,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -50.38,
-    4.04,
-    -10.89
+    -7.99,
+    -26.48,
+    -45.4
    ]
   },
   {
@@ -401584,10 +404217,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -39.4,
-    3.53,
-    22.46
+    8.52,
+    12.42,
+    -28.46
    ],
    "comb": {
     "b": 0.336,
@@ -401672,10 +404307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -40.01,
-    3.87,
-    21.29
+    8.21,
+    13.07,
+    -28.54
    ],
    "comb": {
     "b": 0.336,
@@ -401760,10 +404397,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -40.05,
-    2.51,
-    21.42
+    7.83,
+    9.98,
+    -27.22
    ],
    "comb": {
     "b": 0.336,
@@ -401848,10 +404487,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -39.42,
-    2.17,
-    22.58
+    5.94,
+    12.72,
+    -29.01
    ],
    "comb": {
     "b": 0.336,
@@ -401937,10 +404578,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -34.0,
-    8.26,
-    29.07
+    6.61,
+    10.74,
+    -29.75
    ],
    "comb": {
     "b": 0.538,
@@ -402031,10 +404674,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -33.16,
-    -0.59,
-    35.53
+    4.75,
+    17.2,
+    -22.77
    ],
    "comb": {
     "b": 0.571,
@@ -402125,10 +404770,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -34.43,
-    6.48,
-    33.69
+    6.92,
+    13.77,
+    -23.23
    ],
    "comb": {
     "b": 0.516,
@@ -402216,10 +404863,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -42.12,
-    3.17,
-    20.72
+    7.23,
+    11.68,
+    -33.13
    ]
   },
   {
@@ -402300,10 +404949,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-05",
    "p": [
-    -38.78,
-    20.69,
-    16.78
+    -3.88,
+    1.33,
+    -20.43
    ],
    "comb": {
     "b": 0.345,
@@ -402396,10 +405047,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -38.45,
-    21.97,
-    15.9
+    -4.97,
+    -11.2,
+    -33.2
    ],
    "comb": {
     "b": 0.345,
@@ -402492,10 +405145,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -39.55,
-    18.94,
-    17.06
+    -12.87,
+    -12.36,
+    -24.71
    ],
    "comb": {
     "b": 0.345,
@@ -402584,10 +405239,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    11.08,
-    -20.87,
-    42.48
+    1.83,
+    11.76,
+    -25.6
    ],
    "comb": {
     "b": 0.466,
@@ -402674,10 +405331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    20.95,
-    -21.55,
-    38.2
+    0.9,
+    11.01,
+    -23.87
    ],
    "comb": {
     "b": 0.466,
@@ -402764,10 +405423,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    11.07,
-    -22.25,
-    41.77
+    5.8,
+    0.28,
+    -35.43
    ],
    "comb": {
     "b": 0.466,
@@ -402856,10 +405517,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -44.76,
-    4.14,
-    13.89
+    2.99,
+    -1.35,
+    -29.2
    ],
    "comb": {
     "b": 0.448,
@@ -402948,10 +405611,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -45.4,
-    1.07,
-    21.3
+    2.59,
+    -0.19,
+    -29.46
    ],
    "comb": {
     "b": 0.483,
@@ -403043,10 +405708,12 @@ window.ROADMAP = {
      "H-036"
     ]
    },
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -23.85,
-    -22.92,
-    35.62
+    -33.74,
+    -6.12,
+    -3.86
    ],
    "comb": {
     "b": 0.595,
@@ -403133,10 +405800,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -25.12,
-    -26.65,
-    34.27
+    -41.0,
+    -11.57,
+    -0.82
    ],
    "comb": {
     "b": 0.404,
@@ -403221,10 +405890,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -29.6,
-    -29.69,
-    30.25
+    -46.98,
+    -16.42,
+    -0.44
    ]
   },
   {
@@ -403305,10 +405976,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -34.59,
-    -30.47,
-    32.33
+    -46.08,
+    -24.35,
+    -3.79
    ]
   },
   {
@@ -403389,10 +406062,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -31.97,
-    -34.56,
-    30.89
+    -41.98,
+    -18.58,
+    -4.26
    ]
   },
   {
@@ -403470,10 +406145,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -51.27,
-    -8.8,
-    17.17
+    -34.31,
+    -29.45,
+    -6.73
    ],
    "comb": {
     "b": 0.412,
@@ -403561,10 +406238,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -52.62,
-    -6.49,
-    13.77
+    -35.95,
+    -30.0,
+    -7.62
    ],
    "comb": {
     "b": 0.409,
@@ -403652,10 +406331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -43.05,
-    -24.76,
-    23.12
+    -38.9,
+    -28.88,
+    -7.39
    ],
    "comb": {
     "b": 0.562,
@@ -403743,10 +406424,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -47.72,
-    -1.5,
-    9.1
+    -19.37,
+    -19.96,
+    -7.22
    ],
    "comb": {
     "b": 0.44,
@@ -403835,10 +406518,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -51.5,
-    -2.45,
-    26.2
+    -20.04,
+    -14.38,
+    -9.65
    ],
    "comb": {
     "b": 0.294,
@@ -403927,10 +406612,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -41.71,
-    -23.53,
-    29.62
+    -45.68,
+    -33.93,
+    -5.97
    ]
   },
   {
@@ -404009,10 +406696,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -43.94,
-    -17.5,
-    30.54
+    -28.72,
+    -29.02,
+    -7.33
    ]
   },
   {
@@ -404093,10 +406782,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -22.38,
-    -24.8,
-    41.46
+    -22.44,
+    -13.53,
+    -6.69
    ],
    "comb": {
     "b": 0.609,
@@ -404189,10 +406880,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -43.57,
-    -10.59,
-    28.7
+    -5.59,
+    -13.67,
+    -26.73
    ],
    "comb": {
     "b": 0.246,
@@ -404282,10 +406975,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -46.11,
-    -4.32,
-    26.26
+    -17.48,
+    -11.96,
+    -11.25
    ],
    "comb": {
     "b": 0.453,
@@ -404380,10 +407075,12 @@ window.ROADMAP = {
      "E-002"
     ]
    },
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    34.95,
-    -11.05,
-    31.92
+    -3.37,
+    28.97,
+    -4.11
    ],
    "comb": {
     "b": 0.528,
@@ -404471,10 +407168,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    43.35,
-    -15.88,
-    19.6
+    -8.39,
+    8.48,
+    -0.34
    ]
   },
   {
@@ -404550,10 +407249,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    46.67,
-    -13.77,
-    17.47
+    -2.11,
+    35.08,
+    -2.37
    ],
    "comb": {
     "b": 0.292,
@@ -404640,10 +407341,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    43.89,
-    -14.41,
-    19.55
+    3.18,
+    33.31,
+    0.12
    ],
    "comb": {
     "b": 0.211,
@@ -404730,10 +407433,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    48.84,
-    -0.82,
-    16.93
+    7.53,
+    39.09,
+    0.03
    ],
    "comb": {
     "b": 0.257,
@@ -404821,10 +407526,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    51.86,
-    -5.13,
-    21.33
+    -9.67,
+    42.06,
+    7.68
    ],
    "comb": {
     "b": 0.311,
@@ -404909,10 +407616,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    46.84,
-    -15.01,
-    24.11
+    1.66,
+    36.74,
+    5.19
    ],
    "comb": {
     "b": 0.299,
@@ -404999,10 +407708,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    47.27,
-    -10.08,
-    25.77
+    1.8,
+    41.53,
+    6.89
    ],
    "comb": {
     "b": 0.219,
@@ -405086,10 +407797,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    47.86,
-    -20.99,
-    20.95
+    17.04,
+    23.26,
+    -6.81
    ]
   },
   {
@@ -405165,10 +407878,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    47.53,
-    -21.48,
-    28.32
+    14.22,
+    43.04,
+    -2.38
    ]
   },
   {
@@ -405244,10 +407959,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    48.41,
-    -16.29,
-    19.79
+    3.01,
+    43.46,
+    3.79
    ],
    "comb": {
     "b": 0.288,
@@ -405333,10 +408050,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    41.98,
-    -25.48,
-    20.56
+    3.28,
+    35.39,
+    -2.29
    ]
   },
   {
@@ -405411,10 +408130,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    50.72,
-    -21.82,
-    25.63
+    22.11,
+    43.87,
+    1.2
    ]
   },
   {
@@ -405499,10 +408220,12 @@ window.ROADMAP = {
      "D-052"
     ]
    },
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    34.91,
-    -4.8,
-    39.91
+    10.48,
+    35.8,
+    3.52
    ],
    "comb": {
     "b": 0.619,
@@ -405593,10 +408316,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    39.52,
-    -6.14,
-    37.43
+    14.33,
+    44.11,
+    3.52
    ],
    "comb": {
     "b": 0.478,
@@ -405687,10 +408412,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    40.94,
-    -16.0,
-    30.04
+    11.15,
+    28.99,
+    -7.79
    ],
    "comb": {
     "b": 0.305,
@@ -405775,10 +408502,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    40.95,
-    -8.78,
-    37.64
+    13.45,
+    47.22,
+    4.43
    ]
   },
   {
@@ -405854,10 +408583,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    39.29,
-    -17.64,
-    25.7
+    3.02,
+    60.93,
+    16.45
    ],
    "comb": {
     "b": 0.297,
@@ -405942,10 +408673,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    40.02,
-    -17.63,
-    24.55
+    3.77,
+    60.09,
+    15.72
    ],
    "comb": {
     "b": 0.297,
@@ -406031,10 +408764,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    40.33,
-    -15.51,
-    28.39
+    2.85,
+    61.46,
+    16.2
    ],
    "comb": {
     "b": 0.271,
@@ -406119,10 +408854,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    46.25,
-    -2.22,
-    34.65
+    6.78,
+    59.86,
+    14.91
    ]
   },
   {
@@ -406197,10 +408934,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    43.36,
-    -14.64,
-    27.21
+    -6.49,
+    58.96,
+    18.07
    ]
   },
   {
@@ -406275,10 +409014,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    47.48,
-    -0.45,
-    24.09
+    10.1,
+    43.85,
+    8.63
    ]
   },
   {
@@ -406354,10 +409095,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    47.37,
-    15.4,
-    22.79
+    13.66,
+    41.06,
+    7.72
    ],
    "comb": {
     "b": 0.407,
@@ -406442,10 +409185,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    48.2,
-    -1.62,
-    22.55
+    9.5,
+    43.35,
+    8.26
    ]
   },
   {
@@ -406520,10 +409265,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    48.42,
-    0.27,
-    25.61
+    8.91,
+    43.21,
+    7.46
    ]
   },
   {
@@ -406599,10 +409346,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    48.12,
-    -1.49,
-    26.13
+    6.98,
+    41.88,
+    6.47
    ],
    "comb": {
     "b": 0.291,
@@ -406693,10 +409442,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    53.1,
-    1.23,
-    13.37
+    13.82,
+    46.15,
+    7.41
    ],
    "comb": {
     "b": 0.418,
@@ -406784,10 +409535,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    47.66,
-    -2.63,
-    23.58
+    6.59,
+    39.94,
+    4.97
    ]
   },
   {
@@ -406863,10 +409616,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    49.92,
-    -2.07,
-    22.45
+    9.49,
+    44.12,
+    7.34
    ]
   },
   {
@@ -406944,10 +409699,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    45.6,
-    -2.56,
-    27.36
+    28.88,
+    46.73,
+    4.29
    ],
    "comb": {
     "b": 0.391,
@@ -407032,10 +409789,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    48.57,
-    -2.52,
-    25.2
+    13.67,
+    45.54,
+    10.14
    ],
    "comb": {
     "b": 0.237,
@@ -407119,10 +409878,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    45.63,
-    13.79,
-    26.99
+    28.5,
+    29.73,
+    4.08
    ]
   },
   {
@@ -407198,10 +409959,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    46.3,
-    -11.65,
-    26.86
+    3.85,
+    47.0,
+    10.53
    ]
   },
   {
@@ -407279,10 +410042,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    46.24,
-    -9.14,
-    27.9
+    3.64,
+    49.48,
+    11.28
    ]
   },
   {
@@ -407362,10 +410127,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    48.25,
-    -10.98,
-    26.87
+    9.31,
+    50.91,
+    4.77
    ],
    "comb": {
     "b": 0.405,
@@ -407450,10 +410217,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    44.34,
-    -19.41,
-    22.17
+    -18.4,
+    31.55,
+    1.16
    ]
   },
   {
@@ -407529,10 +410298,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    50.27,
-    -16.14,
-    19.57
+    -14.01,
+    38.71,
+    5.38
    ],
    "comb": {
     "b": 0.287,
@@ -407619,10 +410390,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    50.67,
-    -11.61,
-    21.63
+    -2.36,
+    40.57,
+    3.62
    ],
    "comb": {
     "b": 0.297,
@@ -407706,10 +410479,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    50.22,
-    -18.43,
-    11.78
+    -5.5,
+    29.46,
+    -1.89
    ]
   },
   {
@@ -407786,10 +410561,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    52.71,
-    -17.92,
-    15.64
+    -8.51,
+    41.73,
+    0.96
    ]
   },
   {
@@ -407865,10 +410642,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    51.39,
-    -12.51,
-    19.3
+    -3.92,
+    42.14,
+    1.83
    ],
    "comb": {
     "b": 0.368,
@@ -407954,10 +410733,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    52.89,
-    -12.47,
-    19.78
+    8.92,
+    39.97,
+    3.62
    ],
    "comb": {
     "b": 0.333,
@@ -408043,10 +410824,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    52.17,
-    -19.17,
-    20.82
+    5.21,
+    38.49,
+    3.09
    ],
    "comb": {
     "b": 0.451,
@@ -408132,10 +410915,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    53.33,
-    -12.72,
-    18.4
+    16.24,
+    37.69,
+    3.89
    ],
    "comb": {
     "b": 0.37,
@@ -408220,10 +411005,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    36.42,
-    -12.28,
-    27.13
+    -13.25,
+    30.51,
+    2.13
    ],
    "comb": {
     "b": 0.37,
@@ -408314,10 +411101,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    49.85,
-    2.02,
-    26.11
+    10.89,
+    50.79,
+    10.6
    ]
   },
   {
@@ -408397,10 +411186,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    47.69,
-    0.31,
-    29.94
+    5.98,
+    39.48,
+    9.2
    ],
    "comb": {
     "b": 0.342,
@@ -408489,10 +411280,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    48.15,
-    -3.99,
-    25.81
+    18.0,
+    46.62,
+    7.85
    ],
    "comb": {
     "b": 0.502,
@@ -408581,10 +411374,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    47.61,
-    11.1,
-    24.71
+    17.82,
+    49.84,
+    9.78
    ],
    "comb": {
     "b": 0.301,
@@ -408668,10 +411463,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    47.48,
-    6.14,
-    29.64
+    18.03,
+    52.0,
+    8.26
    ]
   },
   {
@@ -408747,10 +411544,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    46.79,
-    5.36,
-    30.85
+    24.28,
+    52.35,
+    7.92
    ],
    "comb": {
     "b": 0.323,
@@ -408834,10 +411633,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    34.44,
-    -9.58,
-    35.18
+    -60.97,
+    40.84,
+    19.34
    ]
   },
   {
@@ -408916,10 +411717,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    38.33,
-    -5.36,
-    31.91
+    -67.08,
+    52.56,
+    27.83
    ],
    "comb": {
     "b": 0.193,
@@ -409007,10 +411810,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    38.63,
-    -6.73,
-    31.27
+    -66.2,
+    53.02,
+    28.33
    ],
    "comb": {
     "b": 0.193,
@@ -409098,10 +411903,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    37.66,
-    -5.85,
-    32.61
+    -67.21,
+    52.86,
+    28.89
    ],
    "comb": {
     "b": 0.193,
@@ -409189,10 +411996,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    37.93,
-    -6.84,
-    32.09
+    -67.02,
+    53.75,
+    27.68
    ],
    "comb": {
     "b": 0.193,
@@ -409280,10 +412089,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    38.96,
-    -5.65,
-    31.07
+    -66.77,
+    53.91,
+    28.69
    ],
    "comb": {
     "b": 0.193,
@@ -409370,10 +412181,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    1.26,
-    -40.67,
-    31.9
+    -8.74,
+    -6.05,
+    -39.11
    ],
    "comb": {
     "b": 0.532,
@@ -409461,10 +412274,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    34.58,
-    -8.11,
-    35.41
+    -55.67,
+    40.58,
+    20.85
    ]
   },
   {
@@ -409540,10 +412355,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    33.65,
-    -28.22,
-    0.45
+    -32.89,
+    50.72,
+    -18.3
    ],
    "comb": {
     "b": 0.442,
@@ -409627,10 +412444,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    35.85,
-    -34.54,
-    -6.16
+    -42.11,
+    45.59,
+    -5.72
    ]
   },
   {
@@ -409705,10 +412524,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    35.42,
-    -34.24,
-    -9.4
+    -43.07,
+    47.6,
+    -11.93
    ]
   },
   {
@@ -409786,10 +412607,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    37.75,
-    -32.34,
-    -6.67
+    -44.6,
+    53.97,
+    -17.37
    ]
   },
   {
@@ -409866,10 +412689,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    37.52,
-    -32.88,
-    -5.2
+    -40.99,
+    35.9,
+    -10.95
    ]
   },
   {
@@ -409946,10 +412771,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    -1.48,
-    -20.58,
-    42.28
+    -26.53,
+    42.42,
+    -16.6
    ]
   },
   {
@@ -410026,10 +412853,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    5.66,
-    -27.31,
-    37.89
+    -27.02,
+    30.45,
+    -14.44
    ]
   },
   {
@@ -410107,10 +412936,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    40.69,
-    -28.21,
-    7.98
+    -29.79,
+    40.58,
+    -5.2
    ],
    "comb": {
     "b": 0.317,
@@ -410197,10 +413028,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    39.76,
-    -29.11,
-    9.33
+    -18.93,
+    46.87,
+    -9.92
    ],
    "comb": {
     "b": 0.317,
@@ -410286,10 +413119,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    40.07,
-    -30.14,
-    1.28
+    -20.0,
+    56.61,
+    -13.07
    ],
    "comb": {
     "b": 0.306,
@@ -410375,10 +413210,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    39.2,
-    -31.28,
-    0.89
+    -21.07,
+    55.02,
+    -12.89
    ],
    "comb": {
     "b": 0.306,
@@ -410464,10 +413301,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-05",
    "p": [
-    39.57,
-    -30.73,
-    2.37
+    -22.45,
+    48.03,
+    -11.47
    ],
    "comb": {
     "b": 0.306,
@@ -410554,10 +413393,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-05",
    "p": [
-    40.19,
-    -28.15,
-    10.41
+    -26.08,
+    38.39,
+    -4.54
    ],
    "comb": {
     "b": 0.317,
@@ -410644,10 +413485,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    39.21,
-    -29.38,
-    10.73
+    -30.67,
+    24.15,
+    1.25
    ],
    "comb": {
     "b": 0.317,
@@ -410733,10 +413576,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    37.04,
-    -33.64,
-    3.5
+    -17.17,
+    31.05,
+    -9.81
    ],
    "comb": {
     "b": 0.306,
@@ -410822,10 +413667,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    41.91,
-    -23.86,
-    13.77
+    -8.7,
+    24.44,
+    -11.36
    ],
    "comb": {
     "b": 0.416,
@@ -410917,10 +413764,12 @@ window.ROADMAP = {
      "E-071"
     ]
    },
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    43.21,
-    -20.09,
-    9.58
+    -8.85,
+    24.62,
+    -16.56
    ],
    "comb": {
     "b": 0.402,
@@ -411007,10 +413856,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    42.0,
-    -25.1,
-    11.03
+    -9.7,
+    28.03,
+    -14.1
    ],
    "comb": {
     "b": 0.446,
@@ -411097,10 +413948,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    37.89,
-    -27.78,
-    -2.55
+    -5.4,
+    25.89,
+    -22.18
    ]
   },
   {
@@ -411176,10 +414029,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    37.24,
-    -28.8,
-    12.12
+    -2.44,
+    21.61,
+    -19.36
    ],
    "comb": {
     "b": 0.354,
@@ -411263,10 +414118,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    36.61,
-    -31.97,
-    -0.51
+    -0.94,
+    21.15,
+    -23.19
    ]
   },
   {
@@ -411343,10 +414200,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    37.54,
-    -33.24,
-    -1.25
+    -8.19,
+    29.5,
+    -5.26
    ],
    "comb": {
     "b": 0.317,
@@ -411433,10 +414292,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    2.83,
-    -48.47,
-    -2.3
+    1.07,
+    18.29,
+    -26.51
    ],
    "comb": {
     "b": 0.251,
@@ -411523,10 +414384,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    6.23,
-    -48.16,
-    -2.01
+    1.78,
+    13.84,
+    -20.86
    ],
    "comb": {
     "b": 0.251,
@@ -411614,10 +414477,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    -0.48,
-    -51.61,
-    -3.11
+    0.62,
+    12.78,
+    -19.56
    ],
    "comb": {
     "b": 0.428,
@@ -411705,10 +414570,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    -5.24,
-    -48.04,
-    5.24
+    12.83,
+    7.89,
+    -17.59
    ],
    "comb": {
     "b": 0.251,
@@ -411795,10 +414662,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    -4.69,
-    -48.21,
-    4.0
+    16.58,
+    7.0,
+    -16.76
    ],
    "comb": {
     "b": 0.251,
@@ -411885,10 +414754,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-08",
    "p": [
-    -3.88,
-    -48.18,
-    5.11
+    14.29,
+    -0.81,
+    -19.99
    ],
    "comb": {
     "b": 0.251,
@@ -411975,10 +414846,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    -3.41,
-    -48.03,
-    6.63
+    13.62,
+    5.64,
+    -17.89
    ],
    "comb": {
     "b": 0.251,
@@ -412072,10 +414945,12 @@ window.ROADMAP = {
      "P-025"
     ]
    },
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    32.88,
-    -31.39,
-    -1.69
+    -33.7,
+    50.47,
+    -22.96
    ],
    "comb": {
     "b": 0.371,
@@ -412161,10 +415036,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    31.55,
-    -31.49,
-    -9.07
+    -50.29,
+    67.76,
+    -31.44
    ]
   },
   {
@@ -412240,10 +415117,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    30.68,
-    -32.46,
-    -8.6
+    -49.94,
+    70.16,
+    -33.51
    ]
   },
   {
@@ -412319,10 +415198,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    30.59,
-    -32.16,
-    -9.98
+    -48.74,
+    68.65,
+    -32.45
    ]
   },
   {
@@ -412399,10 +415280,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    21.0,
-    -41.77,
-    18.17
+    -46.62,
+    66.16,
+    -31.95
    ],
    "comb": {
     "b": 0.486,
@@ -412489,10 +415372,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    30.24,
-    -34.04,
-    -11.87
+    -46.48,
+    63.24,
+    -30.47
    ]
   },
   {
@@ -412567,10 +415452,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-10",
    "p": [
-    32.84,
-    -31.89,
-    -10.9
+    -50.48,
+    61.65,
+    -29.82
    ]
   },
   {
@@ -412648,10 +415535,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-10",
    "p": [
-    28.71,
-    -38.34,
-    -14.89
+    -50.78,
+    55.96,
+    -29.06
    ],
    "comb": {
     "b": 0.471,
@@ -412736,10 +415625,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    35.86,
-    -36.72,
-    -6.27
+    -42.34,
+    55.48,
+    -23.79
    ]
   },
   {
@@ -412815,10 +415706,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    22.38,
-    -42.34,
-    -23.25
+    -37.32,
+    47.13,
+    -23.96
    ],
    "comb": {
     "b": 0.488,
@@ -412904,10 +415797,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    33.08,
-    -41.23,
-    -14.35
+    -43.36,
+    56.5,
+    -25.27
    ]
   },
   {
@@ -412982,10 +415877,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    32.36,
-    -42.48,
-    -17.85
+    -44.01,
+    56.88,
+    -25.08
    ]
   },
   {
@@ -413061,10 +415958,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    36.56,
-    -37.87,
-    -8.0
+    -38.86,
+    50.57,
+    -23.07
    ],
    "comb": {
     "b": 0.45,
@@ -413151,10 +416050,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-11",
    "p": [
-    32.57,
-    -28.02,
-    -9.12
+    -50.55,
+    67.22,
+    -19.54
    ]
   },
   {
@@ -413233,10 +416134,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-11",
    "p": [
-    36.11,
-    -30.99,
-    -9.91
+    -54.99,
+    71.34,
+    -20.78
    ],
    "comb": {
     "b": 0.347,
@@ -413323,10 +416226,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-11",
    "p": [
-    33.4,
-    -27.19,
-    -8.59
+    -55.76,
+    72.8,
+    -21.02
    ]
   },
   {
@@ -413404,10 +416309,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-12",
    "p": [
-    32.8,
-    -28.2,
-    -7.63
+    -73.57,
+    71.93,
+    -18.52
    ]
   },
   {
@@ -413485,10 +416392,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-13",
    "p": [
-    35.4,
-    -36.28,
-    -10.2
+    -46.08,
+    54.62,
+    -12.01
    ]
   },
   {
@@ -413566,10 +416475,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-13",
    "p": [
-    35.8,
-    -35.62,
-    -11.08
+    -45.79,
+    54.14,
+    -11.34
    ]
   },
   {
@@ -413645,10 +416556,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-12",
    "p": [
-    35.14,
-    -34.88,
-    -8.0
+    -71.13,
+    70.22,
+    -18.82
    ]
   },
   {
@@ -413723,10 +416636,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-12",
    "p": [
-    31.83,
-    -38.09,
-    -14.44
+    -74.83,
+    72.86,
+    -18.81
    ]
   },
   {
@@ -413802,10 +416717,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    33.42,
-    -37.32,
-    -12.76
+    -42.4,
+    40.58,
+    0.17
    ]
   },
   {
@@ -413862,10 +416779,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    13.76,
-    29.5,
-    33.97
+    37.74,
+    10.24,
+    -7.22
    ],
    "comb": {
     "b": 0.412,
@@ -413943,10 +416862,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -19.55,
-    -6.35,
-    -54.05
+    46.93,
+    -2.84,
+    -36.86
    ],
    "comb": {
     "b": 0.353,
@@ -414023,10 +416944,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -10.11,
-    2.77,
-    -53.76
+    16.75,
+    -49.36,
+    -25.0
    ],
    "comb": {
     "b": 0.28,
@@ -414101,10 +417024,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -16.09,
-    -17.88,
-    -45.76
+    5.4,
+    -15.61,
+    -20.95
    ],
    "comb": {
     "b": 0.209,
@@ -414181,10 +417106,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -3.59,
-    -0.7,
-    -53.12
+    20.88,
+    -46.3,
+    -26.98
    ],
    "comb": {
     "b": 0.485,
@@ -414263,10 +417190,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-01",
    "p": [
-    -21.8,
-    -46.45,
-    -6.36
+    9.49,
+    -39.07,
+    -13.99
    ],
    "comb": {
     "b": 0.651,
@@ -414343,10 +417272,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-05",
    "p": [
-    47.71,
-    -9.29,
-    0.02
+    9.09,
+    26.68,
+    -13.28
    ],
    "comb": {
     "b": 0.247,
@@ -414421,10 +417352,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    46.06,
-    -15.45,
-    -1.52
+    8.13,
+    40.65,
+    -0.24
    ]
   },
   {
@@ -414491,10 +417424,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    50.82,
-    -3.36,
-    24.01
+    11.8,
+    39.47,
+    4.83
    ],
    "comb": {
     "b": 0.365,
@@ -414559,10 +417494,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    37.82,
-    -18.44,
-    39.68
+    17.81,
+    26.08,
+    -7.65
    ],
    "comb": {
     "b": 0.407,
@@ -414635,10 +417572,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -32.07,
-    -23.16,
-    -35.64
+    -27.5,
+    -20.87,
+    -18.24
    ]
   },
   {
@@ -414693,10 +417632,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-02",
    "p": [
-    -28.71,
-    -23.76,
-    -38.02
+    -21.84,
+    -51.52,
+    -32.84
    ]
   },
   {
@@ -414758,10 +417699,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-02",
    "p": [
-    -32.09,
-    -27.78,
-    -34.62
+    -19.15,
+    -39.09,
+    -19.05
    ]
   },
   {
@@ -414823,10 +417766,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -32.6,
-    -21.02,
-    -36.47
+    -1.58,
+    -19.03,
+    -28.85
    ],
    "comb": {
     "b": 0.265,
@@ -414901,10 +417846,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    47.87,
-    -19.84,
-    22.03
+    -5.07,
+    56.03,
+    16.5
    ],
    "comb": {
     "b": 0.254,
@@ -414980,10 +417927,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    49.02,
-    -20.21,
-    23.08
+    -15.19,
+    54.29,
+    18.8
    ],
    "comb": {
     "b": 0.405,
@@ -415059,10 +418008,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    40.93,
-    -14.05,
-    22.13
+    5.44,
+    57.82,
+    14.98
    ],
    "comb": {
     "b": 0.354,
@@ -415133,10 +418084,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    46.76,
-    -22.71,
-    28.64
+    -37.9,
+    36.02,
+    20.22
    ],
    "comb": {
     "b": 0.301,
@@ -415207,10 +418160,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    52.49,
-    -14.61,
-    19.38
+    -12.91,
+    37.56,
+    1.21
    ],
    "comb": {
     "b": 0.32,
@@ -415276,10 +418231,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    37.84,
-    -21.92,
-    37.84
+    -27.98,
+    22.99,
+    -0.27
    ],
    "comb": {
     "b": 0.562,
@@ -415350,10 +418307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    45.36,
-    -32.72,
-    -6.48
+    -3.26,
+    17.66,
+    -15.35
    ],
    "comb": {
     "b": 0.454,
@@ -415428,10 +418387,12 @@ window.ROADMAP = {
      "H-019"
     ]
    },
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    44.51,
-    -31.89,
-    1.47
+    -30.88,
+    40.32,
+    -2.47
    ],
    "comb": {
     "b": 0.494,
@@ -415503,10 +418464,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    40.51,
-    -35.15,
-    21.63
+    -27.0,
+    30.55,
+    -1.31
    ],
    "comb": {
     "b": 0.49,
@@ -415585,10 +418548,12 @@ window.ROADMAP = {
      "M-015"
     ]
    },
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    28.49,
-    -36.78,
-    28.91
+    -11.44,
+    23.68,
+    -2.26
    ],
    "comb": {
     "b": 0.632,
@@ -415661,10 +418626,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-03",
    "p": [
-    47.5,
-    -32.81,
-    3.44
+    -23.87,
+    22.17,
+    -10.0
    ],
    "comb": {
     "b": 0.494,
@@ -415735,10 +418702,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    22.24,
-    -39.08,
-    22.22
+    -27.54,
+    28.18,
+    0.73
    ],
    "comb": {
     "b": 0.348,
@@ -415809,10 +418778,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    33.57,
-    -39.08,
-    29.47
+    -35.64,
+    35.22,
+    9.5
    ],
    "comb": {
     "b": 0.383,
@@ -415883,10 +418854,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    28.82,
-    -32.4,
-    28.15
+    -34.47,
+    33.94,
+    12.25
    ],
    "comb": {
     "b": 0.403,
@@ -415962,10 +418935,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    35.04,
-    -32.99,
-    37.26
+    -34.83,
+    32.84,
+    14.46
    ],
    "comb": {
     "b": 0.284,
@@ -416032,10 +419007,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    29.65,
-    -30.0,
-    29.9
+    -42.14,
+    27.69,
+    9.29
    ],
    "comb": {
     "b": 0.596,
@@ -416109,10 +419086,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    22.54,
-    -30.42,
-    32.9
+    -40.17,
+    29.53,
+    16.97
    ],
    "comb": {
     "b": 0.599,
@@ -416185,10 +419164,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    24.5,
-    -24.04,
-    29.84
+    -37.13,
+    27.14,
+    20.83
    ],
    "comb": {
     "b": 0.183,
@@ -416258,10 +419239,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    21.78,
-    -23.82,
-    32.05
+    -45.78,
+    37.05,
+    22.95
    ],
    "comb": {
     "b": 0.403,
@@ -416333,10 +419316,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    15.69,
-    -26.6,
-    39.52
+    -45.09,
+    20.39,
+    12.19
    ],
    "comb": {
     "b": 0.476,
@@ -416409,10 +419394,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    19.51,
-    -25.0,
-    38.86
+    -50.97,
+    31.59,
+    18.02
    ],
    "comb": {
     "b": 0.52,
@@ -416488,10 +419475,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-06",
    "p": [
-    -6.33,
-    1.09,
-    -49.74
+    6.29,
+    -54.96,
+    -23.66
    ]
   },
   {
@@ -416547,10 +419536,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-05",
    "p": [
-    -10.31,
-    -17.0,
-    -46.05
+    5.95,
+    -21.86,
+    -25.75
    ],
    "comb": {
     "b": 0.348,
@@ -416638,10 +419629,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    29.0,
-    10.71,
-    47.06
+    -10.8,
+    19.75,
+    9.35
    ],
    "comb": {
     "b": 0.637,
@@ -416720,10 +419713,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    21.2,
-    -22.24,
-    45.35
+    -25.75,
+    16.27,
+    3.82
    ],
    "comb": {
     "b": 0.3,
@@ -416798,10 +419793,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    -1.38,
-    -11.99,
-    48.68
+    -42.37,
+    5.67,
+    7.79
    ],
    "comb": {
     "b": 0.247,
@@ -416877,10 +419874,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    18.58,
-    -16.8,
-    50.43
+    -31.63,
+    20.68,
+    2.9
    ],
    "comb": {
     "b": 0.472,
@@ -416957,10 +419956,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    9.65,
-    -13.63,
-    53.77
+    -28.04,
+    18.43,
+    4.03
    ],
    "comb": {
     "b": 0.381,
@@ -417047,10 +420048,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -41.79,
-    -37.3,
-    14.38
+    -48.16,
+    -29.92,
+    -7.3
    ],
    "comb": {
     "b": 0.352,
@@ -417125,10 +420128,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -34.73,
-    -35.76,
-    29.32
+    -48.47,
+    -28.24,
+    -4.99
    ]
   },
   {
@@ -417206,10 +420211,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -30.64,
-    -45.06,
-    19.36
+    -11.9,
+    -3.8,
+    2.61
    ],
    "comb": {
     "b": 0.65,
@@ -417298,10 +420305,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    -29.93,
-    -41.09,
-    27.58
+    -41.73,
+    -29.1,
+    -7.17
    ],
    "comb": {
     "b": 0.354,
@@ -417390,10 +420399,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-04",
    "p": [
-    -27.46,
-    -41.97,
-    -0.42
+    -31.4,
+    -36.94,
+    -10.84
    ],
    "comb": {
     "b": 0.504,
@@ -417482,10 +420493,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    -23.58,
-    -39.13,
-    16.59
+    -23.66,
+    -22.67,
+    -16.9
    ],
    "comb": {
     "b": 0.604,
@@ -417566,10 +420579,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    -14.85,
-    -47.07,
-    32.96
+    -25.96,
+    -11.46,
+    -12.9
    ],
    "comb": {
     "b": 0.553,
@@ -417646,10 +420661,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    39.1,
-    21.24,
-    34.5
+    26.32,
+    39.41,
+    5.64
    ],
    "comb": {
     "b": 0.549,
@@ -417725,10 +420742,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    48.95,
-    -10.93,
-    28.79
+    -8.93,
+    45.97,
+    14.04
    ],
    "comb": {
     "b": 0.298,
@@ -417803,10 +420822,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -50.33,
-    1.46,
-    11.75
+    -5.75,
+    1.19,
+    -16.49
    ],
    "comb": {
     "b": 0.442,
@@ -417882,10 +420903,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -44.92,
-    7.03,
-    12.08
+    22.82,
+    -11.05,
+    -33.48
    ],
    "comb": {
     "b": 0.377,
@@ -417961,10 +420984,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-10",
    "p": [
-    34.31,
-    -37.31,
-    -10.19
+    -50.66,
+    53.87,
+    -26.54
    ],
    "comb": {
     "b": 0.403,
@@ -418040,10 +421065,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-12",
    "p": [
-    31.5,
-    -34.65,
-    4.53
+    -70.65,
+    67.81,
+    -16.55
    ],
    "comb": {
     "b": 0.616,
@@ -418121,10 +421148,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    52.55,
-    -10.67,
-    17.17
+    -7.57,
+    26.01,
+    1.86
    ],
    "comb": {
     "b": 0.491,
@@ -418201,10 +421230,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    30.73,
-    -38.48,
-    9.51
+    -34.53,
+    25.09,
+    14.1
    ],
    "comb": {
     "b": 0.469,
@@ -418280,10 +421311,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    12.44,
-    20.62,
-    -42.22
+    31.07,
+    -9.5,
+    -14.48
    ],
    "comb": {
     "b": 0.557,
@@ -418359,10 +421392,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    46.36,
-    7.75,
-    2.17
+    38.58,
+    13.1,
+    5.08
    ]
   },
   {
@@ -418428,10 +421463,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    36.24,
-    -35.77,
-    -8.93
+    -42.88,
+    41.55,
+    -10.78
    ]
   },
   {
@@ -418498,10 +421535,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    35.16,
-    -28.33,
-    -5.52
+    -40.79,
+    56.45,
+    -16.91
    ],
    "comb": {
     "b": 0.368,
@@ -418575,10 +421614,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    43.27,
-    -33.9,
-    -17.96
+    -7.23,
+    22.48,
+    -19.14
    ]
   },
   {
@@ -418646,10 +421687,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    34.7,
-    23.21,
-    24.89
+    33.16,
+    20.38,
+    11.1
    ],
    "comb": {
     "b": 0.503,
@@ -418726,10 +421769,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-03",
    "p": [
-    38.39,
-    -33.68,
-    -8.05
+    -42.86,
+    43.39,
+    -8.79
    ]
   },
   {
@@ -418801,10 +421846,12 @@ window.ROADMAP = {
      "E-060"
     ]
    },
+   "f": "F14",
+   "s": "F14-03",
    "p": [
-    39.72,
-    -32.91,
-    3.48
+    -10.35,
+    33.12,
+    -10.15
    ],
    "comb": {
     "b": 0.58,
@@ -418880,10 +421927,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    -31.53,
-    -6.71,
-    38.43
+    -26.43,
+    51.83,
+    -12.44
    ],
    "comb": {
     "b": 0.454,
@@ -418948,10 +421997,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -37.86,
-    13.41,
-    6.97
+    35.26,
+    -18.51,
+    -11.57
    ]
   },
   {
@@ -419017,10 +422068,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-03",
    "p": [
-    -39.54,
-    -34.39,
-    9.44
+    -86.08,
+    -46.26,
+    -11.33
    ],
    "comb": {
     "b": 0.434,
@@ -419089,10 +422142,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -40.44,
-    -40.92,
-    5.87
+    -44.8,
+    -18.56,
+    -6.35
    ]
   },
   {
@@ -419153,10 +422208,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -43.05,
-    -40.71,
-    3.46
+    -47.1,
+    -20.74,
+    -8.88
    ],
    "comb": {
     "b": 0.229,
@@ -419231,10 +422288,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -41.27,
-    -42.63,
-    1.43
+    -46.15,
+    -23.21,
+    -10.66
    ],
    "comb": {
     "b": 0.094,
@@ -419320,10 +422379,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -41.87,
-    -36.42,
-    16.29
+    -45.98,
+    -25.03,
+    -11.94
    ],
    "comb": {
     "b": 0.332,
@@ -419404,10 +422465,12 @@ window.ROADMAP = {
      "K-114"
     ]
    },
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -44.29,
-    -34.76,
-    0.6
+    -45.27,
+    -40.91,
+    -10.0
    ],
    "comb": {
     "b": 0.561,
@@ -419494,10 +422557,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -34.5,
-    -35.28,
-    8.98
+    -51.58,
+    -29.8,
+    -9.82
    ],
    "comb": {
     "b": 0.12,
@@ -419577,10 +422642,12 @@ window.ROADMAP = {
      "V-014"
     ]
    },
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -39.82,
-    -42.5,
-    11.42
+    -47.69,
+    -21.01,
+    -5.8
    ],
    "comb": {
     "b": 0.21,
@@ -419651,10 +422718,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -42.67,
-    -34.56,
-    12.47
+    -45.84,
+    -30.71,
+    -9.92
    ],
    "comb": {
     "b": 0.36,
@@ -419735,10 +422804,12 @@ window.ROADMAP = {
      "V-014"
     ]
    },
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -48.21,
-    -37.1,
-    -2.17
+    -49.51,
+    -29.55,
+    -11.01
    ],
    "comb": {
     "b": 0.229,
@@ -419815,10 +422886,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -42.19,
-    -41.22,
-    6.59
+    -43.32,
+    -32.28,
+    -11.09
    ],
    "comb": {
     "b": 0.508,
@@ -419895,10 +422968,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -43.06,
-    -36.66,
-    -12.08
+    -21.2,
+    -37.43,
+    -19.61
    ],
    "comb": {
     "b": 0.482,
@@ -419975,10 +423050,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -40.02,
-    -35.76,
-    -17.03
+    -22.79,
+    -30.6,
+    -23.77
    ],
    "comb": {
     "b": 0.463,
@@ -420051,10 +423128,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -24.76,
-    -50.61,
-    23.02
+    -38.21,
+    -11.92,
+    -1.84
    ],
    "comb": {
     "b": 0.65,
@@ -420127,10 +423206,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -35.9,
-    -43.07,
-    5.14
+    -30.29,
+    -30.22,
+    -8.73
    ],
    "comb": {
     "b": 0.345,
@@ -420222,10 +423303,12 @@ window.ROADMAP = {
      "V-014"
     ]
    },
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -45.78,
-    -39.5,
-    6.96
+    -58.37,
+    -34.27,
+    -7.69
    ],
    "comb": {
     "b": 0.187,
@@ -420301,10 +423384,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-03",
    "p": [
-    -43.39,
-    -32.75,
-    6.71
+    -88.26,
+    -47.69,
+    -11.94
    ],
    "comb": {
     "b": 0.138,
@@ -420385,10 +423470,12 @@ window.ROADMAP = {
      "V-014"
     ]
    },
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -47.25,
-    -37.83,
-    6.44
+    -71.16,
+    -40.58,
+    -3.98
    ],
    "comb": {
     "b": 0.077,
@@ -420460,10 +423547,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -45.29,
-    -39.11,
-    11.16
+    -55.69,
+    -25.21,
+    -13.3
    ],
    "comb": {
     "b": 0.24,
@@ -420535,10 +423624,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -43.92,
-    -31.75,
-    7.98
+    -41.23,
+    -43.53,
+    -14.79
    ]
   },
   {
@@ -420600,10 +423691,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -40.87,
-    -34.09,
-    1.45
+    -64.1,
+    -35.97,
+    -2.27
    ],
    "comb": {
     "b": 0.591,
@@ -420691,10 +423784,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -30.89,
-    -28.4,
-    -32.77
+    -13.49,
+    -41.29,
+    -19.09
    ],
    "comb": {
     "b": 0.525,
@@ -420782,10 +423877,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-05",
    "p": [
-    -20.55,
-    -43.14,
-    -29.77
+    -28.58,
+    -46.48,
+    -17.86
    ],
    "comb": {
     "b": 0.508,
@@ -420863,10 +423960,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-05",
    "p": [
-    -13.33,
-    -39.15,
-    -25.54
+    -25.57,
+    -45.36,
+    -17.18
    ],
    "comb": {
     "b": 0.376,
@@ -420918,10 +424017,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -52.3,
-    -1.98,
-    -9.76
+    -2.67,
+    -21.43,
+    -25.47
    ],
    "comb": {
     "b": 0.363,
@@ -420977,10 +424078,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    48.76,
-    4.46,
-    27.8
+    24.26,
+    38.04,
+    6.17
    ]
   },
   {
@@ -421038,10 +424141,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    1.45,
-    -13.36,
-    43.46
+    -41.29,
+    3.9,
+    12.18
    ],
    "comb": {
     "b": 0.429,
@@ -421103,10 +424208,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    13.31,
-    -21.37,
-    45.16
+    -42.42,
+    9.13,
+    5.14
    ],
    "comb": {
     "b": 0.237,
@@ -421156,10 +424263,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -37.59,
-    -28.8,
-    33.2
+    -42.17,
+    -27.3,
+    -7.72
    ]
   },
   {
@@ -421205,10 +424314,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    -7.99,
-    -4.42,
-    -54.01
+    13.61,
+    -48.52,
+    -26.03
    ],
    "comb": {
     "b": 0.39,
@@ -421284,10 +424395,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -43.87,
-    -34.46,
-    7.65
+    -33.46,
+    -29.84,
+    -12.04
    ],
    "comb": {
     "b": 0.438,
@@ -421363,10 +424476,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-18",
    "p": [
-    -15.51,
-    -41.74,
-    26.27
+    -74.64,
+    -34.61,
+    -0.12
    ],
    "comb": {
     "b": 0.503,
@@ -421443,10 +424558,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-05",
    "p": [
-    -5.2,
-    -42.95,
-    33.6
+    -81.02,
+    -33.75,
+    -9.83
    ],
    "comb": {
     "b": 0.396,
@@ -421523,10 +424640,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-05",
    "p": [
-    -30.26,
-    -33.95,
-    33.2
+    -82.64,
+    -37.73,
+    -8.99
    ],
    "comb": {
     "b": 0.422,
@@ -421603,10 +424722,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -28.88,
-    -37.47,
-    30.53
+    -45.83,
+    -27.53,
+    0.01
    ],
    "comb": {
     "b": 0.382,
@@ -421683,10 +424804,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -31.94,
-    -36.59,
-    31.4
+    -49.46,
+    -30.2,
+    0.82
    ],
    "comb": {
     "b": 0.436,
@@ -421762,10 +424885,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -28.15,
-    -42.56,
-    27.2
+    -54.0,
+    -21.93,
+    8.77
    ],
    "comb": {
     "b": 0.296,
@@ -421840,10 +424965,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-04",
    "p": [
-    -36.82,
-    -33.23,
-    29.74
+    -53.96,
+    -26.59,
+    7.3
    ],
    "comb": {
     "b": 0.426,
@@ -421919,10 +425046,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -34.93,
-    -37.44,
-    30.01
+    -56.35,
+    -26.61,
+    9.27
    ],
    "comb": {
     "b": 0.23,
@@ -421998,10 +425127,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -29.87,
-    -28.55,
-    31.07
+    -57.28,
+    -29.33,
+    6.5
    ],
    "comb": {
     "b": 0.394,
@@ -422077,10 +425208,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-12",
    "p": [
-    -38.69,
-    -25.92,
-    34.28
+    -84.71,
+    -30.93,
+    16.75
    ],
    "comb": {
     "b": 0.554,
@@ -422157,10 +425290,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-04",
    "p": [
-    -27.79,
-    -37.77,
-    17.79
+    -35.79,
+    -37.28,
+    -4.19
    ],
    "comb": {
     "b": 0.254,
@@ -422235,10 +425370,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-06",
    "p": [
-    -43.99,
-    -20.45,
-    12.75
+    -39.36,
+    -61.57,
+    -16.3
    ],
    "comb": {
     "b": 0.431,
@@ -422314,10 +425451,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-06",
    "p": [
-    -45.38,
-    -26.15,
-    9.56
+    -39.53,
+    -60.91,
+    -14.64
    ],
    "comb": {
     "b": 0.398,
@@ -422393,10 +425532,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-06",
    "p": [
-    -35.08,
-    -36.36,
-    11.0
+    -39.65,
+    -60.43,
+    -13.74
    ],
    "comb": {
     "b": 0.385,
@@ -422484,10 +425625,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -34.03,
-    -47.87,
-    8.51
+    -33.23,
+    -30.77,
+    -8.01
    ],
    "comb": {
     "b": 0.615,
@@ -422576,10 +425719,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -31.94,
-    -42.87,
-    29.1
+    -53.21,
+    -28.99,
+    7.71
    ],
    "comb": {
     "b": 0.391,
@@ -422668,10 +425813,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -7.43,
-    -45.91,
-    28.95
+    -57.21,
+    -22.81,
+    15.21
    ],
    "comb": {
     "b": 0.517,
@@ -422749,10 +425896,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -25.9,
-    -51.34,
-    14.7
+    -65.7,
+    -40.35,
+    -4.92
    ],
    "comb": {
     "b": 0.401,
@@ -422834,10 +425983,12 @@ window.ROADMAP = {
      "B-059"
     ]
    },
+   "f": "F02",
+   "s": "F02-07",
    "p": [
-    -26.07,
-    -48.67,
-    17.19
+    -48.36,
+    -22.21,
+    6.64
    ],
    "comb": {
     "b": 0.454,
@@ -422924,10 +426075,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -24.77,
-    -46.38,
-    24.08
+    -50.11,
+    -28.05,
+    -4.41
    ],
    "comb": {
     "b": 0.318,
@@ -423014,10 +426167,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -24.91,
-    -51.33,
-    16.35
+    -49.92,
+    -31.1,
+    -2.19
    ],
    "comb": {
     "b": 0.495,
@@ -423095,10 +426250,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    37.89,
-    -34.89,
-    4.46
+    -33.0,
+    22.42,
+    0.42
    ],
    "comb": {
     "b": 0.512,
@@ -423176,10 +426333,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    35.12,
-    -39.87,
-    3.42
+    -36.68,
+    7.02,
+    -2.22
    ],
    "comb": {
     "b": 0.304,
@@ -423260,10 +426419,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    35.53,
-    -39.32,
-    5.07
+    -36.2,
+    17.5,
+    0.69
    ],
    "comb": {
     "b": 0.29,
@@ -423334,10 +426495,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    37.92,
-    -39.22,
-    -4.86
+    -28.23,
+    13.64,
+    -5.6
    ],
    "comb": {
     "b": 0.411,
@@ -423413,10 +426576,12 @@ window.ROADMAP = {
      "C-043"
     ]
    },
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    24.95,
-    -44.48,
-    -23.86
+    -33.59,
+    6.38,
+    0.81
    ],
    "comb": {
     "b": 0.387,
@@ -423498,10 +426663,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    30.23,
-    -41.75,
-    18.54
+    -39.66,
+    6.61,
+    3.01
    ],
    "comb": {
     "b": 0.421,
@@ -423574,10 +426741,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    40.17,
-    -26.99,
-    22.2
+    -42.03,
+    16.05,
+    11.05
    ],
    "comb": {
     "b": 0.577,
@@ -423656,10 +426825,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    35.59,
-    -37.32,
-    18.46
+    -43.06,
+    11.57,
+    5.0
    ],
    "comb": {
     "b": 0.443,
@@ -423732,10 +426903,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    27.59,
-    -33.69,
-    24.9
+    -34.31,
+    17.19,
+    -3.58
    ],
    "comb": {
     "b": 0.595,
@@ -423823,10 +426996,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-09",
    "p": [
-    36.29,
-    -30.23,
-    16.88
+    -11.56,
+    15.03,
+    -12.87
    ],
    "comb": {
     "b": 0.549,
@@ -423901,10 +427076,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    3.96,
-    -51.12,
-    6.63
+    -20.52,
+    -3.53,
+    -17.06
    ],
    "comb": {
     "b": 0.544,
@@ -423976,10 +427153,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    21.46,
-    -50.73,
-    17.63
+    -43.27,
+    -0.48,
+    -8.59
    ],
    "comb": {
     "b": 0.645,
@@ -424055,10 +427234,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -17.96,
-    -49.83,
-    -13.94
+    -14.93,
+    -22.24,
+    -14.76
    ],
    "comb": {
     "b": 0.688,
@@ -424137,10 +427318,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    13.02,
-    -49.12,
-    15.89
+    -40.2,
+    1.08,
+    1.03
    ],
    "comb": {
     "b": 0.499,
@@ -424218,10 +427401,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    22.75,
-    -41.07,
-    25.1
+    -45.96,
+    17.12,
+    10.66
    ],
    "comb": {
     "b": 0.524,
@@ -424294,10 +427479,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-04",
    "p": [
-    10.44,
-    -41.1,
-    29.58
+    -59.59,
+    39.2,
+    8.52
    ],
    "comb": {
     "b": 0.463,
@@ -424374,10 +427561,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    7.25,
-    -37.29,
-    35.07
+    -59.58,
+    30.06,
+    18.71
    ],
    "comb": {
     "b": 0.303,
@@ -424453,10 +427642,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    29.76,
-    -41.9,
-    32.61
+    -46.81,
+    40.02,
+    20.93
    ],
    "comb": {
     "b": 0.486,
@@ -424529,10 +427720,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    25.1,
-    -33.0,
-    28.22
+    -47.97,
+    38.27,
+    16.24
    ],
    "comb": {
     "b": 0.508,
@@ -424610,10 +427803,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -46.93,
-    10.62,
-    -10.51
+    26.93,
+    1.52,
+    -14.79
    ],
    "comb": {
     "b": 0.301,
@@ -424688,10 +427883,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -45.96,
-    -1.17,
-    -23.1
+    26.4,
+    5.6,
+    -15.26
    ],
    "comb": {
     "b": 0.4,
@@ -424756,10 +427953,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    4.97,
-    -58.02,
-    -5.63
+    25.98,
+    7.15,
+    -14.89
    ],
    "comb": {
     "b": 0.425,
@@ -424824,10 +428023,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -45.96,
-    -1.17,
-    -23.1
+    27.04,
+    0.7,
+    -16.3
    ],
    "comb": {
     "b": 0.4,
@@ -424891,10 +428092,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    46.78,
-    -19.74,
-    -1.9
+    25.05,
+    4.34,
+    -12.46
    ]
   },
   {
@@ -424961,10 +428164,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    32.43,
-    -36.68,
-    -13.6
+    14.25,
+    14.91,
+    -10.65
    ],
    "comb": {
     "b": 0.343,
@@ -425028,10 +428233,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    43.78,
-    -13.36,
-    22.06
+    -12.18,
+    46.37,
+    11.36
    ]
   },
   {
@@ -425086,10 +428293,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    43.78,
-    -13.36,
-    22.06
+    -25.88,
+    37.11,
+    3.02
    ]
   },
   {
@@ -425144,10 +428353,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    43.78,
-    -13.36,
-    22.06
+    -15.3,
+    51.32,
+    10.21
    ]
   },
   {
@@ -425202,10 +428413,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    43.78,
-    -13.36,
-    22.06
+    -19.08,
+    67.78,
+    14.75
    ]
   },
   {
@@ -425272,10 +428485,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    38.84,
-    -23.66,
-    18.91
+    -15.07,
+    22.37,
+    1.07
    ],
    "comb": {
     "b": 0.507,
@@ -425344,10 +428559,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    32.53,
-    -32.73,
-    27.85
+    -40.68,
+    33.3,
+    5.06
    ],
    "comb": {
     "b": 0.348,
@@ -425423,10 +428640,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    30.29,
-    -27.1,
-    30.48
+    -26.52,
+    32.4,
+    11.3
    ],
    "comb": {
     "b": 0.308,
@@ -425501,10 +428720,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    20.99,
-    -15.58,
-    39.12
+    -42.64,
+    26.55,
+    -0.99
    ],
    "comb": {
     "b": 0.418,
@@ -425580,10 +428801,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    12.75,
-    -14.96,
-    54.39
+    -37.16,
+    18.75,
+    0.96
    ],
    "comb": {
     "b": 0.317,
@@ -425659,10 +428882,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-02",
    "p": [
-    -34.61,
-    -25.85,
-    -38.45
+    -22.32,
+    -53.0,
+    -34.6
    ],
    "comb": {
     "b": 0.406,
@@ -425739,10 +428964,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -34.7,
-    -28.36,
-    -36.55
+    -23.15,
+    -29.52,
+    -25.23
    ],
    "comb": {
     "b": 0.296,
@@ -425818,10 +429045,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -32.26,
-    -17.04,
-    -38.78
+    -6.93,
+    -32.29,
+    -22.57
    ],
    "comb": {
     "b": 0.284,
@@ -425896,10 +429125,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    44.35,
-    -30.14,
-    5.49
+    -5.12,
+    19.58,
+    -18.19
    ],
    "comb": {
     "b": 0.42,
@@ -425974,10 +429205,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -38.1,
-    10.89,
-    11.89
+    28.9,
+    -8.08,
+    -17.88
    ]
   },
   {
@@ -426033,10 +429266,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -38.1,
-    10.89,
-    11.89
+    25.71,
+    -14.48,
+    -19.65
    ]
   },
   {
@@ -426101,10 +429336,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    -40.06,
-    3.27,
-    9.8
+    48.66,
+    -3.59,
+    -21.06
    ]
   },
   {
@@ -426159,10 +429396,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -43.07,
-    6.85,
-    9.09
+    15.6,
+    -26.46,
+    -32.82
    ]
   },
   {
@@ -426228,10 +429467,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -47.87,
-    4.14,
-    -16.53
+    31.95,
+    -14.33,
+    -14.92
    ],
    "comb": {
     "b": 0.442,
@@ -426296,10 +429537,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -12.71,
-    -35.06,
-    -41.03
+    -15.4,
+    -41.51,
+    -20.89
    ],
    "comb": {
     "b": 0.207,
@@ -426354,10 +429597,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -46.07,
-    -22.38,
-    -21.21
+    11.45,
+    -28.29,
+    -31.3
    ],
    "comb": {
     "b": 0.485,
@@ -426432,10 +429677,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -4.71,
-    36.25,
-    0.56
+    72.78,
+    5.69,
+    -1.01
    ],
    "comb": {
     "b": 0.353,
@@ -426506,10 +429753,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -36.53,
-    -30.93,
-    32.45
+    -46.2,
+    -37.3,
+    -5.54
    ],
    "comb": {
     "b": 0.453,
@@ -426587,10 +429836,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -30.9,
-    -36.86,
-    18.96
+    -25.23,
+    -16.57,
+    4.65
    ],
    "comb": {
     "b": 0.5,
@@ -426663,10 +429914,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -36.37,
-    -33.65,
-    19.47
+    -21.19,
+    -18.31,
+    1.28
    ],
    "comb": {
     "b": 0.486,
@@ -426742,10 +429995,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-06",
    "p": [
-    16.22,
-    -16.77,
-    42.31
+    -31.15,
+    27.45,
+    4.35
    ],
    "comb": {
     "b": 0.347,
@@ -426822,10 +430077,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    30.46,
-    -9.24,
-    49.09
+    -18.14,
+    17.5,
+    9.5
    ],
    "comb": {
     "b": 0.242,
@@ -426895,10 +430152,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    -3.99,
-    -36.33,
-    45.69
+    -32.85,
+    -2.84,
+    1.82
    ],
    "comb": {
     "b": 0.495,
@@ -426972,10 +430231,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    -27.34,
-    -48.38,
-    22.71
+    -41.0,
+    -15.43,
+    -5.14
    ],
    "comb": {
     "b": 0.192,
@@ -427046,10 +430307,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-09",
    "p": [
-    -19.32,
-    -52.51,
-    25.65
+    -36.52,
+    -15.23,
+    -5.71
    ],
    "comb": {
     "b": 0.092,
@@ -427116,10 +430379,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -38.23,
-    -42.3,
-    23.19
+    -48.84,
+    -12.6,
+    -6.86
    ],
    "comb": {
     "b": 0.42,
@@ -427191,10 +430456,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -37.77,
-    -38.84,
-    11.75
+    -65.87,
+    -33.34,
+    -2.23
    ],
    "comb": {
     "b": 0.294,
@@ -427259,10 +430526,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -8.93,
-    -55.95,
-    19.86
+    -46.59,
+    -5.13,
+    -9.01
    ],
    "comb": {
     "b": 0.379,
@@ -427332,10 +430601,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    34.58,
-    -40.64,
-    7.59
+    -41.9,
+    39.15,
+    1.34
    ],
    "comb": {
     "b": 0.405,
@@ -427407,10 +430678,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-06",
    "p": [
-    -39.51,
-    -5.42,
-    -33.92
+    -3.84,
+    -17.61,
+    -12.32
    ],
    "comb": {
     "b": 0.702,
@@ -427483,10 +430756,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    38.42,
-    -33.75,
-    31.44
+    -30.2,
+    14.82,
+    -0.6
    ],
    "comb": {
     "b": 0.61,
@@ -427563,10 +430838,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    31.82,
-    -34.07,
-    31.2
+    -40.71,
+    33.9,
+    3.5
    ],
    "comb": {
     "b": 0.162,
@@ -427637,10 +430914,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    40.09,
-    -38.53,
-    17.51
+    -41.1,
+    37.7,
+    1.69
    ],
    "comb": {
     "b": 0.358,
@@ -427716,10 +430995,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-10",
    "p": [
-    -29.72,
-    -50.26,
-    10.67
+    -59.35,
+    -38.1,
+    -15.8
    ],
    "comb": {
     "b": 0.172,
@@ -427797,10 +431078,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-10",
    "p": [
-    -5.0,
-    -54.93,
-    25.73
+    -59.81,
+    -35.05,
+    -15.43
    ],
    "comb": {
     "b": 0.536,
@@ -427877,10 +431160,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -35.3,
-    -17.04,
-    -37.01
+    -11.5,
+    -44.24,
+    -21.69
    ],
    "comb": {
     "b": 0.315,
@@ -427965,10 +431250,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -24.7,
-    -15.1,
-    -47.28
+    2.92,
+    -46.77,
+    -26.36
    ],
    "comb": {
     "b": 0.224,
@@ -428044,10 +431331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -53.69,
-    3.13,
-    -3.65
+    12.3,
+    -27.66,
+    -22.56
    ],
    "comb": {
     "b": 0.537,
@@ -428127,10 +431416,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-08",
    "p": [
-    -39.98,
-    2.23,
-    -36.07
+    -7.54,
+    -38.63,
+    -14.09
    ],
    "comb": {
     "b": 0.534,
@@ -428196,10 +431487,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    -48.24,
-    -21.41,
-    -16.98
+    -25.48,
+    -14.03,
+    -15.96
    ],
    "comb": {
     "b": 0.377,
@@ -428274,10 +431567,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -11.82,
-    -1.53,
-    -56.39
+    4.02,
+    -47.08,
+    -25.87
    ],
    "comb": {
     "b": 0.326,
@@ -428331,10 +431626,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -25.68,
-    -15.7,
-    -49.16
+    3.05,
+    -48.14,
+    -27.39
    ]
   },
   {
@@ -428401,10 +431698,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-08",
    "p": [
-    -37.69,
-    -18.93,
-    -38.3
+    -12.05,
+    -42.57,
+    -18.58
    ],
    "comb": {
     "b": 0.272,
@@ -428479,10 +431778,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -18.61,
-    -2.92,
-    -54.47
+    2.25,
+    -47.35,
+    -26.77
    ],
    "comb": {
     "b": 0.324,
@@ -428547,10 +431848,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -17.89,
-    -4.77,
-    -52.25
+    13.02,
+    -40.1,
+    -24.4
    ],
    "comb": {
     "b": 0.388,
@@ -428626,10 +431929,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -20.95,
-    -8.19,
-    -53.07
+    -5.58,
+    -46.03,
+    -23.56
    ],
    "comb": {
     "b": 0.379,
@@ -428694,10 +431999,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -23.86,
-    -26.53,
-    -43.3
+    -15.57,
+    -45.18,
+    -21.1
    ],
    "comb": {
     "b": 0.486,
@@ -428772,10 +432079,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-06",
    "p": [
-    -35.52,
-    -23.63,
-    -37.76
+    -13.1,
+    -44.33,
+    -21.84
    ],
    "comb": {
     "b": 0.312,
@@ -428840,10 +432149,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -36.89,
-    -19.75,
-    -36.37
+    -12.0,
+    -42.07,
+    -17.66
    ],
    "comb": {
     "b": 0.276,
@@ -428918,10 +432229,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-04",
    "p": [
-    -26.98,
-    -42.55,
-    -6.56
+    -30.54,
+    -39.54,
+    -8.42
    ],
    "comb": {
     "b": 0.355,
@@ -428997,10 +432310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    5.74,
-    -33.79,
-    -23.17
+    -25.22,
+    -27.19,
+    -8.25
    ],
    "comb": {
     "b": 0.413,
@@ -429076,10 +432391,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -26.52,
-    -38.02,
-    -20.81
+    -28.72,
+    -39.76,
+    -9.77
    ],
    "comb": {
     "b": 0.311,
@@ -429154,10 +432471,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-01",
    "p": [
-    -19.91,
-    -41.09,
-    -36.58
+    -30.08,
+    -47.43,
+    -17.4
    ],
    "comb": {
     "b": 0.144,
@@ -429241,10 +432560,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-05",
    "p": [
-    -21.35,
-    -44.83,
-    -30.93
+    -29.29,
+    -48.17,
+    -18.69
    ]
   },
   {
@@ -429311,10 +432632,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -19.3,
-    -37.47,
-    -36.02
+    -19.33,
+    -45.05,
+    -19.56
    ],
    "comb": {
     "b": 0.301,
@@ -429379,10 +432702,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -30.42,
-    -38.78,
-    -12.29
+    -37.53,
+    -46.22,
+    -16.06
    ],
    "comb": {
     "b": 0.482,
@@ -429458,10 +432783,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -32.24,
-    12.93,
-    -37.08
+    15.91,
+    -32.26,
+    -22.07
    ],
    "comb": {
     "b": 0.422,
@@ -429536,10 +432863,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -21.51,
-    10.64,
-    -47.27
+    15.78,
+    -34.53,
+    -22.7
    ]
   },
   {
@@ -429595,10 +432924,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -15.75,
-    -8.11,
-    -50.91
+    2.37,
+    -37.75,
+    -23.66
    ],
    "comb": {
     "b": 0.439,
@@ -429664,10 +432995,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -3.61,
-    4.45,
-    -55.81
+    2.51,
+    -38.78,
+    -23.63
    ],
    "comb": {
     "b": 0.452,
@@ -429744,10 +433077,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-03",
    "p": [
-    16.27,
-    -4.95,
-    -47.88
+    -1.18,
+    -21.04,
+    -11.27
    ],
    "comb": {
     "b": 0.424,
@@ -429823,10 +433158,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-08",
    "p": [
-    -8.94,
-    0.74,
-    -50.01
+    -10.21,
+    -40.68,
+    -17.94
    ],
    "comb": {
     "b": 0.527,
@@ -429892,10 +433229,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -14.56,
-    -4.72,
-    -55.57
+    4.06,
+    -51.51,
+    -27.17
    ],
    "comb": {
     "b": 0.325,
@@ -429960,10 +433299,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -6.84,
-    2.63,
-    -50.28
+    15.0,
+    -36.42,
+    -22.6
    ]
   },
   {
@@ -430009,10 +433350,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-03",
    "p": [
-    -10.32,
-    1.44,
-    -51.31
+    0.83,
+    -55.0,
+    -22.79
    ]
   },
   {
@@ -430069,10 +433412,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -41.68,
-    -2.79,
-    -39.71
+    10.22,
+    -33.62,
+    -23.96
    ],
    "comb": {
     "b": 0.275,
@@ -430137,10 +433482,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -23.51,
-    -11.2,
-    -48.94
+    0.73,
+    -46.28,
+    -25.85
    ],
    "comb": {
     "b": 0.457,
@@ -430206,10 +433553,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F09",
+   "s": "F09-10",
    "p": [
-    -25.1,
-    -7.73,
-    -51.31
+    2.24,
+    -45.91,
+    -26.12
    ],
    "comb": {
     "b": 0.53,
@@ -430297,10 +433646,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    31.94,
-    36.54,
-    2.6
+    44.65,
+    6.78,
+    8.38
    ],
    "comb": {
     "b": 0.484,
@@ -430390,10 +433741,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    24.88,
-    43.05,
-    -14.16
+    71.38,
+    8.58,
+    2.42
    ],
    "comb": {
     "b": 0.499,
@@ -430478,10 +433831,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    12.74,
-    51.44,
-    -5.16
+    79.82,
+    9.56,
+    3.4
    ]
   },
   {
@@ -430556,10 +433911,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    13.56,
-    51.1,
-    -6.29
+    71.91,
+    5.8,
+    4.63
    ]
   },
   {
@@ -430634,10 +433991,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    14.13,
-    51.09,
-    -4.97
+    81.92,
+    11.77,
+    3.92
    ]
   },
   {
@@ -430716,10 +434075,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    16.71,
-    51.54,
-    -8.06
+    70.09,
+    11.0,
+    2.29
    ],
    "comb": {
     "b": 0.289,
@@ -430811,10 +434172,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    31.99,
-    38.57,
-    2.12
+    47.34,
+    7.41,
+    7.9
    ],
    "comb": {
     "b": 0.444,
@@ -430904,10 +434267,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -32.1,
-    38.54,
-    0.19
+    44.61,
+    -1.7,
+    4.81
    ],
    "comb": {
     "b": 0.609,
@@ -430996,10 +434361,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -9.53,
-    40.21,
-    -19.01
+    63.99,
+    8.45,
+    -2.49
    ]
   },
   {
@@ -431075,10 +434442,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -44.44,
-    2.22,
-    -19.57
+    31.09,
+    -11.02,
+    -5.24
    ]
   },
   {
@@ -431153,10 +434522,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -45.43,
-    13.38,
-    -16.51
+    39.41,
+    -4.61,
+    -2.33
    ]
   },
   {
@@ -431231,10 +434602,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -45.38,
-    9.43,
-    -19.16
+    36.46,
+    -12.76,
+    -9.22
    ]
   },
   {
@@ -431309,10 +434682,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -14.86,
-    31.25,
-    9.83
+    62.25,
+    -12.2,
+    -6.42
    ]
   },
   {
@@ -431387,10 +434762,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -14.97,
-    33.21,
-    9.22
+    67.68,
+    -11.47,
+    -7.67
    ]
   },
   {
@@ -431469,10 +434846,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -5.58,
-    51.11,
-    5.42
+    72.24,
+    -8.59,
+    -5.26
    ],
    "comb": {
     "b": 0.305,
@@ -431560,10 +434939,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-08",
    "p": [
-    -14.13,
-    35.72,
-    7.67
+    67.41,
+    -13.76,
+    -18.51
    ],
    "comb": {
     "b": 0.304,
@@ -431653,10 +435034,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    47.87,
-    13.36,
-    -14.24
+    43.44,
+    23.9,
+    -9.24
    ],
    "comb": {
     "b": 0.316,
@@ -431741,10 +435124,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.15,
-    8.09,
-    -18.79
+    38.71,
+    24.59,
+    -11.65
    ]
   },
   {
@@ -431819,10 +435204,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    48.7,
-    2.84,
-    -21.33
+    39.96,
+    27.31,
+    -16.39
    ]
   },
   {
@@ -431902,10 +435289,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    47.6,
-    12.81,
-    -15.6
+    53.29,
+    26.57,
+    -6.22
    ],
    "comb": {
     "b": 0.293,
@@ -431994,10 +435383,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    46.93,
-    21.11,
-    -5.05
+    68.8,
+    24.04,
+    0.63
    ],
    "comb": {
     "b": 0.322,
@@ -432081,10 +435472,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    51.05,
-    14.88,
-    -2.66
+    76.75,
+    25.61,
+    0.74
    ]
   },
   {
@@ -432160,10 +435553,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    48.35,
-    22.3,
-    -0.33
+    71.67,
+    24.37,
+    1.64
    ]
   },
   {
@@ -432244,10 +435639,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.04,
-    10.69,
-    -12.39
+    36.21,
+    30.61,
+    -9.86
    ],
    "comb": {
     "b": 0.376,
@@ -432333,10 +435730,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.51,
-    -1.07,
-    -14.86
+    27.73,
+    35.14,
+    -9.11
    ]
   },
   {
@@ -432411,10 +435810,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    51.12,
-    -5.45,
-    -13.85
+    34.82,
+    34.48,
+    -11.37
    ]
   },
   {
@@ -432490,10 +435891,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    51.35,
-    -8.69,
-    -11.07
+    21.42,
+    35.33,
+    -8.57
    ]
   },
   {
@@ -432569,10 +435972,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.27,
-    0.17,
-    -15.67
+    21.63,
+    38.07,
+    -4.16
    ]
   },
   {
@@ -432652,10 +436057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    38.64,
-    26.17,
-    5.98
+    56.63,
+    16.83,
+    -7.57
    ],
    "comb": {
     "b": 0.533,
@@ -432741,10 +436148,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    44.69,
-    16.51,
-    -9.65
+    56.07,
+    19.72,
+    -9.66
    ]
   },
   {
@@ -432819,10 +436228,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    44.16,
-    17.35,
-    -10.54
+    61.57,
+    13.09,
+    -5.71
    ]
   },
   {
@@ -432897,10 +436308,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    43.28,
-    19.7,
-    -10.05
+    57.67,
+    22.8,
+    -6.47
    ]
   },
   {
@@ -432975,10 +436388,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    42.82,
-    17.94,
-    -14.38
+    44.96,
+    10.58,
+    -11.18
    ]
   },
   {
@@ -433058,10 +436473,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    47.4,
-    14.87,
-    -14.32
+    49.62,
+    18.94,
+    -10.95
    ],
    "comb": {
     "b": 0.293,
@@ -433145,10 +436562,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    48.42,
-    15.03,
-    -16.25
+    57.18,
+    17.92,
+    -9.84
    ]
   },
   {
@@ -433223,10 +436642,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    47.81,
-    15.93,
-    -17.17
+    56.61,
+    18.68,
+    -9.71
    ]
   },
   {
@@ -433304,10 +436725,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    51.65,
-    11.99,
-    -4.79
+    55.85,
+    18.87,
+    -8.57
    ],
    "comb": {
     "b": 0.294,
@@ -433391,10 +436814,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -2.85,
-    32.65,
-    -18.37
+    61.2,
+    14.3,
+    0.22
    ]
   },
   {
@@ -433470,10 +436895,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -0.03,
-    32.68,
-    -21.6
+    66.77,
+    15.51,
+    1.4
    ]
   },
   {
@@ -433550,10 +436977,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    0.58,
-    41.05,
-    -19.58
+    74.15,
+    9.59,
+    -1.8
    ]
   },
   {
@@ -433628,10 +437057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -0.37,
-    40.28,
-    -24.3
+    74.01,
+    12.0,
+    -1.1
    ]
   },
   {
@@ -433706,10 +437137,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    2.6,
-    39.55,
-    -25.36
+    75.12,
+    10.73,
+    -2.3
    ]
   },
   {
@@ -433784,10 +437217,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -0.54,
-    41.33,
-    -25.58
+    72.25,
+    14.46,
+    -0.09
    ]
   },
   {
@@ -433863,10 +437298,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -1.61,
-    45.83,
-    -16.12
+    68.54,
+    10.17,
+    -0.93
    ],
    "comb": {
     "b": 0.394,
@@ -433950,10 +437387,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    3.06,
-    44.46,
-    -23.01
+    71.08,
+    13.16,
+    0.01
    ]
   },
   {
@@ -434028,10 +437467,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    4.95,
-    44.0,
-    -23.56
+    69.61,
+    10.95,
+    -1.0
    ]
   },
   {
@@ -434106,10 +437547,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-10",
    "p": [
-    2.37,
-    43.81,
-    -24.3
+    53.0,
+    10.62,
+    3.03
    ]
   },
   {
@@ -434185,10 +437628,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    1.66,
-    43.48,
-    -17.91
+    73.57,
+    17.14,
+    1.77
    ],
    "comb": {
     "b": 0.401,
@@ -434272,10 +437717,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    4.52,
-    37.04,
-    -31.15
+    73.73,
+    17.99,
+    1.88
    ]
   },
   {
@@ -434350,10 +437797,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    3.35,
-    36.64,
-    -31.76
+    78.74,
+    28.25,
+    2.46
    ]
   },
   {
@@ -434430,10 +437879,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    4.82,
-    37.52,
-    -32.94
+    87.12,
+    26.76,
+    0.79
    ],
    "comb": {
     "b": 0.326,
@@ -434518,10 +437969,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    4.99,
-    35.09,
-    -35.49
+    81.49,
+    27.91,
+    2.43
    ]
   },
   {
@@ -434596,10 +438049,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    7.24,
-    34.97,
-    -37.38
+    81.55,
+    29.34,
+    2.25
    ]
   },
   {
@@ -434674,10 +438129,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    8.12,
-    34.1,
-    -38.0
+    81.58,
+    27.14,
+    1.86
    ]
   },
   {
@@ -434753,10 +438210,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    24.73,
-    35.59,
-    -30.93
+    61.39,
+    31.88,
+    -0.12
    ]
   },
   {
@@ -434832,10 +438291,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -4.91,
-    40.32,
-    -29.42
+    78.79,
+    13.46,
+    -1.84
    ]
   },
   {
@@ -434910,10 +438371,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -8.3,
-    42.35,
-    -28.47
+    78.59,
+    11.17,
+    -0.13
    ]
   },
   {
@@ -434988,10 +438451,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    4.3,
-    31.44,
-    -16.94
+    81.76,
+    15.78,
+    -9.19
    ]
   },
   {
@@ -435068,10 +438533,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    -2.56,
-    40.51,
-    -29.46
+    83.5,
+    21.59,
+    -4.28
    ]
   },
   {
@@ -435149,10 +438616,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    8.72,
-    42.82,
-    -35.51
+    75.99,
+    15.16,
+    3.66
    ],
    "comb": {
     "b": 0.177,
@@ -435238,10 +438707,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    34.9,
-    32.11,
-    -20.59
+    65.62,
+    28.33,
+    -6.12
    ]
   },
   {
@@ -435316,10 +438787,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    37.83,
-    29.27,
-    -23.39
+    64.78,
+    30.1,
+    -6.01
    ]
   },
   {
@@ -435394,10 +438867,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    39.21,
-    27.42,
-    -23.35
+    63.42,
+    33.98,
+    -5.75
    ]
   },
   {
@@ -435479,10 +438954,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    28.15,
-    43.3,
-    2.38
+    59.48,
+    26.77,
+    -4.98
    ],
    "comb": {
     "b": 0.498,
@@ -435568,10 +439045,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    38.35,
-    33.18,
-    -16.21
+    55.32,
+    31.75,
+    -4.18
    ]
   },
   {
@@ -435646,10 +439125,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    37.14,
-    33.92,
-    -17.47
+    46.64,
+    27.64,
+    -6.97
    ]
   },
   {
@@ -435726,10 +439207,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    38.19,
-    31.24,
-    -23.79
+    62.57,
+    35.54,
+    -4.32
    ],
    "comb": {
     "b": 0.3,
@@ -435813,10 +439296,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    42.28,
-    28.21,
-    -24.23
+    75.57,
+    29.97,
+    -0.24
    ]
   },
   {
@@ -435896,10 +439381,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    19.27,
-    39.4,
-    -27.37
+    69.35,
+    28.34,
+    -4.25
    ],
    "comb": {
     "b": 0.301,
@@ -435983,10 +439470,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    22.44,
-    36.07,
-    -32.09
+    68.11,
+    24.8,
+    -1.84
    ]
   },
   {
@@ -436061,10 +439550,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    21.36,
-    35.76,
-    -33.16
+    83.85,
+    27.79,
+    -7.37
    ]
   },
   {
@@ -436139,10 +439630,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    23.24,
-    34.9,
-    -32.81
+    83.07,
+    26.95,
+    -7.63
    ]
   },
   {
@@ -436217,10 +439710,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    22.79,
-    35.05,
-    -35.39
+    79.1,
+    22.55,
+    -7.13
    ]
   },
   {
@@ -436295,10 +439790,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    26.81,
-    34.69,
-    -32.84
+    83.94,
+    27.54,
+    -6.34
    ]
   },
   {
@@ -436373,10 +439870,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    29.7,
-    34.85,
-    -32.77
+    81.58,
+    28.98,
+    -6.22
    ]
   },
   {
@@ -436451,10 +439950,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    30.89,
-    33.99,
-    -32.57
+    77.75,
+    31.37,
+    -5.37
    ]
   },
   {
@@ -436530,10 +440031,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    25.94,
-    38.97,
-    -33.96
+    85.44,
+    25.58,
+    -7.88
    ]
   },
   {
@@ -436612,10 +440115,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    18.99,
-    44.5,
-    -18.22
+    71.3,
+    14.88,
+    0.63
    ],
    "comb": {
     "b": 0.291,
@@ -436699,10 +440204,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    24.9,
-    44.84,
-    -14.3
+    77.03,
+    14.69,
+    1.85
    ]
   },
   {
@@ -436777,10 +440284,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    26.9,
-    42.95,
-    -16.33
+    63.61,
+    13.96,
+    -1.73
    ]
   },
   {
@@ -436855,10 +440364,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    28.02,
-    42.06,
-    -16.73
+    76.98,
+    17.33,
+    1.62
    ]
   },
   {
@@ -436933,10 +440444,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    28.01,
-    42.58,
-    -15.41
+    77.88,
+    19.55,
+    1.17
    ]
   },
   {
@@ -437017,10 +440530,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -38.72,
-    19.81,
-    6.08
+    40.39,
+    -13.92,
+    -5.28
    ],
    "comb": {
     "b": 0.411,
@@ -437115,10 +440630,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -32.53,
-    28.77,
-    13.55
+    52.75,
+    -2.95,
+    0.64
    ],
    "comb": {
     "b": 0.49,
@@ -437208,10 +440725,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -47.41,
-    -1.66,
-    10.56
+    3.13,
+    -10.71,
+    -21.33
    ],
    "comb": {
     "b": 0.316,
@@ -437296,10 +440815,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -47.2,
-    1.88,
-    11.45
+    2.02,
+    -11.65,
+    -19.96
    ],
    "comb": {
     "b": 0.316,
@@ -437385,10 +440906,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -51.03,
-    5.6,
-    6.11
+    2.07,
+    -9.33,
+    -29.08
    ],
    "comb": {
     "b": 0.361,
@@ -437474,10 +440997,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -50.88,
-    -1.21,
-    9.12
+    1.12,
+    -6.74,
+    -27.44
    ],
    "comb": {
     "b": 0.361,
@@ -437563,10 +441088,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -51.26,
-    3.92,
-    5.52
+    2.66,
+    -11.13,
+    -27.11
    ],
    "comb": {
     "b": 0.361,
@@ -437651,10 +441178,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -38.62,
-    10.95,
-    7.09
+    17.08,
+    -5.42,
+    -27.33
    ]
   },
   {
@@ -437729,10 +441258,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    -48.54,
-    0.04,
-    -2.59
+    5.35,
+    -3.94,
+    -36.22
    ]
   },
   {
@@ -437807,10 +441338,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    -48.37,
-    -3.84,
-    -2.85
+    2.83,
+    -4.05,
+    -34.33
    ]
   },
   {
@@ -437886,10 +441419,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -34.5,
-    16.4,
-    27.47
+    -1.36,
+    16.41,
+    -11.87
    ]
   },
   {
@@ -437965,10 +441500,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-03",
    "p": [
-    -51.97,
-    10.43,
-    -5.0
+    -6.61,
+    -32.93,
+    -49.94
    ]
   },
   {
@@ -438050,10 +441587,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -42.35,
-    25.31,
-    20.02
+    -0.87,
+    -4.58,
+    -27.7
    ],
    "comb": {
     "b": 0.476,
@@ -438143,10 +441682,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -14.92,
-    -10.3,
-    45.1
+    0.98,
+    8.8,
+    -25.78
    ],
    "comb": {
     "b": 0.508,
@@ -438235,10 +441776,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -46.53,
-    -1.15,
-    14.02
+    1.57,
+    -5.25,
+    -32.22
    ],
    "comb": {
     "b": 0.336,
@@ -438323,10 +441866,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    -47.5,
-    -26.57,
-    6.18
+    -0.44,
+    -4.81,
+    -32.52
    ]
   },
   {
@@ -438404,10 +441949,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -20.2,
-    -35.53,
-    36.47
+    -32.88,
+    -0.93,
+    -4.42
    ],
    "comb": {
     "b": 0.386,
@@ -438496,10 +442043,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -11.54,
-    -35.1,
-    42.49
+    -30.41,
+    0.64,
+    -3.48
    ],
    "comb": {
     "b": 0.59,
@@ -438588,10 +442137,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -32.95,
-    -32.68,
-    34.51
+    -35.23,
+    -11.32,
+    -6.75
    ]
   },
   {
@@ -438668,10 +442219,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -35.62,
-    -0.15,
-    16.3
+    -20.95,
+    -25.93,
+    -6.86
    ],
    "comb": {
     "b": 0.502,
@@ -438759,10 +442312,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-14",
    "p": [
-    -30.09,
-    -1.28,
-    43.91
+    -17.32,
+    -7.29,
+    -10.47
    ],
    "comb": {
     "b": 0.592,
@@ -438853,10 +442408,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    53.27,
-    -18.91,
-    18.1
+    8.64,
+    41.25,
+    4.16
    ],
    "comb": {
     "b": 0.243,
@@ -438943,10 +442500,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    47.31,
-    7.27,
-    32.46
+    17.67,
+    54.46,
+    10.67
    ]
   },
   {
@@ -439028,10 +442587,12 @@ window.ROADMAP = {
      "P-230"
     ]
    },
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    51.14,
-    13.27,
-    23.51
+    27.94,
+    51.33,
+    6.32
    ],
    "comb": {
     "b": 0.394,
@@ -439115,10 +442676,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    47.98,
-    5.18,
-    31.87
+    25.1,
+    55.73,
+    8.41
    ]
   },
   {
@@ -439200,10 +442763,12 @@ window.ROADMAP = {
      "P-230"
     ]
    },
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    51.61,
-    14.08,
-    21.97
+    26.37,
+    55.41,
+    8.92
    ],
    "comb": {
     "b": 0.394,
@@ -439287,10 +442852,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    49.05,
-    4.96,
-    33.05
+    23.63,
+    59.29,
+    10.6
    ]
   },
   {
@@ -439366,10 +442933,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    39.59,
-    -9.29,
-    29.37
+    -25.26,
+    20.11,
+    -21.23
    ],
    "comb": {
     "b": 0.399,
@@ -439455,10 +443024,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    26.0,
-    -5.08,
-    44.4
+    -51.97,
+    38.38,
+    13.16
    ],
    "comb": {
     "b": 0.324,
@@ -439550,10 +443121,12 @@ window.ROADMAP = {
      "E-073"
     ]
    },
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    36.68,
-    -4.67,
-    36.13
+    8.23,
+    5.84,
+    -28.85
    ],
    "comb": {
     "b": 0.455,
@@ -439641,10 +443214,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    33.26,
-    -5.58,
-    35.01
+    -53.78,
+    38.44,
+    15.51
    ]
   },
   {
@@ -439720,10 +443295,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    32.83,
-    -6.98,
-    35.16
+    -10.03,
+    -4.87,
+    -40.4
    ]
   },
   {
@@ -439799,10 +443376,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-03",
    "p": [
-    23.43,
-    -21.66,
-    36.67
+    -15.85,
+    6.25,
+    -34.22
    ],
    "comb": {
     "b": 0.406,
@@ -439888,10 +443467,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    33.46,
-    -12.32,
-    33.03
+    -8.91,
+    21.45,
+    -8.4
    ],
    "comb": {
     "b": 0.423,
@@ -439977,10 +443558,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    21.35,
-    -5.43,
-    46.77
+    -52.78,
+    38.77,
+    13.88
    ],
    "comb": {
     "b": 0.363,
@@ -440064,10 +443647,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    35.93,
-    -5.94,
-    36.7
+    -64.02,
+    46.35,
+    21.57
    ]
   },
   {
@@ -440142,10 +443727,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    34.94,
-    -5.74,
-    37.68
+    -51.79,
+    43.49,
+    23.49
    ]
   },
   {
@@ -440221,10 +443808,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    36.12,
-    -4.71,
-    38.83
+    -61.11,
+    48.01,
+    25.49
    ]
   },
   {
@@ -440300,10 +443889,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    36.66,
-    -5.76,
-    38.18
+    -58.17,
+    43.24,
+    17.33
    ]
   },
   {
@@ -440378,10 +443969,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    35.2,
-    -7.14,
-    37.19
+    -65.74,
+    43.54,
+    20.82
    ]
   },
   {
@@ -440456,10 +444049,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-02",
    "p": [
-    37.48,
-    -5.04,
-    39.63
+    -68.39,
+    53.49,
+    28.21
    ]
   },
   {
@@ -440535,10 +444130,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    38.75,
-    -10.28,
-    30.14
+    -49.09,
+    32.35,
+    13.3
    ],
    "comb": {
     "b": 0.33,
@@ -440623,10 +444220,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    34.92,
-    -28.11,
-    7.73
+    -38.07,
+    56.62,
+    -18.25
    ],
    "comb": {
     "b": 0.444,
@@ -440711,10 +444310,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    37.54,
-    -34.3,
-    -9.34
+    -40.23,
+    58.44,
+    -18.6
    ]
   },
   {
@@ -440790,10 +444391,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    37.72,
-    -33.75,
-    -10.55
+    -38.09,
+    54.27,
+    -12.84
    ]
   },
   {
@@ -440869,10 +444472,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    36.83,
-    -34.86,
-    -10.07
+    -40.85,
+    58.24,
+    -18.56
    ]
   },
   {
@@ -440948,10 +444553,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    36.92,
-    -34.35,
-    -11.42
+    -32.64,
+    52.34,
+    -11.61
    ]
   },
   {
@@ -441029,10 +444636,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-06",
    "p": [
-    34.81,
-    -38.2,
-    -1.31
+    -35.07,
+    51.63,
+    -15.08
    ]
   },
   {
@@ -441109,10 +444718,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    40.84,
-    -26.38,
-    12.31
+    -0.72,
+    33.48,
+    -11.87
    ],
    "comb": {
     "b": 0.254,
@@ -441200,10 +444811,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    44.47,
-    -25.81,
-    5.39
+    -2.26,
+    41.67,
+    -6.27
    ],
    "comb": {
     "b": 0.475,
@@ -441293,10 +444906,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    44.34,
-    -25.72,
-    6.75
+    -7.47,
+    45.38,
+    -7.85
    ],
    "comb": {
     "b": 0.475,
@@ -441386,10 +445001,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    43.26,
-    -27.82,
-    5.28
+    -7.56,
+    47.52,
+    -12.73
    ],
    "comb": {
     "b": 0.475,
@@ -441476,10 +445093,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    28.46,
-    -44.03,
-    -9.27
+    -4.9,
+    48.77,
+    -15.64
    ],
    "comb": {
     "b": 0.414,
@@ -441567,10 +445186,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    43.89,
-    -26.92,
-    4.68
+    -5.04,
+    45.44,
+    -11.92
    ],
    "comb": {
     "b": 0.475,
@@ -441660,10 +445281,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    43.76,
-    -26.84,
-    6.13
+    -4.06,
+    44.46,
+    -13.48
    ],
    "comb": {
     "b": 0.475,
@@ -441756,10 +445379,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    42.79,
-    -27.48,
-    9.31
+    -8.58,
+    39.47,
+    1.98
    ],
    "comb": {
     "b": 0.478,
@@ -441845,10 +445470,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    35.65,
-    -37.44,
-    -0.22
+    -18.43,
+    31.46,
+    -10.89
    ]
   },
   {
@@ -441925,10 +445552,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    32.03,
-    -35.3,
-    20.01
+    -22.56,
+    28.8,
+    -6.56
    ],
    "comb": {
     "b": 0.556,
@@ -442013,10 +445642,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    35.95,
-    -37.13,
-    -1.58
+    -21.32,
+    31.12,
+    -9.22
    ]
   },
   {
@@ -442091,10 +445722,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    38.37,
-    -31.44,
-    7.42
+    -6.28,
+    26.78,
+    -12.93
    ]
   },
   {
@@ -442170,10 +445803,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    38.72,
-    -31.79,
-    2.49
+    1.62,
+    22.85,
+    -17.66
    ]
   },
   {
@@ -442253,10 +445888,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-07",
    "p": [
-    17.09,
-    -49.61,
-    9.04
+    4.55,
+    8.68,
+    -24.52
    ],
    "comb": {
     "b": 0.424,
@@ -442341,10 +445978,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-01",
    "p": [
-    39.53,
-    -30.62,
-    3.85
+    -5.35,
+    12.81,
+    -22.92
    ]
   },
   {
@@ -442420,10 +446059,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    1.79,
-    -11.78,
-    45.52
+    2.49,
+    15.55,
+    -18.82
    ],
    "comb": {
     "b": 0.384,
@@ -442507,10 +446148,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    31.02,
-    -33.26,
-    0.35
+    -0.56,
+    18.2,
+    -4.66
    ]
   },
   {
@@ -442587,10 +446230,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    29.4,
-    -34.85,
-    11.61
+    -4.23,
+    18.15,
+    -6.79
    ],
    "comb": {
     "b": 0.436,
@@ -442676,10 +446321,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    41.41,
-    -20.88,
-    7.97
+    -6.98,
+    23.4,
+    -3.28
    ],
    "comb": {
     "b": 0.312,
@@ -442764,10 +446411,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    34.36,
-    -38.58,
-    1.98
+    -12.77,
+    28.04,
+    -9.17
    ]
   },
   {
@@ -442848,10 +446497,12 @@ window.ROADMAP = {
      "E-060"
     ]
    },
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    38.52,
-    -24.44,
-    11.49
+    -5.55,
+    22.12,
+    -5.03
    ]
   },
   {
@@ -442934,10 +446585,12 @@ window.ROADMAP = {
      "E-060"
     ]
    },
+   "f": "F14",
+   "s": "F14-04",
    "p": [
-    40.66,
-    -28.2,
-    14.99
+    -7.82,
+    25.04,
+    -10.03
    ],
    "comb": {
     "b": 0.392,
@@ -443024,10 +446677,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    18.73,
-    -49.37,
-    -6.84
+    -2.95,
+    26.68,
+    -30.46
    ]
   },
   {
@@ -443104,10 +446759,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    18.49,
-    -49.26,
-    -8.12
+    -2.39,
+    25.03,
+    -29.87
    ]
   },
   {
@@ -443184,10 +446841,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-01",
    "p": [
-    17.5,
-    -49.81,
-    -6.9
+    -5.75,
+    24.82,
+    -26.06
    ]
   },
   {
@@ -443264,10 +446923,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    17.27,
-    -49.7,
-    -8.18
+    2.32,
+    2.23,
+    -31.67
    ]
   },
   {
@@ -443349,10 +447010,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-08",
    "p": [
-    15.91,
-    -52.36,
-    -2.53
+    6.92,
+    8.52,
+    -29.43
    ],
    "comb": {
     "b": 0.127,
@@ -443439,10 +447102,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    13.31,
-    -46.35,
-    13.79
+    3.61,
+    30.05,
+    -9.32
    ],
    "comb": {
     "b": 0.258,
@@ -443528,10 +447193,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-08",
    "p": [
-    9.78,
-    -48.96,
-    4.77
+    9.87,
+    3.77,
+    -26.45
    ]
   },
   {
@@ -443613,10 +447280,12 @@ window.ROADMAP = {
      "P-119"
     ]
    },
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    28.39,
-    -45.0,
-    1.96
+    -34.24,
+    51.27,
+    -24.66
    ],
    "comb": {
     "b": 0.484,
@@ -443701,10 +447370,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-10",
    "p": [
-    29.52,
-    -34.99,
-    -10.88
+    -46.43,
+    57.26,
+    -29.53
    ]
   },
   {
@@ -443781,10 +447452,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    35.52,
-    -38.13,
-    -10.91
+    -50.28,
+    67.46,
+    -30.31
    ]
   },
   {
@@ -443861,10 +447534,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    34.56,
-    -38.87,
-    -11.39
+    -51.12,
+    67.93,
+    -30.55
    ]
   },
   {
@@ -443940,10 +447615,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-01",
    "p": [
-    -6.85,
-    -41.6,
-    -27.16
+    -38.18,
+    28.89,
+    -36.34
    ],
    "comb": {
     "b": 0.23,
@@ -444027,10 +447704,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-01",
    "p": [
-    15.99,
-    -43.22,
-    -23.44
+    -46.19,
+    35.79,
+    -46.74
    ]
   },
   {
@@ -444107,10 +447786,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    33.56,
-    -37.68,
-    -11.27
+    -51.4,
+    66.24,
+    -29.09
    ]
   },
   {
@@ -444187,10 +447868,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    34.54,
-    -38.3,
-    -13.2
+    -50.11,
+    69.29,
+    -33.43
    ],
    "comb": {
     "b": 0.393,
@@ -444279,10 +447962,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-07",
    "p": [
-    34.8,
-    -36.52,
-    -11.32
+    -49.83,
+    69.53,
+    -32.42
    ],
    "comb": {
     "b": 0.475,
@@ -444374,10 +448059,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    41.74,
-    -27.01,
-    14.2
+    -41.61,
+    52.42,
+    -18.27
    ],
    "comb": {
     "b": 0.523,
@@ -444464,10 +448151,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    42.53,
-    -23.03,
-    4.85
+    -29.45,
+    -3.19,
+    -30.37
    ],
    "comb": {
     "b": 0.34,
@@ -444552,10 +448241,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    42.38,
-    -22.99,
-    6.19
+    -29.47,
+    -3.67,
+    -30.08
    ],
    "comb": {
     "b": 0.34,
@@ -444640,10 +448331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-02",
    "p": [
-    41.89,
-    -24.04,
-    5.49
+    -38.36,
+    -1.69,
+    -44.26
    ],
    "comb": {
     "b": 0.34,
@@ -444729,10 +448422,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-02",
    "p": [
-    44.16,
-    -23.72,
-    1.71
+    -42.1,
+    -1.54,
+    -49.84
    ]
   },
   {
@@ -444809,10 +448504,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    43.65,
-    -24.69,
-    1.09
+    -30.4,
+    -3.41,
+    -31.66
    ]
   },
   {
@@ -444892,10 +448589,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-02",
    "p": [
-    44.48,
-    -21.84,
-    7.77
+    -40.8,
+    -0.08,
+    -48.0
    ],
    "comb": {
     "b": 0.565,
@@ -444984,10 +448683,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-02",
    "p": [
-    45.07,
-    -25.19,
-    -2.68
+    -44.83,
+    -1.03,
+    -54.09
    ]
   },
   {
@@ -445064,10 +448765,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    43.54,
-    -24.78,
-    2.47
+    -31.14,
+    -3.31,
+    -32.8
    ]
   },
   {
@@ -445145,10 +448848,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-01",
    "p": [
-    38.46,
-    -32.01,
-    -3.47
+    -29.85,
+    -11.11,
+    -26.48
    ],
    "comb": {
     "b": 0.322,
@@ -445214,10 +448919,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -23.75,
-    39.76,
-    -22.98
+    51.97,
+    -3.39,
+    -4.29
    ],
    "comb": {
     "b": 0.382,
@@ -445292,10 +448999,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -14.99,
-    35.1,
-    8.82
+    63.29,
+    -11.88,
+    -7.72
    ],
    "comb": {
     "b": 0.311,
@@ -445360,10 +449069,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -16.1,
-    36.35,
-    9.01
+    42.4,
+    -6.26,
+    -16.29
    ]
   },
   {
@@ -445418,10 +449129,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    -39.01,
-    7.21,
-    25.29
+    32.84,
+    13.56,
+    -8.18
    ]
   },
   {
@@ -445477,10 +449190,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -34.6,
-    19.63,
-    8.9
+    53.4,
+    -9.31,
+    -3.19
    ],
    "comb": {
     "b": 0.304,
@@ -445565,10 +449280,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -18.66,
-    -0.01,
-    -56.34
+    48.74,
+    -0.33,
+    -37.64
    ],
    "comb": {
     "b": 0.291,
@@ -445643,10 +449360,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -38.67,
-    -16.92,
-    -32.45
+    -1.55,
+    -23.71,
+    -19.94
    ],
    "comb": {
     "b": 0.408,
@@ -445718,10 +449437,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    51.55,
-    -16.25,
-    24.53
+    -6.74,
+    60.56,
+    19.04
    ],
    "comb": {
     "b": 0.373,
@@ -445797,10 +449518,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    48.55,
-    -21.63,
-    22.79
+    -0.76,
+    61.31,
+    18.16
    ],
    "comb": {
     "b": 0.238,
@@ -445875,10 +449598,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    48.91,
-    -22.16,
-    21.46
+    -5.31,
+    63.74,
+    20.47
    ],
    "comb": {
     "b": 0.238,
@@ -445954,10 +449679,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    52.16,
-    -20.98,
-    23.34
+    -4.53,
+    61.79,
+    19.5
    ],
    "comb": {
     "b": 0.218,
@@ -446033,10 +449760,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    39.99,
-    -16.84,
-    30.86
+    1.02,
+    60.76,
+    16.34
    ],
    "comb": {
     "b": 0.354,
@@ -446113,10 +449842,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    55.28,
-    -16.66,
-    19.27
+    5.83,
+    38.95,
+    3.34
    ]
   },
   {
@@ -446177,10 +449908,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    49.58,
-    -11.35,
-    15.73
+    4.89,
+    40.34,
+    -1.41
    ],
    "comb": {
     "b": 0.293,
@@ -446250,10 +449983,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    48.53,
-    -30.44,
-    -7.9
+    -5.16,
+    24.82,
+    -17.1
    ],
    "comb": {
     "b": 0.386,
@@ -446322,10 +450057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-03",
    "p": [
-    46.47,
-    -34.4,
-    1.39
+    -37.98,
+    16.75,
+    -2.03
    ]
   },
   {
@@ -446381,10 +450118,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    35.51,
-    -43.26,
-    -14.56
+    -5.93,
+    18.0,
+    -16.6
    ],
    "comb": {
     "b": 0.43,
@@ -446449,10 +450188,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    49.68,
-    -31.77,
-    -6.73
+    -16.13,
+    43.37,
+    -0.21
    ],
    "comb": {
     "b": 0.311,
@@ -446523,10 +450264,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    50.15,
-    -20.67,
-    7.6
+    -14.45,
+    26.56,
+    -4.44
    ],
    "comb": {
     "b": 0.449,
@@ -446599,10 +450342,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-03",
    "p": [
-    44.27,
-    -39.41,
-    -3.13
+    -34.73,
+    24.94,
+    -6.93
    ],
    "comb": {
     "b": 0.613,
@@ -446678,10 +450423,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-07",
    "p": [
-    17.3,
-    -45.97,
-    33.32
+    -38.48,
+    7.6,
+    -4.48
    ],
    "comb": {
     "b": 0.589,
@@ -446762,10 +450509,12 @@ window.ROADMAP = {
      "B-066"
     ]
    },
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    1.52,
-    -56.62,
-    11.68
+    -26.0,
+    -5.75,
+    -17.89
    ],
    "comb": {
     "b": 0.585,
@@ -446842,10 +450591,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    39.04,
-    -30.85,
-    35.06
+    -35.43,
+    29.71,
+    21.96
    ],
    "comb": {
     "b": 0.455,
@@ -446922,10 +450673,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    -1.35,
-    -41.68,
-    40.07
+    -40.62,
+    15.08,
+    16.22
    ],
    "comb": {
     "b": 0.575,
@@ -447004,10 +450757,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    31.66,
-    -29.7,
-    28.08
+    -26.24,
+    34.12,
+    9.78
    ],
    "comb": {
     "b": 0.497,
@@ -447083,10 +450838,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    26.58,
-    -47.87,
-    26.59
+    -30.49,
+    30.13,
+    4.34
    ],
    "comb": {
     "b": 0.349,
@@ -447163,10 +450920,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    40.1,
-    -27.22,
-    39.27
+    -29.56,
+    36.22,
+    12.63
    ],
    "comb": {
     "b": 0.383,
@@ -447242,10 +451001,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    27.45,
-    -38.77,
-    38.05
+    -33.31,
+    29.56,
+    16.19
    ],
    "comb": {
     "b": 0.278,
@@ -447322,10 +451083,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    25.94,
-    -25.93,
-    36.44
+    -49.62,
+    39.43,
+    19.75
    ],
    "comb": {
     "b": 0.519,
@@ -447403,10 +451166,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    29.28,
-    -31.01,
-    36.76
+    -23.98,
+    25.07,
+    2.48
    ],
    "comb": {
     "b": 0.331,
@@ -447499,10 +451264,12 @@ window.ROADMAP = {
      "P-119"
     ]
    },
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    -1.77,
-    -15.09,
-    54.22
+    -13.21,
+    15.75,
+    -3.58
    ],
    "comb": {
     "b": 0.463,
@@ -447589,10 +451356,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -17.83,
-    -30.59,
-    37.67
+    -33.91,
+    -11.39,
+    -7.14
    ],
    "comb": {
     "b": 0.5,
@@ -447669,10 +451438,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -16.89,
-    -30.26,
-    46.3
+    -44.68,
+    -13.25,
+    -1.51
    ],
    "comb": {
     "b": 0.414,
@@ -447759,10 +451530,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -33.21,
-    -38.63,
-    30.45
+    -49.54,
+    -31.66,
+    -5.35
    ],
    "comb": {
     "b": 0.419,
@@ -447851,10 +451624,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -35.64,
-    -43.46,
-    19.07
+    -38.52,
+    -32.85,
+    -10.37
    ],
    "comb": {
     "b": 0.499,
@@ -447931,10 +451706,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -53.16,
-    2.0,
-    -2.22
+    -2.99,
+    -17.38,
+    -28.92
    ]
   },
   {
@@ -448001,10 +451778,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -53.21,
-    0.28,
-    1.72
+    -3.87,
+    -10.38,
+    -28.58
    ],
    "comb": {
     "b": 0.306,
@@ -448081,10 +451860,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    37.4,
-    36.45,
-    -24.85
+    71.52,
+    32.2,
+    -5.51
    ],
    "comb": {
     "b": 0.355,
@@ -448160,10 +451941,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    -52.48,
-    8.65,
-    2.4
+    5.04,
+    -6.69,
+    -35.2
    ]
   },
   {
@@ -448230,10 +452013,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    36.99,
-    34.17,
-    -28.44
+    49.45,
+    41.2,
+    -0.1
    ],
    "comb": {
     "b": 0.4,
@@ -448310,10 +452095,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.44,
-    9.01,
-    -17.58
+    37.31,
+    33.11,
+    -9.74
    ]
   },
   {
@@ -448380,10 +452167,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-02",
    "p": [
-    38.24,
-    -33.78,
-    15.21
+    2.85,
+    27.0,
+    -13.9
    ],
    "comb": {
     "b": 0.54,
@@ -448460,10 +452249,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    -39.22,
-    40.06,
-    5.16
+    30.97,
+    24.71,
+    2.19
    ],
    "comb": {
     "b": 0.584,
@@ -448540,10 +452331,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-02",
    "p": [
-    -44.6,
-    -4.77,
-    22.45
+    5.41,
+    1.17,
+    -35.1
    ],
    "comb": {
     "b": 0.261,
@@ -448619,10 +452412,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    -38.42,
-    29.48,
-    22.12
+    39.45,
+    14.25,
+    -1.21
    ],
    "comb": {
     "b": 0.492,
@@ -448697,10 +452492,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    40.02,
-    -36.99,
-    -5.56
+    -5.06,
+    50.04,
+    -15.34
    ]
   },
   {
@@ -448766,10 +452563,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    24.46,
-    45.8,
-    -17.46
+    63.65,
+    12.27,
+    -0.92
    ],
    "comb": {
     "b": 0.221,
@@ -448844,10 +452643,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    49.48,
-    -8.25,
-    17.85
+    -0.58,
+    42.99,
+    0.43
    ],
    "comb": {
     "b": 0.293,
@@ -448923,10 +452724,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    48.18,
-    17.99,
-    -13.77
+    39.15,
+    7.95,
+    -11.91
    ],
    "comb": {
     "b": 0.483,
@@ -449002,10 +452805,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    -6.17,
-    -5.48,
-    -51.04
+    35.12,
+    13.36,
+    -12.8
    ],
    "comb": {
     "b": 0.398,
@@ -449080,10 +452885,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    25.55,
-    35.27,
-    -35.69
+    86.72,
+    28.99,
+    -7.48
    ]
   },
   {
@@ -449149,10 +452956,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    48.88,
-    9.81,
-    -5.5
+    41.31,
+    14.25,
+    0.76
    ],
    "comb": {
     "b": 0.216,
@@ -449233,10 +453042,12 @@ window.ROADMAP = {
      "P-015"
     ]
    },
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    52.99,
-    -1.95,
-    -13.74
+    35.05,
+    28.32,
+    -11.99
    ],
    "comb": {
     "b": 0.403,
@@ -449313,10 +453124,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    52.77,
-    -3.34,
-    -14.31
+    57.67,
+    35.76,
+    -6.68
    ],
    "comb": {
     "b": 0.299,
@@ -449391,10 +453204,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    44.05,
-    -7.11,
-    36.79
+    15.61,
+    49.74,
+    4.76
    ],
    "comb": {
     "b": 0.323,
@@ -449470,10 +453285,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    46.1,
-    -13.24,
-    26.45
+    -8.81,
+    25.34,
+    -7.63
    ],
    "comb": {
     "b": 0.524,
@@ -449550,10 +453367,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    36.92,
-    -37.83,
-    6.35
+    -13.73,
+    23.29,
+    -2.89
    ],
    "comb": {
     "b": 0.261,
@@ -449630,10 +453449,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -29.52,
-    41.63,
-    8.3
+    56.86,
+    3.08,
+    0.62
    ],
    "comb": {
     "b": 0.654,
@@ -449711,10 +453532,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    49.99,
-    4.11,
-    25.59
+    23.07,
+    48.52,
+    7.02
    ]
   },
   {
@@ -449781,10 +453604,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    55.97,
-    -14.2,
-    19.25
+    -5.59,
+    41.49,
+    2.34
    ],
    "comb": {
     "b": 0.253,
@@ -449860,10 +453685,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F14",
+   "s": "F14-05",
    "p": [
-    37.21,
-    -33.63,
-    0.14
+    8.62,
+    15.22,
+    -6.81
    ],
    "comb": {
     "b": 0.306,
@@ -449939,10 +453766,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    42.33,
-    -32.29,
-    0.24
+    -20.1,
+    57.31,
+    -13.49
    ]
   },
   {
@@ -450009,10 +453838,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-04",
    "p": [
-    38.78,
-    -27.31,
-    33.08
+    6.4,
+    20.12,
+    -13.16
    ],
    "comb": {
     "b": 0.346,
@@ -450088,10 +453919,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    47.97,
-    -21.4,
-    24.19
+    5.24,
+    49.11,
+    0.58
    ],
    "comb": {
     "b": 0.451,
@@ -450173,10 +454006,12 @@ window.ROADMAP = {
      "E-071"
     ]
    },
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    53.51,
-    -1.22,
-    21.89
+    1.65,
+    43.1,
+    3.71
    ],
    "comb": {
     "b": 0.39,
@@ -450251,10 +454086,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-05",
    "p": [
-    43.13,
-    -8.14,
-    27.33
+    -6.41,
+    25.66,
+    -9.73
    ]
   },
   {
@@ -450321,10 +454158,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    47.63,
-    -12.82,
-    30.2
+    -5.62,
+    27.91,
+    -4.31
    ],
    "comb": {
     "b": 0.424,
@@ -450401,10 +454240,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    54.62,
-    -11.79,
-    20.01
+    9.83,
+    48.57,
+    3.93
    ],
    "comb": {
     "b": 0.394,
@@ -450482,10 +454323,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-05",
    "p": [
-    41.76,
-    -27.66,
-    12.8
+    -20.7,
+    46.03,
+    -11.5
    ],
    "comb": {
     "b": 0.476,
@@ -450563,10 +454406,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    35.3,
-    -41.18,
-    -15.13
+    -45.39,
+    57.44,
+    -23.27
    ],
    "comb": {
     "b": 0.409,
@@ -450642,10 +454487,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    -10.91,
-    54.67,
-    7.89
+    32.47,
+    27.84,
+    3.78
    ],
    "comb": {
     "b": 0.621,
@@ -450721,10 +454568,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    55.47,
-    -17.42,
-    18.03
+    2.8,
+    36.79,
+    2.65
    ]
   },
   {
@@ -450791,10 +454640,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-08",
    "p": [
-    -50.64,
-    -29.12,
-    10.51
+    -37.11,
+    -19.95,
+    -18.03
    ],
    "comb": {
     "b": 0.486,
@@ -450867,10 +454718,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -44.93,
-    -36.8,
-    12.22
+    -74.08,
+    -43.59,
+    -3.87
    ],
    "comb": {
     "b": 0.356,
@@ -450947,10 +454800,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -49.06,
-    -33.37,
-    -1.37
+    -39.01,
+    -25.0,
+    -15.25
    ],
    "comb": {
     "b": 0.481,
@@ -451023,10 +454878,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -47.94,
-    -36.81,
-    7.15
+    -51.74,
+    -35.31,
+    -5.28
    ],
    "comb": {
     "b": 0.321,
@@ -451104,10 +454961,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -42.39,
-    -38.52,
-    15.56
+    -46.67,
+    -40.55,
+    -11.17
    ],
    "comb": {
     "b": 0.38,
@@ -451184,10 +455043,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -40.29,
-    -40.58,
-    20.86
+    -50.62,
+    -30.87,
+    -6.43
    ],
    "comb": {
     "b": 0.417,
@@ -451259,10 +455120,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-09",
    "p": [
-    -48.56,
-    -31.41,
-    -0.06
+    -13.77,
+    -4.63,
+    -27.74
    ],
    "comb": {
     "b": 0.541,
@@ -451349,10 +455212,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-06",
    "p": [
-    -16.34,
-    -37.29,
-    -34.31
+    -22.41,
+    -36.48,
+    -20.88
    ],
    "comb": {
     "b": 0.301,
@@ -451439,10 +455304,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-06",
    "p": [
-    -25.31,
-    -35.11,
-    -31.0
+    -19.81,
+    -35.26,
+    -22.03
    ],
    "comb": {
     "b": 0.552,
@@ -451520,10 +455387,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-06",
    "p": [
-    -24.06,
-    -37.48,
-    -31.89
+    -19.86,
+    -36.14,
+    -22.53
    ],
    "comb": {
     "b": 0.337,
@@ -451599,10 +455468,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -37.43,
-    19.89,
-    11.49
+    55.24,
+    -9.0,
+    -4.33
    ],
    "comb": {
     "b": 0.207,
@@ -451669,10 +455540,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -34.96,
-    31.22,
-    4.1
+    48.84,
+    0.54,
+    -1.32
    ],
    "comb": {
     "b": 0.467,
@@ -451762,10 +455635,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    50.94,
-    5.18,
-    32.92
+    15.53,
+    60.07,
+    13.04
    ],
    "comb": {
     "b": 0.247,
@@ -451831,10 +455706,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    51.82,
-    -5.45,
-    34.3
+    9.1,
+    61.4,
+    15.29
    ],
    "comb": {
     "b": 0.316,
@@ -451901,10 +455778,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    46.23,
-    -18.85,
-    32.09
+    3.66,
+    61.98,
+    17.03
    ],
    "comb": {
     "b": 0.18,
@@ -451961,10 +455840,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-07",
    "p": [
-    50.24,
-    -21.34,
-    26.94
+    -4.68,
+    64.17,
+    19.63
    ],
    "comb": {
     "b": 0.237,
@@ -452025,10 +455906,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    -10.45,
-    -7.42,
-    56.39
+    -9.39,
+    24.37,
+    -0.38
    ],
    "comb": {
     "b": 0.577,
@@ -452087,10 +455970,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    -1.36,
-    -31.36,
-    52.15
+    -43.66,
+    30.29,
+    19.92
    ],
    "comb": {
     "b": 0.658,
@@ -452149,10 +456034,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -31.67,
-    -38.82,
-    34.56
+    -41.53,
+    -30.97,
+    -10.11
    ],
    "comb": {
     "b": 0.353,
@@ -452208,10 +456095,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-04",
    "p": [
-    -27.01,
-    -41.96,
-    13.52
+    -30.09,
+    -33.09,
+    -13.24
    ]
   },
   {
@@ -452287,10 +456176,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-18",
    "p": [
-    -42.31,
-    -26.68,
-    29.03
+    -59.48,
+    -42.54,
+    -4.06
    ],
    "comb": {
     "b": 0.378,
@@ -452375,10 +456266,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-05",
    "p": [
-    -30.81,
-    -34.98,
-    34.23
+    -84.6,
+    -38.08,
+    -10.12
    ],
    "comb": {
     "b": 0.11,
@@ -452461,10 +456354,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    41.06,
-    -35.99,
-    -13.74
+    -30.72,
+    10.54,
+    -4.01
    ],
    "comb": {
     "b": 0.447,
@@ -452546,10 +456441,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-09",
    "p": [
-    27.53,
-    -38.74,
-    20.36
+    -13.17,
+    -0.35,
+    -25.81
    ],
    "comb": {
     "b": 0.64,
@@ -452633,10 +456530,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -27.1,
-    -43.42,
-    30.06
+    -53.86,
+    -35.8,
+    -2.51
    ],
    "comb": {
     "b": 0.448,
@@ -452715,10 +456614,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F11",
+   "s": "F11-06",
    "p": [
-    47.07,
-    -32.04,
-    -10.11
+    -5.89,
+    23.4,
+    -16.18
    ],
    "comb": {
     "b": 0.31,
@@ -452795,10 +456696,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    48.82,
-    -32.79,
-    8.05
+    -23.43,
+    27.04,
+    -1.78
    ],
    "comb": {
     "b": 0.574,
@@ -452865,10 +456768,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    44.89,
-    -26.86,
-    9.89
+    -16.28,
+    28.32,
+    -4.28
    ],
    "comb": {
     "b": 0.451,
@@ -452945,10 +456850,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    27.53,
-    -51.73,
-    9.41
+    -29.49,
+    -1.47,
+    -16.0
    ],
    "comb": {
     "b": 0.387,
@@ -453025,10 +456932,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    23.33,
-    -21.76,
-    50.05
+    -44.53,
+    27.23,
+    -1.47
    ],
    "comb": {
     "b": 0.47,
@@ -453105,10 +457014,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-08",
    "p": [
-    18.1,
-    -18.01,
-    53.58
+    -36.32,
+    27.45,
+    -0.41
    ],
    "comb": {
     "b": 0.426,
@@ -453185,10 +457096,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    -17.83,
-    -52.14,
-    22.05
+    -25.27,
+    -7.83,
+    -19.13
    ],
    "comb": {
     "b": 0.342,
@@ -453276,10 +457189,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-04",
    "p": [
-    -34.81,
-    -27.11,
-    -37.38
+    -9.46,
+    -23.61,
+    -27.06
    ],
    "comb": {
     "b": 0.24,
@@ -453355,10 +457270,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F12",
+   "s": "F12-07",
    "p": [
-    -25.2,
-    -31.24,
-    -37.28
+    -10.21,
+    -34.64,
+    -23.82
    ],
    "comb": {
     "b": 0.364,
@@ -453435,10 +457352,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -51.36,
-    -7.22,
-    21.92
+    -34.51,
+    -30.23,
+    -6.62
    ],
    "comb": {
     "b": 0.432,
@@ -453515,10 +457434,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -53.38,
-    -2.54,
-    23.8
+    28.26,
+    -6.43,
+    -16.43
    ],
    "comb": {
     "b": 0.611,
@@ -453593,10 +457514,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-04",
    "p": [
-    -40.13,
-    11.47,
-    12.52
+    29.31,
+    -8.22,
+    -18.24
    ]
   },
   {
@@ -453662,10 +457585,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -39.84,
-    4.55,
-    10.18
+    29.0,
+    -12.8,
+    -40.17
    ],
    "comb": {
     "b": 0.459,
@@ -453729,10 +457654,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -43.07,
-    6.85,
-    9.09
+    27.27,
+    -23.34,
+    -39.14
    ]
   },
   {
@@ -453799,10 +457726,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-08",
    "p": [
-    -32.66,
-    25.98,
-    10.19
+    49.17,
+    -16.22,
+    -23.4
    ],
    "comb": {
     "b": 0.366,
@@ -453878,10 +457807,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-01",
    "p": [
-    -38.69,
-    6.26,
-    34.71
+    5.63,
+    15.38,
+    -18.76
    ],
    "comb": {
     "b": 0.417,
@@ -453956,10 +457887,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -39.49,
-    4.05,
-    11.66
+    26.59,
+    -10.75,
+    -39.57
    ],
    "comb": {
     "b": 0.457,
@@ -454034,10 +457967,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -30.2,
-    31.94,
-    7.19
+    52.09,
+    -14.9,
+    -6.71
    ],
    "comb": {
     "b": 0.443,
@@ -454112,10 +458047,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -41.69,
-    6.51,
-    14.27
+    34.35,
+    -21.57,
+    -35.44
    ],
    "comb": {
     "b": 0.274,
@@ -454191,10 +458128,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -40.69,
-    14.17,
-    11.28
+    34.99,
+    -17.0,
+    -20.59
    ],
    "comb": {
     "b": 0.239,
@@ -454270,10 +458209,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-06",
    "p": [
-    -49.19,
-    -2.51,
-    -0.7
+    8.3,
+    -18.89,
+    -7.46
    ],
    "comb": {
     "b": 0.421,
@@ -454350,10 +458291,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -44.1,
-    6.88,
-    13.91
+    19.04,
+    -24.07,
+    -33.18
    ],
    "comb": {
     "b": 0.444,
@@ -454430,10 +458373,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-09",
    "p": [
-    -37.83,
-    1.28,
-    29.01
+    15.41,
+    -21.58,
+    -26.8
    ],
    "comb": {
     "b": 0.359,
@@ -454510,10 +458455,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -18.94,
-    45.69,
-    -11.62
+    69.49,
+    4.63,
+    -3.8
    ],
    "comb": {
     "b": 0.431,
@@ -454591,10 +458538,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -39.23,
-    8.83,
-    9.72
+    22.89,
+    -9.45,
+    -35.87
    ]
   },
   {
@@ -454661,10 +458610,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-01",
    "p": [
-    -42.66,
-    7.5,
-    10.38
+    21.81,
+    -8.57,
+    -35.87
    ]
   },
   {
@@ -454730,10 +458681,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    -2.47,
-    46.24,
-    -11.38
+    73.92,
+    6.41,
+    -1.24
    ],
    "comb": {
     "b": 0.41,
@@ -454819,10 +458772,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-13",
    "p": [
-    1.5,
-    46.54,
-    -23.94
+    74.66,
+    15.12,
+    0.27
    ],
    "comb": {
     "b": 0.283,
@@ -454896,10 +458851,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    23.71,
-    36.46,
-    -36.81
+    81.4,
+    23.27,
+    -7.91
    ]
   },
   {
@@ -454966,10 +458923,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -49.77,
-    -0.85,
-    -24.4
+    45.85,
+    10.94,
+    -18.62
    ],
    "comb": {
     "b": 0.401,
@@ -455045,10 +459004,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-03",
    "p": [
-    -16.15,
-    -12.5,
-    -51.54
+    6.94,
+    -18.46,
+    -19.33
    ],
    "comb": {
     "b": 0.411,
@@ -455123,10 +459084,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    7.8,
-    9.36,
-    -54.09
+    31.03,
+    10.33,
+    -13.72
    ],
    "comb": {
     "b": 0.472,
@@ -455202,10 +459165,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-01",
    "p": [
-    -37.07,
-    -34.12,
-    31.38
+    -55.42,
+    -37.28,
+    -1.59
    ],
    "comb": {
     "b": 0.237,
@@ -455281,10 +459246,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-13",
    "p": [
-    -31.77,
-    -36.22,
-    22.66
+    -21.59,
+    -18.34,
+    3.75
    ]
   },
   {
@@ -455351,10 +459318,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F10",
+   "s": "F10-01",
    "p": [
-    -4.58,
-    -53.01,
-    -1.99
+    -28.42,
+    22.06,
+    -20.44
    ],
    "comb": {
     "b": 0.551,
@@ -455432,10 +459401,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-05",
    "p": [
-    17.31,
-    -39.82,
-    30.81
+    -17.27,
+    22.13,
+    -5.05
    ],
    "comb": {
     "b": 0.535,
@@ -455511,10 +459482,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    21.01,
-    -37.81,
-    28.32
+    -40.89,
+    30.26,
+    17.65
    ],
    "comb": {
     "b": 0.347,
@@ -455590,10 +459563,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-08",
    "p": [
-    24.77,
-    -42.56,
-    30.32
+    -36.42,
+    26.19,
+    14.01
    ],
    "comb": {
     "b": 0.31,
@@ -455669,10 +459644,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -16.0,
-    -50.39,
-    3.86
+    22.16,
+    1.97,
+    -13.27
    ],
    "comb": {
     "b": 0.349,
@@ -455738,10 +459715,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    10.33,
-    -55.63,
-    -14.86
+    21.09,
+    2.38,
+    -13.33
    ],
    "comb": {
     "b": 0.596,
@@ -455817,10 +459796,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    44.88,
-    -22.8,
-    6.85
+    26.88,
+    15.54,
+    -8.67
    ]
   },
   {
@@ -455875,10 +459856,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    49.29,
-    -22.28,
-    29.37
+    15.53,
+    46.01,
+    -3.13
    ]
   },
   {
@@ -455944,10 +459927,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    49.07,
-    -25.74,
-    26.8
+    9.94,
+    42.17,
+    -3.29
    ]
   },
   {
@@ -456013,10 +459998,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    43.8,
-    -21.1,
-    26.64
+    -3.47,
+    57.09,
+    -4.14
    ],
    "comb": {
     "b": 0.407,
@@ -456080,10 +460067,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    45.54,
-    -21.94,
-    27.7
+    -3.44,
+    57.83,
+    -4.38
    ]
   },
   {
@@ -456148,10 +460137,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    45.54,
-    -21.94,
-    27.7
+    -3.53,
+    57.86,
+    -4.13
    ]
   },
   {
@@ -456208,10 +460199,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    43.47,
-    -12.0,
-    29.51
+    -10.67,
+    40.62,
+    9.35
    ],
    "comb": {
     "b": 0.508,
@@ -456278,10 +460271,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    48.84,
-    -17.19,
-    27.24
+    3.52,
+    29.87,
+    -2.55
    ],
    "comb": {
     "b": 0.511,
@@ -456347,10 +460342,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    48.07,
-    -24.87,
-    22.21
+    9.64,
+    32.86,
+    -4.77
    ]
   },
   {
@@ -456406,10 +460403,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    43.44,
-    6.0,
-    38.72
+    31.99,
+    15.29,
+    -7.45
    ],
    "comb": {
     "b": 0.386,
@@ -456473,10 +460472,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    45.68,
-    -13.94,
-    23.02
+    -19.18,
+    68.18,
+    14.86
    ]
   },
   {
@@ -456542,10 +460543,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-09",
    "p": [
-    42.23,
-    -29.43,
-    9.6
+    -30.03,
+    42.41,
+    -5.64
    ],
    "comb": {
     "b": 0.366,
@@ -456609,10 +460612,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    45.68,
-    -13.94,
-    23.02
+    -12.31,
+    46.95,
+    11.59
    ]
   },
   {
@@ -456668,10 +460673,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-02",
    "p": [
-    42.54,
-    -14.91,
-    23.43
+    -19.07,
+    27.75,
+    13.19
    ],
    "comb": {
     "b": 0.377,
@@ -456746,10 +460753,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    46.84,
-    -13.62,
-    27.69
+    -11.61,
+    44.28,
+    10.68
    ],
    "comb": {
     "b": 0.37,
@@ -456814,10 +460823,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    49.8,
-    -16.04,
-    22.56
+    -0.37,
+    47.1,
+    5.33
    ],
    "comb": {
     "b": 0.383,
@@ -456893,10 +460904,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F07",
+   "s": "F07-03",
    "p": [
-    40.06,
-    -33.97,
-    12.09
+    -23.71,
+    29.69,
+    1.98
    ],
    "comb": {
     "b": 0.444,
@@ -456963,10 +460976,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-08",
    "p": [
-    44.42,
-    -29.15,
-    9.11
+    -13.43,
+    42.91,
+    -13.86
    ],
    "comb": {
     "b": 0.311,
@@ -457040,10 +461055,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    53.89,
-    -5.33,
-    22.16
+    -10.12,
+    44.92,
+    8.49
    ]
   },
   {
@@ -457109,10 +461126,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    54.94,
-    -16.37,
-    17.8
+    -1.77,
+    43.42,
+    3.34
    ],
    "comb": {
     "b": 0.315,
@@ -457187,10 +461206,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    53.51,
-    -6.35,
-    26.47
+    -9.83,
+    44.2,
+    13.89
    ]
   },
   {
@@ -457256,10 +461277,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    58.03,
-    -9.72,
-    11.87
+    3.89,
+    43.49,
+    2.37
    ],
    "comb": {
     "b": 0.297,
@@ -457335,10 +461358,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-02",
    "p": [
-    51.14,
-    -7.07,
-    24.11
+    7.52,
+    42.18,
+    1.71
    ],
    "comb": {
     "b": 0.317,
@@ -457403,10 +461428,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    54.81,
-    -4.34,
-    24.09
+    4.95,
+    43.43,
+    2.67
    ],
    "comb": {
     "b": 0.347,
@@ -457481,10 +461508,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    54.61,
-    1.72,
-    20.94
+    12.94,
+    51.18,
+    10.1
    ],
    "comb": {
     "b": 0.418,
@@ -457559,10 +461588,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    51.24,
-    4.9,
-    30.89
+    15.58,
+    55.47,
+    11.55
    ]
   },
   {
@@ -457618,10 +461649,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    51.24,
-    4.9,
-    30.89
+    14.49,
+    54.81,
+    11.52
    ]
   },
   {
@@ -457687,10 +461720,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    50.24,
-    -16.32,
-    28.52
+    -14.04,
+    39.02,
+    18.29
    ],
    "comb": {
     "b": 0.254,
@@ -457766,10 +461801,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    49.8,
-    -16.69,
-    33.39
+    -13.93,
+    42.64,
+    16.51
    ],
    "comb": {
     "b": 0.503,
@@ -457845,10 +461882,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    48.65,
-    -11.83,
-    30.27
+    -16.87,
+    43.73,
+    16.26
    ],
    "comb": {
     "b": 0.327,
@@ -457916,10 +461955,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-01",
    "p": [
-    52.58,
-    -15.23,
-    34.0
+    -15.76,
+    43.74,
+    16.68
    ]
   },
   {
@@ -457985,10 +462026,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-01",
    "p": [
-    46.13,
-    -16.06,
-    37.45
+    -48.98,
+    42.36,
+    23.21
    ],
    "comb": {
     "b": 0.277,
@@ -458063,10 +462106,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    33.54,
-    -35.49,
-    39.92
+    -39.77,
+    28.47,
+    24.21
    ],
    "comb": {
     "b": 0.249,
@@ -458131,10 +462176,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-07",
    "p": [
-    46.77,
-    -21.07,
-    36.69
+    -22.34,
+    30.15,
+    17.38
    ],
    "comb": {
     "b": 0.386,
@@ -458210,10 +462257,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F05",
+   "s": "F05-04",
    "p": [
-    40.03,
-    -27.7,
-    32.46
+    -27.9,
+    34.8,
+    13.54
    ],
    "comb": {
     "b": 0.468,
@@ -458281,10 +462330,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    54.21,
-    -2.67,
-    21.85
+    9.54,
+    46.66,
+    4.22
    ],
    "comb": {
     "b": 0.479,
@@ -458364,10 +462415,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    51.51,
-    -3.6,
-    27.51
+    18.73,
+    52.92,
+    6.48
    ],
    "comb": {
     "b": 0.417,
@@ -458431,10 +462484,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    50.14,
-    -11.41,
-    27.92
+    10.2,
+    55.35,
+    5.08
    ]
   },
   {
@@ -458489,10 +462544,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    48.66,
-    -14.36,
-    18.21
+    -2.2,
+    37.86,
+    -3.14
    ]
   },
   {
@@ -458558,10 +462615,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    54.64,
-    -14.27,
-    20.35
+    -9.35,
+    42.43,
+    1.58
    ]
   },
   {
@@ -458627,10 +462686,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-08",
    "p": [
-    50.72,
-    -6.34,
-    25.16
+    5.61,
+    44.84,
+    7.97
    ],
    "comb": {
     "b": 0.3,
@@ -458705,10 +462766,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-11",
    "p": [
-    -40.94,
-    -27.65,
-    32.89
+    -51.61,
+    -42.49,
+    -5.2
    ],
    "comb": {
     "b": 0.265,
@@ -458785,10 +462848,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F08",
+   "s": "F08-02",
    "p": [
-    42.91,
-    -27.4,
-    17.71
+    -26.66,
+    35.08,
+    2.31
    ],
    "comb": {
     "b": 0.647,
@@ -458877,10 +462942,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -30.99,
-    -49.0,
-    18.52
+    -66.48,
+    -36.8,
+    -10.25
    ],
    "comb": {
     "b": 0.238,
@@ -458957,10 +463024,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -26.39,
-    -53.8,
-    17.31
+    -77.11,
+    -43.02,
+    -12.74
    ],
    "comb": {
     "b": 0.15,
@@ -459046,10 +463115,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -29.99,
-    -54.54,
-    14.42
+    -75.61,
+    -42.63,
+    -12.86
    ],
    "comb": {
     "b": 0.291,
@@ -459138,10 +463209,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -34.67,
-    -50.24,
-    12.85
+    -74.92,
+    -45.26,
+    -12.69
    ],
    "comb": {
     "b": 0.174,
@@ -459228,10 +463301,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -31.85,
-    -49.69,
-    14.87
+    -70.77,
+    -42.0,
+    -12.38
    ],
    "comb": {
     "b": 0.271,
@@ -459308,10 +463383,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -19.03,
-    -56.2,
-    19.24
+    -72.15,
+    -45.3,
+    -11.53
    ],
    "comb": {
     "b": 0.411,
@@ -459399,10 +463476,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-02",
    "p": [
-    -22.85,
-    -55.6,
-    16.66
+    -68.34,
+    -42.48,
+    -7.18
    ],
    "comb": {
     "b": 0.286,
@@ -459479,10 +463558,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-15",
    "p": [
-    -27.9,
-    -51.48,
-    21.5
+    -65.04,
+    -36.61,
+    -7.42
    ],
    "comb": {
     "b": 0.347,
@@ -459558,10 +463639,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F13",
+   "s": "F13-04",
    "p": [
-    -55.1,
-    -1.39,
-    -10.47
+    8.77,
+    -27.02,
+    -24.52
    ],
    "comb": {
     "b": 0.5,
@@ -459667,10 +463750,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    18.94,
-    50.51,
-    -9.54
+    72.81,
+    13.66,
+    2.48
    ],
    "comb": {
     "b": 0.302,
@@ -459770,10 +463855,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    13.87,
-    54.28,
-    -5.66
+    74.07,
+    13.24,
+    5.5
    ]
   },
   {
@@ -459863,10 +463950,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-07",
    "p": [
-    -17.01,
-    49.06,
-    11.77
+    73.81,
+    -10.91,
+    -5.68
    ]
   },
   {
@@ -459956,10 +464045,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    56.36,
-    17.03,
-    -7.49
+    74.82,
+    27.47,
+    -0.31
    ]
   },
   {
@@ -460051,10 +464142,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    52.25,
-    -2.34,
-    -16.26
+    36.14,
+    34.74,
+    -11.24
    ],
    "comb": {
     "b": 0.296,
@@ -460153,10 +464246,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    27.31,
-    36.88,
-    -37.64
+    95.15,
+    32.59,
+    -8.92
    ]
   },
   {
@@ -460251,10 +464346,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    49.7,
-    24.29,
-    -16.85
+    73.81,
+    28.95,
+    0.1
    ],
    "comb": {
     "b": 0.443,
@@ -460358,10 +464455,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    25.13,
-    44.82,
-    -18.99
+    85.6,
+    19.23,
+    -2.14
    ],
    "comb": {
     "b": 0.141,
@@ -460460,10 +464559,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    32.83,
-    42.24,
-    -17.57
+    85.75,
+    22.55,
+    -1.15
    ]
   },
   {
@@ -460553,10 +464654,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    31.88,
-    42.44,
-    -18.79
+    82.79,
+    22.08,
+    -1.91
    ]
   },
   {
@@ -460647,10 +464750,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    34.04,
-    43.65,
-    -16.73
+    79.57,
+    20.87,
+    0.22
    ]
   },
   {
@@ -460742,10 +464847,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    34.81,
-    41.1,
-    -21.05
+    87.0,
+    25.43,
+    -0.19
    ],
    "comb": {
     "b": 0.272,
@@ -460821,10 +464928,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    28.04,
-    46.79,
-    -4.96
+    69.16,
+    16.27,
+    3.89
    ],
    "comb": {
     "b": 0.369,
@@ -460898,10 +465007,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    28.72,
-    42.66,
-    5.34
+    47.05,
+    5.74,
+    7.6
    ]
   },
   {
@@ -460967,10 +465078,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    39.81,
-    32.1,
-    7.63
+    44.72,
+    8.49,
+    6.37
    ],
    "comb": {
     "b": 0.437,
@@ -461057,10 +465170,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    13.93,
-    56.01,
-    -13.84
+    75.92,
+    14.06,
+    5.37
    ],
    "comb": {
     "b": 0.383,
@@ -461147,10 +465262,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    9.18,
-    55.05,
-    -15.14
+    77.9,
+    12.0,
+    5.97
    ],
    "comb": {
     "b": 0.335,
@@ -461227,10 +465344,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    32.18,
-    42.42,
-    0.01
+    67.32,
+    11.89,
+    7.91
    ],
    "comb": {
     "b": 0.563,
@@ -461317,10 +465436,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    28.98,
-    45.01,
-    -17.44
+    71.99,
+    15.19,
+    5.25
    ],
    "comb": {
     "b": 0.5,
@@ -461396,10 +465517,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    15.94,
-    56.89,
-    -5.61
+    75.74,
+    15.63,
+    6.26
    ],
    "comb": {
     "b": 0.307,
@@ -461475,10 +465598,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -18.01,
-    44.15,
-    -23.69
+    45.25,
+    -0.6,
+    4.36
    ],
    "comb": {
     "b": 0.386,
@@ -461553,10 +465678,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-08",
    "p": [
-    -12.19,
-    58.07,
-    1.33
+    73.09,
+    -11.48,
+    -19.37
    ],
    "comb": {
     "b": 0.255,
@@ -461631,10 +465758,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    49.63,
-    6.99,
-    -17.95
+    48.44,
+    29.8,
+    -7.87
    ]
   },
   {
@@ -461700,10 +465829,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    53.03,
-    3.04,
-    -3.61
+    45.61,
+    23.1,
+    -8.96
    ],
    "comb": {
     "b": 0.358,
@@ -461769,10 +465900,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    48.49,
-    -1.72,
-    2.79
+    45.83,
+    20.17,
+    -9.25
    ],
    "comb": {
     "b": 0.202,
@@ -461847,10 +465980,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    -1.44,
-    41.89,
-    -30.27
+    90.38,
+    20.25,
+    -6.41
    ],
    "comb": {
     "b": 0.143,
@@ -461925,10 +466060,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    19.06,
-    40.92,
-    -33.66
+    82.68,
+    18.26,
+    -1.82
    ],
    "comb": {
     "b": 0.37,
@@ -462013,10 +466150,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    13.26,
-    49.27,
-    -33.19
+    91.29,
+    21.04,
+    -6.84
    ],
    "comb": {
     "b": 0.266,
@@ -462092,10 +466231,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    16.57,
-    43.66,
-    -34.11
+    65.68,
+    22.16,
+    -1.47
    ],
    "comb": {
     "b": 0.45,
@@ -462172,10 +466313,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    39.47,
-    30.31,
-    -26.33
+    68.0,
+    32.32,
+    -3.03
    ],
    "comb": {
     "b": 0.311,
@@ -462251,10 +466394,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-02",
    "p": [
-    45.2,
-    26.23,
-    -16.41
+    39.03,
+    35.75,
+    -2.25
    ],
    "comb": {
     "b": 0.556,
@@ -462320,10 +466465,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    29.05,
-    34.9,
-    -35.81
+    75.45,
+    32.64,
+    -3.19
    ]
   },
   {
@@ -462399,10 +466546,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    28.81,
-    36.73,
-    -39.06
+    98.55,
+    34.49,
+    -9.26
    ]
   },
   {
@@ -462468,10 +466617,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    21.16,
-    42.72,
-    -35.36
+    89.13,
+    21.5,
+    -8.57
    ],
    "comb": {
     "b": 0.268,
@@ -462559,10 +466710,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    48.11,
-    21.02,
-    -24.25
+    63.99,
+    35.4,
+    -6.04
    ],
    "comb": {
     "b": 0.347,
@@ -462638,10 +466791,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    27.52,
-    43.7,
-    -26.03
+    88.11,
+    19.57,
+    -5.58
    ],
    "comb": {
     "b": 0.332,
@@ -462718,10 +466873,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    -27.47,
-    6.72,
-    -43.28
+    23.24,
+    6.47,
+    3.26
    ],
    "comb": {
     "b": 0.496,
@@ -462808,10 +466965,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -26.5,
-    -19.14,
-    43.95
+    -20.91,
+    -4.94,
+    -9.73
    ],
    "comb": {
     "b": 0.425,
@@ -462898,10 +467057,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F02",
+   "s": "F02-17",
    "p": [
-    -20.49,
-    -36.58,
-    42.0
+    -44.12,
+    -19.04,
+    -8.5
    ],
    "comb": {
     "b": 0.227,
@@ -462977,10 +467138,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    26.89,
-    47.69,
-    -18.61
+    63.76,
+    13.29,
+    3.25
    ],
    "comb": {
     "b": 0.366,
@@ -463057,10 +467220,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    32.47,
-    42.67,
-    -21.66
+    88.48,
+    21.96,
+    -2.18
    ],
    "comb": {
     "b": 0.348,
@@ -463135,10 +467300,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    46.37,
-    28.01,
-    -24.25
+    89.93,
+    22.76,
+    2.38
    ]
   },
   {
@@ -463204,10 +467371,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    16.9,
-    55.29,
-    -13.42
+    89.39,
+    17.88,
+    4.16
    ],
    "comb": {
     "b": 0.389,
@@ -463283,10 +467452,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    53.88,
-    -7.24,
-    -14.66
+    20.39,
+    39.29,
+    -2.45
    ],
    "comb": {
     "b": 0.531,
@@ -463366,10 +467537,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-02",
    "p": [
-    50.86,
-    21.61,
-    -21.66
+    41.29,
+    35.05,
+    -3.34
    ],
    "comb": {
     "b": 0.318,
@@ -463444,10 +467617,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    -5.89,
-    54.23,
-    5.01
+    92.3,
+    18.66,
+    3.13
    ],
    "comb": {
     "b": 0.372,
@@ -463524,10 +467699,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-02",
    "p": [
-    32.89,
-    32.45,
-    -29.42
+    63.86,
+    22.41,
+    -3.26
    ],
    "comb": {
     "b": 0.481,
@@ -463605,10 +467782,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-12",
    "p": [
-    -25.92,
-    45.93,
-    -7.32
+    65.73,
+    12.46,
+    5.18
    ],
    "comb": {
     "b": 0.398,
@@ -463683,10 +467862,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-04",
    "p": [
-    45.38,
-    22.33,
-    -31.06
+    49.77,
+    23.32,
+    -8.8
    ],
    "comb": {
     "b": 0.312,
@@ -463761,10 +467942,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    50.87,
-    7.82,
-    -18.75
+    53.1,
+    28.11,
+    -7.02
    ]
   },
   {
@@ -463831,10 +468014,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -6.6,
-    -3.55,
-    -57.34
+    34.83,
+    10.49,
+    -7.38
    ],
    "comb": {
     "b": 0.562,
@@ -463913,10 +468098,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-07",
    "p": [
-    -31.26,
-    32.81,
-    -3.86
+    44.63,
+    1.11,
+    -3.73
    ],
    "comb": {
     "b": 0.292,
@@ -463991,10 +468178,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    37.1,
-    42.57,
-    -18.27
+    85.55,
+    23.56,
+    0.48
    ]
   },
   {
@@ -464060,10 +468249,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    13.83,
-    54.11,
-    -7.17
+    73.77,
+    13.23,
+    3.52
    ],
    "comb": {
     "b": 0.308,
@@ -464138,10 +468329,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F15",
+   "s": "F15-01",
    "p": [
-    -23.02,
-    -14.38,
-    -51.07
+    47.89,
+    15.93,
+    -29.89
    ],
    "comb": {
     "b": 0.449,
@@ -464216,10 +468409,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-03",
    "p": [
-    46.16,
-    28.48,
-    -20.07
+    72.33,
+    31.73,
+    -1.13
    ],
    "comb": {
     "b": 0.313,
@@ -464294,10 +468489,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    54.45,
-    13.43,
-    19.44
+    28.49,
+    43.14,
+    1.52
    ],
    "comb": {
     "b": 0.475,
@@ -464372,10 +468569,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    56.75,
-    -13.33,
-    22.2
+    26.49,
+    48.29,
+    3.48
    ],
    "comb": {
     "b": 0.365,
@@ -464450,10 +468649,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    49.02,
-    3.14,
-    33.32
+    27.41,
+    51.52,
+    5.43
    ],
    "comb": {
     "b": 0.323,
@@ -464529,10 +468730,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-02",
    "p": [
-    -41.33,
-    21.49,
-    6.62
+    46.45,
+    -10.01,
+    -3.61
    ],
    "comb": {
     "b": 0.261,
@@ -464607,10 +468810,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-04",
    "p": [
-    41.39,
-    5.63,
-    42.17
+    26.33,
+    45.2,
+    3.01
    ],
    "comb": {
     "b": 0.404,
@@ -464685,10 +468890,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -35.83,
-    18.08,
-    13.49
+    55.44,
+    -13.47,
+    0.76
    ]
   },
   {
@@ -464755,10 +468962,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-12",
    "p": [
-    -30.86,
-    43.39,
-    -0.01
+    52.61,
+    -3.63,
+    -2.49
    ],
    "comb": {
     "b": 0.395,
@@ -464836,10 +469045,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-06",
    "p": [
-    53.39,
-    -0.61,
-    -12.24
+    32.26,
+    35.21,
+    -10.23
    ],
    "comb": {
     "b": 0.448,
@@ -464915,10 +469126,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-01",
    "p": [
-    31.1,
-    46.62,
-    -14.28
+    81.05,
+    21.51,
+    2.34
    ],
    "comb": {
     "b": 0.308,
@@ -464993,10 +469206,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    52.06,
-    -23.29,
-    25.27
+    7.82,
+    37.94,
+    -2.96
    ]
   },
   {
@@ -465062,10 +469277,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-09",
    "p": [
-    -52.42,
-    9.72,
-    12.56
+    25.03,
+    45.33,
+    6.8
    ],
    "comb": {
     "b": 0.463,
@@ -465151,10 +469368,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-05",
    "p": [
-    20.59,
-    43.05,
-    -36.42
+    84.44,
+    28.4,
+    -6.13
    ],
    "comb": {
     "b": 0.218,
@@ -465240,10 +469459,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-09",
    "p": [
-    51.32,
-    30.89,
-    -14.18
+    75.5,
+    26.07,
+    -2.48
    ],
    "comb": {
     "b": 0.574,
@@ -465330,10 +469551,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    49.57,
-    1.17,
-    35.31
+    24.06,
+    52.92,
+    6.05
    ],
    "comb": {
     "b": 0.437,
@@ -465409,10 +469632,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-06",
    "p": [
-    47.65,
-    13.18,
-    36.67
+    28.91,
+    48.5,
+    6.18
    ]
   },
   {
@@ -465490,10 +469715,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F04",
+   "s": "F04-03",
    "p": [
-    41.8,
-    -42.25,
-    -13.14
+    -20.09,
+    17.56,
+    -7.56
    ],
    "comb": {
     "b": 0.358,
@@ -465585,10 +469812,12 @@ window.ROADMAP = {
      "P-140"
     ]
    },
+   "f": "F12",
+   "s": "F12-02",
    "p": [
-    -25.06,
-    -50.78,
-    17.76
+    -15.96,
+    -0.36,
+    -21.17
    ],
    "comb": {
     "b": 0.54,
@@ -465666,10 +469895,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -24.53,
-    32.63,
-    11.26
+    38.57,
+    -15.06,
+    -21.64
    ],
    "comb": {
     "b": 0.326,
@@ -465746,10 +469977,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F01",
+   "s": "F01-08",
    "p": [
-    -1.59,
-    49.76,
-    -6.11
+    61.42,
+    3.6,
+    -15.77
    ],
    "comb": {
     "b": 0.486,
@@ -465827,10 +470060,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-11",
    "p": [
-    -43.89,
-    31.29,
-    9.76
+    34.71,
+    -14.9,
+    -26.68
    ],
    "comb": {
     "b": 0.397,
@@ -465906,10 +470141,12 @@ window.ROADMAP = {
      "key": "確認#1"
     }
    ],
+   "f": "F06",
+   "s": "F06-08",
    "p": [
-    -16.52,
-    35.71,
-    10.67
+    70.68,
+    -14.23,
+    -15.6
    ]
   }
  ],

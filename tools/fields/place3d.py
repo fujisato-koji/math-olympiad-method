@@ -6,7 +6,7 @@
 # （1 : 0.72 : 0.22、4 次元でも 4 本目は 0）。押し合いが近いほど強い形にすると、詰まった向きがふくらむ（Chen と Buja 2013）。
 # 解き方：初めの位置は古典的 MDS。まず (2, 0)（押し合いが距離の対数）を解き、その答えから目当ての形を L-BFGS で解く。どれも決まった手順で、乱数を使わない。
 # 回転と裏返しは主軸と 3 次のモーメントで決める（embed.fix_gauge）。
-#   python place3d.py [--a 1 --r -1] [--check]   … --check で、乱数の初めと関係を 1 割抜いた配置とくらべる
+#   python place3d.py [--a 1 --r -1] [--check] [--site]   … --check で、乱数の初めと関係を 1 割抜いた配置とくらべる。--site でサイトの 3D の配置（tools/space-layout.json）も書く（D-124）
 import os, sys, json, time
 import numpy as np
 from scipy.optimize import minimize
@@ -115,4 +115,12 @@ if __name__ == '__main__':
             print('  関係を 1 割抜く', drop[-1], flush=True)
         out.update(random=rnd, drop10=drop)
     np.save(os.path.join(H, 'X_3d.npy'), X)
+    if '--site' in args:
+        # サイトの 3D の地図（D-124）：tools/space-layout.json に書く。大きさは、はじめの知の宇宙（D-037）の半径の中央値 48.6 にそろえ、カメラや霧の決まりをそのまま使う
+        r = np.linalg.norm(X - X.mean(0), axis=1)
+        Y = (X - X.mean(0)) * (48.6 / np.median(r))
+        pos = {i: [round(float(v), 2) for v in Y[k]] for k, i in enumerate(L['ids'])}
+        out = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'space-layout.json')
+        open(out, 'w', encoding='utf-8', newline='\n').write(json.dumps(pos, ensure_ascii=False, separators=(',', ':'), sort_keys=True) + '\n')
+        print(f'サイトの 3D の配置を書いた：{len(pos)} 単元 → tools/space-layout.json', flush=True)
     json.dump(out, open(os.path.join(H, 'place3d.json'), 'w'), ensure_ascii=False, indent=1)

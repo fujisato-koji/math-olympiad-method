@@ -890,6 +890,10 @@
   const group = () => MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0];
   const inGroup = id => { const rg = REGION[UNITS[id].region]; return !rg || group()[2](rg); };
   const cssLane = l => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--lane-' + l).trim() || '#9fb4ff';
+  // 関係から見つけた分野（D-122、D-124）：色は relations/fields.yaml の並びの 1〜16（style.css の --field-N）。分野がない単元は流れの色
+  const FIELDS = Object.fromEntries((R.fields || []).map((f, i) => [f.id, { ...f, n: i + 1 }]));
+  const cssField = f => getComputedStyle($('#cosmos') || document.documentElement).getPropertyValue('--field-' + (FIELDS[f] ? FIELDS[f].n : 0)).trim() || '#9fb4ff';
+  const fc = o => o && o.f && FIELDS[o.f] ? `--c: var(--field-${FIELDS[o.f].n})` : lc(o.lane);
   const svgi = d => `<svg viewBox="0 0 24 24" aria-hidden="true">${d}</svg>`;
   const ICON = {
     spark: svgi('<path d="M12 3v5M12 16v5M3 12h5M16 12h5M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M6.3 17.7l2.8-2.8M14.9 9.1l2.8-2.8"/>'),
@@ -963,9 +967,9 @@
     if (!host || !window.Space) return;
     if (!cosmos) {
       try {
-        cosmos = Space.mount({ units: R.units, lanes: R.lanes, laneColor: cssLane, bridges: BRIDGES,
+        cosmos = Space.mount({ units: R.units, lanes: R.lanes, laneColor: cssLane, fields: R.fields || [], fieldColor: cssField, bridges: BRIDGES,
           onPick: id => pick(id), onHover: cosHover, onTouch: () => { const c = $('#cosmos'); if (c) c.classList.add('touched'); },
-          onLane: l => { Music.tap(); cosmos.flyLane(l); tip(`<b>${esc(LANES[l].name)}</b>　${esc(LANES[l].note)}`); } });
+          onField: f => { Music.tap(); cosmos.flyField(f); tip(`<b>${esc(FIELDS[f].name)}</b>　${esc(FIELDS[f].about)}`); } });
       } catch (err) {
         // WebGL が使えない端末では 2D で使う
         X.view = '2d'; syncBar(); paint();
@@ -1361,7 +1365,8 @@
   });
   document.addEventListener('fullscreenchange', () => { setBarH(); if (cosmos) cosmos.resize(); if (X.view === '2d' && parse().name === 'map') paint(); });
 
-  // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は名前を付けた領域（D-019）
+  // 平面の関係図（2D）：横は理解の深さ（前提の鎖の長さ）、縦は名前を付けた領域（D-019）。
+  // 領域は関係から見つけた分野ごとにまとめ、前提の線が縦に短くなる順に並ぶ（D-124、並びは build が relations/region-order.yaml から入れる）
   function drawMap() {
     const host = $('#map');
     if (!host) return;
@@ -1380,10 +1385,14 @@
     const X0 = 168, span = Math.max(1, maxD - minD), avail = Math.max(host.clientWidth, 820);
     const XS = Math.min(140, Math.max(22, (avail - X0 - 70) / span)), W = Math.max(avail, Math.ceil(X0 + span * XS + 70));
     const YS = 18, PAD = 13, TOP = 44, pos = {}, boxes = [];
-    let y = TOP;
+    let y = TOP, prevF = null;
+    const heads = [];
     shownRegions.forEach(rg => {
       const us = shownUnits.filter(u => u.region === rg.id).sort(order);
       if (!us.length) return;
+      // 分野がかわるところに、分野の名前の見出し
+      if (rg.f && rg.f !== prevF && FIELDS[rg.f]) { heads.push({ f: rg.f, y: y + 15 }); y += 26; }
+      prevF = rg.f;
       const byD = {};
       us.forEach(u => (byD[DEPTH[u.id]] = byD[DEPTH[u.id]] || []).push(u));
       const rows = Math.max(...Object.values(byD).map(a => a.length)), h = rows * YS + PAD * 2;
@@ -1407,7 +1416,8 @@
     svg += '<defs>' + Object.entries(ARR).map(([k, [rx, w]]) => `<marker id="arr-${k}" class="arr ${k.split('-')[0]}" viewBox="0 0 10 10" refX="${rx}" refY="5" markerWidth="${w}" markerHeight="${w}" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,1 L10,5 L0,9 z"/></marker>`).join('') + '</defs>';
     svg += marks.map((m, i) => `<g class="level-mark"><line x1="${m.x}" y1="${TOP - 6}" x2="${m.x}" y2="${H}"/>
       </g>`).join('');
-    svg += boxes.map(b => `<g class="region" style="${lc(b.rg.lane)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
+    svg += heads.map(h => `<g class="field-head" style="${fc(h)}"><text x="8" y="${h.y}">${esc(FIELDS[h.f].name)}</text><line x1="8" y1="${h.y + 6}" x2="${W - 8}" y2="${h.y + 6}"/></g>`).join('');
+    svg += boxes.map(b => `<g class="region" style="${fc(b.rg)}"><rect x="${b.x}" y="${b.y}" width="${b.x2 - b.x}" height="${b.h}" rx="14"/>
       <line x1="${X0 - 26}" y1="${b.y + b.h / 2}" x2="${b.x}" y2="${b.y + b.h / 2}" class="leader"/>
       <text x="8" y="${b.y + b.h / 2 + 4}">${esc(b.rg.name)}</text></g>`).join('');
     // 前提の線：同じ領域は「深める」、ほかの領域は「組み合わせる」（x）。代わりになる前提（alt）は点線
@@ -1421,7 +1431,7 @@
       ...Object.values(u.alt || {}).flat().map(n => edge(n, u, 'alt'))]).join('') + '</g>';
     svg += '<g class="dots">' + R.units.map(u => {
       const p = pos[u.id];
-      return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}${hasProblems(u) ? '' : ' noq'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${lc(u.lane)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
+      return p ? `<circle class="${stateOf(u.id)}${inGoal(u.id) ? '' : inChoice(u.id) ? ' choice' : ' off'}${BRIDGES.has(u.id) ? ' bridge' : ''}${hasProblems(u) ? '' : ' noq'}" data-u="${u.id}" cx="${p[0]}" cy="${p[1]}" r="6" style="${fc(u)}"><title>${esc(u.id + ' ' + u.title)}</title></circle>` : '';
     }).join('') + '</g><g class="decos">' + R.units.map(u => decoSvg(u, pos[u.id])).join('') + '</g></svg>';
     host.innerHTML = svg;
     POS2D = pos;

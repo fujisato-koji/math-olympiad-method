@@ -11,6 +11,8 @@
     python tools/fields/run.py --from b   # (b) から始める（(a) の結果が out/ にあるとき）
     python tools/fields/run.py --write    # relations/fields.yaml も書きかえる（付けなければ out/fields.yaml だけ）
     python tools/fields/place3d.py --check  # 3D の配置だけ作り、乱数の初めと関係を 1 割抜いた配置とくらべる
+    python tools/fields/place3d.py --site   # サイトの 3D の地図の位置（tools/space-layout.json）を書く（D-124）
+    python tools/fields/order2d.py          # 2D の地図の縦の並び（relations/region-order.yaml）を書く（D-124。relations/fields.yaml のあとに）
 
 順番：(a) 3 設定（typed、typed_topic2、typed_use2。どれも前提の線を強さ×種類で重み付け、α=1.0）の合意の分け方 → (b) 3 設定の合意（cross.py、out/fields.json）→
 (c) 2 段目（level2.py）→ (d) 3D の配置（place3d.py、out/X_3d.npy）→ (e) out/fields.yaml を書く（save_fields.py。`--write` で relations/fields.yaml も）。
@@ -25,6 +27,7 @@ place3d.py --check は 15 分ほど。
 ## 出力
 
 - `relations/fields.yaml`（版管理する）
+- `relations/region-order.yaml`（版管理する。order2d.py）、`tools/space-layout.json`（版管理する。place3d.py --site）。build はどちらも読むだけ
 - `tools/fields/out/`（.gitignore）：cl_<設定>_a1.0.json、fields.json、X_3d.npy、place3d.json、fields.yaml、preview-data.json（プレビュー用）
 
 ## 決まっている数
@@ -41,6 +44,8 @@ place3d.py --check は 15 分ほど。
 - 3 設定どうしの一致 ARI 0.77〜0.86。合意は 19 の塊（10 単元以上 16）、30 回の一致 0.993。16 の分野と 143 の細かい分野。
 - 3 設定とも同じ仲間で、ゆさぶりでも 8 割以上同じ塊に残る単元 72%（境目 464）。いまの 21 の流れとの一致 ARI 0.37。旧の 13 分野（1,523 単元）との一致 ARI 0.82。
 - 3D の配置：3 本の軸の広がり 1 : 0.85 : 0.51、近傍の保存 0.41。乱数の初め 2 回とも同じ配置（ずれ 0、近所 10 単元の重なり 1.00）。関係を 1 割抜くと、ずれ 2.9〜4.0%、重なり 0.79〜0.84。
+
+分野を作りなおしたら、place3d.py --site と order2d.py も回し、`python tools/roadmap.py build` で site/data.js を作りなおす（サイトの 3D と 2D の地図が分野と並びを読む）。
 
 ## 補助（run.py からは呼ばない）
 

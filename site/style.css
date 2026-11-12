@@ -32,6 +32,8 @@
   --lane-V: #6f8f2e;
   --lane-Q: #7a62b8;
   --lane-Y: #4f8799;
+  /* 関係から見つけた分野の色（D-124）。relations/fields.yaml の並びの 1〜16 */
+  --field-1: #c83a62; --field-2: #2e8f58; --field-3: #3558c8; --field-4: #1f86ad; --field-5: #8a7438; --field-6: #5f55c4; --field-7: #c25a2c; --field-8: #9a8410; --field-9: #5c6b80; --field-10: #2f8f72; --field-11: #6c8a1c; --field-12: #9b4bb8; --field-13: #3f6fc0; --field-14: #b36a10; --field-15: #c0577e; --field-16: #4a5068;
   --ok: #1f9d63;
   --bad: #d4553a;
   --warn: #c27c14;
@@ -75,6 +77,8 @@
     --lane-V: #b8d77a;
     --lane-Q: #b9a6f0;
     --lane-Y: #93c9da;
+    /* 関係から見つけた分野の色（D-124）。relations/fields.yaml の並びの 1〜16 */
+    --field-1: #ff6f91; --field-2: #6bdc9a; --field-3: #6e96ff; --field-4: #4fd2ff; --field-5: #d6c08a; --field-6: #a7a0ff; --field-7: #ff9a6e; --field-8: #f2d64b; --field-9: #a9b8cc; --field-10: #8fe3c0; --field-11: #c6e86a; --field-12: #e39cff; --field-13: #7fb2ff; --field-14: #f5a53c; --field-15: #ffc0d8; --field-16: #eef1ff;
     --ok: #43c98a;
     --bad: #ff7b61;
     --warn: #f0b056;
@@ -115,6 +119,8 @@
   --lane-V: #b8d77a;
   --lane-Q: #b9a6f0;
   --lane-Y: #93c9da;
+  /* 関係から見つけた分野の色（D-124）。relations/fields.yaml の並びの 1〜16 */
+  --field-1: #ff6f91; --field-2: #6bdc9a; --field-3: #6e96ff; --field-4: #4fd2ff; --field-5: #d6c08a; --field-6: #a7a0ff; --field-7: #ff9a6e; --field-8: #f2d64b; --field-9: #a9b8cc; --field-10: #8fe3c0; --field-11: #c6e86a; --field-12: #e39cff; --field-13: #7fb2ff; --field-14: #f5a53c; --field-15: #ffc0d8; --field-16: #eef1ff;
   --ok: #43c98a;
   --bad: #ff7b61;
   --warn: #f0b056;
@@ -549,6 +555,9 @@ section.next { margin: 12px 0 36px; }  /* 単元のページの次の日（.day.
 .map svg { display: block; font-family: var(--font); }
 .map .region rect { fill: color-mix(in srgb, var(--c) 9%, transparent); stroke: color-mix(in srgb, var(--c) 28%, transparent); }
 .map .region text { font-size: 13px; font-weight: 700; fill: var(--ink); }
+/* 関係から見つけた分野の見出し（D-124）：分野の色の名前と、その下の細い線 */
+.map .field-head text { font-size: 15px; font-weight: 800; fill: var(--c); letter-spacing: .04em; }
+.map .field-head line { stroke: var(--c); stroke-width: 1.5; opacity: .35; }
 .map .region .leader { stroke: color-mix(in srgb, var(--c) 30%, transparent); stroke-dasharray: 1 4; }
 .map .level-mark line { stroke: var(--line); stroke-dasharray: 2 5; }
 .map .level-mark text { font-size: 11px; fill: var(--muted); }
@@ -611,6 +620,7 @@ section.next { margin: 12px 0 36px; }  /* 単元のページの次の日（.day.
   --lane-N: #6e96ff; --lane-A: #b28dff; --lane-C: #2fcac2; --lane-G: #ff8461; --lane-L: #f6bf3c; --lane-D: #ff70a6; --lane-M: #d2a874;
   --lane-R: #4fc2ab; --lane-T: #e78ad0; --lane-S: #8fd05f; --lane-P: #64b2f0; --lane-E: #f09b5e; --lane-K: #9ea2ff; --lane-H: #ff8f78;
   --lane-B: #6bdc9a; --lane-F: #a9b8cc; --lane-W: #d6c08a; --lane-I: #ff8fb0; --lane-V: #b8d77a; --lane-Q: #b9a6f0; --lane-Y: #93c9da;
+  --field-1: #ff6f91; --field-2: #6bdc9a; --field-3: #6e96ff; --field-4: #4fd2ff; --field-5: #d6c08a; --field-6: #a7a0ff; --field-7: #ff9a6e; --field-8: #f2d64b; --field-9: #a9b8cc; --field-10: #8fe3c0; --field-11: #c6e86a; --field-12: #e39cff; --field-13: #7fb2ff; --field-14: #f5a53c; --field-15: #ffc0d8; --field-16: #eef1ff;
   --glass: rgba(14, 18, 40, .62); --glass-line: rgba(160, 180, 255, .22); --star-ink: #eef1ff; --star-muted: #a9b2d6;
   position: relative; height: min(84vh, 820px); min-height: 520px; margin: 4px 0 8px; border-radius: 28px; overflow: hidden;
   color: var(--star-ink);

@@ -140,7 +140,8 @@ export function mount(api) {
   canvas.className = 'cosmos-canvas';
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(50, 1, .1, 2000);
-  const color = l => new THREE.Color(api.laneColor(l));
+  // 星の色は関係から見つけた分野（D-124）。分野がまだない単元は流れの色
+  const color = u => new THREE.Color(u.f && api.fieldColor ? api.fieldColor(u.f) : api.laneColor(u.lane));
 
   // ---- 遠くの星くず（背景） ----
   {
@@ -154,15 +155,7 @@ export function mount(api) {
     g.setAttribute('position', new THREE.BufferAttribute(p, 3));
     scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color: 0x9fb4ff, size: 1.2, sizeAttenuation: false, transparent: true, opacity: .55, depthWrite: false })));
   }
-  // ---- 深さの軌道（考え方が深くなる方向の目印） ----
-  [12, 28, 46].forEach((r, k) => {
-    const pts = [];
-    for (let i = 0; i <= 160; i++) { const t = i / 160 * Math.PI * 2; pts.push(new THREE.Vector3(r * Math.cos(t), 0, r * Math.sin(t))); }
-    const ring = new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts),
-      new THREE.LineBasicMaterial({ color: 0x8fa6ff, transparent: true, opacity: .07 - k * .015, depthWrite: false }));
-    ring.rotation.x = .35 + k * .12; ring.rotation.z = k * .5;
-    scene.add(ring);
-  });
+  // 深さの軌道の輪は、中心からの距離が前提の深さだったとき（D-037）の目印なので、関係から見た配置（D-124）では描かない
 
   // ---- 星（単元） ----
   const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N),
@@ -170,7 +163,7 @@ export function mount(api) {
   const P = units.map(u => new THREE.Vector3(...u.p));
   units.forEach((u, i) => {
     pos.set(u.p, i * 3);
-    const c = color(u.lane); col.set([c.r, c.g, c.b], i * 3);
+    const c = color(u); col.set([c.r, c.g, c.b], i * 3);
     size[i] = 330 + 110 * (u.level || 3) + (api.bridges.has(u.id) ? 320 : 0);
     phase[i] = (Math.sin(i * 12.9898) * 43758.5453) % 1;
     alpha[i] = 1;
@@ -256,23 +249,24 @@ export function mount(api) {
     glow.geometry.dispose(); glow.geometry = g;
   }
 
-  // ---- 分野の名前（HTML を星の上に重ねる） ----
+  // ---- 分野の名前（HTML を星の上に重ねる）。関係から見つけた分野の星の重心に置く（D-124） ----
   const labels = document.createElement('div');
   labels.className = 'cosmos-labels';
-  const lanes = api.lanes.map(l => {
-    const mine = units.map((u, i) => [u, i]).filter(([u]) => u.lane === l.id);
+  const marks = (api.fields || []).map(f => {
+    const mine = units.map((u, i) => [u, i]).filter(([u]) => u.f === f.id);
     if (!mine.length) return null;
     const c = new THREE.Vector3();
-    mine.forEach(([, i]) => c.add(P[i].clone().multiplyScalar(P[i].length())));
-    const dir = c.normalize(), r = Math.max(...mine.map(([, i]) => P[i].length()));
+    mine.forEach(([, i]) => c.add(P[i]));
+    c.multiplyScalar(1 / mine.length);
+    const spread = Math.sqrt(mine.reduce((a, [, i]) => a + P[i].distanceToSquared(c), 0) / mine.length);
     const el = document.createElement('button');
-    el.type = 'button'; el.className = 'cosmos-label'; el.textContent = l.name;
-    el.style.setProperty('--c', api.laneColor(l.id));
-    el.addEventListener('click', e => { e.stopPropagation(); api.onLane && api.onLane(l.id); });
+    el.type = 'button'; el.className = 'cosmos-label'; el.textContent = f.name;
+    el.style.setProperty('--c', api.fieldColor(f.id));
+    el.addEventListener('click', e => { e.stopPropagation(); api.onField && api.onField(f.id); });
     labels.appendChild(el);
-    return { id: l.id, at: dir.multiplyScalar(r * .78 + 6), el };
+    return { id: f.id, at: c, r: spread, el };
   }).filter(Boolean);
-  const laneOf = id => lanes.find(l => l.id === id);
+  const markOf = id => marks.find(m => m.id === id);
 
   // ---- 目（カメラ）：ドラッグで回し、ホイールとつまみで寄る。触らないと、ゆっくり回る ----
   const view = { target: new THREE.Vector3(), r: 100, th: .7, ph: 1.15 }, vel = { th: 0, ph: 0 };
@@ -402,7 +396,7 @@ export function mount(api) {
     renderer.render(scene, camera);
     // 分野の名前：手前ほどはっきり、奥は薄く
     const w = canvas.clientWidth, h = canvas.clientHeight;
-    lanes.forEach(l => {
+    marks.forEach(l => {
       v.copy(l.at).project(camera);
       const vis = v.z < 1 && Math.abs(v.x) < 1.1 && Math.abs(v.y) < 1.1;
       l.el.style.display = vis ? '' : 'none';
@@ -452,9 +446,10 @@ export function mount(api) {
       const c = box.getCenter(new THREE.Vector3()), r = THREE.MathUtils.clamp(box.getSize(new THREE.Vector3()).length() * .9, rMin, 85);
       flyTo(c, r);
     },
-    flyLane(id) {
-      const l = laneOf(id);
-      if (l) flyTo(l.at.clone().multiplyScalar(.75), 48);
+    // 分野へ寄る：その分野の星の重心へ、星の広がりに合わせた距離で
+    flyField(id) {
+      const m = markOf(id);
+      if (m) flyTo(m.at, THREE.MathUtils.clamp(m.r * 3.2, 26, 90));
     },
     home() { flyTo(new THREE.Vector3(), 100); },
     // 選んだ星のまわりを回す（D-112）：回転の中心を、中心（原点）とその星の中点に移し、どの向きに回しても両方が画面に収まる距離にする

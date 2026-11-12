@@ -617,6 +617,29 @@ def build_coverage(goal, cov, titles):
     (ROOT / "docs" / name).write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
 
 
+def load_fields():
+    """関係から見つけた分野（D-122）と 2D の縦の並び（D-124）を読む。どちらも tools/fields/ が作り、build は読むだけ。"""
+    fy, ro = ROOT / "relations" / "fields.yaml", ROOT / "relations" / "region-order.yaml"
+    F = (yaml.safe_load(fy.read_text(encoding="utf-8")) or {}).get("fields", []) if fy.exists() else []
+    f_of, s_of = {}, {}
+    for f in F:
+        for s in f["subs"]:
+            for x in s["units"]:
+                f_of[x], s_of[x] = f["id"], s["id"]
+    fields = [{"id": f["id"], "name": f["name"], "en": f.get("name_en") or "", "about": f.get("about") or "",
+               "subs": [{"id": s["id"], "name": s["name"]} for s in f["subs"]]} for f in F]
+    RO = (yaml.safe_load(ro.read_text(encoding="utf-8")) or {}).get("fields", []) if ro.exists() else []
+    region_order = {r: (g["field"], k) for k, (g, r) in enumerate((g, r) for g in RO for r in g["regions"])}
+    return fields, f_of, s_of, region_order
+
+
+def order_regions(regions, region_order):
+    """2D の地図の縦の並び：relations/region-order.yaml の順（分野ごと）。並びにない領域は、もとの順でうしろに置く。"""
+    known = sorted((r for r in regions if r["id"] in region_order), key=lambda r: region_order[r["id"]][1])
+    rest = [r for r in regions if r["id"] not in region_order]
+    return [{**r, "f": region_order[r["id"]][0]} for r in known] + rest
+
+
 def build(data, problems):
     lanes = {l["id"]: l for l in data["lanes"]}
     out_units = []
@@ -625,7 +648,8 @@ def build(data, problems):
     lay = ROOT / "tools" / "space-layout.json"
     pos, added = space.place_missing(data["units"], json.loads(lay.read_text(encoding="utf-8")) if lay.exists() else {})
     if added:
-        print(f"警告: 知の宇宙の配置にない単元 {len(added)}（仮に前提の近くに置いた。python tools/space.py で作り直す）：" + "、".join(added[:10]))
+        print(f"警告: 知の宇宙の配置にない単元 {len(added)}（仮に前提の近くに置いた。python tools/fields/run.py と python tools/fields/place3d.py --site で作り直す）：" + "、".join(added[:10]))
+    fields, f_of, s_of, region_order = load_fields()
     for u in data["units"]:
         m = ID_RE.match(u["id"])
         days = expand(u)
@@ -641,6 +665,7 @@ def build(data, problems):
                           **({"measure": True} if u.get("measure") else {}),
                           **({"alt": u["alt"]} if u.get("alt") else {}),
                           **({"keys": u["keys"]} if u.get("keys") else {}),
+                          **({"f": f_of[u["id"]], "s": s_of[u["id"]]} if u["id"] in f_of else {}),
                           "p": pos[u["id"]],
                           # 組み合わせ：b は広さ、r は珍しさ、rg は前提の領域、pr はいちばん珍しい組
                           **({"comb": {"b": comb[u["id"]]["breadth"], "r": comb[u["id"]]["rarity"],
@@ -655,7 +680,7 @@ def build(data, problems):
                       **({"choices": cov["choices"]} if cov.get("choices") else {}),
                       "units": sorted(gu.get(g["id"], [])), "items": items,
                       **({"choiceUnits": sorted(gc[g["id"]] - gu[g["id"]])} if gc.get(g["id"], set()) - gu.get(g["id"], set()) else {})})
-    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": data.get("regions", []), "kinds": data["kinds"],
+    payload = {"lanes": data["lanes"], "stages": data["stages"], "regions": order_regions(data.get("regions", []), region_order), "kinds": data["kinds"], "fields": fields,
                "glossary": data.get("glossary", []),
                "goals": goals, "levels": THINKING_LEVELS,
                "combLayer": combination.layer(data["units"], data.get("catalog", []), comb), "goalKinds": list(GOAL_KINDS), "goalFields": list(GOAL_FIELDS), "units": out_units, "renamed": data["renamed"]}

@@ -164,6 +164,10 @@ def place_missing(units, pos):
 
 
 if __name__ == "__main__":
+    # D-124 で、サイトの 3D の地図を関係から見た配置に替えた。この道具の layout() は、はじめの知の宇宙（中心からの距離が前提の深さ、方角が流れ）として残す
+    if "--old" not in sys.argv:
+        sys.exit("サイトの 3D の配置は、関係から見た配置になった（D-124）。作りなおすときは python tools/fields/run.py のあと python tools/fields/place3d.py --site。"
+                 "はじめの知の宇宙（D-037）で書くときだけ --old を付ける")
     sys.path.insert(0, str(Path(__file__).parent))
     import roadmap  # noqa: E402
 
