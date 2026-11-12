@@ -7,25 +7,29 @@ import * as THREE from './vendor/three.module.min.js';
 // 3 済（輪が閉じ、外に腕だめしの解けた割合だけ金の弧）、4 腕だめしまで（金の星になり、光の筋がゆっくり回る）。
 // 輪と光の筋を描く星は、絵を大きく取り（k 倍）、星そのものの光の大きさは変えない
 const STAR_VS = `
-attribute float size; attribute vec3 color; attribute float phase; attribute float state; attribute float alpha; attribute float prog;
+attribute float size; attribute vec3 color; attribute float phase; attribute float state; attribute float alpha; attribute float prog; attribute float lit;
 uniform float time; uniform float scale; uniform vec2 fog;
-varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT;
+varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT; varying float vLit;
 void main() {
   vec4 mv = modelViewMatrix * vec4(position, 1.0);
-  float fogk = 1.0 - 0.75 * smoothstep(fog.x, fog.y, -mv.z);
+  // 選んだ星（lit）は霧で沈めすぎない
+  float fogk = 1.0 - 0.75 * (1.0 - 0.6 * lit) * smoothstep(fog.x, fog.y, -mv.z);
   float tw = 0.82 + 0.18 * sin(time * 1.3 + phase * 6.2832);
   float pulse = (state > 0.5 && state < 1.5) ? 1.0 + 0.45 * sin(time * 3.2 + phase * 6.2832) : 1.0;
   float k = state > 3.5 ? 3.4 : state > 1.5 ? 2.0 : 1.0;
   // 進んだ星ほど大きく、遠くからでも見える大きさを下限にする（腕だめしまでの金の光は遠目でも分かるように）
   float boost = state > 3.5 ? 1.7 : state > 2.5 ? 1.3 : state > 1.5 ? 1.15 : 1.0;
   float lo = state > 3.5 ? 22.0 : state > 2.5 ? 9.0 : state > 1.5 ? 7.0 : 1.5;
-  gl_PointSize = clamp(size * scale * tw * pulse * k * boost / -mv.z, lo, 90.0 * k);
+  // 選んだ星座・分野・探した星は、ほかを消さずに、選んだ星の光を強くする（施主の願い）：大きく、遠くでも見え、ゆっくり息をする
+  float shine = 1.0 + lit * (0.9 + 0.12 * sin(time * 1.6 + phase * 6.2832));
+  lo = max(lo, 7.0 * lit);
+  gl_PointSize = clamp(size * scale * tw * pulse * k * boost * shine / -mv.z, lo, 90.0 * k * (1.0 + 0.6 * lit));
   gl_Position = projectionMatrix * mv;
-  vColor = color; vAlpha = alpha * fogk; vState = state; vProg = prog; vK = k;
+  vColor = color; vAlpha = alpha * fogk; vState = state; vProg = prog; vK = k; vLit = lit;
   vSpin = time * 0.22 + phase * 6.2832; vT = time + phase * 6.2832;
 }`;
 const STAR_FS = `
-varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT;
+varying vec3 vColor; varying float vAlpha; varying float vState; varying float vProg; varying float vK; varying float vSpin; varying float vT; varying float vLit;
 void main() {
   vec2 q = gl_PointCoord - 0.5;
   if (length(q) > 0.5) discard;
@@ -35,6 +39,10 @@ void main() {
   float white = vState > 2.5 ? 1.0 : 0.5;
   vec3 col = vColor * glow * 1.15 + vec3(1.0) * core * white;
   float a = glow * 0.85 + core * 0.9;
+  // 選んだ星の暈（かさ）：芯を白く強め、まわりに淡い光を広げる。絵の縁では消えるようにする
+  float halo = exp(-d * d * 6.0) * smoothstep(0.5, 0.32, length(q)) * vLit;
+  col += vColor * halo * 0.9 + vec3(1.0) * core * 0.5 * vLit;
+  a += halo * 0.55 + core * 0.3 * vLit;
   float ang = fract(atan(c.x, -c.y) / 6.2832 + 1.0);
   vec3 gold = vec3(1.0, 0.78, 0.36);
   if (vState > 1.5 && vState < 2.5) {
@@ -148,7 +156,7 @@ export function mount(api) {
 
   // ---- 星（単元） ----
   const pos = new Float32Array(N * 3), col = new Float32Array(N * 3), size = new Float32Array(N),
-    phase = new Float32Array(N), state = new Float32Array(N), alpha = new Float32Array(N), prog = new Float32Array(N);
+    phase = new Float32Array(N), state = new Float32Array(N), alpha = new Float32Array(N), prog = new Float32Array(N), lit = new Float32Array(N);
   const P = units.map(u => new THREE.Vector3(...u.p));
   units.forEach((u, i) => {
     pos.set(u.p, i * 3);
@@ -165,6 +173,7 @@ export function mount(api) {
   sg.setAttribute('state', new THREE.BufferAttribute(state, 1));
   sg.setAttribute('prog', new THREE.BufferAttribute(prog, 1));
   sg.setAttribute('alpha', new THREE.BufferAttribute(alpha, 1));
+  sg.setAttribute('lit', new THREE.BufferAttribute(lit, 1));
   const starMat = new THREE.ShaderMaterial({
     uniforms: { time: { value: 0 }, scale: { value: 1 }, fog: { value: new THREE.Vector2(60, 200) } }, vertexShader: STAR_VS, fragmentShader: STAR_FS,
     transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
@@ -340,13 +349,14 @@ export function mount(api) {
     units.forEach((u, i) => { state[i] = STATE[fn(u.id)] ?? 0; prog[i] = pfn ? pfn(u.id) : 0; });
     sg.attributes.state.needsUpdate = true; sg.attributes.prog.needsUpdate = true;
   }
-  // 見せる濃さ：1 は見える、低いほど沈む。目標の外の星と糸は沈める
-  // boost：目標の星座では、目標の星どうしの糸を濃くする。
+  // 見せる濃さ：1 は見える、低いほど沈む。選んでいない星は消さずに少し沈める
+  // litFn：選んだ星の光の強さ（0 ふつう〜1 いちばん強い）。大きさと暈を強める
+  // boost：選んだ星どうしの糸を濃くする。
   // lens（橋の見方）：橋の星を残してほかを沈め、領域をまたぐ糸を濃く、同じ領域の糸を薄くする
   let lens = false;
-  function setAlpha(fn, boost = 1) {
-    units.forEach((u, i) => { const a = fn(u.id); alpha[i] = lens && !api.bridges.has(u.id) ? a * .45 : a; });
-    sg.attributes.alpha.needsUpdate = true;
+  function setAlpha(fn, boost = 1, litFn = null) {
+    units.forEach((u, i) => { const a = fn(u.id); alpha[i] = lens && !api.bridges.has(u.id) ? a * .45 : a; lit[i] = litFn ? litFn(u.id) : 0; });
+    sg.attributes.alpha.needsUpdate = true; sg.attributes.lit.needsUpdate = true;
     pairs.forEach(([a, b, w], k) => {
       const v = Math.min(alpha[a], alpha[b]), len = P[a].distanceTo(P[b]);
       const f = lens ? (units[a].region !== units[b].region ? 3 : .2) : 1;

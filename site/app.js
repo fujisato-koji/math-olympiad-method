@@ -988,16 +988,23 @@
     (NEXT[id] || []).forEach(x => edges.push([id, x, 0]));
     return edges;
   }
-  // 3D の濃さ：探した星 → 目標の星座 → 分野の範囲の順に効かせる
+  // 3D の濃さと光：探した星 → 目標の星座 → 分野の範囲の順に効かせる。
+  // 選んだ星の光を強くし、ほかの星は消さずに少し沈める（施主「ほかの星が消えるというより、選んだものの光が強くなる方がいい」）
+  const COS_DIM = .6;
   function cosAlpha() {
     if (!cosmos) return;
     const g = GOALS.find(x => x.id === prefs.goal), all = group()[0] === 'all';
+    // 選んだ度合い：1 当たる、.5 目標の選択肢の星、0 当たらない。何も選んでいなければ null
+    const pick = id => {
+      if (X.hits) return X.hits.has(id) ? 1 : 0;
+      if (!g && all) return null;
+      const m = !g ? 1 : inGoal(id) ? 1 : inChoice(id) ? .5 : 0;
+      return all || inGroup(id) ? m : 0;
+    };
     cosmos.setLens(!!prefs.mapComb);
-    cosmos.setAlpha(id => {
-      if (X.hits) return X.hits.has(id) ? 1 : .08;
-      const a = !g ? 1 : inGoal(id) ? 1 : inChoice(id) ? .35 : .05;
-      return all || inGroup(id) ? a : a * .08;
-    }, g ? 3.2 : 1);
+    cosmos.setAlpha(id => { const m = pick(id); return m === null || m > 0 ? 1 : COS_DIM; },
+      g ? 3.2 : X.hits || !all ? 2.4 : 1,
+      id => pick(id) || 0);
   }
   function paint(fly) {
     if (X.view === '3d') {
