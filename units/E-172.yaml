@@ -303,8 +303,8 @@ days:
         paths:
           - [上から おす, てっぺんが 下がる, 紙の 長さは 同じ, あしが そとへ ひらく ア]
       - part: 今日
-        text: ストロー 3 本で 三角を 作ります。三角を 2 つ くっつけて、この 形に しました。ストローは 何本 つかったかな。
-        svg: '<svg viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg"><line x1="60" y1="150" x2="240" y2="150" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><line x1="90" y1="150" x2="170" y2="150" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="170" y1="150" x2="210" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="210" y1="80" x2="130" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="130" y1="80" x2="90" y2="150" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="170" y1="150" x2="130" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="90" cy="150" r="3.2" fill="currentColor"/><circle cx="170" cy="150" r="3.2" fill="currentColor"/><circle cx="210" cy="80" r="3.2" fill="currentColor"/><circle cx="130" cy="80" r="3.2" fill="currentColor"/></svg>'
+        text: ストローを つないで、三角が 2 つ くっついた 形を 作りました。ストローは 何本 つかったかな。
+        svg: '<svg viewBox="0 0 320 175" xmlns="http://www.w3.org/2000/svg"><line x1="90" y1="150" x2="170" y2="150" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="170" y1="150" x2="210" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="210" y1="80" x2="130" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="130" y1="80" x2="90" y2="150" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><line x1="170" y1="150" x2="130" y2="80" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="90" cy="150" r="3.2" fill="currentColor"/><circle cx="170" cy="150" r="3.2" fill="currentColor"/><circle cx="210" cy="80" r="3.2" fill="currentColor"/><circle cx="130" cy="80" r="3.2" fill="currentColor"/></svg>'
         answer: 5
         check: "3 + 3 - 1"
         hints:

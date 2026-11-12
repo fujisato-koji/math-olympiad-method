@@ -420,6 +420,9 @@ def check(data, problems):
                 where = f"{uid} 腕だめし {i}" if d.get("ri") else f"{uid} {d.get('day')} 日目 {i}"
                 if item.get("part") not in PARTS:
                     errors.append(f"{where}: part は {'、'.join(PARTS)} のどれか")
+                # 記号を固定する id（D-044）は文字列。数字だけの指紋を引用符なしで書くと数（0 始まりは 8 進）に読まれて記号が変わる（D-131）
+                if "id" in item and not isinstance(item["id"], str):
+                    errors.append(f"{where}: id は引用符でかこんだ文字列にする（id: \"0465205161\" の形）")
                 if "time" in item and not (isinstance(item["time"], int) and 10 <= item["time"] <= 3600):
                     errors.append(f"{where}: time は目安の秒（10〜3600 の整数）")
                 if bool(d.get("ri")) != (item.get("part") == "離"):
