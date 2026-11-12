@@ -876,15 +876,11 @@
   const X = { view: prefs.xview === '2d' ? '2d' : '3d', sel: null, pair: null, hits: null };
   let cosmos = null, POS2D = {}, CARD = '', hits = [], hintAt = Math.floor(Math.random() * 997);
   const combine = { on: false, from: null };
-  // 範囲：島が多いので、分野ごとに見られるようにする。1 つのボタンは 1 つの分野（流れ）。違う分野を「〇と〇」で抱き合わせない（D-033）
-  const SCHOOL_REGIONS = new Set(['kazu', 'keisan', 'seisu', 'seisuron', 'houteishiki', 'kansu', 'shiki', 'futoshiki', 'kazoekata',
-    'kakuritsu', 'graph', 'katachi', 'hakaru', 'shomei-zukei', 'zahyo', 'haichi', 'suiri', 'ronpo']);
+  // 範囲：島が多いので、分野ごとに見られるようにする。分野は関係から見つけた 16 の分野（D-124 の (5)）で、地図の色と同じ。
+  // 領域はその分野（build が relations/region-order.yaml から入れる rg.f）で絞る。違う分野を「〇と〇」で抱き合わせない（D-033）
   const MAP_GROUPS = [
     ['all', 'すべて', () => true],
-    ['school', '小中高の数学', rg => SCHOOL_REGIONS.has(rg.id)],
-    ['univ', '大学の数学', rg => !SCHOOL_REGIONS.has(rg.id) && ('NACGLDMRTS'.includes(rg.lane) || rg.id === 'suchi')],
-    ['cs', '計算機科学', rg => rg.lane === 'K' && rg.id !== 'suchi'],
-    ...'PHBWIQVEFY'.split('').map(l => [l, LANES[l].name, rg => rg.lane === l]),
+    ...(R.fields || []).map(f => [f.id, f.name, rg => rg.f === f.id]),
   ];
   const REGION = Object.fromEntries((R.regions || []).map(r => [r.id, r]));
   const group = () => MAP_GROUPS.find(g => g[0] === prefs.mapGroup) || MAP_GROUPS[0];
@@ -1271,7 +1267,7 @@
       const p = $('#xpop');
       if (!p.hidden) { p.hidden = true; return; }
       p.innerHTML = `<div class="xpop-title">分野で見る</div>${MAP_GROUPS.map(([gid, name]) =>
-        `<button type="button" data-mapgroup="${gid}" aria-pressed="${group()[0] === gid}">${gid.length === 1 ? `<span class="cc-dot" style="${lc(gid)}"></span>` : ''}${esc(name)}</button>`).join('')}`;
+        `<button type="button" data-mapgroup="${gid}" aria-pressed="${group()[0] === gid}">${gid !== 'all' ? `<span class="cc-dot" style="${fc({ f: gid })}"></span>` : ''}${esc(name)}</button>`).join('')}`;
       p.hidden = false;
       return;
     }
