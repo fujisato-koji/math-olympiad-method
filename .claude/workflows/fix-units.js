@@ -69,7 +69,8 @@ const judgePrompt = (id, solved) => `みちすじの単元 ${id} を、答えを
 2. 食い違った問題と、係が sure=false か issue を付けた問題について、units/${id}.yaml のその問題（key は d<日>-<番>、予備は d<日>-x<番>、腕だめしは ri-<番>）と図を見る（図は python tools/blind.py render ${id} j で画像にし、見たら clean ${id} j で消す）。
 3. 決める：(a) ファイルの答えがまちがい → answer、check、paths を直し、その問題の id: の行を消す。(b) 問いか図が 2 通りに読める・答えが決まらない → 図か文を直して答えを 1 つに決める（意味が変わったら id: を消す）。(c) 係のまちがい → 直さない（わけを書く）。kinds: [最難関] の問題は中身を変えず、kept にわけを書く。
 4. 書くのは units/${id}.yaml だけ。git、build、check はしない。直したら PYTHONIOENCODING=utf-8 python tools/unitqc.py --no-shot ${id} で誤り 0、漢字 0 を確かめる。
-5. docs/problem-figures.md の決まりに従う。`
+5. 選ぶ問題（choices のある問題）は全部、ヒント 3 段でまちがいの選択肢を消しすぎていないかを見る。3 段を合わせて 2 つ以上消して答えだけが残る形、2 択で 1 つ消す形は、消すのを 1 つまでにし、残りを「何を見ればわかるか」「どう比べるか」に直す（D-133）。直した数を fixed に書き、直したら 4. の unitqc をもう一度通す。
+6. docs/problem-figures.md の決まりに従う。`
 
 const ids = (args && args.units) || []
 // 同時に進める単元の数（PC を軽くする。D-132）。args.width で変えられる。1 単元は 直す → 解く 2 人 → 照らす の順
