@@ -532,6 +532,9 @@ def check(data, problems):
                 print(f"警告: {kind}の{fd}が {len(n)}（上限 {cap}）：{'、'.join(n)}")
     for gid, cov in data["coverages"].items():
         errors += [f"[{gid}] {e}" for e in check_coverage(cov, units)]
+    # 外の物差し（yardsticks/*.yaml、D-117）：公開の分類の項目ごとに、受け持つ単元・入れない理由・足りないのどれか
+    import yardstick
+    errors += yardstick.check(set(units))
     # どの単元も、どれかの目標の道のりに入るか、段の物差しの大会のため（measure）であること
     if data["coverages"]:
         on_path = set().union(*goal_units(data).values())
