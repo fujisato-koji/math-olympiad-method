@@ -840,15 +840,15 @@ fields:
     about: マルチンゲール、ブラウン運動、レヴィ過程、確率積分と確率微分方程式、確率偏微分方程式など確率過程の理論と、その金融への応用が集まる。
     units: [S-006, S-007, S-008, S-010, S-011, S-012, S-013, S-014, S-015, S-016, F-035, F-039, S-056, S-043, S-045]
 - id: F16
-  name: 理科（小学校の力と電気）
-  name_en: Elementary Science (Forces and Electricity)
-  about: 磁石・電気・てこ・ばね・滑車・転がりなど、小学校の理科の力と電気の観察と工作、およびものづくりの手順が集まる。
+  name: 初等物理学
+  name_en: Elementary Physics
+  about: 磁石、電気、てこ、ばね、滑車、転がりなど小学校の力と電気の観察と工作、およびものづくりの手順が集まる。
   note: null
   size: 13
   boundary: [P-184]
   subs:
   - id: F16-01
-    name: 理科（小学校の力と電気）
-    name_en: Elementary Science (Forces and Electricity)
+    name: 初等物理学
+    name_en: Elementary Physics
     about: 磁石、豆電球と電池、ゴムやばね、転がり、重さとエネルギーなど、小学校段の電気と力の入口。
     units: [P-181, P-182, P-184, P-185, P-187, E-171, P-183, P-186, E-174, E-175, P-197, E-184, E-199]
