@@ -74,6 +74,7 @@ ri:
   - 線は `stroke="currentColor"`（暗い画面でも見える）、太さ 2。ぬりは淡い色に `fill-opacity` .35〜.7。色見本：黄 #f3c969、空色 #7fc8f8、緑 #7bc96f、赤 #f08080、茶 #c9a36b、紫 #b39ddb、灰 #c8ccd6。文字の色は `fill="currentColor"`。
   - `viewBox="0 0 320 200"` を基本に（横長）。width と height は書かない。文字は font-size 13〜16、text-anchor で寄せ、図とかさならないように置く。
   - 使えないもの：script、foreignObject、on…= の属性、href、url(…)、外の画像。<defs> の marker も使わない（矢印は polygon）。
+  - 天びんも svg で描く（上皿てんびん：台・柱・横の棒・皿 2 つ、傾きは棒の角度）。前の balance:（D-042）は、答えを見ない係の道具にも確かめの PNG にも出ないので使わない。unitqc.py が誤りとして出す。check が bal を使っていたら、式も数で書き直す（D-132 の追記）。
 - 描いたら必ず tools/unitqc.py で PNG にして Read で見る。はみ出し、かさなり、小さすぎる文字、何の絵かわからないものを直す。見たら --clean で消す。
 
 ## 試しの 6 単元の審査で多かった指摘（書く前と書いたあとに、自分で見る）

@@ -35,6 +35,12 @@ U = {u['id']: u for u in data['units']}
 for uid in ids:
     print(f'== {uid}（段 {U[uid]["stage"]}）')
     e = [x for x in mine if uid in x]
+    # 天びんは svg で描く。balance:（D-042）は答えを見ない係の道具（blind.py）にも図の PNG にも出ない（D-132 の追記）
+    pu = problems[uid]
+    nb = [f"{d.get('day')} 日目 {i}" for d in pu.get('days') or [] for i, it in enumerate((d.get('items') or []) + (d.get('extra') or []), 1)
+          if it.get('balance') and not it.get('svg')]
+    nb += [f'腕だめし {i}' for i, it in enumerate(pu.get('ri') or [], 1) if it.get('balance') and not it.get('svg')]
+    e += [f'{uid} {w}：天びんを balance: でなく svg で描く（答えを見ない係に見えない。check が bal を使うなら式も直す）' for w in nb]
     print(f'  誤り {len(e)}')
     for x in e:
         print('   -', x)
