@@ -1,0 +1,322 @@
+# 外の物差し：数学の中の抜けを測る（D-117）。2 けたの 63 区分。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "Mathematics Subject Classification 2020（MSC2020、2 けた）"
+version: "2020"
+sources:
+  Y01: {title: "MSC2020（zbMATH Open と AMS）の分類表 MSC_2020.csv", url: "https://msc2020.org/MSC_2020.csv", date: 2026-11-12, license: "CC BY-NC-SA 4.0（msc2020.org の表示）"}
+items:
+  - id: "00"
+    name: "General and overarching topics; collections"
+    ja: "一般・論文集"
+    none: "分類の便宜の見出し（一般、論文集、事典）で知の中身でない。測れる部分は各項目の単元にある"
+    sources: [Y01]
+  - id: "01"
+    name: "History and biography"
+    ja: "歴史と伝記"
+    none: "人文（数学史と人物の解釈）。解釈は入れず、いまの知に要る歴史は各単元の中で扱う"
+    sources: [Y01]
+  - id: "03"
+    name: "Mathematical logic and foundations"
+    ja: "数理論理と基礎"
+    units: [L-023, L-024, L-029, L-025, L-034]
+    sources: [Y01]
+  - id: "05"
+    name: "Combinatorics"
+    ja: "組合せ論"
+    units: [C-026, C-021, C-037, C-029, C-033]
+    sources: [Y01]
+  - id: "06"
+    name: "Order, lattices, ordered algebraic structures"
+    ja: "順序・束・順序代数"
+    gap: "要る単元の案「順序と束（束とブール代数、分配束と完備束、不動点定理、順序群）」（前提 L-022、A-024、R-001）。入口は L-022（半順序集合）と K-030（回路のブール代数）だけで束の理論がない"
+    sources: [Y01]
+  - id: "08"
+    name: "General algebraic systems"
+    ja: "一般代数系"
+    gap: "要る単元の案「普遍代数と半群（代数系と準同型、ヴァラエティとバーコフの定理、半群とモノイド）」（前提 R-001、R-008）。入口は R-001（群の定義）だけで一般の代数系がない"
+    sources: [Y01]
+  - id: "11"
+    name: "Number theory"
+    ja: "数論"
+    units: [N-032, N-051, N-048, N-062, N-066]
+    sources: [Y01]
+  - id: "12"
+    name: "Field theory and polynomials"
+    ja: "体論と多項式"
+    units: [R-012, R-013, R-015, R-014, A-031]
+    sources: [Y01]
+  - id: "13"
+    name: "Commutative algebra"
+    ja: "可換環論"
+    units: [R-024, R-025, R-010, R-027]
+    sources: [Y01]
+  - id: "14"
+    name: "Algebraic geometry"
+    ja: "代数幾何"
+    units: [T-030, T-035, T-033, T-034, T-036]
+    sources: [Y01]
+  - id: "15"
+    name: "Linear and multilinear algebra; matrix theory"
+    ja: "線形・多重線形代数、行列論"
+    units: [M-005, M-007, M-008, M-011, M-004]
+    sources: [Y01]
+  - id: "16"
+    name: "Associative rings and algebras"
+    ja: "結合環と結合多元環"
+    gap: "要る単元の案「非可換環論（半単純環とウェダーバーンの定理、ジャコブソン根基とアルティン環、中心的単純環とブラウアー群）」（前提 R-008、R-011、R-016）。入口は R-008（環）、R-011（加群）、R-016（群環の表現）で、非可換環の構造論がない"
+    sources: [Y01]
+  - id: "17"
+    name: "Nonassociative rings and algebras"
+    ja: "非結合環と非結合多元環"
+    units: [R-020, R-021, R-022]
+    sources: [Y01]
+  - id: "18"
+    name: "Category theory; homological algebra"
+    ja: "圏論とホモロジー代数"
+    units: [R-026, R-027, R-029, R-031]
+    sources: [Y01]
+  - id: "19"
+    name: "K-theory"
+    ja: "K 理論"
+    gap: "要る単元の案「K 理論の入口（射影加群の K_0 と K_1、ベクトル束の K(X) とボット周期性、代数的 K 理論の入口）」（前提 T-026、R-011、R-027）。入口は T-026（ベクトル束）と R-011（加群）だけで、K 群そのものがない"
+    sources: [Y01]
+  - id: "20"
+    name: "Group theory and generalizations"
+    ja: "群論"
+    units: [R-001, R-002, R-003, R-004, R-007]
+    sources: [Y01]
+  - id: "22"
+    name: "Topological groups, Lie groups"
+    ja: "位相群とリー群"
+    units: [R-023, R-033, R-030, R-020]
+    sources: [Y01]
+  - id: "26"
+    name: "Real functions"
+    ja: "実関数"
+    units: [D-007, D-008, D-009, D-014, A-027]
+    sources: [Y01]
+  - id: "28"
+    name: "Measure and integration"
+    ja: "測度と積分"
+    units: [D-019, D-020, D-021, D-026, D-072]
+    sources: [Y01]
+  - id: "30"
+    name: "Functions of a complex variable"
+    ja: "複素関数論"
+    units: [D-029, D-030, D-031, D-032, D-034]
+    sources: [Y01]
+  - id: "31"
+    name: "Potential theory"
+    ja: "ポテンシャル論"
+    units: [D-088, D-033, D-051, D-056, D-050]
+    sources: [Y01]
+  - id: "32"
+    name: "Several complex variables and analytic spaces"
+    ja: "多変数複素関数と解析空間"
+    gap: "要る単元の案「多変数複素解析（ハルトークスの現象、正則領域と擬凸性、岡の原理、解析空間）」（前提 D-043、T-029、T-037）。入口は D-043 の「入口」だけで中心がない"
+    sources: [Y01]
+  - id: "33"
+    name: "Special functions"
+    ja: "特殊関数"
+    units: [D-077, D-037, D-038, D-042]
+    sources: [Y01]
+  - id: "34"
+    name: "Ordinary differential equations"
+    ja: "常微分方程式"
+    units: [D-044, D-045, D-046, D-047, D-053]
+    sources: [Y01]
+  - id: "35"
+    name: "Partial differential equations"
+    ja: "偏微分方程式"
+    units: [D-057, D-058, D-059, D-091, D-049]
+    sources: [Y01]
+  - id: "37"
+    name: "Dynamical systems and ergodic theory"
+    ja: "力学系とエルゴード理論"
+    units: [D-053, D-055, D-073, D-074, S-044]
+    sources: [Y01]
+  - id: "39"
+    name: "Difference and functional equations"
+    ja: "差分方程式と関数方程式"
+    units: [A-029, A-022, A-035, C-026, E-071]
+    sources: [Y01]
+  - id: "40"
+    name: "Sequences, series, summability"
+    ja: "数列・級数・総和法"
+    units: [D-010, D-080, D-002]
+    sources: [Y01]
+  - id: "41"
+    name: "Approximations and expansions"
+    ja: "近似と展開"
+    units: [D-028, K-001, D-039, D-064, D-022]
+    sources: [Y01]
+  - id: "42"
+    name: "Harmonic analysis on Euclidean spaces"
+    ja: "ユークリッド空間の調和解析"
+    units: [D-022, D-023, D-083, D-085, D-075]
+    sources: [Y01]
+  - id: "43"
+    name: "Abstract harmonic analysis"
+    ja: "抽象調和解析"
+    units: [R-033, D-070]
+    sources: [Y01]
+  - id: "44"
+    name: "Integral transforms, operational calculus"
+    ja: "積分変換、演算子法"
+    units: [D-035, D-075, D-023, E-071]
+    sources: [Y01]
+  - id: "45"
+    name: "Integral equations"
+    ja: "積分方程式"
+    units: [D-078, D-066]
+    sources: [Y01]
+  - id: "46"
+    name: "Functional analysis"
+    ja: "関数解析"
+    units: [D-062, D-063, D-065, D-067, D-069]
+    sources: [Y01]
+  - id: "47"
+    name: "Operator theory"
+    ja: "作用素論"
+    units: [D-066, D-065, D-070]
+    sources: [Y01]
+  - id: "49"
+    name: "Calculus of variations and optimal control; optimization"
+    ja: "変分法と最適制御、最適化"
+    units: [D-052, D-089, E-055, K-009, K-010]
+    sources: [Y01]
+  - id: "51"
+    name: "Geometry"
+    ja: "幾何学"
+    units: [G-017, G-037, G-041, G-026, T-008]
+    sources: [Y01]
+  - id: "52"
+    name: "Convex and discrete geometry"
+    ja: "凸幾何と離散幾何"
+    units: [G-048, C-023, C-044, K-009]
+    sources: [Y01]
+  - id: "53"
+    name: "Differential geometry"
+    ja: "微分幾何"
+    units: [T-016, T-011, T-017, T-014, T-041]
+    sources: [Y01]
+  - id: "54"
+    name: "General topology"
+    ja: "一般位相"
+    units: [T-001, T-003, T-002, T-005, D-013]
+    sources: [Y01]
+  - id: "55"
+    name: "Algebraic topology"
+    ja: "代数的位相"
+    units: [T-019, T-024, T-025, T-027, T-043]
+    sources: [Y01]
+  - id: "57"
+    name: "Manifolds and cell complexes"
+    ja: "多様体とセル複体"
+    units: [T-050, T-056, T-045, T-055, T-004]
+    sources: [Y01]
+  - id: "58"
+    name: "Global analysis, analysis on manifolds"
+    ja: "大域解析、多様体上の解析"
+    units: [T-018, T-015, T-050]
+    sources: [Y01]
+  - id: "60"
+    name: "Probability theory and stochastic processes"
+    ja: "確率論と確率過程"
+    units: [S-006, S-008, S-012, S-005, S-015]
+    sources: [Y01]
+  - id: "62"
+    name: "Statistics"
+    ja: "統計学"
+    units: [S-018, S-019, S-020, S-021, S-022]
+    sources: [Y01]
+  - id: "65"
+    name: "Numerical analysis"
+    ja: "数値解析"
+    units: [K-001, K-003, K-007, K-004, K-002]
+    sources: [Y01]
+  - id: "68"
+    name: "Computer science"
+    ja: "計算機科学"
+    units: [K-028, K-041, K-024, K-023, L-026]
+    sources: [Y01]
+  - id: "70"
+    name: "Mechanics of particles and systems"
+    ja: "粒子と系の力学"
+    units: [P-003, P-016, P-018, P-019, P-017]
+    sources: [Y01]
+  - id: "74"
+    name: "Mechanics of deformable solids"
+    ja: "変形体の力学"
+    units: [E-017, E-012, E-019, E-014, E-002]
+    sources: [Y01]
+  - id: "76"
+    name: "Fluid mechanics"
+    ja: "流体力学"
+    units: [P-014, E-031, E-034, E-037, E-032]
+    sources: [Y01]
+  - id: "78"
+    name: "Optics, electromagnetic theory"
+    ja: "光学、電磁気理論"
+    units: [P-034, P-024, P-028, P-039, P-023]
+    sources: [Y01]
+  - id: "80"
+    name: "Classical thermodynamics, heat transfer"
+    ja: "古典熱力学、伝熱"
+    units: [P-045, P-046, E-038, E-039, E-040]
+    sources: [Y01]
+  - id: "81"
+    name: "Quantum theory"
+    ja: "量子論"
+    units: [P-070, P-072, P-076, P-111, P-087]
+    sources: [Y01]
+  - id: "82"
+    name: "Statistical mechanics, structure of matter"
+    ja: "統計力学、物質の構造"
+    units: [P-048, P-049, P-051, P-052, P-053]
+    sources: [Y01]
+  - id: "83"
+    name: "Relativity and gravitational theory"
+    ja: "相対論と重力理論"
+    units: [P-057, P-060, P-061, P-063, P-064]
+    sources: [Y01]
+  - id: "85"
+    name: "Astronomy and astrophysics"
+    ja: "天文学と天体物理"
+    units: [P-212, P-163, P-169, P-211, P-215]
+    sources: [Y01]
+  - id: "86"
+    name: "Geophysics"
+    ja: "地球物理"
+    units: [W-021, W-015, W-037, W-022, P-157]
+    sources: [Y01]
+  - id: "90"
+    name: "Operations research, mathematical programming"
+    ja: "オペレーションズ・リサーチ、数理計画"
+    units: [K-010, K-009, E-157, C-024, K-011]
+    sources: [Y01]
+  - id: "91"
+    name: "Game theory, economics, finance, and other social and behavioral sciences"
+    ja: "ゲーム理論、経済、金融、社会・行動科学"
+    units: [F-024, F-058, F-012, F-035, F-049]
+    sources: [Y01]
+  - id: "92"
+    name: "Biology and other natural sciences"
+    ja: "生物学とその他の自然科学"
+    units: [B-055, I-037, B-062, B-141, K-119]
+    sources: [Y01]
+  - id: "93"
+    name: "Systems theory; control"
+    ja: "システム論、制御"
+    units: [E-053, E-054, E-055, E-058, E-049]
+    sources: [Y01]
+  - id: "94"
+    name: "Information and communication theory, circuits"
+    ja: "情報・通信理論、回路"
+    units: [C-038, C-039, C-040, E-067, E-069]
+    sources: [Y01]
+  - id: "97"
+    name: "Mathematics education"
+    ja: "数学教育"
+    gap: "要る単元の案「学習科学と教育の実証」（MeSH I02 と同じ単元。前提 Q-005、Q-010、Q-006）に、数学の学習の研究（数の認知の発達、典型的な誤概念、教授法と練習の効果、学習の転移）を含める。入口は Q-005、Q-010。数学の教育課程と制度は入れない"
+    sources: [Y01]

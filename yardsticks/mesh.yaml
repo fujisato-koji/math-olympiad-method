@@ -1,0 +1,714 @@
+# 外の物差し：医学と生命科学の中の抜けを測る（D-117）。16 の大分類を group にし、その下の樹番号 3 字（A01 など）を項目にした。副標目（Y）と廃止の項目は入れない。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "Medical Subject Headings（MeSH、NLM）の樹の上位 2 段"
+version: "2026"
+sources:
+  Y01: {title: "MeSH RDF（NLM）の SPARQL で取った 2026 年版の樹番号 3 字と名前", url: "https://id.nlm.nih.gov/mesh/sparql", date: 2026-11-12, license: "NLM の MeSH の利用条件（https://www.nlm.nih.gov/databases/download/terms_and_conditions_mesh.html）"}
+  Y02: {title: "MeSH Tree View（大分類の名前）", url: "https://meshb.nlm.nih.gov/treeView", date: 2026-11-12, license: "NLM の MeSH の利用条件"}
+items:
+  - {id: "A", name: "Anatomy", ja: "解剖", group: true}
+  - id: "A01"
+    parent: "A"
+    name: "Body Regions"
+    ja: "体の部位"
+    units: [I-012]
+    sources: [Y01]
+  - id: "A02"
+    parent: "A"
+    name: "Musculoskeletal System"
+    ja: "筋骨格系"
+    units: [I-012, I-011, I-048, B-139]
+    sources: [Y01]
+  - id: "A03"
+    parent: "A"
+    name: "Digestive System"
+    ja: "消化器系"
+    units: [I-012, I-017]
+    sources: [Y01]
+  - id: "A04"
+    parent: "A"
+    name: "Respiratory System"
+    ja: "呼吸器系"
+    units: [I-012, I-015]
+    sources: [Y01]
+  - id: "A05"
+    parent: "A"
+    name: "Urogenital System"
+    ja: "泌尿生殖器系"
+    units: [I-012, I-016, I-018]
+    sources: [Y01]
+  - id: "A06"
+    parent: "A"
+    name: "Endocrine System"
+    ja: "内分泌系"
+    units: [I-019, I-004, B-035]
+    sources: [Y01]
+  - id: "A07"
+    parent: "A"
+    name: "Cardiovascular System"
+    ja: "心血管系"
+    units: [I-012, I-014]
+    sources: [Y01]
+  - id: "A08"
+    parent: "A"
+    name: "Nervous System"
+    ja: "神経系"
+    units: [B-063, B-100, B-052, B-034]
+    sources: [Y01]
+  - id: "A09"
+    parent: "A"
+    name: "Sense Organs"
+    ja: "感覚器"
+    units: [B-100, B-063, I-011]
+    sources: [Y01]
+  - id: "A10"
+    parent: "A"
+    name: "Tissues"
+    ja: "組織"
+    units: [I-011]
+    sources: [Y01]
+  - id: "A11"
+    parent: "A"
+    name: "Cells"
+    ja: "細胞"
+    units: [B-010, B-022, I-011]
+    sources: [Y01]
+  - id: "A12"
+    parent: "A"
+    name: "Fluids and Secretions"
+    ja: "体液と分泌液"
+    units: [I-022, I-016]
+    sources: [Y01]
+  - id: "A13"
+    parent: "A"
+    name: "Animal Structures"
+    ja: "動物の構造"
+    units: [B-131, B-130, B-133, B-132]
+    sources: [Y01]
+  - id: "A14"
+    parent: "A"
+    name: "Stomatognathic System"
+    ja: "口腔・顎顔面系"
+    gap: "要る単元の案「口腔と歯の科学」（C07、E06 と同じ単元。前提 I-011、I-012）。歯と歯周の構造と発生、顎と咬合、唾液腺、咀嚼と嚥下"
+    sources: [Y01]
+  - id: "A15"
+    parent: "A"
+    name: "Hemic and Immune Systems"
+    ja: "血液と免疫系"
+    units: [I-022, I-005, B-037]
+    sources: [Y01]
+  - id: "A16"
+    parent: "A"
+    name: "Embryonic Structures"
+    ja: "胚の構造"
+    units: [B-046, I-013, B-140]
+    sources: [Y01]
+  - id: "A17"
+    parent: "A"
+    name: "Integumentary System"
+    ja: "外皮系（皮膚）"
+    units: [I-011, I-048]
+    sources: [Y01]
+  - id: "A18"
+    parent: "A"
+    name: "Plant Structures"
+    ja: "植物の構造"
+    units: [B-026, B-150, B-149, B-016]
+    sources: [Y01]
+  - id: "A19"
+    parent: "A"
+    name: "Fungal Structures"
+    ja: "菌類の構造"
+    units: [B-147]
+    sources: [Y01]
+  - id: "A20"
+    parent: "A"
+    name: "Bacterial Structures"
+    ja: "細菌の構造"
+    units: [B-144, B-043]
+    sources: [Y01]
+  - id: "A21"
+    parent: "A"
+    name: "Viral Structures"
+    ja: "ウイルスの構造"
+    units: [B-146, B-043]
+    sources: [Y01]
+  - {id: "B", name: "Organisms", ja: "生物", group: true}
+  - id: "B01"
+    parent: "B"
+    name: "Eukaryota"
+    ja: "真核生物"
+    units: [B-025, B-130, B-149, B-147, B-133]
+    sources: [Y01]
+  - id: "B02"
+    parent: "B"
+    name: "Archaea"
+    ja: "古細菌"
+    units: [B-145, B-110]
+    sources: [Y01]
+  - id: "B03"
+    parent: "B"
+    name: "Bacteria"
+    ja: "細菌"
+    units: [B-144, B-145, B-043, I-028]
+    sources: [Y01]
+  - id: "B04"
+    parent: "B"
+    name: "Viruses"
+    ja: "ウイルス"
+    units: [B-146, B-043, I-028]
+    sources: [Y01]
+  - id: "B05"
+    parent: "B"
+    name: "Organism Forms"
+    ja: "生物の型と発育段階"
+    units: [B-185, B-132, B-070]
+    sources: [Y01]
+  - {id: "C", name: "Diseases", ja: "疾患", group: true}
+  - id: "C01"
+    parent: "C"
+    name: "Infections"
+    ja: "感染症"
+    units: [I-028, I-029, I-042, I-007, I-031]
+    sources: [Y01]
+  - id: "C04"
+    parent: "C"
+    name: "Neoplasms"
+    ja: "新生物（腫瘍）"
+    units: [I-023, I-050, I-025]
+    sources: [Y01]
+  - id: "C05"
+    parent: "C"
+    name: "Musculoskeletal Diseases"
+    ja: "筋骨格系の病気"
+    units: [I-048]
+    sources: [Y01]
+  - id: "C06"
+    parent: "C"
+    name: "Digestive System Diseases"
+    ja: "消化器の病気"
+    units: [I-047, I-017]
+    sources: [Y01]
+  - id: "C07"
+    parent: "C"
+    name: "Stomatognathic Diseases"
+    ja: "口腔・顎顔面の病気"
+    gap: "要る単元の案「口腔と歯の科学」（A14、E06 と同じ単元。前提 I-011、I-028）。う蝕と歯周病、口腔の感染と腫瘍のしくみ"
+    sources: [Y01]
+  - id: "C08"
+    parent: "C"
+    name: "Respiratory Tract Diseases"
+    ja: "呼吸器の病気"
+    units: [I-045, I-015]
+    sources: [Y01]
+  - id: "C09"
+    parent: "C"
+    name: "Otorhinolaryngologic Diseases"
+    ja: "耳鼻咽喉の病気"
+    gap: "要る単元の案「耳鼻咽喉の病気のしくみ（難聴と中耳炎、副鼻腔炎、気道の閉塞、平衡の障害）」（前提 I-012、I-045）。入口は E-169（人工内耳）"
+    sources: [Y01]
+  - id: "C10"
+    parent: "C"
+    name: "Nervous System Diseases"
+    ja: "神経系の病気"
+    units: [B-068, B-101]
+    sources: [Y01]
+  - id: "C11"
+    parent: "C"
+    name: "Eye Diseases"
+    ja: "眼の病気"
+    gap: "要る単元の案「眼の病気のしくみ（屈折異常、白内障、緑内障、網膜の病気）」（前提 I-046、G14 の案の視覚の生理の単元）。入口は B-170（網膜の人工器官）"
+    sources: [Y01]
+  - id: "C12"
+    parent: "C"
+    name: "Urogenital Diseases"
+    ja: "泌尿生殖器の病気"
+    units: [I-047, I-018, I-049]
+    sources: [Y01]
+  - id: "C14"
+    parent: "C"
+    name: "Cardiovascular Diseases"
+    ja: "心血管の病気"
+    units: [I-045, I-014, I-022]
+    sources: [Y01]
+  - id: "C15"
+    parent: "C"
+    name: "Hemic and Lymphatic Diseases"
+    ja: "血液とリンパの病気"
+    units: [I-022, I-023]
+    sources: [Y01]
+  - id: "C16"
+    parent: "C"
+    name: "Congenital, Hereditary, and Neonatal Diseases and Abnormalities"
+    ja: "先天性・遺伝性・新生児の病気"
+    units: [I-024, I-013]
+    sources: [Y01]
+  - id: "C17"
+    parent: "C"
+    name: "Skin and Connective Tissue Diseases"
+    ja: "皮膚と結合組織の病気"
+    units: [I-048, I-030]
+    sources: [Y01]
+  - id: "C18"
+    parent: "C"
+    name: "Nutritional and Metabolic Diseases"
+    ja: "栄養と代謝の病気"
+    units: [I-046, I-052, I-019]
+    sources: [Y01]
+  - id: "C19"
+    parent: "C"
+    name: "Endocrine System Diseases"
+    ja: "内分泌の病気"
+    units: [I-046, I-019]
+    sources: [Y01]
+  - id: "C20"
+    parent: "C"
+    name: "Immune System Diseases"
+    ja: "免疫系の病気"
+    units: [I-030, I-005]
+    sources: [Y01]
+  - id: "C21"
+    parent: "C"
+    name: "Disorders of Environmental Origin"
+    ja: "環境由来の障害"
+    units: [I-041, I-027, I-004]
+    sources: [Y01]
+  - id: "C22"
+    parent: "C"
+    name: "Animal Diseases"
+    ja: "動物の病気"
+    units: [V-014, V-035, V-036, V-038, V-015]
+    sources: [Y01]
+  - id: "C23"
+    parent: "C"
+    name: "Pathological Conditions, Signs and Symptoms"
+    ja: "病態・徴候・症状"
+    units: [I-020, I-021, I-022, I-044]
+    sources: [Y01]
+  - id: "C24"
+    parent: "C"
+    name: "Occupational Diseases"
+    ja: "職業病"
+    units: [I-041, I-027]
+    sources: [Y01]
+  - id: "C25"
+    parent: "C"
+    name: "Chemically-Induced Disorders"
+    ja: "化学物質による障害"
+    units: [I-027, I-001]
+    sources: [Y01]
+  - id: "C26"
+    parent: "C"
+    name: "Wounds and Injuries"
+    ja: "創傷と外傷"
+    units: [I-051, I-021, I-048]
+    sources: [Y01]
+  - {id: "D", name: "Chemicals and Drugs", ja: "化学物質と薬", group: true}
+  - id: "D01"
+    parent: "D"
+    name: "Inorganic Chemicals"
+    ja: "無機化合物"
+    units: [H-028, H-029, H-013]
+    sources: [Y01]
+  - id: "D02"
+    parent: "D"
+    name: "Organic Chemicals"
+    ja: "有機化合物"
+    units: [H-032, H-033, H-034, H-038]
+    sources: [Y01]
+  - id: "D03"
+    parent: "D"
+    name: "Heterocyclic Compounds"
+    ja: "複素環化合物"
+    gap: "要る単元の案「複素環化合物の化学」（前提 H-034、H-039。CAS 27・28 と同じ単元）。ピロール・ピリジン・イミダゾール・プリンなどの芳香族性と反応性、環の合成。入口は H-047（複素環の合成）と H-044（核酸塩基）、中心がない"
+    sources: [Y01]
+  - id: "D04"
+    parent: "D"
+    name: "Polycyclic Compounds"
+    ja: "多環化合物"
+    gap: "要る単元の案「天然物化学」（前提 H-044、H-039、H-041。CAS 30〜32 と同じ単元）に縮合環とステロイド骨格を含める。入口は H-034（ベンゼン）と H-038（配座）、縮合多環と橋かけ環の中心がない"
+    sources: [Y01]
+  - id: "D05"
+    parent: "D"
+    name: "Macromolecular Substances"
+    ja: "高分子物質"
+    units: [H-035, H-054]
+    sources: [Y01]
+  - id: "D06"
+    parent: "D"
+    name: "Hormones, Hormone Substitutes, and Hormone Antagonists"
+    ja: "ホルモンとその代用・拮抗物質"
+    units: [I-019, I-004, B-035, I-026]
+    sources: [Y01]
+  - id: "D08"
+    parent: "D"
+    name: "Enzymes and Coenzymes"
+    ja: "酵素と補酵素"
+    units: [B-007, B-029]
+    sources: [Y01]
+  - id: "D09"
+    parent: "D"
+    name: "Carbohydrates"
+    ja: "炭水化物"
+    units: [H-044, B-008, B-006]
+    sources: [Y01]
+  - id: "D10"
+    parent: "D"
+    name: "Lipids"
+    ja: "脂質"
+    units: [H-044, B-008, B-006]
+    sources: [Y01]
+  - id: "D12"
+    parent: "D"
+    name: "Amino Acids, Peptides, and Proteins"
+    ja: "アミノ酸・ペプチド・タンパク質"
+    units: [B-014, B-006, H-044, B-013]
+    sources: [Y01]
+  - id: "D13"
+    parent: "D"
+    name: "Nucleic Acids, Nucleotides, and Nucleosides"
+    ja: "核酸・ヌクレオチド・ヌクレオシド"
+    units: [B-032, B-009, H-044, B-006]
+    sources: [Y01]
+  - id: "D20"
+    parent: "D"
+    name: "Complex Mixtures"
+    ja: "複合混合物"
+    none: "雑多な混合物の見出し（生物由来製品、植物の抽出物、煙、粉じんなどの寄せ集め）で知の中身が定まらない。成分ごとの知は D の他の項目の単元（H、B、I-027）が受け持つ"
+    sources: [Y01]
+  - id: "D23"
+    parent: "D"
+    name: "Biological Factors"
+    ja: "生物学的因子"
+    units: [I-005, B-038, I-027]
+    sources: [Y01]
+  - id: "D25"
+    parent: "D"
+    name: "Biomedical and Dental Materials"
+    ja: "生体医療・歯科材料"
+    units: [E-226]
+    sources: [Y01]
+  - id: "D26"
+    parent: "D"
+    name: "Pharmaceutical Preparations"
+    ja: "医薬品製剤"
+    gap: "要る単元の案「製剤学（剤形と添加物、溶解性と生物学的利用能、安定性と品質、製剤の設計）」（前提 I-002、H-021）。入口は E-168（放出制御と送達）"
+    sources: [Y01]
+  - id: "D27"
+    parent: "D"
+    name: "Chemical Actions and Uses"
+    ja: "化学物質の作用と用途"
+    units: [I-001, I-026, I-027]
+    sources: [Y01]
+  - {id: "E", name: "Analytical, Diagnostic and Therapeutic Techniques, and Equipment", ja: "分析・診断・治療の技法と機器", group: true}
+  - id: "E01"
+    parent: "E"
+    name: "Diagnosis"
+    ja: "診断"
+    units: [I-044, I-043, E-223, I-025, B-101]
+    sources: [Y01]
+  - id: "E02"
+    parent: "E"
+    name: "Therapeutics"
+    ja: "治療"
+    units: [I-026, I-054, I-050, I-029, I-031]
+    sources: [Y01]
+  - id: "E03"
+    parent: "E"
+    name: "Anesthesia and Analgesia"
+    ja: "麻酔と鎮痛"
+    units: [V-033, I-026]
+    sources: [Y01]
+  - id: "E04"
+    parent: "E"
+    name: "Surgical Procedures, Operative"
+    ja: "外科的手術"
+    none: "手術の手技（技能）で知の体系でない。手技の裏にある傷の治り方や無菌の原理などの知は I-021、V-034 が受け持つ"
+    sources: [Y01]
+  - id: "E05"
+    parent: "E"
+    name: "Investigative Techniques"
+    ja: "研究の技法"
+    units: [I-035, I-040, B-033, H-042, H-041]
+    sources: [Y01]
+  - id: "E06"
+    parent: "E"
+    name: "Dentistry"
+    ja: "歯科"
+    gap: "要る単元の案「口腔と歯の科学（歯と歯周の構造と発生、う蝕と歯周病のしくみ、咀嚼と唾液、歯科材料）」（前提 I-011、I-012、B-006）。手技は外す。入口は E-226（生体材料）"
+    sources: [Y01]
+  - id: "E07"
+    parent: "E"
+    name: "Equipment and Supplies"
+    ja: "機器と消耗品"
+    units: [E-227, E-225, E-223]
+    sources: [Y01]
+  - {id: "F", name: "Psychiatry and Psychology", ja: "精神医学と心理学", group: true}
+  - id: "F01"
+    parent: "F"
+    name: "Behavior and Behavior Mechanisms"
+    ja: "行動と行動の機構"
+    units: [Q-007, Q-012, Q-009, B-039, Q-018]
+    sources: [Y01]
+  - id: "F02"
+    parent: "F"
+    name: "Psychological Phenomena"
+    ja: "心理現象"
+    units: [Q-004, Q-005, Q-008, Q-013, Q-001]
+    sources: [Y01]
+  - id: "F03"
+    parent: "F"
+    name: "Mental Disorders"
+    ja: "精神疾患"
+    units: [Q-014, B-068, Q-016]
+    sources: [Y01]
+  - id: "F04"
+    parent: "F"
+    name: "Behavioral Disciplines and Activities"
+    ja: "行動の学問と活動"
+    units: [Q-006, Q-013, Q-014, Q-018, Q-021]
+    sources: [Y01]
+  - {id: "G", name: "Phenomena and Processes", ja: "現象と過程", group: true}
+  - id: "G01"
+    parent: "G"
+    name: "Physical Phenomena"
+    ja: "物理現象"
+    units: [P-003, P-044, P-034, P-021, P-104]
+    sources: [Y01]
+  - id: "G02"
+    parent: "G"
+    name: "Chemical Phenomena"
+    ja: "化学現象"
+    units: [H-014, H-022, H-023, H-024, H-027]
+    sources: [Y01]
+  - id: "G03"
+    parent: "G"
+    name: "Metabolism"
+    ja: "代謝"
+    units: [B-008, B-030, I-019, B-029, B-007]
+    sources: [Y01]
+  - id: "G04"
+    parent: "G"
+    name: "Cell Physiological Phenomena"
+    ja: "細胞の生理現象"
+    units: [B-010, B-031, B-052, I-020]
+    sources: [Y01]
+  - id: "G05"
+    parent: "G"
+    name: "Genetic Phenomena"
+    ja: "遺伝現象"
+    units: [B-001, B-002, B-009, B-044, B-032]
+    sources: [Y01]
+  - id: "G06"
+    parent: "G"
+    name: "Microbiological Phenomena"
+    ja: "微生物の現象"
+    units: [B-144, B-146, B-148, B-043]
+    sources: [Y01]
+  - id: "G07"
+    parent: "G"
+    name: "Physiological Phenomena"
+    ja: "生理現象"
+    units: [I-004, B-035, B-036, B-137]
+    sources: [Y01]
+  - id: "G08"
+    parent: "G"
+    name: "Reproductive and Urinary Physiological Phenomena"
+    ja: "生殖と泌尿の生理現象"
+    units: [I-018, I-016]
+    sources: [Y01]
+  - id: "G09"
+    parent: "G"
+    name: "Circulatory and Respiratory Physiological Phenomena"
+    ja: "循環と呼吸の生理現象"
+    units: [I-014, I-015, B-138]
+    sources: [Y01]
+  - id: "G10"
+    parent: "G"
+    name: "Digestive System and Oral Physiological Phenomena"
+    ja: "消化と口腔の生理現象"
+    units: [I-017, B-036]
+    sources: [Y01]
+  - id: "G11"
+    parent: "G"
+    name: "Musculoskeletal and Neural Physiological Phenomena"
+    ja: "筋骨格と神経の生理現象"
+    units: [B-034, B-052, B-139, B-120, B-063]
+    sources: [Y01]
+  - id: "G12"
+    parent: "G"
+    name: "Immune System Phenomena"
+    ja: "免疫現象"
+    units: [I-005, I-030, B-037, I-031]
+    sources: [Y01]
+  - id: "G13"
+    parent: "G"
+    name: "Integumentary System Physiological Phenomena"
+    ja: "外皮の生理現象"
+    gap: "要る単元の案「皮膚の生理（角層の防御と経皮吸収、色素、汗腺と毛、皮膚の老化）」（前提 I-011、I-021）。入口は I-048（皮膚の守りと主な皮膚の病気）"
+    sources: [Y01]
+  - id: "G14"
+    parent: "G"
+    name: "Ocular Physiological Phenomena"
+    ja: "眼の生理現象"
+    gap: "要る単元の案「感覚器の生理（視覚：眼の光学と調節、網膜の光受容と信号処理、視覚路、色覚、眼球運動。聴覚・平衡・嗅覚・味覚も同じ単元か並びの単元で）」（前提 B-052、P-023、P-022）。入口は Q-001、Q-004、B-063"
+    sources: [Y01]
+  - id: "G15"
+    parent: "G"
+    name: "Plant Physiological Phenomena"
+    ja: "植物の生理現象"
+    units: [B-038, B-151, B-153, B-019, B-150]
+    sources: [Y01]
+  - id: "G16"
+    parent: "G"
+    name: "Biological Phenomena"
+    ja: "生物学的現象"
+    units: [B-042, B-112, B-039, B-110]
+    sources: [Y01]
+  - id: "G17"
+    parent: "G"
+    name: "Mathematical Concepts"
+    ja: "数学の概念"
+    units: [S-001, S-022, S-020, S-005, D-055]
+    sources: [Y01]
+  - {id: "H", name: "Disciplines and Occupations", ja: "学問と職業", group: true}
+  - id: "H01"
+    parent: "H"
+    name: "Natural Science Disciplines"
+    ja: "自然科学の学問"
+    none: "学問の名前の一覧の見出し。中身は分野ごとの物差し（MSC2020、PhySH、CAS、AGU など）と地図全体で測る"
+    sources: [Y01]
+  - id: "H02"
+    parent: "H"
+    name: "Health Occupations"
+    ja: "医療の職業"
+    none: "職業と診療科の名前の一覧で知の中身でない。診療科の知は I の単元、職業の倫理と実務は入れない"
+    sources: [Y01]
+  - {id: "I", name: "Anthropology, Education, Sociology, and Social Phenomena", ja: "人類学・教育・社会学・社会現象", group: true}
+  - id: "I01"
+    parent: "I"
+    name: "Social Sciences"
+    ja: "社会科学"
+    units: [F-012, Q-011, F-049, B-090]
+    sources: [Y01]
+  - id: "I02"
+    parent: "I"
+    name: "Education"
+    ja: "教育"
+    gap: "要る単元の案「学習科学と教育の実証（指導法とフィードバックの効果、教育の無作為化試験、学力の測り方）」（前提 Q-005、Q-013、S-050）。入口は Q-005、Q-013、Q-010。教育の制度と政策は規範として外す"
+    sources: [Y01]
+  - id: "I03"
+    parent: "I"
+    name: "Human Activities"
+    ja: "人の活動"
+    none: "日常生活・娯楽・犯罪・軍事・仕事などの寄せ集めの見出しで中身が定まらない。実証の部分は運動の生体力学（B-120）、動物の運動（B-139）、スポーツのデータ（K-066）、人間工学（Q-021）が受け持つ"
+    sources: [Y01]
+  - {id: "J", name: "Technology, Industry, and Agriculture", ja: "技術・産業・農業", group: true}
+  - id: "J01"
+    parent: "J"
+    name: "Technology, Industry, and Agriculture"
+    ja: "技術・産業・農業"
+    units: [E-189, E-212, V-005, E-228, H-030]
+    sources: [Y01]
+  - id: "J02"
+    parent: "J"
+    name: "Food and Beverages"
+    ja: "食品と飲料"
+    units: [V-016, I-052, V-003, I-009]
+    sources: [Y01]
+  - id: "J03"
+    parent: "J"
+    name: "Non-Medical Public and Private Facilities"
+    ja: "非医療の公私の施設"
+    none: "施設の種類の一覧で知の体系でない"
+    sources: [Y01]
+  - {id: "K", name: "Humanities", ja: "人文学", group: true}
+  - id: "K01"
+    parent: "K"
+    name: "Humanities"
+    ja: "人文学"
+    none: "人文（歴史・文学・哲学・芸術・宗教の解釈）。いまの知を理解するのに要る歴史だけが各単元の中で扱われる"
+    sources: [Y01]
+  - {id: "L", name: "Information Science", ja: "情報科学", group: true}
+  - id: "L01"
+    parent: "L"
+    name: "Information Science"
+    ja: "情報科学"
+    units: [K-140, C-038, K-169, K-023, K-040]
+    sources: [Y01]
+  - {id: "M", name: "Named Groups", ja: "名前のついた集団", group: true}
+  - id: "M01"
+    parent: "M"
+    name: "Persons"
+    ja: "人（集団の名前）"
+    none: "年齢・性別・民族・職業などの人の集まりの名前の見出しで知の中身でない。測れる部分は N01（B-090、I-036）が受け持つ"
+    sources: [Y01]
+  - {id: "N", name: "Health Care", ja: "保健医療", group: true}
+  - id: "N01"
+    parent: "N"
+    name: "Population Characteristics"
+    ja: "集団の特徴"
+    units: [B-090, I-036, I-033]
+    sources: [Y01]
+  - id: "N02"
+    parent: "N"
+    name: "Health Care Facilities Workforce and Services"
+    ja: "医療施設・人材・サービス"
+    none: "規範・実務（医療施設と人員とサービスの制度と運営）。測れる部分（疾病負荷、受診の格差）は I-036 が受け持つ"
+    sources: [Y01]
+  - id: "N03"
+    parent: "N"
+    name: "Health Care Economics and Organizations"
+    ja: "医療経済と組織"
+    none: "規範・制度（医療の経済・保険・組織）。医療経済の実証（費用対効果の測り方）の単元は地図になく、保険の数理は F の保険と年金の単元が受け持つ"
+    sources: [Y01]
+  - id: "N04"
+    parent: "N"
+    name: "Health Services Administration"
+    ja: "医療サービスの運営"
+    none: "規範・実務（医療サービスの管理と運営と政策の判断）。実証の部分は N05 の単元（I-040、I-038）が受け持つ"
+    sources: [Y01]
+  - id: "N05"
+    parent: "N"
+    name: "Health Care Quality, Access, and Evaluation"
+    ja: "医療の質・利用・評価"
+    units: [I-040, I-038, I-036]
+    sources: [Y01]
+  - id: "N06"
+    parent: "N"
+    name: "Environment and Public Health"
+    ja: "環境と公衆衛生"
+    units: [I-041, I-007, I-042, I-033]
+    sources: [Y01]
+  - {id: "V", name: "Publication Characteristics", ja: "出版の特徴", group: true}
+  - id: "V01"
+    parent: "V"
+    name: "Publication Components"
+    ja: "出版の構成要素"
+    none: "出版物の構成要素（図・表・付録など）の見出しで知の中身でない"
+    sources: [Y01]
+  - id: "V02"
+    parent: "V"
+    name: "Publication Formats"
+    ja: "出版の形式"
+    none: "出版の形（論文・総説・症例報告などの種類）の見出しで知の中身でない"
+    sources: [Y01]
+  - id: "V03"
+    parent: "V"
+    name: "Study Characteristics"
+    ja: "研究の特徴"
+    none: "出版の種類のラベル（無作為化比較試験、コホート研究など）で知の中身でない。研究デザインの中身は I-035、I-040、Q-006 が受け持つ"
+    sources: [Y01]
+  - id: "V04"
+    parent: "V"
+    name: "Support of Research"
+    ja: "研究の支援"
+    none: "研究費の支援（助成・資金）の見出しで制度であり知の中身でない"
+    sources: [Y01]
+  - {id: "Z", name: "Geographicals", ja: "地理", group: true}
+  - id: "Z01"
+    parent: "Z"
+    name: "Geographic Locations"
+    ja: "地名"
+    none: "地名の見出しで知の中身でない"
+    sources: [Y01]

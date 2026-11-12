@@ -1,0 +1,262 @@
+# 外の物差し：地球科学の中の抜けを測る（D-117）。4 けたの末尾 00 の大区分 51 を項目にした。公式の agu.org は機械の取得を断る（403）ので、Internet Archive の写しから取った。名前のあとの相互参照の番号は落とした。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "AGU Index Terms（大区分）"
+version: "2024-11-28 の写し"
+sources:
+  Y01: {title: "AGU Index Terms（agu.org の Internet Archive 2024-11-28 の写し）", url: "https://web.archive.org/web/20241128175212/https://www.agu.org/Publish-with-AGU/Publish/Author-Resources/Index-terms", date: 2026-11-12, license: "© 2024 American Geophysical Union。利用条件は未確認（記号と名前だけを使う）"}
+items:
+  - id: "0200"
+    name: "GEOHEALTH"
+    ja: "地球と健康"
+    units: [I-041, B-092, I-027]
+    sources: [Y01]
+  - id: "0300"
+    name: "ATMOSPHERIC COMPOSITION AND STRUCTURE"
+    ja: "大気の組成と構造"
+    units: [W-034, H-080, P-122, H-043]
+    sources: [Y01]
+  - id: "0400"
+    name: "BIOGEOSCIENCES"
+    ja: "生物地球科学"
+    units: [B-041, W-033, B-148, B-057, W-104]
+    sources: [Y01]
+  - id: "0500"
+    name: "COMPUTATIONAL GEOPHYSICS"
+    ja: "計算地球物理学"
+    units: [P-137, P-141, P-140, P-136, P-142]
+    sources: [Y01]
+  - id: "1400"
+    name: "CRITICAL ZONE"
+    ja: "クリティカルゾーン"
+    units: [W-062, W-023, W-061, W-103, W-070]
+    sources: [Y01]
+  - id: "0700"
+    name: "CRYOSPHERE"
+    ja: "雪氷圏"
+    units: [W-105, W-106, W-100]
+    sources: [Y01]
+  - id: "0800"
+    name: "EDUCATION"
+    ja: "教育"
+    gap: "要る単元の案「学習科学と教育の実証（指導法とフィードバックの効果、教育の無作為化試験と効果量、学力の測り方、教科ごとの誤概念）」（前提 Q-005、Q-013、S-050。MeSH I02、MSC 97 と同じ単元）。教育の制度と運営は入れない。地球科学の教育の実証も同じ単元で扱う"
+    sources: [Y01]
+  - id: "0600"
+    name: "ELECTROMAGNETICS"
+    ja: "電磁気学"
+    units: [P-034, P-039, P-040, E-084]
+    sources: [Y01]
+  - id: "0900"
+    name: "EXPLORATION GEOPHYSICS"
+    ja: "探査地球物理学"
+    gap: "要る単元の案「探査地球物理（反射法・屈折法の地震探査、重力・磁気・電気・電磁探査、検層、データ処理とイメージング）」（前提 W-021、W-015、W-011、P-039）。入口は W-021、W-065で、中心がない"
+    sources: [Y01]
+  - id: "1000"
+    name: "GEOCHEMISTRY"
+    ja: "地球化学"
+    units: [W-017, W-031, W-032, W-035]
+    sources: [Y01]
+  - id: "1100"
+    name: "GEOCHRONOLOGY"
+    ja: "地質年代学"
+    units: [W-010, W-031, W-009, W-014]
+    sources: [Y01]
+  - id: "1200"
+    name: "GEODESY AND GRAVITY"
+    ja: "測地学と重力"
+    units: [W-015, W-042, E-166]
+    sources: [Y01]
+  - id: "1500"
+    name: "GEOMAGNETISM AND PALEOMAGNETISM"
+    ja: "地磁気と古地磁気"
+    units: [W-011, W-039]
+    sources: [Y01]
+  - id: "1600"
+    name: "GLOBAL CHANGE"
+    ja: "地球規模の変化"
+    units: [P-161, P-201, W-041, P-143, W-033]
+    sources: [Y01]
+  - id: "1700"
+    name: "HISTORY OF GEOPHYSICS"
+    ja: "地球物理学の歴史"
+    none: "人文（地球物理学史の解釈）。いまの知に要る歴史は各単元の中で扱う"
+    sources: [Y01]
+  - id: "1800"
+    name: "HYDROLOGY"
+    ja: "水文学"
+    units: [W-101, W-102, W-061, W-103, W-049]
+    sources: [Y01]
+  - id: "1900"
+    name: "INFORMATICS"
+    ja: "情報学"
+    units: [W-114, W-066, P-133, K-190]
+    sources: [Y01]
+  - id: "2100"
+    name: "INTERPLANETARY PHYSICS"
+    ja: "惑星間空間の物理"
+    gap: "要る単元の案「太陽風と惑星間空間（太陽風の生成と加速、惑星間磁場、衝撃波と粒子加速、宇宙線の伝播）」（前提 P-231、P-246、P-211）。入口は P-231、P-211"
+    sources: [Y01]
+  - id: "2400"
+    name: "IONOSPHERE"
+    ja: "電離圏"
+    gap: "要る単元の案「電離圏（生成と消滅の化学、層構造と日変化、電流系、電波の伝搬、不規則構造と衛星測位への影響）」（前提 P-041、W-034、P-122）。入口は P-041、E-166"
+    sources: [Y01]
+  - id: "2700"
+    name: "MAGNETOSPHERIC PHYSICS"
+    ja: "磁気圏物理"
+    gap: "要る単元の案「磁気圏物理（地球磁気圏の構造、磁気リコネクションと対流、放射線帯、磁気嵐とサブストーム、オーロラ）」（前提 P-231、P-041、W-011）。入口は P-231、P-246"
+    sources: [Y01]
+  - id: "3000"
+    name: "MARINE GEOLOGY AND GEOPHYSICS"
+    ja: "海洋地質学と海洋地球物理学"
+    units: [W-012, W-022, W-063, W-018]
+    sources: [Y01]
+  - id: "3200"
+    name: "MATHEMATICAL GEOPHYSICS"
+    ja: "数理地球物理学"
+    units: [P-141, P-137, P-140, P-135]
+    sources: [Y01]
+  - id: "3300"
+    name: "ATMOSPHERIC PROCESSES"
+    ja: "大気の諸過程"
+    units: [P-122, P-124, P-125, P-130, P-156]
+    sources: [Y01]
+  - id: "3600"
+    name: "MINERALOGY AND PETROLOGY"
+    ja: "鉱物学と岩石学"
+    units: [W-013, W-016, W-019, W-007]
+    sources: [Y01]
+  - id: "3900"
+    name: "MINERAL PHYSICS"
+    ja: "鉱物物理"
+    gap: "要る単元の案「鉱物物理（高圧高温下の鉱物の相転移・状態方程式・弾性・拡散と輸送、地球内部の組成と構造との対応）」（前提 W-013、W-026、W-037、P-093）。入口は W-013、W-026"
+    sources: [Y01]
+  - id: "4300"
+    name: "NATURAL HAZARDS"
+    ja: "自然災害"
+    units: [W-064, W-110, W-113, W-038]
+    sources: [Y01]
+  - id: "4400"
+    name: "NONLINEAR GEOPHYSICS"
+    ja: "非線形地球物理学"
+    units: [D-055, P-020, P-135, D-054]
+    sources: [Y01]
+  - id: "4200"
+    name: "OCEANOGRAPHY: GENERAL"
+    ja: "海洋学（一般）"
+    units: [W-063, P-204, W-104, B-154]
+    sources: [Y01]
+  - id: "4500"
+    name: "OCEANOGRAPHY: PHYSICAL"
+    ja: "海洋学（物理）"
+    units: [P-128, P-127, P-129, P-157, W-063]
+    sources: [Y01]
+  - id: "4800"
+    name: "OCEANOGRAPHY: BIOLOGICAL AND CHEMICAL"
+    ja: "海洋学（生物・化学）"
+    units: [W-104, W-033, B-154, B-148]
+    sources: [Y01]
+  - id: "4900"
+    name: "PALEOCEANOGRAPHY"
+    ja: "古海洋学"
+    units: [W-041, W-032]
+    sources: [Y01]
+  - id: "5100"
+    name: "PHYSICAL PROPERTIES OF ROCKS"
+    ja: "岩石の物性"
+    gap: "要る単元の案「岩石の物性（密度・空隙率・弾性波速度・電気伝導度・熱伝導率・透水性とその測り方）」（前提 W-013、W-029、W-015）。入口は W-029、W-026"
+    sources: [Y01]
+  - id: "5200"
+    name: "PLANETARY SCIENCES: ASTROBIOLOGY"
+    ja: "惑星科学（宇宙生物学）"
+    units: [B-111, W-036]
+    sources: [Y01]
+  - id: "5400"
+    name: "PLANETARY SCIENCES: SOLID SURFACE PLANETS"
+    ja: "惑星科学（固体表面の惑星）"
+    gap: "要る単元の案「固体惑星と月の地質（衝突クレーター、火山と地殻変動、表層の過程、内部構造）」（前提 W-074、W-035、W-012、W-023）。入口は W-074、P-171"
+    sources: [Y01]
+  - id: "5700"
+    name: "PLANETARY SCIENCES: FLUID PLANETS"
+    ja: "惑星科学（流体の惑星）"
+    gap: "要る単元の案「惑星の大気と流体（金星・火星・巨大惑星・タイタンの大気、超回転、惑星の磁気圏の入口）」（前提 P-171、P-157、P-155）。入口は P-171"
+    sources: [Y01]
+  - id: "6000"
+    name: "PLANETARY SCIENCES: COMETS AND SMALL BODIES"
+    ja: "惑星科学（彗星と小天体）"
+    gap: "要る単元の案「小天体と衝突（小惑星・彗星・カイパーベルト、隕石、軌道の進化、衝突の頻度と地球への影響）」（前提 W-074、W-035、P-010）。入口は W-074、W-035"
+    sources: [Y01]
+  - id: "6200"
+    name: "PLANETARY SCIENCES: SOLAR SYSTEM OBJECTS"
+    ja: "惑星科学（太陽系の天体）"
+    units: [W-074, P-171]
+    sources: [Y01]
+  - id: "6300"
+    name: "POLICY SCIENCES"
+    ja: "政策科学"
+    none: "規範（科学政策と制度の判断）。地図に入れない"
+    sources: [Y01]
+  - id: "6600"
+    name: "PUBLIC ISSUES"
+    ja: "公共の問題"
+    none: "規範（社会の議論と倫理）。測れる部分は災害と減災（W-064）、気候科学（P-161）にある"
+    sources: [Y01]
+  - id: "6900"
+    name: "RADIO SCIENCE"
+    ja: "電波科学"
+    units: [E-084, E-088, E-166, P-232]
+    sources: [Y01]
+  - id: "7200"
+    name: "SEISMOLOGY"
+    ja: "地震学"
+    units: [W-021, W-025, W-037, W-111, W-110]
+    sources: [Y01]
+  - id: "7500"
+    name: "SOLAR PHYSICS, ASTROPHYSICS, AND ASTRONOMY"
+    ja: "太陽物理・天体物理・天文学"
+    units: [P-211, P-212, P-202, P-214, P-168]
+    sources: [Y01]
+  - id: "7800"
+    name: "SPACE PLASMA PHYSICS"
+    ja: "宇宙プラズマ物理"
+    units: [P-231, P-246, P-041]
+    sources: [Y01]
+  - id: "7900"
+    name: "SPACE WEATHER"
+    ja: "宇宙天気"
+    gap: "要る単元の案「宇宙天気（太陽フレアとコロナ質量放出、磁気嵐、放射線帯と衛星の障害、電離圏の擾乱、予報と観測）」（前提 P-211、E-065）。入口は E-065、P-211"
+    sources: [Y01]
+  - id: "8000"
+    name: "STRUCTURAL GEOLOGY"
+    ja: "構造地質学"
+    units: [W-020, W-040, W-006]
+    sources: [Y01]
+  - id: "8100"
+    name: "TECTONOPHYSICS"
+    ja: "テクトノフィジックス"
+    units: [W-012, W-027, W-028, W-026, W-040]
+    sources: [Y01]
+  - id: "8400"
+    name: "VOLCANOLOGY"
+    ja: "火山学"
+    units: [W-030, W-112, W-113, W-004, W-016]
+    sources: [Y01]
+  - id: "9300"
+    name: "GEOGRAPHIC LOCATION"
+    ja: "地理的な位置"
+    none: "分類の便宜の見出し（地名の索引）。知の中身でない"
+    sources: [Y01]
+  - id: "9600"
+    name: "INFORMATION RELATED TO GEOLOGIC TIME"
+    ja: "地質年代に関する情報"
+    units: [W-009, W-014, W-036]
+    sources: [Y01]
+  - id: "9800"
+    name: "GENERAL OR MISCELLANEOUS"
+    ja: "一般または雑"
+    none: "分類の便宜の見出し（一般・雑）。知の中身でない"
+    sources: [Y01]
+  - id: "9900"
+    name: "CORRECTIONS"
+    ja: "訂正"
+    none: "分類の便宜の見出し（出版の訂正）。知の中身でない"
+    sources: [Y01]

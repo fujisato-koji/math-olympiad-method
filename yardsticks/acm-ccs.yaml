@@ -1,0 +1,524 @@
+# 外の物差し：計算機科学の中の抜けを測る（D-117）。13 の上位を group にし、その下の 84 を項目にした。id は ACM の概念番号。公式の dl.acm.org は機械の取得を断る（403）ので、Internet Archive の写しから記号と名前を取った（CCS 2012 は 2012 年から改まっていない）。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "ACM Computing Classification System 2012（上位 2 段）"
+version: "2012"
+sources:
+  Y01: {title: "ACM CCS 2012 flat view（dl.acm.org/ccs/ccs_flat.cfm の Internet Archive 2019-11-08 の写し）", url: "https://web.archive.org/web/20191108093737/https://dl.acm.org/ccs/ccs_flat.cfm", date: 2026-11-12, license: "© ACM。利用条件は未確認（記号と名前だけを使う）"}
+items:
+  - {id: "10002944", name: "General and reference", ja: "一般と参考資料", group: true}
+  - id: "10011122"
+    parent: "10002944"
+    name: "Document types"
+    ja: "文書の種類"
+    none: "分類の便宜の見出し（概説、事典、会議録、伝記など出版の形）。知の中身は各分野の単元の中にある"
+    sources: [Y01]
+  - id: "10011123"
+    parent: "10002944"
+    name: "Cross-computing tools and techniques"
+    ja: "計算横断の道具と技法"
+    units: [K-163, K-190, K-022]
+    sources: [Y01]
+  - {id: "10010583", name: "Hardware", ja: "ハードウェア", group: true}
+  - id: "10010584"
+    parent: "10010583"
+    name: "Printed circuit boards"
+    ja: "プリント基板"
+    gap: "要る単元の案「プリント基板の設計と実装（層構成と配線、信号の完全性、電源の分配、熱、基板の試験）」（前提 E-067、E-205）。入口は E-183（配線図と電源）"
+    sources: [Y01]
+  - id: "10010588"
+    parent: "10010583"
+    name: "Communication hardware, interfaces and storage"
+    ja: "通信ハードウェア・インタフェース・記憶"
+    units: [E-205, E-161, E-188, K-032]
+    sources: [Y01]
+  - id: "10010600"
+    parent: "10010583"
+    name: "Integrated circuits"
+    ja: "集積回路"
+    units: [E-230, E-158, K-030, E-233, E-068]
+    sources: [Y01]
+  - id: "10010633"
+    parent: "10010583"
+    name: "Very large scale integration design"
+    ja: "超大規模集積回路（VLSI）の設計"
+    gap: "要る単元の案「VLSI の物理設計（配置配線、タイミング解析、電力と熱、設計の再利用）」（前提 K-030、E-230）。入口は K-030（HDL による設計）、E-233（設計ルールとレイアウト）"
+    sources: [Y01]
+  - id: "10010662"
+    parent: "10010583"
+    name: "Power and energy"
+    ja: "電力とエネルギー"
+    units: [E-170, E-160, E-197, H-048, E-167]
+    sources: [Y01]
+  - id: "10010682"
+    parent: "10010583"
+    name: "Electronic design automation"
+    ja: "電子設計自動化（EDA）"
+    gap: "要る単元の案「電子設計自動化のアルゴリズムと道具（論理合成、配置配線、設計ルール検査、シミュレーション）」（前提 K-030、K-028）。入口は K-030"
+    sources: [Y01]
+  - id: "10010717"
+    parent: "10010583"
+    name: "Hardware validation"
+    ja: "ハードウェアの検証"
+    gap: "要る単元の案「ハードウェアの検証（機能検証、形式検証とモデル検査、等価性検査、タイミング解析）」（前提 K-030、L-040）。入口は L-040（SAT と SMT）"
+    sources: [Y01]
+  - id: "10010737"
+    parent: "10010583"
+    name: "Hardware test"
+    ja: "ハードウェアの試験"
+    gap: "要る単元の案「ハードウェアの試験（テストパターン生成、故障シミュレーション、テスト容易化設計、スキャン）」（前提 K-030、K-035）。入口は E-233（電気特性の検査と歩留まり）"
+    sources: [Y01]
+  - id: "10010750"
+    parent: "10010583"
+    name: "Robustness"
+    ja: "頑健性"
+    units: [K-035, C-039, E-233]
+    sources: [Y01]
+  - id: "10010786"
+    parent: "10010583"
+    name: "Emerging technologies"
+    ja: "新興技術"
+    units: [K-176, K-166, P-249, P-087]
+    sources: [Y01]
+  - {id: "10010520", name: "Computer systems organization", ja: "計算機システムの構成", group: true}
+  - id: "10010521"
+    parent: "10010520"
+    name: "Architectures"
+    ja: "アーキテクチャ"
+    units: [K-031, K-032, K-030, K-036]
+    sources: [Y01]
+  - id: "10010553"
+    parent: "10010520"
+    name: "Embedded and cyber-physical systems"
+    ja: "組込みとサイバーフィジカルシステム"
+    units: [K-085, E-183, E-047]
+    sources: [Y01]
+  - id: "10010570"
+    parent: "10010520"
+    name: "Real-time systems"
+    ja: "リアルタイムシステム"
+    gap: "要る単元の案「リアルタイムシステム（周期タスクのスケジューリング（RM と EDF）、最悪実行時間、優先度逆転、時間制約の検証）」（前提 K-037、K-018）"
+    sources: [Y01]
+  - id: "10010575"
+    parent: "10010520"
+    name: "Dependable and fault-tolerant systems and networks"
+    ja: "高信頼・耐故障のシステムとネットワーク"
+    units: [K-035]
+    sources: [Y01]
+  - {id: "10003033", name: "Networks", ja: "ネットワーク", group: true}
+  - id: "10003034"
+    parent: "10003033"
+    name: "Network architectures"
+    ja: "ネットワークの構成"
+    units: [K-038, K-144, K-132]
+    sources: [Y01]
+  - id: "10003039"
+    parent: "10003033"
+    name: "Network protocols"
+    ja: "ネットワークプロトコル"
+    units: [K-038, K-144, E-087]
+    sources: [Y01]
+  - id: "10003058"
+    parent: "10003033"
+    name: "Network components"
+    ja: "ネットワークの構成要素"
+    gap: "要る単元の案「ネットワーク機器（ルータとスイッチの内部、アダプタ、無線アクセスポイント、プログラマブルなネットワーク）」（前提 K-038、E-205）。入口は K-038"
+    sources: [Y01]
+  - id: "10003068"
+    parent: "10003033"
+    name: "Network algorithms"
+    ja: "ネットワークのアルゴリズム"
+    units: [K-038, K-026, K-011]
+    sources: [Y01]
+  - id: "10003079"
+    parent: "10003033"
+    name: "Network performance evaluation"
+    ja: "ネットワークの性能評価"
+    units: [S-009, E-087, K-131]
+    sources: [Y01]
+  - id: "10003083"
+    parent: "10003033"
+    name: "Network properties"
+    ja: "ネットワークの性質"
+    units: [K-034, E-088, K-038]
+    sources: [Y01]
+  - id: "10003099"
+    parent: "10003033"
+    name: "Network services"
+    ja: "ネットワークサービス"
+    units: [K-144, K-034, K-033]
+    sources: [Y01]
+  - id: "10003106"
+    parent: "10003033"
+    name: "Network types"
+    ja: "ネットワークの種類"
+    units: [E-088, E-089, K-038]
+    sources: [Y01]
+  - {id: "10011007", name: "Software and its engineering", ja: "ソフトウェアとその工学", group: true}
+  - id: "10010940"
+    parent: "10011007"
+    name: "Software organization and properties"
+    ja: "ソフトウェアの構成と性質"
+    units: [K-033, K-037, K-019, K-017]
+    sources: [Y01]
+  - id: "10011006"
+    parent: "10011007"
+    name: "Software notations and tools"
+    ja: "ソフトウェアの記法と道具"
+    units: [K-039, K-020, K-145, K-019, K-029]
+    sources: [Y01]
+  - id: "10011074"
+    parent: "10011007"
+    name: "Software creation and management"
+    ja: "ソフトウェアの作成と管理"
+    gap: "要る単元の案「ソフトウェア工学（要求分析、設計、開発工程の管理、テストと検証、保守、共同開発）」（前提 K-013、K-017）。入口は K-013（テストとデバッグ）、K-017（仕様とテスト）、E-199（システムズエンジニアリング）"
+    sources: [Y01]
+  - {id: "10003752", name: "Theory of computation", ja: "計算理論", group: true}
+  - id: "10003753"
+    parent: "10003752"
+    name: "Models of computation"
+    ja: "計算モデル"
+    units: [L-026, L-030, K-172, K-040]
+    sources: [Y01]
+  - id: "10003766"
+    parent: "10003752"
+    name: "Formal languages and automata theory"
+    ja: "形式言語とオートマトン理論"
+    units: [L-027, L-028, K-039]
+    sources: [Y01]
+  - id: "10003777"
+    parent: "10003752"
+    name: "Computational complexity and cryptography"
+    ja: "計算複雑さと暗号"
+    units: [K-041, K-121, K-171, K-172, K-150]
+    sources: [Y01]
+  - id: "10003790"
+    parent: "10003752"
+    name: "Logic"
+    ja: "論理"
+    units: [L-023, L-024, L-043, L-040, L-035]
+    sources: [Y01]
+  - id: "10003809"
+    parent: "10003752"
+    name: "Design and analysis of algorithms"
+    ja: "アルゴリズムの設計と解析"
+    units: [K-028, K-024, K-025, K-026, K-023]
+    sources: [Y01]
+  - id: "10010061"
+    parent: "10003752"
+    name: "Randomness, geometry and discrete structures"
+    ja: "乱択・幾何・離散構造"
+    units: [K-170, K-026, S-005, C-039, C-027]
+    sources: [Y01]
+  - id: "10010070"
+    parent: "10003752"
+    name: "Theory and algorithms for application domains"
+    ja: "応用領域のための理論とアルゴリズム"
+    units: [S-025, K-052, F-024, K-048]
+    sources: [Y01]
+  - id: "10010124"
+    parent: "10003752"
+    name: "Semantics and reasoning"
+    ja: "意味論と推論"
+    gap: "要る単元の案「プログラムの意味論と検証（操作的意味論と表示的意味論、ホーア論理、抽象解釈、型システムの健全性）」（前提 K-019、L-030）。入口は K-019（契約と不変条件）、L-030（ラムダ計算）"
+    sources: [Y01]
+  - {id: "10002950", name: "Mathematics of computing", ja: "計算の数学", group: true}
+  - id: "10003624"
+    parent: "10002950"
+    name: "Discrete mathematics"
+    ja: "離散数学"
+    units: [C-022, C-029, C-026, C-021, C-030]
+    sources: [Y01]
+  - id: "10003648"
+    parent: "10002950"
+    name: "Probability and statistics"
+    ja: "確率と統計"
+    units: [S-001, S-005, S-018, S-019, S-020]
+    sources: [Y01]
+  - id: "10003705"
+    parent: "10002950"
+    name: "Mathematical software"
+    ja: "数学ソフトウェア"
+    gap: "要る単元の案「数学ソフトウェア（数値ライブラリ BLAS と LAPACK、疎行列ソルバ、浮動小数点の実装と性能の測り方）」（前提 K-003、K-007）。入口は K-190（科学計算の再現性）、K-163（数値解の検証）、K-142（浮動小数点）"
+    sources: [Y01]
+  - id: "10003712"
+    parent: "10002950"
+    name: "Information theory"
+    ja: "情報理論"
+    units: [C-038, C-039, K-140, K-174, E-085]
+    sources: [Y01]
+  - id: "10003714"
+    parent: "10002950"
+    name: "Mathematical analysis"
+    ja: "数学解析"
+    units: [K-001, D-062, D-044, D-078, D-052]
+    sources: [Y01]
+  - id: "10003741"
+    parent: "10002950"
+    name: "Continuous mathematics"
+    ja: "連続数学"
+    units: [T-001, T-019, T-022, D-008, D-009]
+    sources: [Y01]
+  - {id: "10002951", name: "Information systems", ja: "情報システム", group: true}
+  - id: "10002952"
+    parent: "10002951"
+    name: "Data management systems"
+    ja: "データ管理システム"
+    units: [K-169, K-035, K-023]
+    sources: [Y01]
+  - id: "10003152"
+    parent: "10002951"
+    name: "Information storage systems"
+    ja: "情報の保管システム"
+    gap: "要る単元の案「記憶装置とストレージ（ディスクとフラッシュ、RAID、複製、分散ストレージ、キー・バリューストア）」（前提 K-032、K-037）。入口は K-037（ファイルシステム）、K-032（メモリ階層）"
+    sources: [Y01]
+  - id: "10003227"
+    parent: "10002951"
+    name: "Information systems applications"
+    ja: "情報システムの応用"
+    units: [K-060, W-114, E-157, K-049]
+    sources: [Y01]
+  - id: "10003260"
+    parent: "10002951"
+    name: "World Wide Web"
+    ja: "World Wide Web"
+    gap: "要る単元の案「Web の仕組み（HTTP、ブラウザ、Web サービス、リンク解析）」（前提 K-038、K-144）。入口は K-144（DNS と TCP/IP）"
+    sources: [Y01]
+  - id: "10003317"
+    parent: "10002951"
+    name: "Information retrieval"
+    ja: "情報検索"
+    gap: "要る単元の案「情報検索（索引、tf-idf と確率的検索モデル、順位づけ、評価指標、リンク解析）」（前提 K-023、S-001）。入口は K-161（検索拡張）のみ"
+    sources: [Y01]
+  - {id: "10002978", name: "Security and privacy", ja: "セキュリティとプライバシー", group: true}
+  - id: "10002979"
+    parent: "10002978"
+    name: "Cryptography"
+    ja: "暗号"
+    units: [K-042, K-045, K-044, K-173, C-040]
+    sources: [Y01]
+  - id: "10002986"
+    parent: "10002978"
+    name: "Formal methods and theory of security"
+    ja: "セキュリティの形式手法と理論"
+    gap: "要る単元の案「セキュリティの形式手法（攻撃者のモデル、プロトコルの記号的検証、情報流の制御、ゲームによる安全性証明）」（前提 L-023、K-042）。入口は K-044、K-042"
+    sources: [Y01]
+  - id: "10002991"
+    parent: "10002978"
+    name: "Security services"
+    ja: "セキュリティサービス"
+    units: [K-043, K-042, K-044]
+    sources: [Y01]
+  - id: "10002997"
+    parent: "10002978"
+    name: "Intrusion/anomaly detection and malware mitigation"
+    ja: "侵入・異常の検知とマルウェア対策"
+    gap: "要る単元の案「侵入検知とマルウェア対策（シグネチャと異常検知、マルウェアの解析、フィッシング）」（前提 K-043、K-034）。入口は K-043（ファジング）"
+    sources: [Y01]
+  - id: "10003001"
+    parent: "10002978"
+    name: "Security in hardware"
+    ja: "ハードウェアのセキュリティ"
+    gap: "要る単元の案「ハードウェアのセキュリティ（改ざん対策、物理的複製困難関数 PUF、ハードウェアトロイ、サイドチャネルの対策）」（前提 K-043、E-230）。入口は K-043（サイドチャネル攻撃）"
+    sources: [Y01]
+  - id: "10003006"
+    parent: "10002978"
+    name: "Systems security"
+    ja: "システムのセキュリティ"
+    units: [K-043]
+    sources: [Y01]
+  - id: "10003014"
+    parent: "10002978"
+    name: "Network security"
+    ja: "ネットワークのセキュリティ"
+    units: [K-034, K-042]
+    sources: [Y01]
+  - id: "10003018"
+    parent: "10002978"
+    name: "Database and storage security"
+    ja: "データベースと記憶のセキュリティ"
+    gap: "要る単元の案「データの匿名化とプライバシー保護（k 匿名性、差分プライバシー、暗号化データの検索、監査）」（前提 K-044、S-001）。入口は K-044（準同型暗号）、K-146"
+    sources: [Y01]
+  - id: "10003022"
+    parent: "10002978"
+    name: "Software and application security"
+    ja: "ソフトウェアとアプリケーションのセキュリティ"
+    gap: "要る単元の案「ソフトウェアの脆弱性と対策（メモリ破壊、入力の検証、Web アプリの攻撃、リバースエンジニアリング）」（前提 K-029、K-043）。入口は K-043（ファジング）"
+    sources: [Y01]
+  - id: "10003029"
+    parent: "10002978"
+    name: "Human and societal aspects of security and privacy"
+    ja: "セキュリティとプライバシーの人間・社会の側面"
+    units: [K-146]
+    sources: [Y01]
+  - {id: "10003120", name: "Human-centered computing", ja: "人間中心の計算", group: true}
+  - id: "10003121"
+    parent: "10003120"
+    name: "Human computer interaction (HCI)"
+    ja: "人間とコンピュータの対話（HCI）"
+    units: [Q-021, Q-020]
+    sources: [Y01]
+  - id: "10003123"
+    parent: "10003120"
+    name: "Interaction design"
+    ja: "インタラクションデザイン"
+    units: [Q-020, Q-021]
+    sources: [Y01]
+  - id: "10003130"
+    parent: "10003120"
+    name: "Collaborative and social computing"
+    ja: "協調と社会的コンピューティング"
+    gap: "要る単元の案「協調と社会的コンピューティング（グループ作業の実験、ネットワークの構造と情報の拡散、クラウドソーシングの品質管理、集合知）」（前提 Q-011、C-022）。優先度は低い"
+    sources: [Y01]
+  - id: "10003138"
+    parent: "10003120"
+    name: "Ubiquitous and mobile computing"
+    ja: "ユビキタス・モバイルコンピューティング"
+    gap: "要る単元の案「ユビキタスとモバイルの計算（センサーによる状況認識と位置推定、端末の省電力、無線の接続、ウェアラブル）」（前提 E-088、E-183）。入口は E-088、E-225"
+    sources: [Y01]
+  - id: "10003145"
+    parent: "10003120"
+    name: "Visualization"
+    ja: "可視化"
+    units: [K-064]
+    sources: [Y01]
+  - id: "10011738"
+    parent: "10003120"
+    name: "Accessibility"
+    ja: "アクセシビリティ"
+    gap: "要る単元の案「アクセシビリティ（障害の種類と利用の障壁、支援技術、評価の方法と基準）」（前提 Q-021）。入口は Q-021（多様な使う人の一項目のみ）"
+    sources: [Y01]
+  - {id: "10010147", name: "Computing methodologies", ja: "計算の方法論", group: true}
+  - id: "10010148"
+    parent: "10010147"
+    name: "Symbolic and algebraic manipulation"
+    ja: "記号・代数的処理"
+    gap: "要る単元の案「計算機代数（多項式の算術、グレブナー基底、終結式、因数分解、数式処理系）」（前提 R-010、A-036）。入口は K-168（数値代数幾何）、K-153（群のアルゴリズム）"
+    sources: [Y01]
+  - id: "10010169"
+    parent: "10010147"
+    name: "Parallel computing methodologies"
+    ja: "並列計算の方法論"
+    units: [K-027, K-018, K-165, K-032]
+    sources: [Y01]
+  - id: "10010178"
+    parent: "10010147"
+    name: "Artificial intelligence"
+    ja: "人工知能"
+    units: [K-053, K-055, K-054, K-080, K-161]
+    sources: [Y01]
+  - id: "10010257"
+    parent: "10010147"
+    name: "Machine learning"
+    ja: "機械学習"
+    units: [K-048, K-049, K-046, K-051, K-058]
+    sources: [Y01]
+  - id: "10010341"
+    parent: "10010147"
+    name: "Modeling and simulation"
+    ja: "モデル化とシミュレーション"
+    units: [K-015, K-163, S-024, E-157]
+    sources: [Y01]
+  - id: "10010371"
+    parent: "10010147"
+    name: "Computer graphics"
+    ja: "コンピュータグラフィックス"
+    units: [K-075, K-071, K-077, K-076, K-074]
+    sources: [Y01]
+  - id: "10010919"
+    parent: "10010147"
+    name: "Distributed computing methodologies"
+    ja: "分散計算の方法論"
+    gap: "要る単元の案「分散アルゴリズムと分散システム（合意、リーダー選出、論理時計、複製と整合性、MapReduce）」（前提 K-018、K-035）。入口は K-035（耐故障と協調）、K-165（学習の並列化）"
+    sources: [Y01]
+  - id: "10011777"
+    parent: "10010147"
+    name: "Concurrent computing methodologies"
+    ja: "並行計算の方法論"
+    units: [K-018, K-027]
+    sources: [Y01]
+  - {id: "10010405", name: "Applied computing", ja: "応用計算", group: true}
+  - id: "10003550"
+    parent: "10010405"
+    name: "Electronic commerce"
+    ja: "電子商取引"
+    none: "知の体系でない実務（電子商取引の仕組みと運営）。測れる部分は F-064（デジタル決済）、F-024（オークション）、K-042（署名と認証）"
+    sources: [Y01]
+  - id: "10010406"
+    parent: "10010405"
+    name: "Enterprise computing"
+    ja: "企業の計算"
+    none: "経営と企業情報システムの実務（ERP、業務プロセス、企業アーキテクチャ）。測れる部分は E-154（生産管理）、E-157（OR の応用）"
+    sources: [Y01]
+  - id: "10010432"
+    parent: "10010405"
+    name: "Physical sciences and engineering"
+    ja: "物理科学と工学"
+    units: [P-119, H-055, P-132, E-021, E-035]
+    sources: [Y01]
+  - id: "10010444"
+    parent: "10010405"
+    name: "Life and medical sciences"
+    ja: "生命科学と医学"
+    units: [K-118, K-106, K-105, K-109, I-055]
+    sources: [Y01]
+  - id: "10010455"
+    parent: "10010405"
+    name: "Law, social and behavioral sciences"
+    ja: "法・社会・行動科学"
+    units: [Q-016, Q-015, F-024, F-033]
+    sources: [Y01]
+  - id: "10010462"
+    parent: "10010405"
+    name: "Computer forensics"
+    ja: "コンピュータフォレンジック"
+    none: "捜査と証拠収集の実務（職業の手技）。技術の土台は K-144（ファイルシステム）、K-042（ハッシュ）、K-038（ネットワーク）"
+    sources: [Y01]
+  - id: "10010469"
+    parent: "10010405"
+    name: "Arts and humanities"
+    ja: "芸術と人文学"
+    none: "人文（芸術、言語、音楽、デジタル人文学）。測れる部分は E-126（音響）、E-149（心理音響）、K-074（アニメーションと色）"
+    sources: [Y01]
+  - id: "10010476"
+    parent: "10010405"
+    name: "Computers in other domains"
+    ja: "他分野の計算"
+    none: "応用先の寄せ集め（電子政府、軍事、農業、輸送など）で分類の便宜の見出し。中身は各分野の単元（V の農学、E の工学など）にある"
+    sources: [Y01]
+  - id: "10010481"
+    parent: "10010405"
+    name: "Operations research"
+    ja: "オペレーションズ・リサーチ"
+    units: [E-157, K-010, K-011, E-155, E-154]
+    sources: [Y01]
+  - id: "10010489"
+    parent: "10010405"
+    name: "Education"
+    ja: "教育"
+    none: "教育の実務（学習システムの運用、教材）。測れる部分は Q-005（想起練習と間隔反復の効果）、K-122〜K-132（計算的思考の入口）"
+    sources: [Y01]
+  - id: "10010497"
+    parent: "10010405"
+    name: "Document management and text processing"
+    ja: "文書管理とテキスト処理"
+    none: "文書の作成と保管の実務（マークアップ、注釈、版管理、デジタル図書館）。測れる部分は K-140（文字コード）、K-190（版管理）"
+    sources: [Y01]
+  - {id: "10003456", name: "Social and professional topics", ja: "社会と職業の話題", group: true}
+  - id: "10003457"
+    parent: "10003456"
+    name: "Professional topics"
+    ja: "職業の話題"
+    none: "規範と実務（計算機産業、職業、情報システムの管理、計算の歴史の解釈）。測れる部分は K-146（情報技術と社会）"
+    sources: [Y01]
+  - id: "10003462"
+    parent: "10003456"
+    name: "Computing / technology policy"
+    ja: "計算・技術の政策"
+    none: "規範（知的財産、検閲、監視、技術政策などの法・政策の判断）。測れる部分は K-146（個人情報、知的財産とライセンス）"
+    sources: [Y01]
+  - id: "10010927"
+    parent: "10003456"
+    name: "User characteristics"
+    ja: "利用者の特性"
+    none: "分類の便宜の見出し（人種、宗教、性、年齢、障害などの利用者の属性の並び）。属性ごとの知は Q-010（発達）、Q-013（個人差）、Q-021（多様な使う人）の中で扱う"
+    sources: [Y01]

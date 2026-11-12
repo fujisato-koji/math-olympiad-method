@@ -1,0 +1,492 @@
+# 外の物差し：化学の中の抜けを測る（D-117）。5 つの大見出し（BIO、ORG、MAC、APP、PIA）を group にし、80 区分を項目にした。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "Chemical Abstracts（CAS）の 80 区分"
+version: "2026-11-12 取得"
+sources:
+  Y01: {title: "The sections of CA（CAS）", url: "https://www.cas.org/support/documentation/references/ca-sections", date: 2026-11-12, license: "© 2026 American Chemical Society。利用条件は未確認（記号と名前だけを使う）"}
+items:
+  - {id: "BIO", name: "Biochemistry", ja: "生化学", group: true}
+  - id: "1"
+    parent: "BIO"
+    name: "Pharmacology"
+    ja: "薬理学"
+    units: [I-001, I-026, I-002, I-027, I-029]
+    sources: [Y01]
+  - id: "2"
+    parent: "BIO"
+    name: "Mammalian Hormones"
+    ja: "哺乳類のホルモン"
+    units: [I-019, B-035, I-004, I-018]
+    sources: [Y01]
+  - id: "3"
+    parent: "BIO"
+    name: "Biochemical Genetics"
+    ja: "生化学的遺伝学"
+    units: [B-001, B-009, B-002, B-044, B-032]
+    sources: [Y01]
+  - id: "4"
+    parent: "BIO"
+    name: "Toxicology"
+    ja: "毒性学"
+    units: [I-027, B-092, V-032, I-041]
+    sources: [Y01]
+  - id: "5"
+    parent: "BIO"
+    name: "Agrochemical Bioregulators"
+    ja: "農薬と植物生長調節物質"
+    units: [V-009, B-151, B-038]
+    sources: [Y01]
+  - id: "6"
+    parent: "BIO"
+    name: "General Biochemistry"
+    ja: "一般生化学"
+    units: [B-006, B-007, B-008, B-028, B-029]
+    sources: [Y01]
+  - id: "7"
+    parent: "BIO"
+    name: "Enzymes"
+    ja: "酵素"
+    units: [B-007, B-029, B-013]
+    sources: [Y01]
+  - id: "8"
+    parent: "BIO"
+    name: "Radiation Biochemistry"
+    ja: "放射線生化学"
+    gap: "要る単元の案「放射線生物学」（前提 P-104、B-032、I-023）。DNA 損傷と修復、線量と生物効果、確定的影響と確率的影響、放射線治療の生物学。入口は I-041（放射線防護）と P-205（からだへの影響と防護）、中心がない"
+    sources: [Y01]
+  - id: "9"
+    parent: "BIO"
+    name: "Biochemical Methods"
+    ja: "生化学の方法"
+    units: [B-033, H-042, B-012]
+    sources: [Y01]
+  - id: "10"
+    parent: "BIO"
+    name: "Microbial, Algal, and Fungal Biochemistry"
+    ja: "微生物・藻類・菌類の生化学"
+    units: [B-144, B-145, B-147, B-043]
+    sources: [Y01]
+  - id: "11"
+    parent: "BIO"
+    name: "Plant Biochemistry"
+    ja: "植物生化学"
+    units: [B-030, B-153, B-038, B-151, B-152]
+    sources: [Y01]
+  - id: "12"
+    parent: "BIO"
+    name: "Nonmammalian Biochemistry"
+    ja: "非哺乳類の生化学"
+    units: [B-137, B-138, B-132, B-136]
+    sources: [Y01]
+  - id: "13"
+    parent: "BIO"
+    name: "Mammalian Biochemistry"
+    ja: "哺乳類の生化学"
+    units: [B-008, I-019, I-017, B-035, I-004]
+    sources: [Y01]
+  - id: "14"
+    parent: "BIO"
+    name: "Mammalian Pathological Biochemistry"
+    ja: "哺乳類の病態生化学"
+    units: [I-020, I-021, I-023, I-024, I-046]
+    sources: [Y01]
+  - id: "15"
+    parent: "BIO"
+    name: "Immunochemistry"
+    ja: "免疫化学"
+    units: [I-005, B-037, I-030, I-031]
+    sources: [Y01]
+  - id: "16"
+    parent: "BIO"
+    name: "Fermentation and Bioindustrial Biochemistry"
+    ja: "発酵と生物工業の生化学"
+    units: [E-228, E-229, B-043]
+    sources: [Y01]
+  - id: "17"
+    parent: "BIO"
+    name: "Food and Feed Chemistry"
+    ja: "食品・飼料の化学"
+    units: [V-016, V-011, I-052, V-003, I-009]
+    sources: [Y01]
+  - id: "18"
+    parent: "BIO"
+    name: "Animal Nutrition"
+    ja: "動物栄養"
+    units: [V-011, I-052, V-013]
+    sources: [Y01]
+  - id: "19"
+    parent: "BIO"
+    name: "Fertilizers, Soils, and Plant Nutrition"
+    ja: "肥料・土壌・植物栄養"
+    units: [V-008, W-062, W-070, B-038]
+    sources: [Y01]
+  - id: "20"
+    parent: "BIO"
+    name: "History, Education, and Documentation"
+    ja: "歴史・教育・文献"
+    none: "人文・分類の便宜（H の流れ全体）。化学と生化学の歴史や教育や文献の見出しは入れず、いまの知に要る歴史は各単元の中で扱う。情報の検索と分子の記述子は H-058 で測れる"
+    sources: [Y01]
+  - {id: "ORG", name: "Organic", ja: "有機化学", group: true}
+  - id: "21"
+    parent: "ORG"
+    name: "General Organic Chemistry"
+    ja: "一般有機化学"
+    units: [H-032, H-039, H-040, H-047, H-033]
+    sources: [Y01]
+  - id: "22"
+    parent: "ORG"
+    name: "Physical Organic Chemistry"
+    ja: "物理有機化学"
+    units: [H-039, H-038, H-037, H-045]
+    sources: [Y01]
+  - id: "23"
+    parent: "ORG"
+    name: "Aliphatic Compounds"
+    ja: "脂肪族化合物"
+    units: [H-033, H-032]
+    sources: [Y01]
+  - id: "24"
+    parent: "ORG"
+    name: "Alicyclic Compounds"
+    ja: "脂環式化合物"
+    units: [H-038, H-033, H-032]
+    sources: [Y01]
+  - id: "25"
+    parent: "ORG"
+    name: "Benzene, Its Derivatives, and Condensed Benzenoid Compounds"
+    ja: "ベンゼンとその誘導体・縮合ベンゼノイド化合物"
+    units: [H-034, H-039]
+    sources: [Y01]
+  - id: "26"
+    parent: "ORG"
+    name: "Biomolecules and Their Synthetic Analogs"
+    ja: "生体分子とその合成類縁体"
+    units: [H-044, B-006, B-028]
+    sources: [Y01]
+  - id: "27"
+    parent: "ORG"
+    name: "Heterocyclic Compounds (One Hetero Atom)"
+    ja: "複素環化合物（ヘテロ原子 1 個）"
+    gap: "要る単元の案「複素環化合物の化学」（前提 H-034、H-039）。ピロール・フラン・チオフェン・ピリジンなどの芳香族性と反応性、環の合成。入口は H-047（有機合成の中で複素環の合成だけ）、中心がない"
+    sources: [Y01]
+  - id: "28"
+    parent: "ORG"
+    name: "Heterocyclic Compounds (More Than One Hetero Atom)"
+    ja: "複素環化合物（ヘテロ原子 2 個以上）"
+    gap: "要る単元の案「複素環化合物の化学」（27 と同じ単元。前提 H-034、H-039）。イミダゾール・ピリミジン・プリンなど。入口は H-047（複素環の合成）と H-044（核酸塩基）、中心がない"
+    sources: [Y01]
+  - id: "29"
+    parent: "ORG"
+    name: "Organometallic and Organometalloidal Compounds"
+    ja: "有機金属・有機メタロイド化合物"
+    units: [H-052, H-040, H-046, H-028]
+    sources: [Y01]
+  - id: "30"
+    parent: "ORG"
+    name: "Terpenes and Terpenoids"
+    ja: "テルペンとテルペノイド"
+    gap: "要る単元の案「天然物化学」（前提 H-044、H-039、H-041）。テルペン・アルカロイド・ステロイド・ポリケチドの構造と生合成、単離と構造決定。入口は H-044（脂質）と H-047（有機合成）、中心がない"
+    sources: [Y01]
+  - id: "31"
+    parent: "ORG"
+    name: "Alkaloids"
+    ja: "アルカロイド"
+    gap: "要る単元の案「天然物化学」（30 と同じ単元。前提 H-044、H-039、H-041）。窒素を含む天然物の構造と生合成。入口は H-056（医薬品化学）と H-047、中心がない"
+    sources: [Y01]
+  - id: "32"
+    parent: "ORG"
+    name: "Steroids"
+    ja: "ステロイド"
+    gap: "要る単元の案「天然物化学」（30 と同じ単元。前提 H-044、H-039、H-041）。ステロイド骨格と立体、コレステロールの生合成、ホルモン。入口は H-044（脂質と膜）と I-019（副腎のホルモン）、中心がない"
+    sources: [Y01]
+  - id: "33"
+    parent: "ORG"
+    name: "Carbohydrates"
+    ja: "炭水化物"
+    units: [H-044, B-006, B-028, B-008]
+    sources: [Y01]
+  - id: "34"
+    parent: "ORG"
+    name: "Amino Acids, Peptides, and Proteins"
+    ja: "アミノ酸・ペプチド・タンパク質"
+    units: [H-044, B-006, B-028, B-014]
+    sources: [Y01]
+  - {id: "MAC", name: "Macromolecular", ja: "高分子化学", group: true}
+  - id: "35"
+    parent: "MAC"
+    name: "Chemistry of Synthetic High Polymers"
+    ja: "合成高分子の化学"
+    gap: "要る単元の案「高分子の化学と物理」（前提 H-035、H-023、P-049）。連鎖重合・逐次重合・リビング重合・共重合・重合の速度論と分子量分布。入口は H-035（高校の付加重合と縮合重合と平均分子量）だけ、大学の中心がない"
+    sources: [Y01]
+  - id: "36"
+    parent: "MAC"
+    name: "Physical Properties of Synthetic High Polymers"
+    ja: "合成高分子の物性"
+    gap: "要る単元の案「高分子の化学と物理」（35 と同じ単元。前提 H-035、P-049、E-019）。鎖の統計、ガラス転移、結晶化、ゴム弾性、粘弾性、溶液と溶融体。入口は P-103（ソフトマターの中の高分子）と E-019（粘弾性・超弾性）、中心がない"
+    sources: [Y01]
+  - id: "37"
+    parent: "MAC"
+    name: "Plastics Manufacture and Processing"
+    ja: "プラスチックの製造と加工"
+    gap: "要る単元の案「高分子の加工とレオロジー」（前提 E-213、E-031、H-035）。溶融体の流動、押出し・射出成形・フィルム成形、冷却と結晶化、成形品の収縮と反り。原理の単元がない。製品ごとの実務は入れない"
+    sources: [Y01]
+  - id: "38"
+    parent: "MAC"
+    name: "Plastics Fabrication and Uses"
+    ja: "プラスチックの成形品と用途"
+    none: "知の体系でない製品の実務。成形品の種類と用途の一覧は入れず、合成の原理は H-035、製造法一般は E-193、高分子の物性は 36 の gap（高分子の化学と物理）で扱う"
+    sources: [Y01]
+  - id: "39"
+    parent: "MAC"
+    name: "Synthetic Elastomers and Natural Rubber"
+    ja: "合成エラストマーと天然ゴム"
+    gap: "要る単元の案「高分子の化学と物理」（35、36 と同じ単元。ゴム弾性と加硫を含む。前提 H-035、P-049）。入口は H-035（ゴムの合成）と E-019（超弾性）、中心がない"
+    sources: [Y01]
+  - id: "40"
+    parent: "MAC"
+    name: "Textiles and Fibers"
+    ja: "繊維"
+    none: "知の体系でない製品の実務。紡糸・織り・染色の実務は入れず、合成繊維の合成は H-035、繊維の高分子の物性は 36 の gap で扱う"
+    sources: [Y01]
+  - id: "41"
+    parent: "MAC"
+    name: "Dyes, Organic Pigments, Fluorescent Brighteners, and Photographic Sensitizers"
+    ja: "染料・有機顔料・蛍光増白剤・写真増感剤"
+    units: [H-041, H-050, H-045]
+    sources: [Y01]
+  - id: "42"
+    parent: "MAC"
+    name: "Coatings, Inks, and Related Products"
+    ja: "塗料・インキ・関連製品"
+    none: "知の体系でない製品の実務。配合と塗装の実務は入れず、膜形成の原理は高分子（36 の gap）と、分散・コロイド（P-103、H-021）に分かれて測れる"
+    sources: [Y01]
+  - id: "43"
+    parent: "MAC"
+    name: "Cellulose, Lignin, Paper, and Other Wood Products"
+    ja: "セルロース・リグニン・紙・木材製品"
+    none: "知の体系でない製品の実務。パルプ化と抄紙の実務は入れず、セルロースの化学は H-044（糖）、木質構造の力学は E-202、木材組織は B-026 で測れる"
+    sources: [Y01]
+  - id: "44"
+    parent: "MAC"
+    name: "Industrial Carbohydrates"
+    ja: "工業用炭水化物"
+    units: [H-044, V-016, B-028]
+    sources: [Y01]
+  - id: "45"
+    parent: "MAC"
+    name: "Industrial Organic Chemicals, Leather, Fats, and Waxes"
+    ja: "工業有機化学品・皮革・油脂・ろう"
+    units: [E-214, E-212, H-033, H-044]
+    sources: [Y01]
+  - id: "46"
+    parent: "MAC"
+    name: "Surface-Active Agents and Detergents"
+    ja: "界面活性剤と洗剤"
+    units: [H-054, H-070, P-103]
+    sources: [Y01]
+  - {id: "APP", name: "Applied", ja: "応用化学", group: true}
+  - id: "47"
+    parent: "APP"
+    name: "Apparatus and Plant Equipment"
+    ja: "装置とプラント設備"
+    units: [E-218, E-040, E-024, E-189, E-215]
+    sources: [Y01]
+  - id: "48"
+    parent: "APP"
+    name: "Unit Operations and Processes"
+    ja: "単位操作とプロセス"
+    units: [E-213, E-215, E-212, E-214, E-216]
+    sources: [Y01]
+  - id: "49"
+    parent: "APP"
+    name: "Industrial Inorganic Chemicals"
+    ja: "工業無機化学品"
+    units: [H-030, H-028, E-214]
+    sources: [Y01]
+  - id: "50"
+    parent: "APP"
+    name: "Propellants and Explosives"
+    ja: "推進剤と爆薬"
+    units: [E-044, E-045, E-194, E-217]
+    sources: [Y01]
+  - id: "51"
+    parent: "APP"
+    name: "Fossil Fuels, Derivatives, and Related Products"
+    ja: "化石燃料とその誘導品"
+    units: [W-065, E-194, E-215, E-214]
+    sources: [Y01]
+  - id: "52"
+    parent: "APP"
+    name: "Electrochemical, Radiational, and Thermal Energy Technology"
+    ja: "電気化学・放射・熱エネルギー技術"
+    units: [H-048, H-101, H-103, E-160, H-102]
+    sources: [Y01]
+  - id: "53"
+    parent: "APP"
+    name: "Mineralogical and Geological Chemistry"
+    ja: "鉱物・地質化学"
+    units: [W-013, W-017, W-031, W-032, W-016]
+    sources: [Y01]
+  - id: "54"
+    parent: "APP"
+    name: "Extractive Metallurgy"
+    ja: "抽出冶金"
+    gap: "要る単元の案「製錬と冶金プロセス」（前提 H-036、H-048、H-030）。エリンガム図、乾式・湿式・電解の製錬と精錬、スラグ、金属の回収。入口は H-030（高校の鉄・銅・アルミニウムの製錬）、中心がない"
+    sources: [Y01]
+  - id: "55"
+    parent: "APP"
+    name: "Ferrous Metals and Alloys"
+    ja: "鉄系金属・合金"
+    units: [E-164, E-163, H-049, E-015]
+    sources: [Y01]
+  - id: "56"
+    parent: "APP"
+    name: "Nonferrous Metals and Alloys"
+    ja: "非鉄金属・合金"
+    units: [E-164, E-163, H-049, H-030]
+    sources: [Y01]
+  - id: "57"
+    parent: "APP"
+    name: "Ceramics"
+    ja: "セラミックス"
+    units: [H-049, H-053, W-013]
+    sources: [Y01]
+  - id: "58"
+    parent: "APP"
+    name: "Cement, concrete, and Related Building Materials"
+    ja: "セメント・コンクリート・建築材料"
+    units: [E-196, E-119]
+    sources: [Y01]
+  - id: "59"
+    parent: "APP"
+    name: "Air Pollution and Industrial Hygiene"
+    ja: "大気汚染と産業衛生"
+    units: [E-220, H-080, I-041, H-043]
+    sources: [Y01]
+  - id: "60"
+    parent: "APP"
+    name: "Waste Treatment and Disposal"
+    ja: "廃棄物の処理と処分"
+    units: [E-221, E-222, H-081]
+    sources: [Y01]
+  - id: "61"
+    parent: "APP"
+    name: "Water"
+    ja: "水"
+    units: [E-219, H-081, W-103, W-102]
+    sources: [Y01]
+  - id: "62"
+    parent: "APP"
+    name: "Essential Oils and Cosmetics"
+    ja: "精油と化粧品"
+    none: "知の体系でない製品の実務。香料と化粧品の配合の実務は入れず、乳化と界面活性は P-103 と H-054、テルペンは 30 の gap（天然物化学）で扱う"
+    sources: [Y01]
+  - id: "63"
+    parent: "APP"
+    name: "Pharmaceuticals"
+    ja: "医薬品"
+    units: [H-056, I-001, I-002, I-003, I-026]
+    sources: [Y01]
+  - id: "64"
+    parent: "APP"
+    name: "Pharmaceutical Analysis"
+    ja: "医薬品分析"
+    units: [H-042, H-031, H-041]
+    sources: [Y01]
+  - {id: "PIA", name: "Physical, Inorganic, And Analytical", ja: "物理・無機・分析化学", group: true}
+  - id: "65"
+    parent: "PIA"
+    name: "General Physical Chemistry"
+    ja: "一般物理化学"
+    units: [H-036, H-051, H-045, H-020, H-022]
+    sources: [Y01]
+  - id: "66"
+    parent: "PIA"
+    name: "Surface Chemistry and Colloids"
+    ja: "表面化学とコロイド"
+    units: [P-175, P-103, H-054, H-021]
+    sources: [Y01]
+  - id: "67"
+    parent: "PIA"
+    name: "Catalysis, Reaction Kinetics, and Inorganic Reaction Mechanisms"
+    ja: "触媒・反応速度・無機反応機構"
+    units: [H-037, H-023, H-052, H-051, H-046]
+    sources: [Y01]
+  - id: "68"
+    parent: "PIA"
+    name: "Phase Equilibriums, Chemical Equilibriums, and Solutions"
+    ja: "相平衡・化学平衡・溶液"
+    units: [H-036, H-021, P-046, H-024, H-053]
+    sources: [Y01]
+  - id: "69"
+    parent: "PIA"
+    name: "Thermodynamics, Thermochemistry, and Thermal Properties"
+    ja: "熱力学・熱化学・熱的性質"
+    units: [H-036, P-046, P-044, P-045, H-022]
+    sources: [Y01]
+  - id: "70"
+    parent: "PIA"
+    name: "Nuclear Phenomena"
+    ja: "核現象"
+    units: [P-106, P-104]
+    sources: [Y01]
+  - id: "71"
+    parent: "PIA"
+    name: "Nuclear Technology"
+    ja: "原子力技術"
+    gap: "要る単元の案「原子炉と核燃料サイクル」（前提 P-104、P-106）。中性子の輸送と臨界、炉の制御と炉心、核燃料と同位体分離、遮へい、廃棄物。入口は P-104（核分裂）、P-203（原子力発電の概観）、P-241（核融合炉心）、中心がない"
+    sources: [Y01]
+  - id: "72"
+    parent: "PIA"
+    name: "Electrochemistry"
+    ja: "電気化学"
+    units: [H-048, H-027, H-100, H-102, H-101]
+    sources: [Y01]
+  - id: "73"
+    parent: "PIA"
+    name: "Optical, Electron, and Mass Spectroscopy and Other Related Properties"
+    ja: "光・電子・質量分析など分光とその関連性質"
+    units: [H-041, H-050, P-243, P-088, P-090]
+    sources: [Y01]
+  - id: "74"
+    parent: "PIA"
+    name: "Radiation Chemistry, Photochemistry, and Photographic and Other Reprographic Processes"
+    ja: "放射線化学・光化学・写真・複写"
+    gap: "要る単元の案「光化学と放射線化学」（前提 H-045、H-050）。励起状態と光化学反応、量子収率、光誘起の電子移動、放射線分解。入口は H-050（蛍光とりん光）と H-091（光触媒）、中心がない。写真と複写の実務は入れない"
+    sources: [Y01]
+  - id: "75"
+    parent: "PIA"
+    name: "Crystallography and Liquid Crystals"
+    ja: "結晶学と液晶"
+    units: [P-092, H-019, H-053, P-103]
+    sources: [Y01]
+  - id: "76"
+    parent: "PIA"
+    name: "Electric Phenomena"
+    ja: "電気的現象"
+    units: [P-030, P-029, P-035, P-094, P-098]
+    sources: [Y01]
+  - id: "77"
+    parent: "PIA"
+    name: "Magnetic Phenomena"
+    ja: "磁気的現象"
+    units: [P-097, P-035, E-162, P-032]
+    sources: [Y01]
+  - id: "78"
+    parent: "PIA"
+    name: "Inorganic Chemicals and Reactions"
+    ja: "無機化学品と反応"
+    units: [H-028, H-029, H-046, H-030]
+    sources: [Y01]
+  - id: "79"
+    parent: "PIA"
+    name: "Inorganic Analytical Chemistry"
+    ja: "無機分析化学"
+    units: [H-031, H-042, H-026]
+    sources: [Y01]
+  - id: "80"
+    parent: "PIA"
+    name: "Organic Analytical Chemistry"
+    ja: "有機分析化学"
+    units: [H-041, H-042, H-031]
+    sources: [Y01]

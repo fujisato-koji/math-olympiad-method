@@ -1,0 +1,861 @@
+# 外の物差し：経済学の中の抜けを測る（D-117）。20 の大分類を group にし、その下の 2 字（A1 など）を項目にした。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "Journal of Economic Literature（JEL）Classification System"
+version: "2026-11-12 取得"
+sources:
+  Y01: {title: "JEL Classification System（AEA、classificationTree.xml）", url: "https://www.aeaweb.org/econlit/classificationTree.xml", date: 2026-11-12, license: "© American Economic Association。利用条件は未確認（記号と名前だけを使う）"}
+items:
+  - {id: "A", name: "General Economics and Teaching", ja: "一般経済学と教育", group: true}
+  - id: "A1"
+    parent: "A"
+    name: "General Economics"
+    ja: "一般経済学"
+    none: "分類の便宜の見出し（経済学の役割、ほかの学問との関係などの一般論）。経済学の中身は F-008、F-012、F-013 からの単元で扱う"
+    sources: [Y01]
+  - id: "A2"
+    parent: "A"
+    name: "Economic Education and Teaching of Economics"
+    ja: "経済教育・経済学の教授"
+    none: "技能や実務（教え方）。教える中身は各単元の中で扱う"
+    sources: [Y01]
+  - id: "A3"
+    parent: "A"
+    name: "Collective Works"
+    ja: "論文集"
+    none: "分類の便宜の見出し（論文集という出版の形で知の中身でない）"
+    sources: [Y01]
+  - {id: "B", name: "History of Economic Thought, Methodology, and Heterodox Approaches", ja: "経済思想史・方法論・異端派", group: true}
+  - id: "B0"
+    parent: "B"
+    name: "General"
+    ja: "一般（思想史・方法論）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "B1"
+    parent: "B"
+    name: "History of Economic Thought through 1925"
+    ja: "1925年までの経済思想史"
+    none: "人文（思想史の解釈）。いまの理論に要る分は F-012、F-013 などの中で扱う"
+    sources: [Y01]
+  - id: "B2"
+    parent: "B"
+    name: "History of Economic Thought since 1925"
+    ja: "1925年以降の経済思想史"
+    none: "人文（思想史の解釈）。いまの理論に要る分は F-013、F-025 などの中で扱う"
+    sources: [Y01]
+  - id: "B3"
+    parent: "B"
+    name: "History of Economic Thought: Individuals"
+    ja: "経済学者個人の研究"
+    none: "人文（人物と学説の解釈）"
+    sources: [Y01]
+  - id: "B4"
+    parent: "B"
+    name: "Economic Methodology"
+    ja: "経済学の方法論"
+    none: "人文（科学哲学の議論）。実証と因果の方法は S-042、F-049、F-065 にある"
+    sources: [Y01]
+  - id: "B5"
+    parent: "B"
+    name: "Current Heterodox Approaches"
+    ja: "現在の異端派経済学"
+    none: "人文（学派の立場と思想の解釈）。検証できる部分は F-025、F-063 など各理論の中で扱う"
+    sources: [Y01]
+  - {id: "C", name: "Mathematical and Quantitative Methods", ja: "数学・計量の方法", group: true}
+  - id: "C0"
+    parent: "C"
+    name: "General"
+    ja: "一般（数学・計量）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "C1"
+    parent: "C"
+    name: "Econometric and Statistical Methods and Methodology: General"
+    ja: "計量経済・統計の方法一般"
+    units: [S-021, S-018, S-019, F-033]
+    sources: [Y01]
+  - id: "C2"
+    parent: "C"
+    name: "Single Equation Models • Single Variables"
+    ja: "単一方程式・単一変数のモデル"
+    units: [F-033, S-020, F-034]
+    sources: [Y01]
+  - id: "C3"
+    parent: "C"
+    name: "Multiple or Simultaneous Equation Models • Multiple Variables"
+    ja: "多方程式・多変数のモデル"
+    units: [F-033, F-034, S-023]
+    sources: [Y01]
+  - id: "C4"
+    parent: "C"
+    name: "Econometric and Statistical Methods: Special Topics"
+    ja: "計量・統計の特殊テーマ"
+    units: [S-035, S-022, F-055, S-024]
+    sources: [Y01]
+  - id: "C5"
+    parent: "C"
+    name: "Econometric Modeling"
+    ja: "計量経済モデルの構築と予測"
+    units: [F-034, F-033, K-060, E-155]
+    sources: [Y01]
+  - id: "C6"
+    parent: "C"
+    name: "Mathematical Methods • Programming Models • Mathematical and Simulation Modeling"
+    ja: "数理計画・数理モデル・シミュレーション"
+    units: [K-010, K-009, K-015, E-157, K-058]
+    sources: [Y01]
+  - id: "C7"
+    parent: "C"
+    name: "Game Theory and Bargaining Theory"
+    ja: "ゲーム理論と交渉理論"
+    units: [F-024, K-011, L-017, B-058]
+    sources: [Y01]
+  - id: "C8"
+    parent: "C"
+    name: "Data Collection and Data Estimation Methodology • Computer Programs"
+    ja: "データの収集・推定の方法と計算機プログラム"
+    units: [S-031, F-054, S-036]
+    sources: [Y01]
+  - id: "C9"
+    parent: "C"
+    name: "Design of Experiments"
+    ja: "実験の設計"
+    units: [F-049, S-050, S-054, F-065]
+    sources: [Y01]
+  - {id: "D", name: "Microeconomics", ja: "ミクロ経済学", group: true}
+  - id: "D0"
+    parent: "D"
+    name: "General"
+    ja: "一般（ミクロ）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "D1"
+    parent: "D"
+    name: "Household Behavior and Family Economics"
+    ja: "家計の行動と家族の経済学"
+    units: [F-012, F-041]
+    sources: [Y01]
+  - id: "D2"
+    parent: "D"
+    name: "Production and Organizations"
+    ja: "生産と組織"
+    units: [F-012, F-043, F-063]
+    sources: [Y01]
+  - id: "D3"
+    parent: "D"
+    name: "Distribution"
+    ja: "分配"
+    units: [F-063, F-062]
+    sources: [Y01]
+  - id: "D4"
+    parent: "D"
+    name: "Market Structure, Pricing, and Design"
+    ja: "市場構造・価格づけ・市場設計"
+    units: [F-060, F-008, F-024, F-012]
+    sources: [Y01]
+  - id: "D5"
+    parent: "D"
+    name: "General Equilibrium and Disequilibrium"
+    ja: "一般均衡と不均衡"
+    units: [F-058, F-012]
+    sources: [Y01]
+  - id: "D6"
+    parent: "D"
+    name: "Welfare Economics"
+    ja: "厚生経済学"
+    units: [F-058, F-012, F-061, F-007, F-063]
+    sources: [Y01]
+  - id: "D7"
+    parent: "D"
+    name: "Analysis of Collective Decision-Making"
+    ja: "集団的意思決定の分析"
+    gap: "要る単元の案「社会的選択と投票の理論（アローの不可能性定理、多数決のパラドックス、投票制度、公共選択、メカニズムデザインの入口）」（前提 F-012、F-024）。入口は F-061（公共財とただ乗り）"
+    sources: [Y01]
+  - id: "D8"
+    parent: "D"
+    name: "Information, Knowledge, and Uncertainty"
+    ja: "情報・知識・不確実性"
+    units: [F-024, F-061, F-020, Q-009]
+    sources: [Y01]
+  - id: "D9"
+    parent: "D"
+    name: "Micro-Based Behavioral Economics"
+    ja: "ミクロ行動経済学"
+    units: [F-049, Q-009, Q-016]
+    sources: [Y01]
+  - {id: "E", name: "Macroeconomics and Monetary Economics", ja: "マクロ経済学と貨幣経済学", group: true}
+  - id: "E0"
+    parent: "E"
+    name: "General"
+    ja: "一般（マクロ）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "E1"
+    parent: "E"
+    name: "General Aggregative Models"
+    ja: "総括的マクロモデル"
+    units: [F-013, F-025, F-053]
+    sources: [Y01]
+  - id: "E2"
+    parent: "E"
+    name: "Consumption, Saving, Production, Investment, Labor Markets, and Informal Economy"
+    ja: "消費・貯蓄・生産・投資・労働市場・非公式経済"
+    units: [F-025, F-062, F-013]
+    sources: [Y01]
+  - id: "E3"
+    parent: "E"
+    name: "Prices, Business Fluctuations, and Cycles"
+    ja: "物価・景気変動・景気循環"
+    units: [F-025, F-053, F-013]
+    sources: [Y01]
+  - id: "E4"
+    parent: "E"
+    name: "Money and Interest Rates"
+    ja: "貨幣と金利"
+    units: [F-013, F-009, F-064, F-053]
+    sources: [Y01]
+  - id: "E5"
+    parent: "E"
+    name: "Monetary Policy, Central Banking, and the Supply of Money and Credit"
+    ja: "金融政策・中央銀行・貨幣と信用の供給"
+    units: [F-053, F-026, F-013]
+    sources: [Y01]
+  - id: "E6"
+    parent: "E"
+    name: "Macroeconomic Policy, Macroeconomic Aspects of Public Finance, and General Outlook"
+    ja: "マクロ経済政策・財政のマクロ面・見通し"
+    units: [F-052, F-013, F-053, F-054]
+    sources: [Y01]
+  - id: "E7"
+    parent: "E"
+    name: "Macro-Based Behavioral Economics"
+    ja: "マクロ行動経済学"
+    gap: "要る単元の案「行動マクロ経済学（期待形成と学習、合理的不注意、貨幣錯覚、消費者心理と景気）」（前提 F-049、F-025、F-053）。入口は F-049、中心がない"
+    sources: [Y01]
+  - {id: "F", name: "International Economics", ja: "国際経済学", group: true}
+  - id: "F0"
+    parent: "F"
+    name: "General"
+    ja: "一般（国際）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "F1"
+    parent: "F"
+    name: "Trade"
+    ja: "貿易"
+    units: [F-051]
+    sources: [Y01]
+  - id: "F2"
+    parent: "F"
+    name: "International Factor Movements and International Business"
+    ja: "国際的な生産要素の移動と国際ビジネス"
+    gap: "要る単元の案「多国籍企業と国際的な要素移動（直接投資の理論、海外生産の決定、国際労働移動と送金、移民の経済効果）」（前提 F-051、F-062、F-043）。入口は F-050（資本移動）、中心がない"
+    sources: [Y01]
+  - id: "F3"
+    parent: "F"
+    name: "International Finance"
+    ja: "国際金融"
+    units: [F-050, F-054]
+    sources: [Y01]
+  - id: "F4"
+    parent: "F"
+    name: "Macroeconomic Aspects of International Trade and Finance"
+    ja: "国際貿易・金融のマクロ面"
+    units: [F-050, F-013]
+    sources: [Y01]
+  - id: "F5"
+    parent: "F"
+    name: "International Relations, National Security, and International Political Economy"
+    ja: "国際関係・安全保障・国際政治経済"
+    none: "人文・規範（国際政治と安全保障の解釈と政策判断）。貿易政策の効果の測り方は F-051 で扱う"
+    sources: [Y01]
+  - id: "F6"
+    parent: "F"
+    name: "Economic Impacts of Globalization"
+    ja: "グローバル化の経済効果"
+    units: [F-051, F-065, F-063]
+    sources: [Y01]
+  - {id: "G", name: "Financial Economics", ja: "金融経済学", group: true}
+  - id: "G0"
+    parent: "G"
+    name: "General"
+    ja: "一般（金融）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "G1"
+    parent: "G"
+    name: "General Financial Markets"
+    ja: "金融市場一般"
+    units: [F-022, F-036, F-020, F-021, F-035]
+    sources: [Y01]
+  - id: "G2"
+    parent: "G"
+    name: "Financial Institutions and Services"
+    ja: "金融機関とサービス"
+    units: [F-026, F-044, F-015, F-017, F-059]
+    sources: [Y01]
+  - id: "G3"
+    parent: "G"
+    name: "Corporate Finance and Governance"
+    ja: "企業金融とガバナンス"
+    units: [F-023, F-043, F-007]
+    sources: [Y01]
+  - id: "G4"
+    parent: "G"
+    name: "Behavioral Finance"
+    ja: "行動ファイナンス"
+    units: [F-049, Q-009]
+    sources: [Y01]
+  - id: "G5"
+    parent: "G"
+    name: "Household Finance"
+    ja: "家計の金融"
+    units: [F-041, F-005, F-002]
+    sources: [Y01]
+  - {id: "H", name: "Public Economics", ja: "公共経済学", group: true}
+  - id: "H0"
+    parent: "H"
+    name: "General"
+    ja: "一般（公共）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "H1"
+    parent: "H"
+    name: "Structure and Scope of Government"
+    ja: "政府の構造と範囲"
+    none: "規範（政府の役割と規模の判断）。測れる部分は F-052、F-061 にある"
+    sources: [Y01]
+  - id: "H2"
+    parent: "H"
+    name: "Taxation, Subsidies, and Revenue"
+    ja: "課税・補助金・歳入"
+    units: [F-052, F-063, F-061]
+    sources: [Y01]
+  - id: "H3"
+    parent: "H"
+    name: "Fiscal Policies and Behavior of Economic Agents"
+    ja: "財政政策と経済主体の行動"
+    units: [F-052, F-013, F-063]
+    sources: [Y01]
+  - id: "H4"
+    parent: "H"
+    name: "Publicly Provided Goods"
+    ja: "公共的に供給される財"
+    units: [F-061, F-007, F-003]
+    sources: [Y01]
+  - id: "H5"
+    parent: "H"
+    name: "National Government Expenditures and Related Policies"
+    ja: "国の歳出と関連する政策"
+    units: [F-052, F-029, F-063]
+    sources: [Y01]
+  - id: "H6"
+    parent: "H"
+    name: "National Budget, Deficit, and Debt"
+    ja: "国家予算・赤字・債務"
+    units: [F-052, F-054]
+    sources: [Y01]
+  - id: "H7"
+    parent: "H"
+    name: "State and Local Government • Intergovernmental Relations"
+    ja: "州・地方政府・政府間関係"
+    gap: "要る単元の案「地方財政と空間の公共経済学（財政連邦主義、ティブー・モデルと地方公共財、補助金の効果、地域間の財政競争、公共施設の立地）」（前提 F-052、F-061）"
+    sources: [Y01]
+  - id: "H8"
+    parent: "H"
+    name: "Miscellaneous Issues"
+    ja: "その他の公共経済の問題"
+    none: "分類の便宜の見出し（雑多な項目の寄せ集めで中心がない）"
+    sources: [Y01]
+  - {id: "I", name: "Health, Education, and Welfare", ja: "保健・教育・厚生", group: true}
+  - id: "I0"
+    parent: "I"
+    name: "General"
+    ja: "一般（保健・教育・厚生）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "I1"
+    parent: "I"
+    name: "Health"
+    ja: "保健（医療経済）"
+    gap: "要る単元の案「医療経済学（医療市場と医療保険、医療の需要と供給、費用効果分析と QALY、健康の不平等の測り方）」（前提 F-061、F-007、I-036）。入口は I-036（世界の健康）"
+    sources: [Y01]
+  - id: "I2"
+    parent: "I"
+    name: "Education and Research Institutions"
+    ja: "教育と研究機関"
+    gap: "要る単元の案「教育の経済学（教育の収益率、教育の生産関数、学校選択と補助、因果推論による教育政策の評価）」（前提 F-062、S-042）。入口は F-062（人的資本）"
+    sources: [Y01]
+  - id: "I3"
+    parent: "I"
+    name: "Welfare, Well-Being, and Poverty"
+    ja: "厚生・幸福・貧困"
+    units: [F-063, F-065, I-036]
+    sources: [Y01]
+  - {id: "J", name: "Labor and Demographic Economics", ja: "労働と人口の経済学", group: true}
+  - id: "J0"
+    parent: "J"
+    name: "General"
+    ja: "一般（労働・人口）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "J1"
+    parent: "J"
+    name: "Demographic Economics"
+    ja: "人口経済学"
+    units: [B-090, F-056, F-014]
+    sources: [Y01]
+  - id: "J2"
+    parent: "J"
+    name: "Demand and Supply of Labor"
+    ja: "労働の需要と供給"
+    units: [F-062]
+    sources: [Y01]
+  - id: "J3"
+    parent: "J"
+    name: "Wages, Compensation, and Labor Costs"
+    ja: "賃金・報酬・労働費用"
+    units: [F-062]
+    sources: [Y01]
+  - id: "J4"
+    parent: "J"
+    name: "Particular Labor Markets"
+    ja: "特定の労働市場"
+    units: [F-062]
+    sources: [Y01]
+  - id: "J5"
+    parent: "J"
+    name: "Labor–Management Relations, Trade Unions, and Collective Bargaining"
+    ja: "労使関係・労働組合・団体交渉"
+    units: [F-062]
+    sources: [Y01]
+  - id: "J6"
+    parent: "J"
+    name: "Mobility, Unemployment, Vacancies, and Immigrant Workers"
+    ja: "移動・失業・欠員・移民労働者"
+    units: [F-062]
+    sources: [Y01]
+  - id: "J7"
+    parent: "J"
+    name: "Labor Discrimination"
+    ja: "労働市場の差別"
+    gap: "要る単元の案「労働市場の差別と格差（嗜好による差別と統計的差別、監査調査、賃金格差の分解）」（前提 F-062、S-042）。入口は F-062、Q-011（偏見の測り方）"
+    sources: [Y01]
+  - id: "J8"
+    parent: "J"
+    name: "Labor Standards: National and International"
+    ja: "労働基準（国内・国際）"
+    none: "規範（労働基準の制度と政策判断）。最低賃金など政策の効果は F-062 で扱う"
+    sources: [Y01]
+  - {id: "K", name: "Law and Economics", ja: "法と経済学", group: true}
+  - id: "K0"
+    parent: "K"
+    name: "General"
+    ja: "一般（法と経済）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "K1"
+    parent: "K"
+    name: "Basic Areas of Law"
+    ja: "法の基本分野"
+    none: "規範（財産法・契約法・不法行為法・刑法など法の解釈と判断）。外部性と財産権の経済分析は F-061、F-063 にある"
+    sources: [Y01]
+  - id: "K2"
+    parent: "K"
+    name: "Regulation and Business Law"
+    ja: "規制とビジネス法"
+    none: "規範（反トラスト法・証券法・行政法など法の解釈と判断）。規制の経済分析は L5 の要る単元の案に置く"
+    sources: [Y01]
+  - id: "K3"
+    parent: "K"
+    name: "Other Substantive Areas of Law"
+    ja: "その他の実体法"
+    none: "規範（労働法・環境法・税法・移民法など法の解釈と判断）"
+    sources: [Y01]
+  - id: "K4"
+    parent: "K"
+    name: "Legal Procedure, the Legal System, and Illegal Behavior"
+    ja: "訴訟手続・法制度・違法行為"
+    gap: "要る単元の案「犯罪と法執行の経済学（抑止の模型、犯罪の実証、訴訟と和解の分析）」（前提 F-012、F-024、S-042）。法の手続きの解釈は入れない"
+    sources: [Y01]
+  - {id: "L", name: "Industrial Organization", ja: "産業組織論", group: true}
+  - id: "L0"
+    parent: "L"
+    name: "General"
+    ja: "一般（産業組織）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "L1"
+    parent: "L"
+    name: "Market Structure, Firm Strategy, and Market Performance"
+    ja: "市場構造・企業戦略・市場成果"
+    units: [F-060, F-043, F-024]
+    sources: [Y01]
+  - id: "L2"
+    parent: "L"
+    name: "Firm Objectives, Organization, and Behavior"
+    ja: "企業の目的・組織・行動"
+    units: [F-043, F-012]
+    sources: [Y01]
+  - id: "L3"
+    parent: "L"
+    name: "Nonprofit Organizations and Public Enterprise"
+    ja: "非営利組織と公企業"
+    gap: "要る単元の案「規制・公企業・民営化の経済学（自然独占と料金規制、インセンティブ規制、公企業と民営化の比較、非営利組織の経済分析）」（前提 F-060、F-061、F-043）"
+    sources: [Y01]
+  - id: "L4"
+    parent: "L"
+    name: "Antitrust Issues and Policies"
+    ja: "反トラスト問題と政策"
+    gap: "要る単元の案「競争政策の経済学（カルテルと協調、合併の分析、垂直的取引制限、市場支配力の測定）」（前提 F-060、F-024）。入口は F-060（不完全競争）、法の解釈は入れない"
+    sources: [Y01]
+  - id: "L5"
+    parent: "L"
+    name: "Regulation and Industrial Policy"
+    ja: "規制と産業政策"
+    gap: "要る単元の案「規制・公企業・民営化の経済学（自然独占と料金規制、インセンティブ規制、公企業と民営化の比較、非営利組織の経済分析）」（前提 F-060、F-061、F-043）。産業政策の是非の判断は入れない"
+    sources: [Y01]
+  - id: "L6"
+    parent: "L"
+    name: "Industry Studies: Manufacturing"
+    ja: "産業研究：製造業"
+    none: "知の体系でない（産業ごとの事例の一覧）。市場の理論は F-060 で扱う"
+    sources: [Y01]
+  - id: "L7"
+    parent: "L"
+    name: "Industry Studies: Primary Products and Construction"
+    ja: "産業研究：第一次産品と建設"
+    none: "知の体系でない（産業ごとの事例の一覧）"
+    sources: [Y01]
+  - id: "L8"
+    parent: "L"
+    name: "Industry Studies: Services"
+    ja: "産業研究：サービス業"
+    none: "知の体系でない（産業ごとの事例の一覧）。スポーツは Z2 を参照"
+    sources: [Y01]
+  - id: "L9"
+    parent: "L"
+    name: "Industry Studies: Transportation and Utilities"
+    ja: "産業研究：運輸と公益事業"
+    none: "知の体系でない（産業ごとの事例の一覧）。規制の経済分析は L5 の要る単元の案に置く"
+    sources: [Y01]
+  - {id: "M", name: "Business Administration and Business Economics • Marketing • Accounting • Personnel Economics", ja: "経営・マーケティング・会計・人事の経済学", group: true}
+  - id: "M0"
+    parent: "M"
+    name: "General"
+    ja: "一般（経営）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "M1"
+    parent: "M"
+    name: "Business Administration"
+    ja: "経営管理"
+    none: "経営の実務。生産管理と OR は E-154、E-157 で扱う"
+    sources: [Y01]
+  - id: "M2"
+    parent: "M"
+    name: "Business Economics"
+    ja: "ビジネス経済学"
+    units: [F-012, F-007, F-042]
+    sources: [Y01]
+  - id: "M3"
+    parent: "M"
+    name: "Marketing and Advertising"
+    ja: "マーケティングと広告"
+    none: "経営の実務。価格づけの理論は F-060、実験での測り方は S-054 で扱う"
+    sources: [Y01]
+  - id: "M4"
+    parent: "M"
+    name: "Accounting and Auditing"
+    ja: "会計と監査"
+    units: [F-010, F-004, F-042]
+    sources: [Y01]
+  - id: "M5"
+    parent: "M"
+    name: "Personnel Economics"
+    ja: "人事の経済学"
+    gap: "要る単元の案「契約とインセンティブの経済学（プリンシパル・エージェント、報酬設計、昇進のトーナメント、労働契約）」（前提 F-024、F-061、F-062）。入口は F-062（人的資本）、F-061（モラルハザード）"
+    sources: [Y01]
+  - {id: "N", name: "Economic History", ja: "経済史", group: true}
+  - id: "N0"
+    parent: "N"
+    name: "General"
+    ja: "一般（経済史）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "N1"
+    parent: "N"
+    name: "Macroeconomics and Monetary Economics • Industrial Structure • Growth • Fluctuations"
+    ja: "マクロ・貨幣・産業構造・成長・変動の経済史"
+    none: "人文（経済史の記述と解釈）。長期の成長の実証は F-025、F-065 で扱う"
+    sources: [Y01]
+  - id: "N2"
+    parent: "N"
+    name: "Financial Markets and Institutions"
+    ja: "金融市場と金融機関の経済史"
+    none: "人文（経済史の記述と解釈）。金融危機のしくみは F-026 で扱う"
+    sources: [Y01]
+  - id: "N3"
+    parent: "N"
+    name: "Labor and Consumers, Demography, Education, Health, Welfare, Income, Wealth, Religion, and Philanthropy"
+    ja: "労働・消費者・人口・教育・健康・福祉・所得・富・宗教・慈善の経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - id: "N4"
+    parent: "N"
+    name: "Government, War, Law, International Relations, and Regulation"
+    ja: "政府・戦争・法・国際関係・規制の経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - id: "N5"
+    parent: "N"
+    name: "Agriculture, Natural Resources, Environment, and Extractive Industries"
+    ja: "農業・天然資源・環境・採掘産業の経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - id: "N6"
+    parent: "N"
+    name: "Manufacturing and Construction"
+    ja: "製造業と建設の経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - id: "N7"
+    parent: "N"
+    name: "Transport, Trade, Energy, Technology, and Other Services"
+    ja: "運輸・貿易・エネルギー・技術・その他サービスの経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - id: "N8"
+    parent: "N"
+    name: "Micro-Business History"
+    ja: "個別企業の経営史"
+    none: "人文（経営史の記述と解釈）"
+    sources: [Y01]
+  - id: "N9"
+    parent: "N"
+    name: "Regional and Urban History"
+    ja: "地域と都市の経済史"
+    none: "人文（経済史の記述と解釈）"
+    sources: [Y01]
+  - {id: "O", name: "Economic Development, Innovation, Technological Change, and Growth", ja: "経済発展・技術革新・成長", group: true}
+  - id: "O1"
+    parent: "O"
+    name: "Economic Development"
+    ja: "経済発展"
+    units: [F-065, F-025, F-063]
+    sources: [Y01]
+  - id: "O2"
+    parent: "O"
+    name: "Development Planning and Policy"
+    ja: "開発計画と政策"
+    units: [F-065, F-007]
+    sources: [Y01]
+  - id: "O3"
+    parent: "O"
+    name: "Innovation • Research and Development • Technological Change • Intellectual Property Rights"
+    ja: "技術革新・研究開発・技術変化・知的財産権"
+    gap: "要る単元の案「技術革新と知的財産の経済学（内生的成長と研究開発、特許と競争、技術の普及、イノベーションの測定）」（前提 F-025、F-060）。入口は F-065（全要素生産性）"
+    sources: [Y01]
+  - id: "O4"
+    parent: "O"
+    name: "Economic Growth and Aggregate Productivity"
+    ja: "経済成長と総生産性"
+    units: [F-025, F-065]
+    sources: [Y01]
+  - id: "O5"
+    parent: "O"
+    name: "Economywide Country Studies"
+    ja: "国全体の国別研究"
+    none: "分類の便宜の見出し（国・地域別の見出しで知の中身でない）。国の経済の測り方は F-054 で扱う"
+    sources: [Y01]
+  - {id: "P", name: "Political Economy and Comparative Economic Systems", ja: "政治経済と比較経済体制", group: true}
+  - id: "P0"
+    parent: "P"
+    name: "General"
+    ja: "一般（政治経済）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "P1"
+    parent: "P"
+    name: "Capitalist Economies"
+    ja: "資本主義経済"
+    none: "人文・規範（経済体制の記述と評価）。財産権と制度の経済分析は F-063 で扱う"
+    sources: [Y01]
+  - id: "P2"
+    parent: "P"
+    name: "Socialist and Transition Economies"
+    ja: "社会主義・移行経済"
+    none: "人文・規範（経済体制の歴史と評価）"
+    sources: [Y01]
+  - id: "P3"
+    parent: "P"
+    name: "Socialist Institutions and Their Transitions"
+    ja: "社会主義の制度とその移行"
+    none: "人文・規範（制度の歴史と評価）"
+    sources: [Y01]
+  - id: "P4"
+    parent: "P"
+    name: "Other Economic Systems"
+    ja: "その他の経済体制"
+    none: "人文・規範（経済体制の記述と評価）"
+    sources: [Y01]
+  - id: "P5"
+    parent: "P"
+    name: "Comparative Economic Systems"
+    ja: "比較経済体制"
+    none: "人文・規範（経済体制の比較と評価）。国の豊かさの違いの実証は F-065 で扱う"
+    sources: [Y01]
+  - {id: "Q", name: "Agricultural and Natural Resource Economics • Environmental and Ecological Economics", ja: "農業・資源・環境経済学", group: true}
+  - id: "Q0"
+    parent: "Q"
+    name: "General"
+    ja: "一般（農業・資源・環境）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "Q1"
+    parent: "Q"
+    name: "Agriculture"
+    ja: "農業経済"
+    gap: "要る単元の案「農業経済学（農家の生産と所得、農産物市場と価格変動、土地と農業政策の効果）」（前提 F-008、F-012）。周辺は V-010、B-091 に少しあるが中心がない"
+    sources: [Y01]
+  - id: "Q2"
+    parent: "Q"
+    name: "Renewable Resources and Conservation"
+    ja: "再生可能資源と保全"
+    units: [V-013, F-061, B-091, B-103]
+    sources: [Y01]
+  - id: "Q3"
+    parent: "Q"
+    name: "Nonrenewable Resources and Conservation"
+    ja: "枯渇性資源と保全"
+    gap: "要る単元の案「資源とエネルギーの経済学（枯渇性資源の最適採掘とホテリング則、資源価格と資源の呪い、エネルギー市場と電源の費用比較）」（前提 F-025、F-008、W-065）。入口は W-065（地下資源）"
+    sources: [Y01]
+  - id: "Q4"
+    parent: "Q"
+    name: "Energy"
+    ja: "エネルギー"
+    gap: "要る単元の案「資源とエネルギーの経済学（枯渇性資源の最適採掘とホテリング則、資源価格と資源の呪い、エネルギー市場と電源の費用比較）」（前提 F-025、F-008、W-065）。入口は P-203（エネルギー資源と電力の供給）"
+    sources: [Y01]
+  - id: "Q5"
+    parent: "Q"
+    name: "Environmental Economics"
+    ja: "環境経済学"
+    units: [F-061, E-222, B-091]
+    sources: [Y01]
+  - {id: "R", name: "Urban, Rural, Regional, Real Estate, and Transportation Economics", ja: "都市・地域・不動産・交通の経済学", group: true}
+  - id: "R0"
+    parent: "R"
+    name: "General"
+    ja: "一般（都市・地域）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "R1"
+    parent: "R"
+    name: "General Regional Economics"
+    ja: "地域経済一般"
+    gap: "要る単元の案「都市・地域経済学（集積の経済、都市の規模分布、土地利用と地代、空間均衡モデル、地域間の人口移動）」（前提 F-012、F-051）"
+    sources: [Y01]
+  - id: "R2"
+    parent: "R"
+    name: "Household Analysis"
+    ja: "家計の分析（住宅・地域移動）"
+    gap: "要る単元の案「都市・地域経済学（集積の経済、都市の規模分布、土地利用と地代、空間均衡モデル、地域間の人口移動）」（前提 F-012、F-051）。住宅需要と地域間移動はここに入れる"
+    sources: [Y01]
+  - id: "R3"
+    parent: "R"
+    name: "Real Estate Markets, Spatial Production Analysis, and Firm Location"
+    ja: "不動産市場・空間的生産・企業立地"
+    gap: "要る単元の案「不動産市場と立地の経済学（地価と住宅価格の決まり方、ヘドニック価格、企業の立地、輸送費と空間均衡）」（前提 F-012、F-051）。入口は F-047（不動産の投資）"
+    sources: [Y01]
+  - id: "R4"
+    parent: "R"
+    name: "Transportation Economics"
+    ja: "交通経済学"
+    gap: "要る単元の案「交通の経済学（交通需要と混雑、混雑課金、交通投資の費用便益、事故と安全）」（前提 F-061、F-007）"
+    sources: [Y01]
+  - id: "R5"
+    parent: "R"
+    name: "Regional Government Analysis"
+    ja: "地域政府の分析"
+    gap: "要る単元の案「地方財政と空間の公共経済学（財政連邦主義、ティブー・モデルと地方公共財、補助金の効果、地域間の財政競争、公共施設の立地）」（前提 F-052、F-061）。H7 と同じ単元"
+    sources: [Y01]
+  - {id: "Y", name: "Miscellaneous Categories", ja: "その他の分類", group: true}
+  - id: "Y1"
+    parent: "Y"
+    name: "Data: Tables and Charts"
+    ja: "データ：表とグラフ"
+    none: "分類の便宜の見出し（表やグラフを載せた文献の形）。データの読み方は S-027、S-029 で扱う"
+    sources: [Y01]
+  - id: "Y2"
+    parent: "Y"
+    name: "Introductory Material"
+    ja: "入門的な資料"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y3"
+    parent: "Y"
+    name: "Book Reviews (unclassified)"
+    ja: "書評（未分類）"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y4"
+    parent: "Y"
+    name: "Dissertations (unclassified)"
+    ja: "学位論文（未分類）"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y5"
+    parent: "Y"
+    name: "Further Reading (unclassified)"
+    ja: "参考文献（未分類）"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y6"
+    parent: "Y"
+    name: "Excerpts"
+    ja: "抜粋"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y7"
+    parent: "Y"
+    name: "No Author General Discussions"
+    ja: "著者なしの一般論"
+    none: "分類の便宜の見出し（出版の形）"
+    sources: [Y01]
+  - id: "Y8"
+    parent: "Y"
+    name: "Related Disciplines"
+    ja: "関連する学問分野"
+    none: "分類の便宜の見出し（他分野への案内で知の中身でない）"
+    sources: [Y01]
+  - id: "Y9"
+    parent: "Y"
+    name: "Other"
+    ja: "その他"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - {id: "Z", name: "Other Special Topics", ja: "特殊テーマ", group: true}
+  - id: "Z0"
+    parent: "Z"
+    name: "General"
+    ja: "一般（特殊テーマ）"
+    none: "分類の便宜の見出し"
+    sources: [Y01]
+  - id: "Z1"
+    parent: "Z"
+    name: "Cultural Economics • Economic Sociology • Economic Anthropology"
+    ja: "文化経済学・経済社会学・経済人類学"
+    none: "人文（芸術・宗教・文化の解釈）と社会学の記述。測れる部分は F-063（制度）、Q-011（協力と信頼の実験と文化）にある"
+    sources: [Y01]
+  - id: "Z2"
+    parent: "Z"
+    name: "Sports Economics"
+    ja: "スポーツ経済学"
+    units: [K-070, K-065]
+    sources: [Y01]
+  - id: "Z3"
+    parent: "Z"
+    name: "Tourism Economics"
+    ja: "観光経済学"
+    none: "知の体系でない（観光産業の事例と実務）。需要と価格の分析は F-008、F-060 で扱う"
+    sources: [Y01]

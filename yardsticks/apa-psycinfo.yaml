@@ -1,0 +1,537 @@
+# 外の物差し：心理学の中の抜けを測る（D-117）。22 の大分類（下位のあるもの）を group にし、2 段目（4 けたの末尾が 0）を項目にした。3 段目（2221 など）は入れない。公式のページは機械には中身が空で返る（JavaScript）ので、Internet Archive の写しから取った。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "APA PsycInfo Classification Categories and Codes"
+version: "2026-10-18 の写し"
+sources:
+  Y01: {title: "APA PsycInfo Classification Categories and Codes（apa.org の Internet Archive 2026-10-18 の写し）", url: "https://web.archive.org/web/20261018105756/https://www.apa.org/pubs/databases/training/class-codes", date: 2026-11-12, license: "© 2026 American Psychological Association。利用条件は未確認（記号と名前だけを使う）"}
+items:
+  - {id: "2100", name: "General Psychology", ja: "一般心理学", group: true}
+  - id: "2140"
+    parent: "2100"
+    name: "History & Systems"
+    ja: "歴史と学派"
+    none: "人文（心理学史と学派の解釈）。いまの知に要る歴史は各単元の中で扱う"
+    sources: [Y01]
+  - {id: "2200", name: "Psychometrics & Statistics & Methodology", ja: "心理測定・統計・方法論", group: true}
+  - id: "2220"
+    parent: "2200"
+    name: "Tests & Testing"
+    ja: "検査と測定"
+    units: [Q-013, Q-006]
+    sources: [Y01]
+  - id: "2240"
+    parent: "2200"
+    name: "Statistics & Mathematics"
+    ja: "統計と数学"
+    units: [S-019, S-020, S-023, S-050, Q-016]
+    sources: [Y01]
+  - id: "2260"
+    parent: "2200"
+    name: "Research Methods & Experimental Design"
+    ja: "研究法と実験計画"
+    units: [Q-006, S-050, S-031, S-042]
+    sources: [Y01]
+  - {id: "2300", name: "Human Experimental Psychology", ja: "人間の実験心理学", group: true}
+  - id: "2320"
+    parent: "2300"
+    name: "Sensory Perception"
+    ja: "感覚と知覚"
+    units: [Q-004, Q-001, B-063, E-149]
+    sources: [Y01]
+  - id: "2330"
+    parent: "2300"
+    name: "Motor Processes"
+    ja: "運動過程"
+    gap: "要る単元の案「運動の制御と学習（感覚運動の学習、スキルの獲得と練習の効果、協調と時間の精度、眼球運動）」（前提 B-063、Q-005）。入口は B-063、B-120、Q-021（フィッツの法則）で、中心がない"
+    sources: [Y01]
+  - id: "2340"
+    parent: "2300"
+    name: "Cognitive Processes"
+    ja: "認知過程"
+    units: [Q-005, Q-008, Q-009, Q-015, Q-003]
+    sources: [Y01]
+  - id: "2360"
+    parent: "2300"
+    name: "Motivation & Emotion"
+    ja: "動機づけと感情"
+    units: [Q-012, Q-016, B-065]
+    sources: [Y01]
+  - id: "2380"
+    parent: "2300"
+    name: "Consciousness States"
+    ja: "意識の状態"
+    units: [B-114, B-065]
+    sources: [Y01]
+  - id: "2390"
+    parent: "2300"
+    name: "Psychic Phenomenon & Paranormal Activities"
+    ja: "超心理と超常現象"
+    none: "検証できない知（超常現象・超心理）。測れる部分は確率判断のずれと認知の偏り（Q-009）にある"
+    sources: [Y01]
+  - {id: "2400", name: "Animal Experimental & Comparative Psychology", ja: "動物の実験・比較心理学", group: true}
+  - id: "2420"
+    parent: "2400"
+    name: "Learning & Motivation"
+    ja: "動物の学習と動機づけ"
+    units: [Q-007, B-039, B-160]
+    sources: [Y01]
+  - id: "2440"
+    parent: "2400"
+    name: "Social & Instinctive Behavior"
+    ja: "動物の社会行動と本能行動"
+    units: [B-058, B-039, B-160]
+    sources: [Y01]
+  - {id: "2500", name: "Physiological Psychology & Neuroscience", ja: "生理心理学と神経科学", group: true}
+  - id: "2510"
+    parent: "2500"
+    name: "Genetics"
+    ja: "遺伝学"
+    units: [B-002, B-001, Q-013, B-068]
+    sources: [Y01]
+  - id: "2520"
+    parent: "2500"
+    name: "Neuropsychology & Neurology"
+    ja: "神経心理学と神経学"
+    units: [B-063, B-101, B-065, B-068]
+    sources: [Y01]
+  - id: "2530"
+    parent: "2500"
+    name: "Electrophysiology"
+    ja: "電気生理学"
+    units: [B-052, B-067, E-225]
+    sources: [Y01]
+  - id: "2540"
+    parent: "2500"
+    name: "Physiological Processes"
+    ja: "生理過程"
+    units: [I-004, B-035, I-019]
+    sources: [Y01]
+  - id: "2560"
+    parent: "2500"
+    name: "Psychophysiology"
+    ja: "精神生理学"
+    units: [E-225, B-067, Q-012]
+    sources: [Y01]
+  - id: "2580"
+    parent: "2500"
+    name: "Psychopharmacology"
+    ja: "精神薬理学"
+    units: [I-026, B-068, I-001]
+    sources: [Y01]
+  - {id: "2600", name: "Psychology & the Humanities", ja: "心理学と人文", group: true}
+  - id: "2610"
+    parent: "2600"
+    name: "Literature & Fine Arts"
+    ja: "文学と美術"
+    none: "人文（文学と美術）。地図に入れない"
+    sources: [Y01]
+  - id: "2630"
+    parent: "2600"
+    name: "Philosophy"
+    ja: "哲学"
+    none: "人文（哲学）。心の哲学のうち検証できる問いは意識の科学（B-114）に入る"
+    sources: [Y01]
+  - {id: "2700", name: "Communication Systems", ja: "コミュニケーション系", group: true}
+  - id: "2720"
+    parent: "2700"
+    name: "Linguistics & Language & Speech"
+    ja: "言語学・言語・音声"
+    gap: "要る単元の案「言語学と音声（音声学と音韻、語と文の構造と意味、言語の類型と変化、音声の産出と知覚）」（前提 Q-008、E-149）。入口は Q-008（心理言語学）で、言語そのものの科学がない"
+    sources: [Y01]
+  - id: "2750"
+    parent: "2700"
+    name: "Mass Media Communications"
+    ja: "マスメディア"
+    none: "知の体系でない実務（報道・広告・番組の制作と運営）。測れる部分（説得と態度）は Q-011 にある"
+    sources: [Y01]
+  - {id: "2800", name: "Developmental Psychology", ja: "発達心理学", group: true}
+  - id: "2820"
+    parent: "2800"
+    name: "Cognitive & Perceptual Development"
+    ja: "認知と知覚の発達"
+    units: [Q-010]
+    sources: [Y01]
+  - id: "2840"
+    parent: "2800"
+    name: "Psychosocial & Personality Development"
+    ja: "心理社会と人格の発達"
+    units: [Q-010, Q-013, Q-012]
+    sources: [Y01]
+  - id: "2860"
+    parent: "2800"
+    name: "Aging & Older Adult Development"
+    ja: "加齢と高齢期の発達"
+    units: [Q-010, B-112, I-049]
+    sources: [Y01]
+  - {id: "2900", name: "Social Processes & Social Issues", ja: "社会過程と社会問題", group: true}
+  - id: "2910"
+    parent: "2900"
+    name: "Social Structure & Organization"
+    ja: "社会構造と組織"
+    gap: "要る単元の案「社会の構造と変化の実証（階層と移動、社会ネットワーク、人口と都市化、集合行動の測り方）」（前提 B-090、S-042、F-062）。入口は B-090、F-062"
+    sources: [Y01]
+  - id: "2920"
+    parent: "2900"
+    name: "Religion"
+    ja: "宗教"
+    none: "人文（宗教）。地図に入れない"
+    sources: [Y01]
+  - id: "2930"
+    parent: "2900"
+    name: "Culture & Ethnology"
+    ja: "文化と民族学"
+    none: "人文（文化と民族誌の解釈）。測れる部分（文化による違いの実験）は Q-011、文化の伝わり方は B-160 にある"
+    sources: [Y01]
+  - id: "2950"
+    parent: "2900"
+    name: "Marriage & Family"
+    ja: "結婚と家族"
+    gap: "要る単元の案「親密な関係と家族（魅力と関係の満足、結婚と別れ、親の養育と家族の力学の実証）」（前提 Q-010、Q-011）。入口は Q-010 の愛着"
+    sources: [Y01]
+  - id: "2960"
+    parent: "2900"
+    name: "Political Processes & Political Issues"
+    ja: "政治過程と政治問題"
+    none: "規範（政治の判断と制度）。測れる部分は態度と説得（Q-011）、意思決定（Q-009）、ゲーム理論（F-024）にある"
+    sources: [Y01]
+  - id: "2970"
+    parent: "2900"
+    name: "Sex & Gender Roles"
+    ja: "性と性役割"
+    none: "規範（性役割と平等の議論）。測れる部分（ステレオタイプと偏見の測定）は Q-011 にある"
+    sources: [Y01]
+  - id: "2980"
+    parent: "2900"
+    name: "Sexual Behavior & Sexual Orientation"
+    ja: "性行動と性的指向"
+    gap: "要る単元の案「ヒトの性の科学（性的指向と性自認の発達の研究、性行動の疫学、性機能）」（前提 I-018、Q-010）。入口は I-018 の性の分化"
+    sources: [Y01]
+  - id: "2990"
+    parent: "2900"
+    name: "Drug & Alcohol Usage (Legal)"
+    ja: "薬物・アルコールの使用（合法）"
+    units: [Q-018, I-026]
+    sources: [Y01]
+  - {id: "3000", name: "Social Psychology", ja: "社会心理学", group: true}
+  - id: "3020"
+    parent: "3000"
+    name: "Group & Interpersonal Processes"
+    ja: "集団と対人過程"
+    units: [Q-011]
+    sources: [Y01]
+  - id: "3040"
+    parent: "3000"
+    name: "Social Perception & Cognition"
+    ja: "社会的知覚と認知"
+    units: [Q-011]
+    sources: [Y01]
+  - {id: "3100", name: "Personality Psychology", ja: "人格心理学", group: true}
+  - id: "3120"
+    parent: "3100"
+    name: "Personality Traits & Processes"
+    ja: "人格特性と過程"
+    units: [Q-013, Q-012, Q-011]
+    sources: [Y01]
+  - id: "3140"
+    parent: "3100"
+    name: "Personality Theory"
+    ja: "人格理論"
+    units: [Q-013]
+    sources: [Y01]
+  - {id: "3200", name: "Psychological & Physical Disorders", ja: "心理的・身体的障害", group: true}
+  - id: "3210"
+    parent: "3200"
+    name: "Psychological Disorders"
+    ja: "心理的障害"
+    units: [Q-014, B-068, Q-016]
+    sources: [Y01]
+  - id: "3230"
+    parent: "3200"
+    name: "Behavior Disorders & Antisocial Behavior"
+    ja: "行動障害と反社会的行動"
+    gap: "要る単元の案「行動の問題と攻撃・反社会的行動（ADHD、素行症、攻撃性の発達と介入の効果）」（前提 Q-010、Q-014）。入口は Q-014、B-068"
+    sources: [Y01]
+  - id: "3250"
+    parent: "3200"
+    name: "Neurodevelopmental & Autism Spectrum Disorders"
+    ja: "神経発達症と自閉スペクトラム症"
+    units: [B-068, Q-010]
+    sources: [Y01]
+  - id: "3260"
+    parent: "3200"
+    name: "Eating Disorders"
+    ja: "摂食障害"
+    gap: "要る単元の案「摂食障害（神経性やせ症・過食症の病態と治療の効果の実証）」（前提 Q-014、I-019）。入口は Q-014、I-019（食欲と体重の調節）"
+    sources: [Y01]
+  - id: "3270"
+    parent: "3200"
+    name: "Communication Disorders"
+    ja: "コミュニケーション障害"
+    gap: "要る単元の案「言語と聴覚の障害（失語、構音と吃音、難聴、検査と介入の効果）」（前提 Q-008、B-063、E-149）。入口は Q-008"
+    sources: [Y01]
+  - id: "3280"
+    parent: "3200"
+    name: "Environmental Toxins & Health"
+    ja: "環境毒物と健康"
+    units: [I-041, I-027, B-092]
+    sources: [Y01]
+  - id: "3290"
+    parent: "3200"
+    name: "Physical & Somatic Disorders"
+    ja: "身体的・身体症状の障害"
+    units: [I-045, I-046, I-047, I-048, I-050]
+    sources: [Y01]
+  - {id: "3300", name: "Health & Mental Health Treatment & Prevention", ja: "健康・精神保健の治療と予防", group: true}
+  - id: "3310"
+    parent: "3300"
+    name: "Psychotherapy & Psychotherapeutic Counseling"
+    ja: "心理療法とカウンセリング"
+    units: [Q-014]
+    sources: [Y01]
+  - id: "3340"
+    parent: "3300"
+    name: "Clinical Psychopharmacology"
+    ja: "臨床精神薬理学"
+    units: [I-026, I-001, B-068, I-003]
+    sources: [Y01]
+  - id: "3350"
+    parent: "3300"
+    name: "Specialized Interventions"
+    ja: "特別な介入"
+    units: [Q-014, Q-018]
+    sources: [Y01]
+  - id: "3360"
+    parent: "3300"
+    name: "Health Psychology & Medicine"
+    ja: "健康心理学と医学"
+    units: [Q-018, I-036, I-038]
+    sources: [Y01]
+  - id: "3370"
+    parent: "3300"
+    name: "Health & Mental Health Services"
+    ja: "保健・精神保健サービス"
+    none: "規範・制度と運営（サービスの提供体制、費用、配置）。測れる部分（制度の比較、検診の評価）は I-036、I-038 にある"
+    sources: [Y01]
+  - id: "3380"
+    parent: "3300"
+    name: "Rehabilitation"
+    ja: "リハビリテーション"
+    gap: "要る単元の案「リハビリテーションの科学（神経の回復と可塑性、運動療法の効果、機能の評価、補装具）」（前提 B-064、B-063、I-049）。入口は B-064、B-170"
+    sources: [Y01]
+  - {id: "3400", name: "Health & Mental Health Personnel Issues", ja: "保健・精神保健の人材の問題", group: true}
+  - id: "3410"
+    parent: "3400"
+    name: "Professional Education & Training"
+    ja: "専門職の教育と訓練"
+    none: "規範・実務（専門職の養成の制度）。測れる部分（学習の方法の効果）は Q-005 にある"
+    sources: [Y01]
+  - id: "3430"
+    parent: "3400"
+    name: "Professional Personnel Attitudes & Characteristics"
+    ja: "専門職の態度と特性"
+    none: "知の体系でない実務（専門職の人物像と態度の話題）。測れる部分は態度の測定（Q-011）"
+    sources: [Y01]
+  - id: "3450"
+    parent: "3400"
+    name: "Professional Ethics & Standards & Liability"
+    ja: "専門職の倫理・基準・責任"
+    none: "規範（職業の倫理と責任）。研究と医療の倫理の原則は I-034 に入る"
+    sources: [Y01]
+  - id: "3470"
+    parent: "3400"
+    name: "Professional Impairment"
+    ja: "専門職の機能障害"
+    none: "知の体系でない実務（専門職の燃え尽きや不祥事の話題）。測れる部分（ストレスと対処）は Q-012 にある"
+    sources: [Y01]
+  - {id: "3500", name: "Educational & School Psychology", ja: "教育心理学と学校心理学", group: true}
+  - id: "3510"
+    parent: "3500"
+    name: "Educational Administration & Personnel"
+    ja: "教育の運営と人事"
+    none: "規範・運営（学校の経営と人事）。地図に入れない"
+    sources: [Y01]
+  - id: "3530"
+    parent: "3500"
+    name: "Curriculum & Programs & Teaching Methods"
+    ja: "課程・プログラム・教授法"
+    gap: "要る単元の案「学習科学と教育の実証（指導法とフィードバックの効果、教育の無作為化試験と効果量、学力の測り方、教科ごとの誤概念）」（前提 Q-005、Q-013、S-050。MeSH I02、MSC 97 と同じ単元）。教育の制度と運営は入れない。入口は Q-005（想起練習と間隔反復）"
+    sources: [Y01]
+  - id: "3550"
+    parent: "3500"
+    name: "Academic Learning & Achievement"
+    ja: "学習と学業達成"
+    units: [Q-005, Q-013, Q-010]
+    sources: [Y01]
+  - id: "3560"
+    parent: "3500"
+    name: "Classroom Dynamics & Student Adjustment & Attitudes"
+    ja: "学級の力学・生徒の適応・態度"
+    units: [Q-012, Q-011, Q-010]
+    sources: [Y01]
+  - id: "3570"
+    parent: "3500"
+    name: "Special & Compensatory Education"
+    ja: "特別支援・補償教育"
+    none: "規範・実務（特別支援教育の制度と運営）。測れる部分（神経発達症の理解）は B-068、Q-010 にある"
+    sources: [Y01]
+  - id: "3580"
+    parent: "3500"
+    name: "Educational/Vocational Counseling & Student Services"
+    ja: "教育・職業相談と生徒支援"
+    none: "知の体系でない実務（相談と生徒支援の技能）。測れる部分は Q-014（介入の効果）"
+    sources: [Y01]
+  - {id: "3600", name: "Organizational Psychology & Human Resources", ja: "組織心理学と人的資源", group: true}
+  - id: "3610"
+    parent: "3600"
+    name: "Occupational Interests & Guidance"
+    ja: "職業的興味と指導"
+    none: "知の体系でない実務（進路指導）。測れる部分（興味の測定）は Q-013 にある"
+    sources: [Y01]
+  - id: "3620"
+    parent: "3600"
+    name: "Personnel Management & Selection & Training"
+    ja: "人事管理・選抜・訓練"
+    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    sources: [Y01]
+  - id: "3630"
+    parent: "3600"
+    name: "Personnel Evaluation & Job Performance"
+    ja: "人事評価と職務遂行"
+    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    sources: [Y01]
+  - id: "3640"
+    parent: "3600"
+    name: "Management & Management Training"
+    ja: "経営と管理者訓練"
+    none: "経営の実務。測れる部分（集団と意思決定）は Q-011、Q-009 にある"
+    sources: [Y01]
+  - id: "3650"
+    parent: "3600"
+    name: "Personnel Attitudes & Job Satisfaction"
+    ja: "従業員の態度と職務満足"
+    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    sources: [Y01]
+  - id: "3660"
+    parent: "3600"
+    name: "Organizational Behavior"
+    ja: "組織行動"
+    gap: "要る単元の案「産業・組織心理学（選抜と評価の妥当性、職務の遂行の測り方、仕事の動機と職務満足、組織の中の集団とリーダーシップ）」（前提 Q-011、Q-012、Q-013）。採用・人事の実務は入れない"
+    sources: [Y01]
+  - id: "3670"
+    parent: "3600"
+    name: "Working Conditions & Industrial Safety"
+    ja: "労働条件と労働安全"
+    units: [Q-021, I-041, E-217]
+    sources: [Y01]
+  - {id: "3700", name: "Sport Psychology & Leisure", ja: "スポーツ心理学と余暇", group: true}
+  - id: "3720"
+    parent: "3700"
+    name: "Sports & Exercise"
+    ja: "スポーツと運動"
+    gap: "要る単元の案「運動とスポーツの科学（運動の生理、トレーニングの効果、スポーツのバイオメカニクス、運動の継続とスポーツ心理）」（前提 I-004、B-120、Q-012）。入口は B-120、K-065"
+    sources: [Y01]
+  - id: "3740"
+    parent: "3700"
+    name: "Recreation & Leisure"
+    ja: "レクリエーションと余暇"
+    none: "知の体系でない実務（余暇の過ごし方の話題）。測れる部分（幸福感）は Q-012 にある"
+    sources: [Y01]
+  - id: "3800"
+    name: "Military Psychology"
+    ja: "軍事心理学"
+    none: "知の体系でない実務（軍の選抜・訓練・運用）。測れる部分（ストレス、人と機械）は Q-014、Q-021 にある"
+    sources: [Y01]
+  - {id: "3900", name: "Consumer Psychology", ja: "消費者心理学", group: true}
+  - id: "3920"
+    parent: "3900"
+    name: "Consumer Attitudes & Behavior"
+    ja: "消費者の態度と行動"
+    units: [Q-009, F-049, Q-011]
+    sources: [Y01]
+  - id: "3940"
+    parent: "3900"
+    name: "Marketing & Advertising"
+    ja: "マーケティングと広告"
+    none: "経営の実務（市場の施策と広告の制作）。測れる部分（説得と態度、A/B テスト）は Q-011、S-054 にある"
+    sources: [Y01]
+  - {id: "4000", name: "Engineering & Environmental Psychology", ja: "工学・環境心理学", group: true}
+  - id: "4010"
+    parent: "4000"
+    name: "Human Factors Engineering"
+    ja: "人間工学"
+    units: [Q-021, Q-022]
+    sources: [Y01]
+  - id: "4030"
+    parent: "4000"
+    name: "Lifespace & Institutional Design"
+    ja: "生活空間と施設の設計"
+    none: "知の体系でない実務（建築と施設の設計の技能）。測れる部分（人体の寸法、アクセシビリティ）は Q-021 にある"
+    sources: [Y01]
+  - id: "4050"
+    parent: "4000"
+    name: "Community & Environmental Planning"
+    ja: "地域・環境の計画"
+    none: "規範・制度（都市と地域の計画の判断）。地図に入れない"
+    sources: [Y01]
+  - id: "4070"
+    parent: "4000"
+    name: "Environmental Issues & Attitudes"
+    ja: "環境問題と態度"
+    none: "規範（環境政策の判断と態度の議論）。測れる部分（態度、行動を変える介入）は Q-011、Q-018 にある"
+    sources: [Y01]
+  - id: "4090"
+    parent: "4000"
+    name: "Transportation"
+    ja: "交通"
+    none: "実務・政策（交通の計画と運用）。測れる部分（運転の人間要因）は Q-021、Q-022 にある"
+    sources: [Y01]
+  - {id: "4100", name: "Cognitive Psychology & Intelligent Systems", ja: "認知心理学と知的システム", group: true}
+  - id: "4120"
+    parent: "4100"
+    name: "Artificial Intelligence & Expert Systems"
+    ja: "人工知能とエキスパートシステム"
+    units: [K-053, K-054, K-055, K-056, K-161]
+    sources: [Y01]
+  - id: "4140"
+    parent: "4100"
+    name: "Robotics"
+    ja: "ロボット工学"
+    units: [K-085, K-084, K-086, K-087, K-090]
+    sources: [Y01]
+  - id: "4160"
+    parent: "4100"
+    name: "Neural Networks"
+    ja: "ニューラルネットワーク"
+    units: [K-051, K-047, K-050, K-052, B-066]
+    sources: [Y01]
+  - {id: "4200", name: "Forensic Psychology & Legal Issues", ja: "司法心理学と法の問題", group: true}
+  - id: "4210"
+    parent: "4200"
+    name: "Civil Rights & Civil Law"
+    ja: "市民権と民事法"
+    none: "規範（法）。地図に入れない"
+    sources: [Y01]
+  - id: "4230"
+    parent: "4200"
+    name: "Criminal Law & Criminal Adjudication"
+    ja: "刑事法と刑事裁判"
+    none: "規範（法と裁判）。測れる部分（目撃証言の記憶）は Q-005 にある"
+    sources: [Y01]
+  - id: "4250"
+    parent: "4200"
+    name: "Mediation & Conflict Resolution"
+    ja: "調停と紛争解決"
+    none: "規範・実務（調停の技能）。測れる部分（戦略的な相互作用）はゲーム理論（F-024）にある"
+    sources: [Y01]
+  - id: "4270"
+    parent: "4200"
+    name: "Crime Prevention"
+    ja: "犯罪予防"
+    none: "規範・政策（犯罪予防の施策）。地図に入れない"
+    sources: [Y01]
+  - id: "4290"
+    parent: "4200"
+    name: "Police & Legal Personnel"
+    ja: "警察と法曹関係者"
+    none: "知の体系でない職業（警察と法曹の人事と職務）。地図に入れない"
+    sources: [Y01]

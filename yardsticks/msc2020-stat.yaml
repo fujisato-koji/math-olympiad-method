@@ -1,0 +1,171 @@
+# 外の物差し：統計と確率の中の抜けを測る（D-117）。統計だけの公開の分類で広く使われるものが見つからないので、統計の雑誌が使う MSC の 60 と 62 を 3 けたまで下ろした。
+# 書き方と確かめ方は docs/yardsticks.md。地図（roadmap.yaml）は変えず、足りない単元は gap に案を書くだけ（D-117）。
+title: "MSC2020 の 60（確率論と確率過程）と 62（統計学）の 3 けた"
+version: "2020"
+sources:
+  Y01: {title: "MSC2020（zbMATH Open と AMS）の分類表 MSC_2020.csv", url: "https://msc2020.org/MSC_2020.csv", date: 2026-11-12, license: "CC BY-NC-SA 4.0（msc2020.org の表示）"}
+items:
+  - {id: "60", name: "Probability theory and stochastic processes", ja: "確率論と確率過程", group: true}
+  - id: "60Axx"
+    parent: "60"
+    name: "Foundations of probability theory"
+    ja: "確率論の基礎"
+    units: [S-001, S-006]
+    sources: [Y01]
+  - id: "60Bxx"
+    parent: "60"
+    name: "Probability theory on algebraic and topological structures"
+    ja: "代数的・位相的構造上の確率論"
+    units: [S-032, S-013]
+    sources: [Y01]
+  - id: "60Cxx"
+    parent: "60"
+    name: "Combinatorial probability"
+    ja: "組合せ確率"
+    units: [C-043, C-011, C-020, C-027]
+    sources: [Y01]
+  - id: "60Dxx"
+    parent: "60"
+    name: "Geometric probability and stochastic geometry"
+    ja: "幾何的確率と確率幾何"
+    gap: "要る単元の案「確率幾何と幾何的確率（ビュフォンの針とクロフトンの公式、ランダム集合とブーリアンモデル、ポアソン–ボロノイ分割、ランダム幾何グラフ）」（前提 S-010、S-014、G-048）。入口は S-010（空間ポアソン過程）だけ"
+    sources: [Y01]
+  - id: "60Exx"
+    parent: "60"
+    name: "Distribution theory"
+    ja: "分布論"
+    units: [S-003, S-002, S-008, S-014]
+    sources: [Y01]
+  - id: "60Fxx"
+    parent: "60"
+    name: "Limit theorems in probability theory"
+    ja: "確率論の極限定理"
+    units: [S-004, S-007, S-008, S-013]
+    sources: [Y01]
+  - id: "60Gxx"
+    parent: "60"
+    name: "Stochastic processes"
+    ja: "確率過程"
+    units: [S-012, S-011, S-009, S-014, S-005]
+    sources: [Y01]
+  - id: "60Hxx"
+    parent: "60"
+    name: "Stochastic analysis"
+    ja: "確率解析"
+    units: [S-015, S-016, S-045]
+    sources: [Y01]
+  - id: "60Jxx"
+    parent: "60"
+    name: "Markov processes"
+    ja: "マルコフ過程"
+    units: [S-005, S-009, S-012, S-016]
+    sources: [Y01]
+  - id: "60Kxx"
+    parent: "60"
+    name: "Special processes"
+    ja: "特殊な過程"
+    units: [S-009, S-010, S-043]
+    sources: [Y01]
+  - id: "60Lxx"
+    parent: "60"
+    name: "Rough analysis"
+    ja: "ラフ解析"
+    units: [S-045]
+    sources: [Y01]
+  - {id: "62", name: "Statistics", ja: "統計学", group: true}
+  - id: "62Axx"
+    parent: "62"
+    name: "Foundational topics in statistics"
+    ja: "統計学の基礎"
+    units: [S-022, S-021, S-018, S-019]
+    sources: [Y01]
+  - id: "62Bxx"
+    parent: "62"
+    name: "Sufficiency and information"
+    ja: "十分性と情報"
+    units: [S-033, S-021, C-038]
+    sources: [Y01]
+  - id: "62Cxx"
+    parent: "62"
+    name: "Statistical decision theory"
+    ja: "統計的決定理論"
+    units: [S-022]
+    sources: [Y01]
+  - id: "62Dxx"
+    parent: "62"
+    name: "Statistical sampling theory and related topics"
+    ja: "標本抽出論とその周辺"
+    gap: "要る単元の案「標本調査の理論（単純無作為・層化・集落・系統抽出、比推定と回帰推定、ホルビッツ–トンプソン推定量、無回答の重みづけ）」（前提 S-031、S-018、S-003）。入口は S-031（高校水準の標本調査）だけ。欠測は S-036、因果推論は S-042 が受け持つ"
+    sources: [Y01]
+  - id: "62Exx"
+    parent: "62"
+    name: "Statistical distribution theory"
+    ja: "統計的分布論"
+    units: [S-003, S-033, S-041]
+    sources: [Y01]
+  - id: "62Fxx"
+    parent: "62"
+    name: "Parametric inference"
+    ja: "パラメトリック推測"
+    units: [S-018, S-019, S-021, S-033]
+    sources: [Y01]
+  - id: "62Gxx"
+    parent: "62"
+    name: "Nonparametric inference"
+    ja: "ノンパラメトリック推測"
+    units: [S-024, S-034, S-038]
+    sources: [Y01]
+  - id: "62Hxx"
+    parent: "62"
+    name: "Multivariate analysis"
+    ja: "多変量解析"
+    units: [S-023, K-062]
+    sources: [Y01]
+  - id: "62Jxx"
+    parent: "62"
+    name: "Linear inference, regression"
+    ja: "線形推測、回帰"
+    units: [S-020, K-063, S-037]
+    sources: [Y01]
+  - id: "62Kxx"
+    parent: "62"
+    name: "Design of statistical experiments"
+    ja: "実験の計画"
+    units: [S-050]
+    sources: [Y01]
+  - id: "62Lxx"
+    parent: "62"
+    name: "Sequential statistical methods"
+    ja: "逐次的な統計手法"
+    units: [S-052, S-022]
+    sources: [Y01]
+  - id: "62Mxx"
+    parent: "62"
+    name: "Inference from stochastic processes"
+    ja: "確率過程からの推測"
+    units: [F-034, E-056, E-077, E-081]
+    sources: [Y01]
+  - id: "62Nxx"
+    parent: "62"
+    name: "Survival analysis and censored data"
+    ja: "生存時間解析と打ち切りデータ"
+    units: [S-035]
+    sources: [Y01]
+  - id: "62Pxx"
+    parent: "62"
+    name: "Applications of statistics"
+    ja: "統計学の応用"
+    units: [S-051, S-053, S-054, I-040, F-033]
+    sources: [Y01]
+  - id: "62Qxx"
+    parent: "62"
+    name: "Statistical tables"
+    ja: "統計数表"
+    none: "分類の便宜の見出し（数表の出版の形）で知の中身でない。分布の値の計算は S-041 などの単元の中で扱う"
+    sources: [Y01]
+  - id: "62Rxx"
+    parent: "62"
+    name: "Statistics on algebraic and topological structures"
+    ja: "代数的・位相的構造上の統計"
+    gap: "要る単元の案「関数データ・位相的データ・多様体上の統計（関数主成分、パーシステントホモロジー、方向統計と多様体上の平均、距離空間上の統計）」（前提 S-023、T-023、D-087）。入口は T-023（ホモロジーの計算）と D-087（ワッサースタイン距離）だけ"
+    sources: [Y01]
