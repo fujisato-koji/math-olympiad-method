@@ -69,15 +69,19 @@ def kanji_warnings(units, problems, glossary):
 
         def walk(x, key=None):
             if isinstance(x, str):
-                if key in ("check", "svg", "figure", "part", "kinds", "uses", "type", "like"):
+                if key == "svg":
+                    # 図の中の文字（<text>）も子が読むので数える（D-129）
+                    x = re.sub(r"<[^>]+>", "", " ".join(re.findall(r"<text\b[^>]*>(.*?)</text>", x, re.S)))
+                elif key in ("check", "figure", "part", "kinds", "uses", "type", "like"):
                     return
                 bad.update(ch for ch in x if is_kanji(ch) and ch not in ok)
             elif isinstance(x, dict):
                 for k, v in x.items():
                     walk(v, k)
             elif isinstance(x, list):
+                # 一覧の中は、その一覧の名前で決める（kinds: [読み取り] の字は子に見せない）
                 for v in x:
-                    walk(v, None)
+                    walk(v, key)
 
         walk(problems.get(uid, {}))
         if bad:
@@ -384,14 +388,14 @@ def check(data, problems):
         # 後ろの日に置いた概念を、前の日の問題で先取りしない（D-077）
         title = units[uid][2].get("title", "")
         first_plan = {}
+        # plan は expand で [{kind, aim}] にそろえてある（前は entry.items() を「種類: ねらい」と読み、どの日も当たらなかった）
         for di, entry in enumerate(plan, start=1):
-            for kind, aim in entry.items():
-                if kind not in ("導入", "練習"):
-                    continue
-                for term in re.split(r"[、・（）()]", str(aim)):
-                    term = term.strip()
-                    if len(term) >= 3 and term not in title:
-                        first_plan.setdefault(term, di)
+            if entry["kind"] not in ("導入", "練習"):
+                continue
+            for term in re.split(r"[、・（）()]", str(entry["aim"])):
+                term = term.strip()
+                if len(term) >= 3 and term not in title:
+                    first_plan.setdefault(term, di)
         seen_intro = ""
         for d in days:
             di = d.get("day")
@@ -461,10 +465,21 @@ def check(data, problems):
                             errors.append(f"{where}: 答え {a} は段 {st} の鍵盤で打てない（選ぶ問題にするか、形を直す）")
                 if len(item.get("hints", [])) != 3:
                     errors.append(f"{where}: ヒントは 3 段")
+                # ヒントは文か、図の付いた {text, svg}（D-129）。図の決まりは問題の svg と同じ
+                for hint in item.get("hints") or []:
+                    if isinstance(hint, dict):
+                        if set(hint) - {"text", "svg"} or not isinstance(hint.get("text"), str):
+                            errors.append(f"{where}: 図の付いたヒントは {{text, svg}} にする")
+                        hs = str(hint.get("svg", ""))
+                        if hs and (not re.match(r'\s*<svg\b[^>]*\bviewBox="[^"]+"', hs) or not hs.rstrip().endswith("</svg>")):
+                            errors.append(f"{where}: ヒントの svg は viewBox のある <svg>…</svg> にする")
+                        if re.search(r"<script|<foreignObject|\son[a-z]+\s*=|href\s*=|url\(", hs, re.I):
+                            errors.append(f"{where}: ヒントの svg に script、on…= の属性、外への参照は書かない")
                 # ヒントに答えそのものを書かない（R-14）。「5 になります。」のような文を止める
                 ans_n = str(item.get("answer", "")).replace("−", "-").replace(" ", "").replace("　", "").replace("、", ",").rstrip("。")
                 if ans_n:
                     for hint in item.get("hints") or []:
+                        hint = hint.get("text", "") if isinstance(hint, dict) else hint
                         if not isinstance(hint, str):
                             continue
                         h_n = hint.replace("−", "-").replace(" ", "").replace("　", "").replace("、", ",").rstrip("。")

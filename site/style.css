@@ -667,6 +667,8 @@ section.next { margin: 12px 0 36px; }  /* 単元のページの次の日（.day.
 .cosmos-tip .tip-open { display: inline-block; margin-left: 4px; padding: 2px 10px; border-radius: 999px; border: 1px solid var(--glass-line);
   background: rgba(255, 255, 255, .12); color: var(--star-ink); font-weight: 700; text-decoration: none; white-space: nowrap; }
 .cosmos-tip .tip-open:hover, .cosmos-tip .tip-open:focus-visible { background: rgba(255, 255, 255, .24); }
+/* 図の付いたヒント（D-129）：文の下に図 */
+.hint .hint-fig { margin-top: 8px; }
 .cosmos-card {
   position: absolute; right: 18px; bottom: 70px; width: min(380px, calc(100% - 36px)); max-height: calc(100% - 150px); overflow: auto;
   padding: 16px 18px; border-radius: 20px; background: rgba(12, 16, 36, .8); border: 1px solid var(--glass-line); backdrop-filter: blur(14px);

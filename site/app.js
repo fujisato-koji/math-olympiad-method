@@ -231,6 +231,9 @@
   const putMat = (h, mats) => h.replace(matPlace, (m, i) => mats[Number(i)] ?? m);
   const fmt = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text)), m.mats)); };
   // 単元の記号（A-024 など）を、その単元のページへのリンクにする（ヒント・見どころ・手本）
+  // ヒントは文か、{text, svg}（図の付いたヒント、D-129）。text は文と同じに組み、svg は文の下に図として出す
+  const hintText = h => (h && typeof h === 'object') ? (h.text || '') : (h || '');
+  const hintHtml = h => fmtLinks(hintText(h)) + (h && typeof h === 'object' && h.svg ? `<div class="fig fig-svg hint-fig" role="img" aria-label="ず">${h.svg}</div>` : '');
   const fmtLinks = s => { const m = markMat(markGloss(s)); return kindify(putMat(glossHtml(mx(m.text).replace(/\b([A-Z])-(\d{3})\b/g, x => UNITS[x] ? `<a class="ulink" href="#/unit/${x}" target="_blank" rel="noopener">${x}</a>` : x)), m.mats)); };
   // 見本の説明は、長い文を文ごとに改行し、｜で囲んだ表を組む（D-067）。
   // 例：｜量｜記号｜意味｜ の行を続けると、見出しつきの表になる。
@@ -1921,7 +1924,7 @@
   function dkOffer(s, it, why, i = 0) {
     const path = ((it.paths || [])[0] || []).slice(0, -1);
     // 比べる文：止まった一歩と、そこに当たるヒント（ヒントには「わり切れる」のような考えの言葉が入る）
-    const hint = why === 'start' ? 0 : why === 'mid' ? Math.min(i, 2) : null, ht = hint !== null ? (it.hints || [])[hint] || '' : '';
+    const hint = why === 'start' ? 0 : why === 'mid' ? Math.min(i, 2) : null, ht = hint !== null ? hintText((it.hints || [])[hint]) : '';
     const text = why === 'mid' ? `${path[i]} ${ht}` : why === 'start' ? `${it.text} ${path[0] || ''} ${ht}` : `${it.text} ${it.explain || ''}`;
     if (hint !== null && (it.hints || [])[hint]) s.hints = Math.max(s.hints, hint + 1);
     s.dk = { step: 'offer', why, i, hint, cands: lookCands(s, text, why) };
@@ -1942,7 +1945,7 @@
     const head = k.why === 'mean' ? `<p class="dk-note">${W.read}</p>`
       : k.why === 'start' && path.length ? `<p class="dk-note"><b>${W.first}</b>　${fmt(path[0])}</p>`
       : k.why === 'mid' ? `<p class="dk-note"><b>${W.stuck}</b>　${fmt(path[k.i])}</p>` : '';
-    const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${fmtLinks(it.hints[k.hint])}</div></div>` : '';
+    const hint = k.hint !== null && (it.hints || [])[k.hint] ? `<div class="hints"><div class="hint" data-n="${k.hint + 1}">${hintHtml(it.hints[k.hint])}</div></div>` : '';
     return `<div class="dk">${head}${hint}<h3 class="dk-h">${W.offer}</h3><div class="dk-cands">${k.cands.map(c => {
       const cu = UNITS[c.id];
       return `<div class="dk-cand" style="${lc(cu.lane)}"><span class="mode">${c.self ? W.self : W.need}・${STATUS_NAME[status(c.id)]}</span>
@@ -2000,7 +2003,7 @@
       body = `${fig}${dunnoHtml(s, it)}`;
     } else if (it.part === 'わけ' && !s.solved) {
       // わけを口で言う問題：保護者が聞いて「言えた」を押す（D-016）
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmtLinks(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${hintHtml(h)}</div>`).join('');
       const st = UNITS[s.id].stage, ask = st <= 2 ? ['くちで いってみよう。いえたら、おうちの ひとに「いえた」を おしてもらおう。', 'いえた']
         : st === 3 ? ['ノートに、わけを文で書いてみよう。書けたら、おうちの人に見せて「書けた」をおしてもらおう。', '書けた']
         : ['決めたこと（文字や約束）から順に、筋道を立ててノートに書こう。書けたら、おうちの人に見てもらって「書けた」を押そう。', '書けた'];
@@ -2028,7 +2031,7 @@
             <div class="pad${padKeys(s.id).length ? ' wide' : ''}">${[1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ...padKeys(s.id)].map(k => `<button data-key="${k}" type="button">${k}</button>`).join('')}
               <button data-key="del" type="button" aria-label="ひとつ けす">←</button>
               <button class="ok" data-key="ok" type="button">こたえる</button></div></div>`;
-      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${fmtLinks(h)}</div>`).join('');
+      const hints = (it.hints || []).slice(0, s.hints).map((h, i) => `<div class="hint" data-n="${i + 1}">${hintHtml(h)}</div>`).join('');
       body = `${fig}${input}<div class="feedback" id="fb"></div><div class="hints">${hints}</div>
         <div class="actions">${s.hints < 3 ? `<button class="pill" data-act="hint" type="button">ヒント ${s.hints + 1} / 3</button>` : ''}${dk}</div>`;
     }
