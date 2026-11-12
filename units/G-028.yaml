@@ -26,6 +26,7 @@
 # check：角と長さと面積の式。外心と垂心の位置を選ぶ問題は、いちばん大きい角と 90 をくらべる式。
 #   五心の名前や性質を選ぶ問題は約束ごとなので check を付けない。
 # 前提の更新（2026-11-08）：作ったあとで地図の前提が増え、上の注で「前提にない」とした G-022 は、いまは前提のたどりに入っている。問題はそのときの前提の範囲で作ってあり、この道具を使う問題は足してよい。
+# ただし腕だめしの最難関（正方形をつけた三角形と交点の比）だけは例外で、uses に G-019、G-020、G-050、A-011 を挙げて、三平方の定理、相似、座標と方程式を使う。
 
 id: G-028
 days:
@@ -1346,3 +1347,38 @@ ri:
     paths:
       - [AC の延長の上の接点を Q、BC の上の接点を T とする, 接線の長さで AP = AQ、BP = BT、CQ = CT, AP + AQ = AB + BT + AC + CT = AB + BC + CA = 25.2, AP = 25.2 ÷ 2 = 12.6 cm]
     note: 傍接円の接線の長さ（G-054）を 3 組使い、AP が 3 辺の和の半分になることを見ぬく。小数の 3 辺から計算する。内接円の接線の長さ（4 日目）とまぎれて、AB + BC − CA のような式にしやすい。
+  - part: 離
+    kinds:
+    - 最難関
+    level: 10
+    time: 1500
+    uses:
+    - G-019
+    - G-020
+    - G-050
+    - A-011
+    text: '三角形 ABC は AB = 14 cm、BC = 15 cm、CA = 13 cm で、角はすべて鋭角です。辺 CA、CB をそれぞれ 1 辺とする正方形 CAPQ、CBRS を、どちらも三角形 ABC の外がわに作ります（頂点は文字の順にならびます）。線分 BP と線分 AR が交わる点を X、直線 CX と直線 AB が交わる点を H とします。CX : XH を、できるだけ小さい整数の比で答えなさい。'
+    svg: <svg viewBox="0 0 240 150" xmlns="http://www.w3.org/2000/svg"><polygon points="84.4,130.0 157.2,130.0 110.4,67.6" stroke="currentColor" stroke-width="2" fill="none"/><polygon points="110.4,67.6 84.4,130.0 22.0,104.0 48.0,41.6" stroke="currentColor" stroke-width="1.5" fill="none"/><polygon points="110.4,67.6 157.2,130.0 219.6,83.2 172.8,20.8" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="157.2" y1="130.0" x2="22.0" y2="104.0" stroke="currentColor" stroke-width="1.5" fill="none"/><line x1="84.4" y1="130.0" x2="219.6" y2="83.2" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="110.4" cy="121.0" r="2.2" fill="currentColor"/><circle cx="110.4" cy="130.0" r="2.2" fill="currentColor"/><text x="75.4" y="144.0" font-size="12" text-anchor="middle">A</text><text x="166.2" y="144.0" font-size="12" text-anchor="middle">B</text><text x="110.4" y="60.6" font-size="12" text-anchor="middle">C</text><text x="12.0" y="108.0" font-size="12" text-anchor="middle">P</text><text x="39.0" y="38.6" font-size="12" text-anchor="middle">Q</text><text x="228.6" y="87.2" font-size="12" text-anchor="middle">R</text><text x="181.8" y="17.8" font-size="12" text-anchor="middle">S</text><text x="120.4" y="115.0" font-size="12" text-anchor="middle">X</text><text x="110.4" y="144.0" font-size="12" text-anchor="middle">H</text></svg>
+    choices:
+    - '89:15'
+    - 15:89
+    - 89:104
+    - '104:15'
+    answer: '89:15'
+    check: '(lambda I, A, B, C: (lambda P, R: (lambda X: (lambda H: (lambda t: f"{t.numerator}:{t.denominator - t.numerator}")(((X[0] - C[0]) * (H[0] - C[0]) + (X[1] - C[1]) * (H[1] - C[1])) / ((H[0] - C[0]) ** 2 + (H[1] - C[1]) ** 2)))(I(A, (B[0] - A[0], B[1] - A[1]), C, (X[0] - C[0], X[1] - C[1]))))(I(B, (P[0] - B[0], P[1] - B[1]), A, (R[0] - A[0], R[1] - A[1]))))((A[0] + (A[1] - C[1]), A[1] - (A[0] - C[0])), (B[0] - (B[1] - C[1]), B[1] + (B[0] - C[0]))))(lambda p, d, q, e: (lambda t: (p[0] + t * d[0], p[1] + t * d[1]))(Fraction((q[0] - p[0]) * e[1] - (q[1] - p[1]) * e[0], d[0] * e[1] - d[1] * e[0])), (0, 0), (14, 0), (5, 12))'
+    hints:
+    - 三角形の 3 辺の長さがわかっているので、C から辺 AB にひいた垂線の足の位置を、三平方の定理で出してみよう。AH、BH、CH はいくつかな。
+    - BP と AR は、三角形 ABC を 90° 回した形とかかわりがありそうだね。
+    - C から AB への垂線を、C の先へのばしてみよう。
+    paths:
+    - - AH = x とすると、三平方の定理で CH² = 13² − x² = 15² − (14 − x)²。これを解いて x = 5。AH = 5 cm、BH = 14 − 5 = 9 cm、CH = √(13² − 5²) = 12 cm（角がすべて鋭角なので、垂線の足 H は辺 AB の上にある）
+      - 直線 CH の、H と反対がわ（C の先）に CZ = AB = 14 cm となる点 Z をとる。Z は AB について C と同じがわで、ZH = 12 + 14 = 26 cm。△CAZ と △APB で、CA = AP、CZ = AB、はさむ角は ∠ACZ = 180° − ∠ACH = 180° − (90° − ∠A) = 90° + ∠A、∠PAB = ∠PAC + ∠CAB = 90° + ∠A（P は外がわ）。2 辺とその間の角が等しいので △CAZ ≡ △APB で、AZ = PB
+      - 2 つの三角形は同じ向きに合同で、対応する辺 CA と AP のなす角は 90° なので、一方を 90° 回すともう一方に重なる。よって対応する辺 AZ と PB のなす角も 90° で、AZ ⊥ BP。同じように、△CBZ と △BRA で CB = BR、CZ = BA、∠BCZ = 90° + ∠B = ∠RBA なので △CBZ ≡ △BRA、BZ ⊥ AR
+      - BP は △ABZ の頂点 B から辺 AZ への垂線、AR は頂点 A から辺 BZ への垂線。2 本の交点 X は △ABZ の垂心で、3 本目の垂線（Z から AB への垂線 ZH）の上にある。つまり X は直線 CH の上にあり、直線 CX と AB の交点は H。△AHX と △ZHB は、∠AHX = ∠ZHB = 90°、∠HAX = 90° − ∠ABZ = ∠HZB で相似なので、XH = AH × BH ÷ ZH = 5 × 9 ÷ 26 = 45/26 cm
+      - 'XH = 45/26 cm は CH = 12 cm より短いので X は C と H の間にあり、CX = 12 − 45/26 = 267/26 cm。CX : XH = 267 : 45 = 89 : 15'
+    - - A を原点、AB を x 軸にとると、A(0, 0)、B(14, 0)。C(p, q)（q > 0）は p² + q² = 13²、(p − 14)² + q² = 15² をみたすので、2 式の差から 28p = 140、p = 5、q = 12。C(5, 12)
+      - AC = (5, 12) を A のまわりに 90° 回して外がわにすると AP = (−12, 5)。P(−12, 5)。BC = (−9, 12) を B のまわりに反対向きに 90° 回して外がわにすると BR = (12, 9)。R(26, 9)（BR と BC の内積は −9 × 12 + 12 × 9 = 0 で垂直）
+      - 直線 BP は B(14, 0) と P(−12, 5) を通るので y = −5(x − 14) ÷ 26。直線 AR は A(0, 0) と R(26, 9) を通るので y = 9x ÷ 26
+      - 2 式から 9x = −5x + 70、x = 5、y = 45/26。X(5, 45/26)。X と C(5, 12) の x 座標は同じ 5 なので、直線 CX は x = 5。AB（y = 0）との交点は H(5, 0)
+      - 'CX = 12 − 45/26 = 267/26、XH = 45/26。CX : XH = 267 : 45 = 89 : 15'
+    note: '工夫は 3 段：①H（C から AB への垂線の足）を三平方で出して AH = 5、BH = 9、CH = 12、②CH を C の先へ AB と同じ長さだけのばして Z をとり、△CAZ ≡ △APB、△CBZ ≡ △BRA から BP ⊥ AZ、AR ⊥ BZ を出す、③X が △ABZ の垂心なので ZH の上にあり、△AHX ∽ △ZHB から XH = AH × BH ÷ ZH。2 本目は工夫なしの座標で、回転で P、R を出して 2 直線の交点を求める（1 本目は補助線と垂心、2 本目は座標と方程式）。check は A、B、C から回転で P、R をつくり、2 直線の交点 X と、直線 CX と AB の交点 H を Fraction で出して、CX : XH を整数の比の文字で返す（89:15）。H は「C から AB への垂線の足」と決めつけず、CX と AB の交点として計算で出している。直角三角形の版（ピタゴラスの図で BP と AR と C からの垂線が 1 点に集まる）は知られた事実で、ここは一般の三角形で、3 本が 1 点に集まることに気づかないと H の位置が決まらない問いにした。G-020 の「交点の比を出して面積比」を求める問題とはちがい、ここは線分の比そのものを求める。'
